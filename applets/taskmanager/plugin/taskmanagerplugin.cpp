@@ -46,7 +46,7 @@
 
 void TaskManagerPlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.taskmanager"));
+    Q_ASSERT(QLatin1String(uri) == QLatin1String("org.kde.plasma.private.taskmanager"));
     qmlRegisterType<Backend>(uri, 0, 1, "Backend");
     qmlRegisterType<DragHelper>(uri, 0, 1, "DragHelper");
 

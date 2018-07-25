@@ -45,10 +45,10 @@ bool FileEntry::isValid() const
 QIcon FileEntry::icon() const
 {
     if (m_fileItem) {
-        return QIcon::fromTheme(m_fileItem->iconName(), QIcon::fromTheme("unknown"));
+        return QIcon::fromTheme(m_fileItem->iconName(), QIcon::fromTheme(QStringLiteral("unknown")));
     }
 
-    return QIcon::fromTheme("unknown");
+    return QIcon::fromTheme(QStringLiteral("unknown"));
 }
 
 QString FileEntry::name() const

@@ -28,9 +28,9 @@
 #include <KRunner/RunnerManager>
 
 RunnerModel::RunnerModel(QObject *parent) : QAbstractListModel(parent)
-, m_favoritesModel(0)
+, m_favoritesModel(nullptr)
 , m_appletInterface(nullptr)
-, m_runnerManager(0)
+, m_runnerManager(nullptr)
 , m_mergeResults(false)
 , m_deleteWhenEmpty(false)
 {
@@ -154,7 +154,7 @@ int RunnerModel::count() const
 QObject *RunnerModel::modelForRow(int row)
 {
     if (row < 0 || row >= m_models.count()) {
-        return 0;
+        return nullptr;
     }
 
     return m_models.at(row);
@@ -287,7 +287,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
                 matches.first().runner()->name(), m_runnerManager, this);
             matchesModel->setMatches(matches);
 
-            if (it.key() == "services") {
+            if (it.key() == QLatin1String("services")) {
                 beginInsertRows(QModelIndex(), 0, 0);
                 m_models.prepend(matchesModel);
                 endInsertRows();

@@ -32,7 +32,7 @@ static QObject *trash_singletonProvider(QQmlEngine *engine, QJSEngine *scriptEng
 
 void TrashPrivatePlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.trash"));
+    Q_ASSERT(QLatin1String(uri) == QLatin1String("org.kde.plasma.private.trash"));
     qmlRegisterType<DirModel>(uri, 1,0, "DirModel");
     qmlRegisterSingletonType<Trash>(uri, 1, 0, "Trash", trash_singletonProvider);
 }

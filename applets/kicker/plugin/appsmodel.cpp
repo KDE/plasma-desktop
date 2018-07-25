@@ -45,7 +45,7 @@ AppsModel::AppsModel(const QString &entryPath, bool paginate, int pageSize, bool
 , m_description(i18n("Applications"))
 , m_entryPath(entryPath)
 , m_staticEntryList(false)
-, m_changeTimer(0)
+, m_changeTimer(nullptr)
 , m_flat(flat)
 , m_sorted(sorted)
 , m_appNameFormat(AppEntry::NameOnly)
@@ -69,7 +69,7 @@ AppsModel::AppsModel(const QList<AbstractEntry *> entryList, bool deleteEntriesO
 , m_description(i18n("Applications"))
 , m_entryPath(QString())
 , m_staticEntryList(true)
-, m_changeTimer(0)
+, m_changeTimer(nullptr)
 , m_flat(true)
 , m_sorted(true)
 , m_appNameFormat(AppEntry::NameOnly)
@@ -162,13 +162,13 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
 
         if (!m_hiddenEntries.isEmpty()) {
             actionList << Kicker::createSeparatorActionItem();
-            actionList << Kicker::createActionItem(i18n("Unhide Applications in this Submenu"), "unhideSiblingApplications");
+            actionList << Kicker::createActionItem(i18n("Unhide Applications in this Submenu"), QStringLiteral("unhideSiblingApplications"));
         }
 
         const AppsModel *appsModel = qobject_cast<const AppsModel *>(entry->childModel());
 
         if (appsModel && !appsModel->hiddenEntries().isEmpty()) {
-            actionList << Kicker::createActionItem(i18n("Unhide Applications in '%1'", entry->name()), "unhideChildApplications");
+            actionList << Kicker::createActionItem(i18n("Unhide Applications in '%1'", entry->name()), QStringLiteral("unhideChildApplications"));
         }
 
         return actionList;
@@ -196,21 +196,21 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
 
     AbstractEntry *entry = m_entryList.at(row);
 
-    if (actionId == "hideApplication" && entry->type() == AbstractEntry::RunnableType) {
+    if (actionId == QLatin1String("hideApplication") && entry->type() == AbstractEntry::RunnableType) {
         QObject *appletInterface = rootModel()->property("appletInterface").value<QObject *>();
         QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
 
-        if (appletConfig && appletConfig->contains("hiddenApplications")) {
-            QStringList hiddenApps = appletConfig->value("hiddenApplications").toStringList();
+        if (appletConfig && appletConfig->contains(QLatin1String("hiddenApplications"))) {
+            QStringList hiddenApps = appletConfig->value(QLatin1String("hiddenApplications")).toStringList();
 
             KService::Ptr service = static_cast<const AppEntry *>(entry)->service();
 
             if (!hiddenApps.contains(service->menuId())) {
                 hiddenApps << service->menuId();
 
-                appletConfig->insert("hiddenApplications", hiddenApps);
+                appletConfig->insert(QLatin1String("hiddenApplications"), hiddenApps);
                 QMetaObject::invokeMethod(appletConfig, "valueChanged", Qt::DirectConnection,
-                    Q_ARG(QString, "hiddenApplications"),
+                    Q_ARG(QString, QStringLiteral("hiddenApplications")),
                     Q_ARG(QVariant, hiddenApps));
 
                 refresh();
@@ -220,20 +220,20 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
         }
 
         return false;
-    } else if (actionId == "unhideSiblingApplications") {
+    } else if (actionId == QLatin1String("unhideSiblingApplications")) {
         QObject *appletInterface = rootModel()->property("appletInterface").value<QObject *>();
         QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
 
-        if (appletConfig && appletConfig->contains("hiddenApplications")) {
-            QStringList hiddenApps = appletConfig->value("hiddenApplications").toStringList();
+        if (appletConfig && appletConfig->contains(QLatin1String("hiddenApplications"))) {
+            QStringList hiddenApps = appletConfig->value(QLatin1String("hiddenApplications")).toStringList();
 
             foreach(const QString& app, m_hiddenEntries) {
                 hiddenApps.removeOne(app);
             }
 
-            appletConfig->insert("hiddenApplications", hiddenApps);
+            appletConfig->insert(QStringLiteral("hiddenApplications"), hiddenApps);
             QMetaObject::invokeMethod(appletConfig, "valueChanged", Qt::DirectConnection,
-                Q_ARG(QString, "hiddenApplications"),
+                Q_ARG(QString, QStringLiteral("hiddenApplications")),
                 Q_ARG(QVariant, hiddenApps));
 
             m_hiddenEntries.clear();
@@ -244,12 +244,12 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
         }
 
         return false;
-    } else if (actionId == "unhideChildApplications") {
+    } else if (actionId == QLatin1String("unhideChildApplications")) {
         QObject *appletInterface = rootModel()->property("appletInterface").value<QObject *>();
         QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
 
         if (entry->type() == AbstractEntry::GroupType
-            && appletConfig && appletConfig->contains("hiddenApplications")) {
+            && appletConfig && appletConfig->contains(QLatin1String("hiddenApplications"))) {
 
             const AppsModel *appsModel = qobject_cast<const AppsModel *>(entry->childModel());
 
@@ -257,15 +257,15 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
                 return false;
             }
 
-            QStringList hiddenApps = appletConfig->value("hiddenApplications").toStringList();
+            QStringList hiddenApps = appletConfig->value(QLatin1String("hiddenApplications")).toStringList();
 
             foreach(const QString& app, appsModel->hiddenEntries()) {
                 hiddenApps.removeOne(app);
             }
 
-            appletConfig->insert("hiddenApplications", hiddenApps);
+            appletConfig->insert(QStringLiteral("hiddenApplications"), hiddenApps);
             QMetaObject::invokeMethod(appletConfig, "valueChanged", Qt::DirectConnection,
-                Q_ARG(QString, "hiddenApplications"),
+                Q_ARG(QString, QStringLiteral("hiddenApplications")),
                 Q_ARG(QVariant, hiddenApps));
 
             refresh();
@@ -282,7 +282,7 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
 AbstractModel *AppsModel::modelForRow(int row)
 {
     if (row < 0 || row >= m_entryList.count()) {
-        return 0;
+        return nullptr;
     }
 
     return m_entryList.at(row)->childModel();
@@ -622,8 +622,8 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
     QObject *appletInterface = rootModel()->property("appletInterface").value<QObject *>();
     QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
 
-    if (appletConfig && appletConfig->contains("hiddenApplications")) {
-        hiddenApps = appletConfig->value("hiddenApplications").toStringList();
+    if (appletConfig && appletConfig->contains(QLatin1String("hiddenApplications"))) {
+        hiddenApps = appletConfig->value(QLatin1String("hiddenApplications")).toStringList();
     }
 
     for (KServiceGroup::List::ConstIterator it = list.constBegin();
@@ -703,7 +703,7 @@ void AppsModel::sortEntries()
 
 void AppsModel::checkSycocaChanges(const QStringList &changes)
 {
-    if (changes.contains("services") || changes.contains("apps") || changes.contains("xdgdata-apps")) {
+    if (changes.contains(QLatin1String("services")) || changes.contains(QLatin1String("apps")) || changes.contains(QLatin1String("xdgdata-apps"))) {
         m_changeTimer->start();
     }
 }

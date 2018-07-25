@@ -333,7 +333,7 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
 
         QAction *action = new QAction(parent);
         action->setText(url.fileName());
-        action->setIcon(QIcon::fromTheme(fileItem.iconName(), QIcon::fromTheme("unknown")));
+        action->setIcon(QIcon::fromTheme(fileItem.iconName(), QIcon::fromTheme(QStringLiteral("unknown"))));
         action->setProperty("agent", storageId);
         action->setProperty("entryPath", desktopEntryUrl);
         action->setData(resource);
@@ -455,7 +455,7 @@ void Backend::ungrabMouse(QQuickItem *item) const
 
     //pre 5.8.0 QQuickWindow code is "item->grabMouse(); sendEvent(item, mouseEvent)"
     //post 5.8.0 QQuickWindow code is sendEvent(item, mouseEvent); item->grabMouse()
-    if (QVersionNumber::fromString(qVersion()) > QVersionNumber(5, 8, 0)) {
+    if (QVersionNumber::fromString(QString::fromLatin1(qVersion())) > QVersionNumber(5, 8, 0)) {
         QTimer::singleShot(0, item, ungrabMouseHack);
     }
     else {

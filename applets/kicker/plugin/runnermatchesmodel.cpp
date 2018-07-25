@@ -64,7 +64,7 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
     } else if (role == Kicker::DescriptionRole) {
         return match.subtext();
     } else if (role == Kicker::FavoriteIdRole) {
-        if (match.runner()->id() == "services") {
+        if (match.runner()->id() == QLatin1String("services")) {
             return match.data().toString();
         }
     } else if (role == Kicker::UrlRole) {
@@ -95,9 +95,9 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         QVariantList actionList;
 
         foreach (QAction *action, m_runnerManager->actionsForMatch(match)) {
-            QVariantMap item = Kicker::createActionItem(action->text(), "runnerAction",
+            QVariantMap item = Kicker::createActionItem(action->text(), QStringLiteral("runnerAction"),
                 QVariant::fromValue<QObject *>(action));
-            item["icon"] = action->icon();
+            item[QStringLiteral("icon")] = action->icon();
 
             actionList << item;
         }

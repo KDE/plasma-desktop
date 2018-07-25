@@ -44,9 +44,9 @@ namespace KAStats = KActivities::Stats;
 using namespace KAStats;
 using namespace KAStats::Terms;
 
-#define AGENT_APPLICATIONS "org.kde.plasma.favorites.applications"
-#define AGENT_CONTACTS     "org.kde.plasma.favorites.contacts"
-#define AGENT_DOCUMENTS    "org.kde.plasma.favorites.documents"
+#define AGENT_APPLICATIONS QStringLiteral("org.kde.plasma.favorites.applications")
+#define AGENT_CONTACTS     QStringLiteral("org.kde.plasma.favorites.contacts")
+#define AGENT_DOCUMENTS    QStringLiteral("org.kde.plasma.favorites.documents")
 
 QString agentForUrl(const QString &url)
 {
@@ -99,7 +99,7 @@ public:
             qCDebug(KICKER_DEBUG) << "Original id is: " << id << ", and the url is" << url;
 
             // Preferred applications need special handling
-            if (entry->id().startsWith("preferred:")) {
+            if (entry->id().startsWith(QLatin1String("preferred:"))) {
                 m_id = entry->id();
                 return;
             }
@@ -107,7 +107,7 @@ public:
             // If this is an application, use the applications:-format url
             auto appEntry = dynamic_cast<AppEntry*>(entry);
             if (appEntry && !appEntry->menuId().isEmpty()) {
-                m_id = "applications:" + appEntry->menuId();
+                m_id = QStringLiteral("applications:") + appEntry->menuId();
                 return;
             }
 
@@ -123,7 +123,7 @@ public:
             }
 
             // If this is a file, we should have already covered it
-            if (url.scheme() == "file") {
+            if (url.scheme() == QLatin1String("file")) {
                 return;
             }
 
@@ -158,14 +158,14 @@ public:
             return new ContactEntry(q, resource);
 
         } else if (agent == AGENT_DOCUMENTS) {
-            if (resource.startsWith("/")) {
+            if (resource.startsWith(QLatin1String("/"))) {
                 return new FileEntry(q, QUrl::fromLocalFile(resource));
             } else {
                 return new FileEntry(q, QUrl(resource));
             }
 
         } else if (agent == AGENT_APPLICATIONS) {
-            if (resource.startsWith("applications:")) {
+            if (resource.startsWith(QLatin1String("applications:"))) {
                 return new AppEntry(q, resource.mid(13));
             } else {
                 return new AppEntry(q, resource);
@@ -205,15 +205,15 @@ public:
                 });
 
         // Loading the items order
-        const auto cfg = KSharedConfig::openConfig("kactivitymanagerd-statsrc");
+        const auto cfg = KSharedConfig::openConfig(QStringLiteral("kactivitymanagerd-statsrc"));
 
         // We want first to check whether we have an ordering for this activity.
         // If not, we will try to get a global one for this applet
 
         const QString thisGroupName =
-            "Favorites-" + clientId + "-" + m_activities.currentActivity();
+            QStringLiteral("Favorites-") + clientId + QStringLiteral("-") + m_activities.currentActivity();
         const QString globalGroupName =
-            "Favorites-" + clientId + "-global";
+            QStringLiteral("Favorites-") + clientId + QStringLiteral("-global");
 
         KConfigGroup thisCfgGroup(cfg, thisGroupName);
         KConfigGroup globalCfgGroup(cfg, globalGroupName);
@@ -271,7 +271,7 @@ public:
     {
         // We want even files to have a proper URL
         const auto resource =
-            _resource.startsWith("/") ? QUrl::fromLocalFile(_resource).toString() : _resource;
+            _resource.startsWith(QLatin1Char('/')) ? QUrl::fromLocalFile(_resource).toString() : _resource;
 
         qCDebug(KICKER_DEBUG) << "Adding result" << resource << "already present?" << m_itemEntries.contains(resource);
 
@@ -421,18 +421,18 @@ public:
 
     static void saveOrdering(const QStringList &ids, const QString &clientId, const QString &currentActivity)
     {
-        const auto cfg = KSharedConfig::openConfig("kactivitymanagerd-statsrc");
+        const auto cfg = KSharedConfig::openConfig(QStringLiteral("kactivitymanagerd-statsrc"));
 
         QStringList activities {
             currentActivity,
-            "global"
+            QStringLiteral("global")
         };
 
         qCDebug(KICKER_DEBUG) << "Saving ordering for" << currentActivity << "and global" << ids;
 
         for (const auto& activity: activities) {
             const QString groupName =
-                "Favorites-" + clientId + "-" + activity;
+                QStringLiteral("Favorites-") + clientId + QStringLiteral("-") + activity;
 
             KConfigGroup cfgGroup(cfg, groupName);
 
@@ -546,7 +546,7 @@ void KAStatsFavoritesModel::portOldFavorites(const QStringList &ids)
     if (!d) return;
     qCDebug(KICKER_DEBUG) << "portOldFavorites" << ids;
 
-    const auto activityId = ":global";
+    const QString activityId = QStringLiteral(":global");
     std::for_each(ids.begin(), ids.end(), [&] (const QString &id) {
                 addFavoriteTo(id, activityId);
             });
@@ -596,7 +596,7 @@ void KAStatsFavoritesModel::addFavoriteTo(const QString &id, const Activity &act
 
     setDropPlaceholderIndex(-1);
 
-    QStringList matchers { d->m_activities.currentActivity(), ":global", ":current" };
+    QStringList matchers { d->m_activities.currentActivity(), QStringLiteral(":global"), QStringLiteral(":current") };
     if (std::find_first_of(activity.values.cbegin(), activity.values.cend(),
                            matchers.cbegin(), matchers.cend()) != activity.values.cend()) {
         d->addResult(id, index);
@@ -637,8 +637,8 @@ void KAStatsFavoritesModel::setFavoriteOn(const QString &id, const QString &acti
     qCDebug(KICKER_DEBUG) << "setFavoriteOn" << id << activityId << url << " (actual)";
 
     qCDebug(KICKER_DEBUG) << "%%%%%%%%%%% Activity is" << activityId;
-    if (activityId.isEmpty() || activityId == ":any" ||
-            activityId == ":global" ||
+    if (activityId.isEmpty() || activityId == QLatin1String(":any") ||
+            activityId == QStringLiteral(":global") ||
             activityId == m_activities->currentActivity()) {
         d->m_ignoredItems << url;
     }
@@ -687,7 +687,7 @@ QStringList KAStatsFavoritesModel::linkedActivitiesFor(const QString &id) const
 
     auto url = d->normalizedId(id).value();
 
-    if (url.startsWith("file:")) {
+    if (url.startsWith(QLatin1String("file:"))) {
         url = QUrl(url).toLocalFile();
     }
 

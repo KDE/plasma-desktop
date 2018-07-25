@@ -37,8 +37,8 @@ class DashboardWindow : public QQuickWindow
     Q_CLASSINFO("DefaultProperty", "mainItem")
 
     public:
-        DashboardWindow(QQuickItem *parent = 0);
-        ~DashboardWindow();
+        explicit DashboardWindow(QQuickItem *parent = nullptr);
+        ~DashboardWindow() override;
 
         QQuickItem *mainItem() const;
         void setMainItem(QQuickItem *item);

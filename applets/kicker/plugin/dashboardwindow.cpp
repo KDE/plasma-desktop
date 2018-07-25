@@ -26,15 +26,15 @@
 #include <KWindowEffects>
 #include <KWindowSystem>
 
-DashboardWindow::DashboardWindow(QQuickItem *parent) : QQuickWindow(parent ? parent->window() : 0)
-, m_mainItem(0)
-, m_visualParentItem(0)
-, m_visualParentWindow(0)
+DashboardWindow::DashboardWindow(QQuickItem *parent) : QQuickWindow(parent ? parent->window() : nullptr)
+, m_mainItem(nullptr)
+, m_visualParentItem(nullptr)
+, m_visualParentWindow(nullptr)
 {
     setClearBeforeRendering(true);
     setFlags(Qt::FramelessWindowHint);
 
-    setIcon(QIcon::fromTheme("plasma"));
+    setIcon(QIcon::fromTheme(QStringLiteral("plasma")));
 
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &DashboardWindow::updateTheme);
 }

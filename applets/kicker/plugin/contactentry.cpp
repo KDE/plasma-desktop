@@ -65,7 +65,7 @@ QIcon ContactEntry::icon() const
         return QIcon(photo);
     }
 
-    return QIcon::fromTheme("unknown");
+    return QIcon::fromTheme(QStringLiteral("unknown"));
 }
 
 QString ContactEntry::name() const
@@ -114,7 +114,7 @@ QVariantList ContactEntry::actions() const
 {
     QVariantList actionList;
 
-    actionList << Kicker::createActionItem(i18n("Show Contact Information..."), "showContactInfo");
+    actionList << Kicker::createActionItem(i18n("Show Contact Information..."), QStringLiteral("showContactInfo"));
 
     return actionList;
 }
@@ -127,7 +127,7 @@ bool ContactEntry::run(const QString& actionId, const QVariant &argument)
         return false;
     }
 
-    if (actionId == "showContactInfo") {
+    if (actionId == QLatin1String("showContactInfo")) {
         showPersonDetailsDialog(m_personData->personUri());
     }
 
@@ -135,7 +135,7 @@ bool ContactEntry::run(const QString& actionId, const QVariant &argument)
 }
 
 void ContactEntry::showPersonDetailsDialog(const QString &id) {
-    KPeople::PersonDetailsDialog *view = new KPeople::PersonDetailsDialog(0);
+    KPeople::PersonDetailsDialog *view = new KPeople::PersonDetailsDialog(nullptr);
     KPeople::PersonData *data = new KPeople::PersonData(id, view);
     view->setPerson(data);
     view->setAttribute(Qt::WA_DeleteOnClose);

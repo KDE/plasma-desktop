@@ -71,17 +71,17 @@ void SystemEntry::init()
             m_valid = false;
             break;
         case LockSession:
-            m_valid = KAuthorized::authorizeAction("lock_screen");
+            m_valid = KAuthorized::authorizeAction(QStringLiteral("lock_screen"));
             break;
         case LogoutSession:
         case SaveSession:
         {
-            bool authorize = KAuthorized::authorizeAction("logout") && KAuthorized::authorize("logout");
+            bool authorize = KAuthorized::authorizeAction(QStringLiteral("logout")) && KAuthorized::authorize(QStringLiteral("logout"));
 
             if (m_action == SaveSession) {
-                const KConfigGroup c(KSharedConfig::openConfig("ksmserverrc", KConfig::NoGlobals), "General");
+                const KConfigGroup c(KSharedConfig::openConfig(QStringLiteral("ksmserverrc"), KConfig::NoGlobals), "General");
 
-                m_valid = authorize && c.readEntry("loginMode") == "restoreSavedSession";
+                m_valid = authorize && c.readEntry("loginMode") == QLatin1String("restoreSavedSession");
             } else {
                 m_valid = authorize;
             }
@@ -89,7 +89,7 @@ void SystemEntry::init()
             break;
         }
         case SwitchUser:
-            m_valid = (KAuthorized::authorizeAction("start_new_session") || KAuthorized::authorizeAction("switch_user"))
+            m_valid = (KAuthorized::authorizeAction(QStringLiteral("start_new_session")) || KAuthorized::authorizeAction(QStringLiteral("switch_user")))
                 && KDisplayManager().isSwitchable();
             break;
         case SuspendToRam:
@@ -119,38 +119,38 @@ QIcon SystemEntry::icon() const
     const QString &name = iconName();
 
     if (!name.isEmpty()) {
-        return QIcon::fromTheme(name, QIcon::fromTheme("unknown"));
+        return QIcon::fromTheme(name, QIcon::fromTheme(QStringLiteral("unknown")));
     }
 
-    return QIcon::fromTheme("unknown");
+    return QIcon::fromTheme(QStringLiteral("unknown"));
 }
 
 QString SystemEntry::iconName() const
 {
     switch (m_action) {
         case LockSession:
-            return "system-lock-screen";
+            return QStringLiteral("system-lock-screen");
             break;
         case LogoutSession:
-            return "system-log-out";
+            return QStringLiteral("system-log-out");
             break;
         case SaveSession:
-            return "system-save-session";
+            return QStringLiteral("system-save-session");
             break;
         case SwitchUser:
-            return "system-switch-user";
+            return QStringLiteral("system-switch-user");
             break;
         case SuspendToRam:
-            return "system-suspend";
+            return QStringLiteral("system-suspend");
             break;
         case SuspendToDisk:
-            return "system-suspend-hibernate";
+            return QStringLiteral("system-suspend-hibernate");
             break;
         case Reboot:
-            return "system-reboot";
+            return QStringLiteral("system-reboot");
             break;
         case Shutdown:
-            return "system-shutdown";
+            return QStringLiteral("system-shutdown");
             break;
         default:
             break;
@@ -305,8 +305,8 @@ bool SystemEntry::run(const QString& actionId, const QVariant &argument)
         case LockSession:
         {
             QDBusConnection bus = QDBusConnection::sessionBus();
-            QDBusInterface interface("org.freedesktop.ScreenSaver", "/ScreenSaver", "org.freedesktop.ScreenSaver", bus);
-            interface.asyncCall("Lock");
+            QDBusInterface interface(QStringLiteral("org.freedesktop.ScreenSaver"), QStringLiteral("/ScreenSaver"), QStringLiteral("org.freedesktop.ScreenSaver"), bus);
+            interface.asyncCall(QStringLiteral("Lock"));
             break;
         }
         case LogoutSession:
@@ -326,15 +326,15 @@ bool SystemEntry::run(const QString& actionId, const QVariant &argument)
         case SwitchUser:
         {
             QDBusConnection bus = QDBusConnection::sessionBus();
-            QDBusInterface interface("org.kde.ksmserver", "/KSMServer", "org.kde.KSMServerInterface", bus);
-            interface.asyncCall("openSwitchUserDialog");
+            QDBusInterface interface(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QStringLiteral("org.kde.KSMServerInterface"), bus);
+            interface.asyncCall(QStringLiteral("openSwitchUserDialog"));
             break;
         };
         case SuspendToRam:
-            Solid::PowerManagement::requestSleep(Solid::PowerManagement::SuspendState, 0, 0);
+            Solid::PowerManagement::requestSleep(Solid::PowerManagement::SuspendState, nullptr, nullptr);
             break;
         case SuspendToDisk:
-            Solid::PowerManagement::requestSleep(Solid::PowerManagement::HibernateState, 0, 0);
+            Solid::PowerManagement::requestSleep(Solid::PowerManagement::HibernateState, nullptr, nullptr);
             break;
         case Reboot:
             KWorkSpace::requestShutDown(KWorkSpace::ShutdownConfirmDefault, KWorkSpace::ShutdownTypeReboot);

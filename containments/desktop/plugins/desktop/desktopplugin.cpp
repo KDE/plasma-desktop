@@ -24,7 +24,7 @@
 
 void DesktopPlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.private.desktopcontainment.desktop"));
+    Q_ASSERT(QLatin1String(uri) == QLatin1String("org.kde.private.desktopcontainment.desktop"));
     qmlRegisterType<InfoNotification>(uri, 0, 1, "InfoNotification");
 }
 

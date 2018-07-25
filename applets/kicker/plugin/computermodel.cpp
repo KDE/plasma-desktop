@@ -143,7 +143,7 @@ ComputerModel::ComputerModel(QObject *parent) : ForwardingModel(parent)
 , m_appletInterface(nullptr)
 {
     connect(m_systemAppsModel, &SimpleFavoritesModel::favoritesChanged, this, &ComputerModel::systemApplicationsChanged);
-    m_systemAppsModel->setFavorites(QStringList() << "systemsettings.desktop");
+    m_systemAppsModel->setFavorites(QStringList() << QStringLiteral("systemsettings.desktop"));
 
     m_concatProxy->addSourceModel(m_runCommandModel);
     m_concatProxy->addSourceModel(m_systemAppsModel);

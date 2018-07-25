@@ -60,7 +60,7 @@ QVariant RecentContactsModel::data(const QModelIndex &index, int role) const
 
     QString id = sourceModel()->data(index, ResultModel::ResourceRole).toString();
 
-    KPeople::PersonData *data = 0;
+    KPeople::PersonData *data = nullptr;
 
     if (m_idToData.contains(id)) {
         data = m_idToData[id];
@@ -82,15 +82,15 @@ QVariant RecentContactsModel::data(const QModelIndex &index, int role) const
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList ;
 
-        const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Contact"), "forget");
+        const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Contact"), QStringLiteral("forget"));
         actionList << forgetAction;
 
-        const QVariantMap &forgetAllAction = Kicker::createActionItem(i18n("Forget All Contacts"), "forgetAll");
+        const QVariantMap &forgetAllAction = Kicker::createActionItem(i18n("Forget All Contacts"), QStringLiteral("forgetAll"));
         actionList << forgetAllAction;
 
         actionList << Kicker::createSeparatorActionItem();
 
-        actionList << Kicker::createActionItem(i18n("Show Contact Information..."), "showContactInfo");
+        actionList << Kicker::createActionItem(i18n("Show Contact Information..."), QStringLiteral("showContactInfo"));
 
         return actionList;
     } else if (role == Kicker::DescriptionRole) {
@@ -112,7 +112,7 @@ bool RecentContactsModel::trigger(int row, const QString &actionId, const QVaria
         const QList<QAction *> actionList = KPeople::actionsForPerson(id, this);
 
         if (!actionList.isEmpty()) {
-            QAction *chat = 0;
+            QAction *chat = nullptr;
 
             foreach (QAction *action, actionList) {
                 const QVariant &actionType = action->property("actionType");
@@ -130,17 +130,17 @@ bool RecentContactsModel::trigger(int row, const QString &actionId, const QVaria
         }
 
         return false;
-    } else if (actionId == "showContactInfo" && withinBounds) {
+    } else if (actionId == QLatin1String("showContactInfo") && withinBounds) {
         ContactEntry::showPersonDetailsDialog(sourceModel()->data(sourceModel()->index(row, 0),
             ResultModel::ResourceRole).toString());
-    } else if (actionId == "forget" && withinBounds) {
+    } else if (actionId == QLatin1String("forget") && withinBounds) {
         if (sourceModel()) {
             ResultModel *resultModel = static_cast<ResultModel *>(sourceModel());
             resultModel->forgetResource(row);
         }
 
         return false;
-    } else if (actionId == "forgetAll") {
+    } else if (actionId == QLatin1String("forgetAll")) {
         if (sourceModel()) {
             ResultModel *resultModel = static_cast<ResultModel *>(sourceModel());
             resultModel->forgetAllResources();
@@ -162,7 +162,7 @@ QVariantList RecentContactsModel::actions() const
     QVariantList actionList;
 
     if (rowCount()) {
-        actionList << Kicker::createActionItem(i18n("Forget All Contacts"), "forgetAll");
+        actionList << Kicker::createActionItem(i18n("Forget All Contacts"), QStringLiteral("forgetAll"));
     }
 
     return actionList;
@@ -174,10 +174,10 @@ void RecentContactsModel::refresh()
 
     auto query = UsedResources
                     | RecentlyUsedFirst
-                    | Agent("KTp")
+                    | Agent(QStringLiteral("KTp"))
                     | Type::any()
                     | Activity::current()
-                    | Url::startsWith("ktp")
+                    | Url::startsWith(QStringLiteral("ktp"))
                     | Limit(15);
 
     ResultModel *model = new ResultModel(query);

@@ -33,7 +33,7 @@ SystemModel::SystemModel(QObject *parent) : AbstractModel(parent)
 
     m_favoritesModel = new SimpleFavoritesModel(this);
 
-    const QString configFile = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/ksmserverrc";
+    const QString configFile = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/ksmserverrc");
 
     KDirWatch *watch = new KDirWatch(this);
 

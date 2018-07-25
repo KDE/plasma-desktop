@@ -45,7 +45,7 @@ static QObject *menuHelperSingletonProvider(QQmlEngine *engine, QJSEngine *jsEng
 
 void FolderPlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.private.desktopcontainment.folder"));
+    Q_ASSERT(QLatin1String(uri) == QLatin1String("org.kde.private.desktopcontainment.folder"));
     qmlRegisterType<DirectoryPicker>(uri, 0, 1, "DirectoryPicker");
     qmlRegisterType<FolderModel>(uri, 0, 1, "FolderModel");
     qmlRegisterType<ItemViewAdapter>(uri, 0, 1, "ItemViewAdapter");

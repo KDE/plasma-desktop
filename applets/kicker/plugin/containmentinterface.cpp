@@ -82,7 +82,7 @@ bool ContainmentInterface::mayAddLauncher(QObject *appletInterface, ContainmentI
         case TaskManager: {
             if (!entryPath.isEmpty() && containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel"))
             {
-                const Plasma::Applet *taskManager = 0;
+                const Plasma::Applet *taskManager = nullptr;
 
                 foreach(const Plasma::Applet *applet, containment->applets()) {
                     if (m_knownTaskManagers.contains(applet->pluginMetaData().pluginId())) {
@@ -153,7 +153,7 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
                     return;
                 }
 
-                QQuickItem *rootItem = 0;
+                QQuickItem *rootItem = nullptr;
 
                 foreach(QQuickItem *item, gObj->childItems()) {
                     if (item->objectName() == QStringLiteral("folder")) {
@@ -167,7 +167,7 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
                     QMetaObject::invokeMethod(rootItem, "addLauncher", Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
                 }
             } else {
-                containment->createApplet("org.kde.plasma.icon", QVariantList() << entryPath);
+                containment->createApplet(QStringLiteral("org.kde.plasma.icon"), QVariantList() << entryPath);
             }
 
             break;
@@ -175,7 +175,7 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
         case Panel: {
             if (containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel"))
             {
-                containment->createApplet("org.kde.plasma.icon", QVariantList() << entryPath);
+                containment->createApplet(QStringLiteral("org.kde.plasma.icon"), QVariantList() << entryPath);
             }
 
             break;
@@ -183,7 +183,7 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
         case TaskManager: {
             if (containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel"))
             {
-                const Plasma::Applet *taskManager = 0;
+                const Plasma::Applet *taskManager = nullptr;
 
                 foreach(const Plasma::Applet *applet, containment->applets()) {
                     if (m_knownTaskManagers.contains(applet->pluginMetaData().pluginId())) {
@@ -247,6 +247,6 @@ bool ContainmentInterface::screenContainmentMutable(QObject *appletInterface)
 void ContainmentInterface::ensureMutable(Plasma::Containment *containment)
 {
     if (containment && containment->immutability() != Plasma::Types::Mutable) {
-         containment->actions()->action("lock widgets")->trigger();
+         containment->actions()->action(QStringLiteral("lock widgets"))->trigger();
     }
 }

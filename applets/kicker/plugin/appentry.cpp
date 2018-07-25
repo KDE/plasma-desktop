@@ -89,7 +89,7 @@ bool AppEntry::isValid() const
 QIcon AppEntry::icon() const
 {
     if (m_icon.isNull()) {
-        m_icon = QIcon::fromTheme(m_service->icon(), QIcon::fromTheme("unknown"));
+        m_icon = QIcon::fromTheme(m_service->icon(), QIcon::fromTheme(QStringLiteral("unknown")));
     }
     return m_icon;
 }
@@ -171,11 +171,11 @@ QVariantList AppEntry::actions() const
 
     QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
 
-    if (appletConfig && appletConfig->contains("hiddenApplications") && qobject_cast<AppsModel *>(m_owner)) {
-        const QStringList &hiddenApps = appletConfig->value("hiddenApplications").toStringList();
+    if (appletConfig && appletConfig->contains(QLatin1String("hiddenApplications")) && qobject_cast<AppsModel *>(m_owner)) {
+        const QStringList &hiddenApps = appletConfig->value(QLatin1String("hiddenApplications")).toStringList();
 
         if (!hiddenApps.contains(m_service->menuId())) {
-            actionList << Kicker::createActionItem(i18n("Hide Application"), "hideApplication");
+            actionList << Kicker::createActionItem(i18n("Hide Application"), QStringLiteral("hideApplication"));
         }
     }
 
@@ -200,8 +200,8 @@ bool AppEntry::run(const QString& actionId, const QVariant &argument)
         // TODO Once we depend on KDE Frameworks 5.24 and D1902 is merged, use KRun::runApplication instead
         KRun::runService(*m_service, {}, nullptr, true, {}, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
 
-        KActivities::ResourceInstance::notifyAccessed(QUrl("applications:" + m_service->storageId()),
-            "org.kde.plasma.kicker");
+        KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + m_service->storageId()),
+            QStringLiteral("org.kde.plasma.kicker"));
 
         return true;
     }
@@ -214,7 +214,7 @@ bool AppEntry::run(const QString& actionId, const QVariant &argument)
         return true;
     } else if (Kicker::handleAppstreamActions(actionId, argument)) {
         return true;
-    } else if (actionId == "_kicker_jumpListAction") {
+    } else if (actionId == QLatin1String("_kicker_jumpListAction")) {
         return KRun::run(argument.toString(), {}, nullptr, m_service->name(), m_service->icon());
     }
 
@@ -249,7 +249,7 @@ KService::Ptr AppEntry::defaultAppByName(const QString& name)
 
         if (browser.isEmpty()) {
             return KMimeTypeTrader::self()->preferredService(QLatin1String("text/html"));
-        } else if (browser.startsWith('!')) {
+        } else if (browser.startsWith(QLatin1Char('!'))) {
             browser = browser.mid(1);
         }
 
@@ -282,7 +282,7 @@ AppGroupEntry::AppGroupEntry(AppsModel *parentModel, KServiceGroup::Ptr group,
 QIcon AppGroupEntry::icon() const
 {
     if (m_icon.isNull()) {
-        m_icon = QIcon::fromTheme(m_group->icon(), QIcon::fromTheme("unknown"));
+        m_icon = QIcon::fromTheme(m_group->icon(), QIcon::fromTheme(QStringLiteral("unknown")));
     }
     return m_icon;
 }

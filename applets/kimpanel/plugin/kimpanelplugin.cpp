@@ -25,6 +25,6 @@
 void KimpanelPlugin::registerTypes(const char* uri)
 {
     Q_UNUSED(uri);
-    Q_ASSERT(uri == QStringLiteral("org.kde.plasma.private.kimpanel"));
+    Q_ASSERT(QLatin1String(uri) == QStringLiteral("org.kde.plasma.private.kimpanel"));
     qmlRegisterType<Screen>(uri, 0, 1, "Screen");
 }

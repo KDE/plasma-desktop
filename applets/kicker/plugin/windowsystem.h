@@ -21,16 +21,15 @@
 #define WINDOWSYSTEM_H
 
 #include <QObject>
-
+#include <QQuickWindow>
 class QQuickItem;
-class QQuickWindow;
 
 class WindowSystem : public QObject
 {
     Q_OBJECT
 
     public:
-        WindowSystem(QObject *parent = 0);
+        explicit WindowSystem(QObject *parent = nullptr);
         ~WindowSystem();
 
         bool eventFilter(QObject *watched, QEvent *event) override;
@@ -48,7 +47,7 @@ class WindowSystem : public QObject
         void hidden(QQuickWindow *window) const;
 
     private Q_SLOTS:
-        void monitoredWindowVisibilityChanged(bool visible) const;
+        void monitoredWindowVisibilityChanged(QWindow::Visibility visibility) const;
 };
 
 #endif

@@ -90,7 +90,7 @@ bool InvalidAppsFilterProxy::filterAcceptsRow(int source_row, const QModelIndex 
     const QString resource = sourceModel()->index(source_row, 0).data(ResultModel::ResourceRole).toString();
 
     if (resource.startsWith(QLatin1String("applications:"))) {
-        KService::Ptr service = KService::serviceByStorageId(resource.section(':', 1));
+        KService::Ptr service = KService::serviceByStorageId(resource.section(QLatin1Char(':'), 1));
 
         KAStatsFavoritesModel* favoritesModel = m_parentModel ? static_cast<KAStatsFavoritesModel *>(m_parentModel->favoritesModel()) : nullptr;
 
@@ -181,7 +181,7 @@ QVariant RecentUsageModel::data(const QModelIndex &index, int role) const
 
 QVariant RecentUsageModel::appData(const QString &resource, int role) const
 {
-    const QString storageId = resource.section(':', 1);
+    const QString storageId = resource.section(QLatin1Char(':'), 1);
     KService::Ptr service = KService::serviceByStorageId(storageId);
 
     QStringList allowedTypes({ QLatin1String("Service"), QLatin1String("Application") });
@@ -201,7 +201,7 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
             return AppEntry::nameFromService(service, AppEntry::NameOnly);
         }
     } else if (role == Qt::DecorationRole) {
-        return QIcon::fromTheme(service->icon(), QIcon::fromTheme("unknown"));
+        return QIcon::fromTheme(service->icon(), QIcon::fromTheme(QStringLiteral("unknown")));
     } else if (role == Kicker::DescriptionRole) {
         return service->comment();
     } else if (role == Kicker::GroupRole) {
@@ -223,10 +223,10 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
             actionList << recentDocuments << Kicker::createSeparatorActionItem();
         }
 
-        const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Application"), "forget");
+        const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Application"), QStringLiteral("forget"));
         actionList << forgetAction;
 
-        const QVariantMap &forgetAllAction = Kicker::createActionItem(forgetAllActionName(), "forgetAll");
+        const QVariantMap &forgetAllAction = Kicker::createActionItem(forgetAllActionName(), QStringLiteral("forgetAll"));
         actionList << forgetAllAction;
 
         return actionList;
@@ -252,7 +252,7 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
     if (role == Qt::DisplayRole) {
         return fileItem.text();
     } else if (role == Qt::DecorationRole) {
-        return QIcon::fromTheme(fileItem.iconName(), QIcon::fromTheme("unknown"));
+        return QIcon::fromTheme(fileItem.iconName(), QIcon::fromTheme(QStringLiteral("unknown")));
     } else if (role == Kicker::GroupRole) {
         return i18n("Documents");
     } else if (role == Kicker::FavoriteIdRole || role == Kicker::UrlRole) {
@@ -266,10 +266,10 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
 
         actionList << Kicker::createSeparatorActionItem();
 
-        const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Document"), "forget");
+        const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Document"), QStringLiteral("forget"));
         actionList << forgetAction;
 
-        const QVariantMap &forgetAllAction = Kicker::createActionItem(forgetAllActionName(), "forgetAll");
+        const QVariantMap &forgetAllAction = Kicker::createActionItem(forgetAllActionName(), QStringLiteral("forgetAll"));
         actionList << forgetAllAction;
 
         return actionList;
@@ -305,7 +305,7 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
             return true;
         }
 
-        const QString storageId = resource.section(':', 1);
+        const QString storageId = resource.section(QLatin1Char(':'), 1);
         KService::Ptr service = KService::serviceByStorageId(storageId);
 
         if (!service) {
@@ -323,11 +323,11 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
         // TODO Once we depend on KDE Frameworks 5.24 and D1902 is merged, use KRun::runApplication instead
         KRun::runService(*service, {}, nullptr, true, {}, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
 
-        KActivities::ResourceInstance::notifyAccessed(QUrl("applications:" + storageId),
-            "org.kde.plasma.kicker");
+        KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + storageId),
+            QStringLiteral("org.kde.plasma.kicker"));
 
         return true;
-    } else if (actionId == "forget" && withinBounds) {
+    } else if (actionId == QLatin1String("forget") && withinBounds) {
         if (m_activitiesModel) {
             QModelIndex idx = sourceModel()->index(row, 0);
             QSortFilterProxyModel *sourceProxy = qobject_cast<QSortFilterProxyModel *>(sourceModel());
@@ -341,7 +341,7 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
         }
 
         return false;
-    } else if (actionId == "forgetAll") {
+    } else if (actionId == QLatin1String("forgetAll")) {
         if (m_activitiesModel) {
             static_cast<ResultModel *>(m_activitiesModel.data())->forgetAllResources();
         }
@@ -352,7 +352,7 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
 
         if (resource.startsWith(QLatin1String("applications:"))) {
             const QString storageId = sourceModel()->data(sourceModel()->index(row, 0),
-                ResultModel::ResourceRole).toString().section(':', 1);
+                ResultModel::ResourceRole).toString().section(QLatin1Char(':'), 1);
             KService::Ptr service = KService::serviceByStorageId(storageId);
 
             if (service) {
@@ -384,7 +384,7 @@ QVariantList RecentUsageModel::actions() const
     QVariantList actionList;
 
     if (rowCount()) {
-        actionList << Kicker::createActionItem(forgetAllActionName(), "forgetAll");
+        actionList << Kicker::createActionItem(forgetAllActionName(), QStringLiteral("forgetAll"));
     }
 
     return actionList;
@@ -449,12 +449,12 @@ void RecentUsageModel::refresh()
     switch (m_usage) {
         case AppsAndDocs:
         {
-            query = query | Url::startsWith("applications:") | Url::file() | Limit(30);
+            query = query | Url::startsWith(QStringLiteral("applications:")) | Url::file() | Limit(30);
             break;
         }
         case OnlyApps:
         {
-            query = query | Url::startsWith("applications:") | Limit(15);
+            query = query | Url::startsWith(QStringLiteral("applications:")) | Limit(15);
             break;
         }
         case OnlyDocs:

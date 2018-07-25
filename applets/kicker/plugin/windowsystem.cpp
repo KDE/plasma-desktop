@@ -80,8 +80,9 @@ void WindowSystem::monitorWindowVisibility(QQuickItem* item)
         &WindowSystem::monitoredWindowVisibilityChanged, Qt::UniqueConnection);
 }
 
-void WindowSystem::monitoredWindowVisibilityChanged(bool visible) const
+void WindowSystem::monitoredWindowVisibilityChanged(QWindow::Visibility visibility) const
 {
+    bool visible = (visibility != QWindow::Hidden);
     QQuickWindow *w = static_cast<QQuickWindow *>(QObject::sender());
 
     if (!visible) {

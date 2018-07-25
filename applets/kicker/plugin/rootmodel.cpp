@@ -49,7 +49,7 @@ QString GroupEntry::name() const
 
 QIcon GroupEntry::icon() const
 {
-    return QIcon::fromTheme(m_iconName, QIcon::fromTheme("unknown"));
+    return QIcon::fromTheme(m_iconName, QIcon::fromTheme(QStringLiteral("unknown")));
 }
 
 bool GroupEntry::hasChildren() const
@@ -71,9 +71,9 @@ RootModel::RootModel(QObject *parent) : AppsModel(QString(), parent)
 , m_showRecentContacts(false)
 , m_recentOrdering(RecentUsageModel::Recent)
 , m_showPowerSession(true)
-, m_recentAppsModel(0)
-, m_recentDocsModel(0)
-, m_recentContactsModel(0)
+, m_recentAppsModel(nullptr)
+, m_recentDocsModel(nullptr)
+, m_recentContactsModel(nullptr)
 {
 }
 
@@ -104,7 +104,7 @@ QVariant RootModel::data(const QModelIndex& index, int role) const
                     actionList << model->actions();
                     actionList << Kicker::createSeparatorActionItem();
                     actionList << Kicker::createActionItem(i18n("Hide %1",
-                        group->name()), "hideCategory");
+                        group->name()), QStringLiteral("hideCategory"));
                     return actionList;
                 }
             }
@@ -119,7 +119,7 @@ bool RootModel::trigger(int row, const QString& actionId, const QVariant& argume
     const AbstractEntry *entry = m_entryList.at(row);
 
     if (entry->type() == AbstractEntry::GroupType) {
-        if (actionId == "hideCategory") {
+        if (actionId == QLatin1String("hideCategory")) {
             AbstractModel *model = entry->childModel();
 
             if (model == m_recentAppsModel) {
