@@ -27,9 +27,6 @@ class DevicePreference;
 }
 class BackendSelection;
 
-#ifdef HAVE_PULSEAUDIO
-class AudioSetup;
-#endif
 class QTabWidget;
 
 class PhononKcm : public KCModule
@@ -42,18 +39,10 @@ public:
     void save() override;
     void defaults() override;
 
-#ifdef HAVE_PULSEAUDIO
-private Q_SLOTS:
-    void speakerSetupReady();
-#endif
-
 private:
     QTabWidget* m_tabs;
     Phonon::DevicePreference *m_devicePreferenceWidget;
     BackendSelection *m_backendSelection;
-#ifdef HAVE_PULSEAUDIO
-    AudioSetup *m_speakerSetup;
-#endif
 };
 
 #endif // MAIN_H

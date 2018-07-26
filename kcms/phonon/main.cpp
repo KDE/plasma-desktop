@@ -26,9 +26,6 @@
 #include <KPluginFactory>
 #include <KLocalizedString>
 
-#ifdef HAVE_PULSEAUDIO
-#  include "audiosetup.h"
-#endif
 #include "backendselection.h"
 #include "devicepreference.h"
 
@@ -64,12 +61,6 @@ PhononKcm::PhononKcm(QWidget *parent, const QVariantList &args)
     connect(m_devicePreferenceWidget, SIGNAL(changed()), SLOT(changed()));
 
     setButtons( KCModule::Default|KCModule::Apply|KCModule::Help );
-
-#ifdef HAVE_PULSEAUDIO
-    m_speakerSetup = new AudioSetup(this);
-    m_speakerSetup->setVisible(false);
-    connect(m_speakerSetup, SIGNAL(ready()), SLOT(speakerSetupReady()));
-#endif
 }
 
 void PhononKcm::load()
@@ -89,14 +80,5 @@ void PhononKcm::defaults()
     m_devicePreferenceWidget->defaults();
     m_backendSelection->defaults();
 }
-
-#ifdef HAVE_PULSEAUDIO
-void PhononKcm::speakerSetupReady()
-{
-    m_tabs->insertTab(1, m_speakerSetup, i18n("Audio Hardware Setup"));
-    m_devicePreferenceWidget->pulseAudioEnabled();
-    connect(m_speakerSetup, SIGNAL(changed()), SLOT(changed()));
-}
-#endif
 
 #include "main.moc"

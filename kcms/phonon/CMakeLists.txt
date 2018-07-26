@@ -5,26 +5,6 @@ add_definitions(-DPHONON_LIB_SONAME=\"${PHONON_LIB_SONAME}\")
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm5_phonon\")
 
 
-find_package(PulseAudio 0.9.16)
-set_package_properties(PulseAudio PROPERTIES DESCRIPTION "PulseAudio Audio Server"
-                       URL "http://www.pulseaudio.org/"
-                       TYPE OPTIONAL
-                       PURPOSE "libpulse is needed for audio setup GUI"
-                      )
-
-find_package(GLIB2)
-set_package_properties(GLIB2 PROPERTIES DESCRIPTION "Low-level core library for data structure handling, portability wrappers, etc."
-                       URL "http://www.gtk.org"
-                       TYPE OPTIONAL
-                      )
-
-find_package(Canberra)
-set_package_properties(Canberra PROPERTIES DESCRIPTION "Audio setup GUI"
-                      PURPOSE "libcanberra is needed for audio setup GUI"
-                      URL "http://0pointer.de/lennart/projects/libcanberra"
-                      TYPE OPTIONAL
-                      )
-
 set(kcmphonon_SRCS main.cpp devicepreference.cpp backendselection.cpp)
 ki18n_wrap_ui(kcmphonon_SRCS devicepreference.ui backendselection.ui)
 set(kcmphonon_LIBS
@@ -34,17 +14,6 @@ set(kcmphonon_LIBS
     KF5::KCMUtils
     KF5::KIOWidgets
     ${PHONON_LIBRARY})
-
-if(GLIB2_FOUND AND PULSEAUDIO_FOUND AND CANBERRA_FOUND)
-  add_definitions(-DHAVE_PULSEAUDIO)
-
-  set(kcmphonon_SRCS ${kcmphonon_SRCS} audiosetup.cpp testspeakerwidget.cpp)
-  ki18n_wrap_ui(kcmphonon_SRCS audiosetup.ui)
-
-  include_directories(${GLIB2_INCLUDE_DIR} ${PULSEAUDIO_INCLUDE_DIR} ${CANBERRA_INCLUDE_DIRS})
-
-  set(kcmphonon_LIBS ${kcmphonon_LIBS} ${GLIB2_LIBRARIES} ${PulseAudio_LIBRARIES} ${PulseAudio_MAINLOOP_LIBRARY} ${CANBERRA_LIBRARIES})
-endif()
 
 ecm_qt_declare_logging_category(kcmphonon_SRCS HEADER phonon_debug.h IDENTIFIER KCM_PHONON_LOG CATEGORY_NAME org.kde.kcm.phonon)
 
