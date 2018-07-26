@@ -43,8 +43,8 @@ KCMQtQuickSettingsModule::KCMQtQuickSettingsModule(QWidget *parent, const QVaria
 
     m_ui->setupUi(this);
     m_ui->backendCombo->addItem(i18n("Automatic"), QVariant(QStringLiteral()));//so data matches empty config
-    m_ui->backendCombo->addItem(i18n("Open GL"), QVariant("opengl"));
-    m_ui->backendCombo->addItem(i18n("Software"), QVariant("software"));
+    m_ui->backendCombo->addItem(i18n("Open GL"), QVariant(QStringLiteral("opengl")));
+    m_ui->backendCombo->addItem(i18n("Software"), QVariant(QStringLiteral("software")));
 
     m_ui->renderLoopCombo->addItem(i18n("Automatic"), QVariant(QStringLiteral()));
     m_ui->renderLoopCombo->addItem(i18n("Basic"), QVariant(QStringLiteral("basic")));

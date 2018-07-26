@@ -38,7 +38,7 @@ const static QString lcLanguage = QStringLiteral("LANGUAGE");
 
 void writeExports()
 {
-    const QString configPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/" + exportFile;
+    const QString configPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1Char('/') + exportFile;
 
     QString script(QStringLiteral("# Generated script, do not edit\n"));
     script.append(QLatin1String("# Exports language-format specific env vars from startkde.\n"));

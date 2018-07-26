@@ -41,12 +41,12 @@ class KCMQtQuickSettingsModule : public KCModule
     Q_OBJECT
 
 public:
-    KCMQtQuickSettingsModule(QWidget *parent, const QVariantList &);
-    virtual ~KCMQtQuickSettingsModule();
+    explicit KCMQtQuickSettingsModule(QWidget *parent, const QVariantList &);
+    ~KCMQtQuickSettingsModule() override;
 
-    void load() Q_DECL_OVERRIDE;
-    void save() Q_DECL_OVERRIDE;
-    void defaults() Q_DECL_OVERRIDE;
+    void load() override;
+    void save() override;
+    void defaults() override;
 
 private:
     QScopedPointer<Ui::KCMQtQuickSettingsWidget> m_ui;

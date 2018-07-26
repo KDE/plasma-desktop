@@ -36,9 +36,9 @@ LaunchFeedback::LaunchFeedback(QObject *parent, const QVariantList &args)
     , m_taskManagerNotification(true)
     , m_notificationTimeout(STARTUP_DEFAULT_TIMEOUT)
 {
-    KAboutData *about = new KAboutData("kcm_launchfeedback",
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_launchfeedback"),
         i18n("Configure application launch feedback"),
-        "0.2", QString(), KAboutLicense::LGPL);
+        QStringLiteral("0.2"), QString(), KAboutLicense::LGPL);
     setAboutData(about);
 
     setButtons(Apply | Default);

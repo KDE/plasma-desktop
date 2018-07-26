@@ -41,7 +41,7 @@ class Translations : public KQuickAddons::ConfigModule
     Q_PROPERTY(bool everSaved READ everSaved NOTIFY everSavedChanged)
 
     public:
-        explicit Translations(QObject* parent = 0, const QVariantList &list = QVariantList());
+        explicit Translations(QObject* parent = nullptr, const QVariantList &list = QVariantList());
         ~Translations() override;
 
         QAbstractItemModel* translationsModel() const;
@@ -51,9 +51,9 @@ class Translations : public KQuickAddons::ConfigModule
         bool everSaved() const;
 
     public Q_SLOTS:
-        void load();
-        void save();
-        void defaults();
+        void load() override;
+        void save() override;
+        void defaults() override;
 
     Q_SIGNALS:
         void everSavedChanged() const;

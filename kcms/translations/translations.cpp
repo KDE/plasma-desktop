@@ -37,9 +37,9 @@ Translations::Translations(QObject *parent, const QVariantList &args)
     , m_availableTranslationsModel(new AvailableTranslationsModel(this))
     , m_everSaved(false)
 {
-    KAboutData *about = new KAboutData("kcm_translations",
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_translations"),
         i18n("Configure Plasma translations"),
-        "2.0", QString(), KAboutLicense::LGPL);
+        QStringLiteral("2.0"), QString(), KAboutLicense::LGPL);
     setAboutData(about);
 
     setButtons(Apply | Default);
@@ -82,7 +82,7 @@ bool Translations::everSaved() const
 void Translations::load()
 {
     m_configuredLanguages = m_config.readEntry(lcLanguage,
-        QString()).split(':', QString::SkipEmptyParts);
+        QString()).split(QLatin1Char(':'), QString::SkipEmptyParts);
 
     m_selectedTranslationsModel->setSelectedLanguages(m_configuredLanguages);
 }

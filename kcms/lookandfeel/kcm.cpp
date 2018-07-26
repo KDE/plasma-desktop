@@ -309,7 +309,7 @@ void KCMLookandFeel::save()
                     setColors(package.metadata().name(), colorsFile);
                 }
             } else if (!colorScheme.isEmpty()) {
-                colorScheme.remove('\''); // So Foo's does not become FooS
+                colorScheme.remove(QLatin1Char('\'')); // So Foo's does not become FooS
                 QRegExp fixer(QStringLiteral("[\\W,.-]+(.?)"));
                 int offset;
                 while ((offset = fixer.indexIn(colorScheme)) >= 0) {
@@ -597,7 +597,7 @@ QDir KCMLookandFeel::cursorThemeDir(const QString &theme, const int depth)
         }
 
         // Open the index.theme file, so we can get the list of inherited themes
-        KConfig config(dir.path() + "/index.theme", KConfig::NoGlobals);
+        KConfig config(dir.path() + QStringLiteral("/index.theme"), KConfig::NoGlobals);
         KConfigGroup cg(&config, "Icon Theme");
 
         // Recurse through the list of inherited themes, to check if one of them
