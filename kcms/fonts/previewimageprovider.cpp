@@ -125,6 +125,8 @@ QImage PreviewImageProvider::requestImage(const QString &id, QSize *size, const 
     xft.setSubPixelType(oldSubPixelType);
     xft.setHintStyle(oldHintStyle);
     
+    xft.apply();
+    
     *size = img.size();
     
     return img;
