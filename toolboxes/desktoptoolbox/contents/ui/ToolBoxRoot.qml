@@ -77,6 +77,8 @@ Item {
     onOpenChanged: {
         plasmoid.editMode = open
         if (open) {
+            plasmoid.contextualActionsAboutToShow();
+
             toolBoxLoader.active = true;
             toolBoxLoader.item.visible = true;
         } else {
