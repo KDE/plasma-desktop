@@ -27,6 +27,10 @@
 
 int main(int argc, char *argv[])
 {
+    // KJob uses a QEventLoopLocker which causes kfontinst to quit
+    // after the job is done, prevent this by disabling quit lock.
+    QCoreApplication::setQuitLockEnabled(false);
+
     QCoreApplication *app=new QCoreApplication(argc, argv);
     KFI::FontInst    fi;
 
