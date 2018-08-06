@@ -197,8 +197,7 @@ bool AppEntry::run(const QString& actionId, const QVariant &argument)
         }
 #endif
 
-        // TODO Once we depend on KDE Frameworks 5.24 and D1902 is merged, use KRun::runApplication instead
-        KRun::runService(*m_service, {}, nullptr, true, {}, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+        KRun::runApplication(*m_service, {}, nullptr, KRun::DeleteTemporaryFiles, {}, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
 
         KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + m_service->storageId()),
             QStringLiteral("org.kde.plasma.kicker"));
