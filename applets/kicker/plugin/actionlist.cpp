@@ -25,6 +25,8 @@
 
 #include <QApplication>
 #include <QDesktopServices>
+#include <QDir>
+#include <QStandardPaths>
 
 #include <KLocalizedString>
 #include <KMimeTypeTrader>
@@ -153,7 +155,7 @@ QVariantList createAddLauncherActionList(QObject *appletInterface, const KServic
         actionList << Kicker::createActionItem(i18n("Add to Panel (Widget)"), QStringLiteral("addToPanel"));
     }
 
-    if (service && ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath())) {
+    if (service && ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, Kicker::resolvedServiceEntryPath(service))) {
         actionList << Kicker::createActionItem(i18n("Pin to Task Manager"), QStringLiteral("addToTaskManager"));
     }
 
@@ -168,17 +170,17 @@ bool handleAddLauncherAction(const QString &actionId, QObject *appletInterface, 
 
     if (actionId == QLatin1String("addToDesktop")) {
         if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Desktop)) {
-            ContainmentInterface::addLauncher(appletInterface, ContainmentInterface::Desktop, service->entryPath());
+            ContainmentInterface::addLauncher(appletInterface, ContainmentInterface::Desktop, Kicker::resolvedServiceEntryPath(service));
         }
         return true;
     } else if (actionId == QLatin1String("addToPanel")) {
         if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Panel)) {
-            ContainmentInterface::addLauncher(appletInterface, ContainmentInterface::Panel, service->entryPath());
+            ContainmentInterface::addLauncher(appletInterface, ContainmentInterface::Panel, Kicker::resolvedServiceEntryPath(service));
         }
         return true;
     } else if (actionId == QLatin1String("addToTaskManager")) {
-        if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath())) {
-            ContainmentInterface::addLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath());
+        if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, Kicker::resolvedServiceEntryPath(service))) {
+            ContainmentInterface::addLauncher(appletInterface, ContainmentInterface::TaskManager, Kicker::resolvedServiceEntryPath(service));
         }
         return true;
     }
@@ -396,5 +398,13 @@ bool handleAppstreamActions(const QString &actionId, const QVariant &argument)
     return false;
 }
 
+QString resolvedServiceEntryPath(const KService::Ptr &service)
+{
+    QString path = service->entryPath();
+    if (!QDir::isAbsolutePath(path)) {
+        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kservices5/") + path);
+    }
+    return path;
+}
 
 }

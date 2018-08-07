@@ -75,7 +75,7 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
                    || runnerId == QLatin1String("services")) {
             KService::Ptr service = KService::serviceByStorageId(match.data().toString());
             if (service) {
-                return QUrl::fromLocalFile(service->entryPath());
+                return QUrl::fromLocalFile(Kicker::resolvedServiceEntryPath(service));
             }
         }
     } else if (role == Kicker::HasActionListRole) {

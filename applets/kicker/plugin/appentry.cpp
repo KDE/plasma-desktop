@@ -125,7 +125,7 @@ QString AppEntry::menuId() const
 
 QUrl AppEntry::url() const
 {
-    return QUrl::fromLocalFile(m_service->entryPath());
+    return QUrl::fromLocalFile(Kicker::resolvedServiceEntryPath(m_service));
 }
 
 bool AppEntry::hasActions() const
