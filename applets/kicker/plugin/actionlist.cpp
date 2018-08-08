@@ -105,7 +105,9 @@ QVariantList createActionListForFileItem(const KFileItem &fileItem)
         list << createSeparatorActionItem();
     }
 
-    list << createActionItem(i18n("Properties"), QStringLiteral("_kicker_fileItem_properties"));
+    QVariantMap propertiesItem = createActionItem(i18n("Properties"), QStringLiteral("_kicker_fileItem_properties"));
+    propertiesItem[QStringLiteral("icon")] = QStringLiteral("document-properties");
+    list << propertiesItem;
 
     return list;
 }
