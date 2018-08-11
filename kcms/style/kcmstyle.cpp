@@ -209,7 +209,7 @@ KCMStyle::KCMStyle( QWidget* parent, const QVariantList& )
     hbLayout->setStretchFactor( cbStyle, 1 );
     label->setBuddy(cbStyle);
 
-    pbConfigStyle = new QPushButton( i18n("Con&figure..."), gbWidgetStyle );
+    pbConfigStyle = new QPushButton( QIcon::fromTheme(QStringLiteral("configure")), i18n("Con&figure..."), gbWidgetStyle );
     pbConfigStyle->setEnabled( false );
     hbLayout->addWidget( pbConfigStyle );
 
