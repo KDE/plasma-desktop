@@ -167,6 +167,7 @@ FocusScope {
                     if (currentIndex != -1) {
                         if (childDialog) {
                             if (currentItem && currentItem.hasChildren) {
+                                childDialog.mainItem.width = itemList.minimumWidth;
                                 childDialog.model = model.modelForRow(currentIndex);
                                 childDialog.visualParent = listView.currentItem;
                             } else {
