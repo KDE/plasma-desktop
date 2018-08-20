@@ -29,6 +29,7 @@ Positioner::Positioner(QObject *parent): QAbstractItemModel(parent)
 , m_enabled(false)
 , m_folderModel(nullptr)
 , m_perStripe(0)
+, m_lastRow(-1)
 , m_ignoreNextTransaction(false)
 , m_pendingPositions(false)
 , m_updatePositionsTimer(new QTimer(this))
@@ -378,7 +379,6 @@ void Positioner::move(const QVariantList &moves) {
     }
 
     const int oldCount = rowCount();
-    int newLast = 0;
 
     for (int i = 0; i < fromIndices.count(); ++i)
     {
@@ -407,33 +407,22 @@ void Positioner::move(const QVariantList &moves) {
 
         toIndices[i] = to;
 
-        if (to > newLast) {
-            newLast = to;
+        if (!toIndices.contains(from)) {
+            m_proxyToSource.remove(from);
+        }
+
+        updateMaps(to, sourceRow);
+
+        const QModelIndex &fromIdx = index(from, 0);
+        emit dataChanged(fromIdx, fromIdx);
+
+        if (to < oldCount) {
+            const QModelIndex &toIdx = index(to, 0);
+            emit dataChanged(toIdx, toIdx);
         }
     }
 
-    const int newCount = newLast + 1;
-    QModelIndexList changed;
-
-    auto doUpdateMaps = [&]() {
-        for (int i = 0; i < fromIndices.count(); ++i)
-        {
-            const int from = fromIndices[i];
-            const int to = toIndices[i];
-            const int sourceRow = sourceRows[i];
-
-            if (!toIndices.contains(from)) {
-                m_proxyToSource.remove(from);
-            }
-
-            updateMaps(to, sourceRow);
-            changed.append(index(from, 0));
-
-            if (to < oldCount) {
-               changed.append(index(to, 0));
-            }
-        }
-    };
+    const int newCount = rowCount();
 
     if (newCount > oldCount) {
         if (m_beginInsertRowsCalled) {
@@ -441,18 +430,12 @@ void Positioner::move(const QVariantList &moves) {
             m_beginInsertRowsCalled = false;
         }
         beginInsertRows(QModelIndex(), oldCount, newCount - 1);
-        doUpdateMaps();
         endInsertRows();
     }
 
     if (newCount < oldCount) {
         beginRemoveRows(QModelIndex(), newCount, oldCount - 1);
-        doUpdateMaps();
         endRemoveRows();
-    }
-
-    for (auto idx : changed) {
-        emit dataChanged(idx, idx);
     }
 
     m_updatePositionsTimer->start();
@@ -625,6 +608,7 @@ void Positioner::sourceRowsAboutToBeRemoved(const QModelIndex &parent, int first
         m_proxyToSource = newProxyToSource;
         m_sourceToProxy = newSourceToProxy;
 
+        m_lastRow = -1;
         int newLast = lastRow();
 
         if (oldLast > newLast) {
@@ -733,6 +717,7 @@ void Positioner::updateMaps(int proxyIndex, int sourceIndex)
 {
     m_proxyToSource.insert(proxyIndex, sourceIndex);
     m_sourceToProxy.insert(sourceIndex, proxyIndex);
+    m_lastRow = -1;
 }
 
 int Positioner::firstRow() const
@@ -750,9 +735,13 @@ int Positioner::firstRow() const
 int Positioner::lastRow() const
 {
     if (!m_proxyToSource.isEmpty()) {
-        QList<int> keys(m_proxyToSource.keys());
-        qSort(keys);
-        return keys.last();
+        if (m_lastRow != -1) {
+            return m_lastRow;
+        } else {
+            QList<int> keys(m_proxyToSource.keys());
+            qSort(keys);
+            return keys.last();
+        }
     }
 
     return 0;
