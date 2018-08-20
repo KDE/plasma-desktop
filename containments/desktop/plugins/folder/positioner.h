@@ -126,6 +126,8 @@ class FOLDERPLUGIN_TESTS_EXPORT Positioner : public QAbstractItemModel
 
         int m_perStripe;
 
+        int m_lastRow;
+
         QModelIndexList m_pendingChanges;
         bool m_ignoreNextTransaction;
 
