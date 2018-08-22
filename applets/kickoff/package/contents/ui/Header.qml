@@ -35,21 +35,33 @@ Item {
         id: kuser
     }
 
-    state: (query !== "") ? "query" : "hint"
+    state: "name"
 
-    Timer {
-        id: labelTimer
-        interval: 8000
-        repeat: true
-        running: (header.state === "hint" || header.state === "info") && plasmoid.expanded && (header.query === "")
-        onTriggered: {
-            if (header.state == "info") {
-                header.state = "hint";
-            } else if (header.state == "hint") {
-                header.state = "info";
+    states: [
+        State {
+            name: "name"
+            PropertyChanges {
+                target: nameLabel
+                opacity: 1
+            }
+            PropertyChanges {
+                target: infoLabel
+                opacity: 0
+            }
+        },
+        State {
+            name: "info"
+            PropertyChanges {
+                target: nameLabel
+                opacity: 0
+            }
+            PropertyChanges {
+                target: infoLabel
+                opacity: 0.4
             }
         }
-    }
+    ] // states
+
 
     Image {
         id: faceIcon
@@ -103,145 +115,74 @@ Item {
         text: kuser.fullName
         elide: Text.ElideRight
         horizontalAlignment: Text.AlignLeft
-        verticalAlignment: Text.AlignTop
-        height: paintedHeight
+        verticalAlignment: Text.AlignBottom
+
+        Behavior on opacity { NumberAnimation { duration:  units.longDuration; easing.type: Easing.InOutQuad; } }
 
         anchors {
             left: faceIcon.right
-            top: faceIcon.top
+            bottom: queryField.top
             right: parent.right
             leftMargin: units.gridUnit
             rightMargin: units.gridUnit
         }
     }
 
-    Item {
-        id: searchWidget
+    PlasmaExtras.Heading {
+        id: infoLabel
 
-        property int animationDuration: units.longDuration
-        property real normalOpacity: .6
-        property int yOffset: height / 2
+        level: 5
+        opacity: 0
+        text: kuser.os != "" ? i18n("%2@%3 (%1)", kuser.os, kuser.loginName, kuser.host) : i18n("%1@%2", kuser.loginName, kuser.host)
+        elide: Text.ElideRight
+        horizontalAlignment: Text.AlignLeft
+        verticalAlignment: Text.AlignBottom
 
-        height: infoLabel.height
+        Behavior on opacity { NumberAnimation { duration:  units.longDuration; easing.type: Easing.InOutQuad; } }
+
         anchors {
-            left: nameLabel.left
-            top: nameLabel.bottom
-            right: nameLabel.right
-        }
-
-        PlasmaComponents.Label {
-            id: infoLabel
-            anchors {
-                left: parent.left
-                right: parent.right
-            }
-            horizontalAlignment: Text.AlignLeft
-            verticalAlignment: Text.AlignBottom
-            text: kuser.os != "" ? i18n("%2@%3 (%1)", kuser.os, kuser.loginName, kuser.host) : i18n("%1@%2", kuser.loginName, kuser.host)
-            elide: Text.ElideRight
-
-            Behavior on opacity { NumberAnimation { duration:  searchWidget.animationDuration; easing.type: Easing.InOutQuad; } }
-            Behavior on y { NumberAnimation { duration: searchWidget.animationDuration; easing.type: Easing.InOutQuad; } }
-        }
-
-        PlasmaComponents.Label {
-            id: hintLabel
-            anchors {
-                left: parent.left
-                right: parent.right
-            }
-            verticalAlignment: Text.AlignBottom
-            text: i18nc("Type is a verb here, not a noun", "Type to search...")
-            Behavior on opacity { NumberAnimation { duration: searchWidget.animationDuration; easing.type: Easing.InOutQuad; } }
-            Behavior on y { NumberAnimation { duration: searchWidget.animationDuration; easing.type: Easing.InOutQuad; } }
-        }
-
-
-        MouseArea {
-            anchors.fill: parent
-            cursorShape: header.state === "hint" ? Qt.PointingHandCursor : Qt.ArrowCursor
-            acceptedButtons: Qt.LeftButton
-            enabled: header.state === "hint"
-            onClicked: {
-                root.previousState = "Normal"
-                root.state = "Search"
-                header.state = "query"
-                queryField.forceActiveFocus()
-            }
-
-            PlasmaComponents.TextField {
-                id: queryField
-                anchors.fill: parent
-                clearButtonShown: true
-                visible: opacity > 0
-                placeholderText: i18nc("Type is a verb here, not a noun", "Type to search...")
-                Behavior on opacity { NumberAnimation { duration: searchWidget.animationDuration / 4 } }
-
-                onTextChanged: {
-                    if (root.state != "Search") {
-                        root.previousState = root.state;
-                        root.state = "Search";
-                    }
-                    if (text == "") {
-                        root.state = root.previousState;
-                        header.state = "info";
-                    } else {
-                        header.state = "query";
-                    }
-                }
-            }
+            left: faceIcon.right
+            bottom: queryField.top
+            right: parent.right
+            leftMargin: units.gridUnit
+            rightMargin: units.gridUnit
         }
     }
 
-    states: [
-        State {
-            name: "info"
-            PropertyChanges {
-                target: infoLabel
-                opacity: searchWidget.normalOpacity
-                y: 0
+    // Show the info instead of the user's name when hovering over it
+    MouseArea {
+        anchors.fill: nameLabel
+        hoverEnabled: true
+        onEntered: {
+            header.state = "info"
+        }
+        onExited: {
+            header.state = "name"
+        }
+    }
+
+    PlasmaComponents.TextField {
+        id: queryField
+
+        placeholderText: i18n("Search...")
+        clearButtonShown: true
+
+        onTextChanged: {
+            if (root.state != "Search") {
+                root.previousState = root.state;
+                root.state = "Search";
             }
-            PropertyChanges {
-                target: hintLabel
-                opacity: 0
-                y: searchWidget.yOffset
-            }
-            PropertyChanges {
-                target: queryField
-                opacity: 0
-            }
-        },
-        State {
-            name: "hint"
-            PropertyChanges {
-                target: infoLabel
-                y: -searchWidget.yOffset
-                opacity: 0
-            }
-            PropertyChanges {
-                target: hintLabel
-                y: 0
-                opacity: searchWidget.normalOpacity
-            }
-            PropertyChanges {
-                target: queryField
-                opacity: 0
-            }
-        },
-        State {
-            name: "query"
-            PropertyChanges {
-                target: infoLabel
-                opacity: 0
-            }
-            PropertyChanges {
-                target: hintLabel
-                opacity: 0
-            }
-            PropertyChanges {
-                target: queryField
-                opacity: 1
+            if (text == "") {
+                root.state = root.previousState;
             }
         }
-    ] // states
+
+        anchors {
+            left: faceIcon.right
+            bottom: faceIcon.bottom
+            right: parent.right
+            leftMargin: units.gridUnit
+            rightMargin: units.gridUnit
+        }
+    }
 }
