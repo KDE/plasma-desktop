@@ -43,6 +43,7 @@ int main(int argc, char** argv)
 
         KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::SimpleConfig), "Icons");
         config.writeEntry("Theme", themeName);
+        config.sync();
     }
 
     KIconTheme::reconfigure();
