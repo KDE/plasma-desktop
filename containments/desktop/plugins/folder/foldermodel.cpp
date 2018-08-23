@@ -1772,8 +1772,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
 
         // Properties
         if (KPropertiesDialog::canDisplay(items)) {
-            QAction *act = new QAction(menu);
-            act->setText(i18n("&Properties"));
+            QAction *act = new QAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("&Properties"), menu);
             QObject::connect(act, &QAction::triggered, this, &FolderModel::openPropertiesDialog);
             menu->addAction(act);
         }
