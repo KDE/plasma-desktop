@@ -208,7 +208,6 @@ Item {
 
         Item {
             id: header
-            property bool showingSearch: false
             Layout.fillWidth: true
             Layout.alignment: Qt.AlignVCenter
             PlasmaExtras.Title {
@@ -219,24 +218,6 @@ Item {
                 elide: Text.ElideRight
             }
         }
-        
-        PlasmaComponents.ToolButton {
-            id: searchButton
-            iconSource: "edit-find"
-
-            checkable: true
-            onClicked: header.showingSearch = !header.showingSearch
-            checked: header.showingSearch
-            onCheckedChanged: {
-                if (!checked) {
-                    searchInput.text = "";
-                    newSearchRow.height = 0;
-                    widgetExplorer.widgetsModel.searchTerm = "";
-                } else {
-                     newSearchRow.height = parent.height;
-            }
-        }
-    }
 
         PlasmaComponents.ToolButton {
             id: categoryButton
@@ -254,7 +235,7 @@ Item {
             onClicked: main.closed()
         }
     }
-    
+
         RowLayout {
             id: newSearchRow
             anchors.top: topBar.bottom
@@ -263,7 +244,6 @@ Item {
 
             PlasmaComponents.TextField {
                 id: searchInput
-                visible: header.showingSearch
                 Layout.fillWidth: true
                 clearButtonShown: true
                 placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Search...")
