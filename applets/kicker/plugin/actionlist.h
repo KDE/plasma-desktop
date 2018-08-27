@@ -18,6 +18,9 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
+#ifndef ACTIONLIST_H
+#define ACTIONLIST_H
+
 #include <QVariant>
 
 #include <KService>
@@ -68,3 +71,5 @@ bool handleAppstreamActions(const QString &actionId, const QVariant &argument);
 QString resolvedServiceEntryPath(const KService::Ptr &service);
 
 }
+
+#endif

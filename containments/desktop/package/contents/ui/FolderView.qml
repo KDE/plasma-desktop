@@ -346,7 +346,7 @@ FocusScope {
 
             // Moving from an item to its preview popup dialog doesn't unset hoveredItem
             // even though the cursor has left it, so we need to check whether the click
-            // actually occured inside the item we expect it in before going ahead. If it
+            // actually occurred inside the item we expect it in before going ahead. If it
             // didn't, clean up (e.g. dismissing the dialog as a side-effect of unsetting
             // hoveredItem) and abort.
             if (pos.x < 0 || pos.x > hoveredItem.width || pos.y < 0 || pos.y > hoveredItem.height) {

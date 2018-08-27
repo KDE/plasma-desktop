@@ -118,7 +118,7 @@ private:
     // This index refers to the CursorThemeModel, not the proxy or the view
     QPersistentModelIndex m_appliedIndex;
 
-/** Holds the last size that was choosen by the user. Example: The user chooses
+/** Holds the last size that was chosen by the user. Example: The user chooses
     theme1 which provides the sizes 24 and 36. He chooses 36. preferredSize gets
     set to 36. Now, he switchs to theme2 which provides the sizes 30 and 40.
     preferredSize still is 36, so the UI will default to 40, which is next to 36.

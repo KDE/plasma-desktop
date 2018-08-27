@@ -540,7 +540,7 @@ void CGroupList::clear()
         itsGroups.append(itsSpecialGroups[CGroupListItem::PERSONAL]);
         itsGroups.append(itsSpecialGroups[CGroupListItem::SYSTEM]);
     }
-    // Dont add 'Unclassif' until we have some user groups
+    // Don't add 'Unclassif' until we have some user groups
     endResetModel();
 }
 

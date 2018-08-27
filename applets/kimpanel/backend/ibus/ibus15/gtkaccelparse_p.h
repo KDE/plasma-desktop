@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef GDKACCELPARSE_P_H
-#define GDKACCELPARSE_P_H
+#ifndef GTKACCELPARSE_P_H
+#define GTKACCELPARSE_P_H
 
 #include <glib.h>
 

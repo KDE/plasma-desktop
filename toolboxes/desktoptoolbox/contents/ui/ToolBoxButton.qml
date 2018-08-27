@@ -80,7 +80,7 @@ Item {
     height: backgroundFrame.height + backgroundFrame.height % 2
 
     //x and y default to 0, so top left would be correct
-    //If the position is anything else it will updated via onXChanged during intialisation
+    //If the position is anything else it will updated via onXChanged during initialization
     state: "topleft"
 
     onXChanged: stateTimer.restart()

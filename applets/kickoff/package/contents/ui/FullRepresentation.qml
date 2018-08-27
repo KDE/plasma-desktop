@@ -613,7 +613,7 @@ Item {
                 target: tabBar
                 //Set the opacity and NOT the visibility, as visibility is recursive
                 //and this binding would be executed also on popup show/hide
-                //as recomended by the docs: http://doc.qt.io/qt-5/qml-qtquick-item.html#visible-prop
+                //as recommended by the docs: http://doc.qt.io/qt-5/qml-qtquick-item.html#visible-prop
                 //plus, it triggers https://bugreports.qt.io/browse/QTBUG-66907
                 //in which a mousearea may think it's under the mouse while it isn't
                 opacity: tabBar.count > 1 ? 1 : 0

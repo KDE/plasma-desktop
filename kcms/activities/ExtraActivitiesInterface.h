@@ -18,8 +18,8 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef EXTRA_ACTIVITES_INTERFACE_H
-#define EXTRA_ACTIVITES_INTERFACE_H
+#ifndef EXTRA_ACTIVITIES_INTERFACE_H
+#define EXTRA_ACTIVITIES_INTERFACE_H
 
 #include <QAbstractListModel>
 
@@ -47,4 +47,4 @@ private:
     D_PTR;
 };
 
-#endif // EXTRA_ACTIVITES_INTERFACE_H
+#endif // EXTRA_ACTIVITIES_INTERFACE_H

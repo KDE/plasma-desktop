@@ -22,8 +22,6 @@
 #include "positionertest.h"
 
 #include <QTest>
-
-#include <QTest>
 #include <QTemporaryDir>
 #include <QSignalSpy>
 

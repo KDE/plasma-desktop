@@ -18,6 +18,9 @@
  *
  */
 
+#ifndef KDELIBS4CONFIG_H
+#define KDELIBS4CONFIG_H
+
 #include <KSharedConfig>
 #include <KConfigGroup>
 #include <Kdelibs4Migration>
@@ -39,3 +42,4 @@ public:
 
 };
 
+#endif

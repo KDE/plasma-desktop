@@ -113,7 +113,7 @@ void TouchpadConfigLibinput::load()
 
     if (!m_backend->getConfig()) {
         m_errorMessage->setMessageType(KMessageWidget::Error);
-        m_errorMessage->setText(i18n("Error while loading values. See logs for more informations. Please restart this configuration module."));
+        m_errorMessage->setText(i18n("Error while loading values. See logs for more information. Please restart this configuration module."));
         m_errorMessage->animatedShow();
     } else {
         if (!m_backend->touchpadCount()) {
@@ -129,7 +129,7 @@ void TouchpadConfigLibinput::save()
 {
     if (!m_backend->applyConfig()) {
         m_errorMessage->setMessageType(KMessageWidget::Error);
-        m_errorMessage->setText(i18n("Not able to save all changes. See logs for more informations. Please restart this configuration module and try again."));
+        m_errorMessage->setText(i18n("Not able to save all changes. See logs for more information. Please restart this configuration module and try again."));
         m_errorMessage->animatedShow();
     } else {
         hideErrorMessage();

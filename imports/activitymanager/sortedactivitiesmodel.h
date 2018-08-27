@@ -17,8 +17,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef SORTED_ACTIVITY_MODEL
-#define SORTED_ACTIVITY_MODEL
+#ifndef SORTED_ACTIVITIES_MODEL_H
+#define SORTED_ACTIVITIES_MODEL_H
 
 // Qt
 #include <QSortFilterProxyModel>
@@ -90,5 +90,5 @@ private:
     QHash<QString, QVector<WId>> m_activitiesWindows;
 };
 
-#endif // SORTED_ACTIVITY_MODEL
+#endif // SORTED_ACTIVITIES_MODEL_H
 

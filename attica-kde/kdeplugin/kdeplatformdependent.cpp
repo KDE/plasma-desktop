@@ -27,7 +27,6 @@
 #include "attica_plugin_debug.h"
 
 #include <KConfigGroup>
-#include "attica_plugin_debug.h"
 #include <KWallet/KWallet>
 #include <kcmultidialog.h>
 #include <KLocalizedString>

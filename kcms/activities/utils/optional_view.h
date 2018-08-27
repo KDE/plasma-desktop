@@ -18,8 +18,8 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef UTILS_OPTIONAL_H
-#define UTILS_OPTIONAL_H
+#ifndef UTILS_OPTIONAL_VIEW_H
+#define UTILS_OPTIONAL_VIEW_H
 
 namespace kamd {
 namespace utils {
@@ -75,5 +75,5 @@ optional_view<T> make_optional_view(const T &value)
 } // namespace kamd
 
 
-#endif // UTILS_OPTIONAL_H
+#endif // UTILS_OPTIONAL_VIEW_H
 

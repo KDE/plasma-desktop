@@ -17,8 +17,8 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef SHORTCUTS_MODULE_H
-#define SHORTCUTS_MODULE_H
+#ifndef GLOBAL_SHORTCUTS_H
+#define GLOBAL_SHORTCUTS_H
 
 #include <kcmodule.h>
 #include <QHash>

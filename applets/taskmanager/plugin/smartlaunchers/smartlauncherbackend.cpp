@@ -195,7 +195,7 @@ void Backend::update(const QString &uri, const QMap<QString, QVariant> &properti
     updateLauncherProperty(storageId, properties, QStringLiteral("count"), &foundEntry->count, &Backend::countChanged);
     updateLauncherProperty(storageId, properties, QStringLiteral("count-visible"), &foundEntry->countVisible, &Backend::countVisibleChanged);
 
-    // the API gives us progress as 0..1 double but we'll use percent to avoid unneccessary
+    // the API gives us progress as 0..1 double but we'll use percent to avoid unnecessary
     // changes when it just changed a fraction of a percent, hence not using our fancy updateLauncherProperty method
     auto foundProgress = properties.constFind(QStringLiteral("progress"));
     if (foundProgress != propertiesEnd) {

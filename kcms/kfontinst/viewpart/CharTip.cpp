@@ -40,7 +40,6 @@
 #include <QBoxLayout>
 #include <QEvent>
 #include <QResizeEvent>
-#include <QApplication>
 #include <QDesktopWidget>
 
 namespace KFI

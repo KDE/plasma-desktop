@@ -17,8 +17,8 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef __SCHEMEPREVIEWSET_H__
-#define __SCHEMEPREVIEWSET_H__
+#ifndef __SETPREVIEWWIDGET_H__
+#define __SETPREVIEWWIDGET_H__
 
 #include <QFrame>
 #include <QPalette>

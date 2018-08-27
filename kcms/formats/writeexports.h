@@ -15,6 +15,9 @@
  *  along with this program; if not, write to the Free Software
  */
 
+#ifndef WRITEEXPORTS_H
+#define WRITEEXPORTS_H
+
 #include <QDebug>
 #include <QFile>
 #include <QStandardPaths>
@@ -101,3 +104,5 @@ void writeExports()
     out << script;
     file.close();
 }
+
+#endif

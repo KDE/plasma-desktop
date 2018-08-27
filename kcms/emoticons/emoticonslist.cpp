@@ -28,7 +28,6 @@
 
 #include <KGlobal>
 #include <KMessageBox>
-#include <QIcon>
 #include <KAboutData>
 #include <KStandardDirs>
 #include <KFileDialog>

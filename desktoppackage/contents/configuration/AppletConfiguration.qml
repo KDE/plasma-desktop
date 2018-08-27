@@ -248,7 +248,7 @@ Rectangle {
                         return;
                     }
 
-                    // when an item withing ScrollView has active focus the ScrollView,
+                    // when an item within ScrollView has active focus the ScrollView,
                     // as FocusScope, also has it, so we only scroll in this case
                     if (!scroll.activeFocus) {
                         return;

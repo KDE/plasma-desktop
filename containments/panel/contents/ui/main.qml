@@ -96,8 +96,8 @@ function addApplet(applet, x, y) {
         // FIXME TODO: This is a real-world fix to produce a sensible initial position for
         // launcher icons added by launcher menu applets. The basic approach has been used
         // since Plasma 1. However, "add launcher to X" is a generic-enough concept and
-        // frequent-enough occurence that we'd like to abstract it further in the future
-        // and get rid of the uglyness of parties external to the containment adding applets
+        // frequent-enough occurrence that we'd like to abstract it further in the future
+        // and get rid of the ugliness of parties external to the containment adding applets
         // of a specific type, and the containment caring about the applet type. In a better
         // system the containment would be informed of requested launchers, and determine by
         // itself what it wants to do with that information.
