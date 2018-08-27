@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.2
+import QtQuick 2.7
 import QtQuick.Controls 1.1
 
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -204,11 +204,12 @@ Item {
             right: parent.right
         }
 
+
+
         Item {
             id: header
             property bool showingSearch: false
             Layout.fillWidth: true
-            Layout.minimumHeight: Math.max(heading.height, searchInput.height)
             Layout.alignment: Qt.AlignVCenter
             PlasmaExtras.Title {
                 id: heading
@@ -216,26 +217,9 @@ Item {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Widgets")
                 width: parent.width
                 elide: Text.ElideRight
-                visible: !header.showingSearch
-            }
-            PlasmaComponents.TextField {
-                id: searchInput
-                width: parent.width
-                clearButtonShown: true
-                anchors.verticalCenter: parent.verticalCenter
-                placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Search...")
-                onTextChanged: {
-                    list.positionViewAtBeginning()
-                    list.currentIndex = -1
-                    widgetExplorer.widgetsModel.searchTerm = text
-                    header.showingSearch = (text != "");
-                }
-
-                Component.onCompleted: forceActiveFocus()
-                visible: header.showingSearch
             }
         }
-
+        
         PlasmaComponents.ToolButton {
             id: searchButton
             iconSource: "edit-find"
@@ -246,9 +230,13 @@ Item {
             onCheckedChanged: {
                 if (!checked) {
                     searchInput.text = "";
-                }
+                    newSearchRow.height = 0;
+                    widgetExplorer.widgetsModel.searchTerm = "";
+                } else {
+                     newSearchRow.height = parent.height;
             }
         }
+    }
 
         PlasmaComponents.ToolButton {
             id: categoryButton
@@ -266,6 +254,28 @@ Item {
             onClicked: main.closed()
         }
     }
+    
+        RowLayout {
+            id: newSearchRow
+            anchors.top: topBar.bottom
+            anchors.topMargin: units.smallSpacing
+            width: topBar.width
+
+            PlasmaComponents.TextField {
+                id: searchInput
+                visible: header.showingSearch
+                Layout.fillWidth: true
+                clearButtonShown: true
+                placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Search...")
+                onTextChanged: {
+                    list.positionViewAtBeginning()
+                    list.currentIndex = -1
+                    widgetExplorer.widgetsModel.searchTerm = text
+                }
+
+                 Component.onCompleted: forceActiveFocus()
+                }
+            }
 
     Timer {
         id: setModelTimer
@@ -276,12 +286,12 @@ Item {
 
     PlasmaExtras.ScrollArea {
         anchors {
-            top: topBar.bottom
+            top: newSearchRow.bottom 
             left: parent.left
             right: parent.right
             bottom: bottomBar.top
-            topMargin: units.smallSpacing
             bottomMargin: units.smallSpacing
+            topMargin: units.smallSpacing
         }
 
         verticalScrollBarPolicy: Qt.ScrollBarAlwaysOn
@@ -386,4 +396,3 @@ Item {
         */
     }
 }
-
