@@ -65,7 +65,7 @@ find_package(KSMServerDBusInterface CONFIG REQUIRED)
 find_package(KF5ItemModels CONFIG REQUIRED)
 find_package(KF5Emoticons CONFIG REQUIRED)
 
-find_package(AppStreamQt 0.10.4)
+find_package(AppStreamQt 0.12.0)
 set_package_properties(AppStreamQt PROPERTIES DESCRIPTION "Appstream integration"
                        TYPE RECOMMENDED
                        PURPOSE "Needed to allow appstream integration from application menus"
