@@ -81,9 +81,6 @@ DragDrop.DropArea {
     TrashPrivate.DirModel {
         id: dirModel
         url: "trash:/"
-        onCountChanged: {
-            plasmoid.action("empty").enabled = count > 0;
-        }
     }
 
     function action_open() {
@@ -102,7 +99,9 @@ DragDrop.DropArea {
         plasmoid.removeAction("configure");
         plasmoid.setAction("open", i18nc("a verb", "Open"),"document-open");
         plasmoid.setAction("empty",i18nc("a verb", "Empty"),"trash-empty");
-        plasmoid.action("empty").enabled = dirModel.count > 0;
+        plasmoid.action("empty").enabled = Qt.binding(function() {
+            return dirModel.count > 0;
+        });
 
         if (KCMShell.authorize("kcmtrash.desktop").length > 0) {
             plasmoid.setAction("openkcm", i18n("Trash Settings..."), "configure");
