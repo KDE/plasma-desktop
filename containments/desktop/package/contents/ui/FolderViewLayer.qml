@@ -109,6 +109,10 @@ Item {
             plasmoid.configuration.alignment = alignment;
         }
 
+        onPreviewsChanged: {
+            plasmoid.configuration.previews = previews;
+        }
+
         onLockedChanged: {
             plasmoid.configuration.locked = locked;
         }
@@ -132,6 +136,7 @@ Item {
         Component.onCompleted: {
             arrangement = plasmoid.configuration.arrangement;
             alignment = plasmoid.configuration.alignment;
+            previews = plasmoid.configuration.previews;
             locked = plasmoid.configuration.locked;
             sortMode = plasmoid.configuration.sortMode;
             sortDesc = plasmoid.configuration.sortDesc;

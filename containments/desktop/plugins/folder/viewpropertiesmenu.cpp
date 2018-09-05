@@ -94,6 +94,9 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
         m_iconSize->addAction(action);
     }
 
+    m_previews = m_menu->addAction(QIcon::fromTheme(QStringLiteral("view-preview")), i18n("Show Previews"), this, &ViewPropertiesMenu::previewsChanged);
+    m_previews->setCheckable(true);
+
     m_locked = m_menu->addAction(i18n("Locked"), this, SIGNAL(lockedChanged()));
     m_locked->setCheckable(true);
 }
@@ -183,6 +186,18 @@ void ViewPropertiesMenu::setAlignment(int alignment)
                 break;
             }
         }
+    }
+}
+
+bool ViewPropertiesMenu::previews() const
+{
+    return m_previews->isChecked();
+}
+
+void ViewPropertiesMenu::setPreviews(bool previews)
+{
+    if (m_previews->isChecked() != previews) {
+        m_previews->setChecked(previews);
     }
 }
 

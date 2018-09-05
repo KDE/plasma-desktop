@@ -38,6 +38,7 @@ class FOLDERPLUGIN_TESTS_EXPORT ViewPropertiesMenu : public QObject
 
     Q_PROPERTY(int arrangement READ arrangement WRITE setArrangement NOTIFY arrangementChanged)
     Q_PROPERTY(int alignment READ alignment WRITE setAlignment NOTIFY alignmentChanged)
+    Q_PROPERTY(bool previews READ previews WRITE setPreviews NOTIFY previewsChanged)
     Q_PROPERTY(bool locked READ locked WRITE setLocked NOTIFY lockedChanged)
     Q_PROPERTY(int sortMode READ sortMode WRITE setSortMode NOTIFY sortModeChanged)
     Q_PROPERTY(bool sortDesc READ sortDesc WRITE setSortDesc NOTIFY sortDescChanged)
@@ -65,6 +66,9 @@ class FOLDERPLUGIN_TESTS_EXPORT ViewPropertiesMenu : public QObject
         int alignment() const;
         void setAlignment(int alignment);
 
+        bool previews() const;
+        void setPreviews(bool previews);
+
         bool locked() const;
         void setLocked(bool locked);
 
@@ -86,6 +90,7 @@ class FOLDERPLUGIN_TESTS_EXPORT ViewPropertiesMenu : public QObject
         void showIconSizeActionsChanged();
         void arrangementChanged() const;
         void alignmentChanged() const;
+        void previewsChanged() const;
         void lockedChanged() const;
         void sortModeChanged() const;
         void sortDescChanged() const;
@@ -103,6 +108,7 @@ class FOLDERPLUGIN_TESTS_EXPORT ViewPropertiesMenu : public QObject
         QActionGroup *m_iconSize;
         QAction *m_sortDesc;
         QAction *m_sortDirsFirst;
+        QAction *m_previews;
         QAction *m_locked;
 
 };
