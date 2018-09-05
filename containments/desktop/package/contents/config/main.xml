@@ -91,8 +91,8 @@
       <default>true</default>
     </entry>
     <entry name="previewPlugins" type="StringList">
-      <label>List of id's of the thumbnail preview plugins to use in Folder View.</label>
-      <default>imagethumbnail,jpegthumbnail</default>
+      <label>List of ids of the thumbnail preview plugins to use in Folder View. If empty, uses a default set of thumbnailers (cf. KIO::PreviewJob::defaultPlugins)</label>
+      <default></default>
     </entry>
     <entry name="viewMode" type="Int">
       <label>The Folder View view mode (used only by the widget full represntation): 0 = Grid, 1 = List</label>

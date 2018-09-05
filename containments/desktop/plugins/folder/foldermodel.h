@@ -343,7 +343,11 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
         bool m_sortDirsFirst;
         bool m_parseDesktopFiles;
         bool m_previews;
+        // An empty previewPlugin list means use default.
+        // We don't want to leak that fact to the QML side, however, so the property stays empty
+        // and internally we operate on effectivePreviewPlugins instead.
         QStringList m_previewPlugins;
+        QStringList m_effectivePreviewPlugins;
         FilterMode m_filterMode;
         QString m_filterPattern;
         bool m_filterPatternMatchAll;

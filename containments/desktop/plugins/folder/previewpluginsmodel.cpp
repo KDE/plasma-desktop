@@ -22,6 +22,10 @@
 
 #include <KServiceTypeTrader>
 
+#include <KIO/PreviewJob>
+
+#include <algorithm>
+
 static bool lessThan(const KService::Ptr &a, const KService::Ptr &b)
 {
     return QString::localeAwareCompare(a->name(), b->name()) < 0;
@@ -92,9 +96,14 @@ int PreviewPluginsModel::indexOfPlugin(const QString &name) const
 
 void PreviewPluginsModel::setCheckedPlugins(const QStringList &list)
 {
+    QStringList plugins = list;
+    if (plugins.isEmpty()) {
+        plugins = KIO::PreviewJob::defaultPlugins();
+    }
+
     m_checkedRows = QVector<bool>(m_plugins.size(), false);
 
-    foreach (const QString &name, list) {
+    for (const QString &name : plugins) {
         const int row = indexOfPlugin(name);
         if (row != -1) {
             m_checkedRows[row] = true;
@@ -114,5 +123,15 @@ QStringList PreviewPluginsModel::checkedPlugins() const
             list.append(m_plugins.at(i)->desktopEntryName());
         }
     }
+
+    const QStringList defaultPlugins = KIO::PreviewJob::defaultPlugins();
+
+    // If the list of checked plugins is the default set, return an empty list
+    // which denotes the default set.
+    // This ensures newly installed thumbnails are always automatically enabled.
+    if (std::is_permutation(list.constBegin(), list.constEnd(), defaultPlugins.begin())) {
+        return QStringList();
+    }
+
     return list;
 }

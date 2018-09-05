@@ -70,6 +70,7 @@
 #include <KDirModel>
 #include <KIO/CopyJob>
 #include <KIO/Job>
+#include <KIO/PreviewJob>
 #include <KProtocolInfo>
 #include <KRun>
 
@@ -513,7 +514,7 @@ void FolderModel::setViewAdapter(QObject* adapter)
         if (m_viewAdapter && !m_previewGenerator) {
             m_previewGenerator = new KFilePreviewGenerator(abstractViewAdapter, this);
             m_previewGenerator->setPreviewShown(m_previews);
-            m_previewGenerator->setEnabledPlugins(m_previewPlugins);
+            m_previewGenerator->setEnabledPlugins(m_effectivePreviewPlugins);
         }
 
         emit viewAdapterChanged();
@@ -545,15 +546,23 @@ QStringList FolderModel::previewPlugins() const
 
 void FolderModel::setPreviewPlugins(const QStringList& previewPlugins)
 {
-    if (m_previewPlugins != previewPlugins) {
-        m_previewPlugins = previewPlugins;
+    QStringList effectivePlugins = previewPlugins;
+    if (effectivePlugins.isEmpty()) {
+        effectivePlugins = KIO::PreviewJob::defaultPlugins();
+    }
+
+    if (m_effectivePreviewPlugins != effectivePlugins) {
+        m_effectivePreviewPlugins = effectivePlugins;
 
         if (m_previewGenerator) {
             m_previewGenerator->setPreviewShown(false);
-            m_previewGenerator->setEnabledPlugins(m_previewPlugins);
+            m_previewGenerator->setEnabledPlugins(m_effectivePreviewPlugins);
             m_previewGenerator->setPreviewShown(true);
         }
+    }
 
+    if (m_previewPlugins != previewPlugins) {
+        m_previewPlugins = previewPlugins;
         emit previewPluginsChanged();
     }
 }
