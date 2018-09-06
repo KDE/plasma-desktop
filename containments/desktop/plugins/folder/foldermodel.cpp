@@ -1437,8 +1437,8 @@ bool FolderModel::lessThan(const QModelIndex &left, const QModelIndex &right) co
                 break;
             }
         case KDirModel::ModifiedTime: {
-                const QDateTime leftTime = leftItem.time(KFileItem::ModificationTime);
-                const QDateTime rightTime = rightItem.time(KFileItem::ModificationTime);
+                const long long leftTime = leftItem.entry().numberValue(KIO::UDSEntry::UDS_MODIFICATION_TIME, -1);
+                const long long rightTime = rightItem.entry().numberValue(KIO::UDSEntry::UDS_MODIFICATION_TIME, -1);
                 if (leftTime < rightTime)
                     result = -1;
                 else if (leftTime > rightTime)
