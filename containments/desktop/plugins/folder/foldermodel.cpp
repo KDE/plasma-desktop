@@ -1257,6 +1257,8 @@ void FolderModel::selectionChanged(const QItemSelection &selected, const QItemSe
             delete m_dragImages.take(idx.row());
         }
     }
+
+    updateActions();
 }
 
 bool FolderModel::isBlank(int row) const
@@ -1613,19 +1615,52 @@ QObject* FolderModel::newMenu() const
 
 void FolderModel::updateActions()
 {
+    const QModelIndexList indexes = m_selectionModel->selectedIndexes();
+
+    KFileItemList items;
+    QList<QUrl> urls;
+    bool hasRemoteFiles = false;
+    bool isTrashLink = false;
+    const bool isTrash = (resolvedUrl().scheme() == QLatin1String("trash"));
+
+    if (indexes.isEmpty()) {
+        items << rootItem();
+    } else {
+        items.reserve(indexes.count());
+        urls.reserve(indexes.count());
+        for (const QModelIndex &index : indexes) {
+            KFileItem item = itemForIndex(index);
+            if (!item.isNull()) {
+                hasRemoteFiles |= item.localPath().isEmpty();
+                items.append(item);
+                urls.append(item.url());
+            }
+        }
+    }
+
+    KFileItemListProperties itemProperties(items);
+    // Check if we're showing the menu for the trash link
+    if (items.count() == 1 && items.at(0).isDesktopFile()) {
+        KDesktopFile file(items.at(0).localPath());
+        if (file.hasLinkType() && file.readUrl() == QLatin1String("trash:/")) {
+            isTrashLink = true;
+        }
+    }
+
     if (m_newMenu) {
         m_newMenu->checkUpToDate();
         m_newMenu->setPopupFiles(m_dirModel->dirLister()->url());
         // we need to set here as well, when the menu is shown via AppletInterface::eventFilter
         m_menuPosition = QCursor::pos();
+
+        if (QAction *newMenuAction = m_actionCollection.action(QStringLiteral("newMenu"))) {
+            newMenuAction->setEnabled(itemProperties.supportsWriting());
+            newMenuAction->setVisible(!isTrash);
+        }
     }
 
-    const bool isTrash = (resolvedUrl().scheme() == QLatin1String("trash"));
-
-    QAction *emptyTrash = m_actionCollection.action(QStringLiteral("emptyTrash"));
-
-    if (emptyTrash) {
-        if (isTrash) {
+    if (QAction *emptyTrash = m_actionCollection.action(QStringLiteral("emptyTrash"))) {
+        if (isTrash || isTrashLink) {
             emptyTrash->setVisible(true);
             emptyTrash->setEnabled(!isTrashEmpty());
         } else {
@@ -1637,9 +1672,20 @@ void FolderModel::updateActions()
         restoreFromTrash->setVisible(isTrash);
     }
 
-    QAction *paste = m_actionCollection.action(QStringLiteral("paste"));
+    if (QAction *moveToTrash = m_actionCollection.action(QStringLiteral("trash"))) {
+        moveToTrash->setVisible(!hasRemoteFiles && itemProperties.supportsMoving());
+    }
 
-    if (paste) {
+    if (QAction *del = m_actionCollection.action(QStringLiteral("del"))) {
+        del->setVisible(itemProperties.supportsDeleting());
+    }
+
+    if (QAction *cut = m_actionCollection.action(QStringLiteral("cut"))) {
+        cut->setEnabled(itemProperties.supportsDeleting());
+        cut->setVisible(!isTrash);
+    }
+
+    if (QAction *paste = m_actionCollection.action(QStringLiteral("paste"))) {
         bool enable = false;
 
         const QString pasteText = KIO::pasteActionText(QApplication::clipboard()->mimeData(),
@@ -1653,24 +1699,29 @@ void FolderModel::updateActions()
             paste->setEnabled(false);
         }
 
-        QAction* pasteTo = m_actionCollection.action(QStringLiteral("pasteto"));
-
-        if (pasteTo) {
+        if (QAction *pasteTo = m_actionCollection.action(QStringLiteral("pasteto"))) {
+            pasteTo->setVisible(itemProperties.isDirectory() && itemProperties.supportsWriting());
             pasteTo->setEnabled(paste->isEnabled());
             pasteTo->setText(paste->text());
         }
+    }
+
+    if (QAction *rename = m_actionCollection.action(QStringLiteral("rename"))) {
+        qDebug() << "RIENÄIM" << itemProperties.supportsMoving() << itemProperties.urlList();
+        rename->setEnabled(itemProperties.supportsMoving());
+        rename->setVisible(!isTrash);
     }
 }
 
 void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifiers modifiers)
 {
-    QModelIndexList indexes = m_selectionModel->selectedIndexes();
-
     if (m_usedByContainment && !KAuthorized::authorize(QStringLiteral("action/kdesktop_rmb"))) {
         return;
     }
 
     updateActions();
+
+    const QModelIndexList indexes = m_selectionModel->selectedIndexes();
 
     QMenu *menu = new QMenu();
     if (!m_fileItemActions) {
@@ -1694,41 +1745,25 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
     } else {
         KFileItemList items;
         QList<QUrl> urls;
-        bool hasRemoteFiles = false;
-        bool isTrashLink = false;
 
         items.reserve(indexes.count());
         urls.reserve(indexes.count());
-        foreach (const QModelIndex &index, indexes) {
+        for (const QModelIndex &index : indexes) {
             KFileItem item = itemForIndex(index);
             if (!item.isNull()) {
-                hasRemoteFiles |= item.localPath().isEmpty();
                 items.append(item);
                 urls.append(item.url());
             }
         }
-        KFileItemListProperties itemProperties(items);
 
-        // Check if we're showing the menu for the trash link
-        if (items.count() == 1 && items.at(0).isDesktopFile()) {
-            KDesktopFile file(items.at(0).localPath());
-            if (file.hasLinkType() && file.readUrl() == QLatin1String("trash:/")) {
-                isTrashLink = true;
-            }
-        }
+        KFileItemListProperties itemProperties(items);
 
         // Start adding the actions:
         menu->addAction(m_actionCollection.action(QStringLiteral("open")));
         menu->addSeparator();
-        if (itemProperties.supportsDeleting()) {
-            menu->addAction(m_actionCollection.action(QStringLiteral("cut")));
-        }
+        menu->addAction(m_actionCollection.action(QStringLiteral("cut")));
         menu->addAction(m_actionCollection.action(QStringLiteral("copy")));
-
-        if (itemProperties.isDirectory() && itemProperties.supportsWriting()) {
-            menu->addAction(m_actionCollection.action(QStringLiteral("pasteto")));
-        }
-
+        menu->addAction(m_actionCollection.action(QStringLiteral("pasteto")));
         menu->addAction(m_actionCollection.action(QStringLiteral("rename")));
         menu->addAction(m_actionCollection.action(QStringLiteral("restoreFromTrash")));
 
@@ -1736,28 +1771,19 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
         KConfigGroup cg(globalConfig, "KDE");
         bool showDeleteCommand = cg.readEntry("ShowDeleteCommand", false);
 
-        // When we're showing the menu for the trash link, offer "Empty Trash" instead
-        // of the "Move to Trash" action.
-        if (isTrashLink) {
-            QAction *emptyTrashAction = m_actionCollection.action(QStringLiteral("emptyTrash"));
-            if (emptyTrashAction) {
-                // We explicitly force the action visible here, as it relies on the KFileItemList
-                // we collected above. In updateActions() we don't have it and since this is always
-                // called before we open the menu, it would correct visibility again when opening
-                // the context menu for other items later.
-                emptyTrashAction->setVisible(true);
-                emptyTrashAction->setEnabled(!isTrashEmpty());
-                menu->addAction(emptyTrashAction);
-            }
+        menu->addAction(m_actionCollection.action(QStringLiteral("emptyTrash")));
+        if (modifiers.testFlag(Qt::ShiftModifier)) {
+            showDeleteCommand = true;
         } else {
-            if (!modifiers.testFlag(Qt::ShiftModifier) && !hasRemoteFiles && itemProperties.supportsMoving()) {
-                menu->addAction(m_actionCollection.action(QStringLiteral("trash")));
-            } else {
-                showDeleteCommand = true;
+            if (QAction *trashAction = m_actionCollection.action(QStringLiteral("trash"))) {
+                menu->addAction(trashAction);
+                if (!trashAction->isVisible()) {
+                    showDeleteCommand = true;
+                }
             }
         }
 
-        if (showDeleteCommand && itemProperties.supportsDeleting()) {
+        if (showDeleteCommand) {
             menu->addAction(m_actionCollection.action(QStringLiteral("del")));
         }
 
@@ -1785,7 +1811,6 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
             QObject::connect(act, &QAction::triggered, this, &FolderModel::openPropertiesDialog);
             menu->addAction(act);
         }
-
     }
 
     if (visualParent) {
@@ -1847,6 +1872,12 @@ void FolderModel::copy()
         return;
     }
 
+    if (QAction *action = m_actionCollection.action(QStringLiteral("copy"))) {
+        if (!action->isEnabled()) {
+            return;
+        }
+    }
+
     QMimeData *mimeData = QSortFilterProxyModel::mimeData(m_selectionModel->selectedIndexes());
     QApplication::clipboard()->setMimeData(mimeData);
 }
@@ -1857,6 +1888,12 @@ void FolderModel::cut()
         return;
     }
 
+    if (QAction *action = m_actionCollection.action(QStringLiteral("cut"))) {
+        if (!action->isEnabled()) {
+            return;
+        }
+    }
+
     QMimeData *mimeData = QSortFilterProxyModel::mimeData(m_selectionModel->selectedIndexes());
     KIO::setClipboardDataCut(mimeData, true);
     QApplication::clipboard()->setMimeData(mimeData);
@@ -1864,6 +1901,12 @@ void FolderModel::cut()
 
 void FolderModel::paste()
 {
+    if (QAction *action = m_actionCollection.action(QStringLiteral("paste"))) {
+        if (!action->isEnabled()) {
+            return;
+        }
+    }
+
     KIO::paste(QApplication::clipboard()->mimeData(), m_dirModel->dirLister()->url());
 }
 
@@ -1922,6 +1965,12 @@ void FolderModel::moveSelectedToTrash()
         return;
     }
 
+    if (QAction *action = m_actionCollection.action(QStringLiteral("trash"))) {
+        if (!action->isEnabled()) {
+            return;
+        }
+    }
+
     const QList<QUrl> urls = selectedUrls();
     KIO::JobUiDelegate uiDelegate;
 
@@ -1936,6 +1985,12 @@ void FolderModel::deleteSelected()
 {
     if (!m_selectionModel->hasSelection()) {
         return;
+    }
+
+    if (QAction *action = m_actionCollection.action(QStringLiteral("del"))) {
+        if (!action->isEnabled()) {
+            return;
+        }
     }
 
     const QList<QUrl> urls = selectedUrls();

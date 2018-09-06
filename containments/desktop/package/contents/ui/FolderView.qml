@@ -63,9 +63,13 @@ FocusScope {
     property var dialog: null
     property Item editor: null
 
-    function rename()
-    {
+    function rename() {
         if (gridView.currentIndex != -1) {
+            var renameAction = folderView.model.action("rename");
+            if (renameAction && !renameAction.enabled) {
+                return;
+            }
+
             if (!editor) {
                 editor = editorComponent.createObject(listener);
             }
