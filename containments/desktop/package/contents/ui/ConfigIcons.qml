@@ -27,6 +27,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.kconfig 1.0 // for KAuthorized
 
 import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
@@ -43,7 +44,7 @@ Item {
     property alias cfg_useCustomIcon: useCustomIcon.checked
     property alias cfg_arrangement: arrangement.currentIndex
     property alias cfg_alignment: alignment.currentIndex
-    property alias cfg_locked: locked.checked
+    property bool cfg_locked
     property alias cfg_sortMode: sortMode.mode
     property alias cfg_sortDesc: sortDesc.checked
     property alias cfg_sortDirsFirst: sortDirsFirst.checked
@@ -55,6 +56,8 @@ Item {
     property alias cfg_viewMode: viewMode.currentIndex
     property alias cfg_iconSize: iconSize.value
     property alias cfg_textLines: textLines.value
+
+    readonly property bool lockedByKiosk: !KAuthorized.authorize("editable_desktop_icons")
 
     IconDialog {
         id: iconDialog
@@ -194,6 +197,14 @@ Item {
             Layout.columnSpan: 3
 
             visible: ("containmentType" in plasmoid)
+            checked: cfg_locked || lockedByKiosk
+            enabled: !lockedByKiosk
+
+            onCheckedChanged: {
+                if (!lockedByKiosk) {
+                    cfg_locked = checked;
+                }
+            }
 
             text: i18n("Lock in place")
         }

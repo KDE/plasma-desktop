@@ -40,6 +40,7 @@ class FOLDERPLUGIN_TESTS_EXPORT ViewPropertiesMenu : public QObject
     Q_PROPERTY(int alignment READ alignment WRITE setAlignment NOTIFY alignmentChanged)
     Q_PROPERTY(bool previews READ previews WRITE setPreviews NOTIFY previewsChanged)
     Q_PROPERTY(bool locked READ locked WRITE setLocked NOTIFY lockedChanged)
+    Q_PROPERTY(bool lockedEnabled READ lockedEnabled WRITE setLockedEnabled NOTIFY lockedEnabledChanged)
     Q_PROPERTY(int sortMode READ sortMode WRITE setSortMode NOTIFY sortModeChanged)
     Q_PROPERTY(bool sortDesc READ sortDesc WRITE setSortDesc NOTIFY sortDescChanged)
     Q_PROPERTY(bool sortDirsFirst READ sortDirsFirst WRITE setSortDirsFirst NOTIFY sortDirsFirstChanged)
@@ -72,6 +73,9 @@ class FOLDERPLUGIN_TESTS_EXPORT ViewPropertiesMenu : public QObject
         bool locked() const;
         void setLocked(bool locked);
 
+        bool lockedEnabled() const;
+        void setLockedEnabled(bool lockedEnabled);
+
         int sortMode() const;
         void setSortMode(int sortMode);
 
@@ -92,6 +96,7 @@ class FOLDERPLUGIN_TESTS_EXPORT ViewPropertiesMenu : public QObject
         void alignmentChanged() const;
         void previewsChanged() const;
         void lockedChanged() const;
+        void lockedEnabledChanged() const;
         void sortModeChanged() const;
         void sortDescChanged() const;
         void sortDirsFirstChanged() const;

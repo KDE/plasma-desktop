@@ -213,6 +213,19 @@ void ViewPropertiesMenu::setLocked(bool locked)
     }
 }
 
+bool ViewPropertiesMenu::lockedEnabled() const
+{
+    return m_locked->isEnabled();
+}
+
+void ViewPropertiesMenu::setLockedEnabled(bool enabled)
+{
+    if (m_locked->isEnabled() != enabled) {
+        m_locked->setEnabled(enabled);
+        emit lockedEnabledChanged();
+    }
+}
+
 int ViewPropertiesMenu::sortMode() const
 {
     return m_sortMode->checkedAction()->data().toInt();

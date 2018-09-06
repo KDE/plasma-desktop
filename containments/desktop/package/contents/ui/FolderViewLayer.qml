@@ -21,6 +21,7 @@ import QtQuick 2.0
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.kconfig 1.0 // for KAuthorized
 
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 
@@ -38,6 +39,8 @@ Item {
     property alias model: folderView.model
     property alias overflowing: folderView.overflowing
     property alias flow: folderView.flow
+
+    readonly property bool lockedByKiosk: !KAuthorized.authorize("editable_desktop_icons")
 
     function updateContextualActions() {
         folderView.model.updateActions();
@@ -101,6 +104,8 @@ Item {
         showLockAction: isContainment
         showIconSizeActions: !root.useListViewMode
 
+        lockedEnabled: !lockedByKiosk
+
         onArrangementChanged: {
             plasmoid.configuration.arrangement = arrangement;
         }
@@ -114,7 +119,9 @@ Item {
         }
 
         onLockedChanged: {
-            plasmoid.configuration.locked = locked;
+            if (!lockedByKiosk) {
+                plasmoid.configuration.locked = locked;
+            }
         }
 
         onSortModeChanged: {
@@ -137,7 +144,7 @@ Item {
             arrangement = plasmoid.configuration.arrangement;
             alignment = plasmoid.configuration.alignment;
             previews = plasmoid.configuration.previews;
-            locked = plasmoid.configuration.locked;
+            locked = plasmoid.configuration.locked || lockedByKiosk;
             sortMode = plasmoid.configuration.sortMode;
             sortDesc = plasmoid.configuration.sortDesc;
             sortDirsFirst = plasmoid.configuration.sortDirsFirst;
@@ -236,7 +243,7 @@ Item {
             isRootView: true
 
             url: plasmoid.configuration.url
-            locked: (plasmoid.configuration.locked || !isContainment)
+            locked: (plasmoid.configuration.locked || !isContainment || lockedByKiosk)
             filterMode: plasmoid.configuration.filterMode
             filterPattern: plasmoid.configuration.filterPattern
             filterMimeTypes: plasmoid.configuration.filterMimeTypes
