@@ -30,6 +30,7 @@ FocusScope {
     signal keyNavigationAtListEnd
 
     property alias currentIndex: runnerMatches.currentIndex
+    property alias count: runnerMatches.count
     property alias containsMouse: runnerMatches.containsMouse
 
     Accessible.name: header.text
