@@ -396,7 +396,7 @@ FocusScope {
             } else if (event.key == Qt.Key_Down) {
                 if (rootList.visible) {
                     rootList.showChildDialogs = false;
-                    rootList.currentIndex = 0;
+                    rootList.currentIndex = Math.min(1, rootList.count);
                     rootList.forceActiveFocus();
                     rootList.showChildDialogs = true;
                 }
@@ -405,10 +405,28 @@ FocusScope {
                     for (var i = 0; i < runnerModel.count; ++i) {
                         if (runnerModel.modelForRow(i).count) {
                             var targetList = runnerColumnsRepeater.itemAt(i);
+                            targetList.currentIndex = Math.min(1, targetList.count);
+                            targetList.forceActiveFocus();
+                            break;
+                        }
+                    }
+                }
+            } else if (event.key == Qt.Key_Left && cursorPosition == 0) {
+                    for (var i = runnerModel.count; i >= 0; --i) {
+                        if (runnerModel.modelForRow(i).count) {
+                            var targetList = runnerColumnsRepeater.itemAt(i);
                             targetList.currentIndex = 0;
                             targetList.forceActiveFocus();
                             break;
                         }
+                    }
+            } else if (event.key == Qt.Key_Right && cursorPosition == length) {
+                for (var i = 1; i < runnerModel.count; ++i) {
+                    if (runnerModel.modelForRow(i).count) {
+                        var targetList = runnerColumnsRepeater.itemAt(i);
+                        targetList.currentIndex = 0;
+                        targetList.forceActiveFocus();
+                        break;
                     }
                 }
             } else if (event.key == Qt.Key_Enter || event.key == Qt.Key_Return) {
