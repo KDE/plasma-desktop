@@ -60,7 +60,7 @@ Breeze, Breeze Dark and Oxygen.</para></important>
 installations will have only a few icon theme available, amongst them the &plasma; default
 Breeze theme. You can also download more from the Internet from 
 <ulink url="https://store.kde.org/">https://store.kde.org/</ulink> or
-install a them from a local file.</para>
+install them from a local file.</para>
 
 <para>
 On hover an animated preview shows a random selection, common mime types
@@ -70,12 +70,12 @@ and common folder icons.
 <para>
 If you want to remove a theme, use the <inlinemediaobject><imageobject><imagedata
 fileref="edit-delete.png" format="PNG"/></imageobject></inlinemediaobject> overlay
-icon at the button right of the theme icon. To undo this action click on the
+icon at the bottom right of the theme icon. To undo this action click on the
 <inlinemediaobject><imageobject><imagedata fileref="edit-undo.png"
 format="PNG"/></imageobject></inlinemediaobject> icon.
 If you hit <guibutton>Apply</guibutton> or <guibutton>OK</guibutton> the themes
-selected for removal are actually deleted, so you can undo individual or all
-deletions
+selected for removal are actually deleted, so you cannot undo individual or all
+deletions.
 </para>
 
 <variablelist>
@@ -122,7 +122,7 @@ You need to be connected to the Internet to use it. Clicking on this button will
 <varlistentry><term><guilabel>Install from File...</guilabel></term>
 <listitem>
 <para>
-If you dowloaded new themes from the internet, you can use this to browse to the
+If you downloaded new themes from the internet, you can use this to browse to the
 location of those newly downloaded themes. Clicking on this button will bring you the file dialog to point to the icon theme tarball you have on your disk.</para>
 
 <para>Clicking <guibutton>Open</guibutton> in this dialog will install the theme you pointed to and make it available in the theme list.
