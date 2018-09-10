@@ -19,6 +19,8 @@
 
 #include "placesmodel.h"
 
+#include <QStandardPaths>
+
 #include <KFilePlacesModel>
 #include <KService>
 #include <KServiceTypeTrader>
@@ -59,6 +61,22 @@ bool PlacesModel::activityLinkingEnabled() const
     return !services.at(0).data()->noDisplay();
 }
 
+bool PlacesModel::showDesktopEntry() const
+{
+    return m_showDesktopEntry;
+}
+
+void PlacesModel::setShowDesktopEntry(bool showDesktopEntry)
+{
+    if (m_showDesktopEntry != showDesktopEntry) {
+        m_showDesktopEntry = showDesktopEntry;
+
+        invalidateFilter();
+
+        emit showDesktopEntryChanged();
+    }
+}
+
 QString PlacesModel::urlForIndex(int idx) const
 {
     return m_sourceModel->url(mapToSource(index(idx, 0))).toString();
@@ -87,6 +105,14 @@ int PlacesModel::indexForUrl(const QString& url) const
 bool PlacesModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
     const QModelIndex index = m_sourceModel->index(sourceRow, 0, sourceParent);
+
+    if (!m_showDesktopEntry) {
+        const QUrl url = index.data(KFilePlacesModel::UrlRole).toUrl();
+        const QUrl desktopUrl = QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation));
+        if (url == desktopUrl) {
+            return false;
+        }
+    }
 
     return !m_sourceModel->isHidden(index);
 }

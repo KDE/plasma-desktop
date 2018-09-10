@@ -67,6 +67,7 @@ Item {
 
     Folder.PlacesModel {
         id: placesModel
+        showDesktopEntry: false
 
         onPlacesChanged: applyConfig(true)
     }
