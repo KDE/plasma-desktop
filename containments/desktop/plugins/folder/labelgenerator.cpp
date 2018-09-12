@@ -25,14 +25,22 @@
 
 #include "foldermodel.h"
 
+int LabelGenerator::s_instanceCount = 0;
+KFilePlacesModel *LabelGenerator::s_placesModel = nullptr;
+
 LabelGenerator::LabelGenerator(QObject* parent) : QObject(parent),
-    m_placesModel(new KFilePlacesModel(this)),
     m_rtl(false)
 {
+    ++s_instanceCount;
 }
 
 LabelGenerator::~LabelGenerator()
 {
+    --s_instanceCount;
+    if (!s_instanceCount) {
+        delete s_placesModel;
+        s_placesModel = nullptr;
+    }
 }
 
 FolderModel *LabelGenerator::folderModel() const
@@ -49,11 +57,11 @@ void LabelGenerator::setFolderModel(FolderModel *folderModel)
 
         m_folderModel = folderModel;
 
-        connect(m_folderModel.data(), &FolderModel::listingCompleted, this, &LabelGenerator::displayLabelChanged);
-        connect(m_folderModel.data(), &FolderModel::listingCanceled, this, &LabelGenerator::displayLabelChanged);
+        connect(m_folderModel.data(), &FolderModel::listingCompleted, this, &LabelGenerator::updateDisplayLabel);
+        connect(m_folderModel.data(), &FolderModel::listingCanceled, this, &LabelGenerator::updateDisplayLabel);
 
         emit folderModelChanged();
-        emit displayLabelChanged();
+        updateDisplayLabel();
     }
 }
 
@@ -67,7 +75,7 @@ void LabelGenerator::setRtl(bool rtl)
     if (rtl != m_rtl) {
         m_rtl = rtl;
         emit rtlChanged();
-        emit displayLabelChanged();
+        updateDisplayLabel();
     }
 }
 
@@ -81,7 +89,7 @@ void LabelGenerator::setLabelMode(int mode)
     if (mode != m_labelMode) {
         m_labelMode = mode;
         emit labelModeChanged();
-        emit displayLabelChanged();
+        updateDisplayLabel();
     }
 }
 
@@ -95,11 +103,25 @@ void LabelGenerator::setLabelText(const QString& text)
     if (text != m_labelText) {
         m_labelText = text;
         emit labelTextChanged();
-        emit displayLabelChanged();
+        updateDisplayLabel();
     }
 }
 
 QString LabelGenerator::displayLabel() const
+{
+    return m_displayLabel;
+}
+
+void LabelGenerator::updateDisplayLabel()
+{
+    const QString displayLabel = generatedDisplayLabel();
+    if (m_displayLabel != displayLabel) {
+        m_displayLabel = displayLabel;
+        emit displayLabelChanged();
+    }
+}
+
+QString LabelGenerator::generatedDisplayLabel()
 {
     if (!m_folderModel) {
         return QString();
@@ -118,10 +140,16 @@ QString LabelGenerator::displayLabel() const
 
         QString label(url.toDisplayString(QUrl::PreferLocalFile | QUrl::StripTrailingSlash));
 
-        const QModelIndex index = m_placesModel->closestItem(url);
+        if (!s_placesModel) {
+            s_placesModel = new KFilePlacesModel();
+        }
+
+        connectPlacesModel();
+
+        const QModelIndex index = s_placesModel->closestItem(url);
 
         if (index.isValid()) {
-            QString root = m_placesModel->url(index).toDisplayString(QUrl::PreferLocalFile | QUrl::StripTrailingSlash);
+            QString root = s_placesModel->url(index).toDisplayString(QUrl::PreferLocalFile | QUrl::StripTrailingSlash);
 
             label = label.right(label.length() - root.length());
 
@@ -137,7 +165,7 @@ QString LabelGenerator::displayLabel() const
                 }
             }
 
-            label.prepend(m_placesModel->text(index));
+            label.prepend(s_placesModel->text(index));
         }
 
         return label;
@@ -148,4 +176,11 @@ QString LabelGenerator::displayLabel() const
     }
 
     return QString();
+}
+
+void LabelGenerator::connectPlacesModel()
+{
+    connect(s_placesModel, &KFilePlacesModel::rowsInserted, this, &LabelGenerator::updateDisplayLabel, Qt::UniqueConnection);
+    connect(s_placesModel, &KFilePlacesModel::rowsRemoved, this, &LabelGenerator::updateDisplayLabel, Qt::UniqueConnection);
+    connect(s_placesModel, &KFilePlacesModel::dataChanged, this, &LabelGenerator::updateDisplayLabel, Qt::UniqueConnection);
 }

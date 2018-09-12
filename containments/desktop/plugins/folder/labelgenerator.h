@@ -62,10 +62,19 @@ class LabelGenerator : public QObject
         void displayLabelChanged();
 
     private:
-        KFilePlacesModel* m_placesModel;
+        void updateDisplayLabel();
+        QString generatedDisplayLabel();
+
+        static int s_instanceCount;
+        static KFilePlacesModel *s_placesModel;
+        bool m_placesConnected = false;
+
+        void connectPlacesModel();
+
         QPointer<FolderModel> m_folderModel;
         bool m_rtl;
         int m_labelMode;
+        QString m_displayLabel;
         QString m_labelText;
 };
 
