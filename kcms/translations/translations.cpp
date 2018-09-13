@@ -84,6 +84,7 @@ void Translations::load()
     m_configuredLanguages = m_config.readEntry(lcLanguage,
         QString()).split(QLatin1Char(':'), QString::SkipEmptyParts);
 
+    m_availableTranslationsModel->setSelectedLanguages(m_configuredLanguages);
     m_selectedTranslationsModel->setSelectedLanguages(m_configuredLanguages);
 }
 
