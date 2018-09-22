@@ -97,7 +97,7 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
     m_previews = m_menu->addAction(QIcon::fromTheme(QStringLiteral("view-preview")), i18n("Show Previews"), this, &ViewPropertiesMenu::previewsChanged);
     m_previews->setCheckable(true);
 
-    m_locked = m_menu->addAction(i18n("Locked"), this, SIGNAL(lockedChanged()));
+    m_locked = m_menu->addAction(QIcon::fromTheme(QStringLiteral("lock")), i18n("Locked"), this, SIGNAL(lockedChanged()));
     m_locked->setCheckable(true);
 }
 
