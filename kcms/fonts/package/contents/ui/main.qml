@@ -80,7 +80,7 @@ KCM.SimpleKCM {
         QtControls.ComboBox {
             id: antiAliasingComboBox
             Layout.preferredWidth: formLayout.maxImplicitWidth
-            Kirigami.FormData.label: i18n("Use anti-aliasing:")
+            Kirigami.FormData.label: i18nc("Used as a noun, and precedes a combobox full of options", "Anti-aliasing:")
 
             model: [i18n("Enabled"), i18n("Vendor Default"), i18n("Disabled")]
 
@@ -133,7 +133,7 @@ KCM.SimpleKCM {
         QtControls.ComboBox {
             id: subPixelCombo
             Layout.preferredWidth: formLayout.maxImplicitWidth
-            Kirigami.FormData.label: i18n("Sub-pixel rendering type:")
+            Kirigami.FormData.label: i18nc("Used as a noun, and precedes a combobox full of options", "Sub-pixel rendering:")
             currentIndex: kcm.fontAASettings.subPixelCurrentIndex
             onCurrentIndexChanged: kcm.fontAASettings.subPixelCurrentIndex = currentIndex;
             model: kcm.fontAASettings.subPixelOptionsModel
@@ -170,7 +170,7 @@ KCM.SimpleKCM {
         QtControls.ComboBox {
             id: hintingCombo
             Layout.preferredWidth: formLayout.maxImplicitWidth
-            Kirigami.FormData.label: i18n("Hinting style:")
+            Kirigami.FormData.label: i18nc("Used as a noun, and precedes a combobox full of options", "Hinting:")
             currentIndex: kcm.fontAASettings.hintingCurrentIndex
             onCurrentTextChanged: kcm.fontAASettings.hintingCurrentIndex = currentIndex;
             model: kcm.fontAASettings.hintingOptionsModel
