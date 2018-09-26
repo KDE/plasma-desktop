@@ -231,8 +231,9 @@ Item {
         anchors.right: parent.right
         anchors.bottom: parent.bottom
 
+        // If containment always complementary, otherwise inherit (usually normal).
         colorGroup: (root.isContainment ? PlasmaCore.Theme.ComplementaryColorGroup
-            : PlasmaCore.Theme.NormalColorGroup)
+            : PlasmaCore.ColorScope.colorGroup)
 
         FolderView {
             id: folderView
