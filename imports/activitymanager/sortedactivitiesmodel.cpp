@@ -52,7 +52,7 @@ namespace {
         {
             using namespace std::placeholders;
 
-            const auto configFile = QStandardPaths::writableLocation(
+            const QString configFile = QStandardPaths::writableLocation(
                                         QStandardPaths::GenericConfigLocation) +
                                     QLatin1Char('/') + PLASMACONFIG;
 
