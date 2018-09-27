@@ -29,7 +29,7 @@ class SystemModel : public AbstractModel
     Q_OBJECT
 
     public:
-        explicit SystemModel(QObject *parent = 0);
+        explicit SystemModel(QObject *parent = nullptr);
         ~SystemModel();
 
         QString description() const override;

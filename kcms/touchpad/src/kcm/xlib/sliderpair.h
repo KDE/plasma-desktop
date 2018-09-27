@@ -27,7 +27,7 @@ class SliderPair : public QObject
 {
     Q_OBJECT
 public:
-    SliderPair(QSlider *minSlider, QSlider *maxSlider, QObject *parent = 0);
+    SliderPair(QSlider *minSlider, QSlider *maxSlider, QObject *parent = nullptr);
 
 private Q_SLOTS:
     void adjustMinSlider();

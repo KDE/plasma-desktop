@@ -28,10 +28,10 @@ class ForwardingModel : public AbstractModel
 {
     Q_OBJECT
 
-    Q_PROPERTY(QAbstractItemModel* sourceModel READ sourceModel WRITE setSourceModel NOTIFY sourceModelChanged);
+    Q_PROPERTY(QAbstractItemModel* sourceModel READ sourceModel WRITE setSourceModel NOTIFY sourceModelChanged)
 
     public:
-        explicit ForwardingModel(QObject *parent = 0);
+        explicit ForwardingModel(QObject *parent = nullptr);
         ~ForwardingModel();
 
         QString description() const override;

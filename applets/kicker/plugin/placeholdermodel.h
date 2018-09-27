@@ -34,7 +34,7 @@ class PlaceholderModel : public AbstractModel
     Q_PROPERTY(int dropPlaceholderIndex READ dropPlaceholderIndex WRITE setDropPlaceholderIndex NOTIFY dropPlaceholderIndexChanged)
 
     public:
-        explicit PlaceholderModel(QObject *parent = 0);
+        explicit PlaceholderModel(QObject *parent = nullptr);
         ~PlaceholderModel();
 
         QString description() const;

@@ -32,7 +32,7 @@ class DragHelper : public QObject
     Q_PROPERTY(int dragIconSize READ dragIconSize WRITE setDragIconSize NOTIFY dragIconSizeChanged)
 
     public:
-        DragHelper(QObject *parent = 0);
+        DragHelper(QObject *parent = nullptr);
         ~DragHelper();
 
         int dragIconSize() const;

@@ -63,7 +63,7 @@ protected:
     bool event(QEvent *event) override;
 
 public:
-    explicit KbPreviewFrame(QWidget *parent = 0);
+    explicit KbPreviewFrame(QWidget *parent = nullptr);
     ~KbPreviewFrame() override;
     void paintEvent(QPaintEvent *event) override;
     void generateKeyboardLayout(const QString &layout, const QString &layoutVariant, const QString &model);

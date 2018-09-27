@@ -60,7 +60,7 @@ class RootModel : public AppsModel
     Q_PROPERTY(bool showPowerSession READ showPowerSession WRITE setShowPowerSession NOTIFY showPowerSessionChanged)
 
     public:
-        explicit RootModel(QObject *parent = 0);
+        explicit RootModel(QObject *parent = nullptr);
         ~RootModel();
 
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;

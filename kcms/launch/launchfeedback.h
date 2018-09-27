@@ -32,7 +32,7 @@ class LaunchFeedback : public KQuickAddons::ConfigModule
     Q_PROPERTY(int notificationTimeout READ notificationTimeout WRITE setNotificationTimeout NOTIFY notificationTimeoutChanged)
 
     public:
-        explicit LaunchFeedback(QObject* parent = 0, const QVariantList &list = QVariantList());
+        explicit LaunchFeedback(QObject* parent = nullptr, const QVariantList &list = QVariantList());
         ~LaunchFeedback() override;
 
         int busyCursorCurrentIndex() const;

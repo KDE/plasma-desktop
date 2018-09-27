@@ -51,7 +51,7 @@ class KAStatsFavoritesModel : public PlaceholderModel
     Q_PROPERTY(QObject* activities READ activities CONSTANT)
 
     public:
-        explicit KAStatsFavoritesModel(QObject *parent = 0);
+        explicit KAStatsFavoritesModel(QObject *parent = nullptr);
         ~KAStatsFavoritesModel();
 
         QString description() const;

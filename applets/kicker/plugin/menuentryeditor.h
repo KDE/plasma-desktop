@@ -27,7 +27,7 @@ class MenuEntryEditor : public QObject
     Q_OBJECT
 
     public:
-        MenuEntryEditor(QObject *parent = 0);
+        MenuEntryEditor(QObject *parent = nullptr);
         ~MenuEntryEditor();
 
     bool canEdit(const QString &entryPath) const;

@@ -136,7 +136,7 @@ static void closeFont(XftFont *&font)
 {
     if(font)
         XftFontClose(QX11Info::display(), font);
-    font=0L;
+    font= nullptr;
 }
 
 class CFcEngine::Xft
@@ -207,9 +207,9 @@ class CFcEngine::Xft
     bool drawGlyph(XftFont *xftFont, FT_UInt i, int &x, int &y, int w, int h,
                    int fontHeight,bool oneLine, QRect &r) const;
     bool drawAllGlyphs(XftFont *xftFont, int fontHeight, int &x, int &y, int w, int h,
-                       bool oneLine=false, int max=-1, QRect *used=0L) const;
+                       bool oneLine=false, int max=-1, QRect *used= nullptr) const;
     bool drawAllChars(XftFont *xftFont, int fontHeight, int &x, int &y, int w, int h,
-                      bool oneLine=false, int max=-1, QRect *used=0L) const;
+                      bool oneLine=false, int max=-1, QRect *used= nullptr) const;
     QImage toImage(int w, int h) const;
 
     private:
@@ -223,7 +223,7 @@ class CFcEngine::Xft
 
 CFcEngine::Xft::Xft()
 {
-    itsDraw=0L;
+    itsDraw= nullptr;
     itsTxtColor.color.alpha=0x0000;
     init(Qt::black, Qt::white, 64, 64);
 }
@@ -234,7 +234,7 @@ CFcEngine::Xft::~Xft()
     if(itsDraw)
     {
         XftDrawDestroy(itsDraw);
-        itsDraw=0L;
+        itsDraw= nullptr;
     }
 }
 

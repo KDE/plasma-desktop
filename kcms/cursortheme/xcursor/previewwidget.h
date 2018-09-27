@@ -35,7 +35,7 @@ class PreviewWidget : public QQuickPaintedItem
 
 
     public:
-        PreviewWidget(QQuickItem *parent = 0);
+        PreviewWidget(QQuickItem *parent = nullptr);
         ~PreviewWidget();
 
         void setTheme(const CursorTheme *theme, const int size);

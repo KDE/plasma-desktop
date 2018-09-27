@@ -36,7 +36,7 @@ class AbstractModel : public QAbstractListModel
     Q_PROPERTY(AbstractModel* favoritesModel READ favoritesModel WRITE setFavoritesModel NOTIFY favoritesModelChanged)
 
     public:
-        explicit AbstractModel(QObject *parent = 0);
+        explicit AbstractModel(QObject *parent = nullptr);
         ~AbstractModel();
 
         QHash<int, QByteArray> roleNames() const override;

@@ -1258,7 +1258,7 @@ int main(int argc, char *argv [])
     KDE_signal(SIGINT,  signalhandler);
     KDE_signal(SIGHUP,  signalhandler);
 
-    const char *p = qgetenv("DISPLAY");
+    const char *p = qgetenv("DISPLAY").constData();
     if (p) display_name = String(p);
 
     if (!initialize_panel_agent(config_name, display_name, should_resident)) {

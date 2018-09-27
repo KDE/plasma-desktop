@@ -106,7 +106,7 @@ class CGroupList : public QAbstractItemModel
 
     public:
 
-    CGroupList(QWidget *parent = 0);
+    CGroupList(QWidget *parent = nullptr);
     ~CGroupList();
 
     QVariant        data(const QModelIndex &index, int role) const override;

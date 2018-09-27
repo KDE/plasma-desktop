@@ -60,14 +60,14 @@ class CursorThemeModel : public QAbstractTableModel
     Q_OBJECT
 
     public:
-        CursorThemeModel(QObject *parent = 0);
-        ~CursorThemeModel();
-        QHash<int, QByteArray> roleNames() const;
+        explicit CursorThemeModel(QObject *parent = nullptr);
+        ~CursorThemeModel() override;
+        QHash<int, QByteArray> roleNames() const override;
        inline int columnCount(const QModelIndex &parent = QModelIndex()) const;
         inline int rowCount(const QModelIndex &parent = QModelIndex()) const;
-        QVariant headerData(int section, Qt::Orientation orientation, int role) const;
-        QVariant data(const QModelIndex &index, int role) const;
-        void sort(int column, Qt::SortOrder order = Qt::AscendingOrder);
+        QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
+        QVariant data(const QModelIndex &index, int role) const override;
+        void sort(int column, Qt::SortOrder order = Qt::AscendingOrder) override;
 
         /// Returns the CursorTheme at @p index.
         const CursorTheme *theme(const QModelIndex &index);

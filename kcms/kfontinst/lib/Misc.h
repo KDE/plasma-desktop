@@ -103,7 +103,7 @@ namespace Misc
     {
         return folder+file[0].toLower()+'/';
     }
-    extern Q_DECL_EXPORT QString app(const QString &name, const char *path=0L);
+    extern Q_DECL_EXPORT QString app(const QString &name, const char *path= nullptr);
 }
 
 }

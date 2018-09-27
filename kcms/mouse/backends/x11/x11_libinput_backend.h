@@ -30,7 +30,7 @@ class X11LibinputBackend : public X11Backend
     Q_PROPERTY(int deviceCount READ deviceCount CONSTANT)
 
 public:
-    explicit X11LibinputBackend(QObject *parent = 0);
+    explicit X11LibinputBackend(QObject *parent = nullptr);
     ~X11LibinputBackend() = default;
 
     void kcmInit() override;

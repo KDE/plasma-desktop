@@ -42,13 +42,13 @@ class RunnerModel : public QAbstractListModel
     Q_PROPERTY(int count READ count NOTIFY countChanged)
     Q_PROPERTY(AbstractModel* favoritesModel READ favoritesModel WRITE setFavoritesModel NOTIFY favoritesModelChanged)
     Q_PROPERTY(QObject* appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged)
-    Q_PROPERTY(QStringList runners READ runners WRITE setRunners NOTIFY runnersChanged);
-    Q_PROPERTY(QString query READ query WRITE setQuery NOTIFY queryChanged);
+    Q_PROPERTY(QStringList runners READ runners WRITE setRunners NOTIFY runnersChanged)
+    Q_PROPERTY(QString query READ query WRITE setQuery NOTIFY queryChanged)
     Q_PROPERTY(bool mergeResults READ mergeResults WRITE setMergeResults NOTIFY mergeResultsChanged)
     Q_PROPERTY(bool deleteWhenEmpty READ deleteWhenEmpty WRITE setDeleteWhenEmpty NOTIFY deleteWhenEmptyChanged)
 
     public:
-        explicit RunnerModel(QObject *parent = 0);
+        explicit RunnerModel(QObject *parent = nullptr);
         ~RunnerModel();
 
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;

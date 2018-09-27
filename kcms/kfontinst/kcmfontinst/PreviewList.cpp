@@ -37,7 +37,7 @@
 namespace KFI
 {
 
-static CFcEngine * theFcEngine=0L;
+static CFcEngine * theFcEngine= nullptr;
 
 CPreviewList::CPreviewList(QObject *parent)
             : QAbstractItemModel(parent)

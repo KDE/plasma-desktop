@@ -36,7 +36,7 @@ public:
     { return "org.kde.fontinst"; }
 
 public:
-    OrgKdeFontinstInterface(const QString &service, const QString &path, const QDBusConnection &connection, QObject *parent = 0);
+    OrgKdeFontinstInterface(const QString &service, const QString &path, const QDBusConnection &connection, QObject *parent = nullptr);
 
     ~OrgKdeFontinstInterface();
 

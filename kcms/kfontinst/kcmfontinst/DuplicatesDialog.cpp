@@ -179,7 +179,7 @@ void CDuplicatesDialog::scanFinished()
                 top->setFont(COL_FILE, boldFont);
             }
 
-            QTreeWidgetItem *item=0L;
+            QTreeWidgetItem *item= nullptr;
             for(int i=0; (item=itsView->topLevelItem(i)); ++i)
                 item->setExpanded(true);
 

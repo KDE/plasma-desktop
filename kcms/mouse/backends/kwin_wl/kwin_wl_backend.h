@@ -33,7 +33,7 @@ class KWinWaylandBackend : public InputBackend
     Q_PROPERTY(int deviceCount READ deviceCount CONSTANT)
 
 public:
-    explicit KWinWaylandBackend(QObject *parent = 0);
+    explicit KWinWaylandBackend(QObject *parent = nullptr);
     ~KWinWaylandBackend();
 
     bool applyConfig() override;

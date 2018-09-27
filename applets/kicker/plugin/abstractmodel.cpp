@@ -92,7 +92,7 @@ AbstractModel *AbstractModel::modelForRow(int row)
 {
     Q_UNUSED(row)
 
-    return 0;
+    return nullptr;
 }
 
 int AbstractModel::rowForModel(AbstractModel *model)

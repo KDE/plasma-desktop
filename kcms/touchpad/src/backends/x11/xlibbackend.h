@@ -44,7 +44,7 @@ class XlibBackend : public TouchpadBackend
     Q_OBJECT
 
 public:
-    static XlibBackend* initialize(QObject *parent = 0);
+    static XlibBackend* initialize(QObject *parent = nullptr);
     ~XlibBackend();
 
     bool applyConfig(const QVariantHash &) override;

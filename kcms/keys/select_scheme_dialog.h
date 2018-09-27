@@ -31,7 +31,7 @@ class SelectSchemeDialog : public QDialog
 {
     Q_OBJECT
 public:
-    SelectSchemeDialog(QWidget *parent = 0);
+    SelectSchemeDialog(QWidget *parent = nullptr);
     ~SelectSchemeDialog();
 
     QUrl selectedScheme() const;

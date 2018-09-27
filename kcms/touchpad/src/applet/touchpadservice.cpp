@@ -38,7 +38,7 @@ class TouchpadJob : public Plasma::ServiceJob
 public:
     TouchpadJob(OrgKdeTouchpadInterface *daemon,
                 const QString &destination, const QString &operation,
-                const QMap<QString, QVariant> &parameters, QObject *parent = 0)
+                const QMap<QString, QVariant> &parameters, QObject *parent = nullptr)
         : Plasma::ServiceJob(destination, operation, parameters, parent),
           m_daemon(daemon)
     {

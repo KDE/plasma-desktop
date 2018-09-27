@@ -33,7 +33,7 @@ class KWinWaylandBackend : public TouchpadBackend
     Q_PROPERTY(int touchpadCount READ touchpadCount CONSTANT)
 
 public:
-    explicit KWinWaylandBackend(QObject *parent = 0);
+    explicit KWinWaylandBackend(QObject *parent = nullptr);
     ~KWinWaylandBackend();
 
     bool applyConfig() override;

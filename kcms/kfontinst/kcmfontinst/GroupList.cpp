@@ -842,7 +842,7 @@ CGroupListView::CGroupListView(QWidget *parent, CGroupList *model)
                                        this, SIGNAL(print()));
     }
     else
-        itsPrintAct=0L;
+        itsPrintAct= nullptr;
     itsMenu->addSeparator();
     itsExportAct=itsMenu->addAction(QIcon::fromTheme("document-export"), i18n("Export..."),
                                     this, SIGNAL(zip()));

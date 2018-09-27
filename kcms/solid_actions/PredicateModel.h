@@ -31,7 +31,7 @@ class PredicateModel : public QAbstractItemModel
     Q_OBJECT
 
 public:
-    explicit PredicateModel( PredicateItem * menuRoot, QObject *parent = 0 );
+    explicit PredicateModel( PredicateItem * menuRoot, QObject *parent = nullptr );
     ~PredicateModel();
 
     QVariant data( const QModelIndex &index, int role ) const override;

@@ -40,7 +40,7 @@ class FilteredPlacesModel : public QSortFilterProxyModel
     Q_OBJECT
 
     public:
-        FilteredPlacesModel(QObject *parent = 0);
+        FilteredPlacesModel(QObject *parent = nullptr);
         ~FilteredPlacesModel();
 
         QUrl url(const QModelIndex &index) const;
@@ -60,7 +60,7 @@ class RunCommandModel : public AbstractModel
     Q_OBJECT
 
     public:
-        RunCommandModel(QObject *parent = 0);
+        RunCommandModel(QObject *parent = nullptr);
         ~RunCommandModel();
 
         QString description() const override;
@@ -81,7 +81,7 @@ class ComputerModel : public ForwardingModel
     Q_PROPERTY(QStringList systemApplications READ systemApplications WRITE setSystemApplications NOTIFY systemApplicationsChanged)
 
     public:
-        explicit ComputerModel(QObject *parent = 0);
+        explicit ComputerModel(QObject *parent = nullptr);
         ~ComputerModel();
 
         QString description() const override;

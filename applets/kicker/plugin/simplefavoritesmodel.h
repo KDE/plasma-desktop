@@ -36,7 +36,7 @@ class SimpleFavoritesModel : public AbstractModel
     Q_PROPERTY(int dropPlaceholderIndex READ dropPlaceholderIndex WRITE setDropPlaceholderIndex NOTIFY dropPlaceholderIndexChanged)
 
     public:
-        explicit SimpleFavoritesModel(QObject *parent = 0);
+        explicit SimpleFavoritesModel(QObject *parent = nullptr);
         ~SimpleFavoritesModel();
 
         QString description() const override;

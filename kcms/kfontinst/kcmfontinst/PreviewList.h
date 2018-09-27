@@ -60,7 +60,7 @@ class CPreviewList : public QAbstractItemModel
 
     public:
 
-    CPreviewList(QObject *parent = 0);
+    CPreviewList(QObject *parent = nullptr);
     virtual ~CPreviewList() { clear(); }
 
     QVariant        data(const QModelIndex &index, int role) const override;

@@ -41,7 +41,7 @@ class JoyWidget : public QWidget
   Q_OBJECT
   
   public:
-    JoyWidget(QWidget *parent = 0);
+    JoyWidget(QWidget *parent = nullptr);
 
     ~JoyWidget();
 

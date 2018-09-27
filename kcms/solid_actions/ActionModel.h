@@ -29,7 +29,7 @@ class ActionModel : public QAbstractTableModel
     Q_OBJECT
 
 public:
-    explicit ActionModel( QObject *parent = 0 );
+    explicit ActionModel( QObject *parent = nullptr );
     ~ActionModel();
 
     QVariant data( const QModelIndex &index, int role ) const override;

@@ -109,7 +109,7 @@ extern "C"
 class StylePreview : public QWidget, public Ui::StylePreview
 {
 public:
-    StylePreview(QWidget *parent = 0)
+    StylePreview(QWidget *parent = nullptr)
     : QWidget(parent)
     {
         setupUi(this);

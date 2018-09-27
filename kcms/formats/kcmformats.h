@@ -36,7 +36,7 @@ class KCMFormats : public KCModule
     Q_OBJECT
 
 public:
-    explicit KCMFormats(QWidget *parent = 0, const QVariantList &list = QVariantList());
+    explicit KCMFormats(QWidget *parent = nullptr, const QVariantList &list = QVariantList());
     ~KCMFormats();
 
     void load() override;

@@ -33,7 +33,7 @@ class PosWidget : public QWidget
   Q_OBJECT
 
   public:
-    PosWidget(QWidget *parent = 0);
+    PosWidget(QWidget *parent = nullptr);
 
     void changeX(int x);
     void changeY(int y);

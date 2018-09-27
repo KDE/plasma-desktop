@@ -27,7 +27,7 @@ class TouchpadService : public Plasma::Service
     Q_OBJECT
 public:
     TouchpadService(OrgKdeTouchpadInterface *daemon, const QString &destination,
-                    QObject *parent = 0);
+                    QObject *parent = nullptr);
     ~TouchpadService();
 
 protected:

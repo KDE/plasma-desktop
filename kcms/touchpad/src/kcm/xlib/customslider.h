@@ -31,7 +31,7 @@ class CustomSlider : public QSlider
                NOTIFY valueChanged USER true)
 
 public:
-    explicit CustomSlider(QWidget *parent = 0);
+    explicit CustomSlider(QWidget *parent = nullptr);
     
     void setDoubleMinimum(double);
     double doubleMinimum() const;

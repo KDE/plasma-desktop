@@ -35,7 +35,7 @@ class LayoutsTableModel : public QAbstractTableModel
      Q_OBJECT
 
  public:
-     LayoutsTableModel(Rules* rules, Flags *flags, KeyboardConfig* keyboardConfig, QObject *parent = 0);
+     LayoutsTableModel(Rules* rules, Flags *flags, KeyboardConfig* keyboardConfig, QObject *parent = nullptr);
 
      int columnCount(const QModelIndex&) const override;
      Qt::ItemFlags flags(const QModelIndex &index) const override;
@@ -71,7 +71,7 @@ class LabelEditDelegate : public QStyledItemDelegate
 	Q_OBJECT
 
 public:
-	explicit LabelEditDelegate(const KeyboardConfig* keyboardConfig, QObject *parent = 0);
+	explicit LabelEditDelegate(const KeyboardConfig* keyboardConfig, QObject *parent = nullptr);
 
 	QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option,
 			const QModelIndex &index) const override;
@@ -90,7 +90,7 @@ class VariantComboDelegate : public QStyledItemDelegate
 	Q_OBJECT
 
 public:
-	VariantComboDelegate(const KeyboardConfig* keyboardConfig, const Rules* rules, QObject *parent = 0);
+	VariantComboDelegate(const KeyboardConfig* keyboardConfig, const Rules* rules, QObject *parent = nullptr);
 
 	QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option,
 			const QModelIndex &index) const override;
@@ -112,7 +112,7 @@ class KKeySequenceWidgetDelegate : public QStyledItemDelegate
 	Q_OBJECT
 
 public:
-	KKeySequenceWidgetDelegate(const KeyboardConfig* keyboardConfig_, QObject *parent = 0);
+	KKeySequenceWidgetDelegate(const KeyboardConfig* keyboardConfig_, QObject *parent = nullptr);
 
 	QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option,
 			const QModelIndex &index) const override;

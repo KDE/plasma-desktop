@@ -37,7 +37,7 @@ class RunnerMatchesModel : public AbstractModel
 
     public:
         explicit RunnerMatchesModel(const QString &runnerId, const QString &name,
-            Plasma::RunnerManager *manager, QObject *parent = 0);
+            Plasma::RunnerManager *manager, QObject *parent = nullptr);
 
         QString description() const override;
 

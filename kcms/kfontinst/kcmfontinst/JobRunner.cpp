@@ -204,7 +204,7 @@ CJobRunner::CJobRunner(QWidget *parent, int xid)
     itsStack->insertWidget(PAGE_CANCEL, page);
 
     if(KSharedConfig::openConfig(KFI_UI_CFG_FILE)->group(CFG_GROUP).readEntry(CFG_DONT_SHOW_FINISHED_MSG, false))
-        itsDontShowFinishedMsg=0L;
+        itsDontShowFinishedMsg= nullptr;
     else
     {
         page=new QFrame(itsStack);
@@ -383,7 +383,7 @@ int CJobRunner::exec(ECommand cmd, const ItemList &urls, bool destIsSystem)
     if(itsTempDir)
     {
         delete itsTempDir;
-        itsTempDir=0L;
+        itsTempDir= nullptr;
     }
     return rv;
 }
