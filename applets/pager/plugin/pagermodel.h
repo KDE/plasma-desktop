@@ -45,7 +45,7 @@ class PagerModel : public QAbstractListModel, public QQmlParserStatus
     Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
     Q_PROPERTY(PagerType pagerType READ pagerType WRITE setPagerType NOTIFY pagerTypeChanged)
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
-    Q_PROPERTY(bool shouldShowPager READ shouldShowPager NOTIFY shouldShowPagerChanged);
+    Q_PROPERTY(bool shouldShowPager READ shouldShowPager NOTIFY shouldShowPagerChanged)
     Q_PROPERTY(bool showDesktop READ showDesktop WRITE setShowDesktop NOTIFY showDesktopChanged)
     Q_PROPERTY(bool showOnlyCurrentScreen READ showOnlyCurrentScreen WRITE setShowOnlyCurrentScreen NOTIFY showOnlyCurrentScreenChanged)
     Q_PROPERTY(QRect screenGeometry READ screenGeometry WRITE setScreenGeometry NOTIFY screenGeometryChanged)

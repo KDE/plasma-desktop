@@ -46,7 +46,7 @@ class AppsModel : public AbstractModel, public QQmlParserStatus
     Q_PROPERTY(bool showSeparators READ showSeparators WRITE setShowSeparators NOTIFY showSeparatorsChanged)
     Q_PROPERTY(bool showTopLevelItems READ showTopLevelItems WRITE setShowTopLevelItems NOTIFY showTopLevelItemsChanged)
     Q_PROPERTY(int appNameFormat READ appNameFormat WRITE setAppNameFormat NOTIFY appNameFormatChanged)
-    Q_PROPERTY(QObject* appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged);
+    Q_PROPERTY(QObject* appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged)
 
     public:
         explicit AppsModel(const QString &entryPath = QString(), bool paginate = false, int pageSize = 24,

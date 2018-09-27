@@ -99,7 +99,7 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
     Q_PROPERTY(QString filterPattern READ filterPattern WRITE setFilterPattern NOTIFY filterPatternChanged)
     Q_PROPERTY(QStringList filterMimeTypes READ filterMimeTypes WRITE setFilterMimeTypes NOTIFY filterMimeTypesChanged)
     Q_PROPERTY(QObject* newMenu READ newMenu CONSTANT)
-    Q_PROPERTY(QObject* appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged);
+    Q_PROPERTY(QObject* appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged)
 
     public:
         enum DataRole {
