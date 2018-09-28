@@ -308,7 +308,7 @@ FocusScope {
                 onUrlChanged: {
                     if (!label.homeButton && folderView.url != plasmoid.configuration.url) {
                         label.homeButton = homeButtonComponent.createObject(label);
-                    } else if (label.homeButton) {
+                    } else if (label.homeButton && folderView.url == plasmoid.configuration.url) {
                         label.homeButton.destroy();
                     }
                 }
