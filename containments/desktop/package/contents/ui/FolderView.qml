@@ -960,8 +960,10 @@ FocusScope {
                 }
 
                 Keys.onLeftPressed: {
-                    if (root.isPopup && dir.resolvedUrl != dir.resolve(plasmoid.configuration.url)) {
-                        doBack();
+                    if (root.isPopup && root.useListViewMode) {
+                        if (dir.resolvedUrl != dir.resolve(plasmoid.configuration.url)) {
+                            doBack();
+                        }
                     } else if (positioner.enabled) {
                         var newIndex = positioner.nearestItem(currentIndex,
                             FolderTools.effectiveNavDirection(gridView.flow, gridView.effectiveLayoutDirection, Qt.LeftArrow));
@@ -984,9 +986,10 @@ FocusScope {
                 }
 
                 Keys.onRightPressed: {
-                    if (root.isPopup && currentIndex != -1 && dir.hasSelection()) {
-                        var func = root.isPopup ? doCd : dir.run;
-                        func(positioner.map(currentIndex));
+                    if (root.isPopup && root.useListViewMode) {
+                        if (currentIndex != -1 && dir.hasSelection() && currentItem.isDir) {
+                            doCd(positioner.map(currentIndex));
+                        }
                     } else if (positioner.enabled) {
                         var newIndex = positioner.nearestItem(currentIndex,
                             FolderTools.effectiveNavDirection(gridView.flow, gridView.effectiveLayoutDirection, Qt.RightArrow));
