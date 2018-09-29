@@ -59,6 +59,8 @@ FocusScope {
     property alias scrollDown: gridView.scrollDown
     property alias hoveredItem: gridView.hoveredItem
     property var history: []
+    property var lastPosition: null
+    property bool goingBack: false
     property Item backButton: null
     property var dialog: null
     property Item editor: null
@@ -189,13 +191,17 @@ FocusScope {
     }
 
     function doCd(row) {
-        history.push(url);
+        history.push({"url": url, "index": gridView.currentIndex, "yPosition": gridView.visibleArea.yPosition});
         updateHistory();
         dir.cd(row);
+        gridView.currentIndex = -1;
     }
 
     function doBack() {
-        url = history.pop();
+        goingBack = true;
+        gridView.currentIndex = -1;
+        lastPosition = history.pop();
+        url = lastPosition.url;
         updateHistory();
     }
 
@@ -1109,6 +1115,11 @@ FocusScope {
             onListingCompleted: {
                 if (!gridView.model && plasmoid.expanded) {
                     gridView.model = positioner;
+                } else if (goingBack) {
+                    goingBack = false;
+                    gridView.currentIndex = Math.min(lastPosition.index, gridView.count - 1);
+                    setSelected(positioner.map(gridView.currentIndex));
+                    gridView.contentY = lastPosition.yPosition * gridView.contentHeight;
                 }
             }
 
