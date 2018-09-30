@@ -25,7 +25,7 @@ import org.kde.kconfig 1.0 // for KAuthorized
 
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 
-Item {
+FocusScope {
     id: folderViewLayerComponent
 
     property variant sharedActions: ["newMenu", "paste", "undo", "refresh", "emptyTrash"]
