@@ -24,7 +24,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 
-Item {
+FocusScope {
     id: folderViewLayerComponent
 
     property variant sharedActions: ["newMenu", "paste", "undo", "refresh", "emptyTrash"]
