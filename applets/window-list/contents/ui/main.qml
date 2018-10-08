@@ -26,7 +26,7 @@ import org.kde.taskmanager 0.1 as TaskManager
 import org.kde.kwindowsystem 1.0 as KWindowSystem
 
 
-Item {
+FocusScope {
     id: root
 
     Layout.minimumWidth: units.gridUnit * 12
