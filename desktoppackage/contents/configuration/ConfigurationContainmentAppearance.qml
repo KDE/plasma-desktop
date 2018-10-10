@@ -21,6 +21,9 @@ import org.kde.plasma.configuration 2.0
 import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Layouts 1.1
 
+import org.kde.kconfig 1.0 // for KAuthorized
+import org.kde.plasma.private.shell 2.0 as ShellPrivate // for WallpaperPlugin
+
 ColumnLayout {
     id: root
 
@@ -65,15 +68,12 @@ ColumnLayout {
 
     Row {
         spacing: units.largeSpacing / 2
-        anchors.right: wallpaperRow.right
         visible: pluginComboBox.count > 1
-        Item {
-            width: units.largeSpacing
-            height: parent.height
-        }
         QtControls.Label {
+            width: formAlignment - units.largeSpacing
             anchors.verticalCenter: pluginComboBox.verticalCenter
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout:")
+            horizontalAlignment: Text.AlignRight
         }
         QtControls.ComboBox {
             id: pluginComboBox
@@ -147,6 +147,16 @@ ColumnLayout {
                 configDialog.currentWallpaper = model.pluginName
                 main.sourceFile = model.source
                 root.configurationChanged()
+            }
+        }
+        QtControls.Button {
+            iconName: "get-hot-new-stuff"
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Wallpaper Plugins...")
+            visible: KAuthorized.authorize("ghns")
+            onClicked: wallpaperPlugin.getNewWallpaperPlugin(this)
+
+            ShellPrivate.WallpaperPlugin {
+                id: wallpaperPlugin
             }
         }
     }
