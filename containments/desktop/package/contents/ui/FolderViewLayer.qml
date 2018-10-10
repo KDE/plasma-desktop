@@ -39,6 +39,10 @@ FocusScope {
     property alias overflowing: folderView.overflowing
     property alias flow: folderView.flow
 
+    readonly property bool lockedByKiosk: !KAuthorized.authorize("editable_desktop_icons")
+
+    focus: true
+
     function updateContextualActions() {
         folderView.model.updateActions();
 
@@ -158,6 +162,7 @@ FocusScope {
                 if (plasmoid.expanded) {
                     folderView.currentIndex = -1;
                     folderView.forceActiveFocus();
+                    folderView.positionViewAtBeginning();
                 } else {
                     goHome();
 

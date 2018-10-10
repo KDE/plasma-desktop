@@ -239,6 +239,12 @@ FolderViewDropArea {
         return length >= Qt.styleHints.startDragDistance;
     }
 
+    onFocusChanged: {
+        if (focus && isFolder) {
+            folderViewLayer.item.forceActiveFocus();
+        }
+    }
+
     onDragEnter: {
         if (isContainment && plasmoid.immutable && !(isFolder && FolderTools.isFileDrag(event))) {
             event.ignore();
@@ -395,8 +401,9 @@ FolderViewDropArea {
     MouseArea { // unfocus any plasmoid when clicking empty desktop area
         anchors.fill: parent
         onPressed: {
-            root.forceActiveFocus()
+            root.forceActiveFocus();
             mouse.accepted = false // Bug 351277
+
             if (toolBox && toolBox.open) {
                 toolBox.open = false;
             }
@@ -428,8 +435,9 @@ FolderViewDropArea {
         Connections {
             target: folderViewLayer.view
 
+            // `FolderViewDropArea` is not a FocusScope. We need to forward manually.
             onPressed: {
-                folderViewLayer.focus = true;
+                folderViewLayer.forceActiveFocus();
             }
         }
     }

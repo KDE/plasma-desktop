@@ -62,8 +62,11 @@ FocusScope {
     property Item backButton: null
     property var dialog: null
 
-    function rename()
-    {
+    function positionViewAtBeginning() {
+        gridView.positionViewAtBeginning();
+    }
+
+    function rename() {
         if (gridView.currentIndex != -1) {
             editor.targetItem = gridView.currentItem;
         }
@@ -268,6 +271,7 @@ FocusScope {
 
             if (!hoveredItem || hoveredItem.blank) {
                 if (!gridView.ctrlPressed) {
+                    gridView.currentIndex = -1;
                     dir.clearSelection();
                 }
 
@@ -1089,6 +1093,7 @@ FocusScope {
             onListingCompleted: {
                 if (!gridView.model && plasmoid.expanded) {
                     gridView.model = positioner;
+                    gridView.currentIndex = isPopup ? 0 : -1;
                 }
             }
 
