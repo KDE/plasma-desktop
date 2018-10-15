@@ -176,7 +176,6 @@ KCMStyle::KCMStyle( QWidget* parent, const QVariantList& )
 
     about->addAuthor(i18n("Karol Szwed"), QString(), QStringLiteral("gallium@kde.org"));
     about->addAuthor(i18n("Daniel Molkentin"), QString(), QStringLiteral("molkentin@kde.org"));
-    about->addAuthor(i18n("Ralf Nolden"), QString(), QStringLiteral("nolden@kde.org"));
     setAboutData( about );
 
     // Setup pages and mainLayout

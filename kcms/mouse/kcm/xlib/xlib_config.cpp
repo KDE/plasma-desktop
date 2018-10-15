@@ -6,7 +6,6 @@
  * Copyright 2000 Bernd Gehrmann
  * Copyright 2000 Rik Hemsley <rik@kde.org>
  * Copyright 2000 Brad Hughes <bhughes@trolltech.com>
- * Copyright 2001 Ralf Nolden <nolden@kde.org>
  * Copyright 2004 Brad Hards <bradh@frogmouth.net>
  * Copyright 2018 Roman Gilg <subdiff@gmail.com>
  *
@@ -104,7 +103,6 @@ XlibConfig::XlibConfig(ConfigContainer *parent, InputBackend *backend)
     about->addAuthor(i18n("Bernd Gehrmann"));
     about->addAuthor(i18n("Rik Hemsley"));
     about->addAuthor(i18n("Brad Hughes"));
-    about->addAuthor(i18n("Ralf Nolden"));
     about->addAuthor(i18n("Brad Hards"));
     about->addAuthor(i18n("Roman Gilg"));
     m_parent->setAboutData(about);
