@@ -28,6 +28,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kconfig 1.0 // for KAuthorized
+import org.kde.kirigami 2.4 as Kirigami
 
 import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
@@ -64,35 +65,23 @@ Item {
         onIconNameChanged: cfg_icon = iconName || "folder"
     }
 
-    GridLayout {
+    Kirigami.FormLayout {
+        anchors.horizontalCenter: parent.horizontalCenter
 
-        // Row 0: "Panel button"
-        Label {
-            Layout.row: 0
-            Layout.column: 0
 
-            visible: isPopup
-            text: i18n("Panel button:")
-        }
-
-        CheckBox {
-            id: useCustomIcon
-            Layout.row: 0
-            Layout.column: 1
-            Layout.columnSpan: 2
-
-            visible: isPopup
-            checked: cfg_useCustomIcon
-            text: i18n("Use a custom icon")
-        }
-
+        // Panel button
         RowLayout {
-            Layout.row: 0
-            Layout.column: 3
-            Layout.alignment: Qt.AlignRight
             spacing: units.smallSpacing
-
             visible: isPopup
+
+            Kirigami.FormData.label: i18n("Panel button:")
+
+            CheckBox {
+                id: useCustomIcon
+                visible: isPopup
+                checked: cfg_useCustomIcon
+                text: i18n("Use a custom icon")
+            }
 
             Button {
                 id: iconButton
@@ -138,64 +127,32 @@ Item {
             }
         }
 
-        // Row 1: Spacing
         Item {
-            Layout.row: 1
-            Layout.column: 0
-            Layout.minimumHeight: units.largeSpacing
             visible: isPopup
+            Kirigami.FormData.isSection: true
         }
 
-        // Row 2: "Arrangment" - "Arrange in"
-        Label {
-            Layout.row: 2
-            Layout.column: 0
 
-            text: i18n("Arrangement:")
-        }
 
-        Label {
-            Layout.row: 2
-            Layout.column: 1
-
-            text: i18n("Arrange in")
-        }
-
+        // Arrangment section
         ComboBox {
             id: arrangement
-            Layout.row: 2
-            Layout.column: 2
-            Layout.columnSpan: 2
             Layout.fillWidth: true
+
+            Kirigami.FormData.label: i18n("Arrangement:")
 
             model: [i18n("Rows"), i18n("Columns")]
         }
 
-        // Row 3: "Arrangment" - "Align"
-        Label {
-            Layout.row: 3
-            Layout.column: 1
-
-            text: i18n("Align")
-        }
-
         ComboBox {
             id: alignment
-            Layout.row: 3
-            Layout.column: 2
-            Layout.columnSpan: 2
             Layout.fillWidth: true
 
-            model: [i18n("Left"), i18n("Right")]
+            model: [i18n("Align Left"), i18n("Align Right")]
         }
 
-        // Row 4: "Arrangment" - "Lock"
         CheckBox {
             id: locked
-            Layout.row: 4
-            Layout.column: 1
-            Layout.columnSpan: 3
-
             visible: ("containmentType" in plasmoid)
             checked: cfg_locked || lockedByKiosk
             enabled: !lockedByKiosk
@@ -209,34 +166,17 @@ Item {
             text: i18n("Lock in place")
         }
 
-        // Row 5: Spacing
         Item {
-            Layout.row: 5
-            Layout.column: 0
-            Layout.minimumHeight: units.largeSpacing
+            Kirigami.FormData.isSection: true
         }
 
-        // Row 6: "Sorting" - "Sort by"
-        Label {
-            Layout.row: 6
-            Layout.column: 0
 
-            text: i18n("Sorting:")
-        }
-
-        Label {
-            Layout.row: 6
-            Layout.column: 1
-
-            text: i18n("Sort by")
-        }
-
+        // Sorting section
         ComboBox {
             id: sortMode
-            Layout.row: 6
-            Layout.column: 2
-            Layout.columnSpan: 2
             Layout.fillWidth: true
+
+            Kirigami.FormData.label: i18n("Sorting:")
 
             property int mode
             // FIXME TODO HACK: This maps the combo box list model to the KDirModel::ModelColumns
@@ -244,90 +184,51 @@ Item {
             property variant indexToMode: [-1, 0, 1, 6, 2]
             property variant modeToIndex: {'-1' : '0', '0' : '1', '1' : '2', '6' : '3', '2' : '4'}
 
-            model: [i18n("Unsorted"), i18n("Name"), i18n("Size"), i18n("Type"), i18n("Date")]
+            model: [i18n("Manual"), i18n("Name"), i18n("Size"), i18n("Type"), i18n("Date")]
 
             Component.onCompleted: currentIndex = modeToIndex[mode]
             onActivated: mode = indexToMode[index]
         }
 
-        // Row 7: "Sorting" - "Descending"
         CheckBox {
             id: sortDesc
-            Layout.row: 7
-            Layout.column: 1
-            Layout.columnSpan: 3
 
             enabled: (sortMode.currentIndex != 0)
 
             text: i18n("Descending")
         }
 
-        // Row 8: "Sorting" - "Directories first"
         CheckBox {
             id: sortDirsFirst
-            Layout.row: 8
-            Layout.column: 1
-            Layout.columnSpan: 3
 
             enabled: (sortMode.currentIndex != 0)
 
             text: i18n("Folders first")
         }
 
-        // Row 9: Spacing
         Item {
-            Layout.row: 9
-            Layout.column: 0
-            Layout.minimumHeight: units.largeSpacing
+            Kirigami.FormData.isSection: true
         }
 
-        // Row 10: "Appearance" - "View mode"
-        Label {
-            Layout.row: (isPopup ? 10 : 11)
-            Layout.column: 0
 
-            text: i18n("Appearance:")
-        }
-
-        Label {
-            Layout.row: 10
-            Layout.column: 1
-
-            visible: isPopup
-
-            text: i18nc("whether to use icon or list view", "View mode")
-        }
-
+        // View Mode section (only if we're a pop-up)
         ComboBox {
             id: viewMode
-            Layout.row: 10
-            Layout.column: 2
-            Layout.columnSpan: 2
+            visible: isPopup
             Layout.fillWidth: true
 
-            visible: isPopup
+            Kirigami.FormData.label: i18nc("whether to use icon or list view", "View mode:")
 
             model: [i18n("List"), i18n("Icons")]
         }
 
-        // Rows 11+12: "Appearance" - "Size"
-        Label {
-            Layout.row: 11
-            Layout.column: 1
 
-            visible: !isPopup || viewMode.currentIndex === 1
-
-            text: i18n("Size")
-        }
-
+        // Size section
         Slider {
             id: iconSize
-            Layout.row: 11
-            Layout.column: 2
-            Layout.columnSpan: 2
-            Layout.fillWidth: true
-
             visible: !isPopup || viewMode.currentIndex === 1
+
+            Kirigami.FormData.label: i18n("Size:")
 
             minimumValue: 0
             maximumValue: 5
@@ -335,112 +236,73 @@ Item {
             tickmarksEnabled: true
         }
 
-        Label {
-            Layout.row: 12
-            Layout.column: 2
-            Layout.alignment: Qt.AlignLeft
+        RowLayout {
+            Layout.fillWidth: true
 
-            visible: !isPopup || viewMode.currentIndex === 1
+            Label {
+                Layout.alignment: Qt.AlignLeft
+                visible: !isPopup || viewMode.currentIndex === 1
 
-            text: i18n("Small")
-        }
+                text: i18n("Small")
+            }
+            Item {
+                Layout.fillWidth: true
+            }
+            Label {
+                Layout.alignment: Qt.AlignRight
+                visible: !isPopup || viewMode.currentIndex === 1
 
-        Label {
-            Layout.row: 12
-            Layout.column: 3
-            Layout.alignment: Qt.AlignRight
-
-            visible: !isPopup || viewMode.currentIndex === 1
-
-            text: i18n("Large")
-        }
-
-        // Row 13: "Appearance" - "Text lines"
-        Label {
-            Layout.row: 13
-            Layout.column: 1
-
-            visible: !isPopup || viewMode.currentIndex === 1
-
-            text: i18n("Text lines")
+                text: i18n("Large")
+            }
         }
 
         SpinBox {
             id: textLines
-            Layout.row: 13
-            Layout.column: 2
-            Layout.columnSpan: 2
-
             visible: !isPopup || viewMode.currentIndex === 1
+
+            Kirigami.FormData.label: i18n("Text lines:")
 
             minimumValue: 1
             maximumValue: 10
             stepSize: 1
         }
 
-        // Row 14: Spacing
         Item {
-            Layout.row: 14
-            Layout.column: 0
-            Layout.minimumHeight: units.largeSpacing
+            Kirigami.FormData.isSection: true
         }
 
-        // Row 15: "Features" - "Tool tips"
-        Label {
-            Layout.row: 15
-            Layout.column: 0
 
-            text: i18n("Features:")
-        }
-
+        // Features section
         CheckBox {
             id: toolTips
-            Layout.row: 15
-            Layout.column: 1
-            Layout.columnSpan: 3
 
-            text: i18n("Tool tips")
+            Kirigami.FormData.label: i18n("Features:")
+
+            text: i18n("Tooltips")
         }
 
-        // Row 16: "Features" - "Selection markers"
         CheckBox {
             id: selectionMarkers
-            Layout.row: 16
-            Layout.column: 1
-            Layout.columnSpan: 3
-
             visible: Qt.styleHints.singleClickActivation
 
             text: i18n("Selection markers")
         }
 
-        // Row 17: "Features" - "Folder preview popups"
         CheckBox {
             id: popups
-            Layout.row: 17
-            Layout.column: 1
-            Layout.columnSpan: 3
-
             visible: !isPopup
 
             text: i18n("Folder preview popups")
         }
 
-        // Rows 18+19: "Features" - "Preview thumbnails"
         CheckBox {
             id: previews
-            Layout.row: 18
-            Layout.column: 1
-            Layout.columnSpan: 3
 
             text: i18n("Preview thumbnails")
         }
 
         Button {
             id: previewSettings
-            Layout.row: 19
-            Layout.column: 3
-            Layout.alignment: Qt.AlignRight
 
             text: i18n("More Preview Options...")
 

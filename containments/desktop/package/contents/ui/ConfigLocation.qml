@@ -22,6 +22,7 @@ import QtQuick.Controls 1.0
 import QtQuick.Layouts 1.0
 
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kirigami 2.4 as Kirigami
 
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 
@@ -84,44 +85,30 @@ Item {
         }
     }
 
-    GridLayout {
-
-        // Row 0: "Show the Desktop folder"
-        Label {
-            id: locationLabel
-            Layout.column: 0
-            Layout.row: 0
-            text: i18n("Location:")
-        }
+    Kirigami.FormLayout {
+        anchors.horizontalCenter: parent.horizontalCenter
 
         RadioButton {
             id: locationDesktop
-            Layout.row: 0
-            Layout.column: 1
-            Layout.columnSpan: 3
-            text: i18n("Show the Desktop folder")
+
+            Kirigami.FormData.label: i18n("Show:")
+
+            text: i18n("Desktop folder")
             exclusiveGroup: locationGroup
         }
 
-        // Row 1: "Show files linked to the current activity"
         RadioButton {
             id: locationCurrentActivity
-            Layout.row: 1
-            Layout.column: 1
-            Layout.columnSpan: 3
-
             visible: placesModel.activityLinkingEnabled
-            text: i18n("Show files linked to the current activity")
+
+            text: i18n("Files linked to the current activity")
             exclusiveGroup: locationGroup
         }
 
-        // Rows 2+3: "Show a place"
         RadioButton {
             id: locationPlace
-            Layout.row: 2
-            Layout.column: 1
-            Layout.columnSpan: 3
-            text: i18n("Show a place:")
+
+            text: i18n("Places panel item:")
 
             exclusiveGroup: locationGroup
 
@@ -129,133 +116,112 @@ Item {
                 locationPlaceValue.enabled = checked;
             }
         }
-
-        Item {
-            id: indentSpacer
-            Layout.row: 3
-            Layout.column: 1
-            Layout.minimumWidth: units.largeSpacing
-        }
-
-        ComboBox {
-            id: locationPlaceValue
-            Layout.row: 3
-            Layout.column: 2
-            Layout.columnSpan: 2
+        RowLayout {
             Layout.fillWidth: true
 
-            model: placesModel
-            textRole: "display"
+            Item {
+                width: units.largeSpacing
+            }
+            ComboBox {
+                id: locationPlaceValue
 
-            enabled: true
+                Layout.fillWidth: true
 
-            onEnabledChanged: {
-                if (enabled && currentIndex != -1) {
-                    cfg_url = placesModel.urlForIndex(currentIndex);
+                model: placesModel
+                textRole: "display"
+
+                enabled: true
+
+                onEnabledChanged: {
+                    if (enabled && currentIndex != -1) {
+                        cfg_url = placesModel.urlForIndex(currentIndex);
+                    }
+                }
+
+                onActivated: {
+                    cfg_url = placesModel.urlForIndex(index);
                 }
             }
-
-            onActivated: {
-                cfg_url = placesModel.urlForIndex(index);
-            }
         }
-
-        // Rows 4+5: "Specify a folder"
 
         RadioButton {
             id: locationCustom
-            Layout.row: 4
-            Layout.column: 1
-            Layout.columnSpan: 3
 
             exclusiveGroup: locationGroup
-            text: i18n("Specify a folder:")
+            text: i18n("Custom location:")
         }
 
-        TextField {
-            id: locationCustomValue
-            Layout.row: 5
-            Layout.column: 2
+        RowLayout {
             Layout.fillWidth: true
+            Item {
+                width: units.largeSpacing
+            }
+            TextField {
+                id: locationCustomValue
+                enabled: locationCustom.checked
+                Layout.fillWidth: true
 
-            enabled: locationCustom.checked
+                placeholderText: i18n("Type a path or a URL here")
 
-            placeholderText: i18n("Type a path or a URL here")
+                onEnabledChanged: {
+                    if (enabled && text != "") {
+                        cfg_url = text;
+                    }
+                }
 
-            onEnabledChanged: {
-                if (enabled && text != "") {
-                    cfg_url = text;
+                onTextChanged: {
+                    if (enabled) {
+                        cfg_url = text;
+                    }
                 }
             }
+            Button {
+                iconName: "document-open"
 
-            onTextChanged: {
-                if (enabled) {
-                    cfg_url = text;
+                enabled: locationCustom.checked
+
+                onClicked: {
+                    directoryPicker.open();
+                }
+            }
+            Folder.DirectoryPicker {
+                id: directoryPicker
+
+                onUrlChanged: {
+                    locationCustomValue.text = url;
                 }
             }
         }
 
-        Button {
-            Layout.row: 5
-            Layout.column: 3
-            Layout.alignment: Qt.AlignLeft
-            iconName: "document-open"
-
-            enabled: locationCustom.checked
-
-            onClicked: {
-                directoryPicker.open();
-            }
-        }
-
-        Folder.DirectoryPicker {
-            id: directoryPicker
-
-            onUrlChanged: {
-                locationCustomValue.text = url;
-            }
-        }
-
-        // Row 6: Spacing
         Item {
-            id: titleSpacer
-            Layout.column: 0
-            Layout.row: 6
-            Layout.minimumHeight: units.largeSpacing
             visible: titleVisible
-        }
-
-        // Rows 7+8: "Title"
-        Label {
-            id: titleLabel
-            Layout.column: 0
-            Layout.row: 7
-            text: i18n("Title:")
-            visible: titleVisible
+            Kirigami.FormData.isSection: true
         }
 
         ComboBox {
             id: labelMode
-            Layout.row: 7
-            Layout.column: 1
-            Layout.columnSpan: 3
-            Layout.fillWidth: true
             visible: titleVisible
+            Layout.fillWidth: true
+
+            Kirigami.FormData.label: i18n("Title:")
 
             model: [i18n("None"), i18n("Default"), i18n("Full path"), i18n("Custom title")]
         }
 
-        TextField {
-            id: labelText
-            Layout.row: 8
-            Layout.column: 2
-            Layout.columnSpan: 2
+        RowLayout {
             Layout.fillWidth: true
             visible: titleVisible
 
-            enabled: (labelMode.currentIndex == 3)
+            Item {
+                width: units.largeSpacing
+            }
+            TextField {
+                id: labelText
+                Layout.fillWidth: true
+                enabled: (labelMode.currentIndex == 3)
 
-            placeholderText: i18n("Enter custom title here")
+                placeholderText: i18n("Enter custom title here")
+            }
         }
     }
 }
