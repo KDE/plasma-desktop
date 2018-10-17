@@ -201,7 +201,10 @@ bool KNetAttach::validateCurrentPage()
         }
 
         url.setHost(_host->text().trimmed());
-        url.setUserName(_user->text().trimmed());
+        const QString trimmedUser = _user->text().trimmed();
+        if (!trimmedUser.isEmpty()) {
+            url.setUserName(trimmedUser);
+        }
         QString path = _path->text().trimmed();
 #ifndef Q_WS_WIN
         // could a relative path really be made absolute by simply prepending a '/' ?
