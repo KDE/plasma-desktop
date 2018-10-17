@@ -33,7 +33,6 @@
 #include <KDirNotify>
 #include <KCharsets>
 #include <KDebug>
-#include <KUrl>
 #include <KRun>
 #include <KToolInvocation>
 #include <KGlobal>
@@ -158,9 +157,9 @@ bool KNetAttach::validateCurrentPage()
             if (!updateForProtocol(_type)) {
                 // FIXME: handle error
             }
-            KUrl u(group.readEntry("URL"));
+            QUrl u(group.readEntry("URL"));
             _host->setText(u.host());
-            _user->setText(u.user());
+            _user->setText(u.userName());
             _path->setText(u.path());
             if (group.hasKey("Port")) {
                 _port->setValue(group.readEntry("Port",0));
@@ -175,34 +174,34 @@ bool KNetAttach::validateCurrentPage()
     }else{
         button(BackButton)->setEnabled(false);
         button(FinishButton)->setEnabled(false);
-        KUrl url;
+        QUrl url;
         if (_type == QLatin1String("WebFolder")) {
             if (_useEncryption->isChecked()) {
-                url.setProtocol(QStringLiteral("webdavs"));
+                url.setScheme(QStringLiteral("webdavs"));
             } else {
-                url.setProtocol(QStringLiteral("webdav"));
+                url.setScheme(QStringLiteral("webdav"));
             }
             url.setPort(_port->value());
         } else if (_type == QLatin1String("Fish")) {
             KConfig config(QStringLiteral("kio_fishrc"));
             KConfigGroup cg(&config, _host->text().trimmed());
             cg.writeEntry("Charset", KCharsets::charsets()->encodingForName(_encoding->currentText()));
-            url.setProtocol(_protocolText->currentText());
+            url.setScheme(_protocolText->currentText());
             url.setPort(_port->value());
         } else if (_type == QLatin1String("FTP")) {
-            url.setProtocol(QStringLiteral("ftp"));
+            url.setScheme(QStringLiteral("ftp"));
             url.setPort(_port->value());
             KConfig config(QStringLiteral("kio_ftprc"));
             KConfigGroup cg(&config, _host->text().trimmed());
             cg.writeEntry("Charset", KCharsets::charsets()->encodingForName(_encoding->currentText()));
             config.sync();
         } else if (_type == QLatin1String("SMB")) {
-            url.setProtocol(QStringLiteral("smb"));
+            url.setScheme(QStringLiteral("smb"));
         } else { // recent
         }
 
         url.setHost(_host->text().trimmed());
-        url.setUser(_user->text().trimmed());
+        url.setUserName(_user->text().trimmed());
         QString path = _path->text().trimmed();
 #ifndef Q_WS_WIN
         // could a relative path really be made absolute by simply prepending a '/' ?
@@ -234,8 +233,8 @@ bool KNetAttach::validateCurrentPage()
             desktopFile.writeEntry("Icon", "folder-remote");
             desktopFile.writeEntry("Name", name);
             desktopFile.writeEntry("Type", "Link");
-            desktopFile.writeEntry("URL", url.prettyUrl());
-            desktopFile.writeEntry("Charset", url.fileEncoding());
+            desktopFile.writeEntry("URL", url.toDisplayString());
+            desktopFile.writeEntry("Charset", url.queryItemValue("charset"));
             desktopFile.sync();
             org::kde::KDirNotify::emitFilesAdded( QUrl(QStringLiteral("remote:/")) );
         }
@@ -260,7 +259,7 @@ bool KNetAttach::validateCurrentPage()
                 recent.writeEntry("Index", idx);
             }
             recent = KConfigGroup(&_recent,name);
-            recent.writeEntry("URL", url.prettyUrl());
+            recent.writeEntry("URL", url.toDisplayString());
             if (_type == QLatin1String("WebFolder") || _type == QLatin1String("Fish") || _type == QLatin1String("FTP")) {
                 recent.writeEntry("Port", _port->value());
             }
@@ -284,7 +283,7 @@ void KNetAttach::updatePort(bool encryption)
 }
 
 
-bool KNetAttach::doConnectionTest(const KUrl& url)
+bool KNetAttach::doConnectionTest(const QUrl& url)
 {
     KIO::UDSEntry entry;
     if (KIO::NetAccess::stat(url, entry, this)) {

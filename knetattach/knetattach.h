@@ -22,7 +22,8 @@
 
 #include "ui_knetattach.h"
 
-class KUrl;
+class QUrl;
+
 class KNetAttach : public QWizard, private Ui_KNetAttach
 {
     Q_OBJECT
@@ -36,7 +37,7 @@ public slots:
 private:
     QString _type;
 
-    bool doConnectionTest( const KUrl & url );
+    bool doConnectionTest(const QUrl &url );
     bool updateForProtocol( const QString & protocol );
 
 private slots:
