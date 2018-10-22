@@ -23,6 +23,10 @@
       <label>Whether to limit the Pager to the set of windows and the geometry of the screen the widget resides on.</label>
       <default>false</default>
     </entry>
+    <entry name="wrapPage" type="Bool">
+        <label>Whether to wrap page when navigating with pager</label>
+        <default>false</default>
+    </entry>
     <entry name="currentDesktopSelected" type="Enum">
         <label>What to do on left-mouse click on a desktop rectangle.</label>
         <choices>

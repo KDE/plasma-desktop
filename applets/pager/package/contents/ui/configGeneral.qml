@@ -40,6 +40,7 @@ Item {
     property int cfg_currentDesktopSelected
     property alias cfg_pagerLayout: pagerLayout.currentIndex
     property alias cfg_showOnlyCurrentScreen: showOnlyCurrentScreen.checked
+    property alias cfg_wrapPage: wrapPage.checked
 
     onCfg_displayedTextChanged: {
         switch (cfg_displayedText) {
@@ -130,6 +131,16 @@ Item {
         QtControls.CheckBox {
             id: showOnlyCurrentScreen
             text: i18n("Only the current screen")
+        }
+
+        Item {
+            width: 2
+            height: 2
+        } //spacer
+
+        QtControls.CheckBox {
+            id: wrapPage
+            text: i18n("Page navigation wraps around")
         }
 
         QtControls.Label {

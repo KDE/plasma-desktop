@@ -125,9 +125,15 @@ MouseArea {
 
         while (increment != 0) {
             if (increment < 0) {
-                pagerModel.changePage((pagerModel.currentPage + 1) % repeater.count);
+                var nextPage = plasmoid.configuration.wrapPage?
+                    (pagerModel.currentPage + 1) % repeater.count :
+                    Math.min(pagerModel.currentPage + 1, repeater.count - 1);
+                pagerModel.changePage(nextPage);
             } else {
-                pagerModel.changePage((repeater.count + pagerModel.currentPage - 1) % repeater.count);
+                var previousPage = plasmoid.configuration.wrapPage ?
+                    (repeater.count + pagerModel.currentPage - 1) % repeater.count :
+                    Math.max(pagerModel.currentPage - 1, 0);
+                pagerModel.changePage(previousPage);
             }
 
             increment += (increment < 0) ? 1 : -1;
