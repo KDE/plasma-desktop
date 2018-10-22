@@ -83,7 +83,7 @@ PlasmaExtras.ScrollArea {
     }
 
     Column {
-        id: column
+        id: itemColumn
 
         width: itemMultiGrid.width - units.gridUnit
 
@@ -91,7 +91,7 @@ PlasmaExtras.ScrollArea {
             id: repeater
 
             delegate: Item {
-                width: column.width
+                width: itemColumn.width - units.gridUnit
                 height: headerHeight + gridView.height + (index == repeater.count - 1 ? 0 : footerHeight)
 
                 property int headerHeight: (gridViewLabel.height
