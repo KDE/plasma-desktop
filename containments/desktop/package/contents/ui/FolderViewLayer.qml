@@ -39,8 +39,6 @@ FocusScope {
     property alias overflowing: folderView.overflowing
     property alias flow: folderView.flow
 
-    readonly property bool lockedByKiosk: !KAuthorized.authorize("editable_desktop_icons")
-
     focus: true
 
     function updateContextualActions() {
