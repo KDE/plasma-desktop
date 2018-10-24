@@ -1,7 +1,7 @@
 /*
     Copyright (C) 2011  Martin Gräßlin <mgraesslin@kde.org>
     Copyright (C) 2012  Gregor Taetzner <gregor@freenet.de>
-    Copyright (C) 2015  Eike Hein <hein@kde.org>
+    Copyright (C) 2015-2018  Eike Hein <hein@kde.org>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -66,44 +66,34 @@ Item {
         favoritesModel: globalFavorites
     }
 
-    PlasmaExtras.ScrollArea {
+    Connections {
+        target: header
+
+        onQueryChanged: {
+            runnerModel.query = header.query;
+            searchView.currentIndex = 0;
+
+            if (!header.query) {
+                searchView.model = null;
+            }
+        }
+    }
+
+    Connections {
+        target: runnerModel
+
+        onCountChanged: {
+            if (runnerModel.count && !searchView.model) {
+                searchView.model = runnerModel.modelForRow(0);
+            }
+        }
+    }
+
+    KickoffListView {
+        id: searchView
+
         anchors.fill: parent
 
-        ListView {
-            id: searchView
-
-            anchors.fill: parent
-            keyNavigationWraps: true
-            boundsBehavior: Flickable.StopAtBounds
-            delegate: KickoffItem {
-                showAppsByName: false //krunner results have the most relevant field in the "display" column, which is showAppsByName = false
-            }
-            highlight: KickoffHighlight {}
-            highlightMoveDuration : 0
-            highlightResizeDuration: 0
-
-            Connections {
-                target: header
-
-                onQueryChanged: {
-                    runnerModel.query = header.query;
-
-                    if (!header.query) {
-                        searchView.model = null;
-                    }
-                }
-            }
-
-            Connections {
-                target: runnerModel
-
-                onCountChanged: {
-                    if (runnerModel.count && !searchView.model) {
-                        searchView.model = runnerModel.modelForRow(0);
-                        searchView.currentIndex = 0;
-                    }
-                }
-            }
-        } // searchView
-    } // ScrollArea
+        showAppsByName: false //krunner results have the most relevant field in the "display" column, which is showAppsByName = false
+    }
 }

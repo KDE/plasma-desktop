@@ -2,7 +2,7 @@
     Copyright (C) 2011  Martin Gräßlin <mgraesslin@kde.org>
     Copyright (C) 2012 Marco Martin <mart@kde.org>
     Copyright 2014 Sebastian Kügler <sebas@kde.org>
-    Copyright (C) 2015  Eike Hein <hein@kde.org>
+    Copyright (C) 2015-2018  Eike Hein <hein@kde.org>
     Copyright (C) 2016 Jonathan Liu <net147@gmail.com>
     Copyright (C) 2016 Kai Uwe Broulik <kde@privat.broulik.de>
 
@@ -35,22 +35,22 @@ Item {
 
     objectName: "FavoritesView"
 
-    property ListView listView: kickoffListView
+    property ListView listView: favoritesView.listView
 
     function decrementCurrentIndex() {
-        kickoffListView.decrementCurrentIndex();
+        favoritesView.decrementCurrentIndex();
     }
 
     function incrementCurrentIndex() {
-        kickoffListView.incrementCurrentIndex();
+        favoritesView.incrementCurrentIndex();
     }
 
     function activateCurrentIndex() {
-        kickoffListView.currentItem.activate();
+        favoritesView.currentItem.activate();
     }
 
     function openContextMenu() {
-        kickoffListView.currentItem.openActionMenu();
+        favoritesView.currentItem.openActionMenu();
     }
 
     // QQuickItem::isAncestorOf is not invokable...
@@ -69,94 +69,77 @@ Item {
     DropArea {
         property int startRow: -1
 
-        anchors.fill: scrollArea
+        anchors.fill: parent
         enabled: plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
 
         function syncTarget(event) {
-            if (kickoffListView.animating) {
+            if (favoritesView.animating) {
                 return;
             }
 
-            var pos = mapToItem(kickoffListView.contentItem, event.x, event.y);
-            var above = kickoffListView.itemAt(pos.x, pos.y);
+            var pos = mapToItem(listView.contentItem, event.x, event.y);
+            var above = listView.itemAt(pos.x, pos.y);
 
             var source = kickoff.dragSource;
 
-            if (above && above !== source && isChildOf(source, kickoffListView)) {
-                kickoffListView.model.moveRow(source.itemIndex, above.itemIndex);
+            if (above && above !== source && isChildOf(source, favoritesView)) {
+                favoritesView.model.moveRow(source.itemIndex, above.itemIndex);
                 // itemIndex changes directly after moving,
                 // we can just set the currentIndex to it then.
-                kickoffListView.currentIndex = source.itemIndex;
+                favoritesView.currentIndex = source.itemIndex;
             }
         }
 
         onDragEnter: {
             syncTarget(event);
-            startRow = kickoffListView.currentIndex;
+            startRow = favoritesView.currentIndex;
         }
 
-        onDragMove: syncTarget(event);
+        onDragMove: syncTarget(event)
     }
 
     Transition {
         id: moveTransition
         SequentialAnimation {
-            PropertyAction { target: kickoffListView; property: "animating"; value: true }
+            PropertyAction { target: favoritesView; property: "animating"; value: true }
 
             NumberAnimation {
-                duration: kickoffListView.animationDuration
+                duration: favoritesView.animationDuration
                 properties: "x, y"
                 easing.type: Easing.OutQuad
             }
 
-            PropertyAction { target: kickoffListView; property: "animating"; value: false }
+            PropertyAction { target: favoritesView; property: "animating"; value: false }
         }
     }
 
-    PlasmaExtras.ScrollArea {
-        id: scrollArea
+    Connections {
+        target: plasmoid
+        onExpandedChanged: {
+            if (!expanded) {
+                favoritesView.currentIndex = -1;
+            }
+        }
+    }
+
+    KickoffListView {
+        id: favoritesView
 
         anchors.fill: parent
 
-        ListView {
-            id: kickoffListView
+        property bool animating: false
+        property int animationDuration: resetAnimationDurationTimer.interval
 
-            property bool animating: false
-            property int animationDuration: resetAnimationDurationTimer.interval
+        interactive: contentHeight > height
 
-            currentIndex: -1
-            boundsBehavior: Flickable.StopAtBounds
-            keyNavigationWraps: true
-            interactive: contentHeight > height
+        move: moveTransition
+        moveDisplaced: moveTransition
 
-            delegate: KickoffItem {}
-            highlight: KickoffHighlight {}
-            highlightMoveDuration : 0
-            highlightResizeDuration: 0
+        model: globalFavorites
 
-            model: globalFavorites
-
-            onCountChanged: {
-                animationDuration = 0;
-                resetAnimationDurationTimer.start();
-            }
-
-            section {
-                property: "group"
-                criteria: ViewSection.FullString
-            }
-
-            move: moveTransition
-            moveDisplaced: moveTransition
-
-            Connections {
-                target: plasmoid
-                onExpandedChanged: {
-                    if (!expanded) {
-                        kickoffListView.currentIndex = -1;
-                    }
-                }
-            }
+        onCountChanged: {
+            animationDuration = 0;
+            resetAnimationDurationTimer.start();
         }
     }
 
@@ -165,7 +148,7 @@ Item {
 
         interval: 150
 
-        onTriggered: kickoffListView.animationDuration = interval - 20
+        onTriggered: favoritesView.animationDuration = interval - 20
     }
 
 }

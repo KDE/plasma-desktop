@@ -53,7 +53,7 @@ Item {
             } else {
                 applicationsView.newModel = crumbModel.models[index];
             }
-            appViewScrollArea.state = "OutgoingRight";
+            applicationsView.state = "OutgoingRight";
         }
     }
 

@@ -2,7 +2,7 @@
     Copyright (C) 2011  Martin Gräßlin <mgraesslin@kde.org>
     Copyright (C) 2012  Gregor Taetzner <gregor@freenet.de>
     Copyright 2014 Sebastian Kügler <sebas@kde.org>
-    Copyright (C) 2015  Eike Hein <hein@kde.org>
+    Copyright (C) 2015-2018  Eike Hein <hein@kde.org>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -31,16 +31,19 @@ Item {
     width: ListView.view.width
     height: (units.smallSpacing * 2) + Math.max(elementIcon.height, titleElement.height + subTitleElement.height)
 
+    signal reset
     signal actionTriggered(string actionId, variant actionArgument)
     signal aboutToShowActionMenu(variant actionMenu)
+    signal addBreadcrumb(var model, string title)
 
     readonly property int itemIndex: model.index
+    readonly property string url: model.url || ""
+    readonly property var decoration: model.decoration || ""
 
     property bool dropEnabled: false
     property bool appView: false
     property bool modelChildren: model.hasChildren || false
     property bool isCurrent: listItem.ListView.view.currentIndex === index;
-    property string url: model.url || ""
     property bool showAppsByName: plasmoid.configuration.showAppsByName
 
     property bool hasActionList: ((model.favoriteId != null)
@@ -68,21 +71,18 @@ Item {
         if (model.hasChildren) {
             var childModel = view.model.modelForRow(index);
 
-            view.addBreadcrumb(childModel, display);
+            listItem.addBreadcrumb(childModel, display);
             view.model = childModel;
         } else {
             view.model.trigger(index, "", null);
             plasmoid.expanded = false;
-
-            if (view.reset) {
-                view.reset();
-            }
+            listItem.reset();
         }
     }
 
-    function openActionMenu(visualParent, x, y) {
+    function openActionMenu(x, y) {
         aboutToShowActionMenu(actionMenu);
-        actionMenu.visualParent = visualParent != undefined ? visualParent : mouseArea;
+        actionMenu.visualParent = listItem;
         actionMenu.open(x, y);
     }
 
@@ -94,151 +94,82 @@ Item {
         }
     }
 
-    MouseArea {
-        id: mouseArea
+    PlasmaCore.IconItem {
+        id: elementIcon
+
         anchors {
             left: parent.left
+            leftMargin: (units.gridUnit * 4) - units.iconSizes.medium
+            verticalCenter: parent.verticalCenter
+        }
+        width: units.iconSizes.medium
+        height: width
+
+        animated: false
+        usesPlasmaTheme: false
+
+        source: model.decoration
+    }
+
+    PlasmaComponents.Label {
+        id: titleElement
+
+        y: Math.round((parent.height - titleElement.height - ( (subTitleElement.text != "") ? subTitleElement.paintedHeight : 0) ) / 2)
+        anchors {
+            //bottom: elementIcon.verticalCenter
+            left: elementIcon.right
+            right: arrow.left
+            leftMargin: units.gridUnit
+            rightMargin: units.gridUnit * 2
+        }
+        height: paintedHeight
+        // TODO: games should always show the by name!
+        text: model.display
+        elide: Text.ElideRight
+        horizontalAlignment: Text.AlignLeft
+    }
+
+    PlasmaComponents.Label {
+        id: subTitleElement
+
+        anchors {
+            left: titleElement.left
+            right: arrow.left
+            rightMargin: units.gridUnit * 2
+            top: titleElement.bottom
+        }
+        height: paintedHeight
+
+        text: model.description
+        opacity: isCurrent ? 0.8 : 0.6
+        font.pointSize: theme.smallestFont.pointSize
+        elide: Text.ElideMiddle
+        horizontalAlignment: Text.AlignLeft
+    }
+
+    PlasmaCore.SvgItem {
+        id: arrow
+
+        anchors {
             right: parent.right
-            top: parent.top
-            bottom: parent.bottom
+            rightMargin: units.gridUnit * 2
+            verticalCenter: parent.verticalCenter
         }
 
-        property bool pressed: false
-        property int pressX: -1
-        property int pressY: -1
+        width: visible ? units.iconSizes.small : 0
+        height: width
 
-        hoverEnabled: true
-        acceptedButtons: Qt.LeftButton | Qt.RightButton
+        visible: (model.hasChildren == true)
+        opacity: (listItem.ListView.view.currentIndex == index) ? 1.0 : 0.4
 
-        onEntered: {
-            listItem.ListView.view.currentIndex = index;
-        }
-
-        onExited: {
-            listItem.ListView.view.currentIndex = -1;
-        }
-
-        onPressed: {
-            if (mouse.buttons & Qt.RightButton) {
-                if (hasActionList) {
-                    openActionMenu(mouseArea, mouse.x, mouse.y);
-                }
-            } else {
-                pressed = true;
-                pressX = mouse.x;
-                pressY = mouse.y;
-            }
-        }
-
-        onReleased: {
-            if (pressed) {
-                if (appView) {
-                    appViewScrollArea.state = "OutgoingLeft";
-                } else {
-                    listItem.activate();
-                }
-
-                listItem.ListView.view.currentIndex = -1;
-            }
-
-            pressed = false;
-            pressX = -1;
-            pressY = -1;
-        }
-
-        onPositionChanged: {
-            if (pressX != -1 && model.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
-                kickoff.dragSource = listItem;
-                dragHelper.startDrag(root, model.url, model.decoration);
-                pressed = false;
-                pressX = -1;
-                pressY = -1;
-            }
-        }
-
-        onContainsMouseChanged: {
-            if (!containsMouse) {
-                pressed = false;
-                pressX = -1;
-                pressY = -1;
-            }
-        }
-
-        PlasmaCore.IconItem {
-            id: elementIcon
-
-            anchors {
-                left: parent.left
-                leftMargin: (units.gridUnit * 4) - units.iconSizes.medium
-                verticalCenter: parent.verticalCenter
-            }
-            width: units.iconSizes.medium
-            height: width
-
-            animated: false
-            usesPlasmaTheme: false
-
-            source: model.decoration
-        }
-        PlasmaComponents.Label {
-            id: titleElement
-
-            y: Math.round((parent.height - titleElement.height - ( (subTitleElement.text != "") ? subTitleElement.paintedHeight : 0) ) / 2)
-            anchors {
-                //bottom: elementIcon.verticalCenter
-                left: elementIcon.right
-                right: arrow.left
-                leftMargin: units.gridUnit
-                rightMargin: units.gridUnit * 2
-            }
-            height: paintedHeight
-            // TODO: games should always show the by name!
-            text: model.display
-            elide: Text.ElideRight
-            horizontalAlignment: Text.AlignLeft
-        }
-        PlasmaComponents.Label {
-            id: subTitleElement
-
-            anchors {
-                left: titleElement.left
-                right: arrow.left
-                rightMargin: units.gridUnit * 2
-                top: titleElement.bottom
-            }
-            height: paintedHeight
-
-            text: model.description
-            opacity: isCurrent ? 0.8 : 0.6
-            font.pointSize: theme.smallestFont.pointSize
-            elide: Text.ElideMiddle
-            horizontalAlignment: Text.AlignLeft
-        }
-
-        PlasmaCore.SvgItem {
-            id: arrow
-
-            anchors {
-                right: parent.right
-                rightMargin: units.gridUnit * 2
-                verticalCenter: parent.verticalCenter
-            }
-
-            width: visible ? units.iconSizes.small : 0
-            height: width
-
-            visible: (model.hasChildren == true)
-            opacity: (listItem.ListView.view.currentIndex == index) ? 1.0 : 0.4
-
-            svg: arrowsSvg
-            elementId: (Qt.application.layoutDirection == Qt.RightToLeft) ? "left-arrow" : "right-arrow"
-        }
-    } // listItemDelegate
+        svg: arrowsSvg
+        elementId: (Qt.application.layoutDirection == Qt.RightToLeft) ? "left-arrow" : "right-arrow"
+    }
 
     Keys.onPressed: {
         if (event.key == Qt.Key_Menu && hasActionList) {
             event.accepted = true;
-            openActionMenu(mouseArea);
+            openActionMenu();
         } else if ((event.key == Qt.Key_Enter || event.key == Qt.Key_Return) && !modelChildren) {
             if (!modelChildren) {
                 event.accepted = true;

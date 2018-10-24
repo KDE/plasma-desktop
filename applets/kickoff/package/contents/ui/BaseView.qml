@@ -1,7 +1,7 @@
 /*
     Copyright (C) 2011  Martin Gräßlin <mgraesslin@kde.org>
     Copyright (C) 2012 Marco Martin <mart@kde.org>
-    Copyright (C) 2015  Eike Hein <hein@kde.org>
+    Copyright (C) 2015-2018  Eike Hein <hein@kde.org>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -25,56 +25,43 @@ import org.kde.draganddrop 2.0
 
 
 Item {
-    property alias model: kickoffListView.model
-    property alias delegate: kickoffListView.delegate
+    property alias model: baseView.model
+    property alias delegate: baseView.delegate
 
-    property ListView listView: kickoffListView
+    property ListView listView: baseView.listView
 
     function decrementCurrentIndex() {
-        kickoffListView.decrementCurrentIndex();
+        baseView.decrementCurrentIndex();
     }
 
     function incrementCurrentIndex() {
-        kickoffListView.incrementCurrentIndex();
+        baseView.incrementCurrentIndex();
     }
 
     function activateCurrentIndex() {
-        kickoffListView.currentItem.activate();
+        baseView.currentItem.activate();
     }
 
     function openContextMenu() {
-        kickoffListView.currentItem.openActionMenu();
+        baseView.currentItem.openActionMenu();
     }
 
-    PlasmaExtras.ScrollArea {
-        anchors.fill: parent
+    Connections {
+        target: plasmoid
 
-        ListView {
-            id: kickoffListView
-
-            interactive: contentHeight > height
-            boundsBehavior: Flickable.StopAtBounds
-            currentIndex: -1
-            keyNavigationWraps: true
-            highlight: KickoffHighlight {}
-            highlightMoveDuration : 0
-            highlightResizeDuration: 0
-
-            delegate: KickoffItem {}
-
-            section {
-                property: "group"
-                criteria: ViewSection.FullString
-                delegate: SectionDelegate {}
-            }
-            Connections {
-                target: plasmoid
-                onExpandedChanged: {
-                    if (!expanded) {
-                        kickoffListView.currentIndex = -1;
-                    }
-                }
+        onExpandedChanged: {
+            if (!expanded) {
+                baseView.currentIndex = -1;
             }
         }
+    }
+
+    KickoffListView {
+        id: baseView
+
+        anchors.fill: parent
+
+        currentIndex: -1
+        interactive: contentHeight > height
     }
 }

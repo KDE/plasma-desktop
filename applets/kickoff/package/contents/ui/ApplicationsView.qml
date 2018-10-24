@@ -2,7 +2,7 @@
     Copyright (C) 2011  Martin Gräßlin <mgraesslin@kde.org>
     Copyright (C) 2012  Gregor Taetzner <gregor@freenet.de>
     Copyright 2014 Sebastian Kügler <sebas@kde.org>
-    Copyright (C) 2015  Eike Hein <hein@kde.org>
+    Copyright (C) 2015-2018  Eike Hein <hein@kde.org>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -30,7 +30,7 @@ Item {
 
     objectName: "ApplicationsView"
 
-    property ListView listView: applicationsView
+    property ListView listView: applicationsView.listView
 
     function decrementCurrentIndex() {
         applicationsView.decrementCurrentIndex();
@@ -46,7 +46,7 @@ Item {
                 return;
             }
         }
-        appViewScrollArea.state = "OutgoingLeft";
+        applicationsView.state = "OutgoingLeft";
     }
 
     function openContextMenu() {
@@ -56,7 +56,7 @@ Item {
     function deactivateCurrentIndex() {
         if (crumbModel.count > 0) { // this is not the case when switching from the "Applications" to the "Favorites" tab using the "Left" key
             breadcrumbsElement.children[crumbModel.count-1].clickCrumb();
-            appViewScrollArea.state = "OutgoingRight";
+            applicationsView.state = "OutgoingRight";
             return true;
         }
         return false;
@@ -64,7 +64,7 @@ Item {
 
     function reset() {
         applicationsView.model = rootModel;
-        applicationsView.positionViewAtBeginning();
+        applicationsView.listView.positionViewAtBeginning();
         applicationsView.clearBreadcrumbs();
     }
 
@@ -145,10 +145,8 @@ Item {
         } // Flickable
     } // crumbContainer
 
-    PlasmaExtras.ScrollArea {
-        id: appViewScrollArea
-
-        property Item activatedItem: null
+    KickoffListView {
+        id: applicationsView
 
         anchors {
             top: crumbContainer.bottom
@@ -157,60 +155,50 @@ Item {
             leftMargin: -units.largeSpacing
         }
 
-        Behavior on opacity { NumberAnimation { duration: units.longDuration } }
-
         width: parent.width
 
-        function moveRight() {
-            state = "";
-            activatedItem.activate()
-            applicationsView.positionViewAtBeginning()
-        }
+        property Item activatedItem: null
+        property var newModel: null
+
+        Behavior on opacity { NumberAnimation { duration: units.longDuration } }
+
+        focus: true
+
+        appView: true
+
+        model: rootModel
 
         function moveLeft() {
             state = "";
             // newModelIndex set by clicked breadcrumb
             var oldModel = applicationsView.model;
             applicationsView.model = applicationsView.newModel;
-            applicationsView.positionViewAtIndex(applicationsView.model.rowForModel(oldModel), ListView.Center)
+            listView.positionViewAtIndex(model.rowForModel(oldModel), ListView.Center)
         }
 
-        ListView {
-            id: applicationsView
+        function moveRight() {
+            state = "";
+            activatedItem.activate()
+            applicationsView.listView.positionViewAtBeginning()
+        }
 
-            property variant newModel
+        function clearBreadcrumbs() {
+            crumbModel.clear();
+            crumbModel.models = [];
+        }
 
-            focus: true
-            keyNavigationWraps: true
-            boundsBehavior: Flickable.StopAtBounds
-            highlight: KickoffHighlight {}
-            highlightMoveDuration : 0
-            highlightResizeDuration: 0
+        onReset: appViewContainer.reset()
 
-            model: rootModel
-
-            delegate: KickoffItem {
-                id: kickoffItem
-
-                appView: true
-            }
-
-            function addBreadcrumb(model, title) {
-                crumbModel.append({"text": title, "depth": crumbModel.count+1})
-                crumbModel.models.push(model);
-            }
-
-            function clearBreadcrumbs() {
-                crumbModel.clear();
-                crumbModel.models = [];
-            }
-        } // applicationsView
+        onAddBreadcrumb: {
+            crumbModel.append({"text": title, "depth": crumbModel.count+1})
+            crumbModel.models.push(model);
+        }
 
         states: [
             State {
                 name: "OutgoingLeft"
                 PropertyChanges {
-                    target: appViewScrollArea
+                    target: applicationsView
                     x: -parent.width
                     opacity: 0.0
                 }
@@ -218,7 +206,7 @@ Item {
             State {
                 name: "OutgoingRight"
                 PropertyChanges {
-                    target: appViewScrollArea
+                    target: applicationsView
                     x: parent.width
                     opacity: 0.0
                 }
@@ -232,24 +220,26 @@ Item {
                     // We need to cache the currentItem since the selection can move during animation,
                     // and we want the item that has been clicked on, not the one that is under the
                     // mouse once the animation is done
-                    ScriptAction { script: appViewScrollArea.activatedItem = applicationsView.currentItem }
+                    ScriptAction { script: applicationsView.activatedItem = applicationsView.currentItem }
                     NumberAnimation { properties: "x,opacity"; easing.type: Easing.InQuad; duration: units.longDuration }
-                    ScriptAction { script: appViewScrollArea.moveRight() }
+                    ScriptAction { script: applicationsView.moveRight() }
                 }
             },
             Transition {
                 to: "OutgoingRight"
                 SequentialAnimation {
                     NumberAnimation { properties: "x,opacity"; easing.type: Easing.InQuad; duration: units.longDuration }
-                    ScriptAction { script: appViewScrollArea.moveLeft() }
+                    ScriptAction { script: applicationsView.moveLeft() }
                 }
             }
         ]
-    } // appViewScrollArea
+    }
 
     MouseArea {
-        anchors.fill: appViewScrollArea
+        anchors.fill: parent
+
         acceptedButtons: Qt.BackButton
+
         onClicked: {
             deactivateCurrentIndex()
         }
@@ -265,13 +255,13 @@ Item {
             if (running) {
                 updatedLabel.opacity = 1;
                 crumbContainer.opacity = 0.3;
-                appViewScrollArea.opacity = 0.3;
+                applicationsView.scrollArea.opacity = 0.3;
             }
         }
         onTriggered: {
             updatedLabel.opacity = 0;
             crumbContainer.opacity = 1;
-            appViewScrollArea.opacity = 1;
+            applicationsView.scrollArea.opacity = 1;
             running = false;
         }
     }
