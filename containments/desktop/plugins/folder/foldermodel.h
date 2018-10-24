@@ -250,6 +250,8 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
 
         void setScreen(int screen);
 
+        bool eventFilter(QObject *watched, QEvent *event) override;
+
     Q_SIGNALS:
         void urlChanged() const;
         void listingCompleted() const;

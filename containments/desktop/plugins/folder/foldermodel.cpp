@@ -644,6 +644,31 @@ void FolderModel::setScreen(int screen)
     emit screenChanged();
 }
 
+bool FolderModel::eventFilter(QObject *watched, QEvent *event)
+{
+    Q_UNUSED(watched)
+
+    // Catching Shift modifier usage on open context menus to swap the
+    // Trash/Delete actions.
+    if (event->type() == QEvent::KeyPress) {
+        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+
+        if (keyEvent->key() == Qt::Key_Shift) {
+            m_actionCollection.action(QStringLiteral("trash"))->setVisible(false);
+            m_actionCollection.action(QStringLiteral("del"))->setVisible(true);
+        }
+    } else if (event->type() == QEvent::KeyRelease) {
+        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+
+        if (keyEvent->key() == Qt::Key_Shift) {
+            m_actionCollection.action(QStringLiteral("trash"))->setVisible(true);
+            m_actionCollection.action(QStringLiteral("del"))->setVisible(false);
+        }
+    }
+
+    return false;
+}
+
 KFileItem FolderModel::rootItem() const
 {
     return m_dirModel->dirLister()->rootItem();
@@ -1772,20 +1797,15 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
         bool showDeleteCommand = cg.readEntry("ShowDeleteCommand", false);
 
         menu->addAction(m_actionCollection.action(QStringLiteral("emptyTrash")));
-        if (modifiers.testFlag(Qt::ShiftModifier)) {
-            showDeleteCommand = true;
-        } else {
-            if (QAction *trashAction = m_actionCollection.action(QStringLiteral("trash"))) {
-                menu->addAction(trashAction);
-                if (!trashAction->isVisible()) {
-                    showDeleteCommand = true;
-                }
-            }
-        }
 
-        if (showDeleteCommand) {
-            menu->addAction(m_actionCollection.action(QStringLiteral("del")));
-        }
+        QAction *trashAction = m_actionCollection.action(QStringLiteral("trash"));
+        menu->addAction(trashAction);
+        trashAction->setVisible(!modifiers.testFlag(Qt::ShiftModifier));
+
+        QAction *deleteAction = m_actionCollection.action(QStringLiteral("del"));
+        menu->addAction(deleteAction);
+
+        deleteAction->setVisible(showDeleteCommand || !trashAction->isVisible());
 
         // "Open with" actions
         m_fileItemActions->setItemListProperties(itemProperties);
@@ -1818,8 +1838,11 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
     } else {
         m_menuPosition = QCursor::pos();
     }
-    
-    
+
+    // Used to monitor Shift modifier usage while the menu is open, to
+    // swap the Trash and Delete actions.
+    menu->installEventFilter(this);
+
     menu->setAttribute(Qt::WA_TranslucentBackground);
     menu->winId(); //force surface creation before ensurePolish call in menu::Popup which happens before show
     menu->popup(m_menuPosition);
