@@ -102,6 +102,7 @@ Kirigami.ScrollablePage {
         }
 
         Kirigami.Separator {
+            Kirigami.FormData.isSection: false
         }
 
         // General
@@ -182,6 +183,7 @@ Kirigami.ScrollablePage {
         }
 
         Kirigami.Separator {
+            Kirigami.FormData.isSection: false
         }
 
         // Acceleration
@@ -269,6 +271,7 @@ Kirigami.ScrollablePage {
         }
 
         Kirigami.Separator {
+            Kirigami.FormData.isSection: false
         }
 
         // Scrolling
