@@ -16,7 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 import QtQuick 2.7
-import QtQuick.Controls 1.4 as Controls
+import QtQuick.Controls 2.4 as Controls
 import QtQuick.Layouts 1.3 as Layouts
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kcm 1.1 as KCM
@@ -52,26 +52,22 @@ KCM.SimpleKCM {
         }
 
         Kirigami.Separator {
+            Kirigami.FormData.isSection: false
         }
 
         // Click behavior settings
-        Controls.ExclusiveGroup {
-            id: clickBehaviorGroup
-        }
 
         Controls.RadioButton {
             id: singleClick
             Kirigami.FormData.label: i18n("Click behavior:")
             text: i18n("Single-click to open files and folders")
             checked: kcm.singleClick
-            exclusiveGroup: clickBehaviorGroup
             onCheckedChanged: kcm.singleClick = checked
         }
 
         Controls.RadioButton {
             id: doubleClick
             text: i18n("Double-click to open files and folders (single click to select)")
-            exclusiveGroup: clickBehaviorGroup
         }
 
         Connections {
