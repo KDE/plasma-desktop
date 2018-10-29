@@ -51,7 +51,7 @@ KCM.SimpleKCM {
             onVisualFeedbackChanged: showVisualFeedback.checked = kcm.visualFeedback
         }
 
-        Kirigami.Separator {
+        Item {
             Kirigami.FormData.isSection: false
         }
 

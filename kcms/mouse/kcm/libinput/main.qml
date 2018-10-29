@@ -101,7 +101,7 @@ Kirigami.ScrollablePage {
             }
         }
 
-        Kirigami.Separator {
+        Item {
             Kirigami.FormData.isSection: false
         }
 
@@ -182,7 +182,7 @@ Kirigami.ScrollablePage {
             }
         }
 
-        Kirigami.Separator {
+        Item {
             Kirigami.FormData.isSection: false
         }
 
@@ -270,7 +270,7 @@ Kirigami.ScrollablePage {
             }
         }
 
-        Kirigami.Separator {
+        Item {
             Kirigami.FormData.isSection: false
         }
 
