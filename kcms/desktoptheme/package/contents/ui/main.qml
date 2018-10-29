@@ -136,7 +136,7 @@ KCM.GridViewKCM {
             }
 
             QtControls.Button {
-                text: i18n("Get New Themes...")
+                text: i18n("Get New Desktop Themes...")
                 icon.name: "get-hot-new-stuff"
                 onClicked: kcm.getNewStuff(this)
                 visible: KAuthorized.authorize("ghns")

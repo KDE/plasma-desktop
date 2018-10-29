@@ -60,7 +60,7 @@ KCM.GridViewKCM {
         }
         QtControls.Button {
             iconName: "get-hot-new-stuff"
-            text: i18n("&Get New Theme...")
+            text: i18n("&Get New Splash Screens...")
             onClicked: kcm.getNewClicked();
             visible: KAuthorized.authorize("ghns")
         }

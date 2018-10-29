@@ -69,7 +69,12 @@
       <string>You need to be connected to the Internet to use this action. A dialog will display a list of emoticon themes from the http://www.kde-look.org website. Clicking the Install button associated with a theme will install this theme locally.</string>
      </property>
      <property name="text">
-      <string>Get new Theme</string>
+      <string>Get New Emoticons...</string>
+     </property>
+     <property name="icon">
+      <iconset theme="get-hot-new-stuff">
+       <normaloff/>
+      </iconset>
      </property>
     </widget>
    </item>

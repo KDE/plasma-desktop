@@ -79,7 +79,7 @@ KCM.GridViewKCM {
                 Layout.fillWidth: true
             }
             QtControls.Button {
-                text: i18n("Get New Looks...")
+                text: i18n("Get New Look and Feel Themes...")
                 icon.name: "get-hot-new-stuff"
                 onClicked: kcm.getNewStuff(this);
                 visible: KAuthorized.authorize("ghns")

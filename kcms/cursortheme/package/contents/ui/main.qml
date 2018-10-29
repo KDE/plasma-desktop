@@ -142,7 +142,7 @@ KCM.GridViewKCM {
                 }
                 QtControls.Button {
                     icon.name: "get-hot-new-stuff"
-                    text: i18n("&Get New Theme...")
+                    text: i18n("&Get New Cursors...")
                     onClicked: kcm.getNewClicked();
                     enabled: kcm.canInstall
                     visible: KAuthorized.authorize("ghns")
