@@ -25,16 +25,42 @@
    </property>
    <item>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="5" column="4">
+     <item row="5" column="0">
       <widget class="QPushButton" name="schemeEditButton">
        <property name="toolTip">
         <string>Configure the current color scheme</string>
        </property>
        <property name="text">
-        <string>Edit Scheme</string>
+        <string>Edit...</string>
        </property>
        <property name="flat">
         <bool>false</bool>
+       </property>
+       <property name="icon">
+        <iconset theme="edit-entry">
+         <normaloff/>
+        </iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QPushButton" name="schemeRemoveButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="toolTip">
+        <string>Remove the selected scheme</string>
+       </property>
+       <property name="text">
+        <string>Remove</string>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+       <property name="icon">
+        <iconset theme="delete">
+         <normaloff/>
+        </iconset>
        </property>
       </widget>
      </item>
@@ -52,22 +78,21 @@
       </spacer>
      </item>
      <item row="5" column="3">
-      <widget class="QPushButton" name="schemeRemoveButton">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
+      <widget class="QPushButton" name="schemeImportButton">
        <property name="toolTip">
-        <string>Remove the selected scheme</string>
+        <string>Import a color scheme from a file</string>
        </property>
        <property name="text">
-        <string>Remove Scheme</string>
+        <string>&amp;Install from File...</string>
        </property>
-       <property name="flat">
-        <bool>false</bool>
+       <property name="icon">
+        <iconset theme="document-import">
+         <normaloff/>
+        </iconset>
        </property>
       </widget>
      </item>
-     <item row="5" column="0">
+     <item row="5" column="4">
       <widget class="QPushButton" name="schemeKnsButton">
        <property name="toolTip">
         <string>Get new color schemes from the Internet</string>
@@ -100,16 +125,6 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1">
-      <widget class="QPushButton" name="schemeImportButton">
-       <property name="toolTip">
-        <string>Import a color scheme from a file</string>
-       </property>
-       <property name="text">
-        <string>&amp;Install from File</string>
        </property>
       </widget>
      </item>
