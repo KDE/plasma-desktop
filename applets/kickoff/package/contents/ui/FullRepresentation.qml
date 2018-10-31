@@ -116,6 +116,20 @@ Item {
         id: header
     }
 
+    Rectangle {
+        id: headerSeparator
+
+        height: Math.floor(units.devicePixelRatio)
+        color: Qt.tint(PlasmaCore.ColorScope.textColor, Qt.rgba(PlasmaCore.ColorScope.backgroundColor.r, PlasmaCore.ColorScope.backgroundColor.g, PlasmaCore.ColorScope.backgroundColor.b, 0.7))
+
+        width:  root.width
+
+        anchors {
+            top: header.top
+            horizontalCenter: header.horizontalCenter
+        }
+    }
+
     Item {
         id: mainArea
         anchors.topMargin: mainTabGroup.state == "top" ? units.smallSpacing : 0
@@ -213,6 +227,20 @@ Item {
                             bottom: header.top
                         }
                     }
+                    PropertyChanges {
+                        target:tabBarSeparator
+                        width: Math.floor(units.devicePixelRatio)
+                        height: root.height
+                    }
+                    AnchorChanges {
+                        target: tabBarSeparator
+                        anchors {
+                            left: tabBar.right
+                            top: tabBar.top
+                            right: undefined
+                            bottom: tabBar.bottom
+                        }
+                    }
                 },
                 State {
                     name: "top"
@@ -245,6 +273,20 @@ Item {
                         anchors {
                             left: root.left
                             top: root.top
+                            right: root.right
+                            bottom: undefined
+                        }
+                    }
+                    PropertyChanges {
+                        target:tabBarSeparator
+                        width: root.width
+                        height: Math.floor(units.devicePixelRatio)
+                    }
+                    AnchorChanges {
+                        target: tabBarSeparator
+                        anchors {
+                            left: root.left
+                            top: tabBar.bottom
                             right: root.right
                             bottom: undefined
                         }
@@ -285,6 +327,20 @@ Item {
                             bottom: header.top
                         }
                     }
+                    PropertyChanges {
+                        target:tabBarSeparator
+                        width:  Math.floor(units.devicePixelRatio)
+                        height: root.height
+                    }
+                    AnchorChanges {
+                        target: tabBarSeparator
+                        anchors {
+                            left: undefined
+                            top: tabBar.top
+                            right: tabBar.left
+                            bottom: tabBar.bottom
+                        }
+                    }
                 },
                 State {
                     name: "bottom"
@@ -300,6 +356,14 @@ Item {
                     PropertyChanges {
                         target: header
                         height: header.implicitHeight
+                    }
+                    AnchorChanges {
+                        target: headerSeparator
+                        anchors {
+                            top: undefined
+                            bottom: header.bottom
+                            horizontalCenter: header.horizontalCenter
+                        }
                     }
 
                     AnchorChanges {
@@ -319,6 +383,20 @@ Item {
                             top: undefined
                             right: root.right
                             bottom: root.bottom
+                        }
+                    }
+                    PropertyChanges {
+                        target:tabBarSeparator
+                        width: root.width
+                        height: Math.floor(units.devicePixelRatio)
+                    }
+                    AnchorChanges {
+                        target: tabBarSeparator
+                        anchors {
+                            left: root.left
+                            top: undefined
+                            right: root.right
+                            bottom: tabBar.top
                         }
                     }
                 }
@@ -395,6 +473,20 @@ Item {
             }
         }
     } // tabBar
+
+    Rectangle {
+        id: tabBarSeparator
+
+        width:  root.width
+        height: Math.floor(units.devicePixelRatio)
+        color: Qt.tint(PlasmaCore.ColorScope.textColor, Qt.rgba(PlasmaCore.ColorScope.backgroundColor.r, PlasmaCore.ColorScope.backgroundColor.g, PlasmaCore.ColorScope.backgroundColor.b, 0.7))
+
+        anchors {
+            top: header.top
+            left: root.left
+            right: root.right
+        }
+    }
 
     MouseArea {
         anchors.fill: tabBar
