@@ -179,8 +179,7 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
               itsProgress(NULL),
               itsUpdateDialog(NULL),
               itsTempDir(NULL),
-              itsPrintProc(NULL),
-              itsDownloadFontsAct(NULL)
+              itsPrintProc(NULL)
 {
     setButtons(Help);
 
@@ -217,18 +216,12 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     fontControlLayout->setMargin(0);
 
     // Toolbar...
-    QAction     *duplicateFontsAct=new QAction(QIcon::fromTheme("system-search"), i18n("Scan for Duplicate Fonts..."), this);
-                //*validateFontsAct=new QAction(QIcon::fromTheme("checkmark"), i18n("Validate Fonts..."), this);
+    duplicateFontsAct=new QAction(QIcon::fromTheme("system-search"), i18n("Scan for Duplicate Fonts..."), this);
+//     validateFontsAct=new QAction(QIcon::fromTheme("checkmark"), i18n("Validate Fonts..."), this);
 
-    if(!Misc::root())
-        itsDownloadFontsAct=new QAction(QIcon::fromTheme("get-hot-new-stuff"), i18n("Get New Fonts..."), this);
-    itsToolsMenu=new KActionMenu(QIcon::fromTheme("system-run"), i18n("Tools"), this);
-    itsToolsMenu->addAction(duplicateFontsAct);
-    //itsToolsMenu->addAction(validateFontsAct);
-    if(itsDownloadFontsAct)
-        itsToolsMenu->addAction(itsDownloadFontsAct);
-    itsToolsMenu->setDelayed(false);
-    toolbar->addAction(itsToolsMenu);
+    toolbar->addAction(duplicateFontsAct);
+//     toolbar->addAction(validateFontsAct);
+    toolbar->setToolButtonStyle(Qt::ToolButtonFollowStyle);
     itsFilter=new CFontFilter(toolbarWidget);
 
     // Details - Groups...
@@ -291,8 +284,11 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     itsFontListView=new CFontListView(itsPreviewSplitter, itsFontList);
     itsFontListView->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
 
-    itsAddFontControl=new CPushButton(KGuiItem(i18n("Add..."), "list-add",
-                                               i18n("Install fonts")),
+    itsAddFontControl=new CPushButton(KGuiItem(i18n("Install from File..."), "document-import",
+                                               i18n("Install fonts from a local file")),
+                                      fontControlWidget);
+    itsGetNewFontsControl=new CPushButton(KGuiItem(i18n("Get New Fonts..."), "get-hot-new-stuff",
+                                               i18n("Download new fonts")),
                                       fontControlWidget);
 
     itsDeleteFontControl=new CPushButton(KGuiItem(i18n("Delete"), "edit-delete",
@@ -314,12 +310,13 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     mainLayout->addWidget(toolbarWidget);
     mainLayout->addWidget(itsGroupSplitter);
 
-    fontControlLayout->addWidget(itsAddFontControl);
     fontControlLayout->addWidget(itsDeleteFontControl);
     fontControlLayout->addWidget(itsStatusLabel);
     fontControlLayout->addItem(new QSpacerItem(0, itsListingProgress->height()+4,
                                                QSizePolicy::Fixed, QSizePolicy::Fixed));
     fontControlLayout->addWidget(itsListingProgress);
+    fontControlLayout->addWidget(itsAddFontControl);
+    fontControlLayout->addWidget(itsGetNewFontsControl);
 
     fontsLayout->addWidget(itsPreviewSplitter);
     fontsLayout->addWidget(fontControlWidget);
@@ -396,11 +393,10 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     connect(itsEnableGroupControl, SIGNAL(clicked()), SLOT(enableGroup()));
     connect(itsDisableGroupControl, SIGNAL(clicked()), SLOT(disableGroup()));
     connect(itsAddFontControl, SIGNAL(clicked()), SLOT(addFonts()));
+    connect(itsGetNewFontsControl, SIGNAL(clicked()), SLOT(downloadFonts()));
     connect(itsDeleteFontControl, SIGNAL(clicked()), SLOT(deleteFonts()));
     connect(duplicateFontsAct, SIGNAL(triggered(bool)), SLOT(duplicateFonts()));
     //connect(validateFontsAct, SIGNAL(triggered(bool)), SLOT(validateFonts()));
-    if(itsDownloadFontsAct)
-        connect(itsDownloadFontsAct, SIGNAL(triggered(bool)), SLOT(downloadFonts()));
     connect(itsPreview, SIGNAL(customContextMenuRequested(QPoint)), SLOT(previewMenu(QPoint)));
     connect(itsPreviewList, SIGNAL(showMenu(QPoint)), SLOT(previewMenu(QPoint)));
     connect(itsPreviewSplitter, SIGNAL(splitterMoved(int,int)), SLOT(splitterMoved()));
@@ -559,8 +555,7 @@ void CKCmFontInst::groupSelected(const QModelIndex &index)
         grp->setValidated();
     }
 
-    if(itsDownloadFontsAct)
-        itsDownloadFontsAct->setEnabled(grp->isPersonal() || grp->isAll());
+    itsGetNewFontsControl->setEnabled(grp->isPersonal() || grp->isAll());
 }
 
 void CKCmFontInst::print(bool all)

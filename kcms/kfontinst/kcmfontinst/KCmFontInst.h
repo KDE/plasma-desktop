@@ -117,11 +117,11 @@ class CKCmFontInst : public KCModule
     CFontListView    *itsFontListView;
     CGroupList       *itsGroupList;
     CGroupListView   *itsGroupListView;
-    KActionMenu      *itsToolsMenu;
     QPushButton      *itsDeleteGroupControl,
                      *itsEnableGroupControl,
                      *itsDisableGroupControl,
                      *itsAddFontControl,
+                     *itsGetNewFontsControl,
                      *itsDeleteFontControl;
     CFontFilter      *itsFilter;
     QString          itsLastStatusBarMsg;
@@ -135,7 +135,7 @@ class CKCmFontInst : public KCModule
     CJobRunner       *itsRunner;
     QMenu            *itsPreviewMenu,
                      *itsPreviewListMenu;
-    QAction          *itsDownloadFontsAct;
+    QAction          *duplicateFontsAct;
     QWidget          *itsPreviewWidget;
     bool             itsPreviewHidden;
 };
