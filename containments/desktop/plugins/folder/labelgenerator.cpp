@@ -29,7 +29,8 @@ int LabelGenerator::s_instanceCount = 0;
 KFilePlacesModel *LabelGenerator::s_placesModel = nullptr;
 
 LabelGenerator::LabelGenerator(QObject* parent) : QObject(parent),
-    m_rtl(false)
+    m_rtl(false),
+    m_labelMode(1)
 {
     ++s_instanceCount;
 }
