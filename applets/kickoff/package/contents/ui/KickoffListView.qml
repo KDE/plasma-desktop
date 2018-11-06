@@ -112,7 +112,7 @@ FocusScope {
             if (mouse.buttons & Qt.RightButton) {
                 if (item.hasActionList) {
                     mapped = listView.contentItem.mapToItem(item, mapped.x, mapped.y);
-                    openActionMenu(mapped.x, mapped.y);
+                    listView.currentItem.openActionMenu(mapped.x, mapped.y);
                 }
             } else {
                 pressed = item;
