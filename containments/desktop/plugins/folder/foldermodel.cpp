@@ -1792,8 +1792,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
         menu->addAction(m_actionCollection.action(QStringLiteral("rename")));
         menu->addAction(m_actionCollection.action(QStringLiteral("restoreFromTrash")));
 
-        KSharedConfig::Ptr globalConfig = KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::NoGlobals);
-        KConfigGroup cg(globalConfig, "KDE");
+        KConfigGroup cg(KSharedConfig::openConfig(), "KDE");
         bool showDeleteCommand = cg.readEntry("ShowDeleteCommand", false);
 
         menu->addAction(m_actionCollection.action(QStringLiteral("emptyTrash")));
