@@ -132,11 +132,8 @@ Rectangle {
 
         RowLayout {
             id: contentRow
-            anchors {
-                left: parent.left
-                right: parent.right
-            }
             spacing: 0
+            Layout.fillWidth: true
             Layout.fillHeight: true
             Layout.preferredHeight: parent.height - buttonsRow.height
 
