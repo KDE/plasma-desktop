@@ -303,9 +303,6 @@ Item {
             name: "bottomleft"
         },
         State {
-            name: "topleft"
-        },
-        State {
             name: "left"
         }
     ]
