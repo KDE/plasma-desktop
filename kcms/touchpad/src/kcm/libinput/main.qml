@@ -83,7 +83,7 @@ Kirigami.ScrollablePage {
 
         // Device
         Controls.ComboBox {
-            Kirigami.FormData.label: i18n("Device:")
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "Device:")
             id: deviceSelector
 
             enabled: touchpadCount > 1
@@ -110,13 +110,13 @@ Kirigami.ScrollablePage {
 
         // General settings
         Controls.CheckBox {
-            Kirigami.FormData.label: i18n("General:")
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "General:")
             id: deviceEnabled
-            text: i18n("Device enabled")
+            text: i18nd("kcm_touchpad", "Device enabled")
 
             hoverEnabled: true
             Controls.ToolTip {
-                text: i18n("Accept input through this device.")
+                text: i18nd("kcm_touchpad", "Accept input through this device.")
                 visible: parent.hovered
                 delay: 1000
             }
@@ -140,11 +140,11 @@ Kirigami.ScrollablePage {
 
         Controls.CheckBox {
             id: dwt
-            text: i18n("Disable while typing")
+            text: i18nd("kcm_touchpad", "Disable while typing")
 
             hoverEnabled: true
             Controls.ToolTip {
-                text: i18n("Disable touchpad while typing to prevent accidental inputs.")
+                text: i18nd("kcm_touchpad", "Disable touchpad while typing to prevent accidental inputs.")
                 visible: parent.hovered
                 delay: 1000
             }
@@ -168,11 +168,11 @@ Kirigami.ScrollablePage {
 
         Controls.CheckBox {
             id: leftHanded
-            text: i18n("Left handed mode")
+            text: i18nd("kcm_touchpad", "Left handed mode")
 
             hoverEnabled: true
             Controls.ToolTip {
-                text: i18n("Swap left and right buttons.")
+                text: i18nd("kcm_touchpad", "Swap left and right buttons.")
                 visible: parent.hovered
                 delay: 1000
             }
@@ -196,11 +196,11 @@ Kirigami.ScrollablePage {
 
         Controls.CheckBox {
             id: middleEmulation
-            text: i18n("Press left and right buttons for middle click")
+            text: i18nd("kcm_touchpad", "Press left and right buttons for middle click")
 
             hoverEnabled: true
             Controls.ToolTip {
-                text: i18n("Clicking left and right button simultaneously sends middle button click.")
+                text: i18nd("kcm_touchpad", "Clicking left and right button simultaneously sends middle button click.")
                 visible: parent.hovered
                 delay: 1000
             }
@@ -228,7 +228,7 @@ Kirigami.ScrollablePage {
 
         // Acceleration
         Controls.Slider {
-            Kirigami.FormData.label: i18n("Pointer speed:")
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "Pointer speed:")
             id: accelSpeed
 
             from: 1
@@ -257,7 +257,7 @@ Kirigami.ScrollablePage {
         }
 
         Layouts.ColumnLayout {
-            Kirigami.FormData.label: i18n("Acceleration profile:")
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "Acceleration profile:")
             Kirigami.FormData.buddyFor: accelProfileFlat
             id: accelProfile
             spacing: Kirigami.Units.smallSpacing
@@ -288,11 +288,11 @@ Kirigami.ScrollablePage {
 
             Controls.RadioButton {
                 id: accelProfileFlat
-                text: i18n("Flat")
+                text: i18nd("kcm_touchpad", "Flat")
 
                 hoverEnabled: true
                 Controls.ToolTip {
-                    text: i18n("Cursor moves the same distance as finger.")
+                    text: i18nd("kcm_touchpad", "Cursor moves the same distance as finger.")
                     visible: parent.hovered
                     delay: 1000
                 }
@@ -301,11 +301,11 @@ Kirigami.ScrollablePage {
 
             Controls.RadioButton {
                 id: accelProfileAdaptive
-                text: i18n("Adaptive")
+                text: i18nd("kcm_touchpad", "Adaptive")
 
                 hoverEnabled: true
                 Controls.ToolTip {
-                    text: i18n("Cursor travel distance depends on movement speed of finger.")
+                    text: i18nd("kcm_touchpad", "Cursor travel distance depends on movement speed of finger.")
                     visible: parent.hovered
                     delay: 1000
                 }
@@ -319,13 +319,13 @@ Kirigami.ScrollablePage {
 
         // Tapping
         Controls.CheckBox {
-            Kirigami.FormData.label: i18n("Tapping:")
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "Tapping:")
             id: tapToClick
-            text: i18n("Tap-to-click")
+            text: i18nd("kcm_touchpad", "Tap-to-click")
 
             hoverEnabled: true
             Controls.ToolTip {
-                text: i18n("Single tap is left button click.")
+                text: i18nd("kcm_touchpad", "Single tap is left button click.")
                 visible: parent.hovered
                 delay: 1000
             }
@@ -354,11 +354,11 @@ Kirigami.ScrollablePage {
 
         Controls.CheckBox {
             id: tapAndDrag
-            text: i18n("Tap-and-drag")
+            text: i18nd("kcm_touchpad", "Tap-and-drag")
 
             hoverEnabled: true
             Controls.ToolTip {
-                text: i18n("Sliding over touchpad directly after tap drags.")
+                text: i18nd("kcm_touchpad", "Sliding over touchpad directly after tap drags.")
                 visible: parent.hovered
                 delay: 1000
             }
@@ -385,11 +385,11 @@ Kirigami.ScrollablePage {
 
         Controls.CheckBox {
             id: tapAndDragLock
-            text: i18n("Tap-and-drag lock")
+            text: i18nd("kcm_touchpad", "Tap-and-drag lock")
 
             hoverEnabled: true
             Controls.ToolTip {
-                text: i18n("Dragging continues after a short finger lift.")
+                text: i18nd("kcm_touchpad", "Dragging continues after a short finger lift.")
                 visible: parent.hovered
                 delay: 1000
             }
@@ -408,7 +408,7 @@ Kirigami.ScrollablePage {
         }
 
         Layouts.ColumnLayout {
-            Kirigami.FormData.label: i18n("Two-finger tap:")
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "Two-finger tap:")
             Kirigami.FormData.buddyFor: multiTapRightClick
             id: multiTap
 
@@ -417,17 +417,17 @@ Kirigami.ScrollablePage {
             function load() {
                 enabled = touchpad.supportsLmrTapButtonMap && tapToClick.checked
                 if (touchpad.tapFingerCount > 2) {
-                    multiTapRightClick.text = i18n("Right-click (three-finger tap to middle-click)")
-                    multiTapRightClickToolTip.text = i18n("Tap with two fingers to right-click, tap with three fingers to middle-click.")
+                    multiTapRightClick.text = i18nd("kcm_touchpad", "Right-click (three-finger tap to middle-click)")
+                    multiTapRightClickToolTip.text = i18nd("kcm_touchpad", "Tap with two fingers to right-click, tap with three fingers to middle-click.")
 
-                    multiTapMiddleClick.text = i18n("Middle-click (three-finger tap right-click)")
-                    multiTapMiddleClickToolTip.text = i18n("Tap with two fingers to middle-click, tap with three fingers to right-click.")
+                    multiTapMiddleClick.text = i18nd("kcm_touchpad", "Middle-click (three-finger tap right-click)")
+                    multiTapMiddleClickToolTip.text = i18nd("kcm_touchpad", "Tap with two fingers to middle-click, tap with three fingers to right-click.")
                 } else {
-                    multiTapRightClick.text = i18n("Righ-click")
-                    multiTapRightClickToolTip.text = i18n("Tap with two fingers to right-click.")
+                    multiTapRightClick.text = i18nd("kcm_touchpad", "Righ-click")
+                    multiTapRightClickToolTip.text = i18nd("kcm_touchpad", "Tap with two fingers to right-click.")
 
-                    multiTapMiddleClick.text = i18n("Middle-click")
-                    multiTapMiddleClickToolTip.text = i18n("Tap with two fingers to middle-click.")
+                    multiTapMiddleClick.text = i18nd("kcm_touchpad", "Middle-click")
+                    multiTapMiddleClickToolTip.text = i18nd("kcm_touchpad", "Tap with two fingers to middle-click.")
                 }
 
                 if (!enabled) {
@@ -485,7 +485,7 @@ Kirigami.ScrollablePage {
 
         // Scrolling
         Layouts.ColumnLayout {
-            Kirigami.FormData.label: i18n("Scrolling:")
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling:")
             Kirigami.FormData.buddyFor: scrollMethodTwoFingers
             id: scrollMethod
 
@@ -515,11 +515,11 @@ Kirigami.ScrollablePage {
 
             Controls.RadioButton {
                 id: scrollMethodTwoFingers
-                text: i18n("Two fingers")
+                text: i18nd("kcm_touchpad", "Two fingers")
 
                 hoverEnabled: true
                 Controls.ToolTip {
-                    text: i18n("Slide with two fingers scrolls.")
+                    text: i18nd("kcm_touchpad", "Slide with two fingers scrolls.")
                     visible: parent.hovered
                     delay: 1000
                 }
@@ -527,11 +527,11 @@ Kirigami.ScrollablePage {
 
             Controls.RadioButton {
                 id: scrollMethodTouchpadEdges
-                text: i18n("Touchpad edges")
+                text: i18nd("kcm_touchpad", "Touchpad edges")
 
                 hoverEnabled: true
                 Controls.ToolTip {
-                    text: i18n("Slide on the touchpad edges scrolls.")
+                    text: i18nd("kcm_touchpad", "Slide on the touchpad edges scrolls.")
                     visible: parent.hovered
                     delay: 1000
                 }
@@ -541,7 +541,7 @@ Kirigami.ScrollablePage {
 
         Controls.CheckBox {
             id: naturalScroll
-            text: i18n("Invert scroll direction (Natural scrolling)")
+            text: i18nd("kcm_touchpad", "Invert scroll direction (Natural scrolling)")
 
             function load() {
                 enabled = touchpad.supportsNaturalScroll
@@ -557,7 +557,7 @@ Kirigami.ScrollablePage {
 
             hoverEnabled: true
             Controls.ToolTip {
-                text: i18n("Touchscreen like scrolling.")
+                text: i18nd("kcm_touchpad", "Touchscreen like scrolling.")
                 visible: parent.hovered
                 delay: 1000
             }
