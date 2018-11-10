@@ -197,7 +197,7 @@ void SchemeEditorDialog::saveScheme()
                 KStandardGuiItem::overwrite(),
                 KStandardGuiItem::cancel());
 
-            //on don't overwrite, call again the functionn
+            //on don't overwrite, call again the function
             if(ret == KMessageBox::No){
                 this->saveScheme();
                 return;

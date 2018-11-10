@@ -292,9 +292,9 @@ void CKioFonts::get(const QUrl &url)
                                  end((*style).files().end());
 
         //
-        // The thumbnail job always donwloads non-local files to /tmp/... and passes this file name to
+        // The thumbnail job always downloads non-local files to /tmp/... and passes this file name to
         // the thumbnail creator. However, in the case of fonts which are split among many files, this
-        // wont work. Therefore, when the thumbnail code asks for the font to donwload, just return
+        // wont work. Therefore, when the thumbnail code asks for the font to download, just return
         // the family and style info for enabled fonts, and the filename for disabled fonts. This way
         // the font-thumbnail creator can read this and just ask Xft/fontconfig for the font data.
         if("1"==metaData("thumbnail"))

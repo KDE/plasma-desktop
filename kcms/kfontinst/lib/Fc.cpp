@@ -26,7 +26,7 @@
 #include <QHash>
 
 //
-// KDE font chooser always seems to use Italic - for both Oblique, and Italic. So I guees
+// KDE font chooser always seems to use Italic - for both Oblique, and Italic. So I guess
 // the fonts:/ should do too - so as to appear more unified.
 //
 // ditto with respect to Medium/Regular

@@ -652,7 +652,7 @@ FocusScope {
                         scrollRight = false;
                     }
 
-                    // Update rubberband geomety.
+                    // Update rubberband geometry.
                     if (main.rubberBand) {
                         var rB = main.rubberBand;
 

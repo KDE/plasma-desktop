@@ -287,7 +287,7 @@ PlasmaCore.Dialog {
             maxWidth += LayoutManager.horizontalMargins() + units.iconSizes.medium + 2 * units.smallSpacing;
 
             // Add horizontal space for scrollbar if needed.
-            // FIXME TODO HACK: Use actuall scrollbar width instead of a good guess.
+            // FIXME TODO HACK: Use actual scrollbar width instead of a good guess.
             if (maxHeight > preferredHeight) {
                 maxWidth += (units.smallSpacing * 3);
             }

@@ -37,7 +37,7 @@ Item {
         shortcut: "Escape"
         onTriggered: {
             // avoid leaving the panel in an inconsistent state when escaping while dragging it
-            // "checked" means "pressed" in this case, we abuse that propery to make the button look pressed
+            // "checked" means "pressed" in this case, we abuse that property to make the button look pressed
             if (edgeHandle.checked || sizeHandle.checked) {
                 return
             }

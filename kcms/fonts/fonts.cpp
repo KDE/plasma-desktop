@@ -59,7 +59,7 @@ static QFont nearestExistingFont(const QFont &font)
 {
     QFontDatabase dbase;
 
-    // Initialize font data accoring to given font object.
+    // Initialize font data according to given font object.
     QString family = font.family();
     QString style = dbase.styleString(font);
     qreal size = font.pointSizeF();

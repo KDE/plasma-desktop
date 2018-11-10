@@ -60,7 +60,7 @@ public:
 	QList<LayoutUnit> layouts;
 	int layoutLoopCount;
 
-	// switch cotrol options
+	// switch control options
 	SwitchingPolicy switchingPolicy;
 //	bool stickySwitching;
 //	int stickySwitchingDepth;

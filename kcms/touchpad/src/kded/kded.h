@@ -71,7 +71,7 @@ private:
     TouchpadBackend *m_backend;
     TouchpadDisablerSettings m_settings;
     QTimer m_keyboardActivityTimeout;
-    QDBusServiceWatcher m_dependecies;
+    QDBusServiceWatcher m_dependencies;
 
     TouchpadBackend::TouchpadOffState m_keyboardDisableState;
     bool m_userRequestedState, m_touchpadEnabled;

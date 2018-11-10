@@ -28,7 +28,7 @@ Item {
         id: background
         anchors.fill: parent
         // Air theme have huge transparent margins in widgets/background svg, so use
-        // widgets/panel-backroung untill Plasma::FrameSvg exposes the transparent margins
+        // widgets/panel-background until Plasma::FrameSvg exposes the transparent margins
         imagePath: themeName == "air" ? "widgets/panel-background" : "widgets/background"
     }
 

@@ -214,7 +214,7 @@ void Autostart::load()
 
                 int indexPath = m_paths.indexOf((item->fileName().adjusted(QUrl::RemoveFilename).toString() ) );
                 if ( indexPath > 2 )
-                    indexPath = 0; //.kde/share/autostart and .config/autostart load destkop at startup
+                    indexPath = 0; //.kde/share/autostart and .config/autostart load desktop at startup
                 addItem(item, config.readName(), m_pathName.value(indexPath),  grp.readEntry("Exec"), disabled );
             }
         }

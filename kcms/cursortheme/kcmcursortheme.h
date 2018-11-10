@@ -120,7 +120,7 @@ private:
 
 /** Holds the last size that was chosen by the user. Example: The user chooses
     theme1 which provides the sizes 24 and 36. He chooses 36. preferredSize gets
-    set to 36. Now, he switchs to theme2 which provides the sizes 30 and 40.
+    set to 36. Now, he switches to theme2 which provides the sizes 30 and 40.
     preferredSize still is 36, so the UI will default to 40, which is next to 36.
     Now, he chooses theme3 which provides the sizes 34 and 44. preferredSize is
     still 36, so the UI defaults to 34. Now the user changes manually to 44. This

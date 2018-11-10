@@ -59,12 +59,12 @@ struct GeometryParser : qi::grammar<Iterator, iso::space_type> {
     qi::rule<Iterator, std::string(), iso::space_type>comments, ignore;
     qi::rule<Iterator, double(), iso::space_type>localDimension, priority;
 
-    //general non-temrminals
+    //general non-terminals
     qi::rule<Iterator, std::string(), iso::space_type>name;
     qi::rule<Iterator, std::string(), iso::space_type>description;
     qi::rule<Iterator, std::string(), iso::space_type>input;
 
-    //non-teminals for shape
+    //non-terminals for shape
     qi::rule<Iterator, int(), iso::space_type>shape;
     qi::rule<Iterator, int(), iso::space_type>shapeDef;
     qi::rule<Iterator, int(), iso::space_type>shapeC;
@@ -75,7 +75,7 @@ struct GeometryParser : qi::grammar<Iterator, iso::space_type> {
     qi::rule<Iterator, int(), iso::space_type>cordinatea;
     qi::rule<Iterator, int(), iso::space_type>cordinates;
 
-    //non-teminals for key
+    //non-terminals for key
     qi::rule<Iterator, double(), iso::space_type>keygap;
     qi::rule<Iterator, std::string(), iso::space_type>keyName;
     qi::rule<Iterator, std::string(), iso::space_type>keyShape;
@@ -87,7 +87,7 @@ struct GeometryParser : qi::grammar<Iterator, iso::space_type> {
 
     qi::rule<Iterator, std::string(), iso::space_type>section;
 
-    //non-teminals related to local data
+    //non-terminals related to local data
     qi::rule<Iterator, std::string(), iso::space_type>localShape;
     qi::rule<Iterator, std::string(), iso::space_type>localColor;
 
@@ -138,12 +138,12 @@ struct GeometryParser : qi::grammar<Iterator, iso::space_type> {
     void setKeyOffset();
     void setKeyCordi();
 
-    //functionsfor geometry
+    //functions for geometry
     void setGeomShape(std::string n);
     void getName(std::string n);
     void getDescription(std::string n);
 
-    //functions for alingment
+    //functions for alignment
     void setVerticalRow();
     void setVerticalSection();
     void setVerticalGeometry();

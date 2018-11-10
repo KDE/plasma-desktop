@@ -146,7 +146,7 @@ QString SolidActionData::generateUserString( QString className )
 
     finalString = className.remove(0, className.lastIndexOf(':') + 1); // Remove any Class information
     finalString = finalString.replace( camelCase, QStringLiteral(" \\1") ); // Use Camel Casing to add spaces
-    finalString = KStringHandler::capwords( finalString ); // Captialise everything
+    finalString = KStringHandler::capwords( finalString ); // Capitalize everything
     return finalString.trimmed();
 }
 

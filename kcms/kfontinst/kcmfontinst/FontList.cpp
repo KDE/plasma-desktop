@@ -1726,7 +1726,7 @@ void CFontListView::selectionChanged(const QItemSelection &selected,
 QModelIndexList CFontListView::getSelectedItems()
 {
     //
-    // Go throgh current selection, and for any 'font' items that are selected,
+    // Go through current selection, and for any 'font' items that are selected,
     // ensure 'family' item is not...
     QModelIndexList        selectedItems(selectedIndexes()),
                            deselectList;

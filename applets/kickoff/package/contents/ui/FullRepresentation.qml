@@ -572,7 +572,7 @@ Item {
 
                     // If the motion vector is outside the angle range from oldPos to the
                     // relevant tab bar corners, switch immediately. Otherwise start the
-                    // timer, which gets aborted should the pointer exit the the tab bar
+                    // timer, which gets aborted should the pointer exit the tab bar
                     // early.
                     var inRange = (lower < angleMouseMove == angleMouseMove < upper);
 

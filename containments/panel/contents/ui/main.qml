@@ -54,7 +54,7 @@ DragDrop.DropArea {
 
 //BEGIN functions
 function addApplet(applet, x, y) {
-    // don't show applet if it choses to be hidden but still make it
+    // don't show applet if it chooses to be hidden but still make it
     // accessible in the panelcontroller
     // Due to the nature of how "visible" propagates in QML, we need to
     // explicitly set it on the container (so the Layout ignores it)

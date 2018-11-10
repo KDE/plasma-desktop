@@ -35,11 +35,11 @@ bool TouchpadDisabler::workingTouchpadFound() const
 
 void TouchpadDisabler::serviceRegistered(const QString &service)
 {
-    if (!m_dependecies.removeWatchedService(service)) {
+    if (!m_dependencies.removeWatchedService(service)) {
         return;
     }
 
-    if (m_dependecies.watchedServices().isEmpty()) {
+    if (m_dependencies.watchedServices().isEmpty()) {
         lateInit();
     }
 }
@@ -52,9 +52,9 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
         return;
     }
 
-    m_dependecies.addWatchedService("org.kde.plasmashell");
-    m_dependecies.addWatchedService("org.kde.kglobalaccel");
-    connect(&m_dependecies, SIGNAL(serviceRegistered(QString)),
+    m_dependencies.addWatchedService("org.kde.plasmashell");
+    m_dependencies.addWatchedService("org.kde.kglobalaccel");
+    connect(&m_dependencies, SIGNAL(serviceRegistered(QString)),
             SLOT(serviceRegistered(QString)));
 
     connect(m_backend, SIGNAL(mousesChanged()), SLOT(mousePlugged()));
@@ -75,8 +75,8 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     m_userRequestedState = m_touchpadEnabled;
     reloadSettings();
 
-    m_dependecies.setWatchMode(QDBusServiceWatcher::WatchForRegistration);
-    m_dependecies.setConnection(QDBusConnection::sessionBus());
+    m_dependencies.setWatchMode(QDBusServiceWatcher::WatchForRegistration);
+    m_dependencies.setConnection(QDBusConnection::sessionBus());
     QDBusPendingCall async = QDBusConnection::sessionBus().interface()->asyncCall(QLatin1String("ListNames"));
     QDBusPendingCallWatcher *callWatcher = new QDBusPendingCallWatcher(async, this);
     connect(callWatcher, SIGNAL(finished(QDBusPendingCallWatcher*)),
@@ -102,7 +102,7 @@ void TouchpadDisabler::serviceNameFetchFinished(QDBusPendingCallWatcher *callWat
     }
 
     QStringList allServices = reply.value();
-    Q_FOREACH (const QString &service, m_dependecies.watchedServices()) {
+    Q_FOREACH (const QString &service, m_dependencies.watchedServices()) {
         if (allServices.contains(service)) {
             serviceRegistered(service);
         }
@@ -192,7 +192,7 @@ void TouchpadDisabler::timerElapsed()
 
 void TouchpadDisabler::mousePlugged()
 {
-    if (!m_dependecies.watchedServices().isEmpty()) {
+    if (!m_dependencies.watchedServices().isEmpty()) {
         return;
     }
 

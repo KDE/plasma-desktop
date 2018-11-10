@@ -40,7 +40,7 @@ using namespace Attica;
 KdePlatformDependent::KdePlatformDependent()
     : m_config(KSharedConfig::openConfig(QStringLiteral("atticarc"))), m_accessManager(nullptr), m_wallet(nullptr)
 {
-    // FIXME: Investigate how to not leak this instance witohut crashing.
+    // FIXME: Investigate how to not leak this instance without crashing.
     m_accessManager = new QNetworkAccessManager(nullptr);
 
     const QString cacheDir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("/attica");

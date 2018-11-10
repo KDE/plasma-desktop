@@ -987,7 +987,7 @@ void CGroupListView::dropEvent(QDropEvent *event)
                       to(indexAt(event->pos()));
 
         ds >> families;
-        // Are we mvoeing/copying, removing a font from the current group?
+        // Are we moving/copying, removing a font from the current group?
         if(to.isValid() && from.isValid())
         {
             if( ((static_cast<CGroupListItem *>(from.internalPointer()))->isSystem() &&

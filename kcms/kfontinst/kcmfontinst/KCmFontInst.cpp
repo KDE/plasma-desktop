@@ -595,7 +595,7 @@ void CKCmFontInst::print(bool all)
                     title = QCoreApplication::applicationName();
 
                 //
-                // If we have lots of fonts to print, pass kfontinst a tempory groups file to print
+                // If we have lots of fonts to print, pass kfontinst a temporary groups file to print
                 // instead of passing font by font...
                 if(useFile)
                 {

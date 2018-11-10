@@ -134,7 +134,7 @@ Item {
 
 
 
-        // Arrangment section
+        // Arrangement section
         ComboBox {
             id: arrangement
             Layout.fillWidth: true

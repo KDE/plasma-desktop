@@ -142,7 +142,7 @@ Item {
     }
 
     function placeToolBox(ts) {
-        // if nothing has been setup yet, determin default position based on layout direction
+        // if nothing has been setup yet, determine default position based on layout direction
         if (!ts) {
             if (Qt.application.layoutDirection === Qt.RightToLeft) {
                 placeToolBox("topleft");

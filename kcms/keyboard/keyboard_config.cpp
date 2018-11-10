@@ -64,7 +64,7 @@ void KeyboardConfig::setDefaults()
 //	layouts.append(LayoutUnit(DEFAULT_LAYOUT));
 	layoutLoopCount = NO_LOOPING;
 
-	// switch cotrol options
+	// switch control options
 	switchingPolicy = SWITCH_POLICY_GLOBAL;
 //	stickySwitching = false;
 //	stickySwitchingDepth = 2;
