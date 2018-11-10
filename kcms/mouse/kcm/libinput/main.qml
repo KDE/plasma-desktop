@@ -81,7 +81,7 @@ Kirigami.ScrollablePage {
 
         // Device
         Controls.ComboBox {
-            Kirigami.FormData.label: i18n("Device:")
+            Kirigami.FormData.label: i18nd("kcmmouse", "Device:")
             id: deviceSelector
             enabled: deviceCount > 1
             Layouts.Layout.fillWidth: true
@@ -107,9 +107,9 @@ Kirigami.ScrollablePage {
 
         // General
         Controls.CheckBox {
-            Kirigami.FormData.label: i18n("General:")
+            Kirigami.FormData.label: i18nd("kcmmouse", "General:")
             id: deviceEnabled
-            text: i18n("Device enabled")
+            text: i18nd("kcmmouse", "Device enabled")
 
             function load() {
                 if (!formLayout.enabled) {
@@ -128,13 +128,13 @@ Kirigami.ScrollablePage {
             }
 
             ToolTip {
-                text: i18n("Accept input through this device.")
+                text: i18nd("kcmmouse", "Accept input through this device.")
             }
         }
 
         Controls.CheckBox {
             id: leftHanded
-            text: i18n("Left handed mode")
+            text: i18nd("kcmmouse", "Left handed mode")
 
             function load() {
                 if (!formLayout.enabled) {
@@ -153,13 +153,13 @@ Kirigami.ScrollablePage {
             }
 
             ToolTip {
-                text: i18n("Swap left and right buttons.")
+                text: i18nd("kcmmouse", "Swap left and right buttons.")
             }
         }
 
         Controls.CheckBox {
             id: middleEmulation
-            text: i18n("Press left and right buttons for middle-click")
+            text: i18nd("kcmmouse", "Press left and right buttons for middle-click")
 
             function load() {
                 if (!formLayout.enabled) {
@@ -178,7 +178,7 @@ Kirigami.ScrollablePage {
             }
 
             ToolTip {
-                text: i18n("Clicking left and right button simultaneously sends middle button click.")
+                text: i18nd("kcmmouse", "Clicking left and right button simultaneously sends middle button click.")
             }
         }
 
@@ -188,7 +188,7 @@ Kirigami.ScrollablePage {
 
         // Acceleration
         Controls.Slider {
-            Kirigami.FormData.label: i18n("Pointer speed:")
+            Kirigami.FormData.label: i18nd("kcmmouse", "Pointer speed:")
             id: accelSpeed
 
             from: 1
@@ -220,7 +220,7 @@ Kirigami.ScrollablePage {
         Layouts.ColumnLayout {
             id: accelProfile
             spacing: Kirigami.Units.smallSpacing
-            Kirigami.FormData.label: i18n("Acceleration profile:")
+            Kirigami.FormData.label: i18nd("kcmmouse", "Acceleration profile:")
             Kirigami.FormData.buddyFor: accelProfileFlat
 
             function load() {
@@ -251,20 +251,20 @@ Kirigami.ScrollablePage {
 
             Controls.RadioButton {
                 id: accelProfileFlat
-                text: i18n("Flat")
+                text: i18nd("kcmmouse", "Flat")
 
                 ToolTip {
-                    text: i18n("Cursor moves the same distance as the mouse movement.")
+                    text: i18nd("kcmmouse", "Cursor moves the same distance as the mouse movement.")
                 }
                 onCheckedChanged: accelProfile.syncCurrent()
             }
 
             Controls.RadioButton {
                 id: accelProfileAdaptive
-                text: i18n("Adaptive")
+                text: i18nd("kcmmouse", "Adaptive")
 
                 ToolTip {
-                    text: i18n("Cursor travel distance depends on the mouse movement speed.")
+                    text: i18nd("kcmmouse", "Cursor travel distance depends on the mouse movement speed.")
                 }
                 onCheckedChanged: accelProfile.syncCurrent()
             }
@@ -276,9 +276,9 @@ Kirigami.ScrollablePage {
 
         // Scrolling
         Controls.CheckBox {
-            Kirigami.FormData.label: i18n("Scrolling:")
+            Kirigami.FormData.label: i18nd("kcmmouse", "Scrolling:")
             id: naturalScroll
-            text: i18n("Invert scroll direction")
+            text: i18nd("kcmmouse", "Invert scroll direction")
 
             function load() {
                 enabled = device.supportsNaturalScroll
@@ -293,7 +293,7 @@ Kirigami.ScrollablePage {
             }
 
             ToolTip {
-                text: i18n("Touchscreen like scrolling.")
+                text: i18nd("kcmmouse", "Touchscreen like scrolling.")
             }
         }
     }
