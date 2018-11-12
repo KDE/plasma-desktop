@@ -423,7 +423,7 @@ Kirigami.ScrollablePage {
                     multiTapMiddleClick.text = i18nd("kcm_touchpad", "Middle-click (three-finger tap right-click)")
                     multiTapMiddleClickToolTip.text = i18nd("kcm_touchpad", "Tap with two fingers to middle-click, tap with three fingers to right-click.")
                 } else {
-                    multiTapRightClick.text = i18nd("kcm_touchpad", "Righ-click")
+                    multiTapRightClick.text = i18nd("kcm_touchpad", "Right-click")
                     multiTapRightClickToolTip.text = i18nd("kcm_touchpad", "Tap with two fingers to right-click.")
 
                     multiTapMiddleClick.text = i18nd("kcm_touchpad", "Middle-click")
