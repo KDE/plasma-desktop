@@ -54,7 +54,7 @@ class KCMiscKeyboardWidget : public QWidget
   Q_OBJECT
 public:
   KCMiscKeyboardWidget(QWidget *parent);
-  ~KCMiscKeyboardWidget();
+  ~KCMiscKeyboardWidget() override;
 
   void save();
   void load();

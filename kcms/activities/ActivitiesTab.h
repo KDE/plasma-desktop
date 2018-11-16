@@ -32,7 +32,7 @@ class ActivitiesTab : public QWidget {
     Q_OBJECT
 public:
     explicit ActivitiesTab(QWidget *parent);
-    ~ActivitiesTab();
+    ~ActivitiesTab() override;
 
 public Q_SLOTS:
     void defaults();

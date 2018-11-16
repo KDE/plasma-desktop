@@ -48,7 +48,7 @@ class FOLDERPLUGIN_TESTS_EXPORT ViewPropertiesMenu : public QObject
 
     public:
         explicit ViewPropertiesMenu(QObject *parent = nullptr);
-        ~ViewPropertiesMenu();
+        ~ViewPropertiesMenu() override;
 
         QObject* menu() const;
 

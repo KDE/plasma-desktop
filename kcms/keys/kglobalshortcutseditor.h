@@ -45,7 +45,7 @@ public:
      */
     KGlobalShortcutsEditor(QWidget *parent,
                            KShortcutsEditor::ActionTypes actionTypes = KShortcutsEditor::AllActions);
-    ~KGlobalShortcutsEditor();
+    ~KGlobalShortcutsEditor() override;
 
     /**
      * Insert an action collection, i.e. add all it's actions to the ones already associated

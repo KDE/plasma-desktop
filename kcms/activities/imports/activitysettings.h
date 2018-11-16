@@ -30,7 +30,7 @@ class ActivitySettings: public QObject {
 
 public:
     explicit ActivitySettings(QObject *parent = nullptr);
-    ~ActivitySettings();
+    ~ActivitySettings() override;
 
     bool newActivityAuthorized() const;
 

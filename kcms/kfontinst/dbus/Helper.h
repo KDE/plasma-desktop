@@ -40,7 +40,7 @@ class Helper : public QObject
     public:
 
     Helper();
-    ~Helper();
+    ~Helper() override;
 
     public Q_SLOTS:
 

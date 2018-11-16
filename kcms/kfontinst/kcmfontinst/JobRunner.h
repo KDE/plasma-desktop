@@ -84,7 +84,7 @@ class CJobRunner : public QDialog
     };
 
     explicit CJobRunner(QWidget *parent, int xid=0);
-    ~CJobRunner();
+    ~CJobRunner() override;
 
     static FontInstInterface * dbus();
     static QString             folderName(bool sys);

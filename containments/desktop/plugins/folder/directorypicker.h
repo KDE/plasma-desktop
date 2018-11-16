@@ -33,7 +33,7 @@ class DirectoryPicker : public QObject
 
     public:
         explicit DirectoryPicker(QObject *parent = nullptr);
-        ~DirectoryPicker();
+        ~DirectoryPicker() override;
 
         QUrl url() const;
 

@@ -28,7 +28,7 @@ class FileEntry : public AbstractEntry
 {
     public:
         explicit FileEntry(AbstractModel *owner, const QUrl &url);
-        ~FileEntry();
+        ~FileEntry() override;
 
         EntryType type() const override { return RunnableType; }
 

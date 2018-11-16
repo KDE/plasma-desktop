@@ -30,7 +30,7 @@ class SubDialog : public PlasmaQuick::Dialog
 
     public:
         explicit SubDialog(QQuickItem *parent = nullptr);
-        ~SubDialog();
+        ~SubDialog() override;
 
         Q_INVOKABLE QRect availableScreenRectForItem(QQuickItem *item) const;
 

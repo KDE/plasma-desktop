@@ -52,11 +52,11 @@ class KAStatsFavoritesModel : public PlaceholderModel
 
     public:
         explicit KAStatsFavoritesModel(QObject *parent = nullptr);
-        ~KAStatsFavoritesModel();
+        ~KAStatsFavoritesModel() override;
 
-        QString description() const;
+        QString description() const override;
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
+        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
 
         bool enabled() const;
         void setEnabled(bool enable);
@@ -88,10 +88,10 @@ class KAStatsFavoritesModel : public PlaceholderModel
         QObject *activities() const;
         Q_INVOKABLE QString activityNameForId(const QString &activityId) const;
 
-        AbstractModel* favoritesModel();
+        AbstractModel* favoritesModel() override;
 
     public Q_SLOTS:
-        virtual void refresh();
+        void refresh() override;
 
     Q_SIGNALS:
         void enabledChanged() const;

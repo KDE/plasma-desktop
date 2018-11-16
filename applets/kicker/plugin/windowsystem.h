@@ -30,7 +30,7 @@ class WindowSystem : public QObject
 
     public:
         explicit WindowSystem(QObject *parent = nullptr);
-        ~WindowSystem();
+        ~WindowSystem() override;
 
         bool eventFilter(QObject *watched, QEvent *event) override;
 

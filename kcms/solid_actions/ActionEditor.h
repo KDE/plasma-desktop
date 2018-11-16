@@ -33,7 +33,7 @@ class ActionEditor : public QDialog
     Q_OBJECT
 public:
      explicit ActionEditor(QWidget *parent = nullptr);
-    ~ActionEditor();
+    ~ActionEditor() override;
 
     void setActionToEdit( ActionItem * item );
 

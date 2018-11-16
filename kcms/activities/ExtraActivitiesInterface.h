@@ -33,7 +33,7 @@ class ExtraActivitiesInterface : public QObject {
 
 public:
     explicit ExtraActivitiesInterface(QObject *parent = nullptr);
-    ~ExtraActivitiesInterface();
+    ~ExtraActivitiesInterface() override;
 
 public Q_SLOTS:
     void setIsPrivate(const QString &activity, bool isPrivate,

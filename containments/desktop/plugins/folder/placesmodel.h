@@ -33,7 +33,7 @@ class PlacesModel : public QSortFilterProxyModel
 
     public:
         explicit PlacesModel(QObject *parent = nullptr);
-        ~PlacesModel();
+        ~PlacesModel() override;
 
         bool activityLinkingEnabled() const;
 

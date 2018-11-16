@@ -29,7 +29,7 @@ class Screen : public QObject
     Q_OBJECT
 public:
     Screen(QObject* parent = nullptr);
-    ~Screen();
+    ~Screen() override;
 
     Q_INVOKABLE QRect geometryForPoint(int x, int y);
     Q_INVOKABLE qreal devicePixelRatioForPoint(int x, int y);

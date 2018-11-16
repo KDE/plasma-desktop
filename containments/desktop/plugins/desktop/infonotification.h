@@ -37,7 +37,7 @@ class InfoNotification : public QObject
 
     public:
         explicit InfoNotification(QObject *parent = nullptr);
-        ~InfoNotification();
+        ~InfoNotification() override;
 
         bool enabled() const;
         void setEnabled(bool enabled);

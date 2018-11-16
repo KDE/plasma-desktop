@@ -66,7 +66,7 @@ class DirLister : public KDirLister
 
     public:
         explicit DirLister(QObject *parent = nullptr);
-        ~DirLister();
+        ~DirLister() override;
 
     Q_SIGNALS:
         void error(const QString &string);
@@ -131,7 +131,7 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
         Q_ENUM(Status)
 
         explicit FolderModel(QObject *parent = nullptr);
-        ~FolderModel();
+        ~FolderModel() override;
 
         QHash<int, QByteArray> roleNames() const override;
         static QHash<int, QByteArray> staticRoleNames();

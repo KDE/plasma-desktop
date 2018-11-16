@@ -52,7 +52,7 @@ class AppsModel : public AbstractModel, public QQmlParserStatus
         explicit AppsModel(const QString &entryPath = QString(), bool paginate = false, int pageSize = 24,
             bool flat = false, bool sorted = true, bool separators = true, QObject *parent = nullptr);
         explicit AppsModel(const QList<AbstractEntry *> entryList, bool deleteEntriesOnDestruction, QObject *parent = nullptr);
-        ~AppsModel();
+        ~AppsModel() override;
 
         QString description() const override;
         void setDescription(const QString &text);

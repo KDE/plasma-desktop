@@ -31,7 +31,7 @@ class PreviewRenderEngine : public KFI::CFcEngine
 {
 public: 
     PreviewRenderEngine(bool init=true);
-    ~PreviewRenderEngine();
+    ~PreviewRenderEngine() override;
     
     QImage drawAutoSize(const QFont &font, const QColor &txt, const QColor &bgnd, const QString &text);
 };

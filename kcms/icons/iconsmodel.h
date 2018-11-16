@@ -56,7 +56,7 @@ public:
     };
 
     int rowCount(const QModelIndex &parent) const override;
-    QVariant data(const QModelIndex &index, int role) const;
+    QVariant data(const QModelIndex &index, int role) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;
     QHash<int, QByteArray> roleNames() const override;
 

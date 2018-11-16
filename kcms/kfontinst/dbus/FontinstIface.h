@@ -38,7 +38,7 @@ public:
 public:
     OrgKdeFontinstInterface(const QString &service, const QString &path, const QDBusConnection &connection, QObject *parent = nullptr);
 
-    ~OrgKdeFontinstInterface();
+    ~OrgKdeFontinstInterface() override;
 
 public Q_SLOTS: // METHODS
     inline Q_NOREPLY void disable(const QString &family, uint style, bool inSystem, int pid, bool checkConfig)

@@ -32,7 +32,7 @@ class PrivacyTab : public QWidget {
     Q_OBJECT
 public:
     explicit PrivacyTab(QWidget *parent);
-    ~PrivacyTab();
+    ~PrivacyTab() override;
 
 public Q_SLOTS:
     void defaults();

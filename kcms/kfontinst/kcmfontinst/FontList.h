@@ -99,7 +99,7 @@ class CFontList : public QAbstractItemModel
     static QStringList compact(const QStringList &fonts);
 
     CFontList(QWidget *parent=0);
-    ~CFontList();
+    ~CFontList() override;
 
     QVariant        data(const QModelIndex &index, int role) const override;
     Qt::ItemFlags   flags(const QModelIndex &index) const override;
@@ -238,7 +238,7 @@ class CFontItem : public CFontModelItem
     public:
 
     CFontItem(CFontModelItem *p, const Style &s, bool sys);
-    virtual ~CFontItem() { }
+    ~CFontItem() override { }
 
     void                              refresh();
     QString                           name() const             { return family()+QString::fromLatin1(", ")+itsStyleName; }
@@ -273,7 +273,7 @@ class CFontListSortFilterProxy : public QSortFilterProxyModel
     public:
 
     CFontListSortFilterProxy(QObject *parent, QAbstractItemModel *model);
-    virtual ~CFontListSortFilterProxy() { }
+    ~CFontListSortFilterProxy() override { }
 
     QVariant         data(const QModelIndex &idx, int role) const override;
     bool             acceptFont(CFontItem *fnt, bool checkFontText) const;
@@ -317,7 +317,7 @@ class CFontListView : public QTreeView
     public:
 
     CFontListView(QWidget *parent, CFontList *model);
-    virtual ~CFontListView() { }
+    ~CFontListView() override { }
 
     void            getFonts(CJobRunner::ItemList &urls, QStringList &fontNames, QSet<Misc::TFont> *fonts,
                              bool selected, bool getEnabled=true, bool getDisabled=true);

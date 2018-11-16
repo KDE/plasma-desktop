@@ -44,7 +44,7 @@ class CPreviewSelectAction : public KSelectAction
     };
 
     explicit CPreviewSelectAction(QObject *parent, Mode mode=Basic);
-    virtual ~CPreviewSelectAction() { }
+    ~CPreviewSelectAction() override { }
 
     void setStd();
     void setMode(Mode mode);

@@ -32,7 +32,7 @@ class PredicateModel : public QAbstractItemModel
 
 public:
     explicit PredicateModel( PredicateItem * menuRoot, QObject *parent = nullptr );
-    ~PredicateModel();
+    ~PredicateModel() override;
 
     QVariant data( const QModelIndex &index, int role ) const override;
     Qt::ItemFlags flags( const QModelIndex &index ) const override;

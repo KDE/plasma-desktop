@@ -32,7 +32,7 @@ class ForwardingModel : public AbstractModel
 
     public:
         explicit ForwardingModel(QObject *parent = nullptr);
-        ~ForwardingModel();
+        ~ForwardingModel() override;
 
         QString description() const override;
 

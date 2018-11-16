@@ -42,7 +42,7 @@ class CursorThemeConfig : public KQuickAddons::ConfigModule
 
 public:
     CursorThemeConfig(QObject *parent, const QVariantList &);
-    ~CursorThemeConfig();
+    ~CursorThemeConfig() override;
 
 public:
     void load() override;

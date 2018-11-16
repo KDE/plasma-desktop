@@ -49,7 +49,7 @@ class RunnerModel : public QAbstractListModel
 
     public:
         explicit RunnerModel(QObject *parent = nullptr);
-        ~RunnerModel();
+        ~RunnerModel() override;
 
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 

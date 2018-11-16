@@ -37,7 +37,7 @@ class SimpleFavoritesModel : public AbstractModel
 
     public:
         explicit SimpleFavoritesModel(QObject *parent = nullptr);
-        ~SimpleFavoritesModel();
+        ~SimpleFavoritesModel() override;
 
         QString description() const override;
 

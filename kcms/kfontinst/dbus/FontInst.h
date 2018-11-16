@@ -99,7 +99,7 @@ class KFONTINST_EXPORT FontInst : public QObject
     } 
     
     FontInst();
-    ~FontInst();
+    ~FontInst() override;
 
     public Q_SLOTS:
 

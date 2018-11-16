@@ -56,7 +56,7 @@ class CFontFilter : public KLineEdit
     };
 
     CFontFilter(QWidget *parent);
-    virtual ~CFontFilter() { }
+    ~CFontFilter() override { }
 
     void setFoundries(const QSet<QString> &currentFoundries);
 

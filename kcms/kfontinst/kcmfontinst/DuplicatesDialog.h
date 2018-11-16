@@ -121,7 +121,7 @@ class CFontFileListView : public QTreeWidget
     };
     
     CFontFileListView(QWidget *parent);
-    virtual ~CFontFileListView() { }
+    ~CFontFileListView() override { }
 
     QSet<QString>        getMarkedFiles();
     CJobRunner::ItemList getMarkedItems();

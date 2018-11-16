@@ -32,7 +32,7 @@ class SelectSchemeDialog : public QDialog
     Q_OBJECT
 public:
     SelectSchemeDialog(QWidget *parent = nullptr);
-    ~SelectSchemeDialog();
+    ~SelectSchemeDialog() override;
 
     QUrl selectedScheme() const;
 

@@ -81,7 +81,7 @@ class KTimerDialog : public KDialog
     /**
      * Destructor.
      */
-    ~KTimerDialog();
+    ~KTimerDialog() override;
 
     /**
      * Execute the dialog modelessly - see @see QDialog .

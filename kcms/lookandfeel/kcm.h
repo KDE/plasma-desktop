@@ -67,7 +67,7 @@ public:
         HasDesktopSwitcherRole
     };
     KCMLookandFeel(QObject* parent, const QVariantList& args);
-    ~KCMLookandFeel();
+    ~KCMLookandFeel() override;
 
     //List only packages which provide at least one of the components
     QList<Plasma::Package> availablePackages(const QStringList &components);

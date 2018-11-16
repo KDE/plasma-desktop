@@ -37,8 +37,8 @@ class SortProxyModel : public QSortFilterProxyModel
     Q_OBJECT
     public:
         SortProxyModel(QObject *parent = nullptr) : QSortFilterProxyModel(parent) {}
-        ~SortProxyModel() {}
-        QHash<int, QByteArray> roleNames() const;
+        ~SortProxyModel() override {}
+        QHash<int, QByteArray> roleNames() const override;
         inline const CursorTheme *theme(const QModelIndex &index) const;
         inline QModelIndex findIndex(const QString &name) const;
         inline QModelIndex defaultIndex() const;
@@ -48,7 +48,7 @@ class SortProxyModel : public QSortFilterProxyModel
         int compare(const QModelIndex &left, const QModelIndex &right, int role) const;
 
     protected:
-        bool lessThan(const QModelIndex &left, const QModelIndex &right) const;
+        bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
 };
 
 

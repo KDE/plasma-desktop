@@ -44,7 +44,7 @@ class CCharTip : public QFrame
     public:
 
     CCharTip(CFontPreview *parent);
-    ~CCharTip();
+    ~CCharTip() override;
 
     void setItem(const CFcEngine::TChar &ch);
 

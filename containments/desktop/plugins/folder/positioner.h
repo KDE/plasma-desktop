@@ -39,7 +39,7 @@ class FOLDERPLUGIN_TESTS_EXPORT Positioner : public QAbstractItemModel
 
     public:
         explicit Positioner(QObject *parent = nullptr);
-        ~Positioner();
+        ~Positioner() override;
 
         bool enabled() const;
         void setEnabled(bool enabled);

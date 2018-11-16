@@ -39,7 +39,7 @@ class LayoutTrayIcon : public QObject
 
 public:
     LayoutTrayIcon(const Rules* rules, const KeyboardConfig& keyboardConfig);
-    ~LayoutTrayIcon();
+    ~LayoutTrayIcon() override;
 
     void layoutMapChanged();
 

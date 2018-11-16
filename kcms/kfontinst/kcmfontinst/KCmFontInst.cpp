@@ -159,7 +159,7 @@ class CProgressBar : public QProgressBar
     CProgressBar(QWidget *p, int h) : QProgressBar(p), itsHeight((int)(h*0.6))
         { setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed); }
 
-    virtual ~CProgressBar() { }
+    ~CProgressBar() override { }
 
     int height() const     { return itsHeight; }
     QSize sizeHint() const override { return QSize(100, itsHeight); }

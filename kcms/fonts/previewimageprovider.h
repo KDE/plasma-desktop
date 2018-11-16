@@ -27,7 +27,7 @@ class PreviewImageProvider : public QQuickImageProvider
 {
 public:
     PreviewImageProvider(const QFont& font);
-    QImage requestImage(const QString &id, QSize *size, const QSize &requestedSize);
+    QImage requestImage(const QString &id, QSize *size, const QSize &requestedSize) override;
     
 private:
     QFont m_font;

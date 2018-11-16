@@ -34,7 +34,7 @@ class SubMenu : public PlasmaQuick::Dialog
 
     public:
         SubMenu(QQuickItem *parent = nullptr);
-        ~SubMenu();
+        ~SubMenu() override;
 
         Q_INVOKABLE QRect availableScreenRectForItem(QQuickItem *item) const;
 

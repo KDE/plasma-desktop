@@ -43,7 +43,7 @@ class JoyWidget : public QWidget
   public:
     JoyWidget(QWidget *parent = nullptr);
 
-    ~JoyWidget();
+    ~JoyWidget() override;
 
     // initialize list of possible devices and open the first available
     void init();

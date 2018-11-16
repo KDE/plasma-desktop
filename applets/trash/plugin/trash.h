@@ -28,7 +28,7 @@ class Trash : public QObject
 
 public:
     explicit Trash(QObject *parent = nullptr);
-    virtual ~Trash() = default;
+    ~Trash() override = default;
 
     Q_INVOKABLE void trashUrls(const QList<QUrl> &urls);
     Q_INVOKABLE void emptyTrash();

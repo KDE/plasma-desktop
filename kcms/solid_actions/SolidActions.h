@@ -36,7 +36,7 @@ class SolidActions: public KCModule
 
 public:
     SolidActions(QWidget* parent, const QVariantList&);
-    ~SolidActions();
+    ~SolidActions() override;
     void load() override;
     void save() override;
     void defaults() override;

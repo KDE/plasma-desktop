@@ -119,7 +119,7 @@ class CPreviewListViewDelegate : public QStyledItemDelegate
     public:
 
     CPreviewListViewDelegate(QObject *p, int previewSize) : QStyledItemDelegate(p), itsPreviewSize(previewSize) { }
-    virtual ~CPreviewListViewDelegate() { }
+    ~CPreviewListViewDelegate() override { }
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &idx) const override
     {

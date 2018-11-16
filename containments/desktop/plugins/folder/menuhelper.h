@@ -30,7 +30,7 @@ class MenuHelper : public QObject
 
     public:
         explicit MenuHelper(QObject *parent = nullptr);
-        ~MenuHelper();
+        ~MenuHelper() override;
 
         Q_INVOKABLE QString iconName(QAction *action) const;
 

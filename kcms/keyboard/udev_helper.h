@@ -27,7 +27,7 @@ class UdevDeviceNotifier : public QObject
 
 public:
     explicit UdevDeviceNotifier(QObject *parent = nullptr);
-    ~UdevDeviceNotifier();
+    ~UdevDeviceNotifier() override;
 
 Q_SIGNALS:
     void newKeyboardDevice();

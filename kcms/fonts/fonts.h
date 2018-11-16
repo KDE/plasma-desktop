@@ -131,7 +131,7 @@ class KFonts : public KQuickAddons::ConfigModule
 
 public:
     KFonts(QObject *parent, const QVariantList &);
-    ~KFonts();
+    ~KFonts() override;
 
     void setGeneralFont(const QFont &font);
     QFont generalFont() const;
@@ -154,9 +154,9 @@ public:
     QObject* fontAASettings() { return m_fontAASettings; }
 
 public Q_SLOTS:
-    void load();
-    void save();
-    void defaults();
+    void load() override;
+    void save() override;
+    void defaults() override;
     Q_INVOKABLE void adjustAllFonts();
 
 Q_SIGNALS:

@@ -45,7 +45,7 @@ class Item : public QObject
 
 public:
     explicit Item(QObject *parent = nullptr);
-    virtual ~Item() = default;
+    ~Item() override = default;
 
     QUrl launcherUrl() const;
     void setLauncherUrl(const QUrl &launcherUrl);

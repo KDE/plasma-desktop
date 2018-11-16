@@ -29,7 +29,7 @@ class StandardActionsModule : public KCModule
 public:
 
     StandardActionsModule(QWidget *parent, const QVariantList &args);
-    ~StandardActionsModule();
+    ~StandardActionsModule() override;
 
     /*reimp*/ void save() override;
     /*reimp*/ void load() override;

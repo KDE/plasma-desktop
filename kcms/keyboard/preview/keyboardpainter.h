@@ -33,7 +33,7 @@ class KeyboardPainter : public QDialog
 
 public:
     explicit KeyboardPainter();
-    ~KeyboardPainter();
+    ~KeyboardPainter() override;
     void generateKeyboardLayout(const QString &layout, const QString &variant, const QString &model, const QString &title);
     int getHeight();
     int getWidth();

@@ -36,7 +36,7 @@ class KDEDConfig : public KCModule
 Q_OBJECT
 public:
 	explicit KDEDConfig(QWidget* parent, const QVariantList& foo = QVariantList());
-	~KDEDConfig() {}
+	~KDEDConfig() override {}
 
 	void       load() override;
 	void       save() override;

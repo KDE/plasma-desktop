@@ -26,12 +26,12 @@ class KCMNightColor : public KQuickAddons::ConfigModule
     Q_OBJECT
 public:
     KCMNightColor(QObject* parent, const QVariantList& args);
-    ~KCMNightColor() {}
+    ~KCMNightColor() override {}
 
 public Q_SLOTS:
-    void load();
-    void save();
-    void defaults();
+    void load() override;
+    void save() override;
+    void defaults() override;
 
 Q_SIGNALS:
     void loadRelay();

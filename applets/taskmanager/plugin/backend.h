@@ -57,7 +57,7 @@ class Backend : public QObject
         Q_ENUM(MiddleClickAction);
 
         Backend(QObject *parent = nullptr);
-        ~Backend();
+        ~Backend() override;
 
         QQuickItem *taskManagerItem() const;
         void setTaskManagerItem(QQuickItem *item);

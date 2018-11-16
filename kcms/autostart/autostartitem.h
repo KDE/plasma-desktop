@@ -32,7 +32,7 @@ class AutoStartItem : public QTreeWidgetItem, public QObject
 {
 public:
     AutoStartItem( const QString &service, QTreeWidgetItem *parent, Autostart* );
-    ~AutoStartItem();
+    ~AutoStartItem() override;
 
     QUrl fileName() const;
 
@@ -46,7 +46,7 @@ class DesktopStartItem : public AutoStartItem
 {
 public:
     DesktopStartItem( const QString &service, QTreeWidgetItem *parent, Autostart* );
-    ~DesktopStartItem();
+    ~DesktopStartItem() override;
 };
 
 
@@ -57,7 +57,7 @@ class ScriptStartItem : public AutoStartItem
 public:
     enum ENV { START=0, SHUTDOWN=1, PRE_START=2}; //rename
     ScriptStartItem( const QString &service, QTreeWidgetItem *parent, Autostart* );
-    ~ScriptStartItem();
+    ~ScriptStartItem() override;
 
     void changeStartup( ScriptStartItem::ENV type );
 

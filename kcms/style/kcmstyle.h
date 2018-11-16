@@ -59,7 +59,7 @@ class KCMStyle : public KCModule
 
 public:
     KCMStyle( QWidget* parent, const QVariantList& );
-    ~KCMStyle();
+    ~KCMStyle() override;
 
     void load() override;
     void save() override;

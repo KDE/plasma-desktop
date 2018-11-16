@@ -36,7 +36,7 @@ class CFontThumbnail : public ThumbCreator
     public:
 
     CFontThumbnail();
-    ~CFontThumbnail() {}
+    ~CFontThumbnail() override {}
 
     bool  create(const QString &path, int width, int height, QImage &img) override;
     Flags flags() const override;

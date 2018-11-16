@@ -107,7 +107,7 @@ class CGroupList : public QAbstractItemModel
     public:
 
     CGroupList(QWidget *parent = nullptr);
-    ~CGroupList();
+    ~CGroupList() override;
 
     QVariant        data(const QModelIndex &index, int role) const override;
     bool            setData(const QModelIndex &index, const QVariant &value, int role) override;
@@ -180,7 +180,7 @@ class CGroupListView : public QTreeView
     public:
 
     CGroupListView(QWidget *parent, CGroupList *model);
-    virtual ~CGroupListView()              { }
+    ~CGroupListView() override              { }
 
     QSize                 sizeHint() const override { return QSize(32, 32); }
 

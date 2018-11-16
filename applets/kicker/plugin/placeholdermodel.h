@@ -35,32 +35,32 @@ class PlaceholderModel : public AbstractModel
 
     public:
         explicit PlaceholderModel(QObject *parent = nullptr);
-        ~PlaceholderModel();
+        ~PlaceholderModel() override;
 
-        QString description() const;
+        QString description() const override;
 
         QAbstractItemModel *sourceModel() const;
         virtual void setSourceModel(QAbstractItemModel *sourceModel);
 
-        bool canFetchMore(const QModelIndex &parent) const;
-        void fetchMore(const QModelIndex &parent);
+        bool canFetchMore(const QModelIndex &parent) const override;
+        void fetchMore(const QModelIndex &parent) override;
 
-        QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const;
-        QModelIndex parent(const QModelIndex &index) const;
+        QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
+        QModelIndex parent(const QModelIndex &index) const override;
 
-        virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const;
+        int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
+        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
 
-        Q_INVOKABLE QString labelForRow(int row);
+        Q_INVOKABLE QString labelForRow(int row) override;
 
-        Q_INVOKABLE AbstractModel *modelForRow(int row);
+        Q_INVOKABLE AbstractModel *modelForRow(int row) override;
 
-        AbstractModel* favoritesModel();
+        AbstractModel* favoritesModel() override;
 
-        int separatorCount() const;
+        int separatorCount() const override;
 
         int dropPlaceholderIndex() const;
         void setDropPlaceholderIndex(int index);

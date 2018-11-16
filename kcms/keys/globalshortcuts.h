@@ -30,7 +30,7 @@ class GlobalShortcutsModule : public KCModule
     Q_OBJECT
 public:
     GlobalShortcutsModule(QWidget *parent, const QVariantList &args);
-    ~GlobalShortcutsModule();
+    ~GlobalShortcutsModule() override;
 
     void save() override;
     void load() override;

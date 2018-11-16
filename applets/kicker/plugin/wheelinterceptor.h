@@ -31,7 +31,7 @@ class WheelInterceptor : public QQuickItem
 
     public:
         WheelInterceptor(QQuickItem *parent = nullptr);
-        ~WheelInterceptor();
+        ~WheelInterceptor() override;
 
         QQuickItem *destination() const;
         void setDestination(QQuickItem *destination);

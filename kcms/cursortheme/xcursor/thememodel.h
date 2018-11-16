@@ -63,8 +63,8 @@ class CursorThemeModel : public QAbstractTableModel
         explicit CursorThemeModel(QObject *parent = nullptr);
         ~CursorThemeModel() override;
         QHash<int, QByteArray> roleNames() const override;
-       inline int columnCount(const QModelIndex &parent = QModelIndex()) const;
-        inline int rowCount(const QModelIndex &parent = QModelIndex()) const;
+       inline int columnCount(const QModelIndex &parent = QModelIndex()) const override;
+        inline int rowCount(const QModelIndex &parent = QModelIndex()) const override;
         QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
         QVariant data(const QModelIndex &index, int role) const override;
         void sort(int column, Qt::SortOrder order = Qt::AscendingOrder) override;

@@ -59,7 +59,7 @@ public:
     QRect subElementRect(SubElement element, const QStyleOption *option, const QWidget *widget) const override;
     void unpolish(QWidget *widget) override;
     void unpolish(QApplication *application) override;
-    virtual int layoutSpacing(QSizePolicy::ControlType control1, QSizePolicy::ControlType control2,
+    int layoutSpacing(QSizePolicy::ControlType control1, QSizePolicy::ControlType control2,
                               Qt::Orientation orientation, const QStyleOption* option = 0, const QWidget* widget = 0) const override;
 
 protected:

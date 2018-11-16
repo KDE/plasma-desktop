@@ -40,7 +40,7 @@ class CViewer : public KParts::MainWindow
     public:
 
     CViewer();
-    virtual ~CViewer() { }
+    ~CViewer() override { }
     void showUrl(const QUrl &url);
 
     public Q_SLOTS:

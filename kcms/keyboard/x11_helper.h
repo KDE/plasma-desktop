@@ -112,7 +112,7 @@ Q_SIGNALS:
 
 public:
 	XEventNotifier();
-	virtual ~XEventNotifier() {}
+	~XEventNotifier() override {}
 
 	virtual void start();
 	virtual void stop();

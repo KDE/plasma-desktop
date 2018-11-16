@@ -751,7 +751,7 @@ class CGroupListViewDelegate : public QStyledItemDelegate
     public:
 
     CGroupListViewDelegate(QObject *p) : QStyledItemDelegate(p) { }
-    virtual ~CGroupListViewDelegate() { }
+    ~CGroupListViewDelegate() override { }
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &idx) const override
     {

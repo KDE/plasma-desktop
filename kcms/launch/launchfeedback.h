@@ -45,9 +45,9 @@ class LaunchFeedback : public KQuickAddons::ConfigModule
         void setNotificationTimeout(int duration);
 
     public Q_SLOTS:
-        void load();
-        void save();
-        void defaults();
+        void load() override;
+        void save() override;
+        void defaults() override;
 
     Q_SIGNALS:
         void busyCursorCurrentIndexChanged() const;

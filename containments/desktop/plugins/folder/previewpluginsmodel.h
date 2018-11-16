@@ -34,7 +34,7 @@ class PreviewPluginsModel : public QAbstractListModel
 
     public:
         explicit PreviewPluginsModel(QObject *parent = nullptr);
-        ~PreviewPluginsModel();
+        ~PreviewPluginsModel() override;
 
         QHash<int, QByteArray> roleNames() const override;
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;

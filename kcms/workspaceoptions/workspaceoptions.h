@@ -29,7 +29,7 @@ class KCMWorkspaceOptions : public KQuickAddons::ConfigModule
 
 public:
     KCMWorkspaceOptions(QObject* parent, const QVariantList& args);
-    ~KCMWorkspaceOptions() {}
+    ~KCMWorkspaceOptions() override {}
 
     // QML Properties
     bool getToolTip() const;
@@ -42,9 +42,9 @@ public:
     void setSingleClick(bool state);
 
 public Q_SLOTS:
-    void load();
-    void save();
-    void defaults();
+    void load() override;
+    void save() override;
+    void defaults() override;
 
 Q_SIGNALS:
     void toolTipChanged();

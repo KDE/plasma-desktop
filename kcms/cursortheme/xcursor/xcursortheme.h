@@ -43,15 +43,15 @@ class XCursorTheme : public CursorTheme
         * index.theme file if the dir has one.
         */
         XCursorTheme(const QDir &dir);
-        virtual ~XCursorTheme() {}
+        ~XCursorTheme() override {}
 
         const QStringList inherits() const { return m_inherits; }
-        QImage loadImage(const QString &name, int size = 0) const;
-        qulonglong loadCursor(const QString &name, int size = 0) const;
+        QImage loadImage(const QString &name, int size = 0) const override;
+        qulonglong loadCursor(const QString &name, int size = 0) const override;
 
         /** Returns the size that the XCursor library would use if no
             cursor size is given. This depends mainly on Xft.dpi. */
-        int defaultCursorSize() const;
+        int defaultCursorSize() const override;
 
     protected:
         XCursorTheme(const QString &title, const QString &desc)

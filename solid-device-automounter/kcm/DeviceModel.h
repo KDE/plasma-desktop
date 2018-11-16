@@ -33,7 +33,7 @@ class DeviceModel : public QAbstractItemModel
 
 public:
     explicit DeviceModel(QObject *parent = nullptr);
-    virtual ~DeviceModel() = default;
+    ~DeviceModel() override = default;
 
     enum DeviceType {
         Attached,

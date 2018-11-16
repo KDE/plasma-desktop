@@ -31,7 +31,7 @@ class PlasmaDesktopRunner : public Plasma::AbstractRunner
 
     public:
         PlasmaDesktopRunner(QObject *parent, const QVariantList &args);
-        ~PlasmaDesktopRunner();
+        ~PlasmaDesktopRunner() override;
 
         void match(Plasma::RunnerContext &context) override;
         void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;

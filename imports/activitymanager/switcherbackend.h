@@ -49,7 +49,7 @@ class SwitcherBackend : public QObject {
 
 public:
     explicit SwitcherBackend(QObject *parent = nullptr);
-    ~SwitcherBackend();
+    ~SwitcherBackend() override;
 
     static QObject *instance(QQmlEngine *engine, QJSEngine *scriptEngine);
 

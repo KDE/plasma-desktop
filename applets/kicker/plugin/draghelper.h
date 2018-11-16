@@ -33,7 +33,7 @@ class DragHelper : public QObject
 
     public:
         DragHelper(QObject *parent = nullptr);
-        ~DragHelper();
+        ~DragHelper() override;
 
         int dragIconSize() const;
         void setDragIconSize(int size);

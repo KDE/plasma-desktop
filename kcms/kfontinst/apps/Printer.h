@@ -47,7 +47,7 @@ class CPrintThread : public QThread
     public:
         
     CPrintThread(QPrinter *printer, const QList<Misc::TFont> &items, int size, QObject *parent);
-    ~CPrintThread();
+    ~CPrintThread() override;
    
     void run() override;
 
@@ -74,7 +74,7 @@ class CPrinter : public QDialog
     public:
 
     explicit CPrinter(QWidget *parent);
-    ~CPrinter();
+    ~CPrinter() override;
 
     void print(const QList<Misc::TFont> &items, int size);
 

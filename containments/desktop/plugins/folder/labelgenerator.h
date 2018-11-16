@@ -38,7 +38,7 @@ class LabelGenerator : public QObject
 
     public:
         explicit LabelGenerator(QObject *parent = nullptr);
-        ~LabelGenerator();
+        ~LabelGenerator() override;
 
         FolderModel *folderModel() const;
         void setFolderModel(FolderModel *folderModel);

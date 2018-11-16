@@ -32,7 +32,7 @@ class ServerConfigModule : public KCModule, private Ui::ConfigWidget
 
 public:
     ServerConfigModule(QWidget* parent, const QVariantList& args);
-    ~ServerConfigModule();
+    ~ServerConfigModule() override;
 
 public Q_SLOTS:
     void load() override;

@@ -34,7 +34,7 @@ class SwitchingTab : public QWidget {
     Q_OBJECT
 public:
     explicit SwitchingTab(QWidget *parent);
-    ~SwitchingTab();
+    ~SwitchingTab() override;
 
 public Q_SLOTS:
     void defaults();

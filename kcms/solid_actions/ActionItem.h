@@ -36,7 +36,7 @@ class ActionItem: public QObject
 
 public:
     ActionItem(const QString& pathToDesktop, const QString& action, QObject *parent = nullptr);
-    ~ActionItem();
+    ~ActionItem() override;
 
     bool isUserSupplied() const;
 

@@ -55,7 +55,7 @@ class EmoticonList : public KCModule, Ui::EmoticonsManager
 
 public:
     EmoticonList(QWidget *parent, const QVariantList &args);
-    ~EmoticonList();
+    ~EmoticonList() override;
     void load() override;
     void save() override;
     void defaults() override;

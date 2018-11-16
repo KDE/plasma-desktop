@@ -41,7 +41,7 @@ class KColorCm : public KCModule, public Ui::colorSettings
 
 public:
     KColorCm(QWidget *parent, const QVariantList &);
-    ~KColorCm();
+    ~KColorCm() override;
 
 public Q_SLOTS:
 

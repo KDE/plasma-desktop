@@ -39,7 +39,7 @@ class CActionLabel : public QLabel
     public:
 
     CActionLabel(QWidget *parent);
-    ~CActionLabel();
+    ~CActionLabel() override;
     void startAnimation();
     void stopAnimation();
 

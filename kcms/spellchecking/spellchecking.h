@@ -38,7 +38,7 @@ class SonnetSpellCheckingModule : public KCModule
 
  public:
   SonnetSpellCheckingModule(QWidget* parent, const QVariantList&);
-  ~SonnetSpellCheckingModule();
+  ~SonnetSpellCheckingModule() override;
 
   void save() override;
   void defaults() override;

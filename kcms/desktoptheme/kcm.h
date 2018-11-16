@@ -53,7 +53,7 @@ public:
     Q_ENUM(Roles)
 
     KCMDesktopTheme(QObject *parent, const QVariantList &args);
-    ~KCMDesktopTheme();
+    ~KCMDesktopTheme() override;
 
     QStandardItemModel *desktopThemeModel() const;
 

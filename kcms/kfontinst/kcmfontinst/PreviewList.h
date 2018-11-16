@@ -61,7 +61,7 @@ class CPreviewList : public QAbstractItemModel
     public:
 
     CPreviewList(QObject *parent = nullptr);
-    virtual ~CPreviewList() { clear(); }
+    ~CPreviewList() override { clear(); }
 
     QVariant        data(const QModelIndex &index, int role) const override;
     Qt::ItemFlags   flags(const QModelIndex &index) const override;
@@ -85,7 +85,7 @@ class CPreviewListView : public QTreeView
     public:
 
     CPreviewListView(CFcEngine *eng, QWidget *parent);
-    virtual ~CPreviewListView() { }
+    ~CPreviewListView() override { }
 
     void refreshPreviews();
     void showFonts(const QModelIndexList &fonts);

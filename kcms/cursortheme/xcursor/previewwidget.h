@@ -36,7 +36,7 @@ class PreviewWidget : public QQuickPaintedItem
 
     public:
         PreviewWidget(QQuickItem *parent = nullptr);
-        ~PreviewWidget();
+        ~PreviewWidget() override;
 
         void setTheme(const CursorTheme *theme, const int size);
         void setUseLables(bool);
@@ -57,9 +57,9 @@ class PreviewWidget : public QQuickPaintedItem
         void currentSizeChanged();
 
     protected:
-        void paint(QPainter *);
-        void hoverMoveEvent(QHoverEvent *event);
-        void hoverLeaveEvent(QHoverEvent *e);
+        void paint(QPainter *) override;
+        void hoverMoveEvent(QHoverEvent *event) override;
+        void hoverLeaveEvent(QHoverEvent *e) override;
         void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) override;
 
     private:

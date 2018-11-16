@@ -29,7 +29,7 @@ class AdvancedDialog : public QDialog
 
 public:
     explicit AdvancedDialog(QWidget* parent, bool status);
-    ~AdvancedDialog();
+    ~AdvancedDialog() override;
 
     bool onlyInKde() const;
 
