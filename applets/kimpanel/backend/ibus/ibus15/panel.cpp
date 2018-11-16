@@ -135,9 +135,9 @@ impanel_update_logo_by_engine(IBusPanelImpanel* impanel, IBusEngineDesc* engine_
     QByteArray propstr = ibus_engine_desc_to_logo_propstr(engine_desc);
 
     g_dbus_connection_emit_signal (impanel->conn,
-                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty",
+                                    nullptr, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty",
                                     (g_variant_new ("(s)", propstr.constData())),
-                                    NULL);
+                                    nullptr);
 }
 
 void
@@ -170,7 +170,7 @@ void ibus_panel_impanel_navigate(IBusPanelImpanel* impanel, gboolean start, gboo
         return;
     }
 
-    IBusEngineDesc* engine_desc = NULL;
+    IBusEngineDesc* engine_desc = nullptr;
     if (impanel->selected < 0) {
         engine_desc = ibus_bus_get_global_engine(impanel->bus);
     } else if (static_cast<size_t>(impanel->selected) < impanel->engineManager->length()) {
@@ -204,7 +204,7 @@ void ibus_panel_impanel_move_next(IBusPanelImpanel* impanel)
 }
 
 
-static GDBusNodeInfo *introspection_data = NULL;
+static GDBusNodeInfo *introspection_data = nullptr;
 
 static guint owner_id;
 
@@ -335,7 +335,7 @@ static QByteArray
 ibus_property_to_propstr (IBusProperty *property,
                           gboolean useSymbol)
 {
-    const gchar* label = NULL;
+    const gchar* label = nullptr;
     const gchar* tooltip = ibus_text_get_text (ibus_property_get_tooltip (property));
     const gchar* icon = ibus_property_get_icon (property);
 
@@ -424,7 +424,7 @@ impanel_get_default_engine(IBusPanelImpanel* impanel, char*** pengine_names, gsi
             variant = variants[i];
         }
 
-        for (GList* engine = g_list_first(engines); engine != NULL ;
+        for (GList* engine = g_list_first(engines); engine != nullptr ;
             engine = g_list_next(engine)) {
             IBusEngineDesc* desc = IBUS_ENGINE_DESC (engine->data);
             QByteArray name = ibus_engine_desc_get_name(desc);
@@ -438,7 +438,7 @@ impanel_get_default_engine(IBusPanelImpanel* impanel, char*** pengine_names, gsi
             }
         }
     }
-    const char* locale = setlocale(LC_CTYPE, NULL);
+    const char* locale = setlocale(LC_CTYPE, nullptr);
     if (!locale) {
         locale = "C";
     }
@@ -447,7 +447,7 @@ impanel_get_default_engine(IBusPanelImpanel* impanel, char*** pengine_names, gsi
     QString lang = localeList.size() > 0 ? localeList[0] : "";
 
     bool added = false;
-    for (GList* engine = g_list_first(engines); engine != NULL ;
+    for (GList* engine = g_list_first(engines); engine != nullptr ;
         engine = g_list_next(engine)) {
         IBusEngineDesc* desc = IBUS_ENGINE_DESC (engine->data);
         QByteArray name = ibus_engine_desc_get_name(desc);
@@ -466,7 +466,7 @@ impanel_get_default_engine(IBusPanelImpanel* impanel, char*** pengine_names, gsi
         localeList = QString(lang).split('_');
         QString lang = localeList.size() > 0 ? localeList[0] : "";
 
-        for (GList* engine = g_list_first(engines); engine != NULL ;
+        for (GList* engine = g_list_first(engines); engine != nullptr ;
             engine = g_list_next(engine)) {
             IBusEngineDesc* desc = IBUS_ENGINE_DESC (engine->data);
             QByteArray name = ibus_engine_desc_get_name(desc);
@@ -481,7 +481,7 @@ impanel_get_default_engine(IBusPanelImpanel* impanel, char*** pengine_names, gsi
         }
     }
 
-    for (GList* engine = g_list_first(engines); engine != NULL ;
+    for (GList* engine = g_list_first(engines); engine != nullptr ;
         engine = g_list_next(engine)) {
         IBusEngineDesc* desc = IBUS_ENGINE_DESC (engine->data);
         g_object_unref(desc);
@@ -507,14 +507,14 @@ impanel_get_default_engine(IBusPanelImpanel* impanel, char*** pengine_names, gsi
 
 static void
 impanel_update_engines(IBusPanelImpanel* impanel, GVariant* var_engines) {
-    gchar** engine_names = NULL;
+    gchar** engine_names = nullptr;
     size_t len = 0;
     if (var_engines) {
         engine_names = g_variant_dup_strv(var_engines, &len);
     }
     if (len == 0) {
         g_strfreev(engine_names);
-        engine_names = NULL;
+        engine_names = nullptr;
     }
 
     if (!engine_names) {
@@ -537,7 +537,7 @@ impanel_update_engines(IBusPanelImpanel* impanel, GVariant* var_engines) {
 
 static void
 impanel_update_engines_order(IBusPanelImpanel* impanel, GVariant* var_engines) {
-    const gchar** engine_names = NULL;
+    const gchar** engine_names = nullptr;
     size_t len = 0;
     engine_names = g_variant_get_strv(var_engines, &len);
     if (len) {
@@ -552,14 +552,14 @@ impanel_update_engines_order(IBusPanelImpanel* impanel, GVariant* var_engines) {
 
 static void
 impanel_update_triggers(IBusPanelImpanel* impanel, GVariant* variant) {
-    gchar** triggers = NULL;
+    gchar** triggers = nullptr;
     size_t len = 0;
     if (variant) {
         triggers = g_variant_dup_strv(variant, &len);
     }
     if (len == 0) {
         g_strfreev(triggers);
-        triggers = 0;
+        triggers = nullptr;
     }
     if (!triggers) {
         triggers = g_new0 (gchar*, 2);
@@ -605,7 +605,7 @@ static void
 impanel_settings_changed_callback (GSettings* settings, const gchar* key, gpointer user_data)
 {
     IBusPanelImpanel* impanel = ((IBusPanelImpanel *)user_data);
-    gchar *schema = NULL;
+    gchar *schema = nullptr;
     GVariant *value = g_settings_get_value (settings, key);
 
     g_object_get(G_OBJECT(settings), "schema", &schema, NULL);
@@ -699,7 +699,7 @@ impanel_trigger_property_callback (GDBusConnection *connection,
     Q_UNUSED(interface_name);
     Q_UNUSED(signal_name);
     IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL(user_data);
-    gchar *s0 = NULL;
+    gchar *s0 = nullptr;
     g_variant_get (parameters, "(s)", &s0);
     if (!s0 || strlen(s0) <= 6)
         return;
@@ -824,7 +824,7 @@ impanel_configure_callback (GDBusConnection *connection,
     Q_UNUSED(user_data);
     pid_t pid = fork();
     if (pid == 0) {
-        execlp ("ibus-setup", "ibus-setup", (char *)0);
+        execlp ("ibus-setup", "ibus-setup", (char *)nullptr);
         exit (0);
     }
 }
@@ -841,81 +841,81 @@ on_bus_acquired (GDBusConnection *connection,
     g_dbus_connection_register_object (connection,
                                        "/kimpanel",
                                        introspection_data->interfaces[0],
-                                       NULL,  /*&interface_vtable*/
-                                       NULL,  /* user_data */
-                                       NULL,  /* user_data_free_func */
-                                       NULL); /* GError** */
+                                       nullptr,  /*&interface_vtable*/
+                                       nullptr,  /* user_data */
+                                       nullptr,  /* user_data_free_func */
+                                       nullptr); /* GError** */
 
     g_dbus_connection_signal_subscribe (connection,
                                         "org.kde.impanel",
                                         "org.kde.impanel",
                                         "TriggerProperty",
                                         "/org/kde/impanel",
-                                        NULL,
+                                        nullptr,
                                         G_DBUS_SIGNAL_FLAGS_NONE,
                                         impanel_trigger_property_callback,
                                         user_data,
-                                        NULL);
+                                        nullptr);
     g_dbus_connection_signal_subscribe (connection,
                                         "org.kde.impanel",
                                         "org.kde.impanel",
                                         "SelectCandidate",
                                         "/org/kde/impanel",
-                                        NULL,
+                                        nullptr,
                                         G_DBUS_SIGNAL_FLAGS_NONE,
                                         impanel_select_candidate_callback,
                                         user_data,
-                                        NULL);
+                                        nullptr);
     g_dbus_connection_signal_subscribe (connection,
                                         "org.kde.impanel",
                                         "org.kde.impanel",
                                         "LookupTablePageUp",
                                         "/org/kde/impanel",
-                                        NULL,
+                                        nullptr,
                                         G_DBUS_SIGNAL_FLAGS_NONE,
                                         impanel_prev_page_callback,
                                         user_data,
-                                        NULL);
+                                        nullptr);
     g_dbus_connection_signal_subscribe (connection,
                                         "org.kde.impanel",
                                         "org.kde.impanel",
                                         "LookupTablePageDown",
                                         "/org/kde/impanel",
-                                        NULL,
+                                        nullptr,
                                         G_DBUS_SIGNAL_FLAGS_NONE,
                                         impanel_next_page_callback,
                                         user_data,
-                                        NULL);
+                                        nullptr);
     g_dbus_connection_signal_subscribe (connection,
                                         "org.kde.impanel",
                                         "org.kde.impanel",
                                         "PanelCreated",
                                         "/org/kde/impanel",
-                                        NULL,
+                                        nullptr,
                                         G_DBUS_SIGNAL_FLAGS_NONE,
                                         impanel_panel_created_callback,
                                         user_data,
-                                        NULL);
+                                        nullptr);
     g_dbus_connection_signal_subscribe (connection,
                                         "org.kde.impanel",
                                         "org.kde.impanel",
                                         "Exit",
                                         "/org/kde/impanel",
-                                        NULL,
+                                        nullptr,
                                         G_DBUS_SIGNAL_FLAGS_NONE,
                                         impanel_exit_callback,
                                         user_data,
-                                        NULL);
+                                        nullptr);
     g_dbus_connection_signal_subscribe (connection,
                                         "org.kde.impanel",
                                         "org.kde.impanel",
                                         "Configure",
                                         "/org/kde/impanel",
-                                        NULL,
+                                        nullptr,
                                         G_DBUS_SIGNAL_FLAGS_NONE,
                                         impanel_configure_callback,
                                         user_data,
-                                        NULL);
+                                        nullptr);
 
     GVariant* var_engines = g_settings_get_value(impanel->settings_general, "preload-engines");
     impanel_update_engines(impanel, var_engines);
@@ -1013,19 +1013,19 @@ ibus_panel_impanel_class_init (IBusPanelImpanelClass *klass)
 static void
 ibus_panel_impanel_init (IBusPanelImpanel *impanel)
 {
-    impanel->bus = NULL;
-    impanel->app = NULL;
+    impanel->bus = nullptr;
+    impanel->app = nullptr;
     impanel->useSystemKeyboardLayout = false;
     impanel->selected = -1;
 
-    introspection_data = g_dbus_node_info_new_for_xml (introspection_xml, NULL);
+    introspection_data = g_dbus_node_info_new_for_xml (introspection_xml, nullptr);
     owner_id = g_bus_own_name (G_BUS_TYPE_SESSION,
                                "org.kde.kimpanel.inputmethod",
                                G_BUS_NAME_OWNER_FLAGS_REPLACE,
                                on_bus_acquired,
                                on_name_acquired,
                                on_name_lost,
-                               impanel, NULL);
+                               impanel, nullptr);
 
     impanel->propManager = new PropertyManager;
     impanel->engineManager = new EngineManager;
@@ -1040,11 +1040,11 @@ static void
 ibus_panel_impanel_destroy (IBusPanelImpanel *impanel)
 {
     delete impanel->propManager;
-    impanel->propManager = NULL;
+    impanel->propManager = nullptr;
     delete impanel->engineManager;
-    impanel->engineManager = NULL;
+    impanel->engineManager = nullptr;
     delete impanel->xkbLayoutManager;
-    impanel->xkbLayoutManager = NULL;
+    impanel->xkbLayoutManager = nullptr;
 
     g_signal_handlers_disconnect_by_func (impanel->settings_general, (gpointer)impanel_settings_changed_callback, impanel);
     g_signal_handlers_disconnect_by_func (impanel->settings_hotkey, (gpointer)impanel_settings_changed_callback, impanel);
@@ -1109,7 +1109,7 @@ ibus_panel_impanel_real_register_properties(IBusPanelImpanel* impanel)
     if (!impanel->conn)
         return;
 
-    IBusProperty* property = NULL;
+    IBusProperty* property = nullptr;
     guint i = 0;
 
     GVariantBuilder builder;
@@ -1126,7 +1126,7 @@ ibus_panel_impanel_real_register_properties(IBusPanelImpanel* impanel)
 
         IBusPropList* prop_list = impanel->propManager->properties();
         if (prop_list) {
-            while ( ( property = ibus_prop_list_get( prop_list, i ) ) != NULL ) {
+            while ( ( property = ibus_prop_list_get( prop_list, i ) ) != nullptr ) {
                 propstr = ibus_property_to_propstr(property, TRUE);
                 g_variant_builder_add (&builder, "s", propstr.constData());
                 ++i;
@@ -1136,9 +1136,9 @@ ibus_panel_impanel_real_register_properties(IBusPanelImpanel* impanel)
     }
 
     g_dbus_connection_emit_signal (impanel->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "RegisterProperties",
+                                   nullptr, "/kimpanel", "org.kde.kimpanel.inputmethod", "RegisterProperties",
                                    (g_variant_new ("(as)", &builder)),
-                                   NULL);
+                                   nullptr);
 }
 
 
@@ -1156,12 +1156,12 @@ ibus_panel_impanel_set_cursor_location (IBusPanelService *panel,
                             "org.kde.impanel2",
                             "SetSpotRect",
                             (g_variant_new("(iiii)", x, y, w, h)),
-                            NULL,
+                            nullptr,
                             G_DBUS_CALL_FLAGS_NONE,
                            -1,           /* timeout */
-                           NULL,
-                           NULL,
-                           NULL);
+                           nullptr,
+                           nullptr,
+                           nullptr);
 }
 
 static void
@@ -1177,9 +1177,9 @@ ibus_panel_impanel_update_auxiliary_text (IBusPanelService *panel,
         return;
 
     g_dbus_connection_emit_signal (impanel->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateAux",
+                                   nullptr, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateAux",
                                    (g_variant_new ("(ss)", t, attr)),
-                                   NULL);
+                                   nullptr);
 
     if (visible == 0)
         ibus_panel_impanel_hide_auxiliary_text(panel);
@@ -1262,12 +1262,12 @@ ibus_panel_impanel_update_lookup_table (IBusPanelService *panel,
                                            &builder_attrs,
                                            has_prev, has_next,
                                            cursor_pos_in_page, orientation)),
-                           NULL,
+                           nullptr,
                            G_DBUS_CALL_FLAGS_NONE,
                            -1,
-                           NULL,
-                           NULL,
-                           NULL);
+                           nullptr,
+                           nullptr,
+                           nullptr);
 
     if (visible == 0)
         ibus_panel_impanel_hide_lookup_table(panel);
@@ -1289,14 +1289,14 @@ ibus_panel_impanel_update_preedit_text (IBusPanelService *panel,
     const gchar *attr = "";
 
     g_dbus_connection_emit_signal (impanel->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdatePreeditText",
+                                   nullptr, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdatePreeditText",
                                    (g_variant_new ("(ss)", t, attr)),
-                                   NULL);
+                                   nullptr);
 
     g_dbus_connection_emit_signal (impanel->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdatePreeditCaret",
+                                   nullptr, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdatePreeditCaret",
                                    (g_variant_new ("(i)", cursor_pos)),
-                                   NULL);
+                                   nullptr);
 
     if (visible == 0)
         ibus_panel_impanel_hide_preedit_text(panel);
@@ -1317,9 +1317,9 @@ ibus_panel_impanel_update_property (IBusPanelService *panel,
     QByteArray propstr = ibus_property_to_propstr(prop, TRUE);
 
     g_dbus_connection_emit_signal (impanel->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty",
+                                   nullptr, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty",
                                    (g_variant_new ("(s)", propstr.constData())),
-                                   NULL);
+                                   nullptr);
 }
 
 static void
@@ -1343,9 +1343,9 @@ ibus_panel_impanel_hide_auxiliary_text (IBusPanelService *panel)
     gboolean toShow = 0;
 
     g_dbus_connection_emit_signal (impanel->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "ShowAux",
+                                   nullptr, "/kimpanel", "org.kde.kimpanel.inputmethod", "ShowAux",
                                    (g_variant_new ("(b)", toShow)),
-                                   NULL);
+                                   nullptr);
 }
 
 static void
@@ -1363,9 +1363,9 @@ ibus_panel_impanel_hide_lookup_table (IBusPanelService *panel)
     gboolean toShow = 0;
 
     g_dbus_connection_emit_signal (impanel->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "ShowLookupTable",
+                                   nullptr, "/kimpanel", "org.kde.kimpanel.inputmethod", "ShowLookupTable",
                                    (g_variant_new ("(b)", toShow)),
-                                   NULL);
+                                   nullptr);
 }
 
 static void
@@ -1377,9 +1377,9 @@ ibus_panel_impanel_hide_preedit_text (IBusPanelService *panel)
     gboolean toShow = 0;
 
     g_dbus_connection_emit_signal (impanel->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "ShowPreedit",
+                                   nullptr, "/kimpanel", "org.kde.kimpanel.inputmethod", "ShowPreedit",
                                    (g_variant_new ("(b)", toShow)),
-                                   NULL);
+                                   nullptr);
 }
 
 static void
@@ -1409,9 +1409,9 @@ ibus_panel_impanel_show_auxiliary_text (IBusPanelService *panel)
     gboolean toShow = 1;
 
     g_dbus_connection_emit_signal (impanel->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "ShowAux",
+                                   nullptr, "/kimpanel", "org.kde.kimpanel.inputmethod", "ShowAux",
                                    (g_variant_new ("(b)", toShow)),
-                                   NULL);
+                                   nullptr);
 }
 
 static void
@@ -1429,9 +1429,9 @@ ibus_panel_impanel_show_lookup_table (IBusPanelService *panel)
     gboolean toShow = 1;
 
     g_dbus_connection_emit_signal (impanel->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "ShowLookupTable",
+                                   nullptr, "/kimpanel", "org.kde.kimpanel.inputmethod", "ShowLookupTable",
                                    (g_variant_new ("(b)", toShow)),
-                                   NULL);
+                                   nullptr);
 }
 
 static void
@@ -1443,9 +1443,9 @@ ibus_panel_impanel_show_preedit_text (IBusPanelService *panel)
     gboolean toShow = 1;
 
     g_dbus_connection_emit_signal (impanel->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "ShowPreedit",
+                                   nullptr, "/kimpanel", "org.kde.kimpanel.inputmethod", "ShowPreedit",
                                    (g_variant_new ("(b)", toShow)),
-                                   NULL);
+                                   nullptr);
 }
 
 static void
@@ -1473,9 +1473,9 @@ ibus_panel_impanel_state_changed (IBusPanelService *panel)
     impanel_update_logo_by_engine(impanel, engine_desc);
 
     g_dbus_connection_emit_signal (impanel->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "Enable",
+                                   nullptr, "/kimpanel", "org.kde.kimpanel.inputmethod", "Enable",
                                    (g_variant_new ("(b)", TRUE)),
-                                   NULL);
+                                   nullptr);
 
     impanel->engineManager->moveToFirst(engine_desc);
     QStringList engineList = impanel->engineManager->engineOrder();
@@ -1514,9 +1514,9 @@ ibus_panel_impanel_exec_menu(IBusPanelImpanel* impanel,
     }
 
     g_dbus_connection_emit_signal (impanel->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "ExecMenu",
+                                   nullptr, "/kimpanel", "org.kde.kimpanel.inputmethod", "ExecMenu",
                                    (g_variant_new ("(as)", &builder)),
-                                   NULL);
+                                   nullptr);
 }
 
 
@@ -1540,9 +1540,9 @@ ibus_panel_impanel_exec_im_menu (IBusPanelImpanel* impanel)
     }
 
     g_dbus_connection_emit_signal (impanel->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "ExecMenu",
+                                   nullptr, "/kimpanel", "org.kde.kimpanel.inputmethod", "ExecMenu",
                                    (g_variant_new ("(as)", &builder)),
-                                   NULL);
+                                   nullptr);
 }
 
 IBusPanelImpanel *

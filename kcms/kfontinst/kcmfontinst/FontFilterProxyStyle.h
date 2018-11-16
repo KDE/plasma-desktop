@@ -60,7 +60,7 @@ public:
     void unpolish(QWidget *widget) override;
     void unpolish(QApplication *application) override;
     int layoutSpacing(QSizePolicy::ControlType control1, QSizePolicy::ControlType control2,
-                              Qt::Orientation orientation, const QStyleOption* option = 0, const QWidget* widget = 0) const override;
+                              Qt::Orientation orientation, const QStyleOption* option = nullptr, const QWidget* widget = nullptr) const override;
 
 protected:
     QWidget *parent;

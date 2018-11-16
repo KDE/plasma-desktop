@@ -141,7 +141,7 @@ void DevicePreference::changeEvent(QEvent *e)
 
 DevicePreference::DevicePreference(QWidget *parent)
     : QWidget(parent),
-      m_headerModel(0, 1, 0),
+      m_headerModel(0, 1, nullptr),
       m_media(nullptr), m_audioOutput(nullptr), m_videoWidget(nullptr)
 {
     setupUi(this);
@@ -714,8 +714,8 @@ void DevicePreference::on_applyPreferencesButton_clicked()
     QList<AudioOutputDevice> aoPreferredList;
     QList<AudioCaptureDevice> acPreferredList;
     QList<VideoCaptureDevice> vcPreferredList;
-    const Category *categoryList = NULL;
-    const CaptureCategory *capCategoryList = NULL;
+    const Category *categoryList = nullptr;
+    const CaptureCategory *capCategoryList = nullptr;
     int categoryListCount;
     int catIndex;
     bool cap = false;
@@ -913,7 +913,7 @@ void DevicePreference::on_testPlaybackButton_toggled(bool down)
         case dtVideoCapture: {
             // Create a media object and a video output
             m_media = new MediaObject(this);
-            m_videoWidget = new VideoWidget(NULL);
+            m_videoWidget = new VideoWidget(nullptr);
 
             // Try to create a path
             if (!createPath(m_media, m_videoWidget).isValid()) {
@@ -967,9 +967,9 @@ void DevicePreference::on_testPlaybackButton_toggled(bool down)
             return;
         }
 
-        m_media = NULL;
-        m_videoWidget = NULL;
-        m_audioOutput = NULL;
+        m_media = nullptr;
+        m_videoWidget = nullptr;
+        m_audioOutput = nullptr;
         m_testingType = dtInvalidDevice;
     }
 }

@@ -31,7 +31,7 @@ class SMServerConfig : public KCModule
   Q_OBJECT
 
 public:
-  explicit SMServerConfig( QWidget *parent=0, const QVariantList &list=QVariantList() );
+  explicit SMServerConfig( QWidget *parent=nullptr, const QVariantList &list=QVariantList() );
 
   void load() override;
   void save() override;

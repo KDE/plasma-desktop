@@ -431,12 +431,12 @@ void KGlobalShortcutsEditor::addCollection(
 
         // try to find one appropriate icon ( allowing NULL pixmap to be returned)
         QPixmap pixmap = KIconLoader::global()->loadIcon(id, KIconLoader::Small, 0,
-                                  KIconLoader::DefaultState, QStringList(), 0, true);
+                                  KIconLoader::DefaultState, QStringList(), nullptr, true);
         if (pixmap.isNull()) {
             KService::Ptr service = KService::serviceByStorageId(id);
             if(service) {
                 pixmap = KIconLoader::global()->loadIcon(service->icon(), KIconLoader::Small, 0,
-                                  KIconLoader::DefaultState, QStringList(), 0, true);
+                                  KIconLoader::DefaultState, QStringList(), nullptr, true);
             }
         }
         // if NULL pixmap is returned, use the F.D.O "system-run" icon

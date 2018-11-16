@@ -182,10 +182,10 @@ App::App(int &argc, char* argv[]): QGuiApplication(argc, argv)
     ,m_eventFilter(new XcbEventFilter)
     ,m_init(false)
     ,m_bus(ibus_bus_new ())
-    ,m_impanel(0)
+    ,m_impanel(nullptr)
     ,m_keyboardGrabbed(false)
     ,m_doGrab(false)
-    ,m_syms(0)
+    ,m_syms(nullptr)
     ,m_watcher(new QDBusServiceWatcher(this))
 {
     m_syms = xcb_key_symbols_alloc(QX11Info::connection());
@@ -268,7 +268,7 @@ void App::keyRelease(const xcb_key_release_event_t* event)
         release = true;
     else {
         auto cookie = xcb_get_modifier_mapping(QX11Info::connection());
-        auto reply = xcb_get_modifier_mapping_reply(QX11Info::connection(), cookie, NULL);
+        auto reply = xcb_get_modifier_mapping_reply(QX11Info::connection(), cookie, nullptr);
         if (reply) {
             auto keycodes = xcb_get_modifier_mapping_keycodes(reply);
             for (int i = 0; i < reply->keycodes_per_modifier; i++) {
@@ -308,7 +308,7 @@ void App::init()
                                         "NameAcquired",
                                         "/org/freedesktop/DBus",
                                         IBUS_SERVICE_PANEL, G_DBUS_SIGNAL_FLAGS_NONE,
-                                        name_acquired_cb, this, NULL);
+                                        name_acquired_cb, this, nullptr);
 
     g_dbus_connection_signal_subscribe (connection,
                                         "org.freedesktop.DBus",
@@ -316,7 +316,7 @@ void App::init()
                                         "NameLost",
                                         "/org/freedesktop/DBus",
                                         IBUS_SERVICE_PANEL, G_DBUS_SIGNAL_FLAGS_NONE,
-                                        name_lost_cb, this, NULL);
+                                        name_lost_cb, this, nullptr);
 
     ibus_bus_request_name (m_bus, IBUS_SERVICE_PANEL, IBUS_BUS_NAME_FLAG_ALLOW_REPLACEMENT | IBUS_BUS_NAME_FLAG_REPLACE_EXISTING);
     m_init = true;
@@ -338,7 +338,7 @@ void App::nameLost()
     if (m_impanel) {
         g_object_unref(m_impanel);
     }
-    m_impanel = NULL;
+    m_impanel = nullptr;
 }
 
 QByteArray App::normalizeIconName(const QByteArray& icon) const
@@ -418,7 +418,7 @@ bool App::grabXKeyboard() {
     auto w = QX11Info::appRootWindow();
     auto cookie = xcb_grab_keyboard(QX11Info::connection(), false, w, XCB_CURRENT_TIME,
                                     XCB_GRAB_MODE_ASYNC, XCB_GRAB_MODE_ASYNC);
-    auto reply = xcb_grab_keyboard_reply(QX11Info::connection(), cookie, NULL);
+    auto reply = xcb_grab_keyboard_reply(QX11Info::connection(), cookie, nullptr);
 
     if (reply && reply->status == XCB_GRAB_STATUS_SUCCESS) {
         m_keyboardGrabbed = true;
@@ -456,14 +456,14 @@ void App::clean()
 {
     if (m_impanel) {
         g_object_unref(m_impanel);
-        m_impanel = 0;
+        m_impanel = nullptr;
     }
 
     if (m_bus) {
         g_signal_handlers_disconnect_by_func(m_bus, (gpointer) ibus_disconnected_cb, this);
         g_signal_handlers_disconnect_by_func(m_bus, (gpointer) ibus_connected_cb, this);
         g_object_unref(m_bus);
-        m_bus = 0;
+        m_bus = nullptr;
     }
     ungrabKey();
 }

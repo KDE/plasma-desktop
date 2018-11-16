@@ -53,7 +53,7 @@ void LabelGenerator::setFolderModel(FolderModel *folderModel)
 {
     if (m_folderModel.data() != folderModel) {
         if (m_folderModel.data()) {
-            disconnect(m_folderModel.data(), 0, this, 0);
+            disconnect(m_folderModel.data(), nullptr, this, nullptr);
         }
 
         m_folderModel = folderModel;

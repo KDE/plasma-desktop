@@ -37,7 +37,7 @@ inline T* findByName(QList<T*> list, QString name) {
 		if( info->name == name )
 			return info;
 	}
-	return NULL;
+	return nullptr;
 }
 
 struct VariantInfo: public ConfigItem {

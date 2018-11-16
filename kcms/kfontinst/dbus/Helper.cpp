@@ -72,7 +72,7 @@ static void registerSignalHandler(SignalHandler handler)
     sigaddset(&mask, SIGABRT);
 #endif
 
-    sigprocmask(SIG_UNBLOCK, &mask, 0);
+    sigprocmask(SIG_UNBLOCK, &mask, nullptr);
 }
 
 static void signalHander(int)

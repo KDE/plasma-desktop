@@ -40,7 +40,7 @@
 #include <Solid/StorageVolume>
 #include <Solid/OpticalDisc>
 
-static SolidActionData * actData = 0;
+static SolidActionData * actData = nullptr;
 
 SolidActionData::SolidActionData(bool includeFiles)
 {
@@ -152,7 +152,7 @@ QString SolidActionData::generateUserString( QString className )
 
 SolidActionData * SolidActionData::instance()
 {
-    if( actData == 0 ) {
+    if( actData == nullptr ) {
         actData = new SolidActionData( true );
     }
     return actData;

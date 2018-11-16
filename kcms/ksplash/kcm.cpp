@@ -111,7 +111,7 @@ void KCMSplashScreen::setSelectedPlugin(const QString &plugin)
 
 void KCMSplashScreen::getNewClicked()
 {
-    KNS3::DownloadDialog dialog("ksplash.knsrc", 0);
+    KNS3::DownloadDialog dialog("ksplash.knsrc", nullptr);
     if (dialog.exec()) {
         KNS3::Entry::List list = dialog.changedEntries();
         if (list.count() > 0) {
@@ -203,7 +203,7 @@ void KCMSplashScreen::test(const QString &plugin)
     QStringList arguments;
     arguments << plugin << QStringLiteral("--test");
     if (proc.execute(QStringLiteral("ksplashqml"), arguments)) {
-        QMessageBox::critical(0, i18n("Error"), i18n("Failed to successfully test the splash screen."));
+        QMessageBox::critical(nullptr, i18n("Error"), i18n("Failed to successfully test the splash screen."));
     }
 }
 

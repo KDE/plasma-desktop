@@ -606,7 +606,7 @@ void runRdb( uint flags )
         static Atom qt_settings_timestamp = 0;
         if (!qt_settings_timestamp) {
             QString atomname(QStringLiteral("_QT_SETTINGS_TIMESTAMP_"));
-            atomname += XDisplayName( 0 ); // Use the $DISPLAY envvar.
+            atomname += XDisplayName( nullptr ); // Use the $DISPLAY envvar.
             qt_settings_timestamp = XInternAtom( QX11Info::display(), atomname.toLatin1(), False);
         }
 

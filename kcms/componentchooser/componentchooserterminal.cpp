@@ -57,7 +57,7 @@ void CfgTerminalEmulator::configChanged()
 
 void CfgTerminalEmulator::defaults()
 {
-	load(0);
+	load(nullptr);
 }
 
 

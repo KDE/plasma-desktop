@@ -62,7 +62,7 @@ static const int MIN_LOOPING_COUNT = 2;
 KCMKeyboardWidget::KCMKeyboardWidget(Rules* rules_, KeyboardConfig* keyboardConfig_,
                                      const QVariantList &args, QWidget* /*parent*/):
 	rules(rules_),
-	actionCollection(NULL),
+	actionCollection(nullptr),
 	uiUpdating(false)
 {
 	flags = new Flags();
@@ -75,7 +75,7 @@ KCMKeyboardWidget::KCMKeyboardWidget(Rules* rules_, KeyboardConfig* keyboardConf
 	uiWidget->lowerHardwareWidget->layout()->addWidget( kcmMiscWidget );
 	connect(kcmMiscWidget, SIGNAL(changed(bool)), this, SIGNAL(changed(bool)));
 
-    if( rules != NULL ) {
+    if( rules != nullptr ) {
         initializeKeyboardModelUI();
     	initializeXkbOptionsUI();
     	initializeLayoutsUI();
@@ -114,10 +114,10 @@ void KCMKeyboardWidget::handleParameters(const QVariantList &args)
 
 void KCMKeyboardWidget::save()
 {
-	if( rules == NULL )
+	if( rules == nullptr )
 		return;
 
-	if( actionCollection != NULL ) {
+	if( actionCollection != nullptr ) {
 		actionCollection->resetLayoutShortcuts();
 		actionCollection->clear();
 		delete actionCollection;
@@ -129,7 +129,7 @@ void KCMKeyboardWidget::save()
 
 void KCMKeyboardWidget::updateUI()
 {
-	if( rules == NULL )
+	if( rules == nullptr )
 		return;
 
 	uiWidget->layoutsTableView->setModel(uiWidget->layoutsTableView->model());
@@ -148,7 +148,7 @@ void KCMKeyboardWidget::updateUI()
 
 void KCMKeyboardWidget::uiChanged()
 {
-	if( rules == NULL )
+	if( rules == nullptr )
 		return;
 
 	((LayoutsTableModel*)uiWidget->layoutsTableView->model())->refresh();
@@ -231,7 +231,7 @@ void KCMKeyboardWidget::addLayout()
 		return;
 	}
 
-    AddLayoutDialog dialog(rules, keyboardConfig->isFlagShown() ? flags : NULL, keyboardConfig->keyboardModel, keyboardConfig->isLabelShown(), this);
+    AddLayoutDialog dialog(rules, keyboardConfig->isFlagShown() ? flags : nullptr, keyboardConfig->keyboardModel, keyboardConfig->isLabelShown(), this);
     dialog.setModal(true);
     if( dialog.exec() == QDialog::Accepted ) {
     	keyboardConfig->layouts.append( dialog.getSelectedLayoutUnit() );
@@ -474,7 +474,7 @@ void KCMKeyboardWidget::moveDown()
 void KCMKeyboardWidget::moveSelectedLayouts(int shift)
 {
     QItemSelectionModel* selectionModel = uiWidget->layoutsTableView->selectionModel();
-    if( selectionModel == NULL || !selectionModel->hasSelection() )
+    if( selectionModel == nullptr || !selectionModel->hasSelection() )
         return;
 
     QModelIndexList selected = selectionModel->selectedRows();
@@ -614,7 +614,7 @@ void KCMKeyboardWidget::updateXkbShortcutButton(const QString& groupName, QPushB
 		const QString& option = grpOptions.first();
 		const OptionGroupInfo* optionGroupInfo = rules->getOptionGroupInfo(groupName);
 		const OptionInfo* optionInfo = optionGroupInfo->getOptionInfo(option);
-		if( optionInfo == NULL || optionInfo->description == NULL ) {
+		if( optionInfo == nullptr || optionInfo->description == nullptr ) {
         		qCDebug(KCM_KEYBOARD) << "Could not find option info for " << option;
 			button->setText(grpOptions.first());
 		}

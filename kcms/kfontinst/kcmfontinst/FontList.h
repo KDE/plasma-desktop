@@ -98,7 +98,7 @@ class CFontList : public QAbstractItemModel
 
     static QStringList compact(const QStringList &fonts);
 
-    CFontList(QWidget *parent=0);
+    CFontList(QWidget *parent=nullptr);
     ~CFontList() override;
 
     QVariant        data(const QModelIndex &index, int role) const override;
@@ -116,9 +116,9 @@ class CFontList : public QAbstractItemModel
     int             row(const CFamilyItem *fam) const { return itsFamilies.indexOf((CFamilyItem *)fam); }
     void            forceNewPreviews();
     const CFamilyItemCont & families() const { return itsFamilies; }
-    QModelIndex     createIndex(int row, int column, void *data = 0) const
+    QModelIndex     createIndex(int row, int column, void *data = nullptr) const
                         { return QAbstractItemModel::createIndex(row, column, data); }
-    bool            hasFamily(const QString &family)  { return NULL!=findFamily(family); }
+    bool            hasFamily(const QString &family)  { return nullptr!=findFamily(family); }
     void            refresh(bool allowSys, bool allowUser);
     bool            allowSys() const      { return itsAllowSys; }
     bool            allowUser() const     { return itsAllowUser; }
@@ -172,8 +172,8 @@ class CFontModelItem
     virtual ~CFontModelItem()                                            { }
 
     CFontModelItem * parent() const                  { return itsParent; }
-    bool             isFamily() const                { return NULL==itsParent; }
-    bool             isFont() const                  { return NULL!=itsParent; }
+    bool             isFamily() const                { return nullptr==itsParent; }
+    bool             isFont() const                  { return nullptr!=itsParent; }
     bool             isSystem() const                { return itsIsSystem; }
     void             setIsSystem(bool sys)           { itsIsSystem=sys; }
     virtual int      rowNumber() const = 0;

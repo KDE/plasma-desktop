@@ -71,7 +71,7 @@ static const struct
     { QFontDatabase::Japanese, (const FcChar8 *)"ja" },
     { QFontDatabase::Korean, (const FcChar8 *)"ko" },
     { QFontDatabase::Vietnamese, (const FcChar8 *)"vi" },
-    { QFontDatabase::Other, NULL },
+    { QFontDatabase::Other, nullptr },
 
     // The following is only used to save writing system data for disabled fonts...
     { QFontDatabase::Telugu, (const FcChar8 *)"Qt-Telugu" },
@@ -82,7 +82,7 @@ static const struct
     { QFontDatabase::Ogham, (const FcChar8 *)"Qt-Ogham" },
     { QFontDatabase::Runic, (const FcChar8 *)"Qt-Runic" },
 
-    { QFontDatabase::Any, NULL }
+    { QFontDatabase::Any, nullptr }
 };
 
 
@@ -114,7 +114,7 @@ static const struct
 qulonglong WritingSystems::get(FcPattern *pat) const
 {
     qulonglong ws(0);
-    FcLangSet  *langset(0);
+    FcLangSet  *langset(nullptr);
 
     if (FcResultMatch==FcPatternGetLangSet(pat, FC_LANG, 0, &langset))
     {
@@ -125,7 +125,7 @@ qulonglong WritingSystems::get(FcPattern *pat) const
     else
         ws|=toBit(QFontDatabase::Other);
 
-    FcCharSet *cs(0);
+    FcCharSet *cs(nullptr);
 
     if (FcResultMatch == FcPatternGetCharSet(pat, FC_CHARSET, 0, &cs))
     {

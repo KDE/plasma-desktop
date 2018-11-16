@@ -42,7 +42,7 @@ class KCMKeyboardWidget: public QTabWidget
 
 public:
 	KCMKeyboardWidget(Rules* rules, KeyboardConfig* keyboardConfig,
-                          const QVariantList &args, QWidget* parent=0);
+                          const QVariantList &args, QWidget* parent=nullptr);
 	~KCMKeyboardWidget() override;
 
 	void updateUI();

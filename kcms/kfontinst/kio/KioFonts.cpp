@@ -146,7 +146,7 @@ static bool isScalable(const QString &str)
 
 static const char * const constExtensions[]=
             {".ttf", KFI_FONTS_PACKAGE, ".otf", ".pfa", ".pfb", ".ttc",
-             ".pcf", ".pcf.gz", ".bdf", ".bdf.gz", NULL };
+             ".pcf", ".pcf.gz", ".bdf", ".bdf.gz", nullptr };
 
 static QString removeKnownExtension(const QUrl &url)
 {

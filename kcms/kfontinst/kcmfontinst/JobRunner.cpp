@@ -138,11 +138,11 @@ CJobRunner::CJobRunner(QWidget *parent, int xid)
              itsAutoSkip(false),
              itsCancelClicked(false),
              itsModified(false),
-             itsTempDir(0L)
+             itsTempDir(nullptr)
 {
     setModal(true);
 
-    if(NULL==parent && 0!=xid)
+    if(nullptr==parent && 0!=xid)
         XSetTransientForHint(QX11Info::display(), winId(), xid);
 
     itsButtonBox = new QDialogButtonBox;
@@ -256,8 +256,8 @@ void CJobRunner::getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmA
 
     if(check)
     {
-        const char *afm[]={"afm", "AFM", "Afm", NULL},
-                   *pfm[]={"pfm", "PFM", "Pfm", NULL};
+        const char *afm[]={"afm", "AFM", "Afm", nullptr},
+                   *pfm[]={"pfm", "PFM", "Pfm", nullptr};
         bool       gotAfm(false),
                    localFile(url.isLocalFile());
         int        e;

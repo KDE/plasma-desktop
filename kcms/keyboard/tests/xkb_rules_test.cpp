@@ -41,7 +41,7 @@ private Q_SLOTS:
     }
 
     void testRules() {
-        QVERIFY( rules != NULL );
+        QVERIFY( rules != nullptr );
         QVERIFY( rules->modelInfos.size() > 0 );
         QVERIFY( rules->layoutInfos.size() > 0 );
         QVERIFY( rules->optionGroupInfos.size() > 0 );
@@ -49,7 +49,7 @@ private Q_SLOTS:
 
     void testModel() {
         foreach(const ModelInfo* modelInfo, rules->modelInfos) {
-        	QVERIFY( modelInfo != NULL);
+        	QVERIFY( modelInfo != nullptr);
         	QVERIFY( modelInfo->name.length() > 0 );
         	QVERIFY( modelInfo->description.length() > 0 );
 //        	QVERIFY( ! modelInfo->vendor.isEmpty() );
@@ -58,14 +58,14 @@ private Q_SLOTS:
 
     void testLayouts() {
         foreach(const LayoutInfo* layoutInfo, rules->layoutInfos) {
-        	QVERIFY( layoutInfo != NULL);
+        	QVERIFY( layoutInfo != nullptr);
         	QVERIFY( ! layoutInfo->name.isEmpty() );
 //        	const char* desc = layoutInfo->name.toUtf8() ;
 //        	qDebug() << layoutInfo->name;
         	QVERIFY( ! layoutInfo->description.isEmpty() );
 
         	foreach(const VariantInfo* variantInfo, layoutInfo->variantInfos) {
-        		QVERIFY( variantInfo != NULL );
+        		QVERIFY( variantInfo != nullptr );
         		QVERIFY( ! variantInfo->name.isEmpty() );
         		QVERIFY( ! variantInfo->description.isEmpty() );
         	}
@@ -77,13 +77,13 @@ private Q_SLOTS:
 
     void testOptionGroups() {
         foreach(const OptionGroupInfo* optionGroupInfo, rules->optionGroupInfos) {
-        	QVERIFY( optionGroupInfo != NULL);
+        	QVERIFY( optionGroupInfo != nullptr);
         	QVERIFY( ! optionGroupInfo->name.isEmpty() );
         	QVERIFY( ! optionGroupInfo->description.isEmpty() );
         	// optionGroupInfo->exclusive
 
         	foreach(const OptionInfo* optionInfo, optionGroupInfo->optionInfos) {
-        		QVERIFY( optionInfo != NULL );
+        		QVERIFY( optionInfo != nullptr );
         		QVERIFY( ! optionInfo->name.isEmpty() );
         		QVERIFY( ! optionInfo->description.isEmpty() );
         	}
@@ -208,12 +208,12 @@ private Q_SLOTS:
     	QCOMPARE(rules11->version, QString("1.1"));
 
     	foreach(const LayoutInfo* layoutInfo, rules11->layoutInfos) {
-        	QVERIFY( layoutInfo != NULL);
+        	QVERIFY( layoutInfo != nullptr);
         	QVERIFY( ! layoutInfo->name.isEmpty() );
         	QVERIFY( ! layoutInfo->description.isEmpty() );
 
         	foreach(const VariantInfo* variantInfo, layoutInfo->variantInfos) {
-        		QVERIFY( variantInfo != NULL );
+        		QVERIFY( variantInfo != nullptr );
         		QVERIFY( ! variantInfo->name.isEmpty() );
         		QVERIFY( ! variantInfo->description.isEmpty() );
         	}

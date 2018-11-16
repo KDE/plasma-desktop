@@ -93,7 +93,7 @@ class Kclock : public QWidget
   Q_OBJECT
 
 public:
-  Kclock( QWidget *parent=0 );
+  Kclock( QWidget *parent=nullptr );
   ~Kclock() override;
 
   void setTime(const QTime&);

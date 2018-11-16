@@ -63,7 +63,7 @@ XInputEventNotifier::XInputEventNotifier(QWidget* parent):
 
 void XInputEventNotifier::start()
 {
-	if( QCoreApplication::instance() != NULL ) {
+	if( QCoreApplication::instance() != nullptr ) {
 		registerForNewDeviceEvent(QX11Info::display());
 	}
 
@@ -74,7 +74,7 @@ void XInputEventNotifier::stop()
 {
 	XEventNotifier::stop();
 
-	if( QCoreApplication::instance() != NULL ) {
+	if( QCoreApplication::instance() != nullptr ) {
 	//    XEventNotifier::unregisterForNewDeviceEvent(QX11Info::display());
 	}
 }
@@ -99,10 +99,10 @@ bool XInputEventNotifier::processOtherEvents(xcb_generic_event_t* event)
 // for all keyboard devices that don't care about layouts
 static bool isRealKeyboard(const char* deviceName)
 {
-	return strstr(deviceName, "Video Bus") == NULL
-		&& strstr(deviceName, "Sleep Button") == NULL
-		&& strstr(deviceName, "Power Button") == NULL
-		&& strstr(deviceName, "WMI hotkeys") == NULL;
+	return strstr(deviceName, "Video Bus") == nullptr
+		&& strstr(deviceName, "Sleep Button") == nullptr
+		&& strstr(deviceName, "Power Button") == nullptr
+		&& strstr(deviceName, "WMI hotkeys") == nullptr;
 }
 
 int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* event)
@@ -113,7 +113,7 @@ int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* event)
 		if( xdpne->devchange == DeviceEnabled ) {
 			int ndevices;
 			XDeviceInfo *devices = XListInputDevices(display, &ndevices);
-			if( devices != NULL ) {
+			if( devices != nullptr ) {
 				qCDebug(KCM_KEYBOARD) << "New device id:" << xdpne->device_id;
 				for(int i=0; i<ndevices; i++) {
 					qCDebug(KCM_KEYBOARD) << "id:" << devices[i].id << "name:" << devices[i].name << "used as:" << devices[i].use;

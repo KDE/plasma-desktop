@@ -153,9 +153,9 @@ QString Rules::getRulesName()
         return QString();
     }
 	XkbRF_VarDefsRec vd;
-	char *tmp = NULL;
+	char *tmp = nullptr;
 
-	if (XkbRF_GetNamesProp(QX11Info::display(), &tmp, &vd) && tmp != NULL ) {
+	if (XkbRF_GetNamesProp(QX11Info::display(), &tmp, &vd) && tmp != nullptr ) {
 		// 			qCDebug(KCM_KEYBOARD) << "namesprop" << tmp ;
                 const QString name(tmp);
                 XFree(tmp);
@@ -195,7 +195,7 @@ void mergeRules(Rules* rules, Rules* extraRules)
 	QList<LayoutInfo*> layoutsToAdd;
 	foreach(LayoutInfo* extraLayoutInfo, extraRules->layoutInfos) {
 		LayoutInfo* layoutInfo = findByName(rules->layoutInfos, extraLayoutInfo->name);
-		if( layoutInfo != NULL ) {
+		if( layoutInfo != nullptr ) {
 			layoutInfo->variantInfos.append( extraLayoutInfo->variantInfos );
 			layoutInfo->languages.append( extraLayoutInfo->languages );
 		}
@@ -221,7 +221,7 @@ Rules* Rules::readRules(ExtrasFlag extrasFlag)
 	QString rulesFile = findXkbRulesFile();
 	if( ! readRules(rules, rulesFile, false) ) {
 		delete rules;
-		return NULL;
+		return nullptr;
 	}
 	if( extrasFlag == Rules::READ_EXTRAS ) {
 		QRegExp regex(QStringLiteral("\\.xml$"));
@@ -241,7 +241,7 @@ Rules* Rules::readRules(Rules* rules, const QString& filename, bool fromExtras)
 	QFile file(filename);
 	if( !file.open(QFile::ReadOnly | QFile::Text) ) {
 		qCCritical(KCM_KEYBOARD) << "Cannot open the rules file" << file.fileName();
-		return NULL;
+		return nullptr;
 	}
 
 	RulesHandler rulesHandler(rules, fromExtras);
@@ -256,7 +256,7 @@ Rules* Rules::readRules(Rules* rules, const QString& filename, bool fromExtras)
 
 	if( ! reader.parse(xmlInputSource) ) {
 		qCCritical(KCM_KEYBOARD) << "Failed to parse the rules file" << file.fileName();
-		return NULL;
+		return nullptr;
 	}
 
 	postProcess(rules);
@@ -304,7 +304,7 @@ bool RulesHandler::characters(const QString &str)
 	if( !str.trimmed().isEmpty() ) {
 		QString strPath = path.join(QStringLiteral("/"));
 		if( strPath.endsWith(QLatin1String("layoutList/layout/configItem/name")) ) {
-			if( rules->layoutInfos.last() != NULL ) {
+			if( rules->layoutInfos.last() != nullptr ) {
 				rules->layoutInfos.last()->name = str.trimmed();
 //				qCDebug(KCM_KEYBOARD) << "name:" << str;
 			}

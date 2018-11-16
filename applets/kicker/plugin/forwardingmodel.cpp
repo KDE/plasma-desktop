@@ -159,13 +159,13 @@ QString ForwardingModel::labelForRow(int row)
 AbstractModel* ForwardingModel::modelForRow(int row)
 {
     if (!m_sourceModel) {
-        return 0;
+        return nullptr;
     }
 
     AbstractModel *abstractModel = qobject_cast<AbstractModel *>(m_sourceModel);
 
     if (!abstractModel) {
-        return 0;
+        return nullptr;
     }
 
     return abstractModel->modelForRow(row);
@@ -261,5 +261,5 @@ void ForwardingModel::disconnectSignals()
         return;
     }
 
-    disconnect(m_sourceModel, 0, this, 0);
+    disconnect(m_sourceModel, nullptr, this, nullptr);
 }

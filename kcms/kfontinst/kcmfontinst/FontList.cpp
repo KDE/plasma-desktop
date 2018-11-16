@@ -239,10 +239,10 @@ void CFontItem::refresh()
 }
 
 CFamilyItem::CFamilyItem(CFontList &p, const Family &f, bool sys)
-           : CFontModelItem(NULL),
+           : CFontModelItem(nullptr),
              itsStatus(ENABLED),
              itsRealStatus(ENABLED),
-             itsRegularFont(NULL),
+             itsRegularFont(nullptr),
              itsParent(p)
 {
     itsName=f.name();
@@ -297,7 +297,7 @@ CFontItem * CFamilyItem::findFont(quint32 style, bool sys)
         if((*(*fIt)).styleInfo()==style && (*(*fIt)).isSystem()==sys)
             return (*fIt);
 
-    return NULL;
+    return nullptr;
 }
 
 void CFamilyItem::getFoundries(QSet<QString> &foundries) const
@@ -340,9 +340,9 @@ void CFamilyItem::removeFont(CFontItem *font, bool update)
         updateStatus();
     if(itsRegularFont==font)
     {
-        itsRegularFont=NULL;
+        itsRegularFont=nullptr;
         if(update)
-            updateRegularFont(NULL);
+            updateRegularFont(nullptr);
     }
     delete font;
 }
@@ -350,8 +350,8 @@ void CFamilyItem::removeFont(CFontItem *font, bool update)
 void CFamilyItem::refresh()
 {
     updateStatus();
-    itsRegularFont=NULL;
-    updateRegularFont(NULL);
+    itsRegularFont=nullptr;
+    updateRegularFont(nullptr);
 }
 
 bool CFamilyItem::updateStatus()
@@ -967,10 +967,10 @@ inline bool matchString(const QString &str, const QString &pattern)
 
 CFontListSortFilterProxy::CFontListSortFilterProxy(QObject *parent, QAbstractItemModel *model)
                         : QSortFilterProxyModel(parent),
-                          itsGroup(NULL),
+                          itsGroup(nullptr),
                           itsFilterCriteria(CFontFilter::CRIT_FAMILY),
                           itsFilterWs(0),
-                          itsFcQuery(NULL)
+                          itsFcQuery(nullptr)
 {
     setSourceModel(model);
     setSortCaseSensitivity(Qt::CaseInsensitive);
@@ -1417,9 +1417,9 @@ CFontListView::CFontListView(QWidget *parent, CFontList *model)
                                         this, SIGNAL(disable()));
     if(!Misc::app(KFI_VIEWER).isEmpty())
         itsMenu->addSeparator();
-    itsPrintAct=Misc::app(KFI_VIEWER).isEmpty() ? 0L : itsMenu->addAction(QIcon::fromTheme("document-print"), i18n("Print..."),
+    itsPrintAct=Misc::app(KFI_VIEWER).isEmpty() ? nullptr : itsMenu->addAction(QIcon::fromTheme("document-print"), i18n("Print..."),
                                                                           this, SIGNAL(print()));
-    itsViewAct=Misc::app(KFI_VIEWER).isEmpty() ? 0L : itsMenu->addAction(QIcon::fromTheme("kfontview"), i18n("Open in Font Viewer"),
+    itsViewAct=Misc::app(KFI_VIEWER).isEmpty() ? nullptr : itsMenu->addAction(QIcon::fromTheme("kfontview"), i18n("Open in Font Viewer"),
                                                                          this, SLOT(view()));
     itsMenu->addSeparator();
     itsMenu->addAction(QIcon::fromTheme("view-refresh"), i18n("Reload"), model, SLOT(load()));
@@ -1515,7 +1515,7 @@ void CFontListView::getPrintableFonts(QSet<Misc::TFont> &items, bool selected)
 
     foreach(index, selectedItems)
     {
-        CFontItem *font=NULL;
+        CFontItem *font=nullptr;
 
         if(index.isValid() && 0==index.column())
         {

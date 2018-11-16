@@ -362,7 +362,7 @@ void CFontFilter::resizeEvent(QResizeEvent *ev)
 void CFontFilter::mousePressEvent(QMouseEvent *ev)
 {
     if(Qt::LeftButton==ev->button() && itsMenuButton->underMouse())
-        itsMenu->popup(mapToGlobal(QPoint(0, height())), 0);
+        itsMenu->popup(mapToGlobal(QPoint(0, height())), nullptr);
     else
         KLineEdit::mousePressEvent(ev);
 }

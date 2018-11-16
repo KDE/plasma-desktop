@@ -273,7 +273,7 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
     // TODO: With AASystem the changes already made by this module should be reverted somehow.
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
     if (mod || (m_antiAliasing != m_antiAliasingOriginal) || m_dpi != m_dpiOriginal) {
-        KMessageBox::information(0,
+        KMessageBox::information(nullptr,
                                  i18n(
                                      "<p>Some changes such as anti-aliasing or DPI will only affect newly started applications.</p>"
                                  ), i18n("Font Settings Changed"), "FontSettingsChanged");
@@ -669,7 +669,7 @@ QFont KFonts::windowTitleFont() const
 void KFonts::adjustAllFonts()
 {
     QFont font = m_generalFont;
-    KFontChooser::FontDiffFlags fontDiffFlags = 0;
+    KFontChooser::FontDiffFlags fontDiffFlags = nullptr;
     int ret = KFontDialog::getFontDiff(font, fontDiffFlags, KFontChooser::NoDisplayFlags);
 
     if (ret == KDialog::Accepted && fontDiffFlags) {

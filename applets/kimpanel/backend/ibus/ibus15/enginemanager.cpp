@@ -22,7 +22,7 @@
 
 #define THRESHOLD 256
 
-EngineManager::EngineManager() : m_engines(0), m_length(0)
+EngineManager::EngineManager() : m_engines(nullptr), m_length(0)
 {
 
 }

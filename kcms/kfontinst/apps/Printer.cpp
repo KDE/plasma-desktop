@@ -502,7 +502,7 @@ int main(int argc, char **argv)
 
         if(fonts.count())
         {
-            CPrinter(createParent(parser.value(embedOption).toInt(0, 16))).print(fonts, size);
+            CPrinter(createParent(parser.value(embedOption).toInt(nullptr, 16))).print(fonts, size);
 
             return 0;
         }

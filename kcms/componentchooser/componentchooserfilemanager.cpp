@@ -47,7 +47,7 @@ void CfgFileManager::configChanged()
 
 void CfgFileManager::defaults()
 {
-    load(0);
+    load(nullptr);
 }
 
 static KService::List appOffers()
@@ -137,6 +137,6 @@ void CfgFileManager::slotAddFileManager()
     proc << QStringLiteral("keditfiletype5");
     proc << QStringLiteral("inode/directory");
     if (proc.execute() == 0) {
-        load(0);
+        load(nullptr);
     }
 }

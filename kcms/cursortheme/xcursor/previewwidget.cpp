@@ -127,7 +127,7 @@ PreviewWidget::PreviewWidget(QQuickItem *parent)
           m_currentSize(0)
 {
     setAcceptHoverEvents(true);
-    current = NULL;
+    current = nullptr;
 }
 
 
@@ -250,7 +250,7 @@ void PreviewWidget::setTheme(const CursorTheme *theme, const int size)
         updateImplicitSize();
     }
 
-    current = NULL;
+    current = nullptr;
     update();
 }
 

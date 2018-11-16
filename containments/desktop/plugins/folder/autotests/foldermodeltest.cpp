@@ -65,7 +65,7 @@ void FolderModelTest::init()
 void FolderModelTest::cleanup()
 {
     delete m_folderDir;
-    m_folderDir = 0;
+    m_folderDir = nullptr;
     delete m_folderModel;
     m_folderModel = nullptr;
 }

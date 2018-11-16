@@ -70,7 +70,7 @@ class KTimerDialog : public KDialog
      *
      * For the rest of the arguments, See @see KDialog .
      */
-    explicit KTimerDialog( int msec, TimerStyle style=CountDown, QWidget *parent=0,
+    explicit KTimerDialog( int msec, TimerStyle style=CountDown, QWidget *parent=nullptr,
                            const QString &caption=QString(),
                            int buttonMask=Ok|Apply|Cancel, ButtonCode defaultButton=Ok,
                            bool separator=false,

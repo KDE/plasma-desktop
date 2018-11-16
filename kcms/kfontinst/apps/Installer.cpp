@@ -151,7 +151,7 @@ int main(int argc, char **argv)
     if (urls.count())
     {
         QString opt(parser.value(embedOption));
-        KFI::CInstaller inst(createParent(opt.size() ? opt.toInt(0, 16) : 0));
+        KFI::CInstaller inst(createParent(opt.size() ? opt.toInt(nullptr, 16) : 0));
 
         return inst.install(urls);
     }

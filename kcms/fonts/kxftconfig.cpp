@@ -823,10 +823,10 @@ void KXftConfig::applyAntiAliasing()
 bool KXftConfig::aliasingEnabled()
 {
     FcPattern *pattern = FcPatternCreate();
-    FcConfigSubstitute(0, pattern, FcMatchPattern);
+    FcConfigSubstitute(nullptr, pattern, FcMatchPattern);
     FcDefaultSubstitute(pattern);
     FcResult result;
-    FcPattern *f = FcFontMatch(0, pattern, &result);
+    FcPattern *f = FcFontMatch(nullptr, pattern, &result);
     FcBool antialiased = FcTrue;
     FcPatternGetBool(f, FC_ANTIALIAS, 0, &antialiased);
     FcPatternDestroy(f);

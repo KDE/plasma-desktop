@@ -23,7 +23,7 @@
 #include <kconfiggroup.h>
 
 
-static const char* const SWITCHING_POLICIES[] = {"Global", "Desktop", "WinClass", "Window", NULL };
+static const char* const SWITCHING_POLICIES[] = {"Global", "Desktop", "WinClass", "Window", nullptr };
 static const char LIST_SEPARATOR[] = ",";
 //static const char* DEFAULT_LAYOUT = "us";
 static const char DEFAULT_MODEL[] = "pc104";
@@ -44,7 +44,7 @@ QString KeyboardConfig::getSwitchingPolicyString(SwitchingPolicy switchingPolicy
 
 static int findStringIndex(const char* const strings[], const QString& toFind, int defaultIndex)
 {
-	for(int i=0; strings[i] != NULL; i++) {
+	for(int i=0; strings[i] != nullptr; i++) {
 		if( toFind == strings[i] ) {
 			return i;
 		}

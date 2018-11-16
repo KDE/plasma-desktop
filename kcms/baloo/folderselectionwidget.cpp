@@ -273,7 +273,7 @@ void FolderSelectionWidget::slotRemoveButtonClicked()
 
 void FolderSelectionWidget::slotCurrentItemChanged(QListWidgetItem* current, QListWidgetItem*)
 {
-    m_removeButton->setEnabled(current != 0);
+    m_removeButton->setEnabled(current != nullptr);
 }
 
 void FolderSelectionWidget::showMessage(const QString& message)

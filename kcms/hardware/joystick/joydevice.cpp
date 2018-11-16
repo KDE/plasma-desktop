@@ -39,7 +39,7 @@
 
 JoyDevice::JoyDevice(const QString &devicefile)
   : devName(devicefile), joyFd(-1), buttons(0), axes(0),
-    amin(0), amax(0), corr(0), origCorr(0)
+    amin(nullptr), amax(nullptr), corr(nullptr), origCorr(nullptr)
 {
 }
 
@@ -219,13 +219,13 @@ void JoyDevice::close()
 
   delete [] amin;
   delete [] amax;
-  amin = 0;
-  amax = 0;
+  amin = nullptr;
+  amax = nullptr;
 
   delete [] corr;
-  corr = 0;
+  corr = nullptr;
   delete [] origCorr;
-  origCorr = 0;
+  origCorr = nullptr;
 }
 
 //--------------------------------------------------------------
@@ -341,7 +341,7 @@ bool JoyDevice::getEvent(JoyDevice::EventType &type, int &number, int &value)
   timeout.tv_sec = 0;
   timeout.tv_usec = 10000;
 
-  ret = ::select(joyFd + 1, &readSet, 0, 0, &timeout);
+  ret = ::select(joyFd + 1, &readSet, nullptr, nullptr, &timeout);
 
   if ( ret == 1 )  // got an event from the joystick
   {

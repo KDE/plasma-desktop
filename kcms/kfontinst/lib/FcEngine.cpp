@@ -632,7 +632,7 @@ CFcEngine::CFcEngine(bool init)
            itsIndexCount(1),
            itsAlphaSizeIndex(-1),
            itsPreviewString(getDefaultPreviewString()),
-           itsXft(0L)
+           itsXft(nullptr)
 {
     if(init)
         reinit();
@@ -883,7 +883,7 @@ QImage CFcEngine::draw(const QString &name, quint32 style, int faceNo, const QCo
 
             if(xft()->init(needAlpha ? Qt::black : txt, needAlpha ? Qt::white : bgnd, imgWidth, imgHeight))
             {
-                XftFont *xftFont=NULL;
+                XftFont *xftFont=nullptr;
                 int     line1Pos(0),
                         line2Pos(0);
                 QRect   used(0, 0, 0, 0);
@@ -940,7 +940,7 @@ QImage CFcEngine::draw(const QString &name, quint32 style, int faceNo, const QCo
                             ? valid.length()!=text.length()
                             : valid.length()<(text.length()/2))
                             xft()->drawAllChars(xftFont, fSize, x, y, imgWidth, imgHeight, true,
-                                                itsScalable ? 2 : -1, itsScalable ? &used : NULL);
+                                                itsScalable ? 2 : -1, itsScalable ? &used : nullptr);
                         else
                         {
                             QVector<uint> ucs4(valid.toUcs4());
@@ -1206,7 +1206,7 @@ bool CFcEngine::parse(const QString &name, quint32 style, int face)
     {
         int       count;
         FcPattern *pat=FcFreeTypeQuery((const FcChar8 *)(QFile::encodeName(itsName).data()),
-                                       face<1 ? 0 : face, NULL, &count);
+                                       face<1 ? 0 : face, nullptr, &count);
         if(!pat)
             return false;
         itsDescriptiveName=FC::createName(pat);
@@ -1256,7 +1256,7 @@ XftFont * CFcEngine::queryFont()
 
 XftFont * CFcEngine::getFont(int size)
 {
-    XftFont *f=NULL;
+    XftFont *f=nullptr;
 
 #ifdef KFI_FC_DEBUG
     qDebug() << itsName << ' ' << itsStyle << ' ' << size;
@@ -1290,7 +1290,7 @@ XftFont * CFcEngine::getFont(int size)
     }
     else
     {
-        FcPattern *pattern = FcPatternBuild(NULL,
+        FcPattern *pattern = FcPatternBuild(nullptr,
                                             FC_FILE, FcTypeString,
                                                      QFile::encodeName(itsName).constData(),
                                             FC_INDEX, FcTypeInteger, itsIndex<0 ? 0 : itsIndex,
@@ -1407,8 +1407,8 @@ void CFcEngine::getSizes()
 
             if(!itsScalable)
             {
-                FcPattern   *pat=NULL;
-                FcObjectSet *os  = FcObjectSetBuild(FC_PIXEL_SIZE, (void*)0);
+                FcPattern   *pat=nullptr;
+                FcObjectSet *os  = FcObjectSetBuild(FC_PIXEL_SIZE, (void*)nullptr);
                 int         weight,
                             width,
                             slant;
@@ -1417,7 +1417,7 @@ void CFcEngine::getSizes()
 
 #ifndef KFI_FC_NO_WIDTHS
                 if(KFI_NULL_SETTING!=width)
-                    pat=FcPatternBuild(NULL,
+                    pat=FcPatternBuild(nullptr,
                                    FC_FAMILY, FcTypeString,
                                         (const FcChar8 *)(itsName.toUtf8().data()),
                                    FC_WEIGHT, FcTypeInteger, weight,
@@ -1426,14 +1426,14 @@ void CFcEngine::getSizes()
                                    NULL);
                 else
 #endif
-                    pat=FcPatternBuild(NULL,
+                    pat=FcPatternBuild(nullptr,
                                    FC_FAMILY, FcTypeString,
                                         (const FcChar8 *)(itsName.toUtf8().data()),
                                    FC_WEIGHT, FcTypeInteger, weight,
                                    FC_SLANT, FcTypeInteger, slant,
                                    NULL);
 
-                FcFontSet *set=FcFontList(0, pat, os);
+                FcFontSet *set=FcFontList(nullptr, pat, os);
 
                 FcPatternDestroy(pat);
                 FcObjectSetDestroy(os);

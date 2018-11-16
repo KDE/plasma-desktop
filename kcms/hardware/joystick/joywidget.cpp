@@ -63,7 +63,7 @@ class TableWidget : public QTableWidget
 //--------------------------------------------------------------
 
 JoyWidget::JoyWidget(QWidget *parent)
- : QWidget(parent), idle(0), joydev(0)
+ : QWidget(parent), idle(nullptr), joydev(nullptr)
 {
   QVBoxLayout *mainVbox = new QVBoxLayout(this);
   mainVbox->setSpacing(KDialog::spacingHint());

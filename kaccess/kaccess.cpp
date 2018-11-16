@@ -982,9 +982,9 @@ void KAccessApp::noClicked()
 
 void KAccessApp::dialogClosed()
 {
-    if (dialog != 0)
+    if (dialog != nullptr)
         dialog->deleteLater();
-    dialog = 0;
+    dialog = nullptr;
 
     requestedFeatures = features;
 }

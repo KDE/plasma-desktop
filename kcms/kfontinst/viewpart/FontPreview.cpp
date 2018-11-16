@@ -42,7 +42,7 @@ CFontPreview::CFontPreview(QWidget *parent)
               itsLastWidth(0),
               itsLastHeight(0),
               itsStyleInfo(KFI_NO_STYLE_INFO),
-              itsTip(NULL)
+              itsTip(nullptr)
 {
     itsEngine=new CFcEngine;
 }

@@ -37,7 +37,7 @@ public:
 class SMServerConfigImpl : public SMServerConfigDlg  {
    Q_OBJECT
 public:
-	SMServerConfigImpl(QWidget *parent=0);
+	SMServerConfigImpl(QWidget *parent=nullptr);
 	~SMServerConfigImpl() override;
 public Q_SLOTS: // Public slots
   /** No descriptions */

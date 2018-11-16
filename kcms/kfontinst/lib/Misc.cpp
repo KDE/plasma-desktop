@@ -189,8 +189,8 @@ void getAssociatedFiles(const QString &path, QStringList &files, bool afmAndPfm)
 
     if(check)
     {
-        const char *afm[]={"afm", "AFM", "Afm", NULL},
-                   *pfm[]={"pfm", "PFM", "Pfm", NULL};
+        const char *afm[]={"afm", "AFM", "Afm", nullptr},
+                   *pfm[]={"pfm", "PFM", "Pfm", nullptr};
         bool       gotAfm(false);
         int        e;
 

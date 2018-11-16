@@ -443,7 +443,7 @@ void SortedActivitiesModel::onBackgroundsUpdated(const QStringList &activities)
 
 void SortedActivitiesModel::onWindowAdded(WId window)
 {
-    KWindowInfo info(window, 0, NET::WM2Activities);
+    KWindowInfo info(window, nullptr, NET::WM2Activities);
     const QStringList activities = info.activities();
 
     if (activities.isEmpty() || activities.contains("00000000-0000-0000-0000-000000000000")) return;

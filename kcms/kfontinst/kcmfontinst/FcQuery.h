@@ -39,7 +39,7 @@ class CFcQuery : public QObject
 
     public:
 
-    CFcQuery(QObject *parent) : QObject(parent), itsProc(NULL) { }
+    CFcQuery(QObject *parent) : QObject(parent), itsProc(nullptr) { }
     ~CFcQuery() override;
 
     void run(const QString &query);

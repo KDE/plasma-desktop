@@ -77,7 +77,7 @@ static const char * const constUnicodeScriptList[] =
     I18N_NOOP("Tifinagh"),
     I18N_NOOP("Ugaritic"),
     I18N_NOOP("Yi"),
-    NULL
+    nullptr
 };
 
 struct TUnicodeScript

@@ -125,7 +125,7 @@ static QString toStr(EUnicodeCategory cat)
 }
 
 CCharTip::CCharTip(CFontPreview *parent)
-        : QFrame(0, Qt::ToolTip | Qt::WindowStaysOnTopHint | Qt::X11BypassWindowManagerHint),
+        : QFrame(nullptr, Qt::ToolTip | Qt::WindowStaysOnTopHint | Qt::X11BypassWindowManagerHint),
           itsParent(parent)
 {
     itsPixmapLabel = new QLabel(this);
@@ -217,7 +217,7 @@ void CCharTip::showTip()
 
     QImage img=itsParent->engine()->draw(itsParent->itsFontName, itsParent->itsStyleInfo,
                                          itsParent->itsCurrentFace-1, palette().text().color(), bgnd,
-                                         constPixSize, constPixSize, false, range, NULL);
+                                         constPixSize, constPixSize, false, range, nullptr);
 
     if(!img.isNull())
         itsPixmapLabel->setPixmap(QPixmap::fromImage(img));

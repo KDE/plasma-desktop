@@ -156,7 +156,7 @@ QString KCMStyle::defaultStyle()
 }
 
 KCMStyle::KCMStyle( QWidget* parent, const QVariantList& )
-    : KCModule( parent ), appliedStyle(NULL)
+    : KCModule( parent ), appliedStyle(nullptr)
 {
     setQuickHelp( i18n("<h1>Style</h1>"
             "This module allows you to modify the visual appearance "
@@ -534,7 +534,7 @@ void KCMStyle::loadStyle( KConfig& config )
     {
         QString id = (*it).toLower();
         // Find the entry.
-        if ( (entry = styleEntries[id]) != 0 )
+        if ( (entry = styleEntries[id]) != nullptr )
         {
             // Do not add hidden entries
             if (entry->hidden)

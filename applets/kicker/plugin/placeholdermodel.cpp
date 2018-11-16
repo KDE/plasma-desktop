@@ -228,7 +228,7 @@ AbstractModel* PlaceholderModel::modelForRow(int row)
         return abstractModel->modelForRow(rowToSourceRow(row));
 
     } else {
-        return 0;
+        return nullptr;
     }
 }
 
@@ -361,7 +361,7 @@ void PlaceholderModel::disconnectSignals()
         return;
     }
 
-    disconnect(m_sourceModel, 0, this, 0);
+    disconnect(m_sourceModel, nullptr, this, nullptr);
 }
 
 int PlaceholderModel::dropPlaceholderIndex() const

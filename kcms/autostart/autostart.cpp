@@ -451,10 +451,10 @@ void Autostart::slotChangeStartup( ScriptStartItem* item, int index )
 
 void Autostart::slotSelectionChanged()
 {
-    const bool hasItems = ( dynamic_cast<AutoStartItem*>( widget->listCMD->currentItem() )!=0 ) ;
+    const bool hasItems = ( dynamic_cast<AutoStartItem*>( widget->listCMD->currentItem() )!=nullptr ) ;
     widget->btnRemove->setEnabled(hasItems);
 
-    const bool isDesktopItem = (dynamic_cast<DesktopStartItem*>(widget->listCMD->currentItem() ) != 0) ;
+    const bool isDesktopItem = (dynamic_cast<DesktopStartItem*>(widget->listCMD->currentItem() ) != nullptr) ;
     widget->btnProperties->setEnabled(isDesktopItem);
     widget->btnAdvanced->setEnabled(isDesktopItem) ;
 }

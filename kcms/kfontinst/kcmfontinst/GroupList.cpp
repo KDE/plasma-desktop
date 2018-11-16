@@ -475,7 +475,7 @@ bool CGroupList::load(const QString &file)
 
 bool CGroupList::save()
 {
-    if(itsModified && save(itsFileName, NULL))
+    if(itsModified && save(itsFileName, nullptr))
     {
         itsTimeStamp=Misc::getTimeStamp(itsFileName);
         return true;
@@ -730,12 +730,12 @@ CGroupListItem * CGroupList::find(const QString &name)
         if((*it)->name()==name)
             return (*it);
 
-    return NULL;
+    return nullptr;
 }
 
 bool CGroupList::exists(const QString &name, bool showDialog)
 {
-    if(NULL!=find(name))
+    if(nullptr!=find(name))
     {
         if(showDialog)
             KMessageBox::error(itsParent, i18n("<qt>A group named <b>\'%1\'</b> already "

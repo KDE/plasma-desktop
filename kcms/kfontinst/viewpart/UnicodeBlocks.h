@@ -172,7 +172,7 @@ static const struct TUnicodeBlock constUnicodeBlocks[] =
     { 0xE0100, 0xE01EF, I18N_NOOP("Variation Selectors Supplement") },
     { 0xF0000, 0xFFFFF, I18N_NOOP("Supplementary Private Use Area-A") },
     { 0x100000, 0x10FFFF, I18N_NOOP("Supplementary Private Use Area-B") },
-    { 0x0, 0x0, NULL }
+    { 0x0, 0x0, nullptr }
 };
 
 #endif

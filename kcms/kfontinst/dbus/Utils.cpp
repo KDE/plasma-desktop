@@ -217,7 +217,7 @@ EFileType check(const QString &file, Family &fam)
     {
         // Check that file is a font via FreeType...
         int       count=0;
-        FcPattern *pat=FcFreeTypeQuery((const FcChar8 *)(QFile::encodeName(file).constData()), 0, NULL,
+        FcPattern *pat=FcFreeTypeQuery((const FcChar8 *)(QFile::encodeName(file).constData()), 0, nullptr,
                                        &count);
 
         if(pat)

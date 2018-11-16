@@ -61,7 +61,7 @@ int PredicateModel::rowCount( const QModelIndex &parent ) const
 
 QVariant PredicateModel::data( const QModelIndex &index, int role ) const
 {
-    PredicateItem * mi = 0;
+    PredicateItem * mi = nullptr;
     QVariant theData;
     if ( !index.isValid() ) {
         return QVariant();
@@ -84,7 +84,7 @@ QVariant PredicateModel::data( const QModelIndex &index, int role ) const
 Qt::ItemFlags PredicateModel::flags( const QModelIndex &index ) const
 {
     if ( !index.isValid() ) {
-        return 0;
+        return nullptr;
     }
 
     return Qt::ItemIsEnabled | Qt::ItemIsSelectable;

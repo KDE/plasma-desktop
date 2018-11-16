@@ -56,8 +56,8 @@ StandardActionsModule::StandardActionsModule(
         QWidget *parent,
         const QVariantList &args )
     : KCModule(parent, args )
-      ,m_editor(NULL)
-      ,m_actionCollection(NULL)
+      ,m_editor(nullptr)
+      ,m_actionCollection(nullptr)
     {
     KAboutData *about = new KAboutData(QStringLiteral("kcm_standard_actions"), i18n("Standard Shortcuts"), QStringLiteral("0.1"), QString(), KAboutLicense::GPL);
     setAboutData(about);
@@ -113,7 +113,7 @@ void StandardActionsModule::load()
             continue;
             }
         // Create the action
-        QAction *action = KStandardAction::create(id, NULL, NULL, m_actionCollection);
+        QAction *action = KStandardAction::create(id, nullptr, nullptr, m_actionCollection);
         dressUpAction(action, shortcutId);
         shortcutIdsAdded << shortcutId;
         }

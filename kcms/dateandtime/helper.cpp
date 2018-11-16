@@ -100,9 +100,9 @@ int ClockHelper::date( const QString& newdate, const QString& olddate )
 {
     struct timeval tv;
 
-    tv.tv_sec = newdate.toULong() - olddate.toULong() + time(0);
+    tv.tv_sec = newdate.toULong() - olddate.toULong() + time(nullptr);
     tv.tv_usec = 0;
-    if (settimeofday(&tv, 0)) {
+    if (settimeofday(&tv, nullptr)) {
         return DateError;
     }
 

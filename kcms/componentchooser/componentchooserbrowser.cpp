@@ -53,7 +53,7 @@ void CfgBrowser::configChanged()
 
 void CfgBrowser::defaults()
 {
-    load(0);
+    load(nullptr);
 }
 
 void CfgBrowser::load(KConfig *) 
@@ -63,12 +63,12 @@ void CfgBrowser::load(KConfig *)
     if (exec.isEmpty()) {
         radioKIO->setChecked(true);
         m_browserExec = exec;
-        m_browserService = 0;
+        m_browserService = nullptr;
     } else {
         radioExec->setChecked(true);
         if (exec.startsWith('!')) {
             m_browserExec = exec.mid(1);
-            m_browserService = 0;
+            m_browserService = nullptr;
         } else {
             m_browserService = KService::serviceByStorageId( exec );
             if (m_browserService) {

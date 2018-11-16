@@ -38,7 +38,7 @@ class FlagsTest : public QObject
 private Q_SLOTS:
     void initTestCase() {
     	flags = new Flags();
-    	rules = NULL;
+    	rules = nullptr;
     }
 
     void cleanupTestCase() {
@@ -47,7 +47,7 @@ private Q_SLOTS:
     }
 
     void testRules() {
-        QVERIFY( flags != NULL );
+        QVERIFY( flags != nullptr );
 
         QVERIFY( ! flags->getTransparentPixmap().isNull() );
 
@@ -80,7 +80,7 @@ private Q_SLOTS:
         QCOMPARE( flags->getLongText(layoutUnit, rules), QString("English (US)") );
         QCOMPARE( flags->getLongText(layoutUnit2, rules), QString("other") );
 
-        rules = NULL; // when no rules found
+        rules = nullptr; // when no rules found
         QCOMPARE( flags->getLongText(layoutUnit1, rules), QString("us - intl") );
 
         flags->clearCache();

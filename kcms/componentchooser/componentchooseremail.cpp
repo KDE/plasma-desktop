@@ -57,7 +57,7 @@ CfgEmailClient::~CfgEmailClient() {
 
 void CfgEmailClient::defaults()
 {
-    load(0);
+    load(nullptr);
 }
 
 void CfgEmailClient::load(KConfig *)

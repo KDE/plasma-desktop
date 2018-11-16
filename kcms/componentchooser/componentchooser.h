@@ -66,7 +66,7 @@ class ComponentChooser : public QWidget, public Ui::ComponentChooser_UI
 Q_OBJECT
 
 public:
-	ComponentChooser(QWidget *parent=0);
+	ComponentChooser(QWidget *parent=nullptr);
 	~ComponentChooser() override;
 	void load();
 	void save();

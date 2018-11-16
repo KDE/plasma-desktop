@@ -255,7 +255,7 @@ bool ComputerModel::trigger(int row, const QString &actionId, const QVariant &ar
         const QUrl &url = m_filteredPlacesModel->url(sourceIndex);
 
         if (url.isValid()) {
-            new KRun(url, 0);
+            new KRun(url, nullptr);
 
             return true;
         }
@@ -297,5 +297,5 @@ void ComputerModel::onSetupDone(Solid::ErrorType error, QVariant errorData, cons
 
     Q_ASSERT(access);
 
-    new KRun(QUrl::fromLocalFile(access->filePath()), 0);
+    new KRun(QUrl::fromLocalFile(access->filePath()), nullptr);
 }

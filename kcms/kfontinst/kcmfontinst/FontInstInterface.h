@@ -13,7 +13,7 @@ class FontInstInterface : public OrgKdeFontinstInterface
 
     FontInstInterface()
         : OrgKdeFontinstInterface(OrgKdeFontinstInterface::staticInterfaceName(),
-                                  FONTINST_PATH, QDBusConnection::sessionBus(), 0L)
+                                  FONTINST_PATH, QDBusConnection::sessionBus(), nullptr)
     {
     }
 };

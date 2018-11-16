@@ -108,7 +108,7 @@ const IsoCodeEntry* IsoCodes::getEntry(const QString& attributeName, const QStri
 		if( isoCodeEntry->value(attributeName) == attributeValue )
 			return isoCodeEntry;
 	}
-	return NULL;
+	return nullptr;
 }
 
 void IsoCodesPrivate::buildIsoEntryList()

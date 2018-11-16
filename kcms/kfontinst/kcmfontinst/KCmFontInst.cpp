@@ -173,13 +173,13 @@ int CPushButton::theirHeight=0;
 
 CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
             : KCModule(parent),
-              itsPreview(NULL),
+              itsPreview(nullptr),
               itsConfig(KFI_UI_CFG_FILE),
-              itsJob(NULL),
-              itsProgress(NULL),
-              itsUpdateDialog(NULL),
-              itsTempDir(NULL),
-              itsPrintProc(NULL)
+              itsJob(nullptr),
+              itsProgress(nullptr),
+              itsUpdateDialog(nullptr),
+              itsTempDir(nullptr),
+              itsPrintProc(nullptr)
 {
     setButtons(Help);
 
@@ -521,13 +521,13 @@ void CKCmFontInst::addFonts()
         if(urls.count())
             addFonts(urls);
         delete itsTempDir;
-        itsTempDir=NULL;
+        itsTempDir=nullptr;
     }
 }
 
 void CKCmFontInst::groupSelected(const QModelIndex &index)
 {
-    CGroupListItem *grp=NULL;
+    CGroupListItem *grp=nullptr;
 
     if(index.isValid())
         grp=static_cast<CGroupListItem *>(index.internalPointer());
@@ -706,7 +706,7 @@ void CKCmFontInst::moveFonts()
     QStringList          fontNames;
 
     itsDeletedFonts.clear();
-    itsFontListView->getFonts(urls, fontNames, NULL, true);
+    itsFontListView->getFonts(urls, fontNames, nullptr, true);
 
     if(urls.isEmpty())
         KMessageBox::information(this, i18n("You did not select anything to move."),
@@ -1073,7 +1073,7 @@ void CKCmFontInst::addFonts(const QSet<QUrl> &src)
             itsProgress->setAutoClose(true);
         }
 
-        itsProgress->setCancelButton(0);
+        itsProgress->setCancelButton(nullptr);
         itsProgress->setMinimumDuration(500);
         itsProgress->setRange(0, src.size());
         itsProgress->setValue(0);
@@ -1172,7 +1172,7 @@ void CKCmFontInst::toggleFonts(bool enable, const QString &grp)
     CJobRunner::ItemList urls;
     QStringList          fonts;
 
-    itsFontListView->getFonts(urls, fonts, NULL, grp.isEmpty(), !enable, enable);
+    itsFontListView->getFonts(urls, fonts, nullptr, grp.isEmpty(), !enable, enable);
 
     if(urls.isEmpty())
         KMessageBox::information(this,
@@ -1267,7 +1267,7 @@ void CKCmFontInst::doCmd(CJobRunner::ECommand cmd, const CJobRunner::ItemList &u
     CFcEngine::setDirty();
     setStatusBar();
     delete itsTempDir;
-    itsTempDir=NULL;
+    itsTempDir=nullptr;
     itsFontListView->repaint();
     removeDeletedFontsFromGroups();
 }

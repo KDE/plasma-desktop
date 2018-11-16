@@ -34,7 +34,7 @@ LayoutsMenu::LayoutsMenu(const KeyboardConfig& keyboardConfig_, const Rules& rul
 	keyboardConfig(keyboardConfig_),
 	rules(rules_),
 	flags(flags_),
-	actionGroup(NULL)
+	actionGroup(nullptr)
 {
 }
 

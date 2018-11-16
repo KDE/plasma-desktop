@@ -25,8 +25,8 @@
 
 ActionEditor::ActionEditor(QWidget *parent) : QDialog(parent)
 {
-    topItem = new PredicateItem( Solid::Predicate(), 0 );
-    rootItem = 0;
+    topItem = new PredicateItem( Solid::Predicate(), nullptr );
+    rootItem = nullptr;
     rootModel = new PredicateModel( topItem, this );
     // Prepare the dialog
     resize( QSize(600, 600) ); // Set a decent initial size
@@ -75,7 +75,7 @@ void ActionEditor::setActionToEdit( ActionItem * item )
 void ActionEditor::setPredicate( Solid::Predicate predicate )
 {
     delete topItem;
-    topItem = new PredicateItem( Solid::Predicate(), 0 );
+    topItem = new PredicateItem( Solid::Predicate(), nullptr );
     rootItem = new PredicateItem( predicate, topItem );
     rootModel->setRootPredicate( rootItem->parent() );
 

@@ -75,8 +75,8 @@ K_EXPORT_PLUGIN(CFontViewPartFactory("kfontview"))
 CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList<QVariant> &)
              : KParts::ReadOnlyPart(parent),
                itsConfig(KSharedConfig::openConfig()),
-               itsProc(NULL),
-               itsTempDir(NULL),
+               itsProc(nullptr),
+               itsTempDir(nullptr),
                itsInterface(new FontInstInterface()),
                itsOpening(false)
 {
@@ -168,9 +168,9 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList
 CFontViewPart::~CFontViewPart()
 {
     delete itsTempDir;
-    itsTempDir=NULL;
+    itsTempDir=nullptr;
     delete itsInterface;
-    itsInterface=NULL;
+    itsInterface=nullptr;
 }
 
 static inline QUrl mostLocalUrl(const QUrl &url, QWidget *widget)
@@ -194,7 +194,7 @@ bool CFontViewPart::openUrl(const QUrl &url)
        KFI_KIO_FONTS_PROTOCOL==url.scheme() || mostLocalUrl(url, itsFrame).isLocalFile())
     {
         setUrl(url);
-        emit started(0);
+        emit started(nullptr);
         setLocalFilePath(this->url().path());
         bool ret=openFile();
         if (ret)
@@ -237,7 +237,7 @@ void CFontViewPart::timeout()
 
 //    itsMetaUrl=url();
     delete itsTempDir;
-    itsTempDir=NULL;
+    itsTempDir=nullptr;
 
     itsOpening=true;
 

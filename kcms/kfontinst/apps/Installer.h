@@ -37,7 +37,7 @@ class CInstaller
     public:
 
     CInstaller(QWidget *p)
-         : itsParent(p), itsTempDir(NULL) { }
+         : itsParent(p), itsTempDir(nullptr) { }
     ~CInstaller();
 
     int install(const QSet<QUrl> &urls);

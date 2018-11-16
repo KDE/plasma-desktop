@@ -84,7 +84,7 @@ static void registerSignalHandler(SignalHandler handler)
     sigaddset(&mask, SIGABRT);
 #endif
 
-    sigprocmask(SIG_UNBLOCK, &mask, 0);
+    sigprocmask(SIG_UNBLOCK, &mask, nullptr);
 }
 
 void signalHander(int)
@@ -594,7 +594,7 @@ void FontInst::fontListTimeout()
 void FontInst::updateFontList(bool emitChanges)
 {
     // For some reason just the "!FcConfigUptoDate(0)" check does not always work :-(
-    FcBool fcModified=!FcConfigUptoDate(0);
+    FcBool fcModified=!FcConfigUptoDate(nullptr);
 
     if(fcModified ||
        theFolders[FOLDER_SYS].fonts().isEmpty() ||
@@ -632,9 +632,9 @@ void FontInst::updateFontList(bool emitChanges)
 #ifndef KFI_FC_NO_WIDTHS
                                             FC_WIDTH,
 #endif
-                                            FC_SLANT, FC_INDEX, FC_FOUNDRY, (void*)0);
+                                            FC_SLANT, FC_INDEX, FC_FOUNDRY, (void*)nullptr);
 
-        FcFontSet   *list=FcFontList(0, pat, os);
+        FcFontSet   *list=FcFontList(nullptr, pat, os);
 
         FcPatternDestroy(pat);
         FcObjectSetDestroy(os);

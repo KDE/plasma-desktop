@@ -145,10 +145,10 @@ void CursorThemeModel::sort(int column, Qt::SortOrder order)
 const CursorTheme *CursorThemeModel::theme(const QModelIndex &index)
 {
     if (!index.isValid())
-        return NULL;
+        return nullptr;
 
     if (index.row() < 0 || index.row() >= list.count())
-        return NULL;
+        return nullptr;
 
     return list.at(index.row());
 }

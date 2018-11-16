@@ -62,7 +62,7 @@ int iconSize(int s)
 }
 
 Flags::Flags():
-	svg(NULL)
+	svg(nullptr)
 {
 	transparentPixmap = new QPixmap(FLAG_MAX_SIZE, FLAG_MAX_SIZE);
 	transparentPixmap->fill(Qt::transparent);
@@ -70,7 +70,7 @@ Flags::Flags():
 
 Flags::~Flags()
 {
-	if( svg != NULL ) {
+	if( svg != nullptr ) {
 		disconnect(svg, &Plasma::Svg::repaintNeeded, this, &Flags::themeChanged);
 		delete svg;
 	}
@@ -173,25 +173,25 @@ static QString getDisplayText(const QString& layout, const QString& variant, con
 {
 	if( variant.isEmpty() )
 		return layout;
-	if( rules == NULL || rules->version == QLatin1String("1.0") )
+	if( rules == nullptr || rules->version == QLatin1String("1.0") )
 		return i18nc("layout - variant", "%1 - %2", layout, variant);
 	return variant;
 }
 
 QString Flags::getLongText(const LayoutUnit& layoutUnit, const Rules* rules)
 {
-	if( rules == NULL ) {
+	if( rules == nullptr ) {
 		return getDisplayText(layoutUnit.layout, layoutUnit.variant, rules);
 	}
 
 	QString layoutText = layoutUnit.layout;
 	const LayoutInfo* layoutInfo = rules->getLayoutInfo(layoutUnit.layout);
-	if( layoutInfo != NULL ) {
+	if( layoutInfo != nullptr ) {
 		layoutText = layoutInfo->description;
 
 		if( ! layoutUnit.variant.isEmpty() ) {
 			const VariantInfo* variantInfo = layoutInfo->getVariantInfo(layoutUnit.variant);
-			QString variantText = variantInfo != NULL ? variantInfo->description : layoutUnit.variant;
+			QString variantText = variantInfo != nullptr ? variantInfo->description : layoutUnit.variant;
 
 			layoutText = getDisplayText(layoutText, variantText, rules);
 		}
@@ -274,7 +274,7 @@ const QIcon Flags::getIconWithText(const LayoutUnit& layoutUnit, const KeyboardC
 
 Plasma::Svg* Flags::getSvg()
 {
-	if( svg == NULL ) {
+	if( svg == nullptr ) {
 		svg = new Plasma::Svg;
 	    svg->setImagePath(QStringLiteral("widgets/labeltexture"));
 	    svg->setContainsMultipleImages(true);

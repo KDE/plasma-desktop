@@ -215,7 +215,7 @@ void KDEDConfig::load()
 	_lvStartup->clear();
 	_lvLoD->clear();
 
-	QTreeWidgetItem* treeitem = 0L;
+	QTreeWidgetItem* treeitem = nullptr;
 	const auto modules = availableModules();
 	for (const KPluginMetaData &mod : modules) {
 		QString servicePath = mod.metaDataFileName();
@@ -420,7 +420,7 @@ void KDEDConfig::slotStartupItemSelected()
 	}
 
 	// Deselect a currently selected element in the "load on demand" treeview
-	_lvLoD->setCurrentItem(NULL, 0, QItemSelectionModel::Clear);
+	_lvLoD->setCurrentItem(nullptr, 0, QItemSelectionModel::Clear);
 
 	QTreeWidgetItem *item = _lvStartup->selectedItems().at(0);
 	if ( item->text(StartupStatus) == RUNNING ) {
@@ -446,7 +446,7 @@ void KDEDConfig::slotLodItemSelected()
 		return;
 
 	// Deselect a currently selected element in the "load on startup" treeview
-	_lvStartup->setCurrentItem(NULL, 0, QItemSelectionModel::Clear);
+	_lvStartup->setCurrentItem(nullptr, 0, QItemSelectionModel::Clear);
 }
 
 void KDEDConfig::slotServiceRunningToggled()

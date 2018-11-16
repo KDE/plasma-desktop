@@ -33,7 +33,7 @@ class ExportSchemeDialog : public KDialog
 
 public:
 
-    ExportSchemeDialog (QStringList components, QWidget *parent=NULL);
+    ExportSchemeDialog (QStringList components, QWidget *parent=nullptr);
 
     ~ExportSchemeDialog() override;
 

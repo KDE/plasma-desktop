@@ -51,7 +51,7 @@ AddLayoutDialog::AddLayoutDialog(const Rules* rules_, Flags* flags_, const QStri
 //    	if( isoCodeEntry == NULL ) {
 //    		isoCodeEntry = isoCodes.getEntry(IsoCodes::attr_iso_639_2T_code, lang);
 //    	}
-    	QString name = isoCodeEntry != NULL ? i18n(isoCodeEntry->value(IsoCodes::attr_name).toUtf8()) : lang;
+    	QString name = isoCodeEntry != nullptr ? i18n(isoCodeEntry->value(IsoCodes::attr_name).toUtf8()) : lang;
     	layoutDialogUi->languageComboBox->addItem(name, lang);
     }
     layoutDialogUi->languageComboBox->model()->sort(0);

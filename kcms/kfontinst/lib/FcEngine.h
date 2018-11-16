@@ -80,7 +80,7 @@ class Q_DECL_EXPORT CFcEngine
                                       int h);
     QImage                draw(const QString &name, quint32 style, int faceNo, const QColor &txt, const QColor &bgnd, int fSize, const QString &text);
     QImage                draw(const QString &name, quint32 style, int faceNo, const QColor &txt, const QColor &bgnd,
-                               int w, int h, bool thumb, const QList<TRange> &range=QList<TRange>(), QList<TChar> *chars=NULL);
+                               int w, int h, bool thumb, const QList<TRange> &range=QList<TRange>(), QList<TChar> *chars=nullptr);
     int                   getNumIndexes() { return itsIndexCount; } // Only valid after draw has been called!
     static QFont          getQFont(const QString &family, quint32 style, int size);
     const QVector<int> &  sizes() const     { return itsSizes; }

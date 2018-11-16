@@ -477,7 +477,7 @@ void PagerModel::moveWindow(int window, double x, double y, int targetItemId, in
     dest = QPointF(qMax(dest.x(), qreal(0.0)), qMax(dest.y(), qreal(0.0)));
 
     // Use _NET_MOVERESIZE_WINDOW rather than plain move, so that the WM knows this is a pager request.
-    NETRootInfo info(QX11Info::connection(), 0);
+    NETRootInfo info(QX11Info::connection(), nullptr);
     const int flags = (0x20 << 12) | (0x03 << 8) | 1; // From tool, x/y, northwest gravity.
 
     if (!KWindowSystem::mapViewport()) {
@@ -591,7 +591,7 @@ void PagerModel::drop(QMimeData *mimeData, int itemId)
             }
 
             for (const auto &id : ids) {
-                QStringList activities = KWindowInfo(id, 0, NET::WM2Activities).activities();
+                QStringList activities = KWindowInfo(id, nullptr, NET::WM2Activities).activities();
 
                 if (!activities.contains(newActivity)) {
                     KWindowSystem::setOnActivities(id, activities << newActivity);

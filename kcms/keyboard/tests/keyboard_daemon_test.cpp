@@ -48,7 +48,7 @@ private Q_SLOTS:
     }
 
     void testDaemon() {
-        QVERIFY( keyboardDaemon != NULL );
+        QVERIFY( keyboardDaemon != nullptr );
 
 //        QVERIFY( ! flags->getTransparentPixmap().isNull() );
 //

@@ -88,7 +88,7 @@ void SchemeEditorColors::setupColorTable()
         if (i > 8 && i < 18)
         {
             // Inactive Text row through Positive Text role all need a varies button
-            QPushButton * variesButton = new QPushButton(NULL);
+            QPushButton * variesButton = new QPushButton(nullptr);
             variesButton->setText(i18n("Varies"));
             variesButton->setObjectName(QString::number(i));
             connect(variesButton, &QPushButton::clicked, this, &SchemeEditorColors::variesClicked);

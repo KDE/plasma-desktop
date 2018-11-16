@@ -20,7 +20,7 @@
 #include "propertymanager.h"
 #include <QByteArray>
 
-PropertyManager::PropertyManager() : m_props(0)
+PropertyManager::PropertyManager() : m_props(nullptr)
 {
 
 }
@@ -43,7 +43,7 @@ void PropertyManager::setProperties(IBusPropList* props)
 IBusProperty* PropertyManager::property(const QByteArray& key)
 {
     if (!m_props)
-        return NULL;
+        return nullptr;
 
     return searchList(key, m_props);
 }
@@ -51,7 +51,7 @@ IBusProperty* PropertyManager::property(const QByteArray& key)
 IBusProperty* PropertyManager::searchList(const QByteArray& key, IBusPropList* props)
 {
     if (!props)
-        return NULL;
+        return nullptr;
 
     int i = 0;
     while (true) {
@@ -67,7 +67,7 @@ IBusProperty* PropertyManager::searchList(const QByteArray& key, IBusPropList* p
         }
         i++;
     }
-    return NULL;
+    return nullptr;
 }
 
 void PropertyManager::updateProperty(IBusProperty* prop)

@@ -45,13 +45,13 @@ K_PLUGIN_FACTORY_WITH_JSON(KeyboardFactory,
 
 KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant>&)
 	: KDEDModule(parent),
-	  actionCollection(NULL),
-	  xEventNotifier(NULL),
-	  layoutTrayIcon(NULL),
+	  actionCollection(nullptr),
+	  xEventNotifier(nullptr),
+	  layoutTrayIcon(nullptr),
 	  layoutMemory(keyboardConfig),
 	  rules(Rules::readRules(Rules::READ_EXTRAS))
 {
-	if( ! X11Helper::xkbSupported(NULL) )
+	if( ! X11Helper::xkbSupported(nullptr) )
 		return;		//TODO: shut down the daemon?
 
     QDBusConnection dbus = QDBusConnection::sessionBus();
@@ -121,13 +121,13 @@ void KeyboardDaemon::setupTrayIcon()
 	}
 	else if( ! show && layoutTrayIcon ) {
 		delete layoutTrayIcon;
-		layoutTrayIcon = NULL;
+		layoutTrayIcon = nullptr;
 	}
 }
 
 void KeyboardDaemon::registerShortcut()
 {
-	if( actionCollection == NULL ) {
+	if( actionCollection == nullptr ) {
 		actionCollection = new KeyboardLayoutActionCollection(this, false);
 
 		QAction* toggleLayoutAction = actionCollection->getToggleAction();
@@ -140,18 +140,18 @@ void KeyboardDaemon::registerShortcut()
 void KeyboardDaemon::unregisterShortcut()
 {
 	// register KDE keyboard shortcut for switching layouts
-    if( actionCollection != NULL ) {
+    if( actionCollection != nullptr ) {
 		disconnect(actionCollection, SIGNAL(actionTriggered(QAction*)), this, SLOT(setLayout(QAction*)));
         disconnect(actionCollection->getToggleAction(), &QAction::triggered, this, &KeyboardDaemon::switchToNextLayout);
 
         delete actionCollection;
-        actionCollection = NULL;
+        actionCollection = nullptr;
     }
 }
 
 void KeyboardDaemon::registerListeners()
 {
-	if( xEventNotifier == NULL ) {
+	if( xEventNotifier == nullptr ) {
 		xEventNotifier = new XInputEventNotifier();
 	}
 	connect(xEventNotifier, &XInputEventNotifier::newPointerDevice, this, &KeyboardDaemon::configureMouse);
@@ -163,7 +163,7 @@ void KeyboardDaemon::registerListeners()
 
 void KeyboardDaemon::unregisterListeners()
 {
-	if( xEventNotifier != NULL ) {
+	if( xEventNotifier != nullptr ) {
 		xEventNotifier->stop();
 		disconnect(xEventNotifier, &XInputEventNotifier::newPointerDevice, this, &KeyboardDaemon::configureMouse);
 		disconnect(xEventNotifier, &XInputEventNotifier::newKeyboardDevice, this, &KeyboardDaemon::configureKeyboard);
@@ -178,7 +178,7 @@ void KeyboardDaemon::layoutChanged()
     LayoutUnit newLayout = X11Helper::getCurrentLayout();
 
 	layoutMemory.layoutChanged();
-	if( layoutTrayIcon != NULL ) {
+	if( layoutTrayIcon != nullptr ) {
 		layoutTrayIcon->layoutChanged();
 	}
 
@@ -193,7 +193,7 @@ void KeyboardDaemon::layoutMapChanged()
 	keyboardConfig.load();
 	layoutMemory.layoutMapChanged();
 	emit layoutListChanged();
-	if( layoutTrayIcon != NULL ) {
+	if( layoutTrayIcon != nullptr ) {
 		layoutTrayIcon->layoutMapChanged();
 	}
 }

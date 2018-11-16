@@ -105,7 +105,7 @@ bool KclockModule::kauthSave()
       qDebug() << "Set date to " << dtime->userTime();
       helperargs[QStringLiteral("date")] = true;
       helperargs[QStringLiteral("newdate")] = QString::number(newTime.toTime_t());
-      helperargs[QStringLiteral("olddate")] = QString::number(::time(0));
+      helperargs[QStringLiteral("olddate")] = QString::number(::time(nullptr));
   }
 
   QString selectedTimeZone = dtime->selectedTimeZone();

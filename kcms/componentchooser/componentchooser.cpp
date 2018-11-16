@@ -118,7 +118,7 @@ void CfgComponent::defaults()
 
 
 ComponentChooser::ComponentChooser(QWidget *parent):
-    QWidget(parent), Ui::ComponentChooser_UI(), somethingChanged(false), configWidget(0)
+    QWidget(parent), Ui::ComponentChooser_UI(), somethingChanged(false), configWidget(nullptr)
 {
 	setupUi(this);
 	static_cast<QGridLayout*>(layout())->setRowStretch(1, 1);
@@ -156,7 +156,7 @@ void ComponentChooser::slotServiceSelected(QListWidgetItem* it) {
 
 
 	QString cfgType=cfg.group(QByteArray()).readEntry("configurationType");
-	QWidget *newConfigWidget = 0;
+	QWidget *newConfigWidget = nullptr;
 	if (cfgType.isEmpty() || (cfgType==QLatin1String("component")))
 	{
 		if (!(configWidget && qobject_cast<CfgComponent*>(configWidget)))

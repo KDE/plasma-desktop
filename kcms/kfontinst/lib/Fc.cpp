@@ -419,7 +419,7 @@ int getFcInt(FcPattern *pat, const char *val, int index, int def)
 QString getName(const QString &file)
 {
     int       count=0;
-    FcPattern *pat=FcFreeTypeQuery((const FcChar8 *)(QFile::encodeName(file).constData()), 0, NULL,
+    FcPattern *pat=FcFreeTypeQuery((const FcChar8 *)(QFile::encodeName(file).constData()), 0, nullptr,
                                     &count);
     QString   name(i18n("Unknown"));
 
@@ -628,9 +628,9 @@ bool bitmapsEnabled()
 
     if(!checked)
     {
-        FcObjectSet *os  = FcObjectSetBuild(FC_FAMILY, (void *)0);
-        FcPattern   *pat = FcPatternBuild(NULL, FC_SCALABLE, FcTypeBool, FcFalse, NULL);
-        FcFontSet   *set = FcFontList(0, pat, os);
+        FcObjectSet *os  = FcObjectSetBuild(FC_FAMILY, (void *)nullptr);
+        FcPattern   *pat = FcPatternBuild(nullptr, FC_SCALABLE, FcTypeBool, FcFalse, NULL);
+        FcFontSet   *set = FcFontList(nullptr, pat, os);
 
         FcPatternDestroy(pat);
         FcObjectSetDestroy(os);

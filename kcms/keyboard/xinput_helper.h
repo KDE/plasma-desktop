@@ -31,7 +31,7 @@ class XInputEventNotifier: public XEventNotifier {
 	Q_OBJECT
 
 public:
-	XInputEventNotifier(QWidget* parent=NULL);
+	XInputEventNotifier(QWidget* parent=nullptr);
 
 	void start() override;
 	void stop() override;

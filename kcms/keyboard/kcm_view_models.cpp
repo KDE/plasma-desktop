@@ -73,7 +73,7 @@ int LayoutsTableModel::columnCount(const QModelIndex&) const
 Qt::ItemFlags LayoutsTableModel::flags(const QModelIndex &index) const
 {
 	if (!index.isValid())
-		return 0;
+		return nullptr;
 
 	Qt::ItemFlags flags = QAbstractTableModel::flags(index);
 
@@ -167,16 +167,16 @@ QVariant LayoutsTableModel::data(const QModelIndex &index, int role) const
     	 break;
     	 case LAYOUT_COLUMN: {
     		 const LayoutInfo* layoutInfo = rules->getLayoutInfo(layoutUnit.layout);
-             return layoutInfo != NULL ? layoutInfo->description : layoutUnit.layout;
+             return layoutInfo != nullptr ? layoutInfo->description : layoutUnit.layout;
     	 }
     	 case VARIANT_COLUMN: {
     		 if( layoutUnit.variant.isEmpty() )
     			 return QVariant();
     		 const LayoutInfo* layoutInfo = rules->getLayoutInfo(layoutUnit.layout);
-    		 if( layoutInfo == NULL )
+    		 if( layoutInfo == nullptr )
     			 return QVariant();
     		 const VariantInfo* variantInfo = layoutInfo->getVariantInfo(layoutUnit.variant);
-    		 return variantInfo != NULL ? variantInfo->description : layoutUnit.variant;
+    		 return variantInfo != nullptr ? variantInfo->description : layoutUnit.variant;
     	 }
          break;
     	 case DISPLAY_NAME_COLUMN:
@@ -276,11 +276,11 @@ QWidget *LabelEditDelegate::createEditor(QWidget *parent, const QStyleOptionView
 		const QModelIndex & index ) const
 {
 	if( keyboardConfig->indicatorType == KeyboardConfig::SHOW_FLAG )
-		return NULL;
+		return nullptr;
 
 	QWidget* widget = QStyledItemDelegate::createEditor(parent, option, index);
 	QLineEdit* lineEdit = static_cast<QLineEdit*>(widget);
-	if( lineEdit != NULL ) {
+	if( lineEdit != nullptr ) {
 		lineEdit->setMaxLength(LayoutUnit::MAX_LABEL_LENGTH);
 		connect(lineEdit, &QLineEdit::textEdited, this, [this, lineEdit]() {
 			Q_EMIT const_cast<LabelEditDelegate*>(this)->commitData(lineEdit);

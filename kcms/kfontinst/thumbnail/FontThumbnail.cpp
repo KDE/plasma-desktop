@@ -56,7 +56,7 @@ CFontThumbnail::CFontThumbnail()
 bool CFontThumbnail::create(const QString &path, int width, int height, QImage &img)
 {
     QString  realPath(path);
-    QTemporaryDir *tempDir = 0;
+    QTemporaryDir *tempDir = nullptr;
 
     KFI_DBUG << "Create font thumbnail for:" << path << endl;
 

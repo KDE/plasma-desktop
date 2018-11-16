@@ -51,7 +51,7 @@ void MenuEntryEditor::edit(const QString& entryPath, const QString& menuId)
         const QString &fileName = entryUrl.fileName();
 
         if (appsDir.exists(fileName)) {
-            KPropertiesDialog::showDialog(entryUrl, 0, false);
+            KPropertiesDialog::showDialog(entryUrl, nullptr, false);
         } else {
             if (!appsDir.exists()) {
                 if (!QDir::root().mkpath(appsPath)) {

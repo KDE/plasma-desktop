@@ -108,7 +108,7 @@ bool FileEntry::run(const QString& actionId, const QVariant &argument)
     }
 
     if (actionId.isEmpty()) {
-        new KRun(m_fileItem->url(), 0);
+        new KRun(m_fileItem->url(), nullptr);
 
         return true;
     } else {

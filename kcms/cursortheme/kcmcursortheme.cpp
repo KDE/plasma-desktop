@@ -350,7 +350,7 @@ bool CursorThemeConfig::applyTheme(const CursorTheme *theme, const int size)
 
 void CursorThemeConfig::save()
 {
-    const CursorTheme *theme = selectedIndex().isValid() ? m_proxyModel->theme(selectedIndex()) : NULL;
+    const CursorTheme *theme = selectedIndex().isValid() ? m_proxyModel->theme(selectedIndex()) : nullptr;
 
     KConfig config("kcminputrc");
     KConfigGroup c(&config, "Mouse");
@@ -445,7 +445,7 @@ QModelIndex CursorThemeConfig::selectedIndex() const
 
 void CursorThemeConfig::getNewClicked()
 {
-    KNS3::DownloadDialog dialog("xcursor.knsrc", 0);
+    KNS3::DownloadDialog dialog("xcursor.knsrc", nullptr);
     if (dialog.exec()) {
         KNS3::Entry::List list = dialog.changedEntries();
         if (list.count() > 0) {
@@ -522,7 +522,7 @@ void CursorThemeConfig::installThemeFile(const QString &path)
             QString question = i18n("A theme named %1 already exists in your icon "
                     "theme folder. Do you want replace it with this one?", dirName);
 
-            int answer = KMessageBox::warningContinueCancel(0, question,
+            int answer = KMessageBox::warningContinueCancel(nullptr, question,
                                 i18n("Overwrite Theme?"),
                                 KStandardGuiItem::overwrite());
 
@@ -565,7 +565,7 @@ void CursorThemeConfig::removeTheme(int row)
 
     // Don't let the user delete the currently configured theme
     if (idx == m_appliedIndex) {
-        KMessageBox::sorry(0, i18n("<qt>You cannot delete the theme you are currently "
+        KMessageBox::sorry(nullptr, i18n("<qt>You cannot delete the theme you are currently "
                 "using.<br />You have to switch to another theme first.</qt>"));
         return;
     }
@@ -576,7 +576,7 @@ void CursorThemeConfig::removeTheme(int row)
             "This will delete all the files installed by this theme.</qt>",
             theme->title());
 
-    int answer = KMessageBox::warningContinueCancel(0, question,
+    int answer = KMessageBox::warningContinueCancel(nullptr, question,
             i18n("Confirmation"), KStandardGuiItem::del());
 
     if (answer != KMessageBox::Continue) {

@@ -71,7 +71,7 @@ const char* const s_defaultFileExcludeFilters[] = {
     "*.elc",   // Emacs Lisp
 
     // end of list
-    0
+    nullptr
 };
 
 const int s_defaultFileExcludeFiltersVersion = 2;
@@ -101,7 +101,7 @@ const char* const s_defaultFolderExcludeFilters[] = {
     "lost+found",
 
     // end of list
-    0
+    nullptr
 };
 
 const int s_defaultFolderExcludeFiltersVersion = 1;
@@ -135,7 +135,7 @@ const char* const s_sourceCodeMimeTypes[] = {
     "application/x-tex",
 
     // end of list
-    0
+    nullptr
 };
 const int s_sourceCodeMimeTypesVersion = 1;
 }
