@@ -36,7 +36,7 @@
 #include <signal.h>
 #include <sys/errno.h>
 
-#define KFI_DBUG qDebug() << time(0L)
+#define KFI_DBUG qDebug() << time(nullptr)
 
 KAUTH_HELPER_MAIN("org.kde.fontinst", KFI::Helper)
 
