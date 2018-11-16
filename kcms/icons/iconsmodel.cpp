@@ -201,5 +201,3 @@ void IconsModel::removeItemsPendingDeletion()
         }
     }
 }
-
-#include "iconsmodel.moc"
