@@ -24,6 +24,7 @@ Row {
 
     property int activeTab: 0
     property int hoveredTab: -1
+    Accessible.role: Accessible.PageTabList
 
     signal containsMouseChanged(int index, bool containsMouse)
 
@@ -43,6 +44,7 @@ Row {
         text: i18n("Apps & Docs")
 
         active: (tabBar.activeTab == 0)
+        focus: parent.focus & active
     }
 
     DashboardTabButton {
@@ -53,6 +55,7 @@ Row {
         text: i18n("Widgets")
 
         active: (tabBar.activeTab == 1)
+        focus: parent.focus & active
     }
 
     Keys.onLeftPressed: {

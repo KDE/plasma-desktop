@@ -31,6 +31,8 @@ Item {
     property int index: 0
     property bool active: false
     property alias text: label.text
+    Accessible.name: text
+    Accessible.role: Accessible.PageTab
 
     Rectangle {
         anchors.fill: parent
