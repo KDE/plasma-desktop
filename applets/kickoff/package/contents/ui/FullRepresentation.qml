@@ -121,8 +121,8 @@ Item {
 
         height: Math.floor(units.devicePixelRatio)
         color: Qt.tint(PlasmaCore.ColorScope.textColor, Qt.rgba(PlasmaCore.ColorScope.backgroundColor.r, PlasmaCore.ColorScope.backgroundColor.g, PlasmaCore.ColorScope.backgroundColor.b, 0.7))
-
-        width:  root.width
+        opacity: 0.6
+        width: root.width - 2 * units.gridUnit
 
         anchors {
             top: header.top
@@ -480,6 +480,7 @@ Item {
         width:  root.width
         height: Math.floor(units.devicePixelRatio)
         color: Qt.tint(PlasmaCore.ColorScope.textColor, Qt.rgba(PlasmaCore.ColorScope.backgroundColor.r, PlasmaCore.ColorScope.backgroundColor.g, PlasmaCore.ColorScope.backgroundColor.b, 0.7))
+        opacity: 0.6
 
         anchors {
             top: header.top

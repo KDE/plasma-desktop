@@ -54,19 +54,20 @@ FocusScope {
         listView.decrementCurrentIndex();
     }
 
+    
     PlasmaExtras.ScrollArea {
         id: scrollArea
-
+        frameVisible: false
         anchors.fill: parent
 
         ListView {
             id: listView
-
+        
             focus: true
-
+            
             keyNavigationWraps: true
             boundsBehavior: Flickable.StopAtBounds
-
+            
             highlight: KickoffHighlight {}
             highlightMoveDuration : 0
             highlightResizeDuration: 0
