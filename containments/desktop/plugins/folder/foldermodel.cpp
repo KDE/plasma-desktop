@@ -1732,7 +1732,6 @@ void FolderModel::updateActions()
     }
 
     if (QAction *rename = m_actionCollection.action(QStringLiteral("rename"))) {
-        qDebug() << "RIENÄIM" << itemProperties.supportsMoving() << itemProperties.urlList();
         rename->setEnabled(itemProperties.supportsMoving());
         rename->setVisible(!isTrash);
     }
