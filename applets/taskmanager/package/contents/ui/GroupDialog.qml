@@ -127,7 +127,7 @@ PlasmaCore.Dialog {
 
                 onAnimatingChanged: {
                     if (!animating) {
-                        updateSize();
+                        Qt.callLater(updateSize);
                     }
                 }
 
@@ -146,11 +146,11 @@ PlasmaCore.Dialog {
                         return -1;
                     }
 
-                    onItemAdded: updateSize()
+                    onItemAdded: Qt.callLater(updateSize)
 
                     onItemRemoved: {
                         if (groupDialog.visible && index > 0 && index == count) {
-                            updateSize();
+                            Qt.callLater(updateSize);
                         }
                     }
                 }
@@ -262,7 +262,7 @@ PlasmaCore.Dialog {
         // Setting VisualDataModel.rootIndex drops groupRepeater.count to 0
         // before the actual row count. updateSize is therefore invoked twice;
         // only update size once the repeater count matches the model role.
-        } else if (!groupRepeater.aboutToPopulate || visualParent.childCount == groupRepeater.count) {
+        } else if (!groupRepeater.aboutToPopulate && visualParent.childCount == groupRepeater.count) {
             var task;
             var maxWidth = 0;
             var maxHeight = 0;
