@@ -91,7 +91,10 @@ FocusScope {
     }
 
     MouseArea {
-        anchors.fill: parent
+        anchors.left: parent.left
+
+        width: scrollArea.viewport.width
+        height: parent.height
 
         id: mouseArea
 
