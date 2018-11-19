@@ -76,8 +76,7 @@ public:
         {
             if (id.isEmpty()) return;
 
-            AbstractEntry *entry = nullptr;
-            QScopedPointer<AbstractEntry> deleter;
+            QSharedPointer<AbstractEntry> entry = nullptr;
 
             if (parent->m_itemEntries.contains(id)) {
                 entry = parent->m_itemEntries[id];
@@ -85,7 +84,6 @@ public:
                 // This entry is not cached - it is temporary,
                 // so let's clean up when we exit this function
                 entry = parent->entryForResource(id);
-                deleter.reset(entry);
             }
 
             if (!entry || !entry->isValid()) {
@@ -105,7 +103,7 @@ public:
             }
 
             // If this is an application, use the applications:-format url
-            auto appEntry = dynamic_cast<AppEntry*>(entry);
+            auto appEntry = dynamic_cast<AppEntry*>(entry.data());
             if (appEntry && !appEntry->menuId().isEmpty()) {
                 m_id = QStringLiteral("applications:") + appEntry->menuId();
                 return;
@@ -149,30 +147,32 @@ public:
         return NormalizedId(this, id);
     }
 
-    AbstractEntry *entryForResource(const QString &resource) const
+    QSharedPointer<AbstractEntry> entryForResource(const QString &resource) const
     {
+        using SP = QSharedPointer<AbstractEntry>;
+
         const auto agent =
             agentForUrl(resource);
 
         if (agent == AGENT_CONTACTS) {
-            return new ContactEntry(q, resource);
+            return SP(new ContactEntry(q, resource));
 
         } else if (agent == AGENT_DOCUMENTS) {
             if (resource.startsWith(QLatin1String("/"))) {
-                return new FileEntry(q, QUrl::fromLocalFile(resource));
+                return SP(new FileEntry(q, QUrl::fromLocalFile(resource)));
             } else {
-                return new FileEntry(q, QUrl(resource));
+                return SP(new FileEntry(q, QUrl(resource)));
             }
 
         } else if (agent == AGENT_APPLICATIONS) {
             if (resource.startsWith(QLatin1String("applications:"))) {
-                return new AppEntry(q, resource.mid(13));
+                return SP(new AppEntry(q, resource.mid(13)));
             } else {
-                return new AppEntry(q, resource);
+                return SP(new AppEntry(q, resource));
             }
 
         } else {
-            return nullptr;
+            return {};
         }
     }
 
@@ -333,14 +333,13 @@ public:
         m_items.removeAt(index);
 
         // Removing the entry from the cache
-        QMutableHashIterator<QString, AbstractEntry*> i(m_itemEntries);
+        QMutableHashIterator<QString, QSharedPointer<AbstractEntry>> i(m_itemEntries);
         while (i.hasNext()) {
             i.next();
             if (i.value() == entry) {
                 i.remove();
             }
         }
-        delete entry;
 
         endRemoveRows();
     }
@@ -449,7 +448,7 @@ public:
     QString m_clientId;
 
     QVector<NormalizedId> m_items;
-    QHash<QString, AbstractEntry*> m_itemEntries;
+    QHash<QString, QSharedPointer<AbstractEntry>> m_itemEntries;
     QStringList m_ignoredItems;
 };
 
