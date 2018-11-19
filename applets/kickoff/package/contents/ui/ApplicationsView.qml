@@ -64,7 +64,6 @@ Item {
 
     function reset() {
         applicationsView.model = rootModel;
-        applicationsView.listView.positionViewAtBeginning();
         applicationsView.clearBreadcrumbs();
     }
 

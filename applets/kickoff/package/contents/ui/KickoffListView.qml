@@ -54,7 +54,16 @@ FocusScope {
         listView.decrementCurrentIndex();
     }
 
-    
+    Connections {
+        target: plasmoid
+
+        onExpandedChanged: {
+            if (!expanded) {
+                listView.positionViewAtBeginning();
+            }
+        }
+    }
+
     PlasmaExtras.ScrollArea {
         id: scrollArea
         frameVisible: false
