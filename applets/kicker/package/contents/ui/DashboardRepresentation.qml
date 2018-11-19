@@ -726,7 +726,7 @@ Kicker.DashboardWindow {
 
                     z: (opacity == 1.0) ? 1 : 0
                     width: parent.width
-                    height: systemFavoritesGrid.y + systemFavoritesGrid.height
+                    height: Math.min(implicitHeight, systemFavoritesGrid.y + systemFavoritesGrid.height)
 
                     enabled: (opacity == 1.0) ? 1 : 0
 
