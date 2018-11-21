@@ -1596,7 +1596,7 @@ void FolderModel::createActions()
     QAction *rename = KStandardAction::renameFile(this, &FolderModel::requestRename, this);
     QAction *trash = KStandardAction::moveToTrash(this, &FolderModel::moveSelectedToTrash, this);
 
-    QAction *emptyTrash = new QAction(QIcon::fromTheme(QStringLiteral("trash-empty")), i18n("&Empty Trash Bin"), this);
+    QAction *emptyTrash = new QAction(QIcon::fromTheme(QStringLiteral("trash-empty")), i18n("&Empty Trash"), this);
     connect(emptyTrash, &QAction::triggered, this, &FolderModel::emptyTrashBin);
 
     QAction *restoreFromTrash = new QAction(i18nc("Restore from trash", "Restore"), this);
