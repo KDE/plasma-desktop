@@ -33,6 +33,8 @@ PlasmaExtras.ScrollArea {
 
     width: parent.width
 
+    implicitHeight: itemColumn.implicitHeight
+
     signal keyNavLeft(int subGridIndex)
     signal keyNavRight(int subGridIndex)
     signal keyNavUp()
@@ -130,6 +132,13 @@ PlasmaExtras.ScrollArea {
 
                     svg: lineSvg
                     elementId: "horizontal-line"
+                }
+
+                MouseArea {
+                    width: parent.width
+                    height: parent.height
+
+                    onClicked: root.toggle()
                 }
 
                 ItemGridView {
