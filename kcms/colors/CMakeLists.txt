@@ -70,6 +70,7 @@ ki18n_wrap_ui(kcm_colors_SRCS
     setpreview.ui)
 
 add_library(kcm_colors MODULE ${kcm_colors_SRCS})
+add_dependencies(kcm_colors kcolorschemeeditor)
 target_link_libraries(kcm_colors
     KF5::KCMUtils
     KF5::GuiAddons
