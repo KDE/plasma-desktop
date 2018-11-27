@@ -413,12 +413,12 @@ Item {
 
                         z: 1
 
-                        horizontalOffset: 2
-                        verticalOffset: 2
+                        horizontalOffset: 1
+                        verticalOffset: 1
 
-                        radius: 9.0
-                        samples: 18
-                        spread: 0.15
+                        radius: 4
+                        samples: 9
+                        spread: 0.35
 
                         color: "black"
 
