@@ -32,18 +32,21 @@ CfgBrowser::CfgBrowser(QWidget *parent)
     setupUi(this);
     connect(lineExec, &KLineEdit::textChanged, this, &CfgBrowser::configChanged);
     connect(radioKIO, &QRadioButton::toggled, this, &CfgBrowser::configChanged);
-    connect(radioService, &QRadioButton::toggled, this, &CfgBrowser::configChanged);
-    connect(browserCombo, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated), this, [this](int index) {
-        const QString &storageId = browserCombo->itemData(index).toString();
-        m_browserService = KService::serviceByStorageId(storageId);
-        m_browserExec.clear();
-        emit configChanged();
-    });
+    connect(radioService, &QRadioButton::toggled, this, &CfgBrowser::selectBrowserApp);
+    connect(browserCombo, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated), this, &CfgBrowser::selectBrowserApp);
     connect(radioExec, &QRadioButton::toggled, this, &CfgBrowser::configChanged);
     connect(btnSelectApplication, &QToolButton::clicked, this, &CfgBrowser::selectBrowser);
 }
 
 CfgBrowser::~CfgBrowser() {
+}
+
+void CfgBrowser::selectBrowserApp()
+{
+    const QString &storageId = browserCombo->currentData().toString();
+    m_browserService = KService::serviceByStorageId(storageId);
+    m_browserExec.clear();
+    configChanged();
 }
 
 void CfgBrowser::configChanged()

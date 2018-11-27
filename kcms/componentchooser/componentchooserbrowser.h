@@ -32,6 +32,7 @@ public:
 protected Q_SLOTS:
 	void selectBrowser();
 	void configChanged();
+	void selectBrowserApp();
 
 Q_SIGNALS:
 	void changed(bool);
