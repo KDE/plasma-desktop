@@ -173,7 +173,7 @@ bool CGroupListItem::addFamilies(QDomElement &elem)
 void CGroupListItem::save(QTextStream &str)
 {
     str << " <" GROUP_TAG " " NAME_ATTR "=\"" << Misc::encodeText(itsName, str) << "\">" << endl;
-    if(itsFamilies.count())
+    if(!itsFamilies.isEmpty())
     {
         QSet<QString>::ConstIterator it(itsFamilies.begin()),
                                      end(itsFamilies.end());
@@ -859,7 +859,7 @@ CGroupListItem::EType CGroupListView::getType()
 {
     QModelIndexList selectedItems(selectedIndexes());
 
-    if(selectedItems.count() && selectedItems.last().isValid())
+    if(!selectedItems.isEmpty() && selectedItems.last().isValid())
     {
         CGroupListItem *grp=static_cast<CGroupListItem *>(selectedItems.last().internalPointer());
 

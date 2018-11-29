@@ -459,7 +459,7 @@ int main(int argc, char **argv)
     {
         QString listFile(parser.value(listfileOption));
 
-        if(listFile.size())
+        if(!listFile.isEmpty())
         {
             QFile f(listFile);
 
@@ -500,7 +500,7 @@ int main(int argc, char **argv)
             }
         }
 
-        if(fonts.count())
+        if(!fonts.isEmpty())
         {
             CPrinter(createParent(parser.value(embedOption).toInt(nullptr, 16))).print(fonts, size);
 

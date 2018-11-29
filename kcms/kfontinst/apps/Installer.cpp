@@ -101,7 +101,7 @@ int CInstaller::install(const QSet<QUrl> &urls)
         }
     }
 
-    if(instUrls.count())
+    if(!instUrls.isEmpty())
     {
         CJobRunner::ItemList      list;
         QSet<QUrl>::ConstIterator it(instUrls.begin()),
@@ -148,7 +148,7 @@ int main(int argc, char **argv)
     foreach (const QString &arg, parser.positionalArguments())
         urls.insert(QUrl::fromUserInput(arg, QDir::currentPath()));
 
-    if (urls.count())
+    if (!urls.isEmpty())
     {
         QString opt(parser.value(embedOption));
         KFI::CInstaller inst(createParent(opt.size() ? opt.toInt(nullptr, 16) : 0));

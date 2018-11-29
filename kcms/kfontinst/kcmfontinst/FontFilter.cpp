@@ -224,7 +224,7 @@ void CFontFilter::setFoundries(const QSet<QString> &currentFoundries)
         }
     }
 
-    if(foundries.count())
+    if(!foundries.isEmpty())
     {
         // Add foundries to menu - replacing '&' with '&&', as '&' is taken to be
         // a shortcut!

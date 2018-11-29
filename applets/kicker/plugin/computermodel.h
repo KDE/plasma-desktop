@@ -40,7 +40,7 @@ class FilteredPlacesModel : public QSortFilterProxyModel
     Q_OBJECT
 
     public:
-        FilteredPlacesModel(QObject *parent = nullptr);
+        explicit FilteredPlacesModel(QObject *parent = nullptr);
         ~FilteredPlacesModel() override;
 
         QUrl url(const QModelIndex &index) const;

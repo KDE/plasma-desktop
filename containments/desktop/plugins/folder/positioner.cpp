@@ -270,7 +270,7 @@ void Positioner::setRangeSelected(int anchor, int to)
             }
         }
 
-        if (indices.count()) {
+        if (!indices.isEmpty()) {
             m_folderModel->updateSelection(indices, false);
         }
     } else {

@@ -458,7 +458,7 @@ void CKCmFontInst::fontsSelected(const QModelIndexList &list)
 {
     if(!itsPreviewHidden)
     {
-        if(list.count())
+        if(!list.isEmpty())
         {
             if(list.count()<2)
             {
@@ -490,7 +490,7 @@ void CKCmFontInst::addFonts()
     if (dlg.exec() == QDialog::Accepted)
         list = dlg.selectedUrls();
 
-    if(list.count())
+    if(!list.isEmpty())
     {
         QSet<QUrl>           urls;
         QList<QUrl>::Iterator it(list.begin()),
@@ -518,7 +518,7 @@ void CKCmFontInst::addFonts()
                     urls.insert(url);
             }
         }
-        if(urls.count())
+        if(!urls.isEmpty())
             addFonts(urls);
         delete itsTempDir;
         itsTempDir=nullptr;
@@ -570,7 +570,7 @@ void CKCmFontInst::print(bool all)
 
         itsFontListView->getPrintableFonts(fonts, !all);
 
-        if(fonts.count())
+        if(!fonts.isEmpty())
         {
             CPrintDialog dlg(this);
             KConfigGroup cg(&itsConfig, CFG_GROUP);
@@ -774,7 +774,7 @@ void CKCmFontInst::zipGroup()
 
                     files=itsFontListView->getFiles();
 
-                    if(files.count())
+                    if(!files.isEmpty())
                     {
                         QMap<QString, QString>                map=Misc::getFontFileMap(files);
                         QMap<QString, QString>::ConstIterator it(map.constBegin()),
@@ -864,7 +864,7 @@ void CKCmFontInst::downloadFonts()
     KNS3::DownloadDialog *newStuff = new KNS3::DownloadDialog("kfontinst.knsrc", this);
     newStuff->exec();
 
-    if(newStuff->changedEntries().count())  // We have new fonts, so need to reconfigure fontconfig...
+    if(!newStuff->changedEntries().isEmpty())  // We have new fonts, so need to reconfigure fontconfig...
     {
         // Ask dbus helper for the current fonts folder name...
         // We then sym-link our knewstuff3 download folder into the fonts folder...
@@ -1014,7 +1014,7 @@ void CKCmFontInst::setStatusBar()
 
 void CKCmFontInst::addFonts(const QSet<QUrl> &src)
 {
-    if(src.count() && !itsGroupListView->isCustom())
+    if(!src.isEmpty() && !itsGroupListView->isCustom())
     {
         bool system;
 
@@ -1117,7 +1117,7 @@ void CKCmFontInst::addFonts(const QSet<QUrl> &src)
 
 void CKCmFontInst::removeDeletedFontsFromGroups()
 {
-    if(itsDeletedFonts.count())
+    if(!itsDeletedFonts.isEmpty())
     {
         QSet<QString>::Iterator it(itsDeletedFonts.begin()),
                                 end(itsDeletedFonts.end());

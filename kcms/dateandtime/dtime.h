@@ -29,7 +29,6 @@
 #include <QTimer>
 #include <QWidget>
 #include <QCheckBox>
-//Added by qt3to4:
 #include <QPaintEvent>
 
 #include <kdatepicker.h>
@@ -46,7 +45,7 @@ class Dtime : public QWidget, public Ui::DateAndTime
 {
   Q_OBJECT
  public:
-  Dtime( QWidget *parent, bool haveTimedated);
+  explicit Dtime( QWidget *parent, bool haveTimedated);
 
   void processHelperErrors( int code );
   void	load();

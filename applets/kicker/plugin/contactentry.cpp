@@ -85,7 +85,7 @@ QString ContactEntry::id() const
         if (id.isEmpty()) {
             const QStringList uris = m_personData->contactUris();
 
-            if (uris.count()) {
+            if (!uris.isEmpty()) {
                 return uris.at(0);
             }
         } else {

@@ -299,7 +299,7 @@ void CFontViewPart::timeout()
                 {
                     QStringList fonts(zipDir->entries());
 
-                    if(fonts.count())
+                    if(!fonts.isEmpty())
                     {
                         QStringList::ConstIterator it(fonts.begin()),
                                                    end(fonts.end());
@@ -488,7 +488,7 @@ void CFontViewPart::print()
              << QString().setNum(KFI_NO_STYLE_INFO);
 #endif
 
-    if(args.count())
+    if(!args.isEmpty())
         QProcess::startDetached(Misc::app(KFI_PRINTER), args);
 }
 

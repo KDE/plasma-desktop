@@ -668,7 +668,7 @@ QImage CFcEngine::drawPreview(const QString &name, quint32 style, int faceNo, co
 
         getSizes();
 
-        if(itsSizes.size())
+        if(!itsSizes.isEmpty())
         {
             //
             // Calculate size of text...
@@ -771,7 +771,7 @@ QImage CFcEngine::draw(const QString &name, quint32 style, int faceNo, const QCo
 
         getSizes();
         
-        if(itsSizes.size())
+        if(!itsSizes.isEmpty())
         {
             if(!itsScalable) // Then need to get nearest size...
             {
@@ -875,7 +875,7 @@ QImage CFcEngine::draw(const QString &name, quint32 style, int faceNo, const QCo
 
         getSizes();
 
-        if(itsSizes.size())
+        if(!itsSizes.isEmpty())
         {
             int  imgWidth(thumb && itsScalable ? w*4 : w),
                  imgHeight(thumb && itsScalable ? h*4 : h);

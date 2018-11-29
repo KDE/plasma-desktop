@@ -307,7 +307,7 @@ void CFontFileList::getDuplicateFonts(TFontMap &map)
 {
     map=itsMap;
 
-    if(map.count())
+    if(!map.isEmpty())
     {
         TFontMap::Iterator it(map.begin()),
                            end(map.end());
@@ -347,7 +347,7 @@ void CFontFileList::run()
 
     // if we have 2 fonts: /wibble/a.ttf and /wibble/a.TTF fontconfig only returns the 1st, so we
     // now iterate over fontconfig's list, and look for other matching fonts...
-    if(itsMap.count() && !itsTerminated)
+    if(!itsMap.isEmpty() && !itsTerminated)
     {
         // Create a map of folder -> set<files>
         TFontMap::Iterator           it(itsMap.begin()),
@@ -541,7 +541,7 @@ void CFontFileListView::openViewer()
         if(item->parent()) // Then it is a file, not font name :-)
             files.insert(item->text(0));
 
-    if(files.count() &&
+    if(!files.isEmpty() &&
        (files.count()<constMaxBeforePrompt ||
         KMessageBox::Yes==KMessageBox::questionYesNo(this, i18np("Open font in font viewer?",
                                                                  "Open all %1 fonts in font viewer?",
@@ -574,7 +574,7 @@ void CFontFileListView::properties()
                                    db.mimeTypeForFile(item->text(0)).name(),
                                    item->text(COL_LINK).isEmpty() ? S_IFREG : S_IFLNK));
 
-    if(files.count())
+    if(!files.isEmpty())
     {
         KPropertiesDialog dlg(files, this);
         dlg.exec();

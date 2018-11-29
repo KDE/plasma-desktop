@@ -1992,7 +1992,7 @@ void CFontListView::dropEvent(QDropEvent *event)
             }
         }
 
-        if(kurls.count())
+        if(!kurls.isEmpty())
             emit fontsDropped(kurls);
     }
 }

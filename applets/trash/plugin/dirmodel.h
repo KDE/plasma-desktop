@@ -92,7 +92,7 @@ private:
     QHash<QUrl, QPersistentModelIndex> m_filesToPreview;
     QSize m_screenshotSize;
     QHash<QUrl, QPersistentModelIndex> m_previewJobs;
-    KImageCache* m_imageCache;
+    KImageCache* m_imageCache = nullptr;
 };
 
 #endif // DIRMODEL_H

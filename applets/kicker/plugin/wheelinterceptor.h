@@ -30,7 +30,7 @@ class WheelInterceptor : public QQuickItem
     Q_PROPERTY(QQuickItem* destination READ destination WRITE setDestination NOTIFY destinationChanged)
 
     public:
-        WheelInterceptor(QQuickItem *parent = nullptr);
+        explicit WheelInterceptor(QQuickItem *parent = nullptr);
         ~WheelInterceptor() override;
 
         QQuickItem *destination() const;

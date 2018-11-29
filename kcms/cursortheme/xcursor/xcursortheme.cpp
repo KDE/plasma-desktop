@@ -59,7 +59,7 @@ XCursorTheme::XCursorTheme(const QDir &themeDir)
         XcursorImagesDestroy(images);
         qSort(sizeList.begin(), sizeList.end());
         m_availableSizes = sizeList;
-    };
+    }
     if (!sizeList.isEmpty())
     {
         QString sizeListString = QString::number(sizeList.takeFirst());
@@ -177,7 +177,7 @@ int XCursorTheme::defaultCursorSize() const
             dim = DisplayHeight(dpy, DefaultScreen(dpy));
         } else {
             dim = DisplayWidth(dpy, DefaultScreen(dpy));
-        };
+        }
         size = dim / 48;
     }
     return size;

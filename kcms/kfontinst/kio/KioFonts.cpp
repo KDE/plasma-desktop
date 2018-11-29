@@ -545,7 +545,7 @@ void CKioFonts::statFont(const QUrl &url)
 
 void CKioFonts::special(const QByteArray &a)
 {
-    if(a.size())
+    if(!a.isEmpty())
         error(KIO::ERR_UNSUPPORTED_ACTION, i18n("No special methods supported."));
     else
     {

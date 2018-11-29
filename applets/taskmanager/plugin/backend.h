@@ -54,9 +54,9 @@ class Backend : public QObject
             ToggleGrouping
         };
 
-        Q_ENUM(MiddleClickAction);
+        Q_ENUM(MiddleClickAction)
 
-        Backend(QObject *parent = nullptr);
+        explicit Backend(QObject *parent = nullptr);
         ~Backend() override;
 
         QQuickItem *taskManagerItem() const;

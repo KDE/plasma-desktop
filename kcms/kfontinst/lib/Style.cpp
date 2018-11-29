@@ -128,7 +128,7 @@ QString Style::toXml(bool disabled, const QString &family, QTextStream &s) const
 
         QStringList ws(WritingSystems::instance()->getLangs(itsWritingSystems));
 
-        if(ws.count())
+        if(!ws.isEmpty())
             str+=LANGS_ATTR"=\""+ws.join(LANG_SEP)+"\" ";
 
 

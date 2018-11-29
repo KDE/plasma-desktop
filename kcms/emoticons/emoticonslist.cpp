@@ -405,7 +405,7 @@ void EmoticonList::loadTheme(const QString &name)
     if (emoMap.contains(name)) {
         emoMap.remove(name);
         QList<QListWidgetItem *>ls = themeList->findItems(name, Qt::MatchExactly);
-        if (ls.size()) {
+        if (!ls.isEmpty()) {
             delete ls.at(0);
         }
     }
@@ -437,7 +437,7 @@ void EmoticonList::getNewStuff()
             } else if (entries.at(i).status() == KNS3::Entry::Deleted) {
                 QString name = entries.at(i).uninstalledFiles().at(0).section(QLatin1Char('/'), -2, -2);
                 QList<QListWidgetItem*> ls = themeList->findItems(name, Qt::MatchExactly);
-                if (ls.size()) {
+                if (!ls.isEmpty()) {
                     delete ls.at(0);
                     emoMap.remove(name);
                 }

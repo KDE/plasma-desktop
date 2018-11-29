@@ -136,7 +136,7 @@ void Translations::selectedLanguagesChanged()
 
 void Translations::missingLanguagesChanged()
 {
-    if (m_selectedTranslationsModel->missingLanguages().count()) {
+    if (!m_selectedTranslationsModel->missingLanguages().isEmpty()) {
         setNeedsSave(true);
     }
 }

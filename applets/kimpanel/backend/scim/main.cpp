@@ -114,7 +114,7 @@ static void       slot_unlock(void);
 /////////////////////////////////////////////////////////////////////////////
 //static bool               _ui_initialized              = false;
 
-static ConfigModule      *_config_module               = 0;
+static ConfigModule      *_config_module               = nullptr;
 static ConfigPointer      _config;
 
 static std::vector<HelperInfo>       _helper_list;
@@ -123,7 +123,7 @@ static bool               _should_exit                 = false;
 
 //static bool               _panel_is_on                 = false;
 
-static PanelAgent        *_panel_agent                 = 0;
+static PanelAgent        *_panel_agent                 = nullptr;
 
 static QList<PanelFactoryInfo> _factory_list;
 
@@ -289,7 +289,7 @@ class DBusHandler : public QObject
 {
     Q_OBJECT
 public:
-    DBusHandler(QObject *parent = 0): QObject(parent) {
+    explicit DBusHandler(QObject *parent = nullptr): QObject(parent) {
         QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "MovePreeditCaret", this, SLOT(MovePreeditCaret(int)));
         QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "SelectCandidate", this, SLOT(SelectCandidate(int)));
         QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "LookupTablePageUp", this, SLOT(LookupTablePageUp()));
@@ -748,7 +748,7 @@ class PanelAgentThread : public QThread
 {
     Q_OBJECT
 public:
-    PanelAgentThread(QObject *parent = 0): QThread(parent) {}
+    explicit PanelAgentThread(QObject *parent = nullptr): QThread(parent) {}
     ~PanelAgentThread() {}
     void run() {
         if (!_panel_agent->run())

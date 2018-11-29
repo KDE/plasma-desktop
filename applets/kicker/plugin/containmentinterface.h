@@ -41,7 +41,7 @@ class ContainmentInterface : public QObject
 
         Q_ENUM(Target)
 
-        ContainmentInterface(QObject *parent = nullptr);
+        explicit ContainmentInterface(QObject *parent = nullptr);
         ~ContainmentInterface() override;
 
         static Q_INVOKABLE bool mayAddLauncher(QObject *appletInterface, Target target, const QString &entryPath = QString());

@@ -214,12 +214,12 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
         QVariantList actionList;
 
         const QVariantList &jumpList = Kicker::jumpListActions(service);
-        if (jumpList.count()) {
+        if (!jumpList.isEmpty()) {
             actionList << jumpList << Kicker::createSeparatorActionItem();
         }
 
         const QVariantList &recentDocuments = Kicker::recentDocumentActions(service);
-        if (recentDocuments.count()) {
+        if (!recentDocuments.isEmpty()) {
             actionList << recentDocuments << Kicker::createSeparatorActionItem();
         }
 

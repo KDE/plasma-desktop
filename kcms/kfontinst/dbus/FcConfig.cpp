@@ -88,7 +88,7 @@ QString getConfigFile(bool system)
 
     //
     // Go through list of files, looking for the preferred one...
-    if(files.count())
+    if(!files.isEmpty())
     {
         QStringList::const_iterator it(files.begin()),
                               end(files.end());

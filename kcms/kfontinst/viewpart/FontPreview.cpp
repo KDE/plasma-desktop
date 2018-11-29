@@ -136,7 +136,7 @@ void CFontPreview::paintEvent(QPaintEvent *)
 
 void CFontPreview::mouseMoveEvent(QMouseEvent *event)
 {
-    if(itsChars.size())
+    if(!itsChars.isEmpty())
     {
         QList<CFcEngine::TChar>::ConstIterator end(itsChars.end());
 

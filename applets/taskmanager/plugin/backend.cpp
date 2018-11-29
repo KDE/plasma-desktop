@@ -231,7 +231,7 @@ QVariantList Backend::placesActions(const QUrl &launcherUrl, bool showAllPlaces,
 
         QAction *placeAction = new QAction(icon, title, parent);
 
-        connect(placeAction, &QAction::triggered, this, [this, url, desktopEntryUrl] {
+        connect(placeAction, &QAction::triggered, this, [url, desktopEntryUrl] {
             KService::Ptr service = KService::serviceByDesktopPath(desktopEntryUrl.toLocalFile());
             if (!service) {
                 return;
@@ -488,7 +488,7 @@ void Backend::presentWindows(const QVariant &_winIds)
         }
     }
 
-    if (!winIds.count()) {
+    if (winIds.isEmpty()) {
         return;
     }
 
@@ -574,11 +574,11 @@ void Backend::updateWindowHighlight()
 
     QList<WId> windows = m_windowsToHighlight;
 
-    if (windows.count() && m_toolTipItem && m_toolTipItem->window()) {
+    if (!windows.isEmpty() && m_toolTipItem && m_toolTipItem->window()) {
         windows.append(m_toolTipItem->window()->winId());
     }
 
-    if (windows.count() && m_groupDialog) {
+    if (!windows.isEmpty() && m_groupDialog) {
         windows.append(m_groupDialog->winId());
     }
 

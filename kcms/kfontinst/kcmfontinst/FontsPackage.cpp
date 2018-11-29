@@ -51,7 +51,7 @@ QSet<QUrl> extract(const QString &fileName, QTemporaryDir **tempDir)
         {
             QStringList fonts(zipDir->entries());
 
-            if(fonts.count())
+            if(!fonts.isEmpty())
             {
                 QStringList::ConstIterator it(fonts.begin()),
                                            end(fonts.end());

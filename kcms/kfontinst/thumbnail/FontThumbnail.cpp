@@ -74,7 +74,7 @@ bool CFontThumbnail::create(const QString &path, int width, int height, QImage &
             {
                 QStringList fonts(zipDir->entries());
 
-                if(fonts.count())
+                if(!fonts.isEmpty())
                 {
                     QStringList::ConstIterator it(fonts.begin()),
                                                end(fonts.end());

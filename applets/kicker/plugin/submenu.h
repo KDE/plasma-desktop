@@ -33,7 +33,7 @@ class SubMenu : public PlasmaQuick::Dialog
     Q_PROPERTY(bool facingLeft READ facingLeft NOTIFY facingLeftChanged)
 
     public:
-        SubMenu(QQuickItem *parent = nullptr);
+        explicit SubMenu(QQuickItem *parent = nullptr);
         ~SubMenu() override;
 
         Q_INVOKABLE QRect availableScreenRectForItem(QQuickItem *item) const;
