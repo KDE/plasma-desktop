@@ -114,7 +114,7 @@ void KCMSplashScreen::getNewClicked()
     KNS3::DownloadDialog dialog("ksplash.knsrc", nullptr);
     if (dialog.exec()) {
         KNS3::Entry::List list = dialog.changedEntries();
-        if (list.count() > 0) {
+        if (!list.isEmpty()) {
             loadModel();
         }
     }

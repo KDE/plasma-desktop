@@ -64,7 +64,7 @@ void PosWidget::paintEvent(QPaintEvent *)
     for (int i = 0; i < tracePoints.count()-2; i++)
       paint.drawLine(tracePoints[i], tracePoints[i+1]);
 
-    if ( tracePoints.count() > 0 )
+    if ( !tracePoints.isEmpty() )
       paint.drawLine(tracePoints[tracePoints.count()-1], QPoint(x, y));
   }
 
