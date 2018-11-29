@@ -600,8 +600,9 @@ FocusScope {
                     } else {
                         var iconWidth = iconSize + (2 * units.largeSpacing) + (2 * units.smallSpacing);
                         if (root.isContainment && isRootView && scrollArea.viewportWidth > 0) {
-                            var extraWidth = calcExtraSpacing(iconWidth, scrollArea.viewportWidth);
-                            return iconWidth + extraWidth;
+                            var minIconWidth = Math.max(iconWidth, units.iconSizes.small * 8);
+                            var extraWidth = calcExtraSpacing(minIconWidth, scrollArea.viewportWidth);
+                            return minIconWidth + extraWidth;
                         } else {
                             return iconWidth;
                         }
