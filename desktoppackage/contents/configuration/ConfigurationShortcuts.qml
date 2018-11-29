@@ -17,14 +17,12 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Layouts 1.0
 import org.kde.kquickcontrols 2.0
 
 Item {
     id: root
-    width: childrenRect.width
-    height: childrenRect.height
 
     signal configurationChanged
     function saveConfig() {

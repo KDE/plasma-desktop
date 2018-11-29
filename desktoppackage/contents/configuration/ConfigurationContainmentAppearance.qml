@@ -18,16 +18,17 @@
 
 import QtQuick 2.0
 import org.kde.plasma.configuration 2.0
-import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Layouts 1.1
 
 import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.plasma.private.shell 2.0 as ShellPrivate // for WallpaperPlugin
+import org.kde.kirigami 2.5 as Kirigami
 
 ColumnLayout {
     id: root
 
-    property int formAlignment: wallpaperComboBox.x + (units.largeSpacing/2)
+    property int formAlignment: wallpaperComboBox.Kirigami.ScenePosition.x - root.Kirigami.ScenePosition.x + (units.largeSpacing/2)
     property string currentWallpaper: ""
     property string containmentPlugin: ""
     signal configurationChanged
@@ -53,6 +54,7 @@ ColumnLayout {
             var data = configDialog.containmentPluginsConfigModel.get(i);
             if (configDialog.containmentPlugin == data.pluginName) {
                 pluginComboBox.currentIndex = i
+                pluginComboBox.activated(i);
                 break;
             }
         }
@@ -61,30 +63,66 @@ ColumnLayout {
             var data = configDialog.wallpaperConfigModel.get(i);
             if (configDialog.currentWallpaper == data.pluginName) {
                 wallpaperComboBox.currentIndex = i
+                wallpaperComboBox.activated(i);
                 break;
             }
         }
     }
 
-    Row {
-        spacing: units.largeSpacing / 2
-        visible: pluginComboBox.count > 1
-        QtControls.Label {
-            width: formAlignment - units.largeSpacing
-            anchors.verticalCenter: pluginComboBox.verticalCenter
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout:")
-            horizontalAlignment: Text.AlignRight
-        }
+    Kirigami.InlineMessage {
+        visible: plasmoid.immutable || animating
+        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout cannot be changed while widgets are locked")
+        showCloseButton: true
+        Layout.fillWidth: true
+        Layout.leftMargin: Kirigami.Units.smallSpacing
+        Layout.rightMargin: Kirigami.Units.smallSpacing
+    }
+
+    Kirigami.FormLayout {
+        Layout.fillWidth: true
         QtControls.ComboBox {
             id: pluginComboBox
+            Layout.preferredWidth: Math.max(implicitWidth, wallpaperComboBox.implicitWidth)
+            Kirigami.FormData.label: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout:")
             enabled: !plasmoid.immutable
             model: configDialog.containmentPluginsConfigModel
             width: theme.mSize(theme.defaultFont).width * 24
             textRole: "name"
-            onCurrentIndexChanged: {
+            onActivated: {
                 var model = configDialog.containmentPluginsConfigModel.get(currentIndex)
                 root.containmentPlugin = model.pluginName
                 root.configurationChanged()
+            }
+        }
+
+        RowLayout {
+            Layout.fillWidth: true
+            visible: !switchContainmentWarning.visible
+            Kirigami.FormData.label: i18nd("plasma_shell_org.kde.plasma.desktop", "Wallpaper Type:")
+            QtControls.ComboBox {
+                id: wallpaperComboBox
+                Layout.preferredWidth: Math.max(implicitWidth, pluginComboBox.implicitWidth)
+                model: configDialog.wallpaperConfigModel
+                width: theme.mSize(theme.defaultFont).width * 24
+                textRole: "name"
+                onActivated: {
+                    var model = configDialog.wallpaperConfigModel.get(currentIndex)
+                    root.currentWallpaper = model.pluginName
+                    configDialog.currentWallpaper = model.pluginName
+                    main.sourceFile = model.source
+                    root.configurationChanged()
+                }
+            }
+            QtControls.Button {
+                icon.name: "get-hot-new-stuff"
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Plugins...")
+                visible: KAuthorized.authorize("ghns")
+                onClicked: wallpaperPlugin.getNewWallpaperPlugin(this)
+                Layout.preferredHeight: wallpaperComboBox.height
+
+                ShellPrivate.WallpaperPlugin {
+                    id: wallpaperPlugin
+                }
             }
         }
     }
@@ -110,55 +148,11 @@ ColumnLayout {
             property: "enabled"
             value: !switchContainmentWarning.visible
         }
-        Item {
-            Layout.fillHeight: true
-        }
     }
 
-    QtControls.Label {
-        Layout.fillWidth: true
-
-        visible: plasmoid.immutable
-
-        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout cannot be changed while widgets are locked")
-        wrapMode: Text.Wrap
-    }
-
-    Row {
-        visible: !switchContainmentWarning.visible
-        id: wallpaperRow
-        spacing: units.largeSpacing / 2
-        Item {
-            width: units.largeSpacing
-            height: parent.height
-        }
-        QtControls.Label {
-            anchors.verticalCenter: wallpaperComboBox.verticalCenter
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Wallpaper Type:")
-        }
-        QtControls.ComboBox {
-            id: wallpaperComboBox
-            model: configDialog.wallpaperConfigModel
-            width: theme.mSize(theme.defaultFont).width * 24
-            textRole: "name"
-            onCurrentIndexChanged: {
-                var model = configDialog.wallpaperConfigModel.get(currentIndex)
-                root.currentWallpaper = model.pluginName
-                configDialog.currentWallpaper = model.pluginName
-                main.sourceFile = model.source
-                root.configurationChanged()
-            }
-        }
-        QtControls.Button {
-            iconName: "get-hot-new-stuff"
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Wallpaper Plugins...")
-            visible: KAuthorized.authorize("ghns")
-            onClicked: wallpaperPlugin.getNewWallpaperPlugin(this)
-
-            ShellPrivate.WallpaperPlugin {
-                id: wallpaperPlugin
-            }
-        }
+    Item {
+        Layout.fillHeight: true
+        visible: switchContainmentWarning.visible
     }
 
     Item {
@@ -169,10 +163,8 @@ ColumnLayout {
         id: main
 
         Layout.fillHeight: true;
-        anchors {
-            left: parent.left;
-            right: parent.right;
-        }
+        Layout.fillWidth: true;
+
         visible: !switchContainmentWarning.visible
 
         // Bug 360862: if wallpaper has no config, sourceFile will be ""
@@ -188,11 +180,7 @@ ColumnLayout {
                     props["cfg_" + key] = wallpaperConfig[key]
                 }
 
-                var newItem = push({
-                    item: Qt.resolvedUrl(sourceFile),
-                    replace: true,
-                    properties: props
-                })
+                var newItem = replace(Qt.resolvedUrl(sourceFile), props)
 
                 for (var key in wallpaperConfig) {
                     var changedSignal = newItem["cfg_" + key + "Changed"]

@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Layouts 1.0
 
 Item {
@@ -114,7 +114,7 @@ Item {
                     }
                     pluginsCombo.initialized = true;
                 }
-                onCurrentIndexChanged: {
+                onActivated: {
                     if (initialized && configDialog.containmentActionConfigModel.get(currentIndex).pluginName != pluginName) {
                         configDialog.currentContainmentActionsModel.update(index, action, configDialog.containmentActionConfigModel.get(currentIndex).pluginName);
                     }
@@ -130,7 +130,7 @@ Item {
                 Layout.row: index
 
                 QtControls.Button {
-                    iconName: "configure"
+                    icon.name: "configure"
                     width: height
                     enabled: model.hasConfigurationInterface
                     onClicked: {
@@ -138,14 +138,14 @@ Item {
                     }
                 }
                 QtControls.Button {
-                    iconName: "dialog-information"
+                    icon.name: "dialog-information"
                     width: height
                     onClicked: {
                         configDialog.currentContainmentActionsModel.showAbout(index, this);
                     }
                 }
                 QtControls.Button {
-                    iconName: "list-remove"
+                    icon.name: "list-remove"
                     width: height
                     onClicked: {
                         configDialog.currentContainmentActionsModel.remove(index);
@@ -155,7 +155,6 @@ Item {
         }
 
         MouseEventInputButton {
-            anchors.left: parent.left
             defaultText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Action");
             onEventStringChanged: {
                 configDialog.currentContainmentActionsModel.append(eventString, "org.kde.contextmenu");

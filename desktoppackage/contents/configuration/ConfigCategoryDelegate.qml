@@ -18,10 +18,11 @@
 
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Window 2.2
 
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.kirigami 2.5 as Kirigami
 
 MouseArea {
     id: delegate
@@ -32,7 +33,7 @@ MouseArea {
     Layout.fillWidth: true
     hoverEnabled: true
 
-    property bool current: (model.kcm && main.currentItem.kcm && model.kcm == main.currentItem.kcm) || (model.source == main.sourceFile)
+    property bool current: (model.kcm && pageStack.currentItem.kcm && model.kcm == pageStack.currentItem.kcm) || (model.source == pageStack.sourceFile)
 //END properties
 
 //BEGIN functions
@@ -41,19 +42,19 @@ MouseArea {
             return;
         }
         if (typeof(categories.currentItem) !== "undefined") {
-            main.invertAnimations = (categories.currentItem.y > delegate.y);
+            pageStack.invertAnimations = (categories.currentItem.y > delegate.y);
             categories.currentItem = delegate;
         }
         if (model.source) {
-            main.sourceFile = model.source;
+            pageStack.sourceFile = model.source;
         } else if (model.kcm) {
-            main.sourceFile = "";
-            main.sourceFile = Qt.resolvedUrl("ConfigurationKcmPage.qml");
-            main.currentItem.kcm = model.kcm;
+            pageStack.sourceFile = "";
+            pageStack.sourceFile = Qt.resolvedUrl("ConfigurationKcmPage.qml");
+            pageStack.currentItem.kcm = model.kcm;
         } else {
-            main.sourceFile = "";
+            pageStack.sourceFile = "";
         }
-        main.title = model.name
+        pageStack.title = model.name
     }
 //END functions
 
@@ -65,7 +66,7 @@ MouseArea {
             return;
         }
 
-        //print("model source: " + model.source + " " + main.sourceFile);
+        //print("model source: " + model.source + " " + pageStack.sourceFile);
         if (applyButton.enabled) {
             messageDialog.delegate = delegate;
             messageDialog.open();
@@ -84,7 +85,7 @@ MouseArea {
 //BEGIN UI components
     Rectangle {
         anchors.fill: parent
-        color: syspal.highlight
+        color: Kirigami.Theme.highlightColor
         opacity: { // try to match Breeze style hover handling
             var active = categoriesScroll.activeFocus && Window.active
             if (current) {
@@ -133,7 +134,7 @@ MouseArea {
             text: model.name
             wrapMode: Text.Wrap
             horizontalAlignment: Text.AlignHCenter
-            color: current && categoriesScroll.activeFocus ? syspal.highlightedText : syspal.text
+            color: current && categoriesScroll.activeFocus ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
             Behavior on color {
                 ColorAnimation {
                     duration: units.longDuration

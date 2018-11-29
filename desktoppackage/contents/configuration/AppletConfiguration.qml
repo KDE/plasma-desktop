@@ -16,12 +16,13 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.0
+import QtQuick 2.6
 import QtQuick.Dialogs 1.1
-import QtQuick.Controls 1.3 as QtControls
+import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Layouts 1.0
 import QtQuick.Window 2.2
 
+import org.kde.kirigami 2.5 as Kirigami
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.configuration 2.0
 
@@ -36,7 +37,7 @@ Rectangle {
     LayoutMirroring.childrenInherit: true
 
 //BEGIN properties
-    color: syspal.window
+    color: Kirigami.Theme.backgroundColor
     width: units.gridUnit * 40
     height: units.gridUnit * 30
 
@@ -65,12 +66,12 @@ Rectangle {
 
 //BEGIN functions
     function saveConfig() {
-        if (main.currentItem.saveConfig) {
-            main.currentItem.saveConfig()
+        if (pageStack.currentItem.saveConfig) {
+            pageStack.currentItem.saveConfig()
         }
         for (var key in plasmoid.configuration) {
-            if (main.currentItem["cfg_"+key] !== undefined) {
-                plasmoid.configuration[key] = main.currentItem["cfg_"+key]
+            if (pageStack.currentItem["cfg_"+key] !== undefined) {
+                plasmoid.configuration[key] = pageStack.currentItem["cfg_"+key]
             }
         }
     }
@@ -85,26 +86,24 @@ Rectangle {
     Component.onCompleted: {
         if (!isContainment && configDialog.configModel && configDialog.configModel.count > 0) {
             if (configDialog.configModel.get(0).source) {
-                main.sourceFile = configDialog.configModel.get(0).source
+                pageStack.sourceFile = configDialog.configModel.get(0).source
             } else if (configDialog.configModel.get(0).kcm) {
-                main.sourceFile = Qt.resolvedUrl("ConfigurationKcmPage.qml");
-                main.currentItem.kcm = configDialog.configModel.get(0).kcm;
+                pageStack.sourceFile = Qt.resolvedUrl("ConfigurationKcmPage.qml");
+                pageStack.currentItem.kcm = configDialog.configModel.get(0).kcm;
             } else {
-                main.sourceFile = "";
+                pageStack.sourceFile = "";
             }
-            main.title = configDialog.configModel.get(0).name
+            pageStack.title = configDialog.configModel.get(0).name
         } else {
-            main.sourceFile = globalConfigModel.get(0).source
-            main.title = globalConfigModel.get(0).name
+            pageStack.sourceFile = globalConfigModel.get(0).source
+            pageStack.title = globalConfigModel.get(0).name
         }
-//         root.width = mainColumn.implicitWidth
-//         root.height = mainColumn.implicitHeight
+//         root.width = pageStackColumn.implicitWidth
+//         root.height = pageStackColumn.implicitHeight
     }
 //END connections
 
 //BEGIN UI components
-    SystemPalette {id: syspal}
-
     MessageDialog {
         id: messageDialog
         icon: StandardIcon.Warning
@@ -122,10 +121,10 @@ Rectangle {
     }
 
     ColumnLayout {
-        id: mainColumn
+        id: pageStackColumn
         anchors {
             fill: parent
-            margins: mainColumn.spacing * units.devicePixelRatio //margins are hardcoded in QStyle we should match that here
+            margins: pageStackColumn.spacing * units.devicePixelRatio //margins are hardcoded in QStyle we should match that here
         }
         property int implicitWidth: Math.max(contentRow.implicitWidth, buttonsRow.implicitWidth) + 8
         property int implicitHeight: contentRow.implicitHeight + buttonsRow.implicitHeight + 8
@@ -139,13 +138,11 @@ Rectangle {
 
             QtControls.ScrollView {
                 id: categoriesScroll
-                frameVisible: false
-                horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
+                QtControls.ScrollBar.horizontal.policy: QtControls.ScrollBar.AlwaysOff
                 Layout.fillHeight: true
                 visible: (configDialog.configModel ? configDialog.configModel.count : 0) + globalConfigModel.count > 1
                 Layout.maximumWidth: units.gridUnit * 7
                 Layout.preferredWidth: categories.implicitWidth
-                flickableItem.interactive: false
 
                 Keys.onUpPressed: {
                     var buttons = categories.children
@@ -190,7 +187,7 @@ Rectangle {
                 ColumnLayout {
                     id: categories
                     spacing: 0
-                    width: categoriesScroll.viewport.width
+                    width: categoriesScroll.width
 
                     property Item currentItem: children[1]
 
@@ -212,7 +209,7 @@ Rectangle {
             Rectangle {
                 Layout.fillHeight: true
                 width: Math.round(units.devicePixelRatio)
-                color: syspal.highlight
+                color: Kirigami.Theme.highlightColor
                 visible: categoriesScroll.visible
                 opacity: categoriesScroll.activeFocus && Window.active ? 1 : 0.3
                 Behavior on color {
@@ -235,6 +232,7 @@ Rectangle {
                 // we want to focus the controls in the settings page right away, don't focus the ScrollView
                 activeFocusOnTab: false
 
+                property Item flickableItem: pageFlickable
                 // this horrible code below ensures the control with active focus stays visible in the window
                 // by scrolling the view up or down as needed when tabbing through the window
                 Window.onActiveFocusItemChanged: {
@@ -266,109 +264,104 @@ Rectangle {
                                                       yPos - flickable.height + item.height + padding);
                     }
                 }
+                Flickable {
+                    id: pageFlickable
+                    anchors.fill: parent
+                    contentHeight: pageColumn.height
+                    contentWidth: width
+                    Column {
+                        id: pageColumn
+                        spacing: units.largeSpacing / 2
 
-                Column {
-                    spacing: units.largeSpacing / 2
-
-                    QtControls.Label {
-                        id: pageTitle
-                        width: scroll.viewport.width
-                        font.pointSize: theme.defaultFont.pointSize*2
-                        font.weight: Font.Light
-                        text: main.title
-                    }
-
-                    QtControls.StackView {
-                        id: main
-                        property string title: ""
-                        property bool invertAnimations: false
-
-                        height: Math.max((scroll.viewport.height - pageTitle.height - parent.spacing), (main.currentItem  ? (main.currentItem.implicitHeight ? main.currentItem.implicitHeight : main.currentItem.childrenRect.height) : 0))
-                        width: scroll.viewport.width
-
-                        property string sourceFile
-
-                        onSourceFileChanged: {
-                            if (!sourceFile) {
-                                return;
-                            }
-
-                            var props = {}
-
-                            var plasmoidConfig = plasmoid.configuration
-                            for (var key in plasmoidConfig) {
-                                props["cfg_" + key] = plasmoid.configuration[key]
-                            }
-
-                            var newItem = push({
-                                item: Qt.resolvedUrl(sourceFile),
-                                replace: true,
-                                properties: props
-                            })
-
-                            for (var key in plasmoidConfig) {
-                                var changedSignal = newItem["cfg_" + key + "Changed"]
-                                if (changedSignal) {
-                                    changedSignal.connect(root.settingValueChanged)
-                                }
-                            }
-
-                            var configurationChangedSignal = newItem.configurationChanged
-                            if (configurationChangedSignal) {
-                                configurationChangedSignal.connect(root.settingValueChanged)
-                            }
-
-                            applyButton.enabled = false;
-                            scroll.flickableItem.contentY = 0
-                            /*
-                                * This is not needed on a desktop shell that has ok/apply/cancel buttons, i'll leave it here only for future reference until we have a prototype for the active shell.
-                                * root.pageChanged will start a timer, that in turn will call saveConfig() when triggered
-
-                            for (var prop in currentItem) {
-                                if (prop.indexOf("cfg_") === 0) {
-                                    currentItem[prop+"Changed"].connect(root.pageChanged)
-                                }
-                            }*/
+                        Kirigami.Heading {
+                            id: pageTitle
+                            width: scroll.width
+                            level: 1
+                            text: pageStack.title
                         }
 
-                        delegate: QtControls.StackViewDelegate {
-                            function transitionFinished(properties)
-                            {
-                                properties.exitItem.opacity = 1
+                        QtControls.StackView {
+                            id: pageStack
+                            property string title: ""
+                            property bool invertAnimations: false
+
+                            height: Math.max((scroll.height - pageTitle.height - parent.spacing), (pageStack.currentItem  ? (pageStack.currentItem.implicitHeight ? pageStack.currentItem.implicitHeight : pageStack.currentItem.childrenRect.height) : 0))
+                            width: scroll.width
+
+                            property string sourceFile
+
+                            onSourceFileChanged: {
+                                if (!sourceFile) {
+                                    return;
+                                }
+
+                                //in a StackView pages need to be initialized with stackviews size, or have none
+                                var props = {"width": width, "height": height}
+
+                                var plasmoidConfig = plasmoid.configuration
+                                for (var key in plasmoidConfig) {
+                                    props["cfg_" + key] = plasmoid.configuration[key]
+                                }
+
+                                var newItem = replace(Qt.resolvedUrl(sourceFile), props)
+
+                                for (var key in plasmoidConfig) {
+                                    var changedSignal = newItem["cfg_" + key + "Changed"]
+                                    if (changedSignal) {
+                                        changedSignal.connect(root.settingValueChanged)
+                                    }
+                                }
+
+                                var configurationChangedSignal = newItem.configurationChanged
+                                if (configurationChangedSignal) {
+                                    configurationChangedSignal.connect(root.settingValueChanged)
+                                }
+
+                                applyButton.enabled = false;
+                                scroll.flickableItem.contentY = 0
+                                /*
+                                    * This is not needed on a desktop shell that has ok/apply/cancel buttons, i'll leave it here only for future reference until we have a prototype for the active shell.
+                                    * root.pageChanged will start a timer, that in turn will call saveConfig() when triggered
+
+                                for (var prop in currentItem) {
+                                    if (prop.indexOf("cfg_") === 0) {
+                                        currentItem[prop+"Changed"].connect(root.pageChanged)
+                                    }
+                                }*/
                             }
 
-                            pushTransition: QtControls.StackViewTransition {
-                                PropertyAnimation {
-                                    target: enterItem
-                                    property: "opacity"
-                                    from: 0
-                                    to: 1
-                                    duration: units.longDuration
-                                    easing.type: Easing.InOutQuad
+                            replaceEnter: Transition {
+                                ParallelAnimation {
+                                    //OpacityAnimator when starting from 0 is buggy (it shows one frame with opacity 1)
+                                    NumberAnimation {
+                                        property: "opacity"
+                                        from: 0
+                                        to: 1
+                                        duration: units.longDuration
+                                        easing.type: Easing.InOutQuad
+                                    }
+                                    XAnimator {
+                                        from: pageStack.invertAnimations ? -scroll.width/3: scroll.width/3
+                                        to: 0
+                                        duration: units.longDuration
+                                        easing.type: Easing.InOutQuad
+                                    }
                                 }
-                                PropertyAnimation {
-                                    target: enterItem
-                                    property: "x"
-                                    from: main.invertAnimations ? -target.width/3: target.width/3
-                                    to: 0
-                                    duration: units.longDuration
-                                    easing.type: Easing.InOutQuad
-                                }
-                                PropertyAnimation {
-                                    target: exitItem
-                                    property: "opacity"
-                                    from: 1
-                                    to: 0
-                                    duration: units.longDuration
-                                    easing.type: Easing.InOutQuad
-                                }
-                                PropertyAnimation {
-                                    target: exitItem
-                                    property: "x"
-                                    from: 0
-                                    to: main.invertAnimations ? target.width/3 : -target.width/3
-                                    duration: units.longDuration
-                                    easing.type: Easing.InOutQuad
+                            }
+                            replaceExit: Transition {
+                                ParallelAnimation {
+                                    OpacityAnimator {
+                                        from: 1
+                                        to: 0
+                                        duration: units.longDuration
+                                        easing.type: Easing.InOutQuad
+                                    }
+                                    XAnimator {
+                                        from: 0
+                                        to: pageStack.invertAnimations ? scroll.width/3 : -scroll.width/3
+                                        duration: units.longDuration
+                                        easing.type: Easing.InOutQuad
+                                    }
                                 }
                             }
                         }
@@ -405,20 +398,20 @@ Rectangle {
             id: buttonsRow
             Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
             QtControls.Button {
-                iconName: "dialog-ok"
+                icon.name: "dialog-ok"
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "OK")
                 onClicked: acceptAction.trigger()
             }
             QtControls.Button {
                 id: applyButton
                 enabled: false
-                iconName: "dialog-ok-apply"
+                icon.name: "dialog-ok-apply"
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply")
-                visible: main.currentItem && (!main.currentItem.kcm || main.currentItem.kcm.buttons & 4) // 4 = Apply button
+                visible: pageStack.currentItem && (!pageStack.currentItem.kcm || pageStack.currentItem.kcm.buttons & 4) // 4 = Apply button
                 onClicked: applyAction.trigger()
             }
             QtControls.Button {
-                iconName: "dialog-cancel"
+                icon.name: "dialog-cancel"
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel")
                 onClicked: cancelAction.trigger()
             }
