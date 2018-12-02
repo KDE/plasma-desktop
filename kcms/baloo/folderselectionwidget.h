@@ -30,7 +30,7 @@ class FolderSelectionWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit FolderSelectionWidget(QWidget* parent = nullptr, Qt::WindowFlags f = nullptr);
+    explicit FolderSelectionWidget(QWidget* parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 
     void setDirectoryList(QStringList includeDirs, QStringList exclude);
     QStringList includeFolders() const;

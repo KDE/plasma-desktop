@@ -669,7 +669,7 @@ QFont KFonts::windowTitleFont() const
 void KFonts::adjustAllFonts()
 {
     QFont font = m_generalFont;
-    KFontChooser::FontDiffFlags fontDiffFlags = nullptr;
+    KFontChooser::FontDiffFlags fontDiffFlags;
     int ret = KFontDialog::getFontDiff(font, fontDiffFlags, KFontChooser::NoDisplayFlags);
 
     if (ret == KDialog::Accepted && fontDiffFlags) {
