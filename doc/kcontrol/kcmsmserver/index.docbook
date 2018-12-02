@@ -13,8 +13,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2018-03-30</date>
-<releaseinfo>Plasma 5.12</releaseinfo>
+<date>2018-11-28</date>
+<releaseinfo>Plasma 5.14</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -95,8 +95,8 @@ left it.</para>
 <listitem><para>Instead of restoring &plasma; to the state it was when
 you logged out last, it will be restored to a specific state that you
 have saved manually.</para>
-<para>If this option is checked, the start menu offers an additional item 
-<menuchoice><guimenu>Leave</guimenu><guimenuitem>Save Session</guimenuitem></menuchoice>.
+<para>If this option is checked, the application menu offers an additional item 
+<menuchoice><guimenu>Power / Session</guimenu><guimenuitem>Save Session</guimenuitem></menuchoice>.
 </para></listitem>
 </varlistentry>
 <varlistentry>
@@ -107,7 +107,7 @@ have saved manually.</para>
 </varlistentry>
 </variablelist>
 <para>Finally, you can enter a colon (<literal>:</literal>) or comma (<literal>,</literal>)
-separated list of applications that should not be saved in sessions,
+separated list of applications that should be excluded from sessions,
 and therefore will not be started when restoring a session.  For example
 <userinput>xterm:konsole</userinput> or <userinput>xterm,konsole</userinput>.</para>
 <!-- does this need the full path here? -->
