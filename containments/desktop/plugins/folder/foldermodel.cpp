@@ -1783,11 +1783,14 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
         KFileItemListProperties itemProperties(items);
 
         // Start adding the actions:
-        menu->addAction(m_actionCollection.action(QStringLiteral("open")));
+        // "Open" and "Open with" actions
+        m_fileItemActions->setItemListProperties(itemProperties);
+        m_fileItemActions->addOpenWithActionsTo(menu);
         menu->addSeparator();
         menu->addAction(m_actionCollection.action(QStringLiteral("cut")));
         menu->addAction(m_actionCollection.action(QStringLiteral("copy")));
-        menu->addAction(m_actionCollection.action(QStringLiteral("pasteto")));
+        menu->addAction(m_actionCollection.action(QStringLiteral("paste")));
+        menu->addSeparator();
         menu->addAction(m_actionCollection.action(QStringLiteral("rename")));
         menu->addAction(m_actionCollection.action(QStringLiteral("restoreFromTrash")));
 
@@ -1805,9 +1808,8 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
 
         deleteAction->setVisible(showDeleteCommand || !trashAction->isVisible());
 
-        // "Open with" actions
-        m_fileItemActions->setItemListProperties(itemProperties);
-        m_fileItemActions->addOpenWithActionsTo(menu);
+        menu->addSeparator();
+
         // Service actions
         m_fileItemActions->addServiceActionsTo(menu);
         menu->addSeparator();
@@ -1825,7 +1827,9 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
 
         // Properties
         if (KPropertiesDialog::canDisplay(items)) {
+            menu->addSeparator();
             QAction *act = new QAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("&Properties"), menu);
+            act->setShortcuts({Qt::ALT + Qt::Key_Return, Qt::ALT + Qt::Key_Enter});
             QObject::connect(act, &QAction::triggered, this, &FolderModel::openPropertiesDialog);
             menu->addAction(act);
         }
