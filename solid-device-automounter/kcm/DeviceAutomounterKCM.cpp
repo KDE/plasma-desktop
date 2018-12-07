@@ -57,6 +57,9 @@ DeviceAutomounterKCM::DeviceAutomounterKCM(QWidget *parent, const QVariantList &
     m_devices = new DeviceModel(this);
     deviceView->setModel(m_devices);
 
+    deviceView->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    deviceView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
+
     auto emitChanged = [this] {
         emit changed();
     };

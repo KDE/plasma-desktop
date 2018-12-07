@@ -122,7 +122,10 @@ If &quot;Enable automatic mounting of removable media&quot; is unchecked, the ov
          <bool>false</bool>
         </property>
         <attribute name="headerShowSortIndicator" stdset="0">
-         <bool>true</bool>
+         <bool>false</bool>
+        </attribute>
+        <attribute name="headerStretchLastSection">
+         <bool>false</bool>
         </attribute>
        </widget>
       </item>
