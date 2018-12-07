@@ -20,6 +20,7 @@
 */
 
 #include <unistd.h>
+#include <cmath>
 
 #include "kaccess.h"
 
@@ -437,7 +438,14 @@ bool KAccessApp::nativeEventFilter(const QByteArray& eventType, void* message, l
         xcb_generic_event_t* event = static_cast<xcb_generic_event_t *>(message);
         if ((event->response_type & ~0x80) == XkbEventCode + xkb_opcode) {
             xkb_any_ *ev = reinterpret_cast<xkb_any_*>(event);
-            switch (ev->xkbType) {
+            // Workaround for an XCB bug. xkbType comes from an EventType that is defined with bits, like
+            // <item name="BellNotify">             <bit>8</bit>
+            // while the generated XCB event type enum is defined as a bitmask, like
+            //     XCB_XKB_EVENT_TYPE_BELL_NOTIFY = 256
+            // This means if xbkType is 8, we need to set the 8th bit to 1, thus raising 2 to power of 8.
+            // See also https://bugs.freedesktop.org/show_bug.cgi?id=51295
+            const int eventType = pow(2, ev->xkbType);
+            switch (eventType) {
                 case XCB_XKB_EVENT_TYPE_STATE_NOTIFY:
                     xkbStateNotify();
                     break;
@@ -664,13 +672,11 @@ void KAccessApp::createDialogContents()
         dialog->setObjectName(QStringLiteral("AccessXWarning"));
         dialog->setModal(true);
 
-        QWidget *topcontents = new QWidget(dialog);
-        topcontents->setLayout(new QVBoxLayout(topcontents));
+        QVBoxLayout *topLayout = new QVBoxLayout();
 
-        QWidget *contents = new QWidget(topcontents);
-        QHBoxLayout * lay = new QHBoxLayout(contents);
+        QHBoxLayout * lay = new QHBoxLayout();
 
-        QLabel *label1 = new QLabel(contents);
+        QLabel *label1 = new QLabel();
         QIcon icon = QIcon::fromTheme(QStringLiteral("dialog-warning"));
         if (icon.isNull())
             icon = QMessageBox::standardIcon(QMessageBox::Warning);
@@ -681,7 +687,7 @@ void KAccessApp::createDialogContents()
         QVBoxLayout * vlay = new QVBoxLayout();
         lay->addItem(vlay);
 
-        featuresLabel = new QLabel(QString(), contents);
+        featuresLabel = new QLabel();
         featuresLabel->setAlignment(Qt::AlignVCenter);
         featuresLabel->setWordWrap(true);
         vlay->addWidget(featuresLabel);
@@ -690,19 +696,22 @@ void KAccessApp::createDialogContents()
         QHBoxLayout * hlay = new QHBoxLayout();
         vlay->addItem(hlay);
 
-        QLabel *showModeLabel = new QLabel(i18n("&When a gesture was used:"), contents);
+        QLabel *showModeLabel = new QLabel(i18n("&When a gesture was used:"));
         hlay->addWidget(showModeLabel);
 
-        showModeCombobox = new KComboBox(contents);
+        showModeCombobox = new KComboBox();
         hlay->addWidget(showModeCombobox);
         showModeLabel->setBuddy(showModeCombobox);
         showModeCombobox->insertItem(0, i18n("Change Settings Without Asking"));
         showModeCombobox->insertItem(1, i18n("Show This Confirmation Dialog"));
         showModeCombobox->insertItem(2, i18n("Deactivate All AccessX Features & Gestures"));
         showModeCombobox->setCurrentIndex(1);
+        topLayout->addLayout(lay);
 
         auto buttons = new QDialogButtonBox(QDialogButtonBox::Yes | QDialogButtonBox::No, dialog);
-        lay->addWidget(buttons);
+
+        topLayout->addWidget(buttons);
+        dialog->setLayout(topLayout);
 
         connect(buttons, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
         connect(buttons, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
