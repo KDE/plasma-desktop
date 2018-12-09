@@ -29,6 +29,7 @@ ScrollViewKCM {
     id: root
 
     ConfigModule.quickHelp: i18n("Language")
+    ConfigModule.buttons: ConfigModule.Help | ConfigModule.Defaults | ConfigModule.Apply
 
     Component {
         id: addLanguageItemComponent

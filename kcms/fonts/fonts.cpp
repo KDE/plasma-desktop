@@ -442,7 +442,7 @@ KFonts::KFonts(QObject *parent, const QVariantList &args)
     about->addAuthor(i18n("Antonis Tsiapaliokas"), QString(), "antonis.tsiapaliokas@kde.org");
     setAboutData(about);
     qmlRegisterType<QStandardItemModel>();
-    setButtons(Apply | Default);
+    setButtons(Apply | Default | Help);
 
     auto updateState = [this]() {
         setNeedsSave(m_fontAASettings->needsSave());

@@ -19,12 +19,14 @@ import QtQuick 2.7
 import QtQuick.Controls 2.4 as Controls
 import QtQuick.Layouts 1.3 as Layouts
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcm 1.2 as KCM
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 KCM.SimpleKCM {
     id: root
+
+    KCM.ConfigModule.buttons: KCM.ConfigModule.Help | KCM.ConfigModule.Defaults | KCM.ConfigModule.Apply
 
     Kirigami.FormLayout {
         id: formLayout

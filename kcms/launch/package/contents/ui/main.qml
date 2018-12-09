@@ -26,6 +26,7 @@ SimpleKCM {
     id: root
 
     ConfigModule.quickHelp: i18n("Launch Feedback")
+    ConfigModule.buttons: ConfigModule.Help | ConfigModule.Defaults | ConfigModule.Apply
 
     function applyBusyCursorCurrentIndex() {
         if (kcm.busyCursorCurrentIndex == 0) {
