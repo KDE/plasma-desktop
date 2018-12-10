@@ -18,8 +18,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2015-04-08</date>
-<releaseinfo>Plasma 5.3</releaseinfo>
+<date>2018-11-10</date>
+<releaseinfo>Plasma 5.14</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -47,12 +47,11 @@
 
 <para>On this page you can see previews of already installed splash screens. The preview of the current splash screen is highlighted.</para>
 
-<para>Hover a preview image with the mouse cursor then the button <guilabel>Test Splashscreen</guilabel> appears at the top right of the image.
+<para>Hover a preview image with the mouse cursor then the button <guilabel>Test Splashscreen</guilabel> appears at the bottom right of the image.
 Press this button to view the splashscreen in action.</para>
 
-<!-- not in 5.3
 <variablelist>
-<varlistentry><term><guilabel>Get New Splash Screens...</guilabel></term>
+<varlistentry><term><guilabel>Get New Theme...</guilabel></term>
 <listitem>
 <para>
 You need to be connected to the Internet to use this action. A dialog will display a list of themes from the <ulink url="http://www.kde-look.org">http://www.kde-look.org</ulink> website. Clicking the <guibutton>Install</guibutton> button associated with a theme will install this theme locally.
@@ -76,6 +75,7 @@ This new theme is immediately available after you close the System Settings Add-
 </listitem>
 </varlistentry>
 
+<!-- not in 5.14
 <varlistentry><term><guilabel>Install Theme File...</guilabel></term>
 <listitem>
 <para>
