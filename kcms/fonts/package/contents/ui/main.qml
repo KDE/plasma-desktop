@@ -216,7 +216,7 @@ KCM.SimpleKCM {
                 stepSize: 24
                 editable: true
                 enabled: dpiCheckBox.checked
-                value: kcm.fontAASettings.dpi
+                value: enabled ? kcm.fontAASettings.dpi : 96
 
                 Binding {
                     target: kcm
@@ -224,7 +224,7 @@ KCM.SimpleKCM {
                     value: dpiSpinBox.enabled ? dpiSpinBox.value : 0
                 }
                 to: 1000
-                from: 96
+                from: 1
             }
         }
 
