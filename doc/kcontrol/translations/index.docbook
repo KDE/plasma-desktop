@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
  </authorgroup>
 
-	  <date>2018-03-26</date>
-	  <releaseinfo>Plasma 5.12</releaseinfo>
+	  <date>2018-11-28</date>
+	  <releaseinfo>Plasma 5.14</releaseinfo>
 
 	  <keywordset>
 		<keyword>KDE</keyword>
@@ -36,11 +36,7 @@ Applications to be displayed in.
 <para>
 The &plasma; Workspace and &kde; Applications are written in American English and are
 translated into many different languages by teams of volunteers. These
-translations need to be installed first before you can choose to use them. The
-list of <guilabel>Available Languages</guilabel> shows the localized language names of &systemsettings; translations
-installed and available on your system. If the language you want to use is 
-not shown in this list then you will need to install it using the usual method 
-for your system.
+translations need to be installed first before you can choose to use them.
 </para>
 <note><para>Ensure that you have installed the &plasma; language packages or translations for the
 languages you want to use.</para>
@@ -48,32 +44,34 @@ languages you want to use.</para>
 languages as well to have a fully localized &GUI;.</para></note>
 
 <para>
-The <guilabel>Preferred Languages</guilabel> list shows the localized language names that will
+The list shows the localized language names that will
 be used when displaying the &plasma; Workspace and Applications. Because not all
-of the KDE Workspace and Applications may be translated into every language
+of the &plasma; Workspace and Applications may be translated into every language
 &plasma; will try to find suitable translations for you by working down the
-<guilabel>Preferred Languages</guilabel> list until it finds a translation. If
+list until it finds a translation. If
 none of your preferred languages have a required translation then the original
 American English will be used.
 </para>
 
 <para>
-You can add a language to the <guilabel>Preferred Languages</guilabel> list by
-selecting it in the <guilabel>Available Languages</guilabel> and then clicking
-on the Add arrow button. If you have the listbox activated just type the first
-letter of your desired language. Type the first letter again to step through all 
-matching entries in the list.
+You can add a language to the main list by clicking the <guibutton>Add language</guibutton>
+button.
+The localized language names of &systemsettings; translations
+installed and available on your system are displayed. If the language you want to use is
+not shown in this list then you will need to install it using the usual method
+for your system.
+Select one or more languages in the list and click <guibutton>Add</guibutton>.
 </para>
-<para>You can remove a language from the
-<guilabel>Preferred Languages</guilabel> list by selecting it and then clicking
-on the Remove arrow button. You can change the order of preference in the
-<guilabel>Preferred Languages</guilabel> list by selecting a language and
-clicking on the Up or Down arrow button.
+<para>You can remove a language from the main list by selecting it and then clicking
+on the <inlinemediaobject><imageobject><imagedata fileref="list-remove.png" format="PNG"/>
+</imageobject></inlinemediaobject> icon. You can change the order of preference in the
+list by selecting a language and clicking on the <inlinemediaobject><imageobject>
+<imagedata fileref="go-top.png" format="PNG"/>
+</imageobject></inlinemediaobject> icon.
 </para>
 
-<para>Only languages listed in <guilabel>Preferred Languages</guilabel> and 
-<guilabel>Available Languages</guilabel> will be offered as options  
-for <guilabel>Primary language</guilabel> and <guilabel>Fallback language</guilabel> 
+<para>Only languages with installed &systemsettings; translations will be offered as options
+for <guilabel>Primary language</guilabel> and <guilabel>Fallback language</guilabel>
 in the <guilabel>Switch Application Language</guilabel> dialog of the 
 <guimenu>Help</guimenu> menu.
 </para>
