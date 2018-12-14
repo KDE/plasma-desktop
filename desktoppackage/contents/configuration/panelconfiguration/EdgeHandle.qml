@@ -17,6 +17,7 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Controls 2.0 as QQC2
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -25,12 +26,32 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 PlasmaComponents.Button {
     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Screen Edge")
+    iconSource: "transform-move"
     checkable: true
     checked: mel.pressed
 
+    QQC2.ToolTip {
+        id: tooltip
+        visible: false
+        timeout: 10000
+        contentItem: PlasmaComponents.Label {
+            anchors.fill: parent
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Click and drag the button to a screen edge to move the panel there.")
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            wrapMode: Text.WordWrap
+            color: tooltip.palette.toolTipText
+        }
+
+        KQuickControlsAddons.MouseEventListener {
+            anchors.fill: parent
+            onPressed: tooltip.visible = false
+        }
+    }
+
     KQuickControlsAddons.MouseEventListener {
         id: mel
-        cursorShape: Qt.DragMoveCursor
+        cursorShape: Qt.SizeAllCursor
         anchors.fill: parent
         property int lastX
         property int lastY
@@ -42,6 +63,7 @@ PlasmaComponents.Button {
             lastY = mouse.screenY
             startMouseX = mouse.x
             startMouseY = mouse.y
+            tooltip.visible = true
         }
         onPositionChanged: {
             panel.screenToFollow = mouse.screen;

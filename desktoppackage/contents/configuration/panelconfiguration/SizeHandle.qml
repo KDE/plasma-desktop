@@ -17,6 +17,7 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Controls 2.0 as QQC2
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -26,6 +27,9 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 PlasmaComponents.Button {
     readonly property string textLabel: panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge ? i18nd("plasma_shell_org.kde.plasma.desktop", "Width") : i18nd("plasma_shell_org.kde.plasma.desktop", "Height")
     text: panelResizeHintTimer.running ? panel.thickness : textLabel
+
+    readonly property string sizeIcon: panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge ? "resizecol" : "resizerow"
+    iconSource: sizeIcon
 
     checkable: true
     checked: mel.pressed
@@ -40,6 +44,25 @@ PlasmaComponents.Button {
         onThicknessChanged: panelResizeHintTimer.restart()
     }
 
+    QQC2.ToolTip {
+        id: tooltip
+        visible: false
+        timeout: 10000
+        contentItem: PlasmaComponents.Label {
+            anchors.fill: parent
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Click and drag the button to resize the panel.")
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            wrapMode: Text.WordWrap
+            color: tooltip.palette.toolTipText
+        }
+
+        KQuickControlsAddons.MouseEventListener {
+            anchors.fill: parent
+            onPressed: tooltip.visible = false
+        }
+    }
+
     KQuickControlsAddons.MouseEventListener {
         id: mel
         anchors.fill: parent
@@ -51,6 +74,7 @@ PlasmaComponents.Button {
             dialogRoot.closeContextMenu();
             startMouseX = mouse.x
             startMouseY = mouse.y
+            tooltip.visible = true
         }
         onPositionChanged: {
             switch (panel.location) {
