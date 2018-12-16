@@ -33,6 +33,7 @@ PlasmaComponents.Button {
     QQC2.ToolTip {
         id: tooltip
         visible: false
+        delay: 0
         timeout: 10000
         contentItem: PlasmaComponents.Label {
             anchors.fill: parent
