@@ -122,7 +122,7 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
         return windowGeo;
     } else if (role == StackingOrder) {
 #if HAVE_X11
-        const QVariantList &winIds = TaskFilterProxyModel::data(index, AbstractTasksModel::LegacyWinIdList).toList();
+        const QVariantList &winIds = TaskFilterProxyModel::data(index, AbstractTasksModel::WinIdList).toList();
 
         if (winIds.count()) {
             const WId winId = winIds.at(0).toLongLong();

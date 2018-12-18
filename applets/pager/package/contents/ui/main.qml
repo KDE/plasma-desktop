@@ -51,9 +51,9 @@ MouseArea {
     Layout.fillHeight: !root.vertical 
 
     property bool dragging: false
-    property int dragId
+    property string dragId
 
-    property int dragSwitchDesktopId: -1
+    property string dragSwitchDesktopId
 
     property int wheelDelta: 0
 
@@ -302,7 +302,7 @@ MouseArea {
             PlasmaCore.ToolTipArea {
                 id: desktop
 
-                property int desktopId: index
+                property string desktopId: isActivityPager ? model.TasksModel.activity : model.TasksModel.virtualDesktop
                 property bool active: (index == pagerModel.currentPage)
 
                 mainText: model.display
@@ -390,7 +390,7 @@ MouseArea {
                         dragTimer.start();
                     }
                     onDragLeave: {
-                        root.dragSwitchDesktopId = -1;
+                        root.dragSwitchDesktopId = "";
                         dragTimer.stop();
                     }
                     onDrop: {
@@ -404,7 +404,7 @@ MouseArea {
                     id: desktopMouseArea
                     anchors.fill: parent
                     hoverEnabled : true
-                    onClicked: pagerModel.changePage(desktopId);
+                    onClicked: pagerModel.changePage(index);
                 }
 
                 Item {
@@ -429,7 +429,7 @@ MouseArea {
                             z: 1 + model.StackingOrder
 
                             property rect geometry: model.Geometry
-                            property int windowId: model.LegacyWinIdList[0]
+                            property int windowId: model.WinIdList[0]
                             property string visibleName: model.display
                             property bool minimized: (model.IsMinimized === true)
                             onMinimizedChanged: desktop.updateSubText()
