@@ -137,7 +137,7 @@ PlasmaComponents.ContextMenu {
         // Add Media Player control actions
         var sourceName = mpris2Source.sourceNameForLauncherUrl(launcherUrl, get(atm.AppPid));
 
-        if (sourceName && !(get(atm.LegacyWinIdList) != undefined && get(atm.LegacyWinIdList).length > 1)) {
+        if (sourceName && !(get(atm.WinIdList) != undefined && get(atm.WinIdList).length > 1)) {
             var playerData = mpris2Source.data[sourceName]
 
             if (playerData.CanControl) {
@@ -261,7 +261,7 @@ PlasmaComponents.ContextMenu {
         visible: virtualDesktopInfo.numberOfDesktops > 1
             && (visualParent && get(atm.IsLauncher) !== true
             && get(atm.IsStartup) !== true
-            && get(atm.IsVirtualDesktopChangeable) === true)
+            && get(atm.IsVirtualDesktopsChangeable) === true)
 
         enabled: visible
 
@@ -270,8 +270,9 @@ PlasmaComponents.ContextMenu {
         Connections {
             target: virtualDesktopInfo
 
-            onNumberOfDesktopsChanged: virtualDesktopsMenu.refresh()
-            onDesktopNamesChanged: virtualDesktopsMenu.refresh()
+            onNumberOfDesktopsChanged: Qt.callLater(virtualDesktopsMenu.refresh)
+            onDesktopIdsChanged: Qt.callLater(virtualDesktopsMenu.refresh)
+            onDesktopNamesChanged: Qt.callLater(virtualDesktopsMenu.refresh)
         }
 
         PlasmaComponents.ContextMenu {
@@ -289,10 +290,10 @@ PlasmaComponents.ContextMenu {
                 var menuItem = menu.newMenuItem(virtualDesktopsMenu);
                 menuItem.text = i18n("Move &To Current Desktop");
                 menuItem.enabled = Qt.binding(function() {
-                    return menu.visualParent && menu.get(atm.VirtualDesktop) != virtualDesktopInfo.currentDesktop;
+                    return menu.visualParent && menu.get(atm.VirtualDesktops).indexOf(virtualDesktopInfo.currentDesktop) == -1;
                 });
                 menuItem.clicked.connect(function() {
-                    tasksModel.requestVirtualDesktop(menu.modelIndex, virtualDesktopInfo.currentDesktop);
+                    tasksModel.requestVirtualDesktops(menu.modelIndex, [virtualDesktopInfo.currentDesktop]);
                 });
 
                 menuItem = menu.newMenuItem(virtualDesktopsMenu);
@@ -302,7 +303,7 @@ PlasmaComponents.ContextMenu {
                     return menu.visualParent && menu.get(atm.IsOnAllVirtualDesktops) === true;
                 });
                 menuItem.clicked.connect(function() {
-                    tasksModel.requestVirtualDesktop(menu.modelIndex, 0);
+                    tasksModel.requestVirtualDesktops(menu.modelIndex, []);
                 });
                 backend.setActionGroup(menuItem.action);
 
@@ -313,10 +314,10 @@ PlasmaComponents.ContextMenu {
                     menuItem.text = i18nc("1 = number of desktop, 2 = desktop name", "&%1 %2", i + 1, virtualDesktopInfo.desktopNames[i]);
                     menuItem.checkable = true;
                     menuItem.checked = Qt.binding((function(i) {
-                        return function() { return menu.visualParent && menu.get(atm.VirtualDesktop) == (i + 1) };
+                        return function() { return menu.visualParent && menu.get(atm.VirtualDesktops).indexOf(virtualDesktopInfo.desktopIds[i]) > -1 };
                     })(i));
                     menuItem.clicked.connect((function(i) {
-                        return function() { return tasksModel.requestVirtualDesktop(menu.modelIndex, i + 1); };
+                        return function() { return tasksModel.requestVirtualDesktops(menu.modelIndex, [virtualDesktopInfo.desktopIds[i]]); };
                     })(i));
                     backend.setActionGroup(menuItem.action);
                 }
@@ -326,7 +327,7 @@ PlasmaComponents.ContextMenu {
                 menuItem = menu.newMenuItem(virtualDesktopsMenu);
                 menuItem.text = i18n("&New Desktop");
                 menuItem.clicked.connect(function() {
-                    tasksModel.requestVirtualDesktop(menu.modelIndex, virtualDesktopInfo.numberOfDesktops + 1)
+                    tasksModel.requestNewVirtualDesktop(menu.modelIndex);
                 });
             }
 

@@ -125,7 +125,7 @@ MouseArea {
         }
 
         if (model.IsWindow === true) {
-            tasks.windowsHovered(model.LegacyWinIdList, containsMouse);
+            tasks.windowsHovered(model.WinIdList, containsMouse);
         }
 
     }
@@ -343,7 +343,7 @@ MouseArea {
                         return model.AppPid;
                     });
                     toolTipDelegate.windows = Qt.binding(function() {
-                        return model.LegacyWinIdList;
+                        return model.WinIdList;
                     });
                     toolTipDelegate.isGroup = Qt.binding(function() {
                         return model.IsGroupParent == true;

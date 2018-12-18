@@ -80,6 +80,13 @@ Item {
 
             var above = target.childAt(event.x, event.y);
 
+            if (!above) {
+                hoveredItem = null;
+                activationTimer.stop();
+
+                return;
+            }
+
             // If we're mixing launcher tasks with other tasks and are moving
             // a (small) launcher task across a non-launcher task, don't allow
             // the latter to be the move target twice in a row for a while, as
@@ -91,8 +98,8 @@ Item {
             // the movement direction has reversed, etablishing user intent to
             // move back.
             if (!plasmoid.configuration.separateLaunchers && tasks.dragSource != null
-                 && tasks.dragSource.m.IsLauncher === true && above != null
-                 && above.m.IsLauncher !== true && above == ignoredItem) {
+                 && tasks.dragSource.m.IsLauncher === true && above.m.IsLauncher !== true
+                 && above == ignoredItem) {
                 return;
             } else {
                 ignoredItem = null;
@@ -117,12 +124,9 @@ Item {
                     ignoredItem = above;
                     ignoreItemTimer.restart();
                 }
-            } else if (!tasks.dragSource && above && hoveredItem != above) {
+            } else if (!tasks.dragSource && hoveredItem != above) {
                 hoveredItem = above;
                 activationTimer.restart();
-            } else if (!above) {
-                hoveredItem = null;
-                activationTimer.stop();
             }
         }
 
