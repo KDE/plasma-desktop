@@ -29,7 +29,7 @@ Item {
     id: listItem
 
     width: ListView.view.width
-    height: (units.smallSpacing * 2) + Math.max(elementIcon.height, titleElement.height + subTitleElement.height)
+    height: (units.smallSpacing * 2) + Math.max(elementIcon.height, titleElement.implicitHeight + subTitleElement.implicitHeight)
 
     signal reset
     signal actionTriggered(string actionId, variant actionArgument)
@@ -114,7 +114,7 @@ Item {
     PlasmaComponents.Label {
         id: titleElement
 
-        y: Math.round((parent.height - titleElement.height - ( (subTitleElement.text != "") ? subTitleElement.paintedHeight : 0) ) / 2)
+        y: Math.round((parent.height - titleElement.height - ( (subTitleElement.text != "") ? subTitleElement.implicitHeight : 0) ) / 2)
         anchors {
             //bottom: elementIcon.verticalCenter
             left: elementIcon.right
@@ -122,7 +122,7 @@ Item {
             leftMargin: units.gridUnit
             rightMargin: units.gridUnit * 2
         }
-        height: paintedHeight
+        height: implicitHeight //undo PC2 height override, remove when porting to PC3
         // TODO: games should always show the by name!
         text: model.display
         elide: Text.ElideRight
@@ -138,7 +138,7 @@ Item {
             rightMargin: units.gridUnit * 2
             top: titleElement.bottom
         }
-        height: paintedHeight
+        height: implicitHeight
 
         text: model.description
         opacity: isCurrent ? 0.8 : 0.6
