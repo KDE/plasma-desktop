@@ -35,9 +35,7 @@
 <filename class="directory">$HOME/.config/plasma-workspace/env</filename> and <filename class="directory">$HOME/.config/plasma-workspace/shutdown</filename> folders to check what programs and scripts are already there and displays them. It allows you to manage them easily.
 </para>
 
-<note><para>The autostart feature has a bug, currently it is not possible to run a script after the startup of your &plasma; session.</para></note>
-
-<note><para>Note that you can change the location of your <filename class="directory">Autostart</filename> 
+<note><para>Note that you can change the location of your <filename class="directory">Autostart</filename>
 folder in <menuchoice><guimenu>Applications</guimenu> <guimenuitem>Locations</guimenuitem></menuchoice> 
 in the <guilabel>Personalization</guilabel> category of the &systemsettings; and set a different folder 
 than <filename class="directory">$HOME/.config/autostart</filename>.</para></note>
