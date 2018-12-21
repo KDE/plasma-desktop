@@ -207,7 +207,7 @@ KCM.SimpleKCM {
         RowLayout {
             QtControls.CheckBox {
                 id: dpiCheckBox
-                checked: kcm.fontAASettings.dpi != 0
+                checked: kcm.fontAASettings.dpi !== 0
                 text: i18n("Force Fonts DPI:")
             }
 
