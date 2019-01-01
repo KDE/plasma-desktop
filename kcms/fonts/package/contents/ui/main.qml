@@ -230,7 +230,7 @@ KCM.SimpleKCM {
 
         QtDialogs.FontDialog {
             id: fontDialog
-            title: "Choose a font"
+            title: i18n("Choose a font")
             modality: Qt.WindowModal
             property string currentCategory
             property bool adjustAllFonts: false
