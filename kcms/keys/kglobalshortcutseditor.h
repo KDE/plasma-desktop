@@ -42,6 +42,7 @@ public:
      * Constructor
      *
      * @param parent parent widget
+     * @param actionTypes action types
      */
     KGlobalShortcutsEditor(QWidget *parent,
                            KShortcutsEditor::ActionTypes actionTypes = KShortcutsEditor::AllActions);
@@ -52,8 +53,9 @@ public:
      * with the KShortcutsEditor object.
      *
      * @param collection  the collection to add
-     * @param component   title for the component
-     * @param title       title for the subtree in the component
+     * @param path        DBus path to the component
+     * @param id          identifier for the component
+     * @param name        name for the subtree in the component
      */
     void addCollection(KActionCollection *, const QDBusObjectPath &path, const QString &id, const QString &name);
 
@@ -97,8 +99,6 @@ Q_SIGNALS:
 
     /**
      * Indicate that state of the modules contents has changed.
-     *
-     * @param state changed or not
      */
     void changed(bool);
 
