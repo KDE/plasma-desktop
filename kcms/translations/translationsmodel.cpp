@@ -213,7 +213,7 @@ void SelectedTranslationsModel::remove(const QString &languageCode)
 
     int index = m_selectedLanguages.indexOf(languageCode);
 
-    if (index < 1) {
+    if (index < 0 || m_selectedLanguages.count() < 2) {
         return;
     }
 

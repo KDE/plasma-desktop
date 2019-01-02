@@ -221,10 +221,14 @@ ScrollViewKCM {
                 onTriggered: kcm.selectedTranslationsModel.move(index, 0)
             },
             Kirigami.Action {
-                enabled: !model.IsMissing
+                property bool removing: false
+                enabled: removing || !model.IsMissing && languagesList.count > 1
                 iconName: "list-remove"
                 tooltip: i18nc("@info:tooltip", "Remove")
-                onTriggered: kcm.selectedTranslationsModel.remove(model.LanguageCode)
+                onTriggered: {
+                    removing = true; // Don't crash by re-evaluating `enabled` during destruction.
+                    kcm.selectedTranslationsModel.remove(model.LanguageCode);
+                }
             }]
         }
     }
