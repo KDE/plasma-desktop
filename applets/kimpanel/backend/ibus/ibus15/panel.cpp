@@ -1066,9 +1066,11 @@ ibus_panel_impanel_focus_in (IBusPanelService *panel,
         return;
     }
 
-    IBusEngineDesc *engine_desc = ibus_bus_get_global_engine(impanel->bus);
-    impanel_update_logo_by_engine(impanel, engine_desc);
-    g_object_unref(engine_desc);
+    auto engine_desc = ibus_bus_get_global_engine(impanel->bus);
+    if (engine_desc) {
+        impanel_update_logo_by_engine(impanel, engine_desc);
+        g_object_unref(engine_desc);
+    }
 
     impanel->engineManager->setCurrentContext(input_context_path);
     if (!impanel->engineManager->useGlobalEngine()) {
@@ -1120,9 +1122,13 @@ ibus_panel_impanel_real_register_properties(IBusPanelImpanel* impanel)
         QByteArray propstr = ibus_engine_desc_to_logo_propstr(engine_desc);
         g_variant_builder_add (&builder, "s", propstr.constData());
     } else {
+        QByteArray propstr;
         auto engine_desc = ibus_bus_get_global_engine(impanel->bus);
-        QByteArray propstr = ibus_engine_desc_to_logo_propstr(engine_desc);
-        g_variant_builder_add (&builder, "s", propstr.constData());
+        if (engine_desc) {
+            propstr = ibus_engine_desc_to_logo_propstr(engine_desc);
+            g_variant_builder_add (&builder, "s", propstr.constData());
+            g_object_unref(engine_desc);
+        }
 
         IBusPropList* prop_list = impanel->propManager->properties();
         if (prop_list) {
@@ -1132,7 +1138,6 @@ ibus_panel_impanel_real_register_properties(IBusPanelImpanel* impanel)
                 ++i;
             }
         }
-        g_object_unref(engine_desc);
     }
 
     g_dbus_connection_emit_signal (impanel->conn,
