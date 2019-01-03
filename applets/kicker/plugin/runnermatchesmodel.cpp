@@ -222,9 +222,12 @@ void RunnerMatchesModel::setMatches(const QList< Plasma::QueryMatch > &matches)
     for (int row = 0; row < ceiling; ++row) {
         if (!(m_matches.at(row) == matches.at(row))) {
             emitDataChange = true;
-
-            break;
+            m_matches[row] = matches.at(row);
         }
+    }
+
+    if (emitDataChange) {
+        emit dataChanged(index(0, 0), index(ceiling - 1, 0));
     }
 
     if (newCount > oldCount) {
@@ -239,12 +242,6 @@ void RunnerMatchesModel::setMatches(const QList< Plasma::QueryMatch > &matches)
         m_matches = matches;
 
         endRemoveRows();
-    }
-
-    if (emitDataChange) {
-        m_matches = matches;
-
-        emit dataChanged(index(0, 0), index(ceiling - 1, 0));
     }
 
     if (emitCountChange) {
