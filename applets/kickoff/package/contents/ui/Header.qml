@@ -57,7 +57,7 @@ Item {
             }
             PropertyChanges {
                 target: infoLabel
-                opacity: 0.4
+                opacity: 1
             }
         }
     ] // states
