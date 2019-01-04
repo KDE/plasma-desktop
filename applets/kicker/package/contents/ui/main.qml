@@ -268,7 +268,7 @@ Item {
         plasmoid.hideOnWindowDeactivate = true;
 
         if (plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
-            plasmoid.setAction("menuedit", i18n("Edit Applications..."));
+            plasmoid.setAction("menuedit", i18n("Edit Applications..."), "kmenuedit");
         }
 
         updateSvgMetrics();
