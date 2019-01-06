@@ -157,6 +157,9 @@ Item {
                             onClicked: ActivitySettings.deleteActivity(model.id);
 
                             visible: ActivitySettings.newActivityAuthorized
+
+                            // Disable the button when there's only one activity
+                            enabled:  activitiesList.count > 1
                         }
 
                         visible: !dialogDeleteLoader.itemVisible
