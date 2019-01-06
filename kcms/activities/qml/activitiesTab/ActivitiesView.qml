@@ -126,12 +126,7 @@ Item {
                     QtControls.Label {
                         text: model.name
 
-                        anchors {
-                            left: icon.right
-                            right: buttons.left
-                            leftMargin: units.largeSpacing
-                            verticalCenter: icon.verticalCenter
-                        }
+                        anchors.fill: parent
                     }
 
                     Row {
@@ -162,6 +157,9 @@ Item {
                             onClicked: ActivitySettings.deleteActivity(model.id);
 
                             visible: ActivitySettings.newActivityAuthorized
+
+                            // Disable the button when there's only one activity
+                            enabled:  activitiesList.count > 1
                         }
 
                         visible: !dialogDeleteLoader.itemVisible
