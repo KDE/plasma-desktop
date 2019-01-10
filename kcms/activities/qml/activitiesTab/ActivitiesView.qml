@@ -73,6 +73,7 @@ Item {
         enabled: !dialogCreateActivityLoader.itemVisible
 
         ListView {
+            id: activitiesList
             width: parent.width
             // anchors.fill: parent
 
