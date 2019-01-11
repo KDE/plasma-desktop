@@ -280,7 +280,7 @@ void CFontFilter::filterChanged()
             itsCurrentFileTypes.clear();
 
             setCriteria(crit);
-            setPlaceholderText(i18n("Type here to filter on %1", act->text().toLower()));
+            setPlaceholderText(i18n("Filter by %1...", act->text().toLower()));
             setReadOnly(false);
         }
     }
