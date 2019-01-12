@@ -25,7 +25,7 @@ import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.kcm 1.1 as KCM
 
 KCM.GridViewKCM {
-    KCM.ConfigModule.quickHelp: i18n("This module lets you configure the look and feel theme.")
+    KCM.ConfigModule.quickHelp: i18n("This module lets you choose the Look and Feel theme.")
 
     view.model: kcm.lookAndFeelModel
     view.currentIndex: kcm.selectedPluginIndex
@@ -72,7 +72,7 @@ KCM.GridViewKCM {
             QtControls.CheckBox {
                 id: resetCheckbox
                 checked: kcm.resetDefaultLayout
-                text: i18n("Use Desktop Layout from theme")
+                text: i18n("Use desktop layout from theme")
                 onCheckedChanged: kcm.resetDefaultLayout = checked;
             }
             Item {
