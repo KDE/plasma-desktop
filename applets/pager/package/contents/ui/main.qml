@@ -82,7 +82,7 @@ MouseArea {
     }
 
     function action_openKCM() {
-        KQuickControlsAddonsComponents.KCMShell.open("desktop");
+        KQuickControlsAddonsComponents.KCMShell.open("kcm_kwin_virtualdesktops");
     }
 
     function action_showActivityManager() {
@@ -532,7 +532,7 @@ MouseArea {
         if (isActivityPager) {
             plasmoid.setAction("showActivityManager", i18n("Show Activity Manager..."), "preferences-activities");
         } else {
-            if (KQuickControlsAddonsComponents.KCMShell.authorize("desktop.desktop").length > 0) {
+            if (KQuickControlsAddonsComponents.KCMShell.authorize("kcm_kwin_virtualdesktops.desktop").length > 0) {
                 plasmoid.setAction("addDesktop", i18n("Add Virtual Desktop"), "list-add");
                 plasmoid.setAction("removeDesktop", i18n("Remove Virtual Desktop"), "list-remove");
                 plasmoid.action("removeDesktop").enabled = Qt.binding(function() {
