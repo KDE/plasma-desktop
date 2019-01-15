@@ -24,7 +24,7 @@ import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.kcm 1.1 as KCM
 
 KCM.GridViewKCM {
-    KCM.ConfigModule.quickHelp: i18n("This module lets you configure the splash screen theme.")
+    KCM.ConfigModule.quickHelp: i18n("This module lets you choose the splash screen theme.")
 
     view.model: kcm.splashModel
     //NOTE: pay attention to never break this binding
@@ -44,7 +44,7 @@ KCM.GridViewKCM {
             Kirigami.Action {
                 visible: model.pluginName != "None"
                 iconName: "media-playback-start"
-                tooltip: i18n("Test Splashscreen")
+                tooltip: i18n("Test Splash Screen")
                 onTriggered: kcm.test(model.pluginName)
             }
         ]
