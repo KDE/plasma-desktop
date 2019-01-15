@@ -70,8 +70,8 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
     qmlRegisterType<PreviewWidget>("org.kde.private.kcm_cursortheme", 1, 0, "PreviewWidget");
     qmlRegisterType<SortProxyModel>();
 
-    KAboutData* aboutData = new KAboutData(QStringLiteral("kcm_cursortheme"), i18n("Cursor Theme"),
-        QStringLiteral("1.0"), QString(i18n("Mouse Cursor Theme settings")), KAboutLicense::GPL, i18n("(c) 2003-2007 Fredrik Höglund"));
+    KAboutData* aboutData = new KAboutData(QStringLiteral("kcm_cursortheme"), i18n("Cursors"),
+        QStringLiteral("1.0"), QString(i18n("Choose the mouse cursor theme")), KAboutLicense::GPL, i18n("(c) 2003-2007 Fredrik Höglund"));
     aboutData->addAuthor(i18n("Fredrik Höglund"));
     aboutData->addAuthor(i18n("Marco Martin"));
     setAboutData(aboutData);
