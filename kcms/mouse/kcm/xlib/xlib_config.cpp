@@ -30,13 +30,11 @@
 
 #include "../../../migrationlib/kdelibs4config.h"
 
-#include <kglobalsettings.h>
 #include <config-workspace.h>
 
 #include <ktoolinvocation.h>
 #include <klocalizedstring.h>
 //#include <kconfig.h>
-#include <kstandarddirs.h>
 #include <kaboutdata.h>
 #include <KPluginFactory>
 #include <KPluginLoader>
@@ -47,6 +45,7 @@
 #include <QSpinBox>
 #include <QWhatsThis>
 #include <QTabWidget>
+#include <QStandardPaths>
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -151,11 +150,11 @@ void XlibConfig::setHandedness(Handed val)
     leftHanded->setChecked(false);
     if (val == Handed::Right) {
         rightHanded->setChecked(true);
-        mousePix->setPixmap(KStandardDirs::locate("data", "kcmmouse/pics/mouse_rh.png"));
+        mousePix->setPixmap(QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kcmmouse/pics/mouse_rh.png"));
     }
     else {
         leftHanded->setChecked(true);
-        mousePix->setPixmap(KStandardDirs::locate("data", "kcmmouse/pics/mouse_lh.png"));
+        mousePix->setPixmap(QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kcmmouse/pics/mouse_lh.png"));
     }
     m_backend->settings()->handedNeedsApply = true;
 }
@@ -292,9 +291,9 @@ void XlibConfig::defaults()
 void XlibConfig::slotHandedChanged(int val)
 {
     if (val == static_cast<int>(Handed::Right))
-        mousePix->setPixmap(KStandardDirs::locate("data", "kcmmouse/pics/mouse_rh.png"));
+        mousePix->setPixmap(QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kcmmouse/pics/mouse_rh.png"));
     else
-        mousePix->setPixmap(KStandardDirs::locate("data", "kcmmouse/pics/mouse_lh.png"));
+        mousePix->setPixmap(QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kcmmouse/pics/mouse_lh.png"));
     m_backend->settings()->handedNeedsApply = true;
 }
 
