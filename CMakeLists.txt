@@ -55,6 +55,13 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Config
 )
 
+find_package(KF5Kirigami2 ${KF5_MIN_VERSION} CONFIG)
+set_package_properties(KF5Kirigami2 PROPERTIES
+    DESCRIPTION "A QtQuick based components set"
+    PURPOSE "Required at runtime by many KCMs"
+    TYPE RUNTIME
+)
+
 find_package(LibKWorkspace CONFIG REQUIRED)
 find_package(LibTaskManager CONFIG REQUIRED)
 find_package(LibColorCorrect CONFIG REQUIRED)
