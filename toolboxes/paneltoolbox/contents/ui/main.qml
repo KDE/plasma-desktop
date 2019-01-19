@@ -77,4 +77,10 @@ Item {
             main.Plasmoid.action("configure").trigger()
         }
     }
+
+    PlasmaCore.ToolTipArea {
+        anchors.fill: parent
+        mainText: i18n("Configure Panel")
+        icon: "configure"
+    }
 }
