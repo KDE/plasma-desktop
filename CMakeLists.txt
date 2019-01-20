@@ -62,9 +62,9 @@ set_package_properties(KF5Kirigami2 PROPERTIES
     TYPE RUNTIME
 )
 
-find_package(LibKWorkspace CONFIG REQUIRED)
-find_package(LibTaskManager CONFIG REQUIRED)
-find_package(LibColorCorrect CONFIG REQUIRED)
+find_package(LibKWorkspace 5.14.90 CONFIG REQUIRED)
+find_package(LibTaskManager 5.14.90 CONFIG REQUIRED)
+find_package(LibColorCorrect 5.14.90 CONFIG REQUIRED)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 find_package(KRunnerAppDBusInterface CONFIG REQUIRED)
