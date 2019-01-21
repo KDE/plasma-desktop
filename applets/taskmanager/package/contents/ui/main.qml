@@ -29,15 +29,19 @@ import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
 import "code/layout.js" as LayoutManager
 import "code/tools.js" as TaskTools
 
-Item {
+MouseArea {
     id: tasks
 
     anchors.fill: parent
+    hoverEnabled: true
 
     property bool vertical: (plasmoid.formFactor === PlasmaCore.Types.Vertical)
     property bool iconsOnly: (plasmoid.pluginName === "org.kde.plasma.icontasks")
 
     property QtObject contextMenuComponent: Qt.createComponent("ContextMenu.qml");
+
+    property bool needLayoutRefresh: false;
+    property variant taskClosedWithMouseMiddleButton: []
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
@@ -82,6 +86,13 @@ Item {
     onDragSourceChanged: {
         if (dragSource == null) {
             tasksModel.syncLaunchers();
+        }
+    }
+
+    onExited: {
+        if (needLayoutRefresh) {
+            LayoutManager.layout(taskRepeater)
+            needLayoutRefresh = false;
         }
     }
 
@@ -439,7 +450,15 @@ Item {
 
             delegate: Task {}
             onItemAdded: taskList.layout()
-            onItemRemoved: taskList.layout()
+            onItemRemoved: {
+                if (tasks.containsMouse && index != taskRepeater.count &&
+                    item.winIdList.length > 0 && taskClosedWithMouseMiddleButton.indexOf(item.winIdList[0]) > -1) {
+                    needLayoutRefresh = true;
+                } else {
+                    taskList.layout();
+                }
+                taskClosedWithMouseMiddleButton = [];
+            }
         }
     }
 

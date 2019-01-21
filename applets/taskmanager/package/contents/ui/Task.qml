@@ -43,6 +43,7 @@ MouseArea {
 
     readonly property int pid: model.AppPid !== undefined ? model.AppPid : 0
     readonly property string appName: model.AppName
+    readonly property variant winIdList: model.WinIdList
     property int itemIndex: index
     property bool inPopup: false
     property bool isWindow: model.IsWindow === true
@@ -152,6 +153,7 @@ MouseArea {
                 if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.NewInstance) {
                     tasksModel.requestNewInstance(modelIndex());
                 } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.Close) {
+                    tasks.taskClosedWithMouseMiddleButton = winIdList.slice()
                     tasksModel.requestClose(modelIndex());
                 } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleMinimized) {
                     tasksModel.requestToggleMinimized(modelIndex());
