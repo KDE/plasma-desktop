@@ -17,7 +17,6 @@ target_link_libraries(kcm_access
     KF5::KIOWidgets
     KF5::NotifyConfig
     KF5::WindowSystem
-    KF5::KDELibs4Support
     ${X11_LIBRARIES}
 )
 

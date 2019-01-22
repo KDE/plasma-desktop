@@ -10,7 +10,7 @@ macro(KEYBOARD_DAEMON_UNIT_TESTS _testname)
                                      Qt5::Xml
                                      Qt5::Test
                                      KF5::I18n
-                                     KF5::KDELibs4Support
+                                     KF5::WindowSystem
                                      ${X11_Xkbfile_LIB}
                                      ${X11_LIBRARIES}
 )
@@ -30,7 +30,7 @@ macro(KEYBOARD_PREVIEW_UNIT_TESTS _testname)
                                      Qt5::Xml
                                      Qt5::Test
                                      KF5::I18n
-                                     KF5::KDELibs4Support
+                                     KF5::WindowSystem
                                      ${X11_Xkbfile_LIB}
                                      ${X11_LIBRARIES}
 		)
@@ -61,9 +61,11 @@ target_link_libraries(flags_test
                       Qt5::X11Extras
                       Qt5::Xml
                       Qt5::Test
+                      Qt5::Widgets
+                      KF5::GuiAddons
                       KF5::I18n
                       KF5::Plasma
-                      KF5::KDELibs4Support
+                      KF5::WindowSystem
                       XCB::XCB
                       XCB::XKB
                       ${X11_Xkbfile_LIB}
@@ -88,9 +90,13 @@ if( X11_XTest_FOUND )
                          KF5::ConfigCore
                          KF5::CoreAddons
                          KF5::DBusAddons
+                         KF5::GuiAddons
+                         KF5::I18n
+                         KF5::Notifications
                          KF5::Plasma
-                         KF5::KDELibs4Support
                          KF5::GlobalAccel
+                         KF5::WindowSystem
+                         KF5::XmlGui
                          XCB::XCB
                          XCB::XKB
                          ${X11_Xkbfile_LIB}

@@ -18,7 +18,6 @@
 
 #include "flags.h"
 
-#include <kiconloader.h>
 #include <klocalizedstring.h>
 
 #include <plasma/svg.h>
