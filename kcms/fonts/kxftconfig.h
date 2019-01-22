@@ -24,8 +24,7 @@
 
 #ifdef HAVE_FONTCONFIG
 
-#include <time.h>
-
+#include <QDateTime>
 #include <QDomDocument>
 
 class KXftConfig
@@ -187,7 +186,7 @@ private:
     QDomDocument       m_doc;
     QString            m_file;
     bool               m_madeChanges;
-    time_t             m_time;
+    QDateTime          m_time;
 };
 
 #endif

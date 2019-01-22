@@ -30,13 +30,13 @@
 
 #include <QRegExp>
 #include <QFile>
+#include <QFileInfo>
 #include <QDir>
 #include <QX11Info>
 #include <QByteArray>
 #include <QDebug>
 
 #include <KLocalizedString>
-#include <kde_file.h>
 #include <KGlobal>
 #include <KStandardDirs>
 
@@ -78,23 +78,15 @@ static QString dirSyntax(const QString &d)
     return d;
 }
 
-static bool check(const QString &path, unsigned int fmt, bool checkW = false)
-{
-    KDE_struct_stat info;
-    QByteArray        pathC(QFile::encodeName(path));
-
-    return 0 == KDE_lstat(pathC, &info) && (info.st_mode & S_IFMT) == fmt &&
-           (!checkW || 0 ==::access(pathC, W_OK));
-}
-
 inline bool fExists(const QString &p)
 {
-    return check(p, S_IFREG, false);
+    return QFileInfo(p).isFile();
 }
 
 inline bool dWritable(const QString &p)
 {
-    return check(p, S_IFDIR, true);
+    QFileInfo info(p);
+    return info.isDir() && info.isWritable();
 }
 
 static QString getDir(const QString &f)
@@ -110,11 +102,9 @@ static QString getDir(const QString &f)
     return dirSyntax(d);
 }
 
-static time_t getTimeStamp(const QString &item)
+static QDateTime getTimeStamp(const QString &item)
 {
-    KDE_struct_stat info;
-
-    return !item.isNull() && 0 == KDE_lstat(QFile::encodeName(item), &info) ? info.st_mtime : 0;
+    return QFileInfo(item).lastModified();
 }
 
 //
