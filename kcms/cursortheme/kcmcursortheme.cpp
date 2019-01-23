@@ -62,6 +62,7 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
       m_appliedSize(0),
       m_preferredSize(0),
       m_selectedThemeRow(-1),
+      m_selectedSizeRow(-1),
       m_originalSelectedThemeRow(-1),
       m_canInstall(true),
       m_canResize(true),
@@ -165,20 +166,23 @@ int CursorThemeConfig::selectedThemeRow() const
     return m_selectedThemeRow;
 }
 
-void CursorThemeConfig::setPreferredSize(int size)
+void CursorThemeConfig::setSelectedSizeRow(int row)
 {
-    if (m_preferredSize == size) {
-        return;
-    }
+    Q_ASSERT (row < m_sizesModel->rowCount() && row >= 0);
+
+    // we don't return early if m_selectedSizeRow == row as this is called after the model is changed
+    m_selectedSizeRow = row;
+    emit selectedSizeRowChanged();
+
+    int size = m_sizesModel->item(row)->data().toInt();
 
     m_preferredSize = size;
-    emit preferredSizeChanged();
     setNeedsSave(m_originalSelectedThemeRow != m_selectedThemeRow || m_originalPreferredSize != m_preferredSize);
 }
 
-int CursorThemeConfig::preferredSize() const
+int CursorThemeConfig::selectedSizeRow() const
 {
-    return m_preferredSize;
+    return m_selectedSizeRow;
 }
 
 
@@ -273,7 +277,10 @@ void CursorThemeConfig::updateSizeComboBox()
                     };
                 }
             };
-            setPreferredSize(selectItem);
+            if (selectItem < 0) {
+                selectItem = 0;
+            }
+            setSelectedSizeRow(selectItem);
         };
     };
 
@@ -399,6 +406,12 @@ void CursorThemeConfig::load()
           setCanInstall(false);
     }
 
+    const CursorTheme *theme = m_proxyModel->theme(m_appliedIndex);
+
+    setSelectedThemeRow(m_appliedIndex.row());
+    m_originalSelectedThemeRow = m_selectedThemeRow;
+    m_originalPreferredSize = m_preferredSize;
+
     // Load cursor size
     int size = cg.readEntry("cursorSize", 0);
     if (size <= 0) {
@@ -410,11 +423,6 @@ void CursorThemeConfig::load()
 
     m_appliedSize = size;
 
-    const CursorTheme *theme = m_proxyModel->theme(m_appliedIndex);
-
-    setSelectedThemeRow(m_appliedIndex.row());
-    m_originalSelectedThemeRow = m_selectedThemeRow;
-    m_originalPreferredSize = m_preferredSize;
 
     setNeedsSave(false);
 }

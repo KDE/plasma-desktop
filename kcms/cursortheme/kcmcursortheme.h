@@ -38,7 +38,7 @@ class CursorThemeConfig : public KQuickAddons::ConfigModule
     Q_PROPERTY(QAbstractItemModel *cursorsModel READ cursorsModel CONSTANT)
     Q_PROPERTY(QAbstractItemModel *sizesModel READ sizesModel CONSTANT)
     Q_PROPERTY(int selectedThemeRow READ selectedThemeRow WRITE setSelectedThemeRow NOTIFY selectedThemeRowChanged)
-    Q_PROPERTY(int preferredSize READ preferredSize WRITE setPreferredSize NOTIFY preferredSizeChanged)
+    Q_PROPERTY(int selectedSizeRow READ selectedSizeRow WRITE setSelectedSizeRow NOTIFY selectedSizeRowChanged)
 
 public:
     CursorThemeConfig(QObject *parent, const QVariantList &);
@@ -62,10 +62,8 @@ public:
     int selectedThemeRow() const;
     void setSelectedThemeRow(int row);
 
-    /** @returns 0 if in the UI "automatic size" is selected, otherwise
-                    returns the custom size. */
-    int preferredSize() const;
-    void setPreferredSize(int size);
+    int selectedSizeRow() const;
+    void setSelectedSizeRow(int row);
 
     QAbstractItemModel *cursorsModel();
     QAbstractItemModel *sizesModel();
@@ -75,7 +73,7 @@ Q_SIGNALS:
     void canResizeChanged();
     void canConfigureChanged();
     void selectedThemeRowChanged();
-    void preferredSizeChanged();
+    void selectedSizeRowChanged();
 
     void showSuccessMessage(const QString &message);
     void showInfoMessage(const QString &message);
@@ -129,6 +127,7 @@ private:
     int m_originalPreferredSize;
 
     int m_selectedThemeRow;
+    int m_selectedSizeRow;
     int m_originalSelectedThemeRow;
     bool m_canInstall;
     bool m_canResize;
