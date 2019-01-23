@@ -399,6 +399,12 @@ void CursorThemeConfig::load()
           setCanInstall(false);
     }
 
+    const CursorTheme *theme = m_proxyModel->theme(m_appliedIndex);
+
+    setSelectedThemeRow(m_appliedIndex.row());
+    m_originalSelectedThemeRow = m_selectedThemeRow;
+    m_originalPreferredSize = m_preferredSize;
+
     // Load cursor size
     int size = cg.readEntry("cursorSize", 0);
     if (size <= 0) {
@@ -410,11 +416,6 @@ void CursorThemeConfig::load()
 
     m_appliedSize = size;
 
-    const CursorTheme *theme = m_proxyModel->theme(m_appliedIndex);
-
-    setSelectedThemeRow(m_appliedIndex.row());
-    m_originalSelectedThemeRow = m_selectedThemeRow;
-    m_originalPreferredSize = m_preferredSize;
 
     setNeedsSave(false);
 }
