@@ -97,12 +97,17 @@ KCM.GridViewKCM {
                 }
                 QtControls.ComboBox {
                     id: sizeCombo
-                    currentIndex: 0
-                    onCountChanged: currentIndex = 0
                     model: kcm.sizesModel
                     textRole: "display"
-                    onCurrentTextChanged: {
-                        kcm.preferredSize = isNaN(parseInt(sizeCombo.currentText)) ? 0 : parseInt(sizeCombo.currentText);
+                    onActivated: {
+                        kcm.selectedSizeRow = sizeCombo.currentIndex
+                    }
+
+                    Connections {
+                        target: kcm
+                        onSelectedSizeRowChanged: {
+                            sizeCombo.currentIndex = kcm.selectedSizeRow
+                        }
                     }
 
                     delegate: QtControls.ItemDelegate {
