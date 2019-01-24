@@ -32,6 +32,8 @@ KCM.GridViewKCM {
     view.model: kcm.desktopThemeModel
     view.currentIndex: kcm.selectedPluginIndex
 
+    enabled: !kcm.downloadingFile
+
     DropArea {
         anchors.fill: parent
         onEntered: {

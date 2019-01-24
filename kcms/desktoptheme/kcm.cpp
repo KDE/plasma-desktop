@@ -27,6 +27,9 @@
 #include <KLocalizedString>
 #include <KDesktopFile>
 
+#include <KIO/FileCopyJob>
+#include <KIO/JobUiDelegate>
+
 #include <Plasma/Theme>
 #include <Plasma/Svg>
 
@@ -36,6 +39,7 @@
 #include <QQuickWindow>
 #include <QStandardPaths>
 #include <QStandardItemModel>
+#include <QTemporaryFile>
 
 #include <KNewStuff3/KNS3/DownloadDialog>
 
@@ -108,6 +112,11 @@ int KCMDesktopTheme::selectedPluginIndex() const
     return -1;
 }
 
+bool KCMDesktopTheme::downloadingFile() const
+{
+    return m_tempCopyJob;
+}
+
 void KCMDesktopTheme::setPendingDeletion(int index, bool pending)
 {
     QModelIndex idx = m_model->index(index, 0);
@@ -140,12 +149,47 @@ void KCMDesktopTheme::getNewStuff(QQuickItem *ctx)
     m_newStuffDialog.data()->show();
 }
 
-void KCMDesktopTheme::installThemeFromFile(const QUrl &file)
+void KCMDesktopTheme::installThemeFromFile(const QUrl &url)
 {
-    qCDebug(KCM_DESKTOP_THEME) << "Installing ... " << file;
+    if (url.isLocalFile()) {
+        installTheme(url.toLocalFile());
+        return;
+    }
+
+    if (m_tempCopyJob) {
+        return;
+    }
+
+    m_tempInstallFile.reset(new QTemporaryFile());
+    if (!m_tempInstallFile->open()) {
+        emit showErrorMessage(i18n("Unable to create a temporary file."));
+        m_tempInstallFile.reset();
+        return;
+    }
+
+    m_tempCopyJob = KIO::file_copy(url, QUrl::fromLocalFile(m_tempInstallFile->fileName()),
+                                    -1, KIO::Overwrite);
+    m_tempCopyJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
+    emit downloadingFileChanged();
+
+    connect(m_tempCopyJob, &KIO::FileCopyJob::result, this, [this, url](KJob *job) {
+        if (job->error() != KJob::NoError) {
+            emit showErrorMessage(i18n("Unable to download the theme: %1", job->errorText()));
+            return;
+        }
+
+        installTheme(m_tempInstallFile->fileName());
+        m_tempInstallFile.reset();
+    });
+    connect(m_tempCopyJob, &QObject::destroyed, this, &KCMDesktopTheme::downloadingFileChanged);
+}
+
+void KCMDesktopTheme::installTheme(const QString &path)
+{
+    qCDebug(KCM_DESKTOP_THEME) << "Installing ... " << path;
 
     const QString program = QStringLiteral("kpackagetool5");
-    const QStringList arguments = { QStringLiteral("--type"), QStringLiteral("Plasma/Theme"), QStringLiteral("--install"), file.toLocalFile()};
+    const QStringList arguments = { QStringLiteral("--type"), QStringLiteral("Plasma/Theme"), QStringLiteral("--install"), path};
 
     qCDebug(KCM_DESKTOP_THEME) << program << arguments.join(QStringLiteral(" "));
     QProcess *myProcess = new QProcess(this);

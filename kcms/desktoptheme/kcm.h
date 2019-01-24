@@ -26,9 +26,16 @@
 
 #include <KNewStuff3/KNS3/DownloadDialog>
 
+class QTemporaryFile;
+
 namespace Plasma {
     class Svg;
     class Theme;
+}
+
+namespace KIO
+{
+class FileCopyJob;
 }
 
 class QQuickItem;
@@ -40,6 +47,7 @@ class KCMDesktopTheme : public KQuickAddons::ConfigModule
     Q_PROPERTY(QStandardItemModel *desktopThemeModel READ desktopThemeModel CONSTANT)
     Q_PROPERTY(QString selectedPlugin READ selectedPlugin WRITE setSelectedPlugin NOTIFY selectedPluginChanged)
     Q_PROPERTY(int selectedPluginIndex READ selectedPluginIndex NOTIFY selectedPluginIndexChanged)
+    Q_PROPERTY(bool downloadingFile READ downloadingFile NOTIFY downloadingFileChanged)
     Q_PROPERTY(bool canEditThemes READ canEditThemes CONSTANT)
 
 public:
@@ -61,10 +69,12 @@ public:
     void setSelectedPlugin(const QString &plugin);
     int selectedPluginIndex() const;
 
+    bool downloadingFile() const;
+
     bool canEditThemes() const;
 
     Q_INVOKABLE void getNewStuff(QQuickItem *ctx);
-    Q_INVOKABLE void installThemeFromFile(const QUrl &file);
+    Q_INVOKABLE void installThemeFromFile(const QUrl &url);
 
     Q_INVOKABLE void setPendingDeletion(int index, bool pending);
 
@@ -75,6 +85,8 @@ public:
 Q_SIGNALS:
     void selectedPluginChanged(const QString &plugin);
     void selectedPluginIndexChanged();
+    void downloadingFileChanged();
+
     void showSuccessMessage(const QString &message);
     void showErrorMessage(const QString &message);
 
@@ -88,6 +100,8 @@ private:
 
     void processPendingDeletions();
 
+    void installTheme(const QString &path);
+
     QStandardItemModel *m_model;
     QString m_selectedPlugin;
     QStringList m_pendingRemoval;
@@ -96,6 +110,9 @@ private:
     bool m_haveThemeExplorerInstalled;
 
     QPointer<KNS3::DownloadDialog> m_newStuffDialog;
+
+    QScopedPointer<QTemporaryFile> m_tempInstallFile;
+    QPointer<KIO::FileCopyJob> m_tempCopyJob;
 };
 
 Q_DECLARE_LOGGING_CATEGORY(KCM_DESKTOP_THEME)
