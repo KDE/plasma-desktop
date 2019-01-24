@@ -29,7 +29,6 @@
 #include <QFontDatabase>
 #include <QSettings>
 #include <QTextCodec>
-#include <QToolTip>
 
 #include <QPixmap>
 #include <QByteArray>
@@ -375,15 +374,15 @@ static void createGtkrc( bool exportColors, const QPalette& cg, bool exportGtkTh
         // tooltips don't have the standard background color
         t << "style \"ToolTip\"" << endl;
         t << "{" << endl;
-        QPalette group = QToolTip::palette();
-        t << "  bg[NORMAL] = " << color( group.color( QPalette::Active, QPalette::Background ) ) << endl;
-        t << "  base[NORMAL] = " << color( group.color( QPalette::Active, QPalette::Base ) ) << endl;
-        t << "  text[NORMAL] = " << color( group.color( QPalette::Active, QPalette::Text ) ) << endl;
-        t << "  fg[NORMAL] = " << color( group.color( QPalette::Active, QPalette::Foreground ) ) << endl;
+        t << "  bg[NORMAL] = " << color( cg.color( QPalette::ToolTipBase ) ) << endl;
+        t << "  base[NORMAL] = " << color( cg.color( QPalette::ToolTipBase ) ) << endl;
+        t << "  text[NORMAL] = " << color( cg.color( QPalette::ToolTipText ) ) << endl;
+        t << "  fg[NORMAL] = " << color( cg.color( QPalette::ToolTipText ) ) << endl;
         t << "}" << endl;
         t << endl;
         t << "widget \"gtk-tooltip\" style \"ToolTip\"" << endl;
         t << "widget \"gtk-tooltips\" style \"ToolTip\"" << endl;
+        t << "widget \"gtk-tooltip*\" style \"ToolTip\"" << endl;
         t << endl;
 
 
