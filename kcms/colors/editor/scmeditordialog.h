@@ -32,19 +32,20 @@
 class SchemeEditorOptions;
 class SchemeEditorColors;
 class SchemeEditorEffects;
-class KColorCm;
 
 class SchemeEditorDialog : public QDialog, public Ui::ScmEditorDialog
 {
     Q_OBJECT
 
 public:
-    SchemeEditorDialog(const QString &path, KColorCm *parent = nullptr);
-    SchemeEditorDialog(KSharedConfigPtr config, KColorCm *parent = nullptr);
+    SchemeEditorDialog(const QString &path, QWidget *parent = nullptr);
+    SchemeEditorDialog(KSharedConfigPtr config, QWidget *parent = nullptr);
+
+    bool overwriteOnSave() const;
+    void setOverwriteOnSave(bool overwrite);
 
 Q_SIGNALS:
     void changed(bool);
-    void applied();
 
 private Q_SLOTS:
 
@@ -57,7 +58,6 @@ private Q_SLOTS:
 
 private:
     void init();
-    void applyScheme();
     /** save the current scheme */
     void saveScheme();
     void setUnsavedChanges(bool changes);
@@ -65,14 +65,15 @@ private:
     const QString m_filePath;
     QString m_schemeName;
     KSharedConfigPtr m_config;
-    bool m_disableUpdates;
-    bool m_unsavedChanges;
+    bool m_disableUpdates = false;
+    bool m_unsavedChanges = false;
 
     SchemeEditorOptions *m_optionTab;
     SchemeEditorColors *m_colorTab;
     SchemeEditorEffects *m_disabledTab;
     SchemeEditorEffects *m_inactiveTab;
-    KColorCm *m_kcm;
+
+    bool m_overwriteOnSave = false;
 };
 
 #endif

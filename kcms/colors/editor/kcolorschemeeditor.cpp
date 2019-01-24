@@ -24,10 +24,10 @@
 #include <QTextStream>
 
 #include <KAboutData>
+#include <KWindowSystem>
 
 int main(int argc, char* argv[])
 {
-
     QApplication app(argc, argv);
 
     KAboutData aboutData(
@@ -48,6 +48,13 @@ int main(int argc, char* argv[])
     QCommandLineParser parser;
     parser.addPositionalArgument("theme", i18n("Scheme to edit or to use as a base."),
         QStringLiteral("kcolorschemeeditor ThemeName"));
+
+    QCommandLineOption overwriteOption(QStringLiteral("overwrite"), i18n("Overwrite edited theme when saving"));
+    parser.addOption(overwriteOption);
+
+    QCommandLineOption attachOption(QStringLiteral("attach"), i18n("Makes the dialog transient for another application window specified by handle"), QStringLiteral("handle"));
+    parser.addOption(attachOption);
+
     aboutData.setupCommandLine(&parser);
     parser.process(app);
     aboutData.processCommandLine(&parser);
@@ -67,6 +74,23 @@ int main(int argc, char* argv[])
     }
 
     SchemeEditorDialog dialog(path);
+    dialog.setOverwriteOnSave(parser.isSet(overwriteOption));
+
+    // FIXME doesn't work :(
+    const QString attachHandle = parser.value(attachOption);
+    if (!attachHandle.isEmpty()) {
+        // TODO wayland: once we have foreign surface support
+        const QString x11Prefix = QStringLiteral("x11:");
+
+        if (attachHandle.startsWith(x11Prefix)) {
+            bool ok = false;
+            WId winId = attachHandle.mid(x11Prefix.length()).toLong(&ok, 0);
+            if (ok) {
+                dialog.setModal(true);
+                KWindowSystem::setMainWindow(&dialog, winId);
+            }
+        }
+    }
 
     dialog.show();
 

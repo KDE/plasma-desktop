@@ -21,7 +21,6 @@
 #include "scmeditoroptions.h"
 #include "scmeditorcolors.h"
 #include "scmeditoreffects.h"
-#include "colorscm.h"
 
 #include <QDebug>
 #include <QDir>
@@ -32,25 +31,20 @@
 #include <KConfigGroup>
 #include <KColorScheme>
 #include <KMessageBox>
+#include <KWindowSystem>
 
 #include <KNS3/UploadDialog>
 
-SchemeEditorDialog::SchemeEditorDialog(KSharedConfigPtr config, KColorCm *parent)
-    : QDialog( parent )
-    , m_disableUpdates(false)
-    , m_unsavedChanges(false)
-    , m_kcm(parent)
+SchemeEditorDialog::SchemeEditorDialog(KSharedConfigPtr config, QWidget *parent)
+    : QDialog(parent)
 {
     m_config = config;
     init();
 }
 
-SchemeEditorDialog::SchemeEditorDialog(const QString &path, KColorCm *parent)
-    : QDialog( parent )
+SchemeEditorDialog::SchemeEditorDialog(const QString &path, QWidget *parent)
+    : QDialog(parent)
     , m_filePath(path)
-    , m_disableUpdates(false)
-    , m_unsavedChanges(false)
-    , m_kcm(parent)
 {
     m_config = KSharedConfig::openConfig(path);
 
@@ -59,14 +53,22 @@ SchemeEditorDialog::SchemeEditorDialog(const QString &path, KColorCm *parent)
     init();
 }
 
+bool SchemeEditorDialog::overwriteOnSave() const
+{
+    return m_overwriteOnSave;
+}
+
+void SchemeEditorDialog::setOverwriteOnSave(bool overwrite)
+{
+    m_overwriteOnSave = overwrite;
+
+    buttonBox->button(QDialogButtonBox::Apply)->setVisible(overwrite);
+    buttonBox->button(QDialogButtonBox::Save)->setVisible(!overwrite);
+}
+
 void SchemeEditorDialog::init()
 {
     setupUi(this);
-
-    //we are in standalone appication mode? don't show the apply button
-    if (!m_kcm) {
-        buttonBox->button(QDialogButtonBox::Apply)->setVisible(false);
-    }
 
     schemeKnsUploadButton->setIcon( QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")) );
 
@@ -83,6 +85,10 @@ void SchemeEditorDialog::init()
     connect(m_colorTab, &SchemeEditorColors::changed, this, &SchemeEditorDialog::updateTabs);
     connect(m_disabledTab, &SchemeEditorEffects::changed, this, &SchemeEditorDialog::updateTabs);
     connect(m_inactiveTab, &SchemeEditorEffects::changed, this, &SchemeEditorDialog::updateTabs);
+
+    // In overwrite mode we use "Apply", in regular mode "Save" button
+    buttonBox->button(QDialogButtonBox::Apply)->setVisible(false);
+    buttonBox->button(QDialogButtonBox::Apply)->setEnabled(false);
 
     buttonBox->button(QDialogButtonBox::Save)->setEnabled(false);
     buttonBox->button(QDialogButtonBox::Reset)->setEnabled(false);
@@ -125,14 +131,10 @@ void SchemeEditorDialog::on_buttonBox_clicked(QAbstractButton *button)
         updateTabs();
         setUnsavedChanges(false);
     }
-    else if (buttonBox->standardButton(button) == QDialogButtonBox::Save)
+    else if (buttonBox->standardButton(button) == QDialogButtonBox::Save
+             || buttonBox->standardButton(button) == QDialogButtonBox::Apply)
     {
         saveScheme();
-    }
-    else if (buttonBox->standardButton(button) == QDialogButtonBox::Apply)
-    {
-        applyScheme();
-        emit applied();
     }
     else if (buttonBox->standardButton(button) == QDialogButtonBox::Close)
     {
@@ -151,25 +153,18 @@ void SchemeEditorDialog::on_buttonBox_clicked(QAbstractButton *button)
     }
 }
 
-void SchemeEditorDialog::applyScheme()
-{
-    if (!m_kcm) {
-        return;
-    }
-
-    m_kcm->updateConfig(m_config);
-    m_kcm->save();
-}
-
 void SchemeEditorDialog::saveScheme()
 {
+    QString name = m_schemeName;
+
     // prompt for the name to save as
-    bool ok;
-    QString schemeName = KConfigGroup(m_config, "General").readEntry("Name");
-    QString name = QInputDialog::getText(this, i18n("Save Color Scheme"),
-        i18n("&Enter a name for the color scheme:"), QLineEdit::Normal, m_schemeName, &ok);
-    if (!ok) {
-        return;
+    if (!m_overwriteOnSave) {
+        bool ok;
+        name = QInputDialog::getText(this, i18n("Save Color Scheme"),
+            i18n("&Enter a name for the color scheme:"), QLineEdit::Normal, m_schemeName, &ok);
+        if (!ok) {
+            return;
+        }
     }
 
     QString filename = name;
@@ -190,7 +185,7 @@ void SchemeEditorDialog::saveScheme()
     // or if we can overwrite it if it exists
     if (path.isEmpty() || !file.exists() || canWrite)
     {
-        if(canWrite){
+        if(canWrite && !m_overwriteOnSave){
             int ret = KMessageBox::questionYesNo(this,
                 i18n("A color scheme with that name already exists.\nDo you want to overwrite it?"),
                 i18n("Save Color Scheme"),
@@ -226,6 +221,9 @@ void SchemeEditorDialog::saveScheme()
         setWindowTitle(name);
 
         setUnsavedChanges(false);
+
+        QTextStream out(stdout);
+        out << filename << endl;
     }
     else if (!canWrite && file.exists())
     {
@@ -262,11 +260,13 @@ void SchemeEditorDialog::setUnsavedChanges(bool changes)
     if (changes)
     {
         buttonBox->button(QDialogButtonBox::Save)->setEnabled(true);
+        buttonBox->button(QDialogButtonBox::Apply)->setEnabled(true);
         buttonBox->button(QDialogButtonBox::Reset)->setEnabled(true);
     }
     else
     {
         buttonBox->button(QDialogButtonBox::Save)->setEnabled(false);
+        buttonBox->button(QDialogButtonBox::Apply)->setEnabled(false);
         buttonBox->button(QDialogButtonBox::Reset)->setEnabled(false);
     }
 }
