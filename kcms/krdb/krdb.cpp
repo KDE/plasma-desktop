@@ -382,6 +382,7 @@ static void createGtkrc( bool exportColors, const QPalette& cg, bool exportGtkTh
         t << endl;
         t << "widget \"gtk-tooltip\" style \"ToolTip\"" << endl;
         t << "widget \"gtk-tooltips\" style \"ToolTip\"" << endl;
+        t << "widget \"gtk-tooltip*\" style \"ToolTip\"" << endl;
         t << endl;
 
 
