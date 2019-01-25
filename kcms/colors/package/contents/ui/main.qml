@@ -73,21 +73,6 @@ KCM.GridViewKCM {
         }
     }
 
-    view.remove: Transition {
-        ParallelAnimation {
-            NumberAnimation { property: "scale"; to: 0.5; duration: Kirigami.Units.longDuration }
-            NumberAnimation { property: "opacity"; to: 0.0; duration: Kirigami.Units.longDuration }
-        }
-    }
-
-    view.removeDisplaced: Transition {
-        SequentialAnimation {
-            // wait for the "remove" animation to finish
-            PauseAnimation { duration: Kirigami.Units.longDuration }
-            NumberAnimation { properties: "x,y"; duration: Kirigami.Units.longDuration }
-        }
-    }
-
     view.delegate: KCM.GridDelegate {
         id: delegate
 
