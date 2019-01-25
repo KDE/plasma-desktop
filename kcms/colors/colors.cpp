@@ -182,6 +182,7 @@ void KCMColors::loadModel()
     }
 
     m_model->sort(0 /*column*/);
+    emit selectedSchemeIndexChanged();
 }
 
 void KCMColors::getNewStuff(QQuickItem *ctx)
