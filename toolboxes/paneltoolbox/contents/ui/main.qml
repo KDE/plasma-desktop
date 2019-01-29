@@ -80,7 +80,7 @@ Item {
 
     PlasmaCore.ToolTipArea {
         anchors.fill: parent
-        mainText: i18n("Configure Panel")
+        mainText: i18nd("plasma_toolbox_org.kde.paneltoolbox", "Configure Panel")
         icon: "configure"
     }
 }
