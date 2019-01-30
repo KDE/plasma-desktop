@@ -344,15 +344,15 @@ void Kclock::resizeEvent( QResizeEvent * )
 void Kclock::setClockSize(const QSize &size)
 {
     int dim = qMin(size.width(), size.height());
-    QSize newSize = QSize(dim, dim) * devicePixelRatio();
+    QSize newSize = QSize(dim, dim) * devicePixelRatioF();
 
     if (newSize != m_faceCache.size()) {
         m_faceCache = QPixmap(newSize);
         m_handsCache = QPixmap(newSize);
         m_glassCache = QPixmap(newSize);
-        m_faceCache.setDevicePixelRatio(devicePixelRatio());
-        m_handsCache.setDevicePixelRatio(devicePixelRatio());
-        m_glassCache.setDevicePixelRatio(devicePixelRatio());
+        m_faceCache.setDevicePixelRatio(devicePixelRatioF());
+        m_handsCache.setDevicePixelRatio(devicePixelRatioF());
+        m_glassCache.setDevicePixelRatio(devicePixelRatioF());
 
         m_theme->resize(QSize(dim, dim));
         m_repaintCache = RepaintAll;
@@ -427,7 +427,7 @@ void Kclock::paintInterface(QPainter *p, const QRect &rect)
 
     // paint face and glass cache
     QRect faceRect = m_faceCache.rect();
-    QRect targetRect = QRect(QPoint(0, 0), QSize(m_faceCache.width() / devicePixelRatio(), m_faceCache.height() / devicePixelRatio()));
+    QRect targetRect = QRect(QPoint(0, 0), QSize(m_faceCache.width() / devicePixelRatioF(), m_faceCache.height() / devicePixelRatioF()));
 
     if (m_repaintCache == RepaintAll) {
         m_faceCache.fill(Qt::transparent);
@@ -442,7 +442,7 @@ void Kclock::paintInterface(QPainter *p, const QRect &rect)
 
         glassPainter.save();
         QRectF elementRect = QRectF(QPointF(0, 0), m_theme->elementSize(QStringLiteral("HandCenterScrew")));
-        glassPainter.translate(faceRect.width() / (2 * devicePixelRatio()) - elementRect.width() / 2, faceRect.height() / (2 * devicePixelRatio()) - elementRect.height() / 2);
+        glassPainter.translate(faceRect.width() / (2 * devicePixelRatioF()) - elementRect.width() / 2, faceRect.height() / (2 * devicePixelRatioF()) - elementRect.height() / 2);
         m_theme->paint(&glassPainter, elementRect, QStringLiteral("HandCenterScrew"));
         glassPainter.restore();
 

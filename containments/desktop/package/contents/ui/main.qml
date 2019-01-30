@@ -29,6 +29,7 @@ import org.kde.draganddrop 2.0 as DragDrop
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
+import org.kde.private.desktopcontainment.folder 0.1 as Folder
 
 import "code/LayoutManager.js" as LayoutManager
 import "code/FolderTools.js" as FolderTools
@@ -267,6 +268,11 @@ FolderViewDropArea {
 
     onDragEnter: {
         if (isContainment && plasmoid.immutable && !(isFolder && FolderTools.isFileDrag(event))) {
+            event.ignore();
+        }
+
+        // Don't allow any drops while listing.
+        if (isFolder && folderViewLayer.view.status === Folder.FolderModel.Listing) {
             event.ignore();
         }
 
