@@ -93,6 +93,7 @@ class FOLDERPLUGIN_TESTS_EXPORT Positioner : public QAbstractItemModel
 
     private Q_SLOTS:
         void updatePositions();
+        void sourceStatusChanged();
         void sourceDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight,
             const QVector<int> &roles);
         void sourceModelAboutToBeReset();
@@ -132,7 +133,7 @@ class FOLDERPLUGIN_TESTS_EXPORT Positioner : public QAbstractItemModel
         bool m_ignoreNextTransaction;
 
         QStringList m_positions;
-        bool m_pendingPositions;
+        bool m_deferApplyPositions;
         QTimer *m_updatePositionsTimer;
 
         QHash<int, int> m_proxyToSource;
