@@ -407,8 +407,10 @@ void Positioner::move(const QVariantList &moves) {
         }
 
         if (!fromIndices.contains(to) && !isBlank(to)) {
-            // find the next blank space
-            while (!isBlank(to) &&  from != to) {
+            /* find the next blank space
+             * we won't be happy if we're moving two icons to the same place
+             */
+            while ((!isBlank(to) && from != to) || toIndices.contains(to)) {
                 to++;
             }
         }
