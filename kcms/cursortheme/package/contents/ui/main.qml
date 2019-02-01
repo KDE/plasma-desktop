@@ -141,7 +141,7 @@ KCM.GridViewKCM {
                 parent: footerLayout.x + footerLayout.width - comboLayout.width > width ? row1 : row2
                 QtControls.Button {
                     icon.name: "document-import"
-                    text: i18n("&Install From File...")
+                    text: i18n("&Install from File...")
                     onClicked: fileDialogLoader.active = true;
                     enabled: kcm.canInstall
                 }
