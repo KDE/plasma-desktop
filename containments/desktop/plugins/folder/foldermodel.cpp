@@ -150,11 +150,15 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_dirModel->setDirLister(dirLister);
     m_dirModel->setDropsAllowed(KDirModel::DropOnDirectory | KDirModel::DropOnLocalExecutable);
 
-    /*
-     * position dropped items at the desired target position
-     * delay this via queued connection, such that the row is available and can be mapped
-     * when we emit the move request
-     */
+    // If we have dropped items queued for moving, go unsorted now.
+    connect(this, &QAbstractItemModel::rowsAboutToBeInserted,
+            this, [this]() {
+            if (!m_dropTargetPositions.isEmpty()) {
+                setSortMode(-1);
+            }
+    });
+
+    // Position dropped items at the desired target position.
     connect(this, &QAbstractItemModel::rowsInserted,
             this, [this](const QModelIndex &parent, int first, int last) {
         for (int i = first; i <= last; ++i) {
@@ -164,11 +168,11 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
             if (it != m_dropTargetPositions.end()) {
                 const auto pos = it.value();
                 m_dropTargetPositions.erase(it);
-                setSortMode(-1);
                 emit move(pos.x(), pos.y(), {url});
             }
         }
     });
+
     /*
      * Dropped files may not actually show up as new files, e.g. when we overwrite
      * an existing file. Or files that fail to be listed by the dirLister, or...
