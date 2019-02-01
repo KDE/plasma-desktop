@@ -29,9 +29,8 @@ Positioner::Positioner(QObject *parent): QAbstractItemModel(parent)
 , m_enabled(false)
 , m_folderModel(nullptr)
 , m_perStripe(0)
-, m_lastRow(-1)
 , m_ignoreNextTransaction(false)
-, m_pendingPositions(false)
+, m_deferApplyPositions(false)
 , m_updatePositionsTimer(new QTimer(this))
 {
     m_updatePositionsTimer->setSingleShot(true);
@@ -84,7 +83,6 @@ void Positioner::setFolderModel(QObject *folderModel)
         }
 
         m_folderModel = qobject_cast<FolderModel *>(folderModel);
-        connect(m_folderModel, SIGNAL(urlChanged()), this, SLOT(reset()), Qt::UniqueConnection);
 
         if (m_folderModel) {
             connectSignals(m_folderModel);
@@ -130,10 +128,11 @@ void Positioner::setPositions(const QStringList &positions)
 
         emit positionsChanged();
 
-        if (!m_proxyToSource.isEmpty()) {
+        // Defer applying positions until listing completes.
+        if (m_folderModel->status() == FolderModel::Listing) {
+            m_deferApplyPositions = true;
+        } else {
             applyPositions();
-        } else if (m_positions.size() >= 5) {
-            m_pendingPositions = true;
         }
     }
 }
@@ -363,6 +362,11 @@ void Positioner::reset()
 }
 
 void Positioner::move(const QVariantList &moves) {
+    // Don't allow moves while listing.
+    if (m_folderModel->status() == FolderModel::Listing) {
+        return;
+    }
+
     QVector<int> fromIndices;
     QVector<int> toIndices;
     QVector<int> sourceRows;
@@ -403,8 +407,10 @@ void Positioner::move(const QVariantList &moves) {
         }
 
         if (!fromIndices.contains(to) && !isBlank(to)) {
-            // find the next blank space
-            while (!isBlank(to) &&  from != to) {
+            /* find the next blank space
+             * we won't be happy if we're moving two icons to the same place
+             */
+            while ((!isBlank(to) && from != to) || toIndices.contains(to)) {
                 to++;
             }
         }
@@ -480,6 +486,13 @@ void Positioner::updatePositions()
     }
 }
 
+void Positioner::sourceStatusChanged()
+{
+    if (m_deferApplyPositions && m_folderModel->status() != FolderModel::Listing) {
+        applyPositions();
+    }
+}
+
 void Positioner::sourceDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight,
     const QVector<int>& roles)
 {
@@ -516,13 +529,15 @@ void Positioner::sourceModelReset()
 void Positioner::sourceRowsAboutToBeInserted(const QModelIndex &parent, int start, int end)
 {
     if (m_enabled) {
-        if (m_proxyToSource.isEmpty()) {
-            if (!m_pendingPositions) {
-                beginInsertRows(parent, start, end);
-                m_beginInsertRowsCalled = true;
+        // Don't insert yet if we're waiting for listing to complete to apply
+        // initial positions;
+        if (m_deferApplyPositions) {
+            return;
+        } else if (m_proxyToSource.isEmpty()) {
+            beginInsertRows(parent, start, end);
+            m_beginInsertRowsCalled = true;
 
-                initMaps(end + 1);
-            }
+            initMaps(end + 1);
 
             return;
         }
@@ -612,7 +627,6 @@ void Positioner::sourceRowsAboutToBeRemoved(const QModelIndex &parent, int first
         m_proxyToSource = newProxyToSource;
         m_sourceToProxy = newSourceToProxy;
 
-        m_lastRow = -1;
         int newLast = lastRow();
 
         if (oldLast > newLast) {
@@ -641,13 +655,9 @@ void Positioner::sourceRowsInserted(const QModelIndex &parent, int first, int la
     Q_UNUSED(last)
 
     if (!m_ignoreNextTransaction) {
-        if (!m_pendingPositions) {
-            if (m_beginInsertRowsCalled) {
-                endInsertRows();
-                m_beginInsertRowsCalled = false;
-            }
-        } else {
-            applyPositions();
+        if (m_beginInsertRowsCalled) {
+            endInsertRows();
+            m_beginInsertRowsCalled = false;
         }
     } else {
         m_ignoreNextTransaction = false;
@@ -655,7 +665,11 @@ void Positioner::sourceRowsInserted(const QModelIndex &parent, int first, int la
 
     flushPendingChanges();
 
-    m_updatePositionsTimer->start();
+    // Don't generate new positions data if we're waiting for listing to
+    // complete to apply initial positions.
+    if (!m_deferApplyPositions) {
+        m_updatePositionsTimer->start();
+    }
 }
 
 void Positioner::sourceRowsMoved(const QModelIndex &sourceParent, int sourceStart,
@@ -721,7 +735,6 @@ void Positioner::updateMaps(int proxyIndex, int sourceIndex)
 {
     m_proxyToSource.insert(proxyIndex, sourceIndex);
     m_sourceToProxy.insert(sourceIndex, proxyIndex);
-    m_lastRow = -1;
 }
 
 int Positioner::firstRow() const
@@ -739,13 +752,9 @@ int Positioner::firstRow() const
 int Positioner::lastRow() const
 {
     if (!m_proxyToSource.isEmpty()) {
-        if (m_lastRow != -1) {
-            return m_lastRow;
-        } else {
-            QList<int> keys(m_proxyToSource.keys());
-            qSort(keys);
-            return keys.last();
-        }
+        QList<int> keys(m_proxyToSource.keys());
+        qSort(keys);
+        return keys.last();
     }
 
     return 0;
@@ -768,7 +777,23 @@ int Positioner::firstFreeRow() const
 
 void Positioner::applyPositions()
 {
+    // We were called while the source model is listing. Defer applying positions
+    // until listing completes.
+    if (m_folderModel->status() == FolderModel::Listing) {
+        m_deferApplyPositions = true;
+
+        return;
+    }
+
+
     if (m_positions.size() < 5) {
+        // We were waiting for listing to complete before proxying source rows,
+        // but we don't have positions to apply. Reset to populate.
+        if (m_deferApplyPositions) {
+            m_deferApplyPositions = false;
+            reset();
+        }
+
         return;
     }
 
@@ -868,7 +893,7 @@ void Positioner::applyPositions()
 
     endResetModel();
 
-    m_pendingPositions = false;
+    m_deferApplyPositions = false;
 
     m_updatePositionsTimer->start();
 }
@@ -919,6 +944,12 @@ void Positioner::connectSignals(FolderModel* model)
     connect(model, &QAbstractItemModel::layoutChanged,
             this, &Positioner::sourceLayoutChanged,
             Qt::UniqueConnection);
+    connect(m_folderModel, &FolderModel::urlChanged,
+            this, &Positioner::reset,
+            Qt::UniqueConnection);
+    connect(m_folderModel, &FolderModel::statusChanged,
+            this, &Positioner::sourceStatusChanged,
+            Qt::UniqueConnection);
 }
 
 void Positioner::disconnectSignals(FolderModel* model)
@@ -941,4 +972,8 @@ void Positioner::disconnectSignals(FolderModel* model)
             this, &Positioner::sourceRowsRemoved);
     disconnect(model, &QAbstractItemModel::layoutChanged,
             this, &Positioner::sourceLayoutChanged);
+    disconnect(m_folderModel, &FolderModel::urlChanged,
+            this, &Positioner::reset);
+    disconnect(m_folderModel, &FolderModel::statusChanged,
+            this, &Positioner::sourceStatusChanged);
 }
