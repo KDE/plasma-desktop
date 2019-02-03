@@ -76,11 +76,12 @@ Item {
         onClicked: {
             main.Plasmoid.action("configure").trigger()
         }
-    }
 
-    PlasmaCore.ToolTipArea {
-        anchors.fill: parent
-        mainText: i18nd("plasma_toolbox_org.kde.paneltoolbox", "Configure Panel")
-        icon: "configure"
+        PlasmaCore.ToolTipArea {
+            anchors.fill: parent
+            mainText: i18nd("plasma_toolbox_org.kde.paneltoolbox", "Configure Panel...")
+            icon: "configure"
+            enabled: mouseArea.containsMouse
+        }
     }
 }
