@@ -36,6 +36,11 @@ class KIconTheme;
 class QQuickItem;
 class QTemporaryFile;
 
+namespace KIO
+{
+class FileCopyJob;
+}
+
 class IconsModel;
 
 class IconModule : public KQuickAddons::ConfigModule
@@ -45,6 +50,8 @@ class IconModule : public KQuickAddons::ConfigModule
     Q_PROPERTY(IconsModel *iconsModel READ iconsModel CONSTANT)
 
     Q_PROPERTY(QStringList iconGroups READ iconGroups CONSTANT)
+
+    Q_PROPERTY(bool downloadingFile READ downloadingFile NOTIFY downloadingFileChanged)
 
 public:
     IconModule(QObject *parent, const QVariantList &args);
@@ -60,6 +67,8 @@ public:
     IconsModel *iconsModel() const;
 
     QStringList iconGroups() const;
+
+    bool downloadingFile() const;
 
     void load() override;
     void save() override;
@@ -77,6 +86,7 @@ public:
 
 signals:
     void iconSizesChanged();
+    void downloadingFileChanged();
 
     void showSuccessMessage(const QString &message);
     void showErrorMessage(const QString &message);
@@ -110,6 +120,7 @@ private:
     QStringList m_iconGroups;
 
     QScopedPointer<QTemporaryFile> m_tempInstallFile;
+    QPointer<KIO::FileCopyJob> m_tempCopyJob;
 
     QPointer<KNS3::DownloadDialog> m_newStuffDialog;
 

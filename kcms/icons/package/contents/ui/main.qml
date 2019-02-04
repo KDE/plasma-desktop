@@ -36,6 +36,8 @@ KCM.GridViewKCM {
     view.model: kcm.iconsModel
     view.currentIndex: kcm.iconsModel.selectedThemeIndex
 
+    enabled: !kcm.downloadingFile
+
     DropArea {
         anchors.fill: parent
         onEntered: {

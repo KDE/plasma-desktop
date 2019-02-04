@@ -185,6 +185,11 @@ int CursorThemeConfig::selectedSizeRow() const
     return m_selectedSizeRow;
 }
 
+bool CursorThemeConfig::downloadingFile() const
+{
+    return m_tempCopyJob;
+}
+
 
 
 QAbstractItemModel *CursorThemeConfig::cursorsModel()
@@ -469,6 +474,10 @@ void CursorThemeConfig::installThemeFromFile(const QUrl &url)
         return;
     }
 
+    if (m_tempCopyJob) {
+        return;
+    }
+
     m_tempInstallFile.reset(new QTemporaryFile());
     if (!m_tempInstallFile->open()) {
         emit showErrorMessage(i18n("Unable to create a temporary file."));
@@ -476,11 +485,12 @@ void CursorThemeConfig::installThemeFromFile(const QUrl &url)
         return;
     }
 
-    KIO::FileCopyJob *job = KIO::file_copy(url,QUrl::fromLocalFile(m_tempInstallFile->fileName()),
+    m_tempCopyJob = KIO::file_copy(url,QUrl::fromLocalFile(m_tempInstallFile->fileName()),
                                            -1, KIO::Overwrite);
-    job->uiDelegate()->setAutoErrorHandlingEnabled(true);
+    m_tempCopyJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
+    emit downloadingFileChanged();
 
-    connect(job, &KIO::FileCopyJob::result, this, [this, url](KJob *job) {
+    connect(m_tempCopyJob, &KIO::FileCopyJob::result, this, [this, url](KJob *job) {
         if (job->error() != KJob::NoError) {
             emit showErrorMessage(i18n("Unable to download the icon theme archive: %1", job->errorText()));
             return;
@@ -489,6 +499,7 @@ void CursorThemeConfig::installThemeFromFile(const QUrl &url)
         installThemeFile(m_tempInstallFile->fileName());
         m_tempInstallFile.reset();
     });
+    connect(m_tempCopyJob, &QObject::destroyed, this, &CursorThemeConfig::downloadingFileChanged);
 }
 
 void CursorThemeConfig::installThemeFile(const QString &path)

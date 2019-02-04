@@ -37,6 +37,8 @@ KCM.GridViewKCM {
         view.positionViewAtIndex(view.currentIndex, view.GridView.Beginning);
     }
 
+    enabled: !kcm.downloadingFile
+
     DropArea {
         anchors.fill: parent
         onEntered: {

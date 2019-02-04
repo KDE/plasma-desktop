@@ -29,6 +29,11 @@ class CursorThemeModel;
 class SortProxyModel;
 class CursorTheme;
 
+namespace KIO
+{
+    class FileCopyJob;
+}
+
 class CursorThemeConfig : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
@@ -39,6 +44,8 @@ class CursorThemeConfig : public KQuickAddons::ConfigModule
     Q_PROPERTY(QAbstractItemModel *sizesModel READ sizesModel CONSTANT)
     Q_PROPERTY(int selectedThemeRow READ selectedThemeRow WRITE setSelectedThemeRow NOTIFY selectedThemeRowChanged)
     Q_PROPERTY(int selectedSizeRow READ selectedSizeRow WRITE setSelectedSizeRow NOTIFY selectedSizeRowChanged)
+
+    Q_PROPERTY(bool downloadingFile READ downloadingFile NOTIFY downloadingFileChanged)
 
 public:
     CursorThemeConfig(QObject *parent, const QVariantList &);
@@ -65,6 +72,8 @@ public:
     int selectedSizeRow() const;
     void setSelectedSizeRow(int row);
 
+    bool downloadingFile() const;
+
     QAbstractItemModel *cursorsModel();
     QAbstractItemModel *sizesModel();
 
@@ -74,6 +83,7 @@ Q_SIGNALS:
     void canConfigureChanged();
     void selectedThemeRowChanged();
     void selectedSizeRowChanged();
+    void downloadingFileChanged();
 
     void showSuccessMessage(const QString &message);
     void showInfoMessage(const QString &message);
@@ -134,6 +144,7 @@ private:
     bool m_canConfigure;
 
     QScopedPointer<QTemporaryFile> m_tempInstallFile;
+    QPointer<KIO::FileCopyJob> m_tempCopyJob;
 };
 
 #endif
