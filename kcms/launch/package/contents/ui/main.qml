@@ -18,7 +18,7 @@
 
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.0 as QtControls
+import QtQuick.Controls 2.2 as QtControls
 import org.kde.kirigami 2.3 as Kirigami
 import org.kde.kcm 1.1
 
@@ -61,8 +61,7 @@ SimpleKCM {
 
                 text: i18n("No Feedback")
 
-                onCheckedChanged: Qt.callLater(function() { kcm.busyCursorCurrentIndex = 0; })
-
+                onToggled: kcm.busyCursorCurrentIndex = 0;
             }
 
             QtControls.RadioButton {
@@ -70,7 +69,7 @@ SimpleKCM {
 
                 text: i18n("Static")
 
-                onCheckedChanged: Qt.callLater(function() { kcm.busyCursorCurrentIndex = 1; })
+                onToggled: kcm.busyCursorCurrentIndex = 1;
             }
 
             QtControls.RadioButton {
@@ -78,7 +77,7 @@ SimpleKCM {
 
                 text: i18n("Blinking")
 
-                onCheckedChanged: Qt.callLater(function() { kcm.busyCursorCurrentIndex = 2; })
+                onToggled: kcm.busyCursorCurrentIndex = 2;
             }
 
             QtControls.RadioButton {
@@ -86,7 +85,7 @@ SimpleKCM {
 
                 text: i18n("Bouncing")
 
-                onCheckedChanged: Qt.callLater(function() { kcm.busyCursorCurrentIndex = 3; })
+                onToggled: kcm.busyCursorCurrentIndex = 3;
             }
         }
 
@@ -98,7 +97,7 @@ SimpleKCM {
             text: i18n("Enable animation")
 
             checked: kcm.taskManagerNotification
-            onCheckedChanged: kcm.taskManagerNotification = checked
+            onToggled: kcm.taskManagerNotification = checked
         }
 
         QtControls.SpinBox {
