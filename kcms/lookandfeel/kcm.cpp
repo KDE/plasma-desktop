@@ -458,8 +458,6 @@ void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
     if (scheme.isEmpty() && colorFile.isEmpty()) {
         return;
     }
-    KConfigGroup configGroup(&m_config, "General");
-    configGroup.writeEntry("ColorScheme", scheme);
 
     KSharedConfigPtr conf = KSharedConfig::openConfig(colorFile, KSharedConfig::CascadeConfig);
     foreach (const QString &grp, conf->groupList()) {
@@ -467,6 +465,9 @@ void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
         KConfigGroup cg2(&m_config, grp);
         cg.copyTo(&cg2);
     }
+
+    KConfigGroup configGroup(&m_config, "General");
+    configGroup.writeEntry("ColorScheme", scheme);
 
     configGroup.sync();
     KGlobalSettings::self()->emitChange(KGlobalSettings::PaletteChanged);
