@@ -273,7 +273,7 @@ bool X11EvdevBackend::evdevApplyReverseScroll(int deviceid, bool reverse)
 
 void X11EvdevBackend::kcmInit()
 {
-    m_settings->load(this);
+    load();
     apply(true); // force
     X11Backend::kcmInit();
 }
