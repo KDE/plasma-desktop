@@ -127,7 +127,12 @@ Item {
                     QtControls.Label {
                         text: model.name
 
-                        anchors.fill: parent
+                        anchors {
+                            left: icon.right
+                            right: buttons.left
+                            leftMargin: units.largeSpacing
+                            verticalCenter: icon.verticalCenter
+                        }
                     }
 
                     Row {
