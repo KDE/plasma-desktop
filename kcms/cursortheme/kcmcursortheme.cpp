@@ -415,7 +415,6 @@ void CursorThemeConfig::load()
 
     setSelectedThemeRow(m_appliedIndex.row());
     m_originalSelectedThemeRow = m_selectedThemeRow;
-    m_originalPreferredSize = m_preferredSize;
 
     // Load cursor size
     int size = cg.readEntry("cursorSize", 0);
@@ -424,6 +423,7 @@ void CursorThemeConfig::load()
     } else {
         m_preferredSize = size;
     }
+    m_originalPreferredSize = m_preferredSize;
     updateSizeComboBox(); // This handles also the kiosk mode
 
     m_appliedSize = size;
