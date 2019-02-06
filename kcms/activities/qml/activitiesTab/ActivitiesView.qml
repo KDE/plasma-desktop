@@ -90,22 +90,16 @@ Item {
             delegate: Rectangle {
                 width: parent.width
 
-                Behavior on height { PropertyAnimation { duration: units.shortDuration } }
-                height: icon.height + units.smallSpacing * 2 +
-                            (dialogConfigureLoader.itemVisible ? dialogConfigureLoader.height : 0) +
-                            (dialogDeleteLoader.itemVisible ? dialogDeleteLoader.height : 0)
+                height: units.iconSizes.medium + units.smallSpacing * 2
 
                 color: (model.index % 2 == 0) ? palette.base : palette.alternateBase
 
                 Item {
                     id: header
 
-                    height: units.iconSizes.medium
-
                     anchors {
-                        left: parent.left
-                        right: parent.right
-                        top: parent.top
+                        fill: parent
+                        margins: units.smallSpacing
                     }
 
                     QIconItem {
@@ -118,9 +112,6 @@ Item {
                         anchors {
                             left:   parent.left
                             top:    parent.top
-
-                            topMargin: units.smallSpacing
-                            bottomMargin: units.smallSpacing
                         }
                     }
 
@@ -139,11 +130,11 @@ Item {
                         id: buttons
 
                         spacing: units.smallSpacing
+                        height: parent.height
 
                         anchors {
                             right: parent.right
 
-                            rightMargin: units.smallSpacing
                             verticalCenter: parent.verticalCenter
                         }
 
