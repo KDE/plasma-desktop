@@ -312,7 +312,7 @@ QVariant CGroupList::data(const QModelIndex &index, int role) const
                             switch(grp->type())
                             {
                                 case CGroupListItem::ALL:
-                                    return SmallIcon("preferences-desktop-font");
+                                    return SmallIcon("font");
                                 case CGroupListItem::PERSONAL:
                                     return SmallIcon("user-identity");
                                 case CGroupListItem::SYSTEM:
