@@ -170,6 +170,10 @@ void IconsModel::load()
         m_data.append(item);
     }
 
+    std::sort(m_data.begin(), m_data.end(), [](const IconsModelData &a, const IconsModelData &b) {
+        return a.display < b.display;
+    });
+
     endResetModel();
 
     // an item might have been added before the currently selected one

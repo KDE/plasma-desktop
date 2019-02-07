@@ -137,6 +137,7 @@ void KCMSplashScreen::loadModel()
         row->setData(pkg.metadata().comment(), DescriptionRole);
         m_model->appendRow(row);
     }
+    m_model->sort(0 /*column*/);
     emit selectedPluginIndexChanged();
 }
 

@@ -244,6 +244,7 @@ void KCMLookandFeel::loadModel()
 
         m_model->appendRow(row);
     }
+    m_model->sort(0 /*column*/);
     emit selectedPluginIndexChanged();
 }
 
