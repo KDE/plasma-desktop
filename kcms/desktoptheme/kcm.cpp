@@ -282,6 +282,9 @@ void KCMDesktopTheme::load()
         }
     }
 
+    m_model->setSortRole(ThemeNameRole); // FIXME the model should really be just using Qt::DisplayRole
+    m_model->sort(0 /*column*/);
+
     KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("plasmarc")), "Theme");
     setSelectedPlugin(cg.readEntry("name", m_defaultTheme->themeName()));
 
