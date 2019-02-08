@@ -50,11 +50,11 @@ Item {
 
     function switchToInitial() {
         if (firstButton != null) {
+            root.state = "Normal";
             mainTabGroup.currentTab = firstButton.tab;
             tabBar.currentTab = firstButton;
             header.query = ""
             header.state = "hint";
-            root.state = "Normal";
         }
     }
 
