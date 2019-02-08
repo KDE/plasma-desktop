@@ -121,13 +121,12 @@ Item {
         id: toolBoxLoader
         active: false
         sourceComponent: PlasmaCore.Dialog {
+            id: dialog
             flags: Qt.WindowStaysOnTopHint
             location: PlasmaCore.Types.Floating
             visualParent: toolBoxButton
          //   hideOnWindowDeactivate: true
             mainItem: ToolBoxItem {
-                id: dialog
-
                 LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
                 LayoutMirroring.childrenInherit: true
 
