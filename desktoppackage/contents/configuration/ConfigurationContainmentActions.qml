@@ -94,6 +94,8 @@ Item {
 
             QtControls.ComboBox {
                 id: pluginsCombo
+                // "index" argument of onActivated shadows the model index
+                readonly property int pluginIndex: index
                 Layout.fillWidth: true
                 Layout.column: 1
                 Layout.row: index
@@ -115,8 +117,11 @@ Item {
                     pluginsCombo.initialized = true;
                 }
                 onActivated: {
-                    if (initialized && configDialog.containmentActionConfigModel.get(currentIndex).pluginName != pluginName) {
-                        configDialog.currentContainmentActionsModel.update(index, action, configDialog.containmentActionConfigModel.get(currentIndex).pluginName);
+                    if (initialized) {
+                        var newPluginName = configDialog.containmentActionConfigModel.get(index).pluginName;
+                        if (newPluginName != pluginName) {
+                            configDialog.currentContainmentActionsModel.update(pluginIndex, action, newPluginName);
+                        }
                     }
                 }
             }
