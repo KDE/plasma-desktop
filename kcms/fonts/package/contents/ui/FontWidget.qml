@@ -46,13 +46,13 @@ FocusScope {
         QtControls.TextField {
             readOnly: true
             Kirigami.Theme.inherit: true
-            text: root.font.family + " " + root.font.pointSize
+            text: root.font.family + " " + root.font.pointSize + "pt"
             font: root.font
             Layout.fillHeight: true
         }
 
         QtControls.Button {
-            text: i18n("Choose...")
+            icon.name: "document-edit"
             Layout.fillHeight: true
             Kirigami.MnemonicData.enabled: false
             focus: true
@@ -62,6 +62,11 @@ FocusScope {
                 fontDialog.font = root.font;
                 fontDialog.currentFont = root.font;
                 fontDialog.open()
+            }
+            QtControls.ToolTip {
+                visible: parent.hovered
+                text: i18n("Select %1 Font...", label.replace(':', ''))
+                font.capitalization: Font.Capitalize
             }
         }
     }

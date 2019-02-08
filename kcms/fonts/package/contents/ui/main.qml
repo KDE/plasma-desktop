@@ -27,7 +27,7 @@ import org.kde.kcm 1.1 as KCM
 KCM.SimpleKCM {
     id: root
 
-    KCM.ConfigModule.quickHelp: i18n("Fonts")
+    KCM.ConfigModule.quickHelp: i18n("This module lets you configure the system fonts.")
 
     Kirigami.FormLayout {
         id: formLayout
@@ -36,6 +36,7 @@ KCM.SimpleKCM {
         QtControls.Button {
             id: adjustAllFontsButton
             Layout.preferredWidth: formLayout.maxImplicitWidth
+            icon.name: "font-select-symbolic"
             text: i18n("&Adjust All Fonts...")
 
             onClicked: kcm.adjustAllFonts();
@@ -82,7 +83,7 @@ KCM.SimpleKCM {
             Layout.preferredWidth: formLayout.maxImplicitWidth
             Kirigami.FormData.label: i18nc("Used as a noun, and precedes a combobox full of options", "Anti-aliasing:")
 
-            model: [i18n("Enabled"), i18n("Vendor Default"), i18n("Disabled")]
+            model: [i18n("Enabled"), i18n("Vendor default"), i18n("Disabled")]
 
             currentIndex: kcm.fontAASettings.antiAliasing
             onCurrentIndexChanged: kcm.fontAASettings.antiAliasing = antiAliasingComboBox.currentIndex
@@ -99,8 +100,12 @@ KCM.SimpleKCM {
 
         RowLayout {
             id: excludeField
-            Layout.preferredWidth: formLayout.maxImplicitWidth
             enabled: antiAliasingComboBox.currentIndex == 0
+
+            Item {
+                width: units.largeSpacing
+            }
+
             QtControls.SpinBox {
                 id: excludeFromSpinBox
                 stepSize: 1
@@ -208,7 +213,7 @@ KCM.SimpleKCM {
             QtControls.CheckBox {
                 id: dpiCheckBox
                 checked: kcm.fontAASettings.dpi !== 0
-                text: i18n("Force Fonts DPI:")
+                text: i18n("Force font DPI:")
             }
 
             QtControls.SpinBox {
@@ -230,7 +235,7 @@ KCM.SimpleKCM {
 
         QtDialogs.FontDialog {
             id: fontDialog
-            title: i18n("Choose a font")
+            title: i18n("Select Font")
             modality: Qt.WindowModal
             property string currentCategory
             property bool adjustAllFonts: false
