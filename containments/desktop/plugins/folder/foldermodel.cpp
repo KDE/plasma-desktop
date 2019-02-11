@@ -1386,6 +1386,13 @@ bool FolderModel::isDir(const QModelIndex &index, const KDirModel *dirModel) con
             return false;
         }
 
+        // Assume the root folder of a protocol is always a folder.
+        // This avoids spinning up e.g. trash KIO slave just to check whether trash:/ is a folder.
+        if (url.path() == QLatin1String("/")) {
+            m_isDirCache.insert(item.url(), true);
+            return true;
+        }
+
         if (KProtocolInfo::protocolClass(url.scheme()) != QStringLiteral(":local")) {
             return false;
         }

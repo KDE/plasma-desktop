@@ -317,7 +317,7 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
         KDirModel *m_dirModel;
         KDirWatch *m_dirWatch;
         QString m_url;
-        QHash<QUrl, bool> m_isDirCache;
+        mutable QHash<QUrl, bool> m_isDirCache;
         mutable QHash<QUrl, KIO::StatJob *> m_isDirJobs;
         QItemSelectionModel *m_selectionModel;
         QItemSelection m_pinnedSelection;
