@@ -280,7 +280,7 @@ void CFontFilter::filterChanged()
             itsCurrentFileTypes.clear();
 
             setCriteria(crit);
-            setPlaceholderText(i18n("Filter by %1...", act->text().toLower()));
+            setPlaceholderText(i18n("Filter by %1...", act->text()));
             setReadOnly(false);
         }
     }
@@ -342,7 +342,7 @@ void CFontFilter::addAction(ECriteria crit, const QString &text, bool on)
     itsActions[crit]->setData((int)crit);
     itsActions[crit]->setChecked(on);
     if(on)
-        setPlaceholderText(i18n("Filter by %1", text.toLower()));
+        setPlaceholderText(i18n("Filter by %1", text));
     connect(itsActions[crit], SIGNAL(toggled(bool)), SLOT(filterChanged()));
 }
 
