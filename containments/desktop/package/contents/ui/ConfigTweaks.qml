@@ -18,9 +18,10 @@
  ***************************************************************************/
 
 import QtQuick 2.0
-import QtQuick.Controls 1.0
+import QtQuick.Controls 2.0
 import QtQuick.Dialogs 1.1
 import QtQuick.Layouts 1.0
+import org.kde.kirigami 2.4 as Kirigami
 
 import org.kde.plasma.plasmoid 2.0
 
@@ -33,42 +34,18 @@ Item {
     property alias cfg_showToolbox: showToolbox.checked
     property alias cfg_pressToMove: pressToMove.checked
 
-    ColumnLayout {
-        width: parent.width
+    Kirigami.FormLayout {
 
-        GroupBox {
-            Layout.fillWidth: true
+        CheckBox {
+            id: showToolbox
 
-            title: i18n("Desktop Layout")
-            flat: true
-
-            ColumnLayout {
-                Layout.fillWidth: true
-
-                CheckBox {
-                    id: showToolbox
-
-                    text: i18n("Show the desktop toolbox")
-                }
-            }
+            text: i18n("Show the desktop toolbox")
         }
 
-        GroupBox {
-            Layout.fillWidth: true
+        CheckBox {
+            id: pressToMove
 
-            title: i18n("Widget Handling")
-
-            flat: true
-
-            ColumnLayout {
-                Layout.fillWidth: true
-
-                CheckBox {
-                    id: pressToMove
-
-                    text: i18n("Press and hold widgets to move them and reveal their handles")
-                }
-            }
+            text: i18n("Press and hold widgets to move them and reveal their handles")
         }
     }
 }
