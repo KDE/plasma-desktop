@@ -18,7 +18,7 @@
  ***************************************************************************/
 
 import QtQuick 2.0
-import QtQuick.Controls 2.0
+import QtQuick.Controls 2.4
 import QtQuick.Dialogs 1.1
 import QtQuick.Layouts 1.0
 import org.kde.kirigami 2.4 as Kirigami
@@ -34,18 +34,43 @@ Item {
     property alias cfg_showToolbox: showToolbox.checked
     property alias cfg_pressToMove: pressToMove.checked
 
-    Kirigami.FormLayout {
+    property bool showMessage: false
 
-        CheckBox {
-            id: showToolbox
+    ColumnLayout {
 
-            text: i18n("Show the desktop toolbox")
+        Kirigami.InlineMessage {
+            visible: showMessage || animating
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "With the Desktop Toolbox hidden, right-click on the desktop and choose 'Configure Desktop...' to access this configuration window in the future")
+            Layout.fillWidth: true
+            Layout.leftMargin: Kirigami.Units.smallSpacing
+            Layout.rightMargin: Kirigami.Units.smallSpacing
         }
 
-        CheckBox {
-            id: pressToMove
+        Kirigami.FormLayout {
 
-            text: i18n("Press and hold widgets to move them and reveal their handles")
+            CheckBox {
+                id: showToolbox
+
+                text: i18n("Show the desktop toolbox")
+
+                // Only show the message when the user actively unchecks it, not if it's
+                // already unchecked
+                nextCheckState: function() {
+                    if (checkState === Qt.Checked) {
+                        showMessage = true
+                        return Qt.Unhecked
+                    } else {
+                        showMessage = false
+                        return Qt.Checked
+                    }
+                }
+            }
+
+            CheckBox {
+                id: pressToMove
+
+                text: i18n("Press and hold widgets to move them and reveal their handles")
+            }
         }
     }
 }
