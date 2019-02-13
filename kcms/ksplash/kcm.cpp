@@ -47,7 +47,7 @@ KCMSplashScreen::KCMSplashScreen(QObject* parent, const QVariantList& args)
     , m_configGroup(m_config.group("KSplash"))
 {
     qmlRegisterType<QStandardItemModel>();
-    KAboutData* about = new KAboutData(QStringLiteral("kcm_splashscreen"), i18n("Choose the splash screen theme"),
+    KAboutData* about = new KAboutData(QStringLiteral("kcm_splashscreen"), i18n("Splash Screen"),
                                        QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
     setAboutData(about);

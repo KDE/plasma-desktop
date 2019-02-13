@@ -73,7 +73,7 @@ KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
     qApp->setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
     qmlRegisterType<QStandardItemModel>();
     qmlRegisterType<KCMLookandFeel>();
-    KAboutData* about = new KAboutData(QStringLiteral("kcm_lookandfeel"), i18n("Choose the Look and Feel theme"),
+    KAboutData* about = new KAboutData(QStringLiteral("kcm_lookandfeel"), i18n("Look and Feel"),
                                        QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
     setAboutData(about);

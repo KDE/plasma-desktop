@@ -437,7 +437,7 @@ KFonts::KFonts(QObject *parent, const QVariantList &args)
     , m_fontAASettings(new FontAASettings(this))
 {
     qApp->setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
-    KAboutData* about = new KAboutData("kcm_fonts", i18n("Configure the system fonts"),
+    KAboutData* about = new KAboutData("kcm_fonts", i18n("Fonts"),
                                        "0.1", QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Antonis Tsiapaliokas"), QString(), "antonis.tsiapaliokas@kde.org");
     setAboutData(about);

@@ -170,7 +170,7 @@ KCMStyle::KCMStyle( QWidget* parent, const QVariantList& )
     KGlobal::dirs()->addResourceType("themes", "data", "kstyle/themes");
 
     KAboutData *about =
-        new KAboutData( QStringLiteral("kcmstyle"), i18n("KDE Style Module"), QStringLiteral("1.0"),
+        new KAboutData( QStringLiteral("kcmstyle"), i18n("Widget Style"), QStringLiteral("1.0"),
                         QString(), KAboutLicense::GPL,
                         i18n("(c) 2002 Karol Szwed, Daniel Molkentin"));
 

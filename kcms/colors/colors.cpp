@@ -59,7 +59,7 @@ KCMColors::KCMColors(QObject *parent, const QVariantList &args)
 {
     qmlRegisterType<QStandardItemModel>();
 
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_colors"), i18n("Choose the color scheme"),
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_colors"), i18n("Colors"),
                                        QStringLiteral("2.0"), QString(), KAboutLicense::GPL);
     about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@privat.broulik.de"));
     setAboutData(about);
