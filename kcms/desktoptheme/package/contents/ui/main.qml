@@ -65,7 +65,7 @@ KCM.GridViewKCM {
         actions: [
             Kirigami.Action {
                 iconName: "document-edit"
-                tooltip: i18n("Edit Theme")
+                tooltip: i18n("Edit Theme...")
                 enabled: !model.pendingDeletion
                 visible: kcm.canEditThemes
                 onTriggered: kcm.editTheme(model.pluginName)

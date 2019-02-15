@@ -44,7 +44,7 @@ KCM.GridViewKCM {
             Kirigami.Action {
                 visible: model.pluginName != "None"
                 iconName: "media-playback-start"
-                tooltip: i18n("Test Splash Screen")
+                tooltip: i18n("Preview Splash Screen")
                 onTriggered: kcm.test(model.pluginName)
             }
         ]

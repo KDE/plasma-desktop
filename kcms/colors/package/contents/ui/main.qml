@@ -174,7 +174,7 @@ KCM.GridViewKCM {
         actions: [
             Kirigami.Action {
                 iconName: "document-edit"
-                tooltip: i18n("Edit Color Scheme")
+                tooltip: i18n("Edit Color Scheme...")
                 enabled: !model.pendingDeletion
                 onTriggered: kcm.editScheme(model.index, parent)
             },
