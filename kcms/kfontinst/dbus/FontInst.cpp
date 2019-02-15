@@ -38,7 +38,7 @@
 #include "Utils.h"
 #include "FontinstIface.h"
 
-#define KFI_DBUG qDebug() << time(0L)
+#define KFI_DBUG qDebug() << time(nullptr)
 
 namespace KFI
 {

@@ -44,7 +44,7 @@
 #include "config-fontinst.h"
 
 #define DISABLED_FONTS "disabledfonts"
-#define KFI_DBUG qDebug() << time(0L)
+#define KFI_DBUG qDebug() << time(nullptr)
 
 namespace KFI
 {

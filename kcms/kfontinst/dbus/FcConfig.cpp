@@ -35,7 +35,7 @@
 #include <stdio.h>
 #include <fontconfig/fontconfig.h>
 
-#define KFI_DBUG qDebug() << time(0L)
+#define KFI_DBUG qDebug() << time(nullptr)
 
 namespace KFI
 {
