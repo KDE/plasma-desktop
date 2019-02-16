@@ -229,19 +229,19 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     itsGroupListView=new CGroupListView(groupWidget, itsGroupList);
 
     QPushButton *createGroup=new CPushButton(KGuiItem(QString(), "list-add",
-                                                      i18n("Create a new group")),
+                                                      i18n("Create New Group...")),
                                              groupWidget);
 
-    itsDeleteGroupControl=new CPushButton(KGuiItem(QString(), "edit-delete",
-                                                   i18n("Remove group")),
+    itsDeleteGroupControl=new CPushButton(KGuiItem(QString(), "list-remove",
+                                                   i18n("Remove Group...")),
                                           groupWidget);
 
     itsEnableGroupControl=new CPushButton(KGuiItem(QString(), "enablefont",
-                                                   i18n("Enable all disabled fonts in the current group")),
+                                                   i18n("Enable Fonts in Group...")),
                                           groupWidget);
 
     itsDisableGroupControl=new CPushButton(KGuiItem(QString(), "disablefont",
-                                                    i18n("Disable all enabled fonts in the current group")),
+                                                    i18n("Disable Fonts in Group...")),
                                            groupWidget);
 
     groupsLayout->addWidget(itsGroupListView, 0, 0, 1, 5);
@@ -291,8 +291,8 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
                                                i18n("Download new fonts")),
                                       fontControlWidget);
 
-    itsDeleteFontControl=new CPushButton(KGuiItem(i18n("Delete"), "edit-delete",
-                                                  i18n("Delete all selected fonts")),
+    itsDeleteFontControl=new CPushButton(KGuiItem(QString(), "edit-delete",
+                                                  i18n("Delete Selected Fonts...")),
                                          fontControlWidget);
 
     itsPreviewSplitter->addWidget(itsPreviewWidget);
@@ -305,7 +305,6 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
 
     // Layout widgets...
     toolbarLayout->addWidget(toolbar);
-    toolbarLayout->addItem(new QSpacerItem(toolbarLayout->spacing(), 2, QSizePolicy::MinimumExpanding, QSizePolicy::Fixed));
     toolbarLayout->addWidget(itsFilter);
     mainLayout->addWidget(toolbarWidget);
     mainLayout->addWidget(itsGroupSplitter);
@@ -679,13 +678,13 @@ void CKCmFontInst::deleteFonts()
             case 0:
                 break;
             case 1:
-                doIt = KMessageBox::Yes==KMessageBox::warningYesNo(this,
+                doIt = KMessageBox::Continue==KMessageBox::warningContinueCancel(this,
                         i18n("<p>Do you really want to "
                                 "delete</p><p>\'<b>%1</b>\'?</p>", fontNames.first()),
                         i18n("Delete Font"), KStandardGuiItem::del());
             break;
             default:
-                doIt = KMessageBox::Yes==KMessageBox::warningYesNoList(this,
+                doIt = KMessageBox::Continue==KMessageBox::warningContinueCancelList(this,
                         i18np("Do you really want to delete this font?",
                                 "Do you really want to delete these %1 fonts?",
                                 fontNames.count()),
@@ -720,7 +719,7 @@ void CKCmFontInst::moveFonts()
             case 0:
                 break;
             case 1:
-                doIt = KMessageBox::Yes==KMessageBox::warningYesNo(this,
+                doIt = KMessageBox::Continue==KMessageBox::warningContinueCancel(this,
                         i18n("<p>Do you really want to "
                              "move</p><p>\'<b>%1</b>\'</p><p>from <i>%2</i> to <i>%3</i>?</p>",
                              fontNames.first(),
@@ -729,7 +728,7 @@ void CKCmFontInst::moveFonts()
                         i18n("Move Font"), KGuiItem(i18n("Move")));
             break;
             default:
-                doIt = KMessageBox::Yes==KMessageBox::warningYesNoList(this,
+                doIt = KMessageBox::Continue==KMessageBox::warningContinueCancelList(this,
                         i18np("<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>",
                               "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>",
                               fontNames.count(),
@@ -808,7 +807,7 @@ void CKCmFontInst::addGroup()
 {
     bool    ok;
     QString name(QInputDialog::getText(this, i18n("Create New Group"),
-                                       i18n("Please enter the name of the new group:"),
+                                       i18n("Name of New Group:"),
                                        QLineEdit::Normal,
                                        i18n("New Group"), &ok));
 
@@ -1193,7 +1192,7 @@ void CKCmFontInst::toggleFonts(CJobRunner::ItemList &urls, const QStringList &fo
         case 0:
             break;
         case 1:
-            doIt = KMessageBox::Yes==KMessageBox::warningYesNo(this,
+            doIt = KMessageBox::Continue==KMessageBox::warningContinueCancel(this,
                        grp.isEmpty()
                             ? enable ? i18n("<p>Do you really want to "
                                             "enable</p><p>\'<b>%1</b>\'?</p>", fonts.first())
@@ -1212,7 +1211,7 @@ void CKCmFontInst::toggleFonts(CJobRunner::ItemList &urls, const QStringList &fo
                               : KGuiItem(i18n("Disable"), "disablefont", i18n("Disable Font")));
             break;
         default:
-            doIt = KMessageBox::Yes==KMessageBox::warningYesNoList(this,
+            doIt = KMessageBox::Continue==KMessageBox::warningContinueCancelList(this,
                        grp.isEmpty()
                             ? enable ? i18np("Do you really want to enable this font?",
                                              "Do you really want to enable these %1 fonts?",

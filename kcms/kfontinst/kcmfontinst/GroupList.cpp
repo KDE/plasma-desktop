@@ -569,7 +569,7 @@ bool CGroupList::removeGroup(const QModelIndex &idx)
         CGroupListItem *grp=static_cast<CGroupListItem *>(idx.internalPointer());
 
         if(grp && grp->isCustom() &&
-           KMessageBox::Yes==KMessageBox::warningYesNo(itsParent,
+           KMessageBox::Continue==KMessageBox::warningContinueCancel(itsParent,
                                           i18n("<p>Do you really want to remove \'<b>%1</b>\'?</p>"
                                                "<p><i>This will only remove the group, and not "
                                                "the actual fonts.</i></p>", grp->name()),
