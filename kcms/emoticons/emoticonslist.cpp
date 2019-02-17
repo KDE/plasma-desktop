@@ -114,7 +114,7 @@ EmoticonList::EmoticonList(QWidget *parent, const QVariantList &args)
     btAdd->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     btEdit->setIcon(QIcon::fromTheme(QStringLiteral("edit-rename")));
     btRemoveEmoticon->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete")));
-    btNew->setIcon(QIcon::fromTheme(QStringLiteral("document-new")));
+    btNew->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     btGetNew->setIcon(QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")));
     btInstall->setIcon(QIcon::fromTheme(QStringLiteral("document-import")));
     btRemoveTheme->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete")));
@@ -361,7 +361,7 @@ void EmoticonList::editEmoticon()
 
 void EmoticonList::newTheme()
 {
-    const QString name = KInputDialog::getText(i18n("New Emoticon Theme"), i18n("Enter the name of the new emoticon theme:"));
+    const QString name = KInputDialog::getText(i18n("New Emoticon Theme"), i18n("Name of new emoticon theme:"));
     if (name.isEmpty())
         return;
     const QString path = KGlobal::dirs()->saveLocation("emoticons", name, false);
