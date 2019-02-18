@@ -807,7 +807,7 @@ void CKCmFontInst::addGroup()
 {
     bool    ok;
     QString name(QInputDialog::getText(this, i18n("Create New Group"),
-                                       i18n("Name of New Group:"),
+                                       i18n("Name of new group:"),
                                        QLineEdit::Normal,
                                        i18n("New Group"), &ok));
 
