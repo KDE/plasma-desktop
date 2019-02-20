@@ -56,7 +56,7 @@ FolderViewDropArea {
             return units.iconSizeHints.panel;
         }
 
-        return undefined;
+        return 0;
     }
 
     Plasmoid.switchHeight: {
@@ -65,7 +65,7 @@ FolderViewDropArea {
             return units.iconSizeHints.panel;
         }
 
-        return undefined;
+        return 0;
     }
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
