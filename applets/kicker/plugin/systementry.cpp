@@ -175,7 +175,7 @@ QString SystemEntry::name() const
             return i18n("Switch User");
             break;
         case SuspendToRam:
-            return i18n("Suspend");
+            return i18nc("Suspend to RAM", "Sleep");
             break;
         case SuspendToDisk:
             return i18n("Hibernate");
