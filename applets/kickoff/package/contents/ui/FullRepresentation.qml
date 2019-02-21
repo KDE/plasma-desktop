@@ -54,7 +54,6 @@ Item {
             mainTabGroup.currentTab = firstButton.tab;
             tabBar.currentTab = firstButton;
             header.query = ""
-            header.state = "hint";
         }
     }
 
