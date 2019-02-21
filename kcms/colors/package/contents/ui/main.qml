@@ -28,6 +28,7 @@ import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.kcm 1.1 as KCM
 
 KCM.GridViewKCM {
+    id: root
     KCM.ConfigModule.quickHelp: i18n("This module lets you choose the color scheme.")
 
     view.model: kcm.colorsModel
@@ -176,7 +177,7 @@ KCM.GridViewKCM {
                 iconName: "document-edit"
                 tooltip: i18n("Edit Color Scheme...")
                 enabled: !model.pendingDeletion
-                onTriggered: kcm.editScheme(model.index, parent)
+                onTriggered: kcm.editScheme(model.index, root)
             },
             Kirigami.Action {
                 iconName: "edit-delete"
