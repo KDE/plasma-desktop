@@ -32,7 +32,10 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 Item {
     id: root
     Layout.minimumWidth: units.gridUnit * 26
+    Layout.maximumWidth: Layout.minimumWidth
+
     Layout.minimumHeight: units.gridUnit * 34
+    Layout.maximumHeight: Layout.minimumHeight
 
     property string previousState
     property bool switchTabsOnHover: plasmoid.configuration.switchTabsOnHover
