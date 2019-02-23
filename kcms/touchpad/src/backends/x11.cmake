@@ -9,14 +9,13 @@ if(NOT X11_Xinput_FOUND)
 endif()
 
 include_directories(${XCB_INCLUDE_DIR}
-                    ${X11_XCB_INCLUDE_DIR}
                     ${X11_Xinput_INCLUDE_PATH}
                     ${X11_X11_INCLUDE_PATH}
                     ${Synaptics_INCLUDE_DIRS}
                     ${XORG_INCLUDE_DIRS}
 )
 
-add_definitions(${X11_XCB_DEFINITIONS} ${XCB_DEFINITIONS})
+add_definitions(${XCB_DEFINITIONS})
 
 SET(backend_SRCS
     ${backend_SRCS}
@@ -34,7 +33,7 @@ SET(backend_LIBS
     ${backend_LIBS}
     ${XCB_LIBRARIES}
     ${X11_X11_LIB}
-    ${X11_XCB_LIBRARIES}
+    X11::XCB
     ${X11_Xinput_LIB}
 )
 
