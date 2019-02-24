@@ -131,6 +131,8 @@ MouseArea {
         QtControls.Label {
             id: nameLabel
             Layout.fillWidth: true
+            Layout.leftMargin: units.smallSpacing
+            Layout.rightMargin: units.smallSpacing
             text: model.name
             wrapMode: Text.Wrap
             horizontalAlignment: Text.AlignHCenter
