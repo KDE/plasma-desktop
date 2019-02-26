@@ -539,7 +539,7 @@ MouseArea {
                     return repeater.count > 1;
                 });
 
-                plasmoid.setAction("openKCM", i18n("Configure Desktops..."), "configure");
+                plasmoid.setAction("openKCM", i18n("Configure Virtual Desktops..."), "configure");
             }
         }
     }
