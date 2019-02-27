@@ -53,40 +53,38 @@ SimpleKCM {
             onNotificationTimeoutChanged: notificationTimeout.value = kcm.notificationTimeout
         }
 
-        ColumnLayout {
+
+        QtControls.RadioButton {
+            id: busyCursorDisabled
+
             Kirigami.FormData.label: i18n("Cursor:")
+            text: i18n("No Feedback")
 
-            QtControls.RadioButton {
-                id: busyCursorDisabled
+            onToggled: kcm.busyCursorCurrentIndex = 0;
+        }
 
-                text: i18n("No Feedback")
+        QtControls.RadioButton {
+            id: busyCursorStatic
 
-                onToggled: kcm.busyCursorCurrentIndex = 0;
-            }
+            text: i18n("Static")
 
-            QtControls.RadioButton {
-                id: busyCursorStatic
+            onToggled: kcm.busyCursorCurrentIndex = 1;
+        }
 
-                text: i18n("Static")
+        QtControls.RadioButton {
+            id: busyCursorBlinking
 
-                onToggled: kcm.busyCursorCurrentIndex = 1;
-            }
+            text: i18n("Blinking")
 
-            QtControls.RadioButton {
-                id: busyCursorBlinking
+            onToggled: kcm.busyCursorCurrentIndex = 2;
+        }
 
-                text: i18n("Blinking")
+        QtControls.RadioButton {
+            id:  busyCursorBouncing
 
-                onToggled: kcm.busyCursorCurrentIndex = 2;
-            }
+            text: i18n("Bouncing")
 
-            QtControls.RadioButton {
-                id:  busyCursorBouncing
-
-                text: i18n("Bouncing")
-
-                onToggled: kcm.busyCursorCurrentIndex = 3;
-            }
+            onToggled: kcm.busyCursorCurrentIndex = 3;
         }
 
         QtControls.CheckBox {
