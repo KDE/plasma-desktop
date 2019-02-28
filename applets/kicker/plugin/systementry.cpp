@@ -43,21 +43,21 @@ SystemEntry::SystemEntry(AbstractModel *owner, const QString &id) : AbstractEntr
 , m_action(NoAction)
 , m_valid(false)
 {
-    if (id == QStringLiteral("lock-screen")) {
+    if (id == QLatin1String("lock-screen")) {
         m_action = LockSession;
-    } else if (id == QStringLiteral("logout")) {
+    } else if (id == QLatin1String("logout")) {
         m_action = LogoutSession;
-    } else if (id == QStringLiteral("save-session")) {
+    } else if (id == QLatin1String("save-session")) {
         m_action = SaveSession;
-    } else if (id == QStringLiteral("switch-user")) {
+    } else if (id == QLatin1String("switch-user")) {
         m_action = SwitchUser;
-    } else if (id == QStringLiteral("suspend")) {
+    } else if (id == QLatin1String("suspend")) {
         m_action = SuspendToRam;
-    } else if (id == QStringLiteral("hibernate")) {
+    } else if (id == QLatin1String("hibernate")) {
         m_action = SuspendToDisk;
-    } else if (id == QStringLiteral("reboot")) {
+    } else if (id == QLatin1String("reboot")) {
         m_action = Reboot;
-    } else if (id == QStringLiteral("shutdown")) {
+    } else if (id == QLatin1String("shutdown")) {
         m_action = Shutdown;
     }
 
