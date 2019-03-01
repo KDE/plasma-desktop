@@ -67,7 +67,7 @@ JoyWidget::JoyWidget(QWidget *parent)
 {
   QVBoxLayout *mainVbox = new QVBoxLayout(this);
   mainVbox->setSpacing(KDialog::spacingHint());
-  mainVbox->setMargin(0);
+  mainVbox->setContentsMargins(0, 0, 0, 0);
 
   // create area to show an icon + message if no joystick was detected
   {

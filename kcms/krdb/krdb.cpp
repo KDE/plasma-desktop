@@ -136,7 +136,7 @@ static void applyQtColors( KSharedConfigPtr kglobalcfg, QSettings& settings, QPa
   KConfigGroup wmCfgGroup(kglobalcfg, "WM");
 
   // active colors
-  QColor clr = newPal.color( QPalette::Active, QPalette::Background );
+  QColor clr = newPal.color( QPalette::Active, QPalette::Window );
   clr = wmCfgGroup.readEntry("activeBackground", clr);
   settings.setValue(QStringLiteral("/qt/KWinPalette/activeBackground"), clr.name());
   if (QPixmap::defaultDepth() > 8)
@@ -146,24 +146,24 @@ static void applyQtColors( KSharedConfigPtr kglobalcfg, QSettings& settings, QPa
   clr = newPal.color( QPalette::Active, QPalette::HighlightedText );
   clr = wmCfgGroup.readEntry("activeForeground", clr);
   settings.setValue(QStringLiteral("/qt/KWinPalette/activeForeground"), clr.name());
-  clr = newPal.color( QPalette::Active,QPalette::Background );
+  clr = newPal.color( QPalette::Active,QPalette::Window );
   clr = wmCfgGroup.readEntry("frame", clr);
   settings.setValue(QStringLiteral("/qt/KWinPalette/frame"), clr.name());
   clr = wmCfgGroup.readEntry("activeTitleBtnBg", clr);
   settings.setValue(QStringLiteral("/qt/KWinPalette/activeTitleBtnBg"), clr.name());
 
   // inactive colors
-  clr = newPal.color(QPalette::Inactive, QPalette::Background);
+  clr = newPal.color(QPalette::Inactive, QPalette::Window);
   clr = wmCfgGroup.readEntry("inactiveBackground", clr);
   settings.setValue(QStringLiteral("/qt/KWinPalette/inactiveBackground"), clr.name());
   if (QPixmap::defaultDepth() > 8)
     clr = clr.dark(110);
   clr = wmCfgGroup.readEntry("inactiveBlend", clr);
   settings.setValue(QStringLiteral("/qt/KWinPalette/inactiveBlend"), clr.name());
-  clr = newPal.color(QPalette::Inactive, QPalette::Background).dark();
+  clr = newPal.color(QPalette::Inactive, QPalette::Window).dark();
   clr = wmCfgGroup.readEntry("inactiveForeground", clr);
   settings.setValue(QStringLiteral("/qt/KWinPalette/inactiveForeground"), clr.name());
-  clr = newPal.color(QPalette::Inactive, QPalette::Background);
+  clr = newPal.color(QPalette::Inactive, QPalette::Window);
   clr = wmCfgGroup.readEntry("inactiveFrame", clr);
   settings.setValue(QStringLiteral("/qt/KWinPalette/inactiveFrame"), clr.name());
   clr = wmCfgGroup.readEntry("inactiveTitleBtnBg", clr);
@@ -343,15 +343,15 @@ static void createGtkrc( bool exportColors, const QPalette& cg, bool exportGtkTh
     {
         t << "style \"default\"" << endl;
         t << "{" << endl;
-        t << "  bg[NORMAL] = " << color( cg.color( QPalette::Active, QPalette::Background ) ) << endl;
+        t << "  bg[NORMAL] = " << color( cg.color( QPalette::Active, QPalette::Window ) ) << endl;
         t << "  bg[SELECTED] = " << color( cg.color(QPalette::Active, QPalette::Highlight) ) << endl;
-        t << "  bg[INSENSITIVE] = " << color( cg.color( QPalette::Active, QPalette::Background ) ) << endl;
+        t << "  bg[INSENSITIVE] = " << color( cg.color( QPalette::Active, QPalette::Window ) ) << endl;
         t << "  bg[ACTIVE] = " << color( cg.color( QPalette::Active, QPalette::Mid ) ) << endl;
-        t << "  bg[PRELIGHT] = " << color( cg.color( QPalette::Active, QPalette::Background ) ) << endl;
+        t << "  bg[PRELIGHT] = " << color( cg.color( QPalette::Active, QPalette::Window ) ) << endl;
         t << endl;
         t << "  base[NORMAL] = " << color( cg.color( QPalette::Active, QPalette::Base ) ) << endl;
         t << "  base[SELECTED] = " << color( cg.color(QPalette::Active, QPalette::Highlight) ) << endl;
-        t << "  base[INSENSITIVE] = " << color( cg.color( QPalette::Active, QPalette::Background ) ) << endl;
+        t << "  base[INSENSITIVE] = " << color( cg.color( QPalette::Active, QPalette::Window ) ) << endl;
         t << "  base[ACTIVE] = " << color( cg.color(QPalette::Active, QPalette::Highlight) ) << endl;
         t << "  base[PRELIGHT] = " << color( cg.color(QPalette::Active, QPalette::Highlight) ) << endl;
         t << endl;
@@ -361,11 +361,11 @@ static void createGtkrc( bool exportColors, const QPalette& cg, bool exportGtkTh
         t << "  text[ACTIVE] = " << color( cg.color(QPalette::Active, QPalette::HighlightedText) ) << endl;
         t << "  text[PRELIGHT] = " << color( cg.color(QPalette::Active, QPalette::HighlightedText) ) << endl;
         t << endl;
-        t << "  fg[NORMAL] = " << color ( cg.color( QPalette::Active, QPalette::Foreground ) ) << endl;
+        t << "  fg[NORMAL] = " << color ( cg.color( QPalette::Active, QPalette::WindowText ) ) << endl;
         t << "  fg[SELECTED] = " << color( cg.color(QPalette::Active, QPalette::HighlightedText) ) << endl;
         t << "  fg[INSENSITIVE] = " << color( cg.color( QPalette::Active, QPalette::Mid ) ) << endl;
-        t << "  fg[ACTIVE] = " << color( cg.color( QPalette::Active, QPalette::Foreground ) ) << endl;
-        t << "  fg[PRELIGHT] = " << color( cg.color( QPalette::Active, QPalette::Foreground ) ) << endl;
+        t << "  fg[ACTIVE] = " << color( cg.color( QPalette::Active, QPalette::WindowText ) ) << endl;
+        t << "  fg[PRELIGHT] = " << color( cg.color( QPalette::Active, QPalette::WindowText ) ) << endl;
         t << "}" << endl;
         t << endl;
         t << "class \"*\" style \"default\"" << endl;
@@ -439,8 +439,8 @@ void runRdb( uint flags )
   {
     KConfigGroup g(KSharedConfig::openConfig(), "WM");
     QString preproc;
-    QColor backCol = newPal.color( QPalette::Active, QPalette::Background );
-    addColorDef(preproc, "FOREGROUND"         , newPal.color( QPalette::Active, QPalette::Foreground ) );
+    QColor backCol = newPal.color( QPalette::Active, QPalette::Window );
+    addColorDef(preproc, "FOREGROUND"         , newPal.color( QPalette::Active, QPalette::WindowText ) );
     addColorDef(preproc, "BACKGROUND"         , backCol);
     addColorDef(preproc, "HIGHLIGHT"          , backCol.light(100+(2*KColorScheme::contrast()+4)*16/1));
     addColorDef(preproc, "LOWLIGHT"           , backCol.dark(100+(2*KColorScheme::contrast()+4)*10));

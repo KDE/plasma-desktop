@@ -101,10 +101,10 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList
 //     itsMetaLabel=new QLabel(metaBox);
 //     itsMetaLabel->setAlignment(Qt::AlignTop);
 //     metaLayout->addWidget(itsMetaLabel);
-    previewLayout->setMargin(0);
+    previewLayout->setContentsMargins(0, 0, 0, 0);
     previewLayout->setSpacing(0);
-    faceLayout->setMargin(0);
-    controlsLayout->setMargin(0);
+    faceLayout->setContentsMargins(0, 0, 0, 0);
+    controlsLayout->setContentsMargins(0, 0, 0, 0);
     previewLayout->setSpacing(0);
 
     itsFrame->setFrameShape(QFrame::NoFrame);

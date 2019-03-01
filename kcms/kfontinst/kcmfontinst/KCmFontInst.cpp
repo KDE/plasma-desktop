@@ -209,11 +209,11 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
                 *fontsLayout=new QBoxLayout(QBoxLayout::TopToBottom, fontWidget),
                 *fontControlLayout=new QBoxLayout(QBoxLayout::LeftToRight, fontControlWidget);
 
-    toolbarLayout->setMargin(0);
-    mainLayout->setMargin(0);
-    groupsLayout->setMargin(0);
-    fontsLayout->setMargin(0);
-    fontControlLayout->setMargin(0);
+    toolbarLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
+    groupsLayout->setContentsMargins(0, 0, 0, 0);
+    fontsLayout->setContentsMargins(0, 0, 0, 0);
+    fontControlLayout->setContentsMargins(0, 0, 0, 0);
 
     // Toolbar...
     duplicateFontsAct=new QAction(QIcon::fromTheme("system-search"), i18n("Scan for Duplicate Fonts..."), this);
@@ -254,14 +254,14 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
 
     itsPreviewWidget = new QWidget(this);
     QBoxLayout *previewWidgetLayout = new QBoxLayout(QBoxLayout::TopToBottom, itsPreviewWidget);
-    previewWidgetLayout->setMargin(0);
+    previewWidgetLayout->setContentsMargins(0, 0, 0, 0);
     previewWidgetLayout->setSpacing(0);
     
     // Preview
     QFrame     *previewFrame=new QFrame(itsPreviewWidget);
     QBoxLayout *previewFrameLayout=new QBoxLayout(QBoxLayout::LeftToRight, previewFrame);
 
-    previewFrameLayout->setMargin(0);
+    previewFrameLayout->setContentsMargins(0, 0, 0, 0);
     previewFrameLayout->setSpacing(0);
     previewFrame->setFrameShape(QFrame::StyledPanel);
     previewFrame->setFrameShadow(QFrame::Sunken);

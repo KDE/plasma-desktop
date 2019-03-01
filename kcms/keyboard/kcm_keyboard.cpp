@@ -59,7 +59,7 @@ KCMKeyboard::KCMKeyboard(QWidget *parent, const QVariantList &args)
   keyboardConfig = new KeyboardConfig();
 
   QVBoxLayout *layout = new QVBoxLayout(this);
-  layout->setMargin(0);
+  layout->setContentsMargins(0, 0, 0, 0);
 //  layout->setSpacing(KDialog::spacingHint());
 
   widget = new KCMKeyboardWidget(rules, keyboardConfig, args, parent);

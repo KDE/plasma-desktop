@@ -108,7 +108,7 @@ DesktopPathConfig::DesktopPathConfig(QWidget *parent, const QVariantList &)
 {
   QFormLayout *lay = new QFormLayout(this);
   lay->setVerticalSpacing(0);
-  lay->setMargin(0);
+  lay->setContentsMargins(0, 0, 0, 0);
 
   setQuickHelp( i18n("<h1>Paths</h1>\n"
     "This module allows you to choose where in the filesystem the "

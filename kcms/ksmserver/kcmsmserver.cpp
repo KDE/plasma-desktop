@@ -55,7 +55,7 @@ SMServerConfig::SMServerConfig(QWidget *parent, const QVariantList &args)
     " exit by default."));
 
     QVBoxLayout *topLayout = new QVBoxLayout(this);
-    topLayout->setMargin(0);
+    topLayout->setContentsMargins(0, 0, 0, 0);
     dialog = new SMServerConfigImpl(this);
     connect(dialog, SIGNAL(changed()), SLOT(changed()));
 

@@ -51,7 +51,7 @@ CPrintDialog::CPrintDialog(QWidget *parent)
 
     QFrame *page = new QFrame(this);
     QGridLayout *layout=new QGridLayout(page);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
 
     QLabel *lbl=new QLabel(i18n("Select size to print font:"), page);
     lbl->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);

@@ -33,7 +33,7 @@ SonnetSpellCheckingModule::SonnetSpellCheckingModule(QWidget* parent, const QVar
     KCModule(parent)
 {
   QBoxLayout *layout = new QVBoxLayout( this );
-  layout->setMargin(0);
+  layout->setContentsMargins(0, 0, 0, 0);
   m_configWidget = new Sonnet::ConfigWidget( this );
   layout->addWidget(m_configWidget);
   connect(m_configWidget, SIGNAL(configChanged()), this, SLOT(changed()));

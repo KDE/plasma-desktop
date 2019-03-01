@@ -83,7 +83,7 @@ CDuplicatesDialog::CDuplicatesDialog(QWidget *parent, CFontList *fl)
     mainLayout->addWidget(itsButtonBox);
 
     QGridLayout *layout=new QGridLayout(page);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
 
     itsLabel=new QLabel(page);
     itsView=new CFontFileListView(page);

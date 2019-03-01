@@ -180,7 +180,7 @@ KCMStyle::KCMStyle( QWidget* parent, const QVariantList& )
 
     // Setup pages and mainLayout
     mainLayout = new QVBoxLayout( this );
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
 
     tabWidget  = new QTabWidget( this );
     mainLayout->addWidget( tabWidget );

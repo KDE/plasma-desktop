@@ -71,7 +71,7 @@ Joystick::Joystick(QWidget *parent, const QVariantList &)
   joyWidget = new JoyWidget(this);
 
   QVBoxLayout *top = new QVBoxLayout(this);
-  top->setMargin(0);
+  top->setContentsMargins(0, 0, 0, 0);
   top->setSpacing(KDialog::spacingHint());
   top->addWidget(joyWidget);
 }

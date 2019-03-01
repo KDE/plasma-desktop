@@ -75,7 +75,7 @@ KclockModule::KclockModule(QWidget *parent, const QVariantList &)
 
 
   QVBoxLayout *layout = new QVBoxLayout(this);
-  layout->setMargin(0);
+  layout->setContentsMargins(0, 0, 0, 0);
   layout->setSpacing(KDialog::spacingHint());
 
   dtime = new Dtime(this, m_haveTimedated);
