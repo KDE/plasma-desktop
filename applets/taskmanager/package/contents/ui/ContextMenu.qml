@@ -670,6 +670,10 @@ PlasmaComponents.ContextMenu {
     }
 
     PlasmaComponents.MenuItem {
+        separator: true
+    }
+
+    PlasmaComponents.MenuItem {
         property QtObject configureAction: null
 
         enabled: configureAction && configureAction.enabled
@@ -681,6 +685,20 @@ PlasmaComponents.ContextMenu {
         onClicked: configureAction.trigger()
 
         Component.onCompleted: configureAction = plasmoid.action("configure")
+    }
+
+    PlasmaComponents.MenuItem {
+        property QtObject alternativesAction: null
+
+        enabled: alternativesAction && alternativesAction.enabled
+        visible: alternativesAction && alternativesAction.visible
+
+        text: alternativesAction ? alternativesAction.text : ""
+        icon: alternativesAction ? alternativesAction.icon : ""
+
+        onClicked: alternativesAction.trigger()
+
+        Component.onCompleted: alternativesAction = plasmoid.action("alternatives")
     }
 
     PlasmaComponents.MenuItem {
