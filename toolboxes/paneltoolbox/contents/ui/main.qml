@@ -65,7 +65,12 @@ Item {
 
     Connections {
         target: plasmoid
-        onUserConfiguringChanged: plasmoid.editMode = plasmoid.userConfiguring
+        onUserConfiguringChanged: {
+            plasmoid.editMode = plasmoid.userConfiguring;
+            if (plasmoid.userConfiguring) {
+                toolTipArea.hideToolTip();
+            }
+        }
     }
 
     MouseArea {
@@ -78,6 +83,7 @@ Item {
         }
 
         PlasmaCore.ToolTipArea {
+            id: toolTipArea
             anchors.fill: parent
             mainText: i18nd("plasma_toolbox_org.kde.paneltoolbox", "Configure Panel...")
             icon: "configure"
