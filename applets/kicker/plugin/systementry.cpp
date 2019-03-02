@@ -166,7 +166,7 @@ QString SystemEntry::name() const
             return i18n("Lock");
             break;
         case LogoutSession:
-            return i18n("Logout");
+            return i18n("Log Out");
             break;
         case SaveSession:
             return i18n("Save Session");
@@ -181,7 +181,7 @@ QString SystemEntry::name() const
             return i18n("Hibernate");
             break;
         case Reboot:
-            return i18n("Reboot");
+            return i18n("Restart");
             break;
         case Shutdown:
             return i18n("Shut Down");
