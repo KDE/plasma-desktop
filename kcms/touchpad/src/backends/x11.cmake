@@ -1,21 +1,18 @@
 # // krazy:excludeall=copyright,license
 find_package(X11 REQUIRED)
 find_package(X11_XCB REQUIRED)
-find_package(XCB REQUIRED)
+find_package(XCB REQUIRED COMPONENTS ATOM RECORD)
 find_package(PkgConfig REQUIRED)
 
 if(NOT X11_Xinput_FOUND)
     message(FATAL_ERROR "Xinput not found")
 endif()
 
-include_directories(${XCB_INCLUDE_DIR}
-                    ${X11_Xinput_INCLUDE_PATH}
+include_directories(${X11_Xinput_INCLUDE_PATH}
                     ${X11_X11_INCLUDE_PATH}
                     ${Synaptics_INCLUDE_DIRS}
                     ${XORG_INCLUDE_DIRS}
 )
-
-add_definitions(${XCB_DEFINITIONS})
 
 SET(backend_SRCS
     ${backend_SRCS}
@@ -31,7 +28,8 @@ SET(backend_SRCS
 
 SET(backend_LIBS
     ${backend_LIBS}
-    ${XCB_LIBRARIES}
+    XCB::ATOM
+    XCB::RECORD
     ${X11_X11_LIB}
     X11::XCB
     ${X11_Xinput_LIB}
