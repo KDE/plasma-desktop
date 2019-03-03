@@ -14,7 +14,6 @@ set(kcm_componentchooser_SRCS
   componentchooseremail.cpp
   componentchooserterminal.cpp
   kcm_componentchooser.cpp
-  ktimerdialog.cpp
 )
 
 ki18n_wrap_ui(kcm_componentchooser_SRCS
