@@ -74,6 +74,8 @@ Kirigami.ScrollablePage {
         multiTap.load()
         scrollMethod.load()
         naturalScroll.load()
+        rightClickMethod.load()
+        middleClickMethod.load()
 
         loading = false
     }
@@ -219,6 +221,9 @@ Kirigami.ScrollablePage {
                     touchpad.middleEmulation = checked
                     root.changeSignal()
                 }
+                loading = true
+                middleClickMethod.load()
+                loading = false
             }
         }
 
@@ -560,6 +565,150 @@ Kirigami.ScrollablePage {
                 text: i18nd("kcm_touchpad", "Touchscreen like scrolling.")
                 visible: parent.hovered
                 delay: 1000
+            }
+        }
+
+        Item {
+            Kirigami.FormData.isSection: false
+        }
+
+        Layouts.ColumnLayout {
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "Right-click :")
+            Kirigami.FormData.buddyFor: rightClickMethodAreas
+            id: rightClickMethod
+            
+            spacing: Kirigami.Units.smallSpacing
+
+            function load() {
+                visible = (touchpad.supportedButtons & Qt.LeftButton)
+
+                if (!visible) {
+                    rightClickMethodAreas.checked = false
+                    rightClickMethodClickfinger.checked = false
+                    return;
+                }
+
+                rightClickMethodAreas.enabled = touchpad.supportsClickMethodAreas
+                rightClickMethodClickfinger.enabled = touchpad.supportsClickMethodClickfinger
+
+                if (rightClickMethodAreas.enabled && touchpad.clickMethodAreas) {
+                    rightClickMethodAreas.checked = true
+                } else if (rightClickMethodClickfinger.enabled && touchpad.clickMethodClickfinger) {
+                    rightClickMethodClickfinger.checked = true
+                }
+            }
+
+            function syncCurrent() {
+                if (enabled && !root.loading) {
+                    touchpad.clickMethodAreas = rightClickMethodAreas.checked
+                    touchpad.clickMethodClickfinger = rightClickMethodClickfinger.checked
+                    root.changeSignal()
+                }
+                loading = true
+                middleClickMethod.load()
+                loading = false
+            }
+
+            Controls.RadioButton {
+                id: rightClickMethodAreas
+                text: i18nd("kcm_touchpad", "Press bottom-right corner")
+
+                hoverEnabled: true
+                Controls.ToolTip {
+                    text: i18nd("kcm_touchpad", "Software enabled buttons will be added to bottom portion of your touchpad.")
+                    visible: parent.hovered
+                    delay: 1000
+                }
+            }
+
+            Controls.RadioButton {
+                id: rightClickMethodClickfinger
+                text: i18nd("kcm_touchpad", "Press anywhere with two fingers")
+
+                hoverEnabled: true
+                Controls.ToolTip {
+                    text: i18nd("kcm_touchpad", "Tap with two finger to enable right click.")
+                    visible: parent.hovered
+                    delay: 1000
+                }
+                onCheckedChanged: rightClickMethod.syncCurrent()
+            }
+        }
+
+        Item {
+            Kirigami.FormData.isSection: false
+        }
+
+        Layouts.ColumnLayout {
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "Middle-click: ")
+            Kirigami.FormData.buddyFor: middleSoftwareEmulation
+            id: middleClickMethod
+            
+            spacing: Kirigami.Units.smallSpacing
+
+            function load() {
+                visible = rightClickMethod.visible
+
+                if (!visible) {
+                    enabled = false
+                    return;
+                }
+
+                enabled = touchpad.supportsMiddleEmulation
+                if (enabled && touchpad.middleEmulation) {
+                    middleSoftwareEmulation.checked = true
+                } else {
+                    noMiddleSoftwareEmulation.checked = true
+                }
+            }
+
+            function syncCurrent() {
+                if (enabled && !root.loading) {
+                    touchpad.middleEmulation = middleSoftwareEmulation.checked
+                    root.changeSignal()
+                }
+                loading = true
+                middleEmulation.load()
+                loading = false
+            }
+
+            Controls.RadioButton {
+                id: noMiddleSoftwareEmulation
+                text: i18nd("kcm_touchpad", "Press bottom-middle")
+                visible: rightClickMethodAreas.checked
+                hoverEnabled: true
+                Controls.ToolTip {
+                    text: i18nd("kcm_touchpad", "Software enabled middle-button will be added to bottom portion of your touchpad.")
+                    visible: parent.hovered
+                    delay: 1000
+                }
+            }
+
+            Controls.RadioButton {
+                id: middleSoftwareEmulation
+                text: i18nd("kcm_touchpad", "Press bottom left and bottom right corners simultaneously")
+                visible: rightClickMethodAreas.checked
+                hoverEnabled: true
+                Controls.ToolTip {
+                    text: i18nd("kcm_touchpad", "Clicking left and right button simultaneously sends middle button click.")
+                    visible: parent.hovered
+                    delay: 1000
+                }
+                onCheckedChanged: middleClickMethod.syncCurrent()
+            }
+
+            Controls.CheckBox {
+                id: clickfingerMiddleInfoBox
+                text: i18nd("kcm_touchpad", "Press anywhere with three fingers")
+                checked: true
+                enabled: false
+                visible: rightClickMethodClickfinger.checked
+                hoverEnabled: true
+                Controls.ToolTip {
+                    text: i18nd("kcm_touchpad", "Press anywhere with three fingers.")
+                    visible: parent.hovered
+                    delay: 1000
+                }
             }
         }
     } // END Kirigami.FormLayout

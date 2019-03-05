@@ -102,6 +102,15 @@ class KWinWaylandTouchpad : public QObject
     Q_PROPERTY(quint32 defaultScrollButton READ defaultScrollButton CONSTANT)
     Q_PROPERTY(quint32 scrollButton READ scrollButton WRITE setScrollButton NOTIFY scrollButtonChanged)
 
+    // Click Methods 
+    Q_PROPERTY(bool supportsClickMethodAreas READ supportsClickMethodAreas CONSTANT)
+    Q_PROPERTY(bool defaultClickMethodAreas READ defaultClickMethodAreas CONSTANT)
+    Q_PROPERTY(bool clickMethodAreas READ isClickMethodAreas WRITE setClickMethodAreas NOTIFY clickMethodChanged)
+
+    Q_PROPERTY(bool supportsClickMethodClickfinger READ supportsClickMethodClickfinger CONSTANT)
+    Q_PROPERTY(bool defaultClickMethodClickfinger READ defaultClickMethodClickfinger CONSTANT)
+    Q_PROPERTY(bool clickMethodClickfinger READ isClickMethodClickfinger WRITE setClickMethodClickfinger NOTIFY clickMethodChanged)
+
 public:
     KWinWaylandTouchpad(QString dbusName);
     ~KWinWaylandTouchpad() override;
@@ -328,6 +337,32 @@ public:
     void setScrollButton(quint32 button) {
         m_scrollButton.set(button);
     }
+    
+    bool supportsClickMethodAreas() const {
+        return m_supportsClickMethodAreas.val;
+    }
+    bool defaultClickMethodAreas() const {
+        return m_defaultClickMethodAreas.val;
+    }
+    bool isClickMethodAreas() const {
+        return m_clickMethodAreas.val;
+    }
+    void setClickMethodAreas(bool set) {
+        m_clickMethodAreas.set(set);
+    }
+
+    bool supportsClickMethodClickfinger() const {
+        return m_supportsClickMethodClickfinger.val;
+    }
+    bool defaultClickMethodClickfinger() const {
+        return m_defaultClickMethodClickfinger.val;
+    }
+    bool isClickMethodClickfinger() const {
+        return m_clickMethodClickfinger.val;
+    }
+    void setClickMethodClickfinger(bool set) {
+        m_clickMethodClickfinger.set(set);
+    }
 
 Q_SIGNALS:
     void leftHandedChanged();
@@ -343,6 +378,7 @@ Q_SIGNALS:
     void naturalScrollChanged();
     void scrollMethodChanged();
     void scrollButtonChanged();
+    void clickMethodChanged();
 
 private:
     template <typename T>
@@ -450,6 +486,14 @@ private:
 
     Prop<quint32> m_defaultScrollButton = Prop<quint32>("defaultScrollButton");
     Prop<quint32> m_scrollButton = Prop<quint32>("scrollButton");
+
+    Prop<bool> m_supportsClickMethodAreas = Prop<bool>("supportsClickMethodAreas");
+    Prop<bool> m_defaultClickMethodAreas = Prop<bool>("defaultClickMethodAreas");
+    Prop<bool> m_clickMethodAreas = Prop<bool>("clickMethodAreas");
+
+    Prop<bool> m_supportsClickMethodClickfinger = Prop<bool>("supportsClickMethodClickfinger");
+    Prop<bool> m_defaultClickMethodClickfinger = Prop<bool>("defaultClickMethodClickfinger");
+    Prop<bool> m_clickMethodClickfinger = Prop<bool>("clickMethodClickfinger");
 
 
     QDBusInterface *m_iface;

@@ -123,6 +123,13 @@ bool KWinWaylandTouchpad::getConfig()
     success &= valueLoader(m_isScrollEdge);
     success &= valueLoader(m_isScrollOnButtonDown);
     success &= valueLoader(m_scrollButton);
+    // click methods
+    success &= valueLoader(m_supportsClickMethodAreas);
+    success &= valueLoader(m_supportsClickMethodClickfinger);
+    success &= valueLoader(m_defaultClickMethodAreas);
+    success &= valueLoader(m_defaultClickMethodClickfinger);
+    success &= valueLoader(m_clickMethodAreas);
+    success &= valueLoader(m_clickMethodClickfinger);
 
     return success;
 }
@@ -147,6 +154,9 @@ bool KWinWaylandTouchpad::getDefaultConfig()
     m_isScrollTwoFinger.set(m_scrollTwoFingerEnabledByDefault);
     m_isScrollEdge.set(m_scrollEdgeEnabledByDefault);
     m_isScrollOnButtonDown.set(m_scrollOnButtonDownEnabledByDefault);
+
+    m_clickMethodAreas.set(m_defaultClickMethodAreas);
+    m_clickMethodClickfinger.set(m_defaultClickMethodClickfinger);
 
     return true;
 }
@@ -173,7 +183,10 @@ bool KWinWaylandTouchpad::applyConfig()
         << valueWriter(m_isScrollTwoFinger)
         << valueWriter(m_isScrollEdge)
         << valueWriter(m_isScrollOnButtonDown)
-        << valueWriter(m_scrollButton);
+        << valueWriter(m_scrollButton)
+
+        << valueWriter(m_clickMethodAreas)
+        << valueWriter(m_clickMethodClickfinger);
 
     bool success = true;
     QString error_msg;
@@ -212,7 +225,9 @@ bool KWinWaylandTouchpad::isChangedConfig() const
             m_isScrollTwoFinger.changed() ||
             m_isScrollEdge.changed() ||
             m_isScrollOnButtonDown.changed() ||
-            m_scrollButton.changed();
+            m_scrollButton.changed() ||
+            m_clickMethodAreas.changed() ||
+            m_clickMethodClickfinger.changed();
 }
 
 template<typename T>
