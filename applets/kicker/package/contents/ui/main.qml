@@ -224,7 +224,7 @@ Item {
         id: toolTipDelegate
 
         width: contentWidth
-        height: contentHeight
+        height: undefined
 
         property Item toolTip
 
