@@ -4,6 +4,8 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_colors\")
 set(kcm_colors_SRCS
     ../krdb/krdb.cpp
     colors.cpp
+    colorsmodel.cpp
+    filterproxymodel.cpp
 )
 
 # needed for krdb

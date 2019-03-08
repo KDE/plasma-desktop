@@ -49,29 +49,38 @@
 
 #include "../krdb/krdb.h"
 
+#include "colorsmodel.h"
+#include "filterproxymodel.h"
+
 static const QString s_defaultColorSchemeName = QStringLiteral("Breeze");
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "kcm_colors.json", registerPlugin<KCMColors>();)
 
 KCMColors::KCMColors(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
+    , m_model(new ColorsModel(this))
+    , m_filteredModel(new FilterProxyModel(this))
     , m_config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")))
 {
-    qmlRegisterType<QStandardItemModel>();
+    qmlRegisterUncreatableType<KCMColors>("org.kde.private.kcms.colors", 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
+    qmlRegisterType<ColorsModel>();
+    qmlRegisterType<FilterProxyModel>();
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm_colors"), i18n("Colors"),
                                        QStringLiteral("2.0"), QString(), KAboutLicense::GPL);
     about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@privat.broulik.de"));
     setAboutData(about);
 
-    m_model = new QStandardItemModel(this);
-    m_model->setItemRoleNames({
-        {Qt::DisplayRole, QByteArrayLiteral("display")},
-        {SchemeNameRole, QByteArrayLiteral("schemeName")},
-        {PaletteRole, QByteArrayLiteral("palette")},
-        {RemovableRole, QByteArrayLiteral("removable")},
-        {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")}
+    connect(m_model, &ColorsModel::selectedSchemeChanged, this, [this] {
+        m_selectedSchemeDirty = true;
+        setNeedsSave(true);
     });
+    connect(m_model, &ColorsModel::pendingDeletionsChanged, this, [this] {
+        setNeedsSave(true);
+    });
+
+    connect(m_model, &ColorsModel::selectedSchemeChanged, m_filteredModel, &FilterProxyModel::setSelectedScheme);
+    m_filteredModel->setSourceModel(m_model);
 }
 
 KCMColors::~KCMColors()
@@ -79,110 +88,19 @@ KCMColors::~KCMColors()
     m_config->markAsClean();
 }
 
-QStandardItemModel *KCMColors::colorsModel() const
+ColorsModel *KCMColors::model() const
 {
     return m_model;
 }
 
-QString KCMColors::selectedScheme() const
+FilterProxyModel *KCMColors::filteredModel() const
 {
-    return m_selectedScheme;
-}
-
-void KCMColors::setSelectedScheme(const QString &scheme)
-{
-    if (m_selectedScheme == scheme) {
-        return;
-    }
-
-    const bool firstTime = m_selectedScheme.isNull();
-    m_selectedScheme = scheme;
-    emit selectedSchemeChanged();
-    emit selectedSchemeIndexChanged();
-
-    if (!firstTime) {
-        setNeedsSave(true);
-        m_selectedSchemeDirty = true;
-    }
-}
-
-int KCMColors::selectedSchemeIndex() const
-{
-    return indexOfScheme(m_selectedScheme);
-}
-
-int KCMColors::indexOfScheme(const QString &schemeName) const
-{
-    const auto results = m_model->match(m_model->index(0, 0), SchemeNameRole, schemeName);
-    if (results.count() == 1) {
-        return results.first().row();
-    }
-
-    return -1;
+    return m_filteredModel;
 }
 
 bool KCMColors::downloadingFile() const
 {
     return m_tempCopyJob;
-}
-
-void KCMColors::setPendingDeletion(int index, bool pending)
-{
-    QModelIndex idx = m_model->index(index, 0);
-
-    m_model->setData(idx, pending, PendingDeletionRole);
-
-    if (pending && selectedSchemeIndex() == index) {
-        // move to the next non-pending theme
-        const auto nonPending = m_model->match(idx, PendingDeletionRole, false);
-        setSelectedScheme(nonPending.first().data(SchemeNameRole).toString());
-    }
-
-    setNeedsSave(true);
-}
-
-void KCMColors::loadModel()
-{
-    m_model->clear();
-
-    QStringList schemeFiles;
-
-    const QStringList schemeDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes"), QStandardPaths::LocateDirectory);
-    for (const QString &dir : schemeDirs) {
-        const QStringList fileNames = QDir(dir).entryList(QStringList{QStringLiteral("*.colors")});
-        for (const QString &file : fileNames) {
-            const QString suffixedFileName = QStringLiteral("color-schemes/") + file;
-            // can't use QSet because of the transform below (passing const QString as this argument discards qualifiers)
-            if (!schemeFiles.contains(suffixedFileName)) {
-                schemeFiles.append(suffixedFileName);
-            }
-        }
-    }
-
-    std::transform(schemeFiles.begin(), schemeFiles.end(), schemeFiles.begin(), [](const QString &item) {
-        return QStandardPaths::locate(QStandardPaths::GenericDataLocation, item);
-    });
-
-    for (const QString &schemeFile : schemeFiles) {
-        const QFileInfo fi(schemeFile);
-        const QString baseName = fi.baseName();
-
-        KSharedConfigPtr config = KSharedConfig::openConfig(schemeFile, KConfig::SimpleConfig);
-        KConfigGroup group(config, "General");
-        const QString name = group.readEntry("Name", baseName);
-
-        QStandardItem *item = new QStandardItem(name);
-        item->setData(baseName, SchemeNameRole);
-        item->setData(fi.isWritable(), RemovableRole);
-        item->setData(false, PendingDeletionRole);
-
-        item->setData(KColorScheme::createApplicationPalette(config), PaletteRole);
-
-        m_model->appendRow(item);
-    }
-
-    m_model->sort(0 /*column*/);
-    emit selectedSchemeIndexChanged();
 }
 
 void KCMColors::getNewStuff(QQuickItem *ctx)
@@ -194,7 +112,7 @@ void KCMColors::getNewStuff(QQuickItem *ctx)
         m_newStuffDialog->winId(); // so it creates the windowHandle();
 
         connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted, this, [this] {
-            loadModel();
+            m_model->load();
 
             const auto newEntries = m_newStuffDialog->installedEntries();
             // If one new theme was installed, select the first color file in it
@@ -219,7 +137,7 @@ void KCMColors::getNewStuff(QQuickItem *ctx)
                     // but that would require us parse every file, so this should be close enough
                     std::sort(installedThemes.begin(), installedThemes.end());
 
-                    setSelectedScheme(installedThemes.constFirst());
+                    m_model->setSelectedScheme(installedThemes.constFirst());
                 }
             }
         });
@@ -314,23 +232,23 @@ void KCMColors::installSchemeFile(const QString &path)
     group2.writeEntry("Name", newName);
     config2->sync();
 
-    loadModel();
+    m_model->load();
 
     const auto results = m_model->match(m_model->index(0, 0), SchemeNameRole, newName);
     if (!results.isEmpty()) {
-        setSelectedScheme(newName);
+        m_model->setSelectedScheme(newName);
     }
 
     emit showSuccessMessage(i18n("Color scheme installed successfully."));
 }
 
-void KCMColors::editScheme(int index, QQuickItem *ctx)
+void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
 {
     if (m_editDialogProcess) {
         return;
     }
 
-    QModelIndex idx = m_model->index(index, 0);
+    QModelIndex idx = m_model->index(m_model->indexOfScheme(schemeName), 0);
 
     m_editDialogProcess = new QProcess(this);
     connect(m_editDialogProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this,
@@ -341,9 +259,9 @@ void KCMColors::editScheme(int index, QQuickItem *ctx)
         const auto savedThemes = QString::fromUtf8(m_editDialogProcess->readAllStandardOutput()).split(QLatin1Char('\n'), QString::SkipEmptyParts);
 
         if (!savedThemes.isEmpty()) {
-            loadModel(); // would be cool to just reload/add the changed/new ones
+            m_model->load(); // would be cool to just reload/add the changed/new ones
 
-            setSelectedScheme(savedThemes.last());
+            m_model->setSelectedScheme(savedThemes.last());
         }
 
         m_editDialogProcess->deleteLater();
@@ -374,7 +292,7 @@ void KCMColors::editScheme(int index, QQuickItem *ctx)
 
 void KCMColors::load()
 {
-    loadModel();
+    m_model->load();
 
     m_config->markAsClean();
     m_config->reparseConfiguration();
@@ -383,11 +301,15 @@ void KCMColors::load()
     const QString schemeName = group.readEntry("ColorScheme", s_defaultColorSchemeName);
 
     // If the scheme named in kdeglobals doesn't exist, show a warning and use default scheme
-    if (indexOfScheme(schemeName) == -1) {
-        setSelectedScheme(s_defaultColorSchemeName);
+    if (m_model->indexOfScheme(schemeName) == -1) {
+        m_model->setSelectedScheme(s_defaultColorSchemeName);
+        // These are normally synced but initially the model doesn't emit a change to avoid the
+        // Apply button from being enabled without any user interaction. Sync manually here.
+        m_filteredModel->setSelectedScheme(s_defaultColorSchemeName);
         emit showSchemeNotInstalledWarning(schemeName);
     } else {
-        setSelectedScheme(schemeName);
+        m_model->setSelectedScheme(schemeName);
+        m_filteredModel->setSelectedScheme(schemeName);
     }
 
     {
@@ -411,10 +333,10 @@ void KCMColors::save()
 void KCMColors::saveColors()
 {
     KConfigGroup grp(m_config, "General");
-    grp.writeEntry("ColorScheme", m_selectedScheme);
+    grp.writeEntry("ColorScheme", m_model->selectedScheme());
 
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-        QStringLiteral("color-schemes/%1.colors").arg(m_selectedScheme));
+        QStringLiteral("color-schemes/%1.colors").arg(m_model->selectedScheme()));
 
     KSharedConfigPtr config = KSharedConfig::openConfig(path);
 
@@ -529,18 +451,10 @@ void KCMColors::saveColors()
 
 void KCMColors::processPendingDeletions()
 {
-    const auto pendingDeletions = m_model->match(m_model->index(0, 0), PendingDeletionRole, true, -1 /*all*/);
-    QVector<QPersistentModelIndex> persistentPendingDeletions;
-    // turn into persistent model index so we can delete as we go
-    std::transform(pendingDeletions.begin(), pendingDeletions.end(),
-                   std::back_inserter(persistentPendingDeletions), [](const QModelIndex &idx) {
-        return QPersistentModelIndex(idx);
-    });
+    const QStringList pendingDeletions = m_model->pendingDeletions();
 
-    for (const QPersistentModelIndex &idx : persistentPendingDeletions) {
-        const QString schemeName = idx.data(SchemeNameRole).toString();
-
-        Q_ASSERT(schemeName != m_selectedScheme);
+    for (const QString &schemeName : pendingDeletions) {
+        Q_ASSERT(schemeName != m_model->selectedScheme());
 
         const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
             QStringLiteral("color-schemes/%1.colors").arg(schemeName));
@@ -550,15 +464,12 @@ void KCMColors::processPendingDeletions()
         job->exec();
     }
 
-    // remove them in a separate loop after all the delete jobs for a smoother animation
-    for (const QPersistentModelIndex &idx : persistentPendingDeletions) {
-        m_model->removeRow(idx.row());
-    }
+    m_model->removeItemsPendingDeletion();
 }
 
 void KCMColors::defaults()
 {
-    setSelectedScheme(s_defaultColorSchemeName);
+    m_model->setSelectedScheme(s_defaultColorSchemeName);
 
     setNeedsSave(true);
 }

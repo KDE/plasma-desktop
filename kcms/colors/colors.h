@@ -38,13 +38,15 @@ namespace KIO
 class FileCopyJob;
 }
 
+class ColorsModel;
+class FilterProxyModel;
+
 class KCMColors : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
 
-    Q_PROPERTY(QStandardItemModel *colorsModel READ colorsModel CONSTANT)
-    Q_PROPERTY(QString selectedScheme READ selectedScheme WRITE setSelectedScheme NOTIFY selectedSchemeChanged)
-    Q_PROPERTY(int selectedSchemeIndex READ selectedSchemeIndex NOTIFY selectedSchemeIndexChanged)
+    Q_PROPERTY(ColorsModel *model READ model CONSTANT)
+    Q_PROPERTY(FilterProxyModel *filteredModel READ filteredModel CONSTANT)
     Q_PROPERTY(bool downloadingFile READ downloadingFile NOTIFY downloadingFileChanged)
 
 public:
@@ -58,21 +60,22 @@ public:
         PendingDeletionRole
     };
 
-    QStandardItemModel *colorsModel() const;
+    enum SchemeFilter {
+        AllSchemes,
+        LightSchemes,
+        DarkSchemes
+    };
+    Q_ENUM(SchemeFilter)
 
-    QString selectedScheme() const;
-    void setSelectedScheme(const QString &scheme);
-
-    int selectedSchemeIndex() const;
+    ColorsModel *model() const;
+    FilterProxyModel *filteredModel() const;
 
     bool downloadingFile() const;
 
     Q_INVOKABLE void getNewStuff(QQuickItem *ctx);
     Q_INVOKABLE void installSchemeFromFile(const QUrl &url);
 
-    Q_INVOKABLE void setPendingDeletion(int index, bool pending);
-
-    Q_INVOKABLE void editScheme(int index, QQuickItem *ctx);
+    Q_INVOKABLE void editScheme(const QString &schemeName, QQuickItem *ctx);
 
 public Q_SLOTS:
     void load() override;
@@ -90,18 +93,14 @@ Q_SIGNALS:
     void showSchemeNotInstalledWarning(const QString &schemeName);
 
 private:
-    void loadModel();
-
     void saveColors();
     void processPendingDeletions();
 
-    int indexOfScheme(const QString &schemeName) const;
-
     void installSchemeFile(const QString &path);
 
-    QStandardItemModel *m_model;
+    ColorsModel *m_model;
+    FilterProxyModel *m_filteredModel;
 
-    QString m_selectedScheme;
     bool m_selectedSchemeDirty = false;
 
     bool m_applyToAlien = true;

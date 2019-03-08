@@ -26,13 +26,26 @@ import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.kcm 1.1 as KCM
+import org.kde.private.kcms.colors 1.0 as Private
 
 KCM.GridViewKCM {
     id: root
     KCM.ConfigModule.quickHelp: i18n("This module lets you choose the color scheme.")
 
-    view.model: kcm.colorsModel
-    view.currentIndex: kcm.selectedSchemeIndex
+    view.model: kcm.filteredModel
+    view.currentIndex: kcm.filteredModel.selectedSchemeIndex
+
+    Binding {
+        target: kcm.filteredModel
+        property: "query"
+        value: searchField.text
+    }
+
+    Binding {
+        target: kcm.filteredModel
+        property: "filter"
+        value:  filterCombo.model[filterCombo.currentIndex].filter
+    }
 
     enabled: !kcm.downloadingFile
 
@@ -69,6 +82,71 @@ KCM.GridViewKCM {
                 onShowSchemeNotInstalledWarning: {
                     notInstalledWarning.text = i18n("The color scheme '%1' is not installed. Selecting the default theme instead.", schemeName)
                     notInstalledWarning.visible = true;
+                }
+            }
+        }
+
+        RowLayout {
+            Layout.fillWidth: true
+
+            QtControls.TextField {
+                id: searchField
+                Layout.fillWidth: true
+                placeholderText: i18n("Search...")
+                leftPadding: LayoutMirroring.enabled ? clearButton.width : undefined
+                rightPadding: LayoutMirroring.enabled ? undefined : clearButton.width
+
+                // this could be useful as a component
+                MouseArea {
+                    id: clearButton
+                    anchors {
+                        top: parent.top
+                        topMargin: parent.topPadding
+                        right: parent.right
+                        // the TextField's padding is taking into account the clear button's size
+                        // so we just use the opposite one for positioning the clear button
+                        rightMargin: LayoutMirroring.enabled ? parent.rightPadding: parent.leftPadding
+                        bottom: parent.bottom
+                        bottomMargin: parent.bottomPadding
+                    }
+                    width: height
+
+                    opacity: searchField.length > 0 ? 1 : 0
+                    onClicked: searchField.clear()
+
+                    Kirigami.Icon {
+                        anchors.fill: parent
+                        active: parent.pressed
+                        source: "edit-clear-locationbar-" + (LayoutMirroring.enabled ? "ltr" : "rtl")
+                    }
+
+                    Behavior on opacity {
+                        NumberAnimation { duration: Kirigami.Units.longDuration }
+                    }
+                }
+            }
+
+            QtControls.ComboBox {
+                id: filterCombo
+                textRole: "text"
+                model: [
+                    {text: i18n("All Schemes"), filter: Private.KCM.AllSchemes},
+                    {text: i18n("Light Schemes"), filter: Private.KCM.LightSchemes},
+                    {text: i18n("Dark Schemes"), filter: Private.KCM.DarkSchemes}
+                ]
+
+                // HACK QQC2 doesn't support icons, so we just tamper with the desktop style ComboBox's background
+                // and inject a nice little filter icon.
+                Component.onCompleted: {
+                    if (!background || !background.hasOwnProperty("properties")) {
+                        // not a KQuickStyleItem
+                        return;
+                    }
+
+                    var props = background.properties || {};
+                    props.currentIcon = "view-filter";
+                    props.iconColor = Kirigami.Theme.textColor;
+                    background.properties = props;
                 }
             }
         }
@@ -177,24 +255,24 @@ KCM.GridViewKCM {
                 iconName: "document-edit"
                 tooltip: i18n("Edit Color Scheme...")
                 enabled: !model.pendingDeletion
-                onTriggered: kcm.editScheme(model.index, root)
+                onTriggered: kcm.editScheme(model.schemeName, root)
             },
             Kirigami.Action {
                 iconName: "edit-delete"
                 tooltip: i18n("Remove Color Scheme")
                 enabled: model.removable
                 visible: !model.pendingDeletion
-                onTriggered: kcm.setPendingDeletion(model.index, true)
+                onTriggered: model.pendingDeletion = true
             },
             Kirigami.Action {
                 iconName: "edit-undo"
                 tooltip: i18n("Restore Color Scheme")
                 visible: model.pendingDeletion
-                onTriggered: kcm.setPendingDeletion(model.index, false)
+                onTriggered: model.pendingDeletion = false
             }
         ]
         onClicked: {
-            kcm.selectedScheme = model.schemeName;
+            kcm.model.selectedScheme = model.schemeName;
             view.forceActiveFocus();
         }
         onDoubleClicked: {
