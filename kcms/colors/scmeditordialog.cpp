@@ -240,14 +240,14 @@ void SchemeEditorDialog::updateTabs(bool madeByUser)
         setUnsavedChanges(true);
     }
     KConfigGroup group(m_config, "ColorEffects:Inactive");
-    bool hideInactiveTab = group.readEntry("Enable", QVariant(true)).toBool();
-    if ( hideInactiveTab )
-    {
+    bool showInactiveTab = group.readEntry("Enable", QVariant(true)).toBool();
+
+    const int idx = tabWidget->indexOf(m_inactiveTab);
+
+    if (showInactiveTab && idx == -1) {
         tabWidget->addTab(m_inactiveTab, i18n("Inactive"));
-    }
-    else
-    {
-        tabWidget->removeTab(tabWidget->indexOf(m_inactiveTab));
+    } else if (!showInactiveTab && idx > -1) {
+        tabWidget->removeTab(idx);
     }
 
     m_optionTab->updateValues();
