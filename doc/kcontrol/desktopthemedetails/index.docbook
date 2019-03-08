@@ -6,16 +6,20 @@
 ]>
 <article id="desktopthemedetails" lang="&language;">
 <articleinfo>
-<title>Desktop Theme</title>
+<title>Plasma Theme</title>
 <authorgroup>
 <author>
 <firstname>Andrew</firstname>
 <surname>Lake</surname></author>
+<author>
+  <firstname>Carl</firstname>
+  <surname>Schwan</surname>
+</author>
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2018-03-25</date>
-<releaseinfo>Plasma 5.12</releaseinfo>
+<date>2019-03-8</date>
+<releaseinfo>Plasma 5.16</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -26,25 +30,93 @@
 </keywordset>
 </articleinfo>
 
-<para>A preview of available themes is displayed in this dialog. Select a theme by clicking on it.</para>
-
-<para>Use the <guibutton>Get New Desktop Themes...</guibutton> button to download additional themes from the Internet
-or load a theme from file.</para>
-
-<para>The <guibutton>Remove</guibutton> button is enabled only for custom themes.</para>
-
-<note>
-<para>Since &plasma; 5.6 it is no longer possible to edit and customize individual components or items in a theme.</para>
-
-<para>The recommended tools to check, blend and test themes is the plasma-sdk package, the <application>
-Plasma Theme Explorer</application> specifically.</para>
-
-<para>If the plasma-sdk package is installed on your system, a button appears hovering a theme preview and
-lets you start the <application>Plasma Theme Explorer</application>.
+<para>
+  &plasma; comes with multiple themes. The &plasma; theme defines how the different
+  components of &plasma; are displayed (&eg; Plasmoids, panels, widgets).
 </para>
 
-<para>For more technical information visit <ulink url="https://techbase.kde.org/Development/Tutorials/Plasma5/ThemeDetails">this page</ulink>.</para>
-</note>
+<para>
+  <screenshot>
+    <screeninfo>Here's a screenshot of the &plasma; theme manager</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG" />
+      </imageobject>
+      <textobject>
+        <phrase>Customizing &plasma; theme</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para>In this module you can:</para>
+<itemizedlist>
+  <listitem><para>install and choose &plasma; themes</para></listitem>
+  <listitem><para>edit &plasma; themes</para></listitem>
+  <listitem><para>remove &plasma; themes</para></listitem>
+</itemizedlist>
+
+<para>
+  If you want to remove a theme, use the <inlinemediaobject><imageobject><imagedata
+  fileref="edit-delete.png" format="PNG"/></imageobject></inlinemediaobject> overlay
+  icon at the bottom right of the theme icon. To undo this action click on the
+  <inlinemediaobject><imageobject><imagedata fileref="edit-undo.png"
+  format="PNG"/></imageobject></inlinemediaobject> icon.
+  If you hit <guibutton>Apply</guibutton> or <guibutton>OK</guibutton> the themes
+  selected for removal are actually deleted, so you cannot undo individual or all
+  deletions.
+</para>
+
+<para>
+  If the plasma-sdk package is installed on your system, a button appears hovering
+  a theme preview and lets you start the <application>Plasma Theme Explorer</application>.
+</para>
+<para>
+  For more technical information visit <ulink
+  url="https://techbase.kde.org/Development/Tutorials/Plasma5/ThemeDetails">this
+  page</ulink>.
+</para>
+
+<variablelist>
+  <varlistentry>
+    <term><guilabel>Get New Plasma Themes...</guilabel></term>
+    <listitem>
+    <para>
+      You need to be connected to the Internet to use it. Clicking on this button will
+      display a dialog where you can choose a new plasma theme. Clicking on
+      <guibutton>Install</guibutton> in the dialog will install the chosen &plasma; theme
+      and after you <guibutton>Close</guibutton> the installer your new theme is
+      immediately available.
+    </para>
+    <para>
+    <screenshot>
+    <screeninfo>Get New Plasma Themes...</screeninfo>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="get-new-theme.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Get New Plasma Themes...</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    </para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><guilabel>Install from File...</guilabel></term>
+    <listitem>
+      <para>
+      If you downloaded new themes from the internet, you can use this to browse to the
+        location of those newly downloaded themes. Clicking on this button will bring you the
+        file dialog to point to the &plasma; theme tarball you have on your disk.</para>
+
+      <para>Clicking <guibutton>Open</guibutton> in this dialog will install the theme you
+        pointed to and make it available in the theme list.
+      </para>
+    </listitem>
+  </varlistentry>
+</variablelist>
 
 </article>
 
