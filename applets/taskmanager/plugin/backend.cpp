@@ -348,6 +348,7 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
     if (actionCount > 0) {
         QAction *action = new QAction(parent);
         action->setText(i18n("Forget Recent Documents"));
+        action->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear-history")));
         action->setProperty("agent", storageId);
         connect(action, &QAction::triggered, this, &Backend::handleRecentDocumentAction);
 
