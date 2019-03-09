@@ -52,7 +52,7 @@ PlasmaCore.Dialog {
                 }
                 text: panel.formFactor === PlasmaCore.Types.Vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Top") : i18nd("plasma_shell_org.kde.plasma.desktop", "Left")
                 checkable: true
-                checked: panel.alignment == Qt.AlignLeft
+                checked: panel.alignment === Qt.AlignLeft
                 onClicked: panel.alignment = Qt.AlignLeft
                 flat: false
             }
@@ -63,7 +63,7 @@ PlasmaCore.Dialog {
                 }
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Center")
                 checkable: true
-                checked: panel.alignment == Qt.AlignCenter
+                checked: panel.alignment === Qt.AlignCenter
                 onClicked: panel.alignment = Qt.AlignCenter
                 flat: false
             }
@@ -74,7 +74,7 @@ PlasmaCore.Dialog {
                 }
                 text: panel.formFactor === PlasmaCore.Types.Vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Bottom") : i18nd("plasma_shell_org.kde.plasma.desktop", "Right")
                 checkable: true
-                checked: panel.alignment == Qt.AlignRight
+                checked: panel.alignment === Qt.AlignRight
                 onClicked: panel.alignment = Qt.AlignRight
                 flat: false
             }
@@ -92,7 +92,7 @@ PlasmaCore.Dialog {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Always Visible")
                 checkable: true
-                checked: configDialog.visibilityMode == 0
+                checked: configDialog.visibilityMode === 0
                 onClicked: configDialog.visibilityMode = 0
                 flat: false
             }
@@ -100,7 +100,7 @@ PlasmaCore.Dialog {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Auto Hide")
                 checkable: true
-                checked: configDialog.visibilityMode == 1
+                checked: configDialog.visibilityMode === 1
                 onClicked: configDialog.visibilityMode = 1
                 flat: false
             }
@@ -108,7 +108,7 @@ PlasmaCore.Dialog {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Can Cover")
                 checkable: true
-                checked: configDialog.visibilityMode == 2
+                checked: configDialog.visibilityMode === 2
                 onClicked: configDialog.visibilityMode = 2
                 flat: false
             }
@@ -116,7 +116,7 @@ PlasmaCore.Dialog {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Go Below")
                 checkable: true
-                checked: configDialog.visibilityMode == 3
+                checked: configDialog.visibilityMode === 3
                 onClicked: configDialog.visibilityMode = 3
                 flat: false
             }
@@ -124,7 +124,7 @@ PlasmaCore.Dialog {
         PlasmaComponents.ToolButton {
             Layout.fillWidth: true
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Maximize Panel")
-            iconSource: panel.formFactor == PlasmaCore.Types.Vertical ? "zoom-fit-height" : "zoom-fit-width"
+            iconSource: panel.formFactor === PlasmaCore.Types.Vertical ? "zoom-fit-height" : "zoom-fit-width"
             onClicked: panel.maximize();
         }
         PlasmaComponents.ToolButton {

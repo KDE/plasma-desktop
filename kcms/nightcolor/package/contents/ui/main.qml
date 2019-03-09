@@ -165,9 +165,9 @@ Item {
             function updatePage(index) {
                 sourceComponent = undefined;
                 var page;
-                if (index == CC.CompositorAdaptor.ModeLocation) {
+                if (index === CC.CompositorAdaptor.ModeLocation) {
                     page = manualLocationsView;
-                } else if (index == CC.CompositorAdaptor.ModeTimings) {
+                } else if (index === CC.CompositorAdaptor.ModeTimings) {
                     page = manualTimingsView;
                 } else {
                     page = automaticView;

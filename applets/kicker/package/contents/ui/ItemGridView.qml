@@ -127,13 +127,13 @@ FocusScope {
             var item = gridView.itemAt(cPos.x, cPos.y);
 
             if (item) {
-                if (kicker.dragSource.parent == gridView.contentItem) {
-                    if (item != kicker.dragSource) {
+                if (kicker.dragSource.parent === gridView.contentItem) {
+                    if (item !== kicker.dragSource) {
                         item.GridView.view.model.moveRow(dragSource.itemIndex, item.itemIndex);
                     }
-                } else if (kicker.dragSource.view.model.favoritesModel == model
+                } else if (kicker.dragSource.view.model.favoritesModel === model
                     && !model.isFavorite(kicker.dragSource.favoriteId)) {
-                    var hasPlaceholder = (model.dropPlaceholderIndex != -1);
+                    var hasPlaceholder = (model.dropPlaceholderIndex !== -1);
 
                     model.dropPlaceholderIndex = item.itemIndex;
 
@@ -141,10 +141,10 @@ FocusScope {
                         gridView.currentIndex = (item.itemIndex - 1);
                     }
                 }
-            } else if (kicker.dragSource.parent != gridView.contentItem
-                && kicker.dragSource.view.model.favoritesModel == model
+            } else if (kicker.dragSource.parent !== gridView.contentItem
+                && kicker.dragSource.view.model.favoritesModel === model
                 && !model.isFavorite(kicker.dragSource.favoriteId)) {
-                    var hasPlaceholder = (model.dropPlaceholderIndex != -1);
+                    var hasPlaceholder = (model.dropPlaceholderIndex !== -1);
 
                     model.dropPlaceholderIndex = hasPlaceholder ? model.count - 1 : model.count;
 
@@ -165,7 +165,7 @@ FocusScope {
         }
 
         onDrop: {
-            if (kicker.dragSource && kicker.dragSource.parent != gridView.contentItem && kicker.dragSource.view.model.favoritesModel == model) {
+            if (kicker.dragSource && kicker.dragSource.parent !== gridView.contentItem && kicker.dragSource.view.model.favoritesModel === model) {
                 model.addFavorite(kicker.dragSource.favoriteId, model.dropPlaceholderIndex);
                 gridView.currentIndex = -1;
             }
@@ -245,7 +245,7 @@ FocusScope {
                 }
 
                 highlight: Item {
-                    property bool isDropPlaceHolder: "dropPlaceholderIndex" in model && currentIndex == model.dropPlaceholderIndex
+                    property bool isDropPlaceHolder: "dropPlaceholderIndex" in model && currentIndex === model.dropPlaceholderIndex
 
                     PlasmaComponents.Highlight {
                         visible: gridView.currentItem && !isDropPlaceHolder
@@ -299,7 +299,7 @@ FocusScope {
                 }
 
                 Keys.onLeftPressed: {
-                    if (currentCol() != 0) {
+                    if (currentCol() !== 0) {
                         event.accepted = true;
                         moveCurrentIndexLeft();
                     } else {
@@ -310,7 +310,7 @@ FocusScope {
                 Keys.onRightPressed: {
                     var columns = Math.floor(width / cellWidth);
 
-                    if (currentCol() != columns - 1 && currentIndex != count -1) {
+                    if (currentCol() !== columns - 1 && currentIndex != count -1) {
                         event.accepted = true;
                         moveCurrentIndexRight();
                     } else {
@@ -319,7 +319,7 @@ FocusScope {
                 }
 
                 Keys.onUpPressed: {
-                    if (currentRow() != 0) {
+                    if (currentRow() !== 0) {
                         event.accepted = true;
                         moveCurrentIndexUp();
                         positionViewAtIndex(currentIndex, GridView.Contain);
@@ -364,7 +364,7 @@ FocusScope {
                 // with keyboard navigation by ignoring repeated events with
                 // identical coordinates. As the work done here would be re-
                 // dundant in any case, these are safe to ignore.
-                if (lastX == x && lastY == y) {
+                if (lastX === x && lastY === y) {
                     return;
                 }
 

@@ -33,12 +33,12 @@ Item {
     property bool showLabel: true
 
     property int itemIndex: model.index
-    property string favoriteId: model.favoriteId != undefined ? model.favoriteId : ""
-    property url url: model.url != undefined ? model.url : ""
-    property variant icon: model.decoration != undefined ? model.decoration : ""
+    property string favoriteId: model.favoriteId !== undefined ? model.favoriteId : ""
+    property url url: model.url !== undefined ? model.url : ""
+    property variant icon: model.decoration !== undefined ? model.decoration : ""
     property var m: model
-    property bool hasActionList: ((model.favoriteId != null)
-        || (("hasActionList" in model) && (model.hasActionList == true)))
+    property bool hasActionList: ((model.favoriteId !== null)
+        || (("hasActionList" in model) && (model.hasActionList === true)))
 
     Accessible.role: Accessible.MenuItem
     Accessible.name: model.display
@@ -113,10 +113,10 @@ Item {
     }
 
     Keys.onPressed: {
-        if (event.key == Qt.Key_Menu && hasActionList) {
+        if (event.key === Qt.Key_Menu && hasActionList) {
             event.accepted = true;
             openActionMenu(item);
-        } else if ((event.key == Qt.Key_Enter || event.key == Qt.Key_Return)) {
+        } else if ((event.key === Qt.Key_Enter || event.key === Qt.Key_Return)) {
             event.accepted = true;
 
             if ("trigger" in GridView.view.model) {

@@ -109,7 +109,7 @@ Item {
                 property bool initialized: false
                 Component.onCompleted: {
                     for (var i = 0; i < configDialog.containmentActionConfigModel.count; ++i) {
-                        if (configDialog.containmentActionConfigModel.get(i).pluginName == pluginName) {
+                        if (configDialog.containmentActionConfigModel.get(i).pluginName === pluginName) {
                             pluginsCombo.currentIndex = i;
                             break;
                         }
@@ -119,7 +119,7 @@ Item {
                 onActivated: {
                     if (initialized) {
                         var newPluginName = configDialog.containmentActionConfigModel.get(index).pluginName;
-                        if (newPluginName != pluginName) {
+                        if (newPluginName !== pluginName) {
                             configDialog.currentContainmentActionsModel.update(pluginIndex, action, newPluginName);
                         }
                     }

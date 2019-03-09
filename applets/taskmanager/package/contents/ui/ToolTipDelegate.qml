@@ -60,7 +60,7 @@ PlasmaExtras.ScrollArea {
     property bool smartLauncherCountVisible
     property int smartLauncherCount
 
-    readonly property bool isVerticalPanel: plasmoid.formFactor == PlasmaCore.Types.Vertical
+    readonly property bool isVerticalPanel: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     Layout.minimumWidth: contentItem.width
     Layout.maximumWidth: Layout.minimumWidth
@@ -85,7 +85,7 @@ PlasmaExtras.ScrollArea {
     Loader {
         id: contentItem
 
-        active: toolTipDelegate.rootIndex != undefined
+        active: toolTipDelegate.rootIndex !== undefined
         asynchronous: true
 
         sourceComponent: isGroup ? groupToolTip : singleTooltip

@@ -98,7 +98,7 @@ Item {
                     PlasmaCore.IconItem {
                         anchors.fill: parent
                         source: model.decoration
-                        visible: model.screenshot == ""
+                        visible: model.screenshot === ""
                     }
                     Image {
                         width: units.iconSizes.enormous

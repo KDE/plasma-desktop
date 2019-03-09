@@ -36,10 +36,10 @@ Item {
     signal aboutToShowActionMenu(variant actionMenu)
 
     readonly property real fullTextWidth: Math.ceil(icon.width + label.implicitWidth + arrow.width + row.anchors.leftMargin + row.anchors.rightMargin + row.actualSpacing)
-    property bool isSeparator: (model.isSeparator == true)
-    property bool hasChildren: (model.hasChildren == true)
-    property bool hasActionList: ((model.favoriteId != null)
-        || (("hasActionList" in model) && (model.hasActionList == true)))
+    property bool isSeparator: (model.isSeparator === true)
+    property bool hasChildren: (model.hasChildren === true)
+    property bool hasActionList: ((model.favoriteId !== null)
+        || (("hasActionList" in model) && (model.hasActionList === true)))
     property QtObject childDialog: null
     property Item menu: actionMenu
 
@@ -47,7 +47,7 @@ Item {
     Accessible.name: label.text
 
     onHasChildrenChanged: {
-        if (!hasChildren && ListView.view.currentItem == item) {
+        if (!hasChildren && ListView.view.currentItem === item) {
             ListView.view.currentIndex = -1;
         }
     }
@@ -135,7 +135,7 @@ Item {
             } else {
                 mouseCol = mouse.x;
 
-                if (index == item.ListView.view.currentIndex) {
+                if (index === item.ListView.view.currentIndex) {
                     updateCurrentItem();
                 } else if ((index == item.ListView.view.currentIndex - 1) && mouse.y < (itemHeight - 6)
                     || (index == item.ListView.view.currentIndex + 1) && mouse.y > 5) {
@@ -235,7 +235,7 @@ Item {
             height: width
 
             visible: hasChildren
-            opacity: (item.ListView.view.currentIndex == index) ? 1.0 : 0.4
+            opacity: (item.ListView.view.currentIndex === index) ? 1.0 : 0.4
 
             svg: arrows
             elementId: (Qt.application.layoutDirection == Qt.RightToLeft) ? "left-arrow" : "right-arrow"
@@ -270,10 +270,10 @@ Item {
     }
 
     Keys.onPressed: {
-        if (event.key == Qt.Key_Menu && hasActionList) {
+        if (event.key === Qt.Key_Menu && hasActionList) {
             event.accepted = true;
             openActionMenu(mouseArea);
-        } else if ((event.key == Qt.Key_Enter || event.key == Qt.Key_Return) && !hasChildren) {
+        } else if ((event.key === Qt.Key_Enter || event.key === Qt.Key_Return) && !hasChildren) {
             if (!hasChildren) {
                 event.accepted = true;
                 item.ListView.view.model.trigger(index, "", null);

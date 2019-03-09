@@ -42,7 +42,7 @@ KCM.GridViewKCM {
         }
         actions: [
             Kirigami.Action {
-                visible: model.fullScreenPreview != ""
+                visible: model.fullScreenPreview !== ""
                 iconName: "media-playback-start"
                 tooltip: i18n("Preview Theme")
                 onTriggered: {

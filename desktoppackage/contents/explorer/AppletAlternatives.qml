@@ -169,7 +169,7 @@ PlasmaCore.Dialog {
             Layout.fillWidth: true
             PlasmaComponents.Button {
                 id: switchButton
-                enabled: root.currentPlugin != alternativesHelper.currentPlugin
+                enabled: root.currentPlugin !== alternativesHelper.currentPlugin
                 Layout.fillWidth: true
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Switch");
                 onClicked: {

@@ -50,7 +50,7 @@ QtObject {
         var streams = []
         for (var i = 0, length = instantiator.count; i < length; ++i) {
             var stream = instantiator.objectAt(i);
-            if (stream[key] == value) {
+            if (stream[key] === value) {
                 streams.push(stream);
             }
         }

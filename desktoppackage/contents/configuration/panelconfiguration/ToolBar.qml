@@ -88,11 +88,11 @@ Item {
         id: buttonsLayout
         rows: 1
         columns: 1
-        flow: plasmoid.formFactor == PlasmaCore.Types.Horizontal ? GridLayout.TopToBottom : GridLayout.LeftToRight
+        flow: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? GridLayout.TopToBottom : GridLayout.LeftToRight
 
         anchors.margins: rowSpacing
 
-        property bool showText: plasmoid.formFactor == PlasmaCore.Types.Vertical || (row.x + row.width < root.width - placeHolder.width - units.iconSizes.small*4 - units.largeSpacing*5)
+        property bool showText: plasmoid.formFactor === PlasmaCore.Types.Vertical || (row.x + row.width < root.width - placeHolder.width - units.iconSizes.small*4 - units.largeSpacing*5)
 
         rowSpacing: units.smallSpacing
         columnSpacing: units.smallSpacing
@@ -135,8 +135,8 @@ Item {
         }
 
         PlasmaComponents.ToolButton {
-            parent: plasmoid.formFactor == PlasmaCore.Types.Horizontal ? buttonsLayout : root
-            anchors.right: plasmoid.formFactor == PlasmaCore.Types.Horizontal ? undefined : parent.right
+            parent: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? buttonsLayout : root
+            anchors.right: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? undefined : parent.right
             iconSource: "window-close"
             tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Close")
             onClicked: {

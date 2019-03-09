@@ -509,7 +509,7 @@ Item {
         onPositionChanged: {
             var button = tabBar.layout.childAt(mouse.x, mouse.y);
 
-            if (!button || button.objectName != "KickoffButton") {
+            if (!button || button.objectName !== "KickoffButton") {
                 clickTimer.stop();
 
                 return;
@@ -532,7 +532,7 @@ Item {
             // Check Manhattan length against drag distance to get a decent
             // pointer motion vector.
             if ((Math.abs(dx) + Math.abs(dy)) > Qt.styleHints.startDragDistance) {
-                if (tabBar.currentTab != button) {
+                if (tabBar.currentTab !== button) {
                     var tabBarPos = mapToItem(tabBar, oldPos.x, oldPos.y);
                     oldPos = Qt.point(mouse.x, mouse.y);
 
@@ -580,7 +580,7 @@ Item {
                     var inRange = (lower < angleMouseMove == angleMouseMove < upper);
 
                     // Mirror-flip.
-                    if (plasmoid.location == PlasmaCore.Types.RightEdge ? inRange : !inRange) {
+                    if (plasmoid.location === PlasmaCore.Types.RightEdge ? inRange : !inRange) {
                         clickTimer.stop();
                         button.clicked();
 
@@ -600,7 +600,7 @@ Item {
 
             var button = tabBar.layout.childAt(mouse.x, mouse.y);
 
-            if (!button || button.objectName != "KickoffButton") {
+            if (!button || button.objectName !== "KickoffButton") {
                 return;
             }
 
@@ -627,7 +627,7 @@ Item {
     Keys.onPressed: {
 
         if (mainTabGroup.currentTab == applicationsPage) {
-            if (event.key != Qt.Key_Tab) {
+            if (event.key !== Qt.Key_Tab) {
                 root.state = "Applications";
             }
         }
@@ -773,7 +773,7 @@ Item {
         var res = [];
         for(var i = 0; i < configuration.length; i++) {
             var confItemName = configuration[i].substring(0, configuration[i].indexOf(":"));
-            var confItemEnabled = configuration[i].substring(configuration[i].length-1) == "t";
+            var confItemEnabled = configuration[i].substring(configuration[i].length-1) === "t";
             if(confItemEnabled) {
                 res.push(confItemName);
             }
@@ -789,7 +789,7 @@ Item {
 
         // remove old menu items
         for(var i = tabBar.layout.children.length -1; i >= 0; i--)  {
-            if(tabBar.layout.children[i].objectName == "KickoffButton") {
+            if(tabBar.layout.children[i].objectName === "KickoffButton") {
                 tabBar.layout.children[i].destroy();
             }
         }
@@ -797,7 +797,7 @@ Item {
         for (var i = 0; i < menuItems.length; i++) {
              var props = getButtonDefinition(menuItems[i]);
              var button = kickoffButton.createObject(tabBar.layout, props);
-             if(i == 0) {
+             if(i === 0) {
                  firstButton = button;
                  switchToInitial();
              }
@@ -806,12 +806,12 @@ Item {
     }
 
     function menuItemsChanged() {
-        if(configMenuItems.length != plasmoid.configuration.menuItems.length) {
+        if(configMenuItems.length !== plasmoid.configuration.menuItems.length) {
             return true;
         }
 
         for(var i = 0; i < configMenuItems.length; i++) {
-            if(configMenuItems[i] != plasmoid.configuration.menuItems[i]) {
+            if(configMenuItems[i] !== plasmoid.configuration.menuItems[i]) {
                 return true;
             }
         }

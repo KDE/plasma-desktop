@@ -33,12 +33,12 @@ Item {
     signal actionTriggered(string actionId, variant actionArgument)
     signal aboutToShowActionMenu(variant actionMenu)
 
-    property bool hasActionList: ((model.favoriteId != null)
-        || (("hasActionList" in model) && (model.hasActionList != null)))
+    property bool hasActionList: ((model.favoriteId !== null)
+        || (("hasActionList" in model) && (model.hasActionList !== null)))
     property int itemIndex: model.index
 
     onAboutToShowActionMenu: {
-        var actionList = (model.hasActionList != null) ? model.actionList : [];
+        var actionList = (model.hasActionList !== null) ? model.actionList : [];
         Tools.fillActionMenu(i18n, actionMenu, actionList, repeater.model, model.favoriteId);
     }
 

@@ -40,11 +40,11 @@ PlasmaComponents.ContextMenu {
     property bool showAllPlaces: false
 
     placement: {
-        if (plasmoid.location == PlasmaCore.Types.LeftEdge) {
+        if (plasmoid.location === PlasmaCore.Types.LeftEdge) {
             return PlasmaCore.Types.RightPosedTopAlignedPopup;
-        } else if (plasmoid.location == PlasmaCore.Types.TopEdge) {
+        } else if (plasmoid.location === PlasmaCore.Types.TopEdge) {
             return PlasmaCore.Types.BottomPosedLeftAlignedPopup;
-        } else if (plasmoid.location == PlasmaCore.Types.RightEdge) {
+        } else if (plasmoid.location === PlasmaCore.Types.RightEdge) {
             return PlasmaCore.Types.LeftPosedTopAlignedPopup;
         } else {
             return PlasmaCore.Types.TopPosedLeftAlignedPopup;
@@ -54,8 +54,8 @@ PlasmaComponents.ContextMenu {
     minimumWidth: visualParent.width
 
     onStatusChanged: {
-        if (visualParent && get(atm.LauncherUrlWithoutIcon) != "" && status == PlasmaComponents.DialogStatus.Open) {
-            launcherToggleAction.checked = (tasksModel.launcherPosition(get(atm.LauncherUrlWithoutIcon)) != -1);
+        if (visualParent && get(atm.LauncherUrlWithoutIcon) !== "" && status == PlasmaComponents.DialogStatus.Open) {
+            launcherToggleAction.checked = (tasksModel.launcherPosition(get(atm.LauncherUrlWithoutIcon)) !== -1);
             activitiesDesktopsMenu.refresh();
 
         } else if (status == PlasmaComponents.DialogStatus.Closed) {
@@ -137,7 +137,7 @@ PlasmaComponents.ContextMenu {
         // Add Media Player control actions
         var sourceName = mpris2Source.sourceNameForLauncherUrl(launcherUrl, get(atm.AppPid));
 
-        if (sourceName && !(get(atm.WinIdList) != undefined && get(atm.WinIdList).length > 1)) {
+        if (sourceName && !(get(atm.WinIdList) !== undefined && get(atm.WinIdList).length > 1)) {
             var playerData = mpris2Source.data[sourceName]
 
             if (playerData.CanControl) {
@@ -290,7 +290,7 @@ PlasmaComponents.ContextMenu {
                 var menuItem = menu.newMenuItem(virtualDesktopsMenu);
                 menuItem.text = i18n("Move &To Current Desktop");
                 menuItem.enabled = Qt.binding(function() {
-                    return menu.visualParent && menu.get(atm.VirtualDesktops).indexOf(virtualDesktopInfo.currentDesktop) == -1;
+                    return menu.visualParent && menu.get(atm.VirtualDesktops).indexOf(virtualDesktopInfo.currentDesktop) === -1;
                 });
                 menuItem.clicked.connect(function() {
                     tasksModel.requestVirtualDesktops(menu.modelIndex, [virtualDesktopInfo.currentDesktop]);
@@ -458,7 +458,7 @@ PlasmaComponents.ContextMenu {
         id: startNewInstanceItem
         visible: (visualParent && get(atm.IsLauncher) !== true && get(atm.IsStartup) !== true)
 
-        enabled: visualParent && get(atm.LauncherUrlWithoutIcon) != ""
+        enabled: visualParent && get(atm.LauncherUrlWithoutIcon) !== ""
 
         text: i18n("Start New Instance")
         icon: "system-run"
@@ -475,14 +475,14 @@ PlasmaComponents.ContextMenu {
                      && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
                      && (activityInfo.numberOfRunningActivities < 2)
 
-        enabled: visualParent && get(atm.LauncherUrlWithoutIcon) != ""
+        enabled: visualParent && get(atm.LauncherUrlWithoutIcon) !== ""
 
         checkable: true
 
         text: i18nc("Toggle action for showing a launcher button while the application is not running", "&Pin")
 
         onClicked: {
-            if (tasksModel.launcherPosition(get(atm.LauncherUrlWithoutIcon)) != -1) {
+            if (tasksModel.launcherPosition(get(atm.LauncherUrlWithoutIcon)) !== -1) {
                 tasksModel.requestRemoveLauncher(get(atm.LauncherUrlWithoutIcon));
             } else {
                 tasksModel.requestAddLauncher(get(atm.LauncherUrl));
@@ -657,7 +657,7 @@ PlasmaComponents.ContextMenu {
             }
 
             PlasmaComponents.MenuItem {
-                visible: (plasmoid.configuration.groupingStrategy != 0) && menu.get(atm.IsWindow) === true
+                visible: (plasmoid.configuration.groupingStrategy !== 0) && menu.get(atm.IsWindow) === true
 
                 checkable: true
                 checked: menu.visualParent && menu.get(atm.IsGroupable) === true

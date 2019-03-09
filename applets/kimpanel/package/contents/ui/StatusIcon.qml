@@ -44,7 +44,7 @@ Item {
 
     function iconPath(p) {
         if (p.length > 0) {
-            if (p[0] == '/') {
+            if (p[0] === '/') {
                 return p;
             } else {
                 return "image://icon/" + p;

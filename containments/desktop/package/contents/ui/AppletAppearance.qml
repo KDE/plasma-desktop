@@ -170,14 +170,14 @@ Item {
     }
 
     function updateBackgroundHints() {
-        hasBackground = (applet.backgroundHints != "NoBackground");
-        if (applet.backgroundHints == 1) {
+        hasBackground = (applet.backgroundHints !== "NoBackground");
+        if (applet.backgroundHints === 1) {
             appletItem.imagePath = "widgets/background";
             backgroundHints = "StandardBackground";
-        } else if (applet.backgroundHints == 2) {
+        } else if (applet.backgroundHints === 2) {
             appletItem.imagePath = "widgets/translucentbackground"
             backgroundHints = "TranslucentBackground";
-        } else if (applet.backgroundHints == 0) {
+        } else if (applet.backgroundHints === 0) {
             appletItem.imagePath = ""
             backgroundHints = "NoBackground";
         } else {
@@ -216,7 +216,7 @@ Item {
         hoverEnabled: true
 
         onPressed: {
-            if (!plasmoid.immutable && mouse.modifiers == Qt.AltModifier) {
+            if (!plasmoid.immutable && mouse.modifiers === Qt.AltModifier) {
                 if (!dragMouseArea.dragging) {
                     startDrag(mouse)
                 }
@@ -271,7 +271,7 @@ Item {
 
             PlasmaCore.FrameSvgItem {
                 id: plasmoidBackground
-                visible: backgroundHints != PlasmaCore.Types.NoBackground
+                visible: backgroundHints !== PlasmaCore.Types.NoBackground
                 imagePath: "widgets/background"
                 anchors { left: parent.left; top: parent.top; bottom: parent.bottom; }
                 width: parent.width - _handleWidth
@@ -297,7 +297,7 @@ Item {
                 }
                 onAppletRemoved: {
 //                     print("Applet removed Applet-" + applet.id)
-                    if (applet.id == appletItem.applet.id) {
+                    if (applet.id === appletItem.applet.id) {
 //                         print("Destroying Applet-" + applet.id)
                         root.layoutManager.saveRotation(appletItem);
                         appletItem.releasePosition();
@@ -358,7 +358,7 @@ Item {
                     var pos = mapToItem(root.parent, mouse.x, mouse.y);
                     var newCont = plasmoid.containmentAt(pos.x, pos.y);
 
-                    if (newCont && newCont != plasmoid) {
+                    if (newCont && newCont !== plasmoid) {
                         var newPos = newCont.mapFromApplet(plasmoid, pos.x, pos.y);
                         newCont.addApplet(appletItem.applet, newPos.x, newPos.y);
                         placeHolderPaint.opacity = 0;

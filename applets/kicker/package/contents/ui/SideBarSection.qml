@@ -42,7 +42,7 @@ DropArea {
 
         var above = flow.childAt(event.x, event.y);
 
-        if (above && above != kicker.dragSource && dragSource.parent == flow) {
+        if (above && above !== kicker.dragSource && dragSource.parent == flow) {
             repeater.model.moveRow(dragSource.itemIndex, above.itemIndex);
         }
 

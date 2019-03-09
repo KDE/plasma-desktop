@@ -52,7 +52,7 @@ FolderViewDropArea {
 
     Plasmoid.switchWidth: {
         // Support expanding into the full representation only on vertical panels.
-        if (isPopup && plasmoid.formFactor == PlasmaCore.Types.Vertical) {
+        if (isPopup && plasmoid.formFactor === PlasmaCore.Types.Vertical) {
             return units.iconSizeHints.panel;
         }
 
@@ -61,7 +61,7 @@ FolderViewDropArea {
 
     Plasmoid.switchHeight: {
         // Support expanding into the full representation only on vertical panels.
-        if (isPopup && plasmoid.formFactor == PlasmaCore.Types.Vertical) {
+        if (isPopup && plasmoid.formFactor === PlasmaCore.Types.Vertical) {
             return units.iconSizeHints.panel;
         }
 
@@ -71,9 +71,9 @@ FolderViewDropArea {
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    property bool isFolder: (plasmoid.pluginName == "org.kde.plasma.folder")
+    property bool isFolder: (plasmoid.pluginName === "org.kde.plasma.folder")
     property bool isContainment: ("containmentType" in plasmoid)
-    property bool isPopup: (plasmoid.location != PlasmaCore.Types.Floating)
+    property bool isPopup: (plasmoid.location !== PlasmaCore.Types.Floating)
     property bool useListViewMode: isPopup && plasmoid.configuration.viewMode === 0
 
     property Component appletAppearanceComponent
@@ -172,7 +172,7 @@ FolderViewDropArea {
             container.width = applet.width;
             container.height = applet.height;
             // The container needs to be bigger than applet of margins factor.
-            if (applet.backgroundHints != PlasmaCore.Types.NoBackground) {
+            if (applet.backgroundHints !== PlasmaCore.Types.NoBackground) {
                 container.width += container.margins.left + container.margins.right;
                 container.height += container.margins.top + container.margins.bottom;
             }
@@ -202,7 +202,7 @@ FolderViewDropArea {
 
             // To be sure it's restored at the same position, take margins into account
             // if there is a background.
-            if (applet.backgroundHints != PlasmaCore.Types.NoBackground) {
+            if (applet.backgroundHints !== PlasmaCore.Types.NoBackground) {
                 container.x -= container.margins.left;
                 container.y -= container.margins.top;
             }
@@ -248,7 +248,7 @@ FolderViewDropArea {
             var height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 2)) + units.largeSpacing
         }
 
-        if (plasmoid.configuration.labelMode != 0) {
+        if (plasmoid.configuration.labelMode !== 0) {
             height += folderViewLayer.item.labelHeight;
         }
 

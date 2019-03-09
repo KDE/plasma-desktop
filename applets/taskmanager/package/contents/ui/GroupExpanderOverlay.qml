@@ -34,7 +34,7 @@ PlasmaCore.SvgItem {
     states: [
         State {
             name: "top"
-            when: plasmoid.location == PlasmaCore.Types.TopEdge
+            when: plasmoid.location === PlasmaCore.Types.TopEdge
             AnchorChanges {
                 target: arrow
                 anchors.top: arrow.parent.top
@@ -47,7 +47,7 @@ PlasmaCore.SvgItem {
         },
         State {
             name: "left"
-            when: plasmoid.location == PlasmaCore.Types.LeftEdge
+            when: plasmoid.location === PlasmaCore.Types.LeftEdge
             AnchorChanges {
                 target: arrow
                 anchors.top: undefined
@@ -60,7 +60,7 @@ PlasmaCore.SvgItem {
         },
         State {
             name: "right"
-            when: plasmoid.location == PlasmaCore.Types.RightEdge
+            when: plasmoid.location === PlasmaCore.Types.RightEdge
             AnchorChanges {
                 target: arrow
                 anchors.top: undefined

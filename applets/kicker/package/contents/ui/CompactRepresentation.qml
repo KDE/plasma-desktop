@@ -25,13 +25,13 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 Item {
     id: root
 
-    readonly property bool inPanel: (plasmoid.location == PlasmaCore.Types.TopEdge
-        || plasmoid.location == PlasmaCore.Types.RightEdge
-        || plasmoid.location == PlasmaCore.Types.BottomEdge
-        || plasmoid.location == PlasmaCore.Types.LeftEdge)
-    readonly property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
+    readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
+        || plasmoid.location === PlasmaCore.Types.RightEdge
+        || plasmoid.location === PlasmaCore.Types.BottomEdge
+        || plasmoid.location === PlasmaCore.Types.LeftEdge)
+    readonly property bool vertical: (plasmoid.formFactor === PlasmaCore.Types.Vertical)
     readonly property bool useCustomButtonImage: (plasmoid.configuration.useCustomButtonImage
-        && plasmoid.configuration.customButtonImage.length != 0)
+        && plasmoid.configuration.customButtonImage.length !== 0)
     property QtObject dashWindow: null
 
     onWidthChanged: updateSizeHints()

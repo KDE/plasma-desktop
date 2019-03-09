@@ -48,7 +48,7 @@ Item {
         // TODO: port to QQC2 version once we've fixed https://bugs.kde.org/show_bug.cgi?id=403153
         QQC1.ComboBox {
             id: groupingStrategy
-            visible: (plasmoid.pluginName != "org.kde.plasma.icontasks")
+            visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
             Kirigami.FormData.label: i18n("Group:")
             Layout.fillWidth: true
             model: [i18n("Do not group"), i18n("By program name")]
@@ -56,13 +56,13 @@ Item {
 
         CheckBox {
             id: groupPopups
-            visible: (plasmoid.pluginName != "org.kde.plasma.icontasks")
+            visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
             text: i18n("Open groups in popups")
             enabled: groupingStrategy.currentIndex > 0
         }
 
         RowLayout {
-            visible: (plasmoid.pluginName != "org.kde.plasma.icontasks")
+            visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
 
             // Indent the option as it depends on the previous one
             Item {
@@ -78,13 +78,13 @@ Item {
 
         Item {
             Kirigami.FormData.isSection: true
-            visible: (plasmoid.pluginName != "org.kde.plasma.icontasks")
+            visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
         }
 
         // TODO: port to QQC2 version once we've fixed https://bugs.kde.org/show_bug.cgi?id=403153
         QQC1.ComboBox {
             id: sortingStrategy
-            visible: (plasmoid.pluginName != "org.kde.plasma.icontasks")
+            visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
             Kirigami.FormData.label: i18n("Sort:")
             Layout.fillWidth: true
             model: [i18n("Do not sort"), i18n("Manually"), i18n("Alphabetically"), i18n("By desktop"), i18n("By activity")]
@@ -92,14 +92,14 @@ Item {
 
         CheckBox {
             id: separateLaunchers
-            visible: (plasmoid.pluginName != "org.kde.plasma.icontasks")
+            visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
             text: i18n("Keep launchers separate")
             enabled: sortingStrategy.currentIndex == 1
         }
 
         Item {
             Kirigami.FormData.isSection: true
-            visible: (plasmoid.pluginName != "org.kde.plasma.icontasks")
+            visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
         }
 
         // TODO: port to QQC2 version once we've fixed https://bugs.kde.org/show_bug.cgi?id=403153
@@ -143,7 +143,7 @@ Item {
 
         CheckBox {
             id: showOnlyMinimized
-            visible: (plasmoid.pluginName != "org.kde.plasma.icontasks")
+            visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
             text: i18n("Show only tasks that are minimized")
         }
     }

@@ -74,7 +74,7 @@ PlasmaCore.Dialog {
                     for (var i = 0; i < groupRepeater.count; ++i) {
                         var task = groupRepeater.itemAt(i);
 
-                        if (task.modelIndex() == targetIndex) {
+                        if (task.modelIndex() === targetIndex) {
                             selectTask(task);
                             return;
                         }
@@ -262,7 +262,7 @@ PlasmaCore.Dialog {
         // Setting VisualDataModel.rootIndex drops groupRepeater.count to 0
         // before the actual row count. updateSize is therefore invoked twice;
         // only update size once the repeater count matches the model role.
-        } else if (!groupRepeater.aboutToPopulate || visualParent.childCount == groupRepeater.count) {
+        } else if (!groupRepeater.aboutToPopulate || visualParent.childCount === groupRepeater.count) {
             var task;
             var maxWidth = 0;
             var maxHeight = 0;

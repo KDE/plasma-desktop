@@ -71,7 +71,7 @@ Row {
     }
 
     Keys.onPressed: {
-        if (event.key == Qt.Key_Tab) {
+        if (event.key === Qt.Key_Tab) {
             event.accepted = true;
 
             if (searching) {
@@ -79,7 +79,7 @@ Row {
             } else {
                 mainColumn.tryActivate(0, 0);
             }
-        } else if (event.key == Qt.Key_Backtab) {
+        } else if (event.key === Qt.Key_Backtab) {
             event.accepted = true;
 
             if (globalFavoritesGrid.enabled) {

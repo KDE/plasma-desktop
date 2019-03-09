@@ -53,7 +53,7 @@ PlasmaCore.FrameSvgItem {
         }
     }
 
-    property bool vertical: (panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge)
+    property bool vertical: (panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge)
 //END properties
 
 //BEGIN Connections
@@ -89,7 +89,7 @@ PlasmaCore.FrameSvgItem {
         id: panelResetAnimation
         NumberAnimation {
             target: panel
-            properties: (panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge) ? "x" : "y"
+            properties: (panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge) ? "x" : "y"
             to:  {
                 switch (panel.location) {
                 case PlasmaCore.Types.TopEdge:
@@ -108,7 +108,7 @@ PlasmaCore.FrameSvgItem {
 
         NumberAnimation {
             target: configDialog
-            properties: (panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge) ? "x" : "y"
+            properties: (panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge) ? "x" : "y"
             to: {
                 switch (panel.location) {
                 case PlasmaCore.Types.TopEdge:

@@ -52,23 +52,23 @@ FocusScope {
         signal closeRequested()
 
         Keys.onPressed: {
-            if (event.key == Qt.Key_Escape) {
+            if (event.key === Qt.Key_Escape) {
                 if (heading.searchString.length > 0) {
                     heading.searchString = "";
                 } else {
                     activityBrowser.closeRequested();
                 }
 
-            } else if (event.key == Qt.Key_Up) {
+            } else if (event.key === Qt.Key_Up) {
                 activityList.selectPrevious();
 
-            } else if (event.key == Qt.Key_Down) {
+            } else if (event.key === Qt.Key_Down) {
                 activityList.selectNext();
 
-            } else if (event.key == Qt.Key_Return || event.key == Qt.Key_Enter) {
+            } else if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
                 activityList.openSelected();
 
-            } else if (event.key == Qt.Key_Tab) {
+            } else if (event.key === Qt.Key_Tab) {
                 // console.log("TAB KEY");
 
             } else  {

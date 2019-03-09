@@ -46,7 +46,7 @@ Item {
 
         menu = contextMenuComponent.createObject(root);
 
-        if (!actionList || actionList.length == 0) {
+        if (!actionList || actionList.length === 0) {
             var item = emptyMenuItemComponent.createObject(menu);
 
             menu.addMenuItem(item);
@@ -70,11 +70,11 @@ Item {
             visualParent: root.visualParent
 
             placement: {
-                if (plasmoid.location == PlasmaCore.Types.LeftEdge) {
+                if (plasmoid.location === PlasmaCore.Types.LeftEdge) {
                     return PlasmaCore.Types.RightPosedTopAlignedPopup;
-                } else if (plasmoid.location == PlasmaCore.Types.TopEdge) {
+                } else if (plasmoid.location === PlasmaCore.Types.TopEdge) {
                     return PlasmaCore.Types.BottomPosedLeftAlignedPopup;
-                } else if (plasmoid.location == PlasmaCore.Types.RightEdge) {
+                } else if (plasmoid.location === PlasmaCore.Types.RightEdge) {
                     return PlasmaCore.Types.LeftPosedTopAlignedPopup;
                 } else {
                     return PlasmaCore.Types.TopPosedLeftAlignedPopup;
@@ -91,8 +91,8 @@ Item {
 
             text: actionItem.text ? actionItem.text : ""
             icon: actionItem.icon ? actionItem.icon : null
-            checkable: actionItem.hint == "checked"
-            checked: actionItem.hint == "checked"
+            checkable: actionItem.hint === "checked"
+            checked: actionItem.hint === "checked"
 
             onClicked: {
                 actionClicked(actionItem.actionId);

@@ -33,7 +33,7 @@ Item {
 //     flat: true
 //     title: i18n("Appearance")
 
-    property bool isActivityPager: (plasmoid.pluginName == "org.kde.plasma.activitypager")
+    property bool isActivityPager: (plasmoid.pluginName === "org.kde.plasma.activitypager")
 
     property int cfg_displayedText
     property alias cfg_showWindowIcons: showWindowIcons.checked

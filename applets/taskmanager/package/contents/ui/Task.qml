@@ -41,12 +41,12 @@ MouseArea {
 
     readonly property var m: model
 
-    readonly property int pid: model.AppPid != undefined ? model.AppPid : 0
+    readonly property int pid: model.AppPid !== undefined ? model.AppPid : 0
     readonly property string appName: model.AppName
     property int itemIndex: index
     property bool inPopup: false
     property bool isWindow: model.IsWindow === true
-    property int childCount: model.ChildCount != undefined ? model.ChildCount : 0
+    property int childCount: model.ChildCount !== undefined ? model.ChildCount : 0
     property int previousChildCount: 0
     property alias labelText: label.text
     property bool pressed: false
@@ -149,13 +149,13 @@ MouseArea {
     onReleased: {
         if (pressed) {
             if (mouse.button == Qt.MidButton) {
-                if (plasmoid.configuration.middleClickAction == TaskManagerApplet.Backend.NewInstance) {
+                if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.NewInstance) {
                     tasksModel.requestNewInstance(modelIndex());
-                } else if (plasmoid.configuration.middleClickAction == TaskManagerApplet.Backend.Close) {
+                } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.Close) {
                     tasksModel.requestClose(modelIndex());
-                } else if (plasmoid.configuration.middleClickAction == TaskManagerApplet.Backend.ToggleMinimized) {
+                } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleMinimized) {
                     tasksModel.requestToggleMinimized(modelIndex());
-                } else if (plasmoid.configuration.middleClickAction == TaskManagerApplet.Backend.ToggleGrouping) {
+                } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleGrouping) {
                     tasksModel.requestToggleGrouping(modelIndex());
                 }
             } else if (mouse.button == Qt.LeftButton) {
@@ -346,7 +346,7 @@ MouseArea {
                         return model.WinIdList;
                     });
                     toolTipDelegate.isGroup = Qt.binding(function() {
-                        return model.IsGroupParent == true;
+                        return model.IsGroupParent === true;
                     });
                     toolTipDelegate.icon = Qt.binding(function() {
                         return model.decoration;
@@ -355,10 +355,10 @@ MouseArea {
                         return model.LauncherUrlWithoutIcon;
                     });
                     toolTipDelegate.isLauncher = Qt.binding(function() {
-                        return model.IsLauncher == true;
+                        return model.IsLauncher === true;
                     });
                     toolTipDelegate.isMinimizedParent = Qt.binding(function() {
-                        return model.IsMinimized == true;
+                        return model.IsMinimized === true;
                     });
                     toolTipDelegate.displayParent = Qt.binding(function() {
                         return model.display;
@@ -367,10 +367,10 @@ MouseArea {
                         return model.GenericName;
                     });
                     toolTipDelegate.virtualDesktopParent = Qt.binding(function() {
-                        return model.VirtualDesktop != undefined ? model.VirtualDesktop : 0;
+                        return model.VirtualDesktop !== undefined ? model.VirtualDesktop : 0;
                     });
                     toolTipDelegate.isOnAllVirtualDesktopsParent = Qt.binding(function() {
-                        return model.IsOnAllVirtualDesktops == true;
+                        return model.IsOnAllVirtualDesktops === true;
                     });
                     toolTipDelegate.activitiesParent = Qt.binding(function() {
                         return model.Activities;

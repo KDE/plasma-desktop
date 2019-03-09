@@ -67,7 +67,7 @@ FocusScope {
     }
 
     function goHome() {
-        if (folderView.url != plasmoid.configuration.url) {
+        if (folderView.url !== plasmoid.configuration.url) {
             folderView.url = Qt.binding(function() {
                 return plasmoid.configuration.url;
             });
@@ -252,8 +252,8 @@ FocusScope {
             filterPattern: plasmoid.configuration.filterPattern
             filterMimeTypes: plasmoid.configuration.filterMimeTypes
 
-            flow: (plasmoid.configuration.arrangement == 0) ? GridView.FlowLeftToRight : GridView.FlowTopToBottom
-            layoutDirection: (plasmoid.configuration.alignment == 0) ? Qt.LeftToRight : Qt.RightToLeft
+            flow: (plasmoid.configuration.arrangement === 0) ? GridView.FlowLeftToRight : GridView.FlowTopToBottom
+            layoutDirection: (plasmoid.configuration.alignment === 0) ? Qt.LeftToRight : Qt.RightToLeft
 
             onSortModeChanged: {
                 plasmoid.configuration.sortMode = sortMode;
@@ -278,7 +278,7 @@ FocusScope {
 
             // If we bind height to visible, it will be invisible initially (since "visible"
             // propagates recursively) and that confuses the Label, hence the temp property.
-            readonly property bool active: (plasmoid.configuration.labelMode != 0)
+            readonly property bool active: (plasmoid.configuration.labelMode !== 0)
 
             readonly property bool showPin: root.isPopup && plasmoid.compactRepresentationItem && plasmoid.compactRepresentationItem.visible
 
@@ -309,9 +309,9 @@ FocusScope {
                 target: folderView
 
                 onUrlChanged: {
-                    if (!label.homeButton && folderView.url != plasmoid.configuration.url) {
+                    if (!label.homeButton && folderView.url !== plasmoid.configuration.url) {
                         label.homeButton = homeButtonComponent.createObject(label);
-                    } else if (label.homeButton && folderView.url == plasmoid.configuration.url) {
+                    } else if (label.homeButton && folderView.url === plasmoid.configuration.url) {
                         label.homeButton.destroy();
                     }
                 }
@@ -380,7 +380,7 @@ FocusScope {
 
                     anchors.left: parent.left
 
-                    visible: root.isPopup && folderView.url != plasmoid.configuration.url
+                    visible: root.isPopup && folderView.url !== plasmoid.configuration.url
 
                     width: root.isPopup ? Math.round(units.gridUnit * 1.25) : 0
                     height: width
@@ -415,7 +415,7 @@ FocusScope {
             plasmoidAction.shortcut = modelAction.shortcut;
             plasmoidAction.shortcutContext = Qt.WidgetShortcut;
 
-            if (actionName == "newMenu") {
+            if (actionName === "newMenu") {
                 Folder.MenuHelper.setMenu(plasmoidAction, folderView.model.newMenu);
                 plasmoid.setActionSeparator("separator1");
 

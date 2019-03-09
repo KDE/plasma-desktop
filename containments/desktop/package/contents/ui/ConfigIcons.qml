@@ -39,7 +39,7 @@ Item {
     width: childrenRect.width
     height: childrenRect.height
 
-    property bool isPopup: (plasmoid.location != PlasmaCore.Types.Floating)
+    property bool isPopup: (plasmoid.location !== PlasmaCore.Types.Floating)
 
     property string cfg_icon: plasmoid.configuration.icon
     property alias cfg_useCustomIcon: useCustomIcon.checked

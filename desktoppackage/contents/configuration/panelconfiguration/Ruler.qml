@@ -66,7 +66,7 @@ PlasmaCore.FrameSvgItem {
         id: centerMark
         svg: containmentControlsSvg
         elementId: dialogRoot.vertical ? "vertical-centerindicator" : "horizontal-centerindicator"
-        visible: panel.alignment == Qt.AlignCenter
+        visible: panel.alignment === Qt.AlignCenter
         width: dialogRoot.vertical ? parent.width : naturalSize.width
         height: dialogRoot.vertical ? naturalSize.height : parent.height
         anchors.centerIn: parent
@@ -125,7 +125,7 @@ PlasmaCore.FrameSvgItem {
     SliderHandle {
         id: minimumLengthHandle
         alignment: panel.alignment | Qt.AlignLeft
-        visible: panel.alignment != Qt.AlignRight
+        visible: panel.alignment !== Qt.AlignRight
         offset: panel.offset
         graphicElementName: "minslider"
         onValueChanged: panel.minimumLength = value
@@ -133,14 +133,14 @@ PlasmaCore.FrameSvgItem {
         maximumPosition: {
             var dialogRootSize = dialogRoot.vertical ? dialogRoot.height : dialogRoot.width
             var size = dialogRoot.vertical ? height : width
-            panel.alignment == Qt.AlignCenter ? Math.min(dialogRootSize - size/2, dialogRootSize + offset * 2 - size/2) : dialogRootSize - size/2
+            panel.alignment === Qt.AlignCenter ? Math.min(dialogRootSize - size/2, dialogRootSize + offset * 2 - size/2) : dialogRootSize - size/2
         }
     }
 
     SliderHandle {
         id: maximumLengthHandle
         alignment: panel.alignment | Qt.AlignLeft
-        visible: panel.alignment != Qt.AlignRight
+        visible: panel.alignment !== Qt.AlignRight
         offset: panel.offset
         graphicElementName: "maxslider"
         onValueChanged: panel.maximumLength = value
@@ -148,33 +148,33 @@ PlasmaCore.FrameSvgItem {
         maximumPosition: {
             var dialogRootSize = dialogRoot.vertical ? dialogRoot.height : dialogRoot.width
             var size = dialogRoot.vertical ? height : width
-            panel.alignment == Qt.AlignCenter ? Math.min(dialogRootSize - size/2, dialogRootSize + offset * 2 - size/2) : dialogRootSize - size/2
+            panel.alignment === Qt.AlignCenter ? Math.min(dialogRootSize - size/2, dialogRootSize + offset * 2 - size/2) : dialogRootSize - size/2
         }
     }
     SliderHandle {
         id: leftMinimumLengthHandle
         alignment: panel.alignment | Qt.AlignRight
-        visible: panel.alignment != Qt.AlignLeft
+        visible: panel.alignment !== Qt.AlignLeft
         offset: panel.offset
         graphicElementName: "minslider"
         onValueChanged: panel.minimumLength = value
         maximumPosition: offsetHandle.position - units.gridUnit * 3
         minimumPosition: {
             var size = dialogRoot.vertical ? height : width
-            panel.alignment == Qt.AlignCenter ? Math.max(-size/2, offset*2 - size/2) : -size/2
+            panel.alignment === Qt.AlignCenter ? Math.max(-size/2, offset*2 - size/2) : -size/2
         }
     }
     SliderHandle {
         id: leftMaximumLengthHandle
         alignment: panel.alignment | Qt.AlignRight
-        visible: panel.alignment != Qt.AlignLeft
+        visible: panel.alignment !== Qt.AlignLeft
         offset: panel.offset
         graphicElementName: "maxslider"
         onValueChanged: panel.maximumLength = value
         maximumPosition: offsetHandle.position - units.gridUnit * 3
         minimumPosition: {
             var size = dialogRoot.vertical ? height : width
-            panel.alignment == Qt.AlignCenter ? Math.max(-size/2, offset*2 - size/2) : -size/2
+            panel.alignment === Qt.AlignCenter ? Math.max(-size/2, offset*2 - size/2) : -size/2
         }
     }
 

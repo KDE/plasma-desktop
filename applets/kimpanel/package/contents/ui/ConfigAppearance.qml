@@ -35,7 +35,7 @@ Item {
     property font cfg_font
 
     onCfg_fontChanged: {
-        if (cfg_font.family == '') {
+        if (cfg_font.family === '') {
             cfg_font = theme.defaultFont
         }
         fontDialog.font = cfg_font

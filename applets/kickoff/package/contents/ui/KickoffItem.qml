@@ -46,8 +46,8 @@ Item {
     property bool isCurrent: listItem.ListView.view.currentIndex === index;
     property bool showAppsByName: plasmoid.configuration.showAppsByName
 
-    property bool hasActionList: ((model.favoriteId != null)
-        || (("hasActionList" in model) && (model.hasActionList == true)))
+    property bool hasActionList: ((model.favoriteId !== null)
+        || (("hasActionList" in model) && (model.hasActionList === true)))
     property Item menu: actionMenu
 
     onAboutToShowActionMenu: {
@@ -159,18 +159,18 @@ Item {
         width: visible ? units.iconSizes.small : 0
         height: width
 
-        visible: (model.hasChildren == true)
-        opacity: (listItem.ListView.view.currentIndex == index) ? 1.0 : 0.4
+        visible: (model.hasChildren === true)
+        opacity: (listItem.ListView.view.currentIndex === index) ? 1.0 : 0.4
 
         svg: arrowsSvg
         elementId: (Qt.application.layoutDirection == Qt.RightToLeft) ? "left-arrow" : "right-arrow"
     }
 
     Keys.onPressed: {
-        if (event.key == Qt.Key_Menu && hasActionList) {
+        if (event.key === Qt.Key_Menu && hasActionList) {
             event.accepted = true;
             openActionMenu();
-        } else if ((event.key == Qt.Key_Enter || event.key == Qt.Key_Return) && !modelChildren) {
+        } else if ((event.key === Qt.Key_Enter || event.key === Qt.Key_Return) && !modelChildren) {
             if (!modelChildren) {
                 event.accepted = true;
                 listItem.activate();

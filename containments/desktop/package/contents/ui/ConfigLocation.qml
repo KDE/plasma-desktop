@@ -53,7 +53,7 @@ Item {
         } else {
             var placeForUrl = placesModel.indexForUrl(cfg_url);
 
-            if (placeForUrl != -1) {
+            if (placeForUrl !== -1) {
                 locationPlace.checked = true;
                 locationPlaceValue.currentIndex = placeForUrl;
                 locationCustomValue.text = "";

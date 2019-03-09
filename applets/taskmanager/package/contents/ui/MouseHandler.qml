@@ -99,21 +99,21 @@ Item {
             // move back.
             if (!plasmoid.configuration.separateLaunchers && tasks.dragSource != null
                  && tasks.dragSource.m.IsLauncher === true && above.m.IsLauncher !== true
-                 && above == ignoredItem) {
+                 && above= == ignoredItem) {
                 return;
             } else {
                 ignoredItem = null;
             }
 
-            if (tasksModel.sortMode == TaskManager.TasksModel.SortManual && tasks.dragSource) {
+            if (tasksModel.sortMode === TaskManager.TasksModel.SortManual && tasks.dragSource) {
                 // Reject drags between different TaskList instances.
-                if (tasks.dragSource.parent != above.parent) {
+                if (tasks.dragSource.parent !== above.parent) {
                     return;
                 }
 
                 var insertAt = TaskTools.insertIndexAt(above, event.x, event.y);
 
-                if (tasks.dragSource != above && tasks.dragSource.itemIndex != insertAt) {
+                if (tasks.dragSource !== above && tasks.dragSource.itemIndex !== insertAt) {
                     if (groupDialog.visible && groupDialog.visualParent) {
                         tasksModel.move(tasks.dragSource.itemIndex, insertAt,
                             tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex));
@@ -124,7 +124,7 @@ Item {
                     ignoredItem = above;
                     ignoreItemTimer.restart();
                 }
-            } else if (!tasks.dragSource && hoveredItem != above) {
+            } else if (!tasks.dragSource && hoveredItem !== above) {
                 hoveredItem = above;
                 activationTimer.restart();
             }

@@ -34,8 +34,8 @@ Item {
 
     anchors.fill: parent
 
-    property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
-    property bool iconsOnly: (plasmoid.pluginName == "org.kde.plasma.icontasks")
+    property bool vertical: (plasmoid.formFactor === PlasmaCore.Types.Vertical)
+    property bool iconsOnly: (plasmoid.pluginName === "org.kde.plasma.icontasks")
 
     property QtObject contextMenuComponent: Qt.createComponent("ContextMenu.qml");
 
@@ -120,7 +120,7 @@ Item {
         launchInPlace: iconsOnly
         separateLaunchers: {
             if (!iconsOnly && !plasmoid.configuration.separateLaunchers
-                && plasmoid.configuration.sortingStrategy == 1) {
+                && plasmoid.configuration.sortingStrategy === 1) {
                 return false;
             }
 
@@ -221,7 +221,7 @@ Item {
         engine: "mpris2"
         connectedSources: sources
         function sourceNameForLauncherUrl(launcherUrl, pid) {
-            if (!launcherUrl || launcherUrl == "") {
+            if (!launcherUrl || launcherUrl === "") {
                 return "";
             }
 

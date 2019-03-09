@@ -29,13 +29,13 @@ SimpleKCM {
     ConfigModule.buttons: ConfigModule.Help | ConfigModule.Defaults | ConfigModule.Apply
 
     function applyBusyCursorCurrentIndex() {
-        if (kcm.busyCursorCurrentIndex == 0) {
+        if (kcm.busyCursorCurrentIndex === 0) {
             busyCursorDisabled.checked = true;
-        } else if (kcm.busyCursorCurrentIndex == 1) {
+        } else if (kcm.busyCursorCurrentIndex === 1) {
             busyCursorStatic.checked = true;
-        } else if (kcm.busyCursorCurrentIndex == 2) {
+        } else if (kcm.busyCursorCurrentIndex === 2) {
             busyCursorBlinking.checked = true;
-        } else if (kcm.busyCursorCurrentIndex == 3) {
+        } else if (kcm.busyCursorCurrentIndex === 3) {
             busyCursorBouncing.checked = true;
         }
     }

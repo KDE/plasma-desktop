@@ -178,7 +178,7 @@ PlasmaExtras.ScrollArea {
                             return;
                         }
 
-                        if (index == 0 && currentRow() == 0) {
+                        if (index == 0 && currentRow() === 0) {
                             itemMultiGrid.flickableItem.contentY = 0;
                             return;
                         }

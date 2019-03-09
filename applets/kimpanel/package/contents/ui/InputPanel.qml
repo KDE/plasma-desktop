@@ -133,9 +133,9 @@ PlasmaCore.Dialog {
                         CandidateHighlight {
                             id: highlight
                             z: -1
-                            visible: inputpanel.highlightCandidate == model.index || inputpanel.hoveredCandidate == model.index
+                            visible: inputpanel.highlightCandidate === model.index || inputpanel.hoveredCandidate === model.index
                             hover: candidateMouseArea.containsMouse
-                            selected: inputpanel.highlightCandidate == model.index || candidateMouseArea.pressed
+                            selected: inputpanel.highlightCandidate === model.index || candidateMouseArea.pressed
                             anchors {
                                 fill: parent
                             }
@@ -232,7 +232,7 @@ PlasmaCore.Dialog {
         var layout = data["LookupTableLayout"] !== undefined ? data["LookupTableLayout"] : 0;
         inputpanel.highlightCandidate = data["LookupTableCursor"] !== undefined ? data["LookupTableCursor"] : -1;
         inputpanel.hoveredCandidate = -1;
-        inputpanel.verticalLayout = (layout === 1) || (layout == 0 && plasmoid.configuration.vertical_lookup_table);
+        inputpanel.verticalLayout = (layout === 1) || (layout === 0 && plasmoid.configuration.vertical_lookup_table);
         button.visible = lookupTableVisible
 
         if (data["LookupTable"]) {
@@ -283,7 +283,7 @@ PlasmaCore.Dialog {
             if (y > rect.y + rect.height) {
                 y = rect.y + rect.height - height - 40;
             } else {
-                y = y - height - (position.height == 0 ? 40 : position.height);
+                y = y - height - (position.height === 0 ? 40 : position.height);
             }
         }
 

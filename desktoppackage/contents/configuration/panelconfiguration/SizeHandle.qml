@@ -25,10 +25,10 @@ import org.kde.plasma.configuration 2.0
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 PlasmaComponents.Button {
-    readonly property string textLabel: panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge ? i18nd("plasma_shell_org.kde.plasma.desktop", "Width") : i18nd("plasma_shell_org.kde.plasma.desktop", "Height")
+    readonly property string textLabel: panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge ? i18nd("plasma_shell_org.kde.plasma.desktop", "Width") : i18nd("plasma_shell_org.kde.plasma.desktop", "Height")
     text: panelResizeHintTimer.running ? panel.thickness : textLabel
 
-    readonly property string sizeIcon: panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge ? "resizecol" : "resizerow"
+    readonly property string sizeIcon: panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge ? "resizecol" : "resizerow"
     iconSource: sizeIcon
 
     checkable: true
@@ -67,7 +67,7 @@ PlasmaComponents.Button {
     KQuickControlsAddons.MouseEventListener {
         id: mel
         anchors.fill: parent
-        cursorShape: panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge ? Qt.SizeHorCursor : Qt.SizeVerCursor
+        cursorShape: panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge ? Qt.SizeHorCursor : Qt.SizeVerCursor
 
         property int startMouseX
         property int startMouseY
@@ -166,7 +166,7 @@ PlasmaComponents.Button {
             }
             deltaThickness = deltaThickness * 2;
             var newThickness = Math.max(units.gridUnit, panel.thickness + deltaThickness);
-            if (panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge) {
+            if (panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge) {
                 newThickness = Math.min(newThickness, panel.screenToFollow.geometry.width/2);
             } else {
                 newThickness = Math.min(newThickness, panel.screenToFollow.geometry.height/2);

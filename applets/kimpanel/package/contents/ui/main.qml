@@ -27,7 +27,7 @@ Item {
     id: kimpanel
     property int visibleButtons: 0
 
-    property bool vertical: plasmoid.formFactor == PlasmaCore.Types.Vertical
+    property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -69,7 +69,7 @@ Item {
                     icon: model.icon
                     hint: model.hint
                     onTriggered : {
-                        if (button == Qt.LeftButton) {
+                        if (button === Qt.LeftButton) {
                             clickHandler(model.key);
                             // clickHandler will trigger the menu, but we have to wait for
                             // the menu data. So we have to set the visual parent ahead.

@@ -33,11 +33,11 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 Item {
     id: kickoff
 
-    readonly property bool inPanel: (plasmoid.location == PlasmaCore.Types.TopEdge
-        || plasmoid.location == PlasmaCore.Types.RightEdge
-        || plasmoid.location == PlasmaCore.Types.BottomEdge
-        || plasmoid.location == PlasmaCore.Types.LeftEdge)
-    readonly property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
+    readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
+        || plasmoid.location === PlasmaCore.Types.RightEdge
+        || plasmoid.location === PlasmaCore.Types.BottomEdge
+        || plasmoid.location === PlasmaCore.Types.LeftEdge)
+    readonly property bool vertical: (plasmoid.formFactor === PlasmaCore.Types.Vertical)
 
     Plasmoid.switchWidth: units.gridUnit * 20
     Plasmoid.switchHeight: units.gridUnit * 30

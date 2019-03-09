@@ -47,7 +47,7 @@ MouseArea {
 
     onPositionChanged: {
         if (currentApplet && currentApplet.applet &&
-            currentApplet.applet.pluginName == "org.kde.plasma.panelspacer") {
+            currentApplet.applet.pluginName === "org.kde.plasma.panelspacer") {
             if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
                 if ((mouse.y - handle.y) < spacerHandleSize ||
                     (mouse.y - handle.y) > (handle.height - spacerHandleSize)) {
@@ -68,7 +68,7 @@ MouseArea {
         }
 
         if (pressed) {
-            if (currentApplet && currentApplet.applet.pluginName == "org.kde.plasma.panelspacer") {
+            if (currentApplet && currentApplet.applet.pluginName === "org.kde.plasma.panelspacer") {
 
                 if (isResizingLeft) {
                     if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
@@ -101,7 +101,7 @@ MouseArea {
                 mouse.x > width + padding || mouse.y > height + padding)) {
                 var newCont = plasmoid.containmentAt(mouse.x, mouse.y);
 
-                if (newCont && newCont != plasmoid) {
+                if (newCont && newCont !== plasmoid) {
                     var newPos = newCont.mapFromApplet(plasmoid, mouse.x, mouse.y);
                     newCont.addApplet(currentApplet.applet, newPos.x, newPos.y);
                     root.dragOverlay.currentApplet = null;
@@ -170,7 +170,7 @@ MouseArea {
             return;
         }
 
-        if (currentApplet.applet.pluginName == "org.kde.plasma.panelspacer") {
+        if (currentApplet.applet.pluginName === "org.kde.plasma.panelspacer") {
             if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
                 if ((mouse.y - handle.y) < spacerHandleSize) {
                     configurationArea.isResizingLeft = true;
@@ -271,7 +271,7 @@ MouseArea {
                 bottom: (plasmoid.formFactor !== PlasmaCore.Types.Vertical) ? parent.bottom : undefined
                 right: (plasmoid.formFactor !== PlasmaCore.Types.Vertical) ? undefined : parent.right
             }
-            visible: currentApplet && currentApplet.applet.pluginName == "org.kde.plasma.panelspacer"
+            visible: currentApplet && currentApplet.applet.pluginName === "org.kde.plasma.panelspacer"
             opacity: visible && !xAnim.running && !yAnim.running ? 1.0 : 0
             width: configurationArea.spacerHandleSize
             height: configurationArea.spacerHandleSize
@@ -290,7 +290,7 @@ MouseArea {
                 bottom: parent.bottom
                 left: (plasmoid.formFactor !== PlasmaCore.Types.Vertical) ? undefined : parent.left
             }
-            visible: currentApplet && currentApplet.applet.pluginName == "org.kde.plasma.panelspacer"
+            visible: currentApplet && currentApplet.applet.pluginName === "org.kde.plasma.panelspacer"
             opacity: visible && !xAnim.running && !yAnim.running ? 1.0 : 0
             width: configurationArea.spacerHandleSize
             height: configurationArea.spacerHandleSize

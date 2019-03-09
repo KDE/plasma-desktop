@@ -56,8 +56,8 @@ FocusScope {
 
         spacing: units.smallSpacing
 
-        LayoutMirroring.enabled: ((plasmoid.location == PlasmaCore.Types.RightEdge)
-            || (Qt.application.layoutDirection == Qt.RightToLeft && plasmoid.location != PlasmaCore.Types.LeftEdge))
+        LayoutMirroring.enabled: ((plasmoid.location === PlasmaCore.Types.RightEdge)
+            || (Qt.application.layoutDirection == Qt.RightToLeft && plasmoid.location !== PlasmaCore.Types.LeftEdge))
 
         PlasmaCore.FrameSvgItem {
             id: sideBar
@@ -85,7 +85,7 @@ FocusScope {
 
                 states: [ State {
                     name: "top"
-                    when: (plasmoid.location == PlasmaCore.Types.TopEdge)
+                    when: (plasmoid.location === PlasmaCore.Types.TopEdge)
 
                     AnchorChanges {
                         target: favoriteApps
@@ -125,7 +125,7 @@ FocusScope {
 
                 states: [ State {
                     name: "top"
-                    when: (plasmoid.location == PlasmaCore.Types.TopEdge)
+                    when: (plasmoid.location === PlasmaCore.Types.TopEdge)
 
                     AnchorChanges {
                         target: sidebarSeparator
@@ -153,7 +153,7 @@ FocusScope {
 
                 states: [ State {
                     name: "top"
-                    when: (plasmoid.location == PlasmaCore.Types.TopEdge)
+                    when: (plasmoid.location === PlasmaCore.Types.TopEdge)
 
                     AnchorChanges {
                         target: favoriteSystemActions
@@ -190,7 +190,7 @@ FocusScope {
 
             states: [ State {
                 name: "top"
-                when: (plasmoid.location == PlasmaCore.Types.TopEdge)
+                when: (plasmoid.location === PlasmaCore.Types.TopEdge)
 
                 AnchorChanges {
                     target: rootList
@@ -246,7 +246,7 @@ FocusScope {
                     Keys.onPressed: {
                         var target = null;
 
-                        if (event.key == Qt.Key_Right) {
+                        if (event.key === Qt.Key_Right) {
                             var targets = new Array();
 
                             for (var i = index + 1; i < runnerModel.count; ++i) {
@@ -263,7 +263,7 @@ FocusScope {
                                     break;
                                 }
                             }
-                        } else if (event.key == Qt.Key_Left) {
+                        } else if (event.key === Qt.Key_Left) {
                             var targets = new Array();
 
                             for (var i = index - 1; i >= 0; --i) {
@@ -338,7 +338,7 @@ FocusScope {
 
         states: [ State {
             name: "top"
-            when: plasmoid.location == PlasmaCore.Types.TopEdge
+            when: plasmoid.location === PlasmaCore.Types.TopEdge
 
             AnchorChanges {
                 target: searchField
@@ -356,8 +356,8 @@ FocusScope {
         },
         State {
             name: "right"
-            when: (plasmoid.location == PlasmaCore.Types.RightEdge && Qt.application.layoutDirection == Qt.LeftToRight)
-                || (plasmoid.location == PlasmaCore.Types.LeftEdge && Qt.application.layoutDirection == Qt.RightToLeft)
+            when: (plasmoid.location === PlasmaCore.Types.RightEdge && Qt.application.layoutDirection == Qt.LeftToRight)
+                || (plasmoid.location === PlasmaCore.Types.LeftEdge && Qt.application.layoutDirection == Qt.RightToLeft)
 
             AnchorChanges {
                 target: searchField
@@ -375,7 +375,7 @@ FocusScope {
         }]
 
         Keys.onPressed: {
-            if (event.key == Qt.Key_Up) {
+            if (event.key === Qt.Key_Up) {
                 if (rootList.visible) {
                     rootList.showChildDialogs = false;
                     rootList.currentIndex = rootList.model.count - 1;
@@ -393,7 +393,7 @@ FocusScope {
                         }
                     }
                 }
-            } else if (event.key == Qt.Key_Down) {
+            } else if (event.key === Qt.Key_Down) {
                 if (rootList.visible) {
                     rootList.showChildDialogs = false;
                     rootList.currentIndex = Math.min(1, rootList.count);
@@ -411,7 +411,7 @@ FocusScope {
                         }
                     }
                 }
-            } else if (event.key == Qt.Key_Left && cursorPosition == 0) {
+            } else if (event.key === Qt.Key_Left && cursorPosition == 0) {
                     for (var i = runnerModel.count; i >= 0; --i) {
                         if (runnerModel.modelForRow(i).count) {
                             var targetList = runnerColumnsRepeater.itemAt(i);
@@ -420,7 +420,7 @@ FocusScope {
                             break;
                         }
                     }
-            } else if (event.key == Qt.Key_Right && cursorPosition == length) {
+            } else if (event.key === Qt.Key_Right && cursorPosition == length) {
                 for (var i = 1; i < runnerModel.count; ++i) {
                     if (runnerModel.modelForRow(i).count) {
                         var targetList = runnerColumnsRepeater.itemAt(i);
@@ -429,7 +429,7 @@ FocusScope {
                         break;
                     }
                 }
-            } else if (event.key == Qt.Key_Enter || event.key == Qt.Key_Return) {
+            } else if (event.key === Qt.Key_Enter || event.key === Qt.Key_Return) {
                 if (runnerColumns.visible && runnerModel.modelForRow(0).count) {
                     runnerModel.modelForRow(0).trigger(0, "", null);
                     plasmoid.expanded = false;
@@ -444,7 +444,7 @@ FocusScope {
     }
 
     Keys.onPressed: {
-        if (event.key == Qt.Key_Escape) {
+        if (event.key === Qt.Key_Escape) {
             plasmoid.expanded = false;
         }
     }

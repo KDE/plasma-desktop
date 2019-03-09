@@ -29,8 +29,8 @@ import org.kde.plasma.private.pager 2.0
 MouseArea {
     id: root
 
-    property bool isActivityPager: (plasmoid.pluginName == "org.kde.plasma.activitypager")
-    property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
+    property bool isActivityPager: (plasmoid.pluginName === "org.kde.plasma.activitypager")
+    property bool vertical: (plasmoid.formFactor === PlasmaCore.Types.Vertical)
     property var activityDataSource: null
 
     readonly property real aspectRatio: (((pagerModel.pagerItemSize.width * pagerItemGrid.effectiveColumns)
@@ -123,7 +123,7 @@ MouseArea {
             increment--;
         }
 
-        while (increment != 0) {
+        while (increment !== 0) {
             if (increment < 0) {
                 var nextPage = plasmoid.configuration.wrapPage?
                     (pagerModel.currentPage + 1) % repeater.count :
@@ -145,7 +145,7 @@ MouseArea {
 
         enabled: root.visible
 
-        showDesktop: (plasmoid.configuration.currentDesktopSelected == 1)
+        showDesktop: (plasmoid.configuration.currentDesktopSelected === 1)
 
         showOnlyCurrentScreen: plasmoid.configuration.showOnlyCurrentScreen
         screenGeometry: plasmoid.screenGeometry
@@ -220,7 +220,7 @@ MouseArea {
         id: dragTimer
         interval: 1000
         onTriggered: {
-            if (dragSwitchDesktopId != -1 && dragSwitchDesktopId !== pagerModel.currentPage) {
+            if (dragSwitchDesktopId !== -1 && dragSwitchDesktopId !== pagerModel.currentPage) {
                 pagerModel.changePage(dragSwitchDesktopId);
             }
         }
@@ -303,7 +303,7 @@ MouseArea {
                 id: desktop
 
                 property string desktopId: isActivityPager ? model.TasksModel.activity : model.TasksModel.virtualDesktop
-                property bool active: (index == pagerModel.currentPage)
+                property bool active: (index === pagerModel.currentPage)
 
                 mainText: model.display
                 // our ToolTip has maximumLineCount of 8 which doesn't fit but QML doesn't

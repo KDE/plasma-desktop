@@ -56,7 +56,7 @@ Flickable {
             // Searching for the first item that is visible, or back to the one
             // that we started with
         } while (!activitiesList.itemAt(selectedIndex).visible
-                        && startingWithSelected != selectedIndex);
+                        && startingWithSelected !== selectedIndex);
 
         _updateSelectedItem();
 
@@ -75,7 +75,7 @@ Flickable {
     function _updateSelectedItem()
     {
         for (var i = 0; i < activitiesList.count; i++) {
-            activitiesList.itemAt(i).selected = (i == selectedIndex);
+            activitiesList.itemAt(i).selected = (i === selectedIndex);
         }
     }
 
@@ -100,7 +100,7 @@ Flickable {
             }
         }
 
-        if (selectedItem != null) {
+        if (selectedItem !== null) {
             ActivitySwitcher.Backend.setCurrentActivity(selectedItem.activityId);
         }
     }

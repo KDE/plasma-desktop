@@ -68,7 +68,7 @@ FocusScope {
         repeat: false
 
         onTriggered: {
-            if (!plasmoid.expanded || model == undefined || currentIndex == -1) {
+            if (!plasmoid.expanded || model === undefined || currentIndex == -1) {
                 return;
             }
 
@@ -200,7 +200,7 @@ FocusScope {
                 }
 
                 Keys.onPressed: {
-                    if (event.key == Qt.Key_Up) {
+                    if (event.key === Qt.Key_Up) {
                         event.accepted = true;
 
                         if (!keyNavigationWraps && currentIndex == 0) {
@@ -217,7 +217,7 @@ FocusScope {
                         }
 
                         showChildDialogs = true;
-                    } else if (event.key == Qt.Key_Down) {
+                    } else if (event.key === Qt.Key_Down) {
                         event.accepted = true;
 
                         if (!keyNavigationWraps && currentIndex == count - 1) {
@@ -234,21 +234,21 @@ FocusScope {
                         }
 
                         showChildDialogs = true;
-                    } else if ((event.key == Qt.Key_Right || event.key == Qt.Key_Return || event.key == Qt.Key_Enter) && childDialog != null) {
+                    } else if ((event.key === Qt.Key_Right || event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && childDialog != null) {
                         windowSystem.forceActive(childDialog.mainItem);
                         childDialog.mainItem.focus = true;
                         childDialog.mainItem.currentIndex = 0;
-                    } else if ((event.key == Qt.Key_Right || event.key == Qt.Key_Return || event.key == Qt.Key_Enter) && childDialog == null
+                    } else if ((event.key === Qt.Key_Right || event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && childDialog == null
                         && currentItem != null && currentItem.hasChildren) {
                         dialogSpawnTimer.focusOnSpawn = true;
                         dialogSpawnTimer.restart();
-                    } else if (event.key == Qt.Key_Left && dialog != null) {
+                    } else if (event.key === Qt.Key_Left && dialog != null) {
                         dialog.destroy();
-                    } else if (event.key == Qt.Key_Escape) {
+                    } else if (event.key === Qt.Key_Escape) {
                         plasmoid.expanded = false;
-                    } else if (event.key == Qt.Key_Tab) {
+                    } else if (event.key === Qt.Key_Tab) {
                         //do nothing, and skip appending text
-                    } else if (event.text != "") {
+                    } else if (event.text !== "") {
                         appendSearchText(event.text);
                     }
                 }

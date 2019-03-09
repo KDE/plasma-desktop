@@ -88,7 +88,7 @@ Item {
             property bool blank: model.blank
             property bool selected: model.blank ? false : model.selected
             property bool isDir: model.blank ? false : model.isDir
-            property bool hovered: (main.GridView.view.hoveredItem == main)
+            property bool hovered: (main.GridView.view.hoveredItem === main)
             property QtObject popupDialog: null
             property Item iconArea: icon
             property Item label: label
@@ -154,14 +154,14 @@ Item {
 
                 active: (plasmoid.configuration.toolTips && popupDialog == null && !model.blank)
                 interactive: false
-                location: root.useListViewMode ? (plasmoid.location == PlasmaCore.Types.LeftEdge ? PlasmaCore.Types.LeftEdge : PlasmaCore.Types.RightEdge) : plasmoid.location
+                location: root.useListViewMode ? (plasmoid.location === PlasmaCore.Types.LeftEdge ? PlasmaCore.Types.LeftEdge : PlasmaCore.Types.RightEdge) : plasmoid.location
 
                 onContainsMouseChanged:  {
                     if (containsMouse && !model.blank) {
                         toolTip.icon = model.decoration;
                         toolTip.mainText = model.display;
 
-                        if (model.size != undefined) {
+                        if (model.size !== undefined) {
                                 toolTip.subText = model.type + "\n" + model.size;
                         } else {
                             toolTip.subText = model.type;

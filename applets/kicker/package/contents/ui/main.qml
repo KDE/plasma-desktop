@@ -33,7 +33,7 @@ Item {
 
     signal reset
 
-    property bool isDash: (plasmoid.pluginName == "org.kde.plasma.kickerdash")
+    property bool isDash: (plasmoid.pluginName === "org.kde.plasma.kickerdash")
 
     Plasmoid.switchWidth: isDash || !Plasmoid.fullRepresentationItem ? 0 : Plasmoid.fullRepresentationItem.Layout.minimumWidth
     Plasmoid.switchHeight: isDash || !Plasmoid.fullRepresentationItem ? 0 : Plasmoid.fullRepresentationItem.Layout.minimumHeight

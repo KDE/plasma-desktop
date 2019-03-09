@@ -252,7 +252,7 @@ KQuickControlsAddons.MouseEventListener {
                 var pos = mapToItem(root.parent, mouse.x, mouse.y);
                 var newCont = plasmoid.containmentAt(pos.x, pos.y);
 
-                if (newCont && newCont != plasmoid) {
+                if (newCont && newCont !== plasmoid) {
                     var newPos = newCont.mapFromApplet(plasmoid, pos.x, pos.y);
 
                     newCont.addApplet(appletItem.applet, newPos.x, newPos.y);

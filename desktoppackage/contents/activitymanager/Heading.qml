@@ -42,7 +42,7 @@ Item {
     onShowingSearchChanged: if (!showingSearch) searchText.text = ""
 
     Keys.onPressed: {
-        if (event.key == Qt.Key_Escape) {
+        if (event.key === Qt.Key_Escape) {
             if (root.showingSearch) {
                 event.accepted = true;
                 root.showingSearch = false;

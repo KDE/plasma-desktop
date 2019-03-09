@@ -33,7 +33,7 @@ Controls.TextField {
 
     onTextChanged: {
         var textFloat = parseFloat(text);
-        if (textFloat == undefined || isNaN(textFloat)) {
+        if (textFloat === undefined || isNaN(textFloat)) {
             return;
         }
         backend = textFloat;
@@ -41,7 +41,7 @@ Controls.TextField {
 
     onFocusChanged: {
         var textFloat = parseFloat(text);
-        if (!focus && (textFloat == undefined || isNaN(textFloat))) {
+        if (!focus && (textFloat === undefined || isNaN(textFloat))) {
             text = backend;
         }
     }

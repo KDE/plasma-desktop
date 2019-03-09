@@ -31,7 +31,7 @@ PlasmaCore.FrameSvgItem {
     width: gridView.cellWidth
     height: visible ? gridView.cellHeight : 0
 
-    visible: history.length != 0
+    visible: history.length !== 0
 
     property bool ignoreClick: false
     property bool containsDrag: false
@@ -62,7 +62,7 @@ PlasmaCore.FrameSvgItem {
 
         onPressed: {
             if (mouse.buttons & Qt.BackButton) {
-                if (root.isPopup && dir.resolvedUrl != dir.resolve(plasmoid.configuration.url)) {
+                if (root.isPopup && dir.resolvedUrl !== dir.resolve(plasmoid.configuration.url)) {
                     doBack();
                     ignoreClick = true;
                 }

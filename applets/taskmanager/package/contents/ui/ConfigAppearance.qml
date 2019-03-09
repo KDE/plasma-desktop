@@ -30,7 +30,7 @@ Item {
 
     readonly property bool plasmaPaAvailable: Qt.createComponent("PulseAudio.qml").status === Component.Ready
 
-    property bool plasmoidVertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
+    property bool plasmoidVertical: (plasmoid.formFactor === PlasmaCore.Types.Vertical)
 
     property alias cfg_showToolTips: showToolTips.checked
     property alias cfg_highlightWindows: highlightWindows.checked

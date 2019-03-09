@@ -48,7 +48,7 @@ Item {
         id: hideDialogTimer
         interval: 0
         //NOTE: it's checking activeFocusItem instead of active as active doesn't correctly signal its change
-        property bool desktopOrDialogFocus: main.Window.activeFocusItem != null || (toolBoxLoader.item && toolBoxLoader.item.activeFocusItem != null)
+        property bool desktopOrDialogFocus: main.Window.activeFocusItem !== null || (toolBoxLoader.item && toolBoxLoader.item.activeFocusItem !== null)
         onDesktopOrDialogFocusChanged: {
             if (!desktopOrDialogFocus) {
                 hideDialogTimer.restart();

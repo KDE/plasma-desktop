@@ -218,7 +218,7 @@ Kicker.DashboardWindow {
                 for (var i = 0; i < rootModel.count; ++i) {
                     var model = rootModel.modelForRow(i);
 
-                    if (model.description == "KICKER_ALL_MODEL") {
+                    if (model.description === "KICKER_ALL_MODEL") {
                         allAppsGrid.model = model;
                         done = true;
                         break;
@@ -321,7 +321,7 @@ Kicker.DashboardWindow {
             onClicked: searchField.clear();
 
             Keys.onPressed: {
-                if (event.key == Qt.Key_Tab) {
+                if (event.key === Qt.Key_Tab) {
                     event.accepted = true;
 
                     if (runnerModel.count) {
@@ -329,7 +329,7 @@ Kicker.DashboardWindow {
                     } else {
                         systemFavoritesGrid.tryActivate(0, 0);
                     }
-                } else if (event.key == Qt.Key_Backtab) {
+                } else if (event.key === Qt.Key_Backtab) {
                     event.accepted = true;
 
                     if (tabBar.visible) {
@@ -459,7 +459,7 @@ Kicker.DashboardWindow {
                     }
 
                     Keys.onPressed: {
-                        if (event.key == Qt.Key_Tab) {
+                        if (event.key === Qt.Key_Tab) {
                             event.accepted = true;
 
                             if (tabBar.visible) {
@@ -469,7 +469,7 @@ Kicker.DashboardWindow {
                             } else {
                                 mainColumn.tryActivate(0, 0);
                             }
-                        } else if (event.key == Qt.Key_Backtab) {
+                        } else if (event.key === Qt.Key_Backtab) {
                             event.accepted = true;
                             systemFavoritesGrid.tryActivate(0, 0);
                         }
@@ -516,7 +516,7 @@ Kicker.DashboardWindow {
                     }
 
                     Keys.onPressed: {
-                        if (event.key == Qt.Key_Tab) {
+                        if (event.key === Qt.Key_Tab) {
                             event.accepted = true;
 
                             if (globalFavoritesGrid.enabled) {
@@ -528,7 +528,7 @@ Kicker.DashboardWindow {
                             } else {
                                 mainColumn.tryActivate(0, 0);
                             }
-                        } else if (event.key == Qt.Key_Backtab) {
+                        } else if (event.key === Qt.Key_Backtab) {
                             event.accepted = true;
 
                             if (filterList.enabled) {
@@ -758,7 +758,7 @@ Kicker.DashboardWindow {
                 }
 
                 Keys.onPressed: {
-                    if (event.key == Qt.Key_Tab) {
+                    if (event.key === Qt.Key_Tab) {
                         event.accepted = true;
 
                         if (filterList.enabled) {
@@ -766,7 +766,7 @@ Kicker.DashboardWindow {
                         } else {
                             systemFavoritesGrid.tryActivate(0, 0);
                         }
-                    } else if (event.key == Qt.Key_Backtab) {
+                    } else if (event.key === Qt.Key_Backtab) {
                         event.accepted = true;
 
                         if (searching) {
@@ -851,8 +851,8 @@ Kicker.DashboardWindow {
                             property var m: model
                             property int textWidth: label.contentWidth
                             property int mouseCol
-                            property bool hasActionList: ((model.favoriteId != null)
-                                || (("hasActionList" in model) && (model.hasActionList == true)))
+                            property bool hasActionList: ((model.favoriteId !== null)
+                                || (("hasActionList" in model) && (model.hasActionList === true)))
                             property Item menu: actionMenu
 
                             width: parent.width
@@ -876,7 +876,7 @@ Kicker.DashboardWindow {
                             onPositionChanged: { // Lazy menu implementation.
                                 mouseCol = mouse.x;
 
-                                if (justOpenedTimer.running || ListView.view.currentIndex == 0 || index == ListView.view.currentIndex) {
+                                if (justOpenedTimer.running || ListView.view.currentIndex === 0 || index === ListView.view.currentIndex) {
                                     updateCurrentItem();
                                 } else if ((index == ListView.view.currentIndex - 1) && mouse.y < (height - 6)
                                     || (index == ListView.view.currentIndex + 1) && mouse.y > 5) {
@@ -1021,7 +1021,7 @@ Kicker.DashboardWindow {
 
                                 var model = rootModel.modelForRow(currentIndex);
 
-                                if (model.description == "KICKER_ALL_MODEL") {
+                                if (model.description === "KICKER_ALL_MODEL") {
                                     allAppsGrid.model = model;
                                     allApps = true;
                                     funnelModel.sourceModel = null;
@@ -1037,15 +1037,15 @@ Kicker.DashboardWindow {
                         }
 
                         Keys.onPressed: {
-                            if (event.key == Qt.Key_Left) {
+                            if (event.key === Qt.Key_Left) {
                                 event.accepted = true;
 
                                 var currentRow = Math.max(0, Math.ceil(currentItem.y / mainGrid.cellHeight) - 1);
                                 mainColumn.tryActivate(currentRow, mainColumn.columns - 1);
-                            } else if (event.key == Qt.Key_Tab) {
+                            } else if (event.key === Qt.Key_Tab) {
                                 event.accepted = true;
                                 systemFavoritesGrid.tryActivate(0, 0);
-                            } else if (event.key == Qt.Key_Backtab) {
+                            } else if (event.key === Qt.Key_Backtab) {
                                 event.accepted = true;
                                 mainColumn.tryActivate(0, 0);
                             }

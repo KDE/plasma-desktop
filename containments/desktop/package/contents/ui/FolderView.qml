@@ -98,7 +98,7 @@ FocusScope {
     function handleDragMove(x, y) {
         var child = childAt(x, y);
 
-        if (child != null && child == backButton) {
+        if (child !== null && child === backButton) {
             hoveredItem = null;
             backButton.handleDragMove();
         } else {
@@ -152,7 +152,7 @@ FocusScope {
         var dragPos = mapToItem(gridView.contentItem, listener.dragX, listener.dragY);
         var dragIndex = gridView.indexAt(dragPos.x, dragPos.y);
 
-        if (listener.dragX == -1 || dragIndex != dropIndex) {
+        if (listener.dragX == -1 || dragIndex !== dropIndex) {
             dir.drop(target, event, dropItemAt(dropPos));
         }
     }
@@ -273,7 +273,7 @@ FocusScope {
             scrollArea.focus = true;
 
             if (mouse.buttons & Qt.BackButton) {
-                if (root.isPopup && dir.resolvedUrl != dir.resolve(plasmoid.configuration.url)) {
+                if (root.isPopup && dir.resolvedUrl !== dir.resolve(plasmoid.configuration.url)) {
                     doBack();
                     mouse.accepted = true;
                 }
@@ -281,7 +281,7 @@ FocusScope {
                 return;
             }
 
-            if (editor && childAt(mouse.x, mouse.y) != editor) {
+            if (editor && childAt(mouse.x, mouse.y) !== editor) {
                 editor.commit();
             }
 
@@ -382,7 +382,7 @@ FocusScope {
 
             if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
                 if (Qt.styleHints.singleClickActivation || doubleClickInProgress) {
-                    var func = root.useListViewMode && (mouse.button == Qt.LeftButton) && hoveredItem.isDir ? doCd : dir.run;
+                    var func = root.useListViewMode && (mouse.button === Qt.LeftButton) && hoveredItem.isDir ? doCd : dir.run;
                     func(positioner.map(gridView.currentIndex));
 
                     hoveredItem = null;
@@ -932,18 +932,18 @@ FocusScope {
                         if (dir.hasSelection()) {
                             dir.action("trash").trigger();
                         }
-                    } else if (event.key == Qt.Key_Control) {
+                    } else if (event.key === Qt.Key_Control) {
                         ctrlPressed = true;
-                    } else if (event.key == Qt.Key_Shift) {
+                    } else if (event.key === Qt.Key_Shift) {
                         shiftPressed = true;
 
                         if (currentIndex != -1) {
                             anchorIndex = currentIndex;
                         }
-                    } else if (event.key == Qt.Key_Home) {
+                    } else if (event.key === Qt.Key_Home) {
                         currentIndex = 0;
                         updateSelection(event.modifiers);
-                    } else if (event.key == Qt.Key_End) {
+                    } else if (event.key === Qt.Key_End) {
                         currentIndex = count - 1;
                         updateSelection(event.modifiers);
                     } else if (event.matches(StandardKey.Copy)) {
@@ -964,9 +964,9 @@ FocusScope {
                 }
 
                 Keys.onReleased: {
-                    if (event.key == Qt.Key_Control) {
+                    if (event.key === Qt.Key_Control) {
                         ctrlPressed = false;
-                    } else if (event.key == Qt.Key_Shift) {
+                    } else if (event.key === Qt.Key_Shift) {
                         shiftPressed = false;
                         anchorIndex = 0;
                     }
@@ -974,14 +974,14 @@ FocusScope {
 
                 Keys.onLeftPressed: {
                     if (root.isPopup && root.useListViewMode) {
-                        if (dir.resolvedUrl != dir.resolve(plasmoid.configuration.url)) {
+                        if (dir.resolvedUrl !== dir.resolve(plasmoid.configuration.url)) {
                             doBack();
                         }
                     } else if (positioner.enabled) {
                         var newIndex = positioner.nearestItem(currentIndex,
                             FolderTools.effectiveNavDirection(gridView.flow, gridView.effectiveLayoutDirection, Qt.LeftArrow));
 
-                        if (newIndex != -1) {
+                        if (newIndex !== -1) {
                             currentIndex = newIndex;
                             updateSelection(event.modifiers);
                         }
@@ -990,7 +990,7 @@ FocusScope {
 
                         moveCurrentIndexLeft();
 
-                        if (oldIndex == currentIndex) {
+                        if (oldIndex === currentIndex) {
                             return;
                         }
 
@@ -1007,7 +1007,7 @@ FocusScope {
                         var newIndex = positioner.nearestItem(currentIndex,
                             FolderTools.effectiveNavDirection(gridView.flow, gridView.effectiveLayoutDirection, Qt.RightArrow));
 
-                        if (newIndex != -1) {
+                        if (newIndex !== -1) {
                             currentIndex = newIndex;
                             updateSelection(event.modifiers);
                         }
@@ -1016,7 +1016,7 @@ FocusScope {
 
                         moveCurrentIndexRight();
 
-                        if (oldIndex == currentIndex) {
+                        if (oldIndex === currentIndex) {
                             return;
                         }
 
@@ -1029,7 +1029,7 @@ FocusScope {
                         var newIndex = positioner.nearestItem(currentIndex,
                             FolderTools.effectiveNavDirection(gridView.flow, gridView.effectiveLayoutDirection, Qt.UpArrow));
 
-                        if (newIndex != -1) {
+                        if (newIndex !== -1) {
                             currentIndex = newIndex;
                             updateSelection(event.modifiers);
                         }
@@ -1038,7 +1038,7 @@ FocusScope {
 
                         moveCurrentIndexUp();
 
-                        if (oldIndex == currentIndex) {
+                        if (oldIndex === currentIndex) {
                             return;
                         }
 
@@ -1051,7 +1051,7 @@ FocusScope {
                         var newIndex = positioner.nearestItem(currentIndex,
                             FolderTools.effectiveNavDirection(gridView.flow, gridView.effectiveLayoutDirection, Qt.DownArrow));
 
-                        if (newIndex != -1) {
+                        if (newIndex !== -1) {
                             currentIndex = newIndex;
                             updateSelection(event.modifiers);
                         }
@@ -1060,7 +1060,7 @@ FocusScope {
 
                         moveCurrentIndexDown();
 
-                        if (oldIndex == currentIndex) {
+                        if (oldIndex === currentIndex) {
                             return;
                         }
 
@@ -1069,7 +1069,7 @@ FocusScope {
                 }
 
                 Keys.onBackPressed: {
-                    if (root.isPopup && dir.resolvedUrl != dir.resolve(plasmoid.configuration.url)) {
+                    if (root.isPopup && dir.resolvedUrl !== dir.resolve(plasmoid.configuration.url)) {
                         doBack();
                     }
                 }
@@ -1114,7 +1114,7 @@ FocusScope {
             usedByContainment: root.isContainment && main.isRootView
             sortDesc: plasmoid.configuration.sortDesc
             sortDirsFirst: plasmoid.configuration.sortDirsFirst
-            parseDesktopFiles: (plasmoid.configuration.url == "desktop:/")
+            parseDesktopFiles: (plasmoid.configuration.url === "desktop:/")
             previews: plasmoid.configuration.previews
             previewPlugins: plasmoid.configuration.previewPlugins
             appletInterface: plasmoid
@@ -1151,13 +1151,13 @@ FocusScope {
                     from = positioner.indexForUrl(urls[i]);
                     to = -1;
 
-                    if (from == -1) {
+                    if (from === -1) {
                         continue;
                     }
 
                     var offset = dir.dragCursorOffset(positioner.map(from));
 
-                    if (offset.x == -1) {
+                    if (offset.x === -1) {
                         continue;
                     }
 
@@ -1180,7 +1180,7 @@ FocusScope {
                         }
                     }
 
-                    if (from != to) {
+                    if (from !== to) {
                         moves.push(from);
                         moves.push(to);
                     }

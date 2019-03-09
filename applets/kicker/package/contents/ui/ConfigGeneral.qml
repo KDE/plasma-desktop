@@ -36,7 +36,7 @@ Item {
     width: childrenRect.width
     height: childrenRect.height
 
-    property bool isDash: (plasmoid.pluginName == "org.kde.plasma.kickerdash")
+    property bool isDash: (plasmoid.pluginName === "org.kde.plasma.kickerdash")
 
     property string cfg_icon: plasmoid.configuration.icon
     property bool cfg_useCustomButtonImage: plasmoid.configuration.useCustomButtonImage

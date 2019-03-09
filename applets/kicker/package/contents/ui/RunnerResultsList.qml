@@ -66,7 +66,7 @@ FocusScope {
         elide: Text.ElideRight
         font.weight: Font.Bold
 
-        text: (runnerMatches.model != null) ? runnerMatches.model.name : ""
+        text: (runnerMatches.model !== null) ? runnerMatches.model.name : ""
     }
 
     ItemListView {
@@ -74,7 +74,7 @@ FocusScope {
 
         anchors.top: plasmoid.configuration.alignResultsToBottom ? undefined : header.bottom
         anchors.bottom: plasmoid.configuration.alignResultsToBottom ? parent.bottom : undefined
-        anchors.bottomMargin: (index == 0 && anchors.bottom != undefined) ? searchField.height + (2 * units.smallSpacing) : undefined
+        anchors.bottomMargin: (index == 0 && anchors.bottom !== undefined) ? searchField.height + (2 * units.smallSpacing) : undefined
         anchors.left: vertLine.right
         anchors.leftMargin: (index > 0) ? units.smallSpacing : 0
 
@@ -99,7 +99,7 @@ FocusScope {
         model: runnerModel.modelForRow(index)
 
         onModelChanged: {
-            if (model == undefined || model == null) {
+            if (model === undefined || model === null) {
                 enabled: false;
                 visible: false;
             }

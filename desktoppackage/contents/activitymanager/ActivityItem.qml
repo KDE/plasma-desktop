@@ -33,7 +33,7 @@ Item {
 
     property string background : ""
 
-    onBackgroundChanged: if (background[0] != '#') {
+    onBackgroundChanged: if (background[0] !== '#') {
         // We have a proper wallpaper, hurroo!
         backgroundColor.visible = false;
 
