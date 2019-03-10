@@ -33,6 +33,7 @@
 
 #include "styleconfdialog.h"
 #include "ui_stylepreview.h"
+#include "ui_styleconfig.h"
 
 #include <kaboutdata.h>
 #include <kapplication.h>
@@ -51,6 +52,7 @@
 #include <QSettings>
 #include <QAbstractItemView>
 #include <QLabel>
+#include <QGroupBox>
 #include <QPainter>
 #include <QPixmapCache>
 #include <QStyleFactory>
@@ -146,6 +148,16 @@ public:
     }
 };
 
+class StyleConfig : public QWidget, public Ui::StyleConfig
+{
+public:
+    StyleConfig(QWidget *parent = nullptr)
+    : QWidget(parent)
+    {
+        setupUi(this);
+    }
+};
+
 QString KCMStyle::defaultStyle()
 {
 #if defined(Q_OS_UNIX) && !defined(Q_OS_MAC)
@@ -158,10 +170,8 @@ QString KCMStyle::defaultStyle()
 KCMStyle::KCMStyle( QWidget* parent, const QVariantList& )
     : KCModule( parent ), appliedStyle(nullptr)
 {
-    setQuickHelp( i18n("<h1>Style</h1>"
-            "This module allows you to modify the visual appearance "
-            "of user interface elements, such as the widget style "
-            "and effects."));
+    setQuickHelp( i18n("This module allows you to modify the visual appearance "
+                       "of applications' user interface elements."));
 
     m_bStyleDirty= false;
     m_bEffectsDirty = false;
@@ -170,7 +180,7 @@ KCMStyle::KCMStyle( QWidget* parent, const QVariantList& )
     KGlobal::dirs()->addResourceType("themes", "data", "kstyle/themes");
 
     KAboutData *about =
-        new KAboutData( QStringLiteral("kcmstyle"), i18n("Widget Style"), QStringLiteral("1.0"),
+        new KAboutData( QStringLiteral("kcmstyle"), i18n("Application Style"), QStringLiteral("1.0"),
                         QString(), KAboutLicense::GPL,
                         i18n("(c) 2002 Karol Szwed, Daniel Molkentin"));
 
@@ -178,77 +188,38 @@ KCMStyle::KCMStyle( QWidget* parent, const QVariantList& )
     about->addAuthor(i18n("Daniel Molkentin"), QString(), QStringLiteral("molkentin@kde.org"));
     setAboutData( about );
 
-    // Setup pages and mainLayout
+    // Setup mainLayout
     mainLayout = new QVBoxLayout( this );
     mainLayout->setContentsMargins(0, 0, 0, 0);
 
-    tabWidget  = new QTabWidget( this );
-    mainLayout->addWidget( tabWidget );
+    styleConfig = new StyleConfig();
 
-    // Add Page1 (Applications Style)
-    // -----------------
-    //gbWidgetStyle = new QGroupBox( i18n("Widget Style"), page1 );
-    page1 = new QWidget;
-    page1Layout = new QVBoxLayout( page1 );
+    QHBoxLayout *previewLayout = new QHBoxLayout();
+    QGroupBox *gbPreview = new QGroupBox( i18n( "Preview" ) );
+    QHBoxLayout *previewLayoutInner = new QHBoxLayout(gbPreview);
+    previewLayout->setContentsMargins(0, 0, 0, 0);
+    previewLayoutInner->setContentsMargins(0, 0, 0, 0);
+    previewLayout->addStretch();
+    previewLayout->addWidget( gbPreview );
+    previewLayout->addStretch();
 
-    QWidget* gbWidgetStyle = new QWidget( page1 );
-    QVBoxLayout *widgetLayout = new QVBoxLayout(gbWidgetStyle);
-
-    gbWidgetStyleLayout = new QVBoxLayout;
-        widgetLayout->addLayout( gbWidgetStyleLayout );
-    gbWidgetStyleLayout->setAlignment( Qt::AlignTop );
-    hbLayout = new QHBoxLayout( );
-    hbLayout->setObjectName( QStringLiteral("hbLayout") );
-
-    QLabel* label=new QLabel(i18n("Widget style:"),this);
-    hbLayout->addWidget( label );
-
-    cbStyle = new KComboBox( gbWidgetStyle );
-        cbStyle->setObjectName( QStringLiteral("cbStyle") );
-    cbStyle->setEditable( false );
-    hbLayout->addWidget( cbStyle );
-    hbLayout->setStretchFactor( cbStyle, 1 );
-    label->setBuddy(cbStyle);
-
-    pbConfigStyle = new QPushButton( QIcon::fromTheme(QStringLiteral("configure")), i18n("Con&figure..."), gbWidgetStyle );
-    pbConfigStyle->setEnabled( false );
-    hbLayout->addWidget( pbConfigStyle );
-
-    gbWidgetStyleLayout->addLayout( hbLayout );
-
-    lblStyleDesc = new QLabel( gbWidgetStyle );
-    gbWidgetStyleLayout->addWidget( lblStyleDesc );
-
-    QGroupBox *gbPreview = new QGroupBox( i18n( "Preview" ), page1 );
-    QVBoxLayout *previewLayout = new QVBoxLayout(gbPreview);
-    previewLayout->setMargin( 0 );
     stylePreview = new StylePreview( gbPreview );
-    gbPreview->layout()->addWidget( stylePreview );
+    previewLayoutInner->addWidget( stylePreview );
 
-    page1Layout->addWidget( gbWidgetStyle );
-    page1Layout->addWidget( gbPreview );
-    page1Layout->addStretch();
+    mainLayout->addWidget( styleConfig );
+    mainLayout->addLayout( previewLayout );
+    mainLayout->addStretch();
 
-    connect( cbStyle, SIGNAL(activated(int)), this, SLOT(styleChanged()) );
-    connect( cbStyle, SIGNAL(activated(int)), this, SLOT(updateConfigButton()));
-    connect( pbConfigStyle, &QAbstractButton::clicked, this, &KCMStyle::styleSpecificConfig);
-
-    // Add Page2 (Effects)
-    // -------------------
-    page2 = new QWidget;
-    fineTuningUi.setupUi(page2);
-
-    connect(cbStyle, SIGNAL(activated(int)), this, SLOT(setStyleDirty()));
-    connect(fineTuningUi.cbIconsOnButtons,     &QAbstractButton::toggled,   this, &KCMStyle::setEffectsDirty);
-    connect(fineTuningUi.cbIconsInMenus,     &QAbstractButton::toggled,   this, &KCMStyle::setEffectsDirty);
-    connect(fineTuningUi.comboToolbarIcons,    SIGNAL(activated(int)), this, SLOT(setEffectsDirty()));
-    connect(fineTuningUi.comboSecondaryToolbarIcons,    SIGNAL(activated(int)), this, SLOT(setEffectsDirty()));
+    connect( styleConfig->comboStyle, SIGNAL(activated(int)), this, SLOT(styleChanged()) );
+    connect( styleConfig->comboStyle, SIGNAL(activated(int)), this, SLOT(updateConfigButton()) );
+    connect( styleConfig->pbConfigStyle, &QAbstractButton::clicked, this, &KCMStyle::styleSpecificConfig );
+    connect( styleConfig->comboStyle, SIGNAL(activated(int)), this, SLOT(setStyleDirty()) );
+    connect( styleConfig->cbIconsOnButtons, &QAbstractButton::toggled, this, &KCMStyle::setEffectsDirty );
+    connect( styleConfig->cbIconsInMenus, &QAbstractButton::toggled, this, &KCMStyle::setEffectsDirty );
+    connect( styleConfig->comboToolbarIcons, SIGNAL(activated(int)), this, SLOT(setEffectsDirty()) );
+    connect( styleConfig->comboSecondaryToolbarIcons, SIGNAL(activated(int)), this, SLOT(setEffectsDirty()) );
 
     addWhatsThis();
-
-    // Insert the pages into the tabWidget
-    tabWidget->addTab(page1, i18nc("@title:tab", "&Applications"));
-    tabWidget->addTab(page2, i18nc("@title:tab", "&Fine Tuning"));
 }
 
 
@@ -261,14 +232,14 @@ KCMStyle::~KCMStyle()
 void KCMStyle::updateConfigButton()
 {
     if (!styleEntries[currentStyle()] || styleEntries[currentStyle()]->configPage.isEmpty()) {
-        pbConfigStyle->setEnabled(false);
+        styleConfig->pbConfigStyle->setEnabled(false);
         return;
     }
 
     // We don't check whether it's loadable here -
     // lets us report an error and not waste time
     // loading things if the user doesn't click the button
-    pbConfigStyle->setEnabled( true );
+    styleConfig->pbConfigStyle->setEnabled( true );
 }
 
 void KCMStyle::styleSpecificConfig()
@@ -364,16 +335,16 @@ void KCMStyle::save()
         KConfig      _config(QStringLiteral("kdeglobals"), KConfig::NoGlobals);
         KConfigGroup config(&_config, "KDE");
     // Effects page
-    config.writeEntry( "ShowIconsOnPushButtons", fineTuningUi.cbIconsOnButtons->isChecked());
-    config.writeEntry( "ShowIconsInMenuItems", fineTuningUi.cbIconsInMenus->isChecked());
+    config.writeEntry( "ShowIconsOnPushButtons", styleConfig->cbIconsOnButtons->isChecked());
+    config.writeEntry( "ShowIconsInMenuItems", styleConfig->cbIconsInMenus->isChecked());
 
     config.writeEntry("widgetStyle", currentStyle());
 
     KConfigGroup toolbarStyleGroup(&_config, "Toolbar style");
     toolbarStyleGroup.writeEntry("ToolButtonStyle",
-                            toolbarButtonText(fineTuningUi.comboToolbarIcons->currentIndex()));
+                            toolbarButtonText(styleConfig->comboToolbarIcons->currentIndex()));
     toolbarStyleGroup.writeEntry("ToolButtonStyleOtherToolbars",
-                            toolbarButtonText(fineTuningUi.comboSecondaryToolbarIcons->currentIndex()));
+                            toolbarButtonText(styleConfig->comboSecondaryToolbarIcons->currentIndex()));
 
     _config.sync();
 
@@ -425,9 +396,9 @@ bool KCMStyle::findStyle( const QString& str, int& combobox_item )
     combobox_item = 0;
 
     //look up name
-    for( int i = 0; i < cbStyle->count(); i++ )
+    for( int i = 0; i < styleConfig->comboStyle->count(); i++ )
     {
-        if ( cbStyle->itemText(i) == name )
+        if ( styleConfig->comboStyle->itemText(i) == name )
         {
             combobox_item = i;
             return true;
@@ -456,17 +427,18 @@ void KCMStyle::defaults()
     if (!found)
         found = findStyle( QStringLiteral("motif"), item );
 
-    cbStyle->setCurrentIndex( item );
+    styleConfig->comboStyle->setCurrentIndex( item );
 
     m_bStyleDirty = true;
     switchStyle( currentStyle() );  // make resets visible
 
     // Effects
-    fineTuningUi.comboToolbarIcons->setCurrentIndex(toolbarButtonIndex(QStringLiteral("TextBesideIcon")));
-    fineTuningUi.comboSecondaryToolbarIcons->setCurrentIndex(toolbarButtonIndex(QStringLiteral("TextBesideIcon")));
-    fineTuningUi.cbIconsOnButtons->setChecked(true);
-    fineTuningUi.cbIconsInMenus->setChecked(true);
+    styleConfig->comboToolbarIcons->setCurrentIndex(toolbarButtonIndex(QStringLiteral("TextBesideIcon")));
+    styleConfig->comboSecondaryToolbarIcons->setCurrentIndex(toolbarButtonIndex(QStringLiteral("TextBesideIcon")));
+    styleConfig->cbIconsOnButtons->setChecked(true);
+    styleConfig->cbIconsInMenus->setChecked(true);
     emit changed(true);
+    emit updateConfigButton();
 }
 
 void KCMStyle::setEffectsDirty()
@@ -487,7 +459,7 @@ void KCMStyle::setStyleDirty()
 
 void KCMStyle::loadStyle( KConfig& config )
 {
-    cbStyle->clear();
+    styleConfig->comboStyle->clear();
     // Create a dictionary of WidgetStyle to Name and Desc. mappings,
     // as well as the config page info
     qDeleteAll(styleEntries);
@@ -553,7 +525,7 @@ void KCMStyle::loadStyle( KConfig& config )
 
     // Sort the style list, and add it to the combobox
     styles.sort();
-    cbStyle->addItems( styles );
+    styleConfig->comboStyle->addItems( styles );
 
     // Find out which style is currently being used
     KConfigGroup configGroup = config.group( "KDE" );
@@ -561,7 +533,7 @@ void KCMStyle::loadStyle( KConfig& config )
     QString cfgStyle = configGroup.readEntry( "widgetStyle", defaultStyle );
 
     // Select the current style
-    // Do not use cbStyle->listBox() as this may be NULL for some styles when
+    // Do not use comboStyle->listBox() as this may be NULL for some styles when
     // they use QPopupMenus for the drop-down list!
 
     // ##### Since Trolltech likes to seemingly copy & paste code,
@@ -569,9 +541,9 @@ void KCMStyle::loadStyle( KConfig& config )
     // We roll our own (yuck)
     cfgStyle = cfgStyle.toLower();
     int item = 0;
-    for( int i = 0; i < cbStyle->count(); i++ )
+    for( int i = 0; i < styleConfig->comboStyle->count(); i++ )
     {
-        QString id = nameToStyleKey[cbStyle->itemText(i)];
+        QString id = nameToStyleKey[styleConfig->comboStyle->itemText(i)];
         item = i;
         if ( id == cfgStyle )   // ExactMatch
             break;
@@ -581,7 +553,7 @@ void KCMStyle::loadStyle( KConfig& config )
             break;
         item = 0;
     }
-    cbStyle->setCurrentIndex( item );
+    styleConfig->comboStyle->setCurrentIndex( item );
     m_bStyleDirty = false;
 
     switchStyle( currentStyle() );  // make resets visible
@@ -589,7 +561,7 @@ void KCMStyle::loadStyle( KConfig& config )
 
 QString KCMStyle::currentStyle()
 {
-    return nameToStyleKey[cbStyle->currentText()];
+    return nameToStyleKey[styleConfig->comboStyle->currentText()];
 }
 
 
@@ -620,12 +592,6 @@ void KCMStyle::switchStyle(const QString& styleName, bool force)
 
     delete appliedStyle;
     appliedStyle = style;
-
-    // Set the correct style description
-    StyleEntry* entry = styleEntries[ styleName ];
-    QString desc;
-    desc = i18n("Description: %1", entry ? entry->desc : i18n("No description available.") );
-    lblStyleDesc->setText( desc );
 }
 
 void KCMStyle::setStyleRecursive(QWidget* w, QStyle* s)
@@ -713,39 +679,36 @@ void KCMStyle::loadEffects( KConfig& config )
     KConfigGroup configGroup = config.group("Toolbar style");
 
     QString tbIcon = configGroup.readEntry("ToolButtonStyle", "TextBesideIcon");
-    fineTuningUi.comboToolbarIcons->setCurrentIndex(toolbarButtonIndex(tbIcon));
+    styleConfig->comboToolbarIcons->setCurrentIndex(toolbarButtonIndex(tbIcon));
     tbIcon = configGroup.readEntry("ToolButtonStyleOtherToolbars", "TextBesideIcon");
-    fineTuningUi.comboSecondaryToolbarIcons->setCurrentIndex(toolbarButtonIndex(tbIcon));
+    styleConfig->comboSecondaryToolbarIcons->setCurrentIndex(toolbarButtonIndex(tbIcon));
 
     configGroup = config.group("KDE");
-    fineTuningUi.cbIconsOnButtons->setChecked(configGroup.readEntry("ShowIconsOnPushButtons", true));
-    fineTuningUi.cbIconsInMenus->setChecked(configGroup.readEntry("ShowIconsInMenuItems", true));
+    styleConfig->cbIconsOnButtons->setChecked(configGroup.readEntry("ShowIconsOnPushButtons", true));
+    styleConfig->cbIconsInMenus->setChecked(configGroup.readEntry("ShowIconsInMenuItems", true));
 
     m_bEffectsDirty = false;
 }
 
 void KCMStyle::addWhatsThis()
 {
-    // Page1
-    cbStyle->setWhatsThis( i18n("Here you can choose from a list of"
+    stylePreview->setWhatsThis( i18n("This area shows a preview of the currently selected style "
+                            "without having to apply it to the whole desktop.") );
+    styleConfig->comboStyle->setWhatsThis( i18n("Here you can choose from a list of"
                             " predefined widget styles (e.g. the way buttons are drawn) which"
                             " may or may not be combined with a theme (additional information"
                             " like a marble texture or a gradient).") );
-    stylePreview->setWhatsThis( i18n("This area shows a preview of the currently selected style "
-                            "without having to apply it to the whole desktop.") );
-    // Page2
-    page2->setWhatsThis( i18n("This page allows you to choose details about the widget style options") );
-    fineTuningUi.comboToolbarIcons->setWhatsThis( i18n( "<p><b>No Text:</b> Shows only icons on toolbar buttons. "
-                            "Best option for low resolutions.</p>"
-                            "<p><b>Text Only: </b>Shows only text on toolbar buttons.</p>"
-                            "<p><b>Text Beside Icons: </b> Shows icons and text on toolbar buttons. "
-                            "Text is aligned beside the icon.</p>"
-                            "<b>Text Below Icons: </b> Shows icons and text on toolbar buttons. "
-                            "Text is aligned below the icon.") );
-    fineTuningUi.cbIconsOnButtons->setWhatsThis( i18n( "If you enable this option, KDE Applications will "
+    styleConfig->cbIconsOnButtons->setWhatsThis( i18n( "If you enable this option, applications will "
                             "show small icons alongside some important buttons.") );
-    fineTuningUi.cbIconsInMenus->setWhatsThis( i18n( "If you enable this option, KDE Applications will "
+    styleConfig->cbIconsInMenus->setWhatsThis( i18n( "If you enable this option, applications will "
                             "show small icons alongside most menu items.") );
+    styleConfig->comboToolbarIcons->setWhatsThis( i18n( "<p><b>No text:</b> Shows only icons on toolbar buttons. "
+                            "Best option for low resolutions.</p>"
+                            "<p><b>Text only: </b>Shows only text on toolbar buttons.</p>"
+                            "<p><b>Text beside icons: </b> Shows icons and text on toolbar buttons. "
+                            "Text is aligned beside the icon.</p>"
+                            "<b>Text below icons: </b> Shows icons and text on toolbar buttons. "
+                            "Text is aligned below the icon.") );
 }
 
 #include "kcmstyle.moc"

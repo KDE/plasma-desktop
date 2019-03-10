@@ -35,16 +35,9 @@
 #include <kcmodule.h>
 #include <kvbox.h>
 
-#include "ui_finetuning.h"
-
-class KComboBox;
 class KConfig;
-class QCheckBox;
-class QComboBox;
-class QLabel;
-class QPushButton;
 class StylePreview;
-class QTabWidget;
+class StyleConfig;
 
 struct StyleEntry {
     QString name;
@@ -99,22 +92,12 @@ private:
     QMap  <QString,QString>     nameToStyleKey;
 
     QVBoxLayout* mainLayout;
-    QTabWidget* tabWidget;
-    QWidget *page0, *page1, *page2;
-    QVBoxLayout* page1Layout;
 
-    // Page1 widgets
-    QVBoxLayout* gbWidgetStyleLayout;
-    QHBoxLayout* hbLayout;
-    KComboBox* cbStyle;
-    QPushButton* pbConfigStyle;
-    QLabel* lblStyleDesc;
+    // Widgets
     StylePreview* stylePreview;
+    StyleConfig* styleConfig;
     QStyle* appliedStyle;
     QPalette palette;
-
-    // Page2 widgets
-    Ui::FineTuning fineTuningUi;
 };
 
 #endif // __KCMSTYLE_H

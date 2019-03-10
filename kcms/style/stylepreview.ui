@@ -2,155 +2,133 @@
 <ui version="4.0">
  <class>StylePreview</class>
  <widget class="QWidget" name="StylePreview">
-  <layout class="QVBoxLayout">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>360</width>
+    <height>172</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
-    <widget class="QTabWidget" name="TabWidget2">
+    <widget class="QTabWidget" name="tabWidget">
      <property name="sizePolicy">
-      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-       <horstretch>1</horstretch>
+      <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+       <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
      <property name="currentIndex">
       <number>0</number>
      </property>
-     <widget class="QWidget" name="tab">
+     <widget class="QWidget" name="tab_1">
       <attribute name="title">
        <string>Tab 1</string>
       </attribute>
-      <layout class="QVBoxLayout">
-       <item>
-        <layout class="QHBoxLayout">
+      <layout class="QGridLayout">
+       <item row="7" column="2">
+        <widget class="QSpinBox" name="spinBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QSlider" name="horizontalSlider">
+         <property name="value">
+          <number>30</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QPushButton" name="pushButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Push Button</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="3" rowspan="4">
+        <widget class="QScrollBar" name="verticalScrollBar">
+         <property name="maximum">
+          <number>10</number>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1" colspan="2">
+        <widget class="QComboBox" name="comboBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout">
-           <item>
-            <widget class="QGroupBox" name="GroupBox1">
-             <property name="title">
-              <string>Group Box</string>
-             </property>
-             <layout class="QVBoxLayout" name="_2">
-              <item>
-               <widget class="QRadioButton" name="RadioButton1">
-                <property name="text">
-                 <string>Radio button</string>
-                </property>
-                <property name="checked">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QRadioButton" name="RadioButton2">
-                <property name="text">
-                 <string>Radio button</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="Line" name="Line1">
-                <property name="frameShape">
-                 <enum>QFrame::HLine</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Sunken</enum>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QCheckBox" name="CheckBox1">
-                <property name="text">
-                 <string>Checkbox</string>
-                </property>
-                <property name="checked">
-                 <bool>true</bool>
-                </property>
-                <property name="tristate">
-                 <bool>false</bool>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <spacer name="verticalSpacer">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </spacer>
-           </item>
-          </layout>
+          <property name="text">
+           <string>Combo box</string>
+          </property>
          </item>
+        </widget>
+       </item>
+       <item row="6" column="0" rowspan="2">
+        <layout class="QVBoxLayout" name="verticalLayout_1">
          <item>
-          <layout class="QVBoxLayout">
-           <item>
-            <widget class="QProgressBar" name="ProgressBar1">
-             <property name="value">
-              <number>70</number>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QSlider" name="Slider1">
-             <property name="value">
-              <number>30</number>
-             </property>
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <layout class="QHBoxLayout">
-             <item>
-              <widget class="QSpinBox" name="SpinBox1">
-               <property name="maximum">
-                <number>999999</number>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="PushButton1">
-               <property name="text">
-                <string>Button</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <widget class="QComboBox" name="ComboBox1">
-             <item>
-              <property name="text">
-               <string>Combobox</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item>
-            <spacer>
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </spacer>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <widget class="QScrollBar" name="ScrollBar1">
-           <property name="maximum">
-            <number>19</number>
+          <widget class="QCheckBox" name="checkBox">
+           <property name="text">
+            <string>Checkbox</string>
            </property>
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButton_2">
+           <property name="text">
+            <string>Radio button</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButton_1">
+           <property name="text">
+            <string>Radio button</string>
            </property>
           </widget>
          </item>
         </layout>
        </item>
+       <item row="8" column="1" colspan="2">
+        <widget class="QProgressBar" name="progressBar">
+         <property name="value">
+          <number>70</number>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="tab2">
+     <widget class="QWidget" name="tab_2">
       <attribute name="title">
        <string>Tab 2</string>
       </attribute>
