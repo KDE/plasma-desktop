@@ -99,7 +99,7 @@ Item {
             // move back.
             if (!plasmoid.configuration.separateLaunchers && tasks.dragSource != null
                  && tasks.dragSource.m.IsLauncher === true && above.m.IsLauncher !== true
-                 && above= == ignoredItem) {
+                 && above === ignoredItem) {
                 return;
             } else {
                 ignoredItem = null;
