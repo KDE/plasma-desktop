@@ -258,13 +258,15 @@ Kicker.DashboardWindow {
             }
         }
 
-        PlasmaComponents.TextField {
+        TextEdit {
             id: searchField
 
             width: 0
             height: 0
 
             visible: false
+
+            persistentSelection: true
 
             onTextChanged: {
                 if (tabBar.activeTab == 0) {
@@ -277,9 +279,12 @@ Kicker.DashboardWindow {
             function clear() {
                 text = "";
             }
+
+            onSelectionStartChanged: Qt.callLater(searchHeading.updateSelection)
+            onSelectionEndChanged: Qt.callLater(searchHeading.updateSelection)
         }
 
-        PlasmaExtras.Heading {
+        TextEdit {
             id: searchHeading
 
             anchors {
@@ -289,16 +294,24 @@ Kicker.DashboardWindow {
             y: (middleRow.anchors.topMargin / 2) - (smallScreen ? (height/10) : 0)
 
             font.pointSize: dummyHeading.font.pointSize * 1.5
-
-            elide: Text.ElideRight
             wrapMode: Text.NoWrap
             opacity: 1.0
 
+            selectByMouse: false
+            cursorVisible: false
+
             color: "white"
 
-            level: 1
-
             text: searching ? i18n("Searching for '%1'", searchField.text) : i18n("Type to search.")
+
+            function updateSelection() {
+                if (!searchField.selectedText) {
+                    return;
+                }
+
+                var delta = text.lastIndexOf(searchField.text, text.length - 2);
+                searchHeading.select(searchField.selectionStart + delta, searchField.selectionEnd + delta);
+            }
         }
 
         PlasmaComponents.ToolButton {
