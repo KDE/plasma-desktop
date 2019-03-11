@@ -434,15 +434,18 @@ Column {
 
         var subTextEntries = [];
 
-        var vd = isGroup ? VirtualDesktop : virtualDesktopParent;
+        var virtualDesktops = isGroup ? VirtualDesktops : virtualDesktopParent;
+        var virtualDesktopNameList = new Array();
+
+        for (var i = 0; i < virtualDesktops.length; ++i) {
+            virtualDesktopNameList.push(virtualDesktopInfo.desktopNames[virtualDesktops[i] - 1]);
+        }
 
         if (!plasmoid.configuration.showOnlyCurrentDesktop
             && virtualDesktopInfo.numberOfDesktops > 1
             && (isGroup ? IsOnAllVirtualDesktops : isOnAllVirtualDesktopsParent) !== true
-            && vd != -1
-            && vd != undefined
-            && virtualDesktopInfo.desktopNames[vd - 1] != undefined) {
-            subTextEntries.push(i18n("On %1", virtualDesktopInfo.desktopNames[vd - 1]));
+            && virtualDesktops.length > 0) {
+            subTextEntries.push(i18nc("Comma-separated list of desktops", "On %1", virtualDesktopNameList.join()));
         }
 
         var act = isGroup ? Activities : activitiesParent;
