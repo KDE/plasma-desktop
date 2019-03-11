@@ -53,7 +53,7 @@ PlasmaExtras.ScrollArea {
     // Needed for generateSubtext()
     property string displayParent
     property string genericName
-    property int virtualDesktopParent
+    property var virtualDesktopParent
     property bool isOnAllVirtualDesktopsParent
     property var activitiesParent
     //

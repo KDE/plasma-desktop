@@ -190,6 +190,10 @@ void DashboardWindow::keyPressEvent(QKeyEvent *e)
             e->nativeScanCode(), e->nativeVirtualKey(), e->nativeModifiers(),
             e->text(), e->isAutoRepeat(), e->count());
         QCoreApplication::postEvent(this, eventCopy);
+
+        // We _need_ to do it twice to make sure the event ping-pong needed
+        // for delivery happens before we sap focus again.
+        QCoreApplication::processEvents();
         QCoreApplication::processEvents();
 
         if (previousFocusItem) {
