@@ -124,11 +124,6 @@ void KCMSplashScreen::loadModel()
 {
     m_model->clear();
 
-    QStandardItem* row = new QStandardItem(i18n("None"));
-    row->setData("None", PluginNameRole);
-    row->setData(i18n("No splash screen will be shown"), DescriptionRole);
-    m_model->appendRow(row);
-
     const QList<Plasma::Package> pkgs = availablePackages(QStringLiteral("splashmainscript"));
     for (const Plasma::Package &pkg : pkgs) {
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
@@ -138,6 +133,12 @@ void KCMSplashScreen::loadModel()
         m_model->appendRow(row);
     }
     m_model->sort(0 /*column*/);
+
+    QStandardItem* row = new QStandardItem(i18n("None"));
+    row->setData("None", PluginNameRole);
+    row->setData(i18n("No splash screen will be shown"), DescriptionRole);
+    m_model->insertRow(0, row);
+
     emit selectedPluginIndexChanged();
 }
 
