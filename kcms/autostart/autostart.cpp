@@ -253,7 +253,7 @@ void Autostart::load()
                 break;
             }
             if ( fi.isSymLink() ) {
-                QString link = fi.readLink();
+                QString link = fi.symLinkTarget();
                 addItem(item, fi.fileName(), link, type );
             }
             else

@@ -526,7 +526,7 @@ static bool compare(const QString &a, const QString &b)
 void KGlobalShortcutsEditor::exportScheme()
 {
     QStringList keys = d->components.keys();
-    qSort(keys.begin(), keys.end(), compare);
+    std::sort(keys.begin(), keys.end(), compare);
     ExportSchemeDialog dia(keys);
 
     if (dia.exec() != KMessageBox::Ok) {

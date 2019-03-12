@@ -177,7 +177,7 @@ int Positioner::nearestItem(int currentIndex, Qt::ArrowType direction)
     }
 
     QList<int> rows(m_proxyToSource.keys());
-    qSort(rows);
+    std::sort(rows.begin(), rows.end());
 
     int nearestItem = -1;
     const QPoint currentPos(currentIndex % m_perStripe, currentIndex / m_perStripe);
@@ -741,7 +741,7 @@ int Positioner::firstRow() const
 {
     if (!m_proxyToSource.isEmpty()) {
         QList<int> keys(m_proxyToSource.keys());
-        qSort(keys);
+        std::sort(keys.begin(), keys.end());
 
         return keys.first();
     }
@@ -753,7 +753,7 @@ int Positioner::lastRow() const
 {
     if (!m_proxyToSource.isEmpty()) {
         QList<int> keys(m_proxyToSource.keys());
-        qSort(keys);
+        std::sort(keys.begin(), keys.end());
         return keys.last();
     }
 

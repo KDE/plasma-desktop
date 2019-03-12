@@ -118,7 +118,7 @@ void ActionModel::buildActionList()
         }
     }
 
-    qSort( d->actions.begin(), d->actions.end(), sortAction );
+    std::sort(d->actions.begin(), d->actions.end(), sortAction);
     endResetModel();
 }
 

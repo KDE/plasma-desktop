@@ -996,7 +996,7 @@ void FolderModel::dragSelectedInternal(int x, int y)
 
     m_dragIndexes = m_selectionModel->selectedIndexes();
 
-    qSort(m_dragIndexes.begin(), m_dragIndexes.end());
+    std::sort(m_dragIndexes.begin(), m_dragIndexes.end());
 
     // TODO: Optimize to emit contiguous groups.
     emit dataChanged(m_dragIndexes.first(), m_dragIndexes.last(), QVector<int>() << BlankRole);

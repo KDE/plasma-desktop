@@ -30,7 +30,7 @@ MimeTypesModel::MimeTypesModel(QObject *parent) : QAbstractListModel(parent)
 {
     QMimeDatabase db;
     m_mimeTypesList = db.allMimeTypes();
-    qStableSort(m_mimeTypesList.begin(), m_mimeTypesList.end(), lessThan);
+    std::stable_sort(m_mimeTypesList.begin(), m_mimeTypesList.end(), lessThan);
 
     m_checkedRows = QVector<bool>(m_mimeTypesList.size(), false);
 }

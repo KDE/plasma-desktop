@@ -410,7 +410,7 @@ static QPair<int, int> getSelectedRowRange(const QModelIndexList& selected)
 	foreach(const QModelIndex& index, selected) {
 		rows << index.row();
 	}
-	qSort(rows);
+	std::sort(rows.begin(), rows.end());
 	return QPair<int, int>(rows[0], rows[rows.size()-1]);
 }
 
@@ -558,9 +558,9 @@ bool xkbOptionLessThan(const OptionInfo* o1, const OptionInfo* o2)
 
 void KCMKeyboardWidget::initializeXkbOptionsUI()
 {
-	qSort(rules->optionGroupInfos.begin(), rules->optionGroupInfos.end(), xkbOptionGroupLessThan);
+	std::sort(rules->optionGroupInfos.begin(), rules->optionGroupInfos.end(), xkbOptionGroupLessThan);
 	foreach(OptionGroupInfo* optionGroupInfo, rules->optionGroupInfos) {
-		qSort(optionGroupInfo->optionInfos.begin(), optionGroupInfo->optionInfos.end(), xkbOptionLessThan);
+		std::sort(optionGroupInfo->optionInfos.begin(), optionGroupInfo->optionInfos.end(), xkbOptionLessThan);
 	}
 
 	XkbOptionsTreeModel* model = new XkbOptionsTreeModel(rules, keyboardConfig, uiWidget->xkbOptionsTreeView);

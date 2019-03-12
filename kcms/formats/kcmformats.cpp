@@ -74,7 +74,7 @@ bool countryLessThan(const QLocale & c1, const QLocale & c2)
 void KCMFormats::load()
 {
     QList<QLocale> allLocales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
-    qSort(allLocales.begin(), allLocales.end(), countryLessThan);
+    std::sort(allLocales.begin(), allLocales.end(), countryLessThan);
     foreach(QComboBox * combo, m_combos) {
         initCombo(combo, allLocales);
     }

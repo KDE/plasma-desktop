@@ -167,7 +167,7 @@ void CDuplicatesDialog::scanFinished()
                     details.append(KFormat().formatByteSize(info.size()));
                     details.append(QLocale().toString(info.created()));
                     if(info.isSymLink())
-                        details.append(info.readLink());
+                        details.append(info.symLinkTarget());
                     new QTreeWidgetItem(top, details);
                     if(Misc::checkExt(*fit, "pfa") || Misc::checkExt(*fit, "pfb"))
                         t1++;

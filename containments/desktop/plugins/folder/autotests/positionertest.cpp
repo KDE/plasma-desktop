@@ -253,9 +253,9 @@ void PositionerTest::tst_proxyMapping()
 
         auto ensureUnique = [](const QHash<int, int> mapping) {
             auto values = mapping.values();
-            qSort(values);
+            std::sort(values.begin(), values.end());
             auto uniqueValues = values.toSet().toList();
-            qSort(uniqueValues);
+            std::sort(uniqueValues.begin(), uniqueValues.end());
             QVERIFY(uniqueValues == values);
         };
 

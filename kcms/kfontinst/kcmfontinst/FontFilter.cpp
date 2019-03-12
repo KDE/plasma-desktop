@@ -104,7 +104,7 @@ static void sortActions(KSelectAction *group)
             group->removeAction(*it);
         }
 
-        qSort(sorted);
+        std::sort(sorted.begin(), sorted.end());
         QList<SortAction>::ConstIterator s(sorted.constBegin()),
                                          sEnd(sorted.constEnd());
 

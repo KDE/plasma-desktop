@@ -127,7 +127,7 @@ void BackendSelection::load()
             }
         }
 
-        qSort(backendList);
+        std::sort(backendList.begin(), backendList.end());
     }
 
     /// -------------- LOAD

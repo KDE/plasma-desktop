@@ -151,7 +151,7 @@ void EmoticonList::load()
     emoList->clear();
 
     QStringList themeList = kEmoticons.themeList();
-    qSort(themeList.begin(), themeList.end(), caseInsensitiveLessThan);
+    std::sort(themeList.begin(), themeList.end(), caseInsensitiveLessThan);
 
     for (int i = 0; i < themeList.count(); i++) {
         loadTheme(themeList.at(i));
