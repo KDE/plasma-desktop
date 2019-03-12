@@ -33,7 +33,7 @@ MouseArea {
     Layout.fillWidth: true
     hoverEnabled: true
 
-    property bool current: (model.kcm && pageStack.currentItem.kcm && model.kcm == pageStack.currentItem.kcm) || (model.source === pageStack.sourceFile)
+    property bool current: (model.kcm && pageStack.currentItem.kcm && model.kcm == pageStack.currentItem.kcm) || (model.source == pageStack.sourceFile)
 //END properties
 
 //BEGIN functions
