@@ -62,6 +62,13 @@ set_package_properties(KF5Kirigami2 PROPERTIES
     TYPE RUNTIME
 )
 
+find_package(KF5QQC2DeskopStyle ${KF5_MIN_VERSION} CONFIG)
+set_package_properties(KF5QQC2DeskopStyle PROPERTIES
+    DESCRIPTION "QtQuickControls 2 style that uses QWidget's QStyle for painting"
+    PURPOSE "Required at runtime by many KCMs"
+    TYPE RUNTIME
+)
+
 find_package(LibKWorkspace 5.14.90 CONFIG REQUIRED)
 find_package(LibTaskManager 5.14.90 CONFIG REQUIRED)
 find_package(LibColorCorrect 5.14.90 CONFIG REQUIRED)
