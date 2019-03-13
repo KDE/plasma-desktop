@@ -27,6 +27,10 @@ SMServerConfigImpl::SMServerConfigImpl(QWidget *parent ) : SMServerConfigDlg(par
     connect(rebootRadio,&QAbstractButton::toggled, this, &SMServerConfigImpl::configChanged);
     connect(excludeLineedit,&QLineEdit::textChanged,this, &SMServerConfigImpl::configChanged);
     connect(offerShutdownCheck,&QAbstractButton::toggled,this, &SMServerConfigImpl::configChanged);
+
+    firmwareSetupBox->hide();
+
+    firmwareSetupMessageWidget->hide();
 }
 SMServerConfigImpl::~SMServerConfigImpl(){
 }

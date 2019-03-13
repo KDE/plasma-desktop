@@ -23,8 +23,11 @@
 
 #include <kcmodule.h>
 
+class QAction;
+
 class SMServerConfigImpl;
 
+class OrgFreedesktopLogin1ManagerInterface;
 
 class SMServerConfig : public KCModule
 {
@@ -38,7 +41,13 @@ public:
   void defaults() override;
 
 private:
+  void initFirmwareSetup();
+  void checkFirmwareSetupRequested();
   SMServerConfigImpl* dialog;
+
+  OrgFreedesktopLogin1ManagerInterface *m_login1Manager = nullptr;
+  QAction *m_rebootNowAction = nullptr;
+  bool m_isUefi = false;
 };
 
 #endif

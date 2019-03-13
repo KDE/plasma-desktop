@@ -3,6 +3,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcmsmserver\")
 
 set(kcm_smserver_PART_SRCS kcmsmserver.cpp smserverconfigimpl.cpp )
 
+qt5_add_dbus_interface(kcm_smserver_PART_SRCS org.freedesktop.login1.Manager.xml login1_manager)
 
 ki18n_wrap_ui(kcm_smserver_PART_SRCS smserverconfigdlg.ui )
 
