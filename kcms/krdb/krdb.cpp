@@ -140,7 +140,7 @@ static void applyQtColors( KSharedConfigPtr kglobalcfg, QSettings& settings, QPa
   clr = wmCfgGroup.readEntry("activeBackground", clr);
   settings.setValue(QStringLiteral("/qt/KWinPalette/activeBackground"), clr.name());
   if (QPixmap::defaultDepth() > 8)
-    clr = clr.dark(110);
+    clr = clr.darker(110);
   clr = wmCfgGroup.readEntry("activeBlend", clr);
   settings.setValue(QStringLiteral("/qt/KWinPalette/activeBlend"), clr.name());
   clr = newPal.color( QPalette::Active, QPalette::HighlightedText );
@@ -157,10 +157,10 @@ static void applyQtColors( KSharedConfigPtr kglobalcfg, QSettings& settings, QPa
   clr = wmCfgGroup.readEntry("inactiveBackground", clr);
   settings.setValue(QStringLiteral("/qt/KWinPalette/inactiveBackground"), clr.name());
   if (QPixmap::defaultDepth() > 8)
-    clr = clr.dark(110);
+    clr = clr.darker(110);
   clr = wmCfgGroup.readEntry("inactiveBlend", clr);
   settings.setValue(QStringLiteral("/qt/KWinPalette/inactiveBlend"), clr.name());
-  clr = newPal.color(QPalette::Inactive, QPalette::Window).dark();
+  clr = newPal.color(QPalette::Inactive, QPalette::Window).darker();
   clr = wmCfgGroup.readEntry("inactiveForeground", clr);
   settings.setValue(QStringLiteral("/qt/KWinPalette/inactiveForeground"), clr.name());
   clr = newPal.color(QPalette::Inactive, QPalette::Window);
@@ -442,8 +442,8 @@ void runRdb( uint flags )
     QColor backCol = newPal.color( QPalette::Active, QPalette::Window );
     addColorDef(preproc, "FOREGROUND"         , newPal.color( QPalette::Active, QPalette::WindowText ) );
     addColorDef(preproc, "BACKGROUND"         , backCol);
-    addColorDef(preproc, "HIGHLIGHT"          , backCol.light(100+(2*KColorScheme::contrast()+4)*16/1));
-    addColorDef(preproc, "LOWLIGHT"           , backCol.dark(100+(2*KColorScheme::contrast()+4)*10));
+    addColorDef(preproc, "HIGHLIGHT"          , backCol.lighter(100+(2*KColorScheme::contrast()+4)*16/1));
+    addColorDef(preproc, "LOWLIGHT"           , backCol.darker(100+(2*KColorScheme::contrast()+4)*10));
     addColorDef(preproc, "SELECT_BACKGROUND"  , newPal.color( QPalette::Active, QPalette::Highlight));
     addColorDef(preproc, "SELECT_FOREGROUND"  , newPal.color( QPalette::Active, QPalette::HighlightedText));
     addColorDef(preproc, "WINDOW_BACKGROUND"  , newPal.color( QPalette::Active, QPalette::Base ) );

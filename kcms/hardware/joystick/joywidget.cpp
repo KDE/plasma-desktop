@@ -122,10 +122,10 @@ JoyWidget::JoyWidget(QWidget *parent)
   buttonTbl->setEditTriggers(QAbstractItemView::NoEditTriggers);
   buttonTbl->setHorizontalHeaderLabels(QStringList(i18n("State")));
   buttonTbl->setSortingEnabled(false);
-  buttonTbl->horizontalHeader()->setClickable(false);
-  buttonTbl->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
+  buttonTbl->horizontalHeader()->setSectionsClickable(false);
+  buttonTbl->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
   buttonTbl->horizontalHeader()->resizeSection(0, colWidth);
-  buttonTbl->verticalHeader()->setClickable(false);
+  buttonTbl->verticalHeader()->setSectionsClickable(false);
   vboxMid->addWidget(buttonTbl);
 
   vboxRight->addWidget(new QLabel(i18n("Axes:")));
@@ -134,10 +134,10 @@ JoyWidget::JoyWidget(QWidget *parent)
   axesTbl->setEditTriggers(QAbstractItemView::NoEditTriggers);
   axesTbl->setHorizontalHeaderLabels(QStringList(i18n("Value")));
   axesTbl->setSortingEnabled(false);
-  axesTbl->horizontalHeader()->setClickable(false);
-  axesTbl->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
+  axesTbl->horizontalHeader()->setSectionsClickable(false);
+  axesTbl->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
   axesTbl->horizontalHeader()->resizeSection(0, colWidth);
-  axesTbl->verticalHeader()->setClickable(false);
+  axesTbl->verticalHeader()->setSectionsClickable(false);
   vboxRight->addWidget(axesTbl);
 
   hbox->addLayout(vboxLeft);

@@ -72,10 +72,10 @@ void SchemeEditorColors::setupColorTable()
     commonColorTable->verticalHeader()->hide();
     commonColorTable->horizontalHeader()->hide();
     commonColorTable->setShowGrid(false);
-    commonColorTable->horizontalHeader()->setResizeMode(0, QHeaderView::Stretch);
+    commonColorTable->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);
     int minWidth = QPushButton(i18n("Varies")).minimumSizeHint().width();
     commonColorTable->horizontalHeader()->setMinimumSectionSize(minWidth);
-    commonColorTable->horizontalHeader()->setResizeMode(1, QHeaderView::ResizeToContents);
+    commonColorTable->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
 
     for (int i = 0; i < 26; ++i)
     {
@@ -112,7 +112,7 @@ void SchemeEditorColors::setupColorTable()
     colorTable->setShowGrid(false);
     colorTable->setRowCount(12);
     colorTable->horizontalHeader()->setMinimumSectionSize(minWidth);
-    colorTable->horizontalHeader()->setResizeMode(1, QHeaderView::ResizeToContents);
+    colorTable->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
 
     createColorEntry(i18n("Normal Background"),    QStringLiteral("BackgroundNormal"),    m_backgroundButtons, 0);
     createColorEntry(i18n("Alternate Background"), QStringLiteral("BackgroundAlternate"), m_backgroundButtons, 1);
@@ -127,8 +127,8 @@ void SchemeEditorColors::setupColorTable()
     createColorEntry(i18n("Focus Decoration"),     QStringLiteral("DecorationFocus"),     m_decorationButtons, 10);
     createColorEntry(i18n("Hover Decoration"),     QStringLiteral("DecorationHover"),     m_decorationButtons, 11);
 
-    colorTable->horizontalHeader()->setResizeMode(0, QHeaderView::Stretch);
-    colorTable->horizontalHeader()->setResizeMode(1, QHeaderView::ResizeToContents);
+    colorTable->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);
+    colorTable->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
 
     updateColorSchemes();
     updateColorTable();
