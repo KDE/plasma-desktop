@@ -435,7 +435,7 @@ public Q_SLOTS:
     }
 
 protected:
-    bool event(QEvent *e) {
+    bool event(QEvent *e) override {
         QStringList list_result;
         QList<Property> prop_list;
         if (e->type() == dbus_event_type) {
@@ -750,7 +750,7 @@ class PanelAgentThread : public QThread
 public:
     explicit PanelAgentThread(QObject *parent = nullptr): QThread(parent) {}
     ~PanelAgentThread() {}
-    void run() {
+    void run() override {
         if (!_panel_agent->run())
             std::cerr << "Failed to run Panel.\n";
         _global_resource_lock.lock();
