@@ -244,6 +244,8 @@ void KCMDesktopTheme::load()
     KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("plasmarc")), "Theme");
     setSelectedPlugin(cg.readEntry("name", m_defaultTheme->themeName()));
 
+    emit selectedPluginIndexChanged();
+
     updateNeedsSave();
 }
 
