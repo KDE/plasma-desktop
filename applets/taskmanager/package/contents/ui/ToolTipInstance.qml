@@ -106,6 +106,7 @@ Column {
             }
             // window title
             PlasmaExtras.Heading {
+                id: winTitle
                 level: 5
                 width: isWin ? textWidth : undefined
                 height: undefined
@@ -114,6 +115,7 @@ Column {
                 text: generateTitle()
                 textFormat: Text.PlainText
                 opacity: 0.75
+                visible: !hasPlayer
             }
             // subtext
             PlasmaExtras.Heading {
@@ -169,7 +171,7 @@ Column {
         width: header.width
         // similar to 0.5625 = 1 / (16:9) as most screens are
         // round necessary, otherwise shadow mask for players has gap!
-        height: Math.round(0.5 * width)
+        height: Math.round(0.5 * width) + (!winTitle.visible? winTitle.height : 0)
         anchors.horizontalCenter: parent.horizontalCenter
 
         visible: isWin
@@ -187,12 +189,20 @@ Column {
 
                 visible: !albumArtImage.visible && !thumbnailSourceItem.isMinimized
                 winId: thumbnailSourceItem.winId
+            }
 
-                ToolTipWindowMouseArea {
+            Image {
+                id: albumArtBackground
+                source: albumArt
+                anchors.fill: parent
+                fillMode: Image.PreserveAspectCrop
+                visible: albumArtImage.available
+                layer.enabled: true
+                opacity: 0.25
+                layer.effect: FastBlur {
+                    source: albumArtBackground
                     anchors.fill: parent
-                    rootTask: parentTask
-                    modelIndex: submodelIndex
-                    winId: thumbnailSourceItem.winId
+                    radius: 30
                 }
             }
 
@@ -201,40 +211,41 @@ Column {
                 // also Image.Loading to prevent loading thumbnails just because the album art takes a split second to load
                 readonly property bool available: status === Image.Ready || status === Image.Loading
 
-                anchors.fill: parent
+                height: thumbnail.height - playerControlsLoader.realHeight
+                anchors.horizontalCenter: parent.horizontalCenter
                 sourceSize: Qt.size(parent.width, parent.height)
+
                 asynchronous: true
                 source: albumArt
-                fillMode: Image.PreserveAspectCrop
+                fillMode: Image.PreserveAspectFit
                 visible: available
-
-                ToolTipWindowMouseArea {
-                    anchors.fill: parent
-                    rootTask: parentTask
-                    modelIndex: submodelIndex
-                    winId: thumbnailSourceItem.winId
-                }
             }
 
             // when minimized, we don't have a preview, so show the icon
             PlasmaCore.IconItem {
-                anchors.fill: parent
+                width: parent.width
+                height: thumbnail.height - playerControlsLoader.realHeight
+                anchors.horizontalCenter: parent.horizontalCenter
                 source: thumbnailSourceItem.isMinimized && !albumArtImage.visible ? icon : ""
                 animated: false
                 usesPlasmaTheme: false
                 visible: valid
+            }
 
-                ToolTipWindowMouseArea {
-                    anchors.fill: parent
-                    rootTask: parentTask
-                    modelIndex: submodelIndex
-                    winId: thumbnailSourceItem.winId
-                }
+            ToolTipWindowMouseArea {
+                anchors.fill: parent
+                rootTask: parentTask
+                modelIndex: submodelIndex
+                winId: thumbnailSourceItem.winId
             }
         }
 
 
         Loader {
+            id: playerControlsLoader
+
+            property real realHeight: item? item.realHeight : 0
+
             anchors.fill: thumbnail
             sourceComponent: hasPlayer ? playerControlsComp : undefined
         }
@@ -243,6 +254,8 @@ Column {
             id: playerControlsComp
 
             Item {
+                property real realHeight: playerControlsRow.height
+
                 anchors.fill: parent
 
                 // TODO: When could this really be the case? A not-launcher-task always has a window!?
@@ -298,23 +311,31 @@ Column {
                     enabled: canControl
 
                     ColumnLayout {
+                        Layout.leftMargin: 2
                         Layout.fillWidth: true
                         spacing: 0
 
                         PlasmaExtras.Heading {
                             Layout.fillWidth: true
-                            level: 4
-                            wrapMode: Text.NoWrap
+                            level: 5
+                            lineHeight: 1
+                            maximumLineCount: artistText.visible? 1 : 2
+                            wrapMode: artistText.visible? Text.NoWrap : Text.Wrap
                             elide: Text.ElideRight
                             text: track || ""
+                            font.weight: Font.Bold
                         }
 
                         PlasmaExtras.Heading {
+                            id: artistText
                             Layout.fillWidth: true
                             level: 5
                             wrapMode: Text.NoWrap
+                            lineHeight: 1
                             elide: Text.ElideRight
                             text: artist || ""
+                            visible: text != ""
+                            opacity: 0.75
                         }
                     }
 
