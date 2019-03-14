@@ -195,6 +195,10 @@ MouseArea {
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
 
+            font.pixelSize: Math.min(height, theme.defaultFont.pixelSize)
+            // unset pointSize set by PlasmaComponents.Label to avoid "Both point size and pixel size set." warning
+            font.pointSize: -1
+
             z: 0 // Below windows and FrameSvg
         }
     }
