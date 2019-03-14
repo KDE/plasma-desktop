@@ -18,28 +18,46 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.4 as Kirigami
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
     id: root
     property string themeName
 
-    PlasmaCore.FrameSvgItem {
-        id: background
+    Item {
+        id: backgroundMask
         anchors.fill: parent
-        // Air theme have huge transparent margins in widgets/background svg, so use
-        // widgets/panel-background until Plasma::FrameSvg exposes the transparent margins
-        imagePath: themeName == "air" ? "widgets/panel-background" : "widgets/background"
+        clip: true
+
+        PlasmaCore.FrameSvgItem {
+            id: background
+            // Normalize margins around background.
+            // Some themes like "Air" have huge transparent margins which would result in too small container area.
+            // Sadly all of the breathing, shadow and border sizes are in one single margin value,
+            // but for typical themes the border is the smaller part the margin and should be in the size of
+            // Units.largeSpacing, to which we add another Units.largeSpacing for margin of the visual content
+            // Ideally Plasma::FrameSvg exposes the transparent margins one day.
+            readonly property int generalMargin: 2 * Kirigami.Units.largeSpacing
+            anchors {
+                fill: parent
+                topMargin: -margins.top + generalMargin
+                bottomMargin: -margins.bottom + generalMargin
+                leftMargin: -margins.left + generalMargin
+                rightMargin: -margins.right + generalMargin
+            }
+            imagePath: "widgets/background"
+        }
     }
 
     RowLayout {
         id: contents
         anchors {
             fill: parent
-            topMargin: root.height / 8
-            bottomMargin: root.height / 8
-            leftMargin: root.width / 10
-            rightMargin: root.width / 10
+            topMargin: background.generalMargin
+            bottomMargin: background.generalMargin
+            leftMargin: background.generalMargin
+            rightMargin: background.generalMargin
         }
 
         // Icons
