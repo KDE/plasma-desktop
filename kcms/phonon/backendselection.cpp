@@ -138,7 +138,7 @@ void BackendSelection::load()
         m_select->addItem(bd.name);
         m_backends.insert(bd.name, bd);
     }
-    m_select->setItemSelected(m_select->item(0), true);
+    m_select->item(0)->setSelected(true);
 }
 
 void BackendSelection::save()
