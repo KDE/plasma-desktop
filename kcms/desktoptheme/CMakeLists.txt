@@ -23,7 +23,7 @@ kcoreaddons_desktop_to_json(kcm_desktoptheme "kcm_desktoptheme.desktop" SERVICE_
 
 #this desktop file is installed only for retrocompatibility with sycoca
 install(FILES kcm_desktoptheme.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
-install(FILES plasma-themes.knsrc DESTINATION ${KDE_INSTALL_CONFDIR})
+install(FILES plasma-themes.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 install(TARGETS kcm_desktoptheme DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
 kpackage_install_package(package kcm_desktoptheme kcms)

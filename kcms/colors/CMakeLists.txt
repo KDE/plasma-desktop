@@ -34,7 +34,7 @@ kcoreaddons_desktop_to_json(kcm_colors "kcm_colors.desktop")
 
 install(FILES kcm_colors.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(TARGETS kcm_colors DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
-install(FILES colorschemes.knsrc DESTINATION ${KDE_INSTALL_CONFDIR})
+install(FILES colorschemes.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 
 kpackage_install_package(package kcm_colors kcms)
 

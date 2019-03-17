@@ -57,7 +57,7 @@ kcoreaddons_desktop_to_json(kcm_cursortheme "kcm_cursortheme.desktop")
 ########### install files ###############
 
 install( FILES kcm_cursortheme.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
-install( FILES xcursor/xcursor.knsrc DESTINATION  ${KDE_INSTALL_CONFDIR} )
+install( FILES xcursor/xcursor.knsrc DESTINATION  ${KDE_INSTALL_KNSRCDIR} )
 
 kpackage_install_package(package kcm_cursortheme kcms)
 

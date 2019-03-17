@@ -20,7 +20,7 @@ target_link_libraries(kcm_fontinst
 
 install(TARGETS kcm_fontinst  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 install( FILES fontinst.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
-install( FILES kfontinst.knsrc DESTINATION  ${KDE_INSTALL_CONFDIR} )
+install( FILES kfontinst.knsrc DESTINATION  ${KDE_INSTALL_KNSRCDIR} )
 
 ecm_install_icons( ICONS
                    16-actions-addfont.png

@@ -14,4 +14,4 @@ install(TARGETS kcm_emoticons  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 ########### install files ###############
 install( FILES emoticons.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
-install( FILES emoticons.knsrc  DESTINATION  ${KDE_INSTALL_CONFDIR} )
+install( FILES emoticons.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR} )
