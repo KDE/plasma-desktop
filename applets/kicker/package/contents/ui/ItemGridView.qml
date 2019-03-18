@@ -131,7 +131,7 @@ FocusScope {
                     if (item !== kicker.dragSource) {
                         item.GridView.view.model.moveRow(dragSource.itemIndex, item.itemIndex);
                     }
-                } else if (kicker.dragSource.view.model.favoritesModel === model
+                } else if (kicker.dragSource.GridView.view.model.favoritesModel === model
                     && !model.isFavorite(kicker.dragSource.favoriteId)) {
                     var hasPlaceholder = (model.dropPlaceholderIndex !== -1);
 
@@ -142,7 +142,7 @@ FocusScope {
                     }
                 }
             } else if (kicker.dragSource.parent !== gridView.contentItem
-                && kicker.dragSource.view.model.favoritesModel === model
+                && kicker.dragSource.GridView.view.model.favoritesModel === model
                 && !model.isFavorite(kicker.dragSource.favoriteId)) {
                     var hasPlaceholder = (model.dropPlaceholderIndex !== -1);
 
@@ -165,7 +165,7 @@ FocusScope {
         }
 
         onDrop: {
-            if (kicker.dragSource && kicker.dragSource.parent !== gridView.contentItem && kicker.dragSource.view.model.favoritesModel === model) {
+            if (kicker.dragSource && kicker.dragSource.parent !== gridView.contentItem && kicker.dragSource.GridView.view.model.favoritesModel === model) {
                 model.addFavorite(kicker.dragSource.favoriteId, model.dropPlaceholderIndex);
                 gridView.currentIndex = -1;
             }
@@ -410,16 +410,19 @@ FocusScope {
 
             onReleased: {
                 mouse.accepted = true;
+                var item = updatePositionProperties(mouse.x, mouse.y);
 
-                if (gridView.currentItem && gridView.currentItem == pressedItem) {
-                    if ("trigger" in gridView.model) {
-                        gridView.model.trigger(pressedItem.itemIndex, "", null);
+                if (item === undefined) {
+                    if (gridView.currentItem && gridView.currentItem == pressedItem) {
+                        if ("trigger" in gridView.model) {
+                            gridView.model.trigger(pressedItem.itemIndex, "", null);
+                            root.toggle();
+                        }
+
+                        itemGrid.itemActivated(pressedItem.itemIndex, "", null);
+                    } else if (!pressedItem && mouse.button == Qt.LeftButton) {
                         root.toggle();
                     }
-
-                    itemGrid.itemActivated(pressedItem.itemIndex, "", null);
-                } else if (!pressedItem && mouse.button == Qt.LeftButton) {
-                    root.toggle();
                 }
 
                 pressX = -1;
@@ -428,7 +431,7 @@ FocusScope {
             }
 
             onPositionChanged: {
-                var item = updatePositionProperties(mouse.x, mouse.y);
+                var item = pressedItem? pressedItem : updatePositionProperties(mouse.x, mouse.y);
 
                 if (gridView.currentIndex != -1) {
                     if (dragEnabled && pressX != -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
