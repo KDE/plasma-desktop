@@ -195,6 +195,7 @@ void SourcesModel::load()
     QVector<SourceData> fdoAppsData;
 
     QStringList notifyRcFiles;
+    QStringList desktopEntries;
 
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
                             QStringLiteral("knotifications5"), QStandardPaths::LocateDirectory);
@@ -222,6 +223,10 @@ void SourcesModel::load()
             const QStringList groups = config->groupList().filter(regExp);
 
             const QString notifyRcName = file.section(QLatin1Char('.'), 0, -2);
+            const QString desktopEntry = globalGroup.readEntry(QStringLiteral("DesktopEntry"));
+            if (!desktopEntry.isEmpty()) {
+                desktopEntries.append(desktopEntry);
+            }
 
             SourceData source{
                 // The old KCM read the Name and Comment from global settings disregarding
@@ -232,7 +237,7 @@ void SourcesModel::load()
                 globalGroup.readEntry(QStringLiteral("Comment")),
                 globalGroup.readEntry(QStringLiteral("IconName")),
                 notifyRcName,
-                globalGroup.readEntry(QStringLiteral("DesktopEntry")),
+                desktopEntry,
                 {}, // events
                 config
             };
@@ -270,6 +275,10 @@ void SourcesModel::load()
     const auto services = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
                                                             QStringLiteral("exist Exec and TRUE == [X-GNOME-UsesNotifications]"));
     for (const auto &service : services) {
+        if (desktopEntries.contains(service->desktopEntryName())) {
+            continue;
+        }
+
         SourceData source{
             service->name(),
             service->comment(),
