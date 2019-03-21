@@ -83,7 +83,7 @@ Item {
                 id: iconContainer
                 width: units.iconSizes.enormous
                 height: width
-                anchors.horizontalCenter: parent.horizontalCenter
+                Layout.alignment: Qt.AlignHCenter
                 opacity: delegate.pendingUninstall ? 0.6 : 1
                 Behavior on opacity {
                     OpacityAnimator {
