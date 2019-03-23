@@ -6,7 +6,7 @@ if (KFI_BUILD_STANDALONE)
     find_package(Fontconfig REQUIRED)
     find_package(Strigi REQUIRED)
     find_package(X11 REQUIRED)
-    macro_log_feature(X11_Xft_FOUND "libxft" "X FreeType interface library" "http://www.x.org" FALSE "" "Font installer and font previews")
+    macro_log_feature(X11_Xft_FOUND "libxft" "X FreeType interface library" "https://www.x.org" FALSE "" "Font installer and font previews")
     include(KDE4Defaults)
 endif ()
 
