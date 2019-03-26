@@ -86,6 +86,9 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
 
 void SearchConfigModule::load()
 {
+    // Set focus on the pluginselector to pass focus to search bar.
+    m_pluginSelector->setFocus(Qt::OtherFocusReason);
+
     m_pluginSelector->addPlugins(Plasma::RunnerManager::listRunnerInfo(),
                     KPluginSelector::ReadConfigFile,
                     i18n("Available Plugins"), QString(),
