@@ -24,9 +24,15 @@ import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.7 as Kirigami
 
 Kirigami.Page {
+    id: positionPage
+
+    property QtObject settings
+
     title: i18n("Popup Position")
 
     ScreenPositionSelector {
-        anchors.fill: parent
+        anchors.horizontalCenter: parent.horizontalCenter
+        selectedPosition: settings.popupPosition
+        onSelectedPositionChanged: settings.popupPosition = selectedPosition
     }
 }

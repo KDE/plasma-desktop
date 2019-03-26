@@ -35,12 +35,15 @@
 #include "sourcesmodel.h"
 #include "filterproxymodel.h"
 
+#include <notificationmanager/settings.h>
+
 K_PLUGIN_FACTORY_WITH_JSON(KCMNotificationsFactory, "kcm_notifications.json", registerPlugin<KCMNotifications>();)
 
 KCMNotifications::KCMNotifications(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
     , m_sourcesModel(new SourcesModel(this))
     , m_filteredModel(new FilterProxyModel(this))
+    , m_settings(new NotificationManager::Settings(this))
     , m_activitiesModel(new KActivities::ActivitiesModel(this))
 {
     const char uri[] = "org.kde.private.kcms.notifications";
@@ -74,6 +77,11 @@ FilterProxyModel *KCMNotifications::filteredModel() const
     return m_filteredModel;
 }
 
+NotificationManager::Settings *KCMNotifications::settings() const
+{
+    return m_settings;
+}
+
 KActivities::ActivitiesModel *KCMNotifications::activitiesModel() const
 {
     return m_activitiesModel;
@@ -81,6 +89,7 @@ KActivities::ActivitiesModel *KCMNotifications::activitiesModel() const
 
 void KCMNotifications::load()
 {
+    m_settings->load();
     m_sourcesModel->load();
 
     //m_config->markAsClean();
@@ -89,13 +98,14 @@ void KCMNotifications::load()
 
 void KCMNotifications::save()
 {
-
-    setNeedsSave(false);
+    m_settings->save();
+    //setNeedsSave(false);
 }
 
 void KCMNotifications::defaults()
 {
-    setNeedsSave(true);
+    m_settings->defaults();
+    //setNeedsSave(true);
 }
 
 #include "kcm.moc"

@@ -40,6 +40,24 @@ void FilterProxyModel::setQuery(const QString &query)
         m_query = query;
         invalidateFilter();
         emit queryChanged();
+        emit currentIndexChanged();
+    }
+}
+
+int FilterProxyModel::currentIndex() const
+{
+    if (m_currentIndex.isValid()) {
+        return m_currentIndex.row();
+    }
+    return -1;
+}
+
+void FilterProxyModel::setCurrentIndex(const QPersistentModelIndex &idx)
+{
+    const int oldIndex = currentIndex();
+    m_currentIndex = idx;
+    if (oldIndex != currentIndex()) {
+        emit currentIndexChanged();
     }
 }
 
@@ -47,7 +65,6 @@ QPersistentModelIndex FilterProxyModel::makePersistentModelIndex(int row) const
 {
     return QPersistentModelIndex(index(row, 0));
 }
-
 
 bool FilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {

@@ -25,28 +25,29 @@ import QtQuick.Controls 2.2 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-import org.kde.plasma.private.notifications 1.0
+import org.kde.notificationmanager 1.0 as NotificationManager
 
 Item {
     id: monitorPanel
 
-    property int baseUnit: Kirigami.Units.gridUnit// Math.round(Kirigami.Units.gridUnit / 1.5)
+    property int baseUnit: Kirigami.Units.gridUnit
 
     implicitWidth: baseUnit * 13 + baseUnit * 2
     implicitHeight: (screenRatio * baseUnit * 13) + (baseUnit * 2) + basePart.height
-
-    //flat: true
 
     property int selectedPosition
     property var disabledPositions: []
     property real screenRatio: Screen.height / Screen.width
 
-    onEnabledChanged: {
-        if (!enabled) {
-            positionRadios.current = null
+    onSelectedPositionChanged: {
+        var buttons = positionRadios.buttons.length;
+        for (var i = 0; i < buttons.length; ++i) {
+            var button = buttons[i];
+            if (button.position === selectedPosition) {
+                button.checked = true;
+                break;
+            }
         }
-
-        selectedPosition = NotificationsHelper.Default
     }
 
     PlasmaCore.Svg {
@@ -164,15 +165,10 @@ Item {
 
     QtControls.ButtonGroup {
         id: positionRadios
+        onCheckedButtonChanged: monitorPanel.selectedPosition = checkedButton.position
     }
 
-    /*QtControls.ExclusiveGroup {
-        id: positionRadios
-
-        onCurrentChanged: {
-            monitorPanel.selectedPosition = current.position;
-        }
-    }*/
+    // TODO increase hit area for radio buttons
 
     QtControls.RadioButton {
         anchors {
@@ -180,7 +176,7 @@ Item {
             left: leftPart.right
             margins: Kirigami.Units.smallSpacing
         }
-        readonly property int position: NotificationsHelper.TopLeft
+        readonly property int position: NotificationManager.Settings.TopLeft
         checked: monitorPanel.selectedPosition == position
         visible: monitorPanel.disabledPositions.indexOf(position) == -1
         QtControls.ButtonGroup.group: positionRadios
@@ -191,7 +187,7 @@ Item {
             horizontalCenter: topPart.horizontalCenter
             margins: Kirigami.Units.smallSpacing
         }
-        readonly property int position: NotificationsHelper.TopCenter
+        readonly property int position: NotificationManager.Settings.TopCenter
         checked: monitorPanel.selectedPosition == position
         visible: monitorPanel.disabledPositions.indexOf(position) == -1
         QtControls.ButtonGroup.group: positionRadios
@@ -202,40 +198,7 @@ Item {
             right: rightPart.left
             margins: Kirigami.Units.smallSpacing
         }
-        readonly property int position: NotificationsHelper.TopRight
-        checked: monitorPanel.selectedPosition == position
-        visible: monitorPanel.disabledPositions.indexOf(position) == -1
-        QtControls.ButtonGroup.group: positionRadios
-    }
-    QtControls.RadioButton {
-        anchors {
-            left: leftPart.right
-            verticalCenter: leftPart.verticalCenter
-            margins: Kirigami.Units.smallSpacing
-        }
-        readonly property int position: NotificationsHelper.Left
-        checked: monitorPanel.selectedPosition == position
-        visible: monitorPanel.disabledPositions.indexOf(position) == -1
-        QtControls.ButtonGroup.group: positionRadios
-    }
-    QtControls.RadioButton {
-        anchors {
-            horizontalCenter: topPart.horizontalCenter
-            verticalCenter: leftPart.verticalCenter
-            margins: Kirigami.Units.smallSpacing
-        }
-        readonly property int position: NotificationsHelper.Center
-        checked: monitorPanel.selectedPosition == position
-        visible: monitorPanel.disabledPositions.indexOf(position) == -1
-        QtControls.ButtonGroup.group: positionRadios
-    }
-    QtControls.RadioButton {
-        anchors {
-            right: rightPart.left
-            verticalCenter: rightPart.verticalCenter
-            margins: Kirigami.Units.smallSpacing
-        }
-        readonly property int position: NotificationsHelper.Right
+        readonly property int position: NotificationManager.Settings.TopRight
         checked: monitorPanel.selectedPosition == position
         visible: monitorPanel.disabledPositions.indexOf(position) == -1
         QtControls.ButtonGroup.group: positionRadios
@@ -246,7 +209,7 @@ Item {
             left: leftPart.right
             margins: Kirigami.Units.smallSpacing
         }
-        readonly property int position: NotificationsHelper.BottomLeft
+        readonly property int position: NotificationManager.Settings.BottomLeft
         checked: monitorPanel.selectedPosition == position
         visible: monitorPanel.disabledPositions.indexOf(position) == -1
         QtControls.ButtonGroup.group: positionRadios
@@ -257,7 +220,7 @@ Item {
             horizontalCenter: bottomPart.horizontalCenter
             margins: Kirigami.Units.smallSpacing
         }
-        readonly property int position: NotificationsHelper.BottomCenter
+        readonly property int position: NotificationManager.Settings.BottomCenter
         checked: monitorPanel.selectedPosition == position
         visible: monitorPanel.disabledPositions.indexOf(position) == -1
         QtControls.ButtonGroup.group: positionRadios
@@ -268,7 +231,7 @@ Item {
             right: rightPart.left
             margins: Kirigami.Units.smallSpacing
         }
-        readonly property int position: NotificationsHelper.BottomRight
+        readonly property int position: NotificationManager.Settings.BottomRight
         checked: monitorPanel.selectedPosition == position
         visible: monitorPanel.disabledPositions.indexOf(position) == -1
         QtControls.ButtonGroup.group: positionRadios

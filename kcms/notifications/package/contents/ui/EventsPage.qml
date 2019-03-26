@@ -26,12 +26,37 @@ import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.7 as Kirigami
 import org.kde.kcm 1.2 as KCM
 
+import org.kde.notificationmanager 1.0 as NotificationManager
+
 ColumnLayout {
     id: eventsColumn
 
     property var rootIndex
+    property var appData
 
-    property bool customActivitySettings: false
+    property int behavior: {
+        if (appData.desktopEntry) {
+            return kcm.settings.applicationBehavior(appData.desktopEntry);
+        } else if (appData.notifyRcName) {
+            return kcm.settings.serviceBehavior(appData.notifyRcName);
+        }
+        return -1;
+    }
+
+    function setBehavior(flag, enable) {
+        var newBehavior = behavior;
+        if (enable) {
+            newBehavior |= flag;
+        } else {
+            newBehavior &= ~flag;
+        }
+
+        if (appData.desktopEntry) {
+            return kcm.settings.setApplicationBehavior(appData.desktopEntry, newBehavior);
+        } else if (appData.notifyRcName) {
+            return kcm.settings.setServiceBehavior(appData.notifyRcName, newBehavior);
+        }
+    }
 
     readonly property var actions: [
         {key: "Popup", label: i18n("Show popup"), icon: "dialog-information"},
@@ -50,7 +75,8 @@ ColumnLayout {
         QtControls.CheckBox {
             id: showPopupsCheck
             text: i18n("Show popups")
-            checked: true
+            checked: eventsColumn.behavior & NotificationManager.Settings.ShowPopups
+            onClicked: eventsColumn.setBehavior(NotificationManager.Settings.ShowPopups, checked)
         }
 
         RowLayout {
@@ -61,12 +87,16 @@ ColumnLayout {
             QtControls.CheckBox {
                 text: i18n("Show in do not disturb mode")
                 enabled: showPopupsCheck.checked
+                checked: eventsColumn.behavior & NotificationManager.Settings.ShowPopupsInDoNotDisturbMode
+                onClicked: eventsColumn.setBehavior(NotificationManager.Settings.ShowPopupsInDoNotDisturbMode, checked)
             }
         }
 
         QtControls.CheckBox {
             text: i18n("Notification badges")
-            enabled: !!eventsColumn.desktopEntry
+            enabled: !!eventsColumn.appData.desktopEntry
+            checked: eventsColumn.behavior & NotificationManager.Settings.ShowBadges
+            onClicked: eventsColumn.setBehavior(NotificationManager.Settings.ShowBadges, checked)
         }
     }
 
@@ -82,8 +112,6 @@ ColumnLayout {
             activeFocusOnTab: false
             Kirigami.Theme.colorSet: Kirigami.Theme.View
             Kirigami.Theme.inherit: false
-
-            enabled: !eventsColumn.customActivitySettings
 
             Component.onCompleted: background.visible = true
 
@@ -206,19 +234,6 @@ ColumnLayout {
                     }
                 }
             }
-        }
-
-        QtControls.Label {
-            anchors {
-                verticalCenter: parent.verticalCenter
-                left: parent.left
-                right: parent.right
-                margins: Kirigami.Units.smallSpacing
-            }
-            horizontalAlignment: Text.AlignHCenter
-            wrapMode: Text.WordWrap
-            text: i18n("Application events cannot be configured on a per-activity basis.")
-            visible: eventsColumn.customActivitySettings
         }
     }
 

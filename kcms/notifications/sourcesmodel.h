@@ -50,6 +50,8 @@ struct SourceData
 
     KConfig *config; // KSharedConfig::Ptr?
 
+    bool removable; // for "observed" apps
+
     QString display() const
     {
         return !name.isEmpty() ? name : comment;
@@ -70,7 +72,8 @@ public:
         DesktopEntryRole,
 
         EventIdRole,
-        ActionsRole
+        ActionsRole,
+        RemovableRole // for "observed" apps
     };
 
     enum Type {

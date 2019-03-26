@@ -28,6 +28,10 @@
 class SourcesModel;
 class FilterProxyModel;
 
+namespace NotificationManager {
+class Settings;
+}
+
 namespace KActivities {
 class ActivitiesModel;
 }
@@ -38,6 +42,8 @@ class KCMNotifications : public KQuickAddons::ConfigModule
 
     Q_PROPERTY(SourcesModel *sourcesModel READ sourcesModel CONSTANT)
     Q_PROPERTY(FilterProxyModel *filteredModel READ filteredModel CONSTANT)
+
+    Q_PROPERTY(NotificationManager::Settings *settings READ settings CONSTANT)
 
     Q_PROPERTY(KActivities::ActivitiesModel *activitiesModel READ activitiesModel CONSTANT)
 
@@ -54,6 +60,9 @@ public:
 
     SourcesModel *sourcesModel() const;
     FilterProxyModel *filteredModel() const;
+
+    NotificationManager::Settings *settings() const;
+
     KActivities::ActivitiesModel *activitiesModel() const;
 
 public Q_SLOTS:
@@ -64,6 +73,8 @@ public Q_SLOTS:
 private:
     SourcesModel *m_sourcesModel;
     FilterProxyModel *m_filteredModel;
+
+    NotificationManager::Settings *m_settings;
 
     KActivities::ActivitiesModel *m_activitiesModel;
 

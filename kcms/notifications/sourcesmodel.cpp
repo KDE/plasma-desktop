@@ -108,6 +108,7 @@ QVariant SourcesModel::data(const QModelIndex &index, int role) const
         return FdoAppType;
     case NotifyRcNameRole: return source.notifyRcName;
     case DesktopEntryRole: return source.desktopEntry;
+    case RemovableRole: return source.removable;
     }
 
     return QVariant();
@@ -180,7 +181,8 @@ QHash<int, QByteArray> SourcesModel::roleNames() const
         {NotifyRcNameRole, QByteArrayLiteral("notifyRcName")},
         {DesktopEntryRole, QByteArrayLiteral("desktopEntry")},
         {EventIdRole, QByteArrayLiteral("eventId")},
-        {ActionsRole, QByteArrayLiteral("actions")}
+        {ActionsRole, QByteArrayLiteral("actions")},
+        {RemovableRole, QByteArrayLiteral("removable")}
     };
 }
 
@@ -190,8 +192,11 @@ void SourcesModel::load()
 
     m_data.clear();
 
+    QCollator collator;
+
     QVector<SourceData> servicesData;
     QVector<SourceData> knotifyAppsData;
+    // apps that have the X-GNOME-UsesNotifications property or that have been observed sending notifications
     QVector<SourceData> fdoAppsData;
 
     QStringList notifyRcFiles;
@@ -239,7 +244,8 @@ void SourcesModel::load()
                 notifyRcName,
                 desktopEntry,
                 {}, // events
-                config
+                config,
+                false // removable
             };
 
             QVector<EventData> events;
@@ -262,6 +268,10 @@ void SourcesModel::load()
                 events.append(event);
             }
 
+            std::sort(events.begin(), events.end(), [&collator](const EventData &a, const EventData &b) {
+                return collator.compare(a.name, b.name) < 0;
+            });
+
             source.events = events;
 
             if (!source.desktopEntry.isEmpty()) {
@@ -275,6 +285,10 @@ void SourcesModel::load()
     const auto services = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
                                                             QStringLiteral("exist Exec and TRUE == [X-GNOME-UsesNotifications]"));
     for (const auto &service : services) {
+        if (service->noDisplay()) {
+            continue;
+        }
+
         if (desktopEntries.contains(service->desktopEntryName())) {
             continue;
         }
@@ -286,12 +300,35 @@ void SourcesModel::load()
             QString(), //notifyRcFile
             service->desktopEntryName(),
             {},
-            nullptr
+            nullptr,
+            false // removable
         };
         fdoAppsData.append(source);
     }
 
-    QCollator collator;
+    const QStringList seenApps = KSharedConfig::openConfig(QStringLiteral("plasmanotifyrc"))->group("Applications").groupList();
+    for (const QString &app : seenApps) {
+        if (desktopEntries.contains(app)) {
+            continue;
+        }
+
+        KService::Ptr service = KService::serviceByDesktopName(app);
+        if (!service || service->noDisplay()) {
+            continue;
+        }
+
+        SourceData source{
+            service->name(),
+            service->comment(),
+            service->icon(),
+            QString(), //notifyRcFile
+            service->desktopEntryName(),
+            {},
+            nullptr,
+            true // removable
+        };
+        fdoAppsData.append(source);
+    }
 
     auto sortData = [&collator](const SourceData &a, const SourceData &b) {
         return collator.compare(a.display(), b.display()) < 0;
@@ -299,6 +336,7 @@ void SourcesModel::load()
 
     std::sort(servicesData.begin(), servicesData.end(), sortData);
     std::sort(knotifyAppsData.begin(), knotifyAppsData.end(), sortData);
+    // thse are both "Other apps", sort them together or come up with anothe heading "Further other apps"..
     std::sort(fdoAppsData.begin(), fdoAppsData.end(), sortData);
 
     m_data << servicesData << knotifyAppsData << fdoAppsData;

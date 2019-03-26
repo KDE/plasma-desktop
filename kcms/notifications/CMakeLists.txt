@@ -9,7 +9,6 @@ set(kcm_notifications_SRCS
 
 add_library(kcm_notifications MODULE ${kcm_notifications_SRCS})
 target_link_libraries(kcm_notifications
-    #Qt5::DBus
     KF5::KCMUtils
     KF5::Activities
     KF5::CoreAddons
@@ -18,6 +17,7 @@ target_link_libraries(kcm_notifications
     KF5::I18n
     KF5::QuickAddons
     KF5::Service
+    PW::LibNotificationManager
 )
 
 kcoreaddons_desktop_to_json(kcm_notifications "kcm_notifications.desktop")

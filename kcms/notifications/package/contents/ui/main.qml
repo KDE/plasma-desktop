@@ -20,18 +20,23 @@
 
 import QtQuick 2.9
 import QtQuick.Layouts 1.1
-import QtQuick.Window 2.2
-//import QtQuick.Dialogs 1.0 as QtDialogs
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
-//import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.kcm 1.2 as KCM
+
+import org.kde.notificationmanager 1.0 as NotificationManager
 
 KCM.SimpleKCM {
     KCM.ConfigModule.quickHelp: i18n("This module lets you manage application and system notifications.")
-    KCM.ConfigModule.buttons: KCM.ConfigModule.Help/* | KCM.ConfigModule.Default*/ | KCM.ConfigModule.Apply
+    KCM.ConfigModule.buttons: KCM.ConfigModule.Help | KCM.ConfigModule.Default | KCM.ConfigModule.Apply
 
     implicitHeight: 550 // HACK FIXME
+
+    Binding {
+        target: kcm
+        property: "needsSave"
+        value: kcm.settings.dirty // TODO or other stuff
+    }
 
     Kirigami.FormLayout {
         RowLayout {
@@ -39,69 +44,14 @@ KCM.SimpleKCM {
 
             QtControls.CheckBox {
                 id: dndTimeCheck
-                text: i18nc("Enable between hh:mm and hh:mm", "Automatically enable")
+                text: i18nc("Enable do not disturb during following times", "During following times:")
             }
 
             QtControls.Button {
-                text: i18nc("Set times for automatic do not disturb mode", "Set Times...")
+                text: i18nc("Choose times for do not disturb mode", "Choose...")
                 icon.name: "preferences-system-time"
                 onClicked: kcm.push("DndTimePage.qml")
                 enabled: dndTimeCheck.checked
-            }
-        }
-
-        QtControls.CheckBox {
-            text: i18nc("Apps can enable do not disturb mode", "Applications can enable")
-            checked: true
-        }
-
-        RowLayout {
-            QtControls.Label {
-                text: i18n("Keyboard Shortcut:")
-            }
-
-            // TODO keysequence thing
-            QtControls.Button {
-                icon.name: "configure"
-                text: i18n("Meta+N")
-            }
-
-            QtControls.Button {
-                icon.name: "edit-clear"
-            }
-        }
-
-        ColumnLayout {
-            visible: activitiesDndRepeater.count > 1
-
-            QtControls.Label {
-                text: i18n("Automatically enable in the following activities:")
-            }
-
-            Repeater {
-                id: activitiesDndRepeater
-                model: kcm.activitiesModel
-
-                QtControls.CheckBox {
-                    id: activityCheck
-
-                    text: model.name
-                    icon.name: model.iconSource || "preferences-activities"
-
-                    // FIXME make icons work in QQC2 desktop style CheckBox
-                    contentItem: RowLayout {
-                        Kirigami.Icon {
-                            Layout.leftMargin: indicator.width + Kirigami.Units.smallSpacing
-                            source: activityCheck.icon.name
-                            Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                            Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                        }
-
-                        QtControls.Label {
-                            text: activityCheck.text
-                        }
-                    }
-                }
             }
         }
 
@@ -112,38 +62,45 @@ KCM.SimpleKCM {
         QtControls.CheckBox {
             Kirigami.FormData.label: i18n("Critical notifications:")
             text: i18n("Show in do not disturb mode")
-            checked: true
+            checked: kcm.settings.criticalPopupsInDoNotDisturbMode
+            onClicked: kcm.settings.criticalPopupsInDoNotDisturbMode = checked
         }
 
         QtControls.CheckBox {
             text: i18n("Keep always on top")
-            checked: true
+            checked: kcm.settings.keepCriticalAlwaysOnTop
+            onClicked: kcm.settings.keepCriticalAlwaysOnTop = checked
         }
 
         QtControls.CheckBox {
             Kirigami.FormData.label: i18n("Low priority notifications:")
             text: i18n("Show popup")
+            checked: kcm.settings.lowPriorityPopups
+            onClicked: kcm.settings.lowPriorityPopups = checked
         }
 
         QtControls.ButtonGroup {
             id: positionGroup
-            buttons: [positionCloseToPanel, positionCustomPosition]
+            buttons: [positionNearWidget, positionCustomPosition]
         }
 
         QtControls.RadioButton {
-            id: positionCloseToPanel
+            id: positionNearWidget
             Kirigami.FormData.label: i18n("Popup position:")
-            text: i18n("Near the notification icon") // "widget"
-            checked: true
+            text: i18nc("Popup position near notification plasmoid", "Near the notification icon") // "widget"
+            checked: kcm.settings.popupPosition === NotificationManager.Settings.NearWidget
+            onClicked: kcm.settings.popupPosition = NotificationManager.Settings.NearWidget
         }
 
         RowLayout {
             QtControls.RadioButton {
                 id: positionCustomPosition
                 text: i18n("Custom Position")
+                checked: kcm.settings.popupPosition !== NotificationManager.Settings.NearWidget
             }
             QtControls.Button {
                 text: i18n("Choose...")
+                icon.name: "preferences-desktop-display"
                 onClicked: kcm.push("PopupPositionPage.qml")
                 enabled: positionCustomPosition.checked
             }
@@ -153,14 +110,23 @@ KCM.SimpleKCM {
             Layout.fillWidth: false
             Kirigami.FormData.label: i18n("Hide popup after:")
             textRole: "label"
+            currentIndex: {
+                var idx = model.findIndex(function (item) {
+                    return item.value === kcm.settings.popupTimeout;
+                });
+                // would be neat if we could add a custom timeout if setting isn't listed
+                return idx !== -1 ? idx : 0;
+            }
+
             model: [
-                {label: i18n("5 seconds"), value: 5},
-                {label: i18n("7 seconds"), value: 7},
-                {label: i18n("10 seconds"), value: 10},
-                {label: i18n("15 seconds"), value: 15},
-                {label: i18n("30 seconds"), value: 30},
-                {label: i18n("1 minute"), value: 60}
+                {label: i18n("5 seconds"), value: 5 * 1000},
+                {label: i18n("7 seconds"), value: 7 * 1000},
+                {label: i18n("10 seconds"), value: 10 * 1000},
+                {label: i18n("15 seconds"), value: 15 * 1000},
+                {label: i18n("30 seconds"), value: 30 * 1000},
+                {label: i18n("1 minute"), value: 60 * 1000}
             ]
+            onActivated: kcm.settings.popupTimeout = model[index].value
             // FIXME proper sizing, especially for the popup
             Layout.maximumWidth: Kirigami.Units.gridUnit * 6
         }
@@ -172,27 +138,32 @@ KCM.SimpleKCM {
         QtControls.CheckBox {
             Kirigami.FormData.label: i18n("Application progress:")
             text: i18n("Show in task manager")
-            checked: true
+            checked: kcm.settings.jobsInTaskManager
+            onClicked: kcm.settings.jobsInTaskManager = checked
         }
 
         QtControls.CheckBox {
             id: applicationJobsEnabledCheck
-            text: i18n("Show popup")
-            checked: true
+            text: i18nc("Show application jobs in notification widget", "Show in notifications")
+            checked: kcm.settings.jobsInNotifications
+            onClicked: kcm.settings.jobsInNotifications = checked
         }
 
-        RowLayout { // HACK just for indentation
+        RowLayout { // just for indentation
             QtControls.CheckBox {
                 Layout.leftMargin: indicator.width
-                text: i18n("Hide when running")
+                text: i18nc("Keep application job popup open for entire duration of job", "Keep popup open during progress")
                 enabled: applicationJobsEnabledCheck.checked
+                checked: kcm.settings.permanentJobPopups
+                onClicked: kcm.settings.permanentJobPopups = checked
             }
         }
 
         QtControls.CheckBox {
             Kirigami.FormData.label: i18n("Notification badges:")
             text: i18n("Show in task manager")
-            checked: true
+            checked: kcm.settings.badgesInTaskManager
+            onClicked: kcm.settings.badgesInTaskManager = checked
         }
 
         Kirigami.Separator {
