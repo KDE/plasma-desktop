@@ -134,13 +134,46 @@ ComponentChooser::ComponentChooser(QWidget *parent):
 			cg.readEntry("Name",i18n("Unknown")));
 		item->setData(Qt::UserRole, (*it));
 		ServiceChooser->addItem(item);
+		loadConfigWidget((*it), cfg.group(QByteArray()).readEntry("configurationType"), item->text());
 	}
 	ServiceChooser->setFixedWidth(ServiceChooser->sizeHintForColumn(0) + 20);
 	ServiceChooser->sortItems();
 	connect(ServiceChooser,&QListWidget::currentItemChanged,this,&ComponentChooser::slotServiceSelected);
 	ServiceChooser->setCurrentRow(0);
-	slotServiceSelected(ServiceChooser->item(0));
+}
 
+void ComponentChooser::loadConfigWidget(const QString &service, const QString &cfgType, const QString &name)
+{
+	QWidget *loadedConfigWidget = nullptr;
+	if (cfgType.isEmpty() || (cfgType == QLatin1String("component")))
+	{
+		loadedConfigWidget = new CfgComponent(configContainer);
+		static_cast<CfgComponent*>(loadedConfigWidget)->ChooserDocu->setText(i18n("Choose from the list below which component should be used by default for the %1 service.", name));
+	}
+	else if (cfgType==QLatin1String("internal_email"))
+	{
+		loadedConfigWidget = new CfgEmailClient(configContainer);
+	}
+#ifdef Q_OS_UNIX
+	else if (cfgType==QLatin1String("internal_terminal"))
+	{
+		loadedConfigWidget = new CfgTerminalEmulator(configContainer);
+	}
+#endif
+	else if (cfgType==QLatin1String("internal_filemanager"))
+	{
+		loadedConfigWidget = new CfgFileManager(configContainer);
+	}
+	else if (cfgType==QLatin1String("internal_browser"))
+	{
+		loadedConfigWidget = new CfgBrowser(configContainer);
+	}
+
+	if (loadedConfigWidget) {
+		configWidgetMap.insert(service, loadedConfigWidget);
+		configContainer->addWidget(loadedConfigWidget);
+		connect(loadedConfigWidget, SIGNAL(changed(bool)), this, SLOT(emitChanged(bool)));
+	}
 }
 
 void ComponentChooser::slotServiceSelected(QListWidgetItem* it) {
@@ -149,78 +182,20 @@ void ComponentChooser::slotServiceSelected(QListWidgetItem* it) {
 	if (somethingChanged) {
 		if (KMessageBox::questionYesNo(this,i18n("<qt>You changed the default component of your choice, do want to save that change now ?</qt>"),QString(),KStandardGuiItem::save(),KStandardGuiItem::discard())==KMessageBox::Yes) save();
 	}
-	KConfig cfg(it->data(Qt::UserRole).toString(), KConfig::SimpleConfig);
+	const QString &service = it->data(Qt::UserRole).toString();
+	KConfig cfg(service, KConfig::SimpleConfig);
 
 	ComponentDescription->setText(cfg.group(QByteArray()).readEntry("Comment",i18n("No description available")));
 	ComponentDescription->setMinimumSize(ComponentDescription->sizeHint());
 
-
-	QString cfgType=cfg.group(QByteArray()).readEntry("configurationType");
-	QWidget *newConfigWidget = nullptr;
-	if (cfgType.isEmpty() || (cfgType==QLatin1String("component")))
-	{
-		if (!(configWidget && qobject_cast<CfgComponent*>(configWidget)))
-		{
-			CfgComponent* cfgcomp = new CfgComponent(configContainer);
-                        cfgcomp->ChooserDocu->setText(i18n("Choose from the list below which component should be used by default for the %1 service.", it->text()));
-			newConfigWidget = cfgcomp;
-		}
-                else
-                {
-                        static_cast<CfgComponent*>(configWidget)->ChooserDocu->setText(i18n("Choose from the list below which component should be used by default for the %1 service.", it->text()));
-                }
-	}
-	else if (cfgType==QLatin1String("internal_email"))
-	{
-		if (!(configWidget && qobject_cast<CfgEmailClient*>(configWidget)))
-		{
-			newConfigWidget = new CfgEmailClient(configContainer);
-		}
-
-	}
-#ifdef Q_OS_UNIX
-	else if (cfgType==QLatin1String("internal_terminal"))
-	{
-		if (!(configWidget && qobject_cast<CfgTerminalEmulator*>(configWidget)))
-		{
-			newConfigWidget = new CfgTerminalEmulator(configContainer);
-		}
-
-	}
-#endif
-	else if (cfgType==QLatin1String("internal_filemanager"))
-	{
-		if (!(configWidget && qobject_cast<CfgFileManager*>(configWidget)))
-		{
-			newConfigWidget = new CfgFileManager(configContainer);
-		}
-
-	}
-	else if (cfgType==QLatin1String("internal_browser"))
-	{
-		if (!(configWidget && qobject_cast<CfgBrowser*>(configWidget)))
-		{
-			newConfigWidget = new CfgBrowser(configContainer);
-		}
-
-	}
-
-	if (newConfigWidget)
-	{
-		configContainer->addWidget(newConfigWidget);
-		configContainer->setCurrentWidget (newConfigWidget);
-		configContainer->removeWidget(configWidget);
-		delete configWidget;
-		configWidget=newConfigWidget;
-		connect(configWidget,SIGNAL(changed(bool)),this,SLOT(emitChanged(bool)));
-	        configContainer->setMinimumSize(configWidget->sizeHint());
-	}
-
-	if (configWidget)
+	configWidget = configWidgetMap.value(service);
+	if (configWidget) {
+		configContainer->setCurrentWidget(configWidget);
 		dynamic_cast<CfgPlugin*>(configWidget)->load(&cfg);
+	}
 
-        emitChanged(false);
-	latestEditedService=it->data(Qt::UserRole).toString();
+	emitChanged(false);
+	latestEditedService = service;
 }
 
 
@@ -232,7 +207,9 @@ void ComponentChooser::emitChanged(bool val) {
 
 ComponentChooser::~ComponentChooser()
 {
-	delete configWidget;
+	for (QWidget *configWidget : configWidgetMap) {
+		delete configWidget;
+	}
 }
 
 void ComponentChooser::load() {
