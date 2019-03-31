@@ -106,7 +106,7 @@ static QFont nearestExistingFont(const QFont &font)
 }
 
 /**** FontAASettings ****/
-#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
+#if defined(HAVE_FONTCONFIG) && HAVE_X11
 FontAASettings::FontAASettings(QObject *parent)
     : QObject(parent)
     , m_subPixelOptionsModel(new QStandardItemModel(this))
@@ -271,7 +271,7 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
     // Don't overwrite global settings unless explicitly asked for - e.g. the system
     // fontconfig setup may be much more complex than this module can provide.
     // TODO: With AASystem the changes already made by this module should be reverted somehow.
-#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
+#if defined(HAVE_FONTCONFIG) && HAVE_X11
     if (mod || (m_antiAliasing != m_antiAliasingOriginal) || m_dpi != m_dpiOriginal) {
         KMessageBox::information(nullptr,
                                  i18n(

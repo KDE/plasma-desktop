@@ -96,6 +96,9 @@ set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
                         TYPE REQUIRED
                         PURPOSE "Required for building the X11 based workspace"
                       )
+if(X11_FOUND)
+  set(HAVE_X11 1)
+endif()
 
 find_package(UDev)
 set_package_properties(UDev PROPERTIES DESCRIPTION "UDev library"
