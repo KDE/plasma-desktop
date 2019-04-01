@@ -26,13 +26,11 @@ import org.kde.kirigami 2.7 as Kirigami
 Kirigami.Page {
     id: positionPage
 
-    property QtObject settings
-
     title: i18n("Popup Position")
 
     ScreenPositionSelector {
         anchors.horizontalCenter: parent.horizontalCenter
-        selectedPosition: settings.popupPosition
-        onSelectedPositionChanged: settings.popupPosition = selectedPosition
+        selectedPosition: kcm.settings.popupPosition
+        onSelectedPositionChanged: kcm.settings.popupPosition = selectedPosition
     }
 }

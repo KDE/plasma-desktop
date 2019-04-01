@@ -39,26 +39,6 @@ KCM.SimpleKCM {
     }
 
     Kirigami.FormLayout {
-        RowLayout {
-            Kirigami.FormData.label: i18n("Do not disturb mode:")
-
-            QtControls.CheckBox {
-                id: dndTimeCheck
-                text: i18nc("Enable do not disturb during following times", "During following times:")
-            }
-
-            QtControls.Button {
-                text: i18nc("Choose times for do not disturb mode", "Choose...")
-                icon.name: "preferences-system-time"
-                onClicked: kcm.push("DndTimePage.qml")
-                enabled: dndTimeCheck.checked
-            }
-        }
-
-        Kirigami.Separator {
-            Kirigami.FormData.isSection: true
-        }
-
         QtControls.CheckBox {
             Kirigami.FormData.label: i18n("Critical notifications:")
             text: i18n("Show in do not disturb mode")
@@ -67,7 +47,7 @@ KCM.SimpleKCM {
         }
 
         QtControls.CheckBox {
-            text: i18n("Keep always on top")
+            text: i18n("Always keep on top")
             checked: kcm.settings.keepCriticalAlwaysOnTop
             onClicked: kcm.settings.keepCriticalAlwaysOnTop = checked
         }
@@ -93,42 +73,47 @@ KCM.SimpleKCM {
         }
 
         RowLayout {
+            spacing: 0
             QtControls.RadioButton {
                 id: positionCustomPosition
-                text: i18n("Custom Position")
                 checked: kcm.settings.popupPosition !== NotificationManager.Settings.NearWidget
+                activeFocusOnTab: false
+
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: positionCustomButton.clicked()
+                }
             }
             QtControls.Button {
-                text: i18n("Choose...")
+                id: positionCustomButton
+                text: i18n("Choose Custom Position...")
                 icon.name: "preferences-desktop-display"
                 onClicked: kcm.push("PopupPositionPage.qml")
-                enabled: positionCustomPosition.checked
             }
         }
 
-        QtControls.ComboBox {
-            Layout.fillWidth: false
-            Kirigami.FormData.label: i18n("Hide popup after:")
-            textRole: "label"
-            currentIndex: {
-                var idx = model.findIndex(function (item) {
-                    return item.value === kcm.settings.popupTimeout;
-                });
-                // would be neat if we could add a custom timeout if setting isn't listed
-                return idx !== -1 ? idx : 0;
-            }
+        TextMetrics {
+            id: timeoutSpinnerMetrics
+            font: timeoutSpinner.font
+            text: i18np("%1 second", "%1 seconds", 888)
+        }
 
-            model: [
-                {label: i18n("5 seconds"), value: 5 * 1000},
-                {label: i18n("7 seconds"), value: 7 * 1000},
-                {label: i18n("10 seconds"), value: 10 * 1000},
-                {label: i18n("15 seconds"), value: 15 * 1000},
-                {label: i18n("30 seconds"), value: 30 * 1000},
-                {label: i18n("1 minute"), value: 60 * 1000}
-            ]
-            onActivated: kcm.settings.popupTimeout = model[index].value
-            // FIXME proper sizing, especially for the popup
-            Layout.maximumWidth: Kirigami.Units.gridUnit * 6
+        QtControls.SpinBox {
+            id: timeoutSpinner
+            Kirigami.FormData.label: i18n("Hide popup after:")
+            Layout.preferredWidth: timeoutSpinnerMetrics.width + leftPadding + rightPadding
+            from: 1000 // 1 second
+            to: 120000 // 2 minutes
+            stepSize: 1000
+            value: kcm.settings.popupTimeout
+            editable: true
+            valueFromText: function(text, locale) {
+                return parseInt(text) * 1000;
+            }
+            textFromValue: function(value, locale) {
+                return i18np("%1 second", "%1 seconds", Math.round(value / 1000));
+            }
+            onValueModified: kcm.settings.popupTimeout = value
         }
 
         Kirigami.Separator {
@@ -171,8 +156,9 @@ KCM.SimpleKCM {
         }
 
         QtControls.Button {
-            text: i18n("Application Settings")
-            icon.name: "preferences-desktop-notification"
+            Kirigami.FormData.label: i18n("Applications:")
+            text: i18n("Configure...")
+            icon.name: "configure"
             onClicked: kcm.push("SourcesPage.qml")
         }
     }

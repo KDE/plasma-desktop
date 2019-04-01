@@ -93,7 +93,13 @@ ColumnLayout {
         }
 
         QtControls.CheckBox {
-            text: i18n("Notification badges")
+            text: i18n("Show in history")
+            checked: eventsColumn.behavior & NotificationManager.Settings.ShowInHistory
+            onClicked: eventsColumn.setBehavior(NotificationManager.Settings.ShowInHistory, checked)
+        }
+
+        QtControls.CheckBox {
+            text: i18n("Show notification badges")
             enabled: !!eventsColumn.appData.desktopEntry
             checked: eventsColumn.behavior & NotificationManager.Settings.ShowBadges
             onClicked: eventsColumn.setBehavior(NotificationManager.Settings.ShowBadges, checked)
