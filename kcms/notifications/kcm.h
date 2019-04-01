@@ -32,10 +32,6 @@ namespace NotificationManager {
 class Settings;
 }
 
-namespace KActivities {
-class ActivitiesModel;
-}
-
 class KCMNotifications : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
@@ -44,8 +40,6 @@ class KCMNotifications : public KQuickAddons::ConfigModule
     Q_PROPERTY(FilterProxyModel *filteredModel READ filteredModel CONSTANT)
 
     Q_PROPERTY(NotificationManager::Settings *settings READ settings CONSTANT)
-
-    Q_PROPERTY(KActivities::ActivitiesModel *activitiesModel READ activitiesModel CONSTANT)
 
 public:
     KCMNotifications(QObject *parent, const QVariantList &args);
@@ -63,19 +57,17 @@ public:
 
     NotificationManager::Settings *settings() const;
 
-    KActivities::ActivitiesModel *activitiesModel() const;
-
 public Q_SLOTS:
     void load() override;
     void save() override;
     void defaults() override;
 
 private:
+    void processPendingDeletions();
+
     SourcesModel *m_sourcesModel;
     FilterProxyModel *m_filteredModel;
 
     NotificationManager::Settings *m_settings;
-
-    KActivities::ActivitiesModel *m_activitiesModel;
 
 };

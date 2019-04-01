@@ -120,6 +120,7 @@ Kirigami.Page {
                         width: sourcesList.width
                         text: model.display
                         highlighted: ListView.isCurrentItem
+                        opacity: model.pendingDeletion ? 0.6 : 1
                         onClicked: {
                             var idx = kcm.filteredModel.makePersistentModelIndex(index, 0);
                             kcm.filteredModel.setCurrentIndex(idx);
@@ -132,6 +133,7 @@ Kirigami.Page {
                                 Layout.preferredWidth: Kirigami.Units.iconSizes.small
                                 Layout.preferredHeight: Kirigami.Units.iconSizes.small
                                 source: model.decoration
+                                enabled: !model.pendingDeletion
                             }
 
                             QtControls.Label {
@@ -144,13 +146,15 @@ Kirigami.Page {
 
                             // FIXME alignment
                             QtControls.ToolButton {
-                                Layout.topMargin: -sourceDelegate.topPadding
-                                Layout.bottomMargin: -sourceDelegate.bottomPadding
-                                Layout.preferredWidth: height
-                                Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                                icon.name: "edit-delete"
-                                opacity: 0.6
+                                Layout.preferredWidth: Kirigami.Units.iconSizes.small + leftPadding + rightPadding
+                                Layout.preferredHeight: Kirigami.Units.iconSizes.small + topPadding + bottomPadding
+                                icon.name: model.pendingDeletion ? "edit-undo" : "edit-delete"
                                 visible: model.removable
+                                onClicked: model.pendingDeletion = !model.pendingDeletion
+
+                                QtControls.ToolTip {
+                                    text: model.pendingDeletion ? i18n("Undo Remove") : i18n("Remove")
+                                }
                             }
                         }
                     }

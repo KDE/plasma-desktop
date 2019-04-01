@@ -80,7 +80,7 @@ QVariant SourcesModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    if (index.internalId()) {
+    if (index.internalId()) { // event
         const auto &event = m_data.at(index.internalId() - 1).events.at(index.row());
 
         switch (role) {
@@ -109,6 +109,7 @@ QVariant SourcesModel::data(const QModelIndex &index, int role) const
     case NotifyRcNameRole: return source.notifyRcName;
     case DesktopEntryRole: return source.desktopEntry;
     case RemovableRole: return source.removable;
+    case PendingDeletionRole: return source.pendingDeletion;
     }
 
     return QVariant();
@@ -120,18 +121,32 @@ bool SourcesModel::setData(const QModelIndex &index, const QVariant &value, int 
         return false;
     }
 
-    if (!index.internalId()) {
-        return false;
-    }
-
     bool dirty = false;
 
-    auto &event = m_data[index.internalId() - 1].events[index.row()];
-    switch (role) {
-    case ActionsRole:
-        event.actions = value.toStringList();
-        dirty = true;
-        break;
+    if (index.internalId()) { // event
+        auto &event = m_data[index.internalId() - 1].events[index.row()];
+        switch (role) {
+        case ActionsRole: {
+            const QStringList newActions = value.toStringList();
+            if (event.actions != newActions) {
+                event.actions = newActions;
+                dirty = true;
+            }
+            break;
+        }
+        }
+    } else { // source
+        auto &source = m_data[index.row()];
+        switch (role) {
+        case PendingDeletionRole: {
+            const bool newPending = value.toBool();
+            if (source.pendingDeletion != newPending) {
+                source.pendingDeletion = newPending;
+                dirty = true;
+            }
+            emit pendingDeletionsChanged();
+        }
+        }
     }
 
     if (dirty) {
@@ -182,7 +197,8 @@ QHash<int, QByteArray> SourcesModel::roleNames() const
         {DesktopEntryRole, QByteArrayLiteral("desktopEntry")},
         {EventIdRole, QByteArrayLiteral("eventId")},
         {ActionsRole, QByteArrayLiteral("actions")},
-        {RemovableRole, QByteArrayLiteral("removable")}
+        {RemovableRole, QByteArrayLiteral("removable")},
+        {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")}
     };
 }
 
@@ -245,7 +261,8 @@ void SourcesModel::load()
                 desktopEntry,
                 {}, // events
                 config,
-                false // removable
+                false, // removable
+                false // pendingDeletion
             };
 
             QVector<EventData> events;
@@ -301,9 +318,12 @@ void SourcesModel::load()
             service->desktopEntryName(),
             {},
             nullptr,
-            false // removable
+            false, // removable
+            false // pendingDeletion
         };
         fdoAppsData.append(source);
+
+        desktopEntries.append(service->desktopEntryName());
     }
 
     const QStringList seenApps = KSharedConfig::openConfig(QStringLiteral("plasmanotifyrc"))->group("Applications").groupList();
@@ -325,7 +345,8 @@ void SourcesModel::load()
             service->desktopEntryName(),
             {},
             nullptr,
-            true // removable
+            true, // removable
+            false // pendingDeletion
         };
         fdoAppsData.append(source);
     }
@@ -342,4 +363,29 @@ void SourcesModel::load()
     m_data << servicesData << knotifyAppsData << fdoAppsData;
 
     endResetModel();
+}
+
+QStringList SourcesModel::pendingDeletions() const
+{
+    QStringList pendingDeletions;
+
+    for (const auto &item : m_data) {
+        if (item.pendingDeletion) {
+            // Only apps can be deleted so we can assume it has a desktopEntry
+            pendingDeletions.append(item.desktopEntry);
+        }
+    }
+
+    return pendingDeletions;
+}
+
+void SourcesModel::removeItemsPendingDeletion()
+{
+    for (int i = m_data.count() - 1; i >= 0; --i) {
+        if (m_data.at(i).pendingDeletion) {
+            beginRemoveRows(QModelIndex(), i, i);
+            m_data.remove(i);
+            endRemoveRows();
+        }
+    }
 }

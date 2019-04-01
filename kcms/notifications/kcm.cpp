@@ -28,8 +28,6 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 
-#include <KActivities/ActivitiesModel>
-
 #include <algorithm>
 
 #include "sourcesmodel.h"
@@ -44,15 +42,13 @@ KCMNotifications::KCMNotifications(QObject *parent, const QVariantList &args)
     , m_sourcesModel(new SourcesModel(this))
     , m_filteredModel(new FilterProxyModel(this))
     , m_settings(new NotificationManager::Settings(this))
-    , m_activitiesModel(new KActivities::ActivitiesModel(this))
 {
+
     const char uri[] = "org.kde.private.kcms.notifications";
     qmlRegisterUncreatableType<SourcesModel>(uri, 1, 0, "SourcesModel",
                                              QStringLiteral("Cannot create instances of SourcesModel"));
     qmlRegisterType<FilterProxyModel>();
     qmlProtectModule(uri, 1);
-
-    qmlRegisterType<KActivities::ActivitiesModel>();
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm_notifications"), i18n("Notifications"),
                                        QStringLiteral("5.0"), QString(), KAboutLicense::GPL);
@@ -60,6 +56,10 @@ KCMNotifications::KCMNotifications(QObject *parent, const QVariantList &args)
     setAboutData(about);
 
     m_filteredModel->setSourceModel(m_sourcesModel);
+
+    connect(m_sourcesModel, &SourcesModel::pendingDeletionsChanged, this, [this] {
+        setNeedsSave(true);
+    });
 }
 
 KCMNotifications::~KCMNotifications()
@@ -82,11 +82,6 @@ NotificationManager::Settings *KCMNotifications::settings() const
     return m_settings;
 }
 
-KActivities::ActivitiesModel *KCMNotifications::activitiesModel() const
-{
-    return m_activitiesModel;
-}
-
 void KCMNotifications::load()
 {
     m_settings->load();
@@ -98,6 +93,7 @@ void KCMNotifications::load()
 
 void KCMNotifications::save()
 {
+    processPendingDeletions();
     m_settings->save();
     //setNeedsSave(false);
 }
@@ -106,6 +102,17 @@ void KCMNotifications::defaults()
 {
     m_settings->defaults();
     //setNeedsSave(true);
+}
+
+void KCMNotifications::processPendingDeletions()
+{
+    const QStringList pendingDeletions = m_sourcesModel->pendingDeletions();
+
+    for (const QString &desktopEntry : pendingDeletions) {
+        m_settings->forgetKnownApplication(desktopEntry);
+    }
+
+    m_sourcesModel->removeItemsPendingDeletion();
 }
 
 #include "kcm.moc"

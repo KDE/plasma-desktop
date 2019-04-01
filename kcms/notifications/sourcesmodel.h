@@ -51,6 +51,7 @@ struct SourceData
     KConfig *config; // KSharedConfig::Ptr?
 
     bool removable; // for "observed" apps
+    bool pendingDeletion;
 
     QString display() const
     {
@@ -73,7 +74,8 @@ public:
 
         EventIdRole,
         ActionsRole,
-        RemovableRole // for "observed" apps
+        RemovableRole, // for "observed" apps
+        PendingDeletionRole
     };
 
     enum Type {
@@ -96,9 +98,13 @@ public:
 
     QHash<int, QByteArray> roleNames() const override;
 
+    QStringList pendingDeletions() const;
+    void removeItemsPendingDeletion();
+
     void load();
 
 Q_SIGNALS:
+    void pendingDeletionsChanged();
 
 private:
     QVector<SourceData> m_data;

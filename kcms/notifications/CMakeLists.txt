@@ -10,7 +10,6 @@ set(kcm_notifications_SRCS
 add_library(kcm_notifications MODULE ${kcm_notifications_SRCS})
 target_link_libraries(kcm_notifications
     KF5::KCMUtils
-    KF5::Activities
     KF5::CoreAddons
     KF5::Declarative
     KF5::GuiAddons
