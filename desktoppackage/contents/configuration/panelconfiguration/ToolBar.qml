@@ -22,13 +22,16 @@ import QtQuick.Layouts 1.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.configuration 2.0
+import org.kde.kirigami 2.0 as Kirigami
 
 Item {
     id: root
     state: parent.state
-    implicitWidth: Math.max(buttonsLayout.width, row.width) + units.smallSpacing * 2
+    implicitWidth: Math.max(buttonsLayout_1.width, buttonsLayout_2.width, row.width) + units.smallSpacing * 2
     implicitHeight: row.height + 20
 
+    readonly property string lockWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Lock Widgets")
+    readonly property string removePanelButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
     readonly property string addWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets...")
     readonly property string addSpacerButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Spacer")
     readonly property string settingsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "More Settings...")
@@ -46,6 +49,57 @@ Item {
                 contextMenuLoader.close()
             } else {
                 configDialog.close()
+            }
+        }
+    }
+
+    GridLayout {
+        id: buttonsLayout_1
+        rows: 1
+        columns: 1
+        flow: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? GridLayout.TopToBottom : GridLayout.LeftToRight
+
+        anchors.margins: rowSpacing
+        anchors.topMargin: plasmoid.formFactor === PlasmaCore.Types.Vertical ? rowSpacing + closeButton.height : rowSpacing
+
+        property bool showText: plasmoid.formFactor === PlasmaCore.Types.Vertical || (row.x + row.width < root.width - placeHolder.width - units.iconSizes.small*4 - units.largeSpacing*5)
+
+        rowSpacing: units.smallSpacing
+        columnSpacing: units.smallSpacing
+
+        PlasmaComponents.Button {
+            iconSource: "document-encrypt"
+            text: buttonsLayout_1.showText ? root.lockWidgetsButtonText : ""
+            tooltip: buttonsLayout_1.showText ? "" : root.lockWidgetsButtonText
+            Layout.fillWidth: true
+            onClicked: {
+                plasmoid.action("lock widgets").trigger();
+                configDialog.close();
+            }
+        }
+
+        Item {
+            width: units.smallSpacing
+            height: units.smallSpacing
+        }
+
+        Kirigami.Separator {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+        }
+
+        Item {
+            width: units.smallSpacing
+            height: units.smallSpacing
+        }
+
+        PlasmaComponents.Button {
+            iconSource: "delete"
+            text: buttonsLayout_1.showText ? root.removePanelButtonText : ""
+            tooltip: buttonsLayout_1.showText ? "" : root.removePanelButtonText
+            Layout.fillWidth: true
+            onClicked: {
+                plasmoid.action("remove").trigger();
             }
         }
     }
@@ -85,7 +139,7 @@ Item {
     }
 
     GridLayout {
-        id: buttonsLayout
+        id: buttonsLayout_2
         rows: 1
         columns: 1
         flow: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? GridLayout.TopToBottom : GridLayout.LeftToRight
@@ -98,8 +152,8 @@ Item {
         columnSpacing: units.smallSpacing
 
         PlasmaComponents.Button {
-            text: buttonsLayout.showText ? root.addWidgetsButtonText : ""
-            tooltip: buttonsLayout.showText ? "" : root.addWidgetsButtonText
+            text: buttonsLayout_2.showText ? root.addWidgetsButtonText : ""
+            tooltip: buttonsLayout_2.showText ? "" : root.addWidgetsButtonText
             iconSource: "list-add"
             Layout.fillWidth: true
             onClicked: {
@@ -110,8 +164,8 @@ Item {
 
         PlasmaComponents.Button {
             iconSource: "distribute-horizontal-x"
-            text: buttonsLayout.showText ? root.addSpacerButtonText : ""
-            tooltip: buttonsLayout.showText ? "" : root.addSpacerButtonText
+            text: buttonsLayout_2.showText ? root.addSpacerButtonText : ""
+            tooltip: buttonsLayout_2.showText ? "" : root.addSpacerButtonText
             Layout.fillWidth: true
             onClicked: {
                 configDialog.addPanelSpacer();
@@ -121,8 +175,8 @@ Item {
         PlasmaComponents.Button {
             id: settingsButton
             iconSource: "configure"
-            text: buttonsLayout.showText ? root.settingsButtonText : ""
-            tooltip: buttonsLayout.showText ? "" : root.settingsButtonText
+            text: buttonsLayout_2.showText ? root.settingsButtonText : ""
+            tooltip: buttonsLayout_2.showText ? "" : root.settingsButtonText
             Layout.fillWidth: true
             checkable: true
             onCheckedChanged: {
@@ -135,7 +189,8 @@ Item {
         }
 
         PlasmaComponents.ToolButton {
-            parent: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? buttonsLayout : root
+            id: closeButton
+            parent: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? buttonsLayout_2 : root
             anchors.right: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? undefined : parent.right
             iconSource: "window-close"
             tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Close")
@@ -181,7 +236,17 @@ Item {
                 }
             }
             AnchorChanges {
-                target: buttonsLayout
+                target: buttonsLayout_1
+                anchors {
+                    verticalCenter: root.verticalCenter
+                    top: undefined
+                    bottom: undefined
+                    left: root.left
+                    right: undefined
+                }
+            }
+            AnchorChanges {
+                target: buttonsLayout_2
                 anchors {
                     verticalCenter: root.verticalCenter
                     top: undefined
@@ -191,8 +256,12 @@ Item {
                 }
             }
             PropertyChanges {
-                target: buttonsLayout
-                width: buttonsLayout.implicitWidth
+                target: buttonsLayout_1
+                width: buttonsLayout_1.implicitWidth
+            }
+            PropertyChanges {
+                target: buttonsLayout_2
+                width: buttonsLayout_2.implicitWidth
             }
         },
         State {
@@ -211,7 +280,17 @@ Item {
                 }
             }
             AnchorChanges {
-                target: buttonsLayout
+                target: buttonsLayout_1
+                anchors {
+                    verticalCenter: root.verticalCenter
+                    top: undefined
+                    bottom: undefined
+                    left: root.left
+                    right: undefined
+                }
+            }
+            AnchorChanges {
+                target: buttonsLayout_2
                 anchors {
                     verticalCenter: root.verticalCenter
                     top: undefined
@@ -221,8 +300,12 @@ Item {
                 }
             }
             PropertyChanges {
-                target: buttonsLayout
-                width: buttonsLayout.implicitWidth
+                target: buttonsLayout_1
+                width: buttonsLayout_1.implicitWidth
+            }
+            PropertyChanges {
+                target: buttonsLayout_2
+                width: buttonsLayout_2.implicitWidth
             }
         },
         State {
@@ -241,7 +324,17 @@ Item {
                 }
             }
             AnchorChanges {
-                target: buttonsLayout
+                target: buttonsLayout_1
+                anchors {
+                    verticalCenter: undefined
+                    top: root.top
+                    bottom: undefined
+                    left: root.left
+                    right: root.right
+                }
+            }
+            AnchorChanges {
+                target: buttonsLayout_2
                 anchors {
                     verticalCenter: undefined
                     top: undefined
@@ -267,7 +360,17 @@ Item {
                 }
             }
             AnchorChanges {
-                target: buttonsLayout
+                target: buttonsLayout_1
+                anchors {
+                    verticalCenter: undefined
+                    top: root.top
+                    bottom: undefined
+                    left: root.left
+                    right: root.right
+                }
+            }
+            AnchorChanges {
+                target: buttonsLayout_2
                 anchors {
                     verticalCenter: undefined
                     top: undefined
