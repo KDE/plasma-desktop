@@ -99,7 +99,7 @@ Item {
 
         anchors {
             left: parent.left
-            leftMargin: (units.gridUnit * 4) - units.iconSizes.medium
+            leftMargin: units.smallSpacing * 6
             verticalCenter: parent.verticalCenter
         }
         width: units.iconSizes.medium
@@ -119,8 +119,8 @@ Item {
             //bottom: elementIcon.verticalCenter
             left: elementIcon.right
             right: arrow.left
-            leftMargin: units.gridUnit
-            rightMargin: units.gridUnit * 2
+            leftMargin: units.smallSpacing * 4
+            rightMargin: units.smallSpacing * 6
         }
         height: implicitHeight //undo PC2 height override, remove when porting to PC3
         // TODO: games should always show the by name!
@@ -135,7 +135,7 @@ Item {
         anchors {
             left: titleElement.left
             right: arrow.left
-            rightMargin: units.gridUnit * 2
+            rightMargin: units.smallSpacing * 4
             top: titleElement.bottom
         }
         height: implicitHeight
@@ -152,7 +152,7 @@ Item {
 
         anchors {
             right: parent.right
-            rightMargin: units.gridUnit * 2
+            rightMargin: units.smallSpacing * 6
             verticalCenter: parent.verticalCenter
         }
 
