@@ -51,7 +51,7 @@ class FontAASettings : public QObject
 
 public:
     enum AASetting { AAEnabled, AASystem, AADisabled };
-#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
+#if defined(HAVE_FONTCONFIG) && HAVE_X11
     FontAASettings(QObject *parent);
 
     bool save(KXftConfig::AntiAliasing::State aaState);
@@ -95,7 +95,7 @@ Q_SIGNALS:
     void subPixelCurrentIndexChanged();
     void hintingCurrentIndexChanged();
 
-#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
+#if defined(HAVE_FONTCONFIG) && HAVE_X11
 private:
     int m_excludeTo;
     int m_excludeToOriginal;
