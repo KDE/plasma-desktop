@@ -56,6 +56,7 @@ Item {
     property alias cfg_previewPlugins: previewPluginsDialog.previewPlugins
     property alias cfg_viewMode: viewMode.currentIndex
     property alias cfg_iconSize: iconSize.value
+    property alias cfg_labelWidth: labelWidth.currentIndex
     property alias cfg_textLines: textLines.value
 
     readonly property bool lockedByKiosk: !KAuthorized.authorize("editable_desktop_icons")
@@ -228,7 +229,7 @@ Item {
             id: iconSize
             visible: !isPopup || viewMode.currentIndex === 1
 
-            Kirigami.FormData.label: i18n("Size:")
+            Kirigami.FormData.label: i18n("Icon size:")
 
             minimumValue: 0
             maximumValue: 5
@@ -254,6 +255,19 @@ Item {
 
                 text: i18n("Large")
             }
+        }
+
+        ComboBox {
+            id: labelWidth
+            visible: !isPopup || viewMode.currentIndex === 1
+
+            Kirigami.FormData.label: i18n("Label width:")
+
+            model: [
+                i18n("Narrow"),
+                i18n("Medium"),
+                i18n("Wide")
+            ]
         }
 
         SpinBox {

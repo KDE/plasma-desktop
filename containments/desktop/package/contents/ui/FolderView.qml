@@ -607,7 +607,7 @@ FocusScope {
                     } else {
                         var iconWidth = iconSize + (2 * units.largeSpacing) + (2 * units.smallSpacing);
                         if (root.isContainment && isRootView && scrollArea.viewportWidth > 0) {
-                            var minIconWidth = Math.max(iconWidth, units.iconSizes.small * 6);
+                            var minIconWidth = Math.max(iconWidth, units.iconSizes.small * ((plasmoid.configuration.labelWidth * 2) + 4));
                             var extraWidth = calcExtraSpacing(minIconWidth, scrollArea.viewportWidth);
                             return minIconWidth + extraWidth;
                         } else {
