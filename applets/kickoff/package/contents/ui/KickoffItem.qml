@@ -134,8 +134,7 @@ Item {
 
         anchors {
             left: titleElement.left
-            right: arrow.left
-            rightMargin: units.smallSpacing * 4
+            right: arrow.right
             top: titleElement.bottom
         }
         height: implicitHeight
