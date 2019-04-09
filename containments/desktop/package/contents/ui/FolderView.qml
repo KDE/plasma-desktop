@@ -598,7 +598,7 @@ FocusScope {
                         var extraSpace = Math.max(containerSize - allColumnSize, 0);
                         extraSpacing = extraSpace / availableColumns;
                     }
-                    return Math.round(extraSpacing);
+                    return Math.floor(extraSpacing);
                 }
 
                 cellWidth: {
