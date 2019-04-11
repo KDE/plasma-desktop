@@ -101,18 +101,9 @@ void SchemeEditorDialog::on_schemeKnsUploadButton_clicked()
         }
     }
 
-    // find path
-    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-        QStringLiteral("color-schemes/") + m_schemeName + QStringLiteral(".colors"));
-    if (path.isEmpty() ) // if the color scheme file wasn't found
-    {
-        qDebug() << "path for color scheme " << m_schemeName << " couldn't be found";
-        return;
-    }
-
     // upload
     KNS3::UploadDialog dialog(QStringLiteral("colorschemes.knsrc"), this);
-    dialog.setUploadFile(QUrl::fromLocalFile(path) );
+    dialog.setUploadFile(QUrl::fromLocalFile(m_config->name()) );
     dialog.exec();
 }
 
