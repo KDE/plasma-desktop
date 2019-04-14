@@ -60,7 +60,6 @@ PlasmaCore.SvgItem {
     }
 
     svg: clockSvg
-    smooth: !anim.running
     transform: Rotation {
         id: rotation
         angle: 0
