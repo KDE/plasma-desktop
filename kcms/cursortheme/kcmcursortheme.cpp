@@ -462,7 +462,35 @@ void CursorThemeConfig::getNewClicked()
     if (dialog.exec()) {
         KNS3::Entry::List list = dialog.changedEntries();
         if (!list.isEmpty()) {
-            m_model->refreshList();
+            for (const KNS3::Entry& entry : list) {
+                if (entry.status() == KNS3::Entry::Deleted) {
+                    for (const QString& deleted : entry.uninstalledFiles()) {
+                        QVector<QStringRef> list = deleted.splitRef(QLatin1Char('/'));
+                        if (list.last() == QLatin1Char('*')) {
+                            list.takeLast();
+                        }
+                        QModelIndex idx = m_model->findIndex(list.last().toString());
+                        if (idx.isValid()) {
+                            m_model->removeTheme(idx);
+                        }
+                    }
+                } else if (entry.status() == KNS3::Entry::Installed) {
+                    for (const QString& created : entry.installedFiles()) {
+                        QStringList list = created.split(QLatin1Char('/'));
+                        if (list.last() == QLatin1Char('*')) {
+                            list.takeLast();
+                        }
+                        // Because we sometimes get some extra slashes in the installed files list
+                        list.removeAll({});
+                        // Because we'll also get the containing folder, if it was not already there
+                        // we need to ignore it.
+                        if (list.last() == QLatin1String(".icons")) {
+                            continue;
+                        }
+                        m_model->addTheme(list.join(QLatin1Char('/')));
+                    }
+                }
+            }
         }
     }
 }

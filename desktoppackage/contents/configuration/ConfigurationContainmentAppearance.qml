@@ -27,6 +27,7 @@ import org.kde.kirigami 2.5 as Kirigami
 
 ColumnLayout {
     id: root
+    spacing: 0
 
     property int formAlignment: wallpaperComboBox.Kirigami.ScenePosition.x - root.Kirigami.ScenePosition.x + (units.largeSpacing/2)
     property string currentWallpaper: ""
@@ -79,6 +80,7 @@ ColumnLayout {
     }
 
     Kirigami.FormLayout {
+        id: parentLayout // needed for twinFormLayouts to work in wallpaper plugins
         Layout.fillWidth: true
         QtControls.ComboBox {
             id: pluginComboBox

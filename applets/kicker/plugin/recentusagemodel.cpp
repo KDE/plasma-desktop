@@ -22,6 +22,7 @@
 #include "appsmodel.h"
 #include "appentry.h"
 #include "kastatsfavoritesmodel.h"
+#include <kio_version.h>
 
 #include <config-X11.h>
 
@@ -243,9 +244,14 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
         url.setScheme(QStringLiteral("file"));
     }
 
+#if KIO_VERSION >= QT_VERSION_CHECK(5,57,0)
+    // Avoid calling QT_LSTAT and accessing recent documents
+    const KFileItem fileItem(url, KFileItem::SkipMimeTypeFromContent);
+#else
     const KFileItem fileItem(url);
+#endif
 
-    if (!url.isValid() || !(fileItem.isFile() || fileItem.isDir())) {
+    if (!url.isValid()) {
         return QVariant();
     }
 

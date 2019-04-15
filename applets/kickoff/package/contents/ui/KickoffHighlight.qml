@@ -23,8 +23,8 @@ Item {
     PlasmaComponents.Highlight {
         anchors {
             fill: parent
-            leftMargin: units.gridUnit
-            rightMargin: units.gridUnit
+            leftMargin: units.smallSpacing * 4
+            rightMargin: units.smallSpacing * 4
         }
     }
 }

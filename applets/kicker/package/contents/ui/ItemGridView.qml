@@ -194,6 +194,8 @@ FocusScope {
             GridView {
                 id: gridView
 
+                signal itemContainsMouseChanged(bool containsMouse)
+
                 property bool usesPlasmaTheme: false
 
                 property int iconSize: units.iconSizes.huge
@@ -285,6 +287,7 @@ FocusScope {
 
                 onCurrentIndexChanged: {
                     if (currentIndex != -1) {
+                        hoverArea.hoverEnabled = false
                         focus = true;
                     }
                 }
@@ -339,6 +342,21 @@ FocusScope {
                         positionViewAtIndex(currentIndex, GridView.Contain);
                     } else {
                         itemGrid.keyNavDown();
+                    }
+                }
+
+                onItemContainsMouseChanged: {
+                    if (!containsMouse) {
+                        if (!actionMenu.opened) {
+                            gridView.currentIndex = -1;
+                        }
+
+                        hoverArea.pressX = -1;
+                        hoverArea.pressY = -1;
+                        hoverArea.lastX = -1;
+                        hoverArea.lastY = -1;
+                        hoverArea.pressedItem = null;
+                        hoverArea.hoverEnabled = true;
                     }
                 }
             }
@@ -447,20 +465,6 @@ FocusScope {
                         pressX = -1;
                         pressY = -1;
                     }
-                }
-            }
-
-            onContainsMouseChanged: {
-                if (!containsMouse) {
-                    if (!actionMenu.opened) {
-                        gridView.currentIndex = -1;
-                    }
-
-                    pressX = -1;
-                    pressY = -1;
-                    lastX = -1;
-                    lastY = -1;
-                    pressedItem = null;
                 }
             }
         }

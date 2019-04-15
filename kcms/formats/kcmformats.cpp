@@ -315,16 +315,26 @@ void KCMFormats::updateExample()
     QLocale cloc;
     QLocale mloc;
 
+    QString str;
+    QString glob = m_ui->comboGlobal->currentData().toString();
+
     if (useDetailed) {
-        nloc = QLocale(m_ui->comboNumbers->currentData().toString());
-        tloc = QLocale(m_ui->comboTime->currentData().toString());
-        cloc = QLocale(m_ui->comboCurrency->currentData().toString());
-        mloc = QLocale(m_ui->comboMeasurement->currentData().toString());
+        str = m_ui->comboNumbers->currentData().toString();
+        nloc = str.isEmpty() ? QLocale(glob) : QLocale(str);
+
+        str = m_ui->comboTime->currentData().toString();
+        tloc = str.isEmpty() ? QLocale(glob) : QLocale(str);
+
+        str = m_ui->comboCurrency->currentData().toString();
+        cloc = str.isEmpty() ? QLocale(glob) : QLocale(str);
+
+        str = m_ui->comboMeasurement->currentData().toString();
+        mloc = str.isEmpty() ? QLocale(glob) : QLocale(str);
     } else {
-        nloc = QLocale(m_ui->comboGlobal->currentData().toString());
-        tloc = QLocale(m_ui->comboGlobal->currentData().toString());
-        cloc = QLocale(m_ui->comboGlobal->currentData().toString());
-        mloc = QLocale(m_ui->comboGlobal->currentData().toString());
+        nloc = QLocale(glob);
+        tloc = QLocale(glob);
+        cloc = QLocale(glob);
+        mloc = QLocale(glob);
     }
 
     const QString numberExample = nloc.toString(1000.01);

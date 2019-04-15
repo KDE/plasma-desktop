@@ -19,7 +19,7 @@ FILES='UnicodeData.txt Blocks.txt Scripts.txt'
 mkdir -p ${1:-unicode} 
 
 for x in $FILES; do
-	wget "http://www.unicode.org/Public/UNIDATA/$x" -O "${1:-unicode}/$x"
+	wget "https://www.unicode.org/Public/UNIDATA/$x" -O "${1:-unicode}/$x"
 done
 
 echo 'Done.'

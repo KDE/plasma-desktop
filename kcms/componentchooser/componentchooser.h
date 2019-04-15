@@ -77,6 +77,10 @@ private:
 	bool somethingChanged;
 	QWidget *configWidget;
 	QVBoxLayout *myLayout;
+	QMap<QString, QWidget*> configWidgetMap;
+
+	void loadConfigWidget(const QString &, const QString &, const QString &);
+
 protected Q_SLOTS:
 	void emitChanged(bool);
 	void slotServiceSelected(QListWidgetItem *);

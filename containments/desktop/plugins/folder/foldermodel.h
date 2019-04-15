@@ -356,6 +356,7 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
         QSet<QString> m_mimeSet;
         QList<QRegExp> m_regExps;
         int m_screen = -1;
+        bool m_screenUsed;
         ScreenMapper *m_screenMapper = nullptr;
         QObject *m_appletInterface = nullptr;
         bool m_complete;

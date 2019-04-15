@@ -26,8 +26,8 @@
 #include <KIconLoader>
 #include <KLocalizedString>
 
-#include <kpeople/widgets/actions.h> //FIXME TODO: Pretty include in KPeople broken.
-#include <kpeople/widgets/persondetailsdialog.h>
+#include <KPeople/Widgets/Actions>
+#include <KPeople/Widgets/PersonDetailsDialog>
 #include <KPeople/PersonData>
 
 ContactEntry::ContactEntry(AbstractModel *owner, const QString &id) : AbstractEntry(owner)

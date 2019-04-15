@@ -93,17 +93,20 @@ set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"
 
 find_package(Fontconfig)
 set_package_properties(Fontconfig PROPERTIES DESCRIPTION "Font access configuration library"
-                       URL "http://www.freedesktop.org/wiki/Software/fontconfig"
+                       URL "https://www.freedesktop.org/wiki/Software/fontconfig"
                        TYPE OPTIONAL
                        PURPOSE "Needed to build font configuration and installation tools"
                       )
 
 find_package(X11)
 set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
-                        URL "http://www.x.org"
+                        URL "https://www.x.org"
                         TYPE REQUIRED
                         PURPOSE "Required for building the X11 based workspace"
                       )
+if(X11_FOUND)
+  set(HAVE_X11 1)
+endif()
 
 find_package(UDev)
 set_package_properties(UDev PROPERTIES DESCRIPTION "UDev library"

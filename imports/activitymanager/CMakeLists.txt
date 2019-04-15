@@ -14,7 +14,7 @@ find_package (KF5WindowSystem ${KF5_DEP_VERSION} CONFIG REQUIRED)
 find_package (X11)
 set_package_properties (
    X11 PROPERTIES DESCRIPTION "X11 libraries"
-   URL "http://www.x.org"
+   URL "https://www.x.org"
    TYPE REQUIRED
    )
 

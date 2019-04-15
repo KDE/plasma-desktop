@@ -122,7 +122,8 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_filterMode(NoFilter),
     m_filterPatternMatchAll(true),
     m_screenMapper(ScreenMapper::instance()),
-    m_complete(false)
+    m_complete(false),
+    m_screenUsed(false)
 {
     //needed to pass the job around with qml
     qmlRegisterType<KIO::DropJob>();
@@ -638,7 +639,9 @@ void FolderModel::setFilterMimeTypes(const QStringList &mimeList)
 
 void FolderModel::setScreen(int screen)
 {
-    if (m_screen == screen)
+    m_screenUsed = (screen != -1);
+
+    if (!m_screenUsed || m_screen == screen)
         return;
 
     m_screen = screen;
@@ -1556,20 +1559,18 @@ bool FolderModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParen
         const QUrl url = item.url();
         const int screen = m_screenMapper->screenForItem(url);
         // don't do anything if the folderview is not associated with a screen
-        if (m_screen != -1) {
-            if (screen == -1) {
-                // The item is not associated with a screen, probably because this is the first
-                // time we see it or the folderview was previously used as a regular applet.
-                // Associated with this folderview if the view is on the first available screen
-                if (m_screen == m_screenMapper->firstAvailableScreen(resolvedUrl())) {
-                    m_screenMapper->addMapping(url, m_screen, ScreenMapper::DelayedSignal);
-                } else {
-                    return false;
-                }
-            } else if (m_screen != screen) {
-                // the item belongs to a different screen, filter it out
+        if (m_screenUsed && screen == -1) {
+            // The item is not associated with a screen, probably because this is the first
+            // time we see it or the folderview was previously used as a regular applet.
+            // Associated with this folderview if the view is on the first available screen
+            if (m_screen == m_screenMapper->firstAvailableScreen(resolvedUrl())) {
+                m_screenMapper->addMapping(url, m_screen, ScreenMapper::DelayedSignal);
+            } else {
                 return false;
             }
+        } else if (m_screen != screen) {
+            // the item belongs to a different screen, filter it out
+            return false;
         }
     }
 

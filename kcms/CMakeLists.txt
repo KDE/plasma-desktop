@@ -2,7 +2,7 @@ remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_STRICT_ITERATORS -DQT_NO_CAST_FR
 
 find_package(Freetype)
 set_package_properties(Freetype PROPERTIES DESCRIPTION "A font rendering engine"
-                       URL "http://www.freetype.org"
+                       URL "https://www.freetype.org"
                        TYPE OPTIONAL
                        PURPOSE "Needed to build kfontinst, a simple font installer."
                       )

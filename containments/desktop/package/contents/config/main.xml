@@ -102,6 +102,10 @@
       <label>The icon size to use for Folder View icons. One of the list of Plasma icon sizes.</label>
       <default>4</default>
     </entry>
+    <entry name="labelWidth" type="Int">
+      <label>The width of the grid cells when using icon view. 0 = Narrow, 1 = Medium, 2 = Wide</label>
+      <default>1</default>
+    </entry>
     <entry name="textLines" type="Int">
       <label>The (maximum) number of lines of text to use below Folder View icons.</label>
       <default>2</default>

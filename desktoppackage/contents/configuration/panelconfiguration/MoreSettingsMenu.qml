@@ -127,24 +127,6 @@ PlasmaCore.Dialog {
             iconSource: panel.formFactor === PlasmaCore.Types.Vertical ? "zoom-fit-height" : "zoom-fit-width"
             onClicked: panel.maximize();
         }
-        PlasmaComponents.ToolButton {
-            Layout.fillWidth: true
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Lock Widgets")
-            iconSource: "document-encrypt"
-            onClicked: {
-                plasmoid.action("lock widgets").trigger();
-                configDialog.close();
-            }
-        }
-        PlasmaComponents.ToolButton {
-            Layout.fillWidth: true
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
-            iconSource: "delete"
-            onClicked: {
-                contextMenu.visible = false;
-                plasmoid.action("remove").trigger();
-            }
-        }
     }
 
     function hide() {

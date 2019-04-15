@@ -30,6 +30,8 @@ PlasmaCore.FrameSvgItem {
 
     property Item containment
 
+    property alias panelMask: root.mask
+
     readonly property bool verticalPanel: containment && containment.formFactor === PlasmaCore.Types.Vertical
 
     function adjustPrefix() {

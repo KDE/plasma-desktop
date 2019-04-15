@@ -110,6 +110,8 @@ Item {
         anchors.fill: parent
         active: root.visible && label.truncated
         mainItem: toolTipDelegate
+
+        onContainsMouseChanged: item.GridView.view.itemContainsMouseChanged(containsMouse)
     }
 
     Keys.onPressed: {
