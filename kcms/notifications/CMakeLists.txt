@@ -15,6 +15,7 @@ target_link_libraries(kcm_notifications
     KF5::GuiAddons
     KF5::I18n
     KF5::QuickAddons
+    KF5::NotifyConfig
     KF5::Service
     PW::LibNotificationManager
 )

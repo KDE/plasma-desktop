@@ -46,9 +46,27 @@ SourcesModel::SourcesModel(QObject *parent) : QAbstractItemModel(parent)
 
 SourcesModel::~SourcesModel() = default;
 
-QPersistentModelIndex SourcesModel::makePersistentModelIndex(int row) const
+QPersistentModelIndex SourcesModel::makePersistentModelIndex(const QModelIndex &idx) const
 {
-    return QPersistentModelIndex(index(row, 0));
+    return QPersistentModelIndex(idx);
+}
+
+QPersistentModelIndex SourcesModel::persistentIndexForDesktopEntry(const QString &desktopEntry) const
+{
+    const auto matches = match(index(0, 0), SourcesModel::DesktopEntryRole, desktopEntry, 1, Qt::MatchFixedString);
+    if (matches.isEmpty()) {
+        return QPersistentModelIndex();
+    }
+    return QPersistentModelIndex(matches.first());
+}
+
+QPersistentModelIndex SourcesModel::persistentIndexForNotifyRcName(const QString &notifyRcName) const
+{
+    const auto matches = match(index(0, 0), SourcesModel::NotifyRcNameRole, notifyRcName, 1, Qt::MatchFixedString);
+    if (matches.isEmpty()) {
+        return QPersistentModelIndex();
+    }
+    return QPersistentModelIndex(matches.first());
 }
 
 int SourcesModel::columnCount(const QModelIndex &parent) const
@@ -98,14 +116,7 @@ QVariant SourcesModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case Qt::DisplayRole: return source.display();
     case Qt::DecorationRole: return source.iconName;
-    case SourceTypeRole:
-        if (!source.notifyRcName.isEmpty()) {
-            if (!source.desktopEntry.isEmpty()) {
-                return KNotifyAppType;
-            }
-            return ServiceType;
-        }
-        return FdoAppType;
+    case SourceTypeRole: return source.desktopEntry.isEmpty() ? ServiceType : ApplicationType;
     case NotifyRcNameRole: return source.notifyRcName;
     case DesktopEntryRole: return source.desktopEntry;
     case RemovableRole: return source.removable;
@@ -210,17 +221,16 @@ void SourcesModel::load()
 
     QCollator collator;
 
+    QVector<SourceData> appsData;
     QVector<SourceData> servicesData;
-    QVector<SourceData> knotifyAppsData;
-    // apps that have the X-GNOME-UsesNotifications property or that have been observed sending notifications
-    QVector<SourceData> fdoAppsData;
 
     QStringList notifyRcFiles;
     QStringList desktopEntries;
 
+    // old code did KGlobal::dirs()->findAllResources("data", QStringLiteral("*/*.notifyrc")) but in KF5
+    // only notifyrc files in knotifications5/ folder are supported
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
                             QStringLiteral("knotifications5"), QStandardPaths::LocateDirectory);
-
     for (const QString &dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.notifyrc"));
         for (const QString &file : fileNames) {
@@ -229,10 +239,6 @@ void SourcesModel::load()
             }
 
             notifyRcFiles.append(file);
-
-            //const QString path = dir + QLatin1Char('/') + file;
-
-            //KConfig config(path, KConfig::NoGlobals, QStandardPaths::DataLocation);
 
             KConfig *config = new KConfig(file, KConfig::NoGlobals);
             config->addConfigSources(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
@@ -246,6 +252,10 @@ void SourcesModel::load()
             const QString notifyRcName = file.section(QLatin1Char('.'), 0, -2);
             const QString desktopEntry = globalGroup.readEntry(QStringLiteral("DesktopEntry"));
             if (!desktopEntry.isEmpty()) {
+                if (desktopEntries.contains(desktopEntry)) {
+                    continue;
+                }
+
                 desktopEntries.append(desktopEntry);
             }
 
@@ -271,7 +281,6 @@ void SourcesModel::load()
 
                 const QString eventId = regExp.match(group).captured(1);
                 // TODO context stuff
-
                 // TODO load defaults thing
 
                 EventData event{
@@ -292,7 +301,7 @@ void SourcesModel::load()
             source.events = events;
 
             if (!source.desktopEntry.isEmpty()) {
-                knotifyAppsData.append(source);
+                appsData.append(source);
             } else {
                 servicesData.append(source);
             }
@@ -321,12 +330,13 @@ void SourcesModel::load()
             false, // removable
             false // pendingDeletion
         };
-        fdoAppsData.append(source);
-
+        appsData.append(source);
         desktopEntries.append(service->desktopEntryName());
     }
 
-    const QStringList seenApps = KSharedConfig::openConfig(QStringLiteral("plasmanotifyrc"))->group("Applications").groupList();
+    KSharedConfig::Ptr plasmanotifyrc = KSharedConfig::openConfig(QStringLiteral("plasmanotifyrc"));
+    KConfigGroup applicationsGroup = plasmanotifyrc->group("Applications");
+    const QStringList seenApps = applicationsGroup.groupList();
     for (const QString &app : seenApps) {
         if (desktopEntries.contains(app)) {
             continue;
@@ -345,22 +355,21 @@ void SourcesModel::load()
             service->desktopEntryName(),
             {},
             nullptr,
-            true, // removable
+            applicationsGroup.group(app).readEntry("Seen", false), // removable
             false // pendingDeletion
         };
-        fdoAppsData.append(source);
+        appsData.append(source);
+        desktopEntries.append(service->desktopEntryName());
     }
 
     auto sortData = [&collator](const SourceData &a, const SourceData &b) {
         return collator.compare(a.display(), b.display()) < 0;
     };
 
+    std::sort(appsData.begin(), appsData.end(), sortData);
     std::sort(servicesData.begin(), servicesData.end(), sortData);
-    std::sort(knotifyAppsData.begin(), knotifyAppsData.end(), sortData);
-    // thse are both "Other apps", sort them together or come up with anothe heading "Further other apps"..
-    std::sort(fdoAppsData.begin(), fdoAppsData.end(), sortData);
 
-    m_data << servicesData << knotifyAppsData << fdoAppsData;
+    m_data << appsData << servicesData;
 
     endResetModel();
 }

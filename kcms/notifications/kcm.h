@@ -20,9 +20,6 @@
 
 #pragma once
 
-#include <QScopedPointer>
-#include <QPointer>
-
 #include <KQuickAddons/ConfigModule>
 
 class SourcesModel;
@@ -41,6 +38,11 @@ class KCMNotifications : public KQuickAddons::ConfigModule
 
     Q_PROPERTY(NotificationManager::Settings *settings READ settings CONSTANT)
 
+    // So it can show the respective settings module right away
+    Q_PROPERTY(QString initialDesktopEntry READ initialDesktopEntry WRITE setInitialDesktopEntry NOTIFY initialDesktopEntryChanged)
+    Q_PROPERTY(QString initialNotifyRcName READ initialNotifyRcName WRITE setInitialNotifyRcName NOTIFY initialNotifyRcNameChanged)
+    Q_PROPERTY(QString initialEventId READ initialEventId WRITE setInitialEventId NOTIFY initialEventIdChanged)
+
 public:
     KCMNotifications(QObject *parent, const QVariantList &args);
     ~KCMNotifications() override;
@@ -57,10 +59,26 @@ public:
 
     NotificationManager::Settings *settings() const;
 
+    QString initialDesktopEntry() const;
+    void setInitialDesktopEntry(const QString &desktopEntry);
+
+    QString initialNotifyRcName() const;
+    void setInitialNotifyRcName(const QString &notifyRcName);
+
+    QString initialEventId() const;
+    void setInitialEventId(const QString &eventId);
+
+    Q_INVOKABLE void configureEvents(const QString &notifyRcName, const QString &eventId, QQuickItem *ctx = nullptr);
+
 public Q_SLOTS:
     void load() override;
     void save() override;
     void defaults() override;
+
+signals:
+    void initialDesktopEntryChanged();
+    void initialNotifyRcNameChanged();
+    void initialEventIdChanged();
 
 private:
     void processPendingDeletions();
@@ -69,5 +87,9 @@ private:
     FilterProxyModel *m_filteredModel;
 
     NotificationManager::Settings *m_settings;
+
+    QString m_initialDesktopEntry;
+    QString m_initialNotifyRcName;
+    QString m_initialEventId;
 
 };

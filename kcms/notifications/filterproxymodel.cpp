@@ -40,30 +40,7 @@ void FilterProxyModel::setQuery(const QString &query)
         m_query = query;
         invalidateFilter();
         emit queryChanged();
-        emit currentIndexChanged();
     }
-}
-
-int FilterProxyModel::currentIndex() const
-{
-    if (m_currentIndex.isValid()) {
-        return m_currentIndex.row();
-    }
-    return -1;
-}
-
-void FilterProxyModel::setCurrentIndex(const QPersistentModelIndex &idx)
-{
-    const int oldIndex = currentIndex();
-    m_currentIndex = idx;
-    if (oldIndex != currentIndex()) {
-        emit currentIndexChanged();
-    }
-}
-
-QPersistentModelIndex FilterProxyModel::makePersistentModelIndex(int row) const
-{
-    return QPersistentModelIndex(index(row, 0));
 }
 
 bool FilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
@@ -72,7 +49,7 @@ bool FilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &sourc
         return true;
     }
 
-    const QModelIndex idx = source_parent.child(source_row, 0);
+    const QModelIndex idx = sourceModel()->index(source_row, 0, source_parent);
 
     const QString display = idx.data(Qt::DisplayRole).toString();
     if (display.contains(m_query, Qt::CaseInsensitive)) {

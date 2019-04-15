@@ -77,15 +77,18 @@ public:
         RemovableRole, // for "observed" apps
         PendingDeletionRole
     };
+    Q_ENUM(Roles)
 
     enum Type {
-        ServiceType,
-        KNotifyAppType,
-        FdoAppType
+        ApplicationType,
+        ServiceType
     };
     Q_ENUM(Type)
 
-    Q_INVOKABLE QPersistentModelIndex makePersistentModelIndex(int row) const;
+    Q_INVOKABLE QPersistentModelIndex makePersistentModelIndex(const QModelIndex &idx) const;
+
+    Q_INVOKABLE QPersistentModelIndex persistentIndexForDesktopEntry(const QString &desktopEntry) const;
+    Q_INVOKABLE QPersistentModelIndex persistentIndexForNotifyRcName(const QString &notifyRcName) const;
 
     int columnCount(const QModelIndex &parent) const override;
     int rowCount(const QModelIndex &parent) const override;

@@ -27,10 +27,15 @@ import org.kde.kcm 1.2 as KCM
 import org.kde.notificationmanager 1.0 as NotificationManager
 
 KCM.SimpleKCM {
+    id: root
     KCM.ConfigModule.quickHelp: i18n("This module lets you manage application and system notifications.")
-    KCM.ConfigModule.buttons: KCM.ConfigModule.Help | KCM.ConfigModule.Default | KCM.ConfigModule.Apply
+    KCM.ConfigModule.buttons: KCM.ConfigModule.Help | KCM.ConfigModule.Apply
 
-    implicitHeight: 550 // HACK FIXME
+    function openSourcesSettings() {
+        // TODO would be nice to re-use the current SourcesPage instead of pushing a new one that lost all state
+        // but there's no pageAt(index) method in KConfigModuleQml
+        kcm.push("SourcesPage.qml");
+    }
 
     Binding {
         target: kcm
@@ -59,24 +64,30 @@ KCM.SimpleKCM {
             onClicked: kcm.settings.lowPriorityPopups = checked
         }
 
+        QtControls.CheckBox {
+            text: i18n("Show in history")
+            checked: kcm.settings.lowPriorityHistory
+            onClicked: kcm.settings.lowPriorityHistory = checked
+        }
+
         QtControls.ButtonGroup {
             id: positionGroup
-            buttons: [positionNearWidget, positionCustomPosition]
+            buttons: [positionCloseToWidget, positionCustomPosition]
         }
 
         QtControls.RadioButton {
-            id: positionNearWidget
+            id: positionCloseToWidget
             Kirigami.FormData.label: i18n("Popup position:")
             text: i18nc("Popup position near notification plasmoid", "Near the notification icon") // "widget"
-            checked: kcm.settings.popupPosition === NotificationManager.Settings.NearWidget
-            onClicked: kcm.settings.popupPosition = NotificationManager.Settings.NearWidget
+            checked: kcm.settings.popupPosition === NotificationManager.Settings.CloseToWidget
+            onClicked: kcm.settings.popupPosition = NotificationManager.Settings.CloseToWidget
         }
 
         RowLayout {
             spacing: 0
             QtControls.RadioButton {
                 id: positionCustomPosition
-                checked: kcm.settings.popupPosition !== NotificationManager.Settings.NearWidget
+                checked: kcm.settings.popupPosition !== NotificationManager.Settings.CloseToWidget
                 activeFocusOnTab: false
 
                 MouseArea {
@@ -159,7 +170,14 @@ KCM.SimpleKCM {
             Kirigami.FormData.label: i18n("Applications:")
             text: i18n("Configure...")
             icon.name: "configure"
-            onClicked: kcm.push("SourcesPage.qml")
+            onClicked: root.openSourcesSettings()
+        }
+    }
+
+    Component.onCompleted: {
+        if (kcm.initialDesktopEntry || kcm.initialNotifyRcName) {
+            // FIXME doing that right in onCompleted doesn't work
+            Qt.callLater(root.openSourcesSettings);
         }
     }
 }

@@ -22,7 +22,7 @@ import QtQuick 2.9
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
 
-import org.kde.kirigami 2.7 as Kirigami
+import org.kde.kirigami 2.8 as Kirigami
 import org.kde.kcm 1.2 as KCM
 
 import org.kde.private.kcms.notifications 1.0 as Private
@@ -31,10 +31,39 @@ Kirigami.Page {
     id: sourcesPage
     title: i18n("Application Settings")
 
+    Component.onCompleted: {
+        // TODO the page is push'd in Qt.callLater, why is the model still not loaded when we get here?
+        Qt.callLater(function() {
+            if (kcm.initialDesktopEntry) {
+                appConfiguration.rootIndex = kcm.sourcesModel.persistentIndexForDesktopEntry(kcm.initialDesktopEntry);
+            } else if (kcm.initialNotifyRcName) {
+                appConfiguration.rootIndex = kcm.sourcesModel.persistentIndexForNotifyRcName(kcm.initialNotifyRcName);
+                if (kcm.initialEventId) {
+                    appConfiguration.configureEvents(kcm.initialEventId);
+                }
+            }
+
+            kcm.initialDesktopEntry = "";
+            kcm.initialNotifyRcName = "";
+            kcm.initialEventId = "";
+        });
+    }
+
     Binding {
         target: kcm.filteredModel
         property: "query"
         value: searchField.text
+    }
+
+    // We need to manually keep track of the index as we store the sourceModel index
+    // and then use a proxy model to filter it. We don't get any QML change signals anywhere
+    // and ListView needs a currentIndex number
+    Connections {
+        target: kcm.filteredModel
+        onRowsRemoved: sourcesList.updateCurrentIndex()
+        onRowsInserted: sourcesList.updateCurrentIndex()
+        // TODO re-create model index if possible
+        onModelReset: appConfiguration.rootIndex = undefined
     }
 
     RowLayout {
@@ -45,19 +74,9 @@ Kirigami.Page {
             Layout.minimumWidth: Kirigami.Units.gridUnit * 12
             Layout.preferredWidth: Math.round(rootRow.width / 3)
 
-            /*Kirigami.SearchField {
-                Layout.fillWidth: true
-            }*/
-            QtControls.TextField { // FIXME search field
+            Kirigami.SearchField {
                 id: searchField
                 Layout.fillWidth: true
-                placeholderText: i18n("Search...")
-                // TODO autofocus this?
-
-                Shortcut {
-                    sequence: StandardKey.Find
-                    onActivated: searchField.forceActiveFocus()
-                }
             }
 
             QtControls.ScrollView {
@@ -75,15 +94,16 @@ Kirigami.Page {
                     anchors {
                         fill: parent
                         margins: 2
-                        //leftMargin: sourcesScroll.QtControls.ScrollBar.vertical.visible ? 2 :  internal.scrollBarSpace/2 + 2
                     }
                     clip: true
                     activeFocusOnTab: true
-                    currentIndex: kcm.filteredModel.currentIndex
 
                     keyNavigationEnabled: true
                     keyNavigationWraps: true
                     highlightMoveDuration: 0
+
+                    model: kcm.filteredModel
+                    currentIndex: -1
 
                     section {
                         criteria: ViewSection.FullString
@@ -93,9 +113,8 @@ Kirigami.Page {
                             width: sourcesList.width
                             text: {
                                 switch (Number(section)) {
+                                case Private.SourcesModel.ApplicationType: return i18n("Applications");
                                 case Private.SourcesModel.ServiceType: return i18n("System Services");
-                                case Private.SourcesModel.KNotifyAppType: return i18n("Applications");
-                                case Private.SourcesModel.FdoAppType: return i18n("Other Applications");
                                 }
                             }
 
@@ -113,7 +132,21 @@ Kirigami.Page {
                         }
                     }
 
-                    model: kcm.filteredModel
+                    // We need to manually keep track of the index when we filter
+                    function updateCurrentIndex() {
+                        if (!appConfiguration.rootIndex || !appConfiguration.rootIndex.valid) {
+                            currentIndex = -1;
+                            return;
+                        }
+
+                        var filteredIdx = kcm.filteredModel.mapFromSource(appConfiguration.rootIndex);
+                        if (!filteredIdx.valid) {
+                            currentIndex = -1;
+                            return;
+                        }
+
+                        currentIndex = filteredIdx.row;
+                    }
 
                     delegate: QtControls.ItemDelegate {
                         id: sourceDelegate
@@ -122,10 +155,9 @@ Kirigami.Page {
                         highlighted: ListView.isCurrentItem
                         opacity: model.pendingDeletion ? 0.6 : 1
                         onClicked: {
-                            var idx = kcm.filteredModel.makePersistentModelIndex(index, 0);
-                            kcm.filteredModel.setCurrentIndex(idx);
-                            eventsConfiguration.rootIndex = idx;
-                            eventsConfiguration.appData = model
+                            var sourceIdx = kcm.filteredModel.mapToSource(kcm.filteredModel.index(index, 0));
+                            appConfiguration.rootIndex = kcm.sourcesModel.makePersistentModelIndex(sourceIdx);
+                            sourcesList.updateCurrentIndex();
                         }
 
                         contentItem: RowLayout {
@@ -142,6 +174,7 @@ Kirigami.Page {
                                 font: sourceDelegate.font
                                 color: sourceDelegate.highlighted || sourceDelegate.checked || (sourceDelegate.pressed && !sourceDelegate.checked && !sourceDelegate.sectionDelegate) ? Kirigami.Theme.highlightedTextColor : (sourceDelegate.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor)
                                 elide: Text.ElideRight
+                                textFormat: Text.PlainText
                             }
 
                             // FIXME alignment
@@ -158,6 +191,20 @@ Kirigami.Page {
                             }
                         }
                     }
+
+                    QtControls.Label {
+                        anchors {
+                            verticalCenter: parent.verticalCenter
+                            left: parent.left
+                            right: parent.right
+                            margins: Kirigami.Units.smallSpacing
+                        }
+                        horizontalAlignment: Text.AlignHCenter
+                        wrapMode: Text.WordWrap
+                        text: i18n("No application or event matches your search term.")
+                        visible: sourcesList.count === 0 && searchField.length > 0
+                        enabled: false
+                    }
                 }
             }
         }
@@ -167,10 +214,11 @@ Kirigami.Page {
             Layout.fillHeight: true
             Layout.preferredWidth: Math.round(rootRow.width / 3 * 2)
 
-            EventsPage {
-                id: eventsConfiguration
+            ApplicationConfiguration {
+                id: appConfiguration
                 anchors.fill: parent
-                visible: !!rootIndex
+                onRootIndexChanged: sourcesList.updateCurrentIndex()
+                visible: typeof appConfiguration.rootIndex !== "undefined" && appConfiguration.rootIndex.valid
             }
 
             QtControls.Label {
@@ -182,8 +230,8 @@ Kirigami.Page {
                 }
                 horizontalAlignment: Text.AlignHCenter
                 wrapMode: Text.WordWrap
-                text: i18n("No application or event matches your search term.")
-                visible: sourcesList.count === 0 && searchField.length > 0
+                text: i18n("Select an application from the list to configure its notification settings and behavior.")
+                visible: !appConfiguration.rootIndex || !appConfiguration.rootIndex.valid
             }
         }
     }

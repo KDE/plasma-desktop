@@ -28,8 +28,6 @@ class FilterProxyModel : public QSortFilterProxyModel
 
     Q_PROPERTY(QString query READ query WRITE setQuery NOTIFY queryChanged)
 
-    Q_PROPERTY(int currentIndex READ currentIndex NOTIFY currentIndexChanged)
-
 public:
     FilterProxyModel(QObject *parent = nullptr);
     ~FilterProxyModel() override;
@@ -37,20 +35,12 @@ public:
     QString query() const;
     void setQuery(const QString &query);
 
-    int currentIndex() const;
-
-    Q_INVOKABLE void setCurrentIndex(const QPersistentModelIndex &idx);
-
-    Q_INVOKABLE QPersistentModelIndex makePersistentModelIndex(int row) const;
-
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
 Q_SIGNALS:
     void queryChanged();
-    void currentIndexChanged();
 
 private:
     QString m_query;
-    QPersistentModelIndex m_currentIndex;
 
 };

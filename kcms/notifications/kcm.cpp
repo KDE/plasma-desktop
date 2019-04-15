@@ -20,12 +20,20 @@
 
 #include "kcm.h"
 
-#include <QGuiApplication>
+#include <QCommandLineParser>
+#include <QDialog>
+#include <QDialogButtonBox>
+#include <QPushButton>
+#include <QQuickItem>
+#include <QQuickWindow>
 #include <QStandardPaths>
+#include <QVBoxLayout>
+#include <QWindow>
 
 #include <KAboutData>
 #include <KConfigGroup>
 #include <KLocalizedString>
+#include <KNotifyConfigWidget>
 #include <KPluginFactory>
 
 #include <algorithm>
@@ -60,6 +68,29 @@ KCMNotifications::KCMNotifications(QObject *parent, const QVariantList &args)
     connect(m_sourcesModel, &SourcesModel::pendingDeletionsChanged, this, [this] {
         setNeedsSave(true);
     });
+
+    QStringList stringArgs;
+    stringArgs.reserve(args.count() + 1);
+    // need to add a fake argv[0] for QCommandLineParser
+    stringArgs.append(QStringLiteral("kcm_notifications"));
+    for (const QVariant &arg : args) {
+        stringArgs.append(arg.toString());
+    }
+
+    QCommandLineParser parser;
+
+    QCommandLineOption desktopEntryOption(QStringLiteral("desktop-entry"), QString(), QStringLiteral("desktop-entry"));
+    parser.addOption(desktopEntryOption);
+    QCommandLineOption notifyRcNameOption(QStringLiteral("notifyrc"), QString(), QStringLiteral("notifyrcname"));
+    parser.addOption(notifyRcNameOption);
+    QCommandLineOption eventIdOption(QStringLiteral("event-id"), QString(), QStringLiteral("event-id"));
+    parser.addOption(eventIdOption);
+
+    parser.parse(stringArgs);
+
+    setInitialDesktopEntry(parser.value(desktopEntryOption));
+    setInitialNotifyRcName(parser.value(notifyRcNameOption));
+    setInitialEventId(parser.value(eventIdOption));
 }
 
 KCMNotifications::~KCMNotifications()
@@ -82,26 +113,102 @@ NotificationManager::Settings *KCMNotifications::settings() const
     return m_settings;
 }
 
+QString KCMNotifications::initialDesktopEntry() const
+{
+    return m_initialDesktopEntry;
+}
+
+void KCMNotifications::setInitialDesktopEntry(const QString &desktopEntry)
+{
+    if (m_initialDesktopEntry != desktopEntry) {
+        m_initialDesktopEntry = desktopEntry;
+        emit initialDesktopEntryChanged();
+    }
+}
+
+QString KCMNotifications::initialNotifyRcName() const
+{
+    return m_initialNotifyRcName;
+}
+
+void KCMNotifications::setInitialNotifyRcName(const QString &notifyRcName)
+{
+    if (m_initialNotifyRcName != notifyRcName) {
+        m_initialNotifyRcName = notifyRcName;
+        emit initialNotifyRcNameChanged();
+    }
+}
+
+QString KCMNotifications::initialEventId() const
+{
+    return m_initialEventId;
+}
+
+void KCMNotifications::setInitialEventId(const QString &eventId)
+{
+    if (m_initialEventId != eventId) {
+        m_initialEventId = eventId;
+        emit initialEventIdChanged();
+    }
+}
+
+void KCMNotifications::configureEvents(const QString &notifyRcName, const QString &eventId, QQuickItem *ctx)
+{
+    // We're not using KNotifyConfigWidget::configure here as we want to handle the
+    // saving ourself (so we Apply with all other KCM settings) but there's no way
+    // to access the config object :(
+    // We also need access to the QDialog so we can set the KCM as transient parent.
+
+    QDialog *dialog = new QDialog(nullptr);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+    dialog->setWindowTitle(i18n("Configure Notifications"));
+
+    if (ctx && ctx->window()) {
+        dialog->winId(); // so it creates windowHandle
+        dialog->windowHandle()->setTransientParent(ctx->window());
+        dialog->setModal(true);
+    }
+
+    KNotifyConfigWidget *w = new KNotifyConfigWidget(dialog);
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
+    buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Apply | QDialogButtonBox::Cancel);
+    buttonBox->button(QDialogButtonBox::Apply)->setEnabled(false);
+
+    QVBoxLayout *layout = new QVBoxLayout;
+    layout->addWidget(w);
+    layout->addWidget(buttonBox);
+    dialog->setLayout(layout);
+
+    // TODO we should only save settings when clicking Apply in the main UI
+    connect(buttonBox->button(QDialogButtonBox::Apply), &QPushButton::clicked, w, &KNotifyConfigWidget::save);
+    connect(buttonBox->button(QDialogButtonBox::Ok), &QPushButton::clicked, w, &KNotifyConfigWidget::save);
+    connect(w, &KNotifyConfigWidget::changed, buttonBox->button(QDialogButtonBox::Apply), &QPushButton::setEnabled);
+
+    connect(buttonBox, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+
+    w->setApplication(notifyRcName);
+    w->selectEvent(eventId);
+
+    dialog->show();
+}
+
 void KCMNotifications::load()
 {
     m_settings->load();
     m_sourcesModel->load();
-
-    //m_config->markAsClean();
-    //m_config->reparseConfiguration();
 }
 
 void KCMNotifications::save()
 {
     processPendingDeletions();
     m_settings->save();
-    //setNeedsSave(false);
 }
 
 void KCMNotifications::defaults()
 {
     m_settings->defaults();
-    //setNeedsSave(true);
 }
 
 void KCMNotifications::processPendingDeletions()
