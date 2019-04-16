@@ -16,18 +16,16 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.0
+import QtQuick 2.5
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Controls 2.5
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
-
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.5 as Kirigami
 
 ColumnLayout {
+
     property string cfg_icon: plasmoid.configuration.icon
     property alias cfg_switchTabsOnHover: switchTabsOnHoverCheckbox.checked
     property alias cfg_showAppsByName: showApplicationsByNameCheckbox.checked
@@ -35,36 +33,22 @@ ColumnLayout {
     property alias cfg_alphaSort: alphaSort.checked
     property alias cfg_menuItems: configButtons.menuItems
 
-    spacing: units.smallSpacing
+    Kirigami.FormLayout {
 
-    RowLayout {
-        spacing: units.smallSpacing
-
-        QtControls.Label {
-            text: i18n("Icon:")
-        }
-
-        QtControls.Button {
+        Button {
             id: iconButton
-            Layout.minimumWidth: previewFrame.width + units.smallSpacing * 2
-            Layout.maximumWidth: Layout.minimumWidth
-            Layout.minimumHeight: previewFrame.height + units.smallSpacing * 2
-            Layout.maximumHeight: Layout.minimumWidth
+
+            Kirigami.FormData.label: i18n("Icon:")
+
+            implicitWidth: previewFrame.width + units.smallSpacing * 2
+            implicitHeight: previewFrame.height + units.smallSpacing * 2
 
             KQuickAddons.IconDialog {
                 id: iconDialog
-                onIconNameChanged: cfg_icon = iconName || "start-here-kde" // TODO use actual default
+                onIconNameChanged: cfg_icon = iconName || "start-here-kde"
             }
 
-            // just to provide some visual feedback, cannot have checked without checkable enabled
-            checkable: true
-            onClicked: {
-                checked = Qt.binding(function() { // never actually allow it being checked
-                    return iconMenu.status === PlasmaComponents.DialogStatus.Open
-                })
-
-                iconMenu.open(0, height)
-            }
+            onClicked: iconMenu.opened ? iconMenu.close() : iconMenu.open()
 
             PlasmaCore.FrameSvgItem {
                 id: previewFrame
@@ -81,88 +65,65 @@ ColumnLayout {
                     source: cfg_icon
                 }
             }
-        }
 
-        // QQC Menu can only be opened at cursor position, not a random one
-        PlasmaComponents.ContextMenu {
-            id: iconMenu
-            visualParent: iconButton
+            Menu {
+                id: iconMenu
 
-            PlasmaComponents.MenuItem {
-                text: i18nc("@item:inmenu Open icon chooser dialog", "Choose...")
-                icon: "document-open-folder"
-                onClicked: iconDialog.open()
-            }
-            PlasmaComponents.MenuItem {
-                text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
-                icon: "edit-clear"
-                onClicked: cfg_icon = "start-here-kde" // TODO reset to actual default
-            }
-        }
-    }
+                // Appear below the button
+                y: +parent.height
 
-    QtControls.CheckBox {
-        id: switchTabsOnHoverCheckbox
-        text: i18n("Switch tabs on hover")
-    }
-
-    QtControls.CheckBox {
-        id: showApplicationsByNameCheckbox
-        text: i18n("Show applications by name")
-    }
-
-    QtControls.CheckBox {
-        id: useExtraRunners
-        text: i18n("Expand search to bookmarks, files and emails")
-    }
-
-    QtControls.CheckBox {
-        id: alphaSort
-        text: i18n("Sort alphabetically")
-    }
-
-    Item {
-        width: height
-        height: units.gridUnit / 2
-    }
-
-    SystemPalette {
-        id: palette
-    }
-
-    PlasmaExtras.Heading {
-        level: 2
-        text: i18n("Menu Buttons")
-        color: palette.text
-    }
-
-    Row {
-        spacing: units.gridUnit
-        Column {
-            QtControls.Label {
-                text: i18n("Visible Tabs")
-                height: configButtons.cellHeight
-            }
-            QtControls.Label {
-                text: i18n("Hidden Tabs")
-                height: configButtons.cellHeight
+                MenuItem {
+                    text: i18nc("@item:inmenu Open icon chooser dialog", "Choose...")
+                    icon.name: "document-open-folder"
+                    onPressed: iconDialog.open()
+                }
+                MenuItem {
+                    text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
+                    icon.name: "edit-clear"
+                    onClicked: cfg_icon = "start-here-kde"
+                }
             }
         }
-        Column {
-            ConfigButtons {
-                id: configButtons
-            }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        CheckBox {
+            id: switchTabsOnHoverCheckbox
+
+            Kirigami.FormData.label: i18n("General:")
+
+            text: i18n("Switch tabs on hover")
+        }
+
+        CheckBox {
+            id: showApplicationsByNameCheckbox
+            text: i18n("Show applications by name")
+        }
+
+        CheckBox {
+            id: useExtraRunners
+            text: i18n("Expand search to bookmarks, files and emails")
+        }
+
+        CheckBox {
+            id: alphaSort
+            text: i18n("Sort alphabetically")
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
         }
     }
 
-    QtControls.Label {
+    ConfigButtons {
+        id: configButtons
+    }
+
+    Label {
         Layout.fillWidth: true
         text: i18n("Drag tabs between the boxes to show/hide them, or reorder the visible tabs by dragging.")
         wrapMode: Text.WordWrap
-    }
-
-    Item {
-        //spacer
-        Layout.fillHeight: true
     }
 }
