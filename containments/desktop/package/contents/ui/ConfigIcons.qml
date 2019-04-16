@@ -227,6 +227,8 @@ Item {
         // Size section
         Slider {
             id: iconSize
+
+            Layout.fillWidth: true
             visible: !isPopup || viewMode.currentIndex === 1
 
             Kirigami.FormData.label: i18n("Icon size:")
