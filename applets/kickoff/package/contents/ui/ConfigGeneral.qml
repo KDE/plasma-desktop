@@ -48,7 +48,7 @@ ColumnLayout {
                 onIconNameChanged: cfg_icon = iconName || "start-here-kde"
             }
 
-            onClicked: iconMenu.opened ? iconMenu.close() : iconMenu.open()
+            onPressed: iconMenu.opened ? iconMenu.close() : iconMenu.open()
 
             PlasmaCore.FrameSvgItem {
                 id: previewFrame
@@ -75,7 +75,7 @@ ColumnLayout {
                 MenuItem {
                     text: i18nc("@item:inmenu Open icon chooser dialog", "Choose...")
                     icon.name: "document-open-folder"
-                    onPressed: iconDialog.open()
+                    onClicked: iconDialog.open()
                 }
                 MenuItem {
                     text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
