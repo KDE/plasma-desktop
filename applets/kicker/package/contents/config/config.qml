@@ -24,7 +24,7 @@ import org.kde.plasma.configuration 2.0
 ConfigModel {
     ConfigCategory {
          name: i18n("General")
-         icon: "kde"
+         icon: "preferences-desktop-plasma"
          source: "ConfigGeneral.qml"
     }
 }
