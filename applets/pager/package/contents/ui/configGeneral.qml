@@ -17,21 +17,16 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.0
-import QtQuick.Controls 1.0 as QtControls
-import QtQuick.Layouts 1.0 as Layouts
+import QtQuick 2.5
+import QtQuick.Controls 2.5 as QtControls
+
+import org.kde.kirigami 2.5 as Kirigami
 
 
-//FIXME this causes a crash in Oxygen style
-//QtControls.GroupBox {
-Item {
+Kirigami.FormLayout {
 
-    width: childrenRect.width
-    height: childrenRect.height
-
-//FIXME enable when we're back to being a group box
-//     flat: true
-//     title: i18n("Appearance")
+    anchors.left: parent.left
+    anchors.right: parent.right
 
     property bool isActivityPager: (plasmoid.pluginName === "org.kde.plasma.activitypager")
 
@@ -45,14 +40,14 @@ Item {
     onCfg_displayedTextChanged: {
         switch (cfg_displayedText) {
         case 0:
-            displayedTextGroup.current = desktopNumberRadio;
+            displayedTextGroup.checkedButton = desktopNumberRadio;
             break;
         case 1:
-            displayedTextGroup.current = desktopNameRadio;
+            displayedTextGroup.checkedButton = desktopNameRadio;
             break;
         default:
         case 2:
-            displayedTextGroup.current = noTextRadio;
+            displayedTextGroup.checkedButton = noTextRadio;
             break;
         }
     }
@@ -60,10 +55,10 @@ Item {
     onCfg_currentDesktopSelectedChanged: {
         switch (cfg_currentDesktopSelected) {
         case 0:
-            currentDesktopSelectedGroup.current = doesNothingRadio;
+            currentDesktopSelectedGroup.checkedButton = doesNothingRadio;
             break;
         case 1:
-            currentDesktopSelectedGroup.current = showsDesktopRadio;
+            currentDesktopSelectedGroup.checkedButton = showsDesktopRadio;
             break;
         default:
             break;
@@ -75,107 +70,95 @@ Item {
         cfg_displayedTextChanged();
     }
 
-    QtControls.ExclusiveGroup {
+    QtControls.ButtonGroup {
         id: displayedTextGroup
     }
-    QtControls.ExclusiveGroup {
+    QtControls.ButtonGroup {
         id: currentDesktopSelectedGroup
     }
 
-    Layouts.GridLayout {
-        anchors.left: parent.left
-        columns: 2
-        QtControls.Label {
-            text: i18n("Display:")
-            Layouts.Layout.alignment: Qt.AlignVCenter|Qt.AlignRight
-        }
-        QtControls.RadioButton {
-            id: desktopNumberRadio
-            exclusiveGroup: displayedTextGroup
-            text: isActivityPager ? i18n("Activity number") : i18n("Desktop number")
-            onCheckedChanged: if (checked) cfg_displayedText = 0;
-        }
-        Item {
-            width: 2
-            height: 2
-            Layouts.Layout.rowSpan: 2
-        }
-        QtControls.RadioButton {
-            id: desktopNameRadio
-            exclusiveGroup: displayedTextGroup
-            text: isActivityPager ? i18n("Activity name") : i18n("Desktop name")
-            onCheckedChanged: if (checked) cfg_displayedText = 1;
-        }
-        QtControls.RadioButton {
-            id: noTextRadio
-            exclusiveGroup: displayedTextGroup
-            text: i18n("No text")
-            onCheckedChanged: if (checked) cfg_displayedText = 2;
-        }
 
-        Item {
-            width: 2
-            height: 2
-        } //spacer
+    QtControls.CheckBox {
+        id: showWindowIcons
 
-        QtControls.CheckBox {
-            id: showWindowIcons
-            text: i18n("Icons")
-        }
+        Kirigami.FormData.label: i18n("General:")
 
-        Item {
-            width: 2
-            height: 2
-        } //spacer
-
-        QtControls.CheckBox {
-            id: showOnlyCurrentScreen
-            text: i18n("Only the current screen")
-        }
-
-        Item {
-            width: 2
-            height: 2
-        } //spacer
-
-        QtControls.CheckBox {
-            id: wrapPage
-            text: i18n("Page navigation wraps around")
-        }
-
-        QtControls.Label {
-            text: i18n("Layout:")
-            Layouts.Layout.alignment: Qt.AlignVCenter|Qt.AlignRight
-            visible: isActivityPager
-        }
-
-        QtControls.ComboBox {
-            id: pagerLayout
-            model: [i18nc("The pager layout", "Default"), i18n("Horizontal"), i18n("Vertical")]
-            visible: isActivityPager
-        }
-
-        QtControls.Label {
-            text: i18n("Selecting current desktop:")
-            Layouts.Layout.alignment: Qt.AlignVCenter|Qt.AlignRight
-        }
-        QtControls.RadioButton {
-            id: doesNothingRadio
-            exclusiveGroup: currentDesktopSelectedGroup
-            text: i18n("Does nothing")
-            onCheckedChanged: if (checked) cfg_currentDesktopSelected = 0;
-        }
-        Item {
-            width: 2
-            height: 2
-            Layouts.Layout.rowSpan: 2
-        }
-        QtControls.RadioButton {
-            id: showsDesktopRadio
-            exclusiveGroup: currentDesktopSelectedGroup
-            text: i18n("Shows desktop")
-            onCheckedChanged: if (checked) cfg_currentDesktopSelected = 1;
-        }
+        text: i18n("Show application icons on window outlines")
     }
 
+    QtControls.CheckBox {
+        id: showOnlyCurrentScreen
+        text: i18n("Show only current screen")
+    }
+
+    QtControls.CheckBox {
+        id: wrapPage
+        text: i18n("Navigation wraps around")
+    }
+
+
+    Item {
+        Kirigami.FormData.isSection: true
+    }
+
+
+    QtControls.ComboBox {
+        id: pagerLayout
+
+        Kirigami.FormData.label: i18n("Layout:")
+
+        model: [i18nc("The pager layout", "Default"), i18n("Horizontal"), i18n("Vertical")]
+        visible: isActivityPager
+    }
+
+
+    Item {
+        Kirigami.FormData.isSection: true
+        visible: isActivityPager
+    }
+
+
+    QtControls.RadioButton {
+        id: noTextRadio
+
+        Kirigami.FormData.label: i18n("Text display:")
+
+        QtControls.ButtonGroup.group: displayedTextGroup
+        text: i18n("No text")
+        onCheckedChanged: if (checked) cfg_displayedText = 2;
+    }
+    QtControls.RadioButton {
+        id: desktopNumberRadio
+        QtControls.ButtonGroup.group: displayedTextGroup
+        text: isActivityPager ? i18n("Activity number") : i18n("Desktop number")
+        onCheckedChanged: if (checked) cfg_displayedText = 0;
+    }
+    QtControls.RadioButton {
+        id: desktopNameRadio
+        QtControls.ButtonGroup.group: displayedTextGroup
+        text: isActivityPager ? i18n("Activity name") : i18n("Desktop name")
+        onCheckedChanged: if (checked) cfg_displayedText = 1;
+    }
+
+
+    Item {
+        Kirigami.FormData.isSection: true
+    }
+
+
+    QtControls.RadioButton {
+        id: doesNothingRadio
+
+        Kirigami.FormData.label: isActivityPager ? i18n("Selecting current Activity:") : i18n("Selecting current virtual desktop:")
+
+        QtControls.ButtonGroup.group: currentDesktopSelectedGroup
+        text: i18n("Does nothing")
+        onCheckedChanged: if (checked) cfg_currentDesktopSelected = 0;
+    }
+    QtControls.RadioButton {
+        id: showsDesktopRadio
+        QtControls.ButtonGroup.group: currentDesktopSelectedGroup
+        text: i18n("Shows the desktop")
+        onCheckedChanged: if (checked) cfg_currentDesktopSelected = 1;
+    }
 }
