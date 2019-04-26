@@ -119,13 +119,18 @@ PlasmaComponents.ContextMenu {
         var maximumWidth = LayoutManager.maximumContextMenuTextWidth();
 
         sections.forEach(function (section) {
-            // Always show the "Actions:" header, since we visually merge
-            // This section with the one beneath it that shows universal actions
             if (section["actions"].length > 0 || section["group"] == "actions") {
-                var sectionHeader = newMenuItem(menu);
-                sectionHeader.text = section["title"];
-                sectionHeader.section = true;
-                menu.addMenuItem(sectionHeader, startNewInstanceItem);
+                // Don't add the "Actions" header if the menu has nothing but actions
+                // in it, because then it's redundant (all menus have actions)
+                if (
+                    (section["group"] != "actions") ||
+                    (section["group"] == "actions" && (sections[0]["actions"].length > 0 || sections[1]["actions"].length > 0))
+                ) {
+                    var sectionHeader = newMenuItem(menu);
+                    sectionHeader.text = section["title"];
+                    sectionHeader.section = true;
+                    menu.addMenuItem(sectionHeader, startNewInstanceItem);
+                }
             }
 
             for (var i = 0; i < section["actions"].length; ++i) {
