@@ -119,8 +119,6 @@ QVariant SourcesModel::data(const QModelIndex &index, int role) const
     case SourceTypeRole: return source.desktopEntry.isEmpty() ? ServiceType : ApplicationType;
     case NotifyRcNameRole: return source.notifyRcName;
     case DesktopEntryRole: return source.desktopEntry;
-    case RemovableRole: return source.removable;
-    case PendingDeletionRole: return source.pendingDeletion;
     }
 
     return QVariant();
@@ -144,18 +142,6 @@ bool SourcesModel::setData(const QModelIndex &index, const QVariant &value, int 
                 dirty = true;
             }
             break;
-        }
-        }
-    } else { // source
-        auto &source = m_data[index.row()];
-        switch (role) {
-        case PendingDeletionRole: {
-            const bool newPending = value.toBool();
-            if (source.pendingDeletion != newPending) {
-                source.pendingDeletion = newPending;
-                dirty = true;
-            }
-            emit pendingDeletionsChanged();
         }
         }
     }
@@ -207,9 +193,7 @@ QHash<int, QByteArray> SourcesModel::roleNames() const
         {NotifyRcNameRole, QByteArrayLiteral("notifyRcName")},
         {DesktopEntryRole, QByteArrayLiteral("desktopEntry")},
         {EventIdRole, QByteArrayLiteral("eventId")},
-        {ActionsRole, QByteArrayLiteral("actions")},
-        {RemovableRole, QByteArrayLiteral("removable")},
-        {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")}
+        {ActionsRole, QByteArrayLiteral("actions")}
     };
 }
 
@@ -269,10 +253,7 @@ void SourcesModel::load()
                 globalGroup.readEntry(QStringLiteral("IconName")),
                 notifyRcName,
                 desktopEntry,
-                {}, // events
-                config,
-                false, // removable
-                false // pendingDeletion
+                {} // events
             };
 
             QVector<EventData> events;
@@ -325,10 +306,7 @@ void SourcesModel::load()
             service->icon(),
             QString(), //notifyRcFile
             service->desktopEntryName(),
-            {},
-            nullptr,
-            false, // removable
-            false // pendingDeletion
+            {} // events
         };
         appsData.append(source);
         desktopEntries.append(service->desktopEntryName());
@@ -353,10 +331,7 @@ void SourcesModel::load()
             service->icon(),
             QString(), //notifyRcFile
             service->desktopEntryName(),
-            {},
-            nullptr,
-            applicationsGroup.group(app).readEntry("Seen", false), // removable
-            false // pendingDeletion
+            {}
         };
         appsData.append(source);
         desktopEntries.append(service->desktopEntryName());
@@ -372,29 +347,4 @@ void SourcesModel::load()
     m_data << appsData << servicesData;
 
     endResetModel();
-}
-
-QStringList SourcesModel::pendingDeletions() const
-{
-    QStringList pendingDeletions;
-
-    for (const auto &item : m_data) {
-        if (item.pendingDeletion) {
-            // Only apps can be deleted so we can assume it has a desktopEntry
-            pendingDeletions.append(item.desktopEntry);
-        }
-    }
-
-    return pendingDeletions;
-}
-
-void SourcesModel::removeItemsPendingDeletion()
-{
-    for (int i = m_data.count() - 1; i >= 0; --i) {
-        if (m_data.at(i).pendingDeletion) {
-            beginRemoveRows(QModelIndex(), i, i);
-            m_data.remove(i);
-            endRemoveRows();
-        }
-    }
 }

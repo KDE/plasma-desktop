@@ -25,8 +25,6 @@
 #include <QString>
 #include <QVector>
 
-class KConfig;
-
 struct EventData
 {
     QString name;
@@ -48,11 +46,6 @@ struct SourceData
 
     QVector<EventData> events;
 
-    KConfig *config; // KSharedConfig::Ptr?
-
-    bool removable; // for "observed" apps
-    bool pendingDeletion;
-
     QString display() const
     {
         return !name.isEmpty() ? name : comment;
@@ -73,9 +66,7 @@ public:
         DesktopEntryRole,
 
         EventIdRole,
-        ActionsRole,
-        RemovableRole, // for "observed" apps
-        PendingDeletionRole
+        ActionsRole
     };
     Q_ENUM(Roles)
 
@@ -101,13 +92,7 @@ public:
 
     QHash<int, QByteArray> roleNames() const override;
 
-    QStringList pendingDeletions() const;
-    void removeItemsPendingDeletion();
-
     void load();
-
-Q_SIGNALS:
-    void pendingDeletionsChanged();
 
 private:
     QVector<SourceData> m_data;

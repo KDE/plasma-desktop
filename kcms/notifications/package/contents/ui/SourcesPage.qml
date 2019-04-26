@@ -91,10 +91,6 @@ Kirigami.Page {
 
                 ListView {
                     id: sourcesList
-                    anchors {
-                        fill: parent
-                        margins: 2
-                    }
                     clip: true
                     activeFocusOnTab: true
 
@@ -153,7 +149,6 @@ Kirigami.Page {
                         width: sourcesList.width
                         text: model.display
                         highlighted: ListView.isCurrentItem
-                        opacity: model.pendingDeletion ? 0.6 : 1
                         onClicked: {
                             var sourceIdx = kcm.filteredModel.mapToSource(kcm.filteredModel.index(index, 0));
                             appConfiguration.rootIndex = kcm.sourcesModel.makePersistentModelIndex(sourceIdx);
@@ -165,7 +160,6 @@ Kirigami.Page {
                                 Layout.preferredWidth: Kirigami.Units.iconSizes.small
                                 Layout.preferredHeight: Kirigami.Units.iconSizes.small
                                 source: model.decoration
-                                enabled: !model.pendingDeletion
                             }
 
                             QtControls.Label {
@@ -175,19 +169,6 @@ Kirigami.Page {
                                 color: sourceDelegate.highlighted || sourceDelegate.checked || (sourceDelegate.pressed && !sourceDelegate.checked && !sourceDelegate.sectionDelegate) ? Kirigami.Theme.highlightedTextColor : (sourceDelegate.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor)
                                 elide: Text.ElideRight
                                 textFormat: Text.PlainText
-                            }
-
-                            // FIXME alignment
-                            QtControls.ToolButton {
-                                Layout.preferredWidth: Kirigami.Units.iconSizes.small + leftPadding + rightPadding
-                                Layout.preferredHeight: Kirigami.Units.iconSizes.small + topPadding + bottomPadding
-                                icon.name: model.pendingDeletion ? "edit-undo" : "edit-delete"
-                                visible: model.removable
-                                onClicked: model.pendingDeletion = !model.pendingDeletion
-
-                                QtControls.ToolTip {
-                                    text: model.pendingDeletion ? i18n("Undo Remove") : i18n("Remove")
-                                }
                             }
                         }
                     }

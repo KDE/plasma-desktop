@@ -47,13 +47,6 @@ public:
     KCMNotifications(QObject *parent, const QVariantList &args);
     ~KCMNotifications() override;
 
-    enum Roles {
-        SchemeNameRole = Qt::UserRole + 1,
-        PaletteRole,
-        RemovableRole,
-        PendingDeletionRole
-    };
-
     SourcesModel *sourcesModel() const;
     FilterProxyModel *filteredModel() const;
 

@@ -65,10 +65,6 @@ KCMNotifications::KCMNotifications(QObject *parent, const QVariantList &args)
 
     m_filteredModel->setSourceModel(m_sourcesModel);
 
-    connect(m_sourcesModel, &SourcesModel::pendingDeletionsChanged, this, [this] {
-        setNeedsSave(true);
-    });
-
     QStringList stringArgs;
     stringArgs.reserve(args.count() + 1);
     // need to add a fake argv[0] for QCommandLineParser
@@ -202,24 +198,12 @@ void KCMNotifications::load()
 
 void KCMNotifications::save()
 {
-    processPendingDeletions();
     m_settings->save();
 }
 
 void KCMNotifications::defaults()
 {
     m_settings->defaults();
-}
-
-void KCMNotifications::processPendingDeletions()
-{
-    const QStringList pendingDeletions = m_sourcesModel->pendingDeletions();
-
-    for (const QString &desktopEntry : pendingDeletions) {
-        m_settings->forgetKnownApplication(desktopEntry);
-    }
-
-    m_sourcesModel->removeItemsPendingDeletion();
 }
 
 #include "kcm.moc"
