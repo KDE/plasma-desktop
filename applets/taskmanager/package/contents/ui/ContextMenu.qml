@@ -54,7 +54,7 @@ PlasmaComponents.ContextMenu {
     minimumWidth: visualParent.width
 
     onStatusChanged: {
-        if (visualParent && get(atm.LauncherUrlWithoutIcon) !== "" && status == PlasmaComponents.DialogStatus.Open) {
+        if (visualParent && get(atm.LauncherUrlWithoutIcon) != "" && status == PlasmaComponents.DialogStatus.Open) {
             launcherToggleAction.checked = (tasksModel.launcherPosition(get(atm.LauncherUrlWithoutIcon)) !== -1);
             activitiesDesktopsMenu.refresh();
 
@@ -276,7 +276,7 @@ PlasmaComponents.ContextMenu {
         id: startNewInstanceItem
         visible: (visualParent && get(atm.IsLauncher) !== true && get(atm.IsStartup) !== true)
 
-        enabled: visualParent && get(atm.LauncherUrlWithoutIcon) !== ""
+        enabled: visualParent && get(atm.LauncherUrlWithoutIcon) != ""
 
         text: i18n("Start New Instance")
         icon: "list-add-symbolic"
@@ -617,7 +617,7 @@ PlasmaComponents.ContextMenu {
                      && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
                      && (activityInfo.numberOfRunningActivities < 2)
 
-        enabled: visualParent && get(atm.LauncherUrlWithoutIcon) !== ""
+        enabled: visualParent && get(atm.LauncherUrlWithoutIcon) != ""
 
         checkable: true
 
