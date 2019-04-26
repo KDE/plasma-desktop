@@ -199,7 +199,7 @@ MouseArea {
             // unset pointSize set by PlasmaComponents.Label to avoid "Both point size and pixel size set." warning
             font.pointSize: -1
 
-            z: 0 // Below windows and FrameSvg
+            z: 9999 // The label goes above everything
         }
     }
 
@@ -378,7 +378,7 @@ MouseArea {
                     id: desktopFrame
 
                     anchors.fill: parent
-                    z: 2 // Above optional label item and windows
+                    z: 2 // Above window outlines, but below label
                     imagePath: "widgets/pager"
                     prefix: (desktopMouseArea.enabled && desktopMouseArea.containsMouse) || (root.dragging && root.dragId == desktopId) ?
                                 "hover" : (desktop.active ? "active" : "normal")
@@ -418,7 +418,7 @@ MouseArea {
                     width: desktop.width - 2 * x
                     height: desktop.height - 2 * y
 
-                    z: 1 // Between optional label item and FrameSvg
+                    z: 1 // Below FrameSvg
 
                     Repeater {
                         id: windowRectRepeater
