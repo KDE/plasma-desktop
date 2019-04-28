@@ -17,19 +17,18 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.0
-import QtQuick.Controls 1.0
+import QtQuick 2.5
+import QtQuick.Controls 2.5
+import QtQuick.Controls 1.0 as QQC1
 import QtQuick.Layouts 1.0
 
+import org.kde.kirigami 2.5 as Kirigami
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 
-Item {
+ColumnLayout {
     id: configIcons
-
-    width: childrenRect.width
-    height: childrenRect.height
 
     property alias cfg_filterMode: filterMode.currentIndex
     property alias cfg_filterPattern: filterPattern.text
@@ -71,184 +70,157 @@ Item {
                 return types.indexOf(x) < 0; });
         }
     }
-
-    ColumnLayout {
-        width: parent.width
-        height: parent.height
-
+    Kirigami.FormLayout {
         ComboBox {
             id: filterMode
-
-            Layout.fillWidth: true
-
-            model: [i18n("Show All Files"), i18n("Show Files Matching"), i18n("Hide Files Matching")]
-        }
-
-        Label {
-            Layout.fillWidth: true
-
-            text: i18n("File name pattern:")
+            Kirigami.FormData.label: i18n("Files:")
+            model: [i18n("Show all"), i18n("Show matching"), i18n("Hide matching")]
         }
 
         TextField {
             id: filterPattern
-
-            Layout.fillWidth: true
-
+            Kirigami.FormData.label: i18n("File name pattern:")
             enabled: (filterMode.currentIndex > 0)
-        }
-
-        Label {
-            Layout.fillWidth: true
-
-            text: i18n("File types:")
         }
 
         TextField {
             id: mimeFilter
-
-            Layout.fillWidth: true
-
+            Kirigami.FormData.label: i18n("File types:")
             enabled: (filterMode.currentIndex > 0)
+            placeholderText: i18n("Search...")
+        }
+    }
 
-            placeholderText: i18n("Search file type...")
+    ColumnLayout {
+        Layout.fillWidth: true
+        Layout.fillHeight: true
+
+        CheckBox { // Purely for metrics.
+            id: metricsCheckBox
+            visible: false
         }
 
-        RowLayout {
+        QQC1.TableView {
+            id: mimeTypesView
+
+            // Signal the delegates listen to when user presses space to toggle current row.
+            signal toggleCurrent
+
             Layout.fillWidth: true
             Layout.fillHeight: true
 
-            CheckBox { // Purely for metrics.
-                id: metricsCheckBox
-                visible: false
+            enabled: (filterMode.currentIndex > 0)
+
+            model: filteredMimeTypesModel
+
+            sortIndicatorVisible: true
+            sortIndicatorColumn: 2 // Default to sort by "File type".
+
+            onSortIndicatorColumnChanged: { // Disallow sorting by icon.
+                if (sortIndicatorColumn === 1) {
+                    sortIndicatorColumn = 2;
+                }
             }
 
-            TableView {
-                id: mimeTypesView
+            Keys.onSpacePressed: toggleCurrent()
 
-                // Signal the delegates listen to when user presses space to toggle current row.
-                signal toggleCurrent
-
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-
-                enabled: (filterMode.currentIndex > 0)
-
-                model: filteredMimeTypesModel
-
-                sortIndicatorVisible: true
-                sortIndicatorColumn: 2 // Default to sort by "File type".
-
-                onSortIndicatorColumnChanged: { // Disallow sorting by icon.
-                    if (sortIndicatorColumn === 1) {
-                        sortIndicatorColumn = 2;
-                    }
+            function adjustColumns() {
+                // Resize description column to take whatever space is left.
+                var width = viewport.width;
+                for (var i = 0; i < columnCount - 1; ++i) {
+                    width -= getColumn(i).width;
                 }
+                descriptionColumn.width = width;
+            }
 
-                Keys.onSpacePressed: toggleCurrent()
+            onWidthChanged: adjustColumns()
+            // Component.onCompleted is too early to do this...
+            onRowCountChanged: adjustColumns()
 
-                function adjustColumns() {
-                    // Resize description column to take whatever space is left.
-                    var width = viewport.width;
-                    for (var i = 0; i < columnCount - 1; ++i) {
-                        width -= getColumn(i).width;
+            QQC1.TableViewColumn {
+                role: "checked"
+                width: metricsCheckBox.width
+                resizable: false
+                movable: false
+
+                delegate: CheckBox {
+                    id: checkBox
+
+                    checked: styleData.value
+                    activeFocusOnTab: false // only let the TableView as a whole get focus
+                    onClicked: {
+                        model.checked = checked
+                        // Clicking it breaks the binding to the model value which becomes
+                        // an issue during sorting as TableView re-uses delegates.
+                        checked = Qt.binding(function() {
+                            return styleData.value;
+                        });
                     }
-                    descriptionColumn.width = width;
-                }
 
-                onWidthChanged: adjustColumns()
-                // Component.onCompleted is too early to do this...
-                onRowCountChanged: adjustColumns()
-
-                TableViewColumn {
-                    role: "checked"
-                    width: metricsCheckBox.width
-                    resizable: false
-                    movable: false
-
-                    delegate: CheckBox {
-                        id: checkBox
-
-                        checked: styleData.value
-                        activeFocusOnTab: false // only let the TableView as a whole get focus
-                        onClicked: {
-                            model.checked = checked
-                            // Clicking it breaks the binding to the model value which becomes
-                            // an issue during sorting as TableView re-uses delegates.
-                            checked = Qt.binding(function() {
-                                return styleData.value;
-                            });
-                        }
-
-                        Connections {
-                            target: mimeTypesView
-                            onToggleCurrent: {
-                                if (styleData.row === mimeTypesView.currentRow) {
-                                    model.checked = !checkBox.checked
-                                }
+                    Connections {
+                        target: mimeTypesView
+                        onToggleCurrent: {
+                            if (styleData.row === mimeTypesView.currentRow) {
+                                model.checked = !checkBox.checked
                             }
                         }
                     }
                 }
+            }
 
-                TableViewColumn {
-                    role: "decoration"
+            QQC1.TableViewColumn {
+                role: "decoration"
+                width: units.iconSizes.small
+                resizable: false
+                movable: false
+
+                delegate: PlasmaCore.IconItem {
                     width: units.iconSizes.small
-                    resizable: false
-                    movable: false
-
-                    delegate: PlasmaCore.IconItem {
-                        width: units.iconSizes.small
-                        height: units.iconSizes.small
-                        animated: false // TableView re-uses delegates, avoid animation when sorting/filtering.
-                        source: styleData.value
-                    }
-                }
-
-                TableViewColumn {
-                    id: nameColumn
-                    role: "name"
-                    title: i18n("File type")
-                    width: units.gridUnit * 10 // Assume somewhat reasonable default for mime type name.
-                    onWidthChanged: mimeTypesView.adjustColumns()
-                    movable: false
-                }
-                TableViewColumn {
-                    id: descriptionColumn
-                    role: "comment"
-                    title: i18n("Description")
-                    movable: false
-                    resizable: false
+                    height: units.iconSizes.small
+                    animated: false // TableView re-uses delegates, avoid animation when sorting/filtering.
+                    source: styleData.value
                 }
             }
 
-            ColumnLayout {
-                Layout.alignment: Qt.AlignTop
-                // Need to explicitly base the size off the button's implicitWidth
-                // to avoid the column from growing way too wide due to fillWidth...
-                Layout.maximumWidth: Math.max(selectAllButton.implicitWidth, deselectAllButton.implicitWidth)
+            QQC1.TableViewColumn {
+                id: nameColumn
+                role: "name"
+                title: i18n("File type")
+                width: units.gridUnit * 10 // Assume somewhat reasonable default for mime type name.
+                onWidthChanged: mimeTypesView.adjustColumns()
+                movable: false
+            }
 
-                Button {
-                    id: selectAllButton
-                    Layout.fillWidth: true
+            QQC1.TableViewColumn {
+                id: descriptionColumn
+                role: "comment"
+                title: i18n("Description")
+                movable: false
+                resizable: false
+            }
+        }
 
-                    enabled: (filterMode.currentIndex > 0)
+        RowLayout {
+            Button {
+                id: selectAllButton
+                enabled: (filterMode.currentIndex > 0)
+                icon.name: "edit-select-all"
+                ToolTip.delay: 1000
+                ToolTip.timeout: 5000
+                ToolTip.visible: (Kirigami.Settings.isMobile ? pressed : hovered) && ToolTip.text.length > 0
+                ToolTip.text: i18n("Select All")
+                onClicked: filteredMimeTypesModel.checkFiltered()
+            }
 
-                    text: i18n("Select All")
-
-                    onClicked: filteredMimeTypesModel.checkFiltered()
-                }
-
-                Button {
-                    id: deselectAllButton
-                    Layout.fillWidth: true
-
-                    enabled: (filterMode.currentIndex > 0)
-
-                    text: i18n("Deselect All")
-
-                    onClicked: filteredMimeTypesModel.uncheckFiltered()
-                }
+            Button {
+                id: deselectAllButton
+                enabled: (filterMode.currentIndex > 0)
+                icon.name: "edit-select-none"
+                ToolTip.delay: 1000
+                ToolTip.timeout: 5000
+                ToolTip.visible: (Kirigami.Settings.isMobile ? pressed : hovered) && ToolTip.text.length > 0
+                ToolTip.text: i18n("Deselect All")
+                onClicked: filteredMimeTypesModel.uncheckFiltered()
             }
         }
     }
