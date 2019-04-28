@@ -136,7 +136,7 @@ void KCMDesktopTheme::getNewStuff(QQuickItem *ctx)
 {
     if (!m_newStuffDialog) {
         m_newStuffDialog = new KNS3::DownloadDialog(QStringLiteral("plasma-themes.knsrc"));
-        m_newStuffDialog.data()->setWindowTitle(i18n("Download New Desktop Themes"));
+        m_newStuffDialog.data()->setWindowTitle(i18n("Download New Plasma Themes"));
         m_newStuffDialog->setWindowModality(Qt::WindowModal);
         m_newStuffDialog->winId(); // so it creates the windowHandle();
         connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted, this, &KCMDesktopTheme::load);
