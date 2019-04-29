@@ -184,24 +184,29 @@ Rectangle {
                     }
                 }
 
-                ColumnLayout {
-                    id: categories
-                    spacing: 0
-                    implicitWidth: categoriesScroll.width
+                // Encapsulate as ColumnLayout will keep overwriting its own implicitWidth
+                Item {
+                    implicitWidth: categoriesScroll.Layout.maximumWidth
+                    implicitHeight: categories.implicitHeight
+                    ColumnLayout {
+                        id: categories
+                        spacing: 0
+                        width: categoriesScroll.width
 
-                    property Item currentItem: children[1]
+                        property Item currentItem: children[1]
 
-                    Repeater {
-                        model: root.isContainment ? globalConfigModel : undefined
-                        delegate: ConfigCategoryDelegate {}
-                    }
-                    Repeater {
-                        model: configDialogFilterModel
-                        delegate: ConfigCategoryDelegate {}
-                    }
-                    Repeater {
-                        model: !root.isContainment ? globalConfigModel : undefined
-                        delegate: ConfigCategoryDelegate {}
+                        Repeater {
+                            model: root.isContainment ? globalConfigModel : undefined
+                            delegate: ConfigCategoryDelegate {}
+                        }
+                        Repeater {
+                            model: configDialogFilterModel
+                            delegate: ConfigCategoryDelegate {}
+                        }
+                        Repeater {
+                            model: !root.isContainment ? globalConfigModel : undefined
+                            delegate: ConfigCategoryDelegate {}
+                        }
                     }
                 }
             }
