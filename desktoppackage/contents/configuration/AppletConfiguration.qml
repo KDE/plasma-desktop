@@ -104,6 +104,28 @@ Rectangle {
 //END connections
 
 //BEGIN UI components
+    Rectangle {
+        id: sidebar
+        visible: configDialog.configModel
+        anchors.left: root.left
+        width: categories.width
+        height: root.height
+        Kirigami.Theme.inherit: false
+        Kirigami.Theme.colorSet: Kirigami.Theme.View
+        color: Kirigami.Theme.backgroundColor
+    }
+
+    Kirigami.Separator {
+        visible: configDialog.configModel
+        anchors.left: sidebar.right
+        height: root.height
+    }
+
+    Kirigami.Separator {
+        anchors.top: root.top
+        width: root.width
+    }
+
     MessageDialog {
         id: messageDialog
         icon: StandardIcon.Warning
@@ -124,7 +146,9 @@ Rectangle {
         id: pageStackColumn
         anchors {
             fill: parent
-            margins: pageStackColumn.spacing * units.devicePixelRatio //margins are hardcoded in QStyle we should match that here
+            rightMargin: units.smallSpacing * 2
+            leftMargin: configDialog.configModel ? 0 : units.smallSpacing * 2
+            bottomMargin: units.smallSpacing * 2
         }
         property int implicitWidth: Math.max(contentRow.implicitWidth, buttonsRow.implicitWidth) + 8
         property int implicitHeight: contentRow.implicitHeight + buttonsRow.implicitHeight + 8
@@ -211,23 +235,9 @@ Rectangle {
                 }
             }
 
-            Rectangle {
-                Layout.fillHeight: true
-                width: Math.round(units.devicePixelRatio)
-                color: Kirigami.Theme.highlightColor
-                visible: categoriesScroll.visible
-                opacity: categoriesScroll.activeFocus && Window.active ? 1 : 0.3
-                Behavior on color {
-                    ColorAnimation {
-                        duration: units.longDuration
-                        easing.type: Easing.InOutQuad
-                    }
-                }
-            }
-
             Item { // spacer
-                width: units.largeSpacing
                 visible: categoriesScroll.visible
+                width: units.smallSpacing * 2
             }
 
             QtControls.ScrollView {
@@ -281,6 +291,7 @@ Rectangle {
                         Kirigami.Heading {
                             id: pageTitle
                             width: scroll.width
+                            topPadding: units.smallSpacing
                             level: 1
                             text: pageStack.title
                         }
