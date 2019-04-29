@@ -187,7 +187,7 @@ Rectangle {
                 ColumnLayout {
                     id: categories
                     spacing: 0
-                    width: categoriesScroll.width
+                    implicitWidth: categoriesScroll.width
 
                     property Item currentItem: children[1]
 
