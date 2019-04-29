@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -51,24 +51,24 @@ PlasmaCore.Dialog {
         // we don't want a binding here, just set it to the current plugin once
         Component.onCompleted: currentPlugin = alternativesHelper.currentPlugin
 
-        QtControls.Action {
+        QQC2.Action {
             shortcut: "Escape"
             onTriggered: dialog.close()
         }
-        QtControls.Action {
+        QQC2.Action {
             shortcut: "Return"
             onTriggered: switchButton.clicked(null)
         }
-        QtControls.Action {
+        QQC2.Action {
             shortcut: "Enter"
             onTriggered: switchButton.clicked(null)
         }
 
-        QtControls.Action {
+        QQC2.Action {
             shortcut: "Up"
             onTriggered: mainList.decrementCurrentIndex()
         }
-        QtControls.Action {
+        QQC2.Action {
             shortcut: "Down"
             onTriggered: mainList.incrementCurrentIndex()
         }

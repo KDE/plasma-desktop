@@ -18,7 +18,7 @@
  */
 
 import QtQuick 2.7
-import QtQuick.Controls 1.1
+import QtQuick.Controls 2.5 as QQC2
 
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -92,7 +92,7 @@ Item {
         id: kwindowsystem
     }
 
-    Action {
+    QQC2.Action {
         shortcut: "Escape"
         onTriggered: {
             if (searchInput.length > 0) {
@@ -103,21 +103,21 @@ Item {
         }
     }
 
-    Action {
+    QQC2.Action {
         shortcut: "Up"
         onTriggered: list.currentIndex = (list.count + list.currentIndex - 1) % list.count 
     }
 
-    Action {
+    QQC2.Action {
         shortcut: "Down"
         onTriggered: list.currentIndex = (list.currentIndex + 1) % list.count
     }
 
-    Action {
+    QQC2.Action {
         shortcut: "Enter"
         onTriggered: addCurrentApplet()
     }
-    Action {
+    QQC2.Action {
         shortcut: "Return"
         onTriggered: addCurrentApplet()
     }
@@ -352,7 +352,7 @@ Item {
                 right: parent.right
             }
             iconSource: "get-hot-new-stuff"
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get new widgets")
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Widgets...")
             onClicked: {
                 getWidgetsDialog.model = widgetExplorer.widgetsMenuActions
                 getWidgetsDialog.openRelative()
