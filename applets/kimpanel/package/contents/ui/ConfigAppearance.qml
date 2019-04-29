@@ -16,67 +16,55 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.0
-import QtQuick.Controls 1.0 as QtControls
+import QtQuick 2.5
+import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Dialogs 1.1 as QtDialogs
 import QtQuick.Layouts 1.0
 
+import org.kde.kirigami 2.5 as Kirigami
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-Item {
+Kirigami.FormLayout {
     id: iconsPage
-    implicitWidth: pageColumn.implicitWidth
-    implicitHeight: pageColumn.implicitHeight
 
     property alias cfg_vertical_lookup_table: verticalLookupTable.checked
-    property alias cfg_use_default_font: useDefaultFont.checked
+    property bool cfg_use_default_font
     property font cfg_font
 
-    onCfg_fontChanged: {
-        if (cfg_font.family === '') {
-            cfg_font = theme.defaultFont
-        }
-        fontDialog.font = cfg_font
+    QQC2.CheckBox {
+        id: verticalLookupTable
+        Kirigami.FormData.label: i18n("Input method list:")
+        text: i18n("Vertical")
     }
 
-    ColumnLayout {
-        id: pageColumn
-        width: parent.width
+    RowLayout {
+        Kirigami.FormData.label: i18n("Font:")
 
-        QtControls.CheckBox {
-            id: verticalLookupTable
-            text: i18n("Vertical List")
+        QQC2.CheckBox {
+            id: useCustomFont
+            checked: !cfg_use_default_font
+            onClicked: cfg_use_default_font = !checked
+            text: i18n("Use custom:")
         }
 
-        QtControls.CheckBox {
-            id: useDefaultFont
-            text: i18n("Use Default Font")
+        QQC2.TextField {
+            enabled: useCustomFont.checked
+            readOnly: true
+            text: i18nc("The selected font family and font size", font.family + " " + font.pointSize + "pt")
+            font: cfg_font
+            Layout.fillHeight: true
         }
 
-        RowLayout {
-            width: parent.width
+        QQC2.Button {
+            enabled: useCustomFont.checked
+            icon.name: "document-edit"
+            onClicked: fontDialog.open();
 
-            QtControls.Label {
-                text: i18n("Custom Font:")
-            }
-
-            QtControls.TextField {
-                id: fontPreviewLabel
-                Layout.fillWidth: true
-                enabled: !cfg_use_default_font
-                anchors.verticalCenter: parent.verticalCenter
-                readOnly: true
-                font: cfg_font
-                text: cfg_font.family + ' ' + cfg_font.pointSize
-            }
-
-            QtControls.Button {
-                id: fontButton
-                enabled: !cfg_use_default_font
-                text: i18n("Select Font")
-                onClicked: fontDialog.open();
+            QQC2.ToolTip {
+                visible: parent.hovered
+                text: i18n("Select Font...")
             }
         }
     }
@@ -84,6 +72,8 @@ Item {
     QtDialogs.FontDialog {
         id: fontDialog
         title: i18nc("@title:window", "Select Font")
+
+        font: !cfg_font || cfg_font.family === "" ? theme.defaultFont : cfg_font
 
         onAccepted: {
             cfg_font = font
