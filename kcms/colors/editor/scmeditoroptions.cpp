@@ -78,7 +78,6 @@ void SchemeEditorOptions::on_useInactiveEffects_stateChanged(int state)
     group.writeEntry("Enable", bool(state != Qt::Unchecked));
 
     m_disableUpdates = true;
-    printf("re-init\n");
     inactiveSelectionEffect->setChecked(group.readEntry("ChangeSelectionColor", bool(state != Qt::Unchecked)));
     m_disableUpdates = false;
 
