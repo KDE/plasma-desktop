@@ -478,8 +478,6 @@ Item {
 
     Rectangle {
         id: tabBarSeparator
-
-        width:  root.width
         height: Math.floor(units.devicePixelRatio)
         color: Qt.tint(PlasmaCore.ColorScope.textColor, Qt.rgba(PlasmaCore.ColorScope.backgroundColor.r, PlasmaCore.ColorScope.backgroundColor.g, PlasmaCore.ColorScope.backgroundColor.b, 0.7))
         opacity: 0.6
@@ -488,6 +486,8 @@ Item {
             top: header.top
             left: root.left
             right: root.right
+            leftMargin: 4
+            rightMargin: 4
         }
     }
 

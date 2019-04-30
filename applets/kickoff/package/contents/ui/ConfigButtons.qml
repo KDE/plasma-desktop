@@ -16,17 +16,17 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.0
-import QtQuick.Layouts 1.0 as Layouts
-import QtQuick.Controls 1.0 as Controls
+import QtQuick 2.5
 import QtQml.Models 2.1
+
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.5 as Kirigami
 
 
 GridView {
     id: configButtons
 
-    cellHeight: units.gridUnit * 5
+    cellHeight: units.gridUnit * 6 + units.smallSpacing
     cellWidth: units.gridUnit * 6
 
     width: cellWidth * 5
@@ -208,5 +208,17 @@ GridView {
                 }
             }
         }
+    }
+
+    Kirigami.Heading {
+        level: 2
+        text: i18n("Active Tabs")
+        anchors.bottom: configButtons.top
+    }
+
+    Kirigami.Heading {
+        level: 2
+        text: i18n("Inactive Tabs")
+        anchors.bottom: configButtons.verticalCenter
     }
 }

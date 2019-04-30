@@ -51,7 +51,8 @@ class Backend : public QObject
             Close,
             NewInstance,
             ToggleMinimized,
-            ToggleGrouping
+            ToggleGrouping,
+            BringToCurrentDesktop
         };
 
         Q_ENUM(MiddleClickAction)

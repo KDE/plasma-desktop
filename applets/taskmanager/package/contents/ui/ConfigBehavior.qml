@@ -112,7 +112,8 @@ Item {
                 i18n("Close window or group"),
                 i18n("New instance"),
                 i18n("Minimize/Restore window or group"),
-                i18nc("When clicking it would toggle grouping windows of a specific app", "Group/Ungroup")
+                i18nc("When clicking it would toggle grouping windows of a specific app", "Group/Ungroup"),
+                i18n("Bring to the current virtual desktop")
             ]
         }
 

@@ -349,6 +349,8 @@ MouseArea {
 
         onVisualParentChanged: {
             if (visualParent) {
+                currentApplet.applet.prepareContextualActions();
+                alternativesButton.visible = currentApplet.applet.action("alternatives") && currentApplet.applet.action("alternatives").enabled;
                 configureButton.visible = currentApplet.applet.action("configure") && currentApplet.applet.action("configure").enabled;
                 closeButton.visible = currentApplet.applet.action("remove") && currentApplet.applet.action("remove").enabled;
                 label.text = currentApplet.applet.title;
@@ -382,6 +384,16 @@ MouseArea {
                     onClicked: {
                         tooltip.visible = false;
                         currentApplet.applet.action("configure").trigger()
+                    }
+                }
+                PlasmaComponents.ToolButton {
+                    id: alternativesButton
+                    Layout.fillWidth: true
+                    iconSource: "widget-alternatives"
+                    text: i18n("Show Alternatives...")
+                    onClicked: {
+                        tooltip.visible = false;
+                        currentApplet.applet.action("alternatives").trigger()
                     }
                 }
                 PlasmaComponents.ToolButton {

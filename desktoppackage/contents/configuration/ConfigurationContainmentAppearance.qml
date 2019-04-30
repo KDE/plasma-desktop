@@ -81,6 +81,7 @@ ColumnLayout {
 
     Kirigami.FormLayout {
         id: parentLayout // needed for twinFormLayouts to work in wallpaper plugins
+        twinFormLayouts: main.currentItem.formLayout
         Layout.fillWidth: true
         QtControls.ComboBox {
             id: pluginComboBox

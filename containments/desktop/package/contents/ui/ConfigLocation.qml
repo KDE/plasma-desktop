@@ -17,20 +17,17 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.0
-import QtQuick.Controls 1.0
+import QtQuick 2.5
+import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.0
 
 import org.kde.plasma.plasmoid 2.0
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.5 as Kirigami
 
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 
 Item {
     id: configLocation
-
-    width: childrenRect.width
-    height: childrenRect.height
 
     property string cfg_url
     property alias cfg_labelMode: labelMode.currentIndex
@@ -40,7 +37,7 @@ Item {
     onCfg_urlChanged: applyConfig()
 
     function applyConfig(force) {
-        if (!force && locationGroup.current != null) {
+        if (!force && locationGroup.checkedButton != null) {
             return;
         }
 
@@ -73,13 +70,15 @@ Item {
         onPlacesChanged: applyConfig(true)
     }
 
-    ExclusiveGroup {
+    ButtonGroup {
         id: locationGroup
 
-        onCurrentChanged: {
-            if (current == locationDesktop) {
+        buttons:  [locationDesktop, locationCurrentActivity, locationPlace, locationCustom]
+
+        onCheckedButtonChanged: {
+            if (checkedButton == locationDesktop) {
                 cfg_url = "desktop:/";
-            } else if (current == locationCurrentActivity) {
+            } else if (checkedButton == locationCurrentActivity) {
                 cfg_url = "activities:/current/";
             }
         }
@@ -94,7 +93,6 @@ Item {
             Kirigami.FormData.label: i18n("Show:")
 
             text: i18n("Desktop folder")
-            exclusiveGroup: locationGroup
         }
 
         RadioButton {
@@ -102,26 +100,19 @@ Item {
             visible: placesModel.activityLinkingEnabled
 
             text: i18n("Files linked to the current activity")
-            exclusiveGroup: locationGroup
         }
 
-        RadioButton {
-            id: locationPlace
-
-            text: i18n("Places panel item:")
-
-            exclusiveGroup: locationGroup
-
-            onCheckedChanged: {
-                locationPlaceValue.enabled = checked;
-            }
-        }
         RowLayout {
-            Layout.fillWidth: true
+            RadioButton {
+                id: locationPlace
 
-            Item {
-                width: units.largeSpacing
+                text: i18n("Places panel item:")
+
+                onCheckedChanged: {
+                    locationPlaceValue.enabled = checked;
+                }
             }
+
             ComboBox {
                 id: locationPlaceValue
 
@@ -144,24 +135,19 @@ Item {
             }
         }
 
-        RadioButton {
-            id: locationCustom
-
-            exclusiveGroup: locationGroup
-            text: i18n("Custom location:")
-        }
-
         RowLayout {
-            Layout.fillWidth: true
-            Item {
-                width: units.largeSpacing
+            RadioButton {
+                id: locationCustom
+
+                text: i18n("Custom location:")
             }
+
             TextField {
                 id: locationCustomValue
                 enabled: locationCustom.checked
                 Layout.fillWidth: true
 
-                placeholderText: i18n("Type a path or a URL here")
+                placeholderText: i18n("Type path or URL...")
 
                 onEnabledChanged: {
                     if (enabled && text != "") {
@@ -176,7 +162,7 @@ Item {
                 }
             }
             Button {
-                iconName: "document-open"
+                icon.name: "document-open"
 
                 enabled: locationCustom.checked
 
@@ -201,7 +187,6 @@ Item {
         ComboBox {
             id: labelMode
             visible: titleVisible
-            Layout.fillWidth: true
 
             Kirigami.FormData.label: i18n("Title:")
 
@@ -209,18 +194,18 @@ Item {
         }
 
         RowLayout {
-            Layout.fillWidth: true
             visible: titleVisible
 
             Item {
                 width: units.largeSpacing
             }
+
             TextField {
                 id: labelText
                 Layout.fillWidth: true
                 enabled: (labelMode.currentIndex == 3)
 
-                placeholderText: i18n("Enter custom title here")
+                placeholderText: i18n("Enter custom title...")
             }
         }
     }

@@ -11,4 +11,6 @@ if(KF5Activities_FOUND)
    add_subdirectory(showActivityManager)
 endif()
 
+add_subdirectory(minimizeall)
+add_subdirectory(showdesktop)
 add_subdirectory(kimpanel)

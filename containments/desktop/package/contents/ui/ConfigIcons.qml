@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.4
-import QtQuick.Controls 1.0
+import QtQuick 2.5
+import QtQuick.Controls 2.5
 import QtQuick.Dialogs 1.1
 import QtQuick.Layouts 1.0
 
@@ -28,16 +28,13 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kconfig 1.0 // for KAuthorized
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.5 as Kirigami
 
 import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 
 Item {
     id: configIcons
-
-    width: childrenRect.width
-    height: childrenRect.height
 
     property bool isPopup: (plasmoid.location !== PlasmaCore.Types.Floating)
 
@@ -149,7 +146,7 @@ Item {
             id: alignment
             Layout.fillWidth: true
 
-            model: [i18n("Align Left"), i18n("Align Right")]
+            model: [i18n("Align left"), i18n("Align right")]
         }
 
         CheckBox {
@@ -227,14 +224,16 @@ Item {
         // Size section
         Slider {
             id: iconSize
+
+            Layout.fillWidth: true
             visible: !isPopup || viewMode.currentIndex === 1
 
             Kirigami.FormData.label: i18n("Icon size:")
 
-            minimumValue: 0
-            maximumValue: 5
+            from: 0
+            to: 5
             stepSize: 1
-            tickmarksEnabled: true
+            snapMode: Slider.SnapAlways
         }
 
         RowLayout {
@@ -276,8 +275,8 @@ Item {
 
             Kirigami.FormData.label: i18n("Text lines:")
 
-            minimumValue: 1
-            maximumValue: 10
+            from: 1
+            to: 10
             stepSize: 1
         }
 
@@ -318,7 +317,8 @@ Item {
         Button {
             id: previewSettings
 
-            text: i18n("More Preview Options...")
+            icon.name: "configure"
+            text: i18n("Configure Preview Plugins...")
 
             onClicked: {
                 previewPluginsDialog.visible = true;

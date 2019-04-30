@@ -17,24 +17,21 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.0
-import QtQuick.Controls 1.0
-import QtQuick.Dialogs 1.2
-import QtQuick.Layouts 1.0
+import QtQuick 2.5
+import QtQuick.Controls 2.5
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 import org.kde.draganddrop 2.0 as DragDrop
+import org.kde.kirigami 2.5 as Kirigami
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
-Item {
+Kirigami.FormLayout {
     id: configGeneral
 
-    width: childrenRect.width
-    height: childrenRect.height
+    anchors.left: parent.left
+    anchors.right: parent.right
 
     property bool isDash: (plasmoid.pluginName === "org.kde.plasma.kickerdash")
 
@@ -54,222 +51,193 @@ Item {
     property alias cfg_useExtraRunners: useExtraRunners.checked
     property alias cfg_alignResultsToBottom: alignResultsToBottom.checked
 
-    ColumnLayout {
-        anchors.left: parent.left
 
-        RowLayout {
-            spacing: units.smallSpacing
+    Button {
+        id: iconButton
 
-            Label {
-                text: i18n("Icon:")
+        Kirigami.FormData.label: i18n("Icon:")
+
+        implicitWidth: previewFrame.width + units.smallSpacing * 2
+        implicitHeight: previewFrame.height + units.smallSpacing * 2
+
+        // Just to provide some visual feedback when dragging;
+        // cannot have checked without checkable enabled
+        checkable: true
+        checked: dropArea.containsAcceptableDrag
+
+        onPressed: iconMenu.opened ? iconMenu.close() : iconMenu.open()
+
+        DragDrop.DropArea {
+            id: dropArea
+
+            property bool containsAcceptableDrag: false
+
+            anchors.fill: parent
+
+            onDragEnter: {
+                // Cannot use string operations (e.g. indexOf()) on "url" basic type.
+                var urlString = event.mimeData.url.toString();
+
+                // This list is also hardcoded in KIconDialog.
+                var extensions = [".png", ".xpm", ".svg", ".svgz"];
+                containsAcceptableDrag = urlString.indexOf("file:///") === 0 && extensions.some(function (extension) {
+                    return urlString.indexOf(extension) === urlString.length - extension.length; // "endsWith"
+                });
+
+                if (!containsAcceptableDrag) {
+                    event.ignore();
+                }
+            }
+            onDragLeave: containsAcceptableDrag = false
+
+            onDrop: {
+                if (containsAcceptableDrag) {
+                    // Strip file:// prefix, we already verified in onDragEnter that we have only local URLs.
+                    iconDialog.setCustomButtonImage(event.mimeData.url.toString().substr("file://".length));
+                }
+                containsAcceptableDrag = false;
+            }
+        }
+
+        KQuickAddons.IconDialog {
+            id: iconDialog
+
+            function setCustomButtonImage(image) {
+                cfg_customButtonImage = image || cfg_icon || "start-here-kde"
+                cfg_useCustomButtonImage = true;
             }
 
-            Button {
-                id: iconButton
-                Layout.minimumWidth: previewFrame.width + units.smallSpacing * 2
-                Layout.maximumWidth: Layout.minimumWidth
-                Layout.minimumHeight: previewFrame.height + units.smallSpacing * 2
-                Layout.maximumHeight: Layout.minimumWidth
+            onIconNameChanged: setCustomButtonImage(iconName);
+        }
 
-                DragDrop.DropArea {
-                    id: dropArea
+        PlasmaCore.FrameSvgItem {
+            id: previewFrame
+            anchors.centerIn: parent
+            imagePath: plasmoid.location === PlasmaCore.Types.Vertical || plasmoid.location === PlasmaCore.Types.Horizontal
+                    ? "widgets/panel-background" : "widgets/background"
+            width: units.iconSizes.large + fixedMargins.left + fixedMargins.right
+            height: units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
 
-                    property bool containsAcceptableDrag: false
+            PlasmaCore.IconItem {
+                anchors.centerIn: parent
+                width: units.iconSizes.large
+                height: width
+                source: cfg_useCustomButtonImage ? cfg_customButtonImage : cfg_icon
+            }
+        }
 
-                    anchors.fill: parent
+        Menu {
+            id: iconMenu
 
-                    onDragEnter: {
-                        // Cannot use string operations (e.g. indexOf()) on "url" basic type.
-                        var urlString = event.mimeData.url.toString();
+            // Appear below the button
+            y: +parent.height
 
-                        // This list is also hardcoded in KIconDialog.
-                        var extensions = [".png", ".xpm", ".svg", ".svgz"];
-                        containsAcceptableDrag = urlString.indexOf("file:///") === 0 && extensions.some(function (extension) {
-                            return urlString.indexOf(extension) === urlString.length - extension.length; // "endsWith"
-                        });
+            onClosed: iconButton.checked = false;
 
-                        if (!containsAcceptableDrag) {
-                            event.ignore();
-                        }
-                    }
-                    onDragLeave: containsAcceptableDrag = false
-
-                    onDrop: {
-                        if (containsAcceptableDrag) {
-                            // Strip file:// prefix, we already verified in onDragEnter that we have only local URLs.
-                            iconDialog.setCustomButtonImage(event.mimeData.url.toString().substr("file://".length));
-                        }
-                        containsAcceptableDrag = false;
-                    }
-                }
-
-                KQuickAddons.IconDialog {
-                    id: iconDialog
-
-                    function setCustomButtonImage(image) {
-                        cfg_customButtonImage = image || cfg_icon || "start-here-kde"
-                        cfg_useCustomButtonImage = true;
-                    }
-
-                    onIconNameChanged: setCustomButtonImage(iconName);
-                }
-
-                // just to provide some visual feedback, cannot have checked without checkable enabled
-                checkable: true
-                checked: dropArea.containsAcceptableDrag
+            MenuItem {
+                text: i18nc("@item:inmenu Open icon chooser dialog", "Choose...")
+                icon.name: "document-open-folder"
+                onClicked: iconDialog.open()
+            }
+            MenuItem {
+                text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
+                icon.name: "edit-clear"
                 onClicked: {
-                    checked = Qt.binding(function() { // never actually allow it being checked
-                        return iconMenu.status === PlasmaComponents.DialogStatus.Open || dropArea.containsAcceptableDrag;
-                    })
-
-                    iconMenu.open(0, height)
-                }
-
-                PlasmaCore.FrameSvgItem {
-                    id: previewFrame
-                    anchors.centerIn: parent
-                    imagePath: plasmoid.location === PlasmaCore.Types.Vertical || plasmoid.location === PlasmaCore.Types.Horizontal
-                            ? "widgets/panel-background" : "widgets/background"
-                    width: units.iconSizes.large + fixedMargins.left + fixedMargins.right
-                    height: units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
-
-                    PlasmaCore.IconItem {
-                        anchors.centerIn: parent
-                        width: units.iconSizes.large
-                        height: width
-                        source: cfg_useCustomButtonImage ? cfg_customButtonImage : cfg_icon
-                    }
-                }
-            }
-
-            // QQC Menu can only be opened at cursor position, not a random one
-            PlasmaComponents.ContextMenu {
-                id: iconMenu
-                visualParent: iconButton
-
-                PlasmaComponents.MenuItem {
-                    text: i18nc("@item:inmenu Open icon chooser dialog", "Choose...")
-                    icon: "document-open-folder"
-                    onClicked: iconDialog.open()
-                }
-                PlasmaComponents.MenuItem {
-                    text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
-                    icon: "edit-clear"
-                    onClicked: {
-                        cfg_useCustomButtonImage = false;
-                    }
+                    cfg_icon = "start-here-kde"
+                    cfg_useCustomButtonImage = false
                 }
             }
         }
+    }
 
-        GroupBox {
-            Layout.fillWidth: true
 
-            title: i18n("Behavior")
+    Item {
+        Kirigami.FormData.isSection: true
+    }
 
-            flat: true
+    ComboBox {
+        id: appNameFormat
 
-            ColumnLayout {
-                RowLayout {
-                    Label {
-                        text: i18n("Show applications as:")
-                    }
+        Kirigami.FormData.label: i18n("Show applications as:")
 
-                    ComboBox {
-                        id: appNameFormat
+        model: [i18n("Name only"), i18n("Description only"), i18n("Name (Description)"), i18n("Description (Name)")]
+    }
 
-                        Layout.fillWidth: true
+    Item {
+        Kirigami.FormData.isSection: true
+    }
 
-                        model: [i18n("Name only"), i18n("Description only"), i18n("Name (Description)"), i18n("Description (Name)")]
-                    }
-                }
+    CheckBox {
+        id: alphaSort
 
-                CheckBox {
-                    id: limitDepth
+        Kirigami.FormData.label: i18n("Behavior:")
 
-                    visible: !isDash
+        text: i18n("Sort applications alphabetically")
+    }
 
-                    text: i18n("Flatten menu to a single level")
-                }
+    CheckBox {
+        id: limitDepth
 
-                CheckBox {
-                    id: alphaSort
+        visible: !isDash
 
-                    text: i18n("Sort alphabetically")
-                }
-            }
-        }
+        text: i18n("Flatten sub-menus to a single level")
+    }
 
-        GroupBox {
-            Layout.fillWidth: true
 
-            title: i18n("Categories")
+    Item {
+        Kirigami.FormData.isSection: true
+    }
 
-            flat: true
+    CheckBox {
+        id: showRecentApps
 
-            ColumnLayout {
-                RowLayout {
-                    Label {
-                        text: i18n("Show:")
-                    }
+        Kirigami.FormData.label: i18n("Show categories:")
 
-                    ComboBox {
-                        id: recentOrdering
+        text: recentOrdering.currentIndex == 0
+                ? i18n("Recent applications")
+                : i18n("Often used applications")
+    }
 
-                        Layout.fillWidth: true
+    CheckBox {
+        id: showRecentDocs
 
-                        model: [i18n("Recently used"), i18n("Often used")]
-                    }
-                }
+        text: recentOrdering.currentIndex == 0
+                ? i18n("Recent documents")
+                : i18n("Often used documents")
+    }
 
-                CheckBox {
-                    id: showRecentApps
+    CheckBox {
+        id: showRecentContacts
 
-                    text: recentOrdering.currentIndex == 0
-                            ? i18n("Show recent applications")
-                            : i18n("Show often used applications")
-                }
+        text: recentOrdering.currentIndex == 0
+                ? i18n("Recent contacts")
+                : i18n("Often used contacts")
+    }
 
-                CheckBox {
-                    id: showRecentDocs
+    ComboBox {
+        id: recentOrdering
 
-                    text: recentOrdering.currentIndex == 0
-                            ? i18n("Show recent documents")
-                            : i18n("Show often used documents")
-                }
+        Kirigami.FormData.label: i18n("Sort items in categories by:")
+        model: [i18nc("@item:inlistbox Sort items in categories by [Recently used | Often used]", "Recently used"), i18nc("@item:inlistbox Sort items in categories by [Recently used | Ofetn used]", "Often used")]
+    }
 
-                CheckBox {
-                    id: showRecentContacts
+    Item {
+        Kirigami.FormData.isSection: true
+    }
 
-                    text: recentOrdering.currentIndex == 0
-                            ? i18n("Show recent contacts")
-                            : i18n("Show often used contacts")
-                }
-            }
-        }
+    CheckBox {
+        id: useExtraRunners
 
-        GroupBox {
-            Layout.fillWidth: true
+        Kirigami.FormData.label: i18n("Search:")
 
-            title: i18n("Search")
+        text: i18n("Expand search to bookmarks, files and emails")
+    }
 
-            flat: true
+    CheckBox {
+        id: alignResultsToBottom
 
-            ColumnLayout {
-                CheckBox {
-                    id: useExtraRunners
+        visible: !isDash
 
-                    text: i18n("Expand search to bookmarks, files and emails")
-                }
-
-                CheckBox {
-                    id: alignResultsToBottom
-
-                    visible: !isDash
-
-                    text: i18n("Align search results to bottom")
-                }
-            }
-        }
+        text: i18n("Align search results to bottom")
     }
 }

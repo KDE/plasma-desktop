@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 1.1 as QQC
+import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -36,7 +36,7 @@ Item {
     readonly property string addSpacerButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Spacer")
     readonly property string settingsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "More Settings...")
 
-    QQC.Action {
+    QQC2.Action {
         shortcut: "Escape"
         onTriggered: {
             // avoid leaving the panel in an inconsistent state when escaping while dragging it
