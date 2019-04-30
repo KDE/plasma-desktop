@@ -53,7 +53,7 @@ Item {
         appletInterface: plasmoid
 
         runners: {
-            var runners = ["services", "places", "desktopsessions",
+            var runners = ["desktopsessions", "services", "places",
                            "PowerDevil"];
 
             if (plasmoid.configuration.useExtraRunners) {
