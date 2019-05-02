@@ -122,8 +122,8 @@ Item {
         id: headerSeparator
 
         height: Math.floor(units.devicePixelRatio)
-        color: Qt.tint(PlasmaCore.ColorScope.textColor, Qt.rgba(PlasmaCore.ColorScope.backgroundColor.r, PlasmaCore.ColorScope.backgroundColor.g, PlasmaCore.ColorScope.backgroundColor.b, 0.7))
-        opacity: 0.6
+        color: theme.textColor
+        opacity: 0.2
         width: root.width - 2 * units.gridUnit
 
         anchors {
@@ -479,8 +479,8 @@ Item {
     Rectangle {
         id: tabBarSeparator
         height: Math.floor(units.devicePixelRatio)
-        color: Qt.tint(PlasmaCore.ColorScope.textColor, Qt.rgba(PlasmaCore.ColorScope.backgroundColor.r, PlasmaCore.ColorScope.backgroundColor.g, PlasmaCore.ColorScope.backgroundColor.b, 0.7))
-        opacity: 0.6
+        color: theme.textColor
+        opacity: 0.2
 
         anchors {
             top: header.top
