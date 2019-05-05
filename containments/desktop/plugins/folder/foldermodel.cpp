@@ -1509,6 +1509,11 @@ Qt::DropActions FolderModel::supportedDragActions() const
     return Qt::CopyAction | Qt::MoveAction | Qt::LinkAction;
 }
 
+Qt::DropActions FolderModel::supportedDropActions() const
+{
+    return Qt::CopyAction | Qt::MoveAction | Qt::LinkAction;
+}
+
 inline bool FolderModel::matchMimeType(const KFileItem &item) const
 {
     if (m_mimeSet.isEmpty()) {
