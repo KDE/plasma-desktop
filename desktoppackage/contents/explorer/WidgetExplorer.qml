@@ -292,7 +292,7 @@ Item {
 
             activeFocusOnTab: true
             keyNavigationWraps: true
-            cellWidth: (width - units.smallSpacing) / 2
+            cellWidth: Math.floor((width - units.smallSpacing) / 2)
             cellHeight: cellWidth + units.gridUnit * 4 + units.smallSpacing * 2
 
             delegate: AppletDelegate {}
