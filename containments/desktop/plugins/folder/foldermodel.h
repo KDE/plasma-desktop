@@ -239,6 +239,7 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
         bool isDir(const QModelIndex &index, const KDirModel *dirModel) const;
         bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
         Qt::DropActions supportedDragActions() const override;
+        Qt::DropActions supportedDropActions() const override;
 
         Q_INVOKABLE void paste();
         Q_INVOKABLE void copy();
