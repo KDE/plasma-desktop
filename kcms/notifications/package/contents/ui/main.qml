@@ -147,7 +147,8 @@ KCM.SimpleKCM {
 
         RowLayout { // just for indentation
             QtControls.CheckBox {
-                Layout.leftMargin: indicator.width
+                Layout.leftMargin: mirrored ? 0 : indicator.width
+                Layout.rightMargin: mirrored ? indicator.width : 0
                 text: i18nc("Keep application job popup open for entire duration of job", "Keep popup open during progress")
                 enabled: applicationJobsEnabledCheck.checked
                 checked: kcm.settings.permanentJobPopups

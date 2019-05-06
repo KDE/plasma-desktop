@@ -98,12 +98,10 @@ ColumnLayout {
             onClicked: configColumn.setBehavior(NotificationManager.Settings.ShowPopups, checked)
         }
 
-        RowLayout {
-            Item {
-                width: Kirigami.Units.gridUnit
-            }
-
+        RowLayout { // just for indentation
             QtControls.CheckBox {
+                Layout.leftMargin: mirrored ? 0 : indicator.width
+                Layout.rightMargin: mirrored ? indicator.width : 0
                 text: i18n("Show in do not disturb mode")
                 enabled: showPopupsCheck.checked
                 checked: configColumn.behavior & NotificationManager.Settings.ShowPopupsInDoNotDisturbMode

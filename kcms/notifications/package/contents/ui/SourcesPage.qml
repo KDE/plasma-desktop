@@ -32,21 +32,21 @@ Kirigami.Page {
     title: i18n("Application Settings")
 
     Component.onCompleted: {
-        // TODO the page is push'd in Qt.callLater, why is the model still not loaded when we get here?
-        Qt.callLater(function() {
-            if (kcm.initialDesktopEntry) {
-                appConfiguration.rootIndex = kcm.sourcesModel.persistentIndexForDesktopEntry(kcm.initialDesktopEntry);
-            } else if (kcm.initialNotifyRcName) {
-                appConfiguration.rootIndex = kcm.sourcesModel.persistentIndexForNotifyRcName(kcm.initialNotifyRcName);
-                if (kcm.initialEventId) {
-                    appConfiguration.configureEvents(kcm.initialEventId);
-                }
-            }
+        kcm.sourcesModel.load();
 
-            kcm.initialDesktopEntry = "";
-            kcm.initialNotifyRcName = "";
-            kcm.initialEventId = "";
-        });
+        if (kcm.initialDesktopEntry) {
+            appConfiguration.rootIndex = kcm.sourcesModel.persistentIndexForDesktopEntry(kcm.initialDesktopEntry);
+        } else if (kcm.initialNotifyRcName) {
+            appConfiguration.rootIndex = kcm.sourcesModel.persistentIndexForNotifyRcName(kcm.initialNotifyRcName);
+        }
+
+        if (kcm.initialEventId && kcm.initialNotifyRcName) {
+            appConfiguration.configureEvents(kcm.initialEventId);
+        }
+
+        kcm.initialDesktopEntry = "";
+        kcm.initialNotifyRcName = "";
+        kcm.initialEventId = "";
     }
 
     Binding {

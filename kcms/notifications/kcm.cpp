@@ -193,7 +193,6 @@ void KCMNotifications::configureEvents(const QString &notifyRcName, const QStrin
 void KCMNotifications::load()
 {
     m_settings->load();
-    m_sourcesModel->load();
 }
 
 void KCMNotifications::save()

@@ -92,7 +92,7 @@ public:
 
     QHash<int, QByteArray> roleNames() const override;
 
-    void load();
+    Q_INVOKABLE void load();
 
 private:
     QVector<SourceData> m_data;
