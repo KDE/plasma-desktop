@@ -222,14 +222,14 @@ void SourcesModel::load()
 
             notifyRcFiles.append(file);
 
-            KConfig *config = new KConfig(file, KConfig::NoGlobals);
-            config->addConfigSources(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
+            KConfig config(file, KConfig::NoGlobals);
+            config.addConfigSources(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
                                         QStringLiteral("knotifications5/") + file));
 
-            KConfigGroup globalGroup(config, QLatin1String("Global"));
+            KConfigGroup globalGroup(&config, QLatin1String("Global"));
 
             const QRegularExpression regExp(QStringLiteral("^Event/([^/]*)$"));
-            const QStringList groups = config->groupList().filter(regExp);
+            const QStringList groups = config.groupList().filter(regExp);
 
             const QString notifyRcName = file.section(QLatin1Char('.'), 0, -2);
             const QString desktopEntry = globalGroup.readEntry(QStringLiteral("DesktopEntry"));
@@ -256,7 +256,7 @@ void SourcesModel::load()
 
             QVector<EventData> events;
             for (const QString &group : groups) {
-                KConfigGroup cg(config, group);
+                KConfigGroup cg(&config, group);
 
                 const QString eventId = regExp.match(group).captured(1);
                 // TODO context stuff
