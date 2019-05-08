@@ -25,6 +25,7 @@
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QQuickItem>
+#include <QQuickRenderControl>
 #include <QQuickWindow>
 #include <QStandardPaths>
 #include <QVBoxLayout>
@@ -161,7 +162,7 @@ void KCMNotifications::configureEvents(const QString &notifyRcName, const QStrin
 
     if (ctx && ctx->window()) {
         dialog->winId(); // so it creates windowHandle
-        dialog->windowHandle()->setTransientParent(ctx->window());
+        dialog->windowHandle()->setTransientParent(QQuickRenderControl::renderWindowFor(ctx->window()));
         dialog->setModal(true);
     }
 

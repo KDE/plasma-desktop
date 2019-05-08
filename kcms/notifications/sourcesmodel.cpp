@@ -37,8 +37,6 @@
 
 #include <algorithm>
 
-#include <QDebug>
-
 SourcesModel::SourcesModel(QObject *parent) : QAbstractItemModel(parent)
 {
 
