@@ -55,7 +55,7 @@ MouseArea {
     property int pressY: -1
     property QtObject contextMenu: null
     property int wheelDelta: 0
-    readonly property bool smartLauncherEnabled: plasmoid.configuration.smartLaunchersEnabled && !inPopup && model.IsStartup !== true
+    readonly property bool smartLauncherEnabled: !inPopup && model.IsStartup !== true
     property QtObject smartLauncherItem: null
     property alias toolTipAreaItem: toolTipArea
 
@@ -381,7 +381,7 @@ MouseArea {
                     });
 
                     toolTipDelegate.smartLauncherCountVisible = Qt.binding(function() {
-                        return plasmoid.configuration.smartLaunchersEnabled && task.smartLauncherItem && task.smartLauncherItem.countVisible;
+                        return task.smartLauncherItem && task.smartLauncherItem.countVisible;
                     });
                     toolTipDelegate.smartLauncherCount = Qt.binding(function() {
                         return toolTipDelegate.smartLauncherCountVisible ? task.smartLauncherItem.count : 0;
@@ -395,7 +395,7 @@ MouseArea {
         anchors.fill: frame
         asynchronous: true
         source: "TaskProgressOverlay.qml"
-        active: plasmoid.configuration.smartLaunchersEnabled && task.smartLauncherItem && task.smartLauncherItem.progressVisible
+        active: task.smartLauncherItem && task.smartLauncherItem.progressVisible
     }
 
     Item {
@@ -448,7 +448,7 @@ MouseArea {
             height: parent.height
             asynchronous: true
             source: "TaskBadgeOverlay.qml"
-            active: plasmoid.configuration.smartLaunchersEnabled && height >= units.iconSizes.small
+            active: height >= units.iconSizes.small
                     && task.smartLauncherItem && task.smartLauncherItem.countVisible
         }
 

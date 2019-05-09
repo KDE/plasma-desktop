@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2016 Kai Uwe Broulik <kde@privat.broulik.de>            *
+ *   Copyright (C) 2016, 2019 Kai Uwe Broulik <kde@privat.broulik.de>      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -25,13 +25,14 @@
 #include <QHash>
 #include <QVariantMap>
 
-#include <Plasma/DataEngine>
+#include <notificationmanager/jobsmodel.h>
 
 class QDBusServiceWatcher;
 class QString;
 
-namespace Plasma {
-class DataEngineConsumer;
+namespace NotificationManager
+{
+class Settings;
 }
 
 namespace SmartLauncher {
@@ -53,7 +54,6 @@ public:
     explicit Backend(QObject *parent = nullptr);
     ~Backend() override;
 
-    bool available() const;
     bool hasLauncher(const QString &storageId) const;
 
     int count(const QString &uri) const;
@@ -64,9 +64,6 @@ public:
 
     QHash<QString, QString> unityMappingRules() const;
 
-public slots:
-    void dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data);
-
 signals:
     void countChanged(const QString &uri, int count);
     void countVisibleChanged(const QString &uri, bool countVisible);
@@ -74,14 +71,16 @@ signals:
     void progressVisibleChanged(const QString &uri, bool progressVisible);
     void urgentChanged(const QString &uri, bool urgent);
 
+    void reloadRequested(const QString &uri);
     void launcherRemoved(const QString &uri);
 
 private slots:
     void update(const QString &uri, const QMap<QString, QVariant> &properties);
 
 private:
-    bool setupUnity();
-    bool setupApplicationJobs();
+    void reload();
+    void setupUnity();
+    void setupApplicationJobs();
 
     void onServiceUnregistered(const QString &service);
 
@@ -90,23 +89,27 @@ private:
                                 const QVariantMap &properties, // the map of properties we're given by DBus
                                 const QString &property, // the property we're looking for
                                 T *entryMember, // the member variable we're going to write our result in
+                                // the getter for this property which might return something different from the raw value
+                                T (Backend::*getter)(const QString &) const,
                                 // the change signal that will be emitted if the property has changed
                                 void (Backend::*changeSignal)(const QString &, T))
     {
         auto foundProperty = properties.constFind(property);
         if (foundProperty != properties.constEnd()) {
-            T newValue = foundProperty->value<T>();
+            const T oldSanitizedValue = ((this)->*getter)(storageId);
 
-            if (newValue != *entryMember) {
-                *entryMember = newValue;
-                emit ((this)->*changeSignal)(storageId, newValue);
+            T newValue = foundProperty->value<T>();
+            *entryMember = newValue;
+
+            const T newSanitizedValue = ((this)->*getter)(storageId);
+
+            if (newSanitizedValue != oldSanitizedValue) {
+                emit ((this)->*changeSignal)(storageId, newSanitizedValue);
             }
         }
     }
 
-    void onApplicationJobAdded(const QString &source);
-    void onApplicationJobRemoved(const QString &source);
-    void updateApplicationJobPercent(const QString &storageId, Entry *entry);
+    bool doNotDisturbMode() const;
 
     // Unity Launchers
     QDBusServiceWatcher *m_watcher;
@@ -118,13 +121,13 @@ private:
     QHash<QString, QString> m_unityMappingRules;
 
     // Application Jobs
-    Plasma::DataEngineConsumer *m_dataEngineConsumer;
-    Plasma::DataEngine *m_dataEngine;
-    QHash<QString, QString> m_dataSourceToStorageId; // <Job 1, foo.desktop>
-    QHash<QString, QStringList> m_storageIdToJobs; // <foo.desktop, <Job 1, Job 2, ..>>
-    QHash<QString, int> m_jobProgress; // <Job 1, 42>
+    NotificationManager::JobsModel::Ptr m_jobsModel;
+
+    NotificationManager::Settings *m_settings = nullptr;
 
     QHash<QString, Entry> m_launchers;
+
+    QStringList m_badgeBlacklist;
 
     bool m_available = false;
 

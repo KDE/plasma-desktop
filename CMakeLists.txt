@@ -70,6 +70,7 @@ set_package_properties(KF5QQC2DeskopStyle PROPERTIES
 )
 
 find_package(LibKWorkspace 5.14.90 CONFIG REQUIRED)
+find_package(LibNotificationManager 5.15.80 CONFIG REQUIRED)
 find_package(LibTaskManager 5.14.90 CONFIG REQUIRED)
 find_package(LibNotificationManager 5.14.90 CONFIG REQUIRED)
 find_package(LibColorCorrect 5.14.90 CONFIG REQUIRED)

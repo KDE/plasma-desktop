@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2016 Kai Uwe Broulik <kde@privat.broulik.de>            *
+ *   Copyright (C) 2016, 2019 Kai Uwe Broulik <kde@privat.broulik.de>      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -38,53 +38,58 @@ QWeakPointer<Backend> Item::s_backend;
 
 void Item::init()
 {
-    if (m_inited || m_storageId.isEmpty() || !m_backendPtr || !m_backendPtr->available()) {
+    if (m_inited || m_storageId.isEmpty() || !m_backendPtr) {
         return;
     }
 
+    connect(m_backendPtr.data(), &Backend::reloadRequested, this, [this](const QString &uri) {
+        if (uri.isEmpty() || m_storageId == uri) {
+            populate();
+        }
+    });
+
     connect(m_backendPtr.data(), &Backend::launcherRemoved, this, [this](const QString &uri) {
-        if (m_storageId == uri) {
+        if (uri.isEmpty() || m_storageId == uri) {
             clear();
         }
     });
 
     connect(m_backendPtr.data(), &Backend::countChanged, this, [this](const QString &uri, int count) {
-        if (m_storageId == uri) {
+        if (uri.isEmpty() || m_storageId == uri) {
             setCount(count);
         }
     });
 
     connect(m_backendPtr.data(), &Backend::countVisibleChanged, this, [this](const QString &uri, bool countVisible) {
-        if (m_storageId == uri) {
+        if (uri.isEmpty() || m_storageId == uri) {
             setCountVisible(countVisible);
         }
     });
 
     connect(m_backendPtr.data(), &Backend::progressChanged, this, [this](const QString &uri, int progress) {
-        if (m_storageId == uri) {
+        if (uri.isEmpty() || m_storageId == uri) {
             setProgress(progress);
         }
     });
 
     connect(m_backendPtr.data(), &Backend::progressVisibleChanged, this, [this](const QString &uri, bool progressVisible) {
-        if (m_storageId == uri) {
+        if (uri.isEmpty() || m_storageId == uri) {
             setProgressVisible(progressVisible);
         }
     });
 
     connect(m_backendPtr.data(), &Backend::urgentChanged, this, [this](const QString &uri, bool urgent) {
-        if (m_storageId == uri) {
+        if (uri.isEmpty() || m_storageId == uri) {
             setUrgent(urgent);
         }
     });
 
-    m_available = true;
-    emit availableChanged(m_available);
+    m_inited = true;
 }
 
 void Item::populate()
 {
-    if (!m_backendPtr || !m_backendPtr->available() || m_storageId.isEmpty()) {
+    if (!m_backendPtr || m_storageId.isEmpty()) {
         return;
     }
 
@@ -156,10 +161,6 @@ void Item::setLauncherUrl(const QUrl &launcherUrl)
     }
 }
 
-bool Item::available() const
-{
-    return m_available;
-}
 
 int Item::count() const
 {

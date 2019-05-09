@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2016 Kai Uwe Broulik <kde@privat.broulik.de>            *
+ *   Copyright (C) 2016, 2019 Kai Uwe Broulik <kde@privat.broulik.de>      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -24,47 +24,69 @@
 #include <QDBusServiceWatcher>
 #include <QDebug>
 
-#include <Plasma/DataEngineConsumer>
-#include <Plasma/DataEngine>
-
+#include <KConfigGroup>
 #include <KSharedConfig>
 #include <KService>
 
+#include <algorithm>
+
+#include <notificationmanager/jobsmodel.h>
+#include <notificationmanager/settings.h>
+
 using namespace SmartLauncher;
+using namespace NotificationManager;
 
 Backend::Backend(QObject *parent)
     : QObject(parent)
     , m_watcher(new QDBusServiceWatcher(this))
-    , m_dataEngineConsumer(new Plasma::DataEngineConsumer)
-    , m_dataEngine(m_dataEngineConsumer->dataEngine(QStringLiteral("applicationjobs")))
+    , m_settings(new Settings(this))
 {
-    m_available = setupUnity();
-    m_available = setupApplicationJobs() || m_available;
+    setupUnity();
+
+    reload();
+    connect(m_settings, &Settings::settingsChanged, this, &Backend::reload);
 }
 
-Backend::~Backend()
+Backend::~Backend() = default;
+
+void Backend::reload()
 {
-    delete m_dataEngineConsumer;
+    m_badgeBlacklist = m_settings->badgeBlacklistedApplications();
+
+    // Unity Launcher API operates on storage IDs ("foo.desktop"), whereas settings return desktop entries "foo"
+    std::transform(m_badgeBlacklist.begin(), m_badgeBlacklist.end(), m_badgeBlacklist.begin(), [](const QString &desktopEntry) {
+        return desktopEntry + QStringLiteral(".desktop");
+    });
+
+    setupApplicationJobs();
+
+    emit reloadRequested(QString() /*all*/);
 }
 
-bool Backend::setupUnity()
+bool Backend::doNotDisturbMode() const
+{
+    return m_settings->notificationsInhibitedByApplication()
+            || (m_settings->notificationsInhibitedUntil().isValid() && m_settings->notificationsInhibitedUntil() > QDateTime::currentDateTimeUtc());
+}
+
+void Backend::setupUnity()
 {
     auto sessionBus = QDBusConnection::sessionBus();
 
     if (!sessionBus.connect({}, {}, QStringLiteral("com.canonical.Unity.LauncherEntry"),
                             QStringLiteral("Update"), this, SLOT(update(QString,QMap<QString,QVariant>)))) {
         qWarning() << "failed to register Update signal";
-        return false;
+        return;
     }
 
     if (!sessionBus.registerObject(QStringLiteral("/Unity"), this)) {
         qWarning() << "Failed to register unity object";
-        return false;
+        return;
     }
 
     if (!sessionBus.registerService(QStringLiteral("com.canonical.Unity"))) {
         qWarning() << "Failed to register unity service";
-        return false;
+        // In case an external process uses this (e.g. Latte Dock), let it just listen.
     }
 
     KConfigGroup grp(KSharedConfig::openConfig(QStringLiteral("taskmanagerrulesrc")), QStringLiteral("Unity Launcher Mapping"));
@@ -77,31 +99,16 @@ bool Backend::setupUnity()
 
         m_unityMappingRules.insert(key, value);
     }
-
-    return true;
 }
 
-bool Backend::setupApplicationJobs()
+void Backend::setupApplicationJobs()
 {
-    if (!m_dataEngine->isValid()) {
-        qWarning() << "Failed to setup application jobs, data engine is not valid";
-        return false;
+    if (m_settings->jobsInTaskManager() && !m_jobsModel) {
+        m_jobsModel = JobsModel::createJobsModel();
+        m_jobsModel->init();
+    } else if (!m_settings->jobsInTaskManager() && m_jobsModel) {
+        m_jobsModel = nullptr;
     }
-
-    const QStringList &sources = m_dataEngine->sources();
-    for (const QString &source : sources) {
-        onApplicationJobAdded(source);
-    }
-
-    connect(m_dataEngine, &Plasma::DataEngine::sourceAdded, this, &Backend::onApplicationJobAdded);
-    connect(m_dataEngine, &Plasma::DataEngine::sourceRemoved, this, &Backend::onApplicationJobRemoved);
-
-    return true;
-}
-
-bool Backend::available() const
-{
-    return m_available;
 }
 
 bool Backend::hasLauncher(const QString &storageId) const
@@ -111,21 +118,37 @@ bool Backend::hasLauncher(const QString &storageId) const
 
 int Backend::count(const QString &uri) const
 {
+    if (!m_settings->badgesInTaskManager()
+            || doNotDisturbMode()
+            || m_badgeBlacklist.contains(uri)) {
+        return 0;
+    }
     return m_launchers.value(uri).count;
 }
 
 bool Backend::countVisible(const QString &uri) const
 {
+    if (!m_settings->badgesInTaskManager()
+            || doNotDisturbMode()
+            || m_badgeBlacklist.contains(uri)) {
+        return false;
+    }
     return m_launchers.value(uri).countVisible;
 }
 
 int Backend::progress(const QString &uri) const
 {
+    if (!m_settings->jobsInTaskManager()) {
+        return 0;
+    }
     return m_launchers.value(uri).progress;
 }
 
 bool Backend::progressVisible(const QString &uri) const
 {
+    if (!m_settings->jobsInTaskManager()) {
+        return false;
+    }
     return m_launchers.value(uri).progressVisible;
 }
 
@@ -192,22 +215,26 @@ void Backend::update(const QString &uri, const QMap<QString, QVariant> &properti
         }
     }
 
-    updateLauncherProperty(storageId, properties, QStringLiteral("count"), &foundEntry->count, &Backend::countChanged);
-    updateLauncherProperty(storageId, properties, QStringLiteral("count-visible"), &foundEntry->countVisible, &Backend::countVisibleChanged);
+    updateLauncherProperty(storageId, properties, QStringLiteral("count"), &foundEntry->count, &Backend::count, &Backend::countChanged);
+    updateLauncherProperty(storageId, properties, QStringLiteral("count-visible"), &foundEntry->countVisible, &Backend::countVisible, &Backend::countVisibleChanged);
 
     // the API gives us progress as 0..1 double but we'll use percent to avoid unnecessary
     // changes when it just changed a fraction of a percent, hence not using our fancy updateLauncherProperty method
     auto foundProgress = properties.constFind(QStringLiteral("progress"));
     if (foundProgress != propertiesEnd) {
-        int newProgress = qRound(foundProgress->toDouble() * 100);
-        if (newProgress != foundEntry->progress) {
-            foundEntry->progress = newProgress;
-            emit progressChanged(storageId, newProgress);
+        const int oldSanitizedProgress = progress(storageId);
+
+        foundEntry->progress = qRound(foundProgress->toDouble() * 100);
+
+        const int newSanitizedProgress = progress(storageId);
+
+        if (oldSanitizedProgress != newSanitizedProgress) {
+            emit progressChanged(storageId, newSanitizedProgress);
         }
     }
 
-    updateLauncherProperty(storageId, properties, QStringLiteral("progress-visible"), &foundEntry->progressVisible, &Backend::progressVisibleChanged);
-    updateLauncherProperty(storageId, properties, QStringLiteral("urgent"), &foundEntry->urgent, &Backend::urgentChanged);
+    updateLauncherProperty(storageId, properties, QStringLiteral("progress-visible"), &foundEntry->progressVisible, &Backend::progressVisible, &Backend::progressVisibleChanged);
+    updateLauncherProperty(storageId, properties, QStringLiteral("urgent"), &foundEntry->urgent, &Backend::urgent, &Backend::urgentChanged);
 }
 
 void Backend::onServiceUnregistered(const QString &service)
@@ -224,130 +251,4 @@ void Backend::onServiceUnregistered(const QString &service)
 
     m_launchers.remove(storageId);
     emit launcherRemoved(storageId);
-}
-
-void Backend::onApplicationJobAdded(const QString &source)
-{
-    m_dataEngine->connectSource(source, this);
-}
-
-void Backend::onApplicationJobRemoved(const QString &source)
-{
-    m_dataEngine->disconnectSource(source, this);
-
-    const QString &storageId = m_dataSourceToStorageId.take(source);
-    if (storageId.isEmpty()) {
-        return;
-    }
-
-    // remove job, calculate new percentage, or remove launcher if gone altogether
-    auto &jobs = m_storageIdToJobs[storageId];
-    jobs.removeOne(source);
-    if (jobs.isEmpty()) {
-        m_storageIdToJobs.remove(storageId);
-    }
-
-    m_jobProgress.remove(source);
-
-    auto foundEntry = m_launchers.find(storageId);
-    if (foundEntry == m_launchers.end()) {
-        qWarning() << "Cannot remove application job" << source << "as we don't know" << storageId;
-        return;
-    }
-
-    updateApplicationJobPercent(storageId, &*foundEntry);
-
-    if (!foundEntry->progressVisible && !foundEntry->progress) {
-        // no progress anymore whatsoever, remove entire launcher
-        m_launchers.remove(storageId);
-        emit launcherRemoved(storageId);
-    }
-}
-
-void Backend::dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data)
-{
-    QString storageId;
-
-    auto foundStorageId = m_dataSourceToStorageId.constFind(sourceName);
-    if (foundStorageId == m_dataSourceToStorageId.constEnd()) { // we don't know this one, register
-        QString appName = data.value(QStringLiteral("appName")).toString();
-        if (appName.isEmpty()) {
-            qWarning() << "Application jobs got update for" << sourceName << "without app name";
-            return;
-        }
-
-        KService::Ptr service = KService::serviceByStorageId(appName);
-        if (!service) {
-            appName.prepend(QLatin1String("org.kde."));
-            // HACK try to find a service with org.kde. notation
-            service = KService::serviceByStorageId(appName);
-            if (!service) {
-                qWarning() << "Could not find service for job" << sourceName << "with app name" << appName;
-                return;
-            }
-        }
-
-        storageId = service->storageId();
-        m_dataSourceToStorageId.insert(sourceName, storageId);
-    } else {
-        storageId = *foundStorageId;
-    }
-
-    auto foundEntry = m_launchers.find(storageId);
-    if (foundEntry == m_launchers.end()) { // we don't have it yet, create new Entry
-        Entry entry;
-        foundEntry = m_launchers.insert(storageId, entry);
-    }
-
-    int percent = data.value(QStringLiteral("percentage"), 0).toInt();
-
-    // setup everything and calculate new percentage
-    auto &jobs = m_storageIdToJobs[storageId];
-    if (!jobs.contains(sourceName)) {
-        jobs.append(sourceName);
-    }
-
-    m_jobProgress.insert(sourceName, percent); // insert() overrides if exist
-
-    updateApplicationJobPercent(storageId, &*foundEntry);
-}
-
-void Backend::updateApplicationJobPercent(const QString &storageId, Entry *entry)
-{
-    // basically get all jobs for the given storageId and calculate an average progress
-
-    const auto &jobs = m_storageIdToJobs.value(storageId);
-    qreal jobCount = jobs.count();
-
-    int totalProgress = 0;
-    for (const QString &job : jobs) {
-        totalProgress += m_jobProgress.value(job, 0);
-    }
-
-    int progress = 0;
-    if (jobCount > 0) {
-        progress = qRound(totalProgress / jobCount);
-    }
-
-    bool visible = (jobCount > 0);
-
-    if (entry->count != jobCount) {
-        entry->count = jobCount;
-        emit countChanged(storageId, jobCount);
-    }
-
-    if (entry->countVisible != visible) {
-        entry->countVisible = visible;
-        emit countVisibleChanged(storageId, visible);
-    }
-
-    if (entry->progress != progress) {
-        entry->progress = progress;
-        emit progressChanged(storageId, progress);
-    }
-
-    if (entry->progressVisible != visible) {
-        entry->progressVisible = visible;
-        emit progressVisibleChanged(storageId, visible);
-    }
 }

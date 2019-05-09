@@ -34,7 +34,6 @@ Item {
 
     property alias cfg_showToolTips: showToolTips.checked
     property alias cfg_highlightWindows: highlightWindows.checked
-    property alias cfg_smartLaunchersEnabled: smartLaunchers.checked
     property bool cfg_indicateAudioStreams
     property alias cfg_iconSize: iconSize.value
     property alias cfg_maxStripes: maxStripes.value
@@ -53,11 +52,6 @@ Item {
        CheckBox {
             id: highlightWindows
             text: i18n("Highlight windows when hovering over tasks")
-        }
-
-        CheckBox {
-            id: smartLaunchers
-            text: i18n("Show progress and status information in task buttons")
         }
 
         CheckBox {

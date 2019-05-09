@@ -29,6 +29,7 @@ target_link_libraries(taskmanagerplugin
                       KF5::KIOFileWidgets # KFilePlacesModel
                       KF5::Plasma
                       KF5::Service
-                      KF5::WindowSystem)
+                      KF5::WindowSystem
+                      PW::LibNotificationManager)
 
 install(TARGETS taskmanagerplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/taskmanager)

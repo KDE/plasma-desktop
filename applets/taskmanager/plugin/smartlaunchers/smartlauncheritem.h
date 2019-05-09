@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2016 Kai Uwe Broulik <kde@privat.broulik.de>            *
+ *   Copyright (C) 2016, 2019 Kai Uwe Broulik <kde@privat.broulik.de>      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -35,8 +35,6 @@ class Item : public QObject
 
     Q_PROPERTY(QUrl launcherUrl READ launcherUrl WRITE setLauncherUrl NOTIFY launcherUrlChanged)
 
-    Q_PROPERTY(bool available READ available NOTIFY availableChanged)
-
     Q_PROPERTY(int count READ count NOTIFY countChanged)
     Q_PROPERTY(bool countVisible READ countVisible NOTIFY countVisibleChanged)
     Q_PROPERTY(int progress READ progress NOTIFY progressChanged)
@@ -50,8 +48,6 @@ public:
     QUrl launcherUrl() const;
     void setLauncherUrl(const QUrl &launcherUrl);
 
-    bool available() const;
-
     int count() const;
     bool countVisible() const;
     int progress() const;
@@ -60,8 +56,6 @@ public:
 
 signals:
     void launcherUrlChanged(const QUrl &launcherUrl);
-
-    void availableChanged(bool available);
 
     void countChanged(int count);
     void countVisibleChanged(bool countVisible);
@@ -88,7 +82,6 @@ private:
     QUrl m_launcherUrl;
     QString m_storageId;
 
-    bool m_available = false;
     bool m_inited = false;
 
     int m_count = 0;
