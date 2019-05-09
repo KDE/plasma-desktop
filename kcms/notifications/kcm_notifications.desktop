@@ -1,0 +1,19 @@
+[Desktop Entry]
+Exec=kcmshell5 kcm_notifications
+Icon=preferences-desktop-notification-bell
+Type=Service
+X-KDE-ServiceTypes=KCModule
+X-DocPath=kcontrol/notifications/index.html
+
+X-KDE-Library=kcm_notifications
+X-KDE-ParentApp=kcontrol
+
+X-KDE-System-Settings-Parent-Category=personalization
+X-KDE-Weight=40
+
+Name=Notifications
+Comment=Event Notifications and Actions
+
+X-KDE_Keywords=System sounds,Audio,Sound,Notify,Alerts,Notification,popups,disturb,do not disturb,quiet,concentrate,concentration
+
+Categories=Qt;KDE;X-KDE-settings-sound;
