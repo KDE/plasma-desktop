@@ -31,6 +31,7 @@
 #include <KConfigGroup>
 #include <KColorScheme>
 #include <KMessageBox>
+#include <KStandardGuiItem>
 #include <KWindowSystem>
 
 #include <KNS3/UploadDialog>
@@ -53,17 +54,16 @@ SchemeEditorDialog::SchemeEditorDialog(const QString &path, QWidget *parent)
     init();
 }
 
-bool SchemeEditorDialog::overwriteOnSave() const
+bool SchemeEditorDialog::showApplyOverwriteButton() const
 {
-    return m_overwriteOnSave;
+    return m_showApplyOverwriteButton;
 }
 
-void SchemeEditorDialog::setOverwriteOnSave(bool overwrite)
+void SchemeEditorDialog::setShowApplyOverwriteButton(bool show)
 {
-    m_overwriteOnSave = overwrite;
+    m_showApplyOverwriteButton = show;
 
-    buttonBox->button(QDialogButtonBox::Apply)->setVisible(overwrite);
-    buttonBox->button(QDialogButtonBox::Save)->setVisible(!overwrite);
+    buttonBox->button(QDialogButtonBox::Apply)->setVisible(show);
 }
 
 void SchemeEditorDialog::init()
@@ -86,11 +86,11 @@ void SchemeEditorDialog::init()
     connect(m_disabledTab, &SchemeEditorEffects::changed, this, &SchemeEditorDialog::updateTabs);
     connect(m_inactiveTab, &SchemeEditorEffects::changed, this, &SchemeEditorDialog::updateTabs);
 
-    // In overwrite mode we use "Apply", in regular mode "Save" button
+    // "Apply" is only shown in overwrite mode
     buttonBox->button(QDialogButtonBox::Apply)->setVisible(false);
     buttonBox->button(QDialogButtonBox::Apply)->setEnabled(false);
 
-    buttonBox->button(QDialogButtonBox::Save)->setEnabled(false);
+    KGuiItem::assign(buttonBox->button(QDialogButtonBox::Save), KStandardGuiItem::saveAs());
     buttonBox->button(QDialogButtonBox::Reset)->setEnabled(false);
     updateTabs();
 }
@@ -122,10 +122,13 @@ void SchemeEditorDialog::on_buttonBox_clicked(QAbstractButton *button)
         updateTabs();
         setUnsavedChanges(false);
     }
-    else if (buttonBox->standardButton(button) == QDialogButtonBox::Save
-             || buttonBox->standardButton(button) == QDialogButtonBox::Apply)
+    else if (buttonBox->standardButton(button) == QDialogButtonBox::Save)
     {
-        saveScheme();
+        saveScheme(false /*overwrite*/);
+    }
+    else if (buttonBox->standardButton(button) == QDialogButtonBox::Apply)
+    {
+        saveScheme(true /*overwrite*/);
     }
     else if (buttonBox->standardButton(button) == QDialogButtonBox::Close)
     {
@@ -144,12 +147,12 @@ void SchemeEditorDialog::on_buttonBox_clicked(QAbstractButton *button)
     }
 }
 
-void SchemeEditorDialog::saveScheme()
+void SchemeEditorDialog::saveScheme(bool overwrite)
 {
     QString name = m_schemeName;
 
     // prompt for the name to save as
-    if (!m_overwriteOnSave) {
+    if (!overwrite) {
         bool ok;
         name = QInputDialog::getText(this, i18n("Save Color Scheme"),
             i18n("&Enter a name for the color scheme:"), QLineEdit::Normal, m_schemeName, &ok);
@@ -176,7 +179,7 @@ void SchemeEditorDialog::saveScheme()
     // or if we can overwrite it if it exists
     if (path.isEmpty() || !file.exists() || canWrite)
     {
-        if(canWrite && !m_overwriteOnSave){
+        if(canWrite && !overwrite){
             int ret = KMessageBox::questionYesNo(this,
                 i18n("A color scheme with that name already exists.\nDo you want to overwrite it?"),
                 i18n("Save Color Scheme"),
@@ -185,7 +188,7 @@ void SchemeEditorDialog::saveScheme()
 
             //on don't overwrite, call again the function
             if(ret == KMessageBox::No){
-                this->saveScheme();
+                this->saveScheme(overwrite);
                 return;
             }
         }
@@ -250,13 +253,11 @@ void SchemeEditorDialog::setUnsavedChanges(bool changes)
     m_unsavedChanges = changes;
     if (changes)
     {
-        buttonBox->button(QDialogButtonBox::Save)->setEnabled(true);
         buttonBox->button(QDialogButtonBox::Apply)->setEnabled(true);
         buttonBox->button(QDialogButtonBox::Reset)->setEnabled(true);
     }
     else
     {
-        buttonBox->button(QDialogButtonBox::Save)->setEnabled(false);
         buttonBox->button(QDialogButtonBox::Apply)->setEnabled(false);
         buttonBox->button(QDialogButtonBox::Reset)->setEnabled(false);
     }

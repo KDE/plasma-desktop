@@ -41,8 +41,8 @@ public:
     SchemeEditorDialog(const QString &path, QWidget *parent = nullptr);
     SchemeEditorDialog(KSharedConfigPtr config, QWidget *parent = nullptr);
 
-    bool overwriteOnSave() const;
-    void setOverwriteOnSave(bool overwrite);
+    bool showApplyOverwriteButton() const;
+    void setShowApplyOverwriteButton(bool show);
 
 Q_SIGNALS:
     void changed(bool);
@@ -59,7 +59,7 @@ private Q_SLOTS:
 private:
     void init();
     /** save the current scheme */
-    void saveScheme();
+    void saveScheme(bool overwrite);
     void setUnsavedChanges(bool changes);
 
     const QString m_filePath;
@@ -73,7 +73,7 @@ private:
     SchemeEditorEffects *m_disabledTab;
     SchemeEditorEffects *m_inactiveTab;
 
-    bool m_overwriteOnSave = false;
+    bool m_showApplyOverwriteButton = false;
 };
 
 #endif

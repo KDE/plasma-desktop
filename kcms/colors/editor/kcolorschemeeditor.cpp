@@ -49,7 +49,7 @@ int main(int argc, char* argv[])
     parser.addPositionalArgument("theme", i18n("Scheme to edit or to use as a base."),
         QStringLiteral("kcolorschemeeditor ThemeName"));
 
-    QCommandLineOption overwriteOption(QStringLiteral("overwrite"), i18n("Overwrite edited theme when saving"));
+    QCommandLineOption overwriteOption(QStringLiteral("overwrite"), i18n("Show 'Apply' button that saves changes without asking (unlike 'Save As' button)"));
     parser.addOption(overwriteOption);
 
     QCommandLineOption attachOption(QStringLiteral("attach"), i18n("Makes the dialog transient for another application window specified by handle"), QStringLiteral("handle"));
@@ -74,7 +74,7 @@ int main(int argc, char* argv[])
     }
 
     SchemeEditorDialog dialog(path);
-    dialog.setOverwriteOnSave(parser.isSet(overwriteOption));
+    dialog.setShowApplyOverwriteButton(parser.isSet(overwriteOption));
 
     // FIXME doesn't work :(
     const QString attachHandle = parser.value(attachOption);
