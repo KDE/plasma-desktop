@@ -34,6 +34,7 @@ class KCMSplashScreen : public KQuickAddons::ConfigModule
     Q_PROPERTY(QStandardItemModel *splashModel READ splashModel CONSTANT)
     Q_PROPERTY(QString selectedPlugin READ selectedPlugin WRITE setSelectedPlugin NOTIFY selectedPluginChanged)
     Q_PROPERTY(int selectedPluginIndex READ selectedPluginIndex NOTIFY selectedPluginIndexChanged)
+    Q_PROPERTY(bool testing READ testing NOTIFY testingChanged)
 
 public:
     enum Roles {
@@ -52,6 +53,8 @@ public:
 
     int selectedPluginIndex() const;
 
+    bool testing() const;
+
     void loadModel();
 
 public Q_SLOTS:
@@ -65,10 +68,15 @@ Q_SIGNALS:
     void selectedPluginChanged();
     void selectedPluginIndexChanged();
 
+    void testingChanged();
+    void testingFailed();
+
 private:
     QStandardItemModel *m_model;
     Plasma::Package m_package;
     QString m_selectedPlugin;
+
+    QProcess *m_testProcess = nullptr;
 
     KConfig m_config;
     KConfigGroup m_configGroup;

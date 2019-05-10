@@ -26,9 +26,28 @@ import org.kde.kcm 1.1 as KCM
 KCM.GridViewKCM {
     KCM.ConfigModule.quickHelp: i18n("This module lets you choose the splash screen theme.")
 
+    enabled: !kcm.testing
+
     view.model: kcm.splashModel
     //NOTE: pay attention to never break this binding
     view.currentIndex: kcm.selectedPluginIndex
+
+    // putting the InlineMessage as header item causes it to show up initially despite visible false
+    header: ColumnLayout {
+        Kirigami.InlineMessage {
+            id: testingFailedLabel
+            Layout.fillWidth: true
+            showCloseButton: true
+            type: Kirigami.MessageType.Error
+            text: i18n("Failed to test the splash screen.")
+
+            Connections {
+                target: kcm
+                onTestingFailed: testingFailedLabel.visible = true
+            }
+        }
+    }
+
     view.delegate: KCM.GridDelegate {
         id: delegate
 

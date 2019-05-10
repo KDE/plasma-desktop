@@ -29,7 +29,6 @@
 
 #include <QVBoxLayout>
 #include <QPushButton>
-#include <QMessageBox>
 #include <QStandardItemModel>
 #include <QQmlContext>
 #include <QDir>
@@ -195,18 +194,34 @@ int KCMSplashScreen::selectedPluginIndex() const
     return -1;
 }
 
+bool KCMSplashScreen::testing() const
+{
+    return m_testProcess;
+}
+
 void KCMSplashScreen::test(const QString &plugin)
 {
-    if (plugin.isEmpty() || plugin == QLatin1String("None")) {
+    if (plugin.isEmpty() || plugin == QLatin1String("None") || m_testProcess) {
         return;
     }
 
-    QProcess proc;
-    QStringList arguments;
-    arguments << plugin << QStringLiteral("--test");
-    if (proc.execute(QStringLiteral("ksplashqml"), arguments)) {
-        QMessageBox::critical(nullptr, i18n("Error"), i18n("Failed to successfully test the splash screen."));
-    }
+    m_testProcess = new QProcess(this);
+    connect(m_testProcess, &QProcess::errorOccurred, this, [this](QProcess::ProcessError error) {
+        Q_UNUSED(error);
+        emit testingFailed();
+    });
+    connect(m_testProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this,
+        [this](int exitCode, QProcess::ExitStatus exitStatus) {
+        Q_UNUSED(exitCode);
+        Q_UNUSED(exitStatus);
+
+        m_testProcess->deleteLater();
+        m_testProcess = nullptr;
+        emit testingChanged();
+    });
+
+    emit testingChanged();
+    m_testProcess->start(QStringLiteral("ksplashqml"), {plugin, QStringLiteral("--test")});
 }
 
 #include "kcm.moc"
