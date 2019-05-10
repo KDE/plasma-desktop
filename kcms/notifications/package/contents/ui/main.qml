@@ -30,6 +30,8 @@ KCM.SimpleKCM {
     id: root
     KCM.ConfigModule.quickHelp: i18n("This module lets you manage application and system notifications.")
     KCM.ConfigModule.buttons: KCM.ConfigModule.Help | KCM.ConfigModule.Apply
+    // Sidebar on SourcesPage is 1/3 of the width at a minimum of 12, so assume 3 * 12 = 36 as preferred
+    implicitWidth: Kirigami.Units.gridUnit * 36
 
     function openSourcesSettings() {
         // TODO would be nice to re-use the current SourcesPage instead of pushing a new one that lost all state
