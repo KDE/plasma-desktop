@@ -24,15 +24,24 @@
 #include <QVector>
 #include <QVariantHash>
 
+enum class TouchpadInputBackendMode {
+    WaylandLibinput = 0,
+    XLibinput = 1,
+    XSynaptics = 2
+};
+
 class Q_DECL_EXPORT TouchpadBackend : public QObject
 {
     Q_OBJECT
 
 protected:
-        explicit TouchpadBackend(QObject *parent) : QObject(parent) {}
+    explicit TouchpadBackend(QObject *parent) : QObject(parent) {}
+    void setMode(TouchpadInputBackendMode mode);
 
 public:
     static TouchpadBackend *implementation();
+
+    TouchpadInputBackendMode getMode() const {return m_mode;}
 
     virtual bool applyConfig(const QVariantHash &) {return false;}
     virtual bool getConfig(QVariantHash &) {return false;}
@@ -61,6 +70,9 @@ public:
     virtual void watchForEvents(bool keyboard) {}
 
     virtual QStringList listMouses(const QStringList &blacklist) {return QStringList();}
+
+private:
+    TouchpadInputBackendMode m_mode;
 
 Q_SIGNALS:
     void touchpadStateChanged();

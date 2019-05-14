@@ -16,6 +16,7 @@ include_directories(${X11_Xinput_INCLUDE_PATH}
 
 SET(backend_SRCS
     ${backend_SRCS}
+    backends/libinputcommon.cpp
     backends/x11/propertyinfo.cpp
     backends/x11/xlibbackend.cpp
     backends/x11/synapticstouchpad.cpp

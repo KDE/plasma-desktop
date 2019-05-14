@@ -21,33 +21,12 @@
 #include <QDBusInterface>
 #include <QDBusError>
 #include <QVector>
+#include <backends/libinputcommon.h>
 
 #include "logging.h"
 
-namespace {
-template<typename T>
-T valueLoaderPart(QVariant const &reply) { Q_UNUSED(reply); return T(); }
-
-template<>
-bool valueLoaderPart(QVariant const &reply) { return reply.toBool(); }
-
-template<>
-int valueLoaderPart(QVariant const &reply) { return reply.toInt(); }
-
-template<>
-quint32 valueLoaderPart(QVariant const &reply) { return reply.toInt(); }
-
-template<>
-qreal valueLoaderPart(QVariant const &reply) { return reply.toReal(); }
-
-template<>
-QString valueLoaderPart(QVariant const &reply) { return reply.toString(); }
-
-template<>
-Qt::MouseButtons valueLoaderPart(QVariant const &reply) { return static_cast<Qt::MouseButtons>(reply.toInt()); }
-}
-
-KWinWaylandTouchpad::KWinWaylandTouchpad(QString dbusName)
+KWinWaylandTouchpad::KWinWaylandTouchpad(QString dbusName) :
+    LibinputCommon()
 {
     m_iface = new QDBusInterface(QStringLiteral("org.kde.KWin"),
                                  QStringLiteral("/org/kde/KWin/InputDevice/") + dbusName,
@@ -236,7 +215,7 @@ QString KWinWaylandTouchpad::valueWriter(const Prop<T> &prop)
     if (!prop.changed()) {
         return QString();
     }
-    m_iface->setProperty(prop.dbus, prop.val);
+    m_iface->setProperty(prop.name, prop.val);
     QDBusError error = m_iface->lastError();
     if (error.isValid()) {
         qCCritical(KCM_TOUCHPAD) << error.message();
@@ -248,9 +227,9 @@ QString KWinWaylandTouchpad::valueWriter(const Prop<T> &prop)
 template<typename T>
 bool KWinWaylandTouchpad::valueLoader(Prop<T> &prop)
 {
-    QVariant reply = m_iface->property(prop.dbus);
+    QVariant reply = m_iface->property(prop.name);
     if (!reply.isValid()) {
-        qCCritical(KCM_TOUCHPAD) << "Error on d-bus read of" << prop.dbus;
+        qCCritical(KCM_TOUCHPAD) << "Error on d-bus read of" << prop.name;
         prop.avail = false;
         return false;
     }

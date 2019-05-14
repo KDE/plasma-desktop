@@ -29,7 +29,7 @@ class TouchpadConfigPlugin : public QWidget
     Q_OBJECT
 
 public:
-    explicit TouchpadConfigPlugin(QWidget *parent);
+    TouchpadConfigPlugin(QWidget *parent, TouchpadBackend *backend);
     virtual ~TouchpadConfigPlugin() {}
 
     virtual void load() {}

@@ -32,6 +32,7 @@ class TouchpadConfigLibinput : public TouchpadConfigPlugin
 
 public:
     explicit TouchpadConfigLibinput(TouchpadConfigContainer *parent,
+                                    TouchpadBackend *backend,
                             const QVariantList &args = QVariantList());
     virtual ~TouchpadConfigLibinput() {}
 

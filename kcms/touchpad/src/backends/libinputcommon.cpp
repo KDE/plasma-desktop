@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Weng Xuetian <wengxt@gmail.com>
+ * Copyright 2019 Atul Bisht <atulbisht26@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,26 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#ifndef SYNAPTICSTOUCHPAD_H
-#define SYNAPTICSTOUCHPAD_H
+#include "libinputcommon.h"
 
-#include "xlibtouchpad.h"
-#include "xcbatom.h"
 
-class SynapticsTouchpad : public QObject, public XlibTouchpad
-{
-    Q_OBJECT
-
-public:
-    SynapticsTouchpad(Display *display, int deviceId);
-
-protected:
-    double getPropertyScale(const QString &name) const override;
-
-private:
-    XcbAtom m_capsAtom;
-    int m_resX, m_resY;
-    QStringList m_scaleByResX, m_scaleByResY, m_toRadians;
-};
-
-#endif // SYNAPTICSTOUCHPAD_H
+#include "moc_libinputcommon.cpp"

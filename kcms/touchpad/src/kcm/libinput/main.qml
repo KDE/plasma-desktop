@@ -76,6 +76,7 @@ Kirigami.ScrollablePage {
         naturalScroll.load()
         rightClickMethod.load()
         middleClickMethod.load()
+        disableHorizontalScrolling.load()
 
         loading = false
     }
@@ -271,6 +272,7 @@ Kirigami.ScrollablePage {
                 enabled = touchpad.supportsPointerAccelerationProfileAdaptive
 
                 if (!enabled) {
+                    accelProfile.visible = false
                     accelProfileFlat.checked = false
                     accelProfileAdaptive.checked = false
                     return
@@ -563,6 +565,31 @@ Kirigami.ScrollablePage {
             hoverEnabled: true
             Controls.ToolTip {
                 text: i18nd("kcm_touchpad", "Touchscreen like scrolling.")
+                visible: parent.hovered
+                delay: 1000
+            }
+        }
+
+        Controls.CheckBox {
+            id: disableHorizontalScrolling
+            text: i18nd("kcm_touchpad", "Disable horizontal scrolling")
+
+            function load() {
+                visible = touchpad.supportsHorizontalScrolling
+                enabled = touchpad.supportsHorizontalScrolling
+                checked = enabled && !touchpad.horizontalScrolling
+            }
+
+            onCheckedChanged: {
+                if (enabled && !root.loading) {
+                    touchpad.horizontalScrolling = !checked
+                    root.changeSignal()
+                }
+            }
+
+            hoverEnabled: true
+            Controls.ToolTip {
+                text: i18nd("kcm_touchpad", "Disable horizontal scrolling")
                 visible: parent.hovered
                 delay: 1000
             }

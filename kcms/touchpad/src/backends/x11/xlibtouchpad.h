@@ -19,6 +19,7 @@
 #ifndef XLIBTOUCHPAD_H
 #define XLIBTOUCHPAD_H
 
+#include <QObject>
 #include <QVariantHash>
 #include <QSet>
 
@@ -44,14 +45,19 @@ struct Parameter {
 
 class XlibTouchpad
 {
+
 public:
     XlibTouchpad(Display *display, int deviceId);
-    virtual ~XlibTouchpad() {};
+    virtual ~XlibTouchpad() {}
 
     int deviceId() { return m_deviceId; }
     const QStringList &supportedParameters() const { return m_supported; }
     bool applyConfig(const QVariantHash &p);
     bool getConfig(QVariantHash &p);
+    virtual bool getConfig() { return false; }
+    virtual bool applyConfig() { return false; }
+    virtual bool getDefaultConfig() { return false; }
+    virtual bool isChangedConfig() { return false; }
     void setEnabled(bool enable);
     bool enabled();
     void setTouchpadOff(int touchpadOff);

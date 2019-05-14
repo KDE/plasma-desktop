@@ -120,8 +120,10 @@ XlibTouchpad* XlibBackend::findTouchpad()
         Atom *atom = properties.data(), *atomEnd = properties.data() + nProperties;
         for (; atom != atomEnd; atom++) {
             if (*atom == m_libinputIdentifierAtom.atom()) {
+                setMode(TouchpadInputBackendMode::XLibinput);
                 return new LibinputTouchpad(m_display.data(), info->id);
             } else if (*atom == m_synapticsIdentifierAtom.atom()) {
+                setMode(TouchpadInputBackendMode::XSynaptics);
                 return new SynapticsTouchpad(m_display.data(), info->id);
             }
         }
@@ -144,6 +146,20 @@ bool XlibBackend::applyConfig(const QVariantHash &p)
     return success;
 }
 
+bool XlibBackend::applyConfig()
+{
+    if (!m_device) {
+        return false;
+    }
+
+    bool success = m_device->applyConfig();
+    if (!success) {
+        m_errorString = i18n("Cannot apply touchpad configuration");
+    }
+
+    return success;
+}
+
 bool XlibBackend::getConfig(QVariantHash &p)
 {
     if (!m_device) {
@@ -155,6 +171,41 @@ bool XlibBackend::getConfig(QVariantHash &p)
         m_errorString = i18n("Cannot read touchpad configuration");
     }
     return success;
+}
+
+bool XlibBackend::getConfig()
+{
+    if(!m_device) {
+        return false;
+    }
+
+    bool success = m_device->getConfig();
+    if (!success) {
+        m_errorString = i18n("Cannot read touchpad configuration");
+    }
+    return success;
+}
+
+bool XlibBackend::getDefaultConfig()
+{
+    if (!m_device) {
+        return false;
+    }
+
+    bool success = m_device->getDefaultConfig();
+    if (!success) {
+        m_errorString = i18n("Cannot read default touchpad configuration");
+    }
+    return success;
+}
+
+bool XlibBackend::isChangedConfig() const
+{
+    if (!m_device) {
+        return false;
+    }
+
+    return m_device->isChangedConfig();
 }
 
 void XlibBackend::setTouchpadEnabled(bool enable)
@@ -293,6 +344,22 @@ QStringList XlibBackend::listMouses(const QStringList &blacklist)
     }
 
     return list;
+}
+
+QVector<QObject *> XlibBackend::getDevices() const
+{
+    QVector<QObject*> touchpads;
+
+    LibinputTouchpad* libinputtouchpad = dynamic_cast<LibinputTouchpad*> (m_device.data());
+    SynapticsTouchpad* synaptics = dynamic_cast<SynapticsTouchpad*> (m_device.data());
+
+    if ( libinputtouchpad) {
+        touchpads.push_back(libinputtouchpad);
+    }
+    if (synaptics) {
+        touchpads.push_back(synaptics);
+    }
+    return touchpads;
 }
 
 void XlibBackend::watchForEvents(bool keyboard)

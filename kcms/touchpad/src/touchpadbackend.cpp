@@ -28,6 +28,11 @@
 
 #include <KWindowSystem/kwindowsystem.h>
 
+void TouchpadBackend::setMode(TouchpadInputBackendMode mode)
+{
+    m_mode = mode;
+}
+
 TouchpadBackend *TouchpadBackend::implementation()
 {
     //There are multiple possible backends

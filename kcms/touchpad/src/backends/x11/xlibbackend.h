@@ -29,6 +29,8 @@
 
 #include "touchpadbackend.h"
 #include "xlibtouchpad.h"
+#include "libinputtouchpad.h"
+#include "synapticstouchpad.h"
 
 #include <xcb/xcb.h>
 
@@ -43,12 +45,18 @@ class XlibBackend : public TouchpadBackend
 {
     Q_OBJECT
 
+    Q_PROPERTY(int touchpadCount READ touchpadCount CONSTANT)
+
 public:
     static XlibBackend* initialize(QObject *parent = nullptr);
     ~XlibBackend();
 
     bool applyConfig(const QVariantHash &) override;
+    bool applyConfig() override;
     bool getConfig(QVariantHash &) override;
+    bool getConfig() override;
+    bool getDefaultConfig() override;
+    bool isChangedConfig() const override;
     QStringList supportedParameters() const override {
         return m_device ? m_device->supportedParameters() : QStringList();
     }
@@ -65,6 +73,7 @@ public:
     void watchForEvents(bool keyboard) override;
 
     QStringList listMouses(const QStringList &blacklist) override;
+    QVector<QObject*> getDevices() const override;
 
 private slots:
     void propertyChanged(xcb_atom_t);
