@@ -16,16 +16,22 @@ include_directories(${X11_Xinput_INCLUDE_PATH}
 
 SET(backend_SRCS
     ${backend_SRCS}
-    backends/libinputcommon.cpp
     backends/x11/propertyinfo.cpp
     backends/x11/xlibbackend.cpp
     backends/x11/synapticstouchpad.cpp
-    backends/x11/libinputtouchpad.cpp
     backends/x11/xlibtouchpad.cpp
     backends/x11/xcbatom.cpp
     backends/x11/xlibnotifications.cpp
     backends/x11/xrecordkeyboardmonitor.cpp
 )
+
+if (HAVE_XORGLIBINPUT)
+    SET(backend_SRCS
+        ${backend_SRCS}
+        backends/libinputcommon.cpp
+        backends/x11/libinputtouchpad.cpp
+    )
+endif()
 
 SET(backend_LIBS
     ${backend_LIBS}

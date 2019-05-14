@@ -25,25 +25,25 @@
 
 namespace {
 template<typename T>
-T valueLoaderPart(QVariant const &reply) { Q_UNUSED(reply); return T(); }
+inline T valueLoaderPart(QVariant const &reply) { Q_UNUSED(reply); return T(); }
 
 template<>
-bool valueLoaderPart(QVariant const &reply) { return reply.toBool(); }
+inline bool valueLoaderPart(QVariant const &reply) { return reply.toBool(); }
 
 template<>
-int valueLoaderPart(QVariant const &reply) { return reply.toInt(); }
+inline int valueLoaderPart(QVariant const &reply) { return reply.toInt(); }
 
 template<>
-quint32 valueLoaderPart(QVariant const &reply) { return reply.toInt(); }
+inline quint32 valueLoaderPart(QVariant const &reply) { return reply.toInt(); }
 
 template<>
-qreal valueLoaderPart(QVariant const &reply) { return reply.toReal(); }
+inline qreal valueLoaderPart(QVariant const &reply) { return reply.toReal(); }
 
 template<>
-QString valueLoaderPart(QVariant const &reply) { return reply.toString(); }
+inline QString valueLoaderPart(QVariant const &reply) { return reply.toString(); }
 
 template<>
-Qt::MouseButtons valueLoaderPart(QVariant const &reply) { return static_cast<Qt::MouseButtons>(reply.toInt()); }
+inline Qt::MouseButtons valueLoaderPart(QVariant const &reply) { return static_cast<Qt::MouseButtons>(reply.toInt()); }
 }
 
 class LibinputCommon : public QObject

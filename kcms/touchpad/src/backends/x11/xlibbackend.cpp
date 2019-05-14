@@ -25,11 +25,15 @@
 #include <KLocalizedString>
 #include <QDebug>
 
+#include <config-X11.h>
+
 //Includes are ordered this way because of #defines in Xorg's headers
 #include "xrecordkeyboardmonitor.h" // krazy:exclude=includes
 #include "xlibbackend.h" // krazy:exclude=includes
 #include "xlibnotifications.h" // krazy:exclude=includes
+#if HAVE_XORGLIBINPUT
 #include "libinputtouchpad.h"
+#endif
 #include "synapticstouchpad.h"
 #include "propertyinfo.h"
 
@@ -119,10 +123,13 @@ XlibTouchpad* XlibBackend::findTouchpad()
 
         Atom *atom = properties.data(), *atomEnd = properties.data() + nProperties;
         for (; atom != atomEnd; atom++) {
+#if HAVE_XORGLIBINPUT
             if (*atom == m_libinputIdentifierAtom.atom()) {
                 setMode(TouchpadInputBackendMode::XLibinput);
                 return new LibinputTouchpad(m_display.data(), info->id);
-            } else if (*atom == m_synapticsIdentifierAtom.atom()) {
+            }
+#endif
+            if (*atom == m_synapticsIdentifierAtom.atom()) {
                 setMode(TouchpadInputBackendMode::XSynaptics);
                 return new SynapticsTouchpad(m_display.data(), info->id);
             }
@@ -350,12 +357,14 @@ QVector<QObject *> XlibBackend::getDevices() const
 {
     QVector<QObject*> touchpads;
 
+#if HAVE_XORGLIBINPUT
     LibinputTouchpad* libinputtouchpad = dynamic_cast<LibinputTouchpad*> (m_device.data());
-    SynapticsTouchpad* synaptics = dynamic_cast<SynapticsTouchpad*> (m_device.data());
-
     if ( libinputtouchpad) {
         touchpads.push_back(libinputtouchpad);
     }
+#endif
+
+    SynapticsTouchpad* synaptics = dynamic_cast<SynapticsTouchpad*> (m_device.data());
     if (synaptics) {
         touchpads.push_back(synaptics);
     }

@@ -16,19 +16,18 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <QDebug>
-#include <X11/extensions/XInput2.h>
-
 #include "libinputtouchpad.h"
+#include "logging.h"
 
 #include <stddef.h>
 #include <limits.h>
 
-#include <xserver-properties.h>
 #include <libinput-properties.h>
-#include "logging.h"
+#include <xserver-properties.h>
 
-const struct Parameter libinputProperties[] = {
+#include <X11/extensions/XInput2.h>
+
+const Parameter libinputProperties[] = {
 
     /* libinput disable supports property */
     {"supportsDisableEvents",               PT_INT, 0, 1, LIBINPUT_PROP_SENDEVENTS_AVAILABLE, 8, 0},
@@ -118,7 +117,7 @@ const struct Parameter libinputProperties[] = {
     {"clickMethodClickfinger",              PT_INT, 0, 1, LIBINPUT_PROP_CLICK_METHOD_ENABLED, 8, 1},
 
     /* libinput doesn't have a separate toggle for horiz scrolling */
-    { NULL, PT_INT, 0, 0, 0, 0, 0 }
+    { nullptr, PT_INT, 0, 0, nullptr, 0, 0 }
 };
 
 Qt::MouseButtons maskBtns(Display *display, XIButtonClassInfo *buttonInfo)

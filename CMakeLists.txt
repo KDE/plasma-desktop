@@ -137,7 +137,11 @@ add_feature_info("Synaptics" SYNAPTICS_FOUND "Synaptics libraries needed for tou
 
 find_package(XorgLibinput)
 set_package_properties(XorgLibinput PROPERTIES TYPE OPTIONAL)
-add_feature_info("XorgLibinput" XORGLIBINPUT_FOUND "Libinput driver headers needed for mouse KCM")
+add_feature_info("XorgLibinput" XORGLIBINPUT_FOUND "Libinput driver headers needed for mouse and touchpad KCM")
+
+if(XORGLIBINPUT_FOUND)
+  set(HAVE_XORGLIBINPUT 1)
+endif()
 
 include(ConfigureChecks.cmake)
 

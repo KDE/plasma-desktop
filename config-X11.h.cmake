@@ -40,5 +40,8 @@
 /* Define if you have XRandR 1.3 */
 #cmakedefine HAS_RANDR_1_3 1
 
+/* Define if you have XorgLibinput */
+#cmakedefine01 HAVE_XORGLIBINPUT
+
 /* Define if you have X11 at all */
 #cmakedefine01 HAVE_X11
