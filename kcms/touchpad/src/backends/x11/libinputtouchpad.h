@@ -19,10 +19,11 @@
 #ifndef LIBINPUTTOUCHPAD_H
 #define LIBINPUTTOUCHPAD_H
 
-#include <QObject>
-
 #include "xlibtouchpad.h"
 #include "backends/libinputcommon.h"
+
+#include <KSharedConfig>
+#include <KConfigGroup>
 
 class LibinputTouchpad : public LibinputCommon, public XlibTouchpad
 {
@@ -44,6 +45,8 @@ private:
 
     template<typename T>
     QString valueWriter(const Prop<T> &prop);
+
+    KSharedConfigPtr m_config;
 
     //
     // general

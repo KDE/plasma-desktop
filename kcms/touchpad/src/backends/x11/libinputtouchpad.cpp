@@ -19,6 +19,8 @@
 #include "libinputtouchpad.h"
 #include "logging.h"
 
+#include <QSet>
+
 #include <stddef.h>
 #include <limits.h>
 
@@ -26,6 +28,30 @@
 #include <xserver-properties.h>
 
 #include <X11/extensions/XInput2.h>
+
+static const QSet<QString> configProps = {
+    QStringLiteral("enabled"),
+    QStringLiteral("disableWhileTyping"),
+    QStringLiteral("disableEventsOnExternalMouse"),
+    QStringLiteral("leftHanded"),
+    QStringLiteral("middleEmulation"),
+    QStringLiteral("pointerAcceleration"),
+    QStringLiteral("pointerAccelerationProfileFlat"),
+    QStringLiteral("pointerAccelerationProfileAdaptive"),
+    QStringLiteral("tapToClick"),
+    QStringLiteral("tapAndDrag"),
+    QStringLiteral("tapDragLock"),
+    QStringLiteral("lrmTapButtonMap"),
+    QStringLiteral("lmrTapButtonMap"),
+    QStringLiteral("scrollTwoFinger"),
+    QStringLiteral("scrollOnButtonDown"),
+    QStringLiteral("scrollButton"),
+    QStringLiteral("scrollEdge"),
+    QStringLiteral("naturalScroll"),
+    QStringLiteral("horizontalScrolling"),
+    QStringLiteral("clickMethodAreas"),
+    QStringLiteral("clickMethodClickfinger")
+};
 
 const Parameter libinputProperties[] = {
 
@@ -185,6 +211,7 @@ LibinputTouchpad::LibinputTouchpad(Display *display, int deviceId):
         m_tapFingerCount.avail = true;
         m_tapFingerCount.set(1);
     }
+    m_config = KSharedConfig::openConfig(QStringLiteral("touchpadxlibinputrc"));
 }
 
 bool LibinputTouchpad::getConfig()
@@ -378,10 +405,13 @@ bool LibinputTouchpad::valueLoader(Prop<T> &prop)
     }
     prop.avail = true;
 
-    T replyValue = valueLoaderPart<T>(reply);
+    auto touchpadConfig = m_config->group(m_name);
 
+    const T replyValue = valueLoaderPart<T>(reply);
+    const T loadedValue = touchpadConfig.readEntry(QString(prop.name), replyValue);
     prop.old = replyValue;
-    prop.val = replyValue;
+    prop.val = loadedValue;
+
     return true;
 }
 
@@ -399,5 +429,8 @@ QString LibinputTouchpad::valueWriter(const Prop<T> &prop)
         qCCritical(KCM_TOUCHPAD) << "Cannot set property " + QString::fromAscii(prop.name);
         return QStringLiteral("Cannot set property ") + QString::fromAscii(prop.name);
     }
+    auto touchpadConfig = m_config->group(m_name);
+    touchpadConfig.writeEntry(QString(prop.name), prop.val);
+    touchpadConfig.config()->sync();
     return QString();
 }

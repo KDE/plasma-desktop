@@ -29,7 +29,7 @@ extern "C"
     Q_DECL_EXPORT void kcminit_touchpad()
     {
         if (KWindowSystem::isPlatformX11()) {
-            TouchpadConfigXlib::kcmInit();
+            TouchpadConfigContainer::kcmInit();
         }
     }
 }
@@ -47,6 +47,17 @@ TouchpadConfigContainer::TouchpadConfigContainer(QWidget *parent, const QVariant
         }
     } else if (KWindowSystem::isPlatformWayland()) {
         m_plugin = new TouchpadConfigLibinput(this, backend);
+    }
+}
+
+void TouchpadConfigContainer::kcmInit()
+{
+    TouchpadBackend *backend = TouchpadBackend::implementation();
+    if (backend->getMode() == TouchpadInputBackendMode::XLibinput) {
+        backend->getConfig();
+        backend->applyConfig();
+    } else if (backend->getMode() == TouchpadInputBackendMode::XSynaptics) {
+        TouchpadConfigXlib::kcmInit();
     }
 }
 

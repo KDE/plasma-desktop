@@ -36,6 +36,8 @@ public:
     explicit TouchpadConfigContainer(QWidget *parent,
                             const QVariantList &args = QVariantList());
 
+    static void kcmInit();
+
     QSize minimumSizeHint() const override;
     QSize sizeHint() const override;
     void resizeEvent(QResizeEvent *event) override;
