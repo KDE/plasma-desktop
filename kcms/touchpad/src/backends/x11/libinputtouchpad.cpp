@@ -29,29 +29,6 @@
 
 #include <X11/extensions/XInput2.h>
 
-static const QSet<QString> configProps = {
-    QStringLiteral("enabled"),
-    QStringLiteral("disableWhileTyping"),
-    QStringLiteral("disableEventsOnExternalMouse"),
-    QStringLiteral("leftHanded"),
-    QStringLiteral("middleEmulation"),
-    QStringLiteral("pointerAcceleration"),
-    QStringLiteral("pointerAccelerationProfileFlat"),
-    QStringLiteral("pointerAccelerationProfileAdaptive"),
-    QStringLiteral("tapToClick"),
-    QStringLiteral("tapAndDrag"),
-    QStringLiteral("tapDragLock"),
-    QStringLiteral("lrmTapButtonMap"),
-    QStringLiteral("lmrTapButtonMap"),
-    QStringLiteral("scrollTwoFinger"),
-    QStringLiteral("scrollOnButtonDown"),
-    QStringLiteral("scrollButton"),
-    QStringLiteral("scrollEdge"),
-    QStringLiteral("naturalScroll"),
-    QStringLiteral("horizontalScrolling"),
-    QStringLiteral("clickMethodAreas"),
-    QStringLiteral("clickMethodClickfinger")
-};
 
 const Parameter libinputProperties[] = {
 
