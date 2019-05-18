@@ -77,7 +77,7 @@ TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, 
     KDeclarative::KDeclarative kdeclarative;
     kdeclarative.setDeclarativeEngine(m_view->engine());
     kdeclarative.setupBindings();
-    m_view->setSource(QUrl("qrc:/libinput/main.qml"));
+    m_view->setSource(QUrl("qrc:/libinput/touchpad.qml"));
 
     if (m_initError) {
         m_errorMessage->setMessageType(KMessageWidget::Error);
