@@ -366,6 +366,16 @@ bool LibinputTouchpad::isChangedConfig()
     return changed;
 }
 
+int LibinputTouchpad::touchpadOff()
+{
+    return m_enabled.val;
+}
+
+XcbAtom &LibinputTouchpad::touchpadOffAtom()
+{
+    return *m_atoms[QLatin1Literal("enabled")].data();
+}
+
 template<typename T>
 bool LibinputTouchpad::valueLoader(Prop<T> &prop)
 {
