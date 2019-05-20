@@ -29,11 +29,16 @@ class SynapticsTouchpad : public QObject, public XlibTouchpad
 public:
     SynapticsTouchpad(Display *display, int deviceId);
 
+    void setTouchpadOff(int touchpadOff) override;
+    int touchpadOff() override;
+
+    XcbAtom &touchpadOffAtom() override;
+
 protected:
     double getPropertyScale(const QString &name) const override;
 
 private:
-    XcbAtom m_capsAtom;
+    XcbAtom m_capsAtom, m_touchpadOffAtom;
     int m_resX, m_resY;
     QStringList m_scaleByResX, m_scaleByResY, m_toRadians;
 };

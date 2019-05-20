@@ -60,10 +60,10 @@ public:
     virtual bool isChangedConfig() { return false; }
     void setEnabled(bool enable);
     bool enabled();
-    void setTouchpadOff(int touchpadOff);
-    int touchpadOff();
+    virtual void setTouchpadOff(int touchpadOff) {}
+    virtual int touchpadOff() = 0;
 
-    XcbAtom &touchpadOffAtom();
+    virtual XcbAtom &touchpadOffAtom() = 0;
 
 protected:
     void loadSupportedProperties(const Parameter *props);
@@ -78,7 +78,7 @@ protected:
     xcb_connection_t *m_connection;
     int m_deviceId;
 
-    XcbAtom m_floatType, m_enabledAtom, m_touchpadOffAtom;
+    XcbAtom m_floatType, m_enabledAtom;
 
     QMap<QLatin1String, QSharedPointer<XcbAtom> > m_atoms;
 

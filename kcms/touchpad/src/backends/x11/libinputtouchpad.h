@@ -38,6 +38,9 @@ public:
     bool getDefaultConfig() override;
     bool isChangedConfig() override;
 
+    int touchpadOff() override;
+    XcbAtom &touchpadOffAtom() override;
+
 private:
 
     template<typename T>

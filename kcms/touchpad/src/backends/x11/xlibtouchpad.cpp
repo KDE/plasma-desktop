@@ -251,29 +251,6 @@ bool XlibTouchpad::enabled()
     return enabled.value(0).toBool();
 }
 
-
-void XlibTouchpad::setTouchpadOff(int touchpadOff)
-{
-    PropertyInfo off(m_display, m_deviceId, m_touchpadOffAtom.atom(), 0);
-    if (off.b && *(off.b) != touchpadOff) {
-        *(off.b) = touchpadOff;
-        off.set();
-    }
-
-    flush();
-}
-
-int XlibTouchpad::touchpadOff()
-{
-    PropertyInfo off(m_display, m_deviceId, m_touchpadOffAtom.atom(), 0);
-    return  off.value(0).toInt();
-}
-
-XcbAtom& XlibTouchpad::touchpadOffAtom()
-{
-    return m_touchpadOffAtom;
-}
-
 const Parameter* XlibTouchpad::findParameter(const QString& name)
 {
     for (const Parameter *par = m_paramList; par->name; par++) {

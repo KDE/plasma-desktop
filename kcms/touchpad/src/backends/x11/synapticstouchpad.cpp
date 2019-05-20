@@ -235,6 +235,28 @@ SynapticsTouchpad::SynapticsTouchpad(Display *display, int deviceId): XlibTouchp
     m_paramList = synapticsProperties;
 }
 
+void SynapticsTouchpad::setTouchpadOff(int touchpadOff)
+{
+    PropertyInfo off(m_display, m_deviceId, m_touchpadOffAtom.atom(), 0);
+    if (off.b && *(off.b) != touchpadOff) {
+        *(off.b) = touchpadOff;
+        off.set();
+    }
+
+    flush();
+}
+
+int SynapticsTouchpad::touchpadOff()
+{
+    PropertyInfo off(m_display, m_deviceId, m_touchpadOffAtom.atom(), 0);
+    return  off.value(0).toInt();
+}
+
+XcbAtom &SynapticsTouchpad::touchpadOffAtom()
+{
+    return m_touchpadOffAtom;
+}
+
 double SynapticsTouchpad::getPropertyScale(const QString &name) const
 {
     if (m_scaleByResX.contains(name) && m_scaleByResY.contains(name)) {
