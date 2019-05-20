@@ -430,6 +430,7 @@ void KCMLookandFeel::save()
     setLockScreen(m_selectedPlugin);
 
     m_configGroup.sync();
+    m_package.setPath(m_selectedPlugin);
     runRdb(KRdbExportQtColors | KRdbExportGtkTheme | KRdbExportColors | KRdbExportQtSettings | KRdbExportXftSettings);
 }
 
