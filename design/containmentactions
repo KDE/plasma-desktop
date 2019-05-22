@@ -63,7 +63,7 @@ Containment Interface
 The Containment class supports loading and using containmentactions plugins.
 Subclasses need do nothing to get this support. If a subclass has extra actions it wants in the
 contextmenu, it can provide them in contextualActions() the same as before - but there's no longer
-any need to return standard actions like "add widgets" and "run command".
+any need to return standard actions like "add widgets" and "show krunner".
 
 ContextActions plugins to use are set using the setContainmentActions(const QString &trigger, const QString &pluginName)
 method. an empty string removes any plugin set for the given trigger.

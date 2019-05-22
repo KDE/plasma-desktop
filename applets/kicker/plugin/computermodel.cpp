@@ -101,11 +101,11 @@ QVariant RunCommandModel::data(const QModelIndex &index, int role) const
     }
 
     if (role == Qt::DisplayRole) {
-        return i18n("Run Command...");
+        return i18n("Show KRunner");
     } else if (role == Qt::DecorationRole) {
-        return QIcon::fromTheme(QStringLiteral("system-run"));
+        return QIcon::fromTheme(QStringLiteral("plasma-search"));
     } else if (role == Kicker::DescriptionRole) {
-        return i18n("Run a command or a search query");
+        return i18n("Search, calculate, or run a command");
     } else if (role == Kicker::GroupRole) {
         return i18n("Applications");
     }

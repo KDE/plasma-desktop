@@ -56,7 +56,7 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
 
     QHBoxLayout *headerLayout = new QHBoxLayout(this);
 
-    QLabel *label = new QLabel(i18n("Select the search plugins:"));
+    QLabel *label = new QLabel(i18n("Enable or disable KRunner plugins:"));
 
     QPushButton *clearHistoryButton = new QPushButton(i18n("Clear History"));
     clearHistoryButton->setIcon(QIcon::fromTheme(isRightToLeft() ? QStringLiteral("edit-clear-locationbar-ltr")
