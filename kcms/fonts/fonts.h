@@ -46,8 +46,25 @@ class FontAASettings : public QObject
     Q_PROPERTY(bool exclude READ exclude WRITE setExclude NOTIFY excludeChanged)
     Q_PROPERTY(int excludeTo READ excludeTo WRITE setExcludeTo NOTIFY excludeToChanged)
     Q_PROPERTY(int excludeFrom READ excludeFrom WRITE setExcludeFrom NOTIFY excludeFromChanged)
-    Q_PROPERTY(int antiAliasing READ antiAliasing WRITE setAntiAliasing NOTIFY aliasingChanged)
+    Q_PROPERTY(bool antiAliasing READ antiAliasing WRITE setAntiAliasing NOTIFY aliasingChanged)
     Q_PROPERTY(int dpi READ dpi WRITE setDpi NOTIFY dpiChanged)
+
+    struct State
+    {
+        bool exclude;
+        int excludeFrom;
+        int excludeTo;
+        int antiAliasing;
+        bool antiAliasingHasLocalConfig;
+        bool subPixelHasLocalConfig;
+        bool hintingHasLocalConfig;
+        int dpi;
+        int subPixel;
+        int hinting;
+
+        bool operator==(const State& other) const;
+        bool operator!=(const State& other) const;
+    };
 
 public:
     enum AASetting { AAEnabled, AASystem, AADisabled };
@@ -70,16 +87,22 @@ public:
     void setExcludeFrom(const int &excludeTo);
     int excludeFrom() const;
 
-    void setAntiAliasing(const int& antiAliasing);
-    int antiAliasing() const;
+    void setAntiAliasing(bool antiAliasing);
+    bool antiAliasing() const;
+
+    bool antiAliasingNeedsSave() const;
+    bool subPixelNeedsSave() const;
+    bool hintingNeedsSave() const;
 
     void setDpi(const int &dpi);
     int dpi() const;
 
     int subPixelCurrentIndex();
     void setSubPixelCurrentIndex(int idx);
+    void setSubPixel(int idx);
     int hintingCurrentIndex();
     void setHintingCurrentIndex(int idx);
+    void setHinting(int idx);
 
     bool needsSave() const;
 
@@ -97,21 +120,10 @@ Q_SIGNALS:
 
 #if defined(HAVE_FONTCONFIG) && HAVE_X11
 private:
-    int m_excludeTo;
-    int m_excludeToOriginal;
-    int m_excludeFrom;
-    int m_excludeFromOriginal;
-    int m_antiAliasing;
-    int m_antiAliasingOriginal;
-    int m_dpi;
-    int m_dpiOriginal;
-    int m_subPixelCurrentIndex = 0;
-    int m_subPixelCurrentIndexOriginal;
-    int m_hintingCurrentIndex = 0;
-    int m_hintingCurrentIndexOriginal;
+    State m_state;
+    State m_originalState;
     QStandardItemModel *m_subPixelOptionsModel;
     QStandardItemModel *m_hintingOptionsModel;
-    bool m_exclude = false;
 #endif
 };
 

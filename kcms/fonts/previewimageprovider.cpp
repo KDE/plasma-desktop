@@ -81,19 +81,22 @@ QImage PreviewImageProvider::requestImage(const QString &id, QSize *size, const 
     const auto sections = idpart.split(QLatin1Char('_'));
 
     if (sections.size() >= 2) {
-        subPixelIndex = sections[0].toInt();
-        hintingIndex = sections[1].toInt();
+        subPixelIndex = sections[0].toInt() + KXftConfig::SubPixel::None;
+        hintingIndex = sections[1].toInt() + KXftConfig::Hint::None;
+    } else {
+        return QImage();
     }
 
     KXftConfig xft;
     
-    
+
     KXftConfig::AntiAliasing::State oldAntialiasing = xft.getAntiAliasing();
-    double oldStart,oldEnd;
+    double oldStart = 0;
+    double oldEnd = 0;
     xft.getExcludeRange(oldStart, oldEnd);
-    KXftConfig::SubPixel::Type oldSubPixelType;
+    KXftConfig::SubPixel::Type oldSubPixelType = KXftConfig::SubPixel::NotSet;
     xft.getSubPixelType(oldSubPixelType);
-    KXftConfig::Hint::Style oldHintStyle;
+    KXftConfig::Hint::Style oldHintStyle = KXftConfig::Hint::NotSet;
     xft.getHintStyle(oldHintStyle);
     
     
