@@ -54,7 +54,10 @@ if (KF5Baloo_FOUND)
    add_subdirectory(baloo)
 endif()
 add_subdirectory(solid_actions)
-add_subdirectory(cursortheme)
+
+if(X11_Xcursor_FOUND)
+    add_subdirectory(cursortheme)
+endif()
 
 if (SYNAPTICS_FOUND AND X11_Xinput_FOUND)
     add_subdirectory(touchpad)
