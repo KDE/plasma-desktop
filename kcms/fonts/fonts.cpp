@@ -147,7 +147,7 @@ void FontAASettings::load()
 
     KXftConfig::SubPixel::Type spType;
     if (!xft.getSubPixelType(spType) || KXftConfig::SubPixel::NotSet == spType) {
-        spType = KXftConfig::SubPixel::None;
+        spType = KXftConfig::SubPixel::Rgb;
     }
 
     setSubPixel(spType);
@@ -157,7 +157,7 @@ void FontAASettings::load()
     KXftConfig::Hint::Style hStyle;
 
     if (!xft.getHintStyle(hStyle) || KXftConfig::Hint::NotSet == hStyle) {
-        hStyle = KXftConfig::Hint::Medium;
+        hStyle = KXftConfig::Hint::Slight;
     }
 
     setHinting(hStyle);
@@ -322,9 +322,9 @@ void FontAASettings::defaults()
     m_originalState.antiAliasing = m_state.antiAliasing;
     m_state.antiAliasingHasLocalConfig = false;
     setDpi(0);
-    setSubPixel(KXftConfig::SubPixel::None);
+    setSubPixel(KXftConfig::SubPixel::Rgb);
     m_state.subPixelHasLocalConfig = false;
-    setHinting(KXftConfig::Hint::Medium);
+    setHinting(KXftConfig::Hint::Slight);
     m_state.hintingHasLocalConfig = false;
 }
 

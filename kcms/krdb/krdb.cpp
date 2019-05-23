@@ -505,7 +505,7 @@ void runRdb( uint flags )
     else
       contents += QLatin1String("0\n");
 
-    QString hintStyle = generalCfgGroup.readEntry("XftHintStyle", "hintmedium");
+    QString hintStyle = generalCfgGroup.readEntry("XftHintStyle", "hintslight");
     contents += QLatin1String("Xft.hinting: ");
     if(hintStyle.isEmpty())
       contents += QLatin1String("-1\n");
@@ -518,7 +518,7 @@ void runRdb( uint flags )
       contents += "Xft.hintstyle: " + hintStyle + '\n';
     }
 
-    QString subPixel = generalCfgGroup.readEntry("XftSubPixel", "none");
+    QString subPixel = generalCfgGroup.readEntry("XftSubPixel", "rgb");
     if(!subPixel.isEmpty())
       contents += "Xft.rgba: " + subPixel + '\n';
 
