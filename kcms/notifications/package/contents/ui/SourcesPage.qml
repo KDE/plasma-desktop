@@ -34,11 +34,11 @@ Kirigami.Page {
     Component.onCompleted: {
         kcm.sourcesModel.load();
 
-        if (kcm.initialDesktopEntry) {
-            appConfiguration.rootIndex = kcm.sourcesModel.persistentIndexForDesktopEntry(kcm.initialDesktopEntry);
-        } else if (kcm.initialNotifyRcName) {
-            appConfiguration.rootIndex = kcm.sourcesModel.persistentIndexForNotifyRcName(kcm.initialNotifyRcName);
+        var idx = kcm.sourcesModel.persistentIndexForDesktopEntry(kcm.initialDesktopEntry);
+        if (!idx.valid) {
+            idx = kcm.sourcesModel.persistentIndexForNotifyRcName(kcm.initialNotifyRcName);
         }
+        appConfiguration.rootIndex = idx;
 
         if (kcm.initialEventId && kcm.initialNotifyRcName) {
             appConfiguration.configureEvents(kcm.initialEventId);
