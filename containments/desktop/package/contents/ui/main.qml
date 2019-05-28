@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2011-2013 Sebastian Kügler <sebas@kde.org>              *
- *   Copyright (C) 2011 Marco Martin <mart@kde.org>                        *
+ *   Copyright (C) 2011-2019 Marco Martin <mart@kde.org>                        *
  *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -31,7 +31,8 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 
-import "code/LayoutManager.js" as LayoutManager
+import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutManager 
+
 import "code/FolderTools.js" as FolderTools
 
 FolderViewDropArea {
@@ -78,7 +79,6 @@ FolderViewDropArea {
 
     property Component appletAppearanceComponent
     property Item toolBox
-    property var layoutManager: LayoutManager
 
     property int handleDelay: 800
     property real haloOpacity: 0.5
@@ -125,10 +125,10 @@ FolderViewDropArea {
 
     function updateGridSize()
     {
-        LayoutManager.cellSize.width = root.iconWidth + toolBoxSvg.elementSize("left").width + toolBoxSvg.elementSize("right").width
-        LayoutManager.cellSize.height = root.iconHeight + toolBoxSvg.elementSize("top").height + toolBoxSvg.elementSize("bottom").height;
-        LayoutManager.defaultAppletSize.width = LayoutManager.cellSize.width * 6;
-        LayoutManager.defaultAppletSize.height = LayoutManager.cellSize.height * 6;
+        appletsLayout.cellWidth = root.iconWidth + toolBoxSvg.elementSize("left").width + toolBoxSvg.elementSize("right").width
+        appletsLayout.cellHeight = root.iconHeight + toolBoxSvg.elementSize("top").height + toolBoxSvg.elementSize("bottom").height;
+        appletsLayout.defaultItemWidth = appletsLayout.cellWidth * 6;
+        appletsLayout.defaultItemHeight = appletsLayout.cellHeight * 6;
         layoutTimer.restart();
     }
 
@@ -139,7 +139,8 @@ FolderViewDropArea {
 
         folderViewLayer.view.linkHere(desktopUrl);
     }
-
+/*
+    //TODO: port all of that in c++
     function addApplet(applet, x, y) {
         if (!appletAppearanceComponent) {
             appletAppearanceComponent = Qt.createComponent("AppletAppearance.qml");
@@ -228,7 +229,7 @@ FolderViewDropArea {
             LayoutManager.positionItem(container);
         }
     }
-
+*/
     function preferredWidth(minimum) {
         if (isContainment || !folderViewLayer.ready) {
             return -1;
@@ -292,14 +293,12 @@ FolderViewDropArea {
         if (isFolder && FolderTools.isFileDrag(event)) {
             handleDragMove(folderViewLayer.view, mapToItem(folderViewLayer.view, event.x, event.y));
         } else if (isContainment) {
-            placeHolder.width = LayoutManager.defaultAppletSize.width;
-            placeHolder.height = LayoutManager.defaultAppletSize.height;
-            placeHolder.minimumWidth = placeHolder.minimumHeight = 0;
-            placeHolder.x = event.x - placeHolder.width / 2;
-            placeHolder.y = event.y - placeHolder.width / 2;
-            LayoutManager.positionItem(placeHolder);
-            LayoutManager.setSpaceAvailable(placeHolder.x, placeHolder.y, placeHolder.width, placeHolder.height, true);
-            placeHolderPaint.opacity = root.haloOpacity;
+            appletsLayout.showPlaceHolderAt(
+                Qt.rect(event.x - appletsLayout.minimumItemsWidth / 2,
+                event.y - appletsLayout.minimumItemsHeight / 2,
+                appletsLayout.minimumItemsWidth,
+                appletsLayout.minimumItemsHeight)
+            );
         }
     }
 
@@ -310,7 +309,7 @@ FolderViewDropArea {
         }
 
         if (isContainment) {
-            placeHolderPaint.opacity = 0;
+            appletsLayout.hidePlaceHolder();
         }
     }
 
@@ -319,10 +318,10 @@ FolderViewDropArea {
             handleDragEnd(folderViewLayer.view);
             folderViewLayer.view.drop(root, event, mapToItem(folderViewLayer.view, event.x, event.y));
         } else if (isContainment) {
-            placeHolderPaint.opacity = 0;
-            var pos = root.parent.mapFromItem(resultsFlow, event.x - placeHolder.width / 2, event.y - placeHolder.height / 2);
-            plasmoid.processMimeData(event.mimeData, pos.x, pos.y);
+            plasmoid.processMimeData(event.mimeData,
+                        event.x - appletsLayout.placeHolder.width / 2, event.y - appletsLayout.placeHolder.height / 2);
             event.accept(event.proposedAction);
+            appletsLayout.hidePlaceHolder();
         }
     }
 
@@ -336,17 +335,6 @@ FolderViewDropArea {
 
         ignoreUnknownSignals: true
 
-        onAppletAdded: {
-            addApplet(applet, x, y);
-            // Clean any eventual invalid chunks in the config.
-            LayoutManager.save();
-        }
-
-        onAppletRemoved: {
-            // Clean any eventual invalid chunks in the config.
-            LayoutManager.removeApplet(applet);
-            LayoutManager.save();
-        }
 
         onImmutableChanged: {
             if (root.isContainment && !plasmoid.immutable) {
@@ -415,15 +403,12 @@ FolderViewDropArea {
         property int leftBorder: elementSize("left").width
     }
 
-    PlasmaCore.Svg {
-        id: configIconsSvg
-        imagePath: "widgets/configuration-icons"
-    }
-
+    // Can be removed?
     KQuickControlsAddons.EventGenerator {
         id: eventGenerator
     }
-
+    
+/*
     MouseArea { // unfocus any plasmoid when clicking empty desktop area
         anchors.fill: parent
         onPressed: {
@@ -435,6 +420,8 @@ FolderViewDropArea {
             }
         }
     }
+*/
+
 
     Loader {
         id: folderViewLayer
@@ -468,124 +455,35 @@ FolderViewDropArea {
         }
     }
 
-    Item {
-        id: resultsFlow
+    ContainmentLayoutManager.AppletsLayout {
+        id: appletsLayout
         anchors.fill: parent
+        configKey: width > height ? "ItemGeometries" : "ItemGeometriesVertical"
+        containment: plasmoid
+        editModeCondition: plasmoid.immutable
+                ? ContainmentLayoutManager.AppletsLayout.Manual
+                : ContainmentLayoutManager.AppletsLayout.AfterPressAndHold
 
-        anchors {
-            top: parent.top
-            topMargin: 5
-            horizontalCenter: parent.horizontalCenter
+        // Sets the containment in edit mode when we go in edit mode as well
+        onEditModeChanged: plasmoid.editMode = editMode
+
+        minimumItemWidth: units.gridUnit * 3
+        minimumItemHeight: minimumItemWidth
+
+        cellWidth: units.iconSizes.small
+        cellHeight: cellWidth
+
+        acceptsAppletCallback: function(applet, x, y) {
+            print("Applet: "+applet+" "+x+" "+y)
+            return true;
         }
 
-        visible: isContainment
-        enabled: isContainment
-
-        // This is just for event compression when a lot of boxes are created one after the other.
-        Timer {
-            id: layoutTimer
-            repeat: false
-            running: false
-            interval: 100
-            onTriggered: {
-                LayoutManager.resetPositions()
-                for (var i=0; i<resultsFlow.children.length; ++i) {
-                    var child = resultsFlow.children[i]
-                    if (!child.applet)
-                        continue
-                    if (child.enabled) {
-                        if (LayoutManager.itemsConfig[child.category]) {
-                            var rect = LayoutManager.itemsConfig[child.category]
-                            child.x = rect.x
-                            child.y = rect.y
-                            child.width = rect.width
-                            child.height = rect.height
-                            child.rotation = rect.rotation
-                        } else {
-                            child.x = 0
-                            child.y = 0
-                            child.width = Math.min(470, 32+child.categoryCount*140)
-                        }
-                        child.visible = true
-                        LayoutManager.positionItem(child)
-                    } else {
-                        child.visible = false
-                    }
-                }
-                LayoutManager.save()
-            }
-        }
-    }
-
-    Item {
-        id: placerHolderWrapper
-
-        anchors.fill: resultsFlow
-        z: 0
-
-        visible: isContainment
-        enabled: isContainment
-
-        Item {
-            id: placeHolder
-
-            x: -10000 // Move offscreen initially to avoid flickering.
-            width: 100
-            height: 100
-
-            property bool animationsEnabled
-            property int minimumWidth
-            property int minimumHeight
-            property Item syncItem
-
-            function syncWithItem(item) {
-                syncItem = item;
-                minimumWidth = item.minimumWidth;
-                minimumHeight = item.minimumHeight;
-                repositionTimer.running = true;
-                if (placeHolderPaint.opacity < 1) {
-                    placeHolder.delayedSyncWithItem();
-                }
-            }
-
-            function delayedSyncWithItem() {
-                placeHolder.x = placeHolder.syncItem.x;
-                placeHolder.y = placeHolder.syncItem.y;
-                placeHolder.width = placeHolder.syncItem.width + (plasmoid.immutable || !syncItem.showAppletHandle ? 0 : syncItem.handleWidth)
-                placeHolder.height = placeHolder.syncItem.height;
-                // Only positionItem here, we don't want to save.
-                LayoutManager.positionItem(placeHolder);
-                LayoutManager.setSpaceAvailable(placeHolder.x, placeHolder.y, placeHolder.width, placeHolder.height, true);
-            }
-
-            Timer {
-                id: repositionTimer
-                interval: 100
-                repeat: false
-                running: false
-                onTriggered: placeHolder.delayedSyncWithItem()
-            }
+        appletContainerComponent: ContainmentLayoutManager.BasicAppletContainer {
+            id: appletContainer
+            configOverlayComponent: ConfigOverlay {}
         }
 
-        PlasmaComponents.Highlight {
-            id: placeHolderPaint
-
-            x: placeHolder.x
-            y: placeHolder.y
-            width: placeHolder.width
-            height: placeHolder.height
-            z: 0
-
-            opacity: 0
-            visible: opacity > 0
-
-            Behavior on opacity {
-                NumberAnimation {
-                    duration: units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-        }
+        placeHolder: ContainmentLayoutManager.PlaceHolder {}
     }
 
     Component.onCompleted: {
@@ -601,18 +499,6 @@ FolderViewDropArea {
         // the component completes
         root.width = plasmoid.width;
 
-        LayoutManager.resultsFlow = resultsFlow;
-        LayoutManager.plasmoid = plasmoid;
         updateGridSize();
-
-        LayoutManager.restore();
-
-        for (var i = 0; i < plasmoid.applets.length; ++i) {
-            var applet = plasmoid.applets[i];
-            addApplet(applet, -1, -1);
-        }
-
-        // Clean any eventual invalid chunks in the config.
-        LayoutManager.save();
     }
 }
