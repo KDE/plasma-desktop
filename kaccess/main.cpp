@@ -22,7 +22,6 @@
 #include "kaccess.h"
 #include <QDebug>
 #include <QApplication>
-#include <QSessionManager>
 #include <QX11Info>
 #include <KAboutData>
 #include <KLocalizedString>
@@ -34,7 +33,7 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
     migrate.setConfigFiles(QStringList() << QStringLiteral("kaccessrc"));
     migrate.migrate();
 
-    QGuiApplication::setFallbackSessionManagementEnabled(false);
+    qunsetenv("SESSION_MANAGER");
 
     //this application is currently only relevant on X, force to run under X
     //note if someone does port this we still need to run kaccess under X for xwayland apps
@@ -64,13 +63,6 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
     if (acc.isFailed()) {
         return 1;
     }
-
-    auto disableSessionManagement = [](QSessionManager &sm) {
-        sm.setRestartHint(QSessionManager::RestartNever);
-    };
-
-    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
-    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
     // verify the X server has matching XKB extension
     // if yes, the XKB extension is initialized
