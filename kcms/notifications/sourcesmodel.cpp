@@ -51,6 +51,9 @@ QPersistentModelIndex SourcesModel::makePersistentModelIndex(const QModelIndex &
 
 QPersistentModelIndex SourcesModel::persistentIndexForDesktopEntry(const QString &desktopEntry) const
 {
+    if (desktopEntry.isEmpty()) {
+        return QPersistentModelIndex();
+    }
     const auto matches = match(index(0, 0), SourcesModel::DesktopEntryRole, desktopEntry, 1, Qt::MatchFixedString);
     if (matches.isEmpty()) {
         return QPersistentModelIndex();
@@ -60,6 +63,9 @@ QPersistentModelIndex SourcesModel::persistentIndexForDesktopEntry(const QString
 
 QPersistentModelIndex SourcesModel::persistentIndexForNotifyRcName(const QString &notifyRcName) const
 {
+    if (notifyRcName.isEmpty()) {
+        return QPersistentModelIndex();
+    }
     const auto matches = match(index(0, 0), SourcesModel::NotifyRcNameRole, notifyRcName, 1, Qt::MatchFixedString);
     if (matches.isEmpty()) {
         return QPersistentModelIndex();
