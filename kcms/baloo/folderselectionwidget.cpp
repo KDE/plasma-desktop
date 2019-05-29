@@ -50,8 +50,6 @@ FolderSelectionWidget::FolderSelectionWidget(QWidget* parent, Qt::WindowFlags f)
     layout->addWidget(m_listWidget);
 
     QHBoxLayout* hLayout = new QHBoxLayout;
-    QSpacerItem* spacer = new QSpacerItem(0, 0, QSizePolicy::Expanding, QSizePolicy::Minimum);
-    hLayout->addItem(spacer);
 
     m_addButton = new QPushButton(this);
     m_addButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
@@ -66,6 +64,10 @@ FolderSelectionWidget::FolderSelectionWidget(QWidget* parent, Qt::WindowFlags f)
 
     hLayout->addWidget(m_addButton);
     hLayout->addWidget(m_removeButton);
+    
+    QSpacerItem* spacer = new QSpacerItem(0, 0, QSizePolicy::Expanding, QSizePolicy::Minimum);
+    hLayout->addItem(spacer);
+    
     layout->addItem(hLayout);
 }
 
