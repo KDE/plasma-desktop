@@ -40,13 +40,17 @@ Kirigami.Page {
         }
         appConfiguration.rootIndex = idx;
 
-        if (kcm.initialEventId && kcm.initialNotifyRcName) {
-            appConfiguration.configureEvents(kcm.initialEventId);
-        }
+        // In Component.onCompleted we might not be assigned a window yet
+        // which we need to make the events config dialog transient to it
+        Qt.callLater(function() {
+            if (kcm.initialEventId && kcm.initialNotifyRcName) {
+                appConfiguration.configureEvents(kcm.initialEventId);
+            }
 
-        kcm.initialDesktopEntry = "";
-        kcm.initialNotifyRcName = "";
-        kcm.initialEventId = "";
+            kcm.initialDesktopEntry = "";
+            kcm.initialNotifyRcName = "";
+            kcm.initialEventId = "";
+        });
     }
 
     Binding {
