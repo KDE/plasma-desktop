@@ -43,3 +43,4 @@ Categories=Plasma Theme
 StandardResource=tmp
 InstallationCommand=kpackagetool5 -t Plasma/Theme -i %f
 UninstallCommand=kpackagetool5 -t Plasma/Theme -r %f
+DownloadTagFilter=plasma##version!=4,plasma##version==5
