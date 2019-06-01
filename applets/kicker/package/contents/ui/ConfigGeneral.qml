@@ -42,6 +42,7 @@ Kirigami.FormLayout {
     property alias cfg_appNameFormat: appNameFormat.currentIndex
     property alias cfg_limitDepth: limitDepth.checked
     property alias cfg_alphaSort: alphaSort.checked
+    property alias cfg_showIconsRootLevel: showIconsRootLevel.checked
 
     property alias cfg_recentOrdering: recentOrdering.currentIndex
     property alias cfg_showRecentApps: showRecentApps.checked
@@ -183,6 +184,13 @@ Kirigami.FormLayout {
         text: i18n("Flatten sub-menus to a single level")
     }
 
+    CheckBox {
+        id: showIconsRootLevel
+
+        visible: !isDash
+
+        text: i18n("Show icons on the root level of the menu")
+    }
 
     Item {
         Kirigami.FormData.isSection: true
