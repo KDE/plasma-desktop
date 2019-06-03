@@ -35,7 +35,6 @@ class QCloseEvent;
 class QCheckBox;
 class QDialogButtonBox;
 class QAbstractButton;
-class KJob;
 class QTemporaryDir;
 
 namespace KFI

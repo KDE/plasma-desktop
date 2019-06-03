@@ -44,14 +44,10 @@
 #include "Family.h"
 #include "FontInst.h"
 
-class KConfigGroup;
 class KFileItem;
-class KFileItemList;
 class QMenu;
-class QPixmap;
 class QMimeData;
 class QTimer;
-class QPoint;
 
 #define KFI_FONT_DRAG_MIME "kfontinst/fontlist"
 

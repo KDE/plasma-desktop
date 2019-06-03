@@ -30,11 +30,6 @@
 
 #include <kcmodule.h>
 
-class QCheckBox;
-class QDoubleSpinBox;
-class QSlider;
-class QSpinBox;
-class QTabWidget;
 
 class X11EvdevBackend;
 

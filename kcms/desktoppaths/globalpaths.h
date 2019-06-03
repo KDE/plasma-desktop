@@ -38,7 +38,6 @@
 class QFormLayout;
 class KJob;
 class KUrlRequester;
-class QStringList;
 
 namespace KIO { class Job; }
 

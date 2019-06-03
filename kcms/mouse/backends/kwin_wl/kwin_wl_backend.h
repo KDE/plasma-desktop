@@ -23,7 +23,6 @@
 
 #include <QVector>
 
-class KWinWaylandDevice;
 class QDBusInterface;
 
 class KWinWaylandBackend : public InputBackend

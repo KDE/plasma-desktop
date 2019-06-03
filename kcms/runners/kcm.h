@@ -22,12 +22,6 @@
 #include <KCModule>
 #include <KConfig>
 
-class QToolButton;
-class KCModuleProxy;
-
-namespace Plasma {
-    class AbstractRunner;
-}
 
 
 class KPluginSelector;

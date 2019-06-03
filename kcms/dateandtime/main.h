@@ -25,9 +25,7 @@
 
 class Dtime;
 class QTabWidget;
-class KProcess;
 
-class OrgFreedesktopTimedate1Interface;
 
 class KclockModule : public KCModule
 {

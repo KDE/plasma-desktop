@@ -35,14 +35,11 @@
 class QPushButton;
 class QProgressDialog;
 class QTemporaryDir;
-class KToggleAction;
-class KActionMenu;
 class QAction;
 class QLabel;
 class QMenu;
 class QProcess;
 class QSplitter;
-class QComboBox;
 
 namespace KFI
 {
