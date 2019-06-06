@@ -56,8 +56,8 @@ QtObject {
         Layout.minimumWidth: units.iconSizes.small
         Layout.minimumHeight: Layout.minimumWidth
 
-        Layout.maximumWidth: inPanel ? units.iconSizeHints.panel : -1
-        Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1
+        Layout.maximumWidth: inPanel ? units.iconSizes.smallMedium : -1
+        Layout.maximumHeight: Layout.maximumWidth
 
         icon: plasmoid.icon
         mainText: plasmoid.title
