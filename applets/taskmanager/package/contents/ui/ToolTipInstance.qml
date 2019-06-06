@@ -140,28 +140,15 @@ Column {
         }
 
         // close button
-        MouseArea {
+        PlasmaComponents.ToolButton {
             Layout.alignment: Qt.AlignRight | Qt.AlignTop
-
-            height: units.iconSizes.smallMedium
-            width: height
-
             visible: isWin
-
-            acceptedButtons: Qt.LeftButton
-            hoverEnabled: true
+            iconSource: "window-close"
             onClicked: {
                 backend.cancelHighlightWindows();
                 tasksModel.requestClose(submodelIndex);
             }
 
-            PlasmaCore.IconItem {
-                anchors.fill: parent
-                active: parent.containsMouse
-
-                source: "window-close"
-                animated: false
-            }
         }
     }
 
@@ -339,32 +326,15 @@ Column {
                         }
                     }
 
-                    MouseArea {
-                        height: units.iconSizes.smallMedium
-                        width: height
+                    PlasmaComponents.ToolButton {
                         enabled: canGoBack
-
-                        acceptedButtons: Qt.LeftButton
-                        hoverEnabled: true
+                        iconSource: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
                         onClicked: mpris2Source.goPrevious(mprisSourceName)
-
-                        PlasmaCore.IconItem {
-                            anchors.fill: parent
-                            enabled: canGoBack
-                            active: parent.containsMouse
-
-                            source: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
-                            animated: false
-                        }
                     }
 
-                    MouseArea {
-                        height: units.iconSizes.medium
-                        width: height
-                        enabled: playing ? canPause : canPlay
-
-                        acceptedButtons: Qt.LeftButton
-                        hoverEnabled: true
+                    PlasmaComponents.ToolButton {
+                        enabled: playing ? canPause : canPlaye
+                        iconSource: playing ? "media-playback-pause" : "media-playback-start"
                         onClicked: {
                             if (!playing) {
                                 mpris2Source.play(mprisSourceName);
@@ -372,34 +342,12 @@ Column {
                                 mpris2Source.pause(mprisSourceName);
                             }
                         }
-
-                        PlasmaCore.IconItem {
-                            anchors.fill: parent
-                            enabled: playing ? canPause : canPlay
-                            active: parent.containsMouse
-
-                            source: playing ? "media-playback-pause" : "media-playback-start"
-                            animated: false
-                        }
                     }
 
-                    MouseArea {
-                        height: units.iconSizes.smallMedium
-                        width: height
+                    PlasmaComponents.ToolButton {
                         enabled: canGoNext
-
-                        acceptedButtons: Qt.LeftButton
-                        hoverEnabled: true
+                        iconSource: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
                         onClicked: mpris2Source.goNext(mprisSourceName)
-
-                        PlasmaCore.IconItem {
-                            anchors.fill: parent
-                            enabled: canGoNext
-                            active: parent.containsMouse
-
-                            source: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
-                            animated: false
-                        }
                     }
                 }
             }
