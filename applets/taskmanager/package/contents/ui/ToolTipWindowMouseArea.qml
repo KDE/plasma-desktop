@@ -28,17 +28,20 @@ MouseArea {
     property int winId // FIXME Legacy
     property Item rootTask
 
-    acceptedButtons: Qt.LeftButton | Qt.RightButton
+    acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.RightButton
     hoverEnabled: true
     enabled: winId != 0
 
     onClicked: {
         if (mouse.button == Qt.LeftButton) {
             tasksModel.requestActivate(modelIndex);
-        } else {
+            rootTask.hideToolTipTemporarily();
+        } else if (mouse.button == Qt.MiddleButton) {
+            backend.cancelHighlightWindows();
+            tasksModel.requestClose(modelIndex);
+        } else /* right button */ {
             tasks.createContextMenu(rootTask, modelIndex).show();
         }
-        rootTask.hideToolTipTemporarily();
     }
 
     onContainsMouseChanged: {
