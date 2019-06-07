@@ -64,6 +64,7 @@ Controls.TextField {
         backend = date;
     }
 
+    onTextChanged: submit()
     inputMask: "00:00"
     selectByMouse: false
     inputMethodHints: Qt.ImhPreferNumbers
