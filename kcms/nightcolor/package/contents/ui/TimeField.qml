@@ -16,7 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 1.4 as Controls
+import QtQuick.Controls 2.2 as Controls
 
 Controls.TextField {
     id: field
@@ -64,6 +64,8 @@ Controls.TextField {
         backend = date;
     }
 
+    inputMask: "00:00"
+    selectByMouse: false
     inputMethodHints: Qt.ImhPreferNumbers
     validator: RegExpValidator { regExp: /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/ }
 
