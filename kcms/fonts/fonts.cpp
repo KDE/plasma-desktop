@@ -307,6 +307,7 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
 #endif
 #endif
 
+    m_originalState.exclude = m_state.exclude;
     m_originalState.excludeTo = m_state.excludeTo;
     m_originalState.excludeFrom = m_state.excludeFrom;
     
