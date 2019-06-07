@@ -109,6 +109,8 @@ static QFont nearestExistingFont(const QFont &font)
 #if defined(HAVE_FONTCONFIG) && HAVE_X11
 FontAASettings::FontAASettings(QObject *parent)
     : QObject(parent)
+    , m_state()
+    , m_originalState()
     , m_subPixelOptionsModel(new QStandardItemModel(this))
     , m_hintingOptionsModel(new QStandardItemModel(this))
 {
