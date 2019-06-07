@@ -97,21 +97,22 @@ Q_SIGNALS:
 
 #if defined(HAVE_FONTCONFIG) && HAVE_X11
 private:
-    int m_excludeTo;
-    int m_excludeToOriginal;
-    int m_excludeFrom;
-    int m_excludeFromOriginal;
-    int m_antiAliasing;
-    int m_antiAliasingOriginal;
-    int m_dpi;
-    int m_dpiOriginal;
+    int m_excludeTo = 0;
+    int m_excludeToOriginal = 0;
+    int m_excludeFrom = 0;
+    int m_excludeFromOriginal = 0;
+    int m_antiAliasing = 0;
+    int m_antiAliasingOriginal = 0;
+    int m_dpi = 0;
+    int m_dpiOriginal = 0;
     int m_subPixelCurrentIndex = 0;
-    int m_subPixelCurrentIndexOriginal;
+    int m_subPixelCurrentIndexOriginal = 0;
     int m_hintingCurrentIndex = 0;
-    int m_hintingCurrentIndexOriginal;
+    int m_hintingCurrentIndexOriginal = 0;
     QStandardItemModel *m_subPixelOptionsModel;
     QStandardItemModel *m_hintingOptionsModel;
     bool m_exclude = false;
+    bool m_excludeOriginal = false;
 #endif
 };
 

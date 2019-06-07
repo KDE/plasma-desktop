@@ -137,6 +137,7 @@ void FontAASettings::load()
         m_excludeTo = 15;
         setExclude(false);
     }
+    m_excludeOriginal = m_exclude;
     m_excludeFromOriginal = m_excludeFrom;
     m_excludeToOriginal = m_excludeTo;
     excludeToChanged();
@@ -292,6 +293,7 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
 #endif
 #endif
 
+    m_excludeOriginal = m_exclude;
     m_excludeToOriginal = m_excludeTo;
     m_excludeFromOriginal = m_excludeFrom;
     
@@ -426,7 +428,8 @@ bool FontAASettings::needsSave() const
         || m_antiAliasing != m_antiAliasingOriginal
         || m_dpi != m_dpiOriginal
         || m_subPixelCurrentIndex != m_subPixelCurrentIndexOriginal
-        || m_hintingCurrentIndex != m_hintingCurrentIndexOriginal;
+        || m_hintingCurrentIndex != m_hintingCurrentIndexOriginal
+        || m_exclude != m_excludeOriginal;
 }
 
 
@@ -450,6 +453,7 @@ KFonts::KFonts(QObject *parent, const QVariantList &args)
 
     connect(m_fontAASettings, &FontAASettings::subPixelCurrentIndexChanged, this, updateState);
     connect(m_fontAASettings, &FontAASettings::hintingCurrentIndexChanged, this, updateState);
+    connect(m_fontAASettings, &FontAASettings::excludeChanged, this, updateState);
     connect(m_fontAASettings, &FontAASettings::excludeToChanged, this, updateState);
     connect(m_fontAASettings, &FontAASettings::antiAliasingChanged, this, updateState);
     connect(m_fontAASettings, &FontAASettings::aliasingChanged, this, updateState);
