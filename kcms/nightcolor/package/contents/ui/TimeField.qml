@@ -15,10 +15,9 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 import QtQuick 2.1
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.2 as Controls
+import QtQuick.Controls 2.5 as QQC2
 
-Controls.TextField {
+QQC2.TextField {
     id: field
 
     property date backend

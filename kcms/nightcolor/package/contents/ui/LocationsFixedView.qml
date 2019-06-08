@@ -15,13 +15,11 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 import QtQuick 2.1
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 1.4 as Controls
+import org.kde.kirigami 2.5 as Kirigami
+import QtQuick.Controls 2.5 as QQC2
 
-GridLayout {
-    columns: 2
-    rowSpacing: units.smallSpacing
-    columnSpacing: units.smallSpacing
+Kirigami.FormLayout {
+    twinFormLayouts: parentLayout
     enabled: activator.checked
 
     Connections {
@@ -34,12 +32,9 @@ GridLayout {
         longitudeFixedField.backend = cA.longitudeFixed;
     }
 
-    Controls.Label {
-        text: i18n("Latitude")
-        Layout.alignment: Qt.AlignRight
-    }
     NumberField {
         id: latitudeFixedField
+        Kirigami.FormData.label: i18n("Latitude:")
         backend: cA.latitudeFixedStaged
         validator: DoubleValidator {bottom: -90; top: 90; decimals: 10}
         onBackendChanged: {
@@ -49,12 +44,9 @@ GridLayout {
         }
     }
 
-    Controls.Label {
-        text: i18n("Longitude")
-        Layout.alignment: Qt.AlignRight
-    }
     NumberField {
         id: longitudeFixedField
+        Kirigami.FormData.label: i18n("Longitude:")
         backend: cA.longitudeFixedStaged
         validator: DoubleValidator {bottom: -180; top: 180; decimals: 10}
         onBackendChanged: {
@@ -63,10 +55,10 @@ GridLayout {
             calcNeedsSave();
         }
     }
-    Controls.Button {
-        Layout.columnSpan: 2
-        Layout.alignment: Qt.AlignHCenter
+
+    QQC2.Button {
         text: i18n("Detect location")
+        implicitWidth: longitudeFixedField.width // TODO: see if there is a smarter way for doing this
         onClicked: {
             latitudeFixedField.backend = locator.latitude;
             longitudeFixedField.backend = locator.longitude;

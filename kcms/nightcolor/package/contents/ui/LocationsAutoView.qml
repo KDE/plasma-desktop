@@ -15,13 +15,10 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 import QtQuick 2.1
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 1.4 as Controls
+import org.kde.kirigami 2.5 as Kirigami
 
-GridLayout {
-    columns: 2
-    rowSpacing: units.smallSpacing
-    columnSpacing: units.smallSpacing
+Kirigami.FormLayout {
+    twinFormLayouts: parentLayout
     enabled: activator.checked
 
     property double latitude
@@ -30,23 +27,16 @@ GridLayout {
     onLatitudeChanged: latitudeField.backend = latitude;
     onLongitudeChanged: longitudeField.backend = longitude;
 
-    Controls.Label {
-        text: i18n("Latitude")
-        Layout.alignment: Qt.AlignRight
-        enabled: false
-    }
     NumberField {
         id: latitudeField
+        Kirigami.FormData.label: i18n("Latitude:")
         backend: locator.latitude
         enabled: false
     }
-    Controls.Label {
-        text: i18n("Longitude")
-        Layout.alignment: Qt.AlignRight
-        enabled: false
-    }
+
     NumberField {
         id: longitudeField
+        Kirigami.FormData.label: i18n("Longitude:")
         backend: locator.longitude
         enabled: false
     }
