@@ -38,8 +38,4 @@ install(FILES colorschemes.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 
 kpackage_install_package(package kcm_colors kcms)
 
-# built-in color schemes
-file(GLOB schemefiles schemes/*.colors)
-install( FILES ${schemefiles} DESTINATION ${KDE_INSTALL_DATADIR}/color-schemes )
-
 add_subdirectory(editor)
