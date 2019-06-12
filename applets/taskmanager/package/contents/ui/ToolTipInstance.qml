@@ -333,7 +333,7 @@ Column {
                     }
 
                     PlasmaComponents.ToolButton {
-                        enabled: playing ? canPause : canPlaye
+                        enabled: playing ? canPause : canPlay
                         iconSource: playing ? "media-playback-pause" : "media-playback-start"
                         onClicked: {
                             if (!playing) {
