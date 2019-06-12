@@ -869,7 +869,11 @@ void KXftConfig::applyExcludeRange(bool pixel)
         if (!m_antiAliasing.node.isNull()) {
             m_doc.documentElement().removeChild(range.node);
         }
-        m_doc.documentElement().appendChild(matchNode);
+        if(range.node.isNull()) {
+            m_doc.documentElement().appendChild(matchNode);
+        } else {
+            m_doc.documentElement().replaceChild(matchNode, range.node);
+        }
         range.node = matchNode;
     }
 }
