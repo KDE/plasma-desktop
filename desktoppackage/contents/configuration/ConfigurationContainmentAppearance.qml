@@ -27,7 +27,7 @@ import org.kde.kirigami 2.5 as Kirigami
 
 ColumnLayout {
     id: root
-    spacing: 0
+    spacing: 0 // unless it's 0 there will be an additional gap between two FormLayouts
 
     property int formAlignment: wallpaperComboBox.Kirigami.ScenePosition.x - root.Kirigami.ScenePosition.x + (units.largeSpacing/2)
     property string currentWallpaper: ""
@@ -77,6 +77,7 @@ ColumnLayout {
         Layout.fillWidth: true
         Layout.leftMargin: Kirigami.Units.smallSpacing
         Layout.rightMargin: Kirigami.Units.smallSpacing
+        Layout.bottomMargin: Kirigami.Units.smallSpacing * 2 // we need this because ColumnLayout's spacing is 0
     }
 
     Kirigami.FormLayout {
