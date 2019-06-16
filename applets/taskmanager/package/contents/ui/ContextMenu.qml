@@ -55,7 +55,6 @@ PlasmaComponents.ContextMenu {
 
     onStatusChanged: {
         if (visualParent && get(atm.LauncherUrlWithoutIcon) != "" && status == PlasmaComponents.DialogStatus.Open) {
-            launcherToggleAction.checked = (tasksModel.launcherPosition(get(atm.LauncherUrlWithoutIcon)) !== -1);
             activitiesDesktopsMenu.refresh();
 
         } else if (status == PlasmaComponents.DialogStatus.Closed) {
@@ -621,10 +620,9 @@ PlasmaComponents.ContextMenu {
                      && get(atm.IsStartup) !== true
                      && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
                      && (activityInfo.numberOfRunningActivities < 2)
+                     && tasksModel.launcherPosition(get(atm.LauncherUrlWithoutIcon)) == -1
 
         enabled: visualParent && get(atm.LauncherUrlWithoutIcon) != ""
-
-        checkable: true
 
         text: i18n("&Pin to Task Manager")
         icon: "window-pin"
@@ -719,7 +717,10 @@ PlasmaComponents.ContextMenu {
     }
 
     PlasmaComponents.MenuItem {
-        visible: (visualParent && get(atm.IsLauncher) === true) && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
+        visible: (visualParent
+                && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
+                && !launcherToggleAction.visible
+                && !showLauncherInActivitiesItem.visible)
 
         text: i18n("Unpin from Task Manager")
         icon: "window-unpin"
