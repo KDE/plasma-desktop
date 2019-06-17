@@ -455,6 +455,10 @@ FolderViewDropArea {
         }
     }
 
+    Connections {
+        target: plasmoid
+        onEditModeChanged: appletsLayout.editMode = plasmoid.editMode
+    }
     ContainmentLayoutManager.AppletsLayout {
         id: appletsLayout
         anchors.fill: parent
