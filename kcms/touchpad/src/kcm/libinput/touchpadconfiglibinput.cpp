@@ -35,7 +35,7 @@
 
 #include "version.h"
 
-TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, TouchpadBackend* backend, const QVariantList &args)
+TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, TouchpadBackend* backend, const QVariantList &/*args*/)
     : TouchpadConfigPlugin(parent, backend)
 {
     KAboutData* data = new KAboutData(QStringLiteral("kcm_touchpad"),

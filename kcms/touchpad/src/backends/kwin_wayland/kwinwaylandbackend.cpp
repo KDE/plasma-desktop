@@ -78,7 +78,6 @@ void KWinWaylandBackend::findTouchpads()
         return;
     }
 
-    bool touchpadFound = false;
     for (QString sn : devicesSysNames) {
         QDBusInterface deviceIface(QStringLiteral("org.kde.KWin"),
                                     QStringLiteral("/org/kde/KWin/InputDevice/") + sn,
@@ -94,7 +93,6 @@ void KWinWaylandBackend::findTouchpads()
                 return;
             }
             m_devices.append(tp);
-            touchpadFound = true;
             qCDebug(KCM_TOUCHPAD).nospace() <<  "Touchpad found: " <<  tp->name() << " (" << tp->sysName() << ")";
         }
     }

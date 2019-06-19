@@ -68,9 +68,9 @@ public:
     virtual bool isTouchpadEnabled() {return false;}
     virtual void setTouchpadEnabled(bool) {}
 
-    virtual void watchForEvents(bool keyboard) {}
+    virtual void watchForEvents(bool /*keyboard*/) {}
 
-    virtual QStringList listMouses(const QStringList &blacklist) {return QStringList();}
+    virtual QStringList listMouses(const QStringList &/*blacklist*/) {return QStringList();}
 
 private:
     TouchpadInputBackendMode m_mode;
