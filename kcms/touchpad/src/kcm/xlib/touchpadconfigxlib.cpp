@@ -98,7 +98,7 @@ QWidget *addTab(QTabWidget *tabs, T &form)
     return widget;
 }
 
-TouchpadConfigXlib::TouchpadConfigXlib(TouchpadConfigContainer *parent, TouchpadBackend* backend, const QVariantList &args)
+TouchpadConfigXlib::TouchpadConfigXlib(TouchpadConfigContainer *parent, TouchpadBackend* backend, const QVariantList &/*args*/)
     : TouchpadConfigPlugin(parent, backend),
       m_configOutOfSync(false)
 {
@@ -388,7 +388,7 @@ void TouchpadConfigXlib::updateTestAreaEnabled()
 void TouchpadConfigXlib::showConfigureNotificationsDialog()
 {
     KNotifyConfigWidget *widget =
-            KNotifyConfigWidget::configure(0, m_parent->componentData().componentName());
+            KNotifyConfigWidget::configure(nullptr, m_parent->componentData().componentName());
     QDialog *dialog = qobject_cast<QDialog*>(widget->topLevelWidget());
     connect(dialog, SIGNAL(finished()), dialog, SLOT(deleteLater()));
 }

@@ -125,7 +125,7 @@ const struct Parameter synapticsProperties[] = {
     {"MiddleButtonAreaRight", PT_INT, INT_MIN, INT_MAX, SYNAPTICS_PROP_SOFTBUTTON_AREAS,    32, 5},
     {"MiddleButtonAreaTop",   PT_INT, INT_MIN, INT_MAX, SYNAPTICS_PROP_SOFTBUTTON_AREAS,    32, 6},
     {"MiddleButtonAreaBottom", PT_INT, INT_MIN, INT_MAX, SYNAPTICS_PROP_SOFTBUTTON_AREAS,   32, 7},
-    { NULL, PT_INT, 0, 0, 0, 0, 0 }
+    { NULL, PT_INT, 0, 0, nullptr, 0, 0 }
 };
 
 SynapticsTouchpad::SynapticsTouchpad(Display *display, int deviceId): XlibTouchpad(display, deviceId),

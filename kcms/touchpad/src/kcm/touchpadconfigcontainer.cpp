@@ -72,7 +72,7 @@ QSize TouchpadConfigContainer::sizeHint() const
 {
     return m_plugin->sizeHint();
 }
-void TouchpadConfigContainer::resizeEvent(QResizeEvent *event)
+void TouchpadConfigContainer::resizeEvent(QResizeEvent */*event*/)
 {
     Q_EMIT changed(false);
     m_plugin->resize(this->size());
