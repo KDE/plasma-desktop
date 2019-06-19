@@ -25,9 +25,10 @@
 #include <QVariantHash>
 
 enum class TouchpadInputBackendMode {
-    WaylandLibinput = 0,
-    XLibinput = 1,
-    XSynaptics = 2
+    Unset = 0,
+    WaylandLibinput = 1,
+    XLibinput = 2,
+    XSynaptics = 3
 };
 
 class Q_DECL_EXPORT TouchpadBackend : public QObject
@@ -35,7 +36,7 @@ class Q_DECL_EXPORT TouchpadBackend : public QObject
     Q_OBJECT
 
 protected:
-    explicit TouchpadBackend(QObject *parent) : QObject(parent) {}
+    explicit TouchpadBackend(QObject *parent) : QObject(parent), m_mode(TouchpadInputBackendMode::Unset) {}
     void setMode(TouchpadInputBackendMode mode);
 
 public:
