@@ -144,9 +144,13 @@ KCM.GridViewKCM {
                     }
 
                     var props = background.properties || {};
-                    props.currentIcon = "view-filter";
-                    props.iconColor = Kirigami.Theme.textColor;
-                    background.properties = props;
+
+                    background.properties = Qt.binding(function() {
+                        var newProps = props;
+                        newProps.currentIcon = "view-filter";
+                        newProps.iconColor = Kirigami.Theme.textColor;
+                        return newProps;
+                    });
                 }
             }
         }
