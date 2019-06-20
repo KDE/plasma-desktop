@@ -6,7 +6,7 @@
 ]>
 <article id="joystick" lang="&language;">
 <articleinfo>
-<title>Joystick</title>
+<title>Game Controller</title>
 <authorgroup>
 <author>
 <firstname>Michael</firstname>
@@ -25,26 +25,28 @@
 <keyword>KDE</keyword>
 <keyword>System Settings</keyword>
 <keyword>joystick</keyword>
+<keyword>controller</keyword>
+<keyword>gamepad</keyword>
 <keyword>calibrate</keyword>
 </keywordset>
 </articleinfo>
 
 <sect1 id="kcm_joystick">
-<title>Joystick configuration module</title>
+<title>Calibrate Game Controller</title>
 
-<para>This module provides an interface to calibrate your joystick device as well as
-see which functions on your joystick are mapped to which logical button or
+<para>This module provides an interface to calibrate your game controller as well as
+see which functions on your game controller are mapped to which logical button or
 axis.</para>
 
 <para>
 <screenshot>
-<screeninfo>Here's a screenshot of the joystick module</screeninfo>
+<screeninfo>Here's a screenshot of the game controller module</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="joystick-main.png" format="PNG"/>
     </imageobject>
     <textobject>
-      <phrase>The joystick module</phrase>
+      <phrase>The game controller module</phrase>
     </textobject>
   </mediaobject>
 </screenshot>
@@ -55,9 +57,9 @@ axis.</para>
 <listitem>
 <para>
 Here you can see the logical location of the device. If you have more
-than one joystick device, you can also select which one to configure.
+than one game controller, you can also select which one to configure.
 </para>
-<para>If no joystick device is automatically found on your computer
+<para>If no game controller is automatically found on your computer
 and you know that there is one attached, you can enter the correct device file here.
 </para>
 </listitem>
@@ -66,7 +68,7 @@ and you know that there is one attached, you can enter the correct device file h
 <varlistentry><term><guilabel>Position</guilabel></term>
 <listitem>
 <para>
-The plotted location of the X and Y axes of the joystick. Enable <guibutton>Show trace</guibutton>
+The plotted location of the X and Y axes of the game controller's joystick. Enable <guibutton>Show trace</guibutton>
 to plot the path of the joystick from one point to another.
 </para>
 <tip><para>
@@ -78,8 +80,8 @@ If the joystick cannot reach every point on this graph, or if it does not center
 <varlistentry><term><guilabel>Buttons</guilabel></term>
 <listitem>
 <para>
-A place to see the pressed state of buttons on your joystick and if the buttons
-are mapped correctly. When a joystick button is pressed, <guilabel>PRESSED</guilabel> will appear
+A place to see the pressed state of buttons on your game controller and if the buttons
+are mapped correctly. When a button is pressed, <guilabel>PRESSED</guilabel> will appear
 next to the logical number (as the computer sees it) of the button which was
 pressed.
 </para>
@@ -90,7 +92,7 @@ pressed.
 <listitem>
 <para>
 This displays the numerical values of the axis positions. 0 is centered and the
-maximum and minimum values depend on the joystick and the particular axis.
+maximum and minimum values depend on the game controller and the particular axis.
 </para>
 </listitem>
 </varlistentry>
@@ -98,18 +100,18 @@ maximum and minimum values depend on the joystick and the particular axis.
 <varlistentry><term><guilabel>Calibrate</guilabel></term>
 <listitem>
 <para>
-Clicking on <guibutton>Calibrate</guibutton> will open a dialog to calibrate every axis on your joystick. 
+Clicking on <guibutton>Calibrate</guibutton> will open a dialog to calibrate every axis on your joysticks. 
 </para>
 
 <para>
 <screenshot>
-<screeninfo>Calibrating your joystick</screeninfo>
+<screeninfo>Calibrating your game controller</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="joystick-calibration.png" format="PNG"/>
     </imageobject>
     <textobject>
-      <phrase>Calibrating your joystick</phrase>
+      <phrase>Calibrating your game controller</phrase>
     </textobject>
   </mediaobject>
 </screenshot>
