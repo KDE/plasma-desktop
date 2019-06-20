@@ -29,7 +29,7 @@ import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutM
 ContainmentLayoutManager.ConfigOverlayWithHandles {
     id: overlay
 
-    readonly property int iconSize: units.iconSizes.small
+    readonly property int iconSize: touchInteraction ? units.iconSizes.medium : units.iconSizes.small
     PlasmaCore.Svg {
         id: configIconsSvg
         imagePath: "widgets/configuration-icons"
