@@ -332,39 +332,6 @@ FolderViewDropArea {
     }
 */
 
-
-    Loader {
-        id: folderViewLayer
-
-        anchors.fill: parent
-
-        property bool ready: status == Loader.Ready
-        property Item view: item ? item.view : null
-        property QtObject model: item ? item.model : null
-
-        focus: true
-
-        active: isFolder
-        asynchronous: false
-
-        source: "FolderViewLayer.qml"
-
-        onFocusChanged: {
-            if (!focus && model) {
-                model.clearSelection();
-            }
-        }
-
-        Connections {
-            target: folderViewLayer.view
-
-            // `FolderViewDropArea` is not a FocusScope. We need to forward manually.
-            onPressed: {
-                folderViewLayer.forceActiveFocus();
-            }
-        }
-    }
-
     Connections {
         target: plasmoid
         onEditModeChanged: appletsLayout.editMode = plasmoid.editMode
@@ -398,6 +365,38 @@ FolderViewDropArea {
         }
 
         placeHolder: ContainmentLayoutManager.PlaceHolder {}
+
+        Loader {
+            id: folderViewLayer
+
+            anchors.fill: parent
+
+            property bool ready: status == Loader.Ready
+            property Item view: item ? item.view : null
+            property QtObject model: item ? item.model : null
+
+            focus: true
+
+            active: isFolder
+            asynchronous: false
+
+            source: "FolderViewLayer.qml"
+
+            onFocusChanged: {
+                if (!focus && model) {
+                    model.clearSelection();
+                }
+            }
+
+            Connections {
+                target: folderViewLayer.view
+
+                // `FolderViewDropArea` is not a FocusScope. We need to forward manually.
+                onPressed: {
+                    folderViewLayer.forceActiveFocus();
+                }
+            }
+        }
     }
 
     Component.onCompleted: {
