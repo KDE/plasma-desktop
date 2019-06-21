@@ -361,6 +361,9 @@ FolderViewDropArea {
 
         appletContainerComponent: ContainmentLayoutManager.BasicAppletContainer {
             id: appletContainer
+            editModeCondition: plasmoid.immutable
+                ? ContainmentLayoutManager.ItemContainer.Manual
+                : (plasmoid.configuration.pressToMove ? ContainmentLayoutManager.ItemContainer.AfterPressAndHold : ContainmentLayoutManager.ItemContainer.AfterMouseOver)
             configOverlayComponent: ConfigOverlay {}
         }
 
