@@ -374,8 +374,6 @@ FolderViewDropArea {
 
                     newCont.addApplet(appletContainer.applet, newPos.x, newPos.y);
                     appletsLayout.hidePlaceHolder();
-                } else {
-                    appletContainer.showPlaceHolderForItem(appletContainer);
                 }
             }
         }
