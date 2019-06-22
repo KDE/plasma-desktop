@@ -160,7 +160,8 @@ Item {
             var runners = new Array("services");
 
             if (isDash) {
-                runners = runners.concat(new Array("desktopsessions", "PowerDevil"));
+                runners = runners.concat(new Array("desktopsessions", "PowerDevil",
+                    "calculator", "unitconverter"));
             }
 
             if (plasmoid.configuration.useExtraRunners) {
