@@ -319,6 +319,8 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
 
     while (actionCount < 5 && resultIt != results.end()) {
         const QString resource = (*resultIt).resource();
+        ++resultIt;
+
         const QUrl url(resource);
 
         if (!url.isValid()) {
@@ -341,7 +343,6 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
 
         actions << QVariant::fromValue<QAction *>(action);
 
-        ++resultIt;
         ++actionCount;
     }
 
