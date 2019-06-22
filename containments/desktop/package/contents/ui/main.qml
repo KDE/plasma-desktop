@@ -365,6 +365,20 @@ FolderViewDropArea {
                 ? ContainmentLayoutManager.ItemContainer.Manual
                 : (plasmoid.configuration.pressToMove ? ContainmentLayoutManager.ItemContainer.AfterPressAndHold : ContainmentLayoutManager.ItemContainer.AfterMouseOver)
             configOverlayComponent: ConfigOverlay {}
+            onUserDrag: {
+                var pos = mapToItem(root.parent, dragCenter.x, dragCenter.y);
+                var newCont = plasmoid.containmentAt(pos.x, pos.y);
+
+                if (newCont && newCont !== plasmoid) {
+                    var newPos = newCont.mapFromApplet(plasmoid, pos.x, pos.y);
+
+                    newCont.addApplet(appletContainer.applet, newPos.x, newPos.y);
+                    appletsLayout.hidePlaceHolder();
+                } else {
+                    placeHolder.syncWithItem(appletContainer);
+                    appletContainer.showPlaceHolderForItem(appletContainer);
+                }
+            }
         }
 
         placeHolder: ContainmentLayoutManager.PlaceHolder {}
