@@ -105,6 +105,7 @@ MouseArea {
                     var newPos = newCont.mapFromApplet(plasmoid, mouse.x, mouse.y);
                     var applet = currentApplet.applet;
                     currentApplet.destroy();
+                    applet.anchors.fill = undefined
                     newCont.addApplet(applet, newPos.x, newPos.y);
                     return;
                 }
