@@ -507,6 +507,12 @@ Item {
         }
 
         onPositionChanged: {
+            // Reject multiple events with the same coordinates that QQuickWindow
+            // synthesizes.
+            if (oldPos === Qt.point(mouse.x, mouse.y)) {
+                return;
+            }
+
             var button = tabBar.layout.childAt(mouse.x, mouse.y);
 
             if (!button || button.objectName !== "KickoffButton") {
