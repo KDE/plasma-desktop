@@ -54,7 +54,7 @@ Item {
 
         runners: {
             var runners = ["desktopsessions", "services", "places",
-                           "PowerDevil"];
+                           "PowerDevil", "calculator", "unitconverter"];
 
             if (plasmoid.configuration.useExtraRunners) {
                 runners = runners.concat(plasmoid.configuration.runners);
