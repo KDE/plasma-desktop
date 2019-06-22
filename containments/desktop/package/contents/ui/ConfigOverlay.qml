@@ -208,7 +208,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 onPressed: appletsLayout.releaseSpace(overlay.itemContainer);
                 onPositionChanged: {
                     appletsLayout.showPlaceHolderForItem(overlay.itemContainer);
-                    var dragPos = mapToItem(overlay.itemContainer, moouse.x, mouse.y);
+                    var dragPos = mapToItem(overlay.itemContainer, mouse.x, mouse.y);
                     overlay.itemContainer.userDrag(Qt.point(overlay.itemContainer.x, overlay.itemContainer.y), dragPos);
                 }
                 onReleased: {
