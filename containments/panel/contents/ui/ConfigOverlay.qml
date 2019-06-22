@@ -103,8 +103,9 @@ MouseArea {
 
                 if (newCont && newCont !== plasmoid) {
                     var newPos = newCont.mapFromApplet(plasmoid, mouse.x, mouse.y);
-                    newCont.addApplet(currentApplet.applet, newPos.x, newPos.y);
-                    root.dragOverlay.currentApplet = null;
+                    var applet = currentApplet.applet;
+                    currentApplet.destroy();
+                    newCont.addApplet(applet, newPos.x, newPos.y);
                     return;
                 }
             }
