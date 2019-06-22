@@ -60,7 +60,7 @@ public:
     virtual bool isChangedConfig() { return false; }
     void setEnabled(bool enable);
     bool enabled();
-    virtual void setTouchpadOff(int touchpadOff) {}
+    virtual void setTouchpadOff(int /*touchpadOff*/) {}
     virtual int touchpadOff() = 0;
 
     virtual XcbAtom &touchpadOffAtom() = 0;

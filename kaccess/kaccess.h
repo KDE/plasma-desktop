@@ -39,7 +39,6 @@
 #include <fixx11h.h>
 
 class QLabel;
-class KDialog;
 class KComboBox;
 
 class KAccessApp : public QObject, public QAbstractNativeEventFilter

@@ -109,15 +109,19 @@ static QFont nearestExistingFont(const QFont &font)
 #if defined(HAVE_FONTCONFIG) && HAVE_X11
 FontAASettings::FontAASettings(QObject *parent)
     : QObject(parent)
+    , m_state()
+    , m_originalState()
     , m_subPixelOptionsModel(new QStandardItemModel(this))
     , m_hintingOptionsModel(new QStandardItemModel(this))
 {
-    for (int t = KXftConfig::SubPixel::NotSet; t <= KXftConfig::SubPixel::Vbgr; ++t) {
+    m_state.subPixel = KXftConfig::SubPixel::None;
+    for (int t = KXftConfig::SubPixel::None; t <= KXftConfig::SubPixel::Vbgr; ++t) {
         QStandardItem *item = new QStandardItem(KXftConfig::description((KXftConfig::SubPixel::Type)t));
         m_subPixelOptionsModel->appendRow(item);
     }
 
-    for (int s = KXftConfig::Hint::NotSet; s <= KXftConfig::Hint::Full; ++s) {
+    m_state.hinting = KXftConfig::Hint::None;
+    for (int s = KXftConfig::Hint::None; s <= KXftConfig::Hint::Full; ++s) {
         QStandardItem * item = new QStandardItem(KXftConfig::description((KXftConfig::Hint::Style)s));
         m_hintingOptionsModel->appendRow(item);
     }
@@ -129,39 +133,38 @@ void FontAASettings::load()
     KXftConfig xft;
 
     if (xft.getExcludeRange(from, to)) {
-        m_excludeFrom = from;
-        m_excludeTo = to;
+        m_state.excludeFrom = from;
+        m_state.excludeTo = to;
         setExclude(true);
     } else {
-        m_excludeFrom = 8;
-        m_excludeTo = 15;
+        m_state.excludeFrom = 8;
+        m_state.excludeTo = 15;
         setExclude(false);
     }
-    m_excludeFromOriginal = m_excludeFrom;
-    m_excludeToOriginal = m_excludeTo;
+    m_originalState.exclude = m_state.exclude;
+    m_originalState.excludeFrom = m_state.excludeFrom;
+    m_originalState.excludeTo = m_state.excludeTo;
     excludeToChanged();
     excludeFromChanged();
 
     KXftConfig::SubPixel::Type spType;
-    xft.getSubPixelType(spType);
+    if (!xft.getSubPixelType(spType) || KXftConfig::SubPixel::NotSet == spType) {
+        spType = KXftConfig::SubPixel::Rgb;
+    }
 
-    setSubPixelCurrentIndex(spType);
-    m_subPixelCurrentIndexOriginal = spType;
+    setSubPixel(spType);
+    m_originalState.subPixel = spType;
+    m_state.subPixelHasLocalConfig = xft.subPixelTypeHasLocalConfig();
 
     KXftConfig::Hint::Style hStyle;
 
     if (!xft.getHintStyle(hStyle) || KXftConfig::Hint::NotSet == hStyle) {
-        KConfig kglobals("kdeglobals", KConfig::NoGlobals);
-
-        hStyle = KXftConfig::Hint::NotSet;
-        xft.setHintStyle(hStyle);
-        KConfigGroup(&kglobals, "General").writeEntry("XftHintStyle", KXftConfig::toStr(hStyle));
-        kglobals.sync();
-        runRdb(KRdbExportXftSettings | KRdbExportGtkTheme);
+        hStyle = KXftConfig::Hint::Slight;
     }
 
-    setHintingCurrentIndex(hStyle);
-    m_hintingCurrentIndexOriginal = hStyle;
+    setHinting(hStyle);
+    m_originalState.hinting = hStyle;
+    m_state.hintingHasLocalConfig = xft.hintStyleHasLocalConfig();
 
     KConfig _cfgfonts("kcmfonts");
     KConfigGroup cfgfonts(&_cfgfonts, "General");
@@ -174,9 +177,9 @@ void FontAASettings::load()
     }
 
     if (dpicfg <= 0) {
-        m_dpiOriginal = 0;
+        m_originalState.dpi = 0;
     } else {
-        m_dpiOriginal = dpicfg;
+        m_originalState.dpi = dpicfg;
     };
 
     setDpi(dpicfg);
@@ -185,13 +188,17 @@ void FontAASettings::load()
     KConfigGroup cg(config, "General");
 
     if (cfgfonts.readEntry("dontChangeAASettings", true)) {
-        setAntiAliasing(1); //AASystem
+        setAntiAliasing(true); //AASystem
+        m_state.antiAliasingHasLocalConfig = false;
     } else if (cg.readEntry("XftAntialias", true)) {
-        setAntiAliasing(0); //AAEnabled
+        setAntiAliasing(true); //AAEnabled
+        m_state.antiAliasingHasLocalConfig = xft.antiAliasingHasLocalConfig();
     } else {
-        setAntiAliasing(2); //AADisabled
+        setAntiAliasing(false); //AADisabled
+        m_state.antiAliasingHasLocalConfig = xft.antiAliasingHasLocalConfig();
     }
-    m_antiAliasingOriginal = m_antiAliasing;
+    m_originalState.antiAliasing = m_state.antiAliasing;
+    m_originalState.antiAliasingHasLocalConfig = m_state.antiAliasingHasLocalConfig;
 }
 
 bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
@@ -201,15 +208,19 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
     KConfigGroup grp(&kglobals, "General");
 
     xft.setAntiAliasing(aaState);
-    if (m_exclude) {
-        xft.setExcludeRange(m_excludeFrom, m_excludeTo);
+    if (m_state.exclude) {
+        xft.setExcludeRange(m_state.excludeFrom, m_state.excludeTo);
     } else {
         xft.setExcludeRange(0, 0);
     }
 
-    KXftConfig::SubPixel::Type spType = (KXftConfig::SubPixel::Type)m_subPixelCurrentIndex;
+    KXftConfig::SubPixel::Type spType = (KXftConfig::SubPixel::Type)m_state.subPixel;
 
-    xft.setSubPixelType(spType);
+    if (subPixelNeedsSave()) {
+        xft.setSubPixelType(spType);
+    } else {
+        xft.setSubPixelType(KXftConfig::SubPixel::NotSet);
+    }
     grp.writeEntry("XftSubPixel", KXftConfig::toStr(spType));
     if (aaState == KXftConfig::AntiAliasing::NotSet) {
         grp.revertToDefault("XftAntialias");
@@ -218,9 +229,13 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
     }
 
     bool mod = false;
-    KXftConfig::Hint::Style hStyle = (KXftConfig::Hint::Style)m_hintingCurrentIndex;
+    KXftConfig::Hint::Style hStyle = (KXftConfig::Hint::Style)m_state.hinting;
 
-    xft.setHintStyle(hStyle);
+    if (hintingNeedsSave()) {
+        xft.setHintStyle(hStyle);
+    } else {
+        xft.setHintStyle(KXftConfig::Hint::NotSet);
+    }
 
     QString hs(KXftConfig::toStr(hStyle));
 
@@ -244,9 +259,9 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
     KConfigGroup cfgfonts(&_cfgfonts, "General");
 
     if (KWindowSystem::isPlatformWayland()) {
-        cfgfonts.writeEntry("forceFontDPIWayland", m_dpi);
+        cfgfonts.writeEntry("forceFontDPIWayland", m_state.dpi);
     } else {
-        cfgfonts.writeEntry("forceFontDPI", m_dpi);
+        cfgfonts.writeEntry("forceFontDPI", m_state.dpi);
     }
 
     cfgfonts.sync();
@@ -254,7 +269,7 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
 #if HAVE_X11
     // if the setting is reset in the module, remove the dpi value,
     // otherwise don't explicitly remove it and leave any possible system-wide value
-    if (m_dpi == 0 && m_dpiOriginal != 0 && !KWindowSystem::isPlatformWayland()) {
+    if (m_state.dpi == 0 && m_originalState.dpi != 0 && !KWindowSystem::isPlatformWayland()) {
         QProcess proc;
         proc.setProcessChannelMode(QProcess::ForwardedChannels);
         proc.start("xrdb", QStringList() << "-quiet" << "-remove" << "-nocpp");
@@ -271,32 +286,33 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
     // Don't overwrite global settings unless explicitly asked for - e.g. the system
     // fontconfig setup may be much more complex than this module can provide.
     // TODO: With AASystem the changes already made by this module should be reverted somehow.
-#if defined(HAVE_FONTCONFIG) && HAVE_X11
-    if (mod || (m_antiAliasing != m_antiAliasingOriginal) || m_dpi != m_dpiOriginal) {
+#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
+    if (mod || (m_state.antiAliasing != m_originalState.antiAliasing) || m_state.dpi != m_originalState.dpi) {
         KMessageBox::information(nullptr,
                                  i18n(
                                      "<p>Some changes such as anti-aliasing or DPI will only affect newly started applications.</p>"
                                  ), i18n("Font Settings Changed"), "FontSettingsChanged");
-        m_antiAliasingOriginal = m_antiAliasing;
-        m_dpiOriginal = m_dpi;
+        m_originalState.antiAliasing = m_state.antiAliasing;
+        m_originalState.dpi = m_state.dpi;
     }
 #else
 #if HAVE_X11
-    if (m_dpi != m_dpiOriginal) {
+    if (m_state.dpi != m_originalState.dpi) {
         KMessageBox::information(0,
                                  i18n(
                                      "<p>Some changes such as DPI will only affect newly started applications.</p>"
                                  ), i18n("Font Settings Changed"), "FontSettingsChanged");
-        m_dpiOriginal = m_dpi;
+        m_originalState.dpi = m_state.dpi;
     }
 #endif
 #endif
 
-    m_excludeToOriginal = m_excludeTo;
-    m_excludeFromOriginal = m_excludeFrom;
+    m_originalState.exclude = m_state.exclude;
+    m_originalState.excludeTo = m_state.excludeTo;
+    m_originalState.excludeFrom = m_state.excludeFrom;
     
-    m_subPixelCurrentIndexOriginal = m_subPixelCurrentIndex;
-    m_hintingCurrentIndexOriginal = m_hintingCurrentIndex;
+    m_originalState.subPixel = m_state.subPixel;
+    m_originalState.hinting = m_state.hinting;
 
     return mod;
 }
@@ -305,128 +321,151 @@ void FontAASettings::defaults()
 {
     setExcludeTo(15);
     setExcludeFrom(8);
-    setAntiAliasing(1);
-    m_antiAliasingOriginal = m_antiAliasing;
+    setAntiAliasing(true);
+    m_originalState.antiAliasing = m_state.antiAliasing;
+    m_state.antiAliasingHasLocalConfig = false;
     setDpi(0);
-    setSubPixelCurrentIndex(KXftConfig::SubPixel::NotSet);
-    setHintingCurrentIndex(KXftConfig::Hint::NotSet);
+    setSubPixel(KXftConfig::SubPixel::Rgb);
+    m_state.subPixelHasLocalConfig = false;
+    setHinting(KXftConfig::Hint::Slight);
+    m_state.hintingHasLocalConfig = false;
 }
 
 #endif
 
 void FontAASettings::setExclude(bool exclude)
 {
-    if (exclude == m_exclude) {
+    if (exclude == m_state.exclude) {
         return;
     }
 
-    m_exclude = exclude;
+    m_state.exclude = exclude;
     emit excludeChanged();
 }
 
 bool FontAASettings::exclude() const
 {
-    return m_exclude;
+    return m_state.exclude;
 }
 
 void FontAASettings::setExcludeTo(const int &excludeTo)
 {
-    if (m_excludeTo == excludeTo) {
+    if (m_state.excludeTo == excludeTo) {
         return;
     }
 
-    m_excludeTo = excludeTo;
+    m_state.excludeTo = excludeTo;
     emit excludeToChanged();
 }
 
 int FontAASettings::excludeTo() const
 {
-    return m_excludeTo;
+    return m_state.excludeTo;
 }
 
 void FontAASettings::setExcludeFrom(const int &excludeTo)
 {
-    if (m_excludeFrom == excludeTo) {
+    if (m_state.excludeFrom == excludeTo) {
         return;
     }
 
-    m_excludeFrom = excludeTo;
+    m_state.excludeFrom = excludeTo;
     emit excludeToChanged();
 }
 
 int FontAASettings::excludeFrom() const
 {
-    return m_excludeFrom;
+    return m_state.excludeFrom;
 }
 
-void FontAASettings::setAntiAliasing(const int &antiAliasing)
+void FontAASettings::setAntiAliasing(bool antiAliasing)
 {
-    if (m_antiAliasing == antiAliasing) {
+    if (m_state.antiAliasing == antiAliasing) {
         return;
     }
 
-    m_antiAliasing = antiAliasing;
+    m_state.antiAliasing = antiAliasing;
     emit aliasingChanged();
 }
 
-int FontAASettings::antiAliasing() const
+bool FontAASettings::antiAliasing() const
 {
-    return m_antiAliasing;
+    return m_state.antiAliasing;
+}
+
+bool FontAASettings::antiAliasingNeedsSave() const
+{
+    return m_state.antiAliasingHasLocalConfig || (m_state.antiAliasing != m_originalState.antiAliasing);
+}
+
+bool FontAASettings::subPixelNeedsSave() const
+{
+    return m_state.subPixelHasLocalConfig || (m_state.subPixel != m_originalState.subPixel);
+}
+
+bool FontAASettings::hintingNeedsSave() const
+{
+    return m_state.hintingHasLocalConfig || (m_state.hinting != m_originalState.hinting);
 }
 
 void FontAASettings::setDpi(const int &dpi)
 {
-    if (m_dpi == dpi) {
+    if (m_state.dpi == dpi) {
         return;
     }
 
-    m_dpi = dpi;
+    m_state.dpi = dpi;
     emit dpiChanged();
 }
 
 int FontAASettings::dpi() const
 {
-    return m_dpi;
+    return m_state.dpi;
+}
+
+void FontAASettings::setSubPixel(int idx)
+{
+    if (m_state.subPixel == idx) {
+        return;
+    }
+
+    m_state.subPixel = idx;
+    emit subPixelCurrentIndexChanged();
 }
 
 void FontAASettings::setSubPixelCurrentIndex(int idx)
 {
-    if (m_subPixelCurrentIndex == idx) {
-        return;
-    }
-
-    m_subPixelCurrentIndex = idx;
-    emit subPixelCurrentIndexChanged();
+    setSubPixel(KXftConfig::SubPixel::None + idx);
 }
 
 int FontAASettings::subPixelCurrentIndex()
 {
-    return m_subPixelCurrentIndex;
+    return m_state.subPixel - KXftConfig::SubPixel::None;
+}
+
+void FontAASettings::setHinting(int idx)
+{
+    if (m_state.hinting == idx) {
+        return;
+    }
+
+    m_state.hinting = idx;
+    emit hintingCurrentIndexChanged();
 }
 
 void FontAASettings::setHintingCurrentIndex(int idx)
 {
-    if (m_hintingCurrentIndex == idx) {
-        return;
-    }
-
-    m_hintingCurrentIndex = idx;
-    emit hintingCurrentIndexChanged();
+    setHinting(KXftConfig::Hint::None + idx);
 }
 
 int FontAASettings::hintingCurrentIndex()
 {
-    return m_hintingCurrentIndex;
+    return m_state.hinting - KXftConfig::Hint::None;
 }
 
 bool FontAASettings::needsSave() const
 {
-    return m_excludeTo != m_excludeToOriginal
-        || m_excludeFrom != m_excludeFromOriginal
-        || m_antiAliasing != m_antiAliasingOriginal
-        || m_dpi != m_dpiOriginal
-        || m_subPixelCurrentIndex != m_subPixelCurrentIndexOriginal
-        || m_hintingCurrentIndex != m_hintingCurrentIndexOriginal;
+    return m_state != m_originalState;
 }
 
 
@@ -450,6 +489,8 @@ KFonts::KFonts(QObject *parent, const QVariantList &args)
 
     connect(m_fontAASettings, &FontAASettings::subPixelCurrentIndexChanged, this, updateState);
     connect(m_fontAASettings, &FontAASettings::hintingCurrentIndexChanged, this, updateState);
+    connect(m_fontAASettings, &FontAASettings::excludeChanged, this, updateState);
+    connect(m_fontAASettings, &FontAASettings::excludeFromChanged, this, updateState);
     connect(m_fontAASettings, &FontAASettings::excludeToChanged, this, updateState);
     connect(m_fontAASettings, &FontAASettings::antiAliasingChanged, this, updateState);
     connect(m_fontAASettings, &FontAASettings::aliasingChanged, this, updateState);
@@ -539,7 +580,10 @@ void KFonts::save()
     KConfig _cfgfonts("kcmfonts");
     KConfigGroup cfgfonts(&_cfgfonts, "General");
 
-    FontAASettings::AASetting aaSetting = (FontAASettings::AASetting)m_fontAASettings->antiAliasing();
+    FontAASettings::AASetting aaSetting = FontAASettings::AASystem;
+    if (m_fontAASettings->antiAliasingNeedsSave()) {
+        aaSetting = m_fontAASettings->antiAliasing() ? FontAASettings::AAEnabled : FontAASettings::AADisabled;
+    }
     cfgfonts.writeEntry("dontChangeAASettings", aaSetting == FontAASettings::AASystem);
 
     if (aaSetting == FontAASettings::AAEnabled) {
@@ -705,6 +749,30 @@ QFont KFonts::applyFontDiff(const QFont &fnt, const QFont &newFont, int fontDiff
     }
 
     return font;
+}
+
+bool FontAASettings::State::operator==(const State& other) const
+{
+    if (
+        exclude != other.exclude
+        || antiAliasing != other.antiAliasing
+        || dpi != other.dpi
+        || subPixel != other.subPixel
+        || hinting != other.hinting
+    ) {
+        return false;
+    }
+
+    if (exclude && (excludeFrom != other.excludeFrom || excludeTo != other.excludeTo)) {
+        return false;
+    }
+
+    return true;
+}
+
+bool FontAASettings::State::operator!=(const State& other) const
+{
+    return !(*this == other);
 }
 
 #include "fonts.moc"

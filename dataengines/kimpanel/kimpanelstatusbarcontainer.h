@@ -25,7 +25,6 @@
 #include <Plasma/DataContainer>
 
 class PanelAgent;
-class KimpanelService;
 class KimpanelStatusBarContainer : public Plasma::DataContainer
 {
     Q_OBJECT

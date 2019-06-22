@@ -97,6 +97,7 @@ void KeyboardDaemon::configureKeyboard()
 	keyboardConfig.load();
 	XkbHelper::initializeKeyboardLayouts(keyboardConfig);
 	layoutMemory.configChanged();
+	keyboardConfig.save();
 
 	setupTrayIcon();
 

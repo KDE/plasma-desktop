@@ -499,37 +499,28 @@ void runRdb( uint flags )
 
   if (exportXftSettings)
   {
-    if (generalCfgGroup.hasKey("XftAntialias"))
+    contents += QLatin1String("Xft.antialias: ");
+    if(generalCfgGroup.readEntry("XftAntialias", true))
+      contents += QLatin1String("1\n");
+    else
+      contents += QLatin1String("0\n");
+
+    QString hintStyle = generalCfgGroup.readEntry("XftHintStyle", "hintslight");
+    contents += QLatin1String("Xft.hinting: ");
+    if(hintStyle.isEmpty())
+      contents += QLatin1String("-1\n");
+    else
     {
-      contents += QLatin1String("Xft.antialias: ");
-      if(generalCfgGroup.readEntry("XftAntialias", true))
+      if(hintStyle!=QLatin1String("hintnone"))
         contents += QLatin1String("1\n");
       else
         contents += QLatin1String("0\n");
+      contents += "Xft.hintstyle: " + hintStyle + '\n';
     }
 
-    if (generalCfgGroup.hasKey("XftHintStyle"))
-    {
-      QString hintStyle = generalCfgGroup.readEntry("XftHintStyle", "hintmedium");
-      contents += QLatin1String("Xft.hinting: ");
-      if(hintStyle.isEmpty())
-        contents += QLatin1String("-1\n");
-      else
-      {
-        if(hintStyle!=QLatin1String("hintnone"))
-          contents += QLatin1String("1\n");
-        else
-          contents += QLatin1String("0\n");
-        contents += "Xft.hintstyle: " + hintStyle + '\n';
-      }
-    }
-
-    if (generalCfgGroup.hasKey("XftSubPixel"))
-    {
-      QString subPixel = generalCfgGroup.readEntry("XftSubPixel");
-      if(!subPixel.isEmpty())
-        contents += "Xft.rgba: " + subPixel + '\n';
-    }
+    QString subPixel = generalCfgGroup.readEntry("XftSubPixel", "rgb");
+    if(!subPixel.isEmpty())
+      contents += "Xft.rgba: " + subPixel + '\n';
 
     KConfig _cfgfonts( QStringLiteral("kcmfonts") );
     KConfigGroup cfgfonts(&_cfgfonts, "General");

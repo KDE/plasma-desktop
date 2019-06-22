@@ -33,7 +33,6 @@ class PlaceholderModel;
 namespace KActivities {
     class Consumer;
 namespace Stats {
-    class ResultModel;
 namespace Terms {
     class Activity;
 } // namespace Terms

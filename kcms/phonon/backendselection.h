@@ -26,7 +26,6 @@
 #include <QHash>
 #include <QWidget>
 
-class KCModuleProxy;
 
 struct BackendDescriptor {
     explicit BackendDescriptor(const QString &path = QString());

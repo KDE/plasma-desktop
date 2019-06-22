@@ -31,7 +31,7 @@ KCM.SimpleKCM {
 
     Kirigami.FormLayout {
         id: formLayout
-        readonly property int maxImplicitWidth: Math.max(adjustAllFontsButton.implicitWidth, Math.max(antiAliasingComboBox.implicitWidth, Math.max(excludeField.implicitWidth, Math.max(subPixelCombo.implicitWidth, hintingCombo.implicitWidth))))
+        readonly property int maxImplicitWidth: Math.max(adjustAllFontsButton.implicitWidth, excludeField.implicitWidth, subPixelCombo.implicitWidth, hintingCombo.implicitWidth)
 
         QtControls.Button {
             id: adjustAllFontsButton
@@ -78,15 +78,13 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        QtControls.ComboBox {
-            id: antiAliasingComboBox
-            Layout.preferredWidth: formLayout.maxImplicitWidth
-            Kirigami.FormData.label: i18nc("Used as a noun, and precedes a combobox full of options", "Anti-aliasing:")
-
-            model: [i18n("Enabled"), i18n("Vendor default"), i18n("Disabled")]
-
-            currentIndex: kcm.fontAASettings.antiAliasing
-            onCurrentIndexChanged: kcm.fontAASettings.antiAliasing = antiAliasingComboBox.currentIndex
+        QtControls.CheckBox {
+            id: antiAliasingCheckBox
+            checked: kcm.fontAASettings.antiAliasing
+            onCheckedChanged: kcm.fontAASettings.antiAliasing = checked
+            Kirigami.FormData.label: i18n("Anti-Aliasing:")
+            text: i18n("Enable")
+            Layout.fillWidth: true
         }
 
         QtControls.CheckBox {
@@ -95,17 +93,13 @@ KCM.SimpleKCM {
             onCheckedChanged: kcm.fontAASettings.exclude = checked;
             text: i18n("Exclude range from anti-aliasing")
             Layout.fillWidth: true
-            enabled: antiAliasingComboBox.currentIndex == 0
+            enabled: antiAliasingCheckBox.checked
         }
 
         RowLayout {
             id: excludeField
-            enabled: antiAliasingComboBox.currentIndex == 0
-
-            Item {
-                width: units.largeSpacing
-            }
-
+            Layout.preferredWidth: formLayout.maxImplicitWidth
+            enabled: antiAliasingCheckBox.checked
             QtControls.SpinBox {
                 id: excludeFromSpinBox
                 stepSize: 1
@@ -143,7 +137,7 @@ KCM.SimpleKCM {
             onCurrentIndexChanged: kcm.fontAASettings.subPixelCurrentIndex = currentIndex;
             model: kcm.fontAASettings.subPixelOptionsModel
             textRole: "display"
-            enabled: antiAliasingComboBox.currentIndex == 0
+            enabled: antiAliasingCheckBox.checked
             popup.height: popup.implicitHeight
             delegate: QtControls.ItemDelegate {
                 id: subPixelDelegate
@@ -180,7 +174,7 @@ KCM.SimpleKCM {
             onCurrentTextChanged: kcm.fontAASettings.hintingCurrentIndex = currentIndex;
             model: kcm.fontAASettings.hintingOptionsModel
             textRole: "display"
-            enabled: antiAliasingComboBox.currentIndex == 0
+            enabled: antiAliasingCheckBox.checked
             popup.height: popup.implicitHeight
             delegate: QtControls.ItemDelegate {
                 id: hintingDelegate

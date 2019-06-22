@@ -133,12 +133,12 @@ DragDrop.DropArea {
 
         visible: !constrained
 
-        horizontalOffset: units.devicePixelRatio * 2
-        verticalOffset: horizontalOffset
+        horizontalOffset: 1
+        verticalOffset: 1
 
-        radius: 9.0
-        samples: 18
-        spread: 0.15
+        radius: 4
+        samples: 9
+        spread: 0.35
 
         color: "black"
 
@@ -151,6 +151,7 @@ DragDrop.DropArea {
             horizontalCenter: parent.horizontalCenter
             bottom: parent.bottom
         }
+        width: Math.round(text.implicitWidth + units.smallSpacing) // make sure label is not blurry
         text: (dirModel.count === 0) ? i18n("Trash\nEmpty") : i18np("Trash\nOne item", "Trash\n %1 items", dirModel.count)
         color: "white"
         horizontalAlignment: Text.AlignHCenter

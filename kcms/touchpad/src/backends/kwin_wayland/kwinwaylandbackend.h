@@ -23,7 +23,6 @@
 
 #include <QVector>
 
-class KWinWaylandTouchpad;
 class QDBusInterface;
 
 class KWinWaylandBackend : public TouchpadBackend

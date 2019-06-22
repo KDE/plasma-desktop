@@ -25,7 +25,6 @@
 #define INPUTPANEL_SOURCE_NAME "inputpanel"
 #define STATUSBAR_SOURCE_NAME "statusbar"
 
-class KimpanelService;
 class PanelAgent;
 /**
  * This engine provides access to kimpanel

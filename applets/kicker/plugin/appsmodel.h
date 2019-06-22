@@ -28,7 +28,6 @@
 
 #include <KServiceGroup>
 
-class AppGroupEntry;
 
 class QTimer;
 

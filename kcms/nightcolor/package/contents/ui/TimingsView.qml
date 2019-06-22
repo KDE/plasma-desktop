@@ -15,13 +15,11 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 import QtQuick 2.1
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 1.4 as Controls
+import org.kde.kirigami 2.5 as Kirigami
+import QtQuick.Controls 2.5 as QQC2
 
-GridLayout {
-    columns: 2
-    rowSpacing: units.smallSpacing
-    columnSpacing: units.smallSpacing
+Kirigami.FormLayout {
+    twinFormLayouts: parentLayout
     enabled: activator.checked
 
     property double latitude
@@ -35,43 +33,30 @@ GridLayout {
         eveningTimings = sunCalc.getEveningTimings(latitude, longitude);
     }
 
-    Controls.Label {
-        text: i18n("Sunrise begins")
-        Layout.alignment: Qt.AlignRight
-        enabled: false
-    }
     TimeField {
         id: mornBeginField
+        Kirigami.FormData.label: i18n("Sunrise begins:")
         backend: morningTimings.begin
         enabled: false
     }
-    Controls.Label {
-        text: i18n("and ends")
-        Layout.alignment: Qt.AlignRight
-        enabled: false
-    }
+
     TimeField {
         id: mornEndField
+        Kirigami.FormData.label: i18n("...and ends:")
         backend: morningTimings.end
         enabled: false
     }
-    Controls.Label {
-        text: i18n("Sunset begins")
-        Layout.alignment: Qt.AlignRight
-        enabled: false
-    }
+
     TimeField {
         id: evenBeginField
+        Kirigami.FormData.label: i18n("Sunset begins:")
         backend: eveningTimings.begin
         enabled: false
     }
-    Controls.Label {
-        text: i18n("and ends")
-        Layout.alignment: Qt.AlignRight
-        enabled: false
-    }
+
     TimeField {
         id: evenEndField
+        Kirigami.FormData.label: i18n("...and ends:")
         backend: eveningTimings.end
         enabled: false
     }

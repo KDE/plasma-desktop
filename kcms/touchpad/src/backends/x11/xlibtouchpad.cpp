@@ -182,17 +182,17 @@ PropertyInfo* XlibTouchpad::getDevProperty(const QLatin1String& propName)
     }
 
     if (!m_atoms.contains(propName) || !m_atoms[propName]) {
-        return 0;
+        return nullptr;
     }
 
     xcb_atom_t prop = m_atoms[propName]->atom();
     if (!prop) {
-        return 0;
+        return nullptr;
     }
 
     PropertyInfo p(m_display, m_deviceId, prop, m_floatType.atom());
     if (!p.b && !p.f && !p.i) {
-        return 0;
+        return nullptr;
     }
     return &m_props.insert(propName, p).value();
 }
@@ -258,5 +258,5 @@ const Parameter* XlibTouchpad::findParameter(const QString& name)
             return par;
         }
     }
-    return 0;
+    return nullptr;
 }

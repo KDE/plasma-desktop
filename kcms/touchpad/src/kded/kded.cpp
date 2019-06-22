@@ -226,8 +226,12 @@ void TouchpadDisabler::mousePlugged()
 
 void TouchpadDisabler::showNotification(const QString &name, const QString &text)
 {
-    KNotification::event(name, text, QPixmap(), //Icon is specified in .notifyrc
-                         0,
+    if (m_notification) {
+        m_notification->close();
+    }
+
+    m_notification = KNotification::event(name, text, QPixmap(), //Icon is specified in .notifyrc
+                         nullptr,
                          KNotification::CloseOnTimeout,
                          "kcm_touchpad"); // this has to match the name of the .notifyrc file
                          //TouchpadPluginFactory::componentData());

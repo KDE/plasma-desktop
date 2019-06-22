@@ -25,8 +25,6 @@
 
 #include "ui_DeviceAutomounterKCM.h"
 
-class QStandardItemModel;
-class QStandardItem;
 class DeviceModel;
 
 class DeviceAutomounterKCM : public KCModule, public Ui::DeviceAutomounterKCM

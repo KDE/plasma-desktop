@@ -32,7 +32,6 @@
 
 class QLabel;
 class QProgressBar;
-class QStackedWidget;
 class QPrinter;
 
 namespace KFI

@@ -26,6 +26,7 @@
 
 #include <QDateTime>
 #include <QDomDocument>
+#include <QStringList>
 
 class KXftConfig
 {
@@ -155,6 +156,9 @@ public:
     void        setHintStyle(Hint::Style style);
     void        setAntiAliasing(AntiAliasing::State state);
     AntiAliasing::State getAntiAliasing() const;
+    bool        antiAliasingHasLocalConfig() const;
+    bool        subPixelTypeHasLocalConfig() const;
+    bool        hintStyleHasLocalConfig() const;
     bool        changed()
     {
         return m_madeChanges;
@@ -167,6 +171,7 @@ public:
 
 private:
 
+    bool        parseConfigFile(const QString& filename);
     void        readContents();
     void        applySubPixelType();
     void        applyHintStyle();
@@ -174,8 +179,11 @@ private:
     void        setHinting(bool set);
     void        applyHinting();
     void        applyExcludeRange(bool pixel);
+    QString     getConfigFile();
 
 private:
+
+    QStringList        m_globalFiles;
 
     SubPixel           m_subPixel;
     Exclude            m_excludeRange,
@@ -183,6 +191,9 @@ private:
     Hint               m_hint;
     Hinting            m_hinting;
     AntiAliasing       m_antiAliasing;
+    bool               m_antiAliasingHasLocalConfig;
+    bool               m_subPixelHasLocalConfig;
+    bool               m_hintHasLocalConfig;
     QDomDocument       m_doc;
     QString            m_file;
     bool               m_madeChanges;

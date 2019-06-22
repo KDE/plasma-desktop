@@ -600,9 +600,10 @@ Kirigami.ScrollablePage {
         }
 
         Layouts.ColumnLayout {
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Right-click :")
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "Right-click:")
             Kirigami.FormData.buddyFor: rightClickMethodAreas
             id: rightClickMethod
+            enabled: touchpad.supportsClickMethodAreas && touchpad.supportsClickMethodClickfinger
             
             spacing: Kirigami.Units.smallSpacing
 

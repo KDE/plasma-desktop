@@ -23,7 +23,6 @@
 
 #include <PlasmaQuick/Dialog>
 
-class QScreen;
 
 class SubMenu : public PlasmaQuick::Dialog
 {

@@ -29,7 +29,6 @@
 class QTemporaryFile;
 
 namespace Plasma {
-    class Svg;
     class Theme;
 }
 

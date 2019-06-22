@@ -23,8 +23,10 @@
 #include <QTimer>
 #include <QDBusServiceWatcher>
 #include <QDBusPendingCallWatcher>
+#include <QPointer>
 
 #include <KDEDModule>
+#include <KNotification>
 
 #include "touchpadbackend.h"
 #include "kdedsettings.h"
@@ -77,6 +79,8 @@ private:
     bool m_userRequestedState, m_touchpadEnabled;
     bool m_workingTouchpadFound;
     bool m_keyboardActivity, m_mouse;
+
+    QPointer<KNotification> m_notification;
 
     bool m_preparingForSleep = false;
 };

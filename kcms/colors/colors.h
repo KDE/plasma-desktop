@@ -29,7 +29,6 @@
 
 #include <KQuickAddons/ConfigModule>
 
-class QStandardItemModel;
 class QProcess;
 class QTemporaryFile;
 

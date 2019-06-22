@@ -24,7 +24,6 @@
 #include <QUrl>
 
 namespace Plasma {
-    class Applet;
     class Containment;
 }
 

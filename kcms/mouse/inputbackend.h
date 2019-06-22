@@ -24,7 +24,6 @@
 #include <QVector>
 #include <QVariantHash>
 
-class ConfigPlugin;
 
 enum class InputBackendMode {
     KWinWayland = 0,

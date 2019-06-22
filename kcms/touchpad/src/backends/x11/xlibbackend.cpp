@@ -78,7 +78,7 @@ XlibBackend::~XlibBackend()
 
 XlibBackend::XlibBackend(QObject *parent) :
     TouchpadBackend(parent),
-    m_display(XOpenDisplay(0)), m_connection(0)
+    m_display(XOpenDisplay(nullptr)), m_connection(nullptr)
 {
     if (m_display) {
         m_connection = XGetXCBConnection(m_display.data());
