@@ -255,6 +255,8 @@ QVariantList recentDocumentActions(KService::Ptr service)
 
     while (list.count() < 6 && resultIt != results.end()) {
         const QString resource = (*resultIt).resource();
+        ++resultIt;
+
         const QUrl url(resource);
 
         if (!url.isValid()) {
@@ -275,8 +277,6 @@ QVariantList recentDocumentActions(KService::Ptr service)
         item["icon"] = fileItem.iconName();
 
         list << item;
-
-        ++resultIt;
     }
 
     if (list.count()) {
