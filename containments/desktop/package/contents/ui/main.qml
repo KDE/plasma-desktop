@@ -342,9 +342,7 @@ FolderViewDropArea {
         // NOTE: use plasmoid.availableScreenRect and not own width and height as they are updated not atomically
         configKey: plasmoid.availableScreenRect.width > plasmoid.availableScreenRect.height ? "ItemGeometries" : "ItemGeometriesVertical"
         containment: plasmoid
-        editModeCondition: plasmoid.immutable
-                ? ContainmentLayoutManager.AppletsLayout.Manual
-                : ContainmentLayoutManager.AppletsLayout.AfterPressAndHold
+        editModeCondition: ContainmentLayoutManager.AppletsLayout.Manual
 
         // Sets the containment in edit mode when we go in edit mode as well
         onEditModeChanged: plasmoid.editMode = editMode
