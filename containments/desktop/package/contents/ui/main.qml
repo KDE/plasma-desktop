@@ -317,20 +317,6 @@ FolderViewDropArea {
     KQuickControlsAddons.EventGenerator {
         id: eventGenerator
     }
-    
-/*
-    MouseArea { // unfocus any plasmoid when clicking empty desktop area
-        anchors.fill: parent
-        onPressed: {
-            root.forceActiveFocus();
-            mouse.accepted = false // Bug 351277
-
-            if (toolBox && toolBox.open) {
-                toolBox.open = false;
-            }
-        }
-    }
-*/
 
     Connections {
         target: plasmoid
