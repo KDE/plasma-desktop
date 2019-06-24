@@ -259,6 +259,7 @@ Item {
         ComboBox {
             id: labelWidth
             visible: !isPopup || viewMode.currentIndex === 1
+            Layout.fillWidth: true
 
             Kirigami.FormData.label: i18n("Label width:")
 
@@ -316,6 +317,7 @@ Item {
 
         Button {
             id: previewSettings
+            Layout.fillWidth: true
 
             icon.name: "configure"
             text: i18n("Configure Preview Plugins...")
