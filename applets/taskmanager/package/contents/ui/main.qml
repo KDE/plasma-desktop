@@ -251,11 +251,11 @@ MouseArea {
                 }
 
                 var sourceData = data[source];
-                if (!sourceData || sourceData.DesktopEntry !== desktopFileName) {
+                if (!sourceData) {
                     continue;
                 }
 
-                if (pid === undefined || sourceData.InstancePid === pid) {
+                if (sourceData.DesktopEntry === desktopFileName || (pid && sourceData.InstancePid === pid)) {
                     return source;
                 }
 
