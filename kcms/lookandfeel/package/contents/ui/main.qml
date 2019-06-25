@@ -39,6 +39,8 @@ KCM.GridViewKCM {
         thumbnail: Image {
             anchors.fill: parent
             source: model.screenshot || ""
+            sourceSize: Qt.size(delegate.GridView.view.cellWidth * Screen.devicePixelRatio,
+                                delegate.GridView.view.cellHeight * Screen.devicePixelRatio)
         }
         actions: [
             Kirigami.Action {
