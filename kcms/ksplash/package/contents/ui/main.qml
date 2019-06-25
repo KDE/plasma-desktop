@@ -17,6 +17,7 @@
 */
 
 import QtQuick 2.1
+import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.0 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
@@ -58,6 +59,8 @@ KCM.GridViewKCM {
         thumbnail: Image {
             anchors.fill: parent
             source: model.screenshot || ""
+            sourceSize: Qt.size(delegate.GridView.view.cellWidth * Screen.devicePixelRatio,
+                                delegate.GridView.view.cellHeight * Screen.devicePixelRatio)
         }
         actions: [
             Kirigami.Action {
