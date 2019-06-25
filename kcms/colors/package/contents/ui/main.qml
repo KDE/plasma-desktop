@@ -52,6 +52,7 @@ KCM.GridViewKCM {
     Component.onCompleted: {
         // The thumbnails are a bit more elaborate and need more room, especially when translated
         view.implicitCellWidth = Kirigami.Units.gridUnit * 13;
+        view.implicitCellHeight = Kirigami.Units.gridUnit * 11;
     }
 
     DropArea {
@@ -177,9 +178,38 @@ KCM.GridViewKCM {
             Kirigami.Theme.linkColor: model.palette.link
             Kirigami.Theme.textColor: model.palette.text
 
+            Rectangle {
+                id: windowTitleBar
+                width: parent.width
+                height: Math.round(Kirigami.Units.gridUnit * 1.5)
+                gradient: Gradient {
+                    // from Breeze Decoration::paintTitleBar
+                    GradientStop { position: 0.0; color: Qt.lighter(model.activeTitleBarBackground, 1.2) }
+                    GradientStop { position: 0.8; color: model.activeTitleBarBackground }
+                }
+
+                color: model.activeTitleBarBackground
+
+                QtControls.Label {
+                    anchors {
+                        fill: parent
+                        leftMargin: Kirigami.Units.smallSpacing
+                        rightMargin: Kirigami.Units.smallSpacing
+                    }
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    color: model.activeTitleBarForeground
+                    text: i18n("Window Title")
+                    elide: Text.ElideRight
+                }
+            }
+
             ColumnLayout {
                 anchors {
-                    fill: parent
+                    left: parent.left
+                    right: parent.right
+                    top: windowTitleBar.bottom
+                    bottom: parent.bottom
                     margins: Kirigami.Units.smallSpacing
                 }
 

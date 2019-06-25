@@ -61,6 +61,8 @@ QVariant ColorsModel::data(const QModelIndex &index, int role) const
     case Qt::DisplayRole: return item.display;
     case SchemeNameRole: return item.schemeName;
     case PaletteRole: return item.palette;
+    case ActiveTitleBarBackgroundRole: return item.activeTitleBarBackground;
+    case ActiveTitleBarForegroundRole: return item.activeTitleBarForeground;
     case PendingDeletionRole: return item.pendingDeletion;
     case RemovableRole: return item.removable;
     }
@@ -103,6 +105,8 @@ QHash<int, QByteArray> ColorsModel::roleNames() const
         {Qt::DisplayRole, QByteArrayLiteral("display")},
         {SchemeNameRole, QByteArrayLiteral("schemeName")},
         {PaletteRole, QByteArrayLiteral("palette")},
+        {ActiveTitleBarBackgroundRole, QByteArrayLiteral("activeTitleBarBackground")},
+        {ActiveTitleBarForegroundRole, QByteArrayLiteral("activeTitleBarForeground")},
         {RemovableRole, QByteArrayLiteral("removable")},
         {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")}
     };
@@ -180,10 +184,19 @@ void ColorsModel::load()
         KConfigGroup group(config, "General");
         const QString name = group.readEntry("Name", baseName);
 
+        const QPalette palette = KColorScheme::createApplicationPalette(config);
+
+        // from kwin/decorations/decorationpalette.cpp
+        KConfigGroup wmConfig(config, QStringLiteral("WM"));
+        const QColor activeTitleBarBackground = wmConfig.readEntry("activeBackground", palette.color(QPalette::Active, QPalette::Highlight));
+        const QColor activeTitleBarForeground = wmConfig.readEntry("activeForeground", palette.color(QPalette::Active, QPalette::HighlightedText));
+
         ColorsModelData item{
             name,
             baseName,
-            KColorScheme::createApplicationPalette(config),
+            palette,
+            activeTitleBarBackground,
+            activeTitleBarForeground,
             fi.isWritable(),
             false, // pending deletion
         };
