@@ -9,7 +9,6 @@ set(scheme_editor_SRCS
 )
 
 ki18n_wrap_ui(scheme_editor_SRCS
-    colorsettings.ui
     scmeditordialog.ui
     scmeditoroptions.ui
     scmeditorcolors.ui
