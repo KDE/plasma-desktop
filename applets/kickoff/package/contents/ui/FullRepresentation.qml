@@ -209,7 +209,6 @@ Item {
                         target: header
                         width: header.implicitWidth
                     }
-
                     AnchorChanges {
                         target: mainArea
                         anchors {
@@ -219,7 +218,6 @@ Item {
                             bottom: header.top
                         }
                     }
-
                     AnchorChanges {
                         target: tabBar
                         anchors {
@@ -232,15 +230,13 @@ Item {
                     PropertyChanges {
                         target:tabBarSeparator
                         width: Math.floor(units.devicePixelRatio)
-                        height: root.height
                     }
                     AnchorChanges {
                         target: tabBarSeparator
                         anchors {
                             left: tabBar.right
                             top: tabBar.top
-                            right: undefined
-                            bottom: tabBar.bottom
+                            bottom:tabBar.bottom
                         }
                     }
                 },
@@ -259,7 +255,6 @@ Item {
                         target: header
                         height: header.implicitHeight
                     }
-
                     AnchorChanges {
                         target: mainArea
                         anchors {
@@ -269,7 +264,6 @@ Item {
                             bottom: header.top
                         }
                     }
-
                     AnchorChanges {
                         target: tabBar
                         anchors {
@@ -281,16 +275,14 @@ Item {
                     }
                     PropertyChanges {
                         target:tabBarSeparator
-                        width: root.width
                         height: Math.floor(units.devicePixelRatio)
                     }
                     AnchorChanges {
                         target: tabBarSeparator
                         anchors {
-                            left: root.left
+                            left: tabBar.left
+                            right: tabBar.right
                             top: tabBar.bottom
-                            right: root.right
-                            bottom: undefined
                         }
                     }
                 },
@@ -309,7 +301,6 @@ Item {
                         target: header
                         width: header.implicitWidth
                     }
-
                     AnchorChanges {
                         target: mainArea
                         anchors {
@@ -319,7 +310,6 @@ Item {
                             bottom: header.top
                         }
                     }
-
                     AnchorChanges {
                         target: tabBar
                         anchors {
@@ -332,14 +322,12 @@ Item {
                     PropertyChanges {
                         target:tabBarSeparator
                         width:  Math.floor(units.devicePixelRatio)
-                        height: root.height
                     }
                     AnchorChanges {
                         target: tabBarSeparator
                         anchors {
-                            left: undefined
-                            top: tabBar.top
                             right: tabBar.left
+                            top: tabBar.top
                             bottom: tabBar.bottom
                         }
                     }
@@ -364,10 +352,8 @@ Item {
                         anchors {
                             top: undefined
                             bottom: header.bottom
-                            horizontalCenter: header.horizontalCenter
                         }
                     }
-
                     AnchorChanges {
                         target: mainArea
                         anchors {
@@ -377,7 +363,6 @@ Item {
                             bottom: tabBar.top
                         }
                     }
-
                     AnchorChanges {
                         target: tabBar
                         anchors {
@@ -389,16 +374,14 @@ Item {
                     }
                     PropertyChanges {
                         target:tabBarSeparator
-                        width: root.width
                         height: Math.floor(units.devicePixelRatio)
                     }
                     AnchorChanges {
                         target: tabBarSeparator
                         anchors {
-                            left: root.left
-                            top: undefined
-                            right: root.right
                             bottom: tabBar.top
+                            left: tabBar.left
+                            right: tabBar.right
                         }
                     }
                 }
@@ -478,17 +461,9 @@ Item {
 
     Rectangle {
         id: tabBarSeparator
-        height: Math.floor(units.devicePixelRatio)
+
         color: theme.textColor
         opacity: 0.2
-
-        anchors {
-            top: header.top
-            left: root.left
-            right: root.right
-            leftMargin: 4
-            rightMargin: 4
-        }
     }
 
     MouseArea {
