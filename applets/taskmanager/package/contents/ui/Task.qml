@@ -344,7 +344,7 @@ MouseArea {
                         return model.AppName;
                     });
                     toolTipDelegate.pidParent = Qt.binding(function() {
-                        return model.AppPid;
+                        return model.AppPid !== undefined ? model.AppPid : 0;
                     });
                     toolTipDelegate.windows = Qt.binding(function() {
                         return model.WinIdList;
