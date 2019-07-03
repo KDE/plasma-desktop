@@ -302,27 +302,24 @@ Column {
                         Layout.fillWidth: true
                         spacing: 0
 
-                        PlasmaExtras.Heading {
+                        PlasmaComponents.Label {
                             Layout.fillWidth: true
-                            level: 5
                             lineHeight: 1
                             maximumLineCount: artistText.visible? 1 : 2
                             wrapMode: artistText.visible? Text.NoWrap : Text.Wrap
                             elide: Text.ElideRight
                             text: track || ""
-                            font.weight: Font.Bold
                         }
 
-                        PlasmaExtras.Heading {
+                        PlasmaExtras.DescriptiveLabel {
                             id: artistText
                             Layout.fillWidth: true
-                            level: 5
                             wrapMode: Text.NoWrap
                             lineHeight: 1
                             elide: Text.ElideRight
                             text: artist || ""
                             visible: text != ""
-                            opacity: 0.75
+                            font.pointSize: theme.smallestFont.pointSize
                         }
                     }
 
