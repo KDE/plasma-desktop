@@ -27,7 +27,7 @@
 <sect1 id="kcm_autostart">
 <title>Autostart Manager</title>
 
-<para>This module is a configuration tool for managing what programs start up with your personal &plasma;. It allows you to add programs or scripts so they automatically start during the startup or shutdown of your &plasma; session and to manage them.</para>
+<para>This module is a configuration tool for managing what programs start up with your personal &plasma;. It allows you to add programs or scripts so they automatically run during startup or shutdown of your &plasma; session and to manage them.</para>
 
 <note><para>Please note that in this module all changes are immediately applied.</para></note>
 
@@ -104,7 +104,7 @@ Scripts and desktop files set to run on <guilabel>Startup</guilabel> are copied 
 Scripts set on to be ran on <guilabel>Shutdown</guilabel> are copied or symlinked in the <filename class="directory">$HOME/.config/plasma-workspace/shutdown</filename> directory and will be automatically run during &plasma; shutdown after the user has logged out.
 </para>
 <para>
-Scripts set to run at <guilabel>Pre-&kde; Startup</guilabel> are copied or symlinked in <filename class="directory">$HOME/.config/plasma-workspace/env</filename> and are sourced during &plasma; startup (the <filename>startkde</filename> script will look for scripts here).
+Scripts set to run at <guilabel>Pre-&plasma; Startup</guilabel> are copied or symlinked in <filename class="directory">$HOME/.config/plasma-workspace/env</filename> and are sourced during &plasma; startup (the <filename>startkde</filename> script will look for scripts here).
 </para>
 <note><para>
 Only scripts with the <filename class="extension">.sh</filename> extension can be read by &plasma; for <guilabel>Before session startup</guilabel> and <guilabel>Shutdown</guilabel> modes.
@@ -135,7 +135,7 @@ This will copy the program Desktop file in your <filename class="directory">Auto
 <varlistentry><term><guibutton>Add Script</guibutton></term>
 <listitem>
 <para>
-This button opens a dialog which asks you for the location of the script you want to add. If you keep <guilabel>Create as symlink</guilabel> checked (default) then the script will be added as a symlink. If you uncheck this option then the script will be copied in the corresponding local folder.
+This button opens a dialog which asks you for the location of the script you want to add. If you keep <guilabel>Create as symlink</guilabel> checked (default) then the script will be added as a symlink. If you uncheck this option then the script will be copied to the corresponding local folder.
 </para>
 </listitem>
 </varlistentry>
@@ -156,7 +156,7 @@ This button (only enabled for programs &ie; Desktop files) allows you to change 
 <varlistentry><term><guibutton>Advanced</guibutton></term>
 <listitem>
 <para>
-This button only applies to programs (&ie; Desktop files). A dialog asks you if you only want the program to autostart only in &plasma; (and not in other desktop environments you might run). By default, the program will autostart in all desktop environments you might run. Checking <guilabel>Autostart only in Plasma</guilabel> will autostart the program only if you start the &plasma; desktop environment.
+This button only applies to programs (&ie; Desktop files). A dialog asks you if you want the program to autostart only in &plasma; (and not in other desktop environments you might run). By default, the program will autostart in all desktop environments you might run. Checking <guilabel>Autostart only in Plasma</guilabel> will autostart the program only if you start the &plasma; desktop environment.
 </para>
 <para>
 This sets the value Plasma to the OnlyShowIn key of the program Desktop file.
