@@ -12,7 +12,6 @@ include_directories(${X11_Xinput_INCLUDE_PATH}
                     ${X11_X11_INCLUDE_PATH}
                     ${Synaptics_INCLUDE_DIRS}
                     ${XORG_INCLUDE_DIRS}
-                    ${XORGLIBINPUT_INCLUDE_DIRS}
 )
 
 SET(backend_SRCS
@@ -27,6 +26,9 @@ SET(backend_SRCS
 )
 
 if (HAVE_XORGLIBINPUT)
+
+    include_directories(${XORGLIBINPUT_INCLUDE_DIRS})
+
     SET(backend_SRCS
         ${backend_SRCS}
         backends/libinputcommon.cpp
