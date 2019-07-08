@@ -204,10 +204,10 @@ FolderViewDropArea {
             handleDragMove(folderViewLayer.view, mapToItem(folderViewLayer.view, event.x, event.y));
         } else if (isContainment) {
             appletsLayout.showPlaceHolderAt(
-                Qt.rect(event.x - appletsLayout.minimumItemsWidth / 2,
-                event.y - appletsLayout.minimumItemsHeight / 2,
-                appletsLayout.minimumItemsWidth,
-                appletsLayout.minimumItemsHeight)
+                Qt.rect(event.x - appletsLayout.minimumItemWidth / 2,
+                event.y - appletsLayout.minimumItemHeight / 2,
+                appletsLayout.minimumItemWidth,
+                appletsLayout.minimumItemHeight)
             );
         }
     }
