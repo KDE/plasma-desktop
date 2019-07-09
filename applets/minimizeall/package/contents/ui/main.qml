@@ -34,11 +34,11 @@ Item {
         || plasmoid.location === PlasmaCore.Types.BottomEdge
         || plasmoid.location === PlasmaCore.Types.LeftEdge)
 
-    Layout.minimumWidth: units.iconSizes.small
-    Layout.minimumHeight: Layout.minimumWidth
+    Layout.minimumWidth: units.gridUnit
+    Layout.minimumHeight: units.gridUnit
 
-    Layout.maximumWidth: inPanel ? units.iconSizes.smallMedium : -1
-    Layout.maximumHeight: Layout.maximumWidth
+    Layout.maximumWidth: inPanel ? units.iconSizeHints.panel : -1
+    Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
