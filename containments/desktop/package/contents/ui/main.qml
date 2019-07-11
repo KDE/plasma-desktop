@@ -326,7 +326,7 @@ FolderViewDropArea {
         id: appletsLayout
         anchors.fill: parent
         // NOTE: use plasmoid.availableScreenRect and not own width and height as they are updated not atomically
-        configKey: plasmoid.availableScreenRect.width > plasmoid.availableScreenRect.height ? "ItemGeometries" : "ItemGeometriesVertical"
+        configKey: plasmoid.availableScreenRect.width > plasmoid.availableScreenRect.height ? "ItemGeometriesHorizontal" : "ItemGeometriesVertical"
         containment: plasmoid
         editModeCondition: ContainmentLayoutManager.AppletsLayout.Manual
 
