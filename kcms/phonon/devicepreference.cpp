@@ -324,7 +324,7 @@ void DevicePreference::updateDeviceList()
                                                                     categoryToString(capcat)), Qt::DisplayRole);
                 break;
             case VideoCaptureDeviceType:
-                m_headerModel.setHeaderData(0, Qt::Horizontal, i18n("Video Recording Device Preference for the '%1' Category ",
+                m_headerModel.setHeaderData(0, Qt::Horizontal, i18n("Video Recording Device Preference for the '%1' Category",
                                                                     categoryToString(capcat)), Qt::DisplayRole);
                 break;
             default: ;
