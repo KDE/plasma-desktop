@@ -54,12 +54,9 @@ PlasmaCore.ToolTipArea {
         if (!fullRepresentation) {
             return;
         }
+
         //if the fullRepresentation size was restored to a stored size, or if is dragged from the desktop, restore popup size
-        if (fullRepresentation.width > 0) {
-            popupWindow.mainItem.width = Qt.binding(function() {
-                return fullRepresentation.width
-            })
-        } else if (fullRepresentation.Layout && fullRepresentation.Layout.preferredWidth > 0) {
+        if (fullRepresentation.Layout && fullRepresentation.Layout.preferredWidth > 0) {
             popupWindow.mainItem.width = Qt.binding(function() {
                 return fullRepresentation.Layout.preferredWidth
             })
@@ -67,23 +64,27 @@ PlasmaCore.ToolTipArea {
             popupWindow.mainItem.width = Qt.binding(function() {
                 return fullRepresentation.implicitWidth
             })
+        } else if (fullRepresentation.width > 0) {
+            popupWindow.mainItem.width = Qt.binding(function() {
+                return fullRepresentation.width
+            })
         } else {
             popupWindow.mainItem.width = Qt.binding(function() {
                 return theme.mSize(theme.defaultFont).width * 35
             })
         }
 
-        if (fullRepresentation.height > 0) {
-            popupWindow.mainItem.height = Qt.binding(function() {
-                return fullRepresentation.height
-            })
-        } else if (fullRepresentation.Layout && fullRepresentation.Layout.preferredHeight > 0) {
+        if (fullRepresentation.Layout && fullRepresentation.Layout.preferredHeight > 0) {
             popupWindow.mainItem.height = Qt.binding(function() {
                 return fullRepresentation.Layout.preferredHeight
             })
         } else if (fullRepresentation.implicitHeight > 0) {
             popupWindow.mainItem.height = Qt.binding(function() {
                 return fullRepresentation.implicitHeight
+            })
+        } else if (fullRepresentation.height > 0) {
+            popupWindow.mainItem.height = Qt.binding(function() {
+                return fullRepresentation.height
             })
         } else {
             popupWindow.mainItem.height = Qt.binding(function() {
