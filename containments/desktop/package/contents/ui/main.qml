@@ -342,11 +342,6 @@ FolderViewDropArea {
         cellWidth: units.iconSizes.small
         cellHeight: cellWidth
 
-        acceptsAppletCallback: function(applet, x, y) {
-            print("Applet: "+applet+" "+x+" "+y)
-            return true;
-        }
-
         appletContainerComponent: ContainmentLayoutManager.BasicAppletContainer {
             id: appletContainer
             editModeCondition: plasmoid.immutable
