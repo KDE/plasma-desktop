@@ -322,13 +322,16 @@ FolderViewDropArea {
         target: plasmoid
         onEditModeChanged: appletsLayout.editMode = plasmoid.editMode
     }
+
     ContainmentLayoutManager.AppletsLayout {
         id: appletsLayout
         anchors.fill: parent
         // NOTE: use plasmoid.availableScreenRect and not own width and height as they are updated not atomically
         configKey: plasmoid.availableScreenRect.width > plasmoid.availableScreenRect.height ? "ItemGeometriesHorizontal" : "ItemGeometriesVertical"
         containment: plasmoid
-        editModeCondition: ContainmentLayoutManager.AppletsLayout.Manual
+        editModeCondition: plasmoid.immutable
+                ? ContainmentLayoutManager.AppletsLayout.Locked
+                : ContainmentLayoutManager.AppletsLayout.Manual
 
         // Sets the containment in edit mode when we go in edit mode as well
         onEditModeChanged: plasmoid.editMode = editMode
@@ -347,7 +350,7 @@ FolderViewDropArea {
         appletContainerComponent: ContainmentLayoutManager.BasicAppletContainer {
             id: appletContainer
             editModeCondition: plasmoid.immutable
-                ? ContainmentLayoutManager.ItemContainer.Manual
+                ? ContainmentLayoutManager.ItemContainer.Locked
                 : (plasmoid.configuration.pressToMove ? ContainmentLayoutManager.ItemContainer.AfterPressAndHold : ContainmentLayoutManager.ItemContainer.AfterMouseOver)
             configOverlayComponent: ConfigOverlay {}
             onUserDrag: {
