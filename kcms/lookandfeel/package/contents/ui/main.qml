@@ -102,17 +102,17 @@ KCM.GridViewKCM {
                 width: Math.min(parent.width, sourceSize.width)
                 height: Math.min(parent.height, sourceSize.height)
             }
-            onClicked: previewWindow.visible = false;
+            onClicked: previewWindow.close()
             QtControls.ToolButton {
                 anchors {
                     top: parent.top
                     right: parent.right
                 }
                 icon.name: "window-close"
-                onClicked: previewWindow.visible = false;
+                onClicked: previewWindow.close()
             }
             Shortcut {
-                onActivated: previewWindow.visible = false;
+                onActivated: previewWindow.close()
                 sequence: "Esc"
             }
         }
