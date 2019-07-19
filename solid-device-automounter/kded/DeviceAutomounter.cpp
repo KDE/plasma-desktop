@@ -96,7 +96,7 @@ void DeviceAutomounter::automountDevice(Solid::Device &dev, AutomounterSettings:
 
         if (AutomounterSettings::shouldAutomountDevice(dev.udi(), type)) {
             Solid::StorageVolume *sv = dev.as<Solid::StorageVolume>();
-            if (!sv->isIgnored()) {
+            if (!sa->isAccessible() && !sv->isIgnored()) {
                 sa->setup();
             }
         }
