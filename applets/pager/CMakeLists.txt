@@ -13,7 +13,6 @@ target_link_libraries(pagerplugin
                       KF5::WindowSystem
                       KF5::Plasma
                       KF5::Activities
-                      KF5::KDELibs4Support
                       PW::LibTaskManager
                       Qt5::Core
                       Qt5::DBus
