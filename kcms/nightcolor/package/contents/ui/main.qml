@@ -144,9 +144,12 @@ KCM.SimpleKCM {
                 id: modeSwitcher
                 Kirigami.FormData.label: i18n("Operation mode:")
                 enabled: activator.checked
-                model: [i18n("Automatic"),
-                i18n("Location"),
-                i18n("Times")]
+                model: [
+                    i18n("Automatic"),
+                    i18n("Location"),
+                    i18n("Times"),
+                    i18n("Manual")
+                ]
                 currentIndex: cA.mode
                 onCurrentIndexChanged: {
                     cA.modeStaged = currentIndex;
