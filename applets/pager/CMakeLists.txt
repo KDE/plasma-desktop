@@ -17,8 +17,7 @@ target_link_libraries(pagerplugin
                       Qt5::Core
                       Qt5::DBus
                       Qt5::Qml
-                      Qt5::Quick
-                      Qt5::DBus)
+                      Qt5::Quick)
 
 if (X11_FOUND)
     target_link_libraries(pagerplugin Qt5::X11Extras)
