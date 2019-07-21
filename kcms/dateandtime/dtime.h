@@ -26,6 +26,7 @@
 
 #include <QSpinBox>
 #include <QComboBox>
+#include <QTime>
 #include <QTimer>
 #include <QWidget>
 #include <QCheckBox>
