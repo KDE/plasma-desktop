@@ -30,7 +30,7 @@ PlasmaCore.ToolTipArea {
     mainItem: toolTipDelegate
 
     //API
-    property QtObject svg
+    property PlasmaCore.Svg svg
     property alias elementId: icon.elementId
     property QtObject action
     property bool backgroundVisible: false
@@ -41,8 +41,8 @@ PlasmaCore.ToolTipArea {
     property string text
     signal clicked
 
-    width: buttonRow.width
-    height: buttonRow.height
+    implicitWidth: buttonRow.implicitWidth
+    implicitHeight: buttonRow.implicitHeight
 
     opacity: action==undefined||action.enabled?1:0.6
 
@@ -142,6 +142,7 @@ PlasmaCore.ToolTipArea {
             } else {
                 button.clicked()
             }
+            appletContainer.editMode = false;
         }
     }
 }
