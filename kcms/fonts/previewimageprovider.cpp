@@ -89,7 +89,7 @@ QImage PreviewImageProvider::requestImage(const QString &id, QSize *size, const 
     
     
     KXftConfig::AntiAliasing::State oldAntialiasing = xft.getAntiAliasing();
-    double oldStart,oldEnd;
+    double oldStart = 0, oldEnd = 0;
     xft.getExcludeRange(oldStart, oldEnd);
     KXftConfig::SubPixel::Type oldSubPixelType;
     xft.getSubPixelType(oldSubPixelType);
