@@ -24,9 +24,11 @@
 #include <QMimeData>
 #include <QQuickItem>
 #include <QQuickWindow>
+#include <QTimer>
 
 DragHelper::DragHelper(QObject* parent) : QObject(parent)
 , m_dragIconSize(32)
+, m_dragging(false)
 {
 }
 
@@ -66,8 +68,10 @@ void DragHelper::startDrag(QQuickItem *item, const QUrl &url, const QIcon &icon,
 }
 
 void DragHelper::doDrag(QQuickItem *item, const QUrl &url, const QIcon &icon,
-    const QString &extraMimeType, const QString &extraMimeData) const
+    const QString &extraMimeType, const QString &extraMimeData)
 {
+    setDragging(true);
+
     if (item && item->window() && item->window()->mouseGrabberItem()) {
         item->window()->mouseGrabberItem()->ungrabMouse();
     }
@@ -93,5 +97,17 @@ void DragHelper::doDrag(QQuickItem *item, const QUrl &url, const QIcon &icon,
     drag->exec();
 
     emit dropped();
+
+    // Ensure dragging is still true when onRelease is called.
+    QTimer::singleShot(0, qApp, [this] {
+        setDragging(false);
+    });
 }
 
+void DragHelper::setDragging(bool dragging)
+{
+    if (m_dragging == dragging)
+        return;
+    m_dragging = dragging;
+    emit draggingChanged();
+}
