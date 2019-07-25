@@ -288,20 +288,13 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
     // TODO: With AASystem the changes already made by this module should be reverted somehow.
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
     if (mod || (m_state.antiAliasing != m_originalState.antiAliasing) || m_state.dpi != m_originalState.dpi) {
-        KMessageBox::information(nullptr,
-                                 i18n(
-                                     "<p>Some changes such as anti-aliasing or DPI will only affect newly started applications.</p>"
-                                 ), i18n("Font Settings Changed"), "FontSettingsChanged");
         m_originalState.antiAliasing = m_state.antiAliasing;
         m_originalState.dpi = m_state.dpi;
+        emit aliasingChangeApplied();
     }
 #else
 #if HAVE_X11
     if (m_state.dpi != m_originalState.dpi) {
-        KMessageBox::information(0,
-                                 i18n(
-                                     "<p>Some changes such as DPI will only affect newly started applications.</p>"
-                                 ), i18n("Font Settings Changed"), "FontSettingsChanged");
         m_originalState.dpi = m_state.dpi;
     }
 #endif
@@ -310,7 +303,7 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
     m_originalState.exclude = m_state.exclude;
     m_originalState.excludeTo = m_state.excludeTo;
     m_originalState.excludeFrom = m_state.excludeFrom;
-    
+
     m_originalState.subPixel = m_state.subPixel;
     m_originalState.hinting = m_state.hinting;
 
@@ -542,7 +535,7 @@ void KFonts::load()
     m_windowTitleFont = m_windowTitleFontOriginal = nearestExistingFont(cg.readEntry("activeFont", m_defaultFont));
 
     engine()->addImageProvider("preview", new PreviewImageProvider(generalFont()));
-    
+
     emit generalFontChanged();
     emit fixedWidthFontChanged();
     emit smallFontChanged();

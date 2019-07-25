@@ -113,6 +113,7 @@ Q_SIGNALS:
     void excludeToChanged();
     void excludeFromChanged();
     void antiAliasingChanged();
+    void aliasingChangeApplied();
     void aliasingChanged();
     void dpiChanged();
     void subPixelCurrentIndexChanged();
