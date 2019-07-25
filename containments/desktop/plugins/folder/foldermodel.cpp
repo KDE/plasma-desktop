@@ -1637,7 +1637,7 @@ void FolderModel::createActions()
     m_actionCollection.addAction(QStringLiteral("restoreFromTrash"), restoreFromTrash);
     m_actionCollection.addAction(QStringLiteral("emptyTrash"), emptyTrash);
 
-    m_newMenu = new KNewFileMenu(&m_actionCollection, QStringLiteral("newMenu"), QApplication::desktop());
+    m_newMenu = new KNewFileMenu(&m_actionCollection, QStringLiteral("newMenu"), this);
     m_newMenu->setModal(false);
     connect(m_newMenu, &KNewFileMenu::directoryCreated, this, &FolderModel::newFileMenuItemCreated);
     connect(m_newMenu, &KNewFileMenu::fileCreated, this, &FolderModel::newFileMenuItemCreated);

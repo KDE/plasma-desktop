@@ -44,7 +44,6 @@
 #include <QLabel>
 #include <QLayout>
 #include <QFormLayout>
-#include <QDesktopWidget>
 #include <QApplication>
 #include <QLoggingCategory>
 

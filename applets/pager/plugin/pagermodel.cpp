@@ -32,8 +32,8 @@ Free Software Foundation, Inc.,
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
-#include <QDesktopWidget>
 #include <QMetaEnum>
+#include <QScreen>
 
 #include <KWindowSystem>
 
@@ -67,8 +67,6 @@ public:
     static VirtualDesktopInfo *virtualDesktopInfo;
     QMetaObject::Connection virtualDesktopNumberConn;
     QMetaObject::Connection virtualDesktopNamesConn;
-
-    QDesktopWidget *desktopWidget = QApplication::desktop();
 
     QList<WindowModel *> windowModels;
 
@@ -118,10 +116,15 @@ PagerModel::Private::Private(PagerModel *q)
     QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::desktopLayoutRowsChanged,
         q, &PagerModel::layoutRowsChanged);
 
-    QObject::connect(desktopWidget, &QDesktopWidget::screenCountChanged,
-        q, &PagerModel::pagerItemSizeChanged);
-    QObject::connect(desktopWidget, &QDesktopWidget::resized,
-        q, &PagerModel::pagerItemSizeChanged);
+    auto configureScreen = [q](QScreen* screen) {
+        QObject::connect(screen, &QScreen::geometryChanged, q, &PagerModel::pagerItemSizeChanged);
+        q->pagerItemSizeChanged();
+    };
+    for (QScreen* screen : qGuiApp->screens()) {
+        configureScreen(screen);
+    }
+    QObject::connect(qGuiApp, &QGuiApplication::screenAdded, q, configureScreen);
+    QObject::connect(qGuiApp, &QGuiApplication::screenRemoved, q, &PagerModel::pagerItemSizeChanged);
 
 #if HAVE_X11
     QObject::connect(KWindowSystem::self(), &KWindowSystem::stackingOrderChanged, q,
@@ -380,8 +383,9 @@ QSize PagerModel::pagerItemSize() const
 
     QRect totalRect;
 
-    for (int i = 0; i < d->desktopWidget->screenCount(); ++i) {
-        totalRect |= d->desktopWidget->screenGeometry(i);
+    const auto screens = QGuiApplication::screens();
+    for (auto screen : screens) {
+        totalRect |= screen->geometry();
     }
 
     return totalRect.size();

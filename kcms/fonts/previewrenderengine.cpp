@@ -24,8 +24,8 @@
 #include "Fc.h"
 
 #include <QApplication>
-#include <QDesktopWidget>
 #include <QX11Info>
+#include <QScreen>
 
 #include <X11/Xft/Xft.h>
 
@@ -128,7 +128,7 @@ QImage PreviewRenderEngine::drawAutoSize(const QFont &font, const QColor &txt, c
     const quint32 style = qtToFcStyle(font);
     int faceNo = 0;
     
-    double ratio = QApplication::desktop()->screen()->devicePixelRatio();
+    double ratio = QGuiApplication::primaryScreen()->devicePixelRatio();
     double dpi = QX11Info::appDpiY();
     
     int fSize((int)(((font.pointSizeF()*dpi*ratio)/72.0)+0.5));
