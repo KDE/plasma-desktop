@@ -336,25 +336,6 @@ void RootModel::refresh()
             }
 
             groups.prepend(new GroupEntry(this, QString(), QString(), m_favorites));
-        } else if (flat()) {
-            QList<AbstractEntry *> appList;
-
-            foreach (const AbstractEntry *groupEntry, m_entryList) {
-                AbstractModel *model = groupEntry->childModel();
-
-                if (!model) continue;
-
-                for (int i = 0; i < model->count(); ++i) {
-                    AbstractEntry *appEntry = static_cast<AbstractEntry *>(model->index(i, 0).internalPointer());
-
-                    if (appEntry->name().isEmpty()) {
-                        continue;
-                    }
-
-                    appList.append(appEntry);
-                }
-            }
-            groups = appList;
         } else {
             QHash<QString, QList<AbstractEntry *>> m_categoryHash;
 
