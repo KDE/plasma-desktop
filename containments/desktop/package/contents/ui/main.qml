@@ -19,7 +19,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.4
+import QtQuick 2.10
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.plasmoid 2.0
@@ -129,7 +129,6 @@ FolderViewDropArea {
         appletsLayout.cellHeight = root.iconHeight + toolBoxSvg.elementSize("top").height + toolBoxSvg.elementSize("bottom").height;
         appletsLayout.defaultItemWidth = appletsLayout.cellWidth * 6;
         appletsLayout.defaultItemHeight = appletsLayout.cellHeight * 6;
-        layoutTimer.restart();
     }
 
     function addLauncher(desktopUrl) {
@@ -320,6 +319,7 @@ FolderViewDropArea {
 
     Connections {
         target: plasmoid
+        ignoreUnknownSignals: true
         onEditModeChanged: appletsLayout.editMode = plasmoid.editMode
     }
 
