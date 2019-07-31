@@ -237,6 +237,14 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
     connect(ui.kNotifyAccess, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
     connect(ui.kNotifyAccessButton, &QPushButton::clicked, this, &KAccessConfig::configureKNotify);
 
+    // keynboard navigation
+    connect(ui.mouseKeys, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+    connect(ui.mk_delay, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KAccessConfig::configChanged);
+    connect(ui.mk_interval, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KAccessConfig::configChanged);
+    connect(ui.mk_time_to_max, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KAccessConfig::configChanged);
+    connect(ui.mk_max_speed, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KAccessConfig::configChanged);
+    connect(ui.mk_curve, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KAccessConfig::configChanged);
+
     // screen reader
     connect(ui.screenReaderEnabled, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
     connect(ui.launchOrcaConfiguration, &QPushButton::clicked, this, &KAccessConfig::launchOrcaConfiguration);
@@ -336,6 +344,31 @@ void KAccessConfig::load()
     ui.gestureConfirmation->setChecked(keyboardGroup.readEntry("GestureConfirmation", false));
     ui.kNotifyAccess->setChecked(keyboardGroup.readEntry("kNotifyAccess", false));
 
+    KConfigGroup mouseGroup(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "Mouse");
+    ui.mouseKeys->setChecked(mouseGroup.readEntry("MouseKeys", false));
+    ui.mk_delay->setValue(mouseGroup.readEntry("MKDelay", 160));
+
+    const int interval = mouseGroup.readEntry("MKInterval", 5);
+    ui.mk_interval->setValue(interval);
+
+    // Default time to reach maximum speed: 5000 msec
+    int time_to_max = mouseGroup.readEntry("MKTimeToMax", (5000+interval/2)/interval);
+    time_to_max = mouseGroup.readEntry("MK-TimeToMax", time_to_max*interval);
+    ui.mk_time_to_max->setValue(time_to_max);
+
+    // Default maximum speed: 1000 pixels/sec
+    //     (The old default maximum speed from KDE <= 3.4
+    //     (100000 pixels/sec) was way too fast)
+    long max_speed = mouseGroup.readEntry("MKMaxSpeed", interval);
+    max_speed = max_speed * 1000 / interval;
+    if (max_speed > 2000) {
+        max_speed = 2000;
+    }
+    max_speed = mouseGroup.readEntry("MK-MaxSpeed", int(max_speed));
+    ui.mk_max_speed->setValue(max_speed);
+
+    ui.mk_curve->setValue(mouseGroup.readEntry("MKCurve", 0));
+
     KConfigGroup screenReaderGroup(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "ScreenReader");
     ui.screenReaderEnabled->setChecked(screenReaderGroup.readEntry("Enabled", false));
 
@@ -390,6 +423,18 @@ void KAccessConfig::save()
 
 
     keyboardGroup.sync();
+
+    KConfigGroup mouseGroup(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "Mouse");
+    const int interval = ui.mk_interval->value();
+    mouseGroup.writeEntry("MouseKeys", ui.mouseKeys->isChecked());
+    mouseGroup.writeEntry("MKDelay", ui.mk_delay->value());
+    mouseGroup.writeEntry("MKInterval", interval);
+    mouseGroup.writeEntry("MK-TimeToMax", ui.mk_time_to_max->value());
+    mouseGroup.writeEntry("MKTimeToMax", (ui.mk_time_to_max->value() + interval/2)/interval);
+    mouseGroup.writeEntry("MK-MaxSpeed", ui.mk_max_speed->value());
+    mouseGroup.writeEntry("MKMaxSpeed", (ui.mk_max_speed->value()*interval + 500)/1000);
+    mouseGroup.writeEntry("MKCurve", ui.mk_curve->value());
+    mouseGroup.sync();
 
     KConfigGroup screenReaderGroup(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "ScreenReader");
     screenReaderGroup.writeEntry("Enabled", ui.screenReaderEnabled->isChecked());
@@ -449,6 +494,13 @@ void KAccessConfig::defaults()
     ui.accessxBeep->setChecked(true);
     ui.gestureConfirmation->setChecked(true);
     ui.kNotifyAccess->setChecked(false);
+
+    ui.mouseKeys->setChecked(false);
+    ui.mk_delay->setValue(160);
+    ui.mk_interval->setValue(5);
+    ui.mk_time_to_max->setValue(5000);
+    ui.mk_max_speed->setValue(1000);
+    ui.mk_curve->setValue(0);
 
     ui.screenReaderEnabled->setChecked(false);
 
