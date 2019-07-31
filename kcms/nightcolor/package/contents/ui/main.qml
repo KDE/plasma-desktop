@@ -114,31 +114,29 @@ KCM.SimpleKCM {
                 }
             }
 
-            QQC2.Slider {
-                id: tempSlider
+            RowLayout {
                 Kirigami.FormData.label: i18n("Night Color temperature:")
                 enabled: activator.checked
-                from: cA.minimalTemperature
-                to: cA.neutralTemperature
-                value: cA.nightTemperature
-                stepSize: 100
 
-                onValueChanged: {
-                    cA.nightTemperatureStaged = value;
-                    calcNeedsSave();
+                QQC2.Slider {
+                    id: tempSlider
+                    enabled: activator.checked
+                    from: cA.minimalTemperature
+                    implicitWidth: modeSwitcher.width
+                    to: cA.neutralTemperature
+                    value: cA.nightTemperature
+                    stepSize: 100
+
+                    onValueChanged: {
+                        cA.nightTemperatureStaged = value;
+                        calcNeedsSave();
+                    }
                 }
-            }
 
-            RowLayout {
-                enabled: activator.checked
-                Layout.fillWidth: true
-
-                QQC2.Label {
-                    Layout.fillWidth: true
-                    horizontalAlignment: Text.AlignHCenter
-                    text: tempSlider.value + i18n(" K")
+                    QQC2.Label {
+                        text: tempSlider.value + i18n(" K")
+                    }
                 }
-            }
 
             QQC2.ComboBox {
                 id: modeSwitcher
