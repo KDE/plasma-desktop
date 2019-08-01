@@ -27,7 +27,7 @@ import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.kcm 1.1 as KCM
 
 KCM.GridViewKCM {
-    KCM.ConfigModule.quickHelp: i18n("This module lets you choose the Plasma theme.")
+    KCM.ConfigModule.quickHelp: i18n("This module lets you choose the Plasma style.")
 
     view.model: kcm.desktopThemeModel
     view.currentIndex: kcm.selectedPluginIndex
@@ -123,7 +123,7 @@ KCM.GridViewKCM {
             }
 
             QtControls.Button {
-                text: i18n("Get New Plasma Themes...")
+                text: i18n("Get New Plasma Styles...")
                 icon.name: "get-hot-new-stuff"
                 onClicked: kcm.getNewStuff(this)
                 visible: KAuthorized.authorize("ghns")
