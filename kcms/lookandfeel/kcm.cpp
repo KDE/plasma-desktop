@@ -73,7 +73,7 @@ KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
     qApp->setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
     qmlRegisterType<QStandardItemModel>();
     qmlRegisterType<KCMLookandFeel>();
-    KAboutData* about = new KAboutData(QStringLiteral("kcm_lookandfeel"), i18n("Look and Feel"),
+    KAboutData* about = new KAboutData(QStringLiteral("kcm_lookandfeel"), i18n("Global Theme"),
                                        QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
     setAboutData(about);
@@ -109,7 +109,7 @@ void KCMLookandFeel::getNewStuff(QQuickItem *ctx)
 {
     if (!m_newStuffDialog) {
         m_newStuffDialog = new KNS3::DownloadDialog( QLatin1String("lookandfeel.knsrc") );
-        m_newStuffDialog.data()->setWindowTitle(i18n("Download New Look and Feel Themes"));
+        m_newStuffDialog.data()->setWindowTitle(i18n("Download New Global Themes"));
         m_newStuffDialog->setWindowModality(Qt::WindowModal);
         m_newStuffDialog->winId(); // so it creates the windowHandle();
         connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted, this,  &KCMLookandFeel::loadModel);

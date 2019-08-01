@@ -25,7 +25,7 @@ import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.kcm 1.1 as KCM
 
 KCM.GridViewKCM {
-    KCM.ConfigModule.quickHelp: i18n("This module lets you choose the Look and Feel theme.")
+    KCM.ConfigModule.quickHelp: i18n("This module lets you choose the global look and feel.")
 
     view.model: kcm.lookAndFeelModel
     view.currentIndex: kcm.selectedPluginIndex
@@ -81,7 +81,7 @@ KCM.GridViewKCM {
                 Layout.fillWidth: true
             }
             QtControls.Button {
-                text: i18n("Get New Look and Feel Themes...")
+                text: i18n("Get New Global Themes...")
                 icon.name: "get-hot-new-stuff"
                 onClicked: kcm.getNewStuff(this);
                 visible: KAuthorized.authorize("ghns")

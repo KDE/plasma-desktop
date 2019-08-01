@@ -39,7 +39,7 @@ int main(int argc, char **argv)
     const char version[] = "1.0";
 
     // About data
-    KAboutData aboutData("lookandfeeltool", i18n("Look and feel tool"), version, i18n("Command line tool to apply look and feel packages."), KAboutLicense::GPL, i18n("Copyright 2017, Marco Martin"));
+    KAboutData aboutData("lookandfeeltool", i18n("Global Theme Tool"), version, i18n("Command line tool to apply global theme packages for changing the look and feel."), KAboutLicense::GPL, i18n("Copyright 2017, Marco Martin"));
     aboutData.addAuthor(i18n("Marco Martin"), i18n("Maintainer"), QStringLiteral("mart@kde.org"));
     aboutData.setDesktopFileName("org.kde.lookandfeeltool");
     KAboutData::setApplicationData(aboutData);
@@ -49,9 +49,9 @@ int main(int argc, char **argv)
     const static auto _r = QStringLiteral("resetLayout");
 
     QCommandLineOption _list = QCommandLineOption(QStringList() << QStringLiteral("l") << _l,
-                               i18n("List available Look and feel packages"));
+                               i18n("List available global theme packages"));
     QCommandLineOption _apply = QCommandLineOption(QStringList() << QStringLiteral("a") << _a,
-                                i18n("Apply a look and feel package"), i18n("packagename"));
+                                i18n("Apply a global theme package"), i18n("packagename"));
     QCommandLineOption _resetLayout = QCommandLineOption(QStringList() << 
                                _r, i18n("Reset the Plasma Desktop layout"));
 
@@ -81,7 +81,7 @@ int main(int argc, char **argv)
 
         //can't use package.isValid as lnf packages always fallback, even when not existing
         if (p.metadata().pluginId() != parser.value(_apply)) {
-            std::cout << "Unable to find the look and feel package named " << parser.value(_apply).toStdString() << std::endl;
+            std::cout << "Unable to find the theme named " << parser.value(_apply).toStdString() << std::endl;
             return 1;
         }
 
