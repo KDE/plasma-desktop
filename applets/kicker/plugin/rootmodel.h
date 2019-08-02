@@ -53,6 +53,7 @@ class RootModel : public AppsModel
 
     Q_PROPERTY(QObject* systemFavoritesModel READ systemFavoritesModel NOTIFY systemFavoritesModelChanged)
     Q_PROPERTY(bool showAllApps READ showAllApps WRITE setShowAllApps NOTIFY showAllAppsChanged)
+    Q_PROPERTY(bool showAllAppsCategorized READ showAllAppsCategorized WRITE setShowAllAppsCategorized NOTIFY showAllAppsCategorizedChanged)
     Q_PROPERTY(bool showRecentApps READ showRecentApps WRITE setShowRecentApps NOTIFY showRecentAppsChanged)
     Q_PROPERTY(bool showRecentDocs READ showRecentDocs WRITE setShowRecentDocs NOTIFY showRecentDocsChanged)
     Q_PROPERTY(bool showRecentContacts READ showRecentContacts WRITE setShowRecentContacts NOTIFY showRecentContactsChanged)
@@ -69,6 +70,9 @@ class RootModel : public AppsModel
 
         bool showAllApps() const;
         void setShowAllApps(bool show);
+
+        bool showAllAppsCategorized() const;
+        void setShowAllAppsCategorized(bool showCategorized);
 
         bool showRecentApps() const;
         void setShowRecentApps(bool show);
@@ -92,6 +96,7 @@ class RootModel : public AppsModel
         void refreshed() const;
         void systemFavoritesModelChanged() const;
         void showAllAppsChanged() const;
+        void showAllAppsCategorizedChanged() const;
         void showRecentAppsChanged() const;
         void showRecentDocsChanged() const;
         void showRecentContactsChanged() const;
@@ -107,6 +112,7 @@ class RootModel : public AppsModel
         SystemModel *m_systemModel;
 
         bool m_showAllApps;
+        bool m_showAllAppsCategorized;
         bool m_showRecentApps;
         bool m_showRecentDocs;
         bool m_showRecentContacts;

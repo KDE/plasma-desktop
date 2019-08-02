@@ -66,6 +66,7 @@ RootModel::RootModel(QObject *parent) : AppsModel(QString(), parent)
 , m_favorites(new KAStatsFavoritesModel(this))
 , m_systemModel(nullptr)
 , m_showAllApps(false)
+, m_showAllAppsCategorized(false)
 , m_showRecentApps(true)
 , m_showRecentDocs(true)
 , m_showRecentContacts(false)
@@ -156,6 +157,22 @@ void RootModel::setShowAllApps(bool show)
         refresh();
 
         emit showAllAppsChanged();
+    }
+}
+
+bool RootModel::showAllAppsCategorized() const
+{
+    return m_showAllAppsCategorized;
+}
+
+void RootModel::setShowAllAppsCategorized(bool showCategorized)
+{
+    if (m_showAllAppsCategorized != showCategorized) {
+        m_showAllAppsCategorized = showCategorized;
+
+        refresh();
+
+        emit showAllAppsCategorizedChanged();
     }
 }
 
@@ -269,55 +286,55 @@ void RootModel::refresh()
     m_recentContactsModel = nullptr;
 
     if (m_showAllApps) {
-        QList<AbstractEntry *> groups;
+        QHash<QString, AbstractEntry *> appsHash;
 
-        if (m_paginate) {
+        std::function<void(AbstractEntry *)> processEntry = [&](AbstractEntry *entry) {
+            if (entry->type() == AbstractEntry::RunnableType) {
+                AppEntry *appEntry = static_cast<AppEntry*>(entry);
+                appsHash.insert(appEntry->service()->menuId(), appEntry);
+            } else if (entry->type() == AbstractEntry::GroupType) {
+                GroupEntry *groupEntry = static_cast<GroupEntry*>(entry);
+                AbstractModel *model = groupEntry->childModel();
+
+                if (!model) {
+                    return;
+                }
+
+                for (int i = 0; i < model->count(); ++i) {
+                    processEntry(static_cast<AbstractEntry*>(model->index(i, 0).internalPointer()));
+                }
+            }
+        };
+
+        for (AbstractEntry *entry : m_entryList) {
+            processEntry(entry);
+        }
+
+        QList<AbstractEntry *> apps(appsHash.values());
+        QCollator c;
+
+        std::sort(apps.begin(), apps.end(),
+            [&c](AbstractEntry* a, AbstractEntry* b) {
+                if (a->type() != b->type()) {
+                    return a->type() > b->type();
+                } else {
+                    return c.compare(a->name(), b->name()) < 0;
+                }
+            });
+
+        if (!m_showAllAppsCategorized && !m_paginate) { // The app list built above goes into a model.
+            allModel = new AppsModel(apps, false, this);
+        } else if (m_paginate) { // We turn the apps list into a subtree of pages.
             m_favorites = new KAStatsFavoritesModel(this);
             emit favoritesModelChanged();
 
-            QHash<QString, AppEntry *> appsHash;
-            QList<AppEntry *> apps;
-
-            foreach (const AbstractEntry *groupEntry, m_entryList) {
-                AbstractModel *model = groupEntry->childModel();
-
-                if (!model) continue;
-
-                for (int i = 0; i < model->count(); ++i) {
-                    GroupEntry *subGroupEntry = static_cast<GroupEntry*>(model->index(i, 0).internalPointer());
-                    AbstractModel *subModel = subGroupEntry->childModel();
-
-                    for (int j = 0; j < subModel->count(); ++j) {
-                        AppEntry *appEntry = static_cast<AppEntry*>(subModel->index(j, 0).internalPointer());
-
-                        if (appEntry->name().isEmpty()) {
-                            continue;
-                        }
-
-                        appsHash.insert(appEntry->service()->menuId(), appEntry);
-                    }
-                }
-            }
-
-            apps = appsHash.values();
-
-            QCollator c;
-
-            std::sort(apps.begin(), apps.end(),
-                [&c](AbstractEntry* a, AbstractEntry* b) {
-                    if (a->type() != b->type()) {
-                        return a->type() > b->type();
-                    } else {
-                        return c.compare(a->name(), b->name()) < 0;
-                    }
-                });
-
+            QList<AbstractEntry *> groups;
 
             int at = 0;
             QList<AbstractEntry *> page;
             page.reserve(m_pageSize);
 
-            foreach(AppEntry *app, apps) {
+            foreach(AbstractEntry *app, apps) {
                 page.append(app);
 
                 if (at == (m_pageSize - 1)) {
@@ -336,7 +353,10 @@ void RootModel::refresh()
             }
 
             groups.prepend(new GroupEntry(this, QString(), QString(), m_favorites));
-        } else {
+
+            allModel = new AppsModel(groups, true, this);
+        } else { // We turn the apps list into a subtree of apps by starting letter.
+            QList<AbstractEntry *> groups;
             QHash<QString, QList<AbstractEntry *>> m_categoryHash;
 
             foreach (const AbstractEntry *groupEntry, m_entryList) {
@@ -364,9 +384,10 @@ void RootModel::refresh()
                 model->setDescription(i.key());
                 groups.append(new GroupEntry(this, i.key(), QString(), model));
             }
+
+            allModel = new AppsModel(groups, true, this);
         }
 
-        allModel = new AppsModel(groups, true, this);
         allModel->setDescription(QStringLiteral("KICKER_ALL_MODEL")); // Intentionally no i18n.
     }
 
