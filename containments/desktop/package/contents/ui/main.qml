@@ -250,8 +250,6 @@ FolderViewDropArea {
                 pressToMoveHelp.show();
             }
         }
-        
-        onAvailableScreenRegionChanged: layoutTimer.restart();
     }
 
     Connections {
