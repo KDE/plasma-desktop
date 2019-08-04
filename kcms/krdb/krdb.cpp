@@ -37,6 +37,7 @@
 #include <QDBusConnection>
 #include <klauncher_iface.h>
 
+#include <KColorUtils>
 #include <kcolorscheme.h>
 #include <kconfig.h>
 #include <kconfiggroup.h>
@@ -400,6 +401,220 @@ static void createGtkrc( bool exportColors, const QPalette& cg, bool exportGtkTh
     saveFile.commit();
 }
 
+// ---------------------------------------------------------------------
+
+QString gtkColorsHelper(const QString &name, const QString &color)
+{
+    return QStringLiteral("@define-color %1 %2;\n").arg(name, color);
+}
+
+void saveGtkColors()
+{
+    KConfigGroup g(KSharedConfig::openConfig(), "WM");
+    QFile gtkCss(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/gtk-3.0/gtk.css");
+    QFile colorsCss(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/gtk-3.0/colors.css");
+
+    if (gtkCss.open(QIODevice::ReadWrite)) {
+        QTextStream gtkStream(&gtkCss);
+        bool hasImport = false;
+        while (!gtkStream.atEnd()) {
+            QString line = gtkStream.readLine();
+            if (line.contains("@import 'colors.css';")) {
+                hasImport = true;
+            }
+        }
+        if (!hasImport) {
+            gtkStream << "@import 'colors.css';";
+        }
+    }
+    if (colorsCss.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
+        QTextStream colorsStream(&colorsCss);
+        /*
+        0 Active View
+        1 Active Window
+        2 Active Button
+        3 Active Selection
+        4 Active Tooltip
+        5 Active Complimentary
+        */
+        
+        QList<KColorScheme> activeColorSchemes{
+            KColorScheme(QPalette::Active, KColorScheme::View),
+            KColorScheme(QPalette::Active, KColorScheme::Window),
+            KColorScheme(QPalette::Active, KColorScheme::Button),
+            KColorScheme(QPalette::Active, KColorScheme::Selection),
+            KColorScheme(QPalette::Active, KColorScheme::Tooltip),
+            KColorScheme(QPalette::Active, KColorScheme::Complementary)
+        };
+        QList<KColorScheme> inactiveColorSchemes{
+            KColorScheme(QPalette::Inactive, KColorScheme::View),
+            KColorScheme(QPalette::Inactive, KColorScheme::Window),
+            KColorScheme(QPalette::Inactive, KColorScheme::Button),
+            KColorScheme(QPalette::Inactive, KColorScheme::Selection),
+            KColorScheme(QPalette::Inactive, KColorScheme::Tooltip),
+            KColorScheme(QPalette::Inactive, KColorScheme::Complementary)
+        };
+        QList<KColorScheme> disabledColorSchemes{
+            KColorScheme(QPalette::Disabled, KColorScheme::View),
+            KColorScheme(QPalette::Disabled, KColorScheme::Window),
+            KColorScheme(QPalette::Disabled, KColorScheme::Button),
+            KColorScheme(QPalette::Disabled, KColorScheme::Selection),
+            KColorScheme(QPalette::Disabled, KColorScheme::Tooltip),
+            KColorScheme(QPalette::Disabled, KColorScheme::Complementary)
+        };
+
+        /* 
+            Normal (Non Backdrop, Non Insensitive) 
+        */
+
+        // General Colors
+
+        colorsStream << gtkColorsHelper("theme_fg_color", activeColorSchemes[1].foreground(KColorScheme::NormalText).color().name());
+        colorsStream << gtkColorsHelper("theme_bg_color", activeColorSchemes[1].background(KColorScheme::NormalBackground).color().name());
+        colorsStream << gtkColorsHelper("theme_text_color", activeColorSchemes[0].foreground(KColorScheme::NormalText).color().name());
+        colorsStream << gtkColorsHelper("theme_base_color", activeColorSchemes[0].background(KColorScheme::NormalBackground).color().name());
+        colorsStream << gtkColorsHelper("theme_view_hover_decoration_color", activeColorSchemes[0].decoration(KColorScheme::HoverColor).color().name());
+        colorsStream << gtkColorsHelper("theme_hovering_selected_bg_color", activeColorSchemes[3].decoration(KColorScheme::HoverColor).color().name());
+        colorsStream << gtkColorsHelper("theme_selected_bg_color", activeColorSchemes[3].background(KColorScheme::NormalBackground).color().name());
+        colorsStream << gtkColorsHelper("theme_selected_fg_color", activeColorSchemes[3].foreground(KColorScheme::NormalText).color().name());
+        colorsStream << gtkColorsHelper("theme_view_active_decoration_color", activeColorSchemes[0].decoration(KColorScheme::HoverColor).color().name());
+
+        // Button Colors
+        colorsStream << gtkColorsHelper("theme_button_background_normal", activeColorSchemes[2].background(KColorScheme::NormalBackground).color().name());
+        colorsStream << gtkColorsHelper("theme_button_decoration_hover", activeColorSchemes[2].decoration(KColorScheme::HoverColor).color().name());
+        colorsStream << gtkColorsHelper("theme_button_decoration_focus", activeColorSchemes[2].decoration(KColorScheme::FocusColor).color().name());
+        colorsStream << gtkColorsHelper("theme_button_foreground_normal", activeColorSchemes[2].foreground(KColorScheme::NormalText).color().name());
+        colorsStream << gtkColorsHelper("theme_button_foreground_active", activeColorSchemes[3].foreground(KColorScheme::NormalText).color().name());
+        
+        // Misc Colors
+        QColor windowForegroundColor = activeColorSchemes[1].foreground(KColorScheme::NormalText).color();
+        QColor windowBackgroundColor = activeColorSchemes[1].background(KColorScheme::NormalBackground).color();
+        QColor bordersColor = KColorUtils::mix(windowBackgroundColor,windowForegroundColor, 0.25);
+
+        colorsStream << gtkColorsHelper("borders", bordersColor.name());
+        colorsStream << gtkColorsHelper("warning_color", activeColorSchemes[0].foreground(KColorScheme::NeutralText).color().name());
+        colorsStream << gtkColorsHelper("success_color", activeColorSchemes[0].foreground(KColorScheme::PositiveText).color().name());
+        colorsStream << gtkColorsHelper("error_color", activeColorSchemes[0].foreground(KColorScheme::NegativeText).color().name());
+
+        /* 
+            Backdrop (Inactive) 
+        */
+
+        // General
+        colorsStream << gtkColorsHelper("theme_unfocused_fg_color",inactiveColorSchemes[1].foreground(KColorScheme::NormalText).color().name());
+        colorsStream << gtkColorsHelper("theme_unfocused_text_color", inactiveColorSchemes[0].foreground(KColorScheme::NormalText).color().name());
+        colorsStream << gtkColorsHelper("theme_unfocused_bg_color", inactiveColorSchemes[1].background(KColorScheme::NormalBackground).color().name());
+        colorsStream << gtkColorsHelper("theme_unfocused_base_color", inactiveColorSchemes[0].background(KColorScheme::NormalBackground).color().name());
+        colorsStream << gtkColorsHelper("theme_unfocused_selected_bg_color_alt", inactiveColorSchemes[3].background(KColorScheme::NormalBackground).color().name());
+        colorsStream << gtkColorsHelper("theme_unfocused_selected_bg_color", inactiveColorSchemes[3].background(KColorScheme::NormalBackground).color().name());
+        colorsStream << gtkColorsHelper("theme_unfocused_selected_fg_color", inactiveColorSchemes[3].foreground(KColorScheme::NormalText).color().name());
+
+        // Button
+        colorsStream << gtkColorsHelper("theme_button_background_normal_backdrop", inactiveColorSchemes[2].background(KColorScheme::NormalBackground).color().name());
+        colorsStream << gtkColorsHelper("theme_button_decoration_hover_backdrop", inactiveColorSchemes[2].decoration(KColorScheme::HoverColor).color().name());
+        colorsStream << gtkColorsHelper("theme_button_decoration_focus_backdrop", inactiveColorSchemes[2].decoration(KColorScheme::FocusColor).color().name());
+        colorsStream << gtkColorsHelper("theme_button_foreground_normal_backdrop", inactiveColorSchemes[2].foreground(KColorScheme::NormalText).color().name());
+        colorsStream << gtkColorsHelper("theme_button_foreground_active_backdrop", inactiveColorSchemes[3].foreground(KColorScheme::NormalText).color().name());
+
+        // Misc Colors
+        QColor inactiveWindowForegroundColor = inactiveColorSchemes[1].foreground(KColorScheme::NormalText).color();
+        QColor inactiveWindowBackgroundColor = inactiveColorSchemes[1].background(KColorScheme::NormalBackground).color();
+        QColor inactiveBordersColor = KColorUtils::mix(inactiveWindowBackgroundColor,inactiveWindowForegroundColor, 0.25);
+
+        colorsStream << gtkColorsHelper("unfocused_borders", inactiveBordersColor.name());
+        colorsStream << gtkColorsHelper("warning_color_backdrop", inactiveColorSchemes[0].foreground(KColorScheme::NeutralText).color().name());
+        colorsStream << gtkColorsHelper("success_color_backdrop", inactiveColorSchemes[0].foreground(KColorScheme::PositiveText).color().name());
+        colorsStream << gtkColorsHelper("error_color_backdrop", inactiveColorSchemes[0].foreground(KColorScheme::NegativeText).color().name());
+
+        /* 
+            Insensitive (Disabled) 
+        */
+
+        // General
+        colorsStream << gtkColorsHelper("insensitive_fg_color",disabledColorSchemes[1].foreground(KColorScheme::NormalText).color().name());
+        colorsStream << gtkColorsHelper("insensitive_base_fg_color", disabledColorSchemes[0].foreground(KColorScheme::NormalText).color().name());
+        colorsStream << gtkColorsHelper("insensitive_bg_color", disabledColorSchemes[1].background(KColorScheme::NormalBackground).color().name());
+        colorsStream << gtkColorsHelper("insensitive_base_color", disabledColorSchemes[0].background(KColorScheme::NormalBackground).color().name());
+        colorsStream << gtkColorsHelper("insensitive_selected_bg_color", disabledColorSchemes[3].background(KColorScheme::NormalBackground).color().name());
+        colorsStream << gtkColorsHelper("insensitive_selected_fg_color", disabledColorSchemes[3].foreground(KColorScheme::NormalText).color().name());
+
+        // Button
+        colorsStream << gtkColorsHelper("theme_button_background_normal_insensitive", disabledColorSchemes[2].background(KColorScheme::NormalBackground).color().name());
+        colorsStream << gtkColorsHelper("theme_button_decoration_hover_insensitive", disabledColorSchemes[2].decoration(KColorScheme::HoverColor).color().name());
+        colorsStream << gtkColorsHelper("theme_button_decoration_focus_insensitive", disabledColorSchemes[2].decoration(KColorScheme::FocusColor).color().name());
+        colorsStream << gtkColorsHelper("theme_button_foreground_normal_insensitive", disabledColorSchemes[2].foreground(KColorScheme::NormalText).color().name());
+        colorsStream << gtkColorsHelper("theme_button_foreground_active_insensitive", disabledColorSchemes[3].foreground(KColorScheme::NormalText).color().name());
+
+        // Misc Colors
+        QColor disabledWindowForegroundColor = disabledColorSchemes[1].foreground(KColorScheme::NormalText).color();
+        QColor disabledWindowBackgroundColor = disabledColorSchemes[1].background(KColorScheme::NormalBackground).color();
+        QColor disabledBordersColor = KColorUtils::mix(disabledWindowBackgroundColor,disabledWindowForegroundColor, 0.25);
+
+        colorsStream << gtkColorsHelper("insensitive_borders", disabledBordersColor.name());
+        colorsStream << gtkColorsHelper("warning_color_insensitive", disabledColorSchemes[0].foreground(KColorScheme::NeutralText).color().name());
+        colorsStream << gtkColorsHelper("success_color_insensitive", disabledColorSchemes[0].foreground(KColorScheme::PositiveText).color().name());
+        colorsStream << gtkColorsHelper("error_color_insensitive", disabledColorSchemes[0].foreground(KColorScheme::NegativeText).color().name());
+
+        /* 
+            Insensitive Backdrop (Inactive Disabled) These pretty much have the same appearance as regular inactive colors, but they're seperate in case we decide to make
+            them different in the future.
+        */
+
+        // General
+        colorsStream << gtkColorsHelper("insensitive_unfocused_fg_color",disabledColorSchemes[1].foreground(KColorScheme::NormalText).color().name());
+        colorsStream << gtkColorsHelper("theme_unfocused_view_text_color", disabledColorSchemes[0].foreground(KColorScheme::NormalText).color().name());
+        colorsStream << gtkColorsHelper("insensitive_unfocused_bg_color", disabledColorSchemes[1].background(KColorScheme::NormalBackground).color().name());
+        colorsStream << gtkColorsHelper("theme_unfocused_view_bg_color", disabledColorSchemes[0].background(KColorScheme::NormalBackground).color().name());
+        colorsStream << gtkColorsHelper("insensitive_unfocused_selected_bg_color", disabledColorSchemes[3].background(KColorScheme::NormalBackground).color().name());
+        colorsStream << gtkColorsHelper("insensitive_unfocused_selected_fg_color", disabledColorSchemes[3].foreground(KColorScheme::NormalText).color().name());
+
+        // Button
+        colorsStream << gtkColorsHelper("theme_button_background_normal_backdrop_insensitive", disabledColorSchemes[2].background(KColorScheme::NormalBackground).color().name());
+        colorsStream << gtkColorsHelper("theme_button_decoration_hover_backdrop_insensitive", disabledColorSchemes[2].decoration(KColorScheme::HoverColor).color().name());
+        colorsStream << gtkColorsHelper("theme_button_decoration_focus_backdrop_insensitive", disabledColorSchemes[2].decoration(KColorScheme::FocusColor).color().name());
+        colorsStream << gtkColorsHelper("theme_button_foreground_normal_backdrop_insensitive", disabledColorSchemes[2].foreground(KColorScheme::NormalText).color().name());
+        colorsStream << gtkColorsHelper("theme_button_foreground_active_backdrop_insensitive", disabledColorSchemes[3].foreground(KColorScheme::NormalText).color().name());
+
+        // Misc Colors
+        QColor unfocusedDisabledWindowForegroundColor = disabledColorSchemes[1].foreground(KColorScheme::NormalText).color();
+        QColor unfocusedDisabledWindowBackgroundColor = disabledColorSchemes[1].background(KColorScheme::NormalBackground).color();
+        QColor unfocusedDisabledBordersColor = KColorUtils::mix(unfocusedDisabledWindowBackgroundColor,unfocusedDisabledWindowForegroundColor, 0.25);
+
+        colorsStream << gtkColorsHelper("unfocused_insensitive_borders", unfocusedDisabledBordersColor.name());
+        colorsStream << gtkColorsHelper("warning_color_insensitive_backdrop", disabledColorSchemes[0].foreground(KColorScheme::NeutralText).color().name());
+        colorsStream << gtkColorsHelper("success_color_insensitive_backdrop", disabledColorSchemes[0].foreground(KColorScheme::PositiveText).color().name());
+        colorsStream << gtkColorsHelper("error_color_insensitive_backdrop", disabledColorSchemes[0].foreground(KColorScheme::NegativeText).color().name());
+
+        /*
+            Ignorant Colors (These colors do not care about backdrop or insensitive states)
+        */
+        
+        colorsStream << gtkColorsHelper("link_color", activeColorSchemes[0].foreground(KColorScheme::LinkText).color().name());
+        colorsStream << gtkColorsHelper("link_visited_color", activeColorSchemes[0].foreground(KColorScheme::VisitedText).color().name());
+
+        QColor tooltipForegroundColor = activeColorSchemes[4].foreground(KColorScheme::NormalText).color();
+        QColor tooltipBackgroundColor = activeColorSchemes[4].background(KColorScheme::NormalBackground).color();
+        QColor tooltipBorderColor = KColorUtils::mix(tooltipBackgroundColor, tooltipForegroundColor, 0.25);
+
+        colorsStream << gtkColorsHelper("tooltip_text", tooltipForegroundColor.name());
+        colorsStream << gtkColorsHelper("tooltip_background", tooltipBackgroundColor.name());
+        colorsStream << gtkColorsHelper("tooltip_border", tooltipBorderColor.name());
+
+        colorsStream << gtkColorsHelper("content_view_bg", activeColorSchemes[0].background(KColorScheme::NormalBackground).color().name());
+
+        /*
+            Theme titlebar colors
+        */
+        colorsStream << gtkColorsHelper("theme_titlebar_background", "rgb(" + g.readEntry("activeBackground", "") + ")");
+        colorsStream << gtkColorsHelper("theme_titlebar_foreground", "rgb(" + g.readEntry("activeForeground", "") + ")");
+        colorsStream << gtkColorsHelper("theme_titlebar_background_light", activeColorSchemes[1].background(KColorScheme::NormalBackground).color().name());
+        colorsStream << gtkColorsHelper("theme_titlebar_foreground_backdrop", "rgb(" + g.readEntry("inactiveForeground", "") + ")");
+        colorsStream << gtkColorsHelper("theme_titlebar_background_backdrop", "rgb(" + g.readEntry("inactiveBackground", "") + ")");
+        colorsStream << gtkColorsHelper("theme_titlebar_foreground_insensitive", "rgb(" + g.readEntry("inactiveForeground", "") + ")");
+        colorsStream << gtkColorsHelper("theme_titlebar_foreground_insensitive_backdrop", "rgb(" + g.readEntry("inactiveForeground", "") + ")");
+    }
+}
+
 // -----------------------------------------------------------------------------
 
 void runRdb( uint flags )
@@ -410,6 +625,7 @@ void runRdb( uint flags )
   bool exportQtSettings  = flags & KRdbExportQtSettings;
   bool exportXftSettings = flags & KRdbExportXftSettings;
   bool exportGtkTheme    = flags & KRdbExportGtkTheme;
+  bool exportGtkColors   = flags & KRdbExportGtkColors;
 
   KSharedConfigPtr kglobalcfg = KSharedConfig::openConfig( QStringLiteral("kdeglobals") );
   KConfigGroup kglobals(kglobalcfg, "KDE");
@@ -473,6 +689,7 @@ void runRdb( uint flags )
 
     for (QStringList::ConstIterator it = list.constBegin(); it != list.constEnd(); ++it)
       copyFile(tmpFile, QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kdisplay/app-defaults/"+(*it)), true);
+
   }
 
   // Merge ~/.Xresources or fallback to ~/.Xdefaults
@@ -716,5 +933,6 @@ void runRdb( uint flags )
   KConfigGroup toolbars5(kglobalcfg, "Toolbar style");
   toolbars4.writeEntry("ToolButtonStyle", toolbars5.readEntry("ToolButtonStyle", "TextBesideIcon"));
   toolbars4.writeEntry("ToolButtonStyleOtherToolbars", toolbars5.readEntry("ToolButtonStyleOtherToolbars", "TextBesideIcon"));
-}
 
+  saveGtkColors();
+}
