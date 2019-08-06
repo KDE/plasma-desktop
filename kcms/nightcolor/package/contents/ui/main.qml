@@ -164,17 +164,21 @@ KCM.SimpleKCM {
 
 
                 function updatePage(index) {
-                    sourceComponent = undefined;
-                    var page;
-                    if (index === CC.CompositorAdaptor.ModeLocation) {
-                        page = manualLocationsView;
-                    } else if (index === CC.CompositorAdaptor.ModeTimings) {
-                        page = manualTimingsView;
-                    } else {
-                        page = automaticView;
+                    switch (index) {
+                    case CC.CompositorAdaptor.ModeAutomatic:
+                        sourceComponent = automaticView;
+                        break;
+                    case CC.CompositorAdaptor.ModeLocation:
+                        sourceComponent = manualLocationsView;
+                        break;
+                    case CC.CompositorAdaptor.ModeTimings:
+                        sourceComponent = manualTimingsView;
+                        break;
+                    case CC.CompositorAdaptor.ModeConstant:
+                    default:
+                        sourceComponent = undefined;
+                        break;
                     }
-
-                    sourceComponent = page;
                 }
             }
 
@@ -239,82 +243,86 @@ KCM.SimpleKCM {
             Component {
                 id: manualTimingsView
 
-                Kirigami.FormLayout {
-                    twinFormLayouts: parentLayout
-                    enabled: activator.checked && cA.timingsEnabled
+                ColumnLayout {
+                    Loader {
+                        sourceComponent: Kirigami.FormLayout {
+                            twinFormLayouts: parentLayout
+                            enabled: activator.checked && cA.timingsEnabled
 
-                    Connections {
-                        target: root
-                        onReset: {
-                            mornBeginManField.backend = cA.morningBeginFixed;
-                            evenBeginManField.backend = cA.eveningBeginFixed;
-                            transTimeField.backend = cA.transitionTime;
-                        }
-                    }
-
-                    TimeField {
-                        id: mornBeginManField
-                        Kirigami.FormData.label: i18n("Sunrise begins:")
-                        backend: cA.morningBeginFixedStaged
-                        onBackendChanged: {cA.morningBeginFixedStaged = backend;
-                            calcNeedsSave();
-                        }
-
-                        QQC2.ToolTip {
-                            text: i18n("(Input format: HH:MM)")
-                        }
-                    }
-
-                    TimeField {
-                        id: evenBeginManField
-                        Kirigami.FormData.label: i18n("Sunset begins:")
-                        backend: cA.eveningBeginFixedStaged
-                        onBackendChanged: {cA.eveningBeginFixedStaged = backend;
-                            calcNeedsSave();
-                        }
-
-                        QQC2.ToolTip {
-                            text: i18n("Input format: HH:MM")
-                        }
-                    }
-
-                    NumberField {
-                        id: transTimeField
-                        Kirigami.FormData.label: i18n("Transition duration:")
-                        backend: cA.transitionTimeStaged
-                        onBackendChanged: {cA.transitionTimeStaged = backend;
-                            calcNeedsSave();
-                        }
-
-                        inputMethodHints: Qt.ImhDigitsOnly
-                        validator: IntValidator {bottom: 1; top: 600;}  // less than 12 hours (in minutes: 720)
-
-                        QQC2.ToolTip {
-                            text: i18n("Input minutes - min. 1, max. 600")
-                        }
-                    }
-
-                    QQC2.Label {
-                        id: manualTimingsError1
-                        visible: evenBeginManField.getNormedDate() - mornBeginManField.getNormedDate() <= 0
-                        font.italic: true
-                        text: i18n("Error: Morning is before evening.")
-                    }
-
-                    QQC2.Label {
-                        id: manualTimingsError2
-                        visible: {
-                            if (manualTimingsError1.visible) {
-                                return false;
+                            Connections {
+                                target: root
+                                onReset: {
+                                    mornBeginManField.backend = cA.morningBeginFixed;
+                                    evenBeginManField.backend = cA.eveningBeginFixed;
+                                    transTimeField.backend = cA.transitionTime;
+                                }
                             }
-                            var trTime = transTimeField.backend * 60 * 1000;
-                            var mor = mornBeginManField.getNormedDate();
-                            var eve = evenBeginManField.getNormedDate();
 
-                            return eve - mor <= trTime || eve - mor >= 86400000 - trTime;
+                            TimeField {
+                                id: mornBeginManField
+                                Kirigami.FormData.label: i18n("Sunrise begins:")
+                                backend: cA.morningBeginFixedStaged
+                                onBackendChanged: {cA.morningBeginFixedStaged = backend;
+                                    calcNeedsSave();
+                                }
+
+                                QQC2.ToolTip {
+                                    text: i18n("(Input format: HH:MM)")
+                                }
+                            }
+
+                            TimeField {
+                                id: evenBeginManField
+                                Kirigami.FormData.label: i18n("Sunset begins:")
+                                backend: cA.eveningBeginFixedStaged
+                                onBackendChanged: {cA.eveningBeginFixedStaged = backend;
+                                    calcNeedsSave();
+                                }
+
+                                QQC2.ToolTip {
+                                    text: i18n("Input format: HH:MM")
+                                }
+                            }
+
+                            NumberField {
+                                id: transTimeField
+                                Kirigami.FormData.label: i18n("Transition duration:")
+                                backend: cA.transitionTimeStaged
+                                onBackendChanged: {cA.transitionTimeStaged = backend;
+                                    calcNeedsSave();
+                                }
+
+                                inputMethodHints: Qt.ImhDigitsOnly
+                                validator: IntValidator {bottom: 1; top: 600;}  // less than 12 hours (in minutes: 720)
+
+                                QQC2.ToolTip {
+                                    text: i18n("Input minutes - min. 1, max. 600")
+                                }
+                            }
+
+                            QQC2.Label {
+                                id: manualTimingsError1
+                                visible: evenBeginManField.getNormedDate() - mornBeginManField.getNormedDate() <= 0
+                                font.italic: true
+                                text: i18n("Error: Morning is before evening.")
+                            }
+
+                            QQC2.Label {
+                                id: manualTimingsError2
+                                visible: {
+                                    if (manualTimingsError1.visible) {
+                                        return false;
+                                    }
+                                    var trTime = transTimeField.backend * 60 * 1000;
+                                    var mor = mornBeginManField.getNormedDate();
+                                    var eve = evenBeginManField.getNormedDate();
+
+                                    return eve - mor <= trTime || eve - mor >= 86400000 - trTime;
+                                }
+                                font.italic: true
+                                text: i18n("Error: Transition time overlaps.")
+                            }
                         }
-                        font.italic: true
-                        text: i18n("Error: Transition time overlaps.")
                     }
                 }
             }
