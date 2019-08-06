@@ -108,27 +108,26 @@ Kirigami.Page {
                     section {
                         criteria: ViewSection.FullString
                         property: "sourceType"
-                        delegate: QtControls.ItemDelegate {
+                        delegate: Kirigami.AbstractListItem {
                             id: sourceSection
                             width: sourcesList.width
-                            text: {
-                                switch (Number(section)) {
-                                case Private.SourcesModel.ApplicationType: return i18n("Applications");
-                                case Private.SourcesModel.ServiceType: return i18n("System Services");
+
+                            backgroundColor: Kirigami.Theme.backgroundColor
+                            Kirigami.Theme.inherit: false
+                            Kirigami.Theme.colorSet: Kirigami.Theme.Window
+
+                            hoverEnabled: false
+                            supportsMouseEvents: false
+
+                            Kirigami.Heading {
+                                level: 2
+                                text: {
+                                    switch (Number(section)) {
+                                        case Private.SourcesModel.ApplicationType: return i18n("Applications");
+                                        case Private.SourcesModel.ServiceType: return i18n("System Services");
+                                    }
                                 }
                             }
-
-                            // unset "disabled" text color...
-                            contentItem: QtControls.Label {
-                                text: sourceSection.text
-                                // FIXME why does none of this work :(
-                                //Kirigami.Theme.colorGroup: Kirigami.Theme.Active
-                                //color: Kirigami.Theme.textColor
-                                color: rootRow.Kirigami.Theme.textColor
-                                elide: Text.ElideRight
-                                verticalAlignment: Text.AlignVCenter
-                            }
-                            enabled: false
                         }
                     }
 
