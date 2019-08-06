@@ -146,7 +146,7 @@ KCM.SimpleKCM {
                     i18n("Automatic"),
                     i18n("Location"),
                     i18n("Times"),
-                    i18n("Manual")
+                    i18n("Constant")
                 ]
                 currentIndex: cA.mode
                 onCurrentIndexChanged: {
