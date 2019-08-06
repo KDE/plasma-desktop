@@ -93,8 +93,6 @@ Q_SIGNALS:
 
 private:
     void saveColors();
-    static void saveGtkColors(KSharedConfigPtr& config);
-    static QString gtkColorsHelper(const QString &name, const QString &color);
     void processPendingDeletions();
 
     void installSchemeFile(const QString &path);

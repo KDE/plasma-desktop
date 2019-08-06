@@ -96,7 +96,7 @@ extern "C"
 {
     Q_DECL_EXPORT void kcminit_style()
     {
-        uint flags = KRdbExportQtSettings | KRdbExportQtColors | KRdbExportXftSettings | KRdbExportGtkTheme;
+        uint flags = KRdbExportQtSettings | KRdbExportGtkColors | KRdbExportQtColors | KRdbExportXftSettings | KRdbExportGtkTheme;
         KConfig _config( QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals  );
         KConfigGroup config(&_config, "X11");
 
