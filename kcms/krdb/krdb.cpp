@@ -473,10 +473,10 @@ void exportGtkColors(QList<KColorScheme> activeColorSchemes, QList<KColorScheme>
   colorsStream << gtkColorsHelper("theme_unfocused_selected_fg_color", inactiveColorSchemes[3].foreground(KColorScheme::NormalText).color().name());
 
   // Button
-  colorsStream << gtkColorsHelper("theme_button_background_normal_backdrop", inactiveColorSchemes[2].background(KColorScheme::NormalBackground).color().name());
+  colorsStream << gtkColorsHelper("theme_button_background_backdrop", inactiveColorSchemes[2].background(KColorScheme::NormalBackground).color().name());
   colorsStream << gtkColorsHelper("theme_button_decoration_hover_backdrop", inactiveColorSchemes[2].decoration(KColorScheme::HoverColor).color().name());
   colorsStream << gtkColorsHelper("theme_button_decoration_focus_backdrop", inactiveColorSchemes[2].decoration(KColorScheme::FocusColor).color().name());
-  colorsStream << gtkColorsHelper("theme_button_foreground_normal_backdrop", inactiveColorSchemes[2].foreground(KColorScheme::NormalText).color().name());
+  colorsStream << gtkColorsHelper("theme_button_foreground_backdrop", inactiveColorSchemes[2].foreground(KColorScheme::NormalText).color().name());
   colorsStream << gtkColorsHelper("theme_button_foreground_active_backdrop", inactiveColorSchemes[3].foreground(KColorScheme::NormalText).color().name());
 
   // Misc Colors
@@ -502,10 +502,10 @@ void exportGtkColors(QList<KColorScheme> activeColorSchemes, QList<KColorScheme>
   colorsStream << gtkColorsHelper("insensitive_selected_fg_color", disabledColorSchemes[3].foreground(KColorScheme::NormalText).color().name());
 
   // Button
-  colorsStream << gtkColorsHelper("theme_button_background_normal_insensitive", disabledColorSchemes[2].background(KColorScheme::NormalBackground).color().name());
+  colorsStream << gtkColorsHelper("theme_button_background_insensitive", disabledColorSchemes[2].background(KColorScheme::NormalBackground).color().name());
   colorsStream << gtkColorsHelper("theme_button_decoration_hover_insensitive", disabledColorSchemes[2].decoration(KColorScheme::HoverColor).color().name());
   colorsStream << gtkColorsHelper("theme_button_decoration_focus_insensitive", disabledColorSchemes[2].decoration(KColorScheme::FocusColor).color().name());
-  colorsStream << gtkColorsHelper("theme_button_foreground_normal_insensitive", disabledColorSchemes[2].foreground(KColorScheme::NormalText).color().name());
+  colorsStream << gtkColorsHelper("theme_button_foreground_insensitive", disabledColorSchemes[2].foreground(KColorScheme::NormalText).color().name());
   colorsStream << gtkColorsHelper("theme_button_foreground_active_insensitive", disabledColorSchemes[3].foreground(KColorScheme::NormalText).color().name());
 
   // Misc Colors
@@ -532,10 +532,10 @@ void exportGtkColors(QList<KColorScheme> activeColorSchemes, QList<KColorScheme>
   colorsStream << gtkColorsHelper("insensitive_unfocused_selected_fg_color", disabledColorSchemes[3].foreground(KColorScheme::NormalText).color().name());
 
   // Button
-  colorsStream << gtkColorsHelper("theme_button_background_normal_backdrop_insensitive", disabledColorSchemes[2].background(KColorScheme::NormalBackground).color().name());
+  colorsStream << gtkColorsHelper("theme_button_background_backdrop_insensitive", disabledColorSchemes[2].background(KColorScheme::NormalBackground).color().name());
   colorsStream << gtkColorsHelper("theme_button_decoration_hover_backdrop_insensitive", disabledColorSchemes[2].decoration(KColorScheme::HoverColor).color().name());
   colorsStream << gtkColorsHelper("theme_button_decoration_focus_backdrop_insensitive", disabledColorSchemes[2].decoration(KColorScheme::FocusColor).color().name());
-  colorsStream << gtkColorsHelper("theme_button_foreground_normal_backdrop_insensitive", disabledColorSchemes[2].foreground(KColorScheme::NormalText).color().name());
+  colorsStream << gtkColorsHelper("theme_button_foreground_backdrop_insensitive", disabledColorSchemes[2].foreground(KColorScheme::NormalText).color().name());
   colorsStream << gtkColorsHelper("theme_button_foreground_active_backdrop_insensitive", disabledColorSchemes[3].foreground(KColorScheme::NormalText).color().name());
 
   // Misc Colors
