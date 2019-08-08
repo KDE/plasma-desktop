@@ -172,7 +172,10 @@ Item {
             // newModelIndex set by clicked breadcrumb
             var oldModel = applicationsView.model;
             applicationsView.model = applicationsView.newModel;
-            listView.positionViewAtIndex(model.rowForModel(oldModel), ListView.Center)
+
+            var oldModelIndex = model.rowForModel(oldModel);
+            listView.currentIndex = oldModelIndex;
+            listView.positionViewAtIndex(oldModelIndex, ListView.Center);
         }
 
         function moveRight() {
