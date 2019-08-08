@@ -218,6 +218,10 @@ Item {
                             bottom: header.top
                         }
                     }
+                    PropertyChanges {
+                        target: tabBar
+                        width: (tabBar.opacity == 0) ? 0 : units.gridUnit * 5
+                    }
                     AnchorChanges {
                         target: tabBar
                         anchors {
@@ -264,6 +268,10 @@ Item {
                             bottom: header.top
                         }
                     }
+                    PropertyChanges {
+                        target: tabBar
+                        height: (tabBar.opacity == 0) ? 0 : units.gridUnit * 5
+                    }
                     AnchorChanges {
                         target: tabBar
                         anchors {
@@ -309,6 +317,10 @@ Item {
                             right: tabBar.left
                             bottom: header.top
                         }
+                    }
+                    PropertyChanges {
+                        target: tabBar
+                        width: (tabBar.opacity == 0) ? 0 : units.gridUnit * 5
                     }
                     AnchorChanges {
                         target: tabBar
@@ -363,6 +375,10 @@ Item {
                             bottom: tabBar.top
                         }
                     }
+                    PropertyChanges {
+                        target: tabBar
+                        height: (tabBar.opacity == 0) ? 0 : units.gridUnit * 5
+                    }
                     AnchorChanges {
                         target: tabBar
                         anchors {
@@ -393,34 +409,6 @@ Item {
         id: tabBar
 
         property int count: 5 // updated in createButtons()
-
-        width: {
-            if (opacity == 0) {
-                return 0;
-            }
-
-            switch (plasmoid.location) {
-            case PlasmaCore.Types.LeftEdge:
-            case PlasmaCore.Types.RightEdge:
-                return units.gridUnit * 5;
-            default:
-                return 0;
-            }
-        }
-
-        height: {
-            if (opacity == 0) {
-                return 0;
-            }
-
-            switch (plasmoid.location) {
-            case PlasmaCore.Types.LeftEdge:
-            case PlasmaCore.Types.RightEdge:
-                return 0;
-            default:
-                return units.gridUnit * 5;
-            }
-        }
 
         Behavior on width {
             NumberAnimation { duration: units.longDuration; easing.type: Easing.InQuad; }
