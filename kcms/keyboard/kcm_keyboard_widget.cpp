@@ -687,10 +687,10 @@ void KCMKeyboardWidget::updateHardwareUI()
 
 void KCMKeyboardWidget::populateWithCurrentLayouts()
 {
-	QList<LayoutUnit> layouts = X11Helper::getLayoutsList();
-	foreach(LayoutUnit layoutUnit, layouts) {
-		keyboardConfig->layouts.append(layoutUnit);
-	}
+    QList<LayoutUnit> layouts = X11Helper::getLayoutsList();
+    foreach(const LayoutUnit &layoutUnit, layouts) {
+        keyboardConfig->layouts.append(layoutUnit);
+    }
 }
 
 void KCMKeyboardWidget::populateWithCurrentXkbOptions()
@@ -699,10 +699,10 @@ void KCMKeyboardWidget::populateWithCurrentXkbOptions()
         // TODO: implement for Wayland - query dbus maybe?
         return;
     }
-	XkbConfig xkbConfig;
-	if( X11Helper::getGroupNames(QX11Info::display(), &xkbConfig, X11Helper::ALL) ) {
-		foreach(QString xkbOption, xkbConfig.options) {
-			keyboardConfig->xkbOptions.append(xkbOption);
-		}
-	}
+    XkbConfig xkbConfig;
+    if( X11Helper::getGroupNames(QX11Info::display(), &xkbConfig, X11Helper::ALL) ) {
+        foreach(const QString &xkbOption, xkbConfig.options) {
+            keyboardConfig->xkbOptions.append(xkbOption);
+        }
+    }
 }
