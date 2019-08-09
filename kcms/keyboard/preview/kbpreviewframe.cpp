@@ -352,7 +352,7 @@ void KbPreviewFrame::generateKeyboardLayout(const QString &layout, const QString
 }
 
 
-//this functions give the index of the tooltip over which mouse hovers
+// this functions gives the index of the tooltip over which mouse hovers
 int KbPreviewFrame::itemAt(const QPoint &pos)
 {
     int distance =  10000;
