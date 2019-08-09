@@ -483,7 +483,7 @@ bool XkbOptionsTreeModel::setData(const QModelIndex & index, const QVariant & va
             if( idx >= 0 ) {
                 for(int i=0; i<xkbGroup->optionInfos.count(); i++)
                     if( xkbGroup->optionInfos[i]->name == keyboardConfig->xkbOptions[idx] ) {
-                        setData(createIndex(i, index.column(), (quint32)index.internalId()-index.row()+i), Qt::Unchecked, role);
+                        setData(createIndex(i, index.column(), static_cast<quint32>(index.internalId()) - index.row() + i), Qt::Unchecked, role);
                         break;
                     }
             //    m_kxkbConfig->m_options.removeAt(idx);
@@ -505,7 +505,7 @@ bool XkbOptionsTreeModel::setData(const QModelIndex & index, const QVariant & va
 
 void XkbOptionsTreeModel::gotoGroup(const QString& groupName, QTreeView* view) {
 	const OptionGroupInfo* optionGroupInfo = rules->getOptionGroupInfo(groupName);
-    int index = rules->optionGroupInfos.indexOf((OptionGroupInfo*)optionGroupInfo);
+    int index = rules->optionGroupInfos.indexOf(const_cast<OptionGroupInfo*>(optionGroupInfo));
     if( index != -1 ) {
         QModelIndex modelIdx = createIndex(index,0);
 //            view->selectionModel()->setCurrentIndex(createIndex(index,0), QItemSelectionModel::NoUpdate);

@@ -126,8 +126,8 @@ LayoutUnit X11Helper::getCurrentLayout()
     }
     QList<LayoutUnit> currentLayouts = getLayoutsList();
     unsigned int group = X11Helper::getGroup();
-    if( group < (unsigned int)currentLayouts.size() )
-        return currentLayouts.at(group);
+    if( group < static_cast<unsigned int>(currentLayouts.size()) )
+        return currentLayouts.at(static_cast<int>(group));
 
     qCWarning(KCM_KEYBOARD) << "Current group number" << group << "is outside of current layout list" <<
                                getLayoutsListAsString(currentLayouts);
