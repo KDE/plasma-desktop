@@ -249,13 +249,11 @@ bool LayoutsTableModel::setData(const QModelIndex &index, const QVariant &value,
 	}
 	break;
 	case VARIANT_COLUMN: {
-		QString variant = value.toString();
-        layoutUnit.setVariant(variant);
+        layoutUnit.setVariant(value.toString());
 	}
 	break;
 	case SHORTCUT_COLUMN: {
-		QString shortcut = value.toString();
-		layoutUnit.setShortcut(QKeySequence(shortcut));
+        layoutUnit.setShortcut(QKeySequence(value.toString()));
 	}
 	break;
 	}
