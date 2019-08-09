@@ -22,7 +22,7 @@ import QtQuick 2.9
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
 
-import org.kde.kirigami 2.8 as Kirigami
+import org.kde.kirigami 2.10 as Kirigami
 import org.kde.kcm 1.2 as KCM
 
 import org.kde.private.kcms.notifications 1.0 as Private
@@ -108,24 +108,13 @@ Kirigami.Page {
                     section {
                         criteria: ViewSection.FullString
                         property: "sourceType"
-                        delegate: Kirigami.AbstractListItem {
+                        delegate: Kirigami.ListSectionHeader {
                             id: sourceSection
                             width: sourcesList.width
-
-                            backgroundColor: Kirigami.Theme.backgroundColor
-                            Kirigami.Theme.inherit: false
-                            Kirigami.Theme.colorSet: Kirigami.Theme.Window
-
-                            hoverEnabled: false
-                            supportsMouseEvents: false
-
-                            Kirigami.Heading {
-                                level: 2
-                                text: {
-                                    switch (Number(section)) {
-                                        case Private.SourcesModel.ApplicationType: return i18n("Applications");
-                                        case Private.SourcesModel.ServiceType: return i18n("System Services");
-                                    }
+                            label: {
+                                switch (Number(section)) {
+                                    case Private.SourcesModel.ApplicationType: return i18n("Applications");
+                                    case Private.SourcesModel.ServiceType: return i18n("System Services");
                                 }
                             }
                         }
