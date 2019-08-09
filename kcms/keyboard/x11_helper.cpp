@@ -124,14 +124,14 @@ LayoutUnit X11Helper::getCurrentLayout()
     if (!QX11Info::isPlatformX11()) {
         return LayoutUnit();
     }
-	QList<LayoutUnit> currentLayouts = getLayoutsList();
-	unsigned int group = X11Helper::getGroup();
-	if( group < (unsigned int)currentLayouts.size() )
-		return currentLayouts[group];
+    QList<LayoutUnit> currentLayouts = getLayoutsList();
+    unsigned int group = X11Helper::getGroup();
+    if( group < (unsigned int)currentLayouts.size() )
+        return currentLayouts.at(group);
 
-	qCWarning(KCM_KEYBOARD) << "Current group number" << group << "is outside of current layout list" <<
-						getLayoutsListAsString(currentLayouts);
-	return LayoutUnit();
+    qCWarning(KCM_KEYBOARD) << "Current group number" << group << "is outside of current layout list" <<
+                               getLayoutsListAsString(currentLayouts);
+    return LayoutUnit();
 }
 
 LayoutSet X11Helper::getCurrentLayouts()
