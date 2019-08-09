@@ -149,10 +149,10 @@ void AddLayoutDialog::layoutChanged(int layoutIdx)
 
 void AddLayoutDialog::accept()
 {
-	selectedLayoutUnit.layout = layoutDialogUi->layoutComboBox->itemData(layoutDialogUi->layoutComboBox->currentIndex()).toString();
-	selectedLayoutUnit.variant = layoutDialogUi->variantComboBox->itemData(layoutDialogUi->variantComboBox->currentIndex()).toString();
+    selectedLayoutUnit.setLayout(layoutDialogUi->layoutComboBox->itemData(layoutDialogUi->layoutComboBox->currentIndex()).toString());
+    selectedLayoutUnit.setVariant(layoutDialogUi->variantComboBox->itemData(layoutDialogUi->variantComboBox->currentIndex()).toString());
     QString label = layoutDialogUi->labelEdit->text();
-	if( label == selectedLayoutUnit.layout ) {
+    if( label == selectedLayoutUnit.layout() ) {
 		label = QLatin1String("");
 	}
 	selectedLayoutUnit.setDisplayName( label );

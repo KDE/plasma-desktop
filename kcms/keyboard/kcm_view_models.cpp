@@ -163,20 +163,20 @@ QVariant LayoutsTableModel::data(const QModelIndex &index, int role) const
      if (role == Qt::DisplayRole) {
     	 switch( index.column() ) {
     	 case MAP_COLUMN:
-    		 return layoutUnit.layout;
+             return layoutUnit.layout();
     	 break;
     	 case LAYOUT_COLUMN: {
-    		 const LayoutInfo* layoutInfo = rules->getLayoutInfo(layoutUnit.layout);
-             return layoutInfo != nullptr ? layoutInfo->description : layoutUnit.layout;
+             const LayoutInfo* layoutInfo = rules->getLayoutInfo(layoutUnit.layout());
+             return layoutInfo != nullptr ? layoutInfo->description : layoutUnit.layout();
     	 }
     	 case VARIANT_COLUMN: {
-    		 if( layoutUnit.variant.isEmpty() )
+             if( layoutUnit.variant().isEmpty() )
     			 return QVariant();
-    		 const LayoutInfo* layoutInfo = rules->getLayoutInfo(layoutUnit.layout);
+             const LayoutInfo* layoutInfo = rules->getLayoutInfo(layoutUnit.layout());
     		 if( layoutInfo == nullptr )
     			 return QVariant();
-    		 const VariantInfo* variantInfo = layoutInfo->getVariantInfo(layoutUnit.variant);
-    		 return variantInfo != nullptr ? variantInfo->description : layoutUnit.variant;
+             const VariantInfo* variantInfo = layoutInfo->getVariantInfo(layoutUnit.variant());
+             return variantInfo != nullptr ? variantInfo->description : layoutUnit.variant();
     	 }
          break;
     	 case DISPLAY_NAME_COLUMN:
@@ -196,7 +196,7 @@ QVariant LayoutsTableModel::data(const QModelIndex &index, int role) const
     		 return layoutUnit.getDisplayName();
     	 break;
     	 case VARIANT_COLUMN:
-    		 return layoutUnit.variant;
+             return layoutUnit.variant();
     	 break;
     	 case SHORTCUT_COLUMN:
     		 return layoutUnit.getShortcut().toString();
@@ -250,7 +250,7 @@ bool LayoutsTableModel::setData(const QModelIndex &index, const QVariant &value,
 	break;
 	case VARIANT_COLUMN: {
 		QString variant = value.toString();
-		layoutUnit.variant = variant;
+        layoutUnit.setVariant(variant);
 	}
 	break;
 	case SHORTCUT_COLUMN: {
@@ -331,7 +331,7 @@ QWidget *VariantComboDelegate::createEditor(QWidget *parent, const QStyleOptionV
 {
 	QComboBox *editor = new QComboBox(parent);
 	const LayoutUnit& layoutUnit = keyboardConfig->layouts[index.row()];
-	populateComboWithVariants(editor, layoutUnit.layout, rules);
+    populateComboWithVariants(editor, layoutUnit.layout(), rules);
 	connect(editor, &QComboBox::currentTextChanged, this, [this, editor]() {
 		Q_EMIT const_cast<VariantComboDelegate*>(this)->commitData(editor);
 	});

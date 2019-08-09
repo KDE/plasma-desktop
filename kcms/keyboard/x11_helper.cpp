@@ -432,16 +432,16 @@ static QString& stripVariantName(QString& variant)
 LayoutUnit::LayoutUnit(const QString& fullLayoutName)
 {
 	QStringList lv = fullLayoutName.split(LAYOUT_VARIANT_SEPARATOR_PREFIX);
-	layout = lv[0];
-	variant = lv.size() > 1 ? stripVariantName(lv[1]) : QLatin1String("");
+    m_layout = lv[0];
+    m_variant = lv.size() > 1 ? stripVariantName(lv[1]) : QLatin1String("");
 }
 
 QString LayoutUnit::toString() const
 {
-	if( variant.isEmpty() )
-		return layout;
+    if( m_variant.isEmpty() )
+        return m_layout;
 
-	return layout + LAYOUT_VARIANT_SEPARATOR_PREFIX+variant+LAYOUT_VARIANT_SEPARATOR_SUFFIX;
+    return m_layout + LAYOUT_VARIANT_SEPARATOR_PREFIX + m_variant + LAYOUT_VARIANT_SEPARATOR_SUFFIX;
 }
 
 const int LayoutUnit::MAX_LABEL_LENGTH = 3;

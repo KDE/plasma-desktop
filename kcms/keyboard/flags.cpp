@@ -144,10 +144,10 @@ QString Flags::getShortText(const LayoutUnit& layoutUnit, const KeyboardConfig& 
 	if( layoutUnit.isEmpty() )
 		return QStringLiteral("--");
 
-	QString layoutText = layoutUnit.layout;
+    QString layoutText = layoutUnit.layout();
 
 	foreach(const LayoutUnit& lu, keyboardConfig.layouts) {
-		if( layoutUnit.layout == lu.layout && layoutUnit.variant == lu.variant ) {
+        if( layoutUnit.layout() == lu.layout() && layoutUnit.variant() == lu.variant() ) {
 			layoutText = lu.getDisplayName();
 			break;
 		}
@@ -180,17 +180,17 @@ static QString getDisplayText(const QString& layout, const QString& variant, con
 QString Flags::getLongText(const LayoutUnit& layoutUnit, const Rules* rules)
 {
 	if( rules == nullptr ) {
-		return getDisplayText(layoutUnit.layout, layoutUnit.variant, rules);
+        return getDisplayText(layoutUnit.layout(), layoutUnit.variant(), rules);
 	}
 
-	QString layoutText = layoutUnit.layout;
-	const LayoutInfo* layoutInfo = rules->getLayoutInfo(layoutUnit.layout);
+    QString layoutText = layoutUnit.layout();
+    const LayoutInfo* layoutInfo = rules->getLayoutInfo(layoutUnit.layout());
 	if( layoutInfo != nullptr ) {
 		layoutText = layoutInfo->description;
 
-		if( ! layoutUnit.variant.isEmpty() ) {
-			const VariantInfo* variantInfo = layoutInfo->getVariantInfo(layoutUnit.variant);
-			QString variantText = variantInfo != nullptr ? variantInfo->description : layoutUnit.variant;
+        if( ! layoutUnit.variant().isEmpty() ) {
+            const VariantInfo* variantInfo = layoutInfo->getVariantInfo(layoutUnit.variant());
+            QString variantText = variantInfo != nullptr ? variantInfo->description : layoutUnit.variant();
 
 			layoutText = getDisplayText(layoutText, variantText, rules);
 		}
@@ -239,7 +239,7 @@ const QIcon Flags::getIconWithText(const LayoutUnit& layoutUnit, const KeyboardC
 	}
 
 	if( keyboardConfig.indicatorType == KeyboardConfig::SHOW_FLAG ) {
-		QIcon icon = getIcon(layoutUnit.layout);
+        QIcon icon = getIcon(layoutUnit.layout());
 		if( ! icon.isNull() ) {
 			iconOrTextMap[ key ] = icon;
 			return icon;
@@ -257,7 +257,7 @@ const QIcon Flags::getIconWithText(const LayoutUnit& layoutUnit, const KeyboardC
 //	p.setRenderHint(QPainter::Antialiasing);
 
 	if( keyboardConfig.indicatorType == KeyboardConfig::SHOW_LABEL_ON_FLAG ) {
-    	QIcon iconf = createIcon(layoutUnit.layout);
+        QIcon iconf = createIcon(layoutUnit.layout());
         painter.drawPixmap(pixmap.rect(), iconf.pixmap(TRAY_ICON_SIZE));
 	}
 

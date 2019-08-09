@@ -88,7 +88,7 @@ int LayoutsMenu::switchToLayout(const LayoutUnit& layoutUnit, const KeyboardConf
 QAction* LayoutsMenu::createAction(const LayoutUnit& layoutUnit) const
 {
 	QString menuText = Flags::getFullText(layoutUnit, keyboardConfig, &rules);
-	QAction* action = new QAction(getFlag(layoutUnit.layout), menuText, actionGroup);
+    QAction* action = new QAction(getFlag(layoutUnit.layout()), menuText, actionGroup);
 	action->setData(layoutUnit.toString());
 	//FIXME: tooltips don't work on dbusmenus???
 //	if( ! layoutUnit.getShortcut().isEmpty() ) {

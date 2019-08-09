@@ -87,53 +87,57 @@ struct XkbConfig {
 };
 
 
-struct LayoutUnit {
-	static const int MAX_LABEL_LENGTH;
+class LayoutUnit {
+public:
+    static const int MAX_LABEL_LENGTH;
 
-	//TODO: move these to private?
-	QString layout;
-	QString variant;
-
-	LayoutUnit() {}
-	explicit LayoutUnit(const QString& fullLayoutName);
-	LayoutUnit(const QString& layout_, const QString& variant_) {
-		layout = layout_;
-		variant = variant_;
-	}
+    LayoutUnit() {}
+    explicit LayoutUnit(const QString& fullLayoutName);
+    LayoutUnit(const QString& layout, const QString& variant) {
+        m_layout = layout;
+        m_variant = variant;
+    }
     /*explicit*/ LayoutUnit(const LayoutUnit& other) {
         operator=(other);
     }
 
     LayoutUnit &operator=(const LayoutUnit &other) {
         if (this != &other) {
-            layout = other.layout;
-            variant = other.variant;
+            m_layout = other.m_layout;
+            m_variant = other.m_variant;
             displayName = other.displayName;
             shortcut = other.shortcut;
         }
         return *this;
     }
 
-	QString getRawDisplayName() const { return displayName; }
-	QString getDisplayName() const { return !displayName.isEmpty() ? displayName :  layout; }
-	void setDisplayName(const QString& name) { displayName = name; }
+    QString getRawDisplayName() const { return displayName; }
+    QString getDisplayName() const { return !displayName.isEmpty() ? displayName :  m_layout; }
+    void setDisplayName(const QString& name) { displayName = name; }
 
-	void setShortcut(const QKeySequence& shortcut) { this->shortcut = shortcut; }
-	QKeySequence getShortcut() const { return shortcut; }
+    void setShortcut(const QKeySequence& shortcut) { this->shortcut = shortcut; }
+    QKeySequence getShortcut() const { return shortcut; }
+    QString layout() const { return m_layout; }
+    void setLayout(const QString &layout) { m_layout = layout; }
+    QString variant() const { return m_variant; }
+    void setVariant(const QString &variant) { m_variant = variant; }
 
-	bool isEmpty() const { return layout.isEmpty(); }
-	bool isValid() const { return ! isEmpty(); }
-	bool operator==(const LayoutUnit& layoutItem) const {
-		return layout==layoutItem.layout && variant==layoutItem.variant;
-	}
-	bool operator!=(const LayoutUnit& layoutItem) const {
-		return ! (*this == layoutItem);
-	}
-	QString toString() const;
+    bool isEmpty() const { return m_layout.isEmpty(); }
+    bool isValid() const { return ! isEmpty(); }
+    bool operator==(const LayoutUnit& layoutItem) const {
+        // FIXME: why not compare the other properties?
+        return m_layout == layoutItem.m_layout && m_variant == layoutItem.m_variant;
+    }
+    bool operator!=(const LayoutUnit& layoutItem) const {
+        return ! (*this == layoutItem);
+    }
+    QString toString() const;
 
 private:
-	QString displayName;
-	QKeySequence shortcut;
+    QString displayName;
+    QKeySequence shortcut;
+    QString m_layout;
+    QString m_variant;
 };
 
 struct LayoutSet {
@@ -142,9 +146,8 @@ struct LayoutSet {
 
 	LayoutSet() {}
 
-	LayoutSet(const LayoutSet& currentLayouts) {
-		this->layouts = currentLayouts.layouts;
-		this->currentLayout = currentLayouts.currentLayout;
+    LayoutSet(const LayoutSet& other) {
+        operator=(other);
 	}
 
 	bool isValid() const {

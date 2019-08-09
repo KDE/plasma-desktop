@@ -135,7 +135,7 @@ void KeyboardConfig::load()
     QString labelsStr = config.readEntry("DisplayNames", "");
     QStringList labels = labelsStr.split(LIST_SEPARATOR, QString::KeepEmptyParts);
     for(int i=0; i<labels.count() && i<layouts.count(); i++) {
-    	if( !labels[i].isEmpty() && labels[i] != layouts[i].layout ) {
+        if( !labels[i].isEmpty() && labels[i] != layouts[i].layout() ) {
     		layouts[i].setDisplayName(labels[i]);
     	}
     }
