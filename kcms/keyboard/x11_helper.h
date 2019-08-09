@@ -100,12 +100,19 @@ struct LayoutUnit {
 		layout = layout_;
 		variant = variant_;
 	}
-	/*explicit*/ LayoutUnit(const LayoutUnit& layoutUnit) {
-		layout = layoutUnit.layout;
-		variant = layoutUnit.variant;
-		displayName = layoutUnit.displayName;
-		shortcut = layoutUnit.shortcut;
-	}
+    /*explicit*/ LayoutUnit(const LayoutUnit& other) {
+        operator=(other);
+    }
+
+    LayoutUnit &operator=(const LayoutUnit &other) {
+        if (this != &other) {
+            layout = other.layout;
+            variant = other.variant;
+            displayName = other.displayName;
+            shortcut = other.shortcut;
+        }
+        return *this;
+    }
 
 	QString getRawDisplayName() const { return displayName; }
 	QString getDisplayName() const { return !displayName.isEmpty() ? displayName :  layout; }
