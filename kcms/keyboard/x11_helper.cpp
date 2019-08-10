@@ -19,11 +19,6 @@
 #include "x11_helper.h"
 #include "debug.h"
 
-#define explicit explicit_is_keyword_in_cpp
-#include <xcb/xkb.h>
-#undef explicit
-
-
 #include <QX11Info>
 #include <QCoreApplication>
 #include <QDebug>
@@ -33,7 +28,7 @@
 #include <X11/Xatom.h>
 #include <X11/XKBlib.h>
 #include <X11/extensions/XKBrules.h>
-#include <xcb/xcb.h>
+
 #include <fixx11h.h>
 
 // more information about the limit https://bugs.freedesktop.org/show_bug.cgi?id=19501
