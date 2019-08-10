@@ -123,6 +123,9 @@ struct Rules {
 	QString fileName;
 	QString geoName;
 
+    GeometryId(const GeometryId& other) {
+        operator=(other);
+    }
 	GeometryId(const QString& fileName_, const QString& geoName_):
 	  fileName(fileName_),
 	  geoName(geoName_) {}
