@@ -574,6 +574,7 @@ PlasmaComponents.ContextMenu {
                 checked: menu.visualParent && menu.get(atm.IsGroupable) === true
 
                 text: i18n("Allow this program to be grouped")
+                icon: "view-group"
 
                 onClicked: tasksModel.requestToggleGrouping(menu.modelIndex)
             }
