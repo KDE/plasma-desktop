@@ -47,13 +47,20 @@ KCM.SimpleKCM {
 
     Kirigami.FormLayout {
         QtControls.CheckBox {
-            Kirigami.FormData.label: i18n("Critical notifications:")
-            text: i18n("Show in do not disturb mode")
+            Kirigami.FormData.label: i18n("Do not disturb:")
+            text: i18nc("Do not disturb when screens are mirrored", "When screens are mirrored")
+            checked: kcm.settings.inhibitNotificationsWhenScreensMirrored
+            onClicked: kcm.settings.inhibitNotificationsWhenScreensMirrored = checked
+        }
+
+        QtControls.CheckBox {
+            text: i18n("Show critical notifications")
             checked: kcm.settings.criticalPopupsInDoNotDisturbMode
             onClicked: kcm.settings.criticalPopupsInDoNotDisturbMode = checked
         }
 
         QtControls.CheckBox {
+            Kirigami.FormData.label: i18n("Critical notifications:")
             text: i18n("Always keep on top")
             checked: kcm.settings.keepCriticalAlwaysOnTop
             onClicked: kcm.settings.keepCriticalAlwaysOnTop = checked
