@@ -34,7 +34,6 @@ ColumnLayout {
     property alias cfg_menuItems: configButtons.menuItems
 
     Kirigami.FormLayout {
-
         Button {
             id: iconButton
 
@@ -111,19 +110,19 @@ ColumnLayout {
             id: alphaSort
             text: i18n("Sort alphabetically")
         }
-
-        Item {
-            Kirigami.FormData.isSection: true
-        }
     }
 
     ConfigButtons {
         id: configButtons
+        Layout.alignment: Qt.AlignHCenter
     }
-
     Label {
         Layout.fillWidth: true
         text: i18n("Drag tabs between the boxes to show/hide them, or reorder the visible tabs by dragging.")
         wrapMode: Text.WordWrap
+    }
+
+    Item {
+        Layout.fillHeight: true
     }
 }

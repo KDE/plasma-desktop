@@ -19,6 +19,7 @@
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Layouts 1.1
 import org.kde.kquickcontrolsaddons 2.0
 
 PlasmaCore.FrameSvgItem {
@@ -27,33 +28,33 @@ PlasmaCore.FrameSvgItem {
     property alias text: textElement.text
     property string name
 
-    width: units.gridUnit * 6
-    height: units.gridUnit * 5
+    width: units.gridUnit * 5
+    height: units.gridUnit * 4
 
     visible: name != "empty"
 
     imagePath: "widgets/background"
 
-    PlasmaCore.IconItem {
-        id: iconElement
-
+    ColumnLayout {
         anchors.centerIn: parent
-        width: units.iconSizes.medium
-        height: width
 
-        source: icon
-    }
+        PlasmaCore.IconItem {
+            id: iconElement
 
-    QtControls.Label {
-        id: textElement
-        anchors {
-            top: iconElement.bottom
-            left: parent.left
-            right: parent.right
+            Layout.alignment: Qt.AlignHCenter
+            Layout.preferredWidth: units.iconSizes.medium
+            Layout.preferredHeight: width
+
+            source: icon
         }
-        horizontalAlignment: Text.AlignHCenter
-        elide: Text.ElideRight
-        color: PlasmaCore.ColorScope.textColor
-        font.pointSize: theme.smallestFont.pointSize
+
+        QtControls.Label {
+            id: textElement
+            Layout.alignment: Qt.AlignHCenter
+            horizontalAlignment: Text.AlignHCenter
+            elide: Text.ElideRight
+            color: PlasmaCore.ColorScope.textColor
+            font.pointSize: theme.smallestFont.pointSize
+        }
     }
 }
