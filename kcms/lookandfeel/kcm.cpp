@@ -67,10 +67,6 @@ KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
     , m_resetDefaultLayout(false)
     , m_applyWindowDecoration(true)
 {
-    //This flag seems to be needed in order for QQuickWidget to work
-    //see https://bugreports.qt-project.org/browse/QTBUG-40765
-    //also, it seems to work only if set in the kcm, not in the systemsettings' main
-    qApp->setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
     qmlRegisterType<QStandardItemModel>();
     qmlRegisterType<KCMLookandFeel>();
     KAboutData* about = new KAboutData(QStringLiteral("kcm_lookandfeel"), i18n("Global Theme"),
