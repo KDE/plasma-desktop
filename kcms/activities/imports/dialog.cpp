@@ -68,7 +68,6 @@ public:
     QTabWidget  *tabs;
 
     QQuickWidget *tabGeneral;
-    QQuickWidget *tabOther;
     KMessageWidget *message;
     QDialogButtonBox *buttons;
     QString defaultOKText;
@@ -85,11 +84,6 @@ public:
 
         if (setViewSource(view, QStringLiteral("/qml/activityDialog/") + file)) {
             tabs->addTab(view, title);
-
-            auto root = view->rootObject();
-            Q_ASSERT(root);
-            QMetaObject::invokeMethod(root, "load", Qt::DirectConnection);
-
         } else {
             message->setText(i18n("Error loading the QML files. Check your installation.\nMissing %1",
                                   QStringLiteral(KAMD_KCM_DATADIR) + QStringLiteral("/qml/activityDialog/") + file));
@@ -142,7 +136,7 @@ Dialog::Dialog(QObject *parent)
     : QDialog()
     , d(this)
 {
-    resize(600, 500);
+    resize(550, 400);
 
     d->layout = new QVBoxLayout(this);
 
@@ -156,7 +150,6 @@ Dialog::Dialog(QObject *parent)
     d->tabs = new QTabWidget(this);
     d->layout->addWidget(d->tabs);
     d->tabGeneral = d->createTab(i18n("General"), QStringLiteral("GeneralTab.qml"));
-    d->tabOther   = d->createTab(i18n("Other"),   QStringLiteral("OtherTab.qml"));
 
     // Buttons
     d->buttons = new QDialogButtonBox(
@@ -185,7 +178,7 @@ void Dialog::init(const QString &activityId)
     setActivityId(activityId);
     setActivityName(QString());
     setActivityDescription(QString());
-    setActivityIcon(QString());
+    setActivityIcon(QStringLiteral("preferences-activities"));
     setActivityIsPrivate(false);
 
     setActivityShortcut(QKeySequence());
@@ -257,8 +250,8 @@ IMPLEMENT_PROPERTY(General, QString,      const QString &,      Name)
 IMPLEMENT_PROPERTY(General, QString,      const QString &,      Description)
 IMPLEMENT_PROPERTY(General, QString,      const QString &,      Icon)
 IMPLEMENT_PROPERTY(General, QString,      const QString &,      Wallpaper)
-IMPLEMENT_PROPERTY(Other,   QKeySequence, const QKeySequence &, Shortcut)
-IMPLEMENT_PROPERTY(Other,   bool,         bool,                 IsPrivate)
+IMPLEMENT_PROPERTY(General, QKeySequence, const QKeySequence &, Shortcut)
+IMPLEMENT_PROPERTY(General, bool,         bool,                 IsPrivate)
 #undef IMPLEMENT_PROPERTY
 
 void Dialog::save()

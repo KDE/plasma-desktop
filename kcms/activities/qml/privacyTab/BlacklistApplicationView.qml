@@ -18,90 +18,73 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.0
-import org.kde.kquickcontrolsaddons 2.0
-import QtQuick.Controls 1.0 as QtControls
+import QtQuick 2.5
+import QtQuick.Controls 2.5 as QQC2
 
-QtControls.ScrollView {
-    anchors.fill: parent
+import org.kde.kirigami 2.5 as Kirigami
 
-    Flow {
-        id: main
+QQC2.ScrollView {
+    enabled: applicationModel.enabled
+    Component.onCompleted: background.visible = true;
 
-        SystemPalette {
-            id: colors
-        }
+    GridView {
+        id: gridView
+        cellHeight: Kirigami.Units.gridUnit * 5
+        cellWidth: Kirigami.Units.gridUnit * 9
+        model: applicationModel
+        delegate: Item {
+            height: gridView.cellHeight
+            width: gridView.cellWidth
 
-        width: parent.parent.width
+            Rectangle {
+                anchors.fill: parent
+                visible: mouseArea.containsMouse
+                color: Kirigami.Theme.hoverColor
+            }
 
-        property int minimumHeight: 100
+            Kirigami.Icon {
+                id: icon
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.bottom: parent.verticalCenter
+                height: Kirigami.Units.iconSizes.medium
+                width: height
+                source: model.icon
+                opacity: model.blocked ? 0.6 : 1.0
 
-        spacing: 16
+                Behavior on opacity { NumberAnimation { duration: 100 } }
+            }
 
-        height: Math.max(childrenRect.height, minimumHeight)
+            Kirigami.Icon {
+                anchors.bottom: icon.bottom
+                anchors.right: icon.right
+                height: Kirigami.Units.iconSizes.small
+                width: height
+                source: "emblem-unavailable"
+                opacity: model.blocked ? 1.0 : 0.0
 
-        opacity: applicationModel.enabled ? 1 : .3
-        Behavior on opacity { NumberAnimation { duration: 150 } }
+                Behavior on opacity { NumberAnimation { duration: 100 } }
+            }
 
-        Repeater {
-            model: applicationModel
-            Column {
-                id: item
+            QQC2.Label {
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.top: parent.verticalCenter
+                width: parent.width - 20
+                text: model.title
+                horizontalAlignment: Text.AlignHCenter
+                elide: Text.ElideRight
+                maximumLineCount: 2
+                wrapMode: Text.Wrap
+                opacity: model.blocked ? 0.6 : 1.0
 
-                property bool blocked: model.blocked
+                Behavior on opacity { NumberAnimation { duration: 100 } }
+            }
 
-                Item {
-                    id: mainIcon
-
-                    width  : 64 + 20
-                    height : 64 + 20
-
-                    QIconItem {
-                        id: icon
-                        icon: model.icon
-
-                        anchors.fill    : parent
-                        anchors.margins : 10
-
-                        opacity: item.blocked ? 0.5 : 1.0
-                        Behavior on opacity { NumberAnimation { duration: 150 } }
-                    }
-
-                    QIconItem {
-                        id: iconNo
-                        icon: "dialog-cancel"
-
-                        anchors {
-                            right  : parent.right
-                            bottom : parent.bottom
-                        }
-
-                        width   : 48
-                        height  : 48
-                        opacity : (1 - icon.opacity) * 2
-                    }
-
-                    MouseArea {
-                        onClicked: applicationModel.toggleApplicationBlocked(model.index)
-                        anchors.fill: parent
-                    }
-                }
-
-                Text {
-                    elide   : Text.ElideRight
-                    width   : mainIcon.width
-
-                    text    : model.title
-                    opacity : icon.opacity
-                    color   : colors.windowText
-
-                    anchors.margins          : 10
-                    anchors.horizontalCenter : parent.horizontalCenter
-                    horizontalAlignment      : Text.AlignHCenter
-                }
+            MouseArea {
+                id: mouseArea
+                anchors.fill: parent
+                hoverEnabled: true
+                onClicked: applicationModel.toggleApplicationBlocked(model.index)
             }
         }
     }
-
 }
-

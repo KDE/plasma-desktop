@@ -18,147 +18,73 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.2
-import QtQuick.Controls 1.0 as QtControls
+import QtQuick 2.5
+import QtQuick.Controls 2.5 as QQC2
 
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kquickcontrols 2.0 as KQuickControls
+import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
-import "./components" as Local
-
-Item {
+Kirigami.FormLayout {
     id: root
 
     function setFocus() {
         activityName.forceActiveFocus();
-        console.log("GeneralTab: Set focus called");
     }
 
     property string activityId: ""
 
     property alias activityName        : activityName.text
     property alias activityDescription : activityDescription.text
-    property alias activityIcon        : buttonIcon.iconName
-    property alias activityWallpaper   : imageWallpaper.source
+    property alias activityIcon        : activityIcon.icon.name
+    property alias activityIsPrivate   : activityIsPrivate.checked
+    property alias activityShortcut    : activityShortcut.keySequence
 
-    height : content.childrenRect.height + 4 * units.smallSpacing
-    width  : content.childrenRect.width + 4 * units.smallSpacing
+    Item {
+        height: Kirigami.Units.smallSpacing
+    }
 
-    Column {
-        id: content
+    QQC2.Button {
+        id: activityIcon
+        implicitHeight:  Kirigami.Units.iconSizes.medium + Kirigami.Units.largeSpacing * 2
+        implicitWidth: height
+        icon.height: Kirigami.Units.iconSizes.medium
+        icon.width: Kirigami.Units.iconSizes.medium
+        icon.name: "preferences-activities"
+        Kirigami.FormData.label: i18nd("kcm_activities5", "Icon:")
 
-        anchors {
-            fill: parent
-            margins: 2 * units.smallSpacing
+        KQuickControlsAddons.IconDialog {
+            id: iconDialog
+            onIconNameChanged: activityIcon.icon.name = iconName
         }
 
-        spacing: units.smallSpacing
-
-        QtControls.Label {
-            font.bold: true
-            text: i18nd("kcm_activities5", "Activity information")
-        }
-
-        property int labelWidth : 2 * units.largeSpacing +
-                Math.max(activityName.desiredLabelWidth, activityDescription.desiredLabelWidth)
-
-        Local.LabeledTextField {
-            id: activityName
-            label: i18nd("kcm_activities5", "Name:")
-
-            labelWidth: content.labelWidth
-        }
-
-        Local.LabeledTextField {
-            id: activityDescription
-            label: i18nd("kcm_activities5", "Description:")
-
-            labelWidth: content.labelWidth
-        }
-
-        Item {
-            width: parent.width
-            height: units.smallSpacing
-        }
-
-        Row {
-            height  : units.iconSizes.large * 3
-            width   : childrenRect.width
-            spacing : units.largeSpacing
-
-            Item {
-                id: panelWallpaper
-
-                visible: false
-
-                height: parent.height
-                width: buttonChangeWallpaper.width + imageWallpaper.width + units.smallSpacing
-
-                QtControls.Label {
-                    id: labelWallpaper
-                    font.bold: true
-                    text: i18nd("kcm_activities5", "Wallpaper")
-                }
-
-                QtControls.Button {
-                    id: buttonChangeWallpaper
-                    width: content.labelWidth
-                    text: i18ndc("kcm_activities5", "@action:button", "Change...")
-
-                    anchors {
-                        verticalCenter: imageWallpaper.verticalCenter
-                    }
-                }
-
-                Image {
-                    id: imageWallpaper
-                    source: ""
-
-                    width: height / 3 * 4
-
-                    anchors {
-                        top: labelWallpaper.bottom
-                        bottom: parent.bottom
-                        left: buttonChangeWallpaper.right
-
-                        leftMargin: units.smallSpacing
-                    }
-
-                }
-            }
-
-            Item {
-                id: panelIcon
-
-                height : parent.height
-                width  : parent.height
-
-                QtControls.Label {
-                    id: labelIcon
-                    font.bold: true
-                    text: i18nd("kcm_activities5", "Icon")
-                }
-
-                Item {
-                    anchors {
-                        top: labelIcon.bottom
-                        bottom: parent.bottom
-                        left: parent.left
-                        right: parent.right
-                    }
-
-                    Local.IconChooser {
-                        id: buttonIcon
-
-                        width: height
-                        height: 2 * units.iconSizes.large
-
-                        anchors {
-                            centerIn: parent
-                        }
-                    }
-                }
-            }
+        onClicked: {
+            iconDialog.open();
         }
     }
-}
 
+    QQC2.TextField {
+        id: activityName
+        Kirigami.FormData.label: i18nd("kcm_activities5", "Name:")
+    }
+
+    QQC2.TextField {
+        id: activityDescription
+        Kirigami.FormData.label: i18nd("kcm_activities5", "Description:")
+    }
+
+    Kirigami.Separator {
+        Kirigami.FormData.isSection: true
+    }
+
+    QQC2.CheckBox {
+        id: activityIsPrivate
+        Kirigami.FormData.label: i18nd("kcm_activities5", "Privacy:")
+        text: i18nd("kcm_activities5", "Do not track usage for this activity")
+    }
+
+    KQuickControls.KeySequenceItem {
+        id: activityShortcut
+        Kirigami.FormData.label: i18nd("kcm_activities5", "Shortcut for switching:")
+    }
+}

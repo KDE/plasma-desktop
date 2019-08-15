@@ -18,176 +18,71 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.0
-import org.kde.kquickcontrolsaddons 2.0
-import QtQuick.Controls 1.0 as QtControls
+import QtQuick 2.5
+import QtQuick.Controls 2.5 as QQC2
+import QtQuick.Layouts 1.0
 
 import org.kde.activities 0.1 as Activities
 import org.kde.activities.settings 0.1
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.5 as Kirigami
 
-Item {
+ColumnLayout {
     id: root
 
-    anchors.fill: parent
-
-    QtControls.Button {
-        id: buttonCreateActivity
-
-        text: i18nd("kcm_activities5", "Create activity...")
-        iconName: "list-add"
-
-        anchors {
-            top: parent.top
-            left: parent.left
-        }
-
-        onClicked: ActivitySettings.newActivity();
-
-        enabled: !dialogCreateActivityLoader.itemVisible
-        visible: ActivitySettings.newActivityAuthorized
-    }
-
-    Loader {
-        id: dialogCreateActivityLoader
-
-        property bool itemVisible: status == Loader.Ready && item.visible
-
-        z: 1
-
-        anchors {
-            top: buttonCreateActivity.bottom
-            left: buttonCreateActivity.left
-        }
-    }
-
-    QtControls.ScrollView {
-        anchors {
-            top: buttonCreateActivity.bottom
-            topMargin: units.smallSpacing
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-        }
-
-        enabled: !dialogCreateActivityLoader.itemVisible
+    QQC2.ScrollView {
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+        Component.onCompleted: background.visible = true;
 
         ListView {
             id: activitiesList
-            width: parent.width
-            // anchors.fill: parent
 
             model: Activities.ActivityModel {
                 id: kactivities
             }
 
-            SystemPalette {
-                id: palette
-                colorGroup: SystemPalette.Active
-            }
+            delegate: Kirigami.SwipeListItem {
+                hoverEnabled: true
 
-            ///////////////////////////////////////////////////////////////////
-            delegate: Rectangle {
-                width: parent.width
+                contentItem: RowLayout {
+                    id: row
 
-                height: units.iconSizes.medium + units.smallSpacing * 2
-
-                color: (model.index % 2 == 0) ? palette.base : palette.alternateBase
-
-                Item {
-                    id: header
-
-                    anchors {
-                        fill: parent
-                        margins: units.smallSpacing
-                    }
-
-                    QIconItem {
+                    Kirigami.Icon {
                         id: icon
-                        icon: model.icon
-
-                        width:  height
-                        height: parent.height
-
-                        anchors {
-                            left:   parent.left
-                            top:    parent.top
-                        }
+                        height: Kirigami.Units.iconSizes.medium
+                        width: height
+                        source: model.icon
                     }
 
-                    QtControls.Label {
+                    QQC2.Label {
+                        Layout.fillWidth: true
                         text: model.name
-
-                        anchors {
-                            left: icon.right
-                            right: buttons.left
-                            leftMargin: units.largeSpacing
-                            verticalCenter: icon.verticalCenter
-                        }
-                    }
-
-                    Row {
-                        id: buttons
-
-                        spacing: units.smallSpacing
-                        height: parent.height
-
-                        anchors {
-                            right: parent.right
-
-                            verticalCenter: parent.verticalCenter
-                        }
-
-                        QtControls.Button {
-                            id: buttonConfigure
-
-                            iconName: "configure"
-
-                            onClicked: ActivitySettings.configureActivity(model.id);
-                        }
-
-                        QtControls.Button {
-                            id: buttonDelete
-
-                            iconName: "edit-delete"
-
-                            onClicked: ActivitySettings.deleteActivity(model.id);
-
-                            visible: ActivitySettings.newActivityAuthorized
-
-                            // Disable the button when there's only one activity
-                            enabled:  activitiesList.count > 1
-                        }
-
-                        visible: !dialogDeleteLoader.itemVisible
-                    }
-
-                    visible: !dialogConfigureLoader.itemVisible
-                }
-
-                Loader {
-                    id: dialogConfigureLoader
-
-                    property bool itemVisible: status == Loader.Ready && item.visible
-
-                    anchors {
-                        left: parent.left
-                        top: parent.top
                     }
                 }
 
-                Loader {
-                    id: dialogDeleteLoader
-
-                    property bool itemVisible: status == Loader.Ready && item.visible
-
-                    anchors {
-                        left: parent.left
-                        top: header.bottom
+                actions: [
+                    Kirigami.Action {
+                        icon.name: "configure"
+                        tooltip: i18nc("@info:tooltip", "Configure " + model.name + " activity...")
+                        onTriggered: ActivitySettings.configureActivity(model.id);
+                    },
+                    Kirigami.Action {
+                        visible: ActivitySettings.newActivityAuthorized
+                        enabled:  activitiesList.count > 1
+                        icon.name: "edit-delete"
+                        tooltip: i18nc("@info:tooltip", "Delete " + model.name + " activity")
+                        onTriggered: ActivitySettings.deleteActivity(model.id);
                     }
-                }
+                ]
             }
-            ///////////////////////////////////////////////////////////////////
         }
+    }
+
+    QQC2.Button {
+        id: buttonCreateActivity
+        visible: ActivitySettings.newActivityAuthorized
+        text: i18nd("kcm_activities5", "Create New...")
+        icon.name: "list-add"
+        onClicked: ActivitySettings.newActivity();
     }
 }

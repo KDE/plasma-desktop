@@ -30,6 +30,7 @@
 
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <KMessageWidget>
 
 #include "ui_PrivacyTabBase.h"
 #include "BlacklistedApplicationsModel.h"
@@ -71,7 +72,7 @@ PrivacyTab::PrivacyTab(QWidget *parent)
     // Keep history initialization
 
     d->spinKeepHistory->setRange(0, INT_MAX);
-    d->spinKeepHistory->setSpecialValueText(i18nc("unlimited number of months", "forever"));
+    d->spinKeepHistory->setSpecialValueText(i18nc("unlimited number of months", "Forever"));
 
     connect(d->spinKeepHistory, SIGNAL(valueChanged(int)),
             this, SLOT(spinKeepHistoryValueChanged(int)));
@@ -126,6 +127,8 @@ PrivacyTab::PrivacyTab(QWidget *parent)
     d->checkBlacklistAllNotOnList->setEnabled(false);
     d->blacklistedApplicationsModel->setEnabled(false);
     d->viewBlacklistedApplicationsContainer->setEnabled(false);
+
+    d->messageWidget->setVisible(false);
 }
 
 PrivacyTab::~PrivacyTab()
@@ -190,6 +193,8 @@ void PrivacyTab::forget(int count, const QString &what)
                              ResourcesScoring);
 
     rankingsservice.asyncCall(QStringLiteral("DeleteRecentStats"), QString(), count, what);
+
+    d->messageWidget->animatedShow();
 }
 
 void PrivacyTab::forgetLastHour()
@@ -219,7 +224,7 @@ void PrivacyTab::spinKeepHistoryValueChanged(int value)
 
     if (value) {
         d->spinKeepHistory->setPrefix(
-            i18nc("for in 'keep history for 5 months'", "for "));
+            i18nc("for in 'keep history for 5 months'", "For "));
         d->spinKeepHistory->setSuffix(months.subs(value).toString());
     }
 }

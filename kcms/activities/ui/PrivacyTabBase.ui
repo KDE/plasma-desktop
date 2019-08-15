@@ -6,91 +6,83 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>631</width>
-    <height>479</height>
+    <width>500</width>
+    <height>500</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="labelRememberDocuments">
+    <widget class="KMessageWidget" name="messageWidget">
      <property name="text">
-      <string>Remember opened documents:</string>
+      <string>Cleared the activity history.</string>
+     </property>
+     <property name="messageType">
+      <enum>KMessageWidget::Positive</enum>
+     </property>
+     <property name="icon">
+      <iconset theme="dialog-ok-apply">
+       <normaloff>.</normaloff>.</iconset>
      </property>
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout">
+    <layout class="QFormLayout" name="formLayout">
+     <property name="formAlignment">
+      <set>Qt::AlignHCenter|Qt::AlignTop</set>
+     </property>
+     <item row="1" column="0">
+      <widget class="QLabel" name="labelRememberDocuments">
+       <property name="text">
+        <string>Remember opened documents:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QRadioButton" name="radioRememberAllApplications">
+       <property name="text">
+        <string>For a&amp;ll applications</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QRadioButton" name="radioDontRememberApplications">
+       <property name="text">
+        <string>&amp;Do not remember</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QRadioButton" name="radioRememberSpecificApplications">
+       <property name="text">
+        <string>O&amp;nly for specific applications:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QRadioButton" name="radioRememberAllApplications">
-         <property name="text">
-          <string>For a&amp;ll applications</string>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
+        <widget class="QSpinBox" name="spinKeepHistory"/>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioDontRememberApplications">
+        <widget class="QPushButton" name="buttonClearRecentHistory">
          <property name="text">
-          <string>&amp;Do not remember</string>
+          <string>Clear History</string>
          </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioRememberSpecificApplications">
-         <property name="text">
-          <string>O&amp;nly for specific applications</string>
+         <property name="icon">
+          <iconset theme="edit-clear-history">
+           <normaloff>.</normaloff>.</iconset>
          </property>
         </widget>
        </item>
       </layout>
      </item>
-     <item>
-      <spacer name="horizontalSpacer_2">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
+     <item row="0" column="0">
       <widget class="QLabel" name="labelKeepHistory">
        <property name="text">
-        <string>Keep history</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QSpinBox" name="spinKeepHistory"/>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Minimum</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <widget class="QPushButton" name="buttonClearRecentHistory">
-       <property name="text">
-        <string>Clear recent history</string>
+        <string>Keep history:</string>
        </property>
       </widget>
      </item>
@@ -107,14 +99,28 @@
     </widget>
    </item>
    <item>
-    <widget class="QCheckBox" name="checkBlacklistAllNotOnList">
-     <property name="text">
-      <string>Blacklist all applications not on this list</string>
+    <layout class="QHBoxLayout" name="horizontalLayout_1">
+     <property name="leftMargin">
+      <number>6</number>
      </property>
-    </widget>
+     <item>
+      <widget class="QCheckBox" name="checkBlacklistAllNotOnList">
+       <property name="text">
+        <string>Blacklist applications not on the list</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KMessageWidget</class>
+   <extends>QFrame</extends>
+   <header>kmessagewidget.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
