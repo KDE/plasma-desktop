@@ -198,7 +198,10 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
 
     if (actionId == QLatin1String("hideApplication") && entry->type() == AbstractEntry::RunnableType) {
         QObject *appletInterface = rootModel()->property("appletInterface").value<QObject *>();
-        QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
+        QQmlPropertyMap *appletConfig = nullptr;
+        if (appletInterface) {
+            appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
+        }
 
         if (appletConfig && appletConfig->contains(QLatin1String("hiddenApplications"))) {
             QStringList hiddenApps = appletConfig->value(QLatin1String("hiddenApplications")).toStringList();
@@ -222,7 +225,10 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
         return false;
     } else if (actionId == QLatin1String("unhideSiblingApplications")) {
         QObject *appletInterface = rootModel()->property("appletInterface").value<QObject *>();
-        QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
+        QQmlPropertyMap *appletConfig = nullptr;
+        if (appletInterface) {
+            appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
+        }
 
         if (appletConfig && appletConfig->contains(QLatin1String("hiddenApplications"))) {
             QStringList hiddenApps = appletConfig->value(QLatin1String("hiddenApplications")).toStringList();
@@ -246,7 +252,10 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
         return false;
     } else if (actionId == QLatin1String("unhideChildApplications")) {
         QObject *appletInterface = rootModel()->property("appletInterface").value<QObject *>();
-        QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
+        QQmlPropertyMap *appletConfig = nullptr;
+        if (appletInterface) {
+            appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
+        }
 
         if (entry->type() == AbstractEntry::GroupType
             && appletConfig && appletConfig->contains(QLatin1String("hiddenApplications"))) {
@@ -620,8 +629,10 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
     QStringList hiddenApps;
 
     QObject *appletInterface = rootModel()->property("appletInterface").value<QObject *>();
-    QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
-
+    QQmlPropertyMap *appletConfig = nullptr;
+    if (appletInterface) {
+        appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
+    }
     if (appletConfig && appletConfig->contains(QLatin1String("hiddenApplications"))) {
         hiddenApps = appletConfig->value(QLatin1String("hiddenApplications")).toStringList();
     }
