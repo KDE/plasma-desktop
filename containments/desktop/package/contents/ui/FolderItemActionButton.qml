@@ -25,7 +25,20 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 PlasmaCore.SvgItem {
     id: actionButton
 
-    width: visible ? units.iconSizes.small : 0
+    width: {
+        if (!visible) {
+            return 0;
+        }
+        switch(plasmoid.configuration.iconSize) {
+            case 0: return units.iconSizes.small;
+            case 1: return units.iconSizes.small;
+            case 2: return units.iconSizes.small;
+            case 3: return units.iconSizes.smallMedium;
+            case 4: return units.iconSizes.smallMedium;
+            case 5: return units.iconSizes.medium;
+            default: return units.iconSizes.small;
+        }
+    }
     height: width
 
     signal clicked
