@@ -63,14 +63,14 @@ ColumnLayout {
                 actions: [
                     Kirigami.Action {
                         icon.name: "configure"
-                        tooltip: i18nc("@info:tooltip", "Configure " + model.name + " activity...")
+                        tooltip: i18nc("@info:tooltip", "Configure %1 activity", model.name)
                         onTriggered: ActivitySettings.configureActivity(model.id);
                     },
                     Kirigami.Action {
                         visible: ActivitySettings.newActivityAuthorized
                         enabled:  activitiesList.count > 1
                         icon.name: "edit-delete"
-                        tooltip: i18nc("@info:tooltip", "Delete " + model.name + " activity")
+                        tooltip: i18nc("@info:tooltip", "Delete %1 activity", model.name)
                         onTriggered: ActivitySettings.deleteActivity(model.id);
                     }
                 ]
