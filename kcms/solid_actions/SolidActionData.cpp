@@ -145,7 +145,7 @@ QString SolidActionData::generateUserString( QString className )
     QRegExp camelCase(QStringLiteral("([A-Z])")); // Create the split regexp
 
     finalString = className.remove(0, className.lastIndexOf(':') + 1); // Remove any Class information
-    finalString = finalString.replace( camelCase, QStringLiteral(" \\1") ); // Use Camel Casing to add spaces
+    finalString.replace( camelCase, QStringLiteral(" \\1") ); // Use Camel Casing to add spaces
     finalString = KStringHandler::capwords( finalString ); // Capitalize everything
     return finalString.trimmed();
 }

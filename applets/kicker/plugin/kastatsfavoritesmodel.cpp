@@ -637,7 +637,7 @@ void KAStatsFavoritesModel::setFavoriteOn(const QString &id, const QString &acti
 
     qCDebug(KICKER_DEBUG) << "%%%%%%%%%%% Activity is" << activityId;
     if (activityId.isEmpty() || activityId == QLatin1String(":any") ||
-            activityId == QStringLiteral(":global") ||
+            activityId == QLatin1String(":global") ||
             activityId == m_activities->currentActivity()) {
         d->m_ignoredItems << url;
     }

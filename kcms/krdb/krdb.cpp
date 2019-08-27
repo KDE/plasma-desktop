@@ -107,7 +107,7 @@ static void applyGtkStyles(bool active, int version)
 
    // Pass env. var to kdeinit.
    QString name = gtkEnvVar(version);
-   QString value = list.join(QStringLiteral(":"));
+   QString value = list.join(QLatin1String(":"));
    org::kde::KLauncher klauncher(QStringLiteral("org.kde.klauncher5"), QStringLiteral("/KLauncher"), QDBusConnection::sessionBus());
    klauncher.setLaunchEnv(name, value);
 }
@@ -850,7 +850,7 @@ void runRdb( uint flags )
     delete settings;
     QApplication::flush();
 #if HAVE_X11
-    if (qApp->platformName() == QStringLiteral("xcb")) {
+    if (qApp->platformName() == QLatin1String("xcb")) {
         // We let KIPC take care of ourselves, as we are in a KDE app with
         // QApp::setDesktopSettingsAware(false);
         // Instead of calling QApp::x11_apply_settings() directly, we instead

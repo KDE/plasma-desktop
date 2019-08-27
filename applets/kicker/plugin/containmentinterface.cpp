@@ -156,7 +156,7 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
                 QQuickItem *rootItem = nullptr;
 
                 foreach(QQuickItem *item, gObj->childItems()) {
-                    if (item->objectName() == QStringLiteral("folder")) {
+                    if (item->objectName() == QLatin1String("folder")) {
                         rootItem = item;
 
                         break;

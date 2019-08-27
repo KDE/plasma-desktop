@@ -94,7 +94,7 @@ QString ActionItem::involvedTypes() const
         deviceTypes << actData->nameFromInterface( devType );
     }
 
-    return deviceTypes.join(QStringLiteral(", "));
+    return deviceTypes.join(QLatin1String(", "));
 }
 
 void ActionItem::setIcon(const QString& nameOfIcon)

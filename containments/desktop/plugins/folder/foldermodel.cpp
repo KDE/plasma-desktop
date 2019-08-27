@@ -1396,7 +1396,7 @@ bool FolderModel::isDir(const QModelIndex &index, const KDirModel *dirModel) con
             return true;
         }
 
-        if (KProtocolInfo::protocolClass(url.scheme()) != QStringLiteral(":local")) {
+        if (KProtocolInfo::protocolClass(url.scheme()) != QLatin1String(":local")) {
             return false;
         }
 
@@ -1530,7 +1530,7 @@ inline bool FolderModel::matchMimeType(const KFileItem &item) const
         return false;
     }
 
-    if (m_mimeSet.contains(QStringLiteral("all/all")) || m_mimeSet.contains(QStringLiteral("all/allfiles"))) {
+    if (m_mimeSet.contains(QLatin1String("all/all")) || m_mimeSet.contains(QStringLiteral("all/allfiles"))) {
         return true;
     }
 

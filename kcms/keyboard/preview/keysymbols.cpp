@@ -41,7 +41,7 @@ void KeySymbols::setKey(const QString &a)
     i = str.indexOf("]");
 
     QString st = str.left(i);
-    st = st.remove(" ");
+    st.remove(" ");
     //QStringList klst;
     symbols = st.split(",");
 

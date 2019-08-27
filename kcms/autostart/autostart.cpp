@@ -209,8 +209,8 @@ void Autostart::load()
                 const QStringList onlyShowList = grp.readXdgListEntry("OnlyShowIn");
 
                 const bool disabled = hidden ||
-                                        notShowList.contains(QStringLiteral("KDE")) ||
-                                        (!onlyShowList.isEmpty() && !onlyShowList.contains(QStringLiteral("KDE")));
+                                        notShowList.contains(QLatin1String("KDE")) ||
+                                        (!onlyShowList.isEmpty() && !onlyShowList.contains(QLatin1String("KDE")));
 
                 int indexPath = m_paths.indexOf((item->fileName().adjusted(QUrl::RemoveFilename).toString() ) );
                 if ( indexPath > 2 )
@@ -414,19 +414,19 @@ void Autostart::slotAdvanced()
     if (grp.hasKey("OnlyShowIn"))
     {
         lstEntry = grp.readXdgListEntry("OnlyShowIn");
-        status = lstEntry.contains(QStringLiteral("KDE"));
+        status = lstEntry.contains(QLatin1String("KDE"));
     }
 
     AdvancedDialog *dlg = new AdvancedDialog( this,status );
     if ( dlg->exec() )
     {
         status = dlg->onlyInKde();
-        if ( lstEntry.contains( QStringLiteral("KDE") ) && !status )
+        if ( lstEntry.contains(QLatin1String("KDE") ) && !status )
         {
             lstEntry.removeAll( QStringLiteral("KDE") );
             grp.writeXdgListEntry( "OnlyShowIn", lstEntry );
         }
-        else if ( !lstEntry.contains( QStringLiteral("KDE") ) && status )
+        else if ( !lstEntry.contains(QLatin1String("KDE") ) && status )
         {
             lstEntry.append( QStringLiteral("KDE") );
             grp.writeXdgListEntry( "OnlyShowIn", lstEntry );

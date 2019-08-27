@@ -121,7 +121,7 @@ void KCMFormats::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
     // "it_IT")
     // TODO: Properly handle scripts (@foo)
     QString cvalue = locale.name();
-    if (!cvalue.contains(QLatin1Char('.')) && cvalue != QStringLiteral("C")) {
+    if (!cvalue.contains(QLatin1Char('.')) && cvalue != QLatin1Char('C')) {
         // explicitly add the encoding,
         // otherwise Qt doesn't accept dead keys and garbles the output as well
         cvalue.append(QLatin1Char('.') + QTextCodec::codecForLocale()->name());

@@ -38,17 +38,17 @@ void KimpanelJob::start()
     } else if (operation == QLatin1String("LookupTablePageDown")) {
         m_panelAgent->lookupTablePageDown();
     } else if (operation == QLatin1String("MovePreeditCaret")) {
-        if (parameters().contains(QStringLiteral("position"))) {
+        if (parameters().contains(QLatin1String("position"))) {
             int position = parameters()[QStringLiteral("position")].toInt();
             m_panelAgent->movePreeditCaret(position);
         }
     } else if (operation == QLatin1String("SelectCandidate")) {
-        if (parameters().contains(QStringLiteral("candidate"))) {
+        if (parameters().contains(QLatin1String("candidate"))) {
             int candidate = parameters()[QStringLiteral("candidate")].toInt();
             m_panelAgent->selectCandidate(candidate);
         }
     } else if (operation == QLatin1String("TriggerProperty")) {
-        if (parameters().contains(QStringLiteral("key"))) {
+        if (parameters().contains(QLatin1String("key"))) {
             QString key = parameters()[QStringLiteral("key")].toString();
             m_panelAgent->triggerProperty(key);
         }

@@ -319,9 +319,9 @@ AbstractEntry *SimpleFavoritesModel::favoriteFromId(const QString &id)
     const QUrl url(id);
     const QString &s = url.scheme();
 
-    if ((s.isEmpty() && id.contains(QStringLiteral(".desktop"))) || s == QStringLiteral("preferred")) {
+    if ((s.isEmpty() && id.contains(QLatin1String(".desktop"))) || s == QLatin1String("preferred")) {
         return new AppEntry(this, id);
-    } else if (s == QStringLiteral("ktp")) {
+    } else if (s == QLatin1String("ktp")) {
         return new ContactEntry(this, id);
     } else if (url.isValid() && !url.scheme().isEmpty()) {
         return new FileEntry(this, url);

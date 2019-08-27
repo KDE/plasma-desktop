@@ -515,8 +515,8 @@ QString includeGeometry(QString geometry)
     QString startLine = lines[0];
     for (int i = 0; i < lines.size(); i++) {
         includeLineStr = lines[i];
-        lines[i] = lines[i].remove(QStringLiteral(" "));
-        lines[i] = lines[i].remove(QStringLiteral("\r"));
+        lines[i].remove(QStringLiteral(" "));
+        lines[i].remove(QStringLiteral("\r"));
         if (lines[i].startsWith(QLatin1String("include"))) {
             includeLine = i;
             break;
@@ -525,19 +525,19 @@ QString includeGeometry(QString geometry)
     if (includeLine == -1) {
         return geometry;
     }
-    geometry = geometry.remove(includeLineStr);
-    lines[includeLine] = lines[includeLine].remove(QStringLiteral("include"));
-    lines[includeLine] = lines[includeLine].remove(QStringLiteral("\""));
-    lines[includeLine] = lines[includeLine].remove(QStringLiteral(")"));
-    if (lines[includeLine].contains(QStringLiteral("("))) {
+    geometry.remove(includeLineStr);
+    lines[includeLine].remove(QStringLiteral("include"));
+    lines[includeLine].remove(QStringLiteral("\""));
+    lines[includeLine].remove(QStringLiteral(")"));
+    if (lines[includeLine].contains(QLatin1String("("))) {
         QString includeFile = lines[includeLine].split(QStringLiteral("("))[0];
         QString includeGeom = lines[includeLine].split(QStringLiteral("("))[1];
         qCDebug(KEYBOARD_PREVIEW) << "looking to include " << "geometryName" << includeGeom << "in" << includeFile;
         QString includeStr = getGeometry(includeFile, includeGeom);
         includeStr = getGeometryStrContent(includeStr);
-        geometry = geometry.remove(startLine);
-        geometry = geometry.prepend(includeStr);
-        geometry = geometry.prepend(startLine);
+        geometry.remove(startLine);
+        geometry.prepend(includeStr);
+        geometry.prepend(startLine);
         includeGeometry(geometry);
 
     }
@@ -546,7 +546,7 @@ QString includeGeometry(QString geometry)
 
 QString getGeometryStrContent(QString geometryStr)
 {
-    int k = geometryStr.indexOf(QStringLiteral("{"));
+    int k = geometryStr.indexOf(QLatin1String("{"));
     int k2 = geometryStr.lastIndexOf(QLatin1String("};"));
     geometryStr = geometryStr.mid(k + 1, k2 - k - 2);
     return geometryStr;

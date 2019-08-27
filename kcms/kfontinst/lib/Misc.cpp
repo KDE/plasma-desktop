@@ -441,7 +441,7 @@ QMap<QString, QString> getFontFileMap(const QSet<QString> &files)
                             good=false;
                     if(good)
                         for(int i=0;  i<count && good; ++i)
-                            modified[i]=modified[i].remove(0, dir.length());
+                            modified[i].remove(0, dir.length());
                 }
                 else
                     good=false;
@@ -466,7 +466,7 @@ QString modifyName(const QString &fname)
     QString rv(fname);
 
     for(int s=0; constSymbols[s]; ++s)
-        rv=rv.replace(constSymbols[s], '_');
+        rv.replace(constSymbols[s], '_');
 
     int dotPos(rv.lastIndexOf('.'));
 

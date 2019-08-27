@@ -48,14 +48,14 @@ Aliases::Aliases()
 
         QString temp = als.at(i);
 
-        temp = temp.remove(QStringLiteral(" "));
-        temp = temp.remove(QStringLiteral("\n"));
-        temp = temp.remove(QStringLiteral("\""));
-        temp = temp.remove(QStringLiteral(">"));
-        temp = temp.remove(QStringLiteral("<"));
-        temp = temp.remove(QStringLiteral(";"));
-        temp = temp.remove(QStringLiteral("}"));
-        temp = temp.remove(QStringLiteral("{"));
+        temp.remove(QStringLiteral(" "));
+        temp.remove(QStringLiteral("\n"));
+        temp.remove(QStringLiteral("\""));
+        temp.remove(QStringLiteral(">"));
+        temp.remove(QStringLiteral("<"));
+        temp.remove(QStringLiteral(";"));
+        temp.remove(QStringLiteral("}"));
+        temp.remove(QStringLiteral("{"));
 
         QList<QString>alskeys;
 
@@ -66,7 +66,7 @@ Aliases::Aliases()
             for (int k = 1; k < alskeys.size(); k++) {
 
                 QString tmp = alskeys.at(k);
-                int inofeq = tmp.indexOf(QStringLiteral("="));
+                int inofeq = tmp.indexOf(QLatin1String("="));
 
                 QString lat = tmp.left(inofeq);
                 QString key = tmp.mid(inofeq + 1);
@@ -80,7 +80,7 @@ Aliases::Aliases()
             for (int k = 1; k < alskeys.size(); k++) {
                 QString tmp = alskeys.at(k);
 
-                int inofeq = tmp.indexOf(QStringLiteral("="));
+                int inofeq = tmp.indexOf(QLatin1String("="));
 
                 QString lat = tmp.left(inofeq);
                 QString key = tmp.mid(inofeq + 1);
@@ -94,7 +94,7 @@ Aliases::Aliases()
 
                 QString tmp = alskeys.at(k);
 
-                int inofeq = tmp.indexOf(QStringLiteral("="));
+                int inofeq = tmp.indexOf(QLatin1String("="));
 
                 QString lat = tmp.left(inofeq);
                 QString key = tmp.mid(inofeq + 1);

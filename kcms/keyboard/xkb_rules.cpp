@@ -269,7 +269,7 @@ bool RulesHandler::startElement(const QString &/*namespaceURI*/, const QString &
 {
 	path << QString(qName);
 
-	QString strPath = path.join(QStringLiteral("/"));
+	QString strPath = path.join(QLatin1String("/"));
 	if( strPath.endsWith(QLatin1String("layoutList/layout/configItem")) ) {
 			rules->layoutInfos << new LayoutInfo(fromExtras);
 	}
@@ -302,7 +302,7 @@ bool RulesHandler::endElement(const QString &/*namespaceURI*/, const QString &/*
 bool RulesHandler::characters(const QString &str)
 {
 	if( !str.trimmed().isEmpty() ) {
-		QString strPath = path.join(QStringLiteral("/"));
+		QString strPath = path.join(QLatin1String("/"));
 		if( strPath.endsWith(QLatin1String("layoutList/layout/configItem/name")) ) {
 			if( rules->layoutInfos.last() != nullptr ) {
 				rules->layoutInfos.last()->name = str.trimmed();

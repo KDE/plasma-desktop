@@ -170,9 +170,9 @@ void SMServerConfig::load()
   dialog->sdGroup->setEnabled(en);
 
   QString s = c.readEntry( "loginMode" );
-  if ( s == QStringLiteral("default") )
+  if ( s == QLatin1String("default") )
       dialog->emptySessionRadio->setChecked(true);
-  else if ( s == QStringLiteral("restoreSavedSession") )
+  else if ( s == QLatin1String("restoreSavedSession") )
       dialog->savedSessionRadio->setChecked(true);
   else // "restorePreviousLogout"
       dialog->previousSessionRadio->setChecked(true);

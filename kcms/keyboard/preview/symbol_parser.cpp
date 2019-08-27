@@ -191,11 +191,11 @@ QString findLayout(const QString &layout, const QString &layoutVariant)
 
             QString symbolCont = scontentList.at(current);
 
-            int index = symbolCont.indexOf(QStringLiteral("\""));
+            int index = symbolCont.indexOf(QLatin1String("\""));
             symbolCont = symbolCont.mid(index);
-            index = symbolCont.indexOf(QStringLiteral("{"));
+            index = symbolCont.indexOf(QLatin1String("{"));
             symbolCont = symbolCont.left(index);
-            symbolCont = symbolCont.remove(QStringLiteral(" "));
+            symbolCont.remove(QStringLiteral(" "));
             variant = symbolCont.remove(QStringLiteral("\""));
 
             input.prepend("xkb_symbols");

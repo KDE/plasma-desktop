@@ -58,7 +58,7 @@ AppEntry::AppEntry(AbstractModel *owner, const QString &id) : AbstractEntry(owne
 {
     const QUrl url(id);
 
-    if (url.scheme() == QStringLiteral("preferred")) {
+    if (url.scheme() == QLatin1String("preferred")) {
         m_service = defaultAppByName(url.host());
         m_id = id;
     } else {

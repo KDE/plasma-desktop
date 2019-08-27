@@ -51,7 +51,7 @@ int main(int argc, char **argv)
             continue;
         }
         kdeAdded.prepend(path);
-        if (path.contains(QStringLiteral("/lib64/"))) {
+        if (path.contains(QLatin1String("/lib64/"))) {
             path.replace(QLatin1String("/lib64/"), QLatin1String("/lib/"));
             if (!kdeAdded.contains(path)) {
                 kdeAdded.prepend(path);
@@ -69,7 +69,7 @@ int main(int argc, char **argv)
     }
 
     settings.remove(QStringLiteral("/qt/KDE/kdeAddedLibraryPaths"));
-    settings.setValue(libPathKey, libraryPath.join(QStringLiteral(":")));
+    settings.setValue(libPathKey, libraryPath.join(QLatin1String(":")));
 
     return 0;
 }

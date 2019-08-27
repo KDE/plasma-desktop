@@ -96,7 +96,7 @@ static void decode(const QUrl &url, Misc::TFont &font, bool &system)
 {
     font=FC::decode(url);
     QUrlQuery query(url);
-    system = (query.hasQueryItem("sys") && query.queryItemValue("sys") == QStringLiteral("true"));
+    system = (query.hasQueryItem("sys") && query.queryItemValue("sys") == QLatin1String("true"));
 }
 
 QUrl CJobRunner::encode(const QString &family, quint32 style, bool system)

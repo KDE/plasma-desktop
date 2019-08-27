@@ -259,7 +259,7 @@ void JoyWidget::deviceChanged(const QString &dev)
   int start, stop;
   QString devName;
 
-  if ( (start = dev.indexOf(QStringLiteral("/dev"))) == -1 )
+  if ( (start = dev.indexOf(QLatin1String("/dev"))) == -1 )
   {
     KMessageBox::sorry(this,
       i18n("The given device name is invalid (does not contain /dev).\n"
@@ -270,7 +270,7 @@ void JoyWidget::deviceChanged(const QString &dev)
     return;
   }
 
-  if ( (stop = dev.indexOf(QStringLiteral(")"), start)) != -1 )  // seems to be text selected from our list
+  if ( (stop = dev.indexOf(QLatin1String(")"), start)) != -1 )  // seems to be text selected from our list
     devName = dev.mid(start, stop - start);
   else
     devName = dev.mid(start);
