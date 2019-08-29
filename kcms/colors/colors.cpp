@@ -443,12 +443,6 @@ void KCMColors::saveColors()
     });
     QDBusConnection::sessionBus().send(message);
 
-    if (KWindowSystem::isPlatformX11()) {
-        // Send signal to all kwin instances
-        QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"), QStringLiteral("reloadConfig"));
-        QDBusConnection::sessionBus().send(message);
-    }
-
     m_selectedSchemeDirty = false;
 }
 
