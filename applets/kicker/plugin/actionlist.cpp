@@ -277,7 +277,9 @@ QVariantList recentDocumentActions(KService::Ptr service)
     }
 
     if (!list.isEmpty()) {
-        list << createActionItem(i18n("Forget Recent Documents"), QStringLiteral("_kicker_forgetRecentDocuments"));
+        QVariantMap forgetAction = createActionItem(i18n("Forget Recent Documents"), QStringLiteral("_kicker_forgetRecentDocuments"));
+        forgetAction[QStringLiteral("icon")] = QStringLiteral("edit-clear-history");
+        list << forgetAction;
     }
 
     return list;
