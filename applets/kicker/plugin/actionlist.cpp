@@ -382,7 +382,7 @@ QVariantList appstreamActions(const KService::Ptr &service)
     for(const auto &component: components) {
         const QString componentId = component.id();
 
-        QVariantMap appstreamAction = Kicker::createActionItem(i18nc("@action opens a software center with the application", "Manage '%1'...", component.name()), "manageApplication", QVariant(QStringLiteral("appstream://") + componentId));
+        QVariantMap appstreamAction = Kicker::createActionItem(i18nc("@action opens a software center with the application", "Uninstall or Manage Add-Ons..."), "manageApplication", QVariant(QStringLiteral("appstream://") + componentId));
         appstreamAction[QStringLiteral("icon")] = QStringLiteral("plasmadiscover");
         ret << appstreamAction;
     }
