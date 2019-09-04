@@ -270,7 +270,7 @@ void JoyWidget::deviceChanged(const QString &dev)
     return;
   }
 
-  if ( (stop = dev.indexOf(QLatin1String(")"), start)) != -1 )  // seems to be text selected from our list
+  if ( (stop = dev.indexOf(QLatin1Char(')'), start)) != -1 )  // seems to be text selected from our list
     devName = dev.mid(start, stop - start);
   else
     devName = dev.mid(start);

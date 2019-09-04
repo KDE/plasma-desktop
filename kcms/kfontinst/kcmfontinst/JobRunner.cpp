@@ -789,7 +789,7 @@ CJobRunner::Item::Item(const QUrl &u, const QString &n, bool dis)
         int pos(fileName.lastIndexOf('.'));
 
         if(-1!=pos)
-            fileName=fileName.left(pos);
+            fileName.truncate(pos);
     }
 }
 

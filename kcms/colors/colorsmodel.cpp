@@ -164,7 +164,7 @@ void ColorsModel::load()
     for (const QString &dir : schemeDirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList{QStringLiteral("*.colors")});
         for (const QString &file : fileNames) {
-            const QString suffixedFileName = QStringLiteral("color-schemes/") + file;
+            const QString suffixedFileName = QLatin1String("color-schemes/") + file;
             // can't use QSet because of the transform below (passing const QString as this argument discards qualifiers)
             if (!schemeFiles.contains(suffixedFileName)) {
                 schemeFiles.append(suffixedFileName);

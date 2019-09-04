@@ -61,7 +61,7 @@ int main( int argc, char *argv[] )
         }
 
         const QStringList typeValues = availActions->propertyInternalList( internalType );
-        const QString actionText = typeValues.join(QLatin1String(";")).append(";");
+        const QString actionText = typeValues.join(QLatin1Char(';')).append(";");
         tConfig.writeEntry( "Actions", actionText );
 
         qWarning() << "Desktop file created: " + typeFile.fileName();

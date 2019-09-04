@@ -187,7 +187,7 @@ void KCMDesktopTheme::installTheme(const QString &path)
     const QString program = QStringLiteral("kpackagetool5");
     const QStringList arguments = { QStringLiteral("--type"), QStringLiteral("Plasma/Theme"), QStringLiteral("--install"), path};
 
-    qCDebug(KCM_DESKTOP_THEME) << program << arguments.join(QLatin1String(" "));
+    qCDebug(KCM_DESKTOP_THEME) << program << arguments.join(QLatin1Char(' '));
     QProcess *myProcess = new QProcess(this);
     connect(myProcess, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished),
             this, [this, myProcess](int exitCode, QProcess::ExitStatus exitStatus) {

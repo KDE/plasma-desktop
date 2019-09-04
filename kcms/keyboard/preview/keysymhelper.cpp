@@ -67,7 +67,7 @@ QString KeySymHelper::getKeySymbol(const QString &opton)
 
     // Combining Diacritical Marks
     if (ucs >= 0x0300 && ucs <= 0x036F) {
-        ucsStr = " " + ucsStr + " ";
+        ucsStr = " " + ucsStr + QLatin1Char(' ');
     }
 
 //    qWarning() << "--" << opton << "keysym: " << keysym << QString("0x%1").arg(keysym, 0, 16) << "keysym2string" << XKeysymToString(keysym)

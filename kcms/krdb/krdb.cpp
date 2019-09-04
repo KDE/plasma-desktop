@@ -107,7 +107,7 @@ static void applyGtkStyles(bool active, int version)
 
    // Pass env. var to kdeinit.
    QString name = gtkEnvVar(version);
-   QString value = list.join(QLatin1String(":"));
+   QString value = list.join(QLatin1Char(':'));
    org::kde::KLauncher klauncher(QStringLiteral("org.kde.klauncher5"), QStringLiteral("/KLauncher"), QDBusConnection::sessionBus());
    klauncher.setLaunchEnv(name, value);
 }
@@ -566,13 +566,13 @@ void exportGtkColors(QList<KColorScheme> activeColorSchemes, QList<KColorScheme>
   colorsStream << gtkColorsHelper("content_view_bg", activeColorSchemes[0].background(KColorScheme::NormalBackground).color().name());
 
   // Titlebar colors
-  colorsStream << gtkColorsHelper("theme_titlebar_background", "rgb(" + groupWMTheme.readEntry("activeBackground", "") + ")");
-  colorsStream << gtkColorsHelper("theme_titlebar_foreground", "rgb(" + groupWMTheme.readEntry("activeForeground", "") + ")");
+  colorsStream << gtkColorsHelper("theme_titlebar_background", "rgb(" + groupWMTheme.readEntry("activeBackground", "") + QLatin1Char(')'));
+  colorsStream << gtkColorsHelper("theme_titlebar_foreground", "rgb(" + groupWMTheme.readEntry("activeForeground", "") + QLatin1Char(')'));
   colorsStream << gtkColorsHelper("theme_titlebar_background_light", activeColorSchemes[1].background(KColorScheme::NormalBackground).color().name());
-  colorsStream << gtkColorsHelper("theme_titlebar_foreground_backdrop", "rgb(" + groupWMTheme.readEntry("inactiveForeground", "") + ")");
-  colorsStream << gtkColorsHelper("theme_titlebar_background_backdrop", "rgb(" + groupWMTheme.readEntry("inactiveBackground", "") + ")");
-  colorsStream << gtkColorsHelper("theme_titlebar_foreground_insensitive", "rgb(" + groupWMTheme.readEntry("inactiveForeground", "") + ")");
-  colorsStream << gtkColorsHelper("theme_titlebar_foreground_insensitive_backdrop", "rgb(" + groupWMTheme.readEntry("inactiveForeground", "") + ")");
+  colorsStream << gtkColorsHelper("theme_titlebar_foreground_backdrop", "rgb(" + groupWMTheme.readEntry("inactiveForeground", "") + QLatin1Char(')'));
+  colorsStream << gtkColorsHelper("theme_titlebar_background_backdrop", "rgb(" + groupWMTheme.readEntry("inactiveBackground", "") + QLatin1Char(')'));
+  colorsStream << gtkColorsHelper("theme_titlebar_foreground_insensitive", "rgb(" + groupWMTheme.readEntry("inactiveForeground", "") + QLatin1Char(')'));
+  colorsStream << gtkColorsHelper("theme_titlebar_foreground_insensitive_backdrop", "rgb(" + groupWMTheme.readEntry("inactiveForeground", "") + QLatin1Char(')'));
 }
 void saveGtkColors(KSharedConfigPtr& config)
 {

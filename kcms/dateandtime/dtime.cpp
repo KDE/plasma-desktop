@@ -152,7 +152,7 @@ void Dtime::serverTimeCheck() {
 void Dtime::findNTPutility(){
   QByteArray envpath = qgetenv("PATH");
   if (!envpath.isEmpty() && envpath.startsWith(':')) {
-    envpath = envpath.mid(1);
+    envpath.remove(0, 1);
   }
 
   QString path = QStringLiteral("/sbin:/usr/sbin:");

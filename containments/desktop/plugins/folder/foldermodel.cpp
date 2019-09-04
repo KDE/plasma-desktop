@@ -1085,7 +1085,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
     }
 
     auto dropTargetFolderUrl = dropTargetUrl;
-    if (dropTargetFolderUrl.fileName() == QLatin1String(".")) {
+    if (dropTargetFolderUrl.fileName() == QLatin1Char('.')) {
         // the target URL for desktop:/ is e.g. 'file://home/user/Desktop/.'
         dropTargetFolderUrl = dropTargetFolderUrl.adjusted(QUrl::RemoveFilename);
     }
@@ -1530,7 +1530,7 @@ inline bool FolderModel::matchMimeType(const KFileItem &item) const
         return false;
     }
 
-    if (m_mimeSet.contains(QLatin1String("all/all")) || m_mimeSet.contains(QStringLiteral("all/allfiles"))) {
+    if (m_mimeSet.contains(QLatin1String("all/all")) || m_mimeSet.contains(QLatin1String("all/allfiles"))) {
         return true;
     }
 

@@ -305,7 +305,7 @@ QString FolderSelectionWidget::folderDisplayName(const QString& url) const
         // Check Mount allMountPointsExcluded
         Q_FOREACH (QString mountPoint, m_mountPoints) {
             if (url.startsWith(mountPoint)) {
-                name = QLatin1Char('[') + QDir(mountPoint).dirName() + QStringLiteral("]/") + url.mid(mountPoint.length());
+                name = QLatin1Char('[') + QDir(mountPoint).dirName() + QLatin1String("]/") + url.mid(mountPoint.length());
                 break;
             }
         }

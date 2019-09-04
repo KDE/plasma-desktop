@@ -69,7 +69,7 @@ int main(int argc, char **argv)
     }
 
     settings.remove(QStringLiteral("/qt/KDE/kdeAddedLibraryPaths"));
-    settings.setValue(libPathKey, libraryPath.join(QLatin1String(":")));
+    settings.setValue(libPathKey, libraryPath.join(QLatin1Char(':')));
 
     return 0;
 }

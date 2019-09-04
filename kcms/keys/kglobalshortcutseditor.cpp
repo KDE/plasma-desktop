@@ -256,7 +256,7 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
 
                 if (!desktopPath.isEmpty()) {
                     KDesktopFile sourceDF(desktopPath);
-                    KDesktopFile *destinationDF = sourceDF.copyTo(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/kglobalaccel/") + desktopFile);
+                    KDesktopFile *destinationDF = sourceDF.copyTo(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/kglobalaccel/") + desktopFile);
                     qWarning()<<QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/kglobalaccel/") + desktopFile;
                     destinationDF->sync();
                     //TODO: a DBUS call to tell the daemon to refresh desktop files
@@ -772,7 +772,7 @@ bool KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::loadComponent(const 
         // kglobalaccel knows that '|' is our separator between
         // component and context
         if (shortcutContext != QLatin1String("default")) {
-            componentContextId += QStringLiteral("|") + shortcutContext;
+            componentContextId += QLatin1String("|") + shortcutContext;
         }
 
         // Create a action collection for our current component:context

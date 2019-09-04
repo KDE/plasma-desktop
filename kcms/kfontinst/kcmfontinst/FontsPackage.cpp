@@ -79,7 +79,7 @@ QSet<QUrl> extract(const QString &fileName, QTemporaryDir **tempDir)
                         {
                             ::rename(QFile::encodeName((*tempDir)->filePath(name)).data(),
                                      QFile::encodeName((*tempDir)->filePath(name.mid(1))).data());
-                            name=name.mid(1);
+                            name.remove(0, 1);
                         }
 
                         urls.insert(QUrl((*tempDir)->filePath(name)));

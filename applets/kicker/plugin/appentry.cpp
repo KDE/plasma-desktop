@@ -251,7 +251,7 @@ KService::Ptr AppEntry::defaultAppByName(const QString& name)
         if (browser.isEmpty()) {
             return KMimeTypeTrader::self()->preferredService(QLatin1String("text/html"));
         } else if (browser.startsWith(QLatin1Char('!'))) {
-            browser = browser.mid(1);
+            browser.remove(0, 1);
         }
 
         return KService::serviceByStorageId(browser);

@@ -1343,7 +1343,7 @@ void CFontListSortFilterProxy::timeout()
         if(-1!=commaPos)
         {
             QString style(query.mid(commaPos+1));
-            query=query.left(commaPos);
+            query.truncate(commaPos);
             query=query.trimmed();
             query+=":style=";
             style=style.trimmed();

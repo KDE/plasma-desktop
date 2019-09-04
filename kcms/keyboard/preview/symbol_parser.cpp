@@ -194,7 +194,7 @@ QString findLayout(const QString &layout, const QString &layoutVariant)
             int index = symbolCont.indexOf(QLatin1String("\""));
             symbolCont = symbolCont.mid(index);
             index = symbolCont.indexOf(QLatin1String("{"));
-            symbolCont = symbolCont.left(index);
+            symbolCont.truncate(index);
             symbolCont.remove(QStringLiteral(" "));
             variant = symbolCont.remove(QStringLiteral("\""));
 
@@ -243,7 +243,7 @@ KbLayout parseSymbols(const QString &layout, const QString &layoutVariant)
             currentInclude < symbolParser.layout.getIncludeCount();
             currentInclude++) {
         QString include = symbolParser.layout.getInclude(currentInclude);
-        QStringList includeFile = include.split(QStringLiteral("("));
+        QStringList includeFile = include.split(QLatin1Char('('));
         if (includeFile.size() == 2) {
             QString file = includeFile.at(0);
             QString layout = includeFile.at(1);

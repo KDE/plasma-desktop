@@ -105,7 +105,7 @@ public:
             // If this is an application, use the applications:-format url
             auto appEntry = dynamic_cast<AppEntry*>(entry.data());
             if (appEntry && !appEntry->menuId().isEmpty()) {
-                m_id = QStringLiteral("applications:") + appEntry->menuId();
+                m_id = QLatin1String("applications:") + appEntry->menuId();
                 return;
             }
 

@@ -509,7 +509,7 @@ Geometry parseGeometry(const QString &model)
 
 QString includeGeometry(QString geometry)
 {
-    QStringList lines = geometry.split(QStringLiteral("\n"));
+    QStringList lines = geometry.split(QLatin1Char('\n'));
     int includeLine = -1;
     QString includeLineStr;
     QString startLine = lines[0];
@@ -529,9 +529,9 @@ QString includeGeometry(QString geometry)
     lines[includeLine].remove(QStringLiteral("include"));
     lines[includeLine].remove(QStringLiteral("\""));
     lines[includeLine].remove(QStringLiteral(")"));
-    if (lines[includeLine].contains(QLatin1String("("))) {
-        QString includeFile = lines[includeLine].split(QStringLiteral("("))[0];
-        QString includeGeom = lines[includeLine].split(QStringLiteral("("))[1];
+    if (lines[includeLine].contains(QLatin1Char('('))) {
+        QString includeFile = lines[includeLine].split(QLatin1Char('('))[0];
+        QString includeGeom = lines[includeLine].split(QLatin1Char('('))[1];
         qCDebug(KEYBOARD_PREVIEW) << "looking to include " << "geometryName" << includeGeom << "in" << includeFile;
         QString includeStr = getGeometry(includeFile, includeGeom);
         includeStr = getGeometryStrContent(includeStr);

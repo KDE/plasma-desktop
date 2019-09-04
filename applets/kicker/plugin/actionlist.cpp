@@ -382,7 +382,7 @@ QVariantList appstreamActions(const KService::Ptr &service)
     for(const auto &component: components) {
         const QString componentId = component.id();
 
-        QVariantMap appstreamAction = Kicker::createActionItem(i18nc("@action opens a software center with the application", "Uninstall or Manage Add-Ons..."), "manageApplication", QVariant(QStringLiteral("appstream://") + componentId));
+        QVariantMap appstreamAction = Kicker::createActionItem(i18nc("@action opens a software center with the application", "Uninstall or Manage Add-Ons..."), "manageApplication", QVariant(QLatin1String("appstream://") + componentId));
         appstreamAction[QStringLiteral("icon")] = QStringLiteral("plasmadiscover");
         ret << appstreamAction;
     }
@@ -406,7 +406,7 @@ QString resolvedServiceEntryPath(const KService::Ptr &service)
 {
     QString path = service->entryPath();
     if (!QDir::isAbsolutePath(path)) {
-        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kservices5/") + path);
+        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("kservices5/") + path);
     }
     return path;
 }

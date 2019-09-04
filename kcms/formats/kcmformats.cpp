@@ -63,8 +63,8 @@ KCMFormats::~KCMFormats()
 bool countryLessThan(const QLocale & c1, const QLocale & c2)
 {
     // Ensure that the "Default (C)" locale always appears at the top
-    if (c1.name()==QLatin1String("C") && c2.name()!=QLatin1String("C")) return true;
-    if (c2.name()==QLatin1String("C")) return false;
+    if (c1.name()== QLatin1Char('C') && c2.name()!=QLatin1String("C")) return true;
+    if (c2.name()== QLatin1Char('C')) return false;
 
     const QString ncn1 = !c1.nativeCountryName().isEmpty() ? c1.nativeCountryName() : QLocale::countryToString(c1.country());
     const QString ncn2 = !c2.nativeCountryName().isEmpty() ? c2.nativeCountryName() : QLocale::countryToString(c2.country());
@@ -338,7 +338,7 @@ void KCMFormats::updateExample()
     }
 
     const QString numberExample = nloc.toString(1000.01);
-    const QString timeExample = i18n("%1 (long format)", tloc.toString(QDateTime::currentDateTime())) + QStringLiteral("\n") +
+    const QString timeExample = i18n("%1 (long format)", tloc.toString(QDateTime::currentDateTime())) + QLatin1Char('\n') +
             i18n("%1 (short format)", tloc.toString(QDateTime::currentDateTime(), QLocale::ShortFormat));
     const QString currencyExample = cloc.toCurrencyString(24.00);
 
