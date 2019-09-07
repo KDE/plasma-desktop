@@ -298,7 +298,8 @@ PlasmaComponents.ContextMenu {
 
         enabled: visible
 
-        text: i18n("Move To &Desktop")
+        text: i18n("Move to &Desktop")
+        icon: "virtual-desktops"
 
         Connections {
             target: virtualDesktopInfo
@@ -377,7 +378,8 @@ PlasmaComponents.ContextMenu {
 
         enabled: visible
 
-        text: i18n("Move To &Activity")
+        text: i18n("Move to &Activity")
+        icon: "activities"
 
         Connections {
             target: activityInfo
