@@ -178,7 +178,7 @@ void Dialog::init(const QString &activityId)
     setActivityId(activityId);
     setActivityName(QString());
     setActivityDescription(QString());
-    setActivityIcon(QStringLiteral("preferences-activities"));
+    setActivityIcon(QStringLiteral("activities"));
     setActivityIsPrivate(false);
 
     setActivityShortcut(QKeySequence());

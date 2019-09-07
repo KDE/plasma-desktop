@@ -534,7 +534,7 @@ MouseArea {
 
     Component.onCompleted: {
         if (isActivityPager) {
-            plasmoid.setAction("showActivityManager", i18n("Show Activity Manager..."), "preferences-activities");
+            plasmoid.setAction("showActivityManager", i18n("Show Activity Manager..."), "activities");
         } else {
             if (KQuickControlsAddonsComponents.KCMShell.authorize("kcm_kwin_virtualdesktops.desktop").length > 0) {
                 plasmoid.setAction("addDesktop", i18n("Add Virtual Desktop"), "list-add");

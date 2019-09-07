@@ -50,7 +50,7 @@ Kirigami.FormLayout {
         implicitWidth: height
         icon.height: Kirigami.Units.iconSizes.medium
         icon.width: Kirigami.Units.iconSizes.medium
-        icon.name: "preferences-activities"
+        icon.name: "activities"
         Kirigami.FormData.label: i18nd("kcm_activities5", "Icon:")
 
         KQuickControlsAddons.IconDialog {
