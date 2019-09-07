@@ -69,11 +69,11 @@ set_package_properties(KF5QQC2DeskopStyle PROPERTIES
     TYPE RUNTIME
 )
 
-find_package(LibKWorkspace 5.14.90 CONFIG REQUIRED)
-find_package(LibNotificationManager 5.15.80 CONFIG REQUIRED)
-find_package(LibTaskManager 5.14.90 CONFIG REQUIRED)
-find_package(LibNotificationManager 5.14.90 CONFIG REQUIRED)
-find_package(LibColorCorrect 5.14.90 CONFIG REQUIRED)
+find_package(LibKWorkspace ${PROJECT_VERSION} CONFIG REQUIRED)
+find_package(LibNotificationManager ${PROJECT_VERSION} CONFIG REQUIRED)
+find_package(LibTaskManager ${PROJECT_VERSION} CONFIG REQUIRED)
+find_package(LibNotificationManager ${PROJECT_VERSION} CONFIG REQUIRED)
+find_package(LibColorCorrect ${PROJECT_VERSION} CONFIG REQUIRED)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 find_package(KRunnerAppDBusInterface CONFIG REQUIRED)
