@@ -378,7 +378,7 @@ PlasmaComponents.ContextMenu {
 
         enabled: visible
 
-        text: i18n("Move to &Activity")
+        text: i18n("Show in &Activities")
         icon: "activities"
 
         Connections {
