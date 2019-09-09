@@ -150,15 +150,21 @@ QVariantList createAddLauncherActionList(QObject *appletInterface, const KServic
     }
 
     if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Desktop)) {
-        actionList << Kicker::createActionItem(i18n("Add to Desktop"), QStringLiteral("addToDesktop"));
+        QVariantMap addToDesktopAction = Kicker::createActionItem(i18n("Add to Desktop"), QStringLiteral("addToDesktop"));
+        addToDesktopAction[QStringLiteral("icon")] = QStringLiteral("list-add");
+        actionList << addToDesktopAction;
     }
 
     if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Panel)) {
-        actionList << Kicker::createActionItem(i18n("Add to Panel (Widget)"), QStringLiteral("addToPanel"));
+        QVariantMap addToPanelAction = Kicker::createActionItem(i18n("Add to Panel (Widget)"), QStringLiteral("addToPanel"));
+        addToPanelAction[QStringLiteral("icon")] = QStringLiteral("list-add");
+        actionList << addToPanelAction;
     }
 
     if (service && ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, Kicker::resolvedServiceEntryPath(service))) {
-        actionList << Kicker::createActionItem(i18n("Pin to Task Manager"), QStringLiteral("addToTaskManager"));
+        QVariantMap addToTaskManagerAction = Kicker::createActionItem(i18n("Pin to Task Manager"), QStringLiteral("addToTaskManager"));
+        addToTaskManagerAction[QStringLiteral("icon")] = QStringLiteral("pin");
+        actionList << addToTaskManagerAction;
     }
 
     return actionList;

@@ -130,7 +130,7 @@ function createFavoriteActions(i18n, favoriteModel, favoriteId) {
 
         // Adding the item to link/unlink to the current activity
 
-        addActivityItem(favoriteModel.activities.currentActivity, i18n("On The Current Activity"));
+        addActivityItem(favoriteModel.activities.currentActivity, i18n("On the Current Activity"));
 
         actions.push({
             type: "separator",
@@ -144,7 +144,7 @@ function createFavoriteActions(i18n, favoriteModel, favoriteId) {
         });
 
         return [{
-            text       : i18n("Show In Favorites"),
+            text       : i18n("Show in Favorites"),
             icon       : "favorite",
             subActions : actions
         }];
