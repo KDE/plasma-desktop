@@ -213,6 +213,7 @@ Item {
                 y: root.useListViewMode ? 0 : units.smallSpacing
 
                 property Item textShadow: null
+                property Item iconShadow: null
                 property string prefix: ""
 
                 sourceComponent: frameComponent
@@ -406,6 +407,30 @@ Item {
                 }
 
                 Component {
+                    id: iconShadowComponent
+
+                    DropShadow {
+                        anchors.fill: icon
+
+                        z: 1
+
+                        verticalOffset: 1
+
+                        radius: 5
+                        samples: 10
+                        spread: 0.05
+
+                        color: "black"
+
+                        opacity: model.isHidden ? 0.3 : 0.6
+
+                        source: icon
+
+                        visible: !editor || editor.targetItem != main
+                    }
+                }
+
+                Component {
                     id: textShadowComponent
 
                     DropShadow {
@@ -494,6 +519,7 @@ Item {
             Component.onCompleted: {
                 if (root.isContainment && main.GridView.view.isRootView && root.GraphicsInfo.api === GraphicsInfo.OpenGL) {
                     frameLoader.textShadow = textShadowComponent.createObject(frameLoader);
+                    frameLoader.iconShadow = iconShadowComponent.createObject(frameLoader);
                 }
             }
         }
