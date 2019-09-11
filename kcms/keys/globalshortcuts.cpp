@@ -30,8 +30,6 @@
 
 
 K_PLUGIN_FACTORY(GlobalShortcutsModuleFactory, registerPlugin<GlobalShortcutsModule>();)
-K_EXPORT_PLUGIN(GlobalShortcutsModuleFactory("kcmkeys"))
-
 
 GlobalShortcutsModule::GlobalShortcutsModule(QWidget *parent, const QVariantList &args)
  : KCModule(parent, args),

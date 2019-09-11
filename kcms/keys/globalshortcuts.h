@@ -37,7 +37,7 @@ public:
     void defaults() override;
 
 private:
-    KGlobalShortcutsEditor *editor;
+    KGlobalShortcutsEditor *editor = nullptr;
 };
 
 

@@ -20,24 +20,31 @@
 
 
 #include "QDialog"
-#include "KStandardDirs"
 #include <KLineEdit>
 #include <KConfig>
-#include <KGlobal>
 #include <KConfigGroup>
 #include <QDialogButtonBox>
 #include <QPushButton>
-
+#include <QStandardPaths>
+#include <QDebug>
 
 SelectSchemeDialog::SelectSchemeDialog(QWidget *parent)
  : QDialog(parent),
    ui(new Ui::SelectSchemeDialog)
 {
-    m_schemes = KGlobal::dirs()->findAllResources("data", QStringLiteral("kcmkeys/*.kksrc"));
-
-    QVBoxLayout *mainLayout = new QVBoxLayout; 
-    setLayout(mainLayout);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
+                            QStringLiteral("kcmkeys"), QStandardPaths::LocateDirectory);
+    for (const QString &dir : dirs) {
+        const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.kksrc"));
+        for (const QString &file : fileNames) {
+            if (m_schemes.contains(file)) {
+                continue;
+            }
+            m_schemes.append(dir + QLatin1Char('/') + file);
+        }
+    }
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel, this);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setDefault(true);
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -48,7 +55,7 @@ SelectSchemeDialog::SelectSchemeDialog(QWidget *parent)
     mainLayout->addWidget(ui->layoutWidget);
     mainLayout->addWidget(buttonBox);
 
-    foreach (const QString &res, m_schemes) {
+    for (const QString &res : qAsConst(m_schemes)) {
         KConfig config(res, KConfig::SimpleConfig);
         KConfigGroup group(&config, "Settings");
         QString name = group.readEntry("Name");

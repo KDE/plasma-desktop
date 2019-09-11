@@ -22,12 +22,12 @@
 #include "ui_export_scheme_dialog.h"
 
 #include <QButtonGroup>
-#include <KDialog>
+#include <QDialog>
 
 /**
  * @author Michael Jansen <kde@michael-jansen.biz>
  */
-class ExportSchemeDialog : public KDialog
+class ExportSchemeDialog : public QDialog
     {
     Q_OBJECT
 

@@ -21,16 +21,20 @@
 
 #include <QCheckBox>
 #include <KLocalizedString>
+#include <KConfigGroup>
+#include <QDialogButtonBox>
+#include <QPushButton>
 
 
 ExportSchemeDialog::ExportSchemeDialog(QStringList components, QWidget *parent)
-    :   KDialog(parent),
-        ui(),
-        mComponents(components)
-    {
+    :   QDialog(parent),
+      ui(),
+      mComponents(components)
+{
     QWidget *w = new QWidget(this);
     ui.setupUi(w);
-    setMainWidget(w);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->addWidget(w);
 
     // We allow to check more than one button
     mButtons.setExclusive(false);
@@ -40,34 +44,42 @@ ExportSchemeDialog::ExportSchemeDialog(QStringList components, QWidget *parent)
 
     int item=0;
     Q_FOREACH(QString component, mComponents)
-        {
+    {
         QCheckBox *cb = new QCheckBox(component);
         vb->addWidget(cb, item / 2, item % 2);
         mButtons.addButton(cb, item);
         ++item;
-        }
+    }
 
     ui.components->setLayout(vb);
-    }
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+    okButton->setDefault(true);
+    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    mainLayout->addWidget(buttonBox);
+}
 
 
 ExportSchemeDialog::~ExportSchemeDialog()
-    {}
+{}
 
 
 QStringList ExportSchemeDialog::selectedComponents() const
-    {
+{
     QStringList rc;
     Q_FOREACH(QAbstractButton const *button, mButtons.buttons())
-        {
+    {
         if (button->isChecked())
-            {
+        {
             // Remove the '&' added by KAcceleratorManager magically
             rc.append(KLocalizedString::removeAcceleratorMarker(button->text()));
-            }
         }
-    return rc;
     }
+    return rc;
+}
 
 
 #include "moc_export_scheme_dialog.cpp"
