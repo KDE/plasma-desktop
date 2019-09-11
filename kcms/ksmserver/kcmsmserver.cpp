@@ -25,7 +25,7 @@
 #include <QDBusPendingReply>
 #include <QCheckBox>
 #include <QFileInfo>
-//Added by qt3to4:
+
 #include <QVBoxLayout>
 
 #include <kconfig.h>

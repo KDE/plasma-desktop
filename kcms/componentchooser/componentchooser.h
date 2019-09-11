@@ -20,7 +20,7 @@
 #include "ui_componentconfig_ui.h"
 #include <QHash>
 
-//Added by qt3to4:
+
 #include <QVBoxLayout>
 
 #include <kservice.h>
