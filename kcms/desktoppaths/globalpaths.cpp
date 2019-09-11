@@ -46,11 +46,12 @@
 #include <QFormLayout>
 #include <QApplication>
 #include <QLoggingCategory>
+#include <QStandardPaths>
 
 // KDE
 #include <kconfiggroup.h>
 #include <kfileitem.h>
-#include <kglobalsettings.h>
+#include <kglobalsettings.h> //KDELibs4Support
 #include <kio/copyjob.h>
 #include <kio/deletejob.h>
 #include <kio/job.h>
@@ -60,6 +61,8 @@
 #include <kmessagebox.h>
 #include <kurlrequester.h>
 #include <KPluginFactory>
+#include <KConfig>
+#include <KSharedConfig>
 
 Q_LOGGING_CATEGORY(KCM_DESKTOPPATH, "kcm_desktoppath")
 
