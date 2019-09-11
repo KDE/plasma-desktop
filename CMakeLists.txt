@@ -72,7 +72,6 @@ set_package_properties(KF5QQC2DeskopStyle PROPERTIES
 find_package(LibKWorkspace ${PROJECT_VERSION} CONFIG REQUIRED)
 find_package(LibNotificationManager ${PROJECT_VERSION} CONFIG REQUIRED)
 find_package(LibTaskManager ${PROJECT_VERSION} CONFIG REQUIRED)
-find_package(LibNotificationManager ${PROJECT_VERSION} CONFIG REQUIRED)
 find_package(LibColorCorrect ${PROJECT_VERSION} CONFIG REQUIRED)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
