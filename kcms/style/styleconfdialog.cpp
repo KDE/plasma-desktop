@@ -20,19 +20,36 @@
 
 #include "styleconfdialog.h"
 #include <KLocalizedString>
+#include <KConfigGroup>
+#include <QDialogButtonBox>
+#include <QPushButton>
+#include <QVBoxLayout>
 
-StyleConfigDialog::StyleConfigDialog(QWidget* parent, QString styleName)
-  : KDialog( parent )
+StyleConfigDialog::StyleConfigDialog(QWidget* parent, const QString &styleName)
+  : QDialog( parent )
 {
   setObjectName( QStringLiteral("StyleConfigDialog") );
   setModal( true );
-  setCaption( i18n( "Configure %1", styleName ) );
-  setButtons( Default | Ok | Cancel );
-  setDefaultButton( Cancel );
+  setWindowTitle( i18n( "Configure %1", styleName ) );
+  QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
+  QWidget *mainWidget = new QWidget(this);
+  QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel|QDialogButtonBox::RestoreDefaults, this);
+  mainLayout->addWidget(mainWidget);
+
+  mMainLayout = new QHBoxLayout(mainWidget);
+  mMainLayout->setMargin(0);
+
+  QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+  okButton->setDefault(true);
+  okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+  connect(buttonBox, &QDialogButtonBox::accepted, this, &StyleConfigDialog::slotAccept);
+  connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
+  connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked, this, &StyleConfigDialog::defaults);
+  mainLayout->addWidget(buttonBox);
+
+  buttonBox->button(QDialogButtonBox::Cancel)->setDefault(true);
   m_dirty = false;
-  connect(this, &StyleConfigDialog::defaultClicked, this, &StyleConfigDialog::defaults);
-  connect(this, &StyleConfigDialog::okClicked, this, &StyleConfigDialog::save);
 }
 
 bool StyleConfigDialog::isDirty() const
@@ -45,3 +62,13 @@ void StyleConfigDialog::setDirty(bool dirty)
   m_dirty = dirty;
 }
 
+void StyleConfigDialog::slotAccept()
+{
+    Q_EMIT save();
+    QDialog::accept();
+}
+
+void StyleConfigDialog::setMainWidget(QWidget *w)
+{
+    mMainLayout->addWidget(w);
+}

@@ -21,17 +21,18 @@
 #ifndef STYLE_CONF_DIALOG
 #define STYLE_CONF_DIALOG
 
-#include <kdialog.h>
+#include <QDialog>
+class QHBoxLayout;
 
-
-class StyleConfigDialog: public KDialog
+class StyleConfigDialog: public QDialog
 {
   Q_OBJECT
 public:
-  StyleConfigDialog(QWidget* parent, QString styleName);
+  StyleConfigDialog(QWidget* parent, const QString &styleName);
 
   bool isDirty() const;
 
+  void setMainWidget(QWidget *w);
 public Q_SLOTS:
   void setDirty(bool dirty);
 
@@ -40,7 +41,9 @@ Q_SIGNALS:
   void save();
 
 private:
+  void slotAccept();
   bool m_dirty;
+  QHBoxLayout *mMainLayout = nullptr;
 };
 
 #endif

@@ -22,6 +22,8 @@ target_link_libraries(kcm_style
     KF5::Plasma
     ${X11_LIBRARIES}
     KF5::KDELibs4Support
+    KF5::GuiAddons
+    KF5::WindowSystem
     KF5::NewStuff
 )
 

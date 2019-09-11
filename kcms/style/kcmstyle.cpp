@@ -36,12 +36,11 @@
 #include "ui_styleconfig.h"
 
 #include <kaboutdata.h>
-#include <kapplication.h>
+//#include <kapplication.h>
 #include <kcombobox.h>
 #include <kmessagebox.h>
-#include <kstandarddirs.h>
 #include <kautostart.h>
-#include <KDebug>
+#include <KLocalizedString>
 #include <KLibrary>
 #include <KColorScheme>
 #include <KStandardDirs>

@@ -33,7 +33,6 @@
 #include <QMap>
 
 #include <kcmodule.h>
-#include <kvbox.h>
 
 class KConfig;
 class StylePreview;
