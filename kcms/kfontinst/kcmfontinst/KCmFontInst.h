@@ -119,7 +119,8 @@ class CKCmFontInst : public KCModule
                      *itsDisableGroupControl,
                      *itsAddFontControl,
                      *itsGetNewFontsControl,
-                     *itsDeleteFontControl;
+                     *itsDeleteFontControl,
+                     *itsScanDuplicateFontsControl;
     CFontFilter      *itsFilter;
     QString          itsLastStatusBarMsg;
     KIO::Job         *itsJob;
@@ -132,7 +133,6 @@ class CKCmFontInst : public KCModule
     CJobRunner       *itsRunner;
     QMenu            *itsPreviewMenu,
                      *itsPreviewListMenu;
-    QAction          *duplicateFontsAct;
     QWidget          *itsPreviewWidget;
     bool             itsPreviewHidden;
 };

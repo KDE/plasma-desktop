@@ -157,7 +157,7 @@ class CProgressBar : public QProgressBar
     public:
 
     CProgressBar(QWidget *p, int h) : QProgressBar(p), itsHeight((int)(h*0.6))
-        { setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed); }
+        { }
 
     ~CProgressBar() override { }
 
@@ -193,36 +193,25 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     KConfigGroup cg(&itsConfig, CFG_GROUP);
 
     itsGroupSplitter=new QSplitter(this);
-    itsGroupSplitter->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
+    itsGroupSplitter->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
     QWidget *groupWidget=new QWidget(itsGroupSplitter),
             *fontWidget=new QWidget(itsGroupSplitter);
 
     itsPreviewSplitter=new QSplitter(fontWidget);
-    itsPreviewSplitter->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
+    itsPreviewSplitter->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
 
-    QWidget     *toolbarWidget=new QWidget(this),
-                *fontControlWidget=new QWidget(fontWidget);
-    CToolBar    *toolbar=new CToolBar(toolbarWidget);
+    QWidget     *fontControlWidget=new QWidget(fontWidget);
     QGridLayout *groupsLayout=new QGridLayout(groupWidget);
     QBoxLayout  *mainLayout=new QBoxLayout(QBoxLayout::TopToBottom, this),
-                *toolbarLayout=new QBoxLayout(QBoxLayout::LeftToRight, toolbarWidget),
                 *fontsLayout=new QBoxLayout(QBoxLayout::TopToBottom, fontWidget),
                 *fontControlLayout=new QBoxLayout(QBoxLayout::LeftToRight, fontControlWidget);
 
-    toolbarLayout->setContentsMargins(0, 0, 0, 0);
     mainLayout->setContentsMargins(0, 0, 0, 0);
     groupsLayout->setContentsMargins(0, 0, 0, 0);
     fontsLayout->setContentsMargins(0, 0, 0, 0);
     fontControlLayout->setContentsMargins(0, 0, 0, 0);
 
-    // Toolbar...
-    duplicateFontsAct=new QAction(QIcon::fromTheme("system-search"), i18n("Scan for Duplicate Fonts..."), this);
-//     validateFontsAct=new QAction(QIcon::fromTheme("checkmark"), i18n("Validate Fonts..."), this);
-
-    toolbar->addAction(duplicateFontsAct);
-//     toolbar->addAction(validateFontsAct);
-    toolbar->setToolButtonStyle(Qt::ToolButtonFollowStyle);
-    itsFilter=new CFontFilter(toolbarWidget);
+    itsFilter=new CFontFilter(this);
 
     // Details - Groups...
     itsGroupList=new CGroupList(groupWidget);
@@ -236,11 +225,11 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
                                                    i18n("Remove Group...")),
                                           groupWidget);
 
-    itsEnableGroupControl=new CPushButton(KGuiItem(QString(), "enablefont",
+    itsEnableGroupControl=new CPushButton(KGuiItem(QString(), "font-enable",
                                                    i18n("Enable Fonts in Group...")),
                                           groupWidget);
 
-    itsDisableGroupControl=new CPushButton(KGuiItem(QString(), "disablefont",
+    itsDisableGroupControl=new CPushButton(KGuiItem(QString(), "font-disable",
                                                     i18n("Disable Fonts in Group...")),
                                            groupWidget);
 
@@ -256,7 +245,7 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     QBoxLayout *previewWidgetLayout = new QBoxLayout(QBoxLayout::TopToBottom, itsPreviewWidget);
     previewWidgetLayout->setContentsMargins(0, 0, 0, 0);
     previewWidgetLayout->setSpacing(0);
-    
+
     // Preview
     QFrame     *previewFrame=new QFrame(itsPreviewWidget);
     QBoxLayout *previewFrameLayout=new QBoxLayout(QBoxLayout::LeftToRight, previewFrame);
@@ -284,6 +273,10 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     itsFontListView=new CFontListView(itsPreviewSplitter, itsFontList);
     itsFontListView->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
 
+    itsScanDuplicateFontsControl=new CPushButton(KGuiItem(i18n("Find Duplicates..."), "edit-duplicate",
+                                                  i18n("Scan for Duplicate Fonts...")),
+                                         fontControlWidget);
+
     itsAddFontControl=new CPushButton(KGuiItem(i18n("Install from File..."), "document-import",
                                                i18n("Install fonts from a local file")),
                                       fontControlWidget);
@@ -298,22 +291,23 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     itsPreviewSplitter->addWidget(itsPreviewWidget);
     itsPreviewSplitter->setCollapsible(1, true);
 
-    itsStatusLabel = new QLabel(fontControlWidget);
+    QWidget *statusRow = new QWidget(this);
+    QBoxLayout *statusRowLayout=new QBoxLayout(QBoxLayout::LeftToRight, statusRow);
+    itsStatusLabel = new QLabel(statusRow);
     itsStatusLabel->setAlignment(Qt::AlignVCenter|Qt::AlignRight);
-    itsListingProgress=new CProgressBar(fontControlWidget, itsStatusLabel->height());
+    itsListingProgress=new CProgressBar(statusRow, itsStatusLabel->height());
     itsListingProgress->setRange(0, 100);
+    statusRowLayout->addWidget(itsListingProgress);
+    statusRowLayout->addWidget(itsStatusLabel);
 
     // Layout widgets...
-    toolbarLayout->addWidget(toolbar);
-    toolbarLayout->addWidget(itsFilter);
-    mainLayout->addWidget(toolbarWidget);
+    mainLayout->addWidget(itsFilter);
     mainLayout->addWidget(itsGroupSplitter);
+    mainLayout->addWidget(statusRow);
 
     fontControlLayout->addWidget(itsDeleteFontControl);
-    fontControlLayout->addWidget(itsStatusLabel);
-    fontControlLayout->addItem(new QSpacerItem(0, itsListingProgress->height()+4,
-                                               QSizePolicy::Fixed, QSizePolicy::Fixed));
-    fontControlLayout->addWidget(itsListingProgress);
+    fontControlLayout->addStretch();
+    fontControlLayout->addWidget(itsScanDuplicateFontsControl);
     fontControlLayout->addWidget(itsAddFontControl);
     fontControlLayout->addWidget(itsGetNewFontsControl);
 
@@ -362,8 +356,8 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     connect(prevSel, SIGNAL(range(QList<CFcEngine::TRange>)),
             itsPreview, SLOT(setUnicodeRange(QList<CFcEngine::TRange>)));
     connect(changeTextAct, SIGNAL(triggered(bool)), SLOT(changeText()));
-    connect(itsFilter, SIGNAL(textChanged(QString)), itsFontListView, SLOT(filterText(QString)));
-    connect(itsFilter, SIGNAL(criteriaChanged(int,qulonglong,QStringList)), 
+    connect(itsFilter, SIGNAL(queryChanged(QString)), itsFontListView, SLOT(filterText(QString)));
+    connect(itsFilter, SIGNAL(criteriaChanged(int,qulonglong,QStringList)),
             itsFontListView, SLOT(filterCriteria(int,qulonglong,QStringList)));
     connect(itsGroupListView, SIGNAL(del()), SLOT(removeGroup()));
     connect(itsGroupListView, SIGNAL(print()), SLOT(printGroup()));
@@ -394,7 +388,7 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     connect(itsAddFontControl, SIGNAL(clicked()), SLOT(addFonts()));
     connect(itsGetNewFontsControl, SIGNAL(clicked()), SLOT(downloadFonts()));
     connect(itsDeleteFontControl, SIGNAL(clicked()), SLOT(deleteFonts()));
-    connect(duplicateFontsAct, SIGNAL(triggered(bool)), SLOT(duplicateFonts()));
+    connect(itsScanDuplicateFontsControl, SIGNAL(clicked()), SLOT(duplicateFonts()));
     //connect(validateFontsAct, SIGNAL(triggered(bool)), SLOT(validateFonts()));
     connect(itsPreview, SIGNAL(customContextMenuRequested(QPoint)), SLOT(previewMenu(QPoint)));
     connect(itsPreviewList, SIGNAL(showMenu(QPoint)), SLOT(previewMenu(QPoint)));
@@ -1128,7 +1122,7 @@ void CKCmFontInst::removeDeletedFontsFromGroups()
         itsDeletedFonts.clear();
     }
 }
-        
+
 void CKCmFontInst::selectGroup(CGroupListItem::EType grp)
 {
     QModelIndex current(itsGroupListView->currentIndex());
@@ -1207,8 +1201,8 @@ void CKCmFontInst::toggleFonts(CJobRunner::ItemList &urls, const QStringList &fo
                                             "contained within group \'<b>%2</b>\'?</p>",
                                             fonts.first(), grp),
                        enable ? i18n("Enable Font") : i18n("Disable Font"),
-                       enable ? KGuiItem(i18n("Enable"), "enablefont", i18n("Enable Font"))
-                              : KGuiItem(i18n("Disable"), "disablefont", i18n("Disable Font")));
+                       enable ? KGuiItem(i18n("Enable"), "font-enable", i18n("Enable Font"))
+                              : KGuiItem(i18n("Disable"), "font-disable", i18n("Disable Font")));
             break;
         default:
             doIt = KMessageBox::Continue==KMessageBox::warningContinueCancelList(this,
@@ -1231,8 +1225,8 @@ void CKCmFontInst::toggleFonts(CJobRunner::ItemList &urls, const QStringList &fo
                                              urls.count(), grp),
                        fonts,
                        enable ? i18n("Enable Fonts") : i18n("Disable Fonts"),
-                       enable ? KGuiItem(i18n("Enable"), "enablefont", i18n("Enable Fonts"))
-                              : KGuiItem(i18n("Disable"), "disablefont", i18n("Disable Fonts")));
+                       enable ? KGuiItem(i18n("Enable"), "font-enable", i18n("Enable Fonts"))
+                              : KGuiItem(i18n("Disable"), "font-disable", i18n("Disable Fonts")));
     }
 
     if(doIt)

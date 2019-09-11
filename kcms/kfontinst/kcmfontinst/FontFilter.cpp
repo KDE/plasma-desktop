@@ -2,6 +2,7 @@
  * KFontInst - KDE Font Installer
  *
  * Copyright 2003-2007 Craig Drummond <craig@kde.org>
+ *           2019      Guo Yunhe <i@guoyunhe.me>
  *
  * ----
  *
@@ -27,7 +28,6 @@
 #include <KIconLoader>
 #include <KToggleAction>
 #include <KSelectAction>
-#include <QIcon>
 #include <QMimeDatabase>
 #include <QLabel>
 #include <QPainter>
@@ -114,44 +114,61 @@ static void sortActions(KSelectAction *group)
 }
 
 CFontFilter::CFontFilter(QWidget *parent)
-           : KLineEdit(parent)
+           : QWidget(parent)
 {
-    setClearButtonShown(true);
-    setTrapReturnKey(true);
+    itsIcons[CRIT_FAMILY] = QIcon::fromTheme("draw-text");
+    itsTexts[CRIT_FAMILY] = i18n("Family");
+    itsIcons[CRIT_STYLE] = QIcon::fromTheme("format-text-bold");
+    itsTexts[CRIT_STYLE] = i18n("Style");
+    itsIcons[CRIT_FOUNDRY] = QIcon::fromTheme("user-identity");
+    itsTexts[CRIT_FOUNDRY] = i18n("Foundry");
+    itsIcons[CRIT_FONTCONFIG] = QIcon::fromTheme("system-search");
+    itsTexts[CRIT_FONTCONFIG] = i18n("FontConfig Match");
+    itsIcons[CRIT_FILETYPE] = QIcon::fromTheme("preferences-desktop-font-installer");
+    itsTexts[CRIT_FILETYPE] = i18n("File Type");
+    itsIcons[CRIT_FILENAME] = QIcon::fromTheme("application-x-font-type1");
+    itsTexts[CRIT_FILENAME] = i18n("File Name");
+    itsIcons[CRIT_LOCATION] = QIcon::fromTheme("folder");
+    itsTexts[CRIT_LOCATION] = i18n("File Location");
+    itsIcons[CRIT_WS] = QIcon::fromTheme("character-set");
+    itsTexts[CRIT_WS] = i18n("Writing System");
 
-    itsMenuButton = new QLabel(this);
-    itsMenuButton->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
-    itsMenuButton->setCursor(Qt::ArrowCursor);
-    itsMenuButton->setToolTip(i18n("Set Criteria"));
+    m_layout = new QHBoxLayout(this);
+    setLayout(m_layout);
+    m_layout->setContentsMargins(0, 0, 0, 0);
 
-    itsMenu=new QMenu(this);
-    itsPixmaps[CRIT_FAMILY]=SmallIcon("draw-text");
-    itsPixmaps[CRIT_STYLE]=SmallIcon("format-text-bold");
-    itsPixmaps[CRIT_FOUNDRY]=SmallIcon("user-identity");
-    itsPixmaps[CRIT_FONTCONFIG]=SmallIcon("system-search");
-    itsPixmaps[CRIT_FILETYPE]=SmallIcon("preferences-desktop-font-installer");
-    itsPixmaps[CRIT_FILENAME]=SmallIcon("application-x-font-type1");
-    itsPixmaps[CRIT_LOCATION]=SmallIcon("folder");
-    itsPixmaps[CRIT_WS]=SmallIcon("character-set");
+    m_lineEdit = new QLineEdit(this);
+    m_lineEdit->setClearButtonEnabled(true);
+    m_layout->addWidget(m_lineEdit);
+
+    m_menuButton = new QPushButton(this);
+    m_menuButton->setIcon(QIcon::fromTheme("view-filter"));
+    m_menuButton->setText(i18n("Set Criteria"));
+    m_layout->addWidget(m_menuButton);
+
+    connect(m_lineEdit, SIGNAL(textChanged(const QString &)), this, SLOT(textChanged(const QString &)));
+
+    m_menu=new QMenu(this);
+    m_menuButton->setMenu(m_menu);
 
     itsActionGroup=new QActionGroup(this);
-    addAction(CRIT_FAMILY, i18n("Family"), true);
-    addAction(CRIT_STYLE, i18n("Style"), false);
+    addAction(CRIT_FAMILY, true);
+    addAction(CRIT_STYLE, false);
 
-    KSelectAction *foundryMenu=new KSelectAction(QIcon(itsPixmaps[CRIT_FOUNDRY]), i18n("Foundry"), this);
+    KSelectAction *foundryMenu=new KSelectAction(itsIcons[CRIT_FOUNDRY], itsTexts[CRIT_FOUNDRY], this);
     itsActions[CRIT_FOUNDRY]=foundryMenu;
-    itsMenu->addAction(itsActions[CRIT_FOUNDRY]);
+    m_menu->addAction(itsActions[CRIT_FOUNDRY]);
     foundryMenu->setData((int)CRIT_FOUNDRY);
     foundryMenu->setVisible(false);
     connect(foundryMenu, SIGNAL(triggered(QString)), SLOT(foundryChanged(QString)));
 
-    addAction(CRIT_FONTCONFIG, i18n("FontConfig Match"), false);
-    
-    KSelectAction *ftMenu=new KSelectAction(QIcon(itsPixmaps[CRIT_FILETYPE]), i18n("File Type"), this);
+    addAction(CRIT_FONTCONFIG, false);
+
+    KSelectAction *ftMenu=new KSelectAction(itsIcons[CRIT_FILETYPE], itsTexts[CRIT_FILETYPE], this);
     itsActions[CRIT_FILETYPE]=ftMenu;
-    itsMenu->addAction(itsActions[CRIT_FILETYPE]);
+    m_menu->addAction(itsActions[CRIT_FILETYPE]);
     ftMenu->setData((int)CRIT_FILETYPE);
-    
+
     QStringList::ConstIterator it(CFontList::fontMimeTypes.constBegin()),
                                end(CFontList::fontMimeTypes.constEnd());
     QMimeDatabase db;
@@ -159,7 +176,7 @@ CFontFilter::CFontFilter(QWidget *parent)
         if((*it)!="application/vnd.kde.fontspackage")
         {
             QMimeType mime = db.mimeTypeForName(*it);
-            
+
             KToggleAction *act=new KToggleAction(QIcon::fromTheme(mime.iconName()), mime.comment(), this);
 
             ftMenu->addAction(act);
@@ -175,12 +192,12 @@ CFontFilter::CFontFilter(QWidget *parent)
     connect(ftMenu, SIGNAL(triggered(QString)), SLOT(ftChanged(QString)));
     itsCurrentFileTypes.clear();
 
-    addAction(CRIT_FILENAME, i18n("File Name"), false);
-    addAction(CRIT_LOCATION, i18n("File Location"), false);
+    addAction(CRIT_FILENAME, false);
+    addAction(CRIT_LOCATION, false);
 
-    KSelectAction *wsMenu=new KSelectAction(QIcon(itsPixmaps[CRIT_WS]), i18n("Writing System"), this);
+    KSelectAction *wsMenu=new KSelectAction(itsIcons[CRIT_WS], itsTexts[CRIT_WS], this);
     itsActions[CRIT_WS]=wsMenu;
-    itsMenu->addAction(itsActions[CRIT_WS]);
+    m_menu->addAction(itsActions[CRIT_WS]);
     wsMenu->setData((int)CRIT_WS);
 
     itsCurrentWs=QFontDatabase::Any;
@@ -198,7 +215,7 @@ CFontFilter::CFontFilter(QWidget *parent)
     connect(wsMenu, SIGNAL(triggered(QString)), SLOT(wsChanged(QString)));
 
     setCriteria(CRIT_FAMILY);
-    setStyle(new CFontFilterStyle(this, itsMenuButton->width()));
+    setStyle(new CFontFilterStyle(this, m_menuButton->width()));
 }
 
 void CFontFilter::setFoundries(const QSet<QString> &currentFoundries)
@@ -252,14 +269,9 @@ void CFontFilter::setFoundries(const QSet<QString> &currentFoundries)
             else
                 ((KSelectAction *)itsActions[CRIT_FOUNDRY])->setCurrentItem(0);
         }
-    
+
         itsActions[CRIT_FOUNDRY]->setVisible(((KSelectAction *)itsActions[CRIT_FOUNDRY])->actions().count());
     }
-}
-
-QSize CFontFilter::sizeHint() const
-{
-    return QSize(fontMetrics().width(placeholderText())+56, KLineEdit::sizeHint().height());
 }
 
 void CFontFilter::filterChanged()
@@ -275,13 +287,13 @@ void CFontFilter::filterChanged()
             deselectCurrent((KSelectAction *)itsActions[CRIT_FOUNDRY]);
             deselectCurrent((KSelectAction *)itsActions[CRIT_FILETYPE]);
             deselectCurrent((KSelectAction *)itsActions[CRIT_WS]);
-            setText(QString());
+            m_lineEdit->setText(QString());
             itsCurrentWs=QFontDatabase::Any;
             itsCurrentFileTypes.clear();
 
             setCriteria(crit);
-            setPlaceholderText(i18n("Filter by %1...", act->text()));
-            setReadOnly(false);
+            m_lineEdit->setPlaceholderText(i18n("Filter by %1...", act->text()));
+            m_lineEdit->setReadOnly(false);
         }
     }
 }
@@ -297,10 +309,10 @@ void CFontFilter::ftChanged(const QString &ft)
     if(act)
         itsCurrentFileTypes=act->data().toStringList();
     itsCurrentCriteria=CRIT_FILETYPE;
-    setReadOnly(true);
+    m_lineEdit->setReadOnly(true);
     setCriteria(itsCurrentCriteria);
-    setText(ft);
-    setPlaceholderText(text());
+    m_lineEdit->setText(ft);
+    m_lineEdit->setPlaceholderText(m_lineEdit->text());
 }
 
 void CFontFilter::wsChanged(const QString &writingSystemName)
@@ -314,10 +326,10 @@ void CFontFilter::wsChanged(const QString &writingSystemName)
     if(act)
         itsCurrentWs=(QFontDatabase::WritingSystem)act->data().toInt();
     itsCurrentCriteria=CRIT_WS;
-    setReadOnly(true);
+    m_lineEdit->setReadOnly(true);
     setCriteria(itsCurrentCriteria);
-    setText(writingSystemName);
-    setPlaceholderText(text());
+    m_lineEdit->setText(writingSystemName);
+    m_lineEdit->setPlaceholderText(m_lineEdit->text());
 }
 
 void CFontFilter::foundryChanged(const QString &foundry)
@@ -327,65 +339,31 @@ void CFontFilter::foundryChanged(const QString &foundry)
     deselectCurrent(itsActionGroup);
 
     itsCurrentCriteria=CRIT_FOUNDRY;
-    setReadOnly(true);
-    setText(foundry);
-    setPlaceholderText(text());
+    m_lineEdit->setReadOnly(true);
+    m_lineEdit->setText(foundry);
+    m_lineEdit->setPlaceholderText(m_lineEdit->text());
     setCriteria(itsCurrentCriteria);
 }
 
-void CFontFilter::addAction(ECriteria crit, const QString &text, bool on)
+void CFontFilter::textChanged(const QString &text)
 {
-    itsActions[crit]=new KToggleAction(QIcon(itsPixmaps[crit]),
-                                       text, this);
-    itsMenu->addAction(itsActions[crit]);
+    emit queryChanged(text);
+}
+
+void CFontFilter::addAction(ECriteria crit, bool on)
+{
+    itsActions[crit]=new KToggleAction(itsIcons[crit], itsTexts[crit], this);
+    m_menu->addAction(itsActions[crit]);
     itsActionGroup->addAction(itsActions[crit]);
     itsActions[crit]->setData((int)crit);
     itsActions[crit]->setChecked(on);
     if(on)
-        setPlaceholderText(i18n("Filter by %1...", text));
+        m_lineEdit->setPlaceholderText(i18n("Filter by %1...", itsTexts[crit]));
     connect(itsActions[crit], SIGNAL(toggled(bool)), SLOT(filterChanged()));
-}
-
-void CFontFilter::resizeEvent(QResizeEvent *ev)
-{
-    KLineEdit::resizeEvent(ev);
-
-    int frameWidth(style()->pixelMetric(QStyle::PM_DefaultFrameWidth)),
-        y((height()-itsMenuButton->height())/2);
-
-    if (qApp->isLeftToRight())
-        itsMenuButton->move(frameWidth + 2, y);
-    else
-        itsMenuButton->move(size().width() - frameWidth - itsMenuButton->width() - 2, y);
-}
-
-void CFontFilter::mousePressEvent(QMouseEvent *ev)
-{
-    if(Qt::LeftButton==ev->button() && itsMenuButton->underMouse())
-        itsMenu->popup(mapToGlobal(QPoint(0, height())), nullptr);
-    else
-        KLineEdit::mousePressEvent(ev);
 }
 
 void CFontFilter::setCriteria(ECriteria crit)
 {
-    QPixmap arrowmap(itsPixmaps[crit].width()+constArrowPad, itsPixmaps[crit].height());
-
-    QColor bgnd(palette().color(QPalette::Active, QPalette::Base));
-    bgnd.setAlphaF(0.0);
-    arrowmap.fill(bgnd);
-
-    QPainter p(&arrowmap);
-
-    p.drawPixmap(0, 0, itsPixmaps[crit]);
-    QStyleOption opt;
-    opt.state = QStyle::State_Enabled;
-    opt.rect = QRect(arrowmap.width()-(constArrowPad+1), arrowmap.height()-(constArrowPad+1), constArrowPad, constArrowPad);
-    style()->drawPrimitive(QStyle::PE_IndicatorArrowDown, &opt, &p, itsMenuButton);
-    p.end();
-
-    itsMenuButton->setPixmap(arrowmap);
-    itsMenuButton->resize(arrowmap.width(), arrowmap.height());
     itsCurrentCriteria=crit;
 
     emit criteriaChanged(crit, ((qulonglong)1) << (int)itsCurrentWs, itsCurrentFileTypes);

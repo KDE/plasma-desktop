@@ -614,7 +614,7 @@ QVariant CFontList::headerData(int section, Qt::Orientation orientation,
                 break;
 //             case Qt::DecorationRole:
 //                 if(COL_STATUS==section)
-//                     return SmallIcon("fontstatus");
+//                     return QIcon::fromTheme("fontstatus");
 //                 break;
             case Qt::TextAlignmentRole:
                 return QVariant(Qt::AlignLeft | Qt::AlignVCenter);
@@ -815,7 +815,7 @@ void CFontList::actionSlowedUpdates(bool sys)
 void CFontList::addFonts(const FamilyCont &families, bool sys)
 {
 //     bool emitLayout=!itsSlowUpdates || itsFamilies.isEmpty();
-// 
+//
 //     if(emitLayout)
 //         emit layoutAboutToBeChanged();
 
@@ -1093,11 +1093,11 @@ QVariant CFontListSortFilterProxy::data(const QModelIndex &idx, int role) const
                         switch(fam->status())
                         {
                             case CFamilyItem::PARTIAL:
-                                return SmallIcon("dialog-ok", 0, KIconLoader::DisabledState);
+                                return QIcon::fromTheme("dialog-ok");
                             case CFamilyItem::ENABLED:
-                                return SmallIcon("dialog-ok");
+                                return QIcon::fromTheme("dialog-ok");
                             case CFamilyItem::DISABLED:
-                                return SmallIcon("dialog-cancel");
+                                return QIcon::fromTheme("dialog-cancel");
                         }
                         break;
                     default:
@@ -1105,8 +1105,8 @@ QVariant CFontListSortFilterProxy::data(const QModelIndex &idx, int role) const
                 }
             }
             else if(COL_STATUS==index.column())
-                return SmallIcon( (static_cast<CFontItem *>(index.internalPointer()))->isEnabled()
-                                  ? "dialog-ok" : "dialog-cancel", 10);
+                return QIcon::fromTheme( (static_cast<CFontItem *>(index.internalPointer()))->isEnabled()
+                                  ? "dialog-ok" : "dialog-cancel");
             break;
         case Qt::SizeHintRole:
             if(mi->isFamily()) {
@@ -1179,7 +1179,7 @@ bool CFontListSortFilterProxy::acceptFont(CFontItem *fnt, bool checkFontText) co
                     for(; it!=end && !fontMatch; ++it)
                     {
                         QStringList::ConstIterator mime(itsFilterTypes.constBegin());
-                        
+
                         for(; mime!=mimeEnd; ++mime)
                             if(Misc::checkExt((*it).path(), *mime))
                                 fontMatch=true;
@@ -1411,9 +1411,9 @@ CFontListView::CFontListView(QWidget *parent, CFontList *model)
     itsDeleteAct=itsMenu->addAction(QIcon::fromTheme("edit-delete"), i18n("Delete"),
                                        this, SIGNAL(del()));
     itsMenu->addSeparator();
-    itsEnableAct=itsMenu->addAction(QIcon::fromTheme("enablefont"), i18n("Enable"),
+    itsEnableAct=itsMenu->addAction(QIcon::fromTheme("font-enable"), i18n("Enable"),
                                        this, SIGNAL(enable()));
-    itsDisableAct=itsMenu->addAction(QIcon::fromTheme("disablefont"), i18n("Disable"),
+    itsDisableAct=itsMenu->addAction(QIcon::fromTheme("font-disable"), i18n("Disable"),
                                         this, SIGNAL(disable()));
     if(!Misc::app(KFI_VIEWER).isEmpty())
         itsMenu->addSeparator();

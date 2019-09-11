@@ -24,12 +24,12 @@ install( FILES kfontinst.knsrc DESTINATION  ${KDE_INSTALL_KNSRCDIR} )
 
 ecm_install_icons( ICONS
                    16-actions-addfont.png
-                   16-actions-disablefont.png
-                   16-actions-enablefont.png
+                   16-actions-font-disable.png
+                   16-actions-font-enable.png
                    16-actions-fontstatus.png
                    22-actions-addfont.png
-                   22-actions-disablefont.png
-                   22-actions-enablefont.png
+                   22-actions-font-disable.png
+                   22-actions-font-enable.png
                    22-actions-fontstatus.png
                    16-actions-addfont.png
                    DESTINATION

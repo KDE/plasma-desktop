@@ -128,9 +128,9 @@ void CFontPreview::paintEvent(QPaintEvent *)
         if(abs(width()-itsLastWidth)>constStepSize || abs(height()-itsLastHeight)>constStepSize)
             showFont();
         else
-            paint.drawImage(QPoint(constBorder, constBorder), itsImage,
-                            QRect(0, 0, width()-(constBorder*2) * itsImage.devicePixelRatioF(),
-                                  height()-(constBorder*2) * itsImage.devicePixelRatioF()));
+            paint.drawImage(QPointF(constBorder, constBorder), itsImage,
+                            QRectF(0, 0, (width()-(constBorder*2)) * itsImage.devicePixelRatioF(),
+                                  (height()-(constBorder*2)) * itsImage.devicePixelRatioF()));
     }
 }
 

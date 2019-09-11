@@ -127,6 +127,8 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
 
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+
     KLocalizedString::setApplicationDomain(KFI_CATALOGUE);
     KAboutData aboutData("kfontinst", i18n("Font Installer"), WORKSPACE_VERSION_STRING, i18n("Simple font installer"),
                          KAboutLicense::GPL, i18n("(C) Craig Drummond, 2007"));

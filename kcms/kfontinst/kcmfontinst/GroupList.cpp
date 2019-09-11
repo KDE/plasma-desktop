@@ -298,13 +298,13 @@ QVariant CGroupList::data(const QModelIndex &index, int role) const
                             switch(grp->type())
                             {
                                 case CGroupListItem::ALL:      // Removing from a group
-                                    return SmallIcon("list-remove");
+                                    return QIcon::fromTheme("list-remove");
                                 case CGroupListItem::PERSONAL: // Copying/moving
                                 case CGroupListItem::SYSTEM:   // Copying/moving
-                                    return SmallIcon(Qt::LeftToRight==QApplication::layoutDirection()
+                                    return QIcon::fromTheme(Qt::LeftToRight==QApplication::layoutDirection()
                                                         ? "go-next" : "go-previous");
                                 case CGroupListItem::CUSTOM:   // Adding to a group
-                                    return SmallIcon("list-add");
+                                    return QIcon::fromTheme("list-add");
                                 default:
                                     break;
                             }
@@ -312,24 +312,24 @@ QVariant CGroupList::data(const QModelIndex &index, int role) const
                             switch(grp->type())
                             {
                                 case CGroupListItem::ALL:
-                                    return SmallIcon("font");
+                                    return QIcon::fromTheme("font");
                                 case CGroupListItem::PERSONAL:
-                                    return SmallIcon("user-identity");
+                                    return QIcon::fromTheme("user-identity");
                                 case CGroupListItem::SYSTEM:
-                                    return SmallIcon("computer");
+                                    return QIcon::fromTheme("computer");
                                 case CGroupListItem::UNCLASSIFIED:
-                                    return SmallIcon("fontstatus");
+                                    return QIcon::fromTheme("fontstatus");
                                 case CGroupListItem::CUSTOM:
                                     if(0==grp->families().count())
-                                        return SmallIcon("image-missing");
+                                        return QIcon::fromTheme("image-missing");
                                     switch(grp->status())
                                     {
                                         case CFamilyItem::PARTIAL:
-                                            return SmallIcon("dialog-ok", 0, KIconLoader::DisabledState);
+                                            return QIcon::fromTheme("dialog-ok");
                                         case CFamilyItem::ENABLED:
-                                            return SmallIcon("dialog-ok");
+                                            return QIcon::fromTheme("dialog-ok");
                                         case CFamilyItem::DISABLED:
-                                            return SmallIcon("dialog-cancel");
+                                            return QIcon::fromTheme("dialog-cancel");
                                     }
                                     break;
                             }
@@ -578,7 +578,7 @@ bool CGroupList::removeGroup(const QModelIndex &idx)
         {
             itsModified=true;
             itsGroups.removeAll(grp);
-    
+
             int stdGroups=1 +// All
                           (itsSpecialGroups[CGroupListItem::SYSTEM] ? 2 : 0)+ // Personal, System
                           1; // Unclassified
@@ -760,7 +760,7 @@ class CGroupListViewDelegate : public QStyledItemDelegate
 
         if(grp && grp->isUnclassified())
             opt.rect.adjust(0, 0, 0, -1);
-            
+
         QStyledItemDelegate::paint(painter, opt, idx);
 
         if(grp && grp->isUnclassified())
@@ -787,7 +787,7 @@ class CGroupListViewDelegate : public QStyledItemDelegate
         return Qt::Key_Tab==event->key() || Qt::Key_Backtab==event->key() ||
                Qt::Key_Enter==event->key() || Qt::Key_Return==event->key();
     }
-    
+
     bool eventFilter(QObject *editor, QEvent *event) override
     {
         if(editor && event && QEvent::KeyPress==event->type() && isCloseEvent(static_cast<QKeyEvent *>(event)) &&
@@ -805,7 +805,7 @@ class CGroupListViewDelegate : public QStyledItemDelegate
         return false;
     }
 };
-                                     
+
 CGroupListView::CGroupListView(QWidget *parent, CGroupList *model)
               : QTreeView(parent)
 {
@@ -827,14 +827,14 @@ CGroupListView::CGroupListView(QWidget *parent, CGroupList *model)
     itsDeleteAct=itsMenu->addAction(QIcon::fromTheme("list-remove"), i18n("Remove"),
                                     this, SIGNAL(del()));
     itsMenu->addSeparator();
-    itsEnableAct=itsMenu->addAction(QIcon::fromTheme("enablefont"), i18n("Enable"),
+    itsEnableAct=itsMenu->addAction(QIcon::fromTheme("font-enable"), i18n("Enable"),
                                     this, SIGNAL(enable()));
-    itsDisableAct=itsMenu->addAction(QIcon::fromTheme("disablefont"), i18n("Disable"),
+    itsDisableAct=itsMenu->addAction(QIcon::fromTheme("font-disable"), i18n("Disable"),
                                      this, SIGNAL(disable()));
     itsMenu->addSeparator();
     itsRenameAct=itsMenu->addAction(QIcon::fromTheme("edit-rename"), i18n("Rename..."),
                                     this, SLOT(rename()));
-    
+
     if(!Misc::app(KFI_PRINTER).isEmpty())
     {
         itsMenu->addSeparator();

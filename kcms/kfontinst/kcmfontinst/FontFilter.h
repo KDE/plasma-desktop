@@ -5,6 +5,7 @@
  * KFontInst - KDE Font Installer
  *
  * Copyright 2003-2007 Craig Drummond <craig@kde.org>
+ *           2019      Guo Yunhe <i@guoyunhe.me>
  *
  * ----
  *
@@ -24,18 +25,18 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <KLineEdit>
-#include <QPixmap>
+#include <QActionGroup>
+#include <QIcon>
 #include <QFontDatabase>
-
-class QLabel;
-class QMenu;
-class QActionGroup;
+#include <QHBoxLayout>
+#include <QMenu>
+#include <QPushButton>
+#include <QLineEdit>
 
 namespace KFI
 {
 
-class CFontFilter : public KLineEdit
+class CFontFilter : public QWidget
 {
     Q_OBJECT
 
@@ -60,34 +61,35 @@ class CFontFilter : public KLineEdit
 
     void setFoundries(const QSet<QString> &currentFoundries);
 
-    QSize sizeHint() const override;
-
     Q_SIGNALS:
 
     void criteriaChanged(int crit, qulonglong ws, const QStringList &ft);
+    void queryChanged(QString text);
 
     private Q_SLOTS:
 
     void filterChanged();
+    void textChanged(const QString &text);
     void ftChanged(const QString &ft);
     void wsChanged(const QString &writingSystemName);
     void foundryChanged(const QString &foundry);
 
     private:
 
-    void addAction(ECriteria crit, const QString &text, bool on);
-    void resizeEvent(QResizeEvent *ev) override;
-    void mousePressEvent(QMouseEvent *ev) override;
+    void addAction(ECriteria crit, bool on);
     void setCriteria(ECriteria crit);
 
     private:
 
-    QLabel                       *itsMenuButton;
-    QMenu                        *itsMenu;
+    QPushButton                  *m_menuButton;
+    QHBoxLayout                  *m_layout;
+    QMenu                        *m_menu;
+    QLineEdit                    *m_lineEdit;
     ECriteria                    itsCurrentCriteria;
     QFontDatabase::WritingSystem itsCurrentWs;
     QStringList                  itsCurrentFileTypes;
-    QPixmap                      itsPixmaps[NUM_CRIT];
+    QIcon                        itsIcons[NUM_CRIT];
+    QString                      itsTexts[NUM_CRIT];
     QAction                      *itsActions[NUM_CRIT];
     QActionGroup                 *itsActionGroup;
 };
