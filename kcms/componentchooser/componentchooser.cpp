@@ -24,7 +24,6 @@
 
 #include <QCheckBox>
 
-#include <klocale.h>
 #include <kmessagebox.h>
 #include <kconfig.h>
 #include <kstandarddirs.h>

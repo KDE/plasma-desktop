@@ -21,7 +21,6 @@
 
 #include "joydevice.h"
 
-#include <klocale.h>
 #include <QDebug>
 #include <KLocalizedString>
 

@@ -42,7 +42,6 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QDebug>
-#include <klocale.h>
 #include <kprocess.h>
 #include <kstandarddirs.h>
 #include <kmessagebox.h>

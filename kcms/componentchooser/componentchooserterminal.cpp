@@ -21,7 +21,6 @@
 #include <QCheckBox>
 
 #include <kapplication.h>
-#include <klocale.h>
 #include <kmessagebox.h>
 #include <kopenwithdialog.h>
 #include <kconfig.h>
