@@ -395,7 +395,7 @@ MouseArea {
         anchors.fill: frame
         asynchronous: true
         source: "TaskProgressOverlay.qml"
-        active: task.smartLauncherItem && task.smartLauncherItem.progressVisible
+        active: task.isWindow && task.smartLauncherItem && task.smartLauncherItem.progressVisible
     }
 
     Item {
