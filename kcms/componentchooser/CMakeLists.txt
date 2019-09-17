@@ -30,7 +30,13 @@ add_library(kcm_componentchooser MODULE ${kcm_componentchooser_SRCS})
 
 
 target_link_libraries(kcm_componentchooser
+                      KF5::I18n
+                      KF5::Completion
+                      KF5::ConfigWidgets
+                      KF5::Service
+                      KF5::KIOWidgets
                       KF5::KDELibs4Support
+                      Qt5::DBus
                       Qt5::X11Extras
                       )
 

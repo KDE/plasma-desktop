@@ -85,7 +85,6 @@
 
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
-#include <kdemacros.h>
 
 K_PLUGIN_FACTORY(KCMStyleFactory, registerPlugin<KCMStyle>();)
 K_EXPORT_PLUGIN(KCMStyleFactory("kcmstyle"))

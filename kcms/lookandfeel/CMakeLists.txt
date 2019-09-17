@@ -20,6 +20,7 @@ add_library(kcm_lookandfeel MODULE ${kcm_lookandfeel_SRCS})
 target_link_libraries(kcm_lookandfeel
   KF5::KIOWidgets
   KF5::CoreAddons
+  KF5::GuiAddons
   KF5::KCMUtils
   KF5::I18n
   KF5::Plasma

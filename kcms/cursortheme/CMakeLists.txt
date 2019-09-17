@@ -31,6 +31,8 @@ target_link_libraries(kcm_cursortheme
     KF5::Archive
     KF5::KCMUtils
     KF5::I18n
+    KF5::GuiAddons
+    KF5::WindowSystem
     KF5::KIOCore
     KF5::KIOWidgets
     KF5::KDELibs4Support

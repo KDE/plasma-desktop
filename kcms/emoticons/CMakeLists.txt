@@ -7,6 +7,7 @@ ki18n_wrap_ui(kcmemoticons_SRCS emoticonslist.ui)
 add_library(kcm_emoticons MODULE ${kcmemoticons_SRCS})
 target_link_libraries(kcm_emoticons
                       KF5::NewStuff
+                      KF5::Completion
                       KF5::KDELibs4Support
                       KF5::Emoticons)
 

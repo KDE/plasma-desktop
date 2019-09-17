@@ -20,7 +20,6 @@
 #include <QDBusMessage>
 #include <QCheckBox>
 
-#include <kapplication.h>
 #include <kmessagebox.h>
 #include <kopenwithdialog.h>
 #include <kconfig.h>

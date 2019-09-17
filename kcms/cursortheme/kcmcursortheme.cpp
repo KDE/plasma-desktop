@@ -37,7 +37,6 @@
 #include <KIO/DeleteJob>
 #include <KIO/Job>
 #include <KIO/JobUiDelegate>
-#include <kio/netaccess.h>
 #include <KTar>
 #include <KGlobalSettings>
 
