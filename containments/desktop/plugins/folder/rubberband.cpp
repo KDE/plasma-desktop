@@ -39,7 +39,6 @@ void RubberBand::paint(QPainter *painter)
     QStyleOptionRubberBand opt;
     opt.state = QStyle::State_None;
     opt.direction = qApp->layoutDirection();
-    opt.fontMetrics = qApp->fontMetrics();
     opt.styleObject = this;
     opt.palette = qApp->palette();
     opt.shape = QRubberBand::Rectangle;
