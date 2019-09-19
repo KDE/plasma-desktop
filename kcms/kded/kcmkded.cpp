@@ -94,7 +94,7 @@ KDEDConfig::KDEDConfig(QWidget* parent, const QVariantList &) :
 	NOT_RUNNING = i18n("Not running")+' ';
 
 	QVBoxLayout *lay = new QVBoxLayout( this );
-	lay->setMargin( 0 );
+	lay->setContentsMargins( 0, 0, 0, 0 );
 
 	QGroupBox *gb = new QGroupBox( i18n("Load-on-Demand Services"), this );
 	gb->setWhatsThis( i18n("This is a list of available KDE services which will "

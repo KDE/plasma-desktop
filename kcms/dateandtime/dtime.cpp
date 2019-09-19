@@ -87,7 +87,7 @@ Dtime::Dtime(QWidget * parent, bool haveTimeDated):
   }
 
   QVBoxLayout *v2 = new QVBoxLayout( timeBox );
-  v2->setMargin( 0 );
+  v2->setContentsMargins( 0, 0, 0, 0 );
 
   kclock = new Kclock( timeBox );
   kclock->setObjectName(QStringLiteral("Kclock"));

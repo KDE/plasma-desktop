@@ -38,7 +38,7 @@ StyleConfigDialog::StyleConfigDialog(QWidget* parent, const QString &styleName)
   mainLayout->addWidget(mainWidget);
 
   mMainLayout = new QHBoxLayout(mainWidget);
-  mMainLayout->setMargin(0);
+  mMainLayout->setContentsMargins(0, 0, 0, 0);
 
   QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
   okButton->setDefault(true);
