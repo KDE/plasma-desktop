@@ -18,7 +18,10 @@
 
 #include <QPainter>
 #include <QMouseEvent>
+#include <QQuickRenderControl>
 #include <QQuickWindow>
+
+#include <KWindowSystem>
 
 #include "previewwidget.h"
 
@@ -274,19 +277,18 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
 {
     if (needLayout)
         layoutItems();
-    //FIXME: we can't find an handle to the actual window
-    //in the case we are in a QQuickWidget, so we can't do the live preview
-/*
-    foreach (const PreviewCursor *c, list)
-    {
-        if (c->rect().contains(e->pos()))
-        {
-            if (c != current)
-            {
+
+    for (const PreviewCursor *c : qAsConst(list)) {
+        if (c->rect().contains(e->pos())) {
+            if (c != current) {
                 const uint32_t cursor = *c;
-                if (QX11Info::isPlatformX11() && (cursor != XCB_CURSOR_NONE) && window()) {
-                    xcb_change_window_attributes(QX11Info::connection(), window()->winId(), XCB_CW_CURSOR, &cursor);
+
+                if (QWindow *actualWindow = QQuickRenderControl::renderWindowFor(window())) {
+                    if (KWindowSystem::isPlatformX11() && cursor != XCB_CURSOR_NONE) {
+                        xcb_change_window_attributes(QX11Info::connection(), actualWindow->winId(), XCB_CW_CURSOR, &cursor);
+                    }
                 }
+
                 current = c;
             }
             return;
@@ -294,14 +296,13 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
     }
 
     setCursor(Qt::ArrowCursor);
-    current = NULL;
-    */
+    current = nullptr;
 }
 
 void PreviewWidget::hoverLeaveEvent(QHoverEvent *e)
 {
-    if (window()) {
-        window()->unsetCursor();
+    if (QWindow *actualWindow = QQuickRenderControl::renderWindowFor(window())) {
+        actualWindow->unsetCursor();
     }
 }
 
