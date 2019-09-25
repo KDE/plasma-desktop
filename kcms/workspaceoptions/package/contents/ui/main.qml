@@ -16,9 +16,9 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 import QtQuick 2.7
-import QtQuick.Controls 2.4 as Controls
+import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kcm 1.2 as KCM
 
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -32,7 +32,7 @@ KCM.SimpleKCM {
         id: formLayout
 
         // Visual behavior settings
-        Controls.CheckBox {
+        QQC2.CheckBox {
             id: showToolTips
             Kirigami.FormData.label: i18n("Visual behavior:")
             text: i18n("Display informational tooltips on mouse hover")
@@ -40,7 +40,7 @@ KCM.SimpleKCM {
             onCheckedChanged: kcm.toolTip = checked
         }
 
-        Controls.CheckBox {
+        QQC2.CheckBox {
             id: showVisualFeedback
             text: i18n("Display visual feedback for status changes")
             checked: kcm.visualFeedback
@@ -58,13 +58,13 @@ KCM.SimpleKCM {
             Kirigami.FormData.label: i18n("Animation speed:")
             Kirigami.FormData.buddyFor: slider
 
-            Controls.Slider {
+            QQC2.Slider {
                 id: slider
                 Layout.fillWidth: true
                 from: -4
                 to: 4
                 stepSize: 1
-                snapMode: Controls.Slider.SnapAlways
+                snapMode: QQC2.Slider.SnapAlways
                 onMoved: {
                     if(value === to) {
                         kcm.animationDurationFactor = 0;
@@ -79,13 +79,13 @@ KCM.SimpleKCM {
                 }
             }
             RowLayout {
-                Controls.Label {
+                QQC2.Label {
                     text: i18nc("Animation speed", "Slow")
                 }
                 Item {
                     Layout.fillWidth: true
                 }
-                Controls.Label {
+                QQC2.Label {
                     text: i18nc("Animation speed", "Instant")
                 }
             }
@@ -103,7 +103,7 @@ KCM.SimpleKCM {
 
         // Click behavior settings
 
-        Controls.RadioButton {
+        QQC2.RadioButton {
             id: singleClick
             Kirigami.FormData.label: i18n("Click behavior:")
             text: i18n("Single-click to open files and folders")
@@ -111,7 +111,7 @@ KCM.SimpleKCM {
             onCheckedChanged: kcm.singleClick = checked
         }
 
-        Controls.RadioButton {
+        QQC2.RadioButton {
             id: doubleClick
             text: i18n("Double-click to open files and folders (single click to select)")
         }
