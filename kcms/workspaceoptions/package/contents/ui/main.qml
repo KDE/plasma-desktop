@@ -31,7 +31,7 @@ KCM.SimpleKCM {
     Kirigami.FormLayout {
         id: formLayout
 
-        // Visaul behavior settings
+        // Visual behavior settings
         Controls.CheckBox {
             id: showToolTips
             Kirigami.FormData.label: i18n("Visual behavior:")
