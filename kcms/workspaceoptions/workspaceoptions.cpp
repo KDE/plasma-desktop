@@ -69,6 +69,7 @@ void KCMWorkspaceOptions::defaults()
     setToolTip(true);
     setVisualFeedback(true);
     setSingleClick(true);
+    setAnimationDurationFactor(1.0);
 
     handleNeedsSave();
 }
@@ -127,6 +128,21 @@ void KCMWorkspaceOptions::setSingleClick(bool state)
     handleNeedsSave();
 }
 
+qreal KCMWorkspaceOptions::getAnimationDurationFactor() const
+{
+    return m_animationDurationFactor;
+}
+
+void KCMWorkspaceOptions::setAnimationDurationFactor(qreal factor)
+{
+    if (m_animationDurationFactor == factor) {
+        return;
+    }
+    m_animationDurationFactor = factor;
+    emit animationDurationFactorChanged();
+    handleNeedsSave();
+}
+
 void KCMWorkspaceOptions::loadPlasmarc()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("plasmarc"));
@@ -135,7 +151,6 @@ void KCMWorkspaceOptions::loadPlasmarc()
     // Load toolTip
     {
         const KConfigGroup cg(config, QStringLiteral("PlasmaToolTips"));
-
         state = cg.readEntry("Delay", 0.7) > 0;
         setToolTip(state);
         m_toolTipOriginalState = state;
@@ -154,16 +169,15 @@ void KCMWorkspaceOptions::loadPlasmarc()
 void KCMWorkspaceOptions::loadKdeglobals()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
-    bool state;
 
-    // Load singleClick
-    {
-        const KConfigGroup cg(config, QStringLiteral("KDE"));
+    const KConfigGroup cg(config, QStringLiteral("KDE"));
 
-        state = cg.readEntry(QStringLiteral("SingleClick"), true);
-        setSingleClick(state);
-        m_singleClickOriginalState = state;
-    }
+    bool state = cg.readEntry(QStringLiteral("SingleClick"), true);
+    setSingleClick(state);
+    m_singleClickOriginalState = state;
+
+    setAnimationDurationFactor(cg.readEntry("AnimationDurationFactor", 1.0));
+    m_animationOriginalDurationFactor = m_animationDurationFactor;
 }
 
 void KCMWorkspaceOptions::savePlasmarc()
@@ -197,13 +211,15 @@ void KCMWorkspaceOptions::saveKdeglobals()
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
     bool state;
 
-    // Save singleClick
     {
         KConfigGroup cg(config, QStringLiteral("KDE"));
 
         state = getSingleClick();
         cg.writeEntry("SingleClick", state);
         m_singleClickOriginalState = state;
+
+        cg.writeEntry("AnimationDurationFactor", m_animationDurationFactor, KConfig::Notify);
+        m_animationOriginalDurationFactor = m_animationDurationFactor;
     }
 
     config->sync();
@@ -223,7 +239,8 @@ void KCMWorkspaceOptions::handleNeedsSave()
 {
     setNeedsSave(m_toolTipOriginalState != getToolTip() ||
             m_visualFeedbackOriginalState != getVisualFeedback() ||
-            m_singleClickOriginalState != getSingleClick());
+            m_singleClickOriginalState != getSingleClick() ||
+            !qFuzzyCompare(m_animationOriginalDurationFactor, getAnimationDurationFactor()));
 }
 
 #include "workspaceoptions.moc"

@@ -26,6 +26,7 @@ class KCMWorkspaceOptions : public KQuickAddons::ConfigModule
     Q_PROPERTY(bool toolTip READ getToolTip WRITE setToolTip NOTIFY toolTipChanged)
     Q_PROPERTY(bool visualFeedback READ getVisualFeedback WRITE setVisualFeedback NOTIFY visualFeedbackChanged)
     Q_PROPERTY(bool singleClick READ getSingleClick WRITE setSingleClick NOTIFY singleClickChanged)
+    Q_PROPERTY(qreal animationDurationFactor READ getAnimationDurationFactor WRITE setAnimationDurationFactor NOTIFY animationDurationFactorChanged)
 
 public:
     KCMWorkspaceOptions(QObject* parent, const QVariantList& args);
@@ -41,6 +42,9 @@ public:
     bool getSingleClick() const;
     void setSingleClick(bool state);
 
+    qreal getAnimationDurationFactor() const;
+    void setAnimationDurationFactor(qreal speed);
+
 public Q_SLOTS:
     void load() override;
     void save() override;
@@ -50,6 +54,7 @@ Q_SIGNALS:
     void toolTipChanged();
     void visualFeedbackChanged();
     void singleClickChanged();
+    void animationDurationFactorChanged();
 
 private:
     void loadPlasmarc();
@@ -69,6 +74,9 @@ private:
 
     bool m_singleClickOriginalState;
     bool m_singleClickCurrentState;
+
+    qreal m_animationDurationFactor = 1.0;
+    qreal m_animationOriginalDurationFactor = 1.0;
 };
 
 #endif  // _KCM_WORKSPACEOPTIONS_H

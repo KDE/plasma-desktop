@@ -17,7 +17,7 @@
  */
 import QtQuick 2.7
 import QtQuick.Controls 2.4 as Controls
-import QtQuick.Layouts 1.3 as Layouts
+import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kcm 1.2 as KCM
 
@@ -45,6 +45,40 @@ KCM.SimpleKCM {
             text: i18n("Display visual feedback for status changes")
             checked: kcm.visualFeedback
             onCheckedChanged: kcm.visualFeedback = checked
+        }
+
+        // We want to show the slider in a logarithmic way. ie
+        // move from 4x, 3x, 2x, 1x, 0.5x, 0.25x, 0.125x
+        // 0 is a special case
+        RowLayout {
+            Kirigami.FormData.label: i18n("Animation speed:")
+
+            Controls.Label {
+                text: i18nc("Animation speed", "Slow")
+            }
+            Controls.Slider {
+                id: slider
+                Layout.fillWidth: true
+                from: -4
+                to: 4
+                stepSize: 1
+                snapMode: Controls.Slider.SnapAlways
+                onMoved: {
+                    if(value === to) {
+                        kcm.animationDurationFactor = 0;
+                    } else {
+                        kcm.animationDurationFactor = 1.0 / Math.pow(2, value);
+                    }
+                }
+                value: if (kcm.animationDurationFactor === 0) {
+                    return slider.to;
+                } else {
+                    return -(Math.log(kcm.animationDurationFactor) / Math.log(2));
+                }
+            }
+            Controls.Label {
+                text: i18nc("Animation speed", "Instant")
+            }
         }
 
         Connections {
