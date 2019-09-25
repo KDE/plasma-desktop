@@ -47,15 +47,17 @@ KCM.SimpleKCM {
             onCheckedChanged: kcm.visualFeedback = checked
         }
 
+        Item {
+            Kirigami.FormData.isSection: false
+        }
+
         // We want to show the slider in a logarithmic way. ie
         // move from 4x, 3x, 2x, 1x, 0.5x, 0.25x, 0.125x
         // 0 is a special case
-        RowLayout {
+        ColumnLayout {
             Kirigami.FormData.label: i18n("Animation speed:")
+            Kirigami.FormData.buddyFor: slider
 
-            Controls.Label {
-                text: i18nc("Animation speed", "Slow")
-            }
             Controls.Slider {
                 id: slider
                 Layout.fillWidth: true
@@ -76,8 +78,16 @@ KCM.SimpleKCM {
                     return -(Math.log(kcm.animationDurationFactor) / Math.log(2));
                 }
             }
-            Controls.Label {
-                text: i18nc("Animation speed", "Instant")
+            RowLayout {
+                Controls.Label {
+                    text: i18nc("Animation speed", "Slow")
+                }
+                Item {
+                    Layout.fillWidth: true
+                }
+                Controls.Label {
+                    text: i18nc("Animation speed", "Instant")
+                }
             }
         }
 
