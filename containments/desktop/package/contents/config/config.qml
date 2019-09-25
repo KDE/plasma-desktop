@@ -41,7 +41,7 @@ ConfigModel {
 
     ConfigCategory {
          name: i18n("Filter")
-         icon: "view-filter"
+         icon: "preferences-desktop-filter"
          source: "ConfigFilter.qml"
          visible: isFolder
     }
