@@ -28,10 +28,10 @@ Free Software Foundation, Inc.,
 #include <xwindowtasksmodel.h>
 #include <waylandtasksmodel.h>
 
-#include <QApplication>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
+#include <QGuiApplication>
 #include <QMetaEnum>
 #include <QScreen>
 
