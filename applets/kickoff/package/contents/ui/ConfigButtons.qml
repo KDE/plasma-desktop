@@ -26,11 +26,11 @@ import org.kde.kirigami 2.5 as Kirigami
 GridView {
     id: configButtons
 
-    cellHeight: units.gridUnit * 6 + units.smallSpacing
-    cellWidth: units.gridUnit * 6
+    cellHeight: units.gridUnit * 5 + units.smallSpacing
+    cellWidth: units.gridUnit * 5
 
-    width: cellWidth * 5
-    height: cellHeight * 2
+    implicitWidth: cellWidth * 5
+    implicitHeight: cellHeight * 2
 
     property var items: {
         "bookmark":    { icon: "bookmarks", text: i18n("Favorites")},
@@ -106,7 +106,6 @@ GridView {
         }
     }
 
-
     displaced: Transition {
         NumberAnimation { properties: "x,y"; easing.type: Easing.OutQuad }
     }
@@ -126,8 +125,8 @@ GridView {
         delegate: MouseArea {
             id: delegateRoot
 
-            width: units.gridUnit * 6
-            height: units.gridUnit * 5
+            width: units.gridUnit * 5
+            height: units.gridUnit * 4
 
             property int visualIndex: DelegateModel.itemsIndex
 
@@ -210,15 +209,19 @@ GridView {
         }
     }
 
-    Kirigami.Heading {
+    header: Kirigami.Heading {
         level: 2
         text: i18n("Active Tabs")
-        anchors.bottom: configButtons.top
+        width: parent.width
+        horizontalAlignment: Text.AlignHCenter
     }
 
+    // the middle label is placed right the middle of the grid view, which is a single grid with a gap in the middle
     Kirigami.Heading {
         level: 2
         text: i18n("Inactive Tabs")
-        anchors.bottom: configButtons.verticalCenter
+        anchors.top: configButtons.verticalCenter
+        width: parent.width
+        horizontalAlignment: Text.AlignHCenter
     }
 }
