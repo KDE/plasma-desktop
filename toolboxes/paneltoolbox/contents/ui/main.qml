@@ -29,7 +29,7 @@ Item {
     width: isVertical ? units.iconSizes.medium : units.iconSizes.smallMedium + units.smallSpacing * 2
     height: isVertical ? units.iconSizes.smallMedium + units.smallSpacing * 2 : units.iconSizes.medium
     property bool isVertical: plasmoid.formFactor === 3
-    opacity: plasmoid.immutable ? 0 : (mouseArea.containsMouse || plasmoid.userConfiguring ? 1 : 0.5)
+    opacity: plasmoid.editMode || plasmoid.userConfiguring ? (mouseArea.containsMouse || plasmoid.userConfiguring ? 1 : 0.5) : 0
 
     z: 999
 
@@ -77,7 +77,7 @@ Item {
         id: mouseArea
         anchors.fill: parent
         hoverEnabled: enabled
-        enabled: !plasmoid.immutable
+        enabled: plasmoid.editMode || plasmoid.userConfiguring
         onClicked: {
             main.Plasmoid.action("configure").trigger()
         }
