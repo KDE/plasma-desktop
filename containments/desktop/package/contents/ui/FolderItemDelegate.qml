@@ -158,13 +158,15 @@ Item {
 
                 onContainsMouseChanged:  {
                     if (containsMouse && !model.blank) {
-                        toolTip.icon = model.decoration;
-                        toolTip.mainText = model.display;
+                        if (toolTip.active) {
+                            toolTip.icon = model.decoration;
+                            toolTip.mainText = model.display;
 
-                        if (model.size !== undefined) {
-                                toolTip.subText = model.type + "\n" + model.size;
-                        } else {
-                            toolTip.subText = model.type;
+                            if (model.size !== undefined) {
+                                    toolTip.subText = model.type + "\n" + model.size;
+                            } else {
+                                toolTip.subText = model.type;
+                            }
                         }
 
                         main.GridView.view.hoveredItem = main;
