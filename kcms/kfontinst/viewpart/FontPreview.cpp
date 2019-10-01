@@ -156,9 +156,9 @@ void CFontPreview::mouseMoveEvent(QMouseEvent *event)
 
 void CFontPreview::wheelEvent(QWheelEvent *e)
 {
-    if(e->delta()>0)
+    if(e->angleDelta().y()>0)
         zoomIn();
-    else if(e->delta()<0)
+    else if(e->angleDelta().y()<0)
         zoomOut();
 
     e->accept();

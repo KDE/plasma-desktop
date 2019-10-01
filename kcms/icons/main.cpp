@@ -528,7 +528,7 @@ QVariantList IconModule::previewIcons(const QString &themeName, int size, qreal 
             + QString::number(dpr,'f',1) + QLatin1Char('@') + iconNames.join(QLatin1Char(','));
 
         QPixmap pix;
-        if (!QPixmapCache::find(cacheKey, pix)) {
+        if (!QPixmapCache::find(cacheKey, &pix)) {
             if (!theme) {
                 theme.reset(new KIconTheme(themeName));
             }

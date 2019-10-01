@@ -379,10 +379,10 @@ XcbAtom &LibinputTouchpad::touchpadOffAtom()
 template<typename T>
 bool LibinputTouchpad::valueLoader(Prop<T> &prop)
 {
-    const Parameter *p = findParameter(QString::fromAscii(prop.name));
+    const Parameter *p = findParameter(QString::fromLatin1(prop.name));
 
     if (!p) {
-        qCCritical(KCM_TOUCHPAD) << "Error on read of " << QString::fromAscii(prop.name);
+        qCCritical(KCM_TOUCHPAD) << "Error on read of " << QString::fromLatin1(prop.name);
     }
 
     QVariant reply = getParameter(p);

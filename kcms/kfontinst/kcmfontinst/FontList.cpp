@@ -1289,7 +1289,7 @@ void CFontListSortFilterProxy::setFilterGroup(CGroupListItem *grp)
         itsGroup=grp;
 
        // if(!(wasNull && itsGroup && CGroupListItem::ALL==itsGroup->type()))
-            clear();
+            invalidate();
     }
 }
 
@@ -1362,7 +1362,7 @@ void CFontListSortFilterProxy::timeout()
     }
     else
     {
-        clear();
+        invalidate();
         emit refresh();
     }
 }
@@ -1371,7 +1371,7 @@ void CFontListSortFilterProxy::fcResults()
 {
     if(CFontFilter::CRIT_FONTCONFIG==itsFilterCriteria)
     {
-        clear();
+        invalidate();
         emit refresh();
     }
 }
@@ -1386,8 +1386,8 @@ CFontListView::CFontListView(QWidget *parent, CFontList *model)
     itsModel=model;
     header()->setStretchLastSection(false);
     resizeColumnToContents(COL_STATUS);
-    header()->setResizeMode(COL_STATUS, QHeaderView::Fixed);
-    header()->setResizeMode(COL_FONT, QHeaderView::Stretch);
+    header()->setSectionResizeMode(COL_STATUS, QHeaderView::Fixed);
+    header()->setSectionResizeMode(COL_FONT, QHeaderView::Stretch);
     setSelectionMode(QAbstractItemView::ExtendedSelection);
     setSelectionBehavior(QAbstractItemView::SelectRows);
     setSortingEnabled(true);
@@ -1398,7 +1398,7 @@ CFontListView::CFontListView(QWidget *parent, CFontList *model)
     setDropIndicatorShown(false);
     setDragEnabled(true);
     setDragDropMode(QAbstractItemView::DragDrop);
-    header()->setClickable(true);
+    header()->setSectionsClickable(true);
     header()->setSortIndicatorShown(true);
     connect(this, SIGNAL(collapsed(QModelIndex)), SLOT(itemCollapsed(QModelIndex)));
     connect(header(), SIGNAL(sectionClicked(int)), SLOT(setSortColumn(int)));
@@ -1710,7 +1710,7 @@ void CFontListView::setSortColumn(int col)
     if(col!=itsProxy->filterKeyColumn())
     {
         itsProxy->setFilterKeyColumn(col);
-        itsProxy->clear();
+        itsProxy->invalidate();
     }
 }
 

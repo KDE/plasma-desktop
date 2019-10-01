@@ -27,6 +27,7 @@
 #include <QX11Info>
 #include <QStandardPaths>
 #include <QDebug>
+#include <QElapsedTimer>
 
 #include <kprocess.h>
 
@@ -100,7 +101,7 @@ void restoreXmodmap()
 //TODO: make private
 bool XkbHelper::runConfigLayoutCommand(const QStringList& setxkbmapCommandArguments)
 {
-	QTime timer;
+	QElapsedTimer timer;
 	timer.start();
 
 	KProcess setxkbmapProcess;

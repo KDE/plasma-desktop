@@ -34,6 +34,7 @@
 #include <QProcess>
 #include <QTemporaryFile>
 #include <QStandardPaths>
+#include <QUrlQuery>
 #include <unistd.h>
 #include <ctype.h>
 

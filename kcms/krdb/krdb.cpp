@@ -848,7 +848,7 @@ void runRdb( uint flags )
       applyQtSettings( kglobalcfg, *settings );          // For kcmstyle
 
     delete settings;
-    QApplication::flush();
+    QCoreApplication::processEvents();
 #if HAVE_X11
     if (qApp->platformName() == QLatin1String("xcb")) {
         // We let KIPC take care of ourselves, as we are in a KDE app with

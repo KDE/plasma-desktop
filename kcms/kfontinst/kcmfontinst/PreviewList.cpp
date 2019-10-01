@@ -157,7 +157,7 @@ class CPreviewListViewDelegate : public QStyledItemDelegate
 
         QTextStream(&key) << "kfi-" << item->name() << "-" << item->style() << "-" << text.rgba();
 
-        if(!QPixmapCache::find(key, pix))
+        if(!QPixmapCache::find(key, &pix))
         {
             QColor bgnd(Qt::black);
 
