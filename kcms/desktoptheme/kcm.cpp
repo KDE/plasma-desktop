@@ -190,8 +190,8 @@ void KCMDesktopTheme::installTheme(const QString &path)
     qCDebug(KCM_DESKTOP_THEME) << program << arguments.join(QLatin1Char(' '));
     QProcess *myProcess = new QProcess(this);
     connect(myProcess, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished),
-            this, [this, myProcess](int exitCode, QProcess::ExitStatus exitStatus) {
-                Q_UNUSED(exitStatus);
+            this, [this](int exitCode, QProcess::ExitStatus exitStatus) {
+                Q_UNUSED(exitStatus)
                 if (exitCode == 0) {
                     emit showSuccessMessage(i18n("Theme installed successfully."));
                     load();
@@ -349,7 +349,7 @@ void KCMDesktopTheme::processPendingDeletions()
         QProcess *process = new QProcess(this);
         connect(process, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), this,
             [this, process, idx, pluginName, displayName](int exitCode, QProcess::ExitStatus exitStatus) {
-                Q_UNUSED(exitStatus);
+                Q_UNUSED(exitStatus)
                 if (exitCode == 0) {
                     m_model->removeRow(idx.row());
                 } else {
