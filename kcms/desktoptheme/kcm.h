@@ -40,6 +40,7 @@ class FileCopyJob;
 
 class QQuickItem;
 class QStandardItemModel;
+class DesktopThemeSettings;
 
 class KCMDesktopTheme : public KQuickAddons::ConfigModule
 {
@@ -101,6 +102,8 @@ private:
     void processPendingDeletions();
 
     void installTheme(const QString &path);
+
+    DesktopThemeSettings *m_settings;
 
     QStandardItemModel *m_model;
     QString m_selectedPlugin;

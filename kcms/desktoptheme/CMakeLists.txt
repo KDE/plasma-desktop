@@ -5,6 +5,8 @@ set(kcm_desktoptheme_SRCS
   kcm.cpp
 )
 
+kconfig_add_kcfg_files(kcm_desktoptheme_SRCS desktopthemesettings.kcfgc GENERATE_MOC)
+
 add_library(kcm_desktoptheme MODULE ${kcm_desktoptheme_SRCS})
 
 target_link_libraries(kcm_desktoptheme

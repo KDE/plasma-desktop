@@ -24,7 +24,6 @@
 
 #include <KPluginFactory>
 #include <KAboutData>
-#include <KSharedConfig>
 #include <KLocalizedString>
 #include <KDesktopFile>
 
@@ -44,14 +43,19 @@
 
 #include <KNewStuff3/KNS3/DownloadDialog>
 
+#include "desktopthemesettings.h"
+
 Q_LOGGING_CATEGORY(KCM_DESKTOP_THEME, "kcm_desktoptheme")
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMDesktopThemeFactory, "kcm_desktoptheme.json", registerPlugin<KCMDesktopTheme>();)
 
 KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
+    , m_settings(new DesktopThemeSettings)
     , m_haveThemeExplorerInstalled(false)
 {
+    // Unfortunately doesn't generate a ctor taking the parent as parameter
+    m_settings->setParent(this);
     qmlRegisterType<QStandardItemModel>();
 
     KAboutData* about = new KAboutData(QStringLiteral("kcm_desktoptheme"), i18n("Plasma Style"),
@@ -280,8 +284,7 @@ void KCMDesktopTheme::load()
     m_model->setSortRole(ThemeNameRole); // FIXME the model should really be just using Qt::DisplayRole
     m_model->sort(0 /*column*/);
 
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("plasmarc")), "Theme");
-    setSelectedPlugin(cg.readEntry("name", QStringLiteral("default")));
+    setSelectedPlugin(m_settings->name());
 
     emit selectedPluginIndexChanged();
 
@@ -290,12 +293,10 @@ void KCMDesktopTheme::load()
 
 void KCMDesktopTheme::save()
 {
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("plasmarc")), "Theme");
-    const auto currentTheme = cg.readEntry("name", QStringLiteral("default"));
-    if (currentTheme != m_selectedPlugin) {
-        cg.writeEntry("name", m_selectedPlugin);
-        cg.sync();
-        Plasma::Theme().setThemeName(m_selectedPlugin);
+    if (m_settings->name() != m_selectedPlugin) {
+        m_settings->setName(m_selectedPlugin);
+        m_settings->save();
+        Plasma::Theme().setThemeName(m_settings->name());
     }
 
     processPendingDeletions();
@@ -304,7 +305,7 @@ void KCMDesktopTheme::save()
 
 void KCMDesktopTheme::defaults()
 {
-    setSelectedPlugin(QStringLiteral("default"));
+    setSelectedPlugin(m_settings->defaultNameValue());
 
     // can this be done more elegantly?
     const auto pendingDeletions = m_model->match(m_model->index(0, 0), PendingDeletionRole, true);
@@ -325,10 +326,8 @@ void KCMDesktopTheme::editTheme(const QString &theme)
 
 void KCMDesktopTheme::updateNeedsSave()
 {
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("plasmarc")), "Theme");
-    const auto currentTheme = cg.readEntry("name", QStringLiteral("default"));
     setNeedsSave(!m_model->match(m_model->index(0, 0), PendingDeletionRole, true).isEmpty()
-                    || m_selectedPlugin != currentTheme);
+                    || m_selectedPlugin != m_settings->name());
 }
 
 void KCMDesktopTheme::processPendingDeletions()
