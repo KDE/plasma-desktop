@@ -3,6 +3,7 @@
    Copyright (c) 2014 Vishesh Handa <me@vhanda.in>
    Copyright (c) 2016 David Rosca <nowrep@gmail.com>
    Copyright (c) 2018 Kai Uwe Broulik <kde@privat.broulik.de>
+   Copyright (c) 2019 Kevin Ottens <kevin.ottens@enioka.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -104,7 +105,6 @@ private:
     QStandardItemModel *m_model;
     QString m_selectedPlugin;
     QStringList m_pendingRemoval;
-    Plasma::Theme *m_defaultTheme;
     QHash<QString, Plasma::Theme*> m_themes;
     bool m_haveThemeExplorerInstalled;
 

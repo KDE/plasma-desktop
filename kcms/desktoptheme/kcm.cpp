@@ -3,6 +3,7 @@
    Copyright (c) 2014 Vishesh Handa <me@vhanda.in>
    Copyright (c) 2016 David Rosca <nowrep@gmail.com>
    Copyright (c) 2018 Kai Uwe Broulik <kde@privat.broulik.de>
+   Copyright (c) 2019 Kevin Ottens <kevin.ottens@enioka.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -49,7 +50,6 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMDesktopThemeFactory, "kcm_desktoptheme.json", regi
 
 KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
-    , m_defaultTheme(new Plasma::Theme(this))
     , m_haveThemeExplorerInstalled(false)
 {
     qmlRegisterType<QStandardItemModel>();
@@ -74,7 +74,6 @@ KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const QVariantList &args)
 
 KCMDesktopTheme::~KCMDesktopTheme()
 {
-    delete m_defaultTheme;
 }
 
 QStandardItemModel *KCMDesktopTheme::desktopThemeModel() const
@@ -282,7 +281,7 @@ void KCMDesktopTheme::load()
     m_model->sort(0 /*column*/);
 
     KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("plasmarc")), "Theme");
-    setSelectedPlugin(cg.readEntry("name", m_defaultTheme->themeName()));
+    setSelectedPlugin(cg.readEntry("name", QStringLiteral("default")));
 
     emit selectedPluginIndexChanged();
 
@@ -291,8 +290,12 @@ void KCMDesktopTheme::load()
 
 void KCMDesktopTheme::save()
 {
-    if (m_defaultTheme->themeName() != m_selectedPlugin) {
-        m_defaultTheme->setThemeName(m_selectedPlugin);
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("plasmarc")), "Theme");
+    const auto currentTheme = cg.readEntry("name", QStringLiteral("default"));
+    if (currentTheme != m_selectedPlugin) {
+        cg.writeEntry("name", m_selectedPlugin);
+        cg.sync();
+        Plasma::Theme().setThemeName(m_selectedPlugin);
     }
 
     processPendingDeletions();
@@ -322,8 +325,10 @@ void KCMDesktopTheme::editTheme(const QString &theme)
 
 void KCMDesktopTheme::updateNeedsSave()
 {
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("plasmarc")), "Theme");
+    const auto currentTheme = cg.readEntry("name", QStringLiteral("default"));
     setNeedsSave(!m_model->match(m_model->index(0, 0), PendingDeletionRole, true).isEmpty()
-                    || m_selectedPlugin != m_defaultTheme->themeName());
+                    || m_selectedPlugin != currentTheme);
 }
 
 void KCMDesktopTheme::processPendingDeletions()
