@@ -152,7 +152,7 @@ PlasmaCore.Dialog {
                     Layout.maximumHeight: height
                     PlasmaCore.IconItem {
                         id: prevButton
-                        source: "arrow-left"
+                        source: inputpanel.verticalLayout ? "arrow-left" : "arrow-up"
                         width: inputpanel.baseSize
                         height: width
                         scale: prevButtonMouseArea.pressed ? 0.9 : 1
@@ -166,7 +166,7 @@ PlasmaCore.Dialog {
                     }
                     PlasmaCore.IconItem {
                         id: nextButton
-                        source: "arrow-right"
+                        source: inputpanel.verticalLayout ? "arrow-right" : "arrow-down"
                         width: inputpanel.baseSize
                         height: width
                         scale: nextButtonMouseArea.pressed ? 0.9 : 1
