@@ -56,6 +56,13 @@ KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const QVariantList &args)
 {
     // Unfortunately doesn't generate a ctor taking the parent as parameter
     m_settings->setParent(this);
+    m_currentTheme = m_settings->name();
+    connect(m_settings, &DesktopThemeSettings::configChanged,
+            this, &KCMDesktopTheme::updateNeedsSave);
+    connect(m_settings, &DesktopThemeSettings::nameChanged,
+            this, &KCMDesktopTheme::updateNeedsSave);
+
+    qmlRegisterType<DesktopThemeSettings>();
     qmlRegisterType<QStandardItemModel>();
 
     KAboutData* about = new KAboutData(QStringLiteral("kcm_desktoptheme"), i18n("Plasma Style"),
@@ -80,30 +87,19 @@ KCMDesktopTheme::~KCMDesktopTheme()
 {
 }
 
+DesktopThemeSettings *KCMDesktopTheme::desktopThemeSettings() const
+{
+    return m_settings;
+}
+
 QStandardItemModel *KCMDesktopTheme::desktopThemeModel() const
 {
     return m_model;
 }
 
-QString KCMDesktopTheme::selectedPlugin() const
+int KCMDesktopTheme::pluginIndex(const QString &pluginName) const
 {
-    return m_selectedPlugin;
-}
-
-void KCMDesktopTheme::setSelectedPlugin(const QString &plugin)
-{
-    if (m_selectedPlugin == plugin) {
-        return;
-    }
-    m_selectedPlugin = plugin;
-    emit selectedPluginChanged(m_selectedPlugin);
-    emit selectedPluginIndexChanged();
-    updateNeedsSave();
-}
-
-int KCMDesktopTheme::selectedPluginIndex() const
-{
-    const auto results = m_model->match(m_model->index(0, 0), PluginNameRole, m_selectedPlugin);
+    const auto results = m_model->match(m_model->index(0, 0), PluginNameRole, pluginName);
     if (results.count() == 1) {
         return results.first().row();
     }
@@ -122,13 +118,11 @@ void KCMDesktopTheme::setPendingDeletion(int index, bool pending)
 
     m_model->setData(idx, pending, PendingDeletionRole);
 
-    if (pending && selectedPluginIndex() == index) {
+    if (pending && pluginIndex(m_settings->name()) == index) {
         // move to the next non-pending theme
         const auto nonPending = m_model->match(idx, PendingDeletionRole, false);
-        setSelectedPlugin(nonPending.first().data(PluginNameRole).toString());
+        m_settings->setName(nonPending.first().data(PluginNameRole).toString());
     }
-
-    updateNeedsSave();
 }
 
 void KCMDesktopTheme::getNewStuff(QQuickItem *ctx)
@@ -284,28 +278,26 @@ void KCMDesktopTheme::load()
     m_model->setSortRole(ThemeNameRole); // FIXME the model should really be just using Qt::DisplayRole
     m_model->sort(0 /*column*/);
 
-    setSelectedPlugin(m_settings->name());
+    m_settings->load();
+    m_currentTheme = m_settings->name();
 
-    emit selectedPluginIndexChanged();
-
-    updateNeedsSave();
+    // Model has been cleared so pretend the theme name changed to force view update
+    emit m_settings->nameChanged();
 }
 
 void KCMDesktopTheme::save()
 {
-    if (m_settings->name() != m_selectedPlugin) {
-        m_settings->setName(m_selectedPlugin);
-        m_settings->save();
-        Plasma::Theme().setThemeName(m_settings->name());
-    }
-
+    m_settings->save();
+    m_currentTheme = m_settings->name();
+    Plasma::Theme().setThemeName(m_settings->name());
     processPendingDeletions();
     updateNeedsSave();
 }
 
 void KCMDesktopTheme::defaults()
 {
-    setSelectedPlugin(m_settings->defaultNameValue());
+    m_settings->setDefaults();
+    m_currentTheme = m_settings->name();
 
     // can this be done more elegantly?
     const auto pendingDeletions = m_model->match(m_model->index(0, 0), PendingDeletionRole, true);
@@ -327,7 +319,7 @@ void KCMDesktopTheme::editTheme(const QString &theme)
 void KCMDesktopTheme::updateNeedsSave()
 {
     setNeedsSave(!m_model->match(m_model->index(0, 0), PendingDeletionRole, true).isEmpty()
-                    || m_selectedPlugin != m_settings->name());
+                    || m_currentTheme != m_settings->name());
 }
 
 void KCMDesktopTheme::processPendingDeletions()
@@ -346,7 +338,7 @@ void KCMDesktopTheme::processPendingDeletions()
         const QString pluginName = idx.data(PluginNameRole).toString();
         const QString displayName = idx.data(Qt::DisplayRole).toString();
 
-        Q_ASSERT(pluginName != m_selectedPlugin);
+        Q_ASSERT(pluginName != m_settings->name());
 
         const QStringList arguments = {QStringLiteral("-t"), QStringLiteral("theme"), QStringLiteral("-r"), pluginName};
 

@@ -2,6 +2,7 @@
    Copyright (c) 2014 Marco Martin <mart@kde.org>
    Copyright (c) 2016 David Rosca <nowrep@gmail.com>
    Copyright (c) 2018 Kai Uwe Broulik <kde@privat.broulik.de>
+   Copyright (c) 2019 Kevin Ottens <kevin.ottens@enioka.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -30,7 +31,7 @@ KCM.GridViewKCM {
     KCM.ConfigModule.quickHelp: i18n("This module lets you choose the Plasma style.")
 
     view.model: kcm.desktopThemeModel
-    view.currentIndex: kcm.selectedPluginIndex
+    view.currentIndex: kcm.pluginIndex(kcm.desktopThemeSettings.name)
 
     enabled: !kcm.downloadingFile
 
@@ -86,7 +87,7 @@ KCM.GridViewKCM {
         ]
 
         onClicked: {
-            kcm.selectedPlugin = model.pluginName;
+            kcm.desktopThemeSettings.name = model.pluginName;
             view.forceActiveFocus();
         }
     }

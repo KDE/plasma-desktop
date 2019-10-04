@@ -45,9 +45,8 @@ class DesktopThemeSettings;
 class KCMDesktopTheme : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
+    Q_PROPERTY(DesktopThemeSettings *desktopThemeSettings READ desktopThemeSettings CONSTANT)
     Q_PROPERTY(QStandardItemModel *desktopThemeModel READ desktopThemeModel CONSTANT)
-    Q_PROPERTY(QString selectedPlugin READ selectedPlugin WRITE setSelectedPlugin NOTIFY selectedPluginChanged)
-    Q_PROPERTY(int selectedPluginIndex READ selectedPluginIndex NOTIFY selectedPluginIndexChanged)
     Q_PROPERTY(bool downloadingFile READ downloadingFile NOTIFY downloadingFileChanged)
     Q_PROPERTY(bool canEditThemes READ canEditThemes CONSTANT)
 
@@ -64,11 +63,10 @@ public:
     KCMDesktopTheme(QObject *parent, const QVariantList &args);
     ~KCMDesktopTheme() override;
 
+    DesktopThemeSettings *desktopThemeSettings() const;
     QStandardItemModel *desktopThemeModel() const;
 
-    QString selectedPlugin() const;
-    void setSelectedPlugin(const QString &plugin);
-    int selectedPluginIndex() const;
+    Q_INVOKABLE int pluginIndex(const QString &pluginName) const;
 
     bool downloadingFile() const;
 
@@ -84,8 +82,6 @@ public:
     Q_INVOKABLE void editTheme(const QString &themeName);
 
 Q_SIGNALS:
-    void selectedPluginChanged(const QString &plugin);
-    void selectedPluginIndexChanged();
     void downloadingFileChanged();
 
     void showSuccessMessage(const QString &message);
@@ -106,7 +102,7 @@ private:
     DesktopThemeSettings *m_settings;
 
     QStandardItemModel *m_model;
-    QString m_selectedPlugin;
+    QString m_currentTheme;
     QStringList m_pendingRemoval;
     QHash<QString, Plasma::Theme*> m_themes;
     bool m_haveThemeExplorerInstalled;
