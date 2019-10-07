@@ -95,7 +95,6 @@ public Q_SLOTS:
     void removeTheme(int row);
 
 private Q_SLOTS:
-    void selectionChanged();
     /** Updates the size combo box. It loads the size list of the selected cursor
         theme with the corresponding icons and chooses an appropriate entry. It
         enables the combo box and the label if the theme provides more than one

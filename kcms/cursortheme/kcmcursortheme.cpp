@@ -152,11 +152,6 @@ void CursorThemeConfig::setSelectedThemeRow(int row)
     emit selectedThemeRowChanged();
     updateSizeComboBox();
 
-    QModelIndex selected = selectedIndex();
-
-    if (selected.isValid()) {
-        const CursorTheme *theme = m_proxyModel->theme(selected);
-    }
     setNeedsSave(m_originalSelectedThemeRow != m_selectedThemeRow || m_originalPreferredSize != m_preferredSize);
 }
 
@@ -256,7 +251,7 @@ void CursorThemeConfig::updateSizeComboBox()
                 item->setData(i);
                 m_sizesModel->appendRow(item);
                 comboBoxList << i;
-            };
+            }
 
             // select an item
             int selectItem = comboBoxList.indexOf(m_preferredSize);
@@ -278,15 +273,15 @@ void CursorThemeConfig::updateSizeComboBox()
                     if (distance < smallestDistance || (distance == smallestDistance && j > m_preferredSize)) {
                         smallestDistance = distance;
                         selectItem = i;
-                    };
+                    }
                 }
-            };
+            }
             if (selectItem < 0) {
                 selectItem = 0;
             }
             setSelectedSizeRow(selectItem);
-        };
-    };
+        }
+    }
 
     // enable or disable the combobox
     KConfig c("kcminputrc");
@@ -295,7 +290,7 @@ void CursorThemeConfig::updateSizeComboBox()
         setCanResize(false);
     } else {
         setCanResize(m_sizesModel->rowCount() > 0);
-    };
+    }
 
 }
 
@@ -367,7 +362,7 @@ void CursorThemeConfig::save()
     KConfigGroup c(&config, "Mouse");
     if (theme) {
         c.writeEntry("cursorTheme", theme->name());
-    };
+    }
     c.writeEntry("cursorSize", m_preferredSize);
     c.sync();
 
@@ -410,8 +405,6 @@ void CursorThemeConfig::load()
           setCanInstall(false);
     }
 
-    const CursorTheme *theme = m_proxyModel->theme(m_appliedIndex);
-
     setSelectedThemeRow(m_appliedIndex.row());
     m_originalSelectedThemeRow = m_selectedThemeRow;
 
@@ -439,15 +432,6 @@ void CursorThemeConfig::defaults()
     m_preferredSize = 0;
     updateSizeComboBox();
     setNeedsSave(m_originalSelectedThemeRow != m_selectedThemeRow || m_originalPreferredSize != m_preferredSize);
-}
-
-
-void CursorThemeConfig::selectionChanged()
-{
-    updateSizeComboBox();
-
-    setNeedsSave(m_originalSelectedThemeRow != m_selectedThemeRow || m_originalPreferredSize != m_preferredSize);
-    //setNeedsSave(m_appliedIndex != selectedIndex());
 }
 
 QModelIndex CursorThemeConfig::selectedIndex() const
@@ -559,7 +543,7 @@ void CursorThemeConfig::installThemeFile(const QString &path)
     if (!QDir().mkpath(destDir)) {
         emit showErrorMessage(i18n("Failed to create 'icons' folder."));
         return;
-    };
+    }
 
     // Process each cursor theme in the archive
     foreach (const QString &dirName, themeDirs) {
