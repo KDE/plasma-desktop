@@ -32,6 +32,8 @@ Item {
     signal triggered(variant button);
     property int iconSize: units.roundToIconSize(Math.min(parent.width, parent.height))
 
+    width: iconSize
+    height: iconSize
     opacity: 'disable' == hint ? 0.3 : 1
 
     function extractLabelString(l) {
@@ -42,22 +44,9 @@ Item {
         }
     }
 
-    function iconPath(p) {
-        if (p.length > 0) {
-            if (p[0] === '/') {
-                return p;
-            } else {
-                return "image://icon/" + p;
-            }
-        }
-        return p;
-    }
-
     PlasmaCore.IconItem {
         id: imageIcon
-        anchors.centerIn: parent
-        width: iconSize
-        height: iconSize
+        anchors.fill: parent
         scale: mouseArea.pressed ? 0.9 : 1
         source: statusIcon.icon
         visible: statusIcon.icon.length > 0
@@ -66,12 +55,10 @@ Item {
     }
     PlasmaComponents.Label {
         id: textIcon
-        anchors.centerIn: parent
-        width: iconSize
-        height: iconSize
+        anchors.fill: parent
         scale: (mouseArea.pressed ? 0.9 : 1)
         // a reasonable large size to make Text.Fit work
-        minimumPointSize: 0
+        minimumPointSize: theme.smallestFont.pointSize
         font.pointSize: 1024
         fontSizeMode: Text.Fit
         verticalAlignment: Text.AlignVCenter
