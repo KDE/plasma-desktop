@@ -79,18 +79,18 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
     aboutData->addAuthor(i18n("Marco Martin"));
     setAboutData(aboutData);
 
-    m_model = new CursorThemeModel(this);
+    m_themeModel = new CursorThemeModel(this);
 
-    m_proxyModel = new SortProxyModel(this);
-    m_proxyModel->setSourceModel(m_model);
-    m_proxyModel->setFilterCaseSensitivity(Qt::CaseSensitive);
-    m_proxyModel->sort(NameColumn, Qt::AscendingOrder);
+    m_themeProxyModel = new SortProxyModel(this);
+    m_themeProxyModel->setSourceModel(m_themeModel);
+    m_themeProxyModel->setFilterCaseSensitivity(Qt::CaseSensitive);
+    m_themeProxyModel->sort(NameColumn, Qt::AscendingOrder);
 
     m_sizesModel = new QStandardItemModel(this);
 
     // Disable the install button if we can't install new themes to ~/.icons,
     // or Xcursor isn't set up to look for cursor themes there.
-    if (!m_model->searchPaths().contains(QDir::homePath() + "/.icons") || !iconsIsWritable()) {
+    if (!m_themeModel->searchPaths().contains(QDir::homePath() + "/.icons") || !iconsIsWritable()) {
         setCanInstall(false);
     }
 }
@@ -191,7 +191,7 @@ bool CursorThemeConfig::downloadingFile() const
 
 QAbstractItemModel *CursorThemeConfig::cursorsModel()
 {
-    return m_proxyModel;
+    return m_themeProxyModel;
 }
 
 QAbstractItemModel *CursorThemeConfig::sizesModel()
@@ -216,11 +216,11 @@ void CursorThemeConfig::updateSizeComboBox()
     m_sizesModel->clear();
 
     // refill the combo box and adopt its icon size
-    QModelIndex selected = selectedIndex();
+    QModelIndex selected = themeSelectedIndex();
     int maxIconWidth = 0;
     int maxIconHeight = 0;
     if (selected.isValid()) {
-        const CursorTheme *theme = m_proxyModel->theme(selected);
+        const CursorTheme *theme = m_themeProxyModel->theme(selected);
         const QList<int> sizes = theme->availableSizes();
         QIcon m_icon;
         // only refill the combobox if there is more that 1 size
@@ -357,7 +357,7 @@ bool CursorThemeConfig::applyTheme(const CursorTheme *theme, const int size)
 
 void CursorThemeConfig::save()
 {
-    const CursorTheme *theme = selectedIndex().isValid() ? m_proxyModel->theme(selectedIndex()) : nullptr;
+    const CursorTheme *theme = themeSelectedIndex().isValid() ? m_themeProxyModel->theme(themeSelectedIndex()) : nullptr;
 
     if (theme) {
         m_settings->setCursorTheme(theme->name());
@@ -370,7 +370,7 @@ void CursorThemeConfig::save()
         emit showInfoMessage(i18n("You have to restart the Plasma session for these changes to take effect."));
     }
 
-    m_appliedIndex = selectedIndex();
+    m_appliedIndex = themeSelectedIndex();
     m_appliedSize = m_preferredSize;
     m_originalSelectedThemeRow = m_selectedThemeRow;
     m_originalPreferredSize = m_preferredSize;
@@ -385,9 +385,9 @@ void CursorThemeConfig::load()
 
     // Find the theme in the listview
     if (!currentTheme.isEmpty()) {
-        m_appliedIndex = m_proxyModel->findIndex(currentTheme);
+        m_appliedIndex = m_themeProxyModel->findIndex(currentTheme);
     } else {
-        m_appliedIndex = m_proxyModel->defaultIndex();
+        m_appliedIndex = m_themeProxyModel->defaultIndex();
     }
 
     // Disable the listview and the buttons if we're in kiosk mode
@@ -418,16 +418,16 @@ void CursorThemeConfig::load()
 
 void CursorThemeConfig::defaults()
 {
-    QModelIndex defaultIndex = m_proxyModel->findIndex(m_settings->defaultCursorThemeValue());
+    QModelIndex defaultIndex = m_themeProxyModel->findIndex(m_settings->defaultCursorThemeValue());
     setSelectedThemeRow(defaultIndex.row());
     m_preferredSize = m_settings->defaultCursorSizeValue();
     updateSizeComboBox();
     setNeedsSave(m_originalSelectedThemeRow != m_selectedThemeRow || m_originalPreferredSize != m_preferredSize);
 }
 
-QModelIndex CursorThemeConfig::selectedIndex() const
+QModelIndex CursorThemeConfig::themeSelectedIndex() const
 {
-    return m_proxyModel->index(m_selectedThemeRow, 0);
+    return m_themeProxyModel->index(m_selectedThemeRow, 0);
 }
 
 void CursorThemeConfig::getNewClicked()
@@ -443,9 +443,9 @@ void CursorThemeConfig::getNewClicked()
                         if (list.last() == QLatin1Char('*')) {
                             list.takeLast();
                         }
-                        QModelIndex idx = m_model->findIndex(list.last().toString());
+                        QModelIndex idx = m_themeModel->findIndex(list.last().toString());
                         if (idx.isValid()) {
-                            m_model->removeTheme(idx);
+                            m_themeModel->removeTheme(idx);
                         }
                     }
                 } else if (entry.status() == KNS3::Entry::Installed) {
@@ -461,7 +461,7 @@ void CursorThemeConfig::getNewClicked()
                         if (list.last() == QLatin1String(".icons")) {
                             continue;
                         }
-                        m_model->addTheme(list.join(QLatin1Char('/')));
+                        m_themeModel->addTheme(list.join(QLatin1Char('/')));
                     }
                 }
             }
@@ -565,24 +565,24 @@ void CursorThemeConfig::installThemeFile(const QString &path)
         const KArchiveDirectory *dir = static_cast<const KArchiveDirectory*>
                         (archiveDir->entry(dirName));
         dir->copyTo(dest.path());
-        m_model->addTheme(dest);
+        m_themeModel->addTheme(dest);
     }
 
     archive.close();
 
     emit showSuccessMessage(i18n("Theme installed successfully."));
 
-    m_model->refreshList();
+    m_themeModel->refreshList();
 }
 
 void CursorThemeConfig::removeTheme(int row)
 {
-    QModelIndex idx = m_proxyModel->index(row, 0);
+    QModelIndex idx = m_themeProxyModel->index(row, 0);
     if (!idx.isValid()) {
         return;
     }
 
-    const CursorTheme *theme = m_proxyModel->theme(idx);
+    const CursorTheme *theme = m_themeProxyModel->theme(idx);
 
     // Don't let the user delete the currently configured theme
     if (idx == m_appliedIndex) {
@@ -608,7 +608,7 @@ void CursorThemeConfig::removeTheme(int row)
     KIO::del(QUrl::fromLocalFile(theme->path())); // async
 
     // Remove the theme from the model
-    m_proxyModel->removeTheme(idx);
+    m_themeProxyModel->removeTheme(idx);
 
     // TODO:
     //  Since it's possible to substitute cursors in a system theme by adding a local

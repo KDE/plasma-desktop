@@ -106,7 +106,7 @@ private Q_SLOTS:
 
 
 private:
-    QModelIndex selectedIndex() const;
+    QModelIndex themeSelectedIndex() const;
     void installThemeFile(const QString &path);
     /** Applies a given theme, using XFixes, XCursor and KGlobalSettings.
         @param theme The cursor theme to be applied. It is save to pass 0 here
@@ -119,8 +119,8 @@ private:
     bool iconsIsWritable() const;
 
 
-    CursorThemeModel *m_model;
-    SortProxyModel *m_proxyModel;
+    CursorThemeModel *m_themeModel;
+    SortProxyModel *m_themeProxyModel;
     QStandardItemModel *m_sizesModel;
     CursorThemeSettings *m_settings;
 
