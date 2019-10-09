@@ -21,32 +21,32 @@
 #ifndef FOLDERSELECTIONWIDGET_H
 #define FOLDERSELECTIONWIDGET_H
 
-#include <QWidget>
-#include <QListWidget>
-#include <QPushButton>
-#include <KMessageWidget>
+#include <QAbstractListModel>
 
-class FolderSelectionWidget : public QWidget
+class FilteredFolderModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
-    explicit FolderSelectionWidget(QWidget* parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
+    explicit FilteredFolderModel(QObject* parent);
 
-    void setDirectoryList(QStringList includeDirs, QStringList exclude);
+    void setDirectoryList(const QStringList& includeDirs, const QStringList& exclude);
     QStringList includeFolders() const;
     QStringList excludeFolders() const;
 
     enum Roles {
-        UrlRole = Qt::UserRole + 1
+        Folder = Qt::UserRole + 1,
+        Url
     };
 
-Q_SIGNALS:
-    void changed();
+    QVariant data(const QModelIndex& idx, int role) const override;
+    int rowCount(const QModelIndex& parent) const override;
 
-private Q_SLOTS:
-    void slotAddButtonClicked();
-    void slotRemoveButtonClicked();
-    void slotCurrentItemChanged(QListWidgetItem* current, QListWidgetItem*);
+    Q_INVOKABLE void addFolder(const QString& folder);
+    Q_INVOKABLE void removeFolder(int row);
+    QHash<int, QByteArray> roleNames() const override;
+Q_SIGNALS:
+    void folderAdded();
+    void folderRemoved();
 
 private:
     QString folderDisplayName(const QString& url) const;
@@ -66,25 +66,8 @@ private:
      * @brief Widget with the list of directories.
      *
      */
-    QListWidget* m_listWidget;
     QStringList m_mountPoints;
-
-    /**
-     * @brief Button to add a directory to the list.
-     *
-     */
-    QPushButton* m_addButton;
-    /**
-     * @brief Button to remove the selected directory from the list.
-     *
-     */
-    QPushButton* m_removeButton;
-
-    /**
-     * @brief Information, warning or error message widget.
-     *
-     */
-    KMessageWidget* m_messageWidget;
+    QStringList m_excludeList;
 };
 
 #endif // FOLDERSELECTIONWIDGET_H

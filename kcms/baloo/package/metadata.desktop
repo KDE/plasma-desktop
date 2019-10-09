@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=Search
+Comment=Configure the File Indexer
+
+Icon=baloo
+Type=Service
+X-KDE-PluginInfo-Author=Tomaz Canabrava
+X-KDE-PluginInfo-Email=tcanabrava@kde.org
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=kcm_baloofile
+X-KDE-PluginInfo-Version=
+X-KDE-PluginInfo-Website=
+X-KDE-ServiceTypes=Plasma/Generic
+X-Plasma-API=declarativeappletscript
+
+X-Plasma-MainScript=ui/main.qml

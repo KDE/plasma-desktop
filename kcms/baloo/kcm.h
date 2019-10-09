@@ -20,35 +20,50 @@
 #ifndef _BALOO_FILE_KCM_H_
 #define _BALOO_FILE_KCM_H_
 
-#include <KCModule>
-#include "ui_configwidget.h"
+#include <KQuickAddons/ConfigModule>
+
+#include "filteredfoldermodel.h"
 
 namespace Baloo
 {
 
-class ServerConfigModule : public KCModule, private Ui::ConfigWidget
+class ServerConfigModule : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
+    Q_PROPERTY(FilteredFolderModel *filteredModel READ filteredModel CONSTANT)
+    Q_PROPERTY(bool indexing READ indexing WRITE setIndexing NOTIFY indexingChanged)
+    Q_PROPERTY(bool fileContents READ fileContents WRITE setFileContents NOTIFY fileContentsChanged)
 
 public:
-    ServerConfigModule(QWidget* parent, const QVariantList& args);
-    ~ServerConfigModule() override;
+    ServerConfigModule(QObject* parent, const QVariantList& args);
+    virtual ~ServerConfigModule() override;
+
+    bool indexing() const;
+    void setIndexing(bool indexing);
+    Q_SIGNAL void indexingChanged(bool indexing);
+
+    bool fileContents() const;
+    void setFileContents(bool fileContents);
+    Q_SIGNAL void fileContentsChanged(bool fileContents);
+
+    FilteredFolderModel *filteredModel() const;
 
 public Q_SLOTS:
     void load() override;
     void save() override;
     void defaults() override;
-    void indexingEnabledChanged();
 
-    void onDirectoryListChanged();
 private:
-    bool m_previouslyEnabled;
     /**
      * @brief Check if all mount points are in the excluded from indexing list.
      *
      * @return True if all mount points are excluded. False otherwise.
      */
     bool allMountPointsExcluded();
+    FilteredFolderModel *m_filteredFolderModel;
+    bool m_previouslyEnabled;
+    bool m_indexing;
+    bool m_fileContents;
 };
 }
 
