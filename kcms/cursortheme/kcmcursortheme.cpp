@@ -334,6 +334,7 @@ bool CursorThemeConfig::applyTheme(const CursorTheme *theme, const int size)
         XFixesChangeCursorByName(QX11Info::display(), theme->loadCursor(name, size), QFile::encodeName(name));
     }
     updateSizeComboBox();
+    emit themeApplied();
     return true;
 #else
     Q_UNUSED(theme)

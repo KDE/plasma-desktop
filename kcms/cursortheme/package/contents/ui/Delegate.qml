@@ -51,6 +51,13 @@ KCM.GridDelegate {
         currentSize: kcm.cursorThemeSettings.cursorSize
     }
 
+    Connections {
+        target: kcm
+        onThemeApplied: {
+            previewWidget.refresh();
+        }
+    }
+
     actions: [
         Kirigami.Action {
             iconName: "edit-delete"

@@ -51,6 +51,8 @@ class PreviewWidget : public QQuickPaintedItem
         void setCurrentSize(int size);
         int currentSize() const;
 
+        Q_INVOKABLE void refresh();
+
     Q_SIGNALS:
         void themeModelChanged();
         void currentIndexChanged();

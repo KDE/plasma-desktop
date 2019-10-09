@@ -197,6 +197,16 @@ int PreviewWidget::currentSize() const
     return m_currentSize;
 }
 
+void PreviewWidget::refresh()
+{
+    if (!m_themeModel) {
+        return;
+    }
+
+    const CursorTheme *theme = m_themeModel->theme(m_themeModel->index(m_currentIndex, 0));
+    setTheme(theme, m_currentSize);
+}
+
 void PreviewWidget::updateImplicitSize()
 {
     qreal totalWidth = 0;

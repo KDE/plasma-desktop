@@ -89,6 +89,7 @@ Q_SIGNALS:
     void selectedSizeRowChanged();
     void downloadingFileChanged();
     void preferredSizeChanged();
+    void themeApplied();
 
     void showSuccessMessage(const QString &message);
     void showInfoMessage(const QString &message);
