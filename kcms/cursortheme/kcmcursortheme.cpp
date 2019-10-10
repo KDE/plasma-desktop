@@ -1,5 +1,6 @@
 /*
  *  Copyright © 2003-2007 Fredrik Höglund <fredrik@kde.org>
+ *  Copyright © 2019 Benjamin Port <benjamin.port@enioka.com>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -29,8 +30,6 @@
 #include <KAboutData>
 #include <KPluginFactory>
 #include <KLocalizedString>
-#include <KConfig>
-#include <KConfigGroup>
 #include <KMessageBox>
 #include <KUrlRequesterDialog>
 #include <KIO/CopyJob>
@@ -48,6 +47,7 @@
 #include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
 
+#include "cursorthemesettings.h"
 #include <klauncher_iface.h>
 
 #ifdef HAVE_XFIXES
@@ -58,6 +58,7 @@ K_PLUGIN_FACTORY_WITH_JSON(CursorThemeConfigFactory, "kcm_cursortheme.json", reg
 
 CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args),
+      m_settings(new CursorThemeSettings),
       m_appliedSize(0),
       m_preferredSize(0),
       m_selectedThemeRow(-1),
@@ -67,6 +68,8 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
       m_canResize(true),
       m_canConfigure(true)
 {
+    // Unfortunately doesn't generate a ctor taking the parent as parameter
+    m_settings->setParent(this);
     qmlRegisterType<PreviewWidget>("org.kde.private.kcm_cursortheme", 1, 0, "PreviewWidget");
     qmlRegisterType<SortProxyModel>();
 
@@ -284,9 +287,7 @@ void CursorThemeConfig::updateSizeComboBox()
     }
 
     // enable or disable the combobox
-    KConfig c("kcminputrc");
-    KConfigGroup cg(&c, "Mouse");
-    if (cg.isEntryImmutable("cursorSize")) {
+    if (m_settings->isImmutable("cursorSize")) {
         setCanResize(false);
     } else {
         setCanResize(m_sizesModel->rowCount() > 0);
@@ -358,13 +359,12 @@ void CursorThemeConfig::save()
 {
     const CursorTheme *theme = selectedIndex().isValid() ? m_proxyModel->theme(selectedIndex()) : nullptr;
 
-    KConfig config("kcminputrc");
-    KConfigGroup c(&config, "Mouse");
     if (theme) {
-        c.writeEntry("cursorTheme", theme->name());
+        m_settings->setCursorTheme(theme->name());
     }
-    c.writeEntry("cursorSize", m_preferredSize);
-    c.sync();
+    m_settings->setCursorSize(m_preferredSize);
+
+    m_settings->save();
 
     if (!applyTheme(theme, m_preferredSize)) {
         emit showInfoMessage(i18n("You have to restart the Plasma session for these changes to take effect."));
@@ -380,17 +380,8 @@ void CursorThemeConfig::save()
 
 void CursorThemeConfig::load()
 {
-
-    // Get the name of the theme libXcursor currently uses
-    QString currentTheme;
-    if (QX11Info::isPlatformX11()) {
-        currentTheme = XcursorGetTheme(QX11Info::display());
-    }
-
     // Get the name of the theme KDE is configured to use
-    KConfig c("kcminputrc");
-    KConfigGroup cg(&c, "Mouse");
-    currentTheme = cg.readEntry("cursorTheme", currentTheme);
+    QString currentTheme = m_settings->cursorTheme();
 
     // Find the theme in the listview
     if (!currentTheme.isEmpty()) {
@@ -400,7 +391,7 @@ void CursorThemeConfig::load()
     }
 
     // Disable the listview and the buttons if we're in kiosk mode
-    if (cg.isEntryImmutable("cursorTheme")) {
+    if (m_settings->isImmutable( QStringLiteral( "cursorTheme" ))) {
           setCanConfigure(false);
           setCanInstall(false);
     }
@@ -409,7 +400,7 @@ void CursorThemeConfig::load()
     m_originalSelectedThemeRow = m_selectedThemeRow;
 
     // Load cursor size
-    int size = cg.readEntry("cursorSize", 0);
+    int size = m_settings->cursorSize();
     if (size <= 0) {
         m_preferredSize = 0;
     } else {
@@ -427,9 +418,9 @@ void CursorThemeConfig::load()
 
 void CursorThemeConfig::defaults()
 {
-    QModelIndex defaultIndex = m_proxyModel->findIndex("breeze_cursors");
+    QModelIndex defaultIndex = m_proxyModel->findIndex(m_settings->defaultCursorThemeValue());
     setSelectedThemeRow(defaultIndex.row());
-    m_preferredSize = 0;
+    m_preferredSize = m_settings->defaultCursorSizeValue();
     updateSizeComboBox();
     setNeedsSave(m_originalSelectedThemeRow != m_selectedThemeRow || m_originalPreferredSize != m_preferredSize);
 }

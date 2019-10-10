@@ -21,6 +21,7 @@ qt5_add_dbus_interface(libnoinst_SRCS ${klauncher_xml} klauncher_iface)
 
 set(kcm_cursortheme_PART_SRCS kcmcursortheme.cpp ${libnoinst_SRCS})
 
+kconfig_add_kcfg_files(kcm_cursortheme_PART_SRCS cursorthemesettings.kcfgc GENERATE_MOC)
 add_library(kcm_cursortheme MODULE ${kcm_cursortheme_PART_SRCS})
 
 
@@ -55,6 +56,7 @@ kcoreaddons_desktop_to_json(kcm_cursortheme "kcm_cursortheme.desktop")
 
 ########### install files ###############
 
+install(FILES cursorthemesettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install( FILES kcm_cursortheme.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
 install( FILES xcursor/xcursor.knsrc DESTINATION  ${KDE_INSTALL_KNSRCDIR} )
 

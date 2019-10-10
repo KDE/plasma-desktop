@@ -1,5 +1,6 @@
 /*
  *  Copyright © 2003-2007 Fredrik Höglund <fredrik@kde.org>
+ *  Copyright © 2019 Benjamin Port <benjamin.port@enioka.com>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -28,6 +29,7 @@ class QTemporaryFile;
 class CursorThemeModel;
 class SortProxyModel;
 class CursorTheme;
+class CursorThemeSettings;
 
 namespace KIO
 {
@@ -120,6 +122,7 @@ private:
     CursorThemeModel *m_model;
     SortProxyModel *m_proxyModel;
     QStandardItemModel *m_sizesModel;
+    CursorThemeSettings *m_settings;
 
     int m_appliedSize;
     // This index refers to the CursorThemeModel, not the proxy or the view
