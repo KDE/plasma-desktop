@@ -48,7 +48,7 @@ KCM.GridDelegate {
         scale: 1 / Screen.devicePixelRatio
         themeModel: kcm.cursorsModel
         currentIndex: index
-        currentSize: parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
+        currentSize: kcm.cursorThemeSettings.cursorSize
     }
 
     actions: [
@@ -61,7 +61,7 @@ KCM.GridDelegate {
     ]
 
     onClicked: {
-        view.currentIndex = index;
         view.forceActiveFocus();
+        kcm.cursorThemeSettings.cursorTheme = kcm.cursorThemeFromIndex(index);
     }
 }

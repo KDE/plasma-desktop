@@ -32,9 +32,15 @@ KCM.GridViewKCM {
 
     view.model: kcm.cursorsModel
     view.delegate: Delegate {}
+    view.currentIndex: kcm.cursorThemeIndex(kcm.cursorThemeSettings.cursorTheme);
+
     view.onCurrentIndexChanged: {
-        kcm.selectedThemeRow = view.currentIndex;
+        kcm.cursorThemeSettings.cursorTheme = kcm.cursorThemeFromIndex(view.currentIndex)
         view.positionViewAtIndex(view.currentIndex, view.GridView.Beginning);
+    }
+
+    Component.onCompleted: {
+        view.positionViewAtIndex(view.currentIndex, GridView.Beginning);
     }
 
     enabled: !kcm.downloadingFile
@@ -47,11 +53,6 @@ KCM.GridViewKCM {
             }
         }
         onDropped: kcm.installThemeFromFile(drop.urls[0])
-    }
-
-    Connections {
-        target: kcm
-        onSelectedThemeRowChanged: view.currentIndex = kcm.selectedThemeRow;
     }
 
     footer: ColumnLayout {
@@ -101,15 +102,10 @@ KCM.GridViewKCM {
                     id: sizeCombo
                     model: kcm.sizesModel
                     textRole: "display"
+                    currentIndex: kcm.cursorSizeIndex(kcm.cursorThemeSettings.cursorSize);
                     onActivated: {
-                        kcm.selectedSizeRow = sizeCombo.currentIndex
-                    }
-
-                    Connections {
-                        target: kcm
-                        onSelectedSizeRowChanged: {
-                            sizeCombo.currentIndex = kcm.selectedSizeRow
-                        }
+                        kcm.cursorThemeSettings.cursorSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
+                        kcm.preferredSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
                     }
 
                     delegate: QtControls.ItemDelegate {

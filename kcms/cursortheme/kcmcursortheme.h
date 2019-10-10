@@ -39,26 +39,27 @@ namespace KIO
 class CursorThemeConfig : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
+    Q_PROPERTY(CursorThemeSettings *cursorThemeSettings READ cursorThemeSettings CONSTANT)
     Q_PROPERTY(bool canInstall READ canInstall WRITE setCanInstall NOTIFY canInstallChanged)
     Q_PROPERTY(bool canResize READ canResize WRITE setCanResize NOTIFY canResizeChanged)
     Q_PROPERTY(bool canConfigure READ canConfigure WRITE setCanConfigure NOTIFY canConfigureChanged)
     Q_PROPERTY(QAbstractItemModel *cursorsModel READ cursorsModel CONSTANT)
     Q_PROPERTY(QAbstractItemModel *sizesModel READ sizesModel CONSTANT)
-    Q_PROPERTY(int selectedThemeRow READ selectedThemeRow WRITE setSelectedThemeRow NOTIFY selectedThemeRowChanged)
-    Q_PROPERTY(int selectedSizeRow READ selectedSizeRow WRITE setSelectedSizeRow NOTIFY selectedSizeRowChanged)
 
     Q_PROPERTY(bool downloadingFile READ downloadingFile NOTIFY downloadingFileChanged)
+    Q_PROPERTY(int preferredSize READ preferredSize WRITE setPreferredSize NOTIFY preferredSizeChanged)
 
 public:
     CursorThemeConfig(QObject *parent, const QVariantList &);
     ~CursorThemeConfig() override;
 
-public:
     void load() override;
     void save() override;
     void defaults() override;
 
     //for QML properties
+    CursorThemeSettings *cursorThemeSettings() const;
+
     bool canInstall() const;
     void setCanInstall(bool can);
 
@@ -68,24 +69,26 @@ public:
     bool canConfigure() const;
     void setCanConfigure(bool can);
 
-    int selectedThemeRow() const;
-    void setSelectedThemeRow(int row);
-
-    int selectedSizeRow() const;
-    void setSelectedSizeRow(int row);
+    int preferredSize() const;
+    void setPreferredSize(int size);
 
     bool downloadingFile() const;
 
     QAbstractItemModel *cursorsModel();
     QAbstractItemModel *sizesModel();
 
+    Q_INVOKABLE int cursorSizeIndex(int cursorSize) const;
+    Q_INVOKABLE int cursorSizeFromIndex(int index);
+    Q_INVOKABLE int cursorThemeIndex(const QString &cursorTheme) const;
+    Q_INVOKABLE QString cursorThemeFromIndex(int index) const;
+
 Q_SIGNALS:
     void canInstallChanged();
     void canResizeChanged();
     void canConfigureChanged();
-    void selectedThemeRowChanged();
     void selectedSizeRowChanged();
     void downloadingFileChanged();
+    void preferredSizeChanged();
 
     void showSuccessMessage(const QString &message);
     void showInfoMessage(const QString &message);
@@ -106,7 +109,7 @@ private Q_SLOTS:
 
 
 private:
-    QModelIndex themeSelectedIndex() const;
+    void updateNeedsSave();
     void installThemeFile(const QString &path);
     /** Applies a given theme, using XFixes, XCursor and KGlobalSettings.
         @param theme The cursor theme to be applied. It is save to pass 0 here
@@ -124,10 +127,6 @@ private:
     QStandardItemModel *m_sizesModel;
     CursorThemeSettings *m_settings;
 
-    int m_appliedSize;
-    // This index refers to the CursorThemeModel, not the proxy or the view
-    QPersistentModelIndex m_appliedIndex;
-
 /** Holds the last size that was chosen by the user. Example: The user chooses
     theme1 which provides the sizes 24 and 36. He chooses 36. preferredSize gets
     set to 36. Now, he switches to theme2 which provides the sizes 30 and 40.
@@ -136,17 +135,16 @@ private:
     still 36, so the UI defaults to 34. Now the user changes manually to 44. This
     will also change preferredSize. */
     int m_preferredSize;
-    int m_originalPreferredSize;
 
-    int m_selectedThemeRow;
-    int m_selectedSizeRow;
-    int m_originalSelectedThemeRow;
     bool m_canInstall;
     bool m_canResize;
     bool m_canConfigure;
 
     QScopedPointer<QTemporaryFile> m_tempInstallFile;
     QPointer<KIO::FileCopyJob> m_tempCopyJob;
+
+    int m_currentSize;
+    QString m_currentTheme;
 };
 
 #endif

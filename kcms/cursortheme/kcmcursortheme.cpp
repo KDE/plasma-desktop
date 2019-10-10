@@ -59,20 +59,22 @@ K_PLUGIN_FACTORY_WITH_JSON(CursorThemeConfigFactory, "kcm_cursortheme.json", reg
 CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args),
       m_settings(new CursorThemeSettings),
-      m_appliedSize(0),
-      m_preferredSize(0),
-      m_selectedThemeRow(-1),
-      m_selectedSizeRow(-1),
-      m_originalSelectedThemeRow(-1),
       m_canInstall(true),
       m_canResize(true),
       m_canConfigure(true)
 {
     // Unfortunately doesn't generate a ctor taking the parent as parameter
     m_settings->setParent(this);
+    m_currentSize = m_settings->cursorSize();
+    m_currentTheme = m_settings->cursorTheme();
+    m_preferredSize = m_currentSize;
+    connect(m_settings, &CursorThemeSettings::configChanged, this, &CursorThemeConfig::updateNeedsSave);
+    connect(m_settings, &CursorThemeSettings::cursorSizeChanged, this, &CursorThemeConfig::updateNeedsSave);
+    connect(m_settings, &CursorThemeSettings::cursorThemeChanged, this, &CursorThemeConfig::updateNeedsSave);
+    connect(m_settings, &CursorThemeSettings::cursorThemeChanged, this, &CursorThemeConfig::updateSizeComboBox);
     qmlRegisterType<PreviewWidget>("org.kde.private.kcm_cursortheme", 1, 0, "PreviewWidget");
     qmlRegisterType<SortProxyModel>();
-
+    qmlRegisterType<CursorThemeSettings>();
     KAboutData* aboutData = new KAboutData(QStringLiteral("kcm_cursortheme"), i18n("Cursors"),
         QStringLiteral("1.0"), QString(), KAboutLicense::GPL, i18n("(c) 2003-2007 Fredrik Höglund"));
     aboutData->addAuthor(i18n("Fredrik Höglund"));
@@ -98,6 +100,11 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
 CursorThemeConfig::~CursorThemeConfig()
 {
     /* */
+}
+
+CursorThemeSettings *CursorThemeConfig::cursorThemeSettings() const
+{
+    return m_settings;
 }
 
 void CursorThemeConfig::setCanInstall(bool can)
@@ -140,54 +147,29 @@ void CursorThemeConfig::setCanConfigure(bool can)
     emit canConfigureChanged();
 }
 
+int CursorThemeConfig::preferredSize() const
+{
+    return m_preferredSize;
+}
+
+void CursorThemeConfig::setPreferredSize(int size)
+{
+    if (m_preferredSize == size) {
+        return;
+    }
+    m_preferredSize = size;
+    emit preferredSizeChanged();
+}
+
 bool CursorThemeConfig::canConfigure() const
 {
     return m_canConfigure;
-}
-
-void CursorThemeConfig::setSelectedThemeRow(int row)
-{
-    if (m_selectedThemeRow == row) {
-        return;
-    }
-
-    m_selectedThemeRow = row;
-    emit selectedThemeRowChanged();
-    updateSizeComboBox();
-
-    setNeedsSave(m_originalSelectedThemeRow != m_selectedThemeRow || m_originalPreferredSize != m_preferredSize);
-}
-
-int CursorThemeConfig::selectedThemeRow() const
-{
-    return m_selectedThemeRow;
-}
-
-void CursorThemeConfig::setSelectedSizeRow(int row)
-{
-    Q_ASSERT (row < m_sizesModel->rowCount() && row >= 0);
-
-    // we don't return early if m_selectedSizeRow == row as this is called after the model is changed
-    m_selectedSizeRow = row;
-    emit selectedSizeRowChanged();
-
-    int size = m_sizesModel->item(row)->data().toInt();
-
-    m_preferredSize = size;
-    setNeedsSave(m_originalSelectedThemeRow != m_selectedThemeRow || m_originalPreferredSize != m_preferredSize);
-}
-
-int CursorThemeConfig::selectedSizeRow() const
-{
-    return m_selectedSizeRow;
 }
 
 bool CursorThemeConfig::downloadingFile() const
 {
     return m_tempCopyJob;
 }
-
-
 
 QAbstractItemModel *CursorThemeConfig::cursorsModel()
 {
@@ -211,12 +193,12 @@ bool CursorThemeConfig::iconsIsWritable() const
 
 void CursorThemeConfig::updateSizeComboBox()
 {
-
     // clear the combo box
     m_sizesModel->clear();
 
     // refill the combo box and adopt its icon size
-    QModelIndex selected = themeSelectedIndex();
+    int row = cursorThemeIndex(m_settings->cursorTheme());
+    QModelIndex selected = m_themeProxyModel->index(row, 0);
     int maxIconWidth = 0;
     int maxIconHeight = 0;
     if (selected.isValid()) {
@@ -257,32 +239,36 @@ void CursorThemeConfig::updateSizeComboBox()
             }
 
             // select an item
-            int selectItem = comboBoxList.indexOf(m_preferredSize);
-            // m_preferredSize not available for this theme
+            int size = m_preferredSize;
+            int selectItem = comboBoxList.indexOf(size);
+
+            // cursor size not available for this theme
             if (selectItem < 0) {
-                /* Search the value next to m_preferredSize. The first entry (0)
-                   is ignored. (If m_preferredSize would have been 0, then we
-                   would had found it yet. As m_preferredSize is not 0, we won't
+                /* Search the value next to cursor size. The first entry (0)
+                   is ignored. (If cursor size would have been 0, then we
+                   would had found it yet. As cursor size is not 0, we won't
                    default to "automatic size".)*/
                 int j;
                 int distance;
                 int smallestDistance;
                 selectItem = 1;
                 j = comboBoxList.value(selectItem);
-                smallestDistance = j < m_preferredSize ? m_preferredSize - j : j - m_preferredSize;
+                size = j;
+                smallestDistance = qAbs(m_preferredSize - j);
                 for (int i = 2; i < comboBoxList.size(); ++i) {
                     j = comboBoxList.value(i);
-                    distance = j < m_preferredSize ? m_preferredSize - j : j - m_preferredSize;
+                    distance = qAbs(m_preferredSize - j);
                     if (distance < smallestDistance || (distance == smallestDistance && j > m_preferredSize)) {
                         smallestDistance = distance;
                         selectItem = i;
+                        size = j;
                     }
                 }
             }
             if (selectItem < 0) {
                 selectItem = 0;
             }
-            setSelectedSizeRow(selectItem);
+            m_settings->setCursorSize(size);
         }
     }
 
@@ -292,7 +278,8 @@ void CursorThemeConfig::updateSizeComboBox()
     } else {
         setCanResize(m_sizesModel->rowCount() > 0);
     }
-
+    // We need to emit a cursorSizeChanged in all case to refresh UI
+    emit m_settings->cursorSizeChanged();
 }
 
 bool CursorThemeConfig::applyTheme(const CursorTheme *theme, const int size)
@@ -346,7 +333,7 @@ bool CursorThemeConfig::applyTheme(const CursorTheme *theme, const int size)
     foreach (const QString &name, names) {
         XFixesChangeCursorByName(QX11Info::display(), theme->loadCursor(name, size), QFile::encodeName(name));
     }
-
+    updateSizeComboBox();
     return true;
 #else
     Q_UNUSED(theme)
@@ -354,41 +341,65 @@ bool CursorThemeConfig::applyTheme(const CursorTheme *theme, const int size)
 #endif
 }
 
+int CursorThemeConfig::cursorSizeIndex(int cursorSize) const
+{
+    if (m_sizesModel->rowCount() > 0) {
+         if (cursorSize  == 0) {
+             return 0;
+         }
+         const auto items = m_sizesModel->findItems(QString::number(cursorSize));
+         if (items.count() == 1) {
+             return items.first()->row();
+         }
+    }
+    return -1;
+}
+
+int CursorThemeConfig::cursorSizeFromIndex(int index)
+{
+    Q_ASSERT (index < m_sizesModel->rowCount() && index >= 0);
+
+    return m_sizesModel->item(index)->data().toInt();
+}
+
+int CursorThemeConfig::cursorThemeIndex(const QString &cursorTheme) const
+{
+    auto results = m_themeProxyModel->findIndex(cursorTheme);
+    return results.row();
+}
+
+QString CursorThemeConfig::cursorThemeFromIndex(int index) const
+{
+    QModelIndex idx = m_themeProxyModel->index(index, 0);
+    return m_themeProxyModel->theme(idx)->name();
+}
 
 void CursorThemeConfig::save()
 {
-    const CursorTheme *theme = themeSelectedIndex().isValid() ? m_themeProxyModel->theme(themeSelectedIndex()) : nullptr;
-
-    if (theme) {
-        m_settings->setCursorTheme(theme->name());
-    }
-    m_settings->setCursorSize(m_preferredSize);
-
     m_settings->save();
+    m_currentTheme = m_settings->cursorTheme();
+    m_currentSize = m_settings->cursorSize();
+    setPreferredSize(m_currentSize);
 
-    if (!applyTheme(theme, m_preferredSize)) {
+    int row = cursorThemeIndex(m_settings->cursorTheme());
+    QModelIndex selected = m_themeProxyModel->index(row, 0);
+    const CursorTheme *theme = selected.isValid() ? m_themeProxyModel->theme(selected) : nullptr;
+
+    if (!applyTheme(theme, m_currentSize)) {
         emit showInfoMessage(i18n("You have to restart the Plasma session for these changes to take effect."));
     }
-
-    m_appliedIndex = themeSelectedIndex();
-    m_appliedSize = m_preferredSize;
-    m_originalSelectedThemeRow = m_selectedThemeRow;
-    m_originalPreferredSize = m_preferredSize;
     setNeedsSave(false);
 }
 
 
 void CursorThemeConfig::load()
 {
-    // Get the name of the theme KDE is configured to use
+    m_settings->load();
+    m_currentSize = m_settings->cursorSize();
+    m_currentTheme = m_settings->cursorTheme();
+    setPreferredSize(m_currentSize);
+        // Get the name of the theme KDE is configured to use
     QString currentTheme = m_settings->cursorTheme();
-
-    // Find the theme in the listview
-    if (!currentTheme.isEmpty()) {
-        m_appliedIndex = m_themeProxyModel->findIndex(currentTheme);
-    } else {
-        m_appliedIndex = m_themeProxyModel->defaultIndex();
-    }
 
     // Disable the listview and the buttons if we're in kiosk mode
     if (m_settings->isImmutable( QStringLiteral( "cursorTheme" ))) {
@@ -396,21 +407,7 @@ void CursorThemeConfig::load()
           setCanInstall(false);
     }
 
-    setSelectedThemeRow(m_appliedIndex.row());
-    m_originalSelectedThemeRow = m_selectedThemeRow;
-
-    // Load cursor size
-    int size = m_settings->cursorSize();
-    if (size <= 0) {
-        m_preferredSize = 0;
-    } else {
-        m_preferredSize = size;
-    }
-    m_originalPreferredSize = m_preferredSize;
     updateSizeComboBox(); // This handles also the kiosk mode
-
-    m_appliedSize = size;
-
 
     setNeedsSave(false);
 }
@@ -418,16 +415,13 @@ void CursorThemeConfig::load()
 
 void CursorThemeConfig::defaults()
 {
-    QModelIndex defaultIndex = m_themeProxyModel->findIndex(m_settings->defaultCursorThemeValue());
-    setSelectedThemeRow(defaultIndex.row());
-    m_preferredSize = m_settings->defaultCursorSizeValue();
-    updateSizeComboBox();
-    setNeedsSave(m_originalSelectedThemeRow != m_selectedThemeRow || m_originalPreferredSize != m_preferredSize);
+    m_settings->setDefaults();
+    m_preferredSize = m_settings->cursorSize();
 }
 
-QModelIndex CursorThemeConfig::themeSelectedIndex() const
+void CursorThemeConfig::updateNeedsSave()
 {
-    return m_themeProxyModel->index(m_selectedThemeRow, 0);
+    setNeedsSave(m_settings->cursorTheme() != m_currentTheme || m_settings->cursorSize() != m_currentSize);
 }
 
 void CursorThemeConfig::getNewClicked()
@@ -585,7 +579,7 @@ void CursorThemeConfig::removeTheme(int row)
     const CursorTheme *theme = m_themeProxyModel->theme(idx);
 
     // Don't let the user delete the currently configured theme
-    if (idx == m_appliedIndex) {
+    if (theme->name() == m_currentTheme) {
         KMessageBox::sorry(nullptr, i18n("<qt>You cannot delete the theme you are currently "
                 "using.<br />You have to switch to another theme first.</qt>"));
         return;
