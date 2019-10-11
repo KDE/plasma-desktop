@@ -204,8 +204,9 @@ void FontAASettings::load()
 bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
 {
     KXftConfig   xft;
-    KConfig      kglobals("kdeglobals", KConfig::NoGlobals);
-    KConfigGroup grp(&kglobals, "General");
+
+    KSharedConfig::Ptr config = KSharedConfig::openConfig("kdeglobals");
+    KConfigGroup grp(config, "General");
 
     xft.setAntiAliasing(aaState);
     if (m_state.exclude) {
@@ -247,7 +248,7 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
         }
     }
     mod = true;
-    kglobals.sync();
+    config->sync();
 
     if (!mod) {
         mod = xft.changed();
