@@ -12,6 +12,9 @@ if(IBUS_FOUND AND GLIB2_FOUND AND GIO_FOUND AND GOBJECT_FOUND)
 
     find_package(Qt5X11Extras)
     find_package(XCB COMPONENTS XCB KEYSYMS)
+
+    add_subdirectory(emojier)
+
     if (Qt5X11Extras_FOUND AND XCB_XCB_FOUND AND XCB_KEYSYMS_FOUND)
         include_directories(${Qt5X11Extras_INCLUDE_DIRS})
         include_directories(${XCB_XCB_INCLUDE_DIRS})
@@ -27,7 +30,7 @@ if(IBUS_FOUND AND GLIB2_FOUND AND GIO_FOUND AND GOBJECT_FOUND)
             ibus15/propertymanager.cpp)
         add_definitions(-DQT_NO_KEYWORDS)
         add_executable(kimpanel-ibus-panel ${kimpanel_ibus_panel_SRCS})
-        target_link_libraries(kimpanel-ibus-panel ${IBUS_LIBRARIES} GLIB2::GLIB2 ${GIO_LIBRARIES} ${GOBJECT_LIBRARIES}  Qt5::Core Qt5::DBus Qt5::Gui Qt5::X11Extras XCB::KEYSYMS)
+        target_link_libraries(kimpanel-ibus-panel ${IBUS_LIBRARIES} GLIB2::GLIB2 ${GIO_LIBRARIES} ${GOBJECT_LIBRARIES} Qt5::Core Qt5::DBus Qt5::Gui Qt5::X11Extras XCB::KEYSYMS)
         # configure_file(${CMAKE_CURRENT_SOURCE_DIR}/kimpanel.xml.in ${CMAKE_CURRENT_BINARY_DIR}/kimpanel.xml @ONLY)
         # install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kimpanel.xml DESTINATION ${CMAKE_INSTALL_PREFIX}/share/ibus/component)
 
