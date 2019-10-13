@@ -18,8 +18,8 @@
  *
  */
 
-#ifndef FOLDERSELECTIONWIDGET_H
-#define FOLDERSELECTIONWIDGET_H
+#ifndef FILTEREDFOLDERMODEL_H
+#define FILTEREDFOLDERMODEL_H
 
 #include <QAbstractListModel>
 
@@ -70,4 +70,4 @@ private:
     QStringList m_excludeList;
 };
 
-#endif // FOLDERSELECTIONWIDGET_H
+#endif // FILTEREDFOLDERMODEL_H

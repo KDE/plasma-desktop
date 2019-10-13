@@ -46,7 +46,6 @@
 #include <KPluginLoader>
 #include <KLocalizedString>
 
-#include "kworkspace.h"
 #include <sessionmanagement.h>
 
 #include "login1_manager.h"

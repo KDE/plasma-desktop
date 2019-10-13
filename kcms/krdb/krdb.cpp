@@ -519,7 +519,7 @@ void exportGtkColors(QList<KColorScheme> activeColorSchemes, QList<KColorScheme>
   colorsStream << gtkColorsHelper("error_color_insensitive", disabledColorSchemes[0].foreground(KColorScheme::NegativeText).color().name());
 
   /* 
-      Insensitive Backdrop (Inactive Disabled) These pretty much have the same appearance as regular inactive colors, but they're seperate in case we decide to make
+      Insensitive Backdrop (Inactive Disabled) These pretty much have the same appearance as regular inactive colors, but they're separate in case we decide to make
       them different in the future.
   */
 
