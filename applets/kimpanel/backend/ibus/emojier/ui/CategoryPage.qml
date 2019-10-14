@@ -59,6 +59,15 @@ Kirigami.ScrollablePage
             }
         }
 
+        highlight: Rectangle {
+            Kirigami.Theme.inherit: false
+            Kirigami.Theme.colorSet: Kirigami.Theme.Selection
+            color: Kirigami.Theme.backgroundColor
+            z: -1
+            visible: ListView.isCurrent
+        }
+        currentIndex: -1
+
         delegate: QQC2.Label {
             font.pointSize: 30
             fontSizeMode: Text.Fit
@@ -70,6 +79,10 @@ Kirigami.ScrollablePage
             QQC2.ToolTip.visible: mouse.containsMouse
 
             opacity: mouse.containsMouse ? 0.7 : 1
+
+            Keys.onReturnPressed: {
+                mouse.clicked(null)
+            }
 
             MouseArea {
                 id: mouse
