@@ -24,8 +24,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 
 Item {
-    id: kimpanel
-    property int visibleButtons: 0
+    id: root
 
     property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
@@ -42,191 +41,94 @@ Item {
     }
 
     InputPanel { }
+    Text {
+        id: textMetric
+        visible: false
+        // translated but not used, we just need length/height
+        text: i18n("Arbitrary String Which Says Something")
+    }
 
-    Flow {
-        id: items
-        width: parent.width
-        height: parent.height
-        x: (parent.width - childrenRect.width) / 2
-        y: (parent.height - childrenRect.height) / 2
-        flow: kimpanel.vertical ? Flow.LeftToRight : Flow.TopToBottom
+    Plasmoid.fullRepresentation: Item {
+        id: dialogItem
+        Layout.minimumWidth: units.gridUnit * 12
+        Layout.minimumHeight: units.gridUnit * 12
 
-        property int iconSize: Math.min(units.iconSizeHints.panel, units.roundToIconSize(Math.min(width, height)))
+        ListView {
+            id: view
+            anchors.fill: parent
+            focus: true
 
-        Repeater {
-            model: ListModel {
-                id: list
-                dynamicRoles: true
-            }
+            model: dataSource.data["statusbar"]["LayoutList"]
 
             delegate: Item {
-                id: iconDelegate
-                width: items.iconSize
-                height: items.iconSize
-                StatusIcon {
-                    id: statusIcon
-                    anchors.centerIn: parent
-                    width: items.iconSize
-                    height: items.iconSize
-                    label: model.label
-                    tip: model.tip
-                    icon: model.icon
-                    hint: model.hint
-                    onTriggered : {
-                        if (button === Qt.LeftButton) {
-                            if (model.key == 'kimpanel-placeholder') {
-                                return;
-                            }
-                            clickHandler(model.key);
-                            // clickHandler will trigger the menu, but we have to wait for
-                            // the menu data. So we have to set the visual parent ahead.
-                            actionMenu.visualParent = statusIcon;
-                        } else {
-                            contextMenu.open(statusIcon, {key: model.key, label: model.label});
-                        }
+                id: listdelegate
+                height: textMetric.paintedHeight * 2
+
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                }
+
+                PlasmaCore.IconItem {
+                    id: icon
+                    source: "checkmark"
+                    height: parent.height
+                    width: height
+                    visible: index == dataSource.data["statusbar"]["CurrentLayoutIndex"]
+                }
+
+                PlasmaComponents.Label {
+                    text: model.description
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        left: icon.right
+                        right: parent.right
+                        leftMargin: 10
+                        rightMargin: 10
+                    }
+
+                    verticalAlignment: Text.AlignVCenter
+                    elide: Text.ElideRight
+                }
+
+                MouseArea {
+                    height: parent.height + 15
+                    anchors { left: parent.left; right: parent.right;}
+                    hoverEnabled: true
+
+                    onClicked: {
+                        dataSource.data["statusbar"]["LayoutModels"].switchLayout(index);
+                    }
+
+                    onEntered: {
+                        view.currentIndex = index;
                     }
                 }
             }
+
+            highlight: PlasmaComponents.Highlight {
+                hover: true
+            }
+
+            highlightMoveDuration: 250
+            highlightMoveVelocity: 2
         }
     }
 
-    function clickHandler(key) {
-        var service = dataEngine.serviceForSource("statusbar");
-        var operation = service.operationDescription("TriggerProperty");
-        operation.key = key;
-        service.startOperationCall(operation);
+    Plasmoid.compactRepresentation: CompactRepresentation {
+        dataEngine: dataSource
     }
 
-    function action(key) {
-        var service = dataEngine.serviceForSource("statusbar");
-        var operation = service.operationDescription(key);
-        service.startOperationCall(operation);
-    }
-
-    function hideAction(key) {
-        // We must use assignment to change the configuration property,
-        // otherwise it won't get notified.
-        var hiddenList = plasmoid.configuration.hiddenList;
-        if (hiddenList.indexOf(key) === -1) {
-            hiddenList.push(key);
-            plasmoid.configuration.hiddenList = hiddenList;
-        }
-        timer.restart();
-    }
-
-    function showAction(key) {
-        // We must use assignment to change the configuration property,
-        // otherwise it won't get notified.
-        var hiddenList = plasmoid.configuration.hiddenList;
-        var index = hiddenList.indexOf(key);
-        if (index !== -1) {
-            hiddenList.splice(index, 1);
-            plasmoid.configuration.hiddenList = hiddenList;
-        }
-        timer.restart();
-    }
-
-    function showMenu(menu, menuData) {
-        if (!menuData) {
-            return;
-        }
-
-        if (menuData["timestamp"] > menu.timestamp) {
-            menu.timestamp = menuData["timestamp"];
-            var actionList = [];
-            for (var i = 0; i < menuData["props"].length; i++ ) {
-                actionList.push({"actionId": menuData["props"][i].key, "icon": menuData["props"][i].icon, "text": menuData["props"][i].label, hint: menuData["props"][i].hint});
-            }
-            if (actionList.length > 0) {
-                menu.actionList = actionList;
-                menu.open();
-            }
-        }
-    }
-
-    ActionMenu {
-        property var timestamp: 0;
-        id: actionMenu
-        onActionClicked: {
-            clickHandler(actionId);
-        }
-    }
-
-    ContextMenu {
-        id: contextMenu
-    }
-
-    Timer {
-        id: timer
-        interval: 50
-        onTriggered: {
-            var barData = dataEngine.data["statusbar"];
-            var data = [];
-            if (barData && barData["Properties"]) {
-                data = barData["Properties"];
-            }
-            var nodata = data.length == 0;
-            var count = list.count;
-            var c = 0, i;
-            var hiddenActions = [];
-            for (i = 0; i < data.length; i ++) {
-                if (plasmoid.configuration.hiddenList.indexOf(data[i].key) !== -1) {
-                    hiddenActions.push({'key': data[i].key,
-                                'icon': data[i].icon,
-                                'label': data[i].label});
-                } else {
-                    c = c + 1;
-                }
-            }
-            if (c < count) {
-                list.remove(c, count - c);
-            }
-            kimpanel.visibleButtons = c;
-
-            c = 0;
-            for (i = 0; i < data.length; i ++) {
-                if (plasmoid.configuration.hiddenList.indexOf(data[i].key) !== -1) {
-                    continue;
-                }
-                var itemData = {'key': data[i].key,
-                                'icon': data[i].icon,
-                                'label': data[i].label,
-                                'tip': data[i].tip,
-                                'hint': data[i].hint };
-                if (c < count) {
-                    list.set(c, itemData);
-                } else {
-                    list.append(itemData);
-                }
-                c = c + 1;
-            }
-            contextMenu.actionList = hiddenActions;
-
-            // Add a place holder if there is nothing.
-            if (list.count == 0 && !nodata) {
-                var itemData = {'key': 'kimpanel-placeholder',
-                                'icon': 'draw-freehand',
-                                'label': i18n("Input Method Panel"),
-                                'tip': '',
-                                'hint': ''};
-                list.append(itemData);
-            }
-        }
-    }
+    property int visibility: PlasmaCore.Types.HiddenStatus
+    Plasmoid.status: visibility
 
     PlasmaCore.DataSource {
-        id: dataEngine
+        id: dataSource
         engine: "kimpanel"
         connectedSources: ["statusbar"]
         onDataChanged: {
-            showMenu(actionMenu, dataEngine.data["statusbar"]["Menu"]);
-            var data = dataEngine.data["statusbar"]["Properties"];
-            if (!data) {
-                kimpanel.visibleButtons = 0;
-                return;
-            }
-
-            timer.restart();
+            root.visibility = dataSource.data["statusbar"]["Visibility"]?
+                        PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus;
         }
     }
 }

@@ -38,6 +38,9 @@ protected Q_SLOTS:
 
     void execDialog(const KimpanelProperty &prop);
     void execMenu(const QList<KimpanelProperty> &prop_list);
+    void showPlasmoid(bool visible);
+    void setCurrentLayout(QString const& tag, QString const& iconName);
+
 private:
     PanelAgent* m_panelAgent;
     QList< KimpanelProperty > m_props;

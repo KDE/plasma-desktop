@@ -23,6 +23,7 @@
 #include "kimpanelinputpanelcontainer.h"
 #include "kimpanelstatusbarcontainer.h"
 #include "config-kimpanel.h"
+#include "layout_list_models.h"
 
 #include <QProcess>
 #include <QFile>

@@ -21,6 +21,10 @@
 #include "kimpanelservice.h"
 #include "kimpanelagent.h"
 #include "kimpaneldataengine.h"
+#include "input_sources.h"
+#include "layout_list_models.h"
+
+#include <QDebug>
 
 KimpanelStatusBarContainer::KimpanelStatusBarContainer(QObject* parent, PanelAgent* panelAgent):
     DataContainer(parent),
@@ -30,6 +34,25 @@ KimpanelStatusBarContainer::KimpanelStatusBarContainer(QObject* parent, PanelAge
     connect(m_panelAgent, &PanelAgent::registerProperties, this, &KimpanelStatusBarContainer::registerProperties);
     connect(m_panelAgent, &PanelAgent::execMenu, this, &KimpanelStatusBarContainer::execMenu);
     connect(m_panelAgent, &PanelAgent::execDialog, this, &KimpanelStatusBarContainer::execDialog);
+    connect(m_panelAgent, &PanelAgent::showPlasmoid, this, &KimpanelStatusBarContainer::showPlasmoid);
+    connect(m_panelAgent, &PanelAgent::currentLayoutChanged, this, &KimpanelStatusBarContainer::setCurrentLayout);
+    setData("LayoutList", QVariant::fromValue(panelAgent->models()->currentLayoutListModel()));
+    setData("LayoutModels", QVariant::fromValue(panelAgent->models()));
+}
+
+void KimpanelStatusBarContainer::showPlasmoid(bool visible)
+{
+    setData("Visibility", visible);
+    checkForUpdate();
+}
+
+void KimpanelStatusBarContainer::setCurrentLayout(const QString &tag, const QString &iconName)
+{
+    qDebug() << tag << iconName;
+    setData("CurrentLayoutIndex", m_panelAgent->models()->currentLayoutIndex());
+    setData("CurrentTag", tag);
+    setData("CurrentIconName", iconName);
+    checkForUpdate();
 }
 
 Plasma::Service* KimpanelStatusBarContainer::service(QObject* parent)
@@ -42,12 +65,14 @@ Plasma::Service* KimpanelStatusBarContainer::service(QObject* parent)
 
 void KimpanelStatusBarContainer::updateProperty(const KimpanelProperty& property)
 {
-    int i = 0;
-    for (i = 0; i < m_props.size(); i ++) {
+    for (int i = 0; i < m_props.size(); i++) {
         if (m_props[i].key == property.key) {
             m_props[i] = property;
             QList<QVariant> varList;
             Q_FOREACH(const KimpanelProperty & prop, m_props) {
+                if (prop.key == "/Fcitx/logo" || prop.key == "/Fcitx/im") {
+                    continue;
+                }
                 varList << prop.toMap();
             }
             setData(QStringLiteral("Properties"), varList);
@@ -62,6 +87,9 @@ void KimpanelStatusBarContainer::registerProperties(const QList< KimpanelPropert
     m_props = props;
     QList<QVariant> varList;
     Q_FOREACH(const KimpanelProperty & prop, m_props) {
+        if (prop.key == "/Fcitx/logo" || prop.key == "/Fcitx/im") {
+            continue;
+        }
         varList << prop.toMap();
     }
     setData(QStringLiteral("Properties"), varList);

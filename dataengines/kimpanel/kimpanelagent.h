@@ -26,10 +26,12 @@
 #include <QObject>
 #include <QStringList>
 #include <QDBusContext>
+#include <QDBusInterface>
 
 class QDBusServiceWatcher;
 class Impanel2Adaptor;
 class ImpanelAdaptor;
+class LayoutListModels;
 
 class PanelAgent: public QObject, protected QDBusContext
 {
@@ -48,8 +50,8 @@ public:
     void lookupTablePageDown();
     void movePreeditCaret(int pos);
     void triggerProperty(const QString& key);
+    LayoutListModels *models() const;
 
-public: // PROPERTIES
 public Q_SLOTS: // METHODS
     void UpdateLookupTable(const QStringList &labels,
                            const QStringList &candis,
@@ -68,6 +70,9 @@ public Q_SLOTS: // METHODS
                         const QStringList &attrlists,
                         bool hasPrev, bool hasNext, int cursor, int layout);
     void serviceUnregistered(const QString& service);
+    void updateShowStatus();
+    void updateConfig();
+    void updateCurrentLayoutIndex();
 
 Q_SIGNALS:
     // signals that from kimpanel
@@ -104,11 +109,15 @@ Q_SIGNALS:
     void showAux(bool to_show);
     void showLookupTable(bool to_show);
     void updateLookupTableCursor(int pos);
+    void showPlasmoid(bool to_show);
+    void currentLayoutChanged(QString const& label, QString const& iconName);
 
 private:
     bool m_show_aux;
     bool m_show_preedit;
     bool m_show_lookup_table;
+    bool m_show_layout_indicator;
+    bool m_show_single;
     int m_spot_x;
     int m_spot_y;
     QString m_currentService;
@@ -116,6 +125,8 @@ private:
     ImpanelAdaptor* adaptor;
     Impanel2Adaptor* adaptor2;
     QDBusServiceWatcher* watcher;
+    QDBusInterface* m_kdedIface;
+    LayoutListModels* m_models;
 };
 
 #endif // KIMPANEL_AGENT_H

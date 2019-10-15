@@ -22,6 +22,7 @@ set_target_properties(plasma_engine_kimpanel PROPERTIES PREFIX "")
 target_link_libraries(plasma_engine_kimpanel
 	KF5::Plasma
 	Qt5::DBus
+    kcm_keyboard_layoutmodel
 )
 kcoreaddons_desktop_to_json(plasma_engine_kimpanel plasma-dataengine-kimpanel.desktop)
 

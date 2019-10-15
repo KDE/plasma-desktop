@@ -31,11 +31,25 @@
 #include <QDBusServiceWatcher>
 #include <QDBusConnection>
 
+#include "input_sources.h"
+#include "layout_list_models.h"
+
+#include <KConfigGroup>
+#include <KSharedConfig>
+
+#include "input_sources.h"
+#include "layout_list_models.h"
+
+#include <KConfigGroup>
+#include <KSharedConfig>
+
 PanelAgent::PanelAgent(QObject *parent)
     : QObject(parent)
     ,adaptor(new ImpanelAdaptor(this))
     ,adaptor2(new Impanel2Adaptor(this))
     ,watcher(new QDBusServiceWatcher(this))
+    ,m_kdedIface(new QDBusInterface("org.kde.keyboard", "/Layouts", "org.kde.KeyboardLayouts"))
+    ,m_models(new LayoutListModels(this))
 {
     watcher->setConnection(QDBusConnection::sessionBus());
     watcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
@@ -78,6 +92,12 @@ PanelAgent::PanelAgent(QObject *parent)
                                             QStringLiteral("ExecMenu"), this, SLOT(ExecMenu(QStringList)));
 
     connect(watcher, &QDBusServiceWatcher::serviceUnregistered, this, &PanelAgent::serviceUnregistered);
+    connect(InputSources::self(), &InputSources::currentSourceChanged, this, &PanelAgent::updateShowStatus);
+    connect(m_kdedIface, SIGNAL(configChanged()), this, SLOT(updateConfig()));
+    connect(m_models, &LayoutListModels::currentLayoutIndexChanged,
+            this, &PanelAgent::updateCurrentLayoutIndex);
+
+    updateConfig();
 }
 
 PanelAgent::~PanelAgent()
@@ -97,6 +117,57 @@ void PanelAgent::serviceUnregistered(const QString& service)
         emit showLookupTable(false);
         emit registerProperties(QList<KimpanelProperty>());
     }
+}
+
+void PanelAgent::updateShowStatus()
+{
+    bool show = false;
+
+    if (InputSources::self()->currentSource() == InputSources::Sources::XkbSource) {
+        if (m_show_layout_indicator) {
+            if (m_models->configuredLayoutListModel()->rowCount() > 1 || m_show_single) {
+                show = true;
+            }
+        }
+    }
+    else {
+        show = true;
+    }
+
+    emit showPlasmoid(show);
+}
+
+void PanelAgent::updateConfig()
+{
+    m_models->loadConfig();
+
+    KConfigGroup config(
+        KSharedConfig::openConfig(QStringLiteral("kxkbrc"), KConfig::NoGlobals),
+        QStringLiteral("Layout"));
+
+    m_show_layout_indicator = config.readEntry<bool>("ShowLayoutIndicator", true);
+    m_show_single = config.readEntry<bool>("ShowSingle", false);
+
+    updateShowStatus();
+}
+
+void PanelAgent::updateCurrentLayoutIndex()
+{
+    int new_idx = m_models->currentLayoutIndex();
+
+    // TODO: make a "short name" role and use that
+    QString name = m_models->currentLayoutListModel()->data(
+                m_models->currentLayoutListModel()->index(new_idx, 0),
+                LayoutListModelBase::Roles::ShortNameRole).toString();
+
+    QString iconName = m_models->currentIconName();
+
+    emit currentLayoutChanged(name, iconName);
+}
+
+LayoutListModels *PanelAgent::models() const
+{
+    return m_models;
 }
 
 void PanelAgent::configure()
@@ -207,6 +278,8 @@ static KimpanelLookupTable Args2LookupTable(const QStringList &labels, const QSt
 
 void PanelAgent::created()
 {
+    updateShowStatus();
+    updateCurrentLayoutIndex();
     emit PanelCreated();
     emit PanelCreated2();
 }
