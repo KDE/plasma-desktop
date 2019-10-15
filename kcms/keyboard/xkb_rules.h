@@ -86,7 +86,7 @@ struct OptionGroupInfo: public ConfigItem {
     }
 };
 
-struct Rules {
+struct XkbRules {
     enum ExtrasFlag { NO_EXTRAS, READ_EXTRAS };
 
 	static const char XKB_OPTION_GROUP_SEPARATOR;
@@ -96,14 +96,6 @@ struct Rules {
     QList<OptionGroupInfo*> optionGroupInfos;
     QString version;
 
-    Rules();
-
-	~Rules() {
-		foreach(LayoutInfo* layoutInfo, layoutInfos) delete layoutInfo;
-		foreach(ModelInfo* modelInfo, modelInfos) delete modelInfo;
-		foreach(OptionGroupInfo* optionGroupInfo, optionGroupInfos) delete optionGroupInfo;
-	}
-
     const LayoutInfo* getLayoutInfo(const QString& layoutName) const {
     	return findByName(layoutInfos, layoutName);
     }
@@ -112,34 +104,25 @@ struct Rules {
     	return findByName(optionGroupInfos, optionGroupName);
     }
 
-    static Rules* readRules(ExtrasFlag extrasFlag);
-    static Rules* readRules(Rules* rules, const QString& filename, bool fromExtras);
     static QString getRulesName();
     static QString findXkbDir();
 
-#ifdef NEW_GEOMETRY
-    class GeometryId {
-      public:
-	QString fileName;
-	QString geoName;
-
-    GeometryId(const GeometryId& other) {
-        operator=(other);
+    static XkbRules* self() {
+        static QScopedPointer<XkbRules> v(XkbRules::readRules(XkbRules::READ_EXTRAS));
+        return v.get();
     }
-	GeometryId(const QString& fileName_, const QString& geoName_):
-	  fileName(fileName_),
-	  geoName(geoName_) {}
 
-	GeometryId& operator=(const GeometryId& geoId) {
-	  fileName = geoId.fileName;
-	  geoName = geoId.geoName;
-	  return *this;
-	}
-    };
+    ~XkbRules() {
+        foreach(LayoutInfo* layoutInfo, layoutInfos) delete layoutInfo;
+        foreach(ModelInfo* modelInfo, modelInfos) delete modelInfo;
+        foreach(OptionGroupInfo* optionGroupInfo, optionGroupInfos) delete optionGroupInfo;
+    }
 
-    static GeometryId getGeometryId(const QString& model);
-#endif
+private:
+    XkbRules();
 
+    static XkbRules* readRules(ExtrasFlag extrasFlag);
+    static XkbRules* readRules(XkbRules* rules, const QString& filename, bool fromExtras);
 };
 
 #endif /* XKB_RULES_H_ */

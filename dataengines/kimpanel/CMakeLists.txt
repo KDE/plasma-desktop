@@ -23,6 +23,7 @@ target_link_libraries(plasma_engine_kimpanel
 	KF5::Plasma
 	KF5::Service
 	Qt5::DBus
+    kcm_keyboard_layoutmodel
 )
 kcoreaddons_desktop_to_json(plasma_engine_kimpanel plasma-dataengine-kimpanel.desktop)
 

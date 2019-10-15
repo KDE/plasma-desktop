@@ -31,38 +31,38 @@
 //#include <libintl.h>
 //#include <locale.h>
 
-#include "x11_helper.h"
+//#include "x11_helper.h"
 
 // for findXkbRuleFile
 #include <QX11Info>
-#include <X11/Xlib.h>
-#include <X11/Xatom.h>
 #include <X11/XKBlib.h>
+#include <X11/Xatom.h>
+#include <X11/Xlib.h>
 #include <X11/extensions/XKBrules.h>
+#include <config-workspace.h>
 #include <fixx11h.h>
 
-
-
-class RulesHandler : public QXmlDefaultHandler
-{
+class RulesHandler : public QXmlDefaultHandler {
 public:
-	RulesHandler(Rules* rules_, bool fromExtras_):
-		rules(rules_),
-		fromExtras(fromExtras_){}
+    RulesHandler(XkbRules* rules_, bool fromExtras_)
+        : rules(rules_)
+        , fromExtras(fromExtras_)
+    {
+    }
 
-    bool startElement(const QString &namespaceURI, const QString &localName,
-                      const QString &qName, const QXmlAttributes &attributes) override;
-    bool endElement(const QString &namespaceURI, const QString &localName,
-                    const QString &qName) override;
-    bool characters(const QString &str) override;
-//    bool fatalError(const QXmlParseException &exception);
-//    QString errorString() const;
+    bool startElement(const QString& namespaceURI, const QString& localName,
+        const QString& qName, const QXmlAttributes& attributes) override;
+    bool endElement(const QString& namespaceURI, const QString& localName,
+        const QString& qName) override;
+    bool characters(const QString& str) override;
+    //    bool fatalError(const QXmlParseException &exception);
+    //    QString errorString() const;
 
 private:
-//    QString getString(const QString& text);
+    //    QString getString(const QString& text);
 
     QStringList path;
-    Rules* rules;
+    XkbRules* rules;
     const bool fromExtras;
 };
 
@@ -80,23 +80,24 @@ static QString translate_xml_item(const QString& itemText)
 
 static QString translate_description(ConfigItem* item)
 {
-	return item->description.isEmpty()
-			? item->name : translate_xml_item(item->description);
+    return item->description.isEmpty()
+        ? item->name
+        : translate_xml_item(item->description);
 }
 
 static bool notEmpty(const ConfigItem* item)
 {
-  return ! item->name.isEmpty();
+    return !item->name.isEmpty();
 }
 
-template<class T>
+template <class T>
 void removeEmptyItems(QList<T*>& list)
 {
 #ifdef __GNUC__
 #if __GNUC__ == 4 && (__GNUC_MINOR__ == 8 && __GNUC_PATCHLEVEL__ < 3) || (__GNUC_MINOR__ == 7 && __GNUC_PATCHLEVEL__ < 4)
 #warning Compiling with a workaround for GCC < 4.8.3 || GCC < 4.7.4 http://gcc.gnu.org/bugzilla/show_bug.cgi?id=58800
-    Q_FOREACH(T* x, list) {
-        ConfigItem *y = static_cast<ConfigItem*>(x);
+    Q_FOREACH (T* x, list) {
+        ConfigItem* y = static_cast<ConfigItem*>(x);
         if (y->name.isEmpty()) {
             list.removeAll(x);
         }
@@ -107,46 +108,44 @@ void removeEmptyItems(QList<T*>& list)
 #endif
 }
 
-static
-void postProcess(Rules* rules)
+static void postProcess(XkbRules* rules)
 {
-	//TODO remove elements with empty names to safeguard us
-	removeEmptyItems(rules->layoutInfos);
-	removeEmptyItems(rules->modelInfos);
-	removeEmptyItems(rules->optionGroupInfos);
+    //TODO remove elements with empty names to safeguard us
+    removeEmptyItems(rules->layoutInfos);
+    removeEmptyItems(rules->modelInfos);
+    removeEmptyItems(rules->optionGroupInfos);
 
-//	setlocale(LC_ALL, "");
-//	bindtextdomain("xkeyboard-config", LOCALE_DIR);
-	foreach(ModelInfo* modelInfo, rules->modelInfos) {
-		modelInfo->vendor = translate_xml_item(modelInfo->vendor);
-		modelInfo->description = translate_description(modelInfo);
-	}
+    //	setlocale(LC_ALL, "");
+    //	bindtextdomain("xkeyboard-config", LOCALE_DIR);
+    foreach (ModelInfo* modelInfo, rules->modelInfos) {
+        modelInfo->vendor = translate_xml_item(modelInfo->vendor);
+        modelInfo->description = translate_description(modelInfo);
+    }
 
-	foreach(LayoutInfo* layoutInfo, rules->layoutInfos) {
-		layoutInfo->description = translate_description(layoutInfo);
+    foreach (LayoutInfo* layoutInfo, rules->layoutInfos) {
+        layoutInfo->description = translate_description(layoutInfo);
 
-		removeEmptyItems(layoutInfo->variantInfos);
-		foreach(VariantInfo* variantInfo, layoutInfo->variantInfos) {
-			variantInfo->description = translate_description(variantInfo);
-		}
-	}
-	foreach(OptionGroupInfo* optionGroupInfo, rules->optionGroupInfos) {
-		optionGroupInfo->description = translate_description(optionGroupInfo);
+        removeEmptyItems(layoutInfo->variantInfos);
+        foreach (VariantInfo* variantInfo, layoutInfo->variantInfos) {
+            variantInfo->description = translate_description(variantInfo);
+        }
+    }
+    foreach (OptionGroupInfo* optionGroupInfo, rules->optionGroupInfos) {
+        optionGroupInfo->description = translate_description(optionGroupInfo);
 
-		removeEmptyItems(optionGroupInfo->optionInfos);
-		foreach(OptionInfo* optionInfo, optionGroupInfo->optionInfos) {
-			optionInfo->description = translate_description(optionInfo);
-		}
-	}
+        removeEmptyItems(optionGroupInfo->optionInfos);
+        foreach (OptionInfo* optionInfo, optionGroupInfo->optionInfos) {
+            optionInfo->description = translate_description(optionInfo);
+        }
+    }
 }
 
-
-Rules::Rules():
-	version(QStringLiteral("1.0"))
+XkbRules::XkbRules()
+    : version(QStringLiteral("1.0"))
 {
 }
 
-QString Rules::getRulesName()
+QString XkbRules::getRulesName()
 {
     if (!QX11Info::isPlatformX11()) {
         return QString();
@@ -164,29 +163,28 @@ QString Rules::getRulesName()
     return {};
 }
 
-QString Rules::findXkbDir()
+QString XkbRules::findXkbDir()
 {
-	return QStringLiteral(XKBDIR);
+    return QStringLiteral(XKBDIR);
 }
 
 static QString findXkbRulesFile()
 {
-	QString rulesFile;
-	QString rulesName = Rules::getRulesName();
+    QString rulesFile;
+    QString rulesName = XkbRules::getRulesName();
 
-    const QString xkbDir = Rules::findXkbDir();
-	if ( ! rulesName.isNull() ) {
-		rulesFile = QStringLiteral("%1/rules/%2.xml").arg(xkbDir, rulesName);
-	} else {
+    const QString xkbDir = XkbRules::findXkbDir();
+    if (!rulesName.isNull()) {
+        rulesFile = QStringLiteral("%1/rules/%2.xml").arg(xkbDir, rulesName);
+    } else {
         // default to evdev
         rulesFile = QStringLiteral("%1/rules/evdev.xml").arg(xkbDir);
     }
 
-	return rulesFile;
+    return rulesFile;
 }
 
-static
-void mergeRules(Rules* rules, Rules* extraRules)
+static void mergeRules(XkbRules* rules, XkbRules* extraRules)
 {
 	rules->modelInfos.append( extraRules->modelInfos );
 	rules->optionGroupInfos.append( extraRules->optionGroupInfos );	// need to iterate and merge?
@@ -209,22 +207,26 @@ void mergeRules(Rules* rules, Rules* extraRules)
 	extraRules->layoutInfos.clear();
 	extraRules->modelInfos.clear();
 	extraRules->optionGroupInfos.clear();
+
+    // base rules now own the objects - remove them from extra rules so that it does not try to delete them
+    extraRules->layoutInfos.clear();
+    extraRules->modelInfos.clear();
+    extraRules->optionGroupInfos.clear();
 }
 
+const char XkbRules::XKB_OPTION_GROUP_SEPARATOR = ':';
 
-const char Rules::XKB_OPTION_GROUP_SEPARATOR = ':';
-
-Rules* Rules::readRules(ExtrasFlag extrasFlag)
+XkbRules* XkbRules::readRules(ExtrasFlag extrasFlag)
 {
-	Rules* rules = new Rules();
+	XkbRules* rules = new XkbRules();
 	QString rulesFile = findXkbRulesFile();
 	if( ! readRules(rules, rulesFile, false) ) {
 		delete rules;
 		return nullptr;
 	}
-	if( extrasFlag == Rules::READ_EXTRAS ) {
+	if( extrasFlag == XkbRules::READ_EXTRAS ) {
 		QRegExp regex(QStringLiteral("\\.xml$"));
-		Rules* rulesExtra = new Rules();
+		XkbRules* rulesExtra = new XkbRules();
 		QString extraRulesFile = rulesFile.replace(regex, QStringLiteral(".extras.xml"));
 		if( readRules(rulesExtra, extraRulesFile, true) ) {	// not fatal if it fails
 			mergeRules(rules, rulesExtra);
@@ -234,8 +236,7 @@ Rules* Rules::readRules(ExtrasFlag extrasFlag)
 	return rules;
 }
 
-
-Rules* Rules::readRules(Rules* rules, const QString& filename, bool fromExtras)
+XkbRules* XkbRules::readRules(XkbRules* rules, const QString& filename, bool fromExtras)
 {
 	QFile file(filename);
 	if( !file.open(QFile::ReadOnly | QFile::Text) ) {
@@ -243,28 +244,28 @@ Rules* Rules::readRules(Rules* rules, const QString& filename, bool fromExtras)
 		return nullptr;
 	}
 
-	RulesHandler rulesHandler(rules, fromExtras);
+    RulesHandler rulesHandler(rules, fromExtras);
 
-	QXmlSimpleReader reader;
-	reader.setContentHandler(&rulesHandler);
-	reader.setErrorHandler(&rulesHandler);
+    QXmlSimpleReader reader;
+    reader.setContentHandler(&rulesHandler);
+    reader.setErrorHandler(&rulesHandler);
 
-	QXmlInputSource xmlInputSource(&file);
+    QXmlInputSource xmlInputSource(&file);
 
-	qCDebug(KCM_KEYBOARD) << "Parsing xkb rules from" << file.fileName();
+    qCDebug(KCM_KEYBOARD) << "Parsing xkb rules from" << file.fileName();
 
 	if( ! reader.parse(xmlInputSource) ) {
 		qCCritical(KCM_KEYBOARD) << "Failed to parse the rules file" << file.fileName();
 		return nullptr;
 	}
 
-	postProcess(rules);
+    postProcess(rules);
 
-	return rules;
+    return rules;
 }
 
-bool RulesHandler::startElement(const QString &/*namespaceURI*/, const QString &/*localName*/,
-                      const QString &qName, const QXmlAttributes &attributes)
+bool RulesHandler::startElement(const QString& /*namespaceURI*/, const QString& /*localName*/,
+    const QString& qName, const QXmlAttributes& attributes)
 {
 	path << QString(qName);
 
@@ -292,13 +293,13 @@ bool RulesHandler::startElement(const QString &/*namespaceURI*/, const QString &
 	return true;
 }
 
-bool RulesHandler::endElement(const QString &/*namespaceURI*/, const QString &/*localName*/, const QString &/*qName*/)
+bool RulesHandler::endElement(const QString& /*namespaceURI*/, const QString& /*localName*/, const QString& /*qName*/)
 {
-	path.removeLast();
-	return true;
+    path.removeLast();
+    return true;
 }
 
-bool RulesHandler::characters(const QString &str)
+bool RulesHandler::characters(const QString& str)
 {
 	if( !str.trimmed().isEmpty() ) {
 		QString strPath = path.join(QLatin1String("/"));
@@ -363,132 +364,49 @@ bool RulesHandler::characters(const QString &str)
 
 bool LayoutInfo::isLanguageSupportedByLayout(const QString& lang) const
 {
-	if( languages.contains(lang) || isLanguageSupportedByVariants(lang) )
-		return true;
+    if (languages.contains(lang) || isLanguageSupportedByVariants(lang))
+        return true;
 
-//	// return yes if no languages found in layout or its variants
-//	if( languages.empty() ) {
-//		foreach(const VariantInfo* info, variantInfos) {
-//			if( ! info->languages.empty() )
-//				return false;
-//		}
-//		return true;
-//	}
+    //	// return yes if no languages found in layout or its variants
+    //	if( languages.empty() ) {
+    //		foreach(const VariantInfo* info, variantInfos) {
+    //			if( ! info->languages.empty() )
+    //				return false;
+    //		}
+    //		return true;
+    //	}
 
-	return false;
+    return false;
 }
 
 bool LayoutInfo::isLanguageSupportedByVariants(const QString& lang) const
 {
-	foreach(const VariantInfo* info, variantInfos) {
-		if( info->languages.contains(lang) )
-			return true;
-	}
-	return false;
+    foreach (const VariantInfo* info, variantInfos) {
+        if (info->languages.contains(lang))
+            return true;
+    }
+    return false;
 }
 
 bool LayoutInfo::isLanguageSupportedByDefaultVariant(const QString& lang) const
 {
-	if( languages.contains(lang) )
-		return true;
+    if (languages.contains(lang))
+        return true;
 
-	if( languages.empty() && isLanguageSupportedByVariants(lang) )
-		return true;
+    if (languages.empty() && isLanguageSupportedByVariants(lang))
+        return true;
 
-	return false;
+    return false;
 }
 
 bool LayoutInfo::isLanguageSupportedByVariant(const VariantInfo* variantInfo, const QString& lang) const
 {
-	if( variantInfo->languages.contains(lang) )
-		return true;
+    if (variantInfo->languages.contains(lang))
+        return true;
 
-	// if variant has no languages try to "inherit" them from layout
-	if( variantInfo->languages.empty() && languages.contains(lang) )
-		return true;
+    // if variant has no languages try to "inherit" them from layout
+    if (variantInfo->languages.empty() && languages.contains(lang))
+        return true;
 
-	return false;
+    return false;
 }
-
-#ifdef NEW_GEOMETRY
-
-Rules::GeometryId Rules::getGeometryId(const QString& model) {
-    QString xkbDir = Rules::findXkbDir();
-    QString rulesName = Rules::getRulesName();
-    QString ruleFileName = QStringLiteral("%1/rules/%2").arg(xkbDir, rulesName);
-    QFile ruleFile(ruleFileName);
-
-    GeometryId defaultGeoId(QStringLiteral("pc"), QStringLiteral("pc104"));
-
-    if ( ! ruleFile.open(QIODevice::ReadOnly | QIODevice::Text) ){
-        qCCritical(KCM_KEYBOARD) << "Unable to open file" << ruleFileName;
-        return defaultGeoId;
-    }
-    
-    QString modelGeoId = model;
-    bool inTable = false;
-    QTextStream in(&ruleFile);
-    
-    while (!in.atEnd()) {
-        QString line = in.readLine().trimmed();
-
-	if( line.isEmpty() || QRegExp(QStringLiteral("^\\s*//")).indexIn(line) != -1 )
-	    continue;
-
-        QRegExp modelGroupRegex(QStringLiteral("!\\s*(\\$[a-zA-Z0-9_]+)\\s*=(.*)"));
-        
-        if( modelGroupRegex.indexIn(line) != -1 ) {
-    	    QStringList parts = modelGroupRegex.capturedTexts();
-    	    QString groupName = parts[1];
-    	    QStringList models = parts[2].split(QRegExp(QStringLiteral("\\s+")), QString::SkipEmptyParts);
-    	    
-//    	    qCDebug(KCM_KEYBOARD) << "modelGroup definition" << groupName << ":" << models;
-    	    if( models.contains(model) ) {
-    	        modelGeoId = groupName;
-    	    }
-    	    continue;
-        }
-
-
-	if( inTable ) {
-    	    QRegExp modelTableEntry (QStringLiteral("\\s*(\\$?[a-zA-Z0-9_]+|\\*)\\s*=\\s*([a-zA-Z0-9_]+)\\(([a-zA-Z0-9_%]+)\\)"));
-    	    if( modelTableEntry.indexIn(line) == -1 ) {
-    	       if( QRegExp(QStringLiteral("^!\\s*")).indexIn(line) != -1 )
-    	         break;
-    	        
-    		qCWarning(KCM_KEYBOARD) << "could not parse geometry line" << line;
-    		continue;
-    	    }
-        
-    	    QStringList parts = modelTableEntry.capturedTexts();
-    	    QString modelName = parts[1];
-    	    QString fileName = parts[2];
-    	    QString geoName = parts[3];
-    	    if( geoName == QLatin1String("%m") ) {
-    	      geoName = model;
-    	    }
-    	    if( modelName == QLatin1String("*") ) {
-    		defaultGeoId = GeometryId(fileName, geoName);
-    	    }
-    	    
-//    	    qCDebug(KCM_KEYBOARD) << "geo entry" << modelName << fileName << geoName;
-        
-    	    if( modelName == model ) {
-    		return GeometryId(fileName, geoName);
-    	    }
-    	    
-    	    continue;
-        }
-
-        QRegExp modelTableHeader (QStringLiteral("!\\s+model\\s*=\\s*geometry"));
-        if( modelTableHeader.indexIn(line) != -1 ) {
-    	    inTable = true;
-    	    continue;
-        }
-
-    }
-
-    return defaultGeoId;
-}
-
-#endif

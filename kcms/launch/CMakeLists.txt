@@ -15,6 +15,8 @@ target_link_libraries(kcm_launchfeedback
     KF5::I18n
     KF5::KCMUtils
     KF5::QuickAddons
+    KF5::Plasma
+    KF5::PlasmaQuick
 )
 
 kcoreaddons_desktop_to_json(kcm_launchfeedback "kcm_launchfeedback.desktop")
