@@ -22,7 +22,6 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.plasma.workspace.keyboardlayout 1.0
 
 Item {
     id: kimpanel
@@ -44,30 +43,11 @@ Item {
         id: items
         width: parent.width
         height: parent.height
-        anchors.centerIn: parent
+        x: (parent.width - childrenRect.width) / 2
+        y: (parent.height - childrenRect.height) / 2
         flow: kimpanel.vertical ? Flow.LeftToRight : Flow.TopToBottom
 
-        property int iconSize: units.roundToIconSize(Math.min(width, height))
-
-        StatusIcon {
-            readonly property QtObject kl: KeyboardLayout {
-                id: layout
-                function nextLayout() {
-                    var layouts = layout.layouts;
-                    var index = (layouts.indexOf(layout.currentLayout)+1) % layouts.length;
-                    layout.currentLayout = layouts[index];
-                }
-            }
-
-            width: visible ? items.iconSize : 0
-            height: items.iconSize
-            visible: list.count === 0
-            label: layout.currentLayout.substr(0, 2).toLowerCase()
-            tip: layout.currentLayout
-            onTriggered: if (button === Qt.LeftButton) {
-                layout.nextLayout()
-            }
-        }
+        property int iconSize: Math.min(units.iconSizeHints.panel, units.roundToIconSize(Math.min(width, height)))
 
         Repeater {
             model: ListModel {
@@ -75,20 +55,28 @@ Item {
                 dynamicRoles: true
             }
 
-            delegate: StatusIcon {
-                id: statusIcon
-                label: model.label
-                tip: model.tip
-                icon: model.icon
-                hint: model.hint
-                onTriggered : {
-                    if (button === Qt.LeftButton) {
-                        clickHandler(model.key);
-                        // clickHandler will trigger the menu, but we have to wait for
-                        // the menu data. So we have to set the visual parent ahead.
-                        actionMenu.visualParent = statusIcon;
-                    } else {
-                        contextMenu.open(statusIcon, {key: model.key, label: model.label});
+            delegate: Item {
+                id: iconDelegate
+                width: items.iconSize
+                height: items.iconSize
+                StatusIcon {
+                    id: statusIcon
+                    anchors.centerIn: parent
+                    width: items.iconSize
+                    height: items.iconSize
+                    label: model.label
+                    tip: model.tip
+                    icon: model.icon
+                    hint: model.hint
+                    onTriggered : {
+                        if (button === Qt.LeftButton) {
+                            clickHandler(model.key);
+                            // clickHandler will trigger the menu, but we have to wait for
+                            // the menu data. So we have to set the visual parent ahead.
+                            actionMenu.visualParent = statusIcon;
+                        } else {
+                            contextMenu.open(statusIcon, {key: model.key, label: model.label});
+                        }
                     }
                 }
             }
