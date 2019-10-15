@@ -55,7 +55,7 @@ KCMSplashScreen::KCMSplashScreen(QObject* parent, const QVariantList& args)
     m_model = new QStandardItemModel(this);
     QHash<int, QByteArray> roles = m_model->roleNames();
     roles[PluginNameRole] = "pluginName";
-    roles[ScreenhotRole] = "screenshot";
+    roles[ScreenshotRole] = "screenshot";
     roles[DescriptionRole] = "description";
     m_model->setItemRoleNames(roles);
     loadModel();
@@ -84,7 +84,7 @@ QList<Plasma::Package> KCMSplashScreen::availablePackages(const QString &compone
     return packages;
 }
 
-QStandardItemModel *KCMSplashScreen::splashModel()
+QStandardItemModel *KCMSplashScreen::splashModel() const
 {
     return m_model;
 }
@@ -127,7 +127,7 @@ void KCMSplashScreen::loadModel()
     for (const Plasma::Package &pkg : pkgs) {
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
         row->setData(pkg.metadata().pluginName(), PluginNameRole);
-        row->setData(pkg.filePath("previews", QStringLiteral("splash.png")), ScreenhotRole);
+        row->setData(pkg.filePath("previews", QStringLiteral("splash.png")), ScreenshotRole);
         row->setData(pkg.metadata().comment(), DescriptionRole);
         m_model->appendRow(row);
     }
@@ -207,13 +207,13 @@ void KCMSplashScreen::test(const QString &plugin)
 
     m_testProcess = new QProcess(this);
     connect(m_testProcess, &QProcess::errorOccurred, this, [this](QProcess::ProcessError error) {
-        Q_UNUSED(error);
+        Q_UNUSED(error)
         emit testingFailed();
     });
     connect(m_testProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this,
         [this](int exitCode, QProcess::ExitStatus exitStatus) {
-        Q_UNUSED(exitCode);
-        Q_UNUSED(exitStatus);
+        Q_UNUSED(exitCode)
+        Q_UNUSED(exitStatus)
 
         m_testProcess->deleteLater();
         m_testProcess = nullptr;

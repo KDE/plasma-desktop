@@ -39,14 +39,14 @@ class KCMSplashScreen : public KQuickAddons::ConfigModule
 public:
     enum Roles {
         PluginNameRole = Qt::UserRole +1,
-        ScreenhotRole,
+        ScreenshotRole,
         DescriptionRole
     };
     KCMSplashScreen(QObject* parent, const QVariantList& args);
 
     QList<Plasma::Package> availablePackages(const QString &component);
 
-    QStandardItemModel *splashModel();
+    QStandardItemModel *splashModel() const;
 
     QString selectedPlugin() const;
     void setSelectedPlugin(const QString &plugin);
