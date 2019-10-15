@@ -4,6 +4,7 @@
     Copyright 2000 Rik Hemsley
     Copyright 2015 Antonis Tsiapaliokas <antonis.tsiapaliokas@kde.org>
     Copyright 2017 Marco Martin <mart@kde.org>
+    Copyright 2019 Benjamin Port <benjamin.port@enioka.com>
 
     Ported to kcontrol2 by Geert Jansen.
 
@@ -48,6 +49,8 @@
 
 #include "../krdb/krdb.h"
 #include "previewimageprovider.h"
+
+#include "fontssettings.h"
 
 /**** DLL Interface ****/
 K_PLUGIN_FACTORY_WITH_JSON(KFontsFactory, "kcm_fonts.json", registerPlugin<KFonts>();)
@@ -467,6 +470,7 @@ bool FontAASettings::needsSave() const
 
 KFonts::KFonts(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
+    , m_settings(new FontsSettings(this))
     , m_fontAASettings(new FontAASettings(this))
 {
     KAboutData* about = new KAboutData("kcm_fonts", i18n("Fonts"),
@@ -474,11 +478,21 @@ KFonts::KFonts(QObject *parent, const QVariantList &args)
     about->addAuthor(i18n("Antonis Tsiapaliokas"), QString(), "antonis.tsiapaliokas@kde.org");
     setAboutData(about);
     qmlRegisterType<QStandardItemModel>();
+    qmlRegisterType<FontsSettings>();
+
     setButtons(Apply | Default | Help);
 
     auto updateState = [this]() {
         setNeedsSave(m_fontAASettings->needsSave());
     };
+
+    connect(m_settings, &FontsSettings::configChanged, this, &KFonts::updateNeedsSave);
+    connect(m_settings, &FontsSettings::fontChanged, this, &KFonts::updateNeedsSave);
+    connect(m_settings, &FontsSettings::fixedChanged, this, &KFonts::updateNeedsSave);
+    connect(m_settings, &FontsSettings::smallestReadableFont, this, &KFonts::updateNeedsSave);
+    connect(m_settings, &FontsSettings::toolBarFont, this, &KFonts::updateNeedsSave);
+    connect(m_settings, &FontsSettings::menuFont, this, &KFonts::updateNeedsSave);
+    connect(m_settings, &FontsSettings::activeFont, this, &KFonts::updateNeedsSave);
 
     connect(m_fontAASettings, &FontAASettings::subPixelCurrentIndexChanged, this, updateState);
     connect(m_fontAASettings, &FontAASettings::hintingCurrentIndexChanged, this, updateState);
@@ -494,54 +508,32 @@ KFonts::~KFonts()
 {
 }
 
+FontsSettings *KFonts::fontsSettings() const
+{
+    return m_settings;
+}
+
 void KFonts::defaults()
 {
-#ifdef Q_OS_MAC
-    setGeneralFont(QFont("Lucida Grande", 13));
-    setMenuFont(QFont("Lucida Grande", 13));
-    setFixedWidthFont(QFont("Monaco", 10));
-    setToolbarFont(QFont("Lucida Grande", 11));
-    setSmallFont(QFont("Lucida Grande", 9));
-    setWindowTitleFont(QFont("Lucida Grande", 14));
-#else
-    setGeneralFont(QFont("Noto Sans", 10));
-    setMenuFont(QFont("Noto Sans", 10));
-    setFixedWidthFont(QFont("Hack", 9));
-    setToolbarFont(QFont("Noto Sans", 10));
-    setSmallFont(QFont("Noto Sans", 8));
-    setWindowTitleFont(QFont("Noto Sans", 10));
-#endif
-
+    m_settings->setDefaults();
     m_fontAASettings->defaults();
+}
+
+void KFonts::setNearestExistingFonts()
+{
+    m_settings->setFont(nearestExistingFont(m_settings->font()));
+    m_settings->setFixed(nearestExistingFont(m_settings->fixed()));
+    m_settings->setSmallestReadableFont(nearestExistingFont(m_settings->smallestReadableFont()));
+    m_settings->setToolBarFont(nearestExistingFont(m_settings->toolBarFont()));
+    m_settings->setMenuFont(nearestExistingFont(m_settings->menuFont()));
+    m_settings->setActiveFont(nearestExistingFont(m_settings->activeFont()));
 }
 
 void KFonts::load()
 {
-    KSharedConfig::Ptr config = KSharedConfig::openConfig("kdeglobals");
-
-    KConfigGroup cg(config, "General");
-    m_generalFont = m_generalFontOriginal = nearestExistingFont(cg.readEntry("font", m_defaultFont));
-
-
-    m_fixedWidthFont = m_fixedWidthFontOriginal = nearestExistingFont(cg.readEntry("fixed", QFont("Hack", 9)));
-
-    m_smallFont = m_smallFontOriginal = nearestExistingFont(cg.readEntry("smallestReadableFont", m_defaultFont));
-
-    m_toolbarFont = m_toolbarFontOriginal = nearestExistingFont(cg.readEntry("toolBarFont", m_defaultFont));
-
-    m_menuFont = m_menuFontOriginal = nearestExistingFont(cg.readEntry("menuFont", m_defaultFont));
-
-    cg = KConfigGroup(config, "WM");
-    m_windowTitleFont = m_windowTitleFontOriginal = nearestExistingFont(cg.readEntry("activeFont", m_defaultFont));
-
-    engine()->addImageProvider("preview", new PreviewImageProvider(generalFont()));
-
-    emit generalFontChanged();
-    emit fixedWidthFontChanged();
-    emit smallFontChanged();
-    emit toolbarFontChanged();
-    emit menuFontChanged();
-    emit windowTitleFontChanged();
+    m_settings->load();
+    setNearestExistingFonts();
+    engine()->addImageProvider("preview", new PreviewImageProvider(m_settings->font()));
 
     m_fontAASettings->load();
     setNeedsSave(false);
@@ -549,26 +541,7 @@ void KFonts::load()
 
 void KFonts::save()
 {
-    KSharedConfig::Ptr config = KSharedConfig::openConfig("kdeglobals");
-
-    KConfigGroup cg(config, "General");
-    cg.writeEntry("font", m_generalFont.toString());
-    cg.writeEntry("fixed", m_fixedWidthFont.toString());
-    cg.writeEntry("smallestReadableFont", m_smallFont.toString());
-    cg.writeEntry("toolBarFont", m_toolbarFont.toString());
-    cg.writeEntry("menuFont", m_menuFont.toString());
-    cg.sync();
-    cg = KConfigGroup(config, "WM");
-    cg.writeEntry("activeFont", m_windowTitleFont.toString());
-    cg.sync();
-
-    m_defaultFontOriginal = m_defaultFont;
-    m_generalFontOriginal = m_generalFont;
-    m_fixedWidthFontOriginal = m_fixedWidthFont;
-    m_smallFontOriginal = m_smallFont;
-    m_toolbarFontOriginal = m_toolbarFont;
-    m_menuFontOriginal = m_menuFont;
-    m_windowTitleFontOriginal = m_windowTitleFont;
+    m_settings->save();
 
     KConfig _cfgfonts("kcmfonts");
     KConfigGroup cfgfonts(&_cfgfonts, "General");
@@ -597,130 +570,25 @@ void KFonts::save()
 
 void KFonts::updateNeedsSave()
 {
-    setNeedsSave(m_defaultFontOriginal != m_defaultFont ||
-                 m_generalFontOriginal != m_generalFont ||
-                 m_fixedWidthFontOriginal != m_fixedWidthFont ||
-                 m_smallFontOriginal != m_smallFont ||
-                 m_toolbarFontOriginal != m_toolbarFont ||
-                 m_menuFontOriginal != m_menuFont ||
-                 m_windowTitleFontOriginal != m_windowTitleFont ||
-                m_fontAASettings->needsSave());
-}
-
-void KFonts::setGeneralFont(const QFont &font)
-{
-    if (m_generalFont == font) {
-        return;
-    }
-
-    m_generalFont = font;
-    emit generalFontChanged();
-    updateNeedsSave();
-}
-
-QFont KFonts::generalFont() const
-{
-    return m_generalFont;
-}
-
-void KFonts::setFixedWidthFont(const QFont &font)
-{
-    if (m_fixedWidthFont == font) {
-        return;
-    }
-
-    m_fixedWidthFont = font;
-    emit fixedWidthFontChanged();
-    updateNeedsSave();
-}
-
-QFont KFonts::fixedWidthFont() const
-{
-    return m_fixedWidthFont;
-}
-
-void KFonts::setSmallFont(const QFont &font)
-{
-    if (m_smallFont == font) {
-        return;
-    }
-
-    m_smallFont = font;
-    emit smallFontChanged();
-    updateNeedsSave();
-}
-
-QFont KFonts::smallFont() const
-{
-    return m_smallFont;
-}
-
-void KFonts::setToolbarFont(const QFont &font)
-{
-    if (m_toolbarFont == font) {
-        return;
-    }
-
-    m_toolbarFont = font;
-    emit toolbarFontChanged();
-    updateNeedsSave();
-}
-
-QFont KFonts::toolbarFont() const
-{
-    return m_toolbarFont;
-}
-
-void KFonts::setMenuFont(const QFont &font)
-{
-    if (m_menuFont == font) {
-        return;
-    }
-
-    m_menuFont = font;
-    emit menuFontChanged();
-    updateNeedsSave();
-}
-
-QFont KFonts::menuFont() const
-{
-    return m_menuFont;
-}
-
-void KFonts::setWindowTitleFont(const QFont &font)
-{
-    if (m_windowTitleFont == font) {
-        return;
-    }
-
-    m_windowTitleFont = font;
-    emit windowTitleFontChanged();
-    updateNeedsSave();
-}
-
-QFont KFonts::windowTitleFont() const
-{
-    return m_windowTitleFont;
+    setNeedsSave(m_settings->isSaveNeeded() || m_fontAASettings->needsSave());
 }
 
 void KFonts::adjustAllFonts()
 {
-    QFont font = m_generalFont;
+    QFont font = m_settings->font();
     KFontChooser::FontDiffFlags fontDiffFlags;
     int ret = KFontDialog::getFontDiff(font, fontDiffFlags, KFontChooser::NoDisplayFlags);
 
     if (ret == KDialog::Accepted && fontDiffFlags) {
-        setGeneralFont(applyFontDiff(m_generalFont, font, fontDiffFlags));
-        setMenuFont(applyFontDiff(m_menuFont, font, fontDiffFlags));
-        {
-            const QFont adjustedFont = applyFontDiff(m_fixedWidthFont, font, fontDiffFlags);
-            if (QFontInfo(adjustedFont).fixedPitch()) {
-                setFixedWidthFont(adjustedFont);
-            }
+        m_settings->setFont(applyFontDiff(m_settings->font(), font, fontDiffFlags));
+        m_settings->setMenuFont(applyFontDiff(m_settings->menuFont(), font, fontDiffFlags));
+        m_settings->setToolBarFont(applyFontDiff(m_settings->toolBarFont(), font, fontDiffFlags));
+        m_settings->setActiveFont(applyFontDiff(m_settings->activeFont(), font, fontDiffFlags));
+        m_settings->setSmallestReadableFont(applyFontDiff(m_settings->smallestReadableFont(), font, fontDiffFlags));
+        const QFont adjustedFont = applyFontDiff(m_settings->fixed(), font, fontDiffFlags);
+        if (QFontInfo(adjustedFont).fixedPitch()) {
+            m_settings->setFixed(adjustedFont);
         }
-        setToolbarFont(applyFontDiff(m_toolbarFont, font, fontDiffFlags));
-        setSmallFont(applyFontDiff(m_smallFont, font, fontDiffFlags));
-        setWindowTitleFont(applyFontDiff(m_windowTitleFont, font, fontDiffFlags));
     }
 }
 

@@ -1,6 +1,7 @@
 /*
    Copyright (c) 2015 Antonis Tsiapaliokas <antonis.tsiapaliokas@kde.org>
    Copyright (c) 2017 Marco Martin <mart@kde.org>
+   Copyright (c) 2019 Benjamin Port <benjamin.port@enioka.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -59,33 +60,33 @@ KCM.SimpleKCM {
             FontWidget {
                 id: generalFontWidget
                 label: i18n("General:")
-                category: "generalFont"
-                font: kcm.generalFont
+                category: "font"
+                font: kcm.fontsSettings.font
             }
             FontWidget {
                 label: i18n("Fixed width:")
-                category: "fixedWidthFont"
-                font: kcm.fixedWidthFont
+                category: "fixed"
+                font: kcm.fontsSettings.fixed
             }
             FontWidget {
                 label: i18n("Small:")
-                category: "smallFont"
-                font: kcm.smallFont
+                category: "smallestReadableFont"
+                font: kcm.fontsSettings.smallestReadableFont
             }
             FontWidget {
                 label: i18n("Toolbar:")
-                category: "toolbarFont"
-                font: kcm.toolbarFont
+                category: "toolBarFont"
+                font: kcm.fontsSettings.toolBarFont
             }
             FontWidget {
                 label: i18n("Menu:")
                 category: "menuFont"
-                font: kcm.menuFont
+                font: kcm.fontsSettings.menuFont
             }
             FontWidget {
                 label: i18n("Window title:")
-                category: "windowTitleFont"
-                font: kcm.windowTitleFont
+                category: "activeFont"
+                font: kcm.fontsSettings.activeFont
             }
 
             Kirigami.Separator {
@@ -247,7 +248,7 @@ KCM.SimpleKCM {
                     if (adjustAllFonts) {
                         kcm.adjustAllFonts(font);
                     } else {
-                        kcm[currentCategory] = font;
+                        kcm.fontsSettings[currentCategory] = font;
                     }
                 }
             }

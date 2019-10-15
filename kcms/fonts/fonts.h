@@ -4,6 +4,7 @@
     Copyright 2000 Rik Hemsley
     Copyright 2015 Antonis Tsiapaliokas <antonis.tsiapaliokas@kde.org>
     Copyright 2017 Marco Martin <mart@kde.org>
+    Copyright 2019 Benjamin Port <benjamin.port@enioka.com>
 
     Ported to kcontrol2 by Geert Jansen.
 
@@ -33,6 +34,8 @@
 #include <KQuickAddons/ConfigModule>
 
 #include "kxftconfig.h"
+
+class FontsSettings;
 
 class FontAASettings : public QObject
 {
@@ -134,35 +137,14 @@ private:
 class KFonts : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
-    Q_PROPERTY(QFont generalFont READ generalFont WRITE setGeneralFont NOTIFY generalFontChanged)
-    Q_PROPERTY(QFont fixedWidthFont READ fixedWidthFont WRITE setFixedWidthFont NOTIFY fixedWidthFontChanged)
-    Q_PROPERTY(QFont smallFont READ smallFont WRITE setSmallFont NOTIFY smallFontChanged)
-    Q_PROPERTY(QFont toolbarFont READ toolbarFont WRITE setToolbarFont NOTIFY toolbarFontChanged)
-    Q_PROPERTY(QFont menuFont READ menuFont WRITE setMenuFont NOTIFY menuFontChanged)
-    Q_PROPERTY(QFont windowTitleFont READ windowTitleFont WRITE setWindowTitleFont NOTIFY windowTitleFontChanged)
+    Q_PROPERTY(FontsSettings *fontsSettings READ fontsSettings CONSTANT)
     Q_PROPERTY(QObject *fontAASettings READ fontAASettings CONSTANT)
 
 public:
     KFonts(QObject *parent, const QVariantList &);
     ~KFonts() override;
 
-    void setGeneralFont(const QFont &font);
-    QFont generalFont() const;
-
-    void setFixedWidthFont(const QFont &font);
-    QFont fixedWidthFont() const;
-
-    void setSmallFont(const QFont &font);
-    QFont smallFont() const;
-
-    void setToolbarFont(const QFont &font);
-    QFont toolbarFont() const;
-
-    void setMenuFont(const QFont &font);
-    QFont menuFont() const;
-
-    void setWindowTitleFont(const QFont &font);
-    QFont windowTitleFont() const;
+    FontsSettings *fontsSettings() const;
 
     QObject* fontAASettings() { return m_fontAASettings; }
 
@@ -175,32 +157,12 @@ public Q_SLOTS:
 Q_SIGNALS:
     void fontsHaveChanged();
 
-    void generalFontChanged();
-    void fixedWidthFontChanged();
-    void smallFontChanged();
-    void toolbarFontChanged();
-    void menuFontChanged();
-    void windowTitleFontChanged();
-
 private:
     void updateNeedsSave();
     QFont applyFontDiff(const QFont &fnt, const QFont &newFont, int fontDiffFlags);
+    void setNearestExistingFonts();
 
-    QFont m_defaultFont;
-    QFont m_generalFont;
-    QFont m_fixedWidthFont;
-    QFont m_smallFont;
-    QFont m_toolbarFont;
-    QFont m_menuFont;
-    QFont m_windowTitleFont;
-
-    QFont m_defaultFontOriginal;
-    QFont m_generalFontOriginal;
-    QFont m_fixedWidthFontOriginal;
-    QFont m_smallFontOriginal;
-    QFont m_toolbarFontOriginal;
-    QFont m_menuFontOriginal;
-    QFont m_windowTitleFontOriginal;
+    FontsSettings *m_settings;
 
     FontAASettings *m_fontAASettings;
 };
