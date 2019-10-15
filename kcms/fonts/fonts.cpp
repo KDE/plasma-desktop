@@ -465,6 +465,29 @@ bool FontAASettings::needsSave() const
     return m_state != m_originalState;
 }
 
+bool FontAASettings::State::operator==(const State& other) const
+{
+    if (
+        exclude != other.exclude
+        || antiAliasing != other.antiAliasing
+        || dpi != other.dpi
+        || subPixel != other.subPixel
+        || hinting != other.hinting
+    ) {
+        return false;
+    }
+
+    if (exclude && (excludeFrom != other.excludeFrom || excludeTo != other.excludeTo)) {
+        return false;
+    }
+
+    return true;
+}
+
+bool FontAASettings::State::operator!=(const State& other) const
+{
+    return !(*this == other);
+}
 
 /**** KFonts ****/
 
@@ -610,30 +633,6 @@ QFont KFonts::applyFontDiff(const QFont &fnt, const QFont &newFont, int fontDiff
     }
 
     return font;
-}
-
-bool FontAASettings::State::operator==(const State& other) const
-{
-    if (
-        exclude != other.exclude
-        || antiAliasing != other.antiAliasing
-        || dpi != other.dpi
-        || subPixel != other.subPixel
-        || hinting != other.hinting
-    ) {
-        return false;
-    }
-
-    if (exclude && (excludeFrom != other.excludeFrom || excludeTo != other.excludeTo)) {
-        return false;
-    }
-
-    return true;
-}
-
-bool FontAASettings::State::operator!=(const State& other) const
-{
-    return !(*this == other);
 }
 
 #include "fonts.moc"
