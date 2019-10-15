@@ -64,10 +64,5 @@ endif()
 
 if(FONTCONFIG_FOUND AND FREETYPE_FOUND)
     add_subdirectory( kfontinst )
-endif()
-
-if( FREETYPE_FOUND )
-   if(FONTCONFIG_FOUND )
-       add_subdirectory( fonts )
-   endif()
+    add_subdirectory( fonts )
 endif()
