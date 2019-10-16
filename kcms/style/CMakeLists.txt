@@ -3,12 +3,12 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcmstyle\")
 
 ########### next target ###############
 
-set(kcm_style_PART_SRCS ../krdb/krdb.cpp styleconfdialog.cpp kcmstyle.cpp)
+set(kcm_style_PART_SRCS ../krdb/krdb.cpp styleconfdialog.cpp kcmstyle.cpp stylesmodel.cpp previewitem.cpp)
 set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)
 qt5_add_dbus_interface(kcm_style_PART_SRCS ${klauncher_xml} klauncher_iface)
 
 
-ki18n_wrap_ui(kcm_style_PART_SRCS stylepreview.ui styleconfig.ui)
+ki18n_wrap_ui(kcm_style_PART_SRCS stylepreview.ui)
 
 add_library(kcm_style MODULE ${kcm_style_PART_SRCS})
 
@@ -23,13 +23,13 @@ target_link_libraries(kcm_style
     ${X11_LIBRARIES}
     KF5::KDELibs4Support
     KF5::GuiAddons
+    KF5::QuickAddons
     KF5::WindowSystem
-    KF5::NewStuff
 )
 
-install(TARGETS kcm_style  DESTINATION ${KDE_INSTALL_PLUGINDIR})
+kcoreaddons_desktop_to_json(kcm_style "kcm_style.desktop")
 
+install(FILES kcm_style.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(TARGETS kcm_style DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
-########### install files ###############
-
-install( FILES style.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+kpackage_install_package(package kcm_style kcms)

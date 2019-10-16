@@ -1,4 +1,4 @@
 #! /usr/bin/env bash
 $EXTRACTRC *.ui >> rc.cpp
-$XGETTEXT *.cpp -o $podir/kcmstyle.pot
+$XGETTEXT `find . -name "*.cpp" -o -name "*.qml"` -o $podir/kcmstyle.pot
 rm -f rc.cpp

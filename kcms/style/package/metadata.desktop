@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=Application Style
+Comment=Configure application style and behavior
+
+Icon=preferences-desktop-theme-applications
+Type=Service
+X-KDE-PluginInfo-Author=Kai Uwe Broulik
+X-KDE-PluginInfo-Email=kde@privat.broulik.de
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=kcm_style
+X-KDE-PluginInfo-Version=
+X-KDE-PluginInfo-Website=
+X-KDE-ServiceTypes=Plasma/Generic
+X-Plasma-API=declarativeappletscript
+
+X-Plasma-MainScript=ui/main.qml
