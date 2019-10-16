@@ -51,12 +51,9 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMDesktopThemeFactory, "kcm_desktoptheme.json", regi
 
 KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
-    , m_settings(new DesktopThemeSettings)
+    , m_settings(new DesktopThemeSettings(this))
     , m_haveThemeExplorerInstalled(false)
 {
-    // Unfortunately doesn't generate a ctor taking the parent as parameter
-    m_settings->setParent(this);
-    m_currentTheme = m_settings->name();
     connect(m_settings, &DesktopThemeSettings::configChanged,
             this, &KCMDesktopTheme::updateNeedsSave);
     connect(m_settings, &DesktopThemeSettings::nameChanged,
@@ -279,7 +276,6 @@ void KCMDesktopTheme::load()
     m_model->sort(0 /*column*/);
 
     m_settings->load();
-    m_currentTheme = m_settings->name();
 
     // Model has been cleared so pretend the theme name changed to force view update
     emit m_settings->nameChanged();
@@ -288,16 +284,13 @@ void KCMDesktopTheme::load()
 void KCMDesktopTheme::save()
 {
     m_settings->save();
-    m_currentTheme = m_settings->name();
     Plasma::Theme().setThemeName(m_settings->name());
     processPendingDeletions();
-    updateNeedsSave();
 }
 
 void KCMDesktopTheme::defaults()
 {
     m_settings->setDefaults();
-    m_currentTheme = m_settings->name();
 
     // can this be done more elegantly?
     const auto pendingDeletions = m_model->match(m_model->index(0, 0), PendingDeletionRole, true);
@@ -319,7 +312,7 @@ void KCMDesktopTheme::editTheme(const QString &theme)
 void KCMDesktopTheme::updateNeedsSave()
 {
     setNeedsSave(!m_model->match(m_model->index(0, 0), PendingDeletionRole, true).isEmpty()
-                    || m_currentTheme != m_settings->name());
+                    || m_settings->isSaveNeeded());
 }
 
 void KCMDesktopTheme::processPendingDeletions()

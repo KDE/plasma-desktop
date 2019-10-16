@@ -102,7 +102,6 @@ private:
     DesktopThemeSettings *m_settings;
 
     QStandardItemModel *m_model;
-    QString m_currentTheme;
     QStringList m_pendingRemoval;
     QHash<QString, Plasma::Theme*> m_themes;
     bool m_haveThemeExplorerInstalled;
