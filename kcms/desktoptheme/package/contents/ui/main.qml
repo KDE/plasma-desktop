@@ -33,7 +33,7 @@ KCM.GridViewKCM {
     view.model: kcm.desktopThemeModel
     view.currentIndex: kcm.pluginIndex(kcm.desktopThemeSettings.name)
 
-    enabled: !kcm.downloadingFile
+    enabled: !kcm.downloadingFile && !kcm.desktopThemeSettings.isImmutable("name")
 
     DropArea {
         anchors.fill: parent
