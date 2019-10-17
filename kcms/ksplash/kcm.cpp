@@ -1,6 +1,7 @@
 /* This file is part of the KDE Project
    Copyright (c) 2014 Marco Martin <mart@kde.org>
    Copyright (c) 2014 Vishesh Handa <me@vhanda.in>
+   Copyright (c) 2019 Cyril Rossi <cyril.rossi@enioka.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -22,37 +23,38 @@
 #include <KPluginFactory>
 #include <KPluginLoader>
 #include <KAboutData>
-#include <KSharedConfig>
+#include <KLocalizedString>
+
 #include <QStandardPaths>
 #include <QProcess>
-#include <QQuickView>
-
-#include <QVBoxLayout>
-#include <QPushButton>
 #include <QStandardItemModel>
-#include <QQmlContext>
 #include <QDir>
 
-#include <KLocalizedString>
 #include <Plasma/PluginLoader>
 
 #include <KNewStuff3/KNS3/DownloadDialog>
+
+#include "splashscreensettings.h"
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMSplashScreenFactory, "kcm_splashscreen.json", registerPlugin<KCMSplashScreen>();)
 
 KCMSplashScreen::KCMSplashScreen(QObject* parent, const QVariantList& args)
     : KQuickAddons::ConfigModule(parent, args)
-    , m_config(QStringLiteral("ksplashrc"))
-    , m_configGroup(m_config.group("KSplash"))
+    , m_settings(new SplashScreenSettings(this))
+    , m_model(new QStandardItemModel(this))
 {
+    connect(m_settings, &SplashScreenSettings::engineChanged, this, [this]{ setNeedsSave(true); });
+    connect(m_settings, &SplashScreenSettings::themeChanged, this, [this]{ setNeedsSave(true); });
+
+    qmlRegisterType<SplashScreenSettings>();
     qmlRegisterType<QStandardItemModel>();
+
     KAboutData* about = new KAboutData(QStringLiteral("kcm_splashscreen"), i18n("Splash Screen"),
                                        QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
     setAboutData(about);
     setButtons(Help | Apply | Default);
 
-    m_model = new QStandardItemModel(this);
     QHash<int, QByteArray> roles = m_model->roleNames();
     roles[PluginNameRole] = "pluginName";
     roles[ScreenshotRole] = "screenshot";
@@ -84,28 +86,14 @@ QList<Plasma::Package> KCMSplashScreen::availablePackages(const QString &compone
     return packages;
 }
 
+SplashScreenSettings *KCMSplashScreen::splashScreenSettings() const
+{
+    return m_settings;
+}
+
 QStandardItemModel *KCMSplashScreen::splashModel() const
 {
     return m_model;
-}
-
-QString KCMSplashScreen::selectedPlugin() const
-{
-    return m_selectedPlugin;
-}
-
-void KCMSplashScreen::setSelectedPlugin(const QString &plugin)
-{
-    if (m_selectedPlugin == plugin) {
-        return;
-    }
-
-    if (!m_selectedPlugin.isEmpty()) {
-        setNeedsSave(true);
-    }
-    m_selectedPlugin = plugin;
-    emit selectedPluginChanged();
-    emit selectedPluginIndexChanged();
 }
 
 void KCMSplashScreen::getNewClicked()
@@ -138,59 +126,38 @@ void KCMSplashScreen::loadModel()
     row->setData(i18n("No splash screen will be shown"), DescriptionRole);
     m_model->insertRow(0, row);
 
-    emit selectedPluginIndexChanged();
+    if (-1 == pluginIndex(m_settings->theme())) {
+        defaults();
+    }
+
+    emit m_settings->themeChanged();
 }
 
 void KCMSplashScreen::load()
 {
-    m_package = Plasma::PluginLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
-    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
-    if (!packageName.isEmpty()) {
-        m_package.setPath(packageName);
-    }
-
-    QString currentPlugin = m_configGroup.readEntry("Theme", QString());
-    if (currentPlugin.isEmpty()) {
-        currentPlugin = m_package.metadata().pluginName();
-    }
-    setSelectedPlugin(currentPlugin);
-    
+    m_settings->load();
     setNeedsSave(false);
 }
 
-
 void KCMSplashScreen::save()
 {
-    if (m_selectedPlugin.isEmpty()) {
-        return;
-    } else if (m_selectedPlugin == QLatin1String("None")) {
-        m_configGroup.writeEntry("Theme", m_selectedPlugin);
-        m_configGroup.writeEntry("Engine", "none");
-    } else {
-        m_configGroup.writeEntry("Theme", m_selectedPlugin);
-        m_configGroup.writeEntry("Engine", "KSplashQML");
-    }
-
-    m_configGroup.sync();
-    setNeedsSave(false);
+    m_settings->setEngine(m_settings->theme() == QStringLiteral("None") ? QStringLiteral("none") : QStringLiteral("KSplashQML"));
+    m_settings->save();
 }
 
 void KCMSplashScreen::defaults()
 {
-    if (!m_package.metadata().isValid()) {
-        return;
-    }
-    setSelectedPlugin(m_package.metadata().pluginName());
+    m_settings->setDefaults();
+    setNeedsSave(m_settings->isSaveNeeded());
 }
 
-int KCMSplashScreen::selectedPluginIndex() const
+int KCMSplashScreen::pluginIndex(const QString &pluginName) const
 {
-    for (int i = 0; i < m_model->rowCount(); ++i) {
-        if (m_model->data(m_model->index(i, 0), PluginNameRole).toString() == m_selectedPlugin) {
-            return i;
-        }
+    const auto results = m_model->match(m_model->index(0, 0), PluginNameRole, pluginName);
+    if (results.count() == 1) {
+        return results.first().row();
     }
+
     return -1;
 }
 

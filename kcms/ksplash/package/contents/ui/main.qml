@@ -31,7 +31,7 @@ KCM.GridViewKCM {
 
     view.model: kcm.splashModel
     //NOTE: pay attention to never break this binding
-    view.currentIndex: kcm.selectedPluginIndex
+    view.currentIndex: kcm.pluginIndex(kcm.splashScreenSettings.theme)
 
     // putting the InlineMessage as header item causes it to show up initially despite visible false
     header: ColumnLayout {
@@ -71,7 +71,7 @@ KCM.GridViewKCM {
             }
         ]
         onClicked: {
-            kcm.selectedPlugin = model.pluginName;
+            kcm.splashScreenSettings.theme = model.pluginName;
             view.forceActiveFocus();
         }
     }

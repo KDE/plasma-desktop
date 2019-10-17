@@ -1,6 +1,7 @@
 /*
    Copyright (c) 2014 Marco Martin <mart@kde.org>
    Copyright (c) 2014 Vishesh Handa <me@vhanda.in>
+   Copyright (c) 2019 Cyril Rossi <cyril.rossi@enioka.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -20,20 +21,17 @@
 #ifndef _KCM_SEARCH_H
 #define _KCM_SEARCH_H
 
-#include <KConfig>
-#include <KConfigGroup>
-
 #include <Plasma/Package>
 #include <KQuickAddons/ConfigModule>
 
 class QStandardItemModel;
+class SplashScreenSettings;
 
 class KCMSplashScreen : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
+    Q_PROPERTY(SplashScreenSettings *splashScreenSettings READ splashScreenSettings CONSTANT)
     Q_PROPERTY(QStandardItemModel *splashModel READ splashModel CONSTANT)
-    Q_PROPERTY(QString selectedPlugin READ selectedPlugin WRITE setSelectedPlugin NOTIFY selectedPluginChanged)
-    Q_PROPERTY(int selectedPluginIndex READ selectedPluginIndex NOTIFY selectedPluginIndexChanged)
     Q_PROPERTY(bool testing READ testing NOTIFY testingChanged)
 
 public:
@@ -42,20 +40,14 @@ public:
         ScreenshotRole,
         DescriptionRole
     };
+
     KCMSplashScreen(QObject* parent, const QVariantList& args);
 
-    QList<Plasma::Package> availablePackages(const QString &component);
-
+    SplashScreenSettings *splashScreenSettings() const;
     QStandardItemModel *splashModel() const;
-
-    QString selectedPlugin() const;
-    void setSelectedPlugin(const QString &plugin);
-
-    int selectedPluginIndex() const;
-
     bool testing() const;
 
-    void loadModel();
+    Q_INVOKABLE int pluginIndex(const QString &pluginName) const;
 
 public Q_SLOTS:
     void getNewClicked();
@@ -65,21 +57,17 @@ public Q_SLOTS:
     void test(const QString &plugin);
 
 Q_SIGNALS:
-    void selectedPluginChanged();
-    void selectedPluginIndexChanged();
-
     void testingChanged();
     void testingFailed();
 
 private:
+    void loadModel();
+    QList<Plasma::Package> availablePackages(const QString &component);
+
+    SplashScreenSettings *m_settings;
     QStandardItemModel *m_model;
-    Plasma::Package m_package;
-    QString m_selectedPlugin;
 
     QProcess *m_testProcess = nullptr;
-
-    KConfig m_config;
-    KConfigGroup m_configGroup;
 };
 
 #endif
