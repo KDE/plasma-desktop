@@ -30,7 +30,7 @@
 #include <QStandardItemModel>
 #include <QDir>
 
-#include <Plasma/PluginLoader>
+#include <KPackage/PackageLoader>
 
 #include <KNewStuff3/KNS3/DownloadDialog>
 
@@ -63,9 +63,9 @@ KCMSplashScreen::KCMSplashScreen(QObject* parent, const QVariantList& args)
     loadModel();
 }
 
-QList<Plasma::Package> KCMSplashScreen::availablePackages(const QString &component)
+QList<KPackage::Package> KCMSplashScreen::availablePackages(const QString &component)
 {
-    QList<Plasma::Package> packages;
+    QList<KPackage::Package> packages;
     QStringList paths;
     const QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
 
@@ -75,9 +75,9 @@ QList<Plasma::Package> KCMSplashScreen::availablePackages(const QString &compone
     }
 
     for (const QString &path : paths) {
-        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
         pkg.setPath(path);
-        pkg.setFallbackPackage(Plasma::Package());
+        pkg.setFallbackPackage(KPackage::Package());
         if (component.isEmpty() || !pkg.filePath(component.toUtf8()).isEmpty()) {
             packages << pkg;
         }
@@ -111,12 +111,12 @@ void KCMSplashScreen::loadModel()
 {
     m_model->clear();
 
-    const QList<Plasma::Package> pkgs = availablePackages(QStringLiteral("splashmainscript"));
-    for (const Plasma::Package &pkg : pkgs) {
+    const QList<KPackage::Package> pkgs = availablePackages(QStringLiteral("splashmainscript"));
+    for (const KPackage::Package &pkg : pkgs) {
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
-        row->setData(pkg.metadata().pluginName(), PluginNameRole);
+        row->setData(pkg.metadata().pluginId(), PluginNameRole);
         row->setData(pkg.filePath("previews", QStringLiteral("splash.png")), ScreenshotRole);
-        row->setData(pkg.metadata().comment(), DescriptionRole);
+        row->setData(pkg.metadata().description(), DescriptionRole);
         m_model->appendRow(row);
     }
     m_model->sort(0 /*column*/);

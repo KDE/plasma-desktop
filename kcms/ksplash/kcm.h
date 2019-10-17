@@ -21,7 +21,7 @@
 #ifndef _KCM_SEARCH_H
 #define _KCM_SEARCH_H
 
-#include <Plasma/Package>
+#include <KPackage/Package>
 #include <KQuickAddons/ConfigModule>
 
 class QStandardItemModel;
@@ -62,7 +62,7 @@ Q_SIGNALS:
 
 private:
     void loadModel();
-    QList<Plasma::Package> availablePackages(const QString &component);
+    QList<KPackage::Package> availablePackages(const QString &component);
 
     SplashScreenSettings *m_settings;
     QStandardItemModel *m_model;
