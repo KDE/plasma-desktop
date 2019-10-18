@@ -36,7 +36,6 @@
 #include <KLocalizedString>
 #include <kdialog.h>
 #include <kmessagebox.h>
-#include <kiconloader.h>
 #include <kcombobox.h>
 #include <kurlcompletion.h>
 #include <kmessagewidget.h>

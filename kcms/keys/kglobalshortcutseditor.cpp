@@ -30,7 +30,6 @@
 #include <QDebug>
 #include <KGlobalAccel>
 #include <KConfigGroup>
-#include <KIconLoader>
 #include <KMessageBox>
 #include <KStringHandler>
 #include <KLocalizedString>
@@ -431,23 +430,22 @@ void KGlobalShortcutsEditor::addCollection(
         editor = new KShortcutsEditor(this, d->actionTypes);
         d->stack->addWidget(editor);
 
-        // try to find one appropriate icon ( allowing NULL pixmap to be returned)
-        QPixmap pixmap = KIconLoader::global()->loadIcon(id, KIconLoader::Small, 0,
-                                  KIconLoader::DefaultState, QStringList(), nullptr, true);
-        if (pixmap.isNull()) {
+        // try to find one appropriate icon
+        QIcon icon = QIcon::fromTheme(id);
+        if (icon.isNull()) {
             KService::Ptr service = KService::serviceByStorageId(id);
-            if(service) {
-                pixmap = KIconLoader::global()->loadIcon(service->icon(), KIconLoader::Small, 0,
-                                  KIconLoader::DefaultState, QStringList(), nullptr, true);
+            if (service) {
+                icon = QIcon::fromTheme(service->icon());
             }
         }
-        // if NULL pixmap is returned, use the F.D.O "system-run" icon
-        if (pixmap.isNull()) {
-            pixmap = KIconLoader::global()->loadIcon(QStringLiteral("system-run"), KIconLoader::Small);
+
+        // if NULL icon is returned, use the F.D.O "system-run" icon
+        if (icon.isNull()) {
+            icon = QIcon::fromTheme(QStringLiteral("system-run"));
         }
 
         // Add to the component list
-        QStandardItem *item = new QStandardItem(pixmap, friendlyName);
+        QStandardItem *item = new QStandardItem(icon, friendlyName);
         if (id.endsWith(QLatin1String(".desktop"))) {
             item->setData(i18n("Application Launchers"), KCategorizedSortFilterProxyModel::CategoryDisplayRole);
             item->setData(0, KCategorizedSortFilterProxyModel::CategorySortRole);

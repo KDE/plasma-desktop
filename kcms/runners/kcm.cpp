@@ -28,7 +28,6 @@
 #include <KRunner/RunnerManager>
 #include <KCModuleInfo>
 #include <KCModuleProxy>
-#include <KIconLoader>
 #include <KPluginSelector>
 
 #include <QApplication>

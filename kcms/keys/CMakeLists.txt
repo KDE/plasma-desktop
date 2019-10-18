@@ -32,7 +32,6 @@ target_link_libraries(kcm_keys
     KF5::KCMUtils
     KF5::GlobalAccel
     KF5::I18n
-    KF5::IconThemes
     KF5::KIOWidgets
     KF5::XmlGui
     KF5::ItemModels
