@@ -26,20 +26,16 @@
 
 #include <KAboutData>
 #include <KSharedConfig>
-#include <QDebug>
-#include <QStandardPaths>
-#include <QProcess>
-#include <QQuickWidget>
-#include <QQuickView>
 #include <KGlobalSettings>
 #include <KIconLoader>
 #include <KAutostart>
 #include <KRun>
 
-#include <QQmlEngine>
-#include <QQmlContext>
+#include <QDebug>
 #include <QQuickItem>
 #include <QQuickWindow>
+#include <QStandardPaths>
+#include <QProcess>
 #include <QStandardItemModel>
 #include <QX11Info>
 
@@ -79,7 +75,7 @@ KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
     QHash<int, QByteArray> roles = m_model->roleNames();
     roles[PluginNameRole] = "pluginName";
     roles[DescriptionRole] = "description";
-    roles[ScreenhotRole] = "screenshot";
+    roles[ScreenshotRole] = "screenshot";
     roles[FullScreenPreviewRole] = "fullScreenPreview";
     roles[HasSplashRole] = "hasSplash";
     roles[HasLockScreenRole] = "hasLockScreen";
@@ -118,7 +114,7 @@ void KCMLookandFeel::getNewStuff(QQuickItem *ctx)
     m_newStuffDialog.data()->show();
 }
 
-QStandardItemModel *KCMLookandFeel::lookAndFeelModel()
+QStandardItemModel *KCMLookandFeel::lookAndFeelModel() const
 {
     return m_model;
 }
@@ -197,7 +193,7 @@ void KCMLookandFeel::loadModel()
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
         row->setData(pkg.metadata().pluginName(), PluginNameRole);
         row->setData(pkg.metadata().comment(), DescriptionRole);
-        row->setData(pkg.filePath("preview"), ScreenhotRole);
+        row->setData(pkg.filePath("preview"), ScreenshotRole);
         row->setData(pkg.filePath("fullscreenpreview"), FullScreenPreviewRole);
 
         //What the package provides
@@ -722,94 +718,6 @@ void KCMLookandFeel::setWindowDecoration(const QString &library, const QString &
                                                       QStringLiteral("org.kde.KWin"),
                                                       QStringLiteral("reloadConfig"));
     QDBusConnection::sessionBus().send(message);
-}
-
-void KCMLookandFeel::setApplyColors(bool apply)
-{
-    if (m_applyColors == apply) {
-        return;
-    }
-
-    m_applyColors = apply;
-    emit applyColorsChanged();
-}
-
-bool KCMLookandFeel::applyColors() const
-{
-    return m_applyColors;
-}
-
-void KCMLookandFeel::setApplyWidgetStyle(bool apply)
-{
-    if (m_applyWidgetStyle == apply) {
-        return;
-    }
-
-    m_applyWidgetStyle = apply;
-    emit applyWidgetStyleChanged();
-}
-
-bool KCMLookandFeel::applyWidgetStyle() const
-{
-    return m_applyWidgetStyle;
-}
-
-void KCMLookandFeel::setApplyIcons(bool apply)
-{
-    if (m_applyIcons == apply) {
-        return;
-    }
-
-    m_applyIcons = apply;
-    emit applyIconsChanged();
-}
-
-bool KCMLookandFeel::applyIcons() const
-{
-    return m_applyIcons;
-}
-
-void KCMLookandFeel::setApplyPlasmaTheme(bool apply)
-{
-    if (m_applyPlasmaTheme == apply) {
-        return;
-    }
-
-    m_applyPlasmaTheme = apply;
-    emit applyPlasmaThemeChanged();
-}
-
-bool KCMLookandFeel::applyPlasmaTheme() const
-{
-    return m_applyPlasmaTheme;
-}
-
-void KCMLookandFeel::setApplyWindowSwitcher(bool apply)
-{
-    if (m_applyWindowSwitcher == apply) {
-        return;
-    }
-    m_applyWindowSwitcher = apply;
-    emit applyWindowSwitcherChanged();
-}
-
-bool KCMLookandFeel::applyWindowSwitcher() const
-{
-    return m_applyWindowSwitcher;
-}
-
-void KCMLookandFeel::setApplyDesktopSwitcher(bool apply)
-{
-    if (m_applyDesktopSwitcher == apply) {
-        return;
-    }
-    m_applyDesktopSwitcher = apply;
-    emit applyDesktopSwitcherChanged();
-}
-
-bool KCMLookandFeel::applyDesktopSwitcher() const
-{
-    return m_applyDesktopSwitcher;
 }
 
 void KCMLookandFeel::setResetDefaultLayout(bool reset)
