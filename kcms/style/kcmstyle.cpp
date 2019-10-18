@@ -369,13 +369,6 @@ void KCMStyle::save()
         // ##### FIXME - Doesn't apply all settings correctly due to bugs in
         // KApplication/KToolbar
         KGlobalSettings::self()->emitChange(KGlobalSettings::ToolbarStyleChanged);
-
-#if defined(Q_OS_UNIX) && !defined(Q_OS_MAC)
-        // Send signal to all kwin instances
-        QDBusMessage message =
-        QDBusMessage::createSignal(QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"), QStringLiteral("reloadConfig"));
-        QDBusConnection::sessionBus().send(message);
-#endif
     }
 
     // Clean up
