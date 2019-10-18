@@ -26,7 +26,7 @@
 
 #include <KNewStuff3/KNS3/DownloadDialog>
 
-#include <Plasma/Package>
+#include <KPackage/Package>
 #include <KQuickAddons/ConfigModule>
 
 class QQuickItem;
@@ -63,7 +63,7 @@ public:
     ~KCMLookandFeel() override;
 
     //List only packages which provide at least one of the components
-    QList<Plasma::Package> availablePackages(const QStringList &components);
+    QList<KPackage::Package> availablePackages(const QStringList &components);
 
     QStandardItemModel *lookAndFeelModel() const;
 
@@ -104,7 +104,7 @@ private:
     QDir cursorThemeDir(const QString &theme, const int depth);
     const QStringList cursorSearchPaths();
     QStandardItemModel *m_model;
-    Plasma::Package m_package;
+    KPackage::Package m_package;
     QString m_selectedPlugin;
     QStringList m_cursorSearchPaths;
     QPointer<KNS3::DownloadDialog> m_newStuffDialog;

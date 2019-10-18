@@ -20,8 +20,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "../kcm.h"
 // Qt
 #include <QtTest>
-#include <Plasma/Package>
-#include <Plasma/PluginLoader>
+#include <KPackage/Package>
+#include <KPackage/PackageLoader>
 #include <ksycoca.h>
 #include <KJob>
 
@@ -69,7 +69,7 @@ void KcmTest::initTestCase()
 
     const QString packagePath = QFINDTESTDATA("lookandfeel");
 
-    Plasma::Package p = Plasma::PluginLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+    KPackage::Package p = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
     p.setPath(packagePath);
     QVERIFY(p.isValid());
 

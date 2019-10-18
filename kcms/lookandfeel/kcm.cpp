@@ -30,6 +30,7 @@
 #include <KIconLoader>
 #include <KAutostart>
 #include <KRun>
+#include <KService>
 
 #include <QDebug>
 #include <QQuickItem>
@@ -40,7 +41,7 @@
 #include <QX11Info>
 
 #include <KLocalizedString>
-#include <Plasma/PluginLoader>
+#include <KPackage/PackageLoader>
 
 #include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
@@ -150,9 +151,9 @@ int KCMLookandFeel::selectedPluginIndex() const
     return -1;
 }
 
-QList<Plasma::Package> KCMLookandFeel::availablePackages(const QStringList &components)
+QList<KPackage::Package> KCMLookandFeel::availablePackages(const QStringList &components)
 {
-    QList<Plasma::Package> packages;
+    QList<KPackage::Package> packages;
     QStringList paths;
     const QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
 
@@ -163,9 +164,9 @@ QList<Plasma::Package> KCMLookandFeel::availablePackages(const QStringList &comp
     }
 
     for (const QString &path : paths) {
-        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
         pkg.setPath(path);
-        pkg.setFallbackPackage(Plasma::Package());
+        pkg.setFallbackPackage(KPackage::Package());
         if (components.isEmpty()) {
             packages << pkg;
         } else {
@@ -185,14 +186,14 @@ void KCMLookandFeel::loadModel()
 {
     m_model->clear();
 
-    const QList<Plasma::Package> pkgs = availablePackages({"defaults", "layouts"});
-    for (const Plasma::Package &pkg : pkgs) {
+    const QList<KPackage::Package> pkgs = availablePackages({"defaults", "layouts"});
+    for (const KPackage::Package &pkg : pkgs) {
         if (!pkg.metadata().isValid()) {
             continue;
         }
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
-        row->setData(pkg.metadata().pluginName(), PluginNameRole);
-        row->setData(pkg.metadata().comment(), DescriptionRole);
+        row->setData(pkg.metadata().pluginId(), PluginNameRole);
+        row->setData(pkg.metadata().description(), DescriptionRole);
         row->setData(pkg.filePath("preview"), ScreenshotRole);
         row->setData(pkg.filePath("fullscreenpreview"), FullScreenPreviewRole);
 
@@ -242,7 +243,7 @@ void KCMLookandFeel::loadModel()
 
 void KCMLookandFeel::load()
 {
-    m_package = Plasma::PluginLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+    m_package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
     KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     if (!packageName.isEmpty()) {
@@ -253,7 +254,7 @@ void KCMLookandFeel::load()
         return;
     }
 
-    setSelectedPlugin(m_package.metadata().pluginName());
+    setSelectedPlugin(m_package.metadata().pluginId());
 
     setNeedsSave(false);
 }
@@ -261,7 +262,7 @@ void KCMLookandFeel::load()
 
 void KCMLookandFeel::save()
 {
-    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
     package.setPath(m_selectedPlugin);
 
     if (!package.isValid()) {
@@ -432,7 +433,7 @@ void KCMLookandFeel::defaults()
         return;
     }
 
-    setSelectedPlugin(m_package.metadata().pluginName());
+    setSelectedPlugin(m_package.metadata().pluginId());
 }
 
 void KCMLookandFeel::setWidgetStyle(const QString &style)
