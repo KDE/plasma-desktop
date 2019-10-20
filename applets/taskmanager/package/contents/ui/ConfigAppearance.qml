@@ -108,7 +108,7 @@ Item {
 
         CheckBox {
             id: forceStripes
-            text: plasmoidVertical ? i18n("Always arrange tasks in as many rows as columns") : i18n("Always arrange tasks in as many columns as rows")
+            text: plasmoidVertical ? i18n("Always arrange tasks in rows of as many columns") : i18n("Always arrange tasks in columns of as many rows")
             enabled: maxStripes.value > 1
         }
     }
