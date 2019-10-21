@@ -50,15 +50,10 @@ Q_LOGGING_CATEGORY(KCM_DESKTOP_THEME, "kcm_desktoptheme")
 K_PLUGIN_FACTORY_WITH_JSON(KCMDesktopThemeFactory, "kcm_desktoptheme.json", registerPlugin<KCMDesktopTheme>();)
 
 KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+    : KQuickAddons::ManagedConfigModule(parent, args)
     , m_settings(new DesktopThemeSettings(this))
     , m_haveThemeExplorerInstalled(false)
 {
-    connect(m_settings, &DesktopThemeSettings::configChanged,
-            this, &KCMDesktopTheme::updateNeedsSave);
-    connect(m_settings, &DesktopThemeSettings::nameChanged,
-            this, &KCMDesktopTheme::updateNeedsSave);
-
     qmlRegisterType<DesktopThemeSettings>();
     qmlRegisterType<QStandardItemModel>();
 
@@ -224,6 +219,8 @@ void KCMDesktopTheme::applyPlasmaTheme(QQuickItem *item, const QString &themeNam
 
 void KCMDesktopTheme::load()
 {
+    ManagedConfigModule::load();
+
     m_pendingRemoval.clear();
 
     // Get all desktop themes
@@ -275,22 +272,20 @@ void KCMDesktopTheme::load()
     m_model->setSortRole(ThemeNameRole); // FIXME the model should really be just using Qt::DisplayRole
     m_model->sort(0 /*column*/);
 
-    m_settings->load();
-
     // Model has been cleared so pretend the theme name changed to force view update
     emit m_settings->nameChanged();
 }
 
 void KCMDesktopTheme::save()
 {
-    m_settings->save();
+    ManagedConfigModule::save();
     Plasma::Theme().setThemeName(m_settings->name());
     processPendingDeletions();
 }
 
 void KCMDesktopTheme::defaults()
 {
-    m_settings->setDefaults();
+    ManagedConfigModule::defaults();
 
     // can this be done more elegantly?
     const auto pendingDeletions = m_model->match(m_model->index(0, 0), PendingDeletionRole, true);
@@ -309,10 +304,9 @@ void KCMDesktopTheme::editTheme(const QString &theme)
     QProcess::startDetached(QStringLiteral("plasmathemeexplorer -t ") % theme);
 }
 
-void KCMDesktopTheme::updateNeedsSave()
+bool KCMDesktopTheme::isSaveNeeded() const
 {
-    setNeedsSave(!m_model->match(m_model->index(0, 0), PendingDeletionRole, true).isEmpty()
-                    || m_settings->isSaveNeeded());
+    return !m_model->match(m_model->index(0, 0), PendingDeletionRole, true).isEmpty();
 }
 
 void KCMDesktopTheme::processPendingDeletions()

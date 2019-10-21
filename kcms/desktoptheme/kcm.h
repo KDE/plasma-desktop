@@ -23,7 +23,7 @@
 #ifndef _KCM_DESKTOPTHEME_H
 #define _KCM_DESKTOPTHEME_H
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickAddons/ManagedConfigModule>
 
 #include <KNewStuff3/KNS3/DownloadDialog>
 
@@ -42,7 +42,7 @@ class QQuickItem;
 class QStandardItemModel;
 class DesktopThemeSettings;
 
-class KCMDesktopTheme : public KQuickAddons::ConfigModule
+class KCMDesktopTheme : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(DesktopThemeSettings *desktopThemeSettings READ desktopThemeSettings CONSTANT)
@@ -93,7 +93,7 @@ public Q_SLOTS:
     void defaults() override;
 
 private:
-    void updateNeedsSave();
+    bool isSaveNeeded() const override;
 
     void processPendingDeletions();
 
