@@ -114,9 +114,12 @@ KCM.SimpleKCM {
                 }
             }
 
-            RowLayout {
+            GridLayout {
                 Kirigami.FormData.label: i18n("Night Color temperature:")
+                Kirigami.FormData.buddyFor: tempSlider
                 enabled: activator.checked
+
+                columns: 4
 
                 QQC2.Slider {
                     id: tempSlider
@@ -127,16 +130,28 @@ KCM.SimpleKCM {
                     value: cA.nightTemperature
                     stepSize: 100
 
+                    Layout.columnSpan: 3
+
                     onValueChanged: {
                         cA.nightTemperatureStaged = value;
                         calcNeedsSave();
                     }
                 }
-
-                    QQC2.Label {
+                QQC2.Label {
                         text: tempSlider.value + i18n(" K")
-                    }
                 }
+                //row 2
+                QQC2.Label {
+                    text: i18nc("Night colour red-ish", "Warm")
+                }
+                Item {
+                    Layout.fillWidth: true
+                }
+                QQC2.Label {
+                    text: i18nc("Night colour blue-ish", "Cool")
+                }
+                Item {}
+            }
 
             QQC2.ComboBox {
                 id: modeSwitcher
