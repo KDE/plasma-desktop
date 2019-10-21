@@ -315,6 +315,9 @@ KCM.SimpleKCM {
                                 textFromValue: function(value, locale) {
                                     return i18np("%1 minute", "%1 minutes", value)
                                 }
+                                valueFromText: function(text, locale) {
+                                    return parseInt(text);
+                                }
 
                                 QQC2.ToolTip {
                                     text: i18n("Input minutes - min. 1, max. 600")
