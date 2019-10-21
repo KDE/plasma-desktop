@@ -119,6 +119,8 @@ KCM.SimpleKCM {
                     stepSize: 1
                     onValueChanged: kcm.fontAASettings.excludeFrom = value
                     textFromValue: function(value, locale) { return i18n("%1 pt", value)}
+                    valueFromText: function(text, locale) { return parseInt(text) }
+                    editable: true
                     enabled: excludeCheckBox.checked
                 }
 
@@ -134,6 +136,8 @@ KCM.SimpleKCM {
                     stepSize: 1
                     onValueChanged: kcm.fontAASettings.excludeTo = value
                     textFromValue: function(value, locale) { return i18n("%1 pt", value)}
+                    valueFromText: function(text, locale) { return parseInt(text) }
+                    editable: true
                     enabled: excludeCheckBox.checked
                 }
                 Connections {

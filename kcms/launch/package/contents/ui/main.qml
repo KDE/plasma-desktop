@@ -104,6 +104,7 @@ SimpleKCM {
             Kirigami.FormData.label: i18n("Stop animation after:")
 
             stepSize: 1
+            editable: true
 
             enabled: taskManagerNotification.checked
 
@@ -111,6 +112,7 @@ SimpleKCM {
             onValueChanged: kcm.notificationTimeout = value
 
             textFromValue: function(value, locale) { return i18np("%1 sec", "%1 secs", value)}
+            valueFromText: function(text, locale) { return parseInt(text) }
         }
     }
 
