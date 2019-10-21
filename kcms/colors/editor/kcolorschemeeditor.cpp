@@ -87,7 +87,8 @@ int main(int argc, char* argv[])
             WId winId = attachHandle.mid(x11Prefix.length()).toLong(&ok, 0);
             if (ok) {
                 dialog.setModal(true);
-                KWindowSystem::setMainWindow(&dialog, winId);
+                dialog.setAttribute(Qt::WA_NativeWindow, true);
+                KWindowSystem::setMainWindow(dialog.windowHandle(), winId);
             }
         }
     }
