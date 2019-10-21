@@ -299,16 +299,22 @@ KCM.SimpleKCM {
                                 }
                             }
 
-                            NumberField {
+                            QQC2.SpinBox {
                                 id: transTimeField
+                                // Match width of other text fields
+                                Layout.minimumWidth: 200
                                 Kirigami.FormData.label: i18n("Transition duration:")
-                                backend: cA.transitionTimeStaged
-                                onBackendChanged: {cA.transitionTimeStaged = backend;
+                                from: 1
+                                to: 600 // less than 12 hours (in minutes: 720)
+                                value: cA.transitionTimeStaged
+                                editable: true
+                                onValueModified: {
+                                    cA.transitionTimeStaged = value;
                                     calcNeedsSave();
                                 }
-
-                                inputMethodHints: Qt.ImhDigitsOnly
-                                validator: IntValidator {bottom: 1; top: 600;}  // less than 12 hours (in minutes: 720)
+                                textFromValue: function(value, locale) {
+                                    return i18np("%1 minute", "%1 minutes", value)
+                                }
 
                                 QQC2.ToolTip {
                                     text: i18n("Input minutes - min. 1, max. 600")
