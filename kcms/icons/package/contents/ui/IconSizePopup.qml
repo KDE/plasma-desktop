@@ -36,13 +36,16 @@ QtControls.Popup {
 
     onVisibleChanged: {
         if (visible) {
-            iconSizeSlider.updateSizes();
+            iconSizeSlider.sizes = kcm.availableIconSizes(iconTypeList.currentIndex);
+            iconSizeSlider.updateSizes()
         }
     }
 
     Connections {
-        target: kcm
-        onIconSizesChanged: iconSizeSlider.updateSizes()
+        target: iconTypeList
+        onCurrentIndexChanged: {
+            iconSizeSlider.sizes = kcm.availableIconSizes(iconTypeList.currentIndex);
+        }
     }
 
     RowLayout {
@@ -73,7 +76,8 @@ QtControls.Popup {
                     keyNavigationWraps: true
                     highlightMoveDuration: 0
 
-                    model: kcm.iconGroups
+                    model: kcm.iconSizeCategoryModel
+                    currentIndex: 0 // Initialize with the first item
 
                     Keys.onLeftPressed: {
                         LayoutMirroring.enabled ? iconSizeSlider.increase() : iconSizeSlider.decrease()
@@ -87,15 +91,8 @@ QtControls.Popup {
                     delegate: QtControls.ItemDelegate {
                         width: ListView.view.width
                         highlighted: ListView.isCurrentItem
-                        text: [
-                            i18n("Desktop"),
-                            i18n("Toolbar"),
-                            i18n("Main Toolbar"),
-                            i18n("Small Icons"),
-                            i18n("Panel"),
-                            i18n("Dialogs")
-                        ][index]
-
+                        text: model.display
+                        readonly property string configKey: model.configKey
                         onClicked: {
                             ListView.view.currentIndex = index;
                             ListView.view.forceActiveFocus();
@@ -106,8 +103,7 @@ QtControls.Popup {
 
             QtControls.Slider {
                 id: iconSizeSlider
-                readonly property var sizes: kcm.availableIconSizes(iconTypeList.currentIndex)
-                readonly property int currentSize: iconSizeSlider.sizes[iconSizeSlider.value] || 0
+                property var sizes: kcm.availableIconSizes(iconTypeList.currentIndex)
 
                 Layout.fillWidth: true
                 from: 0
@@ -116,13 +112,15 @@ QtControls.Popup {
                 snapMode: QtControls.Slider.SnapAlways
                 enabled: sizes.length > 0
 
-                onMoved: kcm.setIconSize(iconTypeList.currentIndex, currentSize)
+                onMoved: {
+                    kcm.iconsSettings[iconTypeList.currentItem.configKey] = iconSizeSlider.sizes[iconSizeSlider.value] || 0
+                }
 
                 function updateSizes() {
                     // since the icon sizes are queried using invokables, always force an update when opening
                     // in case the user clicked Default or something
                     value = Qt.binding(function() {
-                        var iconSize = kcm.iconSize(iconTypeList.currentIndex)
+                        var iconSize = kcm.iconsSettings[iconTypeList.currentItem.configKey]
 
                         // I have no idea what this code does but it works and is just copied from the old KCM
                         var index = -1;
@@ -153,7 +151,7 @@ QtControls.Popup {
 
                 Kirigami.Icon {
                     anchors.centerIn: parent
-                    width: iconSizeSlider.currentSize
+                    width: kcm.iconsSettings[iconTypeList.currentItem.configKey]
                     height: width
                     source: "folder"
                 }
@@ -163,7 +161,7 @@ QtControls.Popup {
                 id: iconSizeLabel
                 Layout.fillWidth: true
                 horizontalAlignment: Text.AlignHCenter
-                text: iconSizeSlider.currentSize
+                text: kcm.iconsSettings[iconTypeList.currentItem.configKey]
             }
         }
     }

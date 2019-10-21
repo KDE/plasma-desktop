@@ -18,12 +18,7 @@
  */
 
 #include <QApplication>
-#include <KConfigGroup>
-#include <KIconTheme>
-#include <KSharedConfig>
-#include <KSharedDataCache>
-#include <KBuildSycocaProgressDialog>
-#include <QDebug>
+#include "iconssettings.h"
 
 int main(int argc, char** argv)
 {
@@ -33,28 +28,15 @@ int main(int argc, char** argv)
         return 1;
     }
 
-    {
-        //KNS will give us a path
-        QString themeName = app.arguments().last();
-        int idx = themeName.lastIndexOf('/');
-        if (idx>=0) {
-            themeName = themeName.mid(idx);
-        }
-
-        KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::SimpleConfig), "Icons");
-        config.writeEntry("Theme", themeName);
-        config.sync();
+    //KNS will give us a path
+    QString themeName = app.arguments().last();
+    int idx = themeName.lastIndexOf('/');
+    if (idx>=0) {
+        themeName = themeName.mid(idx);
     }
 
-    KIconTheme::reconfigure();
-
-    KSharedDataCache::deleteCache(QStringLiteral("icon-cache"));
-
-    for (int i=0; i<KIconLoader::LastGroup; i++)
-    {
-        KIconLoader::emitChange(KIconLoader::Group(i));
-    }
-
-    KBuildSycocaProgressDialog::rebuildKSycoca(nullptr);
+    IconsSettings settings;
+    settings.setTheme(themeName);
+    settings.save();
     return 0;
 }

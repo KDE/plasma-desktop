@@ -4,6 +4,7 @@
  * Copyright (c) 1999 Matthias Hoelzer-Kluepfel <hoelzer@kde.org>
  * KDE Frameworks 5 port Copyright (C) 2013 Jonathan Riddell <jr@jriddell.org>
  * Copyright (c) 2018 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright (C) 2019 Benjamin Port <benjamin.port@enioka.com>
  *
  * Requires the Qt widget libraries, available at no cost at
  * https://www.qt.io/
@@ -25,13 +26,16 @@
 
 #pragma once
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickAddons/ManagedConfigModule>
 
 #include <KNS3/DownloadDialog>
+#include <KLocalizedString>
 
 #include <QScopedPointer>
+#include <QCache>
 
 class KIconTheme;
+class IconsSettings;
 
 class QQuickItem;
 class QTemporaryFile;
@@ -42,15 +46,14 @@ class FileCopyJob;
 }
 
 class IconsModel;
+class IconSizeCategoryModel;
 
-class IconModule : public KQuickAddons::ConfigModule
+class IconModule : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
-
+    Q_PROPERTY(IconsSettings *iconsSettings READ iconsSettings CONSTANT)
     Q_PROPERTY(IconsModel *iconsModel READ iconsModel CONSTANT)
-
-    Q_PROPERTY(QStringList iconGroups READ iconGroups CONSTANT)
-
+    Q_PROPERTY(IconSizeCategoryModel *iconSizeCategoryModel READ iconSizeCategoryModel CONSTANT)
     Q_PROPERTY(bool downloadingFile READ downloadingFile NOTIFY downloadingFileChanged)
 
 public:
@@ -64,28 +67,26 @@ public:
         PendingDeletionRole
     };
 
+    IconsSettings *iconsSettings() const;
     IconsModel *iconsModel() const;
-
-    QStringList iconGroups() const;
+    IconSizeCategoryModel *iconSizeCategoryModel() const;
 
     bool downloadingFile() const;
 
     void load() override;
     void save() override;
-    void defaults() override;
 
     Q_INVOKABLE void getNewStuff(QQuickItem *ctx);
     Q_INVOKABLE void installThemeFromFile(const QUrl &url);
 
-    Q_INVOKABLE int iconSize(int group) const;
-    Q_INVOKABLE void setIconSize(int group, int size);
     Q_INVOKABLE QList<int> availableIconSizes(int group) const;
+
+    Q_INVOKABLE int pluginIndex(const QString &pluginName) const;
 
     // QML doesn't understand QList<QPixmap>, hence wrapped in a QVariantList
     Q_INVOKABLE QVariantList previewIcons(const QString &themeName, int size, qreal dpr, int limit = -1);
 
 signals:
-    void iconSizesChanged();
     void downloadingFileChanged();
 
     void showSuccessMessage(const QString &message);
@@ -95,7 +96,7 @@ signals:
     void hideProgress();
 
 private:
-    void loadIconSizes();
+    bool isSaveNeeded() const override;
 
     void processPendingDeletions();
 
@@ -107,18 +108,14 @@ private:
 
     static QPixmap getBestIcon(KIconTheme &theme, const QStringList &iconNames, int size, qreal dpr);
 
+    IconsSettings *m_settings;
     IconsModel *m_model;
-    // so we avoid launching changeicon process when theme didn't change (but only e.g. pending deletions)
-    bool m_selectedThemeDirty = false;
-    bool m_iconSizesDirty = false;
+    IconSizeCategoryModel *m_iconSizeCategoryModel;
 
-    QVector<int> m_iconSizes;
-
-    QStringList m_iconGroups;
+    mutable QCache<QString, KIconTheme> m_kiconThemeCache;
 
     QScopedPointer<QTemporaryFile> m_tempInstallFile;
     QPointer<KIO::FileCopyJob> m_tempCopyJob;
 
     QPointer<KNS3::DownloadDialog> m_newStuffDialog;
-
 };

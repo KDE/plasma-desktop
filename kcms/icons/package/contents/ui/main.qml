@@ -34,8 +34,7 @@ KCM.GridViewKCM {
     KCM.ConfigModule.quickHelp: i18n("This module allows you to choose the icons for your desktop.")
 
     view.model: kcm.iconsModel
-    view.currentIndex: kcm.iconsModel.selectedThemeIndex
-
+    view.currentIndex: kcm.pluginIndex(kcm.iconsSettings.theme)
     enabled: !kcm.downloadingFile
 
     DropArea {
@@ -166,7 +165,7 @@ KCM.GridViewKCM {
         ]
         onClicked: {
             if (!model.pendingDeletion) {
-                kcm.iconsModel.selectedTheme = model.themeName;
+                kcm.iconsSettings.theme = model.themeName;
             }
             view.forceActiveFocus();
         }

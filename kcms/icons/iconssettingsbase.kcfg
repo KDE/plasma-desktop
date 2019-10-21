@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="kdeglobals" />
+  <group name="Icons">
+    <entry name="Theme" type="String">
+      <label>Name of the current icon theme</label>
+      <default>breeze</default>
+    </entry>
+  </group>
+  <group name="DesktopIcons">
+    <entry key="Size" name="desktopSize" type="Int">
+      <label>Desktop icons size</label>
+      <default>32</default>
+    </entry>
+  </group>
+  <group name="ToolbarIcons">
+    <entry key="Size" name="toolbarSize" type="Int">
+      <label>Toolbar icons size</label>
+      <default>22</default>
+    </entry>
+  </group>
+  <group name="MainToolbarIcons">
+    <entry key="Size" name="mainToolbarSize" type="Int">
+      <label>Main toolbar icons size</label>
+      <default>22</default>
+    </entry>
+  </group>
+  <group name="SmallIcons">
+    <entry key="Size" name="smallSize" type="Int">
+      <label>Small icons size</label>
+      <default>16</default>
+    </entry>
+  </group>
+  <group name="PanelIcons">
+    <entry key="Size" name="panelSize" type="Int">
+      <label>Panel icons size</label>
+      <default>48</default>
+    </entry>
+  </group>
+  <group name="DialogIcons">
+    <entry key="Size" name="dialogSize" type="Int">
+      <label>Dialog icons size</label>
+      <default>32</default>
+    </entry>
+  </group>
+</kcfg>

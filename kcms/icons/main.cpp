@@ -6,6 +6,7 @@
  * Copyright (C) 2000 Geert Jansen <jansen@kde.org>
  * KDE Frameworks 5 port Copyright (C) 2013 Jonathan Riddell <jr@jriddell.org>
  * Copyright (C) 2018 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright (C) 2019 Benjamin Port <benjamin.port@enioka.com>
  *
  * Requires the Qt widget libraries, available at no cost at
  * https://www.qt.io/
@@ -55,29 +56,23 @@
 #include <algorithm>
 #include <unistd.h> // for unlink
 
+#include "iconssettings.h"
 #include "iconsmodel.h"
+#include "iconsizecategorymodel.h"
 
 #include "config.h" // for CMAKE_INSTALL_FULL_LIBEXECDIR
-
-static const QVector<int> s_defaultIconSizes = { 32, 22, 22, 16, 48, 32 };
-// we try to use KIconTheme::defaultThemeName() but that could be "hicolor" which isn't a "real" theme
-static const QString s_defaultThemeName = QStringLiteral("breeze");
 
 K_PLUGIN_FACTORY_WITH_JSON(IconsFactory, "kcm_icons.json", registerPlugin<IconModule>();)
 
 IconModule::IconModule(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
-    , m_model(new IconsModel(this))
-    , m_iconGroups{
-        QStringLiteral("Desktop"),
-        QStringLiteral("Toolbar"),
-        QStringLiteral("MainToolbar"),
-        QStringLiteral("Small"),
-        QStringLiteral("Panel"),
-        QStringLiteral("Dialog")
-    }
+    : KQuickAddons::ManagedConfigModule(parent, args)
+    , m_settings(new IconsSettings(this))
+    , m_model(new IconsModel(m_settings, this))
+    , m_iconSizeCategoryModel(new IconSizeCategoryModel(this))
 {
+    qmlRegisterType<IconsSettings>();
     qmlRegisterType<IconsModel>();
+    qmlRegisterType<IconSizeCategoryModel>();
 
     // to be able to access its enums
     qmlRegisterUncreatableType<KIconLoader>("org.kde.private.kcms.icons", 1, 0, "KIconLoader", QString());
@@ -94,13 +89,7 @@ IconModule::IconModule(QObject *parent, const QVariantList &args)
 
     setButtons(Apply | Default);
 
-    connect(m_model, &IconsModel::selectedThemeChanged, this, [this] {
-        m_selectedThemeDirty = true;
-        setNeedsSave(true);
-    });
-    connect(m_model, &IconsModel::pendingDeletionsChanged, this, [this] {
-        setNeedsSave(true);
-    });
+    connect(m_model, &IconsModel::pendingDeletionsChanged, this, &IconModule::settingsChanged);
 
     // When user has a lot of themes installed, preview pixmaps might get evicted prematurely
     QPixmapCache::setCacheLimit(50 * 1024); // 50 MiB
@@ -108,7 +97,11 @@ IconModule::IconModule(QObject *parent, const QVariantList &args)
 
 IconModule::~IconModule()
 {
+}
 
+IconsSettings *IconModule::iconsSettings() const
+{
+    return m_settings;
 }
 
 IconsModel *IconModule::iconsModel() const
@@ -116,9 +109,9 @@ IconsModel *IconModule::iconsModel() const
     return m_model;
 }
 
-QStringList IconModule::iconGroups() const
+IconSizeCategoryModel *IconModule::iconSizeCategoryModel() const
 {
-    return m_iconGroups;
+    return m_iconSizeCategoryModel;
 }
 
 bool IconModule::downloadingFile() const
@@ -126,65 +119,41 @@ bool IconModule::downloadingFile() const
     return m_tempCopyJob;
 }
 
-int IconModule::iconSize(int group) const
-{
-    return m_iconSizes[group];
-}
-
-void IconModule::setIconSize(int group, int size)
-{
-    if (iconSize(group) == size) {
-        return;
-    }
-
-    m_iconSizes[group] = size;
-    setNeedsSave(true);
-    m_iconSizesDirty = true;
-    emit iconSizesChanged();
-}
-
 QList<int> IconModule::availableIconSizes(int group) const
 {
-    return KIconLoader::global()->theme()->querySizes(static_cast<KIconLoader::Group>(group));
+    const auto themeName = m_settings->theme();
+    if (!m_kiconThemeCache.contains(m_settings->theme())) {
+        m_kiconThemeCache.insert(themeName, new KIconTheme(themeName));
+    }
+    return m_kiconThemeCache[themeName]->querySizes(static_cast<KIconLoader::Group>(group));
 }
 
 void IconModule::load()
 {
+    ManagedConfigModule::load();
     m_model->load();
-    loadIconSizes();
-    m_model->setSelectedTheme(KIconTheme::current());
-    setNeedsSave(false);
-    m_selectedThemeDirty = false;
-    m_iconSizesDirty = false;
+    // Model has been cleared so pretend the theme name changed to force view update
+    emit m_settings->ThemeChanged();
 }
 
 void IconModule::save()
 {
-    if (m_selectedThemeDirty) {
-        QProcess::startDetached(CMAKE_INSTALL_FULL_LIBEXECDIR "/plasma-changeicons", {m_model->selectedTheme()});
-    }
+    bool needToExportToKDE4 = m_settings->isSaveNeeded();
 
-    if (m_iconSizesDirty) {
-        auto cfg = KSharedConfig::openConfig();
-        for (int i = 0; i < m_iconGroups.count(); ++i) {
-            const QString &group = m_iconGroups.at(i);
-            KConfigGroup cg(cfg, group + QLatin1String("Icons"));
-            cg.writeEntry("Size", m_iconSizes.at(i), KConfig::Normal | KConfig::Global);
-        }
-        cfg->sync();
-    }
+    ManagedConfigModule::save();
 
-    if (m_selectedThemeDirty || m_iconSizesDirty) {
+    if (needToExportToKDE4) {
         exportToKDE4();
     }
 
     processPendingDeletions();
 
     KIconLoader::global()->newIconLoader();
+}
 
-    setNeedsSave(false);
-    m_selectedThemeDirty = false;
-    m_iconSizesDirty = false;
+bool IconModule::isSaveNeeded() const
+{
+    return !m_model->pendingDeletions().isEmpty();
 }
 
 void IconModule::processPendingDeletions()
@@ -192,7 +161,7 @@ void IconModule::processPendingDeletions()
     const QStringList pendingDeletions = m_model->pendingDeletions();
 
     for (const QString &themeName : pendingDeletions) {
-        Q_ASSERT(themeName != m_model->selectedTheme());
+        Q_ASSERT(themeName != m_settings->theme());
 
         KIconTheme theme(themeName);
         auto *job = KIO::del(QUrl::fromLocalFile(theme.dir()), KIO::HideProgressInfo);
@@ -201,54 +170,6 @@ void IconModule::processPendingDeletions()
     }
 
     m_model->removeItemsPendingDeletion();
-}
-
-void IconModule::defaults()
-{
-    if (m_iconSizes != s_defaultIconSizes) {
-        m_iconSizes = s_defaultIconSizes;
-        emit iconSizesChanged();
-    }
-
-    auto setThemeIfAvailable = [this](const QString &themeName) {
-        const auto results = m_model->match(m_model->index(0, 0), ThemeNameRole, themeName);
-        if (results.isEmpty()) {
-            return false;
-        }
-
-        m_model->setSelectedTheme(themeName);
-        return true;
-    };
-
-    if (!setThemeIfAvailable(KIconTheme::defaultThemeName())) {
-        setThemeIfAvailable(QStringLiteral("breeze"));
-    }
-
-    setNeedsSave(true);
-}
-
-void IconModule::loadIconSizes()
-{
-    auto cfg = KSharedConfig::openConfig();
-
-    QVector<int> iconSizes(6, 0); // why doesn't KIconLoader::LastGroup - 1 work here?!
-
-    int i = KIconLoader::FirstGroup;
-    for (const QString &group : qAsConst(m_iconGroups)) {
-        int size = KIconLoader::global()->theme()->defaultSize(static_cast<KIconLoader::Group>(i));
-
-        KConfigGroup iconGroup(cfg, group + QLatin1String("Icons"));
-        size = iconGroup.readEntry("Size", size);
-
-        iconSizes[i] = size;
-
-        ++i;
-    }
-
-    if (m_iconSizes != iconSizes) {
-        m_iconSizes = iconSizes;
-        emit iconSizesChanged();
-    }
 }
 
 void IconModule::getNewStuff(QQuickItem *ctx)
@@ -347,10 +268,12 @@ void IconModule::exportToKDE4()
     KConfig kde4config(configFilePath, KConfig::SimpleConfig);
 
     KConfigGroup kde4IconGroup(&kde4config, "Icons");
-    kde4IconGroup.writeEntry("Theme", m_model->selectedTheme());
+    kde4IconGroup.writeEntry("Theme", m_settings->theme());
 
     //Synchronize icon effects
-    for (const QString &group : qAsConst(m_iconGroups)) {
+    for (int row = 0; row < m_iconSizeCategoryModel->rowCount(); row++) {
+        QModelIndex idx(m_iconSizeCategoryModel->index(row, 0));
+        QString group = m_iconSizeCategoryModel->data(idx, IconSizeCategoryModel::ConfigSectionRole).toString();
         const QString groupName = group + QLatin1String("Icons");
         KConfigGroup cg(kglobalcfg, groupName);
         KConfigGroup kde4Cg(&kde4config, groupName);
@@ -571,6 +494,15 @@ QPixmap IconModule::getBestIcon(KIconTheme &theme, const QStringList &iconNames,
     }
 
     return QPixmap();
+}
+
+int IconModule::pluginIndex(const QString &themeName) const
+{
+    const auto results = m_model->match(m_model->index(0, 0), ThemeNameRole, themeName);
+    if (results.count() == 1) {
+        return results.first().row();
+    }
+    return -1;
 }
 
 #include "main.moc"
