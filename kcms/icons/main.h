@@ -112,9 +112,6 @@ private:
     bool m_selectedThemeDirty = false;
     bool m_iconSizesDirty = false;
 
-    // set when user hits "Defaults" button at which point we'll remove all custom icon effects on Apply
-    bool m_revertIconEffects = false;
-
     QVector<int> m_iconSizes;
 
     QStringList m_iconGroups;

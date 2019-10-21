@@ -24,6 +24,7 @@ add_executable(plasma-changeicons changeicons.cpp)
 target_link_libraries(plasma-changeicons PRIVATE Qt5::Core KF5::KIOWidgets KF5::IconThemes)
 
 kcoreaddons_desktop_to_json(kcm_icons "kcm_icons.desktop")
+install(FILES icons_remove_effects.upd DESTINATION ${KDE_INSTALL_DATADIR}/kconf_update)
 install(FILES kcm_icons.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(TARGETS kcm_icons DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 

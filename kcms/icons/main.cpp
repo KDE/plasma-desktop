@@ -164,41 +164,17 @@ void IconModule::save()
         QProcess::startDetached(CMAKE_INSTALL_FULL_LIBEXECDIR "/plasma-changeicons", {m_model->selectedTheme()});
     }
 
-    if (m_iconSizesDirty || m_revertIconEffects) {
+    if (m_iconSizesDirty) {
         auto cfg = KSharedConfig::openConfig();
         for (int i = 0; i < m_iconGroups.count(); ++i) {
             const QString &group = m_iconGroups.at(i);
             KConfigGroup cg(cfg, group + QLatin1String("Icons"));
             cg.writeEntry("Size", m_iconSizes.at(i), KConfig::Normal | KConfig::Global);
-
-            if (m_revertIconEffects) {
-                cg.revertToDefault("Animated");
-
-                const QStringList states = {
-                    QStringLiteral("Default"),
-                    QStringLiteral("Active"),
-                    QStringLiteral("Disabled")
-                };
-
-                const QStringList keys = {
-                    QStringLiteral("Effect"),
-                    QStringLiteral("Value"),
-                    QStringLiteral("Color"),
-                    QStringLiteral("Color2"),
-                    QStringLiteral("SemiTransparent")
-                };
-
-                for (const QString &state : states) {
-                    for (const QString &key : keys) {
-                        cg.revertToDefault(state + key);
-                    }
-                }
-            }
         }
         cfg->sync();
     }
 
-    if (m_selectedThemeDirty || m_iconSizesDirty || m_revertIconEffects) {
+    if (m_selectedThemeDirty || m_iconSizesDirty) {
         exportToKDE4();
     }
 
@@ -209,7 +185,6 @@ void IconModule::save()
     setNeedsSave(false);
     m_selectedThemeDirty = false;
     m_iconSizesDirty = false;
-    m_revertIconEffects = false;
 }
 
 void IconModule::processPendingDeletions()
@@ -249,7 +224,6 @@ void IconModule::defaults()
         setThemeIfAvailable(QStringLiteral("breeze"));
     }
 
-    m_revertIconEffects = true;
     setNeedsSave(true);
 }
 
