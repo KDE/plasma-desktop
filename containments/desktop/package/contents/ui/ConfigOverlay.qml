@@ -205,8 +205,12 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 cursorShape: Qt.DragMoveCursor
+                hoverEnabled: true
                 onPressed: appletsLayout.releaseSpace(overlay.itemContainer);
                 onPositionChanged: {
+                    if (!pressed) {
+                        return;
+                    }
                     appletsLayout.showPlaceHolderForItem(overlay.itemContainer);
                     var dragPos = mapToItem(overlay.itemContainer, mouse.x, mouse.y);
                     overlay.itemContainer.userDrag(Qt.point(overlay.itemContainer.x, overlay.itemContainer.y), dragPos);

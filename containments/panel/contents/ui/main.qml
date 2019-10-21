@@ -421,10 +421,10 @@ function checkLastSpacer() {
         interval: 150
         onTriggered: {
             dndSpacer.parent = root;
-            currentLayout.x = (isHorizontal && toolBox && Qt.application.layoutDirection === Qt.RightToLeft && (plasmoid.editMode || plasmoid.userConfiguring)) ? toolBox.width : 0;
+            currentLayout.x = (isHorizontal && toolBox && Qt.application.layoutDirection === Qt.RightToLeft && plasmoid.editMode) ? toolBox.width : 0;
             currentLayout.y = 0
-            currentLayout.width = root.width - (isHorizontal && toolBox && (plasmoid.editMode || plasmoid.userConfiguring) ? toolBox.width : 0)
-            currentLayout.height = root.height - (!isHorizontal && toolBox && (plasmoid.editMode || plasmoid.userConfiguring) ? toolBox.height : 0)
+            currentLayout.width = root.width - (isHorizontal && toolBox && plasmoid.editMode ? toolBox.width : 0)
+            currentLayout.height = root.height - (!isHorizontal && toolBox && plasmoid.editMode ? toolBox.height : 0)
             currentLayout.isLayoutHorizontal = isHorizontal
         }
     }

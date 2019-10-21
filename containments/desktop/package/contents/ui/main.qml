@@ -329,7 +329,7 @@ FolderViewDropArea {
         containment: plasmoid
         editModeCondition: plasmoid.immutable
                 ? ContainmentLayoutManager.AppletsLayout.Locked
-                : ContainmentLayoutManager.AppletsLayout.Manual
+                : ContainmentLayoutManager.AppletsLayout.AfterPressAndHold
 
         // Sets the containment in edit mode when we go in edit mode as well
         onEditModeChanged: plasmoid.editMode = editMode
@@ -339,6 +339,8 @@ FolderViewDropArea {
 
         cellWidth: units.iconSizes.small
         cellHeight: cellWidth
+
+        eventManagerToFilter: folderViewLayer.item ? folderViewLayer.item.view.view : null
 
         appletContainerComponent: ContainmentLayoutManager.BasicAppletContainer {
             id: appletContainer

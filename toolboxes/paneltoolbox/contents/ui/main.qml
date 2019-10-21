@@ -18,7 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.0
+import QtQuick 2.8
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.plasmoid 2.0
@@ -29,14 +29,37 @@ Item {
     width: isVertical ? units.iconSizes.medium : units.iconSizes.smallMedium + units.smallSpacing * 2
     height: isVertical ? units.iconSizes.smallMedium + units.smallSpacing * 2 : units.iconSizes.medium
     property bool isVertical: plasmoid.formFactor === 3
-    opacity: plasmoid.editMode || plasmoid.userConfiguring ? (mouseArea.containsMouse || plasmoid.userConfiguring ? 1 : 0.5) : 0
 
     z: 999
 
+    states: [
+        State {
+            when: plasmoid.editMode
+            PropertyChanges {
+                target: main
+                visible: true
+            }
+            PropertyChanges {
+                target: main
+                opacity: mouseArea.containsMouse || plasmoid.userConfiguring ? 1 : 0.5
+            }
+        },
+        State {
+            when: !plasmoid.editMode
+            PropertyChanges {
+                target: main
+                visible: false
+            }
+            PropertyChanges {
+                target: main
+                opacity: 0
+            }
+        }
+    ]
     Behavior on opacity {
-        NumberAnimation {
+        OpacityAnimator {
             duration: units.longDuration;
-            easing.type: Easing.InOutExpo;
+            easing.type: Easing.InOutQuad;
         }
     }
 
@@ -66,8 +89,8 @@ Item {
     Connections {
         target: plasmoid
         onUserConfiguringChanged: {
-            plasmoid.editMode = plasmoid.userConfiguring;
             if (plasmoid.userConfiguring) {
+                plasmoid.editMode = true;
                 toolTipArea.hideToolTip();
             }
         }

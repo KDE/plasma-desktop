@@ -37,6 +37,7 @@ FocusScope {
     property QtObject model: dir
     property Item rubberBand: null
 
+    property alias view: gridView
     property alias isRootView: gridView.isRootView
     property alias currentIndex: gridView.currentIndex
     property alias url: dir.url
@@ -173,16 +174,6 @@ FocusScope {
                 gridView.model = positioner;
             }
         }
-    }
-
-    // Lower the toolBox when an item is hovered, so it doesn't interfere with
-    // its interaction (e.g. the selection button in the top left, cf. Bug 337060)
-    Binding {
-        target: toolBox
-        property: "z"
-        // 999 is the default "z" for desktop ToolBoxRoot
-        value: main.hoveredItem ? -100 : 999
-        when: toolBox
     }
 
     Binding {
