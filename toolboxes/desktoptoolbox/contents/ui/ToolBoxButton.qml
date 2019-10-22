@@ -27,7 +27,9 @@ import org.kde.plasma.plasmoid 2.0
 Item {
     id: toolBoxButton
 
-    property string text: main.Plasmoid.activityName === i18n("Default") ? i18n("Desktop Toolbox") : i18n("Desktop Toolbox — %1 Activity", main.Plasmoid.activityName)
+    property string text: main.Plasmoid.activityName === i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Default")
+                          ? i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Desktop Toolbox")
+                          : i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Desktop Toolbox — %1 Activity", main.Plasmoid.activityName)
     property bool isCorner: !buttonMouse.dragging &&
                             ((state == "topleft") || (state == "topright") ||
                              (state == "bottomright") || (state == "bottomleft"))
