@@ -86,14 +86,24 @@ void valueWriterPart<bool>(bool val, Atom valAtom, Display *dpy)
         _data = nullptr;
 
 
-        if (type_return != XA_INTEGER || !data || format_return != 8 || num_items_return != 1) {
+        if (type_return != XA_INTEGER || !data || format_return != 8) {
             return;
         }
 
-        unsigned char sendVal = val ? 1 : 0;
+        unsigned char sendVal[2] = { 0 };
+        if (num_items_return == 1) {
+            sendVal[0] = val;
+        } else {
+            // Special case for acceleration profile.
+            const Atom accel = XInternAtom(dpy, LIBINPUT_PROP_ACCEL_PROFILE_ENABLED, True);
+            if (num_items_return != 2 || valAtom != accel) {
+                return;
+            }
+            sendVal[val] = 1;
+        }
 
         XIChangeProperty(dpy, deviceid, valAtom, XA_INTEGER,
-                         8, XIPropModeReplace, &sendVal, 1);
+                         8, XIPropModeReplace, sendVal, num_items_return);
 
     });
 }
