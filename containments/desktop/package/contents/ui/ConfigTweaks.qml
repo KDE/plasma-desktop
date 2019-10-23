@@ -40,7 +40,7 @@ Item {
 
         Kirigami.InlineMessage {
             visible: showMessage || animating
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "With the Desktop Toolbox hidden, right-click on the desktop and choose 'Configure Desktop...' to access this configuration window in the future")
+            text: i18nd("plasma_applet_org.kde.desktopcontainment", "With the Desktop Toolbox hidden, right-click on the desktop and choose 'Configure Desktop...' to access this configuration window in the future")
             Layout.fillWidth: true
             Layout.leftMargin: Kirigami.Units.smallSpacing
             Layout.rightMargin: Kirigami.Units.smallSpacing
