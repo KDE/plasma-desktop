@@ -58,7 +58,7 @@ KCM.SimpleKCM {
             Layout.preferredHeight: Kirigami.Units.gridUnit
         }
         QQC2.Label {
-            text: "Do not search in these locations:"
+            text: i18n("Do not search in these locations:")
         }
 
         QQC2.ScrollView {
