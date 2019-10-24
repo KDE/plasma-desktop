@@ -39,13 +39,10 @@
 K_PLUGIN_FACTORY_WITH_JSON(KCMSplashScreenFactory, "kcm_splashscreen.json", registerPlugin<KCMSplashScreen>();)
 
 KCMSplashScreen::KCMSplashScreen(QObject* parent, const QVariantList& args)
-    : KQuickAddons::ConfigModule(parent, args)
+    : KQuickAddons::ManagedConfigModule(parent, args)
     , m_settings(new SplashScreenSettings(this))
     , m_model(new QStandardItemModel(this))
 {
-    connect(m_settings, &SplashScreenSettings::engineChanged, this, [this]{ setNeedsSave(true); });
-    connect(m_settings, &SplashScreenSettings::themeChanged, this, [this]{ setNeedsSave(true); });
-
     qmlRegisterType<SplashScreenSettings>();
     qmlRegisterType<QStandardItemModel>();
 
@@ -133,22 +130,10 @@ void KCMSplashScreen::loadModel()
     emit m_settings->themeChanged();
 }
 
-void KCMSplashScreen::load()
-{
-    m_settings->load();
-    setNeedsSave(false);
-}
-
 void KCMSplashScreen::save()
 {
     m_settings->setEngine(m_settings->theme() == QStringLiteral("None") ? QStringLiteral("none") : QStringLiteral("KSplashQML"));
-    m_settings->save();
-}
-
-void KCMSplashScreen::defaults()
-{
-    m_settings->setDefaults();
-    setNeedsSave(m_settings->isSaveNeeded());
+    ManagedConfigModule::save();
 }
 
 int KCMSplashScreen::pluginIndex(const QString &pluginName) const

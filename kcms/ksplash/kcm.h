@@ -22,12 +22,12 @@
 #define _KCM_SEARCH_H
 
 #include <KPackage/Package>
-#include <KQuickAddons/ConfigModule>
+#include <KQuickAddons/ManagedConfigModule>
 
 class QStandardItemModel;
 class SplashScreenSettings;
 
-class KCMSplashScreen : public KQuickAddons::ConfigModule
+class KCMSplashScreen : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(SplashScreenSettings *splashScreenSettings READ splashScreenSettings CONSTANT)
@@ -51,9 +51,7 @@ public:
 
 public Q_SLOTS:
     void getNewClicked();
-    void load() override;
     void save() override;
-    void defaults() override;
     void test(const QString &plugin);
 
 Q_SIGNALS:
