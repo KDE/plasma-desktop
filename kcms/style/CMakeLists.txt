@@ -7,8 +7,9 @@ set(kcm_style_PART_SRCS ../krdb/krdb.cpp styleconfdialog.cpp kcmstyle.cpp styles
 set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)
 qt5_add_dbus_interface(kcm_style_PART_SRCS ${klauncher_xml} klauncher_iface)
 
-
 ki18n_wrap_ui(kcm_style_PART_SRCS stylepreview.ui)
+
+kconfig_add_kcfg_files(kcm_style_PART_SRCS stylesettings.kcfgc GENERATE_MOC)
 
 add_library(kcm_style MODULE ${kcm_style_PART_SRCS})
 
@@ -29,6 +30,7 @@ target_link_libraries(kcm_style
 
 kcoreaddons_desktop_to_json(kcm_style "kcm_style.desktop")
 
+install(FILES stylesettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES kcm_style.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(TARGETS kcm_style DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 

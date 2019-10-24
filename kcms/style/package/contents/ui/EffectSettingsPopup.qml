@@ -42,14 +42,14 @@ QtControls.Popup {
             id: iconsOnButtonsCheckBox
             Kirigami.FormData.label: i18n("Show icons:")
             text: i18n("On buttons")
-            checked: kcm.iconsOnButtons
-            onClicked: kcm.iconsOnButtons = checked
+            checked: kcm.styleSettings.iconsOnButtons
+            onClicked: kcm.styleSettings.iconsOnButtons = checked
         }
 
         QtControls.CheckBox {
             text: i18n("In menus")
-            checked: kcm.iconsInMenus
-            onClicked: kcm.iconsInMenus = checked
+            checked: kcm.styleSettings.iconsInMenus
+            onClicked: kcm.styleSettings.iconsInMenus = checked
         }
 
         QtControls.ComboBox {

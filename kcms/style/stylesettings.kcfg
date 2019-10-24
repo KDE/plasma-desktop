@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="kdeglobals" />
+  <group name="KDE">
+    <entry name="widgetStyle" type="String">
+      <label>Application style</label>
+      <default>Breeze</default>
+    </entry>
+    <entry name="iconsOnButtons" key="ShowIconsOnPushButtons" type="Bool">
+      <label>Show icons on buttons</label>
+      <default>true</default>
+    </entry>
+    <entry name="iconsInMenus" key="ShowIconsInMenuItems" type="Bool">
+      <label>Show icons in menus</label>
+      <default>true</default>
+    </entry>
+  </group>
+  <group name="Toolbar style">
+    <entry name="toolButtonStyle" key="ToolButtonStyle" type="String">
+      <label>Main toolbar label</label>
+      <default>TextBesideIcon</default>
+    </entry>
+    <entry name="toolButtonStyleOtherToolbars" key="ToolButtonStyleOtherToolbars" type="String">
+      <label>Secondary toolbar label</label>
+      <default>TextBesideIcon</default>
+    </entry>
+  </group>
+</kcfg>

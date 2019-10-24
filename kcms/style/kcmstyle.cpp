@@ -5,6 +5,7 @@
  * Copyright (C) 2007 Urs Wolfer <uwolfer @ kde.org>
  * Copyright (C) 2009 by Davide Bettio <davide.bettio@kdemail.net>
  * Copyright (C) 2019 Kai Uwe Broulik <kde@broulik.de>
+ * Copyright (C) 2019 Cyril Rossi <cyril.rossi@enioka.com>
  *
  * Portions Copyright (C) 2007 Paolo Capriotti <p.capriotti@gmail.com>
  * Portions Copyright (C) 2007 Ivan Cukic <ivan.cukic+kde@gmail.com>
@@ -53,6 +54,7 @@
 
 #include "stylesmodel.h"
 #include "previewitem.h"
+#include "stylesettings.h"
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcm_style.json", registerPlugin<KCMStyle>();)
 
@@ -72,16 +74,13 @@ extern "C"
     }
 }
 
-QString KCMStyle::defaultStyle()
-{
-    return QStringLiteral("Breeze");
-}
-
 KCMStyle::KCMStyle(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
+    , m_settings(new StyleSettings(this))
     , m_model(new StylesModel(this))
 {
     qmlRegisterUncreatableType<KCMStyle>("org.kde.private.kcms.style", 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
+    qmlRegisterType<StyleSettings>();
     qmlRegisterType<StylesModel>();
     qmlRegisterType<PreviewItem>("org.kde.private.kcms.style", 1, 0, "PreviewItem");
 
@@ -99,6 +98,14 @@ KCMStyle::KCMStyle(QObject *parent, const QVariantList &args)
         m_selectedStyleDirty = true;
         setNeedsSave(true);
     });
+    connect(m_settings, &StyleSettings::iconsOnButtonsChanged, this, [this] {
+        m_effectsDirty = true;
+        setNeedsSave(true);
+    });
+    connect(m_settings, &StyleSettings::iconsInMenusChanged, this, [this] {
+        m_effectsDirty = true;
+        setNeedsSave(true);
+    });
 }
 
 KCMStyle::~KCMStyle() = default;
@@ -108,36 +115,9 @@ StylesModel *KCMStyle::model() const
     return m_model;
 }
 
-bool KCMStyle::iconsOnButtons() const
+StyleSettings *KCMStyle::styleSettings() const
 {
-    return m_iconsOnButtons;
-}
-
-void KCMStyle::setIconsOnButtons(bool enable)
-{
-    if (m_iconsOnButtons != enable) {
-        m_iconsOnButtons = enable;
-        emit iconsOnButtonsChanged();
-
-        m_effectsDirty = true;
-        setNeedsSave(true);
-    }
-}
-
-bool KCMStyle::iconsInMenus() const
-{
-    return m_iconsInMenus;
-}
-
-void KCMStyle::setIconsInMenus(bool enable)
-{
-    if (m_iconsInMenus != enable) {
-        m_iconsInMenus = enable;
-        emit iconsInMenusChanged();
-
-        m_effectsDirty = true;
-        setNeedsSave(true);
-    }
+    return m_settings;
 }
 
 KCMStyle::ToolBarStyle KCMStyle::mainToolBarStyle() const
@@ -251,25 +231,9 @@ void KCMStyle::load()
 {
     m_model->load();
 
-    KConfig config(QStringLiteral("kdeglobals"));
+    m_settings->load();
 
-    // Current style
-    KConfigGroup kdeGroup = config.group("KDE");
-    const QString widgetStyle = kdeGroup.readEntry("widgetStyle", KCMStyle::defaultStyle());
-
-    m_model->setSelectedStyle(widgetStyle);
-
-    // Effects settings
-    setIconsOnButtons(kdeGroup.readEntry("ShowIconsOnPushButtons", true));
-    setIconsInMenus(kdeGroup.readEntry("ShowIconsInMenuItems", true));
-
-    KConfigGroup toolBarGroup = config.group("Toolbar style");
-    const QString mainToolBarStyle = toolBarGroup.readEntry("ToolButtonStyle", "TextBesideIcon");
-    const QString otherToolBarStyle = toolBarGroup.readEntry("ToolButtonStyleOtherToolbars", "TextBesideIcon");
-
-    const QMetaEnum toolBarStyleEnum = QMetaEnum::fromType<ToolBarStyle>();
-    setMainToolBarStyle(static_cast<ToolBarStyle>(toolBarStyleEnum.keyToValue(qUtf8Printable(mainToolBarStyle))));
-    setOtherToolBarStyle(static_cast<ToolBarStyle>(toolBarStyleEnum.keyToValue(qUtf8Printable(otherToolBarStyle))));
+    loadSettingsToModel();
 
     m_selectedStyleDirty = false;
     m_effectsDirty = false;
@@ -295,24 +259,15 @@ void KCMStyle::save()
         }
     }
 
-    KConfig config(QStringLiteral("kdeglobals"));
-
-    KConfigGroup kdeGroup = config.group("KDE");
-
     if (newStyleLoaded) {
-        kdeGroup.writeEntry("widgetStyle", m_model->selectedStyle());
+        m_settings->setWidgetStyle(m_model->selectedStyle());
     }
 
-    kdeGroup.writeEntry("ShowIconsOnPushButtons", m_iconsOnButtons);
-    kdeGroup.writeEntry("ShowIconsInMenuItems", m_iconsInMenus);
-
-    KConfigGroup toolBarGroup = config.group("Toolbar style");
     const QMetaEnum toolBarStyleEnum = QMetaEnum::fromType<ToolBarStyle>();
+    m_settings->setToolButtonStyle(toolBarStyleEnum.valueToKey(m_mainToolBarStyle));
+    m_settings->setToolButtonStyleOtherToolbars(toolBarStyleEnum.valueToKey(m_otherToolBarStyle));
 
-    toolBarGroup.writeEntry("ToolButtonStyle", toolBarStyleEnum.valueToKey(m_mainToolBarStyle));
-    toolBarGroup.writeEntry("ToolButtonStyleOtherToolbars", toolBarStyleEnum.valueToKey(m_otherToolBarStyle));
-
-    config.sync();
+    m_settings->save();
 
     // Export the changes we made to qtrc, and update all qt-only
     // applications on the fly, ensuring that we still follow the user's
@@ -342,12 +297,11 @@ void KCMStyle::save()
 
     // Reset selected style back to current in case of failure
     if (!newStyleLoaded) {
-        const QString widgetStyle = kdeGroup.readEntry("widgetStyle", KCMStyle::defaultStyle());
-        m_model->setSelectedStyle(widgetStyle);
+        m_model->setSelectedStyle(m_settings->widgetStyle());
     }
 
+    m_selectedStyleDirty = false;
     m_effectsDirty = false;
-    setNeedsSave(false);
 }
 
 void KCMStyle::defaults()
@@ -355,14 +309,20 @@ void KCMStyle::defaults()
     // TODO the old code had a fallback chain but do we actually support not having Breeze for Plasma?
     // defaultStyle() -> oxygen -> plastique -> windows -> platinum -> motif
 
-    m_model->setSelectedStyle(defaultStyle());
+    m_settings->setDefaults();
 
-    setIconsOnButtons(true);
-    setIconsInMenus(true);
-    setMainToolBarStyle(TextBesideIcon);
-    setOtherToolBarStyle(TextBesideIcon);
+    loadSettingsToModel();
+
+    setNeedsSave(m_settings->isSaveNeeded());
+}
+
+void KCMStyle::loadSettingsToModel()
+{
+    m_model->setSelectedStyle(m_settings->widgetStyle());
+
+    const QMetaEnum toolBarStyleEnum = QMetaEnum::fromType<ToolBarStyle>();
+    setMainToolBarStyle(static_cast<ToolBarStyle>(toolBarStyleEnum.keyToValue(qUtf8Printable(m_settings->toolButtonStyle()))));
+    setOtherToolBarStyle(static_cast<ToolBarStyle>(toolBarStyleEnum.keyToValue(qUtf8Printable(m_settings->toolButtonStyleOtherToolbars()))));
 }
 
 #include "kcmstyle.moc"
-
-// vim: set noet ts=4:

@@ -4,6 +4,7 @@
  * Copyright (C) 2002 Daniel Molkentin <molkentin@kde.org>
  * Copyright (C) 2007 Urs Wolfer <uwolfer @ kde.org>
  * Copyright (C) 2019 Kai Uwe Broulik <kde@broulik.de>
+ * Copyright (C) 2019 Cyril Rossi <cyril.rossi@enioka.com>
  *
  * Portions Copyright (C) TrollTech AS.
  *
@@ -35,6 +36,7 @@
 
 class QQuickItem;
 
+class StyleSettings;
 class StylesModel;
 class StyleConfigDialog;
 
@@ -43,9 +45,7 @@ class KCMStyle : public KQuickAddons::ConfigModule
     Q_OBJECT
 
     Q_PROPERTY(StylesModel *model READ model CONSTANT)
-
-    Q_PROPERTY(bool iconsOnButtons READ iconsOnButtons WRITE setIconsOnButtons NOTIFY iconsOnButtonsChanged)
-    Q_PROPERTY(bool iconsInMenus READ iconsInMenus WRITE setIconsInMenus NOTIFY iconsInMenusChanged)
+    Q_PROPERTY(StyleSettings *styleSettings READ styleSettings CONSTANT)
     Q_PROPERTY(ToolBarStyle mainToolBarStyle READ mainToolBarStyle WRITE setMainToolBarStyle NOTIFY mainToolBarStyleChanged)
     Q_PROPERTY(ToolBarStyle otherToolBarStyle READ otherToolBarStyle WRITE setOtherToolBarStyle NOTIFY otherToolBarStyleChanged)
 
@@ -63,13 +63,7 @@ public:
 
     StylesModel *model() const;
 
-    bool iconsOnButtons() const;
-    void setIconsOnButtons(bool enable);
-    Q_SIGNAL void iconsOnButtonsChanged();
-
-    bool iconsInMenus() const;
-    void setIconsInMenus(bool enable);
-    Q_SIGNAL void iconsInMenusChanged();
+    StyleSettings *styleSettings() const;
 
     ToolBarStyle mainToolBarStyle() const;
     void setMainToolBarStyle(ToolBarStyle style);
@@ -85,21 +79,19 @@ public:
     void save() override;
     void defaults() override;
 
-    static QString defaultStyle();
-
 Q_SIGNALS:
     void showErrorMessage(const QString &message);
-
     void styleReconfigured(const QString &styleName);
 
 private:
+    void loadSettingsToModel();
+
+    StyleSettings *m_settings;
     StylesModel *m_model;
 
     bool m_selectedStyleDirty = false;
     bool m_effectsDirty = false;
 
-    bool m_iconsOnButtons = false;
-    bool m_iconsInMenus = false;
     ToolBarStyle m_mainToolBarStyle = NoText;
     ToolBarStyle m_otherToolBarStyle = NoText;
 
@@ -107,5 +99,3 @@ private:
 };
 
 #endif // __KCMSTYLE_H
-
-// vim: set noet ts=4:
