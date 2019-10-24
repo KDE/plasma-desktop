@@ -27,6 +27,7 @@ KCM.SimpleKCM {
     id: root
     property int error: cA.error
     property bool defaultRequested: false
+    implicitHeight: Kirigami.Units.gridUnit * 29
 
     CC.CompositorAdaptor {
         id: cA
@@ -126,6 +127,10 @@ KCM.SimpleKCM {
                 }
             }
 
+            Item {
+                Kirigami.FormData.isSection: true
+            }
+
             GridLayout {
                 Kirigami.FormData.label: i18n("Night Color temperature:")
                 Kirigami.FormData.buddyFor: tempSlider
@@ -163,6 +168,10 @@ KCM.SimpleKCM {
                     text: i18nc("Night colour blue-ish", "Cool")
                 }
                 Item {}
+            }
+
+            Item {
+                Kirigami.FormData.isSection: true
             }
 
             QQC2.ComboBox {
