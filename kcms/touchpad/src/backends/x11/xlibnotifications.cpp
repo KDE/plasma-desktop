@@ -37,7 +37,7 @@ XlibNotifications::XlibNotifications(Display *display, int device)
     xcb_query_extension_cookie_t inputExtCookie =
             xcb_query_extension(m_connection, std::strlen(INAME), INAME);
     QScopedPointer<xcb_query_extension_reply_t, QScopedPointerPodDeleter>
-            inputExt(xcb_query_extension_reply(m_connection, inputExtCookie, 0));
+            inputExt(xcb_query_extension_reply(m_connection, inputExtCookie, nullptr));
     if (!inputExt) {
         return;
     }
@@ -49,7 +49,7 @@ XlibNotifications::XlibNotifications(Display *display, int device)
 
     m_inputWindow = xcb_generate_id(m_connection);
     xcb_create_window(m_connection, 0, m_inputWindow, screen->root, 0, 0, 1, 1,
-                      0, XCB_WINDOW_CLASS_INPUT_ONLY, 0, 0, 0);
+                      0, XCB_WINDOW_CLASS_INPUT_ONLY, 0, 0, nullptr);
     xcb_flush(m_connection);
 
     XIEventMask masks[2];

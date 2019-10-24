@@ -825,32 +825,32 @@ CGroupListView::CGroupListView(QWidget *parent, CGroupList *model)
     itsMenu=new QMenu(this);
 
     itsDeleteAct=itsMenu->addAction(QIcon::fromTheme("list-remove"), i18n("Remove"),
-                                    this, SIGNAL(del()));
+                                    this, &CGroupListView::del);
     itsMenu->addSeparator();
     itsEnableAct=itsMenu->addAction(QIcon::fromTheme("font-enable"), i18n("Enable"),
-                                    this, SIGNAL(enable()));
+                                    this, &CGroupListView::enable);
     itsDisableAct=itsMenu->addAction(QIcon::fromTheme("font-disable"), i18n("Disable"),
-                                     this, SIGNAL(disable()));
+                                     this, &CGroupListView::disable);
     itsMenu->addSeparator();
     itsRenameAct=itsMenu->addAction(QIcon::fromTheme("edit-rename"), i18n("Rename..."),
-                                    this, SLOT(rename()));
+                                    this, &CGroupListView::rename);
 
     if(!Misc::app(KFI_PRINTER).isEmpty())
     {
         itsMenu->addSeparator();
         itsPrintAct=itsMenu->addAction(QIcon::fromTheme("document-print"), i18n("Print..."),
-                                       this, SIGNAL(print()));
+                                       this, &CGroupListView::print);
     }
     else
         itsPrintAct= nullptr;
     itsMenu->addSeparator();
     itsExportAct=itsMenu->addAction(QIcon::fromTheme("document-export"), i18n("Export..."),
-                                    this, SIGNAL(zip()));
+                                    this, &CGroupListView::zip);
 
     setWhatsThis(model->whatsThis());
     header()->setWhatsThis(whatsThis());
-    connect(this, SIGNAL(addFamilies(QModelIndex,QSet<QString>)),
-            model, SLOT(addToGroup(QModelIndex,QSet<QString>)));
+    connect(this, &CGroupListView::addFamilies,
+            model, &CGroupList::addToGroup);
     connect(this, SIGNAL(removeFamilies(QModelIndex,QSet<QString>)),
             model, SLOT(removeFromGroup(QModelIndex,QSet<QString>)));
 }
@@ -994,7 +994,7 @@ void CGroupListView::dropEvent(QDropEvent *event)
                  (static_cast<CGroupListItem *>(to.internalPointer()))->isPersonal()) ||
                 ((static_cast<CGroupListItem *>(from.internalPointer()))->isPersonal() &&
                  (static_cast<CGroupListItem *>(to.internalPointer()))->isSystem()))
-                QTimer::singleShot(0, this, SLOT(emitMoveFonts()));
+                QTimer::singleShot(0, this, &CGroupListView::emitMoveFonts);
             else if((static_cast<CGroupListItem *>(from.internalPointer()))->isCustom() &&
                     !(static_cast<CGroupListItem *>(to.internalPointer()))->isCustom())
                 emit removeFamilies(from, families);

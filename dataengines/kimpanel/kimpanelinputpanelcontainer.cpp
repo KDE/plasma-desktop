@@ -26,24 +26,24 @@ KimpanelInputPanelContainer::KimpanelInputPanelContainer(QObject* parent, PanelA
     DataContainer(parent),
     m_panelAgent(panelAgent)
 {
-    connect(m_panelAgent, SIGNAL(updateAux(QString, QList<TextAttribute>)), this, SLOT(updateAux(QString, QList<TextAttribute>)));
-    connect(m_panelAgent, SIGNAL(updatePreeditText(QString, QList<TextAttribute>)), this, SLOT(updatePreeditText(QString, QList<TextAttribute>)));
-    connect(m_panelAgent, SIGNAL(updatePreeditCaret(int)), this, SLOT(updatePreeditCaret(int)));
-    connect(m_panelAgent, SIGNAL(updateLookupTable(KimpanelLookupTable)), this, SLOT(updateLookupTable(KimpanelLookupTable)));
-    connect(m_panelAgent, SIGNAL(updateSpotLocation(int,int)), this, SLOT(updateSpotLocation(int,int)));
-    connect(m_panelAgent, SIGNAL(updateSpotRect(int, int, int, int)), this, SLOT(updateSpotRect(int, int, int, int)));
-    connect(m_panelAgent, SIGNAL(showAux(bool)), this, SLOT(showAux(bool)));
-    connect(m_panelAgent, SIGNAL(showPreedit(bool)), this, SLOT(showPreedit(bool)));
-    connect(m_panelAgent, SIGNAL(showLookupTable(bool)), this, SLOT(showLookupTable(bool)));
-    connect(m_panelAgent, SIGNAL(updateLookupTableCursor(int)), this, SLOT(updateLookupTableCursor(int)));
-    connect(m_panelAgent, SIGNAL(updateLookupTableFull(KimpanelLookupTable,int,int)), this, SLOT(updateLookupTableFull(KimpanelLookupTable,int,int)));
+    connect(m_panelAgent, &PanelAgent::updateAux, this, &KimpanelInputPanelContainer::updateAux);
+    connect(m_panelAgent, &PanelAgent::updatePreeditText, this, &KimpanelInputPanelContainer::updatePreeditText);
+    connect(m_panelAgent, &PanelAgent::updatePreeditCaret, this, &KimpanelInputPanelContainer::updatePreeditCaret);
+    connect(m_panelAgent, &PanelAgent::updateLookupTable, this, &KimpanelInputPanelContainer::updateLookupTable);
+    connect(m_panelAgent, &PanelAgent::updateSpotLocation, this, &KimpanelInputPanelContainer::updateSpotLocation);
+    connect(m_panelAgent, &PanelAgent::updateSpotRect, this, &KimpanelInputPanelContainer::updateSpotRect);
+    connect(m_panelAgent, &PanelAgent::showAux, this, &KimpanelInputPanelContainer::showAux);
+    connect(m_panelAgent, &PanelAgent::showPreedit, this, &KimpanelInputPanelContainer::showPreedit);
+    connect(m_panelAgent, &PanelAgent::showLookupTable, this, &KimpanelInputPanelContainer::showLookupTable);
+    connect(m_panelAgent, &PanelAgent::updateLookupTableCursor, this, &KimpanelInputPanelContainer::updateLookupTableCursor);
+    connect(m_panelAgent, &PanelAgent::updateLookupTableFull, this, &KimpanelInputPanelContainer::updateLookupTableFull);
 }
 
 Plasma::Service* KimpanelInputPanelContainer::service(QObject* parent)
 {
     KimpanelService *controller = new KimpanelService(parent, QLatin1String(INPUTPANEL_SOURCE_NAME), m_panelAgent);
-    connect(this, SIGNAL(updateRequested(DataContainer*)),
-            controller, SLOT(enableKimpanelOperations()));
+    connect(this, &Plasma::DataContainer::updateRequested,
+            controller, &KimpanelService::enableKimpanelOperations);
     return controller;
 }
 

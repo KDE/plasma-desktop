@@ -76,9 +76,9 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
     action->setData(int(KDirModel::ModifiedTime));
     m_sortMode->addAction(action);
     menu->addSeparator();
-    m_sortDesc = menu->addAction(i18n("Descending"), this, SIGNAL(sortDescChanged()));
+    m_sortDesc = menu->addAction(i18n("Descending"), this, &ViewPropertiesMenu::sortDescChanged);
     m_sortDesc->setCheckable(true);
-    m_sortDirsFirst = menu->addAction(i18n("Folders First"), this, SIGNAL(sortDirsFirstChanged()));
+    m_sortDirsFirst = menu->addAction(i18n("Folders First"), this, &ViewPropertiesMenu::sortDirsFirstChanged);
     m_sortDirsFirst->setCheckable(true);
 
     m_iconSizeMenu = m_menu->addMenu(i18n("Icon Size"));
@@ -97,7 +97,7 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
     m_previews = m_menu->addAction(QIcon::fromTheme(QStringLiteral("view-preview")), i18n("Show Previews"), this, &ViewPropertiesMenu::previewsChanged);
     m_previews->setCheckable(true);
 
-    m_locked = m_menu->addAction(QIcon::fromTheme(QStringLiteral("lock")), i18n("Locked"), this, SIGNAL(lockedChanged()));
+    m_locked = m_menu->addAction(QIcon::fromTheme(QStringLiteral("lock")), i18n("Locked"), this, &ViewPropertiesMenu::lockedChanged);
     m_locked->setCheckable(true);
 }
 

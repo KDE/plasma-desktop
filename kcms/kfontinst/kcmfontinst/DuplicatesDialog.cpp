@@ -94,7 +94,7 @@ CDuplicatesDialog::CDuplicatesDialog(QWidget *parent, CFontList *fl)
     layout->addWidget(itsView, 1, 0, 1, 2);
     itsFontFileList=new CFontFileList(this);
     connect(itsFontFileList, SIGNAL(finished()), SLOT(scanFinished()));
-    connect(itsView, SIGNAL(haveDeletions(bool)), SLOT(enableButtonOk(bool)));
+    connect(itsView, &CFontFileListView::haveDeletions, this, &CDuplicatesDialog::enableButtonOk);
 }
 
 int CDuplicatesDialog::exec()
@@ -234,7 +234,7 @@ void CDuplicatesDialog::slotButtonClicked(QAbstractButton *button)
                     
                 CJobRunner runner(this);
 
-                connect(&runner, SIGNAL(configuring()), itsFontList, SLOT(unsetSlowUpdates()));
+                connect(&runner, &CJobRunner::configuring, itsFontList, &CFontList::unsetSlowUpdates);
                 runner.exec(CJobRunner::CMD_REMOVE_FILE, itsView->getMarkedItems(), false);
                 itsFontList->setSlowUpdates(false);
                 itsView->removeFiles();
@@ -437,14 +437,14 @@ CFontFileListView::CFontFileListView(QWidget *parent)
     itsMenu=new QMenu(this);
     if(!Misc::app(KFI_VIEWER).isEmpty())
         itsMenu->addAction(QIcon::fromTheme("kfontview"), i18n("Open in Font Viewer"),
-                           this, SLOT(openViewer()));
+                           this, &CFontFileListView::openViewer);
     itsMenu->addAction(QIcon::fromTheme("document-properties"), i18n("Properties"),
-                       this, SLOT(properties()));
+                       this, &CFontFileListView::properties);
     itsMenu->addSeparator();
     itsUnMarkAct=itsMenu->addAction(i18n("Unmark for Deletion"),
-                                    this, SLOT(unmark()));
+                                    this, &CFontFileListView::unmark);
     itsMarkAct=itsMenu->addAction(QIcon::fromTheme("edit-delete"), i18n("Mark for Deletion"),
-                                  this, SLOT(mark()));
+                                  this, &CFontFileListView::mark);
 
     connect(this, SIGNAL(itemSelectionChanged()), SLOT(selectionChanged()));
     connect(this, SIGNAL(itemClicked(QTreeWidgetItem*,int)), SLOT(clicked(QTreeWidgetItem*,int)));

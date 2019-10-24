@@ -122,8 +122,8 @@ FontInst::FontInst()
     registerSignalHandler(signalHander);
     itsConnectionsTimer=new QTimer(this);
     itsFontListTimer=new QTimer(this);
-    connect(itsConnectionsTimer, SIGNAL(timeout()), SLOT(connectionsTimeout()));
-    connect(itsFontListTimer, SIGNAL(timeout()), SLOT(fontListTimeout()));
+    connect(itsConnectionsTimer, &QTimer::timeout, this, &FontInst::connectionsTimeout);
+    connect(itsFontListTimer, &QTimer::timeout, this, &FontInst::fontListTimeout);
     itsConnectionsTimer->start(constConnectionsTimeout);
     itsFontListTimer->start(constFontListTimeout);
 

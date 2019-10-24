@@ -229,9 +229,9 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
 
     // Build the menu
     QMenu *menu = new QMenu(q);
-    menu->addAction( QIcon::fromTheme(QStringLiteral("document-import")), i18n("Import Scheme..."), q, SLOT(importScheme()));
-    menu->addAction( QIcon::fromTheme(QStringLiteral("document-export")), i18n("Export Scheme..."), q, SLOT(exportScheme()));
-    menu->addAction( i18n("Set All Shortcuts to None"), q, SLOT(clearConfiguration()));
+    menu->addAction( QIcon::fromTheme(QStringLiteral("document-import")), i18n("Import Scheme..."), q, &KGlobalShortcutsEditor::importScheme);
+    menu->addAction( QIcon::fromTheme(QStringLiteral("document-export")), i18n("Export Scheme..."), q, &KGlobalShortcutsEditor::exportScheme);
+    menu->addAction( i18n("Set All Shortcuts to None"), q, &KGlobalShortcutsEditor::clearConfiguration);
     
     connect(ui.addButton, &QToolButton::clicked, [this]() {
         if (!selectApplicationDialogUi.treeView->model()) {

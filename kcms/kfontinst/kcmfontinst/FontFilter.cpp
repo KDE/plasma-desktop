@@ -146,7 +146,7 @@ CFontFilter::CFontFilter(QWidget *parent)
     m_menuButton->setText(i18n("Set Criteria"));
     m_layout->addWidget(m_menuButton);
 
-    connect(m_lineEdit, SIGNAL(textChanged(const QString &)), this, SLOT(textChanged(const QString &)));
+    connect(m_lineEdit, &QLineEdit::textChanged, this, &CFontFilter::textChanged);
 
     m_menu=new QMenu(this);
     m_menuButton->setMenu(m_menu);
@@ -359,7 +359,7 @@ void CFontFilter::addAction(ECriteria crit, bool on)
     itsActions[crit]->setChecked(on);
     if(on)
         m_lineEdit->setPlaceholderText(i18n("Filter by %1...", itsTexts[crit]));
-    connect(itsActions[crit], SIGNAL(toggled(bool)), SLOT(filterChanged()));
+    connect(itsActions[crit], &QAction::toggled, this, &CFontFilter::filterChanged);
 }
 
 void CFontFilter::setCriteria(ECriteria crit)

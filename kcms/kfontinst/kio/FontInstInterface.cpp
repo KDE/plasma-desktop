@@ -49,10 +49,10 @@ FontInstInterface::FontInstInterface()
                                                            QDBusConnection::sessionBus(),
                                                            QDBusServiceWatcher::WatchForOwnerChange, this);
 
-    connect(watcher, SIGNAL(serviceOwnerChanged(QString,QString,QString)), SLOT(dbusServiceOwnerChanged(QString,QString,QString)));
-    connect(itsInterface, SIGNAL(status(int,int)), SLOT(status(int,int)));
-    connect(itsInterface, SIGNAL(fontList(int,QList<KFI::Families>)), SLOT(fontList(int,QList<KFI::Families>)));
-    connect(itsInterface, SIGNAL(fontStat(int,KFI::Family)), SLOT(fontStat(int,KFI::Family)));
+    connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged, this, &FontInstInterface::dbusServiceOwnerChanged);
+    connect(itsInterface, &OrgKdeFontinstInterface::status, this, &FontInstInterface::status);
+    connect(itsInterface, &OrgKdeFontinstInterface::fontList, this, &FontInstInterface::fontList);
+    connect(itsInterface, &OrgKdeFontinstInterface::fontStat, this, &FontInstInterface::fontStat);
     
     if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(OrgKdeFontinstInterface::staticInterfaceName()))
         QProcess::startDetached(QLatin1String(KFONTINST_LIB_EXEC_DIR"/fontinst"), QStringList());

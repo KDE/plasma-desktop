@@ -49,7 +49,7 @@ void TestButton::mousePressEvent(QMouseEvent *e)
         break;
     }
 
-    QTimer::singleShot(500, this, SLOT(resetText()));
+    QTimer::singleShot(500, this, &TestButton::resetText);
 
     QPushButton::mousePressEvent(e);
 }

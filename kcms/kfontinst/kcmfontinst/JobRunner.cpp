@@ -229,8 +229,8 @@ CJobRunner::CJobRunner(QWidget *parent, int xid)
                                                            QDBusConnection::sessionBus(),
                                                            QDBusServiceWatcher::WatchForOwnerChange, this);
 
-    connect(watcher, SIGNAL(serviceOwnerChanged(QString,QString,QString)), SLOT(dbusServiceOwnerChanged(QString,QString,QString)));
-    connect(dbus(), SIGNAL(status(int,int)), SLOT(dbusStatus(int,int)));
+    connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged, this, &CJobRunner::dbusServiceOwnerChanged);
+    connect(dbus(), &OrgKdeFontinstInterface::status, this, &CJobRunner::dbusStatus);
     setMinimumSize(420, 160);
 }
 
@@ -376,8 +376,8 @@ int CJobRunner::exec(ECommand cmd, const ItemList &urls, bool destIsSystem)
     itsCurrentFile=QString();
     itsStatusLabel->setText(QString());
     setPage(PAGE_PROGRESS);
-    QTimer::singleShot(0, this, SLOT(doNext()));
-    QTimer::singleShot(constInterfaceCheck, this, SLOT(checkInterface()));
+    QTimer::singleShot(0, this, &CJobRunner::doNext);
+    QTimer::singleShot(constInterfaceCheck, this, &CJobRunner::checkInterface);
     itsActionLabel->startAnimation();
     int rv=QDialog::exec();
     if(itsTempDir)

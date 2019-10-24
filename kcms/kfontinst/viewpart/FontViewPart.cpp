@@ -136,33 +136,33 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList
     controlsLayout->addWidget(itsInstallButton);
     mainLayout->addWidget(previewFrame);
     mainLayout->addWidget(controls);
-    connect(itsPreview, SIGNAL(status(bool)), SLOT(previewStatus(bool)));
-    connect(itsInstallButton, SIGNAL(clicked()), SLOT(install()));
+    connect(itsPreview, &CFontPreview::status, this, &CFontViewPart::previewStatus);
+    connect(itsInstallButton, &QAbstractButton::clicked, this, &CFontViewPart::install);
     connect(itsFaceSelector, SIGNAL(valueChanged(int)), SLOT(showFace(int)));
 
     itsChangeTextAction=actionCollection()->addAction("changeText");
     itsChangeTextAction->setIcon(QIcon::fromTheme("edit-rename"));
     itsChangeTextAction->setText(i18n("Change Text..."));
-    connect(itsChangeTextAction, SIGNAL(triggered(bool)), SLOT(changeText()));
+    connect(itsChangeTextAction, &QAction::triggered, this, &CFontViewPart::changeText);
 
     CPreviewSelectAction *displayTypeAction=new CPreviewSelectAction(this, CPreviewSelectAction::BlocksAndScripts);
     actionCollection()->addAction("displayType", displayTypeAction);
-    connect(displayTypeAction, SIGNAL(range(QList<CFcEngine::TRange>)),
-            SLOT(displayType(QList<CFcEngine::TRange>)));
+    connect(displayTypeAction, &CPreviewSelectAction::range,
+            this, &CFontViewPart::displayType);
 
     QAction *zoomIn=actionCollection()->addAction(KStandardAction::ZoomIn, itsPreview, SLOT(zoomIn())),
             *zoomOut=actionCollection()->addAction(KStandardAction::ZoomOut, itsPreview, SLOT(zoomOut()));
 
-    connect(itsPreview, SIGNAL(atMax(bool)), zoomIn, SLOT(setDisabled(bool)));
-    connect(itsPreview, SIGNAL(atMin(bool)), zoomOut, SLOT(setDisabled(bool)));
+    connect(itsPreview, &CFontPreview::atMax, zoomIn, &QAction::setDisabled);
+    connect(itsPreview, &CFontPreview::atMin, zoomOut, &QAction::setDisabled);
 
     setXMLFile("kfontviewpart.rc");
     setWidget(itsFrame);
     itsExtension->enablePrint(false);
 
     FontInst::registerTypes();
-    connect(itsInterface, SIGNAL(status(int,int)), SLOT(dbusStatus(int,int)));
-    connect(itsInterface, SIGNAL(fontStat(int,KFI::Family)), SLOT(fontStat(int,KFI::Family)));
+    connect(itsInterface, &OrgKdeFontinstInterface::status, this, &CFontViewPart::dbusStatus);
+    connect(itsInterface, &OrgKdeFontinstInterface::fontStat, this, &CFontViewPart::fontStat);
 }
 
 CFontViewPart::~CFontViewPart()
@@ -210,7 +210,7 @@ bool CFontViewPart::openFile()
     // NOTE: Can't do the real open here, as we don't seem to be able to use KIO::NetAccess functions
     // during initial start-up. Bug report 111535 indicates that calling "konqueror <font>" crashes.
     itsInstallButton->setEnabled(false);
-    QTimer::singleShot(0, this, SLOT(timeout()));
+    QTimer::singleShot(0, this, &CFontViewPart::timeout);
     return true;
 }
 

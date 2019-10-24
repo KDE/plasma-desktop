@@ -85,7 +85,7 @@ void Backend::setToolTipItem(QQuickItem *item)
     if (item != m_toolTipItem) {
         m_toolTipItem = item;
 
-        connect(item, SIGNAL(windowChanged(QQuickWindow*)), this, SLOT(toolTipWindowChanged(QQuickWindow*)));
+        connect(item, &QQuickItem::windowChanged, this, &Backend::toolTipWindowChanged);
 
         emit toolTipItemChanged();
     }

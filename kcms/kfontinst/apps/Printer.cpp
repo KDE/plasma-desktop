@@ -388,9 +388,9 @@ void CPrinter::print(const QList<Misc::TFont> &items, int size)
         itsProgress->setRange(0, items.count());
         itsProgress->setValue(0);
         progress(0, QString());
-        connect(thread, SIGNAL(progress(int,QString)), SLOT(progress(int,QString)));
-        connect(thread, SIGNAL(finished()), SLOT(accept()));
-        connect(this, SIGNAL(cancelled()), thread, SLOT(cancel()));
+        connect(thread, &CPrintThread::progress, this, &CPrinter::progress);
+        connect(thread, &QThread::finished, this, &QDialog::accept);
+        connect(this, &CPrinter::cancelled, thread, &CPrintThread::cancel);
         itsActionLabel->startAnimation();
         thread->start();
         exec();

@@ -32,16 +32,16 @@ void XDeleter(void* p)
 }
 
 PropertyInfo::PropertyInfo() :
-    type(0), format(0), nitems(0), f(0), i(0), b(0),
-    display(0), device(0), prop(0)
+    type(0), format(0), nitems(0), f(nullptr), i(nullptr), b(nullptr),
+    display(nullptr), device(0), prop(0)
 {
 }
 
 PropertyInfo::PropertyInfo(Display *display, int device, Atom prop, Atom floatType)
-    : type(0), format(0), nitems(0), f(0), i(0), b(0),
+    : type(0), format(0), nitems(0), f(nullptr), i(nullptr), b(nullptr),
       display(display), device(device), prop(prop)
 {
-    unsigned char *dataPtr = 0;
+    unsigned char *dataPtr = nullptr;
     unsigned long bytes_after;
     XIGetProperty(display, device, prop, 0, 1000, False,
                     AnyPropertyType, &type, &format, &nitems,

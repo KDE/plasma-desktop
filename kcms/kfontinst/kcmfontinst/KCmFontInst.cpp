@@ -351,48 +351,48 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     itsPreviewListMenu->addAction(changeTextAct),
 
     // Connect signals...
-    connect(itsPreview, SIGNAL(atMax(bool)), zoomIn, SLOT(setDisabled(bool)));
-    connect(itsPreview, SIGNAL(atMin(bool)), zoomOut, SLOT(setDisabled(bool)));
-    connect(prevSel, SIGNAL(range(QList<CFcEngine::TRange>)),
-            itsPreview, SLOT(setUnicodeRange(QList<CFcEngine::TRange>)));
-    connect(changeTextAct, SIGNAL(triggered(bool)), SLOT(changeText()));
-    connect(itsFilter, SIGNAL(queryChanged(QString)), itsFontListView, SLOT(filterText(QString)));
-    connect(itsFilter, SIGNAL(criteriaChanged(int,qulonglong,QStringList)),
-            itsFontListView, SLOT(filterCriteria(int,qulonglong,QStringList)));
-    connect(itsGroupListView, SIGNAL(del()), SLOT(removeGroup()));
-    connect(itsGroupListView, SIGNAL(print()), SLOT(printGroup()));
-    connect(itsGroupListView, SIGNAL(enable()), SLOT(enableGroup()));
-    connect(itsGroupListView, SIGNAL(disable()), SLOT(disableGroup()));
-    connect(itsGroupListView, SIGNAL(moveFonts()), SLOT(moveFonts()));
-    connect(itsGroupListView, SIGNAL(zip()), SLOT(zipGroup()));
-    connect(itsGroupListView, SIGNAL(itemSelected(QModelIndex)),
-           SLOT(groupSelected(QModelIndex)));
-    connect(itsGroupListView, SIGNAL(info(QString)),
-           SLOT(showInfo(QString)));
-    connect(itsGroupList, SIGNAL(refresh()), SLOT(refreshFontList()));
-    connect(itsFontList, SIGNAL(listingPercent(int)), SLOT(listingPercent(int)));
-    connect(itsFontList, SIGNAL(layoutChanged()), SLOT(setStatusBar()));
-    connect(itsFontListView, SIGNAL(del()), SLOT(deleteFonts()));
+    connect(itsPreview, &CFontPreview::atMax, zoomIn, &QAction::setDisabled);
+    connect(itsPreview, &CFontPreview::atMin, zoomOut, &QAction::setDisabled);
+    connect(prevSel, &CPreviewSelectAction::range,
+            itsPreview, &CFontPreview::setUnicodeRange);
+    connect(changeTextAct, &QAction::triggered, this, &CKCmFontInst::changeText);
+    connect(itsFilter, &CFontFilter::queryChanged, itsFontListView, &CFontListView::filterText);
+    connect(itsFilter, &CFontFilter::criteriaChanged,
+            itsFontListView, &CFontListView::filterCriteria);
+    connect(itsGroupListView, &CGroupListView::del, this, &CKCmFontInst::removeGroup);
+    connect(itsGroupListView, &CGroupListView::print, this, &CKCmFontInst::printGroup);
+    connect(itsGroupListView, &CGroupListView::enable, this, &CKCmFontInst::enableGroup);
+    connect(itsGroupListView, &CGroupListView::disable, this, &CKCmFontInst::disableGroup);
+    connect(itsGroupListView, &CGroupListView::moveFonts, this, &CKCmFontInst::moveFonts);
+    connect(itsGroupListView, &CGroupListView::zip, this, &CKCmFontInst::zipGroup);
+    connect(itsGroupListView, &CGroupListView::itemSelected,
+           this, &CKCmFontInst::groupSelected);
+    connect(itsGroupListView, &CGroupListView::info,
+           this, &CKCmFontInst::showInfo);
+    connect(itsGroupList, &CGroupList::refresh, this, &CKCmFontInst::refreshFontList);
+    connect(itsFontList, &CFontList::listingPercent, this, &CKCmFontInst::listingPercent);
+    connect(itsFontList, &QAbstractItemModel::layoutChanged, this, &CKCmFontInst::setStatusBar);
+    connect(itsFontListView, &CFontListView::del, this, &CKCmFontInst::deleteFonts);
     connect(itsFontListView, SIGNAL(print()), SLOT(print()));
-    connect(itsFontListView, SIGNAL(enable()), SLOT(enableFonts()));
-    connect(itsFontListView, SIGNAL(disable()), SLOT(disableFonts()));
+    connect(itsFontListView, &CFontListView::enable, this, &CKCmFontInst::enableFonts);
+    connect(itsFontListView, &CFontListView::disable, this, &CKCmFontInst::disableFonts);
     connect(itsFontListView, SIGNAL(fontsDropped(QSet<QUrl>)),
            SLOT(addFonts(QSet<QUrl>)));
-    connect(itsFontListView, SIGNAL(itemsSelected(QModelIndexList)), SLOT(fontsSelected(QModelIndexList)));
-    connect(itsFontListView, SIGNAL(refresh()), SLOT(setStatusBar()));
-    connect(itsGroupListView, SIGNAL(unclassifiedChanged()), itsFontListView, SLOT(refreshFilter()));
-    connect(createGroup, SIGNAL(clicked()), SLOT(addGroup()));
-    connect(itsDeleteGroupControl, SIGNAL(clicked()), SLOT(removeGroup()));
-    connect(itsEnableGroupControl, SIGNAL(clicked()), SLOT(enableGroup()));
-    connect(itsDisableGroupControl, SIGNAL(clicked()), SLOT(disableGroup()));
+    connect(itsFontListView, &CFontListView::itemsSelected, this, &CKCmFontInst::fontsSelected);
+    connect(itsFontListView, &CFontListView::refresh, this, &CKCmFontInst::setStatusBar);
+    connect(itsGroupListView, &CGroupListView::unclassifiedChanged, itsFontListView, &CFontListView::refreshFilter);
+    connect(createGroup, &QAbstractButton::clicked, this, &CKCmFontInst::addGroup);
+    connect(itsDeleteGroupControl, &QAbstractButton::clicked, this, &CKCmFontInst::removeGroup);
+    connect(itsEnableGroupControl, &QAbstractButton::clicked, this, &CKCmFontInst::enableGroup);
+    connect(itsDisableGroupControl, &QAbstractButton::clicked, this, &CKCmFontInst::disableGroup);
     connect(itsAddFontControl, SIGNAL(clicked()), SLOT(addFonts()));
-    connect(itsGetNewFontsControl, SIGNAL(clicked()), SLOT(downloadFonts()));
-    connect(itsDeleteFontControl, SIGNAL(clicked()), SLOT(deleteFonts()));
-    connect(itsScanDuplicateFontsControl, SIGNAL(clicked()), SLOT(duplicateFonts()));
+    connect(itsGetNewFontsControl, &QAbstractButton::clicked, this, &CKCmFontInst::downloadFonts);
+    connect(itsDeleteFontControl, &QAbstractButton::clicked, this, &CKCmFontInst::deleteFonts);
+    connect(itsScanDuplicateFontsControl, &QAbstractButton::clicked, this, &CKCmFontInst::duplicateFonts);
     //connect(validateFontsAct, SIGNAL(triggered(bool)), SLOT(validateFonts()));
-    connect(itsPreview, SIGNAL(customContextMenuRequested(QPoint)), SLOT(previewMenu(QPoint)));
-    connect(itsPreviewList, SIGNAL(showMenu(QPoint)), SLOT(previewMenu(QPoint)));
-    connect(itsPreviewSplitter, SIGNAL(splitterMoved(int,int)), SLOT(splitterMoved()));
+    connect(itsPreview, &QWidget::customContextMenuRequested, this, &CKCmFontInst::previewMenu);
+    connect(itsPreviewList, &CPreviewListView::showMenu, this, &CKCmFontInst::previewMenu);
+    connect(itsPreviewSplitter, &QSplitter::splitterMoved, this, &CKCmFontInst::splitterMoved);
 
     selectMainGroup();
     itsFontList->load();
@@ -1251,7 +1251,7 @@ void CKCmFontInst::doCmd(CJobRunner::ECommand cmd, const CJobRunner::ItemList &u
     itsFontList->setSlowUpdates(true);
     CJobRunner runner(this);
 
-    connect(&runner, SIGNAL(configuring()), itsFontList, SLOT(unsetSlowUpdates()));
+    connect(&runner, &CJobRunner::configuring, itsFontList, &CFontList::unsetSlowUpdates);
     runner.exec(cmd, urls, system);
     itsFontList->setSlowUpdates(false);
     refreshFontList();

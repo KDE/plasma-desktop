@@ -73,7 +73,7 @@ CActionLabel::CActionLabel(QWidget *parent)
 
     setPixmap(*theIcons[0]);
     itsTimer=new QTimer(this);
-    connect(itsTimer, SIGNAL(timeout()), SLOT(rotateIcon()));
+    connect(itsTimer, &QTimer::timeout, this, &CActionLabel::rotateIcon);
 }
 
 CActionLabel::~CActionLabel()

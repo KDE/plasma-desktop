@@ -42,8 +42,8 @@ PlasmaDesktopRunner::PlasmaDesktopRunner(QObject *parent, const QVariantList &ar
                     Plasma::RunnerContext::Help);
     QDBusServiceWatcher *watcher = new QDBusServiceWatcher(s_plasmaService, QDBusConnection::sessionBus(),
                                                            QDBusServiceWatcher::WatchForOwnerChange, this);
-    connect(watcher, SIGNAL(serviceOwnerChanged(QString,QString,QString)),
-            this, SLOT(checkAvailability(QString,QString,QString)));
+    connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged,
+            this, &PlasmaDesktopRunner::checkAvailability);
     checkAvailability(QString(), QString(), QString());
 }
 

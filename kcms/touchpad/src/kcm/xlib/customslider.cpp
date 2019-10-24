@@ -65,7 +65,7 @@ CustomSlider::CustomSlider(QWidget *parent) :
     updateValue();
     updateRange(size());
 
-    connect(this, SIGNAL(actionTriggered(int)), SLOT(updateValue()));
+    connect(this, &QAbstractSlider::actionTriggered, this, &CustomSlider::updateValue);
 }
 
 void CustomSlider::resizeEvent(QResizeEvent *e)

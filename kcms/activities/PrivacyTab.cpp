@@ -108,19 +108,19 @@ PrivacyTab::PrivacyTab(QWidget *parent)
 
     // React to changes
 
-    connect(d->radioRememberAllApplications, SIGNAL(toggled(bool)), this, SIGNAL(changed()));
-    connect(d->radioDontRememberApplications, SIGNAL(toggled(bool)), this, SIGNAL(changed()));
+    connect(d->radioRememberAllApplications, &QAbstractButton::toggled, this, &PrivacyTab::changed);
+    connect(d->radioDontRememberApplications, &QAbstractButton::toggled, this, &PrivacyTab::changed);
     connect(d->spinKeepHistory, SIGNAL(valueChanged(int)), this, SIGNAL(changed()));
-    connect(d->blacklistedApplicationsModel, SIGNAL(changed()), this, SIGNAL(changed()));
+    connect(d->blacklistedApplicationsModel, &BlacklistedApplicationsModel::changed, this, &PrivacyTab::changed);
 
-    connect(d->radioRememberSpecificApplications, SIGNAL(toggled(bool)),
-            d->blacklistedApplicationsModel, SLOT(setEnabled(bool)));
+    connect(d->radioRememberSpecificApplications, &QAbstractButton::toggled,
+            d->blacklistedApplicationsModel, &BlacklistedApplicationsModel::setEnabled);
 
-    connect(d->radioRememberSpecificApplications, SIGNAL(toggled(bool)),
-            d->viewBlacklistedApplicationsContainer, SLOT(setEnabled(bool)));
+    connect(d->radioRememberSpecificApplications, &QAbstractButton::toggled,
+            d->viewBlacklistedApplicationsContainer, &QWidget::setEnabled);
 
-    connect(d->radioRememberSpecificApplications, SIGNAL(toggled(bool)),
-            d->checkBlacklistAllNotOnList, SLOT(setEnabled(bool)));
+    connect(d->radioRememberSpecificApplications, &QAbstractButton::toggled,
+            d->checkBlacklistAllNotOnList, &QWidget::setEnabled);
 
     defaults();
 

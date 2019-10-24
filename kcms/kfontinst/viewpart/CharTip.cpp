@@ -154,7 +154,7 @@ void CCharTip::setItem(const CFcEngine::TChar &ch)
 
     itsItem=ch;
     itsTimer->disconnect(this);
-    connect(itsTimer, SIGNAL(timeout()), this, SLOT(showTip()));
+    connect(itsTimer, &QTimer::timeout, this, &CCharTip::showTip);
     itsTimer->setSingleShot(true);
     itsTimer->start(300);
 }
@@ -225,7 +225,7 @@ void CCharTip::showTip()
         itsPixmapLabel->setPixmap(QPixmap());
 
     itsTimer->disconnect(this);
-    connect(itsTimer, SIGNAL(timeout()), this, SLOT(hideTip()));
+    connect(itsTimer, &QTimer::timeout, this, &CCharTip::hideTip);
     itsTimer->setSingleShot(true);
     itsTimer->start(15000);
 

@@ -77,8 +77,8 @@ SwitchingTab::SwitchingTab(QWidget *parent)
 
     connect(d->scActivities, &KShortcutsEditor::keyChange,
             this, [this] { changed(); });
-    connect(d->checkRememberVirtualDesktop, SIGNAL(toggled(bool)),
-            this, SIGNAL(changed()));
+    connect(d->checkRememberVirtualDesktop, &QAbstractButton::toggled,
+            this, &SwitchingTab::changed);
 
     defaults();
 }

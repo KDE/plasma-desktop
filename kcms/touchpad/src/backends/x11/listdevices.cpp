@@ -26,12 +26,12 @@
 
 int main(void)
 {
-    Display *display = XOpenDisplay(0);
+    Display *display = XOpenDisplay(nullptr);
     int nDevices = 0;
     XDeviceInfo *devices = XListInputDevices(display, &nDevices);
     for (int i = 0; i < nDevices; i++) {
         const char *name = devices[i].name;
-        char *type = 0;
+        char *type = nullptr;
         if (devices[i].type) {
             type = XGetAtomName(display, devices[i].type);
         }

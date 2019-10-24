@@ -26,17 +26,17 @@ KimpanelStatusBarContainer::KimpanelStatusBarContainer(QObject* parent, PanelAge
     DataContainer(parent),
     m_panelAgent(panelAgent)
 {
-    connect(m_panelAgent, SIGNAL(updateProperty(KimpanelProperty)), this, SLOT(updateProperty(KimpanelProperty)));
-    connect(m_panelAgent, SIGNAL(registerProperties(QList<KimpanelProperty>)), this, SLOT(registerProperties(QList<KimpanelProperty>)));
-    connect(m_panelAgent, SIGNAL(execMenu(QList<KimpanelProperty>)), this, SLOT(execMenu(QList<KimpanelProperty>)));
-    connect(m_panelAgent, SIGNAL(execDialog(KimpanelProperty)), this, SLOT(execDialog(KimpanelProperty)));
+    connect(m_panelAgent, &PanelAgent::updateProperty, this, &KimpanelStatusBarContainer::updateProperty);
+    connect(m_panelAgent, &PanelAgent::registerProperties, this, &KimpanelStatusBarContainer::registerProperties);
+    connect(m_panelAgent, &PanelAgent::execMenu, this, &KimpanelStatusBarContainer::execMenu);
+    connect(m_panelAgent, &PanelAgent::execDialog, this, &KimpanelStatusBarContainer::execDialog);
 }
 
 Plasma::Service* KimpanelStatusBarContainer::service(QObject* parent)
 {
     KimpanelService *controller = new KimpanelService(parent, QLatin1String(STATUSBAR_SOURCE_NAME), m_panelAgent);
-    connect(this, SIGNAL(updateRequested(DataContainer*)),
-            controller, SLOT(enableKimpanelOperations()));
+    connect(this, &Plasma::DataContainer::updateRequested,
+            controller, &KimpanelService::enableKimpanelOperations);
     return controller;
 }
 

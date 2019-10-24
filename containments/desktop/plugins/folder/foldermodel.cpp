@@ -1226,11 +1226,11 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
         };
         // remember drop target position for target URL and forget about the source URL
         connect(copyJob, &KIO::CopyJob::copyingDone,
-                this, [this, map](KIO::Job *, const QUrl &, const QUrl &targetUrl, const QDateTime &, bool, bool) {
+                this, [ map](KIO::Job *, const QUrl &, const QUrl &targetUrl, const QDateTime &, bool, bool) {
             map(targetUrl);
         });
         connect(copyJob, &KIO::CopyJob::copyingLinkDone,
-                this, [this, map](KIO::Job *, const QUrl &, const QString &, const QUrl &targetUrl) {
+                this, [ map](KIO::Job *, const QUrl &, const QString &, const QUrl &targetUrl) {
             map(targetUrl);
         });
     });

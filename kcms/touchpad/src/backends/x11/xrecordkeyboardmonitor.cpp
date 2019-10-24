@@ -27,7 +27,7 @@
 #include <X11/Xlib.h>
 
 XRecordKeyboardMonitor::XRecordKeyboardMonitor(Display *display)
-    : m_connection(xcb_connect(XDisplayString(display), 0)),
+    : m_connection(xcb_connect(XDisplayString(display), nullptr)),
       m_modifiersPressed(0), m_keysPressed(0)
 {
     if (!m_connection) {
@@ -47,7 +47,7 @@ XRecordKeyboardMonitor::XRecordKeyboardMonitor(Display *display)
     xcb_flush(m_connection);
 
     QScopedPointer<xcb_get_modifier_mapping_reply_t, QScopedPointerPodDeleter>
-            modmap(xcb_get_modifier_mapping_reply(m_connection, modmapCookie, 0));
+            modmap(xcb_get_modifier_mapping_reply(m_connection, modmapCookie, nullptr));
     if (!modmap) {
         return;
     }
@@ -71,7 +71,7 @@ XRecordKeyboardMonitor::XRecordKeyboardMonitor(Display *display)
 
     m_notifier = new QSocketNotifier(xcb_get_file_descriptor(m_connection),
                                      QSocketNotifier::Read, this);
-    connect(m_notifier, SIGNAL(activated(int)), SLOT(processNextReply()));
+    connect(m_notifier, &QSocketNotifier::activated, this, &XRecordKeyboardMonitor::processNextReply);
     m_notifier->setEnabled(true);
 }
 
@@ -93,7 +93,7 @@ void XRecordKeyboardMonitor::processNextReply()
         std::free(event);
     }
 
-    void *reply = 0;
+    void *reply = nullptr;
     xcb_generic_error_t *error = nullptr;
     while (m_cookie.sequence && xcb_poll_for_reply(m_connection, m_cookie.sequence, &reply, &error)) {
         // xcb_poll_for_reply may set both reply and error to null if connection has error.

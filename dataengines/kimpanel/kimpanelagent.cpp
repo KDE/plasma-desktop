@@ -77,7 +77,7 @@ PanelAgent::PanelAgent(QObject *parent)
     QDBusConnection(QStringLiteral("kimpanel_bus")).connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
                                             QStringLiteral("ExecMenu"), this, SLOT(ExecMenu(QStringList)));
 
-    connect(watcher, SIGNAL(serviceUnregistered(QString)), this, SLOT(serviceUnregistered(QString)));
+    connect(watcher, &QDBusServiceWatcher::serviceUnregistered, this, &PanelAgent::serviceUnregistered);
 }
 
 PanelAgent::~PanelAgent()

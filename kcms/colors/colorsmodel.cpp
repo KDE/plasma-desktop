@@ -134,7 +134,7 @@ void ColorsModel::setSelectedScheme(const QString &scheme)
 
 int ColorsModel::indexOfScheme(const QString &scheme) const
 {
-    auto it = std::find_if(m_data.begin(), m_data.end(), [this, &scheme](const ColorsModelData &item) {
+    auto it = std::find_if(m_data.begin(), m_data.end(), [ &scheme](const ColorsModelData &item) {
         return item.schemeName == scheme;
     });
 

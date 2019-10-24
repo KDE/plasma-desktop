@@ -21,12 +21,12 @@
 #include <cstdlib>
 #include <cstring>
 
-XcbAtom::XcbAtom() : m_connection(0), m_reply(0), m_fetched(false)
+XcbAtom::XcbAtom() : m_connection(nullptr), m_reply(nullptr), m_fetched(false)
 {
 }
 
 XcbAtom::XcbAtom(xcb_connection_t *c, const char *name, bool onlyIfExists)
-    : m_reply(0), m_fetched(false)
+    : m_reply(nullptr), m_fetched(false)
 {
     intern(c, name, onlyIfExists);
 }
@@ -46,7 +46,7 @@ xcb_atom_t XcbAtom::atom()
 {
     if (!m_fetched) {
         m_fetched = true;
-        m_reply = xcb_intern_atom_reply(m_connection, m_cookie, 0);
+        m_reply = xcb_intern_atom_reply(m_connection, m_cookie, nullptr);
     }
     if (m_reply) {
         return m_reply->atom;
