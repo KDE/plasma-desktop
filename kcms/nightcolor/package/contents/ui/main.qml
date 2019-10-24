@@ -99,6 +99,18 @@ KCM.SimpleKCM {
     ColumnLayout {
         spacing: 0
 
+        QQC2.Label {
+            Layout.topMargin: Kirigami.Units.largeSpacing * 2
+            Layout.bottomMargin: Kirigami.Units.largeSpacing * 4
+            Layout.leftMargin: Kirigami.Units.smallSpacing
+            Layout.rightMargin: Kirigami.Units.smallSpacing
+            Layout.alignment: Qt.AlignHCenter
+            Layout.maximumWidth: Math.round(root.width * 0.5)
+
+            text: i18n("Night Color makes the colors on the screen warmer to reduce eye strain.")
+            wrapMode: Text.WordWrap
+        }
+
         Kirigami.FormLayout {
             id: parentLayout
 
