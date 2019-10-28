@@ -236,8 +236,10 @@ KCM.SimpleKCM {
                     enabled: dpiCheckBox.checked
                     value: kcm.fontAASettings.dpi !== 0 ? kcm.fontAASettings.dpi : 96
                     onValueModified: kcm.fontAASettings.dpi = value
-                    to: 1000
-                    from: 1
+                    // to: need to divide to stepSize
+                    to: 1008
+                    // lowest vaue here can be == stepSize, that is because 0 means off
+                    from: 24
                 }
             }
 
