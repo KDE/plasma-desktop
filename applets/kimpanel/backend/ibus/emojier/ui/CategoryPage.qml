@@ -34,9 +34,18 @@ Kirigami.ScrollablePage
         id: searchField
         Layout.fillWidth: true
         placeholderText: i18n("Search...")
-        onTextChanged: emojiModel.search = text
+        onTextChanged: {
+            emojiModel.search = text
+            if (emojiView.currentIndex < 0) {
+                emojiView.currentIndex = 0
+            }
+        }
+        onEditingFinished: {
+            emojiView.currentItem.reportEmoji()
+        }
         height: visible ? implicitHeight : 0
         visible: false
+        Keys.onEscapePressed: visible = false
     }
 
     actions.main: Kirigami.Action {
@@ -50,6 +59,7 @@ Kirigami.ScrollablePage
     }
 
     GridView {
+        id: emojiView
         cellWidth: 64
         cellHeight: cellWidth
         model: CategoryModelFilter {
@@ -64,7 +74,6 @@ Kirigami.ScrollablePage
             Kirigami.Theme.colorSet: Kirigami.Theme.Selection
             color: Kirigami.Theme.backgroundColor
             z: -1
-            visible: ListView.isCurrent
         }
         currentIndex: -1
 
@@ -81,14 +90,18 @@ Kirigami.ScrollablePage
             opacity: mouse.containsMouse ? 0.7 : 1
 
             Keys.onReturnPressed: {
-                mouse.clicked(null)
+                reportEmoji()
+            }
+
+            function reportEmoji() {
+                window.report(model.display, model.toolTip)
             }
 
             MouseArea {
                 id: mouse
                 anchors.fill: parent
                 hoverEnabled: true
-                onClicked: window.report(model.display, model.toolTip)
+                onClicked: reportEmoji()
             }
         }
     }
