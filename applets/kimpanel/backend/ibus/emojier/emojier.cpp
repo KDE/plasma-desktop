@@ -39,6 +39,9 @@
 #include <KCrash>
 #include <KDBusService>
 #include <QDebug>
+#include <QDBusConnection>
+#include <QDBusMessage>
+#include <QDBusConnectionInterface>
 
 #include "emojiersettings.h"
 #include "config-workspace.h"
@@ -263,9 +266,9 @@ int main(int argc, char** argv)
     KCrash::initialize();
     KQuickAddons::QtQuickSettings::init();
 
-    KLocalizedString::setApplicationDomain("org.kde.plasma.emojier");
+    KLocalizedString::setApplicationDomain("plasma.emojier");
 
-    KAboutData about(QStringLiteral("org.kde.plasma.emojier"), QStringLiteral("Emojier"), QStringLiteral(WORKSPACE_VERSION_STRING), i18n("Emoji Picker"),
+    KAboutData about(QStringLiteral("plasma.emojier"), QStringLiteral("Emojier"), QStringLiteral(WORKSPACE_VERSION_STRING), i18n("Emoji Picker"),
              KAboutLicense::GPL, i18n("(C) 2019 Aleix Pol i Gonzalez"));
     about.addAuthor( QStringLiteral("Aleix Pol i Gonzalez"), QString(), QStringLiteral("aleixpol@kde.org") );
     about.setTranslator(i18nc("NAME OF TRANSLATORS", "Your names"), i18nc("EMAIL OF TRANSLATORS", "Your emails"));
@@ -275,9 +278,25 @@ int main(int argc, char** argv)
 
     {
         QCommandLineParser parser;
+
+        QCommandLineOption replaceOption({QStringLiteral("replace")},
+                                 i18n("Replace an existing instance"));
+        parser.addOption(replaceOption);
         about.setupCommandLine(&parser);
         parser.process(app);
         about.processCommandLine(&parser);
+
+        if (parser.isSet(replaceOption)) {
+            auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasma.emojier"),
+                                                        QStringLiteral("/MainApplication"),
+                                                        QStringLiteral("org.qtproject.Qt.QCoreApplication"),
+                                                        QStringLiteral("quit"));
+            auto reply = QDBusConnection::sessionBus().call(message); //deliberately block until it's done, so we register the name after the app quits
+
+            while (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.plasma.emojier"))) {
+                QCoreApplication::processEvents(QEventLoop::AllEvents);
+            }
+        }
     }
 
     KDBusService* service = new KDBusService(KDBusService::Unique, &app);
