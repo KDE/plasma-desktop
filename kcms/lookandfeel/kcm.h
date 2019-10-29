@@ -24,8 +24,6 @@
 #include <KConfigGroup>
 #include <QDir>
 
-#include <KNewStuff3/KNS3/DownloadDialog>
-
 #include <KPackage/Package>
 #include <KQuickAddons/ConfigModule>
 
@@ -87,7 +85,7 @@ public:
     void setDesktopSwitcher(const QString &theme);
     void setWindowDecoration(const QString &library, const QString &theme);
 
-    Q_INVOKABLE void getNewStuff(QQuickItem *ctx);
+    Q_INVOKABLE void reloadModel();
 
 public Q_SLOTS:
     void load() override;
@@ -107,7 +105,6 @@ private:
     KPackage::Package m_package;
     QString m_selectedPlugin;
     QStringList m_cursorSearchPaths;
-    QPointer<KNS3::DownloadDialog> m_newStuffDialog;
 
     KConfig m_config;
     KConfigGroup m_configGroup;

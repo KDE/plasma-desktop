@@ -40,6 +40,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     I18n
     KCMUtils
     NewStuff
+    NewStuffQuick
     KDELibs4Support
     Notifications
     NotifyConfig

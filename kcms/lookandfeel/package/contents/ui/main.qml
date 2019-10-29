@@ -21,6 +21,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
+import org.kde.newstuff 1.62 as NewStuff
 import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.kcm 1.1 as KCM
 
@@ -80,11 +81,11 @@ KCM.GridViewKCM {
             Item {
                 Layout.fillWidth: true
             }
-            QtControls.Button {
-                text: i18n("Get New Global Themes...")
-                icon.name: "get-hot-new-stuff"
-                onClicked: kcm.getNewStuff(this);
-                visible: KAuthorized.authorize("ghns")
+            NewStuff.Button {
+                downloadNewWhat: i18n("Global Themes")
+                configFile: "lookandfeel.knsrc"
+                viewMode: NewStuff.Page.ViewMode.Preview
+                onChangedEntriesChanged: kcm.reloadModel();
             }
         }
     }
