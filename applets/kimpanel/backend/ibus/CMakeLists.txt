@@ -16,7 +16,6 @@ if(IBUS_FOUND AND GLIB2_FOUND AND GIO_FOUND AND GOBJECT_FOUND)
     add_subdirectory(emojier)
 
     if (Qt5X11Extras_FOUND AND XCB_XCB_FOUND AND XCB_KEYSYMS_FOUND)
-        include_directories(${Qt5X11Extras_INCLUDE_DIRS})
         include_directories(${XCB_XCB_INCLUDE_DIRS})
         include_directories(${XCB_KEYSYMS_INCLUDE_DIRS})
         set(kimpanel_ibus_panel_SRCS

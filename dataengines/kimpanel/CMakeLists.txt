@@ -21,7 +21,6 @@ target_include_directories(plasma_engine_kimpanel PRIVATE ${CMAKE_CURRENT_BINARY
 set_target_properties(plasma_engine_kimpanel PROPERTIES PREFIX "")
 target_link_libraries(plasma_engine_kimpanel
 	KF5::Plasma
-	KF5::Service
 	Qt5::DBus
 )
 kcoreaddons_desktop_to_json(plasma_engine_kimpanel plasma-dataengine-kimpanel.desktop)
