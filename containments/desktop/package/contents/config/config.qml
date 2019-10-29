@@ -45,11 +45,4 @@ ConfigModel {
          source: "ConfigFilter.qml"
          visible: isFolder
     }
-
-    ConfigCategory {
-         name: i18n("Tweaks")
-         icon: "preferences-other"
-         source: "ConfigTweaks.qml"
-         visible: plasmoid.configuration.showTweaks && ("containmentType" in plasmoid)
-    }
 }

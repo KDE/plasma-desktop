@@ -131,22 +131,5 @@
       <label>List of MIME types to filter by.</label>
       <default>all/all</default>
     </entry>
-
-    <entry name="showTweaks" type="Bool">
-      <label>Whether to show the "Tweaks" config page. Only used when serving as containment.</label>
-      <default>true</default>
-    </entry>
-    <entry name="showToolbox" type="Bool">
-      <label>Whether to show the Desktop Toolbox. Only used when serving as containment.</label>
-      <default>true</default>
-    </entry>
-    <entry name="pressToMove" type="Bool">
-      <label>Whether to activate widget handles and widget move mode by long press. Only used when serving as containment.</label>
-      <default>true</default>
-    </entry>
-    <entry name="pressToMoveHelp" type="Bool">
-      <label>Whether to show an info notification about pressToMove mode after enabling it or when the containment becomes mutable (i.e. widgets are unlocked).</label>
-      <default>true</default>
-    </entry>
   </group>
 </kcfg>

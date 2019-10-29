@@ -239,50 +239,6 @@ FolderViewDropArea {
         CompactRepresentation { folderView: folderViewLayer.view }
     }
 
-    Connections {
-        target: plasmoid
-
-        ignoreUnknownSignals: true
-
-
-        onImmutableChanged: {
-            if (root.isContainment && !plasmoid.immutable) {
-                pressToMoveHelp.show();
-            }
-        }
-    }
-
-    Connections {
-        target: plasmoid.configuration
-
-        onPressToMoveChanged: {
-            if (plasmoid.configuration.pressToMove && plasmoid.configuration.pressToMoveHelp && !plasmoid.immutable) {
-                pressToMoveHelp.show();
-            }
-        }
-    }
-
-    Binding {
-        target: toolBox
-        property: "visible"
-        value: plasmoid.configuration.showToolbox
-    }
-
-    Desktop.InfoNotification {
-        id: pressToMoveHelp
-
-        enabled: plasmoid.configuration.pressToMove && plasmoid.configuration.pressToMoveHelp
-
-        iconName: "plasma"
-        titleText: i18n("Widgets unlocked")
-        text: i18n("You can press and hold widgets to move them and reveal their handles.")
-        acknowledgeActionText: i18n("Got it")
-
-        onAcknowledged: {
-            plasmoid.configuration.pressToMoveHelp = false;
-        }
-    }
-
     PlasmaCore.FrameSvgItem {
         id : highlightItemSvg
 
@@ -346,7 +302,7 @@ FolderViewDropArea {
             id: appletContainer
             editModeCondition: plasmoid.immutable
                 ? ContainmentLayoutManager.ItemContainer.Locked
-                : (plasmoid.configuration.pressToMove ? ContainmentLayoutManager.ItemContainer.AfterPressAndHold : ContainmentLayoutManager.ItemContainer.AfterMouseOver)
+                : ContainmentLayoutManager.ItemContainer.AfterPressAndHold
             configOverlayComponent: ConfigOverlay {}
             onUserDrag: {
                 var pos = mapToItem(root.parent, dragCenter.x, dragCenter.y);
