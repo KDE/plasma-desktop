@@ -30,7 +30,6 @@ Item {
     implicitWidth: Math.max(buttonsLayout_1.width, buttonsLayout_2.width, row.width) + units.smallSpacing * 2
     implicitHeight: row.height + 20
 
-    readonly property string lockWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Lock Widgets")
     readonly property string removePanelButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
     readonly property string addWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets...")
     readonly property string addSpacerButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Spacer")
@@ -66,32 +65,6 @@ Item {
 
         rowSpacing: units.smallSpacing
         columnSpacing: units.smallSpacing
-
-        PlasmaComponents.Button {
-            iconSource: "document-encrypt"
-            text: buttonsLayout_1.showText ? root.lockWidgetsButtonText : ""
-            tooltip: buttonsLayout_1.showText ? "" : root.lockWidgetsButtonText
-            Layout.fillWidth: true
-            onClicked: {
-                plasmoid.action("lock widgets").trigger();
-                configDialog.close();
-            }
-        }
-
-        Item {
-            width: units.smallSpacing
-            height: units.smallSpacing
-        }
-
-        Kirigami.Separator {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-        }
-
-        Item {
-            width: units.smallSpacing
-            height: units.smallSpacing
-        }
 
         PlasmaComponents.Button {
             iconSource: "delete"
