@@ -42,44 +42,11 @@ KCMQtQuickSettingsModule::KCMQtQuickSettingsModule(QWidget *parent, const QVaria
     setAboutData(about);
 
     m_ui->setupUi(this);
-    m_ui->backendCombo->addItem(i18n("Automatic"), QVariant(QStringLiteral()));//so data matches empty config
-    m_ui->backendCombo->addItem(i18n("Open GL"), QVariant(QStringLiteral("opengl")));
-    m_ui->backendCombo->addItem(i18n("Software"), QVariant(QStringLiteral("software")));
-
-    m_ui->renderLoopCombo->addItem(i18n("Automatic"), QVariant(QStringLiteral()));
-    m_ui->renderLoopCombo->addItem(i18n("Basic"), QVariant(QStringLiteral("basic")));
-    m_ui->renderLoopCombo->addItem(i18n("Threaded"), QVariant(QStringLiteral("threaded")));
-
-    connect(m_ui->backendCombo, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, static_cast<void (KCMQtQuickSettingsModule::*)()>(&KCMQtQuickSettingsModule::changed));
-    connect(m_ui->renderLoopCombo, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, static_cast<void (KCMQtQuickSettingsModule::*)()>(&KCMQtQuickSettingsModule::changed));
-
-    connect(m_ui->glCoreProfileCheckbox, &QCheckBox::stateChanged, this, static_cast<void (KCMQtQuickSettingsModule::*)()>(&KCMQtQuickSettingsModule::changed));
+    addConfig(m_settings.get(), this);
 }
 
 KCMQtQuickSettingsModule::~KCMQtQuickSettingsModule()
 {
-}
-
-void KCMQtQuickSettingsModule::load()
-{
-    m_ui->backendCombo->setCurrentIndex(m_ui->backendCombo->findData(m_settings->sceneGraphBackend()));
-    m_ui->renderLoopCombo->setCurrentIndex(m_ui->renderLoopCombo->findData(m_settings->renderLoop()));
-    m_ui->glCoreProfileCheckbox->setChecked(m_settings->forceGlCoreProfile());
-}
-
-void KCMQtQuickSettingsModule::save()
-{
-    m_settings->setSceneGraphBackend(m_ui->backendCombo->currentData().toString());
-    m_settings->setRenderLoop(m_ui->renderLoopCombo->currentData().toString());
-    m_settings->setForceGlCoreProfile(m_ui->glCoreProfileCheckbox->isChecked());
-    m_settings->save();
-}
-
-void KCMQtQuickSettingsModule::defaults()
-{
-    m_ui->backendCombo->setCurrentIndex(0);
-    m_ui->renderLoopCombo->setCurrentIndex(0);
-    m_ui->glCoreProfileCheckbox->setChecked(false);
 }
 
 #include "kcmqtquicksettings.moc"

@@ -44,10 +44,6 @@ public:
     explicit KCMQtQuickSettingsModule(QWidget *parent, const QVariantList &);
     ~KCMQtQuickSettingsModule() override;
 
-    void load() override;
-    void save() override;
-    void defaults() override;
-
 private:
     QScopedPointer<Ui::KCMQtQuickSettingsWidget> m_ui;
     QScopedPointer<PlasmaQtQuickSettings::RendererSettings> m_settings;

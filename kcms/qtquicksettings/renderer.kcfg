@@ -5,11 +5,21 @@
                           http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
     <kcfgfile arg="true" />
     <group name="QtQuickRendererSettings">
-        <entry name="RenderLoop" type="String">
-            <default></default>
+        <entry name="RenderLoop" type="Enum">
+            <choices name="RenderLoopType">
+                <choice name="automaticloop" />
+                <choice name="basic" />
+                <choice name="threaded" />
+            </choices>
+            <default>automaticloop</default>
         </entry>
-        <entry name="SceneGraphBackend" type="String">
-            <default></default>
+        <entry name="SceneGraphBackend" type="Enum">
+            <choices name="SceneGraphBackendType">
+                <choice name="automaticbackend" />
+                <choice name="opengl" />
+                <choice name="software" />
+            </choices>
+            <default>automaticbackend</default>
         </entry>
         <entry name="ForceGlCoreProfile" type="Bool">
             <default>false</default>
