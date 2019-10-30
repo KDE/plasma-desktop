@@ -115,6 +115,8 @@ void KCMDesktopTheme::setPendingDeletion(int index, bool pending)
         const auto nonPending = m_model->match(idx, PendingDeletionRole, false);
         m_settings->setName(nonPending.first().data(PluginNameRole).toString());
     }
+
+    settingsChanged();
 }
 
 void KCMDesktopTheme::getNewStuff(QQuickItem *ctx)
