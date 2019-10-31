@@ -307,9 +307,6 @@ bool CursorThemeConfig::applyTheme(const CursorTheme *theme, const int size)
     // Update the Xcursor X resources
     runRdb(0);
 
-    // Notify all applications that the cursor theme has changed
-    KGlobalSettings::self()->emitChange(KGlobalSettings::CursorChanged);
-
     // Reload the standard cursors
     QStringList names;
 
@@ -389,6 +386,8 @@ void CursorThemeConfig::save()
     if (!applyTheme(theme, m_currentSize)) {
         emit showInfoMessage(i18n("You have to restart the Plasma session for these changes to take effect."));
     }
+
+    KGlobalSettings::self()->emitChange(KGlobalSettings::CursorChanged);
     setNeedsSave(false);
 }
 
