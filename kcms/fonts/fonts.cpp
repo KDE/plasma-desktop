@@ -555,11 +555,19 @@ void KFonts::setNearestExistingFonts()
 
 void KFonts::load()
 {
+    // first load all the settings
     m_settings->load();
+    m_fontAASettings->load();
+
+    // Then set the existing fonts based on those settings
     setNearestExistingFonts();
+
+    // Load preview
+    // NOTE: This needs to be done AFTER AA settings is loaded
+    // otherwise AA settings will be resetted in process of loading
+    // previews
     engine()->addImageProvider("preview", new PreviewImageProvider(m_settings->font()));
 
-    m_fontAASettings->load();
     setNeedsSave(false);
 }
 
