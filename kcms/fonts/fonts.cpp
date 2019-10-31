@@ -512,10 +512,10 @@ KFonts::KFonts(QObject *parent, const QVariantList &args)
     connect(m_settings, &FontsSettings::configChanged, this, &KFonts::updateNeedsSave);
     connect(m_settings, &FontsSettings::fontChanged, this, &KFonts::updateNeedsSave);
     connect(m_settings, &FontsSettings::fixedChanged, this, &KFonts::updateNeedsSave);
-    connect(m_settings, &FontsSettings::smallestReadableFont, this, &KFonts::updateNeedsSave);
-    connect(m_settings, &FontsSettings::toolBarFont, this, &KFonts::updateNeedsSave);
-    connect(m_settings, &FontsSettings::menuFont, this, &KFonts::updateNeedsSave);
-    connect(m_settings, &FontsSettings::activeFont, this, &KFonts::updateNeedsSave);
+    connect(m_settings, &FontsSettings::smallestReadableFontChanged, this, &KFonts::updateNeedsSave);
+    connect(m_settings, &FontsSettings::toolBarFontChanged, this, &KFonts::updateNeedsSave);
+    connect(m_settings, &FontsSettings::menuFontChanged, this, &KFonts::updateNeedsSave);
+    connect(m_settings, &FontsSettings::activeFontChanged, this, &KFonts::updateNeedsSave);
 
     connect(m_fontAASettings, &FontAASettings::subPixelCurrentIndexChanged, this, updateState);
     connect(m_fontAASettings, &FontAASettings::hintingCurrentIndexChanged, this, updateState);
