@@ -316,6 +316,7 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
 
 void FontAASettings::defaults()
 {
+    setExclude(false);
     setExcludeTo(15);
     setExcludeFrom(8);
     setAntiAliasing(true);
@@ -345,7 +346,7 @@ bool FontAASettings::exclude() const
     return m_state.exclude;
 }
 
-void FontAASettings::setExcludeTo(const int &excludeTo)
+void FontAASettings::setExcludeTo(int excludeTo)
 {
     if (m_state.excludeTo == excludeTo) {
         return;
@@ -360,14 +361,14 @@ int FontAASettings::excludeTo() const
     return m_state.excludeTo;
 }
 
-void FontAASettings::setExcludeFrom(const int &excludeTo)
+void FontAASettings::setExcludeFrom(int excludeFrom)
 {
-    if (m_state.excludeFrom == excludeTo) {
+    if (m_state.excludeFrom == excludeFrom) {
         return;
     }
 
-    m_state.excludeFrom = excludeTo;
-    emit excludeToChanged();
+    m_state.excludeFrom = excludeFrom;
+    emit excludeFromChanged();
 }
 
 int FontAASettings::excludeFrom() const

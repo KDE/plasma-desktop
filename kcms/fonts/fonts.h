@@ -84,10 +84,10 @@ public:
     void setExclude(bool exclude);
     bool exclude() const;
 
-    void setExcludeTo(const int &excludeTo);
+    void setExcludeTo(int excludeTo);
     int excludeTo() const;
 
-    void setExcludeFrom(const int &excludeTo);
+    void setExcludeFrom(int excludeFrom);
     int excludeFrom() const;
 
     void setAntiAliasing(bool antiAliasing);
