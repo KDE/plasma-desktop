@@ -96,4 +96,17 @@ Item {
         id: audioStreamIcon
         anchors.fill: parent
     }
+
+    MouseArea {
+        anchors.fill: parent
+        hoverEnabled: true
+        onClicked: toggleMuted()
+
+        PlasmaCore.FrameSvgItem {
+            anchors.fill: parent
+            visible: parent.containsMouse
+            imagePath: "widgets/viewitem"
+            prefix: "hover"
+        }
+    }
 }
