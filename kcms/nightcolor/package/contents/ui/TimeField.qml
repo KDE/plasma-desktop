@@ -57,8 +57,7 @@ QQC2.TextField {
         var minutes = text.slice(3, 5);
 
         var date = new Date();
-        date.setHours(hours);
-        date.setMinutes(minutes);
+        date.setHours(hours, minutes, 0, 0);
 
         backend = date;
     }
