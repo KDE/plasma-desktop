@@ -21,6 +21,7 @@ include(ECMOptionalAddSubdirectory)
 include(ECMQtDeclareLoggingCategory)
 include(FeatureSummary)
 include(CheckIncludeFiles)
+include(KDEClangFormat)
 
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Quick
@@ -181,5 +182,9 @@ if(X11_Xkb_FOUND AND XCB_XKB_FOUND)
     add_subdirectory(kaccess)
 endif()
 install(FILES org.kde.plasmashell.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+
+# add clang-format target for all our real source files
+file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
+kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
