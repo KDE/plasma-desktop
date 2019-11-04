@@ -150,23 +150,28 @@ void FontAASettings::load()
     excludeToChanged();
     excludeFromChanged();
 
-    KXftConfig::SubPixel::Type spType;
-    if (!xft.getSubPixelType(spType) || KXftConfig::SubPixel::NotSet == spType) {
+    // start with empty subpixel type
+    KXftConfig::SubPixel::Type spType = KXftConfig::SubPixel::NotSet;
+    // get subpixel type from config
+    xft.getSubPixelType(spType);
+    m_originalState.subPixel = spType;
+    // if it is not set, we set it to rgb
+    if (spType == KXftConfig::SubPixel::NotSet) {
         spType = KXftConfig::SubPixel::Rgb;
     }
-
     setSubPixel(spType);
-    m_originalState.subPixel = spType;
     m_state.subPixelHasLocalConfig = xft.subPixelTypeHasLocalConfig();
 
-    KXftConfig::Hint::Style hStyle;
-
-    if (!xft.getHintStyle(hStyle) || KXftConfig::Hint::NotSet == hStyle) {
+    // start with empty hint style
+    KXftConfig::Hint::Style hStyle = KXftConfig::Hint::NotSet;
+    // get value from config;
+    xft.getHintStyle(hStyle);
+    m_originalState.hinting = hStyle;
+    // if it is not set, we set it to slight hinting
+    if (hStyle == KXftConfig::Hint::NotSet) {
         hStyle = KXftConfig::Hint::Slight;
     }
-
     setHinting(hStyle);
-    m_originalState.hinting = hStyle;
     m_state.hintingHasLocalConfig = xft.hintStyleHasLocalConfig();
 
     KConfig _cfgfonts("kcmfonts");
