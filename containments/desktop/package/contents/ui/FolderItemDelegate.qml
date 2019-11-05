@@ -18,6 +18,7 @@
  ***************************************************************************/
 
 import QtQuick 2.8
+import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
 
 import org.kde.plasma.plasmoid 2.0
@@ -380,6 +381,9 @@ Item {
                         prefix: frameLoader.prefix
 
                         imagePath: "widgets/viewitem"
+
+                        // Use inactive highlight effect when something else has focus
+                        opacity: Window.active ? 1 : 0.4
                     }
                 }
 
