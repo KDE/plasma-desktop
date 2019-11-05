@@ -146,6 +146,7 @@ Item {
     PlasmaComponents.QueryDialog {
         id: confirmDialog
         visualParent: plasmoid.compactRepresentationItem
+        hideOnWindowDeactivate: true
         titleText: i18n("Touchpad")
         titleIcon: "dialog-warning"
         message: i18n("No mouse was detected.\nAre you sure you want to disable the touchpad?")
