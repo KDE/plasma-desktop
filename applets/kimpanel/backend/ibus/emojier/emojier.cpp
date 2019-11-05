@@ -128,7 +128,7 @@ public:
 
     EmojiModel() {
         QLocale locale;
-        const QString dictName = "ibus/dicts/emoji-" + locale.bcp47Name() + ".dict";
+        const QString dictName = "ibus/dicts/emoji-" + locale.bcp47Name().replace(QLatin1Char('-'), QLatin1Char('_')) + ".dict";
         const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, dictName);
         if (path.isEmpty()) {
             qWarning() << "could not find" << dictName;
