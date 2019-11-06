@@ -3,6 +3,7 @@
  * Copyright (C) 2007 Jeremy Whiting <jpwhiting@kde.org>
  * Copyright (C) 2016 Olivier Churlaud <olivier@churlaud.com>
  * Copyright (C) 2019 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright (c) 2019 Cyril Rossi <cyril.rossi@enioka.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -52,15 +53,15 @@
 
 #include "colorsmodel.h"
 #include "filterproxymodel.h"
-
-static const QString s_defaultColorSchemeName = QStringLiteral("Breeze");
+#include "colorssettings.h"
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "kcm_colors.json", registerPlugin<KCMColors>();)
 
 KCMColors::KCMColors(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+    : KQuickAddons::ManagedConfigModule(parent, args)
     , m_model(new ColorsModel(this))
     , m_filteredModel(new FilterProxyModel(this))
+    , m_settings(new ColorsSettings(this))
     , m_config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")))
 {
     qmlRegisterUncreatableType<KCMColors>("org.kde.private.kcms.colors", 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
@@ -72,12 +73,17 @@ KCMColors::KCMColors(QObject *parent, const QVariantList &args)
     about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@privat.broulik.de"));
     setAboutData(about);
 
-    connect(m_model, &ColorsModel::selectedSchemeChanged, this, [this] {
-        m_selectedSchemeDirty = true;
-        setNeedsSave(true);
-    });
     connect(m_model, &ColorsModel::pendingDeletionsChanged, this, [this] {
         setNeedsSave(true);
+    });
+
+    connect(m_model, &ColorsModel::selectedSchemeChanged, this, [this](const QString &scheme) {
+        m_selectedSchemeDirty = true;
+        m_settings->setColorScheme(scheme);
+    });
+
+    connect(m_settings, &ColorsSettings::colorSchemeChanged, this, [this] {
+        m_model->setSelectedScheme(m_settings->colorScheme());
     });
 
     connect(m_model, &ColorsModel::selectedSchemeChanged, m_filteredModel, &FilterProxyModel::setSelectedScheme);
@@ -293,20 +299,20 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
 
 void KCMColors::load()
 {
+    ManagedConfigModule::load();
     m_model->load();
 
     m_config->markAsClean();
     m_config->reparseConfiguration();
 
-    KConfigGroup group(m_config, "General");
-    const QString schemeName = group.readEntry("ColorScheme", s_defaultColorSchemeName);
+    const QString schemeName = m_settings->colorScheme();
 
     // If the scheme named in kdeglobals doesn't exist, show a warning and use default scheme
     if (m_model->indexOfScheme(schemeName) == -1) {
-        m_model->setSelectedScheme(s_defaultColorSchemeName);
+        m_model->setSelectedScheme(m_settings->defaultColorSchemeValue());
         // These are normally synced but initially the model doesn't emit a change to avoid the
         // Apply button from being enabled without any user interaction. Sync manually here.
-        m_filteredModel->setSelectedScheme(s_defaultColorSchemeName);
+        m_filteredModel->setSelectedScheme(m_settings->defaultColorSchemeValue());
         emit showSchemeNotInstalledWarning(schemeName);
     } else {
         m_model->setSelectedScheme(schemeName);
@@ -315,6 +321,7 @@ void KCMColors::load()
 
     {
         KConfig cfg(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
+        KConfigGroup group(m_config, "General");
         group = KConfigGroup(&cfg, "X11");
         m_applyToAlien = group.readEntry("exportKDEColors", true);
     }
@@ -322,20 +329,16 @@ void KCMColors::load()
 
 void KCMColors::save()
 {
+    ManagedConfigModule::save();
     if (m_selectedSchemeDirty) {
         saveColors();
     }
 
     processPendingDeletions();
-
-    setNeedsSave(false);
 }
 
 void KCMColors::saveColors()
 {
-    KConfigGroup grp(m_config, "General");
-    grp.writeEntry("ColorScheme", m_model->selectedScheme());
-
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
         QStringLiteral("color-schemes/%1.colors").arg(m_model->selectedScheme()));
 
@@ -462,13 +465,6 @@ void KCMColors::processPendingDeletions()
     }
 
     m_model->removeItemsPendingDeletion();
-}
-
-void KCMColors::defaults()
-{
-    m_model->setSelectedScheme(s_defaultColorSchemeName);
-
-    setNeedsSave(true);
 }
 
 #include "colors.moc"

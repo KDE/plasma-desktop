@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2019 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright (c) 2019 Cyril Rossi <cyril.rossi@enioka.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -27,7 +28,7 @@
 
 #include <KNewStuff3/KNS3/DownloadDialog>
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickAddons/ManagedConfigModule>
 
 class QProcess;
 class QTemporaryFile;
@@ -39,8 +40,9 @@ class FileCopyJob;
 
 class ColorsModel;
 class FilterProxyModel;
+class ColorsSettings;
 
-class KCMColors : public KQuickAddons::ConfigModule
+class KCMColors : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
 
@@ -79,11 +81,8 @@ public:
 public Q_SLOTS:
     void load() override;
     void save() override;
-    void defaults() override;
 
 Q_SIGNALS:
-    void selectedSchemeChanged();
-    void selectedSchemeIndexChanged();
     void downloadingFileChanged();
 
     void showSuccessMessage(const QString &message);
@@ -99,6 +98,7 @@ private:
 
     ColorsModel *m_model;
     FilterProxyModel *m_filteredModel;
+    ColorsSettings *m_settings;
 
     bool m_selectedSchemeDirty = false;
 
