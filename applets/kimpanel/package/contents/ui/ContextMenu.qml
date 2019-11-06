@@ -112,8 +112,8 @@ Item {
                 onClicked: {
                     kimpanel.hideAction(actionItem.key);
                 }
-                enabled: kimpanel.visibleButtons > 1
-                visible: kimpanel.visibleButtons > 1
+                enabled: actionItem.key !== 'kimpanel-placeholder'
+                visible: enabled
             }
 
             PlasmaComponents.MenuItem {

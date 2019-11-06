@@ -37,6 +37,10 @@ Item {
     Layout.preferredHeight: Layout.minimumHeight
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
+    Component.onCompleted: {
+        timer.restart();
+    }
+
     InputPanel { }
 
     Flow {
@@ -70,6 +74,9 @@ Item {
                     hint: model.hint
                     onTriggered : {
                         if (button === Qt.LeftButton) {
+                            if (model.key == 'kimpanel-placeholder') {
+                                return;
+                            }
                             clickHandler(model.key);
                             // clickHandler will trigger the menu, but we have to wait for
                             // the menu data. So we have to set the visual parent ahead.
@@ -153,10 +160,12 @@ Item {
         id: timer
         interval: 50
         onTriggered: {
-            var data = dataEngine.data["statusbar"]["Properties"];
-            if (!data) {
-                return;
+            var barData = dataEngine.data["statusbar"];
+            var data = [];
+            if (barData && barData["Properties"]) {
+                data = barData["Properties"];
             }
+            var nodata = data.length == 0;
             var count = list.count;
             var c = 0, i;
             var hiddenActions = [];
@@ -192,6 +201,16 @@ Item {
                 c = c + 1;
             }
             contextMenu.actionList = hiddenActions;
+
+            // Add a place holder if there is nothing.
+            if (list.count == 0 && !nodata) {
+                var itemData = {'key': 'kimpanel-placeholder',
+                                'icon': 'draw-freehand',
+                                'label': i18n('Input Method Panel'),
+                                'tip': '',
+                                'hint': ''};
+                list.append(itemData);
+            }
         }
     }
 
