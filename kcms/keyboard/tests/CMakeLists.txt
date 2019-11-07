@@ -16,41 +16,8 @@ macro(KEYBOARD_DAEMON_UNIT_TESTS _testname)
 )
 endmacro(KEYBOARD_DAEMON_UNIT_TESTS)
 
-macro(KEYBOARD_PREVIEW_UNIT_TESTS _testname)
-		include_directories("..")
-               set(test_SRCS ../preview/${_testname}.cpp ../preview/geometry_components.cpp ../xkb_rules.cpp ../debug.cpp)
-               add_executable(${_testname}_test ${_testname}_test.cpp ${test_SRCS})
-               ecm_mark_nongui_executable(${_testname}_test)
-               ecm_mark_as_test(${_testname}_test)
-               add_test(NAME kcm-keyboard-${_testname} COMMAND ${_testname}_test)
-               target_link_libraries(${_testname}_test
-                                     Qt5::Concurrent
-                                     Qt5::Widgets
-                                     Qt5::X11Extras
-                                     Qt5::Xml
-                                     Qt5::Test
-                                     KF5::I18n
-                                     KF5::WindowSystem
-                                     ${X11_Xkbfile_LIB}
-                                     ${X11_LIBRARIES}
-		)
-               set_source_files_properties(${test_SRCS} PROPERTIES COMPILE_FLAGS "-fexceptions")
-endmacro(KEYBOARD_PREVIEW_UNIT_TESTS)
-
-
 keyboard_daemon_unit_tests(xkb_rules)
 keyboard_daemon_unit_tests(iso_codes)
-
-find_package(Boost)
-
-if(Boost_FOUND)
-  keyboard_preview_unit_tests(geometry_parser)
-   if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-      # the default maximum template expansion depth (256) is not enough
-      set_property(SOURCE ../preview/geometry_parser.cpp APPEND_STRING PROPERTY COMPILE_FLAGS " -ftemplate-depth=512")
-   endif()
-#  set_source_files_properties(${preview_SRCS} PROPERTIES COMPILE_FLAGS "-fexceptions")
-endif(Boost_FOUND)
 
 add_executable(flags_test flags_test.cpp ../flags.cpp ../x11_helper.cpp ../keyboard_config.cpp ../xkb_rules.cpp ../debug.cpp)
 ecm_mark_nongui_executable(flags_test)

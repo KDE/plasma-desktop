@@ -23,17 +23,19 @@
 #include "xkb_rules.h"
 #include "flags.h"
 #include "iso_codes.h"
+#include "tastenbrett.h"
 
 #include "ui_kcm_add_layout_dialog.h"
 
 #include <config-keyboard.h>
 
-
-AddLayoutDialog::AddLayoutDialog(const Rules* rules_, Flags* flags_, const QString& model_, bool showLabel, QWidget* parent):
+AddLayoutDialog::AddLayoutDialog(const Rules* rules_, Flags* flags_, const QString& model_,
+                                 const QStringList &options_, bool showLabel, QWidget* parent):
 		QDialog(parent),
 		rules(rules_),
 		flags(flags_),
-		model(model_),
+        model(model_),
+        options(options_),
 		selectedLanguage(QStringLiteral("no_language"))
 {
     layoutDialogUi = new Ui_AddLayoutDialog();
@@ -69,11 +71,9 @@ AddLayoutDialog::AddLayoutDialog(const Rules* rules_, Flags* flags_, const QStri
     languageChanged(0);
     connect(layoutDialogUi->languageComboBox, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &AddLayoutDialog::languageChanged);
     connect(layoutDialogUi->layoutComboBox, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &AddLayoutDialog::layoutChanged);
-#ifdef NEW_GEOMETRY
+
     connect(layoutDialogUi->prevbutton, &QPushButton::clicked, this, &AddLayoutDialog::preview);
-#else
-    layoutDialogUi->prevbutton->setVisible(false);
-#endif
+    layoutDialogUi->prevbutton->setVisible(Tastenbrett::exists());
 }
 
 void AddLayoutDialog::languageChanged(int langIdx)
@@ -160,19 +160,9 @@ void AddLayoutDialog::accept()
 	QDialog::accept();
 }
 
-
-#ifdef NEW_GEOMETRY
 void AddLayoutDialog::preview()
 {
     int index = layoutDialogUi->variantComboBox->currentIndex();
     QString variant = layoutDialogUi->variantComboBox->itemData(index).toString();
-    KeyboardPainter* layoutPreview = new KeyboardPainter();
-
-    QString title = Flags::getLongText(LayoutUnit(selectedLayout, variant), rules);
-    layoutPreview->generateKeyboardLayout(selectedLayout, variant, model, title);
-    layoutPreview->setModal(true);
-    layoutPreview->exec();
-
-    delete layoutPreview;
+    Tastenbrett::launch(model, selectedLayout, variant, options.join(','));
 }
-#endif

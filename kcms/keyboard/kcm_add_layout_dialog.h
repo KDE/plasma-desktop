@@ -23,7 +23,6 @@
 #include <QDialog>
 
 #include "keyboard_config.h"
-#include "preview/keyboardpainter.h"
 
 #include <config-keyboard.h>
 
@@ -36,7 +35,8 @@ class AddLayoutDialog: public QDialog
 	Q_OBJECT
 
 public:
-	AddLayoutDialog(const Rules* rules, Flags* flags, const QString& model, bool showLabel, QWidget* parent=nullptr);
+    AddLayoutDialog(const Rules* rules, Flags* flags, const QString& model,
+                    const QStringList &options, bool showLabel, QWidget* parent=nullptr);
 
 	LayoutUnit getSelectedLayoutUnit() { return selectedLayoutUnit; }
 	QString getvariant(QString variant);
@@ -44,15 +44,14 @@ public:
 
 public Q_SLOTS:
 	void languageChanged(int langIdx);
-	void layoutChanged(int layoutIdx);
-#ifdef NEW_GEOMETRY
-	void preview();
-#endif
+    void layoutChanged(int layoutIdx);
+    void preview();
 
 private:
 	const Rules* rules;
 	Flags* flags;
 	const QString& model;
+    const QStringList &options;
 	Ui_AddLayoutDialog* layoutDialogUi;
 	QString selectedLanguage;
 	QString selectedLayout;

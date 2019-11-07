@@ -34,15 +34,13 @@
 #include <QDebug>
 
 #include "keyboard_config.h"
-#ifdef NEW_GEOMETRY
-#include "preview/keyboardpainter.h"
-#endif
 #include "xkb_rules.h"
 #include "flags.h"
 #include "x11_helper.h"
 #include "kcm_view_models.h"
 #include "kcm_add_layout_dialog.h"
 #include "bindings.h"
+#include "tastenbrett.h"
 
 #include "kcmmisc.h"
 #include "ui_kcm_add_layout_dialog.h"
@@ -231,7 +229,12 @@ void KCMKeyboardWidget::addLayout()
 		return;
 	}
 
-    AddLayoutDialog dialog(rules, keyboardConfig->isFlagShown() ? flags : nullptr, keyboardConfig->keyboardModel, keyboardConfig->isLabelShown(), this);
+    AddLayoutDialog dialog(rules,
+                           keyboardConfig->isFlagShown() ? flags : nullptr,
+                           keyboardConfig->keyboardModel,
+                           keyboardConfig->xkbOptions,
+                           keyboardConfig->isLabelShown(),
+                           this);
     dialog.setModal(true);
     if( dialog.exec() == QDialog::Accepted ) {
     	keyboardConfig->layouts.append( dialog.getSelectedLayoutUnit() );
@@ -335,9 +338,7 @@ void KCMKeyboardWidget::initializeLayoutsUI()
 	connect(uiWidget->moveUpBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::moveUp);
 	connect(uiWidget->moveDownBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::moveDown);
 
-#ifdef NEW_GEOMETRY
     connect(uiWidget->previewButton, &QAbstractButton::clicked, this, &KCMKeyboardWidget::previewLayout);
-#endif
 	connect(uiWidget->xkbGrpClearBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::clearGroupShortcuts);
 	connect(uiWidget->xkb3rdLevelClearBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::clear3rdLevelShortcuts);
 
@@ -362,35 +363,32 @@ void KCMKeyboardWidget::initializeLayoutsUI()
 	connect(uiWidget->layoutLoopCountSpinBox, SIGNAL(valueChanged(int)), this, SLOT(uiChanged()));
 }
 
-#ifdef NEW_GEOMETRY
-void KCMKeyboardWidget::previewLayout(){
+void KCMKeyboardWidget::previewLayout()
+{
     QModelIndex index = uiWidget->layoutsTableView->currentIndex();
 
     QModelIndex idcountry = index.sibling(index.row(),0) ;
-    QString country=uiWidget->layoutsTableView->model()->data(idcountry).toString();
-    QModelIndex idvariant = index.sibling(index.row(),2) ;
+    const QString country=uiWidget->layoutsTableView->model()->data(idcountry).toString();
+    const QModelIndex idvariant = index.sibling(index.row(),2) ;
     QString variant=uiWidget->layoutsTableView->model()->data(idvariant).toString();
-    QString model = keyboardConfig->keyboardModel;
+    const QString model = keyboardConfig->keyboardModel;
+    const QStringList options = keyboardConfig->xkbOptions;
 
-    KeyboardPainter layoutPreview;
     const LayoutInfo* layoutInfo = rules->getLayoutInfo(country);
     if (!layoutInfo) {
         return;
     }
 
-    foreach(const VariantInfo* variantInfo, layoutInfo->variantInfos) {
-        if(variant==variantInfo->description){
-            variant=variantInfo->name;
+    for (const VariantInfo *variantInfo : layoutInfo->variantInfos) {
+        if (variant == variantInfo->description) {
+            variant = variantInfo->name;
             break;
         }
     }
 
-    QString title = Flags::getLongText( LayoutUnit(country, variant), rules );
-    layoutPreview.generateKeyboardLayout(country,variant, model, title);
-    layoutPreview.setModal(true);
-    layoutPreview.exec();
+    const QString title = Flags::getLongText( LayoutUnit(country, variant), rules );
+    Tastenbrett::launch(model, country, variant, options.join(','), title);
 }
-#endif
 
 void KCMKeyboardWidget::configureLayoutsChanged()
 {
@@ -420,11 +418,8 @@ void KCMKeyboardWidget::layoutSelectionChanged()
 	uiWidget->removeLayoutBtn->setEnabled( ! selected.isEmpty() );
 	QPair<int, int> rowsRange( getSelectedRowRange(selected) );
 	uiWidget->moveUpBtn->setEnabled( ! selected.isEmpty() && rowsRange.first > 0);
-#ifdef NEW_GEOMETRY
     uiWidget->previewButton->setEnabled( uiWidget->layoutsTableView->selectionModel()->selectedRows().size() == 1 );
-#else
-    uiWidget->previewButton->setVisible(false);
-#endif
+    uiWidget->previewButton->setVisible(Tastenbrett::exists());
 	uiWidget->moveDownBtn->setEnabled( ! selected.isEmpty() && rowsRange.second < keyboardConfig->layouts.size()-1 );
 }
 

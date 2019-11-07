@@ -1,8 +1,9 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmkeyboard\")
 
+add_subdirectory(tastenbrett)
+
 option(HAVE_XINPUT "X11 XInput" OFF)
 option(HAVE_UDEV "UDev" OFF)
-option(NEW_GEOMETRY "Keyboard geometry preview" OFF)
 
 if (X11_Xinput_FOUND)
     set(HAVE_XINPUT ON)
@@ -11,7 +12,6 @@ elseif (UDEV_FOUND)
 else()
     message(STATUS "X11 XInput and UDev is not found, either is required to keep layouts with keyboard hotplugging")
 endif()
-
 
 ### kded daemon ###
 
@@ -79,37 +79,6 @@ endif()
 install( TARGETS kded_keyboard DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded )
 
 ### kcm keyboard ###
-include_directories("preview")
-
-find_package(Boost)
-
-if(Boost_FOUND)
-  set(NEW_GEOMETRY ON)
-
-  set(preview_SRCS
-    preview/geometry_components.cpp
-    preview/geometry_parser.cpp
-    preview/kbpreviewframe.cpp
-    preview/keyboardlayout.cpp
-    preview/symbol_parser.cpp
-    preview/keyaliases.cpp
-    preview/keyboardlayout.cpp
-    preview/keyboardpainter.cpp
-    preview/keysymhelper.cpp
-    preview/keysym2ucs.cpp
-    )
-
-   set_source_files_properties(preview/geometry_parser.cpp preview/symbol_parser.cpp PROPERTIES COMPILE_FLAGS "-fexceptions")
-   if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-      # the default maximum template expansion depth (256) is not enough
-      set_property(SOURCE preview/geometry_parser.cpp APPEND_STRING PROPERTY COMPILE_FLAGS " -ftemplate-depth=512")
-   endif()
-else(Boost_FOUND)
-
-  message("Boost not found, install Boost libraries to enable keyboard geometry preview")
-
-endif(Boost_FOUND)
-
 
 set(kcm_keyboard_PART_SRCS
   kcm_keyboard.cpp
@@ -124,7 +93,7 @@ set(kcm_keyboard_PART_SRCS
   iso_codes.cpp
   kcmmisc.cpp
   bindings.cpp
-  ${preview_SRCS} )
+  tastenbrett.cpp)
 
 ecm_qt_declare_logging_category(kcm_keyboard_PART_SRCS
     HEADER debug.h
@@ -173,3 +142,5 @@ if(BUILD_TESTING)
     find_package(Qt5Test ${QT_MIN_VERSION} CONFIG REQUIRED)
     add_subdirectory( tests )
 endif()
+
+add_dependencies(kcm_keyboard tastenbrett)
