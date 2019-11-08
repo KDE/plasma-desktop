@@ -68,14 +68,15 @@ extern "C"
 
         // This key is written by the "colors" module.
         bool exportKDEColors = config.readEntry("exportKDEColors", true);
-        if (exportKDEColors)
+        if (exportKDEColors) {
             flags |= KRdbExportColors;
+        }
         runRdb( flags );
     }
 }
 
 KCMStyle::KCMStyle(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+    : KQuickAddons::ManagedConfigModule(parent, args)
     , m_settings(new StyleSettings(this))
     , m_model(new StylesModel(this))
 {
@@ -94,17 +95,17 @@ KCMStyle::KCMStyle(QObject *parent, const QVariantList &args)
     about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@broulik.de"));
     setAboutData(about);
 
-    connect(m_model, &StylesModel::selectedStyleChanged, this, [this] {
-        m_selectedStyleDirty = true;
-        setNeedsSave(true);
+    connect(m_model, &StylesModel::selectedStyleChanged, this, [this](const QString &style) {
+        m_settings->setWidgetStyle(style);
+    });
+    connect(m_settings, &StyleSettings::widgetStyleChanged, this, [this] {
+        m_model->setSelectedStyle(m_settings->widgetStyle());
     });
     connect(m_settings, &StyleSettings::iconsOnButtonsChanged, this, [this] {
         m_effectsDirty = true;
-        setNeedsSave(true);
     });
     connect(m_settings, &StyleSettings::iconsInMenusChanged, this, [this] {
         m_effectsDirty = true;
-        setNeedsSave(true);
     });
 }
 
@@ -131,8 +132,9 @@ void KCMStyle::setMainToolBarStyle(ToolBarStyle style)
         m_mainToolBarStyle = style;
         emit mainToolBarStyleChanged();
 
+        const QMetaEnum toolBarStyleEnum = QMetaEnum::fromType<ToolBarStyle>();
+        m_settings->setToolButtonStyle(toolBarStyleEnum.valueToKey(m_mainToolBarStyle));
         m_effectsDirty = true;
-        setNeedsSave(true);
     }
 }
 
@@ -147,8 +149,9 @@ void KCMStyle::setOtherToolBarStyle(ToolBarStyle style)
         m_otherToolBarStyle = style;
         emit otherToolBarStyleChanged();
 
+        const QMetaEnum toolBarStyleEnum = QMetaEnum::fromType<ToolBarStyle>();
+        m_settings->setToolButtonStyleOtherToolbars(toolBarStyleEnum.valueToKey(m_otherToolBarStyle));
         m_effectsDirty = true;
-        setNeedsSave(true);
     }
 }
 
@@ -217,10 +220,9 @@ void KCMStyle::configure(const QString &styleName, QQuickItem *ctx)
         KGlobalSettings::self()->emitChange(KGlobalSettings::StyleChanged);
 
         // When user edited a style, assume they want to use it, too
-        m_model->setSelectedStyle(styleName);
+        m_settings->setWidgetStyle(styleName);
 
-        // We call setStyleDirty here to make sure we force style re-creation
-        m_selectedStyleDirty = true;
+        // We call setNeedsSave(true) here to make sure we force style re-creation
         setNeedsSave(true);
     });
 
@@ -229,59 +231,47 @@ void KCMStyle::configure(const QString &styleName, QQuickItem *ctx)
 
 void KCMStyle::load()
 {
+    ManagedConfigModule::load();
     m_model->load();
-
-    m_settings->load();
+    m_previousStyle = m_settings->widgetStyle();
 
     loadSettingsToModel();
 
-    m_selectedStyleDirty = false;
     m_effectsDirty = false;
-    setNeedsSave(false);
 }
 
 void KCMStyle::save()
 {
-    if (!m_selectedStyleDirty && !m_effectsDirty) {
-        return;
-    }
-
     // Check whether the new style can actually be loaded before saving it.
     // Otherwise apps will use the default style despite something else having been written to the config
     bool newStyleLoaded = false;
-    if (m_selectedStyleDirty) {
-        QScopedPointer<QStyle> newStyle(QStyleFactory::create(m_model->selectedStyle()));
+    if (m_settings->widgetStyle() != m_previousStyle) {
+        QScopedPointer<QStyle> newStyle(QStyleFactory::create(m_settings->widgetStyle()));
         if (newStyle) {
             newStyleLoaded = true;
+            m_previousStyle = m_settings->widgetStyle();
         } else {
-            const QString styleDisplay = m_model->data(m_model->index(m_model->selectedStyleIndex(), 0), Qt::DisplayRole).toString();
+            const QString styleDisplay = m_model->data(m_model->index(m_model->indexOfStyle(m_settings->widgetStyle()), 0), Qt::DisplayRole).toString();
             emit showErrorMessage(i18n("Failed to apply selected style '%1'.", styleDisplay));
+
+            // Reset selected style back to current in case of failure
+            m_settings->setWidgetStyle(m_previousStyle);
         }
     }
 
-    if (newStyleLoaded) {
-        m_settings->setWidgetStyle(m_model->selectedStyle());
-    }
-
-    const QMetaEnum toolBarStyleEnum = QMetaEnum::fromType<ToolBarStyle>();
-    m_settings->setToolButtonStyle(toolBarStyleEnum.valueToKey(m_mainToolBarStyle));
-    m_settings->setToolButtonStyleOtherToolbars(toolBarStyleEnum.valueToKey(m_otherToolBarStyle));
-
-    m_settings->save();
+    ManagedConfigModule::save();
 
     // Export the changes we made to qtrc, and update all qt-only
     // applications on the fly, ensuring that we still follow the user's
     // export fonts/colors settings.
-    if (m_selectedStyleDirty || m_effectsDirty) {
-        uint flags = KRdbExportQtSettings | KRdbExportGtkTheme;
-        KConfig _kconfig( QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals  );
-        KConfigGroup kconfig(&_kconfig, "X11");
-        bool exportKDEColors = kconfig.readEntry("exportKDEColors", true);
-        if (exportKDEColors) {
-            flags |= KRdbExportColors;
-        }
-        runRdb( flags );
+    uint flags = KRdbExportQtSettings | KRdbExportGtkTheme;
+    KConfig _kconfig( QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals  );
+    KConfigGroup kconfig(&_kconfig, "X11");
+    bool exportKDEColors = kconfig.readEntry("exportKDEColors", true);
+    if (exportKDEColors) {
+        flags |= KRdbExportColors;
     }
+    runRdb( flags );
 
     // Now allow KDE apps to reconfigure themselves.
     if (newStyleLoaded) {
@@ -295,12 +285,6 @@ void KCMStyle::save()
         KGlobalSettings::self()->emitChange(KGlobalSettings::ToolbarStyleChanged);
     }
 
-    // Reset selected style back to current in case of failure
-    if (!newStyleLoaded) {
-        m_model->setSelectedStyle(m_settings->widgetStyle());
-    }
-
-    m_selectedStyleDirty = false;
     m_effectsDirty = false;
 }
 
@@ -309,16 +293,14 @@ void KCMStyle::defaults()
     // TODO the old code had a fallback chain but do we actually support not having Breeze for Plasma?
     // defaultStyle() -> oxygen -> plastique -> windows -> platinum -> motif
 
-    m_settings->setDefaults();
+    ManagedConfigModule::defaults();
 
     loadSettingsToModel();
-
-    setNeedsSave(m_settings->isSaveNeeded());
 }
 
 void KCMStyle::loadSettingsToModel()
 {
-    m_model->setSelectedStyle(m_settings->widgetStyle());
+    emit m_settings->widgetStyleChanged();
 
     const QMetaEnum toolBarStyleEnum = QMetaEnum::fromType<ToolBarStyle>();
     setMainToolBarStyle(static_cast<ToolBarStyle>(toolBarStyleEnum.keyToValue(qUtf8Printable(m_settings->toolButtonStyle()))));

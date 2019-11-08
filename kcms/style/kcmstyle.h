@@ -32,7 +32,7 @@
 
 #include <QPointer>
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickAddons/ManagedConfigModule>
 
 class QQuickItem;
 
@@ -40,7 +40,7 @@ class StyleSettings;
 class StylesModel;
 class StyleConfigDialog;
 
-class KCMStyle : public KQuickAddons::ConfigModule
+class KCMStyle : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
 
@@ -89,7 +89,7 @@ private:
     StyleSettings *m_settings;
     StylesModel *m_model;
 
-    bool m_selectedStyleDirty = false;
+    QString m_previousStyle;
     bool m_effectsDirty = false;
 
     ToolBarStyle m_mainToolBarStyle = NoText;
