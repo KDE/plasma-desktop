@@ -24,7 +24,6 @@ import QtQuick.Controls 2.11 as QQC2
 import QtQuick.Dialogs 1.2 as QtDialogs
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kcm 1.1 as KCM
-import Qt.labs.platform 1.1
 
 KCM.SimpleKCM {
     id: root
