@@ -29,7 +29,7 @@ KCM.GridViewKCM {
     KCM.ConfigModule.quickHelp: i18n("This module lets you choose the global look and feel.")
 
     view.model: kcm.lookAndFeelModel
-    view.currentIndex: kcm.selectedPluginIndex
+    view.currentIndex: kcm.pluginIndex(kcm.lookAndFeelSettings.lookAndFeelPackage)
     view.delegate: KCM.GridDelegate {
         id: delegate
 
@@ -55,7 +55,7 @@ KCM.GridViewKCM {
             }
         ]
         onClicked: {
-            kcm.selectedPlugin = model.pluginName;
+            kcm.lookAndFeelSettings.lookAndFeelPackage = model.pluginName;
             view.forceActiveFocus();
             resetCheckbox.checked = false;
         }

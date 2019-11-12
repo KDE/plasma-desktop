@@ -32,6 +32,8 @@
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
 
+#include "lookandfeelsettings.h"
+
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
@@ -88,7 +90,7 @@ int main(int argc, char **argv)
         KCMLookandFeel *kcm = new KCMLookandFeel(nullptr, QVariantList());
         kcm->load();
         kcm->setResetDefaultLayout(parser.isSet(_resetLayout));
-        kcm->setSelectedPlugin(parser.value(_apply));
+        kcm->lookAndFeelSettings()->setLookAndFeelPackage(parser.value(_apply));
         kcm->save();
         delete kcm;
     }

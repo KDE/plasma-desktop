@@ -1,6 +1,7 @@
 /* This file is part of the KDE Project
    Copyright (c) 2014 Marco Martin <mart@kde.org>
    Copyright (c) 2014 Vishesh Handa <me@vhanda.in>
+   Copyright (c) 2019 Cyril Rossi <cyril.rossi@enioka.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -46,12 +47,15 @@
 #include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
 
+#include "lookandfeelsettings.h"
+
 #ifdef HAVE_XFIXES
 #  include <X11/extensions/Xfixes.h>
 #endif
 
-KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
-    : KQuickAddons::ConfigModule(parent, args)
+KCMLookandFeel::KCMLookandFeel(QObject *parent, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, args)
+    , m_settings(new LookAndFeelSettings(this))
     , m_config(QStringLiteral("kdeglobals"))
     , m_configGroup(m_config.group("KDE"))
     , m_applyColors(true)
@@ -64,9 +68,11 @@ KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
     , m_resetDefaultLayout(false)
     , m_applyWindowDecoration(true)
 {
+    qmlRegisterType<LookAndFeelSettings>();
     qmlRegisterType<QStandardItemModel>();
     qmlRegisterType<KCMLookandFeel>();
-    KAboutData* about = new KAboutData(QStringLiteral("kcm_lookandfeel"), i18n("Global Theme"),
+
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_lookandfeel"), i18n("Global Theme"),
                                        QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
     setAboutData(about);
@@ -108,34 +114,13 @@ QStandardItemModel *KCMLookandFeel::lookAndFeelModel() const
     return m_model;
 }
 
-QString KCMLookandFeel::selectedPlugin() const
+int KCMLookandFeel::pluginIndex(const QString &pluginName) const
 {
-    return m_selectedPlugin;
-}
-
-void KCMLookandFeel::setSelectedPlugin(const QString &plugin)
-{
-    if (m_selectedPlugin == plugin) {
-        return;
+    const auto results = m_model->match(m_model->index(0, 0), PluginNameRole, pluginName);
+    if (results.count() == 1) {
+        return results.first().row();
     }
 
-    const bool firstTime = m_selectedPlugin.isNull();
-    m_selectedPlugin = plugin;
-    emit selectedPluginChanged();
-    emit selectedPluginIndexChanged();
-
-    if (!firstTime) {
-        setNeedsSave(true);
-    }
-}
-
-int KCMLookandFeel::selectedPluginIndex() const
-{
-    for (int i = 0; i < m_model->rowCount(); ++i) {
-        if (m_model->data(m_model->index(i, 0), PluginNameRole).toString() == m_selectedPlugin) {
-            return i;
-        }
-    }
     return -1;
 }
 
@@ -170,6 +155,11 @@ QList<KPackage::Package> KCMLookandFeel::availablePackages(const QStringList &co
     return packages;
 }
 
+LookAndFeelSettings *KCMLookandFeel::lookAndFeelSettings() const
+{
+    return m_settings;
+}
+
 void KCMLookandFeel::loadModel()
 {
     m_model->clear();
@@ -179,7 +169,7 @@ void KCMLookandFeel::loadModel()
         if (!pkg.metadata().isValid()) {
             continue;
         }
-        QStandardItem* row = new QStandardItem(pkg.metadata().name());
+        QStandardItem *row = new QStandardItem(pkg.metadata().name());
         row->setData(pkg.metadata().pluginId(), PluginNameRole);
         row->setData(pkg.metadata().description(), DescriptionRole);
         row->setData(pkg.filePath("preview"), ScreenshotRole);
@@ -226,45 +216,36 @@ void KCMLookandFeel::loadModel()
         m_model->appendRow(row);
     }
     m_model->sort(0 /*column*/);
-    emit selectedPluginIndexChanged();
+
+    //Model has been cleared so pretend the selected look and fell changed to force view update
+    emit m_settings->lookAndFeelPackageChanged();
 }
 
 void KCMLookandFeel::load()
 {
+    ManagedConfigModule::load();
+
     m_package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
-    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
-    if (!packageName.isEmpty()) {
-        m_package.setPath(packageName);
-    }
-
-    if (!m_package.metadata().isValid()) {
-        return;
-    }
-
-    setSelectedPlugin(m_package.metadata().pluginId());
-
-    setNeedsSave(false);
+    m_package.setPath(m_settings->lookAndFeelPackage());
 }
-
 
 void KCMLookandFeel::save()
 {
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
-    package.setPath(m_selectedPlugin);
+    package.setPath(m_settings->lookAndFeelPackage());
 
     if (!package.isValid()) {
         return;
     }
 
-    m_configGroup.writeEntry("LookAndFeelPackage", m_selectedPlugin);
+    ManagedConfigModule::save();
 
     if (m_resetDefaultLayout) {
         QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"), QStringLiteral("/PlasmaShell"),
                                                    QStringLiteral("org.kde.PlasmaShell"), QStringLiteral("loadLookAndFeelDefaultLayout"));
 
         QList<QVariant> args;
-        args << m_selectedPlugin;
+        args << m_settings->lookAndFeelPackage();
         message.setArguments(args);
 
         QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
@@ -407,21 +388,12 @@ void KCMLookandFeel::save()
     }
 
     //TODO: option to enable/disable apply? they don't seem required by UI design
-    setSplashScreen(m_selectedPlugin);
-    setLockScreen(m_selectedPlugin);
+    setSplashScreen(m_settings->lookAndFeelPackage());
+    setLockScreen(m_settings->lookAndFeelPackage());
 
     m_configGroup.sync();
-    m_package.setPath(m_selectedPlugin);
+    m_package.setPath(m_settings->lookAndFeelPackage());
     runRdb(KRdbExportQtColors | KRdbExportGtkTheme | KRdbExportColors | KRdbExportQtSettings | KRdbExportXftSettings);
-}
-
-void KCMLookandFeel::defaults()
-{
-    if (!m_package.metadata().isValid()) {
-        return;
-    }
-
-    setSelectedPlugin(m_package.metadata().pluginId());
 }
 
 void KCMLookandFeel::setWidgetStyle(const QString &style)

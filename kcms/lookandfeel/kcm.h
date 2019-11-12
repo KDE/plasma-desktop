@@ -1,6 +1,7 @@
 /*
    Copyright (c) 2014 Marco Martin <mart@kde.org>
    Copyright (c) 2014 Vishesh Handa <me@vhanda.in>
+   Copyright (c) 2019 Cyril Rossi <cyril.rossi@enioka.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -25,17 +26,17 @@
 #include <QDir>
 
 #include <KPackage/Package>
-#include <KQuickAddons/ConfigModule>
+#include <KQuickAddons/ManagedConfigModule>
 
 class QQuickItem;
 class QStandardItemModel;
+class LookAndFeelSettings;
 
-class KCMLookandFeel : public KQuickAddons::ConfigModule
+class KCMLookandFeel : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
+    Q_PROPERTY(LookAndFeelSettings *lookAndFeelSettings READ lookAndFeelSettings CONSTANT)
     Q_PROPERTY(QStandardItemModel *lookAndFeelModel READ lookAndFeelModel CONSTANT)
-    Q_PROPERTY(QString selectedPlugin READ selectedPlugin WRITE setSelectedPlugin NOTIFY selectedPluginChanged)
-    Q_PROPERTY(int selectedPluginIndex READ selectedPluginIndex NOTIFY selectedPluginIndexChanged)
     Q_PROPERTY(bool resetDefaultLayout READ resetDefaultLayout WRITE setResetDefaultLayout NOTIFY resetDefaultLayoutChanged)
 
 public:
@@ -60,15 +61,10 @@ public:
     KCMLookandFeel(QObject* parent, const QVariantList& args);
     ~KCMLookandFeel() override;
 
-    //List only packages which provide at least one of the components
-    QList<KPackage::Package> availablePackages(const QStringList &components);
-
+    LookAndFeelSettings *lookAndFeelSettings() const;
     QStandardItemModel *lookAndFeelModel() const;
 
-    QString selectedPlugin() const;
-    void setSelectedPlugin(const QString &plugin);
-
-    int selectedPluginIndex() const;
+    Q_INVOKABLE int pluginIndex(const QString &pluginName) const;
 
     bool resetDefaultLayout() const;
     void setResetDefaultLayout(bool reset);
@@ -90,20 +86,20 @@ public:
 public Q_SLOTS:
     void load() override;
     void save() override;
-    void defaults() override;
 
 Q_SIGNALS:
-    void selectedPluginChanged();
-    void selectedPluginIndexChanged();
     void resetDefaultLayoutChanged();
 
 private:
+    //List only packages which provide at least one of the components
+    QList<KPackage::Package> availablePackages(const QStringList &components);
     void loadModel();
     QDir cursorThemeDir(const QString &theme, const int depth);
     const QStringList cursorSearchPaths();
+
+    LookAndFeelSettings *m_settings;
     QStandardItemModel *m_model;
     KPackage::Package m_package;
-    QString m_selectedPlugin;
     QStringList m_cursorSearchPaths;
 
     KConfig m_config;

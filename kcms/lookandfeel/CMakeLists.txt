@@ -15,6 +15,8 @@ set(kcm_lookandfeel_SRCS
 set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)
 qt5_add_dbus_interface(kcm_lookandfeel_SRCS ${klauncher_xml} klauncher_iface)
 
+kconfig_add_kcfg_files(kcm_lookandfeel_SRCS lookandfeelsettings.kcfgc GENERATE_MOC)
+
 add_library(kcm_lookandfeel MODULE ${kcm_lookandfeel_SRCS})
 
 target_link_libraries(kcm_lookandfeel
@@ -48,6 +50,7 @@ endif ()
 kcoreaddons_desktop_to_json(kcm_lookandfeel "kcm_lookandfeel.desktop" SERVICE_TYPES kcmodule.desktop)
 
 #this desktop file is installed only for retrocompatibility with sycoca
+install(FILES lookandfeelsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES kcm_lookandfeel.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(TARGETS kcm_lookandfeel DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 install(FILES lookandfeel.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
@@ -71,6 +74,8 @@ set(lookandfeeltool_SRCS
 )
 
 qt5_add_dbus_interface(lookandfeeltool_SRCS ${klauncher_xml} klauncher_iface)
+
+kconfig_add_kcfg_files(lookandfeeltool_SRCS lookandfeelsettings.kcfgc GENERATE_MOC)
 
 add_executable(lookandfeeltool ${lookandfeeltool_SRCS})
 
