@@ -130,6 +130,7 @@ KCM.GridViewKCM {
                                 Layout.fillWidth: true
                                 color: sizeComboDelegate.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                                 text: model[sizeCombo.textRole]
+                                elide: Text.ElideRight
                             }
                         }
                     }
