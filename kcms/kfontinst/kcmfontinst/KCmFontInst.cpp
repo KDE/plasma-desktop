@@ -77,7 +77,6 @@
 K_PLUGIN_FACTORY(FontInstallFactory,
         registerPlugin<KFI::CKCmFontInst>();
         )
-K_EXPORT_PLUGIN(FontInstallFactory("fontinst"))
 
 namespace KFI
 {

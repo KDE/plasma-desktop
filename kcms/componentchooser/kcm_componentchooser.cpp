@@ -27,7 +27,6 @@
 K_PLUGIN_FACTORY(KCMComponentChooserFactory,
         registerPlugin<KCMComponentChooser>();
         )
-K_EXPORT_PLUGIN(KCMComponentChooserFactory("kcmcomponentchooser"))
 
 KCMComponentChooser::KCMComponentChooser(QWidget *parent, const QVariantList &):
 	KCModule(parent) {

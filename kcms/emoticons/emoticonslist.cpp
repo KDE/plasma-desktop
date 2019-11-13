@@ -19,6 +19,7 @@
  ***************************************************************************/
 
 #include "emoticonslist.h"
+#include <kconfigwidgets_version.h>
 #include <QString>
 #include <QDir>
 #include <QIcon>
@@ -232,7 +233,11 @@ void EmoticonList::selectTheme()
 
         new QListWidgetItem(QIcon(it.key()), text, emoList);
     }
+#if KCONFIGWIDGETS_VERSION < QT_VERSION_CHECK(5, 64, 0)
     emit changed();
+#else
+    emit markAsChanged();
+#endif
 }
 
 void EmoticonList::btRemoveThemeClicked()
@@ -302,7 +307,11 @@ void EmoticonList::addEmoticon()
     if (theme.addEmoticon(dlg->getEmoticon(), dlg->getText(), KEmoticonsProvider::Copy)) {
         new QListWidgetItem(QPixmap(dlg->getEmoticon()), dlg->getText(), emoList);
         themeList->currentItem()->setIcon(QIcon(previewEmoticon(theme)));
+#if KCONFIGWIDGETS_VERSION < QT_VERSION_CHECK(5, 64, 0)
         emit changed();
+#else
+        emit markAsChanged();
+#endif
     }
     delete dlg;
 }
@@ -355,7 +364,11 @@ void EmoticonList::editEmoticon()
         new QListWidgetItem(QPixmap(emo), dlg->getText(), emoList);
     }
 
+#if KCONFIGWIDGETS_VERSION < QT_VERSION_CHECK(5, 64, 0)
     emit changed();
+#else
+    emit markAsChanged();
+#endif
     delete dlg;
 }
 

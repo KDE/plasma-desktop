@@ -222,7 +222,9 @@ bool KNetAttach::validateCurrentPage()
             return false;
         }
 
-        KRun::runUrl(url, QStringLiteral("inode/directory"), this);
+        KRun::RunFlags flags;
+        flags |= KRun::RunExecutables;
+        KRun::runUrl(url, QStringLiteral("inode/directory"), this, flags);
 
         QString name = _connectionName->text().trimmed();
 

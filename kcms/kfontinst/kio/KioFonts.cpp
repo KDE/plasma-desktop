@@ -625,20 +625,20 @@ void CKioFonts::createUDSEntry(KIO::UDSEntry &entry, EFolder folder)
 {
     KFI_DBUG << QString(FOLDER_SYS==folder ? i18n(KFI_KIO_FONTS_SYS) : i18n(KFI_KIO_FONTS_USER));
     entry.clear();
-    entry.insert(KIO::UDSEntry::UDS_NAME, FOLDER_ROOT==folder || Misc::root()
+    entry.fastInsert(KIO::UDSEntry::UDS_NAME, FOLDER_ROOT==folder || Misc::root()
                                             ? i18n("Fonts")
                                             : FOLDER_SYS==folder
                                                 ? i18n(KFI_KIO_FONTS_SYS)
                                                 : i18n(KFI_KIO_FONTS_USER));
-    entry.insert(KIO::UDSEntry::UDS_ACCESS, !Misc::root() && FOLDER_SYS==folder ? 0444 : 0744);
-    entry.insert(KIO::UDSEntry::UDS_USER, Misc::root() || FOLDER_SYS==folder
+    entry.fastInsert(KIO::UDSEntry::UDS_ACCESS, !Misc::root() && FOLDER_SYS==folder ? 0444 : 0744);
+    entry.fastInsert(KIO::UDSEntry::UDS_USER, Misc::root() || FOLDER_SYS==folder
                                             ? QString::fromLatin1("root")
                                             : getUserName(getuid()));
-    entry.insert(KIO::UDSEntry::UDS_GROUP, Misc::root() || FOLDER_SYS==folder
+    entry.fastInsert(KIO::UDSEntry::UDS_GROUP, Misc::root() || FOLDER_SYS==folder
                                             ? QString::fromLatin1("root")
                                             : getGroupName(getgid()));
-    entry.insert(KIO::UDSEntry::UDS_FILE_TYPE, S_IFDIR);
-    entry.insert(KIO::UDSEntry::UDS_MIME_TYPE, QString::fromLatin1("inode/directory"));
+    entry.fastInsert(KIO::UDSEntry::UDS_FILE_TYPE, S_IFDIR);
+    entry.fastInsert(KIO::UDSEntry::UDS_MIME_TYPE, QString::fromLatin1("inode/directory"));
 }
 
 bool CKioFonts::createUDSEntry(KIO::UDSEntry &entry, EFolder folder, const Family &family, const Style &style)
@@ -681,9 +681,9 @@ bool CKioFonts::createUDSEntry(KIO::UDSEntry &entry, EFolder folder, const Famil
 
     entry.clear();
 
-    entry.insert(KIO::UDSEntry::UDS_NAME, name);
-    entry.insert(KIO::UDSEntry::UDS_SIZE, size);
-    entry.insert(UDS_EXTRA_FC_STYLE, style.value());
+    entry.fastInsert(KIO::UDSEntry::UDS_NAME, name);
+    entry.fastInsert(KIO::UDSEntry::UDS_SIZE, size);
+    entry.fastInsert(UDS_EXTRA_FC_STYLE, style.value());
 
     QList<File>::ConstIterator it(files.constBegin()),
                                end(files.constEnd());
@@ -727,19 +727,19 @@ bool CKioFonts::createUDSEntry(KIO::UDSEntry &entry, EFolder folder, const Famil
                     extension=(*patterns.begin()).remove("*");
             }
 
-            entry.insert(KIO::UDSEntry::UDS_FILE_TYPE, buff.st_mode&S_IFMT);
-            entry.insert(KIO::UDSEntry::UDS_ACCESS, buff.st_mode&07777);
-            entry.insert(KIO::UDSEntry::UDS_MODIFICATION_TIME, buff.st_mtime);
-            entry.insert(KIO::UDSEntry::UDS_ACCESS_TIME, buff.st_atime);
-            entry.insert(KIO::UDSEntry::UDS_USER, getUserName(buff.st_uid));
-            entry.insert(KIO::UDSEntry::UDS_GROUP, getGroupName(buff.st_gid));
-            entry.insert(KIO::UDSEntry::UDS_MIME_TYPE, mt);
+            entry.fastInsert(KIO::UDSEntry::UDS_FILE_TYPE, buff.st_mode&S_IFMT);
+            entry.fastInsert(KIO::UDSEntry::UDS_ACCESS, buff.st_mode&07777);
+            entry.fastInsert(KIO::UDSEntry::UDS_MODIFICATION_TIME, buff.st_mtime);
+            entry.fastInsert(KIO::UDSEntry::UDS_ACCESS_TIME, buff.st_atime);
+            entry.fastInsert(KIO::UDSEntry::UDS_USER, getUserName(buff.st_uid));
+            entry.fastInsert(KIO::UDSEntry::UDS_GROUP, getGroupName(buff.st_gid));
+            entry.fastInsert(KIO::UDSEntry::UDS_MIME_TYPE, mt);
 
             if(hidden)
             {
-                entry.insert(KIO::UDSEntry::UDS_HIDDEN, 1);
-                entry.insert(UDS_EXTRA_FILE_NAME, (*it).path());
-                entry.insert(UDS_EXTRA_FILE_FACE, (*it).path());
+                entry.fastInsert(KIO::UDSEntry::UDS_HIDDEN, 1);
+                entry.fastInsert(UDS_EXTRA_FILE_NAME, (*it).path());
+                entry.fastInsert(UDS_EXTRA_FILE_FACE, (*it).path());
             }
 
             QString path(QString::fromLatin1("/"));
@@ -758,7 +758,7 @@ bool CKioFonts::createUDSEntry(KIO::UDSEntry &entry, EFolder folder, const Famil
 
             QUrl url(QUrl::fromLocalFile(path));
             url.setScheme(KFI_KIO_FONTS_PROTOCOL);
-            entry.insert(KIO::UDSEntry::UDS_URL, url.url());
+            entry.fastInsert(KIO::UDSEntry::UDS_URL, url.url());
             return true;
         }
     }
