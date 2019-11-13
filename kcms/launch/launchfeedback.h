@@ -1,6 +1,7 @@
 /*
  *  Copyright (C) 2001 Rik Hemsley (rikkus) <rik@kde.org>
  *  Copyright (C) 2017 Eike Hein <hein@kde.org>
+ *  Copyright (c) 2019 Cyril Rossi <cyril.rossi@enioka.com>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -19,51 +20,35 @@
 #ifndef LAUNCHFEEDBACK_H
 #define LAUNCHFEEDBACK_H
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickAddons/ManagedConfigModule>
 
-class LaunchFeedback : public KQuickAddons::ConfigModule
+class LaunchFeedbackSettings;
+
+class LaunchFeedback : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
 
-    Q_PROPERTY(int busyCursorCurrentIndex READ busyCursorCurrentIndex WRITE setBusyCursorCurrentIndex NOTIFY busyCursorCurrentIndexChanged)
+    Q_PROPERTY(LaunchFeedbackSettings *launchFeedbackSettings READ launchFeedbackSettings CONSTANT)
 
-    Q_PROPERTY(bool taskManagerNotification READ taskManagerNotification WRITE setTaskManagerNotification NOTIFY taskManagerNotificationChanged)
+public:
+    enum class CursorFeedbackType {
+        None,
+        Static,
+        Blinking,
+        Bouncing,
+    };
+    Q_ENUM(CursorFeedbackType)
 
-    Q_PROPERTY(int notificationTimeout READ notificationTimeout WRITE setNotificationTimeout NOTIFY notificationTimeoutChanged)
+    explicit LaunchFeedback(QObject *parent = nullptr, const QVariantList &list = QVariantList());
+    ~LaunchFeedback() override;
 
-    public:
-        explicit LaunchFeedback(QObject* parent = nullptr, const QVariantList &list = QVariantList());
-        ~LaunchFeedback() override;
+    LaunchFeedbackSettings *launchFeedbackSettings() const;
 
-        int busyCursorCurrentIndex() const;
-        void setBusyCursorCurrentIndex(int index);
+public Q_SLOTS:
+    void save() override;
 
-        bool taskManagerNotification() const;
-        void setTaskManagerNotification(bool enabled);
-
-        int notificationTimeout() const;
-        void setNotificationTimeout(int duration);
-
-    public Q_SLOTS:
-        void load() override;
-        void save() override;
-        void defaults() override;
-
-    Q_SIGNALS:
-        void busyCursorCurrentIndexChanged() const;
-
-        void taskManagerNotificationChanged() const;
-
-        void notificationTimeoutChanged() const;
-
-    private:
-        void updateNeedsSave();
-
-        int m_busyCursorCurrentIndex;
-
-        bool m_taskManagerNotification;
-
-        int m_notificationTimeout;
+private:
+    LaunchFeedbackSettings *m_settings;
 };
 
 #endif
