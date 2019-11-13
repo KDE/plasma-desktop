@@ -961,7 +961,7 @@ int FontInst::performAction(const QVariantMap &args)
             case KAuth::ActionReply::Error::AuthorizationDeniedError:
                 /*fall through*/
             case KAuth::ActionReply::Error::NoSuchActionError:
-                return KIO::ERR_COULD_NOT_AUTHENTICATE;
+                return KIO::ERR_CANNOT_AUTHENTICATE;
             default:
                 return KIO::ERR_INTERNAL;
         }

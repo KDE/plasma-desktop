@@ -339,7 +339,7 @@ bool DesktopPathConfig::xdgSavePath(KUrlRequester* ur, const QUrl& currentUrl, c
             if (QDir().mkpath(path)) {
                 QDir().rmdir(path); // rmdir again, so that we get a fast rename
             } else {
-                KMessageBox::sorry(this, KIO::buildErrorString(KIO::ERR_COULD_NOT_MKDIR, path));
+                KMessageBox::sorry(this, KIO::buildErrorString(KIO::ERR_CANNOT_MKDIR, path));
                 ur->setUrl(currentUrl); // revert
                 return false;
             }

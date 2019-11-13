@@ -43,7 +43,7 @@
 #include "timedated_interface.h"
 
 K_PLUGIN_FACTORY(KlockModuleFactory, registerPlugin<KclockModule>();)
-K_EXPORT_PLUGIN(KlockModuleFactory("kcmkclock"))
+
 
 
 KclockModule::KclockModule(QWidget *parent, const QVariantList &)

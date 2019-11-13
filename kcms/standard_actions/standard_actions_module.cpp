@@ -34,7 +34,6 @@
 #include <QSet>
 
 K_PLUGIN_FACTORY(StandardActionsModuleFactory, registerPlugin<StandardActionsModule>();)
-K_EXPORT_PLUGIN(StandardActionsModuleFactory("kcm_standard_actions"))
 
 static void dressUpAction(QAction *action, KStandardShortcut::StandardShortcut shortcutId)
     {

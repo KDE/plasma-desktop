@@ -256,7 +256,7 @@ void CKioFonts::put(const QUrl &url, int /*permissions*/, KIO::JobFlags /*flags*
                     }
                     else
                     {
-                        error(KIO::ERR_COULD_NOT_WRITE, dest.fileName());
+                        error(KIO::ERR_CANNOT_WRITE, dest.fileName());
                         result = -1;
                     }
                 }
@@ -441,7 +441,7 @@ void CKioFonts::get(const QUrl &url)
                         if (EINTR==errno)
                             continue;
 
-                        error(KIO::ERR_COULD_NOT_READ, url.toDisplayString());
+                        error(KIO::ERR_CANNOT_READ, url.toDisplayString());
                         ::close(fd);
                         if(multiple)
                             ::unlink(realPathC);
@@ -468,7 +468,7 @@ void CKioFonts::get(const QUrl &url)
             ::unlink(realPathC);
     }
     else
-        error(KIO::ERR_COULD_NOT_READ, url.toDisplayString());
+        error(KIO::ERR_CANNOT_READ, url.toDisplayString());
 }
 
 void CKioFonts::copy(const QUrl &, const QUrl &, int, KIO::JobFlags)

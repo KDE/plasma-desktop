@@ -44,7 +44,6 @@
 #include <X11/keysymdef.h>
 
 K_PLUGIN_FACTORY(KAccessConfigFactory, registerPlugin<KAccessConfig>();)
-K_EXPORT_PLUGIN(KAccessConfigFactory("kcmaccess"))
 
 QString mouseKeysShortcut(Display *display)
 {

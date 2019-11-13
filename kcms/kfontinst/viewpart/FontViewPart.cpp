@@ -70,7 +70,6 @@ static QString getFamily(const QString &font)
 }
 
 K_PLUGIN_FACTORY(CFontViewPartFactory, registerPlugin<CFontViewPart>();)
-K_EXPORT_PLUGIN(CFontViewPartFactory("kfontview"))
 
 CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList<QVariant> &)
              : KParts::ReadOnlyPart(parent),

@@ -766,7 +766,7 @@ QString CJobRunner::errorString(int value) const
             return i18n("Permission denied.<br><i>%1</i>", urlStr);
         case KIO::ERR_UNSUPPORTED_ACTION:
             return i18n("Unsupported action.<br><i>%1</i>", urlStr);
-        case KIO::ERR_COULD_NOT_AUTHENTICATE:
+        case KIO::ERR_CANNOT_AUTHENTICATE:
             return i18n("Authentication failed.<br><i>%1</i>", urlStr);
         default:
             return i18n("Unexpected error while processing: <i>%1</i>", urlStr);
