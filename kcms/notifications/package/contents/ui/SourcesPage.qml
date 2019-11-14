@@ -87,7 +87,6 @@ Kirigami.Page {
                 id: sourcesScroll
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                activeFocusOnTab: false
                 Kirigami.Theme.colorSet: Kirigami.Theme.View
                 Kirigami.Theme.inherit: false
 
@@ -96,6 +95,7 @@ Kirigami.Page {
                 ListView {
                     id: sourcesList
                     clip: true
+                    focus: true
                     activeFocusOnTab: true
 
                     keyNavigationEnabled: true
@@ -136,14 +136,20 @@ Kirigami.Page {
                         currentIndex = filteredIdx.row;
                     }
 
+                    onCurrentIndexChanged: {
+                        var sourceIdx = kcm.filteredModel.mapToSource(kcm.filteredModel.index(sourcesList.currentIndex, 0));
+                        appConfiguration.rootIndex = kcm.sourcesModel.makePersistentModelIndex(sourceIdx);
+                        sourcesList.updateCurrentIndex();
+                    }
+
                     delegate: QtControls.ItemDelegate {
                         id: sourceDelegate
                         width: sourcesList.width
                         text: model.display
                         highlighted: ListView.isCurrentItem
                         onClicked: {
-                            var sourceIdx = kcm.filteredModel.mapToSource(kcm.filteredModel.index(index, 0));
-                            appConfiguration.rootIndex = kcm.sourcesModel.makePersistentModelIndex(sourceIdx);
+                            sourcesList.forceActiveFocus();
+                            sourcesList.currentIndex = index;
                             sourcesList.updateCurrentIndex();
                         }
 
