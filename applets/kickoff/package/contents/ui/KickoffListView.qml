@@ -96,87 +96,114 @@ FocusScope {
                 criteria: ViewSection.FullString
                 delegate: SectionDelegate {}
             }
-        }
-    }
 
-    MouseArea {
-        anchors.left: parent.left
+            MouseArea {
+                anchors.left: parent.left
 
-        width: scrollArea.viewport.width
-        height: parent.height
+                width: scrollArea.viewport.width
+                height: parent.height
 
-        id: mouseArea
+                id: mouseArea
 
-        property Item pressed: null
-        property int pressX: -1
-        property int pressY: -1
+                property Item pressed: null
+                property int pressX: -1
+                property int pressY: -1
+                property bool tapAndHold: false
 
-        hoverEnabled: true
-        acceptedButtons: Qt.LeftButton | Qt.RightButton
+                hoverEnabled: true
+                acceptedButtons: Qt.LeftButton | Qt.RightButton
 
-        onPressed: {
-            var mapped = listView.mapToItem(listView.contentItem, mouse.x, mouse.y);
-            var item = listView.itemAt(mapped.x, mapped.y);
+                onPressed: {
+                    var mapped = listView.mapToItem(listView.contentItem, mouse.x, mouse.y);
+                    var item = listView.itemAt(mapped.x, mapped.y);
 
-            if (!item) {
-                return;
-            }
+                    if (!item) {
+                        return;
+                    }
 
-            if (mouse.buttons & Qt.RightButton) {
-                if (item.hasActionList) {
-                    mapped = listView.contentItem.mapToItem(item, mapped.x, mapped.y);
-                    listView.currentItem.openActionMenu(mapped.x, mapped.y);
-                }
-            } else {
-                pressed = item;
-                pressX = mouse.x;
-                pressY = mouse.y;
-            }
-        }
-
-        onReleased: {
-            var mapped = listView.mapToItem(listView.contentItem, mouse.x, mouse.y);
-            var item = listView.itemAt(mapped.x, mapped.y);
-
-            if (item && pressed === item) {
-                if (item.appView) {
-                    view.state = "OutgoingLeft";
-                } else {
-                    item.activate();
+                    if (mouse.buttons & Qt.RightButton) {
+                        if (item.hasActionList) {
+                            mapped = listView.contentItem.mapToItem(item, mapped.x, mapped.y);
+                            listView.currentItem.openActionMenu(mapped.x, mapped.y);
+                        }
+                    } else {
+                        pressed = item;
+                        pressX = mouse.x;
+                        pressY = mouse.y;
+                    }
                 }
 
-                listView.currentIndex = -1;
-            }
+                onReleased: {
+                    var mapped = listView.mapToItem(listView.contentItem, mouse.x, mouse.y);
+                    var item = listView.itemAt(mapped.x, mapped.y);
 
-            pressed = null;
-            pressX = -1;
-            pressY = -1;
-        }
+                    if (item && pressed === item && !tapAndHold) {
+                        if (item.appView) {
+                            if (mouse.source == Qt.MouseEventSynthesizedByQt) {
+                                positionChanged(mouse);
+                            }
+                            view.state = "OutgoingLeft";
+                        } else {
+                            item.activate();
+                        }
 
-        onPositionChanged: {
-            var mapped = listView.mapToItem(listView.contentItem, mouse.x, mouse.y);
-            var item = listView.itemAt(mapped.x, mapped.y);
+                        listView.currentIndex = -1;
+                    }
+                    if (tapAndHold && mouse.source == Qt.MouseEventSynthesizedByQt) {
+                        if (item.hasActionList) {
+                            mapped = listView.contentItem.mapToItem(item, mapped.x, mapped.y);
+                            listView.currentItem.openActionMenu(mapped.x, mapped.y);
+                        }
+                    }
+                    pressed = null;
+                    pressX = -1;
+                    pressY = -1;
+                    tapAndHold = false;
+                }
 
-            if (item) {
-                listView.currentIndex = item.itemIndex;
-            } else {
-                listView.currentIndex = -1;
-            }
+                onPositionChanged: {
+                    var mapped = listView.mapToItem(listView.contentItem, mouse.x, mouse.y);
+                    var item = listView.itemAt(mapped.x, mapped.y);
 
-            if (pressed && pressX != -1 && pressed.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
-                kickoff.dragSource = item;
-                dragHelper.startDrag(root, pressed.url, pressed.decoration);
-                pressed = null;
-                pressX = -1;
-                pressY = -1;
-            }
-        }
+                    if (item) {
+                        listView.currentIndex = item.itemIndex;
+                    } else {
+                        listView.currentIndex = -1;
+                    }
 
-        onContainsMouseChanged: {
-            if (!containsMouse) {
-                pressed = null;
-                pressX = -1;
-                pressY = -1;
+                    if (mouse.source != Qt.MouseEventSynthesizedByQt || tapAndHold) {
+                        if (pressed && pressX != -1 && pressed.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+                            kickoff.dragSource = item;
+                            if (mouse.source == Qt.MouseEventSynthesizedByQt) {
+                                dragHelper.dragIconSize = units.iconSizes.huge
+                                dragHelper.startDrag(kickoff, pressed.url, pressed.decoration);
+                            } else {
+                                dragHelper.dragIconSize = units.iconSizes.medium
+                                dragHelper.startDrag(kickoff, pressed.url, pressed.decoration);
+                            }
+                            pressed = null;
+                            pressX = -1;
+                            pressY = -1;
+                            tapAndHold = false;
+                        }
+                    }
+                }
+
+                onContainsMouseChanged: {
+                    if (!containsMouse) {
+                        pressed = null;
+                        pressX = -1;
+                        pressY = -1;
+                        tapAndHold = false;
+                    }
+                }
+
+                onPressAndHold: {
+                    if (mouse.source == Qt.MouseEventSynthesizedByQt) {
+                        tapAndHold = true;
+                        positionChanged(mouse);
+                    }
+                }
             }
         }
     }
