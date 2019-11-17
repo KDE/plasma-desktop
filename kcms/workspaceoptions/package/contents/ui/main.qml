@@ -28,6 +28,8 @@ KCM.SimpleKCM {
 
     KCM.ConfigModule.buttons: KCM.ConfigModule.Help | KCM.ConfigModule.Defaults | KCM.ConfigModule.Apply
 
+    implicitWidth: Kirigami.Units.gridUnit * 40
+
     Kirigami.FormLayout {
         id: formLayout
 
