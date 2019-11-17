@@ -13,5 +13,9 @@
       <label>Animation speed</label>
       <default>1.0</default>
     </entry>
+    <entry name="scrollbarLeftClickNavigatesByPage" key="ScrollbarLeftClickNavigatesByPage" type="Bool">
+      <label>Left-click in scrollbar track moves scrollbar by one page</label>
+      <default>true</default>
+    </entry>
   </group>
 </kcfg>

@@ -1,5 +1,6 @@
 /*
  * Copyright 2018 Furkan Tokac <furkantokac34@gmail.com>
+ * Copyright (C) 2019 Nate Graham <nate@kde.org>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -106,6 +107,8 @@ KCM.SimpleKCM {
 
         // Click behavior settings
 
+        QQC2.ButtonGroup { id: singleClickGroup }
+
         QQC2.RadioButton {
             id: singleClick
             Kirigami.FormData.label: i18n("Click behavior:")
@@ -113,6 +116,7 @@ KCM.SimpleKCM {
             enabled: !kcm.globalsSettings.isImmutable("singleClick")
             checked: kcm.globalsSettings.singleClick
             onToggled: kcm.globalsSettings.singleClick = true
+            QQC2.ButtonGroup.group: singleClickGroup
         }
 
         QQC2.RadioButton {
@@ -121,7 +125,34 @@ KCM.SimpleKCM {
             enabled: !kcm.globalsSettings.isImmutable("singleClick")
             checked: !kcm.globalsSettings.singleClick
             onToggled: kcm.globalsSettings.singleClick = false
+            QQC2.ButtonGroup.group: singleClickGroup
         }
 
+        Item {
+            Kirigami.FormData.isSection: false
+        }
+
+        // scroll handle settings
+
+        QQC2.ButtonGroup { id: scrollHandleBehaviorGroup }
+
+        QQC2.RadioButton {
+            id: scrollbarLeftClickNavigatesByPage
+            Kirigami.FormData.label: i18n("Clicking in scrollbar track:")
+            text: i18nc("@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one page up or down'", "Scrolls one page up or down")
+            enabled: !kcm.globalsSettings.isImmutable("scrollbarLeftClickNavigatesByPage")
+            checked: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage
+            onToggled: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage = true
+            QQC2.ButtonGroup.group: scrollHandleBehaviorGroup
+        }
+
+        QQC2.RadioButton {
+            id: scrollBarLeftClickWarpsScrollHandle
+            text: i18nc("@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to the clicked location'", "Scrolls to the clicked location")
+            enabled: !kcm.globalsSettings.isImmutable("scrollbarLeftClickNavigatesByPage")
+            checked: !kcm.globalsSettings.scrollbarLeftClickNavigatesByPage
+            onToggled: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage = false
+            QQC2.ButtonGroup.group: scrollHandleBehaviorGroup
+        }
     }
 }
