@@ -32,7 +32,6 @@
 #include <KMessageBox>
 #include <KFileItem>
 #include <KPropertiesDialog>
-#include <KShell>
 #include <QLabel>
 #include <KFormat>
 #include <QMimeDatabase>
@@ -43,16 +42,12 @@
 #include <QHeaderView>
 #include <QMenu>
 #include <QContextMenuEvent>
-#include <QAction>
 #include <QApplication>
 #include <QDesktopWidget>
 #include <QProcess>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
-#if defined USE_POLICYKIT && USE_POLICYKIT==1
-#include <QDBusInterface>
-#endif
 
 namespace KFI
 {
