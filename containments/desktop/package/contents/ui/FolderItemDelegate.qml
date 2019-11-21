@@ -351,8 +351,15 @@ Item {
                     wrapMode: (maximumLineCount == 1) ? Text.NoWrap : Text.Wrap
                     elide: Text.ElideRight
 
-                    color: (frameLoader.textShadow && frameLoader.textShadow.visible
-                        ? "#fff" : PlasmaCore.ColorScope.textColor)
+                    color: {
+                        if (frameLoader.textShadow && frameLoader.textShadow.visible) {
+                            return "#fff";
+                        } else if (model.selected) {
+                            return PlasmaCore.ColorScope.highlightedTextColor;
+                        } else {
+                            return PlasmaCore.ColorScope.textColor
+                        }
+                    }
 
                     opacity: model.isHidden ? 0.6 : 1
 
