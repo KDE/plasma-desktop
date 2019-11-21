@@ -28,6 +28,8 @@ import org.kde.kcm 1.1 as KCM
 KCM.SimpleKCM {
     id: root
 
+    implicitHeight: Kirigami.Units.gridUnit * 22
+
     KCM.ConfigModule.quickHelp: i18n("This module lets you configure the file indexer and search functionality.")
     ColumnLayout {
         anchors.fill: parent
