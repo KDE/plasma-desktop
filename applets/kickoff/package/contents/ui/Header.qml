@@ -22,6 +22,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 import org.kde.kquickcontrolsaddons 2.0
+import QtGraphicalEffects 1.0
 
 Item {
     id: header
@@ -83,6 +84,31 @@ Item {
             topMargin: units.gridUnit
             leftMargin: units.gridUnit
         }
+
+        // Crop the avatar to fit in a circle, like the lock and login screens
+        layer.enabled: true
+        layer.effect: OpacityMask {
+            // this Rectangle is a circle due to radius size
+            maskSource: Rectangle {
+                width: faceIcon.width
+                height: faceIcon.height
+                radius: height / 2
+                visible: false
+            }
+        }
+    }
+    // Border for the circular avatar
+    Rectangle {
+        anchors.fill: faceIcon
+        // Don't show the circle if we're using software rendering, because
+        // the cropping effect won't be displayed under it
+        visible: GraphicsInfo.api !== GraphicsInfo.Software
+
+        radius: height / 2
+        border.width: 1
+        border.color: theme.textColor
+        opacity: 0.4
+        color: "transparent"
     }
 
     PlasmaCore.IconItem {
