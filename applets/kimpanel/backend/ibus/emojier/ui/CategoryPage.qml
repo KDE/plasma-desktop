@@ -41,7 +41,8 @@ Kirigami.ScrollablePage
             }
         }
         onEditingFinished: {
-            emojiView.currentItem.reportEmoji()
+            if (emojiView.currentItem)
+                emojiView.currentItem.reportEmoji()
         }
         height: visible ? implicitHeight : 0
         visible: false
