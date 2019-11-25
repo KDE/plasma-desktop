@@ -31,6 +31,8 @@ SimpleKCM {
     Kirigami.FormLayout {
         id: formLayout
 
+        readonly property bool cursorImmutable: kcm.launchFeedbackSettings.isImmutable("busyCursor") || kcm.launchFeedbackSettings.isImmutable("blinking") || kcm.launchFeedbackSettings.isImmutable("bouncing")
+
         function setCursorSettings(feedback) {
             kcm.launchFeedbackSettings.busyCursor = feedback !== Private.KCM.None
             kcm.launchFeedbackSettings.blinking = feedback === Private.KCM.Blinking
@@ -40,6 +42,7 @@ SimpleKCM {
         QtControls.RadioButton {
             id: busyCursorDisabled
 
+            enabled: !formLayout.cursorImmutable
             Kirigami.FormData.label: i18n("Cursor:")
             text: i18n("No Feedback")
             checked: !kcm.launchFeedbackSettings.busyCursor && !kcm.launchFeedbackSettings.blinking && !kcm.launchFeedbackSettings.bouncing
@@ -49,6 +52,7 @@ SimpleKCM {
         QtControls.RadioButton {
             id: busyCursorStatic
 
+            enabled: !formLayout.cursorImmutable
             text: i18n("Static")
             checked: kcm.launchFeedbackSettings.busyCursor && !kcm.launchFeedbackSettings.blinking && !kcm.launchFeedbackSettings.bouncing
             onToggled: formLayout.setCursorSettings(Private.KCM.Static)
@@ -57,6 +61,7 @@ SimpleKCM {
         QtControls.RadioButton {
             id: busyCursorBlinking
 
+            enabled: !formLayout.cursorImmutable
             text: i18n("Blinking")
             checked: kcm.launchFeedbackSettings.busyCursor && kcm.launchFeedbackSettings.blinking && !kcm.launchFeedbackSettings.bouncing
             onToggled: formLayout.setCursorSettings(Private.KCM.Blinking)
@@ -65,6 +70,7 @@ SimpleKCM {
         QtControls.RadioButton {
             id: busyCursorBouncing
 
+            enabled: !formLayout.cursorImmutable
             text: i18n("Bouncing")
             checked: kcm.launchFeedbackSettings.busyCursor && !kcm.launchFeedbackSettings.blinking && kcm.launchFeedbackSettings.bouncing
             onToggled: formLayout.setCursorSettings(Private.KCM.Bouncing)
@@ -73,6 +79,7 @@ SimpleKCM {
         QtControls.CheckBox {
             id: taskManagerNotification
 
+            enabled: !kcm.launchFeedbackSettings.isImmutable("taskbarButton")
             Kirigami.FormData.label: i18n("Task Manager:")
 
             text: i18n("Enable animation")
@@ -89,7 +96,7 @@ SimpleKCM {
             stepSize: 1
             editable: true
 
-            enabled: taskManagerNotification.checked
+            enabled: taskManagerNotification.checked && !kcm.launchFeedbackSettings.isImmutable("cursorTimeout")
 
             value: kcm.launchFeedbackSettings.cursorTimeout
             onValueModified: {
