@@ -48,6 +48,7 @@ class KCMColors : public KQuickAddons::ManagedConfigModule
 
     Q_PROPERTY(ColorsModel *model READ model CONSTANT)
     Q_PROPERTY(FilterProxyModel *filteredModel READ filteredModel CONSTANT)
+    Q_PROPERTY(ColorsSettings *colorsSettings READ colorsSettings CONSTANT)
     Q_PROPERTY(bool downloadingFile READ downloadingFile NOTIFY downloadingFileChanged)
 
 public:
@@ -70,7 +71,7 @@ public:
 
     ColorsModel *model() const;
     FilterProxyModel *filteredModel() const;
-
+    ColorsSettings *colorsSettings() const;
     bool downloadingFile() const;
 
     Q_INVOKABLE void getNewStuff(QQuickItem *ctx);

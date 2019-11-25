@@ -47,7 +47,7 @@ KCM.GridViewKCM {
         value:  filterCombo.model[filterCombo.currentIndex].filter
     }
 
-    enabled: !kcm.downloadingFile
+    enabled: !kcm.downloadingFile && !kcm.colorsSettings.isImmutable("colorScheme")
 
     Component.onCompleted: {
         // The thumbnails are a bit more elaborate and need more room, especially when translated

@@ -67,6 +67,7 @@ KCMColors::KCMColors(QObject *parent, const QVariantList &args)
     qmlRegisterUncreatableType<KCMColors>("org.kde.private.kcms.colors", 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
     qmlRegisterType<ColorsModel>();
     qmlRegisterType<FilterProxyModel>();
+    qmlRegisterType<ColorsSettings>();
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm_colors"), i18n("Colors"),
                                        QStringLiteral("2.0"), QString(), KAboutLicense::GPL);
@@ -103,6 +104,11 @@ ColorsModel *KCMColors::model() const
 FilterProxyModel *KCMColors::filteredModel() const
 {
     return m_filteredModel;
+}
+
+ColorsSettings *KCMColors::colorsSettings() const
+{
+    return m_settings;
 }
 
 bool KCMColors::downloadingFile() const
