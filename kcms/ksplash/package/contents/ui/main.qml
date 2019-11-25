@@ -27,7 +27,7 @@ import org.kde.kcm 1.1 as KCM
 KCM.GridViewKCM {
     KCM.ConfigModule.quickHelp: i18n("This module lets you choose the splash screen theme.")
 
-    enabled: !kcm.testing
+    enabled: !kcm.testing && !kcm.splashScreenSettings.isImmutable("theme")
 
     view.model: kcm.splashModel
     //NOTE: pay attention to never break this binding
