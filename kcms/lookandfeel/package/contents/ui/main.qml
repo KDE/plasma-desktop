@@ -30,6 +30,9 @@ KCM.GridViewKCM {
 
     view.model: kcm.lookAndFeelModel
     view.currentIndex: kcm.pluginIndex(kcm.lookAndFeelSettings.lookAndFeelPackage)
+
+    enabled: !kcm.lookAndFeelSettings.isImmutable("lookAndFeelPackage")
+
     view.delegate: KCM.GridDelegate {
         id: delegate
 
