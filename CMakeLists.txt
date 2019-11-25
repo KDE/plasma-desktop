@@ -106,7 +106,7 @@ endif()
 
 find_package(UDev)
 set_package_properties(UDev PROPERTIES DESCRIPTION "UDev library"
-                        URL "http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
+                        URL "https://www.freedesktop.org/wiki/Software/systemd/"
                         TYPE OPTIONAL
                         PURPOSE "Required for device discovery in keyboard daemon"
                       )

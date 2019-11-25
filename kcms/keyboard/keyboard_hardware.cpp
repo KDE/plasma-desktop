@@ -33,7 +33,7 @@
 #include <X11/keysym.h>
 #include <X11/Xlib.h>
 
-// This code is taken from xset utility from XFree 4.3 (http://www.xfree86.org/)
+// This code is taken from xset utility from XFree 4.3 (https://www.xfree86.org/)
 
 static
 void set_repeatrate(int delay, double rate)

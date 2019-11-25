@@ -94,7 +94,7 @@ void removeEmptyItems(QList<T*>& list)
 {
 #ifdef __GNUC__
 #if __GNUC__ == 4 && (__GNUC_MINOR__ == 8 && __GNUC_PATCHLEVEL__ < 3) || (__GNUC_MINOR__ == 7 && __GNUC_PATCHLEVEL__ < 4)
-#warning Compiling with a workaround for GCC < 4.8.3 || GCC < 4.7.4 http://gcc.gnu.org/bugzilla/show_bug.cgi?id=58800
+#warning Compiling with a workaround for GCC < 4.8.3 || GCC < 4.7.4 https://gcc.gnu.org/bugzilla/show_bug.cgi?id=58800
     Q_FOREACH(T* x, list) {
         ConfigItem *y = static_cast<ConfigItem*>(x);
         if (y->name.isEmpty()) {

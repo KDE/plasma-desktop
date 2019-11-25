@@ -108,7 +108,7 @@ MouseArea {
 
     onWheel: {
         // Magic number 120 for common "one click, see:
-        // http://qt-project.org/doc/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
+        // https://doc.qt.io/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
         wheelDelta += wheel.angleDelta.y || wheel.angleDelta.x;
 
         var increment = 0;

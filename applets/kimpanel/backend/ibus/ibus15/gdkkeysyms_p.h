@@ -18,11 +18,11 @@
 
 
 /*
- * File auto-generated from script http://git.gnome.org/browse/gtk+/tree/gdk/gdkkeysyms-update.pl
+ * File auto-generated from script https://gitlab.gnome.org/GNOME/gtk/blob/master/gdk/gdkkeysyms-update.pl
  * using the input file
- * http://cgit.freedesktop.org/xorg/proto/x11proto/plain/keysymdef.h
+ * https://cgit.freedesktop.org/xorg/proto/x11proto/plain/keysymdef.h
  * and
- * http://cgit.freedesktop.org/xorg/proto/x11proto/plain/XF86keysym.h
+ * https://cgit.freedesktop.org/xorg/proto/x11proto/plain/XF86keysym.h
  */
 
 /*

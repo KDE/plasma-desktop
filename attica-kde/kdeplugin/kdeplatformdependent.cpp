@@ -258,6 +258,6 @@ QNetworkAccessManager* Attica::KdePlatformDependent::nam()
     return m_accessManager;
 }
 
-// TODO: re-enable, see http://community.kde.org/Frameworks/Porting_Notes
+// TODO: re-enable, see https://community.kde.org/Frameworks/Porting_Notes
 // Q_EXPORT_PLUGIN2(attica_kde, Attica::KdePlatformDependent)
 

@@ -4,7 +4,7 @@
  * Copyright (c) 1997 Patrick Dowler dowler@morgul.fsh.uvic.ca
  *
  * Requires the Qt widget libraries, available at no cost at
- * http://www.troll.no/
+ * https://www.qt.io/
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
