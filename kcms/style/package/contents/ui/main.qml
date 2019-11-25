@@ -33,6 +33,8 @@ KCM.GridViewKCM {
     view.model: kcm.model
     view.currentIndex: kcm.model.selectedStyleIndex
 
+    view.enabled: !kcm.styleSettings.isImmutable("widgetStyle")
+
     Component.onCompleted: {
         // The widget thumbnails are a bit more elaborate and need more room, especially when translated
         view.implicitCellWidth = Kirigami.Units.gridUnit * 20;

@@ -42,18 +42,21 @@ QtControls.Popup {
             id: iconsOnButtonsCheckBox
             Kirigami.FormData.label: i18n("Show icons:")
             text: i18n("On buttons")
+            enabled: !kcm.styleSettings.isImmutable("iconsOnButtons")
             checked: kcm.styleSettings.iconsOnButtons
             onClicked: kcm.styleSettings.iconsOnButtons = checked
         }
 
         QtControls.CheckBox {
             text: i18n("In menus")
+            enabled: !kcm.styleSettings.isImmutable("iconsInMenus")
             checked: kcm.styleSettings.iconsInMenus
             onClicked: kcm.styleSettings.iconsInMenus = checked
         }
 
         QtControls.ComboBox {
             id: mainToolBarStyleCombo
+            enabled: !kcm.styleSettings.isImmutable("toolButtonStyle")
             Kirigami.FormData.label: i18n("Main toolbar label:")
             model: [
                 {text: i18n("None"), value: Private.KCM.NoText},
@@ -69,6 +72,7 @@ QtControls.Popup {
         }
 
         QtControls.ComboBox {
+            enabled: !kcm.styleSettings.isImmutable("toolButtonStyleOtherToolbars")
             Kirigami.FormData.label: i18n("Secondary toolbar label:")
             model: mainToolBarStyleCombo.model
             textRole: "text"
