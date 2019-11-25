@@ -22,9 +22,9 @@ Free Software Foundation, Inc.,
 
 #include <abstracttasksmodel.h>
 
-#include <QApplication>
-#include <QDesktopWidget>
+#include <QGuiApplication>
 #include <QMetaEnum>
+#include <QScreen>
 
 #include <KWindowSystem>
 
@@ -38,8 +38,6 @@ public:
     Private(WindowModel *q);
 
     PagerModel *pagerModel = nullptr;
-
-    QDesktopWidget *desktopWidget = QApplication::desktop();
 
 private:
     WindowModel *q;
@@ -78,7 +76,8 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
 {
     if (role == AbstractTasksModel::Geometry) {
         QRect windowGeo = TaskFilterProxyModel::data(index, role).toRect();
-        const QRect &desktopGeo = d->desktopWidget->geometry();
+        QList<QScreen *> screens = QGuiApplication::screens();
+        const QRect desktopGeo = screens.at(0)->geometry();
 
         if (KWindowSystem::mapViewport()) {
             int x = windowGeo.center().x() % desktopGeo.width();
