@@ -276,6 +276,7 @@ int main(int argc, char** argv)
     about.setProgramLogo(app.windowIcon());
     KAboutData::setApplicationData(about);
 
+    KDBusService::StartupOptions startup = nullptr;
     {
         QCommandLineParser parser;
 
@@ -287,19 +288,11 @@ int main(int argc, char** argv)
         about.processCommandLine(&parser);
 
         if (parser.isSet(replaceOption)) {
-            auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasma.emojier"),
-                                                        QStringLiteral("/MainApplication"),
-                                                        QStringLiteral("org.qtproject.Qt.QCoreApplication"),
-                                                        QStringLiteral("quit"));
-            auto reply = QDBusConnection::sessionBus().call(message); //deliberately block until it's done, so we register the name after the app quits
-
-            while (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.plasma.emojier"))) {
-                QCoreApplication::processEvents(QEventLoop::AllEvents);
-            }
+            startup |= KDBusService::Replace;
         }
     }
 
-    KDBusService* service = new KDBusService(KDBusService::Unique, &app);
+    KDBusService* service = new KDBusService(KDBusService::Unique | startup, &app);
 
     EmojiModel m;
 
