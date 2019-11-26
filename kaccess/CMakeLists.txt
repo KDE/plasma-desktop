@@ -12,6 +12,7 @@ kf5_add_kdeinit_executable(kaccess ${kaccess_KDEINIT_SRCS})
 target_link_libraries(kdeinit_kaccess
     Qt5::Widgets
     Qt5::X11Extras
+    KF5::CoreAddons
     KF5::ConfigCore
     KF5::Completion
     KF5::GlobalAccel
@@ -20,7 +21,6 @@ target_link_libraries(kdeinit_kaccess
     KF5::WidgetsAddons
     KF5::WindowSystem
     KF5::DBusAddons
-    KF5::Service
     Phonon::phonon4qt5
     ${X11_LIBRARIES}
 )

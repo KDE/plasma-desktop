@@ -36,6 +36,7 @@
 #include <QApplication>
 #include <QAction>
 
+#include <KAboutData>
 #include <KComboBox>
 #include <KNotification>
 #include <KConfig>
@@ -45,7 +46,6 @@
 #include <QDialogButtonBox>
 #include <kglobalaccel.h>
 #include <KLocalizedString>
-#include <ktoolinvocation.h>
 #include <kwindowsystem.h>
 #include <kkeyserver.h>
 #include <KDBusService>
