@@ -56,7 +56,6 @@ target_link_libraries(kded_keyboard
     KF5::GlobalAccel
     KF5::I18n
     KF5::Notifications
-    KF5::Service
     KF5::WindowSystem
     KF5::Plasma
     KF5::XmlGui

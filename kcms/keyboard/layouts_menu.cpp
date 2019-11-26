@@ -19,10 +19,10 @@
 #include "layouts_menu.h"
 #include "debug.h"
 
-#include <ktoolinvocation.h>
 #include <klocalizedstring.h>
 
 #include <QAction>
+#include <QProcess>
 
 #include "keyboard_config.h"
 #include "x11_helper.h"
@@ -55,7 +55,7 @@ void LayoutsMenu::actionTriggered(QAction* action)
 		QStringList args;
 		args << QStringLiteral("--args=--tab=layouts");
 		args << QStringLiteral("kcm_keyboard");
-		KToolInvocation::kdeinitExec(QStringLiteral("kcmshell5"), args);
+		QProcess::startDetached(QStringLiteral("kcmshell5"), args);
 	}
 	else {
 		LayoutUnit layoutUnit(LayoutUnit(action->data().toString()));
