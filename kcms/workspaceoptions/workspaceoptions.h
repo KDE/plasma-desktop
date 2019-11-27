@@ -1,5 +1,6 @@
 /*
  *  Copyright (C) 2018 <furkantokac34@gmail.com>
+ *  Copyright (c) 2019 Cyril Rossi <cyril.rossi@enioka.com>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -15,68 +16,34 @@
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
+
 #ifndef _KCM_WORKSPACEOPTIONS_H
 #define _KCM_WORKSPACEOPTIONS_H
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickAddons/ManagedConfigModule>
 
-class KCMWorkspaceOptions : public KQuickAddons::ConfigModule
+class WorkspaceOptionsGlobalsSettings;
+class WorkspaceOptionsPlasmaSettings;
+
+class KCMWorkspaceOptions : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
-    Q_PROPERTY(bool toolTip READ getToolTip WRITE setToolTip NOTIFY toolTipChanged)
-    Q_PROPERTY(bool visualFeedback READ getVisualFeedback WRITE setVisualFeedback NOTIFY visualFeedbackChanged)
-    Q_PROPERTY(bool singleClick READ getSingleClick WRITE setSingleClick NOTIFY singleClickChanged)
-    Q_PROPERTY(qreal animationDurationFactor READ getAnimationDurationFactor WRITE setAnimationDurationFactor NOTIFY animationDurationFactorChanged)
+    Q_PROPERTY(WorkspaceOptionsGlobalsSettings *globalsSettings READ globalsSettings CONSTANT)
+    Q_PROPERTY(WorkspaceOptionsPlasmaSettings *plasmaSettings READ plasmaSettings CONSTANT)
 
 public:
-    KCMWorkspaceOptions(QObject* parent, const QVariantList& args);
+    KCMWorkspaceOptions(QObject *parent, const QVariantList &args);
     ~KCMWorkspaceOptions() override {}
 
-    // QML Properties
-    bool getToolTip() const;
-    void setToolTip(bool state);
-
-    bool getVisualFeedback() const;
-    void setVisualFeedback(bool state);
-
-    bool getSingleClick() const;
-    void setSingleClick(bool state);
-
-    qreal getAnimationDurationFactor() const;
-    void setAnimationDurationFactor(qreal speed);
+    WorkspaceOptionsGlobalsSettings *globalsSettings() const;
+    WorkspaceOptionsPlasmaSettings *plasmaSettings() const;
 
 public Q_SLOTS:
-    void load() override;
     void save() override;
-    void defaults() override;
-
-Q_SIGNALS:
-    void toolTipChanged();
-    void visualFeedbackChanged();
-    void singleClickChanged();
-    void animationDurationFactorChanged();
 
 private:
-    void loadPlasmarc();
-    void loadKdeglobals();
-
-    void savePlasmarc();
-    void saveKdeglobals();
-
-    void handleNeedsSave();
-
-    // QML variables
-    bool m_toolTipOriginalState;
-    bool m_toolTipCurrentState;
-
-    bool m_visualFeedbackOriginalState;
-    bool m_visualFeedbackCurrentState;
-
-    bool m_singleClickOriginalState;
-    bool m_singleClickCurrentState;
-
-    qreal m_animationDurationFactor = 1.0;
-    qreal m_animationOriginalDurationFactor = 1.0;
+    WorkspaceOptionsGlobalsSettings *m_globalsSettings;
+    WorkspaceOptionsPlasmaSettings *m_plasmaSettings;
 };
 
 #endif  // _KCM_WORKSPACEOPTIONS_H

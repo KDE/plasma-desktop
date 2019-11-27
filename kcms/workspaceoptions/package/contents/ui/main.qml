@@ -26,8 +26,6 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 KCM.SimpleKCM {
     id: root
 
-    KCM.ConfigModule.buttons: KCM.ConfigModule.Help | KCM.ConfigModule.Defaults | KCM.ConfigModule.Apply
-
     implicitWidth: Kirigami.Units.gridUnit * 40
 
     Kirigami.FormLayout {
@@ -38,15 +36,23 @@ KCM.SimpleKCM {
             id: showToolTips
             Kirigami.FormData.label: i18n("Visual behavior:")
             text: i18n("Display informational tooltips on mouse hover")
-            checked: kcm.toolTip
-            onCheckedChanged: kcm.toolTip = checked
+            enabled: !kcm.plasmaSettings.isImmutable("delay")
+            checked: kcm.plasmaSettings.delay > 0
+            onCheckedChanged: {
+                if (checked) {
+                    kcm.plasmaSettings.delay = 0.7
+                } else {
+                    kcm.plasmaSettings.delay = -1
+                }
+            }
         }
 
         QQC2.CheckBox {
             id: showVisualFeedback
             text: i18n("Display visual feedback for status changes")
-            checked: kcm.visualFeedback
-            onCheckedChanged: kcm.visualFeedback = checked
+            enabled: !kcm.plasmaSettings.isImmutable("osdEnabled")
+            checked: kcm.plasmaSettings.osdEnabled
+            onCheckedChanged: kcm.plasmaSettings.osdEnabled = checked
         }
 
         Item {
@@ -57,6 +63,7 @@ KCM.SimpleKCM {
         // move from 4x, 3x, 2x, 1x, 0.5x, 0.25x, 0.125x
         // 0 is a special case
         ColumnLayout {
+            enabled: !kcm.globalsSettings.isImmutable("animationDurationFactor")
             Kirigami.FormData.label: i18n("Animation speed:")
             Kirigami.FormData.buddyFor: slider
 
@@ -69,15 +76,15 @@ KCM.SimpleKCM {
                 snapMode: QQC2.Slider.SnapAlways
                 onMoved: {
                     if(value === to) {
-                        kcm.animationDurationFactor = 0;
+                        kcm.globalsSettings.animationDurationFactor = 0;
                     } else {
-                        kcm.animationDurationFactor = 1.0 / Math.pow(2, value);
+                        kcm.globalsSettings.animationDurationFactor = 1.0 / Math.pow(2, value);
                     }
                 }
-                value: if (kcm.animationDurationFactor === 0) {
+                value: if (kcm.globalsSettings.animationDurationFactor === 0) {
                     return slider.to;
                 } else {
-                    return -(Math.log(kcm.animationDurationFactor) / Math.log(2));
+                    return -(Math.log(kcm.globalsSettings.animationDurationFactor) / Math.log(2));
                 }
             }
             RowLayout {
@@ -93,12 +100,6 @@ KCM.SimpleKCM {
             }
         }
 
-        Connections {
-            target: kcm
-            onToolTipChanged: showToolTips.checked = kcm.toolTip
-            onVisualFeedbackChanged: showVisualFeedback.checked = kcm.visualFeedback
-        }
-
         Item {
             Kirigami.FormData.isSection: false
         }
@@ -109,21 +110,18 @@ KCM.SimpleKCM {
             id: singleClick
             Kirigami.FormData.label: i18n("Click behavior:")
             text: i18n("Single-click to open files and folders")
-            checked: kcm.singleClick
-            onCheckedChanged: kcm.singleClick = checked
+            enabled: !kcm.globalsSettings.isImmutable("singleClick")
+            checked: kcm.globalsSettings.singleClick
+            onToggled: kcm.globalsSettings.singleClick = true
         }
 
         QQC2.RadioButton {
             id: doubleClick
             text: i18n("Double-click to open files and folders (single click to select)")
+            enabled: !kcm.globalsSettings.isImmutable("singleClick")
+            checked: !kcm.globalsSettings.singleClick
+            onToggled: kcm.globalsSettings.singleClick = false
         }
 
-        Connections {
-            target: kcm
-            onSingleClickChanged: {
-                singleClick.checked = kcm.singleClick
-                doubleClick.checked = !singleClick.checked
-            }
-        }
     }
 }
