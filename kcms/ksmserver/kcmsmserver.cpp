@@ -213,11 +213,6 @@ void SMServerConfig::save()
                      int(KWorkSpace::ShutdownTypeNone));
   group.writeEntry("excludeApps", dialog->excludeLineedit->text());
   c.sync();
-# if 0
-  // update the k menu if necessary
-  QDBusInterface kicker("org.kde.kicker", "/kicker", "org.kde.kicker");
-  kicker.call("configure");
-#endif
 }
 
 void SMServerConfig::defaults()
