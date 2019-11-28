@@ -90,22 +90,18 @@ bool PreviewItem::isValid() const
     return m_style && m_widget;
 }
 
-void setStyleRecursively(QWidget *widget, QStyle *style)
+void setStyleRecursively(QWidget *widget, QStyle *style, const QPalette &palette)
 {
     // Don't let styles kill the palette for other styles being previewed.
     widget->setPalette(QPalette());
-
-    QPalette newPalette(KColorScheme::createApplicationPalette(KSharedConfig::openConfig()));
-    style->polish(newPalette);
-
-    widget->setPalette(newPalette);
+    widget->setPalette(palette);
 
     widget->setStyle(style);
 
     const auto children = widget->children();
     for (QObject *child : children) {
         if (child->isWidgetType()) {
-            setStyleRecursively(static_cast<QWidget *>(child), style);
+            setStyleRecursively(static_cast<QWidget *>(child), style, palette);
         }
     }
 }
@@ -138,7 +134,20 @@ void PreviewItem::reload()
     // Prevent Qt from wrongly caching radio button images
     QPixmapCache::clear();
 
-    setStyleRecursively(m_widget.data(), m_style.data());
+    QPalette palette(KColorScheme::createApplicationPalette(KSharedConfig::openConfig()));
+    m_style->polish(palette);
+
+    // HACK Needed so the previews look like their window is active
+    // The previews don't have a parent (we're in QML, after all, there is no QWidget* to parent it to)
+    // so QWidget::isActiveWindow() always returns false making the widget look dull
+    // You still won't get hover effects in some themes (those that don't do that for inactive windows)
+    // but at least at a glance it looks fine...
+    for (int i = 0; i < QPalette::NColorRoles; ++i) {
+        const auto role = static_cast<QPalette::ColorRole>(i);
+        palette.setColor(QPalette::Inactive, role, palette.color(QPalette::Active, role));
+    }
+
+    setStyleRecursively(m_widget.data(), m_style.data(), palette);
 
     m_widget->ensurePolished();
 
