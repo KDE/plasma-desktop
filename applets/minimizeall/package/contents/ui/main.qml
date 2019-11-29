@@ -41,6 +41,7 @@ Item {
     Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+    Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
 
     Plasmoid.onActivated: toggleActive()
 

@@ -35,6 +35,7 @@ QtObject {
     Plasmoid.icon: plasmoid.configuration.icon
     Plasmoid.title: i18n("Show Desktop")
     Plasmoid.toolTipSubText: i18n("Show the Plasma desktop")
+    Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
 
     // QtObject has no default property
     property QtObject showdesktop: ShowDesktop { }
