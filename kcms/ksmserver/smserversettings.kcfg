@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="ksmserverrc" />
+  <group name="General">
+    <entry name="confirmLogout" type="Bool">
+      <label>Confirm logout</label>
+      <default>true</default>
+    </entry>
+    <entry name="offerShutdown" type="Bool">
+      <label>Offer shutdown options</label>
+      <default>true</default>
+    </entry>
+    <entry name="shutdownType" type="Int">
+      <label>Default leave option</label>
+      <default>0</default>
+    </entry>
+    <entry name="loginMode" type="Enum">
+      <choices name="LoginModeType">
+        <choice name="restorePreviousLogout"/>
+        <choice name="restoreSavedSession"/>
+        <choice name="emptySession"/>
+      </choices>
+      <label>On login</label>
+      <default>restorePreviousLogout</default>
+    </entry>
+    <entry name="excludeApps" type="String">
+      <label>Applications to be excluded from session</label>
+      <default></default>
+    </entry>
+  </group>
+</kcfg>

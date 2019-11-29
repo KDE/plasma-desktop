@@ -18,7 +18,7 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <widget class="QCheckBox" name="confirmLogoutCheck">
+       <widget class="QCheckBox" name="kcfg_confirmLogout">
         <property name="whatsThis">
          <string>Check this option if you want the session manager to display a logout confirmation dialog box.</string>
         </property>
@@ -28,7 +28,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QCheckBox" name="offerShutdownCheck">
+       <widget class="QCheckBox" name="kcfg_offerShutdown">
         <property name="text">
          <string>O&amp;ffer shutdown options</string>
         </property>
@@ -38,7 +38,10 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="sdGroup">
+    <widget class="QGroupBox" name="kcfg_shutdownType">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="whatsThis">
       <string>Here you can choose what should happen by default when you log out. This only has meaning, if you logged in through KDM.</string>
      </property>
@@ -71,7 +74,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="loginGroup">
+    <widget class="QGroupBox" name="kcfg_loginMode">
      <property name="whatsThis">
       <string>&lt;ul&gt;
 &lt;li&gt;&lt;b&gt;Restore previous session:&lt;/b&gt; Will save all applications running on exit and restore them when they next start up&lt;/li&gt;
@@ -113,12 +116,12 @@
          <bool>false</bool>
         </property>
         <property name="buddy">
-         <cstring>excludeLineedit</cstring>
+         <cstring>kcfg_excludeApps</cstring>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="excludeLineedit">
+       <widget class="QLineEdit" name="kcfg_excludeApps">
         <property name="whatsThis">
          <string>Here you can enter a colon or comma separated list of applications that should not be saved in sessions, and therefore will not be started when restoring a session. For example 'xterm:konsole' or 'xterm,konsole'.</string>
         </property>
@@ -179,9 +182,9 @@
  <resources/>
  <connections>
   <connection>
-   <sender>offerShutdownCheck</sender>
+   <sender>kcfg_offerShutdown</sender>
    <signal>toggled(bool)</signal>
-   <receiver>sdGroup</receiver>
+   <receiver>kcfg_shutdownType</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">

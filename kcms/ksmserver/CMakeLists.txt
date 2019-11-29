@@ -1,10 +1,11 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmsmserver\")
 
-set(kcm_smserver_PART_SRCS kcmsmserver.cpp smserverconfigimpl.cpp )
+set(kcm_smserver_PART_SRCS kcmsmserver.cpp)
 
 qt5_add_dbus_interface(kcm_smserver_PART_SRCS org.freedesktop.login1.Manager.xml login1_manager)
 
+kconfig_add_kcfg_files(kcm_smserver_PART_SRCS smserversettings.kcfgc GENERATE_MOC)
 ki18n_wrap_ui(kcm_smserver_PART_SRCS smserverconfigdlg.ui )
 
 add_library(kcm_smserver MODULE ${kcm_smserver_PART_SRCS})

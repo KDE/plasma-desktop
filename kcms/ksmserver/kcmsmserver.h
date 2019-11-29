@@ -5,6 +5,8 @@
  *  based on kcmtaskbar.h
  *  Copyright (c) 2000 Kurt Granroth <granroth@kde.org>
  *
+ *  Copyright (c) 2019 Kevin Ottens <kevin.ottens@enioka.com>
+ *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 2 of the License, or
@@ -25,9 +27,14 @@
 
 class QAction;
 
+class SMServerSettings;
 class SMServerConfigImpl;
 
 class OrgFreedesktopLogin1ManagerInterface;
+
+namespace Ui {
+class SMServerConfigDlg;
+}
 
 class SMServerConfig : public KCModule
 {
@@ -35,16 +42,14 @@ class SMServerConfig : public KCModule
 
 public:
   explicit SMServerConfig( QWidget *parent=nullptr, const QVariantList &list=QVariantList() );
-
-  void load() override;
-  void save() override;
-  void defaults() override;
+  ~SMServerConfig();
 
 private:
   void initFirmwareSetup();
   void checkFirmwareSetupRequested();
-  SMServerConfigImpl* dialog;
 
+  QScopedPointer<Ui::SMServerConfigDlg> ui;
+  SMServerSettings *m_settings;
   OrgFreedesktopLogin1ManagerInterface *m_login1Manager = nullptr;
   QAction *m_rebootNowAction = nullptr;
   bool m_isUefi = false;
