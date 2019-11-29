@@ -46,8 +46,9 @@ Kirigami.ApplicationWindow
         visible = false
     }
 
-    Component.onCompleted: {
-        globalDrawer.actions[recentEmojiModel.count === 0 ? 1 : 0].trigger()
+    onVisibilityChanged: {
+        if (visible)
+            globalDrawer.actions[recentEmojiModel.count === 0 ? 1 : 0].trigger()
     }
 
     globalDrawer: Kirigami.GlobalDrawer {

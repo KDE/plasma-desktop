@@ -152,7 +152,7 @@ public:
             m_emoji += { QString::fromUtf8(ibus_emoji_data_get_emoji(data)), ibus_emoji_data_get_description(data), category };
         }
         categories.remove({});
-        m_categories = categories.toList();
+        m_categories = categories.values();
         m_categories.sort();
         m_categories.prepend({});
         m_categories.prepend(QStringLiteral(":recent:"));
@@ -177,33 +177,46 @@ class RecentEmojiModel : public AbstractEmojiModel
     Q_PROPERTY(int count READ rowCount CONSTANT)
 public:
     RecentEmojiModel()
-        : m_settings(new EmojierSettings)
     {
-        auto recent = m_settings->recent();
-        auto recentDescriptions = m_settings->recentDescriptions();
-
-        int i = 0;
-        for (QString c : recent) {
-            m_emoji += { QString(c), recentDescriptions.at(i++), QString{} };
-        }
+        refresh();
     }
 
     Q_SCRIPTABLE void includeRecent(const QString &emoji, const QString &emojiDescription) {
-        QStringList recent = m_settings->recent();
+        QStringList recent = m_settings.recent();
+        QStringList recentDescriptions = m_settings.recentDescriptions();
+
+        const int idx = recent.indexOf(emoji);
+        if (idx >= 0) {
+            recent.removeAt(idx);
+            recentDescriptions.removeAt(idx);
+        }
         recent.prepend(emoji);
         recent = recent.mid(0, 50);
-        m_settings->setRecent(recent);
+        m_settings.setRecent(recent);
 
-        QStringList recentDescriptions = m_settings->recentDescriptions();
         recentDescriptions.prepend(emojiDescription);
         recentDescriptions = recentDescriptions.mid(0, 50);
-        m_settings->setRecentDescriptions(recentDescriptions);
+        m_settings.setRecentDescriptions(recentDescriptions);
+        m_settings.save();
 
-        m_settings->save();
+        refresh();
     }
 
 private:
-    QScopedPointer<EmojierSettings> m_settings;
+    void refresh()
+    {
+        beginResetModel();
+        auto recent = m_settings.recent();
+        auto recentDescriptions = m_settings.recentDescriptions();
+        int i = 0;
+        m_emoji.clear();
+        for (const QString &c : recent) {
+            m_emoji += { c, recentDescriptions.at(i++), QString{} };
+        }
+        endResetModel();
+    }
+
+    EmojierSettings m_settings;
 };
 
 class CategoryModelFilter : public QSortFilterProxyModel
@@ -299,7 +312,6 @@ int main(int argc, char** argv)
     qmlRegisterType<EmojiModel>("org.kde.plasma.emoji", 1, 0, "EmojiModel");
     qmlRegisterType<CategoryModelFilter>("org.kde.plasma.emoji", 1, 0, "CategoryModelFilter");
     qmlRegisterType<SearchModelFilter>("org.kde.plasma.emoji", 1, 0, "SearchModelFilter");
-    qmlRegisterType<EmojierSettings>("org.kde.plasma.emoji", 1, 0, "EmojierSettings");
     qmlRegisterType<RecentEmojiModel>("org.kde.plasma.emoji", 1, 0, "RecentEmojiModel");
     qmlRegisterSingletonType<CopyHelperPrivate>("org.kde.plasma.emoji", 1, 0, "CopyHelper", [] (QQmlEngine*, QJSEngine*) -> QObject* { return new CopyHelperPrivate; });
 
