@@ -190,8 +190,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
             ActionButton {
                 svg: configIconsSvg
                 elementId: "showbackground"
-                //mainText: i18n("Show Background")
-                toolTip: i18n("Show Background")
+                toolTip: checked ? i18n("Hide Background") : i18n("Show Background")
                 iconSize: overlay.iconSize
                 visible: (applet.backgroundHints & PlasmaCore.Types.ConfigurableBackground)
                 checked: applet.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground || applet.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground
