@@ -19,7 +19,6 @@
 // own
 #include "kcmformats.h"
 #include "ui_kcmformatswidget.h"
-#include "writeexports.h"
 
 // Qt
 #include <QApplication>
@@ -171,6 +170,21 @@ QIcon KCMFormats::loadFlagIcon(const QString &flagCode)
     return icon;
 }
 
+const static QString configFile = QStringLiteral("plasma-localerc");
+const static QString exportFile = QStringLiteral("plasma-locale-settings.sh");
+
+const static QString lcLang = QStringLiteral("LANG");
+const static QString lcNumeric = QStringLiteral("LC_NUMERIC");
+const static QString lcTime = QStringLiteral("LC_TIME");
+const static QString lcMonetary = QStringLiteral("LC_MONETARY");
+const static QString lcMeasurement = QStringLiteral("LC_MEASUREMENT");
+const static QString lcCollate = QStringLiteral("LC_COLLATE");
+const static QString lcCtype = QStringLiteral("LC_CTYPE");
+
+const static QString lcLanguage = QStringLiteral("LANGUAGE");
+
+
+
 void KCMFormats::readConfig()
 {
     m_config = KConfigGroup(KSharedConfig::openConfig(configFile), "Formats");
@@ -270,7 +284,6 @@ void KCMFormats::writeConfig()
 void KCMFormats::save()
 {
     writeConfig();
-    writeExports();
     KMessageBox::information(this, i18n("Your changes will take effect the next time you log in."),
                              i18n("Format Settings Changed"), QStringLiteral("FormatSettingsChanged"));
 }
