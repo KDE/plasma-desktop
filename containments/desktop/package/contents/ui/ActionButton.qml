@@ -42,7 +42,9 @@ PlasmaComponents.ToolButton {
         if (qAction) {
             qAction.trigger()
         }
-        appletContainer.editMode = false;
+        if (!plasmoid.editMode) {
+            appletContainer.editMode = false;
+        }
     }
 
 
