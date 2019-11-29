@@ -55,10 +55,21 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
     PlasmaCore.FrameSvgItem {
         id: frame
         anchors.verticalCenter: parent.verticalCenter
-        x: rightAvailableSpace > width + units.gridUnit
+        x: overlay.rightAvailableSpace > width + units.gridUnit
             ? parent.width + units.gridUnit
             : -width - units.gridUnit
 
+        // This MouseArea is used to block input between the applet and the handle, to not make it steal by other applets
+        MouseArea {
+            anchors {
+                top: parent.top
+                bottom: parent.bottom
+            }
+            z: -1
+            x: overlay.rightAvailableSpace > parent.width + units.gridUnit ? -units.gridUnit : 0
+            width: units.gridUnit + parent.width
+            hoverEnabled: true
+        }
         transform: Translate {
             x: open ? 0 : (overlay.rightAvailableSpace > frame.width + units.gridUnit ? -frame.width : frame.width)
 
