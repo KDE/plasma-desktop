@@ -316,5 +316,3 @@ void XlibConfig::slotScrollPolarityChanged()
 {
     m_backend->settings()->handedNeedsApply = true;
 }
-
-#include "xlib_config.moc"
