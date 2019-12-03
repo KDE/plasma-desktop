@@ -29,6 +29,8 @@ Kirigami.ScrollablePage
     id: view
     property alias model: emojiModel.sourceModel
     property alias category: filter.category
+    leftPadding: 0
+    rightPadding: 0
 
     header: QQC2.TextField {
         id: searchField
@@ -61,8 +63,13 @@ Kirigami.ScrollablePage
 
     GridView {
         id: emojiView
-        cellWidth: 64
-        cellHeight: cellWidth
+
+        readonly property real desiredSize: Kirigami.Units.gridUnit * 3
+        readonly property real columnsToHave: Math.ceil(width/desiredSize)
+
+        cellWidth: width/columnsToHave
+        cellHeight: desiredSize
+
         model: CategoryModelFilter {
             id: filter
             sourceModel: SearchModelFilter {
@@ -78,11 +85,19 @@ Kirigami.ScrollablePage
         }
         currentIndex: -1
 
-        delegate: QQC2.Label {
-            font.pointSize: 30
-            fontSizeMode: Text.Fit
-            minimumPointSize: 10
-            text: model.display
+        delegate: MouseArea {
+            QQC2.Label {
+                font.pointSize: 30
+                fontSizeMode: Text.Fit
+                minimumPointSize: 10
+                text: model.display
+                horizontalAlignment: Text.AlignHCenter
+
+                anchors.fill: parent
+                anchors.margins: 1
+            }
+            width: emojiView.cellWidth
+            height: emojiView.cellHeight
 
             QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
             QQC2.ToolTip.text: model.toolTip
@@ -98,12 +113,10 @@ Kirigami.ScrollablePage
                 window.report(model.display, model.toolTip)
             }
 
-            MouseArea {
-                id: mouse
-                anchors.fill: parent
-                hoverEnabled: true
-                onClicked: reportEmoji()
-            }
+
+            id: mouse
+            hoverEnabled: true
+            onClicked: reportEmoji()
         }
     }
 }
