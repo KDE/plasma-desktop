@@ -42,7 +42,7 @@ Kirigami.ScrollablePage
                 emojiView.currentIndex = 0
             }
         }
-        onEditingFinished: {
+        onAccepted: {
             if (emojiView.currentItem)
                 emojiView.currentItem.reportEmoji()
         }
