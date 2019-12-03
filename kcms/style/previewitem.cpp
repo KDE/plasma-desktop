@@ -151,14 +151,14 @@ void PreviewItem::reload()
 
     m_widget->ensurePolished();
 
-    const auto sizeHint = m_widget->sizeHint();
-    setImplicitSize(sizeHint.width(), sizeHint.height());
-
     m_widget->resize(qRound(width()), qRound(height()));
 
     m_widget->installEventFilter(this);
 
     m_widget->show();
+
+    const auto sizeHint = m_widget->sizeHint();
+    setImplicitSize(sizeHint.width(), sizeHint.height());
 
     if (oldValid != isValid()) {
         emit validChanged();
