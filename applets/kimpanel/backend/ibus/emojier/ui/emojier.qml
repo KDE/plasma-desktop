@@ -27,7 +27,6 @@ import org.kde.plasma.emoji 1.0
 Kirigami.ApplicationWindow
 {
     id: window
-    title: i18n("Emoji Picker")
 
     EmojiModel {
         id: emoji
