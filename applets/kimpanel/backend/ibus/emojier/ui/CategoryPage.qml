@@ -52,12 +52,13 @@ Kirigami.ScrollablePage
     }
 
     actions.main: Kirigami.Action {
+        checked: searchField.visible
         icon.name: "search"
         tooltip: i18n("Search...")
         shortcut: StandardKey.Find
         onTriggered: {
-            searchField.visible = true
-            searchField.focus = true
+            searchField.visible = !searchField.visible
+            searchField.focus = searchField.visible
         }
     }
 
