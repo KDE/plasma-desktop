@@ -307,8 +307,6 @@ int main(int argc, char** argv)
 
     KDBusService* service = new KDBusService(KDBusService::Unique | startup, &app);
 
-    EmojiModel m;
-
     qmlRegisterType<EmojiModel>("org.kde.plasma.emoji", 1, 0, "EmojiModel");
     qmlRegisterType<CategoryModelFilter>("org.kde.plasma.emoji", 1, 0, "CategoryModelFilter");
     qmlRegisterType<SearchModelFilter>("org.kde.plasma.emoji", 1, 0, "SearchModelFilter");
