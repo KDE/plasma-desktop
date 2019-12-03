@@ -38,6 +38,7 @@
 #include <KQuickAddons/QtQuickSettings>
 #include <KCrash>
 #include <KDBusService>
+#include <KWindowConfig>
 #include <QDebug>
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -271,6 +272,38 @@ class CopyHelperPrivate : public QObject
         }
 };
 
+class EngineWatcher : public QObject
+{
+public:
+    EngineWatcher(QQmlApplicationEngine* engine)
+        : QObject(engine)
+    {
+        connect(engine, &QQmlApplicationEngine::objectCreated, this, &EngineWatcher::integrateObject);
+    }
+
+    void integrateObject(QObject* object) {
+        QWindow* window = qobject_cast<QWindow*>(object);
+
+        auto conf = KSharedConfig::openConfig();
+        KWindowConfig::restoreWindowSize(window, conf->group("Window"));
+
+        object->installEventFilter(this);
+    }
+
+    bool eventFilter(QObject * object, QEvent * event)
+    {
+        if (event->type() == QEvent::Close) {
+            QWindow* window = qobject_cast<QWindow*>(object);
+
+            auto conf = KSharedConfig::openConfig();
+            auto group = conf->group("Window");
+            KWindowConfig::saveWindowSize(window, group);
+            group.sync();
+        }
+        return false;
+    }
+};
+
 int main(int argc, char** argv)
 {
     QApplication app(argc, argv);
@@ -313,8 +346,10 @@ int main(int argc, char** argv)
     qmlRegisterType<RecentEmojiModel>("org.kde.plasma.emoji", 1, 0, "RecentEmojiModel");
     qmlRegisterSingletonType<CopyHelperPrivate>("org.kde.plasma.emoji", 1, 0, "CopyHelper", [] (QQmlEngine*, QJSEngine*) -> QObject* { return new CopyHelperPrivate; });
 
-    QQmlApplicationEngine engine(QUrl(QStringLiteral("qrc:/ui/emojier.qml")));
+    QQmlApplicationEngine engine;
+    new EngineWatcher(&engine);
     engine.addImageProvider(QLatin1String("text"), new TextImageProvider);
+    engine.load(QUrl(QStringLiteral("qrc:/ui/emojier.qml")));
 
     QObject::connect(service, &KDBusService::activateRequested, &engine, [&engine](const QStringList &/*arguments*/, const QString &/*workingDirectory*/) {
         for (QObject* object : engine.rootObjects()) {
