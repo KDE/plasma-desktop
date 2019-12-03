@@ -295,10 +295,10 @@ void PreviewItem::dispatchEnterLeave(QWidget *enter, QWidget *leave, const QPoin
 
 void PreviewItem::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)
 {
-    if (!m_widget || newGeometry == oldGeometry) {
-        return;
+    if (m_widget && newGeometry != oldGeometry) {
+        m_widget->resize(qRound(newGeometry.width()), qRound(newGeometry.height()));
     }
 
-    m_widget->resize(qRound(newGeometry.width()), qRound(newGeometry.height()));
+    QQuickPaintedItem::geometryChanged(newGeometry, oldGeometry);
 }
 
