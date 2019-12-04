@@ -77,7 +77,7 @@ Kirigami.ApplicationWindow
                 checked: window.pageStack.get(0).title === text
                 text: category.length === 0 ? i18n("All")
                         : isRecent          ? i18n("Recent")
-                        : category.replace(/&/g, "&&");
+                        : category;
                 enabled: !isRecent || recentEmojiModel.count > 0
 
                 icon.name: isRecent ? "document-open-recent-symbolic"
