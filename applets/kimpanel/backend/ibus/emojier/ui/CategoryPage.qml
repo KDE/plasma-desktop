@@ -32,33 +32,43 @@ Kirigami.ScrollablePage
     leftPadding: 0
     rightPadding: 0
 
-    header: QQC2.TextField {
-        id: searchField
-        Layout.fillWidth: true
-        placeholderText: i18n("Search...")
-        onTextChanged: {
-            emojiModel.search = text
-            if (emojiView.currentIndex < 0) {
-                emojiView.currentIndex = 0
-            }
-        }
-        onAccepted: {
-            if (emojiView.currentItem)
-                emojiView.currentItem.reportEmoji()
-        }
-        height: visible ? implicitHeight : 0
-        visible: false
-        Keys.onEscapePressed: visible = false
-    }
-
     actions.main: Kirigami.Action {
-        checked: searchField.visible
         icon.name: "search"
         tooltip: i18n("Search...")
         shortcut: StandardKey.Find
         onTriggered: {
-            searchField.visible = !searchField.visible
-            searchField.focus = searchField.visible
+            checked = !checked
+        }
+    }
+
+    titleDelegate: RowLayout {
+        Layout.fillWidth: true
+        Layout.preferredWidth: view.width
+        Kirigami.Heading {
+            text: view.title
+            Layout.fillWidth: true
+        }
+
+        QQC2.TextField {
+            id: searchField
+            Layout.fillWidth: true
+            placeholderText: i18n("Search...")
+            onTextChanged: {
+                emojiModel.search = text
+                if (emojiView.currentIndex < 0) {
+                    emojiView.currentIndex = 0
+                }
+            }
+            onAccepted: {
+                if (emojiView.currentItem)
+                    emojiView.currentItem.reportEmoji()
+            }
+            visible: view.actions.main.checked
+            onVisibleChanged: if (visible) forceActiveFocus()
+            Keys.onEscapePressed: {
+                text = ""
+                view.actions.main.checked = false
+            }
         }
     }
 
