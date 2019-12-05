@@ -114,13 +114,8 @@ Item {
     PlasmaCore.IconItem {
         source: "user-identity"
         visible: faceIcon.status !== Image.Ready
-        width: units.gridUnit * 3
-        height: width
-        anchors {
-            top: faceIcon.top
-            right: faceIcon.right
-            rightMargin: -units.gridUnit/2
-        }
+        anchors.fill: faceIcon
+        anchors.bottomMargin: units.smallSpacing
         usesPlasmaTheme: false
     }
 
