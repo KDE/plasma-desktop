@@ -15,7 +15,6 @@
 
 #include "componentchooserbrowser.h"
 #include <kopenwithdialog.h>
-#include <kglobalsettings.h>
 #include <kconfiggroup.h>
 
 #include <KBuildSycocaProgressDialog>
@@ -25,6 +24,8 @@
 #include "../migrationlib/kdelibs4config.h"
 
 #include <QUrl>
+#include <QDBusConnection>
+#include <QDBusMessage>
 
 CfgBrowser::CfgBrowser(QWidget *parent)
     : QWidget(parent), Ui::BrowserConfig_UI(),CfgPlugin()
@@ -139,7 +140,11 @@ void CfgBrowser::save(KConfig *)
 
     Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("General"), "kdeglobals");
 
-    KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged);
+    QDBusMessage message  = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
+                                                           QStringLiteral("/KLauncher"),
+                                                           QStringLiteral("org.kde.KLauncher"),
+                                                           QStringLiteral("reparseConfiguration"));
+    QDBusConnection::sessionBus().send(message);
 
     emit changed(false);
 }

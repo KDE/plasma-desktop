@@ -28,7 +28,6 @@
 #include <kurlrequester.h>
 #include <kconfiggroup.h>
 #include <KLocalizedString>
-#include <KGlobalSettings>
 
 #include <QUrl>
 
@@ -85,8 +84,6 @@ void CfgTerminalEmulator::save(KConfig *)
 
 	config.sync();
         Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("General"), "kdeglobals");
-
-	KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged);
 
         QDBusMessage message  = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
                                                       QStringLiteral("/KLauncher"),
