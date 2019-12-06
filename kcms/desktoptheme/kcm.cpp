@@ -68,6 +68,7 @@ KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const QVariantList &args)
     roles[PluginNameRole] = QByteArrayLiteral("pluginName");
     roles[ThemeNameRole] = QByteArrayLiteral("themeName");
     roles[DescriptionRole] = QByteArrayLiteral("description");
+    roles[FollowsSystemColorsRole] = QByteArrayLiteral("followsSystemColors");
     roles[IsLocalRole] = QByteArrayLiteral("isLocal");
     roles[PendingDeletionRole] = QByteArrayLiteral("pendingDeletion");
     m_model->setItemRoleNames(roles);
@@ -258,6 +259,8 @@ void KCMDesktopTheme::load()
             name = packageName;
         }
         const bool isLocal = QFileInfo(theme).isWritable();
+        // Plasma Theme creates a KColorScheme out of the "color" file and falls back to system colors if there is none
+        const bool followsSystemColors = !QFileInfo::exists(themeRoot + QLatin1String("/colors"));
 
         if (m_model->findItems(packageName).isEmpty()) {
             QStandardItem *item = new QStandardItem;
@@ -265,6 +268,7 @@ void KCMDesktopTheme::load()
             item->setData(packageName, PluginNameRole);
             item->setData(name, ThemeNameRole);
             item->setData(df.readComment(), DescriptionRole);
+            item->setData(followsSystemColors, FollowsSystemColorsRole);
             item->setData(isLocal, IsLocalRole);
             item->setData(false, PendingDeletionRole);
             m_model->appendRow(item);

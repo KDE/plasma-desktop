@@ -55,6 +55,7 @@ public:
         PluginNameRole = Qt::UserRole + 1,
         ThemeNameRole,
         DescriptionRole,
+        FollowsSystemColorsRole,
         IsLocalRole,
         PendingDeletionRole
     };

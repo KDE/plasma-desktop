@@ -49,6 +49,7 @@ KCM.GridViewKCM {
         id: delegate
 
         text: model.themeName
+        subtitle: model.followsSystemColors ? i18n("Follows color scheme") : undefined
         toolTip: model.description || model.themeName
 
         opacity: model.pendingDeletion ? 0.3 : 1
