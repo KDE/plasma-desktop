@@ -63,8 +63,8 @@ set_package_properties(KF5Kirigami2 PROPERTIES
     TYPE RUNTIME
 )
 
-find_package(KF5QQC2DeskopStyle ${KF5_MIN_VERSION} CONFIG)
-set_package_properties(KF5QQC2DeskopStyle PROPERTIES
+find_package(KF5QQC2DesktopStyle ${KF5_MIN_VERSION} CONFIG)
+set_package_properties(KF5QQC2DesktopStyle PROPERTIES
     DESCRIPTION "QtQuickControls 2 style that uses QWidget's QStyle for painting"
     PURPOSE "Required at runtime by many KCMs"
     TYPE RUNTIME
