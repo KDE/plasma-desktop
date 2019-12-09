@@ -129,35 +129,56 @@ public:
 
     EmojiModel() {
         QLocale locale;
-        const QString dictName = "ibus/dicts/emoji-" + locale.bcp47Name().replace(QLatin1Char('-'), QLatin1Char('_')) + ".dict";
+        const auto bcp = locale.bcp47Name();
+        const QString dictName = "ibus/dicts/emoji-" + QString(bcp).replace(QLatin1Char('-'), QLatin1Char('_')) + ".dict";
         const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, dictName);
         if (path.isEmpty()) {
             qWarning() << "could not find" << dictName;
             return;
         }
 
-        GSList *list = ibus_emoji_data_load (path.toUtf8().constData());
-        m_emoji.reserve(g_slist_length(list));
-        QSet<QString> categories;
-        for (GSList *l = list; l; l = l->next) {
-            IBusEmojiData *data = (IBusEmojiData *) l->data;
-            if (!IBUS_IS_EMOJI_DATA (data)) {
-                qWarning() << "Your dict format is no longer supported.\n"
-                            "Need to create the dictionaries again.";
-                g_slist_free (list);
-                return;
-            }
+        const QString genericDictName = "ibus/dicts/emoji-" + bcp.left(bcp.indexOf(QLatin1Char('-'))) + ".dict";
+        const QString genericPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, genericDictName);
 
-            const QString category = QString::fromUtf8(ibus_emoji_data_get_category(data));
-            categories.insert(category);
-            m_emoji += { QString::fromUtf8(ibus_emoji_data_get_emoji(data)), ibus_emoji_data_get_description(data), category };
+        QVector<QString> dicts = {path};
+        if (!genericPath.isEmpty()) {
+            dicts << genericPath;
         }
+
+        QSet<QString> categories;
+        QSet<QString> processedEmoji;
+        for (const auto &dictPath : qAsConst(dicts)) {
+            GSList *list = ibus_emoji_data_load (dictPath.toUtf8().constData());
+            m_emoji.reserve(g_slist_length(list));
+            for (GSList *l = list; l; l = l->next) {
+                IBusEmojiData *data = (IBusEmojiData *) l->data;
+                if (!IBUS_IS_EMOJI_DATA (data)) {
+                    qWarning() << "Your dict format is no longer supported.\n"
+                                "Need to create the dictionaries again.";
+                    g_slist_free (list);
+                    return;
+                }
+
+                const QString emoji = QString::fromUtf8(ibus_emoji_data_get_emoji(data));
+                const QString description = ibus_emoji_data_get_description(data);
+                qDebug() << "ooo" << dictPath << emoji << description << processedEmoji.contains(emoji);
+                if (description == QString::fromUtf8("↑↑↑") || description.isEmpty() || processedEmoji.contains(emoji)) {
+                    continue;
+                }
+
+                const QString category = QString::fromUtf8(ibus_emoji_data_get_category(data));
+                categories.insert(category);
+                m_emoji += { emoji, description, category };
+                processedEmoji << emoji;
+            }
+            g_slist_free (list);
+        }
+
         categories.remove({});
         m_categories = categories.values();
         m_categories.sort();
         m_categories.prepend({});
         m_categories.prepend(QStringLiteral(":recent:"));
-        g_slist_free (list);
     }
 
     Q_SCRIPTABLE QString findFirstEmojiForCategory(const QString &category) {
