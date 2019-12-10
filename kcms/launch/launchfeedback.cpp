@@ -53,14 +53,4 @@ LaunchFeedbackSettings *LaunchFeedback::launchFeedbackSettings() const
     return m_settings;
 }
 
-void LaunchFeedback::save()
-{
-    ManagedConfigModule::save();
-
-    org::kde::kwin::Effects kwin(QStringLiteral("org.kde.KWin"),
-        QStringLiteral("/Effects"),
-        QDBusConnection::sessionBus());
-    kwin.reconfigureEffect(QStringLiteral("startupfeedback"));
-}
-
 #include "launchfeedback.moc"

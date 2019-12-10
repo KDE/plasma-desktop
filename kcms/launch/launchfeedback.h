@@ -44,9 +44,6 @@ public:
 
     LaunchFeedbackSettings *launchFeedbackSettings() const;
 
-public Q_SLOTS:
-    void save() override;
-
 private:
     LaunchFeedbackSettings *m_settings;
 };
