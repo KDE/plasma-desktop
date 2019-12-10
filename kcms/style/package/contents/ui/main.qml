@@ -68,10 +68,24 @@ KCM.GridViewKCM {
         toolTip: model.description
 
         thumbnailAvailable: thumbnailItem.valid
-        thumbnail: Private.PreviewItem {
-            id: thumbnailItem
+        thumbnail: Item {
             anchors.fill: parent
-            styleName: model.styleName
+            clip: thumbnailItem.implicitWidth * thumbnailItem.scale > width
+
+            Private.PreviewItem {
+                id: thumbnailItem
+                anchors.centerIn: parent
+                // Fit the widget's width in the grid view
+                // Round up to the nearest 0.05, so that 0.95 gets scaled up to 1.0
+                // to avoid blurriness in case the widget is only slightly bigger
+                scale: (Math.ceil(Math.min(1, parent.width / implicitWidth) * 20) / 20).toFixed(2)
+                width: Math.max(parent.width, implicitWidth)
+                // Scale the height back up as the background color comes from the style
+                // and we don't want to leave an ugly gap above/below it
+                height: parent.height / scale
+                smooth: true
+                styleName: model.styleName
+            }
 
             Connections {
                 target: kcm
