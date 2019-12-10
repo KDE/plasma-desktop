@@ -535,8 +535,7 @@ impanel_update_engines(IBusPanelImpanel* impanel, GVariant* var_engines) {
     IBusEngineDesc** engines = ibus_bus_get_engines_by_names(impanel->bus, engine_names);
 
     impanel->engineManager->setEngines(engines);
-
-    if (engines && engines[0] && !contains(engine_names, ibus_engine_desc_get_name(ibus_bus_get_global_engine(impanel->bus)))) {
+    if (engines && engines[0] && (!ibus_bus_get_global_engine(impanel->bus) || !contains(engine_names, ibus_engine_desc_get_name(ibus_bus_get_global_engine(impanel->bus))))) {
         ibus_bus_set_global_engine(impanel->bus, ibus_engine_desc_get_name(engines[0]));
     }
     g_strfreev(engine_names);
