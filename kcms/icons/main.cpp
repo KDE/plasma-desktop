@@ -474,7 +474,7 @@ QVariantList IconModule::previewIcons(const QString &themeName, int size, qreal 
         {QStringLiteral("folder")},
         {QStringLiteral("document"), QStringLiteral("text-x-generic")},
         {QStringLiteral("user-trash"), QStringLiteral("user-trash-empty")},
-        {QStringLiteral("system-help"), QStringLiteral("help-about"), QStringLiteral("help-contents")},
+        {QStringLiteral("help-browser"), QStringLiteral("system-help"), QStringLiteral("help-about"), QStringLiteral("help-contents")},
         {QStringLiteral("preferences-system"), QStringLiteral("systemsettings"), QStringLiteral("configure")},
 
         {QStringLiteral("text-html")},
