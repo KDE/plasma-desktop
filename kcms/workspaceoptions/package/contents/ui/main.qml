@@ -121,11 +121,18 @@ KCM.SimpleKCM {
 
         QQC2.RadioButton {
             id: doubleClick
-            text: i18n("Double-click to open files and folders (single click to select)")
+            text: i18n("Double-click to open files and folders")
             enabled: !kcm.globalsSettings.isImmutable("singleClick")
             checked: !kcm.globalsSettings.singleClick
             onToggled: kcm.globalsSettings.singleClick = false
             QQC2.ButtonGroup.group: singleClickGroup
+        }
+
+        QQC2.Label {
+            Layout.fillWidth: true
+            text: singleClick.checked ? i18n("Select by clicking on item's selection marker") : i18n("Select by single-clicking")
+            elide: Text.ElideRight
+            font.pointSize: theme.smallestFont.pointSize
         }
 
         Item {
@@ -153,6 +160,18 @@ KCM.SimpleKCM {
             checked: !kcm.globalsSettings.scrollbarLeftClickNavigatesByPage
             onToggled: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage = false
             QQC2.ButtonGroup.group: scrollHandleBehaviorGroup
+        }
+
+        // Don't show a label for what middle-clicking does when using the
+        // "click to zoom the handle" behavior because Qt doesn't invert the
+        // middle-click functionality when using this; see
+        // https://bugreports.qt.io/browse/QTBUG-80728
+        QQC2.Label {
+            Layout.fillWidth: true
+            visible: scrollbarLeftClickNavigatesByPage.checked
+            text: i18n("Middle-click to scroll to clicked location")
+            elide: Text.ElideRight
+            font.pointSize: theme.smallestFont.pointSize
         }
     }
 }
