@@ -48,7 +48,6 @@ Item {
         // TODO: port to QQC2 version once we've fixed https://bugs.kde.org/show_bug.cgi?id=403153
         QQC1.ComboBox {
             id: groupingStrategy
-            visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
             Kirigami.FormData.label: i18n("Group:")
             Layout.fillWidth: true
             model: [i18n("Do not group"), i18n("By program name")]
@@ -144,7 +143,6 @@ Item {
 
         CheckBox {
             id: showOnlyMinimized
-            visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
             text: i18n("Show only tasks that are minimized")
         }
     }

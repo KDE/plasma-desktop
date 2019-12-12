@@ -138,8 +138,7 @@ MouseArea {
             return true;
         }
 
-        groupMode: iconsOnly ? TaskManager.TasksModel.GroupApplications
-            : groupModeEnumValue(plasmoid.configuration.groupingStrategy)
+        groupMode: groupModeEnumValue(plasmoid.configuration.groupingStrategy)
         groupInline: !plasmoid.configuration.groupPopups
         groupingWindowTasksThreshold: (plasmoid.configuration.onlyGroupWhenFull && !iconsOnly
             ? LayoutManager.optimumCapacity(width, height) + 1 : -1)
