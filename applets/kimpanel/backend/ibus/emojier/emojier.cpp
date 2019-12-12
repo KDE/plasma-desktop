@@ -43,6 +43,7 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusConnectionInterface>
+#include <QSessionManager>
 
 #include "emojiersettings.h"
 #include "config-workspace.h"
@@ -327,6 +328,7 @@ public:
 
 int main(int argc, char** argv)
 {
+    QGuiApplication::setFallbackSessionManagementEnabled(false);
     QApplication app(argc, argv);
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-emoticons")));
@@ -342,6 +344,12 @@ int main(int argc, char** argv)
 //     about.setProductName("");
     about.setProgramLogo(app.windowIcon());
     KAboutData::setApplicationData(about);
+
+    auto disableSessionManagement = [](QSessionManager &sm) {
+        sm.setRestartHint(QSessionManager::RestartNever);
+    };
+    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
+    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
     KDBusService::StartupOptions startup = nullptr;
     {
