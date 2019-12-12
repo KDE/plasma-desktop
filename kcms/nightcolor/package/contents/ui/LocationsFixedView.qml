@@ -59,7 +59,7 @@ Kirigami.FormLayout {
     QQC2.Button {
         text: i18n("Detect Location")
         implicitWidth: longitudeFixedField.width // TODO: see if there is a smarter way for doing this
-        icon.name: "edit-paste-in-place"
+        icon.name: "find-location"
         onClicked: {
             latitudeFixedField.backend = locator.latitude;
             longitudeFixedField.backend = locator.longitude;
