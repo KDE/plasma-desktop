@@ -20,7 +20,6 @@ import QtQuick.Controls 2.5 as QQC2
 
 Kirigami.FormLayout {
     twinFormLayouts: parentLayout
-    enabled: activator.checked
 
     property double latitude
     property double longitude
@@ -33,31 +32,33 @@ Kirigami.FormLayout {
         eveningTimings = sunCalc.getEveningTimings(latitude, longitude);
     }
 
-    TimeField {
-        id: mornBeginField
-        Kirigami.FormData.label: i18n("Sunrise begins:")
-        backend: morningTimings.begin
-        enabled: false
+    function prettyTime(date) {
+        return date.toLocaleString(Qt.locale(), "h:m");
     }
 
-    TimeField {
-        id: mornEndField
-        Kirigami.FormData.label: i18n("...and ends:")
-        backend: morningTimings.end
-        enabled: false
+    Kirigami.Separator {
+        Kirigami.FormData.isSection: true
     }
 
-    TimeField {
-        id: evenBeginField
-        Kirigami.FormData.label: i18n("Sunset begins:")
-        backend: eveningTimings.begin
-        enabled: false
+    QQC2.Label {
+        wrapMode: Text.Wrap
+        text: i18n("Night Color begins at %1", prettyTime(eveningTimings.begin))
+    }
+    QQC2.Label {
+        wrapMode: Text.Wrap
+        text: i18n("Color fully changed at %1", prettyTime(eveningTimings.end))
     }
 
-    TimeField {
-        id: evenEndField
-        Kirigami.FormData.label: i18n("...and ends:")
-        backend: eveningTimings.end
-        enabled: false
+    Item {
+        Kirigami.FormData.isSection: true
+    }
+
+    QQC2.Label {
+        wrapMode: Text.Wrap
+        text: i18n("Night Color begins changing back at %1", prettyTime(morningTimings.begin))
+    }
+    QQC2.Label {
+        wrapMode: Text.Wrap
+        text: i18n("Normal coloration restored by %1", prettyTime(morningTimings.end))
     }
 }

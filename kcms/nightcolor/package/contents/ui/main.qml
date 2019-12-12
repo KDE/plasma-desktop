@@ -28,6 +28,7 @@ KCM.SimpleKCM {
     property int error: cA.error
     property bool defaultRequested: false
     implicitHeight: Kirigami.Units.gridUnit * 29
+    implicitWidth: Kirigami.Units.gridUnit * 35
 
     CC.CompositorAdaptor {
         id: cA
@@ -108,12 +109,21 @@ KCM.SimpleKCM {
             Layout.alignment: Qt.AlignHCenter
             Layout.maximumWidth: Math.round(root.width * 0.5)
 
-            text: i18n("Night Color makes the colors on the screen warmer to reduce eye strain.")
+            text: i18n("Night Color makes the colors on the screen warmer to reduce eye strain at the time of your choosing.")
             wrapMode: Text.WordWrap
         }
 
         Kirigami.FormLayout {
             id: parentLayout
+
+            Connections {
+                target: root
+                onReset: {
+                    mornBeginManField.backend = cA.morningBeginFixed;
+                    evenBeginManField.backend = cA.eveningBeginFixed;
+                    transTimeField.value = cA.transitionTime;
+                }
+            }
 
             QQC2.CheckBox {
                 id: activator
@@ -132,7 +142,7 @@ KCM.SimpleKCM {
             }
 
             GridLayout {
-                Kirigami.FormData.label: i18n("Night Color temperature:")
+                Kirigami.FormData.label: i18n("Night Color Temperature:")
                 Kirigami.FormData.buddyFor: tempSlider
                 enabled: activator.checked
 
@@ -140,9 +150,10 @@ KCM.SimpleKCM {
 
                 QQC2.Slider {
                     id: tempSlider
+                    // Match combobox width
+                    Layout.minimumWidth: modeSwitcher.width
                     enabled: activator.checked
                     from: cA.minimalTemperature
-                    implicitWidth: modeSwitcher.width
                     to: cA.neutralTemperature
                     value: cA.nightTemperature
                     stepSize: 100
@@ -176,201 +187,128 @@ KCM.SimpleKCM {
 
             QQC2.ComboBox {
                 id: modeSwitcher
-                Kirigami.FormData.label: i18n("Operation mode:")
+                // Work around https://bugs.kde.org/show_bug.cgi?id=403153
+                Layout.minimumWidth: Kirigami.Units.gridUnit * 17
+                Kirigami.FormData.label: i18n("Activation time:")
                 enabled: activator.checked
                 model: [
-                    i18n("Automatic"),
-                    i18n("Location"),
-                    i18n("Times"),
-                    i18n("Constant")
+                    i18n("Sunset to sunrise at current location"),
+                    i18n("Sunset to sunrise at manual location"),
+                    i18n("Custom time"),
+                    i18n("Always on")
                 ]
                 currentIndex: cA.mode
                 onCurrentIndexChanged: {
                     cA.modeStaged = currentIndex;
-                    advancedControlLoader.updatePage(currentIndex);
                     calcNeedsSave();
                 }
             }
+
+            // Show current location in auto mode
+            QQC2.Label {
+                visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeAutomatic
+                enabled: activator.checked
+                wrapMode: Text.Wrap
+                text: i18n("Latitude: %1   Longitude: %2", locator.latitude, locator.longitude)
+            }
+
+            // Show time entry fields in manual timings mode
+            TimeField {
+                id: evenBeginManField
+                // Match combobox width
+                Layout.minimumWidth: modeSwitcher.width
+                visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeTimings
+                Kirigami.FormData.label: i18n("Turn on at:")
+                backend: cA.eveningBeginFixedStaged
+                onBackendChanged: {cA.eveningBeginFixedStaged = backend;
+                    calcNeedsSave();
+                }
+
+                QQC2.ToolTip {
+                    text: i18n("Input format: HH:MM")
+                }
+            }
+
+            TimeField {
+                id: mornBeginManField
+                // Match combobox width
+                Layout.minimumWidth: modeSwitcher.width
+                visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeTimings
+                Kirigami.FormData.label: i18n("Turn off at:")
+                backend: cA.morningBeginFixedStaged
+                onBackendChanged: {cA.morningBeginFixedStaged = backend;
+                    calcNeedsSave();
+                }
+
+                QQC2.ToolTip {
+                    text: i18n("Input format: HH:MM")
+                }
+            }
+
+            QQC2.SpinBox {
+                id: transTimeField
+                visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeTimings
+                // Match width of combobox and input fields
+                Layout.minimumWidth: modeSwitcher.width
+                Kirigami.FormData.label: i18n("Transition duration:")
+                from: 1
+                to: 600 // less than 12 hours (in minutes: 720)
+                value: cA.transitionTimeStaged
+                editable: true
+                onValueModified: {
+                    cA.transitionTimeStaged = value;
+                    calcNeedsSave();
+                }
+                textFromValue: function(value, locale) {
+                    return i18np("%1 minute", "%1 minutes", value)
+                }
+                valueFromText: function(text, locale) {
+                    return parseInt(text);
+                }
+
+                QQC2.ToolTip {
+                    text: i18n("Input minutes - min. 1, max. 600")
+                }
+            }
+
+            QQC2.Label {
+                id: manualTimingsError1
+                visible: evenBeginManField.getNormedDate() - mornBeginManField.getNormedDate() <= 0
+                font.italic: true
+                text: i18n("Error: Morning is before evening.")
+            }
+
+            QQC2.Label {
+                id: manualTimingsError2
+                visible: {
+                    if (manualTimingsError1.visible) {
+                        return false;
+                    }
+                    var trTime = transTimeField.backend * 60 * 1000;
+                    var mor = mornBeginManField.getNormedDate();
+                    var eve = evenBeginManField.getNormedDate();
+
+                    return eve - mor <= trTime || eve - mor >= 86400000 - trTime;
+                }
+                font.italic: true
+                text: i18n("Error: Transition time overlaps.")
+            }
         }
 
-        Kirigami.FormLayout {
+        // Show location chooser in manual location mode
+        LocationsFixedView {
+            visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeLocation
+            enabled: activator.checked
+        }
 
-            Loader {
-                id: advancedControlLoader
-
-
-                function updatePage(index) {
-                    switch (index) {
-                    case CC.CompositorAdaptor.ModeAutomatic:
-                        sourceComponent = automaticView;
-                        break;
-                    case CC.CompositorAdaptor.ModeLocation:
-                        sourceComponent = manualLocationsView;
-                        break;
-                    case CC.CompositorAdaptor.ModeTimings:
-                        sourceComponent = manualTimingsView;
-                        break;
-                    case CC.CompositorAdaptor.ModeConstant:
-                    default:
-                        sourceComponent = undefined;
-                        break;
-                    }
-                }
-            }
-
-            Component {
-                id: automaticView
-
-                    ColumnLayout {
-
-                    Loader {
-                        sourceComponent: TimingsView {
-                            latitude: locator.latitude
-                            longitude: locator.longitude
-                        }
-                    }
-
-                    Kirigami.Separator {
-                        Layout.fillWidth: true
-                        Kirigami.FormData.isSection: true
-                    }
-
-                    Loader {
-                        sourceComponent: LocationsAutoView {
-                            latitude: locator.latitude
-                            longitude: locator.longitude
-                        }
-                    }
-                }
-            }
-
-            Component {
-                id: manualLocationsView
-
-                ColumnLayout {
-                    id: manualLocationsViewRow
-                    signal change()
-
-                    Loader {
-                        sourceComponent: TimingsView {
-                            latitude: cA.latitudeFixedStaged
-                            longitude: cA.longitudeFixedStaged
-
-                            Connections {
-                                target: manualLocationsViewRow
-                                onChange: {
-                                    reset();
-                                }
-                            }
-                        }
-                    }
-
-                    Kirigami.Separator {
-                        Layout.fillWidth: true
-                        Kirigami.FormData.isSection: true
-                    }
-
-                    Loader {
-                        sourceComponent: LocationsFixedView {}
-                    }
-                }
-            }
-
-            Component {
-                id: manualTimingsView
-
-                ColumnLayout {
-                    Loader {
-                        sourceComponent: Kirigami.FormLayout {
-                            twinFormLayouts: parentLayout
-                            enabled: activator.checked && cA.timingsEnabled
-
-                            Connections {
-                                target: root
-                                onReset: {
-                                    mornBeginManField.backend = cA.morningBeginFixed;
-                                    evenBeginManField.backend = cA.eveningBeginFixed;
-                                    transTimeField.backend = cA.transitionTime;
-                                }
-                            }
-
-                            TimeField {
-                                id: mornBeginManField
-                                Kirigami.FormData.label: i18n("Sunrise begins:")
-                                backend: cA.morningBeginFixedStaged
-                                onBackendChanged: {cA.morningBeginFixedStaged = backend;
-                                    calcNeedsSave();
-                                }
-
-                                QQC2.ToolTip {
-                                    text: i18n("(Input format: HH:MM)")
-                                }
-                            }
-
-                            TimeField {
-                                id: evenBeginManField
-                                Kirigami.FormData.label: i18n("Sunset begins:")
-                                backend: cA.eveningBeginFixedStaged
-                                onBackendChanged: {cA.eveningBeginFixedStaged = backend;
-                                    calcNeedsSave();
-                                }
-
-                                QQC2.ToolTip {
-                                    text: i18n("Input format: HH:MM")
-                                }
-                            }
-
-                            QQC2.SpinBox {
-                                id: transTimeField
-                                // Match width of other text fields
-                                Layout.minimumWidth: 200
-                                Kirigami.FormData.label: i18n("Transition duration:")
-                                from: 1
-                                to: 600 // less than 12 hours (in minutes: 720)
-                                value: cA.transitionTimeStaged
-                                editable: true
-                                onValueModified: {
-                                    cA.transitionTimeStaged = value;
-                                    calcNeedsSave();
-                                }
-                                textFromValue: function(value, locale) {
-                                    return i18np("%1 minute", "%1 minutes", value)
-                                }
-                                valueFromText: function(text, locale) {
-                                    return parseInt(text);
-                                }
-
-                                QQC2.ToolTip {
-                                    text: i18n("Input minutes - min. 1, max. 600")
-                                }
-                            }
-
-                            QQC2.Label {
-                                id: manualTimingsError1
-                                visible: evenBeginManField.getNormedDate() - mornBeginManField.getNormedDate() <= 0
-                                font.italic: true
-                                text: i18n("Error: Morning is before evening.")
-                            }
-
-                            QQC2.Label {
-                                id: manualTimingsError2
-                                visible: {
-                                    if (manualTimingsError1.visible) {
-                                        return false;
-                                    }
-                                    var trTime = transTimeField.backend * 60 * 1000;
-                                    var mor = mornBeginManField.getNormedDate();
-                                    var eve = evenBeginManField.getNormedDate();
-
-                                    return eve - mor <= trTime || eve - mor >= 86400000 - trTime;
-                                }
-                                font.italic: true
-                                text: i18n("Error: Transition time overlaps.")
-                            }
-                        }
-                    }
-                }
-            }
+        // Show start/end times in automatic and manual location modes
+        TimingsView {
+            id: timings
+            visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeAutomatic ||
+                     modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeLocation
+            enabled: activator.checked
+            latitude: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeAutomatic ? locator.latitude : cA.latitudeFixedStaged
+            longitude: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeAutomatic ? locator.longitude : cA.longitudeFixedStaged
         }
     }
 }
