@@ -33,6 +33,14 @@ KCM.SimpleKCM {
     // Sidebar on SourcesPage is 1/3 of the width at a minimum of 12, so assume 3 * 12 = 36 as preferred
     implicitWidth: Kirigami.Units.gridUnit * 36
 
+    readonly property string ourServerVendor: "KDE"
+    readonly property string ourServerName: "Plasma"
+
+    readonly property NotificationManager.ServerInfo currentOwnerInfo: NotificationManager.Server.currentOwner
+
+    readonly property bool notificationsAvailable: currentOwnerInfo.status === NotificationManager.ServerInfo.Running
+        && currentOwnerInfo.vendor === ourServerVendor && currentOwnerInfo.name === ourServerName
+
     function openSourcesSettings() {
         // TODO would be nice to re-use the current SourcesPage instead of pushing a new one that lost all state
         // but there's no pageAt(index) method in KConfigModuleQml
@@ -46,17 +54,44 @@ KCM.SimpleKCM {
     }
 
     Kirigami.FormLayout {
+        Kirigami.InlineMessage {
+            Kirigami.FormData.isSection: true
+            Layout.fillWidth: true
+            type: Kirigami.MessageType.Error
+            text: i18n("Could not find a 'Notifications' widget which is required for displaying notifications.");
+            visible: currentOwnerInfo.status === NotificationManager.ServerInfo.NotRunning
+        }
+
+        Kirigami.InlineMessage {
+            Kirigami.FormData.isSection: true
+            Layout.fillWidth: true
+            type: Kirigami.MessageType.Information
+            text: {
+                if (currentOwnerInfo.vendor && currentOwnerInfo.name) {
+                    return i18nc("Vendor and product name",
+                                 "Notifications are currently provided by '%1 %2' instead of Plasma.",
+                                 currentOwnerInfo.vendor, currentOwnerInfo.name);
+                }
+
+                return i18n("Notifications are currently not provided by Plasma.");
+            }
+            visible: root.currentOwnerInfo.status === NotificationManager.ServerInfo.Running
+                && (currentOwnerInfo.vendor !== root.ourServerVendor || currentOwnerInfo.name !== root.ourServerName)
+        }
+
         QtControls.CheckBox {
             Kirigami.FormData.label: i18n("Do not disturb:")
             text: i18nc("Do not disturb when screens are mirrored", "When screens are mirrored")
             checked: kcm.settings.inhibitNotificationsWhenScreensMirrored
             onClicked: kcm.settings.inhibitNotificationsWhenScreensMirrored = checked
+            enabled: root.notificationsAvailable
         }
 
         QtControls.CheckBox {
             text: i18n("Show critical notifications")
             checked: kcm.settings.criticalPopupsInDoNotDisturbMode
             onClicked: kcm.settings.criticalPopupsInDoNotDisturbMode = checked
+            enabled: root.notificationsAvailable
         }
 
         QtControls.CheckBox {
@@ -64,6 +99,7 @@ KCM.SimpleKCM {
             text: i18n("Always keep on top")
             checked: kcm.settings.keepCriticalAlwaysOnTop
             onClicked: kcm.settings.keepCriticalAlwaysOnTop = checked
+            enabled: root.notificationsAvailable
         }
 
         QtControls.CheckBox {
@@ -71,12 +107,14 @@ KCM.SimpleKCM {
             text: i18n("Show popup")
             checked: kcm.settings.lowPriorityPopups
             onClicked: kcm.settings.lowPriorityPopups = checked
+            enabled: root.notificationsAvailable
         }
 
         QtControls.CheckBox {
             text: i18n("Show in history")
             checked: kcm.settings.lowPriorityHistory
             onClicked: kcm.settings.lowPriorityHistory = checked
+            enabled: root.notificationsAvailable
         }
 
         QtControls.ButtonGroup {
@@ -90,10 +128,13 @@ KCM.SimpleKCM {
             text: i18nc("Popup position near notification plasmoid", "Near the notification icon") // "widget"
             checked: kcm.settings.popupPosition === NotificationManager.Settings.CloseToWidget
             onClicked: kcm.settings.popupPosition = NotificationManager.Settings.CloseToWidget
+            enabled: root.notificationsAvailable
         }
 
         RowLayout {
             spacing: 0
+            enabled: root.notificationsAvailable
+
             QtControls.RadioButton {
                 id: positionCustomPosition
                 checked: kcm.settings.popupPosition !== NotificationManager.Settings.CloseToWidget
@@ -126,6 +167,7 @@ KCM.SimpleKCM {
             to: 120000 // 2 minutes
             stepSize: 1000
             value: kcm.settings.popupTimeout
+            enabled: root.notificationsAvailable
             editable: true
             valueFromText: function(text, locale) {
                 return parseInt(text) * 1000;
@@ -180,6 +222,7 @@ KCM.SimpleKCM {
             Kirigami.FormData.label: i18n("Applications:")
             text: i18n("Configure...")
             icon.name: "configure"
+            enabled: root.notificationsAvailable
             onClicked: root.openSourcesSettings()
         }
     }
