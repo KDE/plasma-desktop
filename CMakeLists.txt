@@ -7,6 +7,7 @@ set(PROJECT_VERSION_MAJOR 5)
 
 set(QT_MIN_VERSION "5.12.0")
 set(KF5_MIN_VERSION "5.73.0")
+set(ACCOUNTSQT_DEP_VERSION "1.13")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
@@ -46,7 +47,6 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Notifications
     NotifyConfig
     Attica
-    Wallet
     Runner
     GlobalAccel
     Declarative
@@ -56,6 +56,17 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Config
     WidgetsAddons
 )
+
+find_package(AccountsQt5 ${ACCOUNTSQT_DEP_VERSION} CONFIG)
+set_package_properties(AccountsQt5 PROPERTIES DESCRIPTION "Accounts management library for Qt applications"
+   URL "https://gitlab.com/accounts-sso/libaccounts-qt"
+   TYPE REQUIRED
+   PURPOSE "Required for building the OpenDesktop integration plugin")
+
+find_package(KAccounts REQUIRED)
+set_package_properties(KAccounts PROPERTIES DESCRIPTION "Accounts management library for KDE applications"
+   TYPE REQUIRED
+   PURPOSE "Required for building the OpenDesktop integration plugin")
 
 find_package(KF5Kirigami2 ${KF5_MIN_VERSION} CONFIG)
 set_package_properties(KF5Kirigami2 PROPERTIES
