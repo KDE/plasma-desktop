@@ -29,6 +29,7 @@ MouseArea {
     property Item rootTask
 
     acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.RightButton
+    cursorShape: Qt.PointingHandCursor
     hoverEnabled: true
     enabled: winId != 0
 
