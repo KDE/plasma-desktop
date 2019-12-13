@@ -132,11 +132,17 @@ Column {
         }
 
         // Count badge.
-        Badge {
+        Item {
             Layout.alignment: Qt.AlignRight | Qt.AlignTop
-            height: units.iconSizes.smallMedium
-            visible: flatIndex === 0 && smartLauncherCountVisible
-            number: smartLauncherCount
+            Layout.preferredHeight: closeButton.height
+            Layout.preferredWidth: closeButton.width
+
+            Badge {
+                anchors.centerIn: parent
+                height: units.iconSizes.smallMedium
+                visible: flatIndex === 0 && smartLauncherCountVisible
+                number: smartLauncherCount
+            }
         }
 
         // close button
