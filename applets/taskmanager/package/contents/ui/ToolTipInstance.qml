@@ -178,8 +178,15 @@ Column {
             // TODO: this causes XCB error message when being visible the first time
             property int winId: isWin && windows[flatIndex] !== undefined ? windows[flatIndex] : 0
 
+            PlasmaComponents.Highlight {
+                anchors.fill: parent
+                visible: hoverHandler.containsMouse
+                pressed: hoverHandler.containsPress
+            }
+
             PlasmaCore.WindowThumbnail {
                 anchors.fill: parent
+                anchors.margins: units.smallSpacing
 
                 visible: !albumArtImage.visible && !thumbnailSourceItem.isMinimized
                 winId: thumbnailSourceItem.winId
@@ -227,6 +234,7 @@ Column {
             }
 
             ToolTipWindowMouseArea {
+                id: hoverHandler
                 anchors.fill: parent
                 rootTask: parentTask
                 modelIndex: submodelIndex
