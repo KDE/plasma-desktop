@@ -52,7 +52,7 @@ PlasmaComponents.ToolButton {
         id: toolTip
         text: button.qAction ? button.qAction.text : ""
         delay: 0
-        visible: button.hovered
+        visible: button.hovered && text.length > 0
         x: button.width
         y: button.height/2 - height/2
     }

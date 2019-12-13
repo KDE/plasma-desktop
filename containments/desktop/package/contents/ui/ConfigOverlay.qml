@@ -98,7 +98,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 id: rotateButton
                 svg: configIconsSvg
                 elementId: "rotate"
-                toolTip: i18n("Rotate")
+                toolTip: !rotateHandle.pressed ? i18n("Rotate") : ""
                 iconSize: overlay.iconSize
                 action: (applet) ? applet.action("rotate") : null
                 down: !rotateHandle.pressed
