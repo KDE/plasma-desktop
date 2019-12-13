@@ -3,6 +3,7 @@
 
     Copyright (c) 2009 Eckhart Wörner <ewoerner@kde.org>
     Copyright (c) 2010 Frederik Gladhorn <gladhorn@kde.org>
+    Copyright (c) 2019 Dan Leinir Turthra Jensen <admin@leinir.dk>
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
@@ -27,7 +28,6 @@
 #include "attica_plugin_debug.h"
 
 #include <KConfigGroup>
-#include <KWallet/KWallet>
 #include <KCMultiDialog>
 #include <KLocalizedString>
 #include <KStringHandler>
@@ -35,10 +35,13 @@
 #include <QNetworkDiskCache>
 #include <QStorageInfo>
 
+#include <KAccounts/Core>
+#include <Accounts/Manager>
+
 using namespace Attica;
 
 KdePlatformDependent::KdePlatformDependent()
-    : m_config(KSharedConfig::openConfig(QStringLiteral("atticarc"))), m_accessManager(nullptr), m_wallet(nullptr)
+    : m_config(KSharedConfig::openConfig(QStringLiteral("atticarc"))), m_accessManager(nullptr)
 {
     // FIXME: Investigate how to not leak this instance without crashing.
     m_accessManager = new QNetworkAccessManager(nullptr);
@@ -53,27 +56,6 @@ KdePlatformDependent::KdePlatformDependent()
 
 KdePlatformDependent::~KdePlatformDependent()
 {
-    delete m_wallet;
-}
-
-bool KdePlatformDependent::openWallet(bool force)
-{
-    if (m_wallet) {
-        return true;
-    }
-
-    QString networkWallet = KWallet::Wallet::NetworkWallet();
-    // if not forced, or the folder doesn't exist, don't try to open the wallet
-    if (force || (!KWallet::Wallet::folderDoesNotExist(networkWallet, QStringLiteral("Attica")))) {
-        m_wallet = KWallet::Wallet::openWallet(networkWallet, 0);
-    }
-
-    if (m_wallet) {
-        m_wallet->createFolder(QStringLiteral("Attica"));
-        m_wallet->setFolder(QStringLiteral("Attica"));
-        return true;
-    }
-    return false;
 }
 
 QNetworkReply* KdePlatformDependent::post(const QNetworkRequest& request, const QByteArray& data)
@@ -99,94 +81,112 @@ QNetworkRequest KdePlatformDependent::removeAuthFromRequest(const QNetworkReques
     return notConstReq;
 }
 
-bool KdePlatformDependent::saveCredentials(const QUrl& baseUrl, const QString& user, const QString& password)
+bool KdePlatformDependent::saveCredentials(const QUrl& /*baseUrl*/, const QString& /*user*/, const QString& /*password*/)
 {
-    m_passwords[baseUrl.toString()] = qMakePair(user, password);
+    return false;
+    // TODO This wants to be replaced by something which opens the kcm to create a new account, but for now we'll have to trust what we're given
+    // Currently only used by the upload dialog (which doesn't work, because we have uploading disabled on opendesktop.org)
+//     Accounts::Manager* accountsManager = KAccounts::accountsManager();
+//     if (accountsManager) {
+//         Accounts::AccountIdList accountIds = accountsManager->accountList(QStringLiteral("opendesktop-rating"));
+//     } else {
+//         // if no accounts manager, return false and tell user
+//         return false;
+//     }
+//     // if all is well, return true
+//     return true;
+}
 
-    if (!m_wallet && !openWallet(true)) {
-
-        if (KMessageBox::warningContinueCancel(nullptr, i18n("Should the password be stored in the configuration file? This is unsafe.")
-                , i18n("Social Desktop Configuration"))
-                == KMessageBox::Cancel) {
-            return false;
+static Accounts::Account* getAccount(const QUrl& /*baseUrl*/) {
+    Accounts::Manager* accountsManager = KAccounts::accountsManager();
+    Accounts::Account* account{nullptr};
+    if (accountsManager) {
+        Accounts::AccountIdList accountIds = accountsManager->accountList(QStringLiteral("opendesktop-rating"));
+        // TODO Present the user with a choice in case there's more than one, but for now just pick the first successful one
+        // loop through the accounts, and attempt to get them
+        for (const Accounts::AccountId& accountId : accountIds) {
+            account = accountsManager->account(accountId);
+            if (account) {
+                break;
+            }
         }
-
-        // use kconfig
-        KConfigGroup group(m_config, baseUrl.toString());
-        group.writeEntry("user", user);
-        group.writeEntry("password", KStringHandler::obscure(password));
-        qCDebug(ATTICA_PLUGIN_LOG) << "Saved credentials in KConfig";
-        return true;
+        if (!account) {
+            // TODO if accounts manager fails to find account, tell user - for now at least log it out
+            qCDebug(ATTICA_PLUGIN_LOG) << "No credentials found, sorry";
+        }/* else {
+            qCDebug(ATTICA_PLUGIN_LOG) << "Got credentials for account, with the keys" << account->allKeys();
+            for (const QString& key : account->allKeys()) {
+                qCDebug(ATTICA_PLUGIN_LOG) << key << account->value(key);
+            }
+        }*/
+    } else {
+        qCDebug(ATTICA_PLUGIN_LOG) << "No accounts manager could be fetched, so could not ask it for account details";
     }
-
-    // Remove the entry when user name is empty
-    if (user.isEmpty()) {
-        m_wallet->removeEntry(baseUrl.toString());
-        return true;
-    }
-
-    const QMap<QString, QString> entries = {
-        { QStringLiteral("user"), user },
-        { QStringLiteral("password"), password }
-    };
-    qCDebug(ATTICA_PLUGIN_LOG) << "Saved credentials in KWallet";
-
-    return !m_wallet->writeMap(baseUrl.toString(), entries);
+    // if all is well, return true
+    return account;
 }
 
 bool KdePlatformDependent::hasCredentials(const QUrl& baseUrl) const
 {
-    if (m_passwords.contains(baseUrl.toString())) {
-        return true;
-    }
+    qCDebug(ATTICA_PLUGIN_LOG) << Q_FUNC_INFO;
+    return getAccount(baseUrl);
 
-    QString networkWallet = KWallet::Wallet::NetworkWallet();
-    if (!KWallet::Wallet::folderDoesNotExist(networkWallet, QStringLiteral("Attica")) &&
-        !KWallet::Wallet::keyDoesNotExist(networkWallet, QStringLiteral("Attica"), baseUrl.toString())) {
-        qCDebug(ATTICA_PLUGIN_LOG) << "Found credentials in KWallet";
-        return true;
-    }
-
-    KConfigGroup group(m_config, baseUrl.toString());
-
-    const QString user = group.readEntry("user", QString());
-    qCDebug(ATTICA_PLUGIN_LOG) << "Credentials found:" << !user.isEmpty();
-    return !user.isEmpty();
+//     QString networkWallet = KWallet::Wallet::NetworkWallet();
+//     if (!KWallet::Wallet::folderDoesNotExist(networkWallet, QStringLiteral("Attica")) &&
+//         !KWallet::Wallet::keyDoesNotExist(networkWallet, QStringLiteral("Attica"), baseUrl.toString())) {
+//         qCDebug(ATTICA_PLUGIN_LOG) << "Found credentials in KWallet";
+//         return true;
+//     }
+//
+//     KConfigGroup group(m_config, baseUrl.toString());
+//
+//     const QString user = group.readEntry("user", QString());
+//     qCDebug(ATTICA_PLUGIN_LOG) << "Credentials found:" << !user.isEmpty();
+//     return !user.isEmpty();
 }
 
 
-bool KdePlatformDependent::loadCredentials(const QUrl& baseUrl, QString& user, QString& password)
+bool KdePlatformDependent::loadCredentials(const QUrl& baseUrl, QString& user, QString& /*password*/)
 {
-    QString networkWallet = KWallet::Wallet::NetworkWallet();
-    if (KWallet::Wallet::folderDoesNotExist(networkWallet, QStringLiteral("Attica")) &&
-        KWallet::Wallet::keyDoesNotExist(networkWallet, QStringLiteral("Attica"), baseUrl.toString())) {
-        // use KConfig
-        KConfigGroup group(m_config, baseUrl.toString());
-        user = group.readEntry("user", QString());
-        password = KStringHandler::obscure(group.readEntry("password", QString()));
-        if (!user.isEmpty()) {
-            qCDebug(ATTICA_PLUGIN_LOG) << "Successfully loaded credentials from kconfig";
-            m_passwords[baseUrl.toString()] = qMakePair(user, password);
-            return true;
-        }
-        return false;
+    qCDebug(ATTICA_PLUGIN_LOG) << Q_FUNC_INFO;
+    Accounts::Account* account = getAccount(baseUrl);
+    if (account) {
+        user = account->valueAsString(QStringLiteral("auth/oauth2/web_server/ClientSecret"));
     }
+    return account;
+//     QString networkWallet = KWallet::Wallet::NetworkWallet();
+//     if (KWallet::Wallet::folderDoesNotExist(networkWallet, QStringLiteral("Attica")) &&
+//         KWallet::Wallet::keyDoesNotExist(networkWallet, QStringLiteral("Attica"), baseUrl.toString())) {
+//         // use KConfig
+//         KConfigGroup group(m_config, baseUrl.toString());
+//         user = group.readEntry("user", QString());
+//         password = KStringHandler::obscure(group.readEntry("password", QString()));
+//         if (!user.isEmpty()) {
+//             qCDebug(ATTICA_PLUGIN_LOG) << "Successfully loaded credentials from kconfig";
+//             m_passwords[baseUrl.toString()] = qMakePair(user, password);
+//             return true;
+//         }
+//         return false;
+//     }
 
-    if (!m_wallet && !openWallet(true)) {
-        return false;
-    }
+//     if (!m_wallet && !openWallet(true)) {
+//         return false;
+//     }
 
-    QMap<QString, QString> entries;
-    if (m_wallet->readMap(baseUrl.toString(), entries) != 0) {
-        return false;
-    }
-    user = entries.value(QStringLiteral("user"));
-    password = entries.value(QStringLiteral("password"));
-    qCDebug(ATTICA_PLUGIN_LOG) << "Successfully loaded credentials.";
+    // if accounts manager not getted, return false...
 
-    m_passwords[baseUrl.toString()] = qMakePair(user, password);
-
-    return true;
+//     QMap<QString, QString> entries;
+//     if (m_wallet->readMap(baseUrl.toString(), entries) != 0) {
+//         return false;
+//     }
+//     // if no account with the appropriate ID, return false
+//     user = entries.value(QStringLiteral("user"));
+//     password = entries.value(QStringLiteral("password"));
+//     qCDebug(ATTICA_PLUGIN_LOG) << "Successfully loaded credentials.";
+//
+//     m_passwords[baseUrl.toString()] = qMakePair(user, password);
+//
+//     return true;
 }
 
 
@@ -257,7 +257,3 @@ QNetworkAccessManager* Attica::KdePlatformDependent::nam()
 {
     return m_accessManager;
 }
-
-// TODO: re-enable, see https://community.kde.org/Frameworks/Porting_Notes
-// Q_EXPORT_PLUGIN2(attica_kde, Attica::KdePlatformDependent)
-
