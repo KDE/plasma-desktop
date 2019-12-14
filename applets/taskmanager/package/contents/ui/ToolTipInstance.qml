@@ -147,6 +147,7 @@ Column {
 
         // close button
         PlasmaComponents.ToolButton {
+            id: closeButton
             Layout.alignment: Qt.AlignRight | Qt.AlignTop
             visible: isWin
             iconSource: "window-close"
