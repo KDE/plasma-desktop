@@ -33,8 +33,8 @@ Kirigami.ScrollablePage {
     
     spacing: Kirigami.Units.smallSpacing
     
-    property size sizeHint: Qt.size(formLayout.width, Math.round(1.1 * formLayout.height))
-    property size minimumSizeHint: Qt.size(formLayout.width, Math.round(1.1 * formLayout.height))
+    property size sizeHint: Qt.size(formLayout.width, Math.round(1.3 * formLayout.height))
+    property size minimumSizeHint: Qt.size(formLayout.width, Math.round(1.3 * formLayout.height))
     
     signal changeSignal()
 
