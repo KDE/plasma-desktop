@@ -228,7 +228,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 Layout.minimumHeight: units.gridUnit * 3
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                cursorShape: Qt.DragMoveCursor
+                cursorShape: containsPress? Qt.DragMoveCursor : Qt.OpenHandCursor
                 hoverEnabled: true
                 onPressed: appletsLayout.releaseSpace(overlay.itemContainer);
                 onPositionChanged: {
