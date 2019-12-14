@@ -16,7 +16,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.1
+import QtQuick 2.5
 import QtQuick.Layouts 1.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -64,7 +64,11 @@ MouseArea {
                 }
             }
         } else {
-            configurationArea.cursorShape = Qt.ArrowCursor;
+            if (configurationArea.containsPress) {
+                configurationArea.cursorShape = Qt.ClosedHandCursor;
+            } else {
+                configurationArea.cursorShape = Qt.OpenHandCursor;
+            }
         }
 
         if (pressed) {
