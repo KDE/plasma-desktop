@@ -33,7 +33,7 @@ Kirigami.FormLayout {
     }
 
     function prettyTime(date) {
-        return date.toLocaleString(Qt.locale(), "h:m");
+        return date.toLocaleString(Qt.locale(), "h:mm");
     }
 
     Kirigami.Separator {
