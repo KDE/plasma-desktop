@@ -27,12 +27,14 @@
 
 #include "attica_plugin_debug.h"
 
+#include <KServiceTypeTrader>
 #include <KConfigGroup>
 #include <KCMultiDialog>
 #include <KLocalizedString>
 #include <KStringHandler>
 #include <KMessageBox>
 #include <QNetworkDiskCache>
+#include <QProcess>
 #include <QStorageInfo>
 
 #include <KAccounts/Core>
@@ -83,18 +85,16 @@ QNetworkRequest KdePlatformDependent::removeAuthFromRequest(const QNetworkReques
 
 bool KdePlatformDependent::saveCredentials(const QUrl& /*baseUrl*/, const QString& /*user*/, const QString& /*password*/)
 {
-    return false;
-    // TODO This wants to be replaced by something which opens the kcm to create a new account, but for now we'll have to trust what we're given
-    // Currently only used by the upload dialog (which doesn't work, because we have uploading disabled on opendesktop.org)
-//     Accounts::Manager* accountsManager = KAccounts::accountsManager();
-//     if (accountsManager) {
-//         Accounts::AccountIdList accountIds = accountsManager->accountList(QStringLiteral("opendesktop-rating"));
-//     } else {
-//         // if no accounts manager, return false and tell user
-//         return false;
-//     }
-//     // if all is well, return true
-//     return true;
+    // TODO KF6 This will want replacing with a call named something that suggests calling it shows accounts (and perhaps
+    // directly requests the accounts kcm to start adding a new account if it's not there, maybe even pre-fills the fields...)
+    KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("Service"), QStringLiteral("Library == 'kcm_kaccounts'"));
+    // If we failed to get the kcm, tell the caller we failed
+    if (services.count() == 0) {
+        return false;
+    }
+    KService::Ptr service = services[0];
+    qCDebug(ATTICA_PLUGIN_LOG) << "Launch the KAccounts control module" << service->name();
+    return QProcess::startDetached(service->exec());
 }
 
 static Accounts::Account* getAccount(const QUrl& /*baseUrl*/) {
