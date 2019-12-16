@@ -110,7 +110,7 @@ QtControls.Popup {
                 to: sizes.length - 1
                 stepSize: 1.0
                 snapMode: QtControls.Slider.SnapAlways
-                enabled: sizes.length > 0
+                enabled: sizes.length > 0 && !kcm.iconsSettings.isImmutable(iconTypeList.currentItem.configKey)
 
                 onMoved: {
                     kcm.iconsSettings[iconTypeList.currentItem.configKey] = iconSizeSlider.sizes[iconSizeSlider.value] || 0

@@ -36,8 +36,10 @@ KCM.GridViewKCM {
     view.model: kcm.iconsModel
     view.currentIndex: kcm.pluginIndex(kcm.iconsSettings.theme)
     enabled: !kcm.downloadingFile
+    view.enabled: !kcm.iconsSettings.isImmutable("Theme")
 
     DropArea {
+        enabled: !kcm.iconsSettings.isImmutable("Theme")
         anchors.fill: parent
         onEntered: {
             if (!drag.hasUrls) {
@@ -242,6 +244,7 @@ KCM.GridViewKCM {
             }
 
             QtControls.Button {
+                enabled: !kcm.iconsSettings.isImmutable("Theme")
                 id: installFromFileButton
                 text: i18n("Install from File...")
                 icon.name: "document-import"
@@ -249,6 +252,7 @@ KCM.GridViewKCM {
             }
 
             QtControls.Button {
+                enabled: !kcm.iconsSettings.isImmutable("Theme")
                 text: i18n("Get New Icons...")
                 icon.name: "get-hot-new-stuff"
                 onClicked: kcm.getNewStuff(this)
