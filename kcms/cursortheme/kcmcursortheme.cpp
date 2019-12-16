@@ -57,20 +57,13 @@
 K_PLUGIN_FACTORY_WITH_JSON(CursorThemeConfigFactory, "kcm_cursortheme.json", registerPlugin<CursorThemeConfig>();)
 
 CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args),
-      m_settings(new CursorThemeSettings),
+    : KQuickAddons::ManagedConfigModule(parent, args),
+      m_settings(new CursorThemeSettings(this)),
       m_canInstall(true),
       m_canResize(true),
       m_canConfigure(true)
 {
-    // Unfortunately doesn't generate a ctor taking the parent as parameter
-    m_settings->setParent(this);
-    m_currentSize = m_settings->cursorSize();
-    m_currentTheme = m_settings->cursorTheme();
-    m_preferredSize = m_currentSize;
-    connect(m_settings, &CursorThemeSettings::configChanged, this, &CursorThemeConfig::updateNeedsSave);
-    connect(m_settings, &CursorThemeSettings::cursorSizeChanged, this, &CursorThemeConfig::updateNeedsSave);
-    connect(m_settings, &CursorThemeSettings::cursorThemeChanged, this, &CursorThemeConfig::updateNeedsSave);
+    m_preferredSize = m_settings->cursorSize();
     connect(m_settings, &CursorThemeSettings::cursorThemeChanged, this, &CursorThemeConfig::updateSizeComboBox);
     qmlRegisterType<PreviewWidget>("org.kde.private.kcm_cursortheme", 1, 0, "PreviewWidget");
     qmlRegisterType<SortProxyModel>();
@@ -265,9 +258,6 @@ void CursorThemeConfig::updateSizeComboBox()
                     }
                 }
             }
-            if (selectItem < 0) {
-                selectItem = 0;
-            }
             m_settings->setCursorSize(size);
         }
     }
@@ -374,31 +364,26 @@ QString CursorThemeConfig::cursorThemeFromIndex(int index) const
 
 void CursorThemeConfig::save()
 {
-    m_settings->save();
-    m_currentTheme = m_settings->cursorTheme();
-    m_currentSize = m_settings->cursorSize();
-    setPreferredSize(m_currentSize);
+    ManagedConfigModule::save();
+    setPreferredSize(m_settings->cursorSize());
 
     int row = cursorThemeIndex(m_settings->cursorTheme());
     QModelIndex selected = m_themeProxyModel->index(row, 0);
     const CursorTheme *theme = selected.isValid() ? m_themeProxyModel->theme(selected) : nullptr;
 
-    if (!applyTheme(theme, m_currentSize)) {
+    if (!applyTheme(theme, m_settings->cursorSize())) {
         emit showInfoMessage(i18n("You have to restart the Plasma session for these changes to take effect."));
     }
 
     KGlobalSettings::self()->emitChange(KGlobalSettings::CursorChanged);
-    setNeedsSave(false);
 }
 
 
 void CursorThemeConfig::load()
 {
-    m_settings->load();
-    m_currentSize = m_settings->cursorSize();
-    m_currentTheme = m_settings->cursorTheme();
-    setPreferredSize(m_currentSize);
-        // Get the name of the theme KDE is configured to use
+    ManagedConfigModule::load();
+    setPreferredSize(m_settings->cursorSize());
+    // Get the name of the theme KDE is configured to use
     QString currentTheme = m_settings->cursorTheme();
 
     // Disable the listview and the buttons if we're in kiosk mode
@@ -415,13 +400,8 @@ void CursorThemeConfig::load()
 
 void CursorThemeConfig::defaults()
 {
-    m_settings->setDefaults();
+    ManagedConfigModule::defaults();
     m_preferredSize = m_settings->cursorSize();
-}
-
-void CursorThemeConfig::updateNeedsSave()
-{
-    setNeedsSave(m_settings->cursorTheme() != m_currentTheme || m_settings->cursorSize() != m_currentSize);
 }
 
 void CursorThemeConfig::getNewClicked()
@@ -579,7 +559,7 @@ void CursorThemeConfig::removeTheme(int row)
     const CursorTheme *theme = m_themeProxyModel->theme(idx);
 
     // Don't let the user delete the currently configured theme
-    if (theme->name() == m_currentTheme) {
+    if (theme->name() == m_settings->cursorTheme()) {
         KMessageBox::sorry(nullptr, i18n("<qt>You cannot delete the theme you are currently "
                 "using.<br />You have to switch to another theme first.</qt>"));
         return;

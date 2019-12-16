@@ -20,7 +20,7 @@
 #ifndef KCMCURSORTHEME_H
 #define KCMCURSORTHEME_H
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickAddons/ManagedConfigModule>
 #include <QScopedPointer>
 
 class QStandardItemModel;
@@ -36,7 +36,7 @@ namespace KIO
     class FileCopyJob;
 }
 
-class CursorThemeConfig : public KQuickAddons::ConfigModule
+class CursorThemeConfig : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(CursorThemeSettings *cursorThemeSettings READ cursorThemeSettings CONSTANT)
@@ -86,7 +86,6 @@ Q_SIGNALS:
     void canInstallChanged();
     void canResizeChanged();
     void canConfigureChanged();
-    void selectedSizeRowChanged();
     void downloadingFileChanged();
     void preferredSizeChanged();
     void themeApplied();
@@ -143,9 +142,6 @@ private:
 
     QScopedPointer<QTemporaryFile> m_tempInstallFile;
     QPointer<KIO::FileCopyJob> m_tempCopyJob;
-
-    int m_currentSize;
-    QString m_currentTheme;
 };
 
 #endif
