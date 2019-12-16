@@ -30,7 +30,7 @@ import org.kde.notificationmanager 1.0 as NotificationManager
 KCM.SimpleKCM {
     id: root
     KCM.ConfigModule.quickHelp: i18n("This module lets you manage application and system notifications.")
-    KCM.ConfigModule.buttons: KCM.ConfigModule.Help | KCM.ConfigModule.Apply
+
     // Sidebar on SourcesPage is 1/3 of the width at a minimum of 12, so assume 3 * 12 = 36 as preferred
     implicitWidth: Kirigami.Units.gridUnit * 36
 
@@ -83,16 +83,16 @@ KCM.SimpleKCM {
         QtControls.CheckBox {
             Kirigami.FormData.label: i18n("Do Not Disturb mode:")
             text: i18nc("Do not disturb when screens are mirrored", "Enable when screens are mirrored")
-            checked: kcm.settings.inhibitNotificationsWhenScreensMirrored
-            onClicked: kcm.settings.inhibitNotificationsWhenScreensMirrored = checked
-            enabled: root.notificationsAvailable
+            checked: kcm.dndSettings.whenScreensMirrored
+            onClicked: kcm.dndSettings.whenScreensMirrored = checked
+            enabled: root.notificationsAvailable && !kcm.dndSettings.isImmutable("WhenScreensMirrored")
         }
 
         QtControls.CheckBox {
             text: i18n("Show critical notifications")
-            checked: kcm.settings.criticalPopupsInDoNotDisturbMode
-            onClicked: kcm.settings.criticalPopupsInDoNotDisturbMode = checked
-            enabled: root.notificationsAvailable
+            checked: kcm.notificationSettings.criticalInDndMode
+            onClicked: kcm.notificationSettings.criticalInDndMode = checked
+            enabled: root.notificationsAvailable && !kcm.notificationSettings.isImmutable("CriticalInDndMode")
         }
 
         RowLayout {
@@ -115,9 +115,9 @@ KCM.SimpleKCM {
         QtControls.CheckBox {
             Kirigami.FormData.label: i18n("Critical notifications:")
             text: i18n("Always keep on top")
-            checked: kcm.settings.keepCriticalAlwaysOnTop
-            onClicked: kcm.settings.keepCriticalAlwaysOnTop = checked
-            enabled: root.notificationsAvailable
+            checked: kcm.notificationSettings.criticalAlwaysOnTop
+            onClicked: kcm.notificationSettings.criticalAlwaysOnTop = checked
+            enabled: root.notificationsAvailable && !kcm.notificationSettings.isImmutable("CriticalAlwaysOnTop")
         }
 
         Item {
@@ -127,16 +127,16 @@ KCM.SimpleKCM {
         QtControls.CheckBox {
             Kirigami.FormData.label: i18n("Low priority notifications:")
             text: i18n("Show popup")
-            checked: kcm.settings.lowPriorityPopups
-            onClicked: kcm.settings.lowPriorityPopups = checked
-            enabled: root.notificationsAvailable
+            checked: kcm.notificationSettings.lowPriorityPopups
+            onClicked: kcm.notificationSettings.lowPriorityPopups = checked
+            enabled: root.notificationsAvailable && !kcm.notificationSettings.isImmutable("LowPriorityPopups")
         }
 
         QtControls.CheckBox {
             text: i18n("Show in history")
-            checked: kcm.settings.lowPriorityHistory
-            onClicked: kcm.settings.lowPriorityHistory = checked
-            enabled: root.notificationsAvailable
+            checked: kcm.notificationSettings.lowPriorityHistory
+            onClicked: kcm.notificationSettings.lowPriorityHistory = checked
+            enabled: root.notificationsAvailable && !kcm.notificationSettings.isImmutable("LowPriorityHistory")
         }
 
         QtControls.ButtonGroup {
@@ -152,20 +152,20 @@ KCM.SimpleKCM {
             id: positionCloseToWidget
             Kirigami.FormData.label: i18n("Popup:")
             text: i18nc("Popup position near notification plasmoid", "Show near notification icon") // "widget"
-            checked: kcm.settings.popupPosition === NotificationManager.Settings.CloseToWidget
+            checked: kcm.notificationSettings.popupPosition === NotificationManager.Settings.CloseToWidget
                 // Force binding re-evaluation when user returns from position selector
                 + kcm.currentIndex * 0
-            onClicked: kcm.settings.popupPosition = NotificationManager.Settings.CloseToWidget
-            enabled: root.notificationsAvailable
+            onClicked: kcm.notificationSettings.popupPosition = NotificationManager.Settings.CloseToWidget
+            enabled: root.notificationsAvailable && !kcm.notificationSettings.isImmutable("PopupPosition")
         }
 
         RowLayout {
             spacing: 0
-            enabled: root.notificationsAvailable
+            enabled: root.notificationsAvailable && !kcm.notificationSettings.isImmutable("PopupPosition")
 
             QtControls.RadioButton {
                 id: positionCustomPosition
-                checked: kcm.settings.popupPosition !== NotificationManager.Settings.CloseToWidget
+                checked: kcm.notificationSettings.popupPosition !== NotificationManager.Settings.CloseToWidget
                     + kcm.currentIndex * 0
                 activeFocusOnTab: false
 
@@ -203,8 +203,8 @@ KCM.SimpleKCM {
                 from: 1000 // 1 second
                 to: 120000 // 2 minutes
                 stepSize: 1000
-                value: kcm.settings.popupTimeout
-                enabled: root.notificationsAvailable
+                value: kcm.notificationSettings.popupTimeout
+                enabled: root.notificationsAvailable && !kcm.notificationSettings.isImmutable("PopupTimeout")
                 editable: true
                 valueFromText: function(text, locale) {
                     return parseInt(text) * 1000;
@@ -212,7 +212,7 @@ KCM.SimpleKCM {
                 textFromValue: function(value, locale) {
                     return i18np("%1 second", "%1 seconds", Math.round(value / 1000));
                 }
-                onValueModified: kcm.settings.popupTimeout = value
+                onValueModified: kcm.notificationSettings.popupTimeout = value
             }
         }
 
@@ -223,15 +223,17 @@ KCM.SimpleKCM {
         QtControls.CheckBox {
             Kirigami.FormData.label: i18n("Application progress:")
             text: i18n("Show in task manager")
-            checked: kcm.settings.jobsInTaskManager
-            onClicked: kcm.settings.jobsInTaskManager = checked
+            checked: kcm.jobSettings.inTaskManager
+            onClicked: kcm.jobSettings.inTaskManager = checked
+            enabled: !kcm.jobSettings.isImmutable("InTaskManager")
         }
 
         QtControls.CheckBox {
             id: applicationJobsEnabledCheck
             text: i18nc("Show application jobs in notification widget", "Show in notifications")
-            checked: kcm.settings.jobsInNotifications
-            onClicked: kcm.settings.jobsInNotifications = checked
+            checked: kcm.jobSettings.inNotifications
+            onClicked: kcm.jobSettings.inNotifications = checked
+            enabled: !kcm.jobSettings.isImmutable("InNotifications")
         }
 
         RowLayout { // just for indentation
@@ -239,9 +241,9 @@ KCM.SimpleKCM {
                 Layout.leftMargin: mirrored ? 0 : indicator.width
                 Layout.rightMargin: mirrored ? indicator.width : 0
                 text: i18nc("Keep application job popup open for entire duration of job", "Keep popup open during progress")
-                enabled: applicationJobsEnabledCheck.checked
-                checked: kcm.settings.permanentJobPopups
-                onClicked: kcm.settings.permanentJobPopups = checked
+                enabled: applicationJobsEnabledCheck.checked && !kcm.jobSettings.isImmutable("PermanentPopups")
+                checked: kcm.jobSettings.permanentPopups
+                onClicked: kcm.jobSettings.permanentPopups = checked
             }
         }
 
@@ -252,8 +254,9 @@ KCM.SimpleKCM {
         QtControls.CheckBox {
             Kirigami.FormData.label: i18n("Notification badges:")
             text: i18n("Show in task manager")
-            checked: kcm.settings.badgesInTaskManager
-            onClicked: kcm.settings.badgesInTaskManager = checked
+            checked: kcm.badgeSettings.inTaskManager
+            onClicked: kcm.badgeSettings.inTaskManager = checked
+            enabled: !kcm.badgeSettings.isImmutable("InTaskManager")
         }
 
         Kirigami.Separator {

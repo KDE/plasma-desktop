@@ -20,7 +20,7 @@
 
 #pragma once
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickAddons/ManagedConfigModule>
 
 #include <QKeySequence>
 
@@ -31,9 +31,13 @@ class FilterProxyModel;
 
 namespace NotificationManager {
 class Settings;
+class DoNotDisturbSettings;
+class NotificationSettings;
+class JobSettings;
+class BadgeSettings;
 }
 
-class KCMNotifications : public KQuickAddons::ConfigModule
+class KCMNotifications : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
 
@@ -41,6 +45,10 @@ class KCMNotifications : public KQuickAddons::ConfigModule
     Q_PROPERTY(FilterProxyModel *filteredModel READ filteredModel CONSTANT)
 
     Q_PROPERTY(NotificationManager::Settings *settings READ settings CONSTANT)
+    Q_PROPERTY(NotificationManager::DoNotDisturbSettings *dndSettings READ dndSettings CONSTANT)
+    Q_PROPERTY(NotificationManager::NotificationSettings *notificationSettings READ notificationSettings CONSTANT)
+    Q_PROPERTY(NotificationManager::JobSettings *jobSettings READ jobSettings CONSTANT)
+    Q_PROPERTY(NotificationManager::BadgeSettings *badgeSettings READ badgeSettings CONSTANT)
 
     Q_PROPERTY(QKeySequence toggleDoNotDisturbShortcut
                READ toggleDoNotDisturbShortcut
@@ -60,6 +68,10 @@ public:
     FilterProxyModel *filteredModel() const;
 
     NotificationManager::Settings *settings() const;
+    NotificationManager::DoNotDisturbSettings *dndSettings() const;
+    NotificationManager::NotificationSettings *notificationSettings() const;
+    NotificationManager::JobSettings *jobSettings() const;
+    NotificationManager::BadgeSettings *badgeSettings() const;
 
     QKeySequence toggleDoNotDisturbShortcut() const;
     void setToggleDoNotDisturbShortcut(const QKeySequence &shortcut);
@@ -93,6 +105,10 @@ private:
     FilterProxyModel *m_filteredModel;
 
     NotificationManager::Settings *m_settings;
+    NotificationManager::DoNotDisturbSettings *m_dndSettings;
+    NotificationManager::NotificationSettings *m_notificationSettings;
+    NotificationManager::JobSettings *m_jobSettings;
+    NotificationManager::BadgeSettings *m_badgeSettings;
 
     QAction *m_toggleDoNotDisturbAction;
     QKeySequence m_toggleDoNotDisturbShortcut;

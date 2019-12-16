@@ -45,14 +45,22 @@
 #include "filterproxymodel.h"
 
 #include <notificationmanager/settings.h>
+#include <notificationmanager/donotdisturbsettings.h>
+#include <notificationmanager/notificationsettings.h>
+#include <notificationmanager/jobsettings.h>
+#include <notificationmanager/badgesettings.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMNotificationsFactory, "kcm_notifications.json", registerPlugin<KCMNotifications>();)
 
 KCMNotifications::KCMNotifications(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+    : KQuickAddons::ManagedConfigModule(parent, args)
     , m_sourcesModel(new SourcesModel(this))
     , m_filteredModel(new FilterProxyModel(this))
     , m_settings(new NotificationManager::Settings(this))
+    , m_dndSettings(new NotificationManager::DoNotDisturbSettings(this))
+    , m_notificationSettings(new NotificationManager::NotificationSettings(this))
+    , m_jobSettings(new NotificationManager::JobSettings(this))
+    , m_badgeSettings(new NotificationManager::BadgeSettings(this))
     , m_toggleDoNotDisturbAction(new QAction(this))
 {
 
@@ -61,6 +69,10 @@ KCMNotifications::KCMNotifications(QObject *parent, const QVariantList &args)
                                              QStringLiteral("Cannot create instances of SourcesModel"));
     qmlRegisterType<FilterProxyModel>();
     qmlRegisterType<QKeySequence>();
+    qmlRegisterType<NotificationManager::DoNotDisturbSettings>();
+    qmlRegisterType<NotificationManager::NotificationSettings>();
+    qmlRegisterType<NotificationManager::JobSettings>();
+    qmlRegisterType<NotificationManager::BadgeSettings>();
     qmlProtectModule(uri, 1);
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm_notifications"), i18n("Notifications"),
@@ -119,6 +131,26 @@ FilterProxyModel *KCMNotifications::filteredModel() const
 NotificationManager::Settings *KCMNotifications::settings() const
 {
     return m_settings;
+}
+
+NotificationManager::DoNotDisturbSettings *KCMNotifications::dndSettings() const
+{
+    return m_dndSettings;
+}
+
+NotificationManager::NotificationSettings *KCMNotifications::notificationSettings() const
+{
+    return m_notificationSettings;
+}
+
+NotificationManager::JobSettings *KCMNotifications::jobSettings() const
+{
+    return m_jobSettings;
+}
+
+NotificationManager::BadgeSettings *KCMNotifications::badgeSettings() const
+{
+    return m_badgeSettings;
 }
 
 QKeySequence KCMNotifications::toggleDoNotDisturbShortcut() const
@@ -221,6 +253,7 @@ void KCMNotifications::configureEvents(const QString &notifyRcName, const QStrin
 
 void KCMNotifications::load()
 {
+    ManagedConfigModule::load();
     m_settings->load();
 
     const QKeySequence toggleDoNotDisturbShortcut = KGlobalAccel::self()->globalShortcut(
@@ -238,6 +271,7 @@ void KCMNotifications::load()
 
 void KCMNotifications::save()
 {
+    ManagedConfigModule::save();
     m_settings->save();
 
     if (m_toggleDoNotDisturbShortcutDirty) {
@@ -252,6 +286,7 @@ void KCMNotifications::save()
 
 void KCMNotifications::defaults()
 {
+    ManagedConfigModule::defaults();
     m_settings->defaults();
 
     setToggleDoNotDisturbShortcut(QKeySequence());

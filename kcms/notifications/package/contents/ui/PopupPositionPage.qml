@@ -30,7 +30,7 @@ Kirigami.Page {
 
     ScreenPositionSelector {
         anchors.horizontalCenter: parent.horizontalCenter
-        selectedPosition: kcm.settings.popupPosition
-        onSelectedPositionChanged: kcm.settings.popupPosition = selectedPosition
+        selectedPosition: kcm.notificationSettings.popupPosition
+        onSelectedPositionChanged: kcm.notificationSettings.popupPosition = selectedPosition
     }
 }
