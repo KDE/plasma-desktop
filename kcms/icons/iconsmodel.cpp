@@ -83,12 +83,11 @@ bool IconsModel::setData(const QModelIndex &index, const QVariant &value, int ro
             item.pendingDeletion = pendingDeletion;
             emit dataChanged(index, index, {PendingDeletionRole});
 
-            // move to the next non-pending theme
+            // if we delete current selected theme move to the next non-pending theme
             const auto nonPending = match(index, PendingDeletionRole, false);
-            if (!nonPending.isEmpty()) {
+            if (m_settings->theme() == index.data(ThemeNameRole)  && !nonPending.isEmpty()) {
                 m_settings->setTheme(nonPending.first().data(ThemeNameRole).toString());
             }
-
             emit pendingDeletionsChanged();
             return true;
         }
