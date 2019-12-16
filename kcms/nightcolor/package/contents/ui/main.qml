@@ -48,12 +48,30 @@ KCM.SimpleKCM {
         // Default was triggered, only allow a normal
         // configuration change again:
         defaultRequested = false;
+
+        calcRepresentsDefault();
+    }
+    function calcRepresentsDefault() {
+        if (cA.nightColorAvailable) {
+            kcm.representsDefaults = activator.checked === cA.activeDefault &&
+                tempSlider.value === cA.nightTemperatureDefault &&
+                modeSwitcher.currentIndex === cA.modeDefault &&
+                cA.latitudeFixedStaged === cA.latitudeFixedDefault &&
+                cA.longitudeFixedStaged === cA.longitudeFixedDefault &&
+                cA.morningBeginFixedStaged.toString() === cA.morningBeginFixedDefault.toString() &&
+                cA.eveningBeginFixedStaged.toString() === cA.eveningBeginFixedDefault.toString() &&
+                cA.transitionTimeStaged === cA.transitionTimeDefault;
+        } else {
+            kcm.representsDefaults = true;
+        }
     }
 
     Connections {
         target: kcm
         onLoadRelay: cA.reloadData()
-        onSaveRelay: defaultRequested ? cA.sendConfigurationAll() : cA.sendConfiguration();
+        onSaveRelay: {
+            defaultRequested ? cA.sendConfigurationAll() : cA.sendConfiguration();
+        }
         onDefaultsRelay: {
             if (!cA.nightColorAvailable) {
                 return;
@@ -63,17 +81,20 @@ KCM.SimpleKCM {
             modeSwitcher.currentIndex = cA.modeDefault;
 
             // set everything else to default as well
-            cA.latitudeFixedStaged = cA.latitudeFixedDefault;
-            cA.longitudeFixedStaged = cA.longitudeFixedDefault;
+            defaults()
 
-            cA.morningBeginFixedStaged = cA.morningBeginFixedDefault;
-            cA.eveningBeginFixedStaged = cA.eveningBeginFixedDefault;
-            cA.transitionTimeStaged = cA.transitionTimeDefault;
+            mornBeginManField.backend = cA.morningBeginFixedDefault;
+            evenBeginManField.backend = cA.eveningBeginFixedDefault;
+            transTimeField.value = cA.transitionTimeDefault;
+            cA.transitionTimeStaged = transTimeField.value;
 
             kcm.needsSave = cA.checkStagedAll();
             defaultRequested = true;
+
+            calcRepresentsDefault();
         }
     }
+    signal defaults()
 
     Connections {
         target: cA
@@ -220,7 +241,8 @@ KCM.SimpleKCM {
                 visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeTimings
                 Kirigami.FormData.label: i18n("Turn on at:")
                 backend: cA.eveningBeginFixedStaged
-                onBackendChanged: {cA.eveningBeginFixedStaged = backend;
+                onBackendChanged: {
+                    cA.eveningBeginFixedStaged = backend;
                     calcNeedsSave();
                 }
 
@@ -236,7 +258,8 @@ KCM.SimpleKCM {
                 visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeTimings
                 Kirigami.FormData.label: i18n("Turn off at:")
                 backend: cA.morningBeginFixedStaged
-                onBackendChanged: {cA.morningBeginFixedStaged = backend;
+                onBackendChanged: {
+                    cA.morningBeginFixedStaged = backend;
                     calcNeedsSave();
                 }
 
