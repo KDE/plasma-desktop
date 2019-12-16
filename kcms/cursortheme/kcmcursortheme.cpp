@@ -455,7 +455,7 @@ void CursorThemeConfig::getNewClicked()
                         if (list.last() == QLatin1String(".icons")) {
                             continue;
                         }
-                        m_themeModel->addTheme(list.join(QLatin1Char('/')));
+                        m_themeModel->addTheme(QStringLiteral("/%1").arg(list.join(QLatin1Char('/'))));
                     }
                 }
             }
