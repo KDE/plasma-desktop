@@ -25,7 +25,6 @@
 #include <KPluginFactory>
 #include <KAboutData>
 #include <KLocalizedString>
-#include <KDesktopFile>
 
 #include <KIO/FileCopyJob>
 #include <KIO/JobUiDelegate>
@@ -44,6 +43,8 @@
 #include <KNewStuff3/KNS3/DownloadDialog>
 
 #include "desktopthemesettings.h"
+#include "filterproxymodel.h"
+#include "themesmodel.h"
 
 Q_LOGGING_CATEGORY(KCM_DESKTOP_THEME, "kcm_desktoptheme")
 
@@ -52,10 +53,13 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMDesktopThemeFactory, "kcm_desktoptheme.json", regi
 KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
     , m_settings(new DesktopThemeSettings(this))
+    , m_model(new ThemesModel(this))
+    , m_filteredModel(new FilterProxyModel(this))
     , m_haveThemeExplorerInstalled(false)
 {
     qmlRegisterType<DesktopThemeSettings>();
-    qmlRegisterType<QStandardItemModel>();
+    qmlRegisterUncreatableType<ThemesModel>("org.kde.private.kcms.desktoptheme", 1, 0, "ThemesModel", "Cannot create ThemesModel");
+    qmlRegisterUncreatableType<FilterProxyModel>("org.kde.private.kcms.desktoptheme", 1, 0, "FilterProxyModel", "Cannot create FilterProxyModel");
 
     KAboutData* about = new KAboutData(QStringLiteral("kcm_desktoptheme"), i18n("Plasma Style"),
                                        QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
@@ -63,17 +67,21 @@ KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const QVariantList &args)
     setAboutData(about);
     setButtons(Apply | Default | Help);
 
-    m_model = new QStandardItemModel(this);
-    QHash<int, QByteArray> roles = m_model->roleNames();
-    roles[PluginNameRole] = QByteArrayLiteral("pluginName");
-    roles[ThemeNameRole] = QByteArrayLiteral("themeName");
-    roles[DescriptionRole] = QByteArrayLiteral("description");
-    roles[FollowsSystemColorsRole] = QByteArrayLiteral("followsSystemColors");
-    roles[IsLocalRole] = QByteArrayLiteral("isLocal");
-    roles[PendingDeletionRole] = QByteArrayLiteral("pendingDeletion");
-    m_model->setItemRoleNames(roles);
-
     m_haveThemeExplorerInstalled = !QStandardPaths::findExecutable(QStringLiteral("plasmathemeexplorer")).isEmpty();
+
+    connect(m_model, &ThemesModel::pendingDeletionsChanged, this, &KCMDesktopTheme::settingsChanged);
+
+    connect(m_model, &ThemesModel::selectedThemeChanged, this, [this](const QString &pluginName) {
+        m_settings->setName(pluginName);
+    });
+
+    connect(m_settings, &DesktopThemeSettings::nameChanged, this, [this] {
+        m_model->setSelectedTheme(m_settings->name());
+    });
+
+    connect(m_model, &ThemesModel::selectedThemeChanged, m_filteredModel, &FilterProxyModel::setSelectedTheme);
+
+    m_filteredModel->setSourceModel(m_model);
 }
 
 KCMDesktopTheme::~KCMDesktopTheme()
@@ -85,39 +93,19 @@ DesktopThemeSettings *KCMDesktopTheme::desktopThemeSettings() const
     return m_settings;
 }
 
-QStandardItemModel *KCMDesktopTheme::desktopThemeModel() const
+ThemesModel *KCMDesktopTheme::desktopThemeModel() const
 {
     return m_model;
 }
 
-int KCMDesktopTheme::pluginIndex(const QString &pluginName) const
+FilterProxyModel *KCMDesktopTheme::filteredModel() const
 {
-    const auto results = m_model->match(m_model->index(0, 0), PluginNameRole, pluginName);
-    if (results.count() == 1) {
-        return results.first().row();
-    }
-
-    return -1;
+    return m_filteredModel;
 }
 
 bool KCMDesktopTheme::downloadingFile() const
 {
     return m_tempCopyJob;
-}
-
-void KCMDesktopTheme::setPendingDeletion(int index, bool pending)
-{
-    QModelIndex idx = m_model->index(index, 0);
-
-    m_model->setData(idx, pending, PendingDeletionRole);
-
-    if (pending && pluginIndex(m_settings->name()) == index) {
-        // move to the next non-pending theme
-        const auto nonPending = m_model->match(idx, PendingDeletionRole, false);
-        m_settings->setName(nonPending.first().data(PluginNameRole).toString());
-    }
-
-    settingsChanged();
 }
 
 void KCMDesktopTheme::getNewStuff(QQuickItem *ctx)
@@ -223,63 +211,8 @@ void KCMDesktopTheme::applyPlasmaTheme(QQuickItem *item, const QString &themeNam
 void KCMDesktopTheme::load()
 {
     ManagedConfigModule::load();
-
-    m_pendingRemoval.clear();
-
-    // Get all desktop themes
-    QStringList themes;
-    const QStringList &packs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("plasma/desktoptheme"), QStandardPaths::LocateDirectory);
-    Q_FOREACH (const QString &ppath, packs) {
-        const QDir cd(ppath);
-        const QStringList &entries = cd.entryList(QDir::Dirs | QDir::Hidden | QDir::NoDotAndDotDot);
-        Q_FOREACH (const QString &pack, entries) {
-            const QString _metadata = ppath + QLatin1Char('/') + pack + QStringLiteral("/metadata.desktop");
-            if (QFile::exists(_metadata)) {
-                themes << _metadata;
-            }
-        }
-    }
-
-    m_model->clear();
-
-    Q_FOREACH (const QString &theme, themes) {
-        int themeSepIndex = theme.lastIndexOf(QLatin1Char('/'), -1);
-        const QString themeRoot = theme.left(themeSepIndex);
-        int themeNameSepIndex = themeRoot.lastIndexOf(QLatin1Char('/'), -1);
-        const QString packageName = themeRoot.right(themeRoot.length() - themeNameSepIndex - 1);
-
-        KDesktopFile df(theme);
-
-        if (df.noDisplay()) {
-            continue;
-        }
-
-        QString name = df.readName();
-        if (name.isEmpty()) {
-            name = packageName;
-        }
-        const bool isLocal = QFileInfo(theme).isWritable();
-        // Plasma Theme creates a KColorScheme out of the "color" file and falls back to system colors if there is none
-        const bool followsSystemColors = !QFileInfo::exists(themeRoot + QLatin1String("/colors"));
-
-        if (m_model->findItems(packageName).isEmpty()) {
-            QStandardItem *item = new QStandardItem;
-            item->setText(packageName);
-            item->setData(packageName, PluginNameRole);
-            item->setData(name, ThemeNameRole);
-            item->setData(df.readComment(), DescriptionRole);
-            item->setData(followsSystemColors, FollowsSystemColorsRole);
-            item->setData(isLocal, IsLocalRole);
-            item->setData(false, PendingDeletionRole);
-            m_model->appendRow(item);
-        }
-    }
-
-    m_model->setSortRole(ThemeNameRole); // FIXME the model should really be just using Qt::DisplayRole
-    m_model->sort(0 /*column*/);
-
-    // Model has been cleared so pretend the theme name changed to force view update
-    emit m_settings->nameChanged();
+    m_model->load();
+    m_model->setSelectedTheme(m_settings->name());
 }
 
 void KCMDesktopTheme::save()
@@ -294,9 +227,9 @@ void KCMDesktopTheme::defaults()
     ManagedConfigModule::defaults();
 
     // can this be done more elegantly?
-    const auto pendingDeletions = m_model->match(m_model->index(0, 0), PendingDeletionRole, true);
+    const auto pendingDeletions = m_model->match(m_model->index(0, 0), ThemesModel::PendingDeletionRole, true);
     for (const QModelIndex &idx : pendingDeletions) {
-        m_model->setData(idx, false, PendingDeletionRole);
+        m_model->setData(idx, false, ThemesModel::PendingDeletionRole);
     }
 }
 
@@ -312,14 +245,14 @@ void KCMDesktopTheme::editTheme(const QString &theme)
 
 bool KCMDesktopTheme::isSaveNeeded() const
 {
-    return !m_model->match(m_model->index(0, 0), PendingDeletionRole, true).isEmpty();
+    return !m_model->match(m_model->index(0, 0), ThemesModel::PendingDeletionRole, true).isEmpty();
 }
 
 void KCMDesktopTheme::processPendingDeletions()
 {
     const QString program = QStringLiteral("plasmapkg2");
 
-    const auto pendingDeletions = m_model->match(m_model->index(0, 0), PendingDeletionRole, true, -1 /*all*/);
+    const auto pendingDeletions = m_model->match(m_model->index(0, 0), ThemesModel::PendingDeletionRole, true, -1 /*all*/);
     QVector<QPersistentModelIndex> persistentPendingDeletions;
     // turn into persistent model index so we can delete as we go
     std::transform(pendingDeletions.begin(), pendingDeletions.end(),
@@ -328,7 +261,7 @@ void KCMDesktopTheme::processPendingDeletions()
     });
 
     for (const QPersistentModelIndex &idx : persistentPendingDeletions) {
-        const QString pluginName = idx.data(PluginNameRole).toString();
+        const QString pluginName = idx.data(ThemesModel::PluginNameRole).toString();
         const QString displayName = idx.data(Qt::DisplayRole).toString();
 
         Q_ASSERT(pluginName != m_settings->name());
@@ -344,7 +277,7 @@ void KCMDesktopTheme::processPendingDeletions()
                 } else {
                     emit showErrorMessage(i18n("Removing theme failed: %1",
                                                QString::fromLocal8Bit(process->readAllStandardOutput().trimmed())));
-                    m_model->setData(idx, false, PendingDeletionRole);
+                    m_model->setData(idx, false, ThemesModel::PendingDeletionRole);
                 }
                 process->deleteLater();
             });

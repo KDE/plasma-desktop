@@ -20,6 +20,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.private.kcms.desktoptheme 1.0 as Private
 
 Item {
     id: root
@@ -176,7 +177,7 @@ Item {
             }
         }
         Kirigami.Icon {
-            visible: model.followsSystemColors
+            visible: model.colorType === Private.ThemesModel.FollowsColorTheme
             source: "color-profile"
             width: Kirigami.Units.iconSizes.smallMedium
             height: width

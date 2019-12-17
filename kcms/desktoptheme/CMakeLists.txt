@@ -3,6 +3,8 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_desktoptheme\")
 
 set(kcm_desktoptheme_SRCS
   kcm.cpp
+  themesmodel.cpp
+  filterproxymodel.cpp
 )
 
 kconfig_add_kcfg_files(kcm_desktoptheme_SRCS desktopthemesettings.kcfgc GENERATE_MOC)

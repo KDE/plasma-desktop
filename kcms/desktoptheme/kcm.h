@@ -39,35 +39,28 @@ class FileCopyJob;
 }
 
 class QQuickItem;
-class QStandardItemModel;
 class DesktopThemeSettings;
+class FilterProxyModel;
+class ThemesModel;
 
 class KCMDesktopTheme : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
+
     Q_PROPERTY(DesktopThemeSettings *desktopThemeSettings READ desktopThemeSettings CONSTANT)
-    Q_PROPERTY(QStandardItemModel *desktopThemeModel READ desktopThemeModel CONSTANT)
+    Q_PROPERTY(FilterProxyModel *filteredModel READ filteredModel CONSTANT)
+    Q_PROPERTY(ThemesModel *desktopThemeModel READ desktopThemeModel CONSTANT)
     Q_PROPERTY(bool downloadingFile READ downloadingFile NOTIFY downloadingFileChanged)
     Q_PROPERTY(bool canEditThemes READ canEditThemes CONSTANT)
 
 public:
-    enum Roles {
-        PluginNameRole = Qt::UserRole + 1,
-        ThemeNameRole,
-        DescriptionRole,
-        FollowsSystemColorsRole,
-        IsLocalRole,
-        PendingDeletionRole
-    };
-    Q_ENUM(Roles)
 
     KCMDesktopTheme(QObject *parent, const QVariantList &args);
     ~KCMDesktopTheme() override;
 
     DesktopThemeSettings *desktopThemeSettings() const;
-    QStandardItemModel *desktopThemeModel() const;
-
-    Q_INVOKABLE int pluginIndex(const QString &pluginName) const;
+    ThemesModel *desktopThemeModel() const;
+    FilterProxyModel *filteredModel() const;
 
     bool downloadingFile() const;
 
@@ -75,8 +68,6 @@ public:
 
     Q_INVOKABLE void getNewStuff(QQuickItem *ctx);
     Q_INVOKABLE void installThemeFromFile(const QUrl &url);
-
-    Q_INVOKABLE void setPendingDeletion(int index, bool pending);
 
     Q_INVOKABLE void applyPlasmaTheme(QQuickItem *item, const QString &themeName);
 
@@ -102,8 +93,8 @@ private:
 
     DesktopThemeSettings *m_settings;
 
-    QStandardItemModel *m_model;
-    QStringList m_pendingRemoval;
+    ThemesModel *m_model;
+    FilterProxyModel *m_filteredModel;
     QHash<QString, Plasma::Theme*> m_themes;
     bool m_haveThemeExplorerInstalled;
 
