@@ -22,6 +22,7 @@ import QtQuick 2.9
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kquickcontrols 2.0 as KQuickControls
 import org.kde.kcm 1.2 as KCM
 
 import org.kde.notificationmanager 1.0 as NotificationManager
@@ -92,6 +93,17 @@ KCM.SimpleKCM {
             checked: kcm.settings.criticalPopupsInDoNotDisturbMode
             onClicked: kcm.settings.criticalPopupsInDoNotDisturbMode = checked
             enabled: root.notificationsAvailable
+        }
+
+        RowLayout {
+            QtControls.Label {
+                text: i18nc("Turn do not disturb mode on/off with keyboard shortcut", "Toggle with:")
+            }
+
+            KQuickControls.KeySequenceItem {
+                keySequence: kcm.toggleDoNotDisturbShortcut
+                onKeySequenceChanged: kcm.toggleDoNotDisturbShortcut = keySequence
+            }
         }
 
         QtControls.CheckBox {

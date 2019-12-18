@@ -20,6 +20,7 @@
 
 #include "kcm.h"
 
+#include <QAction>
 #include <QCommandLineParser>
 #include <QDialog>
 #include <QDialogButtonBox>
@@ -33,6 +34,7 @@
 
 #include <KAboutData>
 #include <KConfigGroup>
+#include <KGlobalAccel>
 #include <KLocalizedString>
 #include <KNotifyConfigWidget>
 #include <KPluginFactory>
@@ -51,12 +53,14 @@ KCMNotifications::KCMNotifications(QObject *parent, const QVariantList &args)
     , m_sourcesModel(new SourcesModel(this))
     , m_filteredModel(new FilterProxyModel(this))
     , m_settings(new NotificationManager::Settings(this))
+    , m_toggleDoNotDisturbAction(new QAction(this))
 {
 
     const char uri[] = "org.kde.private.kcms.notifications";
     qmlRegisterUncreatableType<SourcesModel>(uri, 1, 0, "SourcesModel",
                                              QStringLiteral("Cannot create instances of SourcesModel"));
     qmlRegisterType<FilterProxyModel>();
+    qmlRegisterType<QKeySequence>();
     qmlProtectModule(uri, 1);
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm_notifications"), i18n("Notifications"),
@@ -65,6 +69,13 @@ KCMNotifications::KCMNotifications(QObject *parent, const QVariantList &args)
     setAboutData(about);
 
     m_filteredModel->setSourceModel(m_sourcesModel);
+
+    // for KGlobalAccel...
+    // keep in sync with globalshortcuts.cpp in notification plasmoid!
+    m_toggleDoNotDisturbAction->setObjectName(QStringLiteral("toggle do not disturb"));
+    m_toggleDoNotDisturbAction->setProperty("componentName", QStringLiteral("plasmashell"));
+    m_toggleDoNotDisturbAction->setText(i18n("Toggle do not disturb"));
+    m_toggleDoNotDisturbAction->setIcon(QIcon::fromTheme(QStringLiteral("notifications-disabled")));
 
     QStringList stringArgs;
     stringArgs.reserve(args.count() + 1);
@@ -108,6 +119,23 @@ FilterProxyModel *KCMNotifications::filteredModel() const
 NotificationManager::Settings *KCMNotifications::settings() const
 {
     return m_settings;
+}
+
+QKeySequence KCMNotifications::toggleDoNotDisturbShortcut() const
+{
+    return m_toggleDoNotDisturbShortcut;
+}
+
+void KCMNotifications::setToggleDoNotDisturbShortcut(const QKeySequence &shortcut)
+{
+    if (m_toggleDoNotDisturbShortcut == shortcut) {
+        return;
+    }
+
+    m_toggleDoNotDisturbShortcut = shortcut;
+    m_toggleDoNotDisturbShortcutDirty = true;
+    emit toggleDoNotDisturbShortcutChanged();
+    setNeedsSave(true);
 }
 
 QString KCMNotifications::initialDesktopEntry() const
@@ -194,16 +222,39 @@ void KCMNotifications::configureEvents(const QString &notifyRcName, const QStrin
 void KCMNotifications::load()
 {
     m_settings->load();
+
+    const QKeySequence toggleDoNotDisturbShortcut = KGlobalAccel::self()->globalShortcut(
+        m_toggleDoNotDisturbAction->property("componentName").toString(),
+        m_toggleDoNotDisturbAction->objectName()).value(0);
+
+    if (m_toggleDoNotDisturbShortcut != toggleDoNotDisturbShortcut) {
+        m_toggleDoNotDisturbShortcut = toggleDoNotDisturbShortcut;
+        emit toggleDoNotDisturbShortcutChanged();
+    }
+
+    m_toggleDoNotDisturbShortcutDirty = false;
+    setNeedsSave(false);
 }
 
 void KCMNotifications::save()
 {
     m_settings->save();
+
+    if (m_toggleDoNotDisturbShortcutDirty) {
+        // KeySequenceItem will already have checked whether the shortcut is available
+        KGlobalAccel::self()->setShortcut(m_toggleDoNotDisturbAction,
+                                          {m_toggleDoNotDisturbShortcut},
+                                          KGlobalAccel::NoAutoloading);
+    }
+
+    setNeedsSave(false);
 }
 
 void KCMNotifications::defaults()
 {
     m_settings->defaults();
+
+    setToggleDoNotDisturbShortcut(QKeySequence());
 }
 
 #include "kcm.moc"

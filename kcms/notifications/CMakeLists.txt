@@ -12,6 +12,7 @@ target_link_libraries(kcm_notifications
     KF5::KCMUtils
     KF5::CoreAddons
     KF5::Declarative
+    KF5::GlobalAccel
     KF5::GuiAddons
     KF5::I18n
     KF5::QuickAddons

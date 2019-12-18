@@ -22,6 +22,10 @@
 
 #include <KQuickAddons/ConfigModule>
 
+#include <QKeySequence>
+
+class QAction;
+
 class SourcesModel;
 class FilterProxyModel;
 
@@ -38,6 +42,11 @@ class KCMNotifications : public KQuickAddons::ConfigModule
 
     Q_PROPERTY(NotificationManager::Settings *settings READ settings CONSTANT)
 
+    Q_PROPERTY(QKeySequence toggleDoNotDisturbShortcut
+               READ toggleDoNotDisturbShortcut
+               WRITE setToggleDoNotDisturbShortcut
+               NOTIFY toggleDoNotDisturbShortcutChanged)
+
     // So it can show the respective settings module right away
     Q_PROPERTY(QString initialDesktopEntry READ initialDesktopEntry WRITE setInitialDesktopEntry NOTIFY initialDesktopEntryChanged)
     Q_PROPERTY(QString initialNotifyRcName READ initialNotifyRcName WRITE setInitialNotifyRcName NOTIFY initialNotifyRcNameChanged)
@@ -51,6 +60,10 @@ public:
     FilterProxyModel *filteredModel() const;
 
     NotificationManager::Settings *settings() const;
+
+    QKeySequence toggleDoNotDisturbShortcut() const;
+    void setToggleDoNotDisturbShortcut(const QKeySequence &shortcut);
+    Q_SIGNAL void toggleDoNotDisturbShortcutChanged();
 
     QString initialDesktopEntry() const;
     void setInitialDesktopEntry(const QString &desktopEntry);
@@ -80,6 +93,10 @@ private:
     FilterProxyModel *m_filteredModel;
 
     NotificationManager::Settings *m_settings;
+
+    QAction *m_toggleDoNotDisturbAction;
+    QKeySequence m_toggleDoNotDisturbShortcut;
+    bool m_toggleDoNotDisturbShortcutDirty = false;
 
     QString m_initialDesktopEntry;
     QString m_initialNotifyRcName;
