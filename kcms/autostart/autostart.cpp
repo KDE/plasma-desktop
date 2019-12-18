@@ -222,7 +222,7 @@ void Autostart::load()
 
     //add scripts
 
-    foreach (const QString& path, m_paths) {
+    for (const QString& path : qAsConst(m_paths)) {
         QDir d(path);
         if (!d.exists())
             d.mkpath(path);
