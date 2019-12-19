@@ -28,6 +28,7 @@ target_link_libraries(taskmanagerplugin
                       KF5::KIOWidgets
                       KF5::KIOFileWidgets # KFilePlacesModel
                       KF5::Plasma
+                      KF5::ProcessCore
                       KF5::Service
                       KF5::WindowSystem
                       PW::LibNotificationManager)

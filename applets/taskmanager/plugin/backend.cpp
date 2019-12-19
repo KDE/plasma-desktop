@@ -45,6 +45,9 @@
 #include <KActivities/Stats/ResultSet>
 #include <KActivities/Stats/Terms>
 
+#include <processcore/process.h>
+#include <processcore/processes.h>
+
 namespace KAStats = KActivities::Stats;
 
 using namespace KAStats;
@@ -534,6 +537,19 @@ void Backend::cancelHighlightWindows()
 {
     m_windowsToHighlight.clear();
     updateWindowHighlight();
+}
+
+qint64 Backend::parentPid(qint64 pid) const
+{
+    KSysGuard::Processes procs;
+    procs.updateOrAddProcess(pid);
+
+    KSysGuard::Process *proc = procs.getProcess(pid);
+    if (!proc) {
+        return -1;
+    }
+
+    return proc->parentPid();
 }
 
 void Backend::windowsHovered(const QVariant &_winIds, bool hovered)
