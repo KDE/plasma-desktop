@@ -132,7 +132,7 @@ QStringList FilteredFolderModel::includeFolders() const
           QSet<QString>::fromList(m_mountPoints)
         - QSet<QString>::fromList(m_excludeList);
 
-    return mountPointSet.toList();
+    return mountPointSet.values();
 }
 
 QStringList FilteredFolderModel::excludeFolders() const

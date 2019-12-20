@@ -620,7 +620,7 @@ void FolderModel::setFilterPattern(const QString &pattern)
 
 QStringList FolderModel::filterMimeTypes() const
 {
-    return m_mimeSet.toList();
+    return m_mimeSet.values();
 }
 
 void FolderModel::setFilterMimeTypes(const QStringList &mimeList)

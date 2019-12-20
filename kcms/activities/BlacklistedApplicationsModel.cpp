@@ -120,7 +120,7 @@ void BlacklistedApplicationsModel::load()
         }
     }
 
-    auto applications = (blockedApplications + allowedApplications).toList();
+    auto applications = (blockedApplications + allowedApplications).values();
 
     if (applications.length() > 0) {
         std::sort(applications.begin(), applications.end());
