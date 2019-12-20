@@ -96,6 +96,8 @@ KCM.SimpleKCM {
         }
 
         RowLayout {
+            enabled: root.notificationsAvailable
+
             QtControls.Label {
                 text: i18nc("Turn do not disturb mode on/off with keyboard shortcut", "Toggle with:")
             }
