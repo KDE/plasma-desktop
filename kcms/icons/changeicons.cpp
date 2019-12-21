@@ -32,7 +32,7 @@ int main(int argc, char** argv)
     QString themeName = app.arguments().last();
     int idx = themeName.lastIndexOf('/');
     if (idx>=0) {
-        themeName = themeName.mid(idx);
+        themeName = themeName.mid(idx + 1);
     }
 
     IconsSettings settings;
