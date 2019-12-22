@@ -83,7 +83,12 @@ function optimumCapacity(width, height) {
     var length = tasks.vertical ? height : width;
     var maximum = tasks.vertical ? preferredMaxHeight() : preferredMaxWidth();
 
-    return (Math.ceil(length / maximum) * maxStripes());
+    if (!tasks.vertical) {
+        //  Fit more tasks in this case, that is possible to cut text, before combining tasks.
+        return Math.ceil(length / maximum) * maxStripes() + 1;
+    }
+
+    return Math.floor(length / maximum) * maxStripes();
 }
 
 function layoutWidth() {
