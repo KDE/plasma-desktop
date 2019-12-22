@@ -34,7 +34,7 @@
 #include <KStringHandler>
 #include <KLocalizedString>
 #include <KService>
-#include <KRecursiveFilterProxyModel>
+#include <QSortFilterProxyModel>
 #include <KServiceGroup>
 #include <KDesktopFile>
 #include <KCategorizedSortFilterProxyModel>
@@ -235,7 +235,8 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
     
     connect(ui.addButton, &QToolButton::clicked, [this]() {
         if (!selectApplicationDialogUi.treeView->model()) {
-            KRecursiveFilterProxyModel *filterModel = new KRecursiveFilterProxyModel(selectApplicationDialogUi.treeView);
+            QSortFilterProxyModel *filterModel = new QSortFilterProxyModel(selectApplicationDialogUi.treeView);
+            filterModel->setRecursiveFilteringEnabled(true);
             QStandardItemModel *appModel = new QStandardItemModel(selectApplicationDialogUi.treeView);
             selectApplicationDialogUi.kfilterproxysearchline->setProxy(filterModel);
             filterModel->setSourceModel(appModel);
