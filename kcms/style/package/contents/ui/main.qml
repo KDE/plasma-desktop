@@ -38,7 +38,7 @@ KCM.GridViewKCM {
     Component.onCompleted: {
         // The widget thumbnails are a bit more elaborate and need more room, especially when translated
         view.implicitCellWidth = Kirigami.Units.gridUnit * 20;
-        view.implicitCellHeight = Kirigami.Units.gridUnit * 14;
+        view.implicitCellHeight = Kirigami.Units.gridUnit * 15;
     }
 
     // putting the InlineMessage as header item causes it to show up initially despite visible false
