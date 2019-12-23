@@ -77,7 +77,7 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
     if (role == AbstractTasksModel::Geometry) {
         QRect windowGeo = TaskFilterProxyModel::data(index, role).toRect();
         QList<QScreen *> screens = QGuiApplication::screens();
-        const QRect desktopGeo = screens.at(0)->geometry();
+        const QRect desktopGeo = screens.at(0)->virtualGeometry();
 
         if (KWindowSystem::mapViewport()) {
             int x = windowGeo.center().x() % desktopGeo.width();
