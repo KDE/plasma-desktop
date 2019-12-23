@@ -52,7 +52,7 @@ KCM.GridViewKCM {
     Component.onCompleted: {
         // The thumbnails are a bit more elaborate and need more room, especially when translated
         view.implicitCellWidth = Kirigami.Units.gridUnit * 13;
-        view.implicitCellHeight = Kirigami.Units.gridUnit * 11;
+        view.implicitCellHeight = Kirigami.Units.gridUnit * 12;
     }
 
     DropArea {
