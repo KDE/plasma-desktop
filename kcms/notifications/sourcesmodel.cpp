@@ -31,6 +31,7 @@
 
 #include <KConfig>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
 #include <KService>
 #include <KServiceTypeTrader>
@@ -346,6 +347,17 @@ void SourcesModel::load()
     };
 
     std::sort(appsData.begin(), appsData.end(), sortData);
+
+    // Fake entry for configuring non-identifyable applications
+    appsData << SourceData{
+        i18n("Other Applications"),
+        {},
+        QStringLiteral("applications-other"),
+        QString(),
+        QStringLiteral("@other"),
+        {}
+    };
+
     std::sort(servicesData.begin(), servicesData.end(), sortData);
 
     m_data << appsData << servicesData;

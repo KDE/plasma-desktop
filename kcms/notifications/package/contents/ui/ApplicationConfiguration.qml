@@ -35,6 +35,8 @@ ColumnLayout {
 
     property var rootIndex
 
+    readonly property string otherAppsId: "@other"
+
     readonly property string appDisplayName: kcm.sourcesModel.data(rootIndex, Qt.DisplayRole) || ""
     readonly property string appIconName: kcm.sourcesModel.data(rootIndex, Qt.DecorationRole) || ""
     readonly property string desktopEntry: kcm.sourcesModel.data(rootIndex, Private.SourcesModel.DesktopEntryRole) || ""
@@ -117,13 +119,14 @@ ColumnLayout {
 
         QtControls.CheckBox {
             text: i18n("Show notification badges")
-            enabled: !!configColumn.desktopEntry
+            enabled: !!configColumn.desktopEntry && configColumn.desktopEntry !== configColumn.otherAppsId
             checked: configColumn.behavior & NotificationManager.Settings.ShowBadges
             onClicked: configColumn.setBehavior(NotificationManager.Settings.ShowBadges, checked)
         }
 
         Kirigami.Separator {
             Kirigami.FormData.isSection: true
+            visible: configureEventsButton.visible || noEventsLabel.visible
         }
 
         QtControls.Button {
@@ -136,11 +139,12 @@ ColumnLayout {
     }
 
     QtControls.Label {
+        id: noEventsLabel
         Layout.alignment: Qt.AlignHCenter
         Layout.preferredWidth: form.implicitWidth
         text: i18n("This application does not support configuring notifications on a per-event basis.");
         wrapMode: Text.WordWrap
-        visible: !configColumn.notifyRcName
+        visible: !configColumn.notifyRcName && configColumn.desktopEntry !== configColumn.otherAppsId
     }
 
     // compact layout
