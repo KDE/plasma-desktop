@@ -81,14 +81,14 @@ Item {
         autoPopulate: false
 
         appNameFormat: plasmoid.configuration.appNameFormat
-        flat: isDash ? true : plasmoid.configuration.limitDepth
+        flat: kicker.isDash ? true : plasmoid.configuration.limitDepth
         sorted: plasmoid.configuration.alphaSort
-        showSeparators: !isDash
+        showSeparators: !kicker.isDash
         appletInterface: plasmoid
 
-        showAllApps: isDash
+        showAllApps: kicker.isDash
         showAllAppsCategorized: true
-        showTopLevelItems: !isDash
+        showTopLevelItems: !kicker.isDash
         showRecentApps: plasmoid.configuration.showRecentApps
         showRecentDocs: plasmoid.configuration.showRecentDocs
         showRecentContacts: plasmoid.configuration.showRecentContacts
@@ -160,7 +160,7 @@ Item {
         runners: {
             var runners = new Array("services");
 
-            if (isDash) {
+            if (kicker.isDash) {
                 runners = runners.concat(new Array("desktopsessions", "PowerDevil",
                     "calculator", "unitconverter"));
             }
@@ -172,7 +172,7 @@ Item {
             return runners;
         }
 
-        deleteWhenEmpty: isDash
+        deleteWhenEmpty: kicker.isDash
     }
 
     Kicker.DragHelper {
@@ -263,7 +263,7 @@ Item {
 
     Component.onCompleted: {
         if (plasmoid.hasOwnProperty("activationTogglesExpanded")) {
-            plasmoid.activationTogglesExpanded = !isDash
+            plasmoid.activationTogglesExpanded = !kicker.isDash
         }
 
         windowSystem.focusIn.connect(enableHideOnWindowDeactivate);

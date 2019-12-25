@@ -131,7 +131,7 @@ Item {
             checked   : actionItem.checked ? actionItem.checked : false
 
             onClicked: {
-                actionClicked(actionItem.actionId, actionItem.actionArgument);
+                root.actionClicked(actionItem.actionId, actionItem.actionArgument);
             }
         }
     }

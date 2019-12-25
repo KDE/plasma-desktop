@@ -39,7 +39,7 @@ Item {
 
         color: tab.parent.focus ? theme.highlightColor : "black"
 
-        opacity: active ? 0.4 : 0.15
+        opacity: tab.active ? 0.4 : 0.15
         Behavior on opacity { SmoothedAnimation { duration: units.shortDuration; velocity: 0.01 } }
     }
 
@@ -50,7 +50,7 @@ Item {
 
         elide: Text.ElideNone
         wrapMode: Text.NoWrap
-        opacity: active ? 1.0 : 0.6
+        opacity: tab.active ? 1.0 : 0.6
         Behavior on opacity { SmoothedAnimation { duration: units.shortDuration; velocity: 0.01 } }
 
         color: tab.parent.focus ? theme.highlightedTextColor : "white"
@@ -68,7 +68,7 @@ Item {
         }
 
         onContainsMouseChanged: {
-            tab.parent.containsMouseChanged(index, containsMouse);
+            tab.parent.containsMouseChanged(tab.index, containsMouse);
         }
     }
 }

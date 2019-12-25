@@ -69,7 +69,7 @@ Item {
     Connections {
         target: units.iconSizeHints
 
-        onPanelChanged: updateSizeHints()
+        onPanelChanged: root.updateSizeHints()
     }
 
     PlasmaCore.IconItem {
@@ -77,10 +77,10 @@ Item {
 
         anchors.fill: parent
 
-        readonly property double aspectRatio: (vertical ? implicitHeight / implicitWidth
+        readonly property double aspectRatio: (root.vertical ? implicitHeight / implicitWidth
             : implicitWidth / implicitHeight)
 
-        source: useCustomButtonImage ? plasmoid.configuration.customButtonImage : plasmoid.configuration.icon
+        source: root.useCustomButtonImage ? plasmoid.configuration.customButtonImage : plasmoid.configuration.icon
 
         active: mouseArea.containsMouse && !justOpenedTimer.running
 
@@ -88,9 +88,9 @@ Item {
 
         // A custom icon could also be rectangular. However, if a square, custom, icon is given, assume it
         // to be an icon and round it to the nearest icon size again to avoid scaling artifacts.
-        roundToIconSize: !useCustomButtonImage || aspectRatio === 1
+        roundToIconSize: !root.useCustomButtonImage || aspectRatio === 1
 
-        onSourceChanged: updateSizeHints()
+        onSourceChanged: root.updateSizeHints()
     }
 
     MouseArea
@@ -100,7 +100,7 @@ Item {
 
         anchors.fill: parent
 
-        hoverEnabled: !dashWindow || !dashWindow.visible
+        hoverEnabled: !root.dashWindow || !root.dashWindow.visible
 
         onPressed: {
             if (!isDash) {
@@ -110,7 +110,7 @@ Item {
 
         onClicked: {
             if (isDash) {
-                dashWindow.toggle();
+                root.dashWindow.toggle();
                 justOpenedTimer.start();
             } else {
                 plasmoid.expanded = !wasExpanded;

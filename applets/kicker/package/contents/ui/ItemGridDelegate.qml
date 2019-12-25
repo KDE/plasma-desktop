@@ -61,10 +61,10 @@ Item {
     PlasmaCore.IconItem {
         id: icon
 
-        y: showLabel ? (2 * highlightItemSvg.margins.top) : undefined
+        y: item.showLabel ? (2 * highlightItemSvg.margins.top) : undefined
 
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.verticalCenter: showLabel ? undefined : parent.verticalCenter
+        anchors.verticalCenter: item.showLabel ? undefined : parent.verticalCenter
 
         width: iconSize
         height: width
@@ -80,7 +80,7 @@ Item {
     PlasmaComponents.Label {
         id: label
 
-        visible: showLabel
+        visible: item.showLabel
 
         anchors {
             top: icon.bottom

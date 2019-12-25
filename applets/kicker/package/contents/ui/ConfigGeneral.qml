@@ -104,8 +104,8 @@ Kirigami.FormLayout {
             id: iconDialog
 
             function setCustomButtonImage(image) {
-                cfg_customButtonImage = image || cfg_icon || "start-here-kde"
-                cfg_useCustomButtonImage = true;
+                configGeneral.cfg_customButtonImage = image || configGeneral.cfg_icon || "start-here-kde"
+                configGeneral.cfg_useCustomButtonImage = true;
             }
 
             onIconNameChanged: setCustomButtonImage(iconName);
@@ -123,7 +123,7 @@ Kirigami.FormLayout {
                 anchors.centerIn: parent
                 width: units.iconSizes.large
                 height: width
-                source: cfg_useCustomButtonImage ? cfg_customButtonImage : cfg_icon
+                source: configGeneral.cfg_useCustomButtonImage ? configGeneral.cfg_customButtonImage : configGeneral.cfg_icon
             }
         }
 
@@ -144,8 +144,8 @@ Kirigami.FormLayout {
                 text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
                 icon.name: "edit-clear"
                 onClicked: {
-                    cfg_icon = "start-here-kde"
-                    cfg_useCustomButtonImage = false
+                    configGeneral.cfg_icon = "start-here-kde"
+                    configGeneral.cfg_useCustomButtonImage = false
                 }
             }
         }
@@ -187,7 +187,7 @@ Kirigami.FormLayout {
     CheckBox {
         id: showIconsRootLevel
 
-        visible: !isDash
+        visible: !configGeneral.isDash
 
         text: i18n("Show icons on the root level of the menu")
     }
@@ -244,7 +244,7 @@ Kirigami.FormLayout {
     CheckBox {
         id: alignResultsToBottom
 
-        visible: !isDash
+        visible: !configGeneral.isDash
 
         text: i18n("Align search results to bottom")
     }
