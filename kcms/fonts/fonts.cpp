@@ -497,7 +497,7 @@ bool FontAASettings::State::operator!=(const State& other) const
 /**** KFonts ****/
 
 KFonts::KFonts(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+    : KQuickAddons::ManagedConfigModule(parent, args)
     , m_settings(new FontsSettings(this))
     , m_fontAASettings(new FontAASettings(this))
 {
@@ -513,14 +513,6 @@ KFonts::KFonts(QObject *parent, const QVariantList &args)
     auto updateState = [this]() {
         setNeedsSave(m_fontAASettings->needsSave());
     };
-
-    connect(m_settings, &FontsSettings::configChanged, this, &KFonts::updateNeedsSave);
-    connect(m_settings, &FontsSettings::fontChanged, this, &KFonts::updateNeedsSave);
-    connect(m_settings, &FontsSettings::fixedChanged, this, &KFonts::updateNeedsSave);
-    connect(m_settings, &FontsSettings::smallestReadableFontChanged, this, &KFonts::updateNeedsSave);
-    connect(m_settings, &FontsSettings::toolBarFontChanged, this, &KFonts::updateNeedsSave);
-    connect(m_settings, &FontsSettings::menuFontChanged, this, &KFonts::updateNeedsSave);
-    connect(m_settings, &FontsSettings::activeFontChanged, this, &KFonts::updateNeedsSave);
 
     connect(m_fontAASettings, &FontAASettings::subPixelCurrentIndexChanged, this, updateState);
     connect(m_fontAASettings, &FontAASettings::hintingCurrentIndexChanged, this, updateState);
@@ -543,7 +535,7 @@ FontsSettings *KFonts::fontsSettings() const
 
 void KFonts::defaults()
 {
-    m_settings->setDefaults();
+    ManagedConfigModule::defaults();
     m_fontAASettings->defaults();
 }
 
@@ -560,7 +552,7 @@ void KFonts::setNearestExistingFonts()
 void KFonts::load()
 {
     // first load all the settings
-    m_settings->load();
+    ManagedConfigModule::load();
     m_fontAASettings->load();
 
     // Then set the existing fonts based on those settings
@@ -572,12 +564,13 @@ void KFonts::load()
     // previews
     engine()->addImageProvider("preview", new PreviewImageProvider(m_settings->font()));
 
-    setNeedsSave(false);
+    // reload state after loading by emiting a settings signal
+    emit m_settings->activeFontChanged();
 }
 
 void KFonts::save()
 {
-    m_settings->save();
+    ManagedConfigModule::save();
 
     KConfig _cfgfonts("kcmfonts");
     KConfigGroup cfgfonts(&_cfgfonts, "General");
@@ -601,12 +594,11 @@ void KFonts::save()
     runRdb(KRdbExportXftSettings | KRdbExportGtkTheme);
 
     emit fontsHaveChanged();
-    setNeedsSave(false);
 }
 
-void KFonts::updateNeedsSave()
+bool KFonts::isSaveNeeded() const
 {
-    setNeedsSave(m_settings->isSaveNeeded() || m_fontAASettings->needsSave());
+    return m_fontAASettings->needsSave();
 }
 
 void KFonts::adjustAllFonts()

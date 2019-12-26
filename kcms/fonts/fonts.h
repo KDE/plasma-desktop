@@ -31,7 +31,7 @@
 #include <QAbstractItemModel>
 #include <QStandardItemModel>
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickAddons/ManagedConfigModule>
 
 #include "kxftconfig.h"
 
@@ -134,7 +134,7 @@ private:
 /**
  * The Desktop/fonts tab in kcontrol.
  */
-class KFonts : public KQuickAddons::ConfigModule
+class KFonts : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(FontsSettings *fontsSettings READ fontsSettings CONSTANT)
@@ -158,7 +158,7 @@ Q_SIGNALS:
     void fontsHaveChanged();
 
 private:
-    void updateNeedsSave();
+    bool isSaveNeeded() const override ;
     QFont applyFontDiff(const QFont &fnt, const QFont &newFont, int fontDiffFlags);
     void setNearestExistingFonts();
 
