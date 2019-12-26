@@ -608,13 +608,23 @@ void KFonts::adjustAllFonts()
     int ret = KFontDialog::getFontDiff(font, fontDiffFlags, KFontChooser::NoDisplayFlags);
 
     if (ret == KDialog::Accepted && fontDiffFlags) {
-        m_settings->setFont(applyFontDiff(m_settings->font(), font, fontDiffFlags));
-        m_settings->setMenuFont(applyFontDiff(m_settings->menuFont(), font, fontDiffFlags));
-        m_settings->setToolBarFont(applyFontDiff(m_settings->toolBarFont(), font, fontDiffFlags));
-        m_settings->setActiveFont(applyFontDiff(m_settings->activeFont(), font, fontDiffFlags));
-        m_settings->setSmallestReadableFont(applyFontDiff(m_settings->smallestReadableFont(), font, fontDiffFlags));
+        if (!m_settings->isImmutable("font")) {
+            m_settings->setFont(applyFontDiff(m_settings->font(), font, fontDiffFlags));
+        }
+        if (!m_settings->isImmutable("menuFont")) {
+            m_settings->setMenuFont(applyFontDiff(m_settings->menuFont(), font, fontDiffFlags));
+        }
+        if (!m_settings->isImmutable("toolBarFont")) {
+            m_settings->setToolBarFont(applyFontDiff(m_settings->toolBarFont(), font, fontDiffFlags));
+        }
+        if (!m_settings->isImmutable("activeFont")) {
+            m_settings->setActiveFont(applyFontDiff(m_settings->activeFont(), font, fontDiffFlags));
+        }
+        if (!m_settings->isImmutable("smallestReadableFont")) {
+            m_settings->setSmallestReadableFont(applyFontDiff(m_settings->smallestReadableFont(), font, fontDiffFlags));
+        }
         const QFont adjustedFont = applyFontDiff(m_settings->fixed(), font, fontDiffFlags);
-        if (QFontInfo(adjustedFont).fixedPitch()) {
+        if (QFontInfo(adjustedFont).fixedPitch() && !m_settings->isImmutable("fixed")) {
             m_settings->setFixed(adjustedFont);
         }
     }

@@ -55,6 +55,12 @@ KCM.SimpleKCM {
                 text: i18n("&Adjust All Fonts...")
 
                 onClicked: kcm.adjustAllFonts();
+                enabled: !kcm.fontsSettings.isImmutable("font")
+                        || !kcm.fontsSettings.isImmutable("fixed")
+                        || !kcm.fontsSettings.isImmutable("smallestReadableFont")
+                        || !kcm.fontsSettings.isImmutable("toolBarFont")
+                        || !kcm.fontsSettings.isImmutable("menuFont")
+                        || !kcm.fontsSettings.isImmutable("activeFont")
             }
 
             FontWidget {
@@ -62,31 +68,37 @@ KCM.SimpleKCM {
                 label: i18n("General:")
                 category: "font"
                 font: kcm.fontsSettings.font
+                enabled: !kcm.fontsSettings.isImmutable("font")
             }
             FontWidget {
                 label: i18n("Fixed width:")
                 category: "fixed"
                 font: kcm.fontsSettings.fixed
+                enabled: !kcm.fontsSettings.isImmutable("fixed")
             }
             FontWidget {
                 label: i18n("Small:")
                 category: "smallestReadableFont"
                 font: kcm.fontsSettings.smallestReadableFont
+                enabled: !kcm.fontsSettings.isImmutable("smallestReadableFont")
             }
             FontWidget {
                 label: i18n("Toolbar:")
                 category: "toolBarFont"
                 font: kcm.fontsSettings.toolBarFont
+                enabled: !kcm.fontsSettings.isImmutable("toolBarFont")
             }
             FontWidget {
                 label: i18n("Menu:")
                 category: "menuFont"
                 font: kcm.fontsSettings.menuFont
+                enabled: !kcm.fontsSettings.isImmutable("menuFont")
             }
             FontWidget {
                 label: i18n("Window title:")
                 category: "activeFont"
                 font: kcm.fontsSettings.activeFont
+                enabled: !kcm.fontsSettings.isImmutable("activeFont")
             }
 
             Kirigami.Separator {
