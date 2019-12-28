@@ -162,7 +162,6 @@ public:
 
                 const QString emoji = QString::fromUtf8(ibus_emoji_data_get_emoji(data));
                 const QString description = ibus_emoji_data_get_description(data);
-                qDebug() << "ooo" << dictPath << emoji << description << processedEmoji.contains(emoji);
                 if (description == QString::fromUtf8("↑↑↑") || description.isEmpty() || processedEmoji.contains(emoji)) {
                     continue;
                 }
