@@ -61,6 +61,24 @@ Kirigami.ApplicationWindow
             window.pageStack.replace("qrc:/ui/CategoryPage.qml", {title: text, category: "", model: recentEmojiModel})
         }
     }
+    Kirigami.Action {
+        id: searchAction
+        checked: window.pageStack.get(0).title === text
+        text: i18n("Search")
+        icon.name: "search"
+        shortcut: StandardKey.Find
+
+        onTriggered: {
+            window.pageStack.replace("qrc:/ui/CategoryPage.qml", {title: text, category: "", model: emoji, showSearch: true })
+        }
+    }
+
+    CategoryAction {
+        id: allAction
+        text: i18n("All")
+        icon.name: "view-list-icons"
+        category: ""
+    }
 
     globalDrawer: Kirigami.GlobalDrawer {
         id: drawer
@@ -74,7 +92,8 @@ Kirigami.ApplicationWindow
             for(var i in categories) {
                 var cat = categories[i]
                 actions.push(cat === ":recent:" ? recentAction :
-                             cat.length === 0   ? categoryActionComponent.createObject(drawer, { category: cat, text: i18n("All"), "icon.name": "view-list-icons" })
+                             cat === ":find:"   ? searchAction :
+                             cat.length === 0   ? allAction
                                                 : categoryActionComponent.createObject(drawer, { category: cat }))
             }
             return actions;
@@ -84,16 +103,7 @@ Kirigami.ApplicationWindow
 
         Component {
             id: categoryActionComponent
-            Kirigami.Action {
-                property string category
-                checked: window.pageStack.get(0).title === text
-                text: category
-
-                icon.name: "image://text/" + emoji.findFirstEmojiForCategory(category)
-                onTriggered: {
-                    window.pageStack.replace("qrc:/ui/CategoryPage.qml", {title: text, category: category, model: emoji })
-                }
-            }
+            CategoryAction {}
         }
     }
 }

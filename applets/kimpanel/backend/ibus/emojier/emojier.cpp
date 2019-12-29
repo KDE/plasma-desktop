@@ -121,6 +121,8 @@ protected:
     QVector<Emoji> m_emoji;
 };
 
+#include <QElapsedTimer>
+
 class EmojiModel : public AbstractEmojiModel
 {
     Q_OBJECT
@@ -129,6 +131,8 @@ public:
     enum EmojiRole { CategoryRole = Qt::UserRole + 1 };
 
     EmojiModel() {
+        QElapsedTimer time;
+        time.start();
         QLocale locale;
         const auto bcp = locale.bcp47Name();
         const QString dictName = "ibus/dicts/emoji-" + QString(bcp).replace(QLatin1Char('-'), QLatin1Char('_')) + ".dict";
@@ -178,6 +182,7 @@ public:
         m_categories = categories.values();
         m_categories.sort();
         m_categories.prepend({});
+        m_categories.prepend(QStringLiteral(":find:"));
         m_categories.prepend(QStringLiteral(":recent:"));
     }
 

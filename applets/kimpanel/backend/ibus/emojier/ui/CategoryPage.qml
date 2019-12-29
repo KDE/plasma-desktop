@@ -29,17 +29,9 @@ Kirigami.ScrollablePage
     id: view
     property alias model: emojiModel.sourceModel
     property alias category: filter.category
+    property bool showSearch: false
     leftPadding: 0
     rightPadding: 0
-
-    actions.main: Kirigami.Action {
-        icon.name: "search"
-        tooltip: i18n("Search...")
-        shortcut: StandardKey.Find
-        onTriggered: {
-            checked = !checked
-        }
-    }
 
     titleDelegate: RowLayout {
         Layout.fillWidth: true
@@ -53,6 +45,7 @@ Kirigami.ScrollablePage
             id: searchField
             Layout.fillWidth: true
             placeholderText: i18n("Search...")
+            visible: view.showSearch
             onTextChanged: {
                 emojiModel.search = text
                 if (emojiView.currentIndex < 0) {
@@ -63,11 +56,9 @@ Kirigami.ScrollablePage
                 if (emojiView.currentItem)
                     emojiView.currentItem.reportEmoji()
             }
-            visible: view.actions.main.checked
-            onVisibleChanged: if (visible) forceActiveFocus()
+            Component.onCompleted: if (visible) Qt.callLater(forceActiveFocus)
             Keys.onEscapePressed: {
-                text = ""
-                view.actions.main.checked = false
+                selectAll()
             }
         }
     }
