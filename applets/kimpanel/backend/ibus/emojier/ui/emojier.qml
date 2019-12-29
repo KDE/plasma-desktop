@@ -73,7 +73,8 @@ Kirigami.ApplicationWindow
             var actions = []
             for(var i in categories) {
                 var cat = categories[i]
-                actions.push(cat === ":recent:" ? recentAction
+                actions.push(cat === ":recent:" ? recentAction :
+                             cat.length === 0   ? categoryActionComponent.createObject(drawer, { category: cat, text: i18n("All"), "icon.name": "view-list-icons" })
                                                 : categoryActionComponent.createObject(drawer, { category: cat }))
             }
             return actions;
@@ -86,11 +87,9 @@ Kirigami.ApplicationWindow
             Kirigami.Action {
                 property string category
                 checked: window.pageStack.get(0).title === text
-                text: category.length === 0 ? i18n("All")
-                        : category;
+                text: category
 
-                icon.name: category.length === 0 ? "view-list-icons"
-                         : "image://text/" + emoji.findFirstEmojiForCategory(category)
+                icon.name: "image://text/" + emoji.findFirstEmojiForCategory(category)
                 onTriggered: {
                     window.pageStack.replace("qrc:/ui/CategoryPage.qml", {title: text, category: category, model: emoji })
                 }
