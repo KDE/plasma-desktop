@@ -50,6 +50,18 @@ Kirigami.ApplicationWindow
             globalDrawer.actions[recentEmojiModel.count === 0 ? 1 : 0].trigger()
     }
 
+    Kirigami.Action {
+        id: recentAction
+        checked: window.pageStack.get(0).title === text
+        text: i18n("Recent")
+        enabled: recentEmojiModel.count > 0
+
+        icon.name: "document-open-recent-symbolic"
+        onTriggered: {
+            window.pageStack.replace("qrc:/ui/CategoryPage.qml", {title: text, category: "", model: recentEmojiModel})
+        }
+    }
+
     globalDrawer: Kirigami.GlobalDrawer {
         id: drawer
         title: i18n("Categories")
@@ -60,9 +72,9 @@ Kirigami.ApplicationWindow
         function createCategoryActions(categories) {
             var actions = []
             for(var i in categories) {
-                var cat = categories[i];
-                var catAction = categoryActionComponent.createObject(drawer, { category: cat });
-                actions.push(catAction)
+                var cat = categories[i]
+                actions.push(cat === ":recent:" ? recentAction
+                                                : categoryActionComponent.createObject(drawer, { category: cat }))
             }
             return actions;
         }
@@ -72,19 +84,15 @@ Kirigami.ApplicationWindow
         Component {
             id: categoryActionComponent
             Kirigami.Action {
-                readonly property bool isRecent: category === ":recent:"
                 property string category
                 checked: window.pageStack.get(0).title === text
                 text: category.length === 0 ? i18n("All")
-                        : isRecent          ? i18n("Recent")
                         : category;
-                enabled: !isRecent || recentEmojiModel.count > 0
 
-                icon.name: isRecent ? "document-open-recent-symbolic"
-                         : category.length === 0 ? "view-list-icons"
+                icon.name: category.length === 0 ? "view-list-icons"
                          : "image://text/" + emoji.findFirstEmojiForCategory(category)
                 onTriggered: {
-                    window.pageStack.replace("qrc:/ui/CategoryPage.qml", {title: text, category: isRecent ? "" : category, model: isRecent ? recentEmojiModel : emoji })
+                    window.pageStack.replace("qrc:/ui/CategoryPage.qml", {title: text, category: category, model: emoji })
                 }
             }
         }
