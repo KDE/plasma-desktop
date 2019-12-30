@@ -45,7 +45,6 @@
 #include <KPluginFactory>
 #include <KFontDialog>
 #include <KWindowSystem>
-#include <KMessageBox>
 
 #include "../krdb/krdb.h"
 #include "previewimageprovider.h"
