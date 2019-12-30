@@ -15,6 +15,7 @@ set(kcm_componentchooser_SRCS
   componentchooserterminal.cpp
   kcm_componentchooser.cpp
 )
+kconfig_add_kcfg_files(kcm_componentchooser_SRCS browser_settings.kcfgc GENERATE_MOC)
 
 ki18n_wrap_ui(kcm_componentchooser_SRCS
   browserconfig_ui.ui
@@ -46,4 +47,5 @@ install(TARGETS kcm_componentchooser  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 ########### install files ###############
 
 install( FILES componentchooser.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+install(FILES browser_settings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 

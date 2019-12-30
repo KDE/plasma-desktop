@@ -37,7 +37,7 @@ KCMComponentChooser::KCMComponentChooser(QWidget *parent, const QVariantList &):
 	m_chooser=new ComponentChooser(this);
 	lay->addWidget(m_chooser);
 	connect(m_chooser,SIGNAL(changed(bool)),this,SIGNAL(changed(bool)));
-	setButtons( Default|Apply|Help );
+	connect(m_chooser, &ComponentChooser::defaulted, this, &KCModule::defaulted);
 
 	KAboutData *about =
     new KAboutData( QStringLiteral("kcmcomponentchooser"), i18n("Component Chooser"), QStringLiteral("1.0"),

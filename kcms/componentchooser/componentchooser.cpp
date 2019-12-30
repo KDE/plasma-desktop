@@ -109,6 +109,11 @@ void CfgComponent::defaults()
     //todo
 }
 
+bool CfgComponent::isDefaults() const
+{
+	return false;
+}
+
 //END  General kpart based Component selection
 
 
@@ -196,8 +201,10 @@ void ComponentChooser::slotServiceSelected(QListWidgetItem* it) {
 
 	configWidget = configWidgetMap.value(service);
 	if (configWidget) {
-		configContainer->setCurrentWidget(configWidget);
-		dynamic_cast<CfgPlugin*>(configWidget)->load(&cfg);
+        configContainer->setCurrentWidget(configWidget);
+        const auto plugin = dynamic_cast<CfgPlugin*>(configWidget);
+        plugin->load(&cfg);
+        emit defaulted(plugin->isDefaults());
 	}
 
 	emitChanged(false);
@@ -208,6 +215,9 @@ void ComponentChooser::slotServiceSelected(QListWidgetItem* it) {
 void ComponentChooser::emitChanged(bool val) {
 	somethingChanged=val;
 	emit changed(val);
+
+	CfgPlugin *plugin = dynamic_cast<CfgPlugin *>( configWidget );
+	emit defaulted(plugin->isDefaults());
 }
 
 

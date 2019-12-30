@@ -57,6 +57,11 @@ void CfgTerminalEmulator::defaults()
 	load(nullptr);
 }
 
+bool CfgTerminalEmulator::isDefaults() const
+{
+	return false;
+}
+
 
 void CfgTerminalEmulator::load(KConfig *) {
         KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "General");

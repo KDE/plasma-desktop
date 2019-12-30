@@ -30,6 +30,7 @@ public:
 	void load(KConfig *cfg) override;
 	void save(KConfig *cfg) override;
 	void defaults() override;
+	bool isDefaults() const override;
 
 protected Q_SLOTS:
 	void selectTerminalApp();

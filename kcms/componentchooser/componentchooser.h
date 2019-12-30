@@ -39,6 +39,7 @@ public:
 	virtual void load(KConfig *cfg)=0;
 	virtual void save(KConfig *cfg)=0;
 	virtual void defaults()=0;
+	virtual bool isDefaults() const=0;
 };
 
 class CfgComponent: public QWidget, public Ui::ComponentConfig_UI, public CfgPlugin
@@ -50,6 +51,7 @@ public:
 	void load(KConfig *cfg) override;
 	void save(KConfig *cfg) override;
 	void defaults() override;
+	bool isDefaults() const override;
 
 protected:
 	QHash<QString, QString>  m_lookupDict,m_revLookupDict;
@@ -58,6 +60,7 @@ protected Q_SLOTS:
 	void slotComponentChanged(const QString&);
 Q_SIGNALS:
 	void changed(bool);
+	void defaulted(bool);
 };
 
 class ComponentChooser : public QWidget, public Ui::ComponentChooser_UI
@@ -87,6 +90,7 @@ protected Q_SLOTS:
 
 Q_SIGNALS:
 	void changed(bool);
+	void defaulted(bool);
 
 };
 

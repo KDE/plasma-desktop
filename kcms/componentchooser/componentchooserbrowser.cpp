@@ -15,7 +15,7 @@
 
 #include "componentchooserbrowser.h"
 #include <kopenwithdialog.h>
-#include <kconfiggroup.h>
+#include "browser_settings.h"
 
 #include <KBuildSycocaProgressDialog>
 #include <KLocalizedString>
@@ -52,18 +52,38 @@ void CfgBrowser::selectBrowserApp()
 
 void CfgBrowser::configChanged()
 {
-    emit changed(true);
+    bool hasChanged = false;
+    const BrowserSettings settings;
+    const QString exec = settings.browserApplication();
+
+    if (exec.isEmpty()) {
+        hasChanged |= !radioKIO->isChecked();
+    } else {
+        if (exec.startsWith('!')) {
+            hasChanged |= lineExec->text() != exec;
+        } else {
+            hasChanged |= KService::serviceByStorageId(lineExec->text()) != KService::serviceByStorageId( exec );
+        }
+    }
+
+    emit changed(hasChanged);
 }
 
 void CfgBrowser::defaults()
 {
-    load(nullptr);
+    emit changed(!radioKIO->isChecked());
+    radioKIO->setChecked(true);
+}
+
+bool CfgBrowser::isDefaults() const
+{
+    return radioKIO->isChecked();
 }
 
 void CfgBrowser::load(KConfig *) 
 {
-    const KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("General") );
-    const QString exec = config.readPathEntry( QStringLiteral("BrowserApplication"), QString() );
+    const BrowserSettings settings;
+    const QString exec = settings.browserApplication();
     if (exec.isEmpty()) {
         radioKIO->setChecked(true);
         m_browserExec = exec;
@@ -87,8 +107,9 @@ void CfgBrowser::load(KConfig *)
 
     browserCombo->clear();
 
-    const auto &browsers = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
-                                                             QStringLiteral("'WebBrowser' in Categories"));
+    const auto constraint = QStringLiteral("'WebBrowser' in Categories and"
+                                      " ('x-scheme-handler/http' in ServiceTypes or 'x-scheme-handler/https' in ServiceTypes)");
+    const auto browsers = KServiceTypeTrader::self()->query(QStringLiteral("Application"), constraint);
     for (const auto &service : browsers) {
         browserCombo->addItem(QIcon::fromTheme(service->icon()), service->name(), service->storageId());
 
@@ -103,8 +124,7 @@ void CfgBrowser::load(KConfig *)
 
 void CfgBrowser::save(KConfig *)
 {
-    KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
-    KConfigGroup config(profile, QStringLiteral("General"));
+    BrowserSettings settings;
     QString exec;
     if (radioService->isChecked()) {
         if (m_browserService) {
@@ -118,8 +138,8 @@ void CfgBrowser::save(KConfig *)
             exec = '!' + exec; // Literal command
         }
     }
-    config.writePathEntry( QStringLiteral("BrowserApplication"), exec); // KConfig::Normal|KConfig::Global
-    config.sync();
+    settings.setBrowserApplication(exec);
+    settings.save();
 
     // Save the default browser as scheme handler for http(s) in mimeapps.list
     KSharedConfig::Ptr mimeAppList = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);

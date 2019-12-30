@@ -60,6 +60,11 @@ void CfgEmailClient::defaults()
     load(nullptr);
 }
 
+bool CfgEmailClient::isDefaults() const
+{
+	return false;
+}
+
 void CfgEmailClient::load(KConfig *)
 {
     QString emailClient = pSettings->getSetting(KEMailSettings::ClientProgram);

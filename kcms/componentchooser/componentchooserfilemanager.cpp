@@ -50,6 +50,11 @@ void CfgFileManager::defaults()
     load(nullptr);
 }
 
+bool CfgFileManager::isDefaults() const
+{
+	return false;
+}
+
 static KService::List appOffers()
 {
     return KMimeTypeTrader::self()->query(QStringLiteral("inode/directory"), QStringLiteral("Application"));
