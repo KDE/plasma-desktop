@@ -61,12 +61,6 @@ public:
         , viewBlacklistedApplications(nullptr)
     {
     }
-
-    ~Private()
-    {
-        mainConfig->deleteLater();
-        pluginConfig->deleteLater();
-    }
 };
 
 PrivacyTab::PrivacyTab(QWidget *parent)
