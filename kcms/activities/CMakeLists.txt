@@ -51,6 +51,9 @@ qt5_add_dbus_interface (
    features_interface
    )
 
+kconfig_add_kcfg_files(KAMD_KCM_SRCS kactivitymanagerd_settings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(KAMD_KCM_SRCS kactivitymanagerd_plugins_settings.kcfgc GENERATE_MOC)
+
 add_library (kcm_activities MODULE ${KAMD_KCM_SRCS})
 
 target_link_libraries (kcm_activities
@@ -87,3 +90,5 @@ install (
    DESTINATION ${KAMD_KCM_DATADIR}/qml
    )
 
+install(FILES kactivitymanagerd_settings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
+install(FILES kactivitymanagerd_plugins_settings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})

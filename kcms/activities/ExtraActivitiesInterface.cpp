@@ -31,7 +31,6 @@
 
 #include "utils/dbusfuture_p.h"
 #include "features_interface.h"
-#include "definitions.h"
 #include "common/dbus/common.h"
 
 #define ENABLE_QJSVALUE_CONTINUATION
