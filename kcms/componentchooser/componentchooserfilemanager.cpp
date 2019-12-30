@@ -52,7 +52,11 @@ void CfgFileManager::defaults()
 
 bool CfgFileManager::isDefaults() const
 {
-	return false;
+    if (!mDynamicRadioButtons.isEmpty()) {
+        return !mDynamicRadioButtons.first()->isChecked();
+    } else {
+        return false;
+    }
 }
 
 static KService::List appOffers()
@@ -61,13 +65,12 @@ static KService::List appOffers()
 }
 
 void CfgFileManager::load(KConfig *) {
-    qDeleteAll(mDynamicWidgets);
-    mDynamicWidgets.clear();
+    qDeleteAll(mDynamicRadioButtons);
+    mDynamicRadioButtons.clear();
     const KService::List apps = appOffers();
     bool first = true;
-    Q_FOREACH(const KService::Ptr& service, apps)
-    {
-        QRadioButton* button = new QRadioButton(service->name(), this);
+    for (const KService::Ptr &service : apps) {
+        QRadioButton *button = new QRadioButton(service->name(), this);
         connect(button, &QRadioButton::toggled, this, &CfgFileManager::configChanged);
         button->setProperty("storageId", service->storageId());
         radioLayout->addWidget(button);
@@ -75,7 +78,7 @@ void CfgFileManager::load(KConfig *) {
             button->setChecked(true);
             first = false;
         }
-        mDynamicWidgets << button;
+        mDynamicRadioButtons << button;
     }
 
     emit changed(false);
@@ -83,18 +86,16 @@ void CfgFileManager::load(KConfig *) {
 
 static const char s_DefaultApplications[] = "Default Applications";
 static const char s_AddedAssociations[] = "Added Associations";
-static const char s_RemovedAssociations[] = "Removed Associations";
 
 void CfgFileManager::save(KConfig *)
 {
     QString storageId;
-    Q_FOREACH(QRadioButton* button, qFindChildren<QRadioButton*>(this)) {
+    for (QRadioButton *button : qAsConst(mDynamicRadioButtons)) {
         if (button->isChecked()) {
             storageId = button->property("storageId").toString();
         }
     }
 
-    qDebug() << storageId;
     if (!storageId.isEmpty()) {
         // This is taken from filetypes/mimetypedata.cpp
         KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
@@ -111,24 +112,7 @@ void CfgFileManager::save(KConfig *)
         KConfigGroup defaultApp(profile, s_DefaultApplications);
         defaultApp.writeXdgListEntry(mime, QStringList(storageId));
 
-        Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("Added Associations"), QStringLiteral("mimeapps.list"));
-
         profile->sync();
-
-        // Clean out any kde-mimeapps.list which would take precedence any cancel our changes.
-        // (also taken from filetypes/mimetypedata.cpp)
-        const QString desktops = QString::fromLocal8Bit(qgetenv("XDG_CURRENT_DESKTOP"));
-        foreach (const QString &desktop, desktops.split(":", QString::SkipEmptyParts)) {
-            const QString file = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation)
-                + QLatin1Char('/') + desktop.toLower() + QLatin1String("-mimeapps.list");
-            if (QFileInfo::exists(file)) {
-                qDebug() << "Cleaning up" << file;
-                KConfig conf(file, KConfig::NoGlobals);
-                KConfigGroup(&conf, s_DefaultApplications).deleteEntry(mime);
-                KConfigGroup(&conf, s_AddedAssociations).deleteEntry(mime);
-                KConfigGroup(&conf, s_RemovedAssociations).deleteEntry(mime);
-            }
-        }
 
         KBuildSycocaProgressDialog::rebuildKSycoca(this);
     }

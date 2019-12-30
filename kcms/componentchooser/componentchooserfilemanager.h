@@ -43,7 +43,7 @@ Q_SIGNALS:
     void changed(bool);
 
 private:
-    QList<QObject *> mDynamicWidgets;
+    QList<QRadioButton *> mDynamicRadioButtons;
 };
 
 #endif
