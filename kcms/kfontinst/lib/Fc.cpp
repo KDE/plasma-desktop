@@ -24,7 +24,7 @@
 #include "Fc.h"
 #include <QTextStream>
 #include <QHash>
-
+#include <QUrlQuery>
 //
 // KDE font chooser always seems to use Italic - for both Oblique, and Italic. So I guess
 // the fonts:/ should do too - so as to appear more unified.
