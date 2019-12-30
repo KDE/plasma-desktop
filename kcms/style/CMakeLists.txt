@@ -3,7 +3,15 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_style\")
 
 ########### next target ###############
 
-set(kcm_style_PART_SRCS ../krdb/krdb.cpp styleconfdialog.cpp kcmstyle.cpp stylesmodel.cpp previewitem.cpp)
+set(kcm_style_PART_SRCS
+    ../krdb/krdb.cpp
+    styleconfdialog.cpp
+    kcmstyle.cpp
+    stylesmodel.cpp
+    gtkthemesmodel.cpp
+    gtkpage.cpp
+    previewitem.cpp
+)
 set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)
 qt5_add_dbus_interface(kcm_style_PART_SRCS ${klauncher_xml} klauncher_iface)
 
@@ -26,11 +34,14 @@ target_link_libraries(kcm_style
     KF5::GuiAddons
     KF5::QuickAddons
     KF5::WindowSystem
+    KF5::Archive
+    KF5::NewStuff
 )
 
 kcoreaddons_desktop_to_json(kcm_style "kcm_style.desktop")
 
 install(FILES stylesettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
+install(FILES cgctheme.knsrc cgcgtk3.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 install(FILES kcm_style.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(TARGETS kcm_style DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 

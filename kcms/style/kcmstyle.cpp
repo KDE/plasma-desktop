@@ -37,6 +37,7 @@
 #include <KPluginFactory>
 #include <KPluginLoader>
 
+#include <QDBusReply>
 #include <QLibrary>
 #include <QMetaEnum>
 #include <QQuickItem>
@@ -55,6 +56,7 @@
 #include "stylesmodel.h"
 #include "previewitem.h"
 #include "stylesettings.h"
+#include "gtkpage.h"
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcm_style.json", registerPlugin<KCMStyle>();)
 
@@ -79,6 +81,7 @@ KCMStyle::KCMStyle(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
     , m_settings(new StyleSettings(this))
     , m_model(new StylesModel(this))
+    , m_gtkPage()
 {
     qmlRegisterUncreatableType<KCMStyle>("org.kde.private.kcms.style", 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
     qmlRegisterType<StyleSettings>();
@@ -95,6 +98,12 @@ KCMStyle::KCMStyle(QObject *parent, const QVariantList &args)
     about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@broulik.de"));
     setAboutData(about);
 
+    if (gtkConfigKdedModuleLoaded()) {
+        m_gtkPage = new GtkPage(this);
+        connect(m_gtkPage, &GtkPage::gtkThemeSettingsChanged, this, [this](){
+            setNeedsSave(true);
+        });
+    }
     connect(m_model, &StylesModel::selectedStyleChanged, this, [this](const QString &style) {
         m_settings->setWidgetStyle(style);
     });
@@ -229,8 +238,23 @@ void KCMStyle::configure(const QString &styleName, QQuickItem *ctx)
     m_styleConfigDialog->show();
 }
 
+bool KCMStyle::gtkConfigKdedModuleLoaded()
+{
+    QDBusInterface kdedInterface(
+        QStringLiteral("org.kde.kded5"),
+        QStringLiteral("/kded"),
+        QStringLiteral("org.kde.kded5")
+    );
+    QDBusReply<QStringList> loadedKdedModules = kdedInterface.call(QStringLiteral("loadedModules"));
+    return loadedKdedModules.value().contains(QStringLiteral("gtkconfig"));
+}
+
 void KCMStyle::load()
 {
+    if (m_gtkPage) {
+        m_gtkPage->load();
+    }
+
     ManagedConfigModule::load();
     m_model->load();
     m_previousStyle = m_settings->widgetStyle();
@@ -242,6 +266,10 @@ void KCMStyle::load()
 
 void KCMStyle::save()
 {
+    if (m_gtkPage) {
+        m_gtkPage->save();
+    }
+
     // Check whether the new style can actually be loaded before saving it.
     // Otherwise apps will use the default style despite something else having been written to the config
     bool newStyleLoaded = false;
@@ -290,6 +318,10 @@ void KCMStyle::save()
 
 void KCMStyle::defaults()
 {
+    if (m_gtkPage) {
+        m_gtkPage->defaults();
+    }
+
     // TODO the old code had a fallback chain but do we actually support not having Breeze for Plasma?
     // defaultStyle() -> oxygen -> plastique -> windows -> platinum -> motif
 

@@ -1,0 +1,71 @@
+/*
+ * Copyright 2020 Mikhail Zolotukhin <zomial@protonmail.com>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License or (at your option) version 3 or any later version
+ * accepted by the membership of KDE e.V. (or its successor approved
+ * by the membership of KDE e.V.), which shall act as a proxy
+ * defined in Section 14 of version 3 of the license.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#pragma once
+
+#include <QObject>
+#include <QDBusInterface>
+
+#include "gtkthemesmodel.h"
+
+class GtkPage : public QObject
+{
+    Q_OBJECT
+
+    Q_PROPERTY(GtkThemesModel *gtk2ThemesModel MEMBER m_gtk2ThemesModel NOTIFY gtk2ThemesModelChanged)
+    Q_PROPERTY(GtkThemesModel *gtk3ThemesModel MEMBER m_gtk3ThemesModel NOTIFY gtk3ThemesModelChanged)
+
+public:
+    GtkPage(QObject *parent = nullptr);
+    ~GtkPage() override;
+
+    void load();
+    void save();
+    void defaults();
+
+public Q_SLOTS:
+    QString gtk2ThemeFromConfig();
+    QString gtk3ThemeFromConfig();
+
+    void showGtk2Preview();
+    void showGtk3Preview();
+
+    void installGtkThemeFromFile(const QUrl &fileUrl);
+    void installGtk2ThemeFromGHNS();
+    void installGtk3ThemeFromGHNS();
+
+    void onThemeRemoved();
+
+Q_SIGNALS:
+    void gtk2ThemesModelChanged(GtkThemesModel *model);
+    void gtk3ThemesModelChanged(GtkThemesModel *model);
+
+    void showErrorMessage(const QString &message);
+    void selectGtk2ThemeInCombobox(const QString &themeName);
+    void selectGtk3ThemeInCombobox(const QString &themeName);
+
+    void gtkThemeSettingsChanged();
+
+private:
+    GtkThemesModel *m_gtk2ThemesModel;
+    GtkThemesModel *m_gtk3ThemesModel;
+
+    QDBusInterface gtkConfigInterface;
+};

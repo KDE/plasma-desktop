@@ -35,6 +35,10 @@ KCM.GridViewKCM {
 
     view.enabled: !kcm.styleSettings.isImmutable("widgetStyle")
 
+    function openGtkStyleSettings() {
+        kcm.push("GtkStylePage.qml");
+    }
+
     Component.onCompleted: {
         // The widget thumbnails are a bit more elaborate and need more room, especially when translated
         view.implicitCellWidth = Kirigami.Units.gridUnit * 20;
@@ -111,18 +115,28 @@ KCM.GridViewKCM {
         }
     }
 
-    footer: RowLayout {
-        Layout.fillWidth: true
+    footer: ColumnLayout {
+        RowLayout {
+            Layout.alignment: Qt.AlignLeft
 
-        QtControls.Button {
-            id: effectSettingsButton
-            text: i18n("Configure Icons and Toolbars")
-            icon.name: "configure-toolbars" // proper icon?
-            checkable: true
-            checked: effectSettingsPopupLoader.item && effectSettingsPopupLoader.item.opened
-            onClicked: {
-                effectSettingsPopupLoader.active = true;
-                effectSettingsPopupLoader.item.open();
+            QtControls.Button {
+                id: effectSettingsButton
+                text: i18n("Configure Icons and Toolbars")
+                icon.name: "configure-toolbars" // proper icon?
+                checkable: true
+                checked: effectSettingsPopupLoader.item && effectSettingsPopupLoader.item.opened
+                onClicked: {
+                    effectSettingsPopupLoader.active = true;
+                    effectSettingsPopupLoader.item.open();
+                }
+            }
+
+            QtControls.Button {
+                id: gtkSettingsButton
+                visible: kcm.gtkConfigKdedModuleLoaded()
+                text: i18n("Configure GNOME/GTK Application Style...")
+                icon.name: "configure"
+                onClicked: root.openGtkStyleSettings()
             }
         }
     }

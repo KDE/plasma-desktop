@@ -34,6 +34,8 @@
 
 #include <KQuickAddons/ManagedConfigModule>
 
+#include "gtkpage.h"
+
 class QQuickItem;
 
 class StyleSettings;
@@ -44,6 +46,7 @@ class KCMStyle : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
 
+    Q_PROPERTY(GtkPage *gtkPage MEMBER m_gtkPage CONSTANT)
     Q_PROPERTY(StylesModel *model READ model CONSTANT)
     Q_PROPERTY(StyleSettings *styleSettings READ styleSettings CONSTANT)
     Q_PROPERTY(ToolBarStyle mainToolBarStyle READ mainToolBarStyle WRITE setMainToolBarStyle NOTIFY mainToolBarStyleChanged)
@@ -74,6 +77,7 @@ public:
     Q_SIGNAL void otherToolBarStyleChanged();
 
     Q_INVOKABLE void configure(const QString &styleName, QQuickItem *ctx = nullptr);
+    Q_INVOKABLE bool gtkConfigKdedModuleLoaded();
 
     void load() override;
     void save() override;
@@ -96,6 +100,7 @@ private:
     ToolBarStyle m_otherToolBarStyle = NoText;
 
     QPointer<StyleConfigDialog> m_styleConfigDialog;
+    GtkPage *m_gtkPage;
 };
 
 #endif // __KCMSTYLE_H
