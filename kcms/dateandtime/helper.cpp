@@ -227,7 +227,7 @@ int ClockHelper::tzreset()
 
 void ClockHelper::toHwclock()
 {
-    QString hwclock = KStandardDirs::findExe(QStringLiteral("hwclock"), exePath);
+    QString hwclock = QStandardPaths::findExecutable(QStringLiteral("hwclock"), exePath.split(QLatin1Char(':')));
     if (!hwclock.isEmpty()) {
         KProcess::execute(hwclock, QStringList() << QStringLiteral("--systohc"));
     }

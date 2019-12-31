@@ -43,7 +43,6 @@
 #include <QVBoxLayout>
 #include <QDebug>
 #include <kprocess.h>
-#include <kstandarddirs.h>
 #include <kmessagebox.h>
 #include <kdialog.h>
 #include <kconfig.h>
@@ -154,15 +153,17 @@ void Dtime::findNTPutility(){
     envpath.remove(0, 1);
   }
 
-  QString path = QStringLiteral("/sbin:/usr/sbin:");
+  QStringList path = {"/sbin", "/usr/sbin"};
   if (!envpath.isEmpty()) {
-    path += QFile::decodeName(envpath);
+    path += QFile::decodeName(envpath).split(QLatin1Char(':'));
   } else {
-    path += QLatin1String("/bin:/usr/bin");
+    path += {"/bin", "/usr/bin"};
   }
 
-  foreach(const QString &possible_ntputility, QStringList() << "ntpdate" << "rdate" ) {
-    if( !((ntpUtility = KStandardDirs::findExe(possible_ntputility, path)).isEmpty()) ) {
+  const auto possible_ntputilities = {"ntpdate", "rdate"};
+  for (const QString &possible_ntputility : possible_ntputilities) {
+    auto ntpUtility = QStandardPaths::findExecutable(possible_ntputility, path);
+    if (!ntpUtility.isEmpty()) {
       qDebug() << "ntpUtility = " << ntpUtility;
       return;
     }
