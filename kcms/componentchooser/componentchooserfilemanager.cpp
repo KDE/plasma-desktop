@@ -53,7 +53,7 @@ void CfgFileManager::defaults()
 bool CfgFileManager::isDefaults() const
 {
     if (!mDynamicRadioButtons.isEmpty()) {
-        return !mDynamicRadioButtons.first()->isChecked();
+        return !mDynamicRadioButtons.last()->isChecked();
     } else {
         return false;
     }
