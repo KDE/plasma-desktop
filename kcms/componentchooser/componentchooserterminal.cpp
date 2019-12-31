@@ -14,6 +14,7 @@
  ***************************************************************************/
 
 #include "componentchooserterminal.h"
+#include "terminal_settings.h"
 
 #include <ktoolinvocation.h>
 #include <QDBusConnection>
@@ -55,17 +56,19 @@ void CfgTerminalEmulator::configChanged()
 void CfgTerminalEmulator::defaults()
 {
 	load(nullptr);
+	terminalCB->setChecked(true);
 }
 
 bool CfgTerminalEmulator::isDefaults() const
 {
-	return false;
+	return terminalCB->isChecked();
 }
 
 
-void CfgTerminalEmulator::load(KConfig *) {
-        KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "General");
-	QString terminal = config.readPathEntry("TerminalApplication",QStringLiteral("konsole"));
+void CfgTerminalEmulator::load(KConfig *)
+{
+	TerminalSettings settings;
+	QString terminal = settings.terminalApplication();
 	if (terminal == QLatin1String("konsole"))
 	{
 	   terminalLE->setText(QStringLiteral("xterm"));
@@ -82,19 +85,15 @@ void CfgTerminalEmulator::load(KConfig *) {
 
 void CfgTerminalEmulator::save(KConfig *)
 {
-	KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
-	KConfigGroup config(profile, QStringLiteral("General"));
-	const QString terminal = terminalCB->isChecked() ? QStringLiteral("konsole") : terminalLE->text();
-	config.writePathEntry("TerminalApplication", terminal); // KConfig::Normal|KConfig::Global);
+	TerminalSettings settings;
+	settings.setTerminalApplication(terminalCB->isChecked() ? settings.defaultTerminalApplicationValue() : terminalLE->text());
+	settings.save();
 
-	config.sync();
-        Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("General"), "kdeglobals");
-
-        QDBusMessage message  = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
-                                                      QStringLiteral("/KLauncher"),
-                                                      QStringLiteral("org.kde.KLauncher"),
-                                                      QStringLiteral("reparseConfiguration"));
-        QDBusConnection::sessionBus().send(message);
+	QDBusMessage message  = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
+                                                           QStringLiteral("/KLauncher"),
+                                                           QStringLiteral("org.kde.KLauncher"),
+                                                           QStringLiteral("reparseConfiguration"));
+    QDBusConnection::sessionBus().send(message);
 	emit changed(false);
 }
 
