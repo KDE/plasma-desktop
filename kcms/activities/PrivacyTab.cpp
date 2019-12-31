@@ -116,12 +116,6 @@ PrivacyTab::PrivacyTab(QWidget *parent)
     connect(d->radioRememberSpecificApplications, &QAbstractButton::toggled,
             d->blacklistedApplicationsModel, &BlacklistedApplicationsModel::setEnabled);
 
-    connect(d->radioRememberSpecificApplications, &QAbstractButton::toggled,
-            d->viewBlacklistedApplicationsContainer, &QWidget::setEnabled);
-
-    connect(d->radioRememberSpecificApplications, &QAbstractButton::toggled,
-            d->checkBlacklistAllNotOnList, &QWidget::setEnabled);
-
     connect(d->checkBlacklistAllNotOnList, &QAbstractButton::toggled, this, &PrivacyTab::changed);
 
     defaults();
@@ -135,6 +129,13 @@ PrivacyTab::PrivacyTab(QWidget *parent)
 
 PrivacyTab::~PrivacyTab()
 {
+}
+
+bool PrivacyTab::isDefault()
+{
+    return d->radioRememberAllApplications->isChecked() &&
+            d->spinKeepHistory->value() == d->pluginConfig->defaultKeepHistoryForValue() &&
+            d->checkBlacklistAllNotOnList->isChecked() == d->pluginConfig->defaultBlockedByDefaultValue();
 }
 
 void PrivacyTab::defaults()

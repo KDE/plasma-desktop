@@ -39,12 +39,13 @@ public:
     KActivities::Consumer activities;
 
     void createAction(const QString &actionName, const QString &actionText,
-                      const QList<QKeySequence> &sequence)
+                      const QList<QKeySequence> &defaultSequence)
     {
         auto action = mainActionCollection->addAction(actionName);
         action->setProperty("isConfigurationAction", true);
         action->setText(actionText);
-        KGlobalAccel::self()->setShortcut(action, sequence);
+        KGlobalAccel::self()->setShortcut(action, defaultSequence);
+        KGlobalAccel::self()->setDefaultShortcut(action, defaultSequence);
     }
 
     Private()
@@ -84,6 +85,11 @@ SwitchingTab::SwitchingTab(QWidget *parent)
 
 SwitchingTab::~SwitchingTab()
 {
+}
+
+bool SwitchingTab::isDefault()
+{
+    return !d->checkRememberVirtualDesktop->isChecked();
 }
 
 void SwitchingTab::shortcutChanged(const QKeySequence &sequence)

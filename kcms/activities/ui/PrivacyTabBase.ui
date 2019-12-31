@@ -122,5 +122,38 @@
   </customwidget>
  </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>radioRememberSpecificApplications</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>viewBlacklistedApplicationsContainer</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>352</x>
+     <y>167</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>249</x>
+     <y>363</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioRememberSpecificApplications</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>checkBlacklistAllNotOnList</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>352</x>
+     <y>167</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>252</x>
+     <y>481</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

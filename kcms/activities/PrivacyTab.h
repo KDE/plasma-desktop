@@ -34,6 +34,8 @@ public:
     explicit PrivacyTab(QWidget *parent);
     ~PrivacyTab() override;
 
+    bool isDefault();
+
 public Q_SLOTS:
     void defaults();
     void load();

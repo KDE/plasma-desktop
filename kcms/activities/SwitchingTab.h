@@ -36,6 +36,8 @@ public:
     explicit SwitchingTab(QWidget *parent);
     ~SwitchingTab() override;
 
+    bool isDefault();
+
 public Q_SLOTS:
     void defaults();
     void load();

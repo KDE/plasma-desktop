@@ -47,13 +47,24 @@ MainConfigurationWidget::MainConfigurationWidget(QWidget *parent, QVariantList a
     d->tabs->insertTab(1, d->tabSwitching  = new SwitchingTab(d->tabs), i18n("Switching"));
     d->tabs->insertTab(2, d->tabPrivacy    = new PrivacyTab(d->tabs), i18n("Privacy"));
 
-    connect(d->tabActivities, SIGNAL(changed()), this, SLOT(changed()));
-    connect(d->tabSwitching,  SIGNAL(changed()), this, SLOT(changed()));
-    connect(d->tabPrivacy,    SIGNAL(changed()), this, SLOT(changed()));
+    connect(d->tabActivities, &ActivitiesTab::changed, this, &MainConfigurationWidget::onChanged);
+    connect(d->tabSwitching,  &SwitchingTab::changed, this, &MainConfigurationWidget::onChanged);
+    connect(d->tabPrivacy,    &PrivacyTab::changed, this, &MainConfigurationWidget::onChanged);
 }
 
 MainConfigurationWidget::~MainConfigurationWidget()
 {
+}
+
+void MainConfigurationWidget::checkDefault()
+{
+    defaulted(d->tabSwitching->isDefault() && d->tabPrivacy->isDefault());
+}
+
+void MainConfigurationWidget::onChanged()
+{
+    checkDefault();
+    markAsChanged();
 }
 
 void MainConfigurationWidget::defaults()
@@ -68,6 +79,8 @@ void MainConfigurationWidget::load()
     d->tabActivities->load();
     d->tabPrivacy->load();
     d->tabSwitching->load();
+
+    checkDefault();
 }
 
 void MainConfigurationWidget::save()

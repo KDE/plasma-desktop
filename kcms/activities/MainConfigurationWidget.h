@@ -42,6 +42,12 @@ public Q_SLOTS:
     void load() override;
     void save() override;
 
+private Q_SLOTS:
+    void onChanged();
+
+private:
+    void checkDefault();
+
 private:
     D_PTR;
 };
