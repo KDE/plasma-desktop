@@ -62,7 +62,7 @@ void CfgEmailClient::defaults()
 
 bool CfgEmailClient::isDefaults() const
 {
-	return false;
+	return kmailCB->isChecked();
 }
 
 void CfgEmailClient::load(KConfig *)
