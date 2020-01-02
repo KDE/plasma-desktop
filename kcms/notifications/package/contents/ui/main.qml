@@ -81,8 +81,8 @@ KCM.SimpleKCM {
         }
 
         QtControls.CheckBox {
-            Kirigami.FormData.label: i18n("Do not disturb:")
-            text: i18nc("Do not disturb when screens are mirrored", "When screens are mirrored")
+            Kirigami.FormData.label: i18n("Do Not Disturb mode:")
+            text: i18nc("Do not disturb when screens are mirrored", "Enable when screens are mirrored")
             checked: kcm.settings.inhibitNotificationsWhenScreensMirrored
             onClicked: kcm.settings.inhibitNotificationsWhenScreensMirrored = checked
             enabled: root.notificationsAvailable
@@ -108,12 +108,20 @@ KCM.SimpleKCM {
             }
         }
 
+        Kirigami.Separator {
+            Kirigami.FormData.isSection: true
+        }
+
         QtControls.CheckBox {
             Kirigami.FormData.label: i18n("Critical notifications:")
             text: i18n("Always keep on top")
             checked: kcm.settings.keepCriticalAlwaysOnTop
             onClicked: kcm.settings.keepCriticalAlwaysOnTop = checked
             enabled: root.notificationsAvailable
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
         }
 
         QtControls.CheckBox {
@@ -136,10 +144,14 @@ KCM.SimpleKCM {
             buttons: [positionCloseToWidget, positionCustomPosition]
         }
 
+        Kirigami.Separator {
+            Kirigami.FormData.isSection: true
+        }
+
         QtControls.RadioButton {
             id: positionCloseToWidget
-            Kirigami.FormData.label: i18n("Popup position:")
-            text: i18nc("Popup position near notification plasmoid", "Near the notification icon") // "widget"
+            Kirigami.FormData.label: i18n("Popup:")
+            text: i18nc("Popup position near notification plasmoid", "Show near notification icon") // "widget"
             checked: kcm.settings.popupPosition === NotificationManager.Settings.CloseToWidget
             onClicked: kcm.settings.popupPosition = NotificationManager.Settings.CloseToWidget
             enabled: root.notificationsAvailable
@@ -173,23 +185,32 @@ KCM.SimpleKCM {
             text: i18np("%1 second", "%1 seconds", 888)
         }
 
-        QtControls.SpinBox {
-            id: timeoutSpinner
-            Kirigami.FormData.label: i18n("Hide popup after:")
-            Layout.preferredWidth: timeoutSpinnerMetrics.width + leftPadding + rightPadding
-            from: 1000 // 1 second
-            to: 120000 // 2 minutes
-            stepSize: 1000
-            value: kcm.settings.popupTimeout
-            enabled: root.notificationsAvailable
-            editable: true
-            valueFromText: function(text, locale) {
-                return parseInt(text) * 1000;
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        RowLayout {
+            QtControls.Label {
+                text: i18nc("Part of a sentence like, 'Hide popup after n seconds'", "Hide after:")
             }
-            textFromValue: function(value, locale) {
-                return i18np("%1 second", "%1 seconds", Math.round(value / 1000));
+
+            QtControls.SpinBox {
+                id: timeoutSpinner
+                Layout.preferredWidth: timeoutSpinnerMetrics.width + leftPadding + rightPadding
+                from: 1000 // 1 second
+                to: 120000 // 2 minutes
+                stepSize: 1000
+                value: kcm.settings.popupTimeout
+                enabled: root.notificationsAvailable
+                editable: true
+                valueFromText: function(text, locale) {
+                    return parseInt(text) * 1000;
+                }
+                textFromValue: function(value, locale) {
+                    return i18np("%1 second", "%1 seconds", Math.round(value / 1000));
+                }
+                onValueModified: kcm.settings.popupTimeout = value
             }
-            onValueModified: kcm.settings.popupTimeout = value
         }
 
         Kirigami.Separator {
@@ -219,6 +240,10 @@ KCM.SimpleKCM {
                 checked: kcm.settings.permanentJobPopups
                 onClicked: kcm.settings.permanentJobPopups = checked
             }
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
         }
 
         QtControls.CheckBox {
