@@ -33,8 +33,6 @@ set (KAMD_KCM_SRCS
 
    BlacklistedApplicationsModel.cpp
    ExtraActivitiesInterface.cpp
-
-   utils/dbusfuture_p.cpp
    )
 
 ki18n_wrap_ui (

@@ -29,7 +29,6 @@
 #include <memory>
 #include <utils/d_ptr_implementation.h>
 
-#include "utils/dbusfuture_p.h"
 #include "features_interface.h"
 #include "common/dbus/common.h"
 
