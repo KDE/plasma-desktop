@@ -51,7 +51,6 @@
 // KDE
 #include <kconfiggroup.h>
 #include <kfileitem.h>
-#include <kglobalsettings.h> //KDELibs4Support
 #include <kio/copyjob.h>
 #include <kio/deletejob.h>
 #include <kio/job.h>
@@ -237,7 +236,6 @@ void DesktopPathConfig::save()
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
     KConfigGroup configGroup( config, "Paths" );
 
-    bool pathChanged = false;
     bool autostartMoved = false;
 
     QUrl desktopURL(desktopLocation());
@@ -287,7 +285,6 @@ void DesktopPathConfig::save()
             KConfig xdgUserConf( userDirsFile, KConfig::SimpleConfig );
             KConfigGroup g( &xdgUserConf, "" );
             g.writeEntry( "XDG_DESKTOP_DIR", QString("\"" + translatePath( urlDesktop ) + "\"") );
-            pathChanged = true;
         }
     }
 
@@ -298,31 +295,16 @@ void DesktopPathConfig::save()
         if (autostartMoved)
         {
             configGroup.writePathEntry( "Autostart", urAutostart->url().toLocalFile(), KConfigBase::Normal | KConfigBase::Global );
-            pathChanged = true;
         }
     }
 
     config->sync();
 
-    if (xdgSavePath(urDocument, documentsLocation(), "XDG_DOCUMENTS_DIR", i18n("Documents")))
-        pathChanged = true;
-
-    if (xdgSavePath(urDownload, downloadLocation(), "XDG_DOWNLOAD_DIR", i18n("Downloads")))
-        pathChanged = true;
-
-    if (xdgSavePath(urMovie, moviesLocation(), "XDG_VIDEOS_DIR", i18n("Movies")))
-        pathChanged = true;
-
-    if (xdgSavePath(urPicture, picturesLocation(), "XDG_PICTURES_DIR", i18n("Pictures")))
-        pathChanged = true;
-
-    if (xdgSavePath(urMusic, musicLocation(), "XDG_MUSIC_DIR", i18n("Music")))
-        pathChanged = true;
-
-    if (pathChanged) {
-        qCDebug(KCM_DESKTOPPATH) << "sending message SettingsChanged";
-        KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged, KGlobalSettings::SETTINGS_PATHS);
-    }
+    xdgSavePath(urDocument, documentsLocation(), "XDG_DOCUMENTS_DIR", i18n("Documents"));
+    xdgSavePath(urDownload, downloadLocation(), "XDG_DOWNLOAD_DIR", i18n("Downloads"));
+    xdgSavePath(urMovie, moviesLocation(), "XDG_VIDEOS_DIR", i18n("Movies"));
+    xdgSavePath(urPicture, picturesLocation(), "XDG_PICTURES_DIR", i18n("Pictures"));
+    xdgSavePath(urMusic, musicLocation(), "XDG_MUSIC_DIR", i18n("Music"));
 }
 
 bool DesktopPathConfig::xdgSavePath(KUrlRequester* ur, const QUrl& currentUrl, const char* xdgKey, const QString& type)
