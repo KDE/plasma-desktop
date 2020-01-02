@@ -20,15 +20,27 @@
 
 #include "componentchooserfilemanager.h"
 #include <kbuildsycocaprogressdialog.h>
-#include <QDebug>
 #include <kprocess.h>
 #include <kmimetypetrader.h>
 #include <kopenwithdialog.h>
 #include <kconfiggroup.h>
 #include <QStandardPaths>
-#include <QFileInfo>
+#include <KSharedConfig>
 
-#include "../migrationlib/kdelibs4config.h"
+namespace  {
+
+QRadioButton *findDolphinRadio(const QList<QRadioButton *> &radioButtons)
+{
+    auto it = std::find_if(radioButtons.begin(), radioButtons.end(), [=](QRadioButton *radio) {
+        return radio->property("storageId") == QStringLiteral("org.kde.dolphin.desktop");
+    });
+    if (it == radioButtons.end()) {
+        return nullptr;
+    }
+    return *it;
+}
+
+}
 
 CfgFileManager::CfgFileManager(QWidget *parent)
     : QWidget(parent), Ui::FileManagerConfig_UI(),CfgPlugin()
@@ -48,15 +60,18 @@ void CfgFileManager::configChanged()
 void CfgFileManager::defaults()
 {
     load(nullptr);
+
+    const auto radio = ::findDolphinRadio(mDynamicRadioButtons);
+    if (radio) {
+        radio->setChecked(true);
+    }
 }
 
 bool CfgFileManager::isDefaults() const
 {
-    if (!mDynamicRadioButtons.isEmpty()) {
-        return !mDynamicRadioButtons.last()->isChecked();
-    } else {
-        return false;
-    }
+    const auto dolphinRadio = ::findDolphinRadio(mDynamicRadioButtons);
+    // When dolphin is not present, we can't assume any default value
+    return !dolphinRadio || dolphinRadio->isChecked();
 }
 
 static KService::List appOffers()
