@@ -37,6 +37,7 @@
 
 // Own
 #include "globalpaths.h"
+#include "desktoppathssettings.h"
 
 // Qt
 #include <QCheckBox>
@@ -69,43 +70,9 @@ K_PLUGIN_FACTORY(KcmDesktopPathsFactory, registerPlugin<DesktopPathConfig>();)
 
 //-----------------------------------------------------------------------------
 
-static QUrl desktopLocation()
-{
-    return QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation));
-}
-
-static QUrl autostartLocation()
-{
-    return QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/autostart"));
-}
-
-static QUrl documentsLocation()
-{
-    return QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation));
-}
-
-static QUrl downloadLocation()
-{
-    return QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::DownloadLocation));
-}
-
-static QUrl moviesLocation()
-{
-    return QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::MoviesLocation));
-}
-
-static QUrl picturesLocation()
-{
-    return QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::PicturesLocation));
-}
-
-static QUrl musicLocation()
-{
-    return QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::MusicLocation));
-}
-
 DesktopPathConfig::DesktopPathConfig(QWidget *parent, const QVariantList &)
     : KCModule( parent )
+    , m_pathsSettings(new DesktopPathsSettings(this))
 {
   QFormLayout *lay = new QFormLayout(this);
   lay->setVerticalSpacing(0);
@@ -163,84 +130,44 @@ KUrlRequester* DesktopPathConfig::addRow(QFormLayout *lay, const QString& label,
 
 void DesktopPathConfig::load()
 {
+    m_pathsSettings->load();
+
     // Desktop Paths
-    urDesktop->setUrl(desktopLocation());
-    urAutostart->setUrl(autostartLocation());
-    urDocument->setUrl(documentsLocation());
-    urDownload->setUrl(downloadLocation());
-    urMovie->setUrl(moviesLocation());
-    urPicture->setUrl(picturesLocation());
-    urMusic->setUrl(musicLocation());
+    urAutostart->setUrl(m_pathsSettings->autostartLocation());
+
+    urDesktop->setUrl(m_pathsSettings->desktopLocation());
+    urDocument->setUrl(m_pathsSettings->documentsLocation());
+    urDownload->setUrl(m_pathsSettings->downloadsLocation());
+    urMovie->setUrl(m_pathsSettings->videosLocation());
+    urPicture->setUrl(m_pathsSettings->picturesLocation());
+    urMusic->setUrl(m_pathsSettings->musicLocation());
+
     emit changed(false);
 }
 
 void DesktopPathConfig::defaults()
 {
     // Desktop Paths - keep defaults in sync with kglobalsettings.cpp
-    urDesktop->setUrl(QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Desktop")));
-    urAutostart->setUrl(QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/.config/autostart")));
-    urDocument->setUrl(QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Documents")));
-    urDownload->setUrl(QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Downloads")));
-    urMovie->setUrl(QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Movies")));
-    urPicture->setUrl(QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Pictures")));
-    urMusic->setUrl(QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Music")));
-}
+    m_pathsSettings->setDefaults();
+    m_pathsSettings->setDefaults();
 
-// the following method is copied from kdelibs/kdecore/config/kconfiggroup.cpp
-static bool cleanHomeDirPath( QString &path, const QString &homeDir )
-{
-#ifdef Q_WS_WIN //safer
-    if (!QDir::convertSeparators(path).startsWith(QDir::convertSeparators(homeDir)))
-        return false;
-#else
-    if (!path.startsWith(homeDir))
-        return false;
-#endif
+    urAutostart->setUrl(m_pathsSettings->autostartLocation());
 
-    int len = homeDir.length();
-    // replace by "$HOME" if possible
-    if (len && (path.length() == len || path[len] == '/')) {
-        path.replace(0, len, QStringLiteral("$HOME"));
-        return true;
-    } else
-        return false;
-}
-
-// TODO this functionality is duplicated in libkonq - keep it only there and export
-
-static QString translatePath( QString path ) // krazy:exclude=passbyvalue
-{
-    // keep only one single '/' at the beginning - needed for cleanHomeDirPath()
-    while (path.length() >= 2 && path[0] == '/' && path[1] == '/')
-        path.remove(0,1);
-
-    // we probably should escape any $ ` and \ characters that may occur in the path, but the Qt code that reads back
-    // the file doesn't unescape them so not much point in doing so
-
-    // All of the 3 following functions to return the user's home directory
-    // can return different paths. We have to test all them.
-    const QString homeDir0 = QFile::decodeName(qgetenv("HOME"));
-    const QString homeDir1 = QDir::homePath();
-    const QString homeDir2 = QDir(homeDir1).canonicalPath();
-    if (cleanHomeDirPath(path, homeDir0) ||
-        cleanHomeDirPath(path, homeDir1) ||
-        cleanHomeDirPath(path, homeDir2) ) {
-        // qCDebug(KCM_DESKTOPPATH) << "Path was replaced\n";
-    }
-
-    return path;
+    urDesktop->setUrl(m_pathsSettings->desktopLocation());
+    urDocument->setUrl(m_pathsSettings->documentsLocation());
+    urDownload->setUrl(m_pathsSettings->downloadsLocation());
+    urMovie->setUrl(m_pathsSettings->videosLocation());
+    urPicture->setUrl(m_pathsSettings->picturesLocation());
+    urMusic->setUrl(m_pathsSettings->musicLocation());
 }
 
 void DesktopPathConfig::save()
 {
-    KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    KConfigGroup configGroup( config, "Paths" );
-
     bool autostartMoved = false;
 
-    QUrl desktopURL(desktopLocation());
+    QUrl desktopURL = m_pathsSettings->desktopLocation();
 
-    QUrl autostartURL(autostartLocation());
+    QUrl autostartURL = m_pathsSettings->autostartLocation();
     QUrl newAutostartURL = urAutostart->url();
 
     if ( !urDesktop->url().matches( desktopURL, QUrl::StripTrailingSlash ) )
@@ -274,37 +201,34 @@ void DesktopPathConfig::save()
                 if ( newAutostartURL.matches( futureAutostartURL, QUrl::StripTrailingSlash ) )
                     autostartMoved = true;
                 else
-                    autostartMoved = moveDir( autostartLocation(), urAutostart->url(), i18n("Autostart") );
+                    autostartMoved = moveDir( m_pathsSettings->autostartLocation(), urAutostart->url(), i18n("Autostart") );
             }
         }
 
-        if ( moveDir( desktopLocation(), QUrl::fromLocalFile( urlDesktop ), i18n("Desktop") ) )
+        if ( moveDir( m_pathsSettings->desktopLocation(), QUrl::fromLocalFile( urlDesktop ), i18n("Desktop") ) )
         {
             //save in XDG path
-            const QString userDirsFile(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs"));
-            KConfig xdgUserConf( userDirsFile, KConfig::SimpleConfig );
-            KConfigGroup g( &xdgUserConf, "" );
-            g.writeEntry( "XDG_DESKTOP_DIR", QString("\"" + translatePath( urlDesktop ) + "\"") );
+            m_pathsSettings->setDesktopLocation(QUrl::fromLocalFile(urlDesktop));
         }
     }
 
     if ( !newAutostartURL.matches( autostartURL, QUrl::StripTrailingSlash ) )
     {
         if (!autostartMoved)
-            autostartMoved = moveDir( autostartLocation(), urAutostart->url(), i18n("Autostart") );
+            autostartMoved = moveDir( m_pathsSettings->autostartLocation(), urAutostart->url(), i18n("Autostart") );
         if (autostartMoved)
         {
-            configGroup.writePathEntry( "Autostart", urAutostart->url().toLocalFile(), KConfigBase::Normal | KConfigBase::Global );
+            m_pathsSettings->setAutostartLocation(urAutostart->url());
         }
     }
 
-    config->sync();
+    xdgSavePath(urDocument, m_pathsSettings->documentsLocation(), "documentsLocation", i18n("Documents"));
+    xdgSavePath(urDownload, m_pathsSettings->downloadsLocation(), "downloadsLocation", i18n("Downloads"));
+    xdgSavePath(urMovie, m_pathsSettings->videosLocation(), "videosLocation", i18n("Movies"));
+    xdgSavePath(urPicture, m_pathsSettings->picturesLocation(), "picturesLocation", i18n("Pictures"));
+    xdgSavePath(urMusic, m_pathsSettings->musicLocation(), "musicLocation", i18n("Music"));
 
-    xdgSavePath(urDocument, documentsLocation(), "XDG_DOCUMENTS_DIR", i18n("Documents"));
-    xdgSavePath(urDownload, downloadLocation(), "XDG_DOWNLOAD_DIR", i18n("Downloads"));
-    xdgSavePath(urMovie, moviesLocation(), "XDG_VIDEOS_DIR", i18n("Movies"));
-    xdgSavePath(urPicture, picturesLocation(), "XDG_PICTURES_DIR", i18n("Pictures"));
-    xdgSavePath(urMusic, musicLocation(), "XDG_MUSIC_DIR", i18n("Music"));
+    m_pathsSettings->save();
 }
 
 bool DesktopPathConfig::xdgSavePath(KUrlRequester* ur, const QUrl& currentUrl, const char* xdgKey, const QString& type)
@@ -327,11 +251,9 @@ bool DesktopPathConfig::xdgSavePath(KUrlRequester* ur, const QUrl& currentUrl, c
             }
         }
         if (moveDir(currentUrl, newUrl, type)) {
-            //save in XDG user-dirs.dirs config file, this is where KGlobalSettings/QDesktopServices reads from.
-            const QString userDirsFile(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs"));
-            KConfig xdgUserConf(userDirsFile, KConfig::SimpleConfig);
-            KConfigGroup g(&xdgUserConf, "");
-            g.writeEntry(xdgKey, QString("\"" + translatePath(path) + "\""));
+            auto item = m_pathsSettings->findItem(xdgKey);
+            Q_ASSERT(item);
+            item->setProperty(newUrl);
             return true;
         }
     }
@@ -345,8 +267,8 @@ bool DesktopPathConfig::moveDir( const QUrl & src, const QUrl & dest, const QStr
     if (!QFile::exists(src.toLocalFile()))
         return true;
     // Do not move $HOME! #193057
-    const QString translatedPath = translatePath(src.toLocalFile());
-    if (translatedPath == QLatin1String("$HOME") || translatedPath == QLatin1String("$HOME/")) {
+    const QString translatedPath = src.toLocalFile();
+    if (translatedPath == QDir::homePath() || translatedPath == QDir::homePath() + QLatin1Char('/')) {
         return true;
     }
 

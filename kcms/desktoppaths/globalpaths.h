@@ -41,6 +41,8 @@ class KUrlRequester;
 
 namespace KIO { class Job; }
 
+class DesktopPathsSettings;
+
 //-----------------------------------------------------------------------------
 // The "Path" Tab contains :
 // The paths for Desktop, Autostart and Documents
@@ -60,6 +62,8 @@ private Q_SLOTS:
 private:
     KUrlRequester* addRow(QFormLayout *lay, const QString& label, const QString& whatsThis);
     bool xdgSavePath(KUrlRequester* ur, const QUrl& currentUrl, const char* xdgKey, const QString& type);
+
+    DesktopPathsSettings *m_pathsSettings;
 
     // Desktop Paths
     KUrlRequester *urDesktop;

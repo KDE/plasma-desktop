@@ -3,6 +3,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_desktoppaths\")
 
 set(kcm_desktoppaths_PART_SRCS
    globalpaths.cpp
+   desktoppathssettings.cpp
 )
 
 add_library(kcm_desktoppaths MODULE ${kcm_desktoppaths_PART_SRCS})
