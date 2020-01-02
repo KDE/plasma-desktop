@@ -20,7 +20,6 @@
 
 #include "kcm.h"
 #include "../krdb/krdb.h"
-#include "../cursortheme/xcursor/xcursortheme.h"
 #include "config-kcm.h"
 #include "config-workspace.h"
 #include <klauncher_iface.h>
@@ -45,9 +44,13 @@
 #include <KPackage/PackageLoader>
 
 #include <X11/Xlib.h>
-#include <X11/Xcursor/Xcursor.h>
 
 #include "lookandfeelsettings.h"
+
+#ifdef HAVE_XCURSOR
+#   include "../cursortheme/xcursor/xcursortheme.h"
+#   include <X11/Xcursor/Xcursor.h>
+#endif
 
 #ifdef HAVE_XFIXES
 #  include <X11/extensions/Xfixes.h>
@@ -467,10 +470,11 @@ void KCMLookandFeel::setCursorTheme(const QString themeName)
     cg.writeEntry("cursorTheme", themeName);
     cg.sync();
 
+#ifdef HAVE_XCURSOR
     // Require the Xcursor version that shipped with X11R6.9 or greater, since
     // in previous versions the Xfixes code wasn't enabled due to a bug in the
     // build system (freedesktop bug #975).
-#if HAVE_XFIXES && XFIXES_MAJOR >= 2 && XCURSOR_LIB_VERSION >= 10105
+#if defined(HAVE_XFIXES) && XFIXES_MAJOR >= 2 && XCURSOR_LIB_VERSION >= 10105
     const int cursorSize = cg.readEntry("cursorSize", 0);
 
     QDir themeDir = cursorThemeDir(themeName, 0);
@@ -526,6 +530,7 @@ void KCMLookandFeel::setCursorTheme(const QString themeName)
                                  i18n("You have to restart the Plasma session for these changes to take effect."),
                                  i18n("Cursor Settings Changed"), "CursorSettingsChanged");
 #endif
+#endif
 }
 
 QDir KCMLookandFeel::cursorThemeDir(const QString &theme, const int depth)
@@ -579,6 +584,7 @@ const QStringList KCMLookandFeel::cursorSearchPaths()
     if (!m_cursorSearchPaths.isEmpty())
         return m_cursorSearchPaths;
 
+#ifdef HAVE_XCURSOR
 #if XCURSOR_LIB_MAJOR == 1 && XCURSOR_LIB_MINOR < 1
     // These are the default paths Xcursor will scan for cursor themes
     QString path("~/.icons:/usr/share/icons:/usr/share/pixmaps:/usr/X11R6/lib/X11/icons");
@@ -609,6 +615,9 @@ const QStringList KCMLookandFeel::cursorSearchPaths()
     // Expand all occurrences of ~/ to the home dir
     m_cursorSearchPaths.replaceInStrings(QRegExp(QStringLiteral("^~\\/")), QDir::home().path() + QLatin1Char('/'));
     return m_cursorSearchPaths;
+#else
+    return QStringList();
+#endif
 }
 
 void KCMLookandFeel::setSplashScreen(const QString &theme)

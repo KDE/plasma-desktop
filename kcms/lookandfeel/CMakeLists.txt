@@ -1,16 +1,24 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_lookandfeel\")
 
+if(X11_Xcursor_FOUND)
+    set(HAVE_XCURSOR TRUE)
+endif()
 configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
 
-
 set(kcm_lookandfeel_SRCS
-  kcmmain.cpp
-  kcm.cpp
-  ../krdb/krdb.cpp
-  ../cursortheme/xcursor/cursortheme.cpp
-  ../cursortheme/xcursor/xcursortheme.cpp
+    kcmmain.cpp
+    kcm.cpp
+    ../krdb/krdb.cpp
 )
+
+if (X11_Xcursor_FOUND)
+    set(kcm_lookandfeel_SRCS
+        ${kcm_lookandfeel_SRCS}
+        ../cursortheme/xcursor/cursortheme.cpp
+        ../cursortheme/xcursor/xcursortheme.cpp
+    )
+endif ()
 
 set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)
 qt5_add_dbus_interface(kcm_lookandfeel_SRCS ${klauncher_xml} klauncher_iface)
@@ -69,9 +77,15 @@ set(lookandfeeltool_SRCS
     # TODO: load kcm plugin instead of using code copy
     kcm.cpp
     ../krdb/krdb.cpp
-    ../cursortheme/xcursor/cursortheme.cpp
-    ../cursortheme/xcursor/xcursortheme.cpp
 )
+
+if (X11_Xcursor_FOUND)
+    set(lookandfeeltool_SRCS
+        ${lookandfeeltool_SRCS}
+        ../cursortheme/xcursor/cursortheme.cpp
+        ../cursortheme/xcursor/xcursortheme.cpp
+    )
+endif ()
 
 qt5_add_dbus_interface(lookandfeeltool_SRCS ${klauncher_xml} klauncher_iface)
 
