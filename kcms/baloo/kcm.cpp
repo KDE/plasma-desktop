@@ -1,6 +1,7 @@
 /* This file is part of the KDE Project
    Copyright (c) 2007-2010 Sebastian Trueg <trueg@kde.org>
    Copyright (c) 2012-2014 Vishesh Handa <me@vhanda.in>
+   Copyright (c) 2020 Benjamin Port <benjamin.port@enioka.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -23,7 +24,6 @@
 #include <KPluginFactory>
 #include <KPluginLoader>
 #include <KAboutData>
-#include <QDebug>
 #include <QStandardPaths>
 #include <KLocalizedString>
 
@@ -36,26 +36,19 @@
 #include <QStorageInfo>
 
 #include <Baloo/IndexerConfig>
+#include <baloo/baloosettings.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "kcm_baloofile.json", registerPlugin<Baloo::ServerConfigModule>();)
-
-namespace
-{
-    QStringList defaultFolders()
-    {
-        return { QDir::homePath() };
-    }
-} // namespace
 
 using namespace Baloo;
 
 ServerConfigModule::ServerConfigModule(QObject* parent, const QVariantList& args)
-    : KQuickAddons::ConfigModule(parent, args)
-    , m_filteredFolderModel(new FilteredFolderModel(this))
-    , m_indexing(false)
-    , m_fileContents(false)
+    : KQuickAddons::ManagedConfigModule(parent, args)
+    , m_settings(new BalooSettings(this))
+    , m_filteredFolderModel(new FilteredFolderModel(m_settings, this))
     {
     qmlRegisterType<FilteredFolderModel>();
+    qmlRegisterType<BalooSettings>();
 
     KAboutData* about = new KAboutData(
         QStringLiteral("kcm_baloofile"), i18n("File Search"),
@@ -69,8 +62,9 @@ ServerConfigModule::ServerConfigModule(QObject* parent, const QVariantList& args
     setAboutData(about);
     setButtons(Help | Apply | Default);
 
-    connect(m_filteredFolderModel, &FilteredFolderModel::folderAdded, this, [this]{ setNeedsSave(true); });
-    connect(m_filteredFolderModel, &FilteredFolderModel::folderRemoved, this, [this]{ setNeedsSave(true); });
+    connect(m_settings, &BalooSettings::excludedFoldersChanged, m_filteredFolderModel, &FilteredFolderModel::updateDirectoryList);
+    connect(m_settings, &BalooSettings::foldersChanged, m_filteredFolderModel, &FilteredFolderModel::updateDirectoryList);
+    m_filteredFolderModel->updateDirectoryList();
 }
 
 ServerConfigModule::~ServerConfigModule()
@@ -79,34 +73,21 @@ ServerConfigModule::~ServerConfigModule()
 
 void ServerConfigModule::load()
 {
-    Baloo::IndexerConfig config;
-    m_indexing = config.fileIndexingEnabled();
-    m_previouslyEnabled = m_indexing;
-    m_fileContents = !config.onlyBasicIndexing();
-
-    m_filteredFolderModel->setDirectoryList(config.includeFolders(), config.excludeFolders());
-
-    emit indexingChanged(m_indexing);
-    emit fileContentsChanged(m_fileContents);
+    ManagedConfigModule::load();
+    m_previouslyEnabled = m_settings->indexingEnabled();
 }
 
 void ServerConfigModule::save()
 {
-    bool enabled = m_indexing && !allMountPointsExcluded();
+    ManagedConfigModule::save();
 
     Baloo::IndexerConfig config;
-    config.setFileIndexingEnabled(enabled);
-    config.setIncludeFolders(m_filteredFolderModel->includeFolders());
-    config.setExcludeFolders(m_filteredFolderModel->excludeFolders());
-    config.setOnlyBasicIndexing(!m_fileContents);
-    config.setFirstRun(false);
+    config.setFirstRun(m_previouslyEnabled != m_settings->indexingEnabled());
 
-    if (m_previouslyEnabled != enabled) {
-        config.setFirstRun(true);
-    }
+    m_previouslyEnabled = m_settings->indexingEnabled();
 
     // Start Baloo
-    if (enabled) {
+    if (m_settings->indexingEnabled() && !allMountPointsExcluded()) {
         const QString exe = QStandardPaths::findExecutable(QStringLiteral("baloo_file"));
         QProcess::startDetached(exe, QStringList());
     }
@@ -129,41 +110,9 @@ void ServerConfigModule::save()
     config.refresh();
 }
 
-void ServerConfigModule::defaults()
+FilteredFolderModel *ServerConfigModule::filteredModel() const
 {
-    m_filteredFolderModel->setDirectoryList(defaultFolders(), QStringList());
-}
-
-bool ServerConfigModule::indexing() const
-{
-    return m_indexing;
-}
-
-bool ServerConfigModule::fileContents() const
-{
-    return m_fileContents;
-}
-
-FilteredFolderModel *ServerConfigModule::filteredModel() const {
     return m_filteredFolderModel;
-}
-
-void ServerConfigModule::setIndexing(bool indexing)
-{
-    if (m_indexing != indexing) {
-        m_indexing = indexing;
-        Q_EMIT indexingChanged(indexing);
-        setNeedsSave(true);
-    }
-}
-
-void ServerConfigModule::setFileContents(bool fileContents)
-{
-    if (m_fileContents != fileContents) {
-        m_fileContents = fileContents;
-        Q_EMIT fileContentsChanged(fileContents);
-        setNeedsSave(true);
-    }
 }
 
 bool ServerConfigModule::allMountPointsExcluded()
@@ -173,7 +122,12 @@ bool ServerConfigModule::allMountPointsExcluded()
         mountPoints.append(si.rootPath());
     }
 
-    return m_filteredFolderModel->excludeFolders().toSet() == mountPoints.toSet();
+    return m_settings->excludedFolders().toSet() == mountPoints.toSet();
+}
+
+BalooSettings *ServerConfigModule::balooSettings() const
+{
+    return m_settings;
 }
 
 #include "kcm.moc"

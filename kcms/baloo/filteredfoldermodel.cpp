@@ -2,6 +2,7 @@
  * This file is part of the KDE Baloo Project
  * Copyright (C) 2014  Vishesh Handa <me@vhanda.in>
  * Copyright (C) 2019 Tomaz Canabrava <tcanabrava@kde.org>
+ * Copyright (c) 2020 Benjamin Port <benjamin.port@enioka.com>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -33,6 +34,8 @@
 #include <KLocalizedString>
 #include <QStringList>
 
+#include "baloo/baloosettings.h"
+
 namespace {
     QStringList addTrailingSlashes(const QStringList& input) {
         QStringList output = input;
@@ -52,12 +55,13 @@ namespace {
     }
 }
 
-FilteredFolderModel::FilteredFolderModel(QObject* parent)
+FilteredFolderModel::FilteredFolderModel(BalooSettings *settings, QObject *parent)
     : QAbstractListModel(parent)
+    , m_settings(settings)
 {
 }
 
-void FilteredFolderModel::setDirectoryList(const QStringList& include, const QStringList& exclude)
+void FilteredFolderModel::updateDirectoryList()
 {
     beginResetModel();
 
@@ -79,16 +83,16 @@ void FilteredFolderModel::setDirectoryList(const QStringList& include, const QSt
     m_mountPoints.append(QDir::homePath());
     m_mountPoints = addTrailingSlashes(m_mountPoints);
 
-    QStringList includeList = addTrailingSlashes(include);
+    QStringList includeList = addTrailingSlashes(m_settings->folders());
 
-    m_excludeList = addTrailingSlashes(exclude);
+    m_excludeList = addTrailingSlashes(m_settings->excludedFolders());
 
     // This algorithm seems bogus. verify later.
     for (const QString& mountPath : m_mountPoints) {
         if (includeList.contains(mountPath))
             continue;
 
-        if (exclude.contains(mountPath))
+        if (m_settings->excludedFolders().contains(mountPath))
             continue;
 
         if (!m_excludeList.contains(mountPath)) {
@@ -135,11 +139,6 @@ QStringList FilteredFolderModel::includeFolders() const
     return mountPointSet.values();
 }
 
-QStringList FilteredFolderModel::excludeFolders() const
-{
-    return m_excludeList;
-}
-
 QString FilteredFolderModel::fetchMountPoint(const QString& url) const
 {
     QString mountPoint;
@@ -155,22 +154,29 @@ QString FilteredFolderModel::fetchMountPoint(const QString& url) const
 
 void FilteredFolderModel::addFolder(const QString& url)
 {
-    if (m_excludeList.contains(url)) {
+    auto excluded = m_settings->excludedFolders();
+    if (excluded.contains(url)) {
         return;
     }
-    beginResetModel();
-    m_excludeList.append(QUrl(url).toLocalFile());
-    std::sort(std::begin(m_excludeList), std::end(m_excludeList));
-    endResetModel();
-    Q_EMIT folderAdded();
+    excluded.append(QUrl(url).toLocalFile());
+    std::sort(std::begin(excluded), std::end(excluded));
+    m_settings->setExcludedFolders(excluded);
 }
 
 void FilteredFolderModel::removeFolder(int row)
 {
-    beginRemoveRows(QModelIndex(), row, row);
-    m_excludeList.removeAt(row);
-    endRemoveRows();
-    Q_EMIT folderRemoved();
+    auto url = m_excludeList.at(row);
+    auto excluded = addTrailingSlashes(m_settings->excludedFolders());
+    auto included = addTrailingSlashes(m_settings->folders());
+    if (excluded.contains(url)) {
+        excluded.removeAll(url);
+        std::sort(std::begin(excluded), std::end(excluded));
+        m_settings->setExcludedFolders(excluded);
+    } else if (m_mountPoints.contains(url) && !included.contains(url)) {
+        included.append(url);
+        std::sort(std::begin(included), std::end(included));
+        m_settings->setFolders(included);
+    }
 }
 
 

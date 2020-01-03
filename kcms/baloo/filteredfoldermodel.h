@@ -1,6 +1,7 @@
 /*
  * This file is part of the KDE Baloo project
  * Copyright (C) 2014  Vishesh Handa <me@vhanda.in>
+ * Copyright (c) 2020 Benjamin Port <benjamin.port@enioka.com>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -23,15 +24,15 @@
 
 #include <QAbstractListModel>
 
+class BalooSettings;
+
 class FilteredFolderModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
-    explicit FilteredFolderModel(QObject* parent);
+    explicit FilteredFolderModel(BalooSettings *settings, QObject *parent);
 
-    void setDirectoryList(const QStringList& includeDirs, const QStringList& exclude);
     QStringList includeFolders() const;
-    QStringList excludeFolders() const;
 
     enum Roles {
         Folder = Qt::UserRole + 1,
@@ -44,9 +45,9 @@ public:
     Q_INVOKABLE void addFolder(const QString& folder);
     Q_INVOKABLE void removeFolder(int row);
     QHash<int, QByteArray> roleNames() const override;
-Q_SIGNALS:
-    void folderAdded();
-    void folderRemoved();
+
+public slots:
+    void updateDirectoryList();
 
 private:
     QString folderDisplayName(const QString& url) const;
@@ -62,10 +63,7 @@ private:
      */
     QString iconName(QString path) const;
 
-    /**
-     * @brief Widget with the list of directories.
-     *
-     */
+    BalooSettings *m_settings;
     QStringList m_mountPoints;
     QStringList m_excludeList;
 };

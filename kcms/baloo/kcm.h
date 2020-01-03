@@ -1,6 +1,7 @@
 /* This file is part of the KDE Project
    Copyright (c) 2007 Sebastian Trueg <trueg@kde.org>
    Copyright (c) 2012-2014 Vishesh Handa <me@vhanda.in>
+   Copyright (c) 2020 Benjamin Port <benjamin.port@enioka.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -20,38 +21,31 @@
 #ifndef _BALOO_FILE_KCM_H_
 #define _BALOO_FILE_KCM_H_
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickAddons/ManagedConfigModule>
 
 #include "filteredfoldermodel.h"
+
+class BalooSettings;
 
 namespace Baloo
 {
 
-class ServerConfigModule : public KQuickAddons::ConfigModule
+class ServerConfigModule : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(FilteredFolderModel *filteredModel READ filteredModel CONSTANT)
-    Q_PROPERTY(bool indexing READ indexing WRITE setIndexing NOTIFY indexingChanged)
-    Q_PROPERTY(bool fileContents READ fileContents WRITE setFileContents NOTIFY fileContentsChanged)
+    Q_PROPERTY(BalooSettings *balooSettings READ balooSettings CONSTANT)
 
 public:
     ServerConfigModule(QObject* parent, const QVariantList& args);
     virtual ~ServerConfigModule() override;
 
-    bool indexing() const;
-    void setIndexing(bool indexing);
-    Q_SIGNAL void indexingChanged(bool indexing);
-
-    bool fileContents() const;
-    void setFileContents(bool fileContents);
-    Q_SIGNAL void fileContentsChanged(bool fileContents);
-
+    BalooSettings *balooSettings() const;
     FilteredFolderModel *filteredModel() const;
 
 public Q_SLOTS:
     void load() override;
     void save() override;
-    void defaults() override;
 
 private:
     /**
@@ -60,10 +54,10 @@ private:
      * @return True if all mount points are excluded. False otherwise.
      */
     bool allMountPointsExcluded();
+
+    BalooSettings *m_settings;
     FilteredFolderModel *m_filteredFolderModel;
     bool m_previouslyEnabled;
-    bool m_indexing;
-    bool m_fileContents;
 };
 }
 

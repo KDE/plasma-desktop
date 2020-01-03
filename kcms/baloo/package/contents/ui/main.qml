@@ -42,18 +42,19 @@ KCM.SimpleKCM {
         QQC2.CheckBox {
             id: fileSearchEnabled
             text: i18n("Enable File Search")
-            checked: kcm.indexing
+            enabled: !kcm.balooSettings.isImmutable("indexingEnabled")
+            checked: kcm.balooSettings.indexingEnabled
             onCheckStateChanged: {
-                kcm.indexing = checked
+                kcm.balooSettings.indexingEnabled = checked
             }
         }
 
         QQC2.CheckBox {
             id: indexFileContents
             text: i18n("Also index file content")
-            enabled: fileSearchEnabled.checked
-            checked: kcm.fileContents
-            onCheckStateChanged: kcm.fileContents = checked
+            enabled: fileSearchEnabled.checked && !kcm.balooSettings.isImmutable("onlyBasicIndexing")
+            checked: !kcm.balooSettings.onlyBasicIndexing
+            onCheckStateChanged: kcm.balooSettings.onlyBasicIndexing = !checked
         }
         Item {
             Layout.preferredHeight: Kirigami.Units.gridUnit
