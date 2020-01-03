@@ -31,15 +31,6 @@
 #define __GLOBALPATHS_H
 
 #include <kcmodule.h>
-#include <kio/global.h>
-#include <kio/udsentry.h>
-#include <QUrl>
-
-class QFormLayout;
-class KJob;
-class KUrlRequester;
-
-namespace KIO { class Job; }
 
 namespace Ui { class DesktopPathsView; }
 
@@ -53,27 +44,12 @@ class DesktopPathConfig : public KCModule
 {
     Q_OBJECT
 public:
-    DesktopPathConfig( QWidget *parent, const QVariantList &args );
+    DesktopPathConfig(QWidget *parent, const QVariantList &args);
     ~DesktopPathConfig() override;
 
-    void save() override;
-
-private Q_SLOTS:
-    void slotEntries( KIO::Job * job, const KIO::UDSEntryList& list);
-
 private:
-    bool xdgSavePath(KUrlRequester* ur, const QUrl& currentUrl, const char* xdgKey, const QString& type);
-
     QScopedPointer<Ui::DesktopPathsView> m_ui;
     DesktopPathsSettings *m_pathsSettings;
-
-    bool moveDir( const QUrl & src, const QUrl & dest, const QString & type );
-    bool m_ok;
-    QUrl m_copyToDest; // used when the destination directory already exists
-    QUrl m_copyFromSrc;
-
-private Q_SLOTS:
-    void slotResult( KJob * job );
 };
 
 #endif
