@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DesktopPathsView</class>
+ <widget class="QWidget" name="DesktopPathsView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>313</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Desktop path:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="KUrlRequester" name="kcfg_desktopLocation">
+     <property name="whatsThis">
+      <string>This folder contains all the files which you see on your desktop. You can change the location of this folder if you want to, and the contents will move automatically to the new location as well.</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Autostart path:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="KUrlRequester" name="kcfg_autostartLocation">
+     <property name="whatsThis">
+      <string>This folder contains applications or links to applications (shortcuts) that you want to have started automatically whenever the session starts. You can change the location of this folder if you want to, and the contents will move automatically to the new location as well.</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Documents path:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="KUrlRequester" name="kcfg_documentsLocation">
+     <property name="whatsThis">
+      <string>This folder will be used by default to load or save documents from or to.</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>Downloads path:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="KUrlRequester" name="kcfg_downloadsLocation">
+     <property name="whatsThis">
+      <string>This folder will be used by default to save your downloaded items.</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>Videos path:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="KUrlRequester" name="kcfg_videosLocation">
+     <property name="whatsThis">
+      <string>This folder will be used by default to load or save movies from or to.</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>Pictures path:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="KUrlRequester" name="kcfg_picturesLocation">
+     <property name="whatsThis">
+      <string>This folder will be used by default to load or save pictures from or to.</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label_7">
+     <property name="text">
+      <string>Music path:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="KUrlRequester" name="kcfg_musicLocation">
+     <property name="whatsThis">
+      <string>This folder will be used by default to load or save music from or to.</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KUrlRequester</class>
+   <extends>QWidget</extends>
+   <header>kurlrequester.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

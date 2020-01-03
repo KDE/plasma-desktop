@@ -41,6 +41,8 @@ class KUrlRequester;
 
 namespace KIO { class Job; }
 
+namespace Ui { class DesktopPathsView; }
+
 class DesktopPathsSettings;
 
 //-----------------------------------------------------------------------------
@@ -52,27 +54,18 @@ class DesktopPathConfig : public KCModule
     Q_OBJECT
 public:
     DesktopPathConfig( QWidget *parent, const QVariantList &args );
-    void load() override;
+    ~DesktopPathConfig() override;
+
     void save() override;
-    void defaults() override;
 
 private Q_SLOTS:
     void slotEntries( KIO::Job * job, const KIO::UDSEntryList& list);
 
 private:
-    KUrlRequester* addRow(QFormLayout *lay, const QString& label, const QString& whatsThis);
     bool xdgSavePath(KUrlRequester* ur, const QUrl& currentUrl, const char* xdgKey, const QString& type);
 
+    QScopedPointer<Ui::DesktopPathsView> m_ui;
     DesktopPathsSettings *m_pathsSettings;
-
-    // Desktop Paths
-    KUrlRequester *urDesktop;
-    KUrlRequester *urAutostart;
-    KUrlRequester *urDocument;
-    KUrlRequester *urDownload;
-    KUrlRequester *urMovie;
-    KUrlRequester *urPicture;
-    KUrlRequester *urMusic;
 
     bool moveDir( const QUrl & src, const QUrl & dest, const QString & type );
     bool m_ok;

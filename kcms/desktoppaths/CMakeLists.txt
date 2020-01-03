@@ -6,6 +6,8 @@ set(kcm_desktoppaths_PART_SRCS
    desktoppathssettings.cpp
 )
 
+ki18n_wrap_ui(kcm_desktoppaths_PART_SRCS globalpaths.ui)
+
 add_library(kcm_desktoppaths MODULE ${kcm_desktoppaths_PART_SRCS})
 
 target_link_libraries(kcm_desktoppaths

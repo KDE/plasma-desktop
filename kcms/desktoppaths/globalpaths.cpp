@@ -37,6 +37,7 @@
 
 // Own
 #include "globalpaths.h"
+#include "ui_globalpaths.h"
 #include "desktoppathssettings.h"
 
 // Qt
@@ -72,93 +73,19 @@ K_PLUGIN_FACTORY(KcmDesktopPathsFactory, registerPlugin<DesktopPathConfig>();)
 
 DesktopPathConfig::DesktopPathConfig(QWidget *parent, const QVariantList &)
     : KCModule( parent )
+    , m_ui(new Ui::DesktopPathsView)
     , m_pathsSettings(new DesktopPathsSettings(this))
 {
-  QFormLayout *lay = new QFormLayout(this);
-  lay->setVerticalSpacing(0);
-  lay->setContentsMargins(0, 0, 0, 0);
-
-  setQuickHelp( i18n("<h1>Paths</h1>\n"
-    "This module allows you to choose where in the filesystem the "
-    "files on your desktop should be stored.\n"
-    "Use the \"Whats This?\" (Shift+F1) to get help on specific options."));
-
-  urDesktop = addRow(lay, i18n("Desktop path:"),
-                     i18n("This folder contains all the files"
-                          " which you see on your desktop. You can change the location of this"
-                          " folder if you want to, and the contents will move automatically"
-                          " to the new location as well."));
-
-  urAutostart = addRow(lay, i18n("Autostart path:"),
-                       i18n("This folder contains applications or"
-                            " links to applications (shortcuts) that you want to have started"
-                            " automatically whenever the session starts. You can change the location of this"
-                            " folder if you want to, and the contents will move automatically"
-                            " to the new location as well."));
-
-  urDocument = addRow(lay, i18n("Documents path:"),
-                      i18n("This folder will be used by default to "
-                           "load or save documents from or to."));
-
-  urDownload = addRow(lay, i18n("Downloads path:"),
-                      i18n("This folder will be used by default to "
-                           "save your downloaded items."));
-
-  urMovie = addRow(lay, i18n("Movies path:"),
-                   i18n("This folder will be used by default to "
-                        "load or save movies from or to."));
-
-  urPicture = addRow(lay, i18n("Pictures path:"),
-                     i18n("This folder will be used by default to "
-                          "load or save pictures from or to."));
-
-  urMusic = addRow(lay, i18n("Music path:"),
-                   i18n("This folder will be used by default to "
-                        "load or save music from or to."));
+    m_ui->setupUi(this);
+    setQuickHelp(i18n("<h1>Paths</h1>\n"
+                      "This module allows you to choose where in the filesystem the "
+                      "files on your desktop should be stored.\n"
+                      "Use the \"Whats This?\" (Shift+F1) to get help on specific options."));
+    addConfig(m_pathsSettings, this);
 }
 
-KUrlRequester* DesktopPathConfig::addRow(QFormLayout *lay, const QString& label, const QString& whatsThis)
+DesktopPathConfig::~DesktopPathConfig()
 {
-    KUrlRequester* ur = new KUrlRequester(this);
-    ur->setMode(KFile::Directory | KFile::LocalOnly);
-    lay->addRow(label, ur);
-    connect(ur, SIGNAL(textChanged(QString)), this, SLOT(changed()));
-    lay->labelForField(ur)->setWhatsThis(whatsThis);
-    ur->setWhatsThis(whatsThis);
-    return ur;
-}
-
-void DesktopPathConfig::load()
-{
-    m_pathsSettings->load();
-
-    // Desktop Paths
-    urAutostart->setUrl(m_pathsSettings->autostartLocation());
-
-    urDesktop->setUrl(m_pathsSettings->desktopLocation());
-    urDocument->setUrl(m_pathsSettings->documentsLocation());
-    urDownload->setUrl(m_pathsSettings->downloadsLocation());
-    urMovie->setUrl(m_pathsSettings->videosLocation());
-    urPicture->setUrl(m_pathsSettings->picturesLocation());
-    urMusic->setUrl(m_pathsSettings->musicLocation());
-
-    emit changed(false);
-}
-
-void DesktopPathConfig::defaults()
-{
-    // Desktop Paths - keep defaults in sync with kglobalsettings.cpp
-    m_pathsSettings->setDefaults();
-    m_pathsSettings->setDefaults();
-
-    urAutostart->setUrl(m_pathsSettings->autostartLocation());
-
-    urDesktop->setUrl(m_pathsSettings->desktopLocation());
-    urDocument->setUrl(m_pathsSettings->documentsLocation());
-    urDownload->setUrl(m_pathsSettings->downloadsLocation());
-    urMovie->setUrl(m_pathsSettings->videosLocation());
-    urPicture->setUrl(m_pathsSettings->picturesLocation());
-    urMusic->setUrl(m_pathsSettings->musicLocation());
 }
 
 void DesktopPathConfig::save()
@@ -168,9 +95,9 @@ void DesktopPathConfig::save()
     QUrl desktopURL = m_pathsSettings->desktopLocation();
 
     QUrl autostartURL = m_pathsSettings->autostartLocation();
-    QUrl newAutostartURL = urAutostart->url();
+    QUrl newAutostartURL = m_ui->kcfg_autostartLocation->url();
 
-    if ( !urDesktop->url().matches( desktopURL, QUrl::StripTrailingSlash ) )
+    if ( !m_ui->kcfg_desktopLocation->url().matches( desktopURL, QUrl::StripTrailingSlash ) )
     {
         // Test which other paths were inside this one (as it is by default)
         // and for each, test where it should go.
@@ -178,7 +105,7 @@ void DesktopPathConfig::save()
         // * Not inside destination -> move first
         // !!!
         qCDebug(KCM_DESKTOPPATH) << "desktopURL=" << desktopURL;
-        QString urlDesktop = urDesktop->url().toLocalFile();
+        QString urlDesktop = m_ui->kcfg_desktopLocation->url().toLocalFile();
         if ( !urlDesktop.endsWith(QLatin1Char('/')))
             urlDesktop+=QLatin1Char('/');
 
@@ -190,7 +117,7 @@ void DesktopPathConfig::save()
             if ( newAutostartURL.matches(autostartURL, QUrl::StripTrailingSlash) )
             {
                 // Hack. It could be in a subdir inside desktop. Hmmm... Argl.
-                urAutostart->setUrl(QUrl::fromLocalFile(urlDesktop + QStringLiteral("Autostart/")));
+                m_ui->kcfg_autostartLocation->setUrl(QUrl::fromLocalFile(urlDesktop + QStringLiteral("Autostart/")));
                 qCDebug(KCM_DESKTOPPATH) << "Autostart is moved with the desktop";
                 autostartMoved = true;
             }
@@ -201,7 +128,7 @@ void DesktopPathConfig::save()
                 if ( newAutostartURL.matches( futureAutostartURL, QUrl::StripTrailingSlash ) )
                     autostartMoved = true;
                 else
-                    autostartMoved = moveDir( m_pathsSettings->autostartLocation(), urAutostart->url(), i18n("Autostart") );
+                    autostartMoved = moveDir( m_pathsSettings->autostartLocation(), m_ui->kcfg_autostartLocation->url(), i18n("Autostart") );
             }
         }
 
@@ -215,18 +142,18 @@ void DesktopPathConfig::save()
     if ( !newAutostartURL.matches( autostartURL, QUrl::StripTrailingSlash ) )
     {
         if (!autostartMoved)
-            autostartMoved = moveDir( m_pathsSettings->autostartLocation(), urAutostart->url(), i18n("Autostart") );
+            autostartMoved = moveDir( m_pathsSettings->autostartLocation(), m_ui->kcfg_autostartLocation->url(), i18n("Autostart") );
         if (autostartMoved)
         {
-            m_pathsSettings->setAutostartLocation(urAutostart->url());
+            m_pathsSettings->setAutostartLocation(m_ui->kcfg_autostartLocation->url());
         }
     }
 
-    xdgSavePath(urDocument, m_pathsSettings->documentsLocation(), "documentsLocation", i18n("Documents"));
-    xdgSavePath(urDownload, m_pathsSettings->downloadsLocation(), "downloadsLocation", i18n("Downloads"));
-    xdgSavePath(urMovie, m_pathsSettings->videosLocation(), "videosLocation", i18n("Movies"));
-    xdgSavePath(urPicture, m_pathsSettings->picturesLocation(), "picturesLocation", i18n("Pictures"));
-    xdgSavePath(urMusic, m_pathsSettings->musicLocation(), "musicLocation", i18n("Music"));
+    xdgSavePath(m_ui->kcfg_documentsLocation, m_pathsSettings->documentsLocation(), "documentsLocation", i18n("Documents"));
+    xdgSavePath(m_ui->kcfg_downloadsLocation, m_pathsSettings->downloadsLocation(), "downloadsLocation", i18n("Downloads"));
+    xdgSavePath(m_ui->kcfg_videosLocation, m_pathsSettings->videosLocation(), "videosLocation", i18n("Movies"));
+    xdgSavePath(m_ui->kcfg_picturesLocation, m_pathsSettings->picturesLocation(), "picturesLocation", i18n("Pictures"));
+    xdgSavePath(m_ui->kcfg_musicLocation, m_pathsSettings->musicLocation(), "musicLocation", i18n("Music"));
 
     m_pathsSettings->save();
 }
