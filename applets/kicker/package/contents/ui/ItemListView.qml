@@ -72,26 +72,26 @@ FocusScope {
                 return;
             }
 
-            if (childDialog != null) {
-                childDialog.delayedDestroy();
+            if (itemList.childDialog != null) {
+                itemList.childDialog.delayedDestroy();
             }
 
             // Gets reenabled after the dialog spawn causes a focus-in on the dialog window.
             plasmoid.hideOnWindowDeactivate = false;
 
-            childDialog = itemListDialogComponent.createObject(itemList);
-            childDialog.focusParent = itemList;
-            childDialog.visualParent = listView.currentItem;
-            childDialog.model = model.modelForRow(listView.currentIndex);
-            childDialog.visible = true;
+            itemList.childDialog = itemListDialogComponent.createObject(itemList);
+            itemList.childDialog.focusParent = itemList;
+            itemList.childDialog.visualParent = listView.currentItem;
+            itemList.childDialog.model = model.modelForRow(listView.currentIndex);
+            itemList.childDialog.visible = true;
 
-            windowSystem.forceActive(childDialog.mainItem);
-            childDialog.mainItem.focus = true;
+            windowSystem.forceActive(itemList.childDialog.mainItem);
+            itemList.childDialog.mainItem.focus = true;
 
             if (focusOnSpawn) {
-                childDialog.mainItem.showChildDialogs = false;
-                childDialog.mainItem.currentIndex = 0;
-                childDialog.mainItem.showChildDialogs = true;
+                itemList.childDialog.mainItem.showChildDialogs = false;
+                itemList.childDialog.mainItem.currentIndex = 0;
+                itemList.childDialog.mainItem.showChildDialogs = true;
             }
         }
     }
@@ -103,7 +103,7 @@ FocusScope {
         repeat: false
 
         onTriggered: {
-            if (focus && (!childDialog || !childDialog.mainItem.containsMouse)) {
+            if (focus && (!itemList.childDialog || !itemList.childDialog.mainItem.containsMouse)) {
                 currentIndex = -1;
                 itemList.exited();
             }
@@ -123,7 +123,7 @@ FocusScope {
             if (containsMouse) {
                 resetIndexTimer.stop();
                 itemList.forceActiveFocus();
-            } else if ((!childDialog || !dialog)
+            } else if ((!itemList.childDialog || !dialog)
                 && (!currentItem || !currentItem.menu.opened)) {
                 resetIndexTimer.start();
             }
@@ -165,13 +165,13 @@ FocusScope {
 
                 onCurrentIndexChanged: {
                     if (currentIndex != -1) {
-                        if (childDialog) {
+                        if (itemList.childDialog) {
                             if (currentItem && currentItem.hasChildren) {
-                                childDialog.mainItem.width = itemList.minimumWidth;
-                                childDialog.model = model.modelForRow(currentIndex);
-                                childDialog.visualParent = listView.currentItem;
+                                itemList.childDialog.mainItem.width = itemList.minimumWidth;
+                                itemList.childDialog.model = model.modelForRow(currentIndex);
+                                itemList.childDialog.visualParent = listView.currentItem;
                             } else {
-                                childDialog.delayedDestroy();
+                                itemList.childDialog.delayedDestroy();
                             }
 
                             return;
@@ -187,9 +187,9 @@ FocusScope {
                             dialogSpawnTimer.focusOnSpawn = false;
                             dialogSpawnTimer.restart();
                         }
-                    } else if (childDialog != null) {
-                        childDialog.delayedDestroy();
-                        childDialog = null;
+                    } else if (itemList.childDialog != null) {
+                        itemList.childDialog.delayedDestroy();
+                        itemList.childDialog = null;
                     }
                 }
 
@@ -234,11 +234,11 @@ FocusScope {
                         }
 
                         showChildDialogs = true;
-                    } else if ((event.key === Qt.Key_Right || event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && childDialog != null) {
-                        windowSystem.forceActive(childDialog.mainItem);
-                        childDialog.mainItem.focus = true;
-                        childDialog.mainItem.currentIndex = 0;
-                    } else if ((event.key === Qt.Key_Right || event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && childDialog == null
+                    } else if ((event.key === Qt.Key_Right || event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && itemList.childDialog != null) {
+                        windowSystem.forceActive(itemList.childDialog.mainItem);
+                        itemList.childDialog.mainItem.focus = true;
+                        itemList.childDialog.mainItem.currentIndex = 0;
+                    } else if ((event.key === Qt.Key_Right || event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && itemList.childDialog == null
                         && currentItem != null && currentItem.hasChildren) {
                         dialogSpawnTimer.focusOnSpawn = true;
                         dialogSpawnTimer.restart();

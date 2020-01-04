@@ -53,7 +53,7 @@ Item {
     }
 
     onAboutToShowActionMenu: {
-        var actionList = hasActionList ? model.actionList : [];
+        var actionList = item.hasActionList ? model.actionList : [];
         Tools.fillActionMenu(i18n, actionMenu, actionList, ListView.view.model.favoritesModel, model.favoriteId);
     }
 
@@ -73,7 +73,7 @@ Item {
         id: actionMenu
 
         onActionClicked: {
-            actionTriggered(actionId, actionArgument);
+            item.actionTriggered(actionId, actionArgument);
         }
     }
 
@@ -98,8 +98,8 @@ Item {
 
         onPressed: {
             if (mouse.buttons & Qt.RightButton) {
-                if (hasActionList) {
-                    openActionMenu(mouseArea, mouse.x, mouse.y);
+                if (item.hasActionList) {
+                    item.openActionMenu(mouseArea, mouse.x, mouse.y);
                 }
             } else {
                 pressed = true;
@@ -109,7 +109,7 @@ Item {
         }
 
         onReleased: {
-            if (pressed && !hasChildren) {
+            if (pressed && !item.hasChildren) {
                 item.ListView.view.model.trigger(index, "", null);
                 plasmoid.expanded = false;
             }
@@ -130,7 +130,7 @@ Item {
             }
 
             // FIXME: Correct escape angle calc for right screen edge.
-            if (justOpenedTimer.running || !hasChildren) {
+            if (justOpenedTimer.running || !item.hasChildren) {
                 item.ListView.view.currentIndex = index;
             } else {
                 mouseCol = mouse.x;
@@ -140,11 +140,11 @@ Item {
                 } else if ((index == item.ListView.view.currentIndex - 1) && mouse.y < (itemHeight - 6)
                     || (index == item.ListView.view.currentIndex + 1) && mouse.y > 5) {
 
-                    if ((childDialog != null && childDialog.facingLeft)
+                    if ((item.childDialog != null && item.childDialog.facingLeft)
                         ? mouse.x > item.ListView.view.eligibleWidth - 5 : mouse.x < item.ListView.view.eligibleWidth + 5) {
                         updateCurrentItem();
                     }
-                } else if ((childDialog != null && childDialog.facingLeft)
+                } else if ((item.childDialog != null && item.childDialog.facingLeft)
                     ? mouse.x > item.ListView.view.eligibleWidth : mouse.x < item.ListView.view.eligibleWidth) {
                     updateCurrentItem();
                 }
@@ -211,7 +211,7 @@ Item {
         PlasmaComponents.Label {
             id: label
 
-            enabled: !isParent || (isParent && hasChildren)
+            enabled: !isParent || (isParent && item.hasChildren)
 
             anchors.verticalCenter: parent.verticalCenter
 
@@ -234,7 +234,7 @@ Item {
             width: visible ? units.iconSizes.small : 0
             height: width
 
-            visible: hasChildren
+            visible: item.hasChildren
             opacity: (item.ListView.view.currentIndex === index) ? 1.0 : 0.4
 
             svg: arrows
@@ -263,18 +263,18 @@ Item {
         anchors.rightMargin: highlightItemSvg.margins.right
         anchors.verticalCenter: parent.verticalCenter
 
-        active: isSeparator
+        active: item.isSeparator
 
         asynchronous: false
         sourceComponent: separatorComponent
     }
 
     Keys.onPressed: {
-        if (event.key === Qt.Key_Menu && hasActionList) {
+        if (event.key === Qt.Key_Menu && item.hasActionList) {
             event.accepted = true;
-            openActionMenu(mouseArea);
-        } else if ((event.key === Qt.Key_Enter || event.key === Qt.Key_Return) && !hasChildren) {
-            if (!hasChildren) {
+            item.openActionMenu(mouseArea);
+        } else if ((event.key === Qt.Key_Enter || event.key === Qt.Key_Return) && !item.hasChildren) {
+            if (!item.hasChildren) {
                 event.accepted = true;
                 item.ListView.view.model.trigger(index, "", null);
                 plasmoid.expanded = false;

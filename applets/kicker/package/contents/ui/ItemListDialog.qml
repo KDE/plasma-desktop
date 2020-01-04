@@ -48,10 +48,10 @@ Kicker.SubMenu {
     mainItem: ItemListView {
         id: itemListView
 
-        height: model !== undefined ? Math.min(((Math.floor((itemDialog.availableScreenRectForItem(itemListView).height
+        height: itemDialog.model !== undefined ? Math.min(((Math.floor((itemDialog.availableScreenRectForItem(itemListView).height
             - itemDialog.margins.top - itemDialog.margins.bottom) / itemHeight) - 1)
-            * itemHeight) - (model.separatorCount * itemHeight) + (model.separatorCount * separatorHeight),
-            ((model.count - model.separatorCount) * itemHeight) + (model.separatorCount * separatorHeight)) : 0
+            * itemHeight) - (itemDialog.model.separatorCount * itemHeight) + (itemDialog.model.separatorCount * separatorHeight),
+            ((itemDialog.model.count - itemDialog.model.separatorCount) * itemHeight) + (itemDialog.model.separatorCount * separatorHeight)) : 0
 
         iconsEnabled: true
 

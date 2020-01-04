@@ -70,7 +70,7 @@ FocusScope {
             return -1;
         }
 
-        return Math.floor(currentIndex / Math.floor(width / cellWidth));
+        return Math.floor(currentIndex / Math.floor(width / itemGrid.cellWidth));
     }
 
     function currentCol() {
@@ -78,17 +78,17 @@ FocusScope {
             return -1;
         }
 
-        return currentIndex - (currentRow() * Math.floor(width / cellWidth));
+        return currentIndex - (currentRow() * Math.floor(width / itemGrid.cellWidth));
     }
 
     function lastRow() {
-        var columns = Math.floor(width / cellWidth);
+        var columns = Math.floor(width / itemGrid.cellWidth);
         return Math.ceil(count / columns) - 1;
     }
 
     function tryActivate(row, col) {
         if (count) {
-            var columns = Math.floor(width / cellWidth);
+            var columns = Math.floor(width / itemGrid.cellWidth);
             var rows = Math.ceil(count / columns);
             row = Math.min(row, rows - 1);
             col = Math.min(col, columns - 1);
@@ -118,11 +118,11 @@ FocusScope {
         anchors.fill: parent
 
         onDragMove: {
-            if (!dropEnabled || gridView.animating || !kicker.dragSource) {
+            if (!itemGrid.dropEnabled || gridView.animating || !kicker.dragSource) {
                 return;
             }
 
-            var x = Math.max(0, event.x - (width % cellWidth));
+            var x = Math.max(0, event.x - (width % itemGrid.cellWidth));
             var cPos = mapToItem(gridView.contentItem, x, event.y);
             var item = gridView.itemAt(cPos.x, cPos.y);
 
@@ -131,42 +131,42 @@ FocusScope {
                     if (item !== kicker.dragSource) {
                         item.GridView.view.model.moveRow(dragSource.itemIndex, item.itemIndex);
                     }
-                } else if (kicker.dragSource.GridView.view.model.favoritesModel === model
-                    && !model.isFavorite(kicker.dragSource.favoriteId)) {
-                    var hasPlaceholder = (model.dropPlaceholderIndex !== -1);
+                } else if (kicker.dragSource.GridView.view.model.favoritesModel === itemGrid.model
+                    && !itemGrid.model.isFavorite(kicker.dragSource.favoriteId)) {
+                    var hasPlaceholder = (itemGrid.model.dropPlaceholderIndex !== -1);
 
-                    model.dropPlaceholderIndex = item.itemIndex;
+                    itemGrid.model.dropPlaceholderIndex = item.itemIndex;
 
                     if (!hasPlaceholder) {
                         gridView.currentIndex = (item.itemIndex - 1);
                     }
                 }
             } else if (kicker.dragSource.parent !== gridView.contentItem
-                && kicker.dragSource.GridView.view.model.favoritesModel === model
-                && !model.isFavorite(kicker.dragSource.favoriteId)) {
-                    var hasPlaceholder = (model.dropPlaceholderIndex !== -1);
+                && kicker.dragSource.GridView.view.model.favoritesModel === itemGrid.model
+                && !itemGrid.model.isFavorite(kicker.dragSource.favoriteId)) {
+                    var hasPlaceholder = (itemGrid.model.dropPlaceholderIndex !== -1);
 
-                    model.dropPlaceholderIndex = hasPlaceholder ? model.count - 1 : model.count;
+                    itemGrid.model.dropPlaceholderIndex = hasPlaceholder ? itemGrid.model.count - 1 : itemGrid.model.count;
 
                     if (!hasPlaceholder) {
-                        gridView.currentIndex = (model.count - 1);
+                        gridView.currentIndex = (itemGrid.model.count - 1);
                     }
             } else {
-                model.dropPlaceholderIndex = -1;
+                itemGrid.model.dropPlaceholderIndex = -1;
                 gridView.currentIndex = -1;
             }
         }
 
         onDragLeave: {
-            if ("dropPlaceholderIndex" in model) {
-                model.dropPlaceholderIndex = -1;
+            if ("dropPlaceholderIndex" in itemGrid.model) {
+                itemGrid.model.dropPlaceholderIndex = -1;
                 gridView.currentIndex = -1;
             }
         }
 
         onDrop: {
-            if (kicker.dragSource && kicker.dragSource.parent !== gridView.contentItem && kicker.dragSource.GridView.view.model.favoritesModel === model) {
-                model.addFavorite(kicker.dragSource.favoriteId, model.dropPlaceholderIndex);
+            if (kicker.dragSource && kicker.dragSource.parent !== gridView.contentItem && kicker.dragSource.GridView.view.model.favoritesModel === itemGrid.model) {
+                itemGrid.model.addFavorite(kicker.dragSource.favoriteId, itemGrid.model.dropPlaceholderIndex);
                 gridView.currentIndex = -1;
             }
         }
@@ -201,7 +201,7 @@ FocusScope {
                 property int iconSize: units.iconSizes.huge
 
                 property bool animating: false
-                property int animationDuration: dropEnabled ? resetAnimationDurationTimer.interval : 0
+                property int animationDuration: itemGrid.dropEnabled ? resetAnimationDurationTimer.interval : 0
 
                 focus: true
 
@@ -243,11 +243,11 @@ FocusScope {
                 boundsBehavior: Flickable.StopAtBounds
 
                 delegate: ItemGridDelegate {
-                    showLabel: showLabels
+                    showLabel: itemGrid.showLabels
                 }
 
                 highlight: Item {
-                    property bool isDropPlaceHolder: "dropPlaceholderIndex" in model && currentIndex === model.dropPlaceholderIndex
+                    property bool isDropPlaceHolder: "dropPlaceholderIndex" in itemGrid.model && itemGrid.currentIndex === itemGrid.model.dropPlaceholderIndex
 
                     PlasmaComponents.Highlight {
                         visible: gridView.currentItem && !isDropPlaceHolder
@@ -302,7 +302,7 @@ FocusScope {
                 }
 
                 Keys.onLeftPressed: {
-                    if (currentCol() !== 0) {
+                    if (itemGrid.currentCol() !== 0) {
                         event.accepted = true;
                         moveCurrentIndexLeft();
                     } else {
@@ -313,7 +313,7 @@ FocusScope {
                 Keys.onRightPressed: {
                     var columns = Math.floor(width / cellWidth);
 
-                    if (currentCol() !== columns - 1 && currentIndex != count -1) {
+                    if (itemGrid.currentCol() !== columns - 1 && currentIndex != count -1) {
                         event.accepted = true;
                         moveCurrentIndexRight();
                     } else {
@@ -322,7 +322,7 @@ FocusScope {
                 }
 
                 Keys.onUpPressed: {
-                    if (currentRow() !== 0) {
+                    if (itemGrid.currentRow() !== 0) {
                         event.accepted = true;
                         moveCurrentIndexUp();
                         positionViewAtIndex(currentIndex, GridView.Contain);
@@ -332,7 +332,7 @@ FocusScope {
                 }
 
                 Keys.onDownPressed: {
-                    if (currentRow() < itemGrid.lastRow()) {
+                    if (itemGrid.currentRow() < itemGrid.lastRow()) {
                         // Fix moveCurrentIndexDown()'s lack of proper spatial nav down
                         // into partial columns.
                         event.accepted = true;
@@ -397,7 +397,7 @@ FocusScope {
                     pressedItem = null;
                 } else {
                     gridView.currentIndex = item.itemIndex;
-                    itemGrid.focus = (currentIndex != -1)
+                    itemGrid.focus = (itemGrid.currentIndex != -1)
                 }
 
                 return item;
@@ -450,7 +450,7 @@ FocusScope {
                 var item = pressedItem? pressedItem : updatePositionProperties(mouse.x, mouse.y);
 
                 if (gridView.currentIndex != -1) {
-                    if (dragEnabled && pressX != -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+                    if (itemGrid.dragEnabled && pressX != -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                         if ("pluginName" in item.m) {
                             dragHelper.startDrag(kicker, item.url, item.icon,
                             "text/x-plasmoidservicename", item.m.pluginName);
