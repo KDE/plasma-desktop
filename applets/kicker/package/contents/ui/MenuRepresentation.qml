@@ -243,7 +243,7 @@ FocusScope {
                         }
                     }
 
-                    Keys.onPressed: {
+                    Keys.onPressed: event => {
                         var target = null;
 
                         if (event.key === Qt.Key_Right) {
@@ -374,7 +374,7 @@ FocusScope {
             }
         }]
 
-        Keys.onPressed: {
+        Keys.onPressed: event => {
             if (event.key === Qt.Key_Up) {
                 if (rootList.visible) {
                     rootList.showChildDialogs = false;
@@ -443,7 +443,7 @@ FocusScope {
         }
     }
 
-    Keys.onPressed: {
+    Keys.onPressed: event => {
         if (event.key === Qt.Key_Escape) {
             plasmoid.expanded = false;
         }

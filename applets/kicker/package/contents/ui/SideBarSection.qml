@@ -35,7 +35,7 @@ DropArea {
     property alias model: repeater.model
     property alias usesPlasmaTheme: repeater.usesPlasmaTheme
 
-    onDragMove: {
+    onDragMove: event => {
         if (flow.animating) {
             return;
         }

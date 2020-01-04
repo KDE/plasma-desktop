@@ -403,7 +403,7 @@ FocusScope {
                 return item;
             }
 
-            onPressed: {
+            onPressed: mouse => {
                 mouse.accepted = true;
 
                 updatePositionProperties(mouse.x, mouse.y);
@@ -426,7 +426,7 @@ FocusScope {
                 }
             }
 
-            onReleased: {
+            onReleased: mouse => {
                 mouse.accepted = true;
                 updatePositionProperties(mouse.x, mouse.y);
 
@@ -446,7 +446,7 @@ FocusScope {
                 pressedItem = null;
             }
 
-            onPositionChanged: {
+            onPositionChanged: mouse => {
                 var item = pressedItem? pressedItem : updatePositionProperties(mouse.x, mouse.y);
 
                 if (gridView.currentIndex != -1) {

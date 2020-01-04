@@ -333,7 +333,7 @@ Kicker.DashboardWindow {
 
             onClicked: searchField.clear();
 
-            Keys.onPressed: {
+            Keys.onPressed: event => {
                 if (event.key === Qt.Key_Tab) {
                     event.accepted = true;
 
@@ -471,7 +471,7 @@ Kicker.DashboardWindow {
                         systemFavoritesGrid.tryActivate(0, currentCol());
                     }
 
-                    Keys.onPressed: {
+                    Keys.onPressed: event => {
                         if (event.key === Qt.Key_Tab) {
                             event.accepted = true;
 
@@ -528,7 +528,7 @@ Kicker.DashboardWindow {
                         globalFavoritesGrid.tryActivate(globalFavoritesGrid.rows - 1, currentCol());
                     }
 
-                    Keys.onPressed: {
+                    Keys.onPressed: event => {
                         if (event.key === Qt.Key_Tab) {
                             event.accepted = true;
 
@@ -770,7 +770,7 @@ Kicker.DashboardWindow {
                     }
                 }
 
-                Keys.onPressed: {
+                Keys.onPressed: event => {
                     if (event.key === Qt.Key_Tab) {
                         event.accepted = true;
 
@@ -886,7 +886,7 @@ Kicker.DashboardWindow {
                                 }
                             }
 
-                            onPositionChanged: { // Lazy menu implementation.
+                            onPositionChanged: mouse => { // Lazy menu implementation.
                                 mouseCol = mouse.x;
 
                                 if (justOpenedTimer.running || ListView.view.currentIndex === 0 || index === ListView.view.currentIndex) {
@@ -904,7 +904,7 @@ Kicker.DashboardWindow {
                                 updateCurrentItemTimer.restart();
                             }
 
-                            onPressed: {
+                            onPressed: mouse => {
                                 if (mouse.buttons & Qt.RightButton) {
                                     if (hasActionList) {
                                         openActionMenu(item, mouse.x, mouse.y);
@@ -912,7 +912,7 @@ Kicker.DashboardWindow {
                                 }
                             }
 
-                            onClicked: {
+                            onClicked: mouse => {
                                 if (mouse.button == Qt.LeftButton) {
                                     updateCurrentItem();
                                 }
@@ -1049,7 +1049,7 @@ Kicker.DashboardWindow {
                             }
                         }
 
-                        Keys.onPressed: {
+                        Keys.onPressed: event => {
                             if (event.key === Qt.Key_Left) {
                                 event.accepted = true;
 
@@ -1068,13 +1068,13 @@ Kicker.DashboardWindow {
             }
         }
 
-        onPressed: {
+        onPressed: mouse => {
             if (mouse.button == Qt.RightButton) {
                 contextMenu.open(mouse.x, mouse.y);
             }
         }
 
-        onClicked: {
+        onClicked: mouse => {
             if (mouse.button == Qt.LeftButton) {
                 root.toggle();
             }

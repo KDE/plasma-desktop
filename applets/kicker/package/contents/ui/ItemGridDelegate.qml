@@ -114,7 +114,7 @@ Item {
         onContainsMouseChanged: item.GridView.view.itemContainsMouseChanged(containsMouse)
     }
 
-    Keys.onPressed: {
+    Keys.onPressed: event => {
         if (event.key === Qt.Key_Menu && hasActionList) {
             event.accepted = true;
             openActionMenu(item);

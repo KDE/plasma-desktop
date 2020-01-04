@@ -28,7 +28,7 @@ Row {
 
     signal containsMouseChanged(int index, bool containsMouse)
 
-    onContainsMouseChanged: {
+    onContainsMouseChanged: (index, containsMouse) => {
         if (containsMouse) {
             hoveredTab = index;
         } else {
@@ -58,19 +58,19 @@ Row {
         focus: parent.focus & active
     }
 
-    Keys.onLeftPressed: {
+    Keys.onLeftPressed: event => {
         if (activeTab == 1) {
             activeTab = 0;
         }
     }
 
-    Keys.onRightPressed: {
+    Keys.onRightPressed: event => {
         if (activeTab == 0) {
             activeTab = 1;
         }
     }
 
-    Keys.onPressed: {
+    Keys.onPressed: event => {
         if (event.key === Qt.Key_Tab) {
             event.accepted = true;
 

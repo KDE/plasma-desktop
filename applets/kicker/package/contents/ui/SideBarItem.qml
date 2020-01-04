@@ -37,12 +37,12 @@ Item {
         || (("hasActionList" in model) && (model.hasActionList !== null)))
     property int itemIndex: model.index
 
-    onAboutToShowActionMenu: {
+    onAboutToShowActionMenu: actionMenu => {
         var actionList = (model.hasActionList !== null) ? model.actionList : [];
         Tools.fillActionMenu(i18n, actionMenu, actionList, repeater.model, model.favoriteId);
     }
 
-    onActionTriggered: {
+    onActionTriggered: (actionId, actionArgument) => {
         if (Tools.triggerAction(repeater.model, model.index, actionId, actionArgument) === true) {
             plasmoid.expanded = false;
         }

@@ -96,7 +96,7 @@ Item {
         hoverEnabled: true
         acceptedButtons: Qt.LeftButton | Qt.RightButton
 
-        onPressed: {
+        onPressed: mouse => {
             if (mouse.buttons & Qt.RightButton) {
                 if (item.hasActionList) {
                     item.openActionMenu(mouseArea, mouse.x, mouse.y);
@@ -108,7 +108,7 @@ Item {
             }
         }
 
-        onReleased: {
+        onReleased: mouse => {
             if (pressed && !item.hasChildren) {
                 item.ListView.view.model.trigger(index, "", null);
                 plasmoid.expanded = false;
@@ -119,7 +119,7 @@ Item {
             pressY = -1;
         }
 
-        onPositionChanged: {
+        onPositionChanged: mouse => {
             if (pressX != -1 && model.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                 dragHelper.startDrag(kicker, model.url, model.decoration);
                 pressed = false;
