@@ -18,6 +18,8 @@
 
 #include "kcm.h"
 
+#include "kcmutils_version.h"
+
 #include <KPluginFactory>
 #include <KPluginLoader>
 #include <KAboutData>
@@ -75,6 +77,11 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     //overload, can't use the new syntax
     connect(m_pluginSelector, SIGNAL(changed(bool)),
             this, SIGNAL(changed(bool)));
+
+#if KCMUTILS_VERSION >= QT_VERSION_CHECK(5, 67, 0)
+    connect(m_pluginSelector, &KPluginSelector::defaulted,
+            this, &KCModule::defaulted);
+#endif
 
     layout->addLayout(headerLayout);
     layout->addWidget(m_pluginSelector);
