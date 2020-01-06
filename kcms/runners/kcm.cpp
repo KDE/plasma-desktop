@@ -92,6 +92,7 @@ void SearchConfigModule::load()
                     KPluginSelector::ReadConfigFile,
                     i18n("Available Plugins"), QString(),
                     KSharedConfig::openConfig(QLatin1String( "krunnerrc" )));
+    m_pluginSelector->load();
 }
 
 
@@ -102,6 +103,7 @@ void SearchConfigModule::save()
 
 void SearchConfigModule::defaults()
 {
+    m_pluginSelector->defaults();
 }
 
 #include "kcm.moc"
