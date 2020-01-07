@@ -53,7 +53,7 @@ MouseArea {
     property bool dragging: false
     property string dragId
 
-    property string dragSwitchDesktopId
+    property int dragSwitchDesktopIndex: -1
 
     property int wheelDelta: 0
 
@@ -224,8 +224,8 @@ MouseArea {
         id: dragTimer
         interval: 1000
         onTriggered: {
-            if (dragSwitchDesktopId !== -1 && dragSwitchDesktopId !== pagerModel.currentPage) {
-                pagerModel.changePage(dragSwitchDesktopId);
+            if (dragSwitchDesktopIndex !== -1 && dragSwitchDesktopIndex !== pagerModel.currentPage) {
+                pagerModel.changePage(dragSwitchDesktopIndex);
             }
         }
     }
@@ -390,16 +390,16 @@ MouseArea {
                     preventStealing: true
 
                     onDragEnter: {
-                        root.dragSwitchDesktopId = desktop.desktopId;
+                        root.dragSwitchDesktopIndex = index;
                         dragTimer.start();
                     }
                     onDragLeave: {
-                        root.dragSwitchDesktopId = "";
+                        root.dragSwitchDesktopIndex = -1;
                         dragTimer.stop();
                     }
                     onDrop: {
                         pagerModel.drop(event.mimeData, desktop.desktopId);
-                        root.dragSwitchDesktopId = -1;
+                        root.dragSwitchDesktopIndex = -1;
                         dragTimer.stop();
                     }
                 }
