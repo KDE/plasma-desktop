@@ -459,8 +459,8 @@ FocusScope {
                     dragY = -1;
                     clearPressState();
                 } else {
-                    // Disable rubberband in popup list view mode.
-                    if (root.useListViewMode) {
+                    // Disable rubberband in popup list view mode or while renaming
+                    if (root.useListViewMode || editor.targetItem) {
                         return;
                     }
 
