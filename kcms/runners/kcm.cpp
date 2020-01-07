@@ -73,9 +73,11 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
 
     m_pluginSelector = new KPluginSelector(this);
 
-    //overload, can't use the new syntax
-    connect(m_pluginSelector, SIGNAL(changed(bool)),
-            this, SIGNAL(changed(bool)));
+    auto markAsChanged = [this] {
+        emit changed();
+    };
+    connect(m_pluginSelector, &KPluginSelector::changed, this, markAsChanged);
+    connect(m_pluginSelector, &KPluginSelector::configCommitted, this, markAsChanged);
 
     layout->addLayout(headerLayout);
     layout->addWidget(m_pluginSelector);
