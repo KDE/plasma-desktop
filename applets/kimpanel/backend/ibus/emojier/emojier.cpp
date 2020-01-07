@@ -138,12 +138,15 @@ public:
             return;
         }
 
-        const QString genericDictName = "ibus/dicts/emoji-" + bcp.left(bcp.indexOf(QLatin1Char('-'))) + ".dict";
-        const QString genericPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, genericDictName);
-
         QVector<QString> dicts = {path};
-        if (!genericPath.isEmpty()) {
-            dicts << genericPath;
+        const auto idxSpecific = bcp.indexOf(QLatin1Char('-'));
+        if (idxSpecific > 0) {
+            const QString genericDictName = "ibus/dicts/emoji-" + bcp.left(idxSpecific) + ".dict";
+            const QString genericPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, genericDictName);
+
+            if (!genericPath.isEmpty()) {
+                dicts << genericPath;
+            }
         }
 
         QSet<QString> categories;
