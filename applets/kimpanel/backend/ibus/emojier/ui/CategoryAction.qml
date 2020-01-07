@@ -23,7 +23,7 @@ import org.kde.kirigami 2.6 as Kirigami
 Kirigami.Action {
     property string category
     checked: window.pageStack.get(0).title === text
-    text: category
+    text: i18nd("ibus10", category) //Get the translation of emoji categories from ibus10.mo installed by ibus
 
     icon.name: "image://text/" + emoji.findFirstEmojiForCategory(category)
     onTriggered: {
