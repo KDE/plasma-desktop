@@ -40,12 +40,9 @@ void FilterProxyModel::setSelectedScheme(const QString &scheme)
         return;
     }
 
-    const bool firstTime = m_selectedScheme.isNull();
     m_selectedScheme = scheme;
 
-    if (!firstTime) {
-        emit selectedSchemeChanged();
-    }
+    emit selectedSchemeChanged();
     emit selectedSchemeIndexChanged();
 }
 

@@ -92,6 +92,8 @@ Q_SIGNALS:
     void showSchemeNotInstalledWarning(const QString &schemeName);
 
 private:
+    bool isSaveNeeded() const override;
+
     void saveColors();
     void processPendingDeletions();
 

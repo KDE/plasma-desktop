@@ -74,9 +74,7 @@ KCMColors::KCMColors(QObject *parent, const QVariantList &args)
     about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@privat.broulik.de"));
     setAboutData(about);
 
-    connect(m_model, &ColorsModel::pendingDeletionsChanged, this, [this] {
-        setNeedsSave(true);
-    });
+    connect(m_model, &ColorsModel::pendingDeletionsChanged, this, &KCMColors::settingsChanged);
 
     connect(m_model, &ColorsModel::selectedSchemeChanged, this, [this](const QString &scheme) {
         m_selectedSchemeDirty = true;
@@ -302,6 +300,12 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
 
     m_editDialogProcess->start(QStringLiteral("kcolorschemeeditor"), args);
 }
+
+bool KCMColors::isSaveNeeded() const
+{
+    return !m_model->match(m_model->index(0, 0), ColorsModel::PendingDeletionRole, true).isEmpty();
+}
+
 
 void KCMColors::load()
 {
