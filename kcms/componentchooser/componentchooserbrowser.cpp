@@ -21,8 +21,6 @@
 #include <KLocalizedString>
 #include <KServiceTypeTrader>
 
-#include "../migrationlib/kdelibs4config.h"
-
 #include <QUrl>
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -157,8 +155,6 @@ void CfgBrowser::save(KConfig *)
 
         KBuildSycocaProgressDialog::rebuildKSycoca(this);
     }
-
-    Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("General"), "kdeglobals");
 
     QDBusMessage message  = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
                                                            QStringLiteral("/KLauncher"),

@@ -32,8 +32,6 @@
 
 #include <QUrl>
 
-#include "../migrationlib/kdelibs4config.h"
-
 CfgTerminalEmulator::CfgTerminalEmulator(QWidget *parent)
     : QWidget(parent), Ui::TerminalEmulatorConfig_UI(), CfgPlugin()
 {
