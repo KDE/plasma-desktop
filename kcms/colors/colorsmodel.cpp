@@ -85,10 +85,12 @@ bool ColorsModel::setData(const QModelIndex &index, const QVariant &value, int r
             item.pendingDeletion = pendingDeletion;
             emit dataChanged(index, index, {PendingDeletionRole});
 
-            // move to the next non-pending theme
-            const auto nonPending = match(index, PendingDeletionRole, false);
-            if (!nonPending.isEmpty()) {
-                setSelectedScheme(nonPending.first().data(SchemeNameRole).toString());
+            if (index.row() == selectedSchemeIndex() && pendingDeletion) {
+                // move to the next non-pending theme
+                const auto nonPending = match(index, PendingDeletionRole, false);
+                if (!nonPending.isEmpty()) {
+                    setSelectedScheme(nonPending.first().data(SchemeNameRole).toString());
+                }
             }
 
             emit pendingDeletionsChanged();
