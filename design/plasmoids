@@ -3,9 +3,9 @@ Plasmoids
 
 What is a widget?
 ================
-In the context of Plasma, a "widget" is a single, self-contained graphical object on the canvas. They can be added and removed individually, configured separately from other widgets, etc. These "mini appliations" are sometimes referred to in other widget platforms as "applets", "apps", "gadgets", "karambas", "desklets". We chose the word "widget" for Plasma as it is used by other some other existing systems.
+In the context of Plasma, a "widget" is a single, self-contained graphical object on the canvas. They can be added and removed individually, configured separately from other widgets, etc. These "mini applications" are sometimes referred to in other widget platforms as "applets", "apps", "gadgets", "karambas", "desklets". We chose the word "widget" for Plasma as it is used by other some other existing systems.
 
-The API of a widget is defined by the host "ScriptEngine", with the exception of native Plasma widgets written in C++ which allows plugins in loadable librareis which use the API of the Plasma library directly. Currently Plasma supports both such "native" widgets written in C++, ones written in various dynamic languages (Plasmoids) as well as:
+The API of a widget is defined by the host "ScriptEngine", with the exception of native Plasma widgets written in C++ which allows plugins in loadable libraries which use the API of the Plasma library directly. Currently Plasma supports both such "native" widgets written in C++, ones written in various dynamic languages (Plasmoids) as well as:
 
 * SuperKaramba's karambas
 * Enlightenment 17 edje content
@@ -15,7 +15,7 @@ These are loaded via host AppletScriptEngine plugins that bridge between the wid
 
 What is a Plasmoid?
 ==================
-A Plasmoid is a widget that can be loaded into Plasma that uses the native Plasma API and comes packaged in a single archive file that includes the code, metadata, images, configuration defintions, etc. Plasmoids may be currently written in the following languages / APIs:
+A Plasmoid is a widget that can be loaded into Plasma that uses the native Plasma API and comes packaged in a single archive file that includes the code, metadata, images, configuration definitions, etc. Plasmoids may be currently written in the following languages / APIs:
 
 * HTML/JavaScript widgets (essentially "web pages for Plasma"): they are limited to a small subset of the Plasma library API and DataEngines
 * Simplified JavaScript: these are written in JavaScript but use a managed set of API from the Plasma library and elsewhere; these are the most likely to be widely portable between Plasma instances and are the most securable.
@@ -23,7 +23,7 @@ A Plasmoid is a widget that can be loaded into Plasma that uses the native Plasm
 * Ruby: full access to the Plasma, KDE, Qt and other Ruby APIs are provided
 * Python: full access to the Plasma, KDE, Qt and other Python APIs are provided
 
-There are tutorials for the various APIs avaiable here: http://techbase.kde.org/Development/Tutorials/Plasma
+There are tutorials for the various APIs available here: https://techbase.kde.org/Development/Tutorials/Plasma
 
 The Plasmoid Package
 ====================

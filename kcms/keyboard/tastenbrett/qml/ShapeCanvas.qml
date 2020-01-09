@@ -55,7 +55,7 @@ Canvas {
         // they extend to the left and right of the path, so with a
         // lineWidth of 8 we'll need the entire scene scooted so
         // 0,0 becomes 4,4. Since that also would screw up our absolute
-        // cordinates towards the right (e.g. our width bounds as reported
+        // coordinates towards the right (e.g. our width bounds as reported
         // by XKB) we also need to then adjust the scale so the entire
         // coordinate system so the scene leaves sufficient space at all
         // borders.

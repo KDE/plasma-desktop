@@ -156,7 +156,7 @@ Window {
             x: section.left
             y: section.top
             z: section.priority
-            // Dimension defintions can be a bit wonky for sections but overally should not
+            // Dimension definitions can be a bit wonky for sections but overally should not
             // cause problems even when they are (so long as we don't actually render the
             // sections themself)
             width: section.width

@@ -102,7 +102,7 @@ QString XCursorTheme::findAlternative(const QString &name) const
 
         // Qt uses non-standard names for some core cursors.
         // If Xcursor fails to load the cursor, Qt creates it with the correct name using the
-        // core protcol instead (which in turn calls Xcursor). We emulate that process here.
+        // core protocol instead (which in turn calls Xcursor). We emulate that process here.
         // Note that there's a core cursor called cross, but it's not the one Qt expects.
         alternatives.insert(QStringLiteral("cross"),          QStringLiteral("crosshair"));
         alternatives.insert(QStringLiteral("up_arrow"),       QStringLiteral("center_ptr"));

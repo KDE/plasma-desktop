@@ -95,7 +95,7 @@ Item {
             // TODO: This restriction (minus the timer, which improves things)
             // has been proven out in the EITM fork, but could be improved later
             // by tracking the cursor movement vector and allowing the drag if
-            // the movement direction has reversed, etablishing user intent to
+            // the movement direction has reversed, establishing user intent to
             // move back.
             if (!plasmoid.configuration.separateLaunchers && tasks.dragSource != null
                  && tasks.dragSource.m.IsLauncher === true && above.m.IsLauncher !== true
