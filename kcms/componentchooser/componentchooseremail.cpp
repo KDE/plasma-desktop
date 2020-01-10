@@ -57,7 +57,9 @@ CfgEmailClient::~CfgEmailClient() {
 
 void CfgEmailClient::defaults()
 {
-    load(nullptr);
+    kmailCB->setChecked(true);
+    txtEMailClient->clear();
+    chkRunTerminal->setChecked(false);
 }
 
 bool CfgEmailClient::isDefaults() const
