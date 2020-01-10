@@ -203,6 +203,7 @@ void ComponentChooser::slotServiceSelected(QListWidgetItem* it) {
 	if (configWidget) {
         configContainer->setCurrentWidget(configWidget);
         const auto plugin = dynamic_cast<CfgPlugin*>(configWidget);
+        headerGroupBox->setTitle(it->text());
         plugin->load(&cfg);
         emit defaulted(plugin->isDefaults());
 	}

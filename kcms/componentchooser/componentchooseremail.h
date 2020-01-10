@@ -34,11 +34,11 @@ public:
 
 private:
     KEMailSettings *pSettings;
-    KService::Ptr m_emailClientService;
+    int m_currentIndex = -1;
+    int m_kmailIndex = -1;
 
 protected Q_SLOTS:
-    void selectEmailClient();
-    void configChanged();
+    void selectEmailClient(int index);
 Q_SIGNALS:
     void changed(bool);
 };
