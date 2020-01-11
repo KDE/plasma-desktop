@@ -457,7 +457,7 @@ MouseArea {
             // the text label margin, which derives from the icon width.
             State {
                 name: "standalone"
-                when: !label.visible && !audioStreamIconLoader.shown
+                when: !label.visible
 
                 AnchorChanges {
                     target: iconBox
@@ -494,13 +494,14 @@ MouseArea {
         readonly property bool shown: item && item.visible
 
         source: "AudioStream.qml"
-        width: units.roundToIconSize(Math.min(Math.min(iconBox.width, iconBox.height), units.iconSizes.smallMedium))
+        width: Math.min(Math.min(iconBox.width, iconBox.height) * 0.45, units.iconSizes.smallMedium)
         height: width
 
         anchors {
-            right: parent.right
-            rightMargin: iconBox.adjustMargin(true, parent.width, taskFrame.margins.right)
-            verticalCenter: parent.verticalCenter
+            right: frame.right
+            top: frame.top
+            rightMargin: iconBox.adjustMargin(true, parent.width, taskFrame.margins.right) + units.smallSpacing / 2
+            topMargin: iconBox.adjustMargin(true, parent.width, taskFrame.margins.top) + units.smallSpacing / 2
         }
     }
 

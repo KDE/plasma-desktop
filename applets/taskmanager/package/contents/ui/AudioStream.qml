@@ -36,7 +36,7 @@ Item {
             }
             PropertyChanges {
                 target: audioStreamIcon
-                source: "audio-volume-high"
+                elementId: "audio-volume-high"
             }
         },
         State {
@@ -48,7 +48,7 @@ Item {
             }
             PropertyChanges {
                 target: audioStreamIcon
-                source: "audio-volume-muted"
+                elementId: "audio-volume-muted"
             }
         }
     ]
@@ -88,13 +88,86 @@ Item {
     ]
 
     opacity: 0
-    // The indicator should still shown even if the label is hidden,
-    // but only if there's enough room for it.
-    visible: opacity > 0 && (task.width > icon.paintedWidth + audioStreamIconBox.width)
+    // Do not display the indicator if the icons are too small.
+    visible: opacity > 0 && Math.min(iconBox.width, iconBox.height) >= units.iconSizes.small
 
-    PlasmaCore.IconItem {
+    PlasmaCore.Svg {
+        id: audioSvg
+        imagePath: "icons/audio"
+    }
+
+    PlasmaCore.SvgItem {
         id: audioStreamIcon
-        anchors.fill: parent
+        svg: audioSvg
+        smooth: false
+
+        height: Math.round(Math.min(parent.height * 1.4, units.iconSizes.smallMedium) / 2) * 2
+        width: height
+
+        anchors {
+            verticalCenter: parent.verticalCenter
+            right: parent.right
+            // Avoid overlap to the right.
+            rightMargin: (parent.width - width) / 2 + units.smallSpacing / 4
+        }
+
+        states: [
+            State {
+                name: "horizontal"
+                // When there is enough space for the audio icon, to fit right of the centered task icon.
+                when: (frame.width > Math.min(iconBox.width, iconBox.height) +
+                       Math.min(Math.min(iconBox.width, iconBox.height), units.iconSizes.smallMedium) * 2)
+
+                AnchorChanges {
+                    target: audioStreamIconLoader
+
+                    anchors.top: undefined
+                    anchors.verticalCenter: frame.verticalCenter
+                }
+
+                PropertyChanges {
+                    target: audioStreamIconLoader
+
+                    anchors.rightMargin: iconBox.adjustMargin(true, parent.width, taskFrame.margins.right)
+                    width: units.roundToIconSize(Math.min(Math.min(iconBox.width, iconBox.height), units.iconSizes.smallMedium))
+                }
+
+                PropertyChanges {
+                    target: audioStreamIcon
+
+                    height: parent.height
+                    width: parent.width
+                }
+            },
+
+            State {
+                name: "vertical"
+                // When audio icon can fit above the centered task icon.
+                when: (frame.height > Math.min(iconBox.width, iconBox.height) +
+                       Math.min(Math.min(iconBox.width, iconBox.height), units.iconSizes.smallMedium) * 2)
+
+                AnchorChanges {
+                    target: audioStreamIconLoader
+
+                    anchors.right: undefined
+                    anchors.horizontalCenter: frame.horizontalCenter
+                }
+
+                PropertyChanges {
+                    target: audioStreamIconLoader
+
+                    anchors.topMargin: iconBox.adjustMargin(false, frame.height, taskFrame.margins.top)
+                    width: units.roundToIconSize(Math.min(Math.min(iconBox.width, iconBox.height), units.iconSizes.smallMedium))
+                }
+
+                PropertyChanges {
+                    target: audioStreamIcon
+
+                    height: parent.height
+                    width: parent.width
+                }
+            }
+        ]
     }
 
     MouseArea {
