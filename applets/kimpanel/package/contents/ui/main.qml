@@ -206,7 +206,7 @@ Item {
             if (list.count == 0 && !nodata) {
                 var itemData = {'key': 'kimpanel-placeholder',
                                 'icon': 'draw-freehand',
-                                'label': i18n('Input Method Panel'),
+                                'label': i18n("Input Method Panel"),
                                 'tip': '',
                                 'hint': ''};
                 list.append(itemData);
