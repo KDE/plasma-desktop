@@ -52,8 +52,6 @@ ColumnLayout {
                         height: Kirigami.Units.iconSizes.medium
                         width: height
                         source: model.icon
-                        sourceSize.width: model.icon.width
-                        sourceSize.height: model.icon.height
                     }
 
                     QQC2.Label {
