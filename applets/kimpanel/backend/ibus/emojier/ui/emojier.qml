@@ -28,6 +28,9 @@ Kirigami.ApplicationWindow
 {
     id: window
 
+    width: Kirigami.Units.gridUnit * 25
+    height: Kirigami.Units.gridUnit * 25
+
     EmojiModel {
         id: emoji
     }
