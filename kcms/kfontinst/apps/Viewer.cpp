@@ -118,8 +118,6 @@ public:
     ViewerApplication(int &argc, char **argv)
         : QApplication(argc, argv)
     {
-        cmdParser.addVersionOption();
-        cmdParser.addHelpOption();
         cmdParser.addPositionalArgument(QLatin1String("[URL]"), i18n("URL to open"));
     }
 
