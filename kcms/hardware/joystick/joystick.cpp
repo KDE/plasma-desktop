@@ -43,7 +43,7 @@ K_PLUGIN_FACTORY(JoystickFactory, registerPlugin<Joystick>();)
 Joystick::Joystick(QWidget *parent, const QVariantList &)
   : KCModule(parent)
 {
-  setButtons(Help);
+  setButtons(Help | Default);
   setAboutData(new KAboutData(QStringLiteral("kcmjoystick"), i18n("KDE Joystick Control Module"), QStringLiteral("1.0"),
                                i18n("KDE System Settings Module to test Joysticks"),
                                KAboutLicense::GPL, i18n("(c) 2004, Martin Koller"),
@@ -88,8 +88,6 @@ void Joystick::load()
 void Joystick::defaults()
 {
   joyWidget->resetCalibration();
-
-  emit changed(true);
 }
 
 //---------------------------------------------------------------------------------------------
