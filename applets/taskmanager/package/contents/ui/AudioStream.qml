@@ -88,8 +88,7 @@ Item {
     ]
 
     opacity: 0
-    // Do not display the indicator if the icons are too small.
-    visible: opacity > 0 && Math.min(iconBox.width, iconBox.height) >= units.iconSizes.small
+    visible: opacity > 0
 
     PlasmaCore.Svg {
         id: audioSvg
