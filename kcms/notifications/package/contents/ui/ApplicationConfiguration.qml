@@ -37,10 +37,10 @@ ColumnLayout {
 
     readonly property string otherAppsId: "@other"
 
-    readonly property string appDisplayName: kcm.sourcesModel.data(rootIndex, Qt.DisplayRole) || ""
-    readonly property string appIconName: kcm.sourcesModel.data(rootIndex, Qt.DecorationRole) || ""
-    readonly property string desktopEntry: kcm.sourcesModel.data(rootIndex, Private.SourcesModel.DesktopEntryRole) || ""
-    readonly property string notifyRcName: kcm.sourcesModel.data(rootIndex, Private.SourcesModel.NotifyRcNameRole) || ""
+    readonly property string appDisplayName: rootIndex ? kcm.sourcesModel.data(rootIndex, Qt.DisplayRole) || "" : ""
+    readonly property string appIconName: rootIndex ? kcm.sourcesModel.data(rootIndex, Qt.DecorationRole) || "" : ""
+    readonly property string desktopEntry: rootIndex ? kcm.sourcesModel.data(rootIndex, Private.SourcesModel.DesktopEntryRole) || "" : ""
+    readonly property string notifyRcName: rootIndex ? kcm.sourcesModel.data(rootIndex, Private.SourcesModel.NotifyRcNameRole) || "" : ""
 
     property int behavior: {
         if (configColumn.desktopEntry) {
