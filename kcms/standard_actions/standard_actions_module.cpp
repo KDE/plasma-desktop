@@ -68,6 +68,9 @@ StandardActionsModule::StandardActionsModule(
     m_editor = new KShortcutsEditor(this, KShortcutsEditor::WidgetAction | KShortcutsEditor::WindowAction | KShortcutsEditor::ApplicationAction); // there will be no global actions, so make sure that column is hidden
     connect(m_editor, &KShortcutsEditor::keyChange, this, &StandardActionsModule::keyChanged);
 
+    // Give the editor a sane minimum size so that the KCMshell window isn't tiny
+    m_editor->setMinimumSize(600, 540);
+
     // Make a layout
     QVBoxLayout *global = new QVBoxLayout;
     global->addWidget(m_editor);
