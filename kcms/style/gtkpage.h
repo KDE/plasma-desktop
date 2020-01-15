@@ -22,6 +22,7 @@
 
 #include <QObject>
 #include <QDBusInterface>
+#include <QQmlListReference>
 
 #include "gtkthemesmodel.h"
 
@@ -48,10 +49,9 @@ public Q_SLOTS:
     void showGtk3Preview();
 
     void installGtkThemeFromFile(const QUrl &fileUrl);
-    void installGtk2ThemeFromGHNS();
-    void installGtk3ThemeFromGHNS();
 
     void onThemeRemoved();
+    void onGhnsEntriesChanged(const QQmlListReference &changedEnties);
 
 Q_SIGNALS:
     void gtk2ThemesModelChanged(GtkThemesModel *model);

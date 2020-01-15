@@ -33,7 +33,6 @@ class GtkThemesModel : public QAbstractListModel {
 
 public:
     GtkThemesModel(QObject *parent = nullptr);
-    ~GtkThemesModel() override = default;
 
     enum Roles {
         ThemeNameRole = Qt::UserRole + 1,

@@ -41,7 +41,7 @@ target_link_libraries(kcm_style
 kcoreaddons_desktop_to_json(kcm_style "kcm_style.desktop")
 
 install(FILES stylesettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-install(FILES cgctheme.knsrc cgcgtk3.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
+install(FILES gtk2_themes.knsrc gtk3_themes.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 install(FILES kcm_style.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(TARGETS kcm_style DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
