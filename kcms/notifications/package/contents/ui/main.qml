@@ -153,6 +153,8 @@ KCM.SimpleKCM {
             Kirigami.FormData.label: i18n("Popup:")
             text: i18nc("Popup position near notification plasmoid", "Show near notification icon") // "widget"
             checked: kcm.settings.popupPosition === NotificationManager.Settings.CloseToWidget
+                // Force binding re-evaluation when user returns from position selector
+                + kcm.currentIndex * 0
             onClicked: kcm.settings.popupPosition = NotificationManager.Settings.CloseToWidget
             enabled: root.notificationsAvailable
         }
@@ -164,6 +166,7 @@ KCM.SimpleKCM {
             QtControls.RadioButton {
                 id: positionCustomPosition
                 checked: kcm.settings.popupPosition !== NotificationManager.Settings.CloseToWidget
+                    + kcm.currentIndex * 0
                 activeFocusOnTab: false
 
                 MouseArea {
