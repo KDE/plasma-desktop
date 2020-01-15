@@ -42,7 +42,7 @@ ColumnLayout {
     readonly property string desktopEntry: rootIndex ? kcm.sourcesModel.data(rootIndex, Private.SourcesModel.DesktopEntryRole) || "" : ""
     readonly property string notifyRcName: rootIndex ? kcm.sourcesModel.data(rootIndex, Private.SourcesModel.NotifyRcNameRole) || "" : ""
 
-    property int behavior: {
+    function behavior() {
         if (configColumn.desktopEntry) {
             return kcm.settings.applicationBehavior(configColumn.desktopEntry);
         } else if (configColumn.notifyRcName) {
@@ -52,7 +52,7 @@ ColumnLayout {
     }
 
     function setBehavior(flag, enable) {
-        var newBehavior = behavior;
+        var newBehavior = behavior();
         if (enable) {
             newBehavior |= flag;
         } else {
@@ -96,7 +96,7 @@ ColumnLayout {
         QtControls.CheckBox {
             id: showPopupsCheck
             text: i18n("Show popups")
-            checked: configColumn.behavior & NotificationManager.Settings.ShowPopups
+            checked: configColumn.behavior() & NotificationManager.Settings.ShowPopups
             onClicked: configColumn.setBehavior(NotificationManager.Settings.ShowPopups, checked)
         }
 
@@ -106,21 +106,21 @@ ColumnLayout {
                 Layout.rightMargin: mirrored ? indicator.width : 0
                 text: i18n("Show in do not disturb mode")
                 enabled: showPopupsCheck.checked
-                checked: configColumn.behavior & NotificationManager.Settings.ShowPopupsInDoNotDisturbMode
+                checked: configColumn.behavior() & NotificationManager.Settings.ShowPopupsInDoNotDisturbMode
                 onClicked: configColumn.setBehavior(NotificationManager.Settings.ShowPopupsInDoNotDisturbMode, checked)
             }
         }
 
         QtControls.CheckBox {
             text: i18n("Show in history")
-            checked: configColumn.behavior & NotificationManager.Settings.ShowInHistory
+            checked: configColumn.behavior() & NotificationManager.Settings.ShowInHistory
             onClicked: configColumn.setBehavior(NotificationManager.Settings.ShowInHistory, checked)
         }
 
         QtControls.CheckBox {
             text: i18n("Show notification badges")
             enabled: !!configColumn.desktopEntry && configColumn.desktopEntry !== configColumn.otherAppsId
-            checked: configColumn.behavior & NotificationManager.Settings.ShowBadges
+            checked: configColumn.behavior() & NotificationManager.Settings.ShowBadges
             onClicked: configColumn.setBehavior(NotificationManager.Settings.ShowBadges, checked)
         }
 
