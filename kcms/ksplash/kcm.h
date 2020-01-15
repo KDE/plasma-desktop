@@ -50,7 +50,7 @@ public:
     Q_INVOKABLE int pluginIndex(const QString &pluginName) const;
 
 public Q_SLOTS:
-    void getNewClicked();
+    void ghnsEntriesChanged(const QQmlListReference &changedEntries);
     void save() override;
     void test(const QString &plugin);
 

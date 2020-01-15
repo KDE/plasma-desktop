@@ -40,8 +40,6 @@
 #include <QStandardItemModel>
 #include <QTemporaryFile>
 
-#include <KNewStuff3/KNS3/DownloadDialog>
-
 #include "desktopthemesettings.h"
 #include "filterproxymodel.h"
 #include "themesmodel.h"
@@ -106,23 +104,6 @@ FilterProxyModel *KCMDesktopTheme::filteredModel() const
 bool KCMDesktopTheme::downloadingFile() const
 {
     return m_tempCopyJob;
-}
-
-void KCMDesktopTheme::getNewStuff(QQuickItem *ctx)
-{
-    if (!m_newStuffDialog) {
-        m_newStuffDialog = new KNS3::DownloadDialog(QStringLiteral("plasma-themes.knsrc"));
-        m_newStuffDialog.data()->setWindowTitle(i18n("Download New Plasma Styles"));
-        m_newStuffDialog->setWindowModality(Qt::WindowModal);
-        m_newStuffDialog->winId(); // so it creates the windowHandle();
-        connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted, this, &KCMDesktopTheme::load);
-    }
-
-    if (ctx && ctx->window()) {
-        m_newStuffDialog->windowHandle()->setTransientParent(ctx->window());
-    }
-
-    m_newStuffDialog.data()->show();
 }
 
 void KCMDesktopTheme::installThemeFromFile(const QUrl &url)

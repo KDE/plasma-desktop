@@ -23,7 +23,7 @@ target_link_libraries(kcm_colors
     KF5::I18n
     KF5::KIOCore
     KF5::KIOWidgets
-    KF5::NewStuff
+    KF5::NewStuffCore
     KF5::QuickAddons
     KF5::WindowSystem
 )

@@ -22,7 +22,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.2 as QtControls
 import QtQuick.Dialogs 1.1 as QtDialogs
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.kconfig 1.0 // for KAuthorized
+import org.kde.newstuff 1.62 as NewStuff
 import org.kde.kcm 1.1 as KCM
 
 import org.kde.private.kcm_cursortheme 1.0
@@ -144,12 +144,13 @@ KCM.GridViewKCM {
                     onClicked: fileDialogLoader.active = true;
                     enabled: kcm.canInstall
                 }
-                QtControls.Button {
-                    icon.name: "get-hot-new-stuff"
-                    text: i18n("&Get New Cursors...")
-                    onClicked: kcm.getNewClicked();
+                NewStuff.Button {
+                    id: newStuffButton
                     enabled: kcm.canInstall
-                    visible: KAuthorized.authorize("ghns")
+                    downloadNewWhat: i18n("Cursors")
+                    configFile: "xcursor.knsrc"
+                    viewMode: NewStuff.Page.ViewMode.Tiles
+                    onChangedEntriesChanged: kcm.ghnsEntriesChanged(newStuffButton.changedEntries);
                 }
             }
         }

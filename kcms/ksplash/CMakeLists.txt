@@ -12,11 +12,11 @@ add_library(kcm_splashscreen MODULE ${kcm_splashscreen_SRCS})
 target_link_libraries(kcm_splashscreen
   KF5::KIOWidgets
   KF5::CoreAddons
+  KF5::ConfigWidgets
   KF5::QuickAddons
   KF5::I18n
   KF5::Plasma
   KF5::PlasmaQuick
-  KF5::NewStuff
 
   Qt5::DBus
   Qt5::Widgets

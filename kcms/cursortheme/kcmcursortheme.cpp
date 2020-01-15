@@ -39,8 +39,12 @@
 #include <KTar>
 #include <KGlobalSettings>
 
-#include <KNewStuff3/KNS3/DownloadDialog>
+#include <knewstuffcore_version.h>
+#if KNEWSTUFFCORE_VERSION_MAJOR==5 && KNEWSTUFFCORE_VERSION_MINOR>=67
+#include <KNSCore/EntryWrapper>
+#endif
 
+#include <QQmlListReference>
 #include <QX11Info>
 #include <QStandardItemModel>
 
@@ -404,43 +408,42 @@ void CursorThemeConfig::defaults()
     m_preferredSize = m_settings->cursorSize();
 }
 
-void CursorThemeConfig::getNewClicked()
+void CursorThemeConfig::ghnsEntriesChanged(const QQmlListReference &changedEntries)
 {
-    KNS3::DownloadDialog dialog("xcursor.knsrc", nullptr);
-    if (dialog.exec()) {
-        KNS3::Entry::List list = dialog.changedEntries();
-        if (!list.isEmpty()) {
-            for (const KNS3::Entry& entry : list) {
-                if (entry.status() == KNS3::Entry::Deleted) {
-                    for (const QString& deleted : entry.uninstalledFiles()) {
-                        QVector<QStringRef> list = deleted.splitRef(QLatin1Char('/'));
-                        if (list.last() == QLatin1Char('*')) {
-                            list.takeLast();
-                        }
-                        QModelIndex idx = m_themeModel->findIndex(list.last().toString());
-                        if (idx.isValid()) {
-                            m_themeModel->removeTheme(idx);
-                        }
+#if KNEWSTUFFCORE_VERSION_MAJOR==5 && KNEWSTUFFCORE_VERSION_MINOR>=67
+    for (int i = 0; i < changedEntries.count(); ++i) {
+        KNSCore::EntryWrapper* entry = qobject_cast<KNSCore::EntryWrapper*>(changedEntries.at(i));
+        if (entry) {
+            if (entry->entry().status() == KNS3::Entry::Deleted) {
+                for (const QString& deleted : entry->entry().uninstalledFiles()) {
+                    QVector<QStringRef> list = deleted.splitRef(QLatin1Char('/'));
+                    if (list.last() == QLatin1Char('*')) {
+                        list.takeLast();
                     }
-                } else if (entry.status() == KNS3::Entry::Installed) {
-                    for (const QString& created : entry.installedFiles()) {
-                        QStringList list = created.split(QLatin1Char('/'));
-                        if (list.last() == QLatin1Char('*')) {
-                            list.takeLast();
-                        }
-                        // Because we sometimes get some extra slashes in the installed files list
-                        list.removeAll({});
-                        // Because we'll also get the containing folder, if it was not already there
-                        // we need to ignore it.
-                        if (list.last() == QLatin1String(".icons")) {
-                            continue;
-                        }
-                        m_themeModel->addTheme(QStringLiteral("/%1").arg(list.join(QLatin1Char('/'))));
+                    QModelIndex idx = m_themeModel->findIndex(list.last().toString());
+                    if (idx.isValid()) {
+                        m_themeModel->removeTheme(idx);
                     }
+                }
+            } else if (entry->entry().status() == KNS3::Entry::Installed) {
+                for (const QString& created : entry->entry().installedFiles()) {
+                    QStringList list = created.split(QLatin1Char('/'));
+                    if (list.last() == QLatin1Char('*')) {
+                        list.takeLast();
+                    }
+                    // Because we sometimes get some extra slashes in the installed files list
+                    list.removeAll({});
+                    // Because we'll also get the containing folder, if it was not already there
+                    // we need to ignore it.
+                    if (list.last() == QLatin1String(".icons")) {
+                        continue;
+                    }
+                    m_themeModel->addTheme(list.join(QLatin1Char('/')));
                 }
             }
         }
     }
+#endif
 }
 
 void CursorThemeConfig::installThemeFromFile(const QUrl &url)

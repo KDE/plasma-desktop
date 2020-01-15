@@ -28,9 +28,6 @@
 
 #include <KQuickAddons/ManagedConfigModule>
 
-#include <KNS3/DownloadDialog>
-#include <KLocalizedString>
-
 #include <QScopedPointer>
 #include <QCache>
 
@@ -76,7 +73,7 @@ public:
     void load() override;
     void save() override;
 
-    Q_INVOKABLE void getNewStuff(QQuickItem *ctx);
+    Q_INVOKABLE void ghnsEntriesChanged(const QQmlListReference &changedEntries);
     Q_INVOKABLE void installThemeFromFile(const QUrl &url);
 
     Q_INVOKABLE QList<int> availableIconSizes(int group) const;
@@ -117,5 +114,4 @@ private:
     QScopedPointer<QTemporaryFile> m_tempInstallFile;
     QPointer<KIO::FileCopyJob> m_tempCopyJob;
 
-    QPointer<KNS3::DownloadDialog> m_newStuffDialog;
 };

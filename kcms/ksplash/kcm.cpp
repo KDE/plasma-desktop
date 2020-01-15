@@ -32,8 +32,6 @@
 
 #include <KPackage/PackageLoader>
 
-#include <KNewStuff3/KNS3/DownloadDialog>
-
 #include "splashscreensettings.h"
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMSplashScreenFactory, "kcm_splashscreen.json", registerPlugin<KCMSplashScreen>();)
@@ -93,14 +91,10 @@ QStandardItemModel *KCMSplashScreen::splashModel() const
     return m_model;
 }
 
-void KCMSplashScreen::getNewClicked()
+void KCMSplashScreen::ghnsEntriesChanged(const QQmlListReference &changedEntries)
 {
-    KNS3::DownloadDialog dialog("ksplash.knsrc", nullptr);
-    if (dialog.exec()) {
-        KNS3::Entry::List list = dialog.changedEntries();
-        if (!list.isEmpty()) {
-            loadModel();
-        }
+    if (changedEntries.count() > 0) {
+        loadModel();
     }
 }
 

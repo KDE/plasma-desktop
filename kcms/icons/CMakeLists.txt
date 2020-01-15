@@ -14,7 +14,6 @@ target_link_libraries(kcm_icons
     KF5::I18n
     KF5::IconThemes
     KF5::Archive
-    KF5::NewStuff
     KF5::KIOWidgets
     KF5::QuickAddons
 )

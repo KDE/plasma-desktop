@@ -23,6 +23,7 @@
 #include <KQuickAddons/ManagedConfigModule>
 #include <QScopedPointer>
 
+class QQmlListReference;
 class QStandardItemModel;
 class QTemporaryFile;
 
@@ -95,7 +96,7 @@ Q_SIGNALS:
     void showErrorMessage(const QString &message);
 
 public Q_SLOTS:
-    void getNewClicked();
+    void ghnsEntriesChanged(const QQmlListReference &changedEntries);
     void installThemeFromFile(const QUrl &url);
     void removeTheme(int row);
 

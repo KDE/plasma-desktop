@@ -25,7 +25,7 @@ import QtQuick.Dialogs 1.0 as QtDialogs
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
-import org.kde.kconfig 1.0 // for KAuthorized
+import org.kde.newstuff 1.62 as NewStuff
 import org.kde.kcm 1.1 as KCM
 
 import org.kde.private.kcms.icons 1.0 as Private
@@ -251,12 +251,12 @@ KCM.GridViewKCM {
                 onClicked: fileDialogLoader.active = true
             }
 
-            QtControls.Button {
-                enabled: !kcm.iconsSettings.isImmutable("Theme")
-                text: i18n("Get New Icons...")
-                icon.name: "get-hot-new-stuff"
-                onClicked: kcm.getNewStuff(this)
-                visible: KAuthorized.authorize("ghns")
+            NewStuff.Button {
+                id: newStuffButton
+                downloadNewWhat: i18n("Icons")
+                configFile: "icons.knsrc"
+                viewMode: NewStuff.Page.ViewMode.Preview
+                onChangedEntriesChanged: kcm.ghnsEntriesChanged(newStuffButton.changedEntries);
             }
         }
     }

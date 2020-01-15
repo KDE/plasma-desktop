@@ -21,7 +21,7 @@ import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.0 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.kconfig 1.0 // for KAuthorized
+import org.kde.newstuff 1.62 as NewStuff
 import org.kde.kcm 1.1 as KCM
 
 KCM.GridViewKCM {
@@ -80,11 +80,12 @@ KCM.GridViewKCM {
         Item {
             Layout.fillWidth: true
         }
-        QtControls.Button {
-            iconName: "get-hot-new-stuff"
-            text: i18n("&Get New Splash Screens...")
-            onClicked: kcm.getNewClicked();
-            visible: KAuthorized.authorize("ghns")
+        NewStuff.Button {
+            id: newStuffButton
+            downloadNewWhat: i18n("Splash Screens")
+            configFile: "ksplash.knsrc"
+            viewMode: NewStuff.Page.ViewMode.Preview
+            onChangedEntriesChanged: kcm.ghnsEntriesChanged(newStuffButton.changedEntries);
         }
     }
 }

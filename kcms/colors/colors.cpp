@@ -47,6 +47,11 @@
 #include <KIO/DeleteJob>
 #include <KIO/JobUiDelegate>
 
+#include <knewstuffcore_version.h>
+#if KNEWSTUFFCORE_VERSION_MAJOR==5 && KNEWSTUFFCORE_VERSION_MINOR>=67
+#include <KNSCore/EntryWrapper>
+#endif
+
 #include <algorithm>
 
 #include "../krdb/krdb.h"
@@ -114,25 +119,21 @@ bool KCMColors::downloadingFile() const
     return m_tempCopyJob;
 }
 
-void KCMColors::getNewStuff(QQuickItem *ctx)
+void KCMColors::reloadModel(const QQmlListReference &changedEntries)
 {
-    if (!m_newStuffDialog) {
-        m_newStuffDialog = new KNS3::DownloadDialog(QStringLiteral("colorschemes.knsrc"));
-        m_newStuffDialog.data()->setWindowTitle(i18n("Download New Color Schemes"));
-        m_newStuffDialog->setWindowModality(Qt::WindowModal);
-        m_newStuffDialog->winId(); // so it creates the windowHandle();
+    m_model->load();
 
-        connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted, this, [this] {
-            m_model->load();
+#if KNEWSTUFFCORE_VERSION_MAJOR==5 && KNEWSTUFFCORE_VERSION_MINOR>=67
+    // If one new theme was installed, select the first color file in it
+    if (changedEntries.count() > 1) {
+        QStringList installedThemes;
 
-            const auto newEntries = m_newStuffDialog->installedEntries();
-            // If one new theme was installed, select the first color file in it
-            if (newEntries.count() == 1) {
-                QStringList installedThemes;
+        const QString suffix = QStringLiteral(".colors");
 
-                const QString suffix = QStringLiteral(".colors");
-
-                for (const QString &path : newEntries.first().installedFiles()) {
+        for (int i = 0; i < changedEntries.count(); ++i) {
+            KNSCore::EntryWrapper* entry = qobject_cast<KNSCore::EntryWrapper*>(changedEntries.at(i));
+            if (entry && entry->entry().status() == KNS3::Entry::Installed) {
+                for (const QString &path : entry->entry().installedFiles()) {
                     const QString fileName = path.section(QLatin1Char('/'), -1, -1);
 
                     const int suffixPos = fileName.indexOf(suffix);
@@ -150,15 +151,12 @@ void KCMColors::getNewStuff(QQuickItem *ctx)
 
                     m_model->setSelectedScheme(installedThemes.constFirst());
                 }
+                // Only do this for the first newly installed theme we find
+                break;
             }
-        });
+        }
     }
-
-    if (ctx && ctx->window()) {
-        m_newStuffDialog->windowHandle()->setTransientParent(ctx->window());
-    }
-
-    m_newStuffDialog.data()->show();
+#endif
 }
 
 void KCMColors::installSchemeFromFile(const QUrl &url)

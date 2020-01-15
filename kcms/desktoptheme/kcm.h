@@ -25,8 +25,6 @@
 
 #include <KQuickAddons/ManagedConfigModule>
 
-#include <KNewStuff3/KNS3/DownloadDialog>
-
 class QTemporaryFile;
 
 namespace Plasma {
@@ -66,7 +64,6 @@ public:
 
     bool canEditThemes() const;
 
-    Q_INVOKABLE void getNewStuff(QQuickItem *ctx);
     Q_INVOKABLE void installThemeFromFile(const QUrl &url);
 
     Q_INVOKABLE void applyPlasmaTheme(QQuickItem *item, const QString &themeName);
@@ -97,8 +94,6 @@ private:
     FilterProxyModel *m_filteredModel;
     QHash<QString, Plasma::Theme*> m_themes;
     bool m_haveThemeExplorerInstalled;
-
-    QPointer<KNS3::DownloadDialog> m_newStuffDialog;
 
     QScopedPointer<QTemporaryFile> m_tempInstallFile;
     QPointer<KIO::FileCopyJob> m_tempCopyJob;

@@ -20,7 +20,6 @@ target_link_libraries(kcm_desktoptheme
   KF5::Plasma
   KF5::Declarative
   KF5::QuickAddons
-  KF5::NewStuff
 )
 
 kcoreaddons_desktop_to_json(kcm_desktoptheme "kcm_desktoptheme.desktop" SERVICE_TYPES kcmodule.desktop)

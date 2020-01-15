@@ -37,7 +37,7 @@ target_link_libraries(kcm_cursortheme
     KF5::KIOCore
     KF5::KIOWidgets
     KF5::KDELibs4Support
-    KF5::NewStuff
+    KF5::NewStuffCore
     KF5::QuickAddons
     ${X11_LIBRARIES}
     XCB::XCB

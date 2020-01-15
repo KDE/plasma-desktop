@@ -23,10 +23,10 @@
 
 #include <QScopedPointer>
 #include <QPointer>
+#include <QQmlListReference>
 
 #include <KSharedConfig>
 
-#include <KNewStuff3/KNS3/DownloadDialog>
 
 #include <KQuickAddons/ManagedConfigModule>
 
@@ -74,7 +74,7 @@ public:
     ColorsSettings *colorsSettings() const;
     bool downloadingFile() const;
 
-    Q_INVOKABLE void getNewStuff(QQuickItem *ctx);
+    Q_INVOKABLE void reloadModel(const QQmlListReference &changedEntries);
     Q_INVOKABLE void installSchemeFromFile(const QUrl &url);
 
     Q_INVOKABLE void editScheme(const QString &schemeName, QQuickItem *ctx);
@@ -106,8 +106,6 @@ private:
     bool m_selectedSchemeDirty = false;
 
     bool m_applyToAlien = true;
-
-    QPointer<KNS3::DownloadDialog> m_newStuffDialog;
 
     QProcess *m_editDialogProcess = nullptr;
 

@@ -172,31 +172,16 @@ void IconModule::processPendingDeletions()
     m_model->removeItemsPendingDeletion();
 }
 
-void IconModule::getNewStuff(QQuickItem *ctx)
+void IconModule::ghnsEntriesChanged(const QQmlListReference &changedEntries)
 {
-    if (!m_newStuffDialog) {
-        m_newStuffDialog = new KNS3::DownloadDialog(QStringLiteral("icons.knsrc"));
-        m_newStuffDialog->setWindowTitle(i18n("Download New Icon Themes"));
-        m_newStuffDialog->setWindowModality(Qt::WindowModal);
-        m_newStuffDialog->winId(); // so it creates the windowHandle();
-        // TODO would be lovely to scroll to and select the newly installed scheme, if any
-        connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted, this, [this] {
-            if (m_newStuffDialog->changedEntries().isEmpty()) {
-                return;
-            }
-
-            // reload the display icontheme items
-            KIconLoader::global()->newIconLoader();
-            m_model->load();
-            QPixmapCache::clear();
-        });
+    if (changedEntries.count() == 0) {
+        return;
     }
 
-    if (ctx && ctx->window()) {
-        m_newStuffDialog->windowHandle()->setTransientParent(ctx->window());
-    }
-
-    m_newStuffDialog->show();
+    // reload the display icontheme items
+    KIconLoader::global()->newIconLoader();
+    m_model->load();
+    QPixmapCache::clear();
 }
 
 void IconModule::installThemeFromFile(const QUrl &url)
