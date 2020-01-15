@@ -24,6 +24,7 @@ import QtQuick.Dialogs 1.0 as QtDialogs
 import QtQuick.Controls 2.10 as QtControls
 import org.kde.kirigami 2.10 as Kirigami
 import org.kde.private.kcms.style 1.0 as Private
+import org.kde.newstuff 1.62 as NewStuff
 import org.kde.kcm 1.2 as KCM
 
 Kirigami.Page {
@@ -151,7 +152,7 @@ Kirigami.Page {
 
             QtControls.Button {
                 icon.name: "get-hot-new-stuff"
-                text: i18n("Get New GNOME/GTK Application Styles...")
+                text: i18n("Download New GNOME/GTK Application Styles...")
                 onClicked: ghnsMenu.open()
 
                 QtControls.Menu {
@@ -159,21 +160,40 @@ Kirigami.Page {
 
                     QtControls.MenuItem {
                         icon.name: "get-hot-new-stuff"
-                        text: i18n("Get New GNOME/GTK2 Application Styles...")
+                        text: i18n("Download New GNOME/GTK2 Application Styles...")
                         onClicked: function() {
                             ghnsMenu.close()
-                            kcm.gtkPage.installGtk2ThemeFromGHNS()
+                            gtk2NewStuffButton.showDialog()
+                        }
+
+                        NewStuff.Button {
+                            id: gtk2NewStuffButton
+                            downloadNewWhat: i18n("GNOME/GTK2 Application Styles")
+                            configFile: "gtk2_themes.knsrc"
+                            viewMode: NewStuff.Page.ViewMode.Preview
+                            onChangedEntriesChanged: kcm.gtkPage.onGhnsEntriesChanged(gtk2NewStuffButton.changedEntries);
+                            visible: false
                         }
                     }
                     QtControls.MenuItem {
                         icon.name: "get-hot-new-stuff"
-                        text: i18n("Get New GNOME/GTK3 Application Styles...")
+                        text: i18n("Download New GNOME/GTK3 Application Styles...")
                         onClicked: function() {
                             ghnsMenu.close()
-                            kcm.gtkPage.installGtk3ThemeFromGHNS()
+                            gtk3NewStuffButton.showDialog()
+                        }
+
+                        NewStuff.Button {
+                            id: gtk3NewStuffButton
+                            downloadNewWhat: i18n("GNOME/GTK3 Application Styles")
+                            configFile: "gtk3_themes.knsrc"
+                            viewMode: NewStuff.Page.ViewMode.Preview
+                            onChangedEntriesChanged: kcm.gtkPage.onGhnsEntriesChanged(gtk3NewStuffButton.changedEntries);
+                            visible: false
                         }
                     }
                 }
+
             }
         }
     }

@@ -79,32 +79,20 @@ void GtkPage::showGtk3Preview()
     gtkConfigInterface.call(QStringLiteral("showGtk3ThemePreview"), m_gtk3ThemesModel->selectedTheme());
 }
 
-
-void GtkPage::installGtk2ThemeFromGHNS()
-{
-    KNS3::DownloadDialog downloadDialog(QStringLiteral("cgctheme.knsrc"));
-    downloadDialog.setWindowTitle(i18n("Download New GNOME/GTK2 Application Styles"));
-    downloadDialog.setWindowModality(Qt::WindowModal);
-    if (downloadDialog.exec()) {
-        load();
-    }
-}
-
-void GtkPage::installGtk3ThemeFromGHNS()
-{
-    KNS3::DownloadDialog downloadDialog(QStringLiteral("cgcgtk3.knsrc"));
-    downloadDialog.setWindowTitle(i18n("Download New GNOME/GTK3 Application Styles"));
-    downloadDialog.setWindowModality(Qt::WindowModal);
-    if (downloadDialog.exec()) {
-        load();
-    }
-}
-
 void GtkPage::onThemeRemoved()
 {
     load();
     defaults();
     save();
+}
+
+void GtkPage::onGhnsEntriesChanged(const QQmlListReference &changedEnties)
+{
+    if (changedEnties.count() == 0) {
+        return;
+    }
+
+    load();
 }
 
 void GtkPage::installGtkThemeFromFile(const QUrl &fileUrl)
