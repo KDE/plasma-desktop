@@ -36,14 +36,14 @@ public:
     bool isDefaults() const override;
 
 protected Q_SLOTS:
-    void slotAddFileManager();
-    void configChanged();
+    void selectFileManager(int index);
 
 Q_SIGNALS:
     void changed(bool);
 
 private:
-    QList<QRadioButton *> mDynamicRadioButtons;
+    int m_currentIndex = -1;
+    int m_dolphinIndex = -1;
 };
 
 #endif

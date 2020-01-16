@@ -1,5 +1,6 @@
 /*  This file is part of the KDE project
     Copyright (C) 2008 David Faure <faure@kde.org>
+    Copyright (C) 2020 Méven Car <meven.car@enioka.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -22,79 +23,100 @@
 #include <kbuildsycocaprogressdialog.h>
 #include <kprocess.h>
 #include <kmimetypetrader.h>
+#include <KServiceTypeTrader>
 #include <kopenwithdialog.h>
 #include <kconfiggroup.h>
 #include <QStandardPaths>
 #include <KSharedConfig>
 
-namespace  {
-
-QRadioButton *findDolphinRadio(const QList<QRadioButton *> &radioButtons)
-{
-    auto it = std::find_if(radioButtons.begin(), radioButtons.end(), [=](QRadioButton *radio) {
-        return radio->property("storageId") == QStringLiteral("org.kde.dolphin.desktop");
-    });
-    if (it == radioButtons.end()) {
-        return nullptr;
-    }
-    return *it;
-}
-
-}
-
 CfgFileManager::CfgFileManager(QWidget *parent)
     : QWidget(parent), Ui::FileManagerConfig_UI(),CfgPlugin()
 {
     setupUi(this);
-    connect(btnSelectFileManager, &QToolButton::clicked, this, &CfgFileManager::slotAddFileManager);
+    connect(combofileManager, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated), this, &CfgFileManager::selectFileManager);
 }
 
 CfgFileManager::~CfgFileManager() {
 }
 
-void CfgFileManager::configChanged()
-{
-    emit changed(true);
-}
-
 void CfgFileManager::defaults()
 {
-    load(nullptr);
-
-    const auto radio = ::findDolphinRadio(mDynamicRadioButtons);
-    if (radio) {
-        radio->setChecked(true);
+    if (m_dolphinIndex != -1) {
+        combofileManager->setCurrentIndex(m_dolphinIndex);
     }
 }
 
 bool CfgFileManager::isDefaults() const
 {
-    const auto dolphinRadio = ::findDolphinRadio(mDynamicRadioButtons);
-    // When dolphin is not present, we can't assume any default value
-    return !dolphinRadio || dolphinRadio->isChecked();
+    return m_dolphinIndex == -1 || m_dolphinIndex == combofileManager->currentIndex();
 }
 
-static KService::List appOffers()
+void CfgFileManager::selectFileManager(int index)
 {
-    return KMimeTypeTrader::self()->query(QStringLiteral("inode/directory"), QStringLiteral("Application"));
+    if (index == combofileManager->count() -1) {
+
+        KOpenWithDialog dlg({}, i18n("Select preferred file manager:"), QString(), this);
+        dlg.setSaveNewApplications(true);
+        if (dlg.exec() != QDialog::Accepted) {
+            combofileManager->setCurrentIndex(m_currentIndex);
+            return;
+        }
+
+        const auto service = dlg.service();
+
+        // if the selected service is already in the list
+        const auto matching = combofileManager->model()->match(combofileManager->model()->index(0,0), Qt::UserRole, service->storageId());
+        if (!matching.isEmpty()) {
+            const int index = matching.at(0).row();
+            combofileManager->setCurrentIndex(index);
+            changed(index != m_currentIndex);
+        } else {
+            const QString icon = !service->icon().isEmpty() ? service->icon() : QStringLiteral("application-x-shellscript");
+            combofileManager->insertItem(combofileManager->count() -1, QIcon::fromTheme(icon), service->name(), service->storageId());
+            combofileManager->setCurrentIndex(combofileManager->count() - 2);
+
+            changed(true);
+        }
+    } else {
+        changed(index != m_currentIndex);
+    }
 }
 
-void CfgFileManager::load(KConfig *) {
-    qDeleteAll(mDynamicRadioButtons);
-    mDynamicRadioButtons.clear();
-    const KService::List apps = appOffers();
-    bool first = true;
-    for (const KService::Ptr &service : apps) {
-        QRadioButton *button = new QRadioButton(service->name(), this);
-        connect(button, &QRadioButton::toggled, this, &CfgFileManager::configChanged);
-        button->setProperty("storageId", service->storageId());
-        radioLayout->addWidget(button);
-        if (first) {
-            button->setChecked(true);
-            first = false;
+static const QString mime = QStringLiteral("inode/directory");
+
+void CfgFileManager::load(KConfig *)
+{
+    combofileManager->clear();
+    m_currentIndex = -1;
+
+    const KService::Ptr fileManager = KMimeTypeTrader::self()->preferredService(mime);
+
+    const auto constraint = QStringLiteral("'FileManager' in Categories and 'inode/directory' in ServiceTypes");
+    const KService::List fileManagers = KServiceTypeTrader::self()->query(QStringLiteral("Application"), constraint);
+    for (const KService::Ptr &service : fileManagers) {
+        combofileManager->addItem(QIcon::fromTheme(service->icon()), service->name(), service->storageId());
+
+        if (fileManager->storageId() == service->storageId()) {
+            combofileManager->setCurrentIndex(combofileManager->count() -1);
+            m_currentIndex = combofileManager->count() -1;
         }
-        mDynamicRadioButtons << button;
+        if (service->storageId() == QStringLiteral("org.kde.dolphin.desktop")) {
+            m_dolphinIndex = combofileManager->count() -1;
+        }
     }
+
+    // in case of a service not associated with FileManager Category
+    if (m_currentIndex == -1 && !fileManager->storageId().isEmpty()) {
+        const KService::Ptr service = KService::serviceByStorageId(fileManager->storageId());
+
+        const QString icon = !service->icon().isEmpty() ? service->icon() : QStringLiteral("application-x-shellscript");
+        combofileManager->addItem(QIcon::fromTheme(icon), service->name(), service->storageId());
+        combofileManager->setCurrentIndex(combofileManager->count() -1);
+        m_currentIndex = combofileManager->count() -1;
+    }
+
+    // add a other option to add a new file manager with KOpenWithDialog
+    combofileManager->addItem(QIcon::fromTheme(QStringLiteral("application-x-shellscript")), i18n("Other..."), QStringLiteral());
 
     emit changed(false);
 }
@@ -104,19 +126,15 @@ static const char s_AddedAssociations[] = "Added Associations";
 
 void CfgFileManager::save(KConfig *)
 {
-    QString storageId;
-    for (QRadioButton *button : qAsConst(mDynamicRadioButtons)) {
-        if (button->isChecked()) {
-            storageId = button->property("storageId").toString();
-        }
-    }
-
+    const QString storageId = combofileManager->currentData().toString();
     if (!storageId.isEmpty()) {
+
+        m_currentIndex = combofileManager->currentIndex();
+
         // This is taken from filetypes/mimetypedata.cpp
         KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
         if (!profile->isConfigWritable(true)) // warn user if mimeapps.list is root-owned (#155126/#94504)
             return;
-        const QString mime = QStringLiteral("inode/directory");
         KConfigGroup addedApps(profile, s_AddedAssociations);
         QStringList userApps = addedApps.readXdgListEntry(mime);
         userApps.removeAll(storageId); // remove if present, to make it first in the list
@@ -130,17 +148,6 @@ void CfgFileManager::save(KConfig *)
         profile->sync();
 
         KBuildSycocaProgressDialog::rebuildKSycoca(this);
-    }
-
-    emit changed(false);
-}
-
-void CfgFileManager::slotAddFileManager()
-{
-    KProcess proc;
-    proc << QStringLiteral("keditfiletype5");
-    proc << QStringLiteral("inode/directory");
-    if (proc.execute() == 0) {
-        load(nullptr);
+        emit changed(false);
     }
 }
