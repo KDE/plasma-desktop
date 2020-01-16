@@ -1,5 +1,6 @@
 /* This file is part of the KDE project
    Copyright (C) 2002 Daniel Molkentin <molkentin@kde.org>
+   Copyright (C) 2020 Kai Uwe Broulik <kde@broulik.de>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -19,50 +20,87 @@
 #ifndef KCMKDED_H
 #define KCMKDED_H
 
-#include <QLoggingCategory>
+#include <KQuickAddons/ConfigModule>
 
-#include <KCModule>
+class QDBusServiceWatcher;
 
-class QPushButton;
-class QTreeWidget;
-class QTreeWidgetItem;
 class KConfig;
 class KPluginMetaData;
 
-Q_DECLARE_LOGGING_CATEGORY(KCM_KDED)
+class ModulesModel;
+class FilterProxyModel;
 
-class KDEDConfig : public KCModule
+class OrgKdeKded5Interface;
+
+namespace org {
+  namespace kde {
+    using kded5 = ::OrgKdeKded5Interface;
+  }
+}
+
+class KDEDConfig : public KQuickAddons::ConfigModule
 {
-Q_OBJECT
+    Q_OBJECT
+
+    Q_PROPERTY(ModulesModel *model READ model CONSTANT)
+    Q_PROPERTY(FilterProxyModel *filteredModel READ filteredModel CONSTANT)
+
+    Q_PROPERTY(bool kdedRunning READ kdedRunning NOTIFY kdedRunningChanged)
+
 public:
-	explicit KDEDConfig(QWidget* parent, const QVariantList& foo = QVariantList());
+    explicit KDEDConfig(QObject* parent, const QVariantList& foo = QVariantList());
 	~KDEDConfig() override {}
 
-	void       load() override;
-	void       save() override;
-	void       defaults() override;
+    enum ModuleType {
+        UnknownType = -1,
+        AutostartType,
+        OnDemandType
+    };
+    Q_ENUM(ModuleType)
 
-protected Q_SLOTS:
-	void slotReload();
-	void slotStartService();
-	void slotStopService();
-	void slotServiceRunningToggled();
-	void slotStartupItemSelected();
-	void slotLodItemSelected();
-	void slotItemChecked(QTreeWidgetItem *item, int column);
-	void getServiceStatus();
+    enum ModuleStatus {
+        UnknownStatus = -1,
+        NotRunning,
+        Running
+    };
+    Q_ENUM(ModuleStatus)
 
-        bool autoloadEnabled(KConfig *config, const KPluginMetaData &filename);
-        void setAutoloadEnabled(KConfig *config, const KPluginMetaData &filename, bool b);
+    ModulesModel *model() const;
+    FilterProxyModel *filteredModel() const;
+
+    bool kdedRunning() const;
+
+    Q_INVOKABLE void startModule(const QString &moduleName);
+    Q_INVOKABLE void stopModule(const QString &moduleName);
+
+    void load() override;
+    void save() override;
+    void defaults() override;
+
+signals:
+    void kdedRunningChanged();
+
+    void errorMessage(const QString &errorString);
+    void showSelfDisablingModulesHint();
+    void showRunningModulesChangedAfterSaveHint();
 
 private:
-	QTreeWidget *_lvLoD;
-	QTreeWidget *_lvStartup;
-	QPushButton *_pbStart;
-	QPushButton *_pbStop;
-	
-	QString RUNNING;
-	QString NOT_RUNNING;
+    void setKdedRunning(bool kdedRunning);
+
+    void getModuleStatus();
+    void startOrStopModule(const QString &moduleName, ModuleStatus status /*better than a bool*/);
+
+    ModulesModel *m_model;
+    FilterProxyModel *m_filteredModel;
+
+    org::kde::kded5 *m_kdedInterface;
+
+    QDBusServiceWatcher *m_kdedWatcher;
+    bool m_kdedRunning = false;
+
+    QString m_lastStartedModule;
+    QStringList m_runningModulesBeforeReconfigure;
+
 };
 
 #endif // KCMKDED_H

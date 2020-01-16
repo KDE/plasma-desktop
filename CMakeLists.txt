@@ -81,6 +81,7 @@ find_package(KSMServerDBusInterface CONFIG REQUIRED)
 find_package(KF5ItemModels CONFIG REQUIRED)
 find_package(KF5Emoticons CONFIG REQUIRED)
 find_package(KF5 REQUIRED COMPONENTS SysGuard)
+find_package(KDED CONFIG REQUIRED)
 
 find_package(KF5Baloo ${KF5_MIN_VERSION})
 set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"

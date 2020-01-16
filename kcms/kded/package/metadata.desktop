@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=Background Services
+Comment=Configure background services
+
+Icon=preferences-system-session-services
+Type=Service
+X-KDE-PluginInfo-Author=Kai Uwe Broulik
+X-KDE-PluginInfo-Email=kdebroulik.de
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=kcm_style
+X-KDE-PluginInfo-Version=2.0
+X-KDE-PluginInfo-Website=
+X-KDE-ServiceTypes=Plasma/Generic
+X-Plasma-API=declarativeappletscript
+
+X-Plasma-MainScript=ui/main.qml
