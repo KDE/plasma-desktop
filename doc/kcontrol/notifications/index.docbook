@@ -1,0 +1,199 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="kcmnotify" lang="&language;">
+<title>System Notification Settings</title>
+<articleinfo>
+
+<authorgroup>
+<author>&Mike.McBride; &Mike.McBride.mail;</author>
+<author><personname><firstname>Kai Uwe</firstname> <surname>Broulik</surname></personname> <email>kde@broulik.de</email></author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2020-01-14</date>
+<releaseinfo>Plasma 5.18</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>system notification</keyword>
+<keyword>notification</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sys-notify">
+<title>System Notification Settings</title>
+
+<para>&plasma;, like all applications, needs to inform the user when a
+problem occurs, a task is completed, or something has happened.  &plasma;
+uses a set of <quote>System Notifications</quote> to keep the user
+informed on what is happening.</para>
+
+<para>Using this module, you can determine what &plasma; does to communicate
+each event.</para>
+
+<sect2 id="notification-settings">
+<title>Notification Settings</title>
+
+<sect3 id="do-not-disturb">
+<title>Do Not Disturb mode</title>
+
+    <para>This mode disables all visual and most audible notifications to let you focus on your current task. Settings in this section let you configure under which circumstances &plasma; automatically enables do not disturb mode.</para>
+
+    <variablelist>
+
+    <varlistentry>
+    <term><guiicon>Enable when screens are mirrored</guiicon></term>
+    <listitem><para>Automatically enable do not disturb mode when you mirror your screens, for example during a presentation.</para></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term><guiicon>Show critical notifications</guiicon></term>
+    <listitem><para>Whether to show critical notifications, such as your battery is almost empty, to show even when in do not disturb mode.</para></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term><guiicon>Toggle with:</guiicon></term>
+    <listitem><para>A global shortcut you can press to enable and disable do not disturb mode anytime.</para></listitem>
+    </varlistentry>
+
+    </variablelist>
+
+</sect3>
+
+<sect3 id="notification-filters">
+    <title>Filters</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term>Critical notifications: <guiicon>Always keep on top</guiicon></term>
+    <listitem><para>Keep critical notifications, such as your battery is almost empty, always on top. This ensures they will also be visible while watching a fullscreen video or giving a presentation.</para></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term>Low priority notifications: <guiicon>Show popup</guiicon> and <guiicon>Show in history</guiicon></term>
+    <listitem><para>Whether low priority notifications, such as track changes in your media player, will be shown as popups or in the history, respectively.</para></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="notification-behavior">
+    <title>Behavior</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term>Popup: <guiicon>Show near notification icon</guiicon></term>
+    <listitem><para>Show notification popups close to where your notification icon is located in your panel.</para></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term><guiicon>Choose Custom Position...</guiicon></term>
+    <listitem><para>Lets you choose a fixed screen corner where notification popups will be positioned.</para></listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term><guiicon>Hide after:</guiicon></term>
+    <listitem><para>After how many seconds the notification popup will automatically disappear. You can choose anywhere between 1 and 120 seconds.</para></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="progress-and-badges">
+    <title>Application Progress and Badges</title>
+
+    <sect4 id="application-progress">
+        <title>Application progress</title>
+
+        <para>Options in this section control how application progress, such as copying or downloading a file, is presented.</para>
+
+        <variablelist>
+
+        <varlistentry>
+        <term><guiicon>Show in task manager</guiicon></term>
+        <listitem><para>Colorize the window in the panel based on the progress.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term><guiicon>Show in notifications</guiicon></term>
+        <listitem><para>Show a notification popup during the progress.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term><guiicon>Keep popup open during progress</guiicon></term>
+        <listitem><para>Whether the popup should remain visible for the entire duration of the progress or automatically hide. It will always be shown again when the task finishes or fails.</para></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+    <sect4 id="badges">
+        <title>Notification badges</title>
+
+        <variablelist>
+
+        <varlistentry>
+        <term><guiicon>Show in task manager</guiicon></term>
+        <listitem><para>Let applications show badges, such as an unread message count, in the panel.</para></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+</sect3>
+
+</sect2>
+
+<sect2 id="application-settings">
+<title>Application Settings</title>
+
+<para>Clicking the <guilabel>Configure...</guilabel> button at the end of the list opens the application settings page which lets you configure notification behavior on a per-application and per-service basis.</para>
+
+<para>Use the sidebar on the left to choose an entry from the <guilabel>Applications</guilabel> or <guilabel>System Services</guilabel> category.</para>
+
+<para>General warning popups as well as startup and shutdown sounds are located under the <guilabel>Plasma Workspace</guilabel> service.</para>
+
+<para>Applications that do not provide proper identification, such as shell scripts, can be configured using the <guilabel>Other Applications</guilabel> entry.</para>
+
+<variablelist>
+
+    <varlistentry>
+    <term><guiicon>Show popups</guiicon></term>
+    <listitem><para>Whether this application may show popup notifications.</para></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term><guiicon>Show in do not disturb mode</guiicon></term>
+    <listitem><para>Whether this application may show popup notifications even when in do not disturb mode.</para></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term><guiicon>Show in history</guiicon></term>
+    <listitem><para>Whether this application's notifications will be kept in the notification history.</para></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term><guiicon>Show notification badges</guiicon></term>
+    <listitem><para>Whether this application may show badges, such as an unread message count, in the panel.</para></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term><guiicon>Configure Events...</guiicon></term>
+    <listitem><para>For &kde; applications you can also configure each notification individually.</para></listitem>
+    </varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>
+
+</article>
