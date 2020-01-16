@@ -1,8 +1,8 @@
 /***************************************************************************
                           componentchooserterminal.h  -  description
                              -------------------
-    copyright            : (C) 2002 by Joseph Wenninger
-    email                : jowenn@kde.org
+    copyright            : (C) 2002 by Joseph Wenninger <jowenn@kde.org>
+    copyright            : (C) 2020 by Méven Car <meven.car@enioka.com>
  ***************************************************************************/
 
 /***************************************************************************
@@ -33,11 +33,15 @@ public:
 	bool isDefaults() const override;
 
 protected Q_SLOTS:
-	void selectTerminalApp();
-	void configChanged();
+    void selectTerminalApp();
+    void selectTerminalEmulator(int index);
 
 Q_SIGNALS:
 	void changed(bool);
+
+private:
+    int m_currentIndex = -1;
+    int m_konsoleIndex = -1;
 };
 
 #endif

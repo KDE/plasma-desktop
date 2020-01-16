@@ -1,8 +1,8 @@
 /***************************************************************************
                           componentchooser.cpp  -  description
                              -------------------
-    copyright            : (C) 2002 by Joseph Wenninger
-    email                : jowenn@kde.org
+    copyright            : (C) 2002 by Joseph Wenninger <jowenn@kde.org>
+    copyright            : (C) 2020 by Méven Car <meven.car@enioka.com>
  ***************************************************************************/
 
 /***************************************************************************
@@ -29,62 +29,83 @@
 #include <kurlrequester.h>
 #include <kconfiggroup.h>
 #include <KLocalizedString>
+#include <KServiceTypeTrader>
 
 #include <QUrl>
 
 CfgTerminalEmulator::CfgTerminalEmulator(QWidget *parent)
     : QWidget(parent), Ui::TerminalEmulatorConfig_UI(), CfgPlugin()
 {
-	setupUi(this);
-	connect(terminalLE, &QLineEdit::textChanged, this, &CfgTerminalEmulator::configChanged);
-	connect(terminalCB, &QRadioButton::toggled, this, &CfgTerminalEmulator::configChanged);
-	connect(otherCB, &QRadioButton::toggled, this, &CfgTerminalEmulator::configChanged);
-	connect(btnSelectTerminal, &QToolButton::clicked, this, &CfgTerminalEmulator::selectTerminalApp);
-
+    setupUi(this);
+    connect(terminalCombo, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated), this, &CfgTerminalEmulator::selectTerminalEmulator);
 }
 
 CfgTerminalEmulator::~CfgTerminalEmulator() {
 }
 
-void CfgTerminalEmulator::configChanged()
+void CfgTerminalEmulator::selectTerminalEmulator(int index)
 {
-	emit changed(true);
+    if (index == terminalCombo->count() - 1) {
+        selectTerminalApp();
+    } else {
+        emit changed(m_currentIndex != index);
+    }
 }
 
 void CfgTerminalEmulator::defaults()
 {
-	load(nullptr);
-	terminalCB->setChecked(true);
+    if (m_konsoleIndex != -1) {
+        terminalCombo->setCurrentIndex(m_konsoleIndex);
+    }
 }
 
 bool CfgTerminalEmulator::isDefaults() const
 {
-	return terminalCB->isChecked();
+    return m_konsoleIndex == -1 || m_konsoleIndex == terminalCombo->currentIndex();
 }
-
 
 void CfgTerminalEmulator::load(KConfig *)
 {
 	TerminalSettings settings;
-	QString terminal = settings.terminalApplication();
-	if (terminal == QLatin1String("konsole"))
-	{
-	   terminalLE->setText(QStringLiteral("xterm"));
-	   terminalCB->setChecked(true);
-	}
-	else
-	{
-	  terminalLE->setText(terminal);
-	  otherCB->setChecked(true);
-	}
+    const QString terminal = settings.terminalApplication();
+
+    m_currentIndex = -1;
+    terminalCombo->clear();
+
+    const auto constraint = QStringLiteral("'TerminalEmulator' in Categories AND (not exist NoDisplay OR NoDisplay == false)");
+    const auto terminalEmulators = KServiceTypeTrader::self()->query(QStringLiteral("Application"), constraint);
+    for (const auto &service : terminalEmulators) {
+        terminalCombo->addItem(QIcon::fromTheme(service->icon()), service->name(), service->exec());
+
+        if (!terminal.isEmpty() && service->exec() == terminal) {
+            terminalCombo->setCurrentIndex(terminalCombo->count() - 1);
+            m_currentIndex = terminalCombo->count() - 1;
+        }
+        if (service->exec() == QStringLiteral("konsole")) {
+            m_konsoleIndex = terminalCombo->count() - 1;
+        }
+    }
+
+    if (!terminal.isEmpty() && m_currentIndex == -1) {
+        // we have a terminal specified by the user
+        terminalCombo->addItem(QIcon::fromTheme(QStringLiteral("application-x-shellscript")), terminal, terminal);
+        terminalCombo->setCurrentIndex(terminalCombo->count() - 1);
+        m_currentIndex = terminalCombo->count() - 1;
+    }
+
+    // add a other option to add a new terminal emulator with KOpenWithDialog
+    terminalCombo->addItem(QIcon::fromTheme(QStringLiteral("application-x-shellscript")), i18n("Other..."), QStringLiteral());
 
 	emit changed(false);
 }
 
 void CfgTerminalEmulator::save(KConfig *)
 {
+    const QString terminal = terminalCombo->currentData().toString();
+    m_currentIndex = terminalCombo->currentIndex();
+
 	TerminalSettings settings;
-	settings.setTerminalApplication(terminalCB->isChecked() ? settings.defaultTerminalApplicationValue() : terminalLE->text());
+    settings.setTerminalApplication(terminal);
 	settings.save();
 
 	QDBusMessage message  = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
@@ -92,7 +113,7 @@ void CfgTerminalEmulator::save(KConfig *)
                                                            QStringLiteral("org.kde.KLauncher"),
                                                            QStringLiteral("reparseConfiguration"));
     QDBusConnection::sessionBus().send(message);
-	emit changed(false);
+    emit changed(false);
 }
 
 void CfgTerminalEmulator::selectTerminalApp()
@@ -100,13 +121,27 @@ void CfgTerminalEmulator::selectTerminalApp()
 	QList<QUrl> urlList;
 	KOpenWithDialog dlg(urlList, i18n("Select preferred terminal application:"), QString(), this);
 	// hide "Run in &terminal" here, we don't need it for a Terminal Application
-	dlg.hideRunInTerminal();
-	if (dlg.exec() != QDialog::Accepted) return;
-	QString client = dlg.text();
+    dlg.hideRunInTerminal();
+    dlg.setSaveNewApplications(true);
+    if (dlg.exec() != QDialog::Accepted) {
+        terminalCombo->setCurrentIndex(m_currentIndex);
+        return;
+    }
+    const auto service = dlg.service();
 
-	if (!client.isEmpty())
-	{
-		terminalLE->setText(client);
-	}
+    // if the selected service is already in the list
+    const auto matching = terminalCombo->model()->match(terminalCombo->model()->index(0,0), Qt::DisplayRole, service->exec());
+    if (!matching.isEmpty()) {
+        const int index = matching.at(0).row();
+        terminalCombo->setCurrentIndex(index);
+        changed(index != m_currentIndex);
+    } else {
+        const QString icon = !service->icon().isEmpty() ? service->icon() : QStringLiteral("application-x-shellscript");
+        terminalCombo->insertItem(terminalCombo->count() -1, QIcon::fromTheme(icon), service->name(), service->exec());
+        terminalCombo->setCurrentIndex(terminalCombo->count() - 2);
+
+        changed(true);
+    }
+
 }
 // vim: sw=4 ts=4 noet
