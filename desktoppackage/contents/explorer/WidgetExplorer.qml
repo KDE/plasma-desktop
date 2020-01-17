@@ -326,7 +326,7 @@ Item {
             //moved due to filtering
             displaced: Transition {
                 NumberAnimation {
-                    properties: "y"
+                    properties: "x,y"
                     duration: units.shortDuration * 3
                 }
             }
