@@ -500,7 +500,7 @@ void CKioFonts::del(const QUrl &url, bool isFile)
         error(KIO::ERR_DOES_NOT_EXIST, url.toDisplayString());
 }
 
-void CKioFonts::statFont(const QUrl &url)
+void CKioFonts::stat(const QUrl &url)
 {
     KFI_DBUG << url;
 

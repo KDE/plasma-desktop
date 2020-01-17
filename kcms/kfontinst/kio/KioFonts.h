@@ -58,7 +58,7 @@ class CKioFonts : public KIO::SlaveBase
     void del(const QUrl &url, bool isFile) override;
     void copy(const QUrl &src, const QUrl &dest, int mode, KIO::JobFlags flags) override;
     void rename(const QUrl &src, const QUrl &dest, KIO::JobFlags flags) override;
-    void statFont(const QUrl &url);
+    void stat(const QUrl &url) override;
     void special(const QByteArray &a) override;
 
     private:
