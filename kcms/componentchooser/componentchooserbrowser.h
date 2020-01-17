@@ -31,15 +31,13 @@ public:
 	bool isDefaults() const override;
 
 protected Q_SLOTS:
-	void selectBrowser();
-	void configChanged();
-	void selectBrowserApp();
+    void selectBrowser(int index);
 
 Q_SIGNALS:
 	void changed(bool);
 private:
-	QString m_browserExec;
-	KService::Ptr m_browserService;
+    int m_currentIndex = -1;
+    int m_falkonIndex = -1;
 };
 
 #endif /* COMPONENTCHOOSERBROWSER_H */
