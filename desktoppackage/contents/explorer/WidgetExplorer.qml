@@ -305,9 +305,7 @@ Item {
                 NumberAnimation {
                     properties: "x"
                     from: -list.width
-                    to: 0
                     duration: units.shortDuration * 3
-
                 }
             }
 
