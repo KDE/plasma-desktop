@@ -332,6 +332,18 @@ Item {
                     duration: units.shortDuration * 3
                 }
             }
+
+            PlasmaExtras.Heading {
+                anchors.fill: parent
+                anchors.margins: units.largeSpacing
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                wrapMode: Text.WordWrap
+                level: 2
+                text: searchInput.text.length > 0 ? i18n("No widgets matched the search terms") : i18n("No widgets available")
+                enabled: false
+                visible: list.count == 0
+            }
         }
     }
 
