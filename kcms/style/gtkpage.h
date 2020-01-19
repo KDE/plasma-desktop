@@ -45,6 +45,9 @@ public Q_SLOTS:
     QString gtk2ThemeFromConfig();
     QString gtk3ThemeFromConfig();
 
+    bool gtk2PreviewAvailable();
+    bool gtk3PreviewAvailable();
+
     void showGtk2Preview();
     void showGtk3Preview();
 

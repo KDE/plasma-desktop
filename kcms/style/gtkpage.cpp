@@ -22,6 +22,7 @@
 #include <QUrl>
 #include <QDBusInterface>
 #include <QDBusReply>
+#include <QStandardPaths>
 
 #include <KTar>
 #include <KLocalizedString>
@@ -67,6 +68,16 @@ QString GtkPage::gtk3ThemeFromConfig()
 {
     QDBusReply<QString> dbusReply = gtkConfigInterface.call(QStringLiteral("gtk3Theme"));
     return dbusReply.value();
+}
+
+bool GtkPage::gtk2PreviewAvailable()
+{
+    return !QStandardPaths::findExecutable(QStringLiteral("gtk_preview"), {CMAKE_INSTALL_FULL_LIBEXECDIR}).isEmpty();
+}
+
+bool GtkPage::gtk3PreviewAvailable()
+{
+    return !QStandardPaths::findExecutable(QStringLiteral("gtk3_preview"), {CMAKE_INSTALL_FULL_LIBEXECDIR}).isEmpty();
 }
 
 void GtkPage::showGtk2Preview()

@@ -89,6 +89,7 @@ Kirigami.Page {
                         icon.name: "preview"
                         text: i18n("Preview...")
                         onClicked: kcm.gtkPage.showGtk2Preview()
+                        visible: kcm.gtkPage.gtk2PreviewAvailable()
                     }
                 }
             }
@@ -128,6 +129,7 @@ Kirigami.Page {
                         icon.name: "preview"
                         text: i18n("Preview...")
                         onClicked: kcm.gtkPage.showGtk3Preview()
+                        visible: kcm.gtkPage.gtk3PreviewAvailable()
                     }
 
                 }
