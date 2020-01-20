@@ -33,6 +33,8 @@ struct ModulesModelData
     KDEDConfig::ModuleType type;
     bool autoloadEnabled;
     QString moduleName;
+    bool immutable;
+    bool savedAutoloadEnabled;
 };
 Q_DECLARE_TYPEINFO(ModulesModelData, Q_MOVABLE_TYPE);
 
@@ -49,7 +51,8 @@ public:
         TypeRole,
         AutoloadEnabledRole,
         StatusRole,
-        ModuleNameRole
+        ModuleNameRole,
+        ImmutableRole,
     };
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -64,6 +67,10 @@ public:
 
     QStringList runningModules() const;
     void setRunningModules(const QStringList &runningModules);
+
+    bool representsDefault() const;
+    bool needsSave() const;
+    void refreshAutoloadEnabledSavedState();
 
 signals:
     void autoloadedModulesChanged();

@@ -76,7 +76,8 @@ KDEDConfig::KDEDConfig(QObject* parent, const QVariantList &args)
     m_filteredModel->setSourceModel(m_model);
 
     connect(m_model, &ModulesModel::autoloadedModulesChanged, this, [this] {
-        setNeedsSave(true);
+        setNeedsSave(m_model->needsSave());
+        setRepresentsDefaults(m_model->representsDefault());
     });
 
     connect(m_kdedWatcher, &QDBusServiceWatcher::serviceOwnerChanged, this,
@@ -212,6 +213,7 @@ void KDEDConfig::load()
     m_model->load();
 
     setNeedsSave(false);
+    setRepresentsDefaults(m_model->representsDefault());
 }
 
 void KDEDConfig::save()
@@ -234,7 +236,7 @@ void KDEDConfig::save()
     }
 
     kdedrc.sync();
-
+    m_model->refreshAutoloadEnabledSavedState();
     setNeedsSave(false);
 
     m_runningModulesBeforeReconfigure = m_model->runningModules();
@@ -262,9 +264,7 @@ void KDEDConfig::defaults()
 {
     for (int i = 0; i < m_model->rowCount(); ++i) {
         const QModelIndex idx = m_model->index(i, 0);
-        if (m_model->setData(idx, true, ModulesModel::AutoloadEnabledRole)) {
-            setNeedsSave(true);
-        }
+        m_model->setData(idx, true, ModulesModel::AutoloadEnabledRole);
     }
 }
 

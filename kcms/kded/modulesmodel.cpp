@@ -75,9 +75,36 @@ QVariant ModulesModel::data(const QModelIndex &index, int role) const
         return KDEDConfig::NotRunning;
     }
     case ModuleNameRole: return item.moduleName;
+    case ImmutableRole: return item.immutable;
     }
 
     return QVariant();
+}
+
+bool ModulesModel::representsDefault() const
+{
+    bool isDefault = true;
+    for (int i = 0; i < m_data.count(); ++i) {
+        auto &item = m_data[i];
+        if (item.type != KDEDConfig::AutostartType || item.immutable) {
+            continue;
+        }
+        isDefault &= item.autoloadEnabled;
+    }
+    return isDefault;
+}
+
+bool ModulesModel::needsSave() const
+{
+    bool save = false;
+    for (int i = 0; i < m_data.count(); ++i) {
+        auto &item = m_data[i];
+        if (item.type != KDEDConfig::AutostartType || item.immutable) {
+            continue;
+        }
+        save |= item.autoloadEnabled != item.savedAutoloadEnabled;
+    }
+    return save;
 }
 
 bool ModulesModel::setData(const QModelIndex &index, const QVariant &value, int role)
@@ -90,17 +117,20 @@ bool ModulesModel::setData(const QModelIndex &index, const QVariant &value, int 
 
     auto &item = m_data[index.row()];
 
-    switch (role) {
-    case AutoloadEnabledRole:
-        const bool autoloadEnabled = value.toBool();
-        if (item.type == KDEDConfig::AutostartType
-                && item.autoloadEnabled != autoloadEnabled) {
-            item.autoloadEnabled = value.toBool();
-            dirty = true;
+    if (item.type != KDEDConfig::AutostartType || item.immutable) {
+        return dirty;
+    }
 
-            emit autoloadedModulesChanged();
+    switch (role) {
+    case AutoloadEnabledRole: {
+        const bool autoloadEnabled = value.toBool();
+        if (item.autoloadEnabled != autoloadEnabled) {
+            item.autoloadEnabled = autoloadEnabled;
+            dirty = true;
         }
+        emit autoloadedModulesChanged();
         break;
+    }
     }
 
     if (dirty) {
@@ -119,6 +149,7 @@ QHash<int, QByteArray> ModulesModel::roleNames() const
         {AutoloadEnabledRole, QByteArrayLiteral("autoloadEnabled")},
         {StatusRole, QByteArrayLiteral("status")},
         {ModuleNameRole, QByteArrayLiteral("moduleName")},
+        {ImmutableRole, QByteArrayLiteral("immutable")},
     };
 }
 
@@ -177,6 +208,7 @@ void ModulesModel::load()
 
         // autoload defaults to false if it is not found
         const bool autoload = module.rawData().value(QStringLiteral("X-KDE-Kded-autoload")).toVariant().toBool();
+
         // keep estimating dbusModuleName in sync with KDEDModule (kdbusaddons) and kded (kded)
         // currently (KF5) the module name in the D-Bus object path is set by the pluginId
         const QString dbusModuleName = module.pluginId();
@@ -190,13 +222,16 @@ void ModulesModel::load()
 
         KConfigGroup cg(&kdedrc, QStringLiteral("Module-%1").arg(dbusModuleName));
         const bool autoloadEnabled = cg.readEntry("autoload", true);
+        const bool immutable = cg.isEntryImmutable("autoload");
 
         ModulesModelData data{
             module.name(),
             module.description(),
             KDEDConfig::UnknownType,
             autoloadEnabled,
-            dbusModuleName
+            dbusModuleName,
+            immutable,
+            autoloadEnabled
         };
 
         // The logic has to be identical to Kded::initModules.
@@ -256,5 +291,13 @@ void ModulesModel::setRunningModules(const QStringList &runningModules)
     m_runningModules = runningModules;
     if (m_runningModulesKnown) {
         emit dataChanged(index(0, 0), index(m_data.count() - 1, 0), {StatusRole});
+    }
+}
+
+void ModulesModel::refreshAutoloadEnabledSavedState()
+{
+    for (int i = 0; i < m_data.count(); ++i) {
+        auto &item = m_data[i];
+        item.savedAutoloadEnabled = item.autoloadEnabled;
     }
 }

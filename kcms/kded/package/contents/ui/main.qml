@@ -36,8 +36,6 @@ You can also define whether services should be loaded at startup.</p>
 <p><b>Use this with care: some services are vital for Plasma; do not deactivate services if you
  do not know what you are doing.</b></p>")
 
-    // TODO immutable somehow?
-
     Binding {
         target: kcm.filteredModel
         property: "query"
@@ -164,6 +162,7 @@ You can also define whether services should be loaded at startup.</p>
                 id: delegate
                 // FIXME why does the padding logic to dodge the ScrollBars not work here?
                 text: model.display
+                enabled: !model.immutable
                 checkable: model.type !== Private.KCM.OnDemandType
                 checked: model.autoloadEnabled === true
                 hoverEnabled: checkable
