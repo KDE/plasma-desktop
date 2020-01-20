@@ -33,7 +33,7 @@
 
 class SwitchingTab::Private : public Ui::SwitchingTabBase {
 public:
-    KActivityManagerdSettings mainConfig;
+    KActivityManagerdSettings *mainConfig;
 
     KActionCollection *mainActionCollection;
     KActivities::Consumer activities;
@@ -49,7 +49,8 @@ public:
     }
 
     Private()
-        : mainActionCollection(nullptr)
+        : mainConfig(new KActivityManagerdSettings),
+          mainActionCollection(nullptr)
     {
     }
 };
@@ -74,22 +75,15 @@ SwitchingTab::SwitchingTab(QWidget *parent)
 
     d->scActivities->setActionTypes(KShortcutsEditor::GlobalAction);
     d->scActivities->addCollection(d->mainActionCollection);
-
-    connect(d->scActivities, &KShortcutsEditor::keyChange,
-            this, [this] { changed(); });
-    connect(d->checkRememberVirtualDesktop, &QAbstractButton::toggled,
-            this, &SwitchingTab::changed);
-
-    defaults();
 }
 
 SwitchingTab::~SwitchingTab()
 {
 }
 
-bool SwitchingTab::isDefault()
+KCoreConfigSkeleton *SwitchingTab::mainConfig()
 {
-    return !d->checkRememberVirtualDesktop->isChecked();
+    return d->mainConfig;
 }
 
 void SwitchingTab::shortcutChanged(const QKeySequence &sequence)
@@ -105,23 +99,5 @@ void SwitchingTab::shortcutChanged(const QKeySequence &sequence)
     KGlobalAccel::self()->setShortcut(action, { sequence },
                                       KGlobalAccel::NoAutoloading);
     d->mainActionCollection->writeSettings();
-
-    emit changed();
 }
 
-void SwitchingTab::defaults()
-{
-    d->checkRememberVirtualDesktop->setChecked(false);
-}
-
-void SwitchingTab::load()
-{
-
-    d->checkRememberVirtualDesktop->setChecked(d->mainConfig.virtualDesktopSwitchEnabled());
-}
-
-void SwitchingTab::save()
-{
-    d->mainConfig.setVirtualDesktopSwitchEnabled(d->checkRememberVirtualDesktop->isChecked());
-    d->mainConfig.save();
-}

@@ -29,9 +29,8 @@
 #include <QDebug>
 
 #include <KService>
-#include <KConfig>
-#include <KSharedConfig>
-#include <KConfigGroup>
+
+#include "kactivitymanagerd_plugins_settings.h"
 
 #include <utils/d_ptr_implementation.h>
 
@@ -48,8 +47,8 @@ public:
 
     QList<ApplicationData> applications;
     QSqlDatabase database;
-
-    KSharedConfig::Ptr pluginConfig;
+    
+    KActivityManagerdPluginsSettings *pluginConfig;
     bool enabled;
 };
 
@@ -57,7 +56,13 @@ BlacklistedApplicationsModel::BlacklistedApplicationsModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     d->enabled = false;
-    d->pluginConfig = KSharedConfig::openConfig(QStringLiteral("kactivitymanagerd-pluginsrc"));
+    d->pluginConfig = new KActivityManagerdPluginsSettings;
+    
+    const QString path
+        = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
+          + QStringLiteral("/kactivitymanagerd/resources/database");
+    d->database = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), QStringLiteral("plugins_sqlite_db_resources"));
+    d->database.setDatabaseName(path);
 }
 
 BlacklistedApplicationsModel::~BlacklistedApplicationsModel()
@@ -77,21 +82,12 @@ QHash<int, QByteArray> BlacklistedApplicationsModel::roleNames() const
 void BlacklistedApplicationsModel::load()
 {
     // Loading plugin configuration
-
-    const auto config = d->pluginConfig->group(SQLITE_PLUGIN_CONFIG_KEY);
-
-    const auto defaultBlockedValue = config.readEntry("blocked-by-default", false);
-    auto blockedApplications = QSet<QString>::fromList(config.readEntry("blocked-applications", QStringList()));
-    auto allowedApplications = QSet<QString>::fromList(config.readEntry("allowed-applications", QStringList()));
+    d->pluginConfig->load();
+    const auto defaultBlockedValue = d->pluginConfig->defaultBlockedByDefaultValue();
+    auto blockedApplications = QSet<QString>::fromList(d->pluginConfig->blockedApplications());
+    auto allowedApplications = QSet<QString>::fromList(d->pluginConfig->allowedApplications());
 
     // Reading new applications from the database
-
-    const QString path
-        = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
-          + QStringLiteral("/kactivitymanagerd/resources/database");
-
-    d->database = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), QStringLiteral("plugins_sqlite_db_resources"));
-    d->database.setDatabaseName(path);
 
     if (!d->database.open()) {
         // qDebug() << "Failed to open the database" << path << d->database.lastError();
@@ -150,17 +146,8 @@ void BlacklistedApplicationsModel::load()
 
 void BlacklistedApplicationsModel::save()
 {
-    auto config = d->pluginConfig->group(SQLITE_PLUGIN_CONFIG_KEY);
-    QStringList blockedApplications;
-    QStringList allowedApplications;
-
-    for (int i = 0; i < rowCount(); i++) {
-        (d->applications[i].blocked ? blockedApplications : allowedApplications)
-            << d->applications[i].name;
-    }
-
-    config.writeEntry("allowed-applications", allowedApplications);
-    config.writeEntry("blocked-applications", blockedApplications);
+    d->pluginConfig->save();
+    emit changed(false);
 }
 
 void BlacklistedApplicationsModel::defaults()
@@ -171,6 +158,8 @@ void BlacklistedApplicationsModel::defaults()
 
     dataChanged(QAbstractListModel::index(0),
                 QAbstractListModel::index(rowCount() - 1));
+    
+    emit defaulted(true);
 }
 
 void BlacklistedApplicationsModel::toggleApplicationBlocked(int index)
@@ -183,14 +172,35 @@ void BlacklistedApplicationsModel::toggleApplicationBlocked(int index)
     dataChanged(QAbstractListModel::index(index),
                 QAbstractListModel::index(index));
 
-    emit changed();
+    QStringList blockedApplications;
+    QStringList allowedApplications;
+
+    for (int i = 0; i < rowCount(); i++) {
+        const auto name = d->applications[i].name;
+        if (d->applications[i].blocked) {
+            blockedApplications << name;
+        } else {
+            allowedApplications << name;
+        }
+    }
+
+    d->pluginConfig->setBlockedApplications(blockedApplications);
+    d->pluginConfig->setAllowedApplications(allowedApplications);
+
+    const auto allowedApplicationsItem = d->pluginConfig->findItem("allowedApplications");
+    Q_ASSERT(allowedApplicationsItem);
+    const auto blockedApplicationsItem = d->pluginConfig->findItem("allowedApplications");
+    Q_ASSERT(blockedApplicationsItem);
+
+    emit changed(blockedApplicationsItem->isSaveNeeded() && allowedApplicationsItem->isSaveNeeded());
+    emit defaulted(blockedApplicationsItem->isDefault() && allowedApplicationsItem->isDefault());
 }
 
 QVariant BlacklistedApplicationsModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
-    Q_UNUSED(section);
-    Q_UNUSED(orientation);
-    Q_UNUSED(role);
+    Q_UNUSED(section)
+    Q_UNUSED(orientation)
+    Q_UNUSED(role)
     return QVariant();
 }
 
@@ -224,7 +234,7 @@ QVariant BlacklistedApplicationsModel::data(const QModelIndex &modelIndex, int r
 
 int BlacklistedApplicationsModel::rowCount(const QModelIndex &parent) const
 {
-    Q_UNUSED(parent);
+    Q_UNUSED(parent)
     return d->applications.size();
 }
 

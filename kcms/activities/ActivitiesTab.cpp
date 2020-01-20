@@ -61,14 +61,3 @@ ActivitiesTab::~ActivitiesTab()
 {
 }
 
-void ActivitiesTab::defaults()
-{
-}
-
-void ActivitiesTab::load()
-{
-}
-
-void ActivitiesTab::save()
-{
-}

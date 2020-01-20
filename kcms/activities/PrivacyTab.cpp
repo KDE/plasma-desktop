@@ -63,6 +63,11 @@ public:
     }
 };
 
+KCoreConfigSkeleton *PrivacyTab::pluginConfig()
+{
+    return d->pluginConfig;
+}
+
 PrivacyTab::PrivacyTab(QWidget *parent)
     : QWidget(parent)
     , d(this)
@@ -71,10 +76,10 @@ PrivacyTab::PrivacyTab(QWidget *parent)
 
     // Keep history initialization
 
-    d->spinKeepHistory->setRange(0, INT_MAX);
-    d->spinKeepHistory->setSpecialValueText(i18nc("unlimited number of months", "Forever"));
+    d->kcfg_keepHistoryFor->setRange(0, INT_MAX);
+    d->kcfg_keepHistoryFor->setSpecialValueText(i18nc("unlimited number of months", "Forever"));
 
-    connect(d->spinKeepHistory, SIGNAL(valueChanged(int)),
+    connect(d->kcfg_keepHistoryFor, SIGNAL(valueChanged(int)),
             this, SLOT(spinKeepHistoryValueChanged(int)));
     spinKeepHistoryValueChanged(0);
 
@@ -96,6 +101,8 @@ PrivacyTab::PrivacyTab(QWidget *parent)
     // Blacklist applications
 
     d->blacklistedApplicationsModel = new BlacklistedApplicationsModel(this);
+    connect(d->blacklistedApplicationsModel, &BlacklistedApplicationsModel::changed, this, &PrivacyTab::blackListModelChanged);
+    connect(d->blacklistedApplicationsModel, &BlacklistedApplicationsModel::defaulted, this, &PrivacyTab::blackListModelDefaulted);
 
     new QGridLayout(d->viewBlacklistedApplicationsContainer);
 
@@ -108,21 +115,9 @@ PrivacyTab::PrivacyTab(QWidget *parent)
 
     // React to changes
 
-    connect(d->radioRememberAllApplications, &QAbstractButton::toggled, this, &PrivacyTab::changed);
-    connect(d->radioDontRememberApplications, &QAbstractButton::toggled, this, &PrivacyTab::changed);
-    connect(d->spinKeepHistory, SIGNAL(valueChanged(int)), this, SIGNAL(changed()));
-    connect(d->blacklistedApplicationsModel, &BlacklistedApplicationsModel::changed, this, &PrivacyTab::changed);
-
     connect(d->radioRememberSpecificApplications, &QAbstractButton::toggled,
             d->blacklistedApplicationsModel, &BlacklistedApplicationsModel::setEnabled);
-
-    connect(d->checkBlacklistAllNotOnList, &QAbstractButton::toggled, this, &PrivacyTab::changed);
-
-    defaults();
-
-    d->checkBlacklistAllNotOnList->setEnabled(false);
     d->blacklistedApplicationsModel->setEnabled(false);
-    d->viewBlacklistedApplicationsContainer->setEnabled(false);
 
     d->messageWidget->setVisible(false);
 }
@@ -131,51 +126,25 @@ PrivacyTab::~PrivacyTab()
 {
 }
 
-bool PrivacyTab::isDefault()
-{
-    return d->radioRememberAllApplications->isChecked() &&
-            d->spinKeepHistory->value() == d->pluginConfig->defaultKeepHistoryForValue() &&
-            d->checkBlacklistAllNotOnList->isChecked() == d->pluginConfig->defaultBlockedByDefaultValue();
-}
-
 void PrivacyTab::defaults()
 {
     d->blacklistedApplicationsModel->defaults();
-
-    d->radioRememberAllApplications->click();
-    d->spinKeepHistory->setValue(d->pluginConfig->defaultKeepHistoryForValue());
-    d->checkBlacklistAllNotOnList->setChecked(d->pluginConfig->defaultBlockedByDefaultValue());
 }
 
 void PrivacyTab::load()
 {
     d->blacklistedApplicationsModel->load();
-
-    const auto whatToRemember = static_cast<WhatToRemember>(d->pluginConfig->whatToRemember());
-
-    d->radioRememberAllApplications->setChecked(whatToRemember == AllApplications);
-    d->radioRememberSpecificApplications->setChecked(whatToRemember == SpecificApplications);
-    d->radioDontRememberApplications->setChecked(whatToRemember == NoApplications);
-
-    d->spinKeepHistory->setValue(d->pluginConfig->keepHistoryFor());
-    d->checkBlacklistAllNotOnList->setChecked(d->pluginConfig->blockedByDefault());
 }
 
 void PrivacyTab::save()
 {
     d->blacklistedApplicationsModel->save();
-
+    
     const auto whatToRemember =
         d->radioRememberSpecificApplications->isChecked() ? SpecificApplications :
         d->radioDontRememberApplications->isChecked()     ? NoApplications :
         /* otherwise */                                     AllApplications;
-
-    d->pluginConfig->setWhatToRemember(static_cast<int>(whatToRemember));
-    d->pluginConfig->setKeepHistoryFor(d->spinKeepHistory->value());
-    d->pluginConfig->setBlockedByDefault(d->checkBlacklistAllNotOnList->isChecked());
-
-    d->pluginConfig->save();
-
+    
     d->mainConfig->setResourceScoringEnabled(whatToRemember != NoApplications);
     d->mainConfig->save();
 }
@@ -216,8 +185,8 @@ void PrivacyTab::spinKeepHistoryValueChanged(int value)
                                  " month", " months");
 
     if (value) {
-        d->spinKeepHistory->setPrefix(
+        d->kcfg_keepHistoryFor->setPrefix(
             i18nc("for in 'keep history for 5 months'", "For "));
-        d->spinKeepHistory->setSuffix(months.subs(value).toString());
+        d->kcfg_keepHistoryFor->setSuffix(months.subs(value).toString());
     }
 }

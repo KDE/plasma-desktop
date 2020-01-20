@@ -49,7 +49,8 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
 Q_SIGNALS:
-    void changed();
+    void changed(bool changed);
+    void defaulted(bool isDefault);
     void enabledChanged(bool enabled);
 
 public Q_SLOTS:

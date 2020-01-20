@@ -34,14 +34,6 @@ public:
     explicit ActivitiesTab(QWidget *parent);
     ~ActivitiesTab() override;
 
-public Q_SLOTS:
-    void defaults();
-    void load();
-    void save();
-
-Q_SIGNALS:
-    void changed();
-
 private:
     D_PTR;
 };

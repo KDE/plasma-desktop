@@ -25,6 +25,8 @@
 
 #include <utils/d_ptr.h>
 
+class KCoreConfigSkeleton;
+
 /**
  * PrivacyTab
  */
@@ -35,7 +37,8 @@ public:
     ~PrivacyTab() override;
 
     bool isDefault();
-
+    KCoreConfigSkeleton *pluginConfig();
+    
 public Q_SLOTS:
     void defaults();
     void load();
@@ -51,7 +54,8 @@ private Q_SLOTS:
     void spinKeepHistoryValueChanged(int value);
 
 Q_SIGNALS:
-    void changed();
+    void blackListModelChanged(bool changed);
+    void blackListModelDefaulted(bool isDefault);
 
 private:
     enum WhatToRemember {

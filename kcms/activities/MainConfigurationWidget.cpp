@@ -46,48 +46,37 @@ MainConfigurationWidget::MainConfigurationWidget(QWidget *parent, QVariantList a
     d->tabs->insertTab(0, d->tabActivities = new ActivitiesTab(d->tabs), i18n("Activities"));
     d->tabs->insertTab(1, d->tabSwitching  = new SwitchingTab(d->tabs), i18n("Switching"));
     d->tabs->insertTab(2, d->tabPrivacy    = new PrivacyTab(d->tabs), i18n("Privacy"));
-
-    connect(d->tabActivities, &ActivitiesTab::changed, this, &MainConfigurationWidget::onChanged);
-    connect(d->tabSwitching,  &SwitchingTab::changed, this, &MainConfigurationWidget::onChanged);
-    connect(d->tabPrivacy,    &PrivacyTab::changed, this, &MainConfigurationWidget::onChanged);
+    
+    addConfig(d->tabPrivacy->pluginConfig(), d->tabPrivacy);
+    addConfig(d->tabSwitching->mainConfig(), d->tabSwitching);
+    
+    connect (d->tabPrivacy, &PrivacyTab::blackListModelChanged, this, &MainConfigurationWidget::unmanagedWidgetChangeState);
+    connect (d->tabPrivacy, &PrivacyTab::blackListModelDefaulted, this, &MainConfigurationWidget::unmanagedWidgetDefaultState);
 }
 
 MainConfigurationWidget::~MainConfigurationWidget()
 {
 }
 
-void MainConfigurationWidget::checkDefault()
-{
-    defaulted(d->tabSwitching->isDefault() && d->tabPrivacy->isDefault());
-}
-
-void MainConfigurationWidget::onChanged()
-{
-    checkDefault();
-    markAsChanged();
-}
-
 void MainConfigurationWidget::defaults()
 {
-    d->tabActivities->defaults();
+    KCModule::defaults();
+    
     d->tabPrivacy->defaults();
-    d->tabSwitching->defaults();
 }
 
 void MainConfigurationWidget::load()
 {
-    d->tabActivities->load();
+    KCModule::load();
+    
     d->tabPrivacy->load();
-    d->tabSwitching->load();
-
-    checkDefault();
 }
 
 void MainConfigurationWidget::save()
 {
-    d->tabActivities->save();
+    KCModule::save();
+    
     d->tabPrivacy->save();
-    d->tabSwitching->save();
 }
 
 #include "MainConfigurationWidget.moc"

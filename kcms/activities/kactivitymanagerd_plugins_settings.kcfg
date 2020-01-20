@@ -16,6 +16,12 @@
      <entry name="whatToRemember" key="what-to-remember" type="Int">
          <label>Which data to keep in activity history</label>
         <default>0</default>
-     </entry>     
+     </entry>
+     <entry name="allowedApplications" key="allowed-applications" type="StringList">
+          <label>List of Applications whose activity history to save</label>
+     </entry>
+     <entry name="blockedApplications" key="blocked-applications" type="StringList">
+          <label>List of Applications whose activity history not to save</label>
+     </entry>
    </group>
 </kcfg>

@@ -26,6 +26,7 @@
 #include <utils/d_ptr.h>
 
 class QKeySequence;
+class KCoreConfigSkeleton;
 
 /**
  * SwitchingTab
@@ -36,18 +37,10 @@ public:
     explicit SwitchingTab(QWidget *parent);
     ~SwitchingTab() override;
 
-    bool isDefault();
-
-public Q_SLOTS:
-    void defaults();
-    void load();
-    void save();
+    KCoreConfigSkeleton *mainConfig();
 
 private Q_SLOTS:
     void shortcutChanged(const QKeySequence &sequence);
-
-Q_SIGNALS:
-    void changed();
 
 private:
     D_PTR;

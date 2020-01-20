@@ -30,41 +30,17 @@
      <property name="formAlignment">
       <set>Qt::AlignHCenter|Qt::AlignTop</set>
      </property>
-     <item row="1" column="0">
-      <widget class="QLabel" name="labelRememberDocuments">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelKeepHistory">
        <property name="text">
-        <string>Remember opened documents:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QRadioButton" name="radioRememberAllApplications">
-       <property name="text">
-        <string>For a&amp;ll applications</string>
-       </property>
-       <property name="checked">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QRadioButton" name="radioDontRememberApplications">
-       <property name="text">
-        <string>&amp;Do not remember</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QRadioButton" name="radioRememberSpecificApplications">
-       <property name="text">
-        <string>O&amp;nly for specific applications:</string>
+        <string>Keep history:</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QSpinBox" name="spinKeepHistory"/>
+        <widget class="QSpinBox" name="kcfg_keepHistoryFor"/>
        </item>
        <item>
         <widget class="QPushButton" name="buttonClearRecentHistory">
@@ -79,10 +55,46 @@
        </item>
       </layout>
      </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="labelKeepHistory">
+     <item row="1" column="1">
+      <widget class="QGroupBox" name="kcfg_whatToRemember">
+       <property name="title">
+        <string/>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QRadioButton" name="radioRememberAllApplications">
+           <property name="text">
+            <string>For a&amp;ll applications</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioDontRememberApplications">
+           <property name="text">
+            <string>&amp;Do not remember</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioRememberSpecificApplications">
+           <property name="text">
+            <string>O&amp;nly for specific applications:</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="labelRememberDocuments">
        <property name="text">
-        <string>Keep history:</string>
+        <string>Remember opened documents:</string>
        </property>
       </widget>
      </item>
@@ -104,7 +116,7 @@
       <number>6</number>
      </property>
      <item>
-      <widget class="QCheckBox" name="checkBlacklistAllNotOnList">
+      <widget class="QCheckBox" name="kcfg_blockedByDefault">
        <property name="text">
         <string>Blacklist applications not on the list</string>
        </property>
@@ -142,7 +154,7 @@
   <connection>
    <sender>radioRememberSpecificApplications</sender>
    <signal>toggled(bool)</signal>
-   <receiver>checkBlacklistAllNotOnList</receiver>
+   <receiver>kcfg_blockedByDefault</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
