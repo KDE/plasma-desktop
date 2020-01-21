@@ -149,7 +149,7 @@ Item {
     PlasmaCore.ToolTipArea {
         id: tooltip
         anchors.fill: parent
-        mainText : i18n("Minimize Windows")
+        mainText : i18n("Minimize all Windows")
         subText : i18n("Show the desktop by minimizing all windows")
         icon : plasmoid.configuration.icon
 
