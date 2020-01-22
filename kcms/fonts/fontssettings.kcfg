@@ -12,6 +12,7 @@
       QFont generalFont = QFont("Lucida Grande", 13);
       #else
       QFont generalFont = QFont("Noto Sans", 10);
+      generalFont.setStyleName("Regular");
       #endif
       </code>
       <default code="true">generalFont</default>
@@ -23,6 +24,7 @@
       QFont fixedWidthFont = QFont("Monaco", 10);
       #else
       QFont fixedWidthFont = QFont("Hack", 9);
+      fixedWidthFont.setStyleName("Regular");
       #endif
       </code>
       <default code="true">fixedWidthFont</default>
@@ -34,6 +36,7 @@
       QFont smallFont = QFont("Lucida Grande", 9);
       #else
       QFont smallFont = QFont("Noto Sans", 8);
+      smallFont.setStyleName("Regular");
       #endif
       </code>
       <default code="true">smallFont</default>
@@ -45,6 +48,7 @@
       QFont toolBarFont = QFont("Lucida Grande", 11);
       #else
       QFont toolBarFont = QFont("Noto Sans", 10);
+      toolBarFont.setStyleName("Regular");
       #endif
       </code>
       <default code="true">toolBarFont</default>
@@ -56,6 +60,7 @@
       QFont menuFont = QFont("Lucida Grande", 13);
       #else
       QFont menuFont = QFont("Noto Sans", 10);
+      menuFont.setStyleName("Regular");
       #endif
       </code>
       <default code="true">menuFont</default>
@@ -69,6 +74,7 @@
       QFont windowTitleFont = QFont("Lucida Grande", 14);
       #else
       QFont windowTitleFont = QFont("Noto Sans", 10);
+      windowTitleFont.setStyleName("Regular");
       #endif
       </code>
       <default code="true">windowTitleFont</default>
