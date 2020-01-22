@@ -21,6 +21,8 @@ kconfig_add_kcfg_files(kcm_style_PART_SRCS stylesettings.kcfgc GENERATE_MOC)
 
 add_library(kcm_style MODULE ${kcm_style_PART_SRCS})
 
+target_compile_definitions(kcm_style PUBLIC CMAKE_INSTALL_FULL_LIBEXECDIR="${CMAKE_INSTALL_FULL_LIBEXECDIR}")
+
 target_link_libraries(kcm_style
     Qt5::X11Extras
     Qt5::DBus
