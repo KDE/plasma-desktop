@@ -21,8 +21,10 @@ import QtQuick 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-Item {
+MouseArea {
     id: audioStreamIconBox
+    hoverEnabled: true
+    onClicked: toggleMuted()
 
     // Using States rather than a simple Behavior we can apply different transitions,
     // which allows us to delay showing the icon but hide it instantly still.
@@ -89,6 +91,13 @@ Item {
 
     opacity: 0
     visible: opacity > 0
+
+    PlasmaCore.FrameSvgItem {
+        anchors.fill: audioStreamIcon
+        visible: parent.containsMouse
+        imagePath: "widgets/viewitem"
+        prefix: "hover"
+    }
 
     PlasmaCore.Svg {
         id: audioSvg
@@ -167,18 +176,5 @@ Item {
                 }
             }
         ]
-    }
-
-    MouseArea {
-        anchors.fill: parent
-        hoverEnabled: true
-        onClicked: toggleMuted()
-
-        PlasmaCore.FrameSvgItem {
-            anchors.fill: parent
-            visible: parent.containsMouse
-            imagePath: "widgets/viewitem"
-            prefix: "hover"
-        }
     }
 }
