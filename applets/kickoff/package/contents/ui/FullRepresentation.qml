@@ -118,17 +118,18 @@ Item {
         id: header
     }
 
-    Rectangle {
+    PlasmaCore.SvgItem {
         id: headerSeparator
-
-        height: Math.floor(units.devicePixelRatio)
-        color: theme.textColor
-        opacity: 0.2
-        width: root.width - 2 * units.gridUnit
-
         anchors {
             top: header.top
             horizontalCenter: header.horizontalCenter
+        }
+        height: headerSeparatorLine.elementSize("horizontal-line").height
+        width: root.width - 2 * units.gridUnit
+        elementId: "horizontal-line"
+        svg: PlasmaCore.Svg {
+            id: headerSeparatorLine
+            imagePath: "widgets/line"
         }
     }
 
@@ -233,7 +234,8 @@ Item {
                     }
                     PropertyChanges {
                         target:tabBarSeparator
-                        width: Math.floor(units.devicePixelRatio)
+                        width: tabBarSeparatorLine.elementSize("vertical-line").width
+                        elementId: "vertical-line"
                     }
                     AnchorChanges {
                         target: tabBarSeparator
@@ -283,7 +285,8 @@ Item {
                     }
                     PropertyChanges {
                         target:tabBarSeparator
-                        height: Math.floor(units.devicePixelRatio)
+                        height: tabBarSeparatorLine.elementSize("horizontal-line").height
+                        elementId: "horizontal-line"
                     }
                     AnchorChanges {
                         target: tabBarSeparator
@@ -333,7 +336,8 @@ Item {
                     }
                     PropertyChanges {
                         target:tabBarSeparator
-                        width:  Math.floor(units.devicePixelRatio)
+                        width: tabBarSeparatorLine.elementSize("vertical-line").width
+                        elementId: "vertical-line"
                     }
                     AnchorChanges {
                         target: tabBarSeparator
@@ -390,7 +394,8 @@ Item {
                     }
                     PropertyChanges {
                         target:tabBarSeparator
-                        height: Math.floor(units.devicePixelRatio)
+                        height: tabBarSeparatorLine.elementSize("horizontal-line").height
+                        elementId: "horizontal-line"
                     }
                     AnchorChanges {
                         target: tabBarSeparator
@@ -447,11 +452,12 @@ Item {
         }
     } // tabBar
 
-    Rectangle {
+    PlasmaCore.SvgItem {
         id: tabBarSeparator
-
-        color: theme.textColor
-        opacity: 0.2
+        svg: PlasmaCore.Svg {
+            id: tabBarSeparatorLine
+            imagePath: "widgets/line"
+        }
     }
 
     MouseArea {
