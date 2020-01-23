@@ -269,11 +269,6 @@ static void createGtkrc( bool exportColors, const QPalette& cg, bool exportGtkTh
 
     t << i18n(
             "# created by KDE Plasma, %1\n"
-            "#\n"
-            "# If you do not want Plasma to override your GTK settings, select\n"
-            "# Colors in the System Settings and disable the checkbox\n"
-            "# \"Apply colors to non-Qt applications\"\n"
-            "#\n"
             "#\n", QDateTime::currentDateTime().toString());
 
     if ( 2==version ) {  // we should maybe check for MacOS settings here
