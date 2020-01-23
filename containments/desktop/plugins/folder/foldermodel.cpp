@@ -1047,7 +1047,7 @@ static bool isDropBetweenSharedViews(const QList<QUrl> &urls, const QUrl &folder
     return true;
 }
 
-void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
+void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row, bool showMenuManually)
 {
     QMimeData *mimeData = qobject_cast<QMimeData *>(dropEvent->property("mimeData").value<QObject *>());
 
@@ -1178,7 +1178,8 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
     QDropEvent ev(pos, possibleActions, mimeData, buttons, modifiers);
     ev.setDropAction(proposedAction);
 
-    KIO::DropJob *dropJob = KIO::drop(&ev, dropTargetUrl);
+    KIO::DropJobFlag flag = showMenuManually? KIO::ShowMenuManually : KIO::DropJobDefaultFlags;
+    KIO::DropJob *dropJob = KIO::drop(&ev, dropTargetUrl, flag);
     dropJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
 
     // The QMimeData we extract from the DropArea's drop event is deleted as soon as this method

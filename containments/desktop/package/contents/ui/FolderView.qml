@@ -154,14 +154,14 @@ FocusScope {
         var dragIndex = gridView.indexAt(dragPos.x, dragPos.y);
 
         if (listener.dragX == -1 || dragIndex !== dropIndex) {
-            dir.drop(target, event, dropItemAt(dropPos));
+            dir.drop(target, event, dropItemAt(dropPos), root.isContainment && !plasmoid.immutable);
         }
     }
 
     Connections {
         target: dir
         onPopupMenuAboutToShow: {
-            if (!plasmoid.immutable) {
+            if (root.isContainment && !plasmoid.immutable) {
                 plasmoid.processMimeData(mimeData, x, y, dropJob);
             }
         }
