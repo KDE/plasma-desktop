@@ -87,7 +87,7 @@ bool KdePlatformDependent::saveCredentials(const QUrl& /*baseUrl*/, const QStrin
 {
     // TODO KF6 This will want replacing with a call named something that suggests calling it shows accounts (and perhaps
     // directly requests the accounts kcm to start adding a new account if it's not there, maybe even pre-fills the fields...)
-    KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("Service"), QStringLiteral("Library == 'kcm_kaccounts'"));
+    KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("KCModule"), QStringLiteral("Library == 'kcm_kaccounts'"));
     // If we failed to get the kcm, tell the caller we failed
     if (services.count() == 0) {
         return false;
@@ -97,6 +97,8 @@ bool KdePlatformDependent::saveCredentials(const QUrl& /*baseUrl*/, const QStrin
     return QProcess::startDetached(service->exec());
 }
 
+// TODO Cache the account (so we can call getAccount a WHOLE LOT of times without making the application super slow)
+// TODO Also don't just cache it forever, so reset to nullptr every so often, so we pick up potential new stuff the user's done
 static Accounts::Account* getAccount(const QUrl& /*baseUrl*/) {
     Accounts::Manager* accountsManager = KAccounts::accountsManager();
     Accounts::Account* account{nullptr};
