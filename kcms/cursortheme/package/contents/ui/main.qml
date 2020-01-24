@@ -147,7 +147,7 @@ KCM.GridViewKCM {
                 NewStuff.Button {
                     id: newStuffButton
                     enabled: kcm.canInstall
-                    downloadNewWhat: i18n("Cursors")
+                    text: i18n("&Get New Cursors...")
                     configFile: "xcursor.knsrc"
                     viewMode: NewStuff.Page.ViewMode.Tiles
                     onChangedEntriesChanged: kcm.ghnsEntriesChanged(newStuffButton.changedEntries);
