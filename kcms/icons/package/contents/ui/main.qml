@@ -253,7 +253,7 @@ KCM.GridViewKCM {
 
             NewStuff.Button {
                 id: newStuffButton
-                downloadNewWhat: i18n("Icons")
+                text: i18n("Get New Icons...")
                 configFile: "icons.knsrc"
                 viewMode: NewStuff.Page.ViewMode.Preview
                 onChangedEntriesChanged: kcm.ghnsEntriesChanged(newStuffButton.changedEntries);

@@ -208,7 +208,7 @@ KCM.GridViewKCM {
 
             NewStuff.Button {
                 id: newStuffButton
-                downloadNewWhat: i18n("Plasma Styles")
+                text: i18n("Get New Plasma Styles...")
                 configFile: "plasma-themes.knsrc"
                 viewMode: NewStuff.Page.ViewMode.Preview
                 onChangedEntriesChanged: kcm.load();

@@ -350,7 +350,7 @@ KCM.GridViewKCM {
 
             NewStuff.Button {
                 id: newStuffButton
-                downloadNewWhat: i18n("Color Schemes")
+                text: i18n("Get New Color Schemes...")
                 configFile: "colorschemes.knsrc"
                 viewMode: NewStuff.Page.ViewMode.Tiles
                 onChangedEntriesChanged: kcm.reloadModel(newStuffButton.changedEntries);

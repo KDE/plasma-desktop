@@ -85,7 +85,7 @@ KCM.GridViewKCM {
                 Layout.fillWidth: true
             }
             NewStuff.Button {
-                downloadNewWhat: i18n("Global Themes")
+                text: i18n("Get New Global Themes...")
                 configFile: "lookandfeel.knsrc"
                 viewMode: NewStuff.Page.ViewMode.Preview
                 onChangedEntriesChanged: kcm.reloadModel();
