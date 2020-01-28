@@ -179,14 +179,15 @@ Column {
             property int winId: isWin && windows[flatIndex] !== undefined ? windows[flatIndex] : 0
 
             PlasmaComponents.Highlight {
-                anchors.fill: parent
+                anchors.fill: hoverHandler
                 visible: hoverHandler.containsMouse
                 pressed: hoverHandler.containsPress
             }
 
             PlasmaCore.WindowThumbnail {
-                anchors.fill: parent
-                anchors.margins: units.smallSpacing
+                anchors.fill: hoverHandler
+                // Indent by one pixel to make sure we never cover up the entire highlight
+                anchors.margins: 1
 
                 visible: !albumArtImage.visible && !thumbnailSourceItem.isMinimized
                 winId: thumbnailSourceItem.winId
@@ -212,8 +213,9 @@ Column {
                 // also Image.Loading to prevent loading thumbnails just because the album art takes a split second to load
                 readonly property bool available: status === Image.Ready || status === Image.Loading
 
-                height: thumbnail.height - playerControlsLoader.realHeight
-                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.fill: hoverHandler
+                // Indent by one pixel to make sure we never cover up the entire highlight
+                anchors.margins: 1
                 sourceSize: Qt.size(parent.width, parent.height)
 
                 asynchronous: true
@@ -236,6 +238,8 @@ Column {
             ToolTipWindowMouseArea {
                 id: hoverHandler
                 anchors.fill: parent
+                // Don't go under the player controls bar, when it's visible
+                anchors.bottomMargin: playerControlsLoader.realHeight
                 rootTask: parentTask
                 modelIndex: submodelIndex
                 winId: thumbnailSourceItem.winId
