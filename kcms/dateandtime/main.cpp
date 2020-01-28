@@ -29,7 +29,6 @@
 
 #include <QDBusConnection>
 #include <kaboutdata.h>
-#include <kdialog.h>
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
 #include <kmessagebox.h>
@@ -76,7 +75,7 @@ KclockModule::KclockModule(QWidget *parent, const QVariantList &)
 
   QVBoxLayout *layout = new QVBoxLayout(this);
   layout->setContentsMargins(0, 0, 0, 0);
-  layout->setSpacing(KDialog::spacingHint());
+  layout->setSpacing(style()->pixelMetric(QStyle::PM_DefaultLayoutSpacing) );
 
   dtime = new Dtime(this, m_haveTimedated);
   layout->addWidget(dtime);

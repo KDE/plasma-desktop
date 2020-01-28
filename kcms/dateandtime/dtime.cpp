@@ -44,7 +44,6 @@
 #include <QDebug>
 #include <kprocess.h>
 #include <kmessagebox.h>
-#include <kdialog.h>
 #include <kconfig.h>
 #include <kcolorscheme.h>
 #include <ksystemtimezone.h>
@@ -93,7 +92,7 @@ Dtime::Dtime(QWidget * parent, bool haveTimeDated):
   kclock->setMinimumSize(150,150);
   v2->addWidget( kclock );
 
-  v2->addSpacing( KDialog::spacingHint() );
+  v2->addSpacing( style()->pixelMetric(QStyle::PM_DefaultLayoutSpacing) );
 
   QHBoxLayout *v3 = new QHBoxLayout( );
   v2->addLayout( v3 );
@@ -427,7 +426,7 @@ void Kclock::paintInterface(QPainter *p, const QRect &rect)
 
     // paint face and glass cache
     QRect faceRect = m_faceCache.rect();
-    QRect targetRect = QRect(QPoint(0, 0), QSize(m_faceCache.width() / devicePixelRatioF(), m_faceCache.height() / devicePixelRatioF()));
+    QRect targetRect = QRect(QPoint(0, 0), QSize(qRound(m_faceCache.width() / devicePixelRatioF()), qRound(m_faceCache.height() / devicePixelRatioF())));
 
     if (m_repaintCache == RepaintAll) {
         m_faceCache.fill(Qt::transparent);
