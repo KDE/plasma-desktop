@@ -86,7 +86,8 @@ Item {
         }
 
         // Crop the avatar to fit in a circle, like the lock and login screens
-        layer.enabled: true
+        // but don't on software rendering where this won't render
+        layer.enabled: faceIcon.GraphicsInfo.api !== GraphicsInfo.Software
         layer.effect: OpacityMask {
             // this Rectangle is a circle due to radius size
             maskSource: Rectangle {
