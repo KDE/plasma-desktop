@@ -293,7 +293,9 @@ class CopyHelperPrivate : public QObject
     public:
         Q_INVOKABLE static void copyTextToClipboard(const QString& text)
         {
-            qGuiApp->clipboard()->setText(text);
+            QClipboard *clipboard = qGuiApp->clipboard();
+            clipboard->setText(text, QClipboard::Clipboard);
+            clipboard->setText(text, QClipboard::Selection);
         }
 };
 
