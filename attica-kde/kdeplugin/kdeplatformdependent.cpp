@@ -203,7 +203,7 @@ bool Attica::KdePlatformDependent::askForCredentials(const QUrl& baseUrl, QStrin
 QList<QUrl> KdePlatformDependent::getDefaultProviderFiles() const
 {
     KConfigGroup group(m_config, "General");
-    QStringList pathStrings = group.readPathEntry("providerFiles", QStringList("http://download.kde.org/ocs/providers.xml"));
+    QStringList pathStrings = group.readPathEntry("providerFiles", QStringList("https://autoconfig.kde.org/ocs/providers.xml"));
     QList<QUrl> paths;
     foreach (const QString& pathString, pathStrings) {
         paths.append(QUrl(pathString));
@@ -215,7 +215,7 @@ QList<QUrl> KdePlatformDependent::getDefaultProviderFiles() const
 void KdePlatformDependent::addDefaultProviderFile(const QUrl& url)
 {
     KConfigGroup group(m_config, "General");
-    QStringList pathStrings = group.readPathEntry("providerFiles", QStringList("http://download.kde.org/ocs/providers.xml"));
+    QStringList pathStrings = group.readPathEntry("providerFiles", QStringList("https://autoconfig.kde.org/ocs/providers.xml"));
     QString urlString = url.toString();
     if(!pathStrings.contains(urlString)) {
         pathStrings.append(urlString);
@@ -228,7 +228,7 @@ void KdePlatformDependent::addDefaultProviderFile(const QUrl& url)
 void KdePlatformDependent::removeDefaultProviderFile(const QUrl& url)
 {
     KConfigGroup group(m_config, "General");
-    QStringList pathStrings = group.readPathEntry("providerFiles", QStringList("http://download.kde.org/ocs/providers.xml"));
+    QStringList pathStrings = group.readPathEntry("providerFiles", QStringList("https://autoconfig.kde.org/ocs/providers.xml"));
     pathStrings.removeAll(url.toString());
     group.writeEntry("providerFiles", pathStrings);
 }
