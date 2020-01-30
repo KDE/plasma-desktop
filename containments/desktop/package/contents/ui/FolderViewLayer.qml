@@ -225,8 +225,8 @@ FocusScope {
         }
     }
 
-    PlasmaCore.ColorScope {
-        id: colorScope
+    FolderView {
+        id: folderView
 
         anchors.left: parent.left
         anchors.top: parent.top
@@ -234,39 +234,29 @@ FocusScope {
         anchors.right: parent.right
         anchors.bottom: parent.bottom
 
-        // If containment always complementary, otherwise inherit (usually normal).
-        colorGroup: (root.isContainment ? PlasmaCore.Theme.ComplementaryColorGroup
-            : PlasmaCore.ColorScope.colorGroup)
+        focus: true
+        isRootView: true
 
-        FolderView {
-            id: folderView
+        url: plasmoid.configuration.url
+        locked: (plasmoid.configuration.locked || !isContainment || lockedByKiosk)
+        filterMode: plasmoid.configuration.filterMode
+        filterPattern: plasmoid.configuration.filterPattern
+        filterMimeTypes: plasmoid.configuration.filterMimeTypes
 
-            anchors.fill: parent
+        flow: (plasmoid.configuration.arrangement === 0) ? GridView.FlowLeftToRight : GridView.FlowTopToBottom
+        layoutDirection: (plasmoid.configuration.alignment === 0) ? Qt.LeftToRight : Qt.RightToLeft
 
-            focus: true
-            isRootView: true
+        onSortModeChanged: {
+            plasmoid.configuration.sortMode = sortMode;
+        }
 
-            url: plasmoid.configuration.url
-            locked: (plasmoid.configuration.locked || !isContainment || lockedByKiosk)
-            filterMode: plasmoid.configuration.filterMode
-            filterPattern: plasmoid.configuration.filterPattern
-            filterMimeTypes: plasmoid.configuration.filterMimeTypes
+        onPositionsChanged: {
+            plasmoid.configuration.positions = folderView.positions;
+        }
 
-            flow: (plasmoid.configuration.arrangement === 0) ? GridView.FlowLeftToRight : GridView.FlowTopToBottom
-            layoutDirection: (plasmoid.configuration.alignment === 0) ? Qt.LeftToRight : Qt.RightToLeft
-
-            onSortModeChanged: {
-                plasmoid.configuration.sortMode = sortMode;
-            }
-
-            onPositionsChanged: {
-                plasmoid.configuration.positions = folderView.positions;
-            }
-
-            Component.onCompleted: {
-                folderView.sortMode = plasmoid.configuration.sortMode;
-                folderView.positions = plasmoid.configuration.positions;
-            }
+        Component.onCompleted: {
+            folderView.sortMode = plasmoid.configuration.sortMode;
+            folderView.positions = plasmoid.configuration.positions;
         }
     }
 
