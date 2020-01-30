@@ -28,34 +28,10 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
 {
     m_menu = new QMenu();
 
-    m_arrangementMenu = m_menu->addMenu(i18n("Arrange In"));
-    m_arrangement = new QActionGroup(this);
-    connect(m_arrangement, &QActionGroup::triggered, this, &ViewPropertiesMenu::arrangementChanged);
-    QAction *action = m_arrangementMenu->addAction(i18n("Rows"));
-    action->setCheckable(true);
-    action->setData(0);
-    m_arrangement->addAction(action);
-    action = m_arrangementMenu->addAction(i18n("Columns"));
-    action->setData(1);
-    action->setCheckable(true);
-    m_arrangement->addAction(action);
-
-    m_alignmentMenu = m_menu->addMenu(i18n("Align"));
-    m_alignment = new QActionGroup(this);
-    connect(m_alignment, &QActionGroup::triggered, this, &ViewPropertiesMenu::alignmentChanged);
-    action = m_alignmentMenu->addAction(i18n("Left"));
-    action->setCheckable(true);
-    action->setData(0);
-    m_alignment->addAction(action);
-    action = m_alignmentMenu->addAction(i18n("Right"));
-    action->setCheckable(true);
-    action->setData(1);
-    m_alignment->addAction(action);
-
     QMenu *menu = m_menu->addMenu(i18n("Sort By"));
     m_sortMode = new QActionGroup(this);
     connect(m_sortMode, &QActionGroup::triggered, this, &ViewPropertiesMenu::sortModeChanged);
-    action = menu->addAction(i18n("Unsorted"));
+    QAction *action = menu->addAction(i18n("Unsorted"));
     action->setCheckable(true);
     action->setData(-1);
     m_sortMode->addAction(action);
@@ -93,6 +69,30 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
         action->setData(i);
         m_iconSize->addAction(action);
     }
+
+    m_arrangementMenu = m_menu->addMenu(i18n("Arrange In"));
+    m_arrangement = new QActionGroup(this);
+    connect(m_arrangement, &QActionGroup::triggered, this, &ViewPropertiesMenu::arrangementChanged);
+    action = m_arrangementMenu->addAction(i18n("Rows"));
+    action->setCheckable(true);
+    action->setData(0);
+    m_arrangement->addAction(action);
+    action = m_arrangementMenu->addAction(i18n("Columns"));
+    action->setData(1);
+    action->setCheckable(true);
+    m_arrangement->addAction(action);
+
+    m_alignmentMenu = m_menu->addMenu(i18n("Align"));
+    m_alignment = new QActionGroup(this);
+    connect(m_alignment, &QActionGroup::triggered, this, &ViewPropertiesMenu::alignmentChanged);
+    action = m_alignmentMenu->addAction(i18n("Left"));
+    action->setCheckable(true);
+    action->setData(0);
+    m_alignment->addAction(action);
+    action = m_alignmentMenu->addAction(i18n("Right"));
+    action->setCheckable(true);
+    action->setData(1);
+    m_alignment->addAction(action);
 
     m_previews = m_menu->addAction(QIcon::fromTheme(QStringLiteral("view-preview")), i18n("Show Previews"), this, &ViewPropertiesMenu::previewsChanged);
     m_previews->setCheckable(true);
