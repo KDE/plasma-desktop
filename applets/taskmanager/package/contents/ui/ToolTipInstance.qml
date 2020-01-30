@@ -165,7 +165,7 @@ Column {
         width: header.width
         // similar to 0.5625 = 1 / (16:9) as most screens are
         // round necessary, otherwise shadow mask for players has gap!
-        height: Math.round(0.5 * width) + (!winTitle.visible? winTitle.height : 0)
+        height: Math.round(0.5 * width) + (!winTitle.visible? Math.round(winTitle.height) : 0)
         anchors.horizontalCenter: parent.horizontalCenter
 
         visible: isWin
