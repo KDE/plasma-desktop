@@ -20,3 +20,4 @@ install(TARGETS kcm_smserver  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 install( FILES kcmsmserver.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
 
+add_subdirectory(kconf_update)
