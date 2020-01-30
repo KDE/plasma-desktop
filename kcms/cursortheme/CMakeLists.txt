@@ -13,10 +13,6 @@ xcursor/sortproxymodel.cpp
 ../krdb/krdb.cpp )
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/xcursor/ )
 
-
-set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)
-qt5_add_dbus_interface(libnoinst_SRCS ${klauncher_xml} klauncher_iface)
-
 ########### next target ###############
 
 set(kcm_cursortheme_PART_SRCS kcmcursortheme.cpp ${libnoinst_SRCS})
@@ -41,6 +37,7 @@ target_link_libraries(kcm_cursortheme
     KF5::QuickAddons
     ${X11_LIBRARIES}
     XCB::XCB
+    PW::KWorkspace
 )
 
 if (X11_Xcursor_FOUND)

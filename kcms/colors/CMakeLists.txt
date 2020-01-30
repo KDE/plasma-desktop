@@ -9,8 +9,6 @@ set(kcm_colors_SRCS
 )
 
 # needed for krdb
-qt5_add_dbus_interface(kcm_colors_SRCS ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml klauncher_iface)
-
 kconfig_add_kcfg_files(kcm_colors_SRCS colorssettings.kcfgc GENERATE_MOC)
 
 add_library(kcm_colors MODULE ${kcm_colors_SRCS})
@@ -26,6 +24,7 @@ target_link_libraries(kcm_colors
     KF5::NewStuffCore
     KF5::QuickAddons
     KF5::WindowSystem
+    PW::KWorkspace
 )
 
 if(X11_FOUND)

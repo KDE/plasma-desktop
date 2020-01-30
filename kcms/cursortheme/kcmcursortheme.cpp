@@ -51,8 +51,9 @@
 #include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
 
+#include <updatelaunchenvjob.h>
+
 #include "cursorthemesettings.h"
-#include <klauncher_iface.h>
 
 #ifdef HAVE_XFIXES
 #  include <X11/extensions/Xfixes.h>
@@ -293,10 +294,7 @@ bool CursorThemeConfig::applyTheme(const CursorTheme *theme, const int size)
     QByteArray themeName = QFile::encodeName(theme->name());
 
     // Set up the proper launch environment for newly started apps
-    OrgKdeKLauncherInterface klauncher(QStringLiteral("org.kde.klauncher5"),
-                                       QStringLiteral("/KLauncher"),
-                                       QDBusConnection::sessionBus());
-    klauncher.setLaunchEnv(QStringLiteral("XCURSOR_THEME"), themeName);
+    UpdateLaunchEnvJob launchEnvJob(QStringLiteral("XCURSOR_THEME"), themeName);
 
     // Update the Xcursor X resources
     runRdb(0);

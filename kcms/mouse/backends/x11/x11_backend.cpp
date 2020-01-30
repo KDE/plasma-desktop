@@ -34,7 +34,7 @@
 #include <KSharedConfig>
 #include <KConfigGroup>
 
-#include <klauncher_iface.h>
+#include <updatelaunchenvjob.h>
 
 #include <X11/X.h>
 #include <X11/Xlib.h>
@@ -147,13 +147,10 @@ void X11Backend::kcmInit()
 
     // Tell klauncher to set the XCURSOR_THEME and XCURSOR_SIZE environment
     // variables when launching applications.
-    OrgKdeKLauncherInterface klauncher(QStringLiteral("org.kde.klauncher5"),
-                                       QStringLiteral("/KLauncher"),
-                                       QDBusConnection::sessionBus());
     if (!theme.isEmpty()) {
-        klauncher.setLaunchEnv(QStringLiteral("XCURSOR_THEME"), theme);
+        UpdateLaunchEnvJob launchEnvJob(QStringLiteral("XCURSOR_THEME"), theme);
     }
     if (!size.isEmpty()) {
-        klauncher.setLaunchEnv(QStringLiteral("XCURSOR_SIZE"), size);
+        UpdateLaunchEnvJob launchEnvJob(QStringLiteral("XCURSOR_SIZE"), size);
     }
 }

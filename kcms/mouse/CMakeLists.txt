@@ -24,9 +24,6 @@ ecm_qt_declare_logging_category(common_SRCS
         Critical
 )
 
-set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)
-qt5_add_dbus_interface(common_SRCS ${klauncher_xml} klauncher_iface)
-
 include(backends/x11.cmake)
 include(backends/kwin_wl.cmake)
 
@@ -45,6 +42,7 @@ target_link_libraries(kapplymousetheme
     KF5::CoreAddons
     KF5::ConfigCore
     KF5::I18n
+    PW::KWorkspace
 )
 
 install(TARGETS kapplymousetheme ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
@@ -76,6 +74,7 @@ target_link_libraries(kcm_mouse
     KF5::KIOCore
     KF5::KIOWidgets
     KF5::Declarative
+    PW::KWorkspace
 
     Qt5::DBus
     Qt5::QuickWidgets

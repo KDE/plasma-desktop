@@ -34,8 +34,10 @@
 #include <QByteArray>
 #include <QTextStream>
 #include <QDateTime>
+#include <QDebug>
 #include <QDBusConnection>
-#include <klauncher_iface.h>
+#include <QSaveFile>
+#include <QTemporaryFile>
 
 #include <KColorUtils>
 #include <kcolorscheme.h>
@@ -45,6 +47,8 @@
 #include <KLocalizedString>
 #include <kdelibs4migration.h>
 #include <KWindowSystem>
+
+#include <updatelaunchenvjob.h>
 
 #include "krdb.h"
 #if HAVE_X11
@@ -108,8 +112,7 @@ static void applyGtkStyles(bool active, int version)
    // Pass env. var to kdeinit.
    QString name = gtkEnvVar(version);
    QString value = list.join(QLatin1Char(':'));
-   org::kde::KLauncher klauncher(QStringLiteral("org.kde.klauncher5"), QStringLiteral("/KLauncher"), QDBusConnection::sessionBus());
-   klauncher.setLaunchEnv(name, value);
+   UpdateLaunchEnvJob(name, value);
 }
 
 // -----------------------------------------------------------------------------

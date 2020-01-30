@@ -16,9 +16,6 @@ if(X11_FOUND)
     set(kcm_fonts_PART_SRCS ${kcm_fonts_PART_SRCS} ${libkxftconfig_SRCS})
 endif()
 
-set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)
-qt5_add_dbus_interface(kcm_fonts_PART_SRCS ${klauncher_xml} klauncher_iface)
-
 kconfig_add_kcfg_files(kcm_fonts_PART_SRCS fontssettings.kcfgc GENERATE_MOC)
 add_library(kcm_fonts MODULE ${kcm_fonts_PART_SRCS})
 
@@ -31,7 +28,8 @@ if(X11_FOUND)
         KF5::Plasma
         KF5::PlasmaQuick
         KF5::Declarative
-        KF5::QuickAddons)
+        KF5::QuickAddons
+        PW::KWorkspace)
     if(FONTCONFIG_FOUND)
         target_link_libraries(kcm_fonts ${FONTCONFIG_LIBRARIES})
     endif()

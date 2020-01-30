@@ -16,9 +16,6 @@ if (X11_Xcursor_FOUND)
     )
 endif ()
 
-set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)
-qt5_add_dbus_interface(kcmTest_SRCS ${klauncher_xml} klauncher_iface)
-
 kconfig_add_kcfg_files(kcmTest_SRCS ../lookandfeelsettings.kcfgc GENERATE_MOC)
 
 add_executable(kcmTest ${kcmTest_SRCS})
@@ -37,6 +34,7 @@ target_link_libraries(kcmTest
         KF5::Declarative
         KF5::QuickAddons
         KF5::NewStuff
+        PW::KWorkspace
 
         Qt5::DBus
         Qt5::Widgets
