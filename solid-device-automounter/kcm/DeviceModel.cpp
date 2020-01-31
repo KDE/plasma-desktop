@@ -26,6 +26,7 @@
 #include <Solid/DeviceNotifier>
 #include <Solid/Device>
 #include <Solid/StorageVolume>
+#include <Solid/StorageAccess>
 
 #include "AutomounterSettings.h"
 
@@ -114,14 +115,19 @@ void DeviceModel::addNewDevice(const QString &udi)
 
     const Solid::Device dev(udi);
     if (dev.isValid()) {
-        beginInsertRows(index(0, 0), m_attached.size(), m_attached.size());
-        m_attached << udi;
+        if (dev.is<Solid::StorageAccess>()) {
+            const Solid::StorageAccess *access = dev.as<Solid::StorageAccess>();
+            if (!access->isIgnored() || !access->isAccessible()) {
+                beginInsertRows(index(0, 0), m_attached.size(), m_attached.size());
+                m_attached << udi;
+                endInsertRows();
+            }
+        }
     } else {
         beginInsertRows(index(1, 0), m_disconnected.size(), m_disconnected.size());
         m_disconnected << udi;
+        endInsertRows();
     }
-
-    endInsertRows();
 }
 
 void DeviceModel::reload()
