@@ -61,8 +61,8 @@ QVariant DeviceModel::headerData(int section, Qt::Orientation orientation, int r
     if (orientation == Qt::Horizontal && role == Qt::DisplayRole) {
         switch(section) {
         case 0: return i18n("Device");
-        case 1: return i18n("Automount on Login");
-        case 2: return i18n("Automount on Attach");
+        case 1: return i18nc("As in automount on login", "On Login");
+        case 2: return i18nc("As in automoount on attach", "On Attach");
         }
     }
     return QVariant();
