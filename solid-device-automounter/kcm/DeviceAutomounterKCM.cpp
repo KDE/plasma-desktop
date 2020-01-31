@@ -61,11 +61,7 @@ DeviceAutomounterKCM::DeviceAutomounterKCM(QWidget *parent, const QVariantList &
     deviceView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
 
     auto emitChanged = [this] {
-#if KCONFIGWIDGETS_VERSION < QT_VERSION_CHECK(5, 64, 0)
-        emit changed();
-#else
         emit markAsChanged();
-#endif
     };
 
     connect(automountOnLogin, &QCheckBox::stateChanged, this, emitChanged);
@@ -110,11 +106,8 @@ void DeviceAutomounterKCM::forgetSelectedDevices()
             m_devices->forgetDevice(selected->selectedIndexes()[offset].data(DeviceModel::UdiRole).toString());
         }
     }
-#if KCONFIGWIDGETS_VERSION < QT_VERSION_CHECK(5, 64, 0)
-    emit changed();
-#else
+
     emit markAsChanged();
-#endif
 }
 
 void DeviceAutomounterKCM::enabledChanged()
