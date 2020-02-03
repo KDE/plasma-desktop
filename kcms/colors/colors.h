@@ -55,13 +55,6 @@ public:
     KCMColors(QObject *parent, const QVariantList &args);
     ~KCMColors() override;
 
-    enum Roles {
-        SchemeNameRole = Qt::UserRole + 1,
-        PaletteRole,
-        RemovableRole,
-        PendingDeletionRole
-    };
-
     enum SchemeFilter {
         AllSchemes,
         LightSchemes,

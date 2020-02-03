@@ -243,7 +243,7 @@ void KCMColors::installSchemeFile(const QString &path)
 
     m_model->load();
 
-    const auto results = m_model->match(m_model->index(0, 0), SchemeNameRole, newName);
+    const auto results = m_model->match(m_model->index(0, 0), ColorsModel::SchemeNameRole, newName);
     if (!results.isEmpty()) {
         m_model->setSelectedScheme(newName);
     }
@@ -278,8 +278,8 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
     });
 
     QStringList args;
-    args << idx.data(KCMColors::SchemeNameRole).toString();
-    if (idx.data(KCMColors::RemovableRole).toBool()) {
+    args << idx.data(ColorsModel::SchemeNameRole).toString();
+    if (idx.data(ColorsModel::RemovableRole).toBool()) {
         args << QStringLiteral("--overwrite");
     }
 
