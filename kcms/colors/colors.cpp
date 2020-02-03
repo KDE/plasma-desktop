@@ -270,6 +270,12 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
         if (!savedThemes.isEmpty()) {
             m_model->load(); // would be cool to just reload/add the changed/new ones
 
+            // If the currently active scheme was edited, consider settings dirty even if the scheme itself didn't change
+            if (savedThemes.contains(m_settings->colorScheme())) {
+                m_activeSchemeEdited = true;
+                settingsChanged();
+            }
+
             m_model->setSelectedScheme(savedThemes.last());
         }
 
@@ -301,7 +307,7 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
 
 bool KCMColors::isSaveNeeded() const
 {
-    return !m_model->match(m_model->index(0, 0), ColorsModel::PendingDeletionRole, true).isEmpty();
+    return m_activeSchemeEdited || !m_model->match(m_model->index(0, 0), ColorsModel::PendingDeletionRole, true).isEmpty();
 }
 
 
@@ -341,6 +347,7 @@ void KCMColors::save()
     if (m_selectedSchemeDirty) {
         saveColors();
     }
+    m_activeSchemeEdited = false;
 
     processPendingDeletions();
 }

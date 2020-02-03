@@ -97,6 +97,7 @@ private:
     ColorsSettings *m_settings;
 
     bool m_selectedSchemeDirty = false;
+    bool m_activeSchemeEdited = false;
 
     bool m_applyToAlien = true;
 
