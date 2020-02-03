@@ -19,12 +19,7 @@ kconfig_add_kcfg_files(kcm_componentchooser_SRCS browser_settings.kcfgc GENERATE
 kconfig_add_kcfg_files(kcm_componentchooser_SRCS terminal_settings.kcfgc GENERATE_MOC)
 
 ki18n_wrap_ui(kcm_componentchooser_SRCS
-  browserconfig_ui.ui
-  filemanagerconfig_ui.ui
-  emailclientconfig_ui.ui
   componentchooser_ui.ui
-  componentconfig_ui.ui
-  terminalemulatorconfig_ui.ui
 )
 
 add_library(kcm_componentchooser MODULE ${kcm_componentchooser_SRCS})

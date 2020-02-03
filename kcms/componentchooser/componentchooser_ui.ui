@@ -10,59 +10,71 @@
     <height>192</height>
    </rect>
   </property>
-  <layout class="QGridLayout">
-   <property name="margin">
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <property name="leftMargin">
     <number>0</number>
    </property>
-   <item row="2" column="1">
-    <widget class="QGroupBox" name="headerGroupBox">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="whatsThis">
-      <string>Here you can change the component program. Components are programs that handle basic tasks, like the terminal emulator, the text editor and the email client. Different KDE applications sometimes need to invoke a console emulator, send a mail or display some text. To do so consistently, these applications always call the same components. You can choose here which programs these components are.</string>
-     </property>
-     <property name="title">
-      <string>Default Component</string>
-     </property>
-     <layout class="QVBoxLayout">
-      <item>
-       <widget class="QStackedWidget" name="configContainer"/>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="0" column="0" rowspan="3">
-    <widget class="QListWidget" name="ServiceChooser">
-     <property name="whatsThis">
-      <string>&lt;qt&gt;
-&lt;p&gt;This list shows the configurable component types. Click the component you want to configure.&lt;/p&gt;
-&lt;p&gt;In this dialog you can change KDE default components. Components are programs that handle basic tasks, like the terminal emulator, the text editor and the email client. Different KDE applications sometimes need to invoke a console emulator, send a mail or display some text. To do so consistently, these applications always call the same components. Here you can select which programs these components are.&lt;/p&gt;
-&lt;/qt&gt;</string>
-     </property>
-     <property name="uniformItemSizes">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="1">
-    <widget class="QLabel" name="ComponentDescription">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-     </property>
-     <property name="wordWrap">
-      <bool>true</bool>
-     </property>
-    </widget>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QFormLayout" name="formLayout"/>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Preferred</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>

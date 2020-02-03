@@ -9,19 +9,19 @@
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License version 2 as     *
- *   published by the Free Software Foundationi                            *
+ *   published by the Free Software Foundation                             *
  *                                                                         *
  ***************************************************************************/
 
 #ifndef COMPONENTCHOOSEREMAIL_H
 #define COMPONENTCHOOSEREMAIL_H
 
+#include "componentchooser.h"
+#include <QComboBox>
+
 class KEMailSettings;
 
-#include "ui_emailclientconfig_ui.h"
-#include "componentchooser.h"
-
-class CfgEmailClient: public QWidget, public Ui::EmailClientConfig_UI, public CfgPlugin
+class CfgEmailClient: public CfgPlugin
 {
     Q_OBJECT
 public:
@@ -29,18 +29,12 @@ public:
     ~CfgEmailClient() override;
     void load(KConfig *cfg) override;
     void save(KConfig *cfg) override;
-    void defaults() override;
-    bool isDefaults() const override;
 
 private:
     KEMailSettings *pSettings;
-    int m_currentIndex = -1;
-    int m_kmailIndex = -1;
 
 protected Q_SLOTS:
     void selectEmailClient(int index);
-Q_SIGNALS:
-    void changed(bool);
 };
 
 #endif

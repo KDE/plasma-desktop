@@ -20,7 +20,6 @@
 */
 
 #include "componentchooserfilemanager.h"
-#include <kbuildsycocaprogressdialog.h>
 #include <kprocess.h>
 #include <kmimetypetrader.h>
 #include <KServiceTypeTrader>
@@ -30,50 +29,37 @@
 #include <KSharedConfig>
 
 CfgFileManager::CfgFileManager(QWidget *parent)
-    : QWidget(parent), Ui::FileManagerConfig_UI(),CfgPlugin()
+    : CfgPlugin(parent)
 {
-    setupUi(this);
-    connect(combofileManager, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated), this, &CfgFileManager::selectFileManager);
+    connect(this, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated), this, &CfgFileManager::selectFileManager);
 }
 
 CfgFileManager::~CfgFileManager() {
 }
 
-void CfgFileManager::defaults()
-{
-    if (m_dolphinIndex != -1) {
-        combofileManager->setCurrentIndex(m_dolphinIndex);
-    }
-}
-
-bool CfgFileManager::isDefaults() const
-{
-    return m_dolphinIndex == -1 || m_dolphinIndex == combofileManager->currentIndex();
-}
-
 void CfgFileManager::selectFileManager(int index)
 {
-    if (index == combofileManager->count() -1) {
+    if (index == count() -1) {
 
         KOpenWithDialog dlg({}, i18n("Select preferred file manager:"), QString(), this);
         dlg.setSaveNewApplications(true);
         if (dlg.exec() != QDialog::Accepted) {
-            combofileManager->setCurrentIndex(m_currentIndex);
+            setCurrentIndex(m_currentIndex);
             return;
         }
 
         const auto service = dlg.service();
 
         // if the selected service is already in the list
-        const auto matching = combofileManager->model()->match(combofileManager->model()->index(0,0), Qt::UserRole, service->storageId());
+        const auto matching = model()->match(model()->index(0,0), Qt::UserRole, service->storageId());
         if (!matching.isEmpty()) {
             const int index = matching.at(0).row();
-            combofileManager->setCurrentIndex(index);
+            setCurrentIndex(index);
             changed(index != m_currentIndex);
         } else {
             const QString icon = !service->icon().isEmpty() ? service->icon() : QStringLiteral("application-x-shellscript");
-            combofileManager->insertItem(combofileManager->count() -1, QIcon::fromTheme(icon), service->name(), service->storageId());
-            combofileManager->setCurrentIndex(combofileManager->count() - 2);
+            insertItem(count() -1, QIcon::fromTheme(icon), service->name(), service->storageId());
+            setCurrentIndex(count() - 2);
 
             changed(true);
         }
@@ -86,22 +72,23 @@ static const QString mime = QStringLiteral("inode/directory");
 
 void CfgFileManager::load(KConfig *)
 {
-    combofileManager->clear();
+    clear();
     m_currentIndex = -1;
+    m_defaultIndex = -1;
 
     const KService::Ptr fileManager = KMimeTypeTrader::self()->preferredService(mime);
 
     const auto constraint = QStringLiteral("'FileManager' in Categories and 'inode/directory' in ServiceTypes");
     const KService::List fileManagers = KServiceTypeTrader::self()->query(QStringLiteral("Application"), constraint);
     for (const KService::Ptr &service : fileManagers) {
-        combofileManager->addItem(QIcon::fromTheme(service->icon()), service->name(), service->storageId());
+        addItem(QIcon::fromTheme(service->icon()), service->name(), service->storageId());
 
         if (fileManager->storageId() == service->storageId()) {
-            combofileManager->setCurrentIndex(combofileManager->count() -1);
-            m_currentIndex = combofileManager->count() -1;
+            setCurrentIndex(count() -1);
+            m_currentIndex = count() -1;
         }
         if (service->storageId() == QStringLiteral("org.kde.dolphin.desktop")) {
-            m_dolphinIndex = combofileManager->count() -1;
+            m_defaultIndex = count() -1;
         }
     }
 
@@ -110,13 +97,13 @@ void CfgFileManager::load(KConfig *)
         const KService::Ptr service = KService::serviceByStorageId(fileManager->storageId());
 
         const QString icon = !service->icon().isEmpty() ? service->icon() : QStringLiteral("application-x-shellscript");
-        combofileManager->addItem(QIcon::fromTheme(icon), service->name(), service->storageId());
-        combofileManager->setCurrentIndex(combofileManager->count() -1);
-        m_currentIndex = combofileManager->count() -1;
+        addItem(QIcon::fromTheme(icon), service->name(), service->storageId());
+        setCurrentIndex(count() -1);
+        m_currentIndex = count() -1;
     }
 
     // add a other option to add a new file manager with KOpenWithDialog
-    combofileManager->addItem(QIcon::fromTheme(QStringLiteral("application-x-shellscript")), i18n("Other..."), QStringLiteral());
+    addItem(QIcon::fromTheme(QStringLiteral("application-x-shellscript")), i18n("Other..."), QStringLiteral());
 
     emit changed(false);
 }
@@ -126,10 +113,9 @@ static const char s_AddedAssociations[] = "Added Associations";
 
 void CfgFileManager::save(KConfig *)
 {
-    const QString storageId = combofileManager->currentData().toString();
+    const QString storageId = currentData().toString();
     if (!storageId.isEmpty()) {
-
-        m_currentIndex = combofileManager->currentIndex();
+        m_currentIndex = currentIndex();
 
         // This is taken from filetypes/mimetypedata.cpp
         KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
@@ -147,7 +133,6 @@ void CfgFileManager::save(KConfig *)
 
         profile->sync();
 
-        KBuildSycocaProgressDialog::rebuildKSycoca(this);
         emit changed(false);
     }
 }

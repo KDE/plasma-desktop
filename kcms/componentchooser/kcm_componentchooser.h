@@ -21,7 +21,7 @@
 #include "componentchooser.h"
 
 
-class KCMComponentChooser : public KCModule
+class KCMComponentChooser: public KCModule
 {
     Q_OBJECT
 public:

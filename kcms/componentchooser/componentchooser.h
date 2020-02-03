@@ -1,15 +1,15 @@
 /***************************************************************************
                           componentchooser.h  -  description
                              -------------------
-    copyright            : (C) 2002 by Joseph Wenninger
-    email                : jowenn@kde.org
+    copyright            : (C) 2002 by Joseph Wenninger <jowenn@kde.org>
+    copyright            : (C) 2020 by Méven Car <meven.car@enioka.com>
  ***************************************************************************/
 
 /***************************************************************************
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License version 2 as     *
- *   published by the Free Software Foundationi                            *
+ *   published by the Free Software Foundation                             *
  *                                                                         *
  ***************************************************************************/
 
@@ -17,50 +17,49 @@
 #define _COMPONENTCHOOSER_H_
 
 #include "ui_componentchooser_ui.h"
-#include "ui_componentconfig_ui.h"
 #include <QHash>
 
-
-#include <QVBoxLayout>
+#include <QComboBox>
 
 #include <kservice.h>
 
-class QListWidgetItem;
+class QWidget;
 class KConfig;
 
-/* The CfgPlugin  class is an exception. It is LGPL. It will be parted of the plugin interface
-	which I plan for KDE 3.2.
-*/
-class CfgPlugin
+class CfgPlugin : public QComboBox
 {
+    Q_OBJECT
+
 public:
-	CfgPlugin(){}
+    CfgPlugin(QWidget *parent): QComboBox(parent) {}
 	virtual ~CfgPlugin(){}
 	virtual void load(KConfig *cfg)=0;
-	virtual void save(KConfig *cfg)=0;
-	virtual void defaults()=0;
-	virtual bool isDefaults() const=0;
-};
+    virtual void save(KConfig *cfg)=0;
+    bool hasChanged() const
+    {
+        return m_currentIndex != -1 && m_currentIndex != currentIndex();
+    }
 
-class CfgComponent: public QWidget, public Ui::ComponentConfig_UI, public CfgPlugin
-{
-Q_OBJECT
-public:
-	CfgComponent(QWidget *parent);
-	~CfgComponent() override;
-	void load(KConfig *cfg) override;
-	void save(KConfig *cfg) override;
-	void defaults() override;
-	bool isDefaults() const override;
+    void defaults()
+    {
+        if (m_defaultIndex != -1) {
+            setCurrentIndex(m_defaultIndex);
+        }
+    }
+
+    bool isDefaults() const
+    {
+        return m_defaultIndex == -1 || m_defaultIndex == currentIndex();
+    }
+
+Q_SIGNALS:
+    void changed(bool);
 
 protected:
-	QHash<QString, QString>  m_lookupDict,m_revLookupDict;
-
-protected Q_SLOTS:
-	void slotComponentChanged(const QString&);
-Q_SIGNALS:
-	void changed(bool);
-	void defaulted(bool);
+    // the currently saved selected option
+    int m_currentIndex = -1;
+    // the index default of the default option
+    int m_defaultIndex = -1;
 };
 
 class ComponentChooser : public QWidget, public Ui::ComponentChooser_UI
@@ -76,22 +75,16 @@ public:
 	void restoreDefault();
 
 private:
-	QString latestEditedService;
-	bool somethingChanged;
-	QWidget *configWidget;
-	QVBoxLayout *myLayout;
-	QMap<QString, QWidget*> configWidgetMap;
+    QMap<QString, CfgPlugin*> configWidgetMap;
 
-	void loadConfigWidget(const QString &, const QString &, const QString &);
+    CfgPlugin *loadConfigWidget(const QString &cfgType);
 
 protected Q_SLOTS:
-	void emitChanged(bool);
-	void slotServiceSelected(QListWidgetItem *);
+    void emitChanged();
 
 Q_SIGNALS:
 	void changed(bool);
 	void defaulted(bool);
-
 };
 
 

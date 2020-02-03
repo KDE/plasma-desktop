@@ -39,13 +39,13 @@ KCMComponentChooser::KCMComponentChooser(QWidget *parent, const QVariantList &):
 	connect(m_chooser,SIGNAL(changed(bool)),this,SIGNAL(changed(bool)));
 	connect(m_chooser, &ComponentChooser::defaulted, this, &KCModule::defaulted);
 
-	KAboutData *about =
-    new KAboutData( QStringLiteral("kcmcomponentchooser"), i18n("Component Chooser"), QStringLiteral("1.0"),
-			QString(), KAboutLicense::GPL,
-			i18n("(c), 2002 Joseph Wenninger"));
+    KAboutData *about = new KAboutData( QStringLiteral("kcmcomponentchooser"), i18n("Component Chooser"), QStringLiteral("1.0"),
+            QString(), KAboutLicense::GPL,
+            i18n("(c), 2002 Joseph Wenninger"));
 
-	about->addAuthor(i18n("Joseph Wenninger"), QString() , QStringLiteral("jowenn@kde.org"));
-	setAboutData( about );
+    about->addAuthor(i18n("Joseph Wenninger"), QString() , QStringLiteral("jowenn@kde.org"));
+    about->addAuthor(i18n("Méven Car"), QString() , QStringLiteral("meven.car@kdemail.net"));
+    setAboutData( about );
 }
 
 void KCMComponentChooser::load(){

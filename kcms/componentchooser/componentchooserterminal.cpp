@@ -34,10 +34,9 @@
 #include <QUrl>
 
 CfgTerminalEmulator::CfgTerminalEmulator(QWidget *parent)
-    : QWidget(parent), Ui::TerminalEmulatorConfig_UI(), CfgPlugin()
+    : CfgPlugin(parent)
 {
-    setupUi(this);
-    connect(terminalCombo, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated), this, &CfgTerminalEmulator::selectTerminalEmulator);
+    connect(this, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated), this, &CfgTerminalEmulator::selectTerminalEmulator);
 }
 
 CfgTerminalEmulator::~CfgTerminalEmulator() {
@@ -45,23 +44,11 @@ CfgTerminalEmulator::~CfgTerminalEmulator() {
 
 void CfgTerminalEmulator::selectTerminalEmulator(int index)
 {
-    if (index == terminalCombo->count() - 1) {
+    if (index == count() - 1) {
         selectTerminalApp();
     } else {
         emit changed(m_currentIndex != index);
     }
-}
-
-void CfgTerminalEmulator::defaults()
-{
-    if (m_konsoleIndex != -1) {
-        terminalCombo->setCurrentIndex(m_konsoleIndex);
-    }
-}
-
-bool CfgTerminalEmulator::isDefaults() const
-{
-    return m_konsoleIndex == -1 || m_konsoleIndex == terminalCombo->currentIndex();
 }
 
 void CfgTerminalEmulator::load(KConfig *)
@@ -69,44 +56,47 @@ void CfgTerminalEmulator::load(KConfig *)
 	TerminalSettings settings;
     const QString terminal = settings.terminalApplication();
 
+    clear();
     m_currentIndex = -1;
-    terminalCombo->clear();
+    m_defaultIndex = -1;
 
     const auto constraint = QStringLiteral("'TerminalEmulator' in Categories AND (not exist NoDisplay OR NoDisplay == false)");
     const auto terminalEmulators = KServiceTypeTrader::self()->query(QStringLiteral("Application"), constraint);
     for (const auto &service : terminalEmulators) {
-        terminalCombo->addItem(QIcon::fromTheme(service->icon()), service->name(), service->exec());
+        addItem(QIcon::fromTheme(service->icon()), service->name(), service->exec());
 
         if (!terminal.isEmpty() && service->exec() == terminal) {
-            terminalCombo->setCurrentIndex(terminalCombo->count() - 1);
-            m_currentIndex = terminalCombo->count() - 1;
+            setCurrentIndex(count() - 1);
+            m_currentIndex = count() - 1;
         }
         if (service->exec() == QStringLiteral("konsole")) {
-            m_konsoleIndex = terminalCombo->count() - 1;
+            m_defaultIndex = count() - 1;
         }
     }
 
     if (!terminal.isEmpty() && m_currentIndex == -1) {
         // we have a terminal specified by the user
-        terminalCombo->addItem(QIcon::fromTheme(QStringLiteral("application-x-shellscript")), terminal, terminal);
-        terminalCombo->setCurrentIndex(terminalCombo->count() - 1);
-        m_currentIndex = terminalCombo->count() - 1;
+        addItem(QIcon::fromTheme(QStringLiteral("application-x-shellscript")), terminal, terminal);
+        setCurrentIndex(count() - 1);
+        m_currentIndex = count() - 1;
     }
 
     // add a other option to add a new terminal emulator with KOpenWithDialog
-    terminalCombo->addItem(QIcon::fromTheme(QStringLiteral("application-x-shellscript")), i18n("Other..."), QStringLiteral());
+    addItem(QIcon::fromTheme(QStringLiteral("application-x-shellscript")), i18n("Other..."), QStringLiteral());
 
 	emit changed(false);
 }
 
 void CfgTerminalEmulator::save(KConfig *)
 {
-    const QString terminal = terminalCombo->currentData().toString();
-    m_currentIndex = terminalCombo->currentIndex();
+    const QString terminal = currentData().toString();
+    m_currentIndex = currentIndex();
 
 	TerminalSettings settings;
     settings.setTerminalApplication(terminal);
 	settings.save();
+
+    m_currentIndex = currentIndex();
 
 	QDBusMessage message  = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
                                                            QStringLiteral("/KLauncher"),
@@ -124,21 +114,21 @@ void CfgTerminalEmulator::selectTerminalApp()
     dlg.hideRunInTerminal();
     dlg.setSaveNewApplications(true);
     if (dlg.exec() != QDialog::Accepted) {
-        terminalCombo->setCurrentIndex(m_currentIndex);
+        setCurrentIndex(m_currentIndex);
         return;
     }
     const auto service = dlg.service();
 
     // if the selected service is already in the list
-    const auto matching = terminalCombo->model()->match(terminalCombo->model()->index(0,0), Qt::DisplayRole, service->exec());
+    const auto matching = model()->match(model()->index(0,0), Qt::DisplayRole, service->exec());
     if (!matching.isEmpty()) {
         const int index = matching.at(0).row();
-        terminalCombo->setCurrentIndex(index);
+        setCurrentIndex(index);
         changed(index != m_currentIndex);
     } else {
         const QString icon = !service->icon().isEmpty() ? service->icon() : QStringLiteral("application-x-shellscript");
-        terminalCombo->insertItem(terminalCombo->count() -1, QIcon::fromTheme(icon), service->name(), service->exec());
-        terminalCombo->setCurrentIndex(terminalCombo->count() - 2);
+        insertItem(count() -1, QIcon::fromTheme(icon), service->name(), service->exec());
+        setCurrentIndex(count() - 2);
 
         changed(true);
     }

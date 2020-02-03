@@ -9,39 +9,30 @@
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License version 2 as     *
- *   published by the Free Software Foundationi                            *
+ *   published by the Free Software Foundation                             *
  *                                                                         *
  ***************************************************************************/
 
 #ifndef _COMPONENTCHOOSERTERMINAL_H_
 #define _COMPONENTCHOOSERTERMINAL_H_
 
-#include "ui_terminalemulatorconfig_ui.h"
 #include "componentchooser.h"
+#include <QComboBox>
+
 class KConfig;
 class CfgPlugin;
 
-class CfgTerminalEmulator: public QWidget, public Ui::TerminalEmulatorConfig_UI, public CfgPlugin
+class CfgTerminalEmulator: public CfgPlugin
 {
     Q_OBJECT
 public:
-	CfgTerminalEmulator(QWidget *parent);
-	~CfgTerminalEmulator() override;
-	void load(KConfig *cfg) override;
-	void save(KConfig *cfg) override;
-	void defaults() override;
-	bool isDefaults() const override;
-
+    CfgTerminalEmulator(QWidget *parent);
+    ~CfgTerminalEmulator() override;
+    void load(KConfig *cfg) override;
+    void save(KConfig *cfg) override;
 protected Q_SLOTS:
     void selectTerminalApp();
     void selectTerminalEmulator(int index);
-
-Q_SIGNALS:
-	void changed(bool);
-
-private:
-    int m_currentIndex = -1;
-    int m_konsoleIndex = -1;
 };
 
 #endif
