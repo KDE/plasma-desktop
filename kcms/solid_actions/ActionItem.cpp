@@ -88,9 +88,9 @@ Solid::Predicate ActionItem::predicate() const
 QString ActionItem::involvedTypes() const
 {
     SolidActionData * actData = SolidActionData::instance();
-    QSet<Solid::DeviceInterface::Type> devTypeList = predicateItem.usedTypes();
+    const QSet<Solid::DeviceInterface::Type> devTypeList = predicateItem.usedTypes();
     QStringList deviceTypes;
-    foreach( Solid::DeviceInterface::Type devType, devTypeList ) {
+    for (Solid::DeviceInterface::Type devType : devTypeList) {
         deviceTypes << actData->nameFromInterface( devType );
     }
 
@@ -140,10 +140,10 @@ KConfigGroup * ActionItem::configItem(DesktopAction actionType, GroupType keyGro
     int countAccess = 0;
 
     if (actionType == ActionItem::DesktopRead) {
-        foreach(KConfigGroup * possibleGroup, actionGroups.values(keyGroup)) {
+        const auto values = actionGroups.values(keyGroup);
+        for (KConfigGroup *possibleGroup : values) {
             if (possibleGroup->hasKey(keyName)) {
                 return possibleGroup;
-                break;
             }
         }
     } else if (actionType == ActionItem::DesktopWrite) {

@@ -46,8 +46,8 @@ SolidActionData::SolidActionData(bool includeFiles)
 {
     const int propertyOffset = Solid::DeviceInterface::staticMetaObject.propertyOffset();
 
-    QList<QMetaObject> interfaceList = fillInterfaceList();
-    foreach( const QMetaObject &interface, interfaceList ) {
+    const QList<QMetaObject> interfaceList = fillInterfaceList();
+    for (const QMetaObject &interface : interfaceList) {
         QString ifaceName = interface.className();
         ifaceName.remove(0, ifaceName.lastIndexOf(':') + 1);
         Solid::DeviceInterface::Type ifaceDev = Solid::DeviceInterface::stringToType( ifaceName );
@@ -80,7 +80,8 @@ SolidActionData::SolidActionData(bool includeFiles)
             types.insert( ifaceDev, cleanName ); // Read the user friendly name
 
             QMap<QString,QString> deviceValues = values.value( ifaceDev );
-            foreach( const QString &text, deviceFile.readActions() ) { // We want every single action
+            const auto actions = deviceFile.readActions();
+            for (const QString &text : actions) { // We want every single action
                 KConfigGroup actionType = deviceFile.actionGroup( text );
                 deviceValues.insert( text, actionType.readEntry("Name") ); // Add to the type - actions map
             }

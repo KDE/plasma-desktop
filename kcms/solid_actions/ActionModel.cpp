@@ -104,14 +104,14 @@ void ActionModel::buildActionList()
     // Prepare to search for possible actions -> we only want solid types
     const QStringList actionDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("solid/actions"), QStandardPaths::LocateDirectory);
     // Get service objects for those actions and add them to the display
-    foreach (const QString & actionDir, actionDirs) {
+    for (const QString &actionDir : actionDirs) {
         QDirIterator it(actionDir, QStringList() << QStringLiteral("*.desktop"));
         while (it.hasNext()) {
             it.next();
             const QString desktop = it.filePath();
             // Get contained services list
-            QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(desktop, true);
-            foreach( const KServiceAction &deviceAction, services ) {
+            const QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(desktop, true);
+            for (const KServiceAction &deviceAction : services) {
                 ActionItem * actionItem = new ActionItem( desktop, deviceAction.name(), this ); // Create an action
                 d->actions.append( actionItem );
             }

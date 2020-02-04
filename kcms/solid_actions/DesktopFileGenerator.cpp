@@ -17,7 +17,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA          *
  ***************************************************************************/
 
-#include <QDebug>
 #include <QCoreApplication>
 #include <QCommandLineParser>
 
@@ -46,8 +45,9 @@ int main( int argc, char *argv[] )
     parser.process(application);
     aboutData.processCommandLine(&parser);
 
-    SolidActionData * availActions = SolidActionData::instance();
-    foreach( Solid::DeviceInterface::Type internalType, availActions->interfaceTypeList() ) {
+    SolidActionData *availActions = SolidActionData::instance();
+    const auto interfaceTypes = availActions->interfaceTypeList();
+    for (Solid::DeviceInterface::Type internalType : interfaceTypes) {
         const QString typeName = Solid::DeviceInterface::typeToString( internalType );
         KDesktopFile typeFile(QStandardPaths::GenericDataLocation, "solid/devices/solid-device-" + typeName + ".desktop" );
         KConfigGroup tConfig = typeFile.desktopGroup();
@@ -64,8 +64,7 @@ int main( int argc, char *argv[] )
         const QString actionText = typeValues.join(QLatin1Char(';')).append(";");
         tConfig.writeEntry( "Actions", actionText );
 
-        qWarning() << "Desktop file created: " + typeFile.fileName();
-        foreach( const QString &tValue, typeValues ) {
+        for (const QString &tValue : typeValues) {
             KConfigGroup vConfig = typeFile.actionGroup( tValue );
             if( !vConfig.hasKey("Name") ) {
                 vConfig.writeEntry( "Name", availActions->propertyName( internalType, tValue ) );
@@ -76,6 +75,5 @@ int main( int argc, char *argv[] )
         typeFile.sync();
     }
 
-    qWarning() << "Generation now completed";
     return 0;
 }

@@ -136,9 +136,9 @@ void SolidActions::addAction()
 
     // Prepare to open the editDialog
     fillActionsList();
-    QList<ActionItem*> actionList = actionModel->actionList();
+    const QList<ActionItem*> actionList = actionModel->actionList();
     QModelIndex newAction;
-    foreach( ActionItem * newItem, actionList ) { // Lets find our new action
+    for (ActionItem *newItem : actionList) { // Lets find our new action
         if( newItem->desktopMasterPath == filePath ) {
             const int position = actionList.indexOf( newItem );
             newAction = actionModel->index( position, 0 ); // Grab it
