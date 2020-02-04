@@ -48,12 +48,6 @@ KCM.SimpleKCM {
         kcm.push("SourcesPage.qml");
     }
 
-    Binding {
-        target: kcm
-        property: "needsSave"
-        value: kcm.settings.dirty // TODO or other stuff
-    }
-
     Kirigami.FormLayout {
         Kirigami.InlineMessage {
             Kirigami.FormData.isSection: true

@@ -32,8 +32,6 @@ Kirigami.Page {
     title: i18n("Application Settings")
 
     Component.onCompleted: {
-        kcm.sourcesModel.load();
-
         var idx = kcm.sourcesModel.persistentIndexForDesktopEntry(kcm.initialDesktopEntry);
         if (!idx.valid) {
             idx = kcm.sourcesModel.persistentIndexForNotifyRcName(kcm.initialNotifyRcName);

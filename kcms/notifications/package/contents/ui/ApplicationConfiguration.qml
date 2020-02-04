@@ -34,6 +34,7 @@ ColumnLayout {
     id: configColumn
 
     property var rootIndex
+    property var behaviorSettings: rootIndex ? kcm.behaviorSettings(rootIndex) : null
 
     readonly property string otherAppsId: "@other"
 
@@ -42,29 +43,7 @@ ColumnLayout {
     readonly property string desktopEntry: rootIndex ? kcm.sourcesModel.data(rootIndex, Private.SourcesModel.DesktopEntryRole) || "" : ""
     readonly property string notifyRcName: rootIndex ? kcm.sourcesModel.data(rootIndex, Private.SourcesModel.NotifyRcNameRole) || "" : ""
 
-    function behavior() {
-        if (configColumn.desktopEntry) {
-            return kcm.settings.applicationBehavior(configColumn.desktopEntry);
-        } else if (configColumn.notifyRcName) {
-            return kcm.settings.serviceBehavior(configColumn.notifyRcName);
-        }
-        return -1;
-    }
-
-    function setBehavior(flag, enable) {
-        var newBehavior = behavior();
-        if (enable) {
-            newBehavior |= flag;
-        } else {
-            newBehavior &= ~flag;
-        }
-
-        if (configColumn.desktopEntry) {
-            return kcm.settings.setApplicationBehavior(configColumn.desktopEntry, newBehavior);
-        } else if (configColumn.notifyRcName) {
-            return kcm.settings.setServiceBehavior(configColumn.notifyRcName, newBehavior);
-        }
-    }
+    readonly property bool isOtherApp: configColumn.desktopEntry === configColumn.otherAppsId
 
     function configureEvents(eventId) {
         kcm.configureEvents(configColumn.notifyRcName, eventId, this)
@@ -96,8 +75,9 @@ ColumnLayout {
         QtControls.CheckBox {
             id: showPopupsCheck
             text: i18n("Show popups")
-            checked: configColumn.behavior() & NotificationManager.Settings.ShowPopups
-            onClicked: configColumn.setBehavior(NotificationManager.Settings.ShowPopups, checked)
+            enabled: !!behaviorSettings && !behaviorSettings.isShowPopupsImmutable
+            checked: !!behaviorSettings && behaviorSettings.showPopups
+            onClicked: behaviorSettings.showPopups = checked
         }
 
         RowLayout { // just for indentation
@@ -105,23 +85,24 @@ ColumnLayout {
                 Layout.leftMargin: mirrored ? 0 : indicator.width
                 Layout.rightMargin: mirrored ? indicator.width : 0
                 text: i18n("Show in do not disturb mode")
-                enabled: showPopupsCheck.checked
-                checked: configColumn.behavior() & NotificationManager.Settings.ShowPopupsInDoNotDisturbMode
-                onClicked: configColumn.setBehavior(NotificationManager.Settings.ShowPopupsInDoNotDisturbMode, checked)
+                enabled: showPopupsCheck.checked && !behaviorSettings.isShowPopupsInDndModeImmutable
+                checked: !!behaviorSettings && behaviorSettings.showPopupsInDndMode
+                onClicked: behaviorSettings.showPopupsInDndMode = checked
             }
         }
 
         QtControls.CheckBox {
             text: i18n("Show in history")
-            checked: configColumn.behavior() & NotificationManager.Settings.ShowInHistory
-            onClicked: configColumn.setBehavior(NotificationManager.Settings.ShowInHistory, checked)
+            enabled: !!behaviorSettings && !behaviorSettings.isShowInHistoryImmutable
+            checked: !!behaviorSettings && behaviorSettings.showInHistory
+            onClicked: behaviorSettings.showInHistory = checked
         }
 
         QtControls.CheckBox {
             text: i18n("Show notification badges")
-            enabled: !!configColumn.desktopEntry && configColumn.desktopEntry !== configColumn.otherAppsId
-            checked: configColumn.behavior() & NotificationManager.Settings.ShowBadges
-            onClicked: configColumn.setBehavior(NotificationManager.Settings.ShowBadges, checked)
+            enabled: !!configColumn.desktopEntry && !configColumn.isOtherApp && !!behaviorSettings && !behaviorSettings.isShowBadgesImmutable
+            checked: !!behaviorSettings && behaviorSettings.showBadges
+            onClicked: behaviorSettings.showBadges = checked
         }
 
         Kirigami.Separator {
@@ -144,7 +125,7 @@ ColumnLayout {
         Layout.preferredWidth: form.implicitWidth
         text: i18n("This application does not support configuring notifications on a per-event basis.");
         wrapMode: Text.WordWrap
-        visible: !configColumn.notifyRcName && configColumn.desktopEntry !== configColumn.otherAppsId
+        visible: !configColumn.notifyRcName && !configColumn.isOtherApp
     }
 
     // compact layout
