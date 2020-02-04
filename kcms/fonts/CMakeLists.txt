@@ -10,13 +10,14 @@ include_directories(${FREETYPE_INCLUDE_DIRS})
 
 include_directories(../kfontinst/lib)
 
-set(kcm_fonts_PART_SRCS ../krdb/krdb.cpp previewrenderengine.cpp previewimageprovider.cpp fonts.cpp ../kfontinst/lib/FcEngine.cpp)
+set(kcm_fonts_PART_SRCS ../krdb/krdb.cpp previewrenderengine.cpp previewimageprovider.cpp fonts.cpp fontsaasettings.cpp ../kfontinst/lib/FcEngine.cpp)
 
 if(X11_FOUND)
     set(kcm_fonts_PART_SRCS ${kcm_fonts_PART_SRCS} ${libkxftconfig_SRCS})
 endif()
 
-kconfig_add_kcfg_files(kcm_fonts_PART_SRCS fontssettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(kcm_fonts_PART_SRCS fontssettings.kcfgc fontsaasettingsbase.kcfgc GENERATE_MOC)
+
 add_library(kcm_fonts MODULE ${kcm_fonts_PART_SRCS})
 
 target_link_libraries(kcm_fonts Qt5::DBus Qt5::Xml KF5::KCMUtils KF5::I18n KF5::KDELibs4Support ${FREETYPE_LIBRARIES} kfontinst)
