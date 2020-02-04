@@ -31,7 +31,6 @@
 #include <QWindow>
 #include <QQmlEngine>
 #include <QQuickView>
-#include <QDebug>
 #include <QFontDialog>
 #include <QApplication>
 #include <QFontDatabase>
@@ -470,6 +469,19 @@ bool FontAASettings::needsSave() const
     return m_state != m_originalState;
 }
 
+bool FontAASettings::isDefaults() const
+{
+    State defaultState{};
+    defaultState.exclude = false;
+    defaultState.excludeTo = 15;
+    defaultState.excludeFrom = 8;
+    defaultState.antiAliasing = true;
+    defaultState.dpi = 0;
+    defaultState.subPixel = KXftConfig::SubPixel::Rgb;
+    defaultState.hinting = KXftConfig::Hint::Slight;
+    return m_state == defaultState;
+}
+
 bool FontAASettings::State::operator==(const State& other) const
 {
     if (
@@ -510,18 +522,14 @@ KFonts::KFonts(QObject *parent, const QVariantList &args)
 
     setButtons(Apply | Default | Help);
 
-    auto updateState = [this]() {
-        setNeedsSave(m_fontAASettings->needsSave());
-    };
-
-    connect(m_fontAASettings, &FontAASettings::subPixelCurrentIndexChanged, this, updateState);
-    connect(m_fontAASettings, &FontAASettings::hintingCurrentIndexChanged, this, updateState);
-    connect(m_fontAASettings, &FontAASettings::excludeChanged, this, updateState);
-    connect(m_fontAASettings, &FontAASettings::excludeFromChanged, this, updateState);
-    connect(m_fontAASettings, &FontAASettings::excludeToChanged, this, updateState);
-    connect(m_fontAASettings, &FontAASettings::antiAliasingChanged, this, updateState);
-    connect(m_fontAASettings, &FontAASettings::aliasingChanged, this, updateState);
-    connect(m_fontAASettings, &FontAASettings::dpiChanged, this, updateState);
+    connect(m_fontAASettings, &FontAASettings::subPixelCurrentIndexChanged, this, &KFonts::settingsChanged);
+    connect(m_fontAASettings, &FontAASettings::hintingCurrentIndexChanged, this, &KFonts::settingsChanged);
+    connect(m_fontAASettings, &FontAASettings::excludeChanged, this, &KFonts::settingsChanged);
+    connect(m_fontAASettings, &FontAASettings::excludeFromChanged, this, &KFonts::settingsChanged);
+    connect(m_fontAASettings, &FontAASettings::excludeToChanged, this, &KFonts::settingsChanged);
+    connect(m_fontAASettings, &FontAASettings::antiAliasingChanged, this, &KFonts::settingsChanged);
+    connect(m_fontAASettings, &FontAASettings::aliasingChanged, this, &KFonts::settingsChanged);
+    connect(m_fontAASettings, &FontAASettings::dpiChanged, this, &KFonts::settingsChanged);
 }
 
 KFonts::~KFonts()
@@ -599,6 +607,11 @@ void KFonts::save()
 bool KFonts::isSaveNeeded() const
 {
     return m_fontAASettings->needsSave();
+}
+
+bool KFonts::isDefaults() const
+{
+    return m_fontAASettings->isDefaults();
 }
 
 void KFonts::adjustAllFonts()

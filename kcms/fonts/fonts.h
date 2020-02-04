@@ -77,7 +77,6 @@ public:
     bool save(KXftConfig::AntiAliasing::State aaState);
     void load();
     void defaults();
-    void setAntiAliasingState(KXftConfig::AntiAliasing::State aaState);
     QAbstractItemModel* subPixelOptionsModel() { return m_subPixelOptionsModel; }
     QAbstractItemModel* hintingOptionsModel() { return m_hintingOptionsModel; }
 
@@ -108,6 +107,7 @@ public:
     void setHinting(int idx);
 
     bool needsSave() const;
+    bool isDefaults() const;
 
 #endif
 
@@ -158,7 +158,8 @@ Q_SIGNALS:
     void fontsHaveChanged();
 
 private:
-    bool isSaveNeeded() const override ;
+    bool isSaveNeeded() const override;
+    bool isDefaults() const override;
     QFont applyFontDiff(const QFont &fnt, const QFont &newFont, int fontDiffFlags);
     void setNearestExistingFonts();
 
