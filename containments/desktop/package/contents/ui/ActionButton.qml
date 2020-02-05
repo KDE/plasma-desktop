@@ -55,6 +55,8 @@ PlasmaComponents.ToolButton {
         visible: button.hovered && text.length > 0
         x: button.width
         y: button.height/2 - height/2
+        PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.NormalColorGroup
+        PlasmaCore.ColorScope.inherit: false
     }
     contentItem: ColumnLayout {
         id: buttonColumn
