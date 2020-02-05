@@ -885,11 +885,8 @@ void runRdb( uint flags )
   KConfigGroup generalGroup(kglobalcfg, "General");
   KConfigGroup iconsGroup(kglobalcfg, "Icons");
 
-  const QString colorSchemeName = generalGroup.readEntry("ColorScheme", QString());
-  //if no valid color scheme saved, something weird is going on, abort
-  if (colorSchemeName.isEmpty()) {
-      return;
-  }
+  const QString colorSchemeName = generalGroup.readEntry("ColorScheme", QStringLiteral("Breeze"));
+
   QString colorSchemeSrcFile;
   if (colorSchemeName != QLatin1String("Default")) {
       //fix filename, copied from ColorsCM::saveScheme()
