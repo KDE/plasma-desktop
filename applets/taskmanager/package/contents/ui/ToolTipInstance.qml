@@ -3,6 +3,7 @@
 *   Copyright 2014 by Martin Gräßlin <mgraesslin@kde.org>
 *   Copyright 2016 by Kai Uwe Broulik <kde@privat.broulik.de>
 *   Copyright 2017 by Roman Gilg <subdiff@gmail.com>
+*   Copyright 2020 by Nate Graham <nate@kde.org>
 *
 *   This program is free software; you can redistribute it and/or modify
 *   it under the terms of the GNU Library General Public License as
@@ -26,17 +27,17 @@ import QtGraphicalEffects 1.0
 import QtQml.Models 2.2
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+// for Highlight
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 import org.kde.taskmanager 0.1 as TaskManager
 
-Column {
+ColumnLayout {
     property var submodelIndex
     property int flatIndex: isGroup && index != undefined ? index : 0
-
-    spacing: units.smallSpacing
 
     readonly property string mprisSourceName: mpris2Source.sourceNameForLauncherUrl(toolTipDelegate.launcherUrl, isGroup ? AppPid : pidParent)
     readonly property var playerData: mprisSourceName != "" ? mpris2Source.data[mprisSourceName] : 0
@@ -70,303 +71,235 @@ Column {
     readonly property string artist: currentMetadata["xesam:artist"] || ""
     readonly property string albumArt: currentMetadata["mpris:artUrl"] || ""
 
-    //
+    spacing: units.smallSpacing
+
     // launcher icon + text labels + close button
     RowLayout {
         id: header
-        Layout.minimumWidth: childrenRect.width
-        Layout.maximumWidth: Layout.minimumWidth
+        spacing: units.smallSpacing
 
-        Layout.minimumHeight: childrenRect.height
-        Layout.maximumHeight: Layout.minimumHeight
-
-        anchors.horizontalCenter: parent.horizontalCenter
+        // This number controls the overall size of the window tooltips
+        Layout.maximumWidth: units.gridUnit * 16
+        Layout.minimumWidth: isWin ? Layout.maximumWidth : 0
+        Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
         // launcher icon
         PlasmaCore.IconItem {
             Layout.preferredWidth: units.iconSizes.medium
             Layout.preferredHeight: units.iconSizes.medium
+            Layout.leftMargin: units.smallSpacing
+            Layout.rightMargin: units.smallSpacing
             source: !isWin ? icon : ""
             animated: false
             usesPlasmaTheme: false
             visible: !isWin
         }
+
         // all textlabels
-        Column {
+        ColumnLayout {
+            // app name
             PlasmaExtras.Heading {
                 level: 3
-                width: isWin ? textWidth : undefined
-                height: undefined
                 maximumLineCount: 1
+                Layout.fillWidth: true
                 elide: Text.ElideRight
                 text: appName
                 opacity: flatIndex == 0
-                textFormat: Text.PlainText
-                visible: text !== ""
+                visible: text.length !== 0
             }
             // window title
             PlasmaExtras.Heading {
                 id: winTitle
                 level: 5
-                width: isWin ? textWidth : undefined
-                height: undefined
                 maximumLineCount: 1
+                Layout.fillWidth: true
                 elide: Text.ElideRight
                 text: generateTitle()
-                textFormat: Text.PlainText
                 opacity: 0.75
-                visible: !hasPlayer
+                visible: !hasPlayer && text.length !== 0
             }
             // subtext
             PlasmaExtras.Heading {
                 level: 6
-                width: isWin ? textWidth : undefined
-                height: undefined
                 maximumLineCount: 1
+                Layout.fillWidth: true
                 elide: Text.ElideRight
                 text: isWin ? generateSubText() : ""
-                textFormat: Text.PlainText
                 opacity: 0.6
-                visible: text !== ""
+                visible: text.length !== 0
             }
         }
 
         // Count badge.
+        // The badge itself is inside an item to better center the text in the bubble
         Item {
             Layout.alignment: Qt.AlignRight | Qt.AlignTop
             Layout.preferredHeight: closeButton.height
             Layout.preferredWidth: closeButton.width
+            visible: flatIndex === 0 && smartLauncherCountVisible
 
             Badge {
                 anchors.centerIn: parent
                 height: units.iconSizes.smallMedium
-                visible: flatIndex === 0 && smartLauncherCountVisible
                 number: smartLauncherCount
             }
         }
 
         // close button
-        PlasmaComponents.ToolButton {
+        PlasmaComponents3.ToolButton {
             id: closeButton
             Layout.alignment: Qt.AlignRight | Qt.AlignTop
             visible: isWin
-            iconSource: "window-close"
+            icon.name: "window-close"
+            icon.width: units.iconSizes.small
+            icon.height: units.iconSizes.small
             onClicked: {
                 backend.cancelHighlightWindows();
                 tasksModel.requestClose(submodelIndex);
             }
-
         }
     }
 
     // thumbnail container
     Item {
-        id: thumbnail
-        width: header.width
-        // similar to 0.5625 = 1 / (16:9) as most screens are
-        // round necessary, otherwise shadow mask for players has gap!
-        height: Math.round(0.5 * width) + (!winTitle.visible? Math.round(winTitle.height) : 0)
-        anchors.horizontalCenter: parent.horizontalCenter
+        id: thumbnailSourceItem
+
+        Layout.minimumWidth: header.width
+        Layout.preferredHeight: header.width / 2
 
         visible: isWin
 
-        Item {
-            id: thumbnailSourceItem
+        readonly property bool isMinimized: isGroup ? IsMinimized == true : isMinimizedParent
+        // TODO: this causes XCB error message when being visible the first time
+        property int winId: isWin && windows[flatIndex] !== undefined ? windows[flatIndex] : 0
+
+        // There's no PlasmaComponents3 version
+        PlasmaComponents.Highlight {
+            anchors.fill: hoverHandler
+            visible: hoverHandler.containsMouse
+            pressed: hoverHandler.containsPress
+        }
+
+        PlasmaCore.WindowThumbnail {
+            anchors.fill: hoverHandler
+            // Indent by one pixel to make sure we never cover up the entire highlight
+            anchors.margins: 1
+
+            visible: !albumArtImage.visible && !thumbnailSourceItem.isMinimized
+            winId: thumbnailSourceItem.winId
+        }
+
+        Image {
+            id: albumArtBackground
+            source: albumArt
             anchors.fill: parent
-
-            readonly property bool isMinimized: isGroup ? IsMinimized == true : isMinimizedParent
-            // TODO: this causes XCB error message when being visible the first time
-            property int winId: isWin && windows[flatIndex] !== undefined ? windows[flatIndex] : 0
-
-            PlasmaComponents.Highlight {
-                anchors.fill: hoverHandler
-                visible: hoverHandler.containsMouse
-                pressed: hoverHandler.containsPress
-            }
-
-            PlasmaCore.WindowThumbnail {
-                anchors.fill: hoverHandler
-                // Indent by one pixel to make sure we never cover up the entire highlight
-                anchors.margins: 1
-
-                visible: !albumArtImage.visible && !thumbnailSourceItem.isMinimized
-                winId: thumbnailSourceItem.winId
-            }
-
-            Image {
-                id: albumArtBackground
-                source: albumArt
+            fillMode: Image.PreserveAspectCrop
+            visible: albumArtImage.available
+            layer.enabled: true
+            opacity: 0.25
+            layer.effect: FastBlur {
+                source: albumArtBackground
                 anchors.fill: parent
-                fillMode: Image.PreserveAspectCrop
-                visible: albumArtImage.available
-                layer.enabled: true
-                opacity: 0.25
-                layer.effect: FastBlur {
-                    source: albumArtBackground
-                    anchors.fill: parent
-                    radius: 30
-                }
-            }
-
-            Image {
-                id: albumArtImage
-                // also Image.Loading to prevent loading thumbnails just because the album art takes a split second to load
-                readonly property bool available: status === Image.Ready || status === Image.Loading
-
-                anchors.fill: hoverHandler
-                // Indent by one pixel to make sure we never cover up the entire highlight
-                anchors.margins: 1
-                sourceSize: Qt.size(parent.width, parent.height)
-
-                asynchronous: true
-                source: albumArt
-                fillMode: Image.PreserveAspectFit
-                visible: available
-            }
-
-            // when minimized, we don't have a preview, so show the icon
-            PlasmaCore.IconItem {
-                width: parent.width
-                height: thumbnail.height - playerControlsLoader.realHeight
-                anchors.horizontalCenter: parent.horizontalCenter
-                source: thumbnailSourceItem.isMinimized && !albumArtImage.visible ? icon : ""
-                animated: false
-                usesPlasmaTheme: false
-                visible: valid
-            }
-
-            ToolTipWindowMouseArea {
-                id: hoverHandler
-                anchors.fill: parent
-                // Don't go under the player controls bar, when it's visible
-                anchors.bottomMargin: playerControlsLoader.realHeight
-                rootTask: parentTask
-                modelIndex: submodelIndex
-                winId: thumbnailSourceItem.winId
+                radius: 30
             }
         }
 
+        Image {
+            id: albumArtImage
+            // also Image.Loading to prevent loading thumbnails just because the album art takes a split second to load
+            readonly property bool available: status === Image.Ready || status === Image.Loading
 
-        Loader {
-            id: playerControlsLoader
+            anchors.fill: hoverHandler
+            // Indent by one pixel to make sure we never cover up the entire highlight
+            anchors.margins: 1
+            sourceSize: Qt.size(parent.width, parent.height)
 
-            property real realHeight: item? item.realHeight : 0
-
-            anchors.fill: thumbnail
-            sourceComponent: hasPlayer ? playerControlsComp : undefined
+            asynchronous: true
+            source: albumArt
+            fillMode: Image.PreserveAspectFit
+            visible: available
         }
 
-        Component {
-            id: playerControlsComp
+        // when minimized, we don't have a preview, so show the icon
+        PlasmaCore.IconItem {
+            width: parent.width
+            height: thumbnailSourceItem.height
+            anchors.horizontalCenter: parent.horizontalCenter
+            source: thumbnailSourceItem.isMinimized && !albumArtImage.visible ? icon : ""
+            animated: false
+            usesPlasmaTheme: false
+            visible: valid
+        }
 
-            Item {
-                property real realHeight: playerControlsRow.height
+        ToolTipWindowMouseArea {
+            id: hoverHandler
+            anchors.fill: parent
+            rootTask: parentTask
+            modelIndex: submodelIndex
+            winId: thumbnailSourceItem.winId
+        }
+    }
 
-                anchors.fill: parent
+    // Player controls row
+    RowLayout {
+        Layout.maximumWidth: header.width
 
-                // TODO: When could this really be the case? A not-launcher-task always has a window!?
-                // if there's no window associated with this task, we might still be able to raise the player
-//                MouseArea {
-//                    id: raisePlayerArea
-//                    anchors.fill: parent
+        visible: hasPlayer
+        enabled: canControl
 
-//                    visible: !isWin || !windows[0] && canRaise
-//                    onClicked: mpris2Source.raise(mprisSourceName)
-//                }
+        ColumnLayout {
+            Layout.fillWidth: true
+            spacing: 0
 
-                Item {
-                    id: playerControlsFrostedGlass
-                    anchors.fill: parent
-                    visible: false // OpacityMask would render it
+            PlasmaComponents3.Label {
+                Layout.fillWidth: true
+                lineHeight: 1
+                maximumLineCount: artistText.visible? 1 : 2
+                wrapMode: artistText.visible? Text.NoWrap : Text.Wrap
+                elide: Text.ElideRight
+                text: track || ""
+            }
 
-                    Rectangle {
-                        width: parent.width
-                        height: parent.height - playerControlsRow.height
-                        opacity: 0
-                    }
+            PlasmaExtras.DescriptiveLabel {
+                id: artistText
+                Layout.fillWidth: true
+                wrapMode: Text.NoWrap
+                lineHeight: 1
+                elide: Text.ElideRight
+                text: artist || ""
+                visible: text != ""
+                font.pointSize: theme.smallestFont.pointSize
+            }
+        }
 
-                    Rectangle {
-                        anchors.bottom: parent.bottom
-                        width: parent.width
-                        height: playerControlsRow.height
-                        color: theme.backgroundColor
-                        opacity: 0.8
-                    }
-                }
+        PlasmaComponents3.ToolButton {
+            enabled: canGoBack
+            icon.name: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
+            icon.height: units.iconSizes.small
+            icon.width: units.iconSizes.small
+            onClicked: mpris2Source.goPrevious(mprisSourceName)
+        }
 
-                OpacityMask {
-                    id: playerControlsOpacityMask
-                    anchors.fill: parent
-                    source: playerControlsFrostedGlass
-                    maskSource: thumbnailSourceItem
-                }
-
-                // prevent accidental click-through when a control is disabled
-                MouseArea {
-                    anchors.fill: playerControlsRow
-                }
-
-                RowLayout {
-                    id: playerControlsRow
-                    anchors {
-                        horizontalCenter: parent.horizontalCenter
-                        bottom: parent.bottom
-                    }
-                    width: parent.width
-                    spacing: 0
-                    enabled: canControl
-
-                    ColumnLayout {
-                        Layout.leftMargin: 2
-                        Layout.fillWidth: true
-                        spacing: 0
-
-                        PlasmaComponents.Label {
-                            Layout.fillWidth: true
-                            lineHeight: 1
-                            maximumLineCount: artistText.visible? 1 : 2
-                            wrapMode: artistText.visible? Text.NoWrap : Text.Wrap
-                            elide: Text.ElideRight
-                            text: track || ""
-                        }
-
-                        PlasmaExtras.DescriptiveLabel {
-                            id: artistText
-                            Layout.fillWidth: true
-                            wrapMode: Text.NoWrap
-                            lineHeight: 1
-                            elide: Text.ElideRight
-                            text: artist || ""
-                            visible: text != ""
-                            font.pointSize: theme.smallestFont.pointSize
-                        }
-                    }
-
-                    PlasmaComponents.ToolButton {
-                        enabled: canGoBack
-                        iconSource: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
-                        onClicked: mpris2Source.goPrevious(mprisSourceName)
-                    }
-
-                    PlasmaComponents.ToolButton {
-                        enabled: playing ? canPause : canPlay
-                        iconSource: playing ? "media-playback-pause" : "media-playback-start"
-                        onClicked: {
-                            if (!playing) {
-                                mpris2Source.play(mprisSourceName);
-                            } else {
-                                mpris2Source.pause(mprisSourceName);
-                            }
-                        }
-                    }
-
-                    PlasmaComponents.ToolButton {
-                        enabled: canGoNext
-                        iconSource: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
-                        onClicked: mpris2Source.goNext(mprisSourceName)
-                    }
+        PlasmaComponents3.ToolButton {
+            enabled: playing ? canPause : canPlay
+            icon.name: playing ? "media-playback-pause" : "media-playback-start"
+            icon.height: units.iconSizes.small
+            icon.width: units.iconSizes.small
+            onClicked: {
+                if (!playing) {
+                    mpris2Source.play(mprisSourceName);
+                } else {
+                    mpris2Source.pause(mprisSourceName);
                 }
             }
+        }
+
+        PlasmaComponents3.ToolButton {
+            enabled: canGoNext
+            icon.name: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
+            icon.height: units.iconSizes.small
+            icon.width: units.iconSizes.small
+            onClicked: mpris2Source.goNext(mprisSourceName)
         }
     }
 
