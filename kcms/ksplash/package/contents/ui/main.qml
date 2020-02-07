@@ -82,7 +82,7 @@ KCM.GridViewKCM {
         }
         NewStuff.Button {
             id: newStuffButton
-            text: i18n("Get New Icons...")
+            text: i18n("&Get New Splash Screens...")
             configFile: "ksplash.knsrc"
             viewMode: NewStuff.Page.ViewMode.Preview
             onChangedEntriesChanged: kcm.ghnsEntriesChanged(newStuffButton.changedEntries);
