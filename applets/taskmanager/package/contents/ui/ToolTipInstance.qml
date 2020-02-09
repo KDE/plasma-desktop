@@ -97,10 +97,12 @@ ColumnLayout {
 
         // all textlabels
         ColumnLayout {
+            spacing: 0
             // app name
             PlasmaExtras.Heading {
                 level: 3
                 maximumLineCount: 1
+                lineHeight: 1
                 Layout.fillWidth: true
                 elide: Text.ElideRight
                 text: appName
@@ -112,6 +114,7 @@ ColumnLayout {
                 id: winTitle
                 level: 5
                 maximumLineCount: 1
+                lineHeight: 1
                 Layout.fillWidth: true
                 elide: Text.ElideRight
                 text: generateTitle()
@@ -122,6 +125,7 @@ ColumnLayout {
             PlasmaExtras.Heading {
                 level: 6
                 maximumLineCount: 1
+                lineHeight: 1
                 Layout.fillWidth: true
                 elide: Text.ElideRight
                 text: isWin ? generateSubText() : ""
