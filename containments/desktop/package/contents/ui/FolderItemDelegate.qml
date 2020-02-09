@@ -315,12 +315,14 @@ Item {
                             AnchorChanges {
                                 target: label
                                 anchors.top: icon.bottom
-                                anchors.horizontalCenter: parent.horizontalCenter
+                                anchors.left: parent.left
+                                anchors.right: parent.right
                             }
                             PropertyChanges {
                                 target: label
                                 anchors.topMargin: units.smallSpacing
-                                width: Math.round(Math.min(label.implicitWidth + units.smallSpacing, parent.width - units.smallSpacing))
+                                anchors.leftMargin: units.smallSpacing / 2
+                                anchors.rightMargin: units.smallSpacing / 2
                                 maximumLineCount: plasmoid.configuration.textLines
                                 horizontalAlignment: Text.AlignHCenter
                             }
