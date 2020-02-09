@@ -255,24 +255,43 @@ ColumnLayout {
             Layout.fillWidth: true
             spacing: 0
 
-            PlasmaComponents3.Label {
-                Layout.fillWidth: true
-                lineHeight: 1
-                maximumLineCount: artistText.visible? 1 : 2
-                wrapMode: artistText.visible? Text.NoWrap : Text.Wrap
-                elide: Text.ElideRight
-                text: track || ""
-            }
+             ScrollableTextWrapper {
+                id: songTextWrapper
 
-            PlasmaExtras.DescriptiveLabel {
-                id: artistText
                 Layout.fillWidth: true
-                wrapMode: Text.NoWrap
-                lineHeight: 1
-                elide: Text.ElideRight
-                text: artist || ""
-                visible: text != ""
-                font.pointSize: theme.smallestFont.pointSize
+                Layout.preferredHeight: songText.height
+
+                PlasmaComponents3.Label {
+                    id: songText
+                    parent: songTextWrapper
+                    width: parent.width
+                    height: undefined
+                    lineHeight: 1
+                    maximumLineCount: artistText.visible? 1 : 2
+                    wrapMode: Text.NoWrap
+                    elide: parent.state ? Text.ElideNone : Text.ElideRight
+                    text: track || ""
+                }
+             }
+
+            ScrollableTextWrapper {
+                id: artistTextWrapper
+
+                Layout.fillWidth: true
+                Layout.preferredHeight: artistText.height
+                visible: artistText.text !== ""
+
+                PlasmaExtras.DescriptiveLabel {
+                    id: artistText
+                    parent: artistTextWrapper
+                    width: parent.width
+                    height: undefined
+                    wrapMode: Text.NoWrap
+                    lineHeight: 1
+                    elide: parent.state ? Text.ElideNone : Text.ElideRight
+                    text: artist || ""
+                    font.pointSize: theme.smallestFont.pointSize
+                }
             }
         }
 
