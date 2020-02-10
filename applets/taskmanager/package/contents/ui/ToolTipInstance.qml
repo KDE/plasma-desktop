@@ -100,6 +100,7 @@ ColumnLayout {
             spacing: 0
             // app name
             PlasmaExtras.Heading {
+                id: appNameHeading
                 level: 3
                 maximumLineCount: 1
                 lineHeight: 1
@@ -119,7 +120,7 @@ ColumnLayout {
                 elide: Text.ElideRight
                 text: generateTitle()
                 opacity: 0.75
-                visible: !hasPlayer && text.length !== 0
+                visible: !hasPlayer && text.length !== 0 && text !== appNameHeading.text
             }
             // subtext
             PlasmaExtras.Heading {
@@ -130,7 +131,7 @@ ColumnLayout {
                 elide: Text.ElideRight
                 text: isWin ? generateSubText() : ""
                 opacity: 0.6
-                visible: text.length !== 0
+                visible: text.length !== 0 && text !== appNameHeading.text
             }
         }
 
