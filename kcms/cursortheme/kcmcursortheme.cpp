@@ -286,10 +286,6 @@ bool CursorThemeConfig::applyTheme(const CursorTheme *theme, const int size)
         return false;
     }
 
-    if (!CursorTheme::haveXfixes()) {
-        return false;
-    }
-
     QByteArray themeName = QFile::encodeName(theme->name());
 
     // Set up the proper launch environment for newly started apps
@@ -304,25 +300,27 @@ bool CursorThemeConfig::applyTheme(const CursorTheme *theme, const int size)
     // Reload the standard cursors
     QStringList names;
 
-    // Qt cursors
-    names << "left_ptr"       << "up_arrow"      << "cross"      << "wait"
-          << "left_ptr_watch" << "ibeam"         << "size_ver"   << "size_hor"
-          << "size_bdiag"     << "size_fdiag"    << "size_all"   << "split_v"
-          << "split_h"        << "pointing_hand" << "openhand"
-          << "closedhand"     << "forbidden"     << "whats_this" << "copy" << "move" << "link";
+    if (CursorTheme::haveXfixes()) {
+        // Qt cursors
+        names << "left_ptr"       << "up_arrow"      << "cross"      << "wait"
+            << "left_ptr_watch" << "ibeam"         << "size_ver"   << "size_hor"
+            << "size_bdiag"     << "size_fdiag"    << "size_all"   << "split_v"
+            << "split_h"        << "pointing_hand" << "openhand"
+            << "closedhand"     << "forbidden"     << "whats_this" << "copy" << "move" << "link";
 
-    // X core cursors
-    names << "X_cursor"            << "right_ptr"           << "hand1"
-          << "hand2"               << "watch"               << "xterm"
-          << "crosshair"           << "left_ptr_watch"      << "center_ptr"
-          << "sb_h_double_arrow"   << "sb_v_double_arrow"   << "fleur"
-          << "top_left_corner"     << "top_side"            << "top_right_corner"
-          << "right_side"          << "bottom_right_corner" << "bottom_side"
-          << "bottom_left_corner"  << "left_side"           << "question_arrow"
-          << "pirate";
+        // X core cursors
+        names << "X_cursor"            << "right_ptr"           << "hand1"
+            << "hand2"               << "watch"               << "xterm"
+            << "crosshair"           << "left_ptr_watch"      << "center_ptr"
+            << "sb_h_double_arrow"   << "sb_v_double_arrow"   << "fleur"
+            << "top_left_corner"     << "top_side"            << "top_right_corner"
+            << "right_side"          << "bottom_right_corner" << "bottom_side"
+            << "bottom_left_corner"  << "left_side"           << "question_arrow"
+            << "pirate";
 
-    foreach (const QString &name, names) {
-        XFixesChangeCursorByName(QX11Info::display(), theme->loadCursor(name, size), QFile::encodeName(name));
+        foreach (const QString &name, names) {
+            XFixesChangeCursorByName(QX11Info::display(), theme->loadCursor(name, size), QFile::encodeName(name));
+        }
     }
     updateSizeComboBox();
     emit themeApplied();
