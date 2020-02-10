@@ -71,11 +71,11 @@ SMServerConfig::SMServerConfig(QWidget *parent, const QVariantList &args)
     " and whether the computer should be automatically shut down after session"
     " exit by default."));
 
-    initFirmwareSetup();
-    checkFirmwareSetupRequested();
-
     ui->firmwareSetupBox->hide();
     ui->firmwareSetupMessageWidget->hide();
+
+    initFirmwareSetup();
+    checkFirmwareSetupRequested();
 
     addConfig(m_settings, this);
 }
