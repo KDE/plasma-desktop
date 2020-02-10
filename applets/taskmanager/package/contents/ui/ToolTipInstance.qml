@@ -76,19 +76,20 @@ ColumnLayout {
     // launcher icon + text labels + close button
     RowLayout {
         id: header
-        spacing: units.smallSpacing
+        // match spacing of DefaultToolTip.qml in plasma-framework
+        spacing: isWin ? units.smallSpacing : units.largeSpacing
 
         // This number controls the overall size of the window tooltips
         Layout.maximumWidth: units.gridUnit * 16
         Layout.minimumWidth: isWin ? Layout.maximumWidth : 0
         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+        // match margins of DefaultToolTip.qml in plasma-framework
+        Layout.margins: isWin ? 0 : units.gridUnit / 2
 
         // launcher icon
         PlasmaCore.IconItem {
             Layout.preferredWidth: units.iconSizes.medium
             Layout.preferredHeight: units.iconSizes.medium
-            Layout.leftMargin: units.smallSpacing
-            Layout.rightMargin: units.smallSpacing
             source: !isWin ? icon : ""
             animated: false
             usesPlasmaTheme: false
@@ -103,7 +104,7 @@ ColumnLayout {
                 id: appNameHeading
                 level: 3
                 maximumLineCount: 1
-                lineHeight: 1
+                lineHeight: isWin ? 1 : appNameHeading.lineHeight
                 Layout.fillWidth: true
                 elide: Text.ElideRight
                 text: appName
@@ -115,7 +116,7 @@ ColumnLayout {
                 id: winTitle
                 level: 5
                 maximumLineCount: 1
-                lineHeight: 1
+                lineHeight: isWin ? 1 : winTitle.lineHeight
                 Layout.fillWidth: true
                 elide: Text.ElideRight
                 text: generateTitle()
@@ -124,9 +125,10 @@ ColumnLayout {
             }
             // subtext
             PlasmaExtras.Heading {
+                id: subtext
                 level: 6
                 maximumLineCount: 1
-                lineHeight: 1
+                lineHeight: isWin ? 1 : subtext.lineHeight
                 Layout.fillWidth: true
                 elide: Text.ElideRight
                 text: isWin ? generateSubText() : ""
