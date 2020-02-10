@@ -256,6 +256,8 @@ ColumnLayout {
 
         ColumnLayout {
             Layout.fillWidth: true
+            Layout.topMargin: units.smallSpacing
+            Layout.bottomMargin: units.smallSpacing
             spacing: 0
 
              ScrollableTextWrapper {
