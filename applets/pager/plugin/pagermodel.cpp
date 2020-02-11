@@ -574,7 +574,7 @@ void PagerModel::changePage(int page)
     }
 }
 
-void PagerModel::drop(QMimeData *mimeData, const QVariant &itemId)
+void PagerModel::drop(QMimeData *mimeData, int modifiers, const QVariant &itemId)
 {
     if (!mimeData) {
         return;
@@ -595,23 +595,27 @@ void PagerModel::drop(QMimeData *mimeData, const QVariant &itemId)
                 KWindowSystem::setOnDesktop(id, itemId.toInt());
             }
         } else {
-            QString newActivity;
+            QString newActivity = itemId.toString();
             const QStringList &runningActivities = d->activityInfo->runningActivities();
 
-            if (itemId < runningActivities.length()) {
-                newActivity = itemId.toString();
-            }
-
-            if (newActivity.isEmpty()) {
+            if (!runningActivities.contains(newActivity)) {
                 return;
             }
 
             for (const auto &id : ids) {
                 QStringList activities = KWindowInfo(id, NET::Properties(), NET::WM2Activities).activities();
 
-                if (!activities.contains(newActivity)) {
-                    KWindowSystem::setOnActivities(id, activities << newActivity);
+                if (modifiers & Qt::ControlModifier) { // 'copy' => add to activity
+                    if (!activities.contains(newActivity))
+                        activities << newActivity;
+                } else { // 'move' to activity
+                    // if on only one activity, set it to only the new activity
+                    // if on >1 activity, remove it from the current activity and add it to the new activity
+                    const QString currentActivity = d->activityInfo->currentActivity();
+                    activities.removeAll(currentActivity);
+                    activities << newActivity;
                 }
+                KWindowSystem::setOnActivities(id, activities);
             }
         }
 

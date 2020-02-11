@@ -103,7 +103,7 @@ public:
     Q_INVOKABLE void moveWindow(int window, double x, double y, const QVariant &targetItemId, const QVariant &sourceItemId,
         qreal widthScaleFactor, qreal heightScaleFactor);
     Q_INVOKABLE void changePage(int page);
-    Q_INVOKABLE void drop(QMimeData *mimeData, const QVariant &itemId);
+    Q_INVOKABLE void drop(QMimeData *mimeData, int modifiers, const QVariant &itemId);
     Q_INVOKABLE void addDesktop();
     Q_INVOKABLE void removeDesktop();
 

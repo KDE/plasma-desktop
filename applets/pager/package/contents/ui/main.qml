@@ -398,7 +398,7 @@ MouseArea {
                         dragTimer.stop();
                     }
                     onDrop: {
-                        pagerModel.drop(event.mimeData, desktop.desktopId);
+                        pagerModel.drop(event.mimeData, event.modifiers, desktop.desktopId);
                         root.dragSwitchDesktopIndex = -1;
                         dragTimer.stop();
                     }
