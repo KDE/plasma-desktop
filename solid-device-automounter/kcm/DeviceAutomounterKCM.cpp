@@ -61,6 +61,8 @@ DeviceAutomounterKCM::DeviceAutomounterKCM(QWidget *parent, const QVariantList &
     deviceView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
 
     auto emitChanged = [this] {
+        m_devices->setAutomaticMountOnLogin(automountOnLogin->isChecked());
+        m_devices->setAutomaticMountOnPlugin(automountOnPlugin->isChecked());
         emit markAsChanged();
     };
 

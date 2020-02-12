@@ -138,6 +138,9 @@ void DeviceModel::reload()
     m_attached.clear();
     m_disconnected.clear();
 
+    m_automaticLogin = AutomounterSettings::automountOnLogin();
+    m_automaticAttached = AutomounterSettings::automountOnPlugin();
+
     foreach (const QString &dev, AutomounterSettings::knownDevices()) {
         addNewDevice(dev);
     }
@@ -184,19 +187,44 @@ QModelIndex DeviceModel::parent(const QModelIndex &index) const
 
 Qt::ItemFlags DeviceModel::flags(const QModelIndex &index) const
 {
-    if (index.isValid()) {
-        if (index.parent().isValid()) {
-            if (index.column() > 0) {
-                return Qt::ItemIsSelectable | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable;
-            } else if (index.column() == 0) {
-                return Qt::ItemIsSelectable | Qt::ItemIsEnabled;
-            }
+    if (!index.isValid()) {
+        return Qt::NoItemFlags;
+    }
+
+    if (!index.parent().isValid()) {
+        // first child section elements
+        if (m_automaticLogin && m_automaticAttached) {
+            return Qt::NoItemFlags;
         } else {
             return Qt::ItemIsEnabled;
         }
     }
 
-    return Qt::NoItemFlags;
+    switch (index.column()) {
+    case 0:
+        // first column
+        if (m_automaticLogin && m_automaticAttached) {
+            return Qt::NoItemFlags;
+        } else {
+            return Qt::ItemIsEnabled;
+        }
+    case 1:
+        // on login column
+        if (m_automaticLogin) {
+            // automount on login was checked
+            return Qt::ItemIsSelectable | Qt::ItemIsUserCheckable;
+        }
+        return Qt::ItemIsSelectable | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable;
+    case 2:
+        // on attached column
+        if (m_automaticAttached) {
+            // automount on attach was checked
+            return Qt::ItemIsSelectable | Qt::ItemIsUserCheckable;
+        }
+        return Qt::ItemIsSelectable | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable;
+    default:
+        Q_UNREACHABLE();
+    }
 }
 
 bool DeviceModel::setData(const QModelIndex &index, const QVariant &value, int role)
@@ -333,4 +361,26 @@ int DeviceModel::columnCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
     return 3;
+}
+
+void DeviceModel::setAutomaticMountOnLogin(bool automaticLogin)
+{
+    if (m_automaticLogin != automaticLogin) {
+        m_automaticLogin = automaticLogin;
+        for (int parent = 0; parent < rowCount(); parent++) {
+            const auto parentIndex = index(parent, 0);
+            emit dataChanged(index(0, 1, parentIndex), index(rowCount(parentIndex), 1, parentIndex));
+        }
+    }
+}
+
+void DeviceModel::setAutomaticMountOnPlugin(bool automaticAttached)
+{
+    if (m_automaticAttached != automaticAttached) {
+        m_automaticAttached = automaticAttached;
+        for (int parent = 0; parent < rowCount(); parent++) {
+            const auto parentIndex = index(parent, 0);
+            emit dataChanged(index(0, 2, parentIndex), index(rowCount(parentIndex), 2, parentIndex));
+        }
+    }
 }

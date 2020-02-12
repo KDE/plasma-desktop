@@ -57,6 +57,9 @@ public:
 
     bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
 
+    void setAutomaticMountOnLogin(bool automaticLogin);
+    void setAutomaticMountOnPlugin(bool automaticAttached);
+
 public slots:
     void forgetDevice(const QString &udi);
     void reload();
@@ -72,6 +75,8 @@ private:
     QList<QString> m_disconnected;
     QHash<QString, bool> m_loginForced;
     QHash<QString, bool> m_attachedForced;
+    bool m_automaticLogin;
+    bool m_automaticAttached;
 };
 
 #endif
