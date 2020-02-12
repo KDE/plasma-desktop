@@ -106,25 +106,35 @@ MouseArea {
 
     PlasmaCore.SvgItem {
         id: audioStreamIcon
+
+        // Need audio indicator twice, to keep iconBox in the center.
+        readonly property var requiredSpace: Math.min(iconBox.width, iconBox.height)
+                                             + Math.min(Math.min(iconBox.width, iconBox.height), units.iconSizes.smallMedium) * 2
         svg: audioSvg
         smooth: false
 
-        height: Math.round(Math.min(parent.height * 1.4, units.iconSizes.smallMedium) / 2) * 2
+        height: Math.round(Math.min(parent.height * indicatorScale, units.iconSizes.smallMedium))
         width: height
 
         anchors {
             verticalCenter: parent.verticalCenter
-            right: parent.right
-            // Avoid overlap to the right.
-            rightMargin: (parent.width - width) / 2 + units.smallSpacing / 4
+            horizontalCenter: parent.horizontalCenter
         }
 
         states: [
             State {
+                name: "verticalIconsOnly"
+                when: tasks.vertical && frame.width < audioStreamIcon.requiredSpace
+
+                PropertyChanges {
+                    target: audioStreamIconLoader
+                    anchors.rightMargin: Math.round(taskFrame.margins.right * indicatorScale)
+                }
+            },
+
+            State {
                 name: "horizontal"
-                // When there is enough space for the audio icon, to fit right of the centered task icon.
-                when: (frame.width > Math.min(iconBox.width, iconBox.height) +
-                       Math.min(Math.min(iconBox.width, iconBox.height), units.iconSizes.smallMedium) * 2)
+                when: frame.width > audioStreamIcon.requiredSpace
 
                 AnchorChanges {
                     target: audioStreamIconLoader
@@ -135,8 +145,6 @@ MouseArea {
 
                 PropertyChanges {
                     target: audioStreamIconLoader
-
-                    anchors.rightMargin: iconBox.adjustMargin(true, parent.width, taskFrame.margins.right)
                     width: units.roundToIconSize(Math.min(Math.min(iconBox.width, iconBox.height), units.iconSizes.smallMedium))
                 }
 
@@ -150,9 +158,7 @@ MouseArea {
 
             State {
                 name: "vertical"
-                // When audio icon can fit above the centered task icon.
-                when: (frame.height > Math.min(iconBox.width, iconBox.height) +
-                       Math.min(Math.min(iconBox.width, iconBox.height), units.iconSizes.smallMedium) * 2)
+                when: frame.height > audioStreamIcon.requiredSpace
 
                 AnchorChanges {
                     target: audioStreamIconLoader
@@ -164,7 +170,7 @@ MouseArea {
                 PropertyChanges {
                     target: audioStreamIconLoader
 
-                    anchors.topMargin: iconBox.adjustMargin(false, frame.height, taskFrame.margins.top)
+                    anchors.topMargin: taskFrame.margins.top
                     width: units.roundToIconSize(Math.min(Math.min(iconBox.width, iconBox.height), units.iconSizes.smallMedium))
                 }
 

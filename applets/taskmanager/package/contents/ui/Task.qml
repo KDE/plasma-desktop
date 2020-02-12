@@ -492,16 +492,17 @@ MouseArea {
         id: audioStreamIconLoader
 
         readonly property bool shown: item && item.visible
+        readonly property var indicatorScale: 1.2
 
         source: "AudioStream.qml"
-        width: Math.min(Math.min(iconBox.width, iconBox.height) * 0.45, units.iconSizes.smallMedium)
+        width: Math.min(Math.min(iconBox.width, iconBox.height) * 0.4, units.iconSizes.smallMedium)
         height: width
 
         anchors {
             right: frame.right
             top: frame.top
-            rightMargin: iconBox.adjustMargin(true, parent.width, taskFrame.margins.right) + units.smallSpacing / 2
-            topMargin: iconBox.adjustMargin(true, parent.width, taskFrame.margins.top) + units.smallSpacing / 2
+            rightMargin: taskFrame.margins.right
+            topMargin: Math.round(taskFrame.margins.top * indicatorScale)
         }
     }
 
