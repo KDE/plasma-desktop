@@ -210,9 +210,10 @@ Item {
             id: header
             Layout.fillWidth: true
             Layout.alignment: Qt.AlignVCenter
-            PlasmaExtras.Title {
+            PlasmaExtras.Heading {
                 id: heading
                 anchors.verticalCenter: parent.verticalCenter
+                level: 1
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Widgets")
                 width: parent.width
                 elide: Text.ElideRight

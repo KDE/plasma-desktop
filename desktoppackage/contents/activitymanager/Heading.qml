@@ -62,11 +62,12 @@ Item {
         }
 
         Item {
-            PlasmaExtras.Title {
+            PlasmaExtras.Heading {
                 id: heading
 
                 anchors.fill: parent
 
+                level: 1
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Activities")
                 elide: Text.ElideRight
 
