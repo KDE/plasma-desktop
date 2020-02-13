@@ -76,7 +76,7 @@ public:
     void setOtherToolBarStyle(ToolBarStyle style);
     Q_SIGNAL void otherToolBarStyleChanged();
 
-    Q_INVOKABLE void configure(const QString &styleName, QQuickItem *ctx = nullptr);
+    Q_INVOKABLE void configure(const QString &title, const QString &styleName, QQuickItem *ctx = nullptr);
     Q_INVOKABLE bool gtkConfigKdedModuleLoaded();
 
     void load() override;

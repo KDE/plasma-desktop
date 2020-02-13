@@ -106,7 +106,7 @@ KCM.GridViewKCM {
                 iconName: "document-edit"
                 tooltip: i18n("Configure Style...")
                 enabled: model.configurable
-                onTriggered: kcm.configure(model.styleName, delegate)
+                onTriggered: kcm.configure(model.display, model.styleName, delegate)
             }
         ]
         onClicked: {
