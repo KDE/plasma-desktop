@@ -71,7 +71,6 @@ KCM.SimpleKCM {
 
             ListView {
                 id: fileExcludeList
-                anchors.fill: parent
 
                 model: kcm.filteredModel
                 delegate: Kirigami.BasicListItem {
