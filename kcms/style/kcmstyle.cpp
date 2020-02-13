@@ -164,7 +164,7 @@ void KCMStyle::setOtherToolBarStyle(ToolBarStyle style)
     }
 }
 
-void KCMStyle::configure(const QString &styleName, QQuickItem *ctx)
+void KCMStyle::configure(const QString &title, const QString &styleName, QQuickItem *ctx)
 {
     if (m_styleConfigDialog) {
         return;
@@ -189,7 +189,7 @@ void KCMStyle::configure(const QString &styleName, QQuickItem *ctx)
         return;
     }
 
-    m_styleConfigDialog = new StyleConfigDialog(nullptr/*this*/, configPage);
+    m_styleConfigDialog = new StyleConfigDialog(nullptr/*this*/, title);
     m_styleConfigDialog->setAttribute(Qt::WA_DeleteOnClose);
     m_styleConfigDialog->setWindowModality(Qt::WindowModal);
     m_styleConfigDialog->winId(); // so it creates windowHandle
