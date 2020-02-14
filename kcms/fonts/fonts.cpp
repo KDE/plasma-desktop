@@ -572,8 +572,8 @@ void KFonts::load()
     // previews
     engine()->addImageProvider("preview", new PreviewImageProvider(m_settings->font()));
 
-    // reload state after loading by emiting a settings signal
-    emit m_settings->activeFontChanged();
+    // KCM expect save state to be false at this point (can be true because of setNearestExistingFonts
+    setNeedsSave(false);
 }
 
 void KFonts::save()
