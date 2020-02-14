@@ -54,10 +54,8 @@ Item {
 
     ToolBoxButton {
         id: toolBoxButton
-        visible: false
         Component.onCompleted: {
             placeToolBox(plasmoid.configuration.ToolBoxButtonState);
-            toolBoxButton.visible = true
         }
     }
 
