@@ -69,10 +69,10 @@ void DeviceAutomounter::init()
     }
 
     connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded, this, &DeviceAutomounter::deviceAdded);
-    QList<Solid::Device> volumes = Solid::Device::listFromType(Solid::DeviceInterface::StorageVolume);
-    foreach(Solid::Device volume, volumes) {
+    const QList<Solid::Device> volumes = Solid::Device::listFromType(Solid::DeviceInterface::StorageVolume);
+    for (Solid::Device volume : volumes) {
         // sa can be 0 (e.g. for the swap partition)
-        if (Solid::StorageAccess *sa = volume.as<Solid::StorageAccess>()) {
+        if (const Solid::StorageAccess *sa = volume.as<Solid::StorageAccess>()) {
             connect(sa, &Solid::StorageAccess::accessibilityChanged, this, &DeviceAutomounter::deviceMountChanged);
         }
         automountDevice(volume, AutomounterSettings::Login);

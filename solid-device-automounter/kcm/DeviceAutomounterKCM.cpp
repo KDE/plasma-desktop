@@ -88,7 +88,8 @@ DeviceAutomounterKCM::~DeviceAutomounterKCM()
 
 void DeviceAutomounterKCM::updateForgetDeviceButton()
 {
-    foreach (const QModelIndex &idx, deviceView->selectionModel()->selectedIndexes()) {
+    const auto selectedIndex = deviceView->selectionModel()->selectedIndexes();
+    for (const QModelIndex &idx : selectedIndex) {
 		if (idx.data(DeviceModel::TypeRole) == DeviceModel::Detatched) {
 			forgetDevice->setEnabled(true);
 			return;
@@ -167,7 +168,8 @@ void DeviceAutomounterKCM::save()
         }
     }
 
-    foreach (const QString &possibleDevice, AutomounterSettings::knownDevices()) {
+    const auto knownDevices = AutomounterSettings::knownDevices();
+    for (const QString &possibleDevice : knownDevices) {
         if (!validDevices.contains(possibleDevice)) {
             AutomounterSettings::deviceSettings(possibleDevice).deleteGroup();
         }

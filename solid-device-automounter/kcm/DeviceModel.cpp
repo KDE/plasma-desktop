@@ -141,10 +141,12 @@ void DeviceModel::reload()
     m_automaticLogin = AutomounterSettings::automountOnLogin();
     m_automaticAttached = AutomounterSettings::automountOnPlugin();
 
-    foreach (const QString &dev, AutomounterSettings::knownDevices()) {
+    const auto knownDevices = AutomounterSettings::knownDevices();
+    for (const QString &dev : knownDevices) {
         addNewDevice(dev);
     }
-    foreach (const QString &udi, m_loginForced.keys()) {
+    const auto keys = m_loginForced.keys();
+    for (const QString &udi : keys) {
         m_loginForced[udi] = AutomounterSettings::deviceAutomountIsForced(udi, AutomounterSettings::Login);
         m_attachedForced[udi] = AutomounterSettings::deviceAutomountIsForced(udi, AutomounterSettings::Attach);
     }
