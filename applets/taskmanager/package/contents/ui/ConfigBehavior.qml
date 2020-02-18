@@ -56,23 +56,15 @@ Item {
         CheckBox {
             id: groupPopups
             visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
-            text: i18n("Open groups in popups")
+            text: i18n("Combine into single button")
             enabled: groupingStrategy.currentIndex > 0
         }
 
-        RowLayout {
+        CheckBox {
+            id: onlyGroupWhenFull
             visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
-
-            // Indent the option as it depends on the previous one
-            Item {
-                width: units.largeSpacing
-            }
-
-            CheckBox {
-                id: onlyGroupWhenFull
-                text: i18n("Group only when the Task Manager is full")
-                enabled: groupingStrategy.currentIndex > 0 && groupPopups.checked
-            }
+            text: i18n("Group only when the Task Manager is full")
+            enabled: groupingStrategy.currentIndex > 0 && groupPopups.checked
         }
 
         Item {
@@ -116,9 +108,14 @@ Item {
             ]
         }
 
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
         CheckBox {
             id: wheelEnabled
-            text: i18n("Cycle through tasks with mouse wheel")
+            Kirigami.FormData.label: i18n("Mouse wheel:")
+            text: i18n("Cycle through tasks")
         }
 
         Item {
@@ -127,23 +124,23 @@ Item {
 
         CheckBox {
             id: showOnlyCurrentScreen
-            Kirigami.FormData.label: i18n("Filter:")
-            text: i18n("Show only tasks from the current screen")
+            Kirigami.FormData.label: i18n("Show only tasks:")
+            text: i18n("From current screen")
         }
 
         CheckBox {
             id: showOnlyCurrentDesktop
-            text: i18n("Show only tasks from the current desktop")
+            text: i18n("From current desktop")
         }
 
         CheckBox {
             id: showOnlyCurrentActivity
-            text: i18n("Show only tasks from the current activity")
+            text: i18n("From current activity")
         }
 
         CheckBox {
             id: showOnlyMinimized
-            text: i18n("Show only tasks that are minimized")
+            text: i18n("That are minimized")
         }
     }
 }
