@@ -340,9 +340,9 @@ void KCMLookandFeel::save()
             cg = KConfigGroup(conf, "kwinrc");
             cg = KConfigGroup(&cg, "org.kde.kdecoration2");
 #ifdef HAVE_BREEZE_DECO
-            setWindowDecoration(cg.readEntry("library", QStringLiteral(BREEZE_KDECORATION_PLUGIN_ID)), cg.readEntry("theme", QString()));
+            setWindowDecoration(cg.readEntry("library", QStringLiteral(BREEZE_KDECORATION_PLUGIN_ID)), cg.readEntry("theme", QStringLiteral("Breeze")));
 #else
-            setWindowDecoration(cg.readEntry("library", QStringLiteral("org.kde.kwin.aurorae")), cg.readEntry("theme", QString()));
+            setWindowDecoration(cg.readEntry("library", QStringLiteral("org.kde.kwin.aurorae")), cg.readEntry("theme", QStringLiteral("kwin4_decoration_qml_plastik")));
 #endif
         }
 
@@ -681,7 +681,7 @@ void KCMLookandFeel::setWindowDecoration(const QString &library, const QString &
     KConfigGroup cg(&config, "org.kde.kdecoration2");
     cg.writeEntry("library", library);
     cg.writeEntry("theme", theme);
-    
+
     cg.sync();
     // Reload KWin.
     QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KWin"),
