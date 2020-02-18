@@ -1,0 +1,8 @@
+Version=5
+
+# Rewrite proper widgetStyle value for Breeze
+Id=StyleWidgetStyleDefaultBreeze
+Options=overwrite
+File=kdeglobals
+Group=KDE
+Script=style_widgetstyle_default_breeze.pl,perl
