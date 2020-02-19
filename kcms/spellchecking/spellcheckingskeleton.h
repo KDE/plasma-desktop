@@ -1,6 +1,5 @@
 /*
 
-Copyright 2008 Albert Astals Cid <aacid@kde.org>
 Copyright 2020 Benjamin Port <benjamin.port@enioka.com>
 
 This program is free software; you can redistribute it and/or
@@ -21,38 +20,40 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-#ifndef SONNETSPELLCHECKINGMODULE_H
-#define SONNETSPELLCHECKINGMODULE_H
+#ifndef SPELLCHECKINGSKELETON_H
+#define SPELLCHECKINGSKELETON_H
 
-#include "kcmodule.h"
-#include "spellcheckingskeleton.h"
+#include <KConfigCore/KCoreConfigSkeleton>
 
-class KConfigDialogManager;
-
-namespace Sonnet
-{
+namespace Sonnet {
+    class Settings;
     class ConfigView;
 }
 
-class SonnetSpellCheckingModule : public KCModule
+class SpellCheckingSkeleton : public KCoreConfigSkeleton
 {
     Q_OBJECT
 
 public:
-    SonnetSpellCheckingModule(QWidget *parent, const QVariantList &);
-    ~SonnetSpellCheckingModule() override;
+    explicit SpellCheckingSkeleton(QObject *parent = nullptr);
+    bool usrSave() override;
+    void usrRead() override;
 
-    void save() override;
-    void load() override;
-    void defaults() override;
+    void setPreferredLanguages(const QStringList &preferredLanguages);
+    QStringList preferredLanguages() const;
 
+    void setIgnoreList(const QStringList &ignoreList);
+    QStringList ignoreList() const;
+
+    void setDefaultLanguage(const QString &defaultLanguage);
+    QString defaultLanguage() const;
+
+    QStringList clients() const;
 private:
-    void stateChanged();
-
-    Sonnet::Settings *m_settings;
-    Sonnet::ConfigView *m_configWidget;
-    SpellCheckingSkeleton *m_skeleton;
-    KConfigDialogManager *m_managedConfig;
+    Sonnet::Settings *m_store;
+    QStringList m_preferredLanguages;
+    QStringList m_ignoreList;
+    QString m_defaultLanguage;
 };
 
 #endif

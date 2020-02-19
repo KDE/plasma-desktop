@@ -1,6 +1,7 @@
 /*
 
 Copyright 2008 Albert Astals Cid <aacid@kde.org>
+Copyright 2020 Benjamin Port <benjamin.port@enioka.com>
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License as
@@ -22,35 +23,93 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "spellchecking.h"
 
-#include <kpluginfactory.h>
-#include <sonnet/configwidget.h>
-#include <KConfig>
 #include <QBoxLayout>
+#include <QSet>
+
+#include <KConfigDialogManager>
+#include <Sonnet/ConfigView>
+#include <Sonnet/Settings>
+#include <KPluginFactory>
+#include "spellcheckingskeleton.h"
 
 K_PLUGIN_FACTORY(SpellFactory, registerPlugin<SonnetSpellCheckingModule>();)
 
-SonnetSpellCheckingModule::SonnetSpellCheckingModule(QWidget* parent, const QVariantList&):
-    KCModule(parent)
+SonnetSpellCheckingModule::SonnetSpellCheckingModule(QWidget *parent, const QVariantList &)
+    : KCModule(parent)
 {
-  QBoxLayout *layout = new QVBoxLayout( this );
-  layout->setContentsMargins(0, 0, 0, 0);
-  m_configWidget = new Sonnet::ConfigWidget( this );
-  layout->addWidget(m_configWidget);
-  connect(m_configWidget, SIGNAL(configChanged()), this, SLOT(changed()));
+    QBoxLayout *layout = new QVBoxLayout(this);
+    layout->setContentsMargins(0, 0, 0, 0);
+    m_skeleton = new SpellCheckingSkeleton(this);
+    m_configWidget = new Sonnet::ConfigView(this);
+    m_configWidget->setNoBackendFoundVisible(m_skeleton->clients().isEmpty());
+    layout->addWidget(m_configWidget);
+    m_managedConfig = addConfig(m_skeleton, m_configWidget);
+    connect(m_configWidget, &Sonnet::ConfigView::configChanged, this, &SonnetSpellCheckingModule::stateChanged);
+}
+
+void SonnetSpellCheckingModule::stateChanged()
+{
+    bool unmanagedChangeState = false;
+    bool unmanagedDefaultState = true;
+
+    QStringList refIgnoreList(m_skeleton->ignoreList());
+    QStringList currentIgnoreList(m_configWidget->ignoreList());
+    QStringList defaultIgnoreList(Sonnet::Settings::defaultIgnoreList());
+    QSet<QString> refIgnoreSet(refIgnoreList.begin(), refIgnoreList.end());
+    QSet<QString> currentIgnoreSet(currentIgnoreList.begin(), currentIgnoreList.end());
+    QSet<QString> defaultIgnoreSet(defaultIgnoreList.begin(), defaultIgnoreList.end());
+    unmanagedChangeState |= currentIgnoreSet != refIgnoreSet;
+    unmanagedDefaultState &= currentIgnoreSet == defaultIgnoreSet;
+
+    QStringList refPreferredLanguagesList(m_skeleton->preferredLanguages());
+    QStringList currentPreferredLanguagesList(m_configWidget->preferredLanguages());
+    QStringList defaultPreferredLanguagesList(Sonnet::Settings::defaultPreferredLanguages());
+    QSet<QString> refPreferredLanguages(refPreferredLanguagesList.begin(), refPreferredLanguagesList.end());
+    QSet<QString> currentPreferredLanguages(currentPreferredLanguagesList.begin(), currentPreferredLanguagesList.end());
+    QSet<QString> defaultPreferredLanguages(defaultPreferredLanguagesList.begin(), defaultPreferredLanguagesList.end());
+    unmanagedChangeState |= currentPreferredLanguages != refPreferredLanguages;
+    unmanagedDefaultState &= currentPreferredLanguages == defaultPreferredLanguages;
+
+    unmanagedChangeState |= m_skeleton->defaultLanguage() != m_configWidget->language();
+    unmanagedDefaultState &= m_configWidget->language() == Sonnet::Settings::defaultDefaultLanguage();
+
+    unmanagedWidgetDefaultState(unmanagedDefaultState);
+    unmanagedWidgetChangeState(unmanagedChangeState);
 }
 
 SonnetSpellCheckingModule::~SonnetSpellCheckingModule()
 {
 }
 
+void SonnetSpellCheckingModule::load()
+{
+    KCModule::load();
+    // Set unmanaged widget value
+    m_configWidget->setIgnoreList(m_skeleton->ignoreList());
+    m_configWidget->setPreferredLanguages(m_skeleton->preferredLanguages());
+    m_configWidget->setLanguage(m_skeleton->defaultLanguage());
+}
+
 void SonnetSpellCheckingModule::save()
 {
-    m_configWidget->save();
+    m_skeleton->setIgnoreList(m_configWidget->ignoreList());
+    m_skeleton->setPreferredLanguages(m_configWidget->preferredLanguages());
+    m_skeleton->setDefaultLanguage(m_configWidget->language());
+
+    // with addConfig, save on skeleton will be trigger only if one managed widget changed
+    if (!m_managedConfig->hasChanged()) {
+        m_skeleton->save();
+    }
+    KCModule::save();
 }
 
 void SonnetSpellCheckingModule::defaults()
 {
-    m_configWidget->slotDefault();
+    KCModule::defaults();
+    // set default value for unmanaged widgets
+    m_configWidget->setIgnoreList(Sonnet::Settings::defaultIgnoreList());
+    m_configWidget->setPreferredLanguages(Sonnet::Settings::defaultPreferredLanguages());
+    m_configWidget->setLanguage(Sonnet::Settings::defaultDefaultLanguage());
 }
 
 #include "spellchecking.moc"
