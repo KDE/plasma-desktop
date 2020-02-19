@@ -44,6 +44,7 @@ Item {
     }
     transformOrigin: Item.Center
     opacity: plasmoid.editMode
+    visible: plasmoid.editMode
     Behavior on opacity {
         OpacityAnimator {
             duration: units.longDuration

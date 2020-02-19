@@ -164,7 +164,7 @@ Rectangle {
                 id: categoriesScroll
                 QtControls.ScrollBar.horizontal.policy: QtControls.ScrollBar.AlwaysOff
                 Layout.fillHeight: true
-                visible: (configDialog.configModel ? configDialog.configModel.count : 0) + globalConfigModel.count > 1
+                visible: true
                 Layout.maximumWidth: units.gridUnit * 7
                 Layout.preferredWidth: categories.implicitWidth
 
