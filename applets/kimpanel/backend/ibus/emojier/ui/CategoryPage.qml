@@ -89,8 +89,8 @@ Kirigami.ScrollablePage
 
         delegate: MouseArea {
             QQC2.Label {
-                font.pointSize: 30
-                fontSizeMode: Text.Fit
+                font.pointSize: 25
+                fontSizeMode: model.display.length > 5 ? Text.Fit : Text.FixedSize
                 minimumPointSize: 10
                 text: model.display
                 horizontalAlignment: Text.AlignHCenter
