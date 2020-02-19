@@ -429,8 +429,8 @@ Item {
 
                         verticalOffset: 1
 
-                        radius: 5
-                        samples: 10
+                        radius: Math.round(5 * units.devicePixelRatio)
+                        samples: radius * 2 + 1
                         spread: 0.05
 
                         color: "black"
@@ -454,8 +454,8 @@ Item {
                         horizontalOffset: 1
                         verticalOffset: 1
 
-                        radius: 4
-                        samples: 9
+                        radius: Math.round(4 * units.devicePixelRatio)
+                        samples: radius * 2 + 1
                         spread: 0.35
 
                         color: "black"
