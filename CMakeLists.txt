@@ -68,6 +68,13 @@ set_package_properties(KAccounts PROPERTIES DESCRIPTION "Accounts management lib
    TYPE REQUIRED
    PURPOSE "Required for building the OpenDesktop integration plugin")
 
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(SignOnOAuth2 REQUIRED IMPORTED_TARGET signon-oauth2plugin)
+set_package_properties(signon-oauth2plugin PROPERTIES DESCRIPTION "Plugin for SignOnQt5 which handles OAuth and OAuth2 logins"
+   URL "https://gitlab.com/accounts-sso/signon-plugin-oauth2"
+   TYPE RUNTIME
+   PURPOSE "Required for running the OpenDesktop integration plugin")
+
 find_package(KF5Kirigami2 ${KF5_MIN_VERSION} CONFIG)
 set_package_properties(KF5Kirigami2 PROPERTIES
     DESCRIPTION "A QtQuick based components set"
