@@ -353,7 +353,7 @@ int main(int argc, char** argv)
 
     KLocalizedString::setApplicationDomain("org.kde.plasma.emojier");
 
-    KAboutData about(QStringLiteral("org.kde.plasma.emojier"), i18n("Emoji Picker"), QStringLiteral(WORKSPACE_VERSION_STRING), i18n("Emoji Picker"),
+    KAboutData about(QStringLiteral("plasma.emojier"), i18n("Emoji Picker"), QStringLiteral(WORKSPACE_VERSION_STRING), i18n("Emoji Picker"),
              KAboutLicense::GPL, i18n("(C) 2019 Aleix Pol i Gonzalez"));
     about.addAuthor( QStringLiteral("Aleix Pol i Gonzalez"), QString(), QStringLiteral("aleixpol@kde.org") );
     about.setTranslator(i18nc("NAME OF TRANSLATORS", "Your names"), i18nc("EMAIL OF TRANSLATORS", "Your emails"));
