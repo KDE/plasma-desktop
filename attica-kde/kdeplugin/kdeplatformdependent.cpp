@@ -38,7 +38,9 @@
 #include <QStorageInfo>
 
 #include <KAccounts/Core>
+#include <KAccounts/getcredentialsjob.h>
 #include <Accounts/Manager>
+#include <Accounts/AccountService>
 
 using namespace Attica;
 
@@ -60,19 +62,92 @@ KdePlatformDependent::~KdePlatformDependent()
 {
 }
 
+// TODO Cache the account (so we can call getAccount a WHOLE LOT of times without making the application super slow)
+// TODO Also don't just cache it forever, so reset to nullptr every so often, so we pick up potential new stuff the user's done
+QString KdePlatformDependent::getAccessToken(const QUrl& /*baseUrl*/) const
+{
+    QString accessToken;
+    QString idToken;
+    Accounts::Manager* accountsManager = KAccounts::accountsManager();
+    if (accountsManager) {
+        static const QString serviceType{"opendesktop-rating"};
+        Accounts::AccountIdList accountIds = accountsManager->accountList(serviceType);
+        // TODO Present the user with a choice in case there's more than one, but for now just pick the first successful one
+        // loop through the accounts, and attempt to get them
+        Accounts::Account* account{nullptr};
+        qDebug() << accountIds;
+        for (const Accounts::AccountId& accountId : accountIds) {
+            account = accountsManager->account(accountId);
+            if (account) {
+                bool completed{false};
+                qCDebug(ATTICA_PLUGIN_LOG) << "Fetching data for" << accountId;
+                GetCredentialsJob *job = new GetCredentialsJob(accountId, accountsManager);
+                connect(job, &KJob::finished, [&completed,&accessToken,&idToken](KJob* kjob){
+                    GetCredentialsJob *job = qobject_cast< GetCredentialsJob* >(kjob);
+                    QVariantMap credentialsData = job->credentialsData();
+                    accessToken = credentialsData["AccessToken"].toString();
+                    idToken = credentialsData["IdToken"].toString();
+                    if (!accessToken.isEmpty()) {
+                        qCDebug(ATTICA_PLUGIN_LOG) << "Credentials data was gottened";
+                        for (const QString& key : credentialsData.keys()) {
+                            qCDebug(ATTICA_PLUGIN_LOG) << key << credentialsData[key];
+                        }
+                    }
+                    completed = true;
+                });
+                connect(job, &KJob::result, [&completed](){ completed = true; });
+                job->start();
+                while(!completed) {
+                    qApp->processEvents();
+                }
+                if(!idToken.isEmpty()) {
+                    qCDebug(ATTICA_PLUGIN_LOG) << "OpenID Access token retrieved for account" << account->id();
+                    break;
+                }
+            }
+        }
+    } else {
+        qCDebug(ATTICA_PLUGIN_LOG) << "No accounts manager could be fetched, so could not ask it for account details";
+    }
+
+    return idToken;
+}
+
+QUrl baseUrlFromRequest(const QNetworkRequest& request) {
+    const QUrl url{request.url()};
+    QString baseUrl = QString("%1://%2").arg(url.scheme()).arg(url.host());
+    int port = url.port();
+    if (port != -1) {
+        baseUrl.append(QString::number(port));
+    }
+    return url;
+}
+
+QNetworkRequest KdePlatformDependent::addOAuthToRequest(const QNetworkRequest& request)
+{
+    QNetworkRequest notConstReq = const_cast<QNetworkRequest&>(request);
+    const QString token{getAccessToken(baseUrlFromRequest(request))};
+    if (!token.isEmpty()) {
+        const QString bearer_format = QStringLiteral("Bearer %1");
+        const QString bearer = bearer_format.arg(token);
+        notConstReq.setRawHeader("Authorization", bearer.toUtf8());
+    }
+    return notConstReq;
+}
+
 QNetworkReply* KdePlatformDependent::post(const QNetworkRequest& request, const QByteArray& data)
 {
-    return m_accessManager->post(removeAuthFromRequest(request), data);
+    return m_accessManager->post(addOAuthToRequest(removeAuthFromRequest(request)), data);
 }
 
 QNetworkReply* KdePlatformDependent::post(const QNetworkRequest& request, QIODevice* data)
 {
-    return m_accessManager->post(removeAuthFromRequest(request), data);
+    return m_accessManager->post(addOAuthToRequest(removeAuthFromRequest(request)), data);
 }
 
 QNetworkReply* KdePlatformDependent::get(const QNetworkRequest& request)
 {
-    return m_accessManager->get(removeAuthFromRequest(request));
+    return m_accessManager->get(addOAuthToRequest(removeAuthFromRequest(request)));
 }
 
 QNetworkRequest KdePlatformDependent::removeAuthFromRequest(const QNetworkRequest& request)
@@ -97,98 +172,21 @@ bool KdePlatformDependent::saveCredentials(const QUrl& /*baseUrl*/, const QStrin
     return QProcess::startDetached(service->exec());
 }
 
-// TODO Cache the account (so we can call getAccount a WHOLE LOT of times without making the application super slow)
-// TODO Also don't just cache it forever, so reset to nullptr every so often, so we pick up potential new stuff the user's done
-static Accounts::Account* getAccount(const QUrl& /*baseUrl*/) {
-    Accounts::Manager* accountsManager = KAccounts::accountsManager();
-    Accounts::Account* account{nullptr};
-    if (accountsManager) {
-        Accounts::AccountIdList accountIds = accountsManager->accountList(QStringLiteral("opendesktop-rating"));
-        // TODO Present the user with a choice in case there's more than one, but for now just pick the first successful one
-        // loop through the accounts, and attempt to get them
-        for (const Accounts::AccountId& accountId : accountIds) {
-            account = accountsManager->account(accountId);
-            if (account) {
-                break;
-            }
-        }
-        if (!account) {
-            // TODO if accounts manager fails to find account, tell user - for now at least log it out
-            qCDebug(ATTICA_PLUGIN_LOG) << "No credentials found, sorry";
-        }/* else {
-            qCDebug(ATTICA_PLUGIN_LOG) << "Got credentials for account, with the keys" << account->allKeys();
-            for (const QString& key : account->allKeys()) {
-                qCDebug(ATTICA_PLUGIN_LOG) << key << account->value(key);
-            }
-        }*/
-    } else {
-        qCDebug(ATTICA_PLUGIN_LOG) << "No accounts manager could be fetched, so could not ask it for account details";
-    }
-    // if all is well, return true
-    return account;
-}
-
 bool KdePlatformDependent::hasCredentials(const QUrl& baseUrl) const
 {
     qCDebug(ATTICA_PLUGIN_LOG) << Q_FUNC_INFO;
-    return getAccount(baseUrl);
-
-//     QString networkWallet = KWallet::Wallet::NetworkWallet();
-//     if (!KWallet::Wallet::folderDoesNotExist(networkWallet, QStringLiteral("Attica")) &&
-//         !KWallet::Wallet::keyDoesNotExist(networkWallet, QStringLiteral("Attica"), baseUrl.toString())) {
-//         qCDebug(ATTICA_PLUGIN_LOG) << "Found credentials in KWallet";
-//         return true;
-//     }
-//
-//     KConfigGroup group(m_config, baseUrl.toString());
-//
-//     const QString user = group.readEntry("user", QString());
-//     qCDebug(ATTICA_PLUGIN_LOG) << "Credentials found:" << !user.isEmpty();
-//     return !user.isEmpty();
+    return !getAccessToken(baseUrl).isEmpty();
 }
 
 
 bool KdePlatformDependent::loadCredentials(const QUrl& baseUrl, QString& user, QString& /*password*/)
 {
     qCDebug(ATTICA_PLUGIN_LOG) << Q_FUNC_INFO;
-    Accounts::Account* account = getAccount(baseUrl);
-    if (account) {
-        user = account->valueAsString(QStringLiteral("auth/oauth2/web_server/ClientSecret"));
+    QString token = getAccessToken(baseUrl);
+    if (!token.isEmpty()) {
+        user = token;
     }
-    return account;
-//     QString networkWallet = KWallet::Wallet::NetworkWallet();
-//     if (KWallet::Wallet::folderDoesNotExist(networkWallet, QStringLiteral("Attica")) &&
-//         KWallet::Wallet::keyDoesNotExist(networkWallet, QStringLiteral("Attica"), baseUrl.toString())) {
-//         // use KConfig
-//         KConfigGroup group(m_config, baseUrl.toString());
-//         user = group.readEntry("user", QString());
-//         password = KStringHandler::obscure(group.readEntry("password", QString()));
-//         if (!user.isEmpty()) {
-//             qCDebug(ATTICA_PLUGIN_LOG) << "Successfully loaded credentials from kconfig";
-//             m_passwords[baseUrl.toString()] = qMakePair(user, password);
-//             return true;
-//         }
-//         return false;
-//     }
-
-//     if (!m_wallet && !openWallet(true)) {
-//         return false;
-//     }
-
-    // if accounts manager not getted, return false...
-
-//     QMap<QString, QString> entries;
-//     if (m_wallet->readMap(baseUrl.toString(), entries) != 0) {
-//         return false;
-//     }
-//     // if no account with the appropriate ID, return false
-//     user = entries.value(QStringLiteral("user"));
-//     password = entries.value(QStringLiteral("password"));
-//     qCDebug(ATTICA_PLUGIN_LOG) << "Successfully loaded credentials.";
-//
-//     m_passwords[baseUrl.toString()] = qMakePair(user, password);
-//
-//     return true;
+    return !token.isEmpty();
 }
 
 

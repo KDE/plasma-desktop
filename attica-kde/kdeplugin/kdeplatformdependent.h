@@ -32,7 +32,6 @@
 #include <KSharedConfig>
 #include <KIO/AccessManager>
 
-
 namespace Attica {
 
 class KdePlatformDependent : public QObject, public Attica::PlatformDependent
@@ -60,10 +59,12 @@ public:
     QNetworkAccessManager* nam() override;
 
 private:
+    QNetworkRequest addOAuthToRequest(const QNetworkRequest& request);
     QNetworkRequest removeAuthFromRequest(const QNetworkRequest& request);
+    QString getAccessToken(const QUrl& baseUrl) const;
 
     KSharedConfigPtr m_config;
-    QNetworkAccessManager* m_accessManager = nullptr;
+    QNetworkAccessManager* m_accessManager{nullptr};
     QHash<QString, QPair <QString, QString> > m_passwords;
 };
 
