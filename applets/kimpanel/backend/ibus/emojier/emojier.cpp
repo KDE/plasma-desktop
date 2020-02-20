@@ -55,6 +55,7 @@ struct Emoji {
     QString content;
     QString description;
     QString category;
+    QStringList annotations;
 };
 
 class TextImageProvider : public QQuickImageProvider
@@ -98,7 +99,7 @@ class AbstractEmojiModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
-    enum EmojiRole { CategoryRole = Qt::UserRole + 1 };
+    enum EmojiRole { CategoryRole = Qt::UserRole + 1, AnnotationsRole };
 
     int rowCount(const QModelIndex & parent = {}) const override { return parent.isValid() ? 0 : m_emoji.count(); }
     QVariant data(const QModelIndex & index, int role) const override {
@@ -113,6 +114,8 @@ public:
                 return emoji.description;
             case CategoryRole:
                 return emoji.category;
+            case AnnotationsRole:
+                return emoji.annotations;
         }
         return {};
     }
@@ -169,9 +172,15 @@ public:
                     continue;
                 }
 
+                QStringList annotations;
+                const auto annotations_glib = ibus_emoji_data_get_annotations(data);
+                for (GSList *l = annotations_glib; l; l = l->next) {
+                    annotations << QString::fromUtf8((const gchar*) l->data);
+                }
+
                 const QString category = QString::fromUtf8(ibus_emoji_data_get_category(data));
                 categories.insert(category);
-                m_emoji += { emoji, description, category };
+                m_emoji += { emoji, description, category, annotations };
                 processedEmoji << emoji;
             }
             g_slist_free (list);
@@ -280,7 +289,9 @@ public:
     }
 
     bool filterAcceptsRow(int source_row, const QModelIndex & source_parent) const override {
-        return sourceModel()->index(source_row, 0, source_parent).data(Qt::ToolTipRole).toString().contains(m_search, Qt::CaseInsensitive);
+        const auto idx = sourceModel()->index(source_row, 0, source_parent);
+        return idx.data(Qt::ToolTipRole).toString().contains(m_search, Qt::CaseInsensitive) ||
+               idx.data(AbstractEmojiModel::AnnotationsRole).toStringList().contains(m_search, Qt::CaseInsensitive);
     }
 
 private:
