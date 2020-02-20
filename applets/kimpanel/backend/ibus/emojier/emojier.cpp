@@ -133,23 +133,36 @@ public:
 
     EmojiModel() {
         QLocale locale;
+        QVector<QString> dicts;
         const auto bcp = locale.bcp47Name();
         const QString dictName = "ibus/dicts/emoji-" + QString(bcp).replace(QLatin1Char('-'), QLatin1Char('_')) + ".dict";
         const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, dictName);
-        if (path.isEmpty()) {
-            qWarning() << "could not find" << dictName;
-            return;
+        if (!path.isEmpty()) {
+            dicts << path;
         }
 
-        QVector<QString> dicts = {path};
         const auto idxSpecific = bcp.indexOf(QLatin1Char('-'));
         if (idxSpecific > 0) {
-            const QString genericDictName = "ibus/dicts/emoji-" + bcp.left(idxSpecific) + ".dict";
+            const QString genericDictName = "ibus/dicts/emoji-" + bcp.leftRef(idxSpecific) + ".dict";
             const QString genericPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, genericDictName);
 
             if (!genericPath.isEmpty()) {
                 dicts << genericPath;
             }
+        }
+
+        if (dicts.isEmpty()) {
+            const QString genericDictName = "ibus/dicts/emoji-en.dict";
+            const QString genericPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, genericDictName);
+
+            if (!genericPath.isEmpty()) {
+                dicts << genericPath;
+            }
+        }
+
+        if (dicts.isEmpty()) {
+            qWarning() << "could not find ibus emoji dictionaries." << dictName;
+            return;
         }
 
         QSet<QString> categories;
