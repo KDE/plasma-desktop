@@ -259,7 +259,7 @@ private:
         int i = 0;
         m_emoji.clear();
         for (const QString &c : recent) {
-            m_emoji += { c, recentDescriptions.at(i++), QString{} };
+            m_emoji += { c, recentDescriptions.at(i++), QString{}, {} };
         }
         endResetModel();
     }
@@ -380,7 +380,7 @@ int main(int argc, char** argv)
     QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
     QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
-    KDBusService::StartupOptions startup = nullptr;
+    KDBusService::StartupOptions startup = {};
     {
         QCommandLineParser parser;
 
