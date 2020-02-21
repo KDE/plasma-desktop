@@ -34,7 +34,6 @@
 #include <KStringHandler>
 #include <KLocalizedString>
 #include <KService>
-#include <QSortFilterProxyModel>
 #include <KServiceGroup>
 #include <KDesktopFile>
 #include <KCategorizedSortFilterProxyModel>

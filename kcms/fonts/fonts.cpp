@@ -568,7 +568,7 @@ void KFonts::load()
 
     // Load preview
     // NOTE: This needs to be done AFTER AA settings is loaded
-    // otherwise AA settings will be resetted in process of loading
+    // otherwise AA settings will be reset in process of loading
     // previews
     engine()->addImageProvider("preview", new PreviewImageProvider(m_settings->font()));
 
