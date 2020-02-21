@@ -68,13 +68,12 @@ public:
 
     QPixmap requestPixmap(const QString &id, QSize *_size, const QSize &requestedSize) override
     {
-        QPixmap dummy;
-
         const QString renderString = id.mid(1); //drop initial /
 
         QSize size = requestedSize;
         QFont font;
         if (!size.isValid()) {
+            QPixmap dummy;
             QFontMetrics fm(font, &dummy);
             size = { fm.horizontalAdvance(renderString), fm.height() };
         } else {
