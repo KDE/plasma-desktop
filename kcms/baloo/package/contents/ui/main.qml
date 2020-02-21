@@ -71,6 +71,7 @@ KCM.SimpleKCM {
             ListView {
                 id: fileExcludeList
 
+                clip: true
                 model: kcm.filteredModel
                 delegate: Kirigami.BasicListItem {
                     icon: model.decoration
