@@ -121,10 +121,6 @@ void ServerConfigModule::save()
         QDBusConnection::sessionBus().asyncCall(message);
     }
 
-    // Start cleaner
-    const QString exe = QStandardPaths::findExecutable(QStringLiteral("baloo_file_cleaner"));
-    QProcess::startDetached(exe, QStringList());
-
     // Update the baloo_file's config cache
     config.refresh();
 }
