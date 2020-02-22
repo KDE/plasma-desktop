@@ -37,6 +37,8 @@ ColumnLayout {
         ListView {
             id: activitiesList
 
+            clip: true
+
             model: Activities.ActivityModel {
                 id: kactivities
             }

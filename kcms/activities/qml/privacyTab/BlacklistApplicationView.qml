@@ -29,6 +29,7 @@ QQC2.ScrollView {
 
     GridView {
         id: gridView
+        clip: true
         cellHeight: Kirigami.Units.gridUnit * 5
         cellWidth: Kirigami.Units.gridUnit * 9
         model: applicationModel
