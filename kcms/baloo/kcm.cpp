@@ -33,7 +33,6 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
-#include <QStorageInfo>
 
 #include <Baloo/IndexerConfig>
 #include <baloo/baloosettings.h>
@@ -87,7 +86,7 @@ void ServerConfigModule::save()
     m_previouslyEnabled = m_settings->indexingEnabled();
 
     // Start Baloo
-    if (m_settings->indexingEnabled() && !allMountPointsExcluded()) {
+    if (m_settings->indexingEnabled()) {
         const QString exe = QStandardPaths::findExecutable(QStringLiteral("baloo_file"));
         QProcess::startDetached(exe, QStringList());
     }
@@ -109,16 +108,6 @@ void ServerConfigModule::save()
 FilteredFolderModel *ServerConfigModule::filteredModel() const
 {
     return m_filteredFolderModel;
-}
-
-bool ServerConfigModule::allMountPointsExcluded()
-{
-    QStringList mountPoints;
-    for (const QStorageInfo &si : QStorageInfo::mountedVolumes()) {
-        mountPoints.append(si.rootPath());
-    }
-
-    return m_settings->excludedFolders().toSet() == mountPoints.toSet();
 }
 
 BalooSettings *ServerConfigModule::balooSettings() const

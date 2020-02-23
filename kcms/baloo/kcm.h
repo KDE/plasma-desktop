@@ -48,13 +48,6 @@ public Q_SLOTS:
     void save() override;
 
 private:
-    /**
-     * @brief Check if all mount points are in the excluded from indexing list.
-     *
-     * @return True if all mount points are excluded. False otherwise.
-     */
-    bool allMountPointsExcluded();
-
     BalooSettings *m_settings;
     FilteredFolderModel *m_filteredFolderModel;
     bool m_previouslyEnabled;
