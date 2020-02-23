@@ -32,8 +32,6 @@ class FilteredFolderModel : public QAbstractListModel
 public:
     explicit FilteredFolderModel(BalooSettings *settings, QObject *parent);
 
-    QStringList includeFolders() const;
-
     enum Roles {
         Folder = Qt::UserRole + 1,
         Url
@@ -51,8 +49,6 @@ public slots:
 
 private:
     QString folderDisplayName(const QString& url) const;
-    QString fetchMountPoint(const QString& url) const;
-    void showMessage(const QString& message);
 
     /**
      * @brief Get the theme valid icon name for \p path.

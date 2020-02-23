@@ -146,28 +146,6 @@ int FilteredFolderModel::rowCount(const QModelIndex& parent) const
     return m_excludeList.count();
 }
 
-QStringList FilteredFolderModel::includeFolders() const
-{
-    const QSet<QString> mountPointSet =
-          QSet<QString>::fromList(m_mountPoints)
-        - QSet<QString>::fromList(m_excludeList);
-
-    return mountPointSet.values();
-}
-
-QString FilteredFolderModel::fetchMountPoint(const QString& url) const
-{
-    QString mountPoint;
-
-    for (const QString& mount : qAsConst(m_mountPoints)) {
-        if (url.startsWith(mount) && mount.size() > mountPoint.size())
-            mountPoint = mount;
-    }
-
-    return mountPoint;
-}
-
-
 void FilteredFolderModel::addFolder(const QString& url)
 {
     auto excluded = m_settings->excludedFolders();
