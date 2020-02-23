@@ -108,9 +108,6 @@ void FilteredFolderModel::updateDirectoryList()
         if (includeList.contains(mountPath))
             continue;
 
-        if (m_settings->excludedFolders().contains(mountPath))
-            continue;
-
         if (!m_excludeList.contains(mountPath)) {
             m_excludeList.append(mountPath);
         }
