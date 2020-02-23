@@ -53,6 +53,22 @@ namespace {
             return QString(url).replace(0, QDir::homePath().length(), QStringLiteral("~"));
         return url;
     }
+
+    bool ignoredMountPoint(const QString& mountPoint) {
+        if (mountPoint == QLatin1String("/"))
+            return true;
+
+        if (mountPoint.startsWith(QLatin1String("/boot")))
+            return true;
+
+        if (mountPoint.startsWith(QLatin1String("/tmp")))
+            return true;
+
+        // The user's home directory is forcibly added so we can ignore /home
+        // if /home actually contains the home directory
+        return mountPoint.startsWith(QLatin1String("/home")) &&
+               QDir::homePath().startsWith(QLatin1String("/home"));
+    }
 }
 
 FilteredFolderModel::FilteredFolderModel(BalooSettings *settings, QObject *parent)
@@ -75,7 +91,7 @@ void FilteredFolderModel::updateDirectoryList()
             continue;
 
         const QString mountPath = sa->filePath();
-        if (!shouldShowMountPoint(mountPath))
+        if (ignoredMountPoint(mountPath))
             continue;
 
         m_mountPoints.append(mountPath);
@@ -207,22 +223,6 @@ QString FilteredFolderModel::folderDisplayName(const QString& url) const
         name = name.mid(0, name.size() - 1);
     }
     return name;
-}
-
-bool FilteredFolderModel::shouldShowMountPoint(const QString& mountPoint)
-{
-    if (mountPoint == QLatin1String("/"))
-        return false;
-
-    if (mountPoint.startsWith(QLatin1String("/boot")))
-        return false;
-
-    if (mountPoint.startsWith(QLatin1String("/tmp")))
-        return false;
-
-    // The user's home directory is forcibly added so we can ignore /home
-    // if /home actually contains the home directory
-    return !(mountPoint.startsWith(QLatin1String("/home")) || !QDir::homePath().startsWith(QLatin1String("/home")));
 }
 
 QHash<int, QByteArray> FilteredFolderModel::roleNames() const
