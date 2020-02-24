@@ -117,7 +117,7 @@ void CfgEmailClient::selectEmailClient(int index)
 
         if (dlg.exec() != QDialog::Accepted) {
             // restore previous setting
-            setCurrentIndex(m_currentIndex);
+            setCurrentIndex(validLastCurrentIndex());
             emit changed(false);
         } else {
             const auto service = dlg.service();
@@ -138,8 +138,17 @@ void CfgEmailClient::selectEmailClient(int index)
 
 void CfgEmailClient::save(KConfig *)
 {
+    if (currentIndex() == count() - 1) {
+        // no email client installed, nor selected
+        return;
+    }
+
     const QString &storageId = currentData().toString();
     const KService::Ptr emailClientService = KService::serviceByStorageId(storageId);
+    if (!emailClientService) {
+        // double checking, the selected email client might have been removed
+        return;
+    }
 
     const bool kmailSelected = m_defaultIndex != -1 && currentIndex() == m_defaultIndex;
     if (kmailSelected) {
@@ -152,7 +161,7 @@ void CfgEmailClient::save(KConfig *)
 
     // Save the default email client in mimeapps.list
     KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
-    if (profile->isConfigWritable(true) && emailClientService) {
+    if (profile->isConfigWritable(true)) {
 
         KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
 

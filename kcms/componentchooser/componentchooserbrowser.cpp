@@ -41,7 +41,7 @@ void CfgBrowser::selectBrowser(int index)
         KOpenWithDialog dlg(QStringLiteral("x-scheme-handler/http"), QString(), this);
         dlg.setSaveNewApplications(true);
         if (dlg.exec() != QDialog::Accepted) {
-            setCurrentIndex(m_currentIndex);
+            setCurrentIndex(validLastCurrentIndex());
             return;
         }
 
@@ -104,6 +104,11 @@ void CfgBrowser::load(KConfig *)
 
 void CfgBrowser::save(KConfig *)
 {
+    if (currentIndex() == count() - 1) {
+        // no browser installed, nor selected
+        return;
+    }
+
     const QString browserStorageId = currentData().toString();
 
     BrowserSettings settings;

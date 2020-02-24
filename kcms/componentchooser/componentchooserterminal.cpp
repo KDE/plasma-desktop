@@ -84,21 +84,25 @@ void CfgTerminalEmulator::load(KConfig *)
     // add a other option to add a new terminal emulator with KOpenWithDialog
     addItem(QIcon::fromTheme(QStringLiteral("application-x-shellscript")), i18n("Other..."), QStringLiteral());
 
-	emit changed(false);
+    emit changed(false);
 }
 
 void CfgTerminalEmulator::save(KConfig *)
 {
+    if (currentIndex() == count() - 1) {
+        // no terminal installed, nor selected
+        return;
+    }
+
     const QString terminal = currentData().toString();
-    m_currentIndex = currentIndex();
 
-	TerminalSettings settings;
+    TerminalSettings settings;
     settings.setTerminalApplication(terminal);
-	settings.save();
+    settings.save();
 
     m_currentIndex = currentIndex();
 
-	QDBusMessage message  = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
+    QDBusMessage message  = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
                                                            QStringLiteral("/KLauncher"),
                                                            QStringLiteral("org.kde.KLauncher"),
                                                            QStringLiteral("reparseConfiguration"));
@@ -114,7 +118,7 @@ void CfgTerminalEmulator::selectTerminalApp()
     dlg.hideRunInTerminal();
     dlg.setSaveNewApplications(true);
     if (dlg.exec() != QDialog::Accepted) {
-        setCurrentIndex(m_currentIndex);
+        setCurrentIndex(validLastCurrentIndex());
         return;
     }
     const auto service = dlg.service();

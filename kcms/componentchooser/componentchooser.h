@@ -35,9 +35,10 @@ public:
 	virtual ~CfgPlugin(){}
 	virtual void load(KConfig *cfg)=0;
     virtual void save(KConfig *cfg)=0;
+
     bool hasChanged() const
     {
-        return m_currentIndex != -1 && m_currentIndex != currentIndex();
+        return count() > 1 && m_currentIndex != currentIndex();
     }
 
     void defaults()
@@ -45,6 +46,14 @@ public:
         if (m_defaultIndex != -1) {
             setCurrentIndex(m_defaultIndex);
         }
+    }
+
+    int validLastCurrentIndex() const
+    {
+        // m_currentIndex == -1 means there are no previously saved value
+        // or maybe there were no choices in the combobox
+        // return 0 in those cases
+        return m_currentIndex == -1 ? 0 : m_currentIndex;
     }
 
     bool isDefaults() const

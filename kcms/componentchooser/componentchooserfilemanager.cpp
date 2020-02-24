@@ -44,7 +44,7 @@ void CfgFileManager::selectFileManager(int index)
         KOpenWithDialog dlg({}, i18n("Select preferred file manager:"), QString(), this);
         dlg.setSaveNewApplications(true);
         if (dlg.exec() != QDialog::Accepted) {
-            setCurrentIndex(m_currentIndex);
+            setCurrentIndex(validLastCurrentIndex());
             return;
         }
 
@@ -113,26 +113,29 @@ static const char s_AddedAssociations[] = "Added Associations";
 
 void CfgFileManager::save(KConfig *)
 {
-    const QString storageId = currentData().toString();
-    if (!storageId.isEmpty()) {
-        m_currentIndex = currentIndex();
-
-        // This is taken from filetypes/mimetypedata.cpp
-        KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
-        if (!profile->isConfigWritable(true)) // warn user if mimeapps.list is root-owned (#155126/#94504)
-            return;
-        KConfigGroup addedApps(profile, s_AddedAssociations);
-        QStringList userApps = addedApps.readXdgListEntry(mime);
-        userApps.removeAll(storageId); // remove if present, to make it first in the list
-        userApps.prepend(storageId);
-        addedApps.writeXdgListEntry(mime, userApps);
-
-        // Save the default file manager as per mime-apps spec 1.0.1
-        KConfigGroup defaultApp(profile, s_DefaultApplications);
-        defaultApp.writeXdgListEntry(mime, QStringList(storageId));
-
-        profile->sync();
-
-        emit changed(false);
+    if (currentIndex() == count() - 1) {
+        // no filemanager installed, nor selected
+        return;
     }
+
+    const QString storageId = currentData().toString();
+    m_currentIndex = currentIndex();
+
+    // This is taken from filetypes/mimetypedata.cpp
+    KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
+    if (!profile->isConfigWritable(true)) // warn user if mimeapps.list is root-owned (#155126/#94504)
+        return;
+    KConfigGroup addedApps(profile, s_AddedAssociations);
+    QStringList userApps = addedApps.readXdgListEntry(mime);
+    userApps.removeAll(storageId); // remove if present, to make it first in the list
+    userApps.prepend(storageId);
+    addedApps.writeXdgListEntry(mime, userApps);
+
+    // Save the default file manager as per mime-apps spec 1.0.1
+    KConfigGroup defaultApp(profile, s_DefaultApplications);
+    defaultApp.writeXdgListEntry(mime, QStringList(storageId));
+
+    profile->sync();
+
+    emit changed(false);
 }
