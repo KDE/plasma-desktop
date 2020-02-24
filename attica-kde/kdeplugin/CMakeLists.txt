@@ -21,5 +21,5 @@ target_link_libraries(attica_kde
 )
 
 install(TARGETS attica_kde                 DESTINATION ${KDE_INSTALL_PLUGINDIR})
-install(FILES   opendesktop.provider       DESTINATION ${KDE_INSTALL_DATADIR}/accounts/providers/kde/)
-install(FILES   opendesktop-rating.service DESTINATION ${KDE_INSTALL_DATADIR}/accounts/services/kde/)
+kaccounts_add_provider(opendesktop.provider.in)
+kaccounts_add_service(opendesktop-rating.service.in)
