@@ -41,6 +41,7 @@ K_PLUGIN_FACTORY(DeviceAutomounterKCMFactory, registerPlugin<DeviceAutomounterKC
 
 DeviceAutomounterKCM::DeviceAutomounterKCM(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)//DeviceAutomounterKCMFactory::componentData(), parent)
+    , m_devices(new DeviceModel(this))
 {
     KAboutData *about = new KAboutData(QStringLiteral("kcm_device_automounter"),
                                        i18n("Device Automounter"),
@@ -54,25 +55,20 @@ DeviceAutomounterKCM::DeviceAutomounterKCM(QWidget *parent, const QVariantList &
     setAboutData(about);
     setupUi(this);
 
-    m_devices = new DeviceModel(this);
+    addConfig(AutomounterSettings::self(), this);
+
     deviceView->setModel(m_devices);
 
     deviceView->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
     deviceView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
 
     auto emitChanged = [this] {
-        m_devices->setAutomaticMountOnLogin(automountOnLogin->isChecked());
-        m_devices->setAutomaticMountOnPlugin(automountOnPlugin->isChecked());
+        m_devices->setAutomaticMountOnLogin(kcfg_AutomountOnLogin->isChecked());
+        m_devices->setAutomaticMountOnPlugin(kcfg_AutomountOnPlugin->isChecked());
         emit markAsChanged();
     };
 
-    connect(automountOnLogin, &QCheckBox::stateChanged, this, emitChanged);
-    connect(automountOnPlugin, &QCheckBox::stateChanged, this, emitChanged);
-    connect(automountEnabled, &QCheckBox::stateChanged, this, emitChanged);
-    connect(automountUnknownDevices, &QCheckBox::stateChanged, this, emitChanged);
     connect(m_devices, &DeviceModel::dataChanged, this, emitChanged);
-
-    connect(automountEnabled, &QCheckBox::stateChanged, this, &DeviceAutomounterKCM::enabledChanged);
 
     connect(deviceView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &DeviceAutomounterKCM::updateForgetDeviceButton);
 
@@ -113,35 +109,26 @@ void DeviceAutomounterKCM::forgetSelectedDevices()
     emit markAsChanged();
 }
 
-void DeviceAutomounterKCM::enabledChanged()
-{
-    automountOnLogin->setEnabled(automountEnabled->isChecked());
-    automountOnPlugin->setEnabled(automountEnabled->isChecked());
-    automountUnknownDevices->setEnabled(automountEnabled->isChecked());
-    deviceView->setEnabled(automountEnabled->isChecked());
-}
-
 void DeviceAutomounterKCM::load()
 {
-    automountEnabled->setChecked(AutomounterSettings::automountEnabled());
-    automountUnknownDevices->setChecked(AutomounterSettings::automountUnknownDevices());
-    automountOnLogin->setChecked(AutomounterSettings::automountOnLogin());
-    automountOnPlugin->setChecked(AutomounterSettings::automountOnPlugin());
+    KCModule::load();
+
+    bool automountEnabled = AutomounterSettings::self()->automountEnabled();
+
+    kcfg_AutomountUnknownDevices->setEnabled(automountEnabled);
+    kcfg_AutomountOnLogin->setEnabled(automountEnabled);
+    kcfg_AutomountOnPlugin->setEnabled(automountEnabled);
 
     m_devices->reload();
-    enabledChanged();
     loadLayout();
 }
 
 void DeviceAutomounterKCM::save()
 {
+    KCModule::save();
     saveLayout();
 
-    const bool enabled = automountEnabled->isChecked();
-    AutomounterSettings::setAutomountEnabled(enabled);
-    AutomounterSettings::setAutomountUnknownDevices(automountUnknownDevices->isChecked());
-    AutomounterSettings::setAutomountOnLogin(automountOnLogin->isChecked());
-    AutomounterSettings::setAutomountOnPlugin(automountOnPlugin->isChecked());
+    const bool enabled = kcfg_AutomountEnabled->isChecked();
 
     QStringList validDevices;
     for (int i = 0; i < m_devices->rowCount(); ++i) {

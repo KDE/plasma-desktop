@@ -12,7 +12,7 @@
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0" colspan="3">
-    <widget class="QCheckBox" name="automountEnabled">
+    <widget class="QCheckBox" name="kcfg_AutomountEnabled">
      <property name="whatsThis">
       <string>When this is unchecked, no device automounting of any kind will happen, regardless of anything selected in the &quot;Device Overrides&quot; section.</string>
      </property>
@@ -40,7 +40,7 @@
    <item row="1" column="1">
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QCheckBox" name="automountUnknownDevices">
+      <widget class="QCheckBox" name="kcfg_AutomountUnknownDevices">
        <property name="whatsThis">
         <string>When this is checked, only remembered devices will be automatically mounted. A device is 'remembered' if it has ever been mounted before. For instance, plugging in a USB media player to charge is not sufficient to 'remember' it - if the files are not accessed, it will not be automatically mounted the next time it is seen. Once they have been accessed, however, the device's contents will be automatically made available to the system.</string>
        </property>
@@ -50,22 +50,22 @@
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="automountOnLogin">
+      <widget class="QCheckBox" name="kcfg_AutomountOnLogin">
        <property name="whatsThis">
         <string>If any removable storage devices are connected to your system when you login to your desktop, their contents will automatically be made available to your system for other programs to read.</string>
        </property>
        <property name="text">
-        <string>Mount all removable media at login</string>
+        <string>Automatically mount all removable media at login</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="automountOnPlugin">
+      <widget class="QCheckBox" name="kcfg_AutomountOnPlugin">
        <property name="whatsThis">
         <string>When this is checked, the contents of any storage device will automatically be made available to the system when it is plugged in or attached.</string>
        </property>
        <property name="text">
-        <string>Automatically mount removable media when attached</string>
+        <string>Automatically mount all removable media when attached</string>
        </property>
       </widget>
      </item>
@@ -149,5 +149,70 @@ If &quot;Enable automatic mounting of removable media&quot; is unchecked, the ov
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>kcfg_AutomountEnabled</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>kcfg_AutomountOnLogin</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>307</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>81</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>kcfg_AutomountEnabled</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>kcfg_AutomountOnPlugin</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>307</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>111</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>kcfg_AutomountEnabled</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>kcfg_AutomountUnknownDevices</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>307</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>51</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>kcfg_AutomountEnabled</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>deviceView</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>307</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>244</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

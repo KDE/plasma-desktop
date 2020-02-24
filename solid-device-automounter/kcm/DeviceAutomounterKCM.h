@@ -26,6 +26,7 @@
 #include "ui_DeviceAutomounterKCM.h"
 
 class DeviceModel;
+class AutomounterSettings;
 
 class DeviceAutomounterKCM : public KCModule, public Ui::DeviceAutomounterKCM
 {
@@ -40,7 +41,6 @@ public slots:
     void save() override;
 
 private slots:
-    void enabledChanged();
     void updateForgetDeviceButton();
     void forgetSelectedDevices();
 
@@ -49,7 +49,6 @@ private:
     void loadLayout();
 
     DeviceModel *m_devices;
-
 };
 
 #endif
