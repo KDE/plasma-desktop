@@ -98,8 +98,6 @@ Rectangle {
             pageStack.sourceFile = globalConfigModel.get(0).source
             pageStack.title = globalConfigModel.get(0).name
         }
-//         root.width = pageStackColumn.implicitWidth
-//         root.height = pageStackColumn.implicitHeight
     }
 //END connections
 
@@ -108,7 +106,7 @@ Rectangle {
         id: sidebar
         visible: configDialog.configModel
         anchors.left: root.left
-        width: categories.width
+        width: categoriesScroll.width
         height: root.height
         Kirigami.Theme.inherit: false
         Kirigami.Theme.colorSet: Kirigami.Theme.View
@@ -122,6 +120,7 @@ Rectangle {
     }
 
     Kirigami.Separator {
+        id: topSeparator
         anchors.top: root.top
         width: root.width
     }
@@ -142,110 +141,99 @@ Rectangle {
         }
     }
 
-    ColumnLayout {
-        id: pageStackColumn
+    RowLayout {
         anchors {
             fill: parent
-            rightMargin: units.smallSpacing * 2
             leftMargin: configDialog.configModel ? 0 : units.smallSpacing * 2
-            bottomMargin: units.smallSpacing * 2
         }
-        property int implicitWidth: Math.max(contentRow.implicitWidth, buttonsRow.implicitWidth) + 8
-        property int implicitHeight: contentRow.implicitHeight + buttonsRow.implicitHeight + 8
+        spacing: 0
 
-        RowLayout {
-            id: contentRow
-            spacing: 0
-            Layout.fillWidth: true
+        QtControls.ScrollView {
+            id: categoriesScroll
             Layout.fillHeight: true
-            Layout.preferredHeight: parent.height - buttonsRow.height
+            visible: true
+            clip: true
+            Layout.preferredWidth: units.gridUnit * 7
+            contentWidth: -1
 
-            QtControls.ScrollView {
-                id: categoriesScroll
-                QtControls.ScrollBar.horizontal.policy: QtControls.ScrollBar.AlwaysOff
-                Layout.fillHeight: true
-                visible: true
-                Layout.maximumWidth: units.gridUnit * 7
-                Layout.preferredWidth: categories.implicitWidth
+            Keys.onUpPressed: {
+                var buttons = categories.children
 
-                Keys.onUpPressed: {
-                    var buttons = categories.children
-
-                    var foundPrevious = false
-                    for (var i = buttons.length - 1; i >= 0; --i) {
-                        var button = buttons[i];
-                        if (!button.hasOwnProperty("current")) {
-                            // not a ConfigCategoryDelegate
-                            continue;
-                        }
-
-                        if (foundPrevious) {
-                            button.openCategory()
-                            return
-                        } else if (button.current) {
-                            foundPrevious = true
-                        }
+                var foundPrevious = false
+                for (var i = buttons.length - 1; i >= 0; --i) {
+                    var button = buttons[i];
+                    if (!button.hasOwnProperty("current")) {
+                        // not a ConfigCategoryDelegate
+                        continue;
                     }
-                }
 
-                Keys.onDownPressed: {
-                    var buttons = categories.children
-
-                    var foundNext = false
-                    for (var i = 0, length = buttons.length; i < length; ++i) {
-                        var button = buttons[i];
-                        console.log(button)
-                        if (!button.hasOwnProperty("current")) {
-                            continue;
-                        }
-
-                        if (foundNext) {
-                            button.openCategory()
-                            return
-                        } else if (button.current) {
-                            foundNext = true
-                        }
-                    }
-                }
-
-                // Encapsulate as ColumnLayout will keep overwriting its own implicitWidth
-                Item {
-                    implicitWidth: categoriesScroll.Layout.maximumWidth
-                    implicitHeight: categories.implicitHeight
-                    ColumnLayout {
-                        id: categories
-                        spacing: 0
-                        width: categoriesScroll.width
-
-                        property Item currentItem: children[1]
-
-                        Repeater {
-                            model: root.isContainment ? globalConfigModel : undefined
-                            delegate: ConfigCategoryDelegate {}
-                        }
-                        Repeater {
-                            model: configDialogFilterModel
-                            delegate: ConfigCategoryDelegate {}
-                        }
-                        Repeater {
-                            model: !root.isContainment ? globalConfigModel : undefined
-                            delegate: ConfigCategoryDelegate {}
-                        }
+                    if (foundPrevious) {
+                        button.openCategory()
+                        return
+                    } else if (button.current) {
+                        foundPrevious = true
                     }
                 }
             }
 
-            Item { // spacer
-                visible: categoriesScroll.visible
-                width: units.smallSpacing * 2
+            Keys.onDownPressed: {
+                var buttons = categories.children
+
+                var foundNext = false
+                for (var i = 0, length = buttons.length; i < length; ++i) {
+                    var button = buttons[i];
+                    console.log(button)
+                    if (!button.hasOwnProperty("current")) {
+                        continue;
+                    }
+
+                    if (foundNext) {
+                        button.openCategory()
+                        return
+                    } else if (button.current) {
+                        foundNext = true
+                    }
+                }
             }
 
+            ColumnLayout {
+                id: categories
+                spacing: 0
+                width: categoriesScroll.availableWidth
+
+                property Item currentItem: children[1]
+
+                Repeater {
+                    model: root.isContainment ? globalConfigModel : undefined
+                    delegate: ConfigCategoryDelegate {}
+                }
+                Repeater {
+                    model: configDialogFilterModel
+                    delegate: ConfigCategoryDelegate {}
+                }
+                Repeater {
+                    model: !root.isContainment ? globalConfigModel : undefined
+                    delegate: ConfigCategoryDelegate {}
+                }
+            }
+        }
+
+        // Configuration area and buttons.
+        ColumnLayout {
+            id: configColumn
+            Layout.topMargin: topSeparator.height
+            Layout.bottomMargin: units.smallSpacing * 2
+
+            // Configuration scroll area
             QtControls.ScrollView {
                 id: scroll
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 // we want to focus the controls in the settings page right away, don't focus the ScrollView
                 activeFocusOnTab: false
+                // Avoid scrollbar flashing on/off when decrease the window height, that is created by the content matching the scroll height.
+                // Even if scrollbar does not appear in the UI, modifies the availableWidth causing other issues.
+                QtControls.ScrollBar.vertical.policy: pageStack.maxHeight > pageStack.contentHeight ? QtControls.ScrollBar.AlwaysOff : QtControls.ScrollBar.AlwaysOn
 
                 property Item flickableItem: pageFlickable
                 // this horrible code below ensures the control with active focus stays visible in the window
@@ -281,16 +269,29 @@ Rectangle {
                 }
                 Flickable {
                     id: pageFlickable
-                    anchors.fill: parent
+
+                    anchors {
+                        top: scroll.top
+                        bottom: scroll.bottom
+                        left: scroll.left
+                    }
+                    width: scroll.availableWidth
                     contentHeight: pageColumn.height
                     contentWidth: width
+
                     Column {
                         id: pageColumn
                         spacing: units.largeSpacing / 2
+                        anchors {
+                            left: parent.left
+                            right: parent.right
+                            leftMargin: units.smallSpacing * 2
+                            rightMargin: units.smallSpacing * 2
+                        }
 
                         Kirigami.Heading {
                             id: pageTitle
-                            width: scroll.width
+                            width: pageColumn.width
                             topPadding: units.smallSpacing
                             level: 1
                             text: pageStack.title
@@ -301,8 +302,12 @@ Rectangle {
                             property string title: ""
                             property bool invertAnimations: false
 
-                            height: Math.max((scroll.height - pageTitle.height - parent.spacing), (pageStack.currentItem  ? (pageStack.currentItem.implicitHeight ? pageStack.currentItem.implicitHeight : pageStack.currentItem.childrenRect.height) : 0))
-                            width: scroll.width
+                            property var maxHeight: scroll.availableHeight - pageTitle.height - parent.spacing
+                            property var contentHeight: pageStack.currentItem ? (pageStack.currentItem.implicitHeight
+                                                                                 ? pageStack.currentItem.implicitHeight
+                                                                                 : pageStack.currentItem.childrenRect.height) : 0
+                            height: Math.max(maxHeight, contentHeight)
+                            width: pageColumn.width
 
                             property string sourceFile
 
@@ -357,7 +362,7 @@ Rectangle {
                                         easing.type: Easing.InOutQuad
                                     }
                                     XAnimator {
-                                        from: pageStack.invertAnimations ? -scroll.width/3: scroll.width/3
+                                        from: pageStack.invertAnimations ? -pageColumn.width/3: pageColumn.width/3
                                         to: 0
                                         duration: units.longDuration
                                         easing.type: Easing.InOutQuad
@@ -374,7 +379,7 @@ Rectangle {
                                     }
                                     XAnimator {
                                         from: 0
-                                        to: pageStack.invertAnimations ? scroll.width/3 : -scroll.width/3
+                                        to: pageStack.invertAnimations ? pageColumn.width/3 : -pageColumn.width/3
                                         duration: units.longDuration
                                         easing.type: Easing.InOutQuad
                                     }
@@ -384,52 +389,55 @@ Rectangle {
                     }
                 }
             }
-        }
 
-        QtControls.Action {
-            id: acceptAction
-            onTriggered: {
-                applyAction.trigger();
-                configDialog.close();
+            QtControls.Action {
+                id: acceptAction
+                onTriggered: {
+                    applyAction.trigger();
+                    configDialog.close();
+                }
+                shortcut: "Return"
             }
-            shortcut: "Return"
-        }
 
-        QtControls.Action {
-            id: applyAction
-            onTriggered: {
-                root.saveConfig();
+            QtControls.Action {
+                id: applyAction
+                onTriggered: {
+                    root.saveConfig();
 
-                applyButton.enabled = false;
+                    applyButton.enabled = false;
+                }
             }
-        }
 
-        QtControls.Action {
-            id: cancelAction
-            onTriggered: configDialog.close();
-            shortcut: "Escape"
-        }
+            QtControls.Action {
+                id: cancelAction
+                onTriggered: configDialog.close();
+                shortcut: "Escape"
+            }
 
-        RowLayout {
-            id: buttonsRow
-            Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
-            QtControls.Button {
-                icon.name: "dialog-ok"
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "OK")
-                onClicked: acceptAction.trigger()
-            }
-            QtControls.Button {
-                id: applyButton
-                enabled: false
-                icon.name: "dialog-ok-apply"
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply")
-                visible: pageStack.currentItem && (!pageStack.currentItem.kcm || pageStack.currentItem.kcm.buttons & 4) // 4 = Apply button
-                onClicked: applyAction.trigger()
-            }
-            QtControls.Button {
-                icon.name: "dialog-cancel"
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel")
-                onClicked: cancelAction.trigger()
+            RowLayout {
+                id: buttonsRow
+                Layout.alignment: Qt.AlignRight
+                Layout.rightMargin: units.smallSpacing * 2
+                Layout.leftMargin: units.smallSpacing * 2
+
+                QtControls.Button {
+                    icon.name: "dialog-ok"
+                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "OK")
+                    onClicked: acceptAction.trigger()
+                }
+                QtControls.Button {
+                    id: applyButton
+                    enabled: false
+                    icon.name: "dialog-ok-apply"
+                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply")
+                    visible: pageStack.currentItem && (!pageStack.currentItem.kcm || pageStack.currentItem.kcm.buttons & 4) // 4 = Apply button
+                    onClicked: applyAction.trigger()
+                }
+                QtControls.Button {
+                    icon.name: "dialog-cancel"
+                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel")
+                    onClicked: cancelAction.trigger()
+                }
             }
         }
     }
