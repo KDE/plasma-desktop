@@ -33,6 +33,7 @@
 #include <QCheckBox>
 
 namespace {
+    static const char s_defaultApplication[] = "Default Applications";
     static const char s_AddedAssociations[] = "Added Associations";
     static const auto s_mimetype = QStringLiteral("x-scheme-handler/mailto");
 }
@@ -74,31 +75,14 @@ void CfgEmailClient::load(KConfig *)
         }
     }
 
-    // add the Added association to x-scheme-handler/mailto from the mimeapps.list file
-    const KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
-    const KConfigGroup addedApps(profile, s_AddedAssociations);
-    const auto addedList = addedApps.readXdgListEntry(s_mimetype);
+    // in case of a service not associated with Email Category and/or x-scheme-handler/mailto
+    if (m_currentIndex == -1 && !emailClientService->storageId().isEmpty()) {
+        const KService::Ptr service = KService::serviceByStorageId(emailClientService->storageId());
 
-    for (const auto &addedApp : addedList) {
-        // without .desktop extension
-        auto service = KService::serviceByStorageId(addedApp.mid(0, addedApp.length() -8));
-        if (!service) {
-            service = KService::serviceByStorageId(addedApp);
-        }
-        if (!service) {
-            continue;
-        }
-        // avoid duplicates entry when email clients are present in mimeapps.list's Added Associations too
-        const bool isServiceAlreadyInserted = std::none_of(emailClients.constBegin(), emailClients.constEnd(), [service] (const KService::Ptr &serv) { return service->storageId() == serv->storageId(); });
-        if (isServiceAlreadyInserted) {
-            const auto icon = QIcon::fromTheme(!service->icon().isEmpty() ? service->icon() : QStringLiteral("application-x-shellscript"));
-            addItem(icon, service->name() + " (" + KShell::tildeCollapse(service->entryPath()) + ")", service->storageId());
-
-            if (emailClientService && emailClientService->storageId() == service->storageId()) {
-                setCurrentIndex(count() - 1);
-                m_currentIndex = count() - 1;
-            }
-        }
+        const QString icon = !service->icon().isEmpty() ? service->icon() : QStringLiteral("application-x-shellscript");
+        addItem(QIcon::fromTheme(icon), service->name(), service->storageId());
+        setCurrentIndex(count() - 1);
+        m_currentIndex = count() - 1;
     }
 
     // add a other option to add a new email client with KOpenWithDialog
@@ -166,10 +150,10 @@ void CfgEmailClient::save(KConfig *)
         KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
 
         // Save the default application according to mime-apps-spec 1.0
-        KConfigGroup defaultApp(profile, "Default Applications");
+        KConfigGroup defaultApp(profile, s_defaultApplication);
         defaultApp.writeXdgListEntry(s_mimetype, {emailClientService->storageId()});
 
-        KConfigGroup addedApps(profile, "Added Associations");
+        KConfigGroup addedApps(profile, s_AddedAssociations);
         QStringList apps = addedApps.readXdgListEntry(s_mimetype);
         apps.removeAll(emailClientService->storageId());
         apps.prepend(emailClientService->storageId()); // make it the preferred app, i.e first in list
