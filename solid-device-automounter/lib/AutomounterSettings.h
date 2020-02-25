@@ -28,20 +28,21 @@
 
 class AutomounterSettings : public AutomounterSettingsBase {
     public:
+        using AutomounterSettingsBase::AutomounterSettingsBase;
         enum AutomountType {
             Login,
             Attach
         };
-        static KConfigGroup deviceSettings(const QString &udi);
-        static QStringList knownDevices();
-        static bool deviceIsKnown(const QString &udi);
-        static bool shouldAutomountDevice(const QString &udi, AutomountType type);
-        static void setDeviceLastSeenMounted(const QString &udi, bool mounted);
-        static bool deviceAutomountIsForced(const QString &udi, AutomountType type);
-        static QString getDeviceName(const QString &udi);
-        static bool getDeviceForcedAutomount(const QString &udi);
-        static QString getDeviceIcon(const QString &udi);
-        static void saveDevice(const Solid::Device &dev);
+        KConfigGroup deviceSettings(const QString &udi);
+        QStringList knownDevices();
+        bool deviceIsKnown(const QString &udi);
+        bool shouldAutomountDevice(const QString &udi, AutomountType type);
+        void setDeviceLastSeenMounted(const QString &udi, bool mounted);
+        bool deviceAutomountIsForced(const QString &udi, AutomountType type);
+        QString getDeviceName(const QString &udi);
+        bool getDeviceForcedAutomount(const QString &udi);
+        QString getDeviceIcon(const QString &udi);
+        void saveDevice(const Solid::Device &dev);
 };
 
 #endif

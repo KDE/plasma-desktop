@@ -41,7 +41,8 @@ K_PLUGIN_FACTORY(DeviceAutomounterKCMFactory, registerPlugin<DeviceAutomounterKC
 
 DeviceAutomounterKCM::DeviceAutomounterKCM(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)//DeviceAutomounterKCMFactory::componentData(), parent)
-    , m_devices(new DeviceModel(this))
+    , m_settings(new AutomounterSettings(this))
+    , m_devices(new DeviceModel(m_settings, this))
 {
     KAboutData *about = new KAboutData(QStringLiteral("kcm_device_automounter"),
                                        i18n("Device Automounter"),
@@ -55,7 +56,7 @@ DeviceAutomounterKCM::DeviceAutomounterKCM(QWidget *parent, const QVariantList &
     setAboutData(about);
     setupUi(this);
 
-    addConfig(AutomounterSettings::self(), this);
+    addConfig(m_settings, this);
 
     deviceView->setModel(m_devices);
 
@@ -113,11 +114,11 @@ void DeviceAutomounterKCM::load()
 {
     KCModule::load();
 
-    bool automountEnabled = AutomounterSettings::self()->automountEnabled();
+    bool automountEnabled = m_settings->automountEnabled();
 
-    kcfg_AutomountUnknownDevices->setEnabled(automountEnabled);
-    kcfg_AutomountOnLogin->setEnabled(automountEnabled);
-    kcfg_AutomountOnPlugin->setEnabled(automountEnabled);
+    kcfg_AutomountUnknownDevices->setEnabled(m_settings->automountEnabled());
+    kcfg_AutomountOnLogin->setEnabled(m_settings->automountEnabled());
+    kcfg_AutomountOnPlugin->setEnabled(m_settings->automountEnabled());
 
     m_devices->reload();
     loadLayout();
@@ -140,29 +141,29 @@ void DeviceAutomounterKCM::save()
             validDevices << device;
 
             if (dev.data(Qt::CheckStateRole).toInt() == Qt::Checked) {
-                AutomounterSettings::deviceSettings(device).writeEntry("ForceLoginAutomount", true);
+                m_settings->deviceSettings(device).writeEntry("ForceLoginAutomount", true);
             } else {
-                AutomounterSettings::deviceSettings(device).writeEntry("ForceLoginAutomount", false);
+                m_settings->deviceSettings(device).writeEntry("ForceLoginAutomount", false);
             }
 
             dev = dev.sibling(j, 2);
 
             if (dev.data(Qt::CheckStateRole).toInt() == Qt::Checked) {
-                AutomounterSettings::deviceSettings(device).writeEntry("ForceAttachAutomount", true);
+                m_settings->deviceSettings(device).writeEntry("ForceAttachAutomount", true);
             } else {
-                AutomounterSettings::deviceSettings(device).writeEntry("ForceAttachAutomount", false);
+                m_settings->deviceSettings(device).writeEntry("ForceAttachAutomount", false);
             }
         }
     }
 
-    const auto knownDevices = AutomounterSettings::knownDevices();
+    const auto knownDevices = m_settings->knownDevices();
     for (const QString &possibleDevice : knownDevices) {
         if (!validDevices.contains(possibleDevice)) {
-            AutomounterSettings::deviceSettings(possibleDevice).deleteGroup();
+            m_settings->deviceSettings(possibleDevice).deleteGroup();
         }
     }
 
-    AutomounterSettings::self()->save();
+    m_settings->save();
 
     // Now tell kded to automatically load the module if loaded
     QDBusConnection dbus = QDBusConnection::sessionBus();

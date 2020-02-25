@@ -48,6 +48,7 @@ private:
     void saveLayout();
     void loadLayout();
 
+    AutomounterSettings *m_settings;
     DeviceModel *m_devices;
 };
 

@@ -30,8 +30,9 @@
 
 #include "AutomounterSettings.h"
 
-DeviceModel::DeviceModel(QObject *parent)
+DeviceModel::DeviceModel(AutomounterSettings *m_settings, QObject *parent)
     : QAbstractItemModel(parent)
+    , m_settings(m_settings)
 {
     reload();
     
@@ -104,13 +105,13 @@ void DeviceModel::deviceRemoved(const QString &udi)
 
 void DeviceModel::addNewDevice(const QString &udi)
 {
-    AutomounterSettings::self()->load();
+    m_settings->load();
 
     if (!m_loginForced.contains(udi)) {
-        m_loginForced[udi] = AutomounterSettings::deviceAutomountIsForced(udi, AutomounterSettings::Login);
+        m_loginForced[udi] = m_settings->deviceAutomountIsForced(udi, AutomounterSettings::Login);
     }
     if (!m_attachedForced.contains(udi)) {
-        m_loginForced[udi] = AutomounterSettings::deviceAutomountIsForced(udi, AutomounterSettings::Attach);
+        m_loginForced[udi] = m_settings->deviceAutomountIsForced(udi, AutomounterSettings::Attach);
     }
 
     const Solid::Device dev(udi);
@@ -138,17 +139,17 @@ void DeviceModel::reload()
     m_attached.clear();
     m_disconnected.clear();
 
-    m_automaticLogin = AutomounterSettings::automountOnLogin();
-    m_automaticAttached = AutomounterSettings::automountOnPlugin();
+    m_automaticLogin = m_settings->automountOnLogin();
+    m_automaticAttached = m_settings->automountOnPlugin();
 
-    const auto knownDevices = AutomounterSettings::knownDevices();
+    const auto knownDevices = m_settings->knownDevices();
     for (const QString &dev : knownDevices) {
         addNewDevice(dev);
     }
     const auto keys = m_loginForced.keys();
     for (const QString &udi : keys) {
-        m_loginForced[udi] = AutomounterSettings::deviceAutomountIsForced(udi, AutomounterSettings::Login);
-        m_attachedForced[udi] = AutomounterSettings::deviceAutomountIsForced(udi, AutomounterSettings::Attach);
+        m_loginForced[udi] = m_settings->deviceAutomountIsForced(udi, AutomounterSettings::Login);
+        m_attachedForced[udi] = m_settings->deviceAutomountIsForced(udi, AutomounterSettings::Attach);
     }
     endResetModel();
 }
@@ -277,7 +278,7 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
                 case Qt::CheckStateRole:
                     return m_loginForced[udi] ? Qt::Checked : Qt::Unchecked;
                 case Qt::ToolTipRole:
-                    if (m_loginForced[udi] || AutomounterSettings::shouldAutomountDevice(udi, AutomounterSettings::Login))
+                    if (m_loginForced[udi] || m_settings->shouldAutomountDevice(udi, AutomounterSettings::Login))
                         return i18n("This device will be automatically mounted at login.");
                     return i18n("This device will not be automatically mounted at login.");
                 }
@@ -286,7 +287,7 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
                 case Qt::CheckStateRole:
                     return m_attachedForced[udi] ? Qt::Checked : Qt::Unchecked;
                 case Qt::ToolTipRole:
-                    if (m_attachedForced[udi] || AutomounterSettings::shouldAutomountDevice(udi, AutomounterSettings::Attach))
+                    if (m_attachedForced[udi] || m_settings->shouldAutomountDevice(udi, AutomounterSettings::Attach))
                         return i18n("This device will be automatically mounted when attached.");
                     return i18n("This device will not be automatically mounted when attached.");
                 }
@@ -305,18 +306,18 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
             if (index.column() == 0) {
                 switch(role) {
                 case Qt::DisplayRole:
-                    return AutomounterSettings::getDeviceName(udi);
+                    return m_settings->getDeviceName(udi);
                 case Qt::ToolTipRole:
                     return i18n("UDI: %1", udi);
                 case Qt::DecorationRole:
-                    return QIcon::fromTheme(AutomounterSettings::getDeviceIcon(udi));
+                    return QIcon::fromTheme(m_settings->getDeviceIcon(udi));
                 }
             } else if (index.column() == 1) {
                 switch(role) {
                 case Qt::CheckStateRole:
                     return m_loginForced[udi] ? Qt::Checked : Qt::Unchecked;
                 case Qt::ToolTipRole:
-                    if (m_loginForced[udi] || AutomounterSettings::shouldAutomountDevice(udi, AutomounterSettings::Login))
+                    if (m_loginForced[udi] || m_settings->shouldAutomountDevice(udi, AutomounterSettings::Login))
                         return i18n("This device will be automatically mounted at login.");
                     return i18n("This device will not be automatically mounted at login.");
                 }
@@ -325,7 +326,7 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
                 case Qt::CheckStateRole:
                     return m_attachedForced[udi] ? Qt::Checked : Qt::Unchecked;
                 case Qt::ToolTipRole:
-                    if (m_attachedForced[udi] || AutomounterSettings::shouldAutomountDevice(udi, AutomounterSettings::Attach))
+                    if (m_attachedForced[udi] || m_settings->shouldAutomountDevice(udi, AutomounterSettings::Attach))
                         return i18n("This device will be automatically mounted when attached.");
                     return i18n("This device will not be automatically mounted when attached.");
                 }
@@ -361,7 +362,7 @@ int DeviceModel::rowCount(const QModelIndex &parent) const
 
 int DeviceModel::columnCount(const QModelIndex &parent) const
 {
-    Q_UNUSED(parent);
+    Q_UNUSED(parent)
     return 3;
 }
 

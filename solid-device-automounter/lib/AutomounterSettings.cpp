@@ -22,17 +22,17 @@
 
 KConfigGroup AutomounterSettings::deviceSettings(const QString &udi)
 {
-    return self()->config()->group("Devices").group(udi);
+    return config()->group("Devices").group(udi);
 }
 
 QStringList AutomounterSettings::knownDevices()
 {
-    return self()->config()->group("Devices").groupList();
+    return config()->group("Devices").groupList();
 }
 
 bool AutomounterSettings::deviceIsKnown(const QString &udi)
 {
-    return self()->config()->group("Devices").group(udi).readEntry("EverMounted", false);
+    return config()->group("Devices").group(udi).readEntry("EverMounted", false);
 }
 
 bool AutomounterSettings::deviceAutomountIsForced(const QString &udi, AutomountType type)

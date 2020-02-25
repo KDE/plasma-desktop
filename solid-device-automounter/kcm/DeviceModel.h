@@ -27,12 +27,14 @@
 #include <QList>
 #include <QHash>
 
+class AutomounterSettings;
+
 class DeviceModel : public QAbstractItemModel
 {
     Q_OBJECT
 
 public:
-    explicit DeviceModel(QObject *parent = nullptr);
+    explicit DeviceModel(AutomounterSettings *m_settings, QObject *parent = nullptr);
     ~DeviceModel() override = default;
 
     enum DeviceType {
@@ -77,6 +79,7 @@ private:
     QHash<QString, bool> m_attachedForced;
     bool m_automaticLogin;
     bool m_automaticAttached;
+    AutomounterSettings *m_settings;
 };
 
 #endif

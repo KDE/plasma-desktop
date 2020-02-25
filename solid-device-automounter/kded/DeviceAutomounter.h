@@ -38,6 +38,7 @@ private slots:
 private:
     void automountDevice(Solid::Device &dev, AutomounterSettings::AutomountType type);
 
+    AutomounterSettings *m_settings;
 };
 
 #endif
