@@ -28,6 +28,8 @@ Kirigami.ApplicationWindow
 {
     id: window
 
+    minimumWidth: Math.round(minimumHeight * 1.25)
+    minimumHeight: drawer.contentHeight
     width: Kirigami.Units.gridUnit * 25
     height: Kirigami.Units.gridUnit * 25
 
