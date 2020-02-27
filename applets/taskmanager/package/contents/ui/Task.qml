@@ -62,7 +62,8 @@ MouseArea {
     property Item audioStreamOverlay
     property var audioStreams: []
     property bool delayAudioStreamIndicator: false
-    readonly property bool hasAudioStream: plasmoid.configuration.indicateAudioStreams && audioStreams.length > 0
+    readonly property bool audioIndicatorsEnabled: plasmoid.configuration.indicateAudioStreams
+    readonly property bool hasAudioStream: audioStreams.length > 0
     readonly property bool playingAudio: hasAudioStream && audioStreams.some(function (item) {
         return !item.corked
     })
@@ -222,9 +223,11 @@ MouseArea {
     }
 
     onHasAudioStreamChanged: {
-        if (hasAudioStream) {
-            audioStreamIconLoader.active = true
-        }
+        audioStreamIconLoader.active = hasAudioStream && audioIndicatorsEnabled;
+    }
+
+    onAudioIndicatorsEnabledChanged: {
+        audioStreamIconLoader.active = hasAudioStream && audioIndicatorsEnabled;
     }
 
     Keys.onReturnPressed: TaskTools.activateTask(modelIndex(), model, event.modifiers, task)

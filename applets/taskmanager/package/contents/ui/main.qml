@@ -43,6 +43,8 @@ MouseArea {
     property bool needLayoutRefresh: false;
     property variant taskClosedWithMouseMiddleButton: []
 
+    readonly property bool plasmaPaAvailable: Qt.createComponent("PulseAudio.qml").status === Component.Ready
+
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
     Plasmoid.onUserConfiguringChanged: {
@@ -305,7 +307,7 @@ MouseArea {
     Loader {
         id: pulseAudio
         source: "PulseAudio.qml"
-        active: plasmoid.configuration.indicateAudioStreams
+        active: plasmaPaAvailable
     }
 
     Timer {
