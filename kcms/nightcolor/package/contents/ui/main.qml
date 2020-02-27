@@ -152,7 +152,7 @@ KCM.SimpleKCM {
                 enabled: cA.nightColorAvailable
                 checked: cA.active
 
-                onCheckedChanged: {
+                onToggled: {
                     cA.activeStaged = checked;
                     calcNeedsSave();
                 }
