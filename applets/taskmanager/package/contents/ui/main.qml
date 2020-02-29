@@ -39,11 +39,10 @@ MouseArea {
     property bool iconsOnly: (plasmoid.pluginName === "org.kde.plasma.icontasks")
 
     property QtObject contextMenuComponent: Qt.createComponent("ContextMenu.qml");
+    property QtObject pulseAudioComponent: Qt.createComponent("PulseAudio.qml");
 
     property bool needLayoutRefresh: false;
     property variant taskClosedWithMouseMiddleButton: []
-
-    readonly property bool plasmaPaAvailable: Qt.createComponent("PulseAudio.qml").status === Component.Ready
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
@@ -306,8 +305,8 @@ MouseArea {
 
     Loader {
         id: pulseAudio
-        source: "PulseAudio.qml"
-        active: plasmaPaAvailable
+        sourceComponent: pulseAudioComponent
+        active: pulseAudioComponent.status === Component.Ready
     }
 
     Timer {
