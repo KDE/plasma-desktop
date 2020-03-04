@@ -26,20 +26,27 @@ import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 import org.kde.newstuff 1.62 as NewStuff
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcm 1.3 as KCM
 
 import org.kde.private.kcms.icons 1.0 as Private
 
 KCM.GridViewKCM {
+    id: root
     KCM.ConfigModule.quickHelp: i18n("This module allows you to choose the icons for your desktop.")
 
     view.model: kcm.iconsModel
     view.currentIndex: kcm.pluginIndex(kcm.iconsSettings.theme)
     enabled: !kcm.downloadingFile
-    view.enabled: !kcm.iconsSettings.isImmutable("Theme")
+
+    KCM.SettingStateBinding {
+        target: view
+        configObject: kcm.iconsSettings
+        itemName: "Theme"
+        indicatorAsOverlay: true
+    }
 
     DropArea {
-        enabled: !kcm.iconsSettings.isImmutable("Theme")
+        enabled: view.enabled
         anchors.fill: parent
         onEntered: {
             if (!drag.hasUrls) {
@@ -244,8 +251,8 @@ KCM.GridViewKCM {
             }
 
             QtControls.Button {
-                enabled: !kcm.iconsSettings.isImmutable("Theme")
                 id: installFromFileButton
+                enabled: root.view.enabled
                 text: i18n("Install from File...")
                 icon.name: "document-import"
                 onClicked: fileDialogLoader.active = true
@@ -253,6 +260,7 @@ KCM.GridViewKCM {
 
             NewStuff.Button {
                 id: newStuffButton
+                enabled: root.view.enabled
                 text: i18n("Get New Icons...")
                 configFile: "icons.knsrc"
                 viewMode: NewStuff.Page.ViewMode.Preview

@@ -25,7 +25,7 @@ import QtQuick.Dialogs 1.0
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.newstuff 1.62 as NewStuff
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcm 1.3 as KCM
 import org.kde.private.kcms.desktoptheme 1.0 as Private
 
 
@@ -35,7 +35,7 @@ KCM.GridViewKCM {
     view.model: kcm.filteredModel
     view.currentIndex: kcm.filteredModel.selectedThemeIndex
 
-      Binding {
+    Binding {
         target: kcm.filteredModel
         property: "query"
         value: searchField.text
@@ -47,7 +47,13 @@ KCM.GridViewKCM {
         value:  filterCombo.model[filterCombo.currentIndex].filter
     }
 
-    enabled: !kcm.downloadingFile && !kcm.desktopThemeSettings.isImmutable("name")
+    KCM.SettingStateBinding {
+        target: parent
+        configObject: kcm.desktopThemeSettings
+        itemName: "name"
+        extraEnabledPredicate: !kcm.downloadingFile
+        indicatorAsOverlay: true
+    }
 
     DropArea {
         anchors.fill: parent

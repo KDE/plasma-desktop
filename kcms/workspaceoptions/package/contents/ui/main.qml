@@ -20,7 +20,7 @@ import QtQuick 2.7
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.5 as Kirigami
-import org.kde.kcm 1.2 as KCM
+import org.kde.kcm 1.3 as KCM
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
@@ -37,7 +37,6 @@ KCM.SimpleKCM {
             id: showToolTips
             Kirigami.FormData.label: i18n("Visual behavior:")
             text: i18n("Display informational tooltips on mouse hover")
-            enabled: !kcm.plasmaSettings.isImmutable("delay")
             checked: kcm.plasmaSettings.delay > 0
             onCheckedChanged: {
                 if (checked) {
@@ -46,14 +45,25 @@ KCM.SimpleKCM {
                     kcm.plasmaSettings.delay = -1
                 }
             }
+
+            KCM.SettingStateBinding {
+                target: parent
+                configObject: kcm.plasmaSettings
+                itemName: "delay"
+            }
         }
 
         QQC2.CheckBox {
             id: showVisualFeedback
             text: i18n("Display visual feedback for status changes")
-            enabled: !kcm.plasmaSettings.isImmutable("osdEnabled")
             checked: kcm.plasmaSettings.osdEnabled
             onCheckedChanged: kcm.plasmaSettings.osdEnabled = checked
+
+            KCM.SettingStateBinding {
+                target: parent
+                configObject: kcm.plasmaSettings
+                itemName: "osdEnabled"
+            }
         }
 
         Item {
@@ -64,7 +74,6 @@ KCM.SimpleKCM {
         // move from 4x, 3x, 2x, 1x, 0.5x, 0.25x, 0.125x
         // 0 is a special case
         ColumnLayout {
-            enabled: !kcm.globalsSettings.isImmutable("animationDurationFactor")
             Kirigami.FormData.label: i18n("Animation speed:")
             Kirigami.FormData.buddyFor: slider
 
@@ -86,6 +95,12 @@ KCM.SimpleKCM {
                     return slider.to;
                 } else {
                     return -(Math.log(kcm.globalsSettings.animationDurationFactor) / Math.log(2));
+                }
+
+                KCM.SettingStateBinding {
+                    target: parent
+                    configObject: kcm.globalsSettings
+                    itemName: "animationDurationFactor"
                 }
             }
             RowLayout {
@@ -113,16 +128,21 @@ KCM.SimpleKCM {
             id: singleClick
             Kirigami.FormData.label: i18n("Click behavior:")
             text: i18n("Single-click to open files and folders")
-            enabled: !kcm.globalsSettings.isImmutable("singleClick")
             checked: kcm.globalsSettings.singleClick
             onToggled: kcm.globalsSettings.singleClick = true
             QQC2.ButtonGroup.group: singleClickGroup
+
+            KCM.SettingStateBinding {
+                target: parent
+                configObject: kcm.globalsSettings
+                itemName: "singleClick"
+            }
         }
 
         QQC2.RadioButton {
             id: doubleClick
             text: i18n("Double-click to open files and folders")
-            enabled: !kcm.globalsSettings.isImmutable("singleClick")
+            enabled: singleClick.enabled
             checked: !kcm.globalsSettings.singleClick
             onToggled: kcm.globalsSettings.singleClick = false
             QQC2.ButtonGroup.group: singleClickGroup
@@ -147,16 +167,21 @@ KCM.SimpleKCM {
             id: scrollbarLeftClickNavigatesByPage
             Kirigami.FormData.label: i18n("Clicking in scrollbar track:")
             text: i18nc("@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one page up or down'", "Scrolls one page up or down")
-            enabled: !kcm.globalsSettings.isImmutable("scrollbarLeftClickNavigatesByPage")
             checked: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage
             onToggled: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage = true
             QQC2.ButtonGroup.group: scrollHandleBehaviorGroup
+
+            KCM.SettingStateBinding {
+                target: parent
+                configObject: kcm.globalsSettings
+                itemName: "scrollbarLeftClickNavigatesByPage"
+            }
         }
 
         QQC2.RadioButton {
             id: scrollBarLeftClickWarpsScrollHandle
             text: i18nc("@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to the clicked location'", "Scrolls to the clicked location")
-            enabled: !kcm.globalsSettings.isImmutable("scrollbarLeftClickNavigatesByPage")
+            enabled: scrollbarLeftClickNavigatesByPage.enabled
             checked: !kcm.globalsSettings.scrollbarLeftClickNavigatesByPage
             onToggled: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage = false
             QQC2.ButtonGroup.group: scrollHandleBehaviorGroup
