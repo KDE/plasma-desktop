@@ -24,8 +24,10 @@ if (freeEdges["bottom"] == true) {
     // There is no free edge, so leave the default value
     panel.location = "top";
 }
-
-panel.height = gridUnit * 2
+// For an Icons-Only Task Manager on the bottom, *3 is too much, *2 is too little
+// Round up to next highest even number since the Panel size widget only displays
+// even numbers
+panel.height = 2 * Math.ceil(gridUnit * 2.5 / 2)
 
 // Restrict horizontal panel to a maximum size of a 21:9 monitor
 const maximumAspectRatio = 21/9;
@@ -46,7 +48,7 @@ kickoff.writeConfig("global", "Alt+F1")
 
 //panel.addWidget("org.kde.plasma.showActivityManager")
 panel.addWidget("org.kde.plasma.pager")
-panel.addWidget("org.kde.plasma.taskmanager")
+panel.addWidget("org.kde.plasma.icontasks")
 
 /* Next up is determining whether to add the Input Method Panel
  * widget to the panel or not. This is done based on whether
