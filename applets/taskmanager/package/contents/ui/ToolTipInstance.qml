@@ -73,7 +73,7 @@ ColumnLayout {
 
     spacing: units.smallSpacing
 
-    // launcher icon + text labels + close button
+    // text labels + close button
     RowLayout {
         id: header
         // match spacing of DefaultToolTip.qml in plasma-framework
@@ -85,16 +85,6 @@ ColumnLayout {
         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         // match margins of DefaultToolTip.qml in plasma-framework
         Layout.margins: isWin ? 0 : units.gridUnit / 2
-
-        // launcher icon
-        PlasmaCore.IconItem {
-            Layout.preferredWidth: units.iconSizes.medium
-            Layout.preferredHeight: units.iconSizes.medium
-            source: !isWin ? icon : ""
-            animated: false
-            usesPlasmaTheme: false
-            visible: !isWin
-        }
 
         // all textlabels
         ColumnLayout {
