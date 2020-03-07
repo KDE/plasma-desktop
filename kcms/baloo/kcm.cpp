@@ -73,20 +73,20 @@ ServerConfigModule::~ServerConfigModule()
 void ServerConfigModule::load()
 {
     ManagedConfigModule::load();
-    m_previouslyEnabled = m_settings->indexingEnabled();
 }
 
 void ServerConfigModule::save()
 {
     ManagedConfigModule::save();
 
-    Baloo::IndexerConfig config;
-    config.setFirstRun(m_previouslyEnabled != m_settings->indexingEnabled());
-
-    m_previouslyEnabled = m_settings->indexingEnabled();
-
-    // Start Baloo
+    // Update Baloo config or start Baloo
     if (m_settings->indexingEnabled()) {
+        // Update the baloo_file's config cache - if it not yet running,
+        // the DBus call goes nowhere
+        Baloo::IndexerConfig config;
+        config.refresh();
+
+        // Trying to start baloo when it is already running is fine
         const QString exe = QStandardPaths::findExecutable(QStringLiteral("baloo_file"));
         QProcess::startDetached(exe, QStringList());
     }
@@ -100,9 +100,6 @@ void ServerConfigModule::save()
 
         QDBusConnection::sessionBus().asyncCall(message);
     }
-
-    // Update the baloo_file's config cache
-    config.refresh();
 }
 
 FilteredFolderModel *ServerConfigModule::filteredModel() const

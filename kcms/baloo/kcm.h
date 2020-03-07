@@ -50,7 +50,6 @@ public Q_SLOTS:
 private:
     BalooSettings *m_settings;
     FilteredFolderModel *m_filteredFolderModel;
-    bool m_previouslyEnabled;
 };
 }
 
