@@ -58,42 +58,6 @@ struct Emoji {
     QStringList annotations;
 };
 
-class TextImageProvider : public QQuickImageProvider
-{
-public:
-    TextImageProvider()
-        : QQuickImageProvider(QQuickImageProvider::Pixmap)
-    {
-    }
-
-    QPixmap requestPixmap(const QString &id, QSize *_size, const QSize &requestedSize) override
-    {
-        const QString renderString = id.mid(1); //drop initial /
-
-        QSize size = requestedSize;
-        QFont font;
-        if (!size.isValid()) {
-            QPixmap dummy;
-            QFontMetrics fm(font, &dummy);
-            size = { fm.horizontalAdvance(renderString), fm.height() };
-        } else {
-            font.setPointSize((requestedSize.height() * 3) / 4);
-        }
-        if (_size) {
-            *_size = size;
-        }
-
-        QPixmap pixmap(size.width(), size.height());
-        pixmap.fill(Qt::transparent);
-        QPainter p;
-        p.begin(&pixmap);
-        p.setFont(font);
-        p.drawText(QRect(0, 0, size.width(), size.height()), Qt::AlignCenter, renderString);
-        p.end();
-        return pixmap;
-    }
-};
-
 class AbstractEmojiModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -405,7 +369,6 @@ int main(int argc, char** argv)
 
     QQmlApplicationEngine engine;
     new EngineWatcher(&engine);
-    engine.addImageProvider(QLatin1String("text"), new TextImageProvider);
     engine.load(QUrl(QStringLiteral("qrc:/ui/emojier.qml")));
 
     QObject::connect(service, &KDBusService::activateRequested, &engine, [&engine](const QStringList &/*arguments*/, const QString &/*workingDirectory*/) {
