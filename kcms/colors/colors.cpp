@@ -343,10 +343,13 @@ void KCMColors::load()
 
 void KCMColors::save()
 {
-    ManagedConfigModule::save();
+    // We need to save the colors change first, to avoid a situation,
+    // when we announced that the color scheme has changed, but
+    // the colors themselves in the color scheme have not yet
     if (m_selectedSchemeDirty) {
         saveColors();
     }
+    ManagedConfigModule::save();
     m_activeSchemeEdited = false;
 
     processPendingDeletions();
