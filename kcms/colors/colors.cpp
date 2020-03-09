@@ -339,6 +339,11 @@ void KCMColors::load()
         group = KConfigGroup(&cfg, "X11");
         m_applyToAlien = group.readEntry("exportKDEColors", true);
     }
+
+    // If need save is true at the end of load() function, it will stay disabled forever.
+    // setSelectedScheme() call due to unexisting scheme name in kdeglobals will trigger a need to save.
+    // this following call ensure the apply button will work properly.
+    setNeedsSave(false);
 }
 
 void KCMColors::save()
