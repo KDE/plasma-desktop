@@ -95,11 +95,17 @@ void DeviceModel::deviceRemoved(const QString &udi)
         m_attached.removeOne(udi);
         endRemoveRows();
 
-        // NOTE the device is not moved to the "Disconnected" section
-        // when removing it while the KCM is opened because we need to check
-        // whether the device that just got detached is ignored
+        // We move the device to the "Disconnected" section only if it
+        // is a known device, meaning we have some setting for this device.
+        // Otherwise the device is not moved to the "Disconnected" section
+        // because we need to check whether the device that just got detached is ignored
         // (don't show partition tables and other garbage) but this information
-        // is no longer available when the device is gone
+        // is no longer available once the device is gone
+        if (m_settings->knownDevices().contains(udi)) {
+            beginInsertRows(index(1, 0), m_disconnected.size(), m_disconnected.size());
+            m_disconnected << udi;
+            endInsertRows();
+        }
     }
 }
 
