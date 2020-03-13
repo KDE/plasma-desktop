@@ -158,6 +158,8 @@ MouseArea {
         }
     }
 
+    onEntered: hideTimer.stop();
+
     onExited: hideTimer.restart();
 
     onCurrentAppletChanged: {
@@ -246,7 +248,7 @@ MouseArea {
 
     Timer {
         id: hideTimer
-        interval: units.longDuration * 3
+        interval: units.longDuration * 6
         onTriggered: tooltip.visible = false;
     }
 
