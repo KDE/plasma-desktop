@@ -49,13 +49,31 @@ KCM.SimpleKCM {
             }
         }
 
-        QQC2.CheckBox {
-            id: indexFileContents
-            text: i18n("Also index file content")
-            enabled: fileSearchEnabled.checked && !kcm.balooSettings.isImmutable("onlyBasicIndexing")
-            checked: !kcm.balooSettings.onlyBasicIndexing
-            onCheckStateChanged: kcm.balooSettings.onlyBasicIndexing = !checked
+        RowLayout {
+            Layout.fillWidth: true
+
+            Item {
+                width: units.largeSpacing
+            }
+
+            ColumnLayout {
+                QQC2.CheckBox {
+                    id: indexFileContents
+                    text: i18n("Also index file content")
+                    enabled: fileSearchEnabled.checked && !kcm.balooSettings.isImmutable("onlyBasicIndexing")
+                    checked: !kcm.balooSettings.onlyBasicIndexing
+                    onCheckStateChanged: kcm.balooSettings.onlyBasicIndexing = !checked
+                }
+                QQC2.CheckBox {
+                    id: indexHiddenFolders
+                    text: i18n("Index hidden files and folders")
+                    enabled: fileSearchEnabled.checked && !kcm.balooSettings.isImmutable("indexHiddenFolders")
+                    checked: kcm.balooSettings.indexHiddenFolders
+                    onCheckStateChanged: kcm.balooSettings.indexHiddenFolders = checked
+                }
+            }
         }
+
         Item {
             Layout.preferredHeight: Kirigami.Units.gridUnit
         }
