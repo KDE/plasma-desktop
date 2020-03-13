@@ -23,6 +23,7 @@
 #define FILTEREDFOLDERMODEL_H
 
 #include <QAbstractListModel>
+#include <Baloo/IndexerConfig>
 
 class BalooSettings;
 
@@ -34,10 +35,13 @@ public:
 
     enum Roles {
         Folder = Qt::UserRole + 1,
-        Url
+        Url,
+        EnableIndex,
+        Deletable,
     };
 
     QVariant data(const QModelIndex& idx, int role) const override;
+    bool setData(const QModelIndex& idx, const QVariant& value, int role) override;
     int rowCount(const QModelIndex& parent) const override;
 
     Q_INVOKABLE void addFolder(const QString& folder);
@@ -48,19 +52,21 @@ public slots:
     void updateDirectoryList();
 
 private:
-    QString folderDisplayName(const QString& url) const;
-
-    /**
-     * @brief Get the theme valid icon name for \p path.
-     *
-     * @param path Path to be analysed.
-     * @return One of: "user-home", "drive-harddisk" or "folder"
-     */
-    QString iconName(QString path) const;
-
     BalooSettings *m_settings;
-    QStringList m_mountPoints;
-    QStringList m_excludeList;
+    Baloo::IndexerConfig m_runtimeConfig;
+
+    struct FolderInfo {
+        QString url;
+        QString displayName;
+        QString icon;
+        bool enableIndex;
+        bool isFromConfig;
+    };
+
+    QVector<FolderInfo> m_folderList;
+    QStringList m_deletedSettings; //< track deleted entries
+
+    void syncFolderConfig(const FolderInfo& entry);
 };
 
 #endif // FILTEREDFOLDERMODEL_H

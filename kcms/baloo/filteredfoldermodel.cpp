@@ -22,10 +22,6 @@
 
 #include "filteredfoldermodel.h"
 
-#include <Solid/Device>
-#include <Solid/StorageAccess>
-#include <Solid/StorageDrive>
-
 #include <QIcon>
 
 #include <QDir>
@@ -37,37 +33,23 @@
 #include "baloo/baloosettings.h"
 
 namespace {
-    QStringList addTrailingSlashes(const QStringList& input) {
-        QStringList output = input;
+    QString normalizeTrailingSlashes(QString&& input) {
+        if (!input.endsWith('/'))
+            return input + QLatin1Char('/');
+        return input;
+    }
 
-        for (QString& str : output) {
-            if (!str.endsWith(QDir::separator()))
-                str.append(QDir::separator());
+    QStringList addTrailingSlashes(QStringList&& list) {
+        for (QString& str : list) {
+            str = normalizeTrailingSlashes(std::move(str));
         }
-
-        return output;
+        return list;
     }
 
     QString makeHomePretty(const QString& url) {
         if (url.startsWith(QDir::homePath()))
             return QString(url).replace(0, QDir::homePath().length(), QStringLiteral("~"));
         return url;
-    }
-
-    bool ignoredMountPoint(const QString& mountPoint) {
-        if (mountPoint == QLatin1String("/"))
-            return true;
-
-        if (mountPoint.startsWith(QLatin1String("/boot")))
-            return true;
-
-        if (mountPoint.startsWith(QLatin1String("/tmp")))
-            return true;
-
-        // The user's home directory is forcibly added so we can ignore /home
-        // if /home actually contains the home directory
-        return mountPoint.startsWith(QLatin1String("/home")) &&
-               QDir::homePath().startsWith(QLatin1String("/home"));
     }
 }
 
@@ -81,123 +63,164 @@ void FilteredFolderModel::updateDirectoryList()
 {
     beginResetModel();
 
-    m_mountPoints.clear();
+    const QStringList runtimeExcluded = m_runtimeConfig.excludeFolders();
 
-    QList<Solid::Device> devices = Solid::Device::listFromType(Solid::DeviceInterface::StorageAccess);
+    QStringList settingsIncluded = addTrailingSlashes(m_settings->folders());
+    QStringList settingsExcluded = addTrailingSlashes(m_settings->excludedFolders());
 
-    for (const Solid::Device& dev : devices) {
-        const Solid::StorageAccess* sa = dev.as<Solid::StorageAccess>();
-        if (!sa->isAccessible())
-            continue;
+    const QString homePath = normalizeTrailingSlashes(QDir::homePath());
 
-        const QString mountPath = sa->filePath();
-        if (ignoredMountPoint(mountPath))
-            continue;
-
-        m_mountPoints.append(mountPath);
-    }
-    m_mountPoints.append(QDir::homePath());
-    m_mountPoints = addTrailingSlashes(m_mountPoints);
-
-    QStringList includeList = addTrailingSlashes(m_settings->folders());
-
-    m_excludeList = addTrailingSlashes(m_settings->excludedFolders());
-
-    // This algorithm seems bogus. verify later.
-    for (const QString& mountPath : m_mountPoints) {
-        if (includeList.contains(mountPath))
-            continue;
-
-        if (!m_excludeList.contains(mountPath)) {
-            m_excludeList.append(mountPath);
+    auto folderListEntry = [&homePath] (const QString& url, bool include, bool fromConfig)
+    {
+        QString displayName = url;
+        if (displayName.size() > 1) {
+            displayName.chop(1);
         }
+        if (displayName.startsWith(homePath)) {
+            displayName.replace(0, homePath.length(), QStringLiteral("~/"));
+        }
+
+        QString icon = QStringLiteral("folder");
+        if (url == homePath) {
+            icon = QStringLiteral("user-home");
+        } else if (!fromConfig) {
+            icon = QStringLiteral("drive-harddisk");
+        }
+
+        return FolderInfo{url, displayName, icon, include, fromConfig};
+    };
+    m_folderList.clear();
+
+    for (const QString& folder : settingsIncluded) {
+        m_folderList.append(folderListEntry(folder, true, true));
     }
+    for (const QString& folder : settingsExcluded) {
+        m_folderList.append(folderListEntry(folder, false, true));
+    }
+
+    // Add any automatically excluded mounts to the list
+    for (const QString& folder : runtimeExcluded) {
+        if (settingsIncluded.contains(folder) ||
+            settingsExcluded.contains(folder)) {
+            // Do not add any duplicates
+            continue;
+        }
+        if (m_deletedSettings.contains(folder)) {
+            // Skip entries deleted from the config
+            continue;
+        }
+        m_folderList.append(folderListEntry(folder, false, false));
+    }
+
+    std::sort(m_folderList.begin(), m_folderList.end(),
+        [](const FolderInfo& a, const FolderInfo& b) {
+            return a.url < b.url;
+    });
 
     endResetModel();
 }
 
 QVariant FilteredFolderModel::data(const QModelIndex& idx, int role) const
 {
-    if (!idx.isValid() || idx.row() >= m_excludeList.size()) {
+    if (!idx.isValid() || idx.row() >= m_folderList.size()) {
         return {};
     }
 
-    const auto currentUrl = m_excludeList.at(idx.row());
+    const auto entry = m_folderList.at(idx.row());
     switch (role) {
-        case Qt::DisplayRole: return folderDisplayName(currentUrl);
-        case Qt::WhatsThisRole: return currentUrl;
-        case Qt::DecorationRole: return QIcon::fromTheme(iconName(currentUrl));
-        case Qt::ToolTipRole: return makeHomePretty(currentUrl);
-        case Url: return currentUrl;
-        case Folder: return  folderDisplayName(currentUrl);
+        case Qt::DisplayRole: return entry.displayName;
+        case Qt::WhatsThisRole: return entry.url;
+        case Qt::DecorationRole: return entry.icon;
+        case Qt::ToolTipRole: return makeHomePretty(entry.url);
+        case Url: return entry.url;
+        case Folder: return entry.displayName;
+        case EnableIndex: return entry.enableIndex;
+        case Deletable: return entry.isFromConfig;
         default:
             return {};
     }
-
-    return {};
  }
+
+bool FilteredFolderModel::setData(const QModelIndex& idx, const QVariant& value, int role)
+{
+    if (!idx.isValid() || idx.row() >= m_folderList.size()) {
+        return false;
+    }
+    FolderInfo& entry = m_folderList[idx.row()];
+    if (role == EnableIndex) {
+        entry.enableIndex = value.toBool();
+        syncFolderConfig(entry);
+        emit dataChanged(idx, idx);
+        return true;
+    }
+    return false;
+}
 
 int FilteredFolderModel::rowCount(const QModelIndex& parent) const
 {
     Q_UNUSED(parent);
-    return m_excludeList.count();
+    return m_folderList.count();
 }
 
 void FilteredFolderModel::addFolder(const QString& url)
 {
-    auto excluded = m_settings->excludedFolders();
-    if (excluded.contains(url)) {
+    QString nUrl = normalizeTrailingSlashes(QUrl(url).toLocalFile());
+
+    auto it = std::find_if(m_folderList.begin(), m_folderList.end(),
+        [nUrl](const FolderInfo& folder) {
+            return folder.url == nUrl;
+        });
+    if (it != m_folderList.end() && (*it).isFromConfig) {
         return;
     }
-    excluded.append(QUrl(url).toLocalFile());
+    auto excluded = m_settings->excludedFolders();
+    excluded.append(nUrl);
     std::sort(std::begin(excluded), std::end(excluded));
     m_settings->setExcludedFolders(excluded);
+    m_deletedSettings.removeAll(nUrl);
 }
 
 void FilteredFolderModel::removeFolder(int row)
 {
-    auto url = m_excludeList.at(row);
-    auto excluded = addTrailingSlashes(m_settings->excludedFolders());
-    auto included = addTrailingSlashes(m_settings->folders());
-    if (excluded.contains(url)) {
-        excluded.removeAll(url);
+    auto entry = m_folderList.at(row);
+    if (!entry.isFromConfig) {
+        return;
+    }
+    if (!entry.enableIndex) {
+        auto excluded = addTrailingSlashes(m_settings->excludedFolders());
+        excluded.removeAll(entry.url);
         std::sort(std::begin(excluded), std::end(excluded));
         m_settings->setExcludedFolders(excluded);
-    } else if (m_mountPoints.contains(url) && !included.contains(url)) {
-        included.append(url);
+    } else {
+        auto included = addTrailingSlashes(m_settings->folders());
+        included.removeAll(entry.url);
         std::sort(std::begin(included), std::end(included));
         m_settings->setFolders(included);
     }
+    m_deletedSettings.append(entry.url);
 }
 
-
-QString FilteredFolderModel::folderDisplayName(const QString& url) const
+void FilteredFolderModel::syncFolderConfig(const FolderInfo& entry)
 {
-    QString name = url;
-
-    // Check Home Dir
-    QString homePath = QDir::homePath() + QLatin1Char('/');
-    if (url == homePath) {
-        return QDir(homePath).dirName();
-    }
-
-    if (url.startsWith(homePath)) {
-        name = url.mid(homePath.size());
-    }
-    else {
-        // Check Mount allMountPointsExcluded
-        for (QString mountPoint : m_mountPoints) {
-            if (url.startsWith(mountPoint)) {
-                name = QLatin1Char('[') + mountPoint+ QLatin1String("]/") + url.mid(mountPoint.length());
-                break;
-            }
+    auto excluded = addTrailingSlashes(m_settings->excludedFolders());
+    auto included = addTrailingSlashes(m_settings->folders());
+    if (entry.enableIndex) {
+        included.append(entry.url);
+        std::sort(std::begin(included), std::end(included));
+        if (excluded.removeAll(entry.url)) {
+            std::sort(std::begin(excluded), std::end(excluded));
+            m_settings->setExcludedFolders(excluded);
         }
+        m_settings->setFolders(included);
+    } else {
+        excluded.append(entry.url);
+        std::sort(std::begin(excluded), std::end(excluded));
+        if (included.removeAll(entry.url)) {
+            std::sort(std::begin(included), std::end(included));
+            m_settings->setFolders(included);
+        }
+        m_settings->setExcludedFolders(excluded);
     }
-
-    if (name.endsWith(QLatin1Char('/'))) {
-        name = name.mid(0, name.size() - 1);
-    }
-    return name;
 }
 
 QHash<int, QByteArray> FilteredFolderModel::roleNames() const
@@ -205,26 +228,9 @@ QHash<int, QByteArray> FilteredFolderModel::roleNames() const
     return {
         {Url, "url"},
         {Folder, "folder"},
+        {EnableIndex, "enableIndex"},
+        {Deletable, "deletable"},
         {Qt::DecorationRole, "decoration"}
     };
-}
-
-QString FilteredFolderModel::iconName(QString path) const
-{
-    // Ensure paths end with /
-    if (!path.endsWith(QDir::separator()))
-        path.append(QDir::separator());
-
-    QString homePath = QDir::homePath();
-    if (!homePath.endsWith(QDir::separator()))
-        homePath.append(QDir::separator());
-
-    if (path == homePath)
-        return QStringLiteral("user-home");
-
-    if (m_mountPoints.contains(path))
-        return QStringLiteral("drive-harddisk");
-
-    return QStringLiteral("folder");
 }
 

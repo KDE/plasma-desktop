@@ -78,7 +78,7 @@ KCM.SimpleKCM {
             Layout.preferredHeight: Kirigami.Units.gridUnit
         }
         QQC2.Label {
-            text: i18n("Do not search in these locations:")
+            text: i18n("Folder specific configuration:")
         }
 
         QQC2.ScrollView {
@@ -88,33 +88,90 @@ KCM.SimpleKCM {
             Layout.fillHeight: true
 
             ListView {
-                id: fileExcludeList
-
+                id: directoryConfigList
                 clip: true
+                currentIndex: -1
+
                 model: kcm.filteredModel
-                delegate: Kirigami.BasicListItem {
-                    icon: model.decoration
-                    label: model.folder
-                    onClicked: fileExcludeList.currentIndex = index
-                }
+                delegate: directoryConfigDelegate
             }
         }
 
-        RowLayout {
-            QQC2.Button {
-                id: addFolder
-                icon.name: "list-add"
-                onClicked: fileDialogLoader.active = true
-            }
+        QQC2.Button {
+            Layout.alignment: Qt.AlignRight
+            id: addFolder
+            icon.name: "folder-add"
+            text: i18n("Add folder configuration...")
+            onClicked: fileDialogLoader.active = true
+        }
+    }
 
-            QQC2.Button{
-                id: removeFolder
-                icon.name: "list-remove"
-                enabled: fileExcludeList.currentIndex !== -1
-                onClicked: {
-                    kcm.filteredModel.removeFolder(fileExcludeList.currentIndex)
+    Component {
+        id: directoryConfigDelegate
+        Kirigami.SwipeListItem {
+            id: listItem
+            onClicked: {
+                directoryConfigList.currentIndex = index
+            }
+            property int iconSize: Kirigami.Units.iconSizes.smallMedium
+            property bool selected: directoryConfigList.currentIndex === index
+
+            RowLayout {
+                spacing: units.smallSpacing
+
+                Kirigami.Icon {
+                    source: model.enableIndex ? "search" : "list-remove"
+                    height: listItem.iconSize
+                    width: listItem.iconSize
+                }
+
+                ColumnLayout {
+                    RowLayout {
+                        spacing: units.smallSpacing
+
+                        Kirigami.Icon {
+                            source: model.decoration
+                            height: listItem.iconSize
+                            width: listItem.iconSize
+                        }
+                        QQC2.Label {
+                            text: model.folder
+                            elide: Text.ElideRight
+                            Layout.fillWidth: true
+                        }
+                    }
+                    QQC2.Label {
+                        text: (model.enableIndex ? i18n("%1 is included.", model.url)
+                                                 : i18n("%1 is excluded.", model.url))
+                        elide: Text.ElideRight
+                        Layout.fillWidth: true
+                        opacity: listItem.hovered ? 0.8 : 0.6
+                        visible: listItem.selected
+                    }
+                }
+
+                QQC2.ToolButton {
+                    visible: listItem.hovered && listItem.actionsVisible
+                    height: listItem.iconSize
+                    icon.name: "search"
+                    text: model.enableIndex ? i18n("Disable indexing") : i18n("Enable indexing")
+                    onClicked: {
+                        model.enableIndex = !model.enableIndex
+                    }
                 }
             }
+
+            actions: [
+                Kirigami.Action {
+                    id: removeFolder
+                    enabled: model.deletable
+                    icon.name: "user-trash"
+                    tooltip: i18n("Delete entry")
+                    onTriggered: {
+                        kcm.filteredModel.removeFolder(index)
+                    }
+                }
+            ]
         }
     }
 
