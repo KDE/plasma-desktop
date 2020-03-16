@@ -28,11 +28,8 @@ enum KRdbAction
    KRdbExportQtSettings  = 0x0004,   // Export all possible qtrc settings, excluding colors
    KRdbExportXftSettings = 0x0008,   // Export KDE's Xft (anti-alias) settings
    KRdbExportGtkTheme    = 0x0010,   // Export KDE's widget style to Gtk if possible
-   KRdbExportGtkColors   = 0x0020    // Export KDE's colors to Gtk if possible
 };
 
 void runRdb( uint flags );
-void saveGtkColors();
-void saveGtkColors(KSharedConfigPtr& config);
 
 #endif

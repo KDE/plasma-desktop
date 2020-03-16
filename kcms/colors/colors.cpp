@@ -456,9 +456,7 @@ void KCMColors::saveColors()
 
     m_config->sync();
 
-    runRdb(KRdbExportQtColors | KRdbExportGtkTheme | KRdbExportGtkColors | (m_applyToAlien ? KRdbExportColors : 0));
-
-    saveGtkColors(config);
+    runRdb(KRdbExportQtColors | KRdbExportGtkTheme | (m_applyToAlien ? KRdbExportColors : 0));
 
     QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KGlobalSettings"),
                                                       QStringLiteral("org.kde.KGlobalSettings"),
