@@ -73,7 +73,7 @@ KCM.SimpleKCM {
                 Layout.fillWidth: true
                 from: -4
                 to: 4
-                stepSize: 1
+                stepSize: 0.5
                 snapMode: QQC2.Slider.SnapAlways
                 onMoved: {
                     if(value === to) {
