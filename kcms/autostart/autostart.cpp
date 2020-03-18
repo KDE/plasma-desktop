@@ -190,8 +190,9 @@ void Autostart::load()
             bool desktopFile = filename.endsWith(QLatin1String(".desktop"));
             if ( desktopFile ) {
                 KDesktopFile config(fi.absoluteFilePath());
-                //kDebug() << fi.absoluteFilePath() << "trying" << config.desktopGroup().readEntry("Exec");
-                QStringList commandLine = KShell::splitArgs(config.desktopGroup().readEntry("Exec"));
+                KService service(&config);
+                //kDebug() << fi.absoluteFilePath() << "trying" << service.exec();
+                QStringList commandLine = KShell::splitArgs(service.exec());
                 if (commandLine.isEmpty()) {
                     continue;
                 }
@@ -204,7 +205,7 @@ void Autostart::load()
                 DesktopStartItem *item = new DesktopStartItem( fi.absoluteFilePath(), m_programItem, this );
 
                 const KConfigGroup grp = config.desktopGroup();
-                const bool hidden = grp.readEntry("Hidden", false);
+                const bool hidden = service.isDeleted();
                 const QStringList notShowList = grp.readXdgListEntry("NotShowIn");
                 const QStringList onlyShowList = grp.readXdgListEntry("OnlyShowIn");
 
@@ -215,7 +216,7 @@ void Autostart::load()
                 int indexPath = m_paths.indexOf((item->fileName().adjusted(QUrl::RemoveFilename).toString() ) );
                 if ( indexPath > 2 )
                     indexPath = 0; //.kde/share/autostart and .config/autostart load desktop at startup
-                addItem(item, config.readName(), m_pathName.value(indexPath),  grp.readEntry("Exec"), disabled );
+                addItem(item, service.name(), m_pathName.value(indexPath), service.exec(), disabled );
             }
         }
     }
