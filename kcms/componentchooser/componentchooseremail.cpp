@@ -76,7 +76,7 @@ void CfgEmailClient::load(KConfig *)
     }
 
     // in case of a service not associated with Email Category and/or x-scheme-handler/mailto
-    if (m_currentIndex == -1 && !emailClientService->storageId().isEmpty()) {
+    if (m_currentIndex == -1 && emailClientService && !emailClientService->storageId().isEmpty()) {
         const KService::Ptr service = KService::serviceByStorageId(emailClientService->storageId());
 
         const QString icon = !service->icon().isEmpty() ? service->icon() : QStringLiteral("application-x-shellscript");
