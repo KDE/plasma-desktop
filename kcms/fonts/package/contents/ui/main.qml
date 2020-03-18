@@ -266,9 +266,9 @@ KCM.SimpleKCM {
                 property bool adjustAllFonts: false
                 onAccepted: {
                     if (adjustAllFonts) {
-                        kcm.adjustAllFonts(font);
+                        kcm.adjustAllFonts()
                     } else {
-                        kcm.fontsSettings[currentCategory] = font;
+                        kcm.adjustFont(font, currentCategory)
                     }
                 }
             }

@@ -31,7 +31,6 @@
 #include <QWindow>
 #include <QQmlEngine>
 #include <QQuickView>
-#include <QFontDialog>
 #include <QApplication>
 #include <QFontDatabase>
 
@@ -42,7 +41,7 @@
 #include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <KFontDialog>
+#include <KFontChooserDialog>
 #include <KWindowSystem>
 
 #include "../krdb/krdb.h"
@@ -230,30 +229,43 @@ void KFonts::save()
     emit fontsHaveChanged();
 }
 
+void KFonts::adjustFont(const QFont &font, const QString &category)
+{
+    QFont selFont = font;
+    int ret = KFontChooserDialog::getFont(selFont, KFontChooser::NoDisplayFlags);
+
+    if (ret == QDialog::Accepted) {
+        if (category == QLatin1String("font")) {
+            m_settings->setFont(selFont);
+        } else if (category == QLatin1String("menuFont")) {
+            m_settings->setMenuFont(selFont);
+        } else if (category == QLatin1String("toolBarFont")) {
+            m_settings->setToolBarFont(selFont);
+        } else if (category == QLatin1String("activeFont")) {
+            m_settings->setActiveFont(selFont);
+        } else if (category == QLatin1String("smallestReadableFont")) {
+            m_settings->setSmallestReadableFont(selFont);
+        } else if (category == QLatin1String("fixed")) {
+            m_settings->setFixed(selFont);
+        }
+    }
+}
+
 void KFonts::adjustAllFonts()
 {
     QFont font = m_settings->font();
     KFontChooser::FontDiffFlags fontDiffFlags;
-    int ret = KFontDialog::getFontDiff(font, fontDiffFlags, KFontChooser::NoDisplayFlags);
+    int ret = KFontChooserDialog::getFontDiff(font, fontDiffFlags, KFontChooser::NoDisplayFlags);
 
-    if (ret == KDialog::Accepted && fontDiffFlags) {
-        if (!m_settings->isImmutable("font")) {
-            m_settings->setFont(applyFontDiff(m_settings->font(), font, fontDiffFlags));
-        }
-        if (!m_settings->isImmutable("menuFont")) {
-            m_settings->setMenuFont(applyFontDiff(m_settings->menuFont(), font, fontDiffFlags));
-        }
-        if (!m_settings->isImmutable("toolBarFont")) {
-            m_settings->setToolBarFont(applyFontDiff(m_settings->toolBarFont(), font, fontDiffFlags));
-        }
-        if (!m_settings->isImmutable("activeFont")) {
-            m_settings->setActiveFont(applyFontDiff(m_settings->activeFont(), font, fontDiffFlags));
-        }
-        if (!m_settings->isImmutable("smallestReadableFont")) {
-            m_settings->setSmallestReadableFont(applyFontDiff(m_settings->smallestReadableFont(), font, fontDiffFlags));
-        }
+    if (ret == QDialog::Accepted && fontDiffFlags) {
+        m_settings->setFont(applyFontDiff(m_settings->font(), font, fontDiffFlags));
+        m_settings->setMenuFont(applyFontDiff(m_settings->menuFont(), font, fontDiffFlags));
+        m_settings->setToolBarFont(applyFontDiff(m_settings->toolBarFont(), font, fontDiffFlags));
+        m_settings->setActiveFont(applyFontDiff(m_settings->activeFont(), font, fontDiffFlags));
+        m_settings->setSmallestReadableFont(applyFontDiff(m_settings->smallestReadableFont(), font, fontDiffFlags));
+
         const QFont adjustedFont = applyFontDiff(m_settings->fixed(), font, fontDiffFlags);
-        if (QFontInfo(adjustedFont).fixedPitch() && !m_settings->isImmutable("fixed")) {
+        if (QFontInfo(adjustedFont).fixedPitch()) {
             m_settings->setFixed(adjustedFont);
         }
     }

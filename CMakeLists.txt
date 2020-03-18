@@ -54,6 +54,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Activities
     ActivitiesStats
     Config
+    WidgetsAddons
 )
 
 find_package(KF5Kirigami2 ${KF5_MIN_VERSION} CONFIG)
