@@ -53,6 +53,10 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     setAboutData(about);
     setButtons(Apply | Default);
 
+    if(!args.at(0).toString().isEmpty()) {
+        m_pluginID = args.at(0).toString();
+    }
+
     QVBoxLayout* layout = new QVBoxLayout(this);
 
     QHBoxLayout *headerLayout = new QHBoxLayout(this);
@@ -74,15 +78,11 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
 
     m_pluginSelector = new KPluginSelector(this);
 
-    auto markAsChanged = [this] {
-        emit changed();
-    };
-    connect(m_pluginSelector, &KPluginSelector::changed, this, markAsChanged);
-    connect(m_pluginSelector, &KPluginSelector::configCommitted, this, markAsChanged);
+    connect(m_pluginSelector, &KPluginSelector::changed, this, &SearchConfigModule::markAsChanged);
+    connect(m_pluginSelector, &KPluginSelector::configCommitted, this, &SearchConfigModule::markAsChanged);
 
 #if KCMUTILS_VERSION >= QT_VERSION_CHECK(5, 67, 0)
-    connect(m_pluginSelector, &KPluginSelector::defaulted,
-            this, &KCModule::defaulted);
+    connect(m_pluginSelector, &KPluginSelector::defaulted, this, &KCModule::defaulted);
 #endif
 
     layout->addLayout(headerLayout);
@@ -100,8 +100,12 @@ void SearchConfigModule::load()
     m_pluginSelector->addPlugins(Plasma::RunnerManager::listRunnerInfo(),
                     KPluginSelector::ReadConfigFile,
                     i18n("Available Plugins"), QString(),
-                    KSharedConfig::openConfig(QLatin1String( "krunnerrc" )));
+                    KSharedConfig::openConfig(QStringLiteral( "krunnerrc" )));
     m_pluginSelector->load();
+
+    if(!m_pluginID.isEmpty()){
+        m_pluginSelector->showConfiguration(m_pluginID);
+    }
 }
 
 

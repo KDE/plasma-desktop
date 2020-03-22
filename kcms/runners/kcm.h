@@ -46,6 +46,7 @@ public Q_SLOTS:
 private:
     KPluginSelector *m_pluginSelector;
     KConfig m_config;
+    QString m_pluginID;
 };
 
 #endif
