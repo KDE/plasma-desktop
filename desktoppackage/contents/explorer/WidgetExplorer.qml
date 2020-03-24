@@ -306,7 +306,7 @@ Item {
                 NumberAnimation {
                     properties: "x"
                     from: -list.width
-                    duration: units.shortDuration * 3
+                    duration: units.shortDuration
                 }
             }
 
@@ -315,7 +315,7 @@ Item {
                 NumberAnimation {
                     properties: "x"
                     to: list.width
-                    duration: units.shortDuration * 3
+                    duration: units.shortDuration
                 }
             }
 
@@ -328,7 +328,7 @@ Item {
             displaced: Transition {
                 NumberAnimation {
                     properties: "x,y"
-                    duration: units.shortDuration * 3
+                    duration: units.shortDuration
                 }
             }
 

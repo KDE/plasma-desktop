@@ -54,14 +54,14 @@ Item {
     }
     Behavior on rotation {
         NumberAnimation {
-            duration: units.shortDuration * 3;
+            duration: units.shortDuration;
             easing.type: Easing.InOutExpo;
         }
         enabled: visible
     }
     Behavior on x {
         NumberAnimation {
-            duration: units.shortDuration * 3;
+            duration: units.shortDuration;
             easing.type: Easing.InOutExpo;
         }
         enabled: visible
@@ -69,7 +69,7 @@ Item {
     }
     Behavior on y {
         NumberAnimation {
-            duration: units.shortDuration * 3;
+            duration: units.shortDuration;
             easing.type: Easing.InOutExpo;
         }
         enabled: visible

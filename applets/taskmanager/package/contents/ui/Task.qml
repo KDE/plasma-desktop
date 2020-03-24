@@ -293,7 +293,7 @@ MouseArea {
         Timer {
             id: timer
 
-            interval: units.longDuration * 2
+            interval: units.longDuration
             repeat: false
 
             onTriggered: {
