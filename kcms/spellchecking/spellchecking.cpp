@@ -53,22 +53,34 @@ void SonnetSpellCheckingModule::stateChanged()
     bool unmanagedDefaultState = true;
 
     QStringList refIgnoreList(m_skeleton->ignoreList());
+    refIgnoreList.removeDuplicates();
+    refIgnoreList.sort();
+
     QStringList currentIgnoreList(m_configWidget->ignoreList());
+    currentIgnoreList.removeDuplicates();
+    currentIgnoreList.sort();
+
     QStringList defaultIgnoreList(Sonnet::Settings::defaultIgnoreList());
-    QSet<QString> refIgnoreSet(refIgnoreList.begin(), refIgnoreList.end());
-    QSet<QString> currentIgnoreSet(currentIgnoreList.begin(), currentIgnoreList.end());
-    QSet<QString> defaultIgnoreSet(defaultIgnoreList.begin(), defaultIgnoreList.end());
-    unmanagedChangeState |= currentIgnoreSet != refIgnoreSet;
-    unmanagedDefaultState &= currentIgnoreSet == defaultIgnoreSet;
+    defaultIgnoreList.removeDuplicates();
+    defaultIgnoreList.sort();
+
+    unmanagedChangeState |= currentIgnoreList != refIgnoreList;
+    unmanagedDefaultState &= currentIgnoreList == defaultIgnoreList;
 
     QStringList refPreferredLanguagesList(m_skeleton->preferredLanguages());
+    refPreferredLanguagesList.removeDuplicates();
+    refPreferredLanguagesList.sort();
+
     QStringList currentPreferredLanguagesList(m_configWidget->preferredLanguages());
+    currentPreferredLanguagesList.removeDuplicates();
+    currentPreferredLanguagesList.sort();
+
     QStringList defaultPreferredLanguagesList(Sonnet::Settings::defaultPreferredLanguages());
-    QSet<QString> refPreferredLanguages(refPreferredLanguagesList.begin(), refPreferredLanguagesList.end());
-    QSet<QString> currentPreferredLanguages(currentPreferredLanguagesList.begin(), currentPreferredLanguagesList.end());
-    QSet<QString> defaultPreferredLanguages(defaultPreferredLanguagesList.begin(), defaultPreferredLanguagesList.end());
-    unmanagedChangeState |= currentPreferredLanguages != refPreferredLanguages;
-    unmanagedDefaultState &= currentPreferredLanguages == defaultPreferredLanguages;
+    defaultPreferredLanguagesList.removeDuplicates();
+    defaultPreferredLanguagesList.sort();
+
+    unmanagedChangeState |= currentPreferredLanguagesList != refPreferredLanguagesList;
+    unmanagedDefaultState &= currentPreferredLanguagesList == defaultPreferredLanguagesList;
 
     unmanagedChangeState |= m_skeleton->defaultLanguage() != m_configWidget->language();
     unmanagedDefaultState &= m_configWidget->language() == Sonnet::Settings::defaultDefaultLanguage();
