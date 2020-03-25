@@ -162,7 +162,7 @@ int FilteredFolderModel::rowCount(const QModelIndex& parent) const
     return m_folderList.count();
 }
 
-void FilteredFolderModel::addFolder(const QString& url)
+void FilteredFolderModel::addFolder(const QString& url, const bool included = false)
 {
     QString nUrl = normalizeTrailingSlashes(QUrl(url).toLocalFile());
 
@@ -173,10 +173,17 @@ void FilteredFolderModel::addFolder(const QString& url)
     if (it != m_folderList.end() && (*it).isFromConfig) {
         return;
     }
-    auto excluded = m_settings->excludedFolders();
-    excluded.append(nUrl);
-    std::sort(std::begin(excluded), std::end(excluded));
-    m_settings->setExcludedFolders(excluded);
+    if (included) {
+        auto included = addTrailingSlashes(m_settings->folders());
+        included.append(nUrl);
+        std::sort(std::begin(included), std::end(included));
+        m_settings->setFolders(included);
+    } else {
+        auto excluded = addTrailingSlashes(m_settings->excludedFolders());
+        excluded.append(nUrl);
+        std::sort(std::begin(excluded), std::end(excluded));
+        m_settings->setExcludedFolders(excluded);
+    }
     m_deletedSettings.removeAll(nUrl);
 }
 

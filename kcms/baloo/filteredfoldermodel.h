@@ -44,7 +44,7 @@ public:
     bool setData(const QModelIndex& idx, const QVariant& value, int role) override;
     int rowCount(const QModelIndex& parent) const override;
 
-    Q_INVOKABLE void addFolder(const QString& folder);
+    Q_INVOKABLE void addFolder(const QString& folder, const bool included);
     Q_INVOKABLE void removeFolder(int row);
     QHash<int, QByteArray> roleNames() const override;
 

@@ -28,7 +28,8 @@ import org.kde.kcm 1.1 as KCM
 KCM.SimpleKCM {
     id: root
 
-    implicitHeight: Kirigami.Units.gridUnit * 22
+    implicitWidth: Kirigami.Units.gridUnit * 42
+    implicitHeight: Kirigami.Units.gridUnit * 25
 
     KCM.ConfigModule.quickHelp: i18n("This module lets you configure the file indexer and search functionality.")
     ColumnLayout {
@@ -98,93 +99,148 @@ KCM.SimpleKCM {
         }
 
         QQC2.Button {
+            id: menuButton
+
             Layout.alignment: Qt.AlignRight
-            id: addFolder
+
             icon.name: "folder-add"
             text: i18n("Add folder configuration...")
-            onClicked: fileDialogLoader.active = true
+
+            checkable: true
+            checked: menu.opened
+
+            onClicked: {
+                // Appear above the button, not below it, since the button is at
+                // the bottom of the window and QQC2 items can't leave the window
+
+                // HACK: since we want to position the menu above the button,
+                // we need to know the menu's height, but it only has a height
+                // after the first time it's been shown, so until then, we need
+                // to provide an artificially-synthesized-and-hopefully-good-enough
+                // height value
+                var menuHeight = menu.height && menu.height > 0 ? menu.height : Kirigami.Units.gridUnit * 3
+                menu.popup(menuButton, 0, -menuHeight)
+            }
+        }
+
+        QQC2.Menu {
+            id: menu
+
+            modal: true
+
+            QQC2.MenuItem {
+                text: i18n("Start indexing a folder...")
+                icon.name: "list-add"
+
+                onClicked: {
+                    fileDialogLoader.included = true
+                    fileDialogLoader.active = true
+                }
+            }
+            QQC2.MenuItem {
+                text: i18n("Stop indexing a folder...")
+                icon.name: "list-remove"
+
+                onClicked: {
+                    fileDialogLoader.included = false
+                    fileDialogLoader.active = true
+                }
+            }
         }
     }
 
     Component {
         id: directoryConfigDelegate
-        Kirigami.SwipeListItem {
+        Kirigami.AbstractListItem {
             id: listItem
-            onClicked: {
-                directoryConfigList.currentIndex = index
-            }
-            property int iconSize: Kirigami.Units.iconSizes.smallMedium
-            property bool selected: directoryConfigList.currentIndex === index
 
-            RowLayout {
+            // Store this as a property so we can access it within the combobox,
+            // which also has a `model` property
+            property var indexingModel: model
+
+            // There's no need for a list item to ever be selected
+            highlighted: false
+            hoverEnabled: false
+
+            contentItem: RowLayout {
                 spacing: units.smallSpacing
 
+                // The folder's icon
                 Kirigami.Icon {
-                    source: model.enableIndex ? "search" : "list-remove"
-                    height: listItem.iconSize
-                    width: listItem.iconSize
+                    source: indexingModel.decoration
+
+                    Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
+                    Layout.preferredWidth: Layout.preferredHeight
                 }
 
-                ColumnLayout {
-                    RowLayout {
-                        spacing: units.smallSpacing
+                // The folder's path
+                QQC2.Label {
+                    text: indexingModel.folder
+                    elide: Text.ElideRight
 
-                        Kirigami.Icon {
-                            source: model.decoration
-                            height: listItem.iconSize
-                            width: listItem.iconSize
-                        }
-                        QQC2.Label {
-                            text: model.folder
-                            elide: Text.ElideRight
-                            Layout.fillWidth: true
-                        }
+                    Layout.fillWidth: true
+                }
+
+                // What kind of indexing to do for the folder
+                QQC2.ComboBox {
+                    id: indexingOptionsCombobox
+
+                    property bool indexingDisabled: !indexingModel.enableIndex
+                    property bool fullContentIndexing: indexingModel.enableIndex
+
+                    model: [
+                        i18n("Not indexed"),
+                        i18n("Full content indexing")
+                    ]
+
+                    // Intentionally not a simple ternary to facilitate adding
+                    // more conditions in the future
+                    currentIndex: {
+                        if (indexingDisabled) return 0
+                        if (fullContentIndexing) return 1
                     }
-                    QQC2.Label {
-                        text: (model.enableIndex ? i18n("%1 is included.", model.url)
-                                                 : i18n("%1 is excluded.", model.url))
-                        elide: Text.ElideRight
-                        Layout.fillWidth: true
-                        opacity: listItem.hovered ? 0.8 : 0.6
-                        visible: listItem.selected
+
+                    onActivated: {
+                        // New value is "Not indexed"
+                        if (indexingOptionsCombobox.currentIndex === 0 && fullContentIndexing) {
+                            indexingModel.enableIndex = false
+                        // New value is "Full content indexing"
+                        } else if (indexingOptionsCombobox.currentIndex === 1 && indexingDisabled) {
+                            indexingModel.enableIndex = true
+                        }
                     }
                 }
 
-                QQC2.ToolButton {
-                    visible: listItem.hovered && listItem.actionsVisible
-                    height: listItem.iconSize
-                    icon.name: "search"
-                    text: model.enableIndex ? i18n("Disable indexing") : i18n("Enable indexing")
-                    onClicked: {
-                        model.enableIndex = !model.enableIndex
+                // Delete button to remove this folder entry
+                QQC2.Button {
+                    enabled: model.deletable
+
+                    icon.name: "edit-delete"
+
+                    onClicked: kcm.filteredModel.removeFolder(index)
+
+                    QQC2.ToolTip {
+                        text: i18n("Delete entry")
                     }
                 }
             }
-
-            actions: [
-                Kirigami.Action {
-                    id: removeFolder
-                    enabled: model.deletable
-                    icon.name: "user-trash"
-                    tooltip: i18n("Delete entry")
-                    onTriggered: {
-                        kcm.filteredModel.removeFolder(index)
-                    }
-                }
-            ]
         }
     }
 
     Loader {
         id: fileDialogLoader
+
+        property bool included: false
+
         active: false
+
         sourceComponent: QtDialogs.FileDialog {
             title: i18n("Select a folder to filter")
             folder: shortcuts.home
             selectFolder: true
 
             onAccepted: {
-                kcm.filteredModel.addFolder(fileUrls[0])
+                kcm.filteredModel.addFolder(fileUrls[0], included)
                 fileDialogLoader.active = false
             }
 
