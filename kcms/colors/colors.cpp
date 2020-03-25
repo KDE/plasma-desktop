@@ -344,7 +344,7 @@ void KCMColors::load()
 void KCMColors::save()
 {
     ManagedConfigModule::save();
-    if (m_selectedSchemeDirty) {
+    if (m_selectedSchemeDirty || m_activeSchemeEdited) {
         saveColors();
     }
     m_activeSchemeEdited = false;
