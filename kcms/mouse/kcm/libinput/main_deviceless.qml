@@ -50,6 +50,7 @@ Kirigami.ScrollablePage {
         loading = true
 
         leftHanded.load()
+        middleEmulation.load()
         accelSpeed.load()
         accelProfile.load()
         naturalScroll.load()
