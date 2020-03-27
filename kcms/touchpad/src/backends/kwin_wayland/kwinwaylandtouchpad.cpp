@@ -102,6 +102,8 @@ bool KWinWaylandTouchpad::getConfig()
     success &= valueLoader(m_isScrollEdge);
     success &= valueLoader(m_isScrollOnButtonDown);
     success &= valueLoader(m_scrollButton);
+    // scroll speed
+    success &= valueLoader(m_scrollFactor);
     // click methods
     success &= valueLoader(m_supportsClickMethodAreas);
     success &= valueLoader(m_supportsClickMethodClickfinger);
@@ -136,6 +138,7 @@ bool KWinWaylandTouchpad::getDefaultConfig()
 
     m_clickMethodAreas.set(m_defaultClickMethodAreas);
     m_clickMethodClickfinger.set(m_defaultClickMethodClickfinger);
+    m_scrollFactor.set(1.0);
 
     return true;
 }
@@ -163,6 +166,7 @@ bool KWinWaylandTouchpad::applyConfig()
         << valueWriter(m_isScrollEdge)
         << valueWriter(m_isScrollOnButtonDown)
         << valueWriter(m_scrollButton)
+        << valueWriter(m_scrollFactor)
 
         << valueWriter(m_clickMethodAreas)
         << valueWriter(m_clickMethodClickfinger);
@@ -204,6 +208,7 @@ bool KWinWaylandTouchpad::isChangedConfig() const
             m_isScrollTwoFinger.changed() ||
             m_isScrollEdge.changed() ||
             m_isScrollOnButtonDown.changed() ||
+            m_scrollFactor.changed() ||
             m_scrollButton.changed() ||
             m_clickMethodAreas.changed() ||
             m_clickMethodClickfinger.changed();

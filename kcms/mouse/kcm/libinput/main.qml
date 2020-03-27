@@ -44,6 +44,8 @@ Kirigami.ScrollablePage {
 
     property bool loading: false
 
+    enabled: deviceCount > 0
+
     function resetModel(index) {
         deviceCount = backend.deviceCount
         formLayout.enabled = deviceCount
@@ -72,6 +74,7 @@ Kirigami.ScrollablePage {
         accelSpeed.load()
         accelProfile.load()
         naturalScroll.load()
+        scrollFactor.load()
 
         loading = false
     }
@@ -295,6 +298,66 @@ Kirigami.ScrollablePage {
 
             ToolTip {
                 text: i18nd("kcmmouse", "Touchscreen like scrolling.")
+            }
+        }
+
+        // Scroll Speed aka scroll Factor
+        Layouts.GridLayout {
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling speed:")
+            Kirigami.FormData.buddyFor: scrollFactor
+
+            columns: 3
+
+            Controls.Slider {
+                id: scrollFactor
+
+                from: 0
+                to: 14
+                stepSize: 1
+
+                property variant values : [
+                    0.1,
+                    0.3,
+                    0.5,
+                    0.75,
+                    1, // default
+                    1.5,
+                    2,
+                    3,
+                    4,
+                    5,
+                    7,
+                    9,
+                    12,
+                    15,
+                    20
+                ]
+
+                Layouts.Layout.columnSpan: 3
+
+                function load() {
+                    let index = values.indexOf(device.scrollFactor)
+                    if (index === -1) {
+                        index = values.indexOf(1);
+                    }
+                    value = index
+                }
+
+                onMoved: {
+                    device.scrollFactor = values[value]
+                    root.changeSignal()
+                }
+            }
+
+            //row 2
+            Controls.Label {
+                text: i18nc("Slower Scroll", "Slower")
+            }
+            Item {
+                Layouts.Layout.fillWidth: true
+            }
+            Controls.Label {
+                text: i18nc("Faster Scroll Speed", "Faster")
             }
         }
     }

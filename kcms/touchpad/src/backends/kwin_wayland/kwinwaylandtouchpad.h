@@ -28,6 +28,8 @@ class KWinWaylandTouchpad : public LibinputCommon
 {
     Q_OBJECT
 
+    Q_PROPERTY(qreal scrollFactor READ scrollFactor WRITE setScrollFactor NOTIFY scrollFactorChanged)
+
 public:
     KWinWaylandTouchpad(QString dbusName);
     ~KWinWaylandTouchpad() override;
@@ -103,6 +105,18 @@ public:
     bool supportsScrollOnButtonDown() const override {
         return m_supportsScrollOnButtonDown.val;
     }
+
+    //
+    // Scroll Factor
+    qreal scrollFactor() const
+    {
+        return m_scrollFactor.val;
+    }
+    void setScrollFactor(qreal factor)
+    {
+        return m_scrollFactor.set(factor);
+    }
+
     //
     // Click method
     bool supportsClickMethodAreas() const override {
@@ -111,6 +125,9 @@ public:
     bool supportsClickMethodClickfinger() const override {
         return m_supportsClickMethodClickfinger.val;
     }
+
+Q_SIGNALS:
+    void scrollFactorChanged();
 
 private:
 
@@ -137,6 +154,7 @@ private:
     //
     // scrolling
     Prop<bool> m_supportsNaturalScroll = Prop<bool>("supportsNaturalScroll");
+    Prop<qreal> m_scrollFactor = Prop<qreal>("scrollFactor");
 
     QDBusInterface *m_iface;
 };

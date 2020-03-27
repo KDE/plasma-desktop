@@ -97,6 +97,8 @@ bool KWinWaylandDevice::getConfig()
     success &= valueLoader(m_naturalScrollEnabledByDefault);
     success &= valueLoader(m_naturalScroll);
 
+    success &= valueLoader(m_scrollFactor);
+
     return success;
 }
 
@@ -112,6 +114,8 @@ bool KWinWaylandDevice::getDefaultConfig()
     m_middleEmulation.set(m_middleEmulationEnabledByDefault);
     m_naturalScroll.set(m_naturalScrollEnabledByDefault);
 
+    m_scrollFactor.set(1.0);
+
     return true;
 }
 
@@ -125,7 +129,8 @@ bool KWinWaylandDevice::applyConfig()
         << valueWriter(m_pointerAccelerationProfileFlat)
         << valueWriter(m_pointerAccelerationProfileAdaptive)
         << valueWriter(m_middleEmulation)
-        << valueWriter(m_naturalScroll);
+        << valueWriter(m_naturalScroll)
+        << valueWriter(m_scrollFactor);
 
     bool success = true;
     QString error_msg;
@@ -155,6 +160,7 @@ bool KWinWaylandDevice::isChangedConfig() const
             m_pointerAccelerationProfileFlat.changed() ||
             m_pointerAccelerationProfileAdaptive.changed() ||
             m_middleEmulation.changed() ||
+            m_scrollFactor.changed() ||
             m_naturalScroll.changed();
 }
 
