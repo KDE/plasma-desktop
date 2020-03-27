@@ -133,6 +133,7 @@ TouchpadConfigXlib::TouchpadConfigXlib(TouchpadConfigContainer *parent, Touchpad
     m_errorMessage = new KMessageWidget(this);
     m_errorMessage->setMessageType(KMessageWidget::Error);
     m_errorMessage->setVisible(false);
+    m_errorMessage->setWordWrap(true);
     messageLayout->addWidget(m_errorMessage);
 
     m_configOutOfSyncMessage = new KMessageWidget(this);
