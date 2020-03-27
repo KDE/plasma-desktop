@@ -144,6 +144,7 @@ Dialog::Dialog(QObject *parent)
     d->message = new KMessageWidget(this);
     d->message->setMessageType(KMessageWidget::Error);
     d->message->setVisible(false);
+    d->message->setWordWrap(true);
     d->layout->addWidget(d->message);
 
     // Tabs

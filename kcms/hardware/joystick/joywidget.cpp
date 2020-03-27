@@ -74,6 +74,7 @@ JoyWidget::JoyWidget(QWidget *parent)
     messageBox->setMessageType(KMessageWidget::Error);
     messageBox->setCloseButtonVisible(false);
     messageBox->hide();
+    messageBox->setWordWrap(true);
 
     mainVbox->addWidget(messageBox);
   }
