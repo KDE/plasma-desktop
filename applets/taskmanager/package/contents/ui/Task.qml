@@ -324,8 +324,9 @@ MouseArea {
         }
 
         imagePath: "widgets/tasks"
+        property bool isHovered: task.highlighted && plasmoid.configuration.taskHoverEffect
         property string basePrefix: "normal"
-        prefix: TaskTools.taskPrefix(basePrefix)
+        prefix: isHovered ? TaskTools.taskPrefixHovered(basePrefix) : TaskTools.taskPrefix(basePrefix)
 
         PlasmaCore.ToolTipArea {
             id: toolTipArea
@@ -539,15 +540,6 @@ MouseArea {
             PropertyChanges {
                 target: frame
                 basePrefix: ""
-            }
-        },
-        State {
-            name: "hovered"
-            when: task.highlighted && frame.hasElementPrefix("hover") && plasmoid.configuration.taskHoverEffect
-
-            PropertyChanges {
-                target: frame
-                basePrefix: "hover"
             }
         },
         State {

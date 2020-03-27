@@ -163,3 +163,16 @@ function taskPrefix(prefix) {
     }
     return [effectivePrefix, prefix];
 }
+
+function taskPrefixHovered(prefix) {
+    var effectivePrefix = taskPrefix(prefix);
+
+    if ("" !== prefix)
+        effectivePrefix = [
+            ...taskPrefix(prefix + "-hover"),
+            ...taskPrefix("hover"),
+            ...effectivePrefix
+        ];
+
+    return effectivePrefix;
+}
