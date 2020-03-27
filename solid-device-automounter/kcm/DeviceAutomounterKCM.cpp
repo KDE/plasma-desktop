@@ -63,13 +63,12 @@ DeviceAutomounterKCM::DeviceAutomounterKCM(QWidget *parent, const QVariantList &
     deviceView->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
     deviceView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
 
-    auto emitChanged = [this] {
-        m_devices->setAutomaticMountOnLogin(kcfg_AutomountOnLogin->isChecked());
-        m_devices->setAutomaticMountOnPlugin(kcfg_AutomountOnPlugin->isChecked());
-        emit markAsChanged();
-    };
-
-    connect(m_devices, &DeviceModel::dataChanged, this, emitChanged);
+    connect(kcfg_AutomountOnLogin, &QCheckBox::stateChanged, this, [this](int state) {
+        m_devices->setAutomaticMountOnLogin(state == Qt::Checked);
+    });
+    connect(kcfg_AutomountOnPlugin, &QCheckBox::stateChanged, this, [this](int state) {
+        m_devices->setAutomaticMountOnPlugin(state == Qt::Checked);
+    });
 
     connect(deviceView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &DeviceAutomounterKCM::updateForgetDeviceButton);
 
