@@ -35,6 +35,7 @@
 int main( int argc, char* argv[] )
 {
     int ret = 0;
+    QGuiApplication::setDesktopSettingsAware(false);
     QGuiApplication app(argc, argv);
     if( argc != 3 )
         return 1;
