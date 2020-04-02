@@ -205,26 +205,22 @@ Item {
                 property QtObject qAction: plasmoid.action("add widgets")
                 text: qAction.text
                 icon.name: "list-add"
-                icon.height: units.iconSizes.smallMedium
                 onClicked: qAction.trigger()
             }
             PlasmaComponents3.ToolButton {
                 property QtObject qAction: plasmoid.globalAction("manage activities")
                 text: qAction.text
                 icon.name: "activities"
-                icon.height: units.iconSizes.smallMedium
                 onClicked: qAction.trigger()
             }
             PlasmaComponents3.ToolButton {
                 property QtObject qAction: plasmoid.action("configure")
                 text: qAction.text
                 icon.name: "preferences-desktop-wallpaper"
-                icon.height: units.iconSizes.smallMedium
                 onClicked: qAction.trigger()
             }
             PlasmaComponents3.ToolButton {
                 icon.name: "window-close"
-                icon.height: units.iconSizes.smallMedium
                 Layout.preferredWidth: height
                 onClicked: plasmoid.editMode = false
                 PlasmaComponents3.ToolTip {
