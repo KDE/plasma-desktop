@@ -28,7 +28,6 @@ PlasmaCore.ToolTipArea {
     objectName: "org.kde.desktop-CompactApplet"
     anchors.fill: parent
 
-    icon: plasmoid.icon
     mainText: plasmoid.toolTipMainText
     subText: plasmoid.toolTipSubText
     location: plasmoid.location
