@@ -24,10 +24,13 @@
 #include <KFileItem>
 #include <KFilePlacesModel>
 #include <KLocalizedString>
-#include <KRun>
+#include <KNotificationJobUiDelegate>
 #include <KService>
+#include <KServiceAction>
 #include <kwindoweffects.h>
 #include <KWindowSystem>
+
+#include <KIO/ApplicationLauncherJob>
 
 #include <QAction>
 #include <QActionGroup>
@@ -139,55 +142,45 @@ QUrl Backend::tryDecodeApplicationsUrl(const QUrl &launcherUrl)
 
 QVariantList Backend::jumpListActions(const QUrl &launcherUrl, QObject *parent)
 {
+    QVariantList actions;
+
     if (!parent) {
-        return QVariantList();
+        return actions;
     }
 
     QUrl desktopEntryUrl = tryDecodeApplicationsUrl(launcherUrl);
 
     if (!desktopEntryUrl.isValid() || !desktopEntryUrl.isLocalFile()
         || !KDesktopFile::isDesktopFile(desktopEntryUrl.toLocalFile())) {
-        return QVariantList();
+        return actions;
     }
 
-    QVariantList actions;
-    KDesktopFile desktopFile(desktopEntryUrl.toLocalFile());
+    const KService::Ptr service = KService::serviceByDesktopPath(desktopEntryUrl.toLocalFile());
+    if (!service) {
+        return actions;
+    }
 
-    const QStringList &jumpListActions = desktopFile.readActions();
+    const auto jumpListActions = service->actions();
 
-    const QLatin1String kde("KDE");
-
-    foreach (const QString &actionName, jumpListActions) {
-        const KConfigGroup &actionGroup = desktopFile.actionGroup(actionName);
-
-        if (!actionGroup.isValid() || !actionGroup.exists()) {
-            continue;
-        }
-
-        const QStringList &notShowIn = actionGroup.readXdgListEntry(QStringLiteral("NotShowIn"));
-        if (notShowIn.contains(kde)) {
-            continue;
-        }
-
-        const QStringList &onlyShowIn = actionGroup.readXdgListEntry(QStringLiteral("OnlyShowIn"));
-        if (!onlyShowIn.isEmpty() && !onlyShowIn.contains(kde)) {
-            continue;
-        }
-
-        const QString &name = actionGroup.readEntry(QStringLiteral("Name"));
-        const QString &exec = actionGroup.readEntry(QStringLiteral("Exec"));
-        if (name.isEmpty() || exec.isEmpty()) {
+    for (const KServiceAction &serviceAction : jumpListActions) {
+        if (serviceAction.noDisplay()) {
             continue;
         }
 
         QAction *action = new QAction(parent);
-        action->setText(name);
-        action->setIcon(QIcon::fromTheme(actionGroup.readEntry("Icon")));
-        action->setProperty("exec", exec);
-        // so we can show the proper application name and icon when it launches
-        action->setProperty("applicationName", desktopFile.readName());
-        action->setProperty("applicationIcon", desktopFile.readIcon());
-        connect(action, &QAction::triggered, this, &Backend::handleJumpListAction);
+        action->setText(serviceAction.text());
+        action->setIcon(QIcon::fromTheme(serviceAction.icon()));
+        if (serviceAction.isSeparator()) {
+            action->setSeparator(true);
+        }
+
+        connect(action, &QAction::triggered, this, [this, serviceAction]() {
+            auto *job = new KIO::ApplicationLauncherJob(serviceAction);
+            auto *delegate = new KNotificationJobUiDelegate;
+            delegate->setAutoErrorHandlingEnabled(true);
+            job->setUiDelegate(delegate);
+            job->start();
+        });
 
         actions << QVariant::fromValue<QAction *>(action);
     }
@@ -240,7 +233,13 @@ QVariantList Backend::placesActions(const QUrl &launcherUrl, bool showAllPlaces,
                 return;
             }
 
-            KRun::runService(*service, {url}, QApplication::activeWindow());
+            auto *job = new KIO::ApplicationLauncherJob(service);
+            auto *delegate = new KNotificationJobUiDelegate;
+            delegate->setAutoErrorHandlingEnabled(true);
+            job->setUiDelegate(delegate);
+
+            job->setUrls({url});
+            job->start();
         });
 
         const QString &groupName = idx.data(KFilePlacesModel::GroupRole).toString();
@@ -369,19 +368,6 @@ void Backend::toolTipWindowChanged(QQuickWindow *window)
     updateWindowHighlight();
 }
 
-void Backend::handleJumpListAction() const
-{
-    const QAction *action = qobject_cast<QAction* >(sender());
-
-    if (!action) {
-        return;
-    }
-
-    KRun::run(action->property("exec").toString(), {}, nullptr,
-              action->property("applicationName").toString(),
-              action->property("applicationIcon").toString());
-}
-
 void Backend::handleRecentDocumentAction() const
 {
     const QAction *action = qobject_cast<QAction* >(sender());
@@ -419,7 +405,13 @@ void Backend::handleRecentDocumentAction() const
         return;
     }
 
-    KRun::runService(*service, QList<QUrl>() << QUrl(resource), QApplication::activeWindow());
+    auto *job = new KIO::ApplicationLauncherJob(service);
+    auto *delegate = new KNotificationJobUiDelegate;
+    delegate->setAutoErrorHandlingEnabled(true);
+    job->setUiDelegate(delegate);
+
+    job->setUrls({QUrl(resource)});
+    job->start();
 }
 
 void Backend::setActionGroup(QAction *action) const

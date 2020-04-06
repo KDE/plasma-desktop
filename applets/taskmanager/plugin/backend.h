@@ -108,7 +108,6 @@ class Backend : public QObject
 
     private Q_SLOTS:
         void toolTipWindowChanged(QQuickWindow *window);
-        void handleJumpListAction() const;
         void handleRecentDocumentAction() const;
 
     private:

@@ -25,8 +25,9 @@ target_link_libraries(taskmanagerplugin
                       KF5::ActivitiesStats
                       KF5::I18n
                       KF5::KIOCore
-                      KF5::KIOWidgets
+                      KF5::KIOGui
                       KF5::KIOFileWidgets # KFilePlacesModel
+                      KF5::Notifications # KNotificationJobUiDelegate
                       KF5::Plasma
                       KF5::ProcessCore
                       KF5::Service
