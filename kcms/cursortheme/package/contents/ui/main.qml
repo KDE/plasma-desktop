@@ -23,11 +23,12 @@ import QtQuick.Controls 2.2 as QtControls
 import QtQuick.Dialogs 1.1 as QtDialogs
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.newstuff 1.62 as NewStuff
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcm 1.3 as KCM
 
 import org.kde.private.kcm_cursortheme 1.0
 
 KCM.GridViewKCM {
+    id: root
     KCM.ConfigModule.quickHelp: i18n("This module lets you choose the mouse cursor theme.")
 
     view.model: kcm.cursorsModel
@@ -43,7 +44,11 @@ KCM.GridViewKCM {
         view.positionViewAtIndex(view.currentIndex, GridView.Beginning);
     }
 
-    enabled: !kcm.downloadingFile
+    KCM.SettingStateBinding {
+        configObject: kcm.cursorThemeSettings
+        settingName: "cursorTheme"
+        extraEnabledConditions: !kcm.downloadingFile
+    }
 
     DropArea {
         anchors.fill: parent
@@ -94,7 +99,13 @@ KCM.GridViewKCM {
 
             RowLayout {
                 id: comboLayout
-                enabled: kcm.canResize
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.cursorThemeSettings
+                    settingName: "cursorSize"
+                    extraEnabledConditions: kcm.canResize
+                }
+
                 QtControls.Label {
                     text: i18n("Size:")
                 }

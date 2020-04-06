@@ -23,15 +23,19 @@ import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.newstuff 1.62 as NewStuff
 import org.kde.kconfig 1.0 // for KAuthorized
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcm 1.3 as KCM
 
 KCM.GridViewKCM {
+    id: root
     KCM.ConfigModule.quickHelp: i18n("This module lets you choose the global look and feel.")
 
     view.model: kcm.lookAndFeelModel
     view.currentIndex: kcm.pluginIndex(kcm.lookAndFeelSettings.lookAndFeelPackage)
 
-    enabled: !kcm.lookAndFeelSettings.isImmutable("lookAndFeelPackage")
+    KCM.SettingStateBinding {
+        configObject: kcm.lookAndFeelSettings
+        settingName: "lookAndFeelPackage"
+    }
 
     view.delegate: KCM.GridDelegate {
         id: delegate

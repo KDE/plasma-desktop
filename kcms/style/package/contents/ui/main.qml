@@ -22,7 +22,7 @@ import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcm 1.3 as KCM
 import org.kde.private.kcms.style 1.0 as Private
 
 KCM.GridViewKCM {
@@ -33,7 +33,10 @@ KCM.GridViewKCM {
     view.model: kcm.model
     view.currentIndex: kcm.model.selectedStyleIndex
 
-    view.enabled: !kcm.styleSettings.isImmutable("widgetStyle")
+    KCM.SettingStateBinding {
+        configObject: kcm.styleSettings
+        settingName: "widgetStyle"
+    }
 
     function openGtkStyleSettings() {
         kcm.push("GtkStylePage.qml");

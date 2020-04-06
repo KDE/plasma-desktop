@@ -26,7 +26,7 @@ import QtQuick.Dialogs 1.2 as QtDialogs
 // For KCMShell.open()
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcm 1.3 as KCM
 
 KCM.SimpleKCM {
     id: root
@@ -107,41 +107,65 @@ KCM.SimpleKCM {
                 label: i18n("General:")
                 category: "font"
                 font: kcm.fontsSettings.font
-                enabled: !kcm.fontsSettings.isImmutable("font")
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.fontsSettings
+                    settingName: "font"
+                }
             }
             FontWidget {
                 id: fixedWidthFontWidget
                 label: i18n("Fixed width:")
                 category: "fixed"
                 font: kcm.fontsSettings.fixed
-                enabled: !kcm.fontsSettings.isImmutable("fixed")
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.fontsSettings
+                    settingName: "fixed"
+                }
             }
             FontWidget {
                 id: smallFontWidget
                 label: i18n("Small:")
                 category: "smallestReadableFont"
                 font: kcm.fontsSettings.smallestReadableFont
-                enabled: !kcm.fontsSettings.isImmutable("smallestReadableFont")
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.fontsSettings
+                    settingName: "smallestReadableFont"
+                }
             }
             FontWidget {
                 id: toolbarFontWidget
                 label: i18n("Toolbar:")
                 category: "toolBarFont"
                 font: kcm.fontsSettings.toolBarFont
-                enabled: !kcm.fontsSettings.isImmutable("toolBarFont")
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.fontsSettings
+                    settingName: "toolBarFont"
+                }
             }
             FontWidget {
                 id: menuFontWidget
                 label: i18n("Menu:")
                 category: "menuFont"
                 font: kcm.fontsSettings.menuFont
-                enabled: !kcm.fontsSettings.isImmutable("menuFont")
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.fontsSettings
+                    settingName: "menuFont"
+                }
             }
             FontWidget {
                 label: i18n("Window title:")
                 category: "activeFont"
                 font: kcm.fontsSettings.activeFont
-                enabled: !kcm.fontsSettings.isImmutable("activeFont")
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.fontsSettings
+                    settingName: "activeFont"
+                }
             }
 
             Kirigami.Separator {
@@ -160,6 +184,12 @@ KCM.SimpleKCM {
                 ContextualHelpButton {
                     toolTipText: xi18nc("@info:tooltip Anti-Aliasing", "Pixels on displays are generally aligned in a grid. Therefore shapes of fonts that do not align with this grid will look blocky and wrong unless <emphasis>anti-aliasing</emphasis> techniques are used to reduce this effect. You generally want to keep this option enabled unless it causes problems.")
                 }
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.fontsAASettings
+                    settingName: "antiAliasing"
+                    extraEnabledConditions: !kcm.fontsAASettings.isAaImmutable
+                }
             }
 
             QtControls.CheckBox {
@@ -168,13 +198,19 @@ KCM.SimpleKCM {
                 onCheckedChanged: kcm.fontsAASettings.exclude = checked;
                 text: i18n("Exclude range from anti-aliasing")
                 Layout.fillWidth: true
-                enabled: antiAliasingCheckBox.checked
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.fontsAASettings
+                    settingName: "exclude"
+                    extraEnabledConditions: !kcm.fontsAASettings.isAaImmutable && antiAliasingCheckBox.checked
+                }
             }
 
             RowLayout {
                 id: excludeField
                 Layout.preferredWidth: formLayout.maxImplicitWidth
-                enabled: antiAliasingCheckBox.checked
+                enabled: antiAliasingCheckBox.enabled && antiAliasingCheckBox.checked
+
                 QtControls.SpinBox {
                     id: excludeFromSpinBox
                     stepSize: 1
@@ -182,8 +218,13 @@ KCM.SimpleKCM {
                     textFromValue: function(value, locale) { return i18n("%1 pt", value)}
                     valueFromText: function(text, locale) { return parseInt(text) }
                     editable: true
-                    enabled: excludeCheckBox.checked
                     value: kcm.fontsAASettings.excludeFrom
+
+                    KCM.SettingStateBinding {
+                        configObject: kcm.fontsAASettings
+                        settingName: "excludeFrom"
+                        extraEnabledConditions: excludeCheckBox.checked
+                    }
                 }
 
                 QtControls.Label {
@@ -200,8 +241,13 @@ KCM.SimpleKCM {
                     textFromValue: function(value, locale) { return i18n("%1 pt", value)}
                     valueFromText: function(text, locale) { return parseInt(text) }
                     editable: true
-                    enabled: excludeCheckBox.checked
                     value: kcm.fontsAASettings.excludeTo
+
+                    KCM.SettingStateBinding {
+                        configObject: kcm.fontsAASettings
+                        settingName: "excludeTo"
+                        extraEnabledConditions: excludeCheckBox.checked
+                    }
                 }
                 Connections {
                     target: kcm.fontsAASettings
@@ -219,7 +265,6 @@ KCM.SimpleKCM {
                     onCurrentIndexChanged: kcm.subPixelCurrentIndex = currentIndex;
                     model: kcm.subPixelOptionsModel
                     textRole: "display"
-                    enabled: antiAliasingCheckBox.checked
                     popup.height: popup.implicitHeight
                     delegate: QtControls.ItemDelegate {
                         id: subPixelDelegate
@@ -246,6 +291,12 @@ KCM.SimpleKCM {
                             }
                         }
                     }
+
+                    KCM.SettingStateBinding {
+                        configObject: kcm.fontsAASettings
+                        settingName: "subPixel"
+                        extraEnabledConditions: antiAliasingCheckBox.checked && !kcm.fontsAASettings.isAaImmutable
+                    }
                 }
                 ContextualHelpButton {
                     toolTipText: xi18nc("@info:tooltip Sub-pixel rendering", "<para>On TFT or LCD screens every single pixel is actually composed of three or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can be changed independently to further improve the quality of displayed fonts.</para> <para>The rendering quality is only improved if the selection matches the manner in which the sub-pixels of your display are aligned. Most displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some have <emphasis>BGR</emphasis> and some exotic orderings are not supported by this feature.</para>This does not work with CRT monitors.")
@@ -261,7 +312,6 @@ KCM.SimpleKCM {
                     onCurrentTextChanged: kcm.hintingCurrentIndex = currentIndex;
                     model: kcm.hintingOptionsModel
                     textRole: "display"
-                    enabled: antiAliasingCheckBox.checked
                     popup.height: popup.implicitHeight
                     delegate: QtControls.ItemDelegate {
                         id: hintingDelegate
@@ -288,6 +338,11 @@ KCM.SimpleKCM {
                             }
                         }
                     }
+                    KCM.SettingStateBinding {
+                        configObject: kcm.fontsAASettings
+                        settingName: "hinting"
+                        extraEnabledConditions: antiAliasingCheckBox.checked && !kcm.fontsAASettings.isAaImmutable
+                    }
                 }
                 ContextualHelpButton {
                     toolTipText: xi18nc("@info:tooltip Hinting", "Hinting is a technique in which hints embedded in a font are used to enhance the rendering quality especially at small sizes. Stronger hinting generally leads to sharper edges but the small letters will less closely resemble their shape at big sizes.")
@@ -295,6 +350,8 @@ KCM.SimpleKCM {
             }
 
             RowLayout {
+                Layout.preferredWidth: formLayout.maxImplicitWidth
+
                 QtControls.CheckBox {
                     id: dpiCheckBox
                     checked: kcm.fontsAASettings.dpi !== 0
@@ -303,16 +360,41 @@ KCM.SimpleKCM {
                         kcm.fontsAASettings.dpi = checked ? dpiSpinBox.value : 0
                         dpiTwiddledMessage.visible = checked
                     }
+
+                    // dpiSpinBox will set forceFontDPI or forceFontDPIWayland,
+                    // so only one SettingStateBinding will be activated at a time.
+                    KCM.SettingStateBinding {
+                        configObject: kcm.fontsAASettings
+                        settingName: "forceFontDPIWayland"
+                        extraEnabledConditions: antiAliasingCheckBox.checked && !kcm.fontsAASettings.isAaImmutable
+                    }
+                    KCM.SettingStateBinding {
+                        configObject: kcm.fontsAASettings
+                        settingName: "forceFontDPI"
+                        extraEnabledConditions: antiAliasingCheckBox.checked && !kcm.fontsAASettings.isAaImmutable
+                    }
                 }
 
                 QtControls.SpinBox {
                     id: dpiSpinBox
                     editable: true
-                    enabled: dpiCheckBox.checked
                     value: kcm.fontsAASettings.dpi !== 0 ? kcm.fontsAASettings.dpi : 96
                     onValueModified: kcm.fontsAASettings.dpi = value
                     to: 999
                     from: 1
+
+                    // dpiSpinBox will set forceFontDPI or forceFontDPIWayland,
+                    // so only one SettingStateBinding will be activated at a time.
+                    KCM.SettingStateBinding {
+                        configObject: kcm.fontsAASettings
+                        settingName: "forceFontDPIWayland"
+                        extraEnabledConditions: dpiCheckBox.enabled && dpiCheckBox.checked
+                    }
+                    KCM.SettingStateBinding {
+                        configObject: kcm.fontsAASettings
+                        settingName: "forceFontDPI"
+                        extraEnabledConditions: dpiCheckBox.enabled && dpiCheckBox.checked
+                    }
                 }
                 ContextualHelpButton {
                     toolTipText: xi18nc("@info:tooltip Force fonts DPI", "<para>This option forces a specific DPI value for fonts. It may be useful when the real DPI of the hardware is not detected properly and it is also often misused when poor quality fonts are used that do not look well with DPI values other than 96 or 120 DPI.</para><para>The use of this option is generally discouraged.</para><para>If you are using the <emphasis>X Window System</emphasis>, for selecting the proper DPI value a better option is explicitly configuring it for the whole X server if possible (e.g. DisplaySize in xorg.conf). When fonts do not render properly with the real DPI value better fonts should be used or configuration of font hinting should be checked.</para>")

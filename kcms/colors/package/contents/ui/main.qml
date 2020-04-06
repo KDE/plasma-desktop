@@ -25,7 +25,7 @@ import QtQuick.Dialogs 1.0 as QtDialogs
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.8 as Kirigami
 import org.kde.newstuff 1.62 as NewStuff
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcm 1.3 as KCM
 import org.kde.private.kcms.colors 1.0 as Private
 
 KCM.GridViewKCM {
@@ -47,7 +47,11 @@ KCM.GridViewKCM {
         value:  filterCombo.model[filterCombo.currentIndex].filter
     }
 
-    enabled: !kcm.downloadingFile && !kcm.colorsSettings.isImmutable("colorScheme")
+    KCM.SettingStateBinding {
+        configObject: kcm.colorsSettings
+        settingName: "colorScheme"
+        extraEnabledConditions: !kcm.downloadingFile
+    }
 
     Component.onCompleted: {
         // The thumbnails are a bit more elaborate and need more room, especially when translated

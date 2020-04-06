@@ -35,6 +35,8 @@ class FontsAASettings : public FontsAASettingsBase
     Q_PROPERTY(int dpi READ dpi WRITE setDpi NOTIFY dpiChanged)
     Q_PROPERTY(KXftConfig::SubPixel::Type subPixel READ subPixel WRITE setSubPixel NOTIFY subPixelChanged)
     Q_PROPERTY(KXftConfig::Hint::Style hinting READ hinting WRITE setHinting NOTIFY hintingChanged)
+    Q_PROPERTY(bool isAaImmutable READ isAaImmutable CONSTANT)
+    Q_PROPERTY(bool excludeStateProxy READ excludeStateProxy NOTIFY excludeStateProxyChanged)
 
 public:
     FontsAASettings(QObject *parent = nullptr);
@@ -46,6 +48,8 @@ public:
     int dpi() const;
     KXftConfig::SubPixel::Type subPixel() const;
     KXftConfig::Hint::Style hinting() const;
+    bool isAaImmutable() const;
+    bool excludeStateProxy() const;
 
     void setExclude(bool exclude);
     void setExcludeFrom(int excludeFrom);
@@ -64,9 +68,11 @@ signals:
     void subPixelChanged();
     void hintingChanged();
     void aliasingChangeApplied();
+    void excludeStateProxyChanged();
 
 private:
     FontAASettingsStore *m_fontAASettingsStore;
+    bool m_isAaImmutable = false;
     bool usrSave() override;
 
     using NotifySignalType = void (FontsAASettings::*)();

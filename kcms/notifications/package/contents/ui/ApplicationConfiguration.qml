@@ -24,7 +24,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
 
 import org.kde.kirigami 2.7 as Kirigami
-import org.kde.kcm 1.2 as KCM
+import org.kde.kcm 1.3 as KCM
 
 import org.kde.notificationmanager 1.0 as NotificationManager
 
@@ -75,9 +75,13 @@ ColumnLayout {
         QtControls.CheckBox {
             id: showPopupsCheck
             text: i18n("Show popups")
-            enabled: !!behaviorSettings && !behaviorSettings.isShowPopupsImmutable
             checked: !!behaviorSettings && behaviorSettings.showPopups
             onClicked: behaviorSettings.showPopups = checked
+
+            KCM.SettingStateBinding {
+                configObject: behaviorSettings
+                settingName: "ShowPopups"
+            }
         }
 
         RowLayout { // just for indentation
@@ -85,24 +89,38 @@ ColumnLayout {
                 Layout.leftMargin: mirrored ? 0 : indicator.width
                 Layout.rightMargin: mirrored ? indicator.width : 0
                 text: i18n("Show in do not disturb mode")
-                enabled: showPopupsCheck.checked && !behaviorSettings.isShowPopupsInDndModeImmutable
                 checked: !!behaviorSettings && behaviorSettings.showPopupsInDndMode
                 onClicked: behaviorSettings.showPopupsInDndMode = checked
+
+                KCM.SettingStateBinding {
+                    configObject: behaviorSettings
+                    settingName: "ShowPopupsInDndMode"
+                    extraEnabledConditions: showPopupsCheck.checked
+                }
             }
         }
 
         QtControls.CheckBox {
             text: i18n("Show in history")
-            enabled: !!behaviorSettings && !behaviorSettings.isShowInHistoryImmutable
             checked: !!behaviorSettings && behaviorSettings.showInHistory
             onClicked: behaviorSettings.showInHistory = checked
+
+            KCM.SettingStateBinding {
+                configObject: behaviorSettings
+                settingName: "ShowInHistory"
+            }
         }
 
         QtControls.CheckBox {
             text: i18n("Show notification badges")
-            enabled: !!configColumn.desktopEntry && !configColumn.isOtherApp && !!behaviorSettings && !behaviorSettings.isShowBadgesImmutable
             checked: !!behaviorSettings && behaviorSettings.showBadges
             onClicked: behaviorSettings.showBadges = checked
+
+            KCM.SettingStateBinding {
+                configObject: behaviorSettings
+                settingName: "ShowBadges"
+                extraEnabledConditions: !!configColumn.desktopEntry && configColumn.desktopEntry !== configColumn.otherAppsId
+            }
         }
 
         Kirigami.Separator {

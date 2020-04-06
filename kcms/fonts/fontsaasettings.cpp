@@ -103,6 +103,11 @@ public:
         m_excludeTo = excludeTo;
     }
 
+    bool isImmutable() const
+    {
+        return m_isImmutable;
+    }
+
     bool antiAliasing() const
     {
         return m_antiAliasing;
@@ -228,6 +233,8 @@ public:
 
         KSharedConfig::Ptr config = KSharedConfig::openConfig("kdeglobals");
         KConfigGroup cg(config, "General");
+        m_isImmutable = cg.isEntryImmutable("XftAntialias");
+
         const auto aaState = xft.getAntiAliasing();
         setAntiAliasing(aaState != KXftConfig::AntiAliasing::Disabled);
 
@@ -238,6 +245,7 @@ public:
 
 private:
     FontsAASettings *m_settings;
+    bool m_isImmutable;
     bool m_antiAliasing;
     bool m_antiAliasingChanged;
     KXftConfig::SubPixel::Type m_subPixel;
@@ -248,7 +256,6 @@ private:
     int m_excludeFrom;
     int m_excludeTo;
 };
-
 
 FontsAASettings::FontsAASettings(QObject *parent)
     : FontsAASettingsBase(parent)
@@ -347,6 +354,16 @@ void FontsAASettings::setSubPixel(KXftConfig::SubPixel::Type subPixel)
 KXftConfig::Hint::Style FontsAASettings::hinting() const
 {
     return findItem("hinting")->property().value<KXftConfig::Hint::Style>();
+}
+
+bool FontsAASettings::isAaImmutable() const
+{
+    return m_fontAASettingsStore->isImmutable();
+}
+
+bool FontsAASettings::excludeStateProxy() const
+{
+    return false;
 }
 
 void FontsAASettings::setHinting(KXftConfig::Hint::Style hinting)

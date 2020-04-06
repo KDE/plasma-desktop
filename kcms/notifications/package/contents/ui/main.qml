@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kquickcontrols 2.0 as KQuickControls
-import org.kde.kcm 1.2 as KCM
+import org.kde.kcm 1.3 as KCM
 
 import org.kde.notificationmanager 1.0 as NotificationManager
 
@@ -79,14 +79,24 @@ KCM.SimpleKCM {
             text: i18nc("Do not disturb when screens are mirrored", "Enable when screens are mirrored")
             checked: kcm.dndSettings.whenScreensMirrored
             onClicked: kcm.dndSettings.whenScreensMirrored = checked
-            enabled: root.notificationsAvailable && !kcm.dndSettings.isImmutable("WhenScreensMirrored")
+
+            KCM.SettingStateBinding {
+                configObject: kcm.dndSettings
+                settingName: "WhenScreensMirrored"
+                extraEnabledConditions: root.notificationsAvailable
+            }
         }
 
         QtControls.CheckBox {
             text: i18n("Show critical notifications")
             checked: kcm.notificationSettings.criticalInDndMode
             onClicked: kcm.notificationSettings.criticalInDndMode = checked
-            enabled: root.notificationsAvailable && !kcm.notificationSettings.isImmutable("CriticalInDndMode")
+
+            KCM.SettingStateBinding {
+                configObject: kcm.notificationSettings
+                settingName: "CriticalInDndMode"
+                extraEnabledConditions: root.notificationsAvailable
+            }
         }
 
         RowLayout {
@@ -111,7 +121,12 @@ KCM.SimpleKCM {
             text: i18n("Always keep on top")
             checked: kcm.notificationSettings.criticalAlwaysOnTop
             onClicked: kcm.notificationSettings.criticalAlwaysOnTop = checked
-            enabled: root.notificationsAvailable && !kcm.notificationSettings.isImmutable("CriticalAlwaysOnTop")
+
+            KCM.SettingStateBinding {
+                configObject: kcm.notificationSettings
+                settingName: "CriticalAlwaysOnTop"
+                extraEnabledConditions: root.notificationsAvailable
+            }
         }
 
         Item {
@@ -123,14 +138,24 @@ KCM.SimpleKCM {
             text: i18n("Show popup")
             checked: kcm.notificationSettings.lowPriorityPopups
             onClicked: kcm.notificationSettings.lowPriorityPopups = checked
-            enabled: root.notificationsAvailable && !kcm.notificationSettings.isImmutable("LowPriorityPopups")
+
+            KCM.SettingStateBinding {
+                configObject: kcm.notificationSettings
+                settingName: "LowPriorityPopups"
+                extraEnabledConditions: root.notificationsAvailable
+            }
         }
 
         QtControls.CheckBox {
             text: i18n("Show in history")
             checked: kcm.notificationSettings.lowPriorityHistory
             onClicked: kcm.notificationSettings.lowPriorityHistory = checked
-            enabled: root.notificationsAvailable && !kcm.notificationSettings.isImmutable("LowPriorityHistory")
+
+            KCM.SettingStateBinding {
+                configObject: kcm.notificationSettings
+                settingName: "LowPriorityHistory"
+                extraEnabledConditions: root.notificationsAvailable
+            }
         }
 
         QtControls.ButtonGroup {
@@ -150,12 +175,17 @@ KCM.SimpleKCM {
                 // Force binding re-evaluation when user returns from position selector
                 + kcm.currentIndex * 0
             onClicked: kcm.notificationSettings.popupPosition = NotificationManager.Settings.CloseToWidget
-            enabled: root.notificationsAvailable && !kcm.notificationSettings.isImmutable("PopupPosition")
+
+            KCM.SettingStateBinding {
+                configObject: kcm.notificationSettings
+                settingName: "PopupPosition"
+                extraEnabledConditions: root.notificationsAvailable
+            }
         }
 
         RowLayout {
             spacing: 0
-            enabled: root.notificationsAvailable && !kcm.notificationSettings.isImmutable("PopupPosition")
+            enabled: positionCloseToWidget.enabled
 
             QtControls.RadioButton {
                 id: positionCustomPosition
@@ -167,6 +197,13 @@ KCM.SimpleKCM {
                     anchors.fill: parent
                     onClicked: positionCustomButton.clicked()
                 }
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.notificationSettings
+                    settingName: "PopupPosition"
+                    extraEnabledConditions: root.notificationsAvailable
+                }
+
             }
             QtControls.Button {
                 id: positionCustomButton
@@ -198,7 +235,6 @@ KCM.SimpleKCM {
                 to: 120000 // 2 minutes
                 stepSize: 1000
                 value: kcm.notificationSettings.popupTimeout
-                enabled: root.notificationsAvailable && !kcm.notificationSettings.isImmutable("PopupTimeout")
                 editable: true
                 valueFromText: function(text, locale) {
                     return parseInt(text) * 1000;
@@ -207,6 +243,12 @@ KCM.SimpleKCM {
                     return i18np("%1 second", "%1 seconds", Math.round(value / 1000));
                 }
                 onValueModified: kcm.notificationSettings.popupTimeout = value
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.notificationSettings
+                    settingName: "PopupTimeout"
+                    extraEnabledConditions: root.notificationsAvailable
+                }
             }
         }
 
@@ -219,7 +261,11 @@ KCM.SimpleKCM {
             text: i18n("Show in task manager")
             checked: kcm.jobSettings.inTaskManager
             onClicked: kcm.jobSettings.inTaskManager = checked
-            enabled: !kcm.jobSettings.isImmutable("InTaskManager")
+
+            KCM.SettingStateBinding {
+                configObject: kcm.jobSettings
+                settingName: "InTaskManager"
+            }
         }
 
         QtControls.CheckBox {
@@ -227,7 +273,11 @@ KCM.SimpleKCM {
             text: i18nc("Show application jobs in notification widget", "Show in notifications")
             checked: kcm.jobSettings.inNotifications
             onClicked: kcm.jobSettings.inNotifications = checked
-            enabled: !kcm.jobSettings.isImmutable("InNotifications")
+
+            KCM.SettingStateBinding {
+                configObject: kcm.jobSettings
+                settingName: "InNotifications"
+            }
         }
 
         RowLayout { // just for indentation
@@ -235,9 +285,14 @@ KCM.SimpleKCM {
                 Layout.leftMargin: mirrored ? 0 : indicator.width
                 Layout.rightMargin: mirrored ? indicator.width : 0
                 text: i18nc("Keep application job popup open for entire duration of job", "Keep popup open during progress")
-                enabled: applicationJobsEnabledCheck.checked && !kcm.jobSettings.isImmutable("PermanentPopups")
                 checked: kcm.jobSettings.permanentPopups
                 onClicked: kcm.jobSettings.permanentPopups = checked
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.jobSettings
+                    settingName: "PermanentPopups"
+                    extraEnabledConditions: applicationJobsEnabledCheck.checked
+                }
             }
         }
 
@@ -250,7 +305,11 @@ KCM.SimpleKCM {
             text: i18n("Show in task manager")
             checked: kcm.badgeSettings.inTaskManager
             onClicked: kcm.badgeSettings.inTaskManager = checked
-            enabled: !kcm.badgeSettings.isImmutable("InTaskManager")
+
+            KCM.SettingStateBinding {
+                configObject: kcm.badgeSettings
+                settingName: "InTaskManager"
+            }
         }
 
         Kirigami.Separator {

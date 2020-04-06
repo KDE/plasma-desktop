@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.11 as QQC2
 import QtQuick.Dialogs 1.2 as QtDialogs
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcm 1.3 as KCM
 
 KCM.SimpleKCM {
     id: root
@@ -43,10 +43,14 @@ KCM.SimpleKCM {
         QQC2.CheckBox {
             id: fileSearchEnabled
             text: i18n("Enable File Search")
-            enabled: !kcm.balooSettings.isImmutable("indexingEnabled")
             checked: kcm.balooSettings.indexingEnabled
             onCheckStateChanged: {
                 kcm.balooSettings.indexingEnabled = checked
+            }
+
+            KCM.SettingStateBinding {
+                configObject: kcm.balooSettings
+                settingName: "indexingEnabled"
             }
         }
 
@@ -61,16 +65,26 @@ KCM.SimpleKCM {
                 QQC2.CheckBox {
                     id: indexFileContents
                     text: i18n("Also index file content")
-                    enabled: fileSearchEnabled.checked && !kcm.balooSettings.isImmutable("onlyBasicIndexing")
                     checked: !kcm.balooSettings.onlyBasicIndexing
                     onCheckStateChanged: kcm.balooSettings.onlyBasicIndexing = !checked
+
+                    KCM.SettingStateBinding {
+                        configObject: kcm.balooSettings
+                        settingName: "onlyBasicIndexing"
+                        extraEnabledConditions: fileSearchEnabled.checked
+                    }
                 }
                 QQC2.CheckBox {
                     id: indexHiddenFolders
                     text: i18n("Index hidden files and folders")
-                    enabled: fileSearchEnabled.checked && !kcm.balooSettings.isImmutable("indexHiddenFolders")
                     checked: kcm.balooSettings.indexHiddenFolders
                     onCheckStateChanged: kcm.balooSettings.indexHiddenFolders = checked
+
+                    KCM.SettingStateBinding {
+                        configObject: kcm.balooSettings
+                        settingName: "indexHiddenFolders"
+                        extraEnabledConditions: fileSearchEnabled.checked
+                    }
                 }
             }
         }
