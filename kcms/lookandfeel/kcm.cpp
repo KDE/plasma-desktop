@@ -478,7 +478,7 @@ void KCMLookandFeel::setCursorTheme(const QString themeName)
     // in previous versions the Xfixes code wasn't enabled due to a bug in the
     // build system (freedesktop bug #975).
 #if defined(HAVE_XFIXES) && XFIXES_MAJOR >= 2 && XCURSOR_LIB_VERSION >= 10105
-    const int cursorSize = cg.readEntry("cursorSize", 0);
+    const int cursorSize = cg.readEntry("cursorSize", 24);
 
     QDir themeDir = cursorThemeDir(themeName, 0);
 
