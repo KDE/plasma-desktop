@@ -533,18 +533,28 @@ void KGlobalShortcutsEditor::exportScheme()
         return;
     }
 
-    const QUrl url = QFileDialog::getSaveFileUrl(this, QString(), QUrl(), QStringLiteral("*.kksrc"));
-    if (!url.isEmpty()) {
-        KConfig config(url.path(), KConfig::SimpleConfig);
-        // TODO: Bug ossi to provide a method for this
-        Q_FOREACH(const QString &group, config.groupList())
-            {
-            // do not overwrite the Settings group. That makes it possible to
-            // update the standard scheme kksrc file with the editor.
-            if (group == QLatin1String("Settings")) continue;
-            config.deleteGroup(group);
-            }
-        exportConfiguration(dia.selectedComponents(), &config);
+    const QString filenameExtension = QStringLiteral("kksrc");
+    QFileDialog dialog(this);
+    dialog.setAcceptMode(QFileDialog::AcceptSave);
+    dialog.setFileMode(QFileDialog::AnyFile);
+    dialog.setDirectoryUrl(QUrl());
+    dialog.selectFile(QStringLiteral("global_shortcuts") + QStringLiteral(".") + filenameExtension);
+    dialog.setDefaultSuffix(QStringLiteral(".") + filenameExtension);
+
+    if (dialog.exec() == QFileDialog::Accepted) {
+        const QUrl url = dialog.selectedUrls().constFirst();
+        if (!url.isEmpty()) {
+            KConfig config(url.path(), KConfig::SimpleConfig);
+            // TODO: Bug ossi to provide a method for this
+            Q_FOREACH(const QString &group, config.groupList())
+                {
+                    // do not overwrite the Settings group. That makes it possible to
+                    // update the standard scheme kksrc file with the editor.
+                    if (group == QLatin1String("Settings")) continue;
+                    config.deleteGroup(group);
+                }
+            exportConfiguration(dia.selectedComponents(), &config);
+        }
     }
 }
 
