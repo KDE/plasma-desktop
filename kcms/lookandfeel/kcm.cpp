@@ -39,6 +39,8 @@
 #include <QProcess>
 #include <QStandardItemModel>
 #include <QX11Info>
+#include <QStyle>
+#include <QStyleFactory>
 
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
@@ -259,7 +261,12 @@ void KCMLookandFeel::save()
         KConfigGroup cg(conf, "kdeglobals");
         cg = KConfigGroup(&cg, "KDE");
         if (m_applyWidgetStyle) {
-            setWidgetStyle(cg.readEntry("widgetStyle", QString()));
+            QString widgetStyle = cg.readEntry("widgetStyle", QString());
+            // Some global themes refer to breeze's widgetStyle with a lowercase b.
+            if (widgetStyle == QStringLiteral("breeze")) {
+                widgetStyle = QStringLiteral("Breeze");
+            }
+            setWidgetStyle(widgetStyle);
         }
 
         if (m_applyColors) {
@@ -405,10 +412,15 @@ void KCMLookandFeel::setWidgetStyle(const QString &style)
         return;
     }
 
-    m_configGroup.writeEntry("widgetStyle", style);
-    m_configGroup.sync();
-    //FIXME: changing style on the fly breaks QQuickWidgets
-    KGlobalSettings::self()->emitChange(KGlobalSettings::StyleChanged);
+    // Some global themes use styles that may not be installed.
+    // Test if style can be installed before updating the config.
+    QScopedPointer<QStyle> newStyle(QStyleFactory::create(style));
+    if (newStyle) {
+        m_configGroup.writeEntry("widgetStyle", style);
+        m_configGroup.sync();
+        //FIXME: changing style on the fly breaks QQuickWidgets
+        KGlobalSettings::self()->emitChange(KGlobalSettings::StyleChanged);
+    }
 }
 
 void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
