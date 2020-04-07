@@ -398,7 +398,10 @@ void KCMLookandFeel::save()
     }
 
     //TODO: option to enable/disable apply? they don't seem required by UI design
-    setSplashScreen(m_settings->lookAndFeelPackage());
+    const auto *item = m_model->item(pluginIndex(m_settings->lookAndFeelPackage()));
+    if (item->data(HasSplashRole).toBool()) {
+        setSplashScreen(m_settings->lookAndFeelPackage());
+    }
     setLockScreen(m_settings->lookAndFeelPackage());
 
     m_configGroup.sync();
