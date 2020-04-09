@@ -38,6 +38,16 @@ PlasmaCore.Dialog {
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
 
+        PlasmaComponents.ToolButton {
+            Layout.fillWidth: true
+            // we want destructive actions to be far from the initial cursor
+            // position, so show this on the top unless it's on a top panel
+            visible: location !== PlasmaCore.Types.TopEdge
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
+            iconSource: "delete"
+            onClicked: plasmoid.action("remove").trigger();
+        }
+
         PlasmaExtras.Heading {
             level: 3
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Alignment")
@@ -126,6 +136,15 @@ PlasmaCore.Dialog {
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Maximize Panel")
             iconSource: panel.formFactor === PlasmaCore.Types.Vertical ? "zoom-fit-height" : "zoom-fit-width"
             onClicked: panel.maximize();
+        }
+        PlasmaComponents.ToolButton {
+            Layout.fillWidth: true
+            // we want destructive actions to be far from the initial cursor
+            // position, so show this on the bottom for top panels
+            visible: location === PlasmaCore.Types.TopEdge
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
+            iconSource: "delete"
+            onClicked: plasmoid.action("remove").trigger();
         }
     }
 
