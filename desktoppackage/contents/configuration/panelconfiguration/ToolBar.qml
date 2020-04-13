@@ -30,7 +30,6 @@ Item {
     implicitWidth: Math.max(buttonsLayout_1.width, buttonsLayout_2.width, row.width) + units.smallSpacing * 2
     implicitHeight: row.height + 20
 
-    readonly property string removePanelButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
     readonly property string addWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets...")
     readonly property string addSpacerButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Spacer")
     readonly property string settingsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "More Settings...")
@@ -67,12 +66,23 @@ Item {
         columnSpacing: units.smallSpacing
 
         PlasmaComponents.Button {
-            iconSource: "delete"
-            text: buttonsLayout_1.showText ? root.removePanelButtonText : ""
-            tooltip: buttonsLayout_1.showText ? "" : root.removePanelButtonText
+            text: buttonsLayout_2.showText ? root.addWidgetsButtonText : ""
+            tooltip: buttonsLayout_2.showText ? "" : root.addWidgetsButtonText
+            iconSource: "list-add"
             Layout.fillWidth: true
             onClicked: {
-                plasmoid.action("remove").trigger();
+                configDialog.close();
+                configDialog.showAddWidgetDialog();
+            }
+        }
+
+        PlasmaComponents.Button {
+            iconSource: "distribute-horizontal-x"
+            text: buttonsLayout_2.showText ? root.addSpacerButtonText : ""
+            tooltip: buttonsLayout_2.showText ? "" : root.addSpacerButtonText
+            Layout.fillWidth: true
+            onClicked: {
+                configDialog.addPanelSpacer();
             }
         }
     }
@@ -123,27 +133,6 @@ Item {
 
         rowSpacing: units.smallSpacing
         columnSpacing: units.smallSpacing
-
-        PlasmaComponents.Button {
-            text: buttonsLayout_2.showText ? root.addWidgetsButtonText : ""
-            tooltip: buttonsLayout_2.showText ? "" : root.addWidgetsButtonText
-            iconSource: "list-add"
-            Layout.fillWidth: true
-            onClicked: {
-                configDialog.close();
-                configDialog.showAddWidgetDialog();
-            }
-        }
-
-        PlasmaComponents.Button {
-            iconSource: "distribute-horizontal-x"
-            text: buttonsLayout_2.showText ? root.addSpacerButtonText : ""
-            tooltip: buttonsLayout_2.showText ? "" : root.addSpacerButtonText
-            Layout.fillWidth: true
-            onClicked: {
-                configDialog.addPanelSpacer();
-            }
-        }
 
         PlasmaComponents.Button {
             id: settingsButton
