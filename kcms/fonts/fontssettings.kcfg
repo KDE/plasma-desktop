@@ -23,7 +23,7 @@
       #ifdef Q_OS_MAC
       QFont fixedWidthFont = QFont("Monaco", 10);
       #else
-      QFont fixedWidthFont = QFont("Hack", 9);
+      QFont fixedWidthFont = QFont("Hack", 10);
       fixedWidthFont.setStyleName("Regular");
       #endif
       </code>

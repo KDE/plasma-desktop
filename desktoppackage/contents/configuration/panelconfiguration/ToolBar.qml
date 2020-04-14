@@ -32,7 +32,7 @@ Item {
 
     readonly property string addWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets...")
     readonly property string addSpacerButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Spacer")
-    readonly property string settingsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "More Settings...")
+    readonly property string settingsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "More Options...")
 
     QQC2.Action {
         shortcut: "Escape"
