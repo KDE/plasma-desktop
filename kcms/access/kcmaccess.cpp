@@ -35,7 +35,6 @@
 #include <kkeyserver.h>
 #include <knotifyconfigwidget.h>
 #include <KPluginFactory>
-#include <ktoolinvocation.h>
 
 #include <X11/Xlib.h>
 #include <X11/XKBlib.h>
@@ -450,7 +449,7 @@ void KAccessConfig::save()
     // make kaccess reread the configuration
     // turning a11y features off needs to be done by kaccess
     // so run it to clear any enabled features and it will exit if it should
-    KToolInvocation::startServiceByDesktopName(QStringLiteral("kaccess"));
+    QProcess::startDetached(QStringLiteral("kaccess"));
 
     emit changed(false);
 }
@@ -551,17 +550,6 @@ void KAccessConfig::checkAccess()
 
     bool useTimeout = ui.timeout->isChecked();
     ui.timeoutDelay->setEnabled(useTimeout);
-}
-
-extern "C"
-{
-    /* This one gets called by kcminit
-
-     */
-    Q_DECL_EXPORT void kcminit_access()
-    {
-        KToolInvocation::startServiceByDesktopName(QStringLiteral("kaccess"));
-    }
 }
 
 #include "kcmaccess.moc"

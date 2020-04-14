@@ -30,5 +30,5 @@ install(TARGETS kaccess         ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
 ########### install files ###############
 
-install( FILES kaccess.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+install( FILES kaccess.desktop  DESTINATION  ${KDE_INSTALL_AUTOSTARTDIR} )
 install( FILES kaccess.notifyrc  DESTINATION  ${KDE_INSTALL_KNOTIFY5RCDIR} )
