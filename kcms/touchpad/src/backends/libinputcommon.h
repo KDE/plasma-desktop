@@ -137,6 +137,7 @@ class LibinputCommon : public QObject
     Q_PROPERTY(bool defaultClickMethodClickfinger READ defaultClickMethodClickfinger CONSTANT)
     Q_PROPERTY(bool clickMethodClickfinger READ isClickMethodClickfinger WRITE setClickMethodClickfinger NOTIFY clickMethodChanged)
 
+    Q_PROPERTY(bool supportsScrollFactor READ supportsScrollFactor CONSTANT)
 public:
 
     LibinputCommon() {}
@@ -354,6 +355,8 @@ public:
     void setClickMethodClickfinger(bool set) {
         m_clickMethodClickfinger.set(set);
     }
+
+    virtual bool supportsScrollFactor() const = 0;
 
 Q_SIGNALS:
     void enabledChanged();

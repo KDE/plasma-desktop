@@ -603,6 +603,7 @@ Kirigami.ScrollablePage {
         Layouts.GridLayout {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling speed:")
             Kirigami.FormData.buddyFor: scrollFactor
+            visible: touchpad.supportsScrollFactor
 
             columns: 3
 

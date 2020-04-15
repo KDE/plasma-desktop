@@ -122,6 +122,10 @@ private:
         return m_supportsClickMethodClickfinger.avail && m_supportsClickMethodClickfinger.val;
     }
 
+    bool supportsScrollFactor() const override {
+        return false;
+    }
+
     // Tapping
     Prop<bool> m_lrmTapButtonMapEnabledByDefault = Prop<bool>("lrmTapButtonMapEnabledByDefault");
     Prop<bool> m_lrmTapButtonMap = Prop<bool>("lrmTapButtonMap");

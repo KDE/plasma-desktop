@@ -108,6 +108,9 @@ public:
 
     //
     // Scroll Factor
+    bool supportsScrollFactor() const override {
+        return true;
+    }
     qreal scrollFactor() const
     {
         return m_scrollFactor.val;
