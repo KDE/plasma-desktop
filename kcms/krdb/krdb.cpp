@@ -258,7 +258,7 @@ static QString color( const QColor& col )
     return QStringLiteral( "{ %1, %2, %3 }" ).arg( item( col.red() ) ).arg( item( col.green() ) ).arg( item( col.blue() ) );
 }
 
-static void createGtkrc( bool exportColors, const QPalette& cg, bool exportGtkTheme, const QString& gtkTheme, int version )
+static void createGtkrc( const QPalette& cg, bool exportGtkTheme, const QString& gtkTheme, int version )
 {
     // lukas: why does it create in ~/.kde/share/config ???
     // pfeiffer: so that we don't overwrite the user's gtkrc.
@@ -331,71 +331,11 @@ static void createGtkrc( bool exportColors, const QPalette& cg, bool exportGtkTh
                 t << endl;
                 t << "gtk-theme-name=\"" << gtkStyle << "\"" << endl;
                 t << endl;
-                if (gtkStyle == QLatin1String("oxygen-gtk"))
-                    exportColors = false;
             }
         }
 
     }
 
-    if (exportColors)
-    {
-        t << "style \"default\"" << endl;
-        t << "{" << endl;
-        t << "  bg[NORMAL] = " << color( cg.color( QPalette::Active, QPalette::Window ) ) << endl;
-        t << "  bg[SELECTED] = " << color( cg.color(QPalette::Active, QPalette::Highlight) ) << endl;
-        t << "  bg[INSENSITIVE] = " << color( cg.color( QPalette::Active, QPalette::Window ) ) << endl;
-        t << "  bg[ACTIVE] = " << color( cg.color( QPalette::Active, QPalette::Mid ) ) << endl;
-        t << "  bg[PRELIGHT] = " << color( cg.color( QPalette::Active, QPalette::Window ) ) << endl;
-        t << endl;
-        t << "  base[NORMAL] = " << color( cg.color( QPalette::Active, QPalette::Base ) ) << endl;
-        t << "  base[SELECTED] = " << color( cg.color(QPalette::Active, QPalette::Highlight) ) << endl;
-        t << "  base[INSENSITIVE] = " << color( cg.color( QPalette::Active, QPalette::Window ) ) << endl;
-        t << "  base[ACTIVE] = " << color( cg.color(QPalette::Active, QPalette::Highlight) ) << endl;
-        t << "  base[PRELIGHT] = " << color( cg.color(QPalette::Active, QPalette::Highlight) ) << endl;
-        t << endl;
-        t << "  text[NORMAL] = " << color( cg.color(QPalette::Active, QPalette::Text) ) << endl;
-        t << "  text[SELECTED] = " << color( cg.color(QPalette::Active, QPalette::HighlightedText) ) << endl;
-        t << "  text[INSENSITIVE] = " << color( cg.color( QPalette::Active, QPalette::Mid ) ) << endl;
-        t << "  text[ACTIVE] = " << color( cg.color(QPalette::Active, QPalette::HighlightedText) ) << endl;
-        t << "  text[PRELIGHT] = " << color( cg.color(QPalette::Active, QPalette::HighlightedText) ) << endl;
-        t << endl;
-        t << "  fg[NORMAL] = " << color ( cg.color( QPalette::Active, QPalette::WindowText ) ) << endl;
-        t << "  fg[SELECTED] = " << color( cg.color(QPalette::Active, QPalette::HighlightedText) ) << endl;
-        t << "  fg[INSENSITIVE] = " << color( cg.color( QPalette::Active, QPalette::Mid ) ) << endl;
-        t << "  fg[ACTIVE] = " << color( cg.color( QPalette::Active, QPalette::WindowText ) ) << endl;
-        t << "  fg[PRELIGHT] = " << color( cg.color( QPalette::Active, QPalette::WindowText ) ) << endl;
-        t << "}" << endl;
-        t << endl;
-        t << "class \"*\" style \"default\"" << endl;
-        t << endl;
-
-        // tooltips don't have the standard background color
-        t << "style \"ToolTip\"" << endl;
-        t << "{" << endl;
-        t << "  bg[NORMAL] = " << color( cg.color( QPalette::ToolTipBase ) ) << endl;
-        t << "  base[NORMAL] = " << color( cg.color( QPalette::ToolTipBase ) ) << endl;
-        t << "  text[NORMAL] = " << color( cg.color( QPalette::ToolTipText ) ) << endl;
-        t << "  fg[NORMAL] = " << color( cg.color( QPalette::ToolTipText ) ) << endl;
-        t << "}" << endl;
-        t << endl;
-        t << "widget \"gtk-tooltip\" style \"ToolTip\"" << endl;
-        t << "widget \"gtk-tooltips\" style \"ToolTip\"" << endl;
-        t << "widget \"gtk-tooltip*\" style \"ToolTip\"" << endl;
-        t << endl;
-
-
-        // highlight the current (mouse-hovered) menu-item
-        // not every button, checkbox, etc.
-        t << "style \"MenuItem\"" << endl;
-        t << "{" << endl;
-        t << "  bg[PRELIGHT] = " << color( cg.color(QPalette::Highlight) ) << endl;
-        t << "  fg[PRELIGHT] = " << color( cg.color(QPalette::HighlightedText) ) << endl;
-        t << "}" << endl;
-        t << endl;
-        t << "class \"*MenuItem\" style \"MenuItem\"" << endl;
-        t << endl;
-    }
     saveFile.commit();
 }
 
@@ -430,8 +370,8 @@ void runRdb( uint flags )
   else
     gtkTheme = QStringLiteral("oxygen");
 
-  createGtkrc( exportColors, newPal, exportGtkTheme, gtkTheme, 1 );
-  createGtkrc( exportColors, newPal, exportGtkTheme, gtkTheme, 2 );
+  createGtkrc( newPal, exportGtkTheme, gtkTheme, 1 );
+  createGtkrc( newPal, exportGtkTheme, gtkTheme, 2 );
 
   // Export colors to non-(KDE/Qt) apps (e.g. Motif, GTK+ apps)
   if (exportColors)
