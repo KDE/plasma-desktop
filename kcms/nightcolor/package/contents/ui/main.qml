@@ -230,7 +230,7 @@ KCM.SimpleKCM {
                 visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeAutomatic
                 enabled: activator.checked
                 wrapMode: Text.Wrap
-                text: i18n("Latitude: %1   Longitude: %2", locator.latitude, locator.longitude)
+                text: i18n("Latitude: %1   Longitude: %2", Math.round(locator.latitude * 100)/100, Math.round(locator.longitude * 100)/100)
             }
 
             // Show time entry fields in manual timings mode
