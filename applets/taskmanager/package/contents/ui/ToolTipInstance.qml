@@ -116,7 +116,7 @@ ColumnLayout {
             // subtext
             PlasmaExtras.Heading {
                 id: subtext
-                level: 6
+                level: 5
                 maximumLineCount: 1
                 lineHeight: isWin ? 1 : subtext.lineHeight
                 Layout.fillWidth: true
