@@ -465,6 +465,7 @@ Item {
 
         property var oldPos: null
 
+        enabled: root.state !== "Search"
         hoverEnabled: root.switchTabsOnHover
 
         onExited: {
