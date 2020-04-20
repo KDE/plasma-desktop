@@ -82,8 +82,8 @@ public:
     ~ComponentData();
 
     QString uniqueName() const;
-    KShortcutsEditor *editor();
-    QDBusObjectPath dbusPath();
+    KShortcutsEditor *editor() const;
+    QDBusObjectPath dbusPath() const;
 
 private:
 
@@ -115,13 +115,13 @@ QString ComponentData::uniqueName() const
     }
 
 
-QDBusObjectPath ComponentData::dbusPath()
+QDBusObjectPath ComponentData::dbusPath() const
     {
     return _path;
     }
 
 
-KShortcutsEditor *ComponentData::editor()
+KShortcutsEditor *ComponentData::editor() const
     {
     return _editor;
     }
@@ -165,7 +165,7 @@ void loadAppsCategory(KServiceGroup::Ptr group, QStandardItemModel *model, QStan
     if (group && group->isValid()) {
         KServiceGroup::List list = group->entries();
 
-        for( KServiceGroup::List::ConstIterator it = list.constBegin();
+        for (KServiceGroup::List::ConstIterator it = list.constBegin();
              it != list.constEnd(); ++it) {
             const KSycocaEntry::Ptr p = (*it);
 
@@ -266,7 +266,8 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
                     // Create a action collection for our current component:context
                     KActionCollection *col = new KActionCollection(q, desktopFile);
 
-                    foreach(const QString &actionId, sourceDF.readActions()) {
+                    const auto actions = sourceDF.readActions();
+                    for (const QString &actionId : actions) {
 
                         const QString friendlyName = sourceDF.actionGroup(actionId).readEntry(QStringLiteral("Name"));
                         QAction *action = col->addAction(actionId);
@@ -276,10 +277,10 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
 
                         KGlobalAccel::self()->setShortcut(action, QList<QKeySequence>());
                         
-                        QStringList sequencesStrings = sourceDF.actionGroup(actionId).readEntry(QStringLiteral("X-KDE-Shortcuts"), QString()).split(QLatin1Char('/'));
+                        const QStringList sequencesStrings = sourceDF.actionGroup(actionId).readEntry(QStringLiteral("X-KDE-Shortcuts"), QString()).split(QLatin1Char('/'));
                         QList<QKeySequence> sequences;
                         if (!sequencesStrings.isEmpty()) {
-                            Q_FOREACH (const QString &seqString, sequencesStrings) {
+                            for (const QString &seqString : sequencesStrings) {
                                 sequences.append(QKeySequence(seqString));
                             }
                         }
@@ -298,10 +299,10 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
 
                         KGlobalAccel::self()->setShortcut(action, QList<QKeySequence>());
                         
-                        QStringList sequencesStrings = sourceDF.desktopGroup().readEntry(QStringLiteral("X-KDE-Shortcuts"), QString()).split(QLatin1Char('/'));
+                        const QStringList sequencesStrings = sourceDF.desktopGroup().readEntry(QStringLiteral("X-KDE-Shortcuts"), QString()).split(QLatin1Char('/'));
                         QList<QKeySequence> sequences;
                         if (!sequencesStrings.isEmpty()) {
-                            Q_FOREACH (const QString &seqString, sequencesStrings) {
+                            for (const QString &seqString : sequencesStrings) {
                                 sequences.append(QKeySequence(seqString));
                             }
                         }
@@ -546,13 +547,13 @@ void KGlobalShortcutsEditor::exportScheme()
         if (!url.isEmpty()) {
             KConfig config(url.path(), KConfig::SimpleConfig);
             // TODO: Bug ossi to provide a method for this
-            Q_FOREACH(const QString &group, config.groupList())
-                {
-                    // do not overwrite the Settings group. That makes it possible to
-                    // update the standard scheme kksrc file with the editor.
-                    if (group == QLatin1String("Settings")) continue;
-                    config.deleteGroup(group);
-                }
+            const auto groupList = config.groupList();
+            for (const QString &group : groupList) {
+                // do not overwrite the Settings group. That makes it possible to
+                // update the standard scheme kksrc file with the editor.
+                if (group == QLatin1String("Settings")) continue;
+                config.deleteGroup(group);
+            }
             exportConfiguration(dia.selectedComponents(), &config);
         }
     }
@@ -638,12 +639,12 @@ void KGlobalShortcutsEditor::load()
             i18n("Failed to contact the KDE global shortcuts daemon\n")
                 + errorString );
         return;
-        }
-    QList<QDBusObjectPath> components = componentsRc;
+    }
 
-    Q_FOREACH(const QDBusObjectPath &componentPath, components) {
+    const QList<QDBusObjectPath> components = componentsRc;
+    for (const QDBusObjectPath &componentPath : components) {
         d->loadComponent(componentPath);
-    } // Q_FOREACH(component)
+    }
 }
 
 
@@ -651,7 +652,7 @@ void KGlobalShortcutsEditor::save()
 {
     // The editors are responsible for the saving
     //qDebug() << "Save the changes";
-    Q_FOREACH (ComponentData *cd, d->components) {
+    for (ComponentData *cd : qAsConst(d->components)) {
         cd->editor()->commit();
     }
 }
@@ -663,7 +664,7 @@ void KGlobalShortcutsEditor::importConfiguration(KConfigBase *config)
 
     // In a first step clean out the current configurations. We do this
     // because we want to minimize the chance of conflicts.
-    Q_FOREACH (ComponentData *cd, d->components) {
+    for (ComponentData *cd : qAsConst(d->components)) {
         KConfigGroup group(config, cd->uniqueName());
         //qDebug() << cd->uniqueName() << group.name();
         if (group.exists()) {
@@ -673,7 +674,7 @@ void KGlobalShortcutsEditor::importConfiguration(KConfigBase *config)
     }
 
     // Now import the new configurations.
-    Q_FOREACH (ComponentData *cd, d->components) {
+    for (ComponentData *cd : qAsConst(d->components)) {
         KConfigGroup group(config, cd->uniqueName());
         if (group.exists()) {
             //qDebug() << "Importing" << cd->uniqueName();
@@ -682,9 +683,9 @@ void KGlobalShortcutsEditor::importConfiguration(KConfigBase *config)
     }
 }
 
-void KGlobalShortcutsEditor::exportConfiguration(QStringList components, KConfig *config) const
+void KGlobalShortcutsEditor::exportConfiguration(const QStringList &components, KConfig *config) const
     {
-    Q_FOREACH (const QString &componentFriendly, components)
+    for (const QString &componentFriendly : components)
         {
         QHash<QString, ComponentData*>::Iterator iter = d->components.find(componentFriendly);
         if (iter == d->components.end())
@@ -705,7 +706,7 @@ void KGlobalShortcutsEditor::undo()
 {
     // The editors are responsible for the undo
     //qDebug() << "Undo the changes";
-    Q_FOREACH (ComponentData *cd, d->components) {
+    for (ComponentData *cd : qAsConst(d->components)) {
         cd->editor()->undoChanges();
     }
 }
@@ -713,7 +714,7 @@ void KGlobalShortcutsEditor::undo()
 
 bool KGlobalShortcutsEditor::isModified() const
 {
-    Q_FOREACH (ComponentData *cd, d->components) {
+    for (const ComponentData *cd : qAsConst(d->components)) {
         if (cd->editor()->isModified()) {
             return true;
         }
@@ -754,11 +755,11 @@ bool KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::loadComponent(const 
         //qDebug() << shortcutContextsRc.error();
         return false;
     }
-    QStringList shortcutContexts = shortcutContextsRc;
+    const QStringList shortcutContexts = shortcutContextsRc;
 
     // We add the shortcuts for all shortcut contexts to the editor. This
     // way the user keeps full control of it's shortcuts.
-    Q_FOREACH (const QString &shortcutContext, shortcutContexts) {
+    for (const QString &shortcutContext : shortcutContexts) {
 
         QDBusReply< QList<KGlobalShortcutInfo> > shortcutsRc =
             component.allShortcutInfos(shortcutContext);
@@ -767,7 +768,7 @@ bool KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::loadComponent(const 
             //qDebug() << "allShortcutInfos() failed for " << componentPath.path() << shortcutContext;
             continue;
             }
-        QList<KGlobalShortcutInfo> shortcuts = shortcutsRc;
+        const QList<KGlobalShortcutInfo> shortcuts = shortcutsRc;
         // Shouldn't happen. But you never know
         if (shortcuts.isEmpty()) {
             //qDebug() << "Got shortcut context" << shortcutContext << "without shortcuts for"
@@ -790,7 +791,7 @@ bool KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::loadComponent(const 
                 componentContextId);
 
         // Now add the shortcuts.
-        Q_FOREACH (const KGlobalShortcutInfo &shortcut, shortcuts) {
+        for (const KGlobalShortcutInfo &shortcut : shortcuts) {
 
             const QString &objectName = shortcut.uniqueName();
             QAction *action = col->addAction(objectName);
@@ -812,7 +813,7 @@ bool KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::loadComponent(const 
             if (sc.count()>0) {
                 KGlobalAccel::self()->setDefaultShortcut(action, sc);
             }
-        } // Q_FOREACH(shortcut)
+        }
 
         QString componentFriendlyName = shortcuts[0].componentFriendlyName();
 
@@ -824,7 +825,7 @@ bool KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::loadComponent(const 
 
         q->addCollection(col, componentPath, componentContextId, componentFriendlyName );
 
-    } // Q_FOREACH(context)
+    }
 
     return true;
 }
@@ -832,13 +833,12 @@ bool KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::loadComponent(const 
 
 void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::removeComponent(
         const QString &componentUnique )
-    {
+{
     // TODO: Remove contexts too.
 
-    Q_FOREACH (const QString &text, components.keys())
-        {
-        if (components.value(text)->uniqueName() == componentUnique)
-            {
+    const auto keys = components.keys();
+    for (const QString &text : keys) {
+        if (components.value(text)->uniqueName() == componentUnique) {
             // Remove from QComboBox
             QModelIndexList results = proxyModel->match(proxyModel->index(0, 0), Qt::DisplayRole, text);
             Q_ASSERT(!results.isEmpty());
@@ -849,8 +849,8 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::removeComponent(
 
             // Remove the componentData
             delete components.take(text);
-            }
         }
     }
+}
 
 

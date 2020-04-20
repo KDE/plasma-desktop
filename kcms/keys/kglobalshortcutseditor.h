@@ -81,7 +81,7 @@ public:
     /**
      * Save the shortcuts to the configuration.
      */
-    void exportConfiguration(QStringList componentsFriendly, KConfig *config) const;
+    void exportConfiguration(const QStringList &componentsFriendly, KConfig *config) const;
 
 
     /**

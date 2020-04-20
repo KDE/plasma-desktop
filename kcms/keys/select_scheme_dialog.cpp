@@ -70,8 +70,8 @@ SelectSchemeDialog::SelectSchemeDialog(QWidget *parent)
 
     ui->m_url->setMode(KFile::LocalOnly | KFile::ExistingOnly);
 
-    connect(ui->m_schemes, SIGNAL(activated(int)),
-            this, SLOT(schemeActivated(int)));
+    connect(ui->m_schemes, QOverload<int>::of(&KComboBox::activated),
+            this, &SelectSchemeDialog::schemeActivated);
     connect(ui->m_url->lineEdit(), &QLineEdit::textChanged,
             this, &SelectSchemeDialog::slotUrlChanged);
     mOkButton->setEnabled(false);

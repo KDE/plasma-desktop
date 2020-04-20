@@ -43,8 +43,7 @@ ExportSchemeDialog::ExportSchemeDialog(QStringList components, QWidget *parent)
     QGridLayout *vb = new QGridLayout(this);
 
     int item=0;
-    Q_FOREACH(QString component, mComponents)
-    {
+    for (const QString &component : qAsConst(mComponents)) {
         QCheckBox *cb = new QCheckBox(component);
         vb->addWidget(cb, item / 2, item % 2);
         mButtons.addButton(cb, item);
@@ -70,8 +69,8 @@ ExportSchemeDialog::~ExportSchemeDialog()
 QStringList ExportSchemeDialog::selectedComponents() const
 {
     QStringList rc;
-    Q_FOREACH(QAbstractButton const *button, mButtons.buttons())
-    {
+    const auto buttons = mButtons.buttons();
+    for (const QAbstractButton *button : buttons) {
         if (button->isChecked())
         {
             // Remove the '&' added by KAcceleratorManager magically

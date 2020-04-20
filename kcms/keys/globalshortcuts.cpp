@@ -37,10 +37,9 @@ GlobalShortcutsModule::GlobalShortcutsModule(QWidget *parent, const QVariantList
 {
     KCModule::setButtons(KCModule::Buttons(KCModule::Default | KCModule::Apply | KCModule::Help));
 
-
     // Create the kglobaleditor
     editor = new KGlobalShortcutsEditor(this, KShortcutsEditor::GlobalAction);
-    connect(editor, SIGNAL(changed(bool)), this, SIGNAL(changed(bool)));
+    connect(editor, &KGlobalShortcutsEditor::changed, this, &GlobalShortcutsModule::markAsChanged);
 
     // Layout the hole bunch
     QVBoxLayout *global = new QVBoxLayout;
