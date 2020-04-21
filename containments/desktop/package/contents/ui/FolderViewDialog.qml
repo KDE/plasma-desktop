@@ -61,7 +61,7 @@ Folder.SubDialog {
     mainItem: FolderViewDropArea {
         id: folderViewDropArea
 
-        width: folderView.cellWidth * 3 + (10 * units.devicePixelRatio) // FIXME HACK: Use actual scrollbar width.
+        width: folderView.cellWidth * 3 + (16 * units.devicePixelRatio) // FIXME HACK: Use actual scrollbar width.
         height: folderView.cellHeight * 2
 
         folderView: folderView
