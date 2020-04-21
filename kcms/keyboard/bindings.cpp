@@ -38,6 +38,7 @@ KeyboardLayoutActionCollection::KeyboardLayoutActionCollection(QObject* parent, 
 		KActionCollection(parent, COMPONENT_NAME),
 		configAction(configAction_)
 {
+    setComponentDisplayName(i18n("Keyboard Layout Switcher"));
 	QAction* toggleAction = addAction( actionName );
 	toggleAction->setText( i18n(actionName) );
         KGlobalAccel::self()->setShortcut(toggleAction,

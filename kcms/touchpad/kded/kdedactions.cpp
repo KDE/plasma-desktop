@@ -30,6 +30,7 @@ TouchpadGlobalActions::TouchpadGlobalActions(bool isConfiguration, QObject *pare
 {
     //setComponentName(TouchpadPluginFactory::componentData());
     setComponentName("kcm_touchpad");
+    setComponentDisplayName(i18n("Touchpad"));
 
     QAction *enable = addAction("Enable Touchpad");
     enable->setText(i18n("Enable Touchpad"));
