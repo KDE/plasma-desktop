@@ -14,10 +14,7 @@
     </entry>
     <entry name="theme" key="Theme" type="String">
       <label>Name of the current splash theme</label>
-      <code>KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
-        QString defaultTheme = cg.readEntry("LookAndFeelPackage", QStringLiteral("org.kde.breeze.desktop"));
-     </code>
-      <default code="true">defaultTheme</default>
+      <default>org.kde.breeze.desktop</default>
     </entry>
   </group>
 </kcfg>
