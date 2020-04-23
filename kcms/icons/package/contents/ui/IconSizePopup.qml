@@ -22,7 +22,6 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.kcm 1.3 as KCM
 
 QtControls.Popup {
     id: iconSizePopup
@@ -111,13 +110,7 @@ QtControls.Popup {
                 to: sizes.length - 1
                 stepSize: 1.0
                 snapMode: QtControls.Slider.SnapAlways
-
-                KCM.SettingStateBinding {
-                    target: parent
-                    configObject: kcm.iconsSettings
-                    itemName: iconTypeList.currentItem.configKey
-                    extraEnabledPredicate: parent.sizes.length > 0
-                }
+                enabled: sizes.length > 0 && !kcm.iconsSettings.isImmutable(iconTypeList.currentItem.configKey)
 
                 onMoved: {
                     kcm.iconsSettings[iconTypeList.currentItem.configKey] = iconSizeSlider.sizes[iconSizeSlider.value] || 0
