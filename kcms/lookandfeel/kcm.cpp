@@ -27,8 +27,9 @@
 #include <KSharedConfig>
 #include <KGlobalSettings>
 #include <KIconLoader>
+#include <KIO/ApplicationLauncherJob>
 #include <KAutostart>
-#include <KRun>
+#include <KDialogJobUiDelegate>
 #include <KService>
 
 #include <QDBusConnection>
@@ -388,12 +389,14 @@ void KCMLookandFeel::save()
                 const QStringList autostartServices = cg.readEntry("Services", QStringList());
 
                 for (const QString &serviceFile : autostartServices) {
-                    KService service(serviceFile + QStringLiteral(".desktop"));
+                    KService::Ptr service{new KService(serviceFile + QStringLiteral(".desktop"))};
                     KAutostart as(serviceFile);
-                    as.setCommand(service.exec());
+                    as.setCommand(service->exec());
                     as.setAutostarts(true);
                     if (qEnvironmentVariableIsSet("KDE_FULL_SESSION")) {
-                        KRun::runApplication(service, {}, nullptr);
+                        auto *job = new KIO::ApplicationLauncherJob(service);
+                        job->setUiDelegate(new KDialogJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
+                        job->start();
                     }
                 }
             }
