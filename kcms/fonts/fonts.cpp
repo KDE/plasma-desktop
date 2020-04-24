@@ -261,7 +261,17 @@ void KFonts::adjustAllFonts()
         m_settings->setMenuFont(applyFontDiff(m_settings->menuFont(), font, fontDiffFlags));
         m_settings->setToolBarFont(applyFontDiff(m_settings->toolBarFont(), font, fontDiffFlags));
         m_settings->setActiveFont(applyFontDiff(m_settings->activeFont(), font, fontDiffFlags));
-        m_settings->setSmallestReadableFont(applyFontDiff(m_settings->smallestReadableFont(), font, fontDiffFlags));
+
+        QFont smallestFont = font;
+        // Make the small font 2 points smaller than the general font, but only
+        // if the general font is 9pt or higher or else the small font would be
+        // borderline unreadable. Assume that if the user is making the font
+        // tiny, they want a tiny font everywhere.
+        const int generalFontPointSize = font.pointSize();
+        if (generalFontPointSize >= 9) {
+            smallestFont.setPointSize(generalFontPointSize - 2);
+        }
+        m_settings->setSmallestReadableFont(applyFontDiff(m_settings->smallestReadableFont(), smallestFont, fontDiffFlags));
 
         const QFont adjustedFont = applyFontDiff(m_settings->fixed(), font, fontDiffFlags);
         if (QFontInfo(adjustedFont).fixedPitch()) {
