@@ -54,59 +54,6 @@
 /**** DLL Interface ****/
 K_PLUGIN_FACTORY_WITH_JSON(KFontsFactory, "kcm_fonts.json", registerPlugin<KFonts>();)
 
-//from KFontRequester
-// Determine if the font with given properties is available on the system,
-// otherwise find and return the best fitting combination.
-static QFont nearestExistingFont(const QFont &font)
-{
-    QFontDatabase dbase;
-
-    // Initialize font data according to given font object.
-    QString family = font.family();
-    QString style = dbase.styleString(font);
-    qreal size = font.pointSizeF();
-
-    // Check if the family exists.
-    const QStringList families = dbase.families();
-    if (!families.contains(family)) {
-        // Chose another family.
-        family = QFontInfo(font).family(); // the nearest match
-        if (!families.contains(family)) {
-            family = families.count() ? families.at(0) : QStringLiteral("fixed");
-        }
-    }
-
-    // Check if the family has the requested style.
-    // Easiest by piping it through font selection in the database.
-    QString retStyle = dbase.styleString(dbase.font(family, style, 10));
-    style = retStyle;
-
-    // Check if the family has the requested size.
-    // Only for bitmap fonts.
-    if (!dbase.isSmoothlyScalable(family, style)) {
-        QList<int> sizes = dbase.smoothSizes(family, style);
-        if (!sizes.contains(size)) {
-            // Find nearest available size.
-            int mindiff = 1000;
-            int refsize = size;
-            Q_FOREACH (int lsize, sizes) {
-                int diff = qAbs(refsize - lsize);
-                if (mindiff > diff) {
-                    mindiff = diff;
-                    size = lsize;
-                }
-            }
-        }
-    }
-
-    // Select the font with confirmed properties.
-    QFont result = dbase.font(family, style, int(size));
-    if (dbase.isSmoothlyScalable(family, style) && result.pointSize() == floor(size)) {
-        result.setPointSizeF(size);
-    }
-    return result;
-}
-
 /**** KFonts ****/
 
 KFonts::KFonts(QObject *parent, const QVariantList &args)
@@ -163,23 +110,10 @@ QAbstractItemModel *KFonts::hintingOptionsModel() const
     return m_hintingOptionsModel;
 }
 
-void KFonts::setNearestExistingFonts()
-{
-    m_settings->setFont(nearestExistingFont(m_settings->font()));
-    m_settings->setFixed(nearestExistingFont(m_settings->fixed()));
-    m_settings->setSmallestReadableFont(nearestExistingFont(m_settings->smallestReadableFont()));
-    m_settings->setToolBarFont(nearestExistingFont(m_settings->toolBarFont()));
-    m_settings->setMenuFont(nearestExistingFont(m_settings->menuFont()));
-    m_settings->setActiveFont(nearestExistingFont(m_settings->activeFont()));
-}
-
 void KFonts::load()
 {
     // first load all the settings
     ManagedConfigModule::load();
-
-    // Then set the existing fonts based on those settings
-    setNearestExistingFonts();
 
     // Load preview
     // NOTE: This needs to be done AFTER AA settings is loaded
