@@ -53,7 +53,7 @@
 
 #include <stddef.h>
 #include <limits.h>
-#include <xorg/synaptics-properties.h>
+#include <synaptics-properties.h>
 
 #define SYN_MAX_BUTTONS 12
 
