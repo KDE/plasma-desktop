@@ -1,50 +1,61 @@
 # KI18N Translation Domain for this library
-add_definitions(-DTRANSLATION_DOMAIN=\"kcmkeys\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_keys\")
 
-########### next target ###############
-
-set(kcm_keys_PART_SRCS
-  kglobalshortcutseditor.cpp
-  globalshortcuts.cpp
-  select_scheme_dialog.cpp
-  kglobalaccel_interface.cpp
-  kglobalaccel_component_interface.cpp
-  export_scheme_dialog.cpp
-  )
-
-ki18n_wrap_ui( kcm_keys_PART_SRCS
-    export_scheme_dialog.ui
-    kglobalshortcutseditor.ui
-    select_application.ui
-    select_scheme_dialog.ui )
+set(kcm_keys_SRCS
+    kcm_keys.cpp
+    filteredmodel.cpp
+    shortcutsmodel.cpp
+    )
 
 set(kglobalaccel_xml ${KGLOBALACCEL_DBUS_INTERFACES_DIR}/kf5_org.kde.KGlobalAccel.xml)
-set_source_files_properties(${kglobalaccel_xml} PROPERTIES INCLUDE "kglobalshortcutinfo.h")
-qt5_add_dbus_interface(kdeui_LIB_SRCS ${kglobalaccel_xml} kglobalaccel_interface )
+set_source_files_properties(${kglobalaccel_xml} PROPERTIES
+    INCLUDE "kglobalshortcutinfo.h"
+    NO_NAMESPACE TRUE
+    CLASSNAME "KGlobalAccelInterface"
+)
+qt5_add_dbus_interface(kcm_keys_SRCS ${kglobalaccel_xml} kglobalaccel_interface)
 
 set(kglobalaccel_component_xml ${KGLOBALACCEL_DBUS_INTERFACES_DIR}/kf5_org.kde.kglobalaccel.Component.xml)
-set_source_files_properties(${kglobalaccel_component_xml} PROPERTIES INCLUDE "kglobalshortcutinfo.h")
-qt5_add_dbus_interface(kdeui_LIB_SRCS ${kglobalaccel_component_xml} kglobalaccel_component_interface )
+set_source_files_properties(${kglobalaccel_component_xml} PROPERTIES
+    INCLUDE "kglobalshortcutinfo.h"
+    NO_NAMESPACE TRUE
+    CLASSNAME "KGlobalAccelComponentInterface"
+)
+qt5_add_dbus_interface(kcm_keys_SRCS ${kglobalaccel_component_xml} kglobalaccel_component_interface)
 
-add_library(kcm_keys MODULE ${kcm_keys_PART_SRCS})
+
+ecm_qt_declare_logging_category(kcm_keys_SRCS
+    HEADER kcmkeys_debug.h
+    IDENTIFIER KCMKEYS
+    CATEGORY_NAME org.kde.kcm_keys
+    EXPORT KCMKEYS
+    DESCRIPTION "System Settings - Global Shortcuts"
+)
+
+ecm_qt_install_logging_categories(
+    EXPORT KCMKEYS
+    DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
+)
+
+
+add_library(kcm_keys MODULE ${kcm_keys_SRCS})
+
 target_link_libraries(kcm_keys
     Qt5::DBus
-    KF5::KCMUtils
     KF5::GlobalAccel
     KF5::I18n
     KF5::KIOWidgets
-    KF5::XmlGui
-    KF5::ItemModels
-    KF5::ItemViews
+    KF5::QuickAddons
 )
 
-install(TARGETS kcm_keys  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+kcoreaddons_desktop_to_json(kcm_keys "kcm_keys.desktop")
 
+install(FILES kcm_keys.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(TARGETS kcm_keys DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
-########### install files ###############
+kpackage_install_package(package kcm_keys kcms)
 
-install( FILES keys.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
-install( FILES
+install(FILES
     schemes/kde3.kksrc
     schemes/kde4.kksrc
     schemes/mac4.kksrc
@@ -52,6 +63,5 @@ install( FILES
     schemes/win3.kksrc
     schemes/win4.kksrc
     schemes/wm3.kksrc
-    DESTINATION  ${KDE_INSTALL_DATADIR}/kcmkeys )
-
-
+    DESTINATION  ${KDE_INSTALL_DATADIR}/kcmkeys
+)
