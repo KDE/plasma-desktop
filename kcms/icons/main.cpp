@@ -140,6 +140,16 @@ void IconModule::save()
 {
     bool needToExportToKDE4 = m_settings->isSaveNeeded();
 
+    // keep track of Group of icons size that has changed
+    QList<int> notifyList;
+    for (int i = 0; i < m_iconSizeCategoryModel->rowCount(); ++i) {
+        const QModelIndex index = m_iconSizeCategoryModel->index(i, 0);
+        const QString key = index.data(IconSizeCategoryModel::ConfigKeyRole).toString();
+        if (m_settings->findItem(key)->isSaveNeeded()) {
+            notifyList << index.data(IconSizeCategoryModel::KIconLoaderGroupRole).toInt();
+        }
+    }
+
     ManagedConfigModule::save();
 
     if (needToExportToKDE4) {
@@ -148,7 +158,10 @@ void IconModule::save()
 
     processPendingDeletions();
 
-    KIconLoader::global()->newIconLoader();
+    // Notify the group(s) where icon sizes have changed
+    for (auto group : qAsConst(notifyList)) {
+        KIconLoader::emitChange(KIconLoader::Group(group));
+    }
 }
 
 bool IconModule::isSaveNeeded() const
@@ -286,10 +299,8 @@ void IconModule::exportToKDE4()
             QFile::remove(path);
         }
 
-        //message kde4 apps that icon theme is changed
+        //message kde4 apps that icon theme has changed
         for (int i = 0; i < KIconLoader::LastGroup; i++) {
-            KIconLoader::emitChange(KIconLoader::Group(i));
-
             QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KGlobalSettings"),
                                                               QStringLiteral("org.kde.KGlobalSettings"),
                                                               QStringLiteral("notifyChange"));

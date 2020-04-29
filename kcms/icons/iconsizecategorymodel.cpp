@@ -18,16 +18,17 @@
 
 #include "iconsizecategorymodel.h"
 #include <KLocalizedString>
+#include <KIconLoader>
 
 IconSizeCategoryModel::IconSizeCategoryModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_data({
-        {QStringLiteral("desktopSize"), I18N_NOOP("Desktop"), QStringLiteral("Desktop")},
-        {QStringLiteral("toolbarSize"), I18N_NOOP("Toolbar"), QStringLiteral("Toolbar")},
-        {QStringLiteral("mainToolbarSize"), I18N_NOOP("Main Toolbar"), QStringLiteral("MainToolbar")},
-        {QStringLiteral("smallSize"), I18N_NOOP("Small Icons"), QStringLiteral("Small")},
-        {QStringLiteral("panelSize"), I18N_NOOP("Panel"), QStringLiteral("Panel")},
-        {QStringLiteral("dialogSize"), I18N_NOOP("Dialogs"), QStringLiteral("Dialog")}
+        {QStringLiteral("desktopSize"), I18N_NOOP("Desktop"), QStringLiteral("Desktop"), KIconLoader::Desktop},
+        {QStringLiteral("toolbarSize"), I18N_NOOP("Toolbar"), QStringLiteral("Toolbar"), KIconLoader::Toolbar},
+        {QStringLiteral("mainToolbarSize"), I18N_NOOP("Main Toolbar"), QStringLiteral("MainToolbar"), KIconLoader::MainToolbar},
+        {QStringLiteral("smallSize"), I18N_NOOP("Small Icons"), QStringLiteral("Small"), KIconLoader::Small},
+        {QStringLiteral("panelSize"), I18N_NOOP("Panel"), QStringLiteral("Panel"), KIconLoader::Panel},
+        {QStringLiteral("dialogSize"), I18N_NOOP("Dialogs"), QStringLiteral("Dialog"), KIconLoader::Dialog}
     })
 {
 }
@@ -58,6 +59,8 @@ QVariant IconSizeCategoryModel::data(const QModelIndex &index, int role) const
         return item.configKey;
     case ConfigSectionRole:
         return item.configSection;
+    case  KIconLoaderGroupRole:
+        return item.kIconloaderGroup;
     }
 
     return QVariant();
@@ -68,5 +71,6 @@ QHash<int, QByteArray> IconSizeCategoryModel::roleNames() const
     QHash<int, QByteArray> roleNames = QAbstractListModel::roleNames();
     roleNames[ConfigKeyRole] = QByteArrayLiteral("configKey");
     roleNames[ConfigSectionRole] = QByteArrayLiteral("configSectionRole");
+    roleNames[KIconLoaderGroupRole] = QByteArrayLiteral("KIconLoaderGroup");
     return roleNames;
 }
