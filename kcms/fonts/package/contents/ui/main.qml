@@ -22,6 +22,9 @@ import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.0 as QtControls
 import QtQuick.Dialogs 1.2 as QtDialogs
+
+// For KCMShell.open()
+import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kcm 1.1 as KCM
 
@@ -29,6 +32,13 @@ KCM.SimpleKCM {
     id: root
 
     KCM.ConfigModule.quickHelp: i18n("This module lets you configure the system fonts.")
+
+    property var kscreenAction: Kirigami.Action {
+        visible: KCMShell.authorize("kcm_kscreen.desktop").length > 0
+        text: i18n("Change Display Scaling...")
+        iconName: "preferences-desktop-display"
+        onTriggered: KCMShell.open("kcm_kscreen.desktop")
+    }
 
     ColumnLayout {
 
@@ -42,6 +52,38 @@ KCM.SimpleKCM {
                 target: kcm
                 onAliasingChangeApplied: antiAliasingMessage.visible = true
             }
+        }
+
+        Kirigami.InlineMessage {
+            id: hugeFontsMessage
+            Layout.fillWidth: true
+            showCloseButton: true
+            text: i18n("Very large fonts may produce odd-looking results. Consider adjusting the global screen scale instead of using a very large font size.")
+
+            Connections {
+                target: kcm
+                onFontsHaveChanged: {
+                    if (generalFontWidget.font.pointSize > 14
+                        || fixedWidthFontWidget.font.pointSize > 14
+                        || smallFontWidget.font.pointSize > 14
+                        || toolbarFontWidget.font.pointSize > 14
+                        || menuFontWidget.font.pointSize > 18) {
+                        hugeFontsMessage.visible = true
+                    } else {
+                        hugeFontsMessage.visible = false
+                    }
+                }
+            }
+
+            actions: [ kscreenAction ]
+        }
+
+        Kirigami.InlineMessage {
+            id: dpiTwiddledMessage
+            Layout.fillWidth: true
+            showCloseButton: true
+            text: i18n("The recommended way to scale the user interface is using the global screen scaling feature.")
+            actions: [ kscreenAction ]
         }
 
         Kirigami.FormLayout {
@@ -71,24 +113,28 @@ KCM.SimpleKCM {
                 enabled: !kcm.fontsSettings.isImmutable("font")
             }
             FontWidget {
+                id: fixedWidthFontWidget
                 label: i18n("Fixed width:")
                 category: "fixed"
                 font: kcm.fontsSettings.fixed
                 enabled: !kcm.fontsSettings.isImmutable("fixed")
             }
             FontWidget {
+                id: smallFontWidget
                 label: i18n("Small:")
                 category: "smallestReadableFont"
                 font: kcm.fontsSettings.smallestReadableFont
                 enabled: !kcm.fontsSettings.isImmutable("smallestReadableFont")
             }
             FontWidget {
+                id: toolbarFontWidget
                 label: i18n("Toolbar:")
                 category: "toolBarFont"
                 font: kcm.fontsSettings.toolBarFont
                 enabled: !kcm.fontsSettings.isImmutable("toolBarFont")
             }
             FontWidget {
+                id: menuFontWidget
                 label: i18n("Menu:")
                 category: "menuFont"
                 font: kcm.fontsSettings.menuFont
@@ -241,7 +287,10 @@ KCM.SimpleKCM {
                     id: dpiCheckBox
                     checked: kcm.fontsAASettings.dpi !== 0
                     text: i18n("Force font DPI:")
-                    onClicked: kcm.fontsAASettings.dpi = (checked ? dpiSpinBox.value : 0)
+                    onClicked: {
+                        kcm.fontsAASettings.dpi = checked ? dpiSpinBox.value : 0
+                        dpiTwiddledMessage.visible = checked
+                    }
                 }
 
                 QtControls.SpinBox {

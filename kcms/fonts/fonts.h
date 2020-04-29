@@ -74,6 +74,7 @@ Q_SIGNALS:
     void hintingCurrentIndexChanged();
     void subPixelCurrentIndexChanged();
     void aliasingChangeApplied();
+    void fontDpiSettingsChanged();
 
 private:
     QFont applyFontDiff(const QFont &fnt, const QFont &newFont, int fontDiffFlags);

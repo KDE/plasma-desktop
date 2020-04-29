@@ -225,8 +225,6 @@ void KFonts::save()
     KGlobalSettings::self()->emitChange(KGlobalSettings::FontChanged);
 
     runRdb(KRdbExportXftSettings | KRdbExportGtkTheme);
-
-    emit fontsHaveChanged();
 }
 
 void KFonts::adjustFont(const QFont &font, const QString &category)
@@ -249,6 +247,7 @@ void KFonts::adjustFont(const QFont &font, const QString &category)
             m_settings->setFixed(selFont);
         }
     }
+    emit fontsHaveChanged();
 }
 
 void KFonts::adjustAllFonts()
