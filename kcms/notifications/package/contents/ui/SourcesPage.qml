@@ -22,7 +22,7 @@ import QtQuick 2.9
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
 
-import org.kde.kirigami 2.10 as Kirigami
+import org.kde.kirigami 2.12 as Kirigami
 import org.kde.kcm 1.2 as KCM
 
 import org.kde.private.kcms.notifications 1.0 as Private
@@ -168,15 +168,9 @@ Kirigami.Page {
                 visible: typeof appConfiguration.rootIndex !== "undefined" && appConfiguration.rootIndex.valid
             }
 
-            QtControls.Label {
-                anchors {
-                    verticalCenter: parent.verticalCenter
-                    left: parent.left
-                    right: parent.right
-                    margins: Kirigami.Units.smallSpacing
-                }
-                horizontalAlignment: Text.AlignHCenter
-                wrapMode: Text.WordWrap
+            Kirigami.PlaceholderMessage {
+                anchors.fill: parent
+                anchors.margins: Kirigami.Units.largeSpacing
                 text: i18n("Select an application from the list to configure its notification settings and behavior.")
                 visible: !appConfiguration.rootIndex || !appConfiguration.rootIndex.valid
             }
