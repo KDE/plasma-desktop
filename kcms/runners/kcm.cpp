@@ -1,5 +1,6 @@
 /* This file is part of the KDE Project
    Copyright (c) 2014 Vishesh Handa <me@vhanda.in>
+   Copyright (c) 2020 Alexander Lohnau <alexander.lohnau@gmx.de>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -18,10 +19,7 @@
 
 #include "kcm.h"
 
-#include "kcmutils_version.h"
-
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <KAboutData>
 #include <KSharedConfig>
 #include <QDebug>
@@ -36,7 +34,6 @@
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QDialog>
-#include <QDialogButtonBox>
 #include <QPainter>
 #include <QPushButton>
 
@@ -80,16 +77,10 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
 
     connect(m_pluginSelector, &KPluginSelector::changed, this, &SearchConfigModule::markAsChanged);
     connect(m_pluginSelector, &KPluginSelector::configCommitted, this, &SearchConfigModule::markAsChanged);
-
-#if KCMUTILS_VERSION >= QT_VERSION_CHECK(5, 67, 0)
     connect(m_pluginSelector, &KPluginSelector::defaulted, this, &KCModule::defaulted);
-#endif
 
     layout->addLayout(headerLayout);
     layout->addWidget(m_pluginSelector);
-
-    Plasma::RunnerManager *manager = new Plasma::RunnerManager(this);
-    manager->reloadConfiguration();
 }
 
 void SearchConfigModule::load()
