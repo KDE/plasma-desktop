@@ -240,7 +240,7 @@ KCM.SimpleKCM {
             id: fileDialog
             title: save ? i18n("Export Shortcut Scheme") : i18n("Import Shortcut Scheme")
             folder: shortcuts.home
-            nameFilters: [ i18nc("Template for file dialog","Schortcut Scheme (*.kksrc)") ]
+            nameFilters: [ i18nc("Template for file dialog","Shortcut Scheme (*.kksrc)") ]
             defaultSuffix: ".kksrc"
             selectExisting: !fileDialogLoader.save
             Component.onCompleted: open()
