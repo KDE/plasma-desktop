@@ -72,7 +72,7 @@ ColumnLayout {
 
     Kirigami.InlineMessage {
         visible: plasmoid.immutable || animating
-        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout cannot be changed while widgets are locked")
+        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout changes have been restricted by the system administrator")
         showCloseButton: true
         Layout.fillWidth: true
         Layout.leftMargin: Kirigami.Units.smallSpacing
