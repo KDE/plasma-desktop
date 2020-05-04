@@ -33,7 +33,8 @@ KCM.SimpleKCM {
 
     KCM.ConfigModule.quickHelp: i18n("This module lets you configure the system fonts.")
 
-    property var kscreenAction: Kirigami.Action {
+    Kirigami.Action {
+        id: kscreenAction
         visible: KCMShell.authorize("kcm_kscreen.desktop").length > 0
         text: i18n("Change Display Scaling...")
         iconName: "preferences-desktop-display"
@@ -63,15 +64,11 @@ KCM.SimpleKCM {
             Connections {
                 target: kcm
                 onFontsHaveChanged: {
-                    if (generalFontWidget.font.pointSize > 14
-                        || fixedWidthFontWidget.font.pointSize > 14
-                        || smallFontWidget.font.pointSize > 14
-                        || toolbarFontWidget.font.pointSize > 14
-                        || menuFontWidget.font.pointSize > 18) {
-                        hugeFontsMessage.visible = true
-                    } else {
-                        hugeFontsMessage.visible = false
-                    }
+                    hugeFontsMessage.visible = generalFontWidget.font.pointSize > 14
+                    || fixedWidthFontWidget.font.pointSize > 14
+                    || smallFontWidget.font.pointSize > 14
+                    || toolbarFontWidget.font.pointSize > 14
+                    || menuFontWidget.font.pointSize > 14
                 }
             }
 
