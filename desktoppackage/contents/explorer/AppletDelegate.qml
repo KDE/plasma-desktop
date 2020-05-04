@@ -223,7 +223,7 @@ Item {
                 // otherwise causes binding loop due to the way the Plasma sets the height
                 height: implicitHeight
                 text: model.description
-                font.pointSize: theme.smallestFont.pointSize
+                font: theme.smallestFont
                 wrapMode: Text.WordWrap
                 elide: Text.ElideRight
                 maximumLineCount: heading.lineCount === 1 ? 3 : 2

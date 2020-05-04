@@ -281,7 +281,7 @@ ColumnLayout {
                     lineHeight: 1
                     elide: parent.state ? Text.ElideNone : Text.ElideRight
                     text: artist || ""
-                    font.pointSize: theme.smallestFont.pointSize
+                    font: theme.smallestFont
                 }
             }
         }
