@@ -65,7 +65,7 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
                                                                  : QStringLiteral("edit-clear-locationbar-rtl")));
     connect(clearHistoryButton, &QPushButton::clicked, this, [this] {
         KConfigGroup generalConfig(m_config.group("General"));
-        generalConfig.deleteEntry("history");
+        generalConfig.deleteEntry("history", KConfig::Notify);
         generalConfig.sync();
     });
 
