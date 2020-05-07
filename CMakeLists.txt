@@ -133,6 +133,10 @@ find_package(Synaptics)
 set_package_properties(Synaptics PROPERTIES TYPE OPTIONAL)
 add_feature_info("Synaptics" SYNAPTICS_FOUND "Synaptics libraries needed for touchpad KCM")
 
+find_package(XorgServer)
+set_package_properties(XorgServer PROPERTIES TYPE OPTIONAL)
+add_feature_info("XorgServer" XORGSERVER_FOUND "XServer header needed for touchpad KCM (X11 backend)")
+
 find_package(XorgLibinput)
 set_package_properties(XorgLibinput PROPERTIES TYPE OPTIONAL)
 add_feature_info("XorgLibinput" XORGLIBINPUT_FOUND "Libinput driver headers needed for mouse and touchpad KCM")

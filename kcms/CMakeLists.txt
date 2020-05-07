@@ -58,7 +58,7 @@ if(X11_Xcursor_FOUND)
     add_subdirectory(cursortheme)
 endif()
 
-if (SYNAPTICS_FOUND AND X11_Xinput_FOUND)
+if (XORGSERVER_FOUND AND SYNAPTICS_FOUND AND X11_Xinput_FOUND)
     add_subdirectory(touchpad)
 endif()
 
