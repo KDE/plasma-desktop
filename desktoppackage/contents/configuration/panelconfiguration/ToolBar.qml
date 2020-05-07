@@ -20,6 +20,7 @@ import QtQuick 2.0
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.configuration 2.0
 import org.kde.kirigami 2.0 as Kirigami
@@ -39,7 +40,7 @@ Item {
         onTriggered: {
             // avoid leaving the panel in an inconsistent state when escaping while dragging it
             // "checked" means "pressed" in this case, we abuse that property to make the button look pressed
-            if (edgeHandle.checked || sizeHandle.checked) {
+            if (edgeHandle.checked) {
                 return
             }
 
@@ -89,8 +90,8 @@ Item {
 
     GridLayout {
         id: row
-        columns: dialogRoot.vertical ? 1 : 2
-        rows: dialogRoot.vertical ? 2 : 1
+        columns: dialogRoot.vertical ? 1 : 4
+        rows: dialogRoot.vertical ? 4 : 1
         anchors.centerIn: parent
 
         rowSpacing: units.smallSpacing
@@ -100,9 +101,45 @@ Item {
             id: edgeHandle
             Layout.alignment: Qt.AlignHCenter
         }
-        SizeHandle {
-            id: sizeHandle
-            Layout.alignment: Qt.AlignHCenter
+        Item {
+            Layout.preferredWidth: units.gridUnit
+            Layout.preferredHeight: units.gridUnit
+        }
+        PlasmaComponents3.Label {
+            Layout.fillWidth: true
+            wrapMode: Text.Wrap
+
+            text: panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge ? i18nd("plasma_shell_org.kde.plasma.desktop", "Panel width:") : i18nd("plasma_shell_org.kde.plasma.desktop", "Panel height:")
+        }
+        PlasmaComponents3.SpinBox {
+            Layout.fillWidth: true
+
+            editable: true
+
+            from: 20 // below this size, the panel is mostly unusable
+            to: PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge ? panel.screenToFollow.geometry.width / 2 : panel.screenToFollow.geometry.height / 2
+            stepSize: 2
+
+            value: panel.thickness
+            onValueModified: {
+                panel.thickness = value
+                // Adjust the position of the config bar too
+                switch (panel.location) {
+                    case PlasmaCore.Types.TopEdge:
+                        configDialog.y = panel.y + panel.thickness;
+                        break;
+                    case PlasmaCore.Types.LeftEdge:
+                        configDialog.x = panel.x + panel.thickness;
+                        break;
+                    case PlasmaCore.Types.RightEdge:
+                        configDialog.x = panel.x - configDialog.width;
+                        break;
+                    case PlasmaCore.Types.BottomEdge:
+                    default:
+                        configDialog.y = panel.y - configDialog.height;
+                        break;
+                }
+            }
         }
     }
 
