@@ -82,7 +82,6 @@ Item {
         Layout.minimumWidth: units.iconSizes.small
         Layout.minimumHeight: Layout.minimumWidth
 
-        icon: plasmoid.icon
         mainText: plasmoid.title
         subText: plasmoid.toolTipSubText
 
