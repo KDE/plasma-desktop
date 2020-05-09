@@ -45,6 +45,7 @@ class SwitcherBackend : public QObject {
     Q_OBJECT
 
     Q_PROPERTY(bool shouldShowSwitcher READ shouldShowSwitcher WRITE setShouldShowSwitcher NOTIFY shouldShowSwitcherChanged)
+    Q_PROPERTY(bool dropEnabled READ dropEnabled CONSTANT)
 
 
 public:
@@ -68,6 +69,10 @@ public Q_SLOTS:
 
     void setCurrentActivity(const QString &activity);
     void stopActivity(const QString &activity);
+
+    void setDropMode(bool value);
+    void drop(QMimeData* mimeData, int modifiers, const QVariant &activityId);
+    bool dropEnabled() const;
 
 private:
     template <typename Handler>
@@ -98,6 +103,9 @@ private:
     bool m_shouldShowSwitcher;
     QTimer m_modKeyPollingTimer;
     QString m_previousActivity;
+
+    bool m_dropModeActive;
+    QTimer m_dropModeHider;
 
     SortedActivitiesModel *m_runningActivitiesModel = nullptr;
     SortedActivitiesModel *m_stoppedActivitiesModel = nullptr;

@@ -23,10 +23,13 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.draganddrop 2.0 as DND
+
+import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
 
 import org.kde.activities 0.1 as Activities
 
-MouseArea {
+DND.DropArea {
     id: root
     property string activeSource: "Status"
     height: units.iconSizes.large
@@ -51,10 +54,21 @@ MouseArea {
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
-    onClicked: {
-        var service = dataSource.serviceForSource(activeSource)
-        var operation = service.operationDescription("toggleActivityManager")
-        service.startOperationCall(operation)
+    MouseArea {
+        anchors.fill: parent
+        onClicked: {
+            var service = dataSource.serviceForSource(activeSource)
+            var operation = service.operationDescription("toggleActivityManager")
+            service.startOperationCall(operation)
+        }
+    }
+
+    onDragEnter: {
+        ActivitySwitcher.Backend.setDropMode(true);
+    }
+
+    onDragLeave: {
+        ActivitySwitcher.Backend.setDropMode(false);
     }
 
     PlasmaCore.DataSource {

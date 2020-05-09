@@ -39,6 +39,9 @@
 #include <KIO/PreviewJob>
 #include <KConfig>
 #include <KConfigGroup>
+#include <KWindowSystem>
+#include <windowtasksmodel.h>
+#include <xwindowtasksmodel.h>
 
 // X11
 #include <X11/keysym.h>
@@ -245,6 +248,7 @@ inline void SwitcherBackend::registerShortcut(const QString &actionName,
 SwitcherBackend::SwitcherBackend(QObject *parent)
     : QObject(parent)
     , m_shouldShowSwitcher(false)
+    , m_dropModeActive(false)
     , m_runningActivitiesModel(new SortedActivitiesModel({KActivities::Info::Running, KActivities::Info::Stopping}, this))
     , m_stoppedActivitiesModel(new SortedActivitiesModel({KActivities::Info::Stopped, KActivities::Info::Starting}, this))
 {
@@ -261,8 +265,15 @@ SwitcherBackend::SwitcherBackend(QObject *parent)
     connect(this, &SwitcherBackend::shouldShowSwitcherChanged,
             m_runningActivitiesModel, &SortedActivitiesModel::setInhibitUpdates);
 
+    m_modKeyPollingTimer.setInterval(100);
+    m_modKeyPollingTimer.setSingleShot(true);
     connect(&m_modKeyPollingTimer, &QTimer::timeout,
             this, &SwitcherBackend::showActivitySwitcherIfNeeded);
+
+    m_dropModeHider.setInterval(500);
+    connect(&m_dropModeHider, &QTimer::timeout,
+            this, [this] { setShouldShowSwitcher(false); });
+
     connect(&m_activities, &KActivities::Controller::currentActivityChanged,
             this, &SwitcherBackend::onCurrentActivityChanged);
     m_previousActivity = m_activities.currentActivity();
@@ -324,7 +335,7 @@ void SwitcherBackend::keybdSwitchedToAnotherActivity()
 
 void SwitcherBackend::showActivitySwitcherIfNeeded()
 {
-    if (!m_lastInvokedAction) {
+    if (!m_lastInvokedAction || m_dropModeActive) {
         return;
     }
 
@@ -405,7 +416,7 @@ void SwitcherBackend::setShouldShowSwitcher(bool shouldShowSwitcher)
 
     if (m_shouldShowSwitcher) {
         // TODO: We really should NOT do this by polling
-        m_modKeyPollingTimer.start(100);
+        m_modKeyPollingTimer.start();
     } else {
         m_modKeyPollingTimer.stop();
 
@@ -435,3 +446,74 @@ void SwitcherBackend::stopActivity(const QString &activity)
 {
     m_activities.stopActivity(activity);
 }
+
+bool SwitcherBackend::dropEnabled() const
+{
+#if HAVE_X11
+    return true;
+#else
+    return false;
+#endif
+}
+
+void SwitcherBackend::drop(QMimeData* mimeData, int modifiers, const QVariant &activityId)
+{
+    setDropMode(false);
+
+#if HAVE_X11
+    if (KWindowSystem::isPlatformX11()) {
+        bool ok = false;
+        const QList<WId> &ids = TaskManager::XWindowTasksModel::winIdsFromMimeData(mimeData, &ok);
+
+        if (!ok) {
+            return;
+        }
+
+        const QString newActivity = activityId.toString();
+        const QStringList runningActivities = m_activities.runningActivities();
+
+        if (!runningActivities.contains(newActivity)) {
+            return;
+        }
+
+        for (const auto &id : ids) {
+            QStringList activities = KWindowInfo(id, NET::Properties(), NET::WM2Activities).activities();
+
+            if (modifiers & Qt::ControlModifier) {
+                // Add to the activity instead of moving.
+                // This is a hack because the task manager reports that
+                // is supports only the 'Move' DND action.
+                if (!activities.contains(newActivity)) {
+                    activities << newActivity;
+                }
+
+            } else {
+                // Move to this activity
+                // if on only one activity, set it to only the new activity
+                // if on >1 activity, remove it from the current activity and add it to the new activity
+
+                const QString currentActivity = m_activities.currentActivity();
+                activities.removeAll(currentActivity);
+                activities << newActivity;
+            }
+
+            KWindowSystem::setOnActivities(id, activities);
+        }
+    }
+#endif
+}
+
+void SwitcherBackend::setDropMode(bool value)
+{
+    if (m_dropModeActive == value) return;
+
+    m_dropModeActive = value;
+    if (value) {
+        setShouldShowSwitcher(true);
+        m_dropModeHider.stop();
+    } else {
+        m_dropModeHider.start();
+    }
+}
+
+

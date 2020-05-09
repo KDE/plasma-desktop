@@ -5,6 +5,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddonsComponents
+import org.kde.draganddrop 2.0 as DND
 
 import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
 
@@ -225,18 +226,47 @@ Item {
             // }
         }
 
-        MouseArea {
-            id: hoverArea
+        DND.DropArea {
+            PlasmaComponents.Highlight {
+                id: dropHighlight
+                anchors.fill: parent
+                visible: false
+            }
 
-            anchors.fill : parent
-            onClicked    : root.clicked()
-            hoverEnabled : true
-            onEntered    : S.showActivityItemActionsBar(root)
+            anchors.fill: parent
 
-            Accessible.name          : root.title
-            Accessible.role          : Accessible.Button
-            Accessible.selected      : root.selected
-            Accessible.onPressAction : root.clicked()
+            preventStealing: true
+            enabled: true
+
+            onDrop: {
+                ActivitySwitcher.Backend.drop(event.mimeData, event.modifiers, root.activityId);
+            }
+
+            onDragEnter: {
+                ActivitySwitcher.Backend.setDropMode(true);
+                dropHighlight.visible = true;
+            }
+
+            onDragLeave: {
+                ActivitySwitcher.Backend.setDropMode(false);
+                dropHighlight.visible = false;
+            }
+
+            visible: ActivitySwitcher.Backend.dropEnabled
+
+            MouseArea {
+                id: hoverArea
+
+                anchors.fill : parent
+                onClicked    : root.clicked()
+                hoverEnabled : true
+                onEntered    : S.showActivityItemActionsBar(root)
+
+                Accessible.name          : root.title
+                Accessible.role          : Accessible.Button
+                Accessible.selected      : root.selected
+                Accessible.onPressAction : root.clicked()
+            }
         }
 
         // Controls
