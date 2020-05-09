@@ -183,7 +183,6 @@ void TouchpadConfigLibinput::onTouchpadAdded(bool success)
     }
     m_view->rootContext()->setContextProperty("deviceModel", QVariant::fromValue(m_backend->getDevices()));
     QMetaObject::invokeMethod(rootObj, "resetModel", Q_ARG(QVariant, activeIndex));
-    QMetaObject::invokeMethod(rootObj, "syncValuesFromBackend");
 }
 
 void TouchpadConfigLibinput::onTouchpadRemoved(int index)
@@ -207,7 +206,6 @@ void TouchpadConfigLibinput::onTouchpadRemoved(int index)
     }
     m_view->rootContext()->setContextProperty("deviceModel", QVariant::fromValue(m_backend->getDevices()));
     QMetaObject::invokeMethod(m_view->rootObject(), "resetModel", Q_ARG(QVariant, activeIndex));
-    QMetaObject::invokeMethod(rootObj, "syncValuesFromBackend");
 
     emit m_parent->changed(m_backend->isChangedConfig());
 }
