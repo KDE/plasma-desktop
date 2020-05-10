@@ -400,6 +400,7 @@ void ShortcutsModel::setShortcuts(const KConfigBase &config)
             });
             if (shortcut == component->shortcuts.end()) {
                 qCWarning(KCMKEYS) << "Ignoring unknown action" << key;
+                continue;
             }
             const auto shortcuts = QKeySequence::listFromString(shortcutsGroup.readEntry(key));
             shortcut->activeShortcuts = QSet<QKeySequence>(shortcuts.cbegin(), shortcuts.cend());
