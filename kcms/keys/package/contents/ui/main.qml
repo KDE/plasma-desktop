@@ -92,6 +92,14 @@ KCM.SimpleKCM {
                     id: components
                     clip: true
                     model: kcm.filteredModel
+                    add: Transition {
+                        id: transition
+                        PropertyAction {
+                            target: components
+                            property: "currentIndex"
+                            value: transition.ViewTransition.index
+                        }
+                    }
                     delegate: Kirigami.AbstractListItem {
                         id: componentDelegate
                         readonly property color foregroundColor: ListView.isCurrentItem ? activeTextColor : textColor
