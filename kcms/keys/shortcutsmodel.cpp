@@ -154,21 +154,18 @@ void ShortcutsModel::save()
                 //operator int of QKeySequence
                 QList<int> keys(shortcut.activeShortcuts.cbegin(), shortcut.activeShortcuts.cend());
                 qCDebug(KCMKEYS) << "Saving" << actionId << shortcut.activeShortcuts << keys;
-                auto watcher = new QDBusPendingCallWatcher(m_globalAccelInterface->setForeignShortcut(actionId, keys));
-                connect(watcher, &QDBusPendingCallWatcher::finished, this, [&, watcher] {
-                    QDBusPendingReply<> reply = *watcher;
-                    if (!reply.isValid()) {
-                        qCCritical(KCMKEYS) << "Error while saving";
-                        if (reply.error().isValid()) {
-                            qCCritical(KCMKEYS) << reply.error().name() << reply.error().message();
-                        }
-                        emit errorOccured(i18nc("%1 is the name of the component, %2 is the action for which saving failed",
-                            "Error while saving shortcut %1: %2", component.friendlyName, shortcut.friendlyName));
-                    } else {
-                        shortcut.initialShortcuts = shortcut.activeShortcuts;
+                auto reply = m_globalAccelInterface->setForeignShortcut(actionId, keys);
+                reply.waitForFinished();
+                if (!reply.isValid()) {
+                    qCCritical(KCMKEYS) << "Error while saving";
+                    if (reply.error().isValid()) {
+                        qCCritical(KCMKEYS) << reply.error().name() << reply.error().message();
                     }
-                    watcher->deleteLater();
-                });
+                    emit errorOccured(i18nc("%1 is the name of the component, %2 is the action for which saving failed",
+                        "Error while saving shortcut %1: %2", component.friendlyName, shortcut.friendlyName));
+                } else {
+                    shortcut.initialShortcuts = shortcut.activeShortcuts;
+                }
             }
         }
     }
@@ -450,33 +447,27 @@ void ShortcutsModel::addApplication(const QString &desktopFileName, const QStrin
 void ShortcutsModel::removeComponent(const Component &component)
 {
     const QString &uniqueName = component.uniqueName;
-    auto watcher = new QDBusPendingCallWatcher(m_globalAccelInterface->getComponent(uniqueName));
-    connect(watcher, &QDBusPendingCallWatcher::finished, this, [=] {
-        QDBusPendingReply<QDBusObjectPath> reply = *watcher;
-        watcher->deleteLater();
-        if (!reply.isValid()) {
-            genericErrorOccured(QStringLiteral("Error while calling objectPath of component") + uniqueName, reply.error());
-            return;
-        }
-        KGlobalAccelComponentInterface component(m_globalAccelInterface->service(), reply.value().path(), m_globalAccelInterface->connection());
-        qCDebug(KCMKEYS) << "Cleaning up component at" << reply.value();
-        auto cleanUpWatcher = new QDBusPendingCallWatcher(component.cleanUp());
-        connect(cleanUpWatcher, &QDBusPendingCallWatcher::finished, this, [=] {
-            QDBusPendingReply<bool> reply = *cleanUpWatcher;
-            cleanUpWatcher->deleteLater();
-            if (!reply.isValid()) {
-                genericErrorOccured(QStringLiteral("Error while calling cleanUp of component") + uniqueName, reply.error());
-                return;
-            }
-             auto it =  std::find_if(m_components.begin(), m_components.end(), [&](const Component &c) {
-                return c.uniqueName == uniqueName;
-            });
-            const int row = it - m_components.begin();
-            beginRemoveRows(QModelIndex(), row, row);
-            m_components.remove(row);
-            endRemoveRows();
-        });
+    auto componentReply = m_globalAccelInterface->getComponent(uniqueName);
+    componentReply.waitForFinished();
+    if (!componentReply.isValid()) {
+        genericErrorOccured(QStringLiteral("Error while calling objectPath of component") + uniqueName, componentReply.error());
+        return;
+    }
+    KGlobalAccelComponentInterface componentInterface(m_globalAccelInterface->service(), componentReply.value().path(), m_globalAccelInterface->connection());
+    qCDebug(KCMKEYS) << "Cleaning up component at" << componentReply.value();
+    auto cleanUpReply = componentInterface.cleanUp();
+    cleanUpReply.waitForFinished();
+    if (!cleanUpReply.isValid()) {
+        genericErrorOccured(QStringLiteral("Error while calling cleanUp of component") + uniqueName, cleanUpReply.error());
+        return;
+    }
+    auto it =  std::find_if(m_components.begin(), m_components.end(), [&](const Component &c) {
+        return c.uniqueName == uniqueName;
     });
+    const int row = it - m_components.begin();
+    beginRemoveRows(QModelIndex(), row, row);
+    m_components.remove(row);
+    endRemoveRows();
 }
 
 void ShortcutsModel::genericErrorOccured(const QString &description, const QDBusError &error)
