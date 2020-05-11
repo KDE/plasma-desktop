@@ -48,14 +48,16 @@ bool FilteredShortcutsModel::filterAcceptsRow(int source_row, const QModelIndex 
 
     const auto &defaultShortcuts = index.data(ShortcutsModel::DefaultShortcutsRole).value<QSet<QKeySequence>>();
     for (const auto& shortcut : defaultShortcuts) {
-        if (shortcut.toString(QKeySequence::NativeText).contains(m_filter, Qt::CaseInsensitive)) {
+        if (shortcut.toString(QKeySequence::NativeText).contains(m_filter, Qt::CaseInsensitive)
+                || shortcut.toString(QKeySequence::PortableText).contains(m_filter, Qt::CaseInsensitive)) {
             return true;
         }
     }
 
     const auto &shortcuts = index.data(ShortcutsModel::CustomShortcutsRole).value<QSet<QKeySequence>>();
     for (const auto& shortcut : shortcuts) {
-        if (shortcut.toString(QKeySequence::NativeText).contains(m_filter, Qt::CaseInsensitive)) {
+        if (shortcut.toString(QKeySequence::NativeText).contains(m_filter, Qt::CaseInsensitive)
+                || shortcut.toString(QKeySequence::PortableText).contains(m_filter, Qt::CaseInsensitive)) {
             return true;
         }
     }
