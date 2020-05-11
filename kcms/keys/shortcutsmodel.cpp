@@ -86,6 +86,8 @@ void ShortcutsModel::load()
                 watcher->deleteLater();
                 if (--*pendingCalls == 0) {
                     QCollator collator;
+                    collator.setCaseSensitivity(Qt::CaseInsensitive);
+                    collator.setNumericMode(true);
                     std::sort(m_components.begin(), m_components.end(), [&](const Component &c1, const Component &c2){
                         return c1.type != c2.type ? c1.type < c2.type : collator.compare(c1.friendlyName, c2.friendlyName) < 0;
                     });
@@ -135,6 +137,8 @@ Component ShortcutsModel::loadComponent(const QList<KGlobalShortcutInfo> &info)
         c.shortcuts.push_back(shortcut);
     }
     QCollator collator;
+    collator.setCaseSensitivity(Qt::CaseInsensitive);
+    collator.setNumericMode(true);
     std::sort(c.shortcuts.begin(), c.shortcuts.end(), [&] (const Shortcut &s1, const Shortcut &s2) {
         return collator.compare(s1.friendlyName, s2.friendlyName) < 0;
     });
@@ -416,6 +420,8 @@ void ShortcutsModel::addApplication(const QString &desktopFileName, const QStrin
     m_globalAccelInterface->doRegister(actionId);
     m_globalAccelInterface->unRegister(actionId);
     QCollator collator;
+    collator.setCaseSensitivity(Qt::CaseInsensitive);
+    collator.setNumericMode(true);
     auto pos = std::lower_bound(m_components.begin(), m_components.end(), displayName, [&] (const Component &c, const QString &name) {
         return c.type != i18n("System Services") &&  collator.compare(c.friendlyName, name) < 0;
     });
