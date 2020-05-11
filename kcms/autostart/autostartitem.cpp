@@ -29,9 +29,8 @@
 #include <KLocalizedString>
 #include <KIO/CopyJob>
 
-AutoStartItem::AutoStartItem( const QString &service, QTreeWidgetItem *parent, Autostart* )
+AutoStartItem::AutoStartItem(QTreeWidgetItem *parent)
     : QTreeWidgetItem( parent )
-    , m_fileName(QUrl::fromLocalFile(service))
 {
 }
 
@@ -40,44 +39,30 @@ AutoStartItem::~AutoStartItem()
 
 }
 
-QUrl AutoStartItem::fileName() const
+DesktopStartItem::DesktopStartItem(QTreeWidgetItem *parent )
+    : AutoStartItem(parent )
 {
-    return m_fileName;
-}
-
-void AutoStartItem::setPath(const QString &path)
-{
-    Q_ASSERT( path.endsWith(QDir::separator()) );
-
-    if (QUrl(path) == m_fileName.adjusted(QUrl::RemoveFilename))
-        return;
-
-    const QString& newFileName = path + m_fileName.fileName();
-    KIO::move(m_fileName, QUrl::fromLocalFile(newFileName));
-
-    m_fileName = QUrl::fromLocalFile(newFileName);
-}
-
-DesktopStartItem::DesktopStartItem( const QString &service, QTreeWidgetItem *parent, Autostart*autostart )
-    : AutoStartItem( service, parent,autostart )
-{
-    setCheckState ( Autostart::COL_STATUS,Qt::Checked );
+    setCheckState( Autostart::COL_STATUS, Qt::Checked );
 }
 
 DesktopStartItem::~DesktopStartItem()
 {
 }
 
-ScriptStartItem::ScriptStartItem( const QString &service, QTreeWidgetItem *parent, Autostart* autostart )
-    : AutoStartItem( service, parent,autostart )
+ScriptStartItem::ScriptStartItem( QTreeWidgetItem *parent, Autostart* autostart )
+    : AutoStartItem( parent )
 {
     m_comboBoxStartup = new QComboBox;
-    m_comboBoxStartup->addItems( autostart->listPathName() );
+    // make the folder PathName match the AutoStartPaths that match AutostartEntrySource
+    // skipping XdgAutoStart that is not available for script items
+    m_comboBoxStartup->addItem(AutostartModel::listPathName()[0], AutostartEntrySource::XdgScripts);
+    m_comboBoxStartup->addItem(AutostartModel::listPathName()[1], AutostartEntrySource::PlasmaShutdown);
+    m_comboBoxStartup->addItem(AutostartModel::listPathName()[2], AutostartEntrySource::PlasmaStart);
 
-    setText( 2, i18nc( "The program will be run", "Enabled" ) );
-    QObject::connect(m_comboBoxStartup, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &ScriptStartItem::slotStartupChanged);
-    QObject::connect( this,&ScriptStartItem::askChangeStartup,autostart,&Autostart::slotChangeStartup );
-    treeWidget()->setItemWidget ( this, Autostart::COL_RUN, m_comboBoxStartup );
+    setText(Autostart::COL_STATUS, i18nc( "The program will be run", "Enabled" ) );
+    connect(m_comboBoxStartup, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &ScriptStartItem::slotStartupChanged);
+    connect( this, &ScriptStartItem::askChangeStartup, autostart, &Autostart::slotChangeStartup );
+    treeWidget()->setItemWidget( this, Autostart::COL_RUN, m_comboBoxStartup );
 }
 
 ScriptStartItem::~ScriptStartItem()
@@ -86,20 +71,21 @@ ScriptStartItem::~ScriptStartItem()
 
 void ScriptStartItem::slotStartupChanged(int index)
 {
-    emit askChangeStartup(this, index);
+    Q_UNUSED(index)
+    emit askChangeStartup(this, m_comboBoxStartup->currentData().toInt());
 }
 
-void ScriptStartItem::changeStartup(ScriptStartItem::ENV type )
+void ScriptStartItem::changeStartup(AutostartEntrySource type )
 {
     switch( type )
     {
-    case ScriptStartItem::START:
+    case AutostartEntrySource::XdgScripts:
         m_comboBoxStartup->setCurrentIndex( 0 );
         break;
-    case ScriptStartItem::SHUTDOWN:
+    case AutostartEntrySource::PlasmaShutdown:
         m_comboBoxStartup->setCurrentIndex( 1 );
         break;
-    case ScriptStartItem::PRE_START:
+    case AutostartEntrySource::PlasmaStart:
         m_comboBoxStartup->setCurrentIndex( 2 );
         break;
     default:

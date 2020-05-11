@@ -20,8 +20,9 @@
 #ifndef AUTOSTARTITEM_H
 #define AUTOSTARTITEM_H
 
+#include "autostartmodel.h"
+
 #include <QTreeWidgetItem>
-#include <QObject>
 #include <QUrl>
 
 class QComboBox;
@@ -31,21 +32,15 @@ class Autostart;
 class AutoStartItem : public QTreeWidgetItem, public QObject
 {
 public:
-    AutoStartItem( const QString &service, QTreeWidgetItem *parent, Autostart* );
+    AutoStartItem(QTreeWidgetItem *parent);
     ~AutoStartItem() override;
 
-    QUrl fileName() const;
-
-    void setPath(const QString &path);
-
-private:
-    QUrl m_fileName;
 };
 
 class DesktopStartItem : public AutoStartItem
 {
 public:
-    DesktopStartItem( const QString &service, QTreeWidgetItem *parent, Autostart* );
+    DesktopStartItem(QTreeWidgetItem *parent );
     ~DesktopStartItem() override;
 };
 
@@ -55,17 +50,15 @@ class ScriptStartItem : public AutoStartItem
     Q_OBJECT
 
 public:
-    enum ENV { START=0, SHUTDOWN=1, PRE_START=2}; //rename
-    ScriptStartItem( const QString &service, QTreeWidgetItem *parent, Autostart* );
+    ScriptStartItem(QTreeWidgetItem *parent, Autostart* autostart );
     ~ScriptStartItem() override;
 
-    void changeStartup( ScriptStartItem::ENV type );
+    void changeStartup( AutostartEntrySource type );
 
 Q_SIGNALS:
     void askChangeStartup(ScriptStartItem* item, int index);
 
 private Q_SLOTS:
-
     void slotStartupChanged(int index);
 
 private:

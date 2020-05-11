@@ -39,36 +39,36 @@ class Autostart: public KCModule
 public:
     explicit Autostart( QWidget* parent, const QVariantList&  );
     ~Autostart() override;
-    enum COL_TYPE { COL_NAME = 0, COL_COMMAND=1, COL_STATUS=2,COL_RUN=3 };
+    enum COL_TYPE { COL_NAME = 0, COL_COMMAND=1, COL_STATUS=2, COL_RUN=3 };
     void load() override;
     void save() override;
     void defaults() override;
 
-    QStringList listPathName() const { return m_pathName;}
-
 public Q_SLOTS:
-    void slotChangeStartup( ScriptStartItem* item, int index );
+    void slotChangeStartup( ScriptStartItem *item, int index );
 
 protected:
-    void addItem(DesktopStartItem *item, const QString& name, const QString& run, const QString& command, bool disabled );
-    void addItem(ScriptStartItem *item, const QString& name, const QString& command, ScriptStartItem::ENV type );
+    void updateDesktopStartItem(DesktopStartItem *item, const QString &name, const QString &command, bool disabled, const QString &fileName);
+    void updateScriptStartItem(ScriptStartItem *item, const QString &name, const QString &command, AutostartEntrySource type, const QString &fileName);
 
 private Q_SLOTS:
     void slotAddProgram();
     void slotAddScript();
     void slotRemoveCMD();
     void slotEditCMD(QTreeWidgetItem*);
-    bool slotEditCMD(const KFileItem&);
     void slotEditCMD();
     void slotSelectionChanged();
     void slotItemClicked( QTreeWidgetItem *, int);
     void slotAdvanced();
+    void slotRowInserted(const QModelIndex &parent, int first, int last);
+    void slotDatachanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles);
 
 private:
-    QTreeWidgetItem *m_programItem, *m_scriptItem;
-    QString m_desktopPath;
-    QStringList m_paths;
-    QStringList m_pathName;
+    QModelIndex indexFromWidget(QTreeWidgetItem *widget) const;
+
+    AutostartModel *m_model;
+    QTreeWidgetItem *m_programItem;
+    QTreeWidgetItem *m_scriptItem;
 
     Ui_AutostartConfig *widget;
 };
