@@ -169,8 +169,8 @@ Kirigami.Page {
             }
 
             Kirigami.PlaceholderMessage {
-                anchors.fill: parent
-                anchors.margins: Kirigami.Units.largeSpacing
+                anchors.centerIn: parent
+                width: parent.width - (units.largeSpacing * 4)
                 text: i18n("Select an application from the list to configure its notification settings and behavior.")
                 visible: !appConfiguration.rootIndex || !appConfiguration.rootIndex.valid
             }

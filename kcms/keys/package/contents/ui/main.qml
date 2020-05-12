@@ -202,6 +202,7 @@ KCM.SimpleKCM {
                 }
                 Kirigami.PlaceholderMessage {
                     anchors.centerIn: parent
+                    width: parent.width - (units.largeSpacing * 4)
                     visible: components.currentIndex == -1
                     text: i18n("Select an item from the list to view its shortcuts here")
                 }
