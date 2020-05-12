@@ -72,6 +72,8 @@ public Q_SLOTS:
 
     void setDropMode(bool value);
     void drop(QMimeData* mimeData, int modifiers, const QVariant &activityId);
+    void dropCopy(QMimeData* mimeData, const QVariant &activityId);
+    void dropMove(QMimeData* mimeData, const QVariant &activityId);
     bool dropEnabled() const;
 
 private:

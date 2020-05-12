@@ -456,6 +456,16 @@ bool SwitcherBackend::dropEnabled() const
 #endif
 }
 
+void SwitcherBackend::dropCopy(QMimeData* mimeData, const QVariant &activityId)
+{
+    drop(mimeData, Qt::ControlModifier, activityId);
+}
+
+void SwitcherBackend::dropMove(QMimeData* mimeData, const QVariant &activityId)
+{
+    drop(mimeData, 0, activityId);
+}
+
 void SwitcherBackend::drop(QMimeData* mimeData, int modifiers, const QVariant &activityId)
 {
     setDropMode(false);
