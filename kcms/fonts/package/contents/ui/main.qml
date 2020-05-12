@@ -292,15 +292,12 @@ KCM.SimpleKCM {
 
                 QtControls.SpinBox {
                     id: dpiSpinBox
-                    stepSize: 24
                     editable: true
                     enabled: dpiCheckBox.checked
                     value: kcm.fontsAASettings.dpi !== 0 ? kcm.fontsAASettings.dpi : 96
                     onValueModified: kcm.fontsAASettings.dpi = value
-                    // to: need to divide to stepSize
-                    to: 1008
-                    // lowest vaue here can be == stepSize, that is because 0 means off
-                    from: 24
+                    to: 999
+                    from: 1
                 }
             }
 
