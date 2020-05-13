@@ -121,7 +121,8 @@ void KFonts::load()
     // previews
     engine()->addImageProvider("preview", new PreviewImageProvider(m_settings->font()));
 
-    // KCM expect save state to be false at this point (can be true because of setNearestExistingFonts
+    // KCM expect save state to be false at this point (can be true because if a font setting loaded
+    // from the config isn't available on the system, font substitution may take place)
     setNeedsSave(false);
 }
 

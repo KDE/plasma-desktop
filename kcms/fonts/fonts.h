@@ -78,7 +78,6 @@ Q_SIGNALS:
 
 private:
     QFont applyFontDiff(const QFont &fnt, const QFont &newFont, int fontDiffFlags);
-    void setNearestExistingFonts();
 
     FontsSettings *m_settings;
     FontsAASettings *m_settingsAA;
