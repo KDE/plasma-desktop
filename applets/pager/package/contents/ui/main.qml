@@ -82,7 +82,7 @@ MouseArea {
     }
 
     function action_openKCM() {
-        KQuickControlsAddonsComponents.KCMShell.open("kcm_kwin_virtualdesktops");
+        KQuickControlsAddonsComponents.KCMShell.openSystemSettings("kcm_kwin_virtualdesktops");
     }
 
     function action_showActivityManager() {

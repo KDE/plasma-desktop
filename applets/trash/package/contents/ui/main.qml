@@ -92,7 +92,7 @@ DragDrop.DropArea {
     }
 
     function action_openkcm() {
-        KCMShell.open(["kcmtrash"]);
+        KCMShell.openSystemSettings("kcmtrash");
     }
 
     Component.onCompleted: {
