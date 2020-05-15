@@ -102,11 +102,9 @@ ColumnLayout {
                 visible: text.length !== 0
             }
             // window title
-            PlasmaExtras.Heading {
+            PlasmaComponents.Label {
                 id: winTitle
-                level: 5
                 maximumLineCount: 1
-                lineHeight: isWin ? 1 : winTitle.lineHeight
                 Layout.fillWidth: true
                 elide: Text.ElideRight
                 text: generateTitle()
@@ -114,11 +112,9 @@ ColumnLayout {
                 visible: !hasPlayer && text.length !== 0 && text !== appNameHeading.text
             }
             // subtext
-            PlasmaExtras.Heading {
+            PlasmaComponents.Label {
                 id: subtext
-                level: 5
                 maximumLineCount: 1
-                lineHeight: isWin ? 1 : subtext.lineHeight
                 Layout.fillWidth: true
                 elide: Text.ElideRight
                 text: isWin ? generateSubText() : ""
