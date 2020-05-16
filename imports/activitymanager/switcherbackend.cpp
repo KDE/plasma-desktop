@@ -266,11 +266,11 @@ SwitcherBackend::SwitcherBackend(QObject *parent)
             m_runningActivitiesModel, &SortedActivitiesModel::setInhibitUpdates);
 
     m_modKeyPollingTimer.setInterval(100);
-    m_modKeyPollingTimer.setSingleShot(true);
     connect(&m_modKeyPollingTimer, &QTimer::timeout,
             this, &SwitcherBackend::showActivitySwitcherIfNeeded);
 
     m_dropModeHider.setInterval(500);
+    m_dropModeHider.setSingleShot(true);
     connect(&m_dropModeHider, &QTimer::timeout,
             this, [this] { setShouldShowSwitcher(false); });
 
