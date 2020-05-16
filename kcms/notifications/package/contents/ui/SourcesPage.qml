@@ -140,18 +140,13 @@ Kirigami.Page {
                         }
                     }
 
-                    QtControls.Label {
-                        anchors {
-                            verticalCenter: parent.verticalCenter
-                            left: parent.left
-                            right: parent.right
-                            margins: Kirigami.Units.smallSpacing
-                        }
-                        horizontalAlignment: Text.AlignHCenter
-                        wrapMode: Text.WordWrap
-                        text: i18n("No application or event matches your search term.")
+                    Kirigami.PlaceholderMessage {
+                        anchors.centerIn: parent
+                        width: parent.width - (units.largeSpacing * 4)
+
                         visible: sourcesList.count === 0 && searchField.length > 0
-                        enabled: false
+
+                        text: i18n("No application or event matches your search term.")
                     }
                 }
             }
