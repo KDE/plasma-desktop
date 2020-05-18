@@ -38,6 +38,7 @@ KCMNightColor::KCMNightColor(QObject *parent, const QVariantList& args)
 void KCMNightColor::load()
 {
     emit loadRelay();
+    setNeedsSave(false);
 }
 
 void KCMNightColor::defaults()
