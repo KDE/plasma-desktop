@@ -67,8 +67,8 @@ KCMKeys::KCMKeys(QObject *parent, const QVariantList &args)
         }
     }
     m_shortcutsModel = new ShortcutsModel(m_globalAccelInterface, this);
-    m_fileredModel = new FilteredShortcutsModel(this);
-    m_fileredModel->setSourceModel(m_shortcutsModel);
+    m_filteredModel = new FilteredShortcutsModel(this);
+    m_filteredModel->setSourceModel(m_shortcutsModel);
     connect(m_shortcutsModel, &QAbstractItemModel::dataChanged, this, [this] {
         setNeedsSave(m_shortcutsModel->needsSave());
         setRepresentsDefaults(m_shortcutsModel->isDefault());
@@ -103,7 +103,7 @@ ShortcutsModel* KCMKeys::shortcutsModel() const
 
 FilteredShortcutsModel* KCMKeys::filteredModel() const
 {
-    return m_fileredModel;
+    return m_filteredModel;
 }
 
 void KCMKeys::setError(const QString &errorMessage)
