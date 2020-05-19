@@ -1,0 +1,84 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+"http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+    <!-- GDBus 2.34.1 -->
+<node>
+    <interface name="org.freedesktop.Accounts.User">
+        <method name="SetUserName">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="s" name="name" direction="in"/>
+        </method>
+        <method name="SetRealName">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="s" name="name" direction="in"/>
+        </method>
+        <method name="SetEmail">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="s" name="email" direction="in"/>
+        </method>
+        <method name="SetLanguage">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="s" name="language" direction="in"/>
+        </method>
+        <method name="SetXSession">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <annotation name="org.freedesktop.DBus.GLib.CSymbol" value="user_set_x_session"/>
+            <arg type="s" name="x_session" direction="in"/>
+        </method>
+        <method name="SetLocation">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="s" name="location" direction="in"/>
+        </method>
+        <method name="SetHomeDirectory">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="s" name="homedir" direction="in"/>
+        </method>
+        <method name="SetShell">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="s" name="shell" direction="in"/>
+        </method>
+        <method name="SetIconFile">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="s" name="filename" direction="in"/>
+        </method>
+        <method name="SetLocked">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="b" name="locked" direction="in"/>
+        </method>
+        <method name="SetAccountType">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="i" name="accountType" direction="in"/>
+        </method>
+        <method name="SetPasswordMode">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="i" name="mode" direction="in"/>
+        </method>
+        <method name="SetPassword">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="s" name="password" direction="in"/>
+            <arg type="s" name="hint" direction="in"/>
+        </method>
+        <method name="SetAutomaticLogin">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="b" name="enabled" direction="in"/>
+        </method>
+        <signal name="Changed"/>
+        <property type="t" name="Uid" access="read"/>
+        <property type="s" name="UserName" access="read"/>
+        <property type="s" name="RealName" access="read"/>
+        <property type="i" name="AccountType" access="read"/>
+        <property type="s" name="HomeDirectory" access="read"/>
+        <property type="s" name="Shell" access="read"/>
+        <property type="s" name="Email" access="read"/>
+        <property type="s" name="Language" access="read"/>
+        <property type="s" name="XSession" access="read"/>
+        <property type="s" name="Location" access="read"/>
+        <property type="t" name="LoginFrequency" access="read"/>
+        <property type="s" name="IconFile" access="read"/>
+        <property type="b" name="Locked" access="read"/>
+        <property type="i" name="PasswordMode" access="read"/>
+        <property type="s" name="PasswordHint" access="read"/>
+        <property type="b" name="AutomaticLogin" access="read"/>
+        <property type="b" name="SystemAccount" access="read"/>
+        <property type="b" name="LocalAccount" access="read"/>
+    </interface>
+</node>

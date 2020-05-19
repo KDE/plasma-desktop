@@ -1,0 +1,18 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+"http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+ <interface name="org.freedesktop.login1.Manager">
+  <method name="ListUsers">
+   <arg name="users" type="a(uso)" direction="out"/>
+   <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="UserInfoList"/>
+  </method>
+  <signal name="UserNew">
+   <arg name="uid" type="u"/>
+   <arg name="path" type="o"/>
+  </signal>
+  <signal name="UserRemoved">
+   <arg name="uid" type="u"/>
+   <arg name="path" type="o"/>
+  </signal>
+ </interface>
+</node>
