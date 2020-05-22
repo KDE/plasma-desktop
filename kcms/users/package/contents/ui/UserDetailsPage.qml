@@ -307,7 +307,27 @@ SimpleKCM {
                             "PC Builder Konqi.png",
                             "Scientist Konqi.png",
                             "Teacher Konqi.png",
-                            "Virtual Reality Konqi.png"
+                            "Virtual Reality Konqi.png",
+                            "photos/Air Balloon.png",
+                            "photos/Astronaut.png",
+                            "photos/Books.png",
+                            "photos/Brushes.png",
+                            "photos/Bulb.png",
+                            "photos/Car.png",
+                            "photos/Cat.png",
+                            "photos/Chameleon.png",
+                            "photos/Cocktail.png",
+                            "photos/Dog.png",
+                            "photos/Fish.png",
+                            "photos/Gamepad.png",
+                            "photos/Owl.png",
+                            "photos/Pancakes.png",
+                            "photos/Parrot.png",
+                            "photos/Pencils.png",
+                            "photos/Shuttle.png",
+                            "photos/Soccer.png",
+                            "photos/Sunflower.png",
+                            "photos/Sushi.png"
                         ]
                         QQC2.Button {
                             Layout.preferredHeight: Kirigami.Units.gridUnit * 6
