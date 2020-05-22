@@ -303,6 +303,19 @@ Item {
                     overlays: model.overlays
                 }
 
+                    Rectangle {
+                        id: fallbackRectangleBackground
+                        visible: GraphicsInfo.api === GraphicsInfo.Software && !model.selected
+                        anchors {
+                            fill: label
+                            margins: -units.smallSpacing
+                        }
+
+                        color: "black"
+                        radius: units.smallSpacing
+                        opacity: 0.45
+                    }
+
                 PlasmaComponents.Label {
                     id: label
 
@@ -354,7 +367,7 @@ Item {
                     elide: Text.ElideRight
 
                     color: {
-                        if (frameLoader.textShadow && frameLoader.textShadow.visible) {
+                        if ((frameLoader.textShadow && frameLoader.textShadow.visible) || fallbackRectangleBackground.visible) {
                             return "#fff";
                         } else if (model.selected) {
                             return PlasmaCore.ColorScope.highlightedTextColor;
