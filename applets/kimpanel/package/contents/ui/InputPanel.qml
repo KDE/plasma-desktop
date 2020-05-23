@@ -113,7 +113,7 @@ PlasmaCore.Dialog {
                                 id: tableLabel
                                 text: model.label
                                 font: preferredFont
-                                opacity: highlight.visible ? 0.8 : 0.6
+                                opacity: 0.8
                             }
                             PlasmaComponents.Label {
                                 id: textLabel
