@@ -51,7 +51,7 @@ Kirigami.ApplicationWindow
     }
 
     function startSearch(typedText) {
-        window.pageStack.replace(categoryComponent, {title: i18n("Search"), category: "", model: emoji, showSearch: true, searchText: typedText})
+        window.pageStack.replace("qrc:/ui/CategoryPage.qml", {title: i18n("Search"), category: "", model: emoji, showSearch: true, searchText: typedText})
     }
 
     onVisibilityChanged: {
