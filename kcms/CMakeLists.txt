@@ -33,7 +33,12 @@ add_subdirectory( keys )
 add_subdirectory( ksmserver )
 add_subdirectory( lookandfeel )
 add_subdirectory( nightcolor )
-add_subdirectory( users )
+# The Accounts Service only exists on Linux,
+# making building it for non-Linux platforms
+# non-sensical.
+if("${CMAKE_SYSTEM}" MATCHES "Linux")
+    add_subdirectory( users )
+endif()
 
 add_subdirectory( hardware )
 add_subdirectory( desktoppaths )
