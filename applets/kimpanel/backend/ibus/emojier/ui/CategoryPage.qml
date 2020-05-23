@@ -57,7 +57,9 @@ Kirigami.ScrollablePage
             onTextChanged: {
                 emojiModel.search = text
                 if (emojiView.currentIndex < 0) {
-                    emojiView.currentIndex = 0
+                    Qt.callLater(function() {
+                        emojiView.currentIndex = 0
+                    })
                 }
             }
             onAccepted: {
