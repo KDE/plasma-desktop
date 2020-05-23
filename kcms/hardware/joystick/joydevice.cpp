@@ -400,7 +400,7 @@ void JoyDevice::calcCorrection(int axis, int *min, int *center, int *max)
             << corr[axis].coef[0] << ", "
             << corr[axis].coef[1] << ", "
             << corr[axis].coef[2] << ", "
-            << corr[axis].coef[3] << endl;
+            << corr[axis].coef[3] << Qt::endl;
 }
 
 //--------------------------------------------------------------

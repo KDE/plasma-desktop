@@ -113,8 +113,6 @@ void DeviceAutomounterKCM::load()
 {
     KCModule::load();
 
-    bool automountEnabled = m_settings->automountEnabled();
-
     kcfg_AutomountUnknownDevices->setEnabled(m_settings->automountEnabled());
     kcfg_AutomountOnLogin->setEnabled(m_settings->automountEnabled());
     kcfg_AutomountOnPlugin->setEnabled(m_settings->automountEnabled());

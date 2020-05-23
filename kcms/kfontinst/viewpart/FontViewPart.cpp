@@ -254,7 +254,7 @@ void CFontViewPart::timeout()
         if(!found)
         {
             // Check if url is "fonts:/<font> if so try fonts:/System/<font>, then fonts:/Personal<font>
-            QStringList pathList(url().adjusted(QUrl::StripTrailingSlash).path().split(QLatin1Char('/'), QString::SkipEmptyParts));
+            QStringList pathList(url().adjusted(QUrl::StripTrailingSlash).path().split(QLatin1Char('/'), Qt::SkipEmptyParts));
 
             if(pathList.count()==1)
             {

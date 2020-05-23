@@ -218,7 +218,7 @@ void Dtime::load()
         asia.pool.ntp.org,\
         europe.pool.ntp.org,\
         north-america.pool.ntp.org,\
-        oceania.pool.ntp.org")).split(',', QString::SkipEmptyParts));
+        oceania.pool.ntp.org")).split(',', Qt::SkipEmptyParts));
         setDateTimeAuto->setChecked(config.readEntry("enabled", false));
 
         if (ntpUtility.isEmpty()) {

@@ -291,12 +291,12 @@ bool SortedActivitiesModel::lessThan(const QModelIndex &sourceLeft,
                                      const QModelIndex &sourceRight) const
 {
     const auto activityLeft =
-          sourceModel()->data(sourceLeft, KActivities::ActivitiesModel::ActivityId);
+          sourceModel()->data(sourceLeft, KActivities::ActivitiesModel::ActivityId).toString();
     const auto activityRight =
-          sourceModel()->data(sourceRight, KActivities::ActivitiesModel::ActivityId);
+          sourceModel()->data(sourceRight, KActivities::ActivitiesModel::ActivityId).toString();
 
-    const auto timeLeft  = lastUsedTime(activityLeft.toString());
-    const auto timeRight = lastUsedTime(activityRight.toString());
+    const auto timeLeft  = lastUsedTime(activityLeft);
+    const auto timeRight = lastUsedTime(activityRight);
 
     return (timeLeft < timeRight) ||
            (timeLeft == timeRight && activityLeft < activityRight);

@@ -179,7 +179,7 @@ void CKioFonts::listDir(const QUrl &url)
 {
     KFI_DBUG << url;
 
-    QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split(QLatin1Char('/'), QString::SkipEmptyParts));
+    QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split(QLatin1Char('/'), Qt::SkipEmptyParts));
     EFolder       folder=Misc::root() ? FOLDER_SYS : getFolder(pathList);
     KIO::UDSEntry entry;
     int           size=0;
@@ -214,7 +214,7 @@ void CKioFonts::listDir(const QUrl &url)
 void CKioFonts::put(const QUrl &url, int /*permissions*/, KIO::JobFlags /*flags*/)
 {
     KFI_DBUG << url;
-    QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split(QLatin1Char('/'), QString::SkipEmptyParts));
+    QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split(QLatin1Char('/'), Qt::SkipEmptyParts));
     EFolder     folder(getFolder(pathList));
 
     if(!Misc::root() && FOLDER_ROOT==folder)
@@ -323,8 +323,8 @@ void CKioFonts::get(const QUrl &url)
                     {
                         KFI_DBUG << "hasMetaData(\"thumbnail\"), so return FILE: "
                                     << (*it).path() << " / " << (*it).index();
-                        stream << KFI_PATH_KEY << (*it).path() << endl
-                               << KFI_FACE_KEY << (*it).index() << endl;
+                        stream << KFI_PATH_KEY << (*it).path() << Qt::endl
+                               << KFI_FACE_KEY << (*it).index() << Qt::endl;
                         found=true;
                         break;
                     }
@@ -340,8 +340,8 @@ void CKioFonts::get(const QUrl &url)
                 KFI_DBUG << "hasMetaData(\"thumbnail\"), so return DETAILS: " << family.name() << " / "
                          << (*style).value();
 
-                stream << KFI_NAME_KEY << family.name() << endl
-                       << KFI_STYLE_KEY << (*style).value() << endl;
+                stream << KFI_NAME_KEY << family.name() << Qt::endl
+                       << KFI_STYLE_KEY << (*style).value() << Qt::endl;
             }
 
             totalSize(array.size());
@@ -504,7 +504,7 @@ void CKioFonts::stat(const QUrl &url)
 {
     KFI_DBUG << url;
 
-    QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split(QLatin1Char('/'), QString::SkipEmptyParts));
+    QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split(QLatin1Char('/'), Qt::SkipEmptyParts));
     EFolder       folder=getFolder(pathList);
     KIO::UDSEntry entry;
     bool          ok=true;

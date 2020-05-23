@@ -23,7 +23,7 @@
 #include <kactioncollection.h>
 
 struct Rules;
-struct LayoutUnit;
+class LayoutUnit;
 template <typename T> class QList;
 
 

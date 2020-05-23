@@ -449,7 +449,7 @@ void KAccessConfig::save()
     // make kaccess reread the configuration
     // turning a11y features off needs to be done by kaccess
     // so run it to clear any enabled features and it will exit if it should
-    QProcess::startDetached(QStringLiteral("kaccess"));
+    QProcess::startDetached(QStringLiteral("kaccess"), {});
 
     emit changed(false);
 }

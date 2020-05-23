@@ -304,7 +304,7 @@ public:
         object->installEventFilter(this);
     }
 
-    bool eventFilter(QObject * object, QEvent * event)
+    bool eventFilter(QObject * object, QEvent * event) override
     {
         if (event->type() == QEvent::Close) {
             QWindow* window = qobject_cast<QWindow*>(object);

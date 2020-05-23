@@ -1584,7 +1584,7 @@ void CFontListView::listingPercent(int percent)
 
 void CFontListView::refreshFilter()
 {
-    itsProxy->clear();
+    itsProxy->invalidate();
 }
 
 void CFontListView::filterText(const QString &text)

@@ -154,6 +154,7 @@ QVariant DirModel::data(const QModelIndex &index, int role) const
 
         m_previewTimer->start(100);
         const_cast<DirModel *>(this)->m_filesToPreview[item.url()] = QPersistentModelIndex(index);
+        Q_FALLTHROUGH();
     }
     default:
         return KDirModel::data(index, role);

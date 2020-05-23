@@ -311,6 +311,7 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
 
 void PreviewWidget::hoverLeaveEvent(QHoverEvent *e)
 {
+    Q_UNUSED(e);
     if (QWindow *actualWindow = QQuickRenderControl::renderWindowFor(window())) {
         actualWindow->unsetCursor();
     }

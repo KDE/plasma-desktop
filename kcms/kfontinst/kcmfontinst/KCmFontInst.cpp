@@ -596,8 +596,8 @@ void CKCmFontInst::print(bool all)
                         QTextStream str(&tmpFile);
 
                         for(; it!=end; ++it)
-                            str << (*it).family << endl
-                                << (*it).styleInfo << endl;
+                            str << (*it).family << Qt::endl
+                                << (*it).styleInfo << Qt::endl;
 
                         args << "--embed" << QString().sprintf("0x%x", (unsigned int)window()->winId())
                              << "--qwindowtitle" << title

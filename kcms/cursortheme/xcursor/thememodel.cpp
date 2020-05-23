@@ -194,7 +194,7 @@ const QStringList CursorThemeModel::searchPaths()
 #endif
 
     // Separate the paths
-    baseDirs = path.split(':', QString::SkipEmptyParts);
+    baseDirs = path.split(':', Qt::SkipEmptyParts);
 
     // Remove duplicates
     QMutableStringListIterator i(baseDirs);

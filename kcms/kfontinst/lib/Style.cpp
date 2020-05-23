@@ -63,7 +63,7 @@ Style::Style(const QDomElement &elem, bool loadFiles)
     itsWritingSystems=0;
 
     if(elem.hasAttribute(LANGS_ATTR))
-        itsWritingSystems=WritingSystems::instance()->get(elem.attribute(LANGS_ATTR).split(LANG_SEP, QString::SkipEmptyParts));
+        itsWritingSystems=WritingSystems::instance()->get(elem.attribute(LANGS_ATTR).split(LANG_SEP, Qt::SkipEmptyParts));
 
     if(loadFiles)
     {

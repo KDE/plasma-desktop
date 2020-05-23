@@ -616,7 +616,7 @@ const QStringList KCMLookandFeel::cursorSearchPaths()
 #endif
 
     // Separate the paths
-    m_cursorSearchPaths = path.split(QLatin1Char(':'), QString::SkipEmptyParts);
+    m_cursorSearchPaths = path.split(QLatin1Char(':'), Qt::SkipEmptyParts);
 
     // Remove duplicates
     QMutableStringListIterator i(m_cursorSearchPaths);

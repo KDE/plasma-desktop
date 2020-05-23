@@ -162,7 +162,7 @@ void KCMDesktopTheme::installTheme(const QString &path)
                 }
             });
 
-    connect(myProcess, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::error),
+    connect(myProcess, &QProcess::errorOccurred,
             this, [this](QProcess::ProcessError e) {
                 qCWarning(KCM_DESKTOP_THEME) << "Theme installation failed: " << e;
                 Q_EMIT showErrorMessage(i18n("Theme installation failed."));
@@ -221,7 +221,7 @@ bool KCMDesktopTheme::canEditThemes() const
 
 void KCMDesktopTheme::editTheme(const QString &theme)
 {
-    QProcess::startDetached(QStringLiteral("plasmathemeexplorer -t ") % theme);
+    QProcess::startDetached(QStringLiteral("plasmathemeexplorer"), {QStringLiteral("-t"), theme});
 }
 
 bool KCMDesktopTheme::isSaveNeeded() const

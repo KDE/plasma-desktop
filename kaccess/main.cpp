@@ -71,7 +71,7 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
     int xkb_opcode;
     if (!XkbQueryExtension(QX11Info::display(), &opcode_rtrn, &xkb_opcode, &error_rtrn,
                            &major, &minor)) {
-        qWarning() << "X server has not matching XKB extension" << endl;
+        qWarning() << "X server has not matching XKB extension" << Qt::endl;
         return 1;
     }
     qDebug() << "X server XKB extension major=" << major << " minor=" << minor;

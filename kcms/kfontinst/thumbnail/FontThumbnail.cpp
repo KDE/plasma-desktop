@@ -58,7 +58,7 @@ bool CFontThumbnail::create(const QString &path, int width, int height, QImage &
     QString  realPath(path);
     QTemporaryDir *tempDir = nullptr;
 
-    KFI_DBUG << "Create font thumbnail for:" << path << endl;
+    KFI_DBUG << "Create font thumbnail for:" << path << Qt::endl;
 
     // Is this a appliaction/vnd.kde.fontspackage file? If so, extract 1 scalable font...
     QMimeDatabase db;

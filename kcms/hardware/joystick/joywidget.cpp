@@ -114,7 +114,7 @@ JoyWidget::JoyWidget(QWidget *parent)
 
   // calculate the column width we need
   QFontMetrics fm(font());
-  int colWidth = qMax(fm.width(PRESSED), fm.width(QStringLiteral("-32767"))) + 10;  // -32767 largest string
+  int colWidth = qMax(fm.horizontalAdvance(PRESSED), fm.horizontalAdvance(QStringLiteral("-32767"))) + 10;  // -32767 largest string
 
   vboxMid->addWidget(new QLabel(i18n("Buttons:")));
   buttonTbl = new TableWidget(0, 1);

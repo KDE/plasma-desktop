@@ -192,7 +192,7 @@ SynapticsTouchpad::SynapticsTouchpad(Display *display, int deviceId): XlibTouchp
     };
 
     QVector<bool> cap(TouchpadCapsCount, false);
-    qCopy(caps.b, caps.b + qMin(cap.size(), static_cast<int>(caps.nitems)),
+    std::copy(caps.b, caps.b + qMin(cap.size(), static_cast<int>(caps.nitems)),
           cap.begin());
 
     if (!cap[TouchpadTwoFingerDetect]) {

@@ -668,6 +668,7 @@ void FontInst::updateFontList(bool emitChanges)
                                                                 ? FOLDER_SYS : FOLDER_USER].addFont(Family(family));
                     StyleCont::ConstIterator  style=(*fam).add(Style(styleVal));
                     FileCont::ConstIterator   file=(*style).add(File(fileName, foundry, index));
+                    Q_UNUSED(file);
 
                     (*style).setWritingSystems((*style).writingSystems()|writingSystems);
                     if(scalable)

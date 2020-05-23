@@ -313,7 +313,7 @@ void IconModule::exportToKDE4()
 
         cachePathProcess->deleteLater();
     });
-    cachePathProcess->start(QStringLiteral("kde4-config --path cache"));
+    cachePathProcess->start(QStringLiteral("kde4-config"), { QStringLiteral("--path"), QStringLiteral("cache")});
 }
 
 QStringList IconModule::findThemeDirs(const QString &archiveName)

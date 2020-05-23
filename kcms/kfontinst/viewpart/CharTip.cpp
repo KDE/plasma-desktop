@@ -40,7 +40,7 @@
 #include <QBoxLayout>
 #include <QEvent>
 #include <QResizeEvent>
-#include <QDesktopWidget>
+#include <QScreen>
 
 namespace KFI
 {
@@ -248,7 +248,7 @@ void CCharTip::reposition()
     rect.moveTopRight(itsParent->mapToGlobal(rect.topRight()));
 
     QPoint pos(rect.center());
-    QRect  desk(QApplication::desktop()->screenGeometry(rect.center()));
+    QRect  desk(QApplication::screenAt(rect.center())->geometry());
 
     if ((rect.center().x() + width()) > desk.right())
     {

@@ -25,7 +25,7 @@
 #include "kded5interface.h"
 
 TouchpadEngine::TouchpadEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args), m_source("touchpad"), m_daemon(0)
+    : Plasma::DataEngine(parent, args), m_source("touchpad"), m_daemon(nullptr)
 {
     init();
 }

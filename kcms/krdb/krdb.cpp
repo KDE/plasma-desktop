@@ -96,6 +96,7 @@ static QString writableGtkrc(int version)
 // -----------------------------------------------------------------------------
 static void applyGtkStyles(bool active, int version)
 {
+   Q_UNUSED(active);
    QString gtkkde = writableGtkrc(version);
    QByteArray gtkrc = getenv(gtkEnvVar(version));
    QStringList list = QFile::decodeName(gtkrc).split( QLatin1Char(':'));
@@ -249,17 +250,9 @@ static void copyFile(QFile& tmp, QString const& filename, bool )
 
 // -----------------------------------------------------------------------------
 
-static QString item( int i ) {
-    return QString::number( i / 255.0, 'f', 3 );
-}
-
-static QString color( const QColor& col )
-{
-    return QStringLiteral( "{ %1, %2, %3 }" ).arg( item( col.red() ) ).arg( item( col.green() ) ).arg( item( col.blue() ) );
-}
-
 static void createGtkrc( const QPalette& cg, bool exportGtkTheme, const QString& gtkTheme, int version )
 {
+    Q_UNUSED(cg);
     // lukas: why does it create in ~/.kde/share/config ???
     // pfeiffer: so that we don't overwrite the user's gtkrc.
     // it is found via the GTK_RC_FILES environment variable.
@@ -275,6 +268,7 @@ static void createGtkrc( const QPalette& cg, bool exportGtkTheme, const QString&
             "#\n", QDateTime::currentDateTime().toString());
 
     if ( 2==version ) {  // we should maybe check for MacOS settings here
+        using Qt::endl;
         t << endl;
         t << "gtk-alternative-button-order = 1" << endl;
         t << endl;
@@ -327,10 +321,10 @@ static void createGtkrc( const QPalette& cg, bool exportGtkTheme, const QString&
 
             if (!gtk2ThemeFilename.isEmpty())
             {
-                t << "include \"" << gtk2ThemeFilename << "\"" << endl;
-                t << endl;
-                t << "gtk-theme-name=\"" << gtkStyle << "\"" << endl;
-                t << endl;
+                t << "include \"" << gtk2ThemeFilename << "\"" << Qt::endl;
+                t << Qt::endl;
+                t << "gtk-theme-name=\"" << gtkStyle << "\"" << Qt::endl;
+                t << Qt::endl;
             }
         }
 

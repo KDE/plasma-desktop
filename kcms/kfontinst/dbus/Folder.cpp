@@ -213,14 +213,14 @@ void Folder::saveDisabled()
 
             QTextStream str(&file);
 
-            str << "<" DISABLED_FONTS ">" << endl;
+            str << "<" DISABLED_FONTS ">" << Qt::endl;
 
             FamilyCont::ConstIterator it(itsFonts.begin()),
                                       end(itsFonts.end());
 
             for(; it!=end; ++it)
                 (*it).toXml(true, str);
-            str << "</" DISABLED_FONTS ">" << endl;
+            str << "</" DISABLED_FONTS ">" << Qt::endl;
             str.flush();
 
             if(!file.commit())
@@ -248,11 +248,11 @@ QStringList Folder::toXml(int max)
         {
             if(i)
             {
-                str << "</" FONTLIST_TAG ">" << endl;
+                str << "</" FONTLIST_TAG ">" << Qt::endl;
                 rv.append(string);
                 string=QString();
             }
-            str << "<" FONTLIST_TAG " " << SYSTEM_ATTR "=\"" << (itsIsSystem ? "true" : "false") << "\">" << endl;
+            str << "<" FONTLIST_TAG " " << SYSTEM_ATTR "=\"" << (itsIsSystem ? "true" : "false") << "\">" << Qt::endl;
         }
 
         (*it).toXml(false, str);
@@ -260,7 +260,7 @@ QStringList Folder::toXml(int max)
 
     if(!string.isEmpty())
     {
-        str << "</" FONTLIST_TAG ">" << endl;
+        str << "</" FONTLIST_TAG ">" << Qt::endl;
         rv.append(string);
     }
     return rv;
@@ -345,7 +345,7 @@ KFI_DBUG << "EMPTY MODIFIED " << itsModifiedDirs.isEmpty();
                 dirs.insert(KShell::quoteArg(*it));
 
         if(!dirs.isEmpty())
-            QProcess::startDetached(QLatin1String(KFONTINST_LIB_EXEC_DIR"/fontinst_x11"), dirs.toList());
+            QProcess::startDetached(QStringLiteral(KFONTINST_LIB_EXEC_DIR"/fontinst_x11"), dirs.values());
 
         itsModifiedDirs.clear();
 

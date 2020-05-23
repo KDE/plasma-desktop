@@ -230,12 +230,12 @@ bool User::loggedIn() const
 
 UserApplyJob::UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIface, QString name, QString email, QString realname, QString icon, int type)
     : KJob(),
-    m_dbusIface(dbusIface),
     m_name(name),
     m_email(email),
     m_realname(realname),
     m_icon(icon),
-    m_type(type)
+    m_type(type),
+    m_dbusIface(dbusIface)
 {
 }
 
