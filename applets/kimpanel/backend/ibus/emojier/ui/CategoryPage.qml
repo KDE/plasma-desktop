@@ -28,10 +28,17 @@ Kirigami.ScrollablePage
 {
     id: view
     property alias model: emojiModel.sourceModel
+    property string searchText: ""
     property alias category: filter.category
     property bool showSearch: false
     leftPadding: 0
     rightPadding: 0
+
+    Keys.onPressed: {
+        if(event.text.length > 0 && !view.showSearch && event.modifiers === Qt.NoModifier) {
+            window.startSearch(event.text)
+        }
+    }
 
     titleDelegate: RowLayout {
         Layout.fillWidth: true
@@ -44,6 +51,7 @@ Kirigami.ScrollablePage
         QQC2.TextField {
             id: searchField
             Layout.fillWidth: true
+            text: view.searchText
             placeholderText: i18n("Search...")
             visible: view.showSearch
             onTextChanged: {
