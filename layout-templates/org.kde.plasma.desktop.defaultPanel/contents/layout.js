@@ -27,6 +27,19 @@ if (freeEdges["bottom"] == true) {
 
 panel.height = gridUnit * 2
 
+// Restrict horizontal panel to a maximum size of a 21:9 monitor
+const maximumAspectRatio = 21/9;
+if (panel.formFactor === "horizontal") {
+    const geo = screenGeometry(panelScreen);
+    const maximumWidth = Math.ceil(geo.height * maximumAspectRatio);
+
+    if (geo.width > maximumWidth) {
+        panel.alignment = "center";
+        panel.minimumLength = maximumWidth;
+        panel.maximumLength = maximumWidth;
+    }
+}
+
 var kickoff = panel.addWidget("org.kde.plasma.kickoff")
 kickoff.currentConfigGroup = ["Shortcuts"]
 kickoff.writeConfig("global", "Alt+F1")
