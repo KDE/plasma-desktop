@@ -74,7 +74,7 @@ QString User::email() const {
 void User::setEmail(const QString &value) {
     
     if (mEmail == value) {
-        return;Q_EMIT 
+        return;
     }
     mEmail = value;
     Q_EMIT emailChanged(value);
