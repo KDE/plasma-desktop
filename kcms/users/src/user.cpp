@@ -175,12 +175,11 @@ void User::setPath(const QDBusObjectPath &path) {
 
 static char
 saltCharacter() {
-    char saltCharacters[] = "ABCDEFGHIJKLMNOPQRSTUVXYZ"
-                       "abcdefghijklmnopqrstuvxyz"
-                       "./0123456789";
+    static const char saltCharacters[] = "ABCDEFGHIJKLMNOPQRSTUVXYZ"
+                                         "abcdefghijklmnopqrstuvxyz"
+                                         "./0123456789";
 
-    const quint32 index =
-        QRandomGenerator::system()->bounded(0u, (sizeof(saltCharacters)/sizeof(*saltCharacters)));
+    const quint32 index = QRandomGenerator::system()->bounded(0u, sizeof(saltCharacters));
 
     return saltCharacters[index];
 }
