@@ -26,7 +26,7 @@
 
 class QPixmap;
 class QIcon;
-struct LayoutUnit;
+class LayoutUnit;
 class KeyboardConfig;
 struct Rules;
 class QPainter;
