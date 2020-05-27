@@ -179,7 +179,8 @@ saltCharacter() {
                        "abcdefghijklmnopqrstuvxyz"
                        "./0123456789";
 
-    int index = QRandomGenerator::system()->bounded(0, (sizeof(saltCharacters)/sizeof(*saltCharacters)));
+    const quint32 index =
+        QRandomGenerator::system()->bounded(0u, (sizeof(saltCharacters)/sizeof(*saltCharacters)));
 
     return saltCharacters[index];
 }
