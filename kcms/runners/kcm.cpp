@@ -75,8 +75,7 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
 
     m_pluginSelector = new KPluginSelector(this);
 
-    connect(m_pluginSelector, &KPluginSelector::changed, this, &SearchConfigModule::markAsChanged);
-    connect(m_pluginSelector, &KPluginSelector::configCommitted, this, &SearchConfigModule::markAsChanged);
+    connect(m_pluginSelector, &KPluginSelector::changed, this, QOverload<bool>::of(&SearchConfigModule::changed));
     connect(m_pluginSelector, &KPluginSelector::defaulted, this, &KCModule::defaulted);
 
     layout->addLayout(headerLayout);
