@@ -226,8 +226,9 @@ PlasmaCore.Dialog {
         auxLabel.text = (auxVisible && data["AuxText"]) ? data["AuxText"] : ""
         var preeditText = (preeditVisible && data["PreeditText"]) ? data["PreeditText"] : ""
         var caret = data["CaretPos"] ? data["CaretPos"] : 0;
-        preeditLabel1.text = preeditText.substring(0, caret);
-        preeditLabel2.text = preeditText.substring(caret);
+        var charArray = [...preeditText];
+        preeditLabel1.text = charArray.slice(0, caret).join('');
+        preeditLabel2.text = charArray.slice(caret).join('');
         preedit.visible = preeditVisible;
         var layout = data["LookupTableLayout"] !== undefined ? data["LookupTableLayout"] : 0;
         inputpanel.highlightCandidate = data["LookupTableCursor"] !== undefined ? data["LookupTableCursor"] : -1;
