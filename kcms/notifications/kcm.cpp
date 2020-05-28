@@ -260,6 +260,7 @@ void KCMNotifications::load()
 {
     ManagedConfigModule::load();
 
+    bool firstLoad = m_firstLoad;
     if (m_firstLoad) {
         m_firstLoad = false;
         m_sourcesModel->load();
@@ -299,6 +300,9 @@ void KCMNotifications::load()
     }
 
     m_toggleDoNotDisturbShortcutDirty = false;
+    if (firstLoad) {
+        emit firstLoadDone();
+    }
 }
 
 void KCMNotifications::save()
