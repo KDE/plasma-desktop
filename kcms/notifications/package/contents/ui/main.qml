@@ -264,12 +264,14 @@ KCM.SimpleKCM {
             enabled: root.notificationsAvailable
             onClicked: root.openSourcesSettings()
         }
-    }
 
-    Component.onCompleted: {
-        if (kcm.initialDesktopEntry || kcm.initialNotifyRcName) {
-            // FIXME doing that right in onCompleted doesn't work
-            Qt.callLater(root.openSourcesSettings);
+        Connections {
+            target: kcm
+            onFirstLoadDone: {
+                if (kcm.initialDesktopEntry || kcm.initialNotifyRcName) {
+                        root.openSourcesSettings();
+                }
+            }
         }
     }
 }

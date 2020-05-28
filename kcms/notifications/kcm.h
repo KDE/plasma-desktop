@@ -98,6 +98,7 @@ signals:
     void initialDesktopEntryChanged();
     void initialNotifyRcNameChanged();
     void initialEventIdChanged();
+    void firstLoadDone();
 
 private:
     void processPendingDeletions();
