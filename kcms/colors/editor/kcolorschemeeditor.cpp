@@ -1,5 +1,6 @@
-/* KDE Display scheme editor
+/* KDE color scheme editor
  * Copyright (C) 2016 Olivier Churlaud <olivier@churlaud.com>
+ * Copyright (C) 2020 Noah Davis <noahadvs@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,18 +18,22 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include "scmeditordialog.h"
+// #include "scmeditordialog.h"
+#include "kcolorschemeeditor.h"
 
 #include <QApplication>
 #include <QCommandLineParser>
+#include <QQmlApplicationEngine>
 #include <QTextStream>
 
 #include <KAboutData>
-#include <KWindowSystem>
+#include <KLocalizedString>
+// #include <KWindowSystem>
 
 int main(int argc, char* argv[])
 {
     // Fixes blurry icons with fractional scaling
+    QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
     QApplication app(argc, argv);
 
@@ -45,6 +50,8 @@ int main(int argc, char* argv[])
                         QStringLiteral("jpwhiting@kde.org"));
     aboutData.addAuthor(i18n("Matthew Woehlke"), i18n("KCM code (reused in here)"),
                         QStringLiteral("mw_triad@users.sourceforge.net"));
+    aboutData.addAuthor(i18n("Noah Davis"), i18n("QML rewrite"),
+                        QStringLiteral("noahadvs@gmail.com"));
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
@@ -75,7 +82,12 @@ int main(int argc, char* argv[])
         out << i18n("Scheme not found, falling back to current one.\n");
     }
 
-    SchemeEditorDialog dialog(path);
+    QQmlApplicationEngine engine;
+    engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));
+    if (engine.rootObjects().isEmpty())
+        return -1;
+
+    /*SchemeEditorDialog dialog(path);
     dialog.setShowApplyOverwriteButton(parser.isSet(overwriteOption));
 
     // FIXME doesn't work :(
@@ -95,7 +107,7 @@ int main(int argc, char* argv[])
         }
     }
 
-    dialog.show();
+    dialog.show();*/
 
     return app.exec();
 }
