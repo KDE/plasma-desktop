@@ -175,11 +175,14 @@ void User::setPath(const QDBusObjectPath &path) {
 
 static char
 saltCharacter() {
-    static const char saltCharacters[] = "ABCDEFGHIJKLMNOPQRSTUVXYZ"
-                                         "abcdefghijklmnopqrstuvxyz"
-                                         "./0123456789";
-
-    const quint32 index = QRandomGenerator::system()->bounded(0u, sizeof(saltCharacters));
+    static constexpr const quint32 letterCount = 64;
+    static const char saltCharacters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                         "abcdefghijklmnopqrstuvwxyz"
+                                         "./0123456789"; // and trailing NUL
+    static_assert(sizeof(saltCharacters) == (letterCount+1), // 64 letters and trailing NUL
+                  "Salt-chars array is not exactly 64 letters long");
+    
+    const quint32 index = QRandomGenerator::system()->bounded(0u, letterCount);
 
     return saltCharacters[index];
 }
