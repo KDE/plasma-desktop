@@ -69,7 +69,8 @@ Kirigami.ScrollablePage {
         dwt.load()
         leftHanded.load()
         middleEmulation.load()
-        accelSpeed.load()
+        accelSpeedSpinbox.load()
+        accelSpeedSlider.load()
         accelProfile.load()
         tapToClick.load()
         tapAndDrag.load()
@@ -237,31 +238,97 @@ Kirigami.ScrollablePage {
         }
 
         // Acceleration
-        Controls.Slider {
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Pointer speed:")
+        Layouts.RowLayout {
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "Pointer acceleration:")
             id: accelSpeed
 
-            from: 1
-            to: 11
-            stepSize: 1
-
-            function load() {
-                enabled = touchpad.supportsPointerAcceleration
-                if (!enabled) {
-                    value = 0.1
-                    return
+            function onAccelSpeedChanged(val) {
+                // check slider
+                if (val != accelSpeedSlider.accelSpeedValue) {
+                    accelSpeedSlider.accelSpeedValue = val
+                    accelSpeedSlider.value = Math.round(6 + (val / 100) / 0.2)
                 }
-                // transform libinput's pointer acceleration range [-1, 1] to slider range [1, 11]
-                value = 6 + touchpad.pointerAcceleration / 0.2
+
+                // check spinbox
+                if (val != accelSpeedSpinbox.value) {
+                    accelSpeedSpinbox.value = val
+                }
+
+                // check libinput accelspeed
+                if ((val / 100) != touchpad.pointerAcceleration) {
+                    touchpad.pointerAcceleration = val / 100
+                    root.changeSignal()
+                }
             }
 
-            onValueChanged: {
-                if (touchpad != undefined && enabled && !root.loading) {
-                    // transform slider range [1, 11] to libinput's pointer acceleration range [-1, 1]
-                    // by *10 and /10, we ignore the floating points after 1 digit. This prevents from
-                    // having a libinput value like 0.60000001
-                    touchpad.pointerAcceleration = Math.round(((value-6) * 0.2) * 10) / 10
-                    root.changeSignal()
+            Controls.Slider {
+                id: accelSpeedSlider
+
+                from: 1
+                to: 11
+                stepSize: 1
+                property int accelSpeedValue: 0 // [-100, 100]
+
+                function load() {
+                    enabled = touchpad.supportsPointerAcceleration
+                    if (!enabled) {
+                        return
+                    }
+
+                    accelSpeedValue = Math.round(touchpad.pointerAcceleration * 100)
+
+                    // convert libinput pointer acceleration range [-1, 1] to slider range [1, 11]
+                    value = Math.round(6 + touchpad.pointerAcceleration / 0.2)
+                }
+
+                onValueChanged: {
+                    if (touchpad != undefined && enabled && !root.loading) {
+                        // convert slider range [1, 11] to accelSpeedValue range [-100, 100]
+                        accelSpeedValue = Math.round(((value - 6) * 0.2) * 100)
+
+                        accelSpeed.onAccelSpeedChanged(accelSpeedValue)
+                    }
+                }
+            }
+
+            Controls.SpinBox {
+                id: accelSpeedSpinbox
+
+                Layouts.Layout.minimumWidth: Kirigami.Units.gridUnit * 4
+
+                from: -100
+                to: 100
+                stepSize: 1
+                editable: true
+
+                validator: DoubleValidator {
+                    bottom: accelSpeedSpinbox.from
+                    top: accelSpeedSpinbox.to
+                }
+
+                function load() {
+                    enabled = touchpad.supportsPointerAcceleration
+                    if (!enabled) {
+                        return
+                    }
+
+                    // if existing configuration or another application set a value with more than 2 decimals
+                    // we reduce the precision to 2
+                    value = Math.round(touchpad.pointerAcceleration * 100)
+                }
+
+                onValueChanged: {
+                    if (touchpad != undefined && enabled && !root.loading) {
+                        accelSpeed.onAccelSpeedChanged(value)
+                    }
+                }
+
+                textFromValue: function(val, locale) {
+                    return Number(val / 100).toLocaleString(locale, "f", 2)
+                }
+
+                valueFromText: function(text, locale) {
+                    return Number.fromLocaleString(locale, text) * 100
                 }
             }
         }
@@ -669,7 +736,7 @@ Kirigami.ScrollablePage {
             Kirigami.FormData.buddyFor: rightClickMethodAreas
             id: rightClickMethod
             enabled: touchpad.supportsClickMethodAreas && touchpad.supportsClickMethodClickfinger
-            
+
             spacing: Kirigami.Units.smallSpacing
 
             function load() {
@@ -736,7 +803,7 @@ Kirigami.ScrollablePage {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Middle-click: ")
             Kirigami.FormData.buddyFor: middleSoftwareEmulation
             id: middleClickMethod
-            
+
             spacing: Kirigami.Units.smallSpacing
 
             function load() {
