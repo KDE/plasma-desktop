@@ -25,7 +25,7 @@
 
 #include <KLocalizedString>
 
-K_EXPORT_PLASMA_RUNNER(kwin, KWinRunner)
+K_EXPORT_PLASMA_RUNNER_WITH_JSON(KWinRunner, "plasma-runner-kwin.json")
 
 static const QString s_kwinService = QStringLiteral("org.kde.KWin");
 static const QString s_keyword = QStringLiteral("KWin");
