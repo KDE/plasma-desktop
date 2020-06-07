@@ -80,8 +80,9 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     m_view->rootContext()->setContextProperty("deviceModel", getDeviceList(m_backend));
 
     KDeclarative::KDeclarative kdeclarative;
+    kdeclarative.setupEngine(m_view->engine());  // This is a new engine
     kdeclarative.setDeclarativeEngine(m_view->engine());
-    kdeclarative.setupBindings();
+    kdeclarative.setupContext();
 
     if (m_backend->mode() == InputBackendMode::XLibinput) {
         m_view->setSource(QUrl("qrc:/libinput/main_deviceless.qml"));
