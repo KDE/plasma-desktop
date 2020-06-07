@@ -19,12 +19,13 @@
     License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <user.h>
+#include "user.h"
+#include "user_interface.h"
+
 #include <crypt.h>
 #include <unistd.h>
 #include <sys/types.h>
 #include <QtConcurrent>
-#include "user_interface.h"
 
 User::User(QObject* parent) : QObject(parent) {}
 
