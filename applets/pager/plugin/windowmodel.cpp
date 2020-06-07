@@ -46,6 +46,7 @@ private:
 WindowModel::Private::Private(WindowModel *q)
     : q(q)
 {
+    Q_UNUSED(this->q);
 }
 
 WindowModel::WindowModel(PagerModel *parent)
