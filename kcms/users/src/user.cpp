@@ -21,8 +21,6 @@
 
 #include "user.h"
 #include "user_interface.h"
-
-#include <crypt.h>
 #include <unistd.h>
 #include <sys/types.h>
 #include <QtConcurrent>
