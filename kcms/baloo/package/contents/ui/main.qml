@@ -190,7 +190,7 @@ KCM.SimpleKCM {
 
                     model: [
                         i18n("Not indexed"),
-                        i18n("Full content indexing")
+                        i18n("Indexed")
                     ]
 
                     // Intentionally not a simple ternary to facilitate adding
