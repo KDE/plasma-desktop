@@ -249,7 +249,12 @@ FocusScope {
                     } else if (event.key === Qt.Key_Tab) {
                         //do nothing, and skip appending text
                     } else if (event.text !== "") {
-                        appendSearchText(event.text);
+                        if (/[\x00-\x1F\x7F]/.test(event.text)) {
+                            // We still want to focus it
+                            appendSearchText("");
+                        } else {
+                            appendSearchText(event.text);
+                        }
                     }
                 }
             }
