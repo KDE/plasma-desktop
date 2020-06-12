@@ -83,7 +83,7 @@ FocusScope {
                 ? rootList.height : runnerColumns.height) - header.height);
 
             if (model && model.count) {
-                return Math.min(listHeight, model.count * itemHeight);
+                return Math.min(favoriteSystemActions.height + favoriteApps.height - header.height, model.count * itemHeight);
             }
 
             return listHeight;
