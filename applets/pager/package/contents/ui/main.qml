@@ -156,14 +156,14 @@ MouseArea {
     Connections {
         target: plasmoid.configuration
 
-        onShowWindowIconsChanged: {
+        function onShowWindowIconsChanged() {
             // Causes the model to reset; Component.onCompleted in the
             // window delegate now gets a chance to create the icon item,
             // which it otherwise will not do.
             pagerModel.refresh();
         }
 
-        onDisplayedTextChanged: {
+        function onDisplayedTextChanged() {
             // Causes the model to reset; Component.onCompleted in the
             // desktop delegate now gets a chance to create the label item,
             // which it otherwise will not do.

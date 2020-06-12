@@ -441,7 +441,7 @@ Item {
 
         Connections {
             target: plasmoid
-            onExpandedChanged: {
+            function onExpandedChanged() {
                 if(menuItemsChanged()) {
                     createButtons();
                 }

@@ -37,7 +37,7 @@ Item {
 
     Connections {
         target: ActivitySwitcher.Backend
-        onShouldShowSwitcherChanged: {
+        function onShouldShowSwitcherChanged() {
             if (ActivitySwitcher.Backend.shouldShowSwitcher) {
                 if (sidePanelStack.state != "activityManager") {
                     root.toggleActivityManager();

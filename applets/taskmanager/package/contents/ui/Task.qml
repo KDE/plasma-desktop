@@ -284,7 +284,9 @@ MouseArea {
     Connections {
         target: pulseAudio.item
         ignoreUnknownSignals: true // Plasma-PA might not be available
-        onStreamsChanged: task.updateAudioStreams({delay: true})
+        function onStreamsChanged() { 
+            task.updateAudioStreams({delay: true})
+        }
     }
 
     Component {

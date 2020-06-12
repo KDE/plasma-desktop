@@ -196,7 +196,7 @@ MouseArea {
     Connections {
         target: tasksModel
 
-        onActiveTaskChanged: {
+        function onActiveTaskChanged() {
             if (!plasmoid.configuration.groupPopups) {
                 return;
             }
@@ -330,7 +330,7 @@ MouseArea {
     Connections {
         target: plasmoid
 
-        onLocationChanged: {
+        function onLocationChanged() {
             // This is on a timer because the panel may not have
             // settled into position yet when the location prop-
             // erty updates.
@@ -341,9 +341,15 @@ MouseArea {
     Connections {
         target: plasmoid.configuration
 
-        onLaunchersChanged: tasksModel.launcherList = plasmoid.configuration.launchers
-        onGroupingAppIdBlacklistChanged: tasksModel.groupingAppIdBlacklist = plasmoid.configuration.groupingAppIdBlacklist;
-        onGroupingLauncherUrlBlacklistChanged: tasksModel.groupingLauncherUrlBlacklist = plasmoid.configuration.groupingLauncherUrlBlacklist;
+        function onLaunchersChanged() { 
+            tasksModel.launcherList = plasmoid.configuration.launchers 
+        }
+        function onGroupingAppIdBlacklistChanged() { 
+            tasksModel.groupingAppIdBlacklist = plasmoid.configuration.groupingAppIdBlacklist;
+        }
+        function onGroupingLauncherUrlBlacklistChanged() {
+            tasksModel.groupingLauncherUrlBlacklist = plasmoid.configuration.groupingLauncherUrlBlacklist;
+        }
     }
 
     TaskManagerApplet.DragHelper {

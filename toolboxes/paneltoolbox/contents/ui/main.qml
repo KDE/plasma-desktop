@@ -88,7 +88,7 @@ Item {
 
     Connections {
         target: plasmoid
-        onUserConfiguringChanged: {
+        function onUserConfiguringChanged() {
             if (plasmoid.userConfiguring) {
                 plasmoid.editMode = true;
                 toolTipArea.hideToolTip();

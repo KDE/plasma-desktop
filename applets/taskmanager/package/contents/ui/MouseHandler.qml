@@ -49,7 +49,7 @@ Item {
     Connections {
         target: tasks
 
-        onDragSourceChanged: {
+        function onDragSourceChanged() {
             if (!dragSource) {
                 ignoredItem = null;
                 ignoreItemTimer.stop();
