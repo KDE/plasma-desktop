@@ -189,16 +189,11 @@ bool executeOperation(const QString &archive, Operation operation)
     const bool install = operation == Operation::Install;
     // Give krunner-install higher priority
     QString installerPath;
-    QStringList basenames;
-    if (install) { 
-        basenames = QStringList({"krunner-install", "install"});
-     } else {
-        basenames = QStringList({"krunner-uninstall", "uninstall"});
-    }
-    for (const auto &basename : basenames) {
-        const auto path = findRecursive(archive, basename);
-        if (!path.isEmpty()) {
-            installerPath = path;
+    const QStringList archiveEntries = QDir(archive).entryList(QDir::Files, QDir::Name);
+    const QString scripPrefix = install ? "install" : "uninstall";
+    for (const auto &name : archiveEntries) {
+        if(name.startsWith(scripPrefix)) {
+            installerPath = QDir(archive).filePath(name);
             break;
         }
     }
