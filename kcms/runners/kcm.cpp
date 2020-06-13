@@ -27,7 +27,7 @@
 #include <KLocalizedString>
 #include <KRunner/RunnerManager>
 #include <KPluginSelector>
-
+#include <KNS3/Button>
 #include <QApplication>
 #include <QDBusMessage>
 #include <QDBusConnection>
@@ -105,6 +105,10 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     headerLayout->addWidget(label);
     headerLayout->addStretch();
 
+    QHBoxLayout *downloadLayout = new QHBoxLayout(this);
+    auto *downloadButton = new KNS3::Button(i18n("Download New Plugins..."), QStringLiteral("krunner.knsrc"), this);
+    downloadLayout->addWidget(downloadButton);
+
     m_pluginSelector = new KPluginSelector(this);
 
     connect(m_pluginSelector, &KPluginSelector::changed, this, [this] { markAsChanged(); });
@@ -125,6 +129,7 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     layout->addLayout(configHeaderLayout);
     layout->addSpacing(12);
     layout->addLayout(headerLayout);
+    layout->addLayout(downloadLayout);
     layout->addWidget(m_pluginSelector);
 }
 
