@@ -445,7 +445,7 @@ Item {
                 if(menuItemsChanged()) {
                     createButtons();
                 }
-                if (!expanded) {
+                if (!plasmoid.expanded) {
                     switchToInitial();
                 }
             }

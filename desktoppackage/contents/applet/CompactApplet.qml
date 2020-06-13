@@ -137,12 +137,12 @@ PlasmaCore.ToolTipArea {
 
     Connections {
         target: plasmoid.action("configure")
-        onTriggered: plasmoid.expanded = false
+        function onTriggered() { plasmoid.expanded = false }
     }
 
     Connections {
         target: plasmoid
-        onContextualActionsAboutToShow: root.hideToolTip()
+        function onContextualActionsAboutToShow() { root.hideToolTip() }
     }
 
     PlasmaCore.Dialog {
