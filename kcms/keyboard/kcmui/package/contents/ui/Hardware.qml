@@ -47,26 +47,44 @@ KCM.SimpleKCM {
         Item {
             Kirigami.FormData.isSection: true
         }
-
-        TriSelector {
-            Kirigami.FormData.label: i18n("Numlock on Plasma Startup:")
-            Binding on tristate {
+        
+        Controls.TextField {
+            Kirigami.FormData.label: i18n("Test area:")
+            id: textarea
+            wrapMode: TextEdit.Wrap
+        }
+        
+        Controls.ComboBox {
+            Kirigami.FormData.label: i18n("On start:")
+            model: [
+                i18n("Numlock | On"),
+                i18n("Numlock | Off"),
+                i18n("Numlock | Leave unchanged")
+            ]
+            
+            Binding on currentIndex {
                 value: dataModel.numlockOnStartup
             }
-            tristate: dataModel.numlockOnStartup
-            onChanged: {
-                dataModel.numlockOnStartup = tristate;
+            
+            onAccepted: {
+                dataModel.numlockOnStartup = currentIndex;
                 root.changed();
             }
         }
-
-        TriSelector {
-            Kirigami.FormData.label: i18n("Keyboard Repeat:")
-            Binding on tristate {
+        
+        Controls.ComboBox {
+            model: [
+                i18n("Keyboard Repeat | On"),
+                i18n("Keyboard Repeat | Off"),
+                i18n("Keyboard Repear | Leave unchanged")
+            ]
+            
+            Binding on currentIndex {
                 value: dataModel.keyboardRepeat
             }
-            onChanged: {
-                dataModel.keyboardRepeat = tristate;
+            
+            onAccepted: {
+                dataModel.keyboardRepeat = currentIndex;
                 root.changed();
             }
         }
@@ -140,13 +158,6 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        Controls.TextArea {
-            Kirigami.FormData.label: i18n("Test area:")
-            id: textarea
-            implicitWidth: Math.max(parent.width / 3, delay.width)
-            implicitHeight: 200
-            wrapMode: TextEdit.Wrap
-        }
 
     }
 }
