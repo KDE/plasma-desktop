@@ -139,16 +139,6 @@ Q_NORETURN void packageKit(Operation operation, const QString &fileName)
 #endif
 }
 
-QString findRecursive(const QString &dir, const QString &basename)
-{
-    QDirIterator it(dir, QStringList{basename}, QDir::Files, QDirIterator::Subdirectories);
-    while (it.hasNext()) {
-        return QFileInfo(it.next()).canonicalFilePath();
-    }
-
-    return QString();
-}
-
 bool runScript(const QString &path)
 {
     QProcess process;
