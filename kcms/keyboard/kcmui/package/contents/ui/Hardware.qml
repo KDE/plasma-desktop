@@ -157,7 +157,5 @@ KCM.SimpleKCM {
         Item {
             Kirigami.FormData.isSection: true
         }
-
-
     }
 }

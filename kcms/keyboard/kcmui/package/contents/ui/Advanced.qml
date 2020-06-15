@@ -11,12 +11,22 @@ KCM.ScrollViewKCM {
 
     property var dataModel;
     signal changed();
+    
+    header: Kirigami.SearchField {
+        id: filterText
+    }
 
     view: ListView {
         id: advancedRuleList
         property var _buttonGroups: []
         
-        model: dataModel
+        model: PlasmaCore.SortFilterModel {
+            id: nameFilterModel
+            sourceModel: dataModel
+            filterRole: "description"
+            filterCaseSensitivity: Qt.CaseInsensitive
+            filterString: filterText.text
+        }
         
         section.property: "sectionDescription"
         section.delegate: Kirigami.ListSectionHeader {
