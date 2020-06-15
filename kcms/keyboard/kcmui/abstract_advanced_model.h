@@ -15,10 +15,10 @@ public:
             DescriptionRole = Qt::DisplayRole,
             NameRole = Qt::UserRole + 1,
             SectionNameRole,
+            SectionDescriptionRole,
             ExclusiveRole,
             SelectedRole,
             IsGroupRole,
-            SectionNamePlusIsGroupRole,
         };
     };
 };

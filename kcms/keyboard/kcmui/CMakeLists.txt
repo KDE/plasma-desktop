@@ -37,9 +37,7 @@ set(kcm_keyboard_SRCS
     hardware_config_model.cpp
     layout_config_model.cpp
     keyboard_model_model.cpp
-    abstract_advanced_model.cpp
     advanced_model.cpp
-    advanced_flatten_proxy_model.cpp
     advanced_filter_proxy_model.cpp
 )
 

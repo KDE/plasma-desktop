@@ -17,7 +17,6 @@
 #include "layout_list_xkb_expand_proxy_model.h"
 #include "advanced_model.h"
 #include "advanced_filter_proxy_model.h"
-#include "advanced_flatten_proxy_model.h"
 
 #include "../keyboard_dbus.h"
 
@@ -29,17 +28,15 @@ KcmKeyboard::KcmKeyboard(QObject* parent, const QVariantList& args)
     : KQuickAddons::ConfigModule(parent, args)
     , m_hardwareConfigModel(new HardwareConfigModel(this))
     , m_layoutConfigModel(new LayoutConfigModel(this))
-    , m_advancedModel(new AdvancedFlattenProxyModel(this))
     , m_underlyingAdvancedModel(new AdvancedModel(this))
 {
-    AdvancedFilterProxyModel *filter = new AdvancedFilterProxyModel(this);
-    filter->setSourceModel(m_underlyingAdvancedModel);
-    m_advancedModel->setSourceModel(filter);
-
+    m_advancedModel = new AdvancedFilterProxyModel(this);
+    m_advancedModel->setSourceModel(m_underlyingAdvancedModel);
+    
     KAboutData* about = new KAboutData(
         "kcm_keyboard", i18n("..."),
         QStringLiteral("1.0"), QString(), KAboutLicense::GPL);
-
+    
     about->addAuthor(i18n("Andriy Rysin"));
     about->addAuthor(i18n("Park Gun"));
     setAboutData(about);
@@ -229,7 +226,7 @@ LayoutConfigModel* KcmKeyboard::layoutModel()
     return m_layoutConfigModel;
 }
 
-AdvancedFlattenProxyModel *KcmKeyboard::advancedModel()
+AdvancedFilterProxyModel *KcmKeyboard::advancedModel()
 {
     return m_advancedModel;
 }
