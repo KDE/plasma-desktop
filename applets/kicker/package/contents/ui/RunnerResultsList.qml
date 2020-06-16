@@ -57,9 +57,10 @@ FocusScope {
         anchors.left: vertLine.right
 
         width: runnerMatches.width
-        height: runnerMatches.itemHeight
+        height: runnerMatches.itemHeight + units.smallSpacing
 
         horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignVTop
 
         textFormat: Text.PlainText
         wrapMode: Text.NoWrap

@@ -194,8 +194,7 @@ FocusScope {
 
                 AnchorChanges {
                     target: rootList
-                    anchors.top: undefined
-                    anchors.bottom: parent.bottom
+                    anchors.top: parent.top
                 }
             }]
 
@@ -342,8 +341,8 @@ FocusScope {
 
             AnchorChanges {
                 target: searchField
-                anchors.top: mainRow.top
-                anchors.bottom: undefined
+                anchors.top: undefined
+                anchors.bottom: mainRow.bottom
                 anchors.left: parent.left
                 anchors.right: undefined
             }
