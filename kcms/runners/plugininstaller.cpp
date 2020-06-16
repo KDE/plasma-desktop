@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright © 2020 Alexander Lohnau <>            *
+ *   Copyright © 2020 Alexander Lohnau <alexander.lohnau@gmx.de>           *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or         *
  *   modify it under the terms of the GNU General Public License as        *
