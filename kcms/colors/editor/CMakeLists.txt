@@ -1,33 +1,29 @@
 set(scheme_editor_SRCS
     kcolorschemeeditor.cpp
-#     scmeditordialog.cpp
-#     scmeditoroptions.cpp
-#     scmeditorcolors.cpp
-#     scmeditoreffects.cpp
-#     previewwidget.cpp
-#     setpreviewwidget.cpp
+#     previewbutton.cpp
+#     previewbridge.cpp
+#     previewclient.cpp
+#     previewitem.cpp
+#     previewsettings.cpp
+#     plugin.cpp
+#     buttonsmodel.cpp
     resources.qrc
 )
-
-# ki18n_wrap_ui(scheme_editor_SRCS
-#     scmeditordialog.ui
-#     scmeditoroptions.ui
-#     scmeditorcolors.ui
-#     scmeditoreffects.ui
-#     preview.ui
-#     setpreview.ui
-# )
 
 add_executable(kcolorschemeeditor ${scheme_editor_SRCS})
 
 target_link_libraries(kcolorschemeeditor
+    Qt5::DBus
+    Qt5::Quick
+    KF5::CoreAddons
     KF5::ConfigWidgets
     KF5::GuiAddons
     KF5::I18n
-    KF5::CoreAddons
-    KF5::NewStuff
-    KF5::QuickAddons
-    KF5::WindowSystem
+    KDecoration2::KDecoration
+    KDecoration2::KDecoration2Private
+#     KF5::NewStuff
+#     KF5::QuickAddons
+#     KF5::Service
 )
 
 install(TARGETS kcolorschemeeditor DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

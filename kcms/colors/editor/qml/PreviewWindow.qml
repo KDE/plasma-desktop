@@ -19,8 +19,6 @@
  */
 
 import QtQuick 2.12
-import QtQuick.Layouts 1.12
-import QtQuick.Controls 2.12 as QQC2
 import org.kde.kirigami 2.12 as Kirigami
 
 Kirigami.ShadowedRectangle {
@@ -29,19 +27,23 @@ Kirigami.ShadowedRectangle {
     implicitWidth: titleBar.implicitWidth
     implicitHeight: root.implicitWidth
     
-    property real shadowSize: Kirigami.Units.largeSpacing * 8
-    property real shadowYOffset: Kirigami.Units.largeSpacing * 2
-    property real shadowXOffset: 0
+    property real shadowSize: 32
+    property real shadowYOffset: shadowSize / 4
     
+    Kirigami.Theme.inherit: false
     //TODO: replace colors with colors from the specified colorscheme
-//     Kirigami.Theme.colorSet: Kirigami.Theme.Window
+    Kirigami.Theme.colorSet: Kirigami.Theme.Window
     color: Kirigami.Theme.backgroundColor
-    corners{
-        topLeftRadius: titleBar.titleBarCornerRadius
-        topRightRadius: titleBar.titleBarCornerRadius
-    }
-    shadow.size: shadowSize
-    shadow.yOffset: shadowYOffset
+    radius: titleBar.titleBarCornerRadius
+//     corners {
+//         topLeftRadius: titleBar.titleBarCornerRadius
+//         topRightRadius: titleBar.titleBarCornerRadius
+//     }
+    shadow {
+        size: shadowSize
+        yOffset: shadowYOffset
+        color: Qt.rgba(0, 0, 0, 0.9)
+    }    
     
     PreviewTitleBar {
         id: titleBar

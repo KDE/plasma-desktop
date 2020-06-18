@@ -1,4 +1,5 @@
 /*
+ * Copyright 2014 Martin Gräßlin <mgraesslin@kde.org>
  * Copyright 2020 Noah Davis <noahadvs@gmail.com>
  *
  * This program is free software; you can redistribute it and/or
@@ -18,24 +19,28 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.12
-import QtQuick.Controls 2.12 as QQC2
-import org.kde.kirigami 2.12 as Kirigami
+// Copied from the Window Decorations KCM
+// kwin/kcmkwin/kwindecoration/declarative-plugin/plugin.h
 
-Kirigami.Page {
-    id: previewArea
-    implicitWidth: previewWindow.implicitWidth
-    implicitHeight: previewWindow.implicitHeight
-    Kirigami.Theme.colorSet: Kirigami.Theme.View
+#ifndef KDECOARTIONS_PREVIEW_PLUGIN_H
+#define KDECOARTIONS_PREVIEW_PLUGIN_H
 
-    PreviewWindow {
-        id: previewWindow
-        anchors {
-            fill: parent
-            topMargin: previewWindow.shadowSize - shadowYOffset
-            leftMargin: previewWindow.shadowSize
-            rightMargin: previewWindow.shadowSize
-            bottomMargin: previewWindow.shadowSize + shadowYOffset
-        }
-    }
+#include <QQmlExtensionPlugin>
+
+namespace KDecoration2
+{
+namespace Preview
+{
+
+class Plugin : public QQmlExtensionPlugin
+{
+    Q_PLUGIN_METADATA(IID "org.kde.kdecoration2")
+    Q_OBJECT
+public:
+    void registerTypes(const char *uri) override;
+};
+
 }
+}
+
+#endif

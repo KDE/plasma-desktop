@@ -18,24 +18,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.12
-import QtQuick.Controls 2.12 as QQC2
-import org.kde.kirigami 2.12 as Kirigami
+import QtQuick 2.13
+import QtQuick.Layouts 1.13
+import QtQuick.Controls 2.13 as QQC2
+import org.kde.kirigami 2.13 as Kirigami
 
-Kirigami.Page {
-    id: previewArea
-    implicitWidth: previewWindow.implicitWidth
-    implicitHeight: previewWindow.implicitHeight
+Kirigami.ScrollablePage {
+    id: root
+    
     Kirigami.Theme.colorSet: Kirigami.Theme.View
-
-    PreviewWindow {
-        id: previewWindow
-        anchors {
-            fill: parent
-            topMargin: previewWindow.shadowSize - shadowYOffset
-            leftMargin: previewWindow.shadowSize
-            rightMargin: previewWindow.shadowSize
-            bottomMargin: previewWindow.shadowSize + shadowYOffset
-        }
-    }
+    Kirigami.Theme.inherit: false
 }

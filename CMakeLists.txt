@@ -83,6 +83,7 @@ find_package(KF5ItemModels CONFIG REQUIRED)
 find_package(KF5Emoticons CONFIG REQUIRED)
 find_package(KSysGuard CONFIG REQUIRED)
 find_package(KDED CONFIG REQUIRED)
+find_package(KDecoration2 ${PROJECT_VERSION} CONFIG REQUIRED)
 
 find_package(KF5Baloo ${KF5_MIN_VERSION})
 set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"

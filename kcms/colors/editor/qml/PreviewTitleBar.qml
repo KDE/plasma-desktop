@@ -36,6 +36,9 @@ Kirigami.ShadowedRectangle {
         topLeftRadius: titleBarCornerRadius
         topRightRadius: titleBarCornerRadius
     }
+
+    Kirigami.Theme.inherit: false
+    //TODO: replace with titlebar colors
     Kirigami.Theme.colorSet: Kirigami.Theme.Header
     color: Kirigami.Theme.backgroundColor
     
@@ -56,12 +59,13 @@ Kirigami.ShadowedRectangle {
             smooth: true
             source: "preferences-desktop-color"
         }
-        Repeater {
-            model: 2
-            Item { // Keeps the title perfectly centered
-                width: appIcon.width
-                Layout.fillHeight: true
-            }
+        Item { // Keeps the title perfectly centered
+            width: appIcon.width
+            Layout.fillHeight: true
+        }
+        Item { // Keeps the title perfectly centered
+            width: appIcon.width
+            Layout.fillHeight: true
         }
         QQC2.Label {
             id: title
@@ -79,6 +83,7 @@ Kirigami.ShadowedRectangle {
             height: Kirigami.Units.iconSizes.small
             smooth: true
             source: "window-minimize"
+            color: Kirigami.Theme.textColor
         }
         Kirigami.Icon {
             id: maximizeIcon
@@ -86,6 +91,7 @@ Kirigami.ShadowedRectangle {
             height: minimizeIcon.height
             smooth: true
             source: "window-maximize"
+            color: Kirigami.Theme.textColor
         }
         Kirigami.Icon {
             id: closeIcon
@@ -94,6 +100,13 @@ Kirigami.ShadowedRectangle {
             height: width
             smooth: true
             source: "window-close"
+            color: mouseArea.containsMouse ? Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.negativeTextColor, "white", 0.2) : Kirigami.Theme.negativeTextColor
+            
+            MouseArea {
+                id: mouseArea
+                anchors.fill: closeIcon
+                hoverEnabled: true
+            }
         }
     }
 }

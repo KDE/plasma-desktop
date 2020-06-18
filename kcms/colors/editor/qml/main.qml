@@ -26,32 +26,36 @@ import org.kde.newstuff 1.0 as KNS
 
 // import org.kde.kcolorschemeeditor 1.0
 
-Kirigami.AbstractApplicationWindow {
+Kirigami.ApplicationWindow {
     id: root
     // TODO: use real colorscheme name
     title: "Breeze Dark"
     width: Kirigami.Units.gridUnit * 64
     height: Kirigami.Units.gridUnit * 48
 
-    header: QQC2.ToolBar {
+    /*header: QQC2.ToolBar {
         id: toolbarArea
+        padding: 0
         Kirigami.SearchField {
             id: searchField
             anchors {
                 left: parent.left
+                right: toolSeparator.left
                 top: parent.top
                 bottom: parent.bottom
+                leftMargin: Kirigami.Units.smallSpacing
+                topMargin: anchors.leftMargin
+                bottomMargin: anchors.leftMargin
             }
-            width: colorList.width - toolbarArea.leftPadding - toolSeparator.leftPadding
 //             onAccepted: console.log("Search text is " + searchField.text)
         }
         QQC2.ToolSeparator {
             id: toolSeparator
             anchors {
-                left: searchField.right
                 top: parent.top
                 bottom: parent.bottom
             }
+            x: sidebarSeparator.x - toolSeparator.leftPadding
         }
         Kirigami.ActionToolBar {
             id: actionToolBar
@@ -66,16 +70,19 @@ Kirigami.AbstractApplicationWindow {
                     iconName: "color-picker"
                     text: i18n("Locate Color Role")
                     shortcut: "Ctrl+L"
+                    tooltip: i18n("Locate a color role by clicking on a part of the preview window") + " (" + shortcut + ")"
                 },
                 Kirigami.Action {
                     iconName: "document-save"
                     text: i18n("Save")
                     shortcut: "Ctrl+S"
+                    tooltip: text + " (" + shortcut + ")"
                 },
                 Kirigami.Action {
                     iconName: "document-save-as"
                     text: i18n("Save As...")
                     shortcut: "Ctrl+Shift+S"
+                    tooltip: text + " (" + shortcut + ")"
                 },
                 Kirigami.Action {
                     iconName: "edit-undo"
@@ -94,29 +101,41 @@ Kirigami.AbstractApplicationWindow {
                 // Upload button from old kcolorscheme UI isn't available for QML
             ]
         }
-    }
-
-    RowLayout {
-        id: contentRowLayout
-        anchors.fill: parent
-        spacing: 0
+    }*/
+    pageStack.initialPage: [colorListComponent, previewAreaComponent]
+    
+    Component {
+        id: colorListComponent
         ColorList {
             id: colorList
             Layout.fillHeight: true
-            Layout.minimumWidth: colorList.implicitWidth
+            Layout.minimumWidth: this.implicitWidth
             Layout.preferredWidth: Kirigami.Units.gridUnit * 16
         }
-        Kirigami.Separator {
-            id: sidebarSeparator
-            Layout.fillHeight: true
-        }
+    }
+    Component {
+        id: previewAreaComponent
         PreviewArea {
             id: previewArea
             Layout.fillHeight: true
             Layout.fillWidth: true
-            Layout.minimumWidth: previewArea.implicitWidth
-            Layout.minimumHeight: previewArea.implicitHeight
+            Layout.minimumWidth: this.implicitWidth
+            Layout.minimumHeight: this.implicitHeight
             Layout.preferredWidth: root.width * 0.75
         }
     }
+    
+    /*
+    RowLayout {
+        id: contentRowLayout
+        anchors.fill: parent
+        spacing: 0
+        
+        Kirigami.Separator {
+            id: sidebarSeparator
+            Layout.fillHeight: true
+        }
+        
+    }
+    */
 }

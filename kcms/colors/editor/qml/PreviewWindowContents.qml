@@ -18,41 +18,60 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.12
-import QtQuick.Layouts 1.12
-import QtQuick.Controls 2.12 as QQC2
-import org.kde.kirigami 2.12 as Kirigami
+import QtQuick 2.13
+import QtQuick.Layouts 1.13
+import QtQuick.Controls 2.13 as QQC2
+import org.kde.kirigami 2.13 as Kirigami
+import "previewwindowcontentscomponents"
 
 Kirigami.ApplicationItem {
     id: root
+    clip: true
+    Kirigami.Theme.inherit: false
+    
+    /*header: QQC2.ToolBar {
+        anchors {
+            left: parent.left
+            right: parent.right
+        }
+        Kirigami.ActionToolBar {
+            anchors.fill: parent
+            actions: [
+                Kirigami.Action {
+                    iconName: "document-save"
+                    text: i18n("Action 1")
+                    shortcut: "Ctrl+S"
+                    tooltip: root.fakeControlToolTip
+                },
+                Kirigami.Action {
+                    iconName: "edit-undo"
+                    text: i18n("Action 2")
+                    shortcut: "Ctrl+Z"
+                    tooltip: root.fakeControlToolTip
+                },
+                Kirigami.Action {
+                    iconName: "edit-redo"
+                    text: i18n("Action 3")
+                    shortcut: "Ctrl+Shift+Z"
+                    tooltip: root.fakeControlToolTip
+                }
+            ]
+        }
+    }*/
     
     readonly property string fakeControlToolTip: i18n("This control does nothing.")
-    
+    pageStack.defaultColumnWidth: Kirigami.Units.gridUnit * 7
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.ToolBar
-    pageStack.globalToolBar.toolbarActionAlignment: Qt.AlignLeft
-    pageStack.initialPage: Kirigami.Page {
-        id: mainPage
-        //TODO: use real colorscheme name
-//         title: i18n("Breeze Dark")
-        actions {
-            main: Kirigami.Action {
-                iconName: "document-save"
-                text: i18n("Action 1")
-                shortcut: "Ctrl+S"
-                tooltip: root.fakeControlToolTip
-            }
-            left: Kirigami.Action {
-                iconName: "edit-undo"
-                text: i18n("Action 2")
-                shortcut: "Ctrl+Z"
-                tooltip: root.fakeControlToolTip
-            }
-            right: Kirigami.Action {
-                iconName: "edit-redo"
-                text: i18n("Action 3")
-                shortcut: "Ctrl+Shift+Z"
-                tooltip: root.fakeControlToolTip
-            }
-        }
+//    pageStack.globalToolBar.toolbarActionAlignment: Qt.AlignLeft
+    pageStack.initialPage: [sideBarComponent, mainPageComponent]
+    
+    Component {
+        id: mainPageComponent
+        MainPage {}
+    }
+    
+    Component {
+        id: sideBarComponent
+        SideBar {}
     }
 }
