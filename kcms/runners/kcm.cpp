@@ -31,6 +31,9 @@
 #include <KPluginSelector>
 
 #include <QApplication>
+#include <QDBusMessage>
+#include <QDBusConnection>
+#include <QDBusMetaType>
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QDialog>
@@ -78,6 +81,18 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     connect(m_pluginSelector, &KPluginSelector::changed, this, [this] { markAsChanged(); });
     connect(m_pluginSelector, &KPluginSelector::defaulted, this, &KCModule::defaulted);
 
+    qDBusRegisterMetaType<QByteArrayList>();
+    qDBusRegisterMetaType<QHash<QString, QByteArrayList>>();
+    // This will trigger the reloadConfiguration method for the runner
+    connect(m_pluginSelector, &KPluginSelector::configCommitted, this, [](const QByteArray &componentName){
+        QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/krunnerrc"),
+                                                          QStringLiteral("org.kde.kconfig.notify"),
+                                                          QStringLiteral("ConfigChanged"));
+        const QHash<QString, QByteArrayList> changes = {{QStringLiteral("Runners"), {componentName}}};
+        message.setArguments({QVariant::fromValue(changes)});
+        QDBusConnection::sessionBus().send(message);
+    });
+
     layout->addLayout(headerLayout);
     layout->addWidget(m_pluginSelector);
 }
@@ -102,6 +117,13 @@ void SearchConfigModule::load()
 void SearchConfigModule::save()
 {
     m_pluginSelector->save();
+
+    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/krunnerrc"),
+                                                      QStringLiteral("org.kde.kconfig.notify"),
+                                                      QStringLiteral("ConfigChanged"));
+    const QHash<QString, QByteArrayList> changes = {{QStringLiteral("Plugins"), {}}};
+    message.setArguments({QVariant::fromValue(changes)});
+    QDBusConnection::sessionBus().send(message);
 }
 
 void SearchConfigModule::defaults()
