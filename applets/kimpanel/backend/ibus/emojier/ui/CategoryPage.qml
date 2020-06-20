@@ -35,8 +35,12 @@ Kirigami.ScrollablePage
     rightPadding: 0
 
     Keys.onPressed: {
-        if(event.text.length > 0 && !view.showSearch && event.modifiers === Qt.NoModifier) {
-            window.startSearch(event.text)
+        if (event.key == Qt.Key_Escape) {
+            Qt.quit()
+        }
+        if (event.text.length > 0 && !view.showSearch && event.modifiers === Qt.NoModifier) {
+            // We want to prevent unprintable characters like backspace
+            window.startSearch(/[\x00-\x1F\x7F]/.test(event.text) ? "" : event.text)
         }
     }
 
@@ -62,13 +66,13 @@ Kirigami.ScrollablePage
                     })
                 }
             }
-            onAccepted: {
-                if (emojiView.currentItem)
-                    emojiView.currentItem.reportEmoji()
-            }
             Component.onCompleted: if (visible) Qt.callLater(forceActiveFocus)
             Keys.onEscapePressed: {
-                selectAll()
+                if (text) {
+                    clear()
+                } else {
+                    Qt.quit()
+                }
             }
         }
     }
