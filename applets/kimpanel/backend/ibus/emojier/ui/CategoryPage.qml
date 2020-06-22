@@ -77,6 +77,15 @@ Kirigami.ScrollablePage
         }
     }
 
+    Shortcut {
+        sequence: StandardKey.Copy
+        enabled: emojiView.currentItem
+        onActivated: {
+            emojiView.currentItem.reportEmoji()
+        }
+    }
+
+
     GridView {
         id: emojiView
 
