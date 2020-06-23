@@ -1,7 +1,6 @@
 #pragma once
 
 #include <QAbstractListModel>
-#include "abstract_advanced_model.h"
 
 class AdvancedModel : public QAbstractListModel
 {

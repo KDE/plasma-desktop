@@ -1,7 +1,6 @@
 #ifndef ADVANCED_FILTER_PROXY_MODEL_H
 #define ADVANCED_FILTER_PROXY_MODEL_H
 
-#include "abstract_advanced_model.h"
 #include <QSortFilterProxyModel>
 
 class AdvancedFilterProxyModel : public QSortFilterProxyModel {
