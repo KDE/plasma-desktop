@@ -9,7 +9,7 @@ class FcitxIMListModel : public LayoutListSortFilterProxyModel
     Q_OBJECT
 
 public:
-    FcitxIMListModel(QObject *parent);
+    FcitxIMListModel(QObject* parent);
     QHash<int, QByteArray> roleNames() const override;
 
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
@@ -20,7 +20,7 @@ class FcitxIMConfigModel : public QAbstractListModel
     Q_OBJECT
     Q_PROPERTY(bool isRealIM READ isRealIM NOTIFY isRealIMChanged)
     Q_PROPERTY(bool isLatinSwitchingEnabled READ isLatinSwitchingEnabled WRITE setIsLatinSwitchingEnabled NOTIFY isLatinSwitchingEnabledChanged)
-    Q_PROPERTY(FcitxIMListModel *latinModeLayoutList READ latinModeLayoutList NOTIFY latinModeLayoutListChanged)
+    Q_PROPERTY(FcitxIMListModel* latinModeLayoutList READ latinModeLayoutList NOTIFY latinModeLayoutListChanged)
     Q_PROPERTY(int selectedLatinLayoutIndex READ selectedLatinLayoutIndex WRITE setSelectedLatinLayoutIndex NOTIFY selectedLatinLayoutIndexChanged)
 
 public:

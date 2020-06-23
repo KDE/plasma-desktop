@@ -9,7 +9,7 @@
 #include <QMetaEnum>
 #include <QSettings>
 
-#include <fcitx_interface.h>
+#include "../fcitx/fcitxqtinputmethodproxy.h"
 #include "layout_list_model_fcitx.h"
 #include "../keyboard_dbus.h"
 

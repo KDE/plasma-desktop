@@ -9,10 +9,10 @@
 #include <algorithm>
 #include <exception>
 #include <memory>
-#include <fcitx_interface.h>
 
 #include "input_sources.h"
 
+#include "../fcitx/fcitxqtinputmethodproxy.h"
 #include "fcitx_im_config_model.h"
 
 LayoutListModelFcitx::LayoutListModelFcitx(QObject* parent)

@@ -20,13 +20,14 @@
 #ifndef FCITX_QT_INPUT_METHOD_ITEM_H
 #define FCITX_QT_INPUT_METHOD_ITEM_H
 
+#include "fcitxqtdbusaddons_export.h"
+
 // Qt
 #include <QtCore/QString>
 #include <QtCore/QMetaType>
 #include <QtDBus/QDBusArgument>
 
-
-class FcitxQtInputMethodItem
+class FCITXQTDBUSADDONS_EXPORT FcitxQtInputMethodItem
 {
 public:
     const QString& name() const;

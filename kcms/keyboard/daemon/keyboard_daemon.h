@@ -27,7 +27,7 @@
 #include "bindings.h"
 
 #include "layout_list_models.h"
-#include <fcitx_interface.h>
+#include "../fcitx/fcitxqtinputmethodproxy.h"
 
 class XInputEventNotifier;
 struct XkbRules;

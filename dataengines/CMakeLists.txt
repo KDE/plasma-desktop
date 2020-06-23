@@ -1,1 +1,1 @@
-#add_subdirectory(kimpanel)
+add_subdirectory(kimpanel)
