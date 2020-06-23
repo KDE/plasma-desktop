@@ -339,10 +339,6 @@ KCM.ScrollViewKCM {
 
         clip: true
 
-        Controls.ScrollBar.vertical: Controls.ScrollBar {
-            active: true
-        }
-
         delegate: Kirigami.DelegateRecycler {
             width: layoutList.width
             sourceComponent: listviewDelegateComponent
