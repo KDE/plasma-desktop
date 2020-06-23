@@ -291,22 +291,32 @@ KCM.ScrollViewKCM {
                 }
             }
 
-            onClicked: {
-                if (checked) {
-                    if (layoutList.checkedItem.length === 1) {
-                        layoutList.checkedItem[0].item.checked = false;
-                    }
-                    layoutList.checkedItem[0] = {index: model.index, model: model, item: this};
-                    configureLayoutButton.enabled = model.is_configurable;
-                }
-                else {
-                    layoutList.checkedItem = []
-                    configureLayoutButton.enabled = false;
-                }
-            }
-
-
             actions: [
+                Kirigami.Action {
+                    iconName: "configure"
+                    tooltip: i18nc("@info:tooltip", "Configure")
+                    onTriggered: {
+                        var component;
+                        var imConfigDialog;
+                        if (model.source === 1) { // xkb
+                            component = Qt.createComponent("XkbLayoutConfig.qml");
+                        }
+                        else if (model.source === 2) { // fcitx
+                            component = Qt.createComponent("FcitxIMConfig.qml");
+                        }
+                        else {
+                            return;
+                        }
+
+                        if (component.status === Component.Ready) {
+                            imConfigDialog = component.createObject(root.parent, {width:700, height:500})
+                            imConfigDialog.openForModel(model.config_model);
+                        }
+                        else {
+                            console.log(component.errorString())
+                        }
+                    }
+                },
                 Kirigami.Action {
                     iconName: "list-remove"
                     tooltip: i18nc("@info:tooltip", "Remove")
@@ -314,26 +324,14 @@ KCM.ScrollViewKCM {
                         dataModel.currentLayoutListModel.remove(index)
                         changed();
                     }
-                }]
+                }
+            ]
         }
     }
 
 
     view: ListView {
         id: layoutList
-
-        property var checkedItem;
-
-        Component.onCompleted: checkedItem = [];
-
-        Rectangle {
-            color: "white"
-            anchors.fill: parent
-            z: -10
-        }
-
-        implicitWidth: formLayout.width - buttonColumn.width - parent.spacing
-        implicitHeight: 300
 
         model: dataModel.currentLayoutListModel
 
@@ -361,36 +359,5 @@ KCM.ScrollViewKCM {
             onClicked: previewDialog.open();
         }
         */
-
-        Controls.Button {
-            id: configureLayoutButton
-            text: i18n("Configure...");
-            enabled: false;
-            icon.name: "configure"
-
-            onClicked: {
-                var item = layoutList.checkedItem[0].model;
-                var component;
-                var imConfigDialog;
-                if (item.source === 1) { // xkb
-                    component = Qt.createComponent("XkbLayoutConfig.qml");
-                }
-                else if (item.source === 2) { // fcitx
-                    component = Qt.createComponent("FcitxIMConfig.qml");
-                }
-                else {
-                    return;
-                }
-
-                if (component.status === Component.Ready) {
-                    imConfigDialog = component.createObject(root.parent, {width:700, height:500})
-                    imConfigDialog.openForModel(item.config_model);
-                }
-                else {
-                    console.log(component.errorString())
-                }
-
-            }
-        }
     }
 }
