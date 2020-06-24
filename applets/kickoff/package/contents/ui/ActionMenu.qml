@@ -28,7 +28,7 @@ Item {
     property QtObject menu
     property Item visualParent
     property variant actionList
-    property bool opened: menu ? (menu.status !== PlasmaComponents.DialogStatus.Closed) : false
+    property bool opened: menu ? (menu.status != PlasmaComponents.DialogStatus.Closed) : false
 
     signal actionClicked(string actionId, variant actionArgument)
     signal closed
@@ -42,7 +42,7 @@ Item {
     }
 
     function open(x, y) {
-        if (!actionList || !actionList.length) {
+        if (!actionList) {
             return;
         }
 
@@ -63,12 +63,6 @@ Item {
         }
 
         menu = contextMenuComponent.createObject(root);
-
-        // actionList.forEach(function(actionItem) {
-        //     var item = contextMenuItemComponent.createObject(menu, {
-        //         "actionItem": actionItem,
-        //     });
-        // });
 
         fillMenu(menu, actionList);
     }
@@ -129,9 +123,9 @@ Item {
             property variant actionItem
 
             text      : actionItem.text ? actionItem.text : ""
-            enabled   : actionItem.type !== "title" && ("enabled" in actionItem ? actionItem.enabled : true)
-            separator : actionItem.type === "separator"
-            section   : actionItem.type === "title"
+            enabled   : actionItem.type != "title" && ("enabled" in actionItem ? actionItem.enabled : true)
+            separator : actionItem.type == "separator"
+            section   : actionItem.type == "title"
             icon      : actionItem.icon ? actionItem.icon : null
             checkable : actionItem.checkable ? actionItem.checkable : false
             checked   : actionItem.checked ? actionItem.checked : false

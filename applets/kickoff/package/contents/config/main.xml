@@ -6,46 +6,58 @@
   <kcfgfile name=""/>
 
   <group name="General">
-    <entry name="switchTabsOnHover" type="Bool">
-      <label>Whether to switch between menu tabs by hovering them.</label>
-      <default>true</default>
-    </entry>
-    <entry name="showAppsByName" type="Bool">
-      <label>Whether to display specific application names instead of their generic names (e.g. Dolphin instead of File Manager).</label>
-      <default>true</default>
-    </entry>
     <entry name="icon" type="String">
-      <label>The name of the icon used in the compact representation (e.g. on a small panel).</label>
       <default>start-here-kde</default>
     </entry>
-    <entry name="favorites" type="StringList">
-      <label>List of general favorites. Supported values are menu id's (usually .desktop file names), special URLs that expand into default applications (e.g. preferred://browser), document URLs and KPeople contact URIs.</label>
-      <default>preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover.desktop</default>
+    <entry name="useCustomButtonImage" type="Bool">
+      <default>false</default>
     </entry>
+    <entry name="customButtonImage" type="Url">
+      <default></default>
+    </entry>
+
+    <entry name="showFilterList" type="Bool">
+      <default>true</default>
+    </entry>
+
+    <entry name="appNameFormat" type="Int">
+      <default>0</default>
+    </entry>
+    <entry name="limitDepth" type="Bool">
+      <default>false</default>
+    </entry>
+
+    <entry name="favoriteApps" type="StringList">
+      <default>preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop</default>
+    </entry>
+    <entry name="favoriteSystemActions" type="StringList">
+      <default>logout,lock-screen,reboot,shutdown</default>
+    </entry>
+    <entry name="hiddenApplications" type="StringList">
+      <default></default>
+    </entry>
+
+    <entry name="useExtraRunners" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="extraRunners" type="StringList">
+      <default>bookmarks,baloosearch</default>
+    </entry>
+    <entry name="alignResultsToBottom" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="switchCategoriesOnHover" type="Bool">
+      <label>Whether to switch between menu categories by hovering them.</label>
+      <default>true</default>
+    </entry>
+
+    <entry name="removeApplicationCommand" type="String">
+      <default>muon-discover --application</default>
+    </entry>
+
     <entry name="favoritesPortedToKAstats" type="Bool">
       <label>Are the favorites ported to use KActivitiesStats to allow per-activity favorites</label>
       <default>false</default>
     </entry>
-    <entry name="systemApplications" type="StringList">
-      <label>List of applications at the top of the "Computer" tab.</label>
-      <default>systemsettings.desktop,org.kde.kinfocenter.desktop,org.kde.discover.desktop</default>
-    </entry>
-    <entry name="useExtraRunners" type="Bool">
-      <label>Whether to use additional KRunner plugins to produce results in the search.</label>
-      <default>true</default>
-    </entry>
-    <entry name="runners" type="StringList">
-      <label>The plugin id's of additional KRunner plugins to use. Only used if useExtraRunners is true.</label>
-      <default>shell,bookmarks,recentdocuments,locations,baloosearch</default>
-    </entry>
-
-    <entry name="menuItems" type="StringList">
-      <label>The menu tabs to show.</label>
-      <default>bookmark:t,application:t,computer:t,used:t,oftenUsed:f,leave:t</default>
-    </entry>
-    <entry name="alphaSort" type="Bool">
-      <label>Whether to sort menu contents alphabetically or use manual/system sort order.</label>
-      <default>false</default>
-    </entry>
-    </group>
+  </group>
 </kcfg>

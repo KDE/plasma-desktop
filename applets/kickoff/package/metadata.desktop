@@ -166,22 +166,19 @@ Comment[wa]=Enondeu po lancî des programes
 Comment[x-test]=xxLauncher to start applicationsxx
 Comment[zh_CN]=应用程序的启动器
 Comment[zh_TW]=應用程式啟動器
-Icon=start-here-kde
 Type=Service
+Icon=start-here-kde
 X-KDE-ServiceTypes=Plasma/Applet
 
 X-Plasma-API=declarativeappletscript
-X-Plasma-MainScript=ui/Kickoff.qml
+X-Plasma-MainScript=ui/main.qml
 X-Plasma-Provides=org.kde.plasma.launchermenu
 
-X-Plasma-RequiredExtensions=LaunchApp
-
-X-KDE-PluginInfo-Author=Martin Graesslin
-X-KDE-PluginInfo-Email=plasma-devel@kde.org
+X-KDE-PluginInfo-Author=Eike Hein
+X-KDE-PluginInfo-Email=hein@kde.org
 X-KDE-PluginInfo-Name=org.kde.plasma.kickoff
-X-KDE-PluginInfo-Version=1.0
-X-KDE-PluginInfo-Website=https://userbase.kde.org/Plasma/Kickoff
+X-KDE-PluginInfo-Version=1.0.12
 X-KDE-PluginInfo-Category=Application Launchers
 X-KDE-PluginInfo-Depends=
-X-KDE-PluginInfo-License=GPL-2.0+
+X-KDE-PluginInfo-License=GPL v2+
 X-KDE-PluginInfo-EnabledByDefault=true
