@@ -69,12 +69,6 @@ DND.DropArea {
         ActivitySwitcher.Backend.setDropMode(false);
     }
 
-    PlasmaCore.DataSource {
-        id: dataSource
-        engine: "org.kde.activities"
-        connectedSources: [activeSource]
-    }
-
     PlasmaCore.ToolTipArea {
         id: tooltip
         mainText: i18n("Show Activity Manager")
