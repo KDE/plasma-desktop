@@ -28,6 +28,8 @@
 #include <QX11Info>
 #include <QTimer>
 #include <QDateTime>
+#include <QDBusMessage>
+#include <QDBusConnection>
 
 // Qml and QtQuick
 #include <QQuickImageProvider>
@@ -524,6 +526,17 @@ void SwitcherBackend::setDropMode(bool value)
     } else {
         m_dropModeHider.start();
     }
+}
+
+void SwitcherBackend::toggleActivityManager()
+{
+    auto message = QDBusMessage::createMethodCall(
+            QStringLiteral("org.kde.plasmashell"),
+            QStringLiteral("/PlasmaShell"),
+            QStringLiteral("org.kde.PlasmaShell"),
+            QStringLiteral("toggleActivityManager"));
+    QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
+
 }
 
 
