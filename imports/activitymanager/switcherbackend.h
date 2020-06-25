@@ -76,6 +76,8 @@ public Q_SLOTS:
     void dropMove(QMimeData* mimeData, const QVariant &activityId);
     bool dropEnabled() const;
 
+    void toggleActivityManager();
+
 private:
     template <typename Handler>
     inline void registerShortcut(const QString &actionName, const QString &name,

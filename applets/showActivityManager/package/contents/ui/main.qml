@@ -57,9 +57,7 @@ DND.DropArea {
     MouseArea {
         anchors.fill: parent
         onClicked: {
-            var service = dataSource.serviceForSource(activeSource)
-            var operation = service.operationDescription("toggleActivityManager")
-            service.startOperationCall(operation)
+            ActivitySwitcher.Backend.toggleActivityManager()
         }
     }
 
