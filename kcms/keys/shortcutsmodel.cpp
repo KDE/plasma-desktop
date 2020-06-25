@@ -147,13 +147,14 @@ Component ShortcutsModel::loadComponent(const QList<KGlobalShortcutInfo> &info)
 
 void ShortcutsModel::save()
 {
-    for (auto& component : m_components) {
-        if (component.pendingDeletion) {
-            removeComponent(component);
+    for (auto it = m_components.rbegin(); it != m_components.rend(); ++it) {
+        if (it->pendingDeletion) {
+            removeComponent(*it);
+            continue;
         }
-        for (auto& shortcut : component.shortcuts) {
+        for (auto& shortcut : it->shortcuts) {
             if (shortcut.initialShortcuts != shortcut.activeShortcuts) {
-                const QStringList actionId = buildActionId(component.uniqueName, component.friendlyName,
+                const QStringList actionId = buildActionId(it->uniqueName, it->friendlyName,
                         shortcut.uniqueName, shortcut.friendlyName);
                 //operator int of QKeySequence
                 QList<int> keys(shortcut.activeShortcuts.cbegin(), shortcut.activeShortcuts.cend());
@@ -166,7 +167,7 @@ void ShortcutsModel::save()
                         qCCritical(KCMKEYS) << reply.error().name() << reply.error().message();
                     }
                     emit errorOccured(i18nc("%1 is the name of the component, %2 is the action for which saving failed",
-                        "Error while saving shortcut %1: %2", component.friendlyName, shortcut.friendlyName));
+                        "Error while saving shortcut %1: %2", it->friendlyName, shortcut.friendlyName));
                 } else {
                     shortcut.initialShortcuts = shortcut.activeShortcuts;
                 }
