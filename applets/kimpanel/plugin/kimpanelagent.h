@@ -26,6 +26,7 @@
 #include <QObject>
 #include <QStringList>
 #include <QDBusContext>
+#include <QDBusConnection>
 
 class QDBusServiceWatcher;
 class Impanel2Adaptor;
@@ -49,7 +50,6 @@ public:
     void movePreeditCaret(int pos);
     void triggerProperty(const QString& key);
 
-public: // PROPERTIES
 public Q_SLOTS: // METHODS
     void UpdateLookupTable(const QStringList &labels,
                            const QStringList &candis,
@@ -106,16 +106,13 @@ Q_SIGNALS:
     void updateLookupTableCursor(int pos);
 
 private:
-    bool m_show_aux;
-    bool m_show_preedit;
-    bool m_show_lookup_table;
-    int m_spot_x;
-    int m_spot_y;
     QString m_currentService;
-    QStringList cached_props;
-    ImpanelAdaptor* adaptor;
-    Impanel2Adaptor* adaptor2;
-    QDBusServiceWatcher* watcher;
+    QStringList m_cachedProps;
+    ImpanelAdaptor* m_adaptor;
+    Impanel2Adaptor* m_adaptor2;
+    QDBusServiceWatcher* m_watcher;
+    QDBusConnection m_connection;
+    static int m_connectionIndex;
 };
 
 #endif // KIMPANEL_AGENT_H

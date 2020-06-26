@@ -29,68 +29,70 @@
 #include <QStringList>
 #include <QVariant>
 #include <QDBusServiceWatcher>
-#include <QDBusConnection>
+
+int PanelAgent::m_connectionIndex = 0;
 
 PanelAgent::PanelAgent(QObject *parent)
     : QObject(parent)
-    ,adaptor(new ImpanelAdaptor(this))
-    ,adaptor2(new Impanel2Adaptor(this))
-    ,watcher(new QDBusServiceWatcher(this))
+    ,m_adaptor(new ImpanelAdaptor(this))
+    ,m_adaptor2(new Impanel2Adaptor(this))
+    ,m_watcher(new QDBusServiceWatcher(this))
+    ,m_connection(QDBusConnection::connectToBus(QDBusConnection::SessionBus, QStringLiteral("kimpanel_bus_%0").arg(++m_connectionIndex)))
 {
-    watcher->setConnection(QDBusConnection::sessionBus());
-    watcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
-    QDBusConnection::connectToBus(QDBusConnection::SessionBus, QStringLiteral("kimpanel_bus")).registerObject(QStringLiteral("/org/kde/impanel"), this);
-    QDBusConnection::connectToBus(QDBusConnection::SessionBus, QStringLiteral("kimpanel_bus")).registerService(QStringLiteral("org.kde.impanel"));
+    m_watcher->setConnection(QDBusConnection::sessionBus());
+    m_watcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
+    m_connection.registerObject(QStringLiteral("/org/kde/impanel"), this);
+    m_connection.registerService(QStringLiteral("org.kde.impanel"));
 
     // directly connect to corresponding signal
-    QDBusConnection(QStringLiteral("kimpanel_bus")).connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
-                                            QStringLiteral("Enable"), this, SIGNAL(enable(bool)));
-    QDBusConnection(QStringLiteral("kimpanel_bus")).connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
-                                            QStringLiteral("ShowPreedit"), this, SIGNAL(showPreedit(bool)));
-    QDBusConnection(QStringLiteral("kimpanel_bus")).connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
-                                            QStringLiteral("ShowAux"), this, SIGNAL(showAux(bool)));
-    QDBusConnection(QStringLiteral("kimpanel_bus")).connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
-                                            QStringLiteral("ShowLookupTable"), this, SIGNAL(showLookupTable(bool)));
-    QDBusConnection(QStringLiteral("kimpanel_bus")).connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
-                                            QStringLiteral("UpdateLookupTableCursor"), this, SIGNAL(updateLookupTableCursor(int)));
+    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
+                         QStringLiteral("Enable"), this, SIGNAL(enable(bool)));
+    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
+                         QStringLiteral("ShowPreedit"), this, SIGNAL(showPreedit(bool)));
+    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
+                         QStringLiteral("ShowAux"), this, SIGNAL(showAux(bool)));
+    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
+                         QStringLiteral("ShowLookupTable"), this, SIGNAL(showLookupTable(bool)));
+    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
+                         QStringLiteral("UpdateLookupTableCursor"), this, SIGNAL(updateLookupTableCursor(int)));
 
     // do some serialization
-    QDBusConnection(QStringLiteral("kimpanel_bus")).connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
-                                            QStringLiteral("UpdateLookupTable"), this, SLOT(UpdateLookupTable(QStringList,
-                                                    QStringList, QStringList, bool, bool)));
-    QDBusConnection(QStringLiteral("kimpanel_bus")).connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
-                                            QStringLiteral("UpdatePreeditCaret"), this, SIGNAL(updatePreeditCaret(int)));
-    QDBusConnection(QStringLiteral("kimpanel_bus")).connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
-                                            QStringLiteral("UpdatePreeditText"), this, SLOT(UpdatePreeditText(QString, QString)));
-    QDBusConnection(QStringLiteral("kimpanel_bus")).connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
-                                            QStringLiteral("UpdateAux"), this, SLOT(UpdateAux(QString, QString)));
-    QDBusConnection(QStringLiteral("kimpanel_bus")).connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
-                                            QStringLiteral("UpdateSpotLocation"), this, SIGNAL(updateSpotLocation(int, int)));
-    QDBusConnection(QStringLiteral("kimpanel_bus")).connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
-                                            QStringLiteral("UpdateScreen"), this, SLOT(UpdateScreen(int)));
-    QDBusConnection(QStringLiteral("kimpanel_bus")).connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
-                                            QStringLiteral("UpdateProperty"), this, SLOT(UpdateProperty(QString)));
-    QDBusConnection(QStringLiteral("kimpanel_bus")).connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
-                                            QStringLiteral("RegisterProperties"), this, SLOT(RegisterProperties(QStringList)));
-    QDBusConnection(QStringLiteral("kimpanel_bus")).connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
-                                            QStringLiteral("ExecDialog"), this, SLOT(ExecDialog(QString)));
-    QDBusConnection(QStringLiteral("kimpanel_bus")).connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
-                                            QStringLiteral("ExecMenu"), this, SLOT(ExecMenu(QStringList)));
+    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
+                         QStringLiteral("UpdateLookupTable"), this, SLOT(UpdateLookupTable(QStringList,
+                                                                                           QStringList, QStringList, bool, bool)));
+    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
+                         QStringLiteral("UpdatePreeditCaret"), this, SIGNAL(updatePreeditCaret(int)));
+    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
+                         QStringLiteral("UpdatePreeditText"), this, SLOT(UpdatePreeditText(QString, QString)));
+    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
+                         QStringLiteral("UpdateAux"), this, SLOT(UpdateAux(QString, QString)));
+    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
+                         QStringLiteral("UpdateSpotLocation"), this, SIGNAL(updateSpotLocation(int, int)));
+    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
+                         QStringLiteral("UpdateScreen"), this, SLOT(UpdateScreen(int)));
+    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
+                         QStringLiteral("UpdateProperty"), this, SLOT(UpdateProperty(QString)));
+    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
+                         QStringLiteral("RegisterProperties"), this, SLOT(RegisterProperties(QStringList)));
+    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
+                         QStringLiteral("ExecDialog"), this, SLOT(ExecDialog(QString)));
+    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"),
+                         QStringLiteral("ExecMenu"), this, SLOT(ExecMenu(QStringList)));
 
-    connect(watcher, &QDBusServiceWatcher::serviceUnregistered, this, &PanelAgent::serviceUnregistered);
+    connect(m_watcher, &QDBusServiceWatcher::serviceUnregistered, this, &PanelAgent::serviceUnregistered);
 }
 
 PanelAgent::~PanelAgent()
 {
     // destructor
-    QDBusConnection::disconnectFromBus(QStringLiteral("kimpanel_bus"));
+    QDBusConnection::disconnectFromBus(m_connection.name());
 }
 
 void PanelAgent::serviceUnregistered(const QString& service)
 {
     if (service == m_currentService) {
-        watcher->setWatchedServices(QStringList());
-        cached_props.clear();
+        m_watcher->setWatchedServices(QStringList());
+        m_cachedProps.clear();
         m_currentService = QString();
         emit showAux(false);
         emit showPreedit(false);
@@ -253,15 +255,15 @@ void PanelAgent::RegisterProperties(const QStringList &props)
 {
     const QDBusMessage& msg = message();
     if (msg.service() != m_currentService) {
-        watcher->removeWatchedService(m_currentService);
+        m_watcher->removeWatchedService(m_currentService);
         if (m_currentService.isEmpty()) {
             emit PanelRegistered();
         }
         m_currentService = msg.service();
-        watcher->addWatchedService(m_currentService);
+        m_watcher->addWatchedService(m_currentService);
     }
-    if (cached_props != props) {
-        cached_props = props;
+    if (m_cachedProps != props) {
+        m_cachedProps = props;
         QList<KimpanelProperty> list;
         foreach(const QString & prop, props) {
             list << String2Property(prop);

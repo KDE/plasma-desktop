@@ -29,12 +29,13 @@ PlasmaCore.Dialog {
     type: PlasmaCore.Dialog.PopupMenu
     flags: Qt.Popup | Qt.WindowStaysOnTopHint | Qt.WindowDoesNotAcceptFocus
     location: PlasmaCore.Types.Floating
-    property bool verticalLayout: false
-    property int highlightCandidate: -1
+    visible: helper.auxVisible || helper.preeditVisible || helper.lookupTableVisible
+    property bool verticalLayout: (helper.lookupTableLayout === 1) || (helper.lookupTableLayout === 0 && plasmoid.configuration.vertical_lookup_table);
+    property int highlightCandidate: helper.lookupTableCursor
     property int hoveredCandidate: -1
     property font preferredFont: plasmoid.configuration.use_default_font ? theme.defaultFont : plasmoid.configuration.font
     property int baseSize: theme.mSize(preferredFont).height
-    property rect position
+    property rect position: helper.spotRect
 
     onPositionChanged : updatePosition();
     onWidthChanged : updatePosition();
@@ -50,15 +51,19 @@ PlasmaCore.Dialog {
                 id: textLabel
                 width: auxLabel.width + preedit.width
                 height: Math.max(preedit.height, auxLabel.height)
+                visible: helper.auxVisible || helper.preeditVisible
                 PlasmaComponents.Label {
                     id: auxLabel
                     font: preferredFont
+                    text: helper.auxText
+                    visible: helper.auxVisible
                 }
                 Item {
                     id: preedit
                     width: preeditLabel1.width + preeditLabel2.width + 2
                     height: Math.max(preeditLabel1.height, preeditLabel2.height)
                     clip: true
+                    visible: helper.preeditVisible
                     PlasmaComponents.Label {
                         id: preeditLabel1
                         anchors.top: parent.top
@@ -125,7 +130,7 @@ PlasmaCore.Dialog {
                             id: candidateMouseArea
                             anchors.fill: parent
                             hoverEnabled: true
-                            onReleased: selectCandidate(model.index)
+                            onReleased: helper.selectCandidate(model.index)
                             onContainsMouseChanged: {
                                 inputpanel.hoveredCandidate = containsMouse ? model.index : -1;
                             }
@@ -152,7 +157,7 @@ PlasmaCore.Dialog {
                     Layout.maximumHeight: height
                     PlasmaCore.IconItem {
                         id: prevButton
-                        source: inputpanel.verticalLayout ? "arrow-left" : "arrow-up"
+                        source: inputpanel.verticalLayout ? "arrow-up" : "arrow-left"
                         width: inputpanel.baseSize
                         height: width
                         scale: prevButtonMouseArea.pressed ? 0.9 : 1
@@ -161,12 +166,12 @@ PlasmaCore.Dialog {
                             id: prevButtonMouseArea
                             anchors.fill: parent
                             hoverEnabled: true
-                            onReleased: action("LookupTablePageUp")
+                            onReleased: helper.lookupTablePageUp()
                         }
                     }
                     PlasmaCore.IconItem {
                         id: nextButton
-                        source: inputpanel.verticalLayout ? "arrow-right" : "arrow-down"
+                        source: inputpanel.verticalLayout ? "arrow-down" : "arrow-right"
                         width: inputpanel.baseSize
                         height: width
                         scale: nextButtonMouseArea.pressed ? 0.9 : 1
@@ -175,18 +180,11 @@ PlasmaCore.Dialog {
                             id: nextButtonMouseArea
                             anchors.fill: parent
                             hoverEnabled: true
-                            onReleased: action("LookupTablePageDown")
+                            onReleased: helper.lookupTablePageDown()
                         }
                     }
                 }
             }
-        }
-
-        PlasmaCore.DataSource {
-            id: inputPanelEngine
-            engine: "kimpanel"
-            connectedSources: ["inputpanel"]
-            onDataChanged: timer.restart()
         }
 
         Kimpanel.Screen {
@@ -198,64 +196,46 @@ PlasmaCore.Dialog {
         Timer {
             id: timer
             interval: 1
-            onTriggered: updateUI()
+            onTriggered: updateLookupTable()
+        }
+
+        Connections {
+            target: helper
+
+            function onPreeditTextChanged() {
+                var charArray = [...helper.preeditText];
+                preeditLabel1.text = charArray.slice(0, helper.caretPos).join('');
+                preeditLabel2.text = charArray.slice(helper.caretPos).join('');
+            }
+
+            function onLookupTableChanged() {
+                timer.restart();
+            }
         }
     }
 
-    function updateUI() {
-        var data = inputPanelEngine.data["inputpanel"];
-        if (!data) {
-            return;
-        }
-        var auxVisible = data["AuxVisible"] ? true : false;
-        var preeditVisible = data["PreeditVisible"] ? true : false;
-        var lookupTableVisible = data["LookupTableVisible"] ? true : false;
-        var pos = data["Position"] ? { 'x': data["Position"].x,
-                                    'y': data["Position"].y,
-                                    'w': data["Position"].width,
-                                    'h': data["Position"].height } : {'x' : 0, 'y': 0, 'w': 0, 'h': 0 };
-        inputpanel.position = Qt.rect(pos.x, pos.y, pos.w, pos.h);
-
-        var newVisibility = auxVisible || preeditVisible || lookupTableVisible;
-        if (!newVisibility) {
-            // If we gonna hide anyway, don't do the update.
-            inputpanel.hide();
-            return;
-        }
-        textLabel.visible = auxVisible || preeditVisible;
-        auxLabel.text = (auxVisible && data["AuxText"]) ? data["AuxText"] : ""
-        var preeditText = (preeditVisible && data["PreeditText"]) ? data["PreeditText"] : ""
-        var caret = data["CaretPos"] ? data["CaretPos"] : 0;
-        var charArray = [...preeditText];
-        preeditLabel1.text = charArray.slice(0, caret).join('');
-        preeditLabel2.text = charArray.slice(caret).join('');
-        preedit.visible = preeditVisible;
-        var layout = data["LookupTableLayout"] !== undefined ? data["LookupTableLayout"] : 0;
-        inputpanel.highlightCandidate = data["LookupTableCursor"] !== undefined ? data["LookupTableCursor"] : -1;
+    function updateLookupTable() {
         inputpanel.hoveredCandidate = -1;
-        inputpanel.verticalLayout = (layout === 1) || (layout === 0 && plasmoid.configuration.vertical_lookup_table);
-        button.visible = lookupTableVisible
+        button.visible = helper.lookupTableVisible && (helper.hasPrev || helper.hasNext);
 
-        if (data["LookupTable"]) {
-            var table = data["LookupTable"];
-            if (lookupTableVisible) {
-                if (table.length < tableList.count) {
-                    tableList.remove(table.length, tableList.count - table.length);
-                }
-                for (var i = 0; i < table.length; i ++) {
-                    if (i >= tableList.count) {
-                        tableList.append({'label' : table[i].label, 'text': table[i].text, 'index': i});
-                    } else {
-                        tableList.set(i, {'label' : table[i].label, 'text': table[i].text, 'index': i});
-                    }
-                }
-            } else {
-                tableList.clear();
+        var labels = helper.labels;
+        var texts = helper.texts;
+
+        var length = Math.min(labels.length, texts.length);
+
+        if (helper.lookupTableVisible) {
+            if (length< tableList.count) {
+                tableList.remove(length, tableList.count - length);
             }
-        }
-        // If we gonna show, do that after everything is ready.
-        if (newVisibility) {
-            inputpanel.show();
+            for (var i = 0; i < length; i ++) {
+                if (i >= tableList.count) {
+                    tableList.append({'label' : labels[i], 'text': texts[i], 'index': i});
+                } else {
+                    tableList.set(i, {'label' : labels[i], 'text': texts[i], 'index': i});
+                }
+            }
+        } else {
+            tableList.clear();
         }
     }
 
@@ -293,18 +273,5 @@ PlasmaCore.Dialog {
 
         inputpanel.x = newRect.x + (x - newRect.x) / devicePerPixelRatio;
         inputpanel.y = newRect.y + (y - newRect.y) / devicePerPixelRatio;
-    }
-
-    function action(key) {
-        var service = inputPanelEngine.serviceForSource("inputpanel");
-        var operation = service.operationDescription(key);
-        service.startOperationCall(operation);
-    }
-
-    function selectCandidate(index) {
-        var service = inputPanelEngine.serviceForSource("inputpanel");
-        var operation = service.operationDescription("SelectCandidate");
-        operation.candidate = index;
-        service.startOperationCall(operation);
     }
 }

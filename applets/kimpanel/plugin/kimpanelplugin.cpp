@@ -20,6 +20,7 @@
 
 #include "kimpanelplugin.h"
 #include "screen.h"
+#include "kimpanel.h"
 #include <QQmlEngine>
 
 void KimpanelPlugin::registerTypes(const char* uri)
@@ -27,4 +28,5 @@ void KimpanelPlugin::registerTypes(const char* uri)
     Q_UNUSED(uri);
     Q_ASSERT(QLatin1String(uri) == QLatin1String("org.kde.plasma.private.kimpanel"));
     qmlRegisterType<Screen>(uri, 0, 1, "Screen");
+    qmlRegisterType<Kimpanel>(uri, 0, 1, "Kimpanel");
 }
