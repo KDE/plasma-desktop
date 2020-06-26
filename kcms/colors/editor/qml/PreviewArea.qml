@@ -1,21 +1,5 @@
-/*
- * Copyright 2020 Noah Davis <noahadvs@gmail.com>
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License or (at your option) version 3 or any later version
- * accepted by the membership of KDE e.V. (or its successor approved
- * by the membership of KDE e.V.), which shall act as a proxy
- * defined in Section 14 of version 3 of the license.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+/* SPDX-License-Identifier: LicenseRef-KDE-Accepted-GPL
+ * SPDX-FileCopyrightText: 2020 Noah Davis <noahadvs@gmail.com>
  */
 
 import QtQuick 2.12
@@ -27,11 +11,24 @@ Kirigami.Page {
     implicitWidth: previewWindow.implicitWidth
     implicitHeight: previewWindow.implicitHeight
     Kirigami.Theme.colorSet: Kirigami.Theme.View
+    
+    actions {
+        main: Kirigami.Action {
+            iconName: "color-picker"
+            text: i18n("Locate Color Role")
+            shortcut: "Ctrl+L"
+            tooltip: i18n("Locate a color role by clicking on a part of the preview window") + " (" + shortcut + ")"
+        }
+    }
 
     PreviewWindow {
         id: previewWindow
         anchors {
             fill: parent
+            // Margins are intentionally 2x thicker than the shadows even
+            // though it looks like they should be exactly the same as the
+            // shadows in the code. Why aren't the shadows as thick as the
+            // shadows size? IDK.
             topMargin: previewWindow.shadowSize - shadowYOffset
             leftMargin: previewWindow.shadowSize
             rightMargin: previewWindow.shadowSize

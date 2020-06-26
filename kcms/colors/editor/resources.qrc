@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
+        <file>qml</file>
         <file>qml/main.qml</file>
         <file>qml/ColorEditor.qml</file>
         <file>qml/ColorList.qml</file>
@@ -7,6 +8,7 @@
         <file>qml/PreviewWindow.qml</file>
         <file>qml/PreviewTitleBar.qml</file>
         <file>qml/PreviewWindowContents.qml</file>
+        <file>qml/previewwindowcontentscomponents</file>
         <file>qml/previewwindowcontentscomponents/MainPage.qml</file>
         <file>qml/previewwindowcontentscomponents/SideBar.qml</file>
     </qresource>
