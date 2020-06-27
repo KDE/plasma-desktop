@@ -87,7 +87,7 @@ void CfgFileManager::load(KConfig *)
     for (const KService::Ptr &service : fileManagers) {
         addItem(QIcon::fromTheme(service->icon()), service->name(), service->storageId());
 
-        if (fileManager->storageId() == service->storageId()) {
+        if (fileManager && fileManager->storageId() == service->storageId()) {
             setCurrentIndex(count() -1);
             m_currentIndex = count() -1;
         }
