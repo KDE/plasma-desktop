@@ -97,7 +97,7 @@ void CfgFileManager::load(KConfig *)
     }
 
     // in case of a service not associated with FileManager Category
-    if (m_currentIndex == -1 && !fileManager->storageId().isEmpty()) {
+    if (m_currentIndex == -1 && fileManager && !fileManager->storageId().isEmpty()) {
         const KService::Ptr service = KService::serviceByStorageId(fileManager->storageId());
 
         const QString icon = !service->icon().isEmpty() ? service->icon() : QStringLiteral("application-x-shellscript");
