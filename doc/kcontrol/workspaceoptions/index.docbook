@@ -13,9 +13,9 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2019-08-01</date>
+<date>2020-06-30</date>
 
-<releaseinfo>&plasma; 5.16</releaseinfo>
+<releaseinfo>&plasma; 5.20</releaseinfo>
 
 <keywordset>
 <keyword>System Settings</keyword>
@@ -47,17 +47,25 @@ changes are displayed in an OSD.</para>
 </varlistentry>
 
 <varlistentry>
+<term><guilabel>Animation speed</guilabel></term>
+<listitem>
+    <para>Allows you to set the speed of desktop effect animations from <guilabel>Slow</guilabel> to <guilabel>Instant</guilabel>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
 <term><guilabel>Single-click to open files and folders</guilabel></term>
 <listitem>
 <para>This is the default setting. Clicking once on an icon
 will open it.  To select you can drag around the icon(s) or <keycombo
 action="simul">&Ctrl;<mousebutton>Right</mousebutton></keycombo> click,
-or simply click and hold to drag it.</para>
+or simply click and hold to drag it.
+Selection can also be done by clicking on item's selection marker.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Double-click to open files and folders (select icons on first click)</guilabel></term>
+<term><guilabel>Double-click to open files and folders</guilabel></term>
 <listitem>
 <para>If this option is not checked, icons/files will be opened with a
 single click of the <mousebutton>left</mousebutton> mouse-button. This
@@ -66,6 +74,20 @@ links in most web browsers. If checked however, icons/files will be
 opened with a double click, while a single click will only select the
 icon or file. This is the behavior you may know from other desktops or
 operating systems.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice><guimenu>Clicking in scrollbar track</guimenu><guimenuitem>Scrolls one page up and down</guimenuitem></menuchoice></term>
+<listitem>
+<para>This is the default setting. Left-click in scrollbar track moves scrollbar by one page.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice><guimenu>Clicking in scrollbar track</guimenu><guimenuitem>Scrolls to the clicked location</guimenuitem></menuchoice></term>
+<listitem>
+<para>Turns on the behavior when the scroll handle position jumps right to the position in the document where you have clicked. This is the behavior you may know from other desktops or operating systems.</para>
 </listitem>
 </varlistentry>
 
