@@ -19,6 +19,7 @@ target_link_libraries(kcolorschemeeditor
     KF5::ConfigWidgets
     KF5::GuiAddons
     KF5::I18n
+    KF5::Kirigami2
     KDecoration2::KDecoration
     KDecoration2::KDecoration2Private
 #     KF5::NewStuff

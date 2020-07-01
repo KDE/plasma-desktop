@@ -12,11 +12,15 @@ import org.kde.newstuff 1.0 as KNS
 
 Kirigami.ApplicationWindow {
     id: root
+    minimumWidth: Kirigami.Units.gridUnit * 40
+    minimumHeight: Kirigami.Units.gridUnit * 30
+    width: Kirigami.Units.gridUnit * 64
+    height: Kirigami.Units.gridUnit * 48
     // TODO: use real colorscheme name
     title: "Breeze Dark"
-    width: Math.round(height / 0.75)
-    height: Kirigami.Units.gridUnit * 40
 
+//     pageStack.columnView.columnResizeMode: Kirigami.ColumnView.DynamicColumns
+    pageStack.defaultColumnWidth: Math.round(root.width / 4)//pageStack.firstVisibleItem.implicitWidth
     pageStack.globalToolBar.toolbarActionAlignment: Qt.AlignLeft
     pageStack.initialPage: [colorListComponent, previewAreaComponent]
     
@@ -24,20 +28,12 @@ Kirigami.ApplicationWindow {
         id: colorListComponent
         ColorList {
             id: colorList
-            Layout.fillHeight: true
-            Layout.minimumWidth: this.implicitWidth
-            Layout.preferredWidth: root.width * 0.25
         }
     }
     Component {
         id: previewAreaComponent
         PreviewArea {
             id: previewArea
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            Layout.minimumWidth: this.implicitWidth
-            Layout.minimumHeight: this.implicitHeight
-            Layout.preferredWidth: root.width * 0.75
         }
     }
     

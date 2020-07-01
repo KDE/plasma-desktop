@@ -10,11 +10,11 @@ import org.kde.kirigami 2.12 as Kirigami
 Kirigami.ShadowedRectangle {
     id: root
 
-    property real itemHeight: Math.max(Kirigami.Units.iconSizes.smallMedium, 0)
+    property real itemWidth: Kirigami.Units.iconSizes.smallMedium
     property real titleBarCornerRadius: 3 * Math.floor(Kirigami.Units.devicePixelRatio)
     
     implicitWidth: Kirigami.Units.gridUnit * 32
-    implicitHeight: itemHeight + Kirigami.Units.smallSpacing*2
+    implicitHeight: root.itemWidth + Kirigami.Units.smallSpacing*2
     
     corners{
         topLeftRadius: titleBarCornerRadius
@@ -30,7 +30,7 @@ Kirigami.ShadowedRectangle {
         id: titlebarLayout
         anchors {
             fill: parent
-            leftMargin: Math.round((root.height - root.itemHeight)/2)
+            leftMargin: Math.round((root.height - root.itemWidth)/2)
             rightMargin: anchors.leftMargin
         }
         spacing: anchors.leftMargin
@@ -38,17 +38,17 @@ Kirigami.ShadowedRectangle {
         Kirigami.Icon {
             id: appIcon
             Layout.alignment: Qt.AlignLeft
-            width: Kirigami.Units.iconSizes.smallMedium
+            width: root.itemWidth
             height: width
             smooth: true
             source: "preferences-desktop-color"
         }
         Item { // Keeps the title perfectly centered
-            width: appIcon.width
+            width: root.itemWidth
             Layout.fillHeight: true
         }
         Item { // Keeps the title perfectly centered
-            width: appIcon.width
+            width: root.itemWidth
             Layout.fillHeight: true
         }
         QQC2.Label {
@@ -63,16 +63,16 @@ Kirigami.ShadowedRectangle {
         }
         Kirigami.Icon {
             id: minimizeIcon
-            width: closeIcon.width
-            height: Kirigami.Units.iconSizes.small
+            width: root.itemWidth
+            height: closeIcon.height
             smooth: true
             source: "window-minimize"
             color: Kirigami.Theme.textColor
         }
         Kirigami.Icon {
             id: maximizeIcon
-            width: closeIcon.width
-            height: minimizeIcon.height
+            width: root.itemWidth
+            height: closeIcon.height
             smooth: true
             source: "window-maximize"
             color: Kirigami.Theme.textColor
@@ -80,17 +80,17 @@ Kirigami.ShadowedRectangle {
         Kirigami.Icon {
             id: closeIcon
             Layout.alignment: Qt.AlignRight
-            width: Kirigami.Units.iconSizes.smallMedium
-            height: width
+            width: root.itemWidth
+            height: Kirigami.Units.iconSizes.small
             smooth: true
             source: "window-close"
-            color: mouseArea.containsMouse ? Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.negativeTextColor, "white", 0.2) : Kirigami.Theme.negativeTextColor
+//             color: mouseArea.containsMouse ? Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.negativeTextColor, "white", 0.2) : Kirigami.Theme.negativeTextColor
             
-            MouseArea {
+            /*MouseArea {
                 id: mouseArea
                 anchors.fill: closeIcon
                 hoverEnabled: true
-            }
+            }*/
         }
     }
 }

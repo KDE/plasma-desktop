@@ -9,8 +9,7 @@ import org.kde.kirigami 2.12 as Kirigami
 
 Kirigami.ScrollablePage {
     id: root
-    
-    implicitWidth: Kirigami.Units.gridUnit * 4
+    implicitWidth: Kirigami.Units.gridUnit * 10
     padding: 0
     
     Kirigami.Theme.colorSet: Kirigami.Theme.View
