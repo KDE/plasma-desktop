@@ -9,7 +9,7 @@
   <kcfgfile name="ksplashrc" />
   <group name="KSplash">
     <entry name="engine" key="Engine" type="String">
-      <label>For futur use</label>
+      <label>For future use</label>
       <default code="true">theme() == QStringLiteral("None") ? QStringLiteral("none") : QStringLiteral("KSplashQML")</default>
     </entry>
     <entry name="theme" key="Theme" type="String">

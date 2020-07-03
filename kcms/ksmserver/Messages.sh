@@ -1,5 +1,3 @@
 #! /usr/bin/env bash
-$EXTRACTRC *.ui >> rc.cpp
+$EXTRACTRC `find . -name \*.ui -o -name \*.kcfg` >> rc.cpp
 $XGETTEXT *.cpp -o $podir/kcmsmserver.pot
-rm -f rc.cpp
-
