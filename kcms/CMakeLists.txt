@@ -40,7 +40,6 @@ add_subdirectory( desktoppaths )
 
 add_subdirectory(activities)
 add_subdirectory(componentchooser)
-add_subdirectory(emoticons)
 add_subdirectory(icons)
 add_subdirectory(kded)
 add_subdirectory(formats)
