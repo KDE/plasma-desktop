@@ -1,4 +1,3 @@
-
 set(kcm_keyboard_layoutmodel_SRCS
     layout_list_models.cpp
     layout_list_model_base.cpp
@@ -19,8 +18,6 @@ set(kcm_keyboard_layoutmodel_SRCS
     xkb_layout_config_model.cpp
     fcitx_im_config_model.cpp
 
-    ../fcitx/fcitxqtinputmethodproxy.cpp
-    ../fcitx/fcitxqtinputmethoditem.cpp
     ../xkb_rules.cpp
 )
 
@@ -54,6 +51,7 @@ target_link_libraries(kcm_keyboard_layoutmodel
     XCB::XKB
     ${X11_LIBRARIES}
     ${X11_Xkbfile_LIB}
+    kcm_keyboard_fcitx
 )
 
 target_include_directories(kcm_keyboard_layoutmodel PRIVATE

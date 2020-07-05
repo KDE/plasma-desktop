@@ -83,7 +83,6 @@ void FcitxQtInputMethodItem::registerMetaType()
     qDBusRegisterMetaType<FcitxQtInputMethodItemList>();
 }
 
-FCITXQTDBUSADDONS_EXPORT
 QDBusArgument& operator<<(QDBusArgument& argument, const FcitxQtInputMethodItem& im)
 {
     argument.beginStructure();
@@ -95,7 +94,6 @@ QDBusArgument& operator<<(QDBusArgument& argument, const FcitxQtInputMethodItem&
     return argument;
 }
 
-FCITXQTDBUSADDONS_EXPORT
 const QDBusArgument& operator>>(const QDBusArgument& argument, FcitxQtInputMethodItem& im)
 {
     QString name;

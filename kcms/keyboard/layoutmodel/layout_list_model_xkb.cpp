@@ -11,14 +11,15 @@ LayoutListModelXkb::LayoutListModelXkb(QObject* parent)
       m_layouts(new LayoutList)
 {
     for (int i = 0; i < XkbRules::self()->layoutInfos.count(); ++i) {
-        auto const& layout_info = XkbRules::self()->layoutInfos[i];
+        const auto &layout_info = XkbRules::self()->layoutInfos[i];
 
         Layout layout;
         layout.id = layout_info->name;
         layout.description = layout_info->description;
 
-        for (auto const& lang : layout_info->languages)
+        for (const auto &lang : layout_info->languages) {
             layout.languages << lang;
+        }
 
         // add rest of the variants in
         for (auto const& var_info : layout_info->variantInfos) {
@@ -38,7 +39,7 @@ LayoutListModelXkb::LayoutListModelXkb(QObject* parent)
     }
 }
 
-int LayoutListModelXkb::rowCount(const QModelIndex& parent) const
+int LayoutListModelXkb::rowCount(const QModelIndex &parent) const
 {
     if (parent.column() > 0) {
         return 0;
@@ -48,8 +49,8 @@ int LayoutListModelXkb::rowCount(const QModelIndex& parent) const
         return m_layouts->count();
     }
 
-    Item* item = static_cast<Item*>(parent.internalPointer());
-    if (Layout* layout = dynamic_cast<Layout*>(item)) {
+    Item *item = static_cast<Item *>(parent.internalPointer());
+    if (Layout *layout = dynamic_cast<Layout *>(item)) {
         return layout->variants.count();
     }
 
@@ -62,7 +63,7 @@ int LayoutListModelXkb::columnCount(const QModelIndex& parent) const
     return 1;
 }
 
-Qt::ItemFlags LayoutListModelXkb::flags(const QModelIndex& index) const
+Qt::ItemFlags LayoutListModelXkb::flags(const QModelIndex &index) const
 {
     if (!index.isValid()) {
         return Qt::NoItemFlags;
@@ -71,7 +72,7 @@ Qt::ItemFlags LayoutListModelXkb::flags(const QModelIndex& index) const
     return QAbstractItemModel::flags(index);
 }
 
-QModelIndex LayoutListModelXkb::index(int row, int column, const QModelIndex& parent) const
+QModelIndex LayoutListModelXkb::index(int row, int column, const QModelIndex &parent) const
 {
     if (!hasIndex(row, column, parent)) {
         return QModelIndex();
@@ -91,28 +92,28 @@ QModelIndex LayoutListModelXkb::index(int row, int column, const QModelIndex& pa
     return QModelIndex();
 }
 
-QModelIndex LayoutListModelXkb::parent(const QModelIndex& index) const
+QModelIndex LayoutListModelXkb::parent(const QModelIndex &index) const
 {
     if (!index.isValid()) {
         return QModelIndex();
     }
 
-    Item* item = static_cast<Item*>(index.internalPointer());
-    if (LayoutVariant* variant = dynamic_cast<LayoutVariant*>(item)) {
+    Item* item = static_cast<Item *>(index.internalPointer());
+    if (LayoutVariant *variant = dynamic_cast<LayoutVariant *>(item)) {
         return createIndex(variant->parent_index, 0, &(*m_layouts)[variant->parent_index]);
     }
 
     return QModelIndex();
 }
 
-QVariant LayoutListModelXkb::data(const QModelIndex& index, int role) const
+QVariant LayoutListModelXkb::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
         return QVariant();
     }
 
-    Item* item = static_cast<Item*>(index.internalPointer());
-    if (LayoutVariant* variant = dynamic_cast<LayoutVariant*>(item)) {
+    Item *item = static_cast<Item *>(index.internalPointer());
+    if (LayoutVariant *variant = dynamic_cast<LayoutVariant *>(item)) {
         switch (role) {
         case Roles::ShortNameRole:
         case Roles::NameRole:
@@ -124,7 +125,7 @@ QVariant LayoutListModelXkb::data(const QModelIndex& index, int role) const
         case Roles::LanguagesRole:
             return variant->languages;
         }
-    } else if (Layout* layout = dynamic_cast<Layout*>(item)) {
+    } else if (Layout *layout = dynamic_cast<Layout *>(item)) {
         switch (role) {
         case Roles::ShortNameRole:
         case Roles::NameRole:

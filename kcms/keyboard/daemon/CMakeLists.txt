@@ -56,7 +56,7 @@ target_link_libraries(kded_keyboard
     KF5::XmlGui
     KF5::GuiAddons
     KF5::IconThemes
-
+    kcm_keyboard_fcitx
     kcm_keyboard_layoutmodel
 )
 

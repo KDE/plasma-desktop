@@ -6,24 +6,29 @@
 #include "layout_list_model_base.h"
 #include "../xkb_rules.h"
 
+/**
+ * Layout list wrapper arrount X Keyboard Extension (XKB)
+ * 
+ * @see https://www.freedesktop.org/wiki/Software/XKeyboardConfig/
+ */
 class LayoutListModelXkb : public QAbstractItemModel, public LayoutListModelBase {
     Q_OBJECT
 
 public:
-    explicit LayoutListModelXkb(QObject* parent = nullptr);
+    explicit LayoutListModelXkb(QObject *parent = nullptr);
 
-    int rowCount(const QModelIndex& parent = QModelIndex()) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    int columnCount(const QModelIndex& parent = QModelIndex()) const override;
+    int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    Qt::ItemFlags flags(const QModelIndex& index) const override;
+    Qt::ItemFlags flags(const QModelIndex &index) const override;
 
     QModelIndex index(int row, int column,
-        const QModelIndex& parent = QModelIndex()) const override;
+        const QModelIndex &parent = QModelIndex()) const override;
 
-    QModelIndex parent(const QModelIndex& index) const override;
+    QModelIndex parent(const QModelIndex &index) const override;
 
-    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
 private:
     struct Item {
