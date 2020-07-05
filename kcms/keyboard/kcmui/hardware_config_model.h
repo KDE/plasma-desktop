@@ -1,9 +1,12 @@
-#ifndef KCM_KEYBOARD_DATAMODEL_H
-#define KCM_KEYBOARD_DATAMODEL_H
+/*
+ * SPDX-FileCopyrightText: Gun Park <mujjingun@gmail.com>
+ * 
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+
+#pragma once
 
 #include <QObject>
-
-#include <memory>
 
 #include "keyboard_model_model.h"
 #include "../xkb_rules.h"
@@ -64,5 +67,3 @@ private:
     double m_repeatRate;
     QString m_keyboardModel;
 };
-
-#endif // KCM_KEYBOARD_DATAMODEL_H

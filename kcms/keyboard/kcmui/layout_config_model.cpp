@@ -1,3 +1,9 @@
+/*
+ * SPDX-FileCopyrightText: Gun Park <mujjingun@gmail.com>
+ * 
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+
 #include "layout_config_model.h"
 
 #include <QDebug>

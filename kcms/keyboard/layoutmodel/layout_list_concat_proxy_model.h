@@ -1,10 +1,17 @@
-#ifndef LAYOUT_LIST_CONCAT_PROXY_MODEL_H
-#define LAYOUT_LIST_CONCAT_PROXY_MODEL_H
+/*
+ * SPDX-FileCopyrightText: Gun Park <mujjingun@gmail.com>
+ * 
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+#pragma once
 
 #include <KConcatenateRowsProxyModel>
 
 #include "layout_list_model_base.h"
 
+/**
+ * @brief Contat the Fcitx, Xkb and selected model
+ */
 class LayoutListConcatProxyModel : public KConcatenateRowsProxyModel, public LayoutListModelBase {
     Q_OBJECT
 public:
@@ -12,5 +19,3 @@ public:
 
     QHash<int, QByteArray> roleNames() const override;
 };
-
-#endif // LAYOUT_LIST_CONCAT_PROXY_MODEL_H

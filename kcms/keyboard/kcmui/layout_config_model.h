@@ -1,5 +1,10 @@
-#ifndef LAYOUTMODEL_H
-#define LAYOUTMODEL_H
+/*
+ * SPDX-FileCopyrightText: Gun Park <mujjingun@gmail.com>
+ * 
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+
+#pragma once
 
 #include <QObject>
 #include <KActionCollection>
@@ -14,15 +19,15 @@ class LayoutConfigModel : public QObject {
     Q_PROPERTY(bool layoutIndicatorShowLabel READ layoutIndicatorShowLabel WRITE setLayoutIndicatorShowLabel NOTIFY layoutIndicatorShowLabelChanged)
     Q_PROPERTY(int switchingPolicyIndex READ switchingPolicyIndex WRITE setSwitchingPolicyIndex NOTIFY switchingPolicyIndexChanged)
     Q_PROPERTY(QString alternativeShortcut READ alternativeShortcut WRITE setAlternativeShortcut NOTIFY alternativeShortcutChanged)
-    Q_PROPERTY(LayoutListFilterDuplicatesProxyModel* layoutListModel READ layoutListModel NOTIFY layoutListModelChanged)
-    Q_PROPERTY(LayoutListSortByPriorityProxyModel* currentLayoutListModel READ currentLayoutListModel NOTIFY currentLayoutListModelChanged)
+    Q_PROPERTY(LayoutListFilterDuplicatesProxyModel *layoutListModel READ layoutListModel NOTIFY layoutListModelChanged)
+    Q_PROPERTY(LayoutListSortByPriorityProxyModel *currentLayoutListModel READ currentLayoutListModel NOTIFY currentLayoutListModelChanged)
     Q_PROPERTY(QStringList mainShiftKeyModel READ mainShiftKeyModel)
     Q_PROPERTY(int mainShiftKeyIndex READ mainShiftKeyIndex WRITE setMainShiftKeyIndex NOTIFY mainShiftKeyIndexChanged)
     Q_PROPERTY(QStringList thirdLevelShortcutModel READ thirdLevelShortcutModel)
     Q_PROPERTY(int thirdLevelShortcutIndex READ thirdLevelShortcutIndex WRITE setThirdLevelShortcutIndex NOTIFY thirdLevelShortcutChanged)
 
 public:
-    explicit LayoutConfigModel(QObject* parent);
+    explicit LayoutConfigModel(QObject *parent);
 
 public:
     bool showLayoutIndicator() const;
@@ -89,7 +94,5 @@ private:
 
     QString m_alternativeShortcuts;
 
-    LayoutListModels* m_layoutListModels;
+    LayoutListModels *m_layoutListModels;
 };
-
-#endif // LAYOUTMODEL_H

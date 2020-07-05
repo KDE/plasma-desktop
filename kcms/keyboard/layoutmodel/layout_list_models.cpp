@@ -25,6 +25,30 @@ LayoutListModels::LayoutListModels(QObject* parent)
     , m_fcitxIface(new QDBusInterface("org.fcitx.Fcitx", "/inputmethod", "org.freedesktop.DBus.Properties"))
 {
     // Setup models
+    
+    /*
+     * Layout organization:
+     * 
+     * LayoutListModelXkb
+     *        |
+     * LayoutListXkbExpandProxyModel (flatten tree)    LayoutListModelFcitx      LayoutListModelSelected
+     *        |                                            |                          |
+     *         \___________________________________________|_________________________/
+     *                                                     |
+     *                                         LayoutListConcatProxyModel
+     *                                                     |
+     *                                      LayoutListFilterSourceProxyModel
+     *                                                     |
+     *                                        LayoutListSortFilterProxyModel // sort by name
+     *                                                     |
+     *                                     LayoutListFilterDuplicatesProxyModel // remove duplicate
+     *                                                     |
+     *                                      LayoutListFilterDisabledProxyModel // removed disabled
+     *                                                     |
+     *                                     LayoutListSortByPriorityProxyModel // sorty by priority
+     *                                                     |
+     *                                         LayoutListCurrentProxyModel
+     */
     auto xkbModel = new LayoutListModelXkb(this);
     auto expanded_xkb = new LayoutListXkbExpandProxyModel(this);
     expanded_xkb->setSourceModel(xkbModel);

@@ -30,6 +30,7 @@ ecm_qt_declare_logging_category(kcm_keyboard_layoutmodel_SRCS
 add_library(kcm_keyboard_layoutmodel STATIC ${kcm_keyboard_layoutmodel_SRCS})
 
 target_link_libraries(kcm_keyboard_layoutmodel
+    kcm_keyboard_fcitx
     KF5::ConfigCore
     KF5::CoreAddons
     KF5::QuickAddons
@@ -51,7 +52,6 @@ target_link_libraries(kcm_keyboard_layoutmodel
     XCB::XKB
     ${X11_LIBRARIES}
     ${X11_Xkbfile_LIB}
-    kcm_keyboard_fcitx
 )
 
 target_include_directories(kcm_keyboard_layoutmodel PRIVATE

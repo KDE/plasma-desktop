@@ -9,6 +9,7 @@
 #include <algorithm>
 #include <exception>
 #include <memory>
+#include <fcitxqtinputmethoditem.h>
 #include <fcitx_interface.h>
 
 #include "input_sources.h"

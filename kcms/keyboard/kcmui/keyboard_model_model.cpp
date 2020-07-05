@@ -1,3 +1,9 @@
+/*
+ * SPDX-FileCopyrightText: Gun Park <mujjingun@gmail.com>
+ * 
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+
 #include "keyboard_model_model.h"
 
 #include <KLocalizedString>

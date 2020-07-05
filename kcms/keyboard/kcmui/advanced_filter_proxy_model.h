@@ -1,5 +1,10 @@
-#ifndef ADVANCED_FILTER_PROXY_MODEL_H
-#define ADVANCED_FILTER_PROXY_MODEL_H
+/*
+ * SPDX-FileCopyrightText: Gun Park <mujjingun@gmail.com>
+ * 
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+
+#pragma once
 
 #include <QSortFilterProxyModel>
 
@@ -10,5 +15,3 @@ public:
 
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
 };
-
-#endif // ADVANCED_FILTER_PROXY_MODEL_H

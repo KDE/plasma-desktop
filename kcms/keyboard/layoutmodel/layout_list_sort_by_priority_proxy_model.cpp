@@ -13,7 +13,7 @@ void LayoutListSortByPriorityProxyModel::applyOrderChanges()
 {
     if (!m_tempMapping.empty()) {
         qDebug() << "applyorderchanges" << m_tempMapping;
-        emit enabledOrderChanged(m_tempMapping);
+        Q_EMIT enabledOrderChanged(m_tempMapping);
         m_tempMapping.clear();
     }
 }
@@ -39,7 +39,7 @@ void LayoutListSortByPriorityProxyModel::simulateMove(int src, int dst)
 
 void LayoutListSortByPriorityProxyModel::remove(int idx)
 {
-    emit itemRemoved(idx);
+    Q_EMIT itemRemoved(idx);
 }
 /*
 bool LayoutListSortByPriorityProxyModel::lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const

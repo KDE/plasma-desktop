@@ -1,5 +1,10 @@
-#ifndef NEW_KEYBOARD_MAIN_H
-#define NEW_KEYBOARD_MAIN_H
+/*
+ * SPDX-FileCopyrightText: Gun Park <mujjingun@gmail.com>
+ * 
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+
+#pragma once
 
 #include <KQuickAddons/ConfigModule>
 
@@ -44,5 +49,3 @@ private:
     KActionCollection *m_actionCollection;
     QAction *m_nextLayoutAction;
 };
-
-#endif // NEW_KEYBOARD_MAIN_H
