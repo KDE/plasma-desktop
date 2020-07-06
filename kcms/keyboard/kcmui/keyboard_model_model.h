@@ -1,5 +1,10 @@
-#ifndef KCM_KEYBOARD_KEYBOARDMODELMODEL_H
-#define KCM_KEYBOARD_KEYBOARDMODELMODEL_H
+/*
+ * SPDX-FileCopyrightText: Gun Park <mujjingun@gmail.com>
+ * 
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+
+#pragma once
 
 #include <QAbstractListModel>
 #include <QVector>
@@ -40,5 +45,3 @@ private:
     };
     QVector<KeyboardModel> m_list;
 };
-
-#endif // KCM_KEYBOARD_KEYBOARDMODELMODEL_H

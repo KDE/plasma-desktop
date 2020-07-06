@@ -12,102 +12,99 @@ KCM.ScrollViewKCM {
     property var dataModel;
     signal changed();
 
-    Controls.Dialog {
+    Kirigami.OverlaySheet {
         id: addLayoutDialog
-        standardButtons: Controls.Dialog.Ok | Controls.Dialog.Discard
-        title: i18n("Select Layout")
-
-        x: Math.floor((parent.width - width) / 2)
-        y: Math.floor((parent.height - height) / 2)
-        width: 500
-        height: Math.floor(Math.min(parent.height, 500));
-
+        
         property var selected: []
-
-        ColumnLayout {
-            anchors.fill: parent
-
-            Component {
-                id: sectionHeading
-                Rectangle {
-                    width: parent.width
-                    height: childrenRect.height
-                    color: "transparent"
-
-                    Text {
-                        text: section
-                        font.bold: true
-                        font.pixelSize: 20
-                    }
-                }
+        
+        parent: root.parent.parent
+        
+        topPadding: 0
+        bottomPadding: 0
+        leftPadding: 0
+        rightPadding: 0
+        
+        header: ColumnLayout {
+            spacing: Kirigami.Units.largeSpacing
+            
+            Kirigami.Heading {
+                text: i18nc("@title:window", "Select Layout")
             }
-
-            ListView {
-                id: layoutSelectList
-                implicitWidth: parent.width
-                Layout.fillHeight: true
-
-                Controls.ScrollBar.vertical: Controls.ScrollBar {}
-
-                model: PlasmaCore.SortFilterModel {
-                    id: nameFilterModel
-                    sourceModel: PlasmaCore.SortFilterModel {
-                        id: enabledFilterModel
-                        sourceModel: dataModel.layoutListModel
-
-                        filterRole: "enabled"
-                        filterCallback: function(source_row, value) { return !value; }
-
-                        sortRole: "languages"
-                    }
-
-                    filterRole: "description"
-                    filterCaseSensitivity: Qt.CaseInsensitive
-                    filterString: filterText.text
-                }
-
-                clip: true
-
-                section.property: "languages"
-                section.delegate: sectionHeading
-
-                delegate: Kirigami.BasicListItem {
-                    label: model.description
-                    checkable: true
-                    icon: "input-keyboard"
-
-                    function origIdx() {
-                        return enabledFilterModel.mapRowToSource(
-                            nameFilterModel.mapRowToSource(model.index));
-                    }
-
-                    checked: addLayoutDialog.selected[origIdx()] === true
-                    onCheckedChanged: addLayoutDialog.selected[origIdx()] = checked;
-                }
-            }
-
+            
             Controls.TextArea {
                 id: filterText
                 implicitWidth: parent.width
             }
         }
-
-        onOpened: filterText.forceActiveFocus()
-        onOpenedChanged: filterText.text = ""
-
-        onAccepted: {
-            selected.forEach(function(checked, index) {
-                if (checked) {
-                    dataModel.layoutListModel.add(index);
-                    changed();
-                }
-            });
-            close();
+        
+        onSheetOpenChanged: {
+            if (sheetOpen) {
+                filterText.forceActiveFocus();
+                filterText.text = "";
+            } else {
+                selected = []
+                layoutSelectList.positionViewAtBeginning();
+            }
         }
-        onDiscarded: close();
-        onClosed: {
-            selected = []
-            layoutSelectList.positionViewAtBeginning();
+
+        ListView {
+            id: layoutSelectList
+
+            Controls.ScrollBar.vertical: Controls.ScrollBar {}
+
+            model: PlasmaCore.SortFilterModel {
+                id: nameFilterModel
+                sourceModel: PlasmaCore.SortFilterModel {
+                    id: enabledFilterModel
+                    sourceModel: dataModel.layoutListModel
+
+                    filterRole: "enabled"
+                    filterCallback: function(source_row, value) { return !value; }
+
+                    sortRole: "languages"
+                }
+
+                filterRole: "description"
+                filterCaseSensitivity: Qt.CaseInsensitive
+                filterString: filterText.text
+            }
+
+            clip: true
+
+            section.property: "languages"
+            section.delegate: sectionHeading
+
+            delegate: Kirigami.BasicListItem {
+                label: model.description
+                checkable: true
+                icon: "input-keyboard"
+
+                function origIdx() {
+                    return enabledFilterModel.mapRowToSource(
+                        nameFilterModel.mapRowToSource(model.index));
+                }
+
+                checked: addLayoutDialog.selected[origIdx()] === true
+                onCheckedChanged: addLayoutDialog.selected[origIdx()] = checked;
+            }
+        }
+
+        
+        footer: RowLayout {
+            Controls.Button {
+                Layout.alignment: Qt.AlignRight
+                text: i18nc("@action:button", "Add")
+                
+                onClicked: {
+                    selected.forEach(function(checked, index) {
+                        if (checked) {
+                            dataModel.layoutListModel.add(index);
+                            changed();
+                        }
+                    });
+                    addLayoutDialog.sheetOpen = false;
+                }
+            }
         }
     }
 
@@ -350,7 +347,7 @@ KCM.ScrollViewKCM {
             text: i18n("Add...")
             icon.name: "list-add"
 
-            onClicked: addLayoutDialog.open();
+            onClicked: addLayoutDialog.sheetOpen = true;
         }
 
         /* TODO
