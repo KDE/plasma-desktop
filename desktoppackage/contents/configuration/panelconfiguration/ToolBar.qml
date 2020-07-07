@@ -115,6 +115,7 @@ Item {
             Layout.fillWidth: true
 
             editable: true
+            focus: true
 
             from: 20 // below this size, the panel is mostly unusable
             to: PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge ? panel.screenToFollow.geometry.width / 2 : panel.screenToFollow.geometry.height / 2
