@@ -425,7 +425,7 @@ void KCMLookandFeel::setWidgetStyle(const QString &style)
     // Test if style can be installed before updating the config.
     QScopedPointer<QStyle> newStyle(QStyleFactory::create(style));
     if (newStyle) {
-        m_configGroup.writeEntry("widgetStyle", style);
+        m_configGroup.writeEntry("widgetStyle", style, KConfig::Notify);
         m_configGroup.sync();
         //FIXME: changing style on the fly breaks QQuickWidgets
         KGlobalSettings::self()->emitChange(KGlobalSettings::StyleChanged);
@@ -442,11 +442,11 @@ void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
     foreach (const QString &grp, conf->groupList()) {
         KConfigGroup cg(conf, grp);
         KConfigGroup cg2(&m_config, grp);
-        cg.copyTo(&cg2);
+        cg.copyTo(&cg2, KConfig::Notify);
     }
 
     KConfigGroup configGroup(&m_config, "General");
-    configGroup.writeEntry("ColorScheme", scheme);
+    configGroup.writeEntry("ColorScheme", scheme, KConfig::Notify);
 
     configGroup.sync();
     KGlobalSettings::self()->emitChange(KGlobalSettings::PaletteChanged);
@@ -459,7 +459,7 @@ void KCMLookandFeel::setIcons(const QString &theme)
     }
 
     KConfigGroup cg(&m_config, "Icons");
-    cg.writeEntry("Theme", theme);
+    cg.writeEntry("Theme", theme, KConfig::Notify);
     cg.sync();
 
     for (int i=0; i < KIconLoader::LastGroup; i++) {
@@ -488,7 +488,7 @@ void KCMLookandFeel::setCursorTheme(const QString themeName)
 
     KConfig config(QStringLiteral("kcminputrc"));
     KConfigGroup cg(&config, "Mouse");
-    cg.writeEntry("cursorTheme", themeName);
+    cg.writeEntry("cursorTheme", themeName, KConfig::Notify);
     cg.sync();
 
 #ifdef HAVE_XCURSOR
@@ -697,7 +697,7 @@ void KCMLookandFeel::setWindowDecoration(const QString &library, const QString &
     KConfig config(QStringLiteral("kwinrc"));
     KConfigGroup cg(&config, "org.kde.kdecoration2");
     cg.writeEntry("library", library);
-    cg.writeEntry("theme", theme);
+    cg.writeEntry("theme", theme, KConfig::Notify);
 
     cg.sync();
     // Reload KWin.
