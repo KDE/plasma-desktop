@@ -8,7 +8,6 @@ ecm_optional_add_subdirectory(solid-actions)
 ecm_optional_add_subdirectory(splashscreen)
 ecm_optional_add_subdirectory(icons)
 ecm_optional_add_subdirectory(cookies)
-ecm_optional_add_subdirectory(emoticons)
 ecm_optional_add_subdirectory(baloo)
 
 ecm_optional_add_subdirectory(autostart)

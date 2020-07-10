@@ -80,7 +80,6 @@ find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 find_package(KRunnerAppDBusInterface CONFIG REQUIRED)
 find_package(KSMServerDBusInterface CONFIG REQUIRED)
 find_package(KF5ItemModels CONFIG REQUIRED)
-find_package(KF5Emoticons CONFIG REQUIRED)
 find_package(KSysGuard CONFIG REQUIRED)
 find_package(KDED CONFIG REQUIRED)
 
