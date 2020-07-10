@@ -174,8 +174,6 @@ void KCMKeys::addApplication(QQuickItem *ctx)
             const KService::Ptr service = dialog->service();
             const QString desktopFileName = service->desktopEntryName() + ".desktop";
             if (m_shortcutsModel->match(m_shortcutsModel->index(0, 0), ShortcutsModel::ComponentRole, desktopFileName).isEmpty()) {
-                const QString destination = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/kglobalaccel/";
-                QFile::copy(service->entryPath(), destination + desktopFileName);
                 m_shortcutsModel->addApplication(desktopFileName, service->name());
             } else {
                 qCDebug(KCMKEYS) << "Already have component" << service->storageId();
