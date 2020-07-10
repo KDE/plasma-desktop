@@ -101,7 +101,7 @@ PlasmaComponents.ContextMenu {
                 actions: backend.placesActions(launcherUrl, showAllPlaces, menu)
             },
             {
-                title:   i18n("Recent Documents"),
+                title:   i18n("Recent Files"),
                 group:   "recents",
                 actions: backend.recentDocumentActions(launcherUrl, menu)
             },

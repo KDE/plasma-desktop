@@ -210,8 +210,8 @@ Kirigami.FormLayout {
         id: showRecentDocs
 
         text: recentOrdering.currentIndex == 0
-                ? i18n("Recent documents")
-                : i18n("Often used documents")
+                ? i18n("Recent files")
+                : i18n("Often used files")
     }
 
     CheckBox {
