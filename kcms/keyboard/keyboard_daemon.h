@@ -20,7 +20,7 @@
 #ifndef KEYBOARD_DAEMON_H_
 #define KEYBOARD_DAEMON_H_
 
-#include <kdedmodule.h>
+#include <KDEDModule>
 #include <QStringList>
 
 #include "layout_memory.h"

@@ -24,7 +24,7 @@
 
 #include "kaccess.h"
 
-#include <qprocess.h>
+#include <QProcess>
 #include <QTimer>
 #include <QPainter>
 #include <QMessageBox>
@@ -44,10 +44,10 @@
 #include <KSharedConfig>
 #include <QDialog>
 #include <QDialogButtonBox>
-#include <kglobalaccel.h>
+#include <KGlobalAccel>
 #include <KLocalizedString>
-#include <kwindowsystem.h>
-#include <kkeyserver.h>
+#include <KWindowSystem>
+#include <KKeyServer>
 #include <KDBusService>
 #include <KUserTimestamp>
 

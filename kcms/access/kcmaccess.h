@@ -23,7 +23,7 @@
 #define __kcmaccess_h__
 
 
-#include <kcmodule.h>
+#include <KCModule>
 #include "ui_accessibility.h"
 
 class KAccessConfig : public KCModule

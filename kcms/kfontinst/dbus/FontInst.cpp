@@ -24,7 +24,7 @@
 #include <QDBusConnection>
 #include <QTimer>
 #include <QDebug>
-#include <kauth.h>
+#include <KAuth>
 #include <kio/global.h>
 #include <fontconfig/fontconfig.h>
 #include <sys/types.h>

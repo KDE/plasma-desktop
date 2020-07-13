@@ -15,8 +15,8 @@
 
 #include "componentchooseremail.h"
 
-#include <kemailsettings.h>
-#include <kopenwithdialog.h>
+#include <KEMailSettings>
+#include <KOpenWithDialog>
 
 #include <KLocalizedString>
 #include <KConfigGroup>

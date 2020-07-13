@@ -34,15 +34,15 @@
 #include <QHeaderView>
 
 #include <KLocalizedString>
-#include <kdialog.h>
-#include <kmessagebox.h>
-#include <kcombobox.h>
-#include <kurlcompletion.h>
-#include <kmessagewidget.h>
+#include <KDialog>
+#include <KMessageBox>
+#include <KComboBox>
+#include <KUrlCompletion>
+#include <KMessageWidget>
 
 #include <stdio.h>
-#include <kvbox.h>
-#include <kdebug.h>
+#include <KVBox>
+#include <KDebug>
 
 //--------------------------------------------------------------
 static QString PRESSED = I18N_NOOP("PRESSED");

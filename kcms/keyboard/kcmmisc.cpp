@@ -35,7 +35,7 @@
 #include <QButtonGroup>
 
 #include <KLocalizedString>
-#include <kconfig.h>
+#include <KConfig>
 #include <KConfigGroup>
 #include <KSharedConfig>
 

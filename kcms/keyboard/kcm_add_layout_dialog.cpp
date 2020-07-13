@@ -18,7 +18,7 @@
 
 #include "kcm_add_layout_dialog.h"
 #include <QDebug>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include "xkb_rules.h"
 #include "flags.h"

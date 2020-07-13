@@ -18,8 +18,8 @@
 
 #include "kcm_view_models.h"
 
-#include <klocalizedstring.h>
-#include <kkeysequencewidget.h>
+#include <KLocalizedString>
+#include <KKeySequenceWidget>
 
 #include <QTreeView>
 #include <QComboBox>

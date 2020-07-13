@@ -18,7 +18,7 @@
 
 #include "flags.h"
 
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include <plasma/svg.h>
 #include <plasma/theme.h>

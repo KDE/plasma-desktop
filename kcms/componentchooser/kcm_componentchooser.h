@@ -16,7 +16,7 @@
 #ifndef KCM_COMPONENTCHOOSER_H
 #define KCM_COMPONENTCHOOSER_H
 
-#include <kcmodule.h>
+#include <KCModule>
 
 #include "componentchooser.h"
 

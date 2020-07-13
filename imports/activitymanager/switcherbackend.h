@@ -30,7 +30,7 @@
 
 // KDE
 #include <KActivities/Controller>
-#include <kimagecache.h>
+#include <KImageCache>
 
 // Local
 #include "sortedactivitiesmodel.h"

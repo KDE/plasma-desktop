@@ -20,11 +20,11 @@
 */
 
 #include "componentchooserfilemanager.h"
-#include <kprocess.h>
-#include <kmimetypetrader.h>
+#include <KProcess>
+#include <KMimeTypeTrader>
 #include <KApplicationTrader>
-#include <kopenwithdialog.h>
-#include <kconfiggroup.h>
+#include <KOpenWithDialog>
+#include <KConfigGroup>
 #include <QStandardPaths>
 #include <KSharedConfig>
 

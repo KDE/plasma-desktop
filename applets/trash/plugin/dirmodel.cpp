@@ -26,10 +26,10 @@
 #include <QDebug>
 #include <QMimeDatabase>
 
-#include <kdirlister.h>
+#include <KDirLister>
 #include <kio/previewjob.h>
 #include <KIO/EmptyTrashJob>
-#include <kimagecache.h>
+#include <KImageCache>
 
 DirModel::DirModel(QObject *parent)
     : KDirModel(parent),

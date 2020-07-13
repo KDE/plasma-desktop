@@ -24,13 +24,13 @@
 
 #include <QCheckBox>
 
-#include <kmessagebox.h>
-#include <kconfig.h>
-#include <kstandarddirs.h>
-#include <kmimetypetrader.h>
-#include <kurlrequester.h>
-#include <ktoolinvocation.h>
-#include <kconfiggroup.h>
+#include <KMessageBox>
+#include <KConfig>
+#include <KStandardDirs>
+#include <KMimeTypeTrader>
+#include <KUrlRequester>
+#include <KToolInvocation>
+#include <KConfigGroup>
 #include <KServiceTypeTrader>
 #include <KGlobal>
 #include <QIcon>

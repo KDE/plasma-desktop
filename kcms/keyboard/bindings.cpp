@@ -19,9 +19,9 @@
 #include "bindings.h"
 #include "debug.h"
 
-#include <klocalizedstring.h>
-#include <kglobalaccel.h>
-#include <kaboutdata.h>
+#include <KLocalizedString>
+#include <KGlobalAccel>
+#include <KAboutData>
 
 #include <QList>
 #include <QAction>

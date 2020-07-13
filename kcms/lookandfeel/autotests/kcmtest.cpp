@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QtTest>
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
-#include <ksycoca.h>
+#include <KSycoca>
 #include <KJob>
 
 class KcmTest : public QObject

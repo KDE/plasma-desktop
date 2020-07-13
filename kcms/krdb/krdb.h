@@ -19,7 +19,7 @@
 
 #ifndef _KRDB_H_
 #define _KRDB_H_
-#include <ksharedconfig.h>
+#include <KSharedConfig>
 
 enum KRdbAction
 {

@@ -19,8 +19,8 @@
 #include "keyboard_config.h"
 #include "debug.h"
 
-#include <ksharedconfig.h>
-#include <kconfiggroup.h>
+#include <KSharedConfig>
+#include <KConfigGroup>
 
 
 static const char* const SWITCHING_POLICIES[] = {"Global", "Desktop", "WinClass", "Window", nullptr };

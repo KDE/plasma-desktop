@@ -27,9 +27,9 @@
 #include <QApplication>
 
 #include <KLocalizedString>
-#include <kmessagebox.h>
-#include <kdebug.h>
-#include <kvbox.h>
+#include <KMessageBox>
+#include <KDebug>
+#include <KVBox>
 //--------------------------------------------------------------
 
 CalDialog::CalDialog(QWidget *parent, JoyDevice *joy)

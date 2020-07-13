@@ -33,16 +33,16 @@
 #include <time.h>
 #include <unistd.h>
 
-#include <kcomponentdata.h>
-#include <kconfig.h>
-#include <kconfiggroup.h>
-#include <kstandarddirs.h>
-#include <kprocess.h>
+#include <KComponentData>
+#include <KConfig>
+#include <KConfigGroup>
+#include <KStandardDirs>
+#include <KProcess>
 #include <QFile>
 #include <QDebug>
 
 #if defined(USE_SOLARIS)
-#include <ktemporaryfile.h>
+#include <KTemporaryFile>
 #include <sys/param.h>
 #include <sys/types.h>
 #include <sys/stat.h>

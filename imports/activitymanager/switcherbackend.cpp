@@ -36,8 +36,8 @@
 #include <QQmlEngine>
 
 // KDE
-#include <kglobalaccel.h>
-#include <klocalizedstring.h>
+#include <KGlobalAccel>
+#include <KLocalizedString>
 #include <KIO/PreviewJob>
 #include <KConfig>
 #include <KConfigGroup>

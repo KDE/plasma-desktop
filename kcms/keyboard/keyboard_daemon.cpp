@@ -26,7 +26,7 @@
 #include <QDBusPendingCall>
 #include <QProcess>
 
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 #include "x11_helper.h"
 #include "xinput_helper.h"

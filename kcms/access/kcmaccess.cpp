@@ -29,11 +29,11 @@
 #include <QProcess>
 #include <QX11Info>
 
-#include <kaboutdata.h>
+#include <KAboutData>
 #include <KConfigGroup>
 #include <KSharedConfig>
-#include <kkeyserver.h>
-#include <knotifyconfigwidget.h>
+#include <KKeyServer>
+#include <KNotifyConfigWidget>
 #include <KPluginFactory>
 
 #include <X11/Xlib.h>

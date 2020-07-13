@@ -21,13 +21,13 @@
 
 #include <iostream>
 
-#include <qcommandlineparser.h>
+#include <QCommandLineParser>
 #include <QApplication>
 #include <QDebug>
 
 // Frameworks
 #include <KAboutData>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>

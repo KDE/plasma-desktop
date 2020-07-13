@@ -21,7 +21,7 @@
 
 #include <QComboBox>
 
-#include <kservice.h>
+#include <KService>
 
 class QWidget;
 class KConfig;

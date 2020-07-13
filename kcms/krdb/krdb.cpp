@@ -40,12 +40,12 @@
 #include <QTemporaryFile>
 
 #include <KColorUtils>
-#include <kcolorscheme.h>
-#include <kconfig.h>
-#include <kconfiggroup.h>
-#include <kprocess.h>
+#include <KColorScheme>
+#include <KConfig>
+#include <KConfigGroup>
+#include <KProcess>
 #include <KLocalizedString>
-#include <kdelibs4migration.h>
+#include <Kdelibs4Migration>
 #include <KWindowSystem>
 
 #include <updatelaunchenvjob.h>

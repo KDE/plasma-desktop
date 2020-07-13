@@ -42,11 +42,11 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QDebug>
-#include <kprocess.h>
-#include <kmessagebox.h>
-#include <kconfig.h>
-#include <kcolorscheme.h>
-#include <ksystemtimezone.h>
+#include <KProcess>
+#include <KMessageBox>
+#include <KConfig>
+#include <KColorScheme>
+#include <KSystemTimeZone>
 #include <KTreeWidgetSearchLine>
 #include <KGlobal>
 

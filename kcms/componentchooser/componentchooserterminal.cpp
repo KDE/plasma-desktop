@@ -16,18 +16,18 @@
 #include "componentchooserterminal.h"
 #include "terminal_settings.h"
 
-#include <ktoolinvocation.h>
+#include <KToolInvocation>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QCheckBox>
 
-#include <kmessagebox.h>
-#include <kopenwithdialog.h>
-#include <kconfig.h>
+#include <KMessageBox>
+#include <KOpenWithDialog>
+#include <KConfig>
 
-#include <kmimetypetrader.h>
-#include <kurlrequester.h>
-#include <kconfiggroup.h>
+#include <KMimeTypeTrader>
+#include <KUrlRequester>
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KServiceTypeTrader>
 

@@ -19,8 +19,8 @@
 #include "layout_memory_persister.h"
 #include "debug.h"
 
-#include <kconfiggroup.h>
-#include <ksharedconfig.h>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 #include <QFile>
 #include <QDir>

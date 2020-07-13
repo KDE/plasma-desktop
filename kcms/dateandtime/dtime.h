@@ -32,8 +32,8 @@
 #include <QCheckBox>
 #include <QPaintEvent>
 
-#include <kdatepicker.h>
-#include <knuminput.h>
+#include <KDatePicker>
+#include <KNumInput>
 
 class Kclock;
 class QTimeEdit;

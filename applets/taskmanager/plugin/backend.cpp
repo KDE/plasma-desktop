@@ -27,7 +27,7 @@
 #include <KNotificationJobUiDelegate>
 #include <KService>
 #include <KServiceAction>
-#include <kwindoweffects.h>
+#include <KWindowEffects>
 #include <KWindowSystem>
 
 #include <KIO/ApplicationLauncherJob>

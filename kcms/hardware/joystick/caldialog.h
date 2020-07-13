@@ -23,7 +23,7 @@
 
 #include <QLabel>
 
-#include <kdialog.h>
+#include <KDialog>
 
 class JoyDevice;
 

@@ -19,9 +19,9 @@
 
 #include "kcm_keyboard.h"
 
-#include <kaboutdata.h>
-#include <kpluginfactory.h>
-//#include <kpluginloader.h>
+#include <KAboutData>
+#include <KPluginFactory>
+//#include <KPluginLoader>
 #include <KLocalizedString>
 
 #include <QDBusMessage>

@@ -23,7 +23,7 @@
 #ifndef __kcmsmserver_h__
 #define __kcmsmserver_h__
 
-#include <kcmodule.h>
+#include <KCModule>
 
 class QAction;
 
