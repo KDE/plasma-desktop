@@ -215,6 +215,16 @@ Rectangle {
                     model: !root.isContainment ? globalConfigModel : undefined
                     delegate: ConfigCategoryDelegate {}
                 }
+                 Repeater {
+                    model: ConfigModel {
+                        ConfigCategory{
+                            name: i18nd("plasma_shell_org.kde.plasma.desktop", "About")
+                            icon: "help-about"
+                            source: "AboutPlugin.qml"
+                        }
+                    }
+                    delegate: ConfigCategoryDelegate {}
+                }
             }
         }
 
