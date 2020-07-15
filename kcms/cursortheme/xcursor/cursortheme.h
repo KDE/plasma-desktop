@@ -51,7 +51,8 @@ class CursorTheme
             // Note: use   printf "0x%08X\n" $(($RANDOM*$RANDOM))
             // to define additional roles.
             DisplayDetailRole = 0x24A3DAF8,
-            IsWritableRole
+            IsWritableRole,
+            PendingDeletionRole
         };
 
         CursorTheme() {}

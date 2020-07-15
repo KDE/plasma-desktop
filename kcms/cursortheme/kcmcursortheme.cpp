@@ -93,6 +93,15 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
     if (!m_themeModel->searchPaths().contains(QDir::homePath() + "/.icons") || !iconsIsWritable()) {
         setCanInstall(false);
     }
+
+    connect(m_themeModel, &QAbstractItemModel::dataChanged, this, &CursorThemeConfig::settingsChanged);
+    connect(m_themeModel, &QAbstractItemModel::dataChanged, this, [this] (const QModelIndex &start, const QModelIndex &end, const QVector<int> &roles) {
+        const QModelIndex currentThemeIndex = m_themeModel->findIndex(m_settings->cursorTheme());
+        if (roles.contains(CursorTheme::PendingDeletionRole) && currentThemeIndex.data(CursorTheme::PendingDeletionRole) == true
+            && start.row() <= currentThemeIndex.row() && currentThemeIndex.row() <= end.row()) {
+            m_settings->setCursorTheme(m_themeModel->theme(m_themeModel->defaultIndex())->name());
+        }
+    });
 }
 
 CursorThemeConfig::~CursorThemeConfig()
@@ -367,6 +376,7 @@ void CursorThemeConfig::save()
     if (!applyTheme(theme, m_settings->cursorSize())) {
         emit showInfoMessage(i18n("You have to restart the Plasma session for these changes to take effect."));
     }
+    removeThemes();
 
     KGlobalSettings::self()->emitChange(KGlobalSettings::CursorChanged);
 }
@@ -395,6 +405,11 @@ void CursorThemeConfig::defaults()
 {
     ManagedConfigModule::defaults();
     m_preferredSize = m_settings->cursorSize();
+}
+
+bool CursorThemeConfig::isSaveNeeded() const
+{
+    return !m_themeModel->match(m_themeModel->index(0, 0), CursorTheme::PendingDeletionRole, true).isEmpty();
 }
 
 void CursorThemeConfig::ghnsEntriesChanged(const QQmlListReference &changedEntries)
@@ -541,40 +556,22 @@ void CursorThemeConfig::installThemeFile(const QString &path)
     m_themeModel->refreshList();
 }
 
-void CursorThemeConfig::removeTheme(int row)
+void CursorThemeConfig::removeThemes()
 {
-    QModelIndex idx = m_themeProxyModel->index(row, 0);
-    if (!idx.isValid()) {
-        return;
+    const QModelIndexList indices = m_themeModel->match(m_themeModel->index(0, 0), CursorTheme::PendingDeletionRole, true, -1);
+    for (const auto &idx : indices) {
+        if (!idx.isValid()) {
+            return;
+        }
+
+        const CursorTheme *theme = m_themeModel->theme(idx);
+
+        // Delete the theme from the harddrive
+        KIO::del(QUrl::fromLocalFile(theme->path())); // async
+
+        // Remove the theme from the model
+        m_themeModel->removeTheme(idx);
     }
-
-    const CursorTheme *theme = m_themeProxyModel->theme(idx);
-
-    // Don't let the user delete the currently configured theme
-    if (theme->name() == m_settings->cursorTheme()) {
-        KMessageBox::sorry(nullptr, i18n("<qt>You cannot delete the theme you are currently "
-                "using.<br />You have to switch to another theme first.</qt>"));
-        return;
-    }
-
-    // Get confirmation from the user
-    QString question = i18n("<qt>Are you sure you want to remove the "
-            "<i>%1</i> cursor theme?<br />"
-            "This will delete all the files installed by this theme.</qt>",
-            theme->title());
-
-    int answer = KMessageBox::warningContinueCancel(nullptr, question,
-            i18n("Confirmation"), KStandardGuiItem::del());
-
-    if (answer != KMessageBox::Continue) {
-        return;
-    }
-
-    // Delete the theme from the harddrive
-    KIO::del(QUrl::fromLocalFile(theme->path())); // async
-
-    // Remove the theme from the model
-    m_themeProxyModel->removeTheme(idx);
 
     // TODO:
     //  Since it's possible to substitute cursors in a system theme by adding a local

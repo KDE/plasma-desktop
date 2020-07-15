@@ -98,7 +98,6 @@ Q_SIGNALS:
 public Q_SLOTS:
     void ghnsEntriesChanged(const QQmlListReference &changedEntries);
     void installThemeFromFile(const QUrl &url);
-    void removeTheme(int row);
 
 private Q_SLOTS:
     /** Updates the size combo box. It loads the size list of the selected cursor
@@ -110,7 +109,7 @@ private Q_SLOTS:
 
 
 private:
-    void updateNeedsSave();
+    bool isSaveNeeded() const override;
     void installThemeFile(const QString &path);
     /** Applies a given theme, using XFixes, XCursor and KGlobalSettings.
         @param theme The cursor theme to be applied. It is save to pass 0 here
@@ -121,6 +120,7 @@ private:
             version, otherwise returns \e true. */
     bool applyTheme(const CursorTheme *theme, const int size);
     bool iconsIsWritable() const;
+    void removeThemes();
 
 
     CursorThemeModel *m_themeModel;

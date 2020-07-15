@@ -55,6 +55,7 @@ QHash<int, QByteArray> CursorThemeModel::roleNames() const
     QHash<int, QByteArray> roleNames = QAbstractTableModel::roleNames();
     roleNames[CursorTheme::DisplayDetailRole] = "description";
     roleNames[CursorTheme::IsWritableRole] = "isWritable";
+    roleNames[CursorTheme::PendingDeletionRole] = "pendingDeletion";
 
     return roleNames;
 }
@@ -100,7 +101,7 @@ QVariant CursorThemeModel::data(const QModelIndex &index, int role) const
     if (!index.isValid() || index.row() < 0 || index.row() >= list.count())
         return QVariant();
 
-    const CursorTheme *theme = list.at(index.row());
+    CursorTheme * theme = list.at(index.row());
 
     // Text label
     if (role == Qt::DisplayRole)
@@ -129,9 +130,30 @@ QVariant CursorThemeModel::data(const QModelIndex &index, int role) const
         return theme->isWritable();
     }
 
+    if (role == CursorTheme::PendingDeletionRole) {
+        return pendingDeletions.contains(theme);
+    }
+
     return QVariant();
 }
 
+bool CursorThemeModel::setData(const QModelIndex &index, const QVariant &value, int role)
+{
+    if (!checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid)) {
+        return false;
+    }
+    if (role == CursorTheme::PendingDeletionRole) {
+        const bool shouldRemove = value.toBool();
+        if (shouldRemove) {
+            pendingDeletions.push_back(list[index.row()]);
+        } else {
+            pendingDeletions.removeAll(list[index.row()]);
+        }
+        Q_EMIT dataChanged(index, index, {role});
+        return true;
+    }
+    return false;
+}
 
 void CursorThemeModel::sort(int column, Qt::SortOrder order)
 {
@@ -421,6 +443,7 @@ void CursorThemeModel::removeTheme(const QModelIndex &index)
         return;
 
     beginRemoveRows(QModelIndex(), index.row(), index.row());
+    pendingDeletions.removeAll(list[index.row()]);
     delete list.takeAt(index.row());
     endRemoveRows();
 }
