@@ -113,7 +113,17 @@ Component ShortcutsModel::loadComponent(const QList<KGlobalShortcutInfo> &info)
         }
     }
     const QString type = service && service->isApplication() ? i18n("Applications") : i18n("System Services");
-    const QString icon = service && !service->icon().isEmpty() ? service->icon() : componentUnique;
+    QString icon;
+    if (service && !service->icon().isEmpty()) {
+        icon = service->icon();
+    // If we don't have an service, fallback to using the unique name of the component. If no such
+    // icon exists, it's as good as no icon.
+    } else if(componentUnique.endsWith(".desktop")) {
+        // icons don't end with ".desktop"
+        icon = componentUnique.chopped(8);
+    } else {
+        icon = componentUnique;
+    }
     Component c{componentUnique, componentFriendly, type, icon, QVector<Shortcut>(), false, false};
     for (const auto &action : info) {
         const QString &actionUnique = action.uniqueName();
