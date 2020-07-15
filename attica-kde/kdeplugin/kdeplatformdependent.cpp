@@ -104,6 +104,10 @@ QString KdePlatformDependent::getAccessToken(const QUrl& /*baseUrl*/) const
                     break;
                 }
             }
+            if (idToken.isEmpty()) {
+                // If we arrived here, we did have an opendesktop account, but without the id token, which means an old version of the signon oauth2 plugin was used
+                qCWarning(ATTICA_PLUGIN_LOG) << "We got an OpenDesktop account, but it seems to be lacking the id token. This means an old SignOn OAuth2 plugin was used for logging in. The plugin may have been upgraded in the meantime, but an account created using the old plugin cannot be used, and you must log out and back in again.";
+            }
         }
     } else {
         qCDebug(ATTICA_PLUGIN_LOG) << "No accounts manager could be fetched, so could not ask it for account details";
