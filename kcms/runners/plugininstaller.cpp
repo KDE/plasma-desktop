@@ -73,30 +73,28 @@ public:
         setWindowTitle(i18n("KRunner plugin installer confirmation dialog"));
         setWindowIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
         QVBoxLayout *layout = new QVBoxLayout(this);
-        layout->addWidget(new QLabel(i18n("If you don't understand this information or don't trust "
-                               "the author of this plugin click 'Cancel' now."), this));
-        QString msg = i18n("You are about to install a third party plugin from the KDE Store "
-                                 "which uses a script for the installation. Please note that this can be a security risk, "
-                                 "because of that it is recommended to view the script and source code you are about to install.");
-        if (!readmes.isEmpty()) {
-            msg.append(i18n("\n\nThis plugin contains a %1 file, please have a look at it for more "
-                            "information about the plugin and additional install instructions.\n", readmes.at(0)));
-        }
+        QString msg = i18n("This plugin uses a script for installation which can pose a security risk.\n"
+                           "Please examine the entire plugin's contents before installing, or at least\n"
+                           "read %1the script's source code.\n\n"
+                           "If you do not feel capable or comfortable with this, click \"Cancel\" now.",
+                           readmes.isEmpty() ? QString() : i18n("the README file and "));
         QLabel *msgLabel = new QLabel(msg, this);
         msgLabel->setWordWrap(true);
         layout->addWidget(msgLabel);
         auto *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-        connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::close);
+        buttonBox->button(QDialogButtonBox::Ok)->setIcon(QIcon::fromTheme("emblem-warning"));
+        buttonBox->button(QDialogButtonBox::Ok)->setText(i18n("Accept risk and continue"));
         const auto rejectLambda = []{
             qWarning() << i18n("Installation aborted");
             exit(1);
         };
         // If the user clicks cancel or closes the dialog using escape
         connect(buttonBox, &QDialogButtonBox::rejected, this, rejectLambda);
+        connect(buttonBox, &QDialogButtonBox::accepted, this, [this](){done(1);});
         connect(this, &QDialog::rejected, this, rejectLambda);
 
         QHBoxLayout *helpButtonLayout = new QHBoxLayout(this);
-        QPushButton *scriptButton = new QPushButton(QIcon::fromTheme("text-x-script"), i18n("View install script"), this);
+        QPushButton *scriptButton = new QPushButton(QIcon::fromTheme("text-x-script"), i18n("View script"), this);
         connect(scriptButton, &QPushButton::clicked, this, [installerPath]() {
             QDesktopServices::openUrl(QUrl::fromLocalFile(installerPath));
         });
