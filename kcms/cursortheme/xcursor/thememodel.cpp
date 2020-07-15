@@ -64,6 +64,7 @@ void CursorThemeModel::refreshList()
     beginResetModel();
     qDeleteAll(list);
     list.clear();
+    defaultName.clear();
     endResetModel();
     insertThemes();
 }
