@@ -34,7 +34,6 @@
 #include <KStringHandler>
 #include <KMessageBox>
 #include <QNetworkDiskCache>
-#include <QProcess>
 #include <QStorageInfo>
 
 #include <KAccounts/Core>
@@ -160,16 +159,16 @@ QNetworkRequest KdePlatformDependent::removeAuthFromRequest(const QNetworkReques
 
 bool KdePlatformDependent::saveCredentials(const QUrl& /*baseUrl*/, const QString& /*user*/, const QString& /*password*/)
 {
+    qCDebug(ATTICA_PLUGIN_LOG) << "Launch the KAccounts control module";
     // TODO KF6 This will want replacing with a call named something that suggests calling it shows accounts (and perhaps
     // directly requests the accounts kcm to start adding a new account if it's not there, maybe even pre-fills the fields...)
-    KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("KCModule"), QStringLiteral("Library == 'kcm_kaccounts'"));
-    // If we failed to get the kcm, tell the caller we failed
-    if (services.count() == 0) {
-        return false;
-    }
-    KService::Ptr service = services[0];
-    qCDebug(ATTICA_PLUGIN_LOG) << "Launch the KAccounts control module" << service->name();
-    return QProcess::startDetached(service->exec());
+
+    KCMultiDialog* dialog = new KCMultiDialog;
+    dialog->addModule(QStringLiteral("kcm_kaccounts"));
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+    dialog->show();
+
+    return true;
 }
 
 bool KdePlatformDependent::hasCredentials(const QUrl& baseUrl) const
