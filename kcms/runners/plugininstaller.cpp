@@ -27,7 +27,13 @@
 #include <QCommandLineParser>
 #include <QMimeDatabase>
 #include <QUrl>
-#include <QGuiApplication>
+#include <QApplication>
+#include <QMessageBox>
+#include <QVBoxLayout>
+#include <QLabel>
+#include <QDialogButtonBox>
+#include <QPushButton>
+#include <QDesktopServices>
 #include <KLocalizedString>
 #include <KShell>
 
@@ -47,8 +53,6 @@ enum class Operation {
 #include <PackageKit/Daemon>
 #include <PackageKit/Details>
 #include <PackageKit/Transaction>
-#else
-#include <QDesktopServices>
 #endif
 
 Q_NORETURN void fail(const QString &str)
@@ -59,6 +63,61 @@ Q_NORETURN void fail(const QString &str)
 
     exit(1);
 }
+
+class ScriptConfirmationDialog : public QDialog
+{
+public:
+    ScriptConfirmationDialog(const QString &installerPath, QWidget *parent = nullptr) : QDialog(parent) {
+        const QDir dir = QFileInfo(installerPath).dir();
+        const auto readmes = dir.entryList({QStringLiteral("README*")});
+        setWindowTitle(i18n("KRunner plugin installer confirmation dialog"));
+        setWindowIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
+        QVBoxLayout *layout = new QVBoxLayout(this);
+        layout->addWidget(new QLabel(i18n("If you don't understand this information or don't trust "
+                               "the author of this plugin click 'Cancel' now."), this));
+        QString msg = i18n("You are about to install a third party plugin from the KDE Store "
+                                 "which uses a script for the installation. Please note that this can be a security risk, "
+                                 "because of that it is recommended to view the script and source code you are about to install.");
+        if (!readmes.isEmpty()) {
+            msg.append(i18n("\n\nThis plugin contains a %1 file, please have a look at it for more "
+                            "information about the plugin and additional install instructions.\n", readmes.at(0)));
+        }
+        QLabel *msgLabel = new QLabel(msg, this);
+        msgLabel->setWordWrap(true);
+        layout->addWidget(msgLabel);
+        auto *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+        connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::close);
+        const auto rejectLambda = []{
+            qWarning() << i18n("Installation aborted");
+            exit(1);
+        };
+        // If the user clicks cancel or closes the dialog using escape
+        connect(buttonBox, &QDialogButtonBox::rejected, this, rejectLambda);
+        connect(this, &QDialog::rejected, this, rejectLambda);
+
+        QHBoxLayout *helpButtonLayout = new QHBoxLayout(this);
+        QPushButton *scriptButton = new QPushButton(QIcon::fromTheme("text-x-script"), i18n("View install script"), this);
+        connect(scriptButton, &QPushButton::clicked, this, [installerPath]() {
+            QDesktopServices::openUrl(QUrl::fromLocalFile(installerPath));
+        });
+        helpButtonLayout->addWidget(scriptButton);
+        QPushButton *sourceButton = new QPushButton(QIcon::fromTheme("inode-directory"), i18n("View source directory"), this);
+        connect(sourceButton, &QPushButton::clicked, this, [dir]() {
+            QDesktopServices::openUrl(QUrl::fromLocalFile(dir.absolutePath()));
+        });
+        helpButtonLayout->addWidget(sourceButton);
+        if (!readmes.isEmpty()) {
+            QPushButton *readmeButton = new QPushButton(QIcon::fromTheme("text-x-readme"), i18n("View %1", readmes.at(0)), this);
+            connect(readmeButton, &QPushButton::clicked, this, [dir, readmes]() {
+                QDesktopServices::openUrl(QUrl::fromLocalFile(dir.absoluteFilePath(readmes.at(0))));
+            });
+            helpButtonLayout->addWidget(readmeButton);
+        }
+        helpButtonLayout->setAlignment(Qt::AlignRight);
+        layout->addLayout(helpButtonLayout);
+        layout->addWidget(buttonBox);
+    }
+};
 
 #ifdef HAVE_PACKAGEKIT
 void packageKitInstall(const QString &fileName)
@@ -191,13 +250,18 @@ bool executeOperation(const QString &archive, Operation operation)
     if (installerPath.isEmpty()) {
         fail(i18n("Failed to find an %1 script in %2", install ? i18n("install") : i18n("uninstall"), archive));
     }
+    // We want the user to be exactly aware of whats going on
+    if (install) {
+        ScriptConfirmationDialog dlg(installerPath);
+        dlg.exec();
+    }
 
     return runScript(installerPath);
 }
 
 int main(int argc, char *argv[])
 {
-    QGuiApplication app(argc, argv);
+    QApplication app(argc, argv);
 
     QCommandLineParser parser;
     parser.addPositionalArgument(QStringLiteral("command"), i18nc("@info:shell", "Command to execute: install or uninstall."));
