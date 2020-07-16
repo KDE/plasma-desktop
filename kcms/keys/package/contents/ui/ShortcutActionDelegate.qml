@@ -67,12 +67,6 @@ Kirigami.AbstractListItem {
                     }
                 }
             }
-            MouseArea {
-                id: handMouseArea
-                anchors.fill: topRow
-                cursorShape: Qt.PointingHandCursor
-                acceptedButtons: Qt.NoButton
-            }
         }
         Loader {
             id: editLoader
@@ -195,10 +189,6 @@ Kirigami.AbstractListItem {
             PropertyChanges {
                 target: expandButton
                 icon.name: "collapse"
-            }
-            PropertyChanges {
-                target: handMouseArea
-                cursorShape: Qt.ArrowCursor
             }
             PropertyChanges {
                 target: editLoader
