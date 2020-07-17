@@ -369,21 +369,5 @@ Item {
                 getWidgetsDialog.openRelative()
             }
         }
-
-        /* TODO: WidgetExplorer.extraActions is unimplemented
-        Repeater {
-            model: widgetExplorer.extraActions.length
-
-            PlasmaComponents.Button {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                }
-                iconSource: widgetExplorer.extraActions[modelData].icon
-                text: widgetExplorer.extraActions[modelData].text
-                onClicked: widgetExplorer.extraActions[modelData].trigger()
-            }
-        }
-        */
     }
 }
