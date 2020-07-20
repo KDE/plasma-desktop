@@ -70,20 +70,28 @@ public:
     ScriptConfirmationDialog(const QString &installerPath, QWidget *parent = nullptr) : QDialog(parent) {
         const QDir dir = QFileInfo(installerPath).dir();
         const auto readmes = dir.entryList({QStringLiteral("README*")});
-        setWindowTitle(i18n("KRunner plugin installer confirmation dialog"));
+        setWindowTitle(i18n("KRunner Plugin Installer Confirmation Dialog"));
         setWindowIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
         QVBoxLayout *layout = new QVBoxLayout(this);
-        QString msg = i18n("This plugin uses a script for installation which can pose a security risk.\n"
-                           "Please examine the entire plugin's contents before installing, or at least\n"
-                           "read %1the script's source code.\n\n"
-                           "If you do not feel capable or comfortable with this, click \"Cancel\" now.",
-                           readmes.isEmpty() ? QString() : i18n("the README file and "));
+        QString msg;
+        if (readmes.isEmpty()) {
+            msg = xi18nc("@info", "This plugin uses a script for installation which can pose a security risk."
+                           "Please examine the entire plugin's contents before installing, or at least"
+                           "read the script's source code.</nl>"
+                           "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
+        } else {
+             msg = xi18nc("@info", "This plugin uses a script for installation which can pose a security risk."
+                           "Please examine the entire plugin's contents before installing, or at least"
+                           "read the README file and the script's source code.</nl>"
+                           "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
+        }
         QLabel *msgLabel = new QLabel(msg, this);
         msgLabel->setWordWrap(true);
+        msgLabel->setMaximumWidth(500);
         layout->addWidget(msgLabel);
         auto *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
         buttonBox->button(QDialogButtonBox::Ok)->setIcon(QIcon::fromTheme("emblem-warning"));
-        buttonBox->button(QDialogButtonBox::Ok)->setText(i18n("Accept risk and continue"));
+        buttonBox->button(QDialogButtonBox::Ok)->setText(i18n("Accept Risk And Continue"));
         const auto rejectLambda = []{
             qWarning() << i18n("Installation aborted");
             exit(1);
@@ -94,12 +102,12 @@ public:
         connect(this, &QDialog::rejected, this, rejectLambda);
 
         QHBoxLayout *helpButtonLayout = new QHBoxLayout(this);
-        QPushButton *scriptButton = new QPushButton(QIcon::fromTheme("text-x-script"), i18n("View script"), this);
+        QPushButton *scriptButton = new QPushButton(QIcon::fromTheme("text-x-script"), i18n("View Script"), this);
         connect(scriptButton, &QPushButton::clicked, this, [installerPath]() {
             QDesktopServices::openUrl(QUrl::fromLocalFile(installerPath));
         });
         helpButtonLayout->addWidget(scriptButton);
-        QPushButton *sourceButton = new QPushButton(QIcon::fromTheme("inode-directory"), i18n("View source directory"), this);
+        QPushButton *sourceButton = new QPushButton(QIcon::fromTheme("inode-directory"), i18n("View Source Directory"), this);
         connect(sourceButton, &QPushButton::clicked, this, [dir]() {
             QDesktopServices::openUrl(QUrl::fromLocalFile(dir.absolutePath()));
         });
@@ -260,6 +268,7 @@ bool executeOperation(const QString &archive, Operation operation)
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
+    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     QCommandLineParser parser;
     parser.addPositionalArgument(QStringLiteral("command"), i18nc("@info:shell", "Command to execute: install or uninstall."));
