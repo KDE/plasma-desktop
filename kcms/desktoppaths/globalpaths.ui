@@ -26,6 +26,9 @@
      <property name="whatsThis">
       <string>This folder contains all the files which you see on your desktop. You can change the location of this folder if you want to, and the contents will move automatically to the new location as well.</string>
      </property>
+     <property name="mode">
+         <enum>KFile::Directory</enum>
+     </property>
     </widget>
    </item>
    <item row="1" column="0">
@@ -39,6 +42,9 @@
     <widget class="KUrlRequester" name="kcfg_autostartLocation">
      <property name="whatsThis">
       <string>This folder contains applications or links to applications (shortcuts) that you want to have started automatically whenever the session starts. You can change the location of this folder if you want to, and the contents will move automatically to the new location as well.</string>
+     </property>
+     <property name="mode">
+         <enum>KFile::Directory</enum>
      </property>
     </widget>
    </item>
@@ -54,6 +60,9 @@
      <property name="whatsThis">
       <string>This folder will be used by default to load or save documents from or to.</string>
      </property>
+     <property name="mode">
+         <enum>KFile::Directory</enum>
+     </property>
     </widget>
    </item>
    <item row="3" column="0">
@@ -67,6 +76,9 @@
     <widget class="KUrlRequester" name="kcfg_downloadsLocation">
      <property name="whatsThis">
       <string>This folder will be used by default to save your downloaded items.</string>
+     </property>
+     <property name="mode">
+         <enum>KFile::Directory</enum>
      </property>
     </widget>
    </item>
@@ -82,6 +94,9 @@
      <property name="whatsThis">
       <string>This folder will be used by default to load or save movies from or to.</string>
      </property>
+     <property name="mode">
+         <enum>KFile::Directory</enum>
+     </property>
     </widget>
    </item>
    <item row="5" column="0">
@@ -96,6 +111,9 @@
      <property name="whatsThis">
       <string>This folder will be used by default to load or save pictures from or to.</string>
      </property>
+     <property name="mode">
+         <enum>KFile::Directory</enum>
+     </property>
     </widget>
    </item>
    <item row="6" column="0">
@@ -109,6 +127,9 @@
     <widget class="KUrlRequester" name="kcfg_musicLocation">
      <property name="whatsThis">
       <string>This folder will be used by default to load or save music from or to.</string>
+     </property>
+     <property name="mode">
+         <enum>KFile::Directory</enum>
      </property>
     </widget>
    </item>
