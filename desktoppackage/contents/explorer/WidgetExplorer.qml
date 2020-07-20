@@ -25,6 +25,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kwindowsystem 1.0
+import org.kde.kirigami 2.10 as Kirigami
 
 import QtQuick.Window 2.1
 import QtQuick.Layouts 1.1
@@ -196,67 +197,73 @@ Item {
     */
 
 
-    RowLayout {
-        id: topBar
+    PlasmaExtras.PlasmoidHeading {
+        id: topArea
+        implicitWidth: header.implicitWidth
+        implicitHeight: header.implicitHeight
         anchors {
             top: parent.top
             left: parent.left
             right: parent.right
         }
 
-
-
-        Item {
+        ColumnLayout {
             id: header
-            Layout.fillWidth: true
-            Layout.alignment: Qt.AlignVCenter
-            PlasmaExtras.Heading {
-                id: heading
-                anchors.verticalCenter: parent.verticalCenter
-                level: 1
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Widgets")
-                width: parent.width
-                elide: Text.ElideRight
-            }
-        }
+            anchors.fill: parent
 
-        PlasmaComponents.ToolButton {
-            id: categoryButton
-            tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Categories")
-            iconSource: "view-filter"
-            onClicked: {
-                categoriesDialog.model = widgetExplorer.filterModel
-                categoriesDialog.open(0, categoryButton.height)
+            RowLayout {
+                Kirigami.Heading {
+                    id: heading
+                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Widgets")
+                    elide: Text.ElideRight
+                }
+                Item { Layout.fillWidth: true }
+                PlasmaComponents.ToolButton {
+                    id: categoryButton
+                    tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Categories")
+                    iconSource: "view-filter"
+                    onClicked: {
+                        categoriesDialog.model = widgetExplorer.filterModel
+                        categoriesDialog.open(0, categoryButton.height)
+                    }
+                }
+                PlasmaComponents.ToolButton {
+                    id: closeButton
+                    iconSource: "window-close"
+                    onClicked: main.closed()
+                }
             }
-        }
 
-        PlasmaComponents.ToolButton {
-            id: closeButton
-            iconSource: "window-close"
-            onClicked: main.closed()
+            RowLayout {
+                PlasmaComponents.TextField {
+                    id: searchInput
+                    Layout.fillWidth: true
+                    clearButtonShown: true
+                    placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Search...")
+                    onTextChanged: {
+                        list.positionViewAtBeginning()
+                        list.currentIndex = -1
+                        widgetExplorer.widgetsModel.searchTerm = text
+                    }
+
+                    Component.onCompleted: forceActiveFocus()
+                }
+                PlasmaComponents.ToolButton {
+                    id: getWidgetsButton
+                    iconSource: "get-hot-new-stuff"
+                    tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Widgets...")
+                    onClicked: {
+                        getWidgetsDialog.model = widgetExplorer.widgetsMenuActions
+                        getWidgetsDialog.openRelative()
+                    }
+                }
+            }
+
+            Item {
+                height: units.smallSpacing
+            }
         }
     }
-
-        RowLayout {
-            id: newSearchRow
-            anchors.top: topBar.bottom
-            anchors.topMargin: units.smallSpacing
-            width: topBar.width
-
-            PlasmaComponents.TextField {
-                id: searchInput
-                Layout.fillWidth: true
-                clearButtonShown: true
-                placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Search...")
-                onTextChanged: {
-                    list.positionViewAtBeginning()
-                    list.currentIndex = -1
-                    widgetExplorer.widgetsModel.searchTerm = text
-                }
-
-                 Component.onCompleted: forceActiveFocus()
-                }
-            }
 
     Timer {
         id: setModelTimer
@@ -267,12 +274,10 @@ Item {
 
     PlasmaExtras.ScrollArea {
         anchors {
-            top: newSearchRow.bottom 
+            top: topArea.bottom
             left: parent.left
             right: parent.right
-            bottom: bottomBar.top
-            bottomMargin: units.smallSpacing
-            topMargin: units.smallSpacing
+            bottom: parent.bottom
         }
 
         verticalScrollBarPolicy: Qt.ScrollBarAlwaysOn
@@ -342,31 +347,6 @@ Item {
                 text: searchInput.text.length > 0 ? i18n("No widgets matched the search terms") : i18n("No widgets available")
                 enabled: false
                 visible: list.count == 0
-            }
-        }
-    }
-
-    Column {
-        id: bottomBar
-        anchors {
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-        }
-
-        spacing: units.smallSpacing
-
-        PlasmaComponents.Button {
-            id: getWidgetsButton
-            anchors {
-                left: parent.left
-                right: parent.right
-            }
-            iconSource: "get-hot-new-stuff"
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Widgets...")
-            onClicked: {
-                getWidgetsDialog.model = widgetExplorer.widgetsMenuActions
-                getWidgetsDialog.openRelative()
             }
         }
     }
