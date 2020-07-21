@@ -74,7 +74,6 @@ QString KdePlatformDependent::getAccessToken(const QUrl& /*baseUrl*/) const
         // TODO Present the user with a choice in case there's more than one, but for now just pick the first successful one
         // loop through the accounts, and attempt to get them
         Accounts::Account* account{nullptr};
-        qDebug() << accountIds;
         for (const Accounts::AccountId& accountId : accountIds) {
             account = accountsManager->account(accountId);
             if (account) {
@@ -86,12 +85,13 @@ QString KdePlatformDependent::getAccessToken(const QUrl& /*baseUrl*/) const
                     QVariantMap credentialsData = job->credentialsData();
                     accessToken = credentialsData["AccessToken"].toString();
                     idToken = credentialsData["IdToken"].toString();
-                    if (!accessToken.isEmpty()) {
-                        qCDebug(ATTICA_PLUGIN_LOG) << "Credentials data was gottened";
-                        for (const QString& key : credentialsData.keys()) {
-                            qCDebug(ATTICA_PLUGIN_LOG) << key << credentialsData[key];
-                        }
-                    }
+                    // As this can be useful for more heavy duty debugging purposes, leaving this in so it doesn't have to be rewritten
+//                     if (!accessToken.isEmpty()) {
+//                         qCDebug(ATTICA_PLUGIN_LOG) << "Credentials data was retrieved";
+//                         for (const QString& key : credentialsData.keys()) {
+//                             qCDebug(ATTICA_PLUGIN_LOG) << key << credentialsData[key];
+//                         }
+//                     }
                     completed = true;
                 });
                 connect(job, &KJob::result, [&completed](){ completed = true; });
