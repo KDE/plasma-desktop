@@ -30,7 +30,6 @@ FocusScope {
     property string label
     property string category
     property font font
-    Kirigami.FormData.label: root.label
     activeFocusOnTab: true
 
     Layout.minimumWidth: layout.Layout.minimumWidth
@@ -40,30 +39,38 @@ FocusScope {
     implicitWidth: layout.implicitWidth
     implicitHeight: layout.implicitHeight
 
-    RowLayout {
+    ColumnLayout {
         id: layout
 
-        QtControls.TextField {
-            readOnly: true
-            Kirigami.Theme.inherit: true
-            text: root.font.family + " " + root.font.pointSize + "pt"
-            font: root.font
-            Layout.fillHeight: true
+        QtControls.Label {
+            text: root.label
+
+            Layout.alignment: Qt.AlignLeft
         }
 
-        QtControls.Button {
-            icon.name: "document-edit"
-            Layout.fillHeight: true
-            Kirigami.MnemonicData.enabled: false
-            focus: true
-            onClicked: {
-                fontDialog.adjustAllFonts = false
-                kcm.adjustFont(root.font, root.category)
+        RowLayout {
+            QtControls.TextField {
+                readOnly: true
+                Kirigami.Theme.inherit: true
+                text: root.font.family + " " + root.font.pointSize + "pt"
+                font: root.font
+                Layout.fillHeight: true
             }
-            QtControls.ToolTip {
-                visible: parent.hovered
-                text: i18n("Select %1 Font...", label.replace(':', ''))
-                font.capitalization: Font.Capitalize
+
+            QtControls.Button {
+                icon.name: "document-edit"
+                Layout.fillHeight: true
+                Kirigami.MnemonicData.enabled: false
+                focus: true
+                onClicked: {
+                    fontDialog.adjustAllFonts = false
+                    kcm.adjustFont(root.font, root.category)
+                }
+                QtControls.ToolTip {
+                    visible: parent.hovered
+                    text: i18n("Select %1 Font...", label.replace(':', ''))
+                    font.capitalization: Font.Capitalize
+                }
             }
         }
     }

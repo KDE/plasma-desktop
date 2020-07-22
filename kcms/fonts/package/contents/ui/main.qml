@@ -18,15 +18,17 @@
    Boston, MA 02110-1301, USA.
 */
 
-import QtQuick 2.1
+import QtQuick 2.5
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.0 as QtControls
+import QtQuick.Controls 2.7 as QtControls
 import QtQuick.Dialogs 1.2 as QtDialogs
 
 // For KCMShell.open()
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.12 as Kirigami
 import org.kde.kcm 1.1 as KCM
+
+import org.kde.kwin.private.kdecoration 1.0 as KDecoration
 
 KCM.SimpleKCM {
     id: root
@@ -42,6 +44,152 @@ KCM.SimpleKCM {
     }
 
     ColumnLayout {
+
+        Item {
+            Layout.alignment: Qt.AlignHCenter
+            Layout.fillWidth: true
+            Layout.maximumWidth: 800
+            Layout.preferredHeight: 300
+            Image {
+                source: "../img/wallpaper.jpg"
+                fillMode: Image.PreserveAspectCrop
+                anchors.fill: parent
+                mipmap: true
+            }
+            Kirigami.ShadowedRectangle {
+                anchors {
+                    fill: parent
+                    margins: Kirigami.Units.largeSpacing*4
+                }
+                radius: 3
+                color: Kirigami.Theme.backgroundColor
+                ColumnLayout {
+                    spacing: 0
+                    anchors.fill: parent
+
+                    RowLayout {
+                        QtControls.Label {
+                            id: title
+
+                            text: i18n("Window Title")
+                            font: kcm.fontsSettings.activeFont
+
+                            Layout.margins: Kirigami.Units.smallSpacing
+                        }
+                        Item { Layout.fillWidth: true }
+                        Kirigami.Icon {
+                            source: "window-minimize"
+
+                            Layout.alignment: Qt.AlignVCenter
+                            Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                            Layout.preferredWidth: height
+                        }
+                        Kirigami.Icon {
+                            source: "window-maximize"
+
+                            Layout.alignment: Qt.AlignVCenter
+                            Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                            Layout.preferredWidth: height
+                        }
+                        Kirigami.Icon {
+                            source: "window-close"
+
+                            Layout.alignment: Qt.AlignVCenter
+                            Layout.rightMargin: Kirigami.Units.smallSpacing
+                            Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                            Layout.preferredWidth: height
+                        }
+                    }
+                    QtControls.ToolBar {
+                        Layout.fillWidth: true
+                        RowLayout {
+                            anchors.fill: parent
+
+                            QtControls.ToolButton {
+                                implicitWidth: contentItem.implicitWidth + Kirigami.Units.smallSpacing * 3
+                                implicitHeight: contentItem.implicitHeight + Kirigami.Units.smallSpacing * 4
+                                contentItem: QtControls.Label {
+                                    text: i18n("Toolbar Text")
+                                    font: kcm.fontsSettings.toolBarFont
+
+                                    horizontalAlignment: Text.AlignHCenter
+                                    verticalAlignment: Text.AlignVCenter
+                                }
+                            }
+                            QtControls.ToolButton {
+                                implicitWidth: contentItem.implicitWidth + Kirigami.Units.smallSpacing * 3
+                                implicitHeight: contentItem.implicitHeight + Kirigami.Units.smallSpacing * 4
+                                contentItem: QtControls.Label {
+                                    text: i18n("Copy")
+                                    font: kcm.fontsSettings.toolBarFont
+
+                                    horizontalAlignment: Text.AlignHCenter
+                                    verticalAlignment: Text.AlignVCenter
+                                }
+                            }
+                            QtControls.ToolButton {
+                                implicitWidth: contentItem.implicitWidth + Kirigami.Units.smallSpacing * 3
+                                implicitHeight: contentItem.implicitHeight + Kirigami.Units.smallSpacing * 4
+                                contentItem: QtControls.Label {
+                                    text: i18n("Paste")
+                                    font: kcm.fontsSettings.toolBarFont
+
+                                    horizontalAlignment: Text.AlignHCenter
+                                    verticalAlignment: Text.AlignVCenter
+                                }
+                            }
+                            Item { Layout.fillWidth: true }
+                            QtControls.ToolButton {
+                                implicitWidth: contentItem.implicitWidth + Kirigami.Units.smallSpacing * 3
+                                implicitHeight: contentItem.implicitHeight + Kirigami.Units.smallSpacing * 4
+                                contentItem: QtControls.Label {
+                                    text: i18n("New Folder")
+                                    font: kcm.fontsSettings.toolBarFont
+
+                                    horizontalAlignment: Text.AlignHCenter
+                                    verticalAlignment: Text.AlignVCenter
+                                }
+                            }
+                        }
+                    }
+                    QtControls.Label {
+                        text: i18n("General Text Sample. Lorem Ipsum Dolor Sit Amet.")
+                        font: kcm.fontsSettings.font
+
+                        Layout.margins: Kirigami.Units.largeSpacing
+                    }
+                    QtControls.Label {
+                        text: i18n("Small Text Sample. Lorem Ipsum Dolor Sit Amet.")
+                        font: kcm.fontsSettings.smallestReadableFont
+
+                        Layout.margins: Kirigami.Units.largeSpacing
+                    }
+                    Kirigami.ShadowedRectangle {
+                        radius: 3
+
+                        color: Kirigami.Theme.backgroundColor
+                        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+
+                        height: fixedText.implicitHeight + Kirigami.Units.largeSpacing * 2
+                        width: fixedText.implicitWidth + Kirigami.Units.largeSpacing * 2
+
+                        Layout.margins: Kirigami.Units.largeSpacing
+
+                        QtControls.Label {
+                            id: fixedText
+                            text: i18n(`// Sample fixed width text
+func main() {
+    println("Lorem ipsum dolor sit amet")
+}`)
+
+                            font: kcm.fontsSettings.fixed
+                            anchors.centerIn: parent
+                        }
+                    }
+                    Item { Layout.fillHeight: true }
+                }
+            }
+        }
 
         Kirigami.InlineMessage {
             id: antiAliasingMessage
@@ -83,24 +231,12 @@ KCM.SimpleKCM {
             actions: [ kscreenAction ]
         }
 
-        Kirigami.FormLayout {
-            id: formLayout
-            readonly property int maxImplicitWidth: Math.max(adjustAllFontsButton.implicitWidth, excludeField.implicitWidth, subPixelCombo.implicitWidth, hintingCombo.implicitWidth)
+        GridLayout {
+            rows: 4
+            columns: 2
+            columnSpacing: Kirigami.Units.largeSpacing * 3
 
-            QtControls.Button {
-                id: adjustAllFontsButton
-                Layout.preferredWidth: formLayout.maxImplicitWidth
-                icon.name: "font-select-symbolic"
-                text: i18n("&Adjust All Fonts...")
-
-                onClicked: kcm.adjustAllFonts();
-                enabled: !kcm.fontsSettings.isImmutable("font")
-                        || !kcm.fontsSettings.isImmutable("fixed")
-                        || !kcm.fontsSettings.isImmutable("smallestReadableFont")
-                        || !kcm.fontsSettings.isImmutable("toolBarFont")
-                        || !kcm.fontsSettings.isImmutable("menuFont")
-                        || !kcm.fontsSettings.isImmutable("activeFont")
-            }
+            Layout.alignment: Qt.AlignHCenter
 
             FontWidget {
                 id: generalFontWidget
@@ -143,6 +279,28 @@ KCM.SimpleKCM {
                 font: kcm.fontsSettings.activeFont
                 enabled: !kcm.fontsSettings.isImmutable("activeFont")
             }
+
+            QtControls.Button {
+                id: adjustAllFontsButton
+                icon.name: "font-select-symbolic"
+                text: i18n("&Adjust All Fonts...")
+
+                onClicked: kcm.adjustAllFonts();
+                enabled: !kcm.fontsSettings.isImmutable("font")
+                        || !kcm.fontsSettings.isImmutable("fixed")
+                        || !kcm.fontsSettings.isImmutable("smallestReadableFont")
+                        || !kcm.fontsSettings.isImmutable("toolBarFont")
+                        || !kcm.fontsSettings.isImmutable("menuFont")
+                        || !kcm.fontsSettings.isImmutable("activeFont")
+
+                Layout.fillWidth: true
+                Layout.columnSpan: 2
+            }
+        }
+
+        Kirigami.FormLayout {
+            id: formLayout
+            readonly property int maxImplicitWidth: Math.max(adjustAllFontsButton.implicitWidth, excludeField.implicitWidth, subPixelCombo.implicitWidth, hintingCombo.implicitWidth)
 
             Kirigami.Separator {
                 Kirigami.FormData.isSection: true
