@@ -238,7 +238,7 @@ bool runScript(const QString &path)
 bool executeOperation(const QString &archive, Operation operation)
 {
     if (binaryPackages.contains(QMimeDatabase().mimeTypeForFile(archive).name())) {
-        packageKit(Operation::Install, archive);
+        packageKit(operation, archive);
     }
 
     const bool install = operation == Operation::Install;

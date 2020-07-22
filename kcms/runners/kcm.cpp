@@ -130,6 +130,15 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
 
     QHBoxLayout *downloadLayout = new QHBoxLayout(this);
     auto *downloadButton = new KNS3::Button(i18n("Download New Plugins..."), QStringLiteral("krunner.knsrc"), this);
+    connect(downloadButton, &KNS3::Button::dialogFinished, this, [this](const KNS3::Entry::List &changedEntries) {
+       if (!changedEntries.isEmpty()) {
+           m_pluginSelector->clearPlugins();
+           m_pluginSelector->addPlugins(Plasma::RunnerManager::listRunnerInfo(),
+                                        KPluginSelector::ReadConfigFile,
+                                        i18n("Available Plugins"), QString(),
+                                        KSharedConfig::openConfig(QStringLiteral("krunnerrc")));
+       }
+    });
     downloadLayout->addStretch();
     downloadLayout->addWidget(downloadButton);
     layout->addLayout(downloadLayout);
