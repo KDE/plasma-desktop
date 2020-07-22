@@ -58,7 +58,7 @@ enum class Operation {
 Q_NORETURN void fail(const QString &str)
 {
     qCritical() << str;
-    const QStringList args = {"--detailederror" ,i18n("Dolphin service menu installation failed"),  str};
+    const QStringList args = {"--detailederror" ,i18n("KRunner plugin installation failed"),  str};
     QProcess::startDetached("kdialog", args);
 
     exit(1);
