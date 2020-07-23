@@ -26,6 +26,10 @@
       <label>How tasks are grouped: 0 = Do Not Group, 1 = By Program Name</label>
       <default>1</default>
     </entry>
+    <entry name="groupedTaskVisualization" type="Enum">
+      <label>What happens when clicking on a grouped task: 0 = try to show tooltips, 1 = try to show present Windows effect, 2 = show textual list (AKA group dialog)</label>
+      <default>0</default>
+    </entry>
     <entry name="groupPopups" type="Bool">
       <label>Whether groups are to be reduced to a single task button and expand into a popup or task buttons are grouped on the widget itself.</label>
       <default>true</default>
