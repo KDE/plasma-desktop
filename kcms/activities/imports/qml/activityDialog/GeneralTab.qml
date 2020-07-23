@@ -38,7 +38,6 @@ Kirigami.FormLayout {
     property alias activityDescription : activityDescription.text
     property alias activityIcon        : activityIcon.icon.name
     property alias activityIsPrivate   : activityIsPrivate.checked
-    property alias activityShortcut    : activityShortcut.keySequence
 
     Item {
         height: Kirigami.Units.smallSpacing
@@ -81,10 +80,5 @@ Kirigami.FormLayout {
         id: activityIsPrivate
         Kirigami.FormData.label: i18nd("kcm_activities5", "Privacy:")
         text: i18nd("kcm_activities5", "Do not track usage for this activity")
-    }
-
-    KQuickControls.KeySequenceItem {
-        id: activityShortcut
-        Kirigami.FormData.label: i18nd("kcm_activities5", "Shortcut for switching:")
     }
 }

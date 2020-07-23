@@ -58,7 +58,6 @@ public:
         , activityIcon(QStringLiteral("activityIcon"))
         , activityWallpaper(QStringLiteral("activityWallpaper"))
         , activityIsPrivate(true)
-        , activityShortcut(QStringLiteral("activityShortcut"))
         , features(new KAMD_DBUS_CLASS_INTERFACE(Features, Features, q))
     {
     }
@@ -112,7 +111,6 @@ public:
     QString activityIcon;
     QString activityWallpaper;
     bool activityIsPrivate;
-    QString activityShortcut;
 
     KActivities::Controller activities;
     org::kde::ActivityManager::Features *features;
@@ -182,19 +180,12 @@ void Dialog::init(const QString &activityId)
     setActivityIcon(QStringLiteral("activities"));
     setActivityIsPrivate(false);
 
-    setActivityShortcut(QKeySequence());
-
     if (!activityId.isEmpty()) {
         KActivities::Info activityInfo(activityId);
 
         setActivityName(activityInfo.name());
         setActivityDescription(activityInfo.description());
         setActivityIcon(activityInfo.icon());
-
-        // finding the key shortcut
-        const auto shortcuts = KGlobalAccel::self()->globalShortcut(
-            QStringLiteral("ActivityManager"), QStringLiteral("switch-to-activity-") + activityId);
-        setActivityShortcut(shortcuts.isEmpty() ? QKeySequence() : shortcuts.first());
 
         // is private?
         auto result = d->features->GetValue(
@@ -252,7 +243,6 @@ IMPLEMENT_PROPERTY(General, QString,      const QString &,      Name)
 IMPLEMENT_PROPERTY(General, QString,      const QString &,      Description)
 IMPLEMENT_PROPERTY(General, QString,      const QString &,      Icon)
 IMPLEMENT_PROPERTY(General, QString,      const QString &,      Wallpaper)
-IMPLEMENT_PROPERTY(General, QKeySequence, const QKeySequence &, Shortcut)
 IMPLEMENT_PROPERTY(General, bool,         bool,                 IsPrivate)
 #undef IMPLEMENT_PROPERTY
 
@@ -285,15 +275,6 @@ void Dialog::saveChanges(const QString &activityId)
     d->activities.setActivityDescription(activityId, activityDescription());
     d->activities.setActivityIcon(activityId, activityIcon());
 
-    // setting the key shortcut
-    QAction action(nullptr);
-    action.setProperty("isConfigurationAction", true);
-    action.setProperty("componentName", QStringLiteral("ActivityManager"));
-    action.setObjectName(QStringLiteral("switch-to-activity-") + activityId);
-    KGlobalAccel::self()->removeAllShortcuts(&action);
-    KGlobalAccel::self()->setGlobalShortcut(&action, activityShortcut());
-
-    // is private?
     d->features->SetValue(QStringLiteral("org.kde.ActivityManager.Resources.Scoring/isOTR/")
                               + activityId,
                           QDBusVariant(activityIsPrivate()));
