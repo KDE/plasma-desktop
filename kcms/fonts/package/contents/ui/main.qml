@@ -59,7 +59,7 @@ KCM.SimpleKCM {
             Kirigami.ShadowedRectangle {
                 anchors {
                     fill: parent
-                    margins: Kirigami.Units.largeSpacing*4
+                    margins: Kirigami.Units.largeSpacing * 4
                 }
                 radius: 3
                 color: Kirigami.Theme.backgroundColor
