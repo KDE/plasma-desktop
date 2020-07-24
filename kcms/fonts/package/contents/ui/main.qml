@@ -311,7 +311,7 @@ func main() {
                         || !kcm.fontsSettings.isImmutable("menuFont")
                         || !kcm.fontsSettings.isImmutable("activeFont")
 
-                Layout.fillWidth: true
+                Layout.alignment: Qt.AlignHCenter
                 Layout.columnSpan: 2
             }
         }
