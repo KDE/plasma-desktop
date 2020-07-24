@@ -63,91 +63,109 @@ KCM.SimpleKCM {
                 }
                 radius: 3
                 color: Kirigami.Theme.backgroundColor
+
                 ColumnLayout {
                     spacing: 0
                     anchors.fill: parent
 
-                    RowLayout {
-                        QtControls.Label {
-                            id: title
-
-                            text: i18n("Window Title")
-                            font: kcm.fontsSettings.activeFont
-
-                            Layout.margins: Kirigami.Units.smallSpacing
+                    Kirigami.ShadowedRectangle {
+                        corners {
+                            topLeftRadius: 3
+                            topRightRadius: 3
                         }
-                        Item { Layout.fillWidth: true }
-                        Kirigami.Icon {
-                            source: "window-minimize"
 
-                            Layout.alignment: Qt.AlignVCenter
-                            Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                            Layout.preferredWidth: height
-                        }
-                        Kirigami.Icon {
-                            source: "window-maximize"
-
-                            Layout.alignment: Qt.AlignVCenter
-                            Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                            Layout.preferredWidth: height
-                        }
-                        Kirigami.Icon {
-                            source: "window-close"
-
-                            Layout.alignment: Qt.AlignVCenter
-                            Layout.rightMargin: Kirigami.Units.smallSpacing
-                            Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                            Layout.preferredWidth: height
-                        }
-                    }
-                    QtControls.ToolBar {
+                        implicitHeight: titleCol.implicitHeight
                         Layout.fillWidth: true
-                        RowLayout {
+                        Kirigami.Theme.colorSet: Kirigami.Theme.Header
+                        color: Kirigami.Theme.backgroundColor
+
+                        ColumnLayout {
+                            id: titleCol
                             anchors.fill: parent
 
-                            QtControls.ToolButton {
-                                implicitWidth: contentItem.implicitWidth + Kirigami.Units.smallSpacing * 3
-                                implicitHeight: contentItem.implicitHeight + Kirigami.Units.smallSpacing * 4
-                                contentItem: QtControls.Label {
-                                    text: i18n("Toolbar Text")
-                                    font: kcm.fontsSettings.toolBarFont
+                            RowLayout {
+                                QtControls.Label {
+                                    id: title
 
-                                    horizontalAlignment: Text.AlignHCenter
-                                    verticalAlignment: Text.AlignVCenter
+                                    text: i18n("Window Title")
+                                    font: kcm.fontsSettings.activeFont
+
+                                    Layout.margins: Kirigami.Units.smallSpacing
+                                }
+                                Item { Layout.fillWidth: true }
+                                Kirigami.Icon {
+                                    source: "window-minimize"
+
+                                    Layout.alignment: Qt.AlignVCenter
+                                    Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                                    Layout.preferredWidth: height
+                                }
+                                Kirigami.Icon {
+                                    source: "window-maximize"
+
+                                    Layout.alignment: Qt.AlignVCenter
+                                    Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                                    Layout.preferredWidth: height
+                                }
+                                Kirigami.Icon {
+                                    source: "window-close"
+
+                                    Layout.alignment: Qt.AlignVCenter
+                                    Layout.rightMargin: Kirigami.Units.smallSpacing
+                                    Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                                    Layout.preferredWidth: height
                                 }
                             }
-                            QtControls.ToolButton {
-                                implicitWidth: contentItem.implicitWidth + Kirigami.Units.smallSpacing * 3
-                                implicitHeight: contentItem.implicitHeight + Kirigami.Units.smallSpacing * 4
-                                contentItem: QtControls.Label {
-                                    text: i18n("Copy")
-                                    font: kcm.fontsSettings.toolBarFont
+                            QtControls.ToolBar {
+                                Layout.fillWidth: true
+                                RowLayout {
+                                    anchors.fill: parent
 
-                                    horizontalAlignment: Text.AlignHCenter
-                                    verticalAlignment: Text.AlignVCenter
-                                }
-                            }
-                            QtControls.ToolButton {
-                                implicitWidth: contentItem.implicitWidth + Kirigami.Units.smallSpacing * 3
-                                implicitHeight: contentItem.implicitHeight + Kirigami.Units.smallSpacing * 4
-                                contentItem: QtControls.Label {
-                                    text: i18n("Paste")
-                                    font: kcm.fontsSettings.toolBarFont
+                                    QtControls.ToolButton {
+                                        implicitWidth: contentItem.implicitWidth + Kirigami.Units.smallSpacing * 3
+                                        implicitHeight: contentItem.implicitHeight + Kirigami.Units.smallSpacing * 4
+                                        contentItem: QtControls.Label {
+                                            text: i18n("Toolbar Text")
+                                            font: kcm.fontsSettings.toolBarFont
 
-                                    horizontalAlignment: Text.AlignHCenter
-                                    verticalAlignment: Text.AlignVCenter
-                                }
-                            }
-                            Item { Layout.fillWidth: true }
-                            QtControls.ToolButton {
-                                implicitWidth: contentItem.implicitWidth + Kirigami.Units.smallSpacing * 3
-                                implicitHeight: contentItem.implicitHeight + Kirigami.Units.smallSpacing * 4
-                                contentItem: QtControls.Label {
-                                    text: i18n("New Folder")
-                                    font: kcm.fontsSettings.toolBarFont
+                                            horizontalAlignment: Text.AlignHCenter
+                                            verticalAlignment: Text.AlignVCenter
+                                        }
+                                    }
+                                    QtControls.ToolButton {
+                                        implicitWidth: contentItem.implicitWidth + Kirigami.Units.smallSpacing * 3
+                                        implicitHeight: contentItem.implicitHeight + Kirigami.Units.smallSpacing * 4
+                                        contentItem: QtControls.Label {
+                                            text: i18n("Copy")
+                                            font: kcm.fontsSettings.toolBarFont
 
-                                    horizontalAlignment: Text.AlignHCenter
-                                    verticalAlignment: Text.AlignVCenter
+                                            horizontalAlignment: Text.AlignHCenter
+                                            verticalAlignment: Text.AlignVCenter
+                                        }
+                                    }
+                                    QtControls.ToolButton {
+                                        implicitWidth: contentItem.implicitWidth + Kirigami.Units.smallSpacing * 3
+                                        implicitHeight: contentItem.implicitHeight + Kirigami.Units.smallSpacing * 4
+                                        contentItem: QtControls.Label {
+                                            text: i18n("Paste")
+                                            font: kcm.fontsSettings.toolBarFont
+
+                                            horizontalAlignment: Text.AlignHCenter
+                                            verticalAlignment: Text.AlignVCenter
+                                        }
+                                    }
+                                    Item { Layout.fillWidth: true }
+                                    QtControls.ToolButton {
+                                        implicitWidth: contentItem.implicitWidth + Kirigami.Units.smallSpacing * 3
+                                        implicitHeight: contentItem.implicitHeight + Kirigami.Units.smallSpacing * 4
+                                        contentItem: QtControls.Label {
+                                            text: i18n("New Folder")
+                                            font: kcm.fontsSettings.toolBarFont
+
+                                            horizontalAlignment: Text.AlignHCenter
+                                            verticalAlignment: Text.AlignVCenter
+                                        }
+                                    }
                                 }
                             }
                         }
