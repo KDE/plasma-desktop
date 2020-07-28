@@ -113,7 +113,23 @@ Component ShortcutsModel::loadComponent(const QList<KGlobalShortcutInfo> &info)
         }
     }
     const QString type = service && service->isApplication() ? i18n("Applications") : i18n("System Services");
-    const QString icon = service && !service->icon().isEmpty() ? service->icon() : componentUnique;
+    QString icon;
+
+    static const QHash<QString, QString> hardCodedIcons = {
+        {"ActivityManager", "preferences-desktop-activities"},
+        {"KDE Keyboard Layout Switcher", "input-keyboard"},
+        {"krunner.desktop", "krunner"},
+        {"org_kde_powerdevil", "preferences-system-power-management"}
+    };
+
+    if(service && !service->icon().isEmpty()) {
+        icon = service->icon();
+    } else if (hardCodedIcons.contains(componentUnique)) {
+        icon = hardCodedIcons[componentUnique];
+    } else {
+        icon = componentUnique;
+    }
+
     Component c{componentUnique, componentFriendly, type, icon, QVector<Shortcut>(), false, false};
     for (const auto &action : info) {
         const QString &actionUnique = action.uniqueName();
