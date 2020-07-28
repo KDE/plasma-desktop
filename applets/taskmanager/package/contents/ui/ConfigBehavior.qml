@@ -63,7 +63,7 @@ Item {
         // TODO: port to QQC2 version once we've fixed https://bugs.kde.org/show_bug.cgi?id=403153
         QQC1.ComboBox {
             id: groupedTaskVisualization
-            Kirigami.FormData.label: i18n("Clicking grouped task shows:")
+            Kirigami.FormData.label: i18n("Clicking grouped task:")
             Layout.fillWidth: true
             // FIXME: minimum width once this is ported to QQC2
             Layout.preferredWidth: Kirigami.Units.gridUnit * 14
@@ -71,9 +71,10 @@ Item {
             enabled: groupingStrategy.currentIndex !== 0
 
             model: [
-                i18n("Tooltip window thumbnails"),
-                i18n("'Present Windows' effect"),
-                i18n("Textual list"),
+                i18nc("Completes the sentence 'Clicking grouped task shows tooltip window thumbnails' ", "Shows tooltip window thumbnails"),
+                i18nc("Completes the sentence 'Clicking grouped task shows 'Present Windows' effect' ", "Shows 'Present Windows' effect"),
+                i18nc("Completes the sentence 'Clicking grouped task shows textual list' ", "Shows textual list"),
+                i18nc("Completes the sentence 'Clicking grouped task cycles through tasks' ", "Cycles through tasks"),
             ]
         }
         // "You asked for Tooltips but Tooltips are disabled" message
