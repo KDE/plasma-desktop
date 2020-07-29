@@ -253,7 +253,15 @@ void UserApplyJob::start()
     // will return permission denied if there's a polkit dialog open while a 
     // request is made.
     for (auto const &x: set) {
-        (m_dbusIface->*(x.second))(x.first).waitForFinished();
+        auto resp = (m_dbusIface->*(x.second))(x.first);
+        resp.waitForFinished();
+        // We don't have a meaningful way to discern between errors and
+        // user cancellation; but user cancellation is more likely than errors
+        // so go with that.
+        if (resp.isError()) {
+            emitResult();
+            return;
+        }
     }
     m_dbusIface->SetAccountType(m_type).waitForFinished();
     emitResult();
