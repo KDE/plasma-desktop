@@ -234,8 +234,7 @@ KCM.GridViewKCM {
                 checkable: true
                 checked: iconSizePopupLoader.item && iconSizePopupLoader.item.opened
                 onClicked: {
-                    iconSizePopupLoader.active = true;
-                    iconSizePopupLoader.item.open();
+                    kcm.push("IconSizePopup.qml")
                 }
             }
 
@@ -258,15 +257,6 @@ KCM.GridViewKCM {
                 viewMode: NewStuff.Page.ViewMode.Preview
                 onChangedEntriesChanged: kcm.ghnsEntriesChanged(newStuffButton.changedEntries);
             }
-        }
-    }
-
-    Loader {
-        id: iconSizePopupLoader
-        active: false
-        sourceComponent: IconSizePopup {
-            parent: iconSizesButton
-            y: -height
         }
     }
 
