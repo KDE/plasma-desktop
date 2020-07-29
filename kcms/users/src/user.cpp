@@ -37,7 +37,7 @@ void User::setUid(int value) {
         return;
     }
     mUid = value;
-    Q_EMIT uidChanged(value);
+    Q_EMIT uidChanged();
 }
 
 QString User::name() const {
@@ -50,7 +50,7 @@ void User::setName(const QString &value) {
         return;
     }
     mName = value;
-    Q_EMIT nameChanged(value);
+    Q_EMIT nameChanged();
 }
 
 QString User::realName() const {
@@ -63,7 +63,7 @@ void User::setRealName(const QString &value) {
         return;
     }
     mRealName = value;
-    Q_EMIT realNameChanged(value);
+    Q_EMIT realNameChanged();
 }
 
 QString User::email() const {
@@ -76,7 +76,7 @@ void User::setEmail(const QString &value) {
         return;
     }
     mEmail = value;
-    Q_EMIT emailChanged(value);
+    Q_EMIT emailChanged();
 }
 
 QUrl User::face() const {
@@ -94,8 +94,8 @@ void User::setFace(const QUrl &value) {
     }
     mFace = value;
     mFaceValid = QFile::exists(value.path());
-    Q_EMIT faceValidChanged(mFaceValid);
-    Q_EMIT faceChanged(value);
+    Q_EMIT faceValidChanged();
+    Q_EMIT faceChanged();
 }
 
 bool User::administrator() const {
@@ -107,7 +107,7 @@ void User::setAdministrator(bool value) {
         return;
     }
     mAdministrator = value;
-    Q_EMIT administratorChanged(value);
+    Q_EMIT administratorChanged();
 }
 
 void User::setPath(const QDBusObjectPath &path) {
@@ -125,35 +125,35 @@ void User::setPath(const QDBusObjectPath &path) {
         if (mUid != m_dbusIface->uid()) {
             mUid = m_dbusIface->uid();
             userDataChanged = true;
-            Q_EMIT uidChanged(mUid);
+            Q_EMIT uidChanged();
         }
         if (mName != m_dbusIface->userName()) {
             mName = m_dbusIface->userName();
             userDataChanged = true;
-            Q_EMIT nameChanged(mName);
+            Q_EMIT nameChanged();
         }
         if (mFace != QUrl(m_dbusIface->iconFile())) {
             mFace = QUrl(m_dbusIface->iconFile());
             mFaceValid = QFileInfo::exists(mFace.toString());
             userDataChanged = true;
-            Q_EMIT faceChanged(mFace);
-            Q_EMIT faceValidChanged(mFaceValid);
+            Q_EMIT faceChanged();
+            Q_EMIT faceValidChanged();
         }
         if (mRealName != m_dbusIface->realName()) {
             mRealName = m_dbusIface->realName();
             userDataChanged = true;
-            Q_EMIT realNameChanged(mRealName);
+            Q_EMIT realNameChanged();
         }
         if (mEmail != m_dbusIface->email()) {
             mEmail = m_dbusIface->email();
             userDataChanged = true;
-            Q_EMIT emailChanged(mEmail);
+            Q_EMIT emailChanged();
         }
         const auto administrator = (m_dbusIface->accountType() == 1);
         if (mAdministrator != administrator) {
             mAdministrator = administrator;
             userDataChanged = true;
-            Q_EMIT administratorChanged(mAdministrator);
+            Q_EMIT administratorChanged();
         }
         const auto loggedIn = (mUid == getuid());
         if (mLoggedIn != loggedIn) {
