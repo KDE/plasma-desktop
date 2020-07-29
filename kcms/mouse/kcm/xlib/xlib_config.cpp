@@ -28,8 +28,6 @@
 #include "backends/x11/x11_evdev_backend.h"
 #include "../configcontainer.h"
 
-#include "../../../migrationlib/kdelibs4config.h"
-
 #include <config-workspace.h>
 
 #include <KToolInvocation>

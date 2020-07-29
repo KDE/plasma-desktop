@@ -23,8 +23,6 @@
 #include <KSharedConfig>
 #include <KConfigGroup>
 
-#include "../migrationlib/kdelibs4config.h"
-
 void EvdevSettings::apply(X11EvdevBackend *backend, bool force)
 {
     if (!backend) {
@@ -128,9 +126,6 @@ void EvdevSettings::save()
 
     group.sync();
     kcminputProfile->sync();
-
-    Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("Mouse"), "kcminputrc");
-    Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("KDE"), "kdeglobals");
 
     emitChange(SettingsChanged, SETTINGS_MOUSE);
 }
