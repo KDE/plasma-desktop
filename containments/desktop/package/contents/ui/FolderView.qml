@@ -303,6 +303,7 @@ FocusScope {
                         // which doesn't happen right now because initiating a drag after the press should
                         // still drag all of them: The deselect needs to happen on release instead so we
                         // can distinguish.
+                        // https://bugs.kde.org/show_bug.cgi?id=424152
                         if (!gridView.ctrlPressed && !dir.isSelected(positioner.map(hoveredItem.index))) {
                             dir.clearSelection();
                         }
