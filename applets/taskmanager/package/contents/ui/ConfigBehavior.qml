@@ -71,10 +71,10 @@ Item {
             enabled: groupingStrategy.currentIndex !== 0
 
             model: [
+                i18nc("Completes the sentence 'Clicking grouped task cycles through tasks' ", "Cycles through tasks"),
                 i18nc("Completes the sentence 'Clicking grouped task shows tooltip window thumbnails' ", "Shows tooltip window thumbnails"),
                 i18nc("Completes the sentence 'Clicking grouped task shows 'Present Windows' effect' ", "Shows 'Present Windows' effect"),
                 i18nc("Completes the sentence 'Clicking grouped task shows textual list' ", "Shows textual list"),
-                i18nc("Completes the sentence 'Clicking grouped task cycles through tasks' ", "Cycles through tasks"),
             ]
         }
         // "You asked for Tooltips but Tooltips are disabled" message

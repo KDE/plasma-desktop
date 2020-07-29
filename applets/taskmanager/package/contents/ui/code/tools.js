@@ -101,43 +101,15 @@ function activateTask(index, model, modifiers, task) {
     if (modifiers & Qt.ShiftModifier) {
         tasksModel.requestNewInstance(index);
     } else if (model.IsGroupParent === true) {
-        // If tooltips are enabled and selected as the visualization, show
-        // tooltips
-        if (plasmoid.configuration.showToolTips
-            && plasmoid.configuration.groupedTaskVisualization === 0
-        ) {
-            task.showToolTip();
-        }
 
-        // Otherwise, or if present windows effect is selected as the
-        // visualization, invoke it if it's available
-        else if (backend.canPresentWindows()
-                   && (plasmoid.configuration.groupedTaskVisualization === 1
-                   || plasmoid.configuration.groupedTaskVisualization === 0)
-        ) {
-            task.hideToolTipTemporarily();
-            tasks.presentWindows(model.WinIdList);
-        }
-
-        // If that's not available either, or if the group dialog is selected
-        // as the visualization, show that
-        else if (plasmoid.configuration.groupedTaskVisualization === 2) {
-            if (groupDialog.visible) {
-                task.hideToolTipTemporarily();
-                groupDialog.visible = false;
-            } else {
-                groupDialog.visualParent = task;
-                groupDialog.visible = true;
-            }
-        }
-
-        // Cycle through this group's tasks.
+        // Option 1 (default): Cycle through this group's tasks
+        // ====================================================
         // If the grouped task does not include the currently active task, bring
         // forward the most recently used task in the group according to the
         // Stacking order.
         // Otherwise cycle through all tasks in the group without paying attention
         // to the stacking order, which otherwise would change with every click
-        else if (plasmoid.configuration.groupedTaskVisualization === 3) {
+        if (plasmoid.configuration.groupedTaskVisualization === 0) {
             let childTaskList = [];
             let highestStacking = -1;
             let lastUsedTask = undefined;
@@ -174,6 +146,42 @@ function activateTask(index, model, modifiers, task) {
                             break;
                         }
                 }
+            }
+        }
+
+        // Option 2: show tooltips for all child tasks
+        // ===========================================
+        // Make sure tooltips are actually enabled though; if not, fall through
+        // to the next option.
+        if (plasmoid.configuration.showToolTips
+            && plasmoid.configuration.groupedTaskVisualization === 1
+        ) {
+            task.showToolTip();
+        }
+
+        // Option 3: show Present Windows for all child tasks
+        // ==================================================
+        // Make sure the Present Windows effect is  are actually enabled though;
+        // if not, fall through to the next option.
+        else if (backend.canPresentWindows()
+                   && (plasmoid.configuration.groupedTaskVisualization === 2
+                   || plasmoid.configuration.groupedTaskVisualization === 1)
+        ) {
+            task.hideToolTipTemporarily();
+            tasks.presentWindows(model.WinIdList);
+        }
+
+        // Option 4: show group dialog/textual list
+        // ========================================
+        // This is also the final fallback option if Tooltips or Present windows
+        // are chosen but not actully available
+        else if (plasmoid.configuration.groupedTaskVisualization === 3) {
+            if (groupDialog.visible) {
+                task.hideToolTipTemporarily();
+                groupDialog.visible = false;
+            } else {
+                groupDialog.visualParent = task;
+                groupDialog.visible = true;
             }
         }
     } else {
