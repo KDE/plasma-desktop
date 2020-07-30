@@ -148,13 +148,18 @@ KCM.SimpleKCM {
                 Kirigami.FormData.isSection: true
             }
 
-            QtControls.CheckBox {
-                id: antiAliasingCheckBox
-                checked: kcm.fontsAASettings.antiAliasing
-                onCheckedChanged: kcm.fontsAASettings.antiAliasing = checked
+            RowLayout {
                 Kirigami.FormData.label: i18n("Anti-Aliasing:")
-                text: i18n("Enable")
-                Layout.fillWidth: true
+                QtControls.CheckBox {
+                    id: antiAliasingCheckBox
+                    checked: kcm.fontsAASettings.antiAliasing
+                    onCheckedChanged: kcm.fontsAASettings.antiAliasing = checked
+                    text: i18n("Enable")
+                    Layout.fillWidth: true
+                }
+                ContextualHelpButton {
+                    toolTipText: xi18nc("@info:tooltip Anti-Aliasing", "Pixels on displays are generally aligned in a grid. Therefore shapes of fonts that do not align with this grid will look blocky and wrong unless <emphasis>anti-aliasing</emphasis> techniques are used to reduce this effect. You generally want to keep this option enabled unless it causes problems.")
+                }
             }
 
             QtControls.CheckBox {
@@ -205,77 +210,87 @@ KCM.SimpleKCM {
                 }
             }
 
-            QtControls.ComboBox {
-                id: subPixelCombo
-                Layout.preferredWidth: formLayout.maxImplicitWidth
+            RowLayout {
                 Kirigami.FormData.label: i18nc("Used as a noun, and precedes a combobox full of options", "Sub-pixel rendering:")
-                currentIndex: kcm.subPixelCurrentIndex
-                onCurrentIndexChanged: kcm.subPixelCurrentIndex = currentIndex;
-                model: kcm.subPixelOptionsModel
-                textRole: "display"
-                enabled: antiAliasingCheckBox.checked
-                popup.height: popup.implicitHeight
-                delegate: QtControls.ItemDelegate {
-                    id: subPixelDelegate
-                    onWidthChanged: {
-                        subPixelCombo.popup.width = Math.max(subPixelCombo.popup.width, width)
-                    }
-                    contentItem: ColumnLayout {
-                        id: subPixelLayout
-                        Kirigami.Heading {
-                            id: subPixelComboText
-                            text: model.display
-                            level: 5
+                QtControls.ComboBox {
+                    id: subPixelCombo
+                    Layout.preferredWidth: formLayout.maxImplicitWidth
+                    currentIndex: kcm.subPixelCurrentIndex
+                    onCurrentIndexChanged: kcm.subPixelCurrentIndex = currentIndex;
+                    model: kcm.subPixelOptionsModel
+                    textRole: "display"
+                    enabled: antiAliasingCheckBox.checked
+                    popup.height: popup.implicitHeight
+                    delegate: QtControls.ItemDelegate {
+                        id: subPixelDelegate
+                        onWidthChanged: {
+                            subPixelCombo.popup.width = Math.max(subPixelCombo.popup.width, width)
                         }
-                        Image {
-                            id: subPixelComboImage
-                            source: "image://preview/" + model.index + "_" + kcm.hintingCurrentIndex + ".png"
-                            // Setting sourceSize here is necessary as a workaround for QTBUG-38127
-                            //
-                            // With this bug, images requested from a QQuickImageProvider have an incorrect scale with devicePixelRatio != 1 when sourceSize is not set.
-                            //
-                            // TODO: Check if QTBUG-38127 is fixed and remove the next two lines.
-                            sourceSize.width: 1
-                            sourceSize.height: 1
+                        contentItem: ColumnLayout {
+                            id: subPixelLayout
+                            Kirigami.Heading {
+                                id: subPixelComboText
+                                text: model.display
+                                level: 5
+                            }
+                            Image {
+                                id: subPixelComboImage
+                                source: "image://preview/" + model.index + "_" + kcm.hintingCurrentIndex + ".png"
+                                // Setting sourceSize here is necessary as a workaround for QTBUG-38127
+                                //
+                                // With this bug, images requested from a QQuickImageProvider have an incorrect scale with devicePixelRatio != 1 when sourceSize is not set.
+                                //
+                                // TODO: Check if QTBUG-38127 is fixed and remove the next two lines.
+                                sourceSize.width: 1
+                                sourceSize.height: 1
+                            }
                         }
                     }
                 }
+                ContextualHelpButton {
+                    toolTipText: xi18nc("@info:tooltip Sub-pixel rendering", "<para>On TFT or LCD screens every single pixel is actually composed of three or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can be changed independently to further improve the quality of displayed fonts.</para> <para>The rendering quality is only improved if the selection matches the manner in which the sub-pixels of your display are aligned. Most displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some have <emphasis>BGR</emphasis> and some exotic orderings are not supported by this feature.</para>This does not work with CRT monitors.")
+                }
             }
 
-            QtControls.ComboBox {
-                id: hintingCombo
-                Layout.preferredWidth: formLayout.maxImplicitWidth
+            RowLayout {
                 Kirigami.FormData.label: i18nc("Used as a noun, and precedes a combobox full of options", "Hinting:")
-                currentIndex: kcm.hintingCurrentIndex
-                onCurrentTextChanged: kcm.hintingCurrentIndex = currentIndex;
-                model: kcm.hintingOptionsModel
-                textRole: "display"
-                enabled: antiAliasingCheckBox.checked
-                popup.height: popup.implicitHeight
-                delegate: QtControls.ItemDelegate {
-                    id: hintingDelegate
-                    onWidthChanged: {
-                        hintingCombo.popup.width = Math.max(hintingCombo.popup.width, width)
-                    }
-                    contentItem: ColumnLayout {
-                        id: hintingLayout
-                        Kirigami.Heading {
-                            id: hintingComboText
-                            text: model.display
-                            level: 5
+                QtControls.ComboBox {
+                    id: hintingCombo
+                    Layout.preferredWidth: formLayout.maxImplicitWidth
+                    currentIndex: kcm.hintingCurrentIndex
+                    onCurrentTextChanged: kcm.hintingCurrentIndex = currentIndex;
+                    model: kcm.hintingOptionsModel
+                    textRole: "display"
+                    enabled: antiAliasingCheckBox.checked
+                    popup.height: popup.implicitHeight
+                    delegate: QtControls.ItemDelegate {
+                        id: hintingDelegate
+                        onWidthChanged: {
+                            hintingCombo.popup.width = Math.max(hintingCombo.popup.width, width)
                         }
-                        Image {
-                            id: hintingComboImage
-                            source: "image://preview/" + kcm.subPixelCurrentIndex + "_" + model.index + ".png"
-                            // Setting sourceSize here is necessary as a workaround for QTBUG-38127
-                            //
-                            // With this bug, images requested from a QQuickImageProvider have an incorrect scale with devicePixelRatio != 1 when sourceSize is not set.
-                            //
-                            // TODO: Check if QTBUG-38127 is fixed and remove the next two lines.
-                            sourceSize.width: 1
-                            sourceSize.height: 1
+                        contentItem: ColumnLayout {
+                            id: hintingLayout
+                            Kirigami.Heading {
+                                id: hintingComboText
+                                text: model.display
+                                level: 5
+                            }
+                            Image {
+                                id: hintingComboImage
+                                source: "image://preview/" + kcm.subPixelCurrentIndex + "_" + model.index + ".png"
+                                // Setting sourceSize here is necessary as a workaround for QTBUG-38127
+                                //
+                                // With this bug, images requested from a QQuickImageProvider have an incorrect scale with devicePixelRatio != 1 when sourceSize is not set.
+                                //
+                                // TODO: Check if QTBUG-38127 is fixed and remove the next two lines.
+                                sourceSize.width: 1
+                                sourceSize.height: 1
+                            }
                         }
                     }
+                }
+                ContextualHelpButton {
+                    toolTipText: xi18nc("@info:tooltip Hinting", "Hinting is a technique in which hints embedded in a font are used to enhance the rendering quality especially at small sizes. Stronger hinting generally leads to sharper edges but the small letters will less closely resemble their shape at big sizes.")
                 }
             }
 
@@ -298,6 +313,9 @@ KCM.SimpleKCM {
                     onValueModified: kcm.fontsAASettings.dpi = value
                     to: 999
                     from: 1
+                }
+                ContextualHelpButton {
+                    toolTipText: xi18nc("@info:tooltip Force fonts DPI", "<para>This option forces a specific DPI value for fonts. It may be useful when the real DPI of the hardware is not detected properly and it is also often misused when poor quality fonts are used that do not look well with DPI values other than 96 or 120 DPI.</para><para>The use of this option is generally discouraged.</para><para>If you are using the <emphasis>X Window System</emphasis>, for selecting the proper DPI value a better option is explicitly configuring it for the whole X server if possible (e.g. DisplaySize in xorg.conf). When fonts do not render properly with the real DPI value better fonts should be used or configuration of font hinting should be checked.</para>")
                 }
             }
 
