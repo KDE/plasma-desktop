@@ -127,7 +127,7 @@ function activateTask(index, model, modifiers, task) {
 
             // If the active task is from a different app from the group that
             // was clicked on switch to the last-used task from that app.
-            if (!childTaskList.includes(tasksModel.activeTask)) {
+            if (!childTaskList.some(index => tasksModel.data(index, TaskManager.AbstractTasksModel.IsActive))) {
                 tasksModel.requestActivate(lastUsedTask);
             } else {
                 // If the active task is already among in the group that was
@@ -136,7 +136,7 @@ function activateTask(index, model, modifiers, task) {
                 // every click.
                 for (let j = 0; j < childTaskList.length; ++j) {
                     const childTask = childTaskList[j];
-                        if (childTask == tasksModel.activeTask) {
+                        if (tasksModel.data(childTask, TaskManager.AbstractTasksModel.IsActive)) {
                             // Found the current task. Activate the next one
                             let nextTask = j + 1;
                             if (nextTask >= childTaskList.length) {
