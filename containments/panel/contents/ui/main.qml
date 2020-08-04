@@ -49,6 +49,12 @@ DragDrop.DropArea {
     property bool isHorizontal: plasmoid.formFactor !== PlasmaCore.Types.Vertical
     property int fixedWidth: 0
     property int fixedHeight: 0
+    
+    PlasmaCore.FrameSvgItem {
+        id: panelSvg
+        visible: false
+        imagePath: "widgets/panel-background"
+    }
 
 //END properties
 
@@ -272,14 +278,25 @@ function checkLastSpacer() {
                 }
             }
 
-            Layout.minimumWidth: (currentLayout.isLayoutHorizontal ? (applet && applet.Layout.minimumWidth > 0 ? applet.Layout.minimumWidth : root.height) : root.width)
-            Layout.minimumHeight: (!currentLayout.isLayoutHorizontal ? (applet && applet.Layout.minimumHeight > 0 ? applet.Layout.minimumHeight : root.width) : root.height)
+            //Margins are either the size of the margins in the SVG, unless that prevents the panel from being at least half a smallMedium icon + smallSpace) tall at which point we set the margin to whatever allows it to be that...or if it still won't fit, 1.
 
-            Layout.preferredWidth: (currentLayout.isLayoutHorizontal ? (applet && applet.Layout.preferredWidth > 0 ? applet.Layout.preferredWidth : root.height) : root.width)
-            Layout.preferredHeight: (!currentLayout.isLayoutHorizontal ? (applet && applet.Layout.preferredHeight > 0 ? applet.Layout.preferredHeight : root.width) : root.height)
+            //the size a margin should be to force a panel to be the required size above
+            readonly property real spacingAtMinSize: Math.max(1, (currentLayout.isLayoutHorizontal ? root.height : root.width) - units.iconSizes.smallMedium - units.smallSpacing*2)/2
 
-            Layout.maximumWidth: (currentLayout.isLayoutHorizontal ? (applet && applet.Layout.maximumWidth > 0 ? applet.Layout.maximumWidth : (Layout.fillWidth ? root.width : root.height)) : root.height)
-            Layout.maximumHeight: (!currentLayout.isLayoutHorizontal ? (applet && applet.Layout.maximumHeight > 0 ? applet.Layout.maximumHeight : (Layout.fillHeight ? root.height : root.width)) : root.width)
+            Layout.topMargin: (currentLayout.isLayoutHorizontal && applet && applet.applyMargins) ? Math.round(Math.min(spacingAtMinSize, panelSvg.fixedMargins.top)) : 0
+            Layout.bottomMargin: (currentLayout.isLayoutHorizontal && applet && applet.applyMargins) ? Math.round(Math.min(spacingAtMinSize, panelSvg.fixedMargins.bottom)) : 0
+            Layout.leftMargin: (!currentLayout.isLayoutHorizontal && applet && applet.applyMargins) ? Math.round(Math.min(spacingAtMinSize, panelSvg.fixedMargins.left)) : 0
+            Layout.rightMargin: (!currentLayout.isLayoutHorizontal && applet && applet.applyMargins) ? Math.round(Math.min(spacingAtMinSize, panelSvg.fixedMargins.right)) : 0
+
+            Layout.minimumWidth: (currentLayout.isLayoutHorizontal ? (applet && applet.Layout.minimumWidth > 0 ? applet.Layout.minimumWidth : root.height) : root.width) - Layout.leftMargin - Layout.rightMargin
+            Layout.minimumHeight: (!currentLayout.isLayoutHorizontal ? (applet && applet.Layout.minimumHeight > 0 ? applet.Layout.minimumHeight : root.width) : root.height) - Layout.bottomMargin - Layout.topMargin
+
+            Layout.preferredWidth: (currentLayout.isLayoutHorizontal ? (applet && applet.Layout.preferredWidth > 0 ? applet.Layout.preferredWidth : root.height) : root.width) - Layout.leftMargin - Layout.rightMargin
+            Layout.preferredHeight: (!currentLayout.isLayoutHorizontal ? (applet && applet.Layout.preferredHeight > 0 ? applet.Layout.preferredHeight : root.width) : root.height) - Layout.bottomMargin - Layout.topMargin
+
+            Layout.maximumWidth: (currentLayout.isLayoutHorizontal ? (applet && applet.Layout.maximumWidth > 0 ? applet.Layout.maximumWidth : (Layout.fillWidth ? root.width : root.height)) : root.height) - Layout.leftMargin - Layout.rightMargin
+            Layout.maximumHeight: (!currentLayout.isLayoutHorizontal ? (applet && applet.Layout.maximumHeight > 0 ? applet.Layout.maximumHeight : (Layout.fillHeight ? root.height : root.width)) : root.width) - Layout.bottomMargin - Layout.topMargin
+
 
             property int oldX: x
             property int oldY: y
