@@ -32,27 +32,39 @@ public:
 
     QUrl autostartLocation() const;
     void setAutostartLocation(const QUrl &url);
+    QUrl defaultAutostartLocation() const;
 
     QUrl desktopLocation() const;
     void setDesktopLocation(const QUrl &url);
+    QUrl defaultDesktopLocation() const;
 
     QUrl documentsLocation() const;
     void setDocumentsLocation(const QUrl &url);
+    QUrl defaultDocumentsLocation() const;
 
     QUrl downloadsLocation() const;
     void setDownloadsLocation(const QUrl &url);
+    QUrl defaultDownloadsLocation() const;
 
     QUrl musicLocation() const;
     void setMusicLocation(const QUrl &url);
+    QUrl defaultMusicLocation() const;
 
     QUrl picturesLocation() const;
     void setPicturesLocation(const QUrl &url);
+    QUrl defaultPicturesLocation() const;
 
     QUrl videosLocation() const;
     void setVideosLocation(const QUrl &url);
+    QUrl defaultVideosLocation() const;
+
+
+Q_SIGNALS:
+    void widgetChanged();
 
 private:
     bool usrSave() override;
+    void addItemInternal(const QByteArray &propertyName, const QVariant &defaultValue);
 
 private:
     PathsSettingsStore *m_pathsStore;

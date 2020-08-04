@@ -4,6 +4,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_desktoppaths\")
 set(kcm_desktoppaths_PART_SRCS
    globalpaths.cpp
    desktoppathssettings.cpp
+   desktoppathsdata.cpp
 )
 
 ki18n_wrap_ui(kcm_desktoppaths_PART_SRCS globalpaths.ui)

@@ -34,7 +34,9 @@
 
 namespace Ui { class DesktopPathsView; }
 
+class KUrlRequester;
 class DesktopPathsSettings;
+class DesktopPathsData;
 
 //-----------------------------------------------------------------------------
 // The "Path" Tab contains :
@@ -47,9 +49,14 @@ public:
     DesktopPathConfig(QWidget *parent, const QVariantList &args);
     ~DesktopPathConfig() override;
 
+private Q_SLOTS:
+    void updateDefaultIndicator();
+
 private:
+    void setDefaultIndicatorVisible(KUrlRequester *widget, const QVariant &defaultValue);
+
     QScopedPointer<Ui::DesktopPathsView> m_ui;
-    DesktopPathsSettings *m_pathsSettings;
+    DesktopPathsData *m_data;
 };
 
 #endif

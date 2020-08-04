@@ -27,41 +27,6 @@ namespace {
         const QString userDirsFilePath = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs");
         return KSharedConfig::openConfig(userDirsFilePath, KConfig::SimpleConfig);
     }
-
-    QUrl defaultAutostartLocation()
-    {
-        return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/.config/autostart"));
-    }
-
-    QUrl defaultDesktopLocation()
-    {
-        return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Desktop"));
-    }
-
-    QUrl defaultDocumentsLocation()
-    {
-        return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Documents"));
-    }
-
-    QUrl defaultDownloadsLocation()
-    {
-        return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Downloads"));
-    }
-
-    QUrl defaultMusicLocation()
-    {
-        return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Music"));
-    }
-
-    QUrl defaultPicturesLocation()
-    {
-        return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Pictures"));
-    }
-
-    QUrl defaultVideosLocation()
-    {
-        return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Videos"));
-    }
 }
 
 class PathsSettingsStore : public QObject
@@ -69,20 +34,21 @@ class PathsSettingsStore : public QObject
     Q_OBJECT
     Q_PROPERTY(QUrl autostartLocation READ autostartLocation WRITE setAutostartLocation)
 public:
-    PathsSettingsStore(QObject *parent = nullptr)
+    PathsSettingsStore(DesktopPathsSettings *parent = nullptr)
         : QObject(parent)
         , m_config(KSharedConfig::openConfig())
+        , m_settings(parent)
     {
     }
 
     QUrl autostartLocation() const
     {
-        return readUrl(QStringLiteral("Autostart"), defaultAutostartLocation());
+        return readUrl(QStringLiteral("Autostart"), m_settings->defaultAutostartLocation());
     }
 
     void setAutostartLocation(const QUrl &url)
     {
-        if (url.matches(defaultAutostartLocation(), QUrl::StripTrailingSlash)) {
+        if (url.matches(m_settings->defaultAutostartLocation(), QUrl::StripTrailingSlash)) {
             resetUrl(QStringLiteral("Autostart"));
         } else {
             writeUrl(QStringLiteral("Autostart"), url);
@@ -121,6 +87,7 @@ private:
     }
 
     KSharedConfig::Ptr m_config;
+    DesktopPathsSettings *m_settings;
 };
 
 class XdgPathsSettingsStore : public QObject
@@ -141,7 +108,7 @@ public:
 
     QUrl desktopLocation() const
     {
-        return readUrl(QStringLiteral("XDG_DESKTOP_DIR"), defaultDesktopLocation());
+        return readUrl(QStringLiteral("XDG_DESKTOP_DIR"), m_settings->defaultDesktopLocation());
     }
 
     void setDesktopLocation(const QUrl &url)
@@ -151,7 +118,7 @@ public:
 
     QUrl documentsLocation() const
     {
-        return readUrl(QStringLiteral("XDG_DOCUMENTS_DIR"), defaultDocumentsLocation());
+        return readUrl(QStringLiteral("XDG_DOCUMENTS_DIR"), m_settings->defaultDocumentsLocation());
     }
 
     void setDocumentsLocation(const QUrl &url)
@@ -161,7 +128,7 @@ public:
 
     QUrl downloadsLocation() const
     {
-        return readUrl(QStringLiteral("XDG_DOWNLOAD_DIR"), defaultDownloadsLocation());
+        return readUrl(QStringLiteral("XDG_DOWNLOAD_DIR"), m_settings->defaultDownloadsLocation());
     }
 
     void setDownloadsLocation(const QUrl &url)
@@ -171,7 +138,7 @@ public:
 
     QUrl musicLocation() const
     {
-        return readUrl(QStringLiteral("XDG_MUSIC_DIR"), defaultMusicLocation());
+        return readUrl(QStringLiteral("XDG_MUSIC_DIR"), m_settings->defaultMusicLocation());
     }
 
     void setMusicLocation(const QUrl &url)
@@ -181,7 +148,7 @@ public:
 
     QUrl picturesLocation() const
     {
-        return readUrl(QStringLiteral("XDG_PICTURES_DIR"), defaultPicturesLocation());
+        return readUrl(QStringLiteral("XDG_PICTURES_DIR"), m_settings->defaultPicturesLocation());
     }
 
     void setPicturesLocation(const QUrl &url)
@@ -191,7 +158,7 @@ public:
 
     QUrl videosLocation() const
     {
-        return readUrl(QStringLiteral("XDG_VIDEOS_DIR"), defaultVideosLocation());
+        return readUrl(QStringLiteral("XDG_VIDEOS_DIR"), m_settings->defaultVideosLocation());
     }
 
     void setVideosLocation(const QUrl &url)
@@ -228,13 +195,23 @@ DesktopPathsSettings::DesktopPathsSettings(QObject *parent)
     , m_pathsStore(new PathsSettingsStore(this))
     , m_xdgPathsStore(new XdgPathsSettingsStore(this))
 {
-    addItem(new KPropertySkeletonItem(m_xdgPathsStore, "desktopLocation", defaultDesktopLocation()), "desktopLocation");
-    addItem(new KPropertySkeletonItem(m_pathsStore, "autostartLocation", defaultAutostartLocation()), "autostartLocation");
-    addItem(new KPropertySkeletonItem(m_xdgPathsStore, "documentsLocation", defaultDocumentsLocation()), "documentsLocation");
-    addItem(new KPropertySkeletonItem(m_xdgPathsStore, "downloadsLocation", defaultDownloadsLocation()), "downloadsLocation");
-    addItem(new KPropertySkeletonItem(m_xdgPathsStore, "musicLocation", defaultMusicLocation()), "musicLocation");
-    addItem(new KPropertySkeletonItem(m_xdgPathsStore, "picturesLocation", defaultPicturesLocation()), "picturesLocation");
-    addItem(new KPropertySkeletonItem(m_xdgPathsStore, "videosLocation", defaultVideosLocation()), "videosLocation");
+    addItemInternal("desktopLocation", defaultDesktopLocation());
+    addItemInternal("documentsLocation", defaultDocumentsLocation());
+    addItemInternal("downloadsLocation", defaultDownloadsLocation());
+    addItemInternal("musicLocation", defaultMusicLocation());
+    addItemInternal("picturesLocation", defaultPicturesLocation());
+    addItemInternal("videosLocation", defaultVideosLocation());
+
+    auto *item = new KPropertySkeletonItem(m_pathsStore, "autostartLocation", defaultAutostartLocation());
+    item->setNotifyFunction([this] { emit this->widgetChanged(); });
+    addItem(item, "autostartLocation");
+}
+
+void DesktopPathsSettings::addItemInternal(const QByteArray &propertyName, const QVariant &defaultValue)
+{
+    auto *item = new KPropertySkeletonItem(m_xdgPathsStore, propertyName, defaultValue);
+    item->setNotifyFunction([this] { emit this->widgetChanged(); });
+    addItem(item, propertyName);
 }
 
 QUrl DesktopPathsSettings::autostartLocation() const
@@ -247,6 +224,11 @@ void DesktopPathsSettings::setAutostartLocation(const QUrl &url)
     findItem("autostartLocation")->setProperty(url);
 }
 
+QUrl DesktopPathsSettings::defaultAutostartLocation() const
+{
+    return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/.config/autostart"));
+}
+
 QUrl DesktopPathsSettings::desktopLocation() const
 {
     return findItem("desktopLocation")->property().toUrl();
@@ -255,6 +237,11 @@ QUrl DesktopPathsSettings::desktopLocation() const
 void DesktopPathsSettings::setDesktopLocation(const QUrl &url)
 {
     findItem("desktopLocation")->setProperty(url);
+}
+
+QUrl DesktopPathsSettings::defaultDesktopLocation() const
+{
+    return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Desktop"));
 }
 
 QUrl DesktopPathsSettings::documentsLocation() const
@@ -267,6 +254,11 @@ void DesktopPathsSettings::setDocumentsLocation(const QUrl &url)
     findItem("documentsLocation")->setProperty(url);
 }
 
+QUrl DesktopPathsSettings::defaultDocumentsLocation() const
+{
+    return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Documents"));
+}
+
 QUrl DesktopPathsSettings::downloadsLocation() const
 {
     return findItem("downloadsLocation")->property().toUrl();
@@ -275,6 +267,11 @@ QUrl DesktopPathsSettings::downloadsLocation() const
 void DesktopPathsSettings::setDownloadsLocation(const QUrl &url)
 {
     findItem("downloadsLocation")->setProperty(url);
+}
+
+QUrl DesktopPathsSettings::defaultDownloadsLocation() const
+{
+    return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Downloads"));
 }
 
 QUrl DesktopPathsSettings::musicLocation() const
@@ -287,6 +284,11 @@ void DesktopPathsSettings::setMusicLocation(const QUrl &url)
     findItem("musicLocation")->setProperty(url);
 }
 
+QUrl DesktopPathsSettings::defaultMusicLocation() const
+{
+    return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Music"));
+}
+
 QUrl DesktopPathsSettings::picturesLocation() const
 {
     return findItem("picturesLocation")->property().toUrl();
@@ -297,6 +299,11 @@ void DesktopPathsSettings::setPicturesLocation(const QUrl &url)
     findItem("picturesLocation")->setProperty(url);
 }
 
+QUrl DesktopPathsSettings::defaultPicturesLocation() const
+{
+    return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Pictures"));
+}
+
 QUrl DesktopPathsSettings::videosLocation() const
 {
     return findItem("videosLocation")->property().toUrl();
@@ -305,6 +312,11 @@ QUrl DesktopPathsSettings::videosLocation() const
 void DesktopPathsSettings::setVideosLocation(const QUrl &url)
 {
     findItem("videosLocation")->setProperty(url);
+}
+
+QUrl DesktopPathsSettings::defaultVideosLocation() const
+{
+    return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Videos"));
 }
 
 bool DesktopPathsSettings::usrSave()
