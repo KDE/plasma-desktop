@@ -51,7 +51,7 @@ void User::setUid(int value)
 
 QString User::name() const
 {
-    return mName;
+    return mName.value_or(mCurrentName);
 }
 
 void User::setName(const QString &value)
@@ -60,12 +60,11 @@ void User::setName(const QString &value)
         return;
     }
     mName = value;
-    Q_EMIT nameChanged();
 }
 
 QString User::realName() const
 {
-    return mRealName;
+    return mRealName.value_or(mCurrentRealName);
 }
 
 void User::setRealName(const QString &value)
@@ -74,12 +73,11 @@ void User::setRealName(const QString &value)
         return;
     }
     mRealName = value;
-    Q_EMIT realNameChanged();
 }
 
 QString User::email() const
 {
-    return mEmail;
+    return mEmail.value_or(mCurrentEmail);
 }
 
 void User::setEmail(const QString &value)
@@ -88,17 +86,16 @@ void User::setEmail(const QString &value)
         return;
     }
     mEmail = value;
-    Q_EMIT emailChanged();
 }
 
 QUrl User::face() const
 {
-    return mFace;
+    return mFace.value_or(mCurrentFace);
 }
 
 bool User::faceValid() const
 {
-    return mFaceValid;
+    return mFaceValid.value_or(mCurrentFaceValid);
 }
 
 void User::setFace(const QUrl &value)
@@ -108,13 +105,11 @@ void User::setFace(const QUrl &value)
     }
     mFace = value;
     mFaceValid = QFile::exists(value.path());
-    Q_EMIT faceValidChanged();
-    Q_EMIT faceChanged();
 }
 
 bool User::administrator() const
 {
-    return mAdministrator;
+    return mAdministrator.value_or(mCurrentAdministrator);
 }
 void User::setAdministrator(bool value)
 {
@@ -122,7 +117,6 @@ void User::setAdministrator(bool value)
         return;
     }
     mAdministrator = value;
-    Q_EMIT administratorChanged();
 }
 
 void User::setPath(const QDBusObjectPath &path)
@@ -152,31 +146,31 @@ void User::loadData()
         userDataChanged = true;
         Q_EMIT uidChanged();
     }
-    if (mName != m_dbusIface->userName()) {
-        mName = m_dbusIface->userName();
+    if (mCurrentName != m_dbusIface->userName()) {
+        mCurrentName = m_dbusIface->userName();
         userDataChanged = true;
         Q_EMIT nameChanged();
     }
-    if (mFace != QUrl(m_dbusIface->iconFile())) {
-        mFace = QUrl(m_dbusIface->iconFile());
-        mFaceValid = QFileInfo::exists(mFace.toString());
+    if (mCurrentFace != QUrl(m_dbusIface->iconFile())) {
+        mCurrentFace = QUrl(m_dbusIface->iconFile());
+        mFaceValid = QFileInfo::exists(mCurrentFace.toString());
         userDataChanged = true;
         Q_EMIT faceChanged();
         Q_EMIT faceValidChanged();
     }
-    if (mRealName != m_dbusIface->realName()) {
-        mRealName = m_dbusIface->realName();
+    if (mCurrentRealName != m_dbusIface->realName()) {
+        mCurrentRealName = m_dbusIface->realName();
         userDataChanged = true;
         Q_EMIT realNameChanged();
     }
-    if (mEmail != m_dbusIface->email()) {
-        mEmail = m_dbusIface->email();
+    if (mCurrentEmail != m_dbusIface->email()) {
+        mCurrentEmail = m_dbusIface->email();
         userDataChanged = true;
         Q_EMIT emailChanged();
     }
     const auto administrator = (m_dbusIface->accountType() == 1);
-    if (mAdministrator != administrator) {
-        mAdministrator = administrator;
+    if (mCurrentAdministrator != administrator) {
+        mCurrentAdministrator = administrator;
         userDataChanged = true;
         Q_EMIT administratorChanged();
     }
@@ -186,6 +180,13 @@ void User::loadData()
         userDataChanged = true;
     }
     if (userDataChanged) {
+        mName.reset();
+        mRealName.reset();
+        mEmail.reset();
+        mFace.reset();
+        mAdministrator.reset();
+        mFaceValid.reset();
+
         Q_EMIT dataChanged();
     }
 }
@@ -245,7 +246,12 @@ QDBusObjectPath User::path() const
 
 void User::apply()
 {
-    auto job = new UserApplyJob(m_dbusIface, mName, mEmail, mRealName, mFace.toString().replace("file://", ""), mAdministrator ? 1 : 0);
+    std::optional<QString> face;
+    if (mFace.has_value()) {
+        face = mFace->toString().replace("file://", "");
+    }
+
+    auto job = new UserApplyJob(m_dbusIface, mName, mEmail, mRealName, face, mAdministrator ? 1 : 0);
     connect(job, &UserApplyJob::result, this, [this, job] {
         switch (static_cast<UserApplyJob::Error>(job->error())) {
         case UserApplyJob::Error::PermissionDenied:
@@ -278,7 +284,12 @@ bool User::loggedIn() const
     return mLoggedIn;
 }
 
-UserApplyJob::UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIface, QString name, QString email, QString realname, QString icon, int type)
+UserApplyJob::UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIface,
+                           std::optional<QString> name,
+                           std::optional<QString> email,
+                           std::optional<QString> realname,
+                           std::optional<QString> icon,
+                           int type)
     : KJob()
     , m_name(name)
     , m_email(email)
@@ -306,25 +317,27 @@ void UserApplyJob::start()
         return;
     }
 
-    const std::multimap<QString, QDBusPendingReply<> (OrgFreedesktopAccountsUserInterface::*)(const QString &)> set = {
+    const std::multimap<std::optional<QString>, QDBusPendingReply<> (OrgFreedesktopAccountsUserInterface::*)(const QString &)> set = {
         {m_name, &OrgFreedesktopAccountsUserInterface::SetUserName},
         {m_email, &OrgFreedesktopAccountsUserInterface::SetEmail},
         {m_realname, &OrgFreedesktopAccountsUserInterface::SetRealName},
     };
     for (auto const &x : set) {
-        auto resp = (m_dbusIface->*(x.second))(x.first);
-        resp.waitForFinished();
-        if (resp.isError()) {
-            setError(resp.error());
-            qCWarning(KCMUSERS) << resp.error().name() << resp.error().message();
-            emitResult();
-            return;
+        if (x.first.has_value()) {
+            auto resp = (m_dbusIface->*(x.second))(*x.first);
+            resp.waitForFinished();
+            if (resp.isError()) {
+                setError(resp.error());
+                qCWarning(KCMUSERS) << resp.error().name() << resp.error().message();
+                emitResult();
+                return;
+            }
         }
     }
 
     // Icon is special, since we want to resize it.
-    {
-        QImage icon(m_icon);
+    if (m_icon.has_value()) {
+        QImage icon(*m_icon);
         // 256dp square is plenty big for an avatar and will definitely be smaller than 1MB
         QImage scaled = icon.scaled(QSize(256, 256), Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
