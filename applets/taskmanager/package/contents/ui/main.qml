@@ -52,10 +52,8 @@ MouseArea {
         }
     }
 
-    Plasmoid.applyMargins: false;
-
     Layout.fillWidth: true
-    Layout.fillHeight: true
+    Layout.fillHeight:true
     Layout.minimumWidth: tasks.vertical ? 0 : LayoutManager.preferredMinWidth()
     Layout.minimumHeight: !tasks.vertical ? 0 : LayoutManager.preferredMinHeight()
 

@@ -50,6 +50,7 @@ DragDrop.DropArea {
     property int fixedWidth: 0
     property int fixedHeight: 0
     
+    // This is invisible and only used to read panel margins
     PlasmaCore.FrameSvgItem {
         id: panelSvg
         visible: false
