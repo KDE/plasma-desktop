@@ -21,17 +21,27 @@ import QtQuick.Layouts 1.1
 import QtQml 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.taskmanager 0.1 as TaskManager
 
-PlasmaCore.FrameSvgItem {
+Item {
     id: root
-
-    imagePath: containment && containment.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "widgets/panel-background"
-
-    enabledBorders: panel.enabledBorders
 
     property Item containment
 
-    property alias panelMask: root.mask
+    property alias panelMask: privateSwapper.mask
+
+    QtObject {
+        id: privateSwapper
+        property string completedState: ""
+        // Work around the fact that we can't use a ternary if in an alias
+        readonly property var mask: {
+            if (completedState == "opaque") {
+                return opaqueItem.mask
+            } else {
+                return translucentItem.mask
+            }
+        }
+    }
 
     readonly property bool verticalPanel: containment && containment.formFactor === PlasmaCore.Types.Vertical
 
@@ -46,6 +56,128 @@ PlasmaCore.FrameSvgItem {
     readonly property int bottomPadding: Math.round(Math.min(thickPanelSvg.fixedMargins.bottom, spacingAtMinSize));
     readonly property int leftPadding: Math.round(Math.min(thickPanelSvg.fixedMargins.left, spacingAtMinSize));
     readonly property int rightPadding: Math.round(Math.min(thickPanelSvg.fixedMargins.right, spacingAtMinSize));
+
+    TaskManager.VirtualDesktopInfo {
+        id: virtualDesktopInfo
+    }
+
+    TaskManager.ActivityInfo {
+        id: activityInfo
+    }
+
+    PlasmaCore.SortFilterModel {
+        id: visibleWindowsModel
+        filterRole: 'IsMinimized'
+        filterRegExp: 'false'
+        sourceModel: TaskManager.TasksModel {
+            filterByVirtualDesktop: true
+            filterByActivity: true
+            filterNotMaximized: true
+            filterByScreen: true
+
+            screenGeometry: panel.screenGeometry
+            virtualDesktop: virtualDesktopInfo.currentDesktop
+            activity: activityInfo.currentActivity
+
+            id: tasksModel
+            groupMode: TaskManager.TasksModel.GroupDisabled
+        }
+    }
+
+    PlasmaCore.FrameSvgItem {
+        id: translucentItem
+        enabledBorders: panel.enabledBorders
+        anchors.fill: parent
+
+        imagePath: containment && containment.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "widgets/panel-background"
+    }
+
+    PlasmaCore.FrameSvgItem {
+        id: opaqueItem
+        enabledBorders: panel.enabledBorders
+        anchors.fill: parent
+
+        imagePath: containment && containment.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "solid/widgets/panel-background"
+    }
+
+    transitions: [
+        Transition {
+            from: "*"
+            to: "transparent"
+            SequentialAnimation {
+                ScriptAction {
+                    script: {
+                        translucentItem.visible = true
+                    }
+                }
+                NumberAnimation {
+                    target: opaqueItem
+                    properties: "opacity"
+                    from: 1
+                    to: 0
+                    duration: units.veryLongDuration
+                    easing.type: Easing.InOutQuad
+                }
+                ScriptAction {
+                    script: {
+                        opaqueItem.visible = false
+                        privateSwapper.completedState = "transparent"
+                        root.panelMaskChanged()
+                    }
+                }
+            }
+        },
+        Transition {
+            from: "*"
+            to: "opaque"
+            SequentialAnimation {
+                ScriptAction {
+                    script: {
+                        opaqueItem.visible = true
+                    }
+                }
+                NumberAnimation {
+                    target: opaqueItem
+                    properties: "opacity"
+                    from: 0
+                    to: 1
+                    duration: units.veryLongDuration
+                    easing.type: Easing.InOutQuad
+                }
+                ScriptAction {
+                    script: {
+                        translucentItem.visible = false
+                        privateSwapper.completedState = "opaque"
+                        root.panelMaskChanged()
+                    }
+                }
+            }
+        }
+    ]
+
+    Component.onCompleted: {
+        state = Qt.binding(function() {
+            let mstate = '';
+            if (panel.opacityMode == 0) {
+                mstate = visibleWindowsModel.count > 0 ? "opaque" : "transparent"
+            } else if (panel.opacityMode == 1) {
+                mstate = "opaque"
+            } else {
+                mstate = "transparent"
+            }
+            if (mstate == 'opaque') {
+                containment.containmentDisplayHints |= PlasmaCore.Types.DesktopFullyCovered;
+            } else {
+                containment.containmentDisplayHints &= ~PlasmaCore.Types.DesktopFullyCovered;
+            }
+            return mstate;
+        })
+    }
+    state: ""
+    states: [
+        State { name: "opaque" },
+        State { name: "transparent" }
+    ]
 
     function adjustPrefix() {
         if (!containment) {
