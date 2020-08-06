@@ -441,11 +441,11 @@ Item {
 
         Connections {
             target: plasmoid
-            onExpandedChanged: {
+            function onExpandedChanged() {
                 if(menuItemsChanged()) {
                     createButtons();
                 }
-                if (!expanded) {
+                if (!plasmoid.expanded) {
                     switchToInitial();
                 }
             }
@@ -465,6 +465,7 @@ Item {
 
         property var oldPos: null
 
+        enabled: root.state !== "Search"
         hoverEnabled: root.switchTabsOnHover
 
         onExited: {

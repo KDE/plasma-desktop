@@ -346,7 +346,6 @@ void FolderModelTest::tst_multiScreen()
 
 void FolderModelTest::tst_multiScreenDifferenPath()
 {
-    auto *screenMapper = ScreenMapper::instance();
     m_folderModel->setUsedByContainment(true);
     m_folderModel->setScreen(0);
     QSignalSpy s(m_folderModel, &FolderModel::listingCompleted);

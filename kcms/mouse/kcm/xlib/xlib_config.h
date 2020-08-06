@@ -28,7 +28,7 @@
 #include "ui_kcmmouse.h"
 #include <config-workspace.h>
 
-#include <kcmodule.h>
+#include <KCModule>
 
 
 class X11EvdevBackend;

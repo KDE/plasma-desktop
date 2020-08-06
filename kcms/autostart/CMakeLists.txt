@@ -5,6 +5,7 @@ set(kcm_autostart_PART_SRCS
    autostartitem.cpp
    addscriptdialog.cpp
    advanceddialog.cpp
+   autostartmodel.cpp
    autostart.cpp )
 
 ki18n_wrap_ui(kcm_autostart_PART_SRCS autostartconfig.ui )

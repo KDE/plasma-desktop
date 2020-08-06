@@ -33,61 +33,39 @@
 
 GtkPage::GtkPage(QObject *parent)
     : QObject(parent)
-    , m_gtk2ThemesModel(new GtkThemesModel(this))
-    , m_gtk3ThemesModel(new GtkThemesModel(this))
+    , m_gtkThemesModel(new GtkThemesModel(this))
     , gtkConfigInterface(
         QStringLiteral("org.kde.GtkConfig"),
         QStringLiteral("/GtkConfig"),
         QStringLiteral("org.kde.GtkConfig")
     )
 {
-    connect(m_gtk2ThemesModel, &GtkThemesModel::themeRemoved, this, &GtkPage::onThemeRemoved);
-    connect(m_gtk3ThemesModel, &GtkThemesModel::themeRemoved, this, &GtkPage::onThemeRemoved);
+    connect(m_gtkThemesModel, &GtkThemesModel::themeRemoved, this, &GtkPage::onThemeRemoved);
 
-    connect(m_gtk2ThemesModel, &GtkThemesModel::selectedThemeChanged, this, [this](){
-        Q_EMIT gtkThemeSettingsChanged();
-    });
-    connect(m_gtk3ThemesModel, &GtkThemesModel::selectedThemeChanged, this, [this](){
+    connect(m_gtkThemesModel, &GtkThemesModel::selectedThemeChanged, this, [this](){
         Q_EMIT gtkThemeSettingsChanged();
     });
 }
 
 GtkPage::~GtkPage()
 {
-    delete m_gtk2ThemesModel;
-    delete m_gtk3ThemesModel;
+    delete m_gtkThemesModel;
 }
 
-QString GtkPage::gtk2ThemeFromConfig()
+QString GtkPage::gtkThemeFromConfig()
 {
-    QDBusReply<QString> dbusReply = gtkConfigInterface.call(QStringLiteral("gtk2Theme"));
+    QDBusReply<QString> dbusReply = gtkConfigInterface.call(QStringLiteral("gtkTheme"));
     return dbusReply.value();
 }
 
-QString GtkPage::gtk3ThemeFromConfig()
-{
-    QDBusReply<QString> dbusReply = gtkConfigInterface.call(QStringLiteral("gtk3Theme"));
-    return dbusReply.value();
-}
-
-bool GtkPage::gtk2PreviewAvailable()
+bool GtkPage::gtkPreviewAvailable()
 {
     return !QStandardPaths::findExecutable(QStringLiteral("gtk_preview"), {CMAKE_INSTALL_FULL_LIBEXECDIR}).isEmpty();
 }
 
-bool GtkPage::gtk3PreviewAvailable()
+void GtkPage::showGtkPreview()
 {
-    return !QStandardPaths::findExecutable(QStringLiteral("gtk3_preview"), {CMAKE_INSTALL_FULL_LIBEXECDIR}).isEmpty();
-}
-
-void GtkPage::showGtk2Preview()
-{
-    gtkConfigInterface.call(QStringLiteral("showGtk2ThemePreview"), m_gtk2ThemesModel->selectedTheme());
-}
-
-void GtkPage::showGtk3Preview()
-{
-    gtkConfigInterface.call(QStringLiteral("showGtk3ThemePreview"), m_gtk3ThemesModel->selectedTheme());
+    gtkConfigInterface.call(QStringLiteral("showGtkThemePreview"), m_gtkThemesModel->selectedTheme());
 }
 
 void GtkPage::onThemeRemoved()
@@ -139,20 +117,16 @@ void GtkPage::installGtkThemeFromFile(const QUrl &fileUrl)
 
 void GtkPage::save()
 {
-    gtkConfigInterface.call(QStringLiteral("setGtk2Theme"), m_gtk2ThemesModel->selectedTheme());
-    gtkConfigInterface.call(QStringLiteral("setGtk3Theme"), m_gtk3ThemesModel->selectedTheme());
+    gtkConfigInterface.call(QStringLiteral("setGtkTheme"), m_gtkThemesModel->selectedTheme());
 }
 
 void GtkPage::defaults()
 {
-    Q_EMIT selectGtk2ThemeInCombobox(QStringLiteral("Breeze"));
-    Q_EMIT selectGtk3ThemeInCombobox(QStringLiteral("Breeze"));
+    Q_EMIT selectGtkThemeInCombobox(QStringLiteral("Breeze"));
 }
 
 void GtkPage::load()
 {
-    m_gtk2ThemesModel->loadGtk2();
-    m_gtk3ThemesModel->loadGtk3();
-    Q_EMIT selectGtk2ThemeInCombobox(gtk2ThemeFromConfig());
-    Q_EMIT selectGtk3ThemeInCombobox(gtk3ThemeFromConfig());
+    m_gtkThemesModel->load();
+    Q_EMIT selectGtkThemeInCombobox(gtkThemeFromConfig());
 }

@@ -734,7 +734,7 @@ sub process_blocks_txt ($)
     print $out "#define __UNICODE_BLOCKS_H__\n\n";
 
     print $out "#include <qglobal.h>\n";
-    print $out "#include <klocalizedstring.h>\n\n";
+    print $out "#include <KLocalizedString>\n\n";
 
     print $out "struct TUnicodeBlock\n";
     print $out "{\n";
@@ -817,7 +817,7 @@ sub process_scripts_txt ($)
     print $out "#define __UNICODE_SCRIPTS_H__\n\n";
 
     print $out "#include <QtGlobal>\n";
-    print $out "#include <klocalizedstring.h>\n\n";
+    print $out "#include <KLocalizedString>\n\n";
 
     print $out "static const char * const constUnicodeScriptList[] =\n";
     print $out "{\n";

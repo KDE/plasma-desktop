@@ -25,7 +25,7 @@
 
 #include <X11/Xdefs.h>
 
-class LibinputSettings;
+struct LibinputSettings;
 
 class X11LibinputDummyDevice : public QObject
 {

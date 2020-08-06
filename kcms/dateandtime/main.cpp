@@ -28,16 +28,16 @@
 #include <QVBoxLayout>
 
 #include <QDBusConnection>
-#include <kaboutdata.h>
-#include <kpluginfactory.h>
-#include <kpluginloader.h>
-#include <kmessagebox.h>
+#include <KAboutData>
+#include <KPluginFactory>
+#include <KPluginLoader>
+#include <KMessageBox>
 
 #include "dtime.h"
 #include "helper.h"
 
-#include <kauthaction.h>
-#include <kauthexecutejob.h>
+#include <KAuthAction>
+#include <KAuthExecuteJob>
 
 #include "timedated_interface.h"
 

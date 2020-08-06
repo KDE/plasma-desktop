@@ -18,7 +18,7 @@
 
 #include "kcm_add_layout_dialog.h"
 #include <QDebug>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include "xkb_rules.h"
 #include "flags.h"
@@ -43,7 +43,7 @@ AddLayoutDialog::AddLayoutDialog(const Rules* rules_, Flags* flags_, const QStri
 
     QSet<QString> languages;
     foreach(const LayoutInfo* layoutInfo, rules->layoutInfos) {
-    	QSet<QString> langs = QSet<QString>::fromList(layoutInfo->languages);
+    	QSet<QString> langs = QSet<QString>(layoutInfo->languages.constBegin(), layoutInfo->languages.constEnd());
     	languages.unite( langs );
     }
     IsoCodes isoCodes(IsoCodes::iso_639_3);

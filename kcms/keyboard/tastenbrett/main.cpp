@@ -24,6 +24,9 @@
 #include <QQmlContext>
 #include <QX11Info>
 
+#include <KAboutData>
+#include <KLocalizedString>
+
 #include "application.h"
 #include "config-workspace.h"
 #include "doodad.h"
@@ -57,9 +60,16 @@ int main(int argc, char *argv[])
     Application app(argc, argv);
     Q_ASSERT(app.platformName() == QStringLiteral("xcb"));
 
+    KAboutData aboutData(QStringLiteral("tastenbrett"),
+                         i18nc("app display name", "Keyboard Preview"),
+                         QStringLiteral("1.0"),
+                         i18nc("app description", "Keyboard layout visualization"),
+                         KAboutLicense::GPL);
+    KAboutData::setApplicationData(aboutData);
+
     QCommandLineParser parser;
-    parser.addHelpOption();
-    parser.addVersionOption();
+    aboutData.setupCommandLine(&parser);
+
     QCommandLineOption modelOption(QStringList { "m", "model" }, {}, QStringLiteral("MODEL"));
     parser.addOption(modelOption);
     QCommandLineOption layoutOption(QStringList { "l", "layout" }, {}, QStringLiteral("LAYOUT"));
@@ -69,6 +79,7 @@ int main(int argc, char *argv[])
     QCommandLineOption optionsOption(QStringList { "o", "options" }, {}, QStringLiteral("OPTIONS"));
     parser.addOption(optionsOption);
     parser.process(app);
+    aboutData.processCommandLine(&parser);
 
     XkbRF_VarDefsRec varDefs;
     memset(&varDefs, 0, sizeof(XkbRF_VarDefsRec));

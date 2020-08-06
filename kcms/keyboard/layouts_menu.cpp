@@ -19,7 +19,7 @@
 #include "layouts_menu.h"
 #include "debug.h"
 
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include <QAction>
 #include <QProcess>

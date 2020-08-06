@@ -20,10 +20,10 @@
 #ifndef BINDINGS_H_
 #define BINDINGS_H_
 
-#include <kactioncollection.h>
+#include <KActionCollection>
 
 struct Rules;
-struct LayoutUnit;
+class LayoutUnit;
 template <typename T> class QList;
 
 

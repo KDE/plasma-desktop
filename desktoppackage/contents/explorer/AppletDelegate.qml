@@ -119,7 +119,7 @@ Item {
                         width: runningBadge.width + Math.round(units.smallSpacing * 1.5)
                         height: width
                         radius: height
-                        visible: running
+                        visible: running && ListView.isCurrentItem
                     }
                 }
 
@@ -129,7 +129,7 @@ Item {
                     height: Math.round(theme.mSize(countLabel.font).height * 1.3)
                     radius: height
                     color: theme.highlightColor
-                    visible: running
+                    visible: running && list.currentIndex == index
                     onVisibleChanged: maskShaderSource.scheduleUpdate()
 
                     PlasmaComponents.Label {
@@ -179,7 +179,7 @@ Item {
                     tooltip: delegate.pendingUninstall ? i18nd("plasma_shell_org.kde.plasma.desktop", "Undo uninstall")
                                                        : i18nd("plasma_shell_org.kde.plasma.desktop", "Uninstall widget")
                     flat: false
-                    visible: model.local
+                    visible: model.local && list.currentIndex == index
                     onHoveredChanged: {
                         if (hovered) {
                             // hovering the uninstall button triggers onExited of the main mousearea
@@ -223,7 +223,7 @@ Item {
                 // otherwise causes binding loop due to the way the Plasma sets the height
                 height: implicitHeight
                 text: model.description
-                font.pointSize: theme.smallestFont.pointSize
+                font: theme.smallestFont
                 wrapMode: Text.WordWrap
                 elide: Text.ElideRight
                 maximumLineCount: heading.lineCount === 1 ? 3 : 2

@@ -23,10 +23,10 @@
 #include "joywidget.h"
 #include "joydevice.h"
 
-#include <kaboutdata.h>
-#include <kglobal.h>
+#include <KAboutData>
+#include <KGlobal>
 #include <KLocalizedString>
-#include <kdialog.h>
+#include <KDialog>
 
 #include <stdio.h>
 #include <KPluginFactory>

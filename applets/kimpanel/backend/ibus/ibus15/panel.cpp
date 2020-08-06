@@ -734,6 +734,7 @@ impanel_trigger_property_callback (GDBusConnection *connection,
                     else if (ibus_property_get_prop_type(property) == PROP_TYPE_RADIO) {
                         newstate = PROP_STATE_CHECKED;
                     }
+                    Q_FALLTHROUGH();
                 case PROP_TYPE_NORMAL:
                     ibus_property_set_state(property, newstate);
                     ibus_panel_service_property_activate((IBusPanelService *)impanel, prop_key.constData(), newstate);

@@ -21,7 +21,7 @@
 
 #include <QX11Info>
 
-#include <kwindowsystem.h>
+#include <KWindowSystem>
 
 #include "x11_helper.h"
 #include "xkb_helper.h"

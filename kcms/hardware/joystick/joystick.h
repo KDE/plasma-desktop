@@ -22,7 +22,7 @@
 #define _JOYSTICK_H_
 
 #define KDE3_SUPPORT
-#include <kcmodule.h>
+#include <KCModule>
 #undef KDE3_SUPPORT
 
 class JoyWidget;

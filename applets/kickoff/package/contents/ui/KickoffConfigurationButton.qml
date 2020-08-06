@@ -54,7 +54,7 @@ PlasmaCore.FrameSvgItem {
             horizontalAlignment: Text.AlignHCenter
             elide: Text.ElideRight
             color: PlasmaCore.ColorScope.textColor
-            font.pointSize: theme.smallestFont.pointSize
+            font: theme.smallestFont
         }
     }
 }

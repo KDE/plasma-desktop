@@ -97,14 +97,34 @@ function activateTask(index, model, modifiers, task) {
     if (modifiers & Qt.ShiftModifier) {
         tasksModel.requestNewInstance(index);
     } else if (model.IsGroupParent === true) {
-        if ((iconsOnly || modifiers == Qt.ControlModifier) && backend.canPresentWindows()) {
-            task.toolTipAreaItem.hideToolTip();
+        // If tooltips are enabled and selected as the visualization, show
+        // tooltips
+        if (plasmoid.configuration.showToolTips
+            && plasmoid.configuration.groupedTaskVisualization === 0
+        ) {
+            task.showToolTip();
+        }
+
+        // Otherwise, or if present windows effect is selected as the
+        // visualization, invoke it if it's available
+        else if (backend.canPresentWindows()
+                   && (plasmoid.configuration.groupedTaskVisualization === 1
+                   || plasmoid.configuration.groupedTaskVisualization === 0)
+        ) {
+            task.hideToolTipTemporarily();
             tasks.presentWindows(model.WinIdList);
-        } else if (groupDialog.visible) {
-            groupDialog.visible = false;
-        } else {
-            groupDialog.visualParent = task;
-            groupDialog.visible = true;
+        }
+
+        // If that's not available either, or if the group dialog is selected
+        // as the visualization, show that
+        else if (plasmoid.configuration.groupedTaskVisualization === 2) {
+            if (groupDialog.visible) {
+                task.hideToolTipTemporarily();
+                groupDialog.visible = false;
+            } else {
+                groupDialog.visualParent = task;
+                groupDialog.visible = true;
+            }
         }
     } else {
         if (model.IsMinimized === true) {

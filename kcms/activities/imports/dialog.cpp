@@ -217,6 +217,7 @@ Dialog::~Dialog()
 
 void Dialog::showEvent(QShowEvent *event)
 {
+    Q_UNUSED(event);
     // Setting the focus
     d->setFocus(d->tabGeneral);
 }

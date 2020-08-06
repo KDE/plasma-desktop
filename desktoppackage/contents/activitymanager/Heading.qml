@@ -25,6 +25,9 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
+// for KCMShell
+import org.kde.kquickcontrolsaddons 2.0
+
 import org.kde.activities.settings 0.1
 
 Item {
@@ -105,8 +108,9 @@ Item {
         PlasmaComponents.ToolButton {
             id: configureButton
             iconSource: "configure"
+            visible: KCMShell.authorize("kcm_activities.desktop").length > 0
             onClicked: {
-                ActivitySettings.configureActivities();
+                KCMShell.openSystemSettings("kcm_activities");
                 root.closeRequested();
             }
         }

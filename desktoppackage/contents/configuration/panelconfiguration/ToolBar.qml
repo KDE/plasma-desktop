@@ -20,6 +20,7 @@ import QtQuick 2.0
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.configuration 2.0
 import org.kde.kirigami 2.0 as Kirigami
@@ -30,17 +31,16 @@ Item {
     implicitWidth: Math.max(buttonsLayout_1.width, buttonsLayout_2.width, row.width) + units.smallSpacing * 2
     implicitHeight: row.height + 20
 
-    readonly property string removePanelButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
     readonly property string addWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets...")
     readonly property string addSpacerButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Spacer")
-    readonly property string settingsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "More Settings...")
+    readonly property string settingsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "More Options...")
 
     QQC2.Action {
         shortcut: "Escape"
         onTriggered: {
             // avoid leaving the panel in an inconsistent state when escaping while dragging it
             // "checked" means "pressed" in this case, we abuse that property to make the button look pressed
-            if (edgeHandle.checked || sizeHandle.checked) {
+            if (edgeHandle.checked) {
                 return
             }
 
@@ -67,20 +67,31 @@ Item {
         columnSpacing: units.smallSpacing
 
         PlasmaComponents.Button {
-            iconSource: "delete"
-            text: buttonsLayout_1.showText ? root.removePanelButtonText : ""
-            tooltip: buttonsLayout_1.showText ? "" : root.removePanelButtonText
+            text: buttonsLayout_2.showText ? root.addWidgetsButtonText : ""
+            tooltip: buttonsLayout_2.showText ? "" : root.addWidgetsButtonText
+            iconSource: "list-add"
             Layout.fillWidth: true
             onClicked: {
-                plasmoid.action("remove").trigger();
+                configDialog.close();
+                configDialog.showAddWidgetDialog();
+            }
+        }
+
+        PlasmaComponents.Button {
+            iconSource: "distribute-horizontal-x"
+            text: buttonsLayout_2.showText ? root.addSpacerButtonText : ""
+            tooltip: buttonsLayout_2.showText ? "" : root.addSpacerButtonText
+            Layout.fillWidth: true
+            onClicked: {
+                configDialog.addPanelSpacer();
             }
         }
     }
 
     GridLayout {
         id: row
-        columns: dialogRoot.vertical ? 1 : 2
-        rows: dialogRoot.vertical ? 2 : 1
+        columns: dialogRoot.vertical ? 1 : 4
+        rows: dialogRoot.vertical ? 4 : 1
         anchors.centerIn: parent
 
         rowSpacing: units.smallSpacing
@@ -90,9 +101,46 @@ Item {
             id: edgeHandle
             Layout.alignment: Qt.AlignHCenter
         }
-        SizeHandle {
-            id: sizeHandle
-            Layout.alignment: Qt.AlignHCenter
+        Item {
+            Layout.preferredWidth: units.gridUnit
+            Layout.preferredHeight: units.gridUnit
+        }
+        PlasmaComponents3.Label {
+            Layout.fillWidth: true
+            wrapMode: Text.Wrap
+
+            text: panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge ? i18nd("plasma_shell_org.kde.plasma.desktop", "Panel width:") : i18nd("plasma_shell_org.kde.plasma.desktop", "Panel height:")
+        }
+        PlasmaComponents3.SpinBox {
+            Layout.fillWidth: true
+
+            editable: true
+            focus: true
+
+            from: 20 // below this size, the panel is mostly unusable
+            to: PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge ? panel.screenToFollow.geometry.width / 2 : panel.screenToFollow.geometry.height / 2
+            stepSize: 2
+
+            value: panel.thickness
+            onValueModified: {
+                panel.thickness = value
+                // Adjust the position of the config bar too
+                switch (panel.location) {
+                    case PlasmaCore.Types.TopEdge:
+                        configDialog.y = panel.y + panel.thickness;
+                        break;
+                    case PlasmaCore.Types.LeftEdge:
+                        configDialog.x = panel.x + panel.thickness;
+                        break;
+                    case PlasmaCore.Types.RightEdge:
+                        configDialog.x = panel.x - configDialog.width;
+                        break;
+                    case PlasmaCore.Types.BottomEdge:
+                    default:
+                        configDialog.y = panel.y - configDialog.height;
+                        break;
+                }
+            }
         }
     }
 
@@ -123,27 +171,6 @@ Item {
 
         rowSpacing: units.smallSpacing
         columnSpacing: units.smallSpacing
-
-        PlasmaComponents.Button {
-            text: buttonsLayout_2.showText ? root.addWidgetsButtonText : ""
-            tooltip: buttonsLayout_2.showText ? "" : root.addWidgetsButtonText
-            iconSource: "list-add"
-            Layout.fillWidth: true
-            onClicked: {
-                configDialog.close();
-                configDialog.showAddWidgetDialog();
-            }
-        }
-
-        PlasmaComponents.Button {
-            iconSource: "distribute-horizontal-x"
-            text: buttonsLayout_2.showText ? root.addSpacerButtonText : ""
-            tooltip: buttonsLayout_2.showText ? "" : root.addSpacerButtonText
-            Layout.fillWidth: true
-            onClicked: {
-                configDialog.addPanelSpacer();
-            }
-        }
 
         PlasmaComponents.Button {
             id: settingsButton

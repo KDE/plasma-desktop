@@ -40,13 +40,13 @@ ActionItem::ActionItem(const QString& pathToDesktop, const QString& action, QObj
     desktopFileWrite = new KDesktopFile(desktopWritePath);
     // Now we can fill the action groups list
     configGroups.append(desktopFileMaster->desktopGroup());
-    actionGroups.insertMulti(ActionItem::GroupDesktop, &configGroups.last());
+    actionGroups.insert(ActionItem::GroupDesktop, &configGroups.last());
     configGroups.append(desktopFileMaster->actionGroup(actionName));
-    actionGroups.insertMulti(ActionItem::GroupAction, &configGroups.last());
+    actionGroups.insert(ActionItem::GroupAction, &configGroups.last());
     configGroups.append(desktopFileWrite->desktopGroup());
-    actionGroups.insertMulti(ActionItem::GroupDesktop, &configGroups.last());
+    actionGroups.insert(ActionItem::GroupDesktop, &configGroups.last());
     configGroups.append(desktopFileWrite->actionGroup(actionName));
-    actionGroups.insertMulti(ActionItem::GroupAction, &configGroups.last());
+    actionGroups.insert(ActionItem::GroupAction, &configGroups.last());
 
     const QString predicateString = readKey(ActionItem::GroupDesktop, QStringLiteral("X-KDE-Solid-Predicate"), QLatin1String(""));
     predicateItem = Solid::Predicate::fromString( predicateString );

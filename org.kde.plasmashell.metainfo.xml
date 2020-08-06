@@ -6,6 +6,7 @@
   <name>KDE Plasma Desktop</name>
   <name xml:lang="ar">سطح مكتب بلازما كدي</name>
   <name xml:lang="ast">Escritoriu Plasma de KDE</name>
+  <name xml:lang="az">KDE Plasma İş Masası</name>
   <name xml:lang="ca">Escriptori Plasma del KDE</name>
   <name xml:lang="ca-valencia">Escriptori Plasma de KDE</name>
   <name xml:lang="cs">Plocha KDE Plasma</name>
@@ -48,8 +49,10 @@
   <name xml:lang="zh-TW">KDE Plasma 桌面</name>
   <summary>KDE's complete desktop experience. Simple by default, powerful when needed</summary>
   <summary xml:lang="ast">La esperiencia d'escritoriu completa de KDE. Cenciellu por defeutu, potente cuando se precisa</summary>
+  <summary xml:lang="az">Tam KDE İş Masası. Başlanğıcda sadə görünsə də lazım gəldikdə çox güclüdür</summary>
   <summary xml:lang="ca">Experiència completa de l'escriptori KDE. Senzilla per omissió, potent quan cal</summary>
   <summary xml:lang="ca-valencia">Experiència completa de l'escriptori KDE. Senzilla per defecte, potent quan cal</summary>
+  <summary xml:lang="cs">Úplné grafické prostředí KDE. Jednoduché, ale mocné</summary>
   <summary xml:lang="da">KDE's komplette desktop-oplevelse. Simpelt som standard, kraftfuldt når det behøves</summary>
   <summary xml:lang="de">Das umfassende Arbeitsflächen-Erlebnis von KDE. Standardmäßig einfach, bei Bedarf leistungsstark</summary>
   <summary xml:lang="el">Η πλήρης εμπειρία επιφάνειας εργασίας του KDE. Προκαθορισμένα απλή, πανίσχυρη όταν χρειάζεται.</summary>
@@ -94,6 +97,7 @@
     <screenshot type="default">
       <caption>Plasma being used as a desktop</caption>
       <caption xml:lang="ast">Plasma usándose como escritoriu</caption>
+      <caption xml:lang="az">Plasma İş Masası olaraq istifadə olunur</caption>
       <caption xml:lang="ca">Fa servir el Plasma com a escriptori</caption>
       <caption xml:lang="ca-valencia">S'utilitza Plasma com a escriptori</caption>
       <caption xml:lang="cs">Plasma je použita jako pracovní prostředí</caption>
@@ -136,9 +140,9 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="5.18.4" date="2020-03-31"/>
-    <release version="5.18.3" date="2020-03-10"/>
-    <release version="5.18.2" date="2020-02-25"/>
-    <release version="5.18.1" date="2020-02-18"/>
+    <release version="5.19.3" date="2020-07-07"/>
+    <release version="5.19.2" date="2020-06-23"/>
+    <release version="5.19.1" date="2020-06-16"/>
+    <release version="5.19.0" date="2020-06-09"/>
   </releases>
 </component>

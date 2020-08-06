@@ -1,0 +1,50 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+"http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+    <!-- GDBus 2.34.1 -->
+<node>
+    <interface name="org.freedesktop.Accounts">
+        <method name="ListCachedUsers">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="ao" name="users" direction="out"/>
+        </method>
+        <method name="FindUserById">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="x" name="id" direction="in"/>
+            <arg type="o" name="user" direction="out"/>
+        </method>
+        <method name="FindUserByName">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="s" name="name" direction="in"/>
+            <arg type="o" name="user" direction="out"/>
+        </method>
+        <method name="CreateUser">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="s" name="name" direction="in"/>
+            <arg type="s" name="fullname" direction="in"/>
+            <arg type="i" name="accountType" direction="in"/>
+            <arg type="o" name="user" direction="out"/>
+        </method>
+        <method name="CacheUser">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="s" name="name" direction="in"/>
+            <arg type="o" name="user" direction="out"/>
+        </method>
+        <method name="UncacheUser">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="s" name="name" direction="in"/>
+        </method>
+        <method name="DeleteUser">
+            <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+            <arg type="x" name="id" direction="in"/>
+            <arg type="b" name="removeFiles" direction="in"/>
+        </method>
+        <signal name="UserAdded">
+            <arg type="o" name="user"/>
+        </signal>
+        <signal name="UserDeleted">
+            <arg type="o" name="user"/>
+        </signal>
+        <property type="s" name="DaemonVersion" access="read"/>
+    </interface>
+</node>

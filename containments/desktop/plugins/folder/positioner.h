@@ -134,6 +134,7 @@ class FOLDERPLUGIN_TESTS_EXPORT Positioner : public QAbstractItemModel
 
         QStringList m_positions;
         bool m_deferApplyPositions;
+        QVariantList m_deferMovePositions;
         QTimer *m_updatePositionsTimer;
 
         QHash<int, int> m_proxyToSource;

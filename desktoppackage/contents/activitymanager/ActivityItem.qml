@@ -1,3 +1,22 @@
+/*
+ *   Copyright (C) 2014-2020 Ivan Cukic <ivan.cukic(at)kde.org>
+ *
+ *   This program is free software; you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License version 2,
+ *   or (at your option) any later version, as published by the Free
+ *   Software Foundation
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details
+ *
+ *   You should have received a copy of the GNU General Public
+ *   License along with this program; if not, write to the
+ *   Free Software Foundation, Inc.,
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
 import QtQuick 2.0
 
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -97,12 +116,14 @@ Item {
         }
 
         Rectangle {
-            id: highlight
+            id: currentActivityHighlight
 
             visible:  root.current
 
             border.width: root.current ? units.smallSpacing : 0
             border.color: theme.highlightColor
+
+            z: 10
 
             anchors {
                 fill: parent
@@ -111,8 +132,6 @@ Item {
             }
 
             color: "transparent"
-
-            // z: 1
         }
 
         Item {
@@ -206,37 +225,89 @@ Item {
                         i18nd("plasma_shell_org.kde.plasma.desktop", "Currently being used") :
                         model.lastTimeUsedString
             }
-
-            // Text {
-            //     id: stats
-            //
-            //     color   : "white"
-            //     elide   : Text.ElideRight
-            //     opacity : .6
-            //
-            //     text: "6 documents, 2 applications"
-            //     visible: false
-            //
-            //     anchors {
-            //         top   : lastUsedDate.bottom
-            //         left  : parent.left
-            //         right : parent.right
-            //     }
-            // }
         }
 
-        MouseArea {
-            id: hoverArea
+        Rectangle {
+            id: dropHighlight
+            visible: moveDropAction.isHovered || copyDropAction.isHovered
 
-            anchors.fill : parent
-            onClicked    : root.clicked()
-            hoverEnabled : true
-            onEntered    : S.showActivityItemActionsBar(root)
+            onVisibleChanged: {
+                ActivitySwitcher.Backend.setDropMode(visible);
+                if (visible) {
+                    root.state = "dropAreasShown";
+                } else {
+                    root.state = "plain";
+                }
+            }
 
-            Accessible.name          : root.title
-            Accessible.role          : Accessible.Button
-            Accessible.selected      : root.selected
-            Accessible.onPressAction : root.clicked()
+            anchors {
+                fill: parent
+                topMargin: icon.height + 3 * units.smallSpacing
+            }
+
+            opacity: .75
+            color: theme.backgroundColor
+        }
+
+        TaskDropArea {
+            id: moveDropAction
+
+            anchors {
+                right: parent.horizontalCenter
+                left: parent.left
+                top: parent.top
+                bottom: parent.bottom
+            }
+
+            topPadding: icon.height + 3 * units.smallSpacing
+            actionVisible: dropHighlight.visible
+
+            actionTitle: i18nd("plasma_shell_org.kde.plasma.desktop", "Move to\nthis activity")
+
+            onTaskDropped: {
+                ActivitySwitcher.Backend.dropMove(mimeData, root.activityId);
+            }
+
+            onClicked: {
+                root.clicked();
+            }
+
+            onEntered: {
+                S.showActivityItemActionsBar(root);
+            }
+
+            visible: ActivitySwitcher.Backend.dropEnabled
+        }
+
+        TaskDropArea {
+            id: copyDropAction
+
+            topPadding: icon.height + 3 * units.smallSpacing
+            actionVisible: dropHighlight.visible
+
+            anchors {
+                right: parent.right
+                left: parent.horizontalCenter
+                top: parent.top
+                bottom: parent.bottom
+            }
+
+            actionTitle: i18nd("plasma_shell_org.kde.plasma.desktop", "Show also\nin this activity")
+
+            onTaskDropped: {
+                ActivitySwitcher.Backend.dropCopy(mimeData, root.activityId);
+            }
+
+            onClicked: {
+                root.clicked();
+            }
+
+            onEntered: {
+                S.showActivityItemActionsBar(root);
+            }
+
+            visible: ActivitySwitcher.Backend.dropEnabled
+
         }
 
         // Controls
@@ -321,6 +392,12 @@ Item {
             name: "showingControls"
             PropertyChanges { target: shade; visible: true }
             PropertyChanges { target: controlBar; opacity: 1 }
+        },
+        State {
+            name: "dropAreasShown"
+            // PropertyChanges { target: shade; visible: false }
+            PropertyChanges { target: statsBar; visible: false }
+            PropertyChanges { target: controlBar; opacity: 0 }
         }
     ]
 

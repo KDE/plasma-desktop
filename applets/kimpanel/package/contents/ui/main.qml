@@ -22,6 +22,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.plasma.private.kimpanel 0.1 as Kimpanel
 
 Item {
     id: kimpanel
@@ -77,9 +78,7 @@ Item {
                             if (model.key == 'kimpanel-placeholder') {
                                 return;
                             }
-                            clickHandler(model.key);
-                            // clickHandler will trigger the menu, but we have to wait for
-                            // the menu data. So we have to set the visual parent ahead.
+                            helper.triggerProperty(model.key);
                             actionMenu.visualParent = statusIcon;
                         } else {
                             contextMenu.open(statusIcon, {key: model.key, label: model.label});
@@ -88,19 +87,6 @@ Item {
                 }
             }
         }
-    }
-
-    function clickHandler(key) {
-        var service = dataEngine.serviceForSource("statusbar");
-        var operation = service.operationDescription("TriggerProperty");
-        operation.key = key;
-        service.startOperationCall(operation);
-    }
-
-    function action(key) {
-        var service = dataEngine.serviceForSource("statusbar");
-        var operation = service.operationDescription(key);
-        service.startOperationCall(operation);
     }
 
     function hideAction(key) {
@@ -127,28 +113,20 @@ Item {
     }
 
     function showMenu(menu, menuData) {
-        if (!menuData) {
-            return;
+        var actionList = [];
+        for (var i = 0; i < menuData.length; i++ ) {
+            actionList.push({"actionId": menuData[i].key, "icon": menuData[i].icon, "text": menuData[i].label, hint: menuData[i].hint});
         }
-
-        if (menuData["timestamp"] > menu.timestamp) {
-            menu.timestamp = menuData["timestamp"];
-            var actionList = [];
-            for (var i = 0; i < menuData["props"].length; i++ ) {
-                actionList.push({"actionId": menuData["props"][i].key, "icon": menuData["props"][i].icon, "text": menuData["props"][i].label, hint: menuData["props"][i].hint});
-            }
-            if (actionList.length > 0) {
-                menu.actionList = actionList;
-                menu.open();
-            }
+        if (actionList.length > 0) {
+            menu.actionList = actionList;
+            menu.open();
         }
     }
 
     ActionMenu {
-        property var timestamp: 0;
         id: actionMenu
         onActionClicked: {
-            clickHandler(actionId);
+            helper.triggerProperty(model.key);
         }
     }
 
@@ -160,11 +138,7 @@ Item {
         id: timer
         interval: 50
         onTriggered: {
-            var barData = dataEngine.data["statusbar"];
-            var data = [];
-            if (barData && barData["Properties"]) {
-                data = barData["Properties"];
-            }
+            var data = helper.properties;
             var nodata = data.length == 0;
             var count = list.count;
             var c = 0, i;
@@ -214,19 +188,18 @@ Item {
         }
     }
 
-    PlasmaCore.DataSource {
-        id: dataEngine
-        engine: "kimpanel"
-        connectedSources: ["statusbar"]
-        onDataChanged: {
-            showMenu(actionMenu, dataEngine.data["statusbar"]["Menu"]);
-            var data = dataEngine.data["statusbar"]["Properties"];
-            if (!data) {
-                kimpanel.visibleButtons = 0;
-                return;
-            }
+    Kimpanel.Kimpanel {
+        id: helper
+    }
 
+    Connections {
+        target: helper
+        function onPropertiesChanged() {
             timer.restart();
+        }
+        function onMenuTriggered(menu) {
+            console.log(menu);
+            showMenu(actionMenu, menu);
         }
     }
 }

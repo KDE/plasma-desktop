@@ -16,8 +16,8 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <kconfiggroup.h>
-#include <ksharedconfig.h>
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <KModifierKeyInfo>
 
 #include <QX11Info>

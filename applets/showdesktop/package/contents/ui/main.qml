@@ -60,7 +60,6 @@ QtObject {
         Layout.maximumWidth: inPanel ? units.iconSizeHints.panel : -1
         Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1
 
-        icon: plasmoid.icon
         mainText: plasmoid.title
         subText: plasmoid.toolTipSubText
 

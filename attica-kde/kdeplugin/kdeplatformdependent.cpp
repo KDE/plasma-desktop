@@ -28,7 +28,7 @@
 
 #include <KConfigGroup>
 #include <KWallet/KWallet>
-#include <kcmultidialog.h>
+#include <KCMultiDialog>
 #include <KLocalizedString>
 #include <KStringHandler>
 #include <KMessageBox>

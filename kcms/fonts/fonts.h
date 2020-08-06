@@ -67,16 +67,17 @@ public Q_SLOTS:
     void load() override;
     void save() override;
     Q_INVOKABLE void adjustAllFonts();
+    Q_INVOKABLE void adjustFont(const QFont &font, const QString &category);
 
 Q_SIGNALS:
     void fontsHaveChanged();
     void hintingCurrentIndexChanged();
     void subPixelCurrentIndexChanged();
     void aliasingChangeApplied();
+    void fontDpiSettingsChanged();
 
 private:
     QFont applyFontDiff(const QFont &fnt, const QFont &newFont, int fontDiffFlags);
-    void setNearestExistingFonts();
 
     FontsSettings *m_settings;
     FontsAASettings *m_settingsAA;

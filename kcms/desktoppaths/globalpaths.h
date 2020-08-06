@@ -30,7 +30,7 @@
 #ifndef __GLOBALPATHS_H
 #define __GLOBALPATHS_H
 
-#include <kcmodule.h>
+#include <KCModule>
 
 namespace Ui { class DesktopPathsView; }
 

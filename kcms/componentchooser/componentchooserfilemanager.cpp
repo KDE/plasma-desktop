@@ -20,11 +20,11 @@
 */
 
 #include "componentchooserfilemanager.h"
-#include <kprocess.h>
-#include <kmimetypetrader.h>
-#include <KServiceTypeTrader>
-#include <kopenwithdialog.h>
-#include <kconfiggroup.h>
+#include <KProcess>
+#include <KMimeTypeTrader>
+#include <KApplicationTrader>
+#include <KOpenWithDialog>
+#include <KConfigGroup>
 #include <QStandardPaths>
 #include <KSharedConfig>
 
@@ -78,8 +78,12 @@ void CfgFileManager::load(KConfig *)
 
     const KService::Ptr fileManager = KMimeTypeTrader::self()->preferredService(mime);
 
-    const auto constraint = QStringLiteral("'FileManager' in Categories and 'inode/directory' in ServiceTypes");
-    const KService::List fileManagers = KServiceTypeTrader::self()->query(QStringLiteral("Application"), constraint);
+    const auto fileManagers = KApplicationTrader::query([] (const KService::Ptr &service) {
+        if (service->exec().isEmpty()) {
+            return false;
+        }
+        return service->categories().contains("FileManager");
+    });
     for (const KService::Ptr &service : fileManagers) {
         addItem(QIcon::fromTheme(service->icon()), service->name(), service->storageId());
 

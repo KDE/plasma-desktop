@@ -39,8 +39,7 @@ public:
         ThemePathRole
     };
 
-    void loadGtk2();
-    void loadGtk3();
+    void load();
 
     void setThemesList(const QMap<QString, QString> &themes);
     QMap<QString, QString> themesList();

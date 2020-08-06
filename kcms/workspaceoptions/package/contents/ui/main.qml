@@ -132,7 +132,7 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
             text: singleClick.checked ? i18n("Select by clicking on item's selection marker") : i18n("Select by single-clicking")
             elide: Text.ElideRight
-            font.pointSize: theme.smallestFont.pointSize
+            font: theme.smallestFont
         }
 
         Item {
@@ -171,7 +171,7 @@ KCM.SimpleKCM {
             visible: scrollbarLeftClickNavigatesByPage.checked
             text: i18n("Middle-click to scroll to clicked location")
             elide: Text.ElideRight
-            font.pointSize: theme.smallestFont.pointSize
+            font: theme.smallestFont
         }
     }
 }

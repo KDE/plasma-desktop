@@ -28,7 +28,7 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
 {
     m_menu = new QMenu();
 
-    QMenu *menu = m_menu->addMenu(i18n("Sort By"));
+    QMenu *menu = m_menu->addMenu(QIcon::fromTheme(QStringLiteral("view-sort")), i18n("Sort By"));
     m_sortMode = new QActionGroup(this);
     connect(m_sortMode, &QActionGroup::triggered, this, &ViewPropertiesMenu::sortModeChanged);
     QAction *action = menu->addAction(i18n("Unsorted"));
@@ -57,7 +57,7 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
     m_sortDirsFirst = menu->addAction(i18n("Folders First"), this, &ViewPropertiesMenu::sortDirsFirstChanged);
     m_sortDirsFirst->setCheckable(true);
 
-    m_iconSizeMenu = m_menu->addMenu(i18n("Icon Size"));
+    m_iconSizeMenu = m_menu->addMenu(QIcon::fromTheme(QStringLiteral("transform-scale")), i18n("Icon Size"));
     m_iconSize = new QActionGroup(this);
     connect(m_iconSize, &QActionGroup::triggered, this, &ViewPropertiesMenu::iconSizeChanged);
     const QStringList iconSizes{
@@ -70,7 +70,7 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
         m_iconSize->addAction(action);
     }
 
-    m_arrangementMenu = m_menu->addMenu(i18n("Arrange In"));
+    m_arrangementMenu = m_menu->addMenu(QIcon::fromTheme(QStringLiteral("object-rows")), i18n("Arrange In"));
     m_arrangement = new QActionGroup(this);
     connect(m_arrangement, &QActionGroup::triggered, this, &ViewPropertiesMenu::arrangementChanged);
     action = m_arrangementMenu->addAction(i18n("Rows"));
@@ -82,7 +82,7 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
     action->setCheckable(true);
     m_arrangement->addAction(action);
 
-    m_alignmentMenu = m_menu->addMenu(i18n("Align"));
+    m_alignmentMenu = m_menu->addMenu(QIcon::fromTheme(QStringLiteral("align-horizontal-left")), i18n("Align"));
     m_alignment = new QActionGroup(this);
     connect(m_alignment, &QActionGroup::triggered, this, &ViewPropertiesMenu::alignmentChanged);
     action = m_alignmentMenu->addAction(i18n("Left"));

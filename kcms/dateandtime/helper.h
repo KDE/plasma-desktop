@@ -21,7 +21,7 @@
 #ifndef CLOCK_HELPER_H
 #define CLOCK_HELPER_H
 
-#include <kauth.h>
+#include <KAuth>
 
 using namespace KAuth;
 

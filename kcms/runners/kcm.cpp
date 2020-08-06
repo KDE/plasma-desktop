@@ -1,5 +1,6 @@
 /* This file is part of the KDE Project
    Copyright (c) 2014 Vishesh Handa <me@vhanda.in>
+   Copyright (c) 2020 Alexander Lohnau <alexander.lohnau@gmx.de>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -18,10 +19,7 @@
 
 #include "kcm.h"
 
-#include "kcmutils_version.h"
-
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <KAboutData>
 #include <KSharedConfig>
 #include <QDebug>
@@ -33,10 +31,12 @@
 #include <KPluginSelector>
 
 #include <QApplication>
+#include <QDBusMessage>
+#include <QDBusConnection>
+#include <QDBusMetaType>
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QDialog>
-#include <QDialogButtonBox>
 #include <QPainter>
 #include <QPushButton>
 
@@ -68,7 +68,7 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
                                                                  : QStringLiteral("edit-clear-locationbar-rtl")));
     connect(clearHistoryButton, &QPushButton::clicked, this, [this] {
         KConfigGroup generalConfig(m_config.group("General"));
-        generalConfig.deleteEntry("history");
+        generalConfig.deleteEntry("history", KConfig::Notify);
         generalConfig.sync();
     });
 
@@ -78,18 +78,23 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
 
     m_pluginSelector = new KPluginSelector(this);
 
-    connect(m_pluginSelector, &KPluginSelector::changed, this, &SearchConfigModule::markAsChanged);
-    connect(m_pluginSelector, &KPluginSelector::configCommitted, this, &SearchConfigModule::markAsChanged);
-
-#if KCMUTILS_VERSION >= QT_VERSION_CHECK(5, 67, 0)
+    connect(m_pluginSelector, &KPluginSelector::changed, this, [this] { markAsChanged(); });
     connect(m_pluginSelector, &KPluginSelector::defaulted, this, &KCModule::defaulted);
-#endif
+
+    qDBusRegisterMetaType<QByteArrayList>();
+    qDBusRegisterMetaType<QHash<QString, QByteArrayList>>();
+    // This will trigger the reloadConfiguration method for the runner
+    connect(m_pluginSelector, &KPluginSelector::configCommitted, this, [](const QByteArray &componentName){
+        QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/krunnerrc"),
+                                                          QStringLiteral("org.kde.kconfig.notify"),
+                                                          QStringLiteral("ConfigChanged"));
+        const QHash<QString, QByteArrayList> changes = {{QStringLiteral("Runners"), {componentName}}};
+        message.setArguments({QVariant::fromValue(changes)});
+        QDBusConnection::sessionBus().send(message);
+    });
 
     layout->addLayout(headerLayout);
     layout->addWidget(m_pluginSelector);
-
-    Plasma::RunnerManager *manager = new Plasma::RunnerManager(this);
-    manager->reloadConfiguration();
 }
 
 void SearchConfigModule::load()
@@ -112,6 +117,13 @@ void SearchConfigModule::load()
 void SearchConfigModule::save()
 {
     m_pluginSelector->save();
+
+    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/krunnerrc"),
+                                                      QStringLiteral("org.kde.kconfig.notify"),
+                                                      QStringLiteral("ConfigChanged"));
+    const QHash<QString, QByteArrayList> changes = {{QStringLiteral("Plugins"), {}}};
+    message.setArguments({QVariant::fromValue(changes)});
+    QDBusConnection::sessionBus().send(message);
 }
 
 void SearchConfigModule::defaults()

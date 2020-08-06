@@ -2,14 +2,14 @@ cmake_minimum_required(VERSION 3.0)
 
 project(plasma-desktop)
 
-set(PROJECT_VERSION "5.18.80")
+set(PROJECT_VERSION "5.19.80")
 set(PROJECT_VERSION_MAJOR 5)
 
 set(QT_MIN_VERSION "5.12.0")
-set(KF5_MIN_VERSION "5.69.0")
+set(KF5_MIN_VERSION "5.73.0")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
@@ -54,6 +54,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Activities
     ActivitiesStats
     Config
+    WidgetsAddons
 )
 
 find_package(KF5Kirigami2 ${KF5_MIN_VERSION} CONFIG)
@@ -79,8 +80,7 @@ find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 find_package(KRunnerAppDBusInterface CONFIG REQUIRED)
 find_package(KSMServerDBusInterface CONFIG REQUIRED)
 find_package(KF5ItemModels CONFIG REQUIRED)
-find_package(KF5Emoticons CONFIG REQUIRED)
-find_package(KF5 REQUIRED COMPONENTS SysGuard)
+find_package(KSysGuard CONFIG REQUIRED)
 find_package(KDED CONFIG REQUIRED)
 
 find_package(KF5Baloo ${KF5_MIN_VERSION})
@@ -132,6 +132,10 @@ find_package(Synaptics)
 set_package_properties(Synaptics PROPERTIES TYPE OPTIONAL)
 add_feature_info("Synaptics" SYNAPTICS_FOUND "Synaptics libraries needed for touchpad KCM")
 
+find_package(XorgServer)
+set_package_properties(XorgServer PROPERTIES TYPE OPTIONAL)
+add_feature_info("XorgServer" XORGSERVER_FOUND "XServer header needed for touchpad KCM (X11 backend)")
+
 find_package(XorgLibinput)
 set_package_properties(XorgLibinput PROPERTIES TYPE OPTIONAL)
 add_feature_info("XorgLibinput" XORGLIBINPUT_FOUND "Libinput driver headers needed for mouse and touchpad KCM")
@@ -174,7 +178,6 @@ add_subdirectory(runners)
 add_subdirectory(containments)
 add_subdirectory(toolboxes)
 add_subdirectory(applets)
-add_subdirectory(dataengines)
 add_subdirectory(kcms)
 add_subdirectory(knetattach)
 add_subdirectory(attica-kde)

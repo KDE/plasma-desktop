@@ -28,10 +28,21 @@ Kirigami.ScrollablePage
 {
     id: view
     property alias model: emojiModel.sourceModel
+    property string searchText: ""
     property alias category: filter.category
     property bool showSearch: false
     leftPadding: 0
     rightPadding: 0
+
+    Keys.onPressed: {
+        if (event.key == Qt.Key_Escape) {
+            Qt.quit()
+        }
+        if (event.text.length > 0 && !view.showSearch && event.modifiers === Qt.NoModifier) {
+            // We want to prevent unprintable characters like backspace
+            window.startSearch(/[\x00-\x1F\x7F]/.test(event.text) ? "" : event.text)
+        }
+    }
 
     titleDelegate: RowLayout {
         Layout.fillWidth: true
@@ -44,24 +55,36 @@ Kirigami.ScrollablePage
         QQC2.TextField {
             id: searchField
             Layout.fillWidth: true
+            text: view.searchText
             placeholderText: i18n("Search...")
             visible: view.showSearch
             onTextChanged: {
                 emojiModel.search = text
                 if (emojiView.currentIndex < 0) {
-                    emojiView.currentIndex = 0
+                    Qt.callLater(function() {
+                        emojiView.currentIndex = 0
+                    })
                 }
-            }
-            onAccepted: {
-                if (emojiView.currentItem)
-                    emojiView.currentItem.reportEmoji()
             }
             Component.onCompleted: if (visible) Qt.callLater(forceActiveFocus)
             Keys.onEscapePressed: {
-                selectAll()
+                if (text) {
+                    clear()
+                } else {
+                    Qt.quit()
+                }
             }
         }
     }
+
+    Shortcut {
+        sequence: StandardKey.Copy
+        enabled: emojiView.currentItem
+        onActivated: {
+            emojiView.currentItem.reportEmoji()
+        }
+    }
+
 
     GridView {
         id: emojiView

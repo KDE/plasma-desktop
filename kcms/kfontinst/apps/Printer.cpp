@@ -176,6 +176,7 @@ static QString usableStr(QFont &font, const QString &str)
 static bool hasStr(QFont &font, const QString &str)
 {
     Q_UNUSED(font)
+    Q_UNUSED(str)
     return true;
 }
 

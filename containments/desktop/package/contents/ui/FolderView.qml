@@ -1080,6 +1080,14 @@ FocusScope {
                         gridView.iconSize = gridView.makeIconSize();
                     }
                 }
+                
+                Connections {
+                    target: plasmoid.configuration
+
+                    onViewModeChanged: {
+                        gridView.iconSize = gridView.makeIconSize();
+                    }
+                }
 
                 Connections {
                    target: plasmoid.configuration

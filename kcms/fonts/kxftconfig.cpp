@@ -109,7 +109,7 @@ static QDateTime getTimeStamp(const QString &item)
 
 static QString getEntry(QDomElement element, const char *type, unsigned int numAttributes, ...)
 {
-    if (numAttributes == element.attributes().length()) {
+    if (numAttributes == uint(element.attributes().length())) {
         va_list      args;
         unsigned int arg;
         bool         ok = true;

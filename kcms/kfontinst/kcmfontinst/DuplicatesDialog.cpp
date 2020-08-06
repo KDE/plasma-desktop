@@ -221,9 +221,9 @@ void CDuplicatesDialog::slotButtonClicked(QAbstractButton *button)
             
             if(1==fCount
                 ? KMessageBox::Yes==KMessageBox::warningYesNo(this,
-                    i18n("Are you sure you wish to delete:\n%1", files.toList().first()))
+                    i18n("Are you sure you wish to delete:\n%1", *files.begin()))
                 : KMessageBox::Yes==KMessageBox::warningYesNoList(this,
-                    i18n("Are you sure you wish to delete:"), files.toList()))
+                    i18n("Are you sure you wish to delete:"), files.values()))
             {
                 itsFontList->setSlowUpdates(true);
                     

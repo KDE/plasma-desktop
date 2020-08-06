@@ -25,6 +25,8 @@ target_link_libraries(tastenbrett
         Qt5::Quick
         Qt5::Gui
         Qt5::X11Extras
+        KF5::CoreAddons
+        KF5::I18n
         XCB::XCB
         PkgConfig::XKBCommon
         ${X11_Xkbfile_LIB}

@@ -21,7 +21,7 @@
 #ifndef main_included
 #define main_included
 
-#include <kcmodule.h>
+#include <KCModule>
 
 class Dtime;
 class QTabWidget;

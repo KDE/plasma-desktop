@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 import QtQuick.Dialogs 1.0 as QtDialogs
 import QtQuick.Controls 2.3 as QtControls
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.8 as Kirigami
 import org.kde.newstuff 1.62 as NewStuff
 import org.kde.kcm 1.1 as KCM
 import org.kde.private.kcms.colors 1.0 as Private
@@ -90,41 +90,9 @@ KCM.GridViewKCM {
         RowLayout {
             Layout.fillWidth: true
 
-            QtControls.TextField {
+            Kirigami.SearchField {
                 id: searchField
                 Layout.fillWidth: true
-                placeholderText: i18n("Search...")
-                leftPadding: LayoutMirroring.enabled ? clearButton.width : undefined
-                rightPadding: LayoutMirroring.enabled ? undefined : clearButton.width
-
-                // this could be useful as a component
-                MouseArea {
-                    id: clearButton
-                    anchors {
-                        top: parent.top
-                        topMargin: parent.topPadding
-                        right: parent.right
-                        // the TextField's padding is taking into account the clear button's size
-                        // so we just use the opposite one for positioning the clear button
-                        rightMargin: LayoutMirroring.enabled ? parent.rightPadding: parent.leftPadding
-                        bottom: parent.bottom
-                        bottomMargin: parent.bottomPadding
-                    }
-                    width: height
-
-                    opacity: searchField.length > 0 ? 1 : 0
-                    onClicked: searchField.clear()
-
-                    Kirigami.Icon {
-                        anchors.fill: parent
-                        active: parent.pressed
-                        source: "edit-clear-locationbar-" + (LayoutMirroring.enabled ? "ltr" : "rtl")
-                    }
-
-                    Behavior on opacity {
-                        NumberAnimation { duration: Kirigami.Units.longDuration }
-                    }
-                }
             }
 
             QtControls.ComboBox {

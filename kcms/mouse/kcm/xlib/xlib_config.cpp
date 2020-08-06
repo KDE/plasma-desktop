@@ -32,10 +32,10 @@
 
 #include <config-workspace.h>
 
-#include <ktoolinvocation.h>
-#include <klocalizedstring.h>
-//#include <kconfig.h>
-#include <kaboutdata.h>
+#include <KToolInvocation>
+#include <KLocalizedString>
+//#include <KConfig>
+#include <KAboutData>
 #include <KPluginFactory>
 #include <KPluginLoader>
 

@@ -30,8 +30,7 @@ class GtkPage : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(GtkThemesModel *gtk2ThemesModel MEMBER m_gtk2ThemesModel NOTIFY gtk2ThemesModelChanged)
-    Q_PROPERTY(GtkThemesModel *gtk3ThemesModel MEMBER m_gtk3ThemesModel NOTIFY gtk3ThemesModelChanged)
+    Q_PROPERTY(GtkThemesModel *gtkThemesModel MEMBER m_gtkThemesModel NOTIFY gtkThemesModelChanged)
 
 public:
     GtkPage(QObject *parent = nullptr);
@@ -42,14 +41,11 @@ public:
     void defaults();
 
 public Q_SLOTS:
-    QString gtk2ThemeFromConfig();
-    QString gtk3ThemeFromConfig();
+    QString gtkThemeFromConfig();
 
-    bool gtk2PreviewAvailable();
-    bool gtk3PreviewAvailable();
+    bool gtkPreviewAvailable();
 
-    void showGtk2Preview();
-    void showGtk3Preview();
+    void showGtkPreview();
 
     void installGtkThemeFromFile(const QUrl &fileUrl);
 
@@ -57,18 +53,15 @@ public Q_SLOTS:
     void onGhnsEntriesChanged(const QQmlListReference &changedEnties);
 
 Q_SIGNALS:
-    void gtk2ThemesModelChanged(GtkThemesModel *model);
-    void gtk3ThemesModelChanged(GtkThemesModel *model);
+    void gtkThemesModelChanged(GtkThemesModel *model);
 
     void showErrorMessage(const QString &message);
-    void selectGtk2ThemeInCombobox(const QString &themeName);
-    void selectGtk3ThemeInCombobox(const QString &themeName);
+    void selectGtkThemeInCombobox(const QString &themeName);
 
     void gtkThemeSettingsChanged();
 
 private:
-    GtkThemesModel *m_gtk2ThemesModel;
-    GtkThemesModel *m_gtk3ThemesModel;
+    GtkThemesModel *m_gtkThemesModel;
 
     QDBusInterface gtkConfigInterface;
 };

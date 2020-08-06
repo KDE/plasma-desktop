@@ -14,7 +14,7 @@
  ***************************************************************************/
 
 #include "componentchooserbrowser.h"
-#include <kopenwithdialog.h>
+#include <KOpenWithDialog>
 #include "browser_settings.h"
 
 #include <KLocalizedString>

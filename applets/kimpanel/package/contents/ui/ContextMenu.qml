@@ -120,7 +120,7 @@ Item {
                 text: i18n("Configure Input Method")
                 icon: "configure"
                 onClicked: {
-                    kimpanel.action("Configure");
+                    helper.configure();
                 }
             }
 
@@ -128,7 +128,7 @@ Item {
                 text: i18n("Reload Config")
                 icon: "view-refresh"
                 onClicked: {
-                    kimpanel.action("ReloadConfig");
+                    helper.reloadConfig();
                 }
             }
 
@@ -136,7 +136,7 @@ Item {
                 text: i18n("Exit Input Method")
                 icon: "application-exit"
                 onClicked: {
-                    kimpanel.action("Exit");
+                    helper.exit();
                 }
             }
 

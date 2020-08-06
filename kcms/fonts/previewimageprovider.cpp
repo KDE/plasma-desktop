@@ -70,6 +70,7 @@ PreviewImageProvider::PreviewImageProvider(const QFont& font)
 
 QImage PreviewImageProvider::requestImage(const QString &id, QSize *size, const QSize &requestedSize)
 {
+    Q_UNUSED(requestedSize)
     if (!KWindowSystem::isPlatformX11()) {
         return QImage();
     }

@@ -18,8 +18,8 @@
 
 #include <QVBoxLayout>
 
-#include <kaboutdata.h>
-#include <kcomponentdata.h>
+#include <KAboutData>
+#include <KComponentData>
 #include <KPluginFactory>
 #include <KLocalizedString>
 

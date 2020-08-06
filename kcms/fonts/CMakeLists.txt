@@ -30,6 +30,7 @@ if(X11_FOUND)
         KF5::PlasmaQuick
         KF5::Declarative
         KF5::QuickAddons
+        KF5::WidgetsAddons
         PW::KWorkspace)
     if(FONTCONFIG_FOUND)
         target_link_libraries(kcm_fonts ${FONTCONFIG_LIBRARIES})

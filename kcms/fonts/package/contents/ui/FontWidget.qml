@@ -57,11 +57,8 @@ FocusScope {
             Kirigami.MnemonicData.enabled: false
             focus: true
             onClicked: {
-                fontDialog.adjustAllFonts = false;
-                fontDialog.currentCategory = root.category
-                fontDialog.font = root.font;
-                fontDialog.currentFont = root.font;
-                fontDialog.open()
+                fontDialog.adjustAllFonts = false
+                kcm.adjustFont(root.font, root.category)
             }
             QtControls.ToolTip {
                 visible: parent.hovered

@@ -116,8 +116,8 @@ Item {
 
     Connections {
         target: plasmoid
-        onExpandedChanged: {
-            if (!expanded) {
+        function onExpandedChanged() {
+            if (!plasmoid.expanded) {
                 favoritesView.currentIndex = -1;
             }
         }

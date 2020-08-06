@@ -23,8 +23,6 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 
-#include "kwin_interface.h"
-
 #include "launchfeedbacksettings.h"
 
 K_PLUGIN_FACTORY_WITH_JSON(LaunchFactory, "kcm_launchfeedback.json", registerPlugin<LaunchFeedback>();)

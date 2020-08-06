@@ -50,6 +50,10 @@ Kirigami.ApplicationWindow
         window.showPassiveNotification(i18n("%1 copied to the clipboard", thing))
     }
 
+    function startSearch(typedText) {
+        window.pageStack.replace("qrc:/ui/CategoryPage.qml", {title: i18n("Search"), category: "", model: emoji, showSearch: true, searchText: typedText})
+    }
+
     onVisibilityChanged: {
         if (visible)
             globalDrawer.actions[recentEmojiModel.count === 0 ? 1 : 0].trigger()

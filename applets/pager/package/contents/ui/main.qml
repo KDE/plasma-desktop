@@ -25,13 +25,13 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddonsComponents
 import org.kde.draganddrop 2.0
 import org.kde.plasma.private.pager 2.0
+import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
 
 MouseArea {
     id: root
 
     property bool isActivityPager: (plasmoid.pluginName === "org.kde.plasma.activitypager")
     property bool vertical: (plasmoid.formFactor === PlasmaCore.Types.Vertical)
-    property var activityDataSource: null
 
     readonly property real aspectRatio: (((pagerModel.pagerItemSize.width * pagerItemGrid.effectiveColumns)
         + ((pagerItemGrid.effectiveColumns * pagerItemGrid.spacing) - pagerItemGrid.spacing))
@@ -47,8 +47,8 @@ MouseArea {
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Plasmoid.status: pagerModel.shouldShowPager ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
 
-    Layout.fillWidth: root.vertical 
-    Layout.fillHeight: !root.vertical 
+    Layout.fillWidth: root.vertical
+    Layout.fillHeight: !root.vertical
 
     property bool dragging: false
     property string dragId
@@ -82,19 +82,11 @@ MouseArea {
     }
 
     function action_openKCM() {
-        KQuickControlsAddonsComponents.KCMShell.open("kcm_kwin_virtualdesktops");
+        KQuickControlsAddonsComponents.KCMShell.openSystemSettings("kcm_kwin_virtualdesktops");
     }
 
     function action_showActivityManager() {
-        if (!activityDataSource) {
-            activityDataSource = Qt.createQmlObject('import org.kde.plasma.core 2.0 as PlasmaCore; \
-                PlasmaCore.DataSource { id: dataSource; engine: "org.kde.activities"; \
-                connectedSources: ["Status"] }', root);
-        }
-
-        var service = activityDataSource.serviceForSource("Status")
-        var operation = service.operationDescription("toggleActivityManager")
-        service.startOperationCall(operation)
+        ActivitySwitcher.Backend.toggleActivityManager()
     }
 
     onContainsMouseChanged: {
@@ -156,14 +148,14 @@ MouseArea {
     Connections {
         target: plasmoid.configuration
 
-        onShowWindowIconsChanged: {
+        function onShowWindowIconsChanged() {
             // Causes the model to reset; Component.onCompleted in the
             // window delegate now gets a chance to create the icon item,
             // which it otherwise will not do.
             pagerModel.refresh();
         }
 
-        onDisplayedTextChanged: {
+        function onDisplayedTextChanged() {
             // Causes the model to reset; Component.onCompleted in the
             // desktop delegate now gets a chance to create the label item,
             // which it otherwise will not do.

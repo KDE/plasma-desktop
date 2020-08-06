@@ -125,9 +125,9 @@ Item {
         acceptedButtons: Qt.LeftButton
         cursorShape: Qt.PointingHandCursor
         onClicked: {
-            KCMShell.open("user_manager")
+            KCMShell.openSystemSettings("kcm_users")
         }
-        visible: KCMShell.authorize("user_manager.desktop").length > 0
+        visible: KCMShell.authorize("kcm_users.desktop").length > 0
     }
 
     PlasmaExtras.Heading {

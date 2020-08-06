@@ -49,6 +49,7 @@ QSize ConfigContainer::sizeHint() const
 }
 void ConfigContainer::resizeEvent(QResizeEvent *event)
 {
+    Q_UNUSED(event);
     m_plugin->resize(this->size());
 }
 

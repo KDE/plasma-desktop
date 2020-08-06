@@ -121,9 +121,9 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_previews(false),
     m_filterMode(NoFilter),
     m_filterPatternMatchAll(true),
+    m_screenUsed(false),
     m_screenMapper(ScreenMapper::instance()),
-    m_complete(false),
-    m_screenUsed(false)
+    m_complete(false)
 {
     //needed to pass the job around with qml
     qmlRegisterType<KIO::DropJob>();
@@ -625,7 +625,7 @@ QStringList FolderModel::filterMimeTypes() const
 
 void FolderModel::setFilterMimeTypes(const QStringList &mimeList)
 {
-    const QSet<QString> &set = QSet<QString>::fromList(mimeList);
+    const QSet<QString> set(mimeList.constBegin(), mimeList.constEnd());
 
     if (m_mimeSet != set) {
 

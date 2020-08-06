@@ -34,15 +34,15 @@
 #include <QHeaderView>
 
 #include <KLocalizedString>
-#include <kdialog.h>
-#include <kmessagebox.h>
-#include <kcombobox.h>
-#include <kurlcompletion.h>
-#include <kmessagewidget.h>
+#include <KDialog>
+#include <KMessageBox>
+#include <KComboBox>
+#include <KUrlCompletion>
+#include <KMessageWidget>
 
 #include <stdio.h>
-#include <kvbox.h>
-#include <kdebug.h>
+#include <KVBox>
+#include <KDebug>
 
 //--------------------------------------------------------------
 static QString PRESSED = I18N_NOOP("PRESSED");
@@ -114,7 +114,7 @@ JoyWidget::JoyWidget(QWidget *parent)
 
   // calculate the column width we need
   QFontMetrics fm(font());
-  int colWidth = qMax(fm.width(PRESSED), fm.width(QStringLiteral("-32767"))) + 10;  // -32767 largest string
+  int colWidth = qMax(fm.horizontalAdvance(PRESSED), fm.horizontalAdvance(QStringLiteral("-32767"))) + 10;  // -32767 largest string
 
   vboxMid->addWidget(new QLabel(i18n("Buttons:")));
   buttonTbl = new TableWidget(0, 1);

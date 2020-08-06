@@ -35,23 +35,7 @@ GtkThemesModel::GtkThemesModel(QObject* parent)
 
 }
 
-void GtkThemesModel::loadGtk2()
-{
-    QMap<QString, QString> gtk2ThemesNames;
-
-    for (const QString &possibleThemePath : possiblePathsToThemes()) {
-        // If the directory has a gtk-2.0 directory inside, it is the GTK2 theme for sure
-        QDir possibleThemeDirectory(possibleThemePath);
-        bool hasGtk2DirectoryInside = possibleThemeDirectory.exists(QStringLiteral("gtk-2.0"));
-        if (hasGtk2DirectoryInside) {
-            gtk2ThemesNames.insert(possibleThemeDirectory.dirName(), possibleThemeDirectory.path());
-        }
-    }
-
-    setThemesList(gtk2ThemesNames);
-}
-
-void GtkThemesModel::loadGtk3()
+void GtkThemesModel::load()
 {
     QMap<QString, QString> gtk3ThemesNames;
 
@@ -60,6 +44,14 @@ void GtkThemesModel::loadGtk3()
         // If the directory contains any of gtk-3.X folders, it is the GTK3 theme for sure
         QDir possibleThemeDirectory(possibleThemePath);
         if (!possibleThemeDirectory.entryList(gtk3SubdirPattern, QDir::Dirs).isEmpty()) {
+
+            // Do not show dark Breeze GTK variant, since the colors of it
+            // are coming from the color scheme and selecting them here
+            // is redundant and does not work
+            if (possibleThemeDirectory.dirName() == QStringLiteral("Breeze-Dark")) {
+                continue;
+            }
+
             gtk3ThemesNames.insert(possibleThemeDirectory.dirName(), possibleThemeDirectory.path());
         }
     }

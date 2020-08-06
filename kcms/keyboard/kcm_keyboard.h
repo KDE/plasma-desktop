@@ -20,7 +20,7 @@
 #ifndef KCM_KEYBOARD_H_
 #define KCM_KEYBOARD_H_
 
-#include <kcmodule.h>
+#include <KCModule>
 
 class KCMKeyboardWidget;
 class KeyboardConfig;

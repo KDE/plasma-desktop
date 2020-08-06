@@ -64,6 +64,7 @@ class KWinWaylandDevice : public QObject
     Q_PROPERTY(bool supportsNaturalScroll READ supportsNaturalScroll CONSTANT)
     Q_PROPERTY(bool naturalScrollEnabledByDefault READ naturalScrollEnabledByDefault CONSTANT)
     Q_PROPERTY(bool naturalScroll READ isNaturalScroll WRITE setNaturalScroll NOTIFY naturalScrollChanged)
+    Q_PROPERTY(qreal scrollFactor READ scrollFactor WRITE setScrollFactor NOTIFY scrollFactorChanged)
 
 public:
     KWinWaylandDevice(QString dbusName);
@@ -178,6 +179,14 @@ public:
         m_naturalScroll.set(set);
     }
 
+    qreal scrollFactor() const {
+        return m_scrollFactor.val;
+    }
+    void setScrollFactor(qreal set) {
+        m_scrollFactor.set(set);
+    }
+
+
 Q_SIGNALS:
     void leftHandedChanged();
     void pointerAccelerationChanged();
@@ -185,6 +194,7 @@ Q_SIGNALS:
     void enabledChanged();
     void middleEmulationChanged();
     void naturalScrollChanged();
+    void scrollFactorChanged();
 
 private:
     template <typename T>
@@ -257,6 +267,7 @@ private:
     Prop<bool> m_supportsNaturalScroll = Prop<bool>("supportsNaturalScroll");
     Prop<bool> m_naturalScrollEnabledByDefault = Prop<bool>("naturalScrollEnabledByDefault");
     Prop<bool> m_naturalScroll = Prop<bool>("naturalScroll");
+    Prop<qreal> m_scrollFactor = Prop<qreal>("scrollFactor");
 
     QDBusInterface *m_iface;
 };

@@ -23,6 +23,7 @@
 #include "autostartitem.h"
 #include "addscriptdialog.h"
 #include "advanceddialog.h"
+#include "autostartmodel.h"
 
 #include <QDir>
 #include <QTreeWidget>
@@ -39,12 +40,14 @@
 #include <KLocalizedString>
 #include <KIO/DeleteJob>
 #include <KIO/CopyJob>
+#include <KShell>
 #include <QDebug>
 
 K_PLUGIN_FACTORY(AutostartFactory, registerPlugin<Autostart>();)
 
 Autostart::Autostart( QWidget* parent, const QVariantList& )
     : KCModule(parent )
+    , m_model(new AutostartModel(this))
 {
     widget = new Ui_AutostartConfig();
     widget->setupUi(this);
@@ -62,7 +65,6 @@ Autostart::Autostart( QWidget* parent, const QVariantList& )
     connect( widget->btnProperties, SIGNAL(clicked()), SLOT(slotEditCMD()) );
     connect( widget->listCMD, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)), SLOT(slotEditCMD(QTreeWidgetItem*)) );
 
-
     connect(widget->btnAddScript, &QPushButton::clicked, this, &Autostart::slotAddScript);
     connect(widget->btnAddProgram, &QPushButton::clicked, this, &Autostart::slotAddProgram);
     connect(widget->btnRemove, &QPushButton::clicked, this, &Autostart::slotRemoveCMD);
@@ -70,6 +72,8 @@ Autostart::Autostart( QWidget* parent, const QVariantList& )
     connect(widget->listCMD, &QTreeWidget::itemClicked, this, &Autostart::slotItemClicked);
     connect(widget->listCMD, &QTreeWidget::itemSelectionChanged, this, &Autostart::slotSelectionChanged);
 
+    connect(m_model, &QAbstractItemModel::rowsInserted, this, &Autostart::slotRowInserted);
+    connect(m_model, &QAbstractItemModel::dataChanged, this, &Autostart::slotDatachanged);
 
     KAboutData* about = new KAboutData(QStringLiteral("Autostart"),
                                        i18n("Session Autostart Manager"),
@@ -93,70 +97,40 @@ void Autostart::slotItemClicked( QTreeWidgetItem *item, int col)
 {
     if ( item && col == COL_STATUS ) {
         DesktopStartItem *entry = dynamic_cast<DesktopStartItem*>( item );
-        if ( entry ) {
-            bool disable = ( item->checkState( col ) == Qt::Unchecked );
-            KDesktopFile kc(entry->fileName().path());
-            KConfigGroup grp = kc.desktopGroup();
-            if ( grp.hasKey( "Hidden" ) && !disable) {
-                grp.deleteEntry( "Hidden" );
-            }
-            else
-                grp.writeEntry("Hidden", disable);
-
-            kc.sync();
-            if ( disable )
-                item->setText( COL_STATUS, i18nc( "The program won't be run", "Disabled" ) );
-            else
+        if (entry) {
+            const bool enabled = ( item->checkState( col ) == Qt::Checked );
+            m_model->setData(indexFromWidget(item), enabled, AutostartModel::Roles::Enabled);
+            if (enabled) {
                 item->setText( COL_STATUS, i18nc( "The program will be run", "Enabled" ) );
+            } else {
+                item->setText( COL_STATUS, i18nc( "The program won't be run", "Disabled" ) );
+            }
         }
     }
 }
 
-void Autostart::addItem( DesktopStartItem* item, const QString& name, const QString& run, const QString& command, bool disabled )
+void Autostart::updateDesktopStartItem(DesktopStartItem *item, const QString &name, const QString &command, bool disabled, const QString &fileName)
 {
     Q_ASSERT( item );
     item->setText( COL_NAME, name );
-    item->setText( COL_RUN, run );
+    item->setToolTip(COL_NAME, KShell::tildeCollapse(fileName));
+    item->setText( COL_RUN, AutostartModel::listPathName()[0] /* Startup */ );
     item->setText( COL_COMMAND, command );
     item->setCheckState( COL_STATUS, disabled ? Qt::Unchecked : Qt::Checked );
     item->setText( COL_STATUS, disabled ? i18nc( "The program won't be run", "Disabled" ) : i18nc( "The program will be run", "Enabled" ));
 }
 
-void Autostart::addItem(ScriptStartItem* item, const QString& name, const QString& command, ScriptStartItem::ENV type )
+void Autostart::updateScriptStartItem(ScriptStartItem *item, const QString &name, const QString &command, AutostartEntrySource type, const QString &fileName)
 {
     Q_ASSERT( item );
     item->setText( COL_NAME, name );
+    item->setToolTip(COL_NAME, KShell::tildeCollapse(fileName));
     item->setText( COL_COMMAND, command );
     item->changeStartup( type );
 }
 
-
 void Autostart::load()
 {
-    // FDO user autostart directories are
-    // .config/autostart which has .desktop files executed by klaunch
-
-    //Then we have Plasma-specific locations which run scripts
-    // .config/autostart-scripts which has scripts executed by ksmserver
-    // .config/plasma-workspace/shutdown which has scripts executed by startkde
-    // .config/plasma-workspace/env which has scripts executed by startkde
-
-    //in the case of pre-startup they have to end in .sh
-    //everywhere else it doesn't matter
-
-    //the comment above describes how autostart *currently* works, it is not definitive documentation on how autostart *should* work
-
-    m_desktopPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/autostart/");
-
-    m_paths << QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/autostart-scripts/")
-            << QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/plasma-workspace/shutdown/")
-            << QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/plasma-workspace/env/");
-    // share/autostart shouldn't be an option as this should be reserved for global autostart entries
-
-    m_pathName << i18n("Startup")
-             << i18n("Logout")
-             << i18n("Before session startup")
-        ;
     widget->listCMD->clear();
 
     m_programItem = new QTreeWidgetItem( widget->listCMD );
@@ -175,277 +149,195 @@ void Autostart::load()
     widget->listCMD->expandItem( m_programItem );
     widget->listCMD->expandItem( m_scriptItem );
 
-    //add programs
-    {
-        QDir d(m_desktopPath);
-        if (!d.exists())
-            d.mkpath(m_desktopPath);
-        QDir autostartdir( m_desktopPath );
-        autostartdir.setFilter( QDir::Files );
-        const QFileInfoList list = autostartdir.entryInfoList();
+    m_model->load();
 
-        for (int i = 0; i < list.size(); ++i) {
-            QFileInfo fi = list.at(i);
-            QString filename = fi.fileName();
-            bool desktopFile = filename.endsWith(QLatin1String(".desktop"));
-            if ( desktopFile ) {
-                KDesktopFile config(fi.absoluteFilePath());
-                //kDebug() << fi.absoluteFilePath() << "trying" << config.desktopGroup().readEntry("Exec");
-                QStringList commandLine = KShell::splitArgs(config.desktopGroup().readEntry("Exec"));
-                if (commandLine.isEmpty()) {
-                    continue;
-                }
-
-                const QString exe = commandLine.first();
-                if (exe.isEmpty() || QStandardPaths::findExecutable(exe).isEmpty()) {
-                    continue;
-                }
-
-                DesktopStartItem *item = new DesktopStartItem( fi.absoluteFilePath(), m_programItem, this );
-
-                const KConfigGroup grp = config.desktopGroup();
-                const bool hidden = grp.readEntry("Hidden", false);
-                const QStringList notShowList = grp.readXdgListEntry("NotShowIn");
-                const QStringList onlyShowList = grp.readXdgListEntry("OnlyShowIn");
-
-                const bool disabled = hidden ||
-                                        notShowList.contains(QLatin1String("KDE")) ||
-                                        (!onlyShowList.isEmpty() && !onlyShowList.contains(QLatin1String("KDE")));
-
-                int indexPath = m_paths.indexOf((item->fileName().adjusted(QUrl::RemoveFilename).toString() ) );
-                if ( indexPath > 2 )
-                    indexPath = 0; //.kde/share/autostart and .config/autostart load desktop at startup
-                addItem(item, config.readName(), m_pathName.value(indexPath),  grp.readEntry("Exec"), disabled );
-            }
-        }
-    }
-
-    //add scripts
-
-    for (const QString& path : qAsConst(m_paths)) {
-        QDir d(path);
-        if (!d.exists())
-            d.mkpath(path);
-
-        QDir autostartdir( path );
-        autostartdir.setFilter( QDir::Files );
-        const QFileInfoList list = autostartdir.entryInfoList();
-
-        for (int i = 0; i < list.size(); ++i) {
-            QFileInfo fi = list.at(i);
-
-            ScriptStartItem *item = new ScriptStartItem( fi.absoluteFilePath(), m_scriptItem,this );
-            int typeOfStartup = m_paths.indexOf((item->fileName().adjusted(QUrl::RemoveScheme | QUrl::RemoveFilename).toString()) );
-            ScriptStartItem::ENV type = ScriptStartItem::START;
-            switch( typeOfStartup )
-            {
-            case 0:
-                type =ScriptStartItem::START;
-                break;
-            case 1:
-                type = ScriptStartItem::SHUTDOWN;
-                break;
-            case 2:
-                type = ScriptStartItem::PRE_START;
-                break;
-            default:
-                qDebug()<<" type is not defined :"<<type;
-                break;
-            }
-            if ( fi.isSymLink() ) {
-                QString link = fi.symLinkTarget();
-                addItem(item, fi.fileName(), link, type );
-            }
-            else
-            {
-                addItem( item, fi.fileName(), fi.fileName(),type );
-            }
-        }
+    for (int i = 0; i < m_model->rowCount(); i++) {
+        slotRowInserted(QModelIndex(), i, i);
     }
 
     //Update button
     slotSelectionChanged();
     widget->listCMD->resizeColumnToContents(COL_NAME);
-    //widget->listCMD->resizeColumnToContents(COL_COMMAND);
     widget->listCMD->resizeColumnToContents(COL_STATUS);
     widget->listCMD->resizeColumnToContents(COL_RUN);
 }
 
 void Autostart::slotAddProgram()
 {
-    KOpenWithDialog owdlg( this );
-    if (owdlg.exec() != QDialog::Accepted)
-        return;
+    KOpenWithDialog *owdlg = new KOpenWithDialog(this);
+    connect(owdlg, &QDialog::finished, this, [this, owdlg] (int result) {
+        if (result == QDialog::Accepted) {
 
-    KService::Ptr service = owdlg.service();
+            KService::Ptr service = owdlg->service();
 
-    Q_ASSERT(service);
-    if (!service) {
-        return; // Don't crash if KOpenWith wasn't able to create service.
-    }
+            Q_ASSERT(service);
+            if (!service) {
+                return; // Don't crash if KOpenWith wasn't able to create service.
+            }
 
-    // It is important to ensure that we make an exact copy of an existing
-    // desktop file (if selected) to enable users to override global autostarts.
-    // Also see
-    // https://bugs.launchpad.net/ubuntu/+source/kde-workspace/+bug/923360
-    QString desktopPath;
-    QUrl desktopTemplate;
-    if ( service->desktopEntryName().isEmpty() || service->entryPath().isEmpty()) {
-        // Build custom desktop file (e.g. when the user entered an executable
-        // name in the OpenWithDialog).
-        desktopPath = m_desktopPath + service->name() + QStringLiteral(".desktop");
-        desktopTemplate = QUrl::fromLocalFile( desktopPath );
-        KConfig kc(desktopTemplate.path(), KConfig::SimpleConfig);
-        KConfigGroup kcg = kc.group("Desktop Entry");
-        kcg.writeEntry("Exec",service->exec());
-        kcg.writeEntry("Icon","system-run");
-        kcg.writeEntry("Path","");
-        kcg.writeEntry("Terminal",false);
-        kcg.writeEntry("Type","Application");
-        kc.sync();
-
-        KPropertiesDialog dlg( desktopTemplate, this );
-        if ( dlg.exec() != QDialog::Accepted )
-        {
-            return;
+            m_model->addEntry(service);
         }
-    }
-    else
-    {
-        // Use existing desktop file and use same file name to enable overrides.
-        desktopPath = m_desktopPath + service->desktopEntryName() + QStringLiteral(".desktop");
-        desktopTemplate = QUrl::fromLocalFile( QStandardPaths::locate(QStandardPaths::ApplicationsLocation, service->entryPath()) );
-
-        KPropertiesDialog dlg( QUrl::fromLocalFile(service->entryPath()), QUrl::fromLocalFile(m_desktopPath), service->desktopEntryName() + QStringLiteral(".desktop"), this );
-        if ( dlg.exec() != QDialog::Accepted )
-            return;
-    }
-    KDesktopFile newConf(desktopTemplate.path());
-    DesktopStartItem * item = new DesktopStartItem( desktopPath, m_programItem,this );
-    addItem( item, service->name(), m_pathName[0], newConf.desktopGroup().readEntry("Exec") , false);
+    });
+    owdlg->open();
 }
 
 void Autostart::slotAddScript()
 {
-    AddScriptDialog * addDialog = new AddScriptDialog(this);
-    int result = addDialog->exec();
-    if (result == QDialog::Accepted) {
-        if (addDialog->symLink())
-            KIO::link(addDialog->importUrl(), QUrl::fromLocalFile(m_paths[0]));
-        else
-            KIO::copy(addDialog->importUrl(), QUrl::fromLocalFile(m_paths[0]));
-
-        ScriptStartItem * item = new ScriptStartItem( m_paths[0] + addDialog->importUrl().fileName(), m_scriptItem,this );
-        addItem( item,  addDialog->importUrl().fileName(), addDialog->importUrl().fileName(),ScriptStartItem::START );
-    }
-    delete addDialog;
+    AddScriptDialog *addDialog = new AddScriptDialog(this);
+    connect(addDialog, &QDialog::finished, this, [this, addDialog] (int result) {
+        if (result == QDialog::Accepted) {
+            m_model->addEntry(addDialog->importUrl(), addDialog->symLink());
+        }
+    });
+    addDialog->open();
 }
 
 void Autostart::slotRemoveCMD()
 {
-    QTreeWidgetItem* item = widget->listCMD->currentItem();
-    if (!item)
+    QTreeWidgetItem *widgetItem = widget->listCMD->currentItem();
+    if (!widgetItem) {
         return;
-    DesktopStartItem *startItem = dynamic_cast<DesktopStartItem*>( item );
-    if ( startItem )
-    {
-        QUrl path(startItem->fileName());
-        path.setScheme(QStringLiteral("file"));
-        m_programItem->takeChild( m_programItem->indexOfChild( startItem ) );
-        KIO::del(path);
-        delete item;
     }
-    else
-    {
-        ScriptStartItem * scriptItem = dynamic_cast<ScriptStartItem*>( item );
-        if ( scriptItem )
-        {
-            QUrl path(scriptItem->fileName());
-            path.setScheme(QStringLiteral("file"));
-            m_scriptItem->takeChild( m_scriptItem->indexOfChild( scriptItem ) );
-            KIO::del(path);
-            delete item;
+
+    if (m_model->removeEntry(indexFromWidget(widgetItem))) {
+        if (m_scriptItem->indexOfChild(widgetItem) != -1) {
+            m_scriptItem->removeChild(widgetItem);
+        } else {
+            m_programItem->removeChild(widgetItem);
+        }
+        delete widgetItem;
+    }
+}
+
+void Autostart::slotRowInserted(const QModelIndex &parent, int first, int last)
+{
+    Q_ASSERT(!parent.isValid());
+
+    for (int i = first; i <= last; i++) {
+        QModelIndex idx = m_model->index(i, 0);
+
+        const QString &name = m_model->data(idx, Qt::DisplayRole).toString();
+        const QString &fileName = m_model->data(idx, AutostartModel::Roles::FileName).toString();
+        const AutostartEntrySource source = AutostartModel::sourceFromInt(m_model->data(idx, AutostartModel::Roles::Source).toInt());
+        const QString &command = KShell::tildeCollapse(m_model->data(idx, AutostartModel::Roles::Command).toString());
+
+        if (source == AutostartEntrySource::XdgAutoStart) {
+            const bool enabled = m_model->data(idx, AutostartModel::Roles::Enabled).toBool();
+
+            DesktopStartItem *item = new DesktopStartItem(m_programItem);
+            updateDesktopStartItem(item, name, command, !enabled, fileName);
+        } else {
+            ScriptStartItem *item = new ScriptStartItem(m_scriptItem, this);
+            updateScriptStartItem(item, name, command, source, fileName);
+        }
+    }
+}
+
+void Autostart::slotDatachanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles)
+{
+    Q_UNUSED(roles)
+
+    for (int row = topLeft.row(); row <= bottomRight.row(); row++) {
+
+        QModelIndex idx = m_model->index(row);
+
+        const QString &name = m_model->data(idx, Qt::DisplayRole).toString();
+        const QString &fileName = m_model->data(idx, AutostartModel::Roles::FileName).toString();
+        const AutostartEntrySource source = AutostartModel::sourceFromInt(m_model->data(idx, AutostartModel::Roles::Source).toInt());
+        const QString &command = KShell::tildeCollapse(m_model->data(idx, AutostartModel::Roles::Command).toString());
+
+        if (row > (m_programItem->childCount() -1)) {
+            // scriptItem
+            QTreeWidgetItem *item = m_scriptItem->child(row - m_programItem->childCount());
+            ScriptStartItem *scriptEntry = dynamic_cast<ScriptStartItem*>(item);
+            updateScriptStartItem(scriptEntry, name, command, source, fileName);
+        } else {
+            // desktopItem
+            const bool enabled = m_model->data(idx, AutostartModel::Roles::Enabled).toBool();
+
+            QTreeWidgetItem *item = m_programItem->child(row);
+            DesktopStartItem *desktopItem = dynamic_cast<DesktopStartItem*>(item);
+            updateDesktopStartItem(desktopItem, name, command, !enabled, fileName);
         }
     }
 }
 
 void Autostart::slotEditCMD(QTreeWidgetItem* ent)
 {
-
     if (!ent) return;
-    DesktopStartItem *desktopEntry = dynamic_cast<DesktopStartItem*>( ent );
-    if ( desktopEntry )
-    {
-        KFileItem kfi = KFileItem(QUrl(desktopEntry->fileName()));
+    DesktopStartItem *desktopItem = dynamic_cast<DesktopStartItem*>( ent );
+    if (desktopItem) {
+        const QModelIndex index = indexFromWidget(ent);
+        const QString fileName = m_model->data(index, AutostartModel::Roles::FileName).toString();
+        KFileItem kfi(QUrl::fromLocalFile(fileName));
         kfi.setDelayedMimeTypes(true);
-        if (! slotEditCMD( kfi ))
-            return;
-        if (desktopEntry) {
-            KService service(desktopEntry->fileName().path());
-            addItem( desktopEntry, service.name(), m_pathName.value(m_paths.indexOf(desktopEntry->fileName().adjusted(QUrl::RemoveFilename).toString())), service.exec(),false );
-        }
-    }
-}
 
-bool Autostart::slotEditCMD( const KFileItem &item)
-{
-    KPropertiesDialog dlg( item, this );
-    bool c = ( dlg.exec() == QDialog::Accepted );
-    return c;
+        KPropertiesDialog *dlg = new KPropertiesDialog(kfi, this);
+        connect(dlg, &QDialog::finished, this, [this, index, fileName, desktopItem, dlg] (int result) {
+            if (result == QDialog::Accepted) {
+
+                // Entry may have change of file
+                m_model->reloadEntry(index, dlg->item().localPath());
+
+                const QString name = m_model->data(index, Qt::DisplayRole).toString();
+                const QString command = m_model->data(index, AutostartModel::Roles::Command).toString();
+                const bool enabled = m_model->data(index, AutostartModel::Roles::Enabled).toBool();
+
+                updateDesktopStartItem( desktopItem, name, command, !enabled, fileName);
+            }
+        });
+        dlg->open();
+    }
 }
 
 void Autostart::slotEditCMD()
 {
-    if ( widget->listCMD->currentItem() == nullptr )
+    if (widget->listCMD->currentItem() == nullptr) {
         return;
-    slotEditCMD( (AutoStartItem*)widget->listCMD->currentItem() );
+    }
+    slotEditCMD(dynamic_cast<AutoStartItem*>(widget->listCMD->currentItem()));
 }
 
 void Autostart::slotAdvanced()
 {
-    if ( widget->listCMD->currentItem() == nullptr )
+    if (widget->listCMD->currentItem() == nullptr) {
         return;
-
-    DesktopStartItem *entry = static_cast<DesktopStartItem *>( widget->listCMD->currentItem() );
-    KDesktopFile kc(entry->fileName().path());
-    KConfigGroup grp = kc.desktopGroup();
-    bool status = false;
-    QStringList lstEntry;
-    if (grp.hasKey("OnlyShowIn"))
-    {
-        lstEntry = grp.readXdgListEntry("OnlyShowIn");
-        status = lstEntry.contains(QLatin1String("KDE"));
     }
 
-    AdvancedDialog *dlg = new AdvancedDialog( this,status );
-    if ( dlg->exec() )
-    {
-        status = dlg->onlyInKde();
-        if ( lstEntry.contains(QLatin1String("KDE") ) && !status )
-        {
-            lstEntry.removeAll( QStringLiteral("KDE") );
-            grp.writeXdgListEntry( "OnlyShowIn", lstEntry );
-        }
-        else if ( !lstEntry.contains(QLatin1String("KDE") ) && status )
-        {
-            lstEntry.append( QStringLiteral("KDE") );
-            grp.writeXdgListEntry( "OnlyShowIn", lstEntry );
-        }
-    }
-    delete dlg;
+    const QModelIndex index = indexFromWidget(widget->listCMD->currentItem());
+    const bool onlyInPlasma = m_model->data(index, AutostartModel::Roles::OnlyInPlasma).toBool();
+
+    AdvancedDialog *dlg = new AdvancedDialog(this, onlyInPlasma);
+    connect(dlg, &QDialog::finished, this, [this, index, dlg] (int result) {
+        if (result == QDialog::Accepted) {
+            const bool dialogOnlyInKde = dlg->onlyInKde();
+            m_model->setData(index, dialogOnlyInKde, AutostartModel::Roles::OnlyInPlasma);
+        };
+    });
+    dlg->open();
 }
 
-void Autostart::slotChangeStartup( ScriptStartItem* item, int index )
+QModelIndex Autostart::indexFromWidget(QTreeWidgetItem *widget) const
+{
+    int index = m_programItem->indexOfChild(widget);
+    if (index != -1) {
+        // widget is part of m_programItem children
+        return m_model->index(index);
+    } else {
+        // widget is part of m_scriptItem children
+        return m_model->index(m_programItem->childCount() + m_scriptItem->indexOfChild(widget));
+    }
+}
+
+void Autostart::slotChangeStartup( ScriptStartItem *item, int comboData )
 {
     Q_ASSERT(item);
 
-    if ( item )
-    {
-        item->setPath(m_paths.value(index));
-        widget->listCMD->setCurrentItem( item );
-        if ( ( index == 2 ) && !item->fileName().path().endsWith( QLatin1String(".sh") ))
-            KMessageBox::information( this, i18n( "Only files with “.sh” extensions are allowed for setting up the environment." ) );
+    const QModelIndex index = indexFromWidget(item);
 
+    if (!m_model->setData(index, comboData, AutostartModel::Roles::Source)) {
+        // the action was cancelled restore the previously selected source
+        item->changeStartup(AutostartModel::sourceFromInt(m_model->data(index, AutostartModel::Roles::Source).toInt()));
     }
 }
 

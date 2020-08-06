@@ -19,8 +19,8 @@
 #include "keyboard_config.h"
 #include "debug.h"
 
-#include <ksharedconfig.h>
-#include <kconfiggroup.h>
+#include <KSharedConfig>
+#include <KConfigGroup>
 
 
 static const char* const SWITCHING_POLICIES[] = {"Global", "Desktop", "WinClass", "Window", nullptr };
@@ -98,11 +98,11 @@ void KeyboardConfig::load()
 
     resetOldXkbOptions = config.readEntry("ResetOldOptions", false);
     QString options = config.readEntry("Options", "");
-    xkbOptions = options.split(LIST_SEPARATOR, QString::SkipEmptyParts);
+    xkbOptions = options.split(LIST_SEPARATOR, Qt::SkipEmptyParts);
 
     configureLayouts = config.readEntry("Use", false);
     QString layoutsString = config.readEntry("LayoutList", "");
-    QStringList layoutStrings = layoutsString.split(LIST_SEPARATOR, QString::SkipEmptyParts);
+    QStringList layoutStrings = layoutsString.split(LIST_SEPARATOR, Qt::SkipEmptyParts);
 //    if( layoutStrings.isEmpty() ) {
 //    	layoutStrings.append(DEFAULT_LAYOUT);
 //    }
@@ -133,7 +133,7 @@ void KeyboardConfig::load()
 	showSingle = config.readEntry("ShowSingle", false);
 
     QString labelsStr = config.readEntry("DisplayNames", "");
-    QStringList labels = labelsStr.split(LIST_SEPARATOR, QString::KeepEmptyParts);
+    QStringList labels = labelsStr.split(LIST_SEPARATOR, Qt::KeepEmptyParts);
     for(int i=0; i<labels.count() && i<layouts.count(); i++) {
         if( !labels[i].isEmpty() && labels[i] != layouts[i].layout() ) {
     		layouts[i].setDisplayName(labels[i]);

@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.4
+import QtQuick 2.8
 
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
@@ -44,7 +44,7 @@ Item {
     ShaderEffectSource {
         id: iconShaderSource
         sourceItem: icon
-        hideSource: true
+        hideSource: GraphicsInfo.api !== GraphicsInfo.Software
     }
 
     ShaderEffectSource {

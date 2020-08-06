@@ -185,10 +185,10 @@ void ColorsModel::load()
 
         const QPalette palette = KColorScheme::createApplicationPalette(config);
 
-        // from kwin/decorations/decorationpalette.cpp
+        KColorScheme headerColorScheme(QPalette::Active, KColorScheme::Header, config);
         KConfigGroup wmConfig(config, QStringLiteral("WM"));
-        const QColor activeTitleBarBackground = wmConfig.readEntry("activeBackground", palette.color(QPalette::Active, QPalette::Highlight));
-        const QColor activeTitleBarForeground = wmConfig.readEntry("activeForeground", palette.color(QPalette::Active, QPalette::HighlightedText));
+        const QColor activeTitleBarBackground = wmConfig.readEntry("activeBackground", headerColorScheme.background().color());
+        const QColor activeTitleBarForeground = wmConfig.readEntry("activeForeground", headerColorScheme.foreground().color());
 
         ColorsModelData item{
             name,

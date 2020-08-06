@@ -43,6 +43,9 @@ target_link_libraries (
    KF5::KIOCore
    KF5::KIOWidgets
    KF5::WindowSystem
+
+   PW::LibTaskManager
+
    ${X11_X11_LIB}
    )
 

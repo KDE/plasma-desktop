@@ -29,7 +29,7 @@
 #include <QDebug>
 #include <QElapsedTimer>
 
-#include <kprocess.h>
+#include <KProcess>
 
 #include "keyboard_config.h"
 

@@ -48,12 +48,6 @@ KCM.SimpleKCM {
         kcm.push("SourcesPage.qml");
     }
 
-    Binding {
-        target: kcm
-        property: "needsSave"
-        value: kcm.settings.dirty // TODO or other stuff
-    }
-
     Kirigami.FormLayout {
         Kirigami.InlineMessage {
             Kirigami.FormData.isSection: true
@@ -270,12 +264,14 @@ KCM.SimpleKCM {
             enabled: root.notificationsAvailable
             onClicked: root.openSourcesSettings()
         }
-    }
 
-    Component.onCompleted: {
-        if (kcm.initialDesktopEntry || kcm.initialNotifyRcName) {
-            // FIXME doing that right in onCompleted doesn't work
-            Qt.callLater(root.openSourcesSettings);
+        Connections {
+            target: kcm
+            onFirstLoadDone: {
+                if (kcm.initialDesktopEntry || kcm.initialNotifyRcName) {
+                        root.openSourcesSettings();
+                }
+            }
         }
     }
 }

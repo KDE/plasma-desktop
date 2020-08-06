@@ -27,8 +27,9 @@
 #include <KSharedConfig>
 #include <KGlobalSettings>
 #include <KIconLoader>
+#include <KIO/ApplicationLauncherJob>
 #include <KAutostart>
-#include <KRun>
+#include <KDialogJobUiDelegate>
 #include <KService>
 
 #include <QDBusConnection>
@@ -40,6 +41,8 @@
 #include <QProcess>
 #include <QStandardItemModel>
 #include <QX11Info>
+#include <QStyle>
+#include <QStyleFactory>
 
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
@@ -262,7 +265,12 @@ void KCMLookandFeel::save()
         KConfigGroup cg(conf, "kdeglobals");
         cg = KConfigGroup(&cg, "KDE");
         if (m_applyWidgetStyle) {
-            setWidgetStyle(cg.readEntry("widgetStyle", QString()));
+            QString widgetStyle = cg.readEntry("widgetStyle", QString());
+            // Some global themes refer to breeze's widgetStyle with a lowercase b.
+            if (widgetStyle == QStringLiteral("breeze")) {
+                widgetStyle = QStringLiteral("Breeze");
+            }
+            setWidgetStyle(widgetStyle);
         }
 
         if (m_applyColors) {
@@ -381,12 +389,14 @@ void KCMLookandFeel::save()
                 const QStringList autostartServices = cg.readEntry("Services", QStringList());
 
                 for (const QString &serviceFile : autostartServices) {
-                    KService service(serviceFile + QStringLiteral(".desktop"));
+                    KService::Ptr service{new KService(serviceFile + QStringLiteral(".desktop"))};
                     KAutostart as(serviceFile);
-                    as.setCommand(service.exec());
+                    as.setCommand(service->exec());
                     as.setAutostarts(true);
                     if (qEnvironmentVariableIsSet("KDE_FULL_SESSION")) {
-                        KRun::runApplication(service, {}, nullptr);
+                        auto *job = new KIO::ApplicationLauncherJob(service);
+                        job->setUiDelegate(new KDialogJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
+                        job->start();
                     }
                 }
             }
@@ -394,7 +404,10 @@ void KCMLookandFeel::save()
     }
 
     //TODO: option to enable/disable apply? they don't seem required by UI design
-    setSplashScreen(m_settings->lookAndFeelPackage());
+    const auto *item = m_model->item(pluginIndex(m_settings->lookAndFeelPackage()));
+    if (item->data(HasSplashRole).toBool()) {
+        setSplashScreen(m_settings->lookAndFeelPackage());
+    }
     setLockScreen(m_settings->lookAndFeelPackage());
 
     m_configGroup.sync();
@@ -408,10 +421,15 @@ void KCMLookandFeel::setWidgetStyle(const QString &style)
         return;
     }
 
-    m_configGroup.writeEntry("widgetStyle", style);
-    m_configGroup.sync();
-    //FIXME: changing style on the fly breaks QQuickWidgets
-    KGlobalSettings::self()->emitChange(KGlobalSettings::StyleChanged);
+    // Some global themes use styles that may not be installed.
+    // Test if style can be installed before updating the config.
+    QScopedPointer<QStyle> newStyle(QStyleFactory::create(style));
+    if (newStyle) {
+        m_configGroup.writeEntry("widgetStyle", style, KConfig::Notify);
+        m_configGroup.sync();
+        //FIXME: changing style on the fly breaks QQuickWidgets
+        KGlobalSettings::self()->emitChange(KGlobalSettings::StyleChanged);
+    }
 }
 
 void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
@@ -424,11 +442,11 @@ void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
     foreach (const QString &grp, conf->groupList()) {
         KConfigGroup cg(conf, grp);
         KConfigGroup cg2(&m_config, grp);
-        cg.copyTo(&cg2);
+        cg.copyTo(&cg2, KConfig::Notify);
     }
 
     KConfigGroup configGroup(&m_config, "General");
-    configGroup.writeEntry("ColorScheme", scheme);
+    configGroup.writeEntry("ColorScheme", scheme, KConfig::Notify);
 
     configGroup.sync();
     KGlobalSettings::self()->emitChange(KGlobalSettings::PaletteChanged);
@@ -441,7 +459,7 @@ void KCMLookandFeel::setIcons(const QString &theme)
     }
 
     KConfigGroup cg(&m_config, "Icons");
-    cg.writeEntry("Theme", theme);
+    cg.writeEntry("Theme", theme, KConfig::Notify);
     cg.sync();
 
     for (int i=0; i < KIconLoader::LastGroup; i++) {
@@ -470,7 +488,7 @@ void KCMLookandFeel::setCursorTheme(const QString themeName)
 
     KConfig config(QStringLiteral("kcminputrc"));
     KConfigGroup cg(&config, "Mouse");
-    cg.writeEntry("cursorTheme", themeName);
+    cg.writeEntry("cursorTheme", themeName, KConfig::Notify);
     cg.sync();
 
 #ifdef HAVE_XCURSOR
@@ -478,7 +496,7 @@ void KCMLookandFeel::setCursorTheme(const QString themeName)
     // in previous versions the Xfixes code wasn't enabled due to a bug in the
     // build system (freedesktop bug #975).
 #if defined(HAVE_XFIXES) && XFIXES_MAJOR >= 2 && XCURSOR_LIB_VERSION >= 10105
-    const int cursorSize = cg.readEntry("cursorSize", 0);
+    const int cursorSize = cg.readEntry("cursorSize", 24);
 
     QDir themeDir = cursorThemeDir(themeName, 0);
 
@@ -598,7 +616,7 @@ const QStringList KCMLookandFeel::cursorSearchPaths()
 #endif
 
     // Separate the paths
-    m_cursorSearchPaths = path.split(QLatin1Char(':'), QString::SkipEmptyParts);
+    m_cursorSearchPaths = path.split(QLatin1Char(':'), Qt::SkipEmptyParts);
 
     // Remove duplicates
     QMutableStringListIterator i(m_cursorSearchPaths);
@@ -679,7 +697,7 @@ void KCMLookandFeel::setWindowDecoration(const QString &library, const QString &
     KConfig config(QStringLiteral("kwinrc"));
     KConfigGroup cg(&config, "org.kde.kdecoration2");
     cg.writeEntry("library", library);
-    cg.writeEntry("theme", theme);
+    cg.writeEntry("theme", theme, KConfig::Notify);
 
     cg.sync();
     // Reload KWin.

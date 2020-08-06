@@ -49,8 +49,8 @@ Item {
     Connections {
         target: plasmoid
 
-        onExpandedChanged: {
-            if (!expanded) {
+        function onExpandedChanged() {
+            if (!plasmoid.expanded) {
                 baseView.currentIndex = -1;
             }
         }

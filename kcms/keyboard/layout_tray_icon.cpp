@@ -18,10 +18,10 @@
 
 #include "layout_tray_icon.h"
 
-#include <kstatusnotifieritem.h>
-#include <klocalizedstring.h>
+#include <KStatusNotifierItem>
+#include <KLocalizedString>
 
-#include <qmenu.h>
+#include <QMenu>
 
 #include "xkb_rules.h"
 #include "x11_helper.h"

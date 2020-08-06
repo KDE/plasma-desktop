@@ -57,8 +57,8 @@ FocusScope {
     Connections {
         target: plasmoid
 
-        onExpandedChanged: {
-            if (!expanded) {
+        function onExpandedChanged() {
+            if (!plasmoid.expanded) {
                 listView.positionViewAtBeginning();
             }
         }

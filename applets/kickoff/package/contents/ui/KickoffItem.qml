@@ -141,7 +141,7 @@ Item {
 
         text: model.description || ""
         opacity: isCurrent ? 0.8 : 0.6
-        font.pointSize: theme.smallestFont.pointSize
+        font: theme.smallestFont
         elide: Text.ElideMiddle
         horizontalAlignment: Text.AlignLeft
     }

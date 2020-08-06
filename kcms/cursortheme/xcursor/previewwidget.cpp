@@ -25,11 +25,6 @@
 
 #include "previewwidget.h"
 
-#include <QX11Info>
-#include <X11/Xlib.h>
-#include <X11/Xcursor/Xcursor.h>
-#include <xcb/xcb.h>
-
 #include "cursortheme.h"
 
 
@@ -66,7 +61,6 @@ class PreviewCursor
 {
     public:
         PreviewCursor( const CursorTheme *theme, const QString &name, int size );
-        ~PreviewCursor();
 
         const QPixmap &pixmap() const { return m_pixmap; }
         int width() const { return m_pixmap.width(); }
@@ -76,13 +70,11 @@ class PreviewCursor
         void setPosition( const QPoint &p ) { m_pos = p; }
         void setPosition( int x, int y ) { m_pos = QPoint(x, y); }
         QPoint position() const { return m_pos; }
-        operator const uint32_t () const { return m_cursor; }
         operator const QPixmap& () const { return pixmap(); }
 
     private:
         int m_boundingSize;
         QPixmap m_pixmap;
-        uint32_t m_cursor;
         QPoint  m_pos;
 };
 
@@ -97,18 +89,6 @@ PreviewCursor::PreviewCursor(const CursorTheme *theme, const QString &name, int 
         return;
 
     m_pixmap = QPixmap::fromImage(image);
-
-    // Load the cursor
-    m_cursor = theme->loadCursor(name, size);
-    // ### perhaps we should tag the cursor so it doesn't get
-    //     replaced when a new theme is applied
-}
-
-PreviewCursor::~PreviewCursor()
-{
-    if (QX11Info::isPlatformX11() && m_cursor != XCB_CURSOR_NONE) {
-        xcb_free_cursor(QX11Info::connection(), m_cursor);
-    }
 }
 
 QRect PreviewCursor::rect() const
@@ -291,14 +271,7 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
     for (const PreviewCursor *c : qAsConst(list)) {
         if (c->rect().contains(e->pos())) {
             if (c != current) {
-                const uint32_t cursor = *c;
-
-                if (QWindow *actualWindow = QQuickRenderControl::renderWindowFor(window())) {
-                    if (KWindowSystem::isPlatformX11() && cursor != XCB_CURSOR_NONE) {
-                        xcb_change_window_attributes(QX11Info::connection(), actualWindow->winId(), XCB_CW_CURSOR, &cursor);
-                    }
-                }
-
+                setCursor(c->pixmap());
                 current = c;
             }
             return;
@@ -311,9 +284,8 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
 
 void PreviewWidget::hoverLeaveEvent(QHoverEvent *e)
 {
-    if (QWindow *actualWindow = QQuickRenderControl::renderWindowFor(window())) {
-        actualWindow->unsetCursor();
-    }
+    Q_UNUSED(e);
+    unsetCursor();
 }
 
 void PreviewWidget::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)

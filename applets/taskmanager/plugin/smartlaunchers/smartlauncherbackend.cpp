@@ -54,7 +54,7 @@ void Backend::reload()
     m_badgeBlacklist = m_settings->badgeBlacklistedApplications();
 
     // Unity Launcher API operates on storage IDs ("foo.desktop"), whereas settings return desktop entries "foo"
-    std::transform(m_badgeBlacklist.begin(), m_badgeBlacklist.end(), m_badgeBlacklist.begin(), [](const QString &desktopEntry) {
+    std::transform(m_badgeBlacklist.begin(), m_badgeBlacklist.end(), m_badgeBlacklist.begin(), [](const QString &desktopEntry) -> QString {
         return desktopEntry + QStringLiteral(".desktop");
     });
 

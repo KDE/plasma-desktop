@@ -92,7 +92,7 @@ DragDrop.DropArea {
     }
 
     function action_openkcm() {
-        KCMShell.open(["kcmtrash"]);
+        KCMShell.open("kcmtrash");
     }
 
     Component.onCompleted: {
@@ -163,6 +163,5 @@ DragDrop.DropArea {
         anchors.fill: parent
         mainText: i18n("Trash")
         subText: (dirModel.count === 0) ? i18n("Empty") : i18np("One item", "%1 items", dirModel.count)
-        icon: (dirModel.count > 0) ? "user-trash-full" : "user-trash"
     }
 }

@@ -360,7 +360,6 @@ MouseArea {
                 currentApplet.applet.prepareContextualActions();
                 alternativesButton.visible = currentApplet.applet.action("alternatives") && currentApplet.applet.action("alternatives").enabled;
                 configureButton.visible = currentApplet.applet.action("configure") && currentApplet.applet.action("configure").enabled;
-                closeButton.visible = currentApplet.applet.action("remove") && currentApplet.applet.action("remove").enabled;
                 label.text = currentApplet.applet.title;
             }
         }
@@ -385,6 +384,21 @@ MouseArea {
                     Layout.rightMargin: units.smallSpacing * 2
                 }
                 PlasmaComponents.ToolButton {
+                    Layout.fillWidth: true
+                    // we want destructive actions to be far from the initial
+                    // cursor position, so show this on the top unless it's on
+                    // a top panel
+                    visible: tooltip.location !== PlasmaCore.Types.TopEdge
+                             && currentApplet.applet.action("remove")
+                             && currentApplet.applet.action("remove").enabled
+                    iconSource: "delete"
+                    text: i18n("Remove")
+                    onClicked: {
+                        tooltip.visible = false;
+                        currentApplet.applet.action("remove").trigger();
+                    }
+                }
+                PlasmaComponents.ToolButton {
                     id: configureButton
                     Layout.fillWidth: true
                     iconSource: "configure"
@@ -405,8 +419,12 @@ MouseArea {
                     }
                 }
                 PlasmaComponents.ToolButton {
-                    id: closeButton
                     Layout.fillWidth: true
+                    // we want destructive actions to be far from the initial
+                    // cursor position, so show this on the bottom for top panels
+                    visible: tooltip.location === PlasmaCore.Types.TopEdge
+                             && currentApplet.applet.action("remove")
+                             && currentApplet.applet.action("remove").enabled
                     iconSource: "delete"
                     text: i18n("Remove")
                     onClicked: {

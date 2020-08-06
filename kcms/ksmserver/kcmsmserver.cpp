@@ -31,10 +31,10 @@
 #include <QVBoxLayout>
 
 #include <kworkspace.h>
-#include <qregexp.h>
-#include <kdesktopfile.h>
-#include <kprocess.h>
-#include <kmessagebox.h>
+#include <QRegExp>
+#include <KDesktopFile>
+#include <KProcess>
+#include <KMessageBox>
 #include <QApplication>
 #include <QDBusInterface>
 #include <QLineEdit>

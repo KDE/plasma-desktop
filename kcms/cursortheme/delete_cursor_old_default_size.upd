@@ -1,0 +1,8 @@
+Version=5
+
+# Delete cursor size if it's old default
+Id=DeleteCursorOldDefaultSize
+Options=overwrite
+File=kcminputrc
+Group=Mouse
+Script=delete_cursor_old_default_size.pl,perl

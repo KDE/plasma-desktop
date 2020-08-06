@@ -492,7 +492,7 @@ void PagerModel::moveWindow(int window, double x, double y, const QVariant &targ
             } else {
                 const QStringList &runningActivities = d->activityInfo->runningActivities();
 
-                if (targetItemId < runningActivities.length()) {
+                if (targetItemId.toInt() < runningActivities.length()) {
                     const QString &newActivity = targetItemId.toString();
                     QStringList activities =  windowInfo.activities();
 
@@ -541,7 +541,7 @@ void PagerModel::moveWindow(int window, double x, double y, const QVariant &targ
 
                 const QVariantList &winIds = idx.data(TaskManager::AbstractTasksModel::WinIdList).toList();
 
-                if (!winIds.isEmpty() && winIds.at(0).toUInt() == window) {
+                if (!winIds.isEmpty() && winIds.at(0).toInt() == window) {
                     tasksModel->requestVirtualDesktops(idx, QVariantList() << targetItemId.toString());
                     break;
                 }

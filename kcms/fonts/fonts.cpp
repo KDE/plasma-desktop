@@ -31,7 +31,6 @@
 #include <QWindow>
 #include <QQmlEngine>
 #include <QQuickView>
-#include <QFontDialog>
 #include <QApplication>
 #include <QFontDatabase>
 
@@ -42,7 +41,7 @@
 #include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <KFontDialog>
+#include <KFontChooserDialog>
 #include <KWindowSystem>
 
 #include "../krdb/krdb.h"
@@ -54,59 +53,6 @@
 
 /**** DLL Interface ****/
 K_PLUGIN_FACTORY_WITH_JSON(KFontsFactory, "kcm_fonts.json", registerPlugin<KFonts>();)
-
-//from KFontRequester
-// Determine if the font with given properties is available on the system,
-// otherwise find and return the best fitting combination.
-static QFont nearestExistingFont(const QFont &font)
-{
-    QFontDatabase dbase;
-
-    // Initialize font data according to given font object.
-    QString family = font.family();
-    QString style = dbase.styleString(font);
-    qreal size = font.pointSizeF();
-
-    // Check if the family exists.
-    const QStringList families = dbase.families();
-    if (!families.contains(family)) {
-        // Chose another family.
-        family = QFontInfo(font).family(); // the nearest match
-        if (!families.contains(family)) {
-            family = families.count() ? families.at(0) : QStringLiteral("fixed");
-        }
-    }
-
-    // Check if the family has the requested style.
-    // Easiest by piping it through font selection in the database.
-    QString retStyle = dbase.styleString(dbase.font(family, style, 10));
-    style = retStyle;
-
-    // Check if the family has the requested size.
-    // Only for bitmap fonts.
-    if (!dbase.isSmoothlyScalable(family, style)) {
-        QList<int> sizes = dbase.smoothSizes(family, style);
-        if (!sizes.contains(size)) {
-            // Find nearest available size.
-            int mindiff = 1000;
-            int refsize = size;
-            Q_FOREACH (int lsize, sizes) {
-                int diff = qAbs(refsize - lsize);
-                if (mindiff > diff) {
-                    mindiff = diff;
-                    size = lsize;
-                }
-            }
-        }
-    }
-
-    // Select the font with confirmed properties.
-    QFont result = dbase.font(family, style, int(size));
-    if (dbase.isSmoothlyScalable(family, style) && result.pointSize() == floor(size)) {
-        result.setPointSizeF(size);
-    }
-    return result;
-}
 
 /**** KFonts ****/
 
@@ -164,23 +110,10 @@ QAbstractItemModel *KFonts::hintingOptionsModel() const
     return m_hintingOptionsModel;
 }
 
-void KFonts::setNearestExistingFonts()
-{
-    m_settings->setFont(nearestExistingFont(m_settings->font()));
-    m_settings->setFixed(nearestExistingFont(m_settings->fixed()));
-    m_settings->setSmallestReadableFont(nearestExistingFont(m_settings->smallestReadableFont()));
-    m_settings->setToolBarFont(nearestExistingFont(m_settings->toolBarFont()));
-    m_settings->setMenuFont(nearestExistingFont(m_settings->menuFont()));
-    m_settings->setActiveFont(nearestExistingFont(m_settings->activeFont()));
-}
-
 void KFonts::load()
 {
     // first load all the settings
     ManagedConfigModule::load();
-
-    // Then set the existing fonts based on those settings
-    setNearestExistingFonts();
 
     // Load preview
     // NOTE: This needs to be done AFTER AA settings is loaded
@@ -188,7 +121,8 @@ void KFonts::load()
     // previews
     engine()->addImageProvider("preview", new PreviewImageProvider(m_settings->font()));
 
-    // KCM expect save state to be false at this point (can be true because of setNearestExistingFonts
+    // KCM expect save state to be false at this point (can be true because if a font setting loaded
+    // from the config isn't available on the system, font substitution may take place)
     setNeedsSave(false);
 }
 
@@ -226,7 +160,28 @@ void KFonts::save()
     KGlobalSettings::self()->emitChange(KGlobalSettings::FontChanged);
 
     runRdb(KRdbExportXftSettings | KRdbExportGtkTheme);
+}
 
+void KFonts::adjustFont(const QFont &font, const QString &category)
+{
+    QFont selFont = font;
+    int ret = KFontChooserDialog::getFont(selFont, KFontChooser::NoDisplayFlags);
+
+    if (ret == QDialog::Accepted) {
+        if (category == QLatin1String("font")) {
+            m_settings->setFont(selFont);
+        } else if (category == QLatin1String("menuFont")) {
+            m_settings->setMenuFont(selFont);
+        } else if (category == QLatin1String("toolBarFont")) {
+            m_settings->setToolBarFont(selFont);
+        } else if (category == QLatin1String("activeFont")) {
+            m_settings->setActiveFont(selFont);
+        } else if (category == QLatin1String("smallestReadableFont")) {
+            m_settings->setSmallestReadableFont(selFont);
+        } else if (category == QLatin1String("fixed")) {
+            m_settings->setFixed(selFont);
+        }
+    }
     emit fontsHaveChanged();
 }
 
@@ -234,26 +189,27 @@ void KFonts::adjustAllFonts()
 {
     QFont font = m_settings->font();
     KFontChooser::FontDiffFlags fontDiffFlags;
-    int ret = KFontDialog::getFontDiff(font, fontDiffFlags, KFontChooser::NoDisplayFlags);
+    int ret = KFontChooserDialog::getFontDiff(font, fontDiffFlags, KFontChooser::NoDisplayFlags);
 
-    if (ret == KDialog::Accepted && fontDiffFlags) {
-        if (!m_settings->isImmutable("font")) {
-            m_settings->setFont(applyFontDiff(m_settings->font(), font, fontDiffFlags));
+    if (ret == QDialog::Accepted && fontDiffFlags) {
+        m_settings->setFont(applyFontDiff(m_settings->font(), font, fontDiffFlags));
+        m_settings->setMenuFont(applyFontDiff(m_settings->menuFont(), font, fontDiffFlags));
+        m_settings->setToolBarFont(applyFontDiff(m_settings->toolBarFont(), font, fontDiffFlags));
+        m_settings->setActiveFont(applyFontDiff(m_settings->activeFont(), font, fontDiffFlags));
+
+        QFont smallestFont = font;
+        // Make the small font 2 points smaller than the general font, but only
+        // if the general font is 9pt or higher or else the small font would be
+        // borderline unreadable. Assume that if the user is making the font
+        // tiny, they want a tiny font everywhere.
+        const int generalFontPointSize = font.pointSize();
+        if (generalFontPointSize >= 9) {
+            smallestFont.setPointSize(generalFontPointSize - 2);
         }
-        if (!m_settings->isImmutable("menuFont")) {
-            m_settings->setMenuFont(applyFontDiff(m_settings->menuFont(), font, fontDiffFlags));
-        }
-        if (!m_settings->isImmutable("toolBarFont")) {
-            m_settings->setToolBarFont(applyFontDiff(m_settings->toolBarFont(), font, fontDiffFlags));
-        }
-        if (!m_settings->isImmutable("activeFont")) {
-            m_settings->setActiveFont(applyFontDiff(m_settings->activeFont(), font, fontDiffFlags));
-        }
-        if (!m_settings->isImmutable("smallestReadableFont")) {
-            m_settings->setSmallestReadableFont(applyFontDiff(m_settings->smallestReadableFont(), font, fontDiffFlags));
-        }
+        m_settings->setSmallestReadableFont(applyFontDiff(m_settings->smallestReadableFont(), smallestFont, fontDiffFlags));
+
         const QFont adjustedFont = applyFontDiff(m_settings->fixed(), font, fontDiffFlags);
-        if (QFontInfo(adjustedFont).fixedPitch() && !m_settings->isImmutable("fixed")) {
+        if (QFontInfo(adjustedFont).fixedPitch()) {
             m_settings->setFixed(adjustedFont);
         }
     }

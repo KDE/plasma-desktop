@@ -25,9 +25,9 @@
 #include <QDir>
 #include <QSettings>
 #include <QStringList>
-#include <kcomponentdata.h>
-#include <kglobal.h>
-#include <kstandarddirs.h>
+#include <KComponentData>
+#include <KGlobal>
+#include <KStandardDirs>
 
 int main(int argc, char **argv)
 {

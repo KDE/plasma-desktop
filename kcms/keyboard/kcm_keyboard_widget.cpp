@@ -19,8 +19,8 @@
 #include "kcm_keyboard_widget.h"
 #include "debug.h"
 
-#include <kactioncollection.h>
-#include <kaboutdata.h>
+#include <KActionCollection>
+#include <KAboutData>
 #include <KLocalizedString>
 #include <KGlobalAccel>
 #include <KWindowSystem>

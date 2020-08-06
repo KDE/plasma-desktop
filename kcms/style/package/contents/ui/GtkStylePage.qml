@@ -55,81 +55,41 @@ Kirigami.Page {
             wideMode: true
 
             Row {
-                Kirigami.FormData.label: i18n("GTK2 theme:")
+                Kirigami.FormData.label: i18n("GTK theme:")
 
                 Flow {
                     spacing: Kirigami.Units.smallSpacing
 
                     QtControls.ComboBox {
-                        id: gtk2ThemeCombo
-                        model: kcm.gtkPage.gtk2ThemesModel
-                        currentIndex: model.findThemeIndex(kcm.gtkPage.gtk2ThemeFromConfig())
+                        id: gtkThemeCombo
+                        model: kcm.gtkPage.gtkThemesModel
+                        currentIndex: model.findThemeIndex(kcm.gtkPage.gtkThemeFromConfig())
                         onCurrentTextChanged: function() {
                             model.selectedTheme = currentText
-                            gtk2RemoveButton.enabled = model.selectedThemeRemovable()
+                            gtkRemoveButton.enabled = model.selectedThemeRemovable()
                         }
                         onActivated: model.setSelectedThemeDirty()
                         textRole: "theme-name"
 
                         Connections {
                             target: kcm.gtkPage
-                            onSelectGtk2ThemeInCombobox: function(themeName) {
-                                gtk2ThemeCombo.currentIndex = gtk2ThemeCombo.model.findThemeIndex(themeName)
+                            onSelectGtkThemeInCombobox: function(themeName) {
+                                gtkThemeCombo.currentIndex = gtkThemeCombo.model.findThemeIndex(themeName)
                             }
                         }
                     }
 
                     QtControls.Button {
-                        id: gtk2RemoveButton
+                        id: gtkRemoveButton
                         icon.name: "edit-delete"
-                        onClicked: gtk2ThemeCombo.model.removeSelectedTheme()
+                        onClicked: gtkThemeCombo.model.removeSelectedTheme()
                     }
 
                     QtControls.Button {
                         icon.name: "preview"
                         text: i18n("Preview...")
-                        onClicked: kcm.gtkPage.showGtk2Preview()
-                        visible: kcm.gtkPage.gtk2PreviewAvailable()
-                    }
-                }
-            }
-
-            Row {
-                Kirigami.FormData.label: i18n("GTK3 theme:")
-
-                Flow {
-                    spacing: Kirigami.Units.smallSpacing
-
-                    QtControls.ComboBox {
-                        id: gtk3ThemeCombo
-                        model: kcm.gtkPage.gtk3ThemesModel
-                        currentIndex: model.findThemeIndex(kcm.gtkPage.gtk3ThemeFromConfig())
-                        onCurrentTextChanged: function() {
-                            model.selectedTheme = currentText
-                            gtk3RemoveButton.enabled = model.selectedThemeRemovable()
-                        }
-                        onActivated: model.setSelectedThemeDirty()
-                        textRole: "theme-name"
-
-                        Connections {
-                            target: kcm.gtkPage
-                            onSelectGtk3ThemeInCombobox: function(themeName) {
-                                gtk3ThemeCombo.currentIndex = gtk3ThemeCombo.model.findThemeIndex(themeName)
-                            }
-                        }
-                    }
-
-                    QtControls.Button {
-                        id: gtk3RemoveButton
-                        icon.name: "edit-delete"
-                        onClicked: gtk3ThemeCombo.model.removeSelectedTheme()
-                    }
-
-                    QtControls.Button {
-                        icon.name: "preview"
-                        text: i18n("Preview...")
-                        onClicked: kcm.gtkPage.showGtk3Preview()
-                        visible: kcm.gtkPage.gtk3PreviewAvailable()
+                        onClicked: kcm.gtkPage.showGtkPreview()
+                        visible: kcm.gtkPage.gtkPreviewAvailable()
                     }
 
                 }
@@ -152,50 +112,12 @@ Kirigami.Page {
                 onClicked: fileDialogLoader.active = true
             }
 
-            QtControls.Button {
-                icon.name: "get-hot-new-stuff"
-                text: i18n("Download New GNOME/GTK Application Styles...")
-                onClicked: ghnsMenu.open()
-
-                QtControls.Menu {
-                    id: ghnsMenu
-
-                    QtControls.MenuItem {
-                        icon.name: "get-hot-new-stuff"
-                        text: i18n("Download New GNOME/GTK2 Application Styles...")
-                        onClicked: function() {
-                            ghnsMenu.close()
-                            gtk2NewStuffButton.showDialog()
-                        }
-
-                        NewStuff.Button {
-                            id: gtk2NewStuffButton
-                            downloadNewWhat: i18n("GNOME/GTK2 Application Styles")
-                            configFile: "gtk2_themes.knsrc"
-                            viewMode: NewStuff.Page.ViewMode.Preview
-                            onChangedEntriesChanged: kcm.gtkPage.onGhnsEntriesChanged(gtk2NewStuffButton.changedEntries);
-                            visible: false
-                        }
-                    }
-                    QtControls.MenuItem {
-                        icon.name: "get-hot-new-stuff"
-                        text: i18n("Download New GNOME/GTK3 Application Styles...")
-                        onClicked: function() {
-                            ghnsMenu.close()
-                            gtk3NewStuffButton.showDialog()
-                        }
-
-                        NewStuff.Button {
-                            id: gtk3NewStuffButton
-                            downloadNewWhat: i18n("GNOME/GTK3 Application Styles")
-                            configFile: "gtk3_themes.knsrc"
-                            viewMode: NewStuff.Page.ViewMode.Preview
-                            onChangedEntriesChanged: kcm.gtkPage.onGhnsEntriesChanged(gtk3NewStuffButton.changedEntries);
-                            visible: false
-                        }
-                    }
-                }
-
+            NewStuff.Button {
+                id: gtkNewStuffButton
+                text: i18n("Get New GNOME/GTK Application Styles...")
+                configFile: "gtk_themes.knsrc"
+                viewMode: NewStuff.Page.ViewMode.Preview
+                onChangedEntriesChanged: kcm.gtkPage.onGhnsEntriesChanged(gtkNewStuffButton.changedEntries);
             }
         }
     }

@@ -24,7 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef SONNETSPELLCHECKINGMODULE_H
 #define SONNETSPELLCHECKINGMODULE_H
 
-#include "kcmodule.h"
+#include <KCModule>
 #include "spellcheckingskeleton.h"
 
 class KConfigDialogManager;
