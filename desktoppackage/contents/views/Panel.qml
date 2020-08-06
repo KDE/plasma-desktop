@@ -101,13 +101,6 @@ PlasmaCore.FrameSvgItem {
 
     Item {
         id: containmentParent
-        anchors {
-            fill: parent
-
-            leftMargin: verticalPanel ? 0 : root.fixedMargins.left
-            rightMargin: verticalPanel ? 0 : root.fixedMargins.right
-            topMargin: verticalPanel ? root.fixedMargins.top : 0
-            bottomMargin: verticalPanel ? root.fixedMargins.bottom : 0
-        }
+        anchors.fill: parent
     }
 }

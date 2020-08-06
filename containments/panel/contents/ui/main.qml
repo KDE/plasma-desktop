@@ -364,6 +364,14 @@ function checkLastSpacer() {
 //END components
 
 //BEGIN UI elements
+
+    anchors {
+        leftMargin: currentLayout.isLayoutHorizontal ? panelSvg.fixedMargins.left : 0
+        rightMargin: currentLayout.isLayoutHorizontal ? panelSvg.fixedMargins.right : 0
+        topMargin: currentLayout.isLayoutHorizontal ? 0 : panelSvg.fixedMargins.top
+        bottomMargin: currentLayout.isLayoutHorizontal ? 0 : panelSvg.fixedMargins.bottom
+    }
+
     Item {
         id: lastSpacer
         parent: currentLayout
