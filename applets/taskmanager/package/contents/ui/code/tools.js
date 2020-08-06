@@ -153,7 +153,7 @@ function activateTask(index, model, modifiers, task) {
         // ===========================================
         // Make sure tooltips are actually enabled though; if not, fall through
         // to the next option.
-        if (plasmoid.configuration.showToolTips
+        else if (plasmoid.configuration.showToolTips
             && plasmoid.configuration.groupedTaskVisualization === 1
         ) {
             task.showToolTip();
@@ -164,8 +164,8 @@ function activateTask(index, model, modifiers, task) {
         // Make sure the Present Windows effect is  are actually enabled though;
         // if not, fall through to the next option.
         else if (backend.canPresentWindows()
-                   && (plasmoid.configuration.groupedTaskVisualization === 2
-                   || plasmoid.configuration.groupedTaskVisualization === 1)
+            && (plasmoid.configuration.groupedTaskVisualization === 2
+            || plasmoid.configuration.groupedTaskVisualization === 1)
         ) {
             task.hideToolTipTemporarily();
             tasks.presentWindows(model.WinIdList);
@@ -175,7 +175,7 @@ function activateTask(index, model, modifiers, task) {
         // ========================================
         // This is also the final fallback option if Tooltips or Present windows
         // are chosen but not actully available
-        else if (plasmoid.configuration.groupedTaskVisualization === 3) {
+        else {
             if (groupDialog.visible) {
                 task.hideToolTipTemporarily();
                 groupDialog.visible = false;
