@@ -121,6 +121,39 @@ PlasmaCore.Dialog {
                 flat: false
             }
         }
+        PlasmaExtras.Heading {
+            level: 3
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Opacity")
+        }
+        PlasmaComponents.ButtonColumn {
+            spacing: 0
+            Layout.fillWidth: true
+            Layout.minimumWidth: implicitWidth
+            PlasmaComponents.ToolButton {
+                width: Math.max(implicitWidth, parent.width)
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Adaptive")
+                checkable: true
+                checked: configDialog.opacityMode === 0
+                onClicked: configDialog.opacityMode = 0
+                flat: false
+            }
+            PlasmaComponents.ToolButton {
+                width: Math.max(implicitWidth, parent.width)
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Opaque")
+                checkable: true
+                checked: configDialog.opacityMode === 1
+                onClicked: configDialog.opacityMode = 1
+                flat: false
+            }
+            PlasmaComponents.ToolButton {
+                width: Math.max(implicitWidth, parent.width)
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Translucent")
+                checkable: true
+                checked: configDialog.opacityMode === 2
+                onClicked: configDialog.opacityMode = 2
+                flat: false
+            }
+        }
         PlasmaComponents.ToolButton {
             Layout.fillWidth: true
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Maximize Panel")
