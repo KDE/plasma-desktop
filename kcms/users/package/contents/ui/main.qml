@@ -26,7 +26,7 @@ import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.5 as QQC2
 
 import org.kde.kcm 1.2 as KCM
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami 2.13 as Kirigami
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 
 KCM.ScrollViewKCM {
@@ -61,43 +61,14 @@ KCM.ScrollViewKCM {
                     height: col.height
                     width: height
 
-                    visible: model.faceValid
-
                     color: "transparent"
                     border.color: Kirigami.ColorUtils.adjustColor(Kirigami.Theme.textColor, {alpha: 0.4*255})
                     border.width: 1
                     radius: height/2
 
-                    Image {
-                        anchors {
-                            fill: parent
-                            margins: 1
-                        }
-                        cache: false
-                        mipmap: true
+                    Kirigami.Avatar {
                         source: model.decoration
-                        layer.enabled: true
-                        layer.effect: OpacityMask {
-                            maskSource: Rectangle {
-                                height: col.height-2; width: height
-                                radius: height/2
-                            }
-                        }
-                    }
-                }
-                Rectangle {
-                    height: col.height
-                    width: height
-
-                    visible: !model.faceValid
-
-                    color: "transparent"
-                    border.color: Kirigami.ColorUtils.adjustColor(Kirigami.Theme.textColor, {alpha: 0.4*255})
-                    border.width: 1
-                    radius: height/2
-
-                    Kirigami.Icon {
-                        source: "user-identity"
+                        name: model.display
                         anchors {
                             fill: parent
                             margins: 1

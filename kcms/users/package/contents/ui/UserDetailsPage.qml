@@ -26,7 +26,7 @@ import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Dialogs 1.3
 
 import org.kde.kcm 1.2
-import org.kde.kirigami 2.8 as Kirigami
+import org.kde.kirigami 2.13 as Kirigami
 
 SimpleKCM {
     id: usersDetailPage
@@ -98,28 +98,16 @@ SimpleKCM {
 
                 readonly property int size: 6 * Kirigami.Units.gridUnit
 
-                icon.name: usersDetailPage.user.faceValid || usersDetailPage.overrideImage ? "" : "user-identity"
-                icon.width: size
-                icon.height: size
                 implicitWidth: size
                 implicitHeight: size
                 flat: true
 
-                Image {
+                Kirigami.Avatar {
                     source: usersDetailPage.user.face
-                    visible: usersDetailPage.user.faceValid || usersDetailPage.overrideImage
-                    sourceSize: Qt.size(parent.size*Screen.devicePixelRatio, parent.size*Screen.devicePixelRatio)
-                    cache: false
+                    name: user.realName
                     anchors {
                         fill: parent
                         margins: Kirigami.Units.smallSpacing
-                    }
-                    layer.enabled: usersDetailPage.user.faceValid || usersDetailPage.overrideImage
-                    layer.effect: OpacityMask {
-                        maskSource: Rectangle {
-                            height: userPfp.size; width: height
-                            radius: height/2
-                        }
                     }
                 }
 
