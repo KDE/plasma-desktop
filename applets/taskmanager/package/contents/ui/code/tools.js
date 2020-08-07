@@ -1,5 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2012-2016 by Eike Hein <hein@kde.org>                   *
+ *   Copyright (c) 2020 by Nate Graham <nate@kde.org>                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -16,6 +17,9 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
+
+.import org.kde.taskmanager 0.1 as TaskManager
+.import org.kde.plasma.core 2.0 as PlasmaCore // Needed by TaskManager
 
 function wheelActivateNextPrevTask(anchor, wheelDelta, eventDelta) {
     // magic number 120 for common "one click"
@@ -97,14 +101,88 @@ function activateTask(index, model, modifiers, task) {
     if (modifiers & Qt.ShiftModifier) {
         tasksModel.requestNewInstance(index);
     } else if (model.IsGroupParent === true) {
-        if ((iconsOnly || modifiers == Qt.ControlModifier) && backend.canPresentWindows()) {
-            task.toolTipAreaItem.hideToolTip();
+
+        // Option 1 (default): Cycle through this group's tasks
+        // ====================================================
+        // If the grouped task does not include the currently active task, bring
+        // forward the most recently used task in the group according to the
+        // Stacking order.
+        // Otherwise cycle through all tasks in the group without paying attention
+        // to the stacking order, which otherwise would change with every click
+        if (plasmoid.configuration.groupedTaskVisualization === 0) {
+            let childTaskList = [];
+            let highestStacking = -1;
+            let lastUsedTask = undefined;
+
+            // Build list of child tasks and get stacking order data for them
+            for (let i = 0; i < tasksModel.rowCount(task.modelIndex(index)); ++i) {
+                const childTaskModelIndex = tasksModel.makeModelIndex(task.itemIndex, i);
+                childTaskList.push(childTaskModelIndex);
+                const stacking = tasksModel.data(childTaskModelIndex, TaskManager.AbstractTasksModel.StackingOrder);
+                if (stacking > highestStacking) {
+                    highestStacking = stacking;
+                    lastUsedTask = childTaskModelIndex;
+                }
+            }
+
+            // If the active task is from a different app from the group that
+            // was clicked on switch to the last-used task from that app.
+            if (!childTaskList.some(index => tasksModel.data(index, TaskManager.AbstractTasksModel.IsActive))) {
+                tasksModel.requestActivate(lastUsedTask);
+            } else {
+                // If the active task is already among in the group that was
+                // activated, cycle through all tasks according to the order of
+                // the immutable model index so the order doesn't change with
+                // every click.
+                for (let j = 0; j < childTaskList.length; ++j) {
+                    const childTask = childTaskList[j];
+                        if (tasksModel.data(childTask, TaskManager.AbstractTasksModel.IsActive)) {
+                            // Found the current task. Activate the next one
+                            let nextTask = j + 1;
+                            if (nextTask >= childTaskList.length) {
+                                nextTask = 0;
+                            }
+                            tasksModel.requestActivate(childTaskList[nextTask]);
+                            break;
+                        }
+                }
+            }
+        }
+
+        // Option 2: show tooltips for all child tasks
+        // ===========================================
+        // Make sure tooltips are actually enabled though; if not, fall through
+        // to the next option.
+        else if (plasmoid.configuration.showToolTips
+            && plasmoid.configuration.groupedTaskVisualization === 1
+        ) {
+            task.showToolTip();
+        }
+
+        // Option 3: show Present Windows for all child tasks
+        // ==================================================
+        // Make sure the Present Windows effect is  are actually enabled though;
+        // if not, fall through to the next option.
+        else if (backend.canPresentWindows()
+            && (plasmoid.configuration.groupedTaskVisualization === 2
+            || plasmoid.configuration.groupedTaskVisualization === 1)
+        ) {
+            task.hideToolTipTemporarily();
             tasks.presentWindows(model.WinIdList);
-        } else if (groupDialog.visible) {
-            groupDialog.visible = false;
-        } else {
-            groupDialog.visualParent = task;
-            groupDialog.visible = true;
+        }
+
+        // Option 4: show group dialog/textual list
+        // ========================================
+        // This is also the final fallback option if Tooltips or Present windows
+        // are chosen but not actully available
+        else {
+            if (groupDialog.visible) {
+                task.hideToolTipTemporarily();
+                groupDialog.visible = false;
+            } else {
+                groupDialog.visualParent = task;
+                groupDialog.visible = true;
+            }
         }
     } else {
         if (model.IsMinimized === true) {

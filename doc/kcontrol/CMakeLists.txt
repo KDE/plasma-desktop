@@ -1,12 +1,10 @@
 ecm_optional_add_subdirectory(clock)
 ecm_optional_add_subdirectory(colors)
-ecm_optional_add_subdirectory(desktopthemedetails)
 ecm_optional_add_subdirectory(joystick)
 ecm_optional_add_subdirectory(kcmaccess)
 ecm_optional_add_subdirectory(kcmstyle)
 ecm_optional_add_subdirectory(solid-actions)
 ecm_optional_add_subdirectory(splashscreen)
-ecm_optional_add_subdirectory(icons)
 ecm_optional_add_subdirectory(cookies)
 ecm_optional_add_subdirectory(baloo)
 

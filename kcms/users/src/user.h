@@ -98,13 +98,13 @@ public Q_SLOTS:
 signals:
 
     void dataChanged();
-    void uidChanged(int uid);
-    void nameChanged(const QString &name);
-    void realNameChanged(const QString &realName);
-    void emailChanged(const QString &email);
-    void faceChanged(const QUrl &face);
-    void faceValidChanged(bool faceValid);
-    void administratorChanged(bool administrator);
+    void uidChanged();
+    void nameChanged();
+    void realNameChanged();
+    void emailChanged();
+    void faceChanged();
+    void faceValidChanged();
+    void administratorChanged();
 
 private:
     int mUid = 0;

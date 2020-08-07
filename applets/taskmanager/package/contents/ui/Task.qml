@@ -75,6 +75,9 @@ MouseArea {
         || (task.contextMenu && task.contextMenu.status === PlasmaComponents.DialogStatus.Open)
         || (groupDialog.visible && groupDialog.visualParent === task)
 
+    function showToolTip() {
+        toolTipArea.showToolTip();
+    }
     function hideToolTipTemporarily() {
         toolTipArea.hideToolTip();
     }
@@ -129,7 +132,6 @@ MouseArea {
         if (model.IsWindow === true) {
             tasks.windowsHovered(model.WinIdList, containsMouse);
         }
-
     }
 
     onPressed: {
@@ -164,10 +166,10 @@ MouseArea {
                     tasksModel.requestVirtualDesktops(modelIndex(), [virtualDesktopInfo.currentDesktop]);
                 }
             } else if (mouse.button == Qt.LeftButton) {
-                TaskTools.activateTask(modelIndex(), model, mouse.modifiers, task);
-                if (plasmoid.configuration.showToolTips) {
+                if (plasmoid.configuration.showToolTips && toolTipArea.active) {
                     hideToolTipTemporarily();
                 }
+                TaskTools.activateTask(modelIndex(), model, mouse.modifiers, task);
             } else if (mouse.button === Qt.BackButton || mouse.button === Qt.ForwardButton) {
                 var sourceName = mpris2Source.sourceNameForLauncherUrl(model.LauncherUrlWithoutIcon, model.AppPid);
                 if (sourceName) {

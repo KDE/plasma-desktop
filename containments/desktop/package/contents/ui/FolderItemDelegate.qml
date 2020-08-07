@@ -45,6 +45,10 @@ Item {
     Accessible.name: name
     Accessible.role: Accessible.Canvas
 
+    MouseArea { anchors.fill: parent } // This MouseArea exists to intercept press and hold;
+                                       // preventing edit mode from being triggered
+                                       // when pressing and holding on an icon
+
     function openPopup() {
         if (isDir) {
             loader.item.openPopup();
@@ -328,14 +332,12 @@ Item {
                             AnchorChanges {
                                 target: label
                                 anchors.top: icon.bottom
-                                anchors.left: parent.left
-                                anchors.right: parent.right
+                                anchors.horizontalCenter: parent.horizontalCenter
                             }
                             PropertyChanges {
                                 target: label
                                 anchors.topMargin: units.smallSpacing
-                                anchors.leftMargin: units.smallSpacing / 2
-                                anchors.rightMargin: units.smallSpacing / 2
+                                width: Math.round(Math.min(label.implicitWidth + units.smallSpacing, parent.width - units.smallSpacing))
                                 maximumLineCount: plasmoid.configuration.textLines
                                 horizontalAlignment: Text.AlignHCenter
                             }

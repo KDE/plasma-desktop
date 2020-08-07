@@ -25,11 +25,14 @@ import org.kde.kirigami 2.4 as Kirigami
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
+import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
+
 Item {
     width: childrenRect.width
     height: childrenRect.height
 
     property alias cfg_groupingStrategy: groupingStrategy.currentIndex
+    property alias cfg_groupedTaskVisualization: groupedTaskVisualization.currentIndex
     property alias cfg_groupPopups: groupPopups.checked
     property alias cfg_onlyGroupWhenFull: onlyGroupWhenFull.checked
     property alias cfg_sortingStrategy: sortingStrategy.currentIndex
@@ -41,6 +44,10 @@ Item {
     property alias cfg_showOnlyCurrentActivity: showOnlyCurrentActivity.checked
     property alias cfg_showOnlyMinimized: showOnlyMinimized.checked
 
+    TaskManagerApplet.Backend {
+        id: backend
+    }
+
     Kirigami.FormLayout {
         anchors.left: parent.left
         anchors.right: parent.right
@@ -51,6 +58,49 @@ Item {
             Kirigami.FormData.label: i18n("Group:")
             Layout.fillWidth: true
             model: [i18n("Do not group"), i18n("By program name")]
+        }
+
+        // TODO: port to QQC2 version once we've fixed https://bugs.kde.org/show_bug.cgi?id=403153
+        QQC1.ComboBox {
+            id: groupedTaskVisualization
+            Kirigami.FormData.label: i18n("Clicking grouped task:")
+            Layout.fillWidth: true
+            // FIXME: minimum width once this is ported to QQC2
+            Layout.preferredWidth: Kirigami.Units.gridUnit * 14
+
+            enabled: groupingStrategy.currentIndex !== 0
+
+            model: [
+                i18nc("Completes the sentence 'Clicking grouped task cycles through tasks' ", "Cycles through tasks"),
+                i18nc("Completes the sentence 'Clicking grouped task shows tooltip window thumbnails' ", "Shows tooltip window thumbnails"),
+                i18nc("Completes the sentence 'Clicking grouped task shows 'Present Windows' effect' ", "Shows 'Present Windows' effect"),
+                i18nc("Completes the sentence 'Clicking grouped task shows textual list' ", "Shows textual list"),
+            ]
+        }
+        // "You asked for Tooltips but Tooltips are disabled" message
+        Kirigami.InlineMessage {
+            Layout.fillWidth: true
+            visible: groupedTaskVisualization.currentIndex === 1 && !plasmoid.configuration.showToolTips && backend.canPresentWindows()
+            type: Kirigami.MessageType.Warning
+            text: i18n("Tooltips are disabled, so the 'Present Windows' effect will be displayed instead.")
+        }
+        // "You asked for Tooltips but Tooltips are disabled and Present Windows is not available" message
+        Kirigami.InlineMessage {
+            Layout.fillWidth: true
+            visible: groupedTaskVisualization.currentIndex === 1 && !plasmoid.configuration.showToolTips && !backend.canPresentWindows()
+            type: Kirigami.MessageType.Warning
+            text: i18n("Tooltips are disabled, and the 'Present Windows' effect is not enabled or otherwise available right now, so a textual list will be displayed instead")
+        }
+        // "You asked for Present Windows but Present Windows is not available" message
+        Kirigami.InlineMessage {
+            Layout.fillWidth: true
+            visible: groupedTaskVisualization.currentIndex === 2 && !backend.canPresentWindows()
+            type: Kirigami.MessageType.Warning
+            text: i18n("The 'Present Windows' effect is not enabled or otherwise available right now, so a textual list will be displayed instead.")
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
         }
 
         CheckBox {

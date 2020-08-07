@@ -63,8 +63,8 @@ Item {
                     widgetExplorer.addApplet(pluginName)
                 }
             }
-            onEntered: list.currentIndex = index
-            onExited: list.currentIndex = -1
+            onEntered: delegate.GridView.view.currentIndex = index
+            onExited: delegate.GridView.view.currentIndex = index - 1
         }
 
         ColumnLayout {
@@ -119,7 +119,7 @@ Item {
                         width: runningBadge.width + Math.round(units.smallSpacing * 1.5)
                         height: width
                         radius: height
-                        visible: running
+                        visible: running && delegate.GridView.isCurrentItem
                     }
                 }
 
@@ -129,7 +129,7 @@ Item {
                     height: Math.round(theme.mSize(countLabel.font).height * 1.3)
                     radius: height
                     color: theme.highlightColor
-                    visible: running
+                    visible: running && delegate.GridView.isCurrentItem
                     onVisibleChanged: maskShaderSource.scheduleUpdate()
 
                     PlasmaComponents.Label {
@@ -179,11 +179,12 @@ Item {
                     tooltip: delegate.pendingUninstall ? i18nd("plasma_shell_org.kde.plasma.desktop", "Undo uninstall")
                                                        : i18nd("plasma_shell_org.kde.plasma.desktop", "Uninstall widget")
                     flat: false
-                    visible: model.local
+                    visible: model.local && delegate.GridView.isCurrentItem
+
                     onHoveredChanged: {
                         if (hovered) {
                             // hovering the uninstall button triggers onExited of the main mousearea
-                            list.currentIndex = index
+                            delegate.GridView.view.currentIndex = index
                         }
                     }
 

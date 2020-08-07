@@ -31,6 +31,7 @@ Kirigami.OverlaySheet {
     function openAndClear() {
         verifyField.text = ""
         passwordField.text = ""
+        passwordField.forceActiveFocus()
         this.open()
     }
 

@@ -1,15 +1,3 @@
-if (KFI_BUILD_STANDALONE)
-    cmake_minimum_required(VERSION 2.6.4)
-    find_package(KDE4 "4.6.0" REQUIRED)
-    find_package(Qt4 REQUIRED)
-    find_package(Freetype REQUIRED)
-    find_package(Fontconfig REQUIRED)
-    find_package(Strigi REQUIRED)
-    find_package(X11 REQUIRED)
-    macro_log_feature(X11_Xft_FOUND "libxft" "X FreeType interface library" "https://www.x.org" FALSE "" "Font installer and font previews")
-    include(KDE4Defaults)
-endif ()
-
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kfontinst\")
 
@@ -28,7 +16,6 @@ if (X11_Xft_FOUND)
         ${CMAKE_CURRENT_SOURCE_DIR}/viewpart
         ${CMAKE_CURRENT_SOURCE_DIR}/kcmfontinst
         ${CMAKE_CURRENT_BINARY_DIR}/kcmfontinst)
-    add_definitions(${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
 
     set(libkfontinstdbusiface_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/dbus/FontinstIface.cpp)
     set(libkfontinstview_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/viewpart/FontPreview.cpp

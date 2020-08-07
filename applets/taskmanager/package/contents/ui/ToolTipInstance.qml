@@ -33,8 +33,6 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
-import org.kde.taskmanager 0.1 as TaskManager
-
 ColumnLayout {
     property var submodelIndex
     property int flatIndex: isGroup && index != undefined ? index : 0
@@ -160,11 +158,11 @@ ColumnLayout {
         Layout.minimumWidth: header.width
         Layout.preferredHeight: header.width / 2
 
-        visible: isWin
+        visible: toolTipDelegate.isWin
 
         readonly property bool isMinimized: isGroup ? IsMinimized == true : isMinimizedParent
         // TODO: this causes XCB error message when being visible the first time
-        property int winId: isWin && windows[flatIndex] !== undefined ? windows[flatIndex] : 0
+        readonly property var winId: toolTipDelegate.isWin && toolTipDelegate.windows[flatIndex] !== undefined ? toolTipDelegate.windows[flatIndex] : 0
 
         // There's no PlasmaComponents3 version
         PlasmaComponents.Highlight {
@@ -178,8 +176,18 @@ ColumnLayout {
             // Indent by one pixel to make sure we never cover up the entire highlight
             anchors.margins: 1
 
-            visible: !albumArtImage.visible && !thumbnailSourceItem.isMinimized
-            winId: thumbnailSourceItem.winId
+            visible: !albumArtImage.visible && !thumbnailSourceItem.isMinimized && Number.isInteger(thumbnailSourceItem.winId)
+            winId: Number.isInteger(thumbnailSourceItem.winId) ? thumbnailSourceItem.winId : 0
+        }
+
+        Loader {
+            anchors.fill: hoverHandler
+            anchors.margins: 1
+
+            active: !albumArtImage.visible && !Number.isInteger(thumbnailSourceItem.winId)
+
+            //In a loader since we might not have PipeWire available yet
+            source: "PipeWireThumbnail.qml"
         }
 
         Image {
