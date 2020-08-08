@@ -67,9 +67,9 @@ Q_NORETURN void fail(const QString &str)
 class ScriptConfirmationDialog : public QDialog
 {
 public:
-    ScriptConfirmationDialog(const QString &installerPath, Operation operation, QWidget *parent = nullptr) : QDialog(parent) {
-        const QDir dir = QFileInfo(installerPath).dir();
-        const auto readmes = dir.entryList({QStringLiteral("README*")});
+    ScriptConfirmationDialog(const QString &installerPath, Operation operation, const QString &dir, QWidget *parent = nullptr) : QDialog(parent)
+    {
+        const auto readmes = QDir(dir).entryList({QStringLiteral("README*")});
         setWindowTitle(i18n("KRunner Plugin Installer Confirmation Dialog"));
         setWindowIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
         const bool noInstaller = installerPath.isEmpty();
@@ -144,13 +144,13 @@ public:
         }
         QPushButton *sourceButton = new QPushButton(QIcon::fromTheme("inode-directory"), i18n("View Source Directory"), this);
         connect(sourceButton, &QPushButton::clicked, this, [dir]() {
-            QDesktopServices::openUrl(QUrl::fromLocalFile(dir.absolutePath()));
+            QDesktopServices::openUrl(QUrl::fromLocalFile(dir));
         });
         helpButtonLayout->addWidget(sourceButton);
         if (!readmes.isEmpty()) {
             QPushButton *readmeButton = new QPushButton(QIcon::fromTheme("text-x-readme"), i18n("View %1", readmes.at(0)), this);
             connect(readmeButton, &QPushButton::clicked, this, [dir, readmes]() {
-                QDesktopServices::openUrl(QUrl::fromLocalFile(dir.absoluteFilePath(readmes.at(0))));
+                QDesktopServices::openUrl(QUrl::fromLocalFile(QDir(dir).absoluteFilePath(readmes.at(0))));
             });
             helpButtonLayout->addWidget(readmeButton);
         }
@@ -289,7 +289,7 @@ bool executeOperation(const QString &archive, Operation operation)
     }
     // We want the user to be exactly aware of whats going on
     if (install || installerPath.isEmpty()) {
-        ScriptConfirmationDialog dlg(installerPath, operation);
+        ScriptConfirmationDialog dlg(installerPath, operation, archive);
         dlg.exec();
     }
 
