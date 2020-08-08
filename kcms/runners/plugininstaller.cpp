@@ -67,22 +67,41 @@ Q_NORETURN void fail(const QString &str)
 class ScriptConfirmationDialog : public QDialog
 {
 public:
-    ScriptConfirmationDialog(const QString &installerPath, QWidget *parent = nullptr) : QDialog(parent) {
+    ScriptConfirmationDialog(const QString &installerPath, Operation operation, QWidget *parent = nullptr) : QDialog(parent) {
         const QDir dir = QFileInfo(installerPath).dir();
         const auto readmes = dir.entryList({QStringLiteral("README*")});
         setWindowTitle(i18n("KRunner Plugin Installer Confirmation Dialog"));
         setWindowIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
+        const bool noInstaller = installerPath.isEmpty();
         QVBoxLayout *layout = new QVBoxLayout(this);
         QString msg;
-        if (readmes.isEmpty()) {
+        if (operation == Operation::Uninstall && noInstaller && readmes.isEmpty()) {
+            msg = xi18nc("@info", "This plugin does not provide an uninstall script. Please contact the author."
+                                  "You can try to uninstall the plugin manually."
+                                  "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
+        } else if (operation == Operation::Uninstall && noInstaller) {
+            msg = xi18nc("@info", "This plugin does not provide an uninstallation script. Please contact the author."
+                                  "You can try to uninstall the plugin manually, please have a look at the README"
+                                  "for instructions from the author."
+                                  "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
+        } else if (noInstaller && readmes.isEmpty()) {
+            msg = xi18nc("@info", "This plugin does not provide an installation script. Please contact the author."
+                                  "You can try to install the plugin manually."
+                                  "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
+        } else if (noInstaller) {
+            msg = xi18nc("@info", "This plugin does not provide an installation script. Please contact the author."
+                                  "You can try to install the plugin manually, please have a look at the README"
+                                  "for instructions from the author."
+                                  "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
+        } else if (readmes.isEmpty()) {
             msg = xi18nc("@info", "This plugin uses a script for installation which can pose a security risk."
                            "Please examine the entire plugin's contents before installing, or at least"
-                           "read the script's source code.</nl>"
+                           "read the script's source code."
                            "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
         } else {
              msg = xi18nc("@info", "This plugin uses a script for installation which can pose a security risk."
                            "Please examine the entire plugin's contents before installing, or at least"
-                           "read the README file and the script's source code.</nl>"
+                           "read the README file and the script's source code."
                            "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
         }
         QLabel *msgLabel = new QLabel(msg, this);
@@ -91,22 +110,38 @@ public:
         layout->addWidget(msgLabel);
         auto *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
         buttonBox->button(QDialogButtonBox::Ok)->setIcon(QIcon::fromTheme("emblem-warning"));
-        buttonBox->button(QDialogButtonBox::Ok)->setText(i18n("Accept Risk And Continue"));
+        QString okText;
+        if (noInstaller && operation == Operation::Uninstall) {
+            okText = i18n("Mark entry as uninstalled");
+        } else if (noInstaller) {
+            okText = i18n("Mark entry as installed");
+        } else {
+           okText = i18n("Accept Risk And Continue");
+        }
+        buttonBox->button(QDialogButtonBox::Ok)->setText(okText);
         const auto rejectLambda = []{
             qWarning() << i18n("Installation aborted");
             exit(1);
         };
         // If the user clicks cancel or closes the dialog using escape
         connect(buttonBox, &QDialogButtonBox::rejected, this, rejectLambda);
-        connect(buttonBox, &QDialogButtonBox::accepted, this, [this](){done(1);});
+        connect(buttonBox, &QDialogButtonBox::accepted, this, [this, noInstaller](){
+            if (noInstaller) {
+                exit(0);
+            } else {
+                done(1);
+            }
+        });
         connect(this, &QDialog::rejected, this, rejectLambda);
 
         QHBoxLayout *helpButtonLayout = new QHBoxLayout(this);
-        QPushButton *scriptButton = new QPushButton(QIcon::fromTheme("text-x-script"), i18n("View Script"), this);
-        connect(scriptButton, &QPushButton::clicked, this, [installerPath]() {
-            QDesktopServices::openUrl(QUrl::fromLocalFile(installerPath));
-        });
-        helpButtonLayout->addWidget(scriptButton);
+        if (!noInstaller) {
+            QPushButton *scriptButton = new QPushButton(QIcon::fromTheme("text-x-script"), i18n("View Script"), this);
+            connect(scriptButton, &QPushButton::clicked, this, [installerPath]() {
+                QDesktopServices::openUrl(QUrl::fromLocalFile(installerPath));
+            });
+            helpButtonLayout->addWidget(scriptButton);
+        }
         QPushButton *sourceButton = new QPushButton(QIcon::fromTheme("inode-directory"), i18n("View Source Directory"), this);
         connect(sourceButton, &QPushButton::clicked, this, [dir]() {
             QDesktopServices::openUrl(QUrl::fromLocalFile(dir.absolutePath()));
@@ -252,13 +287,9 @@ bool executeOperation(const QString &archive, Operation operation)
             break;
         }
     }
-
-    if (installerPath.isEmpty()) {
-        fail(i18n("Failed to find an %1 script in %2", install ? i18n("install") : i18n("uninstall"), archive));
-    }
     // We want the user to be exactly aware of whats going on
-    if (install) {
-        ScriptConfirmationDialog dlg(installerPath);
+    if (install || installerPath.isEmpty()) {
+        ScriptConfirmationDialog dlg(installerPath, operation);
         dlg.exec();
     }
 
@@ -293,6 +324,7 @@ int main(int argc, char *argv[])
     } else {
         fail(i18n("Unsupported command %1", cmd));
     }
+
 
     return 0;
 }
