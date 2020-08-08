@@ -60,16 +60,16 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 find_package(AccountsQt5 ${ACCOUNTSQT_DEP_VERSION} CONFIG)
 set_package_properties(AccountsQt5 PROPERTIES DESCRIPTION "Accounts management library for Qt applications"
    URL "https://gitlab.com/accounts-sso/libaccounts-qt"
-   TYPE REQUIRED
+   TYPE OPTIONAL
    PURPOSE "Required for building the OpenDesktop integration plugin")
 
-find_package(KAccounts REQUIRED)
+find_package(KAccounts 20.04)
 set_package_properties(KAccounts PROPERTIES DESCRIPTION "Accounts management library for KDE applications"
-   TYPE REQUIRED
+   TYPE OPTIONAL
    PURPOSE "Required for building the OpenDesktop integration plugin")
 
 find_package(PkgConfig REQUIRED)
-pkg_check_modules(SignOnOAuth2 REQUIRED IMPORTED_TARGET signon-oauth2plugin)
+pkg_check_modules(SignOnOAuth2 IMPORTED_TARGET signon-oauth2plugin)
 set_package_properties(signon-oauth2plugin PROPERTIES DESCRIPTION "Plugin for SignOnQt5 which handles OAuth and OAuth2 logins"
    URL "https://gitlab.com/accounts-sso/signon-plugin-oauth2"
    TYPE RUNTIME
@@ -198,7 +198,9 @@ add_subdirectory(toolboxes)
 add_subdirectory(applets)
 add_subdirectory(kcms)
 add_subdirectory(knetattach)
-add_subdirectory(attica-kde)
+if(KAccounts_FOUND AND AccountsQt5_FOUND)
+    add_subdirectory(attica-kde)
+endif()
 add_subdirectory(imports/activitymanager/)
 add_subdirectory(solid-device-automounter)
 if(X11_Xkb_FOUND AND XCB_XKB_FOUND)
