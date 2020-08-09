@@ -36,6 +36,8 @@
 #include <QDesktopServices>
 #include <KLocalizedString>
 #include <KShell>
+#include <KLocalizedString>
+#include <KIO/OpenFileManagerWindowJob>
 
 #include <config-workspace.h>
 
@@ -160,6 +162,65 @@ public:
     }
 };
 
+
+class PackagekitConfirmationDialog : public QDialog {
+public:
+    PackagekitConfirmationDialog(const QString &packagePath, QWidget *parent = nullptr) : QDialog(parent)
+    {
+        setWindowTitle(i18n("KRunner Plugin Installer Confirmation Dialog"));
+        setWindowIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
+        QVBoxLayout *layout = new QVBoxLayout(this);
+        const bool isRPM = packagePath.endsWith(QLatin1String(".rpm"));
+        QString msg;
+        if (isRPM) {
+            msg = xi18nc("@info", "You are about to install a binary package, you should only install these from a trusted "
+                                 "author/packager."
+                                 "The installation of RPM packages on OpenSUSE will most likely fail, please check "
+                                 "if the author published a key with which the package got signed or try to install the file manually.");
+        } else {
+            msg = xi18nc("@info", "You are about to install a binary package, you should only install these from a trusted "
+                                  "author/packager.");
+        }
+
+        QLabel *msgLabel = new QLabel(msg, this);
+        msgLabel->setWordWrap(true);
+        msgLabel->setMaximumWidth(500);
+        layout->addWidget(msgLabel);
+
+        auto *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+        buttonBox->button(QDialogButtonBox::Ok)->setIcon(QIcon::fromTheme("emblem-warning"));
+        buttonBox->button(QDialogButtonBox::Ok)->setText(i18n("Accept Risk And Continue"));
+        const auto rejectLambda = []{
+            qWarning() << i18n("Installation aborted");
+            exit(1);
+        };
+        // If the user clicks cancel or closes the dialog using escape
+        connect(buttonBox, &QDialogButtonBox::rejected, this, rejectLambda);
+        connect(buttonBox, &QDialogButtonBox::accepted, this, [this](){
+            done(1);
+        });
+        connect(this, &QDialog::rejected, this, rejectLambda);
+
+        QHBoxLayout *helpButtonLayout = new QHBoxLayout(this);
+        QPushButton *highlightFileButton = new QPushButton(QIcon::fromTheme("inode-directory"), i18n("View File"), this);
+        connect(highlightFileButton, &QPushButton::clicked, this, [packagePath]() {
+            KIO::highlightInFileManager({QUrl::fromLocalFile(packagePath)});
+        });
+        helpButtonLayout->addWidget(highlightFileButton);
+        // If the user decides to manually installs the RPM and wants the entry to be marked as installed
+        if (isRPM) {
+            QPushButton *markAsInstalledButton = new QPushButton(QIcon::fromTheme("install"), i18n("Mark Plugin As Installed"), this);
+            connect(markAsInstalledButton, &QPushButton::clicked, this, [packagePath]() {
+                exit(0);
+            });
+            helpButtonLayout->addWidget(markAsInstalledButton);
+        }
+        helpButtonLayout->setAlignment(Qt::AlignRight);
+        layout->addLayout(helpButtonLayout);
+        layout->addWidget(buttonBox);
+    }
+};
+
 #ifdef HAVE_PACKAGEKIT
 void packageKitInstall(const QString &fileName)
 {
@@ -226,6 +287,7 @@ Q_NORETURN void packageKit(Operation operation, const QString &fileName)
     const QString absPath = fileInfo.absoluteFilePath();
     if (operation == Operation
 ::Install) {
+        PackagekitConfirmationDialog(fileName).exec();
         packageKitInstall(absPath);
     } else {
         packageKitUninstall(absPath);

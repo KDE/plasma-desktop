@@ -24,6 +24,8 @@ target_link_libraries(plugininstaller
   KF5::CoreAddons
   KF5::I18n
   Qt5::Widgets
+  KF5::KIOCore
+  KF5::KIOWidgets
 )
 if(HAVE_PACKAGEKIT)
     target_link_libraries(plugininstaller PK::packagekitqt5)
