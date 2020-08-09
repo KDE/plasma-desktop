@@ -177,17 +177,8 @@ public:
         setWindowIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
         QVBoxLayout *layout = new QVBoxLayout(this);
         const bool isRPM = packagePath.endsWith(QLatin1String(".rpm"));
-        QString msg;
-        if (isRPM && isSUSEDistro()) {
-            msg = xi18nc("@info", "You are about to install a binary package, you should only install these from a trusted "
-                                 "author/packager."
-                                 "The installation of RPM packages on OpenSUSE will most likely fail, please check "
-                                 "if the author published a key with which the package got signed or try to install the file manually.");
-        } else {
-            msg = xi18nc("@info", "You are about to install a binary package, you should only install these from a trusted "
+        QString msg = xi18nc("@info", "You are about to install a binary package, you should only install these from a trusted "
                                   "author/packager.");
-        }
-
         QLabel *msgLabel = new QLabel(msg, this);
         msgLabel->setWordWrap(true);
         msgLabel->setMaximumWidth(500);
@@ -202,8 +193,8 @@ public:
         };
         // If the user clicks cancel or closes the dialog using escape
         connect(buttonBox, &QDialogButtonBox::rejected, this, rejectLambda);
-        connect(buttonBox, &QDialogButtonBox::accepted, this, [this, packagePath](){
-            if (isSUSEDistro()) {
+        connect(buttonBox, &QDialogButtonBox::accepted, this, [this, isRPM, packagePath](){
+            if (isRPM && isSUSEDistro()) {
                 const QString command = QStringLiteral("sudo zyper install %1").arg(KShell::quoteArg(packagePath));
                 KToolInvocation::invokeTerminal(QStringLiteral("bash -c \"echo %1;%1\"").arg(command));
                 exit(0);
