@@ -37,6 +37,7 @@
 #include <KLocalizedString>
 #include <KShell>
 #include <KLocalizedString>
+#include <KOSRelease>
 #include <KIO/OpenFileManagerWindowJob>
 #include <KMessageBox>
 #include <KToolInvocation>
@@ -66,17 +67,9 @@ Q_NORETURN void fail(const QString &str)
     exit(1);
 }
 
-bool isSUSEDistro()
+inline bool isSUSEDistro()
 {
-    return true;
-    QProcess p;
-    p.start(QStringLiteral("lsbrelease"), QStringList(QStringLiteral("-a")));
-    p.waitForFinished(100);
-    QStringList lines = QString(p.readAll()).split('\n');
-    if (lines.isEmpty()) {
-        return true;
-    }
-    return lines.first() == QLatin1String("NAME=openSUSE");
+    return KOSRelease().name() == QLatin1String("openSUSE");
 }
 
 class ScriptConfirmationDialog : public QDialog
