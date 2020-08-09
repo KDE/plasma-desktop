@@ -38,6 +38,8 @@
 #include <KShell>
 #include <KLocalizedString>
 #include <KIO/OpenFileManagerWindowJob>
+#include <KMessageBox>
+#include <KToolInvocation>
 
 #include <config-workspace.h>
 
@@ -60,14 +62,13 @@ enum class Operation {
 Q_NORETURN void fail(const QString &str)
 {
     qCritical() << str;
-    const QStringList args = {"--detailederror" ,i18n("KRunner plugin installation failed"),  str};
-    QProcess::startDetached("kdialog", args);
-
+    KMessageBox::error(nullptr, str, i18n("KRunner plugin installation failed"));
     exit(1);
 }
 
 bool isSUSEDistro()
 {
+    return true;
     QProcess p;
     p.start(QStringLiteral("lsbrelease"), QStringList(QStringLiteral("-a")));
     p.waitForFinished(100);
@@ -208,8 +209,14 @@ public:
         };
         // If the user clicks cancel or closes the dialog using escape
         connect(buttonBox, &QDialogButtonBox::rejected, this, rejectLambda);
-        connect(buttonBox, &QDialogButtonBox::accepted, this, [this](){
-            done(1);
+        connect(buttonBox, &QDialogButtonBox::accepted, this, [this, packagePath](){
+            if (isSUSEDistro()) {
+                const QString command = QStringLiteral("sudo zyper install %1").arg(KShell::quoteArg(packagePath));
+                KToolInvocation::invokeTerminal(QStringLiteral("bash -c \"echo %1;%1\"").arg(command));
+                exit(0);
+            } else {
+                done(1);
+            }
         });
         connect(this, &QDialog::rejected, this, rejectLambda);
 
@@ -220,13 +227,6 @@ public:
         });
         helpButtonLayout->addWidget(highlightFileButton);
         // If the user decides to manually installs the RPM and wants the entry to be marked as installed
-        if (isRPM) {
-            QPushButton *markAsInstalledButton = new QPushButton(QIcon::fromTheme("install"), i18n("Mark Plugin As Installed"), this);
-            connect(markAsInstalledButton, &QPushButton::clicked, this, [packagePath]() {
-                exit(0);
-            });
-            helpButtonLayout->addWidget(markAsInstalledButton);
-        }
         helpButtonLayout->setAlignment(Qt::AlignRight);
         layout->addLayout(helpButtonLayout);
         layout->addWidget(buttonBox);
