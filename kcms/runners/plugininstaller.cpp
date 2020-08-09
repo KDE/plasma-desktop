@@ -66,6 +66,18 @@ Q_NORETURN void fail(const QString &str)
     exit(1);
 }
 
+bool isSUSEDistro()
+{
+    QProcess p;
+    p.start(QStringLiteral("lsbrelease"), QStringList(QStringLiteral("-a")));
+    p.waitForFinished(100);
+    QStringList lines = QString(p.readAll()).split('\n');
+    if (lines.isEmpty()) {
+        return true;
+    }
+    return lines.first() == QLatin1String("NAME=openSUSE");
+}
+
 class ScriptConfirmationDialog : public QDialog
 {
 public:
@@ -172,7 +184,7 @@ public:
         QVBoxLayout *layout = new QVBoxLayout(this);
         const bool isRPM = packagePath.endsWith(QLatin1String(".rpm"));
         QString msg;
-        if (isRPM) {
+        if (isRPM && isSUSEDistro()) {
             msg = xi18nc("@info", "You are about to install a binary package, you should only install these from a trusted "
                                  "author/packager."
                                  "The installation of RPM packages on OpenSUSE will most likely fail, please check "
