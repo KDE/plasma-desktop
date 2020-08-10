@@ -77,6 +77,13 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     headerLayout->addWidget(clearHistoryButton);
 
     m_pluginSelector = new KPluginSelector(this);
+    auto handler = [](const KPluginInfo &info) -> QPushButton* {
+        auto *b = new QPushButton();
+        b->setIcon(QIcon::fromTheme(info.icon()));
+        bool hide = info.name() == QStringLiteral("Windows");
+        return  hide ? nullptr : b;
+    };
+    m_pluginSelector->setAdditionalButtonHandler(handler);
 
     connect(m_pluginSelector, &KPluginSelector::changed, this, [this] { markAsChanged(); });
     connect(m_pluginSelector, &KPluginSelector::defaulted, this, &KCModule::defaulted);
