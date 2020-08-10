@@ -238,7 +238,7 @@ void packageKitInstall(const QString &fileName)
                         // Fallback error handling, sometimes packagekit gets stuck when installing an unsupported package
                         // this way we ensure that we exit
                         QTimer::singleShot(1000, [=](){
-                            fail(i18n("Failed to install \"%1\", exited with status \"%2\"",
+                            fail(i18n("Failed to install \"%1\"; exited with status \"%2\"",
                                       fileName, QVariant::fromValue(status).toString()));
                         });
                     });
