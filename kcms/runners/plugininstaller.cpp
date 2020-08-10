@@ -270,7 +270,7 @@ void packageKitUninstall(const QString &fileName)
         [=](PackageKit::Transaction::Exit status, uint) {
             if (status != PackageKit::Transaction::ExitSuccess) {
                 QTimer::singleShot(1000, [=]() {
-                    fail(i18n("Failed to uninstall \"%1\", exited with status \"%2\"",
+                    fail(i18n("Failed to uninstall \"%1\"; exited with status \"%2\"",
                               fileName, QVariant::fromValue(status).toString()));
                 });
             }
