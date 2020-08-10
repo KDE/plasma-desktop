@@ -42,7 +42,7 @@ Item {
                     icon.name: "mail-sent"
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                     QQC2.ToolTip.visible: hovered
-                    QQC2.ToolTip.text: i18nd("plasma_shell_org.kde.plasma.desktop", "Send an email to %1").arg(modelData.emailAddress)
+                    QQC2.ToolTip.text: i18nd("plasma_shell_org.kde.plasma.desktop", "Send an email to %1", modelData.emailAddress)
                     onClicked: Qt.openUrlExternally("mailto:%1".arg(modelData.emailAddress))
                 }
                 QQC2.ToolButton {
