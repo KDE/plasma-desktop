@@ -153,6 +153,7 @@ public Q_SLOTS:
     void save() override;
     void defaults() override;
     Q_INVOKABLE void adjustAllFonts();
+    Q_INVOKABLE void adjustFont(const QFont &font, const QString &category);
 
 Q_SIGNALS:
     void fontsHaveChanged();

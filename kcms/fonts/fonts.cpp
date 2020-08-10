@@ -53,23 +53,50 @@
 /**** DLL Interface ****/
 K_PLUGIN_FACTORY_WITH_JSON(KFontsFactory, "kcm_fonts.json", registerPlugin<KFonts>();)
 
+// If the styleName property is empty, then we want to set it to
+// the "Regular"-like style provided by the font, so that the font
+// selection dialog selects the correct style from the available styles
+// list; for more details see:
+// https://phabricator.kde.org/D27735 and https://phabricator.kde.org/D27785
+static QFont setRegularFontStyle(const QFont &font)
+{
+    if (!(font.styleName().isEmpty() && font.weight() == QFont::Normal)) {
+        return font;
+    }
+
+    QFont f(font);
+    QFontDatabase fdb;
+    const QStringList styles = fdb.styles(f.family());
+    for (const QString &s : styles) {
+        if (s == QLatin1String("Regular")
+            || s == QLatin1String("Normal")
+            || s == QLatin1String("Book")
+            || s == QLatin1String("Roman")) {
+            f.setStyleName(s);
+            return f;
+        }
+    }
+    return font;
+}
+
 //from KFontRequester
 // Determine if the font with given properties is available on the system,
 // otherwise find and return the best fitting combination.
 static QFont nearestExistingFont(const QFont &font)
 {
-    QFontDatabase dbase;
+    QFont _font = setRegularFontStyle(font);
 
+    QFontDatabase dbase;
     // Initialize font data according to given font object.
-    QString family = font.family();
-    QString style = dbase.styleString(font);
-    qreal size = font.pointSizeF();
+    QString family = _font.family();
+    QString style = dbase.styleString(_font);
+    qreal size = _font.pointSizeF();
 
     // Check if the family exists.
     const QStringList families = dbase.families();
     if (!families.contains(family)) {
         // Chose another family.
-        family = QFontInfo(font).family(); // the nearest match
+        family = QFontInfo(_font).family(); // the nearest match
         if (!families.contains(family)) {
             family = families.count() ? families.at(0) : QStringLiteral("fixed");
         }
@@ -612,6 +639,30 @@ bool KFonts::isSaveNeeded() const
 bool KFonts::isDefaults() const
 {
     return m_fontAASettings->isDefaults();
+}
+
+void KFonts::adjustFont(const QFont &font, const QString &category)
+{
+    QFont _font = setRegularFontStyle(font);
+
+    bool ok = false;
+    QFont selFont = QFontDialog::getFont(&ok, _font, nullptr, i18n("Select Font"));
+
+    if (ok && !m_settings->isImmutable(category)) {
+        if (category == QLatin1String("font")) {
+            m_settings->setFont(selFont);
+        } else if (category == QLatin1String("menuFont")) {
+            m_settings->setMenuFont(selFont);
+        } else if (category == QLatin1String("toolBarFont")) {
+            m_settings->setToolBarFont(selFont);
+        } else if (category == QLatin1String("activeFont")) {
+            m_settings->setActiveFont(selFont);
+        } else if (category == QLatin1String("smallestReadableFont")) {
+            m_settings->setSmallestReadableFont(selFont);
+        } else if (category == QLatin1String("fixed")) {
+            m_settings->setFixed(selFont);
+        }
+    }
 }
 
 void KFonts::adjustAllFonts()
