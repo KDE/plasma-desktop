@@ -75,7 +75,7 @@ void fail(const QString &str)
 
 inline bool isSUSEDistro()
 {
-    return KOSRelease().name() == QLatin1String("openSUSE");
+    return KOSRelease().name().contains(QStringLiteral("openSUSE"), Qt::CaseInsensitive);
 }
 
 class ScriptConfirmationDialog : public QDialog
@@ -277,7 +277,7 @@ void packageKitUninstall(const QString &fileName)
     }
 #endif
 
-Q_NORETURN void packageKit(Operation operation, const QString &fileName)
+void packageKit(Operation operation, const QString &fileName)
 {
 #ifdef HAVE_PACKAGEKIT
     QFileInfo fileInfo(fileName);
