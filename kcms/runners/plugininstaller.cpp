@@ -204,15 +204,12 @@ public:
         });
         connect(this, &QDialog::rejected, this, rejectLambda);
 
-        QHBoxLayout *helpButtonLayout = new QHBoxLayout(this);
         QPushButton *highlightFileButton = new QPushButton(QIcon::fromTheme("inode-directory"), i18n("View File"), this);
         connect(highlightFileButton, &QPushButton::clicked, this, [packagePath]() {
             KIO::highlightInFileManager({QUrl::fromLocalFile(packagePath)});
         });
-        helpButtonLayout->addWidget(highlightFileButton);
+        buttonBox->addButton(highlightFileButton, QDialogButtonBox::HelpRole);
         // If the user decides to manually installs the RPM and wants the entry to be marked as installed
-        helpButtonLayout->setAlignment(Qt::AlignRight);
-        layout->addLayout(helpButtonLayout);
         layout->addWidget(buttonBox);
     }
 };
