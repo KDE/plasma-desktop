@@ -156,7 +156,7 @@ public:
             });
             helpButtonLayout->addWidget(scriptButton);
         }
-        QPushButton *sourceButton = new QPushButton(QIcon::fromTheme("inode-directory"), i18n("View Source Directory"), this);
+        QPushButton *sourceButton = new QPushButton(QIcon::fromTheme("document-open-folder"), i18n("View Source Directory"), this);
         connect(sourceButton, &QPushButton::clicked, this, [dir]() {
             QDesktopServices::openUrl(QUrl::fromLocalFile(dir));
         });
