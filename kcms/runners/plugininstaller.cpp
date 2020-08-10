@@ -170,6 +170,7 @@ public:
         }
         helpButtonLayout->setAlignment(Qt::AlignRight);
         layout->addLayout(helpButtonLayout);
+        buttonBox->button(QDialogButtonBox::Cancel)->setFocus();
         layout->addWidget(buttonBox);
     }
 };
@@ -215,7 +216,7 @@ public:
             KIO::highlightInFileManager({QUrl::fromLocalFile(packagePath)});
         });
         buttonBox->addButton(highlightFileButton, QDialogButtonBox::HelpRole);
-        // If the user decides to manually installs the RPM and wants the entry to be marked as installed
+        buttonBox->button(QDialogButtonBox::Cancel)->setFocus();
         layout->addWidget(buttonBox);
     }
 };
