@@ -211,7 +211,7 @@ public:
         });
         connect(this, &QDialog::rejected, this, rejectLambda);
 
-        QPushButton *highlightFileButton = new QPushButton(QIcon::fromTheme("inode-directory"), i18n("View File"), this);
+        QPushButton *highlightFileButton = new QPushButton(QIcon::fromTheme("document-open-folder"), i18n("View File"), this);
         connect(highlightFileButton, &QPushButton::clicked, this, [packagePath]() {
             KIO::highlightInFileManager({QUrl::fromLocalFile(packagePath)});
         });
