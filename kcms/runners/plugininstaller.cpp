@@ -84,7 +84,7 @@ public:
     ScriptConfirmationDialog(const QString &installerPath, Operation operation, const QString &dir, QWidget *parent = nullptr) : QDialog(parent)
     {
         const auto readmes = QDir(dir).entryList({QStringLiteral("README*")});
-        setWindowTitle(i18n("KRunner Plugin Installer Confirmation Dialog"));
+        setWindowTitle(i18n("Confirm Installation"));
         setWindowIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
         const bool noInstaller = installerPath.isEmpty();
         QVBoxLayout *layout = new QVBoxLayout(this);
@@ -180,12 +180,11 @@ class PackagekitConfirmationDialog : public QDialog {
 public:
     PackagekitConfirmationDialog(const QString &packagePath, QWidget *parent = nullptr) : QDialog(parent)
     {
-        setWindowTitle(i18n("KRunner Plugin Installer Confirmation Dialog"));
+        setWindowTitle(i18n("Confirm Installation"));
         setWindowIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
         QVBoxLayout *layout = new QVBoxLayout(this);
         const bool isRPM = packagePath.endsWith(QLatin1String(".rpm"));
-        QString msg = xi18nc("@info", "You are about to install a binary package, you should only install these from a trusted "
-                                  "author/packager.");
+        QString msg = xi18nc("@info", "You are about to install a binary package. You should only install these from a trusted author/packager.");
         QLabel *msgLabel = new QLabel(msg, this);
         msgLabel->setWordWrap(true);
         msgLabel->setMaximumWidth(500);
