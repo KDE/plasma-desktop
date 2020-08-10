@@ -129,7 +129,7 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     layout->addWidget(m_pluginSelector);
 
     QHBoxLayout *downloadLayout = new QHBoxLayout(this);
-    auto *downloadButton = new KNS3::Button(i18n("Download New Plugins..."), QStringLiteral("krunner.knsrc"), this);
+    auto *downloadButton = new KNS3::Button(i18n("Get New Plugins..."), QStringLiteral("krunner.knsrc"), this);
     connect(downloadButton, &KNS3::Button::dialogFinished, this, [this](const KNS3::Entry::List &changedEntries) {
        if (!changedEntries.isEmpty()) {
            m_pluginSelector->clearPlugins();
