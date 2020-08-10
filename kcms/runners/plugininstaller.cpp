@@ -60,9 +60,15 @@ enum class Operation {
 #include <PackageKit/Transaction>
 #endif
 
-Q_NORETURN void fail(const QString &str)
+void fail(const QString &str)
 {
     qCritical() << str;
+    // This prevents the fallback error message to be shown when it is not required
+    static bool failed = false;
+    if (failed) {
+        return;
+    }
+    failed = true;
     KMessageBox::error(nullptr, str, i18n("KRunner plugin installation failed"));
     exit(1);
 }
@@ -228,8 +234,9 @@ void packageKitInstall(const QString &fileName)
                         if (status == PackageKit::Transaction::ExitSuccess) {
                             exit(0);
                         }
-                        // Fallback error handling
-                        QTimer::singleShot(500, [=](){
+                        // Fallback error handling, sometimes packagekit gets stuck when installing an unsupported package
+                        // this way we ensure that we exit
+                        QTimer::singleShot(1000, [=](){
                             fail(i18n("Failed to install \"%1\", exited with status \"%2\"",
                                       fileName, QVariant::fromValue(status).toString()));
                         });
@@ -261,7 +268,7 @@ void packageKitUninstall(const QString &fileName)
     QObject::connect(transaction, &PackageKit::Transaction::finished,
         [=](PackageKit::Transaction::Exit status, uint) {
             if (status != PackageKit::Transaction::ExitSuccess) {
-                QTimer::singleShot(500, [=]() {
+                QTimer::singleShot(1000, [=]() {
                     fail(i18n("Failed to uninstall \"%1\", exited with status \"%2\"",
                               fileName, QVariant::fromValue(status).toString()));
                 });
