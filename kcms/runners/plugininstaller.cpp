@@ -201,7 +201,7 @@ public:
         connect(buttonBox, &QDialogButtonBox::rejected, this, rejectLambda);
         connect(buttonBox, &QDialogButtonBox::accepted, this, [this, isRPM, packagePath](){
             if (isRPM && isSUSEDistro()) {
-                const QString command = QStringLiteral("sudo zyper install %1").arg(KShell::quoteArg(packagePath));
+                const QString command = QStringLiteral("sudo zypper install %1").arg(KShell::quoteArg(packagePath));
                 KToolInvocation::invokeTerminal(QStringLiteral("bash -c \"echo %1;%1\"").arg(command));
                 exit(0);
             } else {
