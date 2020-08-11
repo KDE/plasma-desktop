@@ -24,7 +24,7 @@ import org.kde.kcoreaddons 1.0 as KCoreAddons
 import org.kde.kquickcontrolsaddons 2.0
 import QtGraphicalEffects 1.0
 
-Item {
+PlasmaExtras.PlasmoidHeading {
     id: header
 
     implicitHeight: units.gridUnit * 5
