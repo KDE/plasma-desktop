@@ -25,7 +25,6 @@
 #include <KOpenWithDialog>
 #include <KConfig>
 
-#include <KMimeTypeTrader>
 #include <KUrlRequester>
 #include <KConfigGroup>
 #include <KLocalizedString>

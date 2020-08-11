@@ -27,7 +27,6 @@
 #include <KMessageBox>
 #include <KConfig>
 #include <KStandardDirs>
-#include <KMimeTypeTrader>
 #include <KUrlRequester>
 #include <KToolInvocation>
 #include <KConfigGroup>

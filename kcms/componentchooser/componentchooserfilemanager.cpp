@@ -21,7 +21,6 @@
 
 #include "componentchooserfilemanager.h"
 #include <KProcess>
-#include <KMimeTypeTrader>
 #include <KApplicationTrader>
 #include <KOpenWithDialog>
 #include <KConfigGroup>
@@ -76,7 +75,7 @@ void CfgFileManager::load(KConfig *)
     m_currentIndex = -1;
     m_defaultIndex = -1;
 
-    const KService::Ptr fileManager = KMimeTypeTrader::self()->preferredService(mime);
+    const KService::Ptr fileManager = KApplicationTrader::preferredService(mime);
 
     const auto fileManagers = KApplicationTrader::query([] (const KService::Ptr &service) {
         if (service->exec().isEmpty()) {
