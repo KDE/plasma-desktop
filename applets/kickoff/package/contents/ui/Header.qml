@@ -74,8 +74,8 @@ PlasmaExtras.PlasmoidHeading {
             cache: false
             visible: source !== ""
 
-            width: units.gridUnit * 3
-            height: width
+            Layout.preferredWidth: units.gridUnit * 3
+            Layout.preferredHeight: units.gridUnit * 3
 
             sourceSize.width: width
             sourceSize.height: height
