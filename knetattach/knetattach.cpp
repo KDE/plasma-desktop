@@ -34,7 +34,6 @@
 #include <KCharsets>
 #include <KDebug>
 #include <KRun>
-#include <KToolInvocation>
 #include <KGlobal>
 #include <QDesktopServices>
 #include <QTextCodec>
