@@ -22,7 +22,7 @@
 
 #include <QKeySequence>
 
-#include "shortcutsmodel.h"
+#include "basemodel.h"
 
 FilteredShortcutsModel::FilteredShortcutsModel(QObject *parent)
     : QSortFilterProxyModel(parent)
@@ -46,7 +46,7 @@ bool FilteredShortcutsModel::filterAcceptsRow(int source_row, const QModelIndex 
         return true;
     }
 
-    const auto &defaultShortcuts = index.data(ShortcutsModel::DefaultShortcutsRole).value<QSet<QKeySequence>>();
+    const auto &defaultShortcuts = index.data(BaseModel::DefaultShortcutsRole).value<QSet<QKeySequence>>();
     for (const auto& shortcut : defaultShortcuts) {
         if (shortcut.toString(QKeySequence::NativeText).contains(m_filter, Qt::CaseInsensitive)
                 || shortcut.toString(QKeySequence::PortableText).contains(m_filter, Qt::CaseInsensitive)) {
@@ -54,7 +54,7 @@ bool FilteredShortcutsModel::filterAcceptsRow(int source_row, const QModelIndex 
         }
     }
 
-    const auto &shortcuts = index.data(ShortcutsModel::CustomShortcutsRole).value<QSet<QKeySequence>>();
+    const auto &shortcuts = index.data(BaseModel::CustomShortcutsRole).value<QSet<QKeySequence>>();
     for (const auto& shortcut : shortcuts) {
         if (shortcut.toString(QKeySequence::NativeText).contains(m_filter, Qt::CaseInsensitive)
                 || shortcut.toString(QKeySequence::PortableText).contains(m_filter, Qt::CaseInsensitive)) {

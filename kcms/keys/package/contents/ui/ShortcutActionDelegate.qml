@@ -74,7 +74,10 @@ Kirigami.AbstractListItem {
             visible: false
             Layout.fillWidth: true
             sourceComponent:  RowLayout {
-                readonly property var originalIndex : kcm.filteredModel.mapToSource(dm.modelIndex(index)) 
+                readonly property var originalIndex : {
+                    const concatenatedIndex = kcm.filteredModel.mapToSource(dm.modelIndex(index))
+                    return kcm.shortcutsModel.mapToSource(concatenatedIndex)
+                }
                 spacing: 0
                 ColumnLayout {
                     Layout.alignment: Qt.AlignTop
@@ -94,7 +97,7 @@ Kirigami.AbstractListItem {
                         QQC2.CheckBox {
                             checked: activeShortcuts.indexOf(modelData) != -1
                             text: modelData
-                            onToggled: kcm.shortcutsModel.toggleDefaultShortcut(originalIndex, modelData, checked)
+                            onToggled: originalIndex.model.toggleDefaultShortcut(originalIndex, modelData, checked)
                         }
                     }
                 }
@@ -115,12 +118,12 @@ Kirigami.AbstractListItem {
                                 keySequence: modelData
                                 showClearButton: false
                                 onCaptureFinished: {
-                                    kcm.shortcutsModel.changeShortcut(originalIndex, modelData, keySequence)
+                                    originalIndex.model.changeShortcut(originalIndex, modelData, keySequence)
                                 }
                             }
                             QQC2.Button {
                                 icon.name: "edit-delete"
-                                onClicked: kcm.shortcutsModel.disableShortcut(originalIndex, modelData)
+                                onClicked: originalIndex.model.disableShortcut(originalIndex, modelData)
                                 QQC2.ToolTip {
                                     text: i18n("Delete this shortcut")
                                 }
@@ -152,7 +155,7 @@ Kirigami.AbstractListItem {
                             KeySequenceItem {
                                 showClearButton: false
                                 onCaptureFinished: {
-                                    kcm.shortcutsModel.addShortcut(originalIndex, keySequence)
+                                    originalIndex.model.addShortcut(originalIndex, keySequence)
                                     parent.finished()
                                 }
                             }

@@ -1,504 +1,447 @@
 /*
- * Copyright (C) 2020  David Redondo <david@david-redondo.de>
+ * Copyright 2015 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.com>
+ * Copyright 2015 David Faure <david.faure@kdab.com>
+ * Copyright 2020 David Redondo <kde@david-redondo.de>
  *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License or (at your option) version 3 or any later version
+ * accepted by the membership of KDE e.V. (or its successor approved
+ * by the membership of KDE e.V.), which shall act as a proxy
+ * defined in Section 14 of version 3 of the license.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License along
- * with this program; if not, write to the Free Software Foundation, Inc.,
- * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 #include "shortcutsmodel.h"
 
-#include <algorithm>
-
-#include <QIcon>
-#include <QDBusPendingCallWatcher>
-
-#include <KDesktopFile>
-#include <KConfigGroup>
-#include <KGlobalAccel>
-#include <kglobalaccel_interface.h>
-#include <kglobalaccel_component_interface.h>
-#include <KGlobalShortcutInfo>
-#include <KLocalizedString>
-#include <KService>
-#include <KServiceTypeTrader>
-
-#include "kcmkeys_debug.h"
-
-static QStringList buildActionId(const QString &componentUnique, const QString &componentFriendly,
-                              const QString &actionUnique, const QString &actionFriendly)
+class ShortcutsModelPrivate
 {
-    QStringList actionId{"", "", "", ""};
-    actionId[KGlobalAccel::ComponentUnique] = componentUnique;
-    actionId[KGlobalAccel::ComponentFriendly] = componentFriendly;
-    actionId[KGlobalAccel::ActionUnique] = actionUnique;
-    actionId[KGlobalAccel::ActionFriendly] = actionFriendly;
-    return actionId;
+public:
+    ShortcutsModelPrivate(ShortcutsModel* model)
+        : q(model)
+    {}
+
+    int computeRowsPrior(const QAbstractItemModel *sourceModel) const;
+    QAbstractItemModel *sourceModelForRow(int row, int *sourceRow) const;
+
+    void slotRowsAboutToBeInserted(const QModelIndex &, int start, int end);
+    void slotRowsInserted(const QModelIndex &, int start, int end);
+    void slotRowsAboutToBeRemoved(const QModelIndex &, int start, int end);
+    void slotRowsRemoved(const QModelIndex &, int start, int end);
+    void slotColumnsAboutToBeInserted(const QModelIndex &parent, int start, int end);
+    void slotColumnsInserted(const QModelIndex &parent, int, int);
+    void slotColumnsAboutToBeRemoved(const QModelIndex &parent, int start, int end);
+    void slotColumnsRemoved(const QModelIndex &parent, int, int);
+    void slotDataChanged(const QModelIndex &from, const QModelIndex &to, const QVector<int> &roles);
+    void slotSourceLayoutAboutToBeChanged(const QList<QPersistentModelIndex> &sourceParents, QAbstractItemModel::LayoutChangeHint hint);
+    void slotSourceLayoutChanged(const QList<QPersistentModelIndex> &sourceParents, QAbstractItemModel::LayoutChangeHint hint);
+    void slotModelAboutToBeReset();
+    void slotModelReset();
+
+    ShortcutsModel *q;
+    QList<QAbstractItemModel *> m_models;
+    int m_rowCount = 0; // have to maintain it here since we can't compute during model destruction
+
+    // for layoutAboutToBeChanged/layoutChanged
+    QVector<QPersistentModelIndex> layoutChangePersistentIndexes;
+    QModelIndexList proxyIndexes;
+};
+
+ShortcutsModel::ShortcutsModel(QObject *parent)
+    : QAbstractItemModel(parent),
+      d(new ShortcutsModelPrivate(this))
+{
 }
 
-
-ShortcutsModel::ShortcutsModel(KGlobalAccelInterface *interface, QObject *parent)
- : QAbstractItemModel(parent)
- , m_globalAccelInterface{interface}
+ShortcutsModel::~ShortcutsModel()
 {
 }
 
-void ShortcutsModel::load()
+QModelIndex ShortcutsModel::mapFromSource(const QModelIndex &sourceIndex) const
 {
-    if (!m_globalAccelInterface->isValid()) {
-        return;
+    const QAbstractItemModel *sourceModel = sourceIndex.model();
+    if (!sourceModel) {
+        return {};
     }
-    beginResetModel();
-    m_components.clear();
-    auto componentsWatcher = new  QDBusPendingCallWatcher( m_globalAccelInterface->allComponents());
-    connect(componentsWatcher, &QDBusPendingCallWatcher::finished, this, [this] (QDBusPendingCallWatcher *componentsWatcher) {
-        QDBusPendingReply<QList<QDBusObjectPath>> componentsReply = *componentsWatcher;
-        componentsWatcher->deleteLater();
-        if (componentsReply.isError()) {
-            genericErrorOccured(QStringLiteral("Error while calling allComponents()"), componentsReply.error());
-            endResetModel();
-            return;
-        }
-        const QList<QDBusObjectPath> componentPaths = componentsReply.value();
-        int *pendingCalls = new int;
-        *pendingCalls = componentPaths.size();
-        for (const auto &componentPath : componentPaths) {
-            const QString path = componentPath.path();
-            KGlobalAccelComponentInterface component(m_globalAccelInterface->service(), path, m_globalAccelInterface->connection());
-            auto watcher = new QDBusPendingCallWatcher(component.allShortcutInfos());
-            connect(watcher, &QDBusPendingCallWatcher::finished, this, [path, pendingCalls, this] (QDBusPendingCallWatcher *watcher){
-                QDBusPendingReply<QList<KGlobalShortcutInfo>> reply = *watcher;
-                if (reply.isError()) {
-                    genericErrorOccured(QStringLiteral("Error while calling allShortCutInfos of") + path, reply.error());
-                } else {
-                    m_components.push_back(loadComponent(reply.value()));
-                }
-                watcher->deleteLater();
-                if (--*pendingCalls == 0) {
-                    QCollator collator;
-                    collator.setCaseSensitivity(Qt::CaseInsensitive);
-                    collator.setNumericMode(true);
-                    std::sort(m_components.begin(), m_components.end(), [&](const Component &c1, const Component &c2){
-                        return c1.type != c2.type ? c1.type < c2.type : collator.compare(c1.friendlyName, c2.friendlyName) < 0;
-                    });
-                    endResetModel();
-                    delete pendingCalls;
-                }
-            });
-        }
-    });
+    int rowsPrior = d->computeRowsPrior(sourceModel);
+
+    if (sourceIndex.parent().isValid()) {
+        return createIndex(sourceIndex.row(), sourceIndex.column(), rowsPrior + sourceIndex.parent().row() + 1);
+    }
+    return createIndex(rowsPrior + sourceIndex.row(), sourceIndex.column());
 }
 
-Component ShortcutsModel::loadComponent(const QList<KGlobalShortcutInfo> &info)
+QModelIndex ShortcutsModel::mapToSource(const QModelIndex &proxyIndex) const
 {
-    const QString &componentUnique = info[0].componentUniqueName();
-    const QString &componentFriendly = info[0].componentFriendlyName();
-    KService::Ptr service = KService::serviceByStorageId(componentUnique);
-    if (!service) {
-        // Do we have an application with that name?
-        const KService::List apps = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
-                QStringLiteral("Name == '%1' or Name == '%2'").arg(componentUnique, componentFriendly));
-        if(!apps.isEmpty()) {
-            service = apps[0];
-        }
+    if (!proxyIndex.isValid()) {
+        return QModelIndex();
     }
-    const QString type = service && service->isApplication() ? i18n("Applications") : i18n("System Services");
-    QString icon;
 
-    static const QHash<QString, QString> hardCodedIcons = {
-        {"ActivityManager", "preferences-desktop-activities"},
-        {"KDE Keyboard Layout Switcher", "input-keyboard"},
-        {"krunner.desktop", "krunner"},
-        {"org_kde_powerdevil", "preferences-system-power-management"}
-    };
+    int sourceRow;
+    int topLevelRow = proxyIndex.internalId() ? proxyIndex.internalId() - 1 : proxyIndex.row();
+    QAbstractItemModel *sourceModel = d->sourceModelForRow(topLevelRow, &sourceRow);
+    if (!sourceModel) {
+        return QModelIndex();
+    }
 
-    if(service && !service->icon().isEmpty()) {
-        icon = service->icon();
-    } else if (hardCodedIcons.contains(componentUnique)) {
-        icon = hardCodedIcons[componentUnique];
+    if (proxyIndex.internalId()) {
+        return sourceModel->index(proxyIndex.row(), proxyIndex.column(), sourceModel->index(sourceRow, proxyIndex.column()));
+    }
+    return sourceModel->index(sourceRow, proxyIndex.column());
+}
+
+QVariant ShortcutsModel::data(const QModelIndex &index, int role) const
+{
+    const QModelIndex sourceIndex = mapToSource(index);
+    if (!sourceIndex.isValid()) {
+        return QVariant();
+    }
+    return sourceIndex.model()->data(sourceIndex, role);
+}
+
+bool ShortcutsModel::setData(const QModelIndex &index, const QVariant &value, int role)
+{
+    const QModelIndex sourceIndex = mapToSource(index);
+    if (!sourceIndex.isValid()) {
+        return false;
+    }
+    QAbstractItemModel *sourceModel = const_cast<QAbstractItemModel *>(sourceIndex.model());
+    return sourceModel->setData(sourceIndex, value, role);
+}
+
+QMap<int, QVariant> ShortcutsModel::itemData(const QModelIndex &proxyIndex) const
+{
+    const QModelIndex sourceIndex = mapToSource(proxyIndex);
+    if (!sourceIndex.isValid()) {
+        return {};
+    }
+    return sourceIndex.model()->itemData(sourceIndex);
+}
+
+Qt::ItemFlags ShortcutsModel::flags(const QModelIndex &index) const
+{
+    const QModelIndex sourceIndex = mapToSource(index);
+    return sourceIndex.isValid() ? sourceIndex.model()->flags(sourceIndex) : Qt::ItemFlags();
+}
+
+QVariant ShortcutsModel::headerData(int section, Qt::Orientation orientation, int role) const
+{
+    if (d->m_models.isEmpty()) {
+        return QVariant();
+    }
+    if (orientation == Qt::Horizontal) {
+        return d->m_models.at(0)->headerData(section, orientation, role);
     } else {
-        icon = componentUnique;
-    }
-
-    Component c{componentUnique, componentFriendly, type, icon, QVector<Shortcut>(), false, false};
-    for (const auto &action : info) {
-        const QString &actionUnique = action.uniqueName();
-        const QString &actionFriendly = action.friendlyName();
-        Shortcut shortcut;
-        shortcut.uniqueName = actionUnique;
-        shortcut.friendlyName = actionFriendly;
-        const QList<QKeySequence> defaultShortcuts = action.defaultKeys();
-        for (const auto  &keySequence : defaultShortcuts) {
-            if (!keySequence.isEmpty()) {
-                shortcut.defaultShortcuts.insert(keySequence);
-            }
+        int sourceRow;
+        QAbstractItemModel *sourceModel = d->sourceModelForRow(section, &sourceRow);
+        if (!sourceModel) {
+            return QVariant();
         }
-        const QList<QKeySequence> activeShortcuts = action.keys();
-        for (const QKeySequence &keySequence : activeShortcuts) {
-            if (!keySequence.isEmpty()) {
-                shortcut.activeShortcuts.insert(keySequence);
-            }
-        }
-        shortcut.initialShortcuts = shortcut.activeShortcuts;
-        c.shortcuts.push_back(shortcut);
+        return sourceModel->headerData(sourceRow, orientation, role);
     }
-    QCollator collator;
-    collator.setCaseSensitivity(Qt::CaseInsensitive);
-    collator.setNumericMode(true);
-    std::sort(c.shortcuts.begin(), c.shortcuts.end(), [&] (const Shortcut &s1, const Shortcut &s2) {
-        return collator.compare(s1.friendlyName, s2.friendlyName) < 0;
-    });
-    return c;
 }
 
-void ShortcutsModel::save()
+int ShortcutsModel::columnCount(const QModelIndex &parent) const
 {
-    for (auto it = m_components.rbegin(); it != m_components.rend(); ++it) {
-        if (it->pendingDeletion) {
-            removeComponent(*it);
-            continue;
-        }
-        for (auto& shortcut : it->shortcuts) {
-            if (shortcut.initialShortcuts != shortcut.activeShortcuts) {
-                const QStringList actionId = buildActionId(it->uniqueName, it->friendlyName,
-                        shortcut.uniqueName, shortcut.friendlyName);
-                //operator int of QKeySequence
-                QList<int> keys(shortcut.activeShortcuts.cbegin(), shortcut.activeShortcuts.cend());
-                qCDebug(KCMKEYS) << "Saving" << actionId << shortcut.activeShortcuts << keys;
-                auto reply = m_globalAccelInterface->setForeignShortcut(actionId, keys);
-                reply.waitForFinished();
-                if (!reply.isValid()) {
-                    qCCritical(KCMKEYS) << "Error while saving";
-                    if (reply.error().isValid()) {
-                        qCCritical(KCMKEYS) << reply.error().name() << reply.error().message();
-                    }
-                    emit errorOccured(i18nc("%1 is the name of the component, %2 is the action for which saving failed",
-                        "Error while saving shortcut %1: %2", it->friendlyName, shortcut.friendlyName));
-                } else {
-                    shortcut.initialShortcuts = shortcut.activeShortcuts;
-                }
-            }
-        }
+    if (d->m_models.isEmpty()) {
+        return 0;
     }
+    if (parent.isValid()) {
+        const QModelIndex sourceParent = mapToSource(parent);
+        return sourceParent.model()->columnCount(sourceParent);
+    }
+    return d->m_models.at(0)->columnCount(QModelIndex());
 }
 
-void ShortcutsModel::defaults() {
-    for (auto component = m_components.begin(); component != m_components.end(); ++component) {
-        auto componentIndex = index(component - m_components.begin(), 0);
-        for (auto shortcut = component->shortcuts.begin(); shortcut != component->shortcuts.end(); ++shortcut) {
-            shortcut->activeShortcuts = shortcut->defaultShortcuts;
-        }
-        emit dataChanged(index(0, 0, componentIndex), index(component->shortcuts.size(), 0, componentIndex),
-            {ActiveShortcutsRole, CustomShortcutsRole});
-    }
-}
-
-bool ShortcutsModel::needsSave() const
+QHash<int, QByteArray> ShortcutsModel::roleNames() const
 {
-    for (const auto& component : m_components) {
-        if (component.pendingDeletion) {
-            return true;
-        }
-        for (const auto& shortcut : component.shortcuts) {
-            if (shortcut.initialShortcuts != shortcut.activeShortcuts) {
-                return true;
-            }
-        }
+    if (d->m_models.isEmpty()) {
+        return {};
     }
-    return false;
-}
-
-bool ShortcutsModel::isDefault() const
-{
-   for (const auto& component : m_components) {
-        for (const auto& shortcut : component.shortcuts) {
-            if (shortcut.defaultShortcuts != shortcut.activeShortcuts) {
-                return false;
-            }
-        }
-   }
-   return true;
+    return d->m_models.at(0)->roleNames();
 }
 
 QModelIndex ShortcutsModel::index(int row, int column, const QModelIndex &parent) const
 {
-    if (row < 0 || column != 0) {
+    if(row < 0) {
+        return {};
+    }
+    if(column < 0) {
+        return {};
+    }
+
+    if (parent.isValid()) {
+        const QModelIndex sourceParent = mapToSource(parent);
+        return mapFromSource(sourceParent.model()->index(row, column, sourceParent));
+    }
+
+    int sourceRow;
+    QAbstractItemModel *sourceModel = d->sourceModelForRow(row, &sourceRow);
+    if (!sourceModel) {
         return QModelIndex();
     }
-    if (parent.isValid() && row < rowCount(parent) && column == 0) {
-        return createIndex(row, column, parent.row() + 1);
-    } else if (column == 0 && row < m_components.size()) {
-       return createIndex(row, column, nullptr);
-    }
-    return QModelIndex();
+    return mapFromSource(sourceModel->index(sourceRow, column, parent));
 }
 
 QModelIndex ShortcutsModel::parent(const QModelIndex &child) const
 {
-    if (child.internalId()) {
-        return createIndex(child.internalId() - 1, 0, nullptr);
-    }
-    return QModelIndex();
+    return mapFromSource(mapToSource(child).parent());
 }
 
 int ShortcutsModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid()) {
-        if (parent.parent().isValid()) {
-            return 0;
-        }
-        return m_components[parent.row()].shortcuts.size();
+        const QModelIndex sourceParent = mapToSource(parent);
+        return sourceParent.model()->rowCount(sourceParent);
     }
-    return m_components.size();
+
+    return d->m_rowCount;
 }
 
-int ShortcutsModel::columnCount(const QModelIndex &parent) const
+void ShortcutsModel::addSourceModel(QAbstractItemModel *sourceModel)
 {
-    Q_UNUSED(parent);
-    return 1;
+    Q_ASSERT(sourceModel);
+    Q_ASSERT(!d->m_models.contains(sourceModel));
+    connect(sourceModel, SIGNAL(dataChanged(QModelIndex,QModelIndex,QVector<int>)), this, SLOT(slotDataChanged(QModelIndex,QModelIndex,QVector<int>)));
+    connect(sourceModel, SIGNAL(rowsInserted(QModelIndex,int,int)), this, SLOT(slotRowsInserted(QModelIndex,int,int)));
+    connect(sourceModel, SIGNAL(rowsRemoved(QModelIndex,int,int)), this, SLOT(slotRowsRemoved(QModelIndex,int,int)));
+    connect(sourceModel, SIGNAL(rowsAboutToBeInserted(QModelIndex,int,int)), this, SLOT(slotRowsAboutToBeInserted(QModelIndex,int,int)));
+    connect(sourceModel, SIGNAL(rowsAboutToBeRemoved(QModelIndex,int,int)), this, SLOT(slotRowsAboutToBeRemoved(QModelIndex,int,int)));
+
+    connect(sourceModel, SIGNAL(columnsInserted(QModelIndex,int,int)), this, SLOT(slotColumnsInserted(QModelIndex,int,int)));
+    connect(sourceModel, SIGNAL(columnsRemoved(QModelIndex,int,int)), this, SLOT(slotColumnsRemoved(QModelIndex,int,int)));
+    connect(sourceModel, SIGNAL(columnsAboutToBeInserted(QModelIndex,int,int)), this, SLOT(slotColumnsAboutToBeInserted(QModelIndex,int,int)));
+    connect(sourceModel, SIGNAL(columnsAboutToBeRemoved(QModelIndex,int,int)), this, SLOT(slotColumnsAboutToBeRemoved(QModelIndex,int,int)));
+
+    connect(sourceModel, SIGNAL(layoutAboutToBeChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
+            this, SLOT(slotSourceLayoutAboutToBeChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)));
+    connect(sourceModel, SIGNAL(layoutChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
+            this, SLOT(slotSourceLayoutChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)));
+    connect(sourceModel, SIGNAL(modelAboutToBeReset()), this, SLOT(slotModelAboutToBeReset()));
+    connect(sourceModel, SIGNAL(modelReset()), this, SLOT(slotModelReset()));
+
+    const int newRows = sourceModel->rowCount();
+    if (newRows > 0) {
+        beginInsertRows(QModelIndex(), d->m_rowCount, d->m_rowCount + newRows - 1);
+    }
+    d->m_rowCount += newRows;
+    d->m_models.append(sourceModel);
+    if (newRows > 0) {
+        endInsertRows();
+    }
 }
 
-QVariant ShortcutsModel::data(const QModelIndex &index, int role) const
+QList<QAbstractItemModel*> ShortcutsModel::sources() const
 {
-    if (!checkIndex(index)) {
-        return QVariant();
-    }
-
-    if (index.parent().isValid()) {
-        const Shortcut &shortcut = m_components[index.parent().row()].shortcuts[index.row()];
-        switch (role) {
-        case Qt::DisplayRole:
-            return shortcut.friendlyName.isEmpty() ? shortcut.uniqueName : shortcut.friendlyName;
-        case ActionRole:
-            return shortcut.uniqueName;
-        case ActiveShortcutsRole:
-            return QVariant::fromValue(shortcut.activeShortcuts);
-        case DefaultShortcutsRole: 
-            return QVariant::fromValue(shortcut.defaultShortcuts);
-        case CustomShortcutsRole: {
-            auto  shortcuts = shortcut.activeShortcuts;
-            return QVariant::fromValue(shortcuts.subtract(shortcut.defaultShortcuts));
-        }
-        }
-        return QVariant();
-    }
-    const Component &component = m_components[index.row()];
-    switch(role) {
-    case Qt::DisplayRole:
-        return component.friendlyName;
-    case Qt::DecorationRole:
-        return component.icon;
-    case SectionRole:
-        return component.type;
-    case ComponentRole:
-        return component.uniqueName;
-    case CheckedRole:
-        return component.checked;
-    case PendingDeletionRole:
-        return component.pendingDeletion;
-    }
-    return QVariant();
+    return d->m_models;
 }
 
-bool ShortcutsModel::setData(const QModelIndex &index, const QVariant &value, int role)
+
+
+void ShortcutsModel::removeSourceModel(QAbstractItemModel *sourceModel)
 {
-    if (!checkIndex(index) || index.parent().isValid()) {
-        return false;
+    Q_ASSERT(d->m_models.contains(sourceModel));
+    disconnect(sourceModel, nullptr, this, nullptr);
+
+    const int rowsRemoved = sourceModel->rowCount();
+    const int rowsPrior = d->computeRowsPrior(sourceModel);   // location of removed section
+
+    if (rowsRemoved > 0) {
+        beginRemoveRows(QModelIndex(), rowsPrior, rowsPrior + rowsRemoved - 1);
     }
-    switch (role) {
-    case CheckedRole:
-        m_components[index.row()].checked = value.toBool();
-        emit dataChanged(index, index, {CheckedRole});
-        return true;
-    case PendingDeletionRole:
-        m_components[index.row()].pendingDeletion = value.toBool();
-        emit dataChanged(index, index, {PendingDeletionRole});
-        return true;
+    d->m_models.removeOne(sourceModel);
+    d->m_rowCount -= rowsRemoved;
+    if (rowsRemoved > 0) {
+        endRemoveRows();
     }
-    return false;
 }
 
-QHash<int, QByteArray> ShortcutsModel::roleNames() const
+void ShortcutsModelPrivate::slotRowsAboutToBeInserted(const QModelIndex &sourceParent, int start, int end)
 {
- return {
-        {Qt::DisplayRole, QByteArrayLiteral("display")},
-        {Qt::DecorationRole, QByteArrayLiteral("decoration")},
-        {SectionRole, QByteArrayLiteral("section")},
-        {ComponentRole, QByteArrayLiteral("component")},
-        {ActiveShortcutsRole, QByteArrayLiteral("activeShortcuts")},
-        {DefaultShortcutsRole, QByteArrayLiteral("defaultShortcuts")},
-        {CustomShortcutsRole, QByteArrayLiteral("customShortcuts")},
-        {CheckedRole, QByteArrayLiteral("checked")},
-        {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")}
-        };
-}
-
-void ShortcutsModel::toggleDefaultShortcut(const QModelIndex &index, const QKeySequence &shortcut, bool enabled)
-{
-   if (!checkIndex(index) || !index.parent().isValid())  {
-        return;
-    }
-    qCDebug(KCMKEYS) << "Default shortcut" << index << shortcut << enabled;
-    Shortcut &s = m_components[index.parent().row()].shortcuts[index.row()];
-    if (enabled) {
-        s.activeShortcuts.insert(shortcut);
+    const QAbstractItemModel *model = qobject_cast<QAbstractItemModel *>(q->sender());
+    if (sourceParent.isValid()) {
+        q->beginInsertRows(q->mapFromSource(sourceParent), start, end);
     } else {
-        s.activeShortcuts.remove(shortcut);
+        const int rowsPrior = computeRowsPrior(model);
+        q->beginInsertRows(QModelIndex(), rowsPrior + start, rowsPrior + end);
     }
-    emit dataChanged(index, index, {ActiveShortcutsRole, DefaultShortcutsRole});
 }
 
-void ShortcutsModel::addShortcut(const QModelIndex &index, const QKeySequence &shortcut)
+void ShortcutsModelPrivate::slotRowsInserted(const QModelIndex &sourceParent, int start, int end)
 {
-     if (!checkIndex(index) || !index.parent().isValid())  {
-        return;
+    if (!sourceParent.isValid()) {
+        m_rowCount += end - start + 1;
     }
-    if (shortcut.isEmpty()) {
-        return;
-    }
-    qCDebug(KCMKEYS) << "Adding shortcut" << index << shortcut;
-    Shortcut &s = m_components[index.parent().row()].shortcuts[index.row()];
-    s.activeShortcuts.insert(shortcut);
-    emit dataChanged(index, index, {ActiveShortcutsRole, CustomShortcutsRole});
+    q->endInsertRows();
 }
 
-void ShortcutsModel::disableShortcut(const QModelIndex &index, const QKeySequence &shortcut)
+void ShortcutsModelPrivate::slotRowsAboutToBeRemoved(const QModelIndex &sourceParent, int start, int end)
 {
-    if (!checkIndex(index) || !index.parent().isValid())  {
-        return;
+    if (sourceParent.isValid()) {
+        q->beginRemoveRows(q->mapFromSource(sourceParent), start, end);
+    } else {
+        const QAbstractItemModel *model = qobject_cast<QAbstractItemModel *>(q->sender());
+        const int rowsPrior = computeRowsPrior(model);
+        q->beginRemoveRows(QModelIndex(), rowsPrior + start, rowsPrior + end);
     }
-    qCDebug(KCMKEYS) << "Disabling shortcut" << index << shortcut;
-    Shortcut &s = m_components[index.parent().row()].shortcuts[index.row()];
-    s.activeShortcuts.remove(shortcut);
-    emit dataChanged(index, index, {ActiveShortcutsRole, CustomShortcutsRole});
-
 }
 
-void ShortcutsModel::changeShortcut(const QModelIndex &index, const QKeySequence &oldShortcut, const QKeySequence &newShortcut)
+void ShortcutsModelPrivate::slotRowsRemoved(const QModelIndex &sourceParent, int start, int end)
 {
-    if (!checkIndex(index) || !index.parent().isValid()) {
-        return;
+    if (!sourceParent.isValid()) {
+        m_rowCount -= end - start + 1;
     }
-    if (newShortcut.isEmpty()) {
-        return;
-    }
-    qCDebug(KCMKEYS) << "Changing Shortcut" << index << oldShortcut << " to " << newShortcut;
-    Shortcut &s = m_components[index.parent().row()].shortcuts[index.row()];
-    s.activeShortcuts.remove(oldShortcut);
-    s.activeShortcuts.insert(newShortcut);
-    emit dataChanged(index, index, {ActiveShortcutsRole, CustomShortcutsRole});
+    q->endRemoveRows();
 }
 
-void ShortcutsModel::setShortcuts(const KConfigBase &config)
+void ShortcutsModelPrivate::slotColumnsAboutToBeInserted(const QModelIndex &parent, int start, int end)
 {
-    for (const auto componentGroupName : config.groupList()) {
-        auto component = std::find_if(m_components.begin(), m_components.end(), [&] (const Component &c) {
-            return c.uniqueName == componentGroupName;
-        });
-        if (component == m_components.end()) {
-            qCWarning(KCMKEYS) << "Ignoring unknown component" << componentGroupName;
+    if (parent.isValid()) { // we are flat
+        q->beginInsertColumns(q->mapFromSource(parent), start, end);
+    }
+    const QAbstractItemModel *model = qobject_cast<QAbstractItemModel *>(q->sender());
+    if (m_models.at(0) == model) {
+        q->beginInsertColumns(QModelIndex(), start, end);
+    }
+}
+
+void ShortcutsModelPrivate::slotColumnsInserted(const QModelIndex &parent, int, int)
+{
+    const QAbstractItemModel *model = qobject_cast<QAbstractItemModel *>(q->sender());
+    if (m_models.at(0) == model || parent.isValid()) {
+        q->endInsertColumns();
+    }
+}
+
+void ShortcutsModelPrivate::slotColumnsAboutToBeRemoved(const QModelIndex &parent, int start, int end)
+{
+    if (parent.isValid()) {
+       q->beginRemoveColumns(q->mapFromSource(parent), start, end);
+    }
+    const QAbstractItemModel *model = qobject_cast<QAbstractItemModel *>(q->sender());
+    if (m_models.at(0) == model) {
+        q->beginRemoveColumns(QModelIndex(), start, end);
+    }
+}
+
+void ShortcutsModelPrivate::slotColumnsRemoved(const QModelIndex &parent, int, int)
+{
+    const QAbstractItemModel *model = qobject_cast<QAbstractItemModel *>(q->sender());
+    if (m_models.at(0) == model || parent.isValid()) {
+        q->endRemoveColumns();
+    }
+}
+
+void ShortcutsModelPrivate::slotDataChanged(const QModelIndex &from, const QModelIndex &to, const QVector<int> &roles)
+{
+    if (!from.isValid()) { // QSFPM bug, it emits dataChanged(invalid, invalid) if a cell in a hidden column changes
+        return;
+    }
+    const QModelIndex myFrom = q->mapFromSource(from);
+    const QModelIndex myTo = q->mapFromSource(to);
+    emit q->dataChanged(myFrom, myTo, roles);
+}
+
+void ShortcutsModelPrivate::slotSourceLayoutAboutToBeChanged(const QList<QPersistentModelIndex> &sourceParents, QAbstractItemModel::LayoutChangeHint hint)
+{
+    QList<QPersistentModelIndex> parents;
+    parents.reserve(sourceParents.size());
+    for (const QPersistentModelIndex &parent : sourceParents) {
+        if (!parent.isValid()) {
+            parents << QPersistentModelIndex();
             continue;
         }
-        KConfigGroup componentGroup(&config, componentGroupName);
-        if (!componentGroup.hasGroup("Global Shortcuts")) {
-            qCWarning(KCMKEYS) << "Group" << componentGroupName << "has no shortcuts group";
+        const QModelIndex mappedParent = q->mapFromSource(parent);
+        Q_ASSERT(mappedParent.isValid());
+        parents << mappedParent;
+    }
+
+    emit q->layoutAboutToBeChanged(parents, hint);
+
+    const QModelIndexList persistentIndexList = q->persistentIndexList();
+    layoutChangePersistentIndexes.reserve(persistentIndexList.size());
+
+    for (const QPersistentModelIndex &proxyPersistentIndex : persistentIndexList) {
+        proxyIndexes << proxyPersistentIndex;
+        Q_ASSERT(proxyPersistentIndex.isValid());
+        const QPersistentModelIndex srcPersistentIndex = q->mapToSource(proxyPersistentIndex);
+        Q_ASSERT(srcPersistentIndex.isValid());
+        layoutChangePersistentIndexes << srcPersistentIndex;
+    }
+}
+
+void ShortcutsModelPrivate::slotSourceLayoutChanged(const QList<QPersistentModelIndex> &sourceParents, QAbstractItemModel::LayoutChangeHint hint)
+{
+    for (int i = 0; i < proxyIndexes.size(); ++i) {
+        const QModelIndex proxyIdx = proxyIndexes.at(i);
+        QModelIndex newProxyIdx = q->mapFromSource(layoutChangePersistentIndexes.at(i));
+        q->changePersistentIndex(proxyIdx, newProxyIdx);
+    }
+
+    layoutChangePersistentIndexes.clear();
+    proxyIndexes.clear();
+
+    QList<QPersistentModelIndex> parents;
+    parents.reserve(sourceParents.size());
+    for (const QPersistentModelIndex &parent : sourceParents) {
+        if (!parent.isValid()) {
+            parents << QPersistentModelIndex();
             continue;
         }
-        KConfigGroup shortcutsGroup(&componentGroup, "Global Shortcuts");
-        for (const auto& key : shortcutsGroup.keyList()) {
-            auto shortcut = std::find_if(component->shortcuts.begin(), component->shortcuts.end(), [&] (const Shortcut &s) {
-                return s.uniqueName == key;
-            });
-            if (shortcut == component->shortcuts.end()) {
-                qCWarning(KCMKEYS) << "Ignoring unknown action" << key;
-                continue;
-            }
-            const auto shortcuts = QKeySequence::listFromString(shortcutsGroup.readEntry(key));
-            shortcut->activeShortcuts = QSet<QKeySequence>(shortcuts.cbegin(), shortcuts.cend());
+        const QModelIndex mappedParent = q->mapFromSource(parent);
+        Q_ASSERT(mappedParent.isValid());
+        parents << mappedParent;
+    }
+    emit q->layoutChanged(parents, hint);
+}
+
+void ShortcutsModelPrivate::slotModelAboutToBeReset()
+{
+    const QAbstractItemModel *sourceModel = qobject_cast<const QAbstractItemModel *>(q->sender());
+    Q_ASSERT(m_models.contains(const_cast<QAbstractItemModel *>(sourceModel)));
+    q->beginResetModel();
+}
+
+void ShortcutsModelPrivate::slotModelReset()
+{
+    m_rowCount = computeRowsPrior(nullptr);
+    q->endResetModel();
+}
+
+int ShortcutsModelPrivate::computeRowsPrior(const QAbstractItemModel *sourceModel) const
+{
+    int rowsPrior = 0;
+    for (const QAbstractItemModel *model : qAsConst(m_models)) {
+        if (model == sourceModel) {
+            break;
         }
+        rowsPrior += model->rowCount();
     }
-    emit dataChanged(index(0, 0), index(0, rowCount()), {ActiveShortcutsRole, CustomShortcutsRole});
+    return rowsPrior;
 }
 
-void ShortcutsModel::addApplication(const QString &desktopFileName, const QString &displayName)
+QAbstractItemModel *ShortcutsModelPrivate::sourceModelForRow(int row, int *sourceRow) const
 {
-    // Register a dummy action to trigger kglobalaccel to parse the desktop file
-    QStringList actionId = buildActionId(desktopFileName, displayName, QString(), QString());
-    m_globalAccelInterface->doRegister(actionId);
-    m_globalAccelInterface->unRegister(actionId);
-    QCollator collator;
-    collator.setCaseSensitivity(Qt::CaseInsensitive);
-    collator.setNumericMode(true);
-    auto pos = std::lower_bound(m_components.begin(), m_components.end(), displayName, [&] (const Component &c, const QString &name) {
-        return c.type != i18n("System Services") &&  collator.compare(c.friendlyName, name) < 0;
-    });
-    auto watcher = new QDBusPendingCallWatcher(m_globalAccelInterface->getComponent(desktopFileName));
-    connect(watcher, &QDBusPendingCallWatcher::finished, this, [=] {
-        QDBusPendingReply<QDBusObjectPath> reply = *watcher;
-        watcher->deleteLater();
-        if (!reply.isValid()) {
-            genericErrorOccured(QStringLiteral("Error while calling objectPath of added application") + desktopFileName, reply.error());
-            return;
+    int rowCount = 0;
+    QAbstractItemModel *selection = nullptr;
+    for (QAbstractItemModel *model : qAsConst(m_models)) {
+        const int subRowCount = model->rowCount();
+        if (rowCount + subRowCount > row) {
+            selection = model;
+            break;
         }
-        KGlobalAccelComponentInterface component(m_globalAccelInterface->service(), reply.value().path(), m_globalAccelInterface->connection());
-        auto infoWatcher = new QDBusPendingCallWatcher(component.allShortcutInfos());
-        connect(infoWatcher, &QDBusPendingCallWatcher::finished, this, [=] {
-            QDBusPendingReply<QList<KGlobalShortcutInfo>> infoReply = *infoWatcher;
-            infoWatcher->deleteLater();
-            if (!infoReply.isValid()) {
-                genericErrorOccured(QStringLiteral("Error while calling allShortCutInfos on new component") + desktopFileName, infoReply.error());
-                return;
-            }
-            qCDebug(KCMKEYS) << "inserting at " << pos - m_components.begin();
-            emit beginInsertRows(QModelIndex(), pos - m_components.begin(),  pos - m_components.begin());
-            Component c = loadComponent(infoReply.value());
-            m_components.insert(pos, c);
-            emit endInsertRows();
-        });
-    });
+        rowCount += subRowCount;
+    }
+    *sourceRow = row - rowCount;
+    return selection;
 }
 
-void ShortcutsModel::removeComponent(const Component &component)
-{
-    const QString &uniqueName = component.uniqueName;
-    auto componentReply = m_globalAccelInterface->getComponent(uniqueName);
-    componentReply.waitForFinished();
-    if (!componentReply.isValid()) {
-        genericErrorOccured(QStringLiteral("Error while calling objectPath of component") + uniqueName, componentReply.error());
-        return;
-    }
-    KGlobalAccelComponentInterface componentInterface(m_globalAccelInterface->service(), componentReply.value().path(), m_globalAccelInterface->connection());
-    qCDebug(KCMKEYS) << "Cleaning up component at" << componentReply.value();
-    auto cleanUpReply = componentInterface.cleanUp();
-    cleanUpReply.waitForFinished();
-    if (!cleanUpReply.isValid()) {
-        genericErrorOccured(QStringLiteral("Error while calling cleanUp of component") + uniqueName, cleanUpReply.error());
-        return;
-    }
-    auto it =  std::find_if(m_components.begin(), m_components.end(), [&](const Component &c) {
-        return c.uniqueName == uniqueName;
-    });
-    const int row = it - m_components.begin();
-    beginRemoveRows(QModelIndex(), row, row);
-    m_components.remove(row);
-    endRemoveRows();
-}
-
-void ShortcutsModel::genericErrorOccured(const QString &description, const QDBusError &error)
-{
-    qCCritical(KCMKEYS) << description;
-    if (error.isValid()) {
-        qCCritical(KCMKEYS) << error.name() << error.message();
-    }
-    emit this->errorOccured(i18n("Error while communicating with the global shortcuts service"));
-}
+#include "moc_shortcutsmodel.cpp"

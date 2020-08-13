@@ -121,7 +121,7 @@ KCM.SimpleKCM {
                             QQC2.ToolButton {
                                 Layout.preferredHeight: Kirigami.Units.iconSizes.small + Kirigami.Units.largeSpacing
                                 Layout.preferredWidth: Layout.preferredHeight
-                                visible: !exportActive && !model.pendingDeletion
+                                visible: model.section != i18n("Common Actions") && !exportActive && !model.pendingDeletion
                                 opacity: componentDelegate.containsMouse || componentDelegate.ListView.isCurrentItem ? 1 : 0
                                 enabled: opacity
                                 icon.name: "edit-delete"
@@ -160,9 +160,9 @@ KCM.SimpleKCM {
                             onToggled: {
                                 const checked = sectionCheckbox.checked
                                 const startIndex = kcm.shortcutsModel.index(0, 0)
-                                const indices = kcm.shortcutsModel.match(startIndex, Private.ShortcutsModel.SectionRole, section, -1)
+                                const indices = kcm.shortcutsModel.match(startIndex, Private.BaseModel.SectionRole, section, -1)
                                 for (const index of indices) {
-                                    kcm.shortcutsModel.setData(index, checked, Private.ShortcutsModel.CheckedRole)
+                                    kcm.shortcutsModel.setData(index, checked, Private.BaseModel.CheckedRole)
                                 }
                             }
                             Connections {
@@ -170,14 +170,15 @@ KCM.SimpleKCM {
                                 target: kcm.shortcutsModel
                                 function onDataChanged (topLeft, bottomRight, roles) {
                                     const startIndex = kcm.shortcutsModel.index(0, 0)
-                                    const indices = kcm.shortcutsModel.match(startIndex, Private.ShortcutsModel.SectionRole, section, -1)
-                                    sectionCheckbox.checked = indices.reduce((acc, index) => acc && kcm.shortcutsModel.data(index,Private.ShortcutsModel.CheckedRole), true)
+                                    const indices = kcm.shortcutsModel.match(startIndex, Private.BaseModel.SectionRole, section, -1)
+                                    sectionCheckbox.checked = indices.reduce((acc, index) => acc && kcm.shortcutsModel.data(index, Private.BaseModel.CheckedRole), true)
                                 }
                             }
                         }
                     }
                     onCurrentItemChanged: dm.rootIndex = kcm.filteredModel.index(currentIndex, 0)
-                    onCurrentIndexChanged: shortcutsList.selectedIndex = -1
+                    onCurrentIndexChanged:{ shortcutsList.selectedIndex = -1;
+                    }
                 }
             }
             Item {

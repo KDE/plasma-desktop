@@ -25,18 +25,18 @@
 
 #include <KQuickAddons/ConfigModule>
 
-class QDBusError;
-
 class FilteredShortcutsModel;
 class KGlobalAccelInterface;
+class GlobalAccelModel;
 class ShortcutsModel;
+class StandardShortcutsModel;
 
 class KCMKeys : public KQuickAddons::ConfigModule
 {
     Q_OBJECT 
 
-    Q_PROPERTY(ShortcutsModel *shortcutsModel READ shortcutsModel CONSTANT)
     Q_PROPERTY(FilteredShortcutsModel *filteredModel READ filteredModel CONSTANT)
+    Q_PROPERTY(ShortcutsModel *shortcutsModel READ shortcutsModel CONSTANT)
     Q_PROPERTY(QString lastError READ lastError NOTIFY errorOccured)
 
 public:
@@ -55,8 +55,8 @@ public:
     Q_INVOKABLE QString keySequenceToString(const QKeySequence &keySequence) const;
     Q_INVOKABLE QString urlFilename(const QUrl &url);
 
-    ShortcutsModel* shortcutsModel() const;
     FilteredShortcutsModel* filteredModel() const;
+    ShortcutsModel* shortcutsModel() const;
     QString lastError() const;
 
 Q_SIGNALS:
@@ -66,9 +66,11 @@ private:
     void setError(const QString &errorMessage);
 
     QString m_lastError;
-    ShortcutsModel *m_shortcutsModel;
     FilteredShortcutsModel *m_filteredModel;
+    GlobalAccelModel *m_globalAccelModel;
     KGlobalAccelInterface *m_globalAccelInterface;
+    ShortcutsModel *m_shortcutsModel;
+    StandardShortcutsModel *m_standardShortcutsModel;
 };
 
 #endif
