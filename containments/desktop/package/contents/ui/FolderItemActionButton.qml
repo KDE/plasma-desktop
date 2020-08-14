@@ -32,7 +32,7 @@ PlasmaCore.SvgItem {
         switch(plasmoid.configuration.iconSize) {
             case 0: return units.iconSizes.small;
             case 1: return units.iconSizes.small;
-            case 2: return units.iconSizes.small;
+            case 2: return units.iconSizes.smallMedium;
             case 3: return units.iconSizes.smallMedium;
             case 4: return units.iconSizes.smallMedium;
             case 5: return units.iconSizes.medium;
