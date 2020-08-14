@@ -1807,7 +1807,13 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
         menu->addSeparator();
         menu->addAction(m_actionCollection.action(QStringLiteral("cut")));
         menu->addAction(m_actionCollection.action(QStringLiteral("copy")));
-        menu->addAction(m_actionCollection.action(QStringLiteral("paste")));
+        if (urls.length() == 1 && items.first().isDir()) {
+            menu->addAction(m_actionCollection.action(QStringLiteral("pasteto")));
+        }
+        else {
+            menu->addAction(m_actionCollection.action(QStringLiteral("paste")));
+        }
+
         menu->addSeparator();
         menu->addAction(m_actionCollection.action(QStringLiteral("rename")));
         menu->addAction(m_actionCollection.action(QStringLiteral("restoreFromTrash")));
