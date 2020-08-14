@@ -51,15 +51,16 @@
 #include "fontssettings.h"
 #include "fontsaasettings.h"
 
+#include "fontsdata.h"
+
 /**** DLL Interface ****/
-K_PLUGIN_FACTORY_WITH_JSON(KFontsFactory, "kcm_fonts.json", registerPlugin<KFonts>();)
+K_PLUGIN_FACTORY_WITH_JSON(KFontsFactory, "kcm_fonts.json", registerPlugin<KFonts>();registerPlugin<FontsData>();)
 
 /**** KFonts ****/
 
 KFonts::KFonts(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
-    , m_settings(new FontsSettings(this))
-    , m_settingsAA(new FontsAASettings(this))
+    , m_data(new FontsData(this))
     , m_subPixelOptionsModel(new QStandardItemModel(this))
     , m_hintingOptionsModel(new QStandardItemModel(this))
 {
@@ -82,8 +83,8 @@ KFonts::KFonts(QObject *parent, const QVariantList &args)
         auto item = new QStandardItem(KXftConfig::description(s));
         m_hintingOptionsModel->appendRow(item);
     }
-    connect(m_settingsAA, &FontsAASettings::hintingChanged, this, &KFonts::hintingCurrentIndexChanged);
-    connect(m_settingsAA, &FontsAASettings::subPixelChanged, this, &KFonts::subPixelCurrentIndexChanged);
+    connect(fontsAASettings(), &FontsAASettings::hintingChanged, this, &KFonts::hintingCurrentIndexChanged);
+    connect(fontsAASettings(), &FontsAASettings::subPixelChanged, this, &KFonts::subPixelCurrentIndexChanged);
 }
 
 KFonts::~KFonts()
@@ -92,12 +93,12 @@ KFonts::~KFonts()
 
 FontsSettings *KFonts::fontsSettings() const
 {
-    return m_settings;
+    return m_data->settings();
 }
 
 FontsAASettings *KFonts::fontsAASettings() const
 {
-    return m_settingsAA;
+    return m_data->settingsAA();
 }
 
 QAbstractItemModel *KFonts::subPixelOptionsModel() const
@@ -119,7 +120,7 @@ void KFonts::load()
     // NOTE: This needs to be done AFTER AA settings is loaded
     // otherwise AA settings will be reset in process of loading
     // previews
-    engine()->addImageProvider("preview", new PreviewImageProvider(m_settings->font()));
+    engine()->addImageProvider("preview", new PreviewImageProvider(fontsSettings()->font()));
 
     // KCM expect save state to be false at this point (can be true because if a font setting loaded
     // from the config isn't available on the system, font substitution may take place)
@@ -128,9 +129,9 @@ void KFonts::load()
 
 void KFonts::save()
 {
-    auto dpiItem = m_settingsAA->findItem("forceFontDPI");
-    auto dpiWaylandItem = m_settingsAA->findItem("forceFontDPIWayland");
-    auto antiAliasingItem = m_settingsAA->findItem("antiAliasing");
+    auto dpiItem = fontsAASettings()->findItem("forceFontDPI");
+    auto dpiWaylandItem = fontsAASettings()->findItem("forceFontDPIWayland");
+    auto antiAliasingItem = fontsAASettings()->findItem("antiAliasing");
     Q_ASSERT(dpiItem && dpiWaylandItem && antiAliasingItem);
     if (dpiItem->isSaveNeeded() || dpiWaylandItem->isSaveNeeded() || antiAliasingItem->isSaveNeeded()) {
         emit aliasingChangeApplied();
@@ -143,7 +144,7 @@ void KFonts::save()
 #if HAVE_X11
     // if the setting is reset in the module, remove the dpi value,
     // otherwise don't explicitly remove it and leave any possible system-wide value
-    if (m_settingsAA->forceFontDPI() == 0 && forceFontDPIChanged && !KWindowSystem::isPlatformWayland()) {
+    if (fontsAASettings()->forceFontDPI() == 0 && forceFontDPIChanged && !KWindowSystem::isPlatformWayland()) {
         QProcess proc;
         proc.setProcessChannelMode(QProcess::ForwardedChannels);
         proc.start("xrdb", QStringList() << "-quiet" << "-remove" << "-nocpp");
@@ -169,17 +170,17 @@ void KFonts::adjustFont(const QFont &font, const QString &category)
 
     if (ret == QDialog::Accepted) {
         if (category == QLatin1String("font")) {
-            m_settings->setFont(selFont);
+            fontsSettings()->setFont(selFont);
         } else if (category == QLatin1String("menuFont")) {
-            m_settings->setMenuFont(selFont);
+            fontsSettings()->setMenuFont(selFont);
         } else if (category == QLatin1String("toolBarFont")) {
-            m_settings->setToolBarFont(selFont);
+            fontsSettings()->setToolBarFont(selFont);
         } else if (category == QLatin1String("activeFont")) {
-            m_settings->setActiveFont(selFont);
+            fontsSettings()->setActiveFont(selFont);
         } else if (category == QLatin1String("smallestReadableFont")) {
-            m_settings->setSmallestReadableFont(selFont);
+            fontsSettings()->setSmallestReadableFont(selFont);
         } else if (category == QLatin1String("fixed")) {
-            m_settings->setFixed(selFont);
+            fontsSettings()->setFixed(selFont);
         }
     }
     emit fontsHaveChanged();
@@ -187,15 +188,15 @@ void KFonts::adjustFont(const QFont &font, const QString &category)
 
 void KFonts::adjustAllFonts()
 {
-    QFont font = m_settings->font();
+    QFont font = fontsSettings()->font();
     KFontChooser::FontDiffFlags fontDiffFlags;
     int ret = KFontChooserDialog::getFontDiff(font, fontDiffFlags, KFontChooser::NoDisplayFlags);
 
     if (ret == QDialog::Accepted && fontDiffFlags) {
-        m_settings->setFont(applyFontDiff(m_settings->font(), font, fontDiffFlags));
-        m_settings->setMenuFont(applyFontDiff(m_settings->menuFont(), font, fontDiffFlags));
-        m_settings->setToolBarFont(applyFontDiff(m_settings->toolBarFont(), font, fontDiffFlags));
-        m_settings->setActiveFont(applyFontDiff(m_settings->activeFont(), font, fontDiffFlags));
+        fontsSettings()->setFont(applyFontDiff(fontsSettings()->font(), font, fontDiffFlags));
+        fontsSettings()->setMenuFont(applyFontDiff(fontsSettings()->menuFont(), font, fontDiffFlags));
+        fontsSettings()->setToolBarFont(applyFontDiff(fontsSettings()->toolBarFont(), font, fontDiffFlags));
+        fontsSettings()->setActiveFont(applyFontDiff(fontsSettings()->activeFont(), font, fontDiffFlags));
 
         QFont smallestFont = font;
         // Make the small font 2 points smaller than the general font, but only
@@ -206,11 +207,11 @@ void KFonts::adjustAllFonts()
         if (generalFontPointSize >= 9) {
             smallestFont.setPointSize(generalFontPointSize - 2);
         }
-        m_settings->setSmallestReadableFont(applyFontDiff(m_settings->smallestReadableFont(), smallestFont, fontDiffFlags));
+        fontsSettings()->setSmallestReadableFont(applyFontDiff(fontsSettings()->smallestReadableFont(), smallestFont, fontDiffFlags));
 
-        const QFont adjustedFont = applyFontDiff(m_settings->fixed(), font, fontDiffFlags);
+        const QFont adjustedFont = applyFontDiff(fontsSettings()->fixed(), font, fontDiffFlags);
         if (QFontInfo(adjustedFont).fixedPitch()) {
-            m_settings->setFixed(adjustedFont);
+            fontsSettings()->setFixed(adjustedFont);
         }
     }
 }
@@ -237,22 +238,22 @@ QFont KFonts::applyFontDiff(const QFont &fnt, const QFont &newFont, int fontDiff
 
 int KFonts::subPixelCurrentIndex() const
 {
-    return m_settingsAA->subPixel() - KXftConfig::SubPixel::None;
+    return fontsAASettings()->subPixel() - KXftConfig::SubPixel::None;
 }
 
 void KFonts::setSubPixelCurrentIndex(int idx)
 {
-    m_settingsAA->setSubPixel(static_cast<KXftConfig::SubPixel::Type>(KXftConfig::SubPixel::None + idx));
+    fontsAASettings()->setSubPixel(static_cast<KXftConfig::SubPixel::Type>(KXftConfig::SubPixel::None + idx));
 }
 
 int KFonts::hintingCurrentIndex() const
 {
-    return m_settingsAA->hinting() - KXftConfig::Hint::None;
+    return fontsAASettings()->hinting() - KXftConfig::Hint::None;
 }
 
 void KFonts::setHintingCurrentIndex(int idx)
 {
-    m_settingsAA->setHinting(static_cast<KXftConfig::Hint::Style>(KXftConfig::Hint::None + idx));
+    fontsAASettings()->setHinting(static_cast<KXftConfig::Hint::Style>(KXftConfig::Hint::None + idx));
 }
 
 #include "fonts.moc"

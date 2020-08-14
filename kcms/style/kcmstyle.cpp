@@ -56,9 +56,10 @@
 #include "stylesmodel.h"
 #include "previewitem.h"
 #include "stylesettings.h"
+#include "styledata.h"
 #include "gtkpage.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcm_style.json", registerPlugin<KCMStyle>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcm_style.json", registerPlugin<KCMStyle>();registerPlugin<StyleData>();)
 
 extern "C"
 {
@@ -79,7 +80,7 @@ extern "C"
 
 KCMStyle::KCMStyle(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
-    , m_settings(new StyleSettings(this))
+    , m_data(new StyleData(this))
     , m_model(new StylesModel(this))
     , m_gtkPage()
 {
@@ -105,15 +106,15 @@ KCMStyle::KCMStyle(QObject *parent, const QVariantList &args)
         });
     }
     connect(m_model, &StylesModel::selectedStyleChanged, this, [this](const QString &style) {
-        m_settings->setWidgetStyle(style);
+        styleSettings()->setWidgetStyle(style);
     });
-    connect(m_settings, &StyleSettings::widgetStyleChanged, this, [this] {
-        m_model->setSelectedStyle(m_settings->widgetStyle());
+    connect(styleSettings(), &StyleSettings::widgetStyleChanged, this, [this] {
+        m_model->setSelectedStyle(styleSettings()->widgetStyle());
     });
-    connect(m_settings, &StyleSettings::iconsOnButtonsChanged, this, [this] {
+    connect(styleSettings(), &StyleSettings::iconsOnButtonsChanged, this, [this] {
         m_effectsDirty = true;
     });
-    connect(m_settings, &StyleSettings::iconsInMenusChanged, this, [this] {
+    connect(styleSettings(), &StyleSettings::iconsInMenusChanged, this, [this] {
         m_effectsDirty = true;
     });
 }
@@ -127,7 +128,7 @@ StylesModel *KCMStyle::model() const
 
 StyleSettings *KCMStyle::styleSettings() const
 {
-    return m_settings;
+    return m_data->settings();
 }
 
 KCMStyle::ToolBarStyle KCMStyle::mainToolBarStyle() const
@@ -142,7 +143,7 @@ void KCMStyle::setMainToolBarStyle(ToolBarStyle style)
         emit mainToolBarStyleChanged();
 
         const QMetaEnum toolBarStyleEnum = QMetaEnum::fromType<ToolBarStyle>();
-        m_settings->setToolButtonStyle(toolBarStyleEnum.valueToKey(m_mainToolBarStyle));
+        styleSettings()->setToolButtonStyle(toolBarStyleEnum.valueToKey(m_mainToolBarStyle));
         m_effectsDirty = true;
     }
 }
@@ -159,7 +160,7 @@ void KCMStyle::setOtherToolBarStyle(ToolBarStyle style)
         emit otherToolBarStyleChanged();
 
         const QMetaEnum toolBarStyleEnum = QMetaEnum::fromType<ToolBarStyle>();
-        m_settings->setToolButtonStyleOtherToolbars(toolBarStyleEnum.valueToKey(m_otherToolBarStyle));
+        styleSettings()->setToolButtonStyleOtherToolbars(toolBarStyleEnum.valueToKey(m_otherToolBarStyle));
         m_effectsDirty = true;
     }
 }
@@ -229,7 +230,7 @@ void KCMStyle::configure(const QString &title, const QString &styleName, QQuickI
         KGlobalSettings::self()->emitChange(KGlobalSettings::StyleChanged);
 
         // When user edited a style, assume they want to use it, too
-        m_settings->setWidgetStyle(styleName);
+        styleSettings()->setWidgetStyle(styleName);
 
         // We call setNeedsSave(true) here to make sure we force style re-creation
         setNeedsSave(true);
@@ -257,7 +258,7 @@ void KCMStyle::load()
 
     ManagedConfigModule::load();
     m_model->load();
-    m_previousStyle = m_settings->widgetStyle();
+    m_previousStyle = styleSettings()->widgetStyle();
 
     loadSettingsToModel();
 
@@ -273,17 +274,17 @@ void KCMStyle::save()
     // Check whether the new style can actually be loaded before saving it.
     // Otherwise apps will use the default style despite something else having been written to the config
     bool newStyleLoaded = false;
-    if (m_settings->widgetStyle() != m_previousStyle) {
-        QScopedPointer<QStyle> newStyle(QStyleFactory::create(m_settings->widgetStyle()));
+    if (styleSettings()->widgetStyle() != m_previousStyle) {
+        QScopedPointer<QStyle> newStyle(QStyleFactory::create(styleSettings()->widgetStyle()));
         if (newStyle) {
             newStyleLoaded = true;
-            m_previousStyle = m_settings->widgetStyle();
+            m_previousStyle = styleSettings()->widgetStyle();
         } else {
-            const QString styleDisplay = m_model->data(m_model->index(m_model->indexOfStyle(m_settings->widgetStyle()), 0), Qt::DisplayRole).toString();
+            const QString styleDisplay = m_model->data(m_model->index(m_model->indexOfStyle(styleSettings()->widgetStyle()), 0), Qt::DisplayRole).toString();
             emit showErrorMessage(i18n("Failed to apply selected style '%1'.", styleDisplay));
 
             // Reset selected style back to current in case of failure
-            m_settings->setWidgetStyle(m_previousStyle);
+            styleSettings()->setWidgetStyle(m_previousStyle);
         }
     }
 
@@ -332,11 +333,11 @@ void KCMStyle::defaults()
 
 void KCMStyle::loadSettingsToModel()
 {
-    emit m_settings->widgetStyleChanged();
+    emit styleSettings()->widgetStyleChanged();
 
     const QMetaEnum toolBarStyleEnum = QMetaEnum::fromType<ToolBarStyle>();
-    setMainToolBarStyle(static_cast<ToolBarStyle>(toolBarStyleEnum.keyToValue(qUtf8Printable(m_settings->toolButtonStyle()))));
-    setOtherToolBarStyle(static_cast<ToolBarStyle>(toolBarStyleEnum.keyToValue(qUtf8Printable(m_settings->toolButtonStyleOtherToolbars()))));
+    setMainToolBarStyle(static_cast<ToolBarStyle>(toolBarStyleEnum.keyToValue(qUtf8Printable(styleSettings()->toolButtonStyle()))));
+    setOtherToolBarStyle(static_cast<ToolBarStyle>(toolBarStyleEnum.keyToValue(qUtf8Printable(styleSettings()->toolButtonStyleOtherToolbars()))));
 }
 
 #include "kcmstyle.moc"

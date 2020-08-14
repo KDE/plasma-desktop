@@ -4,6 +4,7 @@ set(kcm_file_SRCS
   kcm.cpp
   fileexcludefilters.cpp
   filteredfoldermodel.cpp
+  baloodata.cpp
 )
 
 add_library(kcm_baloofile MODULE ${kcm_file_SRCS})

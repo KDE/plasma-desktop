@@ -59,14 +59,15 @@
 #include "colorsmodel.h"
 #include "filterproxymodel.h"
 #include "colorssettings.h"
+#include "colorsdata.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "kcm_colors.json", registerPlugin<KCMColors>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "kcm_colors.json", registerPlugin<KCMColors>();registerPlugin<ColorsData>();)
 
 KCMColors::KCMColors(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
     , m_model(new ColorsModel(this))
     , m_filteredModel(new FilterProxyModel(this))
-    , m_settings(new ColorsSettings(this))
+    , m_data(new ColorsData(this))
     , m_config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")))
 {
     qmlRegisterUncreatableType<KCMColors>("org.kde.private.kcms.colors", 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
@@ -83,11 +84,11 @@ KCMColors::KCMColors(QObject *parent, const QVariantList &args)
 
     connect(m_model, &ColorsModel::selectedSchemeChanged, this, [this](const QString &scheme) {
         m_selectedSchemeDirty = true;
-        m_settings->setColorScheme(scheme);
+        colorsSettings()->setColorScheme(scheme);
     });
 
-    connect(m_settings, &ColorsSettings::colorSchemeChanged, this, [this] {
-        m_model->setSelectedScheme(m_settings->colorScheme());
+    connect(colorsSettings(), &ColorsSettings::colorSchemeChanged, this, [this] {
+        m_model->setSelectedScheme(colorsSettings()->colorScheme());
     });
 
     connect(m_model, &ColorsModel::selectedSchemeChanged, m_filteredModel, &FilterProxyModel::setSelectedScheme);
@@ -111,7 +112,7 @@ FilterProxyModel *KCMColors::filteredModel() const
 
 ColorsSettings *KCMColors::colorsSettings() const
 {
-    return m_settings;
+    return m_data->settings();
 }
 
 bool KCMColors::downloadingFile() const
@@ -271,7 +272,7 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
             m_model->load(); // would be cool to just reload/add the changed/new ones
 
             // If the currently active scheme was edited, consider settings dirty even if the scheme itself didn't change
-            if (savedThemes.contains(m_settings->colorScheme())) {
+            if (savedThemes.contains(colorsSettings()->colorScheme())) {
                 m_activeSchemeEdited = true;
                 settingsChanged();
             }
@@ -319,14 +320,14 @@ void KCMColors::load()
     m_config->markAsClean();
     m_config->reparseConfiguration();
 
-    const QString schemeName = m_settings->colorScheme();
+    const QString schemeName = colorsSettings()->colorScheme();
 
     // If the scheme named in kdeglobals doesn't exist, show a warning and use default scheme
     if (m_model->indexOfScheme(schemeName) == -1) {
-        m_model->setSelectedScheme(m_settings->defaultColorSchemeValue());
+        m_model->setSelectedScheme(colorsSettings()->defaultColorSchemeValue());
         // These are normally synced but initially the model doesn't emit a change to avoid the
         // Apply button from being enabled without any user interaction. Sync manually here.
-        m_filteredModel->setSelectedScheme(m_settings->defaultColorSchemeValue());
+        m_filteredModel->setSelectedScheme(colorsSettings()->defaultColorSchemeValue());
         emit showSchemeNotInstalledWarning(schemeName);
     } else {
         m_model->setSelectedScheme(schemeName);

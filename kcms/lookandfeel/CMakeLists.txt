@@ -9,6 +9,7 @@ configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
 set(kcm_lookandfeel_SRCS
     kcmmain.cpp
     kcm.cpp
+    lookandfeeldata.cpp
     ../krdb/krdb.cpp
 )
 
@@ -74,6 +75,7 @@ set(lookandfeeltool_SRCS
     lnftool.cpp
     # TODO: load kcm plugin instead of using code copy
     kcm.cpp
+    lookandfeeldata.cpp
     ../krdb/krdb.cpp
 )
 

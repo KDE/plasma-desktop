@@ -31,19 +31,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <Sonnet/Settings>
 #include <KPluginFactory>
 #include "spellcheckingskeleton.h"
+#include "spellcheckingdata.h"
 
-K_PLUGIN_FACTORY(SpellFactory, registerPlugin<SonnetSpellCheckingModule>();)
+K_PLUGIN_FACTORY(SpellFactory, registerPlugin<SonnetSpellCheckingModule>();registerPlugin<SpellCheckingData>();)
 
 SonnetSpellCheckingModule::SonnetSpellCheckingModule(QWidget *parent, const QVariantList &)
     : KCModule(parent)
+    , m_data(new SpellCheckingData(this))
 {
     QBoxLayout *layout = new QVBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
-    m_skeleton = new SpellCheckingSkeleton(this);
     m_configWidget = new Sonnet::ConfigView(this);
-    m_configWidget->setNoBackendFoundVisible(m_skeleton->clients().isEmpty());
+    m_configWidget->setNoBackendFoundVisible(skeleton()->clients().isEmpty());
     layout->addWidget(m_configWidget);
-    m_managedConfig = addConfig(m_skeleton, m_configWidget);
+    m_managedConfig = addConfig(skeleton(), m_configWidget);
     connect(m_configWidget, &Sonnet::ConfigView::configChanged, this, &SonnetSpellCheckingModule::stateChanged);
 }
 
@@ -52,7 +53,7 @@ void SonnetSpellCheckingModule::stateChanged()
     bool unmanagedChangeState = false;
     bool unmanagedDefaultState = true;
 
-    QStringList refIgnoreList(m_skeleton->ignoreList());
+    QStringList refIgnoreList(skeleton()->ignoreList());
     refIgnoreList.removeDuplicates();
     refIgnoreList.sort();
 
@@ -67,7 +68,7 @@ void SonnetSpellCheckingModule::stateChanged()
     unmanagedChangeState |= currentIgnoreList != refIgnoreList;
     unmanagedDefaultState &= currentIgnoreList == defaultIgnoreList;
 
-    QStringList refPreferredLanguagesList(m_skeleton->preferredLanguages());
+    QStringList refPreferredLanguagesList(skeleton()->preferredLanguages());
     refPreferredLanguagesList.removeDuplicates();
     refPreferredLanguagesList.sort();
 
@@ -82,7 +83,7 @@ void SonnetSpellCheckingModule::stateChanged()
     unmanagedChangeState |= currentPreferredLanguagesList != refPreferredLanguagesList;
     unmanagedDefaultState &= currentPreferredLanguagesList == defaultPreferredLanguagesList;
 
-    unmanagedChangeState |= m_skeleton->defaultLanguage() != m_configWidget->language();
+    unmanagedChangeState |= skeleton()->defaultLanguage() != m_configWidget->language();
     unmanagedDefaultState &= m_configWidget->language() == Sonnet::Settings::defaultDefaultLanguage();
 
     unmanagedWidgetDefaultState(unmanagedDefaultState);
@@ -97,20 +98,20 @@ void SonnetSpellCheckingModule::load()
 {
     KCModule::load();
     // Set unmanaged widget value
-    m_configWidget->setIgnoreList(m_skeleton->ignoreList());
-    m_configWidget->setPreferredLanguages(m_skeleton->preferredLanguages());
-    m_configWidget->setLanguage(m_skeleton->defaultLanguage());
+    m_configWidget->setIgnoreList(skeleton()->ignoreList());
+    m_configWidget->setPreferredLanguages(skeleton()->preferredLanguages());
+    m_configWidget->setLanguage(skeleton()->defaultLanguage());
 }
 
 void SonnetSpellCheckingModule::save()
 {
-    m_skeleton->setIgnoreList(m_configWidget->ignoreList());
-    m_skeleton->setPreferredLanguages(m_configWidget->preferredLanguages());
-    m_skeleton->setDefaultLanguage(m_configWidget->language());
+    skeleton()->setIgnoreList(m_configWidget->ignoreList());
+    skeleton()->setPreferredLanguages(m_configWidget->preferredLanguages());
+    skeleton()->setDefaultLanguage(m_configWidget->language());
 
     // with addConfig, save on skeleton will be trigger only if one managed widget changed
     if (!m_managedConfig->hasChanged()) {
-        m_skeleton->save();
+        skeleton()->save();
     }
     KCModule::save();
 }
@@ -122,6 +123,11 @@ void SonnetSpellCheckingModule::defaults()
     m_configWidget->setIgnoreList(Sonnet::Settings::defaultIgnoreList());
     m_configWidget->setPreferredLanguages(Sonnet::Settings::defaultPreferredLanguages());
     m_configWidget->setLanguage(Sonnet::Settings::defaultDefaultLanguage());
+}
+
+SpellCheckingSkeleton *SonnetSpellCheckingModule::skeleton() const
+{
+    return m_data->settings();
 }
 
 #include "spellchecking.moc"

@@ -1,7 +1,7 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmsmserver\")
 
-set(kcm_smserver_PART_SRCS kcmsmserver.cpp)
+set(kcm_smserver_PART_SRCS kcmsmserver.cpp smserverdata.cpp)
 
 qt5_add_dbus_interface(kcm_smserver_PART_SRCS org.freedesktop.login1.Manager.xml login1_manager)
 

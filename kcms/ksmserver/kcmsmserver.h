@@ -28,6 +28,7 @@
 class QAction;
 
 class SMServerSettings;
+class SMServerData;
 class SMServerConfigImpl;
 
 class OrgFreedesktopLogin1ManagerInterface;
@@ -49,7 +50,7 @@ private:
   void checkFirmwareSetupRequested();
 
   QScopedPointer<Ui::SMServerConfigDlg> ui;
-  SMServerSettings *m_settings;
+  SMServerData *m_data;
   OrgFreedesktopLogin1ManagerInterface *m_login1Manager = nullptr;
   QAction *m_rebootNowAction = nullptr;
   bool m_isUefi = false;

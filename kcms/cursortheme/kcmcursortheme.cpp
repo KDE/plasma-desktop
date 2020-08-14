@@ -20,6 +20,7 @@
 #include <config-X11.h>
 
 #include "kcmcursortheme.h"
+#include "cursorthemedata.h"
 
 #include "xcursor/thememodel.h"
 #include "xcursor/sortproxymodel.h"
@@ -59,17 +60,17 @@
 #  include <X11/extensions/Xfixes.h>
 #endif
 
-K_PLUGIN_FACTORY_WITH_JSON(CursorThemeConfigFactory, "kcm_cursortheme.json", registerPlugin<CursorThemeConfig>();)
+K_PLUGIN_FACTORY_WITH_JSON(CursorThemeConfigFactory, "kcm_cursortheme.json", registerPlugin<CursorThemeConfig>();registerPlugin<CursorThemeData>();)
 
 CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args),
-      m_settings(new CursorThemeSettings(this)),
+      m_data(new CursorThemeData(this)),
       m_canInstall(true),
       m_canResize(true),
       m_canConfigure(true)
 {
-    m_preferredSize = m_settings->cursorSize();
-    connect(m_settings, &CursorThemeSettings::cursorThemeChanged, this, &CursorThemeConfig::updateSizeComboBox);
+    m_preferredSize = cursorThemeSettings()->cursorSize();
+    connect(cursorThemeSettings(), &CursorThemeSettings::cursorThemeChanged, this, &CursorThemeConfig::updateSizeComboBox);
     qmlRegisterType<PreviewWidget>("org.kde.private.kcm_cursortheme", 1, 0, "PreviewWidget");
     qmlRegisterType<SortProxyModel>();
     qmlRegisterType<CursorThemeSettings>();
@@ -111,7 +112,7 @@ CursorThemeConfig::~CursorThemeConfig()
 
 CursorThemeSettings *CursorThemeConfig::cursorThemeSettings() const
 {
-    return m_settings;
+    return m_data->settings();
 }
 
 void CursorThemeConfig::setCanInstall(bool can)
@@ -204,7 +205,7 @@ void CursorThemeConfig::updateSizeComboBox()
     m_sizesModel->clear();
 
     // refill the combo box and adopt its icon size
-    int row = cursorThemeIndex(m_settings->cursorTheme());
+    int row = cursorThemeIndex(cursorThemeSettings()->cursorTheme());
     QModelIndex selected = m_themeProxyModel->index(row, 0);
     int maxIconWidth = 0;
     int maxIconHeight = 0;
@@ -268,18 +269,18 @@ void CursorThemeConfig::updateSizeComboBox()
                     }
                 }
             }
-            m_settings->setCursorSize(size);
+            cursorThemeSettings()->setCursorSize(size);
         }
     }
 
     // enable or disable the combobox
-    if (m_settings->isImmutable("cursorSize")) {
+    if (cursorThemeSettings()->isImmutable("cursorSize")) {
         setCanResize(false);
     } else {
         setCanResize(m_sizesModel->rowCount() > 0);
     }
     // We need to emit a cursorSizeChanged in all case to refresh UI
-    emit m_settings->cursorSizeChanged();
+    emit cursorThemeSettings()->cursorSizeChanged();
 }
 
 bool CursorThemeConfig::applyTheme(const CursorTheme *theme, const int size)
@@ -367,13 +368,13 @@ QString CursorThemeConfig::cursorThemeFromIndex(int index) const
 void CursorThemeConfig::save()
 {
     ManagedConfigModule::save();
-    setPreferredSize(m_settings->cursorSize());
+    setPreferredSize(cursorThemeSettings()->cursorSize());
 
-    int row = cursorThemeIndex(m_settings->cursorTheme());
+    int row = cursorThemeIndex(cursorThemeSettings()->cursorTheme());
     QModelIndex selected = m_themeProxyModel->index(row, 0);
     const CursorTheme *theme = selected.isValid() ? m_themeProxyModel->theme(selected) : nullptr;
 
-    if (!applyTheme(theme, m_settings->cursorSize())) {
+    if (!applyTheme(theme, cursorThemeSettings()->cursorSize())) {
         emit showInfoMessage(i18n("You have to restart the Plasma session for these changes to take effect."));
     }
     removeThemes();
@@ -385,12 +386,12 @@ void CursorThemeConfig::save()
 void CursorThemeConfig::load()
 {
     ManagedConfigModule::load();
-    setPreferredSize(m_settings->cursorSize());
+    setPreferredSize(cursorThemeSettings()->cursorSize());
     // Get the name of the theme KDE is configured to use
-    QString currentTheme = m_settings->cursorTheme();
+    QString currentTheme = cursorThemeSettings()->cursorTheme();
 
     // Disable the listview and the buttons if we're in kiosk mode
-    if (m_settings->isImmutable( QStringLiteral( "cursorTheme" ))) {
+    if (cursorThemeSettings()->isImmutable( QStringLiteral( "cursorTheme" ))) {
           setCanConfigure(false);
           setCanInstall(false);
     }
@@ -404,7 +405,7 @@ void CursorThemeConfig::load()
 void CursorThemeConfig::defaults()
 {
     ManagedConfigModule::defaults();
-    m_preferredSize = m_settings->cursorSize();
+    m_preferredSize = cursorThemeSettings()->cursorSize();
 }
 
 bool CursorThemeConfig::isSaveNeeded() const

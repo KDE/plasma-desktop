@@ -31,6 +31,7 @@
 class QQuickItem;
 class QStandardItemModel;
 class LookAndFeelSettings;
+class LookAndFeelData;
 
 class KCMLookandFeel : public KQuickAddons::ManagedConfigModule
 {
@@ -97,7 +98,7 @@ private:
     QDir cursorThemeDir(const QString &theme, const int depth);
     const QStringList cursorSearchPaths();
 
-    LookAndFeelSettings *m_settings;
+    LookAndFeelData *m_data;
     QStandardItemModel *m_model;
     KPackage::Package m_package;
     QStringList m_cursorSearchPaths;

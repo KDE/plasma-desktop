@@ -33,12 +33,13 @@
 #include <KPackage/PackageLoader>
 
 #include "splashscreensettings.h"
+#include "splashscreendata.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMSplashScreenFactory, "kcm_splashscreen.json", registerPlugin<KCMSplashScreen>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMSplashScreenFactory, "kcm_splashscreen.json", registerPlugin<KCMSplashScreen>();registerPlugin<SplashScreenData>();)
 
 KCMSplashScreen::KCMSplashScreen(QObject* parent, const QVariantList& args)
     : KQuickAddons::ManagedConfigModule(parent, args)
-    , m_settings(new SplashScreenSettings(this))
+    , m_data(new SplashScreenData(this))
     , m_model(new QStandardItemModel(this))
 {
     qmlRegisterType<SplashScreenSettings>();
@@ -83,7 +84,7 @@ QList<KPackage::Package> KCMSplashScreen::availablePackages(const QString &compo
 
 SplashScreenSettings *KCMSplashScreen::splashScreenSettings() const
 {
-    return m_settings;
+    return m_data->settings();
 }
 
 QStandardItemModel *KCMSplashScreen::splashModel() const
@@ -117,16 +118,16 @@ void KCMSplashScreen::loadModel()
     row->setData(i18n("No splash screen will be shown"), DescriptionRole);
     m_model->insertRow(0, row);
 
-    if (-1 == pluginIndex(m_settings->theme())) {
+    if (-1 == pluginIndex(m_data->settings()->theme())) {
         defaults();
     }
 
-    emit m_settings->themeChanged();
+    emit m_data->settings()->themeChanged();
 }
 
 void KCMSplashScreen::save()
 {
-    m_settings->setEngine(m_settings->theme() == QStringLiteral("None") ? QStringLiteral("none") : QStringLiteral("KSplashQML"));
+    m_data->settings()->setEngine(m_data->settings()->theme() == QStringLiteral("None") ? QStringLiteral("none") : QStringLiteral("KSplashQML"));
     ManagedConfigModule::save();
 }
 

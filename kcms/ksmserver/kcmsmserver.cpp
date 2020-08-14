@@ -41,6 +41,7 @@
 
 #include "kcmsmserver.h"
 #include "smserversettings.h"
+#include "smserverdata.h"
 #include "ui_smserverconfigdlg.h"
 
 #include <KPluginFactory>
@@ -51,12 +52,12 @@
 
 #include "login1_manager.h"
 
-K_PLUGIN_FACTORY(SMSFactory, registerPlugin<SMServerConfig>();)
+K_PLUGIN_FACTORY(SMSFactory, registerPlugin<SMServerConfig>(); registerPlugin<SMServerData>();)
 
 SMServerConfig::SMServerConfig(QWidget *parent, const QVariantList &args)
   : KCModule(parent, args)
   , ui(new Ui::SMServerConfigDlg)
-  , m_settings(new SMServerSettings(this))
+  , m_data(new SMServerData(this))
   , m_login1Manager(new OrgFreedesktopLogin1ManagerInterface(QStringLiteral("org.freedesktop.login1"),
                                                              QStringLiteral("/org/freedesktop/login1"),
                                                              QDBusConnection::systemBus(),
@@ -77,7 +78,7 @@ SMServerConfig::SMServerConfig(QWidget *parent, const QVariantList &args)
     initFirmwareSetup();
     checkFirmwareSetupRequested();
 
-    addConfig(m_settings, this);
+    addConfig(m_data->settings(), this);
 }
 
 SMServerConfig::~SMServerConfig() = default;

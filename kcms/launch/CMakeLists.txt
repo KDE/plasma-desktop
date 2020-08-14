@@ -3,7 +3,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_launchfeedback\")
 
 ########### next target ###############
 
-set(kcm_launchfeedback_PART_SRCS launchfeedback.cpp launchfeedbacksettings.cpp)
+set(kcm_launchfeedback_PART_SRCS launchfeedback.cpp launchfeedbacksettings.cpp launchfeedbackdata.cpp)
 
 kconfig_add_kcfg_files(kcm_launchfeedback_PART_SRCS launchfeedbacksettingsbase.kcfgc GENERATE_MOC)
 

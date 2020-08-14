@@ -41,6 +41,7 @@ class FileCopyJob;
 class ColorsModel;
 class FilterProxyModel;
 class ColorsSettings;
+class ColorsData;
 
 class KCMColors : public KQuickAddons::ManagedConfigModule
 {
@@ -94,7 +95,7 @@ private:
 
     ColorsModel *m_model;
     FilterProxyModel *m_filteredModel;
-    ColorsSettings *m_settings;
+    ColorsData *m_data;
 
     bool m_selectedSchemeDirty = false;
     bool m_activeSchemeEdited = false;

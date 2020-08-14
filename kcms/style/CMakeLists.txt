@@ -11,6 +11,7 @@ set(kcm_style_PART_SRCS
     gtkthemesmodel.cpp
     gtkpage.cpp
     previewitem.cpp
+    styledata.cpp
 )
 
 ki18n_wrap_ui(kcm_style_PART_SRCS stylepreview.ui)

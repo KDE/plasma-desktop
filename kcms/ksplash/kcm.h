@@ -26,6 +26,7 @@
 
 class QStandardItemModel;
 class SplashScreenSettings;
+class SplashScreenData;
 
 class KCMSplashScreen : public KQuickAddons::ManagedConfigModule
 {
@@ -62,7 +63,7 @@ private:
     void loadModel();
     QList<KPackage::Package> availablePackages(const QString &component);
 
-    SplashScreenSettings *m_settings;
+    SplashScreenData *m_data;
     QStandardItemModel *m_model;
 
     QProcess *m_testProcess = nullptr;

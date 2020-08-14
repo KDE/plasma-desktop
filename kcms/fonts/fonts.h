@@ -33,6 +33,7 @@
 
 #include <KQuickAddons/ManagedConfigModule>
 
+class FontsData;
 class FontsSettings;
 class FontsAASettings;
 
@@ -41,7 +42,7 @@ class FontsAASettings;
  */
 class KFonts : public KQuickAddons::ManagedConfigModule
 {
-    Q_OBJECT
+Q_OBJECT
     Q_PROPERTY(FontsSettings *fontsSettings READ fontsSettings CONSTANT)
     Q_PROPERTY(FontsAASettings *fontsAASettings READ fontsAASettings CONSTANT)
     Q_PROPERTY(QAbstractItemModel *subPixelOptionsModel READ subPixelOptionsModel CONSTANT)
@@ -79,8 +80,7 @@ Q_SIGNALS:
 private:
     QFont applyFontDiff(const QFont &fnt, const QFont &newFont, int fontDiffFlags);
 
-    FontsSettings *m_settings;
-    FontsAASettings *m_settingsAA;
+    FontsData *m_data;
     QStandardItemModel *m_subPixelOptionsModel;
     QStandardItemModel *m_hintingOptionsModel;
 };

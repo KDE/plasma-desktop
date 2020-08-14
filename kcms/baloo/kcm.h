@@ -26,6 +26,7 @@
 #include "filteredfoldermodel.h"
 
 class BalooSettings;
+class BalooData;
 
 namespace Baloo
 {
@@ -48,7 +49,7 @@ public Q_SLOTS:
     void save() override;
 
 private:
-    BalooSettings *m_settings;
+    BalooData *m_data;
     FilteredFolderModel *m_filteredFolderModel;
 };
 }

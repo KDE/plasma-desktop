@@ -5,6 +5,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR}/..)
 set( kcmTest_SRCS
      kcmtest.cpp
      ../kcm.cpp
+     ../lookandfeeldata.cpp
      ../../krdb/krdb.cpp
 )
 

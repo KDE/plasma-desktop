@@ -31,6 +31,7 @@ class CursorThemeModel;
 class SortProxyModel;
 class CursorTheme;
 class CursorThemeSettings;
+class CursorThemeData;
 
 namespace KIO
 {
@@ -126,7 +127,7 @@ private:
     CursorThemeModel *m_themeModel;
     SortProxyModel *m_themeProxyModel;
     QStandardItemModel *m_sizesModel;
-    CursorThemeSettings *m_settings;
+    CursorThemeData *m_data;
 
 /** Holds the last size that was chosen by the user. Example: The user chooses
     theme1 which provides the sizes 24 and 36. He chooses 36. preferredSize gets

@@ -3,6 +3,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_splashscreen\")
 
 set(kcm_splashscreen_SRCS
   kcm.cpp
+  splashscreendata.cpp
 )
 
 kconfig_add_kcfg_files(kcm_splashscreen_SRCS splashscreensettings.kcfgc GENERATE_MOC)
@@ -13,6 +14,7 @@ target_link_libraries(kcm_splashscreen
   KF5::KIOWidgets
   KF5::CoreAddons
   KF5::ConfigWidgets
+  KF5::KCMUtils
   KF5::QuickAddons
   KF5::I18n
   KF5::Plasma

@@ -39,6 +39,7 @@
 class QQuickItem;
 
 class StyleSettings;
+class StyleData;
 class StylesModel;
 class StyleConfigDialog;
 
@@ -90,7 +91,7 @@ Q_SIGNALS:
 private:
     void loadSettingsToModel();
 
-    StyleSettings *m_settings;
+    StyleData *m_data;
     StylesModel *m_model;
 
     QString m_previousStyle;
