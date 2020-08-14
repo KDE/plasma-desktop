@@ -68,6 +68,8 @@ FocusScope {
     property var dialog: null
     property Item editor: null
 
+    property int previouslySelectedItemIndex: -1
+
     function positionViewAtBeginning() {
         gridView.positionViewAtBeginning();
     }
@@ -298,6 +300,7 @@ FocusScope {
             if (!hoveredItem || hoveredItem.blank) {
                 if (!gridView.ctrlPressed) {
                     gridView.currentIndex = -1;
+                    previouslySelectedItemIndex = -1;
                     dir.clearSelection();
                 }
 
@@ -321,6 +324,7 @@ FocusScope {
                         // can distinguish.
                         // https://bugs.kde.org/show_bug.cgi?id=424152
                         if (!gridView.ctrlPressed && !dir.isSelected(positioner.map(hoveredItem.index))) {
+                            previouslySelectedItemIndex = -1;
                             dir.clearSelection();
                         }
 
@@ -389,6 +393,7 @@ FocusScope {
             // hoveredItem) and abort.
             if (pos.x < 0 || pos.x > hoveredItem.width || pos.y < 0 || pos.y > hoveredItem.height) {
                 hoveredItem = null;
+                previouslySelectedItemIndex = -1;
                 dir.clearSelection();
 
                 return;
@@ -403,15 +408,36 @@ FocusScope {
             pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
 
             if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
+
+                // Clicked on the label of an already-selected item: rename it
+                if (pos.x > hoveredItem.labelArea.x
+                    && pos.x <= hoveredItem.labelArea.x + hoveredItem.labelArea.width
+                    && pos.y > hoveredItem.labelArea.y
+                    && pos.y <= hoveredItem.labelArea.y + hoveredItem.labelArea.height
+                    && previouslySelectedItemIndex == gridView.currentIndex
+                    && gridView.currentIndex != -1
+                    && !Qt.styleHints.singleClickActivation
+                    && !doubleClickInProgress
+                ) {
+                    rename();
+                    return;
+                }
+
+                // Single-click mode and single-clicked on the item or
+                // double-click mode and double-clicked on the item: open it
                 if (Qt.styleHints.singleClickActivation || doubleClickInProgress || mouse.source == Qt.MouseEventSynthesizedByQt) {
                     var func = root.useListViewMode && (mouse.button === Qt.LeftButton) && hoveredItem.isDir ? doCd : dir.run;
                     func(positioner.map(gridView.currentIndex));
-
+                    previouslySelectedItemIndex = gridView.currentIndex;
                     hoveredItem = null;
-                } else {
+                }
+
+                // None of the above: select it
+                else {
                     doubleClickInProgress = true;
                     doubleClickTimer.interval = Qt.styleHints.mouseDoubleClickInterval;
                     doubleClickTimer.start();
+                    previouslySelectedItemIndex = gridView.currentIndex;
                 }
             }
         }
@@ -853,6 +879,10 @@ FocusScope {
                     } else {
                         dir.clearSelection();
                         dir.setSelected(positioner.map(currentIndex));
+                        if (currentIndex == -1) {
+                            previouslySelectedItemIndex = -1;
+                        }
+                        previouslySelectedItemIndex = currentIndex;
                     }
                 }
 
@@ -965,6 +995,7 @@ FocusScope {
 
                 Keys.onEscapePressed: {
                     if (!editor || !editor.targetItem) {
+                        previouslySelectedItemIndex = -1;
                         dir.clearSelection();
                         event.accepted = false;
                     }
@@ -1249,6 +1280,7 @@ FocusScope {
                     gridView.forceLayout();
                 }
 
+                previouslySelectedItemIndex = -1;
                 dir.clearSelection();
             }
         }
