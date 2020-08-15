@@ -285,8 +285,7 @@ void packageKit(Operation operation, const QString &fileName)
         fail(i18n("The file does not exist!"));
     }
     const QString absPath = fileInfo.absoluteFilePath();
-    if (operation == Operation
-::Install) {
+    if (operation == Operation::Install) {
         PackagekitConfirmationDialog(fileName).exec();
         packageKitInstall(absPath);
     } else {
@@ -301,45 +300,13 @@ void packageKit(Operation operation, const QString &fileName)
 #endif
 }
 
-bool runScript(const QString &path)
-{
-    QProcess process;
-    process.setWorkingDirectory(QFileInfo(path).absolutePath());
-
-    if (!QStandardPaths::findExecutable("konsole").isEmpty()) {
-        const QString bashCommand = KShell::quoteArg(path) + ' ' + "|| $SHELL";
-        // If the install script fails a shell opens and the user can fix the problem
-        // without an error konsole closes
-        process.start("konsole", QStringList() << "-e" << "bash" << "-c" << bashCommand, QIODevice::NotOpen);
-    } else {
-        process.start(path, QIODevice::NotOpen);
-    }
-    if (!process.waitForStarted()) {
-        fail(i18n("Failed to run installer script %1", path));
-    }
-
-    // Wait until installer exits, without timeout
-    if (!process.waitForFinished(-1)) {
-        qWarning() << "Failed to wait on installer:" << process.program() << process.arguments().join(" ");
-        return false;
-    }
-
-    if (process.exitStatus() != QProcess::NormalExit || process.exitCode() != 0) {
-        qWarning() << "Installer script exited with error:" << process.program() << process.arguments().join(" ");
-        return false;
-    }
-
-    return true;
-}
-
-bool executeOperation(const QString &archive, Operation operation)
+void executeOperation(const QString &archive, Operation operation)
 {
     if (binaryPackages.contains(QMimeDatabase().mimeTypeForFile(archive).name())) {
         packageKit(operation, archive);
     }
 
     const bool install = operation == Operation::Install;
-    // Give krunner-install higher priority
     QString installerPath;
     const QStringList archiveEntries = QDir(archive).entryList(QDir::Files, QDir::Name);
     const QString scripPrefix = install ? "install" : "uninstall";
@@ -355,7 +322,8 @@ bool executeOperation(const QString &archive, Operation operation)
         dlg.exec();
     }
 
-    return runScript(installerPath);
+    const QString bashCommand = KShell::quoteArg(installerPath) + " || $SHELL";
+    KToolInvocation::invokeTerminal(QStringLiteral("bash -c %1").arg(KShell::quoteArg(bashCommand)));
 }
 
 int main(int argc, char *argv[])
