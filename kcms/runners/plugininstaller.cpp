@@ -95,7 +95,7 @@ public:
                                   "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
         } else if (operation == Operation::Uninstall && noInstaller) {
             msg = xi18nc("@info", "This plugin does not provide an uninstallation script. Please contact the author. "
-                                  "You can try to uninstall the plugin manually, please have a look at the README "
+                                  "You can try to uninstall the plugin manually. Please have a look at the README "
                                   "for instructions from the author.<nl/>"
                                   "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
         } else if (noInstaller && readmes.isEmpty()) {
