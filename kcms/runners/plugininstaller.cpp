@@ -90,32 +90,32 @@ public:
         QVBoxLayout *layout = new QVBoxLayout(this);
         QString msg;
         if (operation == Operation::Uninstall && noInstaller && readmes.isEmpty()) {
-            msg = xi18nc("@info", "This plugin does not provide an uninstall script. Please contact the author."
-                                  "You can try to uninstall the plugin manually."
+            msg = xi18nc("@info", "This plugin does not provide an uninstall script. Please contact the author. "
+                                  "You can try to uninstall the plugin manually.<nl/>"
                                   "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
         } else if (operation == Operation::Uninstall && noInstaller) {
-            msg = xi18nc("@info", "This plugin does not provide an uninstallation script. Please contact the author."
-                                  "You can try to uninstall the plugin manually, please have a look at the README"
-                                  "for instructions from the author."
+            msg = xi18nc("@info", "This plugin does not provide an uninstallation script. Please contact the author. "
+                                  "You can try to uninstall the plugin manually, please have a look at the README "
+                                  "for instructions from the author.<nl/>"
                                   "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
         } else if (noInstaller && readmes.isEmpty()) {
             msg = xi18nc("@info", "This plugin does not provide an installation script. Please contact the author."
-                                  "You can try to install the plugin manually."
+                                  "You can try to install the plugin manually.<nl/>"
                                   "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
         } else if (noInstaller) {
-            msg = xi18nc("@info", "This plugin does not provide an installation script. Please contact the author."
-                                  "You can try to install the plugin manually, please have a look at the README"
-                                  "for instructions from the author."
+            msg = xi18nc("@info", "This plugin does not provide an installation script. Please contact the author.<nl/>"
+                                  "You can try to install the plugin manually, please have a look at the README "
+                                  "for instructions from the author.<nl/>"
                                   "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
         } else if (readmes.isEmpty()) {
-            msg = xi18nc("@info", "This plugin uses a script for installation which can pose a security risk."
+            msg = xi18nc("@info", "This plugin uses a script for installation which can pose a security risk. "
                            "Please examine the entire plugin's contents before installing, or at least"
-                           "read the script's source code."
+                           "read the script's source code.<nl/>"
                            "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
         } else {
-             msg = xi18nc("@info", "This plugin uses a script for installation which can pose a security risk."
-                           "Please examine the entire plugin's contents before installing, or at least"
-                           "read the README file and the script's source code."
+             msg = xi18nc("@info", "This plugin uses a script for installation which can pose a security risk. "
+                           "Please examine the entire plugin's contents before installing, or at least "
+                           "read the README file and the script's source code.<nl/>"
                            "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
         }
         QLabel *msgLabel = new QLabel(msg, this);
