@@ -323,7 +323,7 @@ void executeOperation(const QString &archive, Operation operation)
     }
 
     const QString bashCommand = KShell::quoteArg(installerPath) + " || $SHELL";
-    KToolInvocation::invokeTerminal(QStringLiteral("bash -c %1").arg(KShell::quoteArg(bashCommand)));
+    KToolInvocation::invokeTerminal(QStringLiteral("bash -c %1").arg(KShell::quoteArg(bashCommand)), archive);
 }
 
 int main(int argc, char *argv[])
