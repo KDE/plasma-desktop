@@ -221,14 +221,15 @@ public:
 };
 
 #ifdef HAVE_PACKAGEKIT
+
+void exitWithError(PackageKit::Transaction::Error, const QString &details)
+{
+    fail(details);
+}
+
 void packageKitInstall(const QString &fileName)
 {
     PackageKit::Transaction *transaction = PackageKit::Daemon::installFile(fileName);
-
-    const auto exitWithError = [=](PackageKit::Transaction::Error, const QString &details) {
-       fail(details);
-    };
-
     QObject::connect(transaction, &PackageKit::Transaction::finished,
                      [=](PackageKit::Transaction::Exit status, uint) {
                         if (status == PackageKit::Transaction::ExitSuccess) {
@@ -246,9 +247,6 @@ void packageKitInstall(const QString &fileName)
 
 void packageKitUninstall(const QString &fileName)
 {
-    const auto exitWithError = [=](PackageKit::Transaction::Error, const QString &details) {
-        fail(details);
-    };
     const auto uninstallLambda = [=](PackageKit::Transaction::Exit status, uint) {
         if (status == PackageKit::Transaction::ExitSuccess) {
             exit(0);
