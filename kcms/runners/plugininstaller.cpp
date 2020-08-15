@@ -78,6 +78,12 @@ inline bool isSUSEDistro()
     return KOSRelease().name().contains(QStringLiteral("openSUSE"), Qt::CaseInsensitive);
 }
 
+void aboartInstallation()
+{
+    qWarning() << i18n("Installation aborted");
+    exit(1);
+}
+
 class ScriptConfirmationDialog : public QDialog
 {
 public:
@@ -133,12 +139,8 @@ public:
            okText = i18n("Accept Risk And Continue");
         }
         buttonBox->button(QDialogButtonBox::Ok)->setText(okText);
-        const auto rejectLambda = []{
-            qWarning() << i18n("Installation aborted");
-            exit(1);
-        };
         // If the user clicks cancel or closes the dialog using escape
-        connect(buttonBox, &QDialogButtonBox::rejected, this, rejectLambda);
+        connect(buttonBox, &QDialogButtonBox::rejected, this, aboartInstallation);
         connect(buttonBox, &QDialogButtonBox::accepted, this, [this, noInstaller](){
             if (noInstaller) {
                 exit(0);
@@ -146,7 +148,7 @@ public:
                 done(1);
             }
         });
-        connect(this, &QDialog::rejected, this, rejectLambda);
+        connect(this, &QDialog::rejected, this, aboartInstallation);
 
         QHBoxLayout *helpButtonLayout = new QHBoxLayout(this);
         if (!noInstaller) {
@@ -176,6 +178,7 @@ public:
 };
 
 
+#ifdef HAVE_PACKAGEKIT
 class PackagekitConfirmationDialog : public QDialog {
 public:
     PackagekitConfirmationDialog(const QString &packagePath, QWidget *parent = nullptr) : QDialog(parent)
@@ -193,12 +196,8 @@ public:
         auto *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
         buttonBox->button(QDialogButtonBox::Ok)->setIcon(QIcon::fromTheme("emblem-warning"));
         buttonBox->button(QDialogButtonBox::Ok)->setText(i18n("Accept Risk And Continue"));
-        const auto rejectLambda = []{
-            qWarning() << i18n("Installation aborted");
-            exit(1);
-        };
         // If the user clicks cancel or closes the dialog using escape
-        connect(buttonBox, &QDialogButtonBox::rejected, this, rejectLambda);
+        connect(buttonBox, &QDialogButtonBox::rejected, this, aboartInstallation);
         connect(buttonBox, &QDialogButtonBox::accepted, this, [this, isRPM, packagePath](){
             if (isRPM && isSUSEDistro()) {
                 const QString command = QStringLiteral("sudo zypper install %1").arg(KShell::quoteArg(packagePath));
@@ -208,7 +207,7 @@ public:
                 done(1);
             }
         });
-        connect(this, &QDialog::rejected, this, rejectLambda);
+        connect(this, &QDialog::rejected, this, aboartInstallation);
 
         QPushButton *highlightFileButton = new QPushButton(QIcon::fromTheme("document-open-folder"), i18n("View File"), this);
         connect(highlightFileButton, &QPushButton::clicked, this, [packagePath]() {
@@ -219,8 +218,6 @@ public:
         layout->addWidget(buttonBox);
     }
 };
-
-#ifdef HAVE_PACKAGEKIT
 
 void exitWithError(PackageKit::Transaction::Error, const QString &details)
 {
