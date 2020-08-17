@@ -162,7 +162,12 @@ public:
         connect(sourceButton, &QPushButton::clicked, this, [dir]() {
             QDesktopServices::openUrl(QUrl::fromLocalFile(dir));
         });
-        helpButtonLayout->addWidget(sourceButton);
+        if (readmes.isEmpty() && helpButtonLayout->isEmpty()) {
+            // If there is no script and readme we can display the button in the same line
+            buttonBox->addButton(sourceButton, QDialogButtonBox::HelpRole);
+        } else {
+            helpButtonLayout->addWidget(sourceButton);
+        }
         if (!readmes.isEmpty()) {
             QPushButton *readmeButton = new QPushButton(QIcon::fromTheme("text-x-readme"), i18n("View %1", readmes.at(0)), this);
             connect(readmeButton, &QPushButton::clicked, this, [dir, readmes]() {
