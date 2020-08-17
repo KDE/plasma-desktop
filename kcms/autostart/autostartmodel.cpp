@@ -347,6 +347,7 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
 
     QUrl destinationScript = QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + folder + fileName);
     KIO::CopyJob *job = KIO::link(url, destinationScript, KIO::HideProgressInfo);
+    job->setAutoRename(true);
 
     connect(job, &KIO::CopyJob::renamed, this, [&destinationScript](KIO::Job *job, const QUrl &from, const QUrl &to) {
         Q_UNUSED(job)
