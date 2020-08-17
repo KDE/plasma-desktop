@@ -116,6 +116,8 @@ KCM.ScrollViewKCM {
                     startupFileDialogLoader.active = false
                 }
 
+                onRejected: startupFileDialogLoader.active = false
+
                 Component.onCompleted: open()
             }
         }
@@ -134,6 +136,8 @@ KCM.ScrollViewKCM {
                     kcm.model.addScript(logoutFileDialog.fileUrl, AutostartModel.PlasmaShutdown)
                     logoutFileDialogLoader.active = false
                 }
+
+                onRejected: logoutFileDialogLoader.active = false
 
                 Component.onCompleted: open()
             }
