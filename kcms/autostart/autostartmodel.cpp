@@ -348,15 +348,15 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
     QUrl destinationScript = QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + folder + fileName);
     KIO::CopyJob *job = KIO::link(url, destinationScript, KIO::HideProgressInfo);
     job->setAutoRename(true);
+    job->setProperty("finalUrl", destinationScript);
 
-    connect(job, &KIO::CopyJob::renamed, this, [&destinationScript](KIO::Job *job, const QUrl &from, const QUrl &to) {
-        Q_UNUSED(job)
+    connect(job, &KIO::CopyJob::renamed, this, [](KIO::Job *job, const QUrl &from, const QUrl &to) {
         Q_UNUSED(from)
         // in case the destination filename had to be renamed
-        destinationScript = to;
+        job->setProperty("finalUrl", to);
     });
 
-    connect(job, &KJob::finished, this, [this, index, &destinationScript, url, kind](KJob *theJob) {
+    connect(job, &KJob::finished, this, [this, index, url, kind](KJob *theJob) {
         if (theJob->error()) {
             qWarning() << "Could add script entry" << theJob->errorString();
             return;
@@ -364,7 +364,9 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
 
         beginInsertRows(QModelIndex(), index, index);
 
-        AutostartEntry entry = AutostartEntry {destinationScript.fileName(), url.path(), kind, true, destinationScript.path(), false, QStringLiteral("dialog-scripts")};
+        const QUrl dest = theJob->property("finalUrl").toUrl();
+
+        AutostartEntry entry = AutostartEntry {dest.fileName(), url.path(), kind, true, dest.path(), false, QStringLiteral("dialog-scripts")};
 
         m_entries.insert(index, entry);
 
