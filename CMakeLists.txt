@@ -107,13 +107,6 @@ set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"
                        PURPOSE "Needed to build the File Search KCM"
                       )
 
-find_package(Fontconfig)
-set_package_properties(Fontconfig PROPERTIES DESCRIPTION "Font access configuration library"
-                       URL "https://www.freedesktop.org/wiki/Software/fontconfig"
-                       TYPE OPTIONAL
-                       PURPOSE "Needed to build font configuration and installation tools"
-                      )
-
 find_package(X11)
 set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
                         URL "https://www.x.org"
