@@ -417,7 +417,10 @@ Item {
                     FolderItemActionButton {
                         element: model.selected ? "remove" : "add"
 
-                        onClicked: dir.toggleSelected(positioner.map(index))
+                        onClicked: {
+                            dir.toggleSelected(positioner.map(index))
+                            main.GridView.view.currentIndex = index
+                        }
                     }
                 }
 
@@ -431,6 +434,7 @@ Item {
 
                         onClicked: {
                             dir.setSelected(positioner.map(index))
+                            main.GridView.view.currentIndex = index
                             openPopup();
                         }
                     }
