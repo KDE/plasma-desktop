@@ -82,7 +82,7 @@ void KNetAttach::slotPageChanged( int )
 
 void KNetAttach::slotHelpClicked()
 {
-    QDesktopServices::openUrl(QUrl(QStringLiteral("help:/knetattach")));
+    QDesktopServices::openUrl(QUrl(QStringLiteral("help:/")));
 }
 
 void KNetAttach::setInformationText( const QString &type )
