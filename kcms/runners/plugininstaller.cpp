@@ -152,7 +152,7 @@ public:
 
         QHBoxLayout *helpButtonLayout = new QHBoxLayout(this);
         if (!noInstaller) {
-            QPushButton *scriptButton = new QPushButton(QIcon::fromTheme("text-x-script"), i18n("View Script"), this);
+            QPushButton *scriptButton = new QPushButton(QIcon::fromTheme("dialog-scripts"), i18n("View Script"), this);
             connect(scriptButton, &QPushButton::clicked, this, [installerPath]() {
                 QDesktopServices::openUrl(QUrl::fromLocalFile(installerPath));
             });
