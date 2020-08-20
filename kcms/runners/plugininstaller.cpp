@@ -311,7 +311,7 @@ void executeOperation(const QString &archive, Operation operation)
     const QStringList archiveEntries = QDir(archive).entryList(QDir::Files, QDir::Name);
     const QString scripPrefix = install ? "install" : "uninstall";
     for (const auto &name : archiveEntries) {
-        if(name.startsWith(scripPrefix)) {
+        if (name.startsWith(scriptPrefix)) {
             installerPath = QDir(archive).filePath(name);
             break;
         }
