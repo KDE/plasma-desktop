@@ -237,8 +237,8 @@ void packageKitInstall(const QString &fileName)
                         if (status == PackageKit::Transaction::ExitSuccess) {
                             exit(0);
                         }
-                        // Fallback error handling, sometimes packagekit gets stuck when installing an unsupported package
-                        // this way we ensure that we exit
+                        // Sometimes packagekit gets stuck when installing an unsupported package this way we
+                        // ensure that we exit. The errorCode slot could provide a better message, that is why we wait
                         QTimer::singleShot(1000, [=](){
                             fail(i18n("Failed to install \"%1\"; exited with status \"%2\"",
                                       fileName, QVariant::fromValue(status).toString()));
@@ -249,17 +249,16 @@ void packageKitInstall(const QString &fileName)
 
 void packageKitUninstall(const QString &fileName)
 {
-    const auto uninstallLambda = [=](PackageKit::Transaction::Exit status, uint) {
-        if (status == PackageKit::Transaction::ExitSuccess) {
-            exit(0);
-        }
-    };
-
     PackageKit::Transaction *transaction = PackageKit::Daemon::getDetailsLocal(fileName);
     QObject::connect(transaction, &PackageKit::Transaction::details,
                      [=](const PackageKit::Details &details) {
                          PackageKit::Transaction *transaction = PackageKit::Daemon::removePackage(details.packageId());
-                         QObject::connect(transaction, &PackageKit::Transaction::finished, uninstallLambda);
+                         QObject::connect(transaction, &PackageKit::Transaction::finished,
+                             [=](PackageKit::Transaction::Exit status, uint) {
+                                  if (status == PackageKit::Transaction::ExitSuccess) {
+                                         exit(0);
+                                  }
+                         });
                          QObject::connect(transaction, &PackageKit::Transaction::errorCode, exitWithError);
                      });
 
