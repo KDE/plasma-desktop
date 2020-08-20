@@ -110,7 +110,7 @@ public:
                                   "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
         } else if (noInstaller) {
             msg = xi18nc("@info", "This plugin does not provide an installation script. Please contact the author.<nl/>"
-                                  "You can try to install the plugin manually, please have a look at the README "
+                                  "You can try to install the plugin manually; please have a look at the README "
                                   "for instructions from the author.<nl/>"
                                   "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
         } else if (readmes.isEmpty()) {
