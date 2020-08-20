@@ -76,7 +76,7 @@ private:
 };
 
 struct AutostartEntry {
-    QString name;    // Human readable name or local script name
+    QString name;    // Human readable name or script file path. In case of symlinks the target file path
     QString command; // exec or original .sh file
     AutostartModel::AutostartEntrySource source;
     bool enabled;

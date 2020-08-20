@@ -59,7 +59,7 @@ KCM.ScrollViewKCM {
 
                 Label {
                     height: appIcon.height
-                    text: model.source === AutostartModel.XdgAutoStart ? model.name : model.command
+                    text: model.name
                     elide: Text.ElideRight
                     anchors.left: appIcon.right
                     anchors.leftMargin: Kirigami.Units.largeSpacing

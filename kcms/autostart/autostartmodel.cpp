@@ -159,7 +159,7 @@ void AutostartModel::loadScriptsFromDir(const QString &subDir, AutostartModel::A
             fileName = fi.symLinkTarget();
         }
 
-        m_entries.push_back({fi.fileName(), isSymlink ? fileName : QString(), kind, true, fi.absoluteFilePath(), false, QStringLiteral("dialog-scripts")});
+        m_entries.push_back({fileName, isSymlink ? fileName : QString(), kind, true, fi.absoluteFilePath(), false, QStringLiteral("dialog-scripts")});
     }
 }
 
