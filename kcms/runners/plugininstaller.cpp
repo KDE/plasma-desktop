@@ -309,7 +309,7 @@ void executeOperation(const QString &archive, Operation operation)
     const bool install = operation == Operation::Install;
     QString installerPath;
     const QStringList archiveEntries = QDir(archive).entryList(QDir::Files, QDir::Name);
-    const QString scripPrefix = install ? "install" : "uninstall";
+    const QString scriptPrefix = install ? "install" : "uninstall";
     for (const auto &name : archiveEntries) {
         if (name.startsWith(scriptPrefix)) {
             installerPath = QDir(archive).filePath(name);
