@@ -115,6 +115,10 @@
       </choices>
       <default>3</default>
     </entry>
+    <entry name="minimizeActiveTaskOnClick" type="Bool">
+      <label>Whether to minimize the currently-active task when clicked. If false, clicking on the currently-active task will do nothing.</label>
+      <default>true</default>
+    </entry>
   </group>
 
 </kcfg>

@@ -43,6 +43,7 @@ Item {
     property alias cfg_showOnlyCurrentDesktop: showOnlyCurrentDesktop.checked
     property alias cfg_showOnlyCurrentActivity: showOnlyCurrentActivity.checked
     property alias cfg_showOnlyMinimized: showOnlyMinimized.checked
+    property alias cfg_minimizeActiveTaskOnClick: minimizeActive.checked
 
     TaskManagerApplet.Backend {
         id: backend
@@ -141,6 +142,12 @@ Item {
         Item {
             Kirigami.FormData.isSection: true
             visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
+        }
+
+        CheckBox {
+            id: minimizeActive
+            Kirigami.FormData.label: i18nc("Part of a sentence: 'Clicking active task minimizes the task'", "Clicking active task:")
+            text: i18nc("Part of a sentence: 'Clicking active task minimizes the task'", "Minimizes the task")
         }
 
         // TODO: port to QQC2 version once we've fixed https://bugs.kde.org/show_bug.cgi?id=403153

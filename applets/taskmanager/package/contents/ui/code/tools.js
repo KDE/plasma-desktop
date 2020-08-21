@@ -188,7 +188,7 @@ function activateTask(index, model, modifiers, task) {
         if (model.IsMinimized === true) {
             tasksModel.requestToggleMinimized(index);
             tasksModel.requestActivate(index);
-        } else if (model.IsActive === true) {
+        } else if (model.IsActive === true && plasmoid.configuration.minimizeActiveTaskOnClick) {
             tasksModel.requestToggleMinimized(index);
         } else {
             tasksModel.requestActivate(index);
