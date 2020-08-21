@@ -153,15 +153,15 @@ Item {
         // TODO: port to QQC2 version once we've fixed https://bugs.kde.org/show_bug.cgi?id=403153
         QQC1.ComboBox {
             id: middleClickAction
-            Kirigami.FormData.label: i18n("On middle-click:")
+            Kirigami.FormData.label: i18n("Middle-clicking any task:")
             Layout.fillWidth: true
             model: [
-                i18nc("The click action", "None"),
-                i18n("Close window or group"),
-                i18n("New instance"),
-                i18n("Minimize/Restore window or group"),
-                i18nc("When clicking it would toggle grouping windows of a specific app", "Group/Ungroup"),
-                i18n("Bring to the current virtual desktop")
+                i18nc("Part of a sentence: 'Middle-clicking any task does nothing'", "Does nothing"),
+                i18nc("Part of a sentence: 'Middle-clicking any task closes window or group'", "Closes window or group"),
+                i18nc("Part of a sentence: 'Middle-clicking any task opens a new instance'", "Opens a new instance"),
+                i18nc("Part of a sentence: 'Middle-clicking any task minimizes/restores window or group'", "Minimizes/Restores window or group"),
+                i18nc("Part of a sentence: 'Middle-clicking any task toggles grouping'", "Toggles grouping"),
+                i18nc("Part of a sentence: 'Middle-clicking any task brings it to the current virtual desktop'", "Brings it to the current virtual desktop")
             ]
         }
 
