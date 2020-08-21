@@ -531,17 +531,17 @@ void Backend::cancelHighlightWindows()
     updateWindowHighlight();
 }
 
-qint64 Backend::parentPid(qint64 pid) const
+QString Backend::cgroupForPid(qint64 pid) const
 {
     KSysGuard::Processes procs;
     procs.updateOrAddProcess(pid);
 
     KSysGuard::Process *proc = procs.getProcess(pid);
     if (!proc) {
-        return -1;
+        return "";
     }
 
-    return proc->parentPid();
+    return proc->cGroup();
 }
 
 void Backend::windowsHovered(const QVariant &_winIds, bool hovered)

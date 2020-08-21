@@ -64,15 +64,20 @@ QtObject {
     function streamsForPid(pid) {
         var streams = findStreams("pid", pid);
 
+        var cgroup = backend.cgroupForPid(pid)
+
+        if (!cgroup.length) { //our cgroup info is invalid, therefore we can't match anything
+            return streams;
+        }
         if (streams.length === 0) {
             for (var i = 0, length = instantiator.count; i < length; ++i) {
                 var stream = instantiator.objectAt(i);
 
-                if (stream.parentPid === -1) {
-                    stream.parentPid = backend.parentPid(stream.pid);
+                if (!stream.cgroup.length) {
+                    stream.cgroup = backend.cgroupForPid(stream.pid);
                 }
 
-                if (stream.parentPid === pid) {
+                if (stream.cgroup === cgroup) {
                     streams.push(stream);
                 }
             }
@@ -91,7 +96,7 @@ QtObject {
         delegate: QtObject {
             readonly property int pid: Client ? Client.properties["application.process.id"] : 0
             // Determined on demand.
-            property int parentPid: -1
+            property string cgroup
             readonly property string appName: Client ? Client.properties["application.name"] : ""
             readonly property bool muted: Muted
             // whether there is nothing actually going on on that stream

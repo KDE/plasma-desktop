@@ -89,7 +89,7 @@ class Backend : public QObject
 
         Q_INVOKABLE void cancelHighlightWindows();
 
-        Q_INVOKABLE qint64 parentPid(qint64 pid) const;
+        Q_INVOKABLE QString cgroupForPid(qint64 pid) const;
 
         static QUrl tryDecodeApplicationsUrl(const QUrl &launcherUrl);
 
