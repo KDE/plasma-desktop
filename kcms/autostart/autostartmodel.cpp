@@ -53,20 +53,7 @@
 
 static bool checkEntry(const AutostartEntry &entry)
 {
-    const QStringList commandLine = KShell::splitArgs(entry.command);
-    if (commandLine.isEmpty()) {
-        return false;
-    }
-
-    if (!entry.enabled) {
-        return false;
-    }
-
-    const QString exe = commandLine.first();
-    if (exe.isEmpty() || QStandardPaths::findExecutable(exe).isEmpty()) {
-        return false;
-    }
-    return true;
+    return entry.enabled;
 }
 
 static AutostartEntry loadDesktopEntry(const QString &fileName)
