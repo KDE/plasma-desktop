@@ -61,7 +61,6 @@ static AutostartEntry loadDesktopEntry(const QString &fileName)
     KDesktopFile config(fileName);
     const KConfigGroup grp = config.desktopGroup();
     const auto name = config.readName();
-    const auto command = grp.readEntry("Exec");
 
     const bool hidden = grp.readEntry("Hidden", false);
     const QStringList notShowList = grp.readXdgListEntry("NotShowIn");
@@ -73,7 +72,6 @@ static AutostartEntry loadDesktopEntry(const QString &fileName)
     const QString iconName = config.readIcon();
 
     return {name,
-            command,
             AutostartModel::AutostartEntrySource::XdgAutoStart, // .config/autostart load desktop at startup
             enabled,
             fileName,
@@ -146,7 +144,7 @@ void AutostartModel::loadScriptsFromDir(const QString &subDir, AutostartModel::A
             fileName = fi.symLinkTarget();
         }
 
-        m_entries.push_back({fileName, isSymlink ? fileName : QString(), kind, true, fi.absoluteFilePath(), false, QStringLiteral("dialog-scripts")});
+        m_entries.push_back({fileName, kind, true, fi.absoluteFilePath(), false, QStringLiteral("dialog-scripts")});
     }
 }
 
@@ -186,8 +184,6 @@ QVariant AutostartModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case Qt::DisplayRole:
         return entry.name;
-    case Command:
-        return entry.command;
     case Enabled:
         return entry.enabled;
     case Source:
@@ -236,7 +232,6 @@ void AutostartModel::addApplication(const KService::Ptr &service)
     }
 
     const auto entry = AutostartEntry {service->name(),
-                                       service->exec(),
                                        AutostartModel::AutostartEntrySource::XdgAutoStart, // .config/autostart load desktop at startup
                                        true,
                                        desktopPath,
@@ -353,7 +348,7 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
 
         const QUrl dest = theJob->property("finalUrl").toUrl();
 
-        AutostartEntry entry = AutostartEntry {dest.fileName(), url.path(), kind, true, dest.path(), false, QStringLiteral("dialog-scripts")};
+        AutostartEntry entry = AutostartEntry {dest.fileName(), kind, true, dest.path(), false, QStringLiteral("dialog-scripts")};
 
         m_entries.insert(index, entry);
 
@@ -389,7 +384,6 @@ QHash<int, QByteArray> AutostartModel::roleNames() const
     QHash<int, QByteArray> roleNames = QAbstractListModel::roleNames();
 
     roleNames.insert(Name, QByteArrayLiteral("name"));
-    roleNames.insert(Command, QByteArrayLiteral("command"));
     roleNames.insert(Enabled, QByteArrayLiteral("enabled"));
     roleNames.insert(Source, QByteArrayLiteral("source"));
     roleNames.insert(FileName, QByteArrayLiteral("fileName"));
