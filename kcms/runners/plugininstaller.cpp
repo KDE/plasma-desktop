@@ -75,11 +75,6 @@ void fail(const QString &str)
     exit(1);
 }
 
-inline bool isSUSEDistro()
-{
-    return KOSRelease().name().contains(QStringLiteral("openSUSE"), Qt::CaseInsensitive);
-}
-
 void aboartInstallation()
 {
     qWarning() << i18n("Installation aborted");
@@ -218,7 +213,6 @@ public:
         setWindowTitle(i18n("Confirm Installation"));
         setWindowIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
         QVBoxLayout *layout = new QVBoxLayout(this);
-        const bool isRPM = packagePath.endsWith(QLatin1String(".rpm"));
         QString msg = xi18nc("@info", "You are about to install a binary package. You should only install these from a trusted author/packager.");
         QLabel *msgLabel = new QLabel(msg, this);
         msgLabel->setWordWrap(true);
@@ -230,8 +224,9 @@ public:
         buttonBox->button(QDialogButtonBox::Ok)->setText(i18n("Accept Risk And Continue"));
         // If the user clicks cancel or closes the dialog using escape
         connect(buttonBox, &QDialogButtonBox::rejected, this, aboartInstallation);
-        connect(buttonBox, &QDialogButtonBox::accepted, this, [this, isRPM, packagePath](){
-            if (isRPM && isSUSEDistro()) {
+        connect(buttonBox, &QDialogButtonBox::accepted, this, [this, packagePath](){
+            if (QMimeDatabase().mimeTypeForFile(QFileInfo(packagePath)).name() == QLatin1String("application/x-rpm")
+                    && KOSRelease().name().contains(QStringLiteral("openSUSE"), Qt::CaseInsensitive)) {
                 const QString command = QStringLiteral("sudo zypper install %1").arg(KShell::quoteArg(packagePath));
                 runScriptInTerminal(QStringLiteral("bash -c \"echo %1;%1\"").arg(command), packagePath);
                 exit(0);
