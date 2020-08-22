@@ -283,11 +283,12 @@ function checkLastSpacer() {
 
             //the size a margin should be to force a panel to be the required size above
             readonly property real spacingAtMinSize: Math.max(1, (currentLayout.isLayoutHorizontal ? root.height : root.width) - units.iconSizes.smallMedium - units.smallSpacing*2)/2
+            readonly property bool fillArea: applet && (applet.constraintHints & PlasmaCore.Types.CanFillArea)
 
-            Layout.topMargin: (currentLayout.isLayoutHorizontal && applet && applet.applyMargins) ? Math.round(Math.min(spacingAtMinSize, panelSvg.fixedMargins.top)) : 0
-            Layout.bottomMargin: (currentLayout.isLayoutHorizontal && applet && applet.applyMargins) ? Math.round(Math.min(spacingAtMinSize, panelSvg.fixedMargins.bottom)) : 0
-            Layout.leftMargin: (!currentLayout.isLayoutHorizontal && applet && applet.applyMargins) ? Math.round(Math.min(spacingAtMinSize, panelSvg.fixedMargins.left)) : 0
-            Layout.rightMargin: (!currentLayout.isLayoutHorizontal && applet && applet.applyMargins) ? Math.round(Math.min(spacingAtMinSize, panelSvg.fixedMargins.right)) : 0
+            Layout.topMargin: (currentLayout.isLayoutHorizontal && !fillArea) ? Math.round(Math.min(spacingAtMinSize, panelSvg.fixedMargins.top)) : 0
+            Layout.bottomMargin: (currentLayout.isLayoutHorizontal && !fillArea) ? Math.round(Math.min(spacingAtMinSize, panelSvg.fixedMargins.bottom)) : 0
+            Layout.leftMargin: (!currentLayout.isLayoutHorizontal && !fillArea) ? Math.round(Math.min(spacingAtMinSize, panelSvg.fixedMargins.left)) : 0
+            Layout.rightMargin: (!currentLayout.isLayoutHorizontal && !fillArea) ? Math.round(Math.min(spacingAtMinSize, panelSvg.fixedMargins.right)) : 0
 
             Layout.minimumWidth: (currentLayout.isLayoutHorizontal ? (applet && applet.Layout.minimumWidth > 0 ? applet.Layout.minimumWidth : root.height) : root.width) - Layout.leftMargin - Layout.rightMargin
             Layout.minimumHeight: (!currentLayout.isLayoutHorizontal ? (applet && applet.Layout.minimumHeight > 0 ? applet.Layout.minimumHeight : root.width) : root.height) - Layout.bottomMargin - Layout.topMargin
