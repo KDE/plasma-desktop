@@ -40,7 +40,9 @@
 #include <KOSRelease>
 #include <KIO/OpenFileManagerWindowJob>
 #include <KMessageBox>
-#include <KToolInvocation>
+#include <KConfig>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 #include <config-workspace.h>
 
@@ -82,6 +84,31 @@ void aboartInstallation()
 {
     qWarning() << i18n("Installation aborted");
     exit(1);
+}
+
+
+void runScriptInTerminal(const QString &script, const QString &pwd)
+{
+    KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
+    QString exec = confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole"));
+
+    if (exec == QLatin1String("konsole")) {
+        exec += QLatin1String(" --noclose");
+    } else if (exec == QLatin1String("xterm")) {
+        exec += QLatin1String(" -hold");
+    }
+    exec += QLatin1String(" -e ");
+    exec += KShell::quoteArg(script);
+
+    QProcess process;
+    process.setWorkingDirectory(pwd);
+    // We don't know if the entry read from the config contains options
+    // so we just split it at the end
+    QStringList split = KShell::splitArgs(exec);
+    process.setProgram(split.takeFirst());
+    process.setArguments(split);
+    process.start();
+    process.waitForFinished(-1);
 }
 
 class ScriptConfirmationDialog : public QDialog
@@ -206,7 +233,7 @@ public:
         connect(buttonBox, &QDialogButtonBox::accepted, this, [this, isRPM, packagePath](){
             if (isRPM && isSUSEDistro()) {
                 const QString command = QStringLiteral("sudo zypper install %1").arg(KShell::quoteArg(packagePath));
-                KToolInvocation::invokeTerminal(QStringLiteral("bash -c \"echo %1;%1\"").arg(command));
+                runScriptInTerminal(QStringLiteral("bash -c \"echo %1;%1\"").arg(command), packagePath);
                 exit(0);
             } else {
                 done(1);
@@ -307,12 +334,15 @@ void executeOperation(const QString &archive, Operation operation)
 
     const bool install = operation == Operation::Install;
     QString installerPath;
-    const QStringList archiveEntries = QDir(archive).entryList(QDir::Files, QDir::Name);
+    const QFileInfoList archiveEntries = QDir(archive).entryInfoList(QDir::Files, QDir::Name);
     const QString scriptPrefix = install ? "install" : "uninstall";
-    for (const auto &name : archiveEntries) {
-        if (name.startsWith(scriptPrefix)) {
-            installerPath = QDir(archive).filePath(name);
+    for (const auto &file : archiveEntries) {
+        if (file.baseName() == scriptPrefix) {
+            installerPath = file.absoluteFilePath();
+            // If the name is exactly install/uninstall we immediately take it
             break;
+        } else if (file.baseName().startsWith(scriptPrefix)) {
+            installerPath = file.absoluteFilePath();
         }
     }
     // We want the user to be exactly aware of whats going on
@@ -321,8 +351,12 @@ void executeOperation(const QString &archive, Operation operation)
         dlg.exec();
     }
 
-    const QString bashCommand = KShell::quoteArg(installerPath) + " || $SHELL";
-    KToolInvocation::invokeTerminal(QStringLiteral("bash -c %1").arg(KShell::quoteArg(bashCommand)), archive);
+    const QString finishedMessage = operation == Operation::Install
+                                    ? i18n("Installation script executed successfully, you may now close this window")
+                                    : i18n("Uninstallation script executed successfully, you may now close this window");
+    const QString bashCommand = QStringLiteral("echo %1;%1 || $SHELL && echo %2")
+            .arg(KShell::quoteArg(installerPath), KShell::quoteArg(finishedMessage));
+    runScriptInTerminal(QStringLiteral("bash -c %1").arg(KShell::quoteArg(bashCommand)), archive);
 }
 
 int main(int argc, char *argv[])
