@@ -81,6 +81,12 @@ void aboartInstallation()
     exit(1);
 }
 
+inline QString getCloseMessage(Operation operation)
+{
+    return operation == Operation::Install
+                    ? i18n("Installation executed successfully, you may now close this window")
+                    : i18n("Uninstallation executed successfully, you may now close this window");
+}
 
 void runScriptInTerminal(const QString &script, const QString &pwd)
 {
@@ -127,7 +133,7 @@ public:
                                   "for instructions from the author.<nl/>"
                                   "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
         } else if (noInstaller && readmes.isEmpty()) {
-            msg = xi18nc("@info", "This plugin does not provide an installation script. Please contact the author."
+            msg = xi18nc("@info", "This plugin does not provide an installation script. Please contact the author. "
                                   "You can try to install the plugin manually.<nl/>"
                                   "If you do not feel capable or comfortable with this, click \"Cancel\" now.");
         } else if (noInstaller) {
@@ -228,7 +234,8 @@ public:
             if (QMimeDatabase().mimeTypeForFile(QFileInfo(packagePath)).name() == QLatin1String("application/x-rpm")
                     && KOSRelease().name().contains(QStringLiteral("openSUSE"), Qt::CaseInsensitive)) {
                 const QString command = QStringLiteral("sudo zypper install %1").arg(KShell::quoteArg(packagePath));
-                runScriptInTerminal(QStringLiteral("bash -c \"echo %1;%1\"").arg(command), QFileInfo(packagePath).absolutePath());
+                runScriptInTerminal(QStringLiteral("bash -c \"echo %1;%1 && echo %2\"")
+                        .arg(command, KShell::quoteArg(getCloseMessage(Operation::Install))), QFileInfo(packagePath).absolutePath());
                 exit(0);
             } else {
                 done(1);
@@ -346,11 +353,8 @@ void executeOperation(const QString &archive, Operation operation)
         dlg.exec();
     }
 
-    const QString finishedMessage = operation == Operation::Install
-                                    ? i18n("Installation script executed successfully, you may now close this window")
-                                    : i18n("Uninstallation script executed successfully, you may now close this window");
     const QString bashCommand = QStringLiteral("echo %1;%1 || $SHELL && echo %2")
-            .arg(KShell::quoteArg(installerPath), KShell::quoteArg(finishedMessage));
+            .arg(KShell::quoteArg(installerPath), KShell::quoteArg(getCloseMessage(operation)));
     runScriptInTerminal(QStringLiteral("bash -c %1").arg(KShell::quoteArg(bashCommand)), archive);
 }
 

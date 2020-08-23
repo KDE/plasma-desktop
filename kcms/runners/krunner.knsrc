@@ -4,6 +4,6 @@ Categories=App Runners,System Runners,Web Runners
 ChecksumPolicy=ifpossible
 SignaturePolicy=ifpossible
 TargetDir=krunner-sources
-Uncompress=archive
+Uncompress=subdir-archive
 InstallationCommand=plugininstaller install %f
 UninstallCommand=plugininstaller uninstall %f
