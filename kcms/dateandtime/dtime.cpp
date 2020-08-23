@@ -161,7 +161,8 @@ void Dtime::findNTPutility(){
 
   const auto possible_ntputilities = {"ntpdate", "rdate"};
   for (const QString &possible_ntputility : possible_ntputilities) {
-    auto ntpUtility = QStandardPaths::findExecutable(possible_ntputility, path);
+//     auto ntpUtility = QStandardPaths::findExecutable(possible_ntputility, path);
+    ntpUtility = QStandardPaths::findExecutable(possible_ntputility, path);
     if (!ntpUtility.isEmpty()) {
       qDebug() << "ntpUtility = " << ntpUtility;
       return;
