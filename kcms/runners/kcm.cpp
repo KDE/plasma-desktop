@@ -92,7 +92,8 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     positionLayout->addRow(i18n("History:"), m_retainPriorSearch);
     configHeaderLeft->addLayout(positionLayout);
 
-    configHeaderRight->addStretch();
+    configHeaderRight->setSizeConstraint(QLayout::SetNoConstraint);
+    configHeaderRight->setAlignment(Qt::AlignBottom);
     configHeaderRight->addWidget(clearHistoryButton);
 
     configHeaderLayout->addLayout(configHeaderLeft);
