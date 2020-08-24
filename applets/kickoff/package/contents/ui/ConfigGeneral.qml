@@ -120,6 +120,7 @@ ColumnLayout {
         Layout.fillWidth: true
         text: i18n("Drag tabs between the boxes to show/hide them, or reorder the visible tabs by dragging.")
         wrapMode: Text.WordWrap
+        horizontalAlignment: Text.AlignHCenter
     }
 
     Item {
