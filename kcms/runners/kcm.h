@@ -23,6 +23,7 @@
 #include <KCModule>
 #include <KConfig>
 #include <QRadioButton>
+#include <QCheckBox>
 
 
 
@@ -51,6 +52,7 @@ private:
     QString m_pluginID;
     QRadioButton *m_topPositioning;
     QRadioButton *m_freeFloating;
+    QCheckBox *m_retainPriorSearch;
 };
 
 #endif
