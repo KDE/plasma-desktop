@@ -272,8 +272,8 @@ PlasmaComponents.ContextMenu {
     PlasmaComponents.MenuItem {
         id: startNewInstanceItem
         visible: get(atm.CanLaunchNewInstance)
-        text: i18n("Start New Instance")
-        icon: "list-add-symbolic"
+        text: i18n("Open New Window")
+        icon: "window-new"
 
         onClicked: tasksModel.requestNewInstance(modelIndex)
     }

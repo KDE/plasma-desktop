@@ -143,7 +143,7 @@ Item {
             model: [
                 i18nc("Part of a sentence: 'Middle-clicking any task does nothing'", "Does nothing"),
                 i18nc("Part of a sentence: 'Middle-clicking any task closes window or group'", "Closes window or group"),
-                i18nc("Part of a sentence: 'Middle-clicking any task opens a new instance'", "Opens a new instance"),
+                i18nc("Part of a sentence: 'Middle-clicking any task opens a new window'", "Opens a new window"),
                 i18nc("Part of a sentence: 'Middle-clicking any task minimizes/restores window or group'", "Minimizes/Restores window or group"),
                 i18nc("Part of a sentence: 'Middle-clicking any task toggles grouping'", "Toggles grouping"),
                 i18nc("Part of a sentence: 'Middle-clicking any task brings it to the current virtual desktop'", "Brings it to the current virtual desktop")
