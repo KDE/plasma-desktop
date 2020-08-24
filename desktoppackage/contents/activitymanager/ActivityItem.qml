@@ -367,6 +367,7 @@ Item {
             PlasmaComponents.Button {
                 id: stopButton
 
+                visible: stoppable
                 iconSource: "process-stop"
                 tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Stop activity")
 
