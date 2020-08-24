@@ -87,7 +87,7 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     positionLayout->addRow(i18n("Positioning:"), m_topPositioning);
     positionLayout->addRow(QString(), m_freeFloating);
     configHeaderLeft->addLayout(positionLayout);
-    m_retainPriorSearch = new QCheckBox(i18n("Retain Prior Search"), this);
+    m_retainPriorSearch = new QCheckBox(i18n("Retain previous search"), this);
     connect(m_retainPriorSearch, &QCheckBox::clicked, this, &SearchConfigModule::markAsChanged);
     positionLayout->addRow(i18n("History:"), m_retainPriorSearch);
     configHeaderLeft->addLayout(positionLayout);
