@@ -103,6 +103,7 @@ KCM.SimpleKCM {
                     delegate: Kirigami.AbstractListItem {
                         id: componentDelegate
                         readonly property color foregroundColor: ListView.isCurrentItem ? activeTextColor : textColor
+                        KeyNavigation.right: shortcutsList
                         RowLayout {
                             Kirigami.Icon {
                                 id: appIcon
