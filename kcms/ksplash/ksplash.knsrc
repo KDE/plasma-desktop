@@ -40,5 +40,5 @@ Name[zh_TW]=啟動畫面
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=Plasma Splashscreens
 StandardResource=tmp
-InstallationCommand=kpackagetool5 -t Plasma/LookAndFeel -i %f
-UninstallCommand=kpackagetool5 -t Plasma/LookAndFeel -r %f
+Uncompress=kpackage
+KPackageType=Plasma/LookAndFeel
