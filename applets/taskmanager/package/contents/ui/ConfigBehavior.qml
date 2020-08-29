@@ -171,8 +171,8 @@ Item {
 
         CheckBox {
             id: wheelEnabled
-            Kirigami.FormData.label: i18n("Mouse wheel:")
-            text: i18n("Cycle through tasks")
+            Kirigami.FormData.label: i18nc("Part of a sentence: 'Mouse wheel cycles through tasks'", "Mouse wheel:")
+            text: i18nc("Part of a sentence: 'Mouse wheel cycles through tasks'", "Cycles through tasks")
         }
 
         Item {
