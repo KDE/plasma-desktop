@@ -87,6 +87,13 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     positionLayout->addRow(i18n("Positioning:"), m_topPositioning);
     positionLayout->addRow(QString(), m_freeFloating);
     configHeaderLeft->addLayout(positionLayout);
+    m_retainPriorSearch = new QCheckBox(i18n("Retain previous search"), this);
+    connect(m_retainPriorSearch, &QCheckBox::clicked, this, &SearchConfigModule::markAsChanged);
+    positionLayout->addRow(i18n("History:"), m_retainPriorSearch);
+    configHeaderLeft->addLayout(positionLayout);
+
+    configHeaderRight->setSizeConstraint(QLayout::SetNoConstraint);
+    configHeaderRight->setAlignment(Qt::AlignBottom);
     configHeaderRight->addWidget(clearHistoryButton);
 
     configHeaderLayout->addLayout(configHeaderLeft);
@@ -122,9 +129,11 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
 void SearchConfigModule::load()
 {
     KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("krunnerrc"));
-    bool freeFloating = config->group("General").readEntry("FreeFloating", false);
+    const KConfigGroup general = config->group("General");
+    bool freeFloating = general.readEntry("FreeFloating", false);
     m_topPositioning->setChecked(!freeFloating);
     m_freeFloating->setChecked(freeFloating);
+    m_retainPriorSearch->setChecked(general.readEntry("RetainPriorSearch", true));
     // Set focus on the pluginselector to pass focus to search bar.
     m_pluginSelector->setFocus(Qt::OtherFocusReason);
 
@@ -144,6 +153,7 @@ void SearchConfigModule::save()
 {
     KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("krunnerrc"));
     config->group("General").writeEntry("FreeFloating", m_freeFloating->isChecked(), KConfig::Notify);
+    config->group("General").writeEntry("RetainPriorSearch", m_retainPriorSearch->isChecked(), KConfig::Notify);
     m_pluginSelector->save();
 
     QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/krunnerrc"),
@@ -158,6 +168,7 @@ void SearchConfigModule::defaults()
 {
     m_topPositioning->setChecked(true);
     m_freeFloating->setChecked(false);
+    m_retainPriorSearch->setChecked(true);
     m_pluginSelector->defaults();
 }
 
