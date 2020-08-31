@@ -358,7 +358,7 @@ FolderViewDropArea {
         }
 
         // Customize the icon and text to improve discoverability
-        plasmoid.setAction("configure", i18n("Configure Desktop..."), "preferences-desktop-wallpaper")
+        plasmoid.setAction("configure", i18n("Configure Desktop and Wallpaper..."), "preferences-desktop-wallpaper")
 
         // WORKAROUND: that's the only place where we can inject a sensible size.
         // if root has width defined, it will override the value we set before
