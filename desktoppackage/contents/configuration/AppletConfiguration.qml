@@ -143,6 +143,7 @@ Rectangle {
 
     RowLayout {
         anchors {
+            topMargin: topSeparator.height
             fill: parent
             leftMargin: configDialog.configModel ? 0 : units.smallSpacing * 2
         }
