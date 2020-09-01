@@ -289,10 +289,9 @@ void packageKitUninstall(const QString &fileName)
                          });
         QObject::connect(transaction, &PackageKit::Transaction::errorCode, exitWithError);
     };
-    // On OpenSUSE packagekit can't even look up the package details of a file, so we have to do this manually
+    // On OpenSUSE packagekit can't look up the package details of a file, so we have to do this manually
     if (QMimeDatabase().mimeTypeForFile(QFileInfo(fileName)).name() == QLatin1String("application/x-rpm")
         && KOSRelease().name().contains(QStringLiteral("openSUSE"), Qt::CaseInsensitive)) {
-        // OpenSUSE wont let us get the details of a local file
         QProcess rpmInfoProcess;
         rpmInfoProcess.start(QStringLiteral("rpm"), {"-qi", fileName});
         rpmInfoProcess.waitForFinished(1000);
@@ -330,9 +329,6 @@ void packageKit(Operation operation, const QString &fileName)
 {
 #ifdef HAVE_PACKAGEKIT
     QFileInfo fileInfo(fileName);
-    if (!fileInfo.exists()) {
-        fail(i18n("The file does not exist!"));
-    }
     const QString absPath = fileInfo.absoluteFilePath();
     if (operation == Operation::Install) {
         PackagekitConfirmationDialog(fileName).exec();
@@ -407,7 +403,6 @@ int main(int argc, char *argv[])
     } else {
         fail(i18n("Unsupported command %1", cmd));
     }
-
 
     return 0;
 }
