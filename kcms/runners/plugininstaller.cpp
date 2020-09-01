@@ -279,9 +279,20 @@ void packageKitInstall(const QString &fileName)
 
 void packageKitUninstall(const QString &fileName)
 {
+    const auto removePackage = [](const QString &packageId) {
+        PackageKit::Transaction *transaction = PackageKit::Daemon::removePackage(packageId);
+        QObject::connect(transaction, &PackageKit::Transaction::finished,
+                         [=](PackageKit::Transaction::Exit status, uint) {
+                             if (status == PackageKit::Transaction::ExitSuccess) {
+                                 exit(0);
+                             }
+                         });
+        QObject::connect(transaction, &PackageKit::Transaction::errorCode, exitWithError);
+    };
     // On OpenSUSE packagekit can't even look up the package details of a file, so we have to do this manually
     if (QMimeDatabase().mimeTypeForFile(QFileInfo(fileName)).name() == QLatin1String("application/x-rpm")
         && KOSRelease().name().contains(QStringLiteral("openSUSE"), Qt::CaseInsensitive)) {
+        // OpenSUSE wont let us get the details of a local file
         QProcess rpmInfoProcess;
         rpmInfoProcess.start(QStringLiteral("rpm"), {"-qi", fileName});
         rpmInfoProcess.waitForFinished(1000);
@@ -290,37 +301,29 @@ void packageKitUninstall(const QString &fileName)
         if (!infoMatch.hasMatch()) {
             fail(i18n("Could not resolve package name of %1", fileName));
         }
-        const QString command = QStringLiteral("sudo zypper remove %1").arg(KShell::quoteArg(infoMatch.captured(1)));
-        const QString bashCommand = QStringLiteral("bash -c \"echo %1;%1 && echo %2\"").arg(command, getCloseMessage(Operation::Uninstall));
-        runScriptInTerminal(bashCommand, QFileInfo(fileName).dir().path());
-        exit(0);
-    }
-
-    PackageKit::Transaction *transaction = PackageKit::Daemon::getDetailsLocal(fileName);
-    QObject::connect(transaction, &PackageKit::Transaction::details,
-                     [=](const PackageKit::Details &details) {
-                         PackageKit::Transaction *transaction = PackageKit::Daemon::removePackage(details.packageId());
-                         QObject::connect(transaction, &PackageKit::Transaction::finished,
-                             [=](PackageKit::Transaction::Exit status, uint) {
-                                  if (status == PackageKit::Transaction::ExitSuccess) {
-                                         exit(0);
-                                  }
-                         });
-                         QObject::connect(transaction, &PackageKit::Transaction::errorCode, exitWithError);
-                     });
-
-    QObject::connect(transaction, &PackageKit::Transaction::errorCode, exitWithError);
-    // Fallback error handling
-    QObject::connect(transaction, &PackageKit::Transaction::finished,
-        [=](PackageKit::Transaction::Exit status, uint) {
-            if (status != PackageKit::Transaction::ExitSuccess) {
-                QTimer::singleShot(1000, [=]() {
-                    fail(i18n("Failed to uninstall \"%1\"; exited with status \"%2\"",
-                              fileName, QVariant::fromValue(status).toString()));
-                });
-            }
+        const QString rpmPackageName = KShell::quoteArg(infoMatch.captured(1));
+        PackageKit::Transaction *transaction = PackageKit::Daemon::resolve(rpmPackageName);
+        QObject::connect(transaction, &PackageKit::Transaction::package, [=](PackageKit::Transaction::Info, const QString &packageId, const QString &) {
+            removePackage(packageId);
         });
+    } else {
+        PackageKit::Transaction *transaction = PackageKit::Daemon::getDetailsLocal(fileName);
+        QObject::connect(transaction, &PackageKit::Transaction::details, [=](const PackageKit::Details &details) {
+            removePackage(details.packageId());
+        });
+
+        QObject::connect(transaction, &PackageKit::Transaction::errorCode, exitWithError);
+        // Fallback error handling
+        QObject::connect(transaction, &PackageKit::Transaction::finished, [=](PackageKit::Transaction::Exit status, uint) {
+                             if (status != PackageKit::Transaction::ExitSuccess) {
+                                 QTimer::singleShot(1000, [=]() {
+                                     fail(i18n("Failed to uninstall \"%1\"; exited with status \"%2\"",
+                                               fileName, QVariant::fromValue(status).toString()));
+                                 });
+                             }
+                         });
     }
+}
 #endif
 
 void packageKit(Operation operation, const QString &fileName)
