@@ -224,7 +224,7 @@ Item {
                 Layout.preferredWidth: height
                 onClicked: plasmoid.editMode = false
                 PlasmaComponents3.ToolTip {
-                    text: i18n("Finish Customizing Layout")
+                    text: i18n("Exit Edit Mode")
                 }
             }
         }
