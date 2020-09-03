@@ -30,6 +30,8 @@ Item {
     width: GridView.view.cellWidth
     height: width
 
+    enabled: !model.disabled
+
     property bool showLabel: true
 
     property int itemIndex: model.index

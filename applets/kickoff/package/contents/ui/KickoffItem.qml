@@ -28,6 +28,8 @@ import "code/tools.js" as Tools
 Item {
     id: listItem
 
+    enabled: !model.disabled
+
     width: ListView.view.width
     height: (units.smallSpacing * 2) + Math.max(elementIcon.height, titleElement.implicitHeight + subTitleElement.implicitHeight)
 
