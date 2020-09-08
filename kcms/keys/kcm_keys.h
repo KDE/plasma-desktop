@@ -21,6 +21,7 @@
 #ifndef KCM_KEYS_H
 #define KCM_KEYS_H
 
+#include <QKeySequence>
 #include <QObject>
 
 #include <KQuickAddons/ConfigModule>
@@ -46,6 +47,9 @@ public:
     void load() override;
     void save() override;
 
+    Q_INVOKABLE  void requestKeySequence(QQuickItem *context, const QModelIndex &index,
+        const QKeySequence &newSequence, const QKeySequence &oldSequence = QKeySequence());
+
     Q_INVOKABLE void writeScheme(const QUrl &url);
     Q_INVOKABLE void loadScheme(const QUrl &url);
     Q_INVOKABLE QVariantList defaultSchemes() const;
@@ -64,6 +68,7 @@ Q_SIGNALS:
 
 private:
     void setError(const QString &errorMessage);
+    QModelIndex conflictingIndex(const QKeySequence &keySequence);
 
     QString m_lastError;
     FilteredShortcutsModel *m_filteredModel;

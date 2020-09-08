@@ -97,7 +97,13 @@ Kirigami.AbstractListItem {
                         QQC2.CheckBox {
                             checked: activeShortcuts.indexOf(modelData) != -1
                             text: modelData
-                            onToggled: originalIndex.model.toggleDefaultShortcut(originalIndex, modelData, checked)
+                            onToggled: {
+                                if (checked) {
+                                     kcm.requestKeySequence(this, originalIndex, modelData)
+                                } else {
+                                    originalIndex.model.disableShortcut(originalIndex, modelData)
+                                }
+                            }
                         }
                     }
                 }
@@ -117,8 +123,9 @@ Kirigami.AbstractListItem {
                             KeySequenceItem {
                                 keySequence: modelData
                                 showClearButton: false
+                                checkForConflictsAgainst: ShortcutType.None
                                 onCaptureFinished: {
-                                    originalIndex.model.changeShortcut(originalIndex, modelData, keySequence)
+                                    kcm.requestKeySequence(this, originalIndex, keySequence, modelData)
                                 }
                             }
                             QQC2.Button {
@@ -154,8 +161,9 @@ Kirigami.AbstractListItem {
                             signal finished
                             KeySequenceItem {
                                 showClearButton: false
+                                checkForConflictsAgainst: ShortcutType.None
                                 onCaptureFinished: {
-                                    originalIndex.model.addShortcut(originalIndex, keySequence)
+                                    kcm.requestKeySequence(this, originalIndex, keySequence)
                                     parent.finished()
                                 }
                             }

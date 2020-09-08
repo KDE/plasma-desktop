@@ -27,22 +27,6 @@ BaseModel::BaseModel(QObject *parent)
 {
 }
 
-
-void BaseModel::toggleDefaultShortcut(const QModelIndex &index, const QKeySequence &shortcut, bool enabled)
-{
-    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid) || !index.parent().isValid())  {
-        return;
-    }
-    qCDebug(KCMKEYS) << "Default shortcut" << index << shortcut << enabled;
-    Action &a = m_components[index.parent().row()].actions[index.row()];
-    if (enabled) {
-        a.activeShortcuts.insert(shortcut);
-    } else {
-        a.activeShortcuts.remove(shortcut);
-    }
-    Q_EMIT dataChanged(index, index, {ActiveShortcutsRole, DefaultShortcutsRole});
-}
-
 void BaseModel::addShortcut(const QModelIndex &index, const QKeySequence &shortcut)
 {
    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid) || !index.parent().isValid())  {
