@@ -59,7 +59,8 @@ public:
         DefaultShortcutsRole,
         CustomShortcutsRole,
         CheckedRole,
-        PendingDeletionRole
+        PendingDeletionRole,
+        IsDefaultRole
     };
     Q_ENUM(Roles)
 
