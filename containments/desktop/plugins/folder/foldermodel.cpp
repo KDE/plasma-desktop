@@ -1610,7 +1610,12 @@ void FolderModel::createActions()
     QAction *refresh = new QAction(QIcon::fromTheme(QStringLiteral("view-refresh")), i18n("&Refresh View"), this);
     refresh->setShortcut(QKeySequence(QKeySequence::Refresh));
     connect(refresh, &QAction::triggered, this, &FolderModel::refresh);
-
+    
+    QAction* newDirAction = new QAction(QIcon::fromTheme(QStringLiteral("create_dir")), i18n("&CreateFolder"), this);
+    m_actionCollection.setDefaultShortcut(newDirAction, KStandardShortcut::createFolder().last() );
+    newDirAction->setVisible(false);
+    connect(newDirAction, &QAction::triggered, this, &FolderModel::createFolder);
+    
     QAction *rename = KStandardAction::renameFile(this, &FolderModel::requestRename, this);
     QAction *trash = KStandardAction::moveToTrash(this, &FolderModel::moveSelectedToTrash, this);
 
@@ -1637,7 +1642,8 @@ void FolderModel::createActions()
     m_actionCollection.addAction(QStringLiteral("del"), del);
     m_actionCollection.addAction(QStringLiteral("restoreFromTrash"), restoreFromTrash);
     m_actionCollection.addAction(QStringLiteral("emptyTrash"), emptyTrash);
-
+    m_actionCollection.addAction(QStringLiteral("create_dir"), newDirAction);
+    
     m_newMenu = new KNewFileMenu(&m_actionCollection, QStringLiteral("newMenu"), this);
     m_newMenu->setModal(false);
     connect(m_newMenu, &KNewFileMenu::directoryCreated, this, &FolderModel::newFileMenuItemCreated);
@@ -2112,3 +2118,8 @@ void FolderModel::undoTextChanged(const QString &text)
     }
 }
 
+void FolderModel::createFolder()
+{
+    m_newMenu->setPopupFiles(QList<QUrl>() << m_dirModel->dirLister()->url());
+    m_newMenu->createDirectory();
+}

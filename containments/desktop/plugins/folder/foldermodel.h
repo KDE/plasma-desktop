@@ -248,6 +248,7 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
         Q_INVOKABLE void openSelected();
         Q_INVOKABLE void undo();
         Q_INVOKABLE void refresh();
+        Q_INVOKABLE void createFolder();        
 
         void setScreen(int screen);
 
