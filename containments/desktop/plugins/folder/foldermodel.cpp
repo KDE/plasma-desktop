@@ -1611,7 +1611,7 @@ void FolderModel::createActions()
     refresh->setShortcut(QKeySequence(QKeySequence::Refresh));
     connect(refresh, &QAction::triggered, this, &FolderModel::refresh);
     
-    QAction* newDirAction = new QAction(QIcon::fromTheme(QStringLiteral("create_dir")), i18n("&CreateFolder"), this);
+    QAction* newDirAction = new QAction(QIcon::fromTheme(QStringLiteral("create_dir")), i18n("&Create Folder"), this);
     m_actionCollection.setDefaultShortcut(newDirAction, KStandardShortcut::createFolder().last() );
     newDirAction->setVisible(false);
     connect(newDirAction, &QAction::triggered, this, &FolderModel::createFolder);
