@@ -104,6 +104,7 @@ KCM.SimpleKCM {
                         id: componentDelegate
                         readonly property color foregroundColor: ListView.isCurrentItem ? activeTextColor : textColor
                         KeyNavigation.right: shortcutsList
+                        height: Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.smallSpacing + topPadding + bottomPadding
                         RowLayout {
                             Kirigami.Icon {
                                 id: appIcon
@@ -120,7 +121,7 @@ KCM.SimpleKCM {
                                 opacity: model.pendingDeletion ? 0.3 : 1
                             }
                             QQC2.ToolButton {
-                                Layout.preferredHeight: Kirigami.Units.iconSizes.small + Kirigami.Units.largeSpacing
+                                Layout.preferredHeight: Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.smallSpacing
                                 Layout.preferredWidth: Layout.preferredHeight
                                 visible: model.section != i18n("Common Actions") && !exportActive && !model.pendingDeletion
                                 opacity: componentDelegate.containsMouse || componentDelegate.ListView.isCurrentItem ? 1 : 0
@@ -133,7 +134,7 @@ KCM.SimpleKCM {
                                 }
                             }
                             QQC2.ToolButton {
-                                Layout.preferredHeight: Kirigami.Units.iconSizes.small + Kirigami.Units.largeSpacing
+                                Layout.preferredHeight: Kirigami.Units.iconSizes.small +  2 * Kirigami.Units.smallSpacing
                                 Layout.preferredWidth: Layout.preferredHeight
                                 visible: !exportActive && model.pendingDeletion
                                 icon.name: "edit-undo"
