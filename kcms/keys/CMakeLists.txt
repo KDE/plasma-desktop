@@ -8,6 +8,7 @@ set(kcm_keys_SRCS
     globalaccelmodel.cpp
     shortcutsmodel.cpp
     standardshortcutsmodel.cpp
+    keysdata.cpp
     )
 
 set(kglobalaccel_xml ${KGLOBALACCEL_DBUS_INTERFACES_DIR}/kf5_org.kde.KGlobalAccel.xml)
@@ -48,6 +49,7 @@ target_link_libraries(kcm_keys
     KF5::ConfigGui
     KF5::GlobalAccel
     KF5::I18n
+    KF5::KCMUtils
     KF5::KIOWidgets
     KF5::QuickAddons
 )

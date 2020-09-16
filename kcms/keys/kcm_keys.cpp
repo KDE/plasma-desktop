@@ -40,10 +40,11 @@
 #include "filteredmodel.h"
 #include "globalaccelmodel.h"
 #include "kcmkeys_debug.h"
+#include "keysdata.h"
 #include "shortcutsmodel.h"
 #include "standardshortcutsmodel.h"
 
-K_PLUGIN_CLASS_WITH_JSON(KCMKeys, "kcm_keys.json")
+K_PLUGIN_FACTORY_WITH_JSON(KCMKeysFactory, "kcm_keys.json", registerPlugin<KCMKeys>(); registerPlugin<KeysData>();)
 
 KCMKeys::KCMKeys(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
