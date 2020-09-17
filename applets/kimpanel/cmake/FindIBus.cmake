@@ -2,7 +2,7 @@
 # Once done this will define
 #
 #  IBUS_FOUND - system has IBUS
-#  IBUS_INCLUDE_DIR - The include directory to use for the fontconfig headers
+#  IBUS_INCLUDE_DIR - The include directory to use for the IBUS headers
 #  IBUS_LIBRARIES - Link these to use IBUS
 #  IBUS_DEFINITIONS - Compiler switches required for using IBUS
 
