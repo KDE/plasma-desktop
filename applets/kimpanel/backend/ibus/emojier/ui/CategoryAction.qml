@@ -28,6 +28,8 @@ Kirigami.Action {
             case 'Flags': return 'flag'
             case 'Food & Drink': return 'food'
             case 'Objects': return 'object'
+            case 'People & Body': return 'user'
+            case 'Smileys & Emotion':
             case 'Smileys & People': return 'smiley'
             case 'Symbols': return 'love'
             case 'Travel & Places': return 'globe'
