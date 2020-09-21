@@ -78,13 +78,13 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     QVBoxLayout *configHeaderRight = new QVBoxLayout(this);
 
     // Options where KRunner should pop up
-    m_topPositioning = new QRadioButton(i18n("Top of screen"), this);
+    m_topPositioning = new QRadioButton(i18n("Top"), this);
     connect(m_topPositioning, &QRadioButton::clicked, this, &SearchConfigModule::markAsChanged);
-    m_freeFloating = new QRadioButton(i18n("Free-floating window"), this);
+    m_freeFloating = new QRadioButton(i18n("Center"), this);
     connect(m_freeFloating, &QRadioButton::clicked, this, &SearchConfigModule::markAsChanged);
 
     QFormLayout *positionLayout = new QFormLayout(this);
-    positionLayout->addRow(i18n("Positioning:"), m_topPositioning);
+    positionLayout->addRow(i18n("Position on screen:"), m_topPositioning);
     positionLayout->addRow(QString(), m_freeFloating);
     configHeaderLeft->addLayout(positionLayout);
     m_enableHistory = new QCheckBox(i18n("Enable"), this);
