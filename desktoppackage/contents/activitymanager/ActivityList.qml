@@ -19,6 +19,7 @@
  */
 
 import QtQuick 2.2
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.activities 0.1 as Activities
 
@@ -110,7 +111,7 @@ Flickable {
 
         // width: root.width - (root.width % 10)
         width: root.itemsWidth
-        spacing: units.smallSpacing * 2
+        spacing: PlasmaCore.Units.smallSpacing * 2
 
         // Running activities
 
@@ -132,7 +133,7 @@ Flickable {
                 background   : model.background
                 current      : model.isCurrent
                 hasWindows   : model.hasWindows
-                innerPadding : 2 * units.smallSpacing
+                innerPadding : 2 * PlasmaCore.Units.smallSpacing
                 stoppable    : activitiesList.count > 1
 
                 onClicked    : {
@@ -146,7 +147,7 @@ Flickable {
         Item {
             // spacer
             width  : parent.width
-            height : units.largeSpacing
+            height : PlasmaCore.Units.largeSpacing
         }
 
         PlasmaExtras.Heading {
@@ -173,7 +174,7 @@ Flickable {
                 activityId   : model.id
                 title        : model.name
                 icon         : model.iconSource
-                innerPadding : 2 * units.smallSpacing
+                innerPadding : 2 * PlasmaCore.Units.smallSpacing
 
                 onClicked: {
                     ActivitySwitcher.Backend.setCurrentActivity(model.id)
@@ -184,7 +185,7 @@ Flickable {
         Item {
             // spacer
             width  : parent.width
-            height : units.largeSpacing * 2
+            height : PlasmaCore.Units.largeSpacing * 2
 
             visible: stoppedActivitiesHeading.visible
         }
@@ -193,7 +194,7 @@ Flickable {
             NumberAnimation {
                 properties: "x"
                 from: -100
-                duration: units.shortDuration
+                duration: PlasmaCore.Units.shortDuration
             }
         }
 
@@ -201,7 +202,7 @@ Flickable {
             NumberAnimation {
                 id: animation
                 properties: "y"
-                duration: units.longDuration
+                duration: PlasmaCore.Units.longDuration
             }
         }
     }

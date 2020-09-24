@@ -32,7 +32,7 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 
 Item {
     anchors.fill: parent
-    anchors.topMargin: units.largeSpacing
+    anchors.topMargin: PlasmaCore.Units.largeSpacing
 
     objectName: "FavoritesView"
 

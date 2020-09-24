@@ -29,7 +29,7 @@ import QtGraphicalEffects 1.0
 PlasmaExtras.PlasmoidHeading {
     id: header
 
-    implicitHeight: units.gridUnit * 5
+    implicitHeight: PlasmaCore.Units.gridUnit * 5
 
     property alias query: queryField.text
     property Item input: queryField
@@ -74,14 +74,14 @@ PlasmaExtras.PlasmoidHeading {
             cache: false
             visible: source !== ""
 
-            Layout.preferredWidth: units.gridUnit * 3
-            Layout.preferredHeight: units.gridUnit * 3
+            Layout.preferredWidth: PlasmaCore.Units.gridUnit * 3
+            Layout.preferredHeight: PlasmaCore.Units.gridUnit * 3
 
             sourceSize.width: width
             sourceSize.height: height
 
             fillMode: Image.PreserveAspectFit
-            Layout.margins: units.gridUnit
+            Layout.margins: PlasmaCore.Units.gridUnit
 
             // Crop the avatar to fit in a circle, like the lock and login screens
             // but don't on software rendering where this won't render
@@ -121,18 +121,18 @@ PlasmaExtras.PlasmoidHeading {
                 source: "user-identity"
                 visible: faceIcon.status !== Image.Ready
                 anchors.fill: faceIcon
-                anchors.bottomMargin: units.smallSpacing
+                anchors.bottomMargin: PlasmaCore.Units.smallSpacing
                 usesPlasmaTheme: false
             }
         }
 
         ColumnLayout {
             Layout.fillWidth: true
-            Layout.rightMargin: units.gridUnit
+            Layout.rightMargin: PlasmaCore.Units.gridUnit
 
             Item {
                 Layout.fillWidth: true
-                Layout.preferredHeight: units.gridUnit
+                Layout.preferredHeight: PlasmaCore.Units.gridUnit
 
                 PlasmaExtras.Heading {
                     id: nameLabel
@@ -144,7 +144,7 @@ PlasmaExtras.PlasmoidHeading {
                     horizontalAlignment: Text.AlignLeft
                     verticalAlignment: Text.AlignBottom
 
-                    Behavior on opacity { NumberAnimation { duration:  units.longDuration; easing.type: Easing.InOutQuad; } }
+                    Behavior on opacity { NumberAnimation { duration:  PlasmaCore.Units.longDuration; easing.type: Easing.InOutQuad; } }
 
                     // Show the info instead of the user's name when hovering over it
                     MouseArea {
@@ -169,7 +169,7 @@ PlasmaExtras.PlasmoidHeading {
                     horizontalAlignment: Text.AlignLeft
                     verticalAlignment: Text.AlignBottom
 
-                    Behavior on opacity { NumberAnimation { duration:  units.longDuration; easing.type: Easing.InOutQuad; } }
+                    Behavior on opacity { NumberAnimation { duration:  PlasmaCore.Units.longDuration; easing.type: Easing.InOutQuad; } }
                 }
             }
 

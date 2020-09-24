@@ -27,10 +27,10 @@ import org.kde.plasma.configuration 2.0
 AppletConfiguration {
     id: root
     isContainment: true
-    Layout.minimumWidth: units.gridUnit * 30
-    Layout.minimumHeight: units.gridUnit * 20
-    Layout.preferredWidth: units.gridUnit * 32
-    Layout.preferredHeight: units.gridUnit * 36
+    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 30
+    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 20
+    Layout.preferredWidth: PlasmaCore.Units.gridUnit * 32
+    Layout.preferredHeight: PlasmaCore.Units.gridUnit * 36
     Layout.maximumWidth: plasmoid.availableScreenRect.width
     Layout.maximumHeight: plasmoid.availableScreenRect.height
 

@@ -35,7 +35,7 @@ PlasmaCore.IconItem {
         case PlasmaCore.Types.Horizontal:
             return height;
         default:
-            return units.gridUnit * 3;
+            return PlasmaCore.Units.gridUnit * 3;
         }
     }
 
@@ -46,12 +46,12 @@ PlasmaCore.IconItem {
         case PlasmaCore.Types.Horizontal:
             return 0;
         default:
-            return units.gridUnit * 3;
+            return PlasmaCore.Units.gridUnit * 3;
         }
     }
 
-    Layout.maximumWidth: inPanel ? units.iconSizeHints.panel : -1;
-    Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1;
+    Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1;
+    Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1;
 
     source: plasmoid.icon ? plasmoid.icon : "plasma"
     active: mouseArea.containsMouse

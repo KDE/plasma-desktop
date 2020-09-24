@@ -126,7 +126,7 @@ Kirigami.Page {
 
                     Kirigami.PlaceholderMessage {
                         anchors.centerIn: parent
-                        width: parent.width - (units.largeSpacing * 4)
+                        width: parent.width - (Kirigami.Units.largeSpacing * 4)
 
                         visible: sourcesList.count === 0 && searchField.length > 0
 
@@ -149,7 +149,7 @@ Kirigami.Page {
 
             Kirigami.PlaceholderMessage {
                 anchors.centerIn: parent
-                width: parent.width - (units.largeSpacing * 4)
+                width: parent.width - (Kirigami.Units.largeSpacing * 4)
                 text: i18n("Select an application from the list to configure its notification settings and behavior.")
                 visible: !appConfiguration.rootIndex || !appConfiguration.rootIndex.valid
             }

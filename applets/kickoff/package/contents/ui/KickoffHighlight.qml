@@ -17,14 +17,15 @@
  */
 
 import QtQuick 2.0
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
     PlasmaComponents.Highlight {
         anchors {
             fill: parent
-            leftMargin: units.smallSpacing * 4
-            rightMargin: units.smallSpacing * 4
+            leftMargin: PlasmaCore.Units.smallSpacing * 4
+            rightMargin: PlasmaCore.Units.smallSpacing * 4
         }
     }
 }

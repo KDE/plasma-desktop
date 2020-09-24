@@ -69,20 +69,20 @@ ColumnLayout {
     readonly property string artist: currentMetadata["xesam:artist"] || ""
     readonly property string albumArt: currentMetadata["mpris:artUrl"] || ""
 
-    spacing: units.smallSpacing
+    spacing: PlasmaCore.Units.smallSpacing
 
     // text labels + close button
     RowLayout {
         id: header
         // match spacing of DefaultToolTip.qml in plasma-framework
-        spacing: isWin ? units.smallSpacing : units.largeSpacing
+        spacing: isWin ? PlasmaCore.Units.smallSpacing : PlasmaCore.Units.largeSpacing
 
         // This number controls the overall size of the window tooltips
-        Layout.maximumWidth: units.gridUnit * 16
+        Layout.maximumWidth: PlasmaCore.Units.gridUnit * 16
         Layout.minimumWidth: isWin ? Layout.maximumWidth : 0
         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         // match margins of DefaultToolTip.qml in plasma-framework
-        Layout.margins: isWin ? 0 : units.gridUnit / 2
+        Layout.margins: isWin ? 0 : PlasmaCore.Units.gridUnit / 2
 
         // all textlabels
         ColumnLayout {
@@ -131,7 +131,7 @@ ColumnLayout {
 
             Badge {
                 anchors.centerIn: parent
-                height: units.iconSizes.smallMedium
+                height: PlasmaCore.Units.iconSizes.smallMedium
                 number: smartLauncherCount
             }
         }
@@ -142,8 +142,8 @@ ColumnLayout {
             Layout.alignment: Qt.AlignRight | Qt.AlignTop
             visible: isWin
             icon.name: "window-close"
-            icon.width: units.iconSizes.small
-            icon.height: units.iconSizes.small
+            icon.width: PlasmaCore.Units.iconSizes.small
+            icon.height: PlasmaCore.Units.iconSizes.small
             onClicked: {
                 backend.cancelHighlightWindows();
                 tasksModel.requestClose(submodelIndex);
@@ -251,8 +251,8 @@ ColumnLayout {
 
         ColumnLayout {
             Layout.fillWidth: true
-            Layout.topMargin: units.smallSpacing
-            Layout.bottomMargin: units.smallSpacing
+            Layout.topMargin: PlasmaCore.Units.smallSpacing
+            Layout.bottomMargin: PlasmaCore.Units.smallSpacing
             spacing: 0
 
              ScrollableTextWrapper {

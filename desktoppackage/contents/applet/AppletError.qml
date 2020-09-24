@@ -23,8 +23,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 RowLayout {
     id: root
-    Layout.minimumWidth: units.gridUnit * 20
-    Layout.minimumHeight: units.gridUnit * 8
+    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 20
+    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 8
 
     property alias reason: messageText.text
 
@@ -33,8 +33,8 @@ RowLayout {
     PlasmaCore.IconItem {
         id: icon
         Layout.alignment: Qt.AlignVCenter
-        Layout.minimumWidth: units.iconSizes.huge
-        Layout.minimumHeight: units.iconSizes.huge
+        Layout.minimumWidth: PlasmaCore.Units.iconSizes.huge
+        Layout.minimumHeight: PlasmaCore.Units.iconSizes.huge
         source: "dialog-error"
     }
 

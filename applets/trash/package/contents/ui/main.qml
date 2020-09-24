@@ -47,11 +47,11 @@ DragDrop.DropArea {
         if (constrained) {
             return formFactor === PlasmaCore.Types.Vertical ? width : 1
         }
-        return units.iconSizes.small + text.height
+        return PlasmaCore.Units.iconSizes.small + text.height
     }
 
-    Layout.maximumWidth: inPanel ? units.iconSizeHints.panel : -1
-    Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1
+    Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
+    Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
 
     readonly property int formFactor: plasmoid.formFactor
     readonly property bool constrained: formFactor === PlasmaCore.Types.Vertical || formFactor === PlasmaCore.Types.Horizontal
@@ -151,7 +151,7 @@ DragDrop.DropArea {
             horizontalCenter: parent.horizontalCenter
             bottom: parent.bottom
         }
-        width: Math.round(text.implicitWidth + units.smallSpacing) // make sure label is not blurry
+        width: Math.round(text.implicitWidth + PlasmaCore.Units.smallSpacing) // make sure label is not blurry
         text: (dirModel.count === 0) ? i18n("Trash\nEmpty") : i18np("Trash\nOne item", "Trash\n %1 items", dirModel.count)
         color: "white"
         horizontalAlignment: Text.AlignHCenter

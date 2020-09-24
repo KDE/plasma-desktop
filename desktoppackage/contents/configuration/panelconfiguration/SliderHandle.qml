@@ -107,10 +107,10 @@ PlasmaCore.SvgItem {
         }
         anchors {
             fill: parent
-            leftMargin: (dialogRoot.vertical) ? 0 : -units.gridUnit
-            rightMargin: (dialogRoot.vertical) ? 0 : -units.gridUnit
-            topMargin: (dialogRoot.vertical) ? -units.gridUnit : 0
-            bottomMargin: (dialogRoot.vertical) ? -units.gridUnit : 0
+            leftMargin: (dialogRoot.vertical) ? 0 : -PlasmaCore.Units.gridUnit
+            rightMargin: (dialogRoot.vertical) ? 0 : -PlasmaCore.Units.gridUnit
+            topMargin: (dialogRoot.vertical) ? -PlasmaCore.Units.gridUnit : 0
+            bottomMargin: (dialogRoot.vertical) ? -PlasmaCore.Units.gridUnit : 0
         }
         cursorShape: dialogRoot.vertical ? Qt.SizeVerCursor : Qt.SizeHorCursor
         onPositionChanged: {

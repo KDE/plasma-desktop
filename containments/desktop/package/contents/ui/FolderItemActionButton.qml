@@ -30,13 +30,13 @@ PlasmaCore.SvgItem {
             return 0;
         }
         switch(plasmoid.configuration.iconSize) {
-            case 0: return units.iconSizes.small;
-            case 1: return units.iconSizes.small;
-            case 2: return units.iconSizes.smallMedium;
-            case 3: return units.iconSizes.smallMedium;
-            case 4: return units.iconSizes.smallMedium;
-            case 5: return units.iconSizes.medium;
-            default: return units.iconSizes.small;
+            case 0: return PlasmaCore.Units.iconSizes.small;
+            case 1: return PlasmaCore.Units.iconSizes.small;
+            case 2: return PlasmaCore.Units.iconSizes.smallMedium;
+            case 3: return PlasmaCore.Units.iconSizes.smallMedium;
+            case 4: return PlasmaCore.Units.iconSizes.smallMedium;
+            case 5: return PlasmaCore.Units.iconSizes.medium;
+            default: return PlasmaCore.Units.iconSizes.small;
         }
     }
     height: width
@@ -49,7 +49,7 @@ PlasmaCore.SvgItem {
     elementId: element + "-normal"
 
     Behavior on opacity {
-        NumberAnimation { duration: units.shortDuration }
+        NumberAnimation { duration: PlasmaCore.Units.shortDuration }
     }
 
     MouseArea {

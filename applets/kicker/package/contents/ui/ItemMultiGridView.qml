@@ -87,17 +87,17 @@ PlasmaExtras.ScrollArea {
     Column {
         id: itemColumn
 
-        width: itemMultiGrid.width - units.gridUnit
+        width: itemMultiGrid.width - PlasmaCore.Units.gridUnit
 
         Repeater {
             id: repeater
 
             delegate: Item {
-                width: itemColumn.width - units.gridUnit
+                width: itemColumn.width - PlasmaCore.Units.gridUnit
                 height: headerHeight + gridView.height + (index == repeater.count - 1 ? 0 : footerHeight)
 
                 property int headerHeight: (gridViewLabel.height
-                    + gridViewLabelUnderline.height + units.largeSpacing)
+                    + gridViewLabelUnderline.height + PlasmaCore.Units.largeSpacing)
                 property int footerHeight: (Math.ceil(headerHeight / cellSize) * cellSize) - headerHeight
 
                 property Item itemGrid: gridView
@@ -107,7 +107,7 @@ PlasmaExtras.ScrollArea {
 
                     anchors.top: parent.top
 
-                    x: units.smallSpacing
+                    x: PlasmaCore.Units.smallSpacing
                     width: parent.width - x
                     height: dummyHeading.height
 
@@ -127,7 +127,7 @@ PlasmaExtras.ScrollArea {
 
                     anchors.top: gridViewLabel.bottom
 
-                    width: parent.width - units.gridUnit
+                    width: parent.width - PlasmaCore.Units.gridUnit
                     height: lineSvg.horLineHeight
 
                     svg: lineSvg
@@ -146,7 +146,7 @@ PlasmaExtras.ScrollArea {
 
                     anchors {
                         top: gridViewLabelUnderline.bottom
-                        topMargin: units.largeSpacing
+                        topMargin: PlasmaCore.Units.largeSpacing
                     }
 
                     width: parent.width

@@ -32,7 +32,7 @@ MouseArea {
     id: task
 
     width: groupDialog.contentWidth
-    height: Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.medium) + LayoutManager.verticalMargins()
+    height: Math.max(theme.mSize(theme.defaultFont).height, PlasmaCore.Units.iconSizes.medium) + LayoutManager.verticalMargins()
 
     visible: false
 
@@ -297,7 +297,7 @@ MouseArea {
         Timer {
             id: timer
 
-            interval: units.longDuration
+            interval: PlasmaCore.Units.longDuration
             repeat: false
 
             onTriggered: {
@@ -321,10 +321,10 @@ MouseArea {
         anchors {
             fill: parent
 
-            topMargin: (!tasks.vertical && taskList.rows > 1) ? units.smallSpacing / 4 : 0
-            bottomMargin: (!tasks.vertical && taskList.rows > 1) ? units.smallSpacing / 4 : 0
-            leftMargin: ((inPopup || tasks.vertical) && taskList.columns > 1) ? units.smallSpacing / 4 : 0
-            rightMargin: ((inPopup || tasks.vertical) && taskList.columns > 1) ? units.smallSpacing / 4 : 0
+            topMargin: (!tasks.vertical && taskList.rows > 1) ? PlasmaCore.Units.smallSpacing / 4 : 0
+            bottomMargin: (!tasks.vertical && taskList.rows > 1) ? PlasmaCore.Units.smallSpacing / 4 : 0
+            leftMargin: ((inPopup || tasks.vertical) && taskList.columns > 1) ? PlasmaCore.Units.smallSpacing / 4 : 0
+            rightMargin: ((inPopup || tasks.vertical) && taskList.columns > 1) ? PlasmaCore.Units.smallSpacing / 4 : 0
         }
 
         imagePath: "widgets/tasks"
@@ -427,14 +427,14 @@ MouseArea {
 
             var margins = vert ? LayoutManager.horizontalMargins() : LayoutManager.verticalMargins();
 
-            if ((size - margins) < units.iconSizes.small) {
-                return Math.ceil((margin * (units.iconSizes.small / size)) / 2);
+            if ((size - margins) < PlasmaCore.Units.iconSizes.small) {
+                return Math.ceil((margin * (PlasmaCore.Units.iconSizes.small / size)) / 2);
             }
 
             return margin;
         }
 
-        //width: inPopup ? units.iconSizes.small : Math.min(height, parent.width - LayoutManager.horizontalMargins())
+        //width: inPopup ? PlasmaCore.Units.iconSizes.small : Math.min(height, parent.width - LayoutManager.horizontalMargins())
 
         PlasmaCore.IconItem {
             id: icon
@@ -456,7 +456,7 @@ MouseArea {
             height: parent.height
             asynchronous: true
             source: "TaskBadgeOverlay.qml"
-            active: height >= units.iconSizes.small
+            active: height >= PlasmaCore.Units.iconSizes.small
                     && task.smartLauncherItem && task.smartLauncherItem.countVisible
         }
 
@@ -503,7 +503,7 @@ MouseArea {
         readonly property var indicatorScale: 1.2
 
         source: "AudioStream.qml"
-        width: Math.min(Math.min(iconBox.width, iconBox.height) * 0.4, units.iconSizes.smallMedium)
+        width: Math.min(Math.min(iconBox.width, iconBox.height) * 0.4, PlasmaCore.Units.iconSizes.smallMedium)
         height: width
 
         anchors {
@@ -518,13 +518,13 @@ MouseArea {
         id: label
 
         visible: (inPopup || !iconsOnly && model.IsLauncher !== true
-            && (parent.width - iconBox.height - units.smallSpacing) >= (theme.mSize(theme.defaultFont).width * LayoutManager.minimumMColumns()))
+            && (parent.width - iconBox.height - PlasmaCore.Units.smallSpacing) >= (theme.mSize(theme.defaultFont).width * LayoutManager.minimumMColumns()))
 
         anchors {
             fill: parent
-            leftMargin: taskFrame.margins.left + iconBox.width + units.smallSpacing
+            leftMargin: taskFrame.margins.left + iconBox.width + PlasmaCore.Units.smallSpacing
             topMargin: taskFrame.margins.top
-            rightMargin: taskFrame.margins.right + (audioStreamIconLoader.shown ? (audioStreamIconLoader.width + units.smallSpacing) : 0)
+            rightMargin: taskFrame.margins.right + (audioStreamIconLoader.shown ? (audioStreamIconLoader.width + PlasmaCore.Units.smallSpacing) : 0)
             bottomMargin: taskFrame.margins.bottom
         }
 

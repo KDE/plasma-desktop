@@ -31,7 +31,7 @@ PlasmaComponents.TabButton {
 
     Item {
         anchors {
-            margins: units.smallSpacing
+            margins: PlasmaCore.Units.smallSpacing
             left: parent.left
             right: parent.right
             verticalCenter: parent.verticalCenter
@@ -43,7 +43,7 @@ PlasmaComponents.TabButton {
             id: iconElement
 
             anchors.horizontalCenter: parent.horizontalCenter
-            width: units.iconSizes.medium
+            width: PlasmaCore.Units.iconSizes.medium
             height: width
 
             source: iconSource

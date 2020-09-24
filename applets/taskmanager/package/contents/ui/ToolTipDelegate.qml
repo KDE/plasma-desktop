@@ -105,7 +105,7 @@ PlasmaExtras.ScrollArea {
                 rows: !isVerticalPanel
                 columns: isVerticalPanel
                 flow: isVerticalPanel ? Grid.TopToBottom : Grid.LeftToRight
-                spacing: units.largeSpacing
+                spacing: PlasmaCore.Units.largeSpacing
 
                 Repeater {
                     id: groupRepeater

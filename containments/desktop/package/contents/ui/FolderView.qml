@@ -597,9 +597,9 @@ FocusScope {
                     if (root.useListViewMode) {
                         return gridView.width;
                     } else {
-                        var iconWidth = iconSize + (2 * units.largeSpacing) + (2 * units.smallSpacing);
+                        var iconWidth = iconSize + (2 * PlasmaCore.Units.largeSpacing) + (2 * PlasmaCore.Units.smallSpacing);
                         if (root.isContainment && isRootView && scrollArea.viewportWidth > 0) {
-                            var minIconWidth = Math.max(iconWidth, units.iconSizes.small * ((plasmoid.configuration.labelWidth * 2) + 4));
+                            var minIconWidth = Math.max(iconWidth, PlasmaCore.Units.iconSizes.small * ((plasmoid.configuration.labelWidth * 2) + 4));
                             var extraWidth = calcExtraSpacing(minIconWidth, scrollArea.viewportWidth);
                             return minIconWidth + extraWidth;
                         } else {
@@ -614,7 +614,7 @@ FocusScope {
                             + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
                             listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2;
                     } else {
-                        var iconHeight = iconSize + (theme.mSize(theme.defaultFont).height * plasmoid.configuration.textLines) + (4 * units.smallSpacing);
+                        var iconHeight = iconSize + (theme.mSize(theme.defaultFont).height * plasmoid.configuration.textLines) + (4 * PlasmaCore.Units.smallSpacing);
                         if (root.isContainment && isRootView && scrollArea.viewportHeight > 0) {
                             var extraHeight = calcExtraSpacing(iconHeight, scrollArea.viewportHeight);
                             return iconHeight + extraHeight;
@@ -775,7 +775,7 @@ FocusScope {
 
                 function makeIconSize() {
                     if (root.useListViewMode) {
-                        return units.iconSizes.small;
+                        return PlasmaCore.Units.iconSizes.small;
                     }
 
                     return FolderTools.iconSizeFromTheme(plasmoid.configuration.iconSize);
@@ -803,8 +803,8 @@ FocusScope {
                     var step = rows ? cellWidth : cellHeight;
                     var perStripe = Math.floor(axis / step);
                     var stripes = Math.ceil(gridView.count / perStripe);
-                    var cWidth = gridView.cellWidth - (2 * units.smallSpacing);
-                    var cHeight = gridView.cellHeight - (2 * units.smallSpacing);
+                    var cWidth = gridView.cellWidth - (2 * PlasmaCore.Units.smallSpacing);
+                    var cHeight = gridView.cellHeight - (2 * PlasmaCore.Units.smallSpacing);
                     var midWidth = gridView.cellWidth / 2;
                     var midHeight = gridView.cellHeight / 2;
                     var indices = [];
@@ -832,7 +832,7 @@ FocusScope {
 
                             // Check if the rubberband intersects this cell first to avoid doing more
                             // expensive work.
-                            if (main.rubberBand.intersects(Qt.rect(itemX + units.smallSpacing, itemY + units.smallSpacing,
+                            if (main.rubberBand.intersects(Qt.rect(itemX + PlasmaCore.Units.smallSpacing, itemY + PlasmaCore.Units.smallSpacing,
                                 cWidth, cHeight))) {
                                 var item = gridView.contentItem.childAt(itemX + midWidth, itemY + midHeight);
 
@@ -1320,14 +1320,14 @@ FocusScope {
                             && gridView.effectiveLayoutDirection == Qt.RightToLeft) {
                             _x -= __verticalScrollBar.parent.verticalScrollbarOffset;
                         }
-                        _y = pos.y + units.smallSpacing - __style.padding.top;
+                        _y = pos.y + PlasmaCore.Units.smallSpacing - __style.padding.top;
                     }
                     return([ _x, _y ]);
                 }
 
                 function getWidth(addWidthVerticalScroller) {
-                     return(targetItem.label.parent.width - units.smallSpacing +
-                            (root.useListViewMode ? -(__style.padding.left + __style.padding.right + units.smallSpacing) : 0) +
+                     return(targetItem.label.parent.width - PlasmaCore.Units.smallSpacing +
+                            (root.useListViewMode ? -(__style.padding.left + __style.padding.right + PlasmaCore.Units.smallSpacing) : 0) +
                             (addWidthVerticalScroller ? __verticalScrollBar.parent.verticalScrollbarOffset : 0));
                 }
 

@@ -29,15 +29,15 @@ import org.kde.kwindowsystem 1.0 as KWindowSystem
 FocusScope {
     id: root
 
-    Layout.minimumWidth: units.gridUnit * 12
-    Layout.minimumHeight: units.gridUnit * 12
+    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 12
+    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 12
 
-    Plasmoid.switchWidth: units.gridUnit * 11
-    Plasmoid.switchHeight: units.gridUnit * 11
+    Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 11
+    Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 11
 
     Plasmoid.toolTipSubText: i18n("Show list of opened windows")
 
-    property int itemHeight: Math.ceil((Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.small)
+    property int itemHeight: Math.ceil((Math.max(theme.mSize(theme.defaultFont).height, PlasmaCore.Units.iconSizes.small)
         + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
         listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2
 
@@ -152,7 +152,7 @@ FocusScope {
                 id: item
 
                 height: root.itemHeight
-                width: windowListView.overflowing ? ListView.view.width - units.smallSpacing : ListView.view.width
+                width: windowListView.overflowing ? ListView.view.width - PlasmaCore.Units.smallSpacing : ListView.view.width
 
                 property bool underPin: (item == windowListView.pinTopItem || item == windowListView.pinBottomItem)
 
@@ -178,7 +178,7 @@ FocusScope {
 
                     height: parent.height
 
-                    spacing: units.smallSpacing * 2
+                    spacing: PlasmaCore.Units.smallSpacing * 2
 
                     LayoutMirroring.enabled: (Qt.application.layoutDirection == Qt.RightToLeft)
 
@@ -187,7 +187,7 @@ FocusScope {
 
                         anchors.verticalCenter: parent.verticalCenter
 
-                        width: visible ? units.iconSizes.small : 0
+                        width: visible ? PlasmaCore.Units.iconSizes.small : 0
                         height: width
 
                         usesPlasmaTheme: false
@@ -234,9 +234,9 @@ FocusScope {
 
         anchors.top: parent.top
         anchors.right: parent.right
-        anchors.rightMargin: windowListView.overflowing ? units.gridUnit : 0
+        anchors.rightMargin: windowListView.overflowing ? PlasmaCore.Units.gridUnit : 0
 
-        width: Math.round(units.gridUnit * 1.25)
+        width: Math.round(PlasmaCore.Units.gridUnit * 1.25)
         height: width
 
         iconSource: "window-pin"

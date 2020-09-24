@@ -26,8 +26,8 @@ import org.kde.plasma.plasmoid 2.0
 Item {
     id: main
 
-    width: isVertical ? units.iconSizes.medium : units.iconSizes.smallMedium + units.smallSpacing * 2
-    height: isVertical ? units.iconSizes.smallMedium + units.smallSpacing * 2 : units.iconSizes.medium
+    width: isVertical ? PlasmaCore.Units.iconSizes.medium : PlasmaCore.Units.iconSizes.smallMedium + PlasmaCore.Units.smallSpacing * 2
+    height: isVertical ? PlasmaCore.Units.iconSizes.smallMedium + PlasmaCore.Units.smallSpacing * 2 : PlasmaCore.Units.iconSizes.medium
     property bool isVertical: plasmoid.formFactor === 3
 
     z: 999
@@ -58,7 +58,7 @@ Item {
     ]
     Behavior on opacity {
         OpacityAnimator {
-            duration: units.longDuration;
+            duration: PlasmaCore.Units.longDuration;
             easing.type: Easing.InOutQuad;
         }
     }
@@ -82,7 +82,7 @@ Item {
         elementId: "configure"
 
         anchors.centerIn: mouseArea
-        width: units.iconSizes.small
+        width: PlasmaCore.Units.iconSizes.small
         height: width
     }
 

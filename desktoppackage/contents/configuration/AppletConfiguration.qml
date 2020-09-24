@@ -30,16 +30,16 @@ import org.kde.plasma.configuration 2.0
 //TODO: all of this will be done with desktop components
 Rectangle {
     id: root
-    Layout.minimumWidth: units.gridUnit * 30
-    Layout.minimumHeight: units.gridUnit * 20
+    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 30
+    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 20
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
 //BEGIN properties
     color: Kirigami.Theme.backgroundColor
-    width: units.gridUnit * 40
-    height: units.gridUnit * 30
+    width: PlasmaCore.Units.gridUnit * 40
+    height: PlasmaCore.Units.gridUnit * 30
 
     property bool isContainment: false
 //END properties
@@ -145,7 +145,7 @@ Rectangle {
         anchors {
             topMargin: topSeparator.height
             fill: parent
-            leftMargin: configDialog.configModel ? 0 : units.smallSpacing * 2
+            leftMargin: configDialog.configModel ? 0 : PlasmaCore.Units.smallSpacing * 2
         }
         spacing: 0
 
@@ -154,7 +154,7 @@ Rectangle {
             Layout.fillHeight: true
             visible: true
             clip: true
-            Layout.preferredWidth: units.gridUnit * 7
+            Layout.preferredWidth: PlasmaCore.Units.gridUnit * 7
             contentWidth: -1
 
             Keys.onUpPressed: {
@@ -233,7 +233,7 @@ Rectangle {
         ColumnLayout {
             id: configColumn
             Layout.topMargin: topSeparator.height
-            Layout.bottomMargin: units.smallSpacing * 2
+            Layout.bottomMargin: PlasmaCore.Units.smallSpacing * 2
 
             // Configuration scroll area
             QtControls.ScrollView {
@@ -263,7 +263,7 @@ Rectangle {
                         return;
                     }
 
-                    var padding = units.gridUnit * 2 // some padding to the top/bottom when we scroll
+                    var padding = PlasmaCore.Units.gridUnit * 2 // some padding to the top/bottom when we scroll
 
                     var yPos = item.mapToItem(scroll.contentItem, 0, 0).y;
                     if (yPos < flickable.contentY) {
@@ -292,18 +292,18 @@ Rectangle {
 
                     Column {
                         id: pageColumn
-                        spacing: units.largeSpacing / 2
+                        spacing: PlasmaCore.Units.largeSpacing / 2
                         anchors {
                             left: parent.left
                             right: parent.right
-                            leftMargin: units.smallSpacing * 2
-                            rightMargin: units.smallSpacing * 2
+                            leftMargin: PlasmaCore.Units.smallSpacing * 2
+                            rightMargin: PlasmaCore.Units.smallSpacing * 2
                         }
 
                         Kirigami.Heading {
                             id: pageTitle
                             width: pageColumn.width
-                            topPadding: units.smallSpacing
+                            topPadding: PlasmaCore.Units.smallSpacing
                             level: 1
                             text: pageStack.title
                         }
@@ -369,13 +369,13 @@ Rectangle {
                                         property: "opacity"
                                         from: 0
                                         to: 1
-                                        duration: units.longDuration
+                                        duration: PlasmaCore.Units.longDuration
                                         easing.type: Easing.InOutQuad
                                     }
                                     XAnimator {
                                         from: pageStack.invertAnimations ? -pageColumn.width/3: pageColumn.width/3
                                         to: 0
-                                        duration: units.longDuration
+                                        duration: PlasmaCore.Units.longDuration
                                         easing.type: Easing.InOutQuad
                                     }
                                 }
@@ -385,13 +385,13 @@ Rectangle {
                                     OpacityAnimator {
                                         from: 1
                                         to: 0
-                                        duration: units.longDuration
+                                        duration: PlasmaCore.Units.longDuration
                                         easing.type: Easing.InOutQuad
                                     }
                                     XAnimator {
                                         from: 0
                                         to: pageStack.invertAnimations ? pageColumn.width/3 : -pageColumn.width/3
-                                        duration: units.longDuration
+                                        duration: PlasmaCore.Units.longDuration
                                         easing.type: Easing.InOutQuad
                                     }
                                 }
@@ -428,8 +428,8 @@ Rectangle {
             RowLayout {
                 id: buttonsRow
                 Layout.alignment: Qt.AlignRight
-                Layout.rightMargin: units.smallSpacing * 2
-                Layout.leftMargin: units.smallSpacing * 2
+                Layout.rightMargin: PlasmaCore.Units.smallSpacing * 2
+                Layout.leftMargin: PlasmaCore.Units.smallSpacing * 2
 
                 QtControls.Button {
                     icon.name: "dialog-ok"

@@ -107,7 +107,7 @@ PlasmaCore.FrameSvgItem {
             //Margins are either the size of the margins in the SVG, unless that prevents the panel from being at least half a smallMedium icon + smallSpace) tall at which point we set the margin to whatever allows it to be that...or if it still won't fit, 1.
 
             //the size a margin should be to force a panel to be the required size above
-            readonly property real spacingAtMinSize: Math.max(1, (verticalPanel ? root.width : root.height) - units.iconSizes.smallMedium - units.smallSpacing*2)/2
+            readonly property real spacingAtMinSize: Math.max(1, (verticalPanel ? root.width : root.height) - PlasmaCore.Units.iconSizes.smallMedium - PlasmaCore.Units.smallSpacing*2)/2
 
             topMargin: Math.round(Math.min(root.fixedMargins.top, spacingAtMinSize));
             bottomMargin: Math.round(Math.min(root.fixedMargins.bottom, spacingAtMinSize));

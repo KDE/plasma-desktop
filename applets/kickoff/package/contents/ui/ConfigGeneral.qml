@@ -39,8 +39,8 @@ ColumnLayout {
 
             Kirigami.FormData.label: i18n("Icon:")
 
-            implicitWidth: previewFrame.width + units.smallSpacing * 2
-            implicitHeight: previewFrame.height + units.smallSpacing * 2
+            implicitWidth: previewFrame.width + PlasmaCore.Units.smallSpacing * 2
+            implicitHeight: previewFrame.height + PlasmaCore.Units.smallSpacing * 2
 
             KQuickAddons.IconDialog {
                 id: iconDialog
@@ -54,12 +54,12 @@ ColumnLayout {
                 anchors.centerIn: parent
                 imagePath: plasmoid.location === PlasmaCore.Types.Vertical || plasmoid.location === PlasmaCore.Types.Horizontal
                          ? "widgets/panel-background" : "widgets/background"
-                width: units.iconSizes.large + fixedMargins.left + fixedMargins.right
-                height: units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
+                width: PlasmaCore.Units.iconSizes.large + fixedMargins.left + fixedMargins.right
+                height: PlasmaCore.Units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
 
                 PlasmaCore.IconItem {
                     anchors.centerIn: parent
-                    width: units.iconSizes.large
+                    width: PlasmaCore.Units.iconSizes.large
                     height: width
                     source: cfg_icon
                 }

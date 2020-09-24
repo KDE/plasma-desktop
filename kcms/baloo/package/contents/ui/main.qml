@@ -58,7 +58,7 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
 
             Item {
-                width: units.largeSpacing
+                width: Kirigami.Units.largeSpacing
             }
 
             ColumnLayout {
@@ -177,7 +177,7 @@ KCM.SimpleKCM {
             hoverEnabled: false
 
             contentItem: RowLayout {
-                spacing: units.smallSpacing
+                spacing: Kirigami.Units.smallSpacing
 
                 // The folder's icon
                 Kirigami.Icon {

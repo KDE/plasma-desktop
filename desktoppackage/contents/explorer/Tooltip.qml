@@ -66,7 +66,7 @@ MouseArea {
             top: parent.top
             margins: 8
         }
-        width: units.iconSizes.huge
+        width: PlasmaCore.Units.iconSizes.huge
         height: width
         source: main.icon
     }
@@ -136,7 +136,7 @@ MouseArea {
         }
         opacity: local ? 1 : 0
         Behavior on opacity {
-            NumberAnimation { duration: units.longDuration }
+            NumberAnimation { duration: PlasmaCore.Units.longDuration }
         }
         iconSource: "application-exit"
         text: i18nd("plasma_shell_org.kde.plasma.desktop", "Uninstall")

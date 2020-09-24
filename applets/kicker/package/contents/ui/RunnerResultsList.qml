@@ -40,7 +40,7 @@ FocusScope {
         id: vertLine
 
         anchors.left: parent.left
-        anchors.leftMargin: (index > 0 ) ? units.smallSpacing : 0
+        anchors.leftMargin: (index > 0 ) ? PlasmaCore.Units.smallSpacing : 0
 
         width: (index > 0 ) ? lineSvg.vertLineWidth : 0
         height: parent.height
@@ -57,7 +57,7 @@ FocusScope {
         anchors.left: vertLine.right
 
         width: runnerMatches.width
-        height: runnerMatches.itemHeight + units.smallSpacing
+        height: runnerMatches.itemHeight + PlasmaCore.Units.smallSpacing
 
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVTop
@@ -75,9 +75,9 @@ FocusScope {
 
         anchors.top: plasmoid.configuration.alignResultsToBottom ? undefined : header.bottom
         anchors.bottom: plasmoid.configuration.alignResultsToBottom ? parent.bottom : undefined
-        anchors.bottomMargin: (index == 0 && anchors.bottom !== undefined) ? searchField.height + (2 * units.smallSpacing) : undefined
+        anchors.bottomMargin: (index == 0 && anchors.bottom !== undefined) ? searchField.height + (2 * PlasmaCore.Units.smallSpacing) : undefined
         anchors.left: vertLine.right
-        anchors.leftMargin: (index > 0) ? units.smallSpacing : 0
+        anchors.leftMargin: (index > 0) ? PlasmaCore.Units.smallSpacing : 0
 
         height: {
             var listHeight = (((index == 0)

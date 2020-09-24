@@ -175,10 +175,10 @@ FocusScope {
                         if (pressed && pressX != -1 && pressed.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                             kickoff.dragSource = item;
                             if (mouse.source == Qt.MouseEventSynthesizedByQt) {
-                                dragHelper.dragIconSize = units.iconSizes.huge
+                                dragHelper.dragIconSize = PlasmaCore.Units.iconSizes.huge
                                 dragHelper.startDrag(kickoff, pressed.url, pressed.decoration);
                             } else {
-                                dragHelper.dragIconSize = units.iconSizes.medium
+                                dragHelper.dragIconSize = PlasmaCore.Units.iconSizes.medium
                                 dragHelper.startDrag(kickoff, pressed.url, pressed.decoration);
                             }
                             pressed = null;

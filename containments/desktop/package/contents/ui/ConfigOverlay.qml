@@ -29,7 +29,7 @@ import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutM
 ContainmentLayoutManager.ConfigOverlayWithHandles {
     id: overlay
 
-    readonly property int iconSize: touchInteraction ? units.iconSizes.medium : units.iconSizes.small
+    readonly property int iconSize: touchInteraction ? PlasmaCore.Units.iconSizes.medium : PlasmaCore.Units.iconSizes.small
     PlasmaCore.Svg {
         id: configIconsSvg
         imagePath: "widgets/configuration-icons"
@@ -42,7 +42,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
             property: "scale"
             from: 1
             to: 0
-            duration: units.longDuration
+            duration: PlasmaCore.Units.longDuration
             easing.type: Easing.InOutQuad
         }
         ScriptAction {
@@ -55,9 +55,9 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
     PlasmaCore.FrameSvgItem {
         id: frame
         anchors.verticalCenter: parent.verticalCenter
-        x: overlay.rightAvailableSpace > width + units.gridUnit
-            ? parent.width + units.gridUnit
-            : -width - units.gridUnit
+        x: overlay.rightAvailableSpace > width + PlasmaCore.Units.gridUnit
+            ? parent.width + PlasmaCore.Units.gridUnit
+            : -width - PlasmaCore.Units.gridUnit
 
         // This MouseArea is used to block input between the applet and the handle, to not make it steal by other applets
         MouseArea {
@@ -66,16 +66,16 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 bottom: parent.bottom
             }
             z: -1
-            x: overlay.rightAvailableSpace > parent.width + units.gridUnit ? -units.gridUnit : 0
-            width: units.gridUnit + parent.width
+            x: overlay.rightAvailableSpace > parent.width + PlasmaCore.Units.gridUnit ? -PlasmaCore.Units.gridUnit : 0
+            width: PlasmaCore.Units.gridUnit + parent.width
             hoverEnabled: true
         }
         transform: Translate {
-            x: open ? 0 : (overlay.rightAvailableSpace > frame.width + units.gridUnit ? -frame.width : frame.width)
+            x: open ? 0 : (overlay.rightAvailableSpace > frame.width + PlasmaCore.Units.gridUnit ? -frame.width : frame.width)
 
             Behavior on x {
                 NumberAnimation {
-                    duration: units.longDuration
+                    duration: PlasmaCore.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }
@@ -225,7 +225,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
 
             MouseArea {
                 drag.target: overlay.itemContainer
-                Layout.minimumHeight: units.gridUnit * 3
+                Layout.minimumHeight: PlasmaCore.Units.gridUnit * 3
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 cursorShape: containsPress? Qt.DragMoveCursor : Qt.OpenHandCursor

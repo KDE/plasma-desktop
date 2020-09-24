@@ -37,7 +37,7 @@ Kicker.SubMenu {
 
     location: PlasmaCore.Types.Floating
 
-    offset: units.smallSpacing
+    offset: PlasmaCore.Units.smallSpacing
 
     onWindowDeactivated: {
         if (!aboutToBeDestroyed) {

@@ -32,8 +32,8 @@ import org.kde.activities 0.1 as Activities
 DND.DropArea {
     id: root
     property string activeSource: "Status"
-    height: units.iconSizes.large
-    width: units.iconSizes.large
+    height: PlasmaCore.Units.iconSizes.large
+    width: PlasmaCore.Units.iconSizes.large
 
     property bool showActivityName: plasmoid.configuration.showActivityName
     property bool showActivityIcon: plasmoid.configuration.showActivityIcon
@@ -46,8 +46,8 @@ DND.DropArea {
     Layout.maximumWidth: Infinity
     Layout.maximumHeight: Infinity
 
-    Layout.preferredWidth : icon.width + units.smallSpacing + (root.showActivityName ? name.implicitWidth : 0)
-    Layout.preferredHeight: inPanel ? units.iconSizeHints.panel : -1
+    Layout.preferredWidth : icon.width + PlasmaCore.Units.smallSpacing + (root.showActivityName ? name.implicitWidth : 0)
+    Layout.preferredHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
 
     Layout.minimumWidth: 0
     Layout.minimumHeight: 0
@@ -102,7 +102,7 @@ DND.DropArea {
 
         anchors {
             left: icon.right
-            leftMargin: units.smallSpacing
+            leftMargin: PlasmaCore.Units.smallSpacing
         }
     }
 

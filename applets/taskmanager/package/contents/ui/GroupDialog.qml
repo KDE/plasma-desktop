@@ -37,7 +37,7 @@ PlasmaCore.Dialog {
 
     readonly property int preferredWidth: Screen.width / (3 * Screen.devicePixelRatio)
     readonly property int preferredHeight: Screen.height / (2 * Screen.devicePixelRatio)
-    readonly property int contentWidth: scrollArea.overflowing ? mainItem.width - (units.smallSpacing * 3) : mainItem.width
+    readonly property int contentWidth: scrollArea.overflowing ? mainItem.width - (PlasmaCore.Units.smallSpacing * 3) : mainItem.width
     readonly property TextMetrics textMetrics: TextMetrics {}
     property alias overflowing: scrollArea.overflowing
     property alias activeTask: focusActiveTaskTimer.targetIndex
@@ -282,14 +282,14 @@ PlasmaCore.Dialog {
                 task.labelTextChanged.connect(updateSize);
             }
 
-            maxHeight = groupRepeater.count * (LayoutManager.verticalMargins() + Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.medium));
+            maxHeight = groupRepeater.count * (LayoutManager.verticalMargins() + Math.max(theme.mSize(theme.defaultFont).height, PlasmaCore.Units.iconSizes.medium));
 
-            maxWidth += LayoutManager.horizontalMargins() + units.iconSizes.medium + 2 * units.smallSpacing;
+            maxWidth += LayoutManager.horizontalMargins() + PlasmaCore.Units.iconSizes.medium + 2 * PlasmaCore.Units.smallSpacing;
 
             // Add horizontal space for scrollbar if needed.
             // FIXME TODO HACK: Use actual scrollbar width instead of a good guess.
             if (maxHeight > preferredHeight) {
-                maxWidth += (units.smallSpacing * 3);
+                maxWidth += (PlasmaCore.Units.smallSpacing * 3);
             }
 
             mainItem.height = Math.min(preferredHeight, maxHeight);
