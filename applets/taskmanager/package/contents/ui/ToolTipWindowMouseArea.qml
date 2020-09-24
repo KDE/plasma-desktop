@@ -25,7 +25,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 MouseArea {
     property var modelIndex
-    // winId won't be an in in wayland
+    // winId won't be an int wayland
     property var winId // FIXME Legacy
     property Item rootTask
 
