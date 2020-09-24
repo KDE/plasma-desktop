@@ -25,12 +25,13 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 MouseArea {
     property var modelIndex
-    property int winId // FIXME Legacy
+    // winId won't be an in in wayland
+    property var winId // FIXME Legacy
     property Item rootTask
 
     acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.RightButton
     hoverEnabled: true
-    enabled: winId != 0
+    enabled: winId !== 0
 
     onClicked: {
         if (mouse.button == Qt.LeftButton) {

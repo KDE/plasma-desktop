@@ -181,6 +181,7 @@ ColumnLayout {
         }
 
         Loader {
+            id: pipeWireLoader
             anchors.fill: hoverHandler
             anchors.margins: 1
 
@@ -221,12 +222,12 @@ ColumnLayout {
             visible: available
         }
 
-        // when minimized, we don't have a preview, so show the icon
+        // when minimized, we don't have a preview on X11, so show the icon
         PlasmaCore.IconItem {
             width: parent.width
             height: thumbnailSourceItem.height
             anchors.horizontalCenter: parent.horizontalCenter
-            source: thumbnailSourceItem.isMinimized && !albumArtImage.visible ? icon : ""
+            source: thumbnailSourceItem.isMinimized && !albumArtImage.visible && Number.isInteger(thumbnailSourceItem.winId) ? icon : ""
             animated: false
             usesPlasmaTheme: false
             visible: valid
