@@ -178,7 +178,7 @@ Item {
     Kicker.DragHelper {
         id: dragHelper
 
-        dragIconSize: units.iconSizes.medium
+        dragIconSize: PlasmaCore.Units.iconSizes.medium
     }
 
     Kicker.ProcessRunner {

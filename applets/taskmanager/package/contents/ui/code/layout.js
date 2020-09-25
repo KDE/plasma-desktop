@@ -30,8 +30,8 @@ function verticalMargins() {
 function adjustMargin(height, margin) {
     var available = height - verticalMargins();
 
-    if (available < units.iconSizes.small) {
-        return Math.floor((margin * (units.iconSizes.small / available)) / 3);
+    if (available < PlasmaCore.Units.iconSizes.small) {
+        return Math.floor((margin * (PlasmaCore.Units.iconSizes.small / available)) / 3);
     }
 
     return margin;
@@ -111,7 +111,7 @@ function preferredMinWidth() {
     var width = launcherWidth();
 
     if (!tasks.vertical && !tasks.iconsOnly) {
-        width += (units.smallSpacing * 2) + (theme.mSize(theme.defaultFont).width * 12);
+        width += (PlasmaCore.Units.smallSpacing * 2) + (theme.mSize(theme.defaultFont).width * 12);
     }
 
     return width;
@@ -153,12 +153,12 @@ function preferredMaxHeight() {
                         // the font height will win even if the text will stay invisible.
                         // We leave it for the future developers to improve this expresssion if the
                         // named corner case turns out to be important.
-                        units.iconSizes[iconSizes[plasmoid.configuration.iconSize]],
+                        PlasmaCore.Units.iconSizes[iconSizes[plasmoid.configuration.iconSize]],
                         theme.mSize(theme.defaultFont).height
                     )
                 );
     } else {
-        return verticalMargins() + Math.min(units.iconSizes.small * 3, theme.mSize(theme.defaultFont).height * 3);
+        return verticalMargins() + Math.min(PlasmaCore.Units.iconSizes.small * 3, theme.mSize(theme.defaultFont).height * 3);
     }
 }
 
@@ -193,7 +193,7 @@ function taskHeight() {
 }
 
 function launcherWidth() {
-    var baseWidth = tasks.vertical ? preferredMinHeight() : Math.min(tasks.height, units.iconSizes.small * 3);
+    var baseWidth = tasks.vertical ? preferredMinHeight() : Math.min(tasks.height, PlasmaCore.Units.iconSizes.small * 3);
 
     return (baseWidth + horizontalMargins())
         - (adjustMargin(baseWidth, taskFrame.margins.top) + adjustMargin(baseWidth, taskFrame.margins.bottom));

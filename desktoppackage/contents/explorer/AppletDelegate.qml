@@ -69,25 +69,25 @@ Item {
 
         ColumnLayout {
             id: mainLayout
-            spacing: units.smallSpacing
+            spacing: PlasmaCore.Units.smallSpacing
             anchors {
                 left: parent.left
                 right: parent.right
                 //bottom: parent.bottom
-                margins: units.smallSpacing * 2
-                rightMargin: units.smallSpacing * 2 // don't cram the text to the border too much
+                margins: PlasmaCore.Units.smallSpacing * 2
+                rightMargin: PlasmaCore.Units.smallSpacing * 2 // don't cram the text to the border too much
                 top: parent.top
             }
 
             Item {
                 id: iconContainer
-                width: units.iconSizes.enormous
+                width: PlasmaCore.Units.iconSizes.enormous
                 height: width
                 Layout.alignment: Qt.AlignHCenter
                 opacity: delegate.pendingUninstall ? 0.6 : 1
                 Behavior on opacity {
                     OpacityAnimator {
-                        duration: units.longDuration
+                        duration: PlasmaCore.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
                 }
@@ -101,7 +101,7 @@ Item {
                         visible: model.screenshot === ""
                     }
                     Image {
-                        width: units.iconSizes.enormous
+                        width: PlasmaCore.Units.iconSizes.enormous
                         height: width
                         anchors.fill: parent
                         fillMode: Image.PreserveAspectFit
@@ -114,9 +114,9 @@ Item {
                     anchors.fill: parent
 
                     Rectangle {
-                        x: Math.round(-units.smallSpacing * 1.5 / 2)
+                        x: Math.round(-PlasmaCore.Units.smallSpacing * 1.5 / 2)
                         y: x
-                        width: runningBadge.width + Math.round(units.smallSpacing * 1.5)
+                        width: runningBadge.width + Math.round(PlasmaCore.Units.smallSpacing * 1.5)
                         height: width
                         radius: height
                         visible: running && delegate.GridView.isCurrentItem

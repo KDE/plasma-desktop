@@ -49,25 +49,25 @@ Item {
                 var scaledHeight = Math.floor(parent.width * (buttonIcon.implicitHeight / buttonIcon.implicitWidth));
                 root.Layout.minimumHeight = scaledHeight;
                 root.Layout.maximumHeight = scaledHeight;
-                root.Layout.minimumWidth = units.iconSizes.small;
-                root.Layout.maximumWidth = inPanel ? units.iconSizeHints.panel : -1;
+                root.Layout.minimumWidth = PlasmaCore.Units.iconSizes.small;
+                root.Layout.maximumWidth = inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1;
             } else {
                 var scaledWidth = Math.floor(parent.height * (buttonIcon.implicitWidth / buttonIcon.implicitHeight));
                 root.Layout.minimumWidth = scaledWidth;
                 root.Layout.maximumWidth = scaledWidth;
-                root.Layout.minimumHeight = units.iconSizes.small;
-                root.Layout.maximumHeight = inPanel ? units.iconSizeHints.panel : -1;
+                root.Layout.minimumHeight = PlasmaCore.Units.iconSizes.small;
+                root.Layout.maximumHeight = inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1;
             }
         } else {
-            root.Layout.minimumWidth = units.iconSizes.small;
-            root.Layout.maximumWidth = inPanel ? units.iconSizeHints.panel : -1;
-            root.Layout.minimumHeight = units.iconSizes.small;
-            root.Layout.maximumHeight = inPanel ? units.iconSizeHints.panel : -1;
+            root.Layout.minimumWidth = PlasmaCore.Units.iconSizes.small;
+            root.Layout.maximumWidth = inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1;
+            root.Layout.minimumHeight = PlasmaCore.Units.iconSizes.small;
+            root.Layout.maximumHeight = inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1;
         }
     }
 
     Connections {
-        target: units.iconSizeHints
+        target: PlasmaCore.Units.iconSizeHints
 
         onPanelChanged: root.updateSizeHints()
     }

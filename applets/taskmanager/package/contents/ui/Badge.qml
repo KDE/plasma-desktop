@@ -19,6 +19,7 @@
 
 import QtQuick 2.4
 
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Rectangle {
@@ -36,7 +37,7 @@ Rectangle {
         id: label
         anchors.centerIn: parent
         width: height
-        height: Math.min(units.gridUnit * 2, Math.round(parent.height))
+        height: Math.min(PlasmaCore.Units.gridUnit * 2, Math.round(parent.height))
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         fontSizeMode: Text.VerticalFit

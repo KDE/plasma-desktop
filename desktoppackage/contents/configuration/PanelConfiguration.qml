@@ -103,7 +103,7 @@ PlasmaCore.FrameSvgItem {
                     return panel.screenGeometry.y + panel.screenGeometry.height - panel.height - panel.distance
                 }
             }
-            duration: units.shortDuration
+            duration: PlasmaCore.Units.shortDuration
         }
 
         NumberAnimation {
@@ -122,7 +122,7 @@ PlasmaCore.FrameSvgItem {
                     return panel.screenGeometry.y + panel.screenGeometry.height - panel.height - configDialog.height - panel.distance
                 }
             }
-            duration: units.shortDuration
+            duration: PlasmaCore.Units.shortDuration
         }
     }
 //END Animations

@@ -18,6 +18,7 @@
  ***************************************************************************/
 
 import QtQuick 2.0
+import org.kde.plasma.core 2.0 as PlasmaCore
 
 Flow {
     property bool animating: false
@@ -34,7 +35,7 @@ Flow {
             NumberAnimation {
                 properties: "x, y"
                 easing.type: Easing.OutQuad
-                duration: units.longDuration
+                duration: PlasmaCore.Units.longDuration
             }
 
             PropertyAction { target: taskList; property: "animating"; value: false }

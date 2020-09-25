@@ -354,7 +354,7 @@ function checkLastSpacer() {
             }
             NumberAnimation {
                 id: translAnim
-                duration: units.longDuration
+                duration: PlasmaCore.Units.longDuration
                 easing.type: Easing.InOutQuad
                 target: translation
                 properties: "x,y"
@@ -400,8 +400,8 @@ function checkLastSpacer() {
     GridLayout {
         id: currentLayout
         property bool isLayoutHorizontal
-        rowSpacing: units.smallSpacing
-        columnSpacing: units.smallSpacing
+        rowSpacing: PlasmaCore.Units.smallSpacing
+        columnSpacing: PlasmaCore.Units.smallSpacing
 
         Layout.preferredWidth: {
             var width = 0;

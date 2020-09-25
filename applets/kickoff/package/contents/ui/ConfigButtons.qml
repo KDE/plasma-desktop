@@ -26,8 +26,8 @@ import org.kde.kirigami 2.5 as Kirigami
 GridView {
     id: configButtons
 
-    cellHeight: units.gridUnit * 5 + units.smallSpacing
-    cellWidth: units.gridUnit * 5
+    cellHeight: PlasmaCore.Units.gridUnit * 5 + PlasmaCore.Units.smallSpacing
+    cellWidth: PlasmaCore.Units.gridUnit * 5
 
     implicitWidth: cellWidth * 5
     implicitHeight: cellHeight * 2
@@ -125,8 +125,8 @@ GridView {
         delegate: MouseArea {
             id: delegateRoot
 
-            width: units.gridUnit * 5
-            height: units.gridUnit * 4
+            width: PlasmaCore.Units.gridUnit * 5
+            height: PlasmaCore.Units.gridUnit * 4
 
             property int visualIndex: DelegateModel.itemsIndex
 

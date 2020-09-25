@@ -170,13 +170,13 @@ ColumnLayout {
 
             QQC1.TableViewColumn {
                 role: "decoration"
-                width: units.iconSizes.small
+                width: PlasmaCore.Units.iconSizes.small
                 resizable: false
                 movable: false
 
                 delegate: PlasmaCore.IconItem {
-                    width: units.iconSizes.small
-                    height: units.iconSizes.small
+                    width: PlasmaCore.Units.iconSizes.small
+                    height: PlasmaCore.Units.iconSizes.small
                     animated: false // TableView re-uses delegates, avoid animation when sorting/filtering.
                     source: styleData.value
                 }
@@ -186,7 +186,7 @@ ColumnLayout {
                 id: nameColumn
                 role: "name"
                 title: i18n("File type")
-                width: units.gridUnit * 10 // Assume somewhat reasonable default for mime type name.
+                width: PlasmaCore.Units.gridUnit * 10 // Assume somewhat reasonable default for mime type name.
                 onWidthChanged: mimeTypesView.adjustColumns()
                 movable: false
             }

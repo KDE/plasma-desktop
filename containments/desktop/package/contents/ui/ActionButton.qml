@@ -36,7 +36,7 @@ PlasmaComponents.ToolButton {
     property alias toolTip: toolTip.text
 
     
-    implicitWidth: Math.min(buttonColumn.implicitWidth, units.gridUnit * 10) + leftPadding + rightPadding
+    implicitWidth: Math.min(buttonColumn.implicitWidth, PlasmaCore.Units.gridUnit * 10) + leftPadding + rightPadding
 
     onClicked: {
         if (qAction) {
@@ -63,7 +63,7 @@ PlasmaComponents.ToolButton {
 
         PlasmaCore.SvgItem {
             id: icon
-            Layout.preferredWidth: units.iconSizes.small
+            Layout.preferredWidth: PlasmaCore.Units.iconSizes.small
             Layout.preferredHeight: Layout.preferredWidth
             Layout.alignment: Qt.AlignHCenter
             width: iconSize

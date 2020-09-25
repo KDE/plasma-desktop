@@ -28,8 +28,8 @@ PlasmaCore.FrameSvgItem {
     property alias text: textElement.text
     property string name
 
-    width: units.gridUnit * 5
-    height: units.gridUnit * 4
+    width: PlasmaCore.Units.gridUnit * 5
+    height: PlasmaCore.Units.gridUnit * 4
 
     visible: name != "empty"
 
@@ -42,7 +42,7 @@ PlasmaCore.FrameSvgItem {
             id: iconElement
 
             Layout.alignment: Qt.AlignHCenter
-            Layout.preferredWidth: units.iconSizes.medium
+            Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
             Layout.preferredHeight: width
 
             source: icon

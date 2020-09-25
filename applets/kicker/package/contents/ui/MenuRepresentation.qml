@@ -33,9 +33,9 @@ FocusScope {
 
     Layout.minimumHeight: Math.max(((rootModel.count - rootModel.separatorCount) * rootList.itemHeight)
         + (rootModel.separatorCount * rootList.separatorHeight)
-        + searchField.height + (2 * units.smallSpacing), sideBar.margins.top + sideBar.margins.bottom
+        + searchField.height + (2 * PlasmaCore.Units.smallSpacing), sideBar.margins.top + sideBar.margins.bottom
         + favoriteApps.contentHeight + favoriteSystemActions.contentHeight + sidebarSeparator.height
-        + (4 * units.smallSpacing))
+        + (4 * PlasmaCore.Units.smallSpacing))
     Layout.maximumHeight: Layout.minimumHeight
 
     signal appendSearchText(string text)
@@ -54,7 +54,7 @@ FocusScope {
 
         height: parent.height
 
-        spacing: units.smallSpacing
+        spacing: PlasmaCore.Units.smallSpacing
 
         LayoutMirroring.enabled: ((plasmoid.location === PlasmaCore.Types.RightEdge)
             || (Qt.application.layoutDirection == Qt.RightToLeft && plasmoid.location !== PlasmaCore.Types.LeftEdge))
@@ -66,7 +66,7 @@ FocusScope {
 
             width: (globalFavorites && systemFavorites
                 && (globalFavorites.count + systemFavorites.count)
-                ? units.iconSizes.medium + margins.left + margins.right : 0)
+                ? PlasmaCore.Units.iconSizes.medium + margins.left + margins.right : 0)
             height: parent.height
 
             imagePath: "widgets/frame"
@@ -79,7 +79,7 @@ FocusScope {
                 anchors.topMargin: sideBar.margins.top
 
                 height: (sideBar.height - sideBar.margins.top - sideBar.margins.bottom
-                    - favoriteSystemActions.height - sidebarSeparator.height - (4 * units.smallSpacing))
+                    - favoriteSystemActions.height - sidebarSeparator.height - (4 * PlasmaCore.Units.smallSpacing))
 
                 model: globalFavorites
 
@@ -103,7 +103,7 @@ FocusScope {
                 Binding {
                     target: globalFavorites
                     property: "iconSize"
-                    value: units.iconSizes.medium
+                    value: PlasmaCore.Units.iconSizes.medium
                 }
             }
 
@@ -111,10 +111,10 @@ FocusScope {
                 id: sidebarSeparator
 
                 anchors.bottom: favoriteSystemActions.top
-                anchors.bottomMargin: (2 * units.smallSpacing)
+                anchors.bottomMargin: (2 * PlasmaCore.Units.smallSpacing)
                 anchors.horizontalCenter: parent.horizontalCenter
 
-                width: units.iconSizes.medium
+                width: PlasmaCore.Units.iconSizes.medium
                 height: lineSvg.horLineHeight
 
                 visible: (favoriteApps.model && favoriteApps.model.count
@@ -136,7 +136,7 @@ FocusScope {
 
                     PropertyChanges {
                         target: sidebarSeparator
-                        anchors.topMargin: (2 * units.smallSpacing)
+                        anchors.topMargin: (2 * PlasmaCore.Units.smallSpacing)
                         anchors.bottomMargin: undefined
                     }
                 }]
@@ -306,12 +306,12 @@ FocusScope {
 
         anchors.bottom: mainRow.bottom
         anchors.left: parent.left
-        anchors.leftMargin: sideBar.width + (sideBar.width ? mainRow.spacing : 0) + units.smallSpacing
+        anchors.leftMargin: sideBar.width + (sideBar.width ? mainRow.spacing : 0) + PlasmaCore.Units.smallSpacing
 
-        readonly property real defaultWidth: units.gridUnit * 14
+        readonly property real defaultWidth: PlasmaCore.Units.gridUnit * 14
         width: (runnerColumnsRepeater.count != 0 ? runnerColumnsRepeater.itemAt(0).width
                                                  : (rootList.visible ? rootList.width : defaultWidth))
-                                                 - units.smallSpacing
+                                                 - PlasmaCore.Units.smallSpacing
 
         focus: true
 
@@ -349,7 +349,7 @@ FocusScope {
 
             PropertyChanges {
                 target: searchField
-                anchors.leftMargin: sideBar.width + mainRow.spacing + units.smallSpacing
+                anchors.leftMargin: sideBar.width + mainRow.spacing + PlasmaCore.Units.smallSpacing
                 anchors.rightMargin: undefined
             }
         },
@@ -369,7 +369,7 @@ FocusScope {
             PropertyChanges {
                 target: searchField
                 anchors.leftMargin: undefined
-                anchors.rightMargin: sideBar.width + mainRow.spacing + units.smallSpacing
+                anchors.rightMargin: sideBar.width + mainRow.spacing + PlasmaCore.Units.smallSpacing
             }
         }]
 

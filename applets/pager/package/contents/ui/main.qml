@@ -201,8 +201,8 @@ MouseArea {
         PlasmaCore.IconItem {
             anchors.centerIn: parent
 
-            height: Math.min(units.iconSizes.small, parent.height - (units.smallSpacing * 2))
-            width: Math.min(units.iconSizes.small, parent.width - (units.smallSpacing * 2))
+            height: Math.min(PlasmaCore.Units.iconSizes.small, parent.height - (PlasmaCore.Units.smallSpacing * 2))
+            width: Math.min(PlasmaCore.Units.iconSizes.small, parent.width - (PlasmaCore.Units.smallSpacing * 2))
 
             property var model: null
 
@@ -225,7 +225,7 @@ MouseArea {
     Grid {
         id: pagerItemGrid
 
-        spacing: units.devicePixelRatio
+        spacing: PlasmaCore.Units.devicePixelRatio
         rows: effectiveRows
         columns: effectiveColumns
 
@@ -405,8 +405,8 @@ MouseArea {
 
                 Item {
                     id: clipRect
-                    x: Math.round(units.devicePixelRatio)
-                    y: Math.round(units.devicePixelRatio)
+                    x: Math.round(PlasmaCore.Units.devicePixelRatio)
+                    y: Math.round(PlasmaCore.Units.devicePixelRatio)
                     width: desktop.width - 2 * x
                     height: desktop.height - 2 * y
 
@@ -432,8 +432,8 @@ MouseArea {
                             onVisibleNameChanged: desktop.updateSubText()
 
                             /* since we move clipRect with 1, move it back */
-                            x: (geometry.x * pagerItemGrid.widthScaleFactor) - Math.round(units.devicePixelRatio)
-                            y: (geometry.y * pagerItemGrid.heightScaleFactor) - Math.round(units.devicePixelRatio)
+                            x: (geometry.x * pagerItemGrid.widthScaleFactor) - Math.round(PlasmaCore.Units.devicePixelRatio)
+                            y: (geometry.y * pagerItemGrid.heightScaleFactor) - Math.round(PlasmaCore.Units.devicePixelRatio)
                             width: geometry.width * pagerItemGrid.widthScaleFactor
                             height: geometry.height * pagerItemGrid.heightScaleFactor
                             visible: model.IsMinimized !== true
@@ -451,7 +451,7 @@ MouseArea {
                                 }
                             }
 
-                            border.width: Math.round(units.devicePixelRatio)
+                            border.width: Math.round(PlasmaCore.Units.devicePixelRatio)
                             border.color: (model.IsActive === true) ? windowActiveBorderColor
                                                     : windowInactiveBorderColor
 

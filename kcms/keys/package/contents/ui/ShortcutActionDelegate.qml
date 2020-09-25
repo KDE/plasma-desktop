@@ -22,7 +22,9 @@ import QtQuick.Controls 2.3 as QQC2
 
 import org.kde.kirigami 2.10 as Kirigami
 import org.kde.kquickcontrols 2.0
-import org.kde.kcm 1.2 as KCM 
+import org.kde.kcm 1.5 as KCM
+import org.kde.private.kcms.keys 2.0 as Private
+
 
 Kirigami.AbstractListItem {
     id: root
@@ -66,6 +68,15 @@ Kirigami.AbstractListItem {
                     root.state == 'expanded' ?  shortcutsList.selectedIndex = -1 : shortcutsList.selectedIndex = index
                     }
                 }
+                Rectangle {
+                    id: defaultIndicator
+                    radius: width * 0.5
+                    implicitWidth: Kirigami.Units.largeSpacing
+                    implicitHeight: Kirigami.Units.largeSpacing
+                    visible: kcm.defaultsIndicatorsVisible
+                    opacity: !model.isDefault
+                    color: Kirigami.Theme.neutralTextColor
+                }
             }
         }
         Loader {
@@ -104,6 +115,9 @@ Kirigami.AbstractListItem {
                                     originalIndex.model.disableShortcut(originalIndex, modelData)
                                 }
                             }
+                            KCM.SettingHighlighter {
+                                highlight: !checked
+                            }
                         }
                     }
                 }
@@ -126,6 +140,9 @@ Kirigami.AbstractListItem {
                                 checkForConflictsAgainst: ShortcutType.None
                                 onCaptureFinished: {
                                     kcm.requestKeySequence(this, originalIndex, keySequence, modelData)
+                                }
+                                KCM.SettingHighlighter {
+                                    highlight: true
                                 }
                             }
                             QQC2.Button {

@@ -38,16 +38,16 @@ FocusScope {
 
     //this is used to perfectly align the filter field and delegates
     property int cellWidth: theme.mSize(theme.defaultFont).width * 30
-    property int spacing: 2 * units.smallSpacing
+    property int spacing: 2 * PlasmaCore.Units.smallSpacing
 
     property bool showSwitcherOnly: false
 
-    width: units.gridUnit * 16
+    width: PlasmaCore.Units.gridUnit * 16
 
     Item {
         id: activityBrowser
 
-        property int spacing: 2 * units.smallSpacing
+        property int spacing: 2 * PlasmaCore.Units.smallSpacing
 
         signal closeRequested()
 
@@ -92,8 +92,8 @@ FocusScope {
                 left: parent.left
                 right: parent.right
 
-                leftMargin: units.smallSpacing
-                rightMargin: units.smallSpacing
+                leftMargin: PlasmaCore.Units.smallSpacing
+                rightMargin: PlasmaCore.Units.smallSpacing
             }
 
             onCloseRequested: activityBrowser.closeRequested()
@@ -117,14 +117,14 @@ FocusScope {
 
                 filterString: heading.searchString.toLowerCase()
 
-                itemsWidth: root.width - units.smallSpacing
+                itemsWidth: root.width - PlasmaCore.Units.smallSpacing
             }
         }
 
         Item {
             id: bottomPanel
 
-            height: newActivityButton.height + units.largeSpacing
+            height: newActivityButton.height + PlasmaCore.Units.largeSpacing
 
             visible: !root.showSwitcherOnly
 

@@ -290,8 +290,7 @@ void Dialog::saveChanges(const QString &activityId)
     action.setProperty("isConfigurationAction", true);
     action.setProperty("componentName", QStringLiteral("ActivityManager"));
     action.setObjectName(QStringLiteral("switch-to-activity-") + activityId);
-    KGlobalAccel::self()->removeAllShortcuts(&action);
-    KGlobalAccel::self()->setGlobalShortcut(&action, activityShortcut());
+    KGlobalAccel::self()->setShortcut(&action, {activityShortcut()}, KGlobalAccel::NoAutoloading);
 
     // is private?
     d->features->SetValue(QStringLiteral("org.kde.ActivityManager.Resources.Scoring/isOTR/")

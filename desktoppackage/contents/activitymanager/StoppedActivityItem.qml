@@ -32,7 +32,7 @@ import "static.js" as S
 Item {
     id: root
 
-    property int innerPadding: units.smallSpacing
+    property int innerPadding: PlasmaCore.Units.smallSpacing
 
     property string activityId : ""
 
@@ -42,7 +42,7 @@ Item {
     signal clicked
 
     width  : 200
-    height : icon.height + 2 * units.smallSpacing
+    height : icon.height + 2 * PlasmaCore.Units.smallSpacing
 
     // Background until we get something real
     PlasmaCore.FrameSvgItem {
@@ -72,7 +72,7 @@ Item {
         PlasmaCore.IconItem {
             id: icon
 
-            width  : units.iconSizes.medium
+            width  : PlasmaCore.Units.iconSizes.medium
             height : width
 
             anchors {
@@ -121,13 +121,13 @@ Item {
 
             Behavior on height {
                 NumberAnimation {
-                    duration: units.longDuration
+                    duration: PlasmaCore.Units.longDuration
                 }
             }
 
             Behavior on opacity {
                 NumberAnimation {
-                    duration: units.shortDuration
+                    duration: PlasmaCore.Units.shortDuration
                 }
             }
 
@@ -149,7 +149,7 @@ Item {
 
                 anchors {
                     left       : parent.left
-                    leftMargin : 2 * units.smallSpacing + 2
+                    leftMargin : 2 * PlasmaCore.Units.smallSpacing + 2
                     verticalCenter: parent.verticalCenter
                 }
             }
@@ -165,7 +165,7 @@ Item {
 
                 anchors {
                     right       : parent.right
-                    rightMargin : 2 * units.smallSpacing + 2
+                    rightMargin : 2 * PlasmaCore.Units.smallSpacing + 2
                     verticalCenter: parent.verticalCenter
                 }
             }
@@ -187,7 +187,7 @@ Item {
         Transition {
             NumberAnimation {
                 properties : "opacity"
-                duration   : units.shortDuration
+                duration   : PlasmaCore.Units.shortDuration
             }
         }
     ]

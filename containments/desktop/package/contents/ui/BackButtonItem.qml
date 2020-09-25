@@ -84,7 +84,7 @@ PlasmaCore.FrameSvgItem {
 
         anchors {
             left: parent.left
-            leftMargin: units.smallSpacing
+            leftMargin: PlasmaCore.Units.smallSpacing
             verticalCenter: parent.verticalCenter
         }
 
@@ -99,11 +99,11 @@ PlasmaCore.FrameSvgItem {
 
         anchors {
             left: icon.right
-            leftMargin: units.smallSpacing * 2
+            leftMargin: PlasmaCore.Units.smallSpacing * 2
             verticalCenter: parent.verticalCenter
         }
 
-        width:  parent.width - icon.width - (units.smallSpacing * 4);
+        width:  parent.width - icon.width - (PlasmaCore.Units.smallSpacing * 4);
 
         height: undefined // Unset PlasmaComponents.Label's default.
 

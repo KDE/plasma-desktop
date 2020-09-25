@@ -34,7 +34,7 @@ import org.kde.plasma.private.shell 2.0
 Item {
     id: main
 
-    width: Math.max(heading.paintedWidth, units.iconSizes.enormous * 3 + units.smallSpacing * 4 + units.gridUnit * 2)
+    width: Math.max(heading.paintedWidth, PlasmaCore.Units.iconSizes.enormous * 3 + PlasmaCore.Units.smallSpacing * 4 + PlasmaCore.Units.gridUnit * 2)
     height: 800//Screen.height
 
     opacity: draggingWidget ? 0.3 : 1
@@ -176,7 +176,7 @@ Item {
         mainItem: Tooltip { id: tooltipWidget }
 
         Behavior on y {
-            NumberAnimation { duration: units.longDuration }
+            NumberAnimation { duration: PlasmaCore.Units.longDuration }
         }
     }
     Timer {
@@ -262,7 +262,7 @@ Item {
             }
 
             Item {
-                height: units.smallSpacing
+                height: PlasmaCore.Units.smallSpacing
             }
         }
     }
@@ -288,7 +288,7 @@ Item {
         opacity: setModelTimer.running ? 0 : 1
         Behavior on opacity {
             OpacityAnimator {
-                duration: units.longDuration
+                duration: PlasmaCore.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
@@ -300,8 +300,8 @@ Item {
 
             activeFocusOnTab: true
             keyNavigationWraps: true
-            cellWidth: Math.floor((width - units.smallSpacing) / 3)
-            cellHeight: cellWidth + units.gridUnit * 4 + units.smallSpacing * 2
+            cellWidth: Math.floor((width - PlasmaCore.Units.smallSpacing) / 3)
+            cellHeight: cellWidth + PlasmaCore.Units.gridUnit * 4 + PlasmaCore.Units.smallSpacing * 2
 
             delegate: AppletDelegate {}
             highlight: PlasmaComponents.Highlight {}
@@ -313,7 +313,7 @@ Item {
                 NumberAnimation {
                     properties: "x"
                     from: -list.width
-                    duration: units.shortDuration
+                    duration: PlasmaCore.Units.shortDuration
                 }
             }
 
@@ -322,7 +322,7 @@ Item {
                 NumberAnimation {
                     properties: "x"
                     to: list.width
-                    duration: units.shortDuration
+                    duration: PlasmaCore.Units.shortDuration
                 }
             }
 
@@ -335,13 +335,13 @@ Item {
             displaced: Transition {
                 NumberAnimation {
                     properties: "x,y"
-                    duration: units.shortDuration
+                    duration: PlasmaCore.Units.shortDuration
                 }
             }
 
             PlasmaExtras.Heading {
                 anchors.fill: parent
-                anchors.margins: units.largeSpacing
+                anchors.margins: PlasmaCore.Units.largeSpacing
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 wrapMode: Text.WordWrap

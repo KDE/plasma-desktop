@@ -30,7 +30,7 @@ Item {
     property string tip;
     property string hint;
     signal triggered(variant button);
-    property int iconSize: units.roundToIconSize(Math.min(parent.width, parent.height))
+    property int iconSize: PlasmaCore.Units.roundToIconSize(Math.min(parent.width, parent.height))
 
     opacity: 'disable' == hint ? 0.3 : 1
 

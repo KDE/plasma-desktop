@@ -86,7 +86,7 @@ Item {
 
         anchors {
             top: icon.bottom
-            topMargin: units.smallSpacing
+            topMargin: PlasmaCore.Units.smallSpacing
             left: parent.left
             leftMargin: highlightItemSvg.margins.left
             right: parent.right

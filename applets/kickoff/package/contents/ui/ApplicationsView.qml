@@ -91,7 +91,7 @@ Item {
         }
         height: childrenRect.height
 
-        Behavior on opacity { NumberAnimation { duration: units.longDuration } }
+        Behavior on opacity { NumberAnimation { duration: PlasmaCore.Units.longDuration } }
 
         Flickable {
             id: breadcrumbFlickable
@@ -150,8 +150,8 @@ Item {
         anchors {
             top: crumbContainer.bottom
             bottom: parent.bottom
-            rightMargin: -units.largeSpacing
-            leftMargin: -units.largeSpacing
+            rightMargin: -PlasmaCore.Units.largeSpacing
+            leftMargin: -PlasmaCore.Units.largeSpacing
         }
 
         width: parent.width
@@ -159,7 +159,7 @@ Item {
         property Item activatedItem: null
         property var newModel: null
 
-        Behavior on opacity { NumberAnimation { duration: units.longDuration } }
+        Behavior on opacity { NumberAnimation { duration: PlasmaCore.Units.longDuration } }
 
         focus: true
 
@@ -223,14 +223,14 @@ Item {
                     // and we want the item that has been clicked on, not the one that is under the
                     // mouse once the animation is done
                     ScriptAction { script: applicationsView.activatedItem = applicationsView.currentItem }
-                    NumberAnimation { properties: "x,opacity"; easing.type: Easing.InQuad; duration: units.longDuration }
+                    NumberAnimation { properties: "x,opacity"; easing.type: Easing.InQuad; duration: PlasmaCore.Units.longDuration }
                     ScriptAction { script: applicationsView.moveRight() }
                 }
             },
             Transition {
                 to: "OutgoingRight"
                 SequentialAnimation {
-                    NumberAnimation { properties: "x,opacity"; easing.type: Easing.InQuad; duration: units.longDuration }
+                    NumberAnimation { properties: "x,opacity"; easing.type: Easing.InQuad; duration: PlasmaCore.Units.longDuration }
                     ScriptAction { script: applicationsView.moveLeft() }
                 }
             }
@@ -275,7 +275,7 @@ Item {
         visible: opacity != 0
         anchors.centerIn: parent
 
-        Behavior on opacity { NumberAnimation { duration: units.shortDuration } }
+        Behavior on opacity { NumberAnimation { duration: PlasmaCore.Units.shortDuration } }
     }
 
     Component.onCompleted: {
