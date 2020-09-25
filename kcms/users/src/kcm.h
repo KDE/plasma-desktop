@@ -31,10 +31,12 @@ class KCMUser : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(UserModel* userModel MEMBER m_model CONSTANT)
+    Q_PROPERTY(QVariantList imagesList MEMBER m_imagesList CONSTANT)
 
 private:
     OrgFreedesktopAccountsInterface* m_dbusInterface;
     UserModel* m_model;
+    QVariantList m_imagesList;
 
 public:
     KCMUser(QObject *parent = nullptr, const QVariantList &args = QVariantList());

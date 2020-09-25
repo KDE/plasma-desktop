@@ -26,6 +26,7 @@
 #include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginFactory>
+#include <KPackage/PackageLoader>
 // Qt
 #include <QApplication>
 #include <QFileDialog>
@@ -57,6 +58,15 @@ KCMUser::KCMUser(QObject *parent, const QVariantList &args)
     auto font = QApplication::font("QLabel");
     auto fm = QFontMetrics(font);
     setColumnWidth(fm.capHeight()*30);
+
+    KPackage::Package p = KPackage::PackageLoader::self()->loadPackage("Plasma/Generic", "kcms/kcm_users");
+    Q_ASSERT(p.isValid());
+    qDebug() << p.path() + QDir::separator() + QStringLiteral("img");
+    QDirIterator it(p.path() + QDir::separator() + QStringLiteral("img"), QDirIterator::Subdirectories);
+    while (it.hasNext()) {
+        m_imagesList << QVariant(p.path() + QDir::separator() + QStringLiteral("img") + QDir::separator() + it.next());
+    }
+    qDebug() << m_imagesList;
 }
 
 bool KCMUser::createUser(const QString& name, const QString& realName, const QString& password, bool isAdmin)
