@@ -104,7 +104,6 @@ Rectangle {
 //BEGIN UI components
     Rectangle {
         id: sidebar
-        visible: configDialog.configModel
         anchors.left: root.left
         width: categoriesScroll.width
         height: root.height
@@ -114,7 +113,6 @@ Rectangle {
     }
 
     Kirigami.Separator {
-        visible: configDialog.configModel
         anchors.left: sidebar.right
         height: root.height
     }
@@ -145,7 +143,6 @@ Rectangle {
         anchors {
             topMargin: topSeparator.height
             fill: parent
-            leftMargin: configDialog.configModel ? 0 : PlasmaCore.Units.smallSpacing * 2
         }
         spacing: 0
 
