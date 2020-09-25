@@ -97,24 +97,10 @@ PlasmaCore.FrameSvgItem {
 
             return containment.backgroundHints; 
         }
-    }    
+    }
 
     Item {
         id: containmentParent
-        anchors {
-            fill: parent
-
-            //Margins are either the size of the margins in the SVG, unless that prevents the panel from being at least half a smallMedium icon + smallSpace) tall at which point we set the margin to whatever allows it to be that...or if it still won't fit, 1.
-
-            //the size a margin should be to force a panel to be the required size above
-            readonly property real spacingAtMinSize: Math.max(1, (verticalPanel ? root.width : root.height) - PlasmaCore.Units.iconSizes.smallMedium - PlasmaCore.Units.smallSpacing*2)/2
-
-            topMargin: Math.round(Math.min(root.fixedMargins.top, spacingAtMinSize));
-            bottomMargin: Math.round(Math.min(root.fixedMargins.bottom, spacingAtMinSize));
-
-            //Base the left/right fixedMargins on height as well, to have a good radial symmetry
-            leftMargin: Math.round(Math.min(root.fixedMargins.left, spacingAtMinSize));
-            rightMargin: Math.round(Math.min(root.fixedMargins.right, spacingAtMinSize));
-        }
+        anchors.fill: parent
     }
 }
