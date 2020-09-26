@@ -258,7 +258,7 @@ UserApplyJob::UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIfa
 
 void UserApplyJob::start()
 {
-    const std::map<QString,QDBusPendingReply<> (OrgFreedesktopAccountsUserInterface::*)(const QString&)> set = {
+    const std::multimap<QString,QDBusPendingReply<> (OrgFreedesktopAccountsUserInterface::*)(const QString&)> set = {
         {m_name, &OrgFreedesktopAccountsUserInterface::SetUserName},
         {m_email, &OrgFreedesktopAccountsUserInterface::SetEmail},
         {m_realname, &OrgFreedesktopAccountsUserInterface::SetRealName},
