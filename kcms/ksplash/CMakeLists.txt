@@ -3,7 +3,14 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_splashscreen\")
 
 set(kcm_splashscreen_SRCS
   kcm.cpp
-  splashscreendata.cpp
+)
+
+kcmutils_generate_module_data(
+    kcm_splashscreen_SRCS
+    MODULE_DATA_HEADER splashscreendata.h
+    MODULE_DATA_CLASS_NAME SplashScreenData
+    SETTINGS_HEADERS splashscreensettings.h
+    SETTINGS_CLASSES SplashScreenSettings
 )
 
 kconfig_add_kcfg_files(kcm_splashscreen_SRCS splashscreensettings.kcfgc GENERATE_MOC)
