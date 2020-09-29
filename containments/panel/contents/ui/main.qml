@@ -49,7 +49,7 @@ DragDrop.DropArea {
     property bool isHorizontal: plasmoid.formFactor !== PlasmaCore.Types.Vertical
     property int fixedWidth: 0
     property int fixedHeight: 0
-    
+
     // This is invisible and only used to read panel margins
     PlasmaCore.FrameSvgItem {
         id: panelSvg
@@ -282,10 +282,10 @@ function checkLastSpacer() {
             //Margins are either the size of the margins in the SVG, unless that prevents the panel from being at least half a smallMedium icon + smallSpace) tall at which point we set the margin to whatever allows it to be that...or if it still won't fit, 1.
 
             //the size a margin should be to force a panel to be the required size above
-            readonly property real spacingAtMinSize: Math.max(1, (currentLayout.isLayoutHorizontal ? root.height : root.width) - units.iconSizes.smallMedium - units.smallSpacing*2)/2
+            readonly property real spacingAtMinSize: Math.max(1, (currentLayout.isLayoutHorizontal ? root.height+panelSvg.fixedMargins.top*2 : root.width+panelSvg.fixedMargins.left*2) - units.iconSizes.smallMedium - units.smallSpacing*2)/2
             readonly property bool fillArea: applet && (applet.constraintHints & PlasmaCore.Types.CanFillArea)
 
-            Layout.topMargin: (currentLayout.isLayoutHorizontal && !fillArea) ? Math.round(Math.min(spacingAtMinSize, panelSvg.fixedMargins.top)) : 0
+            Layout.topMargin: (currentLayout.isLayoutHorizontal && !fillArea) ?Math.round(Math.min(spacingAtMinSize, panelSvg.fixedMargins.top)) : 0
             Layout.bottomMargin: (currentLayout.isLayoutHorizontal && !fillArea) ? Math.round(Math.min(spacingAtMinSize, panelSvg.fixedMargins.bottom)) : 0
             Layout.leftMargin: (!currentLayout.isLayoutHorizontal && !fillArea) ? Math.round(Math.min(spacingAtMinSize, panelSvg.fixedMargins.left)) : 0
             Layout.rightMargin: (!currentLayout.isLayoutHorizontal && !fillArea) ? Math.round(Math.min(spacingAtMinSize, panelSvg.fixedMargins.right)) : 0

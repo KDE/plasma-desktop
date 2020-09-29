@@ -34,6 +34,12 @@ PlasmaCore.FrameSvgItem {
 
     readonly property bool verticalPanel: containment && containment.formFactor === PlasmaCore.Types.Vertical
 
+    readonly property real spacingAtMinSize: Math.max(1, (verticalPanel ? root.width : root.height) - PlasmaCore.Units.iconSizes.smallMedium - PlasmaCore.Units.smallSpacing*2)/2
+    readonly property int topMargin: Math.round(Math.min(root.fixedMargins.top, spacingAtMinSize));
+    readonly property int bottomMargin: Math.round(Math.min(root.fixedMargins.bottom, spacingAtMinSize));
+    readonly property int leftMargin: Math.round(Math.min(root.fixedMargins.left, spacingAtMinSize));
+    readonly property int rightMargin: Math.round(Math.min(root.fixedMargins.right, spacingAtMinSize));
+
     function adjustPrefix() {
         if (!containment) {
             return "";
