@@ -230,7 +230,7 @@ ColumnLayout {
             source: thumbnailSourceItem.isMinimized && !albumArtImage.visible && Number.isInteger(thumbnailSourceItem.winId) ? icon : ""
             animated: false
             usesPlasmaTheme: false
-            visible: valid
+            visible: valid && !pipeWireLoader.active
         }
 
         ToolTipWindowMouseArea {
