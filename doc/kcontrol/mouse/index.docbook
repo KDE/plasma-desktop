@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2018-05-18</date>
-<releaseinfo>Plasma 5.13</releaseinfo>
+<date>2020-10-01</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
 
 <abstract>
 <para>This is the documentation for the &systemsettings; module that configures mice and other pointing devices.
@@ -167,76 +167,6 @@ the selected item will be dragged.</para>
 <para>If you have a wheel mouse, use the spin box to determine how many
 lines of text one <quote>step</quote> of the mouse wheel will
 scroll.</para>
-</listitem>
-</varlistentry>
-
-</variablelist>
-
-</sect2>
-
-<sect2 id="keyboard-navigation">
-<title>Keyboard Navigation</title>
-
-<para>
-This tab allows you to configure the keyboard number pad keys as a mouse-type device. This may be useful when you are working on a device without another pointing device, or where you have no other use for the number pad.
-</para>
-
-<variablelist>
-
-<varlistentry>
-<term><guilabel>Move pointer with keyboard (using the num pad)</guilabel></term>
-<listitem>
-<para>
-To enable keyboard mouse mode, you need to select the check box labeled <guilabel>Move pointer with keyboard (using the num pad)</guilabel>. When you do this, the other settings will become enabled, and you can customize the keyboard pointer behavior further, if required.
-</para>
-<para>
-The various keys on the number pad move in the direction you would expect. Note that you can move diagonally as well as up, down, left and right.  The <keycap>5</keycap> key emulates a click to a pointer button, typically &LMB;. You change which button is emulated by using the <keycap>/</keycap> key (which makes it &LMB;), <keycap>*</keycap> key (which makes it &MMB;) and <keycap>-</keycap> (which makes it &RMB;). Using the <keycap>+</keycap> emulates a double click to the selected pointer button. You can use the <keycap>0</keycap> key to emulate holding down the selected pointer button (for easy dragging), and then use the <keycap>.</keycap> to emulate releasing the selected pointer button.
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Acceleration delay</guilabel></term>
-<listitem>
-<para>
-This is the time (in milliseconds) between the initial key press and the first repeated motion event for mouse key acceleration.
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Repeat interval</guilabel></term>
-<listitem>
-<para>
-This is the time in milliseconds between repeated motion events for mouse key acceleration.
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Acceleration time</guilabel></term>
-<listitem>
-<para>
-This is the time in milliseconds before the pointer reaches a maximum speed for mouse key acceleration.
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Maximum speed</guilabel></term>
-<listitem>
-<para>
-This is the maximum speed in pixels per second the pointer can reach for mouse key acceleration.
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Acceleration profile</guilabel></term>
-<listitem>
-<para>
-This is the slope of the acceleration curve for mouse key acceleration.
-</para>
 </listitem>
 </varlistentry>
 
