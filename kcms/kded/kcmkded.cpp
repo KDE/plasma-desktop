@@ -31,10 +31,7 @@
 #include <KAboutData>
 #include <KConfig>
 #include <KConfigGroup>
-#include <KPluginInfo>
 #include <KPluginFactory>
-#include <KPluginLoader>
-#include <KPluginMetaData>
 #include <KLocalizedString>
 
 #include <algorithm>
