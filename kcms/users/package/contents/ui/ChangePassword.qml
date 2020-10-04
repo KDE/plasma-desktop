@@ -76,10 +76,11 @@ Kirigami.OverlaySheet {
             Kirigami.InlineMessage {
                 id: passwordWarning
 
+                Layout.fillWidth: true
+                Layout.maximumWidth: verifyField.width
                 type: Kirigami.MessageType.Error
                 text: i18n("Passwords must match")
                 visible: passwordField.text != "" && verifyField.text != "" && passwordField.text != verifyField.text
-                Layout.alignment: Qt.AlignLeft
             }
             QQC2.Button {
                 id: passButton
