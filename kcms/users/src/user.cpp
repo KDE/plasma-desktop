@@ -231,7 +231,6 @@ void User::apply()
             Q_EMIT applyError(i18n("Could not get permission to save user %1", mName));
             break;
         case UserApplyJob::Error::Failed:
-            [[fallthrough]]
         case UserApplyJob::Error::Unknown:
             Q_EMIT applyError(i18n("There was an error while saving changes"));
             break;
