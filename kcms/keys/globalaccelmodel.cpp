@@ -207,7 +207,7 @@ void GlobalAccelModel::importConfig(const KConfigBase &config)
 {
     for (const auto componentGroupName : config.groupList()) {
         auto component = std::find_if(m_components.begin(), m_components.end(), [&] (const Component &c) {
-            return c.displayName == componentGroupName;
+            return c.id == componentGroupName;
         });
         if (component == m_components.end()) {
             qCWarning(KCMKEYS) << "Ignoring unknown component" << componentGroupName;
