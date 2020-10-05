@@ -1,6 +1,7 @@
 /*
     Copyright 2019  Nicolas Fella <nicolas.fella@gmx.de>
     Copyright 2020  Carson Black <uhhadd@gmail.com>
+    Copyright 2020  David Redondo <kde@david-redondo.de>
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
@@ -21,9 +22,11 @@
 
 #include "user.h"
 #include "user_interface.h"
+#include "kcmusers_debug.h"
 #include <unistd.h>
 #include <sys/types.h>
 #include <QtConcurrent>
+#include <KLocalizedString>
 
 User::User(QObject* parent) : QObject(parent) {}
 
@@ -222,6 +225,19 @@ QDBusObjectPath User::path() const
 void User::apply()
 {
     auto job = new UserApplyJob(m_dbusIface, mName, mEmail, mRealName, mFace.toString().replace("file://", ""), mAdministrator ? 1 : 0);
+    connect(job, &UserApplyJob::result, this, [this, job] {
+        switch (static_cast<UserApplyJob::Error>(job->error())) {
+        case UserApplyJob::Error::PermissionDenied:
+            Q_EMIT applyError(i18n("Could not get permission to save user %1", mName));
+            break;
+        case UserApplyJob::Error::Failed:
+            [[fallthrough]]
+        case UserApplyJob::Error::Unknown:
+            Q_EMIT applyError(i18n("There was an error while saving changes"));
+            break;
+        case UserApplyJob::Error::NoError: ; // Do nothing
+        }
+    });
     job->start();
 }
 
@@ -255,14 +271,30 @@ void UserApplyJob::start()
     for (auto const &x: set) {
         auto resp = (m_dbusIface->*(x.second))(x.first);
         resp.waitForFinished();
-        // We don't have a meaningful way to discern between errors and
-        // user cancellation; but user cancellation is more likely than errors
-        // so go with that.
         if (resp.isError()) {
+            setError(resp.error());
+            qCWarning(KCMUSERS) << resp.error().name() << resp.error().message();
             emitResult();
             return;
         }
     }
-    m_dbusIface->SetAccountType(m_type).waitForFinished();
+    auto setAccount = m_dbusIface->SetAccountType(m_type);
+    setAccount.waitForFinished();
+    if (setAccount.isError()) {
+        setError(setAccount.error());
+        qCWarning(KCMUSERS) << setAccount.error().name() << setAccount.error().message();
+    }
     emitResult();
+}
+
+void UserApplyJob::setError(const QDBusError& error)
+{
+    setErrorText(error.message());
+    if (error.name() == QLatin1String("org.freedesktop.Accounts.Error.Failed")) {
+        KJob::setError(static_cast<int>(Error::Failed));
+    } else if (error.name() == QLatin1String("org.freedesktop.Accounts.Error.PermissionDenied")) {
+        KJob::setError(static_cast<int>(Error::PermissionDenied));
+    } else {
+        KJob::setError(static_cast<int>(Error::Unknown));
+    }
 }

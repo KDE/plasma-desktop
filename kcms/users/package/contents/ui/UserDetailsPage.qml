@@ -38,9 +38,19 @@ SimpleKCM {
     property url oldImage
 
     Connections {
+        target: user
+        function onApplyError(errorText) {
+            errorMessage.visible = true
+            errorMessage.text = errorText
+        }
+    }
+
+
+    Connections {
         target: kcm
 
         onApply: {
+            errorMessage.visible = false
             usersDetailPage.user.realName = realNametextField.text
             usersDetailPage.user.email = emailTextField.text
             usersDetailPage.user.name = userNameField.text
@@ -51,6 +61,7 @@ SimpleKCM {
         }
 
         onReset: {
+            errorMessage.visible = false
             realNametextField.text = usersDetailPage.user.realName
             emailTextField.text = usersDetailPage.user.email
             userNameField.text = usersDetailPage.user.name
@@ -90,7 +101,12 @@ SimpleKCM {
     }
 
     ColumnLayout {
-
+        Kirigami.InlineMessage {
+            id: errorMessage
+            visible: false
+            type: Kirigami.MessageType.Error
+            Layout.fillWidth: true
+        }
         RowLayout {
             Layout.alignment: Qt.AlignHCenter
             QQC2.RoundButton {
