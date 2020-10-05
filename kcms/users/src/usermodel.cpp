@@ -21,13 +21,13 @@
 
 #include "usermodel.h"
 
-#include <QDebug>
 #include <QDBusPendingReply>
 #include <QDBusInterface>
 #include <algorithm>
 #include <KLocalizedString>
 
 #include "accounts_interface.h"
+#include "kcmusers_debug.h"
 
 UserModel::UserModel(QObject* parent)
     : QAbstractListModel(parent)
@@ -60,7 +60,7 @@ UserModel::UserModel(QObject* parent)
     reply.waitForFinished();
 
     if (reply.isError()) {
-        qDebug() << reply.error().message();
+        qCWarning(KCMUSERS) << reply.error().message();
         return;
     }
 
