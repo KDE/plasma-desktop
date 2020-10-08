@@ -83,7 +83,7 @@ feature requests for it to the &kde; bugs website.
 <para>
 As you will see in the screenshot below, the Network Folder Wizard currently
 allows you to add four types of network folders: WebDav, &FTP;, 
-&Microsoft; &Windows; (Samba) network drives and SSH.
+&Microsoft; &Windows; (&Samba;) network drives and SSH.
 Additionally you can select a recent connection for the list box.
 
 <screenshot>
@@ -140,7 +140,7 @@ login password for the network share you've chosen to access.
 <para>
 Below is a list of the information needed by the wizard to create the network
 folders. If an option is not 
-available for a particular folder it does not have to be entered. The Samba
+available for a particular folder it does not have to be entered. The &Samba;
 folders &eg; do not require a <guilabel>Port</guilabel> entry.
 </para>
 
@@ -180,7 +180,7 @@ Here you enter the port number you wish to connect to. The defaults are usually
 sufficient.
 <note>
 <para>
-Not available for &Microsoft; &Windows; (Samba) folders.
+Not available for &Microsoft; &Windows; (&Samba;) folders.
 </para>
 </note>
 </para>

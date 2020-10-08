@@ -75,6 +75,7 @@ KCM.SimpleKCM {
         Kirigami.InlineMessage {
             id: passwordWarning
 
+            Layout.fillWidth: true
             type: Kirigami.MessageType.Error
             text: i18n("Passwords must match")
             visible: passwordField.text != "" && verifyField.text != "" && passwordField.text != verifyField.text

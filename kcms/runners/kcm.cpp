@@ -26,8 +26,6 @@
 #include <QStandardPaths>
 #include <KLocalizedString>
 #include <KRunner/RunnerManager>
-#include <KCModuleInfo>
-#include <KCModuleProxy>
 #include <KPluginSelector>
 
 #include <QApplication>

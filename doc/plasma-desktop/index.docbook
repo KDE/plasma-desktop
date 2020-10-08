@@ -57,7 +57,7 @@
 <para><!--https://www.kde.org/workspaces/-->
 &plasma; provides a modern and customizable environment for running your favorite applications 
 and accessing your information wherever it may be. Other common attributes of the &plasma; Desktop 
-include advanced window management and desktop effects, support for KDE Plasma Widgets, 
+include advanced window management and desktop effects, support for &kde; &plasma; Widgets,
 integrated search, hardware management and a high degree of customizability.
 </para>
 
@@ -288,7 +288,7 @@ where you can set entries to display and their visibility.
 
 <para>
 An icon located usually in the system tray is the <application>Device Notifier</application>.
-Plug in a <acronym>USB</acronym> disk and a dialog will open that allows you to
+Plug in a &USB; disk and a dialog will open that allows you to
 open the device in &dolphin; or another associated application.
 </para>
 <para>
@@ -304,7 +304,7 @@ open the device in &dolphin; or another associated application.
   </mediaobject>
 </screenshot>
 </para>
-<para>The <application>Device Notifier</application> is used for handling pluggable devices such as <acronym>USB</acronym> pendrives (also called flash drives or thumb drives), digital cameras, external <acronym>USB</acronym> hard drives, &etc; It also comes into play when a medium such as a &CD; or DVD is loaded into an optical drive.
+<para>The <application>Device Notifier</application> is used for handling pluggable devices such as &USB; pendrives (also called flash drives or thumb drives), digital cameras, external &USB; hard drives, &etc; It also comes into play when a medium such as a &CD; or DVD is loaded into an optical drive.
 </para>
 <para>When you plug in an external device, or load a new medium into a drive, the <guilabel>Notifier</guilabel> window pops up (you can also open it explicitly by clicking on its Panel icon.) It stays open while the cursor is over it, otherwise it hides itself after a few seconds.
 </para>
@@ -527,7 +527,7 @@ you can use one Folder View as the whole desktop, effectively replicating the "o
 &krunner; is a versatile mini command-line. You can use it to start applications,
 open web pages, access bookmarks, search through your desktop data, calculate
 short equations, and many more. Pressing <keycombo
-action="simul">&Alt;<keysym>Space</keysym></keycombo> or <keycombo
+action="simul">&Alt;&Space;</keycombo> or <keycombo
 action="simul">&Alt;<keysym>F2</keysym></keycombo> opens the &krunner; dialog.
 You just start typing and &krunner; will start searching matches as soon as
 you've entered more than two characters. You can open the settings dialog to
@@ -549,7 +549,7 @@ navigate through the matches using the tab and arrow keys.
 
 <para>Use the <inlinemediaobject><imageobject><imagedata fileref="krunner-configure.png" format="PNG"/>
 </imageobject></inlinemediaobject> button to open the <guilabel>KRunner</guilabel> &systemsettings;
-module and configure where and what to search for in &krunner;
+module and configure where and what to search for in &krunner;.
 </para>
 
 <para>&krunner; supports <quote>Desktop Actions</quote> which are additional actions an application can
@@ -571,7 +571,7 @@ provided by &spectacle;:
   </mediaobject>
 </screenshot>
 
-<para>If you press the <keysym>Down</keysym> key in an empty &krunner; a history of the recent entities
+<para>If you press the &Down; key in an empty &krunner; a history of the recent entities
 is shown. After invoking a search result, its query will move to the top, so repeatedly used
 commands never fall out of the list.
 </para>
@@ -647,12 +647,12 @@ means: Press &Alt; and <keycap>D</keycap>, release and press <keycap>A</keycap>.
 </varlistentry>
 
 <varlistentry>
-<term><keycombo action="simul"><keysym>Meta</keysym><keycap>=</keycap></keycombo></term>
+<term><keycombo action="simul">&Meta;<keycap>=</keycap></keycombo></term>
 <listitem><para>Zoom out</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><keycombo action="simul"><keysym>Meta</keysym><keycap>-</keycap></keycombo></term>
+<term><keycombo action="simul">&Meta;<keycap>-</keycap></keycombo></term>
 <listitem><para>Zoom in</para></listitem>
 </varlistentry>
 
@@ -687,12 +687,12 @@ means: Press &Alt; and <keycap>D</keycap>, release and press <keycap>A</keycap>.
 </varlistentry>
 
 <varlistentry>
-<term><keycombo action="simul"><keycap>Meta</keycap>&Tab;</keycombo></term>
+<term><keycombo action="simul">&Meta;&Tab;</keycombo></term>
 <listitem><para>Next Activity</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><keycombo action="simul"><keycap>Meta</keycap>&Shift;&Tab;</keycombo></term>
+<term><keycombo action="simul">&Meta;&Shift;&Tab;</keycombo></term>
 <listitem><para>Previous Activity</para></listitem>
 </varlistentry>
 
@@ -707,7 +707,7 @@ means: Press &Alt; and <keycap>D</keycap>, release and press <keycap>A</keycap>.
 </varlistentry>
 
 <varlistentry>
-<term><keycombo action="simul"><keysym>Meta</keysym>&Tab;</keycombo></term>
+<term><keycombo action="simul">&Meta;&Tab;</keycombo></term>
 <listitem><para>Open the Activities panel</para></listitem>
 </varlistentry>
 
