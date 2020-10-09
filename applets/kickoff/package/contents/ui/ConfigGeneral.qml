@@ -29,7 +29,6 @@ ColumnLayout {
     property string cfg_icon: plasmoid.configuration.icon
     property alias cfg_switchTabsOnHover: switchTabsOnHoverCheckbox.checked
     property alias cfg_showAppsByName: showApplicationsByNameCheckbox.checked
-    property alias cfg_useExtraRunners: useExtraRunners.checked
     property alias cfg_alphaSort: alphaSort.checked
     property alias cfg_menuItems: configButtons.menuItems
 
@@ -101,9 +100,10 @@ ColumnLayout {
             text: i18n("Show applications by name")
         }
 
-        CheckBox {
-            id: useExtraRunners
-            text: i18n("Expand search to bookmarks, files and emails")
+        Button {
+            icon.name: "settings-configure"
+            text: i18n("Configure enabled search plugins")
+            onPressed: KQuickAddons.KCMShell.open(["kcm_plasmasearch"])
         }
 
         CheckBox {
