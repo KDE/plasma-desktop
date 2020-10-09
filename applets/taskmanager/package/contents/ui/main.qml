@@ -46,6 +46,8 @@ MouseArea {
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
+    Plasmoid.constraintHints: PlasmaCore.Types.CanFillArea
+
     Plasmoid.onUserConfiguringChanged: {
         if (plasmoid.userConfiguring) {
             groupDialog.visible = false;
@@ -53,7 +55,7 @@ MouseArea {
     }
 
     Layout.fillWidth: true
-    Layout.fillHeight:true
+    Layout.fillHeight: true
     Layout.minimumWidth: tasks.vertical ? 0 : LayoutManager.preferredMinWidth()
     Layout.minimumHeight: !tasks.vertical ? 0 : LayoutManager.preferredMinHeight()
 
