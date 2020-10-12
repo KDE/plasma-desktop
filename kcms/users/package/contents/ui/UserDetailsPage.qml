@@ -289,8 +289,6 @@ SimpleKCM {
                         }
 
                         onClicked: stackSwitcher.currentIndex = 1
-                        // https://bugs.kde.org/show_bug.cgi?id=420439
-                        visible: false
                     }
 
                     Repeater {
