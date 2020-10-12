@@ -228,8 +228,10 @@ SimpleKCM {
                 text: i18n("Change Avatar")
             }
         }
-        StackLayout {
+        QQC2.SwipeView {
             id: stackSwitcher
+            interactive: false
+
             Layout.preferredWidth: usersDetailPage.width - (Kirigami.Units.largeSpacing*4)
             Keys.onEscapePressed: {
                 picturesSheet.close()
@@ -248,6 +250,8 @@ SimpleKCM {
 
                     Layout.fillWidth: true
                     Layout.alignment: Qt.AlignHCenter
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
 
                     QQC2.Button {
                         Layout.preferredHeight: Kirigami.Units.gridUnit * 6
@@ -373,6 +377,8 @@ SimpleKCM {
 
                     Layout.fillWidth: true
                     Layout.alignment: Qt.AlignHCenter
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
 
                     QQC2.Button {
                         Layout.preferredHeight: Kirigami.Units.gridUnit * 6
