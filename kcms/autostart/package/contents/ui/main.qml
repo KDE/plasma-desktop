@@ -29,6 +29,9 @@ KCM.ScrollViewKCM {
 
     id: root
 
+    implicitHeight: Kirigami.Units.gridUnit * 28
+    implicitWidth: Kirigami.Units.gridUnit * 28
+
     header: Kirigami.InlineMessage {
         id: errorMessage
         type: Kirigami.MessageType.Error
