@@ -113,6 +113,8 @@ class Backend : public QObject
     private:
         void updateWindowHighlight();
 
+        QVariantList systemSettingsActions(QObject *parent) const;
+
         QQuickItem *m_taskManagerItem = nullptr;
         QQuickItem *m_toolTipItem = nullptr;
         QQuickWindow *m_groupDialog = nullptr;

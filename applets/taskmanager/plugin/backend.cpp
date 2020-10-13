@@ -160,6 +160,13 @@ QVariantList Backend::jumpListActions(const QUrl &launcherUrl, QObject *parent)
         return actions;
     }
 
+    if (service->storageId() == QLatin1String("systemsettings.desktop")) {
+        actions = systemSettingsActions(parent);
+        if (!actions.isEmpty()) {
+            return actions;
+        }
+    }
+
     const auto jumpListActions = service->actions();
 
     for (const KServiceAction &serviceAction : jumpListActions) {
@@ -185,6 +192,50 @@ QVariantList Backend::jumpListActions(const QUrl &launcherUrl, QObject *parent)
         actions << QVariant::fromValue<QAction *>(action);
     }
 
+    return actions;
+}
+
+QVariantList Backend::systemSettingsActions(QObject *parent) const
+{
+    QVariantList actions;
+
+    auto query = AllResources
+        | Agent(QStringLiteral("org.kde.systemsettings"))
+        | HighScoredFirst
+        | Limit(5);
+
+    ResultSet results(query);
+
+    QStringList ids;
+    for (const ResultSet::Result &result : results) {
+        ids << QUrl(result.resource()).path();
+    }
+
+    if (ids.count() < 5) {
+        // We'll load the default set of settings from its jump list actions.
+        return actions;
+    }
+
+    for (const QString &id : ids) {
+        KService::Ptr service = KService::serviceByStorageId(id);
+        if (!service || !service->isValid()) {
+            continue;
+        }
+
+        QAction *action = new QAction(parent);
+        action->setText(service->name());
+        action->setIcon(QIcon::fromTheme(service->icon()));
+
+        connect(action, &QAction::triggered, this, [this, service]() {
+            auto *job = new KIO::ApplicationLauncherJob(service);
+            auto *delegate = new KNotificationJobUiDelegate;
+            delegate->setAutoErrorHandlingEnabled(true);
+            job->setUiDelegate(delegate);
+            job->start();
+        });
+
+        actions << QVariant::fromValue<QAction *>(action);
+    }
     return actions;
 }
 
