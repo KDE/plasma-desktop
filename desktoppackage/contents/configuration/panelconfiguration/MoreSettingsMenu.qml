@@ -134,11 +134,11 @@ PlasmaCore.Dialog {
         PlasmaExtras.Heading {
             level: 3
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Opacity")
-            visible: panel.adaptiveTransparencyEnabled
+            visible: panel.adaptiveOpacityEnabled
         }
         PlasmaComponents.ButtonColumn {
             spacing: 0
-            visible: panel.adaptiveTransparencyEnabled
+            visible: panel.adaptiveOpacityEnabled
             Layout.fillWidth: true
             Layout.minimumWidth: implicitWidth
             PlasmaComponents.ToolButton {
