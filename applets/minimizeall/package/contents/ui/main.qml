@@ -34,11 +34,11 @@ Item {
         || plasmoid.location === PlasmaCore.Types.BottomEdge
         || plasmoid.location === PlasmaCore.Types.LeftEdge)
 
-    Layout.minimumWidth: units.gridUnit
-    Layout.minimumHeight: units.gridUnit
+    Layout.minimumWidth: PlasmaCore.Units.gridUnit
+    Layout.minimumHeight: PlasmaCore.Units.gridUnit
 
-    Layout.maximumWidth: inPanel ? units.iconSizeHints.panel : -1
-    Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1
+    Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
+    Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
@@ -133,7 +133,7 @@ Item {
         opacity: root.active ? 1 : 0
         Behavior on opacity {
             NumberAnimation {
-                duration: units.shortDuration
+                duration: PlasmaCore.Units.shortDuration
                 easing.type: Easing.InOutQuad
             }
         }

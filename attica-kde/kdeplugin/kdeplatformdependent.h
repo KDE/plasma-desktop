@@ -32,11 +32,6 @@
 #include <KSharedConfig>
 #include <KIO/AccessManager>
 
-
-namespace KWallet {
-    class Wallet;
-}
-
 namespace Attica {
 
 class KdePlatformDependent : public QObject, public Attica::PlatformDependent
@@ -64,12 +59,12 @@ public:
     QNetworkAccessManager* nam() override;
 
 private:
-    bool openWallet(bool force);
+    QNetworkRequest addOAuthToRequest(const QNetworkRequest& request);
     QNetworkRequest removeAuthFromRequest(const QNetworkRequest& request);
+    QString getAccessToken(const QUrl& baseUrl) const;
 
     KSharedConfigPtr m_config;
-    QNetworkAccessManager* m_accessManager = nullptr;
-    KWallet::Wallet* m_wallet = nullptr;
+    QNetworkAccessManager* m_accessManager{nullptr};
     QHash<QString, QPair <QString, QString> > m_passwords;
 };
 

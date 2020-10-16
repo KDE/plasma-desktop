@@ -20,72 +20,99 @@ import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.2 as QtControls
 import org.kde.kirigami 2.3 as Kirigami
-import org.kde.kcm 1.1
+import org.kde.kcm 1.3 as KCM
 import org.kde.private.kcms.launchfeedback 1.0 as Private
 
-SimpleKCM {
+KCM.SimpleKCM {
     id: root
 
-    ConfigModule.quickHelp: i18n("Launch Feedback")
+    KCM.ConfigModule.quickHelp: i18n("Launch Feedback")
 
     Kirigami.FormLayout {
         id: formLayout
 
         readonly property bool cursorImmutable: kcm.launchFeedbackSettings.isImmutable("busyCursor") || kcm.launchFeedbackSettings.isImmutable("blinking") || kcm.launchFeedbackSettings.isImmutable("bouncing")
 
-        function setCursorSettings(feedback) {
-            kcm.launchFeedbackSettings.busyCursor = feedback !== Private.KCM.None
-            kcm.launchFeedbackSettings.blinking = feedback === Private.KCM.Blinking
-            kcm.launchFeedbackSettings.bouncing = feedback === Private.KCM.Bouncing
+        QtControls.ButtonGroup {
+            id: busyCursorGroup
+            onCheckedButtonChanged: kcm.launchFeedbackSettings.setSelectedBusyCursor(checkedButton.settingName)
         }
 
         QtControls.RadioButton {
             id: busyCursorDisabled
+            readonly property string settingName: "busyCursorDisabled"
 
-            enabled: !formLayout.cursorImmutable
             Kirigami.FormData.label: i18n("Cursor:")
             text: i18n("No Feedback")
-            checked: !kcm.launchFeedbackSettings.busyCursor && !kcm.launchFeedbackSettings.blinking && !kcm.launchFeedbackSettings.bouncing
-            onToggled: formLayout.setCursorSettings(Private.KCM.None)
+            checked: kcm.launchFeedbackSettings.busyCursorDisabled
+            QtControls.ButtonGroup.group: busyCursorGroup
+
+            KCM.SettingStateBinding {
+                configObject: kcm.launchFeedbackSettings
+                settingName: parent.settingName
+                extraEnabledConditions: !formLayout.cursorImmutable
+            }
         }
 
         QtControls.RadioButton {
             id: busyCursorStatic
+            readonly property string settingName: "busyCursorStatic"
 
-            enabled: !formLayout.cursorImmutable
             text: i18n("Static")
-            checked: kcm.launchFeedbackSettings.busyCursor && !kcm.launchFeedbackSettings.blinking && !kcm.launchFeedbackSettings.bouncing
-            onToggled: formLayout.setCursorSettings(Private.KCM.Static)
+            checked: kcm.launchFeedbackSettings.busyCursorStatic
+            QtControls.ButtonGroup.group: busyCursorGroup
+
+            KCM.SettingStateBinding {
+                configObject: kcm.launchFeedbackSettings
+                settingName: parent.settingName
+                extraEnabledConditions: !formLayout.cursorImmutable
+            }
         }
 
         QtControls.RadioButton {
             id: busyCursorBlinking
+            readonly property string settingName: "busyCursorBlinking"
 
-            enabled: !formLayout.cursorImmutable
             text: i18n("Blinking")
-            checked: kcm.launchFeedbackSettings.busyCursor && kcm.launchFeedbackSettings.blinking && !kcm.launchFeedbackSettings.bouncing
-            onToggled: formLayout.setCursorSettings(Private.KCM.Blinking)
+            checked: kcm.launchFeedbackSettings.busyCursorBlinking
+            QtControls.ButtonGroup.group: busyCursorGroup
+
+            KCM.SettingStateBinding {
+                configObject: kcm.launchFeedbackSettings
+                settingName: parent.settingName
+                extraEnabledConditions: !formLayout.cursorImmutable
+            }
         }
 
         QtControls.RadioButton {
             id: busyCursorBouncing
+            readonly property string settingName: "busyCursorBouncing"
 
-            enabled: !formLayout.cursorImmutable
             text: i18n("Bouncing")
-            checked: kcm.launchFeedbackSettings.busyCursor && !kcm.launchFeedbackSettings.blinking && kcm.launchFeedbackSettings.bouncing
-            onToggled: formLayout.setCursorSettings(Private.KCM.Bouncing)
+            checked: kcm.launchFeedbackSettings.busyCursorBouncing
+            QtControls.ButtonGroup.group: busyCursorGroup
+
+            KCM.SettingStateBinding {
+                configObject: kcm.launchFeedbackSettings
+                settingName: parent.settingName
+                extraEnabledConditions: !formLayout.cursorImmutable
+            }
         }
 
         QtControls.CheckBox {
             id: taskManagerNotification
 
-            enabled: !kcm.launchFeedbackSettings.isImmutable("taskbarButton")
             Kirigami.FormData.label: i18n("Task Manager:")
 
             text: i18n("Enable animation")
 
             checked: kcm.launchFeedbackSettings.taskbarButton
             onToggled: kcm.launchFeedbackSettings.taskbarButton = checked
+
+            KCM.SettingStateBinding {
+                configObject: kcm.launchFeedbackSettings
+                settingName: "taskbarButton"
+            }
         }
 
         QtControls.SpinBox {
@@ -96,8 +123,6 @@ SimpleKCM {
             stepSize: 1
             editable: true
 
-            enabled: taskManagerNotification.checked && !kcm.launchFeedbackSettings.isImmutable("cursorTimeout")
-
             value: kcm.launchFeedbackSettings.cursorTimeout
             onValueModified: {
                 kcm.launchFeedbackSettings.cursorTimeout = value
@@ -106,6 +131,12 @@ SimpleKCM {
 
             textFromValue: function(value, locale) { return i18np("%1 sec", "%1 secs", value)}
             valueFromText: function(text, locale) { return parseInt(text) }
+
+            KCM.SettingStateBinding {
+                configObject: kcm.launchFeedbackSettings
+                settingName: "cursorTimeout"
+                extraEnabledConditions: taskManagerNotification.checked
+            }
         }
     }
 }

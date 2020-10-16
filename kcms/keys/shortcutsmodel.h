@@ -1,4 +1,6 @@
 /*
+ * Copyright 2015 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.com>
+ * Copyright 2015 David Faure <david.faure@kdab.com>
  * Copyright 2020 David Redondo <kde@david-redondo.de>
  *
  * This program is free software; you can redistribute it and/or
@@ -22,91 +24,116 @@
 #define SHORTCUTSMODEL_H
 
 #include <QAbstractItemModel>
-#include <QKeySequence>
-#include <QDBusPendingCallWatcher>
-#include <QList>
-#include <QSet>
-#include <QVector>
+#include <QScopedPointer>
 
+/*
+ * This class is based on KConcatenateRowsProxyModel adapted to handle trees with two levels.
+ */
 
-class QDBusError;
-class QDBusObjectPath;
-
-class KConfigBase;
-class KGlobalAccelInterface;
-class KGlobalShortcutInfo;
-
-class FilteredShortcutsModel;
-
-struct Shortcut {
-    QString uniqueName;
-    QString friendlyName;
-    QSet<QKeySequence> activeShortcuts;
-    QSet<QKeySequence> defaultShortcuts;
-    QSet<QKeySequence> initialShortcuts;
-};
-
-struct Component {
-    QString uniqueName;
-    QString friendlyName;
-    QString type;
-    QString icon;
-    QVector<Shortcut> shortcuts;
-    bool checked;
-    bool pendingDeletion;
-};
+class ShortcutsModelPrivate;
 
 class ShortcutsModel : public QAbstractItemModel
 {
     Q_OBJECT
 
 public:
-    enum Roles {
-        SectionRole = Qt::UserRole,
-        ComponentRole,
-        ActionRole,
-        ActiveShortcutsRole,
-        DefaultShortcutsRole,
-        CustomShortcutsRole,
-        CheckedRole,
-        PendingDeletionRole
-    };
-    Q_ENUM(Roles)
+    /**
+     * Creates a ShortcutsModel.
+     * @param parent optional parent
+     */
+    explicit ShortcutsModel(QObject *parent = nullptr);
+    /**
+     * Destructor.
+     */
+    ~ShortcutsModel() override;
 
-    ShortcutsModel(KGlobalAccelInterface *interface, QObject *parent = nullptr);
+    /**
+     * Adds a source model @p sourceModel, after all existing source models.
+     * @param sourceModel the source model
+     *
+     * The ownership of @p sourceModel is not affected by this.
+     * The same source model cannot be added more than once.
+     */
+    Q_SCRIPTABLE void addSourceModel(QAbstractItemModel *sourceModel);
 
-    Q_INVOKABLE void toggleDefaultShortcut(const QModelIndex &index, const QKeySequence &shortcut, bool enabled);
-    Q_INVOKABLE void addShortcut(const QModelIndex &index, const QKeySequence &shortcut);
-    Q_INVOKABLE void disableShortcut(const QModelIndex &index, const QKeySequence &shortcut);
-    Q_INVOKABLE void changeShortcut(const QModelIndex &index, const QKeySequence &oldShortcut, const QKeySequence &newShortcut);
+    /**
+     * Removes the source model @p sourceModel.
+     * @param sourceModel a source model previously added to this proxy
+     *
+     * The ownership of @sourceModel is not affected by this.
+     */
+    Q_SCRIPTABLE void removeSourceModel(QAbstractItemModel *sourceModel);
 
-    void setShortcuts(const KConfigBase &config);
-    void addApplication(const QString &desktopFileName, const QString &displayName);
+    /**
+     * The currently set source models
+     */
+    QList<QAbstractItemModel *> sources() const;
 
-    void load();
-    void defaults();
-    void save();
-    bool needsSave() const;
-    bool isDefault() const;
+    /**
+     * Returns the proxy index for a given source index
+     * @param sourceIndex an index coming from any of the source models
+     * @return a proxy index
+     * Calling this method with an index not from a source model is undefined behavior.
+     */
+    QModelIndex mapFromSource(const QModelIndex &sourceIndex) const;
 
-    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
-    QModelIndex parent(const QModelIndex &child) const override;
-    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
-    int columnCount(const QModelIndex &parent = QModelIndex()) const override;
+    /**
+     * Returns the source index for a given proxy index.
+     * @param proxyIndex an index for this proxy model
+     * @return a source index
+     */
+    Q_INVOKABLE QModelIndex mapToSource(const QModelIndex &proxyIndex) const;
+
+    /// @reimp
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
+    /// @reimp
+    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::DisplayRole) override;
+    /// @reimp
+    QMap<int, QVariant> itemData(const QModelIndex &proxyIndex) const override;
+    /// @reimp
+    Qt::ItemFlags flags(const QModelIndex &index) const override;
+    /// @reimp
+    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
+    /// @reimp
+    QModelIndex parent(const QModelIndex &index) const override;
+    /// @reimp
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+
+    /**
+     * The horizontal header data for the first source model is returned here.
+     * @reimp
+     */
+    QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
+    /**
+     * The column count for the first source model is returned here.
+     * @reimp
+     */
+    int columnCount(const QModelIndex &parent = QModelIndex()) const override;
+
+    /**
+     * The roles names for the first source model is returned here
+     * @reimp
+     */
     QHash<int, QByteArray> roleNames() const override;
 
-Q_SIGNALS:
-    void errorOccured(const QString&);
+private:
+    Q_PRIVATE_SLOT(d, void slotRowsAboutToBeInserted(const QModelIndex &, int start, int end))
+    Q_PRIVATE_SLOT(d, void slotRowsInserted(const QModelIndex &, int start, int end))
+    Q_PRIVATE_SLOT(d, void slotRowsAboutToBeRemoved(const QModelIndex &, int start, int end))
+    Q_PRIVATE_SLOT(d, void slotRowsRemoved(const QModelIndex &, int start, int end))
+    Q_PRIVATE_SLOT(d, void slotColumnsAboutToBeInserted(const QModelIndex &parent, int start, int end))
+    Q_PRIVATE_SLOT(d, void slotColumnsInserted(const QModelIndex &parent, int, int))
+    Q_PRIVATE_SLOT(d, void slotColumnsAboutToBeRemoved(const QModelIndex &parent, int start, int end))
+    Q_PRIVATE_SLOT(d, void slotColumnsRemoved(const QModelIndex &parent, int, int))
+    Q_PRIVATE_SLOT(d, void slotDataChanged(const QModelIndex &from, const QModelIndex &to, const QVector<int> &roles))
+    Q_PRIVATE_SLOT(d, void slotSourceLayoutAboutToBeChanged(QList<QPersistentModelIndex>, QAbstractItemModel::LayoutChangeHint))
+    Q_PRIVATE_SLOT(d, void slotSourceLayoutChanged(const QList<QPersistentModelIndex> &, QAbstractItemModel::LayoutChangeHint))
+    Q_PRIVATE_SLOT(d, void slotModelAboutToBeReset())
+    Q_PRIVATE_SLOT(d, void slotModelReset())
 
 private:
-    Component loadComponent(const QList<KGlobalShortcutInfo> &info);
-    void removeComponent(const Component &component);
-    void genericErrorOccured(const QString &description, const QDBusError &error);
-
-    KGlobalAccelInterface *m_globalAccelInterface;
-    QVector<Component> m_components;
+    friend class ShortcutsModelPrivate;
+    const QScopedPointer<ShortcutsModelPrivate> d;
 };
 
-#endif // SHORTCUTSMODEL_H
+#endif

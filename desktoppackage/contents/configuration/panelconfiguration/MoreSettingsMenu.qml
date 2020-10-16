@@ -33,7 +33,7 @@ PlasmaCore.Dialog {
         id: menuColumn
         Layout.minimumWidth: menuColumn.implicitWidth
         Layout.minimumHeight: menuColumn.implicitHeight
-        spacing: units.smallSpacing
+        spacing: PlasmaCore.Units.smallSpacing
 
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true

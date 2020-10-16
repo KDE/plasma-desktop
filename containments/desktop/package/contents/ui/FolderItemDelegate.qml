@@ -45,6 +45,10 @@ Item {
     Accessible.name: name
     Accessible.role: Accessible.Canvas
 
+    MouseArea { anchors.fill: parent } // This MouseArea exists to intercept press and hold;
+                                       // preventing edit mode from being triggered
+                                       // when pressing and holding on an icon
+
     function openPopup() {
         if (isDir) {
             loader.item.openPopup();
@@ -212,8 +216,8 @@ Item {
             Loader {
                 id: frameLoader
 
-                x: root.useListViewMode ? 0 : units.smallSpacing
-                y: root.useListViewMode ? 0 : units.smallSpacing
+                x: root.useListViewMode ? 0 : PlasmaCore.Units.smallSpacing
+                y: root.useListViewMode ? 0 : PlasmaCore.Units.smallSpacing
 
                 property Item textShadow: null
                 property Item iconShadow: null
@@ -226,13 +230,13 @@ Item {
                 width: {
                     if (root.useListViewMode) {
                         if (main.GridView.view.overflowing) {
-                            return parent.width - units.smallSpacing;
+                            return parent.width - PlasmaCore.Units.smallSpacing;
                         } else {
                             return parent.width;
                         }
                     }
 
-                    return parent.width - (units.smallSpacing * 2);
+                    return parent.width - (PlasmaCore.Units.smallSpacing * 2);
                 }
 
                 height: {
@@ -240,12 +244,12 @@ Item {
                         return parent.height;
                     }
 
-                    // Note: frameLoader.y = units.smallSpacing (acts as top margin)
-                    return (units.smallSpacing // icon.anchors.topMargin (acts as top padding)
+                    // Note: frameLoader.y = PlasmaCore.Units.smallSpacing (acts as top margin)
+                    return (PlasmaCore.Units.smallSpacing // icon.anchors.topMargin (acts as top padding)
                         + icon.height
-                        + units.smallSpacing // label.anchors.topMargin (acts as spacing between icon and label)
+                        + PlasmaCore.Units.smallSpacing // label.anchors.topMargin (acts as spacing between icon and label)
                         + (label.lineCount * theme.mSize(theme.defaultFont).height)
-                        + units.smallSpacing); // leftover (acts as bottom padding)
+                        + PlasmaCore.Units.smallSpacing); // leftover (acts as bottom padding)
                 }
 
                 PlasmaCore.IconItem {
@@ -275,11 +279,11 @@ Item {
                     ]
 
                     anchors {
-                        topMargin: units.smallSpacing
-                        leftMargin: units.smallSpacing
+                        topMargin: PlasmaCore.Units.smallSpacing
+                        leftMargin: PlasmaCore.Units.smallSpacing
                     }
 
-                    width: root.useListViewMode ? main.GridView.view.iconSize : (parent.width - 2 * units.smallSpacing)
+                    width: root.useListViewMode ? main.GridView.view.iconSize : (parent.width - 2 * PlasmaCore.Units.smallSpacing)
                     height: main.GridView.view.iconSize
 
                     opacity: {
@@ -308,11 +312,11 @@ Item {
                         visible: GraphicsInfo.api === GraphicsInfo.Software && !model.selected
                         anchors {
                             fill: label
-                            margins: -units.smallSpacing
+                            margins: -PlasmaCore.Units.smallSpacing
                         }
 
                         color: "black"
-                        radius: units.smallSpacing
+                        radius: PlasmaCore.Units.smallSpacing
                         opacity: 0.45
                     }
 
@@ -328,14 +332,12 @@ Item {
                             AnchorChanges {
                                 target: label
                                 anchors.top: icon.bottom
-                                anchors.left: parent.left
-                                anchors.right: parent.right
+                                anchors.horizontalCenter: parent.horizontalCenter
                             }
                             PropertyChanges {
                                 target: label
-                                anchors.topMargin: units.smallSpacing
-                                anchors.leftMargin: units.smallSpacing / 2
-                                anchors.rightMargin: units.smallSpacing / 2
+                                anchors.topMargin: PlasmaCore.Units.smallSpacing
+                                width: Math.round(Math.min(label.implicitWidth + PlasmaCore.Units.smallSpacing, parent.width - PlasmaCore.Units.smallSpacing))
                                 maximumLineCount: plasmoid.configuration.textLines
                                 horizontalAlignment: Text.AlignHCenter
                             }
@@ -350,9 +352,9 @@ Item {
                             }
                             PropertyChanges {
                                 target: label
-                                anchors.leftMargin: units.smallSpacing * 2
-                                anchors.rightMargin: units.smallSpacing * 2
-                                width: parent.width - icon.width - (units.smallSpacing * 4)
+                                anchors.leftMargin: PlasmaCore.Units.smallSpacing * 2
+                                anchors.rightMargin: PlasmaCore.Units.smallSpacing * 2
+                                width: parent.width - icon.width - (PlasmaCore.Units.smallSpacing * 4)
                                 maximumLineCount: 1
                                 horizontalAlignment: Text.AlignLeft
                             }
@@ -444,7 +446,7 @@ Item {
 
                         verticalOffset: 1
 
-                        radius: Math.round(5 * units.devicePixelRatio)
+                        radius: Math.round(5 * PlasmaCore.Units.devicePixelRatio)
                         samples: radius * 2 + 1
                         spread: 0.05
 
@@ -469,7 +471,7 @@ Item {
                         horizontalOffset: 1
                         verticalOffset: 1
 
-                        radius: Math.round(4 * units.devicePixelRatio)
+                        radius: Math.round(4 * PlasmaCore.Units.devicePixelRatio)
                         samples: radius * 2 + 1
                         spread: 0.35
 

@@ -30,14 +30,6 @@
       <label>List of applications at the top of the "Computer" tab.</label>
       <default>systemsettings.desktop,org.kde.kinfocenter.desktop,org.kde.discover.desktop</default>
     </entry>
-    <entry name="useExtraRunners" type="Bool">
-      <label>Whether to use additional KRunner plugins to produce results in the search.</label>
-      <default>true</default>
-    </entry>
-    <entry name="runners" type="StringList">
-      <label>The plugin id's of additional KRunner plugins to use. Only used if useExtraRunners is true.</label>
-      <default>shell,bookmarks,recentdocuments,locations,baloosearch</default>
-    </entry>
 
     <entry name="menuItems" type="StringList">
       <label>The menu tabs to show.</label>

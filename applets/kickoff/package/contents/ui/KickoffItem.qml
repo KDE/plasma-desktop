@@ -28,8 +28,10 @@ import "code/tools.js" as Tools
 Item {
     id: listItem
 
+    enabled: !model.disabled
+
     width: ListView.view.width
-    height: (units.smallSpacing * 2) + Math.max(elementIcon.height, titleElement.implicitHeight + subTitleElement.implicitHeight)
+    height: (PlasmaCore.Units.smallSpacing * 2) + Math.max(elementIcon.height, titleElement.implicitHeight + subTitleElement.implicitHeight)
 
     signal reset
     signal actionTriggered(string actionId, variant actionArgument)
@@ -99,10 +101,10 @@ Item {
 
         anchors {
             left: parent.left
-            leftMargin: units.smallSpacing * 6
+            leftMargin: PlasmaCore.Units.smallSpacing * 6
             verticalCenter: parent.verticalCenter
         }
-        width: units.iconSizes.medium
+        width: PlasmaCore.Units.iconSizes.medium
         height: width
 
         animated: false
@@ -119,8 +121,8 @@ Item {
             //bottom: elementIcon.verticalCenter
             left: elementIcon.right
             right: arrow.left
-            leftMargin: units.smallSpacing * 4
-            rightMargin: units.smallSpacing * 6
+            leftMargin: PlasmaCore.Units.smallSpacing * 4
+            rightMargin: PlasmaCore.Units.smallSpacing * 6
         }
         height: implicitHeight //undo PC2 height override, remove when porting to PC3
         // TODO: games should always show the by name!
@@ -151,11 +153,11 @@ Item {
 
         anchors {
             right: parent.right
-            rightMargin: units.smallSpacing * 6
+            rightMargin: PlasmaCore.Units.smallSpacing * 6
             verticalCenter: parent.verticalCenter
         }
 
-        width: visible ? units.iconSizes.small : 0
+        width: visible ? PlasmaCore.Units.iconSizes.small : 0
         height: width
 
         visible: (model.hasChildren === true)

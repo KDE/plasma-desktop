@@ -1,6 +1,7 @@
 /*
     Copyright 2019  Nicolas Fella <nicolas.fella@gmx.de>
     Copyright 2020  Carson Black <uhhadd@gmail.com>
+    Copyright 2020  David Redondo <kde@david-redondo.de>
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
@@ -21,9 +22,11 @@
 
 #include "user.h"
 #include "user_interface.h"
+#include "kcmusers_debug.h"
 #include <unistd.h>
 #include <sys/types.h>
 #include <QtConcurrent>
+#include <KLocalizedString>
 
 User::User(QObject* parent) : QObject(parent) {}
 
@@ -37,7 +40,7 @@ void User::setUid(int value) {
         return;
     }
     mUid = value;
-    Q_EMIT uidChanged(value);
+    Q_EMIT uidChanged();
 }
 
 QString User::name() const {
@@ -50,7 +53,7 @@ void User::setName(const QString &value) {
         return;
     }
     mName = value;
-    Q_EMIT nameChanged(value);
+    Q_EMIT nameChanged();
 }
 
 QString User::realName() const {
@@ -63,7 +66,7 @@ void User::setRealName(const QString &value) {
         return;
     }
     mRealName = value;
-    Q_EMIT realNameChanged(value);
+    Q_EMIT realNameChanged();
 }
 
 QString User::email() const {
@@ -76,7 +79,7 @@ void User::setEmail(const QString &value) {
         return;
     }
     mEmail = value;
-    Q_EMIT emailChanged(value);
+    Q_EMIT emailChanged();
 }
 
 QUrl User::face() const {
@@ -94,8 +97,8 @@ void User::setFace(const QUrl &value) {
     }
     mFace = value;
     mFaceValid = QFile::exists(value.path());
-    Q_EMIT faceValidChanged(mFaceValid);
-    Q_EMIT faceChanged(value);
+    Q_EMIT faceValidChanged();
+    Q_EMIT faceChanged();
 }
 
 bool User::administrator() const {
@@ -107,7 +110,7 @@ void User::setAdministrator(bool value) {
         return;
     }
     mAdministrator = value;
-    Q_EMIT administratorChanged(value);
+    Q_EMIT administratorChanged();
 }
 
 void User::setPath(const QDBusObjectPath &path) {
@@ -125,35 +128,35 @@ void User::setPath(const QDBusObjectPath &path) {
         if (mUid != m_dbusIface->uid()) {
             mUid = m_dbusIface->uid();
             userDataChanged = true;
-            Q_EMIT uidChanged(mUid);
+            Q_EMIT uidChanged();
         }
         if (mName != m_dbusIface->userName()) {
             mName = m_dbusIface->userName();
             userDataChanged = true;
-            Q_EMIT nameChanged(mName);
+            Q_EMIT nameChanged();
         }
         if (mFace != QUrl(m_dbusIface->iconFile())) {
             mFace = QUrl(m_dbusIface->iconFile());
             mFaceValid = QFileInfo::exists(mFace.toString());
             userDataChanged = true;
-            Q_EMIT faceChanged(mFace);
-            Q_EMIT faceValidChanged(mFaceValid);
+            Q_EMIT faceChanged();
+            Q_EMIT faceValidChanged();
         }
         if (mRealName != m_dbusIface->realName()) {
             mRealName = m_dbusIface->realName();
             userDataChanged = true;
-            Q_EMIT realNameChanged(mRealName);
+            Q_EMIT realNameChanged();
         }
         if (mEmail != m_dbusIface->email()) {
             mEmail = m_dbusIface->email();
             userDataChanged = true;
-            Q_EMIT emailChanged(mEmail);
+            Q_EMIT emailChanged();
         }
         const auto administrator = (m_dbusIface->accountType() == 1);
         if (mAdministrator != administrator) {
             mAdministrator = administrator;
             userDataChanged = true;
-            Q_EMIT administratorChanged(mAdministrator);
+            Q_EMIT administratorChanged();
         }
         const auto loggedIn = (mUid == getuid());
         if (mLoggedIn != loggedIn) {
@@ -222,6 +225,18 @@ QDBusObjectPath User::path() const
 void User::apply()
 {
     auto job = new UserApplyJob(m_dbusIface, mName, mEmail, mRealName, mFace.toString().replace("file://", ""), mAdministrator ? 1 : 0);
+    connect(job, &UserApplyJob::result, this, [this, job] {
+        switch (static_cast<UserApplyJob::Error>(job->error())) {
+        case UserApplyJob::Error::PermissionDenied:
+            Q_EMIT applyError(i18n("Could not get permission to save user %1", mName));
+            break;
+        case UserApplyJob::Error::Failed:
+        case UserApplyJob::Error::Unknown:
+            Q_EMIT applyError(i18n("There was an error while saving changes"));
+            break;
+        case UserApplyJob::Error::NoError: ; // Do nothing
+        }
+    });
     job->start();
 }
 
@@ -253,8 +268,32 @@ void UserApplyJob::start()
     // will return permission denied if there's a polkit dialog open while a 
     // request is made.
     for (auto const &x: set) {
-        (m_dbusIface->*(x.second))(x.first).waitForFinished();
+        auto resp = (m_dbusIface->*(x.second))(x.first);
+        resp.waitForFinished();
+        if (resp.isError()) {
+            setError(resp.error());
+            qCWarning(KCMUSERS) << resp.error().name() << resp.error().message();
+            emitResult();
+            return;
+        }
     }
-    m_dbusIface->SetAccountType(m_type).waitForFinished();
+    auto setAccount = m_dbusIface->SetAccountType(m_type);
+    setAccount.waitForFinished();
+    if (setAccount.isError()) {
+        setError(setAccount.error());
+        qCWarning(KCMUSERS) << setAccount.error().name() << setAccount.error().message();
+    }
     emitResult();
+}
+
+void UserApplyJob::setError(const QDBusError& error)
+{
+    setErrorText(error.message());
+    if (error.name() == QLatin1String("org.freedesktop.Accounts.Error.Failed")) {
+        KJob::setError(static_cast<int>(Error::Failed));
+    } else if (error.name() == QLatin1String("org.freedesktop.Accounts.Error.PermissionDenied")) {
+        KJob::setError(static_cast<int>(Error::PermissionDenied));
+    } else {
+        KJob::setError(static_cast<int>(Error::Unknown));
+    }
 }

@@ -214,16 +214,23 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
 
     // gestures --------------------------------------------
 
-    QString shortcut = mouseKeysShortcut(QX11Info::display());
-    if (shortcut.isEmpty())
-        ui.gestures->setToolTip(i18n("Here you can activate keyboard gestures that turn on the following features: \n"
-                                    "Sticky keys: Press Shift key 5 consecutive times\n"
-                                    "Slow keys: Hold down Shift for 8 seconds"));
-    else
-        ui.gestures->setToolTip(i18n("Here you can activate keyboard gestures that turn on the following features: \n"
-                                    "Mouse Keys: %1\n"
-                                    "Sticky keys: Press Shift key 5 consecutive times\n"
-                                    "Slow keys: Hold down Shift for 8 seconds", shortcut));
+    if (QGuiApplication::platformName() == "xcb") {
+        QString shortcut = mouseKeysShortcut(QX11Info::display());
+        if (shortcut.isEmpty())
+            ui.gestures->setToolTip(i18n("Here you can activate keyboard gestures that turn on the following features: \n"
+                                         "Sticky keys: Press Shift key 5 consecutive times\n"
+                                         "Slow keys: Hold down Shift for 8 seconds"));
+        else
+            ui.gestures->setToolTip(i18n("Here you can activate keyboard gestures that turn on the following features: \n"
+                                         "Mouse Keys: %1\n"
+                                         "Sticky keys: Press Shift key 5 consecutive times\n"
+                                         "Slow keys: Hold down Shift for 8 seconds", shortcut));
+    } else {
+        // functionality configured in those tabs currently only works for the X11 case, so disable them
+        for (QWidget* tab : {ui.tabBell, ui.tabModifier, ui.tabKeyFilters, ui.tabActivationGestures, ui.tabMouseKeys}) {
+            ui.tab->setTabEnabled(ui.tab->indexOf(tab), false);
+        }
+    }
 
     connect(ui.gestures, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
     connect(ui.timeout, &QCheckBox::clicked, this, &KAccessConfig::configChanged);

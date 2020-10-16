@@ -40,7 +40,7 @@ MouseArea {
     property int lastX
     property int lastY
 
-    readonly property int spacerHandleSize: units.smallSpacing
+    readonly property int spacerHandleSize: PlasmaCore.Units.smallSpacing
 
     onHeightChanged: tooltip.visible = false;
     onWidthChanged: tooltip.visible = false;
@@ -100,7 +100,7 @@ MouseArea {
                 }
             }
 
-            var padding = units.gridUnit * 3;
+            var padding = PlasmaCore.Units.gridUnit * 3;
             if (currentApplet && (mouse.x < -padding || mouse.y < -padding ||
                 mouse.x > width + padding || mouse.y > height + padding)) {
                 var newCont = plasmoid.containmentAt(mouse.x, mouse.y);
@@ -248,7 +248,7 @@ MouseArea {
 
     Timer {
         id: hideTimer
-        interval: units.longDuration * 6
+        interval: PlasmaCore.Units.longDuration * 6
         onTriggered: tooltip.visible = false;
     }
 
@@ -286,7 +286,7 @@ MouseArea {
             color: theme.textColor
             Behavior on opacity {
                 NumberAnimation {
-                    duration: units.longDuration
+                    duration: PlasmaCore.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }
@@ -305,7 +305,7 @@ MouseArea {
             color: theme.textColor
             Behavior on opacity {
                 NumberAnimation {
-                    duration: units.longDuration
+                    duration: PlasmaCore.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }
@@ -314,7 +314,7 @@ MouseArea {
             enabled: !configurationArea.pressed
             NumberAnimation {
                 id: xAnim
-                duration: units.longDuration
+                duration: PlasmaCore.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
@@ -322,27 +322,27 @@ MouseArea {
             id: yAnim
             enabled: !configurationArea.pressed
             NumberAnimation {
-                duration: units.longDuration
+                duration: PlasmaCore.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
         Behavior on width {
             enabled: !configurationArea.pressed
             NumberAnimation {
-                duration: units.longDuration
+                duration: PlasmaCore.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
         Behavior on height {
             enabled: !configurationArea.pressed
             NumberAnimation {
-                duration: units.longDuration
+                duration: PlasmaCore.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
         Behavior on opacity {
             NumberAnimation {
-                duration: units.longDuration
+                duration: PlasmaCore.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
@@ -374,14 +374,14 @@ MouseArea {
 
             ColumnLayout {
                 id: handleButtons
-                spacing: units.smallSpacing
+                spacing: PlasmaCore.Units.smallSpacing
 
                 PlasmaExtras.Heading {
                     id: label
                     level: 3
                     Layout.fillWidth: true
-                    Layout.leftMargin: units.smallSpacing * 2
-                    Layout.rightMargin: units.smallSpacing * 2
+                    Layout.leftMargin: PlasmaCore.Units.smallSpacing * 2
+                    Layout.rightMargin: PlasmaCore.Units.smallSpacing * 2
                 }
                 PlasmaComponents.ToolButton {
                     Layout.fillWidth: true

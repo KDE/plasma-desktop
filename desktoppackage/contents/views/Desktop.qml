@@ -263,7 +263,7 @@ Item {
                 target: internal.newContainment
                 properties: "x"
                 to: 0
-                duration: units.longDuration
+                duration: PlasmaCore.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }

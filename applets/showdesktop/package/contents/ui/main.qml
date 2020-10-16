@@ -54,11 +54,11 @@ QtObject {
             || plasmoid.location === PlasmaCore.Types.BottomEdge
             || plasmoid.location === PlasmaCore.Types.LeftEdge)
 
-        Layout.minimumWidth: units.iconSizes.small
+        Layout.minimumWidth: PlasmaCore.Units.iconSizes.small
         Layout.minimumHeight: Layout.minimumWidth
 
-        Layout.maximumWidth: inPanel ? units.iconSizeHints.panel : -1
-        Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1
+        Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
+        Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
 
         mainText: plasmoid.title
         subText: plasmoid.toolTipSubText

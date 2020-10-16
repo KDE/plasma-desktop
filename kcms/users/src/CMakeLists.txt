@@ -27,6 +27,19 @@ qt5_add_dbus_interface(kcm_users_SRCS
     login1_interface
 )
 
+ecm_qt_declare_logging_category(kcm_users_SRCS
+    HEADER kcmusers_debug.h
+    IDENTIFIER KCMUSERS
+    CATEGORY_NAME org.kde.kcm_users
+    EXPORT KCMUSERS
+    DESCRIPTION "System Settings - Users"
+)
+
+ecm_qt_install_logging_categories(
+    EXPORT KCMUSERS
+    DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
+)
+
 add_library(kcm_users MODULE ${kcm_users_SRCS})
 
 target_link_libraries(kcm_users

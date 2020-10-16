@@ -19,7 +19,7 @@
 
 #include <KLocalizedString>
 #include <KServiceTypeTrader>
-#include <KMimeTypeTrader>
+#include <KApplicationTrader>
 
 #include <QUrl>
 #include <QDBusConnection>
@@ -68,7 +68,7 @@ void CfgBrowser::selectBrowser(int index)
 
 void CfgBrowser::load(KConfig *)
 {
-    const auto browser = KMimeTypeTrader::self()->preferredService("x-scheme-handler/http");
+    const auto browser = KApplicationTrader::preferredService("x-scheme-handler/http");
 
     clear();
     m_currentIndex = -1;

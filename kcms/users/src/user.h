@@ -28,6 +28,7 @@
 #include <KJob>
 
 class OrgFreedesktopAccountsUserInterface;
+class QDBusError;
 
 class UserApplyJob : public KJob {
     Q_OBJECT
@@ -36,7 +37,16 @@ public:
     UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIface, QString name, QString email, QString realname, QString icon, int type);
     void start() override;
 
+    enum class Error {
+        NoError = 0,
+        PermissionDenied,
+        Failed,
+        Unknown
+    };
+
 private:
+    void setError(const QDBusError &error);
+
     QString m_name;
     QString m_email;
     QString m_realname;
@@ -95,16 +105,17 @@ public:
 public Q_SLOTS:
     Q_SCRIPTABLE void apply();
 
-signals:
+Q_SIGNALS:
 
     void dataChanged();
-    void uidChanged(int uid);
-    void nameChanged(const QString &name);
-    void realNameChanged(const QString &realName);
-    void emailChanged(const QString &email);
-    void faceChanged(const QUrl &face);
-    void faceValidChanged(bool faceValid);
-    void administratorChanged(bool administrator);
+    void uidChanged();
+    void nameChanged();
+    void realNameChanged();
+    void emailChanged();
+    void faceChanged();
+    void faceValidChanged();
+    void administratorChanged();
+    void applyError(const QString& errorMessage);
 
 private:
     int mUid = 0;

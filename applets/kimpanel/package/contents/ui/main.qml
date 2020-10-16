@@ -33,8 +33,8 @@ Item {
     LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    Layout.minimumWidth: vertical ? units.iconSizes.small : items.implicitWidth
-    Layout.minimumHeight: !vertical ? units.iconSizes.small : items.implicitHeight
+    Layout.minimumWidth: vertical ? PlasmaCore.Units.iconSizes.small : items.implicitWidth
+    Layout.minimumHeight: !vertical ? PlasmaCore.Units.iconSizes.small : items.implicitHeight
     Layout.preferredHeight: Layout.minimumHeight
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
@@ -52,7 +52,7 @@ Item {
         y: (parent.height - childrenRect.height) / 2
         flow: kimpanel.vertical ? Flow.LeftToRight : Flow.TopToBottom
 
-        property int iconSize: Math.min(units.iconSizeHints.panel, units.roundToIconSize(Math.min(width, height)))
+        property int iconSize: Math.min(PlasmaCore.Units.iconSizeHints.panel, PlasmaCore.Units.roundToIconSize(Math.min(width, height)))
 
         Repeater {
             model: ListModel {

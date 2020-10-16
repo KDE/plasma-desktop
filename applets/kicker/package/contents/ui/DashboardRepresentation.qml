@@ -22,6 +22,7 @@ import QtGraphicalEffects 1.0
 
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kwindowsystem 1.0
@@ -41,11 +42,11 @@ import "code/tools.js" as Tools
 Kicker.DashboardWindow {
     id: root
 
-    property bool smallScreen: ((Math.floor(width / units.iconSizes.huge) <= 22) || (Math.floor(height / units.iconSizes.huge) <= 14))
+    property bool smallScreen: ((Math.floor(width / PlasmaCore.Units.iconSizes.huge) <= 22) || (Math.floor(height / PlasmaCore.Units.iconSizes.huge) <= 14))
 
-    property int iconSize: smallScreen ? units.iconSizes.large : units.iconSizes.huge
+    property int iconSize: smallScreen ? PlasmaCore.Units.iconSizes.large : PlasmaCore.Units.iconSizes.huge
     property int cellSize: iconSize + theme.mSize(theme.defaultFont).height
-        + (2 * units.smallSpacing)
+        + (2 * PlasmaCore.Units.smallSpacing)
         + (2 * Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
                         highlightItemSvg.margins.left + highlightItemSvg.margins.right))
     property int columns: Math.floor(((smallScreen ? 85 : 80)/100) * Math.ceil(width / cellSize))
@@ -319,11 +320,11 @@ Kicker.DashboardWindow {
 
             anchors {
                 left: searchHeading.right
-                leftMargin: units.largeSpacing
+                leftMargin: PlasmaCore.Units.largeSpacing
                 verticalCenter: searchHeading.verticalCenter
             }
 
-            width: units.iconSizes.large
+            width: PlasmaCore.Units.iconSizes.large
             height: width
 
             visible: (searchField.text != "")
@@ -361,15 +362,15 @@ Kicker.DashboardWindow {
 
             anchors {
                 top: parent.top
-                topMargin: units.gridUnit * (smallScreen ? 8 : 10)
+                topMargin: PlasmaCore.Units.gridUnit * (smallScreen ? 8 : 10)
                 bottom: parent.bottom
-                bottomMargin: (units.gridUnit * 2)
+                bottomMargin: (PlasmaCore.Units.gridUnit * 2)
                 horizontalCenter: parent.horizontalCenter
             }
 
             width: (root.columns * root.cellSize) + (2 * spacing)
 
-            spacing: units.gridUnit * 2
+            spacing: PlasmaCore.Units.gridUnit * 2
 
             Item {
                 id: favoritesColumn
@@ -379,7 +380,7 @@ Kicker.DashboardWindow {
                     bottom: parent.bottom
                 }
 
-                width: (columns * root.cellSize) + units.gridUnit
+                width: (columns * root.cellSize) + PlasmaCore.Units.gridUnit
 
                 property int columns: 3
 
@@ -392,7 +393,7 @@ Kicker.DashboardWindow {
                         top: parent.top
                     }
 
-                    x: units.smallSpacing
+                    x: PlasmaCore.Units.smallSpacing
                     width: parent.width - x
 
                     elide: Text.ElideRight
@@ -406,7 +407,7 @@ Kicker.DashboardWindow {
 
                     opacity: (enabled ? 1.0 : 0.3)
 
-                    Behavior on opacity { SmoothedAnimation { duration: units.longDuration; velocity: 0.01 } }
+                    Behavior on opacity { SmoothedAnimation { duration: PlasmaCore.Units.longDuration; velocity: 0.01 } }
                 }
 
                 PlasmaCore.SvgItem {
@@ -418,7 +419,7 @@ Kicker.DashboardWindow {
                         top: favoritesColumnLabel.bottom
                     }
 
-                    width: parent.width - units.gridUnit
+                    width: parent.width - PlasmaCore.Units.gridUnit
                     height: lineSvg.horLineHeight
 
                     svg: lineSvg
@@ -426,7 +427,7 @@ Kicker.DashboardWindow {
 
                     opacity: (enabled ? 1.0 : 0.3)
 
-                    Behavior on opacity { SmoothedAnimation { duration: units.longDuration; velocity: 0.01 } }
+                    Behavior on opacity { SmoothedAnimation { duration: PlasmaCore.Units.longDuration; velocity: 0.01 } }
                 }
 
                 ItemGridView {
@@ -436,11 +437,11 @@ Kicker.DashboardWindow {
 
                     anchors {
                         top: favoritesColumnLabelUnderline.bottom
-                        topMargin: units.largeSpacing
+                        topMargin: PlasmaCore.Units.largeSpacing
                     }
 
                     property int rows: (Math.floor((parent.height - favoritesColumnLabel.height
-                        - favoritesColumnLabelUnderline.height - units.largeSpacing) / root.cellSize)
+                        - favoritesColumnLabelUnderline.height - PlasmaCore.Units.largeSpacing) / root.cellSize)
                         - systemFavoritesGrid.rows)
 
                     width: parent.width
@@ -457,7 +458,7 @@ Kicker.DashboardWindow {
 
                     opacity: (enabled ? 1.0 : 0.3)
 
-                    Behavior on opacity { SmoothedAnimation { duration: units.longDuration; velocity: 0.01 } }
+                    Behavior on opacity { SmoothedAnimation { duration: PlasmaCore.Units.longDuration; velocity: 0.01 } }
 
                     onCurrentIndexChanged: {
                         preloadAllAppsTimer.defer();
@@ -561,7 +562,7 @@ Kicker.DashboardWindow {
 
                 anchors.top: parent.top
 
-                width: (columns * root.cellSize) + units.gridUnit
+                width: (columns * root.cellSize) + PlasmaCore.Units.gridUnit
                 height: Math.floor(parent.height / root.cellSize) * root.cellSize + mainGridContainer.headerHeight
 
                 property int columns: root.columns - favoritesColumn.columns - filterListColumn.columns
@@ -581,7 +582,7 @@ Kicker.DashboardWindow {
 
                     enabled: (opacity == 1.0) ? 1 : 0
 
-                    property int headerHeight: mainColumnLabel.height + mainColumnLabelUnderline.height + units.largeSpacing
+                    property int headerHeight: mainColumnLabel.height + mainColumnLabelUnderline.height + PlasmaCore.Units.largeSpacing
 
                     opacity: {
                         if (tabBar.activeTab == 0 && root.searching) {
@@ -608,7 +609,7 @@ Kicker.DashboardWindow {
                             top: parent.top
                         }
 
-                        x: units.smallSpacing
+                        x: PlasmaCore.Units.smallSpacing
                         width: parent.width - x
 
                         elide: Text.ElideRight
@@ -631,7 +632,7 @@ Kicker.DashboardWindow {
                             top: mainColumnLabel.bottom
                         }
 
-                        width: parent.width - units.gridUnit
+                        width: parent.width - PlasmaCore.Units.gridUnit
                         height: lineSvg.horLineHeight
 
                         svg: lineSvg
@@ -643,7 +644,7 @@ Kicker.DashboardWindow {
 
                         anchors {
                             top: mainColumnLabelUnderline.bottom
-                            topMargin: units.largeSpacing
+                            topMargin: PlasmaCore.Units.largeSpacing
                         }
 
                         width: parent.width
@@ -651,7 +652,7 @@ Kicker.DashboardWindow {
 
                         cellWidth: (tabBar.activeTab == 0 ? root.cellSize : root.cellSize * 2)
                         cellHeight: cellWidth
-                        iconSize: (tabBar.activeTab == 0 ? root.iconSize : cellWidth - (units.largeSpacing * 2))
+                        iconSize: (tabBar.activeTab == 0 ? root.iconSize : cellWidth - (PlasmaCore.Units.largeSpacing * 2))
 
                         model: funnelModel
 
@@ -800,7 +801,7 @@ Kicker.DashboardWindow {
 
                 anchors {
                     top: parent.top
-                    topMargin: mainColumnLabelUnderline.y + mainColumnLabelUnderline.height + units.largeSpacing
+                    topMargin: mainColumnLabelUnderline.y + mainColumnLabelUnderline.height + PlasmaCore.Units.largeSpacing
                     bottom: parent.bottom
                 }
 
@@ -811,9 +812,9 @@ Kicker.DashboardWindow {
                 PlasmaExtras.ScrollArea {
                     id: filterListScrollArea
 
-                    x: root.visible ? 0 : units.gridUnit
+                    x: root.visible ? 0 : PlasmaCore.Units.gridUnit
 
-                    Behavior on x { SmoothedAnimation { duration: units.longDuration; velocity: 0.01 } }
+                    Behavior on x { SmoothedAnimation { duration: PlasmaCore.Units.longDuration; velocity: 0.01 } }
 
                     width: parent.width
                     height: mainGrid.height
@@ -824,7 +825,7 @@ Kicker.DashboardWindow {
 
                     opacity: root.visible ? (root.searching ? 0.30 : 1.0) : 0.3
 
-                    Behavior on opacity { SmoothedAnimation { duration: units.longDuration; velocity: 0.01 } }
+                    Behavior on opacity { SmoothedAnimation { duration: PlasmaCore.Units.longDuration; velocity: 0.01 } }
 
                     verticalScrollBarPolicy: (opacity == 1.0) ? Qt.ScrollBarAsNeeded : Qt.ScrollBarAlwaysOff
 
@@ -990,7 +991,7 @@ Kicker.DashboardWindow {
                             width: (highlightItemSvg.margins.left
                                 + filterList.currentItem.textWidth
                                 + highlightItemSvg.margins.right
-                                + units.smallSpacing)
+                                + PlasmaCore.Units.smallSpacing)
 
                             visible: filterList.currentItem
                         }
@@ -1013,7 +1014,7 @@ Kicker.DashboardWindow {
                             }
 
                             filterListColumn.columns = Math.ceil(width / root.cellSize);
-                            filterListScrollArea.width = width + hItemMargins + (units.gridUnit * 2);
+                            filterListScrollArea.width = width + hItemMargins + (PlasmaCore.Units.gridUnit * 2);
                         }
 
                         function applyFilter() {

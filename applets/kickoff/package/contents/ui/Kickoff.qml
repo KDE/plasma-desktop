@@ -39,8 +39,8 @@ Item {
         || plasmoid.location === PlasmaCore.Types.LeftEdge)
     readonly property bool vertical: (plasmoid.formFactor === PlasmaCore.Types.Vertical)
 
-    Plasmoid.switchWidth: units.gridUnit * 20
-    Plasmoid.switchHeight: units.gridUnit * 30
+    Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 20
+    Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 30
 
     Plasmoid.fullRepresentation: FullRepresentation {}
 
@@ -51,23 +51,23 @@ Item {
 
         Layout.minimumWidth: {
             if (!inPanel) {
-                return units.iconSizeHints.panel;
+                return PlasmaCore.Units.iconSizeHints.panel;
             }
 
             if (vertical) {
                 return -1;
             } else {
-                return Math.min(units.iconSizeHints.panel, parent.height) * buttonIcon.aspectRatio;
+                return Math.min(PlasmaCore.Units.iconSizeHints.panel, parent.height) * buttonIcon.aspectRatio;
             }
         }
 
         Layout.minimumHeight: {
             if (!inPanel) {
-                return units.iconSizeHints.panel;
+                return PlasmaCore.Units.iconSizeHints.panel;
             }
 
             if (vertical) {
-                return Math.min(units.iconSizeHints.panel, parent.width) * buttonIcon.aspectRatio;
+                return Math.min(PlasmaCore.Units.iconSizeHints.panel, parent.width) * buttonIcon.aspectRatio;
             } else {
                 return -1;
             }
@@ -79,9 +79,9 @@ Item {
             }
 
             if (vertical) {
-                return units.iconSizeHints.panel;
+                return PlasmaCore.Units.iconSizeHints.panel;
             } else {
-                return Math.min(units.iconSizeHints.panel, parent.height) * buttonIcon.aspectRatio;
+                return Math.min(PlasmaCore.Units.iconSizeHints.panel, parent.height) * buttonIcon.aspectRatio;
             }
         }
 
@@ -91,9 +91,9 @@ Item {
             }
 
             if (vertical) {
-                return Math.min(units.iconSizeHints.panel, parent.width) * buttonIcon.aspectRatio;
+                return Math.min(PlasmaCore.Units.iconSizeHints.panel, parent.width) * buttonIcon.aspectRatio;
             } else {
-                return units.iconSizeHints.panel;
+                return PlasmaCore.Units.iconSizeHints.panel;
             }
         }
 

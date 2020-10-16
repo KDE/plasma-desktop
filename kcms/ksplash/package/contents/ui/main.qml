@@ -22,12 +22,17 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.0 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.newstuff 1.62 as NewStuff
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcm 1.3 as KCM
 
 KCM.GridViewKCM {
+    id: root
     KCM.ConfigModule.quickHelp: i18n("This module lets you choose the splash screen theme.")
 
-    enabled: !kcm.testing && !kcm.splashScreenSettings.isImmutable("theme")
+    KCM.SettingStateBinding {
+        configObject: kcm.splashScreenSettings
+        settingName: "theme"
+        extraEnabledConditions: !kcm.testing
+    }
 
     view.model: kcm.splashModel
     //NOTE: pay attention to never break this binding

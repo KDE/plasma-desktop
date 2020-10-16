@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provider id="opendesktop">
+  <_name>OpenDesktop</_name>
+  <_description>Vote on content and create reviews and comments on OpenDesktop.Org</_description>
+  <icon>get-hot-new-stuff</icon>
+  <translations>kaccounts-providers</translations>
+  <domains>.*opendesktop\.org</domains>
+
+  <template>
+    <group name="auth">
+      <setting name="method">oauth2</setting>
+      <setting name="mechanism">web_server</setting>
+      <group name="oauth2">
+        <group name="web_server">
+          <setting name="Host">id.opendesktop.org</setting>
+          <setting name="AuthPath">oauth/authorize</setting>
+          <setting name="TokenPath">oauth/token</setting>
+          <setting name="RedirectUri">http://localhost/oauth2callback</setting>
+          <setting name="ResponseType">code</setting>
+          <setting type="as" name="Scope">[
+              'openid',
+              'profile',
+              'email'
+          ]</setting>
+          <setting type="as" name="AllowedSchemes">['https']</setting>
+          <setting name="ClientId">rkw4TuGcEVOSNOKmhG3W</setting>
+          <setting name="ClientSecret">9J0AX9bOC2pNZ4lV51itAW6BnCMMDlcz</setting>
+        </group>
+      </group>
+    </group>
+  </template>
+</provider>

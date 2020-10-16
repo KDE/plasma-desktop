@@ -66,7 +66,7 @@ MouseArea {
                  }
                  NumberAnimation {
                      property: "opacity"
-                     duration: units.longDuration
+                     duration: PlasmaCore.Units.longDuration
                  }
              }
         },
@@ -76,7 +76,7 @@ MouseArea {
              SequentialAnimation {
                  NumberAnimation {
                      property: "opacity"
-                     duration: units.longDuration
+                     duration: PlasmaCore.Units.longDuration
                  }
              }
         },
@@ -84,7 +84,7 @@ MouseArea {
              to: ""
              NumberAnimation {
                  property: "opacity"
-                 duration: units.longDuration
+                 duration: PlasmaCore.Units.longDuration
              }
         }
     ]
@@ -109,11 +109,11 @@ MouseArea {
 
         // Need audio indicator twice, to keep iconBox in the center.
         readonly property var requiredSpace: Math.min(iconBox.width, iconBox.height)
-                                             + Math.min(Math.min(iconBox.width, iconBox.height), units.iconSizes.smallMedium) * 2
+                                             + Math.min(Math.min(iconBox.width, iconBox.height), PlasmaCore.Units.iconSizes.smallMedium) * 2
         svg: audioSvg
         smooth: false
 
-        height: Math.round(Math.min(parent.height * indicatorScale, units.iconSizes.smallMedium))
+        height: Math.round(Math.min(parent.height * indicatorScale, PlasmaCore.Units.iconSizes.smallMedium))
         width: height
 
         anchors {
@@ -145,7 +145,7 @@ MouseArea {
 
                 PropertyChanges {
                     target: audioStreamIconLoader
-                    width: units.roundToIconSize(Math.min(Math.min(iconBox.width, iconBox.height), units.iconSizes.smallMedium))
+                    width: PlasmaCore.Units.roundToIconSize(Math.min(Math.min(iconBox.width, iconBox.height), PlasmaCore.Units.iconSizes.smallMedium))
                 }
 
                 PropertyChanges {
@@ -171,7 +171,7 @@ MouseArea {
                     target: audioStreamIconLoader
 
                     anchors.topMargin: taskFrame.margins.top
-                    width: units.roundToIconSize(Math.min(Math.min(iconBox.width, iconBox.height), units.iconSizes.smallMedium))
+                    width: PlasmaCore.Units.roundToIconSize(Math.min(Math.min(iconBox.width, iconBox.height), PlasmaCore.Units.iconSizes.smallMedium))
                 }
 
                 PropertyChanges {

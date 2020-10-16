@@ -42,7 +42,7 @@ Item {
         KeySequenceItem {
             id: button
             keySequence: plasmoid.globalShortcut
-            onKeySequenceChanged: {
+            onCaptureFinished: {
                 root.configurationChanged();
             }
         }

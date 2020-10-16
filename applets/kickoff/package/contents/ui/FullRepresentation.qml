@@ -31,10 +31,10 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 
 Item {
     id: root
-    Layout.minimumWidth: units.gridUnit * 26
+    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 26
     Layout.maximumWidth: Layout.minimumWidth
 
-    Layout.minimumHeight: units.gridUnit * 34
+    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 34
     Layout.maximumHeight: Layout.minimumHeight
 
     property string previousState
@@ -63,7 +63,7 @@ Item {
     Kicker.DragHelper {
         id: dragHelper
 
-        dragIconSize: units.iconSizes.medium
+        dragIconSize: PlasmaCore.Units.iconSizes.medium
         onDropped: kickoff.dragSource = null
     }
 
@@ -118,24 +118,9 @@ Item {
         id: header
     }
 
-    PlasmaCore.SvgItem {
-        id: headerSeparator
-        anchors {
-            top: header.top
-            horizontalCenter: header.horizontalCenter
-        }
-        height: headerSeparatorLine.elementSize("horizontal-line").height
-        width: root.width - 2 * units.gridUnit
-        elementId: "horizontal-line"
-        svg: PlasmaCore.Svg {
-            id: headerSeparatorLine
-            imagePath: "widgets/line"
-        }
-    }
-
     Item {
         id: mainArea
-        anchors.topMargin: mainTabGroup.state == "top" ? units.smallSpacing : 0
+        anchors.topMargin: mainTabGroup.state == "top" ? PlasmaCore.Units.smallSpacing : 0
 
         PlasmaComponents.TabGroup {
             id: mainTabGroup
@@ -209,6 +194,7 @@ Item {
                     PropertyChanges {
                         target: header
                         width: header.implicitWidth
+                        location: PlasmaExtras.PlasmoidHeading.Location.Footer
                     }
                     AnchorChanges {
                         target: mainArea
@@ -221,7 +207,7 @@ Item {
                     }
                     PropertyChanges {
                         target: tabBar
-                        width: (tabBar.opacity == 0) ? 0 : units.gridUnit * 5
+                        width: (tabBar.opacity == 0) ? 0 : PlasmaCore.Units.gridUnit * 5
                     }
                     AnchorChanges {
                         target: tabBar
@@ -260,6 +246,7 @@ Item {
                     PropertyChanges {
                         target: header
                         height: header.implicitHeight
+                        location: PlasmaExtras.PlasmoidHeading.Location.Footer
                     }
                     AnchorChanges {
                         target: mainArea
@@ -272,7 +259,7 @@ Item {
                     }
                     PropertyChanges {
                         target: tabBar
-                        height: (tabBar.opacity == 0) ? 0 : units.gridUnit * 5
+                        height: (tabBar.opacity == 0) ? 0 : PlasmaCore.Units.gridUnit * 5
                     }
                     AnchorChanges {
                         target: tabBar
@@ -311,6 +298,7 @@ Item {
                     PropertyChanges {
                         target: header
                         width: header.implicitWidth
+                        location: PlasmaExtras.PlasmoidHeading.Location.Footer
                     }
                     AnchorChanges {
                         target: mainArea
@@ -323,7 +311,7 @@ Item {
                     }
                     PropertyChanges {
                         target: tabBar
-                        width: (tabBar.opacity == 0) ? 0 : units.gridUnit * 5
+                        width: (tabBar.opacity == 0) ? 0 : PlasmaCore.Units.gridUnit * 5
                     }
                     AnchorChanges {
                         target: tabBar
@@ -362,6 +350,7 @@ Item {
                     PropertyChanges {
                         target: header
                         height: header.implicitHeight
+                        location: PlasmaExtras.PlasmoidHeading.Location.Header
                     }
                     AnchorChanges {
                         target: headerSeparator
@@ -381,7 +370,7 @@ Item {
                     }
                     PropertyChanges {
                         target: tabBar
-                        height: (tabBar.opacity == 0) ? 0 : units.gridUnit * 5
+                        height: (tabBar.opacity == 0) ? 0 : PlasmaCore.Units.gridUnit * 5
                     }
                     AnchorChanges {
                         target: tabBar
@@ -416,11 +405,11 @@ Item {
         property int count: 5 // updated in createButtons()
 
         Behavior on width {
-            NumberAnimation { duration: units.longDuration; easing.type: Easing.InQuad; }
+            NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.InQuad; }
             enabled: plasmoid.expanded
         }
         Behavior on height {
-            NumberAnimation { duration: units.longDuration; easing.type: Easing.InQuad; }
+            NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.InQuad; }
             enabled: plasmoid.expanded
         }
 

@@ -69,7 +69,7 @@ Item {
 
         // Panel button
         RowLayout {
-            spacing: units.smallSpacing
+            spacing: PlasmaCore.Units.smallSpacing
             visible: isPopup
 
             Kirigami.FormData.label: i18n("Panel button:")
@@ -83,7 +83,7 @@ Item {
 
             Button {
                 id: iconButton
-                Layout.minimumWidth: units.iconSizes.large + units.smallSpacing * 2
+                Layout.minimumWidth: PlasmaCore.Units.iconSizes.large + PlasmaCore.Units.smallSpacing * 2
                 Layout.maximumWidth: Layout.minimumWidth
                 Layout.minimumHeight: Layout.minimumWidth
                 Layout.maximumHeight: Layout.minimumWidth
@@ -101,7 +101,7 @@ Item {
 
                 PlasmaCore.IconItem {
                     anchors.centerIn: parent
-                    width: units.iconSizes.large
+                    width: PlasmaCore.Units.iconSizes.large
                     height: width
                     source: cfg_icon
                 }

@@ -35,7 +35,7 @@ import "static.js" as S
 Item {
     id: root
 
-    property int innerPadding  : units.largeSpacing
+    property int innerPadding  : PlasmaCore.Units.largeSpacing
 
     property bool current      : false
     property bool selected     : false
@@ -65,7 +65,7 @@ Item {
     signal clicked
 
     width  : 200
-    // height : width * 1 / units.displayAspectRatio
+    // height : width * 1 / PlasmaCore.Units.displayAspectRatio
     // Marco removed displayAspectRatio
     height : width * 9.0 / 16.0
 
@@ -120,7 +120,7 @@ Item {
 
             visible:  root.current
 
-            border.width: root.current ? units.smallSpacing : 0
+            border.width: root.current ? PlasmaCore.Units.smallSpacing : 0
             border.color: theme.highlightColor
 
             z: 10
@@ -142,8 +142,8 @@ Item {
                 left  : parent.left
                 right : parent.right
 
-                leftMargin : 2 * units.smallSpacing + 2
-                topMargin  : 2 * units.smallSpacing
+                leftMargin : 2 * PlasmaCore.Units.smallSpacing + 2
+                topMargin  : 2 * PlasmaCore.Units.smallSpacing
             }
 
             Text {
@@ -180,12 +180,12 @@ Item {
             PlasmaCore.IconItem {
                 id: icon
 
-                width   : units.iconSizes.medium
+                width   : PlasmaCore.Units.iconSizes.medium
                 height  : width
 
                 anchors {
                     right       : parent.right
-                    rightMargin : 2 * units.smallSpacing
+                    rightMargin : 2 * PlasmaCore.Units.smallSpacing
                 }
             }
         }
@@ -193,16 +193,16 @@ Item {
         Column {
             id: statsBar
 
-            height: childrenRect.height + units.smallSpacing
+            height: childrenRect.height + PlasmaCore.Units.smallSpacing
 
             anchors {
                 bottom : controlBar.top
                 left   : parent.left
                 right  : parent.right
 
-                leftMargin   : 2 * units.smallSpacing + 2
-                rightMargin  : 2 * units.smallSpacing
-                bottomMargin : units.smallSpacing
+                leftMargin   : 2 * PlasmaCore.Units.smallSpacing + 2
+                rightMargin  : 2 * PlasmaCore.Units.smallSpacing
+                bottomMargin : PlasmaCore.Units.smallSpacing
             }
 
             PlasmaCore.IconItem {
@@ -242,7 +242,7 @@ Item {
 
             anchors {
                 fill: parent
-                topMargin: icon.height + 3 * units.smallSpacing
+                topMargin: icon.height + 3 * PlasmaCore.Units.smallSpacing
             }
 
             opacity: .75
@@ -259,7 +259,7 @@ Item {
                 bottom: parent.bottom
             }
 
-            topPadding: icon.height + 3 * units.smallSpacing
+            topPadding: icon.height + 3 * PlasmaCore.Units.smallSpacing
             actionVisible: dropHighlight.visible
 
             actionTitle: i18nd("plasma_shell_org.kde.plasma.desktop", "Move to\nthis activity")
@@ -282,7 +282,7 @@ Item {
         TaskDropArea {
             id: copyDropAction
 
-            topPadding: icon.height + 3 * units.smallSpacing
+            topPadding: icon.height + 3 * PlasmaCore.Units.smallSpacing
             actionVisible: dropHighlight.visible
 
             anchors {
@@ -315,18 +315,18 @@ Item {
             id: controlBar
 
             height: root.state == "showingControls" ?
-                        (configButton.height + 4 * units.smallSpacing) :
+                        (configButton.height + 4 * PlasmaCore.Units.smallSpacing) :
                         0
 
             Behavior on height {
                 NumberAnimation {
-                    duration: units.longDuration
+                    duration: PlasmaCore.Units.longDuration
                 }
             }
 
             Behavior on opacity {
                 NumberAnimation {
-                    duration: units.shortDuration
+                    duration: PlasmaCore.Units.shortDuration
                 }
             }
 
@@ -341,7 +341,7 @@ Item {
             Rectangle {
                 anchors {
                     fill: parent
-                    margins: - 2 * units.smallSpacing
+                    margins: - 2 * PlasmaCore.Units.smallSpacing
                 }
 
                 opacity: .75
@@ -359,14 +359,15 @@ Item {
                 anchors {
                     left       : parent.left
                     top        : parent.top
-                    leftMargin : 2 * units.smallSpacing + 2
-                    topMargin  : 2 * units.smallSpacing
+                    leftMargin : 2 * PlasmaCore.Units.smallSpacing + 2
+                    topMargin  : 2 * PlasmaCore.Units.smallSpacing
                 }
             }
 
             PlasmaComponents.Button {
                 id: stopButton
 
+                visible: stoppable
                 iconSource: "process-stop"
                 tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Stop activity")
 
@@ -375,8 +376,8 @@ Item {
                 anchors {
                     right       : parent.right
                     top         : parent.top
-                    rightMargin : 2 * units.smallSpacing + 2
-                    topMargin   : 2 * units.smallSpacing
+                    rightMargin : 2 * PlasmaCore.Units.smallSpacing + 2
+                    topMargin   : 2 * PlasmaCore.Units.smallSpacing
                 }
             }
         }
@@ -405,7 +406,7 @@ Item {
         Transition {
             NumberAnimation {
                 properties : "opacity"
-                duration   : units.shortDuration
+                duration   : PlasmaCore.Units.shortDuration
             }
         }
     ]

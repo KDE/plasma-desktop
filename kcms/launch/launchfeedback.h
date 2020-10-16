@@ -22,6 +22,7 @@
 
 #include <KQuickAddons/ManagedConfigModule>
 
+class LaunchFeedbackData;
 class LaunchFeedbackSettings;
 
 class LaunchFeedback : public KQuickAddons::ManagedConfigModule
@@ -45,7 +46,7 @@ public:
     LaunchFeedbackSettings *launchFeedbackSettings() const;
 
 private:
-    LaunchFeedbackSettings *m_settings;
+    LaunchFeedbackData *m_data;
 };
 
 #endif

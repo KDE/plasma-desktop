@@ -92,8 +92,8 @@ PlasmaCore.Dialog {
                 flow: inputpanel.verticalLayout ? GridLayout.TopToBottom : GridLayout.LeftToRight
                 columns: inputpanel.verticalLayout ? 1 : tableList.count + 1
                 rows: inputpanel.verticalLayout ? tableList.count + 1 : 1
-                columnSpacing: units.smallSpacing / 2
-                rowSpacing: units.smallSpacing / 2
+                columnSpacing: PlasmaCore.Units.smallSpacing / 2
+                rowSpacing: PlasmaCore.Units.smallSpacing / 2
 
                 Repeater {
                     model: ListModel {

@@ -33,16 +33,16 @@ Item {
         anchors {
             left: parent.left
             right: parent.right
-            leftMargin: units.gridUnit
+            leftMargin: PlasmaCore.Units.gridUnit
         }
 
-        y: Math.round(units.gridUnit / 4)
+        y: Math.round(PlasmaCore.Units.gridUnit / 4)
         level: 4
         text: section
     }
     Item {
         width: parent.width
-        height: Math.round(units.gridUnit / 4)
+        height: Math.round(PlasmaCore.Units.gridUnit / 4)
         anchors.left: parent.left
         anchors.top: sectionHeading.bottom
     }

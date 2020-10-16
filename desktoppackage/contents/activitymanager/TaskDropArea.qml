@@ -19,6 +19,7 @@
 
 import QtQuick 2.0
 
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.draganddrop 2.0 as DND
@@ -41,7 +42,7 @@ DND.DropArea {
         id: dropHighlight
         anchors {
             fill: parent
-            // topMargin: icon.height + 3 * units.smallSpacing
+            // topMargin: icon.height + 3 * PlasmaCore.Units.smallSpacing
             topMargin: root.topPadding
         }
         visible: root.isHovered
@@ -52,8 +53,8 @@ DND.DropArea {
         id: dropAreaLeftText
         anchors {
             fill: dropHighlight
-            leftMargin: units.largeSpacing
-            rightMargin: units.largeSpacing
+            leftMargin: PlasmaCore.Units.largeSpacing
+            rightMargin: PlasmaCore.Units.largeSpacing
         }
 
         color: theme.textColor

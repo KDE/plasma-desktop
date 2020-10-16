@@ -3,9 +3,17 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_launchfeedback\")
 
 ########### next target ###############
 
-set(kcm_launchfeedback_PART_SRCS launchfeedback.cpp)
+set(kcm_launchfeedback_PART_SRCS launchfeedback.cpp launchfeedbacksettings.cpp)
 
-kconfig_add_kcfg_files(kcm_launchfeedback_PART_SRCS launchfeedbacksettings.kcfgc GENERATE_MOC)
+kcmutils_generate_module_data(
+    kcm_launchfeedback_PART_SRCS
+    MODULE_DATA_HEADER launchfeedbackdata.h
+    MODULE_DATA_CLASS_NAME LaunchFeedbackData
+    SETTINGS_HEADERS launchfeedbacksettings.h
+    SETTINGS_CLASSES LaunchFeedbackSettings
+)
+
+kconfig_add_kcfg_files(kcm_launchfeedback_PART_SRCS launchfeedbacksettingsbase.kcfgc GENERATE_MOC)
 
 add_library(kcm_launchfeedback MODULE ${kcm_launchfeedback_PART_SRCS})
 
@@ -20,7 +28,7 @@ kcoreaddons_desktop_to_json(kcm_launchfeedback "kcm_launchfeedback.desktop")
 
 ########### install files ###############
 
-install(FILES launchfeedbacksettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
+install(FILES launchfeedbacksettingsbase.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(TARGETS kcm_launchfeedback DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 install(FILES kcm_launchfeedback.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR})
 kpackage_install_package(package kcm_launchfeedback kcms)

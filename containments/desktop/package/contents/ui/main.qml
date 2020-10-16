@@ -54,7 +54,7 @@ FolderViewDropArea {
     Plasmoid.switchWidth: {
         // Support expanding into the full representation only on vertical panels.
         if (isPopup && plasmoid.formFactor === PlasmaCore.Types.Vertical) {
-            return units.iconSizeHints.panel;
+            return PlasmaCore.Units.iconSizeHints.panel;
         }
 
         return 0;
@@ -63,7 +63,7 @@ FolderViewDropArea {
     Plasmoid.switchHeight: {
         // Support expanding into the full representation only on vertical panels.
         if (isPopup && plasmoid.formFactor === PlasmaCore.Types.Vertical) {
-            return units.iconSizeHints.panel;
+            return PlasmaCore.Units.iconSizeHints.panel;
         }
 
         return 0;
@@ -83,7 +83,7 @@ FolderViewDropArea {
     property int handleDelay: 800
     property real haloOpacity: 0.5
 
-    property int iconSize: units.iconSizes.small
+    property int iconSize: PlasmaCore.Units.iconSizes.small
     property int iconWidth: iconSize
     property int iconHeight: iconWidth
 
@@ -111,16 +111,16 @@ FolderViewDropArea {
     }
 
     Behavior on anchors.topMargin {
-        NumberAnimation { duration: units.longDuration; easing.type: Easing.InOutQuad }
+        NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.InOutQuad }
     }
     Behavior on anchors.leftMargin {
-        NumberAnimation { duration: units.longDuration; easing.type: Easing.InOutQuad }
+        NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.InOutQuad }
     }
     Behavior on anchors.rightMargin {
-        NumberAnimation { duration: units.longDuration; easing.type: Easing.InOutQuad }
+        NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.InOutQuad }
     }
     Behavior on anchors.bottomMargin {
-        NumberAnimation { duration: units.longDuration; easing.type: Easing.InOutQuad }
+        NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.InOutQuad }
     }
 
     function updateGridSize()
@@ -143,19 +143,19 @@ FolderViewDropArea {
         if (isContainment || !folderViewLayer.ready) {
             return -1;
         } else if (useListViewMode) {
-            return (minimum ? folderViewLayer.view.cellHeight * 4 : units.gridUnit * 16);
+            return (minimum ? folderViewLayer.view.cellHeight * 4 : PlasmaCore.Units.gridUnit * 16);
         }
 
-        return (folderViewLayer.view.cellWidth * (minimum ? 1 : 3)) + (units.largeSpacing * 2);
+        return (folderViewLayer.view.cellWidth * (minimum ? 1 : 3)) + (PlasmaCore.Units.largeSpacing * 2);
     }
 
     function preferredHeight(minimum) {
         if (isContainment || !folderViewLayer.ready) {
             return -1;
         } else if (useListViewMode) {
-            var height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 15)) + units.smallSpacing;
+            var height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 15)) + PlasmaCore.Units.smallSpacing;
         } else {
-            var height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 2)) + units.largeSpacing
+            var height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 2)) + PlasmaCore.Units.largeSpacing
         }
 
         if (plasmoid.configuration.labelMode !== 0) {
@@ -290,10 +290,10 @@ FolderViewDropArea {
         // Sets the containment in edit mode when we go in edit mode as well
         onEditModeChanged: plasmoid.editMode = editMode
 
-        minimumItemWidth: units.gridUnit * 3
+        minimumItemWidth: PlasmaCore.Units.gridUnit * 3
         minimumItemHeight: minimumItemWidth
 
-        cellWidth: units.iconSizes.small
+        cellWidth: PlasmaCore.Units.iconSizes.small
         cellHeight: cellWidth
 
         eventManagerToFilter: folderViewLayer.item ? folderViewLayer.item.view.view : null
@@ -358,7 +358,7 @@ FolderViewDropArea {
         }
 
         // Customize the icon and text to improve discoverability
-        plasmoid.setAction("configure", i18n("Configure Desktop..."), "preferences-desktop-wallpaper")
+        plasmoid.setAction("configure", i18n("Configure Desktop and Wallpaper..."), "preferences-desktop-wallpaper")
 
         // WORKAROUND: that's the only place where we can inject a sensible size.
         // if root has width defined, it will override the value we set before

@@ -41,8 +41,8 @@ PlasmaCore.Dialog {
 
         signal configurationChanged
 
-        Layout.minimumWidth: units.gridUnit * 20
-        Layout.minimumHeight: Math.min(Screen.height - units.gridUnit * 10, heading.height + buttonsRow.height + mainList.contentHeight + units.gridUnit)
+        Layout.minimumWidth: PlasmaCore.Units.gridUnit * 20
+        Layout.minimumHeight: Math.min(Screen.height - PlasmaCore.Units.gridUnit * 10, heading.height + buttonsRow.height + mainList.contentHeight + PlasmaCore.Units.gridUnit)
 
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
@@ -131,12 +131,12 @@ PlasmaCore.Dialog {
                     }
 
                     RowLayout {
-                        x: 2 * units.smallSpacing
+                        x: 2 * PlasmaCore.Units.smallSpacing
                         width: parent.width - 2 * x
-                        spacing: units.largeSpacing
+                        spacing: PlasmaCore.Units.largeSpacing
                         PlasmaCore.IconItem {
-                            Layout.preferredWidth: units.iconSizes.huge
-                            Layout.preferredHeight: units.iconSizes.huge
+                            Layout.preferredWidth: PlasmaCore.Units.iconSizes.huge
+                            Layout.preferredHeight: PlasmaCore.Units.iconSizes.huge
                             source: model.decoration
                         }
 

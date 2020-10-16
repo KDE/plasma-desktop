@@ -36,15 +36,16 @@
 
 #include <Baloo/IndexerConfig>
 #include <baloo/baloosettings.h>
+#include <baloodata.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "kcm_baloofile.json", registerPlugin<Baloo::ServerConfigModule>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "kcm_baloofile.json", registerPlugin<Baloo::ServerConfigModule>(); registerPlugin<BalooData>();)
 
 using namespace Baloo;
 
 ServerConfigModule::ServerConfigModule(QObject* parent, const QVariantList& args)
     : KQuickAddons::ManagedConfigModule(parent, args)
-    , m_settings(new BalooSettings(this))
-    , m_filteredFolderModel(new FilteredFolderModel(m_settings, this))
+    , m_data(new BalooData(this))
+    , m_filteredFolderModel(new FilteredFolderModel(m_data->settings(), this))
     {
     qmlRegisterType<FilteredFolderModel>();
     qmlRegisterType<BalooSettings>();
@@ -61,8 +62,8 @@ ServerConfigModule::ServerConfigModule(QObject* parent, const QVariantList& args
     setAboutData(about);
     setButtons(Help | Apply | Default);
 
-    connect(m_settings, &BalooSettings::excludedFoldersChanged, m_filteredFolderModel, &FilteredFolderModel::updateDirectoryList);
-    connect(m_settings, &BalooSettings::foldersChanged, m_filteredFolderModel, &FilteredFolderModel::updateDirectoryList);
+    connect(balooSettings(), &BalooSettings::excludedFoldersChanged, m_filteredFolderModel, &FilteredFolderModel::updateDirectoryList);
+    connect(balooSettings(), &BalooSettings::foldersChanged, m_filteredFolderModel, &FilteredFolderModel::updateDirectoryList);
     m_filteredFolderModel->updateDirectoryList();
 }
 
@@ -80,7 +81,7 @@ void ServerConfigModule::save()
     ManagedConfigModule::save();
 
     // Update Baloo config or start Baloo
-    if (m_settings->indexingEnabled()) {
+    if (balooSettings()->indexingEnabled()) {
         // Update the baloo_file's config cache - if it not yet running,
         // the DBus call goes nowhere
         Baloo::IndexerConfig config;
@@ -109,7 +110,7 @@ FilteredFolderModel *ServerConfigModule::filteredModel() const
 
 BalooSettings *ServerConfigModule::balooSettings() const
 {
-    return m_settings;
+    return m_data->settings();
 }
 
 #include "kcm.moc"

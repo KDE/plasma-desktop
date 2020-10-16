@@ -198,7 +198,7 @@ FocusScope {
 
                 property bool usesPlasmaTheme: false
 
-                property int iconSize: units.iconSizes.huge
+                property int iconSize: PlasmaCore.Units.iconSizes.huge
 
                 property bool animating: false
                 property int animationDuration: itemGrid.dropEnabled ? resetAnimationDurationTimer.interval : 0
@@ -273,7 +273,7 @@ FocusScope {
                                 bottomMargin: parent.margins.bottom
                             }
 
-                            width: units.iconSizes.smallMedium
+                            width: PlasmaCore.Units.iconSizes.smallMedium
                             height: width
 
                             source: "list-add"

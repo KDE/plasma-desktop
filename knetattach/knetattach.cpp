@@ -34,7 +34,6 @@
 #include <KCharsets>
 #include <KDebug>
 #include <KRun>
-#include <KToolInvocation>
 #include <KGlobal>
 #include <QDesktopServices>
 #include <QTextCodec>
@@ -83,7 +82,7 @@ void KNetAttach::slotPageChanged( int )
 
 void KNetAttach::slotHelpClicked()
 {
-    QDesktopServices::openUrl(QUrl(QStringLiteral("help:/knetattach")));
+    QDesktopServices::openUrl(QUrl(QStringLiteral("help:/")));
 }
 
 void KNetAttach::setInformationText( const QString &type )

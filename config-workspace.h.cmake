@@ -11,12 +11,6 @@
 /* Define if you have the DPMSInfo prototype in <X11/extensions/dpms.h> */
 #cmakedefine HAVE_DPMSINFO_PROTO 1
 
-/* Defines if your system has the libfontconfig library */
-#cmakedefine HAVE_FONTCONFIG 1
-
-/* Defines if your system has the freetype library */
-#cmakedefine HAVE_FREETYPE 1
-
 /* Define if you have gethostname */
 #cmakedefine HAVE_GETHOSTNAME 1
 

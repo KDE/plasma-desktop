@@ -46,7 +46,7 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMUserFactory, "kcm_users.json", registerPlugin<KCMU
 KCMUser::KCMUser(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args),
       m_dbusInterface(new OrgFreedesktopAccountsInterface(QStringLiteral("org.freedesktop.Accounts"), QStringLiteral("/org/freedesktop/Accounts"), QDBusConnection::systemBus(), this)),
-      m_model(new UserModel())
+      m_model(new UserModel(this))
 {
     KAboutData* about = new KAboutData(QStringLiteral("kcm_users"), i18n("Manage user accounts"),
                                        QStringLiteral("0.1"), QString(), KAboutLicense::GPL);

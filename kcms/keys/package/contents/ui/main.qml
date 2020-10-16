@@ -24,10 +24,10 @@ import QtQml 2.14
 import QtQml.Models 2.3
 
 import org.kde.kirigami 2.12 as Kirigami
-import org.kde.kcm 1.2 as KCM 
+import org.kde.kcm 1.4 as KCM
 import org.kde.private.kcms.keys 2.0 as Private
 
-KCM.SimpleKCM {
+KCM.AbstractKCM {
     id: root
     implicitWidth: 800
     implicitHeight: 600
@@ -103,6 +103,8 @@ KCM.SimpleKCM {
                     delegate: Kirigami.AbstractListItem {
                         id: componentDelegate
                         readonly property color foregroundColor: ListView.isCurrentItem ? activeTextColor : textColor
+                        KeyNavigation.right: shortcutsList
+                        height: Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.smallSpacing + topPadding + bottomPadding
                         RowLayout {
                             Kirigami.Icon {
                                 id: appIcon
@@ -119,9 +121,9 @@ KCM.SimpleKCM {
                                 opacity: model.pendingDeletion ? 0.3 : 1
                             }
                             QQC2.ToolButton {
-                                Layout.preferredHeight: Kirigami.Units.iconSizes.small + Kirigami.Units.largeSpacing
+                                Layout.preferredHeight: Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.smallSpacing
                                 Layout.preferredWidth: Layout.preferredHeight
-                                visible: !exportActive && !model.pendingDeletion
+                                visible: model.section != i18n("Common Actions") && !exportActive && !model.pendingDeletion
                                 opacity: componentDelegate.containsMouse || componentDelegate.ListView.isCurrentItem ? 1 : 0
                                 enabled: opacity
                                 icon.name: "edit-delete"
@@ -132,7 +134,7 @@ KCM.SimpleKCM {
                                 }
                             }
                             QQC2.ToolButton {
-                                Layout.preferredHeight: Kirigami.Units.iconSizes.small + Kirigami.Units.largeSpacing
+                                Layout.preferredHeight: Kirigami.Units.iconSizes.small +  2 * Kirigami.Units.smallSpacing
                                 Layout.preferredWidth: Layout.preferredHeight
                                 visible: !exportActive && model.pendingDeletion
                                 icon.name: "edit-undo"
@@ -148,6 +150,15 @@ KCM.SimpleKCM {
                                 visible: exportActive
                                 onToggled: model.checked = checked
                             }
+                            Rectangle {
+                                id: defaultIndicator
+                                radius: width * 0.5
+                                implicitWidth: Kirigami.Units.largeSpacing
+                                implicitHeight: Kirigami.Units.largeSpacing
+                                visible: kcm.defaultsIndicatorsVisible
+                                opacity: !model.isDefault
+                                color: Kirigami.Theme.neutralTextColor
+                            }
                         }
                     }
                     section.property: "section"
@@ -160,9 +171,9 @@ KCM.SimpleKCM {
                             onToggled: {
                                 const checked = sectionCheckbox.checked
                                 const startIndex = kcm.shortcutsModel.index(0, 0)
-                                const indices = kcm.shortcutsModel.match(startIndex, Private.ShortcutsModel.SectionRole, section, -1)
+                                const indices = kcm.shortcutsModel.match(startIndex, Private.BaseModel.SectionRole, section, -1)
                                 for (const index of indices) {
-                                    kcm.shortcutsModel.setData(index, checked, Private.ShortcutsModel.CheckedRole)
+                                    kcm.shortcutsModel.setData(index, checked, Private.BaseModel.CheckedRole)
                                 }
                             }
                             Connections {
@@ -170,14 +181,15 @@ KCM.SimpleKCM {
                                 target: kcm.shortcutsModel
                                 function onDataChanged (topLeft, bottomRight, roles) {
                                     const startIndex = kcm.shortcutsModel.index(0, 0)
-                                    const indices = kcm.shortcutsModel.match(startIndex, Private.ShortcutsModel.SectionRole, section, -1)
-                                    sectionCheckbox.checked = indices.reduce((acc, index) => acc && kcm.shortcutsModel.data(index,Private.ShortcutsModel.CheckedRole), true)
+                                    const indices = kcm.shortcutsModel.match(startIndex, Private.BaseModel.SectionRole, section, -1)
+                                    sectionCheckbox.checked = indices.reduce((acc, index) => acc && kcm.shortcutsModel.data(index, Private.BaseModel.CheckedRole), true)
                                 }
                             }
                         }
                     }
                     onCurrentItemChanged: dm.rootIndex = kcm.filteredModel.index(currentIndex, 0)
-                    onCurrentIndexChanged: shortcutsList.selectedIndex = -1
+                    onCurrentIndexChanged:{ shortcutsList.selectedIndex = -1;
+                    }
                 }
             }
             Item {

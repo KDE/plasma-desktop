@@ -24,15 +24,17 @@
 #include <KPluginFactory>
 
 #include "launchfeedbacksettings.h"
+#include "launchfeedbackdata.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(LaunchFactory, "kcm_launchfeedback.json", registerPlugin<LaunchFeedback>();)
+K_PLUGIN_FACTORY_WITH_JSON(LaunchFactory, "kcm_launchfeedback.json", registerPlugin<LaunchFeedback>();registerPlugin<LaunchFeedbackData>();)
 
 LaunchFeedback::LaunchFeedback(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
-    , m_settings(new LaunchFeedbackSettings(this))
+    , m_data(new LaunchFeedbackData(this))
 {
-    qmlRegisterUncreatableType<LaunchFeedback>("org.kde.private.kcms.launchfeedback", 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
-    qmlRegisterType<LaunchFeedbackSettings>();
+    constexpr char uri[] = "org.kde.private.kcms.launchfeedback";
+    qmlRegisterUncreatableType<LaunchFeedback>(uri, 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
+    qmlRegisterAnonymousType<LaunchFeedbackSettings>(uri, 1);
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm_launchfeedback"),
         i18n("Configure application launch feedback"),
@@ -48,7 +50,7 @@ LaunchFeedback::~LaunchFeedback()
 
 LaunchFeedbackSettings *LaunchFeedback::launchFeedbackSettings() const
 {
-    return m_settings;
+    return m_data->settings();
 }
 
 #include "launchfeedback.moc"

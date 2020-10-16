@@ -40,8 +40,8 @@ Item {
         onAvailableScreenRegionChanged: placeToolBoxTimer.restart();
     }
 
-    property int iconSize: units.iconSizes.small
-    property int iconWidth: units.iconSizes.smallMedium
+    property int iconSize: PlasmaCore.Units.iconSizes.small
+    property int iconWidth: PlasmaCore.Units.iconSizes.smallMedium
     property int iconHeight: iconWidth
     property bool dialogWasVisible: false
     property bool open: false

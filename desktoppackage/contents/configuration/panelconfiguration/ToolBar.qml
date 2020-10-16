@@ -28,7 +28,7 @@ import org.kde.kirigami 2.0 as Kirigami
 Item {
     id: root
     state: parent.state
-    implicitWidth: Math.max(buttonsLayout_1.width, buttonsLayout_2.width, row.width) + units.smallSpacing * 2
+    implicitWidth: Math.max(buttonsLayout_1.width, buttonsLayout_2.width, row.width) + PlasmaCore.Units.smallSpacing * 2
     implicitHeight: row.height + 20
 
     readonly property string addWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets...")
@@ -61,10 +61,10 @@ Item {
         anchors.margins: rowSpacing
         anchors.topMargin: plasmoid.formFactor === PlasmaCore.Types.Vertical ? rowSpacing + closeButton.height : rowSpacing
 
-        property bool showText: plasmoid.formFactor === PlasmaCore.Types.Vertical || (row.x + row.width < root.width - placeHolder.width - units.iconSizes.small*4 - units.largeSpacing*5)
+        property bool showText: plasmoid.formFactor === PlasmaCore.Types.Vertical || (row.x + row.width < root.width - placeHolder.width - PlasmaCore.Units.iconSizes.small*4 - PlasmaCore.Units.largeSpacing*5)
 
-        rowSpacing: units.smallSpacing
-        columnSpacing: units.smallSpacing
+        rowSpacing: PlasmaCore.Units.smallSpacing
+        columnSpacing: PlasmaCore.Units.smallSpacing
 
         PlasmaComponents.Button {
             text: buttonsLayout_2.showText ? root.addWidgetsButtonText : ""
@@ -94,16 +94,16 @@ Item {
         rows: dialogRoot.vertical ? 4 : 1
         anchors.centerIn: parent
 
-        rowSpacing: units.smallSpacing
-        columnSpacing: units.smallSpacing
+        rowSpacing: PlasmaCore.Units.smallSpacing
+        columnSpacing: PlasmaCore.Units.smallSpacing
 
         EdgeHandle {
             id: edgeHandle
             Layout.alignment: Qt.AlignHCenter
         }
         Item {
-            Layout.preferredWidth: units.gridUnit
-            Layout.preferredHeight: units.gridUnit
+            Layout.preferredWidth: PlasmaCore.Units.gridUnit
+            Layout.preferredHeight: PlasmaCore.Units.gridUnit
         }
         PlasmaComponents3.Label {
             Layout.fillWidth: true
@@ -167,10 +167,10 @@ Item {
 
         anchors.margins: rowSpacing
 
-        property bool showText: plasmoid.formFactor === PlasmaCore.Types.Vertical || (row.x + row.width < root.width - placeHolder.width - units.iconSizes.small*4 - units.largeSpacing*5)
+        property bool showText: plasmoid.formFactor === PlasmaCore.Types.Vertical || (row.x + row.width < root.width - placeHolder.width - PlasmaCore.Units.iconSizes.small*4 - PlasmaCore.Units.largeSpacing*5)
 
-        rowSpacing: units.smallSpacing
-        columnSpacing: units.smallSpacing
+        rowSpacing: PlasmaCore.Units.smallSpacing
+        columnSpacing: PlasmaCore.Units.smallSpacing
 
         PlasmaComponents.Button {
             id: settingsButton

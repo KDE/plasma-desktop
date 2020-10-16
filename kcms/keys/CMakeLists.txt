@@ -2,9 +2,13 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_keys\")
 
 set(kcm_keys_SRCS
+    basemodel.cpp
     kcm_keys.cpp
     filteredmodel.cpp
+    globalaccelmodel.cpp
     shortcutsmodel.cpp
+    standardshortcutsmodel.cpp
+    keysdata.cpp
     )
 
 set(kglobalaccel_xml ${KGLOBALACCEL_DBUS_INTERFACES_DIR}/kf5_org.kde.KGlobalAccel.xml)
@@ -42,8 +46,10 @@ add_library(kcm_keys MODULE ${kcm_keys_SRCS})
 
 target_link_libraries(kcm_keys
     Qt5::DBus
+    KF5::ConfigGui
     KF5::GlobalAccel
     KF5::I18n
+    KF5::KCMUtils
     KF5::KIOWidgets
     KF5::QuickAddons
 )

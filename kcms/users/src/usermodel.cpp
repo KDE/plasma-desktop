@@ -21,13 +21,13 @@
 
 #include "usermodel.h"
 
-#include <QDebug>
 #include <QDBusPendingReply>
 #include <QDBusInterface>
 #include <algorithm>
 #include <KLocalizedString>
 
 #include "accounts_interface.h"
+#include "kcmusers_debug.h"
 
 UserModel::UserModel(QObject* parent)
     : QAbstractListModel(parent)
@@ -60,7 +60,7 @@ UserModel::UserModel(QObject* parent)
     reply.waitForFinished();
 
     if (reply.isError()) {
-        qDebug() << reply.error().message();
+        qCWarning(KCMUSERS) << reply.error().message();
         return;
     }
 
@@ -68,10 +68,23 @@ UserModel::UserModel(QObject* parent)
     for (const QDBusObjectPath& path: users) {
         User *user = new User(this);
         user->setPath(path);
-        connect(user, &User::dataChanged, [=]() {
-            beginResetModel();
-            endResetModel();
-        });
+
+        const std::list<QPair<void(User::*const)(),int>> set = {
+            {&User::uidChanged, UidRole},
+            {&User::nameChanged, NameRole},
+            {&User::faceValidChanged, FaceValidRole},
+            {&User::realNameChanged, RealNameRole},
+            {&User::emailChanged, EmailRole},
+            {&User::administratorChanged, AdministratorRole},
+        };
+
+        for (const auto &item: set) {
+            connect(user, item.first, [this, user, item]{
+                auto idx = index(m_userList.lastIndexOf(user));
+                Q_EMIT dataChanged(idx, idx, {item.second});
+            });
+        }
+
         m_userList.append(user);
     }
     std::sort(m_userList.begin(), m_userList.end(), [](User *lhs, User *) {

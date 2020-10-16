@@ -27,7 +27,7 @@ import org.kde.kquickcontrolsaddons 2.0
 FocusScope {
     id: itemList
 
-    property real minimumWidth: units.gridUnit * 14
+    property real minimumWidth: PlasmaCore.Units.gridUnit * 14
     property real maximumWidth: minimumWidth * 2
 
     width: minimumWidth
@@ -41,10 +41,10 @@ FocusScope {
     property QtObject dialog: null
     property QtObject childDialog: null
     property bool iconsEnabled: false
-    property int itemHeight: Math.ceil((Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.small)
+    property int itemHeight: Math.ceil((Math.max(theme.mSize(theme.defaultFont).height, PlasmaCore.Units.iconSizes.small)
         + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
         listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2
-    property int separatorHeight: lineSvg.horLineHeight + (2 * units.smallSpacing)
+    property int separatorHeight: lineSvg.horLineHeight + (2 * PlasmaCore.Units.smallSpacing)
 
     property alias currentIndex: listView.currentIndex
     property alias currentItem: listView.currentItem

@@ -29,7 +29,6 @@ ColumnLayout {
     property string cfg_icon: plasmoid.configuration.icon
     property alias cfg_switchTabsOnHover: switchTabsOnHoverCheckbox.checked
     property alias cfg_showAppsByName: showApplicationsByNameCheckbox.checked
-    property alias cfg_useExtraRunners: useExtraRunners.checked
     property alias cfg_alphaSort: alphaSort.checked
     property alias cfg_menuItems: configButtons.menuItems
 
@@ -39,8 +38,8 @@ ColumnLayout {
 
             Kirigami.FormData.label: i18n("Icon:")
 
-            implicitWidth: previewFrame.width + units.smallSpacing * 2
-            implicitHeight: previewFrame.height + units.smallSpacing * 2
+            implicitWidth: previewFrame.width + PlasmaCore.Units.smallSpacing * 2
+            implicitHeight: previewFrame.height + PlasmaCore.Units.smallSpacing * 2
 
             KQuickAddons.IconDialog {
                 id: iconDialog
@@ -54,12 +53,12 @@ ColumnLayout {
                 anchors.centerIn: parent
                 imagePath: plasmoid.location === PlasmaCore.Types.Vertical || plasmoid.location === PlasmaCore.Types.Horizontal
                          ? "widgets/panel-background" : "widgets/background"
-                width: units.iconSizes.large + fixedMargins.left + fixedMargins.right
-                height: units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
+                width: PlasmaCore.Units.iconSizes.large + fixedMargins.left + fixedMargins.right
+                height: PlasmaCore.Units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
 
                 PlasmaCore.IconItem {
                     anchors.centerIn: parent
-                    width: units.iconSizes.large
+                    width: PlasmaCore.Units.iconSizes.large
                     height: width
                     source: cfg_icon
                 }
@@ -101,9 +100,10 @@ ColumnLayout {
             text: i18n("Show applications by name")
         }
 
-        CheckBox {
-            id: useExtraRunners
-            text: i18n("Expand search to bookmarks, files and emails")
+        Button {
+            icon.name: "settings-configure"
+            text: i18n("Configure enabled search plugins")
+            onPressed: KQuickAddons.KCMShell.open(["kcm_plasmasearch"])
         }
 
         CheckBox {
@@ -120,6 +120,7 @@ ColumnLayout {
         Layout.fillWidth: true
         text: i18n("Drag tabs between the boxes to show/hide them, or reorder the visible tabs by dragging.")
         wrapMode: Text.WordWrap
+        horizontalAlignment: Text.AlignHCenter
     }
 
     Item {

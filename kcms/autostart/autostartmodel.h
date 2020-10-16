@@ -23,32 +23,19 @@
 
 #include <KService>
 
-enum AutostartEntrySource {
-    XdgAutoStart = 0,
-    XdgScripts = 1,
-    PlasmaShutdown = 2,
-    PlasmaStart = 3,
-};
-
-struct AutostartEntry
-{
-    QString name; // Human readable name or local script name
-    QString command; // exec or original .sh file
-    AutostartEntrySource source;
-    bool enabled;
-    QString fileName; // the file backing the entry
-    bool onlyInPlasma;
-};
-Q_DECLARE_TYPEINFO(AutostartEntry, Q_MOVABLE_TYPE);
+struct AutostartEntry;
+class QQuickItem;
 
 class AutostartModel : public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit AutostartModel(QWidget *parent = nullptr);
+    explicit AutostartModel(QObject *parent = nullptr);
 
     enum Roles {
+        Name = Qt::DisplayRole,
+        IconName = Qt::DecorationRole,
         Command = Qt::UserRole + 1,
         Enabled,
         Source,
@@ -56,28 +43,47 @@ public:
         OnlyInPlasma
     };
 
-    static AutostartEntrySource sourceFromInt(int index);
-    static QString XdgAutoStartPath();
-    static QStringList listPath();
-    static QStringList listPathName();
+    enum AutostartEntrySource {
+        XdgAutoStart = 0,
+        XdgScripts = 1,
+        PlasmaShutdown = 2,
+        PlasmaStart = 3,
+    };
+    Q_ENUM(AutostartEntrySource)
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
     QHash<int, QByteArray> roleNames() const override;
 
-    bool addEntry(const KService::Ptr &service);
-
-    bool addEntry(const QUrl &path, const bool symlink);
-
     bool reloadEntry(const QModelIndex &index, const QString &fileName);
-    bool removeEntry(const QModelIndex &index);
+
+    Q_INVOKABLE void removeEntry(int row);
+    Q_INVOKABLE void editApplication(int row, QQuickItem *context);
+    Q_INVOKABLE void addScript(const QUrl &url, AutostartEntrySource kind);
+    Q_INVOKABLE void showApplicationDialog(QQuickItem *context);
 
     void load();
 
+Q_SIGNALS:
+    void error(const QString &message);
+
 private:
+    void addApplication(const KService::Ptr &service);
+    void loadScriptsFromDir(const QString &subDir, AutostartEntrySource kind);
+    QString XdgAutoStartPath() const;
+
     QVector<AutostartEntry> m_entries;
-    QWidget *m_window;
 };
+
+struct AutostartEntry {
+    QString name;    // Human readable name or script file path. In case of symlinks the target file path
+    QString command; // exec or original .sh file
+    AutostartModel::AutostartEntrySource source;
+    bool enabled;
+    QString fileName; // the file backing the entry
+    bool onlyInPlasma;
+    QString iconName;
+};
+Q_DECLARE_TYPEINFO(AutostartEntry, Q_MOVABLE_TYPE);
 
 #endif // AUTOSTARTMODEL_H

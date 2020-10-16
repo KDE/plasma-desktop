@@ -30,7 +30,8 @@ Item {
     height: isSeparator ? separatorHeight : itemHeight
     width: ListView.view.width
 
-    enabled: !isSeparator
+    // if it's not disabled and is either a leaf node or a node with children
+    enabled: !isSeparator && !model.disabled && (!isParent || (isParent && hasChildren))
 
     signal actionTriggered(string actionId, variant actionArgument)
     signal aboutToShowActionMenu(variant actionMenu)
@@ -187,7 +188,7 @@ Item {
 
         height: parent.height
 
-        spacing: units.smallSpacing * 2
+        spacing: PlasmaCore.Units.smallSpacing * 2
         readonly property real actualSpacing: ((icon.visible ? 1 : 0) * spacing) + ((arrow.visible ? 1 : 0) * spacing)
 
         LayoutMirroring.enabled: (Qt.application.layoutDirection == Qt.RightToLeft)
@@ -197,7 +198,7 @@ Item {
 
             anchors.verticalCenter: parent.verticalCenter
 
-            width: visible ? units.iconSizes.small : 0
+            width: visible ? PlasmaCore.Units.iconSizes.small : 0
             height: width
 
             visible: iconsEnabled
@@ -231,7 +232,7 @@ Item {
 
             anchors.verticalCenter: parent.verticalCenter
 
-            width: visible ? units.iconSizes.small : 0
+            width: visible ? PlasmaCore.Units.iconSizes.small : 0
             height: width
 
             visible: item.hasChildren

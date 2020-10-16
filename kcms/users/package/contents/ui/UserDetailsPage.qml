@@ -26,7 +26,7 @@ import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Dialogs 1.3
 
 import org.kde.kcm 1.2
-import org.kde.kirigami 2.8 as Kirigami
+import org.kde.kirigami 2.13 as Kirigami
 
 SimpleKCM {
     id: usersDetailPage
@@ -38,9 +38,19 @@ SimpleKCM {
     property url oldImage
 
     Connections {
+        target: user
+        function onApplyError(errorText) {
+            errorMessage.visible = true
+            errorMessage.text = errorText
+        }
+    }
+
+
+    Connections {
         target: kcm
 
         onApply: {
+            errorMessage.visible = false
             usersDetailPage.user.realName = realNametextField.text
             usersDetailPage.user.email = emailTextField.text
             usersDetailPage.user.name = userNameField.text
@@ -51,6 +61,7 @@ SimpleKCM {
         }
 
         onReset: {
+            errorMessage.visible = false
             realNametextField.text = usersDetailPage.user.realName
             emailTextField.text = usersDetailPage.user.email
             userNameField.text = usersDetailPage.user.name
@@ -90,7 +101,12 @@ SimpleKCM {
     }
 
     ColumnLayout {
-
+        Kirigami.InlineMessage {
+            id: errorMessage
+            visible: false
+            type: Kirigami.MessageType.Error
+            Layout.fillWidth: true
+        }
         RowLayout {
             Layout.alignment: Qt.AlignHCenter
             QQC2.RoundButton {
@@ -98,28 +114,16 @@ SimpleKCM {
 
                 readonly property int size: 6 * Kirigami.Units.gridUnit
 
-                icon.name: usersDetailPage.user.faceValid || usersDetailPage.overrideImage ? "" : "user-identity"
-                icon.width: size
-                icon.height: size
                 implicitWidth: size
                 implicitHeight: size
                 flat: true
 
-                Image {
+                Kirigami.Avatar {
                     source: usersDetailPage.user.face
-                    visible: usersDetailPage.user.faceValid || usersDetailPage.overrideImage
-                    sourceSize: Qt.size(parent.size*Screen.devicePixelRatio, parent.size*Screen.devicePixelRatio)
-                    cache: false
+                    name: user.realName
                     anchors {
                         fill: parent
                         margins: Kirigami.Units.smallSpacing
-                    }
-                    layer.enabled: usersDetailPage.user.faceValid || usersDetailPage.overrideImage
-                    layer.effect: OpacityMask {
-                        maskSource: Rectangle {
-                            height: userPfp.size; width: height
-                            radius: height/2
-                        }
                     }
                 }
 
@@ -224,8 +228,10 @@ SimpleKCM {
                 text: i18n("Change Avatar")
             }
         }
-        StackLayout {
+        QQC2.SwipeView {
             id: stackSwitcher
+            interactive: false
+
             Layout.preferredWidth: usersDetailPage.width - (Kirigami.Units.largeSpacing*4)
             Keys.onEscapePressed: {
                 picturesSheet.close()
@@ -244,6 +250,8 @@ SimpleKCM {
 
                     Layout.fillWidth: true
                     Layout.alignment: Qt.AlignHCenter
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
 
                     QQC2.Button {
                         Layout.preferredHeight: Kirigami.Units.gridUnit * 6
@@ -285,8 +293,6 @@ SimpleKCM {
                         }
 
                         onClicked: stackSwitcher.currentIndex = 1
-                        // https://bugs.kde.org/show_bug.cgi?id=420439
-                        visible: false
                     }
 
                     Repeater {
@@ -371,6 +377,8 @@ SimpleKCM {
 
                     Layout.fillWidth: true
                     Layout.alignment: Qt.AlignHCenter
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
 
                     QQC2.Button {
                         Layout.preferredHeight: Kirigami.Units.gridUnit * 6
@@ -420,6 +428,15 @@ SimpleKCM {
                                 anchors.fill: parent
                                 anchors.margins: Kirigami.Units.smallSpacing
                                 color: modelData.color
+
+                                Rectangle {
+                                    anchors.fill: parent
+                                    gradient: Gradient {
+                                        GradientStop { position: 0.0; color: "transparent" }
+                                        GradientStop { position: 1.0; color: Qt.rgba(0, 0, 0, 0.3) }
+                                    }
+                                }
+
                                 Kirigami.Heading {
                                     anchors.centerIn: parent
                                     color: modelData.dark ? "white" : "black"

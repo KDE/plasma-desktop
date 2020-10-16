@@ -123,7 +123,7 @@ PlasmaCore.ToolTipArea {
         opacity: plasmoid.expanded ? 1 : 0
         Behavior on opacity {
             NumberAnimation {
-                duration: units.shortDuration
+                duration: PlasmaCore.Units.shortDuration
                 easing.type: Easing.InOutQuad
             }
         }

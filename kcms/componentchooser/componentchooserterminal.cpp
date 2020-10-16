@@ -16,7 +16,6 @@
 #include "componentchooserterminal.h"
 #include "terminal_settings.h"
 
-#include <KToolInvocation>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QCheckBox>
@@ -25,7 +24,6 @@
 #include <KOpenWithDialog>
 #include <KConfig>
 
-#include <KMimeTypeTrader>
 #include <KUrlRequester>
 #include <KConfigGroup>
 #include <KLocalizedString>

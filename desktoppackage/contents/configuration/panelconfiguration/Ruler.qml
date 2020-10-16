@@ -129,7 +129,7 @@ PlasmaCore.FrameSvgItem {
         offset: panel.offset
         graphicElementName: "minslider"
         onValueChanged: panel.minimumLength = value
-        minimumPosition: offsetHandle.position + units.gridUnit * 3
+        minimumPosition: offsetHandle.position + PlasmaCore.Units.gridUnit * 3
         maximumPosition: {
             var dialogRootSize = dialogRoot.vertical ? dialogRoot.height : dialogRoot.width
             var size = dialogRoot.vertical ? height : width
@@ -144,7 +144,7 @@ PlasmaCore.FrameSvgItem {
         offset: panel.offset
         graphicElementName: "maxslider"
         onValueChanged: panel.maximumLength = value
-        minimumPosition: offsetHandle.position + units.gridUnit * 3
+        minimumPosition: offsetHandle.position + PlasmaCore.Units.gridUnit * 3
         maximumPosition: {
             var dialogRootSize = dialogRoot.vertical ? dialogRoot.height : dialogRoot.width
             var size = dialogRoot.vertical ? height : width
@@ -158,7 +158,7 @@ PlasmaCore.FrameSvgItem {
         offset: panel.offset
         graphicElementName: "minslider"
         onValueChanged: panel.minimumLength = value
-        maximumPosition: offsetHandle.position - units.gridUnit * 3
+        maximumPosition: offsetHandle.position - PlasmaCore.Units.gridUnit * 3
         minimumPosition: {
             var size = dialogRoot.vertical ? height : width
             panel.alignment === Qt.AlignCenter ? Math.max(-size/2, offset*2 - size/2) : -size/2
@@ -171,7 +171,7 @@ PlasmaCore.FrameSvgItem {
         offset: panel.offset
         graphicElementName: "maxslider"
         onValueChanged: panel.maximumLength = value
-        maximumPosition: offsetHandle.position - units.gridUnit * 3
+        maximumPosition: offsetHandle.position - PlasmaCore.Units.gridUnit * 3
         minimumPosition: {
             var size = dialogRoot.vertical ? height : width
             panel.alignment === Qt.AlignCenter ? Math.max(-size/2, offset*2 - size/2) : -size/2

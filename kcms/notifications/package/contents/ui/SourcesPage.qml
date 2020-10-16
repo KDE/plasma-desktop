@@ -112,37 +112,21 @@ Kirigami.Page {
                         appConfiguration.rootIndex = kcm.sourcesModel.makePersistentModelIndex(sourceIdx);
                     }
 
-                    delegate: QtControls.ItemDelegate {
+                    delegate: Kirigami.BasicListItem {
                         id: sourceDelegate
                         width: sourcesList.width
                         text: model.display
+                        icon: model.decoration
                         highlighted: ListView.isCurrentItem
                         onClicked: {
                             sourcesList.forceActiveFocus();
                             sourcesList.currentIndex = index;
                         }
-
-                        contentItem: RowLayout {
-                            Kirigami.Icon {
-                                Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                                Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                                source: model.decoration
-                            }
-
-                            QtControls.Label {
-                                Layout.fillWidth: true
-                                text: sourceDelegate.text
-                                font: sourceDelegate.font
-                                color: sourceDelegate.highlighted || sourceDelegate.checked || (sourceDelegate.pressed && !sourceDelegate.checked && !sourceDelegate.sectionDelegate) ? Kirigami.Theme.highlightedTextColor : (sourceDelegate.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor)
-                                elide: Text.ElideRight
-                                textFormat: Text.PlainText
-                            }
-                        }
                     }
 
                     Kirigami.PlaceholderMessage {
                         anchors.centerIn: parent
-                        width: parent.width - (units.largeSpacing * 4)
+                        width: parent.width - (Kirigami.Units.largeSpacing * 4)
 
                         visible: sourcesList.count === 0 && searchField.length > 0
 
@@ -165,7 +149,7 @@ Kirigami.Page {
 
             Kirigami.PlaceholderMessage {
                 anchors.centerIn: parent
-                width: parent.width - (units.largeSpacing * 4)
+                width: parent.width - (Kirigami.Units.largeSpacing * 4)
                 text: i18n("Select an application from the list to configure its notification settings and behavior.")
                 visible: !appConfiguration.rootIndex || !appConfiguration.rootIndex.valid
             }

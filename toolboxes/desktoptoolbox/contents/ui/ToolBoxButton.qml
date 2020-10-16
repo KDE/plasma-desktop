@@ -37,7 +37,7 @@ Item {
 
         Behavior on y {
             NumberAnimation {
-                duration: units.longDuration
+                duration: PlasmaCore.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
@@ -47,21 +47,21 @@ Item {
     visible: plasmoid.editMode
     Behavior on opacity {
         OpacityAnimator {
-            duration: units.longDuration
+            duration: PlasmaCore.Units.longDuration
             easing.type: Easing.InOutQuad
         }
         enabled: visible
     }
     Behavior on rotation {
         NumberAnimation {
-            duration: units.shortDuration;
+            duration: PlasmaCore.Units.shortDuration;
             easing.type: Easing.InOutExpo;
         }
         enabled: visible
     }
     Behavior on x {
         NumberAnimation {
-            duration: units.shortDuration;
+            duration: PlasmaCore.Units.shortDuration;
             easing.type: Easing.InOutExpo;
         }
         enabled: visible
@@ -69,7 +69,7 @@ Item {
     }
     Behavior on y {
         NumberAnimation {
-            duration: units.shortDuration;
+            duration: PlasmaCore.Units.shortDuration;
             easing.type: Easing.InOutExpo;
         }
         enabled: visible
@@ -99,14 +99,14 @@ Item {
 
         //top
         if (y + height / 2 < container.height / 2) {
-            if (Math.abs(container.width/2 - (x + width/2)) < units.gridUnit) {
+            if (Math.abs(container.width/2 - (x + width/2)) < PlasmaCore.Units.gridUnit) {
                 toolBoxButton.state = "topcenter";
             } else {
                 toolBoxButton.state = "top";
             }
         //bottom
         } else {
-            if (Math.abs(container.width/2 - (x + height/2)) < units.gridUnit) {
+            if (Math.abs(container.width/2 - (x + height/2)) < PlasmaCore.Units.gridUnit) {
                 toolBoxButton.state = "bottomcenter";
             } else {
                 toolBoxButton.state = "bottom";
@@ -168,10 +168,10 @@ Item {
             }
 
             // Center snapping X
-            if (snapX && Math.abs(snapStartX - mouse.x) > units.gridUnit) {
+            if (snapX && Math.abs(snapStartX - mouse.x) > PlasmaCore.Units.gridUnit) {
                 toolBoxButton.anchors.horizontalCenter = undefined;
                 snapX = false;
-            } else if (!snapX && Math.abs(main.width/2 - (toolBoxButton.x + toolBoxButton.width/2)) < units.gridUnit) {
+            } else if (!snapX && Math.abs(main.width/2 - (toolBoxButton.x + toolBoxButton.width/2)) < PlasmaCore.Units.gridUnit) {
                 toolBoxButton.anchors.horizontalCenter = main.horizontalCenter;
                 snapStartX = mouse.x;
                 snapX = true;
@@ -198,7 +198,7 @@ Item {
         RowLayout {
             id: buttonLayout
             anchors.centerIn: parent
-            spacing: units.smallSpacing
+            spacing: PlasmaCore.Units.smallSpacing
 
 
             PlasmaComponents3.ToolButton {
@@ -224,7 +224,7 @@ Item {
                 Layout.preferredWidth: height
                 onClicked: plasmoid.editMode = false
                 PlasmaComponents3.ToolTip {
-                    text: i18n("Finish Customizing Layout")
+                    text: i18n("Exit Edit Mode")
                 }
             }
         }

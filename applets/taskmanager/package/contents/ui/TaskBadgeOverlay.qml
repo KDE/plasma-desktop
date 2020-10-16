@@ -19,6 +19,7 @@
 
 import QtQuick 2.8
 
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
@@ -29,7 +30,7 @@ Item {
         anchors.fill: parent
 
         Rectangle {
-            readonly property int offset: Math.round(Math.max(units.smallSpacing / 2, badgeMask.width / 32))
+            readonly property int offset: Math.round(Math.max(PlasmaCore.Units.smallSpacing / 2, badgeMask.width / 32))
             x: Qt.application.layoutDirection === Qt.RightToLeft ? -offset + iconWidthDelta : parent.width - width + offset - iconWidthDelta
             y: -offset
             width: badgeRect.width + offset * 2

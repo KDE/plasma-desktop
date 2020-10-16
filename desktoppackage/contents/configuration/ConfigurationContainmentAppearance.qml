@@ -23,13 +23,14 @@ import QtQuick.Layouts 1.1
 
 import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.plasma.private.shell 2.0 as ShellPrivate // for WallpaperPlugin
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.5 as Kirigami
 
 ColumnLayout {
     id: root
     spacing: 0 // unless it's 0 there will be an additional gap between two FormLayouts
 
-    property int formAlignment: wallpaperComboBox.Kirigami.ScenePosition.x - root.Kirigami.ScenePosition.x + (units.largeSpacing/2)
+    property int formAlignment: wallpaperComboBox.Kirigami.ScenePosition.x - root.Kirigami.ScenePosition.x + (PlasmaCore.Units.largeSpacing/2)
     property string currentWallpaper: ""
     property string containmentPlugin: ""
     signal configurationChanged

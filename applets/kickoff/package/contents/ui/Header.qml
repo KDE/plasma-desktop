@@ -1,5 +1,6 @@
 /*
  *    Copyright 2014  Sebastian Kügler <sebas@kde.org>
+ *    SPDX-FileCopyrightText: (C) 2020 Carl Schwan <carl@carlschwan.eu>
  *
  *    This program is free software; you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
@@ -17,17 +18,22 @@
  */
 
 import QtQuick 2.12
+import QtQuick.Layouts 1.12
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kcoreaddons 1.0 as KCoreAddons
+// While using Kirigami in applets is normally a no, we
+// use Avatar, which doesn't need to read the colour scheme
+// at all to function, so there won't be any oddities with colours.
+import org.kde.kirigami 2.13 as Kirigami
 import org.kde.kquickcontrolsaddons 2.0
 import QtGraphicalEffects 1.0
 
-Item {
+PlasmaExtras.PlasmoidHeading {
     id: header
 
-    implicitHeight: units.gridUnit * 5
+    implicitHeight: PlasmaCore.Units.gridUnit * 5
 
     property alias query: queryField.text
     property Item input: queryField
@@ -63,148 +69,95 @@ Item {
         }
     ] // states
 
+    RowLayout {
+        anchors.fill: parent
 
-    Image {
-        id: faceIcon
-        source: kuser.faceIconUrl
-        cache: false
-        visible: source !== ""
+        PlasmaComponents.RoundButton {
+            visible: KCMShell.authorize("kcm_users.desktop").length > 0
 
-        width: units.gridUnit * 3
-        height: width
+            flat: true
 
-        sourceSize.width: width
-        sourceSize.height: height
+            Layout.preferredWidth: PlasmaCore.Units.gridUnit * 3
+            Layout.preferredHeight: PlasmaCore.Units.gridUnit * 3
 
-        fillMode: Image.PreserveAspectFit
-
-        anchors {
-            top: parent.top
-            left: parent.left
-            topMargin: units.gridUnit
-            leftMargin: units.gridUnit
-        }
-
-        // Crop the avatar to fit in a circle, like the lock and login screens
-        // but don't on software rendering where this won't render
-        layer.enabled: faceIcon.GraphicsInfo.api !== GraphicsInfo.Software
-        layer.effect: OpacityMask {
-            // this Rectangle is a circle due to radius size
-            maskSource: Rectangle {
-                width: faceIcon.width
-                height: faceIcon.height
-                radius: height / 2
-                visible: false
+            Kirigami.Avatar {
+                source: kuser.faceIconUrl
+                name: nameLabel
+                anchors {
+                    fill: parent
+                    margins: PlasmaCore.Units.smallSpacing
+                }
             }
-        }
-    }
-    // Border for the circular avatar
-    Rectangle {
-        anchors.fill: faceIcon
-        // Don't show the circle if we're using software rendering, because
-        // the cropping effect won't be displayed under it
-        visible: GraphicsInfo.api !== GraphicsInfo.Software
 
-        radius: height / 2
-        border.width: 1
-        border.color: theme.textColor
-        opacity: 0.4
-        color: "transparent"
-    }
-
-    PlasmaCore.IconItem {
-        source: "user-identity"
-        visible: faceIcon.status !== Image.Ready
-        anchors.fill: faceIcon
-        anchors.bottomMargin: units.smallSpacing
-        usesPlasmaTheme: false
-    }
-
-    MouseArea {
-        anchors.fill: faceIcon
-        acceptedButtons: Qt.LeftButton
-        cursorShape: Qt.PointingHandCursor
-        onClicked: {
-            KCMShell.openSystemSettings("kcm_users")
-        }
-        visible: KCMShell.authorize("kcm_users.desktop").length > 0
-    }
-
-    PlasmaExtras.Heading {
-        id: nameLabel
-
-        level: 2
-        text: kuser.fullName
-        elide: Text.ElideRight
-        horizontalAlignment: Text.AlignLeft
-        verticalAlignment: Text.AlignBottom
-
-        Behavior on opacity { NumberAnimation { duration:  units.longDuration; easing.type: Easing.InOutQuad; } }
-
-        anchors {
-            left: faceIcon.right
-            bottom: queryField.top
-            right: parent.right
-            leftMargin: units.gridUnit
-            rightMargin: units.gridUnit
-        }
-    }
-
-    PlasmaExtras.Heading {
-        id: infoLabel
-
-        level: 5
-        opacity: 0
-        text: kuser.os !== "" ? i18n("%2@%3 (%1)", kuser.os, kuser.loginName, kuser.host) : i18n("%1@%2", kuser.loginName, kuser.host)
-        elide: Text.ElideRight
-        horizontalAlignment: Text.AlignLeft
-        verticalAlignment: Text.AlignBottom
-
-        Behavior on opacity { NumberAnimation { duration:  units.longDuration; easing.type: Easing.InOutQuad; } }
-
-        anchors {
-            left: faceIcon.right
-            bottom: queryField.top
-            right: parent.right
-            leftMargin: units.gridUnit
-            rightMargin: units.gridUnit
-        }
-    }
-
-    // Show the info instead of the user's name when hovering over it
-    MouseArea {
-        anchors.fill: nameLabel
-        hoverEnabled: true
-        onEntered: {
-            header.state = "info"
-        }
-        onExited: {
-            header.state = "name"
-        }
-    }
-
-    PlasmaComponents.TextField {
-        id: queryField
-
-        placeholderText: i18n("Search...")
-        clearButtonShown: true
-
-        onTextChanged: {
-            if (root.state != "Search") {
-                root.previousState = root.state;
-                root.state = "Search";
-            }
-            if (text == "") {
-                root.state = root.previousState;
+            onClicked: {
+                KCMShell.openSystemSettings("kcm_users")
             }
         }
 
-        anchors {
-            left: faceIcon.right
-            bottom: faceIcon.bottom
-            right: parent.right
-            leftMargin: units.gridUnit
-            rightMargin: units.gridUnit
+        ColumnLayout {
+            Layout.fillWidth: true
+            Layout.rightMargin: PlasmaCore.Units.gridUnit
+
+            Item {
+                Layout.fillWidth: true
+                Layout.preferredHeight: PlasmaCore.Units.gridUnit
+
+                PlasmaExtras.Heading {
+                    id: nameLabel
+                    anchors.fill: parent
+
+                    level: 2
+                    text: kuser.fullName
+                    elide: Text.ElideRight
+                    horizontalAlignment: Text.AlignLeft
+                    verticalAlignment: Text.AlignBottom
+
+                    Behavior on opacity { NumberAnimation { duration:  PlasmaCore.Units.longDuration; easing.type: Easing.InOutQuad; } }
+
+                    // Show the info instead of the user's name when hovering over it
+                    MouseArea {
+                        anchors.fill: nameLabel
+                        hoverEnabled: true
+                        onEntered: {
+                            header.state = "info"
+                        }
+                        onExited: {
+                            header.state = "name"
+                        }
+                    }
+                }
+
+                PlasmaExtras.Heading {
+                    id: infoLabel
+                    anchors.fill: parent
+                    level: 5
+                    opacity: 0
+                    text: kuser.os !== "" ? i18n("%2@%3 (%1)", kuser.os, kuser.loginName, kuser.host) : i18n("%1@%2", kuser.loginName, kuser.host)
+                    elide: Text.ElideRight
+                    horizontalAlignment: Text.AlignLeft
+                    verticalAlignment: Text.AlignBottom
+
+                    Behavior on opacity { NumberAnimation { duration:  PlasmaCore.Units.longDuration; easing.type: Easing.InOutQuad; } }
+                }
+            }
+
+            PlasmaComponents.TextField {
+                id: queryField
+                Layout.fillWidth: true
+
+                placeholderText: i18n("Search...")
+                clearButtonShown: true
+
+                onTextChanged: {
+                    if (root.state != "Search") {
+                        root.previousState = root.state;
+                        root.state = "Search";
+                    }
+                    if (text == "") {
+                        root.state = root.previousState;
+                    }
+                }
+            }
         }
     }
 }

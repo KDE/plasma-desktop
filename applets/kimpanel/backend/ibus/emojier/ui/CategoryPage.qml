@@ -113,6 +113,7 @@ Kirigami.ScrollablePage
         delegate: MouseArea {
             QQC2.Label {
                 font.pointSize: 25
+                font.family: 'emoji' // Avoid monochrome fonts like DejaVu Sans
                 fontSizeMode: model.display.length > 5 ? Text.Fit : Text.FixedSize
                 minimumPointSize: 10
                 text: model.display

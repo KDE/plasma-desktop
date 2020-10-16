@@ -22,6 +22,9 @@
 
 #include <KCModule>
 #include <KConfig>
+#include <QRadioButton>
+#include <QCheckBox>
+#include <QPushButton>
 
 
 
@@ -48,6 +51,11 @@ private:
     KPluginSelector *m_pluginSelector;
     KConfig m_config;
     QString m_pluginID;
+    QRadioButton *m_topPositioning;
+    QRadioButton *m_freeFloating;
+    QCheckBox *m_retainPriorSearch;
+    QPushButton *m_clearHistoryButton;
+    QCheckBox *m_enableHistory;
 };
 
 #endif

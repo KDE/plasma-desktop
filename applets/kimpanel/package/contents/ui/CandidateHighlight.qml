@@ -27,7 +27,7 @@ Item {
 
     Behavior on opacity {
         NumberAnimation {
-            duration: units.longDuration
+            duration: PlasmaCore.Units.longDuration
             easing.type: Easing.OutQuad
         }
     }

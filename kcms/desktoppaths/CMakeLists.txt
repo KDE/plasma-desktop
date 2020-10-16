@@ -6,6 +6,14 @@ set(kcm_desktoppaths_PART_SRCS
    desktoppathssettings.cpp
 )
 
+kcmutils_generate_module_data(
+    kcm_desktoppaths_PART_SRCS
+    MODULE_DATA_HEADER desktoppathsdata.h
+    MODULE_DATA_CLASS_NAME DesktopPathsData
+    SETTINGS_HEADERS desktoppathssettings.h
+    SETTINGS_CLASSES DesktopPathsSettings
+)
+
 ki18n_wrap_ui(kcm_desktoppaths_PART_SRCS globalpaths.ui)
 
 add_library(kcm_desktoppaths MODULE ${kcm_desktoppaths_PART_SRCS})
