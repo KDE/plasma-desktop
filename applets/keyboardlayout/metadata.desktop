@@ -1,15 +1,18 @@
 [Desktop Entry]
 Name=Keyboard Layout Switcher
 Comment=Show/switch keyboard layout
+Icon=input-keyboard
 
 Type=Service
 X-KDE-ServiceTypes=Plasma/Applet
 X-KDE-PluginInfo-Author=Andrey Butirsky
 X-KDE-PluginInfo-Email=butirsky@gmail.com
+X-KDE-PluginInfo-Author=Noah Davis
+X-KDE-PluginInfo-Email=noahadvs@gmail.com
 X-KDE-PluginInfo-Name=org.kde.plasma.keyboardlayout
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=https://kde.org/plasma-desktop/
-X-KDE-PluginInfo-License=GPL-2.0+
+X-KDE-PluginInfo-License=GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 X-KDE-PluginInfo-EnabledByDefault=true
 
 X-Plasma-NotificationArea=true
