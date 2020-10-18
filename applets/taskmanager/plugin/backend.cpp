@@ -181,7 +181,7 @@ QVariantList Backend::jumpListActions(const QUrl &launcherUrl, QObject *parent)
             action->setSeparator(true);
         }
 
-        connect(action, &QAction::triggered, this, [this, serviceAction]() {
+        connect(action, &QAction::triggered, this, [serviceAction]() {
             auto *job = new KIO::ApplicationLauncherJob(serviceAction);
             auto *delegate = new KNotificationJobUiDelegate;
             delegate->setAutoErrorHandlingEnabled(true);
@@ -216,7 +216,7 @@ QVariantList Backend::systemSettingsActions(QObject *parent) const
         return actions;
     }
 
-    for (const QString &id : ids) {
+    for (const QString &id : qAsConst(ids)) {
         KService::Ptr service = KService::serviceByStorageId(id);
         if (!service || !service->isValid()) {
             continue;
@@ -226,7 +226,7 @@ QVariantList Backend::systemSettingsActions(QObject *parent) const
         action->setText(service->name());
         action->setIcon(QIcon::fromTheme(service->icon()));
 
-        connect(action, &QAction::triggered, this, [this, service]() {
+        connect(action, &QAction::triggered, this, [service]() {
             auto *job = new KIO::ApplicationLauncherJob(service);
             auto *delegate = new KNotificationJobUiDelegate;
             delegate->setAutoErrorHandlingEnabled(true);
