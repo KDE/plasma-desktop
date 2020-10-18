@@ -50,6 +50,7 @@ target_link_libraries(kcm_users
     KF5::Declarative
     KF5::I18n
     KF5::QuickAddons
+    KF5::Wallet
     Qt5::DBus
     crypt
 )
