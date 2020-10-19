@@ -106,7 +106,7 @@ PagerModel::Private::Private(PagerModel *q)
     QObject::connect(activityInfo, &ActivityInfo::currentActivityChanged, q,
         [this]() {
             if (pagerType == VirtualDesktops && windowModels.count()) {
-                for (auto windowModel : windowModels) {
+                for (auto windowModel : qAsConst(windowModels)) {
                     windowModel->setActivity(activityInfo->currentActivity());
                 }
             }
@@ -118,9 +118,10 @@ PagerModel::Private::Private(PagerModel *q)
 
     auto configureScreen = [q](QScreen* screen) {
         QObject::connect(screen, &QScreen::geometryChanged, q, &PagerModel::pagerItemSizeChanged);
-        q->pagerItemSizeChanged();
+        Q_EMIT q->pagerItemSizeChanged();
     };
-    for (QScreen* screen : qGuiApp->screens()) {
+    const auto screens = qGuiApp->screens();
+    for (QScreen* screen : screens) {
         configureScreen(screen);
     }
     QObject::connect(qGuiApp, &QGuiApplication::screenAdded, q, configureScreen);
@@ -131,7 +132,7 @@ PagerModel::Private::Private(PagerModel *q)
         [this]() {
             cachedStackingOrder = KWindowSystem::stackingOrder();
 
-            for (auto windowModel : windowModels) {
+            for (auto windowModel : qAsConst(windowModels)) {
                 windowModel->refreshStackingOrder();
             }
         }
@@ -434,7 +435,7 @@ void PagerModel::refresh()
     if (d->pagerType == VirtualDesktops) {
         int virtualDesktop = 0;
 
-        for (auto windowModel : d->windowModels) {
+        for (auto windowModel : qAsConst(d->windowModels)) {
             windowModel->setVirtualDesktop(d->virtualDesktopInfo->desktopIds().at(virtualDesktop));
             ++virtualDesktop;
 
@@ -444,7 +445,7 @@ void PagerModel::refresh()
         int activityIndex = 0;
         const QStringList &runningActivities = d->activityInfo->runningActivities();
 
-        for (auto windowModel : d->windowModels) {
+        for (auto windowModel : qAsConst(d->windowModels)) {
             windowModel->setVirtualDesktop();
 
             windowModel->setActivity(runningActivities.at(activityIndex));
@@ -452,7 +453,7 @@ void PagerModel::refresh()
         }
     }
 
-    for (auto windowModel : d->windowModels) {
+    for (auto windowModel : qAsConst(d->windowModels)) {
         if (d->showOnlyCurrentScreen && d->screenGeometry.isValid()) {
             windowModel->setScreenGeometry(d->screenGeometry);
             windowModel->setFilterByScreen(true);

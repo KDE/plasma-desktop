@@ -1158,7 +1158,8 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row, bool sho
     if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
         if (isDropBetweenSharedViews(mimeData->urls(), dropTargetFolderUrl)) {
             setSortMode(-1);
-            for (const auto &url : mimeData->urls()) {
+            const QList<QUrl> urls = mimeData->urls();
+            for (const auto &url : urls) {
                 m_dropTargetPositions.insert(url.fileName(), dropPos);
                 m_screenMapper->addMapping(mappableUrl(url), m_screen, ScreenMapper::DelayedSignal);
                 m_screenMapper->removeItemFromDisabledScreen(mappableUrl(url));
@@ -1185,7 +1186,8 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row, bool sho
     // The QMimeData we extract from the DropArea's drop event is deleted as soon as this method
     // ends but we need to keep a copy for when popupMenuAboutToShow fires.
     QMimeData *mimeCopy = new QMimeData();
-    for (const QString &format : mimeData->formats()) {
+    const QStringList formats = mimeData->formats();
+    for (const QString &format : formats) {
         mimeCopy->setData(format, mimeData->data(format));
     }
 

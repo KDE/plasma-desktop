@@ -244,7 +244,10 @@ ColumnLayout {
 
     // Player controls row
     RowLayout {
-        Layout.maximumWidth: header.width
+        Layout.maximumWidth: header.Layout.maximumWidth
+        // Match margins of header
+        Layout.leftMargin: isWin ? 0 : PlasmaCore.Units.gridUnit / 2
+        Layout.rightMargin: isWin ? 0 : PlasmaCore.Units.gridUnit / 2
 
         visible: hasPlayer
         enabled: canControl
@@ -253,6 +256,7 @@ ColumnLayout {
             Layout.fillWidth: true
             Layout.topMargin: PlasmaCore.Units.smallSpacing
             Layout.bottomMargin: PlasmaCore.Units.smallSpacing
+            Layout.rightMargin: isWin ? PlasmaCore.Units.smallSpacing : PlasmaCore.Units.largeSpacing
             spacing: 0
 
              ScrollableTextWrapper {
@@ -260,6 +264,7 @@ ColumnLayout {
 
                 Layout.fillWidth: true
                 Layout.preferredHeight: songText.height
+                implicitWidth: songText.implicitWidth
 
                 PlasmaComponents3.Label {
                     id: songText
@@ -279,6 +284,7 @@ ColumnLayout {
 
                 Layout.fillWidth: true
                 Layout.preferredHeight: artistText.height
+                implicitWidth: artistText.implicitWidth
                 visible: artistText.text !== ""
 
                 PlasmaExtras.DescriptiveLabel {
