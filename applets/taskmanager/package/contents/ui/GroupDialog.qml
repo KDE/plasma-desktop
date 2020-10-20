@@ -146,7 +146,10 @@ PlasmaCore.Dialog {
                         return -1;
                     }
 
-                    onItemAdded: Qt.callLater(updateSize)
+                    onItemAdded: {
+                        item.labelTextChanged.connect(updateSize);
+                        Qt.callLater(updateSize)
+                    }
 
                     onItemRemoved: {
                         if (groupDialog.visible && index > 0 && index == count) {
@@ -278,8 +281,6 @@ PlasmaCore.Dialog {
                 if (textWidth > maxWidth) {
                     maxWidth = textWidth;
                 }
-
-                task.labelTextChanged.connect(updateSize);
             }
 
             maxHeight = groupRepeater.count * (LayoutManager.verticalMargins() + Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.medium));
