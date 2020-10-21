@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.4
+import QtQuick 2.12
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 
@@ -466,10 +466,47 @@ FocusScope {
                     }
 
                     dir.pinSelection();
-                    main.rubberBand = Qt.createQmlObject("import QtQuick 2.0; import org.kde.private.desktopcontainment.folder 0.1 as Folder;"
-                        + "Folder.RubberBand { x: " + cPress.x + "; y: " + cPress.y + "; width: 0; height: 0; z: 99999; }",
-                        gridView.contentItem);
+                    main.rubberBand = rubberBandObject.createObject(gridView.contentItem, {x: cPress.x, y: cPress.y})
                     gridView.interactive = false;
+                }
+            }
+        }
+
+        Component {
+            id: rubberBandObject
+
+            Folder.RubberBand {
+                id: rubberBand
+
+                width: 0
+                height: 0
+                z: 99999
+
+                function close() {
+                    opacityAnimation.restart()
+                }
+
+                OpacityAnimator {
+                    id: opacityAnimation
+                    target: rubberBand
+                    to: 0
+                    from: 1
+                    duration: PlasmaCore.Units.shortDuration
+
+                    // This easing curve has an elognated start, which works
+                    // better than a standard easing curve for the rubberband
+                    // animation, which fades out fast and is generally of a
+                    // small area.
+                    easing {
+                        bezierCurve: [0.4, 0.0, 1, 1]
+                        type: Easing.Bezier
+                    }
+
+                    onFinished: {
+                        rubberBand.visible = false
+                        rubberBand.enabled = false
+                        rubberBand.destroy()
+                    }
                 }
             }
         }
@@ -494,10 +531,9 @@ FocusScope {
 
         function pressCanceled() {
             if (main.rubberBand) {
-                main.rubberBand.visible = false;
-                main.rubberBand.enabled = false;
-                main.rubberBand.destroy();
-                main.rubberBand = null;
+                main.rubberBand.close()
+                main.rubberBand = null
+
                 gridView.interactive = true;
                 gridView.cachedRectangleSelection = null;
                 dir.unpinSelection();

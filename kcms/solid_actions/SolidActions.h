@@ -58,7 +58,6 @@ private:
     ActionEditor * editUi;
     Ui::AddAction addUi;
     QDialog * addDialog;
-    void clearActions();
 
 };
 

@@ -78,7 +78,6 @@ private:
   void setRepeat( TriState flag, int delay, double rate);
   void setRepeatRate( int );
 
-  int getRepeatRate();
 
   int sliderMax;
   int clickVolume;

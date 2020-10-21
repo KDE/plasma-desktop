@@ -101,7 +101,6 @@ signals:
     void firstLoadDone();
 
 private:
-    void processPendingDeletions();
     bool isSaveNeeded() const override;
     bool isDefaults() const override;
     void createConnections(NotificationManager::BehaviorSettings *settings);
