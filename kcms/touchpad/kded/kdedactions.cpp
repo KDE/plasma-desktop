@@ -56,7 +56,8 @@ TouchpadGlobalActions::TouchpadGlobalActions(bool isConfiguration, QObject *pare
 		qWarning() << "Couldn't set global shortcut to Qt::Key_TouchpadToggle. There's another program using it, otherwise file a bug against kcm_touchpad";
 	}
 
-    Q_FOREACH (QAction *act, actions()) {
+	const auto actionsList = actions();
+    for (QAction *act : actionsList) {
         KActionCollection::setShortcutsConfigurable(act,true);
         if (isConfiguration) {
             act->setProperty("isConfigurationAction", true);
