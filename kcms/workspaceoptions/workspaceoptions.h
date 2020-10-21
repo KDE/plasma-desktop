@@ -22,6 +22,7 @@
 
 #include <KQuickAddons/ManagedConfigModule>
 
+class WorkspaceOptionsData;
 class WorkspaceOptionsGlobalsSettings;
 class WorkspaceOptionsPlasmaSettings;
 
@@ -42,8 +43,7 @@ public Q_SLOTS:
     void save() override;
 
 private:
-    WorkspaceOptionsGlobalsSettings *m_globalsSettings;
-    WorkspaceOptionsPlasmaSettings *m_plasmaSettings;
+    WorkspaceOptionsData *m_data;
 };
 
 #endif  // _KCM_WORKSPACEOPTIONS_H
