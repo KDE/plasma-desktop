@@ -92,7 +92,7 @@ void X11Helper::scrollLayouts(int delta)
 QStringList X11Helper::getLayoutsListAsString(const QList<LayoutUnit>& layoutsList)
 {
 	QStringList stringList;
-	foreach(const LayoutUnit& layoutUnit, layoutsList) {
+	for (const auto &layoutUnit : layoutsList) {
 		stringList << layoutUnit.toString();
 	}
 	return stringList;

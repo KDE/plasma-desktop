@@ -33,7 +33,7 @@ struct ConfigItem {
 
 template <class T>
 inline T* findByName(QList<T*> list, QString name) {
-	foreach(T* info, list) {
+	for (T *info : qAsConst(list)) {
 		if( info->name == name )
 			return info;
 	}
@@ -56,7 +56,7 @@ struct LayoutInfo: public ConfigItem {
 //	LayoutInfo() {}
 	LayoutInfo(bool fromExtras_):
 		fromExtras(fromExtras_) {}
-	~LayoutInfo() { foreach(VariantInfo* variantInfo, variantInfos) delete variantInfo; }
+	~LayoutInfo() { qDeleteAll(variantInfos); }
 
 	VariantInfo* getVariantInfo(const QString& variantName) const {
 	   	return findByName(variantInfos, variantName);
@@ -79,7 +79,7 @@ struct OptionGroupInfo: public ConfigItem {
 	QList<OptionInfo*> optionInfos;
 	bool exclusive;
 
-	~OptionGroupInfo() { foreach(OptionInfo* opt, optionInfos) delete opt; }
+	~OptionGroupInfo() { qDeleteAll(optionInfos); }
 
 	const OptionInfo* getOptionInfo(const QString& optionName) const {
     	return findByName(optionInfos, optionName);
@@ -99,9 +99,9 @@ struct Rules {
     Rules();
 
 	~Rules() {
-		foreach(LayoutInfo* layoutInfo, layoutInfos) delete layoutInfo;
-		foreach(ModelInfo* modelInfo, modelInfos) delete modelInfo;
-		foreach(OptionGroupInfo* optionGroupInfo, optionGroupInfos) delete optionGroupInfo;
+		qDeleteAll(layoutInfos);
+		qDeleteAll(modelInfos);
+		qDeleteAll(optionGroupInfos);
 	}
 
     const LayoutInfo* getLayoutInfo(const QString& layoutName) const {

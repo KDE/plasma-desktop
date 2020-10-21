@@ -168,7 +168,7 @@ struct LayoutSet {
 	QString toString() const {
 		QString str(currentLayout.toString());
 		str += QLatin1String(": ");
-		foreach(const LayoutUnit& layoutUnit, layouts) {
+		for (const auto &layoutUnit : qAsConst(layouts)) {
 			str += layoutUnit.toString() + QLatin1Char(' ');
 		}
 		return str;
@@ -176,7 +176,7 @@ struct LayoutSet {
 
 	static QString toString(const QList<LayoutUnit>& layoutUnits) {
 		QString str;
-		foreach(const LayoutUnit& layoutUnit, layoutUnits) {
+		for (const auto &layoutUnit : layoutUnits) {
 			str += layoutUnit.toString() + QLatin1Char(',');
 		}
 		return str;
