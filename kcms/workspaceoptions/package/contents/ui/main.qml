@@ -123,8 +123,8 @@ KCM.SimpleKCM {
 
         QQC2.RadioButton {
             id: singleClick
-            Kirigami.FormData.label: i18n("Click behavior:")
-            text: i18n("Single-click to open files and folders")
+            Kirigami.FormData.label: i18nc("part of a sentence: 'Clicking files or folders [opens them/selects them]'", "Clicking files or folders:")
+            text: i18nc("part of a sentence: 'Clicking files or folders opens them'", "Opens them")
             checked: kcm.globalsSettings.singleClick
             onToggled: kcm.globalsSettings.singleClick = true
             QQC2.ButtonGroup.group: singleClickGroup
@@ -137,7 +137,7 @@ KCM.SimpleKCM {
 
         QQC2.RadioButton {
             id: doubleClick
-            text: i18n("Double-click to open files and folders")
+            text: i18nc("part of a sentence: 'Clicking files or folders selects them'", "Selects them")
             checked: !kcm.globalsSettings.singleClick
             onToggled: kcm.globalsSettings.singleClick = false
             QQC2.ButtonGroup.group: singleClickGroup
@@ -151,7 +151,7 @@ KCM.SimpleKCM {
 
         QQC2.Label {
             Layout.fillWidth: true
-            text: singleClick.checked ? i18n("Select by clicking on item's selection marker") : i18n("Select by single-clicking")
+            text: singleClick.checked ? i18n("Select by clicking on item's selection marker") : i18n("Open by double-clicking instead")
             elide: Text.ElideRight
             font: theme.smallestFont
         }
