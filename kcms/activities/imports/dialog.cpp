@@ -33,6 +33,7 @@
 #include <QTabWidget>
 #include <QTimer>
 #include <QVBoxLayout>
+#include <QGuiApplication>
 
 #include <KLocalizedString>
 #include <KGlobalAccel>
@@ -47,7 +48,6 @@
 #include "common/dbus/common.h"
 #include "utils/continue_with.h"
 #include "utils/d_ptr_implementation.h"
-#include "../utils.h"
 
 class Dialog::Private {
 public:
@@ -82,11 +82,14 @@ public:
 
         view->rootContext()->setContextProperty(QStringLiteral("dialog"), q);
 
-        if (setViewSource(view, QStringLiteral("/qml/activityDialog/") + file)) {
+        const QString sourceFile = QStringLiteral(KAMD_KCM_DATADIR) +"qml/activityDialog/" + file;
+
+        if (QFile::exists(sourceFile)) {
+            view->setSource(QUrl::fromLocalFile(sourceFile));
             tabs->addTab(view, title);
         } else {
             message->setText(i18n("Error loading the QML files. Check your installation.\nMissing %1",
-                                  QStringLiteral(KAMD_KCM_DATADIR) + QStringLiteral("/qml/activityDialog/") + file));
+                                  sourceFile));
             message->setVisible(true);
         }
 

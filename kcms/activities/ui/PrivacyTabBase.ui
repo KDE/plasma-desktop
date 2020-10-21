@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
+    <width>629</width>
     <height>500</height>
    </rect>
   </property>
@@ -63,33 +63,33 @@
        <property name="flat">
         <bool>true</bool>
        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_2">
-         <item>
-          <widget class="QRadioButton" name="radioRememberAllApplications">
-           <property name="text">
-            <string>For a&amp;ll applications</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="radioDontRememberApplications">
-           <property name="text">
-            <string>&amp;Do not remember</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="radioRememberSpecificApplications">
-           <property name="text">
-            <string>O&amp;nly for specific applications:</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QRadioButton" name="radioRememberAllApplications">
+          <property name="text">
+           <string>For a&amp;ll applications</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioDontRememberApplications">
+          <property name="text">
+           <string>&amp;Do not remember</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioRememberSpecificApplications">
+          <property name="text">
+           <string>O&amp;nly for specific applications:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="labelRememberDocuments">
@@ -101,12 +101,21 @@
     </layout>
    </item>
    <item>
-    <widget class="QWidget" name="viewBlacklistedApplicationsContainer" native="true">
+    <widget class="QQuickWidget" name="viewBlacklistedApplications">
      <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+      <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>200</height>
+      </size>
+     </property>
+     <property name="resizeMode">
+      <enum>QQuickWidget::SizeRootObjectToView</enum>
      </property>
     </widget>
    </item>
@@ -132,25 +141,14 @@
    <extends>QFrame</extends>
    <header>kmessagewidget.h</header>
   </customwidget>
+  <customwidget>
+   <class>QQuickWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">QtQuickWidgets/QQuickWidget</header>
+  </customwidget>
  </customwidgets>
  <resources/>
  <connections>
-  <connection>
-   <sender>radioRememberSpecificApplications</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>viewBlacklistedApplicationsContainer</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>352</x>
-     <y>167</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>249</x>
-     <y>363</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>radioRememberSpecificApplications</sender>
    <signal>toggled(bool)</signal>

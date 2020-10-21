@@ -21,14 +21,14 @@
 #ifndef ACTIVITIES_TAB_H
 #define ACTIVITIES_TAB_H
 
-#include <QWidget>
+#include <QQuickWidget>
 
 #include <utils/d_ptr.h>
 
 /**
  * ActivitiesTab
  */
-class ActivitiesTab : public QWidget {
+class ActivitiesTab : public QQuickWidget {
     Q_OBJECT
 public:
     explicit ActivitiesTab(QWidget *parent);

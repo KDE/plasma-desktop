@@ -28,7 +28,7 @@
 #include <QQmlComponent>
 #include <QDBusPendingCall>
 
-#include <QQuickView>
+#include <QQuickWidget>
 
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -43,22 +43,16 @@
 
 #include "common/dbus/common.h"
 
-#include "utils.h"
-
 class PrivacyTab::Private : public Ui::PrivacyTabBase {
 public:
     KActivityManagerdSettings *mainConfig;
     KActivityManagerdPluginsSettings *pluginConfig;
 
     BlacklistedApplicationsModel *blacklistedApplicationsModel;
-    QObject *viewBlacklistedApplicationsRoot;
-    std::unique_ptr<QQuickView> viewBlacklistedApplications;
 
     Private(QObject *parent)
         : mainConfig(new KActivityManagerdSettings(parent))
         , pluginConfig(new KActivityManagerdPluginsSettings(parent))
-        , viewBlacklistedApplicationsRoot(nullptr)
-        , viewBlacklistedApplications(nullptr)
     {
     }
 };
@@ -104,14 +98,10 @@ PrivacyTab::PrivacyTab(QWidget *parent)
     connect(d->blacklistedApplicationsModel, &BlacklistedApplicationsModel::changed, this, &PrivacyTab::blackListModelChanged);
     connect(d->blacklistedApplicationsModel, &BlacklistedApplicationsModel::defaulted, this, &PrivacyTab::blackListModelDefaulted);
 
-    new QGridLayout(d->viewBlacklistedApplicationsContainer);
-
-    d->viewBlacklistedApplications
-        = createView(d->viewBlacklistedApplicationsContainer);
+    d->viewBlacklistedApplications->setClearColor(QGuiApplication::palette().window().color());
     d->viewBlacklistedApplications->rootContext()->setContextProperty(
         QStringLiteral("applicationModel"), d->blacklistedApplicationsModel);
-    setViewSource(d->viewBlacklistedApplications,
-        QStringLiteral("/qml/privacyTab/BlacklistApplicationView.qml"));
+    d->viewBlacklistedApplications->setSource(QUrl::fromLocalFile(KAMD_KCM_DATADIR  + QStringLiteral("/qml/privacyTab/BlacklistApplicationView.qml")));
 
     // React to changes
 
