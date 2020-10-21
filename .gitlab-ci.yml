@@ -1,0 +1,10 @@
+image: "clangbuiltlinux/ubuntu:latest"
+
+stages:
+  - Formatting
+
+clang-format:
+  stage: Formatting
+  allow_failure: true
+  script:
+    - ./.run-clang-format.sh
