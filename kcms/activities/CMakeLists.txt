@@ -56,6 +56,7 @@ add_library (kcm_activities MODULE ${KAMD_KCM_SRCS})
 
 target_link_libraries (kcm_activities
    Qt5::Quick
+   Qt5::QuickWidgets
    Qt5::Core
    Qt5::Sql
    Qt5::Qml
