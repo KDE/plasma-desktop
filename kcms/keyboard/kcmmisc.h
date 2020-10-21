@@ -33,61 +33,65 @@ class Ui_KeyboardConfigWidget;
 const int DEFAULT_REPEAT_DELAY = 600;
 const double DEFAULT_REPEAT_RATE = 25.0;
 
-enum TriState {
-	STATE_ON = 0,  STATE_OFF = 1, STATE_UNCHANGED = 2
-};
+enum TriState { STATE_ON = 0, STATE_OFF = 1, STATE_UNCHANGED = 2 };
 
-class TriStateHelper {
+class TriStateHelper
+{
 public:
-	static void setTriState(QButtonGroup* group, TriState state);
-	static TriState getTriState(const QButtonGroup* group);
+    static void setTriState(QButtonGroup *group, TriState state);
+    static TriState getTriState(const QButtonGroup *group);
 
-	static TriState getTriState(int state) { return static_cast<TriState>(state); }
-	static int getInt(TriState state) { return static_cast<int>(state); }
-	static const char* getString(TriState state) {
-		return state == STATE_ON ? "0" : state == STATE_OFF ? "1" : "2";
-	}
+    static TriState getTriState(int state)
+    {
+        return static_cast<TriState>(state);
+    }
+    static int getInt(TriState state)
+    {
+        return static_cast<int>(state);
+    }
+    static const char *getString(TriState state)
+    {
+        return state == STATE_ON ? "0" : state == STATE_OFF ? "1" : "2";
+    }
 };
 
 class KCMiscKeyboardWidget : public QWidget
 {
-  Q_OBJECT
+    Q_OBJECT
 public:
-  KCMiscKeyboardWidget(QWidget *parent);
-  ~KCMiscKeyboardWidget() override;
+    KCMiscKeyboardWidget(QWidget *parent);
+    ~KCMiscKeyboardWidget() override;
 
-  void save();
-  void load();
-  void defaults();
+    void save();
+    void load();
+    void defaults();
 
-  QString quickHelp() const;
+    QString quickHelp() const;
 
 private Q_SLOTS:
-  void changed();
+    void changed();
 
-  void delaySliderChanged (int value);
-  void delaySpinboxChanged (int value);
-  void rateSliderChanged (int value);
-  void rateSpinboxChanged (double value);
-  void keyboardRepeatStateChanged(int selection);
+    void delaySliderChanged(int value);
+    void delaySpinboxChanged(int value);
+    void rateSliderChanged(int value);
+    void rateSpinboxChanged(double value);
+    void keyboardRepeatStateChanged(int selection);
 
 Q_SIGNALS:
-	void changed(bool state);
+    void changed(bool state);
 
 private:
-  void setRepeat( TriState flag, int delay, double rate);
-  void setRepeatRate( int );
+    void setRepeat(TriState flag, int delay, double rate);
+    void setRepeatRate(int);
 
+    int sliderMax;
+    int clickVolume;
+    enum TriState keyboardRepeat;
+    enum TriState numlockState;
 
-  int sliderMax;
-  int clickVolume;
-  enum TriState keyboardRepeat;
-  enum TriState numlockState;
-
-  QButtonGroup* _numlockButtonGroup;
-  QButtonGroup* _keyboardRepeatButtonGroup;
-  Ui_KeyboardConfigWidget& ui;
+    QButtonGroup *_numlockButtonGroup;
+    QButtonGroup *_keyboardRepeatButtonGroup;
+    Ui_KeyboardConfigWidget &ui;
 };
 
 #endif
-

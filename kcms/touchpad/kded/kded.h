@@ -19,17 +19,17 @@
 #ifndef KDED_H
 #define KDED_H
 
-#include <QVariantList>
-#include <QTimer>
-#include <QDBusServiceWatcher>
 #include <QDBusPendingCallWatcher>
+#include <QDBusServiceWatcher>
 #include <QPointer>
+#include <QTimer>
+#include <QVariantList>
 
 #include <KDEDModule>
 #include <KNotification>
 
-#include "touchpadbackend.h"
 #include "kdedsettings.h"
+#include "touchpadbackend.h"
 
 class TouchpadDisabler : public KDEDModule
 {

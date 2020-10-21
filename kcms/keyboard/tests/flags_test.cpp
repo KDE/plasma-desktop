@@ -16,46 +16,49 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <QtTest>
 #include <QIcon>
+#include <QtTest>
 
 #include "../flags.h"
-#include "../xkb_rules.h"
 #include "../keyboard_config.h"
+#include "../xkb_rules.h"
 
-
-static QImage image(const QIcon& icon) {
-	return icon.pixmap(QSize(16,16), QIcon::Normal, QIcon::On).toImage();
+static QImage image(const QIcon &icon)
+{
+    return icon.pixmap(QSize(16, 16), QIcon::Normal, QIcon::On).toImage();
 }
 
 class FlagsTest : public QObject
 {
     Q_OBJECT
 
-	Flags* flags;
-    const Rules* rules;
+    Flags *flags;
+    const Rules *rules;
 
 private Q_SLOTS:
-    void initTestCase() {
-    	flags = new Flags();
-    	rules = nullptr;
+    void initTestCase()
+    {
+        flags = new Flags();
+        rules = nullptr;
     }
 
-    void cleanupTestCase() {
-    	delete flags;
-    	delete rules;
+    void cleanupTestCase()
+    {
+        delete flags;
+        delete rules;
     }
 
-    void testRules() {
-        QVERIFY( flags != nullptr );
+    void testRules()
+    {
+        QVERIFY(flags != nullptr);
 
-        QVERIFY( ! flags->getTransparentPixmap().isNull() );
+        QVERIFY(!flags->getTransparentPixmap().isNull());
 
         const QIcon iconUs(flags->getIcon(QStringLiteral("us")));
-        QVERIFY( ! iconUs.isNull() );
-        QVERIFY( flags->getIcon("--").isNull() );
+        QVERIFY(!iconUs.isNull());
+        QVERIFY(flags->getIcon("--").isNull());
 
-    	KeyboardConfig keyboardConfig;
+        KeyboardConfig keyboardConfig;
         LayoutUnit layoutUnit(QStringLiteral("us"));
         LayoutUnit layoutUnit1(QStringLiteral("us"), QStringLiteral("intl"));
         layoutUnit1.setDisplayName(QStringLiteral("usi"));
@@ -63,36 +66,35 @@ private Q_SLOTS:
 
         keyboardConfig.indicatorType = KeyboardConfig::SHOW_FLAG;
         const QIcon iconUsFlag = flags->getIconWithText(layoutUnit, keyboardConfig);
-        QVERIFY( ! iconUsFlag.isNull() );
-        QCOMPARE( image(iconUsFlag), image(iconUs) );
+        QVERIFY(!iconUsFlag.isNull());
+        QCOMPARE(image(iconUsFlag), image(iconUs));
 
         keyboardConfig.indicatorType = KeyboardConfig::SHOW_LABEL;
         const QIcon iconUsText = flags->getIconWithText(layoutUnit, keyboardConfig);
-        QVERIFY( ! iconUsText.isNull() );
-        QVERIFY( image(iconUsText) != image(iconUs) );
+        QVERIFY(!iconUsText.isNull());
+        QVERIFY(image(iconUsText) != image(iconUs));
 
         keyboardConfig.layouts.append(layoutUnit1);
-        QCOMPARE( flags->getShortText(layoutUnit, keyboardConfig), QString("us") );
-        QCOMPARE( flags->getShortText(layoutUnit1, keyboardConfig), QString("usi") );
-        QCOMPARE( flags->getShortText(layoutUnit2, keyboardConfig), QString("us") );
+        QCOMPARE(flags->getShortText(layoutUnit, keyboardConfig), QString("us"));
+        QCOMPARE(flags->getShortText(layoutUnit1, keyboardConfig), QString("usi"));
+        QCOMPARE(flags->getShortText(layoutUnit2, keyboardConfig), QString("us"));
 
-        const Rules* rules = Rules::readRules(Rules::NO_EXTRAS);
-        QCOMPARE( flags->getLongText(layoutUnit, rules), QString("English (US)") );
-        QCOMPARE( flags->getLongText(layoutUnit2, rules), QString("other") );
+        const Rules *rules = Rules::readRules(Rules::NO_EXTRAS);
+        QCOMPARE(flags->getLongText(layoutUnit, rules), QString("English (US)"));
+        QCOMPARE(flags->getLongText(layoutUnit2, rules), QString("other"));
 
         rules = nullptr; // when no rules found
-        QCOMPARE( flags->getLongText(layoutUnit1, rules), QString("us - intl") );
+        QCOMPARE(flags->getLongText(layoutUnit1, rules), QString("us - intl"));
 
         flags->clearCache();
     }
 
-//    void loadRulesBenchmark() {
-//    	QBENCHMARK {
-//    		Flags* flags = new Flags();
-//    		delete flags;
-//    	}
-//    }
-
+    //    void loadRulesBenchmark() {
+    //    	QBENCHMARK {
+    //    		Flags* flags = new Flags();
+    //    		delete flags;
+    //    	}
+    //    }
 };
 
 // need GUI for xkb protocol in xkb_rules.cpp

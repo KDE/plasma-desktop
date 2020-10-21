@@ -32,9 +32,9 @@
 
 #include "debug.h"
 
-ModulesModel::ModulesModel(QObject *parent) : QAbstractListModel(parent)
+ModulesModel::ModulesModel(QObject *parent)
+    : QAbstractListModel(parent)
 {
-
 }
 
 ModulesModel::~ModulesModel() = default;
@@ -57,9 +57,12 @@ QVariant ModulesModel::data(const QModelIndex &index, int role) const
     const auto &item = m_data.at(index.row());
 
     switch (role) {
-    case Qt::DisplayRole: return item.display;
-    case DescriptionRole: return item.description;
-    case TypeRole: return item.type;
+    case Qt::DisplayRole:
+        return item.display;
+    case DescriptionRole:
+        return item.description;
+    case TypeRole:
+        return item.type;
     case AutoloadEnabledRole:
         if (item.type == KDEDConfig::AutostartType) {
             return item.autoloadEnabled;
@@ -74,8 +77,10 @@ QVariant ModulesModel::data(const QModelIndex &index, int role) const
         }
         return KDEDConfig::NotRunning;
     }
-    case ModuleNameRole: return item.moduleName;
-    case ImmutableRole: return item.immutable;
+    case ModuleNameRole:
+        return item.moduleName;
+    case ImmutableRole:
+        return item.immutable;
     }
 
     return QVariant();
@@ -166,11 +171,12 @@ static QVector<KPluginMetaData> availableModules()
     const KPluginInfo::List oldStylePlugins = KPluginInfo::fromServices(KServiceTypeTrader::self()->query(QStringLiteral("KDEDModule")));
     for (const KPluginInfo &info : oldStylePlugins) {
         if (moduleIds.contains(info.pluginName())) {
-            qCWarning(KCM_KDED).nospace() << "kded module " << info.pluginName() << " has already been found using "
-            "JSON metadata, please don't install the now unneeded .desktop file (" << info.entryPath() << ").";
+            qCWarning(KCM_KDED).nospace() << "kded module " << info.pluginName()
+                                          << " has already been found using "
+                                             "JSON metadata, please don't install the now unneeded .desktop file ("
+                                          << info.entryPath() << ").";
         } else {
-            qCDebug(KCM_KDED).nospace() << "kded module " << info.pluginName() << " still uses .desktop files ("
-            << info.entryPath() << "). Please port it to JSON metadata.";
+            qCDebug(KCM_KDED).nospace() << "kded module " << info.pluginName() << " still uses .desktop files (" << info.entryPath() << "). Please port it to JSON metadata.";
             plugins.append(info.toMetaData());
         }
     }
@@ -224,15 +230,7 @@ void ModulesModel::load()
         const bool autoloadEnabled = cg.readEntry("autoload", true);
         const bool immutable = cg.isEntryImmutable("autoload");
 
-        ModulesModelData data{
-            module.name(),
-            module.description(),
-            KDEDConfig::UnknownType,
-            autoloadEnabled,
-            dbusModuleName,
-            immutable,
-            autoloadEnabled
-        };
+        ModulesModelData data {module.name(), module.description(), KDEDConfig::UnknownType, autoloadEnabled, dbusModuleName, immutable, autoloadEnabled};
 
         // The logic has to be identical to Kded::initModules.
         // They interpret X-KDE-Kded-autoload as false if not specified
@@ -252,9 +250,7 @@ void ModulesModel::load()
     QCollator collator;
     // Otherwise "Write" daemon with quotes will be at the top
     collator.setIgnorePunctuation(true);
-    auto sortAlphabetically = [&collator](const ModulesModelData &a, const ModulesModelData &b) {
-        return collator.compare(a.display, b.display) < 0;
-    };
+    auto sortAlphabetically = [&collator](const ModulesModelData &a, const ModulesModelData &b) { return collator.compare(a.display, b.display) < 0; };
 
     std::sort(autostartModules.begin(), autostartModules.end(), sortAlphabetically);
     std::sort(onDemandModules.begin(), onDemandModules.end(), sortAlphabetically);

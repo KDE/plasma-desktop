@@ -31,10 +31,15 @@ class CfgPlugin : public QComboBox
     Q_OBJECT
 
 public:
-    CfgPlugin(QWidget *parent): QComboBox(parent) {}
-	virtual ~CfgPlugin(){}
-	virtual void load(KConfig *cfg)=0;
-    virtual void save(KConfig *cfg)=0;
+    CfgPlugin(QWidget *parent)
+        : QComboBox(parent)
+    {
+    }
+    virtual ~CfgPlugin()
+    {
+    }
+    virtual void load(KConfig *cfg) = 0;
+    virtual void save(KConfig *cfg) = 0;
 
     bool hasChanged() const
     {
@@ -73,18 +78,17 @@ protected:
 
 class ComponentChooser : public QWidget, public Ui::ComponentChooser_UI
 {
-
-Q_OBJECT
+    Q_OBJECT
 
 public:
-	ComponentChooser(QWidget *parent=nullptr);
-	~ComponentChooser() override;
-	void load();
-	void save();
-	void restoreDefault();
+    ComponentChooser(QWidget *parent = nullptr);
+    ~ComponentChooser() override;
+    void load();
+    void save();
+    void restoreDefault();
 
 private:
-    QMap<QString, CfgPlugin*> configWidgetMap;
+    QMap<QString, CfgPlugin *> configWidgetMap;
 
     CfgPlugin *loadConfigWidget(const QString &cfgType);
 
@@ -92,9 +96,8 @@ protected Q_SLOTS:
     void emitChanged();
 
 Q_SIGNALS:
-	void changed(bool);
-	void defaulted(bool);
+    void changed(bool);
+    void defaulted(bool);
 };
-
 
 #endif

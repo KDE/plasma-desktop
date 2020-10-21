@@ -16,7 +16,6 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #ifndef KCM_KEYBOARD_WIDGET_H_
 #define KCM_KEYBOARD_WIDGET_H_
 
@@ -36,29 +35,31 @@ class LayoutsTableModel;
 class KCMiscKeyboardWidget;
 class KeyboardLayoutActionCollection;
 
-class KCMKeyboardWidget: public QTabWidget
+class KCMKeyboardWidget : public QTabWidget
 {
-	Q_OBJECT
+    Q_OBJECT
 
 public:
-	KCMKeyboardWidget(Rules* rules, KeyboardConfig* keyboardConfig,
-                          const QVariantList &args, QWidget* parent=nullptr);
-	~KCMKeyboardWidget() override;
+    KCMKeyboardWidget(Rules *rules, KeyboardConfig *keyboardConfig, const QVariantList &args, QWidget *parent = nullptr);
+    ~KCMKeyboardWidget() override;
 
-	void updateUI();
-	void save();
+    void updateUI();
+    void save();
 
-	//temp hack
-	KCMiscKeyboardWidget* getKcmMiscWidget() const { return kcmMiscWidget; }
+    // temp hack
+    KCMiscKeyboardWidget *getKcmMiscWidget() const
+    {
+        return kcmMiscWidget;
+    }
 
 Q_SIGNALS:
-	void changed(bool state);
+    void changed(bool state);
 
 private Q_SLOTS:
-	void addLayout();
-	void removeLayout();
-	void layoutSelectionChanged();
-	void uiChanged();
+    void addLayout();
+    void removeLayout();
+    void layoutSelectionChanged();
+    void uiChanged();
     void scrollToGroupShortcut();
     void scrollTo3rdLevelShortcut();
     void clearGroupShortcuts();
@@ -75,27 +76,26 @@ private:
     Flags *flags;
     Ui::TabWidget *uiWidget;
     KeyboardConfig *keyboardConfig;
-	KeyboardLayoutActionCollection* actionCollection;
-	LayoutsTableModel* layoutsTableModel;
-	KCMiscKeyboardWidget* kcmMiscWidget;
-	bool uiUpdating;
+    KeyboardLayoutActionCollection *actionCollection;
+    LayoutsTableModel *layoutsTableModel;
+    KCMiscKeyboardWidget *kcmMiscWidget;
+    bool uiUpdating;
 
-	void initializeLayoutsUI();
-	void initializeXkbOptionsUI();
+    void initializeLayoutsUI();
+    void initializeXkbOptionsUI();
     void initializeKeyboardModelUI();
     void updateHardwareUI();
     void updateLayoutsUI();
     void updateShortcutsUI();
     void updateXkbOptionsUI();
     void updateSwitcingPolicyUI();
-    void updateXkbShortcutButton(const QString& groupName, QPushButton* button);
-    void clearXkbGroup(const QString& groupName);
+    void updateXkbShortcutButton(const QString &groupName, QPushButton *button);
+    void clearXkbGroup(const QString &groupName);
     void moveSelectedLayouts(int shift);
     void populateWithCurrentLayouts();
     void populateWithCurrentXkbOptions();
     void updateLoopCount();
     void handleParameters(const QVariantList &args);
 };
-
 
 #endif /* KCM_KEYBOARD_WIDGET_H_ */

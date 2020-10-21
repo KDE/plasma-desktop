@@ -22,7 +22,8 @@
 
 #include "sourcesmodel.h"
 
-FilterProxyModel::FilterProxyModel(QObject *parent) : QSortFilterProxyModel(parent)
+FilterProxyModel::FilterProxyModel(QObject *parent)
+    : QSortFilterProxyModel(parent)
 {
     setRecursiveFilteringEnabled(true);
 }

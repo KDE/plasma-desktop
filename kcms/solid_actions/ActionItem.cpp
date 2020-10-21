@@ -22,13 +22,13 @@
 
 #include <QString>
 
-#include <KDesktopFileActions>
-#include <KDesktopFile>
 #include <KConfigGroup>
+#include <KDesktopFile>
+#include <KDesktopFileActions>
 
 #include <Solid/DeviceInterface>
 
-ActionItem::ActionItem(const QString& pathToDesktop, const QString& action, QObject *parent)
+ActionItem::ActionItem(const QString &pathToDesktop, const QString &action, QObject *parent)
 {
     Q_UNUSED(parent);
 
@@ -49,7 +49,7 @@ ActionItem::ActionItem(const QString& pathToDesktop, const QString& action, QObj
     actionGroups.insert(ActionItem::GroupAction, &configGroups.last());
 
     const QString predicateString = readKey(ActionItem::GroupDesktop, QStringLiteral("X-KDE-Solid-Predicate"), QLatin1String(""));
-    predicateItem = Solid::Predicate::fromString( predicateString );
+    predicateItem = Solid::Predicate::fromString(predicateString);
 }
 
 ActionItem::~ActionItem()
@@ -87,55 +87,55 @@ Solid::Predicate ActionItem::predicate() const
 
 QString ActionItem::involvedTypes() const
 {
-    SolidActionData * actData = SolidActionData::instance();
+    SolidActionData *actData = SolidActionData::instance();
     const QSet<Solid::DeviceInterface::Type> devTypeList = predicateItem.usedTypes();
     QStringList deviceTypes;
     for (Solid::DeviceInterface::Type devType : devTypeList) {
-        deviceTypes << actData->nameFromInterface( devType );
+        deviceTypes << actData->nameFromInterface(devType);
     }
 
     return deviceTypes.join(QLatin1String(", "));
 }
 
-void ActionItem::setIcon(const QString& nameOfIcon)
+void ActionItem::setIcon(const QString &nameOfIcon)
 {
     setKey(ActionItem::GroupAction, QStringLiteral("Icon"), nameOfIcon);
 }
 
-void ActionItem::setName(const QString& nameOfAction)
+void ActionItem::setName(const QString &nameOfAction)
 {
     setKey(ActionItem::GroupAction, QStringLiteral("Name"), nameOfAction);
 }
 
-void ActionItem::setExec(const QString& execUrl)
+void ActionItem::setExec(const QString &execUrl)
 {
     setKey(ActionItem::GroupAction, QStringLiteral("Exec"), execUrl);
 }
 
-void ActionItem::setPredicate( const QString& newPredicate )
+void ActionItem::setPredicate(const QString &newPredicate)
 {
     setKey(ActionItem::GroupDesktop, QStringLiteral("X-KDE-Solid-Predicate"), newPredicate);
-    predicateItem = Solid::Predicate::fromString( newPredicate );
+    predicateItem = Solid::Predicate::fromString(newPredicate);
 }
 
 /// Private functions below
 
-QString ActionItem::readKey(GroupType keyGroup, const QString& keyName, const QString& defaultValue) const
+QString ActionItem::readKey(GroupType keyGroup, const QString &keyName, const QString &defaultValue) const
 {
     return configItem(ActionItem::DesktopRead, keyGroup, keyName)->readEntry(keyName, defaultValue);
 }
 
-void ActionItem::setKey(GroupType keyGroup, const QString& keyName, const QString& keyContents)
+void ActionItem::setKey(GroupType keyGroup, const QString &keyName, const QString &keyContents)
 {
     configItem(ActionItem::DesktopWrite, keyGroup)->writeEntry(keyName, keyContents);
 }
 
-bool ActionItem::hasKey(GroupType keyGroup, const QString& keyName) const
+bool ActionItem::hasKey(GroupType keyGroup, const QString &keyName) const
 {
     return configItem(ActionItem::DesktopRead, keyGroup, keyName)->hasKey(keyName);
 }
 
-KConfigGroup * ActionItem::configItem(DesktopAction actionType, GroupType keyGroup, const QString& keyName) const
+KConfigGroup *ActionItem::configItem(DesktopAction actionType, GroupType keyGroup, const QString &keyName) const
 {
     int countAccess = 0;
 
@@ -154,4 +154,3 @@ KConfigGroup * ActionItem::configItem(DesktopAction actionType, GroupType keyGro
     }
     return actionGroups.values(keyGroup)[0]; // Implement a backstop so a valid value is always returned
 }
-

@@ -30,8 +30,9 @@
 
 class QTimer;
 
-namespace Plasma {
-    class Corona;
+namespace Plasma
+{
+class Corona;
 }
 
 class FOLDERPLUGIN_TESTS_EXPORT ScreenMapper : public QObject
@@ -39,10 +40,7 @@ class FOLDERPLUGIN_TESTS_EXPORT ScreenMapper : public QObject
     Q_OBJECT
 
 public:
-    enum MappingSignalBehavior {
-        DelayedSignal = 0,
-        ImmediateSignal
-    };
+    enum MappingSignalBehavior { DelayedSignal = 0, ImmediateSignal };
 
     static ScreenMapper *instance();
     ~ScreenMapper() override = default;
@@ -60,7 +58,10 @@ public:
     int firstAvailableScreen(const QUrl &screenUrl) const;
     void removeItemFromDisabledScreen(const QUrl &url);
 
-    bool sharedDesktops() const { return m_sharedDesktops; }
+    bool sharedDesktops() const
+    {
+        return m_sharedDesktops;
+    }
     void setSharedDesktop(bool sharedDesktops);
 
 #ifdef BUILD_TESTING
@@ -80,8 +81,8 @@ private:
     ScreenMapper(QObject *parent = nullptr);
 
     QHash<QUrl, int> m_screenItemMap;
-    QHash<int, QVector<QUrl> > m_itemsOnDisabledScreensMap;
-    QHash<QUrl, QVector<int> > m_screensPerPath; // screens per registered path
+    QHash<int, QVector<QUrl>> m_itemsOnDisabledScreensMap;
+    QHash<QUrl, QVector<int>> m_screensPerPath; // screens per registered path
     QVector<int> m_availableScreens;
     Plasma::Corona *m_corona = nullptr;
     QTimer *m_screenMappingChangedTimer = nullptr;

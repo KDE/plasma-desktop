@@ -16,7 +16,6 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #ifndef KCM_KEYBOARD_H_
 #define KCM_KEYBOARD_H_
 
@@ -26,22 +25,22 @@ class KCMKeyboardWidget;
 class KeyboardConfig;
 struct Rules;
 
-class KCMKeyboard: public KCModule
+class KCMKeyboard : public KCModule
 {
-Q_OBJECT
+    Q_OBJECT
 
 public:
-	KCMKeyboard(QWidget *parent, const QVariantList &);
-	~KCMKeyboard() override;
+    KCMKeyboard(QWidget *parent, const QVariantList &);
+    ~KCMKeyboard() override;
 
-	void save() override;
-	void load() override;
-	void defaults() override;
+    void save() override;
+    void load() override;
+    void defaults() override;
 
 private:
-	Rules* rules;
-	KeyboardConfig* keyboardConfig;
-	KCMKeyboardWidget *widget;
+    Rules *rules;
+    KeyboardConfig *keyboardConfig;
+    KCMKeyboardWidget *widget;
 };
 
 #endif /* KCM_KEYBOARD_H_ */

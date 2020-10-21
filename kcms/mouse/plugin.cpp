@@ -19,8 +19,6 @@
 
 #include <KPluginFactory>
 
-K_PLUGIN_FACTORY(MousePluginFactory,
-                 registerPlugin<ConfigContainer>();
-)
+K_PLUGIN_FACTORY(MousePluginFactory, registerPlugin<ConfigContainer>();)
 
 #include <plugin.moc>

@@ -1,30 +1,30 @@
 /**************************************************************************
-*   Copyright (C) 2009-2010 Trever Fischer <tdfischer@fedoraproject.org>  *
-*   Copyright (C) 2015 Kai UWe Broulik <kde@privat.broulik.de>            *
-*                                                                         *
-*   This program is free software; you can redistribute it and/or modify  *
-*   it under the terms of the GNU General Public License as published by  *
-*   the Free Software Foundation; either version 2 of the License, or     *
-*   (at your option) any later version.                                   *
-*                                                                         *
-*   This program is distributed in the hope that it will be useful,       *
-*   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
-*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
-*   GNU General Public License for more details.                          *
-*                                                                         *
-*   You should have received a copy of the GNU General Public License     *
-*   along with this program; if not, write to the                         *
-*   Free Software Foundation, Inc.,                                       *
-*   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
-***************************************************************************/
+ *   Copyright (C) 2009-2010 Trever Fischer <tdfischer@fedoraproject.org>  *
+ *   Copyright (C) 2015 Kai UWe Broulik <kde@privat.broulik.de>            *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
+ ***************************************************************************/
 
 #include "DeviceAutomounterKCM.h"
-#include <kconfigwidgets_version.h>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QItemSelectionModel>
 #include <QStandardItem>
 #include <QStandardItemModel>
-#include <QItemSelectionModel>
+#include <kconfigwidgets_version.h>
 
 #include <KAboutData>
 #include <KConfigGroup>
@@ -34,22 +34,17 @@
 #include <KPluginFactory>
 
 #include "AutomounterSettings.h"
-#include "LayoutSettings.h"
 #include "DeviceModel.h"
+#include "LayoutSettings.h"
 
 K_PLUGIN_FACTORY(DeviceAutomounterKCMFactory, registerPlugin<DeviceAutomounterKCM>();)
 
 DeviceAutomounterKCM::DeviceAutomounterKCM(QWidget *parent, const QVariantList &args)
-    : KCModule(parent, args)//DeviceAutomounterKCMFactory::componentData(), parent)
+    : KCModule(parent, args) // DeviceAutomounterKCMFactory::componentData(), parent)
     , m_settings(new AutomounterSettings(this))
     , m_devices(new DeviceModel(m_settings, this))
 {
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_device_automounter"),
-                                       i18n("Device Automounter"),
-                                       QStringLiteral("2.0"),
-                                       QString(),
-                                       KAboutLicense::GPL_V2,
-                                       i18n("(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"));
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_device_automounter"), i18n("Device Automounter"), QStringLiteral("2.0"), QString(), KAboutLicense::GPL_V2, i18n("(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"));
     about->addAuthor(i18n("Trever Fischer"), i18n("Original Author"));
     about->addAuthor(i18n("Kai Uwe Broulik"), i18n("Plasma 5 Port"), QStringLiteral("kde@privat.broulik.de"));
 
@@ -63,12 +58,8 @@ DeviceAutomounterKCM::DeviceAutomounterKCM(QWidget *parent, const QVariantList &
     deviceView->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
     deviceView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
 
-    connect(kcfg_AutomountOnLogin, &QCheckBox::stateChanged, this, [this](int state) {
-        m_devices->setAutomaticMountOnLogin(state == Qt::Checked);
-    });
-    connect(kcfg_AutomountOnPlugin, &QCheckBox::stateChanged, this, [this](int state) {
-        m_devices->setAutomaticMountOnPlugin(state == Qt::Checked);
-    });
+    connect(kcfg_AutomountOnLogin, &QCheckBox::stateChanged, this, [this](int state) { m_devices->setAutomaticMountOnLogin(state == Qt::Checked); });
+    connect(kcfg_AutomountOnPlugin, &QCheckBox::stateChanged, this, [this](int state) { m_devices->setAutomaticMountOnPlugin(state == Qt::Checked); });
 
     connect(deviceView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &DeviceAutomounterKCM::updateForgetDeviceButton);
 
@@ -86,21 +77,21 @@ void DeviceAutomounterKCM::updateForgetDeviceButton()
 {
     const auto selectedIndex = deviceView->selectionModel()->selectedIndexes();
     for (const QModelIndex &idx : selectedIndex) {
-		if (idx.data(DeviceModel::TypeRole) == DeviceModel::Detatched) {
-			forgetDevice->setEnabled(true);
-			return;
-		}
-	}
-	forgetDevice->setEnabled(false);
+        if (idx.data(DeviceModel::TypeRole) == DeviceModel::Detatched) {
+            forgetDevice->setEnabled(true);
+            return;
+        }
+    }
+    forgetDevice->setEnabled(false);
 }
 
 void DeviceAutomounterKCM::forgetSelectedDevices()
 {
     QItemSelectionModel *selected = deviceView->selectionModel();
-	int offset = 0;
+    int offset = 0;
     while (!selected->selectedIndexes().isEmpty() && selected->selectedIndexes().size() > offset) {
         if (selected->selectedIndexes()[offset].data(DeviceModel::TypeRole) == DeviceModel::Attached) {
-			offset++;
+            offset++;
         } else {
             m_devices->forgetDevice(selected->selectedIndexes()[offset].data(DeviceModel::UdiRole).toString());
         }
@@ -164,18 +155,12 @@ void DeviceAutomounterKCM::save()
 
     // Now tell kded to automatically load the module if loaded
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
-                                                      QStringLiteral("/kded"),
-                                                      QStringLiteral("org.kde.kded5"),
-                                                      QStringLiteral("setModuleAutoloading"));
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"), QStringLiteral("org.kde.kded5"), QStringLiteral("setModuleAutoloading"));
     msg.setArguments({QVariant(QStringLiteral("device_automounter")), QVariant(enabled)});
     dbus.call(msg, QDBus::NoBlock);
 
     // Load or unload right away
-    msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
-                                         QStringLiteral("/kded"),
-                                         QStringLiteral("org.kde.kded5"),
-                                         enabled ? QStringLiteral("loadModule") : QStringLiteral("unloadModule"));
+    msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"), QStringLiteral("org.kde.kded5"), enabled ? QStringLiteral("loadModule") : QStringLiteral("unloadModule"));
     msg.setArguments({QVariant(QStringLiteral("device_automounter"))});
     dbus.call(msg, QDBus::NoBlock);
 }
@@ -191,16 +176,16 @@ void DeviceAutomounterKCM::saveLayout()
     }
 
     LayoutSettings::setHeaderWidths(widths);
-    //Check DeviceModel.cpp, thats where the magic row numbers come from.
-    LayoutSettings::setAttachedExpanded(deviceView->isExpanded(m_devices->index(0,0)));
-    LayoutSettings::setDetatchedExpanded(deviceView->isExpanded(m_devices->index(1,0)));
+    // Check DeviceModel.cpp, thats where the magic row numbers come from.
+    LayoutSettings::setAttachedExpanded(deviceView->isExpanded(m_devices->index(0, 0)));
+    LayoutSettings::setDetatchedExpanded(deviceView->isExpanded(m_devices->index(1, 0)));
     LayoutSettings::self()->save();
 }
 
 void DeviceAutomounterKCM::loadLayout()
 {
     LayoutSettings::self()->load();
-    //Reset it first, just in case there isn't any layout saved for a particular column.
+    // Reset it first, just in case there isn't any layout saved for a particular column.
     int nbColumn = m_devices->columnCount();
     for (int i = 0; i < nbColumn; ++i) {
         deviceView->resizeColumnToContents(i);
@@ -212,8 +197,8 @@ void DeviceAutomounterKCM::loadLayout()
         deviceView->setColumnWidth(i, widths[i]);
     }
 
-    deviceView->setExpanded(m_devices->index(0,0), LayoutSettings::attachedExpanded());
-    deviceView->setExpanded(m_devices->index(1,0), LayoutSettings::detatchedExpanded());
+    deviceView->setExpanded(m_devices->index(0, 0), LayoutSettings::attachedExpanded());
+    deviceView->setExpanded(m_devices->index(1, 0), LayoutSettings::detatchedExpanded());
 }
 
 #include "DeviceAutomounterKCM.moc"

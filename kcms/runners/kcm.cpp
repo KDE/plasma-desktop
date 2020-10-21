@@ -19,52 +19,49 @@
 
 #include "kcm.h"
 
-#include <KPluginFactory>
 #include <KAboutData>
+#include <KLocalizedString>
+#include <KPluginFactory>
+#include <KPluginSelector>
+#include <KRunner/RunnerManager>
 #include <KSharedConfig>
 #include <QDebug>
 #include <QStandardPaths>
-#include <KLocalizedString>
-#include <KRunner/RunnerManager>
-#include <KPluginSelector>
 
 #include <QApplication>
-#include <QDBusMessage>
 #include <QDBusConnection>
+#include <QDBusMessage>
 #include <QDBusMetaType>
-#include <QVBoxLayout>
-#include <QLabel>
 #include <QDialog>
+#include <QFormLayout>
+#include <QLabel>
 #include <QPainter>
 #include <QPushButton>
-#include <QFormLayout>
+#include <QVBoxLayout>
 
 K_PLUGIN_FACTORY(SearchConfigModuleFactory, registerPlugin<SearchConfigModule>();)
 
-
-SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args)
+SearchConfigModule::SearchConfigModule(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
     , m_config("krunnerrc")
 {
-    KAboutData* about = new KAboutData(QStringLiteral("kcm_search"), i18nc("kcm name for About dialog", "Configure Search Bar"),
-                                       QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_search"), i18nc("kcm name for About dialog", "Configure Search Bar"), QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Vishesh Handa"), QString(), QStringLiteral("vhanda@kde.org"));
     setAboutData(about);
     setButtons(Apply | Default);
 
-    if(!args.at(0).toString().isEmpty()) {
+    if (!args.at(0).toString().isEmpty()) {
         m_pluginID = args.at(0).toString();
     }
 
-    QVBoxLayout* layout = new QVBoxLayout(this);
+    QVBoxLayout *layout = new QVBoxLayout(this);
 
     QHBoxLayout *headerLayout = new QHBoxLayout(this);
 
     QLabel *label = new QLabel(i18n("Enable or disable plugins (used in KRunner and Application Launcher)"));
 
     m_clearHistoryButton = new QPushButton(i18n("Clear History"));
-    m_clearHistoryButton->setIcon(QIcon::fromTheme(isRightToLeft() ? QStringLiteral("edit-clear-locationbar-ltr")
-                                                                   : QStringLiteral("edit-clear-locationbar-rtl")));
+    m_clearHistoryButton->setIcon(QIcon::fromTheme(isRightToLeft() ? QStringLiteral("edit-clear-locationbar-ltr") : QStringLiteral("edit-clear-locationbar-rtl")));
     connect(m_clearHistoryButton, &QPushButton::clicked, this, [this] {
         KConfigGroup generalConfig(m_config.group("General"));
         generalConfig.deleteEntry("history", KConfig::Notify);
@@ -114,10 +111,8 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     qDBusRegisterMetaType<QByteArrayList>();
     qDBusRegisterMetaType<QHash<QString, QByteArrayList>>();
     // This will trigger the reloadConfiguration method for the runner
-    connect(m_pluginSelector, &KPluginSelector::configCommitted, this, [](const QByteArray &componentName){
-        QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/krunnerrc"),
-                                                          QStringLiteral("org.kde.kconfig.notify"),
-                                                          QStringLiteral("ConfigChanged"));
+    connect(m_pluginSelector, &KPluginSelector::configCommitted, this, [](const QByteArray &componentName) {
+        QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/krunnerrc"), QStringLiteral("org.kde.kconfig.notify"), QStringLiteral("ConfigChanged"));
         const QHash<QString, QByteArrayList> changes = {{QStringLiteral("Runners"), {componentName}}};
         message.setArguments({QVariant::fromValue(changes)});
         QDBusConnection::sessionBus().send(message);
@@ -144,17 +139,13 @@ void SearchConfigModule::load()
     // Set focus on the pluginselector to pass focus to search bar.
     m_pluginSelector->setFocus(Qt::OtherFocusReason);
 
-    m_pluginSelector->addPlugins(Plasma::RunnerManager::listRunnerInfo(),
-                    KPluginSelector::ReadConfigFile,
-                    i18n("Available Plugins"), QString(),
-                    config);
+    m_pluginSelector->addPlugins(Plasma::RunnerManager::listRunnerInfo(), KPluginSelector::ReadConfigFile, i18n("Available Plugins"), QString(), config);
     m_pluginSelector->load();
 
-    if(!m_pluginID.isEmpty()){
+    if (!m_pluginID.isEmpty()) {
         m_pluginSelector->showConfiguration(m_pluginID);
     }
 }
-
 
 void SearchConfigModule::save()
 {
@@ -164,9 +155,7 @@ void SearchConfigModule::save()
     config->group("General").writeEntry("HistoryEnabled", m_enableHistory->isChecked(), KConfig::Notify);
     m_pluginSelector->save();
 
-    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/krunnerrc"),
-                                                      QStringLiteral("org.kde.kconfig.notify"),
-                                                      QStringLiteral("ConfigChanged"));
+    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/krunnerrc"), QStringLiteral("org.kde.kconfig.notify"), QStringLiteral("ConfigChanged"));
     const QHash<QString, QByteArrayList> changes = {{QStringLiteral("Plugins"), {}}};
     message.setArguments({QVariant::fromValue(changes)});
     QDBusConnection::sessionBus().send(message);

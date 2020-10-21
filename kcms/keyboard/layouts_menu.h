@@ -19,8 +19,8 @@
 #ifndef LAYOUTS_MENU_H_
 #define LAYOUTS_MENU_H_
 
-#include <QList>
 #include <QIcon>
+#include <QList>
 
 class QAction;
 class KeyboardConfig;
@@ -34,23 +34,23 @@ class LayoutsMenu : public QObject
     Q_OBJECT
 
 public:
-	LayoutsMenu(const KeyboardConfig& keyboardConfig, const Rules& rules, Flags& flags);
-	~LayoutsMenu() override;
+    LayoutsMenu(const KeyboardConfig &keyboardConfig, const Rules &rules, Flags &flags);
+    ~LayoutsMenu() override;
 
-	QList<QAction*> contextualActions();
-	static int switchToLayout(const LayoutUnit& layoutUnit, const KeyboardConfig& keyboardConfig);
+    QList<QAction *> contextualActions();
+    static int switchToLayout(const LayoutUnit &layoutUnit, const KeyboardConfig &keyboardConfig);
 
 private Q_SLOTS:
-	void actionTriggered(QAction* action);
+    void actionTriggered(QAction *action);
 
 private:
-	const QIcon getFlag(const QString& layout) const;
-	QAction* createAction(const LayoutUnit& layoutUnit) const;
+    const QIcon getFlag(const QString &layout) const;
+    QAction *createAction(const LayoutUnit &layoutUnit) const;
 
-	const KeyboardConfig& keyboardConfig;
-	const Rules& rules;
-	Flags& flags;
-    QActionGroup* actionGroup;
+    const KeyboardConfig &keyboardConfig;
+    const Rules &rules;
+    Flags &flags;
+    QActionGroup *actionGroup;
 };
 
 #endif /* LAYOUTS_MENU_H_ */

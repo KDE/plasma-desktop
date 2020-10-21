@@ -22,14 +22,9 @@
 
 class X11EvdevBackend;
 
-enum class Handed {
-    Right = 0,
-    Left = 1,
-    NotSupported = -1
-};
+enum class Handed { Right = 0, Left = 1, NotSupported = -1 };
 
-struct EvdevSettings
-{
+struct EvdevSettings {
     void save();
     void load(X11EvdevBackend *);
     void apply(X11EvdevBackend *, bool force = false);

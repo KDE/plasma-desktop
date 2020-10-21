@@ -20,26 +20,26 @@
 */
 
 #include "componentchooserfilemanager.h"
-#include <KProcess>
 #include <KApplicationTrader>
-#include <KOpenWithDialog>
 #include <KConfigGroup>
-#include <QStandardPaths>
+#include <KOpenWithDialog>
+#include <KProcess>
 #include <KSharedConfig>
+#include <QStandardPaths>
 
 CfgFileManager::CfgFileManager(QWidget *parent)
     : CfgPlugin(parent)
 {
-    connect(this, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated), this, &CfgFileManager::selectFileManager);
+    connect(this, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &CfgFileManager::selectFileManager);
 }
 
-CfgFileManager::~CfgFileManager() {
+CfgFileManager::~CfgFileManager()
+{
 }
 
 void CfgFileManager::selectFileManager(int index)
 {
-    if (index == count() -1) {
-
+    if (index == count() - 1) {
         KOpenWithDialog dlg({}, i18n("Select preferred file manager:"), QString(), this);
         dlg.setSaveNewApplications(true);
         if (dlg.exec() != QDialog::Accepted) {
@@ -50,14 +50,14 @@ void CfgFileManager::selectFileManager(int index)
         const auto service = dlg.service();
 
         // if the selected service is already in the list
-        const auto matching = model()->match(model()->index(0,0), Qt::UserRole, service->storageId());
+        const auto matching = model()->match(model()->index(0, 0), Qt::UserRole, service->storageId());
         if (!matching.isEmpty()) {
             const int index = matching.at(0).row();
             setCurrentIndex(index);
             changed(index != m_currentIndex);
         } else {
             const QString icon = !service->icon().isEmpty() ? service->icon() : QStringLiteral("application-x-shellscript");
-            insertItem(count() -1, QIcon::fromTheme(icon), service->name(), service->storageId());
+            insertItem(count() - 1, QIcon::fromTheme(icon), service->name(), service->storageId());
             setCurrentIndex(count() - 2);
 
             changed(true);
@@ -77,7 +77,7 @@ void CfgFileManager::load(KConfig *)
 
     const KService::Ptr fileManager = KApplicationTrader::preferredService(mime);
 
-    const auto fileManagers = KApplicationTrader::query([] (const KService::Ptr &service) {
+    const auto fileManagers = KApplicationTrader::query([](const KService::Ptr &service) {
         if (service->exec().isEmpty()) {
             return false;
         }
@@ -87,11 +87,11 @@ void CfgFileManager::load(KConfig *)
         addItem(QIcon::fromTheme(service->icon()), service->name(), service->storageId());
 
         if (fileManager->storageId() == service->storageId()) {
-            setCurrentIndex(count() -1);
-            m_currentIndex = count() -1;
+            setCurrentIndex(count() - 1);
+            m_currentIndex = count() - 1;
         }
         if (service->storageId() == QStringLiteral("org.kde.dolphin.desktop")) {
-            m_defaultIndex = count() -1;
+            m_defaultIndex = count() - 1;
         }
     }
 
@@ -101,8 +101,8 @@ void CfgFileManager::load(KConfig *)
 
         const QString icon = !service->icon().isEmpty() ? service->icon() : QStringLiteral("application-x-shellscript");
         addItem(QIcon::fromTheme(icon), service->name(), service->storageId());
-        setCurrentIndex(count() -1);
-        m_currentIndex = count() -1;
+        setCurrentIndex(count() - 1);
+        m_currentIndex = count() - 1;
     }
 
     // add a other option to add a new file manager with KOpenWithDialog

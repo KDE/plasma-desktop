@@ -31,27 +31,31 @@ class MimeTypesModel : public QAbstractListModel
 
     Q_PROPERTY(QStringList checkedTypes READ checkedTypes WRITE setCheckedTypes NOTIFY checkedTypesChanged)
 
-    public:
-        explicit MimeTypesModel(QObject *parent = nullptr);
-        ~MimeTypesModel() override;
+public:
+    explicit MimeTypesModel(QObject *parent = nullptr);
+    ~MimeTypesModel() override;
 
-        QHash<int, QByteArray> roleNames() const override;
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-        bool setData(const QModelIndex &index, const QVariant &value, int role) override;
+    QHash<int, QByteArray> roleNames() const override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const override { Q_UNUSED(parent) return m_mimeTypesList.size(); }
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override
+    {
+        Q_UNUSED(parent)
+        return m_mimeTypesList.size();
+    }
 
-        QStringList checkedTypes() const;
-        void setCheckedTypes(const QStringList &list);
+    QStringList checkedTypes() const;
+    void setCheckedTypes(const QStringList &list);
 
-    Q_SIGNALS:
-        void checkedTypesChanged() const;
+Q_SIGNALS:
+    void checkedTypesChanged() const;
 
-    private:
-        int indexOfType(const QString &name) const;
+private:
+    int indexOfType(const QString &name) const;
 
-        QList<QMimeType> m_mimeTypesList;
-        QVector<bool> m_checkedRows;
+    QList<QMimeType> m_mimeTypesList;
+    QVector<bool> m_checkedRows;
 };
 
 #endif

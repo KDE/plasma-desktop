@@ -20,13 +20,14 @@
 
 #include <QDir>
 
-namespace {
-    //save in XDG user-dirs.dirs config file, this is where KGlobalSettings/QDesktopServices reads from.
-    KSharedConfig::Ptr userDirsConfig()
-    {
-        const QString userDirsFilePath = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs");
-        return KSharedConfig::openConfig(userDirsFilePath, KConfig::SimpleConfig);
-    }
+namespace
+{
+// save in XDG user-dirs.dirs config file, this is where KGlobalSettings/QDesktopServices reads from.
+KSharedConfig::Ptr userDirsConfig()
+{
+    const QString userDirsFilePath = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs");
+    return KSharedConfig::openConfig(userDirsFilePath, KConfig::SimpleConfig);
+}
 }
 
 class PathsSettingsStore : public QObject

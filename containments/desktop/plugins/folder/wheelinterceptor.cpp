@@ -21,7 +21,8 @@
 
 #include <QCoreApplication>
 
-WheelInterceptor::WheelInterceptor(QQuickItem *parent) : QQuickItem(parent)
+WheelInterceptor::WheelInterceptor(QQuickItem *parent)
+    : QQuickItem(parent)
 {
 }
 
@@ -29,7 +30,7 @@ WheelInterceptor::~WheelInterceptor()
 {
 }
 
-QObject* WheelInterceptor::destination() const
+QObject *WheelInterceptor::destination() const
 {
     return m_destination;
 }
@@ -43,7 +44,7 @@ void WheelInterceptor::setDestination(QObject *destination)
     }
 }
 
-void WheelInterceptor::wheelEvent(QWheelEvent* event)
+void WheelInterceptor::wheelEvent(QWheelEvent *event)
 {
     if (m_destination) {
         QCoreApplication::sendEvent(m_destination, event);

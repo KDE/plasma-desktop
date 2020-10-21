@@ -30,7 +30,6 @@
 
 #include <KCModule>
 
-
 class X11EvdevBackend;
 
 class XlibConfig : public ConfigPlugin, public Ui::KCMMouse

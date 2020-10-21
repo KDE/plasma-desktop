@@ -22,11 +22,9 @@
 
 #include <KCModule>
 #include <KConfig>
-#include <QRadioButton>
 #include <QCheckBox>
 #include <QPushButton>
-
-
+#include <QRadioButton>
 
 class KPluginSelector;
 
@@ -35,12 +33,9 @@ class SearchConfigModule : public KCModule
     Q_OBJECT
 
 public:
-    enum Roles {
-        RunnersRole = Qt::UserRole + 1,
-        DescriptionRole
-    };
+    enum Roles { RunnersRole = Qt::UserRole + 1, DescriptionRole };
 
-    SearchConfigModule(QWidget* parent, const QVariantList& args);
+    SearchConfigModule(QWidget *parent, const QVariantList &args);
 
 public Q_SLOTS:
     void load() override;

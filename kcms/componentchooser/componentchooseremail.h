@@ -21,7 +21,7 @@
 
 class KEMailSettings;
 
-class CfgEmailClient: public CfgPlugin
+class CfgEmailClient : public CfgPlugin
 {
     Q_OBJECT
 public:

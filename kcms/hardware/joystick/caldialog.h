@@ -31,20 +31,20 @@ class JoyDevice;
 
 class CalDialog : public KDialog
 {
-  Q_OBJECT
-  
-  public:
+    Q_OBJECT
+
+public:
     CalDialog(QWidget *parent, JoyDevice *joy);
 
     void calibrate();
 
-  private:
+private:
     void waitButton(int axis, bool press, int &lastVal);
 
-  private Q_SLOTS:
+private Q_SLOTS:
     virtual void slotUser1();
 
-  private:
+private:
     JoyDevice *joydev;
 
     QLabel *text;

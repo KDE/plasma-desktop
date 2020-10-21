@@ -20,8 +20,7 @@
 
 #include "componentchooser.h"
 
-
-class KCMComponentChooser: public KCModule
+class KCMComponentChooser : public KCModule
 {
     Q_OBJECT
 public:
@@ -32,7 +31,7 @@ public:
     void defaults() override;
 
 private:
-    ComponentChooser  *m_chooser;
+    ComponentChooser *m_chooser;
 };
 
 #endif // KCM_COMPONENTCHOOSER_H

@@ -51,17 +51,7 @@ class BaseModel : public QAbstractItemModel
     Q_OBJECT
 
 public:
-    enum Roles {
-        SectionRole = Qt::UserRole,
-        ComponentRole,
-        ActionRole,
-        ActiveShortcutsRole,
-        DefaultShortcutsRole,
-        CustomShortcutsRole,
-        CheckedRole,
-        PendingDeletionRole,
-        IsDefaultRole
-    };
+    enum Roles { SectionRole = Qt::UserRole, ComponentRole, ActionRole, ActiveShortcutsRole, DefaultShortcutsRole, CustomShortcutsRole, CheckedRole, PendingDeletionRole, IsDefaultRole };
     Q_ENUM(Roles)
 
     BaseModel(QObject *parent = nullptr);

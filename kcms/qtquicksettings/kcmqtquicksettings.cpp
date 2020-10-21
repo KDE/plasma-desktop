@@ -19,25 +19,21 @@
 
 #include "kcmqtquicksettings.h"
 
-#include <KPluginFactory>
 #include <KAboutData>
+#include <KPluginFactory>
 #include <QDebug>
 
-#include "ui_kcmqtquicksettingswidget.h"
 #include "renderersettings.h"
+#include "ui_kcmqtquicksettingswidget.h"
 
 K_PLUGIN_FACTORY(KCMQtQuickSettingsFactory, registerPlugin<KCMQtQuickSettingsModule>();)
 
 KCMQtQuickSettingsModule::KCMQtQuickSettingsModule(QWidget *parent, const QVariantList &args)
-    : KCModule(parent, args),
-      m_ui(new Ui::KCMQtQuickSettingsWidget),
-      m_settings(new PlasmaQtQuickSettings::RendererSettings(KSharedConfig::openConfig(QStringLiteral("kdeglobals"))))
+    : KCModule(parent, args)
+    , m_ui(new Ui::KCMQtQuickSettingsWidget)
+    , m_settings(new PlasmaQtQuickSettings::RendererSettings(KSharedConfig::openConfig(QStringLiteral("kdeglobals"))))
 {
-    KAboutData *about = new KAboutData(QStringLiteral("Plasma QtQuick Settings"),
-                                       i18n("Plasma QtQuick Settings"),
-                                       QString(),
-                                       i18n("Configure Plasma QtQuick Settings"),
-                                       KAboutLicense::GPL);
+    KAboutData *about = new KAboutData(QStringLiteral("Plasma QtQuick Settings"), i18n("Plasma QtQuick Settings"), QString(), i18n("Configure Plasma QtQuick Settings"), KAboutLicense::GPL);
     about->addAuthor(i18n("David Edmundson"), i18n("Maintainer"), QStringLiteral("davidedmundson@kde.org"));
     setAboutData(about);
 

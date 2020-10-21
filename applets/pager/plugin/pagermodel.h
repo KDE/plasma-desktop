@@ -23,13 +23,13 @@ Free Software Foundation, Inc.,
 #include <config-X11.h>
 
 #if HAVE_X11
-#include <netwm.h>
 #include <QX11Info>
+#include <netwm.h>
 #endif
 
-#include <qwindowdefs.h>
 #include <QAbstractListModel>
 #include <QQmlParserStatus>
+#include <qwindowdefs.h>
 
 class QMimeData;
 
@@ -54,14 +54,9 @@ class PagerModel : public QAbstractListModel, public QQmlParserStatus
     Q_PROPERTY(QSize pagerItemSize READ pagerItemSize NOTIFY pagerItemSizeChanged)
 
 public:
-    enum PagerType {
-        VirtualDesktops = 0,
-        Activities
-    };
+    enum PagerType { VirtualDesktops = 0, Activities };
 
-     enum AdditionalRoles {
-         TasksModel = Qt::UserRole + 1
-     };
+    enum AdditionalRoles { TasksModel = Qt::UserRole + 1 };
 
     explicit PagerModel(QObject *parent = nullptr);
     ~PagerModel() override;
@@ -100,8 +95,7 @@ public:
 
     Q_INVOKABLE void refresh();
 
-    Q_INVOKABLE void moveWindow(int window, double x, double y, const QVariant &targetItemId, const QVariant &sourceItemId,
-        qreal widthScaleFactor, qreal heightScaleFactor);
+    Q_INVOKABLE void moveWindow(int window, double x, double y, const QVariant &targetItemId, const QVariant &sourceItemId, qreal widthScaleFactor, qreal heightScaleFactor);
     Q_INVOKABLE void changePage(int page);
     Q_INVOKABLE void drop(QMimeData *mimeData, int modifiers, const QVariant &itemId);
     Q_INVOKABLE void addDesktop();

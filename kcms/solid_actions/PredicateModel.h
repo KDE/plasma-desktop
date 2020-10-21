@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software            *
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA          *
  * 02110-1301, USA.                                                       *
-***************************************************************************/
+ ***************************************************************************/
 
 #ifndef PREDICATEMODEL_H
 #define PREDICATEMODEL_H
@@ -31,22 +31,22 @@ class PredicateModel : public QAbstractItemModel
     Q_OBJECT
 
 public:
-    explicit PredicateModel( PredicateItem * menuRoot, QObject *parent = nullptr );
+    explicit PredicateModel(PredicateItem *menuRoot, QObject *parent = nullptr);
     ~PredicateModel() override;
 
-    QVariant data( const QModelIndex &index, int role ) const override;
-    Qt::ItemFlags flags( const QModelIndex &index ) const override;
-    QModelIndex index( int row, int column, const QModelIndex &parent = QModelIndex() ) const override;
-    QModelIndex parent( const QModelIndex &index ) const override;
-    int rowCount( const QModelIndex &parent = QModelIndex() ) const override;
-    int columnCount( const QModelIndex &parent = QModelIndex() ) const override;
+    QVariant data(const QModelIndex &index, int role) const override;
+    Qt::ItemFlags flags(const QModelIndex &index) const override;
+    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
+    QModelIndex parent(const QModelIndex &index) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    void setRootPredicate( PredicateItem * item );
-    void itemUpdated( const QModelIndex& item );
-    void childrenChanging( const QModelIndex& item, Solid::Predicate::Type oldType );
+    void setRootPredicate(PredicateItem *item);
+    void itemUpdated(const QModelIndex &item);
+    void childrenChanging(const QModelIndex &item, Solid::Predicate::Type oldType);
 
 protected:
-    PredicateItem * rootItem() const;
+    PredicateItem *rootItem() const;
 
 private:
     class Private;

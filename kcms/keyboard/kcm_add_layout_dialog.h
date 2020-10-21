@@ -16,7 +16,6 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #ifndef KCM_ADD_LAYOUT_DIALOG_H_
 #define KCM_ADD_LAYOUT_DIALOG_H_
 
@@ -30,33 +29,34 @@ struct Rules;
 class Flags;
 class Ui_AddLayoutDialog;
 
-class AddLayoutDialog: public QDialog
+class AddLayoutDialog : public QDialog
 {
-	Q_OBJECT
+    Q_OBJECT
 
 public:
-    AddLayoutDialog(const Rules* rules, Flags* flags, const QString& model,
-                    const QStringList &options, bool showLabel, QWidget* parent=nullptr);
+    AddLayoutDialog(const Rules *rules, Flags *flags, const QString &model, const QStringList &options, bool showLabel, QWidget *parent = nullptr);
 
-	LayoutUnit getSelectedLayoutUnit() { return selectedLayoutUnit; }
-	QString getvariant(QString variant);
-	void accept() override;
+    LayoutUnit getSelectedLayoutUnit()
+    {
+        return selectedLayoutUnit;
+    }
+    QString getvariant(QString variant);
+    void accept() override;
 
 public Q_SLOTS:
-	void languageChanged(int langIdx);
+    void languageChanged(int langIdx);
     void layoutChanged(int layoutIdx);
     void preview();
 
 private:
-	const Rules* rules;
-	Flags* flags;
-	const QString& model;
+    const Rules *rules;
+    Flags *flags;
+    const QString &model;
     const QStringList &options;
-	Ui_AddLayoutDialog* layoutDialogUi;
-	QString selectedLanguage;
-	QString selectedLayout;
-	LayoutUnit selectedLayoutUnit;
+    Ui_AddLayoutDialog *layoutDialogUi;
+    QString selectedLanguage;
+    QString selectedLayout;
+    LayoutUnit selectedLayoutUnit;
 };
-
 
 #endif /* KCM_ADD_LAYOUT_DIALOG_H_ */

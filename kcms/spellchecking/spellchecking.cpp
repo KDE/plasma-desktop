@@ -26,14 +26,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QBoxLayout>
 #include <QSet>
 
+#include "spellcheckingdata.h"
+#include "spellcheckingskeleton.h"
 #include <KConfigDialogManager>
+#include <KPluginFactory>
 #include <Sonnet/ConfigView>
 #include <Sonnet/Settings>
-#include <KPluginFactory>
-#include "spellcheckingskeleton.h"
-#include "spellcheckingdata.h"
 
-K_PLUGIN_FACTORY(SpellFactory, registerPlugin<SonnetSpellCheckingModule>();registerPlugin<SpellCheckingData>();)
+K_PLUGIN_FACTORY(SpellFactory, registerPlugin<SonnetSpellCheckingModule>(); registerPlugin<SpellCheckingData>();)
 
 SonnetSpellCheckingModule::SonnetSpellCheckingModule(QWidget *parent, const QVariantList &)
     : KCModule(parent)

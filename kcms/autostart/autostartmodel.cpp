@@ -327,7 +327,6 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
     QString folder;
 
     if (kind == AutostartModel::AutostartEntrySource::XdgScripts) {
-
         int lastLoginScript = -1;
         for (const AutostartEntry &e : qAsConst(m_entries)) {
             if (e.source == AutostartModel::AutostartEntrySource::PlasmaShutdown) {

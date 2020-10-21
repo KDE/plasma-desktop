@@ -23,7 +23,8 @@
 
 #include <QObject>
 
-class ActivitySettings: public QObject {
+class ActivitySettings : public QObject
+{
     Q_OBJECT
 
     Q_PROPERTY(bool newActivityAuthorized READ newActivityAuthorized CONSTANT)
@@ -42,9 +43,6 @@ public Q_SLOTS:
 
 private:
     bool m_newActivityAuthorized;
-
 };
 
 #endif // ACTIVITYSETTINGS_H
-
-

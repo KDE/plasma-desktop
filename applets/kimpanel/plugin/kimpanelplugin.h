@@ -21,7 +21,6 @@
 #ifndef KIMPANELPLUGIN_H
 #define KIMPANELPLUGIN_H
 
-
 #include <QQmlEngine>
 #include <QQmlExtensionPlugin>
 
@@ -31,9 +30,7 @@ class KimpanelPlugin : public QQmlExtensionPlugin
     Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QQmlExtensionInterface")
 
 public:
-    void registerTypes(const char* uri) override;
-
-
+    void registerTypes(const char *uri) override;
 };
 
 #endif // KIMPANELPLUGIN_H

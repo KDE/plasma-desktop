@@ -16,28 +16,29 @@
 #include "componentchooserterminal.h"
 #include "terminal_settings.h"
 
+#include <QCheckBox>
 #include <QDBusConnection>
 #include <QDBusMessage>
-#include <QCheckBox>
 
+#include <KConfig>
 #include <KMessageBox>
 #include <KOpenWithDialog>
-#include <KConfig>
 
-#include <KUrlRequester>
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KServiceTypeTrader>
+#include <KUrlRequester>
 
 #include <QUrl>
 
 CfgTerminalEmulator::CfgTerminalEmulator(QWidget *parent)
     : CfgPlugin(parent)
 {
-    connect(this, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated), this, &CfgTerminalEmulator::selectTerminalEmulator);
+    connect(this, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &CfgTerminalEmulator::selectTerminalEmulator);
 }
 
-CfgTerminalEmulator::~CfgTerminalEmulator() {
+CfgTerminalEmulator::~CfgTerminalEmulator()
+{
 }
 
 void CfgTerminalEmulator::selectTerminalEmulator(int index)
@@ -51,7 +52,7 @@ void CfgTerminalEmulator::selectTerminalEmulator(int index)
 
 void CfgTerminalEmulator::load(KConfig *)
 {
-	TerminalSettings settings;
+    TerminalSettings settings;
     const QString terminal = settings.terminalApplication();
 
     clear();
@@ -100,19 +101,16 @@ void CfgTerminalEmulator::save(KConfig *)
 
     m_currentIndex = currentIndex();
 
-    QDBusMessage message  = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
-                                                           QStringLiteral("/KLauncher"),
-                                                           QStringLiteral("org.kde.KLauncher"),
-                                                           QStringLiteral("reparseConfiguration"));
+    QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"), QStringLiteral("/KLauncher"), QStringLiteral("org.kde.KLauncher"), QStringLiteral("reparseConfiguration"));
     QDBusConnection::sessionBus().send(message);
     emit changed(false);
 }
 
 void CfgTerminalEmulator::selectTerminalApp()
 {
-	QList<QUrl> urlList;
-	KOpenWithDialog dlg(urlList, i18n("Select preferred terminal application:"), QString(), this);
-	// hide "Run in &terminal" here, we don't need it for a Terminal Application
+    QList<QUrl> urlList;
+    KOpenWithDialog dlg(urlList, i18n("Select preferred terminal application:"), QString(), this);
+    // hide "Run in &terminal" here, we don't need it for a Terminal Application
     dlg.hideRunInTerminal();
     dlg.setSaveNewApplications(true);
     if (dlg.exec() != QDialog::Accepted) {
@@ -122,18 +120,17 @@ void CfgTerminalEmulator::selectTerminalApp()
     const auto service = dlg.service();
 
     // if the selected service is already in the list
-    const auto matching = model()->match(model()->index(0,0), Qt::DisplayRole, service->exec());
+    const auto matching = model()->match(model()->index(0, 0), Qt::DisplayRole, service->exec());
     if (!matching.isEmpty()) {
         const int index = matching.at(0).row();
         setCurrentIndex(index);
         changed(index != m_currentIndex);
     } else {
         const QString icon = !service->icon().isEmpty() ? service->icon() : QStringLiteral("application-x-shellscript");
-        insertItem(count() -1, QIcon::fromTheme(icon), service->name(), service->exec());
+        insertItem(count() - 1, QIcon::fromTheme(icon), service->name(), service->exec());
         setCurrentIndex(count() - 2);
 
         changed(true);
     }
-
 }
 // vim: sw=4 ts=4 noet

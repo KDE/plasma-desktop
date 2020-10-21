@@ -23,8 +23,8 @@
 #include "screenmappertest.h"
 #include "screenmapper.h"
 
-#include <QTest>
 #include <QSignalSpy>
+#include <QTest>
 
 QTEST_MAIN(ScreenMapperTest)
 
@@ -79,7 +79,7 @@ void ScreenMapperTest::tst_addMapping()
     QSignalSpy s(m_screenMapper, &ScreenMapper::screenMappingChanged);
     QString file("desktop:/foo%1.txt");
 
-    for (int i = 0 ; i < 3; i++) {
+    for (int i = 0; i < 3; i++) {
         const QUrl url = ScreenMapper::stringToUrl(file.arg(i));
         m_screenMapper->addMapping(url, i);
         QCOMPARE(s.count(), i + 1);
@@ -93,7 +93,7 @@ void ScreenMapperTest::tst_addRemoveScreenWithItems()
     addScreens(path);
     QString file("desktop:/foo%1.txt");
 
-    for (int i = 0 ; i < 3; i++) {
+    for (int i = 0; i < 3; i++) {
         const QUrl url = ScreenMapper::stringToUrl(file.arg(i));
         m_screenMapper->addMapping(url, i);
     }
@@ -117,7 +117,6 @@ void ScreenMapperTest::tst_addRemoveScreenWithItems()
     QCOMPARE(m_screenMapper->firstAvailableScreen(path), 2);
     m_screenMapper->removeScreen(2, path);
     QCOMPARE(m_screenMapper->firstAvailableScreen(path), -1);
-
 
     QCOMPARE(m_screenMapper->screenForItem(ScreenMapper::stringToUrl(file.arg(0))), -1);
     QCOMPARE(m_screenMapper->screenForItem(ScreenMapper::stringToUrl(file.arg(1))), -1);
@@ -148,7 +147,6 @@ void ScreenMapperTest::tst_addRemoveScreenDifferentPaths()
     m_screenMapper->addScreen(0, path);
     QCOMPARE(m_screenMapper->firstAvailableScreen(path), 0);
     QCOMPARE(m_screenMapper->firstAvailableScreen(path2), -1);
-
 }
 
 void ScreenMapperTest::addScreens(const QUrl &path)

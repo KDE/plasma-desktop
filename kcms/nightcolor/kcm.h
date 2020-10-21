@@ -19,14 +19,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <KQuickAddons/ConfigModule>
 
-namespace ColorCorrect {
-
+namespace ColorCorrect
+{
 class KCMNightColor : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
 public:
-    KCMNightColor(QObject* parent, const QVariantList& args);
-    ~KCMNightColor() override {}
+    KCMNightColor(QObject *parent, const QVariantList &args);
+    ~KCMNightColor() override
+    {
+    }
 
 public Q_SLOTS:
     void load() override;
@@ -41,4 +43,4 @@ Q_SIGNALS:
 
 }
 
-#endif  // _KCM_NIGHTCOLOR_H
+#endif // _KCM_NIGHTCOLOR_H

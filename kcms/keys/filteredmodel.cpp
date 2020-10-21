@@ -47,22 +47,19 @@ bool FilteredShortcutsModel::filterAcceptsRow(int source_row, const QModelIndex 
     }
 
     const auto &defaultShortcuts = index.data(BaseModel::DefaultShortcutsRole).value<QSet<QKeySequence>>();
-    for (const auto& shortcut : defaultShortcuts) {
-        if (shortcut.toString(QKeySequence::NativeText).contains(m_filter, Qt::CaseInsensitive)
-                || shortcut.toString(QKeySequence::PortableText).contains(m_filter, Qt::CaseInsensitive)) {
+    for (const auto &shortcut : defaultShortcuts) {
+        if (shortcut.toString(QKeySequence::NativeText).contains(m_filter, Qt::CaseInsensitive) || shortcut.toString(QKeySequence::PortableText).contains(m_filter, Qt::CaseInsensitive)) {
             return true;
         }
     }
 
     const auto &shortcuts = index.data(BaseModel::CustomShortcutsRole).value<QSet<QKeySequence>>();
-    for (const auto& shortcut : shortcuts) {
-        if (shortcut.toString(QKeySequence::NativeText).contains(m_filter, Qt::CaseInsensitive)
-                || shortcut.toString(QKeySequence::PortableText).contains(m_filter, Qt::CaseInsensitive)) {
+    for (const auto &shortcut : shortcuts) {
+        if (shortcut.toString(QKeySequence::NativeText).contains(m_filter, Qt::CaseInsensitive) || shortcut.toString(QKeySequence::PortableText).contains(m_filter, Qt::CaseInsensitive)) {
             return true;
         }
     }
     return false;
-
 }
 
 QString FilteredShortcutsModel::filter() const
@@ -79,6 +76,3 @@ void FilteredShortcutsModel::setFilter(const QString &filter)
     invalidateFilter();
     emit filterChanged();
 }
-
-
-

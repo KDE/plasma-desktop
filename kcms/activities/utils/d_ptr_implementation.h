@@ -23,29 +23,28 @@
 
 #include <utility>
 
-namespace kamd {
-namespace utils {
-
-template <typename T>
+namespace kamd
+{
+namespace utils
+{
+template<typename T>
 d_ptr<T>::d_ptr()
     : d(new T())
 {
 }
 
-template <typename T>
-template <typename... Args>
+template<typename T>
+template<typename... Args>
 d_ptr<T>::d_ptr(Args &&... args)
     : d(new T(std::forward<Args>(args)...))
 {
 }
 
-template <typename T>
-d_ptr<T>::~d_ptr()
+template<typename T> d_ptr<T>::~d_ptr()
 {
 }
 
-template <typename T>
-T *d_ptr<T>::operator->() const
+template<typename T> T *d_ptr<T>::operator->() const
 {
     return d.get();
 }

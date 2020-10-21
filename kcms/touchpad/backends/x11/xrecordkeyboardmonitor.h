@@ -19,12 +19,12 @@
 #ifndef XRECORDKEYBOARDMONITOR_H
 #define XRECORDKEYBOARDMONITOR_H
 
-#include <QVector>
 #include <QSocketNotifier>
+#include <QVector>
 #include <QX11Info>
 
-#include <xcb/xcb.h>
 #include <xcb/record.h>
+#include <xcb/xcb.h>
 
 class XRecordKeyboardMonitor : public QObject
 {
@@ -43,7 +43,10 @@ private Q_SLOTS:
 
 private:
     void process(xcb_record_enable_context_reply_t *reply);
-    bool activity() const { return m_keysPressed && !m_modifiersPressed; }
+    bool activity() const
+    {
+        return m_keysPressed && !m_modifiersPressed;
+    }
 
     QSocketNotifier *m_notifier;
     xcb_connection_t *m_connection;

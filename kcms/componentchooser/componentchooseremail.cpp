@@ -19,23 +19,24 @@
 #include <KOpenWithDialog>
 
 #include <KApplicationTrader>
-#include <KLocalizedString>
 #include <KConfigGroup>
-#include <KSharedConfig>
+#include <KLocalizedString>
 #include <KService>
 #include <KServiceTypeTrader>
+#include <KSharedConfig>
 #include <KShell>
 
+#include <QCheckBox>
 #include <QDBusConnection>
 #include <QDBusMessage>
-#include <QUrl>
 #include <QFile>
-#include <QCheckBox>
+#include <QUrl>
 
-namespace {
-    static const char s_defaultApplication[] = "Default Applications";
-    static const char s_AddedAssociations[] = "Added Associations";
-    static const auto s_mimetype = QStringLiteral("x-scheme-handler/mailto");
+namespace
+{
+static const char s_defaultApplication[] = "Default Applications";
+static const char s_AddedAssociations[] = "Added Associations";
+static const auto s_mimetype = QStringLiteral("x-scheme-handler/mailto");
 }
 
 CfgEmailClient::CfgEmailClient(QWidget *parent)
@@ -43,10 +44,11 @@ CfgEmailClient::CfgEmailClient(QWidget *parent)
 {
     pSettings = new KEMailSettings();
 
-    connect(this, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated), this, &CfgEmailClient::selectEmailClient);
+    connect(this, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &CfgEmailClient::selectEmailClient);
 }
 
-CfgEmailClient::~CfgEmailClient() {
+CfgEmailClient::~CfgEmailClient()
+{
     delete pSettings;
 }
 
@@ -54,23 +56,20 @@ void CfgEmailClient::load(KConfig *)
 {
     const KService::Ptr emailClientService = KApplicationTrader::preferredService(s_mimetype);
 
-    const auto emailClients = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
-                                                                QStringLiteral("'Email' in Categories and 'x-scheme-handler/mailto' in ServiceTypes"));
+    const auto emailClients = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("'Email' in Categories and 'x-scheme-handler/mailto' in ServiceTypes"));
 
     clear();
     m_currentIndex = -1;
     m_defaultIndex = -1;
 
     for (const auto &service : emailClients) {
-
         addItem(QIcon::fromTheme(service->icon()), service->name(), service->storageId());
 
         if (emailClientService && emailClientService->storageId() == service->storageId()) {
             setCurrentIndex(count() - 1);
             m_currentIndex = count() - 1;
         }
-        if (service->storageId() == QStringLiteral("org.kde.kmail2.desktop") ||
-                service->storageId() == QStringLiteral("org.kde.kmail.desktop")) {
+        if (service->storageId() == QStringLiteral("org.kde.kmail2.desktop") || service->storageId() == QStringLiteral("org.kde.kmail.desktop")) {
             m_defaultIndex = count() - 1;
         }
     }
@@ -93,7 +92,7 @@ void CfgEmailClient::load(KConfig *)
 
 void CfgEmailClient::selectEmailClient(int index)
 {
-    if (index == count() -1) {
+    if (index == count() - 1) {
         // Other option
 
         KOpenWithDialog dlg(s_mimetype, QString(), this);
@@ -146,7 +145,6 @@ void CfgEmailClient::save(KConfig *)
     // Save the default email client in mimeapps.list
     KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
     if (profile->isConfigWritable(true)) {
-
         KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
 
         // Save the default application according to mime-apps-spec 1.0
@@ -166,4 +164,3 @@ void CfgEmailClient::save(KConfig *)
         emit changed(false);
     }
 }
-

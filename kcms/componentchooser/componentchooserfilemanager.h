@@ -24,7 +24,7 @@
 #include "componentchooser.h"
 #include <QComboBox>
 
-class CfgFileManager: public CfgPlugin
+class CfgFileManager : public CfgPlugin
 {
     Q_OBJECT
 public:

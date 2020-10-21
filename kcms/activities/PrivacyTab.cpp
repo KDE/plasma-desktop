@@ -19,23 +19,23 @@
  */
 
 #include "PrivacyTab.h"
-#include "kactivitymanagerd_settings.h"
 #include "kactivitymanagerd_plugins_settings.h"
+#include "kactivitymanagerd_settings.h"
 
+#include <QDBusPendingCall>
 #include <QMenu>
+#include <QQmlComponent>
 #include <QQmlContext>
 #include <QQmlEngine>
-#include <QQmlComponent>
-#include <QDBusPendingCall>
 
 #include <QQuickView>
 
 #include <KConfigGroup>
-#include <KSharedConfig>
 #include <KMessageWidget>
+#include <KSharedConfig>
 
-#include "ui_PrivacyTabBase.h"
 #include "BlacklistedApplicationsModel.h"
+#include "ui_PrivacyTabBase.h"
 
 #include <utils/d_ptr_implementation.h>
 
@@ -45,7 +45,8 @@
 
 #include "utils.h"
 
-class PrivacyTab::Private : public Ui::PrivacyTabBase {
+class PrivacyTab::Private : public Ui::PrivacyTabBase
+{
 public:
     KActivityManagerdSettings *mainConfig;
     KActivityManagerdPluginsSettings *pluginConfig;
@@ -79,22 +80,17 @@ PrivacyTab::PrivacyTab(QWidget *parent)
     d->kcfg_keepHistoryFor->setRange(0, INT_MAX);
     d->kcfg_keepHistoryFor->setSpecialValueText(i18nc("unlimited number of months", "Forever"));
 
-    connect(d->kcfg_keepHistoryFor, SIGNAL(valueChanged(int)),
-            this, SLOT(spinKeepHistoryValueChanged(int)));
+    connect(d->kcfg_keepHistoryFor, SIGNAL(valueChanged(int)), this, SLOT(spinKeepHistoryValueChanged(int)));
     spinKeepHistoryValueChanged(0);
 
     // Clear recent history button
 
     auto menu = new QMenu(this);
 
-    connect(menu->addAction(i18n("Forget the last hour")), &QAction::triggered,
-            this, &PrivacyTab::forgetLastHour);
-    connect(menu->addAction(i18n("Forget the last two hours")), &QAction::triggered,
-            this, &PrivacyTab::forgetTwoHours);
-    connect(menu->addAction(i18n("Forget a day")), &QAction::triggered,
-            this, &PrivacyTab::forgetDay);
-    connect(menu->addAction(i18n("Forget everything")), &QAction::triggered,
-            this, &PrivacyTab::forgetAll);
+    connect(menu->addAction(i18n("Forget the last hour")), &QAction::triggered, this, &PrivacyTab::forgetLastHour);
+    connect(menu->addAction(i18n("Forget the last two hours")), &QAction::triggered, this, &PrivacyTab::forgetTwoHours);
+    connect(menu->addAction(i18n("Forget a day")), &QAction::triggered, this, &PrivacyTab::forgetDay);
+    connect(menu->addAction(i18n("Forget everything")), &QAction::triggered, this, &PrivacyTab::forgetAll);
 
     d->buttonClearRecentHistory->setMenu(menu);
 
@@ -106,17 +102,13 @@ PrivacyTab::PrivacyTab(QWidget *parent)
 
     new QGridLayout(d->viewBlacklistedApplicationsContainer);
 
-    d->viewBlacklistedApplications
-        = createView(d->viewBlacklistedApplicationsContainer);
-    d->viewBlacklistedApplications->rootContext()->setContextProperty(
-        QStringLiteral("applicationModel"), d->blacklistedApplicationsModel);
-    setViewSource(d->viewBlacklistedApplications,
-        QStringLiteral("/qml/privacyTab/BlacklistApplicationView.qml"));
+    d->viewBlacklistedApplications = createView(d->viewBlacklistedApplicationsContainer);
+    d->viewBlacklistedApplications->rootContext()->setContextProperty(QStringLiteral("applicationModel"), d->blacklistedApplicationsModel);
+    setViewSource(d->viewBlacklistedApplications, QStringLiteral("/qml/privacyTab/BlacklistApplicationView.qml"));
 
     // React to changes
 
-    connect(d->radioRememberSpecificApplications, &QAbstractButton::toggled,
-            d->blacklistedApplicationsModel, &BlacklistedApplicationsModel::setEnabled);
+    connect(d->radioRememberSpecificApplications, &QAbstractButton::toggled, d->blacklistedApplicationsModel, &BlacklistedApplicationsModel::setEnabled);
     d->blacklistedApplicationsModel->setEnabled(false);
 
     d->messageWidget->setVisible(false);
@@ -139,20 +131,18 @@ void PrivacyTab::load()
 void PrivacyTab::save()
 {
     d->blacklistedApplicationsModel->save();
-    
-    const auto whatToRemember =
-        d->radioRememberSpecificApplications->isChecked() ? SpecificApplications :
-        d->radioDontRememberApplications->isChecked()     ? NoApplications :
-        /* otherwise */                                     AllApplications;
-    
+
+    const auto whatToRemember = d->radioRememberSpecificApplications->isChecked() ? SpecificApplications
+                                                                                  : d->radioDontRememberApplications->isChecked() ? NoApplications :
+                                                                                                                                  /* otherwise */ AllApplications;
+
     d->mainConfig->setResourceScoringEnabled(whatToRemember != NoApplications);
     d->mainConfig->save();
 }
 
 void PrivacyTab::forget(int count, const QString &what)
 {
-    KAMD_DBUS_DECL_INTERFACE(rankingsservice, Resources/Scoring,
-                             ResourcesScoring);
+    KAMD_DBUS_DECL_INTERFACE(rankingsservice, Resources / Scoring, ResourcesScoring);
 
     rankingsservice.asyncCall(QStringLiteral("DeleteRecentStats"), QString(), count, what);
 
@@ -181,12 +171,10 @@ void PrivacyTab::forgetAll()
 
 void PrivacyTab::spinKeepHistoryValueChanged(int value)
 {
-    static auto months = ki18ncp("unit of time. months to keep the history",
-                                 " month", " months");
+    static auto months = ki18ncp("unit of time. months to keep the history", " month", " months");
 
     if (value) {
-        d->kcfg_keepHistoryFor->setPrefix(
-            i18nc("for in 'keep history for 5 months'", "For "));
+        d->kcfg_keepHistoryFor->setPrefix(i18nc("for in 'keep history for 5 months'", "For "));
         d->kcfg_keepHistoryFor->setSuffix(months.subs(value).toString());
     }
 }

@@ -24,30 +24,28 @@
 
 #include <QDir>
 
+#include <KBuildSycocaProgressDialog>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KGlobal>
-#include <QLabel>
 #include <KLocalizedString>
-#include <KBuildSycocaProgressDialog>
+#include <QLabel>
 
-
-ComponentChooser::ComponentChooser(QWidget *parent):
-    QWidget(parent), Ui::ComponentChooser_UI()
+ComponentChooser::ComponentChooser(QWidget *parent)
+    : QWidget(parent)
+    , Ui::ComponentChooser_UI()
 {
-	setupUi(this);
+    setupUi(this);
 
-    const QString directory = QStandardPaths::locate(
-                QStandardPaths::GenericDataLocation, QStringLiteral("kcm_componentchooser"), QStandardPaths::LocateDirectory);
+    const QString directory = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kcm_componentchooser"), QStandardPaths::LocateDirectory);
     QStringList services;
     const QDir dir(directory);
-    for (const auto &f: dir.entryList(QStringList("*.desktop"))) {
+    for (const auto &f : dir.entryList(QStringList("*.desktop"))) {
         services += dir.absoluteFilePath(f);
     }
 
-    for (const QString &service : qAsConst(services))
-	{
-		KConfig cfg(service, KConfig::SimpleConfig);
+    for (const QString &service : qAsConst(services)) {
+        KConfig cfg(service, KConfig::SimpleConfig);
         KConfigGroup cg = cfg.group(QByteArray());
 
         // fill the form layout
@@ -71,11 +69,11 @@ CfgPlugin *ComponentChooser::loadConfigWidget(const QString &cfgType)
 
     if (cfgType == QLatin1String("internal_email")) {
         loadedConfigWidget = new CfgEmailClient(this);
-	}
+    }
 #ifdef Q_OS_UNIX
     else if (cfgType == QLatin1String("internal_terminal")) {
         loadedConfigWidget = new CfgTerminalEmulator(this);
-	}
+    }
 #endif
     else if (cfgType == QLatin1String("internal_filemanager")) {
         loadedConfigWidget = new CfgFileManager(this);
@@ -95,7 +93,7 @@ void ComponentChooser::emitChanged()
     bool somethingChanged = false;
     bool isDefaults = true;
     // check if another plugin has changed and default status
-    for (CfgPlugin *plugin: qAsConst(configWidgetMap)) {
+    for (CfgPlugin *plugin : qAsConst(configWidgetMap)) {
         somethingChanged |= plugin->hasChanged();
         isDefaults &= plugin->isDefaults();
     }
@@ -108,41 +106,42 @@ ComponentChooser::~ComponentChooser()
 {
     for (QWidget *configWidget : qAsConst(configWidgetMap)) {
         delete configWidget;
-	}
+    }
 }
 
-void ComponentChooser::load() {
+void ComponentChooser::load()
+{
     for (auto it = configWidgetMap.constBegin(); it != configWidgetMap.constEnd(); ++it) {
-
         const auto service = it.key();
         const auto widget = it.value();
 
-        CfgPlugin *plugin = dynamic_cast<CfgPlugin*>(widget);
+        CfgPlugin *plugin = dynamic_cast<CfgPlugin *>(widget);
         if (plugin) {
             KConfig cfg(service, KConfig::SimpleConfig);
-            plugin->load( &cfg );
+            plugin->load(&cfg);
         }
-	}
+    }
 }
 
-void ComponentChooser::save() {
+void ComponentChooser::save()
+{
     for (auto it = configWidgetMap.constBegin(); it != configWidgetMap.constEnd(); ++it) {
-
         const auto service = it.key();
         const auto widget = it.value();
 
-        CfgPlugin *plugin = dynamic_cast<CfgPlugin*>(widget);
+        CfgPlugin *plugin = dynamic_cast<CfgPlugin *>(widget);
         if (plugin) {
             KConfig cfg(service, KConfig::SimpleConfig);
-			plugin->save( &cfg );
-		}
-	}
+            plugin->save(&cfg);
+        }
+    }
 
     // refresh System configuration cache
     KBuildSycocaProgressDialog::rebuildKSycoca(this);
 }
 
-void ComponentChooser::restoreDefault() {
+void ComponentChooser::restoreDefault()
+{
     for (CfgPlugin *plugin : qAsConst(configWidgetMap)) {
         plugin->defaults();
         emitChanged();

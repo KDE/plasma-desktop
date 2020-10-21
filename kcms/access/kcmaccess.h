@@ -22,17 +22,15 @@
 #ifndef __kcmaccess_h__
 #define __kcmaccess_h__
 
-
-#include <KCModule>
 #include "ui_accessibility.h"
+#include <KCModule>
 
 class KAccessConfig : public KCModule
 {
     Q_OBJECT
 
 public:
-
-    KAccessConfig(QWidget *parent, const QVariantList&);
+    KAccessConfig(QWidget *parent, const QVariantList &);
     ~KAccessConfig() override;
 
     void load() override;
@@ -53,6 +51,5 @@ protected Q_SLOTS:
 private:
     Ui::access ui;
 };
-
 
 #endif

@@ -20,7 +20,7 @@
 
 namespace
 {
-const char* const s_defaultFileExcludeFilters[] = {
+const char *const s_defaultFileExcludeFilters[] = {
     // tmp files
     "*~",
     "*.part",
@@ -71,75 +71,69 @@ const char* const s_defaultFileExcludeFilters[] = {
     "*.elc",   // Emacs Lisp
 
     // end of list
-    nullptr
-};
+    nullptr};
 
 const int s_defaultFileExcludeFiltersVersion = 2;
 
-const char* const s_defaultFolderExcludeFilters[] = {
-    "po",
+const char *const s_defaultFolderExcludeFilters[] = {"po",
 
-    // VCS
-    "CVS",
-    ".svn",
-    ".git",
-    "_darcs",
-    ".bzr",
-    ".hg",
+                                                     // VCS
+                                                     "CVS",
+                                                     ".svn",
+                                                     ".git",
+                                                     "_darcs",
+                                                     ".bzr",
+                                                     ".hg",
 
-    // development
-    "CMakeFiles",
-    "CMakeTmp",
-    "CMakeTmpQmake",
-    ".moc",
-    ".obj",
-    ".pch",
-    ".uic",
+                                                     // development
+                                                     "CMakeFiles",
+                                                     "CMakeTmp",
+                                                     "CMakeTmpQmake",
+                                                     ".moc",
+                                                     ".obj",
+                                                     ".pch",
+                                                     ".uic",
 
-    //misc
-    "core-dumps",
-    "lost+found",
+                                                     // misc
+                                                     "core-dumps",
+                                                     "lost+found",
 
-    // end of list
-    nullptr
-};
+                                                     // end of list
+                                                     nullptr};
 
 const int s_defaultFolderExcludeFiltersVersion = 1;
 
-const char* const s_sourceCodeMimeTypes[] = {
-    "text/css",
-    "text/x-c++src",
-    "text/x-c++hdr",
-    "text/x-csrc",
-    "text/x-chdr", // c header files
-    "text/x-python",
-    "text/x-assembly",
-    "text/x-java",
-    "text/x-objsrc",
-    "text/x-ruby",
-    "text/x-scheme",
-    "text/x-pascal",
-    "text/x-yacc",
-    "text/x-sed",
-    "text/x-haskell",
-    "text/asp",
-    "application/x-awk",
-    "application/x-cgi",
-    "application/x-csh",
-    "application/x-java",
-    "application/x-javascript",
-    "application/x-perl",
-    "application/x-php",
-    "application/x-python",
-    "application/x-sh",
-    "application/x-tex",
+const char *const s_sourceCodeMimeTypes[] = {"text/css",
+                                             "text/x-c++src",
+                                             "text/x-c++hdr",
+                                             "text/x-csrc",
+                                             "text/x-chdr", // c header files
+                                             "text/x-python",
+                                             "text/x-assembly",
+                                             "text/x-java",
+                                             "text/x-objsrc",
+                                             "text/x-ruby",
+                                             "text/x-scheme",
+                                             "text/x-pascal",
+                                             "text/x-yacc",
+                                             "text/x-sed",
+                                             "text/x-haskell",
+                                             "text/asp",
+                                             "application/x-awk",
+                                             "application/x-cgi",
+                                             "application/x-csh",
+                                             "application/x-java",
+                                             "application/x-javascript",
+                                             "application/x-perl",
+                                             "application/x-php",
+                                             "application/x-python",
+                                             "application/x-sh",
+                                             "application/x-tex",
 
-    // end of list
-    nullptr
-};
+                                             // end of list
+                                             nullptr};
 const int s_sourceCodeMimeTypesVersion = 1;
 }
-
 
 QStringList Baloo::defaultExcludeFilterList()
 {
@@ -175,4 +169,3 @@ int Baloo::defaultExcludeMimetypesVersion()
     // The +1 is the image, video and audio mimetypes
     return s_sourceCodeMimeTypesVersion + 1;
 }
-

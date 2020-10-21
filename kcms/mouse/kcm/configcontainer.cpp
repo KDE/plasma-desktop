@@ -23,14 +23,13 @@
 
 #include <KWindowSystem/kwindowsystem.h>
 
-extern "C"
+extern "C" {
+Q_DECL_EXPORT void kcminit_mouse()
 {
-    Q_DECL_EXPORT void kcminit_mouse()
-    {
-        InputBackend *backend = InputBackend::implementation();
-        backend->kcmInit();
-        delete backend;
-    }
+    InputBackend *backend = InputBackend::implementation();
+    backend->kcmInit();
+    delete backend;
+}
 }
 
 ConfigContainer::ConfigContainer(QWidget *parent, const QVariantList &args)

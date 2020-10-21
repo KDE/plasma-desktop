@@ -19,10 +19,10 @@
 
 #include <KWindowSystem>
 
-ShowDesktop::ShowDesktop(QObject *parent) : QObject(parent)
+ShowDesktop::ShowDesktop(QObject *parent)
+    : QObject(parent)
 {
-    connect(KWindowSystem::self(), &KWindowSystem::showingDesktopChanged,
-            this, &ShowDesktop::showingDesktopChanged);
+    connect(KWindowSystem::self(), &KWindowSystem::showingDesktopChanged, this, &ShowDesktop::showingDesktopChanged);
 }
 
 ShowDesktop::~ShowDesktop() = default;

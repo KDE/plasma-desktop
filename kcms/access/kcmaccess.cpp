@@ -21,23 +21,23 @@
 
 #include "kcmaccess.h"
 
-#include <stdlib.h>
 #include <math.h>
+#include <stdlib.h>
 
 #include <QFileDialog>
-#include <QStandardPaths>
 #include <QProcess>
+#include <QStandardPaths>
 #include <QX11Info>
 
 #include <KAboutData>
 #include <KConfigGroup>
-#include <KSharedConfig>
 #include <KKeyServer>
 #include <KNotifyConfigWidget>
 #include <KPluginFactory>
+#include <KSharedConfig>
 
-#include <X11/Xlib.h>
 #include <X11/XKBlib.h>
+#include <X11/Xlib.h>
 #define XK_MISCELLANY
 #define XK_XKB_KEYS
 #include <X11/keysymdef.h>
@@ -94,24 +94,20 @@ QString mouseKeysShortcut(Display *display)
     KKeyServer::xEventToQt(&ev, &key);
     QString keyname = QKeySequence(key).toString();
 
-    unsigned int AltMask   = KKeyServer::modXAlt();
-    unsigned int WinMask   = KKeyServer::modXMeta();
-    unsigned int NumMask   = KKeyServer::modXNumLock();
+    unsigned int AltMask = KKeyServer::modXAlt();
+    unsigned int WinMask = KKeyServer::modXMeta();
+    unsigned int NumMask = KKeyServer::modXNumLock();
     unsigned int ScrollMask = KKeyServer::modXScrollLock();
 
-    unsigned int MetaMask  = XkbKeysymToModifiers(display, XK_Meta_L);
+    unsigned int MetaMask = XkbKeysymToModifiers(display, XK_Meta_L);
     unsigned int SuperMask = XkbKeysymToModifiers(display, XK_Super_L);
     unsigned int HyperMask = XkbKeysymToModifiers(display, XK_Hyper_L);
-    unsigned int AltGrMask = XkbKeysymToModifiers(display, XK_Mode_switch)
-                             | XkbKeysymToModifiers(display, XK_ISO_Level3_Shift)
-                             | XkbKeysymToModifiers(display, XK_ISO_Level3_Latch)
-                             | XkbKeysymToModifiers(display, XK_ISO_Level3_Lock);
+    unsigned int AltGrMask = XkbKeysymToModifiers(display, XK_Mode_switch) | XkbKeysymToModifiers(display, XK_ISO_Level3_Shift) | XkbKeysymToModifiers(display, XK_ISO_Level3_Latch) | XkbKeysymToModifiers(display, XK_ISO_Level3_Lock);
 
-    unsigned int mods = ShiftMask | ControlMask | AltMask | WinMask
-                        | LockMask | NumMask | ScrollMask;
+    unsigned int mods = ShiftMask | ControlMask | AltMask | WinMask | LockMask | NumMask | ScrollMask;
 
     AltGrMask &= ~mods;
-    MetaMask  &= ~(mods | AltGrMask);
+    MetaMask &= ~(mods | AltGrMask);
     SuperMask &= ~(mods | AltGrMask | MetaMask);
     HyperMask &= ~(mods | AltGrMask | MetaMask | SuperMask);
 
@@ -154,14 +150,12 @@ QString mouseKeysShortcut(Display *display)
     return result;
 }
 
-KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
+KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
 {
-    KAboutData *about =
-        new KAboutData(QStringLiteral("kcmaccess"), i18n("KDE Accessibility Tool"), QStringLiteral("1.0"),
-                       QString(), KAboutLicense::GPL, i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
+    KAboutData *about = new KAboutData(QStringLiteral("kcmaccess"), i18n("KDE Accessibility Tool"), QStringLiteral("1.0"), QString(), KAboutLicense::GPL, i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
 
-    about->addAuthor(i18n("Matthias Hoelzer-Kluepfel"), i18n("Author") , QStringLiteral("hoelzer@kde.org"));
+    about->addAuthor(i18n("Matthias Hoelzer-Kluepfel"), i18n("Author"), QStringLiteral("hoelzer@kde.org"));
     setAboutData(about);
 
     ui.setupUi(this);
@@ -182,7 +176,6 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
     connect(ui.flashScreen, &QRadioButton::clicked, this, &KAccessConfig::flashClicked);
 
     connect(ui.duration, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KAccessConfig::configChanged);
-
 
     // modifier key settings -------------------------------
 
@@ -217,17 +210,20 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
     if (QGuiApplication::platformName() == "xcb") {
         QString shortcut = mouseKeysShortcut(QX11Info::display());
         if (shortcut.isEmpty())
-            ui.gestures->setToolTip(i18n("Here you can activate keyboard gestures that turn on the following features: \n"
-                                         "Sticky keys: Press Shift key 5 consecutive times\n"
-                                         "Slow keys: Hold down Shift for 8 seconds"));
+            ui.gestures->setToolTip(
+                i18n("Here you can activate keyboard gestures that turn on the following features: \n"
+                     "Sticky keys: Press Shift key 5 consecutive times\n"
+                     "Slow keys: Hold down Shift for 8 seconds"));
         else
-            ui.gestures->setToolTip(i18n("Here you can activate keyboard gestures that turn on the following features: \n"
-                                         "Mouse Keys: %1\n"
-                                         "Sticky keys: Press Shift key 5 consecutive times\n"
-                                         "Slow keys: Hold down Shift for 8 seconds", shortcut));
+            ui.gestures->setToolTip(
+                i18n("Here you can activate keyboard gestures that turn on the following features: \n"
+                     "Mouse Keys: %1\n"
+                     "Sticky keys: Press Shift key 5 consecutive times\n"
+                     "Slow keys: Hold down Shift for 8 seconds",
+                     shortcut));
     } else {
         // functionality configured in those tabs currently only works for the X11 case, so disable them
-        for (QWidget* tab : {ui.tabBell, ui.tabModifier, ui.tabKeyFilters, ui.tabActivationGestures, ui.tabMouseKeys}) {
+        for (QWidget *tab : {ui.tabBell, ui.tabModifier, ui.tabKeyFilters, ui.tabActivationGestures, ui.tabMouseKeys}) {
             ui.tab->setTabEnabled(ui.tab->indexOf(tab), false);
         }
     }
@@ -255,7 +251,6 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
     connect(ui.launchOrcaConfiguration, &QPushButton::clicked, this, &KAccessConfig::launchOrcaConfiguration);
 }
 
-
 KAccessConfig::~KAccessConfig()
 {
 }
@@ -267,7 +262,7 @@ void KAccessConfig::configureKNotify()
 
 void KAccessConfig::launchOrcaConfiguration()
 {
-    const QStringList gsettingArgs = { QStringLiteral("set"), QStringLiteral("org.gnome.desktop.a11y.applications"), QStringLiteral("screen-reader-enabled"), QStringLiteral("true") };
+    const QStringList gsettingArgs = {QStringLiteral("set"), QStringLiteral("org.gnome.desktop.a11y.applications"), QStringLiteral("screen-reader-enabled"), QStringLiteral("true")};
     int ret = QProcess::execute(QStringLiteral("gsettings"), gsettingArgs);
     if (ret) {
         const QString errorStr = QLatin1String("gsettings ") + gsettingArgs.join(QLatin1Char(' '));
@@ -300,12 +295,10 @@ void KAccessConfig::selectSound()
         ui.soundEdit->setText(fname);
 }
 
-
 void KAccessConfig::configChanged()
 {
     emit changed(true);
 }
-
 
 void KAccessConfig::load()
 {
@@ -357,8 +350,8 @@ void KAccessConfig::load()
     ui.mk_interval->setValue(interval);
 
     // Default time to reach maximum speed: 5000 msec
-    int time_to_max = mouseGroup.readEntry("MKTimeToMax", (5000+interval/2)/interval);
-    time_to_max = mouseGroup.readEntry("MK-TimeToMax", time_to_max*interval);
+    int time_to_max = mouseGroup.readEntry("MKTimeToMax", (5000 + interval / 2) / interval);
+    time_to_max = mouseGroup.readEntry("MK-TimeToMax", time_to_max * interval);
     ui.mk_time_to_max->setValue(time_to_max);
 
     // Default maximum speed: 1000 pixels/sec
@@ -381,7 +374,6 @@ void KAccessConfig::load()
 
     emit changed(false);
 }
-
 
 void KAccessConfig::save()
 {
@@ -413,7 +405,6 @@ void KAccessConfig::save()
     keyboardGroup.writeEntry("SlowKeysAcceptBeep", ui.slowKeysAcceptBeep->isChecked());
     keyboardGroup.writeEntry("SlowKeysRejectBeep", ui.slowKeysRejectBeep->isChecked());
 
-
     keyboardGroup.writeEntry("BounceKeys", ui.bounceKeys->isChecked());
     keyboardGroup.writeEntry("BounceKeysDelay", ui.bounceKeysDelay->value());
     keyboardGroup.writeEntry("BounceKeysRejectBeep", ui.bounceKeysRejectBeep->isChecked());
@@ -426,7 +417,6 @@ void KAccessConfig::save()
     keyboardGroup.writeEntry("GestureConfirmation", ui.gestureConfirmation->isChecked());
     keyboardGroup.writeEntry("kNotifyAccess", ui.kNotifyAccess->isChecked());
 
-
     keyboardGroup.sync();
 
     KConfigGroup mouseGroup(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "Mouse");
@@ -435,18 +425,16 @@ void KAccessConfig::save()
     mouseGroup.writeEntry("MKDelay", ui.mk_delay->value());
     mouseGroup.writeEntry("MKInterval", interval);
     mouseGroup.writeEntry("MK-TimeToMax", ui.mk_time_to_max->value());
-    mouseGroup.writeEntry("MKTimeToMax", (ui.mk_time_to_max->value() + interval/2)/interval);
+    mouseGroup.writeEntry("MKTimeToMax", (ui.mk_time_to_max->value() + interval / 2) / interval);
     mouseGroup.writeEntry("MK-MaxSpeed", ui.mk_max_speed->value());
-    mouseGroup.writeEntry("MKMaxSpeed", (ui.mk_max_speed->value()*interval + 500)/1000);
+    mouseGroup.writeEntry("MKMaxSpeed", (ui.mk_max_speed->value() * interval + 500) / 1000);
     mouseGroup.writeEntry("MKCurve", ui.mk_curve->value());
     mouseGroup.sync();
 
     KConfigGroup screenReaderGroup(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "ScreenReader");
     screenReaderGroup.writeEntry("Enabled", ui.screenReaderEnabled->isChecked());
 
-    if (ui.systemBell->isChecked() ||
-        ui.customBell->isChecked() ||
-        ui.visibleBell->isChecked()) {
+    if (ui.systemBell->isChecked() || ui.customBell->isChecked() || ui.visibleBell->isChecked()) {
         KConfig _cfg(QStringLiteral("kdeglobals"), KConfig::NoGlobals);
         KConfigGroup cfg(&_cfg, "General");
         cfg.writeEntry("UseSystemBell", true);
@@ -460,7 +448,6 @@ void KAccessConfig::save()
 
     emit changed(false);
 }
-
 
 void KAccessConfig::defaults()
 {
@@ -514,18 +501,15 @@ void KAccessConfig::defaults()
     emit changed(true);
 }
 
-
 void KAccessConfig::invertClicked()
 {
     ui.flashScreen->setChecked(false);
 }
 
-
 void KAccessConfig::flashClicked()
 {
     ui.invertScreen->setChecked(false);
 }
-
 
 void KAccessConfig::checkAccess()
 {
@@ -560,4 +544,3 @@ void KAccessConfig::checkAccess()
 }
 
 #include "kcmaccess.moc"
-

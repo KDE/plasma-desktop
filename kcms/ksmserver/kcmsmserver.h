@@ -33,27 +33,28 @@ class SMServerConfigImpl;
 
 class OrgFreedesktopLogin1ManagerInterface;
 
-namespace Ui {
+namespace Ui
+{
 class SMServerConfigDlg;
 }
 
 class SMServerConfig : public KCModule
 {
-  Q_OBJECT
+    Q_OBJECT
 
 public:
-  explicit SMServerConfig( QWidget *parent=nullptr, const QVariantList &list=QVariantList() );
-  ~SMServerConfig();
+    explicit SMServerConfig(QWidget *parent = nullptr, const QVariantList &list = QVariantList());
+    ~SMServerConfig();
 
 private:
-  void initFirmwareSetup();
-  void checkFirmwareSetupRequested();
+    void initFirmwareSetup();
+    void checkFirmwareSetupRequested();
 
-  QScopedPointer<Ui::SMServerConfigDlg> ui;
-  SMServerData *m_data;
-  OrgFreedesktopLogin1ManagerInterface *m_login1Manager = nullptr;
-  QAction *m_rebootNowAction = nullptr;
-  bool m_isUefi = false;
+    QScopedPointer<Ui::SMServerConfigDlg> ui;
+    SMServerData *m_data;
+    OrgFreedesktopLogin1ManagerInterface *m_login1Manager = nullptr;
+    QAction *m_rebootNowAction = nullptr;
+    bool m_isUefi = false;
 };
 
 #endif

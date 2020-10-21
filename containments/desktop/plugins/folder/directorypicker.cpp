@@ -24,8 +24,9 @@
 
 #include <KLocalizedString>
 
-DirectoryPicker::DirectoryPicker(QObject *parent) : QObject(parent),
-    m_dialog(nullptr)
+DirectoryPicker::DirectoryPicker(QObject *parent)
+    : QObject(parent)
+    , m_dialog(nullptr)
 {
 }
 
@@ -42,8 +43,7 @@ QUrl DirectoryPicker::url() const
 void DirectoryPicker::open()
 {
     if (!m_dialog) {
-        m_dialog = new QFileDialog(nullptr, i18n("Select Folder"),
-            QStandardPaths::standardLocations(QStandardPaths::HomeLocation).at(0));
+        m_dialog = new QFileDialog(nullptr, i18n("Select Folder"), QStandardPaths::standardLocations(QStandardPaths::HomeLocation).at(0));
         m_dialog->setFileMode(QFileDialog::Directory);
         m_dialog->setOption(QFileDialog::ShowDirsOnly, true);
         connect(m_dialog, &QDialog::accepted, this, &DirectoryPicker::dialogAccepted);

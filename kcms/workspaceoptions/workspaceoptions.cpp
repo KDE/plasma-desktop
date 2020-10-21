@@ -19,13 +19,13 @@
 
 #include "workspaceoptions.h"
 
-#include <KPluginFactory>
 #include <KAboutData>
-#include <KLocalizedString>
 #include <KGlobalSettings>
+#include <KLocalizedString>
+#include <KPluginFactory>
 
-#include <QDBusMessage>
 #include <QDBusConnection>
+#include <QDBusMessage>
 
 #include "workspaceoptions_kdeglobalssettings.h"
 #include "workspaceoptions_plasmasettings.h"
@@ -40,11 +40,7 @@ KCMWorkspaceOptions::KCMWorkspaceOptions(QObject *parent, const QVariantList &ar
     qmlRegisterType<WorkspaceOptionsGlobalsSettings>();
     qmlRegisterType<WorkspaceOptionsPlasmaSettings>();
 
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_workspace"),
-                                       i18n("General Behavior"),
-                                       QStringLiteral("1.1"),
-                                       i18n("System Settings module for configuring general workspace behavior."),
-                                       KAboutLicense::GPL);
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_workspace"), i18n("General Behavior"), QStringLiteral("1.1"), i18n("System Settings module for configuring general workspace behavior."), KAboutLicense::GPL);
 
     about->addAuthor(i18n("Furkan Tokac"), QString(), QStringLiteral("furkantokac34@gmail.com"));
     setAboutData(about);

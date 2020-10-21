@@ -20,7 +20,6 @@
 #ifndef INTERFACEUTIL_H
 #define INTERFACEUTIL_H
 
-
 // needed by the DBUS interface
 Q_DECLARE_METATYPE(QList<int>)
 #endif

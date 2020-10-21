@@ -41,14 +41,14 @@
 
 #include <algorithm>
 
-#include "sourcesmodel.h"
 #include "filterproxymodel.h"
+#include "sourcesmodel.h"
 
-#include <notificationmanager/donotdisturbsettings.h>
-#include <notificationmanager/notificationsettings.h>
-#include <notificationmanager/jobsettings.h>
 #include <notificationmanager/badgesettings.h>
 #include <notificationmanager/behaviorsettings.h>
+#include <notificationmanager/donotdisturbsettings.h>
+#include <notificationmanager/jobsettings.h>
+#include <notificationmanager/notificationsettings.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMNotificationsFactory, "kcm_notifications.json", registerPlugin<KCMNotifications>();)
 
@@ -62,10 +62,8 @@ KCMNotifications::KCMNotifications(QObject *parent, const QVariantList &args)
     , m_badgeSettings(new NotificationManager::BadgeSettings(this))
     , m_toggleDoNotDisturbAction(new QAction(this))
 {
-
     const char uri[] = "org.kde.private.kcms.notifications";
-    qmlRegisterUncreatableType<SourcesModel>(uri, 1, 0, "SourcesModel",
-                                             QStringLiteral("Cannot create instances of SourcesModel"));
+    qmlRegisterUncreatableType<SourcesModel>(uri, 1, 0, "SourcesModel", QStringLiteral("Cannot create instances of SourcesModel"));
 
     qmlRegisterType<FilterProxyModel>();
     qmlRegisterType<QKeySequence>();
@@ -76,8 +74,7 @@ KCMNotifications::KCMNotifications(QObject *parent, const QVariantList &args)
     qmlRegisterType<NotificationManager::BehaviorSettings>();
     qmlProtectModule(uri, 1);
 
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_notifications"), i18n("Notifications"),
-                                       QStringLiteral("5.0"), QString(), KAboutLicense::GPL);
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_notifications"), i18n("Notifications"), QStringLiteral("5.0"), QString(), KAboutLicense::GPL);
     about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@privat.broulik.de"));
     setAboutData(about);
 
@@ -118,7 +115,6 @@ KCMNotifications::KCMNotifications(QObject *parent, const QVariantList &args)
 
 KCMNotifications::~KCMNotifications()
 {
-
 }
 
 SourcesModel *KCMNotifications::sourcesModel() const
@@ -290,9 +286,7 @@ void KCMNotifications::load()
         behaviorSettings->load();
     }
 
-    const QKeySequence toggleDoNotDisturbShortcut = KGlobalAccel::self()->globalShortcut(
-        m_toggleDoNotDisturbAction->property("componentName").toString(),
-        m_toggleDoNotDisturbAction->objectName()).value(0);
+    const QKeySequence toggleDoNotDisturbShortcut = KGlobalAccel::self()->globalShortcut(m_toggleDoNotDisturbAction->property("componentName").toString(), m_toggleDoNotDisturbAction->objectName()).value(0);
 
     if (m_toggleDoNotDisturbShortcut != toggleDoNotDisturbShortcut) {
         m_toggleDoNotDisturbShortcut = toggleDoNotDisturbShortcut;
@@ -314,9 +308,7 @@ void KCMNotifications::save()
 
     if (m_toggleDoNotDisturbShortcutDirty) {
         // KeySequenceItem will already have checked whether the shortcut is available
-        KGlobalAccel::self()->setShortcut(m_toggleDoNotDisturbAction,
-                                          {m_toggleDoNotDisturbShortcut},
-                                          KGlobalAccel::NoAutoloading);
+        KGlobalAccel::self()->setShortcut(m_toggleDoNotDisturbAction, {m_toggleDoNotDisturbShortcut}, KGlobalAccel::NoAutoloading);
     }
 }
 
@@ -332,22 +324,14 @@ void KCMNotifications::defaults()
 
 bool KCMNotifications::isSaveNeeded() const
 {
-    bool needSave = std::any_of(m_behaviorSettingsList.cbegin(),
-                                m_behaviorSettingsList.cend(),
-                                [](const NotificationManager::BehaviorSettings *settings) {
-                                    return settings->isSaveNeeded();
-                                });
+    bool needSave = std::any_of(m_behaviorSettingsList.cbegin(), m_behaviorSettingsList.cend(), [](const NotificationManager::BehaviorSettings *settings) { return settings->isSaveNeeded(); });
 
     return needSave || m_toggleDoNotDisturbShortcutDirty;
 }
 
 bool KCMNotifications::isDefaults() const
 {
-    bool notDefault = std::any_of(m_behaviorSettingsList.cbegin(),
-                                  m_behaviorSettingsList.cend(),
-                                  [](const NotificationManager::BehaviorSettings *settings) {
-                                      return !settings->isDefaults();
-                                  });
+    bool notDefault = std::any_of(m_behaviorSettingsList.cbegin(), m_behaviorSettingsList.cend(), [](const NotificationManager::BehaviorSettings *settings) { return !settings->isDefaults(); });
     return !notDefault;
 }
 

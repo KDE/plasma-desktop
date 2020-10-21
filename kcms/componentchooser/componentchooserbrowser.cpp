@@ -14,29 +14,30 @@
  ***************************************************************************/
 
 #include "componentchooserbrowser.h"
-#include <KOpenWithDialog>
 #include "browser_settings.h"
+#include <KOpenWithDialog>
 
+#include <KApplicationTrader>
 #include <KLocalizedString>
 #include <KServiceTypeTrader>
-#include <KApplicationTrader>
 
-#include <QUrl>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QUrl>
 
 CfgBrowser::CfgBrowser(QWidget *parent)
     : CfgPlugin(parent)
 {
-    connect(this, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated), this, &CfgBrowser::selectBrowser);
+    connect(this, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &CfgBrowser::selectBrowser);
 }
 
-CfgBrowser::~CfgBrowser() {
+CfgBrowser::~CfgBrowser()
+{
 }
 
 void CfgBrowser::selectBrowser(int index)
 {
-    if (index == count() -1) {
+    if (index == count() - 1) {
         QList<QUrl> urlList;
         KOpenWithDialog dlg(QStringLiteral("x-scheme-handler/http"), QString(), this);
         dlg.setSaveNewApplications(true);
@@ -48,14 +49,14 @@ void CfgBrowser::selectBrowser(int index)
         const auto service = dlg.service();
 
         // check if the selected service is already in the list
-        const auto matching = model()->match(model()->index(0,0), Qt::UserRole, service->storageId());
+        const auto matching = model()->match(model()->index(0, 0), Qt::UserRole, service->storageId());
         if (!matching.isEmpty()) {
             const int index = matching.at(0).row();
             setCurrentIndex(index);
             emit changed(index != m_currentIndex);
         } else {
             const QString icon = !service->icon().isEmpty() ? service->icon() : QStringLiteral("application-x-shellscript");
-            insertItem(count() -1, QIcon::fromTheme(icon), service->name(), service->storageId());
+            insertItem(count() - 1, QIcon::fromTheme(icon), service->name(), service->storageId());
             setCurrentIndex(count() - 2);
 
             emit changed(true);
@@ -74,8 +75,9 @@ void CfgBrowser::load(KConfig *)
     m_currentIndex = -1;
     m_defaultIndex = -1;
 
-    const auto constraint = QStringLiteral("'WebBrowser' in Categories and"
-                                      " ('x-scheme-handler/http' in ServiceTypes or 'x-scheme-handler/https' in ServiceTypes)");
+    const auto constraint = QStringLiteral(
+        "'WebBrowser' in Categories and"
+        " ('x-scheme-handler/http' in ServiceTypes or 'x-scheme-handler/https' in ServiceTypes)");
     const auto browsers = KServiceTypeTrader::self()->query(QStringLiteral("Application"), constraint);
     for (const auto &service : browsers) {
         addItem(QIcon::fromTheme(service->icon()), service->name(), service->storageId());
@@ -123,10 +125,7 @@ void CfgBrowser::save(KConfig *)
         defaultApp.writeXdgListEntry(QStringLiteral("x-scheme-handler/https"), QStringList(browserStorageId));
         mimeAppList->sync();
 
-        QDBusMessage message  = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
-                                                               QStringLiteral("/KLauncher"),
-                                                               QStringLiteral("org.kde.KLauncher"),
-                                                               QStringLiteral("reparseConfiguration"));
+        QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"), QStringLiteral("/KLauncher"), QStringLiteral("org.kde.KLauncher"), QStringLiteral("reparseConfiguration"));
         QDBusConnection::sessionBus().send(message);
 
         m_currentIndex = currentIndex();

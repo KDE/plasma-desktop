@@ -40,13 +40,7 @@ class KeyCap : public QObject
     Q_PROPERTY(QString bottomLeft MEMBER bottomLeft CONSTANT)
     Q_PROPERTY(QString bottomRight MEMBER bottomRight CONSTANT)
 public:
-    enum Level
-    {
-        TopLeft = 1,
-        TopRight = 3,
-        BottomLeft = 0,
-        BottomRight = 2
-    };
+    enum Level { TopLeft = 1, TopRight = 3, BottomLeft = 0, BottomRight = 2 };
     Q_ENUM(Level)
     constexpr static int levelCount = 4;
 
@@ -61,11 +55,14 @@ public:
 class Key : public XkbObject
 {
     Q_OBJECT
-#define K_P(type, name) \
-private: \
-    Q_PROPERTY(type name READ auto_prop_##name CONSTANT) \
-public: \
-    type auto_prop_##name () const { return key-> name ; }
+#define K_P(type, name)                                                                                                                                                                                                                        \
+private:                                                                                                                                                                                                                                       \
+    Q_PROPERTY(type name READ auto_prop_##name CONSTANT)                                                                                                                                                                                       \
+public:                                                                                                                                                                                                                                        \
+    type auto_prop_##name() const                                                                                                                                                                                                              \
+    {                                                                                                                                                                                                                                          \
+        return key->name;                                                                                                                                                                                                                      \
+    }
 
     K_P(short, gap)
 

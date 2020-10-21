@@ -20,9 +20,9 @@
 #include "propertymanager.h"
 #include <QByteArray>
 
-PropertyManager::PropertyManager() : m_props(nullptr)
+PropertyManager::PropertyManager()
+    : m_props(nullptr)
 {
-
 }
 
 PropertyManager::~PropertyManager()
@@ -31,7 +31,7 @@ PropertyManager::~PropertyManager()
         g_object_unref(m_props);
 }
 
-void PropertyManager::setProperties(IBusPropList* props)
+void PropertyManager::setProperties(IBusPropList *props)
 {
     if (m_props)
         g_object_unref(m_props);
@@ -40,7 +40,7 @@ void PropertyManager::setProperties(IBusPropList* props)
         g_object_ref(m_props);
 }
 
-IBusProperty* PropertyManager::property(const QByteArray& key)
+IBusProperty *PropertyManager::property(const QByteArray &key)
 {
     if (!m_props)
         return nullptr;
@@ -48,20 +48,20 @@ IBusProperty* PropertyManager::property(const QByteArray& key)
     return searchList(key, m_props);
 }
 
-IBusProperty* PropertyManager::searchList(const QByteArray& key, IBusPropList* props)
+IBusProperty *PropertyManager::searchList(const QByteArray &key, IBusPropList *props)
 {
     if (!props)
         return nullptr;
 
     int i = 0;
     while (true) {
-        IBusProperty* prop = ibus_prop_list_get(props, i);
+        IBusProperty *prop = ibus_prop_list_get(props, i);
         if (!prop)
             break;
         if (ibus_property_get_key(prop) == key)
             return prop;
         if (ibus_property_get_prop_type(prop) == PROP_TYPE_MENU) {
-            IBusProperty* p = searchList(key, ibus_property_get_sub_props(prop));
+            IBusProperty *p = searchList(key, ibus_property_get_sub_props(prop));
             if (p)
                 return p;
         }
@@ -70,7 +70,7 @@ IBusProperty* PropertyManager::searchList(const QByteArray& key, IBusPropList* p
     return nullptr;
 }
 
-void PropertyManager::updateProperty(IBusProperty* prop)
+void PropertyManager::updateProperty(IBusProperty *prop)
 {
     if (m_props)
         ibus_prop_list_update_property(m_props, prop);

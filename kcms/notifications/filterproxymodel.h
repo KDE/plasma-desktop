@@ -42,5 +42,4 @@ Q_SIGNALS:
 
 private:
     QString m_query;
-
 };

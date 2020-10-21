@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software            *
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA          *
  * 02110-1301, USA.                                                       *
-***************************************************************************/
+ ***************************************************************************/
 
 #ifndef ACTIONMODEL_H
 #define ACTIONMODEL_H
@@ -29,19 +29,19 @@ class ActionModel : public QAbstractTableModel
     Q_OBJECT
 
 public:
-    explicit ActionModel( QObject *parent = nullptr );
+    explicit ActionModel(QObject *parent = nullptr);
     ~ActionModel() override;
 
-    QVariant data( const QModelIndex &index, int role ) const override;
-    int rowCount( const QModelIndex &parent = QModelIndex() ) const override;
-    int columnCount( const QModelIndex &parent = QModelIndex() ) const override;
+    QVariant data(const QModelIndex &index, int role) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
     void buildActionList();
-    QList<ActionItem*> actionList() const;
+    QList<ActionItem *> actionList() const;
 
 private:
     class Private;
-    Private * const d;
+    Private *const d;
 };
 
 #endif

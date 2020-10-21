@@ -25,8 +25,7 @@
 
 void XDeleter(void *p);
 
-struct PropertyInfo
-{
+struct PropertyInfo {
     Atom type;
     int format;
     QSharedPointer<unsigned char> data;

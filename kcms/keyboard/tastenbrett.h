@@ -28,8 +28,7 @@ class Tastenbrett
 public:
     static QString path();
     static bool exists();
-    static void launch(const QString &model, const QString &layout, const QString &variant, const QString &options,
-                       const QString &title = QString());
+    static void launch(const QString &model, const QString &layout, const QString &variant, const QString &options, const QString &title = QString());
 };
 
 #endif // TASTENBRETT_H

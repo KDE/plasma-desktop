@@ -25,8 +25,8 @@
 #include <QDebug>
 
 #include <KConfigGroup>
-#include <KSharedConfig>
 #include <KService>
+#include <KSharedConfig>
 
 #include <algorithm>
 
@@ -54,9 +54,7 @@ void Backend::reload()
     m_badgeBlacklist = m_settings->badgeBlacklistedApplications();
 
     // Unity Launcher API operates on storage IDs ("foo.desktop"), whereas settings return desktop entries "foo"
-    std::transform(m_badgeBlacklist.begin(), m_badgeBlacklist.end(), m_badgeBlacklist.begin(), [](const QString &desktopEntry) -> QString {
-        return desktopEntry + QStringLiteral(".desktop");
-    });
+    std::transform(m_badgeBlacklist.begin(), m_badgeBlacklist.end(), m_badgeBlacklist.begin(), [](const QString &desktopEntry) -> QString { return desktopEntry + QStringLiteral(".desktop"); });
 
     setupApplicationJobs();
 
@@ -65,16 +63,14 @@ void Backend::reload()
 
 bool Backend::doNotDisturbMode() const
 {
-    return m_settings->notificationsInhibitedByApplication()
-            || (m_settings->notificationsInhibitedUntil().isValid() && m_settings->notificationsInhibitedUntil() > QDateTime::currentDateTimeUtc());
+    return m_settings->notificationsInhibitedByApplication() || (m_settings->notificationsInhibitedUntil().isValid() && m_settings->notificationsInhibitedUntil() > QDateTime::currentDateTimeUtc());
 }
 
 void Backend::setupUnity()
 {
     auto sessionBus = QDBusConnection::sessionBus();
 
-    if (!sessionBus.connect({}, {}, QStringLiteral("com.canonical.Unity.LauncherEntry"),
-                            QStringLiteral("Update"), this, SLOT(update(QString,QMap<QString,QVariant>)))) {
+    if (!sessionBus.connect({}, {}, QStringLiteral("com.canonical.Unity.LauncherEntry"), QStringLiteral("Update"), this, SLOT(update(QString, QMap<QString, QVariant>)))) {
         qWarning() << "failed to register Update signal";
         return;
     }
@@ -118,9 +114,7 @@ bool Backend::hasLauncher(const QString &storageId) const
 
 int Backend::count(const QString &uri) const
 {
-    if (!m_settings->badgesInTaskManager()
-            || doNotDisturbMode()
-            || m_badgeBlacklist.contains(uri)) {
+    if (!m_settings->badgesInTaskManager() || doNotDisturbMode() || m_badgeBlacklist.contains(uri)) {
         return 0;
     }
     return m_launchers.value(uri).count;
@@ -128,9 +122,7 @@ int Backend::count(const QString &uri) const
 
 bool Backend::countVisible(const QString &uri) const
 {
-    if (!m_settings->badgesInTaskManager()
-            || doNotDisturbMode()
-            || m_badgeBlacklist.contains(uri)) {
+    if (!m_settings->badgesInTaskManager() || doNotDisturbMode() || m_badgeBlacklist.contains(uri)) {
         return false;
     }
     return m_launchers.value(uri).countVisible;

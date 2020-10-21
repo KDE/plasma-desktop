@@ -27,8 +27,7 @@
 
 class OrgFreedesktopAccountsInterface;
 
-class UserModel
-    : public QAbstractListModel
+class UserModel : public QAbstractListModel
 {
     Q_OBJECT
 
@@ -46,17 +45,17 @@ public:
         SectionHeaderRole,
     };
 
-    explicit UserModel(QObject* parent = nullptr);
+    explicit UserModel(QObject *parent = nullptr);
     ~UserModel() override;
 
-    QVariant data(const QModelIndex& index, int role) const override;
-    int rowCount(const QModelIndex& parent = QModelIndex()) const override;
+    QVariant data(const QModelIndex &index, int role) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    Q_INVOKABLE User* getLoggedInUser() const;
+    Q_INVOKABLE User *getLoggedInUser() const;
 
     QHash<int, QByteArray> roleNames() const override;
 
 private:
-    OrgFreedesktopAccountsInterface* m_dbusInterface;
+    OrgFreedesktopAccountsInterface *m_dbusInterface;
     QVector<User *> m_userList;
 };

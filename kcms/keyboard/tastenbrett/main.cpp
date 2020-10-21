@@ -60,23 +60,19 @@ int main(int argc, char *argv[])
     Application app(argc, argv);
     Q_ASSERT(app.platformName() == QStringLiteral("xcb"));
 
-    KAboutData aboutData(QStringLiteral("tastenbrett"),
-                         i18nc("app display name", "Keyboard Preview"),
-                         QStringLiteral("1.0"),
-                         i18nc("app description", "Keyboard layout visualization"),
-                         KAboutLicense::GPL);
+    KAboutData aboutData(QStringLiteral("tastenbrett"), i18nc("app display name", "Keyboard Preview"), QStringLiteral("1.0"), i18nc("app description", "Keyboard layout visualization"), KAboutLicense::GPL);
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
 
-    QCommandLineOption modelOption(QStringList { "m", "model" }, {}, QStringLiteral("MODEL"));
+    QCommandLineOption modelOption(QStringList {"m", "model"}, {}, QStringLiteral("MODEL"));
     parser.addOption(modelOption);
-    QCommandLineOption layoutOption(QStringList { "l", "layout" }, {}, QStringLiteral("LAYOUT"));
+    QCommandLineOption layoutOption(QStringList {"l", "layout"}, {}, QStringLiteral("LAYOUT"));
     parser.addOption(layoutOption);
-    QCommandLineOption variantOption(QStringList { "a", "variant" }, {}, QStringLiteral("VARIANT"));
+    QCommandLineOption variantOption(QStringList {"a", "variant"}, {}, QStringLiteral("VARIANT"));
     parser.addOption(variantOption);
-    QCommandLineOption optionsOption(QStringList { "o", "options" }, {}, QStringLiteral("OPTIONS"));
+    QCommandLineOption optionsOption(QStringList {"o", "options"}, {}, QStringLiteral("OPTIONS"));
     parser.addOption(optionsOption);
     parser.process(app);
     aboutData.processCommandLine(&parser);
@@ -107,29 +103,16 @@ int main(int argc, char *argv[])
                                       True,
                                       True);
     Q_ASSERT(rules);
-    QSharedPointer<XkbRF_RulesRec> rulesCleanup(rules, [](XkbRF_RulesPtr obj) {
-        XkbRF_Free(obj, True);
-    });
+    QSharedPointer<XkbRF_RulesRec> rulesCleanup(rules, [](XkbRF_RulesPtr obj) { XkbRF_Free(obj, True); });
 
     XkbComponentNamesRec componentNames;
     memset(&componentNames, 0, sizeof(XkbComponentNamesRec));
 
     XkbRF_GetComponents(rules, &varDefs, &componentNames);
 
-    XkbDescPtr xkb = XkbGetKeyboardByName(QX11Info::display(),
-                                          XkbUseCoreKbd,
-                                          &componentNames,
-                                          0,
-                                          XkbGBN_GeometryMask |
-                                          XkbGBN_KeyNamesMask |
-                                          XkbGBN_OtherNamesMask |
-                                          XkbGBN_ClientSymbolsMask |
-                                          XkbGBN_IndicatorMapMask,
-                                          false);
+    XkbDescPtr xkb = XkbGetKeyboardByName(QX11Info::display(), XkbUseCoreKbd, &componentNames, 0, XkbGBN_GeometryMask | XkbGBN_KeyNamesMask | XkbGBN_OtherNamesMask | XkbGBN_ClientSymbolsMask | XkbGBN_IndicatorMapMask, false);
     Q_ASSERT(xkb);
-    QSharedPointer<XkbDescRec> xkbCleanup(xkb, [](XkbDescPtr obj) {
-        XkbFreeKeyboard(obj, 0, True);
-    });
+    QSharedPointer<XkbDescRec> xkbCleanup(xkb, [](XkbDescPtr obj) { XkbFreeKeyboard(obj, 0, True); });
 
     Geometry geometry(xkb->geom, xkb);
 
@@ -150,11 +133,15 @@ int main(int argc, char *argv[])
     // faster). Constructing our QObjects takes 1ms.
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/qml/main.qml"));
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-                     &app, [url](QObject *obj, const QUrl &objUrl) {
-        if (!obj && url == objUrl)
-            QCoreApplication::exit(-1);
-    }, Qt::QueuedConnection);
+    QObject::connect(
+        &engine,
+        &QQmlApplicationEngine::objectCreated,
+        &app,
+        [url](QObject *obj, const QUrl &objUrl) {
+            if (!obj && url == objUrl)
+                QCoreApplication::exit(-1);
+        },
+        Qt::QueuedConnection);
     engine.rootContext()->setContextProperty("geometry", &geometry);
     engine.load(url);
 

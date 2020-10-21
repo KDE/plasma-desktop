@@ -28,7 +28,8 @@
 /**
  * ActivitiesTab
  */
-class ActivitiesTab : public QWidget {
+class ActivitiesTab : public QWidget
+{
     Q_OBJECT
 public:
     explicit ActivitiesTab(QWidget *parent);

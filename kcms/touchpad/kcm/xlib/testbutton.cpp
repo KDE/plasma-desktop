@@ -24,7 +24,8 @@
 #include <KLocalizedString>
 
 TestButton::TestButton(QWidget *parent)
-    : QPushButton(parent), m_firstClick(true)
+    : QPushButton(parent)
+    , m_firstClick(true)
 {
 }
 

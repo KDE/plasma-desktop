@@ -30,7 +30,8 @@ class KCoreConfigSkeleton;
 /**
  * PrivacyTab
  */
-class PrivacyTab : public QWidget {
+class PrivacyTab : public QWidget
+{
     Q_OBJECT
 public:
     explicit PrivacyTab(QWidget *parent);
@@ -38,7 +39,7 @@ public:
 
     bool isDefault();
     KCoreConfigSkeleton *pluginConfig();
-    
+
 public Q_SLOTS:
     void defaults();
     void load();
@@ -58,11 +59,7 @@ Q_SIGNALS:
     void blackListModelDefaulted(bool isDefault);
 
 private:
-    enum WhatToRemember {
-        AllApplications = 0,
-        SpecificApplications = 1,
-        NoApplications = 2
-    };
+    enum WhatToRemember { AllApplications = 0, SpecificApplications = 1, NoApplications = 2 };
 
     D_PTR;
 };

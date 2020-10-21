@@ -30,11 +30,14 @@ public:
 
     void intern(xcb_connection_t *, const char *name, bool onlyIfExists = true);
     xcb_atom_t atom();
-    operator xcb_atom_t() { return atom(); }
+    operator xcb_atom_t()
+    {
+        return atom();
+    }
 
 private:
     XcbAtom(const XcbAtom &);
-    XcbAtom &operator =(const XcbAtom &);
+    XcbAtom &operator=(const XcbAtom &);
 
     xcb_connection_t *m_connection;
     xcb_intern_atom_cookie_t m_cookie;

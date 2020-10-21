@@ -22,8 +22,8 @@
 #ifndef FILTEREDFOLDERMODEL_H
 #define FILTEREDFOLDERMODEL_H
 
-#include <QAbstractListModel>
 #include <Baloo/IndexerConfig>
+#include <QAbstractListModel>
 
 class BalooSettings;
 
@@ -40,11 +40,11 @@ public:
         Deletable,
     };
 
-    QVariant data(const QModelIndex& idx, int role) const override;
-    bool setData(const QModelIndex& idx, const QVariant& value, int role) override;
-    int rowCount(const QModelIndex& parent) const override;
+    QVariant data(const QModelIndex &idx, int role) const override;
+    bool setData(const QModelIndex &idx, const QVariant &value, int role) override;
+    int rowCount(const QModelIndex &parent) const override;
 
-    Q_INVOKABLE void addFolder(const QString& folder, const bool included);
+    Q_INVOKABLE void addFolder(const QString &folder, const bool included);
     Q_INVOKABLE void removeFolder(int row);
     QHash<int, QByteArray> roleNames() const override;
 
@@ -66,7 +66,7 @@ private:
     QVector<FolderInfo> m_folderList;
     QStringList m_deletedSettings; //< track deleted entries
 
-    void syncFolderConfig(const FolderInfo& entry);
+    void syncFolderConfig(const FolderInfo &entry);
 };
 
 #endif // FILTEREDFOLDERMODEL_H

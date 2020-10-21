@@ -22,7 +22,7 @@
 class KConfig;
 class CfgPlugin;
 
-class CfgTerminalEmulator: public CfgPlugin
+class CfgTerminalEmulator : public CfgPlugin
 {
     Q_OBJECT
 public:

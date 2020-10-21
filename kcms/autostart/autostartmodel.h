@@ -33,15 +33,7 @@ class AutostartModel : public QAbstractListModel
 public:
     explicit AutostartModel(QObject *parent = nullptr);
 
-    enum Roles {
-        Name = Qt::DisplayRole,
-        IconName = Qt::DecorationRole,
-        Command = Qt::UserRole + 1,
-        Enabled,
-        Source,
-        FileName,
-        OnlyInPlasma
-    };
+    enum Roles { Name = Qt::DisplayRole, IconName = Qt::DecorationRole, Command = Qt::UserRole + 1, Enabled, Source, FileName, OnlyInPlasma };
 
     enum AutostartEntrySource {
         XdgAutoStart = 0,

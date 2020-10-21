@@ -22,31 +22,31 @@
  */
 
 #include <QAction>
+#include <QCheckBox>
 #include <QDBusConnection>
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
-#include <QCheckBox>
 #include <QFileInfo>
 
 #include <QVBoxLayout>
 
-#include <kworkspace.h>
-#include <QRegExp>
 #include <KDesktopFile>
-#include <KProcess>
 #include <KMessageBox>
+#include <KProcess>
 #include <QApplication>
 #include <QDBusInterface>
 #include <QLineEdit>
+#include <QRegExp>
+#include <kworkspace.h>
 
 #include "kcmsmserver.h"
-#include "smserversettings.h"
 #include "smserverdata.h"
+#include "smserversettings.h"
 #include "ui_smserverconfigdlg.h"
 
+#include <KLocalizedString>
 #include <KPluginFactory>
 #include <KPluginLoader>
-#include <KLocalizedString>
 
 #include <sessionmanagement.h>
 
@@ -55,22 +55,20 @@
 K_PLUGIN_FACTORY(SMSFactory, registerPlugin<SMServerConfig>(); registerPlugin<SMServerData>();)
 
 SMServerConfig::SMServerConfig(QWidget *parent, const QVariantList &args)
-  : KCModule(parent, args)
-  , ui(new Ui::SMServerConfigDlg)
-  , m_data(new SMServerData(this))
-  , m_login1Manager(new OrgFreedesktopLogin1ManagerInterface(QStringLiteral("org.freedesktop.login1"),
-                                                             QStringLiteral("/org/freedesktop/login1"),
-                                                             QDBusConnection::systemBus(),
-                                                             this))
+    : KCModule(parent, args)
+    , ui(new Ui::SMServerConfigDlg)
+    , m_data(new SMServerData(this))
+    , m_login1Manager(new OrgFreedesktopLogin1ManagerInterface(QStringLiteral("org.freedesktop.login1"), QStringLiteral("/org/freedesktop/login1"), QDBusConnection::systemBus(), this))
 {
     ui->setupUi(this);
 
-    setQuickHelp( i18n("<h1>Session Manager</h1>"
-    " You can configure the session manager here."
-    " This includes options such as whether or not the session exit (logout)"
-    " should be confirmed, whether the session should be restored again when logging in"
-    " and whether the computer should be automatically shut down after session"
-    " exit by default."));
+    setQuickHelp(
+        i18n("<h1>Session Manager</h1>"
+             " You can configure the session manager here."
+             " This includes options such as whether or not the session exit (logout)"
+             " should be confirmed, whether the session should be restored again when logging in"
+             " and whether the computer should be automatically shut down after session"
+             " exit by default."));
 
     ui->firmwareSetupBox->hide();
     ui->firmwareSetupMessageWidget->hide();
@@ -88,7 +86,7 @@ void SMServerConfig::initFirmwareSetup()
     m_rebootNowAction = new QAction(QIcon::fromTheme(QStringLiteral("system-reboot")), i18n("Restart Now"));
     connect(m_rebootNowAction, &QAction::triggered, this, [this] {
         auto sm = new SessionManagement(this);
-        auto doShutdown=[sm]() {
+        auto doShutdown = [sm]() {
             sm->requestReboot();
             delete sm;
         };
@@ -103,10 +101,7 @@ void SMServerConfig::initFirmwareSetup()
         ui->firmwareSetupMessageWidget->removeAction(m_rebootNowAction);
         ui->firmwareSetupMessageWidget->animatedHide();
 
-        QDBusMessage message = QDBusMessage::createMethodCall(m_login1Manager->service(),
-                                                              m_login1Manager->path(),
-                                                              m_login1Manager->interface(),
-                                                              QStringLiteral("SetRebootToFirmwareSetup"));
+        QDBusMessage message = QDBusMessage::createMethodCall(m_login1Manager->service(), m_login1Manager->path(), m_login1Manager->interface(), QStringLiteral("SetRebootToFirmwareSetup"));
 
         message.setArguments({enable});
         // This cannot be set through a generated DBus interface, so we have to create the message ourself.

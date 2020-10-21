@@ -38,5 +38,4 @@ BalooSettings *BalooData::settings() const
     return m_settings;
 }
 
-
 #include "baloodata.moc"

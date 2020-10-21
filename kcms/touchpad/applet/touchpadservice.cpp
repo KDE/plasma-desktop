@@ -21,10 +21,10 @@
 
 #include "touchpadinterface.h"
 
-TouchpadService::TouchpadService(OrgKdeTouchpadInterface *daemon,
-                                 const QString &destination,
-                                 QObject *parent)
-    : Plasma::Service(parent), m_daemon(daemon), m_destination(destination)
+TouchpadService::TouchpadService(OrgKdeTouchpadInterface *daemon, const QString &destination, QObject *parent)
+    : Plasma::Service(parent)
+    , m_daemon(daemon)
+    , m_destination(destination)
 {
     setName("touchpad");
 }
@@ -36,11 +36,9 @@ TouchpadService::~TouchpadService()
 class TouchpadJob : public Plasma::ServiceJob
 {
 public:
-    TouchpadJob(OrgKdeTouchpadInterface *daemon,
-                const QString &destination, const QString &operation,
-                const QMap<QString, QVariant> &parameters, QObject *parent = nullptr)
-        : Plasma::ServiceJob(destination, operation, parameters, parent),
-          m_daemon(daemon)
+    TouchpadJob(OrgKdeTouchpadInterface *daemon, const QString &destination, const QString &operation, const QMap<QString, QVariant> &parameters, QObject *parent = nullptr)
+        : Plasma::ServiceJob(destination, operation, parameters, parent)
+        , m_daemon(daemon)
     {
     }
 
@@ -56,8 +54,7 @@ private:
     OrgKdeTouchpadInterface *m_daemon;
 };
 
-Plasma::ServiceJob *TouchpadService::createJob(const QString &operation,
-                                               QMap<QString, QVariant> &params)
+Plasma::ServiceJob *TouchpadService::createJob(const QString &operation, QMap<QString, QVariant> &params)
 {
     return new TouchpadJob(m_daemon, m_destination, operation, params, this);
 }

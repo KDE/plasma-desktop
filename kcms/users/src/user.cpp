@@ -21,21 +21,25 @@
 */
 
 #include "user.h"
-#include "user_interface.h"
 #include "kcmusers_debug.h"
-#include <unistd.h>
-#include <sys/types.h>
-#include <QtConcurrent>
+#include "user_interface.h"
 #include <KLocalizedString>
+#include <QtConcurrent>
+#include <sys/types.h>
+#include <unistd.h>
 
-User::User(QObject* parent) : QObject(parent) {}
+User::User(QObject *parent)
+    : QObject(parent)
+{
+}
 
-int User::uid() const {
+int User::uid() const
+{
     return mUid;
 }
 
-void User::setUid(int value) {
-    
+void User::setUid(int value)
+{
     if (mUid == value) {
         return;
     }
@@ -43,12 +47,13 @@ void User::setUid(int value) {
     Q_EMIT uidChanged();
 }
 
-QString User::name() const {
+QString User::name() const
+{
     return mName;
 }
 
-void User::setName(const QString &value) {
-    
+void User::setName(const QString &value)
+{
     if (mName == value) {
         return;
     }
@@ -56,12 +61,13 @@ void User::setName(const QString &value) {
     Q_EMIT nameChanged();
 }
 
-QString User::realName() const {
+QString User::realName() const
+{
     return mRealName;
 }
 
-void User::setRealName(const QString &value) {
-
+void User::setRealName(const QString &value)
+{
     if (mRealName == value) {
         return;
     }
@@ -69,12 +75,13 @@ void User::setRealName(const QString &value) {
     Q_EMIT realNameChanged();
 }
 
-QString User::email() const {
+QString User::email() const
+{
     return mEmail;
 }
 
-void User::setEmail(const QString &value) {
-    
+void User::setEmail(const QString &value)
+{
     if (mEmail == value) {
         return;
     }
@@ -82,16 +89,18 @@ void User::setEmail(const QString &value) {
     Q_EMIT emailChanged();
 }
 
-QUrl User::face() const {
+QUrl User::face() const
+{
     return mFace;
 }
 
-bool User::faceValid() const {
+bool User::faceValid() const
+{
     return mFaceValid;
 }
 
-void User::setFace(const QUrl &value) {
-
+void User::setFace(const QUrl &value)
+{
     if (mFace == value) {
         return;
     }
@@ -101,11 +110,12 @@ void User::setFace(const QUrl &value) {
     Q_EMIT faceChanged();
 }
 
-bool User::administrator() const {
+bool User::administrator() const
+{
     return mAdministrator;
 }
-void User::setAdministrator(bool value) {
-    
+void User::setAdministrator(bool value)
+{
     if (mAdministrator == value) {
         return;
     }
@@ -113,8 +123,10 @@ void User::setAdministrator(bool value) {
     Q_EMIT administratorChanged();
 }
 
-void User::setPath(const QDBusObjectPath &path) {
-    if (!m_dbusIface.isNull()) delete m_dbusIface;
+void User::setPath(const QDBusObjectPath &path)
+{
+    if (!m_dbusIface.isNull())
+        delete m_dbusIface;
     m_dbusIface = new OrgFreedesktopAccountsUserInterface(QStringLiteral("org.freedesktop.Accounts"), path.path(), QDBusConnection::systemBus(), this);
 
     if (!m_dbusIface->isValid() || m_dbusIface->lastError().isValid() || m_dbusIface->systemAccount()) {
@@ -168,29 +180,27 @@ void User::setPath(const QDBusObjectPath &path) {
         }
     };
 
-    connect(m_dbusIface, &OrgFreedesktopAccountsUserInterface::Changed, [=]() {
-        update();
-    });
+    connect(m_dbusIface, &OrgFreedesktopAccountsUserInterface::Changed, [=]() { update(); });
 
     update();
 }
 
-static char
-saltCharacter() {
+static char saltCharacter()
+{
     static constexpr const quint32 letterCount = 64;
-    static const char saltCharacters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                                         "abcdefghijklmnopqrstuvwxyz"
-                                         "./0123456789"; // and trailing NUL
-    static_assert(sizeof(saltCharacters) == (letterCount+1), // 64 letters and trailing NUL
+    static const char saltCharacters[] =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        "abcdefghijklmnopqrstuvwxyz"
+        "./0123456789";                                        // and trailing NUL
+    static_assert(sizeof(saltCharacters) == (letterCount + 1), // 64 letters and trailing NUL
                   "Salt-chars array is not exactly 64 letters long");
-    
+
     const quint32 index = QRandomGenerator::system()->bounded(0u, letterCount);
 
     return saltCharacters[index];
 }
 
-static QString
-saltPassword(const QString &plain)
+static QString saltPassword(const QString &plain)
 {
     QString salt;
 
@@ -234,7 +244,7 @@ void User::apply()
         case UserApplyJob::Error::Unknown:
             Q_EMIT applyError(i18n("There was an error while saving changes"));
             break;
-        case UserApplyJob::Error::NoError: ; // Do nothing
+        case UserApplyJob::Error::NoError:; // Do nothing
         }
     });
     job->start();
@@ -246,28 +256,26 @@ bool User::loggedIn() const
 }
 
 UserApplyJob::UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIface, QString name, QString email, QString realname, QString icon, int type)
-    : KJob(),
-    m_name(name),
-    m_email(email),
-    m_realname(realname),
-    m_icon(icon),
-    m_type(type),
-    m_dbusIface(dbusIface)
+    : KJob()
+    , m_name(name)
+    , m_email(email)
+    , m_realname(realname)
+    , m_icon(icon)
+    , m_type(type)
+    , m_dbusIface(dbusIface)
 {
 }
 
 void UserApplyJob::start()
 {
-    const std::map<QString,QDBusPendingReply<> (OrgFreedesktopAccountsUserInterface::*)(const QString&)> set = {
-        {m_name, &OrgFreedesktopAccountsUserInterface::SetUserName},
-        {m_email, &OrgFreedesktopAccountsUserInterface::SetEmail},
-        {m_realname, &OrgFreedesktopAccountsUserInterface::SetRealName},
-        {m_icon, &OrgFreedesktopAccountsUserInterface::SetIconFile}
-    };
+    const std::map<QString, QDBusPendingReply<> (OrgFreedesktopAccountsUserInterface::*)(const QString &)> set = {{m_name, &OrgFreedesktopAccountsUserInterface::SetUserName},
+                                                                                                                  {m_email, &OrgFreedesktopAccountsUserInterface::SetEmail},
+                                                                                                                  {m_realname, &OrgFreedesktopAccountsUserInterface::SetRealName},
+                                                                                                                  {m_icon, &OrgFreedesktopAccountsUserInterface::SetIconFile}};
     // Do our dbus invocations with blocking calls, since the accounts service
-    // will return permission denied if there's a polkit dialog open while a 
+    // will return permission denied if there's a polkit dialog open while a
     // request is made.
-    for (auto const &x: set) {
+    for (auto const &x : set) {
         auto resp = (m_dbusIface->*(x.second))(x.first);
         resp.waitForFinished();
         if (resp.isError()) {
@@ -286,7 +294,7 @@ void UserApplyJob::start()
     emitResult();
 }
 
-void UserApplyJob::setError(const QDBusError& error)
+void UserApplyJob::setError(const QDBusError &error)
 {
     setErrorText(error.message());
     if (error.name() == QLatin1String("org.freedesktop.Accounts.Error.Failed")) {

@@ -26,13 +26,11 @@ class TouchpadService : public Plasma::Service
 {
     Q_OBJECT
 public:
-    TouchpadService(OrgKdeTouchpadInterface *daemon, const QString &destination,
-                    QObject *parent = nullptr);
+    TouchpadService(OrgKdeTouchpadInterface *daemon, const QString &destination, QObject *parent = nullptr);
     ~TouchpadService();
 
 protected:
-    Plasma::ServiceJob *createJob(const QString &operation,
-                                  QMap<QString, QVariant> &parameters) override;
+    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
 private:
     OrgKdeTouchpadInterface *m_daemon;

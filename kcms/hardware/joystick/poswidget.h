@@ -21,8 +21,8 @@
 #ifndef _POSWIDGET_H_
 #define _POSWIDGET_H_
 
-#include <QWidget>
 #include <QList>
+#include <QWidget>
 class QPaintEvent;
 
 /**
@@ -30,9 +30,9 @@ class QPaintEvent;
 */
 class PosWidget : public QWidget
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     PosWidget(QWidget *parent = nullptr);
 
     void changeX(int x);
@@ -42,10 +42,10 @@ class PosWidget : public QWidget
     // changing it will erase all previous marks from the widget
     void showTrace(bool t);
 
-  protected:
+protected:
     void paintEvent(QPaintEvent *) override;
 
-  private:
+private:
     int x, y;
     bool trace;
     QList<QPoint> tracePoints;

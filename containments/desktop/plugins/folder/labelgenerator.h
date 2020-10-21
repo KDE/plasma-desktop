@@ -36,46 +36,46 @@ class LabelGenerator : public QObject
     Q_PROPERTY(QString labelText READ labelText WRITE setLabelText NOTIFY labelTextChanged)
     Q_PROPERTY(QString displayLabel READ displayLabel NOTIFY displayLabelChanged)
 
-    public:
-        explicit LabelGenerator(QObject *parent = nullptr);
-        ~LabelGenerator() override;
+public:
+    explicit LabelGenerator(QObject *parent = nullptr);
+    ~LabelGenerator() override;
 
-        FolderModel *folderModel() const;
-        void setFolderModel(FolderModel *folderModel);
+    FolderModel *folderModel() const;
+    void setFolderModel(FolderModel *folderModel);
 
-        bool rtl() const;
-        void setRtl(bool rtl);
+    bool rtl() const;
+    void setRtl(bool rtl);
 
-        int labelMode() const;
-        void setLabelMode(int mode);
+    int labelMode() const;
+    void setLabelMode(int mode);
 
-        QString labelText() const;
-        void setLabelText(const QString &text);
+    QString labelText() const;
+    void setLabelText(const QString &text);
 
-        QString displayLabel() const;
+    QString displayLabel() const;
 
-    Q_SIGNALS:
-        void folderModelChanged();
-        void rtlChanged();
-        void labelModeChanged();
-        void labelTextChanged();
-        void displayLabelChanged();
+Q_SIGNALS:
+    void folderModelChanged();
+    void rtlChanged();
+    void labelModeChanged();
+    void labelTextChanged();
+    void displayLabelChanged();
 
-    private:
-        void updateDisplayLabel();
-        QString generatedDisplayLabel();
+private:
+    void updateDisplayLabel();
+    QString generatedDisplayLabel();
 
-        static int s_instanceCount;
-        static KFilePlacesModel *s_placesModel;
-        bool m_placesConnected = false;
+    static int s_instanceCount;
+    static KFilePlacesModel *s_placesModel;
+    bool m_placesConnected = false;
 
-        void connectPlacesModel();
+    void connectPlacesModel();
 
-        QPointer<FolderModel> m_folderModel;
-        bool m_rtl;
-        int m_labelMode;
-        QString m_displayLabel;
-        QString m_labelText;
+    QPointer<FolderModel> m_folderModel;
+    bool m_rtl;
+    int m_labelMode;
+    QString m_displayLabel;
+    QString m_labelText;
 };
 
 #endif

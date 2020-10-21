@@ -28,7 +28,8 @@
 /**
  * BlacklistedApplicationsModel
  */
-class BlacklistedApplicationsModel : public QAbstractListModel {
+class BlacklistedApplicationsModel : public QAbstractListModel
+{
     Q_OBJECT
 
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
@@ -37,10 +38,7 @@ public:
     explicit BlacklistedApplicationsModel(QObject *parent = nullptr);
     ~BlacklistedApplicationsModel() override;
 
-    enum Roles {
-        ApplicationIdRole = Qt::UserRole + 1,
-        BlockedApplicationRole
-    };
+    enum Roles { ApplicationIdRole = Qt::UserRole + 1, BlockedApplicationRole };
 
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;

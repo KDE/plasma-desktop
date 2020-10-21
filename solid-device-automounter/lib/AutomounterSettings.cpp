@@ -1,22 +1,22 @@
 /***************************************************************************
-*   Copyright (C) 2009 by Trever Fischer <wm161@wm161.net>                *
-*   Copyright (C) 2015 by Kai Uwe Broulik <kde@privat.broulik.de>         *
-*                                                                         *
-*   This program is free software; you can redistribute it and/or modify  *
-*   it under the terms of the GNU General Public License as published by  *
-*   the Free Software Foundation; either version 2 of the License, or     *
-*   (at your option) any later version.                                   *
-*                                                                         *
-*   This program is distributed in the hope that it will be useful,       *
-*   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
-*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
-*   GNU General Public License for more details.                          *
-*                                                                         *
-*   You should have received a copy of the GNU General Public License     *
-*   along with this program; if not, write to the                         *
-*   Free Software Foundation, Inc.,                                       *
-*   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
-***************************************************************************/
+ *   Copyright (C) 2009 by Trever Fischer <wm161@wm161.net>                *
+ *   Copyright (C) 2015 by Kai Uwe Broulik <kde@privat.broulik.de>         *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
+ ***************************************************************************/
 
 #include "AutomounterSettings.h"
 
@@ -61,7 +61,7 @@ bool AutomounterSettings::shouldAutomountDevice(const QString &udi, AutomountTyp
     bool deviceAutomount = deviceAutomountIsForced(udi, type);
     bool lastSeenMounted = deviceSettings(udi).readEntry("LastSeenMounted", false);
     bool typeCondition = false;
-    switch(type) {
+    switch (type) {
     case Login:
         typeCondition = automountOnLogin();
         break;
@@ -69,8 +69,7 @@ bool AutomounterSettings::shouldAutomountDevice(const QString &udi, AutomountTyp
         typeCondition = automountOnPlugin();
         break;
     }
-    bool shouldAutomount = deviceAutomount || (enabled && typeCondition
-                                   && (known || lastSeenMounted || automountUnknown));
+    bool shouldAutomount = deviceAutomount || (enabled && typeCondition && (known || lastSeenMounted || automountUnknown));
 
     return shouldAutomount;
 }

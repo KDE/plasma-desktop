@@ -25,24 +25,24 @@
 
 #include <QCollator>
 #include <QDir>
+#include <QRegularExpression>
 #include <QStandardPaths>
 #include <QStringList>
-#include <QRegularExpression>
 
 #include <KConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>
-#include <KSharedConfig>
 #include <KService>
 #include <KServiceTypeTrader>
+#include <KSharedConfig>
 
 #include <algorithm>
 
 static const QString s_plasmaWorkspaceNotifyRcName = QStringLiteral("plasma_workspace");
 
-SourcesModel::SourcesModel(QObject *parent) : QAbstractItemModel(parent)
+SourcesModel::SourcesModel(QObject *parent)
+    : QAbstractItemModel(parent)
 {
-
 }
 
 SourcesModel::~SourcesModel() = default;
@@ -109,10 +109,14 @@ QVariant SourcesModel::data(const QModelIndex &index, int role) const
         const auto &event = m_data.at(index.internalId() - 1).events.at(index.row());
 
         switch (role) {
-        case Qt::DisplayRole: return event.name;
-        case Qt::DecorationRole: return event.iconName;
-        case EventIdRole: return event.eventId;
-        case ActionsRole: return event.actions;
+        case Qt::DisplayRole:
+            return event.name;
+        case Qt::DecorationRole:
+            return event.iconName;
+        case EventIdRole:
+            return event.eventId;
+        case ActionsRole:
+            return event.actions;
         }
 
         return QVariant();
@@ -121,11 +125,16 @@ QVariant SourcesModel::data(const QModelIndex &index, int role) const
     const auto &source = m_data.at(index.row());
 
     switch (role) {
-    case Qt::DisplayRole: return source.display();
-    case Qt::DecorationRole: return source.iconName;
-    case SourceTypeRole: return source.desktopEntry.isEmpty() ? ServiceType : ApplicationType;
-    case NotifyRcNameRole: return source.notifyRcName;
-    case DesktopEntryRole: return source.desktopEntry;
+    case Qt::DisplayRole:
+        return source.display();
+    case Qt::DecorationRole:
+        return source.iconName;
+    case SourceTypeRole:
+        return source.desktopEntry.isEmpty() ? ServiceType : ApplicationType;
+    case NotifyRcNameRole:
+        return source.notifyRcName;
+    case DesktopEntryRole:
+        return source.desktopEntry;
     }
 
     return QVariant();
@@ -193,15 +202,13 @@ QModelIndex SourcesModel::parent(const QModelIndex &child) const
 
 QHash<int, QByteArray> SourcesModel::roleNames() const
 {
-    return {
-        {Qt::DisplayRole, QByteArrayLiteral("display")},
-        {Qt::DecorationRole, QByteArrayLiteral("decoration")},
-        {SourceTypeRole, QByteArrayLiteral("sourceType")},
-        {NotifyRcNameRole, QByteArrayLiteral("notifyRcName")},
-        {DesktopEntryRole, QByteArrayLiteral("desktopEntry")},
-        {EventIdRole, QByteArrayLiteral("eventId")},
-        {ActionsRole, QByteArrayLiteral("actions")}
-    };
+    return {{Qt::DisplayRole, QByteArrayLiteral("display")},
+            {Qt::DecorationRole, QByteArrayLiteral("decoration")},
+            {SourceTypeRole, QByteArrayLiteral("sourceType")},
+            {NotifyRcNameRole, QByteArrayLiteral("notifyRcName")},
+            {DesktopEntryRole, QByteArrayLiteral("desktopEntry")},
+            {EventIdRole, QByteArrayLiteral("eventId")},
+            {ActionsRole, QByteArrayLiteral("actions")}};
 }
 
 void SourcesModel::load()
@@ -220,8 +227,7 @@ void SourcesModel::load()
 
     // old code did KGlobal::dirs()->findAllResources("data", QStringLiteral("*/*.notifyrc")) but in KF5
     // only notifyrc files in knotifications5/ folder are supported
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
-                            QStringLiteral("knotifications5"), QStandardPaths::LocateDirectory);
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications5"), QStandardPaths::LocateDirectory);
     for (const QString &dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.notifyrc"));
         for (const QString &file : fileNames) {
@@ -232,8 +238,7 @@ void SourcesModel::load()
             notifyRcFiles.append(file);
 
             KConfig config(file, KConfig::NoGlobals);
-            config.addConfigSources(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
-                                        QStringLiteral("knotifications5/") + file));
+            config.addConfigSources(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications5/") + file));
 
             KConfigGroup globalGroup(&config, QLatin1String("Global"));
 
@@ -250,7 +255,7 @@ void SourcesModel::load()
                 desktopEntries.append(desktopEntry);
             }
 
-            SourceData source{
+            SourceData source {
                 // The old KCM read the Name and Comment from global settings disregarding
                 // any user settings and just used user-specific files for actions config
                 // I'm pretty sure there's a readEntry equivalent that does that without
@@ -271,20 +276,16 @@ void SourcesModel::load()
                 // TODO context stuff
                 // TODO load defaults thing
 
-                EventData event{
-                    cg.readEntry("Name"),
-                    cg.readEntry("Comment"),
-                    cg.readEntry("IconName"),
-                    eventId,
-                    // TODO Flags?
-                    cg.readEntry("Action").split(QLatin1Char('|'))
-                };
+                EventData event {cg.readEntry("Name"),
+                                 cg.readEntry("Comment"),
+                                 cg.readEntry("IconName"),
+                                 eventId,
+                                 // TODO Flags?
+                                 cg.readEntry("Action").split(QLatin1Char('|'))};
                 events.append(event);
             }
 
-            std::sort(events.begin(), events.end(), [&collator](const EventData &a, const EventData &b) {
-                return collator.compare(a.name, b.name) < 0;
-            });
+            std::sort(events.begin(), events.end(), [&collator](const EventData &a, const EventData &b) { return collator.compare(a.name, b.name) < 0; });
 
             source.events = events;
 
@@ -296,8 +297,7 @@ void SourcesModel::load()
         }
     }
 
-    const auto services = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
-                                                            QStringLiteral("exist Exec and TRUE == [X-GNOME-UsesNotifications]"));
+    const auto services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and TRUE == [X-GNOME-UsesNotifications]"));
     for (const auto &service : services) {
         if (service->noDisplay()) {
             continue;
@@ -307,11 +307,11 @@ void SourcesModel::load()
             continue;
         }
 
-        SourceData source{
+        SourceData source {
             service->name(),
             service->comment(),
             service->icon(),
-            QString(), //notifyRcFile
+            QString(), // notifyRcFile
             service->desktopEntryName(),
             {} // events
         };
@@ -332,31 +332,20 @@ void SourcesModel::load()
             continue;
         }
 
-        SourceData source{
-            service->name(),
-            service->comment(),
-            service->icon(),
-            QString(), //notifyRcFile
-            service->desktopEntryName(),
-            {}
-        };
+        SourceData source {service->name(),
+                           service->comment(),
+                           service->icon(),
+                           QString(), // notifyRcFile
+                           service->desktopEntryName(),
+                           {}};
         appsData.append(source);
         desktopEntries.append(service->desktopEntryName());
     }
 
-    std::sort(appsData.begin(), appsData.end(), [&collator](const SourceData &a, const SourceData &b) {
-        return collator.compare(a.display(), b.display()) < 0;
-    });
+    std::sort(appsData.begin(), appsData.end(), [&collator](const SourceData &a, const SourceData &b) { return collator.compare(a.display(), b.display()) < 0; });
 
     // Fake entry for configuring non-identifyable applications
-    appsData << SourceData{
-        i18n("Other Applications"),
-        {},
-        QStringLiteral("applications-other"),
-        QString(),
-        QStringLiteral("@other"),
-        {}
-    };
+    appsData << SourceData {i18n("Other Applications"), {}, QStringLiteral("applications-other"), QString(), QStringLiteral("@other"), {}};
 
     // Sort and make sure plasma_workspace is at the beginning of the list
     std::sort(servicesData.begin(), servicesData.end(), [&collator](const SourceData &a, const SourceData &b) {

@@ -28,16 +28,16 @@ template<typename T> class QList;
 class PredicateItem
 {
 public:
-    PredicateItem( Solid::Predicate item, PredicateItem * itsParent );
+    PredicateItem(Solid::Predicate item, PredicateItem *itsParent);
     ~PredicateItem();
 
-    PredicateItem * child( int index ) const;
-    PredicateItem * parent() const;
-    QList<PredicateItem*>& children() const;
+    PredicateItem *child(int index) const;
+    PredicateItem *parent() const;
+    QList<PredicateItem *> &children() const;
     Solid::Predicate predicate() const;
     QString prettyName() const;
-    void setTypeByInt( int item );
-    void setComparisonByInt( int item );
+    void setTypeByInt(int item);
+    void setComparisonByInt(int item);
     void updateChildrenStatus();
 
     Solid::Predicate::Type itemType;
@@ -51,6 +51,6 @@ private:
     Private *const d;
 };
 
-Q_DECLARE_METATYPE( PredicateItem * )
+Q_DECLARE_METATYPE(PredicateItem *)
 
 #endif

@@ -20,8 +20,8 @@
 
 #pragma once
 
-#include <KQuickAddons/ConfigModule>
 #include "usermodel.h"
+#include <KQuickAddons/ConfigModule>
 
 class OrgFreedesktopAccountsInterface;
 
@@ -30,21 +30,21 @@ class QQuickView;
 class KCMUser : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
-    Q_PROPERTY(UserModel* userModel MEMBER m_model CONSTANT)
+    Q_PROPERTY(UserModel *userModel MEMBER m_model CONSTANT)
 
 private:
-    OrgFreedesktopAccountsInterface* m_dbusInterface;
-    UserModel* m_model;
+    OrgFreedesktopAccountsInterface *m_dbusInterface;
+    UserModel *m_model;
 
 public:
     KCMUser(QObject *parent = nullptr, const QVariantList &args = QVariantList());
     ~KCMUser() override;
 
-    Q_SCRIPTABLE bool createUser(const QString& name, const QString& realName, const QString& password, bool admin);
+    Q_SCRIPTABLE bool createUser(const QString &name, const QString &realName, const QString &password, bool admin);
     Q_SCRIPTABLE bool deleteUser(int index, bool deleteHome);
     // Grab the initials of a string
-    Q_SCRIPTABLE QString initializeString(const QString& stringToGrabInitialsOf);
-    Q_SCRIPTABLE QString plonkImageInTempfile(const QImage& image);
+    Q_SCRIPTABLE QString initializeString(const QString &stringToGrabInitialsOf);
+    Q_SCRIPTABLE QString plonkImageInTempfile(const QImage &image);
 
 signals:
     Q_SCRIPTABLE void apply();

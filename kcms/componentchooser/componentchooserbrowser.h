@@ -19,9 +19,9 @@
 #include "componentchooser.h"
 #include <QComboBox>
 
-class CfgBrowser: public CfgPlugin
+class CfgBrowser : public CfgPlugin
 {
-Q_OBJECT
+    Q_OBJECT
 public:
     CfgBrowser(QWidget *parent);
     ~CfgBrowser() override;
@@ -33,4 +33,3 @@ protected Q_SLOTS:
 };
 
 #endif /* COMPONENTCHOOSERBROWSER_H */
-

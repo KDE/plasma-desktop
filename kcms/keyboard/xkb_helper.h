@@ -16,20 +16,20 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #ifndef XKB_HELPER_H_
 #define XKB_HELPER_H_
 
-template <typename T> class QList;
+template<typename T> class QList;
 class LayoutUnit;
 class QStringList;
 class KeyboardConfig;
 
-class XkbHelper {
+class XkbHelper
+{
 public:
-	static bool initializeKeyboardLayouts(KeyboardConfig& config);
-	static bool initializeKeyboardLayouts(const QList<LayoutUnit>& layouts);
-	static bool runConfigLayoutCommand(const QStringList& setxkbmapCommandArguments);
+    static bool initializeKeyboardLayouts(KeyboardConfig &config);
+    static bool initializeKeyboardLayouts(const QList<LayoutUnit> &layouts);
+    static bool runConfigLayoutCommand(const QStringList &setxkbmapCommandArguments);
 };
 
 #endif /* XKB_HELPER_H_ */

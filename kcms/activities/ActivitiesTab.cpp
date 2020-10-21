@@ -20,12 +20,12 @@
 
 #include "ActivitiesTab.h"
 
+#include <QQmlComponent>
 #include <QQmlContext>
 #include <QQmlEngine>
-#include <QQmlComponent>
 
-#include <QQuickView>
 #include <QGuiApplication>
+#include <QQuickView>
 #include <QVBoxLayout>
 
 #include "ExtraActivitiesInterface.h"
@@ -37,7 +37,8 @@
 
 #include "utils.h"
 
-class ActivitiesTab::Private {
+class ActivitiesTab::Private
+{
 public:
     std::unique_ptr<QQuickView> viewActivities;
     ExtraActivitiesInterface *extraActivitiesInterface;
@@ -52,12 +53,10 @@ ActivitiesTab::ActivitiesTab(QWidget *parent)
     d->extraActivitiesInterface = new ExtraActivitiesInterface(this);
 
     d->viewActivities = createView(this);
-    d->viewActivities->rootContext()->setContextProperty(
-        QStringLiteral("kactivitiesExtras"), d->extraActivitiesInterface);
+    d->viewActivities->rootContext()->setContextProperty(QStringLiteral("kactivitiesExtras"), d->extraActivitiesInterface);
     setViewSource(d->viewActivities, QStringLiteral("/qml/activitiesTab/main.qml"));
 }
 
 ActivitiesTab::~ActivitiesTab()
 {
 }
-

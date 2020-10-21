@@ -18,17 +18,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-#include <limits.h>
+#include "screen.h"
 #include <QGuiApplication>
 #include <QScreen>
-#include "screen.h"
+#include <limits.h>
 
-int pointToRect(int x, int y, const QRect& r)
+int pointToRect(int x, int y, const QRect &r)
 {
     int dx = 0;
     int dy = 0;
     if (x < r.left()) {
-        dx = r.left() -x;
+        dx = r.left() - x;
     } else if (x > r.right()) {
         dx = x - r.right();
     }
@@ -40,7 +40,8 @@ int pointToRect(int x, int y, const QRect& r)
     return dx + dy;
 }
 
-Screen::Screen(QObject* parent) : QObject(parent)
+Screen::Screen(QObject *parent)
+    : QObject(parent)
 {
 }
 
@@ -48,11 +49,12 @@ Screen::~Screen()
 {
 }
 
-QScreen *screenForPoint(int x, int y) {
+QScreen *screenForPoint(int x, int y)
+{
     auto screens = qApp->screens();
-    QScreen* closestScreen = nullptr;
+    QScreen *closestScreen = nullptr;
     int shortestDistance = INT_MAX;
-    foreach(QScreen* screen, screens) {
+    foreach (QScreen *screen, screens) {
         auto rect = screen->availableGeometry();
         rect.setSize(rect.size() * screen->devicePixelRatio());
         int thisDistance = pointToRect(x, y, rect);
@@ -90,4 +92,3 @@ qreal Screen::devicePixelRatioForPoint(int x, int y)
     }
     return 1.0;
 }
-

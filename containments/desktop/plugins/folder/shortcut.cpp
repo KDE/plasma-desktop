@@ -39,7 +39,7 @@ void ShortCut::installAsEventFilterFor(QObject *target)
 bool ShortCut::eventFilter(QObject *obj, QEvent *e)
 {
     if (e->type() == QEvent::KeyPress) {
-        QKeyEvent *keyEvent = static_cast<QKeyEvent*>(e);
+        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(e);
         int keyInt = keyEvent->modifiers() + keyEvent->key();
         if (KStandardShortcut::deleteFile().contains(QKeySequence(keyInt))) {
             emit deleteFile();
