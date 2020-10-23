@@ -25,7 +25,6 @@
 #include <QString>
 
 #include <KLocalizedString>
-#include <Solid/Predicate>
 
 class PredicateItem::Private {
 

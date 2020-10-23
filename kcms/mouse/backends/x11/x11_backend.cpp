@@ -28,7 +28,6 @@
 #include <libinput-properties.h>
 
 #include <QFile>
-#include <QX11Info>
 #include <KLocalizedString>
 #include <KConfig>
 #include <KSharedConfig>

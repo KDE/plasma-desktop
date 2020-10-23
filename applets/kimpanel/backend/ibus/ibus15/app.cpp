@@ -26,7 +26,6 @@
 #include <QX11Info>
 #include <QDBusServiceWatcher>
 #include <QDBusConnection>
-#include <xcb/xcb_keysyms.h>
 
 #define USED_MASK (XCB_MOD_MASK_SHIFT | XCB_MOD_MASK_CONTROL | XCB_MOD_MASK_1 | XCB_MOD_MASK_4)
 

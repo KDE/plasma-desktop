@@ -22,7 +22,6 @@
 #include <config-X11.h>
 
 #include <QFile>
-#include <QX11Info>
 #include <KLocalizedString>
 #include <evdev-properties.h>
 

@@ -30,7 +30,6 @@
 #include <QMessageBox>
 #include <QDesktopWidget>
 
-#include <QLabel>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QApplication>

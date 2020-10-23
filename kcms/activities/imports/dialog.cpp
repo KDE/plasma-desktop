@@ -22,7 +22,6 @@
 
 #include <QAction>
 #include <QDialogButtonBox>
-#include <QKeySequence>
 #include <QPushButton>
 #include <QQmlContext>
 #include <QQmlEngine>

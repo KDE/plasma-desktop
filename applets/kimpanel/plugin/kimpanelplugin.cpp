@@ -21,7 +21,6 @@
 #include "kimpanelplugin.h"
 #include "screen.h"
 #include "kimpanel.h"
-#include <QQmlEngine>
 
 void KimpanelPlugin::registerTypes(const char* uri)
 {

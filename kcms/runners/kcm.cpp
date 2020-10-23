@@ -36,7 +36,6 @@
 #include <QLabel>
 #include <QDialog>
 #include <QPainter>
-#include <QPushButton>
 #include <QFormLayout>
 
 K_PLUGIN_FACTORY(SearchConfigModuleFactory, registerPlugin<SearchConfigModule>();)

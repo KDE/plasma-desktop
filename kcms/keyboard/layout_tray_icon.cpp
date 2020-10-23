@@ -24,10 +24,8 @@
 #include <QMenu>
 
 #include "xkb_rules.h"
-#include "x11_helper.h"
 #include "xkb_helper.h"
 #include "keyboard_config.h"
-#include "flags.h"
 #include "layouts_menu.h"
 
 

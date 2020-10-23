@@ -22,7 +22,6 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusConnectionInterface>
-#include <KNotification>
 #include <KLocalizedString>
 
 #include "plugins.h"

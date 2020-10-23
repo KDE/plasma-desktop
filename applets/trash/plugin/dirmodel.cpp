@@ -29,7 +29,6 @@
 #include <KDirLister>
 #include <kio/previewjob.h>
 #include <KIO/EmptyTrashJob>
-#include <KImageCache>
 
 DirModel::DirModel(QObject *parent)
     : KDirModel(parent),

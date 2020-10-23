@@ -30,7 +30,6 @@
 
 #include "../../../migrationlib/kdelibs4config.h"
 
-#include <config-workspace.h>
 
 #include <KToolInvocation>
 #include <KLocalizedString>

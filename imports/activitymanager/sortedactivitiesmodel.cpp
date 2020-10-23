@@ -33,7 +33,6 @@
 #include <KConfigGroup>
 #include <KDirWatch>
 #include <KLocalizedString>
-#include <KActivities/Consumer>
 
 #define KWINDOWSYSTEM_NO_DEPRECATED
 

@@ -19,7 +19,6 @@
 #include "x11_helper.h"
 #include "debug.h"
 
-#include <QX11Info>
 #include <QCoreApplication>
 #include <QDebug>
 

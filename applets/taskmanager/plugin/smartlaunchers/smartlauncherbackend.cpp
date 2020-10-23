@@ -30,7 +30,6 @@
 
 #include <algorithm>
 
-#include <notificationmanager/jobsmodel.h>
 #include <notificationmanager/settings.h>
 
 using namespace SmartLauncher;

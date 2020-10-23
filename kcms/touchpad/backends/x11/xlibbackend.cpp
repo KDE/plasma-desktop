@@ -20,7 +20,6 @@
 #include <cmath>
 
 #include <QtAlgorithms>
-#include <QScopedPointer>
 
 #include <KLocalizedString>
 #include <QDebug>
@@ -32,10 +31,7 @@
 #include "xlibbackend.h" // krazy:exclude=includes
 #include "xlibnotifications.h" // krazy:exclude=includes
 #if HAVE_XORGLIBINPUT
-#include "libinputtouchpad.h"
 #endif
-#include "synapticstouchpad.h"
-#include "propertyinfo.h"
 
 #include <X11/Xlib-xcb.h>
 #include <X11/Xatom.h>

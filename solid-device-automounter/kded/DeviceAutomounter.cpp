@@ -21,7 +21,6 @@
 
 #include <KPluginFactory>
 
-#include <Solid/Device>
 #include <Solid/DeviceNotifier>
 #include <Solid/StorageAccess>
 #include <Solid/StorageVolume>

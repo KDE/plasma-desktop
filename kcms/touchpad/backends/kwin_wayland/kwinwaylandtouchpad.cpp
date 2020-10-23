@@ -21,7 +21,6 @@
 #include <QDBusInterface>
 #include <QDBusError>
 #include <QVector>
-#include <backends/libinputcommon.h>
 
 #include "logging.h"
 
