@@ -80,11 +80,11 @@ bool XInputEventNotifier::processOtherEvents(xcb_generic_event_t* event)
 {
 	int newDeviceType = getNewDeviceEventType(event);
 	if( newDeviceType == DEVICE_KEYBOARD ) {
-		emit(newKeyboardDevice());
+		Q_EMIT emit(newKeyboardDevice());
 	}
 	else if( newDeviceType == DEVICE_POINTER ) {
-		emit(newPointerDevice());
-		emit(newKeyboardDevice());	// arghhh, looks like X resets xkb map even when only pointer device is connected
+		Q_EMIT emit(newPointerDevice());
+		Q_EMIT emit(newKeyboardDevice()); // arghhh, looks like X resets xkb map even when only pointer device is connected
 	}
 	return true;
 }

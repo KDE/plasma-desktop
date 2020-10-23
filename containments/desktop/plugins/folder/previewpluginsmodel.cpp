@@ -103,7 +103,7 @@ void PreviewPluginsModel::setCheckedPlugins(const QStringList &list)
 
     m_checkedRows = QVector<bool>(m_plugins.size(), false);
 
-    for (const QString &name : plugins) {
+    for (const QString &name : qAsConst(plugins)) {
         const int row = indexOfPlugin(name);
         if (row != -1) {
             m_checkedRows[row] = true;

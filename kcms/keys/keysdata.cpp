@@ -32,6 +32,8 @@ constexpr int dbusTimeout = 5; //milliseconds
 
 KeysData::KeysData(QObject *parent, const QVariantList &args)
 {
+   Q_UNUSED(parent)
+   Q_UNUSED(args)
 }
 
 bool KeysData::isDefaults() const

@@ -351,11 +351,11 @@ bool XEventNotifier::processXkbEvents(xcb_generic_event_t* event)
 	_xkb_event *xkbevt = reinterpret_cast<_xkb_event *>(event);
 	if( XEventNotifier::isGroupSwitchEvent(xkbevt) ) {
 //		qDebug() << "group switch event";
-		emit(layoutChanged());
+		Q_EMIT emit(layoutChanged());
 	}
 	else if( XEventNotifier::isLayoutSwitchEvent(xkbevt) ) {
 //		qDebug() << "layout switch event";
-		emit(layoutMapChanged());
+		Q_EMIT emit(layoutMapChanged());
 	}
 	return true;
 }
