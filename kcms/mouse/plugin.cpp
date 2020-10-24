@@ -17,6 +17,7 @@
  */
 #include "kcm/configcontainer.h"
 
+#include <KPluginFactory>
 
 K_PLUGIN_FACTORY(MousePluginFactory,
                  registerPlugin<ConfigContainer>();

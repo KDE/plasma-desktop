@@ -19,6 +19,7 @@
 //#include "plugins.h"
 
 #include <KLocalizedString>
+#include <KPluginFactory>
 
 #include "kcm/touchpadconfigcontainer.h"
 #include "kded/kded.h"
