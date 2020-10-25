@@ -91,7 +91,7 @@ ColumnLayout {
             Kirigami.FormData.label: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout:")
             enabled: !plasmoid.immutable
             model: configDialog.containmentPluginsConfigModel
-            width: theme.mSize(theme.defaultFont).width * 24
+            implicitWidth: theme.mSize(theme.defaultFont).width * 24
             textRole: "name"
             onActivated: {
                 var model = configDialog.containmentPluginsConfigModel.get(currentIndex)
@@ -108,7 +108,7 @@ ColumnLayout {
                 id: wallpaperComboBox
                 Layout.preferredWidth: Math.max(implicitWidth, pluginComboBox.implicitWidth)
                 model: configDialog.wallpaperConfigModel
-                width: theme.mSize(theme.defaultFont).width * 24
+                implicitWidth: theme.mSize(theme.defaultFont).width * 24
                 textRole: "name"
                 onActivated: {
                     var model = configDialog.wallpaperConfigModel.get(currentIndex)
