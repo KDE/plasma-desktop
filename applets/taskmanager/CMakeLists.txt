@@ -11,6 +11,11 @@ set(taskmanagerplugin_SRCS
     plugin/smartlaunchers/smartlauncheritem.cpp
 )
 
+ecm_qt_declare_logging_category(taskmanagerplugin_SRCS
+    HEADER log_settings.h
+    IDENTIFIER TASKMANAGER_DEBUG
+    CATEGORY_NAME org.kde.plasma.taskmanager)
+
 install(FILES plugin/qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/taskmanager)
 
 add_library(taskmanagerplugin SHARED ${taskmanagerplugin_SRCS})

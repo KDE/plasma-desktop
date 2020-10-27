@@ -6,6 +6,7 @@
 
 #include "backend.h"
 
+#include "log_settings.h"
 #include <KConfigGroup>
 #include <KDesktopFile>
 #include <KFileItem>
@@ -18,6 +19,7 @@
 #include <KWindowSystem>
 
 #include <KIO/ApplicationLauncherJob>
+#include <KService/KApplicationTrader>
 
 #include <QAction>
 #include <QActionGroup>
@@ -360,6 +362,7 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
 
     while (actionCount < 5 && resultIt != results.end()) {
         const QString resource = (*resultIt).resource();
+        const QString mimetype = (*resultIt).mimetype();
         ++resultIt;
 
         const QUrl url = QUrl::fromLocalFile(resource);
@@ -379,6 +382,7 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
         action->setIcon(QIcon::fromTheme(fileItem.iconName(), QIcon::fromTheme(QStringLiteral("unknown"))));
         action->setProperty("agent", storageId);
         action->setProperty("entryPath", desktopEntryUrl);
+        action->setProperty("mimeType", mimetype);
         action->setData(resource);
         connect(action, &QAction::triggered, this, &Backend::handleRecentDocumentAction);
 
@@ -429,8 +433,26 @@ void Backend::handleRecentDocumentAction() const
     }
 
     KService::Ptr service = KService::serviceByDesktopPath(desktopPath);
+
     if (!service) {
         return;
+    }
+
+    // prevents using a service file that does not support opening a mime type for a file it created
+    // for instance spectacle
+    const auto mimetype = action->property("mimeType").toString();
+    if (!mimetype.isEmpty()) {
+        if (!service->hasMimeType(mimetype)) {
+            // needs to find the application that supports this mimetype
+            service = KApplicationTrader::preferredService(mimetype);
+
+            if (!service) {
+                // no service found to handle the mimetype
+                return;
+            } else {
+                qCWarning(TASKMANAGER_DEBUG) << "Preventing the file to open with " << service->desktopEntryName() << "no alternative found";
+            }
+        }
     }
 
     auto *job = new KIO::ApplicationLauncherJob(service);
