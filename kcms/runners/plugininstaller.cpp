@@ -76,7 +76,7 @@ void fail(const QString &str)
     exit(1);
 }
 
-void aboartInstallation()
+void abortInstallation()
 {
     qWarning() << i18n("Installation aborted");
     exit(1);
@@ -169,7 +169,7 @@ public:
         }
         buttonBox->button(QDialogButtonBox::Ok)->setText(okText);
         // If the user clicks cancel or closes the dialog using escape
-        connect(buttonBox, &QDialogButtonBox::rejected, this, aboartInstallation);
+        connect(buttonBox, &QDialogButtonBox::rejected, this, abortInstallation);
         connect(buttonBox, &QDialogButtonBox::accepted, this, [this, noInstaller](){
             if (noInstaller) {
                 exit(0);
@@ -177,7 +177,7 @@ public:
                 done(1);
             }
         });
-        connect(this, &QDialog::rejected, this, aboartInstallation);
+        connect(this, &QDialog::rejected, this, abortInstallation);
 
         QHBoxLayout *helpButtonLayout = new QHBoxLayout(this);
         if (!noInstaller) {
@@ -230,7 +230,7 @@ public:
         buttonBox->button(QDialogButtonBox::Ok)->setIcon(QIcon::fromTheme("emblem-warning"));
         buttonBox->button(QDialogButtonBox::Ok)->setText(i18n("Accept Risk And Continue"));
         // If the user clicks cancel or closes the dialog using escape
-        connect(buttonBox, &QDialogButtonBox::rejected, this, aboartInstallation);
+        connect(buttonBox, &QDialogButtonBox::rejected, this, abortInstallation);
         connect(buttonBox, &QDialogButtonBox::accepted, this, [this, packagePath](){
             if (QMimeDatabase().mimeTypeForFile(QFileInfo(packagePath)).name() == QLatin1String("application/x-rpm")
                     && KOSRelease().name().contains(QStringLiteral("openSUSE"), Qt::CaseInsensitive)) {
@@ -242,7 +242,7 @@ public:
                 done(1);
             }
         });
-        connect(this, &QDialog::rejected, this, aboartInstallation);
+        connect(this, &QDialog::rejected, this, abortInstallation);
 
         QPushButton *highlightFileButton = new QPushButton(QIcon::fromTheme("document-open-folder"), i18n("View File"), this);
         connect(highlightFileButton, &QPushButton::clicked, this, [packagePath]() {
