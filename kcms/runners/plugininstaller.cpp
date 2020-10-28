@@ -78,7 +78,7 @@ void fail(const QString &str)
 
 void abortInstallation()
 {
-    qWarning() << i18n("Installation aborted");
+    qWarning() << "Installation aborted";
     exit(1);
 }
 
