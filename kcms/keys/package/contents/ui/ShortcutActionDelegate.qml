@@ -137,6 +137,7 @@ Kirigami.AbstractListItem {
                             KeySequenceItem {
                                 keySequence: modelData
                                 showClearButton: false
+                                multiKeyShortcutsAllowed: supportsMultipleKeys
                                 checkForConflictsAgainst: ShortcutType.None
                                 onCaptureFinished: {
                                     kcm.requestKeySequence(this, originalIndex, keySequence, modelData)
@@ -178,6 +179,7 @@ Kirigami.AbstractListItem {
                             signal finished
                             KeySequenceItem {
                                 showClearButton: false
+                                multiKeyShortcutsAllowed: model.supportsMultipleKeys
                                 checkForConflictsAgainst: ShortcutType.None
                                 onCaptureFinished: {
                                     kcm.requestKeySequence(this, originalIndex, keySequence)

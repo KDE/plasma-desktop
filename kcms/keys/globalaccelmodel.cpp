@@ -50,6 +50,14 @@ GlobalAccelModel::GlobalAccelModel(KGlobalAccelInterface *interface, QObject *pa
 {
 }
 
+QVariant GlobalAccelModel::data(const QModelIndex &index, int role) const
+{
+    if (role == SupportsMultipleKeysRole) {
+        return false;
+    }
+    return BaseModel::data(index, role);
+}
+
 void GlobalAccelModel::load()
 {
     if (!m_globalAccelInterface->isValid()) {
