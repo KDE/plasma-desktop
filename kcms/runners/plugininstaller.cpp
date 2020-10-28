@@ -82,7 +82,7 @@ void abortInstallation()
     exit(1);
 }
 
-inline QString getCloseMessage(Operation operation)
+inline QString closeMessage(Operation operation)
 {
     return operation == Operation::Install
                     ? i18n("Installation executed successfully, you may now close this window")
@@ -95,7 +95,7 @@ void runScriptInTerminal(const QString &script, const QString &pwd)
     QString exec = confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole"));
 
     if (exec == QLatin1String("konsole")) {
-        exec += QLatin1String(" --noclose");
+        exec += QLatin1String(" --noclose --separate");
     } else if (exec == QLatin1String("xterm")) {
         exec += QLatin1String(" -hold");
     }
@@ -236,7 +236,7 @@ public:
                     && KOSRelease().name().contains(QStringLiteral("openSUSE"), Qt::CaseInsensitive)) {
                 const QString command = QStringLiteral("sudo zypper install %1").arg(KShell::quoteArg(packagePath));
                 runScriptInTerminal(QStringLiteral("bash -c \"echo %1;%1 && echo %2\"")
-                        .arg(command, KShell::quoteArg(getCloseMessage(Operation::Install))), QFileInfo(packagePath).absolutePath());
+                        .arg(command, KShell::quoteArg(closeMessage(Operation::Install))), QFileInfo(packagePath).absolutePath());
                 exit(0);
             } else {
                 done(1);
@@ -371,7 +371,7 @@ void executeOperation(const QString &archive, Operation operation)
     }
 
     const QString bashCommand = QStringLiteral("echo %1;%1 || $SHELL && echo %2")
-            .arg(KShell::quoteArg(installerPath), KShell::quoteArg(getCloseMessage(operation)));
+            .arg(KShell::quoteArg(installerPath), KShell::quoteArg(closeMessage(operation)));
     runScriptInTerminal(QStringLiteral("bash -c %1").arg(KShell::quoteArg(bashCommand)), archive);
 }
 
