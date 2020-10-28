@@ -263,17 +263,18 @@ void packageKitInstall(const QString &fileName)
 {
     PackageKit::Transaction *transaction = PackageKit::Daemon::installFile(fileName);
     QObject::connect(transaction, &PackageKit::Transaction::finished,
-                     [=](PackageKit::Transaction::Exit status, uint) {
-                        if (status == PackageKit::Transaction::ExitSuccess) {
-                            exit(0);
-                        }
-                        // Sometimes packagekit gets stuck when installing an unsupported package this way we
-                        // ensure that we exit. The errorCode slot could provide a better message, that is why we wait
-                        QTimer::singleShot(1000, [=](){
-                            fail(i18n("Failed to install \"%1\"; exited with status \"%2\"",
-                                      fileName, QVariant::fromValue(status).toString()));
-                        });
-                    });
+                     [=](PackageKit::Transaction::Exit status, uint)
+                     {
+                         if (status == PackageKit::Transaction::ExitSuccess) {
+                             exit(0);
+                         }
+                         // Sometimes packagekit gets stuck when installing an unsupported package this way we
+                         // ensure that we exit. The errorCode slot could provide a better message, that is why we wait
+                         QTimer::singleShot(1000, [=]() {
+                             fail(i18n("Failed to install \"%1\"; exited with status \"%2\"",
+                                       fileName, QVariant::fromValue(status).toString()));
+                         });
+                     });
     QObject::connect(transaction, &PackageKit::Transaction::errorCode, exitWithError);
 }
 
