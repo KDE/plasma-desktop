@@ -72,7 +72,7 @@ void fail(const QString &str)
         return;
     }
     failed = true;
-    KMessageBox::error(nullptr, str, i18n("KRunner plugin installation failed"));
+    KMessageBox::error(nullptr, str, i18nc("@info", "KRunner plugin installation failed"));
     exit(1);
 }
 
@@ -85,8 +85,8 @@ void abortInstallation()
 inline QString closeMessage(Operation operation)
 {
     return operation == Operation::Install
-                    ? i18n("Installation executed successfully, you may now close this window")
-                    : i18n("Uninstallation executed successfully, you may now close this window");
+                    ? i18nc("@info", "Installation executed successfully, you may now close this window")
+                    : i18nc("@info", "Uninstallation executed successfully, you may now close this window");
 }
 
 void runScriptInTerminal(const QString &script, const QString &pwd)
@@ -119,7 +119,7 @@ public:
     ScriptConfirmationDialog(const QString &installerPath, Operation operation, const QString &dir, QWidget *parent = nullptr) : QDialog(parent)
     {
         const auto readmes = QDir(dir).entryList({QStringLiteral("README*")});
-        setWindowTitle(i18n("Confirm Installation"));
+        setWindowTitle(i18nc("@title:window", "Confirm Installation"));
         setWindowIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
         const bool noInstaller = installerPath.isEmpty();
         QVBoxLayout *layout = new QVBoxLayout(this);
@@ -161,11 +161,11 @@ public:
         buttonBox->button(QDialogButtonBox::Ok)->setIcon(QIcon::fromTheme("emblem-warning"));
         QString okText;
         if (noInstaller && operation == Operation::Uninstall) {
-            okText = i18n("Mark entry as uninstalled");
+            okText = i18nc("@action:button", "Mark entry as uninstalled");
         } else if (noInstaller) {
-            okText = i18n("Mark entry as installed");
+            okText = i18nc("@action:button", "Mark entry as installed");
         } else {
-           okText = i18n("Accept Risk And Continue");
+           okText = i18nc("@action:button", "Accept Risk And Continue");
         }
         buttonBox->button(QDialogButtonBox::Ok)->setText(okText);
         // If the user clicks cancel or closes the dialog using escape
@@ -181,13 +181,13 @@ public:
 
         QHBoxLayout *helpButtonLayout = new QHBoxLayout(this);
         if (!noInstaller) {
-            QPushButton *scriptButton = new QPushButton(QIcon::fromTheme("dialog-scripts"), i18n("View Script"), this);
+            QPushButton *scriptButton = new QPushButton(QIcon::fromTheme("dialog-scripts"), i18nc("@action:button", "View Script"), this);
             connect(scriptButton, &QPushButton::clicked, this, [installerPath]() {
                 QDesktopServices::openUrl(QUrl::fromLocalFile(installerPath));
             });
             helpButtonLayout->addWidget(scriptButton);
         }
-        QPushButton *sourceButton = new QPushButton(QIcon::fromTheme("document-open-folder"), i18n("View Source Directory"), this);
+        QPushButton *sourceButton = new QPushButton(QIcon::fromTheme("document-open-folder"), i18nc("@action:button", "View Source Directory"), this);
         connect(sourceButton, &QPushButton::clicked, this, [dir]() {
             QDesktopServices::openUrl(QUrl::fromLocalFile(dir));
         });
@@ -198,7 +198,7 @@ public:
             helpButtonLayout->addWidget(sourceButton);
         }
         if (!readmes.isEmpty()) {
-            QPushButton *readmeButton = new QPushButton(QIcon::fromTheme("text-x-readme"), i18n("View %1", readmes.at(0)), this);
+            QPushButton *readmeButton = new QPushButton(QIcon::fromTheme("text-x-readme"), i18nc("@action:button", "View %1", readmes.at(0)), this);
             connect(readmeButton, &QPushButton::clicked, this, [dir, readmes]() {
                 QDesktopServices::openUrl(QUrl::fromLocalFile(QDir(dir).absoluteFilePath(readmes.at(0))));
             });
@@ -217,7 +217,7 @@ class PackagekitConfirmationDialog : public QDialog {
 public:
     PackagekitConfirmationDialog(const QString &packagePath, QWidget *parent = nullptr) : QDialog(parent)
     {
-        setWindowTitle(i18n("Confirm Installation"));
+        setWindowTitle(i18nc("@title:window", "Confirm Installation"));
         setWindowIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
         QVBoxLayout *layout = new QVBoxLayout(this);
         QString msg = xi18nc("@info", "You are about to install a binary package. You should only install these from a trusted author/packager.");
@@ -228,7 +228,7 @@ public:
 
         auto *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
         buttonBox->button(QDialogButtonBox::Ok)->setIcon(QIcon::fromTheme("emblem-warning"));
-        buttonBox->button(QDialogButtonBox::Ok)->setText(i18n("Accept Risk And Continue"));
+        buttonBox->button(QDialogButtonBox::Ok)->setText(i18nc("@action:button", "Accept Risk And Continue"));
         // If the user clicks cancel or closes the dialog using escape
         connect(buttonBox, &QDialogButtonBox::rejected, this, abortInstallation);
         connect(buttonBox, &QDialogButtonBox::accepted, this, [this, packagePath](){
@@ -244,7 +244,7 @@ public:
         });
         connect(this, &QDialog::rejected, this, abortInstallation);
 
-        QPushButton *highlightFileButton = new QPushButton(QIcon::fromTheme("document-open-folder"), i18n("View File"), this);
+        QPushButton *highlightFileButton = new QPushButton(QIcon::fromTheme("document-open-folder"), i18nc("@action:button", "View File"), this);
         connect(highlightFileButton, &QPushButton::clicked, this, [packagePath]() {
             KIO::highlightInFileManager({QUrl::fromLocalFile(packagePath)});
         });
@@ -271,7 +271,7 @@ void packageKitInstall(const QString &fileName)
                          // Sometimes packagekit gets stuck when installing an unsupported package this way we
                          // ensure that we exit. The errorCode slot could provide a better message, that is why we wait
                          QTimer::singleShot(1000, [=]() {
-                             fail(i18n("Failed to install \"%1\"; exited with status \"%2\"",
+                             fail(i18nc("@info", "Failed to install \"%1\"; exited with status \"%2\"",
                                        fileName, QVariant::fromValue(status).toString()));
                          });
                      });
@@ -299,7 +299,7 @@ void packageKitUninstall(const QString &fileName)
         const QString rpmInfo = rpmInfoProcess.readAll();
         const auto infoMatch = QRegularExpression(QStringLiteral("Name *: (.+)")).match(rpmInfo);
         if (!infoMatch.hasMatch()) {
-            fail(i18n("Could not resolve package name of %1", fileName));
+            fail(i18nc("@info", "Could not resolve package name of %1", fileName));
         }
         const QString rpmPackageName = KShell::quoteArg(infoMatch.captured(1));
         PackageKit::Transaction *transaction = PackageKit::Daemon::resolve(rpmPackageName);
@@ -317,7 +317,7 @@ void packageKitUninstall(const QString &fileName)
         QObject::connect(transaction, &PackageKit::Transaction::finished, [=](PackageKit::Transaction::Exit status, uint) {
                              if (status != PackageKit::Transaction::ExitSuccess) {
                                  QTimer::singleShot(1000, [=]() {
-                                     fail(i18n("Failed to uninstall \"%1\"; exited with status \"%2\"",
+                                     fail(i18nc("@info", "Failed to uninstall \"%1\"; exited with status \"%2\"",
                                                fileName, QVariant::fromValue(status).toString()));
                                  });
                              }
@@ -338,7 +338,7 @@ void packageKit(Operation operation, const QString &fileName)
         packageKitUninstall(absPath);
     }
     QGuiApplication::exec(); // For event handling, no return after signals finish
-    fail(i18n("Unknown error when installing package"));
+    fail(i18nc("@info", "Unknown error when installing package"));
 #else
     Q_UNUSED(operation)
     QDesktopServices::openUrl(QUrl(fileName));
@@ -388,10 +388,10 @@ int main(int argc, char *argv[])
 
     const QStringList args = parser.positionalArguments();
     if (args.isEmpty()) {
-        fail(i18n("Command is required."));
+        fail(i18nc("@info", "Command is required."));
     }
     if (args.size() == 1) {
-        fail(i18n("Path to archive is required."));
+        fail(i18nc("@info", "Path to archive is required."));
     }
 
     const QString cmd = args[0];
@@ -402,7 +402,7 @@ int main(int argc, char *argv[])
     } else if (cmd == QLatin1String("uninstall")) {
         executeOperation(archive, Operation::Uninstall);
     } else {
-        fail(i18n("Unsupported command %1", cmd));
+        fail(i18nc("@info", "Unsupported command %1", cmd));
     }
 
     return 0;
