@@ -43,6 +43,7 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <QDBusConnection>
 
 #include <config-workspace.h>
 
@@ -259,6 +260,15 @@ void exitWithError(PackageKit::Transaction::Error, const QString &details)
     fail(details);
 }
 
+QStringList supportedPackagekitMimeTypes()
+{
+    QDBusMessage message = QDBusMessage::createMethodCall("org.freedesktop.PackageKit", "/org/freedesktop/PackageKit", "org.freedesktop.DBus.Properties", "Get");
+    message.setArguments({"org.freedesktop.PackageKit", "MimeTypes"});
+    QDBusMessage reply = QDBusConnection::systemBus().call(message);
+    QVariantList args = reply.arguments();
+    return reply.arguments().at(0).value<QDBusVariant>().variant().toStringList();
+}
+
 void packageKitInstall(const QString &fileName)
 {
     PackageKit::Transaction *transaction = PackageKit::Daemon::installFile(fileName, PackageKit::Transaction::TransactionFlags());
@@ -268,12 +278,6 @@ void packageKitInstall(const QString &fileName)
                          if (status == PackageKit::Transaction::ExitSuccess) {
                              exit(0);
                          }
-                         // Sometimes packagekit gets stuck when installing an unsupported package this way we
-                         // ensure that we exit. The errorCode slot could provide a better message, that is why we wait
-                         QTimer::singleShot(1000, [=]() {
-                             fail(i18nc("@info", "Failed to install \"%1\"; exited with status \"%2\"",
-                                       fileName, QVariant::fromValue(status).toString()));
-                         });
                      });
     QObject::connect(transaction, &PackageKit::Transaction::errorCode, exitWithError);
 }
@@ -313,15 +317,6 @@ void packageKitUninstall(const QString &fileName)
         });
 
         QObject::connect(transaction, &PackageKit::Transaction::errorCode, exitWithError);
-        // Fallback error handling
-        QObject::connect(transaction, &PackageKit::Transaction::finished, [=](PackageKit::Transaction::Exit status, uint) {
-                             if (status != PackageKit::Transaction::ExitSuccess) {
-                                 QTimer::singleShot(1000, [=]() {
-                                     fail(i18nc("@info", "Failed to uninstall \"%1\"; exited with status \"%2\"",
-                                               fileName, QVariant::fromValue(status).toString()));
-                                 });
-                             }
-                         });
     }
 }
 #endif
@@ -348,8 +343,13 @@ void packageKit(Operation operation, const QString &fileName)
 
 void executeOperation(const QString &archive, Operation operation)
 {
-    if (binaryPackages.contains(QMimeDatabase().mimeTypeForFile(archive).name())) {
-        packageKit(operation, archive);
+    const QString mimeType = QMimeDatabase().mimeTypeForFile(archive).name();
+    if (binaryPackages.contains(mimeType)) {
+        if (supportedPackagekitMimeTypes().contains(mimeType)) {
+            packageKit(operation, archive);
+        } else {
+           fail(i18nc("@info", "The mime type %1 is not supported by the packagekit backend", mimeType));
+        }
     }
 
     const bool install = operation == Operation::Install;
