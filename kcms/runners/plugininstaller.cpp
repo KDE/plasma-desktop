@@ -261,7 +261,7 @@ void exitWithError(PackageKit::Transaction::Error, const QString &details)
 
 void packageKitInstall(const QString &fileName)
 {
-    PackageKit::Transaction *transaction = PackageKit::Daemon::installFile(fileName);
+    PackageKit::Transaction *transaction = PackageKit::Daemon::installFile(fileName, PackageKit::Transaction::TransactionFlags());
     QObject::connect(transaction, &PackageKit::Transaction::finished,
                      [=](PackageKit::Transaction::Exit status, uint)
                      {
