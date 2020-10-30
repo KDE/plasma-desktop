@@ -252,7 +252,6 @@ QStringList supportedPackagekitMimeTypes()
     QDBusMessage message = QDBusMessage::createMethodCall("org.freedesktop.PackageKit", "/org/freedesktop/PackageKit", "org.freedesktop.DBus.Properties", "Get");
     message.setArguments({"org.freedesktop.PackageKit", "MimeTypes"});
     QDBusMessage reply = QDBusConnection::systemBus().call(message);
-    QVariantList args = reply.arguments();
     return reply.arguments().at(0).value<QDBusVariant>().variant().toStringList();
 }
 
@@ -286,7 +285,7 @@ void packageKitUninstall(const QString &fileName)
         && KOSRelease().name().contains(QStringLiteral("openSUSE"), Qt::CaseInsensitive)) {
         QProcess rpmInfoProcess;
         rpmInfoProcess.start(QStringLiteral("rpm"), {"-qi", fileName});
-        rpmInfoProcess.waitForFinished(1000);
+        rpmInfoProcess.waitForFinished();
         const QString rpmInfo = rpmInfoProcess.readAll();
         const auto infoMatch = QRegularExpression(QStringLiteral("Name *: (.+)")).match(rpmInfo);
         if (!infoMatch.hasMatch()) {
