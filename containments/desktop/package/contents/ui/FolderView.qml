@@ -276,6 +276,20 @@ FocusScope {
                 editor.commit();
             }
 
+            if (mouse.source === Qt.MouseEventSynthesizedByQt) {
+                var index = gridView.indexAt(mouse.x, mouse.y);
+                var indexItem = gridView.itemAtIndex(index);
+                if (indexItem && indexItem.iconArea) {
+                    gridView.currentIndex = index;
+                    hoveredItem = indexItem;
+                } else {
+                    hoveredItem = null;
+                }
+                if (gridView.hoveredItem && gridView.hoveredItem.toolTip.active) {
+                    gridView.hoveredItem.toolTip.hideToolTip();
+                }
+            }
+
             pressX = mouse.x;
             pressY = mouse.y;
 
@@ -336,6 +350,20 @@ FocusScope {
         onCanceled: pressCanceled()
         onReleased: pressCanceled()
 
+        onPressAndHold: {
+            if (mouse.source == Qt.MouseEventSynthesizedByQt) {
+                if (pressedItem) {
+                    if (pressedItem.toolTip && pressedItem.toolTip.active) {
+                        pressedItem.toolTip.hideToolTip();
+                    }
+                }
+                clearPressState();
+                if (hoveredItem) {
+                    dir.openContextMenu(null, mouse.modifiers);
+                }
+            }
+        }
+
         onClicked: {
             clearPressState();
 
@@ -373,7 +401,7 @@ FocusScope {
             pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
 
             if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
-                if (Qt.styleHints.singleClickActivation || doubleClickInProgress) {
+                if (Qt.styleHints.singleClickActivation || doubleClickInProgress || mouse.source == Qt.MouseEventSynthesizedByQt) {
                     var func = root.useListViewMode && (mouse.button === Qt.LeftButton) && hoveredItem.isDir ? doCd : dir.run;
                     func(positioner.map(gridView.currentIndex));
 
