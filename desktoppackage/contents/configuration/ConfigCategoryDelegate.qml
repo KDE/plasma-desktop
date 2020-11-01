@@ -28,36 +28,17 @@ import org.kde.kirigami 2.5 as Kirigami
 MouseArea {
     id: delegate
 
+    signal activated()
+
 //BEGIN properties
     implicitWidth: delegateContents.implicitWidth + 4 * PlasmaCore.Units.smallSpacing
     implicitHeight: delegateContents.height + PlasmaCore.Units.smallSpacing * 4
     Layout.fillWidth: true
     hoverEnabled: true
 
-    property bool current: (model.kcm && pageStack.currentItem.kcm && model.kcm == pageStack.currentItem.kcm) || (model.source == pageStack.sourceFile)
+    property var item
+    property bool current: false
 //END properties
-
-//BEGIN functions
-    function openCategory() {
-        if (current) {
-            return;
-        }
-        if (typeof(categories.currentItem) !== "undefined") {
-            pageStack.invertAnimations = (categories.currentItem.y > delegate.y);
-            categories.currentItem = delegate;
-        }
-        if (model.source) {
-            pageStack.sourceFile = model.source;
-        } else if (model.kcm) {
-            pageStack.sourceFile = "";
-            pageStack.sourceFile = Qt.resolvedUrl("ConfigurationKcmPage.qml");
-            pageStack.currentItem.kcm = model.kcm;
-        } else {
-            pageStack.sourceFile = "";
-        }
-        pageStack.title = model.name
-    }
-//END functions
 
 //BEGIN connections
     onPressed: {
@@ -67,14 +48,7 @@ MouseArea {
             return;
         }
 
-        //print("model source: " + model.source + " " + pageStack.sourceFile);
-        if (applyButton.enabled) {
-            messageDialog.delegate = delegate;
-            messageDialog.open();
-            return;
-        }
-
-        openCategory();
+        activated()
     }
     onCurrentChanged: {
         if (current) {
