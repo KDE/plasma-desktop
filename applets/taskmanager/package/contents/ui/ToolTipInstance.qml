@@ -379,14 +379,17 @@ ColumnLayout {
         var virtualDesktopNameList = new Array();
 
         for (var i = 0; i < virtualDesktops.length; ++i) {
-            virtualDesktopNameList.push(virtualDesktopInfo.desktopNames[virtualDesktops[i] - 1]);
+            virtualDesktopNameList.push(virtualDesktopInfo.desktopNames[virtualDesktopInfo.desktopIds.indexOf(virtualDesktops[i])]);
         }
 
-        if (!plasmoid.configuration.showOnlyCurrentDesktop
-            && virtualDesktopInfo.numberOfDesktops > 1
-            && (isGroup ? IsOnAllVirtualDesktops : isOnAllVirtualDesktopsParent) !== true
-            && virtualDesktops.length > 0) {
-            subTextEntries.push(i18nc("Comma-separated list of desktops", "On %1", virtualDesktopNameList.join()));
+        var onAllDesktops = (isGroup ? IsOnAllVirtualDesktops : isOnAllVirtualDesktopsParent) === true;
+        if (!plasmoid.configuration.showOnlyCurrentDesktop && virtualDesktopInfo.numberOfDesktops > 1) {
+            if (!onAllDesktops && virtualDesktops.length > 0) {
+                subTextEntries.push(i18nc("Comma-separated list of desktops", "On %1",
+                    virtualDesktopNameList.join(", ")));
+            } else if (onAllDesktops) {
+                subTextEntries.push(i18nc("Comma-separated list of desktops", "Pinned to all desktops"));
+            }
         }
 
         var act = isGroup ? Activities : activitiesParent;
