@@ -164,7 +164,7 @@ KAccessConfig::KAccessConfig(QObject *parent, const QVariantList& args)
     qmlRegisterType<ScreenReaderSettings>();
 
     KAboutData *about =
-        new KAboutData(QStringLiteral("kcmaccess"), i18n("KDE Accessibility Tool"), QStringLiteral("1.0"),
+        new KAboutData(QStringLiteral("kcmaccess"), i18n("Accessibility"), QStringLiteral("1.0"),
                        QString(), KAboutLicense::GPL, i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
 
     about->addAuthor(i18n("Matthias Hoelzer-Kluepfel"), i18n("Author") , QStringLiteral("hoelzer@kde.org"));

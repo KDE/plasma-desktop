@@ -54,7 +54,7 @@ Kirigami.FormLayout {
         onToggled: kcm.keyboardSettings.stickyKeysAutoOff = checked
     }
     QQC2.CheckBox {
-        text: i18n("Use system bell when modifier keys are used")
+        text: i18n("Ring system bell when modifier keys are used")
 
         enabled: !kcm.keyboardSettings.isImmutable("StickyKeysBeep") && kcm.keyboardSettings.stickyKeys
 
@@ -67,7 +67,7 @@ Kirigami.FormLayout {
     }
 
     QQC2.CheckBox {
-        Kirigami.FormData.label: i18n("Sticky and slow keys:")
+        Kirigami.FormData.label: i18n("Activation:")
         text: i18n("Use gestures to activate")
 
         enabled: !kcm.keyboardSettings.isImmutable("StickyKeys")
@@ -76,7 +76,7 @@ Kirigami.FormLayout {
         onToggled: kcm.keyboardSettings.stickyKeys = checked
     }
 
-    Row {
+    RowLayout {
         QQC2.CheckBox {
             text: i18n("Disable After:")
 

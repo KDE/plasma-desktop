@@ -61,7 +61,7 @@ Kirigami.FormLayout {
         checked: kcm.keyboardSettings.slowKeysPressBeep
         onToggled: kcm.keyboardSettings.slowKeysPressBeep = checked
     }
-    QQC2.CheckBox{
+    QQC2.CheckBox {
         id: slowKeysAcceptBeep
 
         text: i18nc("Use system bell when a key is accepted", "&when any key is accepted")
@@ -71,7 +71,7 @@ Kirigami.FormLayout {
         checked: kcm.keyboardSettings.slowKeysAcceptBeep
         onToggled: kcm.keyboardSettings.slowKeysAcceptBeep = checked
     }
-    QQC2.CheckBox{
+    QQC2.CheckBox {
         id: slowKeysRejectBeep
 
         text: i18nc("Use system bell when a key is rejected", "&when any key is rejected")
@@ -109,7 +109,7 @@ Kirigami.FormLayout {
     QQC2.CheckBox {
         id: bounceKeysRejectBeep
 
-        text: i18n("Ring system bell when bounce key is rejected")
+        text: i18n("Ring system bell when rejected")
 
         enabled: !kcm.keyboardSettings.isImmutable("BounceKeysRejectBeep") && kcm.keyboardSettings.bounceKeys
 

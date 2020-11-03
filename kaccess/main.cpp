@@ -51,7 +51,7 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
     // we need an application object for QX11Info
     QApplication app(argc, argv);
 
-    KAboutData about(QStringLiteral("kaccess"), QString(), i18n("KDE Accessibility Tool"),
+    KAboutData about(QStringLiteral("kaccess"), QString(), i18n("Accessibility"),
                       {}, KAboutLicense::GPL_V2,
                       i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
 

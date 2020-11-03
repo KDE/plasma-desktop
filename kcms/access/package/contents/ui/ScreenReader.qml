@@ -49,8 +49,8 @@ Kirigami.FormLayout {
         Layout.fillWidth: true
         wrapMode: Text.Wrap
         text: screenReaderInstalled
-            ? i18n("Please note that you may have to log out once to allow the screen reader to work properly.")
-            : i18n("It appears that you don't have Orca Screen Reader installed, please install it before trying to use this feature, and restart this configuration panel")
+            ? i18n("Please note that you may have to log out or reboot once to allow the screen reader to work properly.")
+            : i18n("It appears that the Orca Screen Reader is not installed. Please install it before trying to use this feature, and then log out or reboot")
     }
 
     onVisibleChanged: {

@@ -32,11 +32,11 @@ KCM.SimpleKCM {
     implicitWidth: Kirigami.Units.gridUnit * 44
     implicitHeight: Kirigami.Units.gridUnit * 25
 
-    KCM.ConfigModule.quickHelp: i18n("This module lets you configure the accessibility features such as screen reader.")
+    KCM.ConfigModule.quickHelp: i18n("This module lets you configure the accessibility features such as a screen reader.")
 
     property var elements: [
         {
-            icon: "preferences-desktop-notification-bell",
+            icon: "notifications",
             title: i18nc("System Bell", "Bell")
         },
         {
@@ -44,7 +44,7 @@ KCM.SimpleKCM {
             title: i18nc("System Modifier Keys", "Modifier Keys")
         },
         {
-            icon: "preferences-desktop-keyboard",
+            icon: "view-filter",
             title: i18nc("System keyboard filters", "Keyboard Filters")
         },
         {
@@ -62,13 +62,13 @@ KCM.SimpleKCM {
         anchors.margins: Kirigami.Units.largeSpacing
         QQC2.ScrollView {
             id: leftSidePaneBackground
-            // This does not work anymore. returns a null value.
-            Component.onCompleted: leftSidePaneBackground.background.visible = true
             contentHeight: root.contentItem.height -  Kirigami.Units.gridUnit * 4
             contentWidth: Kirigami.Units.gridUnit * 13
 
             QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
             QQC2.ScrollBar.vertical.policy: QQC2.ScrollBar.AlwaysOff
+
+            Component.onCompleted: leftSidePaneBackground.background.visible = true
 
             ListView {
                 id: listView
