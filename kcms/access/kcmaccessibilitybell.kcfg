@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="kaccessrc" />
+  <group name="Bell">
+    <entry name="SystemBell" key="SystemBell" type="Bool">
+      <label>Use System Bell</label>
+      <default>true</default>
+    </entry>
+    <entry name="CustomBell" key="ArtsBell" type="Bool">
+      <label>Customize system bell</label>
+      <default>false</default>
+    </entry>
+    <entry name="CustomBellFile" key="ArtsBellFile" type="String">
+      <label>Sound file for the Bell</label>
+    </entry>
+    <entry name="VisibleBell" key="VisibleBell" type="Bool">
+      <label>Use a visual bell instead of a sound</label>
+      <default>false</default>
+    </entry>
+    <entry name="InvertScreen" key="VisibleBellInvert" type="Bool">
+      <label>Invert the system colors on the bell</label>
+      <default>true</default>
+    </entry>
+    <entry name="VisibleBellColor" key="VisibleBellColor" type="Color">
+      <label>Color of the Systme bell</label>
+      <default></default>
+    </entry>
+    <entry name="VisibleBellPause" key="VisibleBellPause" type="Int">
+      <label>Duration of the Visible Bell</label>
+      <default>500</default>
+    </entry>
+  </group>
+</kcfg>

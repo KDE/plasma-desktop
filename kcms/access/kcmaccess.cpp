@@ -28,6 +28,9 @@
 #include <QStandardPaths>
 #include <QProcess>
 #include <QX11Info>
+#include <QQuickItem>
+#include <QQuickRenderControl>
+#include <QWindow>
 
 #include <KAboutData>
 #include <KConfigGroup>
@@ -35,14 +38,21 @@
 #include <KKeyServer>
 #include <KNotifyConfigWidget>
 #include <KPluginFactory>
-
+#include <KToolInvocation>
+#include <KLocalizedString>
 #include <X11/Xlib.h>
 #include <X11/XKBlib.h>
+
 #define XK_MISCELLANY
 #define XK_XKB_KEYS
 #include <X11/keysymdef.h>
 
-K_PLUGIN_FACTORY(KAccessConfigFactory, registerPlugin<KAccessConfig>();)
+#include "kcmaccessibilitybell.h"
+#include "kcmaccessibilitykeyboard.h"
+#include "kcmaccessibilitymouse.h"
+#include "kcmaccessibilityscreenreader.h"
+
+K_PLUGIN_FACTORY_WITH_JSON(KCMAccessFactory, "kcm_access.json", registerPlugin<KAccessConfig>();)
 
 QString mouseKeysShortcut(Display *display)
 {
@@ -130,323 +140,84 @@ QString mouseKeysShortcut(Display *display)
     if ((modifiers & ShiftMask) != 0)
         keyname = QKeySequence(Qt::SHIFT).toString() + QLatin1Char('+') + keyname;
 
-    QString result;
-    if ((modifiers & ScrollMask) != 0)
-        if ((modifiers & LockMask) != 0)
-            if ((modifiers & NumMask) != 0)
-                result = i18n("Press %1 while NumLock, CapsLock and ScrollLock are active", keyname);
-            else
-                result = i18n("Press %1 while CapsLock and ScrollLock are active", keyname);
-        else if ((modifiers & NumMask) != 0)
-            result = i18n("Press %1 while NumLock and ScrollLock are active", keyname);
-        else
-            result = i18n("Press %1 while ScrollLock is active", keyname);
-    else if ((modifiers & LockMask) != 0)
-        if ((modifiers & NumMask) != 0)
-            result = i18n("Press %1 while NumLock and CapsLock are active", keyname);
-        else
-            result = i18n("Press %1 while CapsLock is active", keyname);
-    else if ((modifiers & NumMask) != 0)
-        result = i18n("Press %1 while NumLock is active", keyname);
-    else
-        result = i18n("Press %1", keyname);
-
-    return result;
+    return modifiers & ScrollMask & LockMask & NumMask ? i18n("Press %1 while NumLock, CapsLock and ScrollLock are active", keyname)
+         : modifiers & ScrollMask & LockMask ? i18n("Press %1 while CapsLock and ScrollLock are active", keyname)
+         : modifiers & ScrollMask & NumMask ? i18n("Press %1 while NumLock and ScrollLock are active", keyname)
+         : modifiers & ScrollMask ? i18n("Press %1 while ScrollLock is active", keyname)
+         : modifiers & LockMask & NumMask ? i18n("Press %1 while NumLock and CapsLock are active", keyname)
+         : modifiers & LockMask ? i18n("Press %1 while CapsLock is active", keyname)
+         : modifiers & NumMask ? i18n("Press %1 while NumLock is active", keyname)
+         : i18n("Press %1", keyname);
 }
 
-KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
-    : KCModule(parent, args)
+KAccessConfig::KAccessConfig(QObject *parent, const QVariantList& args)
+    : KQuickAddons::ManagedConfigModule(parent, args)
+    , m_mouseSettings(new MouseSettings(this))
+    , m_bellSettings(new BellSettings(this))
+    , m_keyboardSettings(new KeyboardSettings(this))
+    , m_screenReaderSettings(new ScreenReaderSettings(this))
+    , m_desktopShortcutInfo(mouseKeysShortcut(QX11Info::display()))
 {
+    qmlRegisterType<MouseSettings>();
+    qmlRegisterType<BellSettings>();
+    qmlRegisterType<KeyboardSettings>();
+    qmlRegisterType<ScreenReaderSettings>();
+
     KAboutData *about =
         new KAboutData(QStringLiteral("kcmaccess"), i18n("KDE Accessibility Tool"), QStringLiteral("1.0"),
                        QString(), KAboutLicense::GPL, i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
 
     about->addAuthor(i18n("Matthias Hoelzer-Kluepfel"), i18n("Author") , QStringLiteral("hoelzer@kde.org"));
+
+    int tryOrcaRun = QProcess::execute(QStringLiteral("orca"), {QStringLiteral("--version")});
+    m_screenReaderInstalled = tryOrcaRun != -2;
+
+    setButtons(ConfigModule::Apply | ConfigModule::Default | ConfigModule::Help);
     setAboutData(about);
-
-    ui.setupUi(this);
-
-    connect(ui.soundButton, &QPushButton::clicked, this, &KAccessConfig::selectSound);
-    connect(ui.customBell, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
-    connect(ui.systemBell, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.customBell, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.soundEdit, &QLineEdit::textChanged, this, &KAccessConfig::configChanged);
-
-    connect(ui.invertScreen, &QRadioButton::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.flashScreen, &QRadioButton::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.visibleBell, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.visibleBell, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
-    connect(ui.colorButton, &KColorButton::clicked, this, &KAccessConfig::changeFlashScreenColor);
-
-    connect(ui.invertScreen, &QRadioButton::clicked, this, &KAccessConfig::invertClicked);
-    connect(ui.flashScreen, &QRadioButton::clicked, this, &KAccessConfig::flashClicked);
-
-    connect(ui.duration, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KAccessConfig::configChanged);
-
-
-    // modifier key settings -------------------------------
-
-    connect(ui.stickyKeys, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.stickyKeysLock, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.stickyKeysAutoOff, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.stickyKeys, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
-
-    connect(ui.stickyKeysBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.toggleKeysBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.kNotifyModifiers, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.kNotifyModifiers, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
-    connect(ui.kNotifyModifiersButton, &QPushButton::clicked, this, &KAccessConfig::configureKNotify);
-
-    // key filter settings ---------------------------------
-
-    connect(ui.slowKeysDelay, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KAccessConfig::configChanged);
-    connect(ui.slowKeys, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.slowKeys, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
-
-    connect(ui.slowKeysPressBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.slowKeysAcceptBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.slowKeysRejectBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-
-    connect(ui.bounceKeysDelay, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KAccessConfig::configChanged);
-    connect(ui.bounceKeys, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.bounceKeysRejectBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.bounceKeys, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
-
-    // gestures --------------------------------------------
-
-    if (QGuiApplication::platformName() == "xcb") {
-        QString shortcut = mouseKeysShortcut(QX11Info::display());
-        if (shortcut.isEmpty())
-            ui.gestures->setToolTip(i18n("Here you can activate keyboard gestures that turn on the following features: \n"
-                                         "Sticky keys: Press Shift key 5 consecutive times\n"
-                                         "Slow keys: Hold down Shift for 8 seconds"));
-        else
-            ui.gestures->setToolTip(i18n("Here you can activate keyboard gestures that turn on the following features: \n"
-                                         "Mouse Keys: %1\n"
-                                         "Sticky keys: Press Shift key 5 consecutive times\n"
-                                         "Slow keys: Hold down Shift for 8 seconds", shortcut));
-    } else {
-        // functionality configured in those tabs currently only works for the X11 case, so disable them
-        for (QWidget* tab : {ui.tabBell, ui.tabModifier, ui.tabKeyFilters, ui.tabActivationGestures, ui.tabMouseKeys}) {
-            ui.tab->setTabEnabled(ui.tab->indexOf(tab), false);
-        }
-    }
-
-    connect(ui.gestures, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.timeout, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.timeout, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
-    connect(ui.timeoutDelay, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KAccessConfig::configChanged);
-    connect(ui.accessxBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.gestureConfirmation, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.kNotifyAccess, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.kNotifyAccess, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
-    connect(ui.kNotifyAccessButton, &QPushButton::clicked, this, &KAccessConfig::configureKNotify);
-
-    // keynboard navigation
-    connect(ui.mouseKeys, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.mk_delay, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KAccessConfig::configChanged);
-    connect(ui.mk_interval, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KAccessConfig::configChanged);
-    connect(ui.mk_time_to_max, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KAccessConfig::configChanged);
-    connect(ui.mk_max_speed, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KAccessConfig::configChanged);
-    connect(ui.mk_curve, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KAccessConfig::configChanged);
-
-    // screen reader
-    connect(ui.screenReaderEnabled, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(ui.launchOrcaConfiguration, &QPushButton::clicked, this, &KAccessConfig::launchOrcaConfiguration);
 }
-
 
 KAccessConfig::~KAccessConfig()
 {
 }
 
-void KAccessConfig::configureKNotify()
+void KAccessConfig::configureKNotify(QQuickItem *parent)
 {
-    KNotifyConfigWidget::configure(this, QStringLiteral("kaccess"));
+    auto dialog = KNotifyConfigWidget::configure(nullptr, QStringLiteral("kaccess"));
+    if (parent && parent->window()) {
+        dialog->winId();
+        dialog->windowHandle()
+            ->setTransientParent(QQuickRenderControl::renderWindowFor(parent->window()));
+    }
 }
 
 void KAccessConfig::launchOrcaConfiguration()
 {
-    const QStringList gsettingArgs = { QStringLiteral("set"), QStringLiteral("org.gnome.desktop.a11y.applications"), QStringLiteral("screen-reader-enabled"), QStringLiteral("true") };
+    const QStringList gsettingArgs = {
+        QStringLiteral("set"),
+        QStringLiteral("org.gnome.desktop.a11y.applications"),
+        QStringLiteral("screen-reader-enabled"),
+        QStringLiteral("true")
+    };
+
     int ret = QProcess::execute(QStringLiteral("gsettings"), gsettingArgs);
     if (ret) {
         const QString errorStr = QLatin1String("gsettings ") + gsettingArgs.join(QLatin1Char(' '));
-        ui.orcaLaunchFeedbackLabel->setText(i18n("Could not set gsettings for Orca: \"%1\" failed", errorStr));
+        setOrcaLaunchFeedback(i18n("Could not set gsettings for Orca: \"%1\" failed", errorStr));
         return;
     }
 
     qint64 pid = 0;
     bool started = QProcess::startDetached(QStringLiteral("orca"), {QStringLiteral("--setup")}, QString(), &pid);
     if (!started) {
-        ui.orcaLaunchFeedbackLabel->setText(i18n("Error: Could not launch \"orca --setup\""));
+       setOrcaLaunchFeedback(i18n("Error: Could not launch \"orca --setup\""));
     }
 }
-
-void KAccessConfig::changeFlashScreenColor()
-{
-    ui.invertScreen->setChecked(false);
-    ui.flashScreen->setChecked(true);
-    configChanged();
-}
-
-void KAccessConfig::selectSound()
-{
-    const QStringList list = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("sound/"));
-    QString start;
-    if (!list.isEmpty())
-        start = list[0];
-    const QString fname = QFileDialog::getOpenFileName(this, QString(), start);
-    if (!fname.isEmpty())
-        ui.soundEdit->setText(fname);
-}
-
-
-void KAccessConfig::configChanged()
-{
-    emit changed(true);
-}
-
-
-void KAccessConfig::load()
-{
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "Bell");
-
-    ui.systemBell->setChecked(cg.readEntry("SystemBell", true));
-    ui.customBell->setChecked(cg.readEntry("ArtsBell", false));
-    ui.soundEdit->setText(cg.readPathEntry("ArtsBellFile", QString()));
-
-    ui.visibleBell->setChecked(cg.readEntry("VisibleBell", false));
-    ui.invertScreen->setChecked(cg.readEntry("VisibleBellInvert", true));
-    ui.flashScreen->setChecked(!ui.invertScreen->isChecked());
-    ui.colorButton->setColor(cg.readEntry("VisibleBellColor", QColor(Qt::red)));
-
-    ui.duration->setValue(cg.readEntry("VisibleBellPause", 500));
-
-    KConfigGroup keyboardGroup(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "Keyboard");
-
-    ui.stickyKeys->setChecked(keyboardGroup.readEntry("StickyKeys", false));
-    ui.stickyKeysLock->setChecked(keyboardGroup.readEntry("StickyKeysLatch", true));
-    ui.stickyKeysAutoOff->setChecked(keyboardGroup.readEntry("StickyKeysAutoOff", false));
-    ui.stickyKeysBeep->setChecked(keyboardGroup.readEntry("StickyKeysBeep", true));
-    ui.toggleKeysBeep->setChecked(keyboardGroup.readEntry("ToggleKeysBeep", false));
-    ui.kNotifyModifiers->setChecked(keyboardGroup.readEntry("kNotifyModifiers", false));
-
-    ui.slowKeys->setChecked(keyboardGroup.readEntry("SlowKeys", false));
-    ui.slowKeysDelay->setValue(keyboardGroup.readEntry("SlowKeysDelay", 500));
-    ui.slowKeysPressBeep->setChecked(keyboardGroup.readEntry("SlowKeysPressBeep", true));
-    ui.slowKeysAcceptBeep->setChecked(keyboardGroup.readEntry("SlowKeysAcceptBeep", true));
-    ui.slowKeysRejectBeep->setChecked(keyboardGroup.readEntry("SlowKeysRejectBeep", true));
-
-    ui.bounceKeys->setChecked(keyboardGroup.readEntry("BounceKeys", false));
-    ui.bounceKeysDelay->setValue(keyboardGroup.readEntry("BounceKeysDelay", 500));
-    ui.bounceKeysRejectBeep->setChecked(keyboardGroup.readEntry("BounceKeysRejectBeep", true));
-
-    ui.gestures->setChecked(keyboardGroup.readEntry("Gestures", false));
-    ui.timeout->setChecked(keyboardGroup.readEntry("AccessXTimeout", false));
-    ui.timeoutDelay->setValue(keyboardGroup.readEntry("AccessXTimeoutDelay", 30));
-
-    ui.accessxBeep->setChecked(keyboardGroup.readEntry("AccessXBeep", true));
-    ui.gestureConfirmation->setChecked(keyboardGroup.readEntry("GestureConfirmation", false));
-    ui.kNotifyAccess->setChecked(keyboardGroup.readEntry("kNotifyAccess", false));
-
-    KConfigGroup mouseGroup(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "Mouse");
-    ui.mouseKeys->setChecked(mouseGroup.readEntry("MouseKeys", false));
-    ui.mk_delay->setValue(mouseGroup.readEntry("MKDelay", 160));
-
-    const int interval = mouseGroup.readEntry("MKInterval", 5);
-    ui.mk_interval->setValue(interval);
-
-    // Default time to reach maximum speed: 5000 msec
-    int time_to_max = mouseGroup.readEntry("MKTimeToMax", (5000+interval/2)/interval);
-    time_to_max = mouseGroup.readEntry("MK-TimeToMax", time_to_max*interval);
-    ui.mk_time_to_max->setValue(time_to_max);
-
-    // Default maximum speed: 1000 pixels/sec
-    //     (The old default maximum speed from KDE <= 3.4
-    //     (100000 pixels/sec) was way too fast)
-    long max_speed = mouseGroup.readEntry("MKMaxSpeed", interval);
-    max_speed = max_speed * 1000 / interval;
-    if (max_speed > 2000) {
-        max_speed = 2000;
-    }
-    max_speed = mouseGroup.readEntry("MK-MaxSpeed", int(max_speed));
-    ui.mk_max_speed->setValue(max_speed);
-
-    ui.mk_curve->setValue(mouseGroup.readEntry("MKCurve", 0));
-
-    KConfigGroup screenReaderGroup(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "ScreenReader");
-    ui.screenReaderEnabled->setChecked(screenReaderGroup.readEntry("Enabled", false));
-
-    checkAccess();
-
-    emit changed(false);
-}
-
 
 void KAccessConfig::save()
 {
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "Bell");
+    ManagedConfigModule::save();
 
-    cg.writeEntry("SystemBell", ui.systemBell->isChecked());
-    cg.writeEntry("ArtsBell", ui.customBell->isChecked());
-    cg.writePathEntry("ArtsBellFile", ui.soundEdit->text());
-
-    cg.writeEntry("VisibleBell", ui.visibleBell->isChecked());
-    cg.writeEntry("VisibleBellInvert", ui.invertScreen->isChecked());
-    cg.writeEntry("VisibleBellColor", ui.colorButton->color());
-
-    cg.writeEntry("VisibleBellPause", ui.duration->value());
-    cg.sync();
-
-    KConfigGroup keyboardGroup(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "Keyboard");
-
-    keyboardGroup.writeEntry("StickyKeys", ui.stickyKeys->isChecked());
-    keyboardGroup.writeEntry("StickyKeysLatch", ui.stickyKeysLock->isChecked());
-    keyboardGroup.writeEntry("StickyKeysAutoOff", ui.stickyKeysAutoOff->isChecked());
-    keyboardGroup.writeEntry("StickyKeysBeep", ui.stickyKeysBeep->isChecked());
-    keyboardGroup.writeEntry("ToggleKeysBeep", ui.toggleKeysBeep->isChecked());
-    keyboardGroup.writeEntry("kNotifyModifiers", ui.kNotifyModifiers->isChecked());
-
-    keyboardGroup.writeEntry("SlowKeys", ui.slowKeys->isChecked());
-    keyboardGroup.writeEntry("SlowKeysDelay", ui.slowKeysDelay->value());
-    keyboardGroup.writeEntry("SlowKeysPressBeep", ui.slowKeysPressBeep->isChecked());
-    keyboardGroup.writeEntry("SlowKeysAcceptBeep", ui.slowKeysAcceptBeep->isChecked());
-    keyboardGroup.writeEntry("SlowKeysRejectBeep", ui.slowKeysRejectBeep->isChecked());
-
-
-    keyboardGroup.writeEntry("BounceKeys", ui.bounceKeys->isChecked());
-    keyboardGroup.writeEntry("BounceKeysDelay", ui.bounceKeysDelay->value());
-    keyboardGroup.writeEntry("BounceKeysRejectBeep", ui.bounceKeysRejectBeep->isChecked());
-
-    keyboardGroup.writeEntry("Gestures", ui.gestures->isChecked());
-    keyboardGroup.writeEntry("AccessXTimeout", ui.timeout->isChecked());
-    keyboardGroup.writeEntry("AccessXTimeoutDelay", ui.timeoutDelay->value());
-
-    keyboardGroup.writeEntry("AccessXBeep", ui.accessxBeep->isChecked());
-    keyboardGroup.writeEntry("GestureConfirmation", ui.gestureConfirmation->isChecked());
-    keyboardGroup.writeEntry("kNotifyAccess", ui.kNotifyAccess->isChecked());
-
-
-    keyboardGroup.sync();
-
-    KConfigGroup mouseGroup(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "Mouse");
-    const int interval = ui.mk_interval->value();
-    mouseGroup.writeEntry("MouseKeys", ui.mouseKeys->isChecked());
-    mouseGroup.writeEntry("MKDelay", ui.mk_delay->value());
-    mouseGroup.writeEntry("MKInterval", interval);
-    mouseGroup.writeEntry("MK-TimeToMax", ui.mk_time_to_max->value());
-    mouseGroup.writeEntry("MKTimeToMax", (ui.mk_time_to_max->value() + interval/2)/interval);
-    mouseGroup.writeEntry("MK-MaxSpeed", ui.mk_max_speed->value());
-    mouseGroup.writeEntry("MKMaxSpeed", (ui.mk_max_speed->value()*interval + 500)/1000);
-    mouseGroup.writeEntry("MKCurve", ui.mk_curve->value());
-    mouseGroup.sync();
-
-    KConfigGroup screenReaderGroup(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "ScreenReader");
-    screenReaderGroup.writeEntry("Enabled", ui.screenReaderEnabled->isChecked());
-
-    if (ui.systemBell->isChecked() ||
-        ui.customBell->isChecked() ||
-        ui.visibleBell->isChecked()) {
+    if (m_bellSettings->systemBell() || m_bellSettings->customBell() || m_bellSettings->visibleBell()) {
         KConfig _cfg(QStringLiteral("kdeglobals"), KConfig::NoGlobals);
         KConfigGroup cfg(&_cfg, "General");
         cfg.writeEntry("UseSystemBell", true);
@@ -457,107 +228,26 @@ void KAccessConfig::save()
     // turning a11y features off needs to be done by kaccess
     // so run it to clear any enabled features and it will exit if it should
     QProcess::startDetached(QStringLiteral("kaccess"), {});
-
-    emit changed(false);
 }
 
-
-void KAccessConfig::defaults()
+QString KAccessConfig::orcaLaunchFeedback() const
 {
-    ui.systemBell->setChecked(true);
-    ui.customBell->setChecked(false);
-    ui.soundEdit->setText(QString());
-
-    ui.visibleBell->setChecked(false);
-    ui.invertScreen->setChecked(true);
-    ui.flashScreen->setChecked(false);
-    ui.colorButton->setColor(QColor(Qt::red));
-
-    ui.duration->setValue(500);
-
-    ui.slowKeys->setChecked(false);
-    ui.slowKeysDelay->setValue(500);
-    ui.slowKeysPressBeep->setChecked(true);
-    ui.slowKeysAcceptBeep->setChecked(true);
-    ui.slowKeysRejectBeep->setChecked(true);
-
-    ui.bounceKeys->setChecked(false);
-    ui.bounceKeysDelay->setValue(500);
-    ui.bounceKeysRejectBeep->setChecked(true);
-
-    ui.stickyKeys->setChecked(false);
-    ui.stickyKeysLock->setChecked(true);
-    ui.stickyKeysAutoOff->setChecked(false);
-    ui.stickyKeysBeep->setChecked(true);
-    ui.toggleKeysBeep->setChecked(false);
-    ui.kNotifyModifiers->setChecked(false);
-
-    ui.gestures->setChecked(false);
-    ui.timeout->setChecked(false);
-    ui.timeoutDelay->setValue(30);
-
-    ui.accessxBeep->setChecked(true);
-    ui.gestureConfirmation->setChecked(true);
-    ui.kNotifyAccess->setChecked(false);
-
-    ui.mouseKeys->setChecked(false);
-    ui.mk_delay->setValue(160);
-    ui.mk_interval->setValue(5);
-    ui.mk_time_to_max->setValue(5000);
-    ui.mk_max_speed->setValue(1000);
-    ui.mk_curve->setValue(0);
-
-    ui.screenReaderEnabled->setChecked(false);
-
-    checkAccess();
-
-    emit changed(true);
+    return m_orcaLaunchFeedback;
 }
 
-
-void KAccessConfig::invertClicked()
+void KAccessConfig::setOrcaLaunchFeedback(const QString& value)
 {
-    ui.flashScreen->setChecked(false);
+    if (m_orcaLaunchFeedback != value) {
+        m_orcaLaunchFeedback = value;
+        emit orcaLaunchFeedbackChanged();
+    }
 }
 
-
-void KAccessConfig::flashClicked()
+bool KAccessConfig::orcaInstalled()
 {
-    ui.invertScreen->setChecked(false);
-}
-
-
-void KAccessConfig::checkAccess()
-{
-    bool custom = ui.customBell->isChecked();
-    ui.soundEdit->setEnabled(custom);
-    ui.soundButton->setEnabled(custom);
-    ui.soundLabel->setEnabled(custom);
-
-    bool visible = ui.visibleBell->isChecked();
-    ui.invertScreen->setEnabled(visible);
-    ui.flashScreen->setEnabled(visible);
-    ui.colorButton->setEnabled(visible);
-    ui.duration->setEnabled(visible);
-
-    bool sticky = ui.stickyKeys->isChecked();
-    ui.stickyKeysLock->setEnabled(sticky);
-    ui.stickyKeysAutoOff->setEnabled(sticky);
-    ui.stickyKeysBeep->setEnabled(sticky);
-
-    bool slow = ui.slowKeys->isChecked();
-    ui.slowKeysDelay->setEnabled(slow);
-    ui.slowKeysPressBeep->setEnabled(slow);
-    ui.slowKeysAcceptBeep->setEnabled(slow);
-    ui.slowKeysRejectBeep->setEnabled(slow);
-
-    bool bounce = ui.bounceKeys->isChecked();
-    ui.bounceKeysDelay->setEnabled(bounce);
-    ui.bounceKeysRejectBeep->setEnabled(bounce);
-
-    bool useTimeout = ui.timeout->isChecked();
-    ui.timeoutDelay->setEnabled(useTimeout);
+    int tryOrcaRun = QProcess::execute(QStringLiteral("orca"), {QStringLiteral("--version")});
+    // If the process cannot be started, -2 is returned.
+    return tryOrcaRun != -2;
 }
 
 #include "kcmaccess.moc"
-

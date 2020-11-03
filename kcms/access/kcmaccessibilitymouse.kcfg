@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="kaccessrc" />
+  <group name="Mouse">
+    <entry name="MouseKeys" key="MouseKeys" type="Bool">
+      <label>Use keys to control the mouse</label>
+      <default>false</default>
+    </entry>
+    <entry name="AccelerationDelay" key="MKDelay" type="Int">
+      <label>Delay for the mouse movement</label>
+      <default>1</default>
+    </entry>
+    <entry name="RepetitionInterval" key="MKInterval" type="Int">
+      <label>Repetition interval for the mouse movement</label>
+      <default>1</default>
+    </entry>
+    <entry name="MK_TimeToMax" key="MK_TimeToMax" type="Int">
+      <label>Time to hit maximum velocity</label>
+      <default>5000</default>
+    </entry>
+    <entry name="AccelerationTime" key="MKTimeToMax" type="Int">
+      <label>Time to hit maximum velocity</label>
+    </entry>
+    <entry name="MK_MaxSpeed" key="MK_MaxSpeed" type="Int">
+      <label>Maximum velocity</label>
+      <default>1000</default>
+    </entry>
+    <entry name="MaxSpeed" key="MKMaxSpeed" type="Int">
+      <label>Maximum Velocity</label>
+    </entry>
+    <entry name="ProfileCurve" key="MKCurve" type="Int">
+      <label>Mouse Key Curve</label>
+      <default>0</default>
+    </entry>
+  </group>
+</kcfg>
