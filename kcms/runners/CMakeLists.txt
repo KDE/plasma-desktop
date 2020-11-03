@@ -6,7 +6,11 @@ set(kcm_search_SRCS
 )
 
 add_library(kcm_plasmasearch MODULE ${kcm_search_SRCS})
-add_executable(plugininstaller plugininstaller.cpp)
+add_executable(plugininstaller
+        plugininstaller/main.cpp
+        plugininstaller/AbstractJob.cpp
+        plugininstaller/PackageKitJob.cpp
+        plugininstaller/ScriptJob.cpp)
 
 target_link_libraries(kcm_plasmasearch
   KF5::KIOWidgets
