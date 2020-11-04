@@ -40,6 +40,7 @@ struct SourceData
     QString name;
     QString comment;
     QString iconName;
+    bool isDefault;
 
     QString notifyRcName;
     QString desktopEntry;
@@ -64,6 +65,7 @@ public:
         SourceTypeRole = Qt::UserRole + 1,
         NotifyRcNameRole,
         DesktopEntryRole,
+        IsDefaultRole,
 
         EventIdRole,
         ActionsRole
