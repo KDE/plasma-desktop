@@ -55,7 +55,6 @@ public:
         }
         QLabel *msgLabel = new QLabel(msg, this);
         msgLabel->setWordWrap(true);
-        msgLabel->setMaximumWidth(500);
         layout->addWidget(msgLabel);
         auto *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
         buttonBox->button(QDialogButtonBox::Ok)->setIcon(QIcon::fromTheme("emblem-warning"));

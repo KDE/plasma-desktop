@@ -24,14 +24,13 @@ public:
         QString msg = xi18nc("@info", "You are about to install a binary package. You should only install these from a trusted author/packager.");
         QLabel *msgLabel = new QLabel(msg, this);
         msgLabel->setWordWrap(true);
-        msgLabel->setMaximumWidth(500);
         layout->addWidget(msgLabel);
 
         auto *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
         buttonBox->button(QDialogButtonBox::Ok)->setIcon(QIcon::fromTheme("emblem-warning"));
         buttonBox->button(QDialogButtonBox::Ok)->setText(i18nc("@action:button", "Accept Risk And Continue"));
-        connect(buttonBox, &QDialogButtonBox::accepted, this, [this](){ done(1); });
-        connect(buttonBox, &QDialogButtonBox::rejected, this, [this](){ done(0); });
+        connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
+        connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
         QPushButton *highlightFileButton = new QPushButton(QIcon::fromTheme("document-open-folder"), i18nc("@action:button", "View File"), this);
         connect(highlightFileButton, &QPushButton::clicked, this, [packagePath]() {
