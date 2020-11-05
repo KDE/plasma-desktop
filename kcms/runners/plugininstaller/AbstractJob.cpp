@@ -21,7 +21,7 @@ void AbstractJob::runScriptInTerminal(const QString &script, const QString &pwd)
     exec += QLatin1String(" -e ");
     exec += KShell::quoteArg(script);
 
-    QProcess *process = new QProcess();
+    QProcess *process = new QProcess(this);
     process->setWorkingDirectory(pwd);
     // We don't know if the entry read from the config contains options
     // so we just split it at the end
