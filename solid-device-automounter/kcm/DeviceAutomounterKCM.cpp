@@ -36,8 +36,9 @@
 #include "AutomounterSettings.h"
 #include "LayoutSettings.h"
 #include "DeviceModel.h"
+#include "DeviceAutomounterData.h"
 
-K_PLUGIN_FACTORY(DeviceAutomounterKCMFactory, registerPlugin<DeviceAutomounterKCM>();)
+K_PLUGIN_FACTORY(DeviceAutomounterKCMFactory, registerPlugin<DeviceAutomounterKCM>(); registerPlugin<DeviceAutomounterData>();)
 
 DeviceAutomounterKCM::DeviceAutomounterKCM(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)//DeviceAutomounterKCMFactory::componentData(), parent)
