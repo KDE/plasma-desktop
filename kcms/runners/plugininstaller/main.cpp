@@ -61,20 +61,18 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    AbstractJob *job;
+    QScopedPointer<AbstractJob> job;
     const QString mimeType = QMimeDatabase().mimeTypeForFile(QFileInfo(file)).name();
     if (binaryPackages.contains(mimeType)) {
-        job = new PackageKitJob();
+        job.reset(new PackageKitJob());
     } else {
-        job = new ScriptJob();
+        job.reset(new ScriptJob());
     }
 
-    QObject::connect(job, &AbstractJob::finished, qApp,  [job]() {
-        delete job;
+    QObject::connect(job.data(), &AbstractJob::finished, qApp,  []() {
         qApp->exit();
     }, Qt::QueuedConnection);
-    QObject::connect(job, &AbstractJob::error, qApp, [job](const QString &error) {
-        delete job;
+    QObject::connect(job.data(), &AbstractJob::error, qApp, [](const QString &error) {
         fail(error);
     }, Qt::QueuedConnection);
 
