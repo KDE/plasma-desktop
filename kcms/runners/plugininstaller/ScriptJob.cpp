@@ -28,7 +28,7 @@ void ScriptJob::executeOperation(const QString &archive, Operation operation)
     // We want the user to be exactly aware of whats going on
     if (install || installerPath.isEmpty()) {
         ScriptConfirmationDialog dlg(installerPath, operation, archive);
-        if (dlg.exec()) {
+        if (dlg.exec() == QDialog::Accepted) {
             if (installerPath.isEmpty()) {
                 Q_EMIT finished(); // The "Mark entry as installed" button
             } else {
