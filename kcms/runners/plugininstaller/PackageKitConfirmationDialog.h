@@ -14,9 +14,9 @@
 #include <KLocalizedString>
 #include <KIO/OpenFileManagerWindowJob>
 
-class PackagekitConfirmationDialog : public QDialog {
+class PackageKitConfirmationDialog : public QDialog {
 public:
-    PackagekitConfirmationDialog(const QString &packagePath, QWidget *parent = nullptr) : QDialog(parent)
+    PackageKitConfirmationDialog(const QString &packagePath, QWidget *parent = nullptr) : QDialog(parent)
     {
         setWindowTitle(i18nc("@title:window", "Confirm Installation"));
         setWindowIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));

@@ -17,5 +17,4 @@ public:
     void executeOperation(const QString &fileName, Operation operation) override;
 };
 
-
 #endif //SCRIPTJOB_H

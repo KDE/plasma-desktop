@@ -14,7 +14,7 @@
 #include <KOSRelease>
 #include <QMimeDatabase>
 #include <QDBusConnection>
-#include "PackagekitConfirmationDialog.h"
+#include "PackageKitConfirmationDialog.h"
 #endif
 
 void PackageKitJob::executeOperation(const QString &fileName, Operation operation)
@@ -29,7 +29,7 @@ void PackageKitJob::executeOperation(const QString &fileName, Operation operatio
     }
 
     if (operation == Operation::Install) {
-        PackagekitConfirmationDialog dlg(fileName);
+        PackageKitConfirmationDialog dlg(fileName);
         if (dlg.exec()) {
             packageKitInstall(absPath);
         } else {

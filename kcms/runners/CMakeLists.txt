@@ -23,7 +23,6 @@ target_link_libraries(kcm_plasmasearch
   Qt5::Widgets
 )
 
-
 target_link_libraries(plugininstaller
   KF5::CoreAddons
   KF5::I18n
