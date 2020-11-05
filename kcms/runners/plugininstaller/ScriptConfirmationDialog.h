@@ -59,7 +59,7 @@ public:
         layout->addWidget(msgLabel);
         auto *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
         buttonBox->button(QDialogButtonBox::Ok)->setIcon(QIcon::fromTheme("emblem-warning"));
-        connect(buttonBox, &QDialogButtonBox::accepted, this, [this](){ done(1); });
+        connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
         connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
         QString okText;
