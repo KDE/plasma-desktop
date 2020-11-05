@@ -6,6 +6,13 @@
 
 #include "AbstractJob.h"
 
+#include <KConfig>
+#include <KSharedConfig>
+#include <KConfigGroup>
+#include <KShell>
+#include <KLocalizedString>
+
+#include <QProcess>
 #include <QDebug>
 
 void AbstractJob::runScriptInTerminal(const QString &script, const QString &pwd)

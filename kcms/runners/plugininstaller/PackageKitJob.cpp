@@ -8,12 +8,14 @@
 
 #include <QFileInfo>
 #ifdef HAVE_PACKAGEKIT
+#include <KShell>
 #include <PackageKit/Daemon>
 #include <PackageKit/Details>
 #include <QRegularExpression>
 #include <KOSRelease>
 #include <QMimeDatabase>
 #include <QDBusConnection>
+#include <QProcess>
 #include "PackageKitConfirmationDialog.h"
 #endif
 

@@ -7,12 +7,7 @@
 #ifndef ABSTRACTJOB_H
 #define ABSTRACTJOB_H
 
-#include <KConfig>
-#include <KSharedConfig>
-#include <KConfigGroup>
-#include <KShell>
-#include <KLocalizedString>
-#include <QProcess>
+#include <QObject>
 
 enum class Operation {
     Install,

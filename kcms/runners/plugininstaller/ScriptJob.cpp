@@ -4,10 +4,13 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+#include "ScriptJob.h"
+
+#include <KLocalizedString>
+#include <KShell>
 #include <QFileInfoList>
 #include <QDir>
 #include <QDebug>
-#include "ScriptJob.h"
 #include "ScriptConfirmationDialog.h"
 
 void ScriptJob::executeOperation(const QString &archive, Operation operation)
