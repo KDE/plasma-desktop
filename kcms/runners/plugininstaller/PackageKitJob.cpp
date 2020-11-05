@@ -30,7 +30,7 @@ void PackageKitJob::executeOperation(const QFileInfo &fileInfo, const QString &m
     if (operation == Operation::Install) {
         PackageKitConfirmationDialog dlg(fileInfo.absoluteFilePath());
         if (dlg.exec() == QDialog::Accepted) {
-            packageKitInstall(fileInfo.absoluteFilePath());
+            packageKitInstall(fileInfo.absoluteFilePath(), mimeType);
         } else {
             Q_EMIT error(QString());
         }
@@ -45,12 +45,10 @@ void PackageKitJob::executeOperation(const QFileInfo &fileInfo, const QString &m
 }
 
 #ifdef HAVE_PACKAGEKIT
-void PackageKitJob::packageKitInstall(const QString &fileName)
+void PackageKitJob::packageKitInstall(const QString &fileName, const QString &mimeType)
 {
     QFileInfo fileInfo(fileName);
-    const QString mimeType = QMimeDatabase().mimeTypeForFile(fileInfo).name();
-    if (mimeType == QLatin1String("application/x-rpm")
-        && KOSRelease().name().contains(QStringLiteral("openSUSE"), Qt::CaseInsensitive)) {
+    if (mimeType == QLatin1String("application/x-rpm") && KOSRelease().idLike().contains(u"suse")) {
         const QString zypperCommand = QStringLiteral("sudo zypper install %1")
             .arg(KShell::quoteArg(fileInfo.absoluteFilePath()));
         const QString command = QStringLiteral("bash -c \"echo %1;%1 && echo %2\"")

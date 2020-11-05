@@ -27,7 +27,7 @@ private:
     QStringList supportedPackagekitMimeTypes();
 
 private Q_SLOTS:
-    void packageKitInstall(const QString &fileName);
+    void packageKitInstall(const QString &fileName, const QString &mimeType);
     void packageKitUninstall(const QString &fileName);
     void removePackage(const QString &packageId);
 
