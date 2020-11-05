@@ -26,17 +26,20 @@ void AbstractJob::runScriptInTerminal(const QString &script, const QString &pwd)
     // We don't know if the entry read from the config contains options
     // so we just split it at the end
     QStringList split = KShell::splitArgs(exec);
-    process->setProgram(split.takeFirst());
+    const QString program = split.takeFirst();
+    process->setProgram(program);
     process->setArguments(split);
     process->start();
+
     connect(process, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this,
-            [this, process] (int, QProcess::ExitStatus exitStatus) {
-        process->deleteLater();
+            [this] (int, QProcess::ExitStatus exitStatus) {
         if (exitStatus == QProcess::NormalExit) {
             Q_EMIT finished();
-        } else {
-            Q_EMIT error(QString());
         }
+    });
+    connect(process, &QProcess::errorOccurred, this,
+        [this, program] (QProcess::ProcessError) {
+            Q_EMIT error(i18nc("@info", "Failed to run install script in terminal \"%1\"", program));
     });
 }
 
