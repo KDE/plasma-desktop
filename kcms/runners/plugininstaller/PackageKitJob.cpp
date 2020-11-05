@@ -30,7 +30,7 @@ void PackageKitJob::executeOperation(const QString &fileName, Operation operatio
 
     if (operation == Operation::Install) {
         PackageKitConfirmationDialog dlg(fileName);
-        if (dlg.exec()) {
+        if (dlg.exec() == QDialog::Accepted) {
             packageKitInstall(absPath);
         } else {
             Q_EMIT error(QString());
