@@ -49,6 +49,14 @@ qt5_add_dbus_interface (
    features_interface
    )
 
+kcmutils_generate_module_data(
+    KAMD_KCM_SRCS
+    MODULE_DATA_HEADER kactivitiesdata.h
+    MODULE_DATA_CLASS_NAME KActivitiesData
+    SETTINGS_HEADERS kactivitymanagerd_settings.h kactivitymanagerd_plugins_settings.h
+    SETTINGS_CLASSES KActivityManagerdSettings KActivityManagerdPluginsSettings
+)
+
 kconfig_add_kcfg_files(KAMD_KCM_SRCS kactivitymanagerd_settings.kcfgc GENERATE_MOC)
 kconfig_add_kcfg_files(KAMD_KCM_SRCS kactivitymanagerd_plugins_settings.kcfgc GENERATE_MOC)
 

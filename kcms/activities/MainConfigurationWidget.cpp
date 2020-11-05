@@ -27,8 +27,9 @@
 #include "ActivitiesTab.h"
 #include "SwitchingTab.h"
 #include "PrivacyTab.h"
+#include "kactivitiesdata.h"
 
-K_PLUGIN_FACTORY(ActivitiesKCMFactory, registerPlugin<MainConfigurationWidget>();)
+K_PLUGIN_FACTORY(ActivitiesKCMFactory, registerPlugin<MainConfigurationWidget>(); registerPlugin<KActivitiesData>();)
 
 class MainConfigurationWidget::Private : public Ui::MainConfigurationWidgetBase {
 public:
