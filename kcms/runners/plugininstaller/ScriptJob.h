@@ -14,7 +14,7 @@ class ScriptJob : public AbstractJob
 Q_OBJECT
 
 public:
-    void executeOperation(const QString &fileName, Operation operation) override;
+    void executeOperation(const QFileInfo &fileInfo, const QString &mimeType, Operation operation) override;
 };
 
 #endif //SCRIPTJOB_H

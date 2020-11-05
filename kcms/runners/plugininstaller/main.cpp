@@ -62,7 +62,8 @@ int main(int argc, char *argv[])
     }
 
     QScopedPointer<AbstractJob> job;
-    const QString mimeType = QMimeDatabase().mimeTypeForFile(QFileInfo(file)).name();
+    QFileInfo fileInfo(file);
+    const QString mimeType = QMimeDatabase().mimeTypeForFile(fileInfo).name();
     if (binaryPackages.contains(mimeType)) {
         job.reset(new PackageKitJob());
     } else {
@@ -76,7 +77,7 @@ int main(int argc, char *argv[])
         fail(error);
     }, Qt::QueuedConnection);
 
-    job->executeOperation(file, operation);
+    job->executeOperation(fileInfo, mimeType, operation);
 
     return app.exec();
 }

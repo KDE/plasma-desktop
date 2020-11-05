@@ -13,11 +13,11 @@
 #include <QDebug>
 #include "ScriptConfirmationDialog.h"
 
-void ScriptJob::executeOperation(const QString &archive, Operation operation)
+void ScriptJob::executeOperation(const QFileInfo &fileInfo, const QString &mimeType, Operation operation)
 {
     const bool install = operation == Operation::Install;
     QString installerPath;
-    const QFileInfoList archiveEntries = QDir(archive).entryInfoList(QDir::Files, QDir::Name);
+    const QFileInfoList archiveEntries = fileInfo.absoluteDir().entryInfoList(QDir::Files, QDir::Name);
     const QString scriptPrefix = install ? "install" : "uninstall";
     for (const auto &file : archiveEntries) {
         if (file.baseName() == scriptPrefix) {
@@ -30,14 +30,14 @@ void ScriptJob::executeOperation(const QString &archive, Operation operation)
     }
     // We want the user to be exactly aware of whats going on
     if (install || installerPath.isEmpty()) {
-        ScriptConfirmationDialog dlg(installerPath, operation, archive);
+        ScriptConfirmationDialog dlg(installerPath, operation, fileInfo.absolutePath());
         if (dlg.exec() == QDialog::Accepted) {
             if (installerPath.isEmpty()) {
                 Q_EMIT finished(); // The "Mark entry as installed" button
             } else {
                 const QString bashCommand = QStringLiteral("echo %1;%1 || $SHELL && echo %2")
                     .arg(KShell::quoteArg(installerPath), KShell::quoteArg(terminalCloseMessage(operation)));
-                runScriptInTerminal(QStringLiteral("bash -c %1").arg(KShell::quoteArg(bashCommand)), archive);
+                runScriptInTerminal(QStringLiteral("sh -c %1").arg(KShell::quoteArg(bashCommand)), fileInfo.absolutePath());
             }
         } else {
             Q_EMIT error(QString());

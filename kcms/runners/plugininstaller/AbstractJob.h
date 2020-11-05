@@ -9,6 +9,8 @@
 
 #include <QObject>
 
+class QFileInfo;
+
 enum class Operation {
     Install,
     Uninstall
@@ -19,7 +21,7 @@ class AbstractJob: public QObject
 Q_OBJECT
 
 public:
-    virtual void executeOperation(const QString &fileName, Operation operation) = 0;
+    virtual void executeOperation(const QFileInfo &fileInfo, const QString &mimeType, Operation operation) = 0;
 
     void runScriptInTerminal(const QString &script, const QString &pwd);
     QString terminalCloseMessage(Operation operation);

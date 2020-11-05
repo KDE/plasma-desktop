@@ -19,26 +19,23 @@
 #include "PackageKitConfirmationDialog.h"
 #endif
 
-void PackageKitJob::executeOperation(const QString &fileName, Operation operation)
+void PackageKitJob::executeOperation(const QFileInfo &fileInfo, const QString &mimeType, Operation operation)
 {
 #ifdef HAVE_PACKAGEKIT
-    QFileInfo fileInfo(fileName);
-    const QString absPath = fileInfo.absoluteFilePath();
-    const QString mimeType = QMimeDatabase().mimeTypeForFile(fileInfo).name();
     if (!supportedPackagekitMimeTypes().contains(mimeType)) {
         Q_EMIT error(i18nc("@info", "The mime type %1 is not supported by the packagekit backend", mimeType));
         return;
     }
 
     if (operation == Operation::Install) {
-        PackageKitConfirmationDialog dlg(fileName);
+        PackageKitConfirmationDialog dlg(fileInfo.absoluteFilePath());
         if (dlg.exec() == QDialog::Accepted) {
-            packageKitInstall(absPath);
+            packageKitInstall(fileInfo.absoluteFilePath());
         } else {
             Q_EMIT error(QString());
         }
     } else {
-        packageKitUninstall(absPath);
+        packageKitUninstall(fileInfo.absoluteFilePath());
     }
 #else
     Q_UNUSED(fileName)

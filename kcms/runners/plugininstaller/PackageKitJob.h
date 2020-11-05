@@ -20,7 +20,7 @@ class PackageKitJob : public AbstractJob
 Q_OBJECT
 
 public:
-    void executeOperation(const QString &fileName, Operation operation) override;
+    void executeOperation(const QFileInfo &fileInfo, const QString &mimeType, Operation operation) override;
 
 #ifdef HAVE_PACKAGEKIT
 private:
