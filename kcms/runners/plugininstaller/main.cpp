@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
     }
 
     const QString cmd = args.at(0);
-    const QString file = args[1];
+    const QString file = args.at(1);
     const QStringList binaryPackages = {QStringLiteral("application/vnd.debian.binary-package"),
                                         QStringLiteral("application/x-rpm"),
                                         QStringLiteral("application/x-xz"),
