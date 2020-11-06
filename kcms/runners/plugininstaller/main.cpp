@@ -12,11 +12,13 @@
 #include <KMessageBox>
 #include <QMimeDatabase>
 #include <QFileInfo>
+#include <KOSRelease>
 
 #include "config-workspace.h"
 #ifdef HAVE_PACKAGEKIT
 #include "PackageKitJob.h"
 #endif
+#include "ZypperRPMJob.h"
 #include "ScriptJob.h"
 
 void fail(const QString &str)
@@ -67,7 +69,9 @@ int main(int argc, char *argv[])
     QScopedPointer<AbstractJob> job;
     QFileInfo fileInfo(file);
     const QString mimeType = QMimeDatabase().mimeTypeForFile(fileInfo).name();
-    if (binaryPackages.contains(mimeType)) {
+    if (mimeType == QLatin1String("application/x-rpm") && KOSRelease().idLike().contains(u"suse")) {
+        job.reset(new ZypperRPMJob());
+    } else if (binaryPackages.contains(mimeType)) {
 #ifdef HAVE_PACKAGEKIT
         job.reset(new PackageKitJob());
 #else

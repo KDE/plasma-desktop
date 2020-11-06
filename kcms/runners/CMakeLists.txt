@@ -9,7 +9,7 @@ add_library(kcm_plasmasearch MODULE ${kcm_search_SRCS})
 add_executable(plugininstaller
         plugininstaller/main.cpp
         plugininstaller/AbstractJob.cpp
-        plugininstaller/ScriptJob.cpp)
+        plugininstaller/ScriptJob.cpp plugininstaller/ZypperRPMJob.cpp plugininstaller/ZypperRPMJob.h)
 if(HAVE_PACKAGEKIT)
     target_sources(plugininstaller PUBLIC plugininstaller/PackageKitJob.cpp)
 endif()

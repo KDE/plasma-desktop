@@ -37,17 +37,7 @@ void AbstractJob::runScriptInTerminal(const QString &script, const QString &pwd)
     process->setProgram(program);
     process->setArguments(split);
     process->start();
-
-    connect(process, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this,
-            [this] (int, QProcess::ExitStatus exitStatus) {
-        if (exitStatus == QProcess::NormalExit) {
-            Q_EMIT finished();
-        }
-    });
-    connect(process, &QProcess::errorOccurred, this,
-        [this, program] (QProcess::ProcessError) {
-            Q_EMIT error(i18nc("@info", "Failed to run install script in terminal \"%1\"", program));
-    });
+    connectSignals(process);
 }
 
 QString AbstractJob::terminalCloseMessage(Operation operation)
@@ -60,6 +50,21 @@ QString AbstractJob::terminalCloseMessage(Operation operation)
     default:
         return i18nc("@info", "Script executed successfully, you may now close this window");
     }
+}
+
+void AbstractJob::connectSignals(QProcess *process)
+{
+    connect(process, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this,
+            [this] (int, QProcess::ExitStatus exitStatus) {
+                if (exitStatus == QProcess::NormalExit) {
+                    Q_EMIT finished();
+                }
+            });
+
+    connect(process, &QProcess::errorOccurred, this,
+            [this, process] (QProcess::ProcessError) {
+                Q_EMIT error(i18nc("@info", "Failed to run install script in terminal \"%1\"", process->program()));
+            });
 }
 
 #include "AbstractJob.moc"

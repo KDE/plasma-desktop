@@ -28,55 +28,28 @@ void PackageKitJob::executeOperation(const QFileInfo &fileInfo, const QString &m
     if (operation == Operation::Install) {
         PackageKitConfirmationDialog dlg(fileInfo.absoluteFilePath());
         if (dlg.exec() == QDialog::Accepted) {
-            packageKitInstall(fileInfo.absoluteFilePath(), mimeType);
+            packageKitInstall(fileInfo.absoluteFilePath());
         } else {
             Q_EMIT error(QString());
         }
     } else {
-        packageKitUninstall(fileInfo.absoluteFilePath(), mimeType);
+        packageKitUninstall(fileInfo.absoluteFilePath());
     }
 }
 
-void PackageKitJob::packageKitInstall(const QString &fileName, const QString &mimeType)
+void PackageKitJob::packageKitInstall(const QString &fileName)
 {
-    QFileInfo fileInfo(fileName);
-    if (mimeType == QLatin1String("application/x-rpm") && KOSRelease().idLike().contains(u"suse")) {
-        const QString zypperCommand = QStringLiteral("sudo zypper install %1")
-            .arg(KShell::quoteArg(fileInfo.absoluteFilePath()));
-        const QString command = QStringLiteral("bash -c \"echo %1;%1 && echo %2\"")
-            .arg(zypperCommand, KShell::quoteArg(terminalCloseMessage(Operation::Install)));
-        runScriptInTerminal(command, fileInfo.absolutePath());
-    } else {
-        PackageKit::Transaction *transaction = PackageKit::Daemon::installFile(fileName, {});
-        connect(transaction, &PackageKit::Transaction::finished, this, &PackageKitJob::transactionFinished);
-        connect(transaction, &PackageKit::Transaction::errorCode, this, &PackageKitJob::transactionError);
-    }
+    PackageKit::Transaction *transaction = PackageKit::Daemon::installFile(fileName, {});
+    connect(transaction, &PackageKit::Transaction::finished, this, &PackageKitJob::transactionFinished);
+    connect(transaction, &PackageKit::Transaction::errorCode, this, &PackageKitJob::transactionError);
 }
 
-void PackageKitJob::packageKitUninstall(const QString &fileName, const QString &mimeType)
+void PackageKitJob::packageKitUninstall(const QString &fileName)
 {
-    // On OpenSUSE packagekit can't look up the package details of a file, so we have to do this manually
-    if (mimeType == QLatin1String("application/x-rpm") && KOSRelease().idLike().contains(u"suse")) {
-        QProcess rpmInfoProcess;
-        rpmInfoProcess.start(QStringLiteral("rpm"), {"-qi", fileName});
-        rpmInfoProcess.waitForFinished();
-        const QString rpmInfo = rpmInfoProcess.readAll();
-        const auto infoMatch = QRegularExpression(QStringLiteral("Name *: (.+)")).match(rpmInfo);
-        if (!infoMatch.hasMatch()) {
-            Q_EMIT error(i18nc("@info", "Could not resolve package name of %1", fileName));
-        }
-        const QString rpmPackageName = KShell::quoteArg(infoMatch.captured(1));
-        PackageKit::Transaction *transaction = PackageKit::Daemon::resolve(rpmPackageName);
-        connect(transaction, &PackageKit::Transaction::package,
-                this, [this](PackageKit::Transaction::Info, const QString &packageId, const QString &) {
-                    removePackage(packageId);
-                });
-    } else {
-        PackageKit::Transaction *transaction = PackageKit::Daemon::getDetailsLocal(fileName);
-        connect(transaction, &PackageKit::Transaction::details,
-            this, [this](const PackageKit::Details &details) { removePackage(details.packageId()); });
-        connect(transaction, &PackageKit::Transaction::errorCode, this, &PackageKitJob::transactionError);
-    }
+    PackageKit::Transaction *transaction = PackageKit::Daemon::getDetailsLocal(fileName);
+    connect(transaction, &PackageKit::Transaction::details,
+        this, [this](const PackageKit::Details &details) { removePackage(details.packageId()); });
+    connect(transaction, &PackageKit::Transaction::errorCode, this, &PackageKitJob::transactionError);
 }
 
 void PackageKitJob::removePackage(const QString &packageId)

@@ -10,6 +10,7 @@
 #include <QObject>
 
 class QFileInfo;
+class QProcess;
 
 enum class Operation {
     Install,
@@ -29,6 +30,9 @@ public:
 Q_SIGNALS:
     void finished();
     void error(const QString &errorMessage);
+
+protected:
+    void connectSignals(QProcess *process);
 };
 
 #endif // ABSTRACTJOB_H
