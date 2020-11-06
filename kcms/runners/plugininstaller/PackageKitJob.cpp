@@ -35,7 +35,7 @@ void PackageKitJob::executeOperation(const QFileInfo &fileInfo, const QString &m
             Q_EMIT error(QString());
         }
     } else {
-        packageKitUninstall(fileInfo.absoluteFilePath());
+        packageKitUninstall(fileInfo.absoluteFilePath(), mimeType);
     }
 #else
     Q_UNUSED(fileName)
@@ -61,11 +61,10 @@ void PackageKitJob::packageKitInstall(const QString &fileName, const QString &mi
     }
 }
 
-void PackageKitJob::packageKitUninstall(const QString &fileName)
+void PackageKitJob::packageKitUninstall(const QString &fileName, const QString &mimeType)
 {
     // On OpenSUSE packagekit can't look up the package details of a file, so we have to do this manually
-    if (QMimeDatabase().mimeTypeForFile(QFileInfo(fileName)).name() == QLatin1String("application/x-rpm")
-        && KOSRelease().name().contains(QStringLiteral("openSUSE"), Qt::CaseInsensitive)) {
+    if (mimeType == QLatin1String("application/x-rpm") && KOSRelease().idLike().contains(u"suse")) {
         QProcess rpmInfoProcess;
         rpmInfoProcess.start(QStringLiteral("rpm"), {"-qi", fileName});
         rpmInfoProcess.waitForFinished();

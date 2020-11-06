@@ -28,7 +28,7 @@ private:
 
 private Q_SLOTS:
     void packageKitInstall(const QString &fileName, const QString &mimeType);
-    void packageKitUninstall(const QString &fileName);
+    void packageKitUninstall(const QString &fileName, const QString &mimeType);
     void removePackage(const QString &packageId);
 
     void transactionError(PackageKit::Transaction::Error, const QString &details);
