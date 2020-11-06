@@ -35,12 +35,19 @@ void ScriptJob::executeOperation(const QFileInfo &fileInfo, const QString &mimeT
             if (installerPath.isEmpty()) {
                 Q_EMIT finished(); // The "Mark entry as installed" button
             } else {
-                const QString bashCommand = QStringLiteral("echo %1;%1 || $SHELL && echo %2")
-                    .arg(KShell::quoteArg(installerPath), KShell::quoteArg(terminalCloseMessage(operation)));
-                runScriptInTerminal(QStringLiteral("sh -c %1").arg(KShell::quoteArg(bashCommand)), fileInfo.absolutePath());
+                runScriptInTerminal(formatScriptCommand(operation, installerPath), fileInfo.absolutePath());
             }
         } else {
             Q_EMIT error(QString());
         }
+    } else {
+        runScriptInTerminal(formatScriptCommand(operation, installerPath), fileInfo.absolutePath());
     }
+}
+QString ScriptJob::formatScriptCommand(Operation operation, const QString &installerPath)
+{
+    const QString bashCommand = QStringLiteral("echo %1;%1 || $SHELL && echo %2")
+        .arg(KShell::quoteArg(installerPath), KShell::quoteArg(terminalCloseMessage(operation)));
+    return QStringLiteral("sh -c %1").arg(KShell::quoteArg(bashCommand));
+
 }

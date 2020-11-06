@@ -15,6 +15,9 @@ Q_OBJECT
 
 public:
     void executeOperation(const QFileInfo &fileInfo, const QString &mimeType, Operation operation) override;
+
+private:
+    QString formatScriptCommand(Operation operation, const QString &installerPath);
 };
 
 #endif //SCRIPTJOB_H
