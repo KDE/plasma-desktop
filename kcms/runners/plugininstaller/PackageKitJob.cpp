@@ -7,7 +7,6 @@
 #include "PackageKitJob.h"
 
 #include <QFileInfo>
-#ifdef HAVE_PACKAGEKIT
 #include <KShell>
 #include <PackageKit/Daemon>
 #include <PackageKit/Details>
@@ -16,12 +15,11 @@
 #include <QMimeDatabase>
 #include <QDBusConnection>
 #include <QProcess>
+
 #include "PackageKitConfirmationDialog.h"
-#endif
 
 void PackageKitJob::executeOperation(const QFileInfo &fileInfo, const QString &mimeType, Operation operation)
 {
-#ifdef HAVE_PACKAGEKIT
     if (!supportedPackagekitMimeTypes().contains(mimeType)) {
         Q_EMIT error(i18nc("@info", "The mime type %1 is not supported by the packagekit backend", mimeType));
         return;
@@ -37,14 +35,8 @@ void PackageKitJob::executeOperation(const QFileInfo &fileInfo, const QString &m
     } else {
         packageKitUninstall(fileInfo.absoluteFilePath(), mimeType);
     }
-#else
-    Q_UNUSED(fileName)
-    Q_UNUSED(operation)
-    Q_EMIT error(i18nc("@info", "Can not install binary packages"));
-#endif
 }
 
-#ifdef HAVE_PACKAGEKIT
 void PackageKitJob::packageKitInstall(const QString &fileName, const QString &mimeType)
 {
     QFileInfo fileInfo(fileName);
@@ -116,4 +108,3 @@ QStringList PackageKitJob::supportedPackagekitMimeTypes()
     QDBusMessage reply = QDBusConnection::systemBus().call(message);
     return reply.arguments().at(0).value<QDBusVariant>().variant().toStringList();
 }
-#endif

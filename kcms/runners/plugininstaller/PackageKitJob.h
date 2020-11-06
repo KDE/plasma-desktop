@@ -9,11 +9,7 @@
 #ifndef PACKAGEKITJOB_H
 #define PACKAGEKITJOB_H
 
-#include "config-workspace.h"
-
-#ifdef HAVE_PACKAGEKIT
 #include <PackageKit/Transaction>
-#endif
 
 class PackageKitJob : public AbstractJob
 {
@@ -22,7 +18,6 @@ Q_OBJECT
 public:
     void executeOperation(const QFileInfo &fileInfo, const QString &mimeType, Operation operation) override;
 
-#ifdef HAVE_PACKAGEKIT
 private:
     QStringList supportedPackagekitMimeTypes();
 
@@ -33,7 +28,6 @@ private Q_SLOTS:
 
     void transactionError(PackageKit::Transaction::Error, const QString &details);
     void transactionFinished(PackageKit::Transaction::Exit status, uint);
-#endif
 };
 
 #endif //PACKAGEKITJOB_H

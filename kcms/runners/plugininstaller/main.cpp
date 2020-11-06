@@ -13,7 +13,10 @@
 #include <QMimeDatabase>
 #include <QFileInfo>
 
+#include "config-workspace.h"
+#ifdef HAVE_PACKAGEKIT
 #include "PackageKitJob.h"
+#endif
 #include "ScriptJob.h"
 
 void fail(const QString &str)
@@ -65,7 +68,11 @@ int main(int argc, char *argv[])
     QFileInfo fileInfo(file);
     const QString mimeType = QMimeDatabase().mimeTypeForFile(fileInfo).name();
     if (binaryPackages.contains(mimeType)) {
+#ifdef HAVE_PACKAGEKIT
         job.reset(new PackageKitJob());
+#else
+        fail(i18nc("@info", "No Packagekit support"));
+#endif
     } else {
         job.reset(new ScriptJob());
     }
