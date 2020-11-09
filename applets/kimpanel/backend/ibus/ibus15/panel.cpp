@@ -22,7 +22,6 @@
 #include <locale.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ibus.h>
 #include <string>
 #include <QByteArray>
 #include <QPair>

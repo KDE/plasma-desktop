@@ -45,8 +45,9 @@ TouchpadParametersBase::TouchpadParametersBase(const QString &configname,
 QVariantHash TouchpadParametersBase::values() const
 {
     QVariantHash r;
-    Q_FOREACH(const KConfigSkeletonItem *i, items()) {
-        r[i->name()] = i->property();
+    const auto itemList = items();
+    for (const KConfigSkeletonItem *skel : itemList) {
+        r[skel->name()] = skel->property();
     }
     return r;
 }

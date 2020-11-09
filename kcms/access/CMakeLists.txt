@@ -3,25 +3,44 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcmaccess\")
 
 set(kcm_access_PART_SRCS kcmaccess.cpp )
 
-ki18n_wrap_ui(kcm_access_PART_SRCS
-  accessibility.ui
-)
+# needed for krdb
+qt5_add_dbus_interface(kcm_access_PART_SRCS ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml klauncher_iface)
+kconfig_add_kcfg_files(kcm_access_PART_SRCS
+    kcmaccessibilitybell.kcfgc
+    kcmaccessibilitykeyboard.kcfgc
+    kcmaccessibilitymouse.kcfgc
+    kcmaccessibilityscreenreader.kcfgc
+    GENERATE_MOC)
 
 add_library(kcm_access MODULE ${kcm_access_PART_SRCS})
 
 target_link_libraries(kcm_access
-    Qt5::X11Extras
+    Qt5::DBus
     KF5::KCMUtils
+    KF5::CoreAddons
+    KF5::Declarative
+    KF5::GuiAddons
     KF5::I18n
-    KF5::KIOCore
-    KF5::KIOWidgets
-    KF5::NotifyConfig
+    KF5::NewStuff
+    KF5::QuickAddons
     KF5::WindowSystem
+    KF5::NotifyConfig
+    Qt5::X11Extras
     ${X11_LIBRARIES}
 )
 
-install(TARGETS kcm_access DESTINATION ${KDE_INSTALL_PLUGINDIR})
+kcoreaddons_desktop_to_json(kcm_access "kcm_access.desktop")
 
-########### install files ###############
+install(FILES kcm_access.desktop  DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(TARGETS kcm_access DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
+install(
+    FILES
+        kcmaccessibilitybell.kcfg
+        kcmaccessibilitykeyboard.kcfg
+        kcmaccessibilitymouse.kcfg
+        kcmaccessibilityscreenreader.kcfg
+    DESTINATION
+        ${KDE_INSTALL_KCFGDIR}
+)
 
-install( FILES kcmaccess.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+kpackage_install_package(package kcmaccess kcms)

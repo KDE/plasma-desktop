@@ -50,6 +50,14 @@ GlobalAccelModel::GlobalAccelModel(KGlobalAccelInterface *interface, QObject *pa
 {
 }
 
+QVariant GlobalAccelModel::data(const QModelIndex &index, int role) const
+{
+    if (role == SupportsMultipleKeysRole) {
+        return false;
+    }
+    return BaseModel::data(index, role);
+}
+
 void GlobalAccelModel::load()
 {
     if (!m_globalAccelInterface->isValid()) {
@@ -191,7 +199,7 @@ void GlobalAccelModel::save()
 
 void GlobalAccelModel::exportToConfig(const KConfigBase &config)
 {
-    for (const auto& component : m_components) {
+    for (const auto& component : qAsConst(m_components)) {
         if (component.checked) {
             KConfigGroup mainGroup(&config, component.id);
             KConfigGroup group(&mainGroup, "Global Shortcuts");
@@ -205,7 +213,8 @@ void GlobalAccelModel::exportToConfig(const KConfigBase &config)
 
 void GlobalAccelModel::importConfig(const KConfigBase &config)
 {
-    for (const auto componentGroupName : config.groupList()) {
+    const auto groupList = config.groupList();
+    for (const auto &componentGroupName : groupList) {
         auto component = std::find_if(m_components.begin(), m_components.end(), [&] (const Component &c) {
             return c.id == componentGroupName;
         });
@@ -219,7 +228,8 @@ void GlobalAccelModel::importConfig(const KConfigBase &config)
             continue;
         }
         KConfigGroup shortcutsGroup(&componentGroup, "Global Shortcuts");
-        for (const auto& key : shortcutsGroup.keyList()) {
+        const QStringList keys = shortcutsGroup.keyList();
+        for (const auto& key : keys) {
             auto action = std::find_if(component->actions.begin(), component->actions.end(), [&] (const Action &a) {
                 return a.id == key;
             });
@@ -268,10 +278,10 @@ void GlobalAccelModel::addApplication(const QString &desktopFileName, const QStr
                 return;
             }
             qCDebug(KCMKEYS) << "inserting at " << pos - m_components.begin();
-            emit beginInsertRows(QModelIndex(), pos - m_components.begin(),  pos - m_components.begin());
+            beginInsertRows(QModelIndex(), pos - m_components.begin(),  pos - m_components.begin());
             auto c = loadComponent(infoReply.value());
             m_components.insert(pos, c);
-            emit endInsertRows();
+            endInsertRows();
         });
     });
 }

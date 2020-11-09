@@ -51,7 +51,6 @@
 #include <KFileCopyToMenu>
 #include <KFileItemActions>
 #include <KFileItemListProperties>
-#include <KNewFileMenu>
 #include <KIO/DeleteJob>
 #include <KIO/EmptyTrashJob>
 #include <KIO/FileUndoManager>
@@ -65,7 +64,6 @@
 #include <KShell>
 
 #include <KCoreDirLister>
-#include <KDirLister>
 #include <KDesktopFile>
 #include <KDirModel>
 #include <KIO/CopyJob>

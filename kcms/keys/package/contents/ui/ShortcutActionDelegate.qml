@@ -60,14 +60,6 @@ Kirigami.AbstractListItem {
                         }
                     }
                 }
-                QQC2.ToolButton {
-                    Layout.alignment: Qt.AlignRight
-                    id: expandButton
-                    icon.name: "expand"
-                    onClicked: {
-                    root.state == 'expanded' ?  shortcutsList.selectedIndex = -1 : shortcutsList.selectedIndex = index
-                    }
-                }
                 Rectangle {
                     id: defaultIndicator
                     radius: width * 0.5
@@ -76,6 +68,14 @@ Kirigami.AbstractListItem {
                     visible: kcm.defaultsIndicatorsVisible
                     opacity: !model.isDefault
                     color: Kirigami.Theme.neutralTextColor
+                }
+                QQC2.ToolButton {
+                    Layout.alignment: Qt.AlignRight
+                    id: expandButton
+                    icon.name: "expand"
+                    onClicked: {
+                    root.state == 'expanded' ?  shortcutsList.selectedIndex = -1 : shortcutsList.selectedIndex = index
+                    }
                 }
             }
         }
@@ -137,6 +137,7 @@ Kirigami.AbstractListItem {
                             KeySequenceItem {
                                 keySequence: modelData
                                 showClearButton: false
+                                multiKeyShortcutsAllowed: supportsMultipleKeys
                                 checkForConflictsAgainst: ShortcutType.None
                                 onCaptureFinished: {
                                     kcm.requestKeySequence(this, originalIndex, keySequence, modelData)
@@ -178,6 +179,7 @@ Kirigami.AbstractListItem {
                             signal finished
                             KeySequenceItem {
                                 showClearButton: false
+                                multiKeyShortcutsAllowed: model.supportsMultipleKeys
                                 checkForConflictsAgainst: ShortcutType.None
                                 onCaptureFinished: {
                                     kcm.requestKeySequence(this, originalIndex, keySequence)

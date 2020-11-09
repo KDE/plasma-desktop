@@ -64,7 +64,7 @@ Item {
                 }
             }
             onEntered: delegate.GridView.view.currentIndex = index
-            onExited: delegate.GridView.view.currentIndex = index - 1
+            onExited: delegate.GridView.view.currentIndex = - 1
         }
 
         ColumnLayout {

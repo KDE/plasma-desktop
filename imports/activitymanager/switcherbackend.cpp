@@ -26,7 +26,6 @@
 // Qt
 #include <QAction>
 #include <QX11Info>
-#include <QTimer>
 #include <QDateTime>
 #include <QDBusMessage>
 #include <QDBusConnection>

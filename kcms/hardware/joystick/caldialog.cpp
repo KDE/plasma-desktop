@@ -22,7 +22,6 @@
 #include "caldialog.h"
 #include "joydevice.h"
 
-#include <QLabel>
 #include <QTimer>
 #include <QApplication>
 

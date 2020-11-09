@@ -124,7 +124,7 @@ bool XkbHelper::initializeKeyboardLayouts(const QList<LayoutUnit>& layoutUnits)
 {
 	QStringList layouts;
 	QStringList variants;
-	foreach (const LayoutUnit& layoutUnit, layoutUnits) {
+	for (const auto &layoutUnit : layoutUnits) {
         layouts.append(layoutUnit.layout());
         variants.append(layoutUnit.variant());
 	}
@@ -154,8 +154,8 @@ bool XkbHelper::initializeKeyboardLayouts(KeyboardConfig& config)
 	if( config.configureLayouts ) {
 		QStringList layouts;
 		QStringList variants;
-		QList<LayoutUnit> defaultLayouts = config.getDefaultLayouts();
-		foreach (const LayoutUnit& layoutUnit, defaultLayouts) {
+		const QList<LayoutUnit> defaultLayouts = config.getDefaultLayouts();
+		for (const auto &layoutUnit : defaultLayouts) {
             layouts.append(layoutUnit.layout());
             variants.append(layoutUnit.variant());
 		}

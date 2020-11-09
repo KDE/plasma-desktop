@@ -106,15 +106,15 @@ QList<QAction*> LayoutsMenu::contextualActions()
 	actionGroup = new QActionGroup(this);
 
 	X11Helper::getLayoutsList(); //UGLY: seems to be more reliable with extra call
-	QList<LayoutUnit> currentLayouts = X11Helper::getLayoutsList();
-	foreach(const LayoutUnit& layoutUnit, currentLayouts) {
+	const QList<LayoutUnit> currentLayouts = X11Helper::getLayoutsList();
+	for (const auto &layoutUnit : currentLayouts) {
 		QAction* action = createAction(layoutUnit);
 		actionGroup->addAction(action);
 	}
 
 	if( keyboardConfig.configureLayouts ) {
 		QList<LayoutUnit> extraLayouts = keyboardConfig.layouts;
-		foreach(const LayoutUnit& layoutUnit, currentLayouts) {
+		for (const auto &layoutUnit : currentLayouts) {
 			extraLayouts.removeOne(layoutUnit);
 		}
 		if( extraLayouts.size() > 0 ) {
@@ -122,7 +122,7 @@ QList<QAction*> LayoutsMenu::contextualActions()
 			separator->setSeparator(true);
 			actionGroup->addAction(separator);
 
-			foreach(const LayoutUnit& layoutUnit, extraLayouts) {
+			for (const auto &layoutUnit : qAsConst(extraLayouts)) {
 				QAction* action = createAction(layoutUnit);
 				actionGroup->addAction(action);
 			}

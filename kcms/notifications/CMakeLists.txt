@@ -5,6 +5,7 @@ set(kcm_notifications_SRCS
     kcm.cpp
     sourcesmodel.cpp
     filterproxymodel.cpp
+    notificationsdata.cpp
 )
 
 add_library(kcm_notifications MODULE ${kcm_notifications_SRCS})

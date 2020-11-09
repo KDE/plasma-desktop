@@ -22,36 +22,52 @@
 #ifndef __kcmaccess_h__
 #define __kcmaccess_h__
 
+#include <KQuickAddons/ManagedConfigModule>
+#include <QString>
+#include <QColor>
 
-#include <KCModule>
-#include "ui_accessibility.h"
+class MouseSettings;
+class BellSettings;
+class KeyboardSettings;
+class ScreenReaderSettings;
 
-class KAccessConfig : public KCModule
+class KAccessConfig : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
+    Q_PROPERTY(MouseSettings *mouseSettings MEMBER m_mouseSettings CONSTANT)
+    Q_PROPERTY(BellSettings *bellSettings MEMBER m_bellSettings CONSTANT)
+    Q_PROPERTY(KeyboardSettings *keyboardSettings MEMBER m_keyboardSettings CONSTANT)
+    Q_PROPERTY(ScreenReaderSettings *screenReaderSettings MEMBER m_screenReaderSettings CONSTANT)
+    Q_PROPERTY(QString orcaLaunchFeedback READ orcaLaunchFeedback WRITE setOrcaLaunchFeedback NOTIFY orcaLaunchFeedbackChanged)
+    Q_PROPERTY(QString desktopShortcutInfo MEMBER m_desktopShortcutInfo CONSTANT)
+    Q_PROPERTY(bool screenReaderInstalled MEMBER m_screenReaderInstalled CONSTANT)
 
 public:
 
-    KAccessConfig(QWidget *parent, const QVariantList&);
+    KAccessConfig(QObject *parent, const QVariantList&);
     ~KAccessConfig() override;
 
-    void load() override;
     void save() override;
-    void defaults() override;
 
-protected Q_SLOTS:
+    Q_INVOKABLE void configureKNotify(QQuickItem *parent);
+    Q_INVOKABLE void launchOrcaConfiguration();
+    Q_INVOKABLE bool orcaInstalled();
 
-    void configChanged();
-    void checkAccess();
-    void invertClicked();
-    void flashClicked();
-    void selectSound();
-    void changeFlashScreenColor();
-    void configureKNotify();
-    void launchOrcaConfiguration();
+    QString orcaLaunchFeedback() const;
+
+Q_SIGNALS:
+    void orcaLaunchFeedbackChanged();
 
 private:
-    Ui::access ui;
+    void setOrcaLaunchFeedback(const QString& value);
+
+    MouseSettings *m_mouseSettings;
+    BellSettings *m_bellSettings;
+    KeyboardSettings *m_keyboardSettings;
+    ScreenReaderSettings *m_screenReaderSettings;
+    QString m_orcaLaunchFeedback;
+    QString m_desktopShortcutInfo;
+    bool m_screenReaderInstalled;
 };
 
 

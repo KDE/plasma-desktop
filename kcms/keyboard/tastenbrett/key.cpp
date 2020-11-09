@@ -130,7 +130,7 @@ static QString keySymToString(KeySym keysym) {
     if (static_cast<KeySym>(xkbKeysym) == keysym) {
         str = xkbKeysymToUtf8(xkbKeysym);
 
-        for (const auto &c : str) {
+        for (const auto &c : qAsConst(str)) {
             if (!c.isPrint() && !c.isNull()) {
                 str = "";
                 break;

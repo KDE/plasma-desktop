@@ -237,6 +237,7 @@ void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index,
         : i18n("Shortcut %1 is already assigned to action '%2' of %3.\nDo you want to reassign it?", keysString, actionName, componentName);
     const QString title = i18nc("@title:window", "Found conflict");
     auto dialog = new QDialog;
+    dialog->setWindowTitle(title);
     if (context && context->window()) {
         dialog->winId(); // so it creates windowHandle
         dialog->windowHandle()->setTransientParent(QQuickRenderControl::renderWindowFor(context->window()));
@@ -247,7 +248,7 @@ void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index,
         QMessageBox::Question, message, {}, QString(), nullptr, KMessageBox::NoExec);
     dialog->show();
 
-    connect(dialog, &QDialog::finished, this, [this, index, conflict, newSequence, oldSequence] (int result)  {
+    connect(dialog, &QDialog::finished, this, [index, conflict, newSequence, oldSequence] (int result)  {
         auto model = const_cast<BaseModel*>(static_cast<const BaseModel*>(index.model()));
         if (result != QDialogButtonBox::Yes) {
             // Also emit if we are not changing anything, to force the frontend to update and be consistent

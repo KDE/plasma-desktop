@@ -126,6 +126,7 @@ QVariant SourcesModel::data(const QModelIndex &index, int role) const
     case SourceTypeRole: return source.desktopEntry.isEmpty() ? ServiceType : ApplicationType;
     case NotifyRcNameRole: return source.notifyRcName;
     case DesktopEntryRole: return source.desktopEntry;
+    case IsDefaultRole: return source.isDefault;
     }
 
     return QVariant();
@@ -151,6 +152,18 @@ bool SourcesModel::setData(const QModelIndex &index, const QVariant &value, int 
             break;
         }
         }
+    }
+
+    auto &source = m_data[index.row()];
+
+    switch (role) {
+    case IsDefaultRole: {
+        if (source.isDefault != value.toBool()) {
+            source.isDefault = value.toBool();
+            dirty = true;
+        }
+        break;
+    }
     }
 
     if (dirty) {
@@ -199,6 +212,7 @@ QHash<int, QByteArray> SourcesModel::roleNames() const
         {SourceTypeRole, QByteArrayLiteral("sourceType")},
         {NotifyRcNameRole, QByteArrayLiteral("notifyRcName")},
         {DesktopEntryRole, QByteArrayLiteral("desktopEntry")},
+        {IsDefaultRole, QByteArrayLiteral("isDefault")},
         {EventIdRole, QByteArrayLiteral("eventId")},
         {ActionsRole, QByteArrayLiteral("actions")}
     };
@@ -258,6 +272,7 @@ void SourcesModel::load()
                 globalGroup.readEntry(QStringLiteral("Name")),
                 globalGroup.readEntry(QStringLiteral("Comment")),
                 globalGroup.readEntry(QStringLiteral("IconName")),
+                true,
                 notifyRcName,
                 desktopEntry,
                 {} // events
@@ -311,6 +326,7 @@ void SourcesModel::load()
             service->name(),
             service->comment(),
             service->icon(),
+            true,
             QString(), //notifyRcFile
             service->desktopEntryName(),
             {} // events
@@ -336,6 +352,7 @@ void SourcesModel::load()
             service->name(),
             service->comment(),
             service->icon(),
+            true,
             QString(), //notifyRcFile
             service->desktopEntryName(),
             {}
@@ -353,6 +370,7 @@ void SourcesModel::load()
         i18n("Other Applications"),
         {},
         QStringLiteral("applications-other"),
+        true,
         QString(),
         QStringLiteral("@other"),
         {}

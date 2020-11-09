@@ -142,7 +142,6 @@ Comment[zh_TW]=自動啟動應用程式
 Encoding=UTF-8
 Type=Service
 Icon=system-run
-Exec=kcmshell5 autostart
 X-KDE-Library=kcm_autostart
 X-KDE-ServiceTypes=KCModule
 X-KDE-FormFactors=desktop

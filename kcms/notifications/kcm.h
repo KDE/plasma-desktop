@@ -29,6 +29,7 @@ class QAction;
 
 class SourcesModel;
 class FilterProxyModel;
+class NotificationsData;
 
 namespace NotificationManager {
 class DoNotDisturbSettings;
@@ -49,6 +50,7 @@ class KCMNotifications : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(NotificationManager::NotificationSettings *notificationSettings READ notificationSettings CONSTANT)
     Q_PROPERTY(NotificationManager::JobSettings *jobSettings READ jobSettings CONSTANT)
     Q_PROPERTY(NotificationManager::BadgeSettings *badgeSettings READ badgeSettings CONSTANT)
+    Q_PROPERTY(bool isDefaultsBehaviorSettings READ isDefaultsBehaviorSettings NOTIFY isDefaultsBehaviorSettingsChanged)
 
     Q_PROPERTY(QKeySequence toggleDoNotDisturbShortcut
                READ toggleDoNotDisturbShortcut
@@ -89,6 +91,8 @@ public:
 
     Q_INVOKABLE NotificationManager::BehaviorSettings *behaviorSettings(const QModelIndex &index);
 
+    bool isDefaultsBehaviorSettings() const;
+
 public Q_SLOTS:
     void load() override;
     void save() override;
@@ -99,20 +103,21 @@ signals:
     void initialNotifyRcNameChanged();
     void initialEventIdChanged();
     void firstLoadDone();
+    void isDefaultsBehaviorSettingsChanged();
+
+private Q_SLOTS:
+    void onDefaultsIndicatorsVisibleChanged();
+    void updateModelIsDefaultStatus(const QModelIndex &index);
 
 private:
     bool isSaveNeeded() const override;
     bool isDefaults() const override;
-    void createConnections(NotificationManager::BehaviorSettings *settings);
+    void createConnections(NotificationManager::BehaviorSettings *settings, const QModelIndex &index);
 
     SourcesModel *m_sourcesModel;
     FilterProxyModel *m_filteredModel;
 
-    NotificationManager::DoNotDisturbSettings *m_dndSettings;
-    NotificationManager::NotificationSettings *m_notificationSettings;
-    NotificationManager::JobSettings *m_jobSettings;
-    NotificationManager::BadgeSettings *m_badgeSettings;
-    QHash<int, NotificationManager::BehaviorSettings *> m_behaviorSettingsList;
+    NotificationsData *m_data;
 
     QAction *m_toggleDoNotDisturbAction;
     QKeySequence m_toggleDoNotDisturbShortcut;

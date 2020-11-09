@@ -45,6 +45,16 @@ SimpleKCM {
         }
     }
 
+    Connections {
+        target: user
+        function onPasswordSuccessfullyChanged() {
+            // Prompt to change the wallet password of the logged-in user
+            if (usersDetailPage.user.loggedIn && usersDetailPage.user.usesDefaultWallet()) {
+                changeWalletPassword.open()
+            }
+        }
+    }
+
 
     Connections {
         target: kcm
@@ -464,4 +474,6 @@ SimpleKCM {
     }
 
     ChangePassword { id: changePassword; account: user }
+
+    ChangeWalletPassword { id: changeWalletPassword }
 }

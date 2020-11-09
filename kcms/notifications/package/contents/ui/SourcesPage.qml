@@ -122,6 +122,15 @@ Kirigami.Page {
                             sourcesList.forceActiveFocus();
                             sourcesList.currentIndex = index;
                         }
+                        Rectangle {
+                            id: defaultIndicator
+                            radius: width * 0.5
+                            implicitWidth: Kirigami.Units.largeSpacing
+                            implicitHeight: Kirigami.Units.largeSpacing
+                            visible: kcm.defaultsIndicatorsVisible
+                            opacity: !model.isDefault
+                            color: Kirigami.Theme.neutralTextColor
+                        }
                     }
 
                     Kirigami.PlaceholderMessage {

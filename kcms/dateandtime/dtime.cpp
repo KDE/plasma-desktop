@@ -30,14 +30,11 @@
 #include <time.h>
 #include <sys/types.h>
 
-#include <QComboBox>
 #include <QGroupBox>
 #include <QPushButton>
 #include <QPainter>
 #include <QTimeEdit>
 
-#include <QCheckBox>
-#include <QPaintEvent>
 #include <QGridLayout>
 #include <QHBoxLayout>
 #include <QVBoxLayout>

@@ -22,7 +22,6 @@
 
 #include <KCModule>
 
-#include "SolidActions.h"
 #include "ActionModel.h"
 #include "ActionEditor.h"
 #include "ui_AddAction.h"

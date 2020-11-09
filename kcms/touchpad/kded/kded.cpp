@@ -22,7 +22,6 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusConnectionInterface>
-#include <KNotification>
 #include <KLocalizedString>
 
 #include "plugins.h"
@@ -101,8 +100,9 @@ void TouchpadDisabler::serviceNameFetchFinished(QDBusPendingCallWatcher *callWat
         return;
     }
 
-    QStringList allServices = reply.value();
-    Q_FOREACH (const QString &service, m_dependencies.watchedServices()) {
+    const QStringList allServices = reply.value();
+    const QStringList watchedList = m_dependencies.watchedServices();
+    for (const QString &service : watchedList) {
         if (allServices.contains(service)) {
             serviceRegistered(service);
         }

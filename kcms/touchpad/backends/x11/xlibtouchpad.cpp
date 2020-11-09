@@ -30,7 +30,7 @@ bool XlibTouchpad::applyConfig(const QVariantHash& p)
     m_props.clear();
 
     bool error = false;
-    Q_FOREACH(const QString &name, m_supported) {
+    for (const QString &name : qAsConst(m_supported)) {
         QVariantHash::ConstIterator i = p.find(name);
         if (i == p.end()) {
             continue;
@@ -85,7 +85,7 @@ bool XlibTouchpad::getConfig(QVariantHash& p)
     m_props.clear();
 
     bool error = false;
-    Q_FOREACH(const QString &name, m_supported) {
+    for (const QString &name : qAsConst(m_supported)) {
         const Parameter *par = findParameter(name);
         if (!par) {
             continue;
@@ -161,7 +161,7 @@ QVariant XlibTouchpad::getParameter(const Parameter* par)
 
 void XlibTouchpad::flush()
 {
-    Q_FOREACH(const QLatin1String &name, m_changed) {
+    for (const QLatin1String &name : qAsConst(m_changed)) {
         m_props[name].set();
     }
     m_changed.clear();

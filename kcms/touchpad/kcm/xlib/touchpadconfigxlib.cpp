@@ -35,7 +35,6 @@
 #include "sliderpair.h"
 #include "touchpadbackend.h"
 #include "plugins.h"
-#include "testarea.h"
 #include "touchpadinterface.h"
 #include "customconfigdialogmanager.h"
 #include "kded/kdedactions.h"
@@ -73,7 +72,8 @@ static void copyHelpFromBuddy(QObject *root)
             asLabel->setWhatsThis(asLabel->buddy()->whatsThis());
         }
     }
-    Q_FOREACH(QObject *child, root->children()) {
+    const auto childList = root->children();
+    for (QObject *child : childList) {
         copyHelpFromBuddy(child);
     }
 }
@@ -239,8 +239,7 @@ void TouchpadConfigXlib::gotReplyFromDaemon(QDBusPendingCallWatcher *watch)
 
 void TouchpadConfigXlib::updateMouseList()
 {
-    QStringList mouses(
-                m_backend->listMouses(m_daemonSettings.mouseBlacklist()));
+    const QStringList mouses(m_backend->listMouses(m_daemonSettings.mouseBlacklist()));
 
     for (int i = 0; i < m_mouseCombo->count(); ) {
         if (!mouses.contains(m_mouseCombo->itemText(i))) {
@@ -250,9 +249,9 @@ void TouchpadConfigXlib::updateMouseList()
         }
     }
 
-    Q_FOREACH (const QString &i, mouses) {
-        if (!m_mouseCombo->contains(i)) {
-            m_mouseCombo->addItem(i);
+    for (const QString &device : mouses) {
+        if (!m_mouseCombo->contains(device)) {
+            m_mouseCombo->addItem(device);
         }
     }
 }

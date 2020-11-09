@@ -37,9 +37,6 @@ PlasmaDesktopRunner::PlasmaDesktopRunner(QObject *parent, const QVariantList &ar
       m_enabled(false)
 {
     setObjectName( QLatin1String("Plasma-Desktop" ));
-    setIgnoredTypes(Plasma::RunnerContext::FileSystem |
-                    Plasma::RunnerContext::NetworkLocation |
-                    Plasma::RunnerContext::Help);
     QDBusServiceWatcher *watcher = new QDBusServiceWatcher(s_plasmaService, QDBusConnection::sessionBus(),
                                                            QDBusServiceWatcher::WatchForOwnerChange, this);
     connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged,

@@ -42,7 +42,6 @@
 #include "smartlaunchers/smartlauncheritem.h"
 
 #include <QAction>
-#include <QQmlEngine>
 
 void TaskManagerPlugin::registerTypes(const char *uri)
 {

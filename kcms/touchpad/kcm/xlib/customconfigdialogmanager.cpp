@@ -36,7 +36,8 @@ CustomConfigDialogManager::CustomConfigDialogManager(QWidget *parent,
 {
     static const QString kcfgPrefix("kcfg_");
 
-    Q_FOREACH(KConfigSkeletonItem *i, conf->items()) {
+    const auto itemList = conf->items();
+    for (KConfigSkeletonItem *i : itemList) {
         QString name(i->name());
 
         QWidget *child = parent->findChild<QWidget*>(kcfgPrefix + name);
@@ -60,14 +61,9 @@ CustomConfigDialogManager::CustomConfigDialogManager(QWidget *parent,
         }
 
         QStringList choiceList;
-        Q_FOREACH(const KCoreConfigSkeleton::ItemEnum::Choice &c,
-                  asEnum->choices())
-        {
-            if (c.label.isEmpty()) {
-                choiceList.append(c.name);
-            } else {
-                choiceList.append(c.label);
-            }
+        const auto asEnumChoices = asEnum->choices();
+        for (const auto &choice : asEnumChoices) {
+            choiceList.append(!choice.label.isEmpty() ? choice.label : choice.name);
         }
 
         KComboBox *asComboBox = qobject_cast<KComboBox *>(child);

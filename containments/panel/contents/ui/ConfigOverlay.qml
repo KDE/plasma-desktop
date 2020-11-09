@@ -376,13 +376,17 @@ MouseArea {
                 id: handleButtons
                 spacing: PlasmaCore.Units.smallSpacing
 
-                PlasmaExtras.Heading {
-                    id: label
-                    level: 3
-                    Layout.fillWidth: true
-                    Layout.leftMargin: PlasmaCore.Units.smallSpacing * 2
-                    Layout.rightMargin: PlasmaCore.Units.smallSpacing * 2
+                PlasmaExtras.PlasmoidHeading {
+                    leftPadding: PlasmaCore.Units.smallSpacing * 2
+                    rightPadding: PlasmaCore.Units.smallSpacing * 2
+
+                    contentItem: PlasmaExtras.Heading {
+                        id: label
+                        level: 3
+                        horizontalAlignment: Text.AlignHCenter
+                    }
                 }
+
                 PlasmaComponents.ToolButton {
                     Layout.fillWidth: true
                     // we want destructive actions to be far from the initial

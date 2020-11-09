@@ -20,7 +20,6 @@
 #include "showdesktop.h"
 
 // Qt
-#include <QQmlEngine>
 
 void ShowDesktopPlugin::registerTypes(const char *uri)
 {

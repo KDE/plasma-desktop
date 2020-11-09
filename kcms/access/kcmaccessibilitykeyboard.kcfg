@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="kaccessrc" />
+  <group name="Keyboard">
+    <entry name="StickyKeys" key="StickyKeys" type="Bool">
+      <label>Use sticky Keys</label>
+      <default>false</default>
+    </entry>
+    <entry name="StickyKeysLatch" key="StickyKeysLatch" type="Bool">
+      <label>Lock the sticky keys</label>
+      <default>true</default>
+    </entry>
+    <entry name="StickyKeysAutoOff" key="StickyKeysAutoOff" type="Bool">
+      <label>Automatically turn off the sticky keys after an interval</label>
+      <default>false</default>
+    </entry>
+    <entry name="StickyKeysBeep" key="StickyKeysBeep" type="Bool">
+      <label>Beep on a sticky key press</label>
+      <default>true</default>
+    </entry>
+    <entry name="ToggleKeysBeep" key="ToggleKeysBeep" type="Bool">
+      <label>Toggle keys beep</label>
+      <default>false</default>
+    </entry>
+    <entry name="KeyboardNotifyModifiers" key="kNotifyModifiers" type="Bool">
+      <label>Notify when a keyboard modifier is pressed</label>
+      <default>false</default>
+    </entry>
+    <entry name="SlowKeys" key="SlowKeys" type="Bool">
+      <label>Use slow keypresses</label>
+      <default>false</default>
+    </entry>
+    <entry name="SlowKeysDelay" key="SlowKeysDelay" type="Int">
+      <label>Delay for the key press</label>
+      <default>500</default>
+    </entry>
+    <entry name="SlowKeysPressBeep" key="SlowKeysPressBeep" type="Bool">
+      <label>Beep on a slow keypress</label>
+      <default>true</default>
+    </entry>
+    <entry name="SlowKeysAcceptBeep" key="SlowKeysAcceptBeep" type="Bool">
+      <label>Beep on an accepted keypress</label>
+      <default>true</default>
+    </entry>
+    <entry name="SlowKeysRejectBeep" key="SlowKeysRejectBeep" type="Bool">
+      <label>Beep on a rejected keypress</label>
+      <default>true</default>
+    </entry>
+    <entry name="BounceKeys" key="BounceKeys" type="Bool">
+      <label>Bounce Keys</label>
+      <default>false</default>
+    </entry>
+    <entry name="BounceKeysDelay" key="BounceKeysDelay" type="Int">
+      <label>Use a delay for bouncing</label>
+      <default>500</default>
+    </entry>
+    <entry name="BounceKeysRejectBeep" key="BounceKeysRejectBeep" type="Bool">
+      <label>Beep if a bounce key event is rejected</label>
+      <default>false</default>
+    </entry>
+    <entry name="Gestures" key="Gestures" type="Bool">
+      <label>Use Gestures</label>
+      <default>false</default>
+    </entry>
+    <entry name="AccessXTimeout" key="AccessXTimeout" type="Int">
+      <label>Use a timeout delay</label>
+      <default>30</default>
+    </entry>
+    <entry name="AccessXTimeoutDelay" key="AccessXTimeoutDelay" type="Bool">
+      <label>Invert the system colors on the bell</label>
+      <default>false</default>
+    </entry>
+    <entry name="AccessXBeep" key="AccessBeep" type="Bool">
+      <label>Use a beep for access</label>
+      <default>false</default>
+    </entry>
+    <entry name="GestureConfirmation" key="GestureConfirmation" type="Bool">
+      <label>Ask for Confirmation for a gesture</label>
+      <default>false</default>
+    </entry>
+    <entry name="KeyboardNotifyAccess" key="kNotifyAccess" type="Bool">
+      <label>Confirm access to the Keyboard</label>
+      <default>false</default>
+    </entry>
+  </group>
+</kcfg>

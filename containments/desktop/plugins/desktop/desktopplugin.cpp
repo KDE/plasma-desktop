@@ -20,7 +20,6 @@
 #include "desktopplugin.h"
 #include "infonotification.h"
 
-#include <QQmlEngine>
 
 void DesktopPlugin::registerTypes(const char *uri)
 {

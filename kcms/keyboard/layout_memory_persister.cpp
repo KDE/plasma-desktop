@@ -100,7 +100,7 @@ QString LayoutMemoryPersister::getLayoutMapAsString()
 
 bool LayoutMemoryPersister::save()
 {
-    QFileInfo fileInfo(QStandardPaths::writableLocation(QStandardPaths::DataLocation) + REL_SESSION_FILE_PATH);
+    QFileInfo fileInfo(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + REL_SESSION_FILE_PATH);
 
     QDir baseDir(fileInfo.absoluteDir());
     if( ! baseDir.exists() ) {
@@ -115,7 +115,7 @@ bool LayoutMemoryPersister::save()
 
 bool LayoutMemoryPersister::restore()
 {
-    QFile file(QStandardPaths::writableLocation(QStandardPaths::DataLocation) + REL_SESSION_FILE_PATH);
+    QFile file(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + REL_SESSION_FILE_PATH);
     if (!file.exists()) {
         return false;
     }

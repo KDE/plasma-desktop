@@ -19,7 +19,6 @@
 #include "x11_helper.h"
 #include "debug.h"
 
-#include <QX11Info>
 #include <QCoreApplication>
 #include <QDebug>
 
@@ -92,7 +91,7 @@ void X11Helper::scrollLayouts(int delta)
 QStringList X11Helper::getLayoutsListAsString(const QList<LayoutUnit>& layoutsList)
 {
 	QStringList stringList;
-	foreach(const LayoutUnit& layoutUnit, layoutsList) {
+	for (const auto &layoutUnit : layoutsList) {
 		stringList << layoutUnit.toString();
 	}
 	return stringList;
@@ -352,11 +351,11 @@ bool XEventNotifier::processXkbEvents(xcb_generic_event_t* event)
 	_xkb_event *xkbevt = reinterpret_cast<_xkb_event *>(event);
 	if( XEventNotifier::isGroupSwitchEvent(xkbevt) ) {
 //		qDebug() << "group switch event";
-		emit(layoutChanged());
+		Q_EMIT emit(layoutChanged());
 	}
 	else if( XEventNotifier::isLayoutSwitchEvent(xkbevt) ) {
 //		qDebug() << "layout switch event";
-		emit(layoutMapChanged());
+		Q_EMIT emit(layoutMapChanged());
 	}
 	return true;
 }

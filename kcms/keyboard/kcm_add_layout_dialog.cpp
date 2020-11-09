@@ -27,7 +27,6 @@
 
 #include "ui_kcm_add_layout_dialog.h"
 
-#include <config-keyboard.h>
 
 AddLayoutDialog::AddLayoutDialog(const Rules* rules_, Flags* flags_, const QString& model_,
                                  const QStringList &options_, bool showLabel, QWidget* parent):

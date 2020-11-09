@@ -18,7 +18,6 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "propertymanager.h"
-#include <QByteArray>
 
 PropertyManager::PropertyManager() : m_props(nullptr)
 {

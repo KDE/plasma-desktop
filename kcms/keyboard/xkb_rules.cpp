@@ -117,24 +117,24 @@ void postProcess(Rules* rules)
 
 //	setlocale(LC_ALL, "");
 //	bindtextdomain("xkeyboard-config", LOCALE_DIR);
-	foreach(ModelInfo* modelInfo, rules->modelInfos) {
+	for (ModelInfo *modelInfo : qAsConst(rules->modelInfos)) {
 		modelInfo->vendor = translate_xml_item(modelInfo->vendor);
 		modelInfo->description = translate_description(modelInfo);
 	}
 
-	foreach(LayoutInfo* layoutInfo, rules->layoutInfos) {
+	for (LayoutInfo *layoutInfo : qAsConst(rules->layoutInfos)) {
 		layoutInfo->description = translate_description(layoutInfo);
 
 		removeEmptyItems(layoutInfo->variantInfos);
-		foreach(VariantInfo* variantInfo, layoutInfo->variantInfos) {
+		for (VariantInfo *variantInfo : qAsConst(layoutInfo->variantInfos)) {
 			variantInfo->description = translate_description(variantInfo);
 		}
 	}
-	foreach(OptionGroupInfo* optionGroupInfo, rules->optionGroupInfos) {
+	for (OptionGroupInfo *optionGroupInfo : qAsConst(rules->optionGroupInfos)) {
 		optionGroupInfo->description = translate_description(optionGroupInfo);
 
 		removeEmptyItems(optionGroupInfo->optionInfos);
-		foreach(OptionInfo* optionInfo, optionGroupInfo->optionInfos) {
+		for (OptionInfo *optionInfo : qAsConst(optionGroupInfo->optionInfos)) {
 			optionInfo->description = translate_description(optionInfo);
 		}
 	}
@@ -192,7 +192,7 @@ void mergeRules(Rules* rules, Rules* extraRules)
 	rules->optionGroupInfos.append( extraRules->optionGroupInfos );	// need to iterate and merge?
 
 	QList<LayoutInfo*> layoutsToAdd;
-	foreach(LayoutInfo* extraLayoutInfo, extraRules->layoutInfos) {
+	for (LayoutInfo *extraLayoutInfo : qAsConst(extraRules->layoutInfos)) {
 		LayoutInfo* layoutInfo = findByName(rules->layoutInfos, extraLayoutInfo->name);
 		if( layoutInfo != nullptr ) {
 			layoutInfo->variantInfos.append( extraLayoutInfo->variantInfos );
@@ -380,7 +380,7 @@ bool LayoutInfo::isLanguageSupportedByLayout(const QString& lang) const
 
 bool LayoutInfo::isLanguageSupportedByVariants(const QString& lang) const
 {
-	foreach(const VariantInfo* info, variantInfos) {
+	for (const VariantInfo *info : qAsConst(variantInfos)) {
 		if( info->languages.contains(lang) )
 			return true;
 	}

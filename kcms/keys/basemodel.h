@@ -60,7 +60,8 @@ public:
         CustomShortcutsRole,
         CheckedRole,
         PendingDeletionRole,
-        IsDefaultRole
+        IsDefaultRole,
+        SupportsMultipleKeysRole
     };
     Q_ENUM(Roles)
 

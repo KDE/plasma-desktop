@@ -104,6 +104,8 @@ public:
 
 public Q_SLOTS:
     Q_SCRIPTABLE void apply();
+    Q_SCRIPTABLE bool usesDefaultWallet();
+    Q_SCRIPTABLE void changeWalletPassword();
 
 Q_SIGNALS:
 
@@ -116,6 +118,7 @@ Q_SIGNALS:
     void faceValidChanged();
     void administratorChanged();
     void applyError(const QString& errorMessage);
+    void passwordSuccessfullyChanged();
 
 private:
     int mUid = 0;

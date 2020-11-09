@@ -171,6 +171,8 @@ QVariant BaseModel::data(const QModelIndex &index, int role) const
         }
         case IsDefaultRole:
             return action.activeShortcuts == action.defaultShortcuts;
+        case SupportsMultipleKeysRole:
+            return true;
         }
         return QVariant();
     }
@@ -233,6 +235,7 @@ QHash<int, QByteArray> BaseModel::roleNames() const
         {CustomShortcutsRole, QByteArrayLiteral("customShortcuts")},
         {CheckedRole, QByteArrayLiteral("checked")},
         {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")},
-        {IsDefaultRole, QByteArrayLiteral("isDefault")}
+        {IsDefaultRole, QByteArrayLiteral("isDefault")},
+        {SupportsMultipleKeysRole, QByteArrayLiteral("supportsMultipleKeys")}
         };
 }

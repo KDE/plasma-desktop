@@ -20,7 +20,6 @@
 
 #include <cstring>
 
-#include <X11/Xlib.h>
 #include <X11/Xlib-xcb.h>
 #include <X11/extensions/XI.h>
 #include <X11/extensions/XI2proto.h>

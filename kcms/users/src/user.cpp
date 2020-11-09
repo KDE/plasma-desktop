@@ -27,6 +27,7 @@
 #include <sys/types.h>
 #include <QtConcurrent>
 #include <KLocalizedString>
+#include <KWallet>
 
 User::User(QObject* parent) : QObject(parent) {}
 
@@ -214,7 +215,13 @@ saltPassword(const QString &plain)
 
 void User::setPassword(const QString &password)
 {
-    m_dbusIface->SetPassword(saltPassword(password), QString());
+    // Blocking because we need to wait for the password to be changed before we
+    // can ask the user about also possibly changing their KWallet password
+    auto invocation = m_dbusIface->SetPassword(saltPassword(password), QString());
+    invocation.waitForFinished();
+    if (!invocation.isError()) {
+        emit passwordSuccessfullyChanged();
+    }
 }
 
 QDBusObjectPath User::path() const
@@ -240,6 +247,16 @@ void User::apply()
     job->start();
 }
 
+bool User::usesDefaultWallet()
+{
+    const QStringList wallets = KWallet::Wallet::walletList();
+    return wallets.contains(QStringLiteral("kdewallet"));
+}
+void User::changeWalletPassword()
+{
+    KWallet::Wallet::changePassword(QStringLiteral("kdewallet"), 1);
+}
+
 bool User::loggedIn() const
 {
     return mLoggedIn;
@@ -258,7 +275,7 @@ UserApplyJob::UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIfa
 
 void UserApplyJob::start()
 {
-    const std::map<QString,QDBusPendingReply<> (OrgFreedesktopAccountsUserInterface::*)(const QString&)> set = {
+    const std::multimap<QString,QDBusPendingReply<> (OrgFreedesktopAccountsUserInterface::*)(const QString&)> set = {
         {m_name, &OrgFreedesktopAccountsUserInterface::SetUserName},
         {m_email, &OrgFreedesktopAccountsUserInterface::SetEmail},
         {m_realname, &OrgFreedesktopAccountsUserInterface::SetRealName},

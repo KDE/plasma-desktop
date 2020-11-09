@@ -27,15 +27,15 @@
 #include <QDBusMessage>
 #include <QDBusConnection>
 
+#include "workspaceoptionsdata.h"
 #include "workspaceoptions_kdeglobalssettings.h"
 #include "workspaceoptions_plasmasettings.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMWorkspaceOptionsFactory, "kcm_workspace.json", registerPlugin<KCMWorkspaceOptions>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMWorkspaceOptionsFactory, "kcm_workspace.json", registerPlugin<KCMWorkspaceOptions>(); registerPlugin<WorkspaceOptionsData>();)
 
 KCMWorkspaceOptions::KCMWorkspaceOptions(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
-    , m_globalsSettings(new WorkspaceOptionsGlobalsSettings(this))
-    , m_plasmaSettings(new WorkspaceOptionsPlasmaSettings(this))
+    , m_data(new WorkspaceOptionsData(this))
 {
     qmlRegisterType<WorkspaceOptionsGlobalsSettings>();
     qmlRegisterType<WorkspaceOptionsPlasmaSettings>();
@@ -54,12 +54,12 @@ KCMWorkspaceOptions::KCMWorkspaceOptions(QObject *parent, const QVariantList &ar
 
 WorkspaceOptionsGlobalsSettings *KCMWorkspaceOptions::globalsSettings() const
 {
-    return m_globalsSettings;
+    return m_data->workspaceOptionsGlobalsSettings();
 }
 
 WorkspaceOptionsPlasmaSettings *KCMWorkspaceOptions::plasmaSettings() const
 {
-    return m_plasmaSettings;
+    return m_data->workspaceOptionsPlasmaSettings();
 }
 
 void KCMWorkspaceOptions::save()

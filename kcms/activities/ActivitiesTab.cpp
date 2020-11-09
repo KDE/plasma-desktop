@@ -35,26 +35,19 @@
 
 #include "kactivities-kcm-features.h"
 
-#include "utils.h"
-
 class ActivitiesTab::Private {
 public:
-    std::unique_ptr<QQuickView> viewActivities;
     ExtraActivitiesInterface *extraActivitiesInterface;
 };
 
 ActivitiesTab::ActivitiesTab(QWidget *parent)
-    : QWidget(parent)
+    : QQuickWidget(parent)
     , d()
 {
-    new QVBoxLayout(this);
-
-    d->extraActivitiesInterface = new ExtraActivitiesInterface(this);
-
-    d->viewActivities = createView(this);
-    d->viewActivities->rootContext()->setContextProperty(
-        QStringLiteral("kactivitiesExtras"), d->extraActivitiesInterface);
-    setViewSource(d->viewActivities, QStringLiteral("/qml/activitiesTab/main.qml"));
+    setClearColor(QGuiApplication::palette().window().color());
+    setResizeMode(QQuickWidget::SizeRootObjectToView);
+    rootContext()->setContextProperty(QStringLiteral("kactivitiesExtras"), d->extraActivitiesInterface);
+    setSource(QUrl::fromLocalFile(KAMD_KCM_DATADIR + QStringLiteral("/qml/activitiesTab/main.qml")));
 }
 
 ActivitiesTab::~ActivitiesTab()

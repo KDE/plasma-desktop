@@ -25,7 +25,6 @@
 #include <QDebug>
 
 #include <X11/X.h>
-#include <X11/Xlib.h>
 #include <X11/Xatom.h>
 
 #ifdef HAVE_XINPUT
@@ -44,10 +43,8 @@ typedef struct xcb_input_device_presence_notify_event_t {
 // FIXME: #include <xcb/xinput.h> once xcb-xinput is stable
 #endif
 
-#include "x11_helper.h"
 #include "udev_helper.h"
 
-#include <fixx11h.h>
 
 static const int DEVICE_NONE = 0;
 static const int DEVICE_KEYBOARD = 1;
@@ -83,11 +80,11 @@ bool XInputEventNotifier::processOtherEvents(xcb_generic_event_t* event)
 {
 	int newDeviceType = getNewDeviceEventType(event);
 	if( newDeviceType == DEVICE_KEYBOARD ) {
-		emit(newKeyboardDevice());
+		Q_EMIT emit(newKeyboardDevice());
 	}
 	else if( newDeviceType == DEVICE_POINTER ) {
-		emit(newPointerDevice());
-		emit(newKeyboardDevice());	// arghhh, looks like X resets xkb map even when only pointer device is connected
+		Q_EMIT emit(newPointerDevice());
+		Q_EMIT emit(newKeyboardDevice()); // arghhh, looks like X resets xkb map even when only pointer device is connected
 	}
 	return true;
 }

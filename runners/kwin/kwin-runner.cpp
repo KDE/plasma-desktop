@@ -35,9 +35,6 @@ KWinRunner::KWinRunner(QObject *parent, const QVariantList &args)
       m_enabled(false)
 {
     setObjectName(s_keyword);
-    setIgnoredTypes(Plasma::RunnerContext::FileSystem |
-                    Plasma::RunnerContext::NetworkLocation |
-                    Plasma::RunnerContext::Help);
     QDBusServiceWatcher *watcher = new QDBusServiceWatcher(s_kwinService, QDBusConnection::sessionBus(),
                                                            QDBusServiceWatcher::WatchForOwnerChange, this);
     connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged, this, &KWinRunner::checkAvailability);
