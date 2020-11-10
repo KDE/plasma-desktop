@@ -126,7 +126,7 @@ Item {
     ActionMenu {
         id: actionMenu
         onActionClicked: {
-            helper.triggerProperty(model.key);
+            helper.triggerProperty(actionId);
         }
     }
 
@@ -198,7 +198,6 @@ Item {
             timer.restart();
         }
         function onMenuTriggered(menu) {
-            console.log(menu);
             showMenu(actionMenu, menu);
         }
     }
