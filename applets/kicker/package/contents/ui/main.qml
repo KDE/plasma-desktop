@@ -125,7 +125,7 @@ Item {
     Connections {
         target: globalFavorites
 
-        onFavoritesChanged: {
+        function onFavoritesChanged() {
             plasmoid.configuration.favoriteApps = target.favorites;
         }
     }
@@ -133,7 +133,7 @@ Item {
     Connections {
         target: systemFavorites
 
-        onFavoritesChanged: {
+        function onFavoritesChanged() {
             plasmoid.configuration.favoriteSystemActions = target.favorites;
         }
     }
@@ -141,11 +141,11 @@ Item {
     Connections {
         target: plasmoid.configuration
 
-        onFavoriteAppsChanged: {
+        function onFavoriteAppsChanged() {
             globalFavorites.favorites = plasmoid.configuration.favoriteApps;
         }
 
-        onFavoriteSystemActionsChanged: {
+        function onFavoriteSystemActionsChanged() {
             systemFavorites.favorites = plasmoid.configuration.favoriteSystemActions;
         }
     }
@@ -243,7 +243,7 @@ Item {
     Connections {
         target: plasmoid
 
-        onExpandedChanged: {
+        function onExpandedChanged(expanded) {
             if (expanded) {
                 windowSystem.monitorWindowVisibility(plasmoid.fullRepresentationItem);
                 justOpenedTimer.start();

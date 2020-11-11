@@ -79,14 +79,14 @@ KCM.ScrollViewKCM {
 
             Connections {
                 target: kcm
-                onErrorMessage: {
+                function onErrorMessage(errorString) {
                     errorMessage.text = errorString;
                     errorMessage.visible = true;
                 }
-                onShowSelfDisablingModulesHint: {
+                function onShowSelfDisablingModulesHint() {
                     selfDisablingModulesHint.visible = true;
                 }
-                onShowRunningModulesChangedAfterSaveHint: {
+                function onShowRunningModulesChangedAfterSaveHint() {
                     runningModulesChangedAfterSaveHint.visible = true;
                 }
             }

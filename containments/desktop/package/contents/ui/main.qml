@@ -274,7 +274,9 @@ FolderViewDropArea {
     Connections {
         target: plasmoid
         ignoreUnknownSignals: true
-        onEditModeChanged: appletsLayout.editMode = plasmoid.editMode
+        function onEditModeChanged() {
+            appletsLayout.editMode = plasmoid.editMode
+        }
     }
 
     ContainmentLayoutManager.AppletsLayout {
@@ -345,7 +347,7 @@ FolderViewDropArea {
                 target: folderViewLayer.view
 
                 // `FolderViewDropArea` is not a FocusScope. We need to forward manually.
-                onPressed: {
+                function onPressed() {
                     folderViewLayer.forceActiveFocus();
                 }
             }

@@ -159,7 +159,7 @@ ColumnLayout {
 
                     Connections {
                         target: mimeTypesView
-                        onToggleCurrent: {
+                        function onToggleCurrent() {
                             if (styleData.row === mimeTypesView.currentRow) {
                                 model.checked = !checkBox.checked
                             }

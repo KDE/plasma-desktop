@@ -96,14 +96,14 @@ Item {
         target: tasksModel
         enabled: root.active
 
-        onActiveTaskChanged: {
+        function onActiveTaskChanged() {
             if (tasksModel.activeTask.valid) { //to suppress changing focus to non windows, such as the desktop
                 root.active = false;
                 root.minimizedClients = [];
             }
         }
-        onVirtualDesktopChanged: deactivate()
-        onActivityChanged: deactivate()
+        function onVirtualDesktopChanged() {deactivate()}
+        function onActivityChanged() {deactivate()}
     }
 
     PlasmaCore.FrameSvgItem {

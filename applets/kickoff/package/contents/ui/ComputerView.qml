@@ -40,7 +40,7 @@ BaseView {
     Connections {
         target: computerModel
 
-        onSystemApplicationsChanged: {
+        function onSystemApplicationsChanged() {
             plasmoid.configuration.systemApplications = target.systemApplications;
         }
     }
@@ -48,7 +48,7 @@ BaseView {
     Connections {
         target: plasmoid.configuration
 
-        onSystemApplicationsChanged: {
+        function onSystemApplicationsChanged() {
             computerModel.systemApplications = plasmoid.configuration.systemApplications;
         }
     }

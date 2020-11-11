@@ -45,7 +45,7 @@ MouseArea {
     onClicked: tooltipDialog.visible = false
     Connections {
         target: tooltipDialog
-        onAppletDelegateChanged: {
+        function onAppletDelegateChanged() {
             if (!tooltipDialog.appletDelegate) {
                 return
             }

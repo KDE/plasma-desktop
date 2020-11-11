@@ -152,7 +152,7 @@ Item {
 
     Connections {
         target: configDialog
-        onVisibleChanged: {
+        function onVisibleChanged() {
             if (!configDialog.visible) {
                 settingsButton.checked = false
             }

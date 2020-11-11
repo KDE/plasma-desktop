@@ -187,7 +187,9 @@ Item {
 
     Connections {
         target: containment
-        onAvailableScreenRectChanged: sidePanel.requestActivate();
+        function onAvailableScreenRectChanged() {
+            sidePanel.requestActivate();
+        }
     }
 
     onContainmentChanged: {

@@ -167,7 +167,7 @@ FocusScope {
     Connections {
         target: plasmoid
 
-        onExpandedChanged: {
+        function onExpandedChanged() {
             if (root.isPopup) {
                 if (plasmoid.expanded) {
                     folderView.currentIndex = -1;
@@ -183,7 +183,7 @@ FocusScope {
             }
         }
 
-        onExternalData: {
+        function onExternalData(mimetype, data) {
             plasmoid.configuration.url = data
         }
     }
@@ -191,36 +191,36 @@ FocusScope {
     Connections {
         target: plasmoid.configuration
 
-        onArrangementChanged: {
+        function onArrangementChanged() {
             viewPropertiesMenu.arrangement = plasmoid.configuration.arrangement;
         }
 
-        onAlignmentChanged: {
+        function onAlignmentChanged() {
             viewPropertiesMenu.alignment = plasmoid.configuration.alignment;
         }
 
-        onLockedChanged: {
+        function onLockedChanged() {
             viewPropertiesMenu.locked = plasmoid.configuration.locked;
         }
 
-        onSortModeChanged: {
+        function onSortModeChanged() {
             folderView.sortMode = plasmoid.configuration.sortMode;
             viewPropertiesMenu.sortMode = plasmoid.configuration.sortMode;
         }
 
-        onSortDescChanged: {
+        function onSortDescChanged() {
             viewPropertiesMenu.sortDesc = plasmoid.configuration.sortDesc;
         }
 
-        onSortDirsFirstChanged: {
+        function onSortDirsFirstChanged() {
             viewPropertiesMenu.sortDirsFirst = plasmoid.configuration.sortDirsFirst;
         }
 
-        onIconSizeChanged: {
+        function onIconSizeChanged() {
             viewPropertiesMenu.iconSize = plasmoid.configuration.iconSize;
         }
 
-        onPositionsChanged: {
+        function onPositionsChanged() {
             folderView.positions = plasmoid.configuration.positions;
         }
     }
@@ -298,7 +298,7 @@ FocusScope {
             Connections {
                 target: folderView
 
-                onUrlChanged: {
+                function onUrlChanged() {
                     if (!label.homeButton && folderView.url !== plasmoid.configuration.url) {
                         label.homeButton = homeButtonComponent.createObject(label);
                     } else if (label.homeButton && folderView.url === plasmoid.configuration.url) {

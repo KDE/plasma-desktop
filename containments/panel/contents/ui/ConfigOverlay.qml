@@ -254,10 +254,10 @@ MouseArea {
 
     Connections {
         target: currentApplet
-        onXChanged: handle.x = currentApplet.x
-        onYChanged: handle.y = currentApplet.y
-        onWidthChanged: handle.width = currentApplet.width
-        onHeightChanged: handle.height = currentApplet.height
+        function onXChanged() {handle.x = currentApplet.x}
+        function onYChanged() {handle.y = currentApplet.y}
+        function onWidthChanged() {handle.width = currentApplet.width}
+        function onHeightChanged() {handle.height = currentApplet.height}
     }
 
     Rectangle {

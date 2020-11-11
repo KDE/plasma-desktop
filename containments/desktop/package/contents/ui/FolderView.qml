@@ -160,7 +160,7 @@ FocusScope {
 
     Connections {
         target: dir
-        onPopupMenuAboutToShow: {
+        function onPopupMenuAboutToShow(dropJob, mimeData, x, y) {
             if (root.isContainment && !plasmoid.immutable) {
                 plasmoid.processMimeData(mimeData, x, y, dropJob);
             }
@@ -169,7 +169,7 @@ FocusScope {
 
     Connections {
         target: plasmoid
-        onExpandedChanged: {
+        function onExpandedChanged() {
             if (plasmoid.expanded && dir.status === Folder.FolderModel.Ready && !gridView.model) {
                 gridView.model = positioner;
             }
@@ -209,7 +209,7 @@ FocusScope {
     Connections {
         target: root
 
-        onIsPopupChanged: {
+        function onIsPopupChanged() {
             if (backButton == null && root.useListViewMode) {
                 backButton = makeBackButton();
             } else if (backButton != null) {
@@ -1133,7 +1133,7 @@ FocusScope {
                 Connections {
                     target: units
 
-                    onIconSizesChanged: {
+                    function onIconSizesChanged() {
                         gridView.iconSize = gridView.makeIconSize();
                     }
                 }
@@ -1141,26 +1141,18 @@ FocusScope {
                 Connections {
                     target: plasmoid.configuration
 
-                    onIconSizeChanged: {
+                    function onIconSizeChanged() {
                         gridView.iconSize = gridView.makeIconSize();
                     }
-                }
-                
-                Connections {
-                    target: plasmoid.configuration
 
-                    onViewModeChanged: {
+                    function onViewModeChanged() {
                         gridView.iconSize = gridView.makeIconSize();
                     }
-                }
 
-                Connections {
-                   target: plasmoid.configuration
-
-                   onUrlChanged: {
-                       history = [];
-                       updateHistory();
-                   }
+                    function onUrlChanged() {
+                        history = [];
+                        updateHistory();
+                    }
                 }
             }
         }

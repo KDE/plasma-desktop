@@ -124,7 +124,7 @@ Kicker.DashboardWindow {
         Connections {
             target: kicker
 
-            onReset: {
+            function onReset() {
                 if (!root.searching) {
                     filterList.applyFilter();
 
@@ -134,8 +134,8 @@ Kicker.DashboardWindow {
                 }
             }
 
-            onDragSourceChanged: {
-                if (!dragSource) {
+            function onDragSourceChanged() {
+                if (!kicker.dragSource) {
                     // FIXME TODO HACK: Reset all views post-DND to work around
                     // mouse grab bug despite QQuickWindow::mouseGrabberItem==0x0.
                     // Needs a more involved hunt through Qt Quick sources later since
@@ -161,7 +161,7 @@ Kicker.DashboardWindow {
 
         Connections {
             target: plasmoid
-            onUserConfiguringChanged: {
+            function onUserConfiguringChanged() {
                 if (plasmoid.userConfiguring) {
                     root.hide()
                 }
