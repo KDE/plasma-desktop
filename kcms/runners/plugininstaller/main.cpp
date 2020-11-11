@@ -1,0 +1,94 @@
+/*
+    SPDX-FileCopyrightText: 2020 Alexander Lohnau <alexander.lohnau@gmx.de>
+
+    SPDX-License-Identifier: LGPL-2.0-or-later
+*/
+
+#include <QDebug>
+#include <QUrl>
+#include <QApplication>
+#include <KLocalizedString>
+#include <QCommandLineParser>
+#include <KMessageBox>
+#include <QMimeDatabase>
+#include <QFileInfo>
+#include <KOSRelease>
+
+#include "config-workspace.h"
+#ifdef HAVE_PACKAGEKIT
+#include "PackageKitJob.h"
+#endif
+#include "ZypperRPMJob.h"
+#include "ScriptJob.h"
+
+void fail(const QString &str)
+{
+    if (!str.isEmpty()) {
+        KMessageBox::error(nullptr, str, i18nc("@info", "KRunner plugin installation failed"));
+    }
+    qApp->exit(1);
+}
+
+int main(int argc, char *argv[])
+{
+    QApplication app(argc, argv);
+    app.setQuitOnLastWindowClosed(false);
+    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+
+    QCommandLineParser parser;
+    parser.addPositionalArgument(QStringLiteral("command"), i18nc("@info:shell", "Command to execute: install or uninstall."));
+    parser.addPositionalArgument(QStringLiteral("path"), i18nc("@info:shell", "Path to archive."));
+    parser.process(app);
+
+    const QStringList args = parser.positionalArguments();
+    if (args.isEmpty()) {
+        qWarning() << "Command is required";
+        return 1;
+    }
+    if (args.size() == 1) {
+        qWarning() << "Path to archive is required";
+        return 1;
+    }
+
+    const QString cmd = args.at(0);
+    const QString file = args.at(1);
+    const QStringList binaryPackages = {QStringLiteral("application/vnd.debian.binary-package"),
+                                        QStringLiteral("application/x-rpm"),
+                                        QStringLiteral("application/x-xz"),
+                                        QStringLiteral("application/zstd")};
+    bool install;
+    if (cmd == QLatin1String("install")) {
+        install = true;
+    } else if (cmd == QLatin1String("uninstall")) {
+        install = false;
+    } else {
+        qWarning() << "Unsupported command" << cmd;
+        return 1;
+    }
+
+    QScopedPointer<AbstractJob> job;
+    QFileInfo fileInfo(file);
+    const QString mimeType = QMimeDatabase().mimeTypeForFile(fileInfo).name();
+    if (mimeType == QLatin1String("application/x-rpm") && KOSRelease().idLike().contains(u"suse")) {
+        job.reset(new ZypperRPMJob());
+    } else if (binaryPackages.contains(mimeType)) {
+#ifdef HAVE_PACKAGEKIT
+        job.reset(new PackageKitJob());
+#else
+        fail(i18nc("@info", "No Packagekit support"));
+#endif
+    } else {
+        job.reset(new ScriptJob());
+    }
+
+    QObject::connect(job.data(), &AbstractJob::finished, qApp,  []() {
+        qApp->exit();
+    }, Qt::QueuedConnection);
+    QObject::connect(job.data(), &AbstractJob::error, qApp, [](const QString &error) {
+        fail(error);
+    }, Qt::QueuedConnection);
+
+    job->executeOperation(fileInfo, mimeType, install);
+
+    return app.exec();
+}

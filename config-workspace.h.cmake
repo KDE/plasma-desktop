@@ -150,6 +150,9 @@
 #define BREEZE_KDECORATION_PLUGIN_ID "${BREEZE_KDECORATION_PLUGIN_ID}"
 #endif
 
+/* Define to 1 if you have packagekit available. */
+#cmakedefine HAVE_PACKAGEKIT 1
+
 /*
  * On HP-UX, the declaration of vsnprintf() is needed every time !
  */

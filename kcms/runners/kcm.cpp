@@ -27,7 +27,7 @@
 #include <KLocalizedString>
 #include <KRunner/RunnerManager>
 #include <KPluginSelector>
-
+#include <KNS3/Button>
 #include <QApplication>
 #include <QDBusMessage>
 #include <QDBusConnection>
@@ -126,6 +126,21 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     layout->addSpacing(12);
     layout->addLayout(headerLayout);
     layout->addWidget(m_pluginSelector);
+
+    QHBoxLayout *downloadLayout = new QHBoxLayout(this);
+    KNS3::Button *downloadButton = new KNS3::Button(i18n("Get New Plugins..."), QStringLiteral("krunner.knsrc"), this);
+    connect(downloadButton, &KNS3::Button::dialogFinished, this, [this](const KNS3::Entry::List &changedEntries) {
+       if (!changedEntries.isEmpty()) {
+           m_pluginSelector->clearPlugins();
+           m_pluginSelector->addPlugins(Plasma::RunnerManager::listRunnerInfo(),
+                                        KPluginSelector::ReadConfigFile,
+                                        i18n("Available Plugins"), QString(),
+                                        KSharedConfig::openConfig(QStringLiteral("krunnerrc")));
+       }
+    });
+    downloadLayout->addStretch();
+    downloadLayout->addWidget(downloadButton);
+    layout->addLayout(downloadLayout);
 }
 
 void SearchConfigModule::load()
