@@ -70,10 +70,6 @@ void XInputEventNotifier::start()
 void XInputEventNotifier::stop()
 {
 	XEventNotifier::stop();
-
-	if( QCoreApplication::instance() != nullptr ) {
-	//    XEventNotifier::unregisterForNewDeviceEvent(QX11Info::display());
-	}
 }
 
 bool XInputEventNotifier::processOtherEvents(xcb_generic_event_t* event)

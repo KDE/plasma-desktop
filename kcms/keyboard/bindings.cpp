@@ -84,23 +84,6 @@ void KeyboardLayoutActionCollection::setToggleShortcut(const QKeySequence& keySe
     KGlobalAccel::self()->setShortcut(getToggleAction(), QList<QKeySequence>() << keySequence, KGlobalAccel::NoAutoloading);
 }
 
-//KAction* KeyboardLayoutActionCollection::setShortcut(LayoutUnit& layoutUnit, const QKeySequence& keySequence, const Rules* rules)
-//{
-//	KAction* action = getAction(layoutUnit);
-//	if( action == NULL && ! keySequence.isEmpty() ) {
-//		action = createLayoutShortcutActon(layoutUnit, rules, false);
-//	}
-//	else if( action != NULL && keySequence.isEmpty() ){
-////		action->setGlobalShortcut(KShortcut(keySequence), KAction::ActiveShortcut, KAction::NoAutoloading);	// do we need this?
-//		removeAction(action);
-//		action = NULL;
-//	}
-////	if( configAction ) {
-////		layoutUnit.setShortcut(keySequence);	// shortcut was restored
-////	}
-//	return action;
-//}
-
 void KeyboardLayoutActionCollection::setLayoutShortcuts(QList<LayoutUnit>& layoutUnits, const Rules* rules)
 {
 	for (QList<LayoutUnit>::iterator i = layoutUnits.begin(); i != layoutUnits.end(); ++i) {
@@ -129,15 +112,6 @@ void KeyboardLayoutActionCollection::loadLayoutShortcuts(QList<LayoutUnit>& layo
 	}
 	qCDebug(KCM_KEYBOARD) << "Cleaning component shortcuts on load" << KGlobalAccel::cleanComponent(COMPONENT_NAME);
 }
-
-//KAction* KeyboardLayoutActionCollection::getAction(const LayoutUnit& layoutUnit)
-//{
-//	for(int i=1; i<actions().size(); i++) {
-//		if( action(i)->data() == layoutUnit.toString() )
-//			return static_cast<KAction*>(action(i));
-//	}
-//	return NULL;
-//}
 
 void KeyboardLayoutActionCollection::resetLayoutShortcuts()
 {

@@ -287,15 +287,6 @@ void LabelEditDelegate::updateEditorGeometry(QWidget *editor,
     editor->setGeometry(option.rect);
 }
 
-//void LabelEditDelegate::paint( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const
-//{
-//	QStyleOptionViewItem option2(option);
-////	option2.decorationPosition =  QStyleOptionViewItem::Right;
-//	option2.decorationAlignment = Qt::AlignHCenter | Qt::AlignVCenter;
-//	QStyledItemDelegate::paint(painter, option2, index);
-//}
-
-
 //
 // VariantComboDelegate
 //
@@ -382,15 +373,6 @@ QWidget *KKeySequenceWidgetDelegate::createEditor(QWidget *parent, const QStyleO
 
     return editor;
 }
-
-//void KKeySequenceWidgetDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
-//{
-//	KKeySequenceWidget *kkeysequencewidget = static_cast<KKeySequenceWidget*>(editor);
-//	QString shortcut = index.model()->data(index, Qt::EditRole).toString();
-//	kkeysequencewidget->setKeySequence(QKeySequence(shortcut));
-//	kkeysequencewidget->captureKeySequence();
-//	qDebug() << "set editor data";
-//}
 
 void KKeySequenceWidgetDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
                                               const QModelIndex &index) const
@@ -502,8 +484,5 @@ void XkbOptionsTreeModel::gotoGroup(const QString& groupName, QTreeView* view) {
         view->selectionModel()->setCurrentIndex(modelIdx, QItemSelectionModel::Current);
         view->setFocus(Qt::OtherFocusReason);
     }
-//    else {
-//        qDebug() << "can't scroll to group" << group;
-//    }
 }
 
