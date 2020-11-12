@@ -77,10 +77,10 @@ KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent)
 
   connect(_numlockButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(changed()));
 
-  _keyboardRepeatButtonGroup = new QButtonGroup(ui.keyboardRepeatButtonGroup);
-  _keyboardRepeatButtonGroup->addButton(ui.keyboardRepeatOnRadioButton, 0);
-  _keyboardRepeatButtonGroup->addButton(ui.keyboardRepeatOffRadioButton, 1);
-  _keyboardRepeatButtonGroup->addButton(ui.keyboardRepeatUnchangedRadioButton, 2);
+  _keyboardRepeatButtonGroup = new QButtonGroup(ui.repeatFormLayout);
+  _keyboardRepeatButtonGroup->addButton(ui.accentMenuRadioButton, 0);
+  _keyboardRepeatButtonGroup->addButton(ui.repeatRadioButton, 1);
+  _keyboardRepeatButtonGroup->addButton(ui.nothingRadioButton, 2);
 
   connect(_keyboardRepeatButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(changed()));
   connect(_keyboardRepeatButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(keyboardRepeatStateChanged(int)));
@@ -101,10 +101,9 @@ KCMiscKeyboardWidget::~KCMiscKeyboardWidget()
 }
 
 // set the slider and LCD values
-void KCMiscKeyboardWidget::setRepeat(TriState keyboardRepeat, int delay_, double rate_)
+void KCMiscKeyboardWidget::setRepeat(KeyBehaviour keyboardRepeat, int delay_, double rate_)
 {
-	TriStateHelper::setTriState( _keyboardRepeatButtonGroup, keyboardRepeat );
-//    ui.repeatBox->setChecked(r == AutoRepeatModeOn);
+    _keyboardRepeatButtonGroup->button(keyboardRepeat)->click();
     ui.delay->setValue(delay_);
     ui.rate->setValue(rate_);
     delaySpinboxChanged(delay_);
@@ -130,15 +129,14 @@ void KCMiscKeyboardWidget::load()
   ui.rate->blockSignals(true);
 
   // need to read as string to support old "true/false" parameter
-  QString key = config.readEntry("KeyboardRepeating", TriStateHelper::getString(STATE_ON));
-  if( key == QLatin1String("true") || key == TriStateHelper::getString(STATE_ON)) {
-	  keyboardRepeat = STATE_ON;
+  QString key = config.readEntry("KeyRepeat", TriStateHelper::getString(STATE_ON));
+  if( key == QLatin1String("true") || key == TriStateHelper::getString(STATE_ON) || key == QLatin1String("accent")) {
+	  keyboardRepeat = KeyBehaviour::AccentMenu;
   }
-  else if( key == QLatin1String("false") || key == TriStateHelper::getString(STATE_OFF)) {
-	  keyboardRepeat = STATE_OFF;
-  }
-  else {
-	  keyboardRepeat = STATE_UNCHANGED;
+  else if( key == QLatin1String("false") || key == TriStateHelper::getString(STATE_OFF) || key == QLatin1String("nothing")) {
+	  keyboardRepeat = KeyBehaviour::DoNothing;
+  } else if (key == QLatin1String("repeat")) {
+    keyboardRepeat = KeyBehaviour::RepeatKey;
   }
 
 //  keyboardRepeat = (key ? AutoRepeatModeOn : AutoRepeatModeOff);
@@ -159,19 +157,19 @@ void KCMiscKeyboardWidget::save()
 {
   KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kcminputrc"), KConfig::NoGlobals), "Keyboard");
 
-  keyboardRepeat = TriStateHelper::getTriState(_keyboardRepeatButtonGroup);
+  keyboardRepeat = KeyBehaviour(_keyboardRepeatButtonGroup->checkedId());
   numlockState = TriStateHelper::getTriState(_numlockButtonGroup);
 
-  config.writeEntry("KeyboardRepeating", TriStateHelper::getInt(keyboardRepeat));
-  config.writeEntry("RepeatRate", ui.rate->value() );
-  config.writeEntry("RepeatDelay", ui.delay->value() );
+  config.writeEntry("KeyRepeat", keybehaviourNames[KeyBehaviour(_keyboardRepeatButtonGroup->checkedId())], KConfig::Notify);
+  config.writeEntry("RepeatRate", ui.rate->value(), KConfig::Notify );
+  config.writeEntry("RepeatDelay", ui.delay->value(), KConfig::Notify );
   config.writeEntry("NumLock", TriStateHelper::getInt(numlockState) );
   config.sync();
 }
 
 void KCMiscKeyboardWidget::defaults()
 {
-    setRepeat(STATE_ON, DEFAULT_REPEAT_DELAY, DEFAULT_REPEAT_RATE);
+    setRepeat(KeyBehaviour::AccentMenu, DEFAULT_REPEAT_DELAY, DEFAULT_REPEAT_RATE);
     TriStateHelper::setTriState( _numlockButtonGroup, STATE_UNCHANGED );
     emit changed(true);
 }
@@ -225,7 +223,6 @@ void KCMiscKeyboardWidget::changed()
 
 void KCMiscKeyboardWidget::keyboardRepeatStateChanged(int selection)
 {
-	bool enabled = selection == TriStateHelper::getInt(STATE_ON);
-	ui.keyboardRepeatParamsGroupBox->setEnabled(enabled);
+	ui.keyboardRepeatParamsGroupBox->setVisible(selection == KeyBehaviour::RepeatKey);
 	changed();
 }

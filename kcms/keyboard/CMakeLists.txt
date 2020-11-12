@@ -94,6 +94,11 @@ set(kcm_keyboard_PART_SRCS
   bindings.cpp
   tastenbrett.cpp)
 
+install(FILES kcminputrc_repeat.upd
+        DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
+install(PROGRAMS kcminputrc_migrate_repeat_value.py
+        DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
+
 ecm_qt_declare_logging_category(kcm_keyboard_PART_SRCS
     HEADER debug.h
     IDENTIFIER KCM_KEYBOARD
