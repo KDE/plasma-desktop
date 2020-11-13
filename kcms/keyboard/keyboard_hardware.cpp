@@ -58,42 +58,32 @@ void set_repeatrate(int delay, double rate)
 }
 
 static
-int set_repeat_mode(TriState keyboardRepeatMode)
+int set_repeat_mode(bool enabled)
 {
 	XKeyboardState   kbd;
 	XKeyboardControl kbdc;
 
 	XGetKeyboardControl(QX11Info::display(), &kbd);
 
-	int flags = 0;
-	if( keyboardRepeatMode != STATE_UNCHANGED ) {
-		flags |= KBAutoRepeatMode;
-		kbdc.auto_repeat_mode = (keyboardRepeatMode==STATE_ON ? AutoRepeatModeOn : AutoRepeatModeOff);
-	}
+	kbdc.auto_repeat_mode = (enabled ? AutoRepeatModeOn : AutoRepeatModeOff);
 
-	return XChangeKeyboardControl(QX11Info::display(), flags, &kbdc);
+	return XChangeKeyboardControl(QX11Info::display(), KBAutoRepeatMode, &kbdc);
 }
 
 void init_keyboard_hardware()
 {
     KConfigGroup config(KSharedConfig::openConfig( QStringLiteral("kcminputrc") ), "Keyboard");
 
-	QString keyRepeatStr = config.readEntry("KeyboardRepeating", TriStateHelper::getString(STATE_ON));
-	TriState keyRepeat = STATE_UNCHANGED;
-	if( keyRepeatStr == QLatin1String("true") || keyRepeatStr == TriStateHelper::getString(STATE_ON) ) {
-		keyRepeat = STATE_ON;
-	}
-	else if( keyRepeatStr == QLatin1String("false") || keyRepeatStr == TriStateHelper::getString(STATE_OFF) ) {
-		keyRepeat = STATE_OFF;
-	}
+	QString keyRepeatStr = config.readEntry("KeyRepeat", "accent");
 
-	if( keyRepeat == STATE_ON ) {
+	if (keyRepeatStr == QLatin1String("accent") || keyRepeatStr == QLatin1String("repeat")) {
 		int delay_ = config.readEntry("RepeatDelay", DEFAULT_REPEAT_DELAY);
 		double rate_ = config.readEntry("RepeatRate", DEFAULT_REPEAT_RATE);
 		set_repeatrate(delay_, rate_);
+		set_repeat_mode(true);
+	} else {
+		set_repeat_mode(false);
 	}
-
-	set_repeat_mode(keyRepeat);
 
 	TriState numlockState = TriStateHelper::getTriState( config.readEntry( "NumLock", TriStateHelper::getInt(STATE_UNCHANGED) ) );
 	if( numlockState != STATE_UNCHANGED ) {
