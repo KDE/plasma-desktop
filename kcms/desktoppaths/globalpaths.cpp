@@ -72,7 +72,6 @@ DesktopPathConfig::~DesktopPathConfig()
 void DesktopPathConfig::updateDefaultIndicator()
 {
     setDefaultIndicatorVisible(m_ui->kcfg_desktopLocation, m_data->settings()->defaultDesktopLocation());
-    setDefaultIndicatorVisible(m_ui->kcfg_autostartLocation, m_data->settings()->defaultAutostartLocation());
     setDefaultIndicatorVisible(m_ui->kcfg_documentsLocation, m_data->settings()->defaultDocumentsLocation());
     setDefaultIndicatorVisible(m_ui->kcfg_downloadsLocation, m_data->settings()->defaultDownloadsLocation());
     setDefaultIndicatorVisible(m_ui->kcfg_musicLocation, m_data->settings()->defaultMusicLocation());
