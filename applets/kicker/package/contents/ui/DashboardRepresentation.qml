@@ -19,6 +19,7 @@
 
 import QtQuick 2.4
 import QtGraphicalEffects 1.0
+import QtQml 2.15
 
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -493,6 +494,7 @@ Kicker.DashboardWindow {
                         target: globalFavorites
                         property: "iconSize"
                         value: root.iconSize
+                        restoreMode: Binding.RestoreBinding
                     }
                 }
 

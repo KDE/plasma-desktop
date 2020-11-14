@@ -20,6 +20,7 @@ import QtQuick 2.0
 import org.kde.plasma.configuration 2.0
 import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Layouts 1.1
+import QtQml 2.15
 
 import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.plasma.private.shell 2.0 as ShellPrivate // for WallpaperPlugin
@@ -152,6 +153,7 @@ ColumnLayout {
             target: categoriesScroll //from parent scope AppletConfiguration
             property: "enabled"
             value: !switchContainmentWarning.visible
+            restoreMode: Binding.RestoreBinding
         }
     }
 

@@ -79,6 +79,7 @@ KCM.AbstractKCM {
                 target: kcm.filteredModel
                 property: "filter"
                 value: search.text
+                restoreMode: Binding.RestoreBinding
             }
         }
         GridLayout  {
