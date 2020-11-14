@@ -30,8 +30,8 @@ K_EXPORT_PLASMA_RUNNER_WITH_JSON(PlasmaDesktopRunner, "plasma-runner-plasma-desk
 
 static const QString s_plasmaService = QLatin1String("org.kde.plasmashell");
 
-PlasmaDesktopRunner::PlasmaDesktopRunner(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args),
+PlasmaDesktopRunner::PlasmaDesktopRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::AbstractRunner(parent, metaData, args),
       m_desktopConsoleKeyword(i18nc("Note this is a KRunner keyword", "desktop console")),
       m_kwinConsoleKeyword(i18nc("Note this is a KRunner keyword", "wm console")),
       m_enabled(false)

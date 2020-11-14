@@ -30,8 +30,8 @@ K_EXPORT_PLASMA_RUNNER_WITH_JSON(KWinRunner, "plasma-runner-kwin.json")
 static const QString s_kwinService = QStringLiteral("org.kde.KWin");
 static const QString s_keyword = QStringLiteral("KWin");
 
-KWinRunner::KWinRunner(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args),
+KWinRunner::KWinRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::AbstractRunner(parent, metaData, args),
       m_enabled(false)
 {
     setObjectName(s_keyword);
