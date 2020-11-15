@@ -62,6 +62,7 @@ private Q_SLOTS:
 public Q_SLOTS:
 	Q_SCRIPTABLE bool setLayout(const QString& layout);
 	Q_SCRIPTABLE QString getCurrentLayout();
+	Q_SCRIPTABLE QString getCurrentLayoutLongName() const;
 	Q_SCRIPTABLE QStringList getLayoutsList();
 	Q_SCRIPTABLE QString getLayoutDisplayName(const QString &layout);
 

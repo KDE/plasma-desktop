@@ -47,6 +47,7 @@ KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant>&)
 	  xEventNotifier(nullptr),
 	  layoutTrayIcon(nullptr),
 	  layoutMemory(keyboardConfig),
+	  currentLayout(X11Helper::getCurrentLayout()),
 	  rules(Rules::readRules(Rules::READ_EXTRAS))
 {
 	if( ! X11Helper::xkbSupported(nullptr) )
@@ -232,7 +233,12 @@ bool KeyboardDaemon::setLayout(const QString& layout)
 
 QString KeyboardDaemon::getCurrentLayout()
 {
-	return X11Helper::getCurrentLayout().toString();
+	return currentLayout.toString();
+}
+
+QString KeyboardDaemon::getCurrentLayoutLongName() const
+{
+	return Flags::getLongText(currentLayout, rules);
 }
 
 QStringList KeyboardDaemon::getLayoutsList()
