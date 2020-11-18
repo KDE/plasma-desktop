@@ -156,7 +156,7 @@ KAccessConfig::KAccessConfig(QObject *parent, const QVariantList& args)
     , m_bellSettings(new BellSettings(this))
     , m_keyboardSettings(new KeyboardSettings(this))
     , m_screenReaderSettings(new ScreenReaderSettings(this))
-    , m_desktopShortcutInfo(mouseKeysShortcut(QX11Info::display()))
+    , m_desktopShortcutInfo(QX11Info::isPlatformX11() ? mouseKeysShortcut(QX11Info::display()) : QString())
 {
     qmlRegisterType<MouseSettings>();
     qmlRegisterType<BellSettings>();
