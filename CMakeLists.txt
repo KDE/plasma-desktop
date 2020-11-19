@@ -161,20 +161,6 @@ endif()
 
 include(ConfigureChecks.cmake)
 
-find_package(Breeze ${PROJECT_VERSION} CONFIG)
-set_package_properties(Breeze PROPERTIES
-                       TYPE OPTIONAL
-                       PURPOSE "For setting the default window decoration plugin")
-if(${Breeze_FOUND})
-    if(${BREEZE_WITH_KDECORATION})
-        set(HAVE_BREEZE_DECO true)
-    else()
-        set(HAVE_BREEZE_DECO FALSE)
-    endif()
-else()
-    set(HAVE_BREEZE_DECO FALSE)
-endif()
-
 find_package(PackageKitQt5)
 set_package_properties(PackageKitQt5
         PROPERTIES DESCRIPTION "Software Manager integration"
