@@ -23,8 +23,10 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 
 BaseView {
     objectName: "LeaveView"
-
     model: Kicker.SystemModel {
         favoritesModel: globalFavorites
+    }
+    delegate: KickoffItem {
+        usePlasmaIcon: true
     }
 }
