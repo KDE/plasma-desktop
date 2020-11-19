@@ -51,6 +51,7 @@ Item {
     property bool hasActionList: ((model.favoriteId !== null)
         || (("hasActionList" in model) && (model.hasActionList === true)))
     property Item menu: actionMenu
+    property alias usePlasmaIcon: elementIcon.usesPlasmaTheme
 
     onAboutToShowActionMenu: {
         var actionList = hasActionList ? model.actionList : [];
