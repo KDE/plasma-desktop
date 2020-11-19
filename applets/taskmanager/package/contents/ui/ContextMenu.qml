@@ -445,6 +445,26 @@ PlasmaComponents.ContextMenu {
                 }
 
                 menu.newSeparator(activitiesDesktopsMenu);
+
+                for (var i = 0; i < runningActivities.length; ++i) {
+                    var activityId = runningActivities[i];
+                    var onActivities = menu.get(atm.Activities);
+
+                    // if the task is on a single activity, don't insert a "move to" item for that activity
+                    if(onActivities.length == 1 && onActivities[0] == activityId) {
+                        continue;
+                    }
+
+                    menuItem = menu.newMenuItem(activitiesDesktopsMenu);
+                    menuItem.text = i18n("Move to %1", activityInfo.activityName(activityId))
+                    menuItem.clicked.connect((function(activityId) {
+                        return function () {
+                            return tasksModel.requestActivities(menu.modelIndex, [activityId]);
+                        };
+                    })(activityId));
+                }
+
+                menu.newSeparator(activitiesDesktopsMenu);
             }
 
             Component.onCompleted: refresh()
