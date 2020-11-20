@@ -317,13 +317,23 @@ SimpleKCM {
 
                             Image {
                                 id: imgDelegate
+                                visible: false
                                 smooth: true
                                 mipmap: true
-
-                                anchors.fill: parent
+                                sourceSize.width: Kirigami.Units.gridUnit * 5
+                                sourceSize.height: Kirigami.Units.gridUnit * 5
                                 source: modelData
 
                                 Accessible.ignored: true
+                            }
+
+                            Kirigami.ShadowedTexture {
+                                radius: width / 2
+                                anchors.centerIn: parent
+                                width: Kirigami.Units.gridUnit * 5
+                                height: Kirigami.Units.gridUnit * 5
+
+                                source: imgDelegate
                             }
 
                             onClicked: {
