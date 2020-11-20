@@ -34,7 +34,7 @@
 #include <QStorageInfo>
 
 #include <KAccounts/Core>
-#include <KAccounts/getcredentialsjob.h>
+#include <KAccounts/GetCredentialsJob>
 #include <Accounts/Manager>
 #include <Accounts/AccountService>
 
