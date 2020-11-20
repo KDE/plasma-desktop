@@ -57,6 +57,20 @@ KCMUser::KCMUser(QObject *parent, const QVariantList &args)
     auto font = QApplication::font("QLabel");
     auto fm = QFontMetrics(font);
     setColumnWidth(fm.capHeight()*30);
+
+    const auto dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("plasma-avatars"), QStandardPaths::LocateDirectory);
+    for (const auto& dir : dirs) {
+        QDirIterator it(
+            dir,
+            QStringList{ QStringLiteral("*.jpg"), QStringLiteral("*.png") },
+            QDir::Files,
+            QDirIterator::Subdirectories
+        );
+
+        while (it.hasNext()) {
+            m_avatarFiles << it.next();
+        }
+    }
 }
 
 bool KCMUser::createUser(const QString& name, const QString& realName, const QString& password, bool isAdmin)

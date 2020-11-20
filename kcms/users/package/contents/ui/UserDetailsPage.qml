@@ -306,45 +306,7 @@ SimpleKCM {
                     }
 
                     Repeater {
-                        model: [
-                            "Artist Konqi.png",
-                            "Bookworm Konqi.png",
-                            "Boss Konqi.png",
-                            "Bug Catcher Konqi.png",
-                            "Card Shark Konqi.png",
-                            "Hacker Konqi.png",
-                            "Journalist Konqi.png",
-                            "Katie.png",
-                            "Konqi.png",
-                            "Mechanic Konqi.png",
-                            "Messenger Konqi.png",
-                            "Musician Konqi.png",
-                            "Office Worker Konqi.png",
-                            "PC Builder Konqi.png",
-                            "Scientist Konqi.png",
-                            "Teacher Konqi.png",
-                            "Virtual Reality Konqi.png",
-                            "photos/Air Balloon.png",
-                            "photos/Astronaut.png",
-                            "photos/Books.png",
-                            "photos/Brushes.png",
-                            "photos/Bulb.png",
-                            "photos/Car.png",
-                            "photos/Cat.png",
-                            "photos/Chameleon.png",
-                            "photos/Cocktail.png",
-                            "photos/Dog.png",
-                            "photos/Fish.png",
-                            "photos/Gamepad.png",
-                            "photos/Owl.png",
-                            "photos/Pancakes.png",
-                            "photos/Parrot.png",
-                            "photos/Pencils.png",
-                            "photos/Shuttle.png",
-                            "photos/Soccer.png",
-                            "photos/Sunflower.png",
-                            "photos/Sushi.png"
-                        ]
+                        model: kcm.avatarFiles
                         QQC2.Button {
                             Layout.preferredHeight: Kirigami.Units.gridUnit * 6
                             Layout.preferredWidth: Layout.preferredHeight
@@ -359,7 +321,7 @@ SimpleKCM {
                                 mipmap: true
 
                                 anchors.fill: parent
-                                source: "../img/%1".arg(modelData)
+                                source: modelData
 
                                 Accessible.ignored: true
                             }
