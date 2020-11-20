@@ -27,12 +27,9 @@
 
 #include "attica_plugin_debug.h"
 
-#include <KServiceTypeTrader>
 #include <KConfigGroup>
 #include <KCMultiDialog>
 #include <KLocalizedString>
-#include <KStringHandler>
-#include <KMessageBox>
 #include <QNetworkDiskCache>
 #include <QStorageInfo>
 
