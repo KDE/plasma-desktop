@@ -49,6 +49,7 @@ kickoff.writeConfig("global", "Alt+F1")
 //panel.addWidget("org.kde.plasma.showActivityManager")
 panel.addWidget("org.kde.plasma.pager")
 panel.addWidget("org.kde.plasma.icontasks")
+panel.addWidget("org.kde.plasma.marginsseparator")
 
 /* Next up is determining whether to add the Input Method Panel
  * widget to the panel or not. This is done based on whether

@@ -21,6 +21,7 @@ var layout;
 var root;
 var plasmoid;
 var lastSpacer;
+var marginHighlights;
 
 
 function restore() {
@@ -67,12 +68,16 @@ function save() {
         }
     }
     plasmoid.configuration.AppletOrder = ids.join(';');
+    updateMargins();
 }
 
 function removeApplet (applet) {
     for (var i = layout.children.length - 1; i >= 0; --i) {
         var child = layout.children[i];
         if (child.applet === applet) {
+            // This makes sure the child is not in the layout.children anymore
+            // even while it's being destroyed.
+            child.parent = root;
             child.destroy();
         }
     }
@@ -207,4 +212,37 @@ function insertAtCoordinates(item, x, y) {
     } else {
         return insertAfter(child, item);
     }
+}
+
+function updateMargins() {
+    for (var i = 0; i < marginHighlights.length; ++i) {
+        marginHighlights[i].destroy();
+    }
+    marginHighlights = [];
+    var inThickArea = false;
+    var startApplet = undefined;
+    for (var i = 0; i < layout.children.length; ++i) {
+        var child = layout.children[i];
+        if (child.dragging) {child = child.dragging}
+        if (child.applet) {
+            child.inThickArea = inThickArea;
+            if ((child.applet.constraintHints & PlasmaCore.Types.MarginAreasSeparator) == PlasmaCore.Types.MarginAreasSeparator) {
+                var marginRect = rectHighlightEl.createObject(root, {
+                    startApplet: startApplet,
+                    endApplet: child,
+                    thickArea: inThickArea
+                });
+                marginHighlights.push(marginRect);
+                var startApplet = child;
+                inThickArea = !inThickArea;
+            }
+        }
+    }
+    if (marginHighlights.length == 0) return;
+    var marginRect = rectHighlightEl.createObject(root, {
+        startApplet: startApplet,
+        endApplet: undefined,
+        thickArea: inThickArea
+    });
+    marginHighlights.push(marginRect);
 }
