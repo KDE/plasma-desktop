@@ -101,11 +101,8 @@ void KeyboardConfig::load()
     xkbOptions = options.split(LIST_SEPARATOR, Qt::SkipEmptyParts);
 
     configureLayouts = config.readEntry("Use", false);
-    QString layoutsString = config.readEntry("LayoutList", "");
-    QStringList layoutStrings = layoutsString.split(LIST_SEPARATOR, Qt::SkipEmptyParts);
-//    if( layoutStrings.isEmpty() ) {
-//    	layoutStrings.append(DEFAULT_LAYOUT);
-//    }
+    const QStringList layoutStrings = config.readEntry("LayoutList", QStringList());
+    const QStringList variants = config.readEntry("VariantList", QStringList());
     layouts.clear();
     if (layoutStrings.isEmpty()) {
         QList<LayoutUnit> x11layouts = X11Helper::getLayoutsList();
@@ -113,8 +110,13 @@ void KeyboardConfig::load()
             layouts.append(layoutUnit);
         }
     } else {
-        for (const QString& layoutString : layoutStrings) {
-            layouts.append(LayoutUnit(layoutString));
+        QStringList::ConstIterator layout = layoutStrings.begin();
+        const int range = qMin(layoutStrings.size(), variants.size());
+        for (int i = 0; i < range; ++i) {
+            layouts.append({*layout++, variants.at(i)});
+        }
+        while (layout != layoutStrings.end()) {
+            layouts.append(LayoutUnit(*layout++));
         }
     }
     configureLayouts = !layouts.isEmpty();
@@ -168,14 +170,27 @@ void KeyboardConfig::save()
     config.writeEntry("Use", configureLayouts);
 
     QStringList layoutStrings;
+    QStringList variants;
     QStringList displayNames;
 //    QStringList shortcuts;
     foreach(const LayoutUnit& layoutUnit, layouts) {
-    	layoutStrings.append(layoutUnit.toString());
-    	displayNames.append(layoutUnit.getRawDisplayName());
+        layoutStrings.append(layoutUnit.layout());
+        variants.append(layoutUnit.variant());
+        displayNames.append(layoutUnit.getRawDisplayName());
 //    	shortcuts.append(layoutUnit.getShortcut().toString());
     }
+
+    auto cleanTail = [](QStringList &list)
+    {
+        while (!list.isEmpty() && list.constLast().isEmpty()) {
+            list.removeLast();
+        }
+    };
+    cleanTail(variants);
+    cleanTail(displayNames);
+
     config.writeEntry("LayoutList", layoutStrings.join(LIST_SEPARATOR));
+    config.writeEntry("VariantList", variants);
     config.writeEntry("DisplayNames", displayNames.join(LIST_SEPARATOR));
 //    config.writeEntry("LayoutShortcuts", shortcuts.join(LIST_SEPARATOR));
 
