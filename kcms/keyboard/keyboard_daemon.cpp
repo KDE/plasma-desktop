@@ -157,7 +157,7 @@ void KeyboardDaemon::registerListeners()
 	connect(xEventNotifier, &XInputEventNotifier::newPointerDevice, this, &KeyboardDaemon::configureMouse);
 	connect(xEventNotifier, &XInputEventNotifier::newKeyboardDevice, this, &KeyboardDaemon::configureKeyboard);
 	connect(xEventNotifier, &XEventNotifier::layoutMapChanged, this, &KeyboardDaemon::layoutMapChanged);
-	connect(xEventNotifier, &XEventNotifier::layoutChanged, this, &KeyboardDaemon::layoutChanged);
+	connect(xEventNotifier, &XEventNotifier::layoutChanged, this, &KeyboardDaemon::layoutChangedSlot);
 	xEventNotifier->start();
 }
 
@@ -167,12 +167,12 @@ void KeyboardDaemon::unregisterListeners()
 		xEventNotifier->stop();
 		disconnect(xEventNotifier, &XInputEventNotifier::newPointerDevice, this, &KeyboardDaemon::configureMouse);
 		disconnect(xEventNotifier, &XInputEventNotifier::newKeyboardDevice, this, &KeyboardDaemon::configureKeyboard);
-		disconnect(xEventNotifier, &XEventNotifier::layoutChanged, this, &KeyboardDaemon::layoutChanged);
+		disconnect(xEventNotifier, &XEventNotifier::layoutChanged, this, &KeyboardDaemon::layoutChangedSlot);
 		disconnect(xEventNotifier, &XEventNotifier::layoutMapChanged, this, &KeyboardDaemon::layoutMapChanged);
 	}
 }
 
-void KeyboardDaemon::layoutChanged()
+void KeyboardDaemon::layoutChangedSlot()
 {
 	//TODO: pass newLayout into layoutTrayIcon?
     LayoutUnit newLayout = X11Helper::getCurrentLayout();
