@@ -21,6 +21,8 @@
 import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
+import QtQml 2.15
+
 import org.kde.kirigami 2.10 as Kirigami
 import org.kde.kcm 1.2 as KCM
 import org.kde.private.kcms.style 1.0 as Private
@@ -34,12 +36,14 @@ KCM.ScrollViewKCM {
         target: kcm.filteredModel
         property: "query"
         value: searchField.text
+        restoreMode: Binding.RestoreBinding
     }
 
     Binding {
         target: kcm.filteredModel
         property: "statusFilter"
         value: filterCombo.model[filterCombo.currentIndex].statusFilter
+        restoreMode: Binding.RestoreBinding
     }
 
     header: ColumnLayout {
@@ -79,14 +83,14 @@ KCM.ScrollViewKCM {
 
             Connections {
                 target: kcm
-                onErrorMessage: {
+                function onErrorMessage(errorString) {
                     errorMessage.text = errorString;
                     errorMessage.visible = true;
                 }
-                onShowSelfDisablingModulesHint: {
+                function onShowSelfDisablingModulesHint() {
                     selfDisablingModulesHint.visible = true;
                 }
-                onShowRunningModulesChangedAfterSaveHint: {
+                function onShowRunningModulesChangedAfterSaveHint() {
                     runningModulesChangedAfterSaveHint.visible = true;
                 }
             }

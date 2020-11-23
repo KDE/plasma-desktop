@@ -57,7 +57,7 @@ Item {
     Connections {
         target: header
 
-        onQueryChanged: {
+        function onQueryChanged() {
             runnerModel.query = header.query;
             searchView.currentIndex = 0;
 
@@ -70,7 +70,7 @@ Item {
     Connections {
         target: runnerModel
 
-        onCountChanged: {
+        function onCountChanged() {
             if (runnerModel.count && !searchView.model) {
                 searchView.model = runnerModel.modelForRow(0);
             }

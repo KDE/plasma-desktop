@@ -27,7 +27,7 @@ class KWinRunner : public Plasma::AbstractRunner
     Q_OBJECT
 
     public:
-        explicit KWinRunner(QObject *parent, const QVariantList &args);
+        explicit KWinRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
         ~KWinRunner() override;
 
         void match(Plasma::RunnerContext &context) override;

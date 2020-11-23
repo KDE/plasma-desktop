@@ -18,6 +18,7 @@
 
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
+import QtQml 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.taskmanager 0.1 as TaskManager
@@ -215,6 +216,7 @@ Item {
                 return containment.Layout.preferredWidth
             }
         }
+        restoreMode: Binding.RestoreBinding
     }
 
     Binding {
@@ -228,6 +230,7 @@ Item {
 
             return containment.backgroundHints; 
         }
+        restoreMode: Binding.RestoreBinding
     }
 
     Item {

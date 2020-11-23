@@ -49,7 +49,9 @@ KCM.GridViewKCM {
 
             Connections {
                 target: kcm
-                onTestingFailed: testingFailedLabel.visible = true
+                function onTestingFailed() {
+                    testingFailedLabel.visible = true
+                }
             }
         }
     }

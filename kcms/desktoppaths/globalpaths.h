@@ -40,7 +40,7 @@ class DesktopPathsData;
 
 //-----------------------------------------------------------------------------
 // The "Path" Tab contains :
-// The paths for Desktop, Autostart and Documents
+// The paths for Desktop and Documents
 
 class DesktopPathConfig : public KCModule
 {

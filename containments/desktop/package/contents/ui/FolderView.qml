@@ -19,8 +19,9 @@
 
 import QtQuick 2.12
 import QtQuick.Layouts 1.1
-import org.kde.plasma.plasmoid 2.0
+import QtQml 2.15
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -160,7 +161,7 @@ FocusScope {
 
     Connections {
         target: dir
-        onPopupMenuAboutToShow: {
+        function onPopupMenuAboutToShow(dropJob, mimeData, x, y) {
             if (root.isContainment && !plasmoid.immutable) {
                 plasmoid.processMimeData(mimeData, x, y, dropJob);
             }
@@ -169,7 +170,7 @@ FocusScope {
 
     Connections {
         target: plasmoid
-        onExpandedChanged: {
+        function onExpandedChanged() {
             if (plasmoid.expanded && dir.status === Folder.FolderModel.Ready && !gridView.model) {
                 gridView.model = positioner;
             }
@@ -180,6 +181,7 @@ FocusScope {
         target: plasmoid
         property: "busy"
         value: !gridView.model && dir.status === Folder.FolderModel.Listing
+        restoreMode: Binding.RestoreBinding
     }
 
     function makeBackButton() {
@@ -209,7 +211,7 @@ FocusScope {
     Connections {
         target: root
 
-        onIsPopupChanged: {
+        function onIsPopupChanged() {
             if (backButton == null && root.useListViewMode) {
                 backButton = makeBackButton();
             } else if (backButton != null) {
@@ -1133,7 +1135,7 @@ FocusScope {
                 Connections {
                     target: units
 
-                    onIconSizesChanged: {
+                    function onIconSizesChanged() {
                         gridView.iconSize = gridView.makeIconSize();
                     }
                 }
@@ -1141,26 +1143,18 @@ FocusScope {
                 Connections {
                     target: plasmoid.configuration
 
-                    onIconSizeChanged: {
+                    function onIconSizeChanged() {
                         gridView.iconSize = gridView.makeIconSize();
                     }
-                }
-                
-                Connections {
-                    target: plasmoid.configuration
 
-                    onViewModeChanged: {
+                    function onViewModeChanged() {
                         gridView.iconSize = gridView.makeIconSize();
                     }
-                }
 
-                Connections {
-                   target: plasmoid.configuration
-
-                   onUrlChanged: {
-                       history = [];
-                       updateHistory();
-                   }
+                    function onUrlChanged() {
+                        history = [];
+                        updateHistory();
+                    }
                 }
             }
         }

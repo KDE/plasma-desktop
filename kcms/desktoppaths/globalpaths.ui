@@ -28,23 +28,6 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="0">
-    <widget class="QLabel" name="label_2">
-     <property name="text">
-      <string>Autostart path:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="1">
-    <widget class="KUrlRequester" name="kcfg_autostartLocation">
-     <property name="whatsThis">
-      <string>This folder contains applications or links to applications (shortcuts) that you want to have started automatically whenever the session starts. You can change the location of this folder if you want to, and the contents will move automatically to the new location as well.</string>
-     </property>
-     <property name="mode">
-         <enum>KFile::Directory</enum>
-     </property>
-    </widget>
-   </item>
    <item row="2" column="0">
     <widget class="QLabel" name="label_3">
      <property name="text">

@@ -33,9 +33,7 @@ public:
 	~KeyboardLayoutActionCollection() override;
 
 	QAction* getToggleAction();
-//	KAction* getAction(const LayoutUnit& layoutUnit);
 	QAction* createLayoutShortcutActon(const LayoutUnit& layoutUnit, const Rules* rules, bool autoload);
-//	KAction* setShortcut(LayoutUnit& layoutUnit, const QKeySequence& keySequence, const Rules* rules);
 	void setLayoutShortcuts(QList<LayoutUnit>& layoutUnits, const Rules* rules);
 	void setToggleShortcut(const QKeySequence& keySequence);
 	void loadLayoutShortcuts(QList<LayoutUnit>& layoutUnits, const Rules* rules);
@@ -44,8 +42,5 @@ public:
 private:
 	bool configAction;
 };
-
-//KActionCollection* createGlobalActionCollection(QObject *parent, KAction** mainAction);
-//KAction* createLayoutShortcutActon(KActionCollection* actionCollection, const LayoutUnit& layoutUnit, const Rules* rules);
 
 #endif /* BINDINGS_H_ */

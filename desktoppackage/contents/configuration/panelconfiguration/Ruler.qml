@@ -47,7 +47,9 @@ PlasmaCore.FrameSvgItem {
      */
     Connections {
         target: panel
-        onAlignmentChanged: offset = 0
+        function onAlignmentChanged() {
+            offset = 0
+        }
     }
 
     Component.onCompleted: {

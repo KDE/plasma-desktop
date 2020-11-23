@@ -49,7 +49,9 @@ Item {
 
     Connections {
         target: configDialog.currentContainmentActionsModel
-        onConfigurationChanged: root.configurationChanged()
+        function onConfigurationChanged() {
+            root.configurationChanged()
+        }
     }
 
     GridLayout {

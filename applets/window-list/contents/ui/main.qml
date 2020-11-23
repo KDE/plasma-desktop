@@ -77,7 +77,7 @@ FocusScope {
     Connections {
         target: plasmoid
 
-        onExpandedChanged: {
+        function onExpandedChanged(expanded) {
             if (!expanded) {
                 windowListView.currentIndex = 0;
             }

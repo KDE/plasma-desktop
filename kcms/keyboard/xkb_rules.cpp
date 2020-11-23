@@ -28,8 +28,6 @@
 #include <QXmlAttributes>
 
 #include <QtConcurrent>
-//#include <libintl.h>
-//#include <locale.h>
 
 #include "x11_helper.h"
 
@@ -55,12 +53,8 @@ public:
     bool endElement(const QString &namespaceURI, const QString &localName,
                     const QString &qName) override;
     bool characters(const QString &str) override;
-//    bool fatalError(const QXmlParseException &exception);
-//    QString errorString() const;
 
 private:
-//    QString getString(const QString& text);
-
     QStringList path;
     Rules* rules;
     const bool fromExtras;
@@ -115,7 +109,6 @@ void postProcess(Rules* rules)
 	removeEmptyItems(rules->modelInfos);
 	removeEmptyItems(rules->optionGroupInfos);
 
-//	setlocale(LC_ALL, "");
 //	bindtextdomain("xkeyboard-config", LOCALE_DIR);
 	for (ModelInfo *modelInfo : qAsConst(rules->modelInfos)) {
 		modelInfo->vendor = translate_xml_item(modelInfo->vendor);
@@ -305,57 +298,43 @@ bool RulesHandler::characters(const QString &str)
 		if( strPath.endsWith(QLatin1String("layoutList/layout/configItem/name")) ) {
 			if( rules->layoutInfos.last() != nullptr ) {
 				rules->layoutInfos.last()->name = str.trimmed();
-//				qCDebug(KCM_KEYBOARD) << "name:" << str;
 			}
-			// skipping invalid entry
 		}
 		else if( strPath.endsWith(QLatin1String("layoutList/layout/configItem/description")) ) {
 			rules->layoutInfos.last()->description = str.trimmed();
-//			qCDebug(KCM_KEYBOARD) << "descr:" << str;
 		}
 		else if( strPath.endsWith(QLatin1String("layoutList/layout/configItem/languageList/iso639Id")) ) {
 			rules->layoutInfos.last()->languages << str.trimmed();
-//			qCDebug(KCM_KEYBOARD) << "\tlang:" << str;
 		}
 		else if( strPath.endsWith(QLatin1String("layoutList/layout/variantList/variant/configItem/name")) ) {
 			rules->layoutInfos.last()->variantInfos.last()->name = str.trimmed();
-//			qCDebug(KCM_KEYBOARD) << "\tvariant name:" << str;
 		}
 		else if( strPath.endsWith(QLatin1String("layoutList/layout/variantList/variant/configItem/description")) ) {
 			rules->layoutInfos.last()->variantInfos.last()->description = str.trimmed();
-//			qCDebug(KCM_KEYBOARD) << "\tvariant descr:" << str;
 		}
 		else if( strPath.endsWith(QLatin1String("layoutList/layout/variantList/variant/configItem/languageList/iso639Id")) ) {
 			rules->layoutInfos.last()->variantInfos.last()->languages << str.trimmed();
-//			qCDebug(KCM_KEYBOARD) << "\tvlang:" << str;
 		}
 		else if( strPath.endsWith(QLatin1String("modelList/model/configItem/name")) ) {
 			rules->modelInfos.last()->name = str.trimmed();
-//			qCDebug(KCM_KEYBOARD) << "name:" << str;
 		}
 		else if( strPath.endsWith(QLatin1String("modelList/model/configItem/description")) ) {
 			rules->modelInfos.last()->description = str.trimmed();
-//			qCDebug(KCM_KEYBOARD) << "\tdescr:" << str;
 		}
 		else if( strPath.endsWith(QLatin1String("modelList/model/configItem/vendor")) ) {
 			rules->modelInfos.last()->vendor = str.trimmed();
-//			qCDebug(KCM_KEYBOARD) << "\tvendor:" << str;
 		}
 		else if( strPath.endsWith(QLatin1String("optionList/group/configItem/name")) ) {
 			rules->optionGroupInfos.last()->name = str.trimmed();
-//			qCDebug(KCM_KEYBOARD) << "name:" << str;
 		}
 		else if( strPath.endsWith(QLatin1String("optionList/group/configItem/description")) ) {
 			rules->optionGroupInfos.last()->description = str.trimmed();
-//			qCDebug(KCM_KEYBOARD) << "\tdescr:" << str;
 		}
 		else if( strPath.endsWith(QLatin1String("optionList/group/option/configItem/name")) ) {
 			rules->optionGroupInfos.last()->optionInfos.last()->name = str.trimmed();
-//			qCDebug(KCM_KEYBOARD) << "name:" << str;
 		}
 		else if( strPath.endsWith(QLatin1String("optionList/group/option/configItem/description")) ) {
 			rules->optionGroupInfos.last()->optionInfos.last()->description = str.trimmed();
-//			qCDebug(KCM_KEYBOARD) << "\tdescr:" << str;
 		}
 	}
 	return true;
@@ -363,19 +342,7 @@ bool RulesHandler::characters(const QString &str)
 
 bool LayoutInfo::isLanguageSupportedByLayout(const QString& lang) const
 {
-	if( languages.contains(lang) || isLanguageSupportedByVariants(lang) )
-		return true;
-
-//	// return yes if no languages found in layout or its variants
-//	if( languages.empty() ) {
-//		foreach(const VariantInfo* info, variantInfos) {
-//			if( ! info->languages.empty() )
-//				return false;
-//		}
-//		return true;
-//	}
-
-	return false;
+	return languages.contains(lang) || isLanguageSupportedByVariants(lang);
 }
 
 bool LayoutInfo::isLanguageSupportedByVariants(const QString& lang) const

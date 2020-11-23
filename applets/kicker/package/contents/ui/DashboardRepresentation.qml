@@ -19,6 +19,7 @@
 
 import QtQuick 2.4
 import QtGraphicalEffects 1.0
+import QtQml 2.15
 
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -124,7 +125,7 @@ Kicker.DashboardWindow {
         Connections {
             target: kicker
 
-            onReset: {
+            function onReset() {
                 if (!root.searching) {
                     filterList.applyFilter();
 
@@ -134,8 +135,8 @@ Kicker.DashboardWindow {
                 }
             }
 
-            onDragSourceChanged: {
-                if (!dragSource) {
+            function onDragSourceChanged() {
+                if (!kicker.dragSource) {
                     // FIXME TODO HACK: Reset all views post-DND to work around
                     // mouse grab bug despite QQuickWindow::mouseGrabberItem==0x0.
                     // Needs a more involved hunt through Qt Quick sources later since
@@ -161,7 +162,7 @@ Kicker.DashboardWindow {
 
         Connections {
             target: plasmoid
-            onUserConfiguringChanged: {
+            function onUserConfiguringChanged() {
                 if (plasmoid.userConfiguring) {
                     root.hide()
                 }
@@ -493,6 +494,7 @@ Kicker.DashboardWindow {
                         target: globalFavorites
                         property: "iconSize"
                         value: root.iconSize
+                        restoreMode: Binding.RestoreBinding
                     }
                 }
 

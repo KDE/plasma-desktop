@@ -133,13 +133,15 @@ MouseArea {
                 placeHolder.height = item.height;
                 placeHolder.parent = configurationArea;
                 var posInItem = mapToItem(item, mouse.x, mouse.y);
+                let i = 0;
 
                 if ((plasmoid.formFactor === PlasmaCore.Types.Vertical && posInItem.y < item.height/2) ||
                     (plasmoid.formFactor !== PlasmaCore.Types.Vertical && posInItem.x < item.width/2)) {
-                    root.layoutManager.insertBefore(item, placeHolder);
+                    i = root.layoutManager.insertBefore(item, placeHolder);
                 } else {
-                    root.layoutManager.insertAfter(item, placeHolder);
+                    i = root.layoutManager.insertAfter(item, placeHolder);
                 }
+                if (i!=undefined) {root.layoutManager.updateMargins()}
             }
 
         } else {
@@ -209,6 +211,7 @@ MouseArea {
         lastY = mouse.y;
         placeHolder.width = currentApplet.width;
         placeHolder.height = currentApplet.height;
+        placeHolder.dragging = currentApplet;
         root.layoutManager.insertBefore(currentApplet, placeHolder);
         currentApplet.parent = moveAppletLayer;
         currentApplet.z = 900;
@@ -241,6 +244,7 @@ MouseArea {
 
     Item {
         id: placeHolder
+        property Item dragging
         visible: configurationArea.containsMouse
         Layout.fillWidth: currentApplet ? currentApplet.Layout.fillWidth : false
         Layout.fillHeight: currentApplet ? currentApplet.Layout.fillHeight : false
@@ -254,10 +258,10 @@ MouseArea {
 
     Connections {
         target: currentApplet
-        onXChanged: handle.x = currentApplet.x
-        onYChanged: handle.y = currentApplet.y
-        onWidthChanged: handle.width = currentApplet.width
-        onHeightChanged: handle.height = currentApplet.height
+        function onXChanged() {handle.x = currentApplet.x}
+        function onYChanged() {handle.y = currentApplet.y}
+        function onWidthChanged() {handle.width = currentApplet.width}
+        function onHeightChanged() {handle.height = currentApplet.height}
     }
 
     Rectangle {

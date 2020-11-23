@@ -59,14 +59,22 @@ PlasmaCore.FrameSvgItem {
 //BEGIN Connections
     Connections {
         target: panel
-        onOffsetChanged: ruler.offset = panel.offset
-        onMinimumLengthChanged: ruler.minimumLength = panel.minimumLength
-        onMaximumLengthChanged: ruler.maximumLength = panel.maximumLength
+        function onOffsetChanged() {
+            ruler.offset = panel.offset
+        }
+        function onMinimumLengthChanged() {
+            ruler.minimumLength = panel.minimumLength
+        }
+        function onMaximumLengthChanged() {
+            ruler.maximumLength = panel.maximumLength
+        }
     }
 
     Connections {
         target: plasmoid
-        onImmutableChanged: configDialog.close()
+        function onImmutableChanged() {
+            configDialog.close()
+        }
     }
 //END Connections
 

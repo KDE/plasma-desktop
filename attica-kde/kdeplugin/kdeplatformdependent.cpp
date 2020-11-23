@@ -27,17 +27,14 @@
 
 #include "attica_plugin_debug.h"
 
-#include <KServiceTypeTrader>
 #include <KConfigGroup>
 #include <KCMultiDialog>
 #include <KLocalizedString>
-#include <KStringHandler>
-#include <KMessageBox>
 #include <QNetworkDiskCache>
 #include <QStorageInfo>
 
 #include <KAccounts/Core>
-#include <KAccounts/getcredentialsjob.h>
+#include <KAccounts/GetCredentialsJob>
 #include <Accounts/Manager>
 #include <Accounts/AccountService>
 

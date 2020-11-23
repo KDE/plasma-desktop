@@ -1,5 +1,6 @@
 /*
  *  Copyright 2015 Marco Martin <mart@kde.org>
+ *  Copyright 2020 Nicolas Fella <nicolas.fella@gmx.de>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -22,37 +23,26 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 Item {
     id: page
 
-    width: parent.width
-    height: parent.height
-
-//BEGIN properties
     property QtObject kcm
 
-    signal configurationChanged
-//END properties
+    signal settingValueChanged()
 
-//BEGIN functions
     function saveConfig() {
         kcm.save()
     }
-//END functions
 
-//BEGIN connections
     onKcmChanged: {
-        kcm.mainUi.parent = page;
-        kcm.mainUi.anchors.fill = page;
-        kcm.load();
+        kcm.mainUi.parent = page
+        kcm.mainUi.anchors.fill = page
+        kcm.load()
     }
 
     Connections {
         target: kcm
-        onNeedsSaveChanged: {
+        function onNeedsSaveChanged() {
             if (kcm.needsSave) {
-                page.configurationChanged();
+                page.settingValueChanged()
             }
         }
     }
-//END connections
-
-
 }

@@ -68,11 +68,17 @@ KCM.SimpleKCM {
 
     Connections {
         target: kcm
-        onLoadRelay: cA.reloadData()
-        onSaveRelay: {
-            defaultRequested ? cA.sendConfigurationAll() : cA.sendConfiguration();
+        function onLoadRelay() {
+            cA.reloadData()
         }
-        onDefaultsRelay: {
+        function onSaveRelay() {
+            if (defaultRequested) {
+                cA.sendConfigurationAll()
+            } else {
+                cA.sendConfiguration();
+            }
+        }
+        function onDefaultsRelay() {
             if (!cA.nightColorAvailable) {
                 return;
             }
@@ -98,8 +104,10 @@ KCM.SimpleKCM {
 
     Connections {
         target: cA
-        onDataUpdated: calcNeedsSave()
-        onStagedDataReset: {
+        function onDataUpdated() {
+            calcNeedsSave()
+        }
+        function onStagedDataReset() {
             activator.checked = cA.active;
             tempSlider.value = cA.nightTemperature;
             modeSwitcher.currentIndex = cA.mode;
@@ -139,7 +147,7 @@ KCM.SimpleKCM {
 
             Connections {
                 target: root
-                onReset: {
+                function onReset() {
                     mornBeginManField.backend = cA.morningBeginFixed;
                     evenBeginManField.backend = cA.eveningBeginFixed;
                     transTimeField.value = cA.transitionTime;

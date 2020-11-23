@@ -330,7 +330,7 @@ KCM.SimpleKCM {
 
         Connections {
             target: kcm
-            onFirstLoadDone: {
+            function onFirstLoadDone() {
                 if (kcm.initialDesktopEntry || kcm.initialNotifyRcName) {
                         root.openSourcesSettings();
                 }

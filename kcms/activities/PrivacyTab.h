@@ -36,7 +36,6 @@ public:
     explicit PrivacyTab(QWidget *parent);
     ~PrivacyTab() override;
 
-    bool isDefault();
     KCoreConfigSkeleton *pluginConfig();
     
 public Q_SLOTS:

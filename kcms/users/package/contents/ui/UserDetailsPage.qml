@@ -59,7 +59,7 @@ SimpleKCM {
     Connections {
         target: kcm
 
-        onApply: {
+        function onApply() {
             errorMessage.visible = false
             usersDetailPage.user.realName = realNametextField.text
             usersDetailPage.user.email = emailTextField.text
@@ -70,7 +70,7 @@ SimpleKCM {
             usersDetailPage.oldImage = ""
         }
 
-        onReset: {
+        function onReset() {
             errorMessage.visible = false
             realNametextField.text = usersDetailPage.user.realName
             emailTextField.text = usersDetailPage.user.email

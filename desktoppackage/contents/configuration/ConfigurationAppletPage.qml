@@ -1,0 +1,74 @@
+/*
+ *  Copyright 2020 Nicolas Fella <nicolas.fella@gmx.de>
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
+ */
+
+import QtQuick 2.0
+
+import org.kde.kirigami 2.10 as Kirigami
+
+Kirigami.ScrollablePage {
+
+    id: root
+
+    property var configItem
+
+    signal settingValueChanged()
+
+    function saveConfig() {
+        for (var key in plasmoid.configuration) {
+            if (loader.item["cfg_" + key] != undefined) {
+                plasmoid.configuration[key] = loader.item["cfg_" + key]
+            }
+        }
+
+        // For ConfigurationContainmentActions.qml
+        if (loader.item.hasOwnProperty("saveConfig")) {
+            loader.item.saveConfig()
+        }
+    }
+
+    Loader {
+        id: loader
+        width: parent.width
+        // HACK the height of the loader is based on the implicitHeight of the content
+        // If the content item doesn't set one fall back to the height of its children
+        height: item.implicitHeight ? item.implicitHeight : item.childrenRect.height
+
+        Component.onCompleted: {
+            var plasmoidConfig = plasmoid.configuration
+
+            var props = {}
+            for (var key in plasmoidConfig) {
+                props["cfg_" + key] = plasmoid.configuration[key]
+            }
+
+            setSource(configItem.source, props)
+
+            for (var key in plasmoidConfig) {
+                var changedSignal = item["cfg_" + key + "Changed"]
+                if (changedSignal) {
+                    changedSignal.connect(root.settingValueChanged)
+                }
+            }
+
+            var configurationChangedSignal = item.configurationChanged
+            if (configurationChangedSignal) {
+                configurationChangedSignal.connect(root.settingValueChanged)
+            }
+        }
+    }
+}

@@ -69,7 +69,9 @@ Item {
     Connections {
         target: PlasmaCore.Units.iconSizeHints
 
-        onPanelChanged: root.updateSizeHints()
+        function onPanelChanged() {
+            root.updateSizeHints()
+        }
     }
 
     PlasmaCore.IconItem {

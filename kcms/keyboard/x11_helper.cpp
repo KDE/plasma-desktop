@@ -152,14 +152,6 @@ LayoutSet X11Helper::getCurrentLayouts()
 	return layoutSet;
 }
 
-
-//static QString addNum(const QString& str, int n)
-//{
-//    QString format("%1%2");
-//    if( str.length() >= 3 ) return format.arg(str.left(2)).arg(n);
-//    return format.arg(str).arg(n);
-//}
-
 QList<LayoutUnit> X11Helper::getLayoutsList()
 {
     if (!QX11Info::isPlatformX11()) {
@@ -176,18 +168,6 @@ QList<LayoutUnit> X11Helper::getLayoutsList()
 			}
 			layouts << LayoutUnit(layout, variant);
 		}
-		// if there are layouts with same map name add numbers to display name
-//		for(int i=0; i<layouts.length(); i++) {
-//			int n=1;
-//			for(int j=i+1; j<layouts.length(); j++) {
-//				if( layouts[i].layout == layouts[j].layout && layouts[i].getRawDisplayName().isEmpty() ) {
-//					layouts[i].setDisplayName( addNum(layouts[i].layout, 1) );
-//					layouts[j].setDisplayName( addNum(layouts[j].layout, ++n) );
-//					qCDebug(KCM_KEYBOARD) << "Adding" << 1 << "to" << layouts[i].toString();
-//					qCDebug(KCM_KEYBOARD) << "Adding" << n << "to" << layouts[j].toString();
-//				}
-//			}
-//		}
 	}
 	else {
 		qCWarning(KCM_KEYBOARD) << "Failed to get layout groups from X server";
@@ -374,18 +354,6 @@ bool XEventNotifier::nativeEventFilter(const QByteArray &eventType, void *messag
     }
     return false;
 }
-
-//bool XEventNotifier::x11Event(XEvent * event)
-//{
-//	//    qApp->x11ProcessEvent ( event );
-//	if( isXkbEvent(event) ) {
-//		processXkbEvents(event);
-//	}
-//	else {
-//		processOtherEvents(event);
-//	}
-//	return QWidget::x11Event(event);
-//}
 
 bool XEventNotifier::isGroupSwitchEvent(_xkb_event* xkbEvent)
 {

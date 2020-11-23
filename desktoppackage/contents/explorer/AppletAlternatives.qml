@@ -123,7 +123,7 @@ PlasmaCore.Dialog {
 
                     Connections {
                         target: mainList
-                        onCurrentIndexChanged: {
+                        function onCurrentIndexChanged() {
                             if (mainList.currentIndex === index) {
                                 root.currentPlugin = model.pluginName
                             }

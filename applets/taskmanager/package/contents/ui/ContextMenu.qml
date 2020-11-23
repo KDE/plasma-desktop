@@ -304,9 +304,9 @@ PlasmaComponents.ContextMenu {
         Connections {
             target: virtualDesktopInfo
 
-            onNumberOfDesktopsChanged: Qt.callLater(virtualDesktopsMenu.refresh)
-            onDesktopIdsChanged: Qt.callLater(virtualDesktopsMenu.refresh)
-            onDesktopNamesChanged: Qt.callLater(virtualDesktopsMenu.refresh)
+            function onNumberOfDesktopsChanged() {Qt.callLater(virtualDesktopsMenu.refresh)}
+            function onDesktopIdsChanged() {Qt.callLater(virtualDesktopsMenu.refresh)}
+            function onDesktopNamesChanged() {Qt.callLater(virtualDesktopsMenu.refresh)}
         }
 
         PlasmaComponents.ContextMenu {
@@ -384,7 +384,9 @@ PlasmaComponents.ContextMenu {
         Connections {
             target: activityInfo
 
-            onNumberOfRunningActivitiesChanged: activitiesDesktopsMenu.refresh()
+            function onNumberOfRunningActivitiesChanged() {
+                activitiesDesktopsMenu.refresh()
+            }
         }
 
         PlasmaComponents.ContextMenu {
@@ -653,7 +655,9 @@ PlasmaComponents.ContextMenu {
 
         Connections {
             target: activityInfo
-            onNumberOfRunningActivitiesChanged: activitiesDesktopsMenu.refresh()
+            function onNumberOfRunningActivitiesChanged() {
+                activitiesDesktopsMenu.refresh()
+            }
         }
 
         PlasmaComponents.ContextMenu {

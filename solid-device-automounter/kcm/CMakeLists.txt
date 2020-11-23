@@ -6,6 +6,14 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
 
 ki18n_wrap_ui(kcm_device_automounter_SRCS DeviceAutomounterKCM.ui)
 
+kcmutils_generate_module_data(
+    kcm_device_automounter_SRCS
+    MODULE_DATA_HEADER DeviceAutomounterData.h
+    MODULE_DATA_CLASS_NAME DeviceAutomounterData
+    SETTINGS_HEADERS AutomounterSettings.h
+    SETTINGS_CLASSES AutomounterSettings
+)
+
 kconfig_add_kcfg_files(kcm_device_automounter_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/../lib/AutomounterSettingsBase.kcfgc ${CMAKE_CURRENT_SOURCE_DIR}/LayoutSettings.kcfgc)
 
 add_library(kcm_device_automounter ${kcm_device_automounter_SRCS} ${device_automounter_lib_SRCS})

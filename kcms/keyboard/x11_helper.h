@@ -63,7 +63,6 @@ public:
 	virtual void stop();
 
 protected:
-//    bool x11Event(XEvent * e);
     virtual bool processOtherEvents(xcb_generic_event_t* e);
     virtual bool processXkbEvents(xcb_generic_event_t* e);
     bool nativeEventFilter(const QByteArray &eventType, void *message, long *) override;

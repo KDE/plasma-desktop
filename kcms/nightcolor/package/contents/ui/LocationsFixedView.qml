@@ -24,8 +24,10 @@ Kirigami.FormLayout {
 
     Connections {
         target: root
-        onReset: reset()
-        onDefaults: {
+        function onReset() {
+            reset()
+        }
+        function onDefaults() {
             latitudeFixedField.backend = cA.latitudeFixedDefault;
             longitudeFixedField.backend = cA.longitudeFixedDefault;
         }

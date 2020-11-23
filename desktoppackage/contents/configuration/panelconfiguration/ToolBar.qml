@@ -119,7 +119,11 @@ Item {
 
             from: 20 // below this size, the panel is mostly unusable
             to: PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge ? panel.screenToFollow.geometry.width / 2 : panel.screenToFollow.geometry.height / 2
-            stepSize: 2
+
+            // When the panel is on the top or left, we need to reverse the drag
+            // and scroll directions so people can drag and scroll towards the
+            // center of the screen
+            stepSize: panel.location === PlasmaCore.Types.TopEdge || panel.location === PlasmaCore.Types.RightEdge ? -2 : 2
 
             value: panel.thickness
             onValueModified: {
@@ -152,7 +156,7 @@ Item {
 
     Connections {
         target: configDialog
-        onVisibleChanged: {
+        function onVisibleChanged() {
             if (!configDialog.visible) {
                 settingsButton.checked = false
             }

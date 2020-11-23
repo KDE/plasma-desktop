@@ -37,7 +37,9 @@ Item {
 
     Connections {
         target: plasmoid
-        onAvailableScreenRegionChanged: placeToolBoxTimer.restart();
+        function onAvailableScreenRegionChanged() {
+            placeToolBoxTimer.restart();
+        }
     }
 
     property int iconSize: PlasmaCore.Units.iconSizes.small

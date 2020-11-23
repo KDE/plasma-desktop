@@ -738,16 +738,9 @@ Kirigami.ScrollablePage {
             enabled: touchpad.supportsClickMethodAreas && touchpad.supportsClickMethodClickfinger
 
             spacing: Kirigami.Units.smallSpacing
+            visible: touchpad.supportedButtons & Qt.LeftButton
 
             function load() {
-                visible = (touchpad.supportedButtons & Qt.LeftButton)
-
-                if (!visible) {
-                    rightClickMethodAreas.checked = false
-                    rightClickMethodClickfinger.checked = false
-                    return;
-                }
-
                 rightClickMethodAreas.enabled = touchpad.supportsClickMethodAreas
                 rightClickMethodClickfinger.enabled = touchpad.supportsClickMethodClickfinger
 
@@ -760,8 +753,8 @@ Kirigami.ScrollablePage {
 
             function syncCurrent() {
                 if (enabled && !root.loading) {
-                    touchpad.clickMethodAreas = rightClickMethodAreas.checked
-                    touchpad.clickMethodClickfinger = rightClickMethodClickfinger.checked
+                    touchpad.clickMethodAreas = rightClickMethodAreas.checked && rightClickMethodAreas.visible
+                    touchpad.clickMethodClickfinger = rightClickMethodClickfinger.checked && rightClickMethodClickfinger.visible
                     root.changeSignal()
                 }
                 loading = true
@@ -805,15 +798,9 @@ Kirigami.ScrollablePage {
             id: middleClickMethod
 
             spacing: Kirigami.Units.smallSpacing
+            visible: rightClickMethod.visible
 
             function load() {
-                visible = rightClickMethod.visible
-
-                if (!visible) {
-                    enabled = false
-                    return;
-                }
-
                 enabled = touchpad.supportsMiddleEmulation
                 if (enabled && touchpad.middleEmulation) {
                     middleSoftwareEmulation.checked = true
@@ -824,7 +811,7 @@ Kirigami.ScrollablePage {
 
             function syncCurrent() {
                 if (enabled && !root.loading) {
-                    touchpad.middleEmulation = middleSoftwareEmulation.checked
+                    touchpad.middleEmulation = middleSoftwareEmulation.checked && middleSoftwareEmulation.visible
                     root.changeSignal()
                 }
                 loading = true

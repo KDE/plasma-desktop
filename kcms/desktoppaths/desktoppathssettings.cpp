@@ -29,67 +29,6 @@ namespace {
     }
 }
 
-class PathsSettingsStore : public QObject
-{
-    Q_OBJECT
-    Q_PROPERTY(QUrl autostartLocation READ autostartLocation WRITE setAutostartLocation)
-public:
-    PathsSettingsStore(DesktopPathsSettings *parent = nullptr)
-        : QObject(parent)
-        , m_config(KSharedConfig::openConfig())
-        , m_settings(parent)
-    {
-    }
-
-    QUrl autostartLocation() const
-    {
-        return readUrl(QStringLiteral("Autostart"), m_settings->defaultAutostartLocation());
-    }
-
-    void setAutostartLocation(const QUrl &url)
-    {
-        if (url.matches(m_settings->defaultAutostartLocation(), QUrl::StripTrailingSlash)) {
-            resetUrl(QStringLiteral("Autostart"));
-        } else {
-            writeUrl(QStringLiteral("Autostart"), url);
-        }
-    }
-
-    void save()
-    {
-        if (m_config->isDirty()) {
-            m_config->sync();
-        }
-    }
-
-private:
-    QUrl readUrl(const QString &key, const QUrl &defaultValue) const
-    {
-        KConfigGroup group(m_config, QStringLiteral("Paths"));
-        const auto path = group.readPathEntry(key, QString());
-        if (path.isEmpty()) {
-            return defaultValue;
-        } else {
-            return QUrl::fromLocalFile(path);
-        }
-    }
-
-    void writeUrl(const QString &key, const QUrl &url)
-    {
-        KConfigGroup group(m_config, QStringLiteral("Paths"));
-        group.writePathEntry(key, url.toLocalFile(), KConfig::Normal | KConfig::Global);
-    }
-
-    void resetUrl(const QString &key)
-    {
-        KConfigGroup group(m_config, QStringLiteral("Paths"));
-        group.revertToDefault(key, KConfig::Normal | KConfig::Global);
-    }
-
-    KSharedConfig::Ptr m_config;
-    DesktopPathsSettings *m_settings;
-};
-
 class XdgPathsSettingsStore : public QObject
 {
     Q_OBJECT
@@ -192,7 +131,6 @@ private:
 
 DesktopPathsSettings::DesktopPathsSettings(QObject *parent)
     : KCoreConfigSkeleton(userDirsConfig(), parent)
-    , m_pathsStore(new PathsSettingsStore(this))
     , m_xdgPathsStore(new XdgPathsSettingsStore(this))
 {
     addItemInternal("desktopLocation", defaultDesktopLocation());
@@ -201,10 +139,6 @@ DesktopPathsSettings::DesktopPathsSettings(QObject *parent)
     addItemInternal("musicLocation", defaultMusicLocation());
     addItemInternal("picturesLocation", defaultPicturesLocation());
     addItemInternal("videosLocation", defaultVideosLocation());
-
-    auto *item = new KPropertySkeletonItem(m_pathsStore, "autostartLocation", defaultAutostartLocation());
-    item->setNotifyFunction([this] { emit this->widgetChanged(); });
-    addItem(item, "autostartLocation");
 }
 
 void DesktopPathsSettings::addItemInternal(const QByteArray &propertyName, const QVariant &defaultValue)
@@ -212,21 +146,6 @@ void DesktopPathsSettings::addItemInternal(const QByteArray &propertyName, const
     auto *item = new KPropertySkeletonItem(m_xdgPathsStore, propertyName, defaultValue);
     item->setNotifyFunction([this] { emit this->widgetChanged(); });
     addItem(item, propertyName);
-}
-
-QUrl DesktopPathsSettings::autostartLocation() const
-{
-    return findItem("autostartLocation")->property().toUrl();
-}
-
-void DesktopPathsSettings::setAutostartLocation(const QUrl &url)
-{
-    findItem("autostartLocation")->setProperty(url);
-}
-
-QUrl DesktopPathsSettings::defaultAutostartLocation() const
-{
-    return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/.config/autostart"));
 }
 
 QUrl DesktopPathsSettings::desktopLocation() const
@@ -317,12 +236,6 @@ void DesktopPathsSettings::setVideosLocation(const QUrl &url)
 QUrl DesktopPathsSettings::defaultVideosLocation() const
 {
     return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Videos"));
-}
-
-bool DesktopPathsSettings::usrSave()
-{
-    m_pathsStore->save();
-    return KCoreConfigSkeleton::usrSave();
 }
 
 #include "desktoppathssettings.moc"

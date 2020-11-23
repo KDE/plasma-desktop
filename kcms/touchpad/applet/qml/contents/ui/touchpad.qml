@@ -89,7 +89,7 @@ Item {
 
         Connections {
             target: confirmDialog
-            onStatusChanged: {
+            function onStatusChanged() {
                 if (confirmDialog.status === PlasmaComponents.DialogStatus.Open) {
                     toolTip.hideToolTip()
                 }

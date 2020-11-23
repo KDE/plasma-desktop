@@ -21,7 +21,6 @@
 
 #include <KCoreConfigSkeleton>
 
-class PathsSettingsStore;
 class XdgPathsSettingsStore;
 
 class DesktopPathsSettings : public KCoreConfigSkeleton
@@ -29,10 +28,6 @@ class DesktopPathsSettings : public KCoreConfigSkeleton
     Q_OBJECT
 public:
     DesktopPathsSettings(QObject *parent = nullptr);
-
-    QUrl autostartLocation() const;
-    void setAutostartLocation(const QUrl &url);
-    QUrl defaultAutostartLocation() const;
 
     QUrl desktopLocation() const;
     void setDesktopLocation(const QUrl &url);
@@ -63,11 +58,9 @@ Q_SIGNALS:
     void widgetChanged();
 
 private:
-    bool usrSave() override;
     void addItemInternal(const QByteArray &propertyName, const QVariant &defaultValue);
 
 private:
-    PathsSettingsStore *m_pathsStore;
     XdgPathsSettingsStore *m_xdgPathsStore;
 };
 

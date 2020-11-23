@@ -1,5 +1,6 @@
 /*
  *  Copyright 2013 Marco Martin <mart@kde.org>
+ *  Copyright 2020 Nicolas Fella <nicolas.fella@gmx.de>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -26,8 +27,6 @@ import org.kde.kirigami 2.5 as Kirigami
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.configuration 2.0
 
-
-//TODO: all of this will be done with desktop components
 Rectangle {
     id: root
     Layout.minimumWidth: PlasmaCore.Units.gridUnit * 30
@@ -36,15 +35,12 @@ Rectangle {
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-//BEGIN properties
     color: Kirigami.Theme.backgroundColor
     width: PlasmaCore.Units.gridUnit * 40
     height: PlasmaCore.Units.gridUnit * 30
 
     property bool isContainment: false
-//END properties
 
-//BEGIN model
     property ConfigModel globalConfigModel:  globalAppletConfigModel
 
     ConfigModel {
@@ -62,46 +58,47 @@ Rectangle {
         filterRole: "visible"
         filterCallback: function(source_row, value) { return value; }
     }
-//END model
-
-//BEGIN functions
-    function saveConfig() {
-        if (pageStack.currentItem.saveConfig) {
-            pageStack.currentItem.saveConfig()
-        }
-        for (var key in plasmoid.configuration) {
-            if (pageStack.currentItem["cfg_"+key] !== undefined) {
-                plasmoid.configuration[key] = pageStack.currentItem["cfg_"+key]
-            }
-        }
-    }
 
     function settingValueChanged() {
         applyButton.enabled = true;
     }
-//END functions
 
+    function open(item) {
 
-//BEGIN connections
-    Component.onCompleted: {
-        if (!isContainment && configDialog.configModel && configDialog.configModel.count > 0) {
-            if (configDialog.configModel.get(0).source) {
-                pageStack.sourceFile = configDialog.configModel.get(0).source
-            } else if (configDialog.configModel.get(0).kcm) {
-                pageStack.sourceFile = Qt.resolvedUrl("ConfigurationKcmPage.qml");
-                pageStack.currentItem.kcm = configDialog.configModel.get(0).kcm;
+        if (item.source) {
+            if (item.source === "ConfigurationContainmentAppearance.qml") {
+                mainLoader.source = item.source
             } else {
-                pageStack.sourceFile = "";
+                mainLoader.setSource(Qt.resolvedUrl("ConfigurationAppletPage.qml"), {configItem: item})
             }
-            pageStack.title = configDialog.configModel.get(0).name
+        } else if (item.kcm) {
+            mainLoader.setSource(Qt.resolvedUrl("ConfigurationKcmPage.qml"), {kcm: item.kcm})
         } else {
-            pageStack.sourceFile = globalConfigModel.get(0).source
-            pageStack.title = globalConfigModel.get(0).name
+            mainLoader.setSource("")
+        }
+        pageTitle.text = item.name
+
+        applyButton.enabled = false
+    }
+
+    Connections {
+        target: mainLoader.item
+
+        function onSettingValueChanged() {
+            applyButton.enabled = true
         }
     }
-//END connections
 
-//BEGIN UI components
+    Component.onCompleted: {
+        // if we are a containment then the first item will be ConfigurationContainmentAppearance
+        // if the applet does not have own configs then the first item will be Shortcuts
+        if (isContainment || !configDialog.configModel || configDialog.configModel.count === 0) {
+            open(root.globalConfigModel.get(0))
+        } else {
+            open(configDialog.configModel.get(0))
+        }
+    }
+
     Rectangle {
         id: sidebar
         anchors.left: root.left
@@ -115,6 +112,7 @@ Rectangle {
     Kirigami.Separator {
         anchors.left: sidebar.right
         height: root.height
+        z: 100
     }
 
     Kirigami.Separator {
@@ -126,24 +124,21 @@ Rectangle {
     MessageDialog {
         id: messageDialog
         icon: StandardIcon.Warning
-        property Item delegate
+        property var item
         title: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply Settings")
         text: i18nd("plasma_shell_org.kde.plasma.desktop", "The settings of the current module have changed. Do you want to apply the changes or discard them?")
         standardButtons: StandardButton.Apply | StandardButton.Discard | StandardButton.Cancel
         onApply: {
             applyAction.trigger()
-            delegate.openCategory()
+            root.open(item)
         }
         onDiscard: {
-            delegate.openCategory()
+            root.open(item)
         }
     }
 
     RowLayout {
-        anchors {
-            topMargin: topSeparator.height
-            fill: parent
-        }
+        anchors.fill: parent
         spacing: 0
 
         QtControls.ScrollView {
@@ -166,7 +161,7 @@ Rectangle {
                     }
 
                     if (foundPrevious) {
-                        button.openCategory()
+                        categories.openCategory(button.item)
                         return
                     } else if (button.current) {
                         foundPrevious = true
@@ -180,13 +175,12 @@ Rectangle {
                 var foundNext = false
                 for (var i = 0, length = buttons.length; i < length; ++i) {
                     var button = buttons[i];
-                    console.log(button)
                     if (!button.hasOwnProperty("current")) {
                         continue;
                     }
 
                     if (foundNext) {
-                        button.openCategory()
+                        categories.openCategory(button.item)
                         return
                     } else if (button.current) {
                         foundNext = true
@@ -201,19 +195,47 @@ Rectangle {
 
                 property Item currentItem: children[1]
 
+                function openCategory(item) {
+                    if (applyButton.enabled) {
+                        messageDialog.item = item;
+                        messageDialog.open();
+                        return;
+                    }
+                    open(item)
+                }
+
+                Component {
+                    id: categoryDelegate
+                    ConfigCategoryDelegate {
+                        onActivated: categories.openCategory(model)
+                        current: {
+                            if (model.kcm && mainLoader.item.kcm) {
+                                return model.kcm == mainLoader.item.kcm
+                            }
+
+                            if (mainLoader.item.configItem) {
+                                return model.source == mainLoader.item.configItem.source
+                            }
+
+                            return mainLoader.source == Qt.resolvedUrl(model.source)
+                        }
+                        item: model
+                    }
+                }
+
                 Repeater {
                     model: root.isContainment ? globalConfigModel : undefined
-                    delegate: ConfigCategoryDelegate {}
+                    delegate: categoryDelegate
                 }
                 Repeater {
                     model: configDialogFilterModel
-                    delegate: ConfigCategoryDelegate {}
+                    delegate: categoryDelegate
                 }
                 Repeater {
                     model: !root.isContainment ? globalConfigModel : undefined
-                    delegate: ConfigCategoryDelegate {}
+                    delegate: categoryDelegate
                 }
-                 Repeater {
+                Repeater {
                     model: ConfigModel {
                         ConfigCategory{
                             name: i18nd("plasma_shell_org.kde.plasma.desktop", "About")
@@ -221,7 +243,7 @@ Rectangle {
                             source: "AboutPlugin.qml"
                         }
                     }
-                    delegate: ConfigCategoryDelegate {}
+                    delegate: categoryDelegate
                 }
             }
         }
@@ -232,170 +254,18 @@ Rectangle {
             Layout.topMargin: topSeparator.height
             Layout.bottomMargin: PlasmaCore.Units.smallSpacing * 2
 
-            // Configuration scroll area
-            QtControls.ScrollView {
-                id: scroll
+            Kirigami.Heading {
+                id: pageTitle
+                Layout.fillWidth: true
+                topPadding: Kirigami.Units.smallSpacing
+                leftPadding: Kirigami.Units.largeSpacing
+                level: 1
+            }
+
+            Loader {
+                id: mainLoader
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                // we want to focus the controls in the settings page right away, don't focus the ScrollView
-                activeFocusOnTab: false
-                // Avoid scrollbar flashing on/off when decrease the window height, that is created by the content matching the scroll height.
-                // Even if scrollbar does not appear in the UI, modifies the availableWidth causing other issues.
-                QtControls.ScrollBar.vertical.policy: pageStack.maxHeight > pageStack.contentHeight ? QtControls.ScrollBar.AlwaysOff : QtControls.ScrollBar.AlwaysOn
-
-                property Item flickableItem: pageFlickable
-                // this horrible code below ensures the control with active focus stays visible in the window
-                // by scrolling the view up or down as needed when tabbing through the window
-                Window.onActiveFocusItemChanged: {
-                    var flickable = scroll.flickableItem;
-
-                    var item = Window.activeFocusItem;
-                    if (!item) {
-                        return;
-                    }
-
-                    // when an item within ScrollView has active focus the ScrollView,
-                    // as FocusScope, also has it, so we only scroll in this case
-                    if (!scroll.activeFocus) {
-                        return;
-                    }
-
-                    var padding = PlasmaCore.Units.gridUnit * 2 // some padding to the top/bottom when we scroll
-
-                    var yPos = item.mapToItem(scroll.contentItem, 0, 0).y;
-                    if (yPos < flickable.contentY) {
-                        flickable.contentY = Math.max(0, yPos - padding);
-
-                    // The "Math.min(padding, item.height)" ensures that we only scroll the item into view
-                    // when it's barely visible. The logic was mostly meant for keyboard navigating through
-                    // a list of CheckBoxes, so this check keeps us from trying to scroll an inner ScrollView
-                    // into view when it implicitly gains focus (like plasma-pa config dialog has).
-                    } else if (yPos + Math.min(padding, item.height) > flickable.contentY + flickable.height) {
-                        flickable.contentY = Math.min(flickable.contentHeight - flickable.height,
-                                                      yPos - flickable.height + item.height + padding);
-                    }
-                }
-                Flickable {
-                    id: pageFlickable
-
-                    anchors {
-                        top: scroll.top
-                        bottom: scroll.bottom
-                        left: scroll.left
-                    }
-                    width: scroll.availableWidth
-                    contentHeight: pageColumn.height
-                    contentWidth: width
-
-                    Column {
-                        id: pageColumn
-                        spacing: PlasmaCore.Units.largeSpacing / 2
-                        anchors {
-                            left: parent.left
-                            right: parent.right
-                            leftMargin: PlasmaCore.Units.smallSpacing * 2
-                            rightMargin: PlasmaCore.Units.smallSpacing * 2
-                        }
-
-                        Kirigami.Heading {
-                            id: pageTitle
-                            width: pageColumn.width
-                            topPadding: PlasmaCore.Units.smallSpacing
-                            level: 1
-                            text: pageStack.title
-                        }
-
-                        QtControls.StackView {
-                            id: pageStack
-                            property string title: ""
-                            property bool invertAnimations: false
-
-                            property var maxHeight: scroll.availableHeight - pageTitle.height - parent.spacing
-                            property var contentHeight: pageStack.currentItem ? (pageStack.currentItem.implicitHeight
-                                                                                 ? pageStack.currentItem.implicitHeight
-                                                                                 : pageStack.currentItem.childrenRect.height) : 0
-                            height: Math.max(maxHeight, contentHeight)
-                            width: pageColumn.width
-
-                            property string sourceFile
-
-                            onSourceFileChanged: {
-                                if (!sourceFile) {
-                                    return;
-                                }
-
-                                //in a StackView pages need to be initialized with stackviews size, or have none
-                                var props = {"width": width, "height": height}
-
-                                var plasmoidConfig = plasmoid.configuration
-                                for (var key in plasmoidConfig) {
-                                    props["cfg_" + key] = plasmoid.configuration[key]
-                                }
-
-                                var newItem = replace(Qt.resolvedUrl(sourceFile), props)
-
-                                for (var key in plasmoidConfig) {
-                                    var changedSignal = newItem["cfg_" + key + "Changed"]
-                                    if (changedSignal) {
-                                        changedSignal.connect(root.settingValueChanged)
-                                    }
-                                }
-
-                                var configurationChangedSignal = newItem.configurationChanged
-                                if (configurationChangedSignal) {
-                                    configurationChangedSignal.connect(root.settingValueChanged)
-                                }
-
-                                applyButton.enabled = false;
-                                scroll.flickableItem.contentY = 0
-                                /*
-                                    * This is not needed on a desktop shell that has ok/apply/cancel buttons, i'll leave it here only for future reference until we have a prototype for the active shell.
-                                    * root.pageChanged will start a timer, that in turn will call saveConfig() when triggered
-
-                                for (var prop in currentItem) {
-                                    if (prop.indexOf("cfg_") === 0) {
-                                        currentItem[prop+"Changed"].connect(root.pageChanged)
-                                    }
-                                }*/
-                            }
-
-                            replaceEnter: Transition {
-                                ParallelAnimation {
-                                    //OpacityAnimator when starting from 0 is buggy (it shows one frame with opacity 1)
-                                    NumberAnimation {
-                                        property: "opacity"
-                                        from: 0
-                                        to: 1
-                                        duration: PlasmaCore.Units.longDuration
-                                        easing.type: Easing.InOutQuad
-                                    }
-                                    XAnimator {
-                                        from: pageStack.invertAnimations ? -pageColumn.width/3: pageColumn.width/3
-                                        to: 0
-                                        duration: PlasmaCore.Units.longDuration
-                                        easing.type: Easing.InOutQuad
-                                    }
-                                }
-                            }
-                            replaceExit: Transition {
-                                ParallelAnimation {
-                                    OpacityAnimator {
-                                        from: 1
-                                        to: 0
-                                        duration: PlasmaCore.Units.longDuration
-                                        easing.type: Easing.InOutQuad
-                                    }
-                                    XAnimator {
-                                        from: 0
-                                        to: pageStack.invertAnimations ? pageColumn.width/3 : -pageColumn.width/3
-                                        duration: PlasmaCore.Units.longDuration
-                                        easing.type: Easing.InOutQuad
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
             }
 
             QtControls.Action {
@@ -410,7 +280,7 @@ Rectangle {
             QtControls.Action {
                 id: applyAction
                 onTriggered: {
-                    root.saveConfig();
+                    mainLoader.item.saveConfig()
 
                     applyButton.enabled = false;
                 }
@@ -438,7 +308,7 @@ Rectangle {
                     enabled: false
                     icon.name: "dialog-ok-apply"
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply")
-                    visible: pageStack.currentItem && (!pageStack.currentItem.kcm || pageStack.currentItem.kcm.buttons & 4) // 4 = Apply button
+                    visible: mainLoader.item && (!mainLoader.item.kcm || mainLoader.item.kcm.buttons & 4) // 4 = Apply button
                     onClicked: applyAction.trigger()
                 }
                 QtControls.Button {
@@ -449,5 +319,4 @@ Rectangle {
             }
         }
     }
-//END UI components
 }
