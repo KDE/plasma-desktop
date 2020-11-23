@@ -38,14 +38,11 @@ public:
     KActionCollection *mainActionCollection;
     KActivities::Consumer activities;
 
-    void createAction(const QString &actionName, const QString &actionText,
-                      const QList<QKeySequence> &defaultSequence)
+    void createAction(const QString &actionName, const QString &actionText)
     {
         auto action = mainActionCollection->addAction(actionName);
         action->setProperty("isConfigurationAction", true);
         action->setText(actionText);
-        KGlobalAccel::self()->setShortcut(action, defaultSequence);
-        KGlobalAccel::self()->setDefaultShortcut(action, defaultSequence);
     }
 
     Private()
@@ -67,11 +64,9 @@ SwitchingTab::SwitchingTab(QWidget *parent)
     d->mainActionCollection->setConfigGlobal(true);
 
     d->createAction(QStringLiteral("next activity"),
-                    i18nc("@action", "Walk through activities"),
-                    { Qt::META + Qt::Key_Tab });
+                    i18nc("@action", "Walk through activities"));
     d->createAction(QStringLiteral("previous activity"),
-                    i18nc("@action", "Walk through activities (Reverse)"),
-                    { Qt::META + Qt::SHIFT + Qt::Key_Tab } );
+                    i18nc("@action", "Walk through activities (Reverse)"));
 
     d->scActivities->setActionTypes(KShortcutsEditor::GlobalAction);
     d->scActivities->addCollection(d->mainActionCollection);
