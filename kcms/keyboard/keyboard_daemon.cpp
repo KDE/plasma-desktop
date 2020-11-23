@@ -184,7 +184,7 @@ void KeyboardDaemon::layoutChanged()
 
 	if( newLayout != currentLayout ) {
             currentLayout = newLayout;
-            emit currentLayoutChanged(newLayout.toString());
+            emit layoutChanged(newLayout.toString());
         }
 }
 
@@ -231,24 +231,24 @@ bool KeyboardDaemon::setLayout(const QString& layout)
 	return X11Helper::setLayout(LayoutUnit(layout));
 }
 
-QString KeyboardDaemon::getCurrentLayout()
+QString KeyboardDaemon::getLayout() const
 {
 	return currentLayout.toString();
 }
 
-QString KeyboardDaemon::getCurrentLayoutLongName() const
+QString KeyboardDaemon::getLayoutDisplayName() const
+{
+	return Flags::getShortText(currentLayout, keyboardConfig);
+}
+
+QString KeyboardDaemon::getLayoutLongName() const
 {
 	return Flags::getLongText(currentLayout, rules);
 }
 
-QStringList KeyboardDaemon::getLayoutsList()
+QStringList KeyboardDaemon::getLayoutsList() const
 {
 	return X11Helper::getLayoutsListAsString( X11Helper::getLayoutsList() );
-}
-
-QString KeyboardDaemon::getLayoutDisplayName(const QString &layout)
-{
-	return Flags::getShortText(LayoutUnit(layout), keyboardConfig);
 }
 
 #include "keyboard_daemon.moc"

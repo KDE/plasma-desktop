@@ -61,13 +61,13 @@ private Q_SLOTS:
 public Q_SLOTS:
 	Q_SCRIPTABLE void switchToNextLayout();
 	Q_SCRIPTABLE bool setLayout(const QString& layout);
-	Q_SCRIPTABLE QString getCurrentLayout();
-	Q_SCRIPTABLE QString getCurrentLayoutLongName() const;
-	Q_SCRIPTABLE QStringList getLayoutsList();
-	Q_SCRIPTABLE QString getLayoutDisplayName(const QString &layout);
+	Q_SCRIPTABLE QString getLayout() const;
+	Q_SCRIPTABLE QString getLayoutDisplayName() const;
+	Q_SCRIPTABLE QString getLayoutLongName() const;
+	Q_SCRIPTABLE QStringList getLayoutsList() const;
 
 Q_SIGNALS:
-	Q_SCRIPTABLE void currentLayoutChanged(QString layout);
+	Q_SCRIPTABLE void layoutChanged(QString layout);
 	Q_SCRIPTABLE void layoutListChanged();
 
 public:
