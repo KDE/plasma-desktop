@@ -211,7 +211,7 @@ void KeyboardDaemon::switchToNextLayout()
         QStringLiteral("org.kde.osdService"),
         QStringLiteral("kbdLayoutChanged"));
 
-        msg << Flags::getShortText(newLayout, keyboardConfig);
+        msg << Flags::getLongText(newLayout, rules);
 
         QDBusConnection::sessionBus().asyncCall(msg);
 }
