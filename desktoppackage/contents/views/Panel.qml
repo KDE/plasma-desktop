@@ -154,8 +154,10 @@ Item {
             if (panel.opacityMode == 0) {
                 return visibleWindowsModel.count > 0 ? "opaque" : "transparent"
             } else if (panel.opacityMode == 1) {
+                containment.ContainmentDisplayHints |= PlasmaCore.Types.DesktopFullyCovered
                 return "opaque"
             } else {
+                containment.ContainmentDisplayHints &= ~PlasmaCore.Types.DesktopFullyCovered
                 return "transparent"
             }
         })
