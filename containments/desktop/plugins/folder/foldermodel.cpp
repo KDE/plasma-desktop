@@ -1820,8 +1820,8 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
             menu->addAction(m_actionCollection.action(QStringLiteral("paste")));
         }
 
-        menu->addSeparator();
         menu->addAction(m_actionCollection.action(QStringLiteral("rename")));
+        menu->addSeparator();
         menu->addAction(m_actionCollection.action(QStringLiteral("restoreFromTrash")));
 
         KConfigGroup cg(KSharedConfig::openConfig(), "KDE");
