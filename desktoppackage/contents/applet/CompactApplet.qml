@@ -15,12 +15,13 @@
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
-import QtQuick 2.0
+import QtQuick 2.14
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 
 PlasmaCore.ToolTipArea {
@@ -158,12 +159,24 @@ PlasmaCore.ToolTipArea {
 
         //It's a MouseEventListener to get all the events, so the eventfilter will be able to catch them
         mainItem: MouseEventListener {
-            id: appletParent
-
             focus: true
 
             Keys.onEscapePressed: {
                 plasmoid.expanded = false;
+            }
+
+            Item {
+                id: appletParent
+
+                readonly property bool collapseBorders: root.fullRepresentation && (root.fullRepresentation instanceof PlasmaExtras.Representation) && popupWindow.inset.left >= 0
+
+                anchors {
+                    fill: parent
+                    leftMargin: collapseBorders ? -popupWindow.margins.left + popupWindow.inset.left : 0
+                    rightMargin: collapseBorders ? -popupWindow.margins.right + popupWindow.inset.right : 0
+                    topMargin: collapseBorders ? -popupWindow.margins.top + popupWindow.inset.top : 0
+                    bottomMargin: collapseBorders ? -popupWindow.margins.bottom + popupWindow.inset.bottom : 0
+                }
             }
 
             LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
