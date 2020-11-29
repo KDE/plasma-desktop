@@ -146,7 +146,7 @@ QString Flags::getShortText(const LayoutUnit& layoutUnit, const KeyboardConfig& 
 
     QString layoutText = layoutUnit.layout();
 
-	foreach(const LayoutUnit& lu, keyboardConfig.layouts) {
+	for (const LayoutUnit &lu : keyboardConfig.layouts) {
         if( layoutUnit.layout() == lu.layout() && layoutUnit.variant() == lu.variant() ) {
 			layoutText = lu.getDisplayName();
 			break;

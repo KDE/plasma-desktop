@@ -173,7 +173,7 @@ void KeyboardConfig::save()
     QStringList variants;
     QStringList displayNames;
 //    QStringList shortcuts;
-    foreach(const LayoutUnit& layoutUnit, layouts) {
+    for (const LayoutUnit &layoutUnit : qAsConst(layouts)) {
         layoutStrings.append(layoutUnit.layout());
         variants.append(layoutUnit.variant());
         displayNames.append(layoutUnit.getRawDisplayName());
@@ -192,7 +192,6 @@ void KeyboardConfig::save()
     config.writeEntry("LayoutList", layoutStrings.join(LIST_SEPARATOR));
     config.writeEntry("VariantList", variants);
     config.writeEntry("DisplayNames", displayNames.join(LIST_SEPARATOR));
-//    config.writeEntry("LayoutShortcuts", shortcuts.join(LIST_SEPARATOR));
 
     config.writeEntry("LayoutLoopCount", layoutLoopCount);
 
@@ -210,7 +209,7 @@ QList<LayoutUnit> KeyboardConfig::getDefaultLayouts() const
 {
 	QList<LayoutUnit> defaultLayoutList;
 	int i = 0;
-	foreach(const LayoutUnit& layoutUnit, layouts) {
+	for (const LayoutUnit &layoutUnit : qAsConst(layouts)) {
 		defaultLayoutList.append(layoutUnit);
 		if( layoutLoopCount != KeyboardConfig::NO_LOOPING && i >= layoutLoopCount-1 )
 			break;

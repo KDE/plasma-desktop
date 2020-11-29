@@ -97,9 +97,9 @@ void KCMKeyboardWidget::handleParameters(const QVariantList &args)
 {
     // TODO: improve parameter handling
 	setCurrentIndex(TAB_HARDWARE);
-    foreach(const QVariant& arg, args) {
+    for (const auto &arg : args) {
   	  if( arg.type() == QVariant::String ) {
-  		  QString str = arg.toString();
+  		  const QString str = arg.toString();
   		  if( str == QLatin1String("--tab=layouts") ) {
   			  setCurrentIndex(TAB_LAYOUTS);
   		  }
@@ -208,7 +208,7 @@ void KCMKeyboardWidget::uiChanged()
 
 void KCMKeyboardWidget::initializeKeyboardModelUI()
 {
-    foreach(ModelInfo* modelInfo, rules->modelInfos) {
+    for (const ModelInfo *modelInfo : qAsConst(rules->modelInfos)) {
     	QString vendor = modelInfo->vendor;
     	if( vendor.isEmpty() ) {
     		vendor = i18nc("unknown keyboard model vendor", "Unknown");
@@ -405,7 +405,7 @@ static QPair<int, int> getSelectedRowRange(const QModelIndexList& selected)
 	}
 
 	QList<int> rows;
-	foreach(const QModelIndex& index, selected) {
+	for (const auto &index : selected) {
 		rows << index.row();
 	}
 	std::sort(rows.begin(), rows.end());
@@ -428,9 +428,9 @@ void KCMKeyboardWidget::removeLayout()
 	if( ! uiWidget->layoutsTableView->selectionModel()->hasSelection() )
 		return;
 
-	QModelIndexList selected = uiWidget->layoutsTableView->selectionModel()->selectedIndexes();
+	const QModelIndexList selected = uiWidget->layoutsTableView->selectionModel()->selectedIndexes();
 	QPair<int, int> rowsRange( getSelectedRowRange(selected) );
-	foreach(const QModelIndex& idx, selected) {
+	for (const auto &idx : selected) {
 		if( idx.column() == 0 ) {
 			keyboardConfig->layouts.removeAt(rowsRange.first);
 		}
@@ -472,7 +472,7 @@ void KCMKeyboardWidget::moveSelectedLayouts(int shift)
     if( selectionModel == nullptr || !selectionModel->hasSelection() )
         return;
 
-    QModelIndexList selected = selectionModel->selectedRows();
+    const QModelIndexList selected = selectionModel->selectedRows();
     if( selected.count() < 1 )
         return;
 
@@ -481,7 +481,7 @@ void KCMKeyboardWidget::moveSelectedLayouts(int shift)
 
     if( newFirstRow >= 0 && newLastRow <= keyboardConfig->layouts.size() - 1 ) {
         QList<int> selectionRows;
-    	foreach(const QModelIndex& index, selected) {
+    	for (const QModelIndex &index : selected) {
     		int newRowIndex = index.row() + shift;
     		keyboardConfig->layouts.move(index.row(), newRowIndex);
             selectionRows << newRowIndex;
@@ -489,7 +489,7 @@ void KCMKeyboardWidget::moveSelectedLayouts(int shift)
     	uiChanged();
 
     	QItemSelection selection;
-    	foreach(int row, selectionRows) {
+    	for (const int row : qAsConst(selectionRows)) {
             QModelIndex topLeft = layoutsTableModel->index(row, 0, QModelIndex());
             QModelIndex bottomRight = layoutsTableModel->index(row, layoutsTableModel->columnCount(topLeft)-1, QModelIndex());
             selection << QItemSelectionRange(topLeft, bottomRight);
@@ -554,7 +554,7 @@ bool xkbOptionLessThan(const OptionInfo* o1, const OptionInfo* o2)
 void KCMKeyboardWidget::initializeXkbOptionsUI()
 {
 	std::sort(rules->optionGroupInfos.begin(), rules->optionGroupInfos.end(), xkbOptionGroupLessThan);
-	foreach(OptionGroupInfo* optionGroupInfo, rules->optionGroupInfos) {
+	for (OptionGroupInfo *optionGroupInfo : qAsConst(rules->optionGroupInfos)) {
 		std::sort(optionGroupInfo->optionInfos.begin(), optionGroupInfo->optionInfos.end(), xkbOptionLessThan);
 	}
 
@@ -682,8 +682,8 @@ void KCMKeyboardWidget::updateHardwareUI()
 
 void KCMKeyboardWidget::populateWithCurrentLayouts()
 {
-    QList<LayoutUnit> layouts = X11Helper::getLayoutsList();
-    foreach(const LayoutUnit &layoutUnit, layouts) {
+    const QList<LayoutUnit> layouts = X11Helper::getLayoutsList();
+    for (const auto &layoutUnit : layouts) {
         keyboardConfig->layouts.append(layoutUnit);
     }
 }
@@ -696,7 +696,7 @@ void KCMKeyboardWidget::populateWithCurrentXkbOptions()
     }
     XkbConfig xkbConfig;
     if( X11Helper::getGroupNames(QX11Info::display(), &xkbConfig, X11Helper::ALL) ) {
-        foreach(const QString &xkbOption, xkbConfig.options) {
+        for (const QString &xkbOption : qAsConst(xkbConfig.options)) {
             keyboardConfig->xkbOptions.append(xkbOption);
         }
     }
