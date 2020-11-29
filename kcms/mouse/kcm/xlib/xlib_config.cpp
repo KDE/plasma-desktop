@@ -36,7 +36,6 @@
 //#include <KConfig>
 #include <KAboutData>
 #include <KPluginFactory>
-#include <KPluginLoader>
 
 #include <QCheckBox>
 #include <QDoubleSpinBox>

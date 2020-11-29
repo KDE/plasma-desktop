@@ -45,7 +45,6 @@
 #include "ui_smserverconfigdlg.h"
 
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <KLocalizedString>
 
 #include <sessionmanagement.h>

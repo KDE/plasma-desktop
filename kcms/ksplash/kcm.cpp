@@ -21,7 +21,6 @@
 #include "kcm.h"
 
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <KAboutData>
 #include <KLocalizedString>
 

@@ -17,7 +17,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "kcm.h"
 
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <KAboutData>
 #include <KLocalizedString>
 
