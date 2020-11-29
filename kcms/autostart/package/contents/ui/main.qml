@@ -105,21 +105,21 @@ KCM.ScrollViewKCM {
         spacing: Kirigami.Units.largeSpacing
 
         Loader {
-            id: startupFileDialogLoader
+            id: loginFileDialogLoader
 
             active: false
 
             sourceComponent: FileDialog {
-                id: startupFileDialog
-                title: i18n("Choose Startup Script")
+                id: loginFileDialog
+                title: i18n("Choose Login Script")
                 folder: shortcuts.home
                 selectMultiple: false
                 onAccepted: {
-                    kcm.model.addScript(startupFileDialog.fileUrl, AutostartModel.XdgScripts)
-                    startupFileDialogLoader.active = false
+                    kcm.model.addScript(loginFileDialog.fileUrl, AutostartModel.XdgScripts)
+                    loginFileDialogLoader.active = false
                 }
 
-                onRejected: startupFileDialogLoader.active = false
+                onRejected: loginFileDialogLoader.active = false
 
                 Component.onCompleted: open()
             }
@@ -185,7 +185,7 @@ KCM.ScrollViewKCM {
                 text: i18n("Add Login Script...")
                 icon.name: "list-add"
 
-                onClicked: startupFileDialogLoader.active = true
+                onClicked: loginFileDialogLoader.active = true
             }
             MenuItem {
                 text: i18n("Add Logout Script...")
