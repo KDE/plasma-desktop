@@ -151,15 +151,22 @@ Item {
 
     Component.onCompleted: {
         state = Qt.binding(function() {
+            let mstate = '';
             if (panel.opacityMode == 0) {
-                return visibleWindowsModel.count > 0 ? "opaque" : "transparent"
+                mstate = visibleWindowsModel.count > 0 ? "opaque" : "transparent"
             } else if (panel.opacityMode == 1) {
-                containment.ContainmentDisplayHints |= PlasmaCore.Types.DesktopFullyCovered
-                return "opaque"
+                mstate = "opaque"
             } else {
-                containment.ContainmentDisplayHints &= ~PlasmaCore.Types.DesktopFullyCovered
-                return "transparent"
+                mstate = "transparent"
             }
+            if (mstate == 'opaque') {
+                //containment.setContainmentDisplayHints(containment.containmentDisplayHints)
+                containment.containmentDisplayHints |= PlasmaCore.Types.DesktopFullyCovered;
+            } else {
+                //containment.setContainmentDisplayHints(containment.containmentDisplayHints)
+                containment.containmentDisplayHints &= ~PlasmaCore.Types.DesktopFullyCovered;
+            }
+            return mstate;
         })
     }
     state: ""
