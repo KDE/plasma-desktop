@@ -165,9 +165,6 @@ public:
         categories.remove({});
         m_categories = categories.values();
         m_categories.sort();
-        m_categories.prepend({});
-        m_categories.prepend(QStringLiteral(":find:"));
-        m_categories.prepend(QStringLiteral(":recent:"));
     }
 
     Q_SCRIPTABLE QString findFirstEmojiForCategory(const QString &category) {

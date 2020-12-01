@@ -96,23 +96,17 @@ Kirigami.ApplicationWindow
         collapsed: true
         modal: false
 
-        function createCategoryActions(categories) {
-            var actions = []
-            for(var i in categories) {
-                var cat = categories[i]
-                actions.push(cat === ":recent:" ? recentAction :
-                             cat === ":find:"   ? searchAction :
-                             cat.length === 0   ? allAction
-                                                : categoryActionComponent.createObject(drawer, { category: cat }))
+        Instantiator {
+            model: emoji.categories
+            CategoryAction {
+                category: modelData
             }
-            return actions;
+            onObjectAdded: {
+                var actions = Array.prototype.map.call(drawer.actions, i => i)
+                actions.splice(index + 3, 0, object)
+                drawer.actions = actions
+            }
         }
-
-        actions: createCategoryActions(emoji.categories)
-
-        Component {
-            id: categoryActionComponent
-            CategoryAction {}
-        }
+        actions: [allAction, searchAction, recentAction]
     }
 }
