@@ -219,3 +219,10 @@ file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
 kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
+
+find_package(XdgUserDir)
+set_package_properties(XdgUserDir PROPERTIES DESCRIPTION "Xdg-user-dir script"
+    TYPE RUNTIME
+    PURPOSE "Used to translate default paths in KCM desktoppath")
+
+

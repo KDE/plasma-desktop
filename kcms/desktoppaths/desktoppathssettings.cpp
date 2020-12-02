@@ -18,6 +18,8 @@
 
 #include "desktoppathssettings.h"
 
+#include <KLocalizedString>
+
 #include <QDir>
 
 namespace
@@ -163,7 +165,7 @@ void DesktopPathsSettings::setDesktopLocation(const QUrl &url)
 
 QUrl DesktopPathsSettings::defaultDesktopLocation() const
 {
-    return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Desktop"));
+    return QUrl::fromLocalFile(QDir::homePath() + QLatin1Char('/') + i18nd("xdg-user-dirs" ,"Desktop"));
 }
 
 QUrl DesktopPathsSettings::documentsLocation() const
@@ -178,7 +180,7 @@ void DesktopPathsSettings::setDocumentsLocation(const QUrl &url)
 
 QUrl DesktopPathsSettings::defaultDocumentsLocation() const
 {
-    return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Documents"));
+    return QUrl::fromLocalFile(QDir::homePath() + QLatin1Char('/') + i18nd("xdg-user-dirs" ,"Documents"));
 }
 
 QUrl DesktopPathsSettings::downloadsLocation() const
@@ -193,7 +195,7 @@ void DesktopPathsSettings::setDownloadsLocation(const QUrl &url)
 
 QUrl DesktopPathsSettings::defaultDownloadsLocation() const
 {
-    return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Downloads"));
+    return QUrl::fromLocalFile(QDir::homePath() + QLatin1Char('/') + i18nd("xdg-user-dirs" ,"Downloads"));
 }
 
 QUrl DesktopPathsSettings::musicLocation() const
@@ -208,7 +210,7 @@ void DesktopPathsSettings::setMusicLocation(const QUrl &url)
 
 QUrl DesktopPathsSettings::defaultMusicLocation() const
 {
-    return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Music"));
+    return QUrl::fromLocalFile(QDir::homePath() + QLatin1Char('/') + i18nd("xdg-user-dirs" ,"Music"));
 }
 
 QUrl DesktopPathsSettings::picturesLocation() const
@@ -223,7 +225,7 @@ void DesktopPathsSettings::setPicturesLocation(const QUrl &url)
 
 QUrl DesktopPathsSettings::defaultPicturesLocation() const
 {
-    return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Pictures"));
+    return QUrl::fromLocalFile(QDir::homePath() + QLatin1Char('/') + i18nd("xdg-user-dirs" ,"Pictures"));
 }
 
 QUrl DesktopPathsSettings::videosLocation() const
@@ -238,7 +240,7 @@ void DesktopPathsSettings::setVideosLocation(const QUrl &url)
 
 QUrl DesktopPathsSettings::defaultVideosLocation() const
 {
-    return QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/Videos"));
+    return QUrl::fromLocalFile(QDir::homePath() + QLatin1Char('/') + i18nd("xdg-user-dirs" ,"Videos"));
 }
 
 #include "desktoppathssettings.moc"
