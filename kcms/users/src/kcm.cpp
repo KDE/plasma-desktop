@@ -58,7 +58,7 @@ KCMUser::KCMUser(QObject *parent, const QVariantList &args)
     auto fm = QFontMetrics(font);
     setColumnWidth(fm.capHeight()*30);
 
-    const auto dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("plasma-avatars"), QStandardPaths::LocateDirectory);
+    const auto dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("plasma/avatars"), QStandardPaths::LocateDirectory);
     for (const auto& dir : dirs) {
         QDirIterator it(
             dir,
@@ -114,7 +114,7 @@ QString KCMUser::initializeString(const QString& stringToGrabInitialsOf)
     if (stringToGrabInitialsOf.isEmpty()) return "";
 
     auto normalized = stringToGrabInitialsOf.normalized(QString::NormalizationForm_D);
-    if (normalized.contains(" ")) { 
+    if (normalized.contains(" ")) {
         QStringList split = normalized.split(" ");
         auto first = split.first();
         auto last = split.last();
