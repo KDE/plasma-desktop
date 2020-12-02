@@ -118,7 +118,7 @@ void User::setPath(const QDBusObjectPath &path) {
     if (!m_dbusIface.isNull()) delete m_dbusIface;
     m_dbusIface = new OrgFreedesktopAccountsUserInterface(QStringLiteral("org.freedesktop.Accounts"), path.path(), QDBusConnection::systemBus(), this);
 
-    if (!m_dbusIface->isValid() || m_dbusIface->lastError().isValid() || m_dbusIface->systemAccount()) {
+    if (m_dbusIface->systemAccount()) {
         return;
     }
 
