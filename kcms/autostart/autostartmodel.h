@@ -39,7 +39,8 @@ public:
         Enabled = Qt::UserRole + 1,
         Source,
         FileName,
-        OnlyInPlasma
+        OnlyInPlasma,
+        IsUser
     };
 
     enum AutostartEntrySource {
@@ -47,6 +48,7 @@ public:
         XdgScripts = 1,
         PlasmaShutdown = 2,
         PlasmaStart = 3,
+        SystemXdgAutoStart = 4,
     };
     Q_ENUM(AutostartEntrySource)
 
@@ -54,12 +56,13 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
 
-    bool reloadEntry(const QModelIndex &index, const QString &fileName);
+    bool reloadEntry(const QModelIndex &index);
 
     Q_INVOKABLE void removeEntry(int row);
     Q_INVOKABLE void editApplication(int row, QQuickItem *context);
     Q_INVOKABLE void addScript(const QUrl &url, AutostartEntrySource kind);
     Q_INVOKABLE void showApplicationDialog(QQuickItem *context);
+    Q_INVOKABLE void toggleApplication(int row);
 
     void load();
 
@@ -69,7 +72,6 @@ Q_SIGNALS:
 private:
     void addApplication(const KService::Ptr &service);
     void loadScriptsFromDir(const QString &subDir, AutostartEntrySource kind);
-    QString XdgAutoStartPath() const;
 
     QVector<AutostartEntry> m_entries;
 };
@@ -81,6 +83,7 @@ struct AutostartEntry {
     QString fileName; // the file backing the entry
     bool onlyInPlasma;
     QString iconName;
+    bool isUser;
 };
 Q_DECLARE_TYPEINFO(AutostartEntry, Q_MOVABLE_TYPE);
 

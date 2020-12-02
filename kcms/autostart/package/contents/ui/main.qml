@@ -52,7 +52,15 @@ KCM.ScrollViewKCM {
 
         delegate: Kirigami.SwipeListItem {
 
-            Item {
+            RowLayout {
+                CheckBox {
+                    id: itemChecked
+                    Layout.leftMargin: Kirigami.Units.gridUnit
+                    Layout.alignment: Qt.AlignVCenter
+                    checked: model.enabled
+                    visible: model.source === AutostartModel.XdgAutoStart
+                    onClicked: kcm.model.toggleApplication(model.index);
+                }
                 Kirigami.Icon {
                     id: appIcon
                     source: model.iconName
@@ -61,12 +69,10 @@ KCM.ScrollViewKCM {
                 }
 
                 Label {
+                    Layout.fillWidth: true
                     height: appIcon.height
                     text: model.name
                     elide: Text.ElideRight
-                    anchors.left: appIcon.right
-                    anchors.leftMargin: Kirigami.Units.largeSpacing
-                    anchors.right: parent.right
                 }
             }
 
@@ -81,6 +87,7 @@ KCM.ScrollViewKCM {
                     text: i18n("Remove")
                     icon.name: "list-remove"
                     onTriggered: kcm.model.removeEntry(model.index)
+                    visible: model.isUser
                 }
             ]
         }

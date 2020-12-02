@@ -25,6 +25,7 @@
 #include <QDir>
 #include <QQuickItem>
 #include <QQuickRenderControl>
+#include <QSet>
 #include <QStandardPaths>
 #include <QWindow>
 
@@ -35,8 +36,26 @@
 #include <KOpenWithDialog>
 #include <KPropertiesDialog>
 
+
+namespace {
+QString XdgAutoStartPath()
+{
+    return QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/autostart/");
+}
+
+QString XdgAutoStartDesktopFile(const QString &fileName)
+{
+    return QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("autostart/") + fileName);
+}
+
+QString writableXdgAutoStartDesktopFile(const QString &fileName)
+{
+    return QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/autostart/") + fileName;
+}
+
 // FDO user autostart directories are
 // .config/autostart which has .desktop files executed by klaunch
+// System autostart directories which is defined by $XDG_CONFIG_DIRS, usually /etc/xdg/autostart
 
 // Then we have Plasma-specific locations which run scripts
 // .config/autostart-scripts which has scripts executed by ksmserver
@@ -50,25 +69,34 @@
 
 // share/autostart shouldn't be an option as this should be reserved for global autostart entries
 
-static std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName)
+std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName)
 {
-    KDesktopFile config(fileName);
+    // KDesktopFile will load the desktop file in cascaded way, while Autostart specific
+    // Requires it to be the first file found, so we use absolute path instead.
+    auto path = XdgAutoStartDesktopFile(fileName);
+    KDesktopFile config(path);
+    // Skip NoDisplay=true files.
+    if (config.noDisplay()) {
+        return {};
+    }
+
     const KConfigGroup grp = config.desktopGroup();
-    const auto name = config.readName();
+    QString name = config.readName();
+    // Leave an option for user to delete invalid desktop files.
+    if (name.isEmpty()) {
+        name = fileName;
+    }
+
+    // Skip the entries with X-KDE-autostart-condition. They will have autostart settings outside of this KCM.
+    if (!grp.readEntry("X-KDE-autostart-condition", "").isEmpty()) {
+        return {};
+    }
 
     const bool hidden = grp.readEntry("Hidden", false);
 
-    if (hidden) {
-        return {};
-    }
-
     const QStringList notShowList = grp.readXdgListEntry("NotShowIn");
     const QStringList onlyShowList = grp.readXdgListEntry("OnlyShowIn");
-    const bool enabled = !(notShowList.contains(QLatin1String("KDE")) || (!onlyShowList.isEmpty() && !onlyShowList.contains(QLatin1String("KDE"))));
-
-    if (!enabled) {
-        return {};
-    }
+    const bool enabled = !(hidden || notShowList.contains(QLatin1String("KDE")) || (!onlyShowList.isEmpty() && !onlyShowList.contains(QLatin1String("KDE"))));
 
     const auto lstEntry = grp.readXdgListEntry("OnlyShowIn");
     const bool onlyInPlasma = lstEntry.contains(QLatin1String("KDE"));
@@ -82,23 +110,21 @@ static std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName)
     if (!tryCommand.isEmpty() && QStandardPaths::findExecutable(tryCommand).isEmpty() && !QFile::exists(tryCommand)) {
         return {};
     }
+    const bool isUser = QFileInfo(writableXdgAutoStartDesktopFile(fileName)).isFile();
 
     return std::optional<AutostartEntry>({name,
             AutostartModel::AutostartEntrySource::XdgAutoStart, // .config/autostart load desktop at startup
             enabled,
             fileName,
             onlyInPlasma,
-            iconName});
+            iconName,
+            isUser});
+}
 }
 
 AutostartModel::AutostartModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-}
-
-QString AutostartModel::XdgAutoStartPath() const
-{
-    return QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/autostart/");
 }
 
 void AutostartModel::load()
@@ -112,15 +138,30 @@ void AutostartModel::load()
         autostartdir.mkpath(XdgAutoStartPath());
     }
 
-    autostartdir.setFilter(QDir::Files | QDir::NoDotAndDotDot);
+    QStringList paths = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("autostart"), QStandardPaths::LocateDirectory);
 
-    const auto filesInfo = autostartdir.entryInfoList();
-    for (const QFileInfo &fi : filesInfo) {
-        if (!KDesktopFile::isDesktopFile(fi.fileName())) {
+    QSet<QString> files;
+    for (const auto &path: paths) {
+        QDir dir(path);
+        if (!dir.exists()) {
             continue;
         }
+        for (const auto &fileName : dir.entryList(QStringList() << QStringLiteral("*.desktop"))) {
+            if (!KDesktopFile::isDesktopFile(fileName)) {
+                continue;
+            }
+            if (!files.contains(fileName)) {
+                files.insert(fileName);
+            }
+        }
+    }
 
-        const std::optional<AutostartEntry> entry = loadDesktopEntry(fi.absoluteFilePath());
+    // Ensure the order is stable.
+    QStringList filesList(files.begin(), files.end());
+    filesList.sort();
+
+    for (const auto &file : filesList) {
+        const std::optional<AutostartEntry> entry = loadDesktopEntry(file);
 
         if (!entry) {
             continue;
@@ -156,7 +197,7 @@ void AutostartModel::loadScriptsFromDir(const QString &subDir, AutostartModel::A
             fileName = fi.symLinkTarget();
         }
 
-        m_entries.push_back({fileName, kind, true, fi.absoluteFilePath(), false, QStringLiteral("dialog-scripts")});
+        m_entries.push_back({fileName, kind, true, fi.absoluteFilePath(), false, QStringLiteral("dialog-scripts"), true});
     }
 }
 
@@ -169,13 +210,14 @@ int AutostartModel::rowCount(const QModelIndex &parent) const
     return m_entries.count();
 }
 
-bool AutostartModel::reloadEntry(const QModelIndex &index, const QString &fileName)
+bool AutostartModel::reloadEntry(const QModelIndex &index)
 {
     if (!checkIndex(index)) {
         return false;
     }
 
-    const std::optional<AutostartEntry> newEntry = loadDesktopEntry(fileName);
+    const auto &entry = m_entries[index.row()];
+    const std::optional<AutostartEntry> newEntry = loadDesktopEntry(entry.fileName);
 
     if (!newEntry) {
         return false;
@@ -207,6 +249,8 @@ QVariant AutostartModel::data(const QModelIndex &index, int role) const
         return entry.onlyInPlasma;
     case IconName:
         return entry.iconName;
+    case IsUser:
+        return entry.isUser;
     }
 
     return QVariant();
@@ -215,13 +259,15 @@ QVariant AutostartModel::data(const QModelIndex &index, int role) const
 void AutostartModel::addApplication(const KService::Ptr &service)
 {
     QString desktopPath;
+    QString desktopFileName;
     // It is important to ensure that we make an exact copy of an existing
     // desktop file (if selected) to enable users to override global autostarts.
     // Also see
     // https://bugs.launchpad.net/ubuntu/+source/kde-workspace/+bug/923360
     if (service->desktopEntryName().isEmpty() || service->entryPath().isEmpty()) {
         // create a new desktop file in s_desktopPath
-        desktopPath = XdgAutoStartPath() + service->name() + QStringLiteral(".desktop");
+        desktopFileName = service->name() + QStringLiteral(".desktop");
+        desktopPath = writableXdgAutoStartDesktopFile(desktopFileName);
 
         KDesktopFile desktopFile(desktopPath);
         KConfigGroup kcg = desktopFile.desktopGroup();
@@ -234,7 +280,8 @@ void AutostartModel::addApplication(const KService::Ptr &service)
         desktopFile.sync();
 
     } else {
-        desktopPath = XdgAutoStartPath() + service->desktopEntryName() + QStringLiteral(".desktop");
+        desktopFileName = service->desktopEntryName() + QStringLiteral(".desktop");
+        desktopPath = writableXdgAutoStartDesktopFile(desktopFileName);
 
         QFile::remove(desktopPath);
 
@@ -242,14 +289,17 @@ void AutostartModel::addApplication(const KService::Ptr &service)
         KDesktopFile desktopFile(service->entryPath());
         auto newDeskTopFile = desktopFile.copyTo(desktopPath);
         newDeskTopFile->sync();
+        delete newDeskTopFile;
     }
 
     const auto entry = AutostartEntry {service->name(),
                                        AutostartModel::AutostartEntrySource::XdgAutoStart, // .config/autostart load desktop at startup
                                        true,
-                                       desktopPath,
+                                       desktopFileName,
                                        false,
-                                       service->icon()};
+                                       service->icon(),
+        true
+    };
 
     int lastApplication = -1;
     for (const AutostartEntry &e : qAsConst(m_entries)) {
@@ -361,7 +411,7 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
 
         const QUrl dest = theJob->property("finalUrl").toUrl();
 
-        AutostartEntry entry = AutostartEntry {dest.fileName(), kind, true, dest.path(), false, QStringLiteral("dialog-scripts")};
+        AutostartEntry entry = AutostartEntry {dest.fileName(), kind, true, dest.path(), false, QStringLiteral("dialog-scripts"), true};
 
         m_entries.insert(index, entry);
 
@@ -374,8 +424,13 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
 void AutostartModel::removeEntry(int row)
 {
     const auto entry = m_entries.at(row);
-
-    KIO::DeleteJob *job = KIO::del(QUrl::fromLocalFile(entry.fileName), KIO::HideProgressInfo);
+    QString filePath;
+    if (entry.source == XdgAutoStart) {
+        filePath = writableXdgAutoStartDesktopFile(entry.fileName);
+    } else {
+        filePath = entry.fileName;
+    }
+    KIO::DeleteJob *job = KIO::del(QUrl::fromLocalFile(filePath), KIO::HideProgressInfo);
 
     connect(job, &KJob::finished, this, [this, row, entry](KJob *theJob) {
         if (theJob->error()) {
@@ -383,10 +438,15 @@ void AutostartModel::removeEntry(int row)
             return;
         }
 
-        beginRemoveRows(QModelIndex(), row, row);
-        m_entries.remove(row);
+        // If there's a system file available, reload the system entry again.
+        if (entry.source == XdgAutoStart && !XdgAutoStartDesktopFile(entry.fileName).isEmpty()) {
+            reloadEntry(index(row, 0));
+        } else {
+            beginRemoveRows(QModelIndex(), row, row);
+            m_entries.remove(row);
 
-        endRemoveRows();
+            endRemoveRows();
+        }
     });
 
     job->start();
@@ -402,6 +462,7 @@ QHash<int, QByteArray> AutostartModel::roleNames() const
     roleNames.insert(FileName, QByteArrayLiteral("fileName"));
     roleNames.insert(OnlyInPlasma, QByteArrayLiteral("onlyInPlasma"));
     roleNames.insert(IconName, QByteArrayLiteral("iconName"));
+    roleNames.insert(IsUser, QByteArrayLiteral("isUser"));
 
     return roleNames;
 }
@@ -411,7 +472,7 @@ void AutostartModel::editApplication(int row, QQuickItem *context)
     const QModelIndex idx = index(row, 0);
 
     const QString fileName = data(idx, AutostartModel::Roles::FileName).toString();
-    KFileItem kfi(QUrl::fromLocalFile(fileName));
+    KFileItem kfi(QUrl::fromLocalFile(XdgAutoStartDesktopFile(fileName)));
     kfi.setDelayedMimeTypes(true);
 
     KPropertiesDialog *dlg = new KPropertiesDialog(kfi, nullptr);
@@ -427,8 +488,45 @@ void AutostartModel::editApplication(int row, QQuickItem *context)
 
     connect(dlg, &QDialog::finished, this, [this, idx, dlg](int result) {
         if (result == QDialog::Accepted) {
-            reloadEntry(idx, dlg->item().localPath());
+            reloadEntry(idx);
         }
     });
     dlg->open();
+}
+
+void AutostartModel::toggleApplication(int row)
+{
+    // Only XDG autostart entry support this.
+    const auto entry = m_entries.at(row);
+    Q_ASSERT(entry.source == XdgAutoStart);
+
+    // Load the old configuration.
+    const KDesktopFile config(XdgAutoStartDesktopFile(entry.fileName));
+    bool newEnabled = !entry.enabled;
+    const KConfigGroup grp = config.desktopGroup();
+
+    QString desktopPath = writableXdgAutoStartDesktopFile(entry.fileName);
+    // Update entries are relevant to enable/disable to the entries.
+    KDesktopFile* newDesktopFile = config.copyTo(desktopPath);
+    KConfigGroup newGroup = newDesktopFile->desktopGroup();
+    // We will try to preserve NotShowIn and OnlyShowIn if possible.
+    if (newEnabled) {
+        newGroup.writeEntry("Hidden", false);
+        QStringList notShowList = grp.readXdgListEntry("NotShowIn");
+        if (notShowList.removeAll("KDE")) {
+            newGroup.writeXdgListEntry("NotShowIn", notShowList);
+        }
+        QStringList onlyShowList = grp.readXdgListEntry("OnlyShowIn");
+        if (!onlyShowList.empty() && !onlyShowList.contains("KDE")) {
+            onlyShowList.append("KDE");
+            newGroup.writeXdgListEntry("OnlyShowIn", onlyShowList);
+        }
+    } else {
+        newGroup.writeEntry("Hidden", true);
+    }
+
+    // Sync the new data to disk.
+    delete newDesktopFile;
+    // Reload entry from disk.
+    reloadEntry(index(row, 0));
 }
