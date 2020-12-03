@@ -12,6 +12,14 @@ kconfig_add_kcfg_files(kcm_access_PART_SRCS
     kcmaccessibilityscreenreader.kcfgc
     GENERATE_MOC)
 
+kcmutils_generate_module_data(
+    kcm_access_PART_SRCS
+    MODULE_DATA_HEADER kcmaccessibilitydata.h
+    MODULE_DATA_CLASS_NAME AccessibilityData
+    SETTINGS_HEADERS kcmaccessibilitybell.h kcmaccessibilitykeyboard.h kcmaccessibilitymouse.h kcmaccessibilityscreenreader.h
+    SETTINGS_CLASSES BellSettings KeyboardSettings MouseSettings ScreenReaderSettings
+)
+
 add_library(kcm_access MODULE ${kcm_access_PART_SRCS})
 
 target_link_libraries(kcm_access

@@ -21,7 +21,7 @@
 import QtQuick 2.6
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.12 as QQC2
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcm 1.3 as KCM
 import org.kde.kirigami 2.3 as Kirigami
 
 Kirigami.FormLayout {
@@ -31,7 +31,10 @@ Kirigami.FormLayout {
         Kirigami.FormData.label:  i18n("Use number pad to move cursor:")
         text: i18n("Enable")
 
-        enabled: !kcm.mouseSettings.isImmutable("MouseKeys")
+        KCM.SettingStateBinding {
+            configObject: kcm.mouseSettings
+            settingName: "MouseKeys"
+        }
 
         checked: kcm.mouseSettings.mouseKeys
         onToggled: kcm.mouseSettings.mouseKeys = checked
@@ -40,7 +43,10 @@ Kirigami.FormLayout {
         Kirigami.FormData.label: i18n("When a gesture is used:")
         text: i18n("Display a confirmation dialog")
 
-        enabled: !kcm.keyboardSettings.isImmutable("GestureConfirmation")
+        KCM.SettingStateBinding {
+            configObject: kcm.keyboardSettings
+            settingName: "GestureConfirmation"
+        }
 
         checked: kcm.keyboardSettings.gestureConfirmation
         onToggled: kcm.keyboardSettings.gestureConfirmation = checked
@@ -48,7 +54,10 @@ Kirigami.FormLayout {
     QQC2.CheckBox {
         text: i18n("Ring the System Bell")
 
-        enabled: !kcm.keyboardSettings.isImmutable("Gestures")
+        KCM.SettingStateBinding {
+            configObject: kcm.keyboardSettings
+            settingName: "Gestures"
+        }
 
         checked: kcm.keyboardSettings.gestures
         onToggled: kcm.keyboardSettings.gestures = checked
@@ -56,7 +65,10 @@ Kirigami.FormLayout {
     QQC2.CheckBox {
         text: i18n("Show a notification")
 
-        enabled: !kcm.keyboardSettings.isImmutable("KeyboardNotifyAccess")
+        KCM.SettingStateBinding {
+            configObject: kcm.keyboardSettings
+            settingName: "KeyboardNotifyAccess"
+        }
 
         checked: kcm.keyboardSettings.keyboardNotifyAccess
         onToggled: kcm.keyboardSettings.keyboardNotifyAccess = checked
@@ -69,7 +81,10 @@ Kirigami.FormLayout {
     QQC2.SpinBox {
         Kirigami.FormData.label: i18n("Acceleration delay:")
 
-        enabled: !kcm.mouseSettings.isImmutable("AccelerationDelay")
+        KCM.SettingStateBinding {
+            configObject: kcm.mouseSettings
+            settingName: "AccelerationDelay"
+        }
 
         value: kcm.mouseSettings.accelerationDelay
         onValueChanged: kcm.mouseSettings.accelerationDelay = value
@@ -77,7 +92,10 @@ Kirigami.FormLayout {
     QQC2.SpinBox {
         Kirigami.FormData.label: i18n("Repeat interval:")
 
-        enabled: !kcm.mouseSettings.isImmutable("RepetitionInterval")
+        KCM.SettingStateBinding {
+            configObject: kcm.mouseSettings
+            settingName: "RepetitionInterval"
+        }
 
         value: kcm.mouseSettings.repetitionInterval
         onValueChanged: kcm.mouseSettings.repetitionInterval = value
@@ -85,6 +103,10 @@ Kirigami.FormLayout {
     QQC2.SpinBox {
         Kirigami.FormData.label: i18n("Acceleration time:")
 
+        KCM.SettingStateBinding {
+            configObject: kcm.mouseSettings
+            settingName: "AccelerationTime"
+        }
         enabled: !kcm.mouseSettings.isImmutable("AccelerationTime")
 
         value: kcm.mouseSettings.accelerationTime
@@ -93,7 +115,10 @@ Kirigami.FormLayout {
     QQC2.SpinBox {
         Kirigami.FormData.label:  i18n("Maximum speed:")
 
-        enabled: !kcm.mouseSettings.isImmutable("MaxSpeed")
+        KCM.SettingStateBinding {
+            configObject: kcm.mouseSettings
+            settingName: "MaxSpeed"
+        }
 
         value: kcm.mouseSettings.maxSpeed
         onValueChanged: kcm.mouseSettings.maxSpeed = value
@@ -101,7 +126,10 @@ Kirigami.FormLayout {
     QQC2.SpinBox {
         Kirigami.FormData.label: i18n("Acceleration profile:")
 
-        enabled: !kcm.mouseSettings.isImmutable("ProfileCurve")
+        KCM.SettingStateBinding {
+            configObject: kcm.mouseSettings
+            settingName: "ProfileCurve"
+        }
 
         value: kcm.mouseSettings.profileCurve
         onValueChanged: kcm.mouseSettings.profileCurve = value

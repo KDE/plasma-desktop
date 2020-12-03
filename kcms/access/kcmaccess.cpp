@@ -51,8 +51,9 @@
 #include "kcmaccessibilitykeyboard.h"
 #include "kcmaccessibilitymouse.h"
 #include "kcmaccessibilityscreenreader.h"
+#include "kcmaccessibilitydata.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMAccessFactory, "kcm_access.json", registerPlugin<KAccessConfig>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMAccessFactory, "kcm_access.json", registerPlugin<KAccessConfig>(); registerPlugin<AccessibilityData>();)
 
 QString mouseKeysShortcut(Display *display)
 {
@@ -152,10 +153,7 @@ QString mouseKeysShortcut(Display *display)
 
 KAccessConfig::KAccessConfig(QObject *parent, const QVariantList& args)
     : KQuickAddons::ManagedConfigModule(parent, args)
-    , m_mouseSettings(new MouseSettings(this))
-    , m_bellSettings(new BellSettings(this))
-    , m_keyboardSettings(new KeyboardSettings(this))
-    , m_screenReaderSettings(new ScreenReaderSettings(this))
+    , m_data(new AccessibilityData(this))
     , m_desktopShortcutInfo(QX11Info::isPlatformX11() ? mouseKeysShortcut(QX11Info::display()) : QString())
 {
     qmlRegisterType<MouseSettings>();
@@ -217,7 +215,7 @@ void KAccessConfig::save()
 {
     ManagedConfigModule::save();
 
-    if (m_bellSettings->systemBell() || m_bellSettings->customBell() || m_bellSettings->visibleBell()) {
+    if (bellSettings()->systemBell() || bellSettings()->customBell() || bellSettings()->visibleBell()) {
         KConfig _cfg(QStringLiteral("kdeglobals"), KConfig::NoGlobals);
         KConfigGroup cfg(&_cfg, "General");
         cfg.writeEntry("UseSystemBell", true);
@@ -248,6 +246,26 @@ bool KAccessConfig::orcaInstalled()
     int tryOrcaRun = QProcess::execute(QStringLiteral("orca"), {QStringLiteral("--version")});
     // If the process cannot be started, -2 is returned.
     return tryOrcaRun != -2;
+}
+
+MouseSettings *KAccessConfig::mouseSettings() const
+{
+    return m_data->mouseSettings();
+}
+
+BellSettings *KAccessConfig::bellSettings() const
+{
+    return m_data->bellSettings();
+}
+
+KeyboardSettings *KAccessConfig::keyboardSettings() const
+{
+    return m_data->keyboardSettings();
+}
+
+ScreenReaderSettings *KAccessConfig::screenReaderSettings() const
+{
+    return m_data->screenReaderSettings();
 }
 
 #include "kcmaccess.moc"

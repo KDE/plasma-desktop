@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.12 as QQC2
 import QtQuick.Dialogs 1.3 as Dialogs
 
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcm 1.3 as KCM
 import org.kde.kquickcontrols 2.0 as KQuickAddons
 import org.kde.kirigami 2.3 as Kirigami
 
@@ -44,8 +44,10 @@ Kirigami.FormLayout {
 
         Kirigami.FormData.label: i18n("Audible bell:")
         text: i18nc("Enable the system bell", "Enable")
-
-        enabled: !kcm.bellSettings.isImmutable("SystemBell")
+        KCM.SettingStateBinding {
+            configObject: kcm.bellSettings
+            settingName: "SystemBell"
+        }
 
         checked: kcm.bellSettings.systemBell
         onToggled: kcm.bellSettings.systemBell = checked
@@ -53,7 +55,11 @@ Kirigami.FormLayout {
     QQC2.CheckBox {
         text: i18n("Ring when toggling accessibility features with gestures")
 
-        enabled: !kcm.keyboardSettings.isImmutable("Gestures") && systemBell.checked
+        KCM.SettingStateBinding {
+            configObject: kcm.keyboardSettings
+            settingName: "Gestures"
+            extraEnabledConditions: systemBell.checked
+        }
 
         checked: kcm.keyboardSettings.gestures
         onToggled: kcm.keyboardSettings.gestures = checked
@@ -67,7 +73,11 @@ Kirigami.FormLayout {
             id: customBell
             Layout.alignment: Qt.AlignVCenter
 
-            enabled: !kcm.bellSettings.isImmutable("CustomBell") && kcm.bellSettings.systemBell
+            KCM.SettingStateBinding {
+                configObject: kcm.bellSettings
+                settingName: "CustomBell"
+                extraEnabledConditions: kcm.bellSettings.systemBell
+            }
 
             checked: kcm.bellSettings.customBell
             onToggled: kcm.bellSettings.customBell= checked
@@ -78,7 +88,11 @@ Kirigami.FormLayout {
 
             text: kcm.bellSettings.customBellFile
 
-            enabled: !kcm.bellSettings.isImmutable("CustomBellFile") && kcm.bellSettings.customBell
+            KCM.SettingStateBinding {
+                configObject: kcm.bellSettings
+                settingName: "CustomBellFile"
+                extraEnabledConditions: kcm.bellSettings.customBell
+            }
 
             onEditingFinished: kcm.bellSettings.customBellFile = textEdit.text
         }
@@ -87,7 +101,11 @@ Kirigami.FormLayout {
             QQC2.ToolTip.visible: down
             QQC2.ToolTip.text: i18n("Search audio file for the system bell")
             Accessible.name: i18n("Button search audio file")
-            enabled: !kcm.bellSettings.isImmutable("CustomBellFile") && kcm.bellSettings.customBell
+            KCM.SettingStateBinding {
+                configObject: kcm.bellSettings
+                settingName: "CustomBellFile"
+                extraEnabledConditions: kcm.bellSettings.customBell
+            }
 
             onClicked: fileDialog.open()
         }
@@ -101,7 +119,10 @@ Kirigami.FormLayout {
         Kirigami.FormData.label: i18n("Visual bell:")
         text: i18nc("Enable visual bell", "Enable")
 
-        enabled: !kcm.bellSettings.isImmutable("VisibleBell")
+        KCM.SettingStateBinding {
+            configObject: kcm.bellSettings
+            settingName: "VisibleBell"
+        }
 
         checked: kcm.bellSettings.visibleBell
         onToggled: kcm.bellSettings.visibleBell = checked
@@ -112,7 +133,11 @@ Kirigami.FormLayout {
 
         text: i18nc("Invert screen on a system bell", "Invert Screen")
 
-        enabled: !kcm.bellSettings.isImmutable("InvertScreen") && kcm.bellSettings.visibleBell
+        KCM.SettingStateBinding {
+            configObject: kcm.bellSettings
+            settingName: "InvertScreen"
+            extraEnabledConditions: kcm.bellSettings.visibleBell
+        }
 
         checked: kcm.bellSettings.invertScreen
         onToggled: kcm.bellSettings.invertScreen = checked
@@ -125,15 +150,20 @@ Kirigami.FormLayout {
 
             text: i18nc("Flash screen on a system bell", "Flash")
 
-            enabled: !kcm.bellSettings.isImmutable("InvertScreen")
+            KCM.SettingStateBinding {
+                configObject: kcm.bellSettings
+                settingName: "InvertScreen"
+            }
 
             checked: !kcm.bellSettings.invertScreen
             onToggled: kcm.bellSettings.invertScreen = !checked
         }
         KQuickAddons.ColorButton {
             text: i18nc("Color of the system bell","Color")
-
-            enabled: !kcm.bellSettings.isImmutable("VisibleBellColor")
+            KCM.SettingStateBinding {
+                configObject: kcm.bellSettings
+                settingName: "VisibleBellColor"
+            }
 
             color: kcm.bellSettings.visibleBellColor
             onAccepted: kcm.bellSettings.visibleBellColor = color
@@ -142,7 +172,11 @@ Kirigami.FormLayout {
     QQC2.SpinBox {
         Kirigami.FormData.label: i18nc("Duration of the system bell", "Duration:")
 
-        enabled: !kcm.bellSettings.isImmutable("VisibleBellPause") && kcm.bellSettings.visibleBell
+        KCM.SettingStateBinding {
+            configObject: kcm.bellSettings
+            settingName: "VisibleBellPause"
+            extraEnabledConditions: kcm.bellSettings.visibleBell
+        }
 
         value: kcm.bellSettings.visibleBellPause
         onValueModified: kcm.bellSettings.visibleBellPause = value

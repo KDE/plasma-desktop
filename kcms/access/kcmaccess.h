@@ -30,14 +30,15 @@ class MouseSettings;
 class BellSettings;
 class KeyboardSettings;
 class ScreenReaderSettings;
+class AccessibilityData;
 
 class KAccessConfig : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
-    Q_PROPERTY(MouseSettings *mouseSettings MEMBER m_mouseSettings CONSTANT)
-    Q_PROPERTY(BellSettings *bellSettings MEMBER m_bellSettings CONSTANT)
-    Q_PROPERTY(KeyboardSettings *keyboardSettings MEMBER m_keyboardSettings CONSTANT)
-    Q_PROPERTY(ScreenReaderSettings *screenReaderSettings MEMBER m_screenReaderSettings CONSTANT)
+    Q_PROPERTY(MouseSettings *mouseSettings READ mouseSettings CONSTANT)
+    Q_PROPERTY(BellSettings *bellSettings READ bellSettings CONSTANT)
+    Q_PROPERTY(KeyboardSettings *keyboardSettings READ keyboardSettings CONSTANT)
+    Q_PROPERTY(ScreenReaderSettings *screenReaderSettings READ screenReaderSettings CONSTANT)
     Q_PROPERTY(QString orcaLaunchFeedback READ orcaLaunchFeedback WRITE setOrcaLaunchFeedback NOTIFY orcaLaunchFeedbackChanged)
     Q_PROPERTY(QString desktopShortcutInfo MEMBER m_desktopShortcutInfo CONSTANT)
     Q_PROPERTY(bool screenReaderInstalled MEMBER m_screenReaderInstalled CONSTANT)
@@ -55,16 +56,18 @@ public:
 
     QString orcaLaunchFeedback() const;
 
+    MouseSettings *mouseSettings() const;
+    BellSettings *bellSettings() const;
+    KeyboardSettings *keyboardSettings() const;
+    ScreenReaderSettings *screenReaderSettings() const;
+
 Q_SIGNALS:
     void orcaLaunchFeedbackChanged();
 
 private:
     void setOrcaLaunchFeedback(const QString& value);
 
-    MouseSettings *m_mouseSettings;
-    BellSettings *m_bellSettings;
-    KeyboardSettings *m_keyboardSettings;
-    ScreenReaderSettings *m_screenReaderSettings;
+    AccessibilityData *m_data;
     QString m_orcaLaunchFeedback;
     QString m_desktopShortcutInfo;
     bool m_screenReaderInstalled;
