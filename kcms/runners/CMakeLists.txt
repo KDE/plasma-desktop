@@ -3,7 +3,10 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_search\")
 
 set(kcm_search_SRCS
   kcm.cpp
+  krunnerdata.cpp
 )
+
+kconfig_add_kcfg_files(kcm_search_SRCS krunnersettings.kcfgc)
 
 add_library(kcm_plasmasearch MODULE ${kcm_search_SRCS})
 add_executable(plugininstaller

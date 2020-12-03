@@ -1,6 +1,7 @@
 /*
    Copyright (c) 2014 Vishesh Handa <me@vhanda.in>
    Copyright (c) 2020 Alexander Lohnau <alexander.lohnau@gmx.de>
+   Copyright (c) 2020 Cyril Rossi <cyril.rossi@enioka.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -21,7 +22,8 @@
 #define _KCM_SEARCH_H
 
 #include <KCModule>
-#include <KConfig>
+#include <KSharedConfig>
+
 #include <QRadioButton>
 #include <QCheckBox>
 #include <QPushButton>
@@ -29,6 +31,7 @@
 
 
 class KPluginSelector;
+class KRunnerSettings;
 
 class SearchConfigModule : public KCModule
 {
@@ -46,16 +49,20 @@ public Q_SLOTS:
     void load() override;
     void save() override;
     void defaults() override;
+    void updateUnmanagedState();
 
 private:
+    void setDefaultIndicatorVisible(QWidget *widget, bool visible);
+
     KPluginSelector *m_pluginSelector;
-    KConfig m_config;
+    KSharedConfigPtr m_config;
     QString m_pluginID;
     QRadioButton *m_topPositioning;
     QRadioButton *m_freeFloating;
     QCheckBox *m_retainPriorSearch;
     QPushButton *m_clearHistoryButton;
     QCheckBox *m_enableHistory;
+    KRunnerSettings *m_settings;
 };
 
 #endif

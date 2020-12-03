@@ -1,6 +1,7 @@
 /* This file is part of the KDE Project
    Copyright (c) 2014 Vishesh Handa <me@vhanda.in>
    Copyright (c) 2020 Alexander Lohnau <alexander.lohnau@gmx.de>
+   Copyright (c) 2020 Cyril Rossi <cyril.rossi@enioka.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -21,7 +22,6 @@
 
 #include <KPluginFactory>
 #include <KAboutData>
-#include <KSharedConfig>
 #include <QDebug>
 #include <QStandardPaths>
 #include <KLocalizedString>
@@ -38,12 +38,16 @@
 #include <QPainter>
 #include <QFormLayout>
 
-K_PLUGIN_FACTORY(SearchConfigModuleFactory, registerPlugin<SearchConfigModule>();)
+#include "krunnersettings.h"
+#include "krunnerdata.h"
+
+K_PLUGIN_FACTORY(SearchConfigModuleFactory, registerPlugin<SearchConfigModule>(); registerPlugin<KRunnerData>();)
 
 
 SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args)
     : KCModule(parent, args)
-    , m_config("krunnerrc")
+    , m_config(KSharedConfig::openConfig("krunnerrc"))
+    , m_settings(new KRunnerSettings(this))
 {
     KAboutData* about = new KAboutData(QStringLiteral("kcm_search"), i18nc("kcm name for About dialog", "Configure Search Bar"),
                                        QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
@@ -55,9 +59,10 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
         m_pluginID = args.at(0).toString();
     }
 
-    QVBoxLayout* layout = new QVBoxLayout(this);
+    QVBoxLayout *layout = new QVBoxLayout(this);
 
-    QHBoxLayout *headerLayout = new QHBoxLayout(this);
+    QHBoxLayout *headerLayout = new QHBoxLayout;
+    layout->addLayout(headerLayout);
 
     QLabel *label = new QLabel(i18n("Enable or disable plugins (used in KRunner and Application Launcher)"));
 
@@ -65,32 +70,31 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     m_clearHistoryButton->setIcon(QIcon::fromTheme(isRightToLeft() ? QStringLiteral("edit-clear-locationbar-ltr")
                                                                    : QStringLiteral("edit-clear-locationbar-rtl")));
     connect(m_clearHistoryButton, &QPushButton::clicked, this, [this] {
-        KConfigGroup generalConfig(m_config.group("General"));
+        KConfigGroup generalConfig(m_config->group("General"));
         generalConfig.deleteEntry("history", KConfig::Notify);
         generalConfig.sync();
     });
 
-    QHBoxLayout *configHeaderLayout = new QHBoxLayout(this);
-    QVBoxLayout *configHeaderLeft = new QVBoxLayout(this);
-    QVBoxLayout *configHeaderRight = new QVBoxLayout(this);
+    QHBoxLayout *configHeaderLayout = new QHBoxLayout;
+    QVBoxLayout *configHeaderLeft = new QVBoxLayout;
+    QVBoxLayout *configHeaderRight = new QVBoxLayout;
 
     // Options where KRunner should pop up
     m_topPositioning = new QRadioButton(i18n("Top"), this);
-    connect(m_topPositioning, &QRadioButton::clicked, this, &SearchConfigModule::markAsChanged);
+    connect(m_topPositioning, &QRadioButton::toggled, this, &SearchConfigModule::updateUnmanagedState);
     m_freeFloating = new QRadioButton(i18n("Center"), this);
-    connect(m_freeFloating, &QRadioButton::clicked, this, &SearchConfigModule::markAsChanged);
+    connect(m_freeFloating, &QRadioButton::toggled, this, &SearchConfigModule::updateUnmanagedState);
 
-    QFormLayout *positionLayout = new QFormLayout(this);
+    QFormLayout *positionLayout = new QFormLayout;
     positionLayout->addRow(i18n("Position on screen:"), m_topPositioning);
     positionLayout->addRow(QString(), m_freeFloating);
-    configHeaderLeft->addLayout(positionLayout);
     m_enableHistory = new QCheckBox(i18n("Enable"), this);
+    m_enableHistory->setObjectName("kcfg_historyEnabled");
     positionLayout->addItem(new QSpacerItem(0, 0));
     positionLayout->addRow(i18n("History:"), m_enableHistory);
-    connect(m_enableHistory, &QCheckBox::clicked, this, &SearchConfigModule::markAsChanged);
-    connect(m_enableHistory, &QCheckBox::clicked, m_clearHistoryButton, &QPushButton::setEnabled);
+    connect(m_enableHistory, &QCheckBox::toggled, m_clearHistoryButton, &QPushButton::setEnabled);
     m_retainPriorSearch = new QCheckBox(i18n("Retain previous search"), this);
-    connect(m_retainPriorSearch, &QCheckBox::clicked, this, &SearchConfigModule::markAsChanged);
+    m_retainPriorSearch->setObjectName("kcfg_retainPriorSearch");
     positionLayout->addRow(QString(), m_retainPriorSearch);
     configHeaderLeft->addLayout(positionLayout);
 
@@ -106,9 +110,7 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     headerLayout->addStretch();
 
     m_pluginSelector = new KPluginSelector(this);
-
-    connect(m_pluginSelector, &KPluginSelector::changed, this, [this] { markAsChanged(); });
-    connect(m_pluginSelector, &KPluginSelector::defaulted, this, &KCModule::defaulted);
+    connect(m_pluginSelector, &KPluginSelector::changed, this, &SearchConfigModule::updateUnmanagedState);
 
     qDBusRegisterMetaType<QByteArrayList>();
     qDBusRegisterMetaType<QHash<QString, QByteArrayList>>();
@@ -124,10 +126,9 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
 
     layout->addLayout(configHeaderLayout);
     layout->addSpacing(12);
-    layout->addLayout(headerLayout);
     layout->addWidget(m_pluginSelector);
 
-    QHBoxLayout *downloadLayout = new QHBoxLayout(this);
+    QHBoxLayout *downloadLayout = new QHBoxLayout;
     KNS3::Button *downloadButton = new KNS3::Button(i18n("Get New Plugins..."), QStringLiteral("krunner.knsrc"), this);
     connect(downloadButton, &KNS3::Button::dialogFinished, this, [this](const KNS3::Entry::List &changedEntries) {
        if (!changedEntries.isEmpty()) {
@@ -138,26 +139,27 @@ QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
            m_pluginSelector->addPlugins(Plasma::RunnerManager::listRunnerInfo(),
                                         KPluginSelector::ReadConfigFile,
                                         i18n("Available Plugins"), QString(),
-                                        KSharedConfig::openConfig(QStringLiteral("krunnerrc")));
+                                        m_config);
 QT_WARNING_POP
        }
     });
     downloadLayout->addStretch();
     downloadLayout->addWidget(downloadButton);
     layout->addLayout(downloadLayout);
+
+    connect(this, &SearchConfigModule::defaultsIndicatorsVisibleChanged, this, &SearchConfigModule::updateUnmanagedState);
+    connect(this, &SearchConfigModule::defaultsIndicatorsVisibleChanged, m_pluginSelector, &KPluginSelector::setDefaultsIndicatorsVisible);
+    addConfig(m_settings, this);
 }
 
 void SearchConfigModule::load()
 {
-    KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("krunnerrc"));
-    const KConfigGroup general = config->group("General");
-    bool freeFloating = general.readEntry("FreeFloating", false);
-    m_topPositioning->setChecked(!freeFloating);
-    m_freeFloating->setChecked(freeFloating);
-    m_retainPriorSearch->setChecked(general.readEntry("RetainPriorSearch", true));
-    bool historyEnabled = general.readEntry("HistoryEnabled", true);
-    m_enableHistory->setChecked(historyEnabled);
-    m_clearHistoryButton->setEnabled(historyEnabled);
+    KCModule::load();
+
+    m_topPositioning->setChecked(!m_settings->freeFloating());
+    m_freeFloating->setChecked(m_settings->freeFloating());
+
+    m_clearHistoryButton->setEnabled(m_enableHistory->isChecked());
 
     // Set focus on the pluginselector to pass focus to search bar.
     m_pluginSelector->setFocus(Qt::OtherFocusReason);
@@ -168,7 +170,7 @@ QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
     m_pluginSelector->addPlugins(Plasma::RunnerManager::listRunnerInfo(),
                     KPluginSelector::ReadConfigFile,
                     i18n("Available Plugins"), QString(),
-                    config);
+                    m_config);
 QT_WARNING_POP
     m_pluginSelector->load();
 
@@ -180,10 +182,11 @@ QT_WARNING_POP
 
 void SearchConfigModule::save()
 {
-    KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("krunnerrc"));
-    config->group("General").writeEntry("FreeFloating", m_freeFloating->isChecked(), KConfig::Notify);
-    config->group("General").writeEntry("RetainPriorSearch", m_retainPriorSearch->isChecked(), KConfig::Notify);
-    config->group("General").writeEntry("HistoryEnabled", m_enableHistory->isChecked(), KConfig::Notify);
+    m_settings->setFreeFloating(m_freeFloating->isChecked());
+    m_settings->save();
+
+    KCModule::save();
+
     m_pluginSelector->save();
 
     QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/krunnerrc"),
@@ -196,12 +199,39 @@ void SearchConfigModule::save()
 
 void SearchConfigModule::defaults()
 {
-    m_topPositioning->setChecked(true);
-    m_freeFloating->setChecked(false);
-    m_retainPriorSearch->setChecked(true);
-    m_enableHistory->setChecked(true);
-    m_clearHistoryButton->setEnabled(true);
+    KCModule::defaults();
+
+    m_topPositioning->setChecked(!m_settings->defaultFreeFloatingValue());
+    m_freeFloating->setChecked(m_settings->defaultFreeFloatingValue());
+
     m_pluginSelector->defaults();
 }
+
+void SearchConfigModule::updateUnmanagedState()
+{
+    bool isNeedSave = false;
+    isNeedSave |= m_pluginSelector->isSaveNeeded();
+    isNeedSave |= m_topPositioning->isChecked() == m_settings->freeFloating();
+    isNeedSave |= m_freeFloating->isChecked() != m_settings->freeFloating();
+
+    unmanagedWidgetChangeState(isNeedSave);
+
+    bool isDefault = true;
+    isDefault &= m_pluginSelector->isDefault();
+    isDefault &= m_topPositioning->isChecked() != m_settings->defaultFreeFloatingValue();
+    isDefault &= m_freeFloating->isChecked() == m_settings->defaultFreeFloatingValue();
+
+    setDefaultIndicatorVisible(m_topPositioning, defaultsIndicatorsVisible() && m_topPositioning->isChecked() == m_settings->defaultFreeFloatingValue());
+    setDefaultIndicatorVisible(m_freeFloating, defaultsIndicatorsVisible() && m_freeFloating->isChecked() != m_settings->defaultFreeFloatingValue());
+
+    unmanagedWidgetDefaultState(isDefault);
+}
+
+void SearchConfigModule::setDefaultIndicatorVisible(QWidget *widget, bool visible)
+{
+    widget->setProperty("_kde_highlight_neutral", visible);
+    widget->update();
+}
+
 
 #include "kcm.moc"
