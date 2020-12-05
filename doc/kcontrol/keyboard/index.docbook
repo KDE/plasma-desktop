@@ -15,8 +15,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2016-03-18</date>
-<releaseinfo>Plasma 5.7</releaseinfo>
+<date>2020-12-05</date>
+<releaseinfo>Plasma 5.21</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -63,15 +63,35 @@ started up.</para>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Keyboard Repeat</guilabel></term>
+<term><guilabel>When a key is held:</guilabel></term>
 <listitem>
-<para>When this option is turned on, pressing and holding down a key
+<para>It is possible to select one of the tree options here, namely</para>
+<variablelist>
+<varlistentry>
+<term><guilabel>Show accented and similar characters</guilabel></term>
+<listitem>
+<para>If this option is selected, when a key is held down while entering text, a popup is shown which lets one choose between various accented forms of the character.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Do nothing</guilabel></term>
+<listitem>
+<para>This option allows you to turn off any activities when you pressing and holding down the keys.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Repeat the key being held</guilabel></term>
+<listitem>
+<para>When this option is selected, pressing and holding down a key
 emits the same character repeatedly until the key is released.  Pressing
 and holding the key will have the same effect as pressing it multiple
 times in succession.</para>
 <tip><para> Almost all users will want to have this option enabled, because it
 makes navigating through documents with the arrow keys significantly
 easier. </para></tip>
+</listitem>
+</varlistentry>
+</variablelist>
 
 <variablelist>
 <varlistentry>
