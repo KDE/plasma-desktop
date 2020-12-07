@@ -91,10 +91,24 @@ Kirigami.ApplicationWindow
 
     globalDrawer: Kirigami.GlobalDrawer {
         id: drawer
+
         title: i18n("Categories")
         collapsible: !topContent.activeFocus
         collapsed: true
         modal: false
+
+        header: Kirigami.AbstractApplicationHeader {
+            topPadding: Kirigami.Units.smallSpacing
+            bottomPadding: Kirigami.Units.smallSpacing
+            leftPadding: Kirigami.Units.largeSpacing
+            rightPadding: Kirigami.Units.smallSpacing
+
+            Kirigami.Heading {
+                level: 1
+                text: drawer.title
+                Layout.fillWidth: true
+            }
+        }
 
         Instantiator {
             model: emoji.categories
