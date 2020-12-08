@@ -48,10 +48,6 @@ PlasmaCore.ToolTipArea {
         root.visible = true;
     }
 
-    Text {
-        text: plasmoid.containmentDisplayHints
-    }
-
     onFullRepresentationChanged: {
 
         if (!fullRepresentation) {
@@ -157,22 +153,7 @@ PlasmaCore.ToolTipArea {
         visualParent: compactRepresentation ? compactRepresentation : null
         location: plasmoid.location
         hideOnWindowDeactivate: plasmoid.hideOnWindowDeactivate
-        backgroundHints: Qt.Binding(function(){
-            console.log();
-            console.log('READING THE FLAG');
-            console.log();
-            console.log();
-            console.log();
-            console.log();
-            console.log();
-            console.log();
-            console.log();
-            console.log();
-            console.log(plasmoid.containmentDisplayHints);
-            console.log();
-            return PlasmaCore.Dialog.OpaqueBackground;
-        })
-        //backgroundHints: (plasmoid.containmentDisplayHints & PlasmaCore.Types.DesktopFullyCovered) ? PlasmaCore.Dialog.OpaqueBackground : PlasmaCore.Dialog.StandardBackground
+        backgroundHints: (plasmoid.containmentDisplayHints & PlasmaCore.Types.DesktopFullyCovered) ? PlasmaCore.Dialog.OpaqueBackground : PlasmaCore.Dialog.StandardBackground
 
         property var oldStatus: PlasmaCore.Types.UnknownStatus
 
