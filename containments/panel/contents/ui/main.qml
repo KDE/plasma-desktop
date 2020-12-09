@@ -173,7 +173,6 @@ function checkLastSpacer() {
         LayoutManager.lastSpacer = lastSpacer;
         LayoutManager.marginHighlights = [];
         LayoutManager.restore();
-        containmentSizeSyncTimer.restart();
 
         plasmoid.action("configure").visible = Qt.binding(function() {
             return !plasmoid.immutable;
@@ -212,7 +211,6 @@ function checkLastSpacer() {
         event.accept(event.proposedAction);
         root.fixedWidth = 0;
         root.fixedHeight = 0;
-        containmentSizeSyncTimer.restart();
     }
 
 
@@ -227,8 +225,6 @@ function checkLastSpacer() {
     }
 
     Plasmoid.onUserConfiguringChanged: {
-        containmentSizeSyncTimer.restart();
-
         if (plasmoid.immutable) {
             if (dragOverlay) {
                 dragOverlay.destroy();
@@ -257,11 +253,7 @@ function checkLastSpacer() {
         }
     }
 
-    Plasmoid.onFormFactorChanged: containmentSizeSyncTimer.restart();
-    Containment.onEditModeChanged: containmentSizeSyncTimer.restart();
-
     onToolBoxChanged: {
-        containmentSizeSyncTimer.restart();
         if (startupTimer.running) {
             startupTimer.restart();
         }
@@ -493,26 +485,10 @@ function checkLastSpacer() {
         rowSpacing: PlasmaCore.Units.smallSpacing
         columnSpacing: PlasmaCore.Units.smallSpacing
 
-        Layout.preferredWidth: {
-            var width = 0;
-            for (var i = 0, length = currentLayout.children.length; i < length; ++i) {
-                var item = currentLayout.children[i];
-                if (item.Layout) {
-                    width += Math.max(item.Layout.minimumWidth, item.Layout.preferredWidth);
-                }
-            }
-            return width;
-        }
-        Layout.preferredHeight: {
-            var height = 0;
-            for (var i = 0, length = currentLayout.children.length; i < length; ++i) {
-                var item = currentLayout.children[i];
-                if (item.Layout) {
-                    height += Math.max(item.Layout.minimumHeight, item.Layout.preferredHeight);
-                }
-            }
-            return height;
-        }
+        anchors.fill: parent
+        anchors.rightMargin: (isHorizontal && toolBox && plasmoid.editMode) ? toolBox.width : 0
+        anchors.bottomMargin: (!isHorizontal && toolBox && plasmoid.editMode) ? toolBox.height : 0
+
         rows: 1
         columns: 1
         //when horizontal layout top-to-bottom, this way it will obey our limit of one row and actually lay out left to right
@@ -521,28 +497,13 @@ function checkLastSpacer() {
     }
 
     onWidthChanged: {
-        containmentSizeSyncTimer.restart()
         if (startupTimer.running) {
             startupTimer.restart();
         }
     }
     onHeightChanged: {
-        containmentSizeSyncTimer.restart()
         if (startupTimer.running) {
             startupTimer.restart();
-        }
-    }
-
-    Timer {
-        id: containmentSizeSyncTimer
-        interval: 150
-        onTriggered: {
-            dndSpacer.parent = root;
-            currentLayout.x = (isHorizontal && toolBox && Qt.application.layoutDirection === Qt.RightToLeft && plasmoid.editMode) ? toolBox.width : 0;
-            currentLayout.y = 0
-            currentLayout.width = root.width - (isHorizontal && toolBox && plasmoid.editMode ? toolBox.width : 0)
-            currentLayout.height = root.height - (!isHorizontal && toolBox && plasmoid.editMode ? toolBox.height : 0)
-            currentLayout.isLayoutHorizontal = isHorizontal
         }
     }
 
