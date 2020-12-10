@@ -100,7 +100,7 @@ KCM.ScrollViewKCM {
             function openPage() {
                 userList.currentIndex = index
                 kcm.pop(0)
-                kcm.push("UserDetailsPage.qml", {user: User})
+                kcm.push("UserDetailsPage.qml", {user: userObject})
             }
 
             onClicked: openPage()
