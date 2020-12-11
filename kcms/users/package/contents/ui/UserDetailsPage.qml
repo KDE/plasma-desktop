@@ -256,7 +256,8 @@ SimpleKCM {
                     rowSpacing: Kirigami.Units.smallSpacing
                     columnSpacing: Kirigami.Units.smallSpacing
                     columns: {
-                        return Math.floor((stackSwitcher.width) / (Kirigami.Units.gridUnit * 6))
+                        // subtract gridunit from stackswticher width to roughly compensate for slight overlap on tightly fit grids
+                        return Math.floor((stackSwitcher.width - Kirigami.Units.gridUnit) / ((Kirigami.Units.gridUnit * 6) + picturesColumn.columnSpacing))
                     }
 
                     Layout.fillWidth: true
