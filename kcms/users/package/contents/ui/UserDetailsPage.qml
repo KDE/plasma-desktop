@@ -130,6 +130,7 @@ SimpleKCM {
 
                 Kirigami.Avatar {
                     source: usersDetailPage.user.face
+                    cache: false // user picture path doesn't change after updating
                     name: user.realName
                     anchors {
                         fill: parent

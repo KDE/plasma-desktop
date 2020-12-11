@@ -41,6 +41,17 @@ KCM.ScrollViewKCM {
     implicitWidth: Kirigami.Units.gridUnit * 30
     implicitHeight: Kirigami.Units.gridUnit * 20
 
+    // QML cannot update avatar image when override. By increasing this number and
+    // appending it to image source with '?', we force avatar to reload
+    property int avatarVersion: 0
+
+    Connections {
+        target: kcm
+        onApply: {
+            avatarVersion += 1
+        }
+    }
+
     Component.onCompleted: {
         kcm.columnWidth = Kirigami.Units.gridUnit * 15
         kcm.push("UserDetailsPage.qml", {user: kcm.userModel.getLoggedInUser()})
@@ -73,7 +84,8 @@ KCM.ScrollViewKCM {
                     radius: height/2
 
                     Kirigami.Avatar {
-                        source: model.decoration
+                        source: model.decoration + '?' + avatarVersion // force reload after saving
+                        cache: false // avoid caching
                         name: model.display
                         anchors {
                             fill: parent
