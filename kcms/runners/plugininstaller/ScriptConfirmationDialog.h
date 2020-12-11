@@ -25,7 +25,7 @@ public:
         QVBoxLayout *layout = new QVBoxLayout(this);
         QString msg;
         if (!install && noInstaller && readmes.isEmpty()) {
-            msg = xi18nc("@info", "This plugin does not provide an uninstall script. Please contact the author. "
+            msg = xi18nc("@info", "This plugin does not provide an uninstallation script. Please contact the author. "
                                   "You can try to uninstall the plugin manually.<nl/>"
                                   "If you do not feel capable or comfortable with this, click <interface>Cancel</interface>  now.");
         } else if (!install && noInstaller) {
