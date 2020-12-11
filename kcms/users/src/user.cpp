@@ -28,6 +28,7 @@
 #include <QtConcurrent>
 #include <KLocalizedString>
 #include <KWallet>
+#include <QImage>
 
 User::User(QObject* parent) : QObject(parent) {}
 
@@ -279,7 +280,6 @@ void UserApplyJob::start()
         {m_name, &OrgFreedesktopAccountsUserInterface::SetUserName},
         {m_email, &OrgFreedesktopAccountsUserInterface::SetEmail},
         {m_realname, &OrgFreedesktopAccountsUserInterface::SetRealName},
-        {m_icon, &OrgFreedesktopAccountsUserInterface::SetIconFile}
     };
     // Do our dbus invocations with blocking calls, since the accounts service
     // will return permission denied if there's a polkit dialog open while a 
@@ -294,6 +294,43 @@ void UserApplyJob::start()
             return;
         }
     }
+
+    // Icon is special, since we want to resize it.
+    {
+        QImage icon(m_icon);
+        // 256dp square is plenty big for an avatar and will definitely be smaller than 1MB
+        QImage scaled = icon.scaled(QSize(256, 256), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+
+        QTemporaryFile file;
+        if (!file.open()) {
+            setErrorText(i18n("Failed to resize image: opening temp file failed"));
+            qCWarning(KCMUSERS) << i18n("Failed to resize image: opening temp file failed");
+            KJob::setError(static_cast<int>(Error::UserFacing));
+            emitResult();
+            return;
+        }
+
+        if (!scaled.save(&file, "png")) {
+            setErrorText(i18n("Failed to resize image: writing to temp file failed"));
+            qCWarning(KCMUSERS) << i18n("Failed to resize image: writing to temp file failed");
+            KJob::setError(static_cast<int>(Error::UserFacing));
+            emitResult();
+            return;
+        }
+
+        file.close();
+
+        auto resp = m_dbusIface->SetIconFile(file.fileName());
+
+        resp.waitForFinished();
+        if (resp.isError()) {
+            setError(resp.error());
+            qCWarning(KCMUSERS) << resp.error().name() << resp.error().message();
+            emitResult();
+            return;
+        }
+    }
+
     auto setAccount = m_dbusIface->SetAccountType(m_type);
     setAccount.waitForFinished();
     if (setAccount.isError()) {
