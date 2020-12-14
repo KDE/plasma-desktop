@@ -119,34 +119,24 @@ SimpleKCM {
         }
         RowLayout {
             Layout.alignment: Qt.AlignHCenter
-            QQC2.RoundButton {
-                id: userPfp
+            Kirigami.Avatar {
+                source: usersDetailPage.user.face
+                cache: false
+                name: user.realName
 
                 readonly property int size: 6 * Kirigami.Units.gridUnit
 
-                implicitWidth: size
-                implicitHeight: size
-                flat: true
+                Layout.preferredWidth: size
+                Layout.preferredHeight: size
 
-                Kirigami.Avatar {
-                    source: usersDetailPage.user.face
-                    cache: false // user picture path doesn't change after updating
-                    name: user.realName
-                    anchors {
-                        fill: parent
-                        margins: Kirigami.Units.smallSpacing
+                actions {
+                    main: Kirigami.Action {
+                        text: i18n("Change avatar")
+                        onTriggered: {
+                            picturesSheet.open()
+                            stackSwitcher.forceActiveFocus()
+                        }
                     }
-                }
-
-                Layout.alignment: Qt.AlignHCenter
-                Layout.maximumHeight: size + Kirigami.smallSpacing
-                Layout.minimumHeight: size + Kirigami.smallSpacing
-                Layout.maximumWidth: size + Kirigami.smallSpacing
-                Layout.minimumWidth: size + Kirigami.smallSpacing
-
-                onClicked: {
-                    picturesSheet.open()
-                    stackSwitcher.forceActiveFocus()
                 }
             }
             QQC2.TextField  {
