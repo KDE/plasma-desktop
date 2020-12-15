@@ -119,6 +119,7 @@ int main(int argc, char *argv[])
     memset(&componentNames, 0, sizeof(XkbComponentNamesRec));
     XkbRF_GetComponents(rules, &varDefs, &componentNames);
 
+    QString errorDescription;
     QString errorDetails;
     std::unique_ptr<Geometry> geometry;
 
@@ -143,6 +144,11 @@ int main(int argc, char *argv[])
         setxkbmap.waitForFinished();
         xkbcomp.waitForFinished();
 
+        errorDescription = i18nc("@label",
+                                 "The keyboard geometry failed to load."
+                                 " This often indicates that the selected model does not support a specific layout"
+                                 " or layout variant."
+                                 " This problem will likely also present when you try to use this combination of model, layout and variant.");
         errorDetails = xkbcomp.readAllStandardOutput();
     } else {
         Q_ASSERT(xkb);
@@ -172,6 +178,7 @@ int main(int argc, char *argv[])
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
     engine.rootContext()->setContextProperty("geometry", geometry.get());
+    engine.rootContext()->setContextProperty("errorDescription", errorDescription);
     engine.rootContext()->setContextProperty("errorDetails", errorDetails);
     engine.load(url);
 

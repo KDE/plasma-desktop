@@ -62,6 +62,13 @@ Window {
         visible: false
         anchors.fill: parent
 
+        Label {
+            Layout.fillWidth: true
+            text: errorDescription
+            color: activePalette.text
+            wrapMode: Text.WordWrap
+        }
+
         TextArea {
             Layout.fillWidth: true
             text: errorDetails
