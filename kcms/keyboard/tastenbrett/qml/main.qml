@@ -21,6 +21,7 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.5
+import QtQuick.Layouts 1.15
 
 import org.kde.tastenbrett.private 1.0 as XKB
 
@@ -54,6 +55,19 @@ Window {
     Rectangle {
         anchors.fill: parent
         color: activePalette.window
+    }
+
+    ColumnLayout {
+        id: errorLayout
+        visible: false
+        anchors.fill: parent
+
+        TextArea {
+            Layout.fillWidth: true
+            text: errorDetails
+            readOnly: true
+            color: activePalette.text
+        }
     }
 
     Item {
@@ -184,6 +198,12 @@ Window {
     }
 
     Component.onCompleted: {
+        if (errorDetails != "") {
+            errorLayout.visible = true
+            visible = true
+            return
+        }
+
         // Based on the geometry aspect we scale either width or height to scale so
         // the default size is fitting. NB: geom dimensions are mm!
         if (geometry.widthMM >= geometry.heightMM) {

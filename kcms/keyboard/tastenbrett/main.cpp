@@ -23,9 +23,12 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QX11Info>
+#include <QProcess>
 
 #include <KAboutData>
 #include <KLocalizedString>
+
+#include <memory>
 
 #include "application.h"
 #include "config-workspace.h"
@@ -106,15 +109,18 @@ int main(int argc, char *argv[])
                                       qgetenv("LOCALE").data(),
                                       True,
                                       True);
+
     Q_ASSERT(rules);
-    QSharedPointer<XkbRF_RulesRec> rulesCleanup(rules, [](XkbRF_RulesPtr obj) {
+    std::unique_ptr<XkbRF_RulesRec, std::function<void(XkbRF_RulesPtr)>> rulesCleanup(rules, [](XkbRF_RulesPtr obj) {
         XkbRF_Free(obj, True);
     });
 
     XkbComponentNamesRec componentNames;
     memset(&componentNames, 0, sizeof(XkbComponentNamesRec));
-
     XkbRF_GetComponents(rules, &varDefs, &componentNames);
+
+    QString errorDetails;
+    std::unique_ptr<Geometry> geometry;
 
     XkbDescPtr xkb = XkbGetKeyboardByName(QX11Info::display(),
                                           XkbUseCoreKbd,
@@ -126,12 +132,22 @@ int main(int argc, char *argv[])
                                           XkbGBN_ClientSymbolsMask |
                                           XkbGBN_IndicatorMapMask,
                                           false);
-    Q_ASSERT(xkb);
-    QSharedPointer<XkbDescRec> xkbCleanup(xkb, [](XkbDescPtr obj) {
-        XkbFreeKeyboard(obj, 0, True);
-    });
+    if (!xkb) {
+        QProcess setxkbmap;
+        QProcess xkbcomp;
 
-    Geometry geometry(xkb->geom, xkb);
+        setxkbmap.setStandardOutputProcess(&xkbcomp);
+        xkbcomp.setProcessChannelMode(QProcess::MergedChannels); // combine in single channel
+        setxkbmap.start(QStringLiteral("setxkbmap"), {QStringLiteral("-print"), QStringLiteral("-model"), model, QStringLiteral("-layout"), layout, QStringLiteral("-variant"), variant, QStringLiteral("-option"), options});
+        xkbcomp.start(QStringLiteral("xkbcomp"), {QStringLiteral("-")});
+        setxkbmap.waitForFinished();
+        xkbcomp.waitForFinished();
+
+        errorDetails = xkbcomp.readAllStandardOutput();
+    } else {
+        Q_ASSERT(xkb);
+        geometry.reset(new Geometry(xkb->geom, xkb));
+    }
 
     // Register the doodads so we can perform easy type checks with them
     // and determine how to render the individual object.
@@ -155,8 +171,11 @@ int main(int argc, char *argv[])
         if (!obj && url == objUrl)
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
-    engine.rootContext()->setContextProperty("geometry", &geometry);
+    engine.rootContext()->setContextProperty("geometry", geometry.get());
+    engine.rootContext()->setContextProperty("errorDetails", errorDetails);
     engine.load(url);
 
     return app.exec();
 }
+
+#include "main.moc"
