@@ -131,6 +131,8 @@ install(TARGETS kcm_keyboard DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 install( FILES kcm_keyboard.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
 
+add_subdirectory(kconf_update)
+
 # Images
 
 add_subdirectory( pics )

@@ -1,0 +1,7 @@
+Version=5
+
+# Split keyboard layouts and variants into separate configuration entries
+Id=split-variants
+File=kxkbrc
+Group=Layout
+Script=kxkb_variants.awk
