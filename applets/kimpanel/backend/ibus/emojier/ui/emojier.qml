@@ -107,6 +107,6 @@ Kirigami.ApplicationWindow
                 drawer.actions = actions
             }
         }
-        actions: [allAction, searchAction, recentAction]
+        actions: [recentAction, searchAction, allAction]
     }
 }
