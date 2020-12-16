@@ -249,7 +249,7 @@ KCM.SimpleKCM {
         active: false
 
         sourceComponent: QtDialogs.FileDialog {
-            title: i18n("Select a folder to filter")
+            title: fileDialogLoader.included ? i18n("Select a folder to include") : i18n("Select a folder to exclude")
             folder: shortcuts.home
             selectFolder: true
 
