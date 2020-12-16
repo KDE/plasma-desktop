@@ -20,40 +20,68 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program; if not, write to the Free Software
  */
-#ifndef __kcmsmserver_h__
-#define __kcmsmserver_h__
+#pragma once
 
-#include <KCModule>
+#include <KQuickAddons/ManagedConfigModule>
 
 class QAction;
 
-class SMServerSettings;
-class SMServerData;
 class SMServerConfigImpl;
 
 class OrgFreedesktopLogin1ManagerInterface;
 
-namespace Ui {
-class SMServerConfigDlg;
-}
-
-class SMServerConfig : public KCModule
+/// KCM handling the desktop session and in particular the login and logout
+/// handling.
+class SMServerConfig : public KQuickAddons::ManagedConfigModule
 {
-  Q_OBJECT
+    Q_OBJECT
+
+    /// True if we are in an UEFI system.
+    Q_PROPERTY(bool isUefi READ isUefi CONSTANT)
+
+    /// Config telling if we should restart in the setup screen next time we boot.
+    Q_PROPERTY(bool restartInSetupScreen READ restartInSetupScreen WRITE setRestartInSetupScreen NOTIFY restartInSetupScreenChanged)
+
+    /// Error message, empty if there is no error
+    Q_PROPERTY(QString error READ error NOTIFY errorChanged)
+
+    /// Can setup the firmware
+    Q_PROPERTY(bool canFirmareSetup READ canFirmareSetup CONSTANT)
 
 public:
-  explicit SMServerConfig( QWidget *parent=nullptr, const QVariantList &list=QVariantList() );
-  ~SMServerConfig();
+    explicit SMServerConfig(QObject *parent = nullptr, const QVariantList &list = QVariantList());
+    ~SMServerConfig() override;
+
+    bool isUefi() const;
+
+    bool restartInSetupScreen() const;
+    void setRestartInSetupScreen(bool isUefi);
+
+    QString error() const;
+
+    bool canFirmareSetup() const;
+
+    /// Tell the computer to reboot.
+    Q_INVOKABLE void reboot();
+
+    void defaults() override;
+
+Q_SIGNALS:
+    void isUefiChanged();
+    void restartInSetupScreenChanged();
+    void errorChanged();
 
 private:
-  void initFirmwareSetup();
-  void checkFirmwareSetupRequested();
+    bool isSaveNeeded() const override;
+    bool isDefaults() const override;
 
-  QScopedPointer<Ui::SMServerConfigDlg> ui;
-  SMServerData *m_data;
-  OrgFreedesktopLogin1ManagerInterface *m_login1Manager = nullptr;
-  QAction *m_rebootNowAction = nullptr;
-  bool m_isUefi = false;
+    void checkFirmwareSetupRequested();
+
+    OrgFreedesktopLogin1ManagerInterface *m_login1Manager = nullptr;
+    QAction *m_rebootNowAction = nullptr;
+    bool m_isUefi = false;
+    bool m_restartInSetupScreen = false;
+    bool m_restartInSetupScreenInitial = false;
+    bool m_canFirmareSetup = false;
+    QString m_error;
 };
-
-#endif
