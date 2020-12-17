@@ -134,14 +134,9 @@ void CfgEmailClient::save(KConfig *)
         return;
     }
 
-    const bool kmailSelected = m_defaultIndex != -1 && currentIndex() == m_defaultIndex;
-    if (kmailSelected) {
-        pSettings->setSetting(KEMailSettings::ClientProgram, QString());
-        pSettings->setSetting(KEMailSettings::ClientTerminal, QStringLiteral("false"));
-    } else {
-        pSettings->setSetting(KEMailSettings::ClientProgram, emailClientService->storageId());
-        pSettings->setSetting(KEMailSettings::ClientTerminal, emailClientService->terminal() ? QStringLiteral("true") : QStringLiteral("false"));
-    }
+    // Force xdg-mime to use the mime handler in the fallback code
+    pSettings->setSetting(KEMailSettings::ClientProgram, QString());
+    pSettings->setSetting(KEMailSettings::ClientTerminal, QStringLiteral("false"));
 
     // Save the default email client in mimeapps.list
     KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
