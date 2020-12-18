@@ -42,6 +42,12 @@
 #include <X11/Xlib.h>
 #include <cmath>
 
+namespace {
+  bool hasAccentSupport() {
+    static bool isPlasmaIM = (qgetenv("QT_IM_MODULE") == "plasmaim");
+    return isPlasmaIM;
+  }
+}
 
 KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent)
 	: QWidget(parent),
@@ -78,7 +84,11 @@ KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent)
   connect(_numlockButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(changed()));
 
   _keyboardRepeatButtonGroup = new QButtonGroup(ui.repeatFormLayout);
-  _keyboardRepeatButtonGroup->addButton(ui.accentMenuRadioButton, 0);
+  if (hasAccentSupport()) {
+    _keyboardRepeatButtonGroup->addButton(ui.accentMenuRadioButton, 0);
+  } else {
+    ui.accentMenuRadioButton->setVisible(false);
+  }
   _keyboardRepeatButtonGroup->addButton(ui.repeatRadioButton, 1);
   _keyboardRepeatButtonGroup->addButton(ui.nothingRadioButton, 2);
 
@@ -103,6 +113,9 @@ KCMiscKeyboardWidget::~KCMiscKeyboardWidget()
 // set the slider and LCD values
 void KCMiscKeyboardWidget::setRepeat(KeyBehaviour keyboardRepeat, int delay_, double rate_)
 {
+    if (keyboardRepeat == KeyBehaviour::AccentMenu && !hasAccentSupport()) {
+        keyboardRepeat = KeyBehaviour::RepeatKey;
+    }
     _keyboardRepeatButtonGroup->button(keyboardRepeat)->click();
     ui.delay->setValue(delay_);
     ui.rate->setValue(rate_);
