@@ -32,6 +32,7 @@ Kirigami.FormLayout {
     property alias cfg_vertical_lookup_table: verticalLookupTable.checked
     property bool cfg_use_default_font
     property font cfg_font
+    property bool cfg_scaleIconsToFit
 
     QQC2.CheckBox {
         id: verticalLookupTable
@@ -67,6 +68,20 @@ Kirigami.FormLayout {
                 text: i18n("Select Font...")
             }
         }
+    }
+
+    QQC2.RadioButton {
+        Kirigami.FormData.label: i18nc("The arrangement of icons in the Panel", "Panel icon size:")
+        text: i18n("Small")
+        checked: cfg_scaleIconsToFit == false
+        onToggled: cfg_scaleIconsToFit = !checked
+    }
+    QQC2.RadioButton {
+        id: automaticRadioButton
+        text: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? i18n("Scale with Panel height")
+                                                                    : i18n("Scale with Panel width")
+        checked: cfg_scaleIconsToFit == true
+        onToggled: cfg_scaleIconsToFit = checked
     }
 
     QtDialogs.FontDialog {

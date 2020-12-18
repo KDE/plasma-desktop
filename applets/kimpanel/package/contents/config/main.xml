@@ -18,6 +18,10 @@
     <entry name="hiddenList" type="StringList">
       <default></default>
     </entry>
+    <entry name="scaleIconsToFit" type="bool">
+      <label>Whether to automatically scale System Tray icons to fix the available thickness of the panel. If false, tray icons will be capped at the smallMedium size (22px) and become a two-row/column layout when the panel is thick.</label>
+      <default>false</default>
+    </entry>
   </group>
 
 </kcfg>
