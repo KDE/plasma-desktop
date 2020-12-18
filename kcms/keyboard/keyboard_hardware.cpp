@@ -76,7 +76,9 @@ int set_repeat_mode(TriState keyboardRepeatMode)
 
 void init_keyboard_hardware()
 {
-    KConfigGroup config(KSharedConfig::openConfig( QStringLiteral("kcminputrc") ), "Keyboard");
+	auto inputConfig = KSharedConfig::openConfig( QStringLiteral("kcminputrc") );
+	inputConfig->reparseConfiguration();
+	KConfigGroup config(inputConfig, "Keyboard");
 
 	QString keyRepeatStr = config.readEntry("KeyboardRepeating", TriStateHelper::getString(STATE_ON));
 	TriState keyRepeat = STATE_UNCHANGED;
@@ -100,4 +102,5 @@ void init_keyboard_hardware()
         KModifierKeyInfo keyInfo;
         keyInfo.setKeyLocked(Qt::Key_NumLock, numlockState == STATE_ON);
 	}
+	XFlush(QX11Info::display());
 }
