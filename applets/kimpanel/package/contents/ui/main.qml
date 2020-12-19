@@ -70,8 +70,6 @@ Item {
             // Add margins only if the panel is larger than a small icon (to avoid large gaps between tiny icons)
             readonly property int smallSizeCellLength: gridThickness < smallIconSize ? gridThickness : smallIconSize + PlasmaCore.Units.smallSpacing
             cellHeight: {
-                console.log(gridThickness);
-                console.log(rowsOrColumns);
                 if (kimpanel.vertical) {
                     return autoSize ? kimpanel.width : smallSizeCellLength
                 } else {
