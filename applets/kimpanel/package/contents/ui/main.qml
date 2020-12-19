@@ -35,6 +35,8 @@ Item {
 
     Layout.minimumWidth: vertical ? PlasmaCore.Units.iconSizes.small : mainLayout.implicitWidth
     Layout.minimumHeight: vertical ? mainLayout.implicitHeight : PlasmaCore.Units.iconSizes.small
+    Layout.preferredWidth: vertical ? kimpanel.width : mainLayout.implicitWidth
+    Layout.preferredHeight: !vertical ? kimpanel.height : mainLayout.implicitHeight
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
