@@ -105,6 +105,8 @@ ecm_qt_install_logging_categories(
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
 
+kconfig_add_kcfg_files(kcm_keyboard_PART_SRCS workspace_options.kcfgc)
+
 ki18n_wrap_ui(kcm_keyboard_PART_SRCS kcm_keyboard.ui kcm_add_layout_dialog.ui kcmmiscwidget.ui)
 
 add_library(kcm_keyboard MODULE ${kcm_keyboard_PART_SRCS})

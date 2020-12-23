@@ -33,11 +33,13 @@
 #include <QWidget>
 #include <QX11Info>
 
+#include "keyboard_config.h"
+#include "workspace_options.h"
+
 #include "bindings.h"
 #include "flags.h"
 #include "kcm_add_layout_dialog.h"
 #include "kcm_view_models.h"
-#include "keyboard_config.h"
 #include "tastenbrett.h"
 #include "x11_helper.h"
 #include "xkb_rules.h"
@@ -55,8 +57,11 @@ static const int TAB_ADVANCED = 2;
 
 static const int MIN_LOOPING_COUNT = 2;
 
-KCMKeyboardWidget::KCMKeyboardWidget(Rules *rules_, KeyboardConfig *keyboardConfig_, const QVariantList &args, QWidget * /*parent*/)
+
+KCMKeyboardWidget::KCMKeyboardWidget(Rules *rules_, KeyboardConfig *keyboardConfig_, WorkspaceOptions &workspaceOptions,
+                                     const QVariantList &args, QWidget * /*parent*/)
     : rules(rules_)
+    , m_workspaceOptions(workspaceOptions)
     , actionCollection(nullptr)
     , uiUpdating(false)
 {
@@ -151,6 +156,8 @@ void KCMKeyboardWidget::uiChanged()
 
     if (uiUpdating)
         return;
+
+    m_workspaceOptions.setOsdKbdLayoutChangedEnabled(uiWidget->showOSD_Chk->isChecked());
 
     keyboardConfig->showIndicator = uiWidget->showIndicatorChk->isChecked();
     keyboardConfig->showSingle = uiWidget->showSingleChk->isChecked();
@@ -314,6 +321,9 @@ void KCMKeyboardWidget::initializeLayoutsUI()
 
     uiWidget->kdeKeySequence->setModifierlessAllowed(false);
 
+    uiWidget->showOSD_Chk->setText(m_workspaceOptions.osdKbdLayoutChangedEnabledItem()->label());
+    uiWidget->showOSD_Chk->setToolTip(m_workspaceOptions.osdKbdLayoutChangedEnabledItem()->toolTip());
+
     connect(uiWidget->addLayoutBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::addLayout);
     connect(uiWidget->removeLayoutBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::removeLayout);
     //	connect(uiWidget->layoutsTable, SIGNAL(itemSelectionChanged()), this, SLOT(layoutSelectionChanged()));
@@ -338,6 +348,7 @@ void KCMKeyboardWidget::initializeLayoutsUI()
     //	connect(uiWidget->configureLayoutsChk, SIGNAL(toggled(bool)), uiWidget->layoutsGroupBox, SLOT(setEnabled(bool)));
     connect(uiWidget->layoutsGroupBox, &QGroupBox::toggled, this, &KCMKeyboardWidget::configureLayoutsChanged);
 
+    connect(uiWidget->showOSD_Chk, &QAbstractButton::clicked, this, &KCMKeyboardWidget::uiChanged);
     connect(uiWidget->showIndicatorChk, &QAbstractButton::clicked, this, &KCMKeyboardWidget::uiChanged);
     connect(uiWidget->showIndicatorChk, &QAbstractButton::toggled, uiWidget->showSingleChk, &QWidget::setEnabled);
     connect(uiWidget->showFlagRadioBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::uiChanged);
@@ -632,6 +643,7 @@ void KCMKeyboardWidget::updateXkbOptionsUI()
 void KCMKeyboardWidget::updateLayoutsUI()
 {
     uiWidget->layoutsGroupBox->setChecked(keyboardConfig->configureLayouts);
+    uiWidget->showOSD_Chk->setChecked(m_workspaceOptions.osdKbdLayoutChangedEnabled());
     uiWidget->showIndicatorChk->setChecked(keyboardConfig->showIndicator);
     uiWidget->showSingleChk->setChecked(keyboardConfig->showSingle);
     uiWidget->showFlagRadioBtn->setChecked(keyboardConfig->indicatorType == KeyboardConfig::SHOW_FLAG);

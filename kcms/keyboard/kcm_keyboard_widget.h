@@ -27,6 +27,7 @@
 
 class QWidget;
 class KeyboardConfig;
+class WorkspaceOptions;
 struct Rules;
 class Flags;
 class QString;
@@ -40,7 +41,8 @@ class KCMKeyboardWidget : public QTabWidget
     Q_OBJECT
 
 public:
-    KCMKeyboardWidget(Rules *rules, KeyboardConfig *keyboardConfig, const QVariantList &args, QWidget *parent = nullptr);
+    KCMKeyboardWidget(Rules *rules, KeyboardConfig *keyboardConfig, WorkspaceOptions &workspaceOptions,
+                      const QVariantList &args, QWidget *parent = nullptr);
     ~KCMKeyboardWidget() override;
 
     void updateUI();
@@ -76,6 +78,7 @@ private:
     Flags *flags;
     Ui::TabWidget *uiWidget;
     KeyboardConfig *keyboardConfig;
+    WorkspaceOptions &m_workspaceOptions;
     KeyboardLayoutActionCollection *actionCollection;
     LayoutsTableModel *layoutsTableModel;
     KCMiscKeyboardWidget *kcmMiscWidget;

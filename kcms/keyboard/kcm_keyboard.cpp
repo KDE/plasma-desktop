@@ -61,7 +61,7 @@ KCMKeyboard::KCMKeyboard(QWidget *parent, const QVariantList &args)
     layout->setContentsMargins(0, 0, 0, 0);
     //  layout->setSpacing(KDialog::spacingHint());
 
-    widget = new KCMKeyboardWidget(rules, keyboardConfig, args, parent);
+    widget = new KCMKeyboardWidget(rules, keyboardConfig, m_workspaceOptions, args, parent);
     layout->addWidget(widget);
 
     connect(widget, SIGNAL(changed(bool)), this, SIGNAL(changed(bool)));
@@ -78,14 +78,19 @@ KCMKeyboard::~KCMKeyboard()
 void KCMKeyboard::defaults()
 {
     keyboardConfig->setDefaults();
+    m_workspaceOptions.osdKbdLayoutChangedEnabledItem()->setDefault();
+
     widget->updateUI();
     widget->getKcmMiscWidget()->defaults();
+
     emit changed(true);
 }
 
 void KCMKeyboard::load()
 {
     keyboardConfig->load();
+    m_workspaceOptions.read();
+
     widget->updateUI();
     widget->getKcmMiscWidget()->load();
 }
@@ -94,6 +99,8 @@ void KCMKeyboard::load()
 void KCMKeyboard::save()
 {
     keyboardConfig->save();
+    m_workspaceOptions.save();
+
     widget->save();
     widget->getKcmMiscWidget()->save();
 

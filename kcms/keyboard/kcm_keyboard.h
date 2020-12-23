@@ -20,6 +20,7 @@
 #define KCM_KEYBOARD_H_
 
 #include <KCModule>
+#include "workspace_options.h"
 
 class KCMKeyboardWidget;
 class KeyboardConfig;
@@ -40,6 +41,7 @@ public:
 private:
     Rules *rules;
     KeyboardConfig *keyboardConfig;
+    WorkspaceOptions m_workspaceOptions;
     KCMKeyboardWidget *widget;
 };
 
