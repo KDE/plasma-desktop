@@ -52,9 +52,9 @@ FolderViewDropArea {
     Layout.maximumHeight: isPopup ? preferredHeight(false) : -1
 
     function switchSize() {
-        // Support expanding into the full representation only on vertical panels.
+        // Support expanding into the full representation on very thick vertical panels.
         if (isPopup && plasmoid.formFactor === PlasmaCore.Types.Vertical) {
-            return units.iconSizeHints.panel;
+            return PlasmaCore.Units.gridUnit * 8;
         }
 
         return 0;
