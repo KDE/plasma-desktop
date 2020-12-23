@@ -51,7 +51,7 @@ FolderViewDropArea {
     Layout.maximumWidth: isPopup ? preferredWidth(false) : -1
     Layout.maximumHeight: isPopup ? preferredHeight(false) : -1
 
-    Plasmoid.switchWidth: {
+    function switchSize() {
         // Support expanding into the full representation only on vertical panels.
         if (isPopup && plasmoid.formFactor === PlasmaCore.Types.Vertical) {
             return PlasmaCore.Units.iconSizeHints.panel;
@@ -60,14 +60,8 @@ FolderViewDropArea {
         return 0;
     }
 
-    Plasmoid.switchHeight: {
-        // Support expanding into the full representation only on vertical panels.
-        if (isPopup && plasmoid.formFactor === PlasmaCore.Types.Vertical) {
-            return PlasmaCore.Units.iconSizeHints.panel;
-        }
-
-        return 0;
-    }
+    Plasmoid.switchWidth: { switchSize(); }
+    Plasmoid.switchHeight: { switchSize(); }
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
