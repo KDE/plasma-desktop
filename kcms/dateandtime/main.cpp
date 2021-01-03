@@ -30,7 +30,6 @@
 #include <QDBusConnection>
 #include <KAboutData>
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <KMessageBox>
 
 #include "dtime.h"

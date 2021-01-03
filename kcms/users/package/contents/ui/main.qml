@@ -28,6 +28,7 @@ import QtQuick.Controls 2.5 as QQC2
 import org.kde.kcm 1.2 as KCM
 import org.kde.kirigami 2.13 as Kirigami
 import org.kde.kcoreaddons 1.0 as KCoreAddons
+import org.kde.plasma.kcm.users 1.0
 
 KCM.ScrollViewKCM {
     id: root
@@ -39,6 +40,22 @@ KCM.ScrollViewKCM {
 
     implicitWidth: Kirigami.Units.gridUnit * 30
     implicitHeight: Kirigami.Units.gridUnit * 20
+
+    // QML cannot update avatar image when override. By increasing this number and
+    // appending it to image source with '?', we force avatar to reload
+    property int avatarVersion: 0
+
+    Connections {
+        target: kcm
+        onApply: {
+            avatarVersion += 1
+        }
+    }
+
+    Component.onCompleted: {
+        kcm.columnWidth = Kirigami.Units.gridUnit * 15
+        kcm.push("UserDetailsPage.qml", {user: kcm.userModel.getLoggedInUser()})
+    }
 
     view: ListView {
         id: userList
@@ -67,7 +84,8 @@ KCM.ScrollViewKCM {
                     radius: height/2
 
                     Kirigami.Avatar {
-                        source: model.decoration
+                        source: model.decoration + '?' + avatarVersion // force reload after saving
+                        cache: false // avoid caching
                         name: model.display
                         anchors {
                             fill: parent
@@ -94,7 +112,7 @@ KCM.ScrollViewKCM {
             function openPage() {
                 userList.currentIndex = index
                 kcm.pop(0)
-                kcm.push("UserDetailsPage.qml", {user: User})
+                kcm.push("UserDetailsPage.qml", {user: userObject})
             }
 
             onClicked: openPage()

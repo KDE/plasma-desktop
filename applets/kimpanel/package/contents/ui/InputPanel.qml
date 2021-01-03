@@ -30,7 +30,7 @@ PlasmaCore.Dialog {
     flags: Qt.Popup | Qt.WindowStaysOnTopHint | Qt.WindowDoesNotAcceptFocus
     location: PlasmaCore.Types.Floating
     visible: helper.auxVisible || helper.preeditVisible || helper.lookupTableVisible
-    property bool verticalLayout: (helper.lookupTableLayout === 1) || (helper.lookupTableLayout === 0 && plasmoid.configuration.vertical_lookup_table);
+    readonly property bool verticalLayout: (helper.lookupTableLayout === 1) || (helper.lookupTableLayout === 0 && plasmoid.configuration.vertical_lookup_table);
     property int highlightCandidate: helper.lookupTableCursor
     property int hoveredCandidate: -1
     property font preferredFont: plasmoid.configuration.use_default_font ? theme.defaultFont : plasmoid.configuration.font
@@ -101,12 +101,15 @@ PlasmaCore.Dialog {
                         dynamicRoles: true
                     }
                     delegate: Item {
+                        id: candidateDelegate
                         width: candidate.width + highlight.marginHints.left + highlight.marginHints.right
                         height: candidate.height + highlight.marginHints.top + highlight.marginHints.bottom
                         Layout.minimumWidth: width
                         Layout.minimumHeight: height
                         Layout.maximumWidth: width
                         Layout.maximumHeight: height
+
+                        readonly property bool selected: inputpanel.highlightCandidate === model.index || candidateMouseArea.pressed
 
                         Row {
                             id: candidate
@@ -119,11 +122,13 @@ PlasmaCore.Dialog {
                                 text: model.label
                                 font: preferredFont
                                 opacity: 0.8
+                                color: selected ? theme.highlightedTextColor : theme.textColor
                             }
                             PlasmaComponents.Label {
                                 id: textLabel
                                 text: model.text
                                 font: preferredFont
+                                color: selected ? theme.highlightedTextColor : theme.textColor
                             }
                         }
                         MouseArea {
@@ -140,7 +145,7 @@ PlasmaCore.Dialog {
                             z: -1
                             visible: inputpanel.highlightCandidate === model.index || inputpanel.hoveredCandidate === model.index
                             hover: candidateMouseArea.containsMouse
-                            selected: inputpanel.highlightCandidate === model.index || candidateMouseArea.pressed
+                            selected: candidateDelegate.selected
                             anchors {
                                 fill: parent
                             }

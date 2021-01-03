@@ -6,6 +6,7 @@
  *  Copyright (c) 2000 Kurt Granroth <granroth@kde.org>
  *
  *  Copyright (c) 2019 Kevin Ottens <kevin.ottens@enioka.com>
+ *  SPDX-FileCopyrightText: 2020 Carl Schwan <carl@carlschwan.eu>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -28,141 +29,168 @@
 #include <QCheckBox>
 #include <QFileInfo>
 
-#include <QVBoxLayout>
-
 #include <kworkspace.h>
 #include <QRegExp>
 #include <KDesktopFile>
 #include <KProcess>
-#include <KMessageBox>
-#include <QApplication>
+#include <KPluginFactory>
 #include <QDBusInterface>
-#include <QLineEdit>
 
 #include "kcmsmserver.h"
 #include "smserversettings.h"
-#include "smserverdata.h"
-#include "ui_smserverconfigdlg.h"
 
-#include <KPluginFactory>
-#include <KPluginLoader>
+#include <KAboutData>
 #include <KLocalizedString>
 
 #include <sessionmanagement.h>
 
 #include "login1_manager.h"
 
-K_PLUGIN_FACTORY(SMSFactory, registerPlugin<SMServerConfig>(); registerPlugin<SMServerData>();)
+K_PLUGIN_CLASS_WITH_JSON(SMServerConfig, "metadata.json")
 
-SMServerConfig::SMServerConfig(QWidget *parent, const QVariantList &args)
-  : KCModule(parent, args)
-  , ui(new Ui::SMServerConfigDlg)
-  , m_data(new SMServerData(this))
+SMServerConfig::SMServerConfig(QObject *parent, const QVariantList &args)
+  : KQuickAddons::ManagedConfigModule(parent, args)
   , m_login1Manager(new OrgFreedesktopLogin1ManagerInterface(QStringLiteral("org.freedesktop.login1"),
                                                              QStringLiteral("/org/freedesktop/login1"),
                                                              QDBusConnection::systemBus(),
                                                              this))
 {
-    ui->setupUi(this);
 
-    setQuickHelp( i18n("<h1>Session Manager</h1>"
+    auto settings = new SMServerSettings(this);
+    qmlRegisterSingletonInstance("org.kde.desktopsession.private", 1, 0, "Settings", settings);
+
+    setQuickHelp(i18n("<h1>Session Manager</h1>"
     " You can configure the session manager here."
     " This includes options such as whether or not the session exit (logout)"
     " should be confirmed, whether the session should be restored again when logging in"
     " and whether the computer should be automatically shut down after session"
     " exit by default."));
 
-    ui->firmwareSetupBox->hide();
-    ui->firmwareSetupMessageWidget->hide();
-
-    initFirmwareSetup();
     checkFirmwareSetupRequested();
+    m_restartInSetupScreenInitial = m_restartInSetupScreen;
 
-    addConfig(m_data->settings(), this);
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_smserver"), i18n("Desktop Session"),
+            QStringLiteral("1.0"), i18n("Desktop Session Login and Logout"), KAboutLicense::GPL,
+            i18n("Copyright © 2000–2020 Desktop Session team"));
+
+    about->addAuthor(i18n("Oswald Buddenhagen"), QString(), QStringLiteral("ossi@kde.org"));
+    about->addAuthor(i18n("Carl Schwan"), QStringLiteral("QML rewrite"),
+            QStringLiteral("carl@carlschwan.eu"), QStringLiteral("https://carlschwan.eu"));
+    setAboutData(about);
+    setButtons(Help | Apply | Default);
+
+    const QString canFirmareSetup = m_login1Manager->CanRebootToFirmwareSetup().value();
+    if (canFirmareSetup == QLatin1String("yes") || canFirmareSetup == QLatin1String("challenge")) {
+        m_canFirmareSetup = true;
+        // now check whether we're UEFI to provide a more descriptive button label
+        if (QFileInfo(QStringLiteral("/sys/firmware/efi")).isDir()) {
+            m_isUefi = true;
+        }
+    }
 }
 
 SMServerConfig::~SMServerConfig() = default;
 
-void SMServerConfig::initFirmwareSetup()
+bool SMServerConfig::isUefi() const
 {
-    m_rebootNowAction = new QAction(QIcon::fromTheme(QStringLiteral("system-reboot")), i18n("Restart Now"));
-    connect(m_rebootNowAction, &QAction::triggered, this, [this] {
-        auto sm = new SessionManagement(this);
-        auto doShutdown=[sm]() {
-            sm->requestReboot();
-            delete sm;
-        };
-        if (sm->state() == SessionManagement::State::Loading) {
-            connect(sm, &SessionManagement::stateChanged, this, doShutdown);
-        } else {
-            doShutdown();
+    return m_isUefi;
+}
+
+bool SMServerConfig::restartInSetupScreen() const
+{
+    return m_restartInSetupScreen;
+}
+
+void SMServerConfig::setRestartInSetupScreen(bool restartInSetupScreen)
+{
+    if (m_restartInSetupScreen == restartInSetupScreen) {
+        return;
+    }
+
+    QDBusMessage message = QDBusMessage::createMethodCall(m_login1Manager->service(),
+                                                          m_login1Manager->path(),
+                                                          m_login1Manager->interface(),
+                                                          QStringLiteral("SetRebootToFirmwareSetup"));
+
+    message.setArguments({restartInSetupScreen});
+    // This cannot be set through a generated DBus interface, so we have to create the message ourself.
+    message.setInteractiveAuthorizationAllowed(true);
+
+    QDBusPendingReply<void> call = m_login1Manager->connection().asyncCall(message);
+    QDBusPendingCallWatcher *callWatcher = new QDBusPendingCallWatcher(call, this);
+    connect(callWatcher, &QDBusPendingCallWatcher::finished, this, [this, restartInSetupScreen](QDBusPendingCallWatcher *watcher) {
+        QDBusPendingReply<void> reply = *watcher;
+        watcher->deleteLater();
+
+        checkFirmwareSetupRequested();
+
+        settingsChanged();
+
+        if (reply.isError()) {
+            // User likely canceled the PolKit prompt, don't show an error in this case
+            if (reply.error().type() != QDBusError::AccessDenied) {
+                m_error = reply.error().message();
+                Q_EMIT errorChanged();
+            }
+            return;
+        } else if (m_error.length() > 0) {
+            m_error = QString();
+            Q_EMIT errorChanged();
+        }
+        m_restartInSetupScreen = restartInSetupScreen;
+        Q_EMIT restartInSetupScreenChanged();
+
+        if (!restartInSetupScreen) {
+            return;
         }
     });
+}
 
-    connect(ui->firmwareSetupCheck, &QCheckBox::clicked, this, [this](bool enable) {
-        ui->firmwareSetupMessageWidget->removeAction(m_rebootNowAction);
-        ui->firmwareSetupMessageWidget->animatedHide();
 
-        QDBusMessage message = QDBusMessage::createMethodCall(m_login1Manager->service(),
-                                                              m_login1Manager->path(),
-                                                              m_login1Manager->interface(),
-                                                              QStringLiteral("SetRebootToFirmwareSetup"));
+QString SMServerConfig::error() const
+{
+    return m_error;
+}
 
-        message.setArguments({enable});
-        // This cannot be set through a generated DBus interface, so we have to create the message ourself.
-        message.setInteractiveAuthorizationAllowed(true);
-
-        QDBusPendingReply<void> call = m_login1Manager->connection().asyncCall(message);
-        QDBusPendingCallWatcher *callWatcher = new QDBusPendingCallWatcher(call, this);
-        connect(callWatcher, &QDBusPendingCallWatcher::finished, this, [this, enable](QDBusPendingCallWatcher *watcher) {
-            QDBusPendingReply<void> reply = *watcher;
-            watcher->deleteLater();
-
-            checkFirmwareSetupRequested();
-
-            KMessageWidget *message = ui->firmwareSetupMessageWidget;
-
-            if (reply.isError()) {
-                // User likely canceled the PolKit prompt, don't show an error in this case
-                if (reply.error().type() != QDBusError::AccessDenied) {
-                    message->setMessageType(KMessageWidget::Error);
-                    message->setText(i18n("Failed to request restart to firmware setup: %1", reply.error().message()));
-                    message->animatedShow();
-                }
-                return;
-            }
-
-            if (!enable) {
-                return;
-            }
-
-            message->setMessageType(KMessageWidget::Information);
-            if (m_isUefi) {
-                message->setText(i18n("Next time the computer is restarted, it will enter the UEFI setup screen."));
-            } else {
-                message->setText(i18n("Next time the computer is restarted, it will enter the firmware setup screen."));
-            }
-            message->addAction(m_rebootNowAction);
-            message->animatedShow();
-        });
-    });
-
-    const QString canFirmareSetup = m_login1Manager->CanRebootToFirmwareSetup().value();
-    if (canFirmareSetup == QLatin1String("yes") || canFirmareSetup == QLatin1String("challenge")) {
-        // now check whether we're UEFI to provide a more descriptive button label
-        if (QFileInfo(QStringLiteral("/sys/firmware/efi")).isDir()) {
-            m_isUefi = true;
-            ui->firmwareSetupBox->setTitle(i18n("UEFI Setup"));
-            ui->firmwareSetupCheck->setText(i18n("Enter UEFI setup on next restart"));
-        }
-
-        ui->firmwareSetupBox->setVisible(true);
+void SMServerConfig::reboot()
+{
+    auto sm = new SessionManagement(this);
+    auto doShutdown = [sm]() {
+        sm->requestReboot();
+        delete sm;
+    };
+    if (sm->state() == SessionManagement::State::Loading) {
+        connect(sm, &SessionManagement::stateChanged, this, doShutdown);
+    } else {
+        doShutdown();
     }
 }
 
 void SMServerConfig::checkFirmwareSetupRequested()
 {
-    ui->firmwareSetupCheck->setChecked(m_login1Manager->property("RebootToFirmwareSetup").toBool());
+    m_restartInSetupScreen = m_login1Manager->property("RebootToFirmwareSetup").toBool();
+    Q_EMIT restartInSetupScreenChanged();
+}
+
+bool SMServerConfig::canFirmareSetup() const
+{
+    return m_canFirmareSetup;
+}
+
+bool SMServerConfig::isSaveNeeded() const
+{
+    return m_restartInSetupScreen != m_restartInSetupScreenInitial;
+}
+
+bool SMServerConfig::isDefaults() const 
+{
+    return m_restartInSetupScreen;
+}
+
+void SMServerConfig::defaults()
+{
+    ManagedConfigModule::defaults();
+    setRestartInSetupScreen(false);
 }
 
 #include "kcmsmserver.moc"

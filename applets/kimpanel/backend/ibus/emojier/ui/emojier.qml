@@ -91,28 +91,36 @@ Kirigami.ApplicationWindow
 
     globalDrawer: Kirigami.GlobalDrawer {
         id: drawer
+
         title: i18n("Categories")
         collapsible: !topContent.activeFocus
         collapsed: true
         modal: false
 
-        function createCategoryActions(categories) {
-            var actions = []
-            for(var i in categories) {
-                var cat = categories[i]
-                actions.push(cat === ":recent:" ? recentAction :
-                             cat === ":find:"   ? searchAction :
-                             cat.length === 0   ? allAction
-                                                : categoryActionComponent.createObject(drawer, { category: cat }))
+        header: Kirigami.AbstractApplicationHeader {
+            topPadding: Kirigami.Units.smallSpacing
+            bottomPadding: Kirigami.Units.smallSpacing
+            leftPadding: Kirigami.Units.largeSpacing
+            rightPadding: Kirigami.Units.smallSpacing
+
+            Kirigami.Heading {
+                level: 1
+                text: drawer.title
+                Layout.fillWidth: true
             }
-            return actions;
         }
 
-        actions: createCategoryActions(emoji.categories)
-
-        Component {
-            id: categoryActionComponent
-            CategoryAction {}
+        Instantiator {
+            model: emoji.categories
+            CategoryAction {
+                category: modelData
+            }
+            onObjectAdded: {
+                var actions = Array.prototype.map.call(drawer.actions, i => i)
+                actions.splice(index + 3, 0, object)
+                drawer.actions = actions
+            }
         }
+        actions: [recentAction, searchAction, allAction]
     }
 }

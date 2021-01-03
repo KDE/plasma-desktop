@@ -3,13 +3,12 @@ Icon=system-log-out
 Type=Service
 X-KDE-ServiceTypes=KCModule
 X-DocPath=kcontrol/kcmsmserver/index.html
-
+X-Plasma-MainScript=ui/main.qml
+X-KDE-FormFactors=desktop
 X-KDE-Library=kcm_smserver
 X-KDE-ParentApp=kcontrol
-
 X-KDE-System-Settings-Parent-Category=session
 X-KDE-Weight=60
-
 Name=Desktop Session
 Name[ar]=جلسة سطح المكتب
 Name[ast]=Sesión del escritoriu

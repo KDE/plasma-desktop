@@ -60,7 +60,6 @@ target_link_libraries(kded_keyboard
     KF5::Plasma
     KF5::XmlGui
     KF5::GuiAddons
-    KF5::IconThemes
     XCB::XCB
     XCB::XKB
     ${X11_LIBRARIES}
@@ -94,6 +93,11 @@ set(kcm_keyboard_PART_SRCS
   bindings.cpp
   tastenbrett.cpp)
 
+install(FILES kcminputrc_repeat.upd
+        DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
+install(PROGRAMS kcminputrc_migrate_repeat_value.py
+        DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
+
 ecm_qt_declare_logging_category(kcm_keyboard_PART_SRCS
     HEADER debug.h
     IDENTIFIER KCM_KEYBOARD
@@ -112,13 +116,10 @@ target_link_libraries(kcm_keyboard
     KF5::KCMUtils
     KF5::GlobalAccel
     KF5::I18n
-    KF5::KIOCore
-    KF5::KIOWidgets
     KF5::WindowSystem
     KF5::Plasma
     KF5::XmlGui
     KF5::GuiAddons
-    KF5::IconThemes
     XCB::XCB
     XCB::XKB
     ${X11_Xkbfile_LIB}
@@ -129,6 +130,8 @@ target_link_libraries(kcm_keyboard
 install(TARGETS kcm_keyboard DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 install( FILES kcm_keyboard.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
+
+add_subdirectory(kconf_update)
 
 # Images
 

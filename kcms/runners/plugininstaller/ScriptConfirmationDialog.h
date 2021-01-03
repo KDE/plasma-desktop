@@ -25,7 +25,7 @@ public:
         QVBoxLayout *layout = new QVBoxLayout(this);
         QString msg;
         if (!install && noInstaller && readmes.isEmpty()) {
-            msg = xi18nc("@info", "This plugin does not provide an uninstall script. Please contact the author. "
+            msg = xi18nc("@info", "This plugin does not provide an uninstallation script. Please contact the author. "
                                   "You can try to uninstall the plugin manually.<nl/>"
                                   "If you do not feel capable or comfortable with this, click <interface>Cancel</interface>  now.");
         } else if (!install && noInstaller) {
@@ -38,8 +38,8 @@ public:
                                   "You can try to install the plugin manually.<nl/>"
                                   "If you do not feel capable or comfortable with this, click <interface>Cancel</interface>  now.");
         } else if (noInstaller) {
-            msg = xi18nc("@info", "This plugin does not provide an installation script. Please contact the author.<nl/>"
-                                  "You can try to install the plugin manually; please have a look at the README "
+            msg = xi18nc("@info", "This plugin does not provide an installation script. Please contact the author. "
+                                  "You can try to install the plugin manually. Please have a look at the README "
                                   "for instructions from the author.<nl/>"
                                   "If you do not feel capable or comfortable with this, click <interface>Cancel</interface>  now.");
         } else if (readmes.isEmpty()) {

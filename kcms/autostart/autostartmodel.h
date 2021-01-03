@@ -36,8 +36,7 @@ public:
     enum Roles {
         Name = Qt::DisplayRole,
         IconName = Qt::DecorationRole,
-        Command = Qt::UserRole + 1,
-        Enabled,
+        Enabled = Qt::UserRole + 1,
         Source,
         FileName,
         OnlyInPlasma
@@ -77,7 +76,6 @@ private:
 
 struct AutostartEntry {
     QString name;    // Human readable name or script file path. In case of symlinks the target file path
-    QString command; // exec or original .sh file
     AutostartModel::AutostartEntrySource source;
     bool enabled;
     QString fileName; // the file backing the entry

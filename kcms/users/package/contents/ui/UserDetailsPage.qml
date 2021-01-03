@@ -119,33 +119,24 @@ SimpleKCM {
         }
         RowLayout {
             Layout.alignment: Qt.AlignHCenter
-            QQC2.RoundButton {
-                id: userPfp
+            Kirigami.Avatar {
+                source: usersDetailPage.user.face
+                cache: false
+                name: user.realName
 
                 readonly property int size: 6 * Kirigami.Units.gridUnit
 
-                implicitWidth: size
-                implicitHeight: size
-                flat: true
+                Layout.preferredWidth: size
+                Layout.preferredHeight: size
 
-                Kirigami.Avatar {
-                    source: usersDetailPage.user.face
-                    name: user.realName
-                    anchors {
-                        fill: parent
-                        margins: Kirigami.Units.smallSpacing
+                actions {
+                    main: Kirigami.Action {
+                        text: i18n("Change avatar")
+                        onTriggered: {
+                            picturesSheet.open()
+                            stackSwitcher.forceActiveFocus()
+                        }
                     }
-                }
-
-                Layout.alignment: Qt.AlignHCenter
-                Layout.maximumHeight: size + Kirigami.smallSpacing
-                Layout.minimumHeight: size + Kirigami.smallSpacing
-                Layout.maximumWidth: size + Kirigami.smallSpacing
-                Layout.minimumWidth: size + Kirigami.smallSpacing
-
-                onClicked: {
-                    picturesSheet.open()
-                    stackSwitcher.forceActiveFocus()
                 }
             }
             QQC2.TextField  {
@@ -255,7 +246,8 @@ SimpleKCM {
                     rowSpacing: Kirigami.Units.smallSpacing
                     columnSpacing: Kirigami.Units.smallSpacing
                     columns: {
-                        return Math.floor((stackSwitcher.width) / (Kirigami.Units.gridUnit * 6))
+                        // subtract gridunit from stackswticher width to roughly compensate for slight overlap on tightly fit grids
+                        return Math.floor((stackSwitcher.width - Kirigami.Units.gridUnit) / ((Kirigami.Units.gridUnit * 6) + picturesColumn.columnSpacing))
                     }
 
                     Layout.fillWidth: true
@@ -306,45 +298,7 @@ SimpleKCM {
                     }
 
                     Repeater {
-                        model: [
-                            "Artist Konqi.png",
-                            "Bookworm Konqi.png",
-                            "Boss Konqi.png",
-                            "Bug Catcher Konqi.png",
-                            "Card Shark Konqi.png",
-                            "Hacker Konqi.png",
-                            "Journalist Konqi.png",
-                            "Katie.png",
-                            "Konqi.png",
-                            "Mechanic Konqi.png",
-                            "Messenger Konqi.png",
-                            "Musician Konqi.png",
-                            "Office Worker Konqi.png",
-                            "PC Builder Konqi.png",
-                            "Scientist Konqi.png",
-                            "Teacher Konqi.png",
-                            "Virtual Reality Konqi.png",
-                            "photos/Air Balloon.png",
-                            "photos/Astronaut.png",
-                            "photos/Books.png",
-                            "photos/Brushes.png",
-                            "photos/Bulb.png",
-                            "photos/Car.png",
-                            "photos/Cat.png",
-                            "photos/Chameleon.png",
-                            "photos/Cocktail.png",
-                            "photos/Dog.png",
-                            "photos/Fish.png",
-                            "photos/Gamepad.png",
-                            "photos/Owl.png",
-                            "photos/Pancakes.png",
-                            "photos/Parrot.png",
-                            "photos/Pencils.png",
-                            "photos/Shuttle.png",
-                            "photos/Soccer.png",
-                            "photos/Sunflower.png",
-                            "photos/Sushi.png"
-                        ]
+                        model: kcm.avatarFiles
                         QQC2.Button {
                             Layout.preferredHeight: Kirigami.Units.gridUnit * 6
                             Layout.preferredWidth: Layout.preferredHeight
@@ -355,13 +309,23 @@ SimpleKCM {
 
                             Image {
                                 id: imgDelegate
+                                visible: false
                                 smooth: true
                                 mipmap: true
-
-                                anchors.fill: parent
-                                source: "../img/%1".arg(modelData)
+                                sourceSize.width: Kirigami.Units.gridUnit * 5
+                                sourceSize.height: Kirigami.Units.gridUnit * 5
+                                source: modelData
 
                                 Accessible.ignored: true
+                            }
+
+                            Kirigami.ShadowedTexture {
+                                radius: width / 2
+                                anchors.centerIn: parent
+                                width: Kirigami.Units.gridUnit * 5
+                                height: Kirigami.Units.gridUnit * 5
+
+                                source: imgDelegate
                             }
 
                             onClicked: {

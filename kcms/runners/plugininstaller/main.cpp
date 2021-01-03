@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
 #ifdef HAVE_PACKAGEKIT
         job.reset(new PackageKitJob());
 #else
-        fail(i18nc("@info", "No Packagekit support"));
+        fail(i18nc("@info", "No PackageKit support"));
 #endif
     } else {
         job.reset(new ScriptJob());

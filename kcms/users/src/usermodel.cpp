@@ -99,7 +99,7 @@ QHash<int, QByteArray> UserModel::roleNames() const
     names.insert(NameRole, "name");
     names.insert(EmailRole, "email");
     names.insert(AdministratorRole, "administrator");
-    names.insert(UserRole, "User");
+    names.insert(UserRole, "userObject");
     names.insert(FaceValidRole, "faceValid");
     names.insert(LoggedInRole, "loggedIn");
     names.insert(SectionHeaderRole, "sectionHeader");

@@ -19,6 +19,7 @@
  */
 
 #include "baloodata.h"
+#include "kcm.h"
 
 #include <QVariantList>
 

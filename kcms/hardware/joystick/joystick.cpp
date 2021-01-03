@@ -30,7 +30,6 @@
 
 #include <stdio.h>
 #include <KPluginFactory>
-#include <KPluginLoader>
 
 #include <QVBoxLayout>
 

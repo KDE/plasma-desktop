@@ -33,8 +33,5 @@ Item {
     Layout.preferredHeight: Layout.minimumHeight
     Layout.maximumHeight: Layout.minimumHeight
 
-    Plasmoid.preferredRepresentation: plasmoid.fullRepresentation
-    Plasmoid.backgroundHints: planar ? PlasmaCore.Types.StandardBackground : PlasmaCore.Types.NoBackground
-
     Plasmoid.constraintHints: PlasmaCore.Types.MarginAreasSeparator
 }

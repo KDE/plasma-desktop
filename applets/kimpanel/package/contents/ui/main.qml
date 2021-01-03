@@ -26,16 +26,18 @@ import org.kde.plasma.private.kimpanel 0.1 as Kimpanel
 
 Item {
     id: kimpanel
-    property int visibleButtons: 0
 
-    property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
+    property int visibleButtons: 0
+    readonly property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    Layout.minimumWidth: vertical ? PlasmaCore.Units.iconSizes.small : items.implicitWidth
-    Layout.minimumHeight: !vertical ? PlasmaCore.Units.iconSizes.small : items.implicitHeight
-    Layout.preferredHeight: Layout.minimumHeight
+    Layout.minimumWidth: vertical ? PlasmaCore.Units.iconSizes.small : mainLayout.implicitWidth
+    Layout.minimumHeight: vertical ? mainLayout.implicitHeight : PlasmaCore.Units.iconSizes.small
+    Layout.preferredWidth: vertical ? kimpanel.width : mainLayout.implicitWidth
+    Layout.preferredHeight: !vertical ? kimpanel.height : mainLayout.implicitHeight
+
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
     Component.onCompleted: {
@@ -44,35 +46,80 @@ Item {
 
     InputPanel { }
 
-    Flow {
-        id: items
-        width: parent.width
-        height: parent.height
-        x: (parent.width - childrenRect.width) / 2
-        y: (parent.height - childrenRect.height) / 2
-        flow: kimpanel.vertical ? Flow.LeftToRight : Flow.TopToBottom
+    GridLayout {
+        id: mainLayout
 
-        property int iconSize: Math.min(PlasmaCore.Units.iconSizeHints.panel, PlasmaCore.Units.roundToIconSize(Math.min(width, height)))
+        rowSpacing: 0
+        columnSpacing: 0
+        anchors.fill: parent
 
-        Repeater {
+        GridView {
+            id: items
+
+            Layout.alignment: Qt.AlignCenter
+
+            interactive: false
+            flow: kimpanel.vertical ? GridView.FlowLeftToRight : GridView.FlowTopToBottom
+
+            // The icon size to display when not using the auto-scaling setting
+            readonly property int smallIconSize: PlasmaCore.Units.iconSizes.smallMedium
+            readonly property bool autoSize: plasmoid.configuration.scaleIconsToFit
+
+            readonly property int gridThickness: kimpanel.vertical ? kimpanel.width : kimpanel.height
+            // Should change to 2 rows/columns on a 56px panel (in standard DPI)
+            readonly property int rowsOrColumns: autoSize ? 1 : Math.max(1, Math.min(count, Math.floor(gridThickness / smallSizeCellLength)))
+
+            // Add margins only if the panel is larger than a small icon (to avoid large gaps between tiny icons)
+            readonly property int smallSizeCellLength: gridThickness < smallIconSize ? gridThickness : smallIconSize + PlasmaCore.Units.smallSpacing
+            cellHeight: {
+                if (kimpanel.vertical) {
+                    return autoSize ? kimpanel.width : smallSizeCellLength
+                } else {
+                    return autoSize ? kimpanel.height : Math.floor(kimpanel.height / rowsOrColumns)
+                }
+            }
+            cellWidth: {
+                if (kimpanel.vertical) {
+                    return autoSize ? kimpanel.width : Math.floor(kimpanel.width / rowsOrColumns)
+                } else {
+                    return autoSize ? kimpanel.height : smallSizeCellLength
+                }
+            }
+
+            //depending on the form factor, we are calculating only one dimention, second is always the same as root/parent
+            implicitHeight: kimpanel.vertical ? cellHeight * Math.ceil(count / rowsOrColumns) : kimpanel.height
+            implicitWidth: !kimpanel.vertical ? cellWidth * Math.ceil(count / rowsOrColumns) : kimpanel.width
+
+            readonly property int iconSize: {
+                var size;
+                if (autoSize) {
+                    size = Math.min(implicitWidth / rowsOrColumns, implicitHeight / rowsOrColumns)
+                } else {
+                    size = Math.min(gridThickness, smallIconSize)
+                }
+                return PlasmaCore.Units.roundToIconSize(Math.min(size, PlasmaCore.Units.iconSizes.enormous))
+            }
+
             model: ListModel {
                 id: list
                 dynamicRoles: true
             }
 
             delegate: Item {
-                id: iconDelegate
-                width: items.iconSize
-                height: items.iconSize
+                width: items.cellWidth
+                height: items.cellHeight
                 StatusIcon {
                     id: statusIcon
                     anchors.centerIn: parent
+                    Layout.alignment: Qt.AlignCenter
+
                     width: items.iconSize
                     height: items.iconSize
                     label: model.label
                     tip: model.tip
                     icon: model.icon
                     hint: model.hint
+
                     onTriggered : {
                         if (button === Qt.LeftButton) {
                             if (model.key == 'kimpanel-placeholder') {

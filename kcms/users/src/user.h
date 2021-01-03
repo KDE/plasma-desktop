@@ -41,7 +41,8 @@ public:
         NoError = 0,
         PermissionDenied,
         Failed,
-        Unknown
+        Unknown,
+        UserFacing
     };
 
 private:

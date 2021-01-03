@@ -52,21 +52,22 @@ class Q_DECL_EXPORT KeyboardDaemon : public KDEDModule
     void setupTrayIcon();
 
 private Q_SLOTS:
-	void switchToNextLayout();
     void configureKeyboard();
     void configureMouse();
-    void layoutChanged();
+    void layoutChangedSlot();
     void layoutMapChanged();
 	bool setLayout(QAction* action);
 
 public Q_SLOTS:
+	Q_SCRIPTABLE void switchToNextLayout();
 	Q_SCRIPTABLE bool setLayout(const QString& layout);
-	Q_SCRIPTABLE QString getCurrentLayout();
-	Q_SCRIPTABLE QStringList getLayoutsList();
-	Q_SCRIPTABLE QString getLayoutDisplayName(const QString &layout);
+	Q_SCRIPTABLE QString getLayout() const;
+	Q_SCRIPTABLE QString getLayoutDisplayName() const;
+	Q_SCRIPTABLE QString getLayoutLongName() const;
+	Q_SCRIPTABLE QStringList getLayoutsList() const;
 
 Q_SIGNALS:
-	Q_SCRIPTABLE void currentLayoutChanged(QString layout);
+	Q_SCRIPTABLE void layoutChanged(QString layout);
 	Q_SCRIPTABLE void layoutListChanged();
 
 public:

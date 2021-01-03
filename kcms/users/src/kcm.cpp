@@ -48,6 +48,7 @@ KCMUser::KCMUser(QObject *parent, const QVariantList &args)
       m_dbusInterface(new OrgFreedesktopAccountsInterface(QStringLiteral("org.freedesktop.Accounts"), QStringLiteral("/org/freedesktop/Accounts"), QDBusConnection::systemBus(), this)),
       m_model(new UserModel(this))
 {
+    qmlRegisterUncreatableType<User>("org.kde.plasma.kcm.users", 1, 0, "User", QString());
     KAboutData* about = new KAboutData(QStringLiteral("kcm_users"), i18n("Manage user accounts"),
                                        QStringLiteral("0.1"), QString(), KAboutLicense::GPL);
     about->addAuthor(i18n("Nicolas Fella"), QString(), QStringLiteral("nicolas.fella@gmx.de"));
@@ -57,6 +58,20 @@ KCMUser::KCMUser(QObject *parent, const QVariantList &args)
     auto font = QApplication::font("QLabel");
     auto fm = QFontMetrics(font);
     setColumnWidth(fm.capHeight()*30);
+
+    const auto dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("plasma/avatars"), QStandardPaths::LocateDirectory);
+    for (const auto& dir : dirs) {
+        QDirIterator it(
+            dir,
+            QStringList{ QStringLiteral("*.jpg"), QStringLiteral("*.png") },
+            QDir::Files,
+            QDirIterator::Subdirectories
+        );
+
+        while (it.hasNext()) {
+            m_avatarFiles << it.next();
+        }
+    }
 }
 
 bool KCMUser::createUser(const QString& name, const QString& realName, const QString& password, bool isAdmin)
@@ -100,7 +115,7 @@ QString KCMUser::initializeString(const QString& stringToGrabInitialsOf)
     if (stringToGrabInitialsOf.isEmpty()) return "";
 
     auto normalized = stringToGrabInitialsOf.normalized(QString::NormalizationForm_D);
-    if (normalized.contains(" ")) { 
+    if (normalized.contains(" ")) {
         QStringList split = normalized.split(" ");
         auto first = split.first();
         auto last = split.last();

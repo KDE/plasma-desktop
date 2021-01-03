@@ -1820,8 +1820,8 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
             menu->addAction(m_actionCollection.action(QStringLiteral("paste")));
         }
 
-        menu->addSeparator();
         menu->addAction(m_actionCollection.action(QStringLiteral("rename")));
+        menu->addSeparator();
         menu->addAction(m_actionCollection.action(QStringLiteral("restoreFromTrash")));
 
         KConfigGroup cg(KSharedConfig::openConfig(), "KDE");
@@ -1859,7 +1859,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
         if (KPropertiesDialog::canDisplay(items)) {
             menu->addSeparator();
             QAction *act = new QAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("&Properties"), menu);
-            act->setShortcuts({Qt::ALT + Qt::Key_Return, Qt::ALT + Qt::Key_Enter});
+            act->setShortcuts({Qt::ALT | Qt::Key_Return, Qt::ALT | Qt::Key_Enter});
             QObject::connect(act, &QAction::triggered, this, &FolderModel::openPropertiesDialog);
             menu->addAction(act);
         }

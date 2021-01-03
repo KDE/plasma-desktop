@@ -41,12 +41,12 @@ AddLayoutDialog::AddLayoutDialog(const Rules* rules_, Flags* flags_, const QStri
     layoutDialogUi->setupUi(this);
 
     QSet<QString> languages;
-    foreach(const LayoutInfo* layoutInfo, rules->layoutInfos) {
+    for (const LayoutInfo *layoutInfo  : rules->layoutInfos) {
     	QSet<QString> langs = QSet<QString>(layoutInfo->languages.constBegin(), layoutInfo->languages.constEnd());
     	languages.unite( langs );
     }
     IsoCodes isoCodes(IsoCodes::iso_639_3);
-    foreach(const QString& lang, languages) {
+    for (const QString &lang : qAsConst(languages)) {
     	const IsoCodeEntry* isoCodeEntry = isoCodes.getEntry(IsoCodes::attr_iso_639_3_id, lang);
 //    	const IsoCodeEntry* isoCodeEntry = isoCodes.getEntry(IsoCodes::attr_iso_639_2B_code, lang);
 //    	if( isoCodeEntry == NULL ) {
@@ -87,7 +87,7 @@ void AddLayoutDialog::languageChanged(int langIdx)
 	layoutDialogUi->layoutComboBox->clear();
 	int defaultIndex = -1;
 	int i = 0;
-    foreach(const LayoutInfo* layoutInfo, rules->layoutInfos) {
+    for (const LayoutInfo *layoutInfo : qAsConst(rules->layoutInfos)) {
     	if( lang.isEmpty() || layoutInfo->isLanguageSupportedByLayout(lang) ) {
     		if( flags ) {
     			QIcon icon(flags->getIcon(layoutInfo->name));
@@ -128,7 +128,7 @@ void AddLayoutDialog::layoutChanged(int layoutIdx)
 
 	layoutDialogUi->variantComboBox->clear();
 	const LayoutInfo* layoutInfo = rules->getLayoutInfo(layoutName);
-    foreach(const VariantInfo* variantInfo, layoutInfo->variantInfos) {
+    for (const VariantInfo *variantInfo : layoutInfo->variantInfos) {
         if( lang.isEmpty() || layoutInfo->isLanguageSupportedByVariant(variantInfo, lang) ) {
         	layoutDialogUi->variantComboBox->addItem(variantInfo->description, variantInfo->name);
         }

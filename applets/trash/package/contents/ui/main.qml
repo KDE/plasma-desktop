@@ -21,7 +21,7 @@ import QtGraphicalEffects 1.0
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as Components
+import org.kde.plasma.components 3.0 as PC3
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.draganddrop 2.0 as DragDrop
@@ -145,7 +145,7 @@ DragDrop.DropArea {
         source: constrained ? null : text
     }
 
-    Components.Label {
+    PC3.Label {
         id: text
         anchors {
             horizontalCenter: parent.horizontalCenter

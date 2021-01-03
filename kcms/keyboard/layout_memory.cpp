@@ -111,7 +111,7 @@ bool isExtraSubset(const QList<LayoutUnit>& allLayouts, const QList<LayoutUnit>&
 {
 	if( allLayouts.first() != newList.first() )
 		return false;
-	foreach(const LayoutUnit& layoutUnit, newList) {
+	for (const LayoutUnit &layoutUnit : newList) {
 		if( ! allLayouts.contains(layoutUnit) )
 			return false;
 	}

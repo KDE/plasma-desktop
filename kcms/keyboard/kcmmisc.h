@@ -24,6 +24,7 @@
 #ifndef __KCMMISC_H__
 #define __KCMMISC_H__
 
+#include <QMap>
 #include <QString>
 #include <QWidget>
 
@@ -32,6 +33,18 @@ class Ui_KeyboardConfigWidget;
 
 const int DEFAULT_REPEAT_DELAY = 600;
 const double DEFAULT_REPEAT_RATE = 25.0;
+
+enum KeyBehaviour {
+  AccentMenu = 0,
+  RepeatKey = 1,
+  DoNothing = 2
+};
+
+const QMap<KeyBehaviour,QString> keybehaviourNames = {
+  { AccentMenu, QStringLiteral("accent")  },
+  { RepeatKey,  QStringLiteral("repeat")  },
+  { DoNothing,  QStringLiteral("nothing") },
+};
 
 enum TriState {
 	STATE_ON = 0,  STATE_OFF = 1, STATE_UNCHANGED = 2
@@ -75,13 +88,13 @@ Q_SIGNALS:
 	void changed(bool state);
 
 private:
-  void setRepeat( TriState flag, int delay, double rate);
+  void setRepeat( KeyBehaviour flag, int delay, double rate);
   void setRepeatRate( int );
 
 
   int sliderMax;
   int clickVolume;
-  enum TriState keyboardRepeat;
+  KeyBehaviour keyboardRepeat;
   enum TriState numlockState;
 
   QButtonGroup* _numlockButtonGroup;

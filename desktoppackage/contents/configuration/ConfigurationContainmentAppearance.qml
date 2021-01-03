@@ -22,8 +22,7 @@ import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Layouts 1.1
 import QtQml 2.15
 
-import org.kde.kconfig 1.0 // for KAuthorized
-import org.kde.plasma.private.shell 2.0 as ShellPrivate // for WallpaperPlugin
+import org.kde.newstuff 1.62 as NewStuff
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kcm 1.4
@@ -121,16 +120,10 @@ AbstractKCM {
                         root.settingValueChanged()
                     }
                 }
-                QtControls.Button {
-                    icon.name: "get-hot-new-stuff"
+                NewStuff.Button {
+                    configFile: "wallpaperplugin.knsrc"
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Plugins...")
-                    visible: KAuthorized.authorize("ghns")
-                    onClicked: wallpaperPlugin.getNewWallpaperPlugin(this)
                     Layout.preferredHeight: wallpaperComboBox.height
-
-                    ShellPrivate.WallpaperPlugin {
-                        id: wallpaperPlugin
-                    }
                 }
             }
         }

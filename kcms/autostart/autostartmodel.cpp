@@ -50,47 +50,45 @@
 
 // share/autostart shouldn't be an option as this should be reserved for global autostart entries
 
-static bool checkEntry(const AutostartEntry &entry)
-{
-    const QStringList commandLine = KShell::splitArgs(entry.command);
-    if (commandLine.isEmpty()) {
-        return false;
-    }
-
-    if (!entry.enabled) {
-        return false;
-    }
-
-    const QString exe = commandLine.first();
-    if (exe.isEmpty() || QStandardPaths::findExecutable(exe).isEmpty()) {
-        return false;
-    }
-    return true;
-}
-
-static AutostartEntry loadDesktopEntry(const QString &fileName)
+static std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName)
 {
     KDesktopFile config(fileName);
     const KConfigGroup grp = config.desktopGroup();
     const auto name = config.readName();
-    const auto command = grp.readEntry("Exec");
 
     const bool hidden = grp.readEntry("Hidden", false);
+
+    if (hidden) {
+        return {};
+    }
+
     const QStringList notShowList = grp.readXdgListEntry("NotShowIn");
     const QStringList onlyShowList = grp.readXdgListEntry("OnlyShowIn");
-    const bool enabled = !(hidden || notShowList.contains(QLatin1String("KDE")) || (!onlyShowList.isEmpty() && !onlyShowList.contains(QLatin1String("KDE"))));
+    const bool enabled = !(notShowList.contains(QLatin1String("KDE")) || (!onlyShowList.isEmpty() && !onlyShowList.contains(QLatin1String("KDE"))));
+
+    if (!enabled) {
+        return {};
+    }
 
     const auto lstEntry = grp.readXdgListEntry("OnlyShowIn");
     const bool onlyInPlasma = lstEntry.contains(QLatin1String("KDE"));
     const QString iconName = config.readIcon();
 
-    return {name,
-            command,
+    const QString tryCommand = grp.readEntry("TryExec");
+
+    // Try to filter out entries that point to nonexistant programs
+    // If TryExec is either found in $PATH or is an absolute file path that exists
+    // This doesn't detect uninstalled Flatpaks for example though
+    if (!tryCommand.isEmpty() && QStandardPaths::findExecutable(tryCommand).isEmpty() && !QFile::exists(tryCommand)) {
+        return {};
+    }
+
+    return std::optional<AutostartEntry>({name,
             AutostartModel::AutostartEntrySource::XdgAutoStart, // .config/autostart load desktop at startup
             enabled,
             fileName,
             onlyInPlasma,
-            iconName};
+            iconName});
 }
 
 AutostartModel::AutostartModel(QObject *parent)
@@ -122,13 +120,13 @@ void AutostartModel::load()
             continue;
         }
 
-        const AutostartEntry entry = loadDesktopEntry(fi.absoluteFilePath());
+        const std::optional<AutostartEntry> entry = loadDesktopEntry(fi.absoluteFilePath());
 
-        if (!checkEntry(entry)) {
+        if (!entry) {
             continue;
         }
 
-        m_entries.push_back(entry);
+        m_entries.push_back(entry.value());
     }
 
     loadScriptsFromDir(QStringLiteral("/autostart-scripts/"), AutostartModel::AutostartEntrySource::XdgScripts);
@@ -158,7 +156,7 @@ void AutostartModel::loadScriptsFromDir(const QString &subDir, AutostartModel::A
             fileName = fi.symLinkTarget();
         }
 
-        m_entries.push_back({fileName, isSymlink ? fileName : QString(), kind, true, fi.absoluteFilePath(), false, QStringLiteral("dialog-scripts")});
+        m_entries.push_back({fileName, kind, true, fi.absoluteFilePath(), false, QStringLiteral("dialog-scripts")});
     }
 }
 
@@ -177,12 +175,13 @@ bool AutostartModel::reloadEntry(const QModelIndex &index, const QString &fileNa
         return false;
     }
 
-    AutostartEntry newEntry = loadDesktopEntry(fileName);
-    if (!checkEntry(newEntry)) {
+    const std::optional<AutostartEntry> newEntry = loadDesktopEntry(fileName);
+
+    if (!newEntry) {
         return false;
     }
 
-    m_entries.replace(index.row(), newEntry);
+    m_entries.replace(index.row(), newEntry.value());
     Q_EMIT dataChanged(index, index);
     return true;
 }
@@ -198,8 +197,6 @@ QVariant AutostartModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case Qt::DisplayRole:
         return entry.name;
-    case Command:
-        return entry.command;
     case Enabled:
         return entry.enabled;
     case Source:
@@ -248,7 +245,6 @@ void AutostartModel::addApplication(const KService::Ptr &service)
     }
 
     const auto entry = AutostartEntry {service->name(),
-                                       service->exec(),
                                        AutostartModel::AutostartEntrySource::XdgAutoStart, // .config/autostart load desktop at startup
                                        true,
                                        desktopPath,
@@ -365,7 +361,7 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
 
         const QUrl dest = theJob->property("finalUrl").toUrl();
 
-        AutostartEntry entry = AutostartEntry {dest.fileName(), url.path(), kind, true, dest.path(), false, QStringLiteral("dialog-scripts")};
+        AutostartEntry entry = AutostartEntry {dest.fileName(), kind, true, dest.path(), false, QStringLiteral("dialog-scripts")};
 
         m_entries.insert(index, entry);
 
@@ -401,7 +397,6 @@ QHash<int, QByteArray> AutostartModel::roleNames() const
     QHash<int, QByteArray> roleNames = QAbstractListModel::roleNames();
 
     roleNames.insert(Name, QByteArrayLiteral("name"));
-    roleNames.insert(Command, QByteArrayLiteral("command"));
     roleNames.insert(Enabled, QByteArrayLiteral("enabled"));
     roleNames.insert(Source, QByteArrayLiteral("source"));
     roleNames.insert(FileName, QByteArrayLiteral("fileName"));

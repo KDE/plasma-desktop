@@ -353,13 +353,6 @@ Item {
                         location: PlasmaExtras.PlasmoidHeading.Location.Header
                     }
                     AnchorChanges {
-                        target: headerSeparator
-                        anchors {
-                            top: undefined
-                            bottom: header.bottom
-                        }
-                    }
-                    AnchorChanges {
                         target: mainArea
                         anchors {
                             left: root.left
