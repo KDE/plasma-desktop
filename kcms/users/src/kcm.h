@@ -48,6 +48,8 @@ public:
     Q_SCRIPTABLE QString initializeString(const QString& stringToGrabInitialsOf);
     Q_SCRIPTABLE QString plonkImageInTempfile(const QImage& image);
 
+    Q_SCRIPTABLE QString complainAboutPassword(const QString& username, const QString& realname, const QString& password);
+
 signals:
     Q_SCRIPTABLE void apply();
     Q_SCRIPTABLE void reset();

@@ -53,6 +53,7 @@ target_link_libraries(kcm_users
     KF5::Wallet
     Qt5::DBus
     crypt
+    crack
 )
 
 kcoreaddons_desktop_to_json(kcm_users "../kcm_users.desktop" SERVICE_TYPES kcmodule.desktop)

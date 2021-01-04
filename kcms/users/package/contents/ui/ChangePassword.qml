@@ -82,10 +82,19 @@ Kirigami.OverlaySheet {
                 text: i18n("Passwords must match")
                 visible: passwordField.text != "" && verifyField.text != "" && passwordField.text != verifyField.text
             }
+            Kirigami.InlineMessage {
+                id: badPasswordWarning
+
+                text: kcm.complainAboutPassword(passwordRoot.account.name, passwordRoot.account.realName, passwordField.text)
+                type: Kirigami.MessageType.Error
+                visible: passwordField.text === verifyField.text && passwordField.text !== "" && text !== ""
+
+                Layout.fillWidth: true
+            }
             QQC2.Button {
                 id: passButton
                 text: i18n("Set Password")
-                enabled: !passwordWarning.visible && verifyField.text && passwordField.text
+                enabled: !passwordWarning.visible && !badPasswordWarning.visible && verifyField.text && passwordField.text
                 Layout.alignment: Qt.AlignLeft
                 onClicked: apply()
                 function apply() {

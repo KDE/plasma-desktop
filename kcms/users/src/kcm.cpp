@@ -34,6 +34,8 @@
 #include <QFontMetrics>
 #include <QQmlProperty>
 #include <QTemporaryFile>
+// cracklib
+#include <crack.h>
 
 #include "user.h"
 #include "accounts_interface.h"
@@ -72,6 +74,19 @@ KCMUser::KCMUser(QObject *parent, const QVariantList &args)
             m_avatarFiles << it.next();
         }
     }
+}
+
+QString KCMUser::complainAboutPassword(const QString& username, const QString& realname, const QString& password)
+{
+    auto usernameData = username.toLocal8Bit();
+    auto realnameData = realname.toLocal8Bit();
+    auto passwordData = password.toLocal8Bit();
+
+    auto data = FascistCheckUser(passwordData.data(), GetDefaultCracklibDict(), usernameData.data(), realnameData.data());
+    if (data == nullptr) {
+        return QString();
+    }
+    return QString::fromLocal8Bit(data);
 }
 
 bool KCMUser::createUser(const QString& name, const QString& realName, const QString& password, bool isAdmin)
