@@ -17,51 +17,44 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA          *
  ***************************************************************************/
 
-#ifndef COMPONENTCHOOSER_H
-#define COMPONENTCHOOSER_H
+import QtQuick 2.12
+import QtQuick.Controls 2.12 as Controls
 
-#include <QString>
-#include <QVariant>
+import org.kde.kirigami 2.7 as Kirigami
 
-#include <optional>
+Controls.ComboBox {
+    id: comboBox
+    
+    property string label
+    property var component
+    
+    Kirigami.FormData.label: label
+    model: component.applications
+    textRole: "name"
+    currentIndex: component.index
+    onActivated: component.select(currentIndex, true)
+    
+    delegate: Controls.ItemDelegate {
+        width: comboBox.popup.width
+        text: modelData[comboBox.textRole]
+        highlighted: comboBox.highlightedIndex == index
+        icon.name: modelData.icon
+    }
+    
+    // HACK QQC2 doesn't support icons, so we just tamper with the desktop style ComboBox's background
+    Component.onCompleted: {
+        if (!background || !background.hasOwnProperty("properties")) {
+            //not a KQuickStyleItem
+            return;
+        }
 
-#include <KLocalizedString>
+        var props = background.properties || {};
 
-class ComponentChooser : public QObject
-{
-    Q_OBJECT
-    Q_PROPERTY(QVariantList applications MEMBER m_applications NOTIFY applicationsChanged)
-    Q_PROPERTY(int index MEMBER m_index NOTIFY indexChanged)
-
-public:
-
-    ComponentChooser(QObject *parent, const QString &mimeType, const QString &type, const QString &defaultApplication, const QString &dialogText);
-
-    void defaults();
-    virtual void load();
-    bool isDefaults() const;
-    bool isSaveNeeded() const;
-
-    Q_INVOKABLE void select(int index);
-
-
-    virtual void save() = 0;
-    void saveMimeTypeAssociation(const QString &mime, const QString &storageId);
-
-
-Q_SIGNALS:
-    void applicationsChanged();
-    void indexChanged();
-
-protected:
-    QVariantList m_applications;
-    int m_index;
-    std::optional<int> m_defaultIndex;
-    QString m_mimeType;
-    QString m_type;
-    QString m_defaultApplication;
-    QString m_previousApplication;
-    QString m_dialogText;
-};
-
-#endif
+        background.properties = Qt.binding(function() {
+            var newProps = props;
+            newProps.currentIcon = component.applications[currentIndex]["icon"];
+            newProps.iconColor = Kirigami.Theme.textColor;
+            return newProps;
+        });
+    }
+}

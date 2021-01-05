@@ -1,48 +1,33 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm5_componentchooser\")
 
-add_subdirectory( componentservices ) 
-
-
-
-########### next target ###############
-
-set(kcm_componentchooser_SRCS
-  componentchooser.cpp
-  componentchooserbrowser.cpp
-  componentchooserfilemanager.cpp
-  componentchooseremail.cpp
-  componentchooserterminal.cpp
-  kcm_componentchooser.cpp
-)
-kconfig_add_kcfg_files(kcm_componentchooser_SRCS browser_settings.kcfgc GENERATE_MOC)
-kconfig_add_kcfg_files(kcm_componentchooser_SRCS terminal_settings.kcfgc GENERATE_MOC)
-
-ki18n_wrap_ui(kcm_componentchooser_SRCS
-  componentchooser_ui.ui
+set(componentchooser_SRCS
+    kcm_componentchooser.cpp
+    componentchooser.cpp
+    componentchooserbrowser.cpp
+    componentchooseremail.cpp
+    componentchooserterminal.cpp
+    componentchooserfilemanager.cpp
 )
 
-add_library(kcm_componentchooser MODULE ${kcm_componentchooser_SRCS})
+kconfig_add_kcfg_files(componentchooser_SRCS browser_settings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(componentchooser_SRCS terminal_settings.kcfgc GENERATE_MOC)
 
-
+add_library(kcm_componentchooser MODULE ${componentchooser_SRCS})
 
 target_link_libraries(kcm_componentchooser
-                      KF5::I18n
-                      KF5::Completion
-                      KF5::ConfigWidgets
-                      KF5::Service
-                      KF5::KIOWidgets
-                      KF5::KDELibs4Support
-                      Qt5::DBus
-                      Qt5::X11Extras
-                      )
+    Qt5::Core
+    KF5::CoreAddons
+    KF5::I18n
+    KF5::QuickAddons
+    KF5::Service
+    KF5::KIOWidgets
+    KF5::ConfigGui
+)
 
-install(TARGETS kcm_componentchooser  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+kcoreaddons_desktop_to_json(kcm_componentchooser "package/metadata.desktop")
 
+install(TARGETS kcm_componentchooser DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
-########### install files ###############
-
-install( FILES componentchooser.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
-install(FILES browser_settings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-install(FILES terminal_settings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-
+install(FILES package/metadata.desktop RENAME componentchooser.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+kpackage_install_package(package kcm_componentchooser kcms)

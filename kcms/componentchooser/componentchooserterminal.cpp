@@ -1,139 +1,112 @@
 /***************************************************************************
-                          componentchooser.cpp  -  description
-                             -------------------
-    copyright            : (C) 2002 by Joseph Wenninger <jowenn@kde.org>
-    copyright            : (C) 2020 by Méven Car <meven.car@enioka.com>
- ***************************************************************************/
-
-/***************************************************************************
+ *   Copyright (C) 2002 Joseph Wenninger <jowenn@kde.org>                  *
+ *   Copyright (C) 2020 Méven Car <meven.car@kdemail.net>                  *
+ *   Copyright (C) 2020 Tobias Fella <fella@posteo.de>                     *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
- *   it under the terms of the GNU General Public License version 2 as     *
- *   published by the Free Software Foundation                             *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
  *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA          *
  ***************************************************************************/
 
 #include "componentchooserterminal.h"
-#include "terminal_settings.h"
 
 #include <QDBusConnection>
 #include <QDBusMessage>
-#include <QCheckBox>
 
-#include <KMessageBox>
-#include <KOpenWithDialog>
-#include <KConfig>
+#include <KApplicationTrader>
+#include <KQuickAddons/ConfigModule>
 
-#include <KUrlRequester>
-#include <KConfigGroup>
-#include <KLocalizedString>
-#include <KServiceTypeTrader>
+#include "terminal_settings.h"
 
-#include <QUrl>
-
-CfgTerminalEmulator::CfgTerminalEmulator(QWidget *parent)
-    : CfgPlugin(parent)
+ComponentChooserTerminal::ComponentChooserTerminal(QObject *parent)
+    : ComponentChooser(parent, QLatin1String(""), QStringLiteral("TerminalEmulator"), QStringLiteral("org.kde.konsole.desktop"), i18n("Select default terminal emulator"))
 {
-    connect(this, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated), this, &CfgTerminalEmulator::selectTerminalEmulator);
 }
 
-CfgTerminalEmulator::~CfgTerminalEmulator() {
-}
-
-void CfgTerminalEmulator::selectTerminalEmulator(int index)
+void ComponentChooserTerminal::load()
 {
-    if (index == count() - 1) {
-        selectTerminalApp();
-    } else {
-        emit changed(m_currentIndex != index);
-    }
-}
+    m_applications.clear();
 
-void CfgTerminalEmulator::load(KConfig *)
-{
-	TerminalSettings settings;
-    const QString terminal = settings.terminalApplication();
-
-    clear();
-    m_currentIndex = -1;
-    m_defaultIndex = -1;
-
-    const auto constraint = QStringLiteral("'TerminalEmulator' in Categories AND (not exist NoDisplay OR NoDisplay == false)");
-    const auto terminalEmulators = KServiceTypeTrader::self()->query(QStringLiteral("Application"), constraint);
-    for (const auto &service : terminalEmulators) {
-        addItem(QIcon::fromTheme(service->icon()), service->name(), service->exec());
-
-        if (!terminal.isEmpty() && service->exec() == terminal) {
-            setCurrentIndex(count() - 1);
-            m_currentIndex = count() - 1;
-        }
-        if (service->exec() == QStringLiteral("konsole")) {
-            m_defaultIndex = count() - 1;
-        }
-    }
-
-    if (!terminal.isEmpty() && m_currentIndex == -1) {
-        // we have a terminal specified by the user
-        addItem(QIcon::fromTheme(QStringLiteral("application-x-shellscript")), terminal, terminal);
-        setCurrentIndex(count() - 1);
-        m_currentIndex = count() - 1;
-    }
-
-    // add a other option to add a new terminal emulator with KOpenWithDialog
-    addItem(QIcon::fromTheme(QStringLiteral("application-x-shellscript")), i18n("Other..."), QStringLiteral());
-
-    emit changed(false);
-}
-
-void CfgTerminalEmulator::save(KConfig *)
-{
-    if (currentIndex() == count() - 1) {
-        // no terminal installed, nor selected
-        return;
-    }
-
-    const QString terminal = currentData().toString();
+    bool preferredServiceAdded = false;
 
     TerminalSettings settings;
-    settings.setTerminalApplication(terminal);
-    settings.save();
 
-    m_currentIndex = currentIndex();
+    QString preferredService = settings.terminalApplication();
 
-    QDBusMessage message  = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
-                                                           QStringLiteral("/KLauncher"),
-                                                           QStringLiteral("org.kde.KLauncher"),
-                                                           QStringLiteral("reparseConfiguration"));
-    QDBusConnection::sessionBus().send(message);
-    emit changed(false);
+    KApplicationTrader::query([&preferredServiceAdded, preferredService, this](const KService::Ptr &service) {
+        if (service->exec().isEmpty() || !service->categories().contains(m_type) || service->noDisplay()) {
+            return false;
+        }
+        QVariantMap application;
+        application["name"] = service->name();
+        application["icon"] = service->icon();
+        application["storageId"] = service->storageId();
+        application["execLine"] = service->exec();
+        m_applications += application;
+        if ((!preferredService.isEmpty() && preferredService == service->exec())) {
+            m_index = m_applications.length() - 1;
+            preferredServiceAdded = true;
+        }
+        if (service->storageId() == m_defaultApplication) {
+            m_defaultIndex = m_applications.length() - 1;
+        }
+        return false;
+    });
+    if (!preferredService.isEmpty() && !preferredServiceAdded) {
+        // standard application was specified by the user
+        QVariantMap application;
+        TerminalSettings settings;
+        auto service = KService::serviceByStorageId(QStringLiteral("org.kde.ksysguard.desktop"));
+        if (settings.defaultTerminalServiceValue() != settings.terminalService() && service != nullptr) {
+            application["name"] = service->name();
+            application["icon"] = service->icon();
+            application["storageId"] = service->storageId();
+            application["execLine"] = service->exec();
+        } else {
+            application["name"] = preferredService;
+            application["icon"] = QStringLiteral("application-x-shellscript");
+            application["execLine"] = preferredService;
+        }
+        m_applications += application;
+        m_index = m_applications.length() - 1;
+    }
+    QVariantMap application;
+    application["name"] = i18n("Other...");
+    application["icon"] = QStringLiteral("application-x-shellscript");
+    application["storageId"] = QLatin1String("");
+    m_applications += application;
+    if (m_index == -1) {
+        m_index = 0;
+    }
+
+    m_previousApplication = m_applications[m_index].toMap()["storageId"].toString();
+    Q_EMIT applicationsChanged();
+    Q_EMIT indexChanged();
 }
 
-void CfgTerminalEmulator::selectTerminalApp()
+void ComponentChooserTerminal::save()
 {
-	QList<QUrl> urlList;
-	KOpenWithDialog dlg(urlList, i18n("Select preferred terminal application:"), QString(), this);
-	// hide "Run in &terminal" here, we don't need it for a Terminal Application
-    dlg.hideRunInTerminal();
-    dlg.setSaveNewApplications(true);
-    if (dlg.exec() != QDialog::Accepted) {
-        setCurrentIndex(validLastCurrentIndex());
-        return;
-    }
-    const auto service = dlg.service();
+    TerminalSettings terminalSettings;
+    terminalSettings.setTerminalApplication(m_applications[m_index].toMap()["execLine"].toString());
+    terminalSettings.setTerminalService(m_applications[m_index].toMap()["storageId"].toString());
+    terminalSettings.save();
 
-    // if the selected service is already in the list
-    const auto matching = model()->match(model()->index(0,0), Qt::DisplayRole, service->exec());
-    if (!matching.isEmpty()) {
-        const int index = matching.at(0).row();
-        setCurrentIndex(index);
-        changed(index != m_currentIndex);
-    } else {
-        const QString icon = !service->icon().isEmpty() ? service->icon() : QStringLiteral("application-x-shellscript");
-        insertItem(count() -1, QIcon::fromTheme(icon), service->name(), service->exec());
-        setCurrentIndex(count() - 2);
+    QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
+                                                          QStringLiteral("/KLauncher"),
+                                                          QStringLiteral("org.kde.KLauncher"),
+                                                          QStringLiteral("reparseConfiguration"));
+    QDBusConnection::sessionBus().send(message);
 
-        changed(true);
-    }
-
+    m_previousApplication = m_applications[m_index].toMap()["storageId"].toString();
 }
-// vim: sw=4 ts=4 noet

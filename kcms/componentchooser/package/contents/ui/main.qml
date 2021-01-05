@@ -17,51 +17,28 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA          *
  ***************************************************************************/
 
-#ifndef COMPONENTCHOOSER_H
-#define COMPONENTCHOOSER_H
+import QtQuick 2.12
 
-#include <QString>
-#include <QVariant>
+import org.kde.kirigami 2.7 as Kirigami
+import org.kde.kcm 1.2
 
-#include <optional>
-
-#include <KLocalizedString>
-
-class ComponentChooser : public QObject
-{
-    Q_OBJECT
-    Q_PROPERTY(QVariantList applications MEMBER m_applications NOTIFY applicationsChanged)
-    Q_PROPERTY(int index MEMBER m_index NOTIFY indexChanged)
-
-public:
-
-    ComponentChooser(QObject *parent, const QString &mimeType, const QString &type, const QString &defaultApplication, const QString &dialogText);
-
-    void defaults();
-    virtual void load();
-    bool isDefaults() const;
-    bool isSaveNeeded() const;
-
-    Q_INVOKABLE void select(int index);
-
-
-    virtual void save() = 0;
-    void saveMimeTypeAssociation(const QString &mime, const QString &storageId);
-
-
-Q_SIGNALS:
-    void applicationsChanged();
-    void indexChanged();
-
-protected:
-    QVariantList m_applications;
-    int m_index;
-    std::optional<int> m_defaultIndex;
-    QString m_mimeType;
-    QString m_type;
-    QString m_defaultApplication;
-    QString m_previousApplication;
-    QString m_dialogText;
-};
-
-#endif
+SimpleKCM {
+    Kirigami.FormLayout {
+        ComponentComboBox {
+            component: kcm.browsers
+            label: i18n("Web browser:")
+        }
+        ComponentComboBox {
+            component: kcm.fileManagers
+            label: i18n("File manager:")
+        }
+        ComponentComboBox {
+            component: kcm.emailClients
+            label: i18n("Email client:")
+        }
+        ComponentComboBox {
+            component: kcm.terminalEmulators
+            label: i18n("Terminal emulator:")
+        }
+    }
+}
