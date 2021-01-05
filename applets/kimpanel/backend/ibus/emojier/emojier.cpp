@@ -44,6 +44,9 @@
 #include <QDBusMessage>
 #include <QDBusConnectionInterface>
 #include <QSessionManager>
+#include <QX11Info>
+
+#include <kstartupinfo.h>
 
 #include "emojiersettings.h"
 #include "config-workspace.h"
@@ -373,6 +376,10 @@ int main(int argc, char** argv)
             auto w = qobject_cast<QQuickWindow*>(object);
             if (!w)
                 continue;
+
+            if (w && QX11Info::isPlatformX11())
+                KStartupInfo::setNewStartupId(w, QX11Info::nextStartupId());
+
             w->setVisible(true);
             w->raise();
         }
