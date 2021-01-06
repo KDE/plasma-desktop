@@ -44,7 +44,7 @@ Item {
         PlasmaCore.IconItem {
             Layout.minimumWidth: PlasmaCore.Units.iconSizes.huge
             Layout.minimumHeight: PlasmaCore.Units.iconSizes.huge
-            source: "data-warning"
+            source: "dialog-error"
             Layout.alignment: Qt.AlignHCenter
         }
 
