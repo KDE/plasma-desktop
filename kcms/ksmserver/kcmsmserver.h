@@ -46,7 +46,7 @@ class SMServerConfig : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(QString error READ error NOTIFY errorChanged)
 
     /// Can setup the firmware
-    Q_PROPERTY(bool canFirmareSetup READ canFirmareSetup CONSTANT)
+    Q_PROPERTY(bool canFirmwareSetup READ canFirmwareSetup CONSTANT)
 
 public:
     explicit SMServerConfig(QObject *parent = nullptr, const QVariantList &list = QVariantList());
@@ -59,7 +59,7 @@ public:
 
     QString error() const;
 
-    bool canFirmareSetup() const;
+    bool canFirmwareSetup() const;
 
     /// Tell the computer to reboot.
     Q_INVOKABLE void reboot();
@@ -82,6 +82,6 @@ private:
     bool m_isUefi = false;
     bool m_restartInSetupScreen = false;
     bool m_restartInSetupScreenInitial = false;
-    bool m_canFirmareSetup = false;
+    bool m_canFirmwareSetup = false;
     QString m_error;
 };

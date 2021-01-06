@@ -26,7 +26,6 @@
 #include <QDBusConnection>
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
-#include <QCheckBox>
 #include <QFileInfo>
 
 #include <kworkspace.h>
@@ -38,6 +37,7 @@
 
 #include "kcmsmserver.h"
 #include "smserversettings.h"
+#include "smserverdata.h"
 
 #include <KAboutData>
 #include <KLocalizedString>
@@ -46,7 +46,7 @@
 
 #include "login1_manager.h"
 
-K_PLUGIN_CLASS_WITH_JSON(SMServerConfig, "metadata.json")
+K_PLUGIN_FACTORY_WITH_JSON(SMServerConfigFactory, "metadata.json", registerPlugin<SMServerConfig>(); registerPlugin<SMServerData>();)
 
 SMServerConfig::SMServerConfig(QObject *parent, const QVariantList &args)
   : KQuickAddons::ManagedConfigModule(parent, args)
@@ -79,9 +79,9 @@ SMServerConfig::SMServerConfig(QObject *parent, const QVariantList &args)
     setAboutData(about);
     setButtons(Help | Apply | Default);
 
-    const QString canFirmareSetup = m_login1Manager->CanRebootToFirmwareSetup().value();
-    if (canFirmareSetup == QLatin1String("yes") || canFirmareSetup == QLatin1String("challenge")) {
-        m_canFirmareSetup = true;
+    const QString canFirmwareSetup = m_login1Manager->CanRebootToFirmwareSetup().value();
+    if (canFirmwareSetup == QLatin1String("yes") || canFirmwareSetup == QLatin1String("challenge")) {
+        m_canFirmwareSetup = true;
         // now check whether we're UEFI to provide a more descriptive button label
         if (QFileInfo(QStringLiteral("/sys/firmware/efi")).isDir()) {
             m_isUefi = true;
@@ -172,9 +172,9 @@ void SMServerConfig::checkFirmwareSetupRequested()
     Q_EMIT restartInSetupScreenChanged();
 }
 
-bool SMServerConfig::canFirmareSetup() const
+bool SMServerConfig::canFirmwareSetup() const
 {
-    return m_canFirmareSetup;
+    return m_canFirmwareSetup;
 }
 
 bool SMServerConfig::isSaveNeeded() const
@@ -184,7 +184,7 @@ bool SMServerConfig::isSaveNeeded() const
 
 bool SMServerConfig::isDefaults() const 
 {
-    return m_restartInSetupScreen;
+    return !m_restartInSetupScreen;
 }
 
 void SMServerConfig::defaults()
