@@ -58,6 +58,8 @@ KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant>&)
 	dbus.registerObject(KEYBOARD_DBUS_OBJECT_PATH, this, QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableSignals);
     dbus.connect(QString(), KEYBOARD_DBUS_OBJECT_PATH, KEYBOARD_DBUS_SERVICE_NAME, KEYBOARD_DBUS_CONFIG_RELOAD_MESSAGE, this, SLOT(configureKeyboard()));
 
+    LayoutNames::registerMetaType();
+
 	configureKeyboard();
 	registerListeners();
 
@@ -236,19 +238,20 @@ QString KeyboardDaemon::getLayout() const
 	return currentLayout.toString();
 }
 
-QString KeyboardDaemon::getLayoutDisplayName() const
-{
-	return Flags::getShortText(currentLayout, keyboardConfig);
-}
-
 QString KeyboardDaemon::getLayoutLongName() const
 {
 	return Flags::getLongText(currentLayout, rules);
 }
 
-QStringList KeyboardDaemon::getLayoutsList() const
+QVector<LayoutNames> KeyboardDaemon::getLayoutsList() const
 {
-	return X11Helper::getLayoutsListAsString( X11Helper::getLayoutsList() );
+    QVector<LayoutNames> ret;
+
+    const auto layoutsList = X11Helper::getLayoutsList();
+    for (auto &layoutUnit : layoutsList) {
+        ret.append( {layoutUnit.toString(), layoutUnit.layout(), Flags::getShortText(layoutUnit, keyboardConfig), Flags::getLongText(layoutUnit, rules)} );
+    }
+    return ret;
 }
 
 #include "keyboard_daemon.moc"

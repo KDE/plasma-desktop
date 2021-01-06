@@ -31,6 +31,7 @@ set( kded_keyboard_SRCS
     layouts_menu.cpp
     flags.cpp
     xkb_rules.cpp
+    layoutnames.cpp
 )
 
 ecm_qt_declare_logging_category(kded_keyboard_SRCS

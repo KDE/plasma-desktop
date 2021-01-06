@@ -11,32 +11,53 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.workspace.components 2.0
 
 KeyboardLayoutButton {
-    text: layout.layoutDisplayName
-    Plasmoid.toolTipSubText: layout.layoutLongName
-    icon.name: StandardPaths.locate(StandardPaths.GenericDataLocation,
-                    "kf5/locale/countries/" + layout.layoutDisplayName + "/flag.png")
+    id: root
 
     display: plasmoid.configuration.showFlag && icon.name ? AbstractButton.IconOnly : AbstractButton.TextOnly
     Plasmoid.status: hasMultipleKeyboardLayouts ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
+    function iconURL(name) {
+        return StandardPaths.locate(StandardPaths.GenericDataLocation,
+                    "kf5/locale/countries/" + name + "/flag.png")
+    }
+
+    connections.target: null
+
     Connections {
-        target: layout
-        function onLayoutsChanged() {
+        target: keyboardLayout
+
+        function onLayoutsChanged(layouts) {
             plasmoid.clearActions()
 
-            layout.layouts.forEach(
-                function(layoutID) {
-                    // TODO: add layoutDisplayName to layouts and lookup icon.name by index here
-                    plasmoid.setAction(layoutID, layoutID /* ,icon.name */)
+            layouts.forEach(
+                function(layout) {
+                    plasmoid.setAction(
+                        layout.id,
+                        layout.longName,
+                        iconURL(layout.shortName).toString().substring(7) // remove file:// scheme
+                    )
+
+                    const action = plasmoid.action(layout.id)
+                    action.toolTip = layout.displayName || layout.shortName
+                    action.iconText = layout.shortName
                 }
             )
+        }
+
+        function onLayoutChanged(idName) {
+            const action = plasmoid.action(idName)
+
+            text = action.toolTip
+            root.Plasmoid.toolTipSubText = action.text
+            icon.name = iconURL(action.iconText)
+
+            root.Plasmoid.activated()
         }
     }
 
     function actionTriggered(selectedLayout) {
-        Plasmoid.activated()
-        layout.layout = selectedLayout
+        keyboardLayout.setLayout(selectedLayout)
     }
 
     // to fit at least 2 letters in systray
