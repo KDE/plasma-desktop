@@ -23,15 +23,17 @@ import QtQuick.Layouts 1.0
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+
 Item {
     id: root
-    Layout.minimumWidth:   units.largeSpacing
-    Layout.preferredWidth: Layout.minimumWidth
-    Layout.maximumWidth:   Layout.minimumWidth
+    Plasmoid.compactRepresentation: Item {
+        Layout.minimumWidth:   units.largeSpacing
+        Layout.preferredWidth: Layout.minimumWidth
+        Layout.maximumWidth:   Layout.minimumWidth
 
-    Layout.minimumHeight: PlasmaCore.minimumWidth
-    Layout.preferredHeight: Layout.minimumHeight
-    Layout.maximumHeight: Layout.minimumHeight
-
+        Layout.minimumHeight: units.largeSpacing
+        Layout.preferredHeight: Layout.minimumHeight
+        Layout.maximumHeight: Layout.minimumHeight
+    }
     Plasmoid.constraintHints: PlasmaCore.Types.MarginAreasSeparator
 }
