@@ -84,7 +84,7 @@ KCM.SimpleKCM {
             id: badPasswordWarning
 
             text: kcm.complainAboutPassword(userNameField.text, realNameField.text, passwordField.text)
-            type: Kirigami.MessageType.Error
+            type: Kirigami.MessageType.Warning
             visible: passwordField.text === verifyField.text && passwordField.text !== "" && text !== ""
 
             Layout.fillWidth: true

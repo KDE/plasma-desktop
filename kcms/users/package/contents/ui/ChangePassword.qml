@@ -86,7 +86,7 @@ Kirigami.OverlaySheet {
                 id: badPasswordWarning
 
                 text: kcm.complainAboutPassword(passwordRoot.account.name, passwordRoot.account.realName, passwordField.text)
-                type: Kirigami.MessageType.Error
+                type: Kirigami.MessageType.Warning
                 visible: passwordField.text === verifyField.text && passwordField.text !== "" && text !== ""
 
                 Layout.fillWidth: true
