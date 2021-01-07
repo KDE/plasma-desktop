@@ -35,6 +35,8 @@ AbstractKCM {
     property string currentWallpaper: ""
     property string containmentPlugin: ""
 
+    title: i18n("Appearance")
+
     function saveConfig() {
         if (main.currentItem.saveConfig) {
             main.currentItem.saveConfig()

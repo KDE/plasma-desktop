@@ -1,6 +1,7 @@
 /*
  *  Copyright 2015 Marco Martin <mart@kde.org>
  *  Copyright 2020 Nicolas Fella <nicolas.fella@gmx.de>
+ *  Copyright 2020 Carl Schwan <carlschwan@kde.org>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,31 +18,70 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick 2.6
+import QtQuick.Controls 2.2 as Controls
+import org.kde.kirigami 2.5 as Kirigami
 
-Item {
-    id: page
+Kirigami.Page {
+    id: container
 
-    property QtObject kcm
+    required property QtObject kcm
+    required property Item internalPage
 
     signal settingValueChanged()
 
-    function saveConfig() {
-        kcm.save()
+    title: kcm.name
+    topPadding: 0
+    leftPadding: 0
+    rightPadding: 0
+    bottomPadding: 0
+    flickable: internalPage.flickable
+    actions.main: internalPage.actions.main
+    actions.contextualActions: internalPage.contextualActions
+
+    onInternalPageChanged: {
+        internalPage.parent = contentItem;
+        internalPage.anchors.fill = contentItem;
+    }
+    onActiveFocusChanged: {
+        if (activeFocus) {
+            internalPage.forceActiveFocus();
+        }
     }
 
-    onKcmChanged: {
-        kcm.mainUi.parent = page
-        kcm.mainUi.anchors.fill = page
+    Component.onCompleted: {
         kcm.load()
     }
 
+    function saveConfig() {
+        kcm.save();
+    }
+
+    data: [
+        Connections {
+            target: kcm
+            onPagePushed: {
+                app.pageStack.push(configurationKcmPageComponent.createObject(app.pageStack, {"kcm": kcm, "internalPage": page}));
+            }
+            onPageRemoved: app.pageStack.pop();
+        },
+        Connections {
+            target: app.pageStack
+            onPageRemoved: {
+                if (kcm.needsSave) {
+                    kcm.save()
+                }
+                if (page == container) {
+                    page.destroy();
+                }
+            }
+        }
+    ]
     Connections {
         target: kcm
         function onNeedsSaveChanged() {
             if (kcm.needsSave) {
-                page.settingValueChanged()
+                container.settingValueChanged()
             }
         }
     }

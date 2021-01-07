@@ -14,9 +14,9 @@ import org.kde.kirigami 2.6 as Kirigami
 /**
  * A copy of Kirigami.AboutPage adapted to KPluginMetadata instead of KAboutData
  */
-
-Item {
+Kirigami.ScrollablePage {
     id: page
+    title: i18n("About")
 
     Component {
         id: personDelegate
@@ -60,7 +60,6 @@ Item {
 
     Kirigami.FormLayout {
         id: form
-        anchors.fill: parent
         GridLayout {
             columns: 2
             Layout.fillWidth: true
