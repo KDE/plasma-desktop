@@ -174,6 +174,12 @@ KAccessConfig::KAccessConfig(QObject *parent, const QVariantList& args)
 
     setButtons(ConfigModule::Apply | ConfigModule::Default | ConfigModule::Help);
     setAboutData(about);
+
+    connect(m_data->bellSettings(), &BellSettings::configChanged, this, &KAccessConfig::bellIsDefaultsChanged);
+    connect(m_data->mouseSettings(), &MouseSettings::configChanged, this, &KAccessConfig::mouseIsDefaultsChanged);
+    connect(m_data->keyboardFiltersSettings(), &ScreenReaderSettings::configChanged, this, &KAccessConfig::keyboardFiltersIsDefaultsChanged);
+    connect(m_data->keyboardSettings(), &ScreenReaderSettings::configChanged, this, &KAccessConfig::keyboardModifiersIsDefaultsChanged);
+    connect(m_data->screenReaderSettings(), &ScreenReaderSettings::configChanged, this, &KAccessConfig::screenReaderIsDefaultsChanged);
 }
 
 KAccessConfig::~KAccessConfig()
@@ -273,6 +279,31 @@ KeyboardFiltersSettings *KAccessConfig::keyboardFiltersSettings() const
 ScreenReaderSettings *KAccessConfig::screenReaderSettings() const
 {
     return m_data->screenReaderSettings();
+}
+
+bool KAccessConfig::bellIsDefaults() const
+{
+    return bellSettings()->isDefaults();
+}
+
+bool KAccessConfig::mouseIsDefaults() const
+{
+    return mouseSettings()->isDefaults();
+}
+
+bool KAccessConfig::keyboardFiltersIsDefaults() const
+{
+    return keyboardFiltersSettings()->isDefaults();
+}
+
+bool KAccessConfig::keyboardModifiersIsDefaults() const
+{
+    return keyboardSettings()->isDefaults();
+}
+
+bool KAccessConfig::screenReaderIsDefaults() const
+{
+    return screenReaderSettings()->isDefaults();
 }
 
 #include "kcmaccess.moc"

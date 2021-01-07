@@ -44,6 +44,11 @@ class KAccessConfig : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(QString orcaLaunchFeedback READ orcaLaunchFeedback WRITE setOrcaLaunchFeedback NOTIFY orcaLaunchFeedbackChanged)
     Q_PROPERTY(QString desktopShortcutInfo MEMBER m_desktopShortcutInfo CONSTANT)
     Q_PROPERTY(bool screenReaderInstalled MEMBER m_screenReaderInstalled CONSTANT)
+    Q_PROPERTY(bool bellIsDefaults READ bellIsDefaults NOTIFY bellIsDefaultsChanged)
+    Q_PROPERTY(bool mouseIsDefaults READ mouseIsDefaults NOTIFY mouseIsDefaultsChanged)
+    Q_PROPERTY(bool keyboardFiltersIsDefaults READ keyboardFiltersIsDefaults NOTIFY keyboardFiltersIsDefaultsChanged)
+    Q_PROPERTY(bool keyboardModifiersIsDefaults READ keyboardModifiersIsDefaults NOTIFY keyboardModifiersIsDefaultsChanged)
+    Q_PROPERTY(bool screenReaderIsDefaults READ screenReaderIsDefaults NOTIFY screenReaderIsDefaultsChanged)
 
 public:
 
@@ -64,8 +69,19 @@ public:
     KeyboardFiltersSettings *keyboardFiltersSettings() const;
     ScreenReaderSettings *screenReaderSettings() const;
 
+    bool bellIsDefaults() const;
+    bool mouseIsDefaults() const;
+    bool keyboardFiltersIsDefaults() const;
+    bool keyboardModifiersIsDefaults() const;
+    bool screenReaderIsDefaults() const;
+
 Q_SIGNALS:
     void orcaLaunchFeedbackChanged();
+    void bellIsDefaultsChanged();
+    void mouseIsDefaultsChanged();
+    void keyboardFiltersIsDefaultsChanged();
+    void keyboardModifiersIsDefaultsChanged();
+    void screenReaderIsDefaultsChanged();
 
 private:
     void setOrcaLaunchFeedback(const QString& value);

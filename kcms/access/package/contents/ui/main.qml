@@ -37,23 +37,28 @@ KCM.SimpleKCM {
     property var elements: [
         {
             icon: "notifications",
-            title: i18nc("System Bell", "Bell")
+            title: i18nc("System Bell", "Bell"),
+            defaultnessKey: "bellIsDefaults"
         },
         {
             icon: "input-keyboard",
-            title: i18nc("System Modifier Keys", "Modifier Keys")
+            title: i18nc("System Modifier Keys", "Modifier Keys"),
+            defaultnessKey: "keyboardModifiersIsDefaults"
         },
         {
             icon: "view-filter",
-            title: i18nc("System keyboard filters", "Keyboard Filters")
+            title: i18nc("System keyboard filters", "Keyboard Filters"),
+            defaultnessKey: "keyboardFiltersIsDefaults"
         },
         {
             icon: "input-mouse",
-            title: i18nc("System mouse navigation", "Mouse Navigation")
+            title: i18nc("System mouse navigation", "Mouse Navigation"),
+            defaultnessKey: "mouseIsDefaults"
         },
         {
             icon: "audio-input-microphone",
-            title: i18nc("System mouse navigation", "Screen Reader")
+            title: i18nc("System mouse navigation", "Screen Reader"),
+            defaultnessKey: "screenReaderIsDefaults"
         }
     ]
 
@@ -84,6 +89,15 @@ KCM.SimpleKCM {
                     icon: modelData.icon
                     label: modelData.title
                     onClicked: listView.forceActiveFocus()
+                    Rectangle {
+                        id: defaultIndicator
+                        radius: width * 0.5
+                        implicitWidth: Kirigami.Units.largeSpacing
+                        implicitHeight: Kirigami.Units.largeSpacing
+                        visible: kcm.defaultsIndicatorsVisible
+                        opacity: !kcm[modelData.defaultnessKey]
+                        color: Kirigami.Theme.neutralTextColor
+                    }
                 }
             }
         }
