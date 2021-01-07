@@ -49,6 +49,7 @@
 
 #include "kcmaccessibilitybell.h"
 #include "kcmaccessibilitykeyboard.h"
+#include "kcmaccessibilitykeyboardfilters.h"
 #include "kcmaccessibilitymouse.h"
 #include "kcmaccessibilityscreenreader.h"
 #include "kcmaccessibilitydata.h"
@@ -159,6 +160,7 @@ KAccessConfig::KAccessConfig(QObject *parent, const QVariantList& args)
     qmlRegisterType<MouseSettings>();
     qmlRegisterType<BellSettings>();
     qmlRegisterType<KeyboardSettings>();
+    qmlRegisterType<KeyboardFiltersSettings>();
     qmlRegisterType<ScreenReaderSettings>();
 
     KAboutData *about =
@@ -261,6 +263,11 @@ BellSettings *KAccessConfig::bellSettings() const
 KeyboardSettings *KAccessConfig::keyboardSettings() const
 {
     return m_data->keyboardSettings();
+}
+
+KeyboardFiltersSettings *KAccessConfig::keyboardFiltersSettings() const
+{
+    return m_data->keyboardFiltersSettings();
 }
 
 ScreenReaderSettings *KAccessConfig::screenReaderSettings() const

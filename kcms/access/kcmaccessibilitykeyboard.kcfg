@@ -14,7 +14,7 @@
       <default>true</default>
     </entry>
     <entry name="StickyKeysAutoOff" key="StickyKeysAutoOff" type="Bool">
-      <label>Automatically turn off the sticky keys after an interval</label>
+      <label>Turn sticky keys off when two keys are pressed simultaneously</label>
       <default>false</default>
     </entry>
     <entry name="StickyKeysBeep" key="StickyKeysBeep" type="Bool">
@@ -29,42 +29,6 @@
       <label>Notify when a keyboard modifier is pressed</label>
       <default>false</default>
     </entry>
-    <entry name="SlowKeys" key="SlowKeys" type="Bool">
-      <label>Use slow keypresses</label>
-      <default>false</default>
-    </entry>
-    <entry name="SlowKeysDelay" key="SlowKeysDelay" type="Int">
-      <label>Delay for the key press</label>
-      <default>500</default>
-    </entry>
-    <entry name="SlowKeysPressBeep" key="SlowKeysPressBeep" type="Bool">
-      <label>Beep on a slow keypress</label>
-      <default>true</default>
-    </entry>
-    <entry name="SlowKeysAcceptBeep" key="SlowKeysAcceptBeep" type="Bool">
-      <label>Beep on an accepted keypress</label>
-      <default>true</default>
-    </entry>
-    <entry name="SlowKeysRejectBeep" key="SlowKeysRejectBeep" type="Bool">
-      <label>Beep on a rejected keypress</label>
-      <default>true</default>
-    </entry>
-    <entry name="BounceKeys" key="BounceKeys" type="Bool">
-      <label>Bounce Keys</label>
-      <default>false</default>
-    </entry>
-    <entry name="BounceKeysDelay" key="BounceKeysDelay" type="Int">
-      <label>Use a delay for bouncing</label>
-      <default>500</default>
-    </entry>
-    <entry name="BounceKeysRejectBeep" key="BounceKeysRejectBeep" type="Bool">
-      <label>Beep if a bounce key event is rejected</label>
-      <default>false</default>
-    </entry>
-    <entry name="Gestures" key="Gestures" type="Bool">
-      <label>Use Gestures</label>
-      <default>false</default>
-    </entry>
     <entry name="AccessXTimeout" key="AccessXTimeout" type="Int">
       <label>Use a timeout delay</label>
       <default>30</default>
@@ -75,14 +39,6 @@
     </entry>
     <entry name="AccessXBeep" key="AccessBeep" type="Bool">
       <label>Use a beep for access</label>
-      <default>false</default>
-    </entry>
-    <entry name="GestureConfirmation" key="GestureConfirmation" type="Bool">
-      <label>Ask for Confirmation for a gesture</label>
-      <default>false</default>
-    </entry>
-    <entry name="KeyboardNotifyAccess" key="kNotifyAccess" type="Bool">
-      <label>Confirm access to the Keyboard</label>
       <default>false</default>
     </entry>
   </group>

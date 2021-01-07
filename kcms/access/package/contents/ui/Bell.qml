@@ -52,18 +52,6 @@ Kirigami.FormLayout {
         checked: kcm.bellSettings.systemBell
         onToggled: kcm.bellSettings.systemBell = checked
     }
-    QQC2.CheckBox {
-        text: i18n("Ring when toggling accessibility features with gestures")
-
-        KCM.SettingStateBinding {
-            configObject: kcm.keyboardSettings
-            settingName: "Gestures"
-            extraEnabledConditions: systemBell.checked
-        }
-
-        checked: kcm.keyboardSettings.gestures
-        onToggled: kcm.keyboardSettings.gestures = checked
-    }
 
     RowLayout {
         Kirigami.FormData.label: i18nc("Defines if the system will use a sound system bell", "Custom sound:")

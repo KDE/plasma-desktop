@@ -44,34 +44,34 @@ Kirigami.FormLayout {
         text: i18n("Display a confirmation dialog")
 
         KCM.SettingStateBinding {
-            configObject: kcm.keyboardSettings
+            configObject: kcm.mouseSettings
             settingName: "GestureConfirmation"
         }
 
-        checked: kcm.keyboardSettings.gestureConfirmation
-        onToggled: kcm.keyboardSettings.gestureConfirmation = checked
+        checked: kcm.mouseSettings.gestureConfirmation
+        onToggled: kcm.mouseSettings.gestureConfirmation = checked
     }
     QQC2.CheckBox {
         text: i18n("Ring the System Bell")
 
         KCM.SettingStateBinding {
-            configObject: kcm.keyboardSettings
+            configObject: kcm.mouseSettings
             settingName: "Gestures"
         }
 
-        checked: kcm.keyboardSettings.gestures
-        onToggled: kcm.keyboardSettings.gestures = checked
+        checked: kcm.mouseSettings.gestures
+        onToggled: kcm.mouseSettings.gestures = checked
     }
     QQC2.CheckBox {
         text: i18n("Show a notification")
 
         KCM.SettingStateBinding {
-            configObject: kcm.keyboardSettings
+            configObject: kcm.mouseSettings
             settingName: "KeyboardNotifyAccess"
         }
 
-        checked: kcm.keyboardSettings.keyboardNotifyAccess
-        onToggled: kcm.keyboardSettings.keyboardNotifyAccess = checked
+        checked: kcm.mouseSettings.keyboardNotifyAccess
+        onToggled: kcm.mouseSettings.keyboardNotifyAccess = checked
     }
 
     Item {
@@ -107,7 +107,6 @@ Kirigami.FormLayout {
             configObject: kcm.mouseSettings
             settingName: "AccelerationTime"
         }
-        enabled: !kcm.mouseSettings.isImmutable("AccelerationTime")
 
         value: kcm.mouseSettings.accelerationTime
         onValueChanged: kcm.mouseSettings.accelerationTime = value

@@ -29,6 +29,7 @@
 class MouseSettings;
 class BellSettings;
 class KeyboardSettings;
+class KeyboardFiltersSettings;
 class ScreenReaderSettings;
 class AccessibilityData;
 
@@ -38,6 +39,7 @@ class KAccessConfig : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(MouseSettings *mouseSettings READ mouseSettings CONSTANT)
     Q_PROPERTY(BellSettings *bellSettings READ bellSettings CONSTANT)
     Q_PROPERTY(KeyboardSettings *keyboardSettings READ keyboardSettings CONSTANT)
+    Q_PROPERTY(KeyboardFiltersSettings *keyboardFiltersSettings READ keyboardFiltersSettings CONSTANT)
     Q_PROPERTY(ScreenReaderSettings *screenReaderSettings READ screenReaderSettings CONSTANT)
     Q_PROPERTY(QString orcaLaunchFeedback READ orcaLaunchFeedback WRITE setOrcaLaunchFeedback NOTIFY orcaLaunchFeedbackChanged)
     Q_PROPERTY(QString desktopShortcutInfo MEMBER m_desktopShortcutInfo CONSTANT)
@@ -59,6 +61,7 @@ public:
     MouseSettings *mouseSettings() const;
     BellSettings *bellSettings() const;
     KeyboardSettings *keyboardSettings() const;
+    KeyboardFiltersSettings *keyboardFiltersSettings() const;
     ScreenReaderSettings *screenReaderSettings() const;
 
 Q_SIGNALS:

@@ -82,44 +82,6 @@ Kirigami.FormLayout {
     }
 
     QQC2.CheckBox {
-        Kirigami.FormData.label: i18n("Activation:")
-        text: i18n("Use gestures to activate")
-
-        KCM.SettingStateBinding {
-            configObject: kcm.keyboardSettings
-            settingName: "StickyKeys"
-        }
-
-        checked: kcm.keyboardSettings.stickyKeys
-        onToggled: kcm.keyboardSettings.stickyKeys = checked
-    }
-
-    RowLayout {
-        QQC2.CheckBox {
-            text: i18n("Disable After:")
-
-            KCM.SettingStateBinding {
-                configObject: kcm.keyboardSettings
-                settingName: "StickyKeysAutoOff"
-                extraEnabledConditions: kcm.keyboardSettings.stickyKeys
-            }
-
-            checked: kcm.keyboardSettings.stickyKeysAutoOff
-            onToggled: kcm.keyboardSettings.stickyKeysAutoOff = checked
-
-        }
-        QQC2.SpinBox {
-            KCM.SettingStateBinding {
-                configObject: kcm.keyboardSettings
-                settingName: "SlowKeysDelay"
-                extraEnabledConditions: kcm.keyboardSettings.stickyKeys
-            }
-
-            value: kcm.keyboardSettings.slowKeysDelay
-            onValueChanged: kcm.keyboardSettings.slowKeysDelay = value
-        }
-    }
-    QQC2.CheckBox {
         Kirigami.FormData.label: i18n("Feedback:")
         text: i18n("Ring system bell when locking keys are toggled")
 

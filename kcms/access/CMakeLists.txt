@@ -8,6 +8,7 @@ qt5_add_dbus_interface(kcm_access_PART_SRCS ${KINIT_DBUS_INTERFACES_DIR}/kf5_org
 kconfig_add_kcfg_files(kcm_access_PART_SRCS
     kcmaccessibilitybell.kcfgc
     kcmaccessibilitykeyboard.kcfgc
+    kcmaccessibilitykeyboardfilters.kcfgc
     kcmaccessibilitymouse.kcfgc
     kcmaccessibilityscreenreader.kcfgc
     GENERATE_MOC)
@@ -16,8 +17,8 @@ kcmutils_generate_module_data(
     kcm_access_PART_SRCS
     MODULE_DATA_HEADER kcmaccessibilitydata.h
     MODULE_DATA_CLASS_NAME AccessibilityData
-    SETTINGS_HEADERS kcmaccessibilitybell.h kcmaccessibilitykeyboard.h kcmaccessibilitymouse.h kcmaccessibilityscreenreader.h
-    SETTINGS_CLASSES BellSettings KeyboardSettings MouseSettings ScreenReaderSettings
+    SETTINGS_HEADERS kcmaccessibilitybell.h kcmaccessibilitykeyboard.h kcmaccessibilitykeyboardfilters.h kcmaccessibilitymouse.h kcmaccessibilityscreenreader.h
+    SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ScreenReaderSettings
 )
 
 add_library(kcm_access MODULE ${kcm_access_PART_SRCS})
