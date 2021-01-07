@@ -86,7 +86,7 @@ QString KCMUser::complainAboutPassword(const QString& username, const QString& r
     if (data == nullptr) {
         return QString();
     }
-    return QString::fromLocal8Bit(data);
+    return i18nc("%1 contains the reason why the password is weak", "Weak password: %1", QString::fromLocal8Bit(data));
 }
 
 bool KCMUser::createUser(const QString& name, const QString& realName, const QString& password, bool isAdmin)
