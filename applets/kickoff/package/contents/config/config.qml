@@ -18,12 +18,12 @@
 
 import QtQuick 2.0
 
-import org.kde.plasma.configuration 2.0
+import org.kde.plasma.configuration 2.0 as PlasmaConfig
 
-ConfigModel {
-    ConfigCategory {
-         name: i18n("General")
-         icon: "preferences-desktop-plasma"
-         source: "ConfigGeneral.qml"
+PlasmaConfig.ConfigModel {
+    PlasmaConfig.ConfigCategory {
+        name: i18n("General")
+        icon: "preferences-desktop-plasma"
+        source: "ConfigGeneral.qml"
     }
 }

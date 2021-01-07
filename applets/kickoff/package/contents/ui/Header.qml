@@ -1,6 +1,7 @@
 /*
  *    Copyright 2014  Sebastian Kügler <sebas@kde.org>
  *    SPDX-FileCopyrightText: (C) 2020 Carl Schwan <carl@carlschwan.eu>
+ *    Copyright (C) 2021 by Mikel Johnson <mikel5764@gmail.com>
  *
  *    This program is free software; you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
@@ -27,16 +28,17 @@ import org.kde.kcoreaddons 1.0 as KCoreAddons
 // use Avatar, which doesn't need to read the colour scheme
 // at all to function, so there won't be any oddities with colours.
 import org.kde.kirigami 2.13 as Kirigami
-import org.kde.kquickcontrolsaddons 2.0
-import QtGraphicalEffects 1.0
+import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 
 PlasmaExtras.PlasmoidHeading {
     id: header
 
-    implicitHeight: PlasmaCore.Units.gridUnit * 5
+    implicitHeight: Math.round(PlasmaCore.Units.gridUnit * 2.5)
+    rightPadding: rightInset
 
     property alias query: queryField.text
     property Item input: queryField
+    property Item avatar: avatarButton
 
     KCoreAddons.KUser {
         id: kuser
@@ -70,19 +72,27 @@ PlasmaExtras.PlasmoidHeading {
     ] // states
 
     RowLayout {
-        anchors.fill: parent
-
+        id: nameAndIcon
+        anchors.left: parent.left
+        anchors.leftMargin: PlasmaCore.Units.gridUnit + header.leftInset + PlasmaCore.Units.devicePixelRatio //border width
+        anchors.right: parent.right
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.rightMargin: Math.round(parent.width/1.5) + PlasmaCore.Units.gridUnit
         PlasmaComponents.RoundButton {
-            visible: KCMShell.authorize("kcm_users.desktop").length > 0
+            id: avatarButton
+            visible: KQuickAddons.KCMShell.authorize("kcm_users.desktop").length > 0
 
             flat: true
 
-            Layout.preferredWidth: PlasmaCore.Units.gridUnit * 3
-            Layout.preferredHeight: PlasmaCore.Units.gridUnit * 3
+            Layout.preferredWidth: PlasmaCore.Units.gridUnit * 2
+            Layout.preferredHeight: PlasmaCore.Units.gridUnit * 2
+
+            Accessible.name: nameLabel.text
+            Accessible.description: i18n("Go to user settings")
 
             Kirigami.Avatar {
                 source: kuser.faceIconUrl
-                name: nameLabel
+                name: nameLabel.text
                 anchors {
                     fill: parent
                     margins: PlasmaCore.Units.smallSpacing
@@ -90,73 +100,116 @@ PlasmaExtras.PlasmoidHeading {
             }
 
             onClicked: {
-                KCMShell.openSystemSettings("kcm_users")
+                KQuickAddons.KCMShell.openSystemSettings("kcm_users")
+            }
+
+            Keys.onPressed: {
+                // In search on backtab focus on search pane
+                if (event.key == Qt.Key_Backtab && (root.state == "Search" || mainTabGroup.state == "top")) {
+                    navigationMethod.state = "keyboard"
+                    keyboardNavigation.state = "RightColumn"
+                    root.currentContentView.forceActiveFocus()
+                    event.accepted = true;
+                    return;
+                }
             }
         }
 
-        ColumnLayout {
+        Item {
             Layout.fillWidth: true
-            Layout.rightMargin: PlasmaCore.Units.gridUnit
+            Layout.preferredHeight: PlasmaCore.Units.gridUnit
+            Layout.alignment: Layout.AlignVCenter | Qt.AlignLeft
 
-            Item {
-                Layout.fillWidth: true
-                Layout.preferredHeight: PlasmaCore.Units.gridUnit
+            PlasmaExtras.Heading {
+                id: nameLabel
+                anchors.fill: parent
 
-                PlasmaExtras.Heading {
-                    id: nameLabel
-                    anchors.fill: parent
+                level: 2
+                text: kuser.fullName
+                elide: Text.ElideRight
+                horizontalAlignment: Text.AlignLeft
+                verticalAlignment: Text.AlignVCenter
 
-                    level: 2
-                    text: kuser.fullName
-                    elide: Text.ElideRight
-                    horizontalAlignment: Text.AlignLeft
-                    verticalAlignment: Text.AlignBottom
-
-                    Behavior on opacity { NumberAnimation { duration:  PlasmaCore.Units.longDuration; easing.type: Easing.InOutQuad; } }
-
-                    // Show the info instead of the user's name when hovering over it
-                    MouseArea {
-                        anchors.fill: nameLabel
-                        hoverEnabled: true
-                        onEntered: {
-                            header.state = "info"
-                        }
-                        onExited: {
-                            header.state = "name"
-                        }
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: PlasmaCore.Units.longDuration
+                        easing.type: Easing.InOutQuad
                     }
                 }
 
-                PlasmaExtras.Heading {
-                    id: infoLabel
-                    anchors.fill: parent
-                    level: 5
-                    opacity: 0
-                    text: kuser.os !== "" ? i18n("%2@%3 (%1)", kuser.os, kuser.loginName, kuser.host) : i18n("%1@%2", kuser.loginName, kuser.host)
-                    elide: Text.ElideRight
-                    horizontalAlignment: Text.AlignLeft
-                    verticalAlignment: Text.AlignBottom
-
-                    Behavior on opacity { NumberAnimation { duration:  PlasmaCore.Units.longDuration; easing.type: Easing.InOutQuad; } }
+                // Show the info instead of the user's name when hovering over it
+                MouseArea {
+                    anchors.fill: nameLabel
+                    hoverEnabled: true
+                    onEntered: {
+                        header.state = "info"
+                    }
+                    onExited: {
+                        header.state = "name"
+                    }
                 }
             }
 
-            PlasmaComponents.TextField {
-                id: queryField
-                Layout.fillWidth: true
+            PlasmaExtras.Heading {
+                id: infoLabel
+                anchors.fill: parent
+                level: 5
+                opacity: 0
+                text: kuser.os !== "" ? i18n("%2@%3 (%1)", kuser.os, kuser.loginName, kuser.host) : i18n("%1@%2", kuser.loginName, kuser.host)
+                elide: Text.ElideRight
+                horizontalAlignment: Text.AlignLeft
+                verticalAlignment: Text.AlignVCenter
 
-                placeholderText: i18n("Search...")
-                clearButtonShown: true
-
-                onTextChanged: {
-                    if (root.state != "Search") {
-                        root.previousState = root.state;
-                        root.state = "Search";
-                    }
-                    if (text == "") {
-                        root.state = root.previousState;
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: PlasmaCore.Units.longDuration
+                        easing.type: Easing.InOutQuad
                     }
                 }
+            }
+        }
+    }
+
+    PlasmaComponents.TextField {
+        id: queryField
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.rightMargin: PlasmaCore.Units.gridUnit - PlasmaCore.Units.devicePixelRatio //separator width
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.leftMargin: Math.round(parent.width/3) + PlasmaCore.Units.gridUnit + header.leftInset
+
+        placeholderText: i18n("Search...")
+        clearButtonShown: true
+
+        Accessible.editable: true
+        Accessible.searchEdit: true
+
+        Keys.onPressed: {
+            // On tab focus on left pane (or search when searching)
+            if (event.key == Qt.Key_Tab) {
+                navigationMethod.state = "keyboard"
+                // There's no left panel when we search
+                if (root.state == "Search") {
+                    keyboardNavigation.state = "RightColumn"
+                    root.currentContentView.forceActiveFocus()
+                } else if (mainTabGroup.state == "top") {
+                    applicationButton.forceActiveFocus(Qt.TabFocusReason)
+                } else {
+                    keyboardNavigation.state = "LeftColumn"
+                    root.currentView.forceActiveFocus()
+                }
+                event.accepted = true;
+                return;
+            }
+        }
+
+        onTextChanged: {
+            if (root.state != "Search") {
+                root.previousState = root.state;
+                root.state = "Search";
+            }
+            if (text == "") {
+                root.state = root.previousState;
             }
         }
     }

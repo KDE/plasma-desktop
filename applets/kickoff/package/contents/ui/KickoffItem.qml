@@ -3,6 +3,7 @@
     Copyright (C) 2012  Gregor Taetzner <gregor@freenet.de>
     Copyright 2014 Sebastian Kügler <sebas@kde.org>
     Copyright (C) 2015-2018  Eike Hein <hein@kde.org>
+    Copyright (C) 2021 by Mikel Johnson <mikel5764@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -20,8 +21,7 @@
 */
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.draganddrop 2.0
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 import "code/tools.js" as Tools
 
@@ -31,7 +31,7 @@ Item {
     enabled: !model.disabled
 
     width: ListView.view.width
-    height: (PlasmaCore.Units.smallSpacing * 2) + Math.max(elementIcon.height, titleElement.implicitHeight + subTitleElement.implicitHeight)
+    height: (PlasmaCore.Units.smallSpacing * 2) + Math.max(elementIcon.height+ PlasmaCore.Units.smallSpacing*2, titleElement.implicitHeight + PlasmaCore.Units.smallSpacing*2)
 
     signal reset
     signal actionTriggered(string actionId, variant actionArgument)
@@ -42,16 +42,26 @@ Item {
     readonly property string url: model.url || ""
     readonly property var decoration: model.decoration || ""
 
-    property bool dropEnabled: false
     property bool appView: false
     property bool modelChildren: model.hasChildren || false
-    property bool isCurrent: listItem.ListView.view.currentIndex === index;
-    property bool showAppsByName: plasmoid.configuration.showAppsByName
+    property bool isCurrent: ListView.view.currentIndex === index;
 
     property bool hasActionList: ((model.favoriteId !== null)
         || (("hasActionList" in model) && (model.hasActionList === true)))
-    property Item menu: actionMenu
-    property alias usePlasmaIcon: elementIcon.usesPlasmaTheme
+
+    // left sidebar app list
+    property bool isManagerMode: false
+
+    // left sidebar places list
+    property bool managesChildrenOutside: model.managesChildrenOutside || false
+
+    // Report list count when we first focus on an item (see more thorough explanation in KickoffListView.qml)
+    Accessible.role: Accessible.MenuItem
+    Accessible.name: ListView.view.accessibilityCount ? i18np("List with 1 item", "List with %1 items", ListView.view.count) : accessibleName
+    Accessible.description: ListView.view.accessibilityCount ? accessibleName : ""
+
+    property string displayName: managesChildrenOutside ? ListView.view.model.getI18nName(index) : model.display
+    property string accessibleName: modelChildren || managesChildrenOutside ? i18n("%1 submenu", displayName) : displayName
 
     onAboutToShowActionMenu: {
         var actionList = hasActionList ? model.actionList : [];
@@ -60,7 +70,9 @@ Item {
 
     onActionTriggered: {
         if (Tools.triggerAction(ListView.view.model, model.index, actionId, actionArgument) === true) {
-            plasmoid.expanded = false;
+            if (!listItem.managesChildrenOutside) {
+                plasmoid.expanded = false;
+            }
         }
 
         if (actionId.indexOf("_kicker_favorite_") === 0) {
@@ -73,12 +85,17 @@ Item {
 
         if (model.hasChildren) {
             var childModel = view.model.modelForRow(index);
-
-            listItem.addBreadcrumb(childModel, display);
-            view.model = childModel;
+            if (listItem.isManagerMode) {
+                return {model : childModel, name : display};
+            } else {
+                listItem.addBreadcrumb(childModel, display);
+                view.model = childModel;
+            }
         } else {
             view.model.trigger(index, "", null);
-            plasmoid.expanded = false;
+            if (!listItem.managesChildrenOutside) {
+                plasmoid.expanded = false;
+            }
             listItem.reset();
         }
     }
@@ -105,7 +122,7 @@ Item {
             leftMargin: PlasmaCore.Units.smallSpacing * 6
             verticalCenter: parent.verticalCenter
         }
-        width: PlasmaCore.Units.iconSizes.medium
+        width: PlasmaCore.Units.iconSizes.smallMedium
         height: width
 
         animated: false
@@ -114,39 +131,36 @@ Item {
         source: model.decoration
     }
 
-    PlasmaComponents.Label {
+    PlasmaComponents3.Label {
         id: titleElement
 
-        y: Math.round((parent.height - titleElement.height - ( (subTitleElement.text != "") ? subTitleElement.implicitHeight : 0) ) / 2)
         anchors {
-            //bottom: elementIcon.verticalCenter
             left: elementIcon.right
             right: arrow.left
             leftMargin: PlasmaCore.Units.smallSpacing * 4
             rightMargin: PlasmaCore.Units.smallSpacing * 6
+            verticalCenter: parent.verticalCenter
         }
-        height: implicitHeight //undo PC2 height override, remove when porting to PC3
-        // TODO: games should always show the by name!
-        text: model.display
+        text: listItem.displayName
         elide: Text.ElideRight
         horizontalAlignment: Text.AlignLeft
     }
 
-    PlasmaComponents.Label {
+    PlasmaComponents3.Label {
         id: subTitleElement
 
         anchors {
-            left: titleElement.left
+            left: parent.left
+            leftMargin: elementIcon.anchors.leftMargin + elementIcon.width + titleElement.anchors.leftMargin + titleElement.contentWidth + titleElement.anchors.rightMargin
             right: arrow.right
-            top: titleElement.bottom
+            verticalCenter: parent.verticalCenter
         }
-        height: implicitHeight
 
-        text: model.description || ""
+        text: isManagerMode ? "" : model.description || ""
         opacity: isCurrent ? 0.8 : 0.6
         font: theme.smallestFont
         elide: Text.ElideMiddle
-        horizontalAlignment: Text.AlignLeft
+        horizontalAlignment: Text.AlignRight
     }
 
     PlasmaCore.SvgItem {
@@ -161,22 +175,13 @@ Item {
         width: visible ? PlasmaCore.Units.iconSizes.small : 0
         height: width
 
-        visible: (model.hasChildren === true)
+        visible: listItem.managesChildrenOutside || (model.hasChildren === true)
         opacity: (listItem.ListView.view.currentIndex === index) ? 1.0 : 0.4
 
-        svg: arrowsSvg
-        elementId: (Qt.application.layoutDirection == Qt.RightToLeft) ? "left-arrow" : "right-arrow"
-    }
-
-    Keys.onPressed: {
-        if (event.key === Qt.Key_Menu && hasActionList) {
-            event.accepted = true;
-            openActionMenu();
-        } else if ((event.key === Qt.Key_Enter || event.key === Qt.Key_Return) && !modelChildren) {
-            if (!modelChildren) {
-                event.accepted = true;
-                listItem.activate();
-            }
+        svg: PlasmaCore.Svg {
+            imagePath: "widgets/arrows"
+            size: "16x16"
         }
+        elementId: (Qt.application.layoutDirection == Qt.RightToLeft) ? "left-arrow" : "right-arrow"
     }
 } // listItem

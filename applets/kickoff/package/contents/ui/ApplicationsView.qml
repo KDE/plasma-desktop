@@ -3,6 +3,7 @@
     Copyright (C) 2012  Gregor Taetzner <gregor@freenet.de>
     Copyright 2014 Sebastian Kügler <sebas@kde.org>
     Copyright (C) 2015-2018  Eike Hein <hein@kde.org>
+    Copyright (C) 2021 by Mikel Johnson <mikel5764@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -20,32 +21,33 @@
 */
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
-Item {
+FocusScope {
     id: appViewContainer
-
-    anchors.fill: parent
+    property QtObject activatedSection: null
+    property string rootBreadcrumbName: ""
+    signal appModelChange()
+    onAppModelChange: {
+        if (activatedSection != null) {
+            applicationsView.clearBreadcrumbs();
+            applicationsView.listView.model = activatedSection;
+        }
+    }
 
     objectName: "ApplicationsView"
 
     property ListView listView: applicationsView.listView
 
-    function decrementCurrentIndex() {
-        applicationsView.decrementCurrentIndex();
+    function keyNavUp() {
+        return applicationsView.keyNavUp();
     }
 
-    function incrementCurrentIndex() {
-        applicationsView.incrementCurrentIndex();
+    function keyNavDown() {
+        return applicationsView.keyNavDown();
     }
 
-    function activateCurrentIndex(start) {
-        if (!applicationsView.currentItem.modelChildren) {
-            if (!start) {
-                return;
-            }
-        }
+    function activateCurrentIndex() {
         applicationsView.state = "OutgoingLeft";
     }
 
@@ -54,7 +56,7 @@ Item {
     }
 
     function deactivateCurrentIndex() {
-        if (crumbModel.count > 0) { // this is not the case when switching from the "Applications" to the "Favorites" tab using the "Left" key
+        if (crumbModel.count > 0) { // this is not the case when switching from the right sidebar to the left when going "left"
             breadcrumbsElement.children[crumbModel.count-1].clickCrumb();
             applicationsView.state = "OutgoingRight";
             return true;
@@ -63,8 +65,13 @@ Item {
     }
 
     function reset() {
-        applicationsView.model = rootModel;
+        applicationsView.model = activatedSection;
         applicationsView.clearBreadcrumbs();
+        if (applicationsView.model == null) {
+            applicationsView.currentIndex = -1
+        } else {
+            applicationsView.currentIndex = 0
+        }
     }
 
     function refreshed() {
@@ -80,7 +87,12 @@ Item {
             }
         }
     }
-
+    Connections {
+        target: rootBreadcrumb
+        function onRootClick() {
+            applicationsView.newModel = activatedSection;
+        }
+    }
     Item {
         id: crumbContainer
 
@@ -89,9 +101,42 @@ Item {
             left: parent.left
             right: parent.right
         }
-        height: childrenRect.height
+        visible: applicationsView.model != null && applicationsView.model.description && applicationsView.model.description != "KICKER_ALL_MODEL"
+        height: visible ? breadcrumbFlickable.height : 0
 
-        Behavior on opacity { NumberAnimation { duration: PlasmaCore.Units.longDuration } }
+        Behavior on opacity {
+            NumberAnimation {
+                duration: PlasmaCore.Units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
+
+        PlasmaCore.SvgItem {
+            id: horizontalSeparator
+            opacity: applicationsView.listView.contentY !== 0
+            height: PlasmaCore.Units.devicePixelRatio
+            elementId: "horizontal-line"
+            z: 1
+
+            anchors {
+                left: parent.left
+                leftMargin: PlasmaCore.Units.smallSpacing * 4
+                right: parent.right
+                rightMargin: PlasmaCore.Units.smallSpacing * 4
+                bottom: parent.bottom
+            }
+
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: PlasmaCore.Units.shortDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
+
+            svg: PlasmaCore.Svg {
+                imagePath: "widgets/line"
+            }
+        }
 
         Flickable {
             id: breadcrumbFlickable
@@ -105,20 +150,19 @@ Item {
 
             contentWidth: breadcrumbsElement.width
             pixelAligned: true
-            //contentX: contentWidth - width
 
             // HACK: Align the content to right for RTL locales
             leftMargin: LayoutMirroring.enabled ? Math.max(0, width - contentWidth) : 0
 
-            PlasmaComponents.ButtonRow {
+            Row {
                 id: breadcrumbsElement
 
-                exclusive: false
+                spacing: PlasmaCore.Units.smallSpacing * 2
 
                 Breadcrumb {
                     id: rootBreadcrumb
                     root: true
-                    text: i18n("All Applications")
+                    text: rootBreadcrumbName
                     depth: 0
                 }
                 Repeater {
@@ -146,12 +190,9 @@ Item {
 
     KickoffListView {
         id: applicationsView
-
         anchors {
             top: crumbContainer.bottom
             bottom: parent.bottom
-            rightMargin: -PlasmaCore.Units.largeSpacing
-            leftMargin: -PlasmaCore.Units.largeSpacing
         }
 
         width: parent.width
@@ -159,29 +200,40 @@ Item {
         property Item activatedItem: null
         property var newModel: null
 
-        Behavior on opacity { NumberAnimation { duration: PlasmaCore.Units.longDuration } }
+        section.property: model && model.description == "KICKER_ALL_MODEL" ? "display" : ""
+        section.criteria: ViewSection.FirstCharacter
+
+        Behavior on opacity {
+            NumberAnimation {
+                duration: PlasmaCore.Units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
 
         focus: true
 
         appView: true
 
-        model: rootModel
-
         function moveLeft() {
-            state = "";
+            state = "Normal";
             // newModelIndex set by clicked breadcrumb
             var oldModel = applicationsView.model;
             applicationsView.model = applicationsView.newModel;
 
             var oldModelIndex = model.rowForModel(oldModel);
-            listView.currentIndex = oldModelIndex;
-            listView.positionViewAtIndex(oldModelIndex, ListView.Center);
+            // new model may not be a parent of old model (e.g. grandparent)
+            if (oldModelIndex === -1) {
+                listView.positionAtBeginning()
+            } else {
+                listView.currentIndex = oldModelIndex;
+                listView.positionViewAtIndex(oldModelIndex, ListView.Center);
+            }
         }
 
         function moveRight() {
-            state = "";
+            state = "Normal";
             activatedItem.activate()
-            applicationsView.listView.positionViewAtBeginning()
+            applicationsView.listView.positionAtBeginning()
         }
 
         function clearBreadcrumbs() {
@@ -196,12 +248,21 @@ Item {
             crumbModel.models.push(model);
         }
 
+        state: "Normal"
         states: [
+            State {
+                name: "Normal"
+                PropertyChanges {
+                    target: applicationsView
+                    x: 0
+                    opacity: 1.0
+                }
+            },
             State {
                 name: "OutgoingLeft"
                 PropertyChanges {
                     target: applicationsView
-                    x: -parent.width
+                    x: LayoutMirroring.enabled ? parent.width : -parent.width
                     opacity: 0.0
                 }
             },
@@ -209,7 +270,7 @@ Item {
                 name: "OutgoingRight"
                 PropertyChanges {
                     target: applicationsView
-                    x: parent.width
+                    x: LayoutMirroring.enabled ? -parent.width : parent.width
                     opacity: 0.0
                 }
             }
@@ -222,16 +283,30 @@ Item {
                     // We need to cache the currentItem since the selection can move during animation,
                     // and we want the item that has been clicked on, not the one that is under the
                     // mouse once the animation is done
-                    ScriptAction { script: applicationsView.activatedItem = applicationsView.currentItem }
-                    NumberAnimation { properties: "x,opacity"; easing.type: Easing.InQuad; duration: PlasmaCore.Units.longDuration }
-                    ScriptAction { script: applicationsView.moveRight() }
+                    ScriptAction {
+                        script: applicationsView.activatedItem = applicationsView.currentItem
+                    }
+                    NumberAnimation {
+                        properties: "x"
+                        easing.type: Easing.InQuad
+                        duration: PlasmaCore.Units.longDuration
+                    }
+                    ScriptAction {
+                        script: applicationsView.moveRight()
+                    }
                 }
             },
             Transition {
                 to: "OutgoingRight"
                 SequentialAnimation {
-                    NumberAnimation { properties: "x,opacity"; easing.type: Easing.InQuad; duration: PlasmaCore.Units.longDuration }
-                    ScriptAction { script: applicationsView.moveLeft() }
+                    NumberAnimation {
+                        properties: "x"
+                        easing.type: Easing.InQuad
+                        duration: PlasmaCore.Units.longDuration
+                    }
+                    ScriptAction {
+                        script: applicationsView.moveLeft()
+                    }
                 }
             }
         ]
@@ -247,8 +322,10 @@ Item {
         }
     }
 
+    // Displays text when application list gets updated
     Timer {
         id: updatedLabelTimer
+        // We want to have enough time to show that applications have been updated even for those who disabled animations
         interval: 1500
         running: false
         repeat: true
@@ -257,25 +334,30 @@ Item {
             if (running) {
                 updatedLabel.opacity = 1;
                 crumbContainer.opacity = 0.3;
-                applicationsView.scrollArea.opacity = 0.3;
+                applicationsView.listView.opacity = 0.3;
             }
         }
         onTriggered: {
             updatedLabel.opacity = 0;
             crumbContainer.opacity = 1;
-            applicationsView.scrollArea.opacity = 1;
+            applicationsView.listView.opacity = 1;
             running = false;
         }
     }
 
-    PlasmaComponents.Label {
+    PlasmaComponents3.Label {
         id: updatedLabel
         text: i18n("Applications updated.")
         opacity: 0
         visible: opacity != 0
         anchors.centerIn: parent
 
-        Behavior on opacity { NumberAnimation { duration: PlasmaCore.Units.shortDuration } }
+        Behavior on opacity {
+            NumberAnimation {
+                duration: PlasmaCore.Units.shortDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
     }
 
     Component.onCompleted: {

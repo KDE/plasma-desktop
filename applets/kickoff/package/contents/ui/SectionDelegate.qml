@@ -1,6 +1,7 @@
 /*
     Copyright (C) 2011  Martin Gräßlin <mgraesslin@kde.org>
     Copyright (C) 2012 Marco Martin <mart@kde.org>
+    Copyright (C) 2021 by Mikel Johnson <mikel5764@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,7 +19,6 @@
 */
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 
@@ -32,10 +32,12 @@ Item {
         id: sectionHeading
         anchors {
             left: parent.left
-            right: parent.right
             leftMargin: PlasmaCore.Units.gridUnit
+            right: parent.right
         }
 
+        // important for RTL (otherwise label won't reverse)
+        horizontalAlignment: Text.AlignLeft
         y: Math.round(PlasmaCore.Units.gridUnit / 4)
         level: 4
         text: section

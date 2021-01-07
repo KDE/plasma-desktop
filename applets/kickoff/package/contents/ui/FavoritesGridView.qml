@@ -27,24 +27,21 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 
 FocusScope {
 
-    objectName: "FavoritesView"
+    objectName: "FavoritesGridView"
 
-    property ListView listView: favoritesView.listView
+    property GridView gridView: favoritesGridView.gridView
 
-    function keyNavUp() {
-        return favoritesView.keyNavUp();
-    }
-
-    function keyNavDown() {
-        return favoritesView.keyNavDown();
-    }
+    function keyNavLeft() { return favoritesGridView.keyNavLeft() }
+    function keyNavRight() { return favoritesGridView.keyNavRight() }
+    function keyNavUp() { return favoritesGridView.keyNavUp() }
+    function keyNavDown() { return favoritesGridView.keyNavDown() }
 
     function activateCurrentIndex() {
-        favoritesView.currentItem.activate();
+        favoritesGridView.currentItem.activate();
     }
 
     function openContextMenu() {
-        favoritesView.currentItem.openActionMenu();
+        favoritesGridView.currentItem.openActionMenu();
     }
 
     // QQuickItem::isAncestorOf is not invokable...
@@ -59,26 +56,25 @@ FocusScope {
 
         return isChildOf(item, item.parent);
     }
-
     DropArea {
         anchors.fill: parent
         enabled: plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
 
         function syncTarget(drag) {
-            if (favoritesView.animating) {
+            if (favoritesGridView.animating) {
                 return;
             }
 
-            var pos = mapToItem(listView.contentItem, drag.x, drag.y);
-            var above = listView.itemAt(pos.x, pos.y);
+            var pos = mapToItem(gridView.contentItem, drag.x, drag.y);
+            var above = gridView.itemAt(pos.x, pos.y);
 
             var source = kickoff.dragSource;
 
-            if (above && above !== source && isChildOf(source, favoritesView)) {
-                favoritesView.model.moveRow(source.itemIndex, above.itemIndex);
+            if (above && above !== source && isChildOf(source, favoritesGridView)) {
+                favoritesGridView.model.moveRow(source.itemIndex, above.itemIndex);
                 // itemIndex changes directly after moving,
                 // we can just set the currentIndex to it then.
-                favoritesView.currentIndex = source.itemIndex;
+                favoritesGridView.currentIndex = source.itemIndex;
             }
         }
 
@@ -89,15 +85,15 @@ FocusScope {
     Transition {
         id: moveTransition
         SequentialAnimation {
-            PropertyAction { target: favoritesView; property: "animating"; value: true }
+            PropertyAction { target: favoritesGridView; property: "animating"; value: true }
 
             NumberAnimation {
-                duration: favoritesView.animationDuration
+                duration: favoritesGridView.animationDuration
                 properties: "x, y"
                 easing.type: Easing.OutQuad
             }
 
-            PropertyAction { target: favoritesView; property: "animating"; value: false }
+            PropertyAction { target: favoritesGridView; property: "animating"; value: false }
         }
     }
 
@@ -105,13 +101,13 @@ FocusScope {
         target: plasmoid
         function onExpandedChanged() {
             if (!plasmoid.expanded) {
-                favoritesView.currentIndex = 0;
+                favoritesGridView.currentIndex = 0;
             }
         }
     }
 
-    KickoffListView {
-        id: favoritesView
+    KickoffGridView {
+        id: favoritesGridView
 
         anchors.fill: parent
 
@@ -139,7 +135,7 @@ FocusScope {
         // In other words: it's not a passive animation it should (roughly) follow the drag
         interval: 150
 
-        onTriggered: favoritesView.animationDuration = interval - 20
+        onTriggered: favoritesGridView.animationDuration = interval - 20
     }
 
 }

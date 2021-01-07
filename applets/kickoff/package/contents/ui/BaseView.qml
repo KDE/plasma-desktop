@@ -2,6 +2,7 @@
     Copyright (C) 2011  Martin Gräßlin <mgraesslin@kde.org>
     Copyright (C) 2012 Marco Martin <mart@kde.org>
     Copyright (C) 2015-2018  Eike Hein <hein@kde.org>
+    Copyright (C) 2021 by Mikel Johnson <mikel5764@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,24 +19,21 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 import QtQuick 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.draganddrop 2.0
 
-
-Item {
+FocusScope {
     property alias model: baseView.model
     property alias delegate: baseView.delegate
+    property alias contentHeight: baseView.contentHeight
+    property alias isExternalManagerMode: baseView.isExternalManagerMode
 
     property ListView listView: baseView.listView
 
-    function decrementCurrentIndex() {
-        baseView.decrementCurrentIndex();
+    function keyNavUp() {
+        return baseView.keyNavUp();
     }
 
-    function incrementCurrentIndex() {
-        baseView.incrementCurrentIndex();
+    function keyNavDown() {
+        return baseView.keyNavDown();
     }
 
     function activateCurrentIndex() {
@@ -51,17 +49,19 @@ Item {
 
         function onExpandedChanged() {
             if (!plasmoid.expanded) {
-                baseView.currentIndex = -1;
+                baseView.currentIndex = 0;
             }
         }
     }
 
+    focus: true
+
     KickoffListView {
         id: baseView
 
+        focus: true
         anchors.fill: parent
 
-        currentIndex: -1
         interactive: contentHeight > height
     }
 }

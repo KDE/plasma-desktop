@@ -2,6 +2,7 @@
     Copyright (C) 2011  Martin Gräßlin <mgraesslin@kde.org>
     Copyright (C) 2012  Gregor Taetzner <gregor@freenet.de>
     Copyright (C) 2015-2018  Eike Hein <hein@kde.org>
+    Copyright (C) 2021 by Mikel Johnson <mikel5764@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,25 +19,20 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 import QtQuick 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
-Item {
+FocusScope {
     id: searchViewContainer
-
-    anchors.fill: parent
 
     objectName: "SearchView"
 
-    function decrementCurrentIndex() {
-        searchView.decrementCurrentIndex();
+    function keyNavUp() {
+        return searchView.keyNavUp();
     }
 
-    function incrementCurrentIndex() {
-        searchView.incrementCurrentIndex();
+    function keyNavDown() {
+        return searchView.keyNavDown();
     }
 
     function activateCurrentIndex() {
@@ -46,6 +42,8 @@ Item {
     function openContextMenu() {
         searchView.currentItem.openActionMenu();
     }
+
+    property ListView listView: searchView.listView
 
     Kicker.RunnerModel {
         id: runnerModel
@@ -59,7 +57,6 @@ Item {
 
         function onQueryChanged() {
             runnerModel.query = header.query;
-            searchView.currentIndex = 0;
 
             if (!header.query) {
                 searchView.model = null;
@@ -77,11 +74,26 @@ Item {
         }
     }
 
+    // if search loaded that means that we have a query
+    Component.onCompleted: {
+        runnerModel.query = header.query;
+    }
+
     KickoffListView {
         id: searchView
 
-        anchors.fill: parent
+        focus: true
 
-        showAppsByName: false //krunner results have the most relevant field in the "display" column, which is showAppsByName = false
+        // we specifically only reverse search results (improves UX substantially)
+        upsideDown: mainTabGroup.state == "top"
+
+        // set index to 0 when model *loads*
+        onModelChanged: {
+            if (model) {
+                searchView.currentIndex = 0
+            }
+        }
+
+        anchors.fill: parent
     }
 }
