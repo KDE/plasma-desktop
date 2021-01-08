@@ -26,14 +26,14 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Item {
     id: root
-    Plasmoid.compactRepresentation: Item {
-        Layout.minimumWidth:   units.largeSpacing
-        Layout.preferredWidth: Layout.minimumWidth
-        Layout.maximumWidth:   Layout.minimumWidth
+    Layout.minimumWidth:   units.largeSpacing
+    Layout.preferredWidth: Layout.minimumWidth
+    Layout.maximumWidth:   Layout.minimumWidth
 
-        Layout.minimumHeight: units.largeSpacing
-        Layout.preferredHeight: Layout.minimumHeight
-        Layout.maximumHeight: Layout.minimumHeight
-    }
+    Layout.minimumHeight: Layout.minimumWidth
+    Layout.preferredHeight: Layout.minimumHeight
+    Layout.maximumHeight: Layout.minimumHeight
+
     Plasmoid.constraintHints: PlasmaCore.Types.MarginAreasSeparator
+    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 }
