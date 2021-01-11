@@ -31,22 +31,22 @@ KeyboardLayoutButton {
             plasmoid.clearActions()
 
             layouts.forEach(
-                function(layout) {
+                function(layout, index) {
                     plasmoid.setAction(
-                        layout.id,
+                        index,
                         layout.longName,
                         iconURL(layout.shortName).toString().substring(7) // remove file:// scheme
                     )
 
-                    const action = plasmoid.action(layout.id)
+                    const action = plasmoid.action(index)
                     action.toolTip = layout.displayName || layout.shortName
                     action.iconText = layout.shortName
                 }
             )
         }
 
-        function onLayoutChanged(idName) {
-            const action = plasmoid.action(idName)
+        function onLayoutChanged(index) {
+            const action = plasmoid.action(index)
 
             text = action.toolTip
             root.Plasmoid.toolTipSubText = action.text

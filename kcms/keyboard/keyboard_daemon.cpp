@@ -185,9 +185,9 @@ void KeyboardDaemon::layoutChangedSlot()
 	}
 
 	if( newLayout != currentLayout ) {
-            currentLayout = newLayout;
-            emit layoutChanged(newLayout.toString());
-        }
+		currentLayout = newLayout;
+		emit layoutChanged(getLayout());
+	}
 }
 
 void KeyboardDaemon::layoutMapChanged()
@@ -228,14 +228,14 @@ bool KeyboardDaemon::setLayout(QAction* action)
 //	return X11Helper::setLayout(LayoutUnit(action->data().toString()));
 }
 
-bool KeyboardDaemon::setLayout(const QString& layout)
+bool KeyboardDaemon::setLayout(uint index)
 {
-	return X11Helper::setLayout(LayoutUnit(layout));
+	return X11Helper::setGroup(index);
 }
 
-QString KeyboardDaemon::getLayout() const
+uint KeyboardDaemon::getLayout() const
 {
-	return currentLayout.toString();
+	return X11Helper::getGroup();
 }
 
 QString KeyboardDaemon::getLayoutLongName() const
@@ -249,7 +249,7 @@ QVector<LayoutNames> KeyboardDaemon::getLayoutsList() const
 
     const auto layoutsList = X11Helper::getLayoutsList();
     for (auto &layoutUnit : layoutsList) {
-        ret.append( {layoutUnit.toString(), layoutUnit.layout(), Flags::getShortText(layoutUnit, keyboardConfig), Flags::getLongText(layoutUnit, rules)} );
+        ret.append( {layoutUnit.layout(), Flags::getShortText(layoutUnit, keyboardConfig), Flags::getLongText(layoutUnit, rules)} );
     }
     return ret;
 }

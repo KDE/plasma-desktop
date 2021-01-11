@@ -206,7 +206,6 @@ public:
 	enum FetchType { ALL, LAYOUTS_ONLY, MODEL_ONLY };
 	static bool getGroupNames(Display* dpy, XkbConfig* xkbConfig, FetchType fetchType);
 
-private:
 	static unsigned int getGroup();
 	static bool setGroup(unsigned int group);
 };

@@ -11,7 +11,7 @@ void LayoutNames::registerMetaType()
 QDBusArgument &operator<<(QDBusArgument &argument, const LayoutNames &layoutNames)
 {
     argument.beginStructure();
-    argument << layoutNames.id << layoutNames.shortName << layoutNames.displayName << layoutNames.longName;
+    argument << layoutNames.shortName << layoutNames.displayName << layoutNames.longName;
     argument.endStructure();
     return argument;
 }
@@ -19,7 +19,7 @@ QDBusArgument &operator<<(QDBusArgument &argument, const LayoutNames &layoutName
 const QDBusArgument &operator>>(const QDBusArgument &argument, LayoutNames &layoutNames)
 {
     argument.beginStructure();
-    argument >> layoutNames.id >> layoutNames.shortName >> layoutNames.displayName >> layoutNames.longName;
+    argument >> layoutNames.shortName >> layoutNames.displayName >> layoutNames.longName;
     argument.endStructure();
     return argument;
 }

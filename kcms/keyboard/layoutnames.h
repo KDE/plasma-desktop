@@ -9,7 +9,6 @@ struct LayoutNames
 {
     static void registerMetaType();
 
-    QString id;
     QString shortName;
     QString displayName;
     QString longName;
