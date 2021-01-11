@@ -28,11 +28,13 @@
 #include "componentchooserfilemanager.h"
 #include "componentchooserterminal.h"
 #include "componentchooseremail.h"
+#include "componentchooserdata.h"
 
-K_PLUGIN_CLASS_WITH_JSON(KcmComponentChooser, "metadata.json")
+K_PLUGIN_FACTORY_WITH_JSON(KcmComponentChooserFactory, "metadata.json", registerPlugin<KcmComponentChooser>(); registerPlugin<ComponentChooserData>();)
 
 KcmComponentChooser::KcmComponentChooser(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
+    , m_data(new ComponentChooserData(this))
 {
     KAboutData *aboutData = new KAboutData("kcm_componentchooser", i18nc("@title", "Default Applications"), "1.0", QString(), KAboutLicense::LicenseKey::GPL_V2);
 
@@ -43,50 +45,56 @@ KcmComponentChooser::KcmComponentChooser(QObject *parent, const QVariantList &ar
     setAboutData(aboutData);
     setButtons(Help | Default | Apply);
 
-    m_browsers = new ComponentChooserBrowser(this);
-    m_fileManagers = new ComponentChooserFileManager(this);
-    m_terminalEmulators = new ComponentChooserTerminal(this);
-    m_emailClients = new ComponentChooserEmail(this);
+    connect(browsers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
+    connect(fileManagers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
+    connect(terminalEmulators(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
+    connect(emailClients(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
+}
 
-    connect(m_browsers, &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
-    connect(m_fileManagers, &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
-    connect(m_terminalEmulators, &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
-    connect(m_emailClients, &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
+ComponentChooser *KcmComponentChooser::browsers() const
+{
+    return m_data->browsers();
+}
+
+ComponentChooser *KcmComponentChooser::emailClients() const
+{
+    return m_data->emailClients();
+}
+
+ComponentChooser *KcmComponentChooser::terminalEmulators() const
+{
+    return m_data->terminalEmulators();
+}
+
+ComponentChooser *KcmComponentChooser::fileManagers() const
+{
+    return m_data->fileManagers();
 }
 
 void KcmComponentChooser::defaults()
 {
-    m_browsers->defaults();
-    m_fileManagers->defaults();
-    m_terminalEmulators->defaults();
-    m_emailClients->defaults();
+    m_data->defaults();
 }
 
 void KcmComponentChooser::load()
 {
-    m_browsers->load();
-    m_fileManagers->load();
-    m_terminalEmulators->load();
-    m_emailClients->load();
+    m_data->load();
 }
 
 void KcmComponentChooser::save()
 {
-    m_browsers->save();
-    m_fileManagers->save();
-    m_terminalEmulators->save();
-    m_emailClients->save();
-
+    m_data->save();
     KBuildSycocaProgressDialog::rebuildKSycoca(nullptr);
 }
 
 bool KcmComponentChooser::isDefaults() const
 {
-    return m_browsers->isDefaults() && m_fileManagers->isDefaults() && m_terminalEmulators->isDefaults() && m_emailClients->isDefaults();
+    return m_data->isDefaults();
 }
+
 bool KcmComponentChooser::isSaveNeeded() const
 {
-    return m_browsers->isSaveNeeded() || m_fileManagers->isSaveNeeded() || m_terminalEmulators->isSaveNeeded() || m_emailClients->isSaveNeeded();
+    return m_data->isSaveNeeded();
 }
 
 

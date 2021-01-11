@@ -94,6 +94,7 @@ void ComponentChooser::load()
     m_previousApplication = m_applications[m_index].toMap()["storageId"].toString();
     Q_EMIT applicationsChanged();
     Q_EMIT indexChanged();
+    Q_EMIT isDefaultsChanged();
 }
 
 void ComponentChooser::select(int index)
@@ -108,6 +109,7 @@ void ComponentChooser::select(int index)
         connect(dialog, &KOpenWithDialog::finished, this, [this, dialog] (int result) {
             if (result == QDialog::Rejected) {
                 Q_EMIT indexChanged();
+                Q_EMIT isDefaultsChanged();
                 return;
             }
 
@@ -117,6 +119,7 @@ void ComponentChooser::select(int index)
                 if (m_applications[i].toMap()["storageId"] == service->storageId()) {
                     m_index = i;
                     Q_EMIT indexChanged();
+                    Q_EMIT isDefaultsChanged();
                     return;
                 }
             }
@@ -130,12 +133,14 @@ void ComponentChooser::select(int index)
             m_index = m_applications.length() - 2;
             Q_EMIT applicationsChanged();
             Q_EMIT indexChanged();
+            Q_EMIT isDefaultsChanged();
         });
         dialog->open();
     } else {
         m_index = index;
     }
     Q_EMIT indexChanged();
+    Q_EMIT isDefaultsChanged();
 }
 
 void ComponentChooser::saveMimeTypeAssociation(const QString &mime, const QString &storageId)

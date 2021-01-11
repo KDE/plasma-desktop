@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2020 Tobias Fella <fella@posteo.de>                     *
+ *   Copyright (C) 2020 Cyril Rossi <cyril.rossi@enioka.com>               *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,54 +17,37 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA          *
  ***************************************************************************/
 
-#ifndef COMPONENTCHOOSER_H
-#define COMPONENTCHOOSER_H
+#ifndef COMPONENTCHOOSERDATA_H
+#define COMPONENTCHOOSERDATA_H
 
-#include <QString>
-#include <QVariant>
+#include <QObject>
 
-#include <optional>
+#include <KCModuleData>
 
-#include <KLocalizedString>
+class ComponentChooser;
 
-class ComponentChooser : public QObject
+class ComponentChooserData : public KCModuleData
 {
-    Q_OBJECT
-    Q_PROPERTY(QVariantList applications MEMBER m_applications NOTIFY applicationsChanged)
-    Q_PROPERTY(int index MEMBER m_index NOTIFY indexChanged)
-    Q_PROPERTY(bool isDefaults READ isDefaults NOTIFY isDefaultsChanged)
-
 public:
+    ComponentChooserData(QObject *parent = nullptr, const QVariantList &args = QVariantList());
 
-    ComponentChooser(QObject *parent, const QString &mimeType, const QString &type, const QString &defaultApplication, const QString &dialogText);
-
+    void load();
+    void save();
     void defaults();
-    virtual void load();
-    bool isDefaults() const;
+
+    bool isDefaults() const override;
     bool isSaveNeeded() const;
 
-    Q_INVOKABLE void select(int index);
+    ComponentChooser *browsers() const;
+    ComponentChooser *fileManagers() const;
+    ComponentChooser *terminalEmulators() const;
+    ComponentChooser *emailClients() const;
 
-
-    virtual void save() = 0;
-    void saveMimeTypeAssociation(const QString &mime, const QString &storageId);
-
-    bool isDefault() const;
-
-Q_SIGNALS:
-    void applicationsChanged();
-    void indexChanged();
-    void isDefaultsChanged();
-
-protected:
-    QVariantList m_applications;
-    int m_index;
-    std::optional<int> m_defaultIndex;
-    QString m_mimeType;
-    QString m_type;
-    QString m_defaultApplication;
-    QString m_previousApplication;
-    QString m_dialogText;
+private:
+    ComponentChooser *m_browsers;
+    ComponentChooser *m_fileManagers;
+    ComponentChooser *m_terminalEmulators;
+    ComponentChooser *m_emailClients;
 };
 
-#endif
+#endif // COMPONENTCHOOSERDATA_H

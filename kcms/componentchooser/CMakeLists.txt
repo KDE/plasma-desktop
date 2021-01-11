@@ -8,6 +8,7 @@ set(componentchooser_SRCS
     componentchooseremail.cpp
     componentchooserterminal.cpp
     componentchooserfilemanager.cpp
+    componentchooserdata.cpp
 )
 
 kconfig_add_kcfg_files(componentchooser_SRCS browser_settings.kcfgc GENERATE_MOC)
@@ -23,6 +24,7 @@ target_link_libraries(kcm_componentchooser
     KF5::Service
     KF5::KIOWidgets
     KF5::ConfigGui
+    KF5::KCMUtils
 )
 
 kcoreaddons_desktop_to_json(kcm_componentchooser "package/metadata.desktop")

@@ -41,7 +41,6 @@ void ComponentChooserTerminal::load()
     bool preferredServiceAdded = false;
 
     TerminalSettings settings;
-
     QString preferredService = settings.terminalApplication();
 
     KApplicationTrader::query([&preferredServiceAdded, preferredService, this](const KService::Ptr &service) {
@@ -93,6 +92,7 @@ void ComponentChooserTerminal::load()
     m_previousApplication = m_applications[m_index].toMap()["storageId"].toString();
     Q_EMIT applicationsChanged();
     Q_EMIT indexChanged();
+    Q_EMIT isDefaultsChanged();
 }
 
 void ComponentChooserTerminal::save()
