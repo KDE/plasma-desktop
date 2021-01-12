@@ -26,8 +26,6 @@ BaseView {
     model: Kicker.ComputerModel {
         id: computerModel
 
-        appNameFormat: rootModel.appNameFormat
-
         appletInterface: plasmoid
 
         favoritesModel: globalFavorites

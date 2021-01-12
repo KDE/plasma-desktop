@@ -18,7 +18,6 @@
  ***************************************************************************/
 
 import QtQuick 2.0
-import QtQuick.Controls 1.4 as QQC1
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.12
 import org.kde.kirigami 2.4 as Kirigami
@@ -53,21 +52,19 @@ Item {
         anchors.left: parent.left
         anchors.right: parent.right
 
-        // TODO: port to QQC2 version once we've fixed https://bugs.kde.org/show_bug.cgi?id=403153
-        QQC1.ComboBox {
+        ComboBox {
             id: groupingStrategy
             Kirigami.FormData.label: i18n("Group:")
             Layout.fillWidth: true
+            Layout.minimumWidth: Kirigami.Units.gridUnit * 14
             model: [i18n("Do not group"), i18n("By program name")]
         }
 
-        // TODO: port to QQC2 version once we've fixed https://bugs.kde.org/show_bug.cgi?id=403153
-        QQC1.ComboBox {
+        ComboBox {
             id: groupedTaskVisualization
             Kirigami.FormData.label: i18n("Clicking grouped task:")
             Layout.fillWidth: true
-            // FIXME: minimum width once this is ported to QQC2
-            Layout.preferredWidth: Kirigami.Units.gridUnit * 14
+            Layout.minimumWidth: Kirigami.Units.gridUnit * 14
 
             enabled: groupingStrategy.currentIndex !== 0
 
@@ -123,12 +120,12 @@ Item {
             visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
         }
 
-        // TODO: port to QQC2 version once we've fixed https://bugs.kde.org/show_bug.cgi?id=403153
-        QQC1.ComboBox {
+        ComboBox {
             id: sortingStrategy
             visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
             Kirigami.FormData.label: i18n("Sort:")
             Layout.fillWidth: true
+            Layout.minimumWidth: Kirigami.Units.gridUnit * 14
             model: [i18n("Do not sort"), i18n("Manually"), i18n("Alphabetically"), i18n("By desktop"), i18n("By activity")]
         }
 
@@ -150,11 +147,11 @@ Item {
             text: i18nc("Part of a sentence: 'Clicking active task minimizes the task'", "Minimizes the task")
         }
 
-        // TODO: port to QQC2 version once we've fixed https://bugs.kde.org/show_bug.cgi?id=403153
-        QQC1.ComboBox {
+        ComboBox {
             id: middleClickAction
             Kirigami.FormData.label: i18n("Middle-clicking any task:")
             Layout.fillWidth: true
+            Layout.minimumWidth: Kirigami.Units.gridUnit * 14
             model: [
                 i18nc("Part of a sentence: 'Middle-clicking any task does nothing'", "Does nothing"),
                 i18nc("Part of a sentence: 'Middle-clicking any task closes window or group'", "Closes window or group"),

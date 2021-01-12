@@ -32,6 +32,7 @@ class Geometry : public XkbObject
     Q_PROPERTY(qreal heightMM MEMBER heightMM CONSTANT)
 public:
     Geometry(XkbGeometryPtr geom_, XkbDescPtr xkb_, QObject *parent = nullptr);
+    ~Geometry() override;
 
     XkbGeometryPtr geom = nullptr;
 

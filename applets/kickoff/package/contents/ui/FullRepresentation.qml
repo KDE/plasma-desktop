@@ -4,6 +4,7 @@
     Copyright (C) 2012  Marco Martin <mart@kde.org>
     Copyright (C) 2013 2014 David Edmundson <davidedmundson@kde.org>
     Copyright 2014 Sebastian Kügler <sebas@kde.org>
+    Copyright (C) 2021 by Mikel Johnson <mikel5764@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -19,45 +20,41 @@
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
-import QtQuick 2.3
-import org.kde.plasma.plasmoid 2.0
+import QtQuick 2.12
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 2.0 as PlasmaComponents // for TabGroup
+import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
 Item {
     id: root
-    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 26
+    Layout.minimumWidth: Math.round(PlasmaCore.Units.gridUnit * 26 * 1.5)
     Layout.maximumWidth: Layout.minimumWidth
 
-    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 34
+    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 30
     Layout.maximumHeight: Layout.minimumHeight
 
     property string previousState
     property bool switchTabsOnHover: plasmoid.configuration.switchTabsOnHover
-    property Item currentView: mainTabGroup.currentTab.decrementCurrentIndex ? mainTabGroup.currentTab : mainTabGroup.currentTab.item
-    property KickoffButton firstButton: null
-    property var configMenuItems
+    property Item currentView: mainTabGroup.currentTab.keyNavDown ? mainTabGroup.currentTab : mainTabGroup.currentTab.item
+    property Item currentContentView: contentTabGroup.currentItem.keyNavDown ? contentTabGroup.currentItem : contentTabGroup.currentItem.item
 
-    property QtObject globalFavorites: rootModelFavorites
-
-    state: "Normal"
+    property QtObject globalFavorites: rootModel.favoritesModel
+    property QtObject systemFavorites: rootModel.systemFavoritesModel
 
     onFocusChanged: {
         header.input.forceActiveFocus();
     }
 
     function switchToInitial() {
-        if (firstButton != null) {
-            root.state = "Normal";
-            mainTabGroup.currentTab = firstButton.tab;
-            tabBar.currentTab = firstButton;
-            header.query = ""
-        }
+        root.state = "Normal";
+        tabBar.currentIndex = 0;
+        header.query = ""
+        keyboardNavigation.state = "LeftColumn"
+        navigationMethod.state = "mouse"
     }
 
     Kicker.DragHelper {
@@ -67,27 +64,25 @@ Item {
         onDropped: kickoff.dragSource = null
     }
 
-    Kicker.AppsModel {
+    Kicker.RootModel {
         id: rootModel
 
         autoPopulate: false
 
         appletInterface: plasmoid
 
-        appNameFormat: plasmoid.configuration.showAppsByName ? 0 : 1
         flat: false
         sorted: plasmoid.configuration.alphaSort
         showSeparators: false
         showTopLevelItems: true
 
-        favoritesModel: Kicker.KAStatsFavoritesModel {
-            id: rootModelFavorites
-            favorites: plasmoid.configuration.favorites
-
-            onFavoritesChanged: {
-                plasmoid.configuration.favorites = favorites;
-            }
-        }
+        showAllApps: true
+        showAllAppsCategorized: false
+        showRecentApps: false
+        showRecentDocs: false
+        showRecentContacts: false
+        showPowerSession: false
+        showFavoritesPlaceholder: true
 
         Component.onCompleted: {
             favoritesModel.initForClient("org.kde.plasma.kickoff.favorites.instance-" + plasmoid.id)
@@ -101,79 +96,73 @@ Item {
         }
     }
 
-    PlasmaCore.DataSource {
-        id: pmSource
-        engine: "powermanagement"
-        connectedSources: ["PowerDevil"]
+    onSystemFavoritesChanged: {
+        systemFavorites.favorites = String(plasmoid.configuration.systemFavorites).split(',');
     }
 
-    PlasmaCore.Svg {
-        id: arrowsSvg
+    Connections {
+        target: plasmoid.configuration
 
-        imagePath: "widgets/arrows"
-        size: "16x16"
+        function onFavoritesChanged() {
+            globalFavorites.favorites = plasmoid.configuration.favorites;
+        }
+
+        function onSystemFavoritesChanged() {
+            systemFavorites.favorites = String(plasmoid.configuration.systemFavorites).split(',');
+        }
+    }
+
+    Connections {
+        target: globalFavorites
+
+        function onFavoritesChanged() {
+            plasmoid.configuration.favorites = target.favorites;
+        }
     }
 
     Header {
         id: header
+        anchors.left: parent.left
+        anchors.right: parent.right
+        Component.onCompleted: {
+            header.input.forceActiveFocus();
+        }
     }
 
     Item {
         id: mainArea
-        anchors.topMargin: mainTabGroup.state == "top" ? PlasmaCore.Units.smallSpacing : 0
-
+        anchors.left: parent.left
+        anchors.right:parent.right
+        anchors.rightMargin: Math.round(parent.width/1.5)
+        clip: true
         PlasmaComponents.TabGroup {
             id: mainTabGroup
-            currentTab: favoritesPage
+            currentTab: tabBar.currentIndex == 0 ? applicationsGroupPage : placesPage
 
-            anchors {
-                fill: parent
-            }
+            anchors.fill: parent
 
             //pages
-            FavoritesView {
-                id: favoritesPage
+            ApplicationsGroupView {
+                id: applicationsGroupPage
             }
-            PlasmaExtras.ConditionalLoader {
-                id: applicationsPage
-                when: mainTabGroup.currentTab == applicationsPage
-                source: Qt.resolvedUrl("ApplicationsView.qml")
-            }
-            PlasmaExtras.ConditionalLoader {
-                id: systemPage
-                when: mainTabGroup.currentTab == systemPage
-                source: Qt.resolvedUrl("ComputerView.qml")
-            }
-            PlasmaExtras.ConditionalLoader {
-                id: recentlyUsedPage
-                when: mainTabGroup.currentTab == recentlyUsedPage
-                source: Qt.resolvedUrl("RecentlyUsedView.qml")
-            }
-            PlasmaExtras.ConditionalLoader {
-                id: oftenUsedPage
-                when: mainTabGroup.currentTab == oftenUsedPage
-                source: Qt.resolvedUrl("OftenUsedView.qml")
-            }
-            PlasmaExtras.ConditionalLoader {
-                id: leavePage
-                when: mainTabGroup.currentTab == leavePage
-                source: Qt.resolvedUrl("LeaveView.qml")
-            }
-            PlasmaExtras.ConditionalLoader {
-                id: searchPage
-                when: root.state == "Search"
-                //when: mainTabGroup.currentTab == searchPage || root.state == "Search"
-                source: Qt.resolvedUrl("SearchView.qml")
+
+            Loader {
+                id: placesPage
+                active: mainTabGroup.currentTab == placesPage
+                source: Qt.resolvedUrl("PlacesView.qml")
+
+                // we want to keep pages always loaded to keep animations nice
+                onLoaded: {
+                    active = true
+                }
             }
 
             state: {
                 switch (plasmoid.location) {
                 case PlasmaCore.Types.LeftEdge:
-                    return LayoutMirroring.enabled ? "right" : "left";
+                case PlasmaCore.Types.RightEdge:
                 case PlasmaCore.Types.TopEdge:
                     return "top";
-                case PlasmaCore.Types.RightEdge:
-                    return LayoutMirroring.enabled ? "left" : "right";
                 case PlasmaCore.Types.BottomEdge:
                 default:
                     return "bottom";
@@ -181,65 +170,11 @@ Item {
             }
             states: [
                 State {
-                    name: "left"
-                    AnchorChanges {
-                        target: header
-                        anchors {
-                            left: root.left
-                            top: undefined
-                            right: root.right
-                            bottom: root.bottom
-                        }
-                    }
-                    PropertyChanges {
-                        target: header
-                        width: header.implicitWidth
-                        location: PlasmaExtras.PlasmoidHeading.Location.Footer
-                    }
-                    AnchorChanges {
-                        target: mainArea
-                        anchors {
-                            left: tabBar.right
-                            top: root.top
-                            right: root.right
-                            bottom: header.top
-                        }
-                    }
-                    PropertyChanges {
-                        target: tabBar
-                        width: (tabBar.opacity == 0) ? 0 : PlasmaCore.Units.gridUnit * 5
-                    }
-                    AnchorChanges {
-                        target: tabBar
-                        anchors {
-                            left: root.left
-                            top: root.top
-                            right: undefined
-                            bottom: header.top
-                        }
-                    }
-                    PropertyChanges {
-                        target:tabBarSeparator
-                        width: tabBarSeparatorLine.elementSize("vertical-line").width
-                        elementId: "vertical-line"
-                    }
-                    AnchorChanges {
-                        target: tabBarSeparator
-                        anchors {
-                            left: tabBar.right
-                            top: tabBar.top
-                            bottom:tabBar.bottom
-                        }
-                    }
-                },
-                State {
                     name: "top"
                     AnchorChanges {
                         target: header
                         anchors {
-                            left: root.left
                             top: undefined
-                            right: root.right
                             bottom: root.bottom
                         }
                     }
@@ -249,90 +184,50 @@ Item {
                         location: PlasmaExtras.PlasmoidHeading.Location.Footer
                     }
                     AnchorChanges {
-                        target: mainArea
+                        target: footer
                         anchors {
-                            left: root.left
-                            top: tabBar.bottom
-                            right: root.right
-                            bottom: header.top
-                        }
-                    }
-                    PropertyChanges {
-                        target: tabBar
-                        height: (tabBar.opacity == 0) ? 0 : PlasmaCore.Units.gridUnit * 5
-                    }
-                    AnchorChanges {
-                        target: tabBar
-                        anchors {
-                            left: root.left
                             top: root.top
-                            right: root.right
                             bottom: undefined
                         }
                     }
                     PropertyChanges {
-                        target:tabBarSeparator
-                        height: tabBarSeparatorLine.elementSize("horizontal-line").height
-                        elementId: "horizontal-line"
+                        target: footer
+                        height: footer.implicitHeight
+                        location: PlasmaExtras.PlasmoidHeading.Location.Header
                     }
                     AnchorChanges {
-                        target: tabBarSeparator
+                        target: ignoreArea
                         anchors {
-                            left: tabBar.left
-                            right: tabBar.right
-                            top: tabBar.bottom
+                            top: root.top
+                            bottom: header.top
                         }
-                    }
-                },
-                State {
-                    name: "right"
-                    AnchorChanges {
-                        target: header
-                        anchors {
-                            left: root.left
-                            top: undefined
-                            right: root.right
-                            bottom: root.bottom
-                        }
-                    }
-                    PropertyChanges {
-                        target: header
-                        width: header.implicitWidth
-                        location: PlasmaExtras.PlasmoidHeading.Location.Footer
                     }
                     AnchorChanges {
                         target: mainArea
                         anchors {
-                            left: root.left
-                            top: root.top
-                            right: tabBar.left
+                            top: footer.bottom
+                            bottom: header.top
+                        }
+                    }
+                    AnchorChanges {
+                        target: contentArea
+                        anchors {
+                            top: footer.bottom
                             bottom: header.top
                         }
                     }
                     PropertyChanges {
-                        target: tabBar
-                        width: (tabBar.opacity == 0) ? 0 : PlasmaCore.Units.gridUnit * 5
-                    }
-                    AnchorChanges {
-                        target: tabBar
+                        target: verticalSeparator
                         anchors {
-                            left: undefined
-                            top: root.top
-                            right: root.right
-                            bottom: header.top
+                            topMargin: footer.topInset
+                            bottomMargin: header.bottomInset
                         }
                     }
                     PropertyChanges {
-                        target:tabBarSeparator
-                        width: tabBarSeparatorLine.elementSize("vertical-line").width
-                        elementId: "vertical-line"
-                    }
-                    AnchorChanges {
-                        target: tabBarSeparator
+                        target: tabBar
                         anchors {
-                            right: tabBar.left
-                            top: tabBar.top
-                            bottom: tabBar.bottom
+                            topMargin: footer.topInset
+                            bottomMargin: -footer.bottomPadding
                         }
                     }
                 },
@@ -341,9 +236,7 @@ Item {
                     AnchorChanges {
                         target: header
                         anchors {
-                            left: root.left
                             top: root.top
-                            right: root.right
                             bottom: undefined
                         }
                     }
@@ -353,38 +246,50 @@ Item {
                         location: PlasmaExtras.PlasmoidHeading.Location.Header
                     }
                     AnchorChanges {
-                        target: mainArea
+                        target: footer
                         anchors {
-                            left: root.left
-                            top: header.bottom
-                            right: root.right
-                            bottom: tabBar.top
-                        }
-                    }
-                    PropertyChanges {
-                        target: tabBar
-                        height: (tabBar.opacity == 0) ? 0 : PlasmaCore.Units.gridUnit * 5
-                    }
-                    AnchorChanges {
-                        target: tabBar
-                        anchors {
-                            left: root.left
                             top: undefined
-                            right: root.right
                             bottom: root.bottom
                         }
                     }
                     PropertyChanges {
-                        target:tabBarSeparator
-                        height: tabBarSeparatorLine.elementSize("horizontal-line").height
-                        elementId: "horizontal-line"
+                        target: footer
+                        height: footer.implicitHeight
+                        location: PlasmaExtras.PlasmoidHeading.Location.Footer
                     }
                     AnchorChanges {
-                        target: tabBarSeparator
+                        target: ignoreArea
                         anchors {
-                            bottom: tabBar.top
-                            left: tabBar.left
-                            right: tabBar.right
+                            top: header.bottom
+                            bottom: root.bottom
+                        }
+                    }
+                    AnchorChanges {
+                        target: mainArea
+                        anchors {
+                            top: header.bottom
+                            bottom: footer.top
+                        }
+                    }
+                    AnchorChanges {
+                        target: contentArea
+                        anchors {
+                            top: header.bottom
+                            bottom: footer.top
+                        }
+                    }
+                    PropertyChanges {
+                        target: verticalSeparator
+                        anchors {
+                            topMargin: header.topInset
+                            bottomMargin: footer.bottomInset
+                        }
+                    }
+                    PropertyChanges {
+                        target: tabBar
+                        anchors {
+                            topMargin: -footer.topPadding
+                            bottomMargin: footer.bottomInset
                         }
                     }
                 }
@@ -392,70 +297,287 @@ Item {
         } // mainTabGroup
     }
 
-    PlasmaComponents.TabBar {
-        id: tabBar
-
-        property int count: 5 // updated in createButtons()
-
-        Behavior on width {
-            NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.InQuad; }
-            enabled: plasmoid.expanded
-        }
-        Behavior on height {
-            NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.InQuad; }
-            enabled: plasmoid.expanded
-        }
-
-        tabPosition: {
-            switch (plasmoid.location) {
-            case PlasmaCore.Types.TopEdge:
-                return Qt.TopEdge;
-            case PlasmaCore.Types.LeftEdge:
-                return Qt.LeftEdge;
-            case PlasmaCore.Types.RightEdge:
-                return Qt.RightEdge;
-            default:
-                return Qt.BottomEdge;
+    Connections {
+        target: applicationsGroupPage
+        function onAppModelChange() {
+            if (applicationsGroupPage.activatedSection.description == "KICKER_FAVORITES_MODEL") {
+                contentTabGroup.isFavorites = true
+            } else {
+                applicationsPage.activatedSection = applicationsGroupPage.activatedSection
+                applicationsPage.rootBreadcrumbName = applicationsGroupPage.newBreadcrumbName
+                applicationsPage.appModelChange()
+                contentTabGroup.isFavorites = false
             }
-        }
 
-        onCurrentTabChanged: header.input.forceActiveFocus();
-
-        Connections {
-            target: plasmoid
-            function onExpandedChanged() {
-                if(menuItemsChanged()) {
-                    createButtons();
-                }
-                if (!plasmoid.expanded) {
-                    switchToInitial();
-                }
-            }
         }
-    } // tabBar
+    }
+
+    Connections {
+        target: placesPage.item
+        function onSectionTrigger(index) {
+            placesContentPage.currentIndex = index;
+        }
+    }
 
     PlasmaCore.SvgItem {
-        id: tabBarSeparator
+        id: verticalSeparator
+        z: 1
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        width: PlasmaCore.Units.devicePixelRatio
+        elementId: "vertical-line"
+        anchors.left: parent.left
+        anchors.leftMargin: Math.round(parent.width/3)
         svg: PlasmaCore.Svg {
-            id: tabBarSeparatorLine
+            id: lineSvg;
             imagePath: "widgets/line"
         }
     }
 
+    // we make our model ourselves
+    ListModel {
+        id: placesViewModel
+        signal trigger(int index)
+
+        function getI18nName(index) {
+            switch(index) {
+                case 0: return i18n("Computer");
+                case 1: return i18n("History");
+                case 2: return i18n("Frequently Used");
+                default: return ""
+            }
+        }
+
+        ListElement { filename: "ComputerView.qml"; decoration: "computer-laptop"; managesChildrenOutside: true }
+        ListElement { filename: "RecentlyUsedView.qml"; decoration: "view-history"; managesChildrenOutside: true }
+        ListElement { filename: "FrequentlyUsedView.qml"; decoration: "clock"; managesChildrenOutside: true }
+    }
+
+    Item {
+        id: contentArea
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.leftMargin: mainArea.opacity == 0 ? 0 : Math.round(parent.width/3)
+        clip: true
+        PlasmaComponents.TabGroup {
+            id: contentTabGroup
+            property bool isFavorites: true
+            property Item currentItem: currentTab == searchPage ? searchPage : currentTab.currentItem
+            currentTab: root.state == "Search" ? searchPage : mainTabGroup.currentTab == applicationsGroupPage ? applicationsContentPage : placesContentPage
+
+            onCurrentItemChanged: {
+                if (root.currentContentView) {
+                    if (root.currentContentView.gridView) {
+                        root.currentContentView.gridView.positionAtBeginning();
+                    } else {
+                        root.currentContentView.listView.positionAtBeginning();
+                    }
+                }
+            }
+
+            anchors.fill: parent
+
+            //pages
+            Item {
+                id: applicationsContentPage
+                property Item currentItem: contentTabGroup.isFavorites ? (plasmoid.configuration.favoritesDisplay == 0 ? favoritesGridPage : favoritesPage) : applicationsPage
+                FavoritesView {
+                    id: favoritesPage
+                    visible: parent.currentItem == favoritesPage
+                    anchors.fill: parent
+                }
+                FavoritesGridView {
+                    id: favoritesGridPage
+                    visible: parent.currentItem == favoritesGridPage
+                    anchors.fill: parent
+                }
+                ApplicationsView {
+                    id: applicationsPage
+                    visible: parent.currentItem == applicationsPage
+                    anchors.fill: parent
+                }
+            }
+
+            // this allows us to track/set index without having to worry about presentation
+            Item {
+                id: placesContentPage
+                property int currentIndex: -1
+                property Item currentItem: placesRepeater.itemAt(currentIndex)
+                Repeater {
+                    id: placesRepeater
+                    model: placesViewModel
+                    delegate: Loader {
+                        // so we don't load immediately
+                        active: contentTabGroup.currentTab == placesContentPage && visible
+                        visible: placesContentPage.currentIndex == index
+                        source: Qt.resolvedUrl(filename)
+                        anchors.fill: parent
+
+                        // we don't want to load/unload constantly because it's performance heavy
+                        onLoaded: {
+                            active = true
+                        }
+                    }
+                    onItemAdded: {
+                        if (index == 0) {
+                            parent.currentIndex = 0
+                        }
+                    }
+                }
+            }
+
+            Loader {
+                id: searchPage
+                active: root.state == "Search"
+                source: Qt.resolvedUrl("SearchView.qml")
+
+                // keeps animations nice
+                onLoaded: {
+                    active = true
+                }
+            }
+        } // contentTabGroup
+    }
+    PlasmaExtras.PlasmoidHeading {
+        id: footer
+
+        implicitHeight: (footer.opacity == 0) ? 0 : Math.round(PlasmaCore.Units.gridUnit * 2.5)
+
+        anchors.left: parent.left
+        anchors.right: parent.right
+
+        Behavior on height {
+            NumberAnimation {
+                duration: PlasmaCore.Units.longDuration
+                easing.type: Easing.InQuad
+            }
+            enabled: plasmoid.expanded
+        }
+
+        PC3.TabBar {
+            id: tabBar
+            anchors.fill: parent
+            anchors.rightMargin: Math.round(parent.width/1.5)
+            onCurrentIndexChanged: {
+                header.input.forceActiveFocus();
+                keyboardNavigation.state = "LeftColumn"
+                root.currentView.listView.positionAtBeginning();
+            }
+
+            PC3.TabButton {
+                id: applicationButton
+                implicitHeight: parent.height
+                icon.width: PlasmaCore.Units.iconSizes.smallMedium
+                icon.height: PlasmaCore.Units.iconSizes.smallMedium
+                icon.name: "applications-other"
+                text: i18n("Applications")
+                hoverEnabled: plasmoid.configuration.switchTabsOnHover
+                onHoveredChanged: {
+                    if (hovered) {
+                        tabBar.currentIndex = PC3.TabBar.index
+                    }
+                }
+                Keys.onPressed: {
+                    // On back tab focus on right pane
+                    if (event.key == Qt.Key_Backtab) {
+                        if (mainTabGroup.state == "top") {
+                            header.input.forceActiveFocus(Qt.TabFocusReason)
+                        } else {
+                            navigationMethod.state = "keyboard"
+                            keyboardNavigation.state = "RightColumn"
+                            root.currentContentView.forceActiveFocus()
+                        }
+                        event.accepted = true;
+                        return;
+                    }
+                }
+            }
+            PC3.TabButton {
+                id: computerButton
+                icon.width: PlasmaCore.Units.iconSizes.smallMedium
+                icon.height: PlasmaCore.Units.iconSizes.smallMedium
+                icon.name: "compass"
+                text: i18n("Places") //Explore?
+                hoverEnabled: plasmoid.configuration.switchTabsOnHover
+                onHoveredChanged: {
+                    if (hovered) {
+                        tabBar.currentIndex = PC3.TabBar.index
+                    }
+                }
+            }
+            position: {
+                switch (plasmoid.location) {
+                case PlasmaCore.Types.TopEdge:
+                case PlasmaCore.Types.LeftEdge:
+                case PlasmaCore.Types.RightEdge:
+                    return PC3.TabBar.Header;
+                default:
+                    return PC3.TabBar.Footer;
+                }
+            }
+
+            Connections {
+                target: plasmoid
+                function onExpandedChanged() {
+                    header.input.forceActiveFocus();
+                    switchToInitial();
+                }
+            }
+        } // tabBar
+
+        LeaveButtons {
+            id: leaveButtons
+            anchors.fill: parent
+            anchors.rightMargin: PlasmaCore.Units.gridUnit
+            anchors.leftMargin: Math.round(parent.width/3) + PlasmaCore.Units.gridUnit
+        }
+    }
+
+    // The cursor often passes over the sidebar while moving towards the main list, causing the view to change unintentionally.
+    // This prevents it by having a MouseArea that blocks hover until we're sure that it's wanted
+    // After that there's no further delays until mouse exists the area
+
+    Item {
+        // Filter area includes left sidebar and footer
+        id: ignoreArea
+        anchors.left: parent.left
+        anchors.right:parent.right
+        anchors.rightMargin: mainArea.opacity == 0 ? parent.width : Math.round(parent.width/1.5)
+    }
+
+    HoverHandler {
+        // activate filter when we're out of the area
+        target: ignoreArea
+        onHoveredChanged: {
+            if (!hoverFilter.visible) {
+                hoverFilter.visible = !hovered
+            }
+        }
+    }
+
+    TapHandler {
+        // on any tap/button disable filter immediately
+        acceptedButtons: Qt.AllButtons
+        target: parent
+        onTapped: hoverFilter.visible = false
+    }
+
     MouseArea {
-        anchors.fill: tabBar
+        id: hoverFilter
+        anchors.fill: ignoreArea
 
         property var oldPos: null
+        hoverEnabled: true
+        visible: false
 
-        enabled: root.state !== "Search"
-        hoverEnabled: root.switchTabsOnHover
+        acceptedButtons: Qt.NoButton
 
         onExited: {
             // Reset so we switch immediately when MouseArea is entered
             // freshly, e.g. from the panel.
             oldPos = null;
 
-            clickTimer.stop();
+            hoverFilterTimer.stop();
         }
 
         onPositionChanged: {
@@ -465,21 +587,13 @@ Item {
                 return;
             }
 
-            var button = tabBar.layout.childAt(mouse.x, mouse.y);
-
-            if (!button || button.objectName !== "KickoffButton") {
-                clickTimer.stop();
-
-                return;
-            }
-
             // Switch immediately when MouseArea was freshly entered, e.g.
-            // from the panel.
+            // from the panel. NOTE: Disabled since it's questionable usability wise. Needs more thorough testing
             if (oldPos === null) {
                 oldPos = Qt.point(mouse.x, mouse.y);
 
-                clickTimer.stop();
-                button.clicked();
+                hoverFilterTimer.stop();
+                //hoverFilter.visible = false
 
                 return;
             }
@@ -490,152 +604,201 @@ Item {
             // Check Manhattan length against drag distance to get a decent
             // pointer motion vector.
             if ((Math.abs(dx) + Math.abs(dy)) > Qt.styleHints.startDragDistance) {
-                if (tabBar.currentTab !== button) {
-                    var tabBarPos = mapToItem(tabBar, oldPos.x, oldPos.y);
-                    oldPos = Qt.point(mouse.x, mouse.y);
-
-                    var angleMouseMove = Math.atan2(dy, dx) * 180 / Math.PI;
-                    var angleToCornerA = 0;
-                    var angleToCornerB = 0;
-
-                    switch (plasmoid.location) {
-                        case PlasmaCore.Types.TopEdge: {
-                            angleToCornerA = Math.atan2(tabBar.height - tabBarPos.y, 0 - tabBarPos.x);
-                            angleToCornerB = Math.atan2(tabBar.height - tabBarPos.y, tabBar.width - tabBarPos.x);
-
-                            break;
-                        }
-                        case PlasmaCore.Types.LeftEdge: {
-                            angleToCornerA = Math.atan2(0 - tabBarPos.y, tabBar.width - tabBarPos.x);
-                            angleToCornerB = Math.atan2(tabBar.height - tabBarPos.y, tabBar.width - tabBarPos.x);
-
-                            break;
-                        }
-                        case PlasmaCore.Types.RightEdge: {
-                            angleToCornerA = Math.atan2(0 - tabBarPos.y, 0 - tabBarPos.x);
-                            angleToCornerB = Math.atan2(tabBar.height - tabBarPos.y, 0 - tabBarPos.x);
-
-                            break;
-                        }
-                        // PlasmaCore.Types.BottomEdge
-                        default: {
-                            angleToCornerA = Math.atan2(0 - tabBarPos.y, 0 - tabBarPos.x);
-                            angleToCornerB = Math.atan2(0 - tabBarPos.y, tabBar.width - tabBarPos.x);
-                        }
-                    }
-
-                    // Degrees are nicer to debug than radians.
-                    angleToCornerA = angleToCornerA * 180 / Math.PI;
-                    angleToCornerB = angleToCornerB * 180 / Math.PI;
-
-                    var lower = Math.min(angleToCornerA, angleToCornerB);
-                    var upper = Math.max(angleToCornerA, angleToCornerB);
-
-                    // If the motion vector is outside the angle range from oldPos to the
-                    // relevant tab bar corners, switch immediately. Otherwise start the
-                    // timer, which gets aborted should the pointer exit the tab bar
-                    // early.
-                    var inRange = (lower < angleMouseMove == angleMouseMove < upper);
-
-                    // Mirror-flip.
-                    if (plasmoid.location === PlasmaCore.Types.RightEdge ? inRange : !inRange) {
-                        clickTimer.stop();
-                        button.clicked();
-
-                        return;
-                    } else {
-                        clickTimer.pendingButton = button;
-                        clickTimer.start();
-                    }
-                } else {
-                    oldPos = Qt.point(mouse.x, mouse.y);
-                }
+                hoverFilterTimer.start();
             }
-        }
-
-        onClicked: {
-            clickTimer.stop();
-
-            var button = tabBar.layout.childAt(mouse.x, mouse.y);
-
-            if (!button || button.objectName !== "KickoffButton") {
-                return;
-            }
-
-            button.clicked();
         }
 
         Timer {
-            id: clickTimer
+            id: hoverFilterTimer
 
-            property Item pendingButton: null
-
+            // this is an interaction and not an animation, so we want it as a constant
             interval: 250
 
-            onTriggered: {
-                if (pendingButton) {
-                    pendingButton.clicked();
-                }
-            }
+            onTriggered: hoverFilter.visible = false
         }
     }
 
-    Keys.forwardTo: [tabBar.layout]
-
+    // we need to reverse left and right arrows for RTL support
+    function keyBackwardFunction() {
+        if (header.input.activeFocus) { return; }
+        if (keyboardNavigation.state == "RightColumn") {
+            if (root.currentContentView.gridView) {
+                if (!root.currentContentView.keyNavLeft()) { //go left if we're on the first column
+                    keyboardNavigation.state = "LeftColumn";
+                }
+                return;
+            }
+            if (root.currentContentView !== applicationsPage || !root.currentContentView.deactivateCurrentIndex()) {
+                if (root.state != "Search") {
+                    keyboardNavigation.state = "LeftColumn"
+                }
+            }
+        }
+        return;
+    }
+    function keyForwardFunction() {
+        // allow going to right panel immediately even if left panel is not focused
+        if (root.currentContentView.gridView) {
+            if (keyboardNavigation.state != "RightColumn") {
+                keyboardNavigation.state = "RightColumn";
+                if (root.currentContentView.gridView.currentIndex === -1) {
+                    root.currentContentView.keyNavRight()
+                }
+            } else if (root.currentContentView.activeFocus) { // only if focused
+                root.currentContentView.keyNavRight()
+            }
+            return;
+        }
+        // search ignores keyboardNavigation and is always current
+        if ((keyboardNavigation.state == "RightColumn" || root.state == "Search") && root.currentContentView.activeFocus) { // only if focused
+            currentContentView.activateCurrentIndex();
+        } else {
+            keyboardNavigation.state = "RightColumn";
+        }
+        return;
+    }
     Keys.onPressed: {
+        // switch tabs on CTRL+Tab (and CTRL+Shift+Tab)
+        if ((event.key == Qt.Key_Tab || event.key == Qt.Key_Backtab) && (event.modifiers & Qt.ControlModifier)) {
+            // only 2 tabs so no need to handle Shift
+            tabBar.currentIndex = !tabBar.currentIndex
+            event.accepted = true;
+            return;
+        }
 
-        if (mainTabGroup.currentTab == applicationsPage) {
-            if (event.key !== Qt.Key_Tab) {
-                root.state = "Applications";
+        // handle tab navigation for main columns
+        if (event.key == Qt.Key_Tab) {
+            navigationMethod.state = "keyboard"
+            if (root.currentView.activeFocus) {
+                keyboardNavigation.state = "RightColumn"
+                event.accepted = true;
+                return;
+            } else if (root.currentContentView.activeFocus) {
+                // There's no footer when we search
+                if (root.state == "Search" || mainTabGroup.state == "top") {
+                    header.avatar.forceActiveFocus(Qt.TabFocusReason)
+                } else {
+                    applicationButton.forceActiveFocus(Qt.TabFocusReason)
+                }
+                event.accepted = true;
+                return;
+            }
+        }
+        // and backtab navigation
+        if (event.key == Qt.Key_Backtab) {
+            navigationMethod.state = "keyboard"
+            if (root.currentContentView.activeFocus) {
+                // There's no left panel when we search
+                if (root.state == "Search") {
+                    header.input.forceActiveFocus(Qt.BacktabFocusReason)
+                } else {
+                    keyboardNavigation.state = "LeftColumn"
+                }
+                event.accepted = true;
+                return;
+            } else if (root.currentView.activeFocus) {
+                if (mainTabGroup.state == "top" && root.state != "Search") {
+                    leaveButtons.leave.forceActiveFocus(Qt.TabFocusReason)
+                } else {
+                    header.input.forceActiveFocus(Qt.BacktabFocusReason)
+                }
+                event.accepted = true;
+                return;
+            }
+        }
+        var headerUpFooterDown = (event.key == Qt.Key_Down && footer.activeFocus) || (event.key == Qt.Key_Up && header.activeFocus)
+        var headerDownFooterUp = (event.key == Qt.Key_Down && header.activeFocus) || (event.key == Qt.Key_Up && footer.activeFocus)
+        // Don't react on down presses with active footer or up presses with active header (this is inverse when upside down)
+        if ((mainTabGroup.state == "bottom" && headerUpFooterDown) || (mainTabGroup.state == "top" && headerDownFooterUp)) {
+            return;
+        }
+        if (event.key != Qt.Key_Shift) {
+            navigationMethod.state = "keyboard"
+            // Focus on content when pressing down and up from header and footer respectively (this is inverse when upside down)
+            // Note however that we don't filter left and right keys. We still want to move between columns even without focus
+            // Instead we block moving (grid) and submenus (list) and *only* change focus
+            if (((mainTabGroup.state == "bottom" && headerDownFooterUp) || (mainTabGroup.state == "top" && headerUpFooterDown)) && !root.currentView.activeFocus && !root.currentContentView.activeFocus) {
+                if (root.state == "Search") {
+                    keyboardNavigation.state = "RightColumn"
+                }
+                if (keyboardNavigation.state == "LeftColumn") {
+                    root.currentView.forceActiveFocus()
+                } else {
+                    root.currentContentView.forceActiveFocus()
+                }
+
+                return;
             }
         }
 
         switch(event.key) {
             case Qt.Key_Up: {
-                currentView.decrementCurrentIndex();
+                // Focus on header when reaching the beginning of the list/grid
+                if (keyboardNavigation.state == "LeftColumn" && root.state != "Search") {
+                    if (!root.currentView.keyNavUp()) {
+                        if (mainTabGroup.state == "top") {
+                            tabBar.currentItem.forceActiveFocus(Qt.TabFocusReason);
+                        } else {
+                            header.forceActiveFocus();
+                        }
+                    }
+                } else {
+                    if (!root.currentContentView.keyNavUp()) {
+                        if (mainTabGroup.state == "top") {
+                            if (root.state != "Search") {
+                                tabBar.currentItem.forceActiveFocus(Qt.TabFocusReason);
+                            }
+                        } else {
+                            header.forceActiveFocus();
+                        }
+                    }
+                }
                 event.accepted = true;
                 break;
             }
             case Qt.Key_Down: {
-                currentView.incrementCurrentIndex();
+                // Focus on footer when reaching the end of the list/grid
+                if (keyboardNavigation.state == "LeftColumn" && root.state != "Search") {
+                    if (!root.currentView.keyNavDown()) {
+                        if (mainTabGroup.state == "top") {
+                            header.forceActiveFocus();
+                        } else {
+                            // forces activeFocus visuals
+                            tabBar.currentItem.forceActiveFocus(Qt.TabFocusReason);
+                        }
+                    }
+                } else {
+                    if (!root.currentContentView.keyNavDown()) {
+                        if (mainTabGroup.state == "top") {
+                            header.forceActiveFocus();
+                        } else if (root.state != "Search") {
+                            tabBar.currentItem.forceActiveFocus(Qt.TabFocusReason);
+                        }
+                    }
+                }
                 event.accepted = true;
                 break;
             }
             case Qt.Key_Left: {
-                if (header.input.focus && header.state == "query") {
-                    break;
-                }
-                if (!currentView.deactivateCurrentIndex()) {
-                    if (root.state == "Applications") {
-                        mainTabGroup.currentTab = firstButton.tab;
-                        tabBar.currentTab = firstButton;
-                    }
-                    root.state = "Normal"
+                if (!LayoutMirroring.enabled) {
+                    keyBackwardFunction()
+                } else {
+                    keyForwardFunction()
                 }
                 event.accepted = true;
                 break;
             }
             case Qt.Key_Right: {
-                if (header.input.focus && header.state == "query") {
-                    break;
+                if (!LayoutMirroring.enabled) {
+                    keyForwardFunction()
+                } else {
+                    keyBackwardFunction()
                 }
-                currentView.activateCurrentIndex();
-                event.accepted = true;
-                break;
-            }
-            case Qt.Key_Tab: {
-                root.state == "Applications" ? root.state = "Normal" : root.state = "Applications";
-                event.accepted = true;
-                break;
-            }
-            case Qt.Key_Enter:
-            case Qt.Key_Return: {
-                currentView.activateCurrentIndex(1);
                 event.accepted = true;
                 break;
             }
             case Qt.Key_Escape: {
-                if (header.state != "query") {
+                if (header.query.length == 0) {
                     plasmoid.expanded = false;
                 } else {
                     header.query = "";
@@ -643,136 +806,121 @@ Item {
                 event.accepted = true;
                 break;
             }
-            case Qt.Key_Menu: {
-                currentView.openContextMenu();
+            case Qt.Key_Enter:
+            case Qt.Key_Return: {
+                if (keyboardNavigation.state == "LeftColumn" && root.state != "Search") {
+                    currentView.activateCurrentIndex();
+                    keyboardNavigation.state = "RightColumn";
+                } else {
+                    currentContentView.activateCurrentIndex();
+                }
                 event.accepted = true;
                 break;
             }
-            default:
-                if (!header.input.focus) {
-                    header.input.forceActiveFocus();
+            case Qt.Key_Menu: {
+                if (keyboardNavigation.state == "RightColumn" || root.state == "Search") {
+                    currentContentView.openContextMenu();
+                } else if (root.currentView == applicationsGroupPage && applicationsGroupPage.listView.currentIndex != -1) {
+                    if (!applicationsGroupPage.listView.currentItem.modelChildren) {
+                        currentView.openContextMenu();
+                    }
                 }
+                event.accepted = true;
+                break;
+            }
+            default: {
+                // Relay first key press to search field, make sure it's a proper character
+                if (event.text != "" && !header.input.activeFocus && event.key != Qt.Key_Backspace && event.key != Qt.Key_Backtab && event.key != Qt.Key_Tab) {
+                    // Works for both LTR and RTL
+                    header.input.insert(header.input.length, event.text.charAt(0))
+                    header.input.forceActiveFocus()
+                }
+                // Relay backspace
+                if (!header.input.activeFocus && event.key == Qt.Key_Backspace && header.input.length != 0) {
+                    header.input.remove(header.input.length - 1, header.input.length)
+                    header.input.forceActiveFocus()
+                }
+            }
         }
     }
-
+    state: "Normal"
     states: [
         State {
             name: "Normal"
             PropertyChanges {
-                target: root
-                Keys.forwardTo: [tabBar.layout]
-            }
-            PropertyChanges {
-                target: tabBar
+                target: footer
                 //Set the opacity and NOT the visibility, as visibility is recursive
                 //and this binding would be executed also on popup show/hide
                 //as recommended by the docs: https://doc.qt.io/qt-5/qml-qtquick-item.html#visible-prop
                 //plus, it triggers https://bugreports.qt.io/browse/QTBUG-66907
                 //in which a mousearea may think it's under the mouse while it isn't
-                opacity: tabBar.count > 1 ? 1 : 0
-            }
-        },
-        State {
-            name: "Applications"
-            PropertyChanges {
-                target: root
-                Keys.forwardTo: [root]
+                opacity: 1
             }
             PropertyChanges {
-                target: tabBar
-                opacity: tabBar.count > 1 ? 1 : 0
+                target: mainArea
+                opacity: 1
+            }
+            PropertyChanges {
+                target: verticalSeparator
+                visible: true
             }
         },
         State {
             name: "Search"
             PropertyChanges {
-                target: tabBar
+                target: footer
                 opacity: 0
             }
             PropertyChanges {
-                target: mainTabGroup
-                currentTab: searchPage
+                target: mainArea
+                opacity: 0
             }
             PropertyChanges {
-                target: root
-                Keys.forwardTo: [root]
+                target: verticalSeparator
+                visible: false
             }
         }
     ] // states
-
-    function getButtonDefinition(name) {
-        switch(name) {
-        case "bookmark":
-            return {id: "bookmarkButton", tab: favoritesPage, iconSource: "bookmarks", text: i18n("Favorites")};
-        case "application":
-            return {id: "applicationButton", tab: applicationsPage, iconSource: "applications-other", text: i18n("Applications")};
-        case "computer":
-            return {id: "computerButton", tab: systemPage, iconSource: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] ? "computer-laptop" : "computer", text: i18n("Computer")};
-        case "used":
-            return {id: "usedButton", tab: recentlyUsedPage, iconSource: "view-history", text: i18n("History")};
-        case "oftenUsed":
-            return {id: "usedButton", tab: oftenUsedPage, iconSource: "office-chart-pie", text: i18n("Often Used")};
-        case "leave":
-            return {id: "leaveButton", tab: leavePage, iconSource: "system-log-out", text: i18n("Leave")};
-        }
-    }
-
-    Component {
-        id: kickoffButton
-        KickoffButton {}
-    }
-
-
-    Component.onCompleted: {
-        createButtons();
-    }
-
-    function getEnabled(configuration) {
-        var res = [];
-        for(var i = 0; i < configuration.length; i++) {
-            var confItemName = configuration[i].substring(0, configuration[i].indexOf(":"));
-            var confItemEnabled = configuration[i].substring(configuration[i].length-1) === "t";
-            if(confItemEnabled) {
-                res.push(confItemName);
+    Item {
+        id: keyboardNavigation
+        state: "LeftColumn"
+        states: [
+            State {
+                name: "LeftColumn"
+            },
+            State {
+                name: "RightColumn"
+            }
+        ]
+        onStateChanged: {
+            if (state == "LeftColumn") {
+                root.currentView.forceActiveFocus()
+            } else if (root.state != "search") {
+                root.currentContentView.forceActiveFocus()
             }
         }
-
-        return res;
     }
-
-    function createButtons() {
-        configMenuItems = plasmoid.configuration.menuItems;
-        var menuItems = getEnabled(plasmoid.configuration.menuItems);
-        tabBar.count = menuItems.length
-
-        // remove old menu items
-        for(var i = tabBar.layout.children.length -1; i >= 0; i--)  {
-            if(tabBar.layout.children[i].objectName === "KickoffButton") {
-                tabBar.layout.children[i].destroy();
-            }
+    onCurrentViewChanged: {
+        if (keyboardNavigation.state == "LeftColumn") {
+            root.currentView.forceActiveFocus()
         }
-
-        for (var i = 0; i < menuItems.length; i++) {
-             var props = getButtonDefinition(menuItems[i]);
-             var button = kickoffButton.createObject(tabBar.layout, props);
-             if(i === 0) {
-                 firstButton = button;
-                 switchToInitial();
-             }
-        }
-
     }
-
-    function menuItemsChanged() {
-        if(configMenuItems.length !== plasmoid.configuration.menuItems.length) {
-            return true;
+    onCurrentContentViewChanged: {
+        if (keyboardNavigation.state == "RightColumn" && root.state != "search") {
+            root.currentContentView.forceActiveFocus()
         }
-
-        for(var i = 0; i < configMenuItems.length; i++) {
-            if(configMenuItems[i] !== plasmoid.configuration.menuItems[i]) {
-                return true;
+    }
+    Item {
+        id: navigationMethod
+        property bool inSearch: root.state == "Search"
+        state: "mouse"
+        states: [
+            State {
+                name: "mouse"
+            },
+            State {
+                name: "keyboard"
             }
-        }
-        return false;
+        ]
     }
 }

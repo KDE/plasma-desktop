@@ -9,5 +9,8 @@
      <entry name="terminalApplication" key="TerminalApplication" type="String">
        <default>konsole</default>
      </entry>
+     <entry name="terminalService" key="TerminalService" type="String">
+       <default>org.kde.konsole.desktop</default>
+     </entry>
    </group>
 </kcfg>

@@ -1,7 +1,5 @@
 /*
-    Copyright (C) 2011  Martin Gräßlin <mgraesslin@kde.org>
-    Copyright (C) 2012 Marco Martin <mart@kde.org>
-    Copyright (C) 2015  Eike Hein <hein@kde.org>
+    Copyright (C) 2020  Mikel Johnson <mikel5764@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,15 +16,19 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 import QtQuick 2.0
-import org.kde.plasma.private.kicker 0.1 as Kicker
-
 
 BaseView {
-    objectName: "LeaveView"
-    model: Kicker.SystemModel {
-        favoritesModel: globalFavorites
-    }
-    delegate: KickoffItem {
-        usePlasmaIcon: true
+    id: placesView
+    signal sectionTrigger(int index)
+    objectName: "PlacesView"
+    isExternalManagerMode: true
+    model: placesViewModel
+    focus: true
+    Connections {
+        target: placesViewModel
+        function onTrigger(index) {
+            placesView.listView.currentIndex = index
+            placesView.sectionTrigger(index)
+        }
     }
 }

@@ -3,6 +3,14 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_smserver\")
 
 set(kcm_smserver_PART_SRCS kcmsmserver.cpp)
 
+kcmutils_generate_module_data(
+    kcm_smserver_PART_SRCS
+    MODULE_DATA_HEADER smserverdata.h
+    MODULE_DATA_CLASS_NAME SMServerData
+    SETTINGS_HEADERS smserversettings.h
+    SETTINGS_CLASSES SMServerSettings
+)
+
 qt5_add_dbus_interface(kcm_smserver_PART_SRCS org.freedesktop.login1.Manager.xml login1_manager)
 
 kconfig_add_kcfg_files(kcm_smserver_PART_SRCS smserversettings.kcfgc GENERATE_MOC)

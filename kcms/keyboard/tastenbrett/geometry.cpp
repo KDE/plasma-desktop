@@ -43,3 +43,8 @@ Geometry::Geometry(XkbGeometryPtr geom_, XkbDescPtr xkb_, QObject *parent)
         sections.push_back(new Section(geom->sections + i, xkb, this));
     }
 }
+
+Geometry::~Geometry()
+{
+    XkbFreeKeyboard(xkb, 0, True);
+}

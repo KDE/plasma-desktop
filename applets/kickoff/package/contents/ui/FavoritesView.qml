@@ -5,6 +5,7 @@
     Copyright (C) 2015-2018  Eike Hein <hein@kde.org>
     Copyright (C) 2016 Jonathan Liu <net147@gmail.com>
     Copyright (C) 2016 Kai Uwe Broulik <kde@privat.broulik.de>
+    Copyright (C) 2021 by Mikel Johnson <mikel5764@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -21,29 +22,21 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 import QtQuick 2.0
-import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.draganddrop 2.0
 
-import org.kde.plasma.private.kicker 0.1 as Kicker
-
-Item {
-    anchors.fill: parent
-    anchors.topMargin: PlasmaCore.Units.largeSpacing
+FocusScope {
 
     objectName: "FavoritesView"
 
     property ListView listView: favoritesView.listView
 
-    function decrementCurrentIndex() {
-        favoritesView.decrementCurrentIndex();
+    function keyNavUp() {
+        return favoritesView.keyNavUp();
     }
 
-    function incrementCurrentIndex() {
-        favoritesView.incrementCurrentIndex();
+    function keyNavDown() {
+        return favoritesView.keyNavDown();
     }
 
     function activateCurrentIndex() {
@@ -68,17 +61,15 @@ Item {
     }
 
     DropArea {
-        property int startRow: -1
-
         anchors.fill: parent
         enabled: plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
 
-        function syncTarget(event) {
+        function syncTarget(drag) {
             if (favoritesView.animating) {
                 return;
             }
 
-            var pos = mapToItem(listView.contentItem, event.x, event.y);
+            var pos = mapToItem(listView.contentItem, drag.x, drag.y);
             var above = listView.itemAt(pos.x, pos.y);
 
             var source = kickoff.dragSource;
@@ -91,12 +82,8 @@ Item {
             }
         }
 
-        onDragEnter: {
-            syncTarget(event);
-            startRow = favoritesView.currentIndex;
-        }
-
-        onDragMove: syncTarget(event)
+        onPositionChanged: syncTarget(drag)
+        onEntered: syncTarget(drag)
     }
 
     Transition {
@@ -118,7 +105,7 @@ Item {
         target: plasmoid
         function onExpandedChanged() {
             if (!plasmoid.expanded) {
-                favoritesView.currentIndex = -1;
+                favoritesView.currentIndex = 0;
             }
         }
     }
@@ -130,6 +117,7 @@ Item {
 
         property bool animating: false
         property int animationDuration: resetAnimationDurationTimer.interval
+        focus: true
 
         interactive: contentHeight > height
 
@@ -147,6 +135,8 @@ Item {
     Timer {
         id: resetAnimationDurationTimer
 
+        // We don't want drag animation to be affected by "Animation speed" setting cause this is an active interaction (we want this enabled even for those who disabled animations)
+        // In other words: it's not a passive animation it should (roughly) follow the drag
         interval: 150
 
         onTriggered: favoritesView.animationDuration = interval - 20

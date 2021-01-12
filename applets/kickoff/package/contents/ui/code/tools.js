@@ -84,8 +84,8 @@ function createFavoriteActions(i18n, favoriteModel, favoriteId) {
             checkable : true,
 
             actionId  : linkedToAllActivities ?
-                             "_kicker_favorite_remove_from_activity" :
-                             "_kicker_favorite_set_to_activity",
+                            "_kicker_favorite_remove_from_activity" :
+                            "_kicker_favorite_set_to_activity",
             checked   : linkedToAllActivities,
 
             actionArgument : {

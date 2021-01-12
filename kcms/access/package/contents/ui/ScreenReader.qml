@@ -21,7 +21,7 @@
 import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.12 as QQC2
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcm 1.3 as KCM
 import org.kde.kirigami 2.3 as Kirigami
 
 Kirigami.FormLayout {
@@ -30,7 +30,10 @@ Kirigami.FormLayout {
     QQC2.CheckBox {
         text: i18n("Enable Screen Reader")
 
-        enabled: !kcm.screenReaderSettings.isImmutable("Enabled")
+        KCM.SettingStateBinding {
+            configObject: kcm.screenReaderSettings
+            settingName: "Enabled"
+        }
 
         checked: kcm.screenReaderSettings.enabled
         onToggled: kcm.screenReaderSettings.enabled = checked

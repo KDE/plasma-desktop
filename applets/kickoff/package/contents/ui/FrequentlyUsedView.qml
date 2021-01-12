@@ -19,15 +19,14 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 import QtQuick 2.0
-import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
 BaseView {
-    objectName: "OftenUsedView"
+    objectName: "FrequentlyUsedView"
 
     model: Kicker.RecentUsageModel {
         favoritesModel: globalFavorites
-        ordering: 1 // Popular / Often Used
+        ordering: 1 // Popular / Frequently Used
     }
 }

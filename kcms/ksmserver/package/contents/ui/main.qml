@@ -51,7 +51,7 @@ KCM.SimpleKCM {
             Kirigami.FormData.label: i18n("General:")
             text: i18n("Confirm logout")
             checked: Settings.confirmLogout
-            onToggled: Settings.confirmLogout = true
+            onToggled: Settings.confirmLogout = checked
             KCM.SettingStateBinding {
                 configObject: Settings
                 settingName: "confirmLogout"
@@ -60,7 +60,7 @@ KCM.SimpleKCM {
         CheckBox {
             text: i18n("Offer shutdown options")
             checked: Settings.offerShutdown
-            onToggled: Settings.offerShutdown = true
+            onToggled: Settings.offerShutdown = checked
             KCM.SettingStateBinding {
                 configObject: Settings
                 settingName: "offerShutdown"
@@ -167,7 +167,7 @@ KCM.SimpleKCM {
         CheckBox {
             id: uefi
             text: i18n("Enter firmware setup screen on next restart")
-            visible: kcm.canFirmareSetup
+            visible: kcm.canFirmwareSetup
             checked: kcm.restartInSetupScreen
             onToggled: kcm.restartInSetupScreen = checked
         }

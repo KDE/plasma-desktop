@@ -49,10 +49,12 @@
 
 #include "kcmaccessibilitybell.h"
 #include "kcmaccessibilitykeyboard.h"
+#include "kcmaccessibilitykeyboardfilters.h"
 #include "kcmaccessibilitymouse.h"
 #include "kcmaccessibilityscreenreader.h"
+#include "kcmaccessibilitydata.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMAccessFactory, "kcm_access.json", registerPlugin<KAccessConfig>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMAccessFactory, "kcm_access.json", registerPlugin<KAccessConfig>(); registerPlugin<AccessibilityData>();)
 
 QString mouseKeysShortcut(Display *display)
 {
@@ -152,15 +154,13 @@ QString mouseKeysShortcut(Display *display)
 
 KAccessConfig::KAccessConfig(QObject *parent, const QVariantList& args)
     : KQuickAddons::ManagedConfigModule(parent, args)
-    , m_mouseSettings(new MouseSettings(this))
-    , m_bellSettings(new BellSettings(this))
-    , m_keyboardSettings(new KeyboardSettings(this))
-    , m_screenReaderSettings(new ScreenReaderSettings(this))
+    , m_data(new AccessibilityData(this))
     , m_desktopShortcutInfo(QX11Info::isPlatformX11() ? mouseKeysShortcut(QX11Info::display()) : QString())
 {
     qmlRegisterType<MouseSettings>();
     qmlRegisterType<BellSettings>();
     qmlRegisterType<KeyboardSettings>();
+    qmlRegisterType<KeyboardFiltersSettings>();
     qmlRegisterType<ScreenReaderSettings>();
 
     KAboutData *about =
@@ -174,6 +174,12 @@ KAccessConfig::KAccessConfig(QObject *parent, const QVariantList& args)
 
     setButtons(ConfigModule::Apply | ConfigModule::Default | ConfigModule::Help);
     setAboutData(about);
+
+    connect(m_data->bellSettings(), &BellSettings::configChanged, this, &KAccessConfig::bellIsDefaultsChanged);
+    connect(m_data->mouseSettings(), &MouseSettings::configChanged, this, &KAccessConfig::mouseIsDefaultsChanged);
+    connect(m_data->keyboardFiltersSettings(), &ScreenReaderSettings::configChanged, this, &KAccessConfig::keyboardFiltersIsDefaultsChanged);
+    connect(m_data->keyboardSettings(), &ScreenReaderSettings::configChanged, this, &KAccessConfig::keyboardModifiersIsDefaultsChanged);
+    connect(m_data->screenReaderSettings(), &ScreenReaderSettings::configChanged, this, &KAccessConfig::screenReaderIsDefaultsChanged);
 }
 
 KAccessConfig::~KAccessConfig()
@@ -217,7 +223,7 @@ void KAccessConfig::save()
 {
     ManagedConfigModule::save();
 
-    if (m_bellSettings->systemBell() || m_bellSettings->customBell() || m_bellSettings->visibleBell()) {
+    if (bellSettings()->systemBell() || bellSettings()->customBell() || bellSettings()->visibleBell()) {
         KConfig _cfg(QStringLiteral("kdeglobals"), KConfig::NoGlobals);
         KConfigGroup cfg(&_cfg, "General");
         cfg.writeEntry("UseSystemBell", true);
@@ -248,6 +254,56 @@ bool KAccessConfig::orcaInstalled()
     int tryOrcaRun = QProcess::execute(QStringLiteral("orca"), {QStringLiteral("--version")});
     // If the process cannot be started, -2 is returned.
     return tryOrcaRun != -2;
+}
+
+MouseSettings *KAccessConfig::mouseSettings() const
+{
+    return m_data->mouseSettings();
+}
+
+BellSettings *KAccessConfig::bellSettings() const
+{
+    return m_data->bellSettings();
+}
+
+KeyboardSettings *KAccessConfig::keyboardSettings() const
+{
+    return m_data->keyboardSettings();
+}
+
+KeyboardFiltersSettings *KAccessConfig::keyboardFiltersSettings() const
+{
+    return m_data->keyboardFiltersSettings();
+}
+
+ScreenReaderSettings *KAccessConfig::screenReaderSettings() const
+{
+    return m_data->screenReaderSettings();
+}
+
+bool KAccessConfig::bellIsDefaults() const
+{
+    return bellSettings()->isDefaults();
+}
+
+bool KAccessConfig::mouseIsDefaults() const
+{
+    return mouseSettings()->isDefaults();
+}
+
+bool KAccessConfig::keyboardFiltersIsDefaults() const
+{
+    return keyboardFiltersSettings()->isDefaults();
+}
+
+bool KAccessConfig::keyboardModifiersIsDefaults() const
+{
+    return keyboardSettings()->isDefaults();
+}
+
+bool KAccessConfig::screenReaderIsDefaults() const
+{
+    return screenReaderSettings()->isDefaults();
 }
 
 #include "kcmaccess.moc"

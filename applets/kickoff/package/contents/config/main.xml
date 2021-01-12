@@ -1,43 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
-      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
-  <kcfgfile name=""/>
-
-  <group name="General">
-    <entry name="switchTabsOnHover" type="Bool">
-      <label>Whether to switch between menu tabs by hovering them.</label>
-      <default>true</default>
-    </entry>
-    <entry name="showAppsByName" type="Bool">
-      <label>Whether to display specific application names instead of their generic names (e.g. Dolphin instead of File Manager).</label>
-      <default>true</default>
-    </entry>
-    <entry name="icon" type="String">
-      <label>The name of the icon used in the compact representation (e.g. on a small panel).</label>
-      <default>start-here-kde</default>
-    </entry>
-    <entry name="favorites" type="StringList">
-      <label>List of general favorites. Supported values are menu id's (usually .desktop file names), special URLs that expand into default applications (e.g. preferred://browser), document URLs and KPeople contact URIs.</label>
-      <default>preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover.desktop</default>
-    </entry>
-    <entry name="favoritesPortedToKAstats" type="Bool">
-      <label>Are the favorites ported to use KActivitiesStats to allow per-activity favorites</label>
-      <default>false</default>
-    </entry>
-    <entry name="systemApplications" type="StringList">
-      <label>List of applications at the top of the "Computer" tab.</label>
-      <default>systemsettings.desktop,org.kde.kinfocenter.desktop,org.kde.discover.desktop</default>
-    </entry>
-
-    <entry name="menuItems" type="StringList">
-      <label>The menu tabs to show.</label>
-      <default>bookmark:t,application:t,computer:t,used:t,oftenUsed:f,leave:t</default>
-    </entry>
-    <entry name="alphaSort" type="Bool">
-      <label>Whether to sort menu contents alphabetically or use manual/system sort order.</label>
-      <default>false</default>
-    </entry>
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+    http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name=""/>
+    <group name="General">
+        <entry name="switchTabsOnHover" type="Bool">
+            <label>Whether to switch between menu tabs by hovering them.</label>
+            <default>true</default>
+        </entry>
+        <entry name="icon" type="String">
+            <label>The name of the icon used in the compact representation (e.g. on a small panel).</label>
+            <default>start-here-kde</default>
+        </entry>
+            <entry name="favorites" type="StringList">
+            <label>List of general favorites. Supported values are menu id's (usually .desktop file names), special URLs that expand into default applications (e.g. preferred://browser), document URLs and KPeople contact URIs.</label>
+            <default>preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover.desktop</default>
+        </entry>
+        <entry name="systemFavorites" type="StringList">
+            <label>List of system action favorites.</label>
+            <default>suspend,hibernate,reboot,shutdown</default>
+        </entry>
+            <entry name="primaryActions" type="Int">
+            <label>Which actions should be displayed in the footer: 0 = Power, 1 = Session, 2 = Custom</label>
+            <default>0</default>
+        </entry>
+        <entry name="favoritesPortedToKAstats" type="Bool">
+            <label>Are the favorites ported to use KActivitiesStats to allow per-activity favorites</label>
+            <default>false</default>
+        </entry>
+        <entry name="systemApplications" type="StringList">
+            <label>List of applications at the top of the "Computer" tab.</label>
+            <default>systemsettings.desktop,org.kde.kinfocenter.desktop,org.kde.discover.desktop</default>
+        </entry>
+            <entry name="favoritesDisplay" type="Int">
+            <label>How to display favorites: 0 = Grid, 1 = List</label>
+        <default>0</default>
+        </entry>
+        <entry name="gridAllowTwoLines" type="Bool">
+            <label>Whether to allow showing two lines in grid view.</label>
+            <default>true</default>
+        </entry>
+        <entry name="alphaSort" type="Bool">
+            <label>Whether to sort menu contents alphabetically or use manual/system sort order.</label>
+            <default>false</default>
+        </entry>
     </group>
 </kcfg>

@@ -1,5 +1,6 @@
 /*
  *  Copyright 2013 David Edmundson <davidedmundson@kde.org>
+ *  Copyright (C) 2021 by Mikel Johnson <mikel5764@gmail.com>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -16,7 +17,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.5
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.5
 
@@ -28,9 +29,11 @@ ColumnLayout {
 
     property string cfg_icon: plasmoid.configuration.icon
     property alias cfg_switchTabsOnHover: switchTabsOnHoverCheckbox.checked
-    property alias cfg_showAppsByName: showApplicationsByNameCheckbox.checked
+    property int cfg_favoritesDisplay: plasmoid.configuration.favoritesDisplay
+    property alias cfg_gridAllowTwoLines: gridAllowTwoLines.checked
     property alias cfg_alphaSort: alphaSort.checked
-    property alias cfg_menuItems: configButtons.menuItems
+    property var cfg_systemFavorites: String(plasmoid.configuration.systemFavorites)
+    property int cfg_primaryActions: plasmoid.configuration.primaryActions
 
     Kirigami.FormLayout {
         Button {
@@ -52,7 +55,7 @@ ColumnLayout {
                 id: previewFrame
                 anchors.centerIn: parent
                 imagePath: plasmoid.location === PlasmaCore.Types.Vertical || plasmoid.location === PlasmaCore.Types.Horizontal
-                         ? "widgets/panel-background" : "widgets/background"
+                        ? "widgets/panel-background" : "widgets/background"
                 width: PlasmaCore.Units.iconSizes.large + fixedMargins.left + fixedMargins.right
                 height: PlasmaCore.Units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
 
@@ -89,15 +92,13 @@ ColumnLayout {
 
         CheckBox {
             id: switchTabsOnHoverCheckbox
-
             Kirigami.FormData.label: i18n("General:")
-
             text: i18n("Switch tabs on hover")
         }
 
         CheckBox {
-            id: showApplicationsByNameCheckbox
-            text: i18n("Show applications by name")
+            id: alphaSort
+            text: i18n("Always sort applications alphabetically")
         }
 
         Button {
@@ -106,21 +107,74 @@ ColumnLayout {
             onPressed: KQuickAddons.KCMShell.open(["kcm_plasmasearch"])
         }
 
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        RadioButton {
+            id: showFavoritesInGrid
+            Kirigami.FormData.label: i18n("Show favorites:")
+            text: i18n("In a grid")
+            ButtonGroup.group: displayGroup
+            property int index: 0
+            checked: plasmoid.configuration.favoritesDisplay == index
+        }
+
+        RadioButton {
+            id: showFavoritesInList
+            text: i18n("In a list")
+            ButtonGroup.group: displayGroup
+            property int index: 1
+            checked: plasmoid.configuration.favoritesDisplay == index
+        }
+
         CheckBox {
-            id: alphaSort
-            text: i18n("Sort alphabetically")
+            id: gridAllowTwoLines
+            text: i18n("Allow label to have two lines")
+            enabled: showFavoritesInGrid.checked
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        RadioButton {
+            id: powerActionsButton
+            Kirigami.FormData.label: i18n("Primary actions:")
+            text: i18n("Power actions")
+            ButtonGroup.group: radioGroup
+            property string actions: "suspend,hibernate,reboot,shutdown"
+            property int index: 0
+            checked: plasmoid.configuration.primaryActions == index
+        }
+
+        RadioButton {
+            id: sessionActionsButton
+            text: i18n("Session actions")
+            ButtonGroup.group: radioGroup
+            property string actions: "lock-screen,logout,save-session,switch-user"
+            property int index: 1
+            checked: plasmoid.configuration.primaryActions == index
         }
     }
 
-    ConfigButtons {
-        id: configButtons
-        Layout.alignment: Qt.AlignHCenter
+    ButtonGroup {
+        id: displayGroup
+        onCheckedButtonChanged: {
+            if (checkedButton) {
+                cfg_favoritesDisplay = checkedButton.index
+            }
+        }
     }
-    Label {
-        Layout.fillWidth: true
-        text: i18n("Drag tabs between the boxes to show/hide them, or reorder the visible tabs by dragging.")
-        wrapMode: Text.WordWrap
-        horizontalAlignment: Text.AlignHCenter
+
+    ButtonGroup {
+        id: radioGroup
+        onCheckedButtonChanged: {
+            if (checkedButton) {
+                cfg_primaryActions = checkedButton.index
+                cfg_systemFavorites = checkedButton.actions
+            }
+        }
     }
 
     Item {

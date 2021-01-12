@@ -44,12 +44,12 @@ Item {
         PlasmaCore.IconItem {
             Layout.minimumWidth: PlasmaCore.Units.iconSizes.huge
             Layout.minimumHeight: PlasmaCore.Units.iconSizes.huge
-            source: "data-warning"
+            source: "dialog-error"
             Layout.alignment: Qt.AlignHCenter
         }
 
         PlasmaExtras.Heading {
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Oops! There was an error loading %1.", root.errorInformation.appletName)
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Sorry! There was an error loading %1.", root.errorInformation.appletName)
             level: 2
             wrapMode: Text.Wrap
             horizontalAlignment: Text.AlignHCenter

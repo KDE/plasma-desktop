@@ -2,6 +2,7 @@
     Copyright (C) 2011  Martin Gräßlin <mgraesslin@kde.org>
     Copyright (C) 2012  Gregor Taetzner <gregor@freenet.de>
     Copyright (C) 2015-2018  Eike Hein <hein@kde.org>
+    Copyright (C) 2021 by Mikel Johnson <mikel5764@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -19,9 +20,7 @@
 */
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.plasma.components 2.0 as PlasmaComponents
-
+import org.kde.plasma.components 3.0 as PC3
 
 FocusScope {
     id: view
@@ -30,14 +29,13 @@ FocusScope {
     signal addBreadcrumb(var model, string title)
 
     readonly property Item listView: listView
-    readonly property Item scrollArea: scrollArea
 
-    property bool showAppsByName: true
     property bool appView: false
 
     property alias model: listView.model
     property alias delegate: listView.delegate
     property alias currentIndex: listView.currentIndex
+
     property alias currentItem: listView.currentItem
     property alias count: listView.count
     property alias interactive: listView.interactive
@@ -46,12 +44,48 @@ FocusScope {
     property alias move: listView.move
     property alias moveDisplaced: listView.moveDisplaced
 
+    // left sidebar app list
+    property bool isManagerMode: false
+
+    // left sidebar places list
+    property bool isExternalManagerMode: false
+
+    property alias section: listView.section
+
+    // Accessibility NOTE: We don't name panes because doing so would be annoying and redundant
+
+    property bool upsideDown: false
+
     function incrementCurrentIndex() {
-        listView.incrementCurrentIndex();
+        if (listView.currentIndex < listView.count - 1) {
+            listView.incrementCurrentIndex();
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function decrementCurrentIndex() {
+        if (listView.currentIndex > 0) {
+            listView.decrementCurrentIndex();
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function keyNavDown() {
+        if (upsideDown) {
+            return view.decrementCurrentIndex()
+        } else {
+            return view.incrementCurrentIndex()
+        }
     }
 
-    function decrementCurrentIndex() {
-        listView.decrementCurrentIndex();
+    function keyNavUp() {
+        if (upsideDown) {
+            return view.incrementCurrentIndex()
+        } else {
+            return view.decrementCurrentIndex()
+        }
     }
 
     Connections {
@@ -59,33 +93,134 @@ FocusScope {
 
         function onExpandedChanged() {
             if (!plasmoid.expanded) {
-                listView.positionViewAtBeginning();
+                listView.positionAtBeginning()
             }
         }
     }
 
-    PlasmaExtras.ScrollArea {
-        id: scrollArea
-        frameVisible: false
+    // This only applies to the left sidebar
+    // If we're hovering over items quickly they change instantly
+    // however if we stop on one item (section) we add a delay
+    // so that we can stop accidental category switching when going from left sidebar to the right one
+    // that way you can move your cursor diagonally without switching sections
+    // and still have highlight following instantly when quickly hovering over sections
+    // thus preventing feeling of sluggishness
+
+    Timer {
+        id: changedIndexRecently
+        // this is an interaction and not an animation, so we want it as a constant
+        interval: 300
+        repeat: false
+    }
+
+    Timer {
+        id: delayedActivation
+        // interaction time needs to be a constant
+        interval: 250
+        repeat: false
+        property int indexToGoTo: -1
+        onTriggered: {
+            if (indexToGoTo !== -1) {
+                listView.currentIndex = indexToGoTo
+                indexToGoTo = -1
+            }
+        }
+    }
+
+    PC3.ScrollView {
         anchors.fill: parent
+        PC3.ScrollBar.horizontal.visible: false
+        focus: true
 
         ListView {
+            currentIndex: 0
+            onCurrentIndexChanged: {
+                if (currentIndex != -1) {
+                    // stop reporting list count when index changes
+                    accessibilityCount = false
+                    if (view.isManagerMode || view.isExternalManagerMode) {
+                        changedIndexRecently.restart()
+                    }
+                    if (view.isExternalManagerMode) {
+                        model.trigger(currentIndex)
+                        return;
+                    }
+                    if (view.isManagerMode && currentItem.appView && currentItem.modelChildren) {
+                        view.activatedItem = view.currentItem;
+                        view.moveRight();
+                    }
+                }
+            }
             id: listView
-        
+            property int listBeginningMargin: currentSection == "" && (!view.appView || view.isManagerMode) ? PlasmaCore.Units.largeSpacing : 0 // don't add margin in the right app view or when sections are present
+            property int listEndMargin: (contentHeight + listBeginningMargin) > parent.height ? PlasmaCore.Units.largeSpacing : 0
+            clip: currentSection == "" && view.appView && !view.isManagerMode //clip only in the right app view where breadcrumb is present
+
+            topMargin: view.upsideDown ? listEndMargin : listBeginningMargin
+            bottomMargin: view.upsideDown ? listBeginningMargin : listEndMargin
+
             focus: true
-            
-            keyNavigationWraps: true
+
+            verticalLayoutDirection: view.upsideDown ? ListView.BottomToTop : ListView.TopToBottom
+
+            // Currently narrator only notifies about focus changes
+            // That means that if item has focus narrator won't notify about name/description changes, like count changing
+            // which is most apparent with submenus
+            // We work around this by having the first focused item having the list count and name as a description
+            // When we unfocus it goes back to only reporting it's name
+            // That way we create a seamless experience where when model changes we always report the new item count
+
+            // Determines whether or not we tell the amount of items in the list
+            property bool accessibilityCount: true
+
+            // we report item amount when model changes
+            onModelChanged: {
+                accessibilityCount = true
+            }
+
+            // and also when we focus on our list
+            onActiveFocusChanged: {
+                accessibilityCount = true
+            }
+
+            // Let root handle keyboard interaction
+            Keys.forwardTo: [root]
+
+            function positionAtBeginning() {
+                positionViewAtBeginning();
+                // positionViewAtBeginning doesn't account for margins
+                // move content manually only if it overflows
+                if (visibleArea.heightRatio !== 1.0) {
+                    if (view.upsideDown) {
+                        contentY += topMargin;
+                    } else {
+                        contentY -= topMargin;
+                    }
+                }
+                currentIndex = 0;
+            }
             boundsBehavior: Flickable.StopAtBounds
-            
-            highlight: KickoffHighlight {}
+            property bool hasKeyboardFocus: navigationMethod.inSearch || (keyboardNavigation.state == (view.isManagerMode || view.isExternalManagerMode  ? "LeftColumn" : "RightColumn"))
+
+            highlight: Item {
+                opacity: navigationMethod.state != "keyboard" || (listView.hasKeyboardFocus && listView.activeFocus) ? 1 : 0.5
+                PlasmaCore.FrameSvgItem {
+                    anchors {
+                        fill: parent
+                        leftMargin: PlasmaCore.Units.smallSpacing * 4
+                        rightMargin: PlasmaCore.Units.smallSpacing * 4
+                    }
+                    imagePath: "widgets/viewitem"
+                    prefix: "hover"
+                }
+            }
             highlightMoveDuration : 0
             highlightResizeDuration: 0
 
             delegate: KickoffItem {
                 id: delegateItem
-
+                isManagerMode: view.isManagerMode
                 appView: view.appView
-                showAppsByName: view.showAppsByName
 
                 onReset: view.reset()
                 onAddBreadcrumb: view.addBreadcrumb(model, title)
@@ -100,7 +235,7 @@ FocusScope {
             MouseArea {
                 anchors.left: parent.left
 
-                width: scrollArea.viewport.width
+                width: parent.width
                 height: parent.height
 
                 id: mouseArea
@@ -112,6 +247,13 @@ FocusScope {
 
                 hoverEnabled: true
                 acceptedButtons: Qt.LeftButton | Qt.RightButton
+
+                onExited: {
+                    if (view.isManagerMode || view.isExternalManagerMode) {
+                        delayedActivation.stop();
+                        delayedActivation.indexToGoTo = -1;
+                    }
+                }
 
                 onPressed: {
                     var mapped = listView.mapToItem(listView.contentItem, mouse.x, mouse.y);
@@ -142,12 +284,15 @@ FocusScope {
                             if (mouse.source == Qt.MouseEventSynthesizedByQt) {
                                 positionChanged(mouse);
                             }
-                            view.state = "OutgoingLeft";
+                            if (isManagerMode && view.currentItem && !view.currentItem.modelChildren) {
+                                view.activatedItem = view.currentItem;
+                                view.moveRight();
+                            } else if (!isManagerMode) {
+                                view.state = "OutgoingLeft";
+                            }
                         } else {
                             item.activate();
                         }
-
-                        listView.currentIndex = -1;
                     }
                     if (tapAndHold && mouse.source == Qt.MouseEventSynthesizedByQt) {
                         if (item.hasActionList) {
@@ -166,9 +311,22 @@ FocusScope {
                     var item = listView.itemAt(mapped.x, mapped.y);
 
                     if (item) {
-                        listView.currentIndex = item.itemIndex;
-                    } else {
-                        listView.currentIndex = -1;
+                        navigationMethod.state = "mouse"
+                        if (!navigationMethod.inSearch) {
+                            if (view.isManagerMode || view.isExternalManagerMode) {
+                                keyboardNavigation.state = "LeftColumn"
+                            } else {
+                                keyboardNavigation.state = "RightColumn"
+                            }
+                        }
+                        if (kickoff.dragSource == null || kickoff.dragSource == item) {
+                            if ((!view.isManagerMode && !view.isExternalManagerMode) || changedIndexRecently.running || mouse.source == Qt.MouseEventSynthesizedByQt) {
+                                listView.currentIndex = item.itemIndex;
+                            } else {
+                                delayedActivation.indexToGoTo = item.itemIndex;
+                                delayedActivation.start()
+                            }
+                        }
                     }
 
                     if (mouse.source != Qt.MouseEventSynthesizedByQt || tapAndHold) {

@@ -4,6 +4,7 @@
     Copyright (C) 2012  Marco Martin <mart@kde.org>
     Copyright (C) 2013  David Edmundson <davidedmundson@kde.org>
     Copyright (C) 2015  Eike Hein <hein@kde.org>
+    Copyright (C) 2021 by Mikel Johnson <mikel5764@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -22,11 +23,8 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 
-import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.plasmoid 2.0 as PlasmaPlasmoid
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
@@ -39,14 +37,14 @@ Item {
         || plasmoid.location === PlasmaCore.Types.LeftEdge)
     readonly property bool vertical: (plasmoid.formFactor === PlasmaCore.Types.Vertical)
 
-    Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 20
-    Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 30
+    PlasmaPlasmoid.Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 28
+    PlasmaPlasmoid.Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 20
 
-    Plasmoid.fullRepresentation: FullRepresentation {}
+    PlasmaPlasmoid.Plasmoid.fullRepresentation: FullRepresentation {}
 
-    Plasmoid.icon: plasmoid.configuration.icon
+    PlasmaPlasmoid.Plasmoid.icon: plasmoid.configuration.icon
 
-    Plasmoid.compactRepresentation: MouseArea {
+    PlasmaPlasmoid.Plasmoid.compactRepresentation: MouseArea {
         id: compactRoot
 
         Layout.minimumWidth: {
@@ -108,6 +106,7 @@ Item {
 
         Timer {
             id: expandOnDragTimer
+            // this is an interaction and not an animation, so we want it as a constant
             interval: 250
             running: compactDragArea.containsDrag
             onTriggered: plasmoid.expanded = true

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="kaccessrc" />
+  <group name="Keyboard">
+    <entry name="SlowKeys" key="SlowKeys" type="Bool">
+      <label>Use slow keypresses</label>
+      <default>false</default>
+    </entry>
+    <entry name="SlowKeysDelay" key="SlowKeysDelay" type="Int">
+      <label>Delay for the key press</label>
+      <default>500</default>
+    </entry>
+    <entry name="SlowKeysPressBeep" key="SlowKeysPressBeep" type="Bool">
+      <label>Beep on a slow keypress</label>
+      <default>true</default>
+    </entry>
+    <entry name="SlowKeysAcceptBeep" key="SlowKeysAcceptBeep" type="Bool">
+      <label>Beep on an accepted keypress</label>
+      <default>true</default>
+    </entry>
+    <entry name="SlowKeysRejectBeep" key="SlowKeysRejectBeep" type="Bool">
+      <label>Beep on a rejected keypress</label>
+      <default>true</default>
+    </entry>
+    <entry name="BounceKeys" key="BounceKeys" type="Bool">
+      <label>Bounce Keys</label>
+      <default>false</default>
+    </entry>
+    <entry name="BounceKeysDelay" key="BounceKeysDelay" type="Int">
+      <label>Use a delay for bouncing</label>
+      <default>500</default>
+    </entry>
+    <entry name="BounceKeysRejectBeep" key="BounceKeysRejectBeep" type="Bool">
+      <label>Beep if a bounce key event is rejected</label>
+      <default>false</default>
+    </entry>
+  </group>
+</kcfg>

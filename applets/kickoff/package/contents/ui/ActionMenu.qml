@@ -1,6 +1,7 @@
 /***************************************************************************
  *   Copyright (C) 2013 by Aurélien Gâteau <agateau@kde.org>               *
  *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
+ *   Copyright (C) 2021 by Mikel Johnson <mikel5764@gmail.com>             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -20,26 +21,18 @@
 
 import QtQuick 2.0
 
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 2.0 as PlasmaComponents // for Menu + MenuItem
 
 Item {
-    id: root
+    id: actionMenuRoot
 
     property QtObject menu
     property Item visualParent
     property variant actionList
-    property bool opened: menu ? (menu.status !== PlasmaComponents.DialogStatus.Closed) : false
 
     signal actionClicked(string actionId, variant actionArgument)
-    signal closed
 
     onActionListChanged: refreshMenu();
-
-    onOpenedChanged: {
-        if (!opened) {
-            closed();
-        }
-    }
 
     function open(x, y) {
         if (!actionList || !actionList.length) {
@@ -62,7 +55,7 @@ Item {
             return;
         }
 
-        menu = contextMenuComponent.createObject(root);
+        menu = contextMenuComponent.createObject(actionMenuRoot);
 
         // actionList.forEach(function(actionItem) {
         //     var item = contextMenuItemComponent.createObject(menu, {
@@ -78,7 +71,7 @@ Item {
             if (actionItem.subActions) {
                 // This is a menu
                 var submenuItem = contextSubmenuItemComponent.createObject(
-                                          menu, { "actionItem" : actionItem });
+                                        menu, { "actionItem" : actionItem });
 
                 fillMenu(submenuItem.submenu, actionItem.subActions);
 
@@ -97,8 +90,8 @@ Item {
     Component {
         id: contextMenuComponent
 
-        PlasmaComponents.ContextMenu {
-            visualParent: root.visualParent
+        PlasmaComponents.Menu {
+            visualParent: actionMenuRoot.visualParent
         }
     }
 
@@ -115,7 +108,7 @@ Item {
 
             property variant submenu : submenu_
 
-            PlasmaComponents.ContextMenu {
+            PlasmaComponents.Menu {
                 id: submenu_
                 visualParent: submenuItem.action
             }
@@ -137,7 +130,7 @@ Item {
             checked   : actionItem.checked ? actionItem.checked : false
 
             onClicked: {
-                actionClicked(actionItem.actionId, actionItem.actionArgument);
+                actionMenuRoot.actionClicked(actionItem.actionId, actionItem.actionArgument);
             }
         }
     }

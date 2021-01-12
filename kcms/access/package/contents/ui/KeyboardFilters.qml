@@ -21,7 +21,7 @@
 import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.12 as QQC2
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcm 1.3 as KCM
 
 import org.kde.kirigami 2.3 as Kirigami
 
@@ -32,10 +32,13 @@ Kirigami.FormLayout {
         Kirigami.FormData.label: i18n("Slow keys:")
         text: i18nc("Enable slow keys", "Enable")
 
-        enabled: !kcm.keyboardSettings.isImmutable("SlowKeys")
+        KCM.SettingStateBinding {
+            configObject: kcm.keyboardFiltersSettings
+            settingName: "SlowKeys"
+        }
 
-        checked: kcm.keyboardSettings.slowKeys
-        onToggled: kcm.keyboardSettings.slowKeys = checked
+        checked: kcm.keyboardFiltersSettings.slowKeys
+        onToggled: kcm.keyboardFiltersSettings.slowKeys = checked
     }
 
     QQC2.SpinBox {
@@ -43,9 +46,14 @@ Kirigami.FormLayout {
 
         Kirigami.FormData.label: i18nc("Slow keys Delay", "Delay:")
 
-        enabled: !kcm.keyboardSettings.isImmutable("SlowKeysDelay") && kcm.keyboardSettings.slowKeys
+        KCM.SettingStateBinding {
+            configObject: kcm.keyboardFiltersSettings
+            settingName: "SlowKeysDelay"
+            extraEnabledConditions: kcm.keyboardFiltersSettings.slowKeys
+        }
 
-        onValueChanged: kcm.keyboardSettings.slowKeysDelay = value
+        value: kcm.keyboardFiltersSettings.slowKeysDelay
+        onValueChanged: kcm.keyboardFiltersSettings.slowKeysDelay = value
     }
     Item {
         Kirigami.FormData.isSection: true
@@ -56,30 +64,42 @@ Kirigami.FormLayout {
         Kirigami.FormData.label: i18n("Ring system bell:")
         text: i18nc("Use system bell when a key is pressed", "&when any key is pressed")
 
-        enabled: !kcm.keyboardSettings.isImmutable("SlowKeysPressBeep") && kcm.keyboardSettings.slowKeys
+        KCM.SettingStateBinding {
+            configObject: kcm.keyboardFiltersSettings
+            settingName: "SlowKeysPressBeep"
+            extraEnabledConditions: kcm.keyboardFiltersSettings.slowKeys
+        }
 
-        checked: kcm.keyboardSettings.slowKeysPressBeep
-        onToggled: kcm.keyboardSettings.slowKeysPressBeep = checked
+        checked: kcm.keyboardFiltersSettings.slowKeysPressBeep
+        onToggled: kcm.keyboardFiltersSettings.slowKeysPressBeep = checked
     }
     QQC2.CheckBox {
         id: slowKeysAcceptBeep
 
         text: i18nc("Use system bell when a key is accepted", "&when any key is accepted")
 
-        enabled: !kcm.keyboardSettings.isImmutable("SlowKeysAcceptBeep") && kcm.keyboardSettings.slowKeys
+        KCM.SettingStateBinding {
+            configObject: kcm.keyboardFiltersSettings
+            settingName: "SlowKeysAcceptBeep"
+            extraEnabledConditions: kcm.keyboardFiltersSettings.slowKeys
+        }
 
-        checked: kcm.keyboardSettings.slowKeysAcceptBeep
-        onToggled: kcm.keyboardSettings.slowKeysAcceptBeep = checked
+        checked: kcm.keyboardFiltersSettings.slowKeysAcceptBeep
+        onToggled: kcm.keyboardFiltersSettings.slowKeysAcceptBeep = checked
     }
     QQC2.CheckBox {
         id: slowKeysRejectBeep
 
         text: i18nc("Use system bell when a key is rejected", "&when any key is rejected")
 
-        enabled: !kcm.keyboardSettings.isImmutable("SlowKeysRejectBeep") && kcm.keyboardSettings.slowKeys
+        KCM.SettingStateBinding {
+            configObject: kcm.keyboardFiltersSettings
+            settingName: "SlowKeysRejectBeep"
+            extraEnabledConditions: kcm.keyboardFiltersSettings.slowKeys
+        }
 
-        checked: kcm.keyboardSettings.slowKeysRejectBeep
-        onToggled: kcm.keyboardSettings.slowKeysRejectBeep = checked
+        checked: kcm.keyboardFiltersSettings.slowKeysRejectBeep
+        onToggled: kcm.keyboardFiltersSettings.slowKeysRejectBeep = checked
     }
     Item {
         Kirigami.FormData.isSection: true
@@ -90,10 +110,13 @@ Kirigami.FormLayout {
         Kirigami.FormData.label: i18n("Bounce keys:")
         text: i18nc("Bounce keys enable", "Enable");
 
-        enabled: !kcm.keyboardSettings.isImmutable("BounceKeys")
+        KCM.SettingStateBinding {
+            configObject: kcm.keyboardFiltersSettings
+            settingName: "BounceKeys"
+        }
 
-        checked: kcm.keyboardSettings.bounceKeys
-        onToggled: kcm.keyboardSettings.bounceKeys = checked
+        checked: kcm.keyboardFiltersSettings.bounceKeys
+        onToggled: kcm.keyboardFiltersSettings.bounceKeys = checked
     }
 
     QQC2.SpinBox {
@@ -101,9 +124,14 @@ Kirigami.FormLayout {
 
         Kirigami.FormData.label: i18nc("Bounce keys delay", "Delay:")
 
-        enabled: !kcm.keyboardSettings.isImmutable("BounceKeysDelay") && kcm.keyboardSettings.bounceKeys
+        KCM.SettingStateBinding {
+            configObject: kcm.keyboardFiltersSettings
+            settingName: "BounceKeysDelay"
+            extraEnabledConditions: kcm.keyboardFiltersSettings.bounceKeys
+        }
 
-        onValueChanged: kcm.keyboardSettings.bounceDelay = value
+        value: kcm.keyboardFiltersSettings.bounceKeysDelay
+        onValueChanged: kcm.keyboardFiltersSettings.bounceKeysDelay = value
     }
 
     QQC2.CheckBox {
@@ -111,9 +139,13 @@ Kirigami.FormLayout {
 
         text: i18n("Ring system bell when rejected")
 
-        enabled: !kcm.keyboardSettings.isImmutable("BounceKeysRejectBeep") && kcm.keyboardSettings.bounceKeys
+        KCM.SettingStateBinding {
+            configObject: kcm.keyboardFiltersSettings
+            settingName: "BounceKeysRejectBeep"
+            extraEnabledConditions: kcm.keyboardFiltersSettings.bounceKeys
+        }
 
-        checked: kcm.keyboardSettings.bounceKeysRejectBeep
-        onToggled: kcm.keyboardSettings.bounceKeysRejectBeep = checked
+        checked: kcm.keyboardFiltersSettings.bounceKeysRejectBeep
+        onToggled: kcm.keyboardFiltersSettings.bounceKeysRejectBeep = checked
     }
 }

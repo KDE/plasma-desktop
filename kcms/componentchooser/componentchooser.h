@@ -1,100 +1,70 @@
 /***************************************************************************
-                          componentchooser.h  -  description
-                             -------------------
-    copyright            : (C) 2002 by Joseph Wenninger <jowenn@kde.org>
-    copyright            : (C) 2020 by Méven Car <meven.car@enioka.com>
- ***************************************************************************/
-
-/***************************************************************************
+ *   Copyright (C) 2020 Tobias Fella <fella@posteo.de>                     *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
- *   it under the terms of the GNU General Public License version 2 as     *
- *   published by the Free Software Foundation                             *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
  *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA          *
  ***************************************************************************/
 
-#ifndef _COMPONENTCHOOSER_H_
-#define _COMPONENTCHOOSER_H_
+#ifndef COMPONENTCHOOSER_H
+#define COMPONENTCHOOSER_H
 
-#include "ui_componentchooser_ui.h"
-#include <QHash>
+#include <QString>
+#include <QVariant>
 
-#include <QComboBox>
+#include <optional>
 
-#include <KService>
+#include <KLocalizedString>
 
-class QWidget;
-class KConfig;
-
-class CfgPlugin : public QComboBox
+class ComponentChooser : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(QVariantList applications MEMBER m_applications NOTIFY applicationsChanged)
+    Q_PROPERTY(int index MEMBER m_index NOTIFY indexChanged)
+    Q_PROPERTY(bool isDefaults READ isDefaults NOTIFY isDefaultsChanged)
 
 public:
-    CfgPlugin(QWidget *parent): QComboBox(parent) {}
-	virtual ~CfgPlugin(){}
-	virtual void load(KConfig *cfg)=0;
-    virtual void save(KConfig *cfg)=0;
 
-    bool hasChanged() const
-    {
-        return count() > 1 && m_currentIndex != currentIndex();
-    }
+    ComponentChooser(QObject *parent, const QString &mimeType, const QString &type, const QString &defaultApplication, const QString &dialogText);
 
-    void defaults()
-    {
-        if (m_defaultIndex != -1) {
-            setCurrentIndex(m_defaultIndex);
-        }
-    }
+    void defaults();
+    virtual void load();
+    bool isDefaults() const;
+    bool isSaveNeeded() const;
 
-    int validLastCurrentIndex() const
-    {
-        // m_currentIndex == -1 means there are no previously saved value
-        // or maybe there were no choices in the combobox
-        // return 0 in those cases
-        return m_currentIndex == -1 ? 0 : m_currentIndex;
-    }
+    Q_INVOKABLE void select(int index);
 
-    bool isDefaults() const
-    {
-        return m_defaultIndex == -1 || m_defaultIndex == currentIndex();
-    }
+
+    virtual void save() = 0;
+    void saveMimeTypeAssociation(const QString &mime, const QString &storageId);
+
+    bool isDefault() const;
 
 Q_SIGNALS:
-    void changed(bool);
+    void applicationsChanged();
+    void indexChanged();
+    void isDefaultsChanged();
 
 protected:
-    // the currently saved selected option
-    int m_currentIndex = -1;
-    // the index default of the default option
-    int m_defaultIndex = -1;
+    QVariantList m_applications;
+    int m_index;
+    std::optional<int> m_defaultIndex;
+    QString m_mimeType;
+    QString m_type;
+    QString m_defaultApplication;
+    QString m_previousApplication;
+    QString m_dialogText;
 };
-
-class ComponentChooser : public QWidget, public Ui::ComponentChooser_UI
-{
-
-Q_OBJECT
-
-public:
-	ComponentChooser(QWidget *parent=nullptr);
-	~ComponentChooser() override;
-	void load();
-	void save();
-	void restoreDefault();
-
-private:
-    QMap<QString, CfgPlugin*> configWidgetMap;
-
-    CfgPlugin *loadConfigWidget(const QString &cfgType);
-
-protected Q_SLOTS:
-    void emitChanged();
-
-Q_SIGNALS:
-	void changed(bool);
-	void defaulted(bool);
-};
-
 
 #endif
