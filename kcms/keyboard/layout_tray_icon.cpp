@@ -104,7 +104,7 @@ void LayoutTrayIcon::layoutChanged()
     const QIcon icon(getFlag(layoutUnit.layout()));
 	m_notifierItem->setToolTipIconByPixmap(icon);
 
-	QIcon textOrIcon = flags->getIconWithText(layoutUnit, keyboardConfig);
+	QIcon textOrIcon = flags->getIconWithText(layoutUnit, keyboardConfig, Flags::ColorType::Plasma);
 	m_notifierItem->setIconByPixmap( textOrIcon );
 }
 

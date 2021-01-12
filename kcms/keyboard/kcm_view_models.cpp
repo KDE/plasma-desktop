@@ -134,7 +134,7 @@ QVariant LayoutsTableModel::data(const QModelIndex &index, int role) const
          switch( index.column() ) {
          case DISPLAY_NAME_COLUMN: {
              // if(keyboardConfig->isFlagShown()) {
-             QIcon icon = countryFlags->getIconWithText(layoutUnit, *keyboardConfig);
+             QIcon icon = countryFlags->getIconWithText(layoutUnit, *keyboardConfig, Flags::ColorType::ColorScheme);
              return icon.isNull() ? countryFlags->getTransparentPixmap() : icon;
              // }
          }

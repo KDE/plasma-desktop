@@ -26,6 +26,7 @@
 
 #include <QStandardPaths>
 #include <QStringList>
+#include <QPalette>
 #include <QPixmap>
 #include <QPainter>
 #include <QIcon>
@@ -213,7 +214,7 @@ QString getPixmapKey(const KeyboardConfig& keyboardConfig)
 	return QStringLiteral("_");	// should not happen
 }
 
-void Flags::drawLabel(QPainter& painter, const QString& layoutText, bool flagShown)
+void Flags::drawLabel(QPainter& painter, const QString& layoutText, bool flagShown, ColorType colorType)
 {
 	QFont font = painter.font();
     QRect rect = painter.window();
@@ -223,14 +224,21 @@ void Flags::drawLabel(QPainter& painter, const QString& layoutText, bool flagSho
 	// we init svg so that we get notification about theme change
 	getSvg();
 
-    const QColor textColor = flagShown ? Qt::black : Plasma::Theme().color(Plasma::Theme::TextColor);
+	QColor textColor;
+	if (flagShown) {
+		textColor = Qt::black;
+	} else if (colorType == ColorType::Plasma) {
+		textColor = Plasma::Theme().color(Plasma::Theme::TextColor);
+	} else {
+		textColor = QPalette().color(QPalette::Text);
+	}
 
     painter.setPen(textColor);
     painter.setFont(font);
     painter.drawText(rect, Qt::AlignCenter, layoutText);
 }
 
-const QIcon Flags::getIconWithText(const LayoutUnit& layoutUnit, const KeyboardConfig& keyboardConfig)
+const QIcon Flags::getIconWithText(const LayoutUnit& layoutUnit, const KeyboardConfig& keyboardConfig, ColorType colorType)
 {
 	const QString keySuffix(getPixmapKey(keyboardConfig));
 	const QString key(layoutUnit.toString() + keySuffix);
@@ -261,7 +269,7 @@ const QIcon Flags::getIconWithText(const LayoutUnit& layoutUnit, const KeyboardC
         painter.drawPixmap(pixmap.rect(), iconf.pixmap(TRAY_ICON_SIZE));
 	}
 
-	drawLabel(painter, layoutText, keyboardConfig.isFlagShown());
+	drawLabel(painter, layoutText, keyboardConfig.isFlagShown(), colorType);
 
     painter.end();
 

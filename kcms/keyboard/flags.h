@@ -42,8 +42,13 @@ public:
 	Flags();
 	~Flags() override;
 
+	enum ColorType {
+		Plasma = Qt::UserRole,
+		ColorScheme
+	};
+
 	const QIcon getIcon(const QString& layout);
-	const QIcon getIconWithText(const LayoutUnit& layoutUnit, const KeyboardConfig& keyboardConfig);
+	const QIcon getIconWithText(const LayoutUnit& layoutUnit, const KeyboardConfig& keyboardConfig, ColorType colorType = ColorType::Plasma);
 	const QPixmap& getTransparentPixmap() const { return *transparentPixmap; }
 
 	static QString getLongText(const LayoutUnit& layoutUnit, const Rules* rules);
@@ -60,7 +65,7 @@ Q_SIGNALS:
 private:
 	QIcon createIcon(const QString& layout);
 	QString getCountryFromLayoutName(const QString& fullLayoutName) const;
-	void drawLabel(QPainter& painter, const QString& layoutText, bool flagShown);
+	void drawLabel(QPainter& painter, const QString& layoutText, bool flagShown, ColorType colorType);
 	Plasma::Svg* getSvg();
 
 	QMap<QString, QIcon> iconMap;
