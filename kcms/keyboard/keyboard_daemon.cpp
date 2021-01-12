@@ -202,20 +202,12 @@ void KeyboardDaemon::layoutMapChanged()
 
 void KeyboardDaemon::switchToNextLayout()
 {
-	qCDebug(KCM_KEYBOARD) << "Toggling layout";
-	X11Helper::switchToNextLayout();
+	X11Helper::scrollLayouts(1);
+}
 
-        LayoutUnit newLayout = X11Helper::getCurrentLayout();
-
-        QDBusMessage msg = QDBusMessage::createMethodCall(
-        QStringLiteral("org.kde.plasmashell"),
-        QStringLiteral("/org/kde/osdService"),
-        QStringLiteral("org.kde.osdService"),
-        QStringLiteral("kbdLayoutChanged"));
-
-        msg << Flags::getLongText(newLayout, rules);
-
-        QDBusConnection::sessionBus().asyncCall(msg);
+void KeyboardDaemon::switchToPreviousLayout()
+{
+	X11Helper::scrollLayouts(-1);
 }
 
 bool KeyboardDaemon::setLayout(QAction* action)
