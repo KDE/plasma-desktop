@@ -1,3 +1,3 @@
 #! /usr/bin/env bash
 $EXTRACTRC `find . -name \*.kcfg` >> rc.cpp
-$XGETTEXT `find . -name "*.cpp" -o -name "*.qml"` -o $podir/kcm5_componentchooser.pot
+$XGETTEXT `find . -name "*.cpp" -o -name "*.qml"` -o $podir/kcm_componentchooser.pot
