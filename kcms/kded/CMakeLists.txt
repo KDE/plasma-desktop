@@ -5,6 +5,7 @@ set(kcm_kded_SRCS
     kcmkded.cpp
     modulesmodel.cpp
     filterproxymodel.cpp
+    kdedconfigdata.cpp
 )
 
 qt5_add_dbus_interface(kcm_kded_SRCS ${KDED_DBUS_INTERFACE} kded_interface)
@@ -18,7 +19,7 @@ add_library(kcm_kded MODULE ${kcm_kded_SRCS})
 
 kcoreaddons_desktop_to_json(kcm_kded "kcmkded.desktop")
 
-target_link_libraries(kcm_kded KF5::QuickAddons KF5::Service KF5::I18n Qt5::DBus)
+target_link_libraries(kcm_kded KF5::QuickAddons KF5::Service KF5::I18n KF5::KCMUtils Qt5::DBus)
 
 install(TARGETS kcm_kded  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms )
 
