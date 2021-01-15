@@ -125,56 +125,57 @@ void User::setPath(const QDBusObjectPath &path) {
 
     mPath = path;
 
-    auto update = [=]() {
-        bool userDataChanged = false;
-        if (mUid != m_dbusIface->uid()) {
-            mUid = m_dbusIface->uid();
-            userDataChanged = true;
-            Q_EMIT uidChanged();
-        }
-        if (mName != m_dbusIface->userName()) {
-            mName = m_dbusIface->userName();
-            userDataChanged = true;
-            Q_EMIT nameChanged();
-        }
-        if (mFace != QUrl(m_dbusIface->iconFile())) {
-            mFace = QUrl(m_dbusIface->iconFile());
-            mFaceValid = QFileInfo::exists(mFace.toString());
-            userDataChanged = true;
-            Q_EMIT faceChanged();
-            Q_EMIT faceValidChanged();
-        }
-        if (mRealName != m_dbusIface->realName()) {
-            mRealName = m_dbusIface->realName();
-            userDataChanged = true;
-            Q_EMIT realNameChanged();
-        }
-        if (mEmail != m_dbusIface->email()) {
-            mEmail = m_dbusIface->email();
-            userDataChanged = true;
-            Q_EMIT emailChanged();
-        }
-        const auto administrator = (m_dbusIface->accountType() == 1);
-        if (mAdministrator != administrator) {
-            mAdministrator = administrator;
-            userDataChanged = true;
-            Q_EMIT administratorChanged();
-        }
-        const auto loggedIn = (mUid == getuid());
-        if (mLoggedIn != loggedIn) {
-            mLoggedIn = loggedIn;
-            userDataChanged = true;
-        }
-        if (userDataChanged) {
-            Q_EMIT dataChanged();
-        }
-    };
-
     connect(m_dbusIface, &OrgFreedesktopAccountsUserInterface::Changed, [=]() {
-        update();
+        loadData();
     });
 
-    update();
+    loadData();
+}
+
+void User::loadData()
+{
+    bool userDataChanged = false;
+    if (mUid != m_dbusIface->uid()) {
+        mUid = m_dbusIface->uid();
+        userDataChanged = true;
+        Q_EMIT uidChanged();
+    }
+    if (mName != m_dbusIface->userName()) {
+        mName = m_dbusIface->userName();
+        userDataChanged = true;
+        Q_EMIT nameChanged();
+    }
+    if (mFace != QUrl(m_dbusIface->iconFile())) {
+        mFace = QUrl(m_dbusIface->iconFile());
+        mFaceValid = QFileInfo::exists(mFace.toString());
+        userDataChanged = true;
+        Q_EMIT faceChanged();
+        Q_EMIT faceValidChanged();
+    }
+    if (mRealName != m_dbusIface->realName()) {
+        mRealName = m_dbusIface->realName();
+        userDataChanged = true;
+        Q_EMIT realNameChanged();
+    }
+    if (mEmail != m_dbusIface->email()) {
+        mEmail = m_dbusIface->email();
+        userDataChanged = true;
+        Q_EMIT emailChanged();
+    }
+    const auto administrator = (m_dbusIface->accountType() == 1);
+    if (mAdministrator != administrator) {
+        mAdministrator = administrator;
+        userDataChanged = true;
+        Q_EMIT administratorChanged();
+    }
+    const auto loggedIn = (mUid == getuid());
+    if (mLoggedIn != loggedIn) {
+        mLoggedIn = loggedIn;
+        userDataChanged = true;
+    }
+    if (userDataChanged) {
+        Q_EMIT dataChanged();
+    }
 }
 
 static char
@@ -236,10 +237,12 @@ void User::apply()
     connect(job, &UserApplyJob::result, this, [this, job] {
         switch (static_cast<UserApplyJob::Error>(job->error())) {
         case UserApplyJob::Error::PermissionDenied:
+            loadData(); // Reload the old data to avoid half transactions
             Q_EMIT applyError(i18n("Could not get permission to save user %1", mName));
             break;
         case UserApplyJob::Error::Failed:
         case UserApplyJob::Error::Unknown:
+            loadData(); // Reload the old data to avoid half transactions
             Q_EMIT applyError(i18n("There was an error while saving changes"));
             break;
         case UserApplyJob::Error::NoError: ; // Do nothing
@@ -276,14 +279,26 @@ UserApplyJob::UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIfa
 
 void UserApplyJob::start()
 {
+    // With our UI the user expects the as a single transaction, but the accountsservice API does not provide that
+    // When one of the writes fails, e.g. because the user cancelled the authentication dialog then none of the values should be applied
+    // Not all calls trigger an authentication dialog, e.g. SetRealName for the current user does not but SetAccountType does
+    // Therefore make a blocking call to SetAccountType first to trigger the auth dialog. If the user declines don't attempt to write anything else
+    // This avoids settings any data when the user thinks they aborted the transaction, see https://bugs.kde.org/show_bug.cgi?id=425036
+    // Subsequent calls do not trigger the auth dialog again
+    auto setAccount = m_dbusIface->SetAccountType(m_type);
+    setAccount.waitForFinished();
+    if (setAccount.isError()) {
+        setError(setAccount.error());
+        qCWarning(KCMUSERS) << setAccount.error().name() << setAccount.error().message();
+        emitResult();
+        return;
+    }
+
     const std::multimap<QString,QDBusPendingReply<> (OrgFreedesktopAccountsUserInterface::*)(const QString&)> set = {
         {m_name, &OrgFreedesktopAccountsUserInterface::SetUserName},
         {m_email, &OrgFreedesktopAccountsUserInterface::SetEmail},
         {m_realname, &OrgFreedesktopAccountsUserInterface::SetRealName},
     };
-    // Do our dbus invocations with blocking calls, since the accounts service
-    // will return permission denied if there's a polkit dialog open while a 
-    // request is made.
     for (auto const &x: set) {
         auto resp = (m_dbusIface->*(x.second))(x.first);
         resp.waitForFinished();
@@ -331,12 +346,6 @@ void UserApplyJob::start()
         }
     }
 
-    auto setAccount = m_dbusIface->SetAccountType(m_type);
-    setAccount.waitForFinished();
-    if (setAccount.isError()) {
-        setError(setAccount.error());
-        qCWarning(KCMUSERS) << setAccount.error().name() << setAccount.error().message();
-    }
     emitResult();
 }
 

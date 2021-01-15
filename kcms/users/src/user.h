@@ -101,6 +101,8 @@ public:
      void setAdministrator(bool value);
      void setPath(const QDBusObjectPath &path);
 
+     void loadData();
+
      QString _() { return QString(); };
 
 public Q_SLOTS:
