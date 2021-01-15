@@ -44,13 +44,16 @@ Kirigami.OverlaySheet {
     ColumnLayout {
         id: mainColumn
         spacing: Kirigami.Units.smallSpacing
-        Layout.preferredWidth: Kirigami.Units.gridUnit * 15
 
         // We don't use a FormLayout here because layouting breaks at small widths.
         ColumnLayout {
+            Layout.preferredWidth: Kirigami.Units.gridUnit * 15
             Layout.alignment: Qt.AlignHCenter
             Kirigami.PasswordField {
                 id: passwordField
+
+                Layout.fillWidth: true
+
                 placeholderText: i18n("Password")
 
                 onAccepted: {
@@ -59,10 +62,12 @@ Kirigami.OverlaySheet {
                     }
                 }
 
-                Layout.alignment: Qt.AlignLeft
             }
             Kirigami.PasswordField {
                 id: verifyField
+
+                Layout.fillWidth: true
+
                 placeholderText: i18n("Confirm password")
 
                 onAccepted: {
@@ -70,14 +75,11 @@ Kirigami.OverlaySheet {
                         passButton.apply()
                     }
                 }
-
-                Layout.alignment: Qt.AlignLeft
             }
             Kirigami.InlineMessage {
                 id: passwordWarning
 
                 Layout.fillWidth: true
-                Layout.maximumWidth: verifyField.width
                 type: Kirigami.MessageType.Error
                 text: i18n("Passwords must match")
                 visible: passwordField.text != "" && verifyField.text != "" && passwordField.text != verifyField.text
