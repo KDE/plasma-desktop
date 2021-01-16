@@ -24,31 +24,41 @@
 
 #include <QTimer>
 #include <QApplication>
+#include <QVBoxLayout>
+#include <QPushButton>
+#include <QDialogButtonBox>
 
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KDebug>
-#include <KVBox>
+
 //--------------------------------------------------------------
 
 CalDialog::CalDialog(QWidget *parent, JoyDevice *joy)
-  : KDialog( parent ),
+  : QDialog( parent ),
     joydev(joy)
 {
   setObjectName( QStringLiteral("calibrateDialog") );
   setModal( true );
-  setCaption( i18n("Calibration") );
-  setButtons( Cancel | User1 );
-  setDefaultButton( User1 );
-  setButtonGuiItem( User1, KGuiItem( i18n("Next") ) );
+  setWindowTitle( i18n("Calibration") );
 
-  KVBox *main = new KVBox( this );
-  setMainWidget( main );
+  QVBoxLayout *main = new QVBoxLayout( this );
+  main->setSpacing(0);
 
-  text = new QLabel(main);
+  text = new QLabel( this );
   text->setMinimumHeight(200);
-  valueLbl = new QLabel(main);
-  connect(this,&KDialog::user1Clicked,this,&CalDialog::slotUser1);
+  valueLbl = new QLabel( this );
+
+  main->addWidget(text);
+  main->addWidget(valueLbl);
+
+  QDialogButtonBox *buttonBox = new QDialogButtonBox( this );
+  buttonBox->addButton(QDialogButtonBox::Cancel);
+  QPushButton *Next = buttonBox->addButton(i18n("Next"), QDialogButtonBox::ApplyRole);
+  Next->setDefault( true );
+  main->addWidget(buttonBox);
+  setLayout(main);
+
+  connect(Next,&QPushButton::clicked,this,&CalDialog::slotNext);
 }
 
 //--------------------------------------------------------------
@@ -187,7 +197,7 @@ void CalDialog::waitButton(int axis, bool press, int &lastVal)
 //--------------------------------------------------------------
 // Next button
 
-void CalDialog::slotUser1()
+void CalDialog::slotNext()
 {
   setResult(-2);
 }

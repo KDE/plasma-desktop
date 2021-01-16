@@ -24,9 +24,9 @@
 #include "joydevice.h"
 
 #include <KAboutData>
-#include <KGlobal>
 #include <KLocalizedString>
-#include <KDialog>
+#include <QDialog>
+#include <QStyle>
 
 #include <stdio.h>
 #include <KPluginFactory>
@@ -71,7 +71,7 @@ Joystick::Joystick(QWidget *parent, const QVariantList &)
 
   QVBoxLayout *top = new QVBoxLayout(this);
   top->setContentsMargins(0, 0, 0, 0);
-  top->setSpacing(KDialog::spacingHint());
+  top->setSpacing(style()->pixelMetric(QStyle::PM_DefaultLayoutSpacing));
   top->addWidget(joyWidget);
 }
 
