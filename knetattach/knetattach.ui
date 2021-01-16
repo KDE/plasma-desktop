@@ -48,7 +48,7 @@
      </spacer>
     </item>
     <item>
-     <widget class="KButtonGroup" name="buttonGroup1">
+     <widget class="QGroupBox" name="buttonGroup1">
       <property name="title">
        <string/>
       </property>
@@ -382,12 +382,6 @@
   </widget>
  </widget>
  <customwidgets>
-  <customwidget>
-   <class>KButtonGroup</class>
-   <extends>QGroupBox</extends>
-   <header>kbuttongroup.h</header>
-   <container>1</container>
-  </customwidget>
   <customwidget>
    <class>KLineEdit</class>
    <extends>QLineEdit</extends>

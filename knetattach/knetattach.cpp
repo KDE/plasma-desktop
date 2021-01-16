@@ -22,19 +22,15 @@
 
 #include <QVariant>
 
-#include <KIO/NetAccess>
+#include <KIO/StatJob>
+#include <KJobWidgets>
 #include <KMessageBox>
 #include <QIcon>
-#include <KLocale>
-#include <KGlobalSettings>
 #include <KConfig>
 #include <KConfigGroup>
-#include <KStandardDirs>
 #include <KDirNotify>
 #include <KCharsets>
-#include <KDebug>
 #include <KRun>
-#include <KGlobal>
 #include <QDesktopServices>
 #include <QTextCodec>
 
@@ -228,9 +224,7 @@ bool KNetAttach::validateCurrentPage()
         QString name = _connectionName->text().trimmed();
 
         if (_createIcon->isChecked()) {
-            KGlobal::dirs()->addResourceType("remote_entries", "data", "remoteview");
-
-            QString path = KGlobal::dirs()->saveLocation("remote_entries");
+            QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/remoteview/");
             path += name + QStringLiteral(".desktop");
             KConfig _desktopFile( path, KConfig::SimpleConfig );
             KConfigGroup desktopFile(&_desktopFile, "Desktop Entry");
@@ -289,12 +283,9 @@ void KNetAttach::updatePort(bool encryption)
 
 bool KNetAttach::doConnectionTest(const QUrl& url)
 {
-    KIO::UDSEntry entry;
-    if (KIO::NetAccess::stat(url, entry, this)) {
-        // Anything to test here?
-        return true;
-    }
-    return false;
+    KIO::StatJob *job = KIO::stat(url);
+    KJobWidgets::setWindow(job, this);
+    return job->exec();
 }
 
 
