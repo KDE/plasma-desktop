@@ -8,6 +8,6 @@ Kirigami.FormLayout {
     CheckBox {
         checked: plasmoid.configuration.showFlag
         onCheckedChanged: plasmoid.configuration.showFlag = checked
-        text: "Show flag"
+        text: i18n("Show flag")
     }
 }
