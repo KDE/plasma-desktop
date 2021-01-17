@@ -1906,7 +1906,7 @@ void FolderModel::openPropertiesDialog()
 
 void FolderModel::linkHere(const QUrl &sourceUrl)
 {
-    KIO::CopyJob *job = KIO::link(sourceUrl, m_dirModel->dirLister()->url());
+    KIO::CopyJob *job = KIO::link(sourceUrl, m_dirModel->dirLister()->url(), KIO::HideProgressInfo);
     KIO::FileUndoManager::self()->recordCopyJob(job);
 }
 
