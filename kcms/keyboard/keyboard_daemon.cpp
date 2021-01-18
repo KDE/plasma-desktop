@@ -230,11 +230,6 @@ uint KeyboardDaemon::getLayout() const
 	return X11Helper::getGroup();
 }
 
-QString KeyboardDaemon::getLayoutLongName() const
-{
-	return Flags::getLongText(currentLayout, rules);
-}
-
 QVector<LayoutNames> KeyboardDaemon::getLayoutsList() const
 {
     QVector<LayoutNames> ret;

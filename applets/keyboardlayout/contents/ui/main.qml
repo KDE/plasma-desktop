@@ -13,6 +13,10 @@ import org.kde.plasma.workspace.components 2.0
 KeyboardLayoutButton {
     id: root
 
+    text: layoutNames.displayName || layoutNames.shortName
+    Plasmoid.toolTipSubText: layoutNames.longName
+    icon.name: iconURL(layoutNames.shortName)
+
     display: plasmoid.configuration.showFlag && icon.name ? AbstractButton.IconOnly : AbstractButton.TextOnly
     Plasmoid.status: hasMultipleKeyboardLayouts ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
@@ -22,42 +26,30 @@ KeyboardLayoutButton {
                     "kf5/locale/countries/" + name + "/flag.png")
     }
 
-    connections.target: null
-
     Connections {
         target: keyboardLayout
 
-        function onLayoutsChanged(layouts) {
+        function onLayoutsListChanged() {
             plasmoid.clearActions()
 
-            layouts.forEach(
+            keyboardLayout.layoutsList.forEach(
                 function(layout, index) {
                     plasmoid.setAction(
                         index,
                         layout.longName,
                         iconURL(layout.shortName).toString().substring(7) // remove file:// scheme
                     )
-
-                    const action = plasmoid.action(index)
-                    action.toolTip = layout.displayName || layout.shortName
-                    action.iconText = layout.shortName
                 }
             )
         }
 
-        function onLayoutChanged(index) {
-            const action = plasmoid.action(index)
-
-            text = action.toolTip
-            root.Plasmoid.toolTipSubText = action.text
-            icon.name = iconURL(action.iconText)
-
+        function onLayoutChanged() {
             root.Plasmoid.activated()
         }
     }
 
     function actionTriggered(selectedLayout) {
-        keyboardLayout.setLayout(selectedLayout)
+        keyboardLayout.layout = selectedLayout
     }
 
     // to fit at least 2 letters in systray

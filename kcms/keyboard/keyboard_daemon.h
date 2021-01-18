@@ -64,7 +64,6 @@ public Q_SLOTS:
 	Q_SCRIPTABLE void switchToPreviousLayout();
 	Q_SCRIPTABLE bool setLayout(uint index);
 	Q_SCRIPTABLE uint getLayout() const;
-	Q_SCRIPTABLE QString getLayoutLongName() const;
 	Q_SCRIPTABLE QVector<LayoutNames> getLayoutsList() const;
 
 Q_SIGNALS:
