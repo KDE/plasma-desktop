@@ -58,7 +58,7 @@ Q_SIGNALS:
 
 protected:
     QVariantList m_applications;
-    int m_index;
+    int m_index = -1;
     std::optional<int> m_defaultIndex;
     QString m_mimeType;
     QString m_type;

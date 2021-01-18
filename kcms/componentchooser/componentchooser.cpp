@@ -99,7 +99,7 @@ void ComponentChooser::load()
 
 void ComponentChooser::select(int index)
 {
-    if (m_index == index) {
+    if (m_index == index && m_applications.size() != 1) {
         return;
     }
     if (index == m_applications.length() - 1) {
