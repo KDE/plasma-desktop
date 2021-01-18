@@ -85,7 +85,7 @@ void GlobalAccelModel::load()
                 QDBusPendingReply<QList<KGlobalShortcutInfo>> reply = *watcher;
                 if (reply.isError()) {
                     genericErrorOccured(QStringLiteral("Error while calling allShortCutInfos of") + path, reply.error());
-                } else {
+                } else if (!reply.value().isEmpty()) {
                     m_components.push_back(loadComponent(reply.value()));
                 }
                 watcher->deleteLater();
@@ -276,6 +276,10 @@ void GlobalAccelModel::addApplication(const QString &desktopFileName, const QStr
             if (!infoReply.isValid()) {
                 genericErrorOccured(QStringLiteral("Error while calling allShortCutInfos on new component") + desktopFileName, infoReply.error());
                 return;
+            }
+            if (infoReply.value().isEmpty()) {
+                qCWarning(KCMKEYS()) << "New component has no shortcuts:" << reply.value().path();
+                Q_EMIT errorOccured(i18nc("%1 is the name of an application", "Error while adding %1, it seems it has no actions."));
             }
             qCDebug(KCMKEYS) << "inserting at " << pos - m_components.begin();
             beginInsertRows(QModelIndex(), pos - m_components.begin(),  pos - m_components.begin());
