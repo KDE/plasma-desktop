@@ -449,9 +449,6 @@ void Backend::handleRecentDocumentAction() const
     }
 
     KService::Ptr service = KService::serviceByDesktopPath(desktopPath);
-
-        qDebug() << service;
-
     if (!service) {
         return;
     }
