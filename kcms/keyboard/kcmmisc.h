@@ -95,9 +95,8 @@ private:
   int sliderMax;
   int clickVolume;
   KeyBehaviour keyboardRepeat;
-  enum TriState numlockState;
+  int numlockState;
 
-  QButtonGroup* _numlockButtonGroup;
   QButtonGroup* _keyboardRepeatButtonGroup;
   Ui_KeyboardConfigWidget& ui;
 };

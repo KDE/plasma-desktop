@@ -41,6 +41,7 @@
 
 #include <X11/Xlib.h>
 #include <cmath>
+#include <qcheckbox.h>
 
 namespace {
   bool hasAccentSupport() {
@@ -76,12 +77,7 @@ KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent)
   connect(ui.rate, SIGNAL(valueChanged(double)), this, SLOT(rateSpinboxChanged(double)));
   connect(ui.rateSlider, &QAbstractSlider::valueChanged, this, &KCMiscKeyboardWidget::rateSliderChanged);
 
-  _numlockButtonGroup = new QButtonGroup(ui.numlockButtonGroup);
-  _numlockButtonGroup->addButton(ui.radioButton1, 0);
-  _numlockButtonGroup->addButton(ui.radioButton2, 1);
-  _numlockButtonGroup->addButton(ui.radioButton3, 2);
-
-  connect(_numlockButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(changed()));
+  connect(ui.numlockCheckbox, &QCheckBox::stateChanged, this, [this]{ changed(); });
 
   _keyboardRepeatButtonGroup = new QButtonGroup(ui.repeatFormLayout);
   if (hasAccentSupport()) {
@@ -159,8 +155,11 @@ void KCMiscKeyboardWidget::load()
 
   //  setRepeat(kbd.global_auto_repeat, ui.delay->value(), ui.rate->value());
 
-  numlockState = TriStateHelper::getTriState(config.readEntry( "NumLock", TriStateHelper::getInt(STATE_UNCHANGED) ));
-  TriStateHelper::setTriState( _numlockButtonGroup, numlockState );
+  numlockState = config.readEntry<int>( "NumLock", TriState::STATE_OFF );
+  if (numlockState == TriState::STATE_UNCHANGED) {
+    numlockState = TriState::STATE_OFF;
+  }
+  ui.numlockCheckbox->setChecked(numlockState == TriState::STATE_ON);
 
   ui.delay->blockSignals(false);
   ui.rate->blockSignals(false);
@@ -171,19 +170,19 @@ void KCMiscKeyboardWidget::save()
   KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kcminputrc"), KConfig::NoGlobals), "Keyboard");
 
   keyboardRepeat = KeyBehaviour(_keyboardRepeatButtonGroup->checkedId());
-  numlockState = TriStateHelper::getTriState(_numlockButtonGroup);
+  numlockState = ui.numlockCheckbox->isChecked() ? TriState::STATE_ON : TriState::STATE_OFF;
 
   config.writeEntry("KeyRepeat", keybehaviourNames[KeyBehaviour(_keyboardRepeatButtonGroup->checkedId())], KConfig::Notify);
   config.writeEntry("RepeatRate", ui.rate->value(), KConfig::Notify );
   config.writeEntry("RepeatDelay", ui.delay->value(), KConfig::Notify );
-  config.writeEntry("NumLock", TriStateHelper::getInt(numlockState) );
+  config.writeEntry("NumLock", numlockState );
   config.sync();
 }
 
 void KCMiscKeyboardWidget::defaults()
 {
     setRepeat(KeyBehaviour::AccentMenu, DEFAULT_REPEAT_DELAY, DEFAULT_REPEAT_RATE);
-    TriStateHelper::setTriState( _numlockButtonGroup, STATE_UNCHANGED );
+    ui.numlockCheckbox->setChecked(false);
     emit changed(true);
 }
 
