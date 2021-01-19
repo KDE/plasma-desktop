@@ -25,7 +25,7 @@ class X11EvdevBackend;
 enum class Handed {
     Right = 0,
     Left = 1,
-    NotSupported = -1
+    NotSupported = -1,
 };
 
 struct EvdevSettings

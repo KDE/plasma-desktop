@@ -68,13 +68,13 @@ public:
         IsDefaultRole,
 
         EventIdRole,
-        ActionsRole
+        ActionsRole,
     };
     Q_ENUM(Roles)
 
     enum Type {
         ApplicationType,
-        ServiceType
+        ServiceType,
     };
     Q_ENUM(Type)
 

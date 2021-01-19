@@ -56,7 +56,7 @@ protected:
         LastTimeUsed       = KActivities::ActivitiesModel::UserRole,
         LastTimeUsedString = KActivities::ActivitiesModel::UserRole + 1,
         WindowCount        = KActivities::ActivitiesModel::UserRole + 2,
-        HasWindows         = KActivities::ActivitiesModel::UserRole + 3
+        HasWindows         = KActivities::ActivitiesModel::UserRole + 3,
     };
 
 public Q_SLOTS:

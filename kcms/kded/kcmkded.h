@@ -54,14 +54,14 @@ public:
     enum ModuleType {
         UnknownType = -1,
         AutostartType,
-        OnDemandType
+        OnDemandType,
     };
     Q_ENUM(ModuleType)
 
     enum ModuleStatus {
         UnknownStatus = -1,
         NotRunning,
-        Running
+        Running,
     };
     Q_ENUM(ModuleStatus)
 

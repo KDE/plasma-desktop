@@ -39,7 +39,7 @@ public:
 
     enum Roles {
         ApplicationIdRole = Qt::UserRole + 1,
-        BlockedApplicationRole
+        BlockedApplicationRole,
     };
 
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;

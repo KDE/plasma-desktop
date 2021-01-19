@@ -39,7 +39,7 @@ public:
         Enabled = Qt::UserRole + 1,
         Source,
         FileName,
-        OnlyInPlasma
+        OnlyInPlasma,
     };
 
     enum AutostartEntrySource {

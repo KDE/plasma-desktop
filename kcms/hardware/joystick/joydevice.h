@@ -52,13 +52,13 @@ class JoyDevice
       ERR_GET_CORR,
       ERR_RESTORE_CORR,
       ERR_INIT_CAL,
-      ERR_APPLY_CAL
+      ERR_APPLY_CAL,
     };
 
     enum EventType
     {
       BUTTON,
-      AXIS
+      AXIS,
     };
 
     // devicefile to use, e.g. "/dev/js0"

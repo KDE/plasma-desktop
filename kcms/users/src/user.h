@@ -42,7 +42,7 @@ public:
         PermissionDenied,
         Failed,
         Unknown,
-        UserFacing
+        UserFacing,
     };
 
 private:

@@ -39,12 +39,12 @@ public:
 
     enum DeviceType {
         Attached,
-        Detatched
+        Detatched,
     };
 
     enum {
         UdiRole = Qt::UserRole,
-        TypeRole
+        TypeRole,
     };
 
     Qt::ItemFlags flags(const QModelIndex &index) const override;

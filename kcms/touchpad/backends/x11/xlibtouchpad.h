@@ -30,7 +30,7 @@
 enum ParaType {
     PT_INT,
     PT_BOOL,
-    PT_DOUBLE
+    PT_DOUBLE,
 };
 
 struct Parameter {

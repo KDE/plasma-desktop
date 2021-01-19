@@ -28,7 +28,7 @@ enum class TouchpadInputBackendMode {
     Unset = 0,
     WaylandLibinput = 1,
     XLibinput = 2,
-    XSynaptics = 3
+    XSynaptics = 3,
 };
 
 class Q_DECL_EXPORT TouchpadBackend : public QObject
@@ -59,7 +59,7 @@ public:
     virtual int touchpadCount() const {return 0;}
 
     enum TouchpadOffState {
-        TouchpadEnabled, TouchpadTapAndScrollDisabled, TouchpadFullyDisabled
+        TouchpadEnabled, TouchpadTapAndScrollDisabled, TouchpadFullyDisabled,
     };
     virtual void setTouchpadOff(TouchpadOffState) {}
     virtual TouchpadOffState getTouchpadOff() {return TouchpadFullyDisabled;}

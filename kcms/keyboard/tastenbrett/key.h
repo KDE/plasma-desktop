@@ -45,7 +45,7 @@ public:
         TopLeft = 1,
         TopRight = 3,
         BottomLeft = 0,
-        BottomRight = 2
+        BottomRight = 2,
     };
     Q_ENUM(Level)
     constexpr static int levelCount = 4;

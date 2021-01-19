@@ -86,7 +86,7 @@ private:
 
     enum Direction {
         Next,
-        Previous
+        Previous,
     };
 
     void switchToActivity(Direction i);

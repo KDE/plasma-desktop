@@ -28,7 +28,7 @@
 enum class InputBackendMode {
     KWinWayland = 0,
     XLibinput = 1,
-    XEvdev = 2
+    XEvdev = 2,
 };
 
 class InputBackend : public QObject

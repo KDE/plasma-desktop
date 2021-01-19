@@ -41,7 +41,7 @@ class SearchConfigModule : public KCModule
 public:
     enum Roles {
         RunnersRole = Qt::UserRole + 1,
-        DescriptionRole
+        DescriptionRole,
     };
 
     SearchConfigModule(QWidget* parent, const QVariantList& args);

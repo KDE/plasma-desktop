@@ -60,7 +60,7 @@ private:
     enum WhatToRemember {
         AllApplications = 0,
         SpecificApplications = 1,
-        NoApplications = 2
+        NoApplications = 2,
     };
 
     D_PTR;

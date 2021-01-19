@@ -52,7 +52,7 @@ public:
     enum Roles {
         UrlRole = Qt::UserRole + 1,
         MimeTypeRole = Qt::UserRole + 2,
-        Thumbnail  = Qt::UserRole + 3
+        Thumbnail  = Qt::UserRole + 3,
     };
 
     explicit DirModel(QObject* parent=nullptr);

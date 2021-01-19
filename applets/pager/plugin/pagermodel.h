@@ -56,11 +56,11 @@ class PagerModel : public QAbstractListModel, public QQmlParserStatus
 public:
     enum PagerType {
         VirtualDesktops = 0,
-        Activities
+        Activities,
     };
 
      enum AdditionalRoles {
-         TasksModel = Qt::UserRole + 1
+         TasksModel = Qt::UserRole + 1,
      };
 
     explicit PagerModel(QObject *parent = nullptr);

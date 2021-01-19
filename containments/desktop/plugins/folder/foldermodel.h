@@ -113,20 +113,20 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
             LinkDestinationUrl,
             SizeRole,
             TypeRole,
-            FileNameRole
+            FileNameRole,
         };
 
         enum FilterMode {
             NoFilter = 0,
             FilterShowMatches,
-            FilterHideMatches
+            FilterHideMatches,
         };
 
         enum Status {
             None,
             Ready,
             Listing,
-            Canceled
+            Canceled,
         };
         Q_ENUM(Status)
 

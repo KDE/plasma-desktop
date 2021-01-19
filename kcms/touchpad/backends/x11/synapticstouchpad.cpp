@@ -188,7 +188,7 @@ SynapticsTouchpad::SynapticsTouchpad(Display *display, int deviceId): XlibTouchp
         TouchpadThreeFingerDetect,
         TouchpadPressureDetect,
         TouchpadPalmDetect,
-        TouchpadCapsCount
+        TouchpadCapsCount,
     };
 
     QVector<bool> cap(TouchpadCapsCount, false);

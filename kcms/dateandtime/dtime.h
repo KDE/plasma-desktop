@@ -114,7 +114,7 @@ private:
   enum RepaintCache {
       RepaintNone,
       RepaintAll,
-      RepaintHands
+      RepaintHands,
   };
   RepaintCache	m_repaintCache;
   QPixmap	m_faceCache;

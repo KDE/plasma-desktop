@@ -31,7 +31,7 @@ class AutomounterSettings : public AutomounterSettingsBase {
         using AutomounterSettingsBase::AutomounterSettingsBase;
         enum AutomountType {
             Login,
-            Attach
+            Attach,
         };
         KConfigGroup deviceSettings(const QString &udi);
         QStringList knownDevices();

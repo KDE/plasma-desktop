@@ -268,7 +268,7 @@ public:
         SHOW_AUX,
         HIDE_AUX,
         SHOW_HELP,
-        SHOW_FACTORY_MENU
+        SHOW_FACTORY_MENU,
     }
     ;
     DBusEvent(SCIM_EVENT_TYPE t, const QVariantList &arglist = QVariantList())

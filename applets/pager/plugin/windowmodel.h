@@ -32,7 +32,7 @@ class WindowModel : public TaskManager::TaskFilterProxyModel
 
 public:
     enum WindowModelRoles {
-        StackingOrder = Qt::UserRole + 1
+        StackingOrder = Qt::UserRole + 1,
     };
 
     explicit WindowModel(PagerModel *parent);

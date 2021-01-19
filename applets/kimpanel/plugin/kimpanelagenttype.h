@@ -31,7 +31,7 @@ struct TextAttribute {
         None,
         Decorate,
         Foreground,
-        Background
+        Background,
     };
     Type type;
     int start;

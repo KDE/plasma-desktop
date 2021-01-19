@@ -37,7 +37,7 @@ const double DEFAULT_REPEAT_RATE = 25.0;
 enum KeyBehaviour {
   AccentMenu = 0,
   RepeatKey = 1,
-  DoNothing = 2
+  DoNothing = 2,
 };
 
 const QMap<KeyBehaviour,QString> keybehaviourNames = {
@@ -47,7 +47,7 @@ const QMap<KeyBehaviour,QString> keybehaviourNames = {
 };
 
 enum TriState {
-	STATE_ON = 0,  STATE_OFF = 1, STATE_UNCHANGED = 2
+	STATE_ON = 0,  STATE_OFF = 1, STATE_UNCHANGED = 2,
 };
 
 class TriStateHelper {

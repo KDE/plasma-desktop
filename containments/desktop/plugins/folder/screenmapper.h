@@ -41,7 +41,7 @@ class FOLDERPLUGIN_TESTS_EXPORT ScreenMapper : public QObject
 public:
     enum MappingSignalBehavior {
         DelayedSignal = 0,
-        ImmediateSignal
+        ImmediateSignal,
     };
 
     static ScreenMapper *instance();

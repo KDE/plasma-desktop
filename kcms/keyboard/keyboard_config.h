@@ -41,13 +41,13 @@ public:
 		SWITCH_POLICY_GLOBAL = 0,
 		SWITCH_POLICY_DESKTOP = 1,
 		SWITCH_POLICY_APPLICATION = 2,
-		SWITCH_POLICY_WINDOW = 3
+		SWITCH_POLICY_WINDOW = 3,
 	};
 
 	enum IndicatorType {
 		SHOW_LABEL = 0,
 		SHOW_FLAG = 1,
-		SHOW_LABEL_ON_FLAG = 2
+		SHOW_LABEL_ON_FLAG = 2,
 	};
 
 	QString keyboardModel;

@@ -52,7 +52,7 @@ class Backend : public QObject
             NewInstance,
             ToggleMinimized,
             ToggleGrouping,
-            BringToCurrentDesktop
+            BringToCurrentDesktop,
         };
 
         Q_ENUM(MiddleClickAction)

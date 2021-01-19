@@ -39,7 +39,7 @@ public:
     enum Roles {
         PluginNameRole = Qt::UserRole +1,
         ScreenshotRole,
-        DescriptionRole
+        DescriptionRole,
     };
 
     KCMSplashScreen(QObject* parent, const QVariantList& args);
