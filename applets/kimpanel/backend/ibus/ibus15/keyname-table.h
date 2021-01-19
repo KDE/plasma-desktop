@@ -21,6 +21,7 @@
  *
  * Do not edit.   
  */
+// clang-format off
 static const char keynames[] =
   "space\0"
   "exclam\0"
@@ -4033,3 +4034,4 @@ NC_("keyboard label", "XF86WakeUp")
 NC_("keyboard label", "XF86Suspend")
 
 #endif
+// clang-format on

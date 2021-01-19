@@ -129,12 +129,12 @@ void PrivacyTab::load()
 void PrivacyTab::save()
 {
     d->blacklistedApplicationsModel->save();
-    
+    // clang-format off
     const auto whatToRemember =
         d->radioRememberSpecificApplications->isChecked() ? SpecificApplications :
         d->radioDontRememberApplications->isChecked()     ? NoApplications :
         /* otherwise */                                     AllApplications;
-    
+    // clang-format on
     d->mainConfig->setResourceScoringEnabled(whatToRemember != NoApplications);
     d->mainConfig->save();
 }

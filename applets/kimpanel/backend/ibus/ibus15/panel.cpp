@@ -992,6 +992,7 @@ ibus_panel_impanel_class_init (IBusPanelImpanelClass *klass)
 {
     GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
+    // clang-format off
     IBUS_OBJECT_CLASS (object_class)->destroy = (IBusObjectDestroyFunc) ibus_panel_impanel_destroy;
     IBUS_PANEL_SERVICE_CLASS (object_class)->focus_in                   = ibus_panel_impanel_focus_in;
     IBUS_PANEL_SERVICE_CLASS (object_class)->focus_out                  = ibus_panel_impanel_focus_out;
@@ -1016,6 +1017,7 @@ ibus_panel_impanel_class_init (IBusPanelImpanelClass *klass)
     IBUS_PANEL_SERVICE_CLASS (object_class)->show_preedit_text          = ibus_panel_impanel_show_preedit_text;
     IBUS_PANEL_SERVICE_CLASS (object_class)->start_setup                = ibus_panel_impanel_start_setup;
     IBUS_PANEL_SERVICE_CLASS (object_class)->state_changed              = ibus_panel_impanel_state_changed;
+    // clang-format on
 }
 
 static void

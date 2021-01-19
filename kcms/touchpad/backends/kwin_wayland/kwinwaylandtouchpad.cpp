@@ -192,6 +192,7 @@ bool KWinWaylandTouchpad::applyConfig()
 
 bool KWinWaylandTouchpad::isChangedConfig() const
 {
+    // clang-format off
     return m_enabled.changed() ||
             m_leftHanded.changed() ||
             m_pointerAcceleration.changed() ||
@@ -211,6 +212,7 @@ bool KWinWaylandTouchpad::isChangedConfig() const
             m_scrollButton.changed() ||
             m_clickMethodAreas.changed() ||
             m_clickMethodClickfinger.changed();
+    // clang-format on
 }
 
 template<typename T>

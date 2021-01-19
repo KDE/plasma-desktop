@@ -340,7 +340,7 @@ bool LibinputTouchpad::getDefaultConfig()
 
 bool LibinputTouchpad::isChangedConfig()
 {
-
+    // clang-format off
     bool changed = m_enabled.changed() ||
             m_tapToClick.changed() ||
             m_lrmTapButtonMap.changed() ||
@@ -362,6 +362,7 @@ bool LibinputTouchpad::isChangedConfig()
             m_scrollButton.changed() ||
             m_clickMethodAreas.changed() ||
             m_clickMethodClickfinger.changed();
+    // clang-format on
 
     return changed;
 }
