@@ -135,7 +135,9 @@ void KeyboardDaemon::registerShortcut()
 		QAction* toggleLayoutAction = actionCollection->getToggleAction();
 		connect(toggleLayoutAction, &QAction::triggered, this, &KeyboardDaemon::switchToNextLayout);
 		actionCollection->loadLayoutShortcuts(keyboardConfig.layouts, rules);
+        // clang-format off
 		connect(actionCollection, SIGNAL(actionTriggered(QAction*)), this, SLOT(setLayout(QAction*)));
+        // clang-format on
     }
 }
 
@@ -143,7 +145,9 @@ void KeyboardDaemon::unregisterShortcut()
 {
 	// register KDE keyboard shortcut for switching layouts
     if( actionCollection != nullptr ) {
+        // clang-format off
 		disconnect(actionCollection, SIGNAL(actionTriggered(QAction*)), this, SLOT(setLayout(QAction*)));
+        // clang-format on
         disconnect(actionCollection->getToggleAction(), &QAction::triggered, this, &KeyboardDaemon::switchToNextLayout);
 
         delete actionCollection;

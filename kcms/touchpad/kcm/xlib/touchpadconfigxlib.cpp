@@ -215,8 +215,9 @@ TouchpadConfigXlib::TouchpadConfigXlib(TouchpadConfigContainer *parent, Touchpad
     m_kdedTab->setEnabled(false);
     QDBusPendingCallWatcher *watch;
     watch = new QDBusPendingCallWatcher(m_daemon->workingTouchpadFound(), this);
-    connect(watch, SIGNAL(finished(QDBusPendingCallWatcher*)),
-            SLOT(gotReplyFromDaemon(QDBusPendingCallWatcher*)));
+    // clang-format off
+    connect(watch, SIGNAL(finished(QDBusPendingCallWatcher*)), SLOT(gotReplyFromDaemon(QDBusPendingCallWatcher*)));
+    // clang-format on
 
     // Testing area
 

@@ -210,6 +210,7 @@ void ShortcutsModel::addSourceModel(QAbstractItemModel *sourceModel)
 {
     Q_ASSERT(sourceModel);
     Q_ASSERT(!d->m_models.contains(sourceModel));
+    // clang-format off
     connect(sourceModel, SIGNAL(dataChanged(QModelIndex,QModelIndex,QVector<int>)), this, SLOT(slotDataChanged(QModelIndex,QModelIndex,QVector<int>)));
     connect(sourceModel, SIGNAL(rowsInserted(QModelIndex,int,int)), this, SLOT(slotRowsInserted(QModelIndex,int,int)));
     connect(sourceModel, SIGNAL(rowsRemoved(QModelIndex,int,int)), this, SLOT(slotRowsRemoved(QModelIndex,int,int)));
@@ -227,6 +228,7 @@ void ShortcutsModel::addSourceModel(QAbstractItemModel *sourceModel)
             this, SLOT(slotSourceLayoutChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)));
     connect(sourceModel, SIGNAL(modelAboutToBeReset()), this, SLOT(slotModelAboutToBeReset()));
     connect(sourceModel, SIGNAL(modelReset()), this, SLOT(slotModelReset()));
+    // clang-format on
 
     const int newRows = sourceModel->rowCount();
     if (newRows > 0) {
