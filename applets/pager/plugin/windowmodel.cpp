@@ -66,9 +66,9 @@ QHash<int, QByteArray> WindowModel::roleNames() const
 
     QMetaEnum e = metaObject()->enumerator(metaObject()->indexOfEnumerator("WindowModelRoles"));
 
-     for (int i = 0; i < e.keyCount(); ++i) {
-         roles.insert(e.value(i), e.key(i));
-     }
+    for (int i = 0; i < e.keyCount(); ++i) {
+        roles.insert(e.value(i), e.key(i));
+    }
 
     return roles;
 }
@@ -92,8 +92,7 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
                 y = y + desktopGeo.height();
             }
 
-            const QRect mappedGeo(x - windowGeo.width() / 2, y - windowGeo.height() / 2,
-                windowGeo.width(), windowGeo.height());
+            const QRect mappedGeo(x - windowGeo.width() / 2, y - windowGeo.height() / 2, windowGeo.width(), windowGeo.height());
 
             if (filterByScreen() && screenGeometry().isValid()) {
                 const QPoint &screenOffset = screenGeometry().topLeft();

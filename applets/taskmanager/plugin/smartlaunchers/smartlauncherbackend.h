@@ -20,9 +20,9 @@
 #ifndef SMARTLAUNCHER_BACKEND_H
 #define SMARTLAUNCHER_BACKEND_H
 
-#include <QObject>
 #include <QDBusContext>
 #include <QHash>
+#include <QObject>
 #include <QVariantMap>
 
 #include <notificationmanager/jobsmodel.h>
@@ -35,10 +35,9 @@ namespace NotificationManager
 class Settings;
 }
 
-namespace SmartLauncher {
-
-struct Entry
+namespace SmartLauncher
 {
+struct Entry {
     int count = 0;
     bool countVisible = false;
     int progress = 0;
@@ -84,7 +83,7 @@ private:
 
     void onServiceUnregistered(const QString &service);
 
-    template <typename T>
+    template<typename T>
     void updateLauncherProperty(const QString &storageId, // our KService storage id
                                 const QVariantMap &properties, // the map of properties we're given by DBus
                                 const QString &property, // the property we're looking for
@@ -104,7 +103,7 @@ private:
             const T newSanitizedValue = ((this)->*getter)(storageId);
 
             if (newSanitizedValue != oldSanitizedValue) {
-                emit ((this)->*changeSignal)(storageId, newSanitizedValue);
+                emit((this)->*changeSignal)(storageId, newSanitizedValue);
             }
         }
     }
@@ -130,7 +129,6 @@ private:
     QStringList m_badgeBlacklist;
 
     bool m_available = false;
-
 };
 
 } // namespace SmartLauncher

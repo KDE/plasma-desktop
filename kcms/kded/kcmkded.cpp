@@ -31,13 +31,13 @@
 #include <KAboutData>
 #include <KConfig>
 #include <KConfigGroup>
-#include <KPluginFactory>
 #include <KLocalizedString>
+#include <KPluginFactory>
 
 #include <algorithm>
 
-#include "modulesmodel.h"
 #include "filterproxymodel.h"
+#include "modulesmodel.h"
 
 #include "kded_interface.h"
 #include "kdedconfigdata.h"
@@ -46,30 +46,28 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcmkded.json", registerPlugin<KDEDC
 
 static const QString s_kdedServiceName = QStringLiteral("org.kde.kded5");
 
-KDEDConfig::KDEDConfig(QObject* parent, const QVariantList &args)
-	: KQuickAddons::ConfigModule(parent, args)
+KDEDConfig::KDEDConfig(QObject *parent, const QVariantList &args)
+    : KQuickAddons::ConfigModule(parent, args)
     , m_model(new ModulesModel(this))
     , m_filteredModel(new FilterProxyModel(this))
-    , m_kdedInterface(new org::kde::kded5(s_kdedServiceName,
-                                          QStringLiteral("/kded"),
-                                          QDBusConnection::sessionBus()))
-    , m_kdedWatcher(new QDBusServiceWatcher(s_kdedServiceName,
-                                            QDBusConnection::sessionBus(),
-                                            QDBusServiceWatcher::WatchForOwnerChange, this))
+    , m_kdedInterface(new org::kde::kded5(s_kdedServiceName, QStringLiteral("/kded"), QDBusConnection::sessionBus()))
+    , m_kdedWatcher(new QDBusServiceWatcher(s_kdedServiceName, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this))
 {
     qmlRegisterUncreatableType<KDEDConfig>("org.kde.private.kcms.style", 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
     // FIXME Qt 5.14 qmlRegisterAnonymousType
     qmlRegisterType<ModulesModel>();
     qmlRegisterType<FilterProxyModel>();
 
-    KAboutData *about = new KAboutData(QStringLiteral("kcm5_kded"), i18n("Background Services"),
-        QStringLiteral("2.0"), QString(), KAboutLicense::GPL,
-        i18n("(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik")
-    );
-	about->addAuthor(i18n("Daniel Molkentin"), QString(),QStringLiteral("molkentin@kde.org"));
-    about->addAuthor(i18n("Kai Uwe Broulik"), QString(),QStringLiteral("kde@broulik.de"));
+    KAboutData *about = new KAboutData(QStringLiteral("kcm5_kded"),
+                                       i18n("Background Services"),
+                                       QStringLiteral("2.0"),
+                                       QString(),
+                                       KAboutLicense::GPL,
+                                       i18n("(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"));
+    about->addAuthor(i18n("Daniel Molkentin"), QString(), QStringLiteral("molkentin@kde.org"));
+    about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@broulik.de"));
     setAboutData(about);
-    setButtons(Apply|Default|Help);
+    setButtons(Apply | Default | Help);
 
     m_filteredModel->setSourceModel(m_model);
 
@@ -78,8 +76,7 @@ KDEDConfig::KDEDConfig(QObject* parent, const QVariantList &args)
         setRepresentsDefaults(m_model->representsDefault());
     });
 
-    connect(m_kdedWatcher, &QDBusServiceWatcher::serviceOwnerChanged, this,
-        [this](const QString &service, const QString &oldOwner, const QString &newOwner) {
+    connect(m_kdedWatcher, &QDBusServiceWatcher::serviceOwnerChanged, this, [this](const QString &service, const QString &oldOwner, const QString &newOwner) {
         Q_UNUSED(service)
         Q_UNUSED(oldOwner)
         setKdedRunning(!newOwner.isEmpty());
@@ -130,8 +127,7 @@ void KDEDConfig::stopModule(const QString &moduleName)
 
 void KDEDConfig::startOrStopModule(const QString &moduleName, ModuleStatus status)
 {
-    auto call = (status == NotRunning ? m_kdedInterface->unloadModule(moduleName)
-                                      : m_kdedInterface->loadModule(moduleName));
+    auto call = (status == NotRunning ? m_kdedInterface->unloadModule(moduleName) : m_kdedInterface->loadModule(moduleName));
 
     QDBusPendingCallWatcher *callWatcher = new QDBusPendingCallWatcher(call, this);
     connect(callWatcher, &QDBusPendingCallWatcher::finished, this, [this, moduleName, status](QDBusPendingCallWatcher *watcher) {
@@ -216,7 +212,7 @@ void KDEDConfig::load()
 
 void KDEDConfig::save()
 {
-	KConfig kdedrc(QStringLiteral("kded5rc"), KConfig::NoGlobals);
+    KConfig kdedrc(QStringLiteral("kded5rc"), KConfig::NoGlobals);
 
     for (int i = 0; i < m_model->rowCount(); ++i) {
         const QModelIndex idx = m_model->index(i, 0);

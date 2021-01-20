@@ -39,26 +39,24 @@
 // one device
 class JoyDevice
 {
-  public:
-    enum ErrorCode
-    {
-      SUCCESS,
-      OPEN_FAILED,
-      NO_JOYSTICK,
-      WRONG_VERSION,
-      ERR_GET_VERSION,
-      ERR_GET_BUTTONS,
-      ERR_GET_AXES,
-      ERR_GET_CORR,
-      ERR_RESTORE_CORR,
-      ERR_INIT_CAL,
-      ERR_APPLY_CAL,
+public:
+    enum ErrorCode {
+        SUCCESS,
+        OPEN_FAILED,
+        NO_JOYSTICK,
+        WRONG_VERSION,
+        ERR_GET_VERSION,
+        ERR_GET_BUTTONS,
+        ERR_GET_AXES,
+        ERR_GET_CORR,
+        ERR_RESTORE_CORR,
+        ERR_INIT_CAL,
+        ERR_APPLY_CAL,
     };
 
-    enum EventType
-    {
-      BUTTON,
-      AXIS,
+    enum EventType {
+        BUTTON,
+        AXIS,
     };
 
     // devicefile to use, e.g. "/dev/js0"
@@ -71,18 +69,33 @@ class JoyDevice
     // return descriptive error text for given error code
     QString errText(ErrorCode code) const;
 
-    int fd() const { return joyFd; }
+    int fd() const
+    {
+        return joyFd;
+    }
     void close();
     ErrorCode restoreCorr();
 
     // return devicefilename from constructor
-    const QString &device() const { return devName; }
+    const QString &device() const
+    {
+        return devName;
+    }
 
     // descriptive text for this device read from the driver
-    QString text() const { return descr; }
+    QString text() const
+    {
+        return descr;
+    }
 
-    int numButtons() const { return buttons; }
-    int numAxes() const { return axes; }
+    int numButtons() const
+    {
+        return buttons;
+    }
+    int numAxes() const
+    {
+        return axes;
+    }
     int axisMin(int axis) const;
     int axisMax(int axis) const;
 
@@ -90,7 +103,7 @@ class JoyDevice
     bool getEvent(JoyDevice::EventType &type, int &number, int &value);
 
     // methods for calibration
-    ErrorCode initCalibration();  // must be called first
+    ErrorCode initCalibration(); // must be called first
     void calcPrecision();
 
     void resetMinMax(int axis, int value = 0);
@@ -100,18 +113,18 @@ class JoyDevice
     void calcCorrection(int axis, int *min, int *center, int *max);
     ErrorCode applyCalibration();
 
-  private:
-    QString devName;  // device filename
-    QString descr;    // descriptive text
+private:
+    QString devName; // device filename
+    QString descr; // descriptive text
     int joyFd;
 
     int buttons;
     int axes;
-    int *amin;  // axes min values
-    int *amax;  // axes max values
+    int *amin; // axes min values
+    int *amax; // axes max values
 
-    struct js_corr *corr;  // calibration values during the calib. steps
-    struct js_corr *origCorr;  // original calibration correction values
+    struct js_corr *corr; // calibration values during the calib. steps
+    struct js_corr *origCorr; // original calibration correction values
 };
 
 #endif

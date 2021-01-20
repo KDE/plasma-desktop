@@ -19,23 +19,23 @@
 #ifndef XLIBBACKEND_H
 #define XLIBBACKEND_H
 
-#include <QMap>
-#include <QSet>
-#include <QScopedPointer>
 #include <QLatin1String>
-#include <QStringList>
+#include <QMap>
+#include <QScopedPointer>
+#include <QSet>
 #include <QSharedPointer>
+#include <QStringList>
 #include <QX11Info>
 
-#include "touchpadbackend.h"
-#include "xlibtouchpad.h"
 #include "libinputtouchpad.h"
 #include "synapticstouchpad.h"
+#include "touchpadbackend.h"
+#include "xlibtouchpad.h"
 
 #include <xcb/xcb.h>
 
-#include "xcbatom.h"
 #include "propertyinfo.h"
+#include "xcbatom.h"
 
 class XlibTouchpad;
 class XlibNotifications;
@@ -48,7 +48,7 @@ class XlibBackend : public TouchpadBackend
     Q_PROPERTY(int touchpadCount READ touchpadCount CONSTANT)
 
 public:
-    static XlibBackend* initialize(QObject *parent = nullptr);
+    static XlibBackend *initialize(QObject *parent = nullptr);
     ~XlibBackend();
 
     bool applyConfig(const QVariantHash &) override;
@@ -57,11 +57,18 @@ public:
     bool getConfig() override;
     bool getDefaultConfig() override;
     bool isChangedConfig() const override;
-    QStringList supportedParameters() const override {
+    QStringList supportedParameters() const override
+    {
         return m_device ? m_device->supportedParameters() : QStringList();
     }
-    QString errorString() const override { return m_errorString; }
-    int touchpadCount() const override { return m_device ? 1 : 0; }
+    QString errorString() const override
+    {
+        return m_errorString;
+    }
+    int touchpadCount() const override
+    {
+        return m_device ? 1 : 0;
+    }
 
     void setTouchpadOff(TouchpadOffState) override;
     TouchpadOffState getTouchpadOff() override;
@@ -73,7 +80,7 @@ public:
     void watchForEvents(bool keyboard) override;
 
     QStringList listMouses(const QStringList &blacklist) override;
-    QVector<QObject*> getDevices() const override;
+    QVector<QObject *> getDevices() const override;
 
 private slots:
     void propertyChanged(xcb_atom_t);

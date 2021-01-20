@@ -17,24 +17,28 @@
  * see <http://www.gnu.org/licenses/>.
  */
 
-
+#include "config-kimpanel.h"
 #include <QCoreApplication>
-#include <QDBusServiceWatcher>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
+#include <QDBusServiceWatcher>
 #include <QProcess>
-#include "config-kimpanel.h"
 
-class IBusPanelLauncher : public QCoreApplication {
+class IBusPanelLauncher : public QCoreApplication
+{
     Q_OBJECT
 public:
-    IBusPanelLauncher(int &argc, char *argv[]) : QCoreApplication(argc, argv), m_watcher(new QDBusServiceWatcher(this)) {
+    IBusPanelLauncher(int &argc, char *argv[])
+        : QCoreApplication(argc, argv)
+        , m_watcher(new QDBusServiceWatcher(this))
+    {
         m_watcher->setConnection(QDBusConnection::sessionBus());
         QMetaObject::invokeMethod(this, "init", Qt::QueuedConnection);
     }
 
 public Q_SLOTS:
-    void init() {
+    void init()
+    {
         // already a launcher running
         if (!QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.impanel.IBusPanelLauncher"))) {
             quit();
@@ -57,31 +61,34 @@ public Q_SLOTS:
         }
     }
 
-    void serviceRegistered(const QString &service) {
+    void serviceRegistered(const QString &service)
+    {
         if (service == "org.freedesktop.IBus") {
             launchIBusPanel();
         }
     }
 
-    void serviceUnregistered(const QString &service) {
+    void serviceUnregistered(const QString &service)
+    {
         if (service == "org.kde.impanel") {
             quit();
         }
     }
 
 private:
-    void launchIBusPanel() {
-        const QString panelPath = QStringLiteral(KIMPANEL_LIBEXEC_DIR"/kimpanel-ibus-panel");
+    void launchIBusPanel()
+    {
+        const QString panelPath = QStringLiteral(KIMPANEL_LIBEXEC_DIR "/kimpanel-ibus-panel");
         QProcess::startDetached(panelPath, QStringList());
         quit();
     }
 
 private:
     QDBusServiceWatcher *m_watcher;
-
 };
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
     IBusPanelLauncher app(argc, argv);
 
     return app.exec();

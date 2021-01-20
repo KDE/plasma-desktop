@@ -23,18 +23,17 @@
 
 #include <PlasmaQuick/Dialog>
 
-
 class SubDialog : public PlasmaQuick::Dialog
 {
     Q_OBJECT
 
-    public:
-        explicit SubDialog(QQuickItem *parent = nullptr);
-        ~SubDialog() override;
+public:
+    explicit SubDialog(QQuickItem *parent = nullptr);
+    ~SubDialog() override;
 
-        Q_INVOKABLE QRect availableScreenRectForItem(QQuickItem *item) const;
+    Q_INVOKABLE QRect availableScreenRectForItem(QQuickItem *item) const;
 
-        QPoint popupPosition(QQuickItem *item, const QSize &size) override;
+    QPoint popupPosition(QQuickItem *item, const QSize &size) override;
 };
 
 #endif

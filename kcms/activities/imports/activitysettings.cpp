@@ -28,8 +28,8 @@
 
 #include "dialog.h"
 
-#include <kactivities/info.h>
 #include <kactivities/controller.h>
+#include <kactivities/info.h>
 
 ActivitySettings::ActivitySettings(QObject *parent)
     : QObject(parent)
@@ -60,14 +60,13 @@ void ActivitySettings::deleteActivity(const QString &id)
 {
     KActivities::Info info(id);
 
-    if (QMessageBox::question(nullptr, i18nc("@title:window", "Delete Activity"),
-                              i18n("Are you sure you want to delete '%1'?",
-                                   info.name())) == QMessageBox::Yes) {
+    if (QMessageBox::question(nullptr, i18nc("@title:window", "Delete Activity"), i18n("Are you sure you want to delete '%1'?", info.name()))
+        == QMessageBox::Yes) {
         KActivities::Controller().removeActivity(id);
     }
 }
 
 void ActivitySettings::configureActivities()
 {
-    QProcess::startDetached(QStringLiteral("kcmshell5"), { QStringLiteral("activities") });
+    QProcess::startDetached(QStringLiteral("kcmshell5"), {QStringLiteral("activities")});
 }

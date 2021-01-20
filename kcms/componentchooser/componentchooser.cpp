@@ -106,7 +106,7 @@ void ComponentChooser::select(int index)
         KOpenWithDialog *dialog = new KOpenWithDialog(QList<QUrl>(), m_mimeType, m_dialogText, QString());
         dialog->setSaveNewApplications(true);
         dialog->setAttribute(Qt::WA_DeleteOnClose);
-        connect(dialog, &KOpenWithDialog::finished, this, [this, dialog] (int result) {
+        connect(dialog, &KOpenWithDialog::finished, this, [this, dialog](int result) {
             if (result == QDialog::Rejected) {
                 Q_EMIT indexChanged();
                 Q_EMIT isDefaultsChanged();
@@ -157,7 +157,10 @@ void ComponentChooser::saveMimeTypeAssociation(const QString &mime, const QStrin
         addedApps.writeXdgListEntry(mime, apps);
         profile->sync();
 
-        QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"), QStringLiteral("/KLauncher"), QStringLiteral("org.kde.KLauncher"), QStringLiteral("reparseConfiguration"));
+        QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
+                                                              QStringLiteral("/KLauncher"),
+                                                              QStringLiteral("org.kde.KLauncher"),
+                                                              QStringLiteral("reparseConfiguration"));
         QDBusConnection::sessionBus().send(message);
     }
     m_previousApplication = m_applications[m_index].toMap()["storageId"].toString();

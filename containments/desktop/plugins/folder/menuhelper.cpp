@@ -22,7 +22,8 @@
 #include <QAction>
 #include <QMenu>
 
-MenuHelper::MenuHelper(QObject *parent) : QObject(parent)
+MenuHelper::MenuHelper(QObject *parent)
+    : QObject(parent)
 {
 }
 
@@ -39,9 +40,9 @@ QString MenuHelper::iconName(QAction *action) const
     return action->icon().name();
 }
 
-void MenuHelper::setMenu(QAction* action, QObject* menu)
+void MenuHelper::setMenu(QAction *action, QObject *menu)
 {
-    QMenu* bla = qobject_cast<QMenu *>(menu);
+    QMenu *bla = qobject_cast<QMenu *>(menu);
 
     if (action && bla) {
         action->setMenu(bla);

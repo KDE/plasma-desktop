@@ -28,8 +28,7 @@ enum class Handed {
     NotSupported = -1,
 };
 
-struct EvdevSettings
-{
+struct EvdevSettings {
     void save();
     void load(X11EvdevBackend *);
     void apply(X11EvdevBackend *, bool force = false);

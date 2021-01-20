@@ -28,16 +28,16 @@
 #include <QDBusPendingReply>
 #include <QFileInfo>
 
-#include <kworkspace.h>
-#include <QRegExp>
 #include <KDesktopFile>
-#include <KProcess>
 #include <KPluginFactory>
+#include <KProcess>
 #include <QDBusInterface>
+#include <QRegExp>
+#include <kworkspace.h>
 
 #include "kcmsmserver.h"
-#include "smserversettings.h"
 #include "smserverdata.h"
+#include "smserversettings.h"
 
 #include <KAboutData>
 #include <KLocalizedString>
@@ -49,33 +49,35 @@
 K_PLUGIN_FACTORY_WITH_JSON(SMServerConfigFactory, "metadata.json", registerPlugin<SMServerConfig>(); registerPlugin<SMServerData>();)
 
 SMServerConfig::SMServerConfig(QObject *parent, const QVariantList &args)
-  : KQuickAddons::ManagedConfigModule(parent, args)
-  , m_login1Manager(new OrgFreedesktopLogin1ManagerInterface(QStringLiteral("org.freedesktop.login1"),
-                                                             QStringLiteral("/org/freedesktop/login1"),
-                                                             QDBusConnection::systemBus(),
-                                                             this))
+    : KQuickAddons::ManagedConfigModule(parent, args)
+    , m_login1Manager(new OrgFreedesktopLogin1ManagerInterface(QStringLiteral("org.freedesktop.login1"),
+                                                               QStringLiteral("/org/freedesktop/login1"),
+                                                               QDBusConnection::systemBus(),
+                                                               this))
 {
-
     auto settings = new SMServerSettings(this);
     qmlRegisterSingletonInstance("org.kde.desktopsession.private", 1, 0, "Settings", settings);
 
-    setQuickHelp(i18n("<h1>Session Manager</h1>"
-    " You can configure the session manager here."
-    " This includes options such as whether or not the session exit (logout)"
-    " should be confirmed, whether the session should be restored again when logging in"
-    " and whether the computer should be automatically shut down after session"
-    " exit by default."));
+    setQuickHelp(
+        i18n("<h1>Session Manager</h1>"
+             " You can configure the session manager here."
+             " This includes options such as whether or not the session exit (logout)"
+             " should be confirmed, whether the session should be restored again when logging in"
+             " and whether the computer should be automatically shut down after session"
+             " exit by default."));
 
     checkFirmwareSetupRequested();
     m_restartInSetupScreenInitial = m_restartInSetupScreen;
 
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_smserver"), i18n("Desktop Session"),
-            QStringLiteral("1.0"), i18n("Desktop Session Login and Logout"), KAboutLicense::GPL,
-            i18n("Copyright © 2000–2020 Desktop Session team"));
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_smserver"),
+                                       i18n("Desktop Session"),
+                                       QStringLiteral("1.0"),
+                                       i18n("Desktop Session Login and Logout"),
+                                       KAboutLicense::GPL,
+                                       i18n("Copyright © 2000–2020 Desktop Session team"));
 
     about->addAuthor(i18n("Oswald Buddenhagen"), QString(), QStringLiteral("ossi@kde.org"));
-    about->addAuthor(i18n("Carl Schwan"), QStringLiteral("QML rewrite"),
-            QStringLiteral("carl@carlschwan.eu"), QStringLiteral("https://carlschwan.eu"));
+    about->addAuthor(i18n("Carl Schwan"), QStringLiteral("QML rewrite"), QStringLiteral("carl@carlschwan.eu"), QStringLiteral("https://carlschwan.eu"));
     setAboutData(about);
     setButtons(Help | Apply | Default);
 
@@ -146,7 +148,6 @@ void SMServerConfig::setRestartInSetupScreen(bool restartInSetupScreen)
     });
 }
 
-
 QString SMServerConfig::error() const
 {
     return m_error;
@@ -182,7 +183,7 @@ bool SMServerConfig::isSaveNeeded() const
     return m_restartInSetupScreen != m_restartInSetupScreenInitial;
 }
 
-bool SMServerConfig::isDefaults() const 
+bool SMServerConfig::isDefaults() const
 {
     return !m_restartInSetupScreen;
 }

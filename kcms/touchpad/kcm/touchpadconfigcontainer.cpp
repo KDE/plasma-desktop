@@ -17,21 +17,20 @@
  */
 
 #include "touchpadconfigcontainer.h"
-#include "touchpadconfigplugin.h"
 #include "kcm/libinput/touchpadconfiglibinput.h"
 #include "kcm/xlib/touchpadconfigxlib.h"
 #include "touchpadbackend.h"
+#include "touchpadconfigplugin.h"
 
 #include <KWindowSystem/kwindowsystem.h>
 
-extern "C"
+extern "C" {
+Q_DECL_EXPORT void kcminit_touchpad()
 {
-    Q_DECL_EXPORT void kcminit_touchpad()
-    {
-        if (KWindowSystem::isPlatformX11()) {
-            TouchpadConfigContainer::kcmInit();
-        }
+    if (KWindowSystem::isPlatformX11()) {
+        TouchpadConfigContainer::kcmInit();
     }
+}
 }
 
 TouchpadConfigContainer::TouchpadConfigContainer(QWidget *parent, const QVariantList &args)
@@ -72,7 +71,7 @@ QSize TouchpadConfigContainer::sizeHint() const
 {
     return m_plugin->sizeHint();
 }
-void TouchpadConfigContainer::resizeEvent(QResizeEvent */*event*/)
+void TouchpadConfigContainer::resizeEvent(QResizeEvent * /*event*/)
 {
     Q_EMIT changed(false);
     m_plugin->resize(this->size());

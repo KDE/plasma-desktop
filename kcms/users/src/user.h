@@ -21,16 +21,17 @@
 
 #pragma once
 
-#include <QObject>
-#include <QDBusObjectPath>
-#include <QUrl>
-#include <QPointer>
 #include <KJob>
+#include <QDBusObjectPath>
+#include <QObject>
+#include <QPointer>
+#include <QUrl>
 
 class OrgFreedesktopAccountsUserInterface;
 class QDBusError;
 
-class UserApplyJob : public KJob {
+class UserApplyJob : public KJob
+{
     Q_OBJECT
 
 public:
@@ -57,53 +58,56 @@ private:
     QPointer<OrgFreedesktopAccountsUserInterface> m_dbusIface;
 };
 
-class User : public QObject {
+class User : public QObject
+{
     Q_OBJECT
 
-    Q_PROPERTY(int uid READ uid WRITE setUid NOTIFY uidChanged )
-    Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged )
+    Q_PROPERTY(int uid READ uid WRITE setUid NOTIFY uidChanged)
+    Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
 
-    Q_PROPERTY(QString realName READ realName WRITE setRealName NOTIFY realNameChanged )
+    Q_PROPERTY(QString realName READ realName WRITE setRealName NOTIFY realNameChanged)
 
-    Q_PROPERTY(QString email READ email WRITE setEmail NOTIFY emailChanged )
+    Q_PROPERTY(QString email READ email WRITE setEmail NOTIFY emailChanged)
 
-    Q_PROPERTY(QUrl face READ face WRITE setFace NOTIFY faceChanged )
+    Q_PROPERTY(QUrl face READ face WRITE setFace NOTIFY faceChanged)
 
-    Q_PROPERTY(bool faceValid READ faceValid NOTIFY faceValidChanged )
+    Q_PROPERTY(bool faceValid READ faceValid NOTIFY faceValidChanged)
 
     Q_PROPERTY(QString password READ _ WRITE setPassword)
 
     Q_PROPERTY(bool loggedIn READ loggedIn CONSTANT)
 
-    Q_PROPERTY(bool administrator READ administrator WRITE setAdministrator NOTIFY administratorChanged )
+    Q_PROPERTY(bool administrator READ administrator WRITE setAdministrator NOTIFY administratorChanged)
 
 public:
     explicit User(QObject *parent = nullptr);
 
+    int uid() const;
+    void setUid(int value);
 
-     int uid() const;
-     void setUid(int value);
+    QString name() const;
+    QString realName() const;
+    QString email() const;
+    QUrl face() const;
+    bool faceValid() const;
+    bool loggedIn() const;
+    bool administrator() const;
+    QDBusObjectPath path() const;
 
-     QString name() const;
-     QString realName() const;
-     QString email() const;
-     QUrl face() const;
-     bool faceValid() const;
-     bool loggedIn() const;
-     bool administrator() const;
-     QDBusObjectPath path() const;
+    void setName(const QString &value);
+    void setRealName(const QString &value);
+    void setEmail(const QString &value);
+    void setFace(const QUrl &value);
+    void setPassword(const QString &value);
+    void setAdministrator(bool value);
+    void setPath(const QDBusObjectPath &path);
 
-     void setName(const QString &value);
-     void setRealName(const QString &value);
-     void setEmail(const QString &value);
-     void setFace(const QUrl &value);
-     void setPassword(const QString &value);
-     void setAdministrator(bool value);
-     void setPath(const QDBusObjectPath &path);
+    void loadData();
 
-     void loadData();
-
-     QString _() { return QString(); };
+    QString _()
+    {
+        return QString();
+    };
 
 public Q_SLOTS:
     Q_SCRIPTABLE void apply();
@@ -120,7 +124,7 @@ Q_SIGNALS:
     void faceChanged();
     void faceValidChanged();
     void administratorChanged();
-    void applyError(const QString& errorMessage);
+    void applyError(const QString &errorMessage);
     void passwordSuccessfullyChanged();
 
 private:

@@ -32,7 +32,5 @@ void ActivitySwitcherExtensionPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(QLatin1String(uri) == QLatin1String("org.kde.plasma.activityswitcher"));
 
-    qmlRegisterSingletonType<SwitcherBackend>(uri, 1, 0, "Backend",
-                                              SwitcherBackend::instance);
+    qmlRegisterSingletonType<SwitcherBackend>(uri, 1, 0, "Backend", SwitcherBackend::instance);
 }
-

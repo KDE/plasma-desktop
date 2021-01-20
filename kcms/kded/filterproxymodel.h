@@ -50,5 +50,4 @@ Q_SIGNALS:
 private:
     QString m_query;
     KDEDConfig::ModuleStatus m_statusFilter = KDEDConfig::UnknownStatus; // "all"
-
 };

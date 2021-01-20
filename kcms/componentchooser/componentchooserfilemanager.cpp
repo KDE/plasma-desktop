@@ -20,7 +20,11 @@
 #include "componentchooserfilemanager.h"
 
 ComponentChooserFileManager::ComponentChooserFileManager(QObject *parent)
-    : ComponentChooser(parent, QStringLiteral("inode/directory"), QStringLiteral("FileManager"), QStringLiteral("org.kde.dolphin.desktop"), i18n("Select default file manager"))
+    : ComponentChooser(parent,
+                       QStringLiteral("inode/directory"),
+                       QStringLiteral("FileManager"),
+                       QStringLiteral("org.kde.dolphin.desktop"),
+                       i18n("Select default file manager"))
 {
 }
 

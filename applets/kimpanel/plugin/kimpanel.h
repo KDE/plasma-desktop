@@ -21,11 +21,11 @@
 #ifndef KIMPANEL_H
 #define KIMPANEL_H
 
+#include "kimpanelagent.h"
+#include <QList>
 #include <QObject>
 #include <QRect>
-#include <QList>
 #include <QVariantList>
-#include "kimpanelagent.h"
 
 class Kimpanel : public QObject
 {
@@ -43,13 +43,13 @@ class Kimpanel : public QObject
     Q_PROPERTY(int lookupTableCursor MEMBER m_lookupTableCursor NOTIFY lookupTableChanged)
     Q_PROPERTY(int lookupTableLayout MEMBER m_lookupTableLayout NOTIFY lookupTableChanged)
     Q_PROPERTY(bool hasPrev MEMBER m_hasPrev NOTIFY lookupTableChanged)
-    Q_PROPERTY(bool  hasNext MEMBER m_hasNext NOTIFY lookupTableChanged)
+    Q_PROPERTY(bool hasNext MEMBER m_hasNext NOTIFY lookupTableChanged)
     Q_PROPERTY(QStringList labels MEMBER m_labels NOTIFY lookupTableChanged)
     Q_PROPERTY(QStringList texts MEMBER m_texts NOTIFY lookupTableChanged)
 
     Q_PROPERTY(QVariantList properties MEMBER m_props NOTIFY propertiesChanged)
 public:
-    Kimpanel(QObject* parent = nullptr);
+    Kimpanel(QObject *parent = nullptr);
 
     Q_INVOKABLE void lookupTablePageUp();
     Q_INVOKABLE void lookupTablePageDown();
@@ -69,11 +69,11 @@ signals:
     void menuTriggered(const QVariantList &props);
 
 private slots:
-    void updatePreeditText(const QString& text, const QList<TextAttribute>& attrList);
-    void updateAux(const QString& text, const QList<TextAttribute>& attrList);
+    void updatePreeditText(const QString &text, const QList<TextAttribute> &attrList);
+    void updateAux(const QString &text, const QList<TextAttribute> &attrList);
     void updatePreeditCaret(int pos);
-    void updateLookupTable(const KimpanelLookupTable& lookupTable);
-    void updateLookupTableFull(const KimpanelLookupTable& lookupTable,int cursor, int layout);
+    void updateLookupTable(const KimpanelLookupTable &lookupTable);
+    void updateLookupTableFull(const KimpanelLookupTable &lookupTable, int cursor, int layout);
     void updateSpotLocation(int x, int y);
     void updateSpotRect(int x, int y, int w, int h);
     void showAux(bool visible);
@@ -81,13 +81,13 @@ private slots:
     void showLookupTable(bool visible);
     void updateLookupTableCursor(int cursor);
 
-    void updateProperty(const KimpanelProperty& property);
+    void updateProperty(const KimpanelProperty &property);
     void registerProperties(const QList<KimpanelProperty> &props);
     void execDialog(const KimpanelProperty &prop);
     void execMenu(const QList<KimpanelProperty> &prop_list);
 
 private:
-    PanelAgent* m_panelAgent;
+    PanelAgent *m_panelAgent;
     QString m_auxText;
     QString m_preeditText;
     int m_caretPos = 0;
@@ -106,4 +106,3 @@ private:
 };
 
 #endif
-

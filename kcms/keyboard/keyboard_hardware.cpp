@@ -17,80 +17,78 @@
  */
 
 #include <KConfigGroup>
-#include <KSharedConfig>
 #include <KModifierKeyInfo>
+#include <KSharedConfig>
 
-#include <QX11Info>
 #include <QDebug>
+#include <QX11Info>
 
 #include <math.h>
 
-#include "x11_helper.h"
-#include "kcmmisc.h"
 #include "debug.h"
+#include "kcmmisc.h"
+#include "x11_helper.h"
 
 #include <X11/XKBlib.h>
-#include <X11/keysym.h>
 #include <X11/Xlib.h>
+#include <X11/keysym.h>
 
 // This code is taken from xset utility from XFree 4.3 (https://www.xfree86.org/)
 
-static
-void set_repeatrate(int delay, double rate)
+static void set_repeatrate(int delay, double rate)
 {
-	if( !X11Helper::xkbSupported(nullptr) ) {
-		qCCritical(KCM_KEYBOARD) << "Failed to set keyboard repeat rate: xkb is not supported";
-		return;
-	}
+    if (!X11Helper::xkbSupported(nullptr)) {
+        qCCritical(KCM_KEYBOARD) << "Failed to set keyboard repeat rate: xkb is not supported";
+        return;
+    }
 
-	XkbDescPtr xkb = XkbAllocKeyboard();
-	if (xkb) {
-		Display* dpy = QX11Info::display();
-		//int res =
-		XkbGetControls(dpy, XkbRepeatKeysMask, xkb);
-		xkb->ctrls->repeat_delay = delay;
-		xkb->ctrls->repeat_interval = (int)floor(1000/rate + 0.5);
-		//res =
-		XkbSetControls(dpy, XkbRepeatKeysMask, xkb);
+    XkbDescPtr xkb = XkbAllocKeyboard();
+    if (xkb) {
+        Display *dpy = QX11Info::display();
+        // int res =
+        XkbGetControls(dpy, XkbRepeatKeysMask, xkb);
+        xkb->ctrls->repeat_delay = delay;
+        xkb->ctrls->repeat_interval = (int)floor(1000 / rate + 0.5);
+        // res =
+        XkbSetControls(dpy, XkbRepeatKeysMask, xkb);
         XkbFreeKeyboard(xkb, 0, true);
-		return;
-	}
+        return;
+    }
 }
 
-static
-int set_repeat_mode(bool enabled)
+static int set_repeat_mode(bool enabled)
 {
-	XKeyboardState   kbd;
-	XKeyboardControl kbdc;
+    XKeyboardState kbd;
+    XKeyboardControl kbdc;
 
-	XGetKeyboardControl(QX11Info::display(), &kbd);
+    XGetKeyboardControl(QX11Info::display(), &kbd);
 
-	kbdc.auto_repeat_mode = (enabled ? AutoRepeatModeOn : AutoRepeatModeOff);
+    kbdc.auto_repeat_mode = (enabled ? AutoRepeatModeOn : AutoRepeatModeOff);
 
-	return XChangeKeyboardControl(QX11Info::display(), KBAutoRepeatMode, &kbdc);
+    return XChangeKeyboardControl(QX11Info::display(), KBAutoRepeatMode, &kbdc);
 }
 
 void init_keyboard_hardware()
 {
-	auto inputConfig = KSharedConfig::openConfig( QStringLiteral("kcminputrc") );
-	inputConfig->reparseConfiguration();
-	KConfigGroup config(inputConfig, "Keyboard");
+    auto inputConfig = KSharedConfig::openConfig(QStringLiteral("kcminputrc"));
+    inputConfig->reparseConfiguration();
+    KConfigGroup config(inputConfig, "Keyboard");
 
-	QString keyRepeatStr = config.readEntry("KeyRepeat", "accent");
+    QString keyRepeatStr = config.readEntry("KeyRepeat", "accent");
 
-	if (keyRepeatStr == QLatin1String("accent") || keyRepeatStr == QLatin1String("repeat")) {
-		int delay_ = config.readEntry("RepeatDelay", DEFAULT_REPEAT_DELAY);
-		double rate_ = config.readEntry("RepeatRate", DEFAULT_REPEAT_RATE);
-		set_repeatrate(delay_, rate_);
-		set_repeat_mode(true);
-	} else {
-		set_repeat_mode(false);
-	}
+    if (keyRepeatStr == QLatin1String("accent") || keyRepeatStr == QLatin1String("repeat")) {
+        int delay_ = config.readEntry("RepeatDelay", DEFAULT_REPEAT_DELAY);
+        double rate_ = config.readEntry("RepeatRate", DEFAULT_REPEAT_RATE);
+        set_repeatrate(delay_, rate_);
+        set_repeat_mode(true);
+    } else {
+        set_repeat_mode(false);
+    }
 
-	TriState numlockState = TriStateHelper::getTriState( config.readEntry( "NumLock", TriStateHelper::getInt(STATE_UNCHANGED) ) );
-	if( numlockState != STATE_UNCHANGED ) {
+    TriState numlockState = TriStateHelper::getTriState(config.readEntry("NumLock", TriStateHelper::getInt(STATE_UNCHANGED)));
+    if (numlockState != STATE_UNCHANGED) {
         KModifierKeyInfo keyInfo;
         keyInfo.setKeyLocked(Qt::Key_NumLock, numlockState == STATE_ON);
-	}
-	XFlush(QX11Info::display());
+    }
+    XFlush(QX11Info::display());
 }

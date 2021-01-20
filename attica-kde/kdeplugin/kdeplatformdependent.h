@@ -29,11 +29,11 @@
 
 #include <QHash>
 
-#include <KSharedConfig>
 #include <KIO/AccessManager>
+#include <KSharedConfig>
 
-namespace Attica {
-
+namespace Attica
+{
 class KdePlatformDependent : public QObject, public Attica::PlatformDependent
 {
     Q_OBJECT
@@ -44,31 +44,30 @@ public:
     KdePlatformDependent();
     ~KdePlatformDependent() override;
     QList<QUrl> getDefaultProviderFiles() const override;
-    void addDefaultProviderFile(const QUrl& url) override;
-    void removeDefaultProviderFile(const QUrl& url) override;
-    void enableProvider(const QUrl& baseUrl, bool enabled) const override;
-    bool isEnabled(const QUrl& baseUrl) const override;
+    void addDefaultProviderFile(const QUrl &url) override;
+    void removeDefaultProviderFile(const QUrl &url) override;
+    void enableProvider(const QUrl &baseUrl, bool enabled) const override;
+    bool isEnabled(const QUrl &baseUrl) const override;
 
-    QNetworkReply* post(const QNetworkRequest& request, const QByteArray& data) override;
-    QNetworkReply* post(const QNetworkRequest& request, QIODevice* data) override;
-    QNetworkReply* get(const QNetworkRequest& request) override;
-    bool saveCredentials(const QUrl& baseUrl, const QString& user, const QString& password) override;
-    bool hasCredentials(const QUrl& baseUrl) const override;
-    bool loadCredentials(const QUrl& baseUrl, QString& user, QString& password) override;
-    bool askForCredentials(const QUrl& baseUrl, QString& user, QString& password) override;
-    QNetworkAccessManager* nam() override;
+    QNetworkReply *post(const QNetworkRequest &request, const QByteArray &data) override;
+    QNetworkReply *post(const QNetworkRequest &request, QIODevice *data) override;
+    QNetworkReply *get(const QNetworkRequest &request) override;
+    bool saveCredentials(const QUrl &baseUrl, const QString &user, const QString &password) override;
+    bool hasCredentials(const QUrl &baseUrl) const override;
+    bool loadCredentials(const QUrl &baseUrl, QString &user, QString &password) override;
+    bool askForCredentials(const QUrl &baseUrl, QString &user, QString &password) override;
+    QNetworkAccessManager *nam() override;
 
 private:
-    QNetworkRequest addOAuthToRequest(const QNetworkRequest& request);
-    QNetworkRequest removeAuthFromRequest(const QNetworkRequest& request);
-    QString getAccessToken(const QUrl& baseUrl) const;
+    QNetworkRequest addOAuthToRequest(const QNetworkRequest &request);
+    QNetworkRequest removeAuthFromRequest(const QNetworkRequest &request);
+    QString getAccessToken(const QUrl &baseUrl) const;
 
     KSharedConfigPtr m_config;
-    QNetworkAccessManager* m_accessManager{nullptr};
-    QHash<QString, QPair <QString, QString> > m_passwords;
+    QNetworkAccessManager *m_accessManager{nullptr};
+    QHash<QString, QPair<QString, QString>> m_passwords;
 };
 
 }
-
 
 #endif

@@ -20,11 +20,11 @@
 
 #include "notificationsdata.h"
 
-#include <notificationmanager/donotdisturbsettings.h>
-#include <notificationmanager/notificationsettings.h>
-#include <notificationmanager/jobsettings.h>
 #include <notificationmanager/badgesettings.h>
 #include <notificationmanager/behaviorsettings.h>
+#include <notificationmanager/donotdisturbsettings.h>
+#include <notificationmanager/jobsettings.h>
+#include <notificationmanager/notificationsettings.h>
 
 NotificationsData::NotificationsData(QObject *parent, const QVariantList &args)
     : KCModuleData(parent, args)
@@ -39,7 +39,7 @@ NotificationsData::NotificationsData(QObject *parent, const QVariantList &args)
 
 NotificationManager::DoNotDisturbSettings *NotificationsData::dndSettings() const
 {
-    return  m_dndSettings;
+    return m_dndSettings;
 }
 
 NotificationManager::NotificationSettings *NotificationsData::notificationSettings() const
@@ -90,22 +90,17 @@ void NotificationsData::defaultsBehaviorSettings()
 
 bool NotificationsData::isSaveNeededBehaviorSettings() const
 {
-    bool needSave = std::any_of(m_behaviorSettingsList.cbegin(),
-                                m_behaviorSettingsList.cend(),
-                                [](const NotificationManager::BehaviorSettings *settings) {
-                                    return settings->isSaveNeeded();
-                                });
+    bool needSave = std::any_of(m_behaviorSettingsList.cbegin(), m_behaviorSettingsList.cend(), [](const NotificationManager::BehaviorSettings *settings) {
+        return settings->isSaveNeeded();
+    });
     return needSave;
 }
 
 bool NotificationsData::isDefaultsBehaviorSettings() const
 {
-
-    bool notDefault = std::any_of(m_behaviorSettingsList.cbegin(),
-                                  m_behaviorSettingsList.cend(),
-                                  [](const NotificationManager::BehaviorSettings *settings) {
-                                      return !settings->isDefaults();
-                                  });
+    bool notDefault = std::any_of(m_behaviorSettingsList.cbegin(), m_behaviorSettingsList.cend(), [](const NotificationManager::BehaviorSettings *settings) {
+        return !settings->isDefaults();
+    });
     return !notDefault;
 }
 
@@ -113,7 +108,7 @@ void NotificationsData::readBehaviorSettings()
 {
     KConfig config("plasmanotifyrc", KConfig::SimpleConfig);
 
-    for (auto groupEntry : { QStringLiteral("Applications"), QStringLiteral("Services") }) {
+    for (auto groupEntry : {QStringLiteral("Applications"), QStringLiteral("Services")}) {
         KConfigGroup group(&config, groupEntry);
         for (const QString &desktopEntry : group.groupList()) {
             m_behaviorSettingsList.insert(m_behaviorSettingsList.count(), new NotificationManager::BehaviorSettings(groupEntry, desktopEntry, this));

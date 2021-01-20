@@ -27,11 +27,14 @@ class Section : public XkbObject
 {
     Q_OBJECT
 
-#define S_P(type, name) \
-private: \
-    Q_PROPERTY(type name READ auto_prop_##name CONSTANT) \
-public: \
-    type auto_prop_##name () const { return section-> name ; }
+#define S_P(type, name)                                                                                                                                        \
+private:                                                                                                                                                       \
+    Q_PROPERTY(type name READ auto_prop_##name CONSTANT)                                                                                                       \
+public:                                                                                                                                                        \
+    type auto_prop_##name() const                                                                                                                              \
+    {                                                                                                                                                          \
+        return section->name;                                                                                                                                  \
+    }
 
     S_P(unsigned char, priority)
     S_P(short, top)

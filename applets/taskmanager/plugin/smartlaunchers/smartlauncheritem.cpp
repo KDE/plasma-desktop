@@ -24,7 +24,8 @@
 
 using namespace SmartLauncher;
 
-Item::Item(QObject *parent) : QObject(parent)
+Item::Item(QObject *parent)
+    : QObject(parent)
 {
     m_backendPtr = s_backend.toStrongRef();
     if (!m_backendPtr) {
@@ -160,7 +161,6 @@ void Item::setLauncherUrl(const QUrl &launcherUrl)
         populate();
     }
 }
-
 
 int Item::count() const
 {

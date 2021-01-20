@@ -20,8 +20,8 @@
 #ifndef VIEWPROPERTIESMENU_H
 #define VIEWPROPERTIESMENU_H
 
-#include <QObject>
 #include "folderplugin_private_export.h"
+#include <QObject>
 class QAction;
 class QActionGroup;
 class QMenu;
@@ -30,7 +30,7 @@ class FOLDERPLUGIN_TESTS_EXPORT ViewPropertiesMenu : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QObject* menu READ menu CONSTANT)
+    Q_PROPERTY(QObject *menu READ menu CONSTANT)
 
     Q_PROPERTY(bool showLayoutActions READ showLayoutActions WRITE setShowLayoutActions NOTIFY showLayoutActionsChanged)
     Q_PROPERTY(bool showLockAction READ showLockAction WRITE setShowLockAction NOTIFY showLockActionChanged)
@@ -46,76 +46,75 @@ class FOLDERPLUGIN_TESTS_EXPORT ViewPropertiesMenu : public QObject
     Q_PROPERTY(bool sortDirsFirst READ sortDirsFirst WRITE setSortDirsFirst NOTIFY sortDirsFirstChanged)
     Q_PROPERTY(int iconSize READ iconSize WRITE setIconSize NOTIFY iconSizeChanged)
 
-    public:
-        explicit ViewPropertiesMenu(QObject *parent = nullptr);
-        ~ViewPropertiesMenu() override;
+public:
+    explicit ViewPropertiesMenu(QObject *parent = nullptr);
+    ~ViewPropertiesMenu() override;
 
-        QObject* menu() const;
+    QObject *menu() const;
 
-        bool showLayoutActions() const;
-        void setShowLayoutActions(bool show);
+    bool showLayoutActions() const;
+    void setShowLayoutActions(bool show);
 
-        bool showLockAction() const;
-        void setShowLockAction(bool show);
+    bool showLockAction() const;
+    void setShowLockAction(bool show);
 
-        bool showIconSizeActions() const;
-        void setShowIconSizeActions(bool show);
+    bool showIconSizeActions() const;
+    void setShowIconSizeActions(bool show);
 
-        int arrangement() const;
-        void setArrangement(int arrangement);
+    int arrangement() const;
+    void setArrangement(int arrangement);
 
-        int alignment() const;
-        void setAlignment(int alignment);
+    int alignment() const;
+    void setAlignment(int alignment);
 
-        bool previews() const;
-        void setPreviews(bool previews);
+    bool previews() const;
+    void setPreviews(bool previews);
 
-        bool locked() const;
-        void setLocked(bool locked);
+    bool locked() const;
+    void setLocked(bool locked);
 
-        bool lockedEnabled() const;
-        void setLockedEnabled(bool lockedEnabled);
+    bool lockedEnabled() const;
+    void setLockedEnabled(bool lockedEnabled);
 
-        int sortMode() const;
-        void setSortMode(int sortMode);
+    int sortMode() const;
+    void setSortMode(int sortMode);
 
-        bool sortDesc() const;
-        void setSortDesc(bool sortDesc);
+    bool sortDesc() const;
+    void setSortDesc(bool sortDesc);
 
-        bool sortDirsFirst() const;
-        void setSortDirsFirst(bool sortDirsFirst);
+    bool sortDirsFirst() const;
+    void setSortDirsFirst(bool sortDirsFirst);
 
-        int iconSize() const;
-        void setIconSize(int iconSize);
+    int iconSize() const;
+    void setIconSize(int iconSize);
 
-    Q_SIGNALS:
-        void showLayoutActionsChanged() const;
-        void showLockActionChanged() const;
-        void showIconSizeActionsChanged();
-        void arrangementChanged() const;
-        void alignmentChanged() const;
-        void previewsChanged() const;
-        void lockedChanged() const;
-        void lockedEnabledChanged() const;
-        void sortModeChanged() const;
-        void sortDescChanged() const;
-        void sortDirsFirstChanged() const;
-        void iconSizeChanged();
+Q_SIGNALS:
+    void showLayoutActionsChanged() const;
+    void showLockActionChanged() const;
+    void showIconSizeActionsChanged();
+    void arrangementChanged() const;
+    void alignmentChanged() const;
+    void previewsChanged() const;
+    void lockedChanged() const;
+    void lockedEnabledChanged() const;
+    void sortModeChanged() const;
+    void sortDescChanged() const;
+    void sortDirsFirstChanged() const;
+    void iconSizeChanged();
 
-    private:
-        QMenu *m_menu;
-        QMenu *m_arrangementMenu;
-        QActionGroup *m_arrangement;
-        QMenu *m_alignmentMenu;
-        QActionGroup *m_alignment;
-        QActionGroup *m_sortMode;
-        QMenu *m_iconSizeMenu;
-        QActionGroup *m_iconSize;
-        QAction *m_sortDesc;
-        QAction *m_sortDirsFirst;
-        QAction *m_previews;
-        QAction *m_locked;
-
+private:
+    QMenu *m_menu;
+    QMenu *m_arrangementMenu;
+    QActionGroup *m_arrangement;
+    QMenu *m_alignmentMenu;
+    QActionGroup *m_alignment;
+    QActionGroup *m_sortMode;
+    QMenu *m_iconSizeMenu;
+    QActionGroup *m_iconSize;
+    QAction *m_sortDesc;
+    QAction *m_sortDirsFirst;
+    QAction *m_previews;
+    QAction *m_locked;
 };
 
 #endif

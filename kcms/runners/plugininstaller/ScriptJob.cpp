@@ -6,12 +6,12 @@
 
 #include "ScriptJob.h"
 
+#include "ScriptConfirmationDialog.h"
 #include <KLocalizedString>
 #include <KShell>
-#include <QFileInfoList>
-#include <QDir>
 #include <QDebug>
-#include "ScriptConfirmationDialog.h"
+#include <QDir>
+#include <QFileInfoList>
 
 void ScriptJob::executeOperation(const QFileInfo &fileInfo, const QString &mimeType, bool install)
 {
@@ -48,7 +48,7 @@ void ScriptJob::executeOperation(const QFileInfo &fileInfo, const QString &mimeT
 
 QString ScriptJob::formatScriptCommand(bool install, const QString &installerPath)
 {
-    const QString bashCommand = QStringLiteral("echo %1;%1 || $SHELL && echo %2")
-        .arg(KShell::quoteArg(installerPath), KShell::quoteArg(terminalCloseMessage(install)));
+    const QString bashCommand =
+        QStringLiteral("echo %1;%1 || $SHELL && echo %2").arg(KShell::quoteArg(installerPath), KShell::quoteArg(terminalCloseMessage(install)));
     return QStringLiteral("sh -c %1").arg(KShell::quoteArg(bashCommand));
 }

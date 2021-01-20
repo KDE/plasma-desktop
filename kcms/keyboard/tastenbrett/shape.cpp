@@ -25,8 +25,7 @@
 Shape::Shape(XkbShapePtr shape_, XkbDescPtr xkb_, QObject *parent)
     : XkbObject(xkb_, parent)
     , shape(shape_)
-    , bounds(QRect(shape->bounds.x1, shape->bounds.y1,
-                   shape->bounds.x2, shape->bounds.y2))
+    , bounds(QRect(shape->bounds.x1, shape->bounds.y1, shape->bounds.x2, shape->bounds.y2))
 {
     // Awkward hack. We only ever render one outline because
     // otherwise we wouldn't know where to stick labels so they

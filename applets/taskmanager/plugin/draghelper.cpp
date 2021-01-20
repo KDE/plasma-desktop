@@ -21,16 +21,17 @@
 
 #include <QApplication>
 #include <QDrag>
-#include <QMimeData>
-#include <QQuickItem>
 #include <QIcon>
+#include <QMimeData>
 #include <QPixmap>
 #include <QPointer>
+#include <QQuickItem>
 
 #include "backend.h"
 
-DragHelper::DragHelper(QObject* parent) : QObject(parent)
-, m_dragIconSize(32)
+DragHelper::DragHelper(QObject *parent)
+    : QObject(parent)
+    , m_dragIconSize(32)
 {
 }
 
@@ -57,19 +58,19 @@ bool DragHelper::isDrag(int oldX, int oldY, int newX, int newY) const
     return ((QPoint(oldX, oldY) - QPoint(newX, newY)).manhattanLength() >= QApplication::startDragDistance());
 }
 
-void DragHelper::startDrag(QQuickItem *item, const QString &mimeType,
-    const QVariant &mimeData, const QUrl &url, const QIcon &icon)
+void DragHelper::startDrag(QQuickItem *item, const QString &mimeType, const QVariant &mimeData, const QUrl &url, const QIcon &icon)
 {
-    QMetaObject::invokeMethod(this, "startDragInternal", Qt::QueuedConnection,
-        Q_ARG(QQuickItem*, item),
-        Q_ARG(QString, mimeType),
-        Q_ARG(QVariant, mimeData),
-        Q_ARG(QUrl, url),
-        Q_ARG(QIcon, icon));
+    QMetaObject::invokeMethod(this,
+                              "startDragInternal",
+                              Qt::QueuedConnection,
+                              Q_ARG(QQuickItem *, item),
+                              Q_ARG(QString, mimeType),
+                              Q_ARG(QVariant, mimeData),
+                              Q_ARG(QUrl, url),
+                              Q_ARG(QIcon, icon));
 }
 
-void DragHelper::startDragInternal(QQuickItem *item, const QString &mimeType,
-    const QVariant &mimeData, const QUrl &url, const QIcon &icon) const
+void DragHelper::startDragInternal(QQuickItem *item, const QString &mimeType, const QVariant &mimeData, const QUrl &url, const QIcon &icon) const
 {
     QPointer<QQuickItem> grabber = item;
 
@@ -93,4 +94,3 @@ void DragHelper::startDragInternal(QQuickItem *item, const QString &mimeType,
 
     emit dropped();
 }
-

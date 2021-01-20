@@ -25,9 +25,10 @@
 class ShortcutsModelPrivate
 {
 public:
-    ShortcutsModelPrivate(ShortcutsModel* model)
+    ShortcutsModelPrivate(ShortcutsModel *model)
         : q(model)
-    {}
+    {
+    }
 
     int computeRowsPrior(const QAbstractItemModel *sourceModel) const;
     QAbstractItemModel *sourceModelForRow(int row, int *sourceRow) const;
@@ -56,8 +57,8 @@ public:
 };
 
 ShortcutsModel::ShortcutsModel(QObject *parent)
-    : QAbstractItemModel(parent),
-      d(new ShortcutsModelPrivate(this))
+    : QAbstractItemModel(parent)
+    , d(new ShortcutsModelPrivate(this))
 {
 }
 
@@ -171,10 +172,10 @@ QHash<int, QByteArray> ShortcutsModel::roleNames() const
 
 QModelIndex ShortcutsModel::index(int row, int column, const QModelIndex &parent) const
 {
-    if(row < 0) {
+    if (row < 0) {
         return {};
     }
-    if(column < 0) {
+    if (column < 0) {
         return {};
     }
 
@@ -241,12 +242,10 @@ void ShortcutsModel::addSourceModel(QAbstractItemModel *sourceModel)
     }
 }
 
-QList<QAbstractItemModel*> ShortcutsModel::sources() const
+QList<QAbstractItemModel *> ShortcutsModel::sources() const
 {
     return d->m_models;
 }
-
-
 
 void ShortcutsModel::removeSourceModel(QAbstractItemModel *sourceModel)
 {
@@ -254,7 +253,7 @@ void ShortcutsModel::removeSourceModel(QAbstractItemModel *sourceModel)
     disconnect(sourceModel, nullptr, this, nullptr);
 
     const int rowsRemoved = sourceModel->rowCount();
-    const int rowsPrior = d->computeRowsPrior(sourceModel);   // location of removed section
+    const int rowsPrior = d->computeRowsPrior(sourceModel); // location of removed section
 
     if (rowsRemoved > 0) {
         beginRemoveRows(QModelIndex(), rowsPrior, rowsPrior + rowsRemoved - 1);
@@ -326,7 +325,7 @@ void ShortcutsModelPrivate::slotColumnsInserted(const QModelIndex &parent, int, 
 void ShortcutsModelPrivate::slotColumnsAboutToBeRemoved(const QModelIndex &parent, int start, int end)
 {
     if (parent.isValid()) {
-       q->beginRemoveColumns(q->mapFromSource(parent), start, end);
+        q->beginRemoveColumns(q->mapFromSource(parent), start, end);
     }
     const QAbstractItemModel *model = qobject_cast<QAbstractItemModel *>(q->sender());
     if (m_models.at(0) == model) {

@@ -5,8 +5,7 @@
 
 class QDBusArgument;
 
-struct LayoutNames
-{
+struct LayoutNames {
     static void registerMetaType();
 
     QString shortName;

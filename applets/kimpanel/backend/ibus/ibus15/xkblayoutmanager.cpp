@@ -18,27 +18,25 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "xkblayoutmanager.h"
-#include <QStringList>
-#include <QProcess>
 #include <QDir>
+#include <QProcess>
+#include <QStringList>
 
-const char* XKB_COMMAND = "setxkbmap";
-const char* XKB_QUERY_ARG = "-query";
-const char* XKB_LAYOUT_ARG = "-layout";
-const char* XMODMAP_COMMAND = "xmodmap";
-const char* XMODMAP_KNOWN_FILES[] = {".xmodmap", ".xmodmaprc",
-                                     ".Xmodmap", ".Xmodmaprc"};
+const char *XKB_COMMAND = "setxkbmap";
+const char *XKB_QUERY_ARG = "-query";
+const char *XKB_LAYOUT_ARG = "-layout";
+const char *XMODMAP_COMMAND = "xmodmap";
+const char *XMODMAP_KNOWN_FILES[] = {".xmodmap", ".xmodmaprc", ".Xmodmap", ".Xmodmaprc"};
 
-XkbLayoutManager::XkbLayoutManager() :
-    m_useXkbModmap(false)
+XkbLayoutManager::XkbLayoutManager()
+    : m_useXkbModmap(false)
 {
-
 }
 
-void XkbLayoutManager::setLatinLayouts(const gchar** variants, gsize length)
+void XkbLayoutManager::setLatinLayouts(const gchar **variants, gsize length)
 {
     m_latinLayouts.clear();
-    for (gsize i = 0; i < length; i ++ ) {
+    for (gsize i = 0; i < length; i++) {
         m_latinLayouts.insert(QString::fromUtf8(variants[i]));
     }
 }
@@ -49,8 +47,8 @@ void XkbLayoutManager::getLayout()
     process.start(XKB_COMMAND, QStringList(XKB_QUERY_ARG));
     process.waitForFinished();
     QByteArray output = process.readAllStandardOutput();
-    QList< QByteArray > lines = output.split('\n');
-    Q_FOREACH(const QByteArray& line, lines) {
+    QList<QByteArray> lines = output.split('\n');
+    Q_FOREACH (const QByteArray &line, lines) {
         QByteArray element("layout:");
         if (line.startsWith(element)) {
             m_defaultLayout = QString::fromLatin1(line.mid(element.length(), line.length())).trimmed();
@@ -68,19 +66,17 @@ void XkbLayoutManager::getLayout()
     }
 }
 
-void XkbLayoutManager::setLayout(IBusEngineDesc* desc)
+void XkbLayoutManager::setLayout(IBusEngineDesc *desc)
 {
-    const gchar* clayout = ibus_engine_desc_get_layout(desc);
-    const gchar* cvariant = ibus_engine_desc_get_layout_variant(desc);
-    const gchar* coption = ibus_engine_desc_get_layout_option(desc);
+    const gchar *clayout = ibus_engine_desc_get_layout(desc);
+    const gchar *cvariant = ibus_engine_desc_get_layout_variant(desc);
+    const gchar *coption = ibus_engine_desc_get_layout_option(desc);
 
     QString layout = QString::fromUtf8(clayout ? clayout : "");
     QString variant = QString::fromUtf8(cvariant ? cvariant : "");
     QString option = QString::fromUtf8(coption ? coption : "");
 
-    if (layout == "default" &&
-        (variant == "default" || variant == "") &&
-        (option == "default" || option == "")) {
+    if (layout == "default" && (variant == "default" || variant == "") && (option == "default" || option == "")) {
         return;
     }
 
@@ -152,7 +148,7 @@ void XkbLayoutManager::runXmodmap()
     }
 
     QDir home = QDir::home();
-    for (size_t i = 0; i < sizeof(XMODMAP_KNOWN_FILES) / sizeof(XMODMAP_KNOWN_FILES[0]); i ++ ) {
+    for (size_t i = 0; i < sizeof(XMODMAP_KNOWN_FILES) / sizeof(XMODMAP_KNOWN_FILES[0]); i++) {
         if (home.exists(XMODMAP_KNOWN_FILES[i])) {
             QProcess::startDetached(XMODMAP_COMMAND, QStringList(home.filePath(XMODMAP_KNOWN_FILES[i])));
             break;

@@ -26,29 +26,23 @@ CustomSlider::Interpolator::~Interpolator()
 {
 }
 
-double CustomSlider::Interpolator::absolute(double relative,
-                                            double minimum,
-                                            double maximum) const
+double CustomSlider::Interpolator::absolute(double relative, double minimum, double maximum) const
 {
     return relative * (maximum - minimum) + minimum;
 }
 
-double CustomSlider::Interpolator::relative(double absolute,
-                                            double minimum,
-                                            double maximum) const
+double CustomSlider::Interpolator::relative(double absolute, double minimum, double maximum) const
 {
     return (absolute - minimum) / (maximum - minimum);
 }
 
-double CustomSlider::SqrtInterpolator::absolute(
-        double relative, double minimum, double maximum) const
+double CustomSlider::SqrtInterpolator::absolute(double relative, double minimum, double maximum) const
 {
     relative *= relative;
     return Interpolator::absolute(relative, minimum, maximum);
 }
 
-double CustomSlider::SqrtInterpolator::relative(
-        double absolute, double minimum, double maximum) const
+double CustomSlider::SqrtInterpolator::relative(double absolute, double minimum, double maximum) const
 {
     double value = Interpolator::relative(absolute, minimum, maximum);
     return std::sqrt(value);
@@ -56,8 +50,11 @@ double CustomSlider::SqrtInterpolator::relative(
 
 const CustomSlider::Interpolator CustomSlider::lerp;
 
-CustomSlider::CustomSlider(QWidget *parent) :
-    QSlider(parent), m_min(0.0), m_max(1.0), m_interpolator(&lerp)
+CustomSlider::CustomSlider(QWidget *parent)
+    : QSlider(parent)
+    , m_min(0.0)
+    , m_max(1.0)
+    , m_interpolator(&lerp)
 {
     setSingleStep(10);
     setPageStep(100);

@@ -20,55 +20,58 @@
 
 #include "kcm.h"
 
-#include <KPluginFactory>
 #include <KAboutData>
+#include <KActivities/Consumer>
+#include <KActivities/Info>
+#include <KLocalizedString>
+#include <KNS3/Button>
+#include <KPluginFactory>
+#include <KPluginSelector>
+#include <KRunner/RunnerManager>
 #include <QDebug>
 #include <QStandardPaths>
-#include <KLocalizedString>
-#include <KRunner/RunnerManager>
-#include <KPluginSelector>
-#include <KNS3/Button>
-#include <KActivities/Info>
-#include <KActivities/Consumer>
 
-#include <QApplication>
-#include <QDBusMessage>
-#include <QDBusConnection>
-#include <QDBusMetaType>
-#include <QVBoxLayout>
-#include <QLabel>
-#include <QDialog>
-#include <QPainter>
-#include <QFormLayout>
-#include <QFileInfo>
-#include <QMenu>
-#include <QAction>
-#include <QToolButton>
-#include "krunnersettings.h"
 #include "krunnerdata.h"
+#include "krunnersettings.h"
+#include <QAction>
+#include <QApplication>
+#include <QDBusConnection>
+#include <QDBusMessage>
+#include <QDBusMetaType>
+#include <QDialog>
+#include <QFileInfo>
+#include <QFormLayout>
+#include <QLabel>
+#include <QMenu>
+#include <QPainter>
+#include <QToolButton>
+#include <QVBoxLayout>
 
 K_PLUGIN_FACTORY(SearchConfigModuleFactory, registerPlugin<SearchConfigModule>(); registerPlugin<KRunnerData>();)
 
-
-SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args)
+SearchConfigModule::SearchConfigModule(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
     , m_config(KSharedConfig::openConfig("krunnerrc"))
     , m_settings(new KRunnerSettings(this))
 {
-    KAboutData* about = new KAboutData(QStringLiteral("kcm_search"), i18nc("kcm name for About dialog", "Configure Search Bar"),
-                                       QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_search"),
+                                       i18nc("kcm name for About dialog", "Configure Search Bar"),
+                                       QStringLiteral("0.1"),
+                                       QString(),
+                                       KAboutLicense::LGPL);
     about->addAuthor(i18n("Vishesh Handa"), QString(), QStringLiteral("vhanda@kde.org"));
     setAboutData(about);
     setButtons(Apply | Default);
 
-    if(!args.at(0).toString().isEmpty()) {
+    if (!args.at(0).toString().isEmpty()) {
         m_pluginID = args.at(0).toString();
     }
 
     QVBoxLayout *layout = new QVBoxLayout(this);
     m_consumer = new KActivities::Consumer(this);
-    m_historyConfigGroup = KSharedConfig::openConfig(QStringLiteral("krunnerstaterc"), KConfig::NoGlobals,
-                                  QStandardPaths::GenericDataLocation)->group("PlasmaRunnerManager").group("History");
+    m_historyConfigGroup = KSharedConfig::openConfig(QStringLiteral("krunnerstaterc"), KConfig::NoGlobals, QStandardPaths::GenericDataLocation)
+                               ->group("PlasmaRunnerManager")
+                               .group("History");
 
     QHBoxLayout *headerLayout = new QHBoxLayout;
     layout->addLayout(headerLayout);
@@ -76,8 +79,8 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     QLabel *label = new QLabel(i18n("Enable or disable plugins (used in KRunner and Application Launcher)"));
 
     m_clearHistoryButton = new QToolButton(this);
-    m_clearHistoryButton->setIcon(QIcon::fromTheme(isRightToLeft() ? QStringLiteral("edit-clear-locationbar-ltr")
-                                                                   : QStringLiteral("edit-clear-locationbar-rtl")));
+    m_clearHistoryButton->setIcon(
+        QIcon::fromTheme(isRightToLeft() ? QStringLiteral("edit-clear-locationbar-ltr") : QStringLiteral("edit-clear-locationbar-rtl")));
     m_clearHistoryButton->setPopupMode(QToolButton::InstantPopup);
     m_clearHistoryButton->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
     connect(m_clearHistoryButton, &QPushButton::clicked, this, &SearchConfigModule::deleteAllHistory);
@@ -126,10 +129,9 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     qDBusRegisterMetaType<QByteArrayList>();
     qDBusRegisterMetaType<QHash<QString, QByteArrayList>>();
     // This will trigger the reloadConfiguration method for the runner
-    connect(m_pluginSelector, &KPluginSelector::configCommitted, this, [](const QByteArray &componentName){
-        QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/krunnerrc"),
-                                                          QStringLiteral("org.kde.kconfig.notify"),
-                                                          QStringLiteral("ConfigChanged"));
+    connect(m_pluginSelector, &KPluginSelector::configCommitted, this, [](const QByteArray &componentName) {
+        QDBusMessage message =
+            QDBusMessage::createSignal(QStringLiteral("/krunnerrc"), QStringLiteral("org.kde.kconfig.notify"), QStringLiteral("ConfigChanged"));
         const QHash<QString, QByteArrayList> changes = {{QStringLiteral("Runners"), {componentName}}};
         message.setArguments({QVariant::fromValue(changes)});
         QDBusConnection::sessionBus().send(message);
@@ -142,17 +144,18 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     QHBoxLayout *downloadLayout = new QHBoxLayout;
     KNS3::Button *downloadButton = new KNS3::Button(i18n("Get New Plugins..."), QStringLiteral("krunner.knsrc"), this);
     connect(downloadButton, &KNS3::Button::dialogFinished, this, [this](const KNS3::Entry::List &changedEntries) {
-       if (!changedEntries.isEmpty()) {
-           m_pluginSelector->clearPlugins();
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
-QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
-           m_pluginSelector->addPlugins(Plasma::RunnerManager::listRunnerInfo(),
-                                        KPluginSelector::ReadConfigFile,
-                                        i18n("Available Plugins"), QString(),
-                                        m_config);
-QT_WARNING_POP
-       }
+        if (!changedEntries.isEmpty()) {
+            m_pluginSelector->clearPlugins();
+            QT_WARNING_PUSH
+            QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+            QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
+            m_pluginSelector->addPlugins(Plasma::RunnerManager::listRunnerInfo(),
+                                         KPluginSelector::ReadConfigFile,
+                                         i18n("Available Plugins"),
+                                         QString(),
+                                         m_config);
+            QT_WARNING_POP
+        }
     });
     downloadLayout->addStretch();
     downloadLayout->addWidget(downloadButton);
@@ -175,22 +178,18 @@ void SearchConfigModule::load()
     // Set focus on the pluginselector to pass focus to search bar.
     m_pluginSelector->setFocus(Qt::OtherFocusReason);
 
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
-QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
-    m_pluginSelector->addPlugins(Plasma::RunnerManager::listRunnerInfo(),
-                    KPluginSelector::ReadConfigFile,
-                    i18n("Available Plugins"), QString(),
-                    m_config);
-QT_WARNING_POP
+    QT_WARNING_PUSH
+    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
+    m_pluginSelector->addPlugins(Plasma::RunnerManager::listRunnerInfo(), KPluginSelector::ReadConfigFile, i18n("Available Plugins"), QString(), m_config);
+    QT_WARNING_POP
     m_pluginSelector->load();
 
-    if(!m_pluginID.isEmpty()){
+    if (!m_pluginID.isEmpty()) {
         m_pluginSelector->showConfiguration(m_pluginID);
     }
     configureClearHistoryButton();
 }
-
 
 void SearchConfigModule::save()
 {
@@ -198,7 +197,6 @@ void SearchConfigModule::save()
     m_settings->save();
 
     KCModule::save();
-
 
     // Combine & write history
     if (!m_activityAware->isChecked()) {
@@ -217,9 +215,7 @@ void SearchConfigModule::save()
 
     m_pluginSelector->save();
 
-    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/krunnerrc"),
-                                                      QStringLiteral("org.kde.kconfig.notify"),
-                                                      QStringLiteral("ConfigChanged"));
+    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/krunnerrc"), QStringLiteral("org.kde.kconfig.notify"), QStringLiteral("ConfigChanged"));
     const QHash<QString, QByteArrayList> changes = {{QStringLiteral("Plugins"), {}}};
     message.setArguments({QVariant::fromValue(changes)});
     QDBusConnection::sessionBus().send(message);
@@ -241,8 +237,7 @@ void SearchConfigModule::configureClearHistoryButton()
     const QStringList historyKeys = m_historyConfigGroup.keyList();
     if (m_activityAware->isChecked() && activities.length() > 1) {
         auto *installMenu = new QMenu(m_clearHistoryButton);
-        QAction *all = installMenu->addAction(m_clearHistoryButton->icon(),
-                i18nc("delete history for all activities", "For all activities"));
+        QAction *all = installMenu->addAction(m_clearHistoryButton->icon(), i18nc("delete history for all activities", "For all activities"));
         installMenu->setEnabled(!historyKeys.isEmpty());
         connect(all, &QAction::triggered, this, &SearchConfigModule::deleteAllHistory);
         for (const auto &key : activities) {
@@ -256,10 +251,11 @@ void SearchConfigModule::configureClearHistoryButton()
             } else {
                 icon = QIcon::fromTheme(iconStr);
             }
-            QAction *singleActivity = installMenu->addAction(icon,
-                    i18nc("delete history for this activity", "For activity \"%1\"", info.name()));
+            QAction *singleActivity = installMenu->addAction(icon, i18nc("delete history for this activity", "For activity \"%1\"", info.name()));
             singleActivity->setEnabled(historyKeys.contains(key)); // Otherwise there would be nothing to delete
-            connect(singleActivity, &QAction::triggered, this, [this, key](){ deleteHistoryGroup(key); });
+            connect(singleActivity, &QAction::triggered, this, [this, key]() {
+                deleteHistoryGroup(key);
+            });
             installMenu->addAction(singleActivity);
             m_clearHistoryButton->setText(i18n("Clear History..."));
         }
@@ -310,6 +306,5 @@ void SearchConfigModule::setDefaultIndicatorVisible(QWidget *widget, bool visibl
     widget->setProperty("_kde_highlight_neutral", visible);
     widget->update();
 }
-
 
 #include "kcm.moc"

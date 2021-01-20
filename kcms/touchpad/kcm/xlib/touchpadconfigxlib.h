@@ -23,16 +23,17 @@
 
 #include <KConfigDialogManager>
 #include <QScopedPointer>
+#include <QSpinBox>
 
-#include "touchpadparameters.h"
-#include "testarea.h"
 #include "kdedsettings.h"
+#include "testarea.h"
+#include "touchpadparameters.h"
 
+#include "ui_kded.h"
 #include "ui_pointermotion.h"
-#include "ui_tap.h"
 #include "ui_scroll.h"
 #include "ui_sensitivity.h"
-#include "ui_kded.h"
+#include "ui_tap.h"
 
 class TouchpadConfigContainer;
 class TouchpadBackend;
@@ -51,9 +52,7 @@ class TouchpadConfigXlib : public TouchpadConfigPlugin
     Q_OBJECT
 
 public:
-    explicit TouchpadConfigXlib(TouchpadConfigContainer *parent,
-                                TouchpadBackend* backend,
-                            const QVariantList &args = QVariantList());
+    explicit TouchpadConfigXlib(TouchpadConfigContainer *parent, TouchpadBackend *backend, const QVariantList &args = QVariantList());
     ~TouchpadConfigXlib() override;
 
     static void kcmInit();

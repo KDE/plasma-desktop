@@ -24,9 +24,6 @@
 #include "kcm/touchpadconfigcontainer.h"
 #include "kded/kded.h"
 
-
-K_PLUGIN_FACTORY(TouchpadPluginFactory,
-                 registerPlugin<TouchpadDisabler>();
-                 registerPlugin<TouchpadConfigContainer>("kcm");)
+K_PLUGIN_FACTORY(TouchpadPluginFactory, registerPlugin<TouchpadDisabler>(); registerPlugin<TouchpadConfigContainer>("kcm");)
 #include <plugins.moc>
-//K_EXPORT_PLUGIN(TouchpadPluginFactory(buildAboutData()))
+// K_EXPORT_PLUGIN(TouchpadPluginFactory(buildAboutData()))

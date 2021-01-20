@@ -33,6 +33,7 @@
 #include <QDrag>
 #include <QImage>
 #include <QItemSelectionModel>
+#include <QLoggingCategory>
 #include <QMenu>
 #include <QMimeData>
 #include <QMimeDatabase>
@@ -41,17 +42,16 @@
 #include <QQuickItem>
 #include <QQuickWindow>
 #include <QTimer>
-#include <QLoggingCategory>
 #include <qplatformdefs.h>
 
-#include <KDirWatch>
-#include <KIO/DropJob>
 #include <KAuthorized>
 #include <KConfigGroup>
+#include <KDirWatch>
 #include <KFileCopyToMenu>
 #include <KFileItemActions>
 #include <KFileItemListProperties>
 #include <KIO/DeleteJob>
+#include <KIO/DropJob>
 #include <KIO/EmptyTrashJob>
 #include <KIO/FileUndoManager>
 #include <KIO/JobUiDelegate>
@@ -76,17 +76,18 @@
 #include <Plasma/Containment>
 #include <Plasma/Corona>
 
-#include <sys/types.h>
 #include <sys/stat.h>
+#include <sys/types.h>
 #include <unistd.h>
 
 Q_LOGGING_CATEGORY(FOLDERMODEL, "plasma.containments.desktop.folder.foldermodel")
 
-DirLister::DirLister(QObject *parent) : KDirLister(parent)
+DirLister::DirLister(QObject *parent)
+    : KDirLister(parent)
 {
 }
 
-DirLister:: ~DirLister()
+DirLister::~DirLister()
 {
 }
 
@@ -100,30 +101,31 @@ void DirLister::handleError(KIO::Job *job)
     KDirLister::handleError(job);
 }
 
-FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
-    m_dirWatch(nullptr),
-    m_dragInProgress(false),
-    m_urlChangedWhileDragging(false),
-    m_dropTargetPositionsCleanup(new QTimer(this)),
-    m_previewGenerator(nullptr),
-    m_viewAdapter(nullptr),
-    m_actionCollection(this),
-    m_newMenu(nullptr),
-    m_fileItemActions(nullptr),
-    m_usedByContainment(false),
-    m_locked(true),
-    m_sortMode(0),
-    m_sortDesc(false),
-    m_sortDirsFirst(true),
-    m_parseDesktopFiles(false),
-    m_previews(false),
-    m_filterMode(NoFilter),
-    m_filterPatternMatchAll(true),
-    m_screenUsed(false),
-    m_screenMapper(ScreenMapper::instance()),
-    m_complete(false)
+FolderModel::FolderModel(QObject *parent)
+    : QSortFilterProxyModel(parent)
+    , m_dirWatch(nullptr)
+    , m_dragInProgress(false)
+    , m_urlChangedWhileDragging(false)
+    , m_dropTargetPositionsCleanup(new QTimer(this))
+    , m_previewGenerator(nullptr)
+    , m_viewAdapter(nullptr)
+    , m_actionCollection(this)
+    , m_newMenu(nullptr)
+    , m_fileItemActions(nullptr)
+    , m_usedByContainment(false)
+    , m_locked(true)
+    , m_sortMode(0)
+    , m_sortDesc(false)
+    , m_sortDirsFirst(true)
+    , m_parseDesktopFiles(false)
+    , m_previews(false)
+    , m_filterMode(NoFilter)
+    , m_filterPatternMatchAll(true)
+    , m_screenUsed(false)
+    , m_screenMapper(ScreenMapper::instance())
+    , m_complete(false)
 {
-    //needed to pass the job around with qml
+    // needed to pass the job around with qml
     qmlRegisterType<KIO::DropJob>();
     DirLister *dirLister = new DirLister(this);
     dirLister->setDelayedMimeTypes(true);
@@ -150,16 +152,14 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_dirModel->setDropsAllowed(KDirModel::DropOnDirectory | KDirModel::DropOnLocalExecutable);
 
     // If we have dropped items queued for moving, go unsorted now.
-    connect(this, &QAbstractItemModel::rowsAboutToBeInserted,
-            this, [this]() {
-            if (!m_dropTargetPositions.isEmpty()) {
-                setSortMode(-1);
-            }
+    connect(this, &QAbstractItemModel::rowsAboutToBeInserted, this, [this]() {
+        if (!m_dropTargetPositions.isEmpty()) {
+            setSortMode(-1);
+        }
     });
 
     // Position dropped items at the desired target position.
-    connect(this, &QAbstractItemModel::rowsInserted,
-            this, [this](const QModelIndex &parent, int first, int last) {
+    connect(this, &QAbstractItemModel::rowsInserted, this, [this](const QModelIndex &parent, int first, int last) {
         for (int i = first; i <= last; ++i) {
             const auto idx = index(i, 0, parent);
             const auto url = itemForIndex(idx).url();
@@ -192,8 +192,7 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     });
 
     m_selectionModel = new QItemSelectionModel(this, this);
-    connect(m_selectionModel, &QItemSelectionModel::selectionChanged,
-            this, &FolderModel::selectionChanged);
+    connect(m_selectionModel, &QItemSelectionModel::selectionChanged, this, &FolderModel::selectionChanged);
 
     setSourceModel(m_dirModel);
 
@@ -216,12 +215,12 @@ FolderModel::~FolderModel()
     }
 }
 
-QHash< int, QByteArray > FolderModel::roleNames() const
+QHash<int, QByteArray> FolderModel::roleNames() const
 {
     return staticRoleNames();
 }
 
-QHash< int, QByteArray > FolderModel::staticRoleNames()
+QHash<int, QByteArray> FolderModel::staticRoleNames()
 {
     QHash<int, QByteArray> roleNames;
     roleNames[Qt::DisplayRole] = "display";
@@ -283,7 +282,7 @@ QString FolderModel::url() const
     return m_url;
 }
 
-void FolderModel::setUrl(const QString& url)
+void FolderModel::setUrl(const QString &url)
 {
     const QUrl &resolvedNewUrl = resolve(url);
 
@@ -337,7 +336,7 @@ QUrl FolderModel::resolvedUrl() const
     return m_dirModel->dirLister()->url();
 }
 
-QUrl FolderModel::resolve(const QString& url)
+QUrl FolderModel::resolve(const QString &url)
 {
     QUrl resolvedUrl;
 
@@ -423,7 +422,7 @@ void FolderModel::setLocked(bool locked)
     }
 }
 
-void FolderModel::dirListFailed(const QString& error)
+void FolderModel::dirListFailed(const QString &error)
 {
     m_errorString = error;
     emit errorStringChanged();
@@ -502,12 +501,12 @@ void FolderModel::setParseDesktopFiles(bool enable)
     }
 }
 
-QObject* FolderModel::viewAdapter() const
+QObject *FolderModel::viewAdapter() const
 {
     return m_viewAdapter;
 }
 
-void FolderModel::setViewAdapter(QObject* adapter)
+void FolderModel::setViewAdapter(QObject *adapter)
 {
     if (m_viewAdapter != adapter) {
         KAbstractViewAdapter *abstractViewAdapter = dynamic_cast<KAbstractViewAdapter *>(adapter);
@@ -547,7 +546,7 @@ QStringList FolderModel::previewPlugins() const
     return m_previewPlugins;
 }
 
-void FolderModel::setPreviewPlugins(const QStringList& previewPlugins)
+void FolderModel::setPreviewPlugins(const QStringList &previewPlugins)
 {
     QStringList effectivePlugins = previewPlugins;
     if (effectivePlugins.isEmpty()) {
@@ -626,7 +625,6 @@ void FolderModel::setFilterMimeTypes(const QStringList &mimeList)
     const QSet<QString> set(mimeList.constBegin(), mimeList.constEnd());
 
     if (m_mimeSet != set) {
-
         m_mimeSet = set;
 
         invalidateFilterIfComplete();
@@ -698,7 +696,7 @@ void FolderModel::cd(int row)
     bool isDir = data(idx, IsDirRole).toBool();
 
     if (isDir) {
-        const KFileItem  item = itemForIndex(idx);
+        const KFileItem item = itemForIndex(idx);
         if (m_parseDesktopFiles && item.isDesktopFile()) {
             const KDesktopFile file(item.targetUrl().path());
             if (file.hasLinkType()) {
@@ -730,7 +728,7 @@ void FolderModel::run(int row)
     // otherwise ask for security reasons. We also don't use the targetUrl()
     // from above since we don't want the resolved /home/foo/Desktop URL.
     run->setShowScriptExecutionPrompt(item.url().scheme() != QLatin1String("desktop")
-                                   || item.url().adjusted(QUrl::RemoveFilename).path() != QLatin1String("/"));
+                                      || item.url().adjusted(QUrl::RemoveFilename).path() != QLatin1String("/"));
 }
 
 void FolderModel::runSelected()
@@ -757,7 +755,7 @@ void FolderModel::runSelected()
     fileItemActions.runPreferredApplications(items, QString());
 }
 
-void FolderModel::rename(int row, const QString& name)
+void FolderModel::rename(int row, const QString &name)
 {
     if (row < 0) {
         return;
@@ -975,9 +973,7 @@ void FolderModel::dragSelected(int x, int y)
     // Avoid starting a drag synchronously in a mouse handler or interferes with
     // child event filtering in parent items (and thus e.g. press-and-hold hand-
     // ling in a containment).
-    QMetaObject::invokeMethod(this, "dragSelectedInternal", Qt::QueuedConnection,
-        Q_ARG(int, x),
-        Q_ARG(int, y));
+    QMetaObject::invokeMethod(this, "dragSelectedInternal", Qt::QueuedConnection, Q_ARG(int, x), Q_ARG(int, y));
 }
 
 void FolderModel::dragSelectedInternal(int x, int y)
@@ -1037,15 +1033,14 @@ void FolderModel::dragSelectedInternal(int x, int y)
 static bool isDropBetweenSharedViews(const QList<QUrl> &urls, const QUrl &folderUrl)
 {
     for (const auto &url : urls) {
-        if (folderUrl.adjusted(QUrl::StripTrailingSlash)
-               != url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash)) {
+        if (folderUrl.adjusted(QUrl::StripTrailingSlash) != url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash)) {
             return false;
         }
     }
     return true;
 }
 
-void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row, bool showMenuManually)
+void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool showMenuManually)
 {
     QMimeData *mimeData = qobject_cast<QMimeData *>(dropEvent->property("mimeData").value<QObject *>());
 
@@ -1057,8 +1052,8 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row, bool sho
     KFileItem item;
 
     if (row > -1 && row < rowCount()) {
-         idx = index(row, 0);
-         item = itemForIndex(idx);
+        idx = index(row, 0);
+        item = itemForIndex(idx);
     }
 
     QUrl dropTargetUrl;
@@ -1127,15 +1122,15 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row, bool sho
         return;
     }
 
-    if (mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-service")) &&
-        mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-path"))) {
+    if (mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-service"))
+        && mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-path"))) {
         const QString remoteDBusClient = mimeData->data(QStringLiteral("application/x-kde-ark-dndextract-service"));
         const QString remoteDBusPath = mimeData->data(QStringLiteral("application/x-kde-ark-dndextract-path"));
 
-        QDBusMessage message =
-            QDBusMessage::createMethodCall(remoteDBusClient, remoteDBusPath,
-                                            QStringLiteral("org.kde.ark.DndExtract"),
-                                            QStringLiteral("extractSelectedFilesTo"));
+        QDBusMessage message = QDBusMessage::createMethodCall(remoteDBusClient,
+                                                              remoteDBusPath,
+                                                              QStringLiteral("org.kde.ark.DndExtract"),
+                                                              QStringLiteral("extractSelectedFilesTo"));
         message.setArguments({dropTargetUrl.toDisplayString(QUrl::PreferLocalFile)});
 
         QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
@@ -1177,7 +1172,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row, bool sho
     QDropEvent ev(pos, possibleActions, mimeData, buttons, modifiers);
     ev.setDropAction(proposedAction);
 
-    KIO::DropJobFlag flag = showMenuManually? KIO::ShowMenuManually : KIO::DropJobDefaultFlags;
+    KIO::DropJobFlag flag = showMenuManually ? KIO::ShowMenuManually : KIO::DropJobDefaultFlags;
     KIO::DropJob *dropJob = KIO::drop(&ev, dropTargetUrl, flag);
     dropJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
 
@@ -1201,7 +1196,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row, bool sho
      * hash and eventually trigger a move request when we get notified about
      * the new file event from the source model.
      */
-    connect(dropJob, &KIO::DropJob::copyJobStarted, this, [this, dropPos, dropTargetUrl](KIO::CopyJob* copyJob) {
+    connect(dropJob, &KIO::DropJob::copyJobStarted, this, [this, dropPos, dropTargetUrl](KIO::CopyJob *copyJob) {
         auto map = [this, dropPos, dropTargetUrl](const QUrl &targetUrl) {
             m_dropTargetPositions.insert(targetUrl.fileName(), dropPos);
             m_dropTargetPositionsCleanup->start();
@@ -1226,18 +1221,16 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row, bool sho
             }
         };
         // remember drop target position for target URL and forget about the source URL
-        connect(copyJob, &KIO::CopyJob::copyingDone,
-                this, [ map](KIO::Job *, const QUrl &, const QUrl &targetUrl, const QDateTime &, bool, bool) {
+        connect(copyJob, &KIO::CopyJob::copyingDone, this, [map](KIO::Job *, const QUrl &, const QUrl &targetUrl, const QDateTime &, bool, bool) {
             map(targetUrl);
         });
-        connect(copyJob, &KIO::CopyJob::copyingLinkDone,
-                this, [ map](KIO::Job *, const QUrl &, const QString &, const QUrl &targetUrl) {
+        connect(copyJob, &KIO::CopyJob::copyingLinkDone, this, [map](KIO::Job *, const QUrl &, const QString &, const QUrl &targetUrl) {
             map(targetUrl);
         });
     });
 }
 
-void FolderModel::dropCwd(QObject* dropEvent)
+void FolderModel::dropCwd(QObject *dropEvent)
 {
     QMimeData *mimeData = qobject_cast<QMimeData *>(dropEvent->property("mimeData").value<QObject *>());
 
@@ -1245,15 +1238,15 @@ void FolderModel::dropCwd(QObject* dropEvent)
         return;
     }
 
-    if (mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-service")) &&
-        mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-path"))) {
+    if (mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-service"))
+        && mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-path"))) {
         const QString remoteDBusClient = mimeData->data(QStringLiteral("application/x-kde-ark-dndextract-service"));
         const QString remoteDBusPath = mimeData->data(QStringLiteral("application/x-kde-ark-dndextract-path"));
 
-        QDBusMessage message =
-            QDBusMessage::createMethodCall(remoteDBusClient, remoteDBusPath,
-                                            QStringLiteral("org.kde.ark.DndExtract"),
-                                            QStringLiteral("extractSelectedFilesTo"));
+        QDBusMessage message = QDBusMessage::createMethodCall(remoteDBusClient,
+                                                              remoteDBusPath,
+                                                              QStringLiteral("org.kde.ark.DndExtract"),
+                                                              QStringLiteral("extractSelectedFilesTo"));
         message.setArguments(QVariantList() << m_dirModel->dirLister()->url().adjusted(QUrl::PreferLocalFile).toString());
 
         QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
@@ -1279,7 +1272,7 @@ void FolderModel::selectionChanged(const QItemSelection &selected, const QItemSe
     QVector<int> roles;
     roles.append(SelectedRole);
 
-    foreach(const QModelIndex &index, indices) {
+    foreach (const QModelIndex &index, indices) {
         emit dataChanged(index, index, roles);
     }
 
@@ -1303,7 +1296,7 @@ bool FolderModel::isBlank(int row) const
     return data(index(row, 0), BlankRole).toBool();
 }
 
-QVariant FolderModel::data(const QModelIndex& index, int role) const
+QVariant FolderModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
         return QVariant();
@@ -1353,7 +1346,7 @@ QVariant FolderModel::data(const QModelIndex& index, int role) const
     return QSortFilterProxyModel::data(index, role);
 }
 
-int FolderModel::indexForUrl(const QUrl& url) const
+int FolderModel::indexForUrl(const QUrl &url) const
 {
     return mapFromSource(m_dirModel->indexForUrl(url)).row();
 }
@@ -1414,7 +1407,7 @@ bool FolderModel::isDir(const QModelIndex &index, const KDirModel *dirModel) con
 
 void FolderModel::statResult(KJob *job)
 {
-    KIO::StatJob *statJob = static_cast<KIO::StatJob*>(job);
+    KIO::StatJob *statJob = static_cast<KIO::StatJob *>(job);
 
     const QUrl &url = statJob->property("org.kde.plasma.folder_url").toUrl();
     const QModelIndex &idx = index(indexForUrl(url), 0);
@@ -1428,7 +1421,7 @@ void FolderModel::statResult(KJob *job)
     m_isDirJobs.remove(url);
 }
 
-void FolderModel::evictFromIsDirCache(const KFileItemList& items)
+void FolderModel::evictFromIsDirCache(const KFileItemList &items)
 {
     foreach (const KFileItem &item, items) {
         m_screenMapper->removeFromMap(item.url());
@@ -1438,7 +1431,7 @@ void FolderModel::evictFromIsDirCache(const KFileItemList& items)
 
 bool FolderModel::lessThan(const QModelIndex &left, const QModelIndex &right) const
 {
-    const KDirModel *dirModel = static_cast<KDirModel*>(sourceModel());
+    const KDirModel *dirModel = static_cast<KDirModel *>(sourceModel());
 
     if (m_sortDirsFirst || left.column() == KDirModel::Size) {
         bool leftIsDir = isDir(left, dirModel);
@@ -1459,42 +1452,41 @@ bool FolderModel::lessThan(const QModelIndex &left, const QModelIndex &right) co
     int result = 0;
 
     switch (column) {
-        case KDirModel::Size: {
-                if (isDir(left, dirModel) && isDir(right, dirModel)) {
-                    const int leftChildCount = dirModel->data(left, KDirModel::ChildCountRole).toInt();
-                    const int rightChildCount = dirModel->data(right, KDirModel::ChildCountRole).toInt();
-                    if (leftChildCount < rightChildCount)
-                        result = -1;
-                    else if (leftChildCount > rightChildCount)
-                        result = +1;
-                } else {
-                    const KIO::filesize_t leftSize = leftItem.size();
-                    const KIO::filesize_t rightSize = rightItem.size();
-                    if (leftSize < rightSize)
-                        result = -1;
-                    else if (leftSize > rightSize)
-                        result = +1;
-                }
+    case KDirModel::Size: {
+        if (isDir(left, dirModel) && isDir(right, dirModel)) {
+            const int leftChildCount = dirModel->data(left, KDirModel::ChildCountRole).toInt();
+            const int rightChildCount = dirModel->data(right, KDirModel::ChildCountRole).toInt();
+            if (leftChildCount < rightChildCount)
+                result = -1;
+            else if (leftChildCount > rightChildCount)
+                result = +1;
+        } else {
+            const KIO::filesize_t leftSize = leftItem.size();
+            const KIO::filesize_t rightSize = rightItem.size();
+            if (leftSize < rightSize)
+                result = -1;
+            else if (leftSize > rightSize)
+                result = +1;
+        }
 
-                break;
-            }
-        case KDirModel::ModifiedTime: {
-                const long long leftTime = leftItem.entry().numberValue(KIO::UDSEntry::UDS_MODIFICATION_TIME, -1);
-                const long long rightTime = rightItem.entry().numberValue(KIO::UDSEntry::UDS_MODIFICATION_TIME, -1);
-                if (leftTime < rightTime)
-                    result = -1;
-                else if (leftTime > rightTime)
-                    result = +1;
+        break;
+    }
+    case KDirModel::ModifiedTime: {
+        const long long leftTime = leftItem.entry().numberValue(KIO::UDSEntry::UDS_MODIFICATION_TIME, -1);
+        const long long rightTime = rightItem.entry().numberValue(KIO::UDSEntry::UDS_MODIFICATION_TIME, -1);
+        if (leftTime < rightTime)
+            result = -1;
+        else if (leftTime > rightTime)
+            result = +1;
 
-                break;
-            }
-        case KDirModel::Type:
-            result = QString::compare(dirModel->data(left, Qt::DisplayRole).toString(),
-                                      dirModel->data(right, Qt::DisplayRole).toString());
-            break;
+        break;
+    }
+    case KDirModel::Type:
+        result = QString::compare(dirModel->data(left, Qt::DisplayRole).toString(), dirModel->data(right, Qt::DisplayRole).toString());
+        break;
 
-        default:
-            break;
+    default:
+        break;
     }
 
     if (result != 0)
@@ -1558,7 +1550,7 @@ inline bool FolderModel::matchPattern(const KFileItem &item) const
 
 bool FolderModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
-    const KDirModel *dirModel = static_cast<KDirModel*>(sourceModel());
+    const KDirModel *dirModel = static_cast<KDirModel *>(sourceModel());
     const KFileItem item = dirModel->itemForIndex(dirModel->index(sourceRow, KDirModel::Name, sourceParent));
 
     if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
@@ -1610,12 +1602,12 @@ void FolderModel::createActions()
     QAction *refresh = new QAction(QIcon::fromTheme(QStringLiteral("view-refresh")), i18n("&Refresh View"), this);
     refresh->setShortcut(QKeySequence(QKeySequence::Refresh));
     connect(refresh, &QAction::triggered, this, &FolderModel::refresh);
-    
-    QAction* newDirAction = new QAction(QIcon::fromTheme(QStringLiteral("create_dir")), i18n("&Create Folder"), this);
-    m_actionCollection.setDefaultShortcut(newDirAction, KStandardShortcut::createFolder().last() );
+
+    QAction *newDirAction = new QAction(QIcon::fromTheme(QStringLiteral("create_dir")), i18n("&Create Folder"), this);
+    m_actionCollection.setDefaultShortcut(newDirAction, KStandardShortcut::createFolder().last());
     newDirAction->setVisible(false);
     connect(newDirAction, &QAction::triggered, this, &FolderModel::createFolder);
-    
+
     QAction *rename = KStandardAction::renameFile(this, &FolderModel::requestRename, this);
     QAction *trash = KStandardAction::moveToTrash(this, &FolderModel::moveSelectedToTrash, this);
 
@@ -1643,7 +1635,7 @@ void FolderModel::createActions()
     m_actionCollection.addAction(QStringLiteral("restoreFromTrash"), restoreFromTrash);
     m_actionCollection.addAction(QStringLiteral("emptyTrash"), emptyTrash);
     m_actionCollection.addAction(QStringLiteral("create_dir"), newDirAction);
-    
+
     m_newMenu = new KNewFileMenu(&m_actionCollection, QStringLiteral("newMenu"), this);
     m_newMenu->setModal(false);
     connect(m_newMenu, &KNewFileMenu::directoryCreated, this, &FolderModel::newFileMenuItemCreated);
@@ -1652,12 +1644,12 @@ void FolderModel::createActions()
     m_copyToMenu = new KFileCopyToMenu(nullptr);
 }
 
-QAction* FolderModel::action(const QString &name) const
+QAction *FolderModel::action(const QString &name) const
 {
     return m_actionCollection.action(name);
 }
 
-QObject* FolderModel::newMenu() const
+QObject *FolderModel::newMenu() const
 {
     return m_newMenu->menu();
 }
@@ -1737,8 +1729,7 @@ void FolderModel::updateActions()
     if (QAction *paste = m_actionCollection.action(QStringLiteral("paste"))) {
         bool enable = false;
 
-        const QString pasteText = KIO::pasteActionText(QApplication::clipboard()->mimeData(),
-            &enable, rootItem());
+        const QString pasteText = KIO::pasteActionText(QApplication::clipboard()->mimeData(), &enable, rootItem());
 
         if (enable) {
             paste->setText(pasteText);
@@ -1815,8 +1806,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
         menu->addAction(m_actionCollection.action(QStringLiteral("copy")));
         if (urls.length() == 1 && items.first().isDir()) {
             menu->addAction(m_actionCollection.action(QStringLiteral("pasteto")));
-        }
-        else {
+        } else {
             menu->addAction(m_actionCollection.action(QStringLiteral("paste")));
         }
 
@@ -1876,9 +1866,11 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
     menu->installEventFilter(this);
 
     menu->setAttribute(Qt::WA_TranslucentBackground);
-    menu->winId(); //force surface creation before ensurePolish call in menu::Popup which happens before show
+    menu->winId(); // force surface creation before ensurePolish call in menu::Popup which happens before show
     menu->popup(m_menuPosition);
-    connect(menu, &QMenu::aboutToHide, [menu]() { menu->deleteLater(); });
+    connect(menu, &QMenu::aboutToHide, [menu]() {
+        menu->deleteLater();
+    });
 }
 
 void FolderModel::openPropertiesDialog()
@@ -2033,7 +2025,7 @@ void FolderModel::moveSelectedToTrash()
     KIO::JobUiDelegate uiDelegate;
 
     if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Trash, KIO::JobUiDelegate::DefaultConfirmation)) {
-        KIO::Job* job = KIO::trash(urls);
+        KIO::Job *job = KIO::trash(urls);
         job->uiDelegate()->setAutoErrorHandlingEnabled(true);
         KIO::FileUndoManager::self()->recordJob(KIO::FileUndoManager::Trash, urls, QUrl(QStringLiteral("trash:/")), job);
     }
@@ -2055,7 +2047,7 @@ void FolderModel::deleteSelected()
     KIO::JobUiDelegate uiDelegate;
 
     if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Delete, KIO::JobUiDelegate::DefaultConfirmation)) {
-        KIO::Job* job = KIO::del(urls);
+        KIO::Job *job = KIO::del(urls);
         job->uiDelegate()->setAutoErrorHandlingEnabled(true);
     }
 }
@@ -2068,7 +2060,7 @@ void FolderModel::openSelected()
 
     const QList<QUrl> urls = selectedUrls();
     for (const QUrl &url : urls) {
-        (void) new KRun(url, nullptr);
+        (void)new KRun(url, nullptr);
     }
 }
 
@@ -2088,7 +2080,7 @@ void FolderModel::emptyTrashBin()
     uiDelegate.setWindow(QApplication::desktop());
 
     if (uiDelegate.askDeleteConfirmation(QList<QUrl>(), KIO::JobUiDelegate::EmptyTrash, KIO::JobUiDelegate::DefaultConfirmation)) {
-        KIO::Job* job = KIO::emptyTrash();
+        KIO::Job *job = KIO::emptyTrash();
         job->uiDelegate()->setAutoErrorHandlingEnabled(true);
     }
 }

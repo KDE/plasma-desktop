@@ -19,17 +19,16 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include "app.h"
+#include "panel.h"
 #include <QSessionManager>
 #include <ibus.h>
-#include <stdlib.h>
 #include <locale.h>
-#include "panel.h"
-#include "app.h"
+#include <stdlib.h>
 
-int
-main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-    ibus_init ();
+    ibus_init();
     // we don't need im in this.
     qputenv("QT_IM_MODULE", "compose");
     App app(argc, argv);
@@ -45,4 +44,3 @@ main (int argc, char *argv[])
 
     return app.exec();
 }
-

@@ -21,12 +21,12 @@
 #define SWITCHER_BACKEND_H
 
 // Qt
-#include <QObject>
 #include <QHash>
-#include <QKeySequence>
-#include <QTimer>
-#include <QPixmap>
 #include <QJSValue>
+#include <QKeySequence>
+#include <QObject>
+#include <QPixmap>
+#include <QTimer>
 
 // KDE
 #include <KActivities/Controller>
@@ -39,14 +39,17 @@ class QAction;
 class QQmlEngine;
 class QJSEngine;
 
-namespace KIO { class PreviewJob; }
+namespace KIO
+{
+class PreviewJob;
+}
 
-class SwitcherBackend : public QObject {
+class SwitcherBackend : public QObject
+{
     Q_OBJECT
 
     Q_PROPERTY(bool shouldShowSwitcher READ shouldShowSwitcher WRITE setShouldShowSwitcher NOTIFY shouldShowSwitcherChanged)
     Q_PROPERTY(bool dropEnabled READ dropEnabled CONSTANT)
-
 
 public:
     explicit SwitcherBackend(QObject *parent = nullptr);
@@ -71,18 +74,15 @@ public Q_SLOTS:
     void stopActivity(const QString &activity);
 
     void setDropMode(bool value);
-    void drop(QMimeData* mimeData, int modifiers, const QVariant &activityId);
-    void dropCopy(QMimeData* mimeData, const QVariant &activityId);
-    void dropMove(QMimeData* mimeData, const QVariant &activityId);
+    void drop(QMimeData *mimeData, int modifiers, const QVariant &activityId);
+    void dropCopy(QMimeData *mimeData, const QVariant &activityId);
+    void dropMove(QMimeData *mimeData, const QVariant &activityId);
     bool dropEnabled() const;
 
     void toggleActivityManager();
 
 private:
-    template <typename Handler>
-    inline void registerShortcut(const QString &actionName, const QString &name,
-                                 const QKeySequence &shortcut,
-                                 Handler &&handler);
+    template<typename Handler> inline void registerShortcut(const QString &actionName, const QString &name, const QKeySequence &shortcut, Handler &&handler);
 
     enum Direction {
         Next,
@@ -113,7 +113,6 @@ private:
 
     SortedActivitiesModel *m_runningActivitiesModel = nullptr;
     SortedActivitiesModel *m_stoppedActivitiesModel = nullptr;
-
 };
 
 #endif // SWITCHER_BACKEND_H

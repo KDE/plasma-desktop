@@ -28,7 +28,8 @@
 /**
  * BlacklistedApplicationsModel
  */
-class BlacklistedApplicationsModel : public QAbstractListModel {
+class BlacklistedApplicationsModel : public QAbstractListModel
+{
     Q_OBJECT
 
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)

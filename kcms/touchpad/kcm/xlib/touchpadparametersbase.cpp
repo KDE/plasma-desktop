@@ -21,20 +21,16 @@
 
 namespace
 {
-
 KConfigGroup &systemDefaults()
 {
-    static KSharedConfig::Ptr p(KSharedConfig::openConfig(".touchpaddefaults",
-                                                          KConfig::SimpleConfig,
-                                                          QStandardPaths::TempLocation));
+    static KSharedConfig::Ptr p(KSharedConfig::openConfig(".touchpaddefaults", KConfig::SimpleConfig, QStandardPaths::TempLocation));
     static KConfigGroup group(p->group("parameters"));
     return group;
 }
 
 }
 
-TouchpadParametersBase::TouchpadParametersBase(const QString &configname,
-                                               QObject *parent)
+TouchpadParametersBase::TouchpadParametersBase(const QString &configname, QObject *parent)
     : KCoreConfigSkeleton(configname, parent)
 {
     if (!systemDefaults().exists()) {
@@ -77,8 +73,7 @@ void TouchpadParametersBase::setSystemDefaults()
     systemDefaults().sync();
 }
 
-QVariant TouchpadParametersBase::systemDefault(const QString &name,
-                                               const QVariant &hardcoded)
+QVariant TouchpadParametersBase::systemDefault(const QString &name, const QVariant &hardcoded)
 {
     return systemDefaults().readEntry(name, hardcoded);
 }

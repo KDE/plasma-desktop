@@ -26,7 +26,8 @@
 
 #include "utils/d_ptr.h"
 
-class Dialog: public QDialog {
+class Dialog : public QDialog
+{
     Q_OBJECT
 
 public:
@@ -69,8 +70,6 @@ private:
     Dialog(QObject *parent = nullptr);
 
     D_PTR;
-
 };
 
 #endif // DIALOG_H
-

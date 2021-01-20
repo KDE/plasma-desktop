@@ -18,14 +18,14 @@
 
 #include "kwinwaylandtouchpad.h"
 
-#include <QDBusInterface>
 #include <QDBusError>
+#include <QDBusInterface>
 #include <QVector>
 
 #include "logging.h"
 
-KWinWaylandTouchpad::KWinWaylandTouchpad(QString dbusName) :
-    LibinputCommon()
+KWinWaylandTouchpad::KWinWaylandTouchpad(QString dbusName)
+    : LibinputCommon()
 {
     m_iface = new QDBusInterface(QStringLiteral("org.kde.KWin"),
                                  QStringLiteral("/org/kde/KWin/InputDevice/") + dbusName,
@@ -146,29 +146,17 @@ bool KWinWaylandTouchpad::applyConfig()
 {
     QVector<QString> msgs;
 
-    msgs << valueWriter(m_enabled)
-        << valueWriter(m_leftHanded)
-        << valueWriter(m_pointerAcceleration)
-        << valueWriter(m_defaultPointerAccelerationProfileFlat)
-        << valueWriter(m_defaultPointerAccelerationProfileAdaptive)
+    msgs << valueWriter(m_enabled) << valueWriter(m_leftHanded) << valueWriter(m_pointerAcceleration) << valueWriter(m_defaultPointerAccelerationProfileFlat)
+         << valueWriter(m_defaultPointerAccelerationProfileAdaptive)
 
-        << valueWriter(m_disableWhileTyping)
-        << valueWriter(m_middleEmulation)
+         << valueWriter(m_disableWhileTyping) << valueWriter(m_middleEmulation)
 
-        << valueWriter(m_tapToClick)
-        << valueWriter(m_tapAndDrag)
-        << valueWriter(m_tapDragLock)
-        << valueWriter(m_lmrTapButtonMap)
+         << valueWriter(m_tapToClick) << valueWriter(m_tapAndDrag) << valueWriter(m_tapDragLock) << valueWriter(m_lmrTapButtonMap)
 
-        << valueWriter(m_naturalScroll)
-        << valueWriter(m_isScrollTwoFinger)
-        << valueWriter(m_isScrollEdge)
-        << valueWriter(m_isScrollOnButtonDown)
-        << valueWriter(m_scrollButton)
-        << valueWriter(m_scrollFactor)
+         << valueWriter(m_naturalScroll) << valueWriter(m_isScrollTwoFinger) << valueWriter(m_isScrollEdge) << valueWriter(m_isScrollOnButtonDown)
+         << valueWriter(m_scrollButton) << valueWriter(m_scrollFactor)
 
-        << valueWriter(m_clickMethodAreas)
-        << valueWriter(m_clickMethodClickfinger);
+         << valueWriter(m_clickMethodAreas) << valueWriter(m_clickMethodClickfinger);
 
     bool success = true;
     QString error_msg;
@@ -185,7 +173,7 @@ bool KWinWaylandTouchpad::applyConfig()
     }
 
     if (!success) {
-        qCCritical(KCM_TOUCHPAD) <<  error_msg;
+        qCCritical(KCM_TOUCHPAD) << error_msg;
     }
     return success;
 }
@@ -215,8 +203,7 @@ bool KWinWaylandTouchpad::isChangedConfig() const
     // clang-format on
 }
 
-template<typename T>
-QString KWinWaylandTouchpad::valueWriter(const Prop<T> &prop)
+template<typename T> QString KWinWaylandTouchpad::valueWriter(const Prop<T> &prop)
 {
     if (!prop.changed()) {
         return QString();
@@ -230,8 +217,7 @@ QString KWinWaylandTouchpad::valueWriter(const Prop<T> &prop)
     return QString();
 }
 
-template<typename T>
-bool KWinWaylandTouchpad::valueLoader(Prop<T> &prop)
+template<typename T> bool KWinWaylandTouchpad::valueLoader(Prop<T> &prop)
 {
     QVariant reply = m_iface->property(prop.name);
     if (!reply.isValid()) {

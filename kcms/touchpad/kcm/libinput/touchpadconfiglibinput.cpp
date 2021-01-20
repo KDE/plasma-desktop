@@ -20,35 +20,33 @@
 
 #include <KAboutData>
 #include <KLocalizedString>
-#include <kdeclarative/kdeclarative.h>
 #include <KMessageWidget>
+#include <kdeclarative/kdeclarative.h>
 
+#include <QMetaObject>
+#include <QQmlContext>
+#include <QQmlProperty>
 #include <QQuickItem>
 #include <QQuickWidget>
-#include <QQmlContext>
 #include <QVBoxLayout>
-#include <QQmlProperty>
-#include <QMetaObject>
 
 #include "../touchpadconfigcontainer.h"
 #include "touchpadbackend.h"
 
 #include "version.h"
 
-TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, TouchpadBackend* backend, const QVariantList &/*args*/)
+TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, TouchpadBackend *backend, const QVariantList & /*args*/)
     : TouchpadConfigPlugin(parent, backend)
 {
-    KAboutData* data = new KAboutData(QStringLiteral("kcm_touchpad"),
-                    i18n("Touchpad KCM"),
-                    TOUCHPAD_KCM_VERSION,
-                    i18n("System Settings module for managing your touchpad"),
-                    KAboutLicense::GPL_V2,
-                    i18n("Copyright © 2016 Roman Gilg"),
-                    QString());
+    KAboutData *data = new KAboutData(QStringLiteral("kcm_touchpad"),
+                                      i18n("Touchpad KCM"),
+                                      TOUCHPAD_KCM_VERSION,
+                                      i18n("System Settings module for managing your touchpad"),
+                                      KAboutLicense::GPL_V2,
+                                      i18n("Copyright © 2016 Roman Gilg"),
+                                      QString());
 
-    data->addAuthor(i18n("Roman Gilg"),
-                   i18n("Developer"),
-                   QStringLiteral("subdiff@gmail.com"));
+    data->addAuthor(i18n("Roman Gilg"), i18n("Developer"), QStringLiteral("subdiff@gmail.com"));
 
     m_parent->setAboutData(data);
 
@@ -82,8 +80,7 @@ TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, 
     if (m_initError) {
         m_errorMessage->setMessageType(KMessageWidget::Error);
         m_errorMessage->setText(m_backend->errorString());
-        QMetaObject::invokeMethod(m_errorMessage, "animatedShow",
-                                  Qt::QueuedConnection);
+        QMetaObject::invokeMethod(m_errorMessage, "animatedShow", Qt::QueuedConnection);
     } else {
         connect(m_backend, SIGNAL(touchpadAdded(bool)), this, SLOT(onTouchpadAdded(bool)));
         connect(m_backend, SIGNAL(touchpadRemoved(int)), this, SLOT(onTouchpadRemoved(int)));

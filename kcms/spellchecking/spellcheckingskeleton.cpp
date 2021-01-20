@@ -25,7 +25,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <Sonnet/Settings>
 
 SpellCheckingSkeleton::SpellCheckingSkeleton(QObject *parent)
-        : KCoreConfigSkeleton(QStringLiteral(""), parent), m_store(new Sonnet::Settings(this))
+    : KCoreConfigSkeleton(QStringLiteral(""), parent)
+    , m_store(new Sonnet::Settings(this))
 {
     // Associated with managed widget
     addItem(new KPropertySkeletonItem(m_store, "skipUppercase", Sonnet::Settings::defaultSkipUppercase()), "skipUppercase");

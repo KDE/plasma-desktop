@@ -19,8 +19,8 @@
 #include "x11_libinput_backend.h"
 #include "x11_libinput_dummydevice.h"
 
-X11LibinputBackend::X11LibinputBackend(QObject *parent) :
-    X11Backend(parent)
+X11LibinputBackend::X11LibinputBackend(QObject *parent)
+    : X11Backend(parent)
 {
     m_mode = InputBackendMode::XLibinput;
     m_device = new X11LibinputDummyDevice(this, m_dpy);
@@ -28,22 +28,22 @@ X11LibinputBackend::X11LibinputBackend(QObject *parent) :
 
 bool X11LibinputBackend::applyConfig()
 {
-    return static_cast<X11LibinputDummyDevice*>(m_device)->applyConfig();
+    return static_cast<X11LibinputDummyDevice *>(m_device)->applyConfig();
 }
 
 bool X11LibinputBackend::getConfig()
 {
-    return static_cast<X11LibinputDummyDevice*>(m_device)->getConfig();
+    return static_cast<X11LibinputDummyDevice *>(m_device)->getConfig();
 }
 
 bool X11LibinputBackend::getDefaultConfig()
 {
-    return static_cast<X11LibinputDummyDevice*>(m_device)->getDefaultConfig();
+    return static_cast<X11LibinputDummyDevice *>(m_device)->getDefaultConfig();
 }
 
 bool X11LibinputBackend::isChangedConfig() const
 {
-    return static_cast<X11LibinputDummyDevice*>(m_device)->isChangedConfig();
+    return static_cast<X11LibinputDummyDevice *>(m_device)->isChangedConfig();
 }
 
 void X11LibinputBackend::kcmInit()

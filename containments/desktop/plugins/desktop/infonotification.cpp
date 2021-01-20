@@ -21,7 +21,8 @@
 
 #include <KNotification>
 
-InfoNotification::InfoNotification(QObject *parent) : QObject(parent)
+InfoNotification::InfoNotification(QObject *parent)
+    : QObject(parent)
     , m_enabled(false)
 {
 }
@@ -118,4 +119,3 @@ void InfoNotification::setAcknowledgeActionText(const QString &acknowledgeAction
         emit acknowledgeActionTextChanged();
     }
 }
-

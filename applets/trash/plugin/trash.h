@@ -34,8 +34,6 @@ public:
     Q_INVOKABLE void emptyTrash();
     Q_INVOKABLE bool canBeTrashed(const QUrl &url) const;
     Q_INVOKABLE QList<QUrl> trashableUrls(const QList<QUrl> &urls) const;
-
 };
-
 
 #endif // TRASH_H

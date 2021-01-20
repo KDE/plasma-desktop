@@ -24,13 +24,13 @@
 
 #include "ui_dateandtime.h"
 
-#include <QSpinBox>
+#include <QCheckBox>
 #include <QComboBox>
+#include <QPaintEvent>
+#include <QSpinBox>
 #include <QTime>
 #include <QTimer>
 #include <QWidget>
-#include <QCheckBox>
-#include <QPaintEvent>
 
 #include <KDatePicker>
 #include <KNumInput>
@@ -38,89 +38,90 @@
 class Kclock;
 class QTimeEdit;
 
-namespace Plasma {
-    class Svg;
+namespace Plasma
+{
+class Svg;
 }
 
 class Dtime : public QWidget, public Ui::DateAndTime
 {
-  Q_OBJECT
- public:
-  explicit Dtime( QWidget *parent, bool haveTimedated);
+    Q_OBJECT
+public:
+    explicit Dtime(QWidget *parent, bool haveTimedated);
 
-  void processHelperErrors( int code );
-  void	load();
+    void processHelperErrors(int code);
+    void load();
 
-  QString selectedTimeZone() const;
-  QStringList ntpServers() const;
-  bool ntpEnabled() const;
-  QDateTime userTime() const;
+    QString selectedTimeZone() const;
+    QStringList ntpServers() const;
+    bool ntpEnabled() const;
+    QDateTime userTime() const;
 
-  QString quickHelp() const;
+    QString quickHelp() const;
 
 Q_SIGNALS:
-  void	timeChanged(bool);
+    void timeChanged(bool);
 
- private Q_SLOTS:
-  void	configChanged();
-  void	serverTimeCheck();
-  void	timeout();
-  void	set_time();
-  void	changeDate(const QDate&);
+private Q_SLOTS:
+    void configChanged();
+    void serverTimeCheck();
+    void timeout();
+    void set_time();
+    void changeDate(const QDate &);
 
 private:
-  void currentZone();
-  void	findNTPutility();
-  QString	ntpUtility;
+    void currentZone();
+    void findNTPutility();
+    QString ntpUtility;
 
-  QTimeEdit	*timeEdit;
+    QTimeEdit *timeEdit;
 
-  Kclock	*kclock;
+    Kclock *kclock;
 
-  QTime		time;
-  QDate		date;
-  QTimer	internalTimer;
+    QTime time;
+    QDate date;
+    QTimer internalTimer;
 
-  QString       timeServer;
-  int		BufI;
-  bool		refresh;
-  bool		ontimeout;
-  bool  m_haveTimedated;
+    QString timeServer;
+    int BufI;
+    bool refresh;
+    bool ontimeout;
+    bool m_haveTimedated;
 };
 
 class Kclock : public QWidget
 {
-  Q_OBJECT
+    Q_OBJECT
 
 public:
-  Kclock( QWidget *parent=nullptr );
-  ~Kclock() override;
+    Kclock(QWidget *parent = nullptr);
+    ~Kclock() override;
 
-  void setTime(const QTime&);
+    void setTime(const QTime &);
 
 protected:
-  void	paintEvent( QPaintEvent *event ) override;
-  void	showEvent( QShowEvent *event ) override;
-  void	resizeEvent( QResizeEvent *event ) override;
+    void paintEvent(QPaintEvent *event) override;
+    void showEvent(QShowEvent *event) override;
+    void resizeEvent(QResizeEvent *event) override;
 
 private:
-  void setClockSize(const QSize &size);
-  void drawHand(QPainter *p, const QRect &rect, const qreal verticalTranslation, const qreal rotation, const QString &handName);
-  void paintInterface(QPainter *p, const QRect &rect);
+    void setClockSize(const QSize &size);
+    void drawHand(QPainter *p, const QRect &rect, const qreal verticalTranslation, const qreal rotation, const QString &handName);
+    void paintInterface(QPainter *p, const QRect &rect);
 
 private:
-  QTime		time;
-  Plasma::Svg	*m_theme;
-  enum RepaintCache {
-      RepaintNone,
-      RepaintAll,
-      RepaintHands,
-  };
-  RepaintCache	m_repaintCache;
-  QPixmap	m_faceCache;
-  QPixmap	m_handsCache;
-  QPixmap	m_glassCache;
-  qreal		m_verticalTranslation;
+    QTime time;
+    Plasma::Svg *m_theme;
+    enum RepaintCache {
+        RepaintNone,
+        RepaintAll,
+        RepaintHands,
+    };
+    RepaintCache m_repaintCache;
+    QPixmap m_faceCache;
+    QPixmap m_handsCache;
+    QPixmap m_glassCache;
+    qreal m_verticalTranslation;
 };
 
 #endif // dtime_included

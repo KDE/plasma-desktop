@@ -22,7 +22,8 @@
 
 #include <QQmlExtensionPlugin>
 
-class ActivitySwitcherExtensionPlugin : public QQmlExtensionPlugin {
+class ActivitySwitcherExtensionPlugin : public QQmlExtensionPlugin
+{
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.kde.plasma.activityswitcher")
 

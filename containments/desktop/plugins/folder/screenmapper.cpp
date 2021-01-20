@@ -23,9 +23,9 @@
 #include <QScreen>
 #include <QTimer>
 
-#include <Plasma/Corona>
 #include <KConfig>
 #include <KConfigGroup>
+#include <Plasma/Corona>
 
 ScreenMapper *ScreenMapper::instance()
 {
@@ -38,17 +38,16 @@ ScreenMapper::ScreenMapper(QObject *parent)
     , m_screenMappingChangedTimer(new QTimer(this))
 
 {
-    connect(m_screenMappingChangedTimer, &QTimer::timeout,
-            this, &ScreenMapper::screenMappingChanged);
+    connect(m_screenMappingChangedTimer, &QTimer::timeout, this, &ScreenMapper::screenMappingChanged);
 
     connect(this, &ScreenMapper::screenMappingChanged, this, [this] {
-       if (!m_corona)
-           return;
+        if (!m_corona)
+            return;
 
-       auto config = m_corona->config();
-       KConfigGroup group(config, QLatin1String("ScreenMapping"));
-       group.writeEntry(QLatin1String("screenMapping"), screenMapping());
-       config->sync();
+        auto config = m_corona->config();
+        KConfigGroup group(config, QLatin1String("ScreenMapping"));
+        group.writeEntry(QLatin1String("screenMapping"), screenMapping());
+        config->sync();
     });
 
     // used to compress screenMappingChanged signals when addMapping is called multiple times,
@@ -71,7 +70,7 @@ void ScreenMapper::removeScreen(int screenId, const QUrl &screenUrl)
         const auto name = it.key();
         if (it.value() == screenId && name.url().startsWith(screenPathWithScheme)) {
             bool found = false;
-            for (const auto &disabledUrls: qAsConst(m_itemsOnDisabledScreensMap)) {
+            for (const auto &disabledUrls : qAsConst(m_itemsOnDisabledScreensMap)) {
                 found = disabledUrls.contains(name);
                 if (found)
                     break;
@@ -85,7 +84,7 @@ void ScreenMapper::removeScreen(int screenId, const QUrl &screenUrl)
 
     saveDisabledScreensMap();
 
-    for (const auto &url: urlsToRemoveFromMapping)
+    for (const auto &url : urlsToRemoveFromMapping)
         removeFromMap(url);
 
     m_availableScreens.removeAll(screenId);
@@ -96,7 +95,7 @@ void ScreenMapper::removeScreen(int screenId, const QUrl &screenUrl)
         pathIt->removeAll(screenId);
     } else if (screenUrl.isEmpty()) {
         // the screen was indeed removed so all references to it needs to be cleaned up
-        for (auto & pathIt: m_screensPerPath) {
+        for (auto &pathIt : m_screensPerPath) {
             pathIt.removeAll(screenId);
         }
     }
@@ -114,7 +113,7 @@ void ScreenMapper::addScreen(int screenId, const QUrl &screenUrl)
     auto it = m_itemsOnDisabledScreensMap.find(screenId);
     if (it != m_itemsOnDisabledScreensMap.end()) {
         auto items = it.value();
-        for (const auto &name: it.value()) {
+        for (const auto &name : it.value()) {
             // add the items to the new screen, if they are on a disabled screen and their
             // location is below the new screen's path
             if (name.url().startsWith(screenPathWithScheme)) {
@@ -170,8 +169,7 @@ int ScreenMapper::firstAvailableScreen(const QUrl &screenUrl) const
 
 void ScreenMapper::removeItemFromDisabledScreen(const QUrl &url)
 {
-    for (auto it = m_itemsOnDisabledScreensMap.begin();
-         it != m_itemsOnDisabledScreensMap.end(); ++it) {
+    for (auto it = m_itemsOnDisabledScreensMap.begin(); it != m_itemsOnDisabledScreensMap.end(); ++it) {
         auto urls = &(*it);
         urls->removeAll(url);
     }
@@ -207,10 +205,10 @@ void ScreenMapper::setCorona(Plasma::Corona *corona)
 
         m_corona = corona;
         if (m_corona) {
-            connect(m_corona, &Plasma::Corona::screenRemoved, this, [this] (int screenId) {
+            connect(m_corona, &Plasma::Corona::screenRemoved, this, [this](int screenId) {
                 removeScreen(screenId, {});
             });
-            connect(m_corona, &Plasma::Corona::screenAdded, this, [this] (int screenId) {
+            connect(m_corona, &Plasma::Corona::screenAdded, this, [this](int screenId) {
                 addScreen(screenId, {});
             });
 
@@ -277,7 +275,7 @@ void ScreenMapper::readDisabledScreensMap()
 
     auto config = m_corona->config();
     KConfigGroup group(config, QLatin1String("ScreenMapping"));
-    const QStringList serializedMap  = group.readEntry(QLatin1String("itemsOnDisabledScreens"), QStringList{});
+    const QStringList serializedMap = group.readEntry(QLatin1String("itemsOnDisabledScreens"), QStringList{});
     m_itemsOnDisabledScreensMap.clear();
     bool readingScreenId = true;
     int vectorSize = -1;
@@ -301,7 +299,6 @@ void ScreenMapper::readDisabledScreensMap()
             }
         }
     }
-
 }
 
 void ScreenMapper::saveDisabledScreensMap() const
@@ -315,7 +312,7 @@ void ScreenMapper::saveDisabledScreensMap() const
     auto it = m_itemsOnDisabledScreensMap.constBegin();
     for (; it != m_itemsOnDisabledScreensMap.constEnd(); ++it) {
         serializedMap.append(QString::number(it.key()));
-        const auto urls= it.value();
+        const auto urls = it.value();
         serializedMap.append(QString::number(urls.size()));
         for (const auto &url : urls) {
             serializedMap.append(url.toString());
@@ -323,5 +320,4 @@ void ScreenMapper::saveDisabledScreensMap() const
     }
 
     group.writeEntry(QLatin1String("itemsOnDisabledScreens"), serializedMap);
-
 }

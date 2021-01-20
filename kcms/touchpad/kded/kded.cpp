@@ -18,14 +18,14 @@
 
 #include "kded.h"
 
-#include <QDebug>
-#include <QDBusConnection>
-#include <QDBusMessage>
-#include <QDBusConnectionInterface>
 #include <KLocalizedString>
+#include <QDBusConnection>
+#include <QDBusConnectionInterface>
+#include <QDBusMessage>
+#include <QDebug>
 
-#include "plugins.h"
 #include "kdedactions.h"
+#include "plugins.h"
 
 bool TouchpadDisabler::workingTouchpadFound() const
 {
@@ -44,8 +44,13 @@ void TouchpadDisabler::serviceRegistered(const QString &service)
 }
 
 TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
-    : KDEDModule(parent), m_backend(TouchpadBackend::implementation()),
-      m_userRequestedState(true), m_touchpadEnabled(true), m_workingTouchpadFound(false), m_keyboardActivity(false), m_mouse(false)
+    : KDEDModule(parent)
+    , m_backend(TouchpadBackend::implementation())
+    , m_userRequestedState(true)
+    , m_touchpadEnabled(true)
+    , m_workingTouchpadFound(false)
+    , m_keyboardActivity(false)
+    , m_mouse(false)
 {
     if (!m_backend) {
         return;
@@ -53,22 +58,17 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
 
     m_dependencies.addWatchedService("org.kde.plasmashell");
     m_dependencies.addWatchedService("org.kde.kglobalaccel");
-    connect(&m_dependencies, SIGNAL(serviceRegistered(QString)),
-            SLOT(serviceRegistered(QString)));
+    connect(&m_dependencies, SIGNAL(serviceRegistered(QString)), SLOT(serviceRegistered(QString)));
 
     connect(m_backend, SIGNAL(mousesChanged()), SLOT(mousePlugged()));
-    connect(m_backend, SIGNAL(keyboardActivityStarted()),
-            SLOT(keyboardActivityStarted()));
-    connect(m_backend, SIGNAL(keyboardActivityFinished()),
-            SLOT(keyboardActivityFinished()));
-    connect(m_backend, SIGNAL(touchpadStateChanged()),
-            SLOT(updateCurrentState()));
+    connect(m_backend, SIGNAL(keyboardActivityStarted()), SLOT(keyboardActivityStarted()));
+    connect(m_backend, SIGNAL(keyboardActivityFinished()), SLOT(keyboardActivityFinished()));
+    connect(m_backend, SIGNAL(touchpadStateChanged()), SLOT(updateCurrentState()));
 
     connect(m_backend, SIGNAL(touchpadReset()), SLOT(handleReset()));
 
     m_keyboardActivityTimeout.setSingleShot(true);
-    connect(&m_keyboardActivityTimeout, SIGNAL(timeout()),
-            SLOT(timerElapsed()));
+    connect(&m_keyboardActivityTimeout, SIGNAL(timeout()), SLOT(timerElapsed()));
 
     updateCurrentState();
     m_userRequestedState = m_touchpadEnabled;
@@ -78,9 +78,7 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     m_dependencies.setConnection(QDBusConnection::sessionBus());
     QDBusPendingCall async = QDBusConnection::sessionBus().interface()->asyncCall(QLatin1String("ListNames"));
     QDBusPendingCallWatcher *callWatcher = new QDBusPendingCallWatcher(async, this);
-    connect(callWatcher, SIGNAL(finished(QDBusPendingCallWatcher*)),
-            this, SLOT(serviceNameFetchFinished(QDBusPendingCallWatcher*)));
-
+    connect(callWatcher, SIGNAL(finished(QDBusPendingCallWatcher *)), this, SLOT(serviceNameFetchFinished(QDBusPendingCallWatcher *)));
 
     QDBusConnection::systemBus().connect(QStringLiteral("org.freedesktop.login1"),
                                          QStringLiteral("/org/freedesktop/login1"),
@@ -148,13 +146,10 @@ void TouchpadDisabler::enable()
 void TouchpadDisabler::reloadSettings()
 {
     m_settings.load();
-    m_keyboardActivityTimeout.setInterval(
-                m_settings.keyboardActivityTimeoutMs());
+    m_keyboardActivityTimeout.setInterval(m_settings.keyboardActivityTimeoutMs());
 
     m_keyboardDisableState =
-            m_settings.onlyDisableTapAndScrollOnKeyboardActivity() ?
-                TouchpadBackend::TouchpadTapAndScrollDisabled :
-                TouchpadBackend::TouchpadFullyDisabled;
+        m_settings.onlyDisableTapAndScrollOnKeyboardActivity() ? TouchpadBackend::TouchpadTapAndScrollDisabled : TouchpadBackend::TouchpadFullyDisabled;
 
     mousePlugged();
 
@@ -213,12 +208,10 @@ void TouchpadDisabler::mousePlugged()
     // If the disable is caused by plugin mouse, show the message, otherwise it might
     // be user already disables touchpad themselves.
     if (!newState && disable) {
-        showNotification("TouchpadDisabled",
-                         i18n("Touchpad was disabled because a mouse was plugged in"));
+        showNotification("TouchpadDisabled", i18n("Touchpad was disabled because a mouse was plugged in"));
     }
     if (newState) {
-        showNotification("TouchpadEnabled",
-                         i18n("Touchpad was enabled because the mouse was unplugged"));
+        showNotification("TouchpadEnabled", i18n("Touchpad was enabled because the mouse was unplugged"));
     }
 
     m_backend->setTouchpadEnabled(newState);
@@ -230,11 +223,13 @@ void TouchpadDisabler::showNotification(const QString &name, const QString &text
         m_notification->close();
     }
 
-    m_notification = KNotification::event(name, text, QPixmap(), //Icon is specified in .notifyrc
-                         nullptr,
-                         KNotification::CloseOnTimeout,
-                         "kcm_touchpad"); // this has to match the name of the .notifyrc file
-                         //TouchpadPluginFactory::componentData());
+    m_notification = KNotification::event(name,
+                                          text,
+                                          QPixmap(), // Icon is specified in .notifyrc
+                                          nullptr,
+                                          KNotification::CloseOnTimeout,
+                                          "kcm_touchpad"); // this has to match the name of the .notifyrc file
+    // TouchpadPluginFactory::componentData());
 }
 
 bool TouchpadDisabler::isMousePluggedIn() const
@@ -294,12 +289,10 @@ void TouchpadDisabler::showOsd()
         return;
     }
 
-    QDBusMessage msg = QDBusMessage::createMethodCall(
-        QStringLiteral("org.kde.plasmashell"),
-        QStringLiteral("/org/kde/osdService"),
-        QStringLiteral("org.kde.osdService"),
-        QStringLiteral("touchpadEnabledChanged")
-    );
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
+                                                      QStringLiteral("/org/kde/osdService"),
+                                                      QStringLiteral("org.kde.osdService"),
+                                                      QStringLiteral("touchpadEnabledChanged"));
 
     msg.setArguments({m_backend->isTouchpadEnabled()});
 

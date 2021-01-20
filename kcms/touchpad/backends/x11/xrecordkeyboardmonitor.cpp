@@ -23,19 +23,19 @@
 
 #include <QScopedPointer>
 
-#include <xcb/xcbext.h>
 #include <X11/Xlib.h>
+#include <xcb/xcbext.h>
 
 XRecordKeyboardMonitor::XRecordKeyboardMonitor(Display *display)
-    : m_connection(xcb_connect(XDisplayString(display), nullptr)),
-      m_modifiersPressed(0), m_keysPressed(0)
+    : m_connection(xcb_connect(XDisplayString(display), nullptr))
+    , m_modifiersPressed(0)
+    , m_keysPressed(0)
 {
     if (!m_connection) {
         return;
     }
 
-    xcb_get_modifier_mapping_cookie_t modmapCookie =
-            xcb_get_modifier_mapping(m_connection);
+    xcb_get_modifier_mapping_cookie_t modmapCookie = xcb_get_modifier_mapping(m_connection);
 
     m_context = xcb_generate_id(m_connection);
     xcb_record_range_t range;
@@ -46,8 +46,7 @@ XRecordKeyboardMonitor::XRecordKeyboardMonitor(Display *display)
     xcb_record_create_context(m_connection, m_context, 0, 1, 1, &cs, &range);
     xcb_flush(m_connection);
 
-    QScopedPointer<xcb_get_modifier_mapping_reply_t, QScopedPointerPodDeleter>
-            modmap(xcb_get_modifier_mapping_reply(m_connection, modmapCookie, nullptr));
+    QScopedPointer<xcb_get_modifier_mapping_reply_t, QScopedPointerPodDeleter> modmap(xcb_get_modifier_mapping_reply(m_connection, modmapCookie, nullptr));
     if (!modmap) {
         return;
     }
@@ -59,9 +58,7 @@ XRecordKeyboardMonitor::XRecordKeyboardMonitor(Display *display)
         m_modifier[*i] = true;
     }
     m_ignore.fill(false, std::numeric_limits<xcb_keycode_t>::max() + 1);
-    for (xcb_keycode_t *i = modifiers;
-         i < modifiers + modmap->keycodes_per_modifier; i++)
-    {
+    for (xcb_keycode_t *i = modifiers; i < modifiers + modmap->keycodes_per_modifier; i++) {
         m_ignore[*i] = true;
     }
     m_pressed.fill(false, std::numeric_limits<xcb_keycode_t>::max() + 1);
@@ -69,8 +66,7 @@ XRecordKeyboardMonitor::XRecordKeyboardMonitor(Display *display)
     m_cookie = xcb_record_enable_context(m_connection, m_context);
     xcb_flush(m_connection);
 
-    m_notifier = new QSocketNotifier(xcb_get_file_descriptor(m_connection),
-                                     QSocketNotifier::Read, this);
+    m_notifier = new QSocketNotifier(xcb_get_file_descriptor(m_connection), QSocketNotifier::Read, this);
     connect(m_notifier, &QSocketNotifier::activated, this, &XRecordKeyboardMonitor::processNextReply);
     m_notifier->setEnabled(true);
 }
@@ -111,8 +107,7 @@ void XRecordKeyboardMonitor::processNextReply()
             continue;
         }
 
-        QScopedPointer<xcb_record_enable_context_reply_t, QScopedPointerPodDeleter>
-                data(reinterpret_cast<xcb_record_enable_context_reply_t*>(reply));
+        QScopedPointer<xcb_record_enable_context_reply_t, QScopedPointerPodDeleter> data(reinterpret_cast<xcb_record_enable_context_reply_t *>(reply));
         process(data.data());
     }
 }
@@ -121,15 +116,11 @@ void XRecordKeyboardMonitor::process(xcb_record_enable_context_reply_t *reply)
 {
     bool prevActivity = activity();
 
-    xcb_key_press_event_t *events = reinterpret_cast<xcb_key_press_event_t*>
-            (xcb_record_enable_context_data(reply));
-    int nEvents = xcb_record_enable_context_data_length(reply) /
-            sizeof(xcb_key_press_event_t);
+    xcb_key_press_event_t *events = reinterpret_cast<xcb_key_press_event_t *>(xcb_record_enable_context_data(reply));
+    int nEvents = xcb_record_enable_context_data_length(reply) / sizeof(xcb_key_press_event_t);
     bool wasActivity = prevActivity;
     for (xcb_key_press_event_t *e = events; e < events + nEvents; e++) {
-        if (e->response_type != XCB_KEY_PRESS &&
-                e->response_type != XCB_KEY_RELEASE)
-        {
+        if (e->response_type != XCB_KEY_PRESS && e->response_type != XCB_KEY_RELEASE) {
             continue;
         }
 
@@ -143,8 +134,7 @@ void XRecordKeyboardMonitor::process(xcb_record_enable_context_reply_t *reply)
         }
         m_pressed[e->detail] = pressed;
 
-        int &counter = m_modifier[e->detail] ? m_modifiersPressed :
-                                               m_keysPressed;
+        int &counter = m_modifier[e->detail] ? m_modifiersPressed : m_keysPressed;
         if (pressed) {
             counter++;
         } else {

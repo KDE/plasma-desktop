@@ -1,7 +1,6 @@
 #include "layoutnames.h"
 #include <QDBusMetaType>
 
-
 void LayoutNames::registerMetaType()
 {
     qDBusRegisterMetaType<LayoutNames>();

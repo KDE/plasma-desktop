@@ -19,10 +19,10 @@
  */
 
 #include "kimpanelplugin.h"
-#include "screen.h"
 #include "kimpanel.h"
+#include "screen.h"
 
-void KimpanelPlugin::registerTypes(const char* uri)
+void KimpanelPlugin::registerTypes(const char *uri)
 {
     Q_UNUSED(uri);
     Q_ASSERT(QLatin1String(uri) == QLatin1String("org.kde.plasma.private.kimpanel"));

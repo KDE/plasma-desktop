@@ -23,17 +23,17 @@
 // Qt
 #include <QApplication>
 #include <QComboBox>
-#include <QFile>
 #include <QDebug>
+#include <QFile>
 #include <QLocale>
 #include <QStandardPaths>
-#include <QTextStream>
 #include <QTextCodec>
+#include <QTextStream>
 
 // Frameworks
-#include <KPluginFactory>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <KPluginFactory>
 #include <KSharedConfig>
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMFormatsFactory, "formats.json", registerPlugin<KCMFormats>();)
@@ -41,17 +41,13 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMFormatsFactory, "formats.json", registerPlugin<KCM
 KCMFormats::KCMFormats(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
 {
-    setQuickHelp(i18n("<h1>Formats</h1>"
-                      "You can configure the formats used for time, dates, money and other numbers here."));
+    setQuickHelp(
+        i18n("<h1>Formats</h1>"
+             "You can configure the formats used for time, dates, money and other numbers here."));
 
     m_ui = new Ui::KCMFormatsWidget;
     m_ui->setupUi(this);
-    m_combos << m_ui->comboGlobal
-             << m_ui->comboNumbers
-             << m_ui->comboTime
-             << m_ui->comboCurrency
-             << m_ui->comboMeasurement
-             << m_ui->comboCollate;
+    m_combos << m_ui->comboGlobal << m_ui->comboNumbers << m_ui->comboTime << m_ui->comboCurrency << m_ui->comboMeasurement << m_ui->comboCollate;
 }
 
 KCMFormats::~KCMFormats()
@@ -59,11 +55,13 @@ KCMFormats::~KCMFormats()
     delete m_ui;
 }
 
-bool countryLessThan(const QLocale & c1, const QLocale & c2)
+bool countryLessThan(const QLocale &c1, const QLocale &c2)
 {
     // Ensure that the "Default (C)" locale always appears at the top
-    if (c1.name()== QLatin1Char('C') && c2.name()!=QLatin1String("C")) return true;
-    if (c2.name()== QLatin1Char('C')) return false;
+    if (c1.name() == QLatin1Char('C') && c2.name() != QLatin1String("C"))
+        return true;
+    if (c2.name() == QLatin1Char('C'))
+        return false;
 
     const QString ncn1 = !c1.nativeCountryName().isEmpty() ? c1.nativeCountryName() : QLocale::countryToString(c1.country());
     const QString ncn2 = !c2.nativeCountryName().isEmpty() ? c2.nativeCountryName() : QLocale::countryToString(c2.country());
@@ -84,7 +82,7 @@ void KCMFormats::load()
         connectCombo(combo);
     }
 
-    connect(m_ui->checkDetailed, &QAbstractButton::toggled, [ = ]() {
+    connect(m_ui->checkDetailed, &QAbstractButton::toggled, [=]() {
         updateExample();
         updateEnabled();
         emit changed(true);
@@ -95,7 +93,7 @@ void KCMFormats::load()
     emit changed(false);
 }
 
-void KCMFormats::initCombo(QComboBox *combo, const QList<QLocale> & allLocales)
+void KCMFormats::initCombo(QComboBox *combo, const QList<QLocale> &allLocales)
 {
     combo->clear();
     const QString clabel = i18n("No change");
@@ -107,7 +105,7 @@ void KCMFormats::initCombo(QComboBox *combo, const QList<QLocale> & allLocales)
 
 void KCMFormats::connectCombo(QComboBox *combo)
 {
-    connect(combo, &QComboBox::currentTextChanged, [ = ]() {
+    connect(combo, &QComboBox::currentTextChanged, [=]() {
         emit changed(true);
         updateExample();
     });
@@ -182,8 +180,6 @@ const static QString lcCollate = QStringLiteral("LC_COLLATE");
 const static QString lcCtype = QStringLiteral("LC_CTYPE");
 
 const static QString lcLanguage = QStringLiteral("LANGUAGE");
-
-
 
 void KCMFormats::readConfig()
 {
@@ -284,8 +280,10 @@ void KCMFormats::writeConfig()
 void KCMFormats::save()
 {
     writeConfig();
-    KMessageBox::information(this, i18n("Your changes will take effect the next time you log in."),
-                             i18n("Format Settings Changed"), QStringLiteral("FormatSettingsChanged"));
+    KMessageBox::information(this,
+                             i18n("Your changes will take effect the next time you log in."),
+                             i18n("Format Settings Changed"),
+                             QStringLiteral("FormatSettingsChanged"));
 }
 
 void KCMFormats::defaults()
@@ -351,8 +349,8 @@ void KCMFormats::updateExample()
     }
 
     const QString numberExample = nloc.toString(1000.01);
-    const QString timeExample = i18n("%1 (long format)", tloc.toString(QDateTime::currentDateTime())) + QLatin1Char('\n') +
-            i18n("%1 (short format)", tloc.toString(QDateTime::currentDateTime(), QLocale::ShortFormat));
+    const QString timeExample = i18n("%1 (long format)", tloc.toString(QDateTime::currentDateTime())) + QLatin1Char('\n')
+        + i18n("%1 (short format)", tloc.toString(QDateTime::currentDateTime(), QLocale::ShortFormat));
     const QString currencyExample = cloc.toCurrencyString(24.00);
 
     QString measurementSetting;

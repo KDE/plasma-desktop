@@ -24,7 +24,8 @@
 #include <KDirModel>
 #include <KLocalizedString>
 
-ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
+ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent)
+    : QObject(parent)
 {
     m_menu = new QMenu();
 
@@ -60,9 +61,7 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
     m_iconSizeMenu = m_menu->addMenu(QIcon::fromTheme(QStringLiteral("transform-scale")), i18n("Icon Size"));
     m_iconSize = new QActionGroup(this);
     connect(m_iconSize, &QActionGroup::triggered, this, &ViewPropertiesMenu::iconSizeChanged);
-    const QStringList iconSizes{
-        i18n("Tiny"), i18n("Small"), i18n("Small Medium"), i18n("Medium"), i18n("Large"), i18n("Huge")
-    };
+    const QStringList iconSizes{i18n("Tiny"), i18n("Small"), i18n("Small Medium"), i18n("Medium"), i18n("Large"), i18n("Huge")};
     for (int i = 0; i < iconSizes.count(); ++i) {
         action = m_iconSizeMenu->addAction(iconSizes.at(i));
         action->setCheckable(true);
@@ -106,7 +105,7 @@ ViewPropertiesMenu::~ViewPropertiesMenu()
     delete m_menu;
 }
 
-QObject* ViewPropertiesMenu::menu() const
+QObject *ViewPropertiesMenu::menu() const
 {
     return m_menu;
 }
@@ -160,8 +159,7 @@ int ViewPropertiesMenu::arrangement() const
 
 void ViewPropertiesMenu::setArrangement(int arrangement)
 {
-    if (!m_arrangement->checkedAction()
-        || m_arrangement->checkedAction()->data().toInt() != arrangement) {
+    if (!m_arrangement->checkedAction() || m_arrangement->checkedAction()->data().toInt() != arrangement) {
         foreach (QAction *action, m_arrangement->actions()) {
             if (action->data().toInt() == arrangement) {
                 action->setChecked(true);
@@ -178,8 +176,7 @@ int ViewPropertiesMenu::alignment() const
 
 void ViewPropertiesMenu::setAlignment(int alignment)
 {
-    if (!m_alignment->checkedAction()
-        || m_alignment->checkedAction()->data().toInt() != alignment) {
+    if (!m_alignment->checkedAction() || m_alignment->checkedAction()->data().toInt() != alignment) {
         foreach (QAction *action, m_alignment->actions()) {
             if (action->data().toInt() == alignment) {
                 action->setChecked(true);
@@ -233,8 +230,7 @@ int ViewPropertiesMenu::sortMode() const
 
 void ViewPropertiesMenu::setSortMode(int sortMode)
 {
-    if (!m_sortMode->checkedAction()
-        || m_sortMode->checkedAction()->data().toInt() != sortMode) {
+    if (!m_sortMode->checkedAction() || m_sortMode->checkedAction()->data().toInt() != sortMode) {
         foreach (QAction *action, m_sortMode->actions()) {
             if (action->data().toInt() == sortMode) {
                 action->setChecked(true);
@@ -275,9 +271,7 @@ int ViewPropertiesMenu::iconSize() const
 
 void ViewPropertiesMenu::setIconSize(int iconSize)
 {
-    if (!m_iconSize->checkedAction()
-        || m_iconSize->checkedAction()->data().toInt() != iconSize) {
-
+    if (!m_iconSize->checkedAction() || m_iconSize->checkedAction()->data().toInt() != iconSize) {
         QAction *action = m_iconSize->actions().value(iconSize);
         if (action) {
             action->setChecked(true);

@@ -32,7 +32,10 @@
 
 #include <KCModule>
 
-namespace Ui { class DesktopPathsView; }
+namespace Ui
+{
+class DesktopPathsView;
+}
 
 class KUrlRequester;
 class DesktopPathsSettings;
@@ -60,4 +63,3 @@ private:
 };
 
 #endif
-

@@ -18,25 +18,24 @@
 
 #include "layout_tray_icon.h"
 
-#include <KStatusNotifierItem>
 #include <KLocalizedString>
+#include <KStatusNotifierItem>
 
 #include <QMenu>
 
-#include "xkb_rules.h"
-#include "xkb_helper.h"
 #include "keyboard_config.h"
 #include "layouts_menu.h"
-
+#include "xkb_helper.h"
+#include "xkb_rules.h"
 
 //
 // Layout Tray Icon
 //
-LayoutTrayIcon::LayoutTrayIcon(const Rules* rules_, const KeyboardConfig& keyboardConfig_):
-	keyboardConfig(keyboardConfig_),
-	rules(rules_),
-	flags(new Flags()),
-	layoutsMenu(new LayoutsMenu(keyboardConfig_, *rules, *flags))
+LayoutTrayIcon::LayoutTrayIcon(const Rules *rules_, const KeyboardConfig &keyboardConfig_)
+    : keyboardConfig(keyboardConfig_)
+    , rules(rules_)
+    , flags(new Flags())
+    , layoutsMenu(new LayoutsMenu(keyboardConfig_, *rules, *flags))
 {
     m_notifierItem = new KStatusNotifierItem(this);
     m_notifierItem->setCategory(KStatusNotifierItem::Hardware);
@@ -45,9 +44,9 @@ LayoutTrayIcon::LayoutTrayIcon(const Rules* rules_, const KeyboardConfig& keyboa
     m_notifierItem->setTitle(i18nc("tooltip title", "Keyboard Layout"));
     m_notifierItem->setToolTipIconByName(QStringLiteral("preferences-desktop-keyboard"));
 
-	QMenu* menu = new QMenu(QLatin1String(""));
+    QMenu *menu = new QMenu(QLatin1String(""));
     m_notifierItem->setContextMenu(menu);
-	m_notifierItem->setStandardActionsEnabled(false);
+    m_notifierItem->setStandardActionsEnabled(false);
 
     layoutMapChanged();
 
@@ -58,67 +57,67 @@ LayoutTrayIcon::LayoutTrayIcon(const Rules* rules_, const KeyboardConfig& keyboa
 
 LayoutTrayIcon::~LayoutTrayIcon()
 {
-	destroy();
-	delete flags;
-	delete layoutsMenu;
+    destroy();
+    delete flags;
+    delete layoutsMenu;
 }
 
 void LayoutTrayIcon::init()
 {
     connect(m_notifierItem, &KStatusNotifierItem::activateRequested, this, &LayoutTrayIcon::toggleLayout);
     connect(m_notifierItem, &KStatusNotifierItem::scrollRequested, this, &LayoutTrayIcon::scrollRequested);
-	connect(flags, &Flags::pixmapChanged, this, &LayoutTrayIcon::layoutChanged);
+    connect(flags, &Flags::pixmapChanged, this, &LayoutTrayIcon::layoutChanged);
 }
 
 void LayoutTrayIcon::destroy()
 {
-	disconnect(flags, &Flags::pixmapChanged, this, &LayoutTrayIcon::layoutChanged);
+    disconnect(flags, &Flags::pixmapChanged, this, &LayoutTrayIcon::layoutChanged);
     disconnect(m_notifierItem, &KStatusNotifierItem::scrollRequested, this, &LayoutTrayIcon::scrollRequested);
     disconnect(m_notifierItem, &KStatusNotifierItem::activateRequested, this, &LayoutTrayIcon::toggleLayout);
 }
 
 void LayoutTrayIcon::layoutMapChanged()
 {
-	flags->clearCache();
+    flags->clearCache();
 
-	QMenu* menu = m_notifierItem->contextMenu();
-	menu->clear();
-	QList<QAction*> actions = layoutsMenu->contextualActions();
-	menu->addActions(actions);
+    QMenu *menu = m_notifierItem->contextMenu();
+    menu->clear();
+    QList<QAction *> actions = layoutsMenu->contextualActions();
+    menu->addActions(actions);
 
-	layoutChanged();
+    layoutChanged();
 }
 
 void LayoutTrayIcon::layoutChanged()
 {
-	LayoutUnit layoutUnit = X11Helper::getCurrentLayout();
-	if( layoutUnit.isEmpty() )
-		return;
+    LayoutUnit layoutUnit = X11Helper::getCurrentLayout();
+    if (layoutUnit.isEmpty())
+        return;
 
-//	QString shortText = Flags::getShortText(layoutUnit, *keyboardConfig);
-//	qDebug() << "systray: LayoutChanged" << layoutUnit.toString() << shortText;
-	QString longText = Flags::getLongText(layoutUnit, rules);
+    //	QString shortText = Flags::getShortText(layoutUnit, *keyboardConfig);
+    //	qDebug() << "systray: LayoutChanged" << layoutUnit.toString() << shortText;
+    QString longText = Flags::getLongText(layoutUnit, rules);
 
-	m_notifierItem->setToolTipSubTitle(longText);
+    m_notifierItem->setToolTipSubTitle(longText);
 
     const QIcon icon(getFlag(layoutUnit.layout()));
-	m_notifierItem->setToolTipIconByPixmap(icon);
+    m_notifierItem->setToolTipIconByPixmap(icon);
 
-	QIcon textOrIcon = flags->getIconWithText(layoutUnit, keyboardConfig, Flags::ColorType::Plasma);
-	m_notifierItem->setIconByPixmap( textOrIcon );
+    QIcon textOrIcon = flags->getIconWithText(layoutUnit, keyboardConfig, Flags::ColorType::Plasma);
+    m_notifierItem->setIconByPixmap(textOrIcon);
 }
 
 void LayoutTrayIcon::toggleLayout()
 {
-	X11Helper::switchToNextLayout();
+    X11Helper::switchToNextLayout();
 }
 
 void LayoutTrayIcon::scrollRequested(int delta, Qt::Orientation /*orientation*/)
 {
-	X11Helper::scrollLayouts(delta > 0 ? 1 : -1);
+    X11Helper::scrollLayouts(delta > 0 ? 1 : -1);
 }
 
-const QIcon LayoutTrayIcon::getFlag(const QString& layout) const
+const QIcon LayoutTrayIcon::getFlag(const QString &layout) const
 {
     return keyboardConfig.isFlagShown() ? flags->getIcon(layout) : QIcon::fromTheme(QStringLiteral("preferences-desktop-keyboard"));
 }

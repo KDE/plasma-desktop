@@ -16,8 +16,8 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <cstring>
 #include <cmath>
+#include <cstring>
 
 #include <QtAlgorithms>
 
@@ -26,23 +26,22 @@
 
 #include <config-X11.h>
 
-//Includes are ordered this way because of #defines in Xorg's headers
-#include "xrecordkeyboardmonitor.h" // krazy:exclude=includes
+// Includes are ordered this way because of #defines in Xorg's headers
 #include "xlibbackend.h" // krazy:exclude=includes
 #include "xlibnotifications.h" // krazy:exclude=includes
+#include "xrecordkeyboardmonitor.h" // krazy:exclude=includes
 #if HAVE_XORGLIBINPUT
 #endif
 
-#include <X11/Xlib-xcb.h>
 #include <X11/Xatom.h>
+#include <X11/Xlib-xcb.h>
 #include <X11/extensions/XInput.h>
 #include <X11/extensions/XInput2.h>
 
 #include <synaptics-properties.h>
 #include <xserver-properties.h>
 
-struct DeviceListDeleter
-{
+struct DeviceListDeleter {
     static void cleanup(XDeviceInfo *p)
     {
         if (p) {
@@ -58,9 +57,9 @@ void XlibBackend::XDisplayCleanup::cleanup(Display *p)
     }
 }
 
-XlibBackend* XlibBackend::initialize(QObject *parent)
+XlibBackend *XlibBackend::initialize(QObject *parent)
 {
-    XlibBackend* backend = new XlibBackend(parent);
+    XlibBackend *backend = new XlibBackend(parent);
     if (!backend->m_display) {
         delete backend;
         return nullptr;
@@ -72,9 +71,10 @@ XlibBackend::~XlibBackend()
 {
 }
 
-XlibBackend::XlibBackend(QObject *parent) :
-    TouchpadBackend(parent),
-    m_display(XOpenDisplay(nullptr)), m_connection(nullptr)
+XlibBackend::XlibBackend(QObject *parent)
+    : TouchpadBackend(parent)
+    , m_display(XOpenDisplay(nullptr))
+    , m_connection(nullptr)
 {
     if (m_display) {
         m_connection = XGetXCBConnection(m_display.data());
@@ -99,23 +99,18 @@ XlibBackend::XlibBackend(QObject *parent) :
     }
 }
 
-XlibTouchpad* XlibBackend::findTouchpad()
+XlibTouchpad *XlibBackend::findTouchpad()
 {
     int nDevices = 0;
-    QScopedPointer<XDeviceInfo, DeviceListDeleter>
-            deviceInfo(XListInputDevices(m_display.data(), &nDevices));
+    QScopedPointer<XDeviceInfo, DeviceListDeleter> deviceInfo(XListInputDevices(m_display.data(), &nDevices));
 
-    for (XDeviceInfo *info = deviceInfo.data();
-         info < deviceInfo.data() + nDevices; info++)
-    {
+    for (XDeviceInfo *info = deviceInfo.data(); info < deviceInfo.data() + nDevices; info++) {
         // Make sure device is touchpad
         if (info->type != m_touchpadAtom.atom()) {
             continue;
         }
         int nProperties = 0;
-        QSharedPointer<Atom> properties(
-                    XIListProperties(m_display.data(), info->id,
-                                     &nProperties), XDeleter);
+        QSharedPointer<Atom> properties(XIListProperties(m_display.data(), info->id, &nProperties), XDeleter);
 
         Atom *atom = properties.data(), *atomEnd = properties.data() + nProperties;
         for (; atom != atomEnd; atom++) {
@@ -178,7 +173,7 @@ bool XlibBackend::getConfig(QVariantHash &p)
 
 bool XlibBackend::getConfig()
 {
-    if(!m_device) {
+    if (!m_device) {
         return false;
     }
 
@@ -310,9 +305,7 @@ void XlibBackend::devicePlugged(int device)
 
 void XlibBackend::propertyChanged(xcb_atom_t prop)
 {
-    if ((m_device && prop == m_device->touchpadOffAtom().atom()) ||
-            prop == m_enabledAtom.atom())
-    {
+    if ((m_device && prop == m_device->touchpadOffAtom().atom()) || prop == m_enabledAtom.atom()) {
         Q_EMIT touchpadStateChanged();
     }
 }
@@ -320,8 +313,7 @@ void XlibBackend::propertyChanged(xcb_atom_t prop)
 QStringList XlibBackend::listMouses(const QStringList &blacklist)
 {
     int nDevices = 0;
-    QScopedPointer<XDeviceInfo, DeviceListDeleter>
-            info(XListInputDevices(m_display.data(), &nDevices));
+    QScopedPointer<XDeviceInfo, DeviceListDeleter> info(XListInputDevices(m_display.data(), &nDevices));
     QStringList list;
     for (XDeviceInfo *i = info.data(); i != info.data() + nDevices; i++) {
         if (m_device && i->id == static_cast<XID>(m_device->deviceId())) {
@@ -330,8 +322,8 @@ QStringList XlibBackend::listMouses(const QStringList &blacklist)
         if (i->use != IsXExtensionPointer && i->use != IsXPointer) {
             continue;
         }
-        //type = KEYBOARD && use = Pointer means usb receiver for both keyboard
-        //and mouse
+        // type = KEYBOARD && use = Pointer means usb receiver for both keyboard
+        // and mouse
         if (i->type != m_mouseAtom.atom() && i->type != m_keyboardAtom.atom()) {
             continue;
         }
@@ -351,16 +343,16 @@ QStringList XlibBackend::listMouses(const QStringList &blacklist)
 
 QVector<QObject *> XlibBackend::getDevices() const
 {
-    QVector<QObject*> touchpads;
+    QVector<QObject *> touchpads;
 
 #if HAVE_XORGLIBINPUT
-    LibinputTouchpad* libinputtouchpad = dynamic_cast<LibinputTouchpad*> (m_device.data());
-    if ( libinputtouchpad) {
+    LibinputTouchpad *libinputtouchpad = dynamic_cast<LibinputTouchpad *>(m_device.data());
+    if (libinputtouchpad) {
         touchpads.push_back(libinputtouchpad);
     }
 #endif
 
-    SynapticsTouchpad* synaptics = dynamic_cast<SynapticsTouchpad*> (m_device.data());
+    SynapticsTouchpad *synaptics = dynamic_cast<SynapticsTouchpad *>(m_device.data());
     if (synaptics) {
         touchpads.push_back(synaptics);
     }
@@ -371,12 +363,9 @@ void XlibBackend::watchForEvents(bool keyboard)
 {
     if (!m_notifications) {
         m_notifications.reset(new XlibNotifications(m_display.data(), m_device ? m_device->deviceId() : XIAllDevices));
-        connect(m_notifications.data(), SIGNAL(devicePlugged(int)),
-                SLOT(devicePlugged(int)));
-        connect(m_notifications.data(), SIGNAL(touchpadDetached()),
-                SLOT(touchpadDetached()));
-        connect(m_notifications.data(), SIGNAL(propertyChanged(xcb_atom_t)),
-                SLOT(propertyChanged(xcb_atom_t)));
+        connect(m_notifications.data(), SIGNAL(devicePlugged(int)), SLOT(devicePlugged(int)));
+        connect(m_notifications.data(), SIGNAL(touchpadDetached()), SLOT(touchpadDetached()));
+        connect(m_notifications.data(), SIGNAL(propertyChanged(xcb_atom_t)), SLOT(propertyChanged(xcb_atom_t)));
     }
 
     if (keyboard == !m_keyboard.isNull()) {
@@ -389,8 +378,6 @@ void XlibBackend::watchForEvents(bool keyboard)
     }
 
     m_keyboard.reset(new XRecordKeyboardMonitor(m_display.data()));
-    connect(m_keyboard.data(), SIGNAL(keyboardActivityStarted()),
-            SIGNAL(keyboardActivityStarted()));
-    connect(m_keyboard.data(), SIGNAL(keyboardActivityFinished()),
-            SIGNAL(keyboardActivityFinished()));
+    connect(m_keyboard.data(), SIGNAL(keyboardActivityStarted()), SIGNAL(keyboardActivityStarted()));
+    connect(m_keyboard.data(), SIGNAL(keyboardActivityFinished()), SIGNAL(keyboardActivityFinished()));
 }

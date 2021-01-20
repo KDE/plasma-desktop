@@ -25,7 +25,7 @@
 
 #include <logging.h>
 
-ConfigPlugin* ConfigPlugin::implementation(ConfigContainer *parent)
+ConfigPlugin *ConfigPlugin::implementation(ConfigContainer *parent)
 {
     InputBackend *backend = InputBackend::implementation(parent);
     InputBackendMode mode = backend->mode();
@@ -43,7 +43,7 @@ ConfigPlugin* ConfigPlugin::implementation(ConfigContainer *parent)
 }
 
 ConfigPlugin::ConfigPlugin(ConfigContainer *parent)
-    : QWidget(parent),
-      m_parent(parent)
+    : QWidget(parent)
+    , m_parent(parent)
 {
 }

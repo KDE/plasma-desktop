@@ -26,11 +26,14 @@
 class Outline : public XkbObject
 {
     Q_OBJECT
-#define P(type, name) \
-private: \
-    Q_PROPERTY(type name READ auto_prop_##name CONSTANT) \
-public: \
-    type auto_prop_##name () const { return outline-> name ; }
+#define P(type, name)                                                                                                                                          \
+private:                                                                                                                                                       \
+    Q_PROPERTY(type name READ auto_prop_##name CONSTANT)                                                                                                       \
+public:                                                                                                                                                        \
+    type auto_prop_##name() const                                                                                                                              \
+    {                                                                                                                                                          \
+        return outline->name;                                                                                                                                  \
+    }
 
     P(unsigned short, corner_radius)
 

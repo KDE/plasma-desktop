@@ -39,11 +39,18 @@ public:
     bool getConfig() override;
     bool getDefaultConfig() override;
     bool isChangedConfig() const override;
-    QString errorString() const override { return m_errorString; }
+    QString errorString() const override
+    {
+        return m_errorString;
+    }
 
-    virtual int deviceCount() const override { return 1; }
-    virtual QVector<QObject*> getDevices() const override {
-        return QVector<QObject*>(1, m_device);
+    virtual int deviceCount() const override
+    {
+        return 1;
+    }
+    virtual QVector<QObject *> getDevices() const override
+    {
+        return QVector<QObject *>(1, m_device);
     }
 
 private:

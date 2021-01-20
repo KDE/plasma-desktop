@@ -24,33 +24,37 @@
 
 #include <QIcon>
 
+#include <KLocalizedString>
 #include <QDir>
+#include <QStringList>
 #include <QTimer>
 #include <QUrl>
-#include <KLocalizedString>
-#include <QStringList>
 
 #include "baloo/baloosettings.h"
 
-namespace {
-    QString normalizeTrailingSlashes(QString&& input) {
-        if (!input.endsWith('/'))
-            return input + QLatin1Char('/');
-        return input;
-    }
+namespace
+{
+QString normalizeTrailingSlashes(QString &&input)
+{
+    if (!input.endsWith('/'))
+        return input + QLatin1Char('/');
+    return input;
+}
 
-    QStringList addTrailingSlashes(QStringList&& list) {
-        for (QString& str : list) {
-            str = normalizeTrailingSlashes(std::move(str));
-        }
-        return list;
+QStringList addTrailingSlashes(QStringList &&list)
+{
+    for (QString &str : list) {
+        str = normalizeTrailingSlashes(std::move(str));
     }
+    return list;
+}
 
-    QString makeHomePretty(const QString& url) {
-        if (url.startsWith(QDir::homePath()))
-            return QString(url).replace(0, QDir::homePath().length(), QStringLiteral("~"));
-        return url;
-    }
+QString makeHomePretty(const QString &url)
+{
+    if (url.startsWith(QDir::homePath()))
+        return QString(url).replace(0, QDir::homePath().length(), QStringLiteral("~"));
+    return url;
+}
 }
 
 FilteredFolderModel::FilteredFolderModel(BalooSettings *settings, QObject *parent)
@@ -70,8 +74,7 @@ void FilteredFolderModel::updateDirectoryList()
 
     const QString homePath = normalizeTrailingSlashes(QDir::homePath());
 
-    auto folderListEntry = [&homePath] (const QString& url, bool include, bool fromConfig)
-    {
+    auto folderListEntry = [&homePath](const QString &url, bool include, bool fromConfig) {
         QString displayName = url;
         if (displayName.size() > 1) {
             displayName.chop(1);
@@ -91,17 +94,16 @@ void FilteredFolderModel::updateDirectoryList()
     };
     m_folderList.clear();
 
-    for (const QString& folder : settingsIncluded) {
+    for (const QString &folder : settingsIncluded) {
         m_folderList.append(folderListEntry(folder, true, true));
     }
-    for (const QString& folder : settingsExcluded) {
+    for (const QString &folder : settingsExcluded) {
         m_folderList.append(folderListEntry(folder, false, true));
     }
 
     // Add any automatically excluded mounts to the list
-    for (const QString& folder : runtimeExcluded) {
-        if (settingsIncluded.contains(folder) ||
-            settingsExcluded.contains(folder)) {
+    for (const QString &folder : runtimeExcluded) {
+        if (settingsIncluded.contains(folder) || settingsExcluded.contains(folder)) {
             // Do not add any duplicates
             continue;
         }
@@ -112,15 +114,14 @@ void FilteredFolderModel::updateDirectoryList()
         m_folderList.append(folderListEntry(folder, false, false));
     }
 
-    std::sort(m_folderList.begin(), m_folderList.end(),
-        [](const FolderInfo& a, const FolderInfo& b) {
-            return a.url < b.url;
+    std::sort(m_folderList.begin(), m_folderList.end(), [](const FolderInfo &a, const FolderInfo &b) {
+        return a.url < b.url;
     });
 
     endResetModel();
 }
 
-QVariant FilteredFolderModel::data(const QModelIndex& idx, int role) const
+QVariant FilteredFolderModel::data(const QModelIndex &idx, int role) const
 {
     if (!idx.isValid() || idx.row() >= m_folderList.size()) {
         return {};
@@ -128,25 +129,33 @@ QVariant FilteredFolderModel::data(const QModelIndex& idx, int role) const
 
     const auto entry = m_folderList.at(idx.row());
     switch (role) {
-        case Qt::DisplayRole: return entry.displayName;
-        case Qt::WhatsThisRole: return entry.url;
-        case Qt::DecorationRole: return entry.icon;
-        case Qt::ToolTipRole: return makeHomePretty(entry.url);
-        case Url: return entry.url;
-        case Folder: return entry.displayName;
-        case EnableIndex: return entry.enableIndex;
-        case Deletable: return entry.isFromConfig;
-        default:
-            return {};
+    case Qt::DisplayRole:
+        return entry.displayName;
+    case Qt::WhatsThisRole:
+        return entry.url;
+    case Qt::DecorationRole:
+        return entry.icon;
+    case Qt::ToolTipRole:
+        return makeHomePretty(entry.url);
+    case Url:
+        return entry.url;
+    case Folder:
+        return entry.displayName;
+    case EnableIndex:
+        return entry.enableIndex;
+    case Deletable:
+        return entry.isFromConfig;
+    default:
+        return {};
     }
- }
+}
 
-bool FilteredFolderModel::setData(const QModelIndex& idx, const QVariant& value, int role)
+bool FilteredFolderModel::setData(const QModelIndex &idx, const QVariant &value, int role)
 {
     if (!idx.isValid() || idx.row() >= m_folderList.size()) {
         return false;
     }
-    FolderInfo& entry = m_folderList[idx.row()];
+    FolderInfo &entry = m_folderList[idx.row()];
     if (role == EnableIndex) {
         entry.enableIndex = value.toBool();
         syncFolderConfig(entry);
@@ -156,20 +165,19 @@ bool FilteredFolderModel::setData(const QModelIndex& idx, const QVariant& value,
     return false;
 }
 
-int FilteredFolderModel::rowCount(const QModelIndex& parent) const
+int FilteredFolderModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
     return m_folderList.count();
 }
 
-void FilteredFolderModel::addFolder(const QString& url, const bool included = false)
+void FilteredFolderModel::addFolder(const QString &url, const bool included = false)
 {
     QString nUrl = normalizeTrailingSlashes(QUrl(url).toLocalFile());
 
-    auto it = std::find_if(m_folderList.begin(), m_folderList.end(),
-        [nUrl](const FolderInfo& folder) {
-            return folder.url == nUrl;
-        });
+    auto it = std::find_if(m_folderList.begin(), m_folderList.end(), [nUrl](const FolderInfo &folder) {
+        return folder.url == nUrl;
+    });
     if (it != m_folderList.end() && (*it).isFromConfig) {
         return;
     }
@@ -207,7 +215,7 @@ void FilteredFolderModel::removeFolder(int row)
     m_deletedSettings.append(entry.url);
 }
 
-void FilteredFolderModel::syncFolderConfig(const FolderInfo& entry)
+void FilteredFolderModel::syncFolderConfig(const FolderInfo &entry)
 {
     auto excluded = addTrailingSlashes(m_settings->excludedFolders());
     auto included = addTrailingSlashes(m_settings->folders());
@@ -232,12 +240,9 @@ void FilteredFolderModel::syncFolderConfig(const FolderInfo& entry)
 
 QHash<int, QByteArray> FilteredFolderModel::roleNames() const
 {
-    return {
-        {Url, "url"},
-        {Folder, "folder"},
-        {EnableIndex, "enableIndex"},
-        {Deletable, "deletable"},
-        {Qt::DecorationRole, "decoration"}
-    };
+    return {{Url, "url"}, //
+            {Folder, "folder"},
+            {EnableIndex, "enableIndex"},
+            {Deletable, "deletable"},
+            {Qt::DecorationRole, "decoration"}};
 }
-

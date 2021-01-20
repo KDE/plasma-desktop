@@ -46,10 +46,8 @@ PreviewPluginsModel::~PreviewPluginsModel()
 
 QHash<int, QByteArray> PreviewPluginsModel::roleNames() const
 {
-    return {
-        { Qt::DisplayRole, "display" },
-        { Qt::CheckStateRole, "checked" }
-    };
+    return {{Qt::DisplayRole, "display"}, //
+            {Qt::CheckStateRole, "checked"}};
 }
 
 QVariant PreviewPluginsModel::data(const QModelIndex &index, int role) const
@@ -59,11 +57,11 @@ QVariant PreviewPluginsModel::data(const QModelIndex &index, int role) const
     }
 
     switch (role) {
-        case Qt::DisplayRole:
-            return m_plugins.at(index.row())->name();
+    case Qt::DisplayRole:
+        return m_plugins.at(index.row())->name();
 
-        case Qt::CheckStateRole:
-            return m_checkedRows.at(index.row()) ? Qt::Checked : Qt::Unchecked;
+    case Qt::CheckStateRole:
+        return m_checkedRows.at(index.row()) ? Qt::Checked : Qt::Unchecked;
     }
 
     return QVariant();

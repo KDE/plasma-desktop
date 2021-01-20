@@ -28,9 +28,7 @@ class CustomConfigDialogManager : public KConfigDialogManager
 {
     Q_OBJECT
 public:
-    CustomConfigDialogManager(QWidget *parent,
-                              KCoreConfigSkeleton *config,
-                              const QStringList &supported);
+    CustomConfigDialogManager(QWidget *parent, KCoreConfigSkeleton *config, const QStringList &supported);
     ~CustomConfigDialogManager();
 
     QVariantHash currentWidgetProperties() const;

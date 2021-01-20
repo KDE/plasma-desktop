@@ -43,8 +43,5 @@ void ActivitiesSettingsPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(QLatin1String(uri) == QLatin1String("org.kde.activities.settings"));
 
-    qmlRegisterSingletonType("org.kde.activities.settings", 0, 1,
-                             "ActivitySettings",
-                             settingsSingleton);
+    qmlRegisterSingletonType("org.kde.activities.settings", 0, 1, "ActivitySettings", settingsSingleton);
 }
-

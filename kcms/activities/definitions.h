@@ -24,4 +24,3 @@
 #define SQLITE_PLUGIN_CONFIG_KEY "Plugin-org.kde.ActivityManager.Resources.Scoring"
 
 #endif // DEFINITIONS_H
-

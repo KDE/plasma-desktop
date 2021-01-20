@@ -25,24 +25,24 @@
 
 #include <QCollator>
 #include <QDir>
+#include <QRegularExpression>
 #include <QStandardPaths>
 #include <QStringList>
-#include <QRegularExpression>
 
 #include <KConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>
-#include <KSharedConfig>
 #include <KService>
 #include <KServiceTypeTrader>
+#include <KSharedConfig>
 
 #include <algorithm>
 
 static const QString s_plasmaWorkspaceNotifyRcName = QStringLiteral("plasma_workspace");
 
-SourcesModel::SourcesModel(QObject *parent) : QAbstractItemModel(parent)
+SourcesModel::SourcesModel(QObject *parent)
+    : QAbstractItemModel(parent)
 {
-
 }
 
 SourcesModel::~SourcesModel() = default;
@@ -109,10 +109,14 @@ QVariant SourcesModel::data(const QModelIndex &index, int role) const
         const auto &event = m_data.at(index.internalId() - 1).events.at(index.row());
 
         switch (role) {
-        case Qt::DisplayRole: return event.name;
-        case Qt::DecorationRole: return event.iconName;
-        case EventIdRole: return event.eventId;
-        case ActionsRole: return event.actions;
+        case Qt::DisplayRole:
+            return event.name;
+        case Qt::DecorationRole:
+            return event.iconName;
+        case EventIdRole:
+            return event.eventId;
+        case ActionsRole:
+            return event.actions;
         }
 
         return QVariant();
@@ -121,12 +125,18 @@ QVariant SourcesModel::data(const QModelIndex &index, int role) const
     const auto &source = m_data.at(index.row());
 
     switch (role) {
-    case Qt::DisplayRole: return source.display();
-    case Qt::DecorationRole: return source.iconName;
-    case SourceTypeRole: return source.desktopEntry.isEmpty() ? ServiceType : ApplicationType;
-    case NotifyRcNameRole: return source.notifyRcName;
-    case DesktopEntryRole: return source.desktopEntry;
-    case IsDefaultRole: return source.isDefault;
+    case Qt::DisplayRole:
+        return source.display();
+    case Qt::DecorationRole:
+        return source.iconName;
+    case SourceTypeRole:
+        return source.desktopEntry.isEmpty() ? ServiceType : ApplicationType;
+    case NotifyRcNameRole:
+        return source.notifyRcName;
+    case DesktopEntryRole:
+        return source.desktopEntry;
+    case IsDefaultRole:
+        return source.isDefault;
     }
 
     return QVariant();
@@ -206,16 +216,14 @@ QModelIndex SourcesModel::parent(const QModelIndex &child) const
 
 QHash<int, QByteArray> SourcesModel::roleNames() const
 {
-    return {
-        {Qt::DisplayRole, QByteArrayLiteral("display")},
-        {Qt::DecorationRole, QByteArrayLiteral("decoration")},
-        {SourceTypeRole, QByteArrayLiteral("sourceType")},
-        {NotifyRcNameRole, QByteArrayLiteral("notifyRcName")},
-        {DesktopEntryRole, QByteArrayLiteral("desktopEntry")},
-        {IsDefaultRole, QByteArrayLiteral("isDefault")},
-        {EventIdRole, QByteArrayLiteral("eventId")},
-        {ActionsRole, QByteArrayLiteral("actions")}
-    };
+    return {{Qt::DisplayRole, QByteArrayLiteral("display")},
+            {Qt::DecorationRole, QByteArrayLiteral("decoration")},
+            {SourceTypeRole, QByteArrayLiteral("sourceType")},
+            {NotifyRcNameRole, QByteArrayLiteral("notifyRcName")},
+            {DesktopEntryRole, QByteArrayLiteral("desktopEntry")},
+            {IsDefaultRole, QByteArrayLiteral("isDefault")},
+            {EventIdRole, QByteArrayLiteral("eventId")},
+            {ActionsRole, QByteArrayLiteral("actions")}};
 }
 
 void SourcesModel::load()
@@ -234,8 +242,7 @@ void SourcesModel::load()
 
     // old code did KGlobal::dirs()->findAllResources("data", QStringLiteral("*/*.notifyrc")) but in KF5
     // only notifyrc files in knotifications5/ folder are supported
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
-                            QStringLiteral("knotifications5"), QStandardPaths::LocateDirectory);
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications5"), QStandardPaths::LocateDirectory);
     for (const QString &dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.notifyrc"));
         for (const QString &file : fileNames) {
@@ -246,8 +253,7 @@ void SourcesModel::load()
             notifyRcFiles.append(file);
 
             KConfig config(file, KConfig::NoGlobals);
-            config.addConfigSources(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
-                                        QStringLiteral("knotifications5/") + file));
+            config.addConfigSources(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications5/") + file));
 
             KConfigGroup globalGroup(&config, QLatin1String("Global"));
 
@@ -286,14 +292,12 @@ void SourcesModel::load()
                 // TODO context stuff
                 // TODO load defaults thing
 
-                EventData event{
-                    cg.readEntry("Name"),
-                    cg.readEntry("Comment"),
-                    cg.readEntry("IconName"),
-                    eventId,
-                    // TODO Flags?
-                    cg.readEntry("Action").split(QLatin1Char('|'))
-                };
+                EventData event{cg.readEntry("Name"),
+                                cg.readEntry("Comment"),
+                                cg.readEntry("IconName"),
+                                eventId,
+                                // TODO Flags?
+                                cg.readEntry("Action").split(QLatin1Char('|'))};
                 events.append(event);
             }
 
@@ -311,8 +315,8 @@ void SourcesModel::load()
         }
     }
 
-    const auto services = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
-                                                            QStringLiteral("exist Exec and TRUE == [X-GNOME-UsesNotifications]"));
+    const auto services =
+        KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and TRUE == [X-GNOME-UsesNotifications]"));
     for (const auto &service : services) {
         if (service->noDisplay()) {
             continue;
@@ -327,7 +331,7 @@ void SourcesModel::load()
             service->comment(),
             service->icon(),
             true,
-            QString(), //notifyRcFile
+            QString(), // notifyRcFile
             service->desktopEntryName(),
             {} // events
         };
@@ -348,15 +352,13 @@ void SourcesModel::load()
             continue;
         }
 
-        SourceData source{
-            service->name(),
-            service->comment(),
-            service->icon(),
-            true,
-            QString(), //notifyRcFile
-            service->desktopEntryName(),
-            {}
-        };
+        SourceData source{service->name(),
+                          service->comment(),
+                          service->icon(),
+                          true,
+                          QString(), // notifyRcFile
+                          service->desktopEntryName(),
+                          {}};
         appsData.append(source);
         desktopEntries.append(service->desktopEntryName());
     }
@@ -366,15 +368,7 @@ void SourcesModel::load()
     });
 
     // Fake entry for configuring non-identifyable applications
-    appsData << SourceData{
-        i18n("Other Applications"),
-        {},
-        QStringLiteral("applications-other"),
-        true,
-        QString(),
-        QStringLiteral("@other"),
-        {}
-    };
+    appsData << SourceData{i18n("Other Applications"), {}, QStringLiteral("applications-other"), true, QString(), QStringLiteral("@other"), {}};
 
     // Sort and make sure plasma_workspace is at the beginning of the list
     std::sort(servicesData.begin(), servicesData.end(), [&collator](const SourceData &a, const SourceData &b) {

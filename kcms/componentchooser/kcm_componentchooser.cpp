@@ -25,10 +25,10 @@
 #include <KPluginFactory>
 
 #include "componentchooserbrowser.h"
+#include "componentchooserdata.h"
+#include "componentchooseremail.h"
 #include "componentchooserfilemanager.h"
 #include "componentchooserterminal.h"
-#include "componentchooseremail.h"
-#include "componentchooserdata.h"
 
 K_PLUGIN_FACTORY_WITH_JSON(KcmComponentChooserFactory, "metadata.json", registerPlugin<KcmComponentChooser>(); registerPlugin<ComponentChooserData>();)
 
@@ -36,7 +36,11 @@ KcmComponentChooser::KcmComponentChooser(QObject *parent, const QVariantList &ar
     : KQuickAddons::ManagedConfigModule(parent, args)
     , m_data(new ComponentChooserData(this))
 {
-    KAboutData *aboutData = new KAboutData("kcm_componentchooser", i18nc("@title", "Default Applications"), "1.0", QString(), KAboutLicense::LicenseKey::GPL_V2);
+    KAboutData *aboutData = new KAboutData("kcm_componentchooser", //
+                                           i18nc("@title", "Default Applications"),
+                                           "1.0",
+                                           QString(),
+                                           KAboutLicense::LicenseKey::GPL_V2);
 
     aboutData->addAuthor(i18n("Joseph Wenninger"), QString(), QStringLiteral("jowenn@kde.org"));
     aboutData->addAuthor(i18n("Méven Car"), QString(), QStringLiteral("meven.car@kdemail.net"));
@@ -96,6 +100,5 @@ bool KcmComponentChooser::isSaveNeeded() const
 {
     return m_data->isSaveNeeded();
 }
-
 
 #include "kcm_componentchooser.moc"

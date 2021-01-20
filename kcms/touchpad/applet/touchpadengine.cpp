@@ -20,33 +20,31 @@
 #include <QDBusConnection>
 #include <QDBusInterface>
 
+#include "kded5interface.h"
 #include "touchpadinterface.h"
 #include "touchpadservice.h"
-#include "kded5interface.h"
 
 TouchpadEngine::TouchpadEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args), m_source("touchpad"), m_daemon(nullptr)
+    : Plasma::DataEngine(parent, args)
+    , m_source("touchpad")
+    , m_daemon(nullptr)
 {
     init();
 }
 
 void TouchpadEngine::init()
 {
-    OrgKdeKded5Interface kded(QLatin1String("org.kde.kded5"),
-                              QLatin1String("/kded"),
-                              QDBusConnection::sessionBus());
+    OrgKdeKded5Interface kded(QLatin1String("org.kde.kded5"), QLatin1String("/kded"), QDBusConnection::sessionBus());
     kded.loadModule("touchpad").waitForFinished();
 
-    m_daemon = new OrgKdeTouchpadInterface("org.kde.kded5", "/modules/touchpad",
-                                           QDBusConnection::sessionBus(), this);
+    m_daemon = new OrgKdeTouchpadInterface("org.kde.kded5", "/modules/touchpad", QDBusConnection::sessionBus(), this);
     if (!m_daemon->isValid()) {
         return;
     }
 
     connect(m_daemon, SIGNAL(workingTouchpadFoundChanged(bool)), SLOT(workingTouchpadFoundChanged(bool)));
     connect(m_daemon, SIGNAL(enabledChanged(bool)), SLOT(enabledChanged(bool)));
-    connect(m_daemon, SIGNAL(mousePluggedInChanged(bool)),
-            SLOT(mousePluggedInChanged(bool)));
+    connect(m_daemon, SIGNAL(mousePluggedInChanged(bool)), SLOT(mousePluggedInChanged(bool)));
 
     workingTouchpadFoundChanged(m_daemon->workingTouchpadFound());
     enabledChanged(m_daemon->isEnabled());

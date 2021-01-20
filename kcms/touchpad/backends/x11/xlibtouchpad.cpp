@@ -16,16 +16,16 @@ static QVariant negateVariant(const QVariant &value)
     return value;
 }
 
-XlibTouchpad::XlibTouchpad(Display *display, int deviceId) :
-    m_display(display),
-    m_connection(XGetXCBConnection(display)),
-    m_deviceId(deviceId)
+XlibTouchpad::XlibTouchpad(Display *display, int deviceId)
+    : m_display(display)
+    , m_connection(XGetXCBConnection(display))
+    , m_deviceId(deviceId)
 {
     m_floatType.intern(m_connection, "FLOAT");
     m_enabledAtom.intern(m_connection, XI_PROP_ENABLED);
 }
 
-bool XlibTouchpad::applyConfig(const QVariantHash& p)
+bool XlibTouchpad::applyConfig(const QVariantHash &p)
 {
     m_props.clear();
 
@@ -58,9 +58,7 @@ bool XlibTouchpad::applyConfig(const QVariantHash& p)
 
             if (name == "CoastingSpeed") {
                 QVariantHash::ConstIterator coastingEnabled = p.find("Coasting");
-                if (coastingEnabled != p.end() &&
-                        !coastingEnabled.value().toBool())
-                {
+                if (coastingEnabled != p.end() && !coastingEnabled.value().toBool()) {
                     value = QVariant(0);
                 }
             }
@@ -76,7 +74,7 @@ bool XlibTouchpad::applyConfig(const QVariantHash& p)
     return !error;
 }
 
-bool XlibTouchpad::getConfig(QVariantHash& p)
+bool XlibTouchpad::getConfig(QVariantHash &p)
 {
     if (m_supported.isEmpty()) {
         return false;
@@ -129,15 +127,14 @@ bool XlibTouchpad::getConfig(QVariantHash& p)
     return !error;
 }
 
-void XlibTouchpad::loadSupportedProperties(const Parameter* props)
+void XlibTouchpad::loadSupportedProperties(const Parameter *props)
 {
     m_paramList = props;
     for (const Parameter *param = props; param->name; param++) {
         QLatin1String name(param->prop_name);
 
         if (!m_atoms.contains(name)) {
-            m_atoms.insert(name, QSharedPointer<XcbAtom>(
-                            new XcbAtom(m_connection, param->prop_name)));
+            m_atoms.insert(name, QSharedPointer<XcbAtom>(new XcbAtom(m_connection, param->prop_name)));
         }
     }
 
@@ -148,7 +145,7 @@ void XlibTouchpad::loadSupportedProperties(const Parameter* props)
     }
 }
 
-QVariant XlibTouchpad::getParameter(const Parameter* par)
+QVariant XlibTouchpad::getParameter(const Parameter *par)
 {
     PropertyInfo *p = getDevProperty(QLatin1String(par->prop_name));
     if (!p || par->prop_offset >= p->nitems) {
@@ -157,7 +154,6 @@ QVariant XlibTouchpad::getParameter(const Parameter* par)
 
     return p->value(par->prop_offset);
 }
-
 
 void XlibTouchpad::flush()
 {
@@ -169,13 +165,13 @@ void XlibTouchpad::flush()
     XFlush(m_display);
 }
 
-double XlibTouchpad::getPropertyScale(const QString& name) const
+double XlibTouchpad::getPropertyScale(const QString &name) const
 {
     Q_UNUSED(name);
     return 1.0;
 }
 
-PropertyInfo* XlibTouchpad::getDevProperty(const QLatin1String& propName)
+PropertyInfo *XlibTouchpad::getDevProperty(const QLatin1String &propName)
 {
     if (m_props.contains(propName)) {
         return &m_props[propName];
@@ -233,7 +229,6 @@ bool XlibTouchpad::setParameter(const Parameter *par, const QVariant &value)
     return true;
 }
 
-
 void XlibTouchpad::setEnabled(bool enable)
 {
     PropertyInfo enabled(m_display, m_deviceId, m_enabledAtom.atom(), 0);
@@ -251,7 +246,7 @@ bool XlibTouchpad::enabled()
     return enabled.value(0).toBool();
 }
 
-const Parameter* XlibTouchpad::findParameter(const QString& name)
+const Parameter *XlibTouchpad::findParameter(const QString &name)
 {
     for (const Parameter *par = m_paramList; par->name; par++) {
         if (name == par->name) {

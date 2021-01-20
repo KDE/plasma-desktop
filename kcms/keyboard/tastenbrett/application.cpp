@@ -27,7 +27,7 @@ bool Application::notify(QObject *receiver, QEvent *event)
     if (event->type() == QEvent::KeyPress || event->type() == QEvent::KeyRelease) {
         emit keyEvent(dynamic_cast<QKeyEvent *>(event));
     }
-    return QGuiApplication::notify(receiver,event);
+    return QGuiApplication::notify(receiver, event);
 }
 
 Application *Application::instance()

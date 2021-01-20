@@ -18,33 +18,49 @@
 
 #include "kwin_wl_device.h"
 
-#include <QDBusInterface>
 #include <QDBusError>
+#include <QDBusInterface>
 #include <QVector>
 
 #include "logging.h"
 
-namespace {
-template<typename T>
-T valueLoaderPart(QVariant const &reply) { Q_UNUSED(reply); return T(); }
+namespace
+{
+template<typename T> T valueLoaderPart(QVariant const &reply)
+{
+    Q_UNUSED(reply);
+    return T();
+}
 
-template<>
-bool valueLoaderPart(QVariant const &reply) { return reply.toBool(); }
+template<> bool valueLoaderPart(QVariant const &reply)
+{
+    return reply.toBool();
+}
 
-template<>
-int valueLoaderPart(QVariant const &reply) { return reply.toInt(); }
+template<> int valueLoaderPart(QVariant const &reply)
+{
+    return reply.toInt();
+}
 
-template<>
-quint32 valueLoaderPart(QVariant const &reply) { return reply.toInt(); }
+template<> quint32 valueLoaderPart(QVariant const &reply)
+{
+    return reply.toInt();
+}
 
-template<>
-qreal valueLoaderPart(QVariant const &reply) { return reply.toReal(); }
+template<> qreal valueLoaderPart(QVariant const &reply)
+{
+    return reply.toReal();
+}
 
-template<>
-QString valueLoaderPart(QVariant const &reply) { return reply.toString(); }
+template<> QString valueLoaderPart(QVariant const &reply)
+{
+    return reply.toString();
+}
 
-template<>
-Qt::MouseButtons valueLoaderPart(QVariant const &reply) { return static_cast<Qt::MouseButtons>(reply.toInt()); }
+template<> Qt::MouseButtons valueLoaderPart(QVariant const &reply)
+{
+    return static_cast<Qt::MouseButtons>(reply.toInt());
+}
 }
 
 KWinWaylandDevice::KWinWaylandDevice(QString dbusName)
@@ -123,14 +139,8 @@ bool KWinWaylandDevice::applyConfig()
 {
     QVector<QString> msgs;
 
-    msgs << valueWriter(m_enabled)
-        << valueWriter(m_leftHanded)
-        << valueWriter(m_pointerAcceleration)
-        << valueWriter(m_pointerAccelerationProfileFlat)
-        << valueWriter(m_pointerAccelerationProfileAdaptive)
-        << valueWriter(m_middleEmulation)
-        << valueWriter(m_naturalScroll)
-        << valueWriter(m_scrollFactor);
+    msgs << valueWriter(m_enabled) << valueWriter(m_leftHanded) << valueWriter(m_pointerAcceleration) << valueWriter(m_pointerAccelerationProfileFlat)
+         << valueWriter(m_pointerAccelerationProfileAdaptive) << valueWriter(m_middleEmulation) << valueWriter(m_naturalScroll) << valueWriter(m_scrollFactor);
 
     bool success = true;
     QString error_msg;
@@ -147,25 +157,18 @@ bool KWinWaylandDevice::applyConfig()
     }
 
     if (!success) {
-        qCCritical(KCM_MOUSE) <<  error_msg;
+        qCCritical(KCM_MOUSE) << error_msg;
     }
     return success;
 }
 
 bool KWinWaylandDevice::isChangedConfig() const
 {
-    return m_enabled.changed() ||
-            m_leftHanded.changed() ||
-            m_pointerAcceleration.changed() ||
-            m_pointerAccelerationProfileFlat.changed() ||
-            m_pointerAccelerationProfileAdaptive.changed() ||
-            m_middleEmulation.changed() ||
-            m_scrollFactor.changed() ||
-            m_naturalScroll.changed();
+    return m_enabled.changed() || m_leftHanded.changed() || m_pointerAcceleration.changed() || m_pointerAccelerationProfileFlat.changed()
+        || m_pointerAccelerationProfileAdaptive.changed() || m_middleEmulation.changed() || m_scrollFactor.changed() || m_naturalScroll.changed();
 }
 
-template<typename T>
-QString KWinWaylandDevice::valueWriter(const Prop<T> &prop)
+template<typename T> QString KWinWaylandDevice::valueWriter(const Prop<T> &prop)
 {
     if (!prop.changed()) {
         return QString();
@@ -179,8 +182,7 @@ QString KWinWaylandDevice::valueWriter(const Prop<T> &prop)
     return QString();
 }
 
-template<typename T>
-bool KWinWaylandDevice::valueLoader(Prop<T> &prop)
+template<typename T> bool KWinWaylandDevice::valueLoader(Prop<T> &prop)
 {
     QVariant reply = m_iface->property(prop.dbus);
     if (!reply.isValid()) {

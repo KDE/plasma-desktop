@@ -20,8 +20,8 @@
 #ifndef KDEDCONFIGDATA_H
 #define KDEDCONFIGDATA_H
 
-#include <QObject>
 #include <KCModuleData>
+#include <QObject>
 
 class KDEDConfigData : public KCModuleData
 {

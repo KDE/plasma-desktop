@@ -16,10 +16,8 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #ifndef LAYOUT_TRAY_ICON_H_
 #define LAYOUT_TRAY_ICON_H_
-
 
 #include "flags.h"
 #include "x11_helper.h"
@@ -38,7 +36,7 @@ class LayoutTrayIcon : public QObject
     Q_OBJECT
 
 public:
-    LayoutTrayIcon(const Rules* rules, const KeyboardConfig& keyboardConfig);
+    LayoutTrayIcon(const Rules *rules, const KeyboardConfig &keyboardConfig);
     ~LayoutTrayIcon() override;
 
     void layoutMapChanged();
@@ -47,20 +45,19 @@ public Q_SLOTS:
     void layoutChanged();
 
 private Q_SLOTS:
-	void toggleLayout();
+    void toggleLayout();
     void scrollRequested(int, Qt::Orientation);
 
 private:
-	void init();
-	void destroy();
-	const QIcon getFlag(const QString& layout) const;
+    void init();
+    void destroy();
+    const QIcon getFlag(const QString &layout) const;
 
-	const KeyboardConfig& keyboardConfig;
-	const Rules* rules;
-	Flags* flags;
+    const KeyboardConfig &keyboardConfig;
+    const Rules *rules;
+    Flags *flags;
     KStatusNotifierItem *m_notifierItem;
-	LayoutsMenu* layoutsMenu;
+    LayoutsMenu *layoutsMenu;
 };
-
 
 #endif /* LAYOUT_WIDGET_H_ */

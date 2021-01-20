@@ -34,7 +34,7 @@ class StandardShortcutsModel;
 
 class KCMKeys : public KQuickAddons::ConfigModule
 {
-    Q_OBJECT 
+    Q_OBJECT
 
     Q_PROPERTY(FilteredShortcutsModel *filteredModel READ filteredModel CONSTANT)
     Q_PROPERTY(ShortcutsModel *shortcutsModel READ shortcutsModel CONSTANT)
@@ -47,8 +47,8 @@ public:
     void load() override;
     void save() override;
 
-    Q_INVOKABLE  void requestKeySequence(QQuickItem *context, const QModelIndex &index,
-        const QKeySequence &newSequence, const QKeySequence &oldSequence = QKeySequence());
+    Q_INVOKABLE void
+    requestKeySequence(QQuickItem *context, const QModelIndex &index, const QKeySequence &newSequence, const QKeySequence &oldSequence = QKeySequence());
 
     Q_INVOKABLE void writeScheme(const QUrl &url);
     Q_INVOKABLE void loadScheme(const QUrl &url);
@@ -59,8 +59,8 @@ public:
     Q_INVOKABLE QString keySequenceToString(const QKeySequence &keySequence) const;
     Q_INVOKABLE QString urlFilename(const QUrl &url);
 
-    FilteredShortcutsModel* filteredModel() const;
-    ShortcutsModel* shortcutsModel() const;
+    FilteredShortcutsModel *filteredModel() const;
+    ShortcutsModel *shortcutsModel() const;
     QString lastError() const;
 
 Q_SIGNALS:

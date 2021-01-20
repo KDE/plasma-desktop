@@ -4,19 +4,22 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+#include <KLocalizedString>
+#include <QDesktopServices>
 #include <QDialog>
-#include <QVBoxLayout>
+#include <QDialogButtonBox>
+#include <QDir>
 #include <QIcon>
 #include <QLabel>
-#include <QDialogButtonBox>
-#include <QDesktopServices>
 #include <QPushButton>
 #include <QUrl>
+#include <QVBoxLayout>
 
 class ScriptConfirmationDialog : public QDialog
 {
 public:
-    ScriptConfirmationDialog(const QString &installerPath, bool install, const QString &dir, QWidget *parent = nullptr) : QDialog(parent)
+    ScriptConfirmationDialog(const QString &installerPath, bool install, const QString &dir, QWidget *parent = nullptr)
+        : QDialog(parent)
     {
         const auto readmes = QDir(dir).entryList({QStringLiteral("README*")});
         setWindowTitle(i18nc("@title:window", "Confirm Installation"));
@@ -25,33 +28,39 @@ public:
         QVBoxLayout *layout = new QVBoxLayout(this);
         QString msg;
         if (!install && noInstaller && readmes.isEmpty()) {
-            msg = xi18nc("@info", "This plugin does not provide an uninstallation script. Please contact the author. "
-                                  "You can try to uninstall the plugin manually.<nl/>"
-                                  "If you do not feel capable or comfortable with this, click <interface>Cancel</interface>  now.");
+            msg = xi18nc("@info",
+                         "This plugin does not provide an uninstallation script. Please contact the author. "
+                         "You can try to uninstall the plugin manually.<nl/>"
+                         "If you do not feel capable or comfortable with this, click <interface>Cancel</interface>  now.");
         } else if (!install && noInstaller) {
-            msg = xi18nc("@info", "This plugin does not provide an uninstallation script. Please contact the author. "
-                                  "You can try to uninstall the plugin manually. Please have a look at the README "
-                                  "for instructions from the author.<nl/>"
-                                  "If you do not feel capable or comfortable with this, click <interface>Cancel</interface>  now.");
+            msg = xi18nc("@info",
+                         "This plugin does not provide an uninstallation script. Please contact the author. "
+                         "You can try to uninstall the plugin manually. Please have a look at the README "
+                         "for instructions from the author.<nl/>"
+                         "If you do not feel capable or comfortable with this, click <interface>Cancel</interface>  now.");
         } else if (noInstaller && readmes.isEmpty()) {
-            msg = xi18nc("@info", "This plugin does not provide an installation script. Please contact the author. "
-                                  "You can try to install the plugin manually.<nl/>"
-                                  "If you do not feel capable or comfortable with this, click <interface>Cancel</interface>  now.");
+            msg = xi18nc("@info",
+                         "This plugin does not provide an installation script. Please contact the author. "
+                         "You can try to install the plugin manually.<nl/>"
+                         "If you do not feel capable or comfortable with this, click <interface>Cancel</interface>  now.");
         } else if (noInstaller) {
-            msg = xi18nc("@info", "This plugin does not provide an installation script. Please contact the author. "
-                                  "You can try to install the plugin manually. Please have a look at the README "
-                                  "for instructions from the author.<nl/>"
-                                  "If you do not feel capable or comfortable with this, click <interface>Cancel</interface>  now.");
+            msg = xi18nc("@info",
+                         "This plugin does not provide an installation script. Please contact the author. "
+                         "You can try to install the plugin manually. Please have a look at the README "
+                         "for instructions from the author.<nl/>"
+                         "If you do not feel capable or comfortable with this, click <interface>Cancel</interface>  now.");
         } else if (readmes.isEmpty()) {
-            msg = xi18nc("@info", "This plugin uses a script for installation which can pose a security risk. "
-                                  "Please examine the entire plugin's contents before installing, or at least "
-                                  "read the script's source code.<nl/>"
-                                  "If you do not feel capable or comfortable with this, click <interface>Cancel</interface>  now.");
+            msg = xi18nc("@info",
+                         "This plugin uses a script for installation which can pose a security risk. "
+                         "Please examine the entire plugin's contents before installing, or at least "
+                         "read the script's source code.<nl/>"
+                         "If you do not feel capable or comfortable with this, click <interface>Cancel</interface>  now.");
         } else {
-            msg = xi18nc("@info", "This plugin uses a script for installation which can pose a security risk. "
-                                  "Please examine the entire plugin's contents before installing, or at least "
-                                  "read the README file and the script's source code.<nl/>"
-                                  "If you do not feel capable or comfortable with this, click <interface>Cancel</interface>  now.");
+            msg = xi18nc("@info",
+                         "This plugin uses a script for installation which can pose a security risk. "
+                         "Please examine the entire plugin's contents before installing, or at least "
+                         "read the README file and the script's source code.<nl/>"
+                         "If you do not feel capable or comfortable with this, click <interface>Cancel</interface>  now.");
         }
         QLabel *msgLabel = new QLabel(msg, this);
         msgLabel->setWordWrap(true);

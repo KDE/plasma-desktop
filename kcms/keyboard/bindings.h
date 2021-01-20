@@ -16,7 +16,6 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #ifndef BINDINGS_H_
 #define BINDINGS_H_
 
@@ -24,23 +23,23 @@
 
 struct Rules;
 class LayoutUnit;
-template <typename T> class QList;
+template<typename T> class QList;
 
-
-class KeyboardLayoutActionCollection : public KActionCollection {
+class KeyboardLayoutActionCollection : public KActionCollection
+{
 public:
-	KeyboardLayoutActionCollection(QObject* parent, bool configAction);
-	~KeyboardLayoutActionCollection() override;
+    KeyboardLayoutActionCollection(QObject *parent, bool configAction);
+    ~KeyboardLayoutActionCollection() override;
 
-	QAction* getToggleAction();
-	QAction* createLayoutShortcutActon(const LayoutUnit& layoutUnit, const Rules* rules, bool autoload);
-	void setLayoutShortcuts(QList<LayoutUnit>& layoutUnits, const Rules* rules);
-	void setToggleShortcut(const QKeySequence& keySequence);
-	void loadLayoutShortcuts(QList<LayoutUnit>& layoutUnits, const Rules* rules);
-	void resetLayoutShortcuts();
+    QAction *getToggleAction();
+    QAction *createLayoutShortcutActon(const LayoutUnit &layoutUnit, const Rules *rules, bool autoload);
+    void setLayoutShortcuts(QList<LayoutUnit> &layoutUnits, const Rules *rules);
+    void setToggleShortcut(const QKeySequence &keySequence);
+    void loadLayoutShortcuts(QList<LayoutUnit> &layoutUnits, const Rules *rules);
+    void resetLayoutShortcuts();
 
 private:
-	bool configAction;
+    bool configAction;
 };
 
 #endif /* BINDINGS_H_ */

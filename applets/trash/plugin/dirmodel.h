@@ -20,11 +20,11 @@
 #ifndef DIRMODEL_H
 #define DIRMODEL_H
 
-#include <QSize>
 #include <KDirModel>
-#include <QVariant>
 #include <KImageCache>
 #include <KSharedDataCache>
+#include <QSize>
+#include <QVariant>
 
 class QTimer;
 
@@ -52,27 +52,30 @@ public:
     enum Roles {
         UrlRole = Qt::UserRole + 1,
         MimeTypeRole = Qt::UserRole + 2,
-        Thumbnail  = Qt::UserRole + 3,
+        Thumbnail = Qt::UserRole + 3,
     };
 
-    explicit DirModel(QObject* parent=nullptr);
+    explicit DirModel(QObject *parent = nullptr);
     ~DirModel() override;
 
     QHash<int, QByteArray> roleNames() const override;
 
-    void setUrl(const QString& url);
+    void setUrl(const QString &url);
     QString url() const;
 
     QVariant data(const QModelIndex &index, int role) const override;
-    int count() const {return rowCount();}
+    int count() const
+    {
+        return rowCount();
+    }
 
     Q_INVOKABLE int indexForUrl(const QString &url) const;
 
     Q_INVOKABLE QVariantMap get(int index) const;
 
     /**
-      * Helper method to empty the trash
-      */
+     * Helper method to empty the trash
+     */
     Q_INVOKABLE void emptyTrash();
 
 protected Q_SLOTS:
@@ -87,12 +90,12 @@ Q_SIGNALS:
 private:
     QStringList m_mimeTypes;
 
-    //previews
+    // previews
     QTimer *m_previewTimer = nullptr;
     QHash<QUrl, QPersistentModelIndex> m_filesToPreview;
     QSize m_screenshotSize;
     QHash<QUrl, QPersistentModelIndex> m_previewJobs;
-    KImageCache* m_imageCache = nullptr;
+    KImageCache *m_imageCache = nullptr;
 };
 
 #endif // DIRMODEL_H

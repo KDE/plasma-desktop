@@ -25,8 +25,8 @@
 #include <QDebug>
 
 #include <KConfigGroup>
-#include <KSharedConfig>
 #include <KService>
+#include <KSharedConfig>
 
 #include <algorithm>
 
@@ -65,15 +65,19 @@ void Backend::reload()
 bool Backend::doNotDisturbMode() const
 {
     return m_settings->notificationsInhibitedByApplication()
-            || (m_settings->notificationsInhibitedUntil().isValid() && m_settings->notificationsInhibitedUntil() > QDateTime::currentDateTimeUtc());
+        || (m_settings->notificationsInhibitedUntil().isValid() && m_settings->notificationsInhibitedUntil() > QDateTime::currentDateTimeUtc());
 }
 
 void Backend::setupUnity()
 {
     auto sessionBus = QDBusConnection::sessionBus();
 
-    if (!sessionBus.connect({}, {}, QStringLiteral("com.canonical.Unity.LauncherEntry"),
-                            QStringLiteral("Update"), this, SLOT(update(QString,QMap<QString,QVariant>)))) {
+    if (!sessionBus.connect({},
+                            {},
+                            QStringLiteral("com.canonical.Unity.LauncherEntry"),
+                            QStringLiteral("Update"),
+                            this,
+                            SLOT(update(QString, QMap<QString, QVariant>)))) {
         qWarning() << "failed to register Update signal";
         return;
     }
@@ -117,9 +121,7 @@ bool Backend::hasLauncher(const QString &storageId) const
 
 int Backend::count(const QString &uri) const
 {
-    if (!m_settings->badgesInTaskManager()
-            || doNotDisturbMode()
-            || m_badgeBlacklist.contains(uri)) {
+    if (!m_settings->badgesInTaskManager() || doNotDisturbMode() || m_badgeBlacklist.contains(uri)) {
         return 0;
     }
     return m_launchers.value(uri).count;
@@ -127,9 +129,7 @@ int Backend::count(const QString &uri) const
 
 bool Backend::countVisible(const QString &uri) const
 {
-    if (!m_settings->badgesInTaskManager()
-            || doNotDisturbMode()
-            || m_badgeBlacklist.contains(uri)) {
+    if (!m_settings->badgesInTaskManager() || doNotDisturbMode() || m_badgeBlacklist.contains(uri)) {
         return false;
     }
     return m_launchers.value(uri).countVisible;
@@ -215,7 +215,12 @@ void Backend::update(const QString &uri, const QMap<QString, QVariant> &properti
     }
 
     updateLauncherProperty(storageId, properties, QStringLiteral("count"), &foundEntry->count, &Backend::count, &Backend::countChanged);
-    updateLauncherProperty(storageId, properties, QStringLiteral("count-visible"), &foundEntry->countVisible, &Backend::countVisible, &Backend::countVisibleChanged);
+    updateLauncherProperty(storageId,
+                           properties,
+                           QStringLiteral("count-visible"),
+                           &foundEntry->countVisible,
+                           &Backend::countVisible,
+                           &Backend::countVisibleChanged);
 
     // the API gives us progress as 0..1 double but we'll use percent to avoid unnecessary
     // changes when it just changed a fraction of a percent, hence not using our fancy updateLauncherProperty method
@@ -232,7 +237,12 @@ void Backend::update(const QString &uri, const QMap<QString, QVariant> &properti
         }
     }
 
-    updateLauncherProperty(storageId, properties, QStringLiteral("progress-visible"), &foundEntry->progressVisible, &Backend::progressVisible, &Backend::progressVisibleChanged);
+    updateLauncherProperty(storageId,
+                           properties,
+                           QStringLiteral("progress-visible"),
+                           &foundEntry->progressVisible,
+                           &Backend::progressVisible,
+                           &Backend::progressVisibleChanged);
     updateLauncherProperty(storageId, properties, QStringLiteral("urgent"), &foundEntry->urgent, &Backend::urgent, &Backend::urgentChanged);
 }
 

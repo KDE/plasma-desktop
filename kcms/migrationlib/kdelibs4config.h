@@ -21,8 +21,8 @@
 #ifndef KDELIBS4CONFIG_H
 #define KDELIBS4CONFIG_H
 
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
 #include <Kdelibs4Migration>
 
 class Kdelibs4SharedConfig
@@ -39,7 +39,6 @@ public:
         simpleConfigGroup.copyTo(&kde4ConfigGroup);
         kde4ConfigGroup.sync();
     }
-
 };
 
 #endif

@@ -11,7 +11,7 @@
 
 class ZypperRPMJob : public AbstractJob
 {
-Q_OBJECT
+    Q_OBJECT
 
 public:
     void executeOperation(const QFileInfo &fileInfo, const QString &mimeType, bool install) override;

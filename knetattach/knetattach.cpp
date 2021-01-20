@@ -17,45 +17,45 @@
    Boston, MA 02110-1301, USA.
  */
 
-
 #include "knetattach.h"
 
 #include <QVariant>
 
-#include <KIO/StatJob>
-#include <KJobWidgets>
-#include <KMessageBox>
-#include <QIcon>
+#include <KCharsets>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KDirNotify>
-#include <KCharsets>
+#include <KIO/StatJob>
+#include <KJobWidgets>
+#include <KMessageBox>
 #include <KRun>
 #include <QDesktopServices>
+#include <QIcon>
 #include <QTextCodec>
 
-KNetAttach::KNetAttach( QWidget* parent )
-    : QWizard( parent ), Ui_KNetAttach()
+KNetAttach::KNetAttach(QWidget *parent)
+    : QWizard(parent)
+    , Ui_KNetAttach()
 {
-    setupUi( this );
+    setupUi(this);
 
     connect(_recent, &QAbstractButton::toggled, _recentConnectionName, &QWidget::setEnabled);
     connect(_connectionName, &QLineEdit::textChanged, this, &KNetAttach::updateParametersPageStatus);
     connect(_user, &QLineEdit::textChanged, this, &KNetAttach::updateParametersPageStatus);
     connect(_host, &QLineEdit::textChanged, this, &KNetAttach::updateParametersPageStatus);
-    connect(_port, (void (QSpinBox::*)(int))&QSpinBox::valueChanged, this, &KNetAttach::updateParametersPageStatus);
+    connect(_port, (void (QSpinBox::*)(int)) & QSpinBox::valueChanged, this, &KNetAttach::updateParametersPageStatus);
     connect(_path, &QLineEdit::textChanged, this, &KNetAttach::updateParametersPageStatus);
     connect(_useEncryption, &QAbstractButton::toggled, this, &KNetAttach::updatePort);
     connect(_createIcon, &QAbstractButton::toggled, this, &KNetAttach::updateFinishButtonText);
-    connect( this, &QWizard::helpRequested, this, &KNetAttach::slotHelpClicked );
-    connect( this, &QWizard::currentIdChanged, this, &KNetAttach::slotPageChanged );
+    connect(this, &QWizard::helpRequested, this, &KNetAttach::slotHelpClicked);
+    connect(this, &QWizard::currentIdChanged, this, &KNetAttach::slotPageChanged);
     setWindowIcon(QIcon::fromTheme(QStringLiteral("knetattach")));
     setOption(HaveHelpButton, true);
-    //setResizeMode(Fixed); FIXME: make the wizard fixed-geometry
+    // setResizeMode(Fixed); FIXME: make the wizard fixed-geometry
     button(FinishButton)->setEnabled(false);
-    KConfig crecent( QStringLiteral("krecentconnections"), KConfig::NoGlobals  );
+    KConfig crecent(QStringLiteral("krecentconnections"), KConfig::NoGlobals);
     KConfigGroup recent(&crecent, "General");
-    QStringList idx = recent.readEntry("Index",QStringList());
+    QStringList idx = recent.readEntry("Index", QStringList());
     if (idx.isEmpty()) {
         _recent->setEnabled(false);
         if (_recent->isChecked()) {
@@ -71,7 +71,7 @@ KNetAttach::KNetAttach( QWidget* parent )
     _encoding->setCurrentIndex(codecForLocaleIdx != -1 ? codecForLocaleIdx : 0);
 }
 
-void KNetAttach::slotPageChanged( int )
+void KNetAttach::slotPageChanged(int)
 {
     updateFinishButtonText(true);
 }
@@ -81,18 +81,25 @@ void KNetAttach::slotHelpClicked()
     QDesktopServices::openUrl(QUrl(QStringLiteral("help:/")));
 }
 
-void KNetAttach::setInformationText( const QString &type )
+void KNetAttach::setInformationText(const QString &type)
 {
     QString text;
 
-    if (type==QLatin1String("WebFolder")) {
-        text = i18n("Enter a name for this <i>WebFolder</i> as well as a server address, port and folder path to use and press the <b>Save & Connect</b> button.");
-    } else if (type==QLatin1String("Fish")) {
-        text = i18n("Enter a name for this <i>Secure shell connection</i> as well as a server address, port and folder path to use and press the <b>Save & Connect</b> button.");
-    } else if (type==QLatin1String("FTP")) {
-        text = i18n("Enter a name for this <i>File Transfer Protocol connection</i> as well as a server address and folder path to use and press the <b>Save & Connect</b> button.");
-    } else if (type==QLatin1String("SMB")) {
-        text = i18n("Enter a name for this <i>Microsoft Windows network drive</i> as well as a server address and folder path to use and press the <b>Save & Connect</b> button.");
+    if (type == QLatin1String("WebFolder")) {
+        text =
+            i18n("Enter a name for this <i>WebFolder</i> as well as a server address, port and folder path to use and press the <b>Save & Connect</b> button.");
+    } else if (type == QLatin1String("Fish")) {
+        text = i18n(
+            "Enter a name for this <i>Secure shell connection</i> as well as a server address, port and folder path to use and press the <b>Save & Connect</b> "
+            "button.");
+    } else if (type == QLatin1String("FTP")) {
+        text = i18n(
+            "Enter a name for this <i>File Transfer Protocol connection</i> as well as a server address and folder path to use and press the <b>Save & "
+            "Connect</b> button.");
+    } else if (type == QLatin1String("SMB")) {
+        text = i18n(
+            "Enter a name for this <i>Microsoft Windows network drive</i> as well as a server address and folder path to use and press the <b>Save & "
+            "Connect</b> button.");
     }
 
     _informationText->setText(text);
@@ -100,15 +107,12 @@ void KNetAttach::setInformationText( const QString &type )
 
 void KNetAttach::updateParametersPageStatus()
 {
-    button(FinishButton)->setEnabled(
-                !_host->text().trimmed().isEmpty() &&
-                !_path->text().trimmed().isEmpty() &&
-                !_connectionName->text().trimmed().isEmpty());
+    button(FinishButton)->setEnabled(!_host->text().trimmed().isEmpty() && !_path->text().trimmed().isEmpty() && !_connectionName->text().trimmed().isEmpty());
 }
 
 bool KNetAttach::validateCurrentPage()
 {
-    if (currentPage() == _folderType){
+    if (currentPage() == _folderType) {
         _host->setFocus();
         _connectionName->setFocus();
 
@@ -130,11 +134,11 @@ bool KNetAttach::validateCurrentPage()
         } else if (_smb->isChecked()) {
             setInformationText(QStringLiteral("SMB"));
             updateForProtocol(QStringLiteral("SMB"));
-        } else { //if (_recent->isChecked()) {
-            KConfig recent( QStringLiteral("krecentconnections"), KConfig::NoGlobals );
+        } else { // if (_recent->isChecked()) {
+            KConfig recent(QStringLiteral("krecentconnections"), KConfig::NoGlobals);
             if (!recent.hasGroup(_recentConnectionName->currentText())) {
                 KConfigGroup group = recent.group("General");
-                QStringList idx = group.readEntry("Index",QStringList());
+                QStringList idx = group.readEntry("Index", QStringList());
                 if (idx.isEmpty()) {
                     _recent->setEnabled(false);
                     if (_recent->isChecked()) {
@@ -157,7 +161,7 @@ bool KNetAttach::validateCurrentPage()
             _user->setText(u.userName());
             _path->setText(u.path());
             if (group.hasKey("Port")) {
-                _port->setValue(group.readEntry("Port",0));
+                _port->setValue(group.readEntry("Port", 0));
             } else {
                 _port->setValue(u.port());
             }
@@ -166,7 +170,7 @@ bool KNetAttach::validateCurrentPage()
         }
         updateParametersPageStatus();
 
-    }else{
+    } else {
         button(BackButton)->setEnabled(false);
         button(FinishButton)->setEnabled(false);
         QUrl url;
@@ -226,7 +230,7 @@ bool KNetAttach::validateCurrentPage()
         if (_createIcon->isChecked()) {
             QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/remoteview/");
             path += name + QStringLiteral(".desktop");
-            KConfig _desktopFile( path, KConfig::SimpleConfig );
+            KConfig _desktopFile(path, KConfig::SimpleConfig);
             KConfigGroup desktopFile(&_desktopFile, "Desktop Entry");
             desktopFile.writeEntry("Icon", "folder-remote");
             desktopFile.writeEntry("Name", name);
@@ -234,13 +238,13 @@ bool KNetAttach::validateCurrentPage()
             desktopFile.writeEntry("URL", url.toDisplayString());
             desktopFile.writeEntry("Charset", url.queryItemValue("charset"));
             desktopFile.sync();
-            org::kde::KDirNotify::emitFilesAdded( QUrl(QStringLiteral("remote:/")) );
+            org::kde::KDirNotify::emitFilesAdded(QUrl(QStringLiteral("remote:/")));
         }
 
         if (!name.isEmpty()) {
             KConfig _recent(QStringLiteral("krecentconnections"), KConfig::NoGlobals);
             KConfigGroup recent(&_recent, "General");
-            QStringList idx = recent.readEntry("Index",QStringList());
+            QStringList idx = recent.readEntry("Index", QStringList());
             _recent.deleteGroup(name); // erase anything stale
             if (idx.contains(name)) {
                 idx.removeAll(name);
@@ -256,7 +260,7 @@ bool KNetAttach::validateCurrentPage()
                 _recent.deleteGroup(last);
                 recent.writeEntry("Index", idx);
             }
-            recent = KConfigGroup(&_recent,name);
+            recent = KConfigGroup(&_recent, name);
             recent.writeEntry("URL", url.toDisplayString());
             if (_type == QLatin1String("WebFolder") || _type == QLatin1String("Fish") || _type == QLatin1String("FTP")) {
                 recent.writeEntry("Port", _port->value());
@@ -267,7 +271,6 @@ bool KNetAttach::validateCurrentPage()
     }
     return true;
 }
-
 
 void KNetAttach::updatePort(bool encryption)
 {
@@ -280,16 +283,14 @@ void KNetAttach::updatePort(bool encryption)
     }
 }
 
-
-bool KNetAttach::doConnectionTest(const QUrl& url)
+bool KNetAttach::doConnectionTest(const QUrl &url)
 {
     KIO::StatJob *job = KIO::stat(url);
     KJobWidgets::setWindow(job, this);
     return job->exec();
 }
 
-
-bool KNetAttach::updateForProtocol(const QString& protocol)
+bool KNetAttach::updateForProtocol(const QString &protocol)
 {
     _type = protocol;
     if (protocol == QLatin1String("WebFolder")) {
@@ -338,7 +339,6 @@ bool KNetAttach::updateForProtocol(const QString& protocol)
     }
     return true;
 }
-
 
 void KNetAttach::updateFinishButtonText(bool save)
 {

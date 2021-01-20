@@ -20,23 +20,23 @@
 
 #include "kcm.h"
 
-#include <KPluginFactory>
 #include <KAboutData>
 #include <KLocalizedString>
+#include <KPluginFactory>
 
-#include <QStandardPaths>
+#include <QDir>
 #include <QProcess>
 #include <QStandardItemModel>
-#include <QDir>
+#include <QStandardPaths>
 
 #include <KPackage/PackageLoader>
 
-#include "splashscreensettings.h"
 #include "splashscreendata.h"
+#include "splashscreensettings.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMSplashScreenFactory, "kcm_splashscreen.json", registerPlugin<KCMSplashScreen>();registerPlugin<SplashScreenData>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMSplashScreenFactory, "kcm_splashscreen.json", registerPlugin<KCMSplashScreen>(); registerPlugin<SplashScreenData>();)
 
-KCMSplashScreen::KCMSplashScreen(QObject* parent, const QVariantList& args)
+KCMSplashScreen::KCMSplashScreen(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
     , m_data(new SplashScreenData(this))
     , m_model(new QStandardItemModel(this))
@@ -44,8 +44,7 @@ KCMSplashScreen::KCMSplashScreen(QObject* parent, const QVariantList& args)
     qmlRegisterType<SplashScreenSettings>();
     qmlRegisterType<QStandardItemModel>();
 
-    KAboutData* about = new KAboutData(QStringLiteral("kcm_splashscreen"), i18n("Splash Screen"),
-                                       QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_splashscreen"), i18n("Splash Screen"), QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
     setAboutData(about);
     setButtons(Help | Apply | Default);
@@ -104,7 +103,7 @@ void KCMSplashScreen::loadModel()
 
     const QList<KPackage::Package> pkgs = availablePackages(QStringLiteral("splashmainscript"));
     for (const KPackage::Package &pkg : pkgs) {
-        QStandardItem* row = new QStandardItem(pkg.metadata().name());
+        QStandardItem *row = new QStandardItem(pkg.metadata().name());
         row->setData(pkg.metadata().pluginId(), PluginNameRole);
         row->setData(pkg.filePath("previews", QStringLiteral("splash.png")), ScreenshotRole);
         row->setData(pkg.metadata().description(), DescriptionRole);
@@ -112,7 +111,7 @@ void KCMSplashScreen::loadModel()
     }
     m_model->sort(0 /*column*/);
 
-    QStandardItem* row = new QStandardItem(i18n("None"));
+    QStandardItem *row = new QStandardItem(i18n("None"));
     row->setData("None", PluginNameRole);
     row->setData(i18n("No splash screen will be shown"), DescriptionRole);
     m_model->insertRow(0, row);
@@ -156,8 +155,7 @@ void KCMSplashScreen::test(const QString &plugin)
         Q_UNUSED(error)
         emit testingFailed();
     });
-    connect(m_testProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this,
-        [this](int exitCode, QProcess::ExitStatus exitStatus) {
+    connect(m_testProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this](int exitCode, QProcess::ExitStatus exitStatus) {
         Q_UNUSED(exitCode)
         Q_UNUSED(exitStatus)
 

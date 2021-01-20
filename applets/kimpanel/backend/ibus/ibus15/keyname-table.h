@@ -19,7 +19,7 @@
  *
  *  Date: Thu Nov  2 17:26:30 2006
  *
- * Do not edit.   
+ * Do not edit.
  */
 // clang-format off
 static const char keynames[] =

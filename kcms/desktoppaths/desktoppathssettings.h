@@ -53,7 +53,6 @@ public:
     void setVideosLocation(const QUrl &url);
     QUrl defaultVideosLocation() const;
 
-
 Q_SIGNALS:
     void widgetChanged();
 
@@ -65,4 +64,3 @@ private:
 };
 
 #endif
-

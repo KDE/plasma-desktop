@@ -13,7 +13,7 @@
 
 class PackageKitJob : public AbstractJob
 {
-Q_OBJECT
+    Q_OBJECT
 
 public:
     void executeOperation(const QFileInfo &fileInfo, const QString &mimeType, bool install) override;
@@ -30,4 +30,4 @@ private Q_SLOTS:
     void transactionFinished(PackageKit::Transaction::Exit status, uint);
 };
 
-#endif //PACKAGEKITJOB_H
+#endif // PACKAGEKITJOB_H

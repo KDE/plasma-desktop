@@ -32,10 +32,12 @@ class FilterProxyModel;
 
 class OrgKdeKded5Interface;
 
-namespace org {
-  namespace kde {
-    using kded5 = ::OrgKdeKded5Interface;
-  }
+namespace org
+{
+namespace kde
+{
+using kded5 = ::OrgKdeKded5Interface;
+}
 }
 
 class KDEDConfig : public KQuickAddons::ConfigModule
@@ -48,8 +50,10 @@ class KDEDConfig : public KQuickAddons::ConfigModule
     Q_PROPERTY(bool kdedRunning READ kdedRunning NOTIFY kdedRunningChanged)
 
 public:
-    explicit KDEDConfig(QObject* parent, const QVariantList& foo = QVariantList());
-	~KDEDConfig() override {}
+    explicit KDEDConfig(QObject *parent, const QVariantList &foo = QVariantList());
+    ~KDEDConfig() override
+    {
+    }
 
     enum ModuleType {
         UnknownType = -1,
@@ -100,8 +104,6 @@ private:
 
     QString m_lastStartedModule;
     QStringList m_runningModulesBeforeReconfigure;
-
 };
 
 #endif // KCMKDED_H
-

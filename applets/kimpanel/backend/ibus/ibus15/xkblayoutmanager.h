@@ -20,8 +20,8 @@
 #ifndef XKBLAYOUTMANAGER_H
 #define XKBLAYOUTMANAGER_H
 
-#include <QString>
 #include <QSet>
+#include <QString>
 #include <ibus.h>
 
 class XkbLayoutManager
@@ -29,11 +29,18 @@ class XkbLayoutManager
 public:
     XkbLayoutManager();
     void setUseXkbModmap(bool use);
-    void setLayout(IBusEngineDesc* desc);
-    void setLatinLayouts(const gchar** variants, gsize length);
+    void setLayout(IBusEngineDesc *desc);
+    void setLatinLayouts(const gchar **variants, gsize length);
     void getLayout();
-    const QString& defaultLayout() { return m_defaultLayout; }
-    const QString& defaultVariant() { return m_defaultVariant; }
+    const QString &defaultLayout()
+    {
+        return m_defaultLayout;
+    }
+    const QString &defaultVariant()
+    {
+        return m_defaultVariant;
+    }
+
 private:
     QSet<QString> m_latinLayouts;
     QString m_defaultLayout;

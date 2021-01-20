@@ -24,9 +24,9 @@ Free Software Foundation, Inc.,
 
 #include <activityinfo.h>
 #include <virtualdesktopinfo.h>
+#include <waylandtasksmodel.h>
 #include <windowtasksmodel.h>
 #include <xwindowtasksmodel.h>
-#include <waylandtasksmodel.h>
 
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -93,50 +93,43 @@ PagerModel::Private::Private(PagerModel *q)
         activityInfo = new ActivityInfo();
     }
 
-    QObject::connect(activityInfo, &ActivityInfo::numberOfRunningActivitiesChanged,
-        q, &PagerModel::shouldShowPagerChanged);
+    QObject::connect(activityInfo, &ActivityInfo::numberOfRunningActivitiesChanged, q, &PagerModel::shouldShowPagerChanged);
 
     if (!virtualDesktopInfo) {
         virtualDesktopInfo = new VirtualDesktopInfo();
     }
 
-    QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::numberOfDesktopsChanged,
-        q, &PagerModel::shouldShowPagerChanged);
+    QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::numberOfDesktopsChanged, q, &PagerModel::shouldShowPagerChanged);
 
-    QObject::connect(activityInfo, &ActivityInfo::currentActivityChanged, q,
-        [this]() {
-            if (pagerType == VirtualDesktops && windowModels.count()) {
-                for (auto windowModel : qAsConst(windowModels)) {
-                    windowModel->setActivity(activityInfo->currentActivity());
-                }
+    QObject::connect(activityInfo, &ActivityInfo::currentActivityChanged, q, [this]() {
+        if (pagerType == VirtualDesktops && windowModels.count()) {
+            for (auto windowModel : qAsConst(windowModels)) {
+                windowModel->setActivity(activityInfo->currentActivity());
             }
         }
-    );
+    });
 
-    QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::desktopLayoutRowsChanged,
-        q, &PagerModel::layoutRowsChanged);
+    QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::desktopLayoutRowsChanged, q, &PagerModel::layoutRowsChanged);
 
-    auto configureScreen = [q](QScreen* screen) {
+    auto configureScreen = [q](QScreen *screen) {
         QObject::connect(screen, &QScreen::geometryChanged, q, &PagerModel::pagerItemSizeChanged);
         Q_EMIT q->pagerItemSizeChanged();
     };
     const auto screens = qGuiApp->screens();
-    for (QScreen* screen : screens) {
+    for (QScreen *screen : screens) {
         configureScreen(screen);
     }
     QObject::connect(qGuiApp, &QGuiApplication::screenAdded, q, configureScreen);
     QObject::connect(qGuiApp, &QGuiApplication::screenRemoved, q, &PagerModel::pagerItemSizeChanged);
 
 #if HAVE_X11
-    QObject::connect(KWindowSystem::self(), &KWindowSystem::stackingOrderChanged, q,
-        [this]() {
-            cachedStackingOrder = KWindowSystem::stackingOrder();
+    QObject::connect(KWindowSystem::self(), &KWindowSystem::stackingOrderChanged, q, [this]() {
+        cachedStackingOrder = KWindowSystem::stackingOrder();
 
-            for (auto windowModel : qAsConst(windowModels)) {
-                windowModel->refreshStackingOrder();
-            }
+        for (auto windowModel : qAsConst(windowModels)) {
+            windowModel->refreshStackingOrder();
         }
-    );
+    });
 #endif
 }
 
@@ -156,45 +149,38 @@ void PagerModel::Private::refreshDataSource()
 {
     if (pagerType == VirtualDesktops) {
         QObject::disconnect(virtualDesktopNumberConn);
-        virtualDesktopNumberConn = QObject::connect(virtualDesktopInfo,
-            &VirtualDesktopInfo::numberOfDesktopsChanged,
-            q, [this]() { q->refresh(); });
+        virtualDesktopNumberConn = QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::numberOfDesktopsChanged, q, [this]() {
+            q->refresh();
+        });
 
         QObject::disconnect(virtualDesktopNamesConn);
-        virtualDesktopNamesConn = QObject::connect(virtualDesktopInfo,
-            &VirtualDesktopInfo::desktopNamesChanged,
-            q, [this]() {
-                if (q->rowCount()) {
-                    emit q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0), QVector<int>{Qt::DisplayRole});
-                }
+        virtualDesktopNamesConn = QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::desktopNamesChanged, q, [this]() {
+            if (q->rowCount()) {
+                emit q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0), QVector<int>{Qt::DisplayRole});
             }
-        );
+        });
 
         QObject::disconnect(activityNumberConn);
         QObject::disconnect(activityNamesConn);
 
-        QObject::disconnect(activityInfo, &ActivityInfo::currentActivityChanged,
-            q, &PagerModel::currentPageChanged);
-        QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::currentDesktopChanged,
-            q, &PagerModel::currentPageChanged, Qt::UniqueConnection);
+        QObject::disconnect(activityInfo, &ActivityInfo::currentActivityChanged, q, &PagerModel::currentPageChanged);
+        QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::currentDesktopChanged, q, &PagerModel::currentPageChanged, Qt::UniqueConnection);
     } else {
         QObject::disconnect(activityNumberConn);
-        activityNumberConn = QObject::connect(activityInfo,
-            &ActivityInfo::numberOfRunningActivitiesChanged,
-            q, [this]() { q->refresh(); });
+        activityNumberConn = QObject::connect(activityInfo, &ActivityInfo::numberOfRunningActivitiesChanged, q, [this]() {
+            q->refresh();
+        });
 
         QObject::disconnect(activityNamesConn);
-        activityNamesConn = QObject::connect(activityInfo,
-            &ActivityInfo::namesOfRunningActivitiesChanged,
-            q, [this]() { q->refresh(); });
+        activityNamesConn = QObject::connect(activityInfo, &ActivityInfo::namesOfRunningActivitiesChanged, q, [this]() {
+            q->refresh();
+        });
 
         QObject::disconnect(virtualDesktopNumberConn);
         QObject::disconnect(virtualDesktopNamesConn);
 
-        QObject::disconnect(virtualDesktopInfo, &VirtualDesktopInfo::currentDesktopChanged,
-            q, &PagerModel::currentPageChanged);
-        QObject::connect(activityInfo, &ActivityInfo::currentActivityChanged,
-            q, &PagerModel::currentPageChanged, Qt::UniqueConnection);
+        QObject::disconnect(virtualDesktopInfo, &VirtualDesktopInfo::currentDesktopChanged, q, &PagerModel::currentPageChanged);
+        QObject::connect(activityInfo, &ActivityInfo::currentActivityChanged, q, &PagerModel::currentPageChanged, Qt::UniqueConnection);
     }
 
     emit q->currentPageChanged();
@@ -217,9 +203,9 @@ QHash<int, QByteArray> PagerModel::roleNames() const
 
     QMetaEnum e = metaObject()->enumerator(metaObject()->indexOfEnumerator("AdditionalRoles"));
 
-     for (int i = 0; i < e.keyCount(); ++i) {
-         roles.insert(e.value(i), e.key(i));
-     }
+    for (int i = 0; i < e.keyCount(); ++i) {
+        roles.insert(e.value(i), e.key(i));
+    }
 
     return roles;
 }
@@ -303,8 +289,7 @@ void PagerModel::setEnabled(bool enabled)
 
 bool PagerModel::shouldShowPager() const
 {
-    return (d->pagerType == VirtualDesktops) ? d->virtualDesktopInfo->numberOfDesktops() > 1
-        : d->activityInfo->numberOfRunningActivities() > 1;
+    return (d->pagerType == VirtualDesktops) ? d->virtualDesktopInfo->numberOfDesktops() > 1 : d->activityInfo->numberOfRunningActivities() > 1;
 }
 
 bool PagerModel::showDesktop() const
@@ -372,8 +357,7 @@ int PagerModel::currentPage() const
 
 int PagerModel::layoutRows() const
 {
-    return qBound(1, d->virtualDesktopInfo->desktopLayoutRows(),
-        d->virtualDesktopInfo->numberOfDesktops());
+    return qBound(1, d->virtualDesktopInfo->desktopLayoutRows(), d->virtualDesktopInfo->numberOfDesktops());
 }
 
 QSize PagerModel::pagerItemSize() const
@@ -410,9 +394,7 @@ void PagerModel::refresh()
     d->refreshDataSource();
 
     int modelCount = d->windowModels.count();
-    const int modelsNeeded = ((d->pagerType == VirtualDesktops)
-        ? d->virtualDesktopInfo->numberOfDesktops()
-        : d->activityInfo->numberOfRunningActivities());
+    const int modelsNeeded = ((d->pagerType == VirtualDesktops) ? d->virtualDesktopInfo->numberOfDesktops() : d->activityInfo->numberOfRunningActivities());
 
     if (modelCount > modelsNeeded) {
         while (modelCount != modelsNeeded) {
@@ -467,8 +449,13 @@ void PagerModel::refresh()
     emit countChanged();
 }
 
-void PagerModel::moveWindow(int window, double x, double y, const QVariant &targetItemId, const QVariant &sourceItemId,
-    qreal widthScaleFactor, qreal heightScaleFactor)
+void PagerModel::moveWindow(int window,
+                            double x,
+                            double y,
+                            const QVariant &targetItemId,
+                            const QVariant &sourceItemId,
+                            qreal widthScaleFactor,
+                            qreal heightScaleFactor)
 {
 #if HAVE_X11
     if (KWindowSystem::isPlatformX11()) {
@@ -495,7 +482,7 @@ void PagerModel::moveWindow(int window, double x, double y, const QVariant &targ
 
                 if (targetItemId.toInt() < runningActivities.length()) {
                     const QString &newActivity = targetItemId.toString();
-                    QStringList activities =  windowInfo.activities();
+                    QStringList activities = windowInfo.activities();
 
                     if (!activities.contains(newActivity)) {
                         activities.removeOne(sourceItemId.toString());
@@ -507,8 +494,7 @@ void PagerModel::moveWindow(int window, double x, double y, const QVariant &targ
 
             // Only move the window if it is not full screen and if it is kept within the same desktop.
             // Moving when dropping between desktop is too annoying due to the small drop area.
-            if (!(windowInfo.state() & NET::FullScreen) &&
-                (targetItemId == sourceItemId || windowInfo.onAllDesktops())) {
+            if (!(windowInfo.state() & NET::FullScreen) && (targetItemId == sourceItemId || windowInfo.onAllDesktops())) {
                 const QPoint &d = dest.toPoint();
                 info.moveResizeWindowRequest(windowId, flags, d.x(), d.y(), 0, 0);
             }
@@ -548,7 +534,7 @@ void PagerModel::moveWindow(int window, double x, double y, const QVariant &targ
                 }
             }
         } else {
-            //FIXME TODO: Activities support.
+            // FIXME TODO: Activities support.
         }
     }
 }
@@ -558,9 +544,9 @@ void PagerModel::changePage(int page)
     if (currentPage() == page) {
         if (d->showDesktop) {
             QDBusConnection::sessionBus().asyncCall(QDBusMessage::createMethodCall(QLatin1String("org.kde.plasmashell"),
-                QLatin1String("/PlasmaShell"),
-                QLatin1String("org.kde.PlasmaShell"),
-                QLatin1String("toggleDashboard")));
+                                                                                   QLatin1String("/PlasmaShell"),
+                                                                                   QLatin1String("org.kde.PlasmaShell"),
+                                                                                   QLatin1String("toggleDashboard")));
         }
     } else {
         if (d->pagerType == VirtualDesktops) {

@@ -29,12 +29,12 @@
 #include <KAboutData>
 #include <KConfig>
 #include <KConfigGroup>
-#include <kglobalaccel_interface.h>
 #include <KGlobalShortcutInfo>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KOpenWithDialog>
 #include <KPluginFactory>
+#include <kglobalaccel_interface.h>
 
 #include "basemodel.h"
 #include "filteredmodel.h"
@@ -57,17 +57,18 @@ KCMKeys::KCMKeys(QObject *parent, const QVariantList &args)
     qDBusRegisterMetaType<KGlobalShortcutInfo>();
     qDBusRegisterMetaType<QList<KGlobalShortcutInfo>>();
     qDBusRegisterMetaType<QList<QStringList>>();
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_keys"), i18n("Shortcuts"),
-        QStringLiteral("2.0"), QString(), KAboutLicense::GPL);
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_keys"), i18n("Shortcuts"), QStringLiteral("2.0"), QString(), KAboutLicense::GPL);
     about->addAuthor(i18n("David Redondo"), QString(), QStringLiteral("kde@david-redondo.de"));
     setAboutData(about);
-    m_globalAccelInterface = new KGlobalAccelInterface(QStringLiteral("org.kde.kglobalaccel")
-         , QStringLiteral("/kglobalaccel"), QDBusConnection::sessionBus(), this);
+    m_globalAccelInterface = new KGlobalAccelInterface(QStringLiteral("org.kde.kglobalaccel"), //
+                                                       QStringLiteral("/kglobalaccel"),
+                                                       QDBusConnection::sessionBus(),
+                                                       this);
     if (!m_globalAccelInterface->isValid()) {
         setError(i18n("Failed to communicate with global shortcuts daemon"));
         qCCritical(KCMKEYS) << "Interface is not valid";
         if (m_globalAccelInterface->lastError().isValid()) {
-           qCCritical(KCMKEYS) <<  m_globalAccelInterface->lastError().name() << m_globalAccelInterface->lastError().message();
+            qCCritical(KCMKEYS) << m_globalAccelInterface->lastError().name() << m_globalAccelInterface->lastError().message();
         }
     }
     m_globalAccelModel = new GlobalAccelModel(m_globalAccelInterface, this);
@@ -77,7 +78,6 @@ KCMKeys::KCMKeys(QObject *parent, const QVariantList &args)
     m_shortcutsModel->addSourceModel(m_standardShortcutsModel);
     m_filteredModel = new FilteredShortcutsModel(this);
     m_filteredModel->setSourceModel(m_shortcutsModel);
-
 
     connect(m_shortcutsModel, &QAbstractItemModel::dataChanged, this, [this] {
         setNeedsSave(m_globalAccelModel->needsSave() || m_standardShortcutsModel->needsSave());
@@ -109,12 +109,12 @@ void KCMKeys::defaults()
     m_standardShortcutsModel->defaults();
 }
 
-ShortcutsModel* KCMKeys::shortcutsModel() const
+ShortcutsModel *KCMKeys::shortcutsModel() const
 {
     return m_shortcutsModel;
 }
 
-FilteredShortcutsModel* KCMKeys::filteredModel() const
+FilteredShortcutsModel *KCMKeys::filteredModel() const
 {
     return m_filteredModel;
 }
@@ -127,7 +127,7 @@ void KCMKeys::setError(const QString &errorMessage)
 
 QString KCMKeys::lastError() const
 {
-  return m_lastError;
+    return m_lastError;
 }
 
 void KCMKeys::writeScheme(const QUrl &url)
@@ -139,7 +139,7 @@ void KCMKeys::writeScheme(const QUrl &url)
     file.sync();
 }
 
-void KCMKeys::loadScheme(const QUrl &url) 
+void KCMKeys::loadScheme(const QUrl &url)
 {
     qCDebug(KCMKEYS) << "Loading scheme" << url.toLocalFile();
     KConfig file(url.toLocalFile(), KConfig::SimpleConfig);
@@ -150,8 +150,7 @@ void KCMKeys::loadScheme(const QUrl &url)
 QVariantList KCMKeys::defaultSchemes() const
 {
     QVariantList schemes;
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
-                            QStringLiteral("kcmkeys"), QStandardPaths::LocateDirectory);
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kcmkeys"), QStandardPaths::LocateDirectory);
     for (const QString &dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.kksrc"));
         for (const QString &file : fileNames) {
@@ -174,7 +173,7 @@ void KCMKeys::addApplication(QQuickItem *ctx)
     }
     dialog->hideRunInTerminal();
     dialog->open();
-    connect(dialog, &KOpenWithDialog::finished, this, [this, dialog] (int result) {
+    connect(dialog, &KOpenWithDialog::finished, this, [this, dialog](int result) {
         if (result == QDialog::Accepted && dialog->service()) {
             const KService::Ptr service = dialog->service();
             const QString desktopFileName = service->desktopEntryName() + ".desktop";
@@ -209,16 +208,15 @@ QModelIndex KCMKeys::conflictingIndex(const QKeySequence &keySequence)
             }
         }
     }
-    return  QModelIndex();
+    return QModelIndex();
 }
 
-void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index,
-        const QKeySequence &newSequence, const QKeySequence &oldSequence)
+void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index, const QKeySequence &newSequence, const QKeySequence &oldSequence)
 {
     qCDebug(KCMKEYS) << index << "wants" << newSequence << "instead of" << oldSequence;
     const QModelIndex conflict = conflictingIndex(newSequence);
     if (!conflict.isValid()) {
-        auto model = const_cast<BaseModel*>(static_cast<const BaseModel*>(index.model()));
+        auto model = const_cast<BaseModel *>(static_cast<const BaseModel *>(index.model()));
         if (!oldSequence.isEmpty()) {
             model->changeShortcut(index, oldSequence, newSequence);
         } else {
@@ -232,8 +230,12 @@ void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index,
     const QString actionName = conflict.data().toString();
     const QString componentName = conflict.parent().data().toString();
     const QString keysString = newSequence.toString(QKeySequence::NativeText);
-    const QString message = isStandardAction ? i18nc("%2 is the name of a category inside the 'Common Actions' section",
-        "Shortcut %1 is already assigned to the common %2 action '%3'.\nDo you want to reassign it?", keysString, componentName, actionName)
+    const QString message = isStandardAction
+        ? i18nc("%2 is the name of a category inside the 'Common Actions' section",
+                "Shortcut %1 is already assigned to the common %2 action '%3'.\nDo you want to reassign it?",
+                keysString,
+                componentName,
+                actionName)
         : i18n("Shortcut %1 is already assigned to action '%2' of %3.\nDo you want to reassign it?", keysString, actionName, componentName);
     const QString title = i18nc("@title:window", "Found conflict");
     auto dialog = new QDialog;
@@ -244,12 +246,18 @@ void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index,
     }
     dialog->setWindowModality(Qt::WindowModal);
     dialog->setAttribute(Qt::WA_DeleteOnClose);
-    KMessageBox::createKMessageBox(dialog, new QDialogButtonBox(QDialogButtonBox::Yes | QDialogButtonBox::No, dialog),
-        QMessageBox::Question, message, {}, QString(), nullptr, KMessageBox::NoExec);
+    KMessageBox::createKMessageBox(dialog,
+                                   new QDialogButtonBox(QDialogButtonBox::Yes | QDialogButtonBox::No, dialog),
+                                   QMessageBox::Question,
+                                   message,
+                                   {},
+                                   QString(),
+                                   nullptr,
+                                   KMessageBox::NoExec);
     dialog->show();
 
-    connect(dialog, &QDialog::finished, this, [index, conflict, newSequence, oldSequence] (int result)  {
-        auto model = const_cast<BaseModel*>(static_cast<const BaseModel*>(index.model()));
+    connect(dialog, &QDialog::finished, this, [index, conflict, newSequence, oldSequence](int result) {
+        auto model = const_cast<BaseModel *>(static_cast<const BaseModel *>(index.model()));
         if (result != QDialogButtonBox::Yes) {
             // Also emit if we are not changing anything, to force the frontend to update and be consistent
             // with the model. It is currently out of sync because it reflects the user input that
@@ -257,7 +265,7 @@ void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index,
             Q_EMIT model->dataChanged(index, index, {BaseModel::ActiveShortcutsRole, BaseModel::CustomShortcutsRole});
             return;
         }
-        const_cast<BaseModel*>(static_cast<const BaseModel*>(conflict.model()))->disableShortcut(conflict, newSequence);
+        const_cast<BaseModel *>(static_cast<const BaseModel *>(conflict.model()))->disableShortcut(conflict, newSequence);
         if (!oldSequence.isEmpty()) {
             model->changeShortcut(index, oldSequence, newSequence);
         } else {
@@ -265,6 +273,5 @@ void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index,
         }
     });
 }
-
 
 #include "kcm_keys.moc"

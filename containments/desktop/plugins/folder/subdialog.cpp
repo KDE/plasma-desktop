@@ -23,7 +23,8 @@
 #include <QGuiApplication>
 #include <QScreen>
 
-SubDialog::SubDialog(QQuickItem *parent) : PlasmaQuick::Dialog(parent)
+SubDialog::SubDialog(QQuickItem *parent)
+    : PlasmaQuick::Dialog(parent)
 {
 }
 
@@ -31,7 +32,7 @@ SubDialog::~SubDialog()
 {
 }
 
-QPoint SubDialog::popupPosition(QQuickItem* item, const QSize& size)
+QPoint SubDialog::popupPosition(QQuickItem *item, const QSize &size)
 {
     if (!item || !item->window()) {
         return QPoint(0, 0);
@@ -70,7 +71,7 @@ QRect SubDialog::availableScreenRectForItem(QQuickItem *item) const
 
     const QPoint globalPosition = item->window()->mapToGlobal(item->position().toPoint());
 
-    foreach(QScreen *s, QGuiApplication::screens()) {
+    foreach (QScreen *s, QGuiApplication::screens()) {
         if (s->geometry().contains(globalPosition)) {
             screen = s;
         }

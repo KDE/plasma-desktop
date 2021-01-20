@@ -27,20 +27,20 @@
 
 #include <libinput-properties.h>
 
-#include <QFile>
-#include <KLocalizedString>
 #include <KConfig>
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KLocalizedString>
+#include <KSharedConfig>
+#include <QFile>
 
 #include <updatelaunchenvjob.h>
 
 #include <X11/X.h>
-#include <X11/Xlib.h>
 #include <X11/Xatom.h>
-#include <X11/extensions/XInput2.h>
-#include <X11/extensions/XI.h>
+#include <X11/Xlib.h>
 #include <X11/Xutil.h>
+#include <X11/extensions/XI.h>
+#include <X11/extensions/XInput2.h>
 #ifdef HAVE_XCURSOR
 #include <X11/Xcursor/Xcursor.h>
 #include <X11/extensions/XInput.h>
@@ -51,18 +51,17 @@ X11Backend *X11Backend::implementation(QObject *parent)
     auto dpy = QX11Info::display();
     Atom testAtom = XInternAtom(dpy, LIBINPUT_PROP_ACCEL, True);
 
-    //There are multiple possible drivers
+    // There are multiple possible drivers
     if (testAtom) {
         qCDebug(KCM_MOUSE) << "Using libinput driver on X11.";
         return new X11LibinputBackend(parent);
-    }
-    else {
+    } else {
         qCDebug(KCM_MOUSE) << "Using evdev driver on X11.";
         return new X11EvdevBackend(parent);
     }
 }
 
-X11Backend::X11Backend(QObject* parent)
+X11Backend::X11Backend(QObject *parent)
     : InputBackend(parent)
 {
     m_platformX11 = QX11Info::isPlatformX11();
@@ -97,7 +96,7 @@ QString X11Backend::currentCursorTheme()
     return QFile::decodeName(name);
 }
 
-void X11Backend::applyCursorTheme(const QString& theme, int size)
+void X11Backend::applyCursorTheme(const QString &theme, int size)
 {
 #ifdef HAVE_XCURSOR
 

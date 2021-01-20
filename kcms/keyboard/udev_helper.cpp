@@ -70,16 +70,9 @@ void UdevDeviceNotifier::init()
 
 void UdevDeviceNotifier::socketActivated()
 {
-    static const char *keyboardDevice[] = {
-        "ID_INPUT_KEYBOARD",
-        "ID_INPUT_KEY"
-    };
+    static const char *keyboardDevice[] = {"ID_INPUT_KEYBOARD", "ID_INPUT_KEY"};
 
-    static const char *pointerDevice[] = {
-        "ID_INPUT_MOUSE",
-        "ID_INPUT_TOUCHPAD",
-        "ID_INPUT_TABLET"
-    };
+    static const char *pointerDevice[] = {"ID_INPUT_MOUSE", "ID_INPUT_TOUCHPAD", "ID_INPUT_TABLET"};
 
     struct udev_device *dev = udev_monitor_receive_device(m_monitor);
     if (!dev) {
@@ -130,4 +123,3 @@ void UdevDeviceNotifier::socketActivated()
 {
 }
 #endif
-

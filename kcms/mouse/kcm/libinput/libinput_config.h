@@ -31,7 +31,9 @@ class LibinputConfig : public ConfigPlugin
 
 public:
     explicit LibinputConfig(ConfigContainer *parent, InputBackend *backend);
-    virtual ~LibinputConfig() {}
+    virtual ~LibinputConfig()
+    {
+    }
 
     void load() override;
     void save() override;
@@ -40,7 +42,9 @@ public:
     QSize sizeHint() const override;
     QSize minimumSizeHint() const override;
 
-    void hideEvent(QHideEvent *) override {}
+    void hideEvent(QHideEvent *) override
+    {
+    }
 
 private Q_SLOTS:
     void onChange();

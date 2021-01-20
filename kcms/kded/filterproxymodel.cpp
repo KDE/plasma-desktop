@@ -22,9 +22,9 @@
 
 #include "modulesmodel.h"
 
-FilterProxyModel::FilterProxyModel(QObject *parent) : QSortFilterProxyModel(parent)
+FilterProxyModel::FilterProxyModel(QObject *parent)
+    : QSortFilterProxyModel(parent)
 {
-
 }
 
 FilterProxyModel::~FilterProxyModel() = default;
@@ -63,7 +63,7 @@ bool FilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &sourc
 
     if (!m_query.isEmpty()) {
         if (!idx.data(Qt::DisplayRole).toString().contains(m_query, Qt::CaseInsensitive)
-                && !idx.data(ModulesModel::ModuleNameRole).toString().contains(m_query, Qt::CaseInsensitive)) {
+            && !idx.data(ModulesModel::ModuleNameRole).toString().contains(m_query, Qt::CaseInsensitive)) {
             return false;
         }
     }

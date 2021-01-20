@@ -53,11 +53,13 @@ class KWinWaylandDevice : public QObject
 
     Q_PROPERTY(bool supportsPointerAccelerationProfileFlat READ supportsPointerAccelerationProfileFlat CONSTANT)
     Q_PROPERTY(bool defaultPointerAccelerationProfileFlat READ defaultPointerAccelerationProfileFlat CONSTANT)
-    Q_PROPERTY(bool pointerAccelerationProfileFlat READ pointerAccelerationProfileFlat WRITE setPointerAccelerationProfileFlat NOTIFY pointerAccelerationProfileChanged)
+    Q_PROPERTY(bool pointerAccelerationProfileFlat READ pointerAccelerationProfileFlat WRITE setPointerAccelerationProfileFlat NOTIFY
+                   pointerAccelerationProfileChanged)
 
     Q_PROPERTY(bool supportsPointerAccelerationProfileAdaptive READ supportsPointerAccelerationProfileAdaptive CONSTANT)
     Q_PROPERTY(bool defaultPointerAccelerationProfileAdaptive READ defaultPointerAccelerationProfileAdaptive CONSTANT)
-    Q_PROPERTY(bool pointerAccelerationProfileAdaptive READ pointerAccelerationProfileAdaptive WRITE setPointerAccelerationProfileAdaptive NOTIFY pointerAccelerationProfileChanged)
+    Q_PROPERTY(bool pointerAccelerationProfileAdaptive READ pointerAccelerationProfileAdaptive WRITE setPointerAccelerationProfileAdaptive NOTIFY
+                   pointerAccelerationProfileChanged)
 
     //
     // scrolling
@@ -79,113 +81,143 @@ public:
 
     //
     // general
-    QString name() const {
+    QString name() const
+    {
         return m_name.val;
     }
-    QString sysName() const {
+    QString sysName() const
+    {
         return m_sysName.val;
     }
-    bool supportsDisableEvents() const {
+    bool supportsDisableEvents() const
+    {
         return m_supportsDisableEvents.val;
     }
-    void setEnabled(bool enabled) {
+    void setEnabled(bool enabled)
+    {
         m_enabled.set(enabled);
     }
-    bool isEnabled() const {
+    bool isEnabled() const
+    {
         return m_enabled.val;
     }
-    Qt::MouseButtons supportedButtons() const {
+    Qt::MouseButtons supportedButtons() const
+    {
         return m_supportedButtons.val;
     }
 
     //
     // advanced
-    bool supportsLeftHanded() const {
+    bool supportsLeftHanded() const
+    {
         return m_supportsLeftHanded.val;
     }
-    bool leftHandedEnabledByDefault() const {
+    bool leftHandedEnabledByDefault() const
+    {
         return m_leftHandedEnabledByDefault.val;
     }
-    bool isLeftHanded() const {
+    bool isLeftHanded() const
+    {
         return m_leftHanded.val;
     }
-    void setLeftHanded(bool set) {
+    void setLeftHanded(bool set)
+    {
         m_leftHanded.set(set);
     }
 
-    bool supportsMiddleEmulation() const {
+    bool supportsMiddleEmulation() const
+    {
         return m_supportsMiddleEmulation.val;
     }
-    bool middleEmulationEnabledByDefault() const {
+    bool middleEmulationEnabledByDefault() const
+    {
         return m_middleEmulationEnabledByDefault.val;
     }
-    bool isMiddleEmulation() const {
+    bool isMiddleEmulation() const
+    {
         return m_middleEmulation.val;
     }
-    void setMiddleEmulation(bool set) {
+    void setMiddleEmulation(bool set)
+    {
         m_middleEmulation.set(set);
     }
 
     //
     // acceleration speed and profile
-    bool supportsPointerAcceleration() const {
+    bool supportsPointerAcceleration() const
+    {
         return m_supportsPointerAcceleration.val;
     }
-    qreal pointerAcceleration() const {
+    qreal pointerAcceleration() const
+    {
         return m_pointerAcceleration.val;
     }
-    void setPointerAcceleration(qreal acceleration) {
+    void setPointerAcceleration(qreal acceleration)
+    {
         m_pointerAcceleration.set(acceleration);
     }
 
-    bool supportsPointerAccelerationProfileFlat() const {
+    bool supportsPointerAccelerationProfileFlat() const
+    {
         return m_supportsPointerAccelerationProfileFlat.val;
     }
-    bool defaultPointerAccelerationProfileFlat() const {
+    bool defaultPointerAccelerationProfileFlat() const
+    {
         return m_defaultPointerAccelerationProfileFlat.val;
     }
-    bool pointerAccelerationProfileFlat() const {
+    bool pointerAccelerationProfileFlat() const
+    {
         return m_pointerAccelerationProfileFlat.val;
     }
-    void setPointerAccelerationProfileFlat(bool set) {
+    void setPointerAccelerationProfileFlat(bool set)
+    {
         m_pointerAccelerationProfileFlat.set(set);
     }
 
-    bool supportsPointerAccelerationProfileAdaptive() const {
+    bool supportsPointerAccelerationProfileAdaptive() const
+    {
         return m_supportsPointerAccelerationProfileAdaptive.val;
     }
-    bool defaultPointerAccelerationProfileAdaptive() const {
+    bool defaultPointerAccelerationProfileAdaptive() const
+    {
         return m_defaultPointerAccelerationProfileAdaptive.val;
     }
-    bool pointerAccelerationProfileAdaptive() const {
+    bool pointerAccelerationProfileAdaptive() const
+    {
         return m_pointerAccelerationProfileAdaptive.val;
     }
-    void setPointerAccelerationProfileAdaptive(bool set) {
+    void setPointerAccelerationProfileAdaptive(bool set)
+    {
         m_pointerAccelerationProfileAdaptive.set(set);
     }
 
     //
     // scrolling
-    bool supportsNaturalScroll() const {
+    bool supportsNaturalScroll() const
+    {
         return m_supportsNaturalScroll.val;
     }
-    bool naturalScrollEnabledByDefault() const {
+    bool naturalScrollEnabledByDefault() const
+    {
         return m_naturalScrollEnabledByDefault.val;
     }
-    bool isNaturalScroll() const {
+    bool isNaturalScroll() const
+    {
         return m_naturalScroll.val;
     }
-    void setNaturalScroll(bool set) {
+    void setNaturalScroll(bool set)
+    {
         m_naturalScroll.set(set);
     }
 
-    qreal scrollFactor() const {
+    qreal scrollFactor() const
+    {
         return m_scrollFactor.val;
     }
-    void setScrollFactor(qreal set) {
+    void setScrollFactor(qreal set)
+    {
         m_scrollFactor.set(set);
     }
-
 
 Q_SIGNALS:
     void leftHandedChanged();
@@ -197,23 +229,26 @@ Q_SIGNALS:
     void scrollFactorChanged();
 
 private:
-    template <typename T>
-    struct Prop {
+    template<typename T> struct Prop {
         explicit Prop(const QByteArray &dbusName)
             : dbus(dbusName)
-        {}
+        {
+        }
 
-        void set(T newVal) {
+        void set(T newVal)
+        {
             if (avail && val != newVal) {
                 val = newVal;
             }
         }
-        void set(const Prop<T> &p) {
+        void set(const Prop<T> &p)
+        {
             if (avail && val != p.val) {
                 val = p.val;
             }
         }
-        bool changed() const {
+        bool changed() const
+        {
             return avail && (old != val);
         }
 
@@ -223,11 +258,9 @@ private:
         T val;
     };
 
-    template<typename T>
-    bool valueLoader(Prop<T> &prop);
+    template<typename T> bool valueLoader(Prop<T> &prop);
 
-    template<typename T>
-    QString valueWriter(const Prop<T> &prop);
+    template<typename T> QString valueWriter(const Prop<T> &prop);
 
     //
     // general
@@ -238,7 +271,7 @@ private:
 
     //
     // advanced
-    Prop<Qt::MouseButtons> m_supportedButtons  = Prop<Qt::MouseButtons>("supportedButtons");
+    Prop<Qt::MouseButtons> m_supportedButtons = Prop<Qt::MouseButtons>("supportedButtons");
 
     Prop<bool> m_supportsLeftHanded = Prop<bool>("supportsLeftHanded");
     Prop<bool> m_leftHandedEnabledByDefault = Prop<bool>("leftHandedEnabledByDefault");

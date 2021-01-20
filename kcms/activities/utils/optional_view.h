@@ -21,11 +21,16 @@
 #ifndef UTILS_OPTIONAL_VIEW_H
 #define UTILS_OPTIONAL_VIEW_H
 
-namespace kamd {
-namespace utils {
-
-struct none_t {};
-inline const none_t none() { return none_t(); }
+namespace kamd
+{
+namespace utils
+{
+struct none_t {
+};
+inline const none_t none()
+{
+    return none_t();
+}
 
 // A simple implementation of the optional class
 // until we can rely on std::optional.
@@ -33,8 +38,8 @@ inline const none_t none() { return none_t(); }
 // features to the std one.
 // (we need it in the core library, so we don't
 // want to use boost.optional)
-template <typename T>
-class optional_view {
+template<typename T> class optional_view
+{
 public:
     explicit optional_view(const T &value)
         : m_value(&value)
@@ -65,8 +70,7 @@ private:
     const T *const m_value;
 };
 
-template <typename T>
-optional_view<T> make_optional_view(const T &value)
+template<typename T> optional_view<T> make_optional_view(const T &value)
 {
     return optional_view<T>(value);
 }
@@ -74,6 +78,4 @@ optional_view<T> make_optional_view(const T &value)
 } // namespace utils
 } // namespace kamd
 
-
 #endif // UTILS_OPTIONAL_VIEW_H
-

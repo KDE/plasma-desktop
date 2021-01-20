@@ -19,8 +19,8 @@
 #include "plasma-desktop-runner.h"
 
 #include <QDBusConnection>
-#include <QDBusServiceWatcher>
 #include <QDBusConnectionInterface>
+#include <QDBusServiceWatcher>
 
 #include <QDebug>
 
@@ -31,16 +31,14 @@ K_EXPORT_PLASMA_RUNNER_WITH_JSON(PlasmaDesktopRunner, "plasma-runner-plasma-desk
 static const QString s_plasmaService = QLatin1String("org.kde.plasmashell");
 
 PlasmaDesktopRunner::PlasmaDesktopRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, metaData, args),
-      m_desktopConsoleKeyword(i18nc("Note this is a KRunner keyword", "desktop console")),
-      m_kwinConsoleKeyword(i18nc("Note this is a KRunner keyword", "wm console")),
-      m_enabled(false)
+    : Plasma::AbstractRunner(parent, metaData, args)
+    , m_desktopConsoleKeyword(i18nc("Note this is a KRunner keyword", "desktop console"))
+    , m_kwinConsoleKeyword(i18nc("Note this is a KRunner keyword", "wm console"))
+    , m_enabled(false)
 {
-    setObjectName( QLatin1String("Plasma-Desktop" ));
-    QDBusServiceWatcher *watcher = new QDBusServiceWatcher(s_plasmaService, QDBusConnection::sessionBus(),
-                                                           QDBusServiceWatcher::WatchForOwnerChange, this);
-    connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged,
-            this, &PlasmaDesktopRunner::checkAvailability);
+    setObjectName(QLatin1String("Plasma-Desktop"));
+    QDBusServiceWatcher *watcher = new QDBusServiceWatcher(s_plasmaService, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this);
+    connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged, this, &PlasmaDesktopRunner::checkAvailability);
     checkAvailability(QString(), QString(), QString());
 }
 
@@ -79,22 +77,30 @@ void PlasmaDesktopRunner::run(const Plasma::RunnerContext &context, const Plasma
 
         QString query = context.query();
         if (query.compare(m_desktopConsoleKeyword, Qt::CaseInsensitive) == 0) {
-            message = QDBusMessage::createMethodCall(s_plasmaService, QStringLiteral("/PlasmaShell"),
-                                                     QStringLiteral("org.kde.PlasmaShell"), QStringLiteral("showInteractiveConsole"));
+            message = QDBusMessage::createMethodCall(s_plasmaService,
+                                                     QStringLiteral("/PlasmaShell"),
+                                                     QStringLiteral("org.kde.PlasmaShell"),
+                                                     QStringLiteral("showInteractiveConsole"));
         } else if (query.startsWith(m_desktopConsoleKeyword)) {
-            message = QDBusMessage::createMethodCall(s_plasmaService, QStringLiteral("/PlasmaShell"),
-                                                     QStringLiteral("org.kde.PlasmaShell"), QStringLiteral("loadScriptInInteractiveConsole"));
+            message = QDBusMessage::createMethodCall(s_plasmaService,
+                                                     QStringLiteral("/PlasmaShell"),
+                                                     QStringLiteral("org.kde.PlasmaShell"),
+                                                     QStringLiteral("loadScriptInInteractiveConsole"));
             query.replace(m_desktopConsoleKeyword, QString(), Qt::CaseInsensitive);
             QList<QVariant> args;
             args << query;
             message.setArguments(args);
         }
         if (query.compare(m_kwinConsoleKeyword, Qt::CaseInsensitive) == 0) {
-            message = QDBusMessage::createMethodCall(s_plasmaService, QStringLiteral("/PlasmaShell"),
-                                                     QStringLiteral("org.kde.PlasmaShell"), QStringLiteral("showInteractiveKWinConsole"));
+            message = QDBusMessage::createMethodCall(s_plasmaService,
+                                                     QStringLiteral("/PlasmaShell"),
+                                                     QStringLiteral("org.kde.PlasmaShell"),
+                                                     QStringLiteral("showInteractiveKWinConsole"));
         } else if (query.startsWith(m_kwinConsoleKeyword)) {
-            message = QDBusMessage::createMethodCall(s_plasmaService, QStringLiteral("/PlasmaShell"),
-                                                     QStringLiteral("org.kde.PlasmaShell"), QStringLiteral("loadKWinScriptInInteractiveConsole"));
+            message = QDBusMessage::createMethodCall(s_plasmaService,
+                                                     QStringLiteral("/PlasmaShell"),
+                                                     QStringLiteral("org.kde.PlasmaShell"),
+                                                     QStringLiteral("loadKWinScriptInInteractiveConsole"));
             query.replace(m_kwinConsoleKeyword, QString(), Qt::CaseInsensitive);
             QList<QVariant> args;
             args << query;
@@ -139,4 +145,3 @@ void PlasmaDesktopRunner::checkAvailability(const QString &name, const QString &
 }
 
 #include "plasma-desktop-runner.moc"
-

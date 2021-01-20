@@ -32,13 +32,23 @@ public:
     static ConfigPlugin *implementation(ConfigContainer *parent);
 
     explicit ConfigPlugin(ConfigContainer *parent);
-    virtual ~ConfigPlugin() {}
+    virtual ~ConfigPlugin()
+    {
+    }
 
-    virtual void load() {}
-    virtual void save() {}
-    virtual void defaults() {}
+    virtual void load()
+    {
+    }
+    virtual void save()
+    {
+    }
+    virtual void defaults()
+    {
+    }
 
-    void hideEvent(QHideEvent *) override {}
+    void hideEvent(QHideEvent *) override
+    {
+    }
 
 protected:
     ConfigContainer *m_parent;

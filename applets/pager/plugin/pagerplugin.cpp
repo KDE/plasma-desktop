@@ -17,10 +17,8 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-
 #include "pagerplugin.h"
 #include "pagermodel.h"
-
 
 void KickoffPlugin::registerTypes(const char *uri)
 {

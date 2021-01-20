@@ -25,15 +25,16 @@
 #include <QWidgetList> //For WId
 
 // KDE
+#include <KActivities/ActivitiesModel>
 #include <KActivities/Consumer>
 #include <KActivities/Info>
-#include <KActivities/ActivitiesModel>
 
 #include <config-X11.h>
 
 #include <netwm.h>
 
-class SortedActivitiesModel : public QSortFilterProxyModel {
+class SortedActivitiesModel : public QSortFilterProxyModel
+{
     Q_OBJECT
 
     Q_PROPERTY(bool inhibitUpdates READ inhibitUpdates WRITE setInhibitUpdates NOTIFY inhibitUpdatesChanged)
@@ -42,7 +43,7 @@ public:
     SortedActivitiesModel(const QVector<KActivities::Info::State> &states, QObject *parent = nullptr);
     ~SortedActivitiesModel() override;
 
-    QVariant data(const QModelIndex & index, int role = Qt::DisplayRole) const override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
     QHash<int, QByteArray> roleNames() const override;
 
@@ -50,13 +51,13 @@ public:
 
 protected:
     uint lastUsedTime(const QString &activity) const;
-    bool lessThan(const QModelIndex & source_left, const QModelIndex & source_right) const override;
+    bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const override;
 
     enum AdditionalRoles {
-        LastTimeUsed       = KActivities::ActivitiesModel::UserRole,
+        LastTimeUsed = KActivities::ActivitiesModel::UserRole,
         LastTimeUsedString = KActivities::ActivitiesModel::UserRole + 1,
-        WindowCount        = KActivities::ActivitiesModel::UserRole + 2,
-        HasWindows         = KActivities::ActivitiesModel::UserRole + 3,
+        WindowCount = KActivities::ActivitiesModel::UserRole + 2,
+        HasWindows = KActivities::ActivitiesModel::UserRole + 3,
     };
 
 public Q_SLOTS:
@@ -91,4 +92,3 @@ private:
 };
 
 #endif // SORTED_ACTIVITIES_MODEL_H
-

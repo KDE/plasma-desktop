@@ -31,7 +31,8 @@ class KCoreConfigSkeleton;
 /**
  * SwitchingTab
  */
-class SwitchingTab : public QWidget {
+class SwitchingTab : public QWidget
+{
     Q_OBJECT
 public:
     explicit SwitchingTab(QWidget *parent);

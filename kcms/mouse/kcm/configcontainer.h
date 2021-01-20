@@ -28,8 +28,7 @@ class ConfigContainer : public KCModule
     Q_OBJECT
 
 public:
-    explicit ConfigContainer(QWidget *parent,
-                            const QVariantList &args = QVariantList());
+    explicit ConfigContainer(QWidget *parent, const QVariantList &args = QVariantList());
 
     QSize minimumSizeHint() const override;
     QSize sizeHint() const override;
@@ -39,15 +38,24 @@ public:
     void save() override;
     void defaults() override;
 
-    void kcmLoad() { KCModule::load(); }
-    void kcmSave() { KCModule::save(); }
-    void kcmDefaults() { KCModule::defaults(); }
+    void kcmLoad()
+    {
+        KCModule::load();
+    }
+    void kcmSave()
+    {
+        KCModule::save();
+    }
+    void kcmDefaults()
+    {
+        KCModule::defaults();
+    }
 
 protected:
     void hideEvent(QHideEvent *) override;
 
 private:
-    ConfigPlugin* m_plugin = nullptr;
+    ConfigPlugin *m_plugin = nullptr;
 };
 
 #endif // CONFIGCONTAINER_H

@@ -23,7 +23,8 @@
 
 #include <QQmlExtensionPlugin>
 
-class ActivitiesSettingsPlugin : public QQmlExtensionPlugin {
+class ActivitiesSettingsPlugin : public QQmlExtensionPlugin
+{
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.kde.activities.settings")
 
@@ -33,4 +34,3 @@ public:
 };
 
 #endif // KACTIVITIES_IMPORTS_PLUGIN_H
-

@@ -26,8 +26,7 @@
 
 #include "kcmkded.h"
 
-struct ModulesModelData
-{
+struct ModulesModelData {
     QString display;
     QString description;
     KDEDConfig::ModuleType type;
@@ -80,5 +79,4 @@ private:
 
     bool m_runningModulesKnown = false;
     QStringList m_runningModules;
-
 };

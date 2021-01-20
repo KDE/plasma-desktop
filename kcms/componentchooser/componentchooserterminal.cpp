@@ -30,7 +30,11 @@
 #include "terminal_settings.h"
 
 ComponentChooserTerminal::ComponentChooserTerminal(QObject *parent)
-    : ComponentChooser(parent, QLatin1String(""), QStringLiteral("TerminalEmulator"), QStringLiteral("org.kde.konsole.desktop"), i18n("Select default terminal emulator"))
+    : ComponentChooser(parent,
+                       QLatin1String(""),
+                       QStringLiteral("TerminalEmulator"),
+                       QStringLiteral("org.kde.konsole.desktop"),
+                       i18n("Select default terminal emulator"))
 {
 }
 

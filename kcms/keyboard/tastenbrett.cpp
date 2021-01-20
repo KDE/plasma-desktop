@@ -21,9 +21,9 @@
 #include "tastenbrett.h"
 
 #include <QCoreApplication>
+#include <QDebug>
 #include <QProcess>
 #include <QStandardPaths>
-#include <QDebug>
 
 QString Tastenbrett::path()
 {
@@ -33,8 +33,7 @@ QString Tastenbrett::path()
     }
 
     // Find relative to KCM (when run from build dir)
-    path = QStandardPaths::findExecutable("tastenbrett", { qEnvironmentVariable("QT_PLUGIN_PATH"),
-                                                           qApp->applicationDirPath() });
+    path = QStandardPaths::findExecutable("tastenbrett", {qEnvironmentVariable("QT_PLUGIN_PATH"), qApp->applicationDirPath()});
     if (!path.isNull()) {
         return path;
     }
@@ -55,7 +54,7 @@ void Tastenbrett::launch(const QString &model, const QString &layout, const QStr
 
     QProcess p;
     p.setProgram(path());
-    QStringList args { "--model", model, "--layout", layout, "--variant", variant, "--options", options };
+    QStringList args{"--model", model, "--layout", layout, "--variant", variant, "--options", options};
     if (!title.isEmpty()) {
         args << "-title" << title;
     }

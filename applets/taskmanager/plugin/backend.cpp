@@ -37,11 +37,11 @@
 #include <QApplication>
 #include <QJsonArray>
 #include <QMenu>
-#include <QScopedPointer>
 #include <QQuickItem>
 #include <QQuickWindow>
-#include <QVersionNumber>
+#include <QScopedPointer>
 #include <QTimer>
+#include <QVersionNumber>
 
 #include <KActivities/Consumer>
 #include <KActivities/Stats/Cleaning>
@@ -56,7 +56,8 @@ namespace KAStats = KActivities::Stats;
 using namespace KAStats;
 using namespace KAStats::Terms;
 
-Backend::Backend(QObject* parent) : QObject(parent)
+Backend::Backend(QObject *parent)
+    : QObject(parent)
     , m_panelWinId(0)
     , m_highlightWindows(false)
     , m_actionGroup(new QActionGroup(this))
@@ -72,7 +73,7 @@ QQuickItem *Backend::taskManagerItem() const
     return m_taskManagerItem;
 }
 
-void Backend::setTaskManagerItem(QQuickItem* item)
+void Backend::setTaskManagerItem(QQuickItem *item)
 {
     if (item != m_taskManagerItem) {
         m_taskManagerItem = item;
@@ -150,8 +151,7 @@ QVariantList Backend::jumpListActions(const QUrl &launcherUrl, QObject *parent)
 
     QUrl desktopEntryUrl = tryDecodeApplicationsUrl(launcherUrl);
 
-    if (!desktopEntryUrl.isValid() || !desktopEntryUrl.isLocalFile()
-        || !KDesktopFile::isDesktopFile(desktopEntryUrl.toLocalFile())) {
+    if (!desktopEntryUrl.isValid() || !desktopEntryUrl.isLocalFile() || !KDesktopFile::isDesktopFile(desktopEntryUrl.toLocalFile())) {
         return actions;
     }
 
@@ -199,10 +199,7 @@ QVariantList Backend::systemSettingsActions(QObject *parent) const
 {
     QVariantList actions;
 
-    auto query = AllResources
-        | Agent(QStringLiteral("org.kde.systemsettings"))
-        | HighScoredFirst
-        | Limit(5);
+    auto query = AllResources | Agent(QStringLiteral("org.kde.systemsettings")) | HighScoredFirst | Limit(5);
 
     ResultSet results(query);
 
@@ -247,8 +244,7 @@ QVariantList Backend::placesActions(const QUrl &launcherUrl, bool showAllPlaces,
 
     QUrl desktopEntryUrl = tryDecodeApplicationsUrl(launcherUrl);
 
-    if (!desktopEntryUrl.isValid() || !desktopEntryUrl.isLocalFile()
-        || !KDesktopFile::isDesktopFile(desktopEntryUrl.toLocalFile())) {
+    if (!desktopEntryUrl.isValid() || !desktopEntryUrl.isLocalFile() || !KDesktopFile::isDesktopFile(desktopEntryUrl.toLocalFile())) {
         return QVariantList();
     }
 
@@ -344,8 +340,7 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
 
     QUrl desktopEntryUrl = tryDecodeApplicationsUrl(launcherUrl);
 
-    if (!desktopEntryUrl.isValid() || !desktopEntryUrl.isLocalFile()
-        || !KDesktopFile::isDesktopFile(desktopEntryUrl.toLocalFile())) {
+    if (!desktopEntryUrl.isValid() || !desktopEntryUrl.isLocalFile() || !KDesktopFile::isDesktopFile(desktopEntryUrl.toLocalFile())) {
         return QVariantList();
     }
 
@@ -357,12 +352,7 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
         storageId = storageId.left(storageId.length() - 8);
     }
 
-    auto query = UsedResources
-        | RecentlyUsedFirst
-        | Agent(storageId)
-        | Type::any()
-        | Activity::current()
-        | Url::file();
+    auto query = UsedResources | RecentlyUsedFirst | Agent(storageId) | Type::any() | Activity::current() | Url::file();
 
     ResultSet results(query);
 
@@ -421,7 +411,7 @@ void Backend::toolTipWindowChanged(QQuickWindow *window)
 
 void Backend::handleRecentDocumentAction() const
 {
-    const QAction *action = qobject_cast<QAction* >(sender());
+    const QAction *action = qobject_cast<QAction *>(sender());
 
     if (!action) {
         return;
@@ -437,11 +427,7 @@ void Backend::handleRecentDocumentAction() const
     const QString resource = action->data().toString();
 
     if (desktopPath.isEmpty() || resource.isEmpty()) {
-        auto query = UsedResources
-            | Agent(agent)
-            | Type::any()
-            | Activity::current()
-            | Url::file();
+        auto query = UsedResources | Agent(agent) | Type::any() | Activity::current() | Url::file();
 
         KAStats::forgetResources(query);
 
@@ -484,29 +470,28 @@ QRect Backend::globalRect(QQuickItem *item) const
 
 void Backend::ungrabMouse(QQuickItem *item) const
 {
-    //this is a workaround where Qt will fail to realize a mouse has been released
+    // this is a workaround where Qt will fail to realize a mouse has been released
 
     // this happens if a window which does not accept focus spawns a new window that takes focus and X grab
     // whilst the mouse is depressed
     // https://bugreports.qt.io/browse/QTBUG-59044
     // this causes the next click to go missing
 
-    //by releasing manually we avoid that situation
+    // by releasing manually we avoid that situation
     auto ungrabMouseHack = [item]() {
-        if (item && item->window() &&  item->window()->mouseGrabberItem()) {
+        if (item && item->window() && item->window()->mouseGrabberItem()) {
             item->window()->mouseGrabberItem()->ungrabMouse();
         }
     };
 
-    //pre 5.8.0 QQuickWindow code is "item->grabMouse(); sendEvent(item, mouseEvent)"
-    //post 5.8.0 QQuickWindow code is sendEvent(item, mouseEvent); item->grabMouse()
+    // pre 5.8.0 QQuickWindow code is "item->grabMouse(); sendEvent(item, mouseEvent)"
+    // post 5.8.0 QQuickWindow code is sendEvent(item, mouseEvent); item->grabMouse()
     if (QVersionNumber::fromString(QString::fromLatin1(qVersion())) > QVersionNumber(5, 8, 0)) {
         QTimer::singleShot(0, item, ungrabMouseHack);
-    }
-    else {
+    } else {
         ungrabMouseHack();
     }
-    //end workaround
+    // end workaround
 }
 
 bool Backend::canPresentWindows() const
@@ -524,7 +509,7 @@ void Backend::presentWindows(const QVariant &_winIds)
 
     const QVariantList &_winIdsList = _winIds.toList();
 
-    foreach(const QVariant &_winId, _winIdsList) {
+    foreach (const QVariant &_winId, _winIdsList) {
         bool ok = false;
         qlonglong winId = _winId.toLongLong(&ok);
 
@@ -599,7 +584,7 @@ void Backend::windowsHovered(const QVariant &_winIds, bool hovered)
     if (hovered) {
         const QVariantList &winIds = _winIds.toList();
 
-        foreach(const QVariant &_winId, winIds) {
+        foreach (const QVariant &_winId, winIds) {
             bool ok = false;
             qlonglong winId = _winId.toLongLong(&ok);
 

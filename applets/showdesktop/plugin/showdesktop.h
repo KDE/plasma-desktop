@@ -37,7 +37,6 @@ public:
 
 Q_SIGNALS:
     void showingDesktopChanged(bool showingDesktop);
-
 };
 
-#endif //SHOWDESKTOP_HEADER
+#endif // SHOWDESKTOP_HEADER

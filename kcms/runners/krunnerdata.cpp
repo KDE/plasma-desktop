@@ -18,11 +18,11 @@
 
 #include "krunnerdata.h"
 
+#include <KPackage/Package>
+#include <KPackage/PackageLoader>
+#include <KPackage/PackageStructure>
 #include <KPluginFactory>
 #include <KPluginInfo>
-#include <KPackage/PackageLoader>
-#include <KPackage/Package>
-#include <KPackage/PackageStructure>
 #include <KRunner/RunnerManager>
 
 #include "krunnersettings.h"

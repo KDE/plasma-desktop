@@ -25,7 +25,6 @@
 
 #include "basemodel.h"
 
-
 class QDBusError;
 
 class KConfigBase;
@@ -39,7 +38,6 @@ class GlobalAccelModel : public BaseModel
     Q_OBJECT
 
 public:
-
     GlobalAccelModel(KGlobalAccelInterface *interface, QObject *parent = nullptr);
 
     QVariant data(const QModelIndex &index, int role) const override;
@@ -51,10 +49,9 @@ public:
 
     void load() override;
     void save() override;
- 
 
 Q_SIGNALS:
-    void errorOccured(const QString&);
+    void errorOccured(const QString &);
 
 private:
     Component loadComponent(const QList<KGlobalShortcutInfo> &info);

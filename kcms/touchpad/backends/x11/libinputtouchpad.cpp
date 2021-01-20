@@ -21,107 +21,105 @@
 
 #include <QSet>
 
-#include <stddef.h>
 #include <limits.h>
+#include <stddef.h>
 
 #include <libinput-properties.h>
 #include <xserver-properties.h>
 
 #include <X11/extensions/XInput2.h>
 
-
 const Parameter libinputProperties[] = {
 
     /* libinput disable supports property */
-    {"supportsDisableEvents",               PT_INT, 0, 1, LIBINPUT_PROP_SENDEVENTS_AVAILABLE, 8, 0},
-    {"enabled",                             PT_INT, 0, 1, LIBINPUT_PROP_SENDEVENTS_ENABLED, 8, 0},
-    {"enabledDefault",                      PT_INT, 0, 1, LIBINPUT_PROP_SENDEVENTS_ENABLED_DEFAULT, 8, 0},
+    {"supportsDisableEvents", PT_INT, 0, 1, LIBINPUT_PROP_SENDEVENTS_AVAILABLE, 8, 0},
+    {"enabled", PT_INT, 0, 1, LIBINPUT_PROP_SENDEVENTS_ENABLED, 8, 0},
+    {"enabledDefault", PT_INT, 0, 1, LIBINPUT_PROP_SENDEVENTS_ENABLED_DEFAULT, 8, 0},
 
     /* LeftHandSupport */
-    {"leftHandedEnabledByDefault",          PT_INT, 0, 1, LIBINPUT_PROP_LEFT_HANDED_DEFAULT, 8, 0},
-    {"leftHanded",                          PT_INT, 0, 1, LIBINPUT_PROP_LEFT_HANDED, 8, 0},
+    {"leftHandedEnabledByDefault", PT_INT, 0, 1, LIBINPUT_PROP_LEFT_HANDED_DEFAULT, 8, 0},
+    {"leftHanded", PT_INT, 0, 1, LIBINPUT_PROP_LEFT_HANDED, 8, 0},
 
     /* Disable on external mouse */
-    {"supportsDisableEventsOnExternalMouse",PT_INT, 0, 1, LIBINPUT_PROP_SENDEVENTS_AVAILABLE, 8, 1},
-    {"disableEventsOnExternalMouse",        PT_INT, 0, 1, LIBINPUT_PROP_SENDEVENTS_ENABLED, 8, 1},
+    {"supportsDisableEventsOnExternalMouse", PT_INT, 0, 1, LIBINPUT_PROP_SENDEVENTS_AVAILABLE, 8, 1},
+    {"disableEventsOnExternalMouse", PT_INT, 0, 1, LIBINPUT_PROP_SENDEVENTS_ENABLED, 8, 1},
     {"disableEventsOnExternalMouseDefault", PT_INT, 0, 1, LIBINPUT_PROP_SENDEVENTS_ENABLED_DEFAULT, 8, 1},
 
     /* Disable while typing */
-    {"disableWhileTypingEnabledByDefault",  PT_INT, 0, 1, LIBINPUT_PROP_DISABLE_WHILE_TYPING_DEFAULT, 8, 0},
-    {"disableWhileTyping",                  PT_INT, 0, 1, LIBINPUT_PROP_DISABLE_WHILE_TYPING, 8, 0},
+    {"disableWhileTypingEnabledByDefault", PT_INT, 0, 1, LIBINPUT_PROP_DISABLE_WHILE_TYPING_DEFAULT, 8, 0},
+    {"disableWhileTyping", PT_INT, 0, 1, LIBINPUT_PROP_DISABLE_WHILE_TYPING, 8, 0},
 
     /* Middle Emulation */
-    {"middleEmulationEnabledByDefault",     PT_INT, 0, 1, LIBINPUT_PROP_MIDDLE_EMULATION_ENABLED_DEFAULT, 8, 0},
-    {"middleEmulation",                     PT_INT, 0, 1, LIBINPUT_PROP_MIDDLE_EMULATION_ENABLED, 8, 0},
+    {"middleEmulationEnabledByDefault", PT_INT, 0, 1, LIBINPUT_PROP_MIDDLE_EMULATION_ENABLED_DEFAULT, 8, 0},
+    {"middleEmulation", PT_INT, 0, 1, LIBINPUT_PROP_MIDDLE_EMULATION_ENABLED, 8, 0},
 
     /* This is a boolean for all three fingers, no per-finger config */
-    {"tapToClick",                             PT_INT, 0, 1, LIBINPUT_PROP_TAP,     8,     0},
-    {"tapToClickEnabledByDefault",          PT_INT, 0, 1, LIBINPUT_PROP_TAP_DEFAULT, 8, 0},
+    {"tapToClick", PT_INT, 0, 1, LIBINPUT_PROP_TAP, 8, 0},
+    {"tapToClickEnabledByDefault", PT_INT, 0, 1, LIBINPUT_PROP_TAP_DEFAULT, 8, 0},
 
     /* LMR */
-    {"lrmTapButtonMapEnabledByDefault",     PT_INT, 0, 1, LIBINPUT_PROP_TAP_BUTTONMAP_DEFAULT, 8, 0},
-    {"lrmTapButtonMap",                     PT_INT, 0, 1, LIBINPUT_PROP_TAP_BUTTONMAP, 8, 0},
-    {"lmrTapButtonMapEnabledByDefault",     PT_INT, 0, 1, LIBINPUT_PROP_TAP_BUTTONMAP_DEFAULT, 8, 1},
-    {"lmrTapButtonMap",                     PT_INT, 0, 1, LIBINPUT_PROP_TAP_BUTTONMAP, 8, 1},
+    {"lrmTapButtonMapEnabledByDefault", PT_INT, 0, 1, LIBINPUT_PROP_TAP_BUTTONMAP_DEFAULT, 8, 0},
+    {"lrmTapButtonMap", PT_INT, 0, 1, LIBINPUT_PROP_TAP_BUTTONMAP, 8, 0},
+    {"lmrTapButtonMapEnabledByDefault", PT_INT, 0, 1, LIBINPUT_PROP_TAP_BUTTONMAP_DEFAULT, 8, 1},
+    {"lmrTapButtonMap", PT_INT, 0, 1, LIBINPUT_PROP_TAP_BUTTONMAP, 8, 1},
 
     /* Tap and Drag Enabled */
-    {"tapAndDragEnabledByDefault",          PT_INT, 0, 1, LIBINPUT_PROP_TAP_DRAG_DEFAULT, 8, 0},
-    {"tapAndDrag",                          PT_INT, 0, 1, LIBINPUT_PROP_TAP_DRAG, 8, 0},
+    {"tapAndDragEnabledByDefault", PT_INT, 0, 1, LIBINPUT_PROP_TAP_DRAG_DEFAULT, 8, 0},
+    {"tapAndDrag", PT_INT, 0, 1, LIBINPUT_PROP_TAP_DRAG, 8, 0},
 
     /* Tap and Drag Lock Enabled */
-    {"tapDragLockEnabledByDefault",         PT_INT, 0, 1, LIBINPUT_PROP_TAP_DRAG_LOCK_DEFAULT, 8, 0},
-    {"tapDragLock",                         PT_INT, 0, 1, LIBINPUT_PROP_TAP_DRAG_LOCK, 8, 0},
+    {"tapDragLockEnabledByDefault", PT_INT, 0, 1, LIBINPUT_PROP_TAP_DRAG_LOCK_DEFAULT, 8, 0},
+    {"tapDragLock", PT_INT, 0, 1, LIBINPUT_PROP_TAP_DRAG_LOCK, 8, 0},
 
     /* libinput normalizes the accel to -1/1 */
-    {"defaultPointerAcceleration",          PT_DOUBLE, -1.0, 1.0,   LIBINPUT_PROP_ACCEL_DEFAULT,  0 /*float */, 0},
-    {"pointerAcceleration",                 PT_DOUBLE, -1.0, 1.0,   LIBINPUT_PROP_ACCEL,  0 /*float */, 0},
+    {"defaultPointerAcceleration", PT_DOUBLE, -1.0, 1.0, LIBINPUT_PROP_ACCEL_DEFAULT, 0 /*float */, 0},
+    {"pointerAcceleration", PT_DOUBLE, -1.0, 1.0, LIBINPUT_PROP_ACCEL, 0 /*float */, 0},
 
     /* Libinput Accel Profile */
-    {"supportsPointerAccelerationProfileAdaptive",  PT_BOOL, 0, 1, LIBINPUT_PROP_ACCEL_PROFILES_AVAILABLE, 8, 0},
-    {"defaultPointerAccelerationProfileAdaptive",   PT_BOOL, 0, 1, LIBINPUT_PROP_ACCEL_PROFILE_ENABLED_DEFAULT, 8, 0},
-    {"pointerAccelerationProfileAdaptive",          PT_BOOL, 0, 1, LIBINPUT_PROP_ACCEL_PROFILE_ENABLED, 8, 0},
-    {"supportsPointerAccelerationProfileFlat",      PT_BOOL, 0, 1, LIBINPUT_PROP_ACCEL_PROFILES_AVAILABLE, 8, 1},
-    {"defaultPointerAccelerationProfileFlat",       PT_BOOL, 0, 1, LIBINPUT_PROP_ACCEL_PROFILE_ENABLED_DEFAULT, 8, 1},
-    {"pointerAccelerationProfileFlat",              PT_BOOL, 0, 1, LIBINPUT_PROP_ACCEL_PROFILE_ENABLED, 8, 1},
+    {"supportsPointerAccelerationProfileAdaptive", PT_BOOL, 0, 1, LIBINPUT_PROP_ACCEL_PROFILES_AVAILABLE, 8, 0},
+    {"defaultPointerAccelerationProfileAdaptive", PT_BOOL, 0, 1, LIBINPUT_PROP_ACCEL_PROFILE_ENABLED_DEFAULT, 8, 0},
+    {"pointerAccelerationProfileAdaptive", PT_BOOL, 0, 1, LIBINPUT_PROP_ACCEL_PROFILE_ENABLED, 8, 0},
+    {"supportsPointerAccelerationProfileFlat", PT_BOOL, 0, 1, LIBINPUT_PROP_ACCEL_PROFILES_AVAILABLE, 8, 1},
+    {"defaultPointerAccelerationProfileFlat", PT_BOOL, 0, 1, LIBINPUT_PROP_ACCEL_PROFILE_ENABLED_DEFAULT, 8, 1},
+    {"pointerAccelerationProfileFlat", PT_BOOL, 0, 1, LIBINPUT_PROP_ACCEL_PROFILE_ENABLED, 8, 1},
 
     /* Natural Scrolling */
-    {"naturalScrollEnabledByDefault",       PT_INT, 0, 1, LIBINPUT_PROP_NATURAL_SCROLL_DEFAULT, 8, 0},
-    {"naturalScroll",                       PT_INT, 0, 1, LIBINPUT_PROP_NATURAL_SCROLL, 8, 0},
+    {"naturalScrollEnabledByDefault", PT_INT, 0, 1, LIBINPUT_PROP_NATURAL_SCROLL_DEFAULT, 8, 0},
+    {"naturalScroll", PT_INT, 0, 1, LIBINPUT_PROP_NATURAL_SCROLL, 8, 0},
 
     /* Horizontal scrolling */
-    {"horizontalScrolling",          PT_INT, 0, 1, LIBINPUT_PROP_HORIZ_SCROLL_ENABLED, 8, 0},
+    {"horizontalScrolling", PT_INT, 0, 1, LIBINPUT_PROP_HORIZ_SCROLL_ENABLED, 8, 0},
 
     /* Two-Finger Scrolling */
-    {"supportsScrollTwoFinger",             PT_INT, 0, 1, LIBINPUT_PROP_SCROLL_METHODS_AVAILABLE, 8, 0},
-    {"scrollTwoFingerEnabledByDefault",     PT_INT, 0, 1, LIBINPUT_PROP_SCROLL_METHOD_ENABLED_DEFAULT, 8, 0},
-    {"scrollTwoFinger",                     PT_INT, 0, 1, LIBINPUT_PROP_SCROLL_METHOD_ENABLED, 8, 0},
+    {"supportsScrollTwoFinger", PT_INT, 0, 1, LIBINPUT_PROP_SCROLL_METHODS_AVAILABLE, 8, 0},
+    {"scrollTwoFingerEnabledByDefault", PT_INT, 0, 1, LIBINPUT_PROP_SCROLL_METHOD_ENABLED_DEFAULT, 8, 0},
+    {"scrollTwoFinger", PT_INT, 0, 1, LIBINPUT_PROP_SCROLL_METHOD_ENABLED, 8, 0},
 
     /* Edge Scrolling */
-    {"supportsScrollEdge",                  PT_INT, 0, 1, LIBINPUT_PROP_SCROLL_METHODS_AVAILABLE, 8, 1},
-    {"scrollEdgeEnabledByDefault",          PT_INT, 0, 1, LIBINPUT_PROP_SCROLL_METHOD_ENABLED_DEFAULT, 8, 1},
-    {"scrollEdge",                          PT_INT, 0, 1, LIBINPUT_PROP_SCROLL_METHOD_ENABLED, 8, 1},
+    {"supportsScrollEdge", PT_INT, 0, 1, LIBINPUT_PROP_SCROLL_METHODS_AVAILABLE, 8, 1},
+    {"scrollEdgeEnabledByDefault", PT_INT, 0, 1, LIBINPUT_PROP_SCROLL_METHOD_ENABLED_DEFAULT, 8, 1},
+    {"scrollEdge", PT_INT, 0, 1, LIBINPUT_PROP_SCROLL_METHOD_ENABLED, 8, 1},
 
     /* scroll on button */
-    {"supportsScrollOnButtonDown",          PT_INT, 0, 1, LIBINPUT_PROP_SCROLL_METHODS_AVAILABLE, 8, 2},
-    {"scrollOnButtonDownEnabledByDefault",  PT_INT, 0, 1, LIBINPUT_PROP_SCROLL_METHOD_ENABLED_DEFAULT, 8, 2},
-    {"scrollOnButtonDown",                  PT_INT, 0, 1, LIBINPUT_PROP_SCROLL_METHOD_ENABLED, 8, 2},
+    {"supportsScrollOnButtonDown", PT_INT, 0, 1, LIBINPUT_PROP_SCROLL_METHODS_AVAILABLE, 8, 2},
+    {"scrollOnButtonDownEnabledByDefault", PT_INT, 0, 1, LIBINPUT_PROP_SCROLL_METHOD_ENABLED_DEFAULT, 8, 2},
+    {"scrollOnButtonDown", PT_INT, 0, 1, LIBINPUT_PROP_SCROLL_METHOD_ENABLED, 8, 2},
 
     /* Scroll Button for scroll on button Down */
-    {"defaultScrollButton",                 PT_INT, 0, INT_MAX, LIBINPUT_PROP_SCROLL_BUTTON_DEFAULT, 32, 0},
-    {"scrollButton",                        PT_INT, 0, INT_MAX, LIBINPUT_PROP_SCROLL_BUTTON, 32, 0},
+    {"defaultScrollButton", PT_INT, 0, INT_MAX, LIBINPUT_PROP_SCROLL_BUTTON_DEFAULT, 32, 0},
+    {"scrollButton", PT_INT, 0, INT_MAX, LIBINPUT_PROP_SCROLL_BUTTON, 32, 0},
 
     /* Click Methods */
-    {"supportsClickMethodAreas",            PT_INT, 0, 1, LIBINPUT_PROP_CLICK_METHODS_AVAILABLE, 8, 0},
-    {"defaultClickMethodAreas",             PT_INT, 0, 1, LIBINPUT_PROP_CLICK_METHOD_ENABLED_DEFAULT, 8, 0},
-    {"clickMethodAreas",                    PT_INT, 0, 1, LIBINPUT_PROP_CLICK_METHOD_ENABLED, 8, 0},
+    {"supportsClickMethodAreas", PT_INT, 0, 1, LIBINPUT_PROP_CLICK_METHODS_AVAILABLE, 8, 0},
+    {"defaultClickMethodAreas", PT_INT, 0, 1, LIBINPUT_PROP_CLICK_METHOD_ENABLED_DEFAULT, 8, 0},
+    {"clickMethodAreas", PT_INT, 0, 1, LIBINPUT_PROP_CLICK_METHOD_ENABLED, 8, 0},
 
-    {"supportsClickMethodClickfinger",      PT_INT, 0, 1, LIBINPUT_PROP_CLICK_METHODS_AVAILABLE, 8, 1},
-    {"defaultClickMethodClickfinger",       PT_INT, 0, 1, LIBINPUT_PROP_CLICK_METHOD_ENABLED_DEFAULT, 8, 1},
-    {"clickMethodClickfinger",              PT_INT, 0, 1, LIBINPUT_PROP_CLICK_METHOD_ENABLED, 8, 1},
+    {"supportsClickMethodClickfinger", PT_INT, 0, 1, LIBINPUT_PROP_CLICK_METHODS_AVAILABLE, 8, 1},
+    {"defaultClickMethodClickfinger", PT_INT, 0, 1, LIBINPUT_PROP_CLICK_METHOD_ENABLED_DEFAULT, 8, 1},
+    {"clickMethodClickfinger", PT_INT, 0, 1, LIBINPUT_PROP_CLICK_METHOD_ENABLED, 8, 1},
 
     /* libinput doesn't have a separate toggle for horiz scrolling */
-    { nullptr, PT_INT, 0, 0, nullptr, 0, 0 }
-};
+    {nullptr, PT_INT, 0, 0, nullptr, 0, 0}};
 
 Qt::MouseButtons maskBtns(Display *display, XIButtonClassInfo *buttonInfo)
 {
@@ -157,9 +155,9 @@ Qt::MouseButtons maskBtns(Display *display, XIButtonClassInfo *buttonInfo)
     return buttons;
 }
 
-LibinputTouchpad::LibinputTouchpad(Display *display, int deviceId):
-    LibinputCommon(),
-    XlibTouchpad(display, deviceId)
+LibinputTouchpad::LibinputTouchpad(Display *display, int deviceId)
+    : LibinputCommon()
+    , XlibTouchpad(display, deviceId)
 {
     loadSupportedProperties(libinputProperties);
 
@@ -171,12 +169,12 @@ LibinputTouchpad::LibinputTouchpad(Display *display, int deviceId):
         XIAnyClassInfo *classInfo = deviceInfo->classes[i];
 
         if (classInfo->type == XIButtonClass) {
-            XIButtonClassInfo *btnInfo = (XIButtonClassInfo*) classInfo;
+            XIButtonClassInfo *btnInfo = (XIButtonClassInfo *)classInfo;
             m_supportedButtons.avail = true;
             m_supportedButtons.set(maskBtns(m_display, btnInfo));
         }
         if (classInfo->type == XITouchClass) {
-            XITouchClassInfo *touchInfo = (XITouchClassInfo*) classInfo;
+            XITouchClassInfo *touchInfo = (XITouchClassInfo *)classInfo;
             m_tapFingerCount.avail = true;
             m_tapFingerCount.set(touchInfo->num_touches);
         }
@@ -268,26 +266,11 @@ bool LibinputTouchpad::applyConfig()
 {
     QVector<QString> msgs;
 
-    msgs << valueWriter(m_enabled)
-         << valueWriter(m_tapToClick)
-         << valueWriter(m_lrmTapButtonMap)
-         << valueWriter(m_lmrTapButtonMap)
-         << valueWriter(m_tapAndDrag)
-         << valueWriter(m_tapDragLock)
-         << valueWriter(m_leftHanded)
-         << valueWriter(m_disableWhileTyping)
-         << valueWriter(m_middleEmulation)
-         << valueWriter(m_pointerAcceleration)
-         << valueWriter(m_pointerAccelerationProfileFlat)
-         << valueWriter(m_pointerAccelerationProfileAdaptive)
-         << valueWriter(m_naturalScroll)
-         << valueWriter(m_horizontalScrolling)
-         << valueWriter(m_isScrollTwoFinger)
-         << valueWriter(m_isScrollEdge)
-         << valueWriter(m_isScrollOnButtonDown)
-         << valueWriter(m_scrollButton)
-         << valueWriter(m_clickMethodAreas)
-         << valueWriter(m_clickMethodClickfinger);
+    msgs << valueWriter(m_enabled) << valueWriter(m_tapToClick) << valueWriter(m_lrmTapButtonMap) << valueWriter(m_lmrTapButtonMap) << valueWriter(m_tapAndDrag)
+         << valueWriter(m_tapDragLock) << valueWriter(m_leftHanded) << valueWriter(m_disableWhileTyping) << valueWriter(m_middleEmulation)
+         << valueWriter(m_pointerAcceleration) << valueWriter(m_pointerAccelerationProfileFlat) << valueWriter(m_pointerAccelerationProfileAdaptive)
+         << valueWriter(m_naturalScroll) << valueWriter(m_horizontalScrolling) << valueWriter(m_isScrollTwoFinger) << valueWriter(m_isScrollEdge)
+         << valueWriter(m_isScrollOnButtonDown) << valueWriter(m_scrollButton) << valueWriter(m_clickMethodAreas) << valueWriter(m_clickMethodClickfinger);
 
     bool success = true;
     QString error_msg;
@@ -304,7 +287,7 @@ bool LibinputTouchpad::applyConfig()
     }
 
     if (!success) {
-        qCCritical(KCM_TOUCHPAD) <<  error_msg;
+        qCCritical(KCM_TOUCHPAD) << error_msg;
     }
 
     flush();
@@ -377,8 +360,7 @@ XcbAtom &LibinputTouchpad::touchpadOffAtom()
     return *m_atoms[QLatin1String(LIBINPUT_PROP_SENDEVENTS_ENABLED)].data();
 }
 
-template<typename T>
-bool LibinputTouchpad::valueLoader(Prop<T> &prop)
+template<typename T> bool LibinputTouchpad::valueLoader(Prop<T> &prop)
 {
     const Parameter *p = findParameter(QString::fromLatin1(prop.name));
 
@@ -403,8 +385,7 @@ bool LibinputTouchpad::valueLoader(Prop<T> &prop)
     return true;
 }
 
-template<typename T>
-QString LibinputTouchpad::valueWriter(const Prop<T> &prop)
+template<typename T> QString LibinputTouchpad::valueWriter(const Prop<T> &prop)
 {
     const Parameter *p = findParameter(QString::fromLatin1(prop.name));
 
@@ -412,7 +393,7 @@ QString LibinputTouchpad::valueWriter(const Prop<T> &prop)
         return QString();
     }
 
-    bool error = !setParameter( p, prop.val);
+    bool error = !setParameter(p, prop.val);
     if (error) {
         qCCritical(KCM_TOUCHPAD) << "Cannot set property " + QString::fromLatin1(prop.name);
         return QStringLiteral("Cannot set property ") + QString::fromLatin1(prop.name);

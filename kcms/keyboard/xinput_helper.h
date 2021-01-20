@@ -16,7 +16,6 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #ifndef XINPUT_HELPER_H_
 #define XINPUT_HELPER_H_
 
@@ -27,30 +26,31 @@
 
 class UdevDeviceNotifier;
 
-class XInputEventNotifier: public XEventNotifier {
-	Q_OBJECT
+class XInputEventNotifier : public XEventNotifier
+{
+    Q_OBJECT
 
 public:
-	XInputEventNotifier(QWidget* parent=nullptr);
+    XInputEventNotifier(QWidget *parent = nullptr);
 
-	void start() override;
-	void stop() override;
+    void start() override;
+    void stop() override;
 
-	int registerForNewDeviceEvent(Display* dpy);
+    int registerForNewDeviceEvent(Display *dpy);
 
 Q_SIGNALS:
-	void newKeyboardDevice();
-	void newPointerDevice();
+    void newKeyboardDevice();
+    void newPointerDevice();
 
 protected:
-	bool processOtherEvents(xcb_generic_event_t* event) override;
+    bool processOtherEvents(xcb_generic_event_t *event) override;
 
 private:
-	int getNewDeviceEventType(xcb_generic_event_t* event);
+    int getNewDeviceEventType(xcb_generic_event_t *event);
 
-	int xinputEventType;
-	Display* display;
-	UdevDeviceNotifier *udevNotifier;
+    int xinputEventType;
+    Display *display;
+    UdevDeviceNotifier *udevNotifier;
 };
 
 #endif /* XINPUT_HELPER_H_ */

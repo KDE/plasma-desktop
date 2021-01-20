@@ -19,12 +19,12 @@
 #ifndef XLIBNOTIFICATIONS_H
 #define XLIBNOTIFICATIONS_H
 
-#include <QX11Info>
-#include <QWidget>
 #include <QSocketNotifier>
+#include <QWidget>
+#include <QX11Info>
 
-#include <xcb/xcb.h>
 #include <X11/Xlib.h>
+#include <xcb/xcb.h>
 
 class XlibNotifications : public QObject
 {

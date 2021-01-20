@@ -25,17 +25,18 @@
 #include "ui_MainConfigurationWidgetBase.h"
 
 #include "ActivitiesTab.h"
-#include "SwitchingTab.h"
 #include "PrivacyTab.h"
+#include "SwitchingTab.h"
 #include "kactivitiesdata.h"
 
 K_PLUGIN_FACTORY(ActivitiesKCMFactory, registerPlugin<MainConfigurationWidget>(); registerPlugin<KActivitiesData>();)
 
-class MainConfigurationWidget::Private : public Ui::MainConfigurationWidgetBase {
+class MainConfigurationWidget::Private : public Ui::MainConfigurationWidgetBase
+{
 public:
-    ActivitiesTab * tabActivities;
-    SwitchingTab * tabSwitching;
-    PrivacyTab * tabPrivacy;
+    ActivitiesTab *tabActivities;
+    SwitchingTab *tabSwitching;
+    PrivacyTab *tabPrivacy;
 };
 
 MainConfigurationWidget::MainConfigurationWidget(QWidget *parent, QVariantList args)
@@ -45,14 +46,14 @@ MainConfigurationWidget::MainConfigurationWidget(QWidget *parent, QVariantList a
     d->setupUi(this);
 
     d->tabs->insertTab(0, d->tabActivities = new ActivitiesTab(d->tabs), i18n("Activities"));
-    d->tabs->insertTab(1, d->tabSwitching  = new SwitchingTab(d->tabs), i18n("Switching"));
-    d->tabs->insertTab(2, d->tabPrivacy    = new PrivacyTab(d->tabs), i18n("Privacy"));
-    
+    d->tabs->insertTab(1, d->tabSwitching = new SwitchingTab(d->tabs), i18n("Switching"));
+    d->tabs->insertTab(2, d->tabPrivacy = new PrivacyTab(d->tabs), i18n("Privacy"));
+
     addConfig(d->tabPrivacy->pluginConfig(), d->tabPrivacy);
     addConfig(d->tabSwitching->mainConfig(), d->tabSwitching);
-    
-    connect (d->tabPrivacy, &PrivacyTab::blackListModelChanged, this, &MainConfigurationWidget::unmanagedWidgetChangeState);
-    connect (d->tabPrivacy, &PrivacyTab::blackListModelDefaulted, this, &MainConfigurationWidget::unmanagedWidgetDefaultState);
+
+    connect(d->tabPrivacy, &PrivacyTab::blackListModelChanged, this, &MainConfigurationWidget::unmanagedWidgetChangeState);
+    connect(d->tabPrivacy, &PrivacyTab::blackListModelDefaulted, this, &MainConfigurationWidget::unmanagedWidgetDefaultState);
 }
 
 MainConfigurationWidget::~MainConfigurationWidget()
@@ -62,21 +63,21 @@ MainConfigurationWidget::~MainConfigurationWidget()
 void MainConfigurationWidget::defaults()
 {
     KCModule::defaults();
-    
+
     d->tabPrivacy->defaults();
 }
 
 void MainConfigurationWidget::load()
 {
     KCModule::load();
-    
+
     d->tabPrivacy->load();
 }
 
 void MainConfigurationWidget::save()
 {
     KCModule::save();
-    
+
     d->tabPrivacy->save();
 }
 

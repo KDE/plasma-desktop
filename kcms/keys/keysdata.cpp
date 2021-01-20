@@ -21,24 +21,24 @@
 #include "keysdata.h"
 
 #include <KGlobalAccel>
-#include <kglobalaccel_interface.h>
-#include <kglobalaccel_component_interface.h>
 #include <KGlobalShortcutInfo>
 #include <KPluginFactory>
 #include <KStandardShortcut>
+#include <kglobalaccel_component_interface.h>
+#include <kglobalaccel_interface.h>
 
 // Short timeout, rather fail than block isDefaults for to long which needs to be sync
-constexpr int dbusTimeout = 5; //milliseconds
+constexpr int dbusTimeout = 5; // milliseconds
 
 KeysData::KeysData(QObject *parent, const QVariantList &args)
 {
-   Q_UNUSED(parent)
-   Q_UNUSED(args)
+    Q_UNUSED(parent)
+    Q_UNUSED(args)
 }
 
 bool KeysData::isDefaults() const
 {
-   for (int i = KStandardShortcut::AccelNone + 1; i < KStandardShortcut::StandardShortcutCount; ++i) {
+    for (int i = KStandardShortcut::AccelNone + 1; i < KStandardShortcut::StandardShortcutCount; ++i) {
         const auto id = static_cast<KStandardShortcut::StandardShortcut>(i);
         const QList<QKeySequence> activeShortcuts = KStandardShortcut::shortcut(id);
         const QList<QKeySequence> defaultShortcuts = KStandardShortcut::hardcodedDefaultShortcut(id);
@@ -48,8 +48,7 @@ bool KeysData::isDefaults() const
     }
 
     // need to do this blocking
-    KGlobalAccelInterface globalAccelInterface(QStringLiteral("org.kde.kglobalaccel"),
-        QStringLiteral("/kglobalaccel"), QDBusConnection::sessionBus());
+    KGlobalAccelInterface globalAccelInterface(QStringLiteral("org.kde.kglobalaccel"), QStringLiteral("/kglobalaccel"), QDBusConnection::sessionBus());
     globalAccelInterface.setTimeout(dbusTimeout);
     if (!globalAccelInterface.isValid()) {
         return true;
@@ -61,8 +60,7 @@ bool KeysData::isDefaults() const
     }
     const auto components = componentsCall.value();
     for (const auto &componentPath : components) {
-        KGlobalAccelComponentInterface component(globalAccelInterface.service(), componentPath.path(),
-            QDBusConnection::sessionBus());
+        KGlobalAccelComponentInterface component(globalAccelInterface.service(), componentPath.path(), QDBusConnection::sessionBus());
         component.setTimeout(dbusTimeout);
         if (!component.isValid()) {
             return true;
@@ -81,6 +79,5 @@ bool KeysData::isDefaults() const
     }
     return true;
 }
-
 
 #include "keysdata.moc"

@@ -18,22 +18,21 @@
 
 #include "globalaccelmodel.h"
 
-#include <QIcon>
 #include <QDBusPendingCallWatcher>
+#include <QIcon>
 
 #include <KConfigGroup>
 #include <KGlobalAccel>
-#include <kglobalaccel_interface.h>
-#include <kglobalaccel_component_interface.h>
 #include <KGlobalShortcutInfo>
 #include <KLocalizedString>
 #include <KService>
 #include <KServiceTypeTrader>
+#include <kglobalaccel_component_interface.h>
+#include <kglobalaccel_interface.h>
 
 #include "kcmkeys_debug.h"
 
-static QStringList buildActionId(const QString &componentUnique, const QString &componentFriendly,
-                              const QString &actionUnique, const QString &actionFriendly)
+static QStringList buildActionId(const QString &componentUnique, const QString &componentFriendly, const QString &actionUnique, const QString &actionFriendly)
 {
     QStringList actionId{"", "", "", ""};
     actionId[KGlobalAccel::ComponentUnique] = componentUnique;
@@ -43,10 +42,9 @@ static QStringList buildActionId(const QString &componentUnique, const QString &
     return actionId;
 }
 
-
 GlobalAccelModel::GlobalAccelModel(KGlobalAccelInterface *interface, QObject *parent)
- : BaseModel(parent)
- , m_globalAccelInterface{interface}
+    : BaseModel(parent)
+    , m_globalAccelInterface{interface}
 {
 }
 
@@ -65,8 +63,8 @@ void GlobalAccelModel::load()
     }
     beginResetModel();
     m_components.clear();
-    auto componentsWatcher = new  QDBusPendingCallWatcher( m_globalAccelInterface->allComponents());
-    connect(componentsWatcher, &QDBusPendingCallWatcher::finished, this, [this] (QDBusPendingCallWatcher *componentsWatcher) {
+    auto componentsWatcher = new QDBusPendingCallWatcher(m_globalAccelInterface->allComponents());
+    connect(componentsWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *componentsWatcher) {
         QDBusPendingReply<QList<QDBusObjectPath>> componentsReply = *componentsWatcher;
         componentsWatcher->deleteLater();
         if (componentsReply.isError()) {
@@ -81,7 +79,7 @@ void GlobalAccelModel::load()
             const QString path = componentPath.path();
             KGlobalAccelComponentInterface component(m_globalAccelInterface->service(), path, m_globalAccelInterface->connection());
             auto watcher = new QDBusPendingCallWatcher(component.allShortcutInfos());
-            connect(watcher, &QDBusPendingCallWatcher::finished, this, [path, pendingCalls, this] (QDBusPendingCallWatcher *watcher){
+            connect(watcher, &QDBusPendingCallWatcher::finished, this, [path, pendingCalls, this](QDBusPendingCallWatcher *watcher) {
                 QDBusPendingReply<QList<KGlobalShortcutInfo>> reply = *watcher;
                 if (reply.isError()) {
                     genericErrorOccured(QStringLiteral("Error while calling allShortCutInfos of") + path, reply.error());
@@ -93,7 +91,7 @@ void GlobalAccelModel::load()
                     QCollator collator;
                     collator.setCaseSensitivity(Qt::CaseInsensitive);
                     collator.setNumericMode(true);
-                    std::sort(m_components.begin(), m_components.end(), [&](const Component &c1, const Component &c2){
+                    std::sort(m_components.begin(), m_components.end(), [&](const Component &c1, const Component &c2) {
                         return c1.type != c2.type ? c1.type < c2.type : collator.compare(c1.displayName, c2.displayName) < 0;
                     });
                     endResetModel();
@@ -112,22 +110,20 @@ Component GlobalAccelModel::loadComponent(const QList<KGlobalShortcutInfo> &info
     if (!service) {
         // Do we have an application with that name?
         const KService::List apps = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
-                QStringLiteral("Name == '%1' or Name == '%2'").arg(componentUnique, componentFriendly));
-        if(!apps.isEmpty()) {
+                                                                      QStringLiteral("Name == '%1' or Name == '%2'").arg(componentUnique, componentFriendly));
+        if (!apps.isEmpty()) {
             service = apps[0];
         }
     }
     const QString type = service && service->isApplication() ? i18n("Applications") : i18n("System Services");
     QString icon;
 
-    static const QHash<QString, QString> hardCodedIcons = {
-        {"ActivityManager", "preferences-desktop-activities"},
-        {"KDE Keyboard Layout Switcher", "input-keyboard"},
-        {"krunner.desktop", "krunner"},
-        {"org_kde_powerdevil", "preferences-system-power-management"}
-    };
+    static const QHash<QString, QString> hardCodedIcons = {{"ActivityManager", "preferences-desktop-activities"},
+                                                           {"KDE Keyboard Layout Switcher", "input-keyboard"},
+                                                           {"krunner.desktop", "krunner"},
+                                                           {"org_kde_powerdevil", "preferences-system-power-management"}};
 
-    if(service && !service->icon().isEmpty()) {
+    if (service && !service->icon().isEmpty()) {
         icon = service->icon();
     } else if (hardCodedIcons.contains(componentUnique)) {
         icon = hardCodedIcons[componentUnique];
@@ -143,7 +139,7 @@ Component GlobalAccelModel::loadComponent(const QList<KGlobalShortcutInfo> &info
         action.id = actionUnique;
         action.displayName = actionFriendly;
         const QList<QKeySequence> defaultShortcuts = actionInfo.defaultKeys();
-        for (const auto  &keySequence : defaultShortcuts) {
+        for (const auto &keySequence : defaultShortcuts) {
             if (!keySequence.isEmpty()) {
                 action.defaultShortcuts.insert(keySequence);
             }
@@ -160,7 +156,7 @@ Component GlobalAccelModel::loadComponent(const QList<KGlobalShortcutInfo> &info
     QCollator collator;
     collator.setCaseSensitivity(Qt::CaseInsensitive);
     collator.setNumericMode(true);
-    std::sort(c.actions.begin(), c.actions.end(), [&] (const Action &s1, const Action &s2) {
+    std::sort(c.actions.begin(), c.actions.end(), [&](const Action &s1, const Action &s2) {
         return collator.compare(s1.displayName, s2.displayName) < 0;
     });
     return c;
@@ -173,11 +169,10 @@ void GlobalAccelModel::save()
             removeComponent(*it);
             continue;
         }
-        for (auto& action : it->actions) {
+        for (auto &action : it->actions) {
             if (action.initialShortcuts != action.activeShortcuts) {
-                const QStringList actionId = buildActionId(it->id, it->displayName,
-                        action.id, action.displayName);
-                //operator int of QKeySequence
+                const QStringList actionId = buildActionId(it->id, it->displayName, action.id, action.displayName);
+                // operator int of QKeySequence
                 QList<int> keys(action.activeShortcuts.cbegin(), action.activeShortcuts.cend());
                 qCDebug(KCMKEYS) << "Saving" << actionId << action.activeShortcuts << keys;
                 auto reply = m_globalAccelInterface->setForeignShortcut(actionId, keys);
@@ -188,7 +183,9 @@ void GlobalAccelModel::save()
                         qCCritical(KCMKEYS) << reply.error().name() << reply.error().message();
                     }
                     emit errorOccured(i18nc("%1 is the name of the component, %2 is the action for which saving failed",
-                        "Error while saving shortcut %1: %2", it->displayName, it->displayName));
+                                            "Error while saving shortcut %1: %2",
+                                            it->displayName,
+                                            it->displayName));
                 } else {
                     action.initialShortcuts = action.activeShortcuts;
                 }
@@ -199,11 +196,11 @@ void GlobalAccelModel::save()
 
 void GlobalAccelModel::exportToConfig(const KConfigBase &config)
 {
-    for (const auto& component : qAsConst(m_components)) {
+    for (const auto &component : qAsConst(m_components)) {
         if (component.checked) {
             KConfigGroup mainGroup(&config, component.id);
             KConfigGroup group(&mainGroup, "Global Shortcuts");
-            for (const auto& action : component.actions) {
+            for (const auto &action : component.actions) {
                 const QList<QKeySequence> shortcutsList(action.activeShortcuts.cbegin(), action.activeShortcuts.cend());
                 group.writeEntry(action.id, QKeySequence::listToString(shortcutsList));
             }
@@ -215,7 +212,7 @@ void GlobalAccelModel::importConfig(const KConfigBase &config)
 {
     const auto groupList = config.groupList();
     for (const auto &componentGroupName : groupList) {
-        auto component = std::find_if(m_components.begin(), m_components.end(), [&] (const Component &c) {
+        auto component = std::find_if(m_components.begin(), m_components.end(), [&](const Component &c) {
             return c.id == componentGroupName;
         });
         if (component == m_components.end()) {
@@ -229,8 +226,8 @@ void GlobalAccelModel::importConfig(const KConfigBase &config)
         }
         KConfigGroup shortcutsGroup(&componentGroup, "Global Shortcuts");
         const QStringList keys = shortcutsGroup.keyList();
-        for (const auto& key : keys) {
-            auto action = std::find_if(component->actions.begin(), component->actions.end(), [&] (const Action &a) {
+        for (const auto &key : keys) {
+            auto action = std::find_if(component->actions.begin(), component->actions.end(), [&](const Action &a) {
                 return a.id == key;
             });
             if (action == component->actions.end()) {
@@ -241,7 +238,7 @@ void GlobalAccelModel::importConfig(const KConfigBase &config)
             const QSet<QKeySequence> shortcutsSet(shortcuts.cbegin(), shortcuts.cend());
             if (shortcutsSet != action->activeShortcuts) {
                 action->activeShortcuts = shortcutsSet;
-                const QModelIndex i = index(action - component->actions.begin(), 0, index(component-m_components.begin(), 0));
+                const QModelIndex i = index(action - component->actions.begin(), 0, index(component - m_components.begin(), 0));
                 Q_EMIT dataChanged(i, i, {CustomShortcutsRole, ActiveShortcutsRole});
             }
         }
@@ -257,8 +254,8 @@ void GlobalAccelModel::addApplication(const QString &desktopFileName, const QStr
     QCollator collator;
     collator.setCaseSensitivity(Qt::CaseInsensitive);
     collator.setNumericMode(true);
-    auto pos = std::lower_bound(m_components.begin(), m_components.end(), displayName, [&] (const Component &c, const QString &name) {
-        return c.type != i18n("System Services") &&  collator.compare(c.displayName, name) < 0;
+    auto pos = std::lower_bound(m_components.begin(), m_components.end(), displayName, [&](const Component &c, const QString &name) {
+        return c.type != i18n("System Services") && collator.compare(c.displayName, name) < 0;
     });
     auto watcher = new QDBusPendingCallWatcher(m_globalAccelInterface->getComponent(desktopFileName));
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [=] {
@@ -282,7 +279,7 @@ void GlobalAccelModel::addApplication(const QString &desktopFileName, const QStr
                 Q_EMIT errorOccured(i18nc("%1 is the name of an application", "Error while adding %1, it seems it has no actions."));
             }
             qCDebug(KCMKEYS) << "inserting at " << pos - m_components.begin();
-            beginInsertRows(QModelIndex(), pos - m_components.begin(),  pos - m_components.begin());
+            beginInsertRows(QModelIndex(), pos - m_components.begin(), pos - m_components.begin());
             auto c = loadComponent(infoReply.value());
             m_components.insert(pos, c);
             endInsertRows();
@@ -307,7 +304,7 @@ void GlobalAccelModel::removeComponent(const Component &component)
         genericErrorOccured(QStringLiteral("Error while calling cleanUp of component") + uniqueName, cleanUpReply.error());
         return;
     }
-    auto it =  std::find_if(m_components.begin(), m_components.end(), [&](const Component &c) {
+    auto it = std::find_if(m_components.begin(), m_components.end(), [&](const Component &c) {
         return c.id == uniqueName;
     });
     const int row = it - m_components.begin();

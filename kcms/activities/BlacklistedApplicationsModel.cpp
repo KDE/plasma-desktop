@@ -20,13 +20,13 @@
 
 #include "BlacklistedApplicationsModel.h"
 
+#include <QDebug>
 #include <QList>
 #include <QSet>
 #include <QSqlDatabase>
-#include <QSqlQuery>
 #include <QSqlError>
+#include <QSqlQuery>
 #include <QVariant>
-#include <QDebug>
 
 #include <KService>
 
@@ -36,7 +36,8 @@
 
 #include "definitions.h"
 
-class BlacklistedApplicationsModel::Private {
+class BlacklistedApplicationsModel::Private
+{
 public:
     struct ApplicationData {
         QString name;
@@ -47,7 +48,7 @@ public:
 
     QList<ApplicationData> applications;
     QSqlDatabase database;
-    
+
     KActivityManagerdPluginsSettings *pluginConfig;
     bool enabled;
 };
@@ -57,10 +58,8 @@ BlacklistedApplicationsModel::BlacklistedApplicationsModel(QObject *parent)
 {
     d->enabled = false;
     d->pluginConfig = new KActivityManagerdPluginsSettings;
-    
-    const QString path
-        = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
-          + QStringLiteral("/kactivitymanagerd/resources/database");
+
+    const QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/kactivitymanagerd/resources/database");
     d->database = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), QStringLiteral("plugins_sqlite_db_resources"));
     d->database.setDatabaseName(path);
 }
@@ -71,12 +70,7 @@ BlacklistedApplicationsModel::~BlacklistedApplicationsModel()
 
 QHash<int, QByteArray> BlacklistedApplicationsModel::roleNames() const
 {
-    return {
-        { ApplicationIdRole, "name"},
-        { Qt::DecorationRole, "icon"},
-        { Qt::DisplayRole, "title"},
-        { BlockedApplicationRole, "blocked" }
-    };
+    return {{ApplicationIdRole, "name"}, {Qt::DecorationRole, "icon"}, {Qt::DisplayRole, "title"}, {BlockedApplicationRole, "blocked"}};
 }
 
 void BlacklistedApplicationsModel::load()
@@ -123,20 +117,14 @@ void BlacklistedApplicationsModel::load()
 
         beginInsertRows(QModelIndex(), 0, applications.length() - 1);
 
-        foreach(const auto & name, applications)
-        {
+        foreach (const auto &name, applications) {
             const auto service = KService::serviceByDesktopName(name);
             const auto blocked = blockedApplications.contains(name);
 
             if (service) {
-                d->applications << Private::ApplicationData{
-                                       name,
-                                       service->name(),
-                                       service->icon(),
-                                       blocked
-                                   };
+                d->applications << Private::ApplicationData{name, service->name(), service->icon(), blocked};
             } else {
-                d->applications << Private::ApplicationData{ name, name, QString(), blocked };
+                d->applications << Private::ApplicationData{name, name, QString(), blocked};
             }
         }
 
@@ -156,9 +144,8 @@ void BlacklistedApplicationsModel::defaults()
         d->applications[i].blocked = false;
     }
 
-    dataChanged(QAbstractListModel::index(0),
-                QAbstractListModel::index(rowCount() - 1));
-    
+    dataChanged(QAbstractListModel::index(0), QAbstractListModel::index(rowCount() - 1));
+
     emit defaulted(true);
 }
 
@@ -169,8 +156,7 @@ void BlacklistedApplicationsModel::toggleApplicationBlocked(int index)
     }
 
     d->applications[index].blocked = !d->applications[index].blocked;
-    dataChanged(QAbstractListModel::index(index),
-                QAbstractListModel::index(index));
+    dataChanged(QAbstractListModel::index(index), QAbstractListModel::index(index));
 
     QStringList blockedApplications;
     QStringList allowedApplications;

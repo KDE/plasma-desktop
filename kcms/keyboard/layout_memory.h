@@ -16,16 +16,15 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #ifndef LAYOUT_MEMORY_H_
 #define LAYOUT_MEMORY_H_
 
-#include <QString>
 #include <QMap>
+#include <QString>
 #include <QWidgetList> //For WId
 
-#include "x11_helper.h"
 #include "keyboard_config.h"
+#include "x11_helper.h"
 
 class LayoutMemoryPersister;
 
@@ -37,7 +36,7 @@ class LayoutMemory : public QObject
     // or in case of layout switcher popup menu to apply new layout to previous key
     QString previousLayoutMapKey;
     QList<LayoutUnit> prevLayoutList;
-    const KeyboardConfig& keyboardConfig;
+    const KeyboardConfig &keyboardConfig;
 
     void registerListeners();
     void unregisterListeners();
@@ -45,22 +44,22 @@ class LayoutMemory : public QObject
     void setCurrentLayoutFromMap();
 
 public Q_SLOTS:
-	void layoutMapChanged();
-	void layoutChanged();
-	void windowChanged(WId wId);
-	void desktopChanged(int desktop);
+    void layoutMapChanged();
+    void layoutChanged();
+    void windowChanged(WId wId);
+    void desktopChanged(int desktop);
 
 public:
-	LayoutMemory(const KeyboardConfig& keyboardConfig);
-	~LayoutMemory() override;
+    LayoutMemory(const KeyboardConfig &keyboardConfig);
+    ~LayoutMemory() override;
 
-	void configChanged();
+    void configChanged();
 
 protected:
-    //QVariant does not support long for WId so we'll use QString for key instead
+    // QVariant does not support long for WId so we'll use QString for key instead
     QMap<QString, LayoutSet> layoutMap;
 
-	friend class LayoutMemoryPersister;
+    friend class LayoutMemoryPersister;
 };
 
 #endif /* LAYOUT_MEMORY_H_ */

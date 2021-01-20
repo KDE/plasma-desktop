@@ -27,8 +27,8 @@
 
 #include "smartlauncherbackend.h"
 
-namespace SmartLauncher {
-
+namespace SmartLauncher
+{
 class Item : public QObject
 {
     Q_OBJECT
@@ -89,7 +89,6 @@ private:
     int m_progress = 0;
     bool m_progressVisible = false;
     bool m_urgent = false;
-
 };
 
 } // namespace SmartLauncher

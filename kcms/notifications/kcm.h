@@ -22,8 +22,8 @@
 
 #include <KQuickAddons/ManagedConfigModule>
 
-#include <QKeySequence>
 #include <QHash>
+#include <QKeySequence>
 
 class QAction;
 
@@ -31,7 +31,8 @@ class SourcesModel;
 class FilterProxyModel;
 class NotificationsData;
 
-namespace NotificationManager {
+namespace NotificationManager
+{
 class DoNotDisturbSettings;
 class NotificationSettings;
 class JobSettings;
@@ -52,10 +53,8 @@ class KCMNotifications : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(NotificationManager::BadgeSettings *badgeSettings READ badgeSettings CONSTANT)
     Q_PROPERTY(bool isDefaultsBehaviorSettings READ isDefaultsBehaviorSettings NOTIFY isDefaultsBehaviorSettingsChanged)
 
-    Q_PROPERTY(QKeySequence toggleDoNotDisturbShortcut
-               READ toggleDoNotDisturbShortcut
-               WRITE setToggleDoNotDisturbShortcut
-               NOTIFY toggleDoNotDisturbShortcutChanged)
+    Q_PROPERTY(
+        QKeySequence toggleDoNotDisturbShortcut READ toggleDoNotDisturbShortcut WRITE setToggleDoNotDisturbShortcut NOTIFY toggleDoNotDisturbShortcutChanged)
 
     // So it can show the respective settings module right away
     Q_PROPERTY(QString initialDesktopEntry READ initialDesktopEntry WRITE setInitialDesktopEntry NOTIFY initialDesktopEntryChanged)

@@ -22,8 +22,8 @@
 #define KIMPANEL_AGENTTYPE_H
 
 // Qt
-#include <QString>
 #include <QList>
+#include <QString>
 #include <QVariant>
 
 struct TextAttribute {
@@ -42,7 +42,8 @@ struct TextAttribute {
 struct KimpanelProperty {
     KimpanelProperty() = default;
 
-    KimpanelProperty(QString key, QString label, QString icon, QString tip, QString hint) {
+    KimpanelProperty(QString key, QString label, QString icon, QString tip, QString hint)
+    {
         this->key = key;
         this->label = label;
         this->tip = tip;
@@ -56,7 +57,8 @@ struct KimpanelProperty {
     QString tip;
     QString hint;
 
-    QVariantMap toMap() const {
+    QVariantMap toMap() const
+    {
         QVariantMap map;
         map[QStringLiteral("key")] = key;
         map[QStringLiteral("label")] = label;

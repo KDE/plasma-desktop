@@ -32,31 +32,30 @@ class ActionEditor : public QDialog
 {
     Q_OBJECT
 public:
-     explicit ActionEditor(QWidget *parent = nullptr);
+    explicit ActionEditor(QWidget *parent = nullptr);
     ~ActionEditor() override;
 
-    void setActionToEdit( ActionItem * item );
+    void setActionToEdit(ActionItem *item);
 
 public slots:
     void accept() override;
 
 private:
-    SolidActionData * actionData();
+    SolidActionData *actionData();
     QString predicateString();
 
     Ui::ActionEditor ui;
-    ActionItem * activeItem;
-    PredicateItem * topItem;
-    PredicateItem * rootItem;
-    PredicateModel * rootModel;
+    ActionItem *activeItem;
+    PredicateItem *topItem;
+    PredicateItem *rootItem;
+    PredicateModel *rootModel;
 
 private slots:
     void updatePropertyList();
     void manageControlStatus();
     void updateParameter();
     void saveParameter();
-    void setPredicate( Solid::Predicate predicate );
-
+    void setPredicate(Solid::Predicate predicate);
 };
 
 #endif

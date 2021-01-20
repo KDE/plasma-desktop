@@ -27,12 +27,11 @@ class CustomSlider : public QSlider
 
     Q_PROPERTY(double minimum READ doubleMinimum WRITE setDoubleMinimum)
     Q_PROPERTY(double maximum READ doubleMaximum WRITE setDoubleMaximum)
-    Q_PROPERTY(double value READ doubleValue WRITE setDoubleValue \
-               NOTIFY valueChanged USER true)
+    Q_PROPERTY(double value READ doubleValue WRITE setDoubleValue NOTIFY valueChanged USER true)
 
 public:
     explicit CustomSlider(QWidget *parent = nullptr);
-    
+
     void setDoubleMinimum(double);
     double doubleMinimum() const;
 
@@ -42,11 +41,11 @@ public:
     class Interpolator
     {
     public:
-        Interpolator() { }
-        virtual double absolute(double relative,
-                                double minimum, double maximum) const;
-        virtual double relative(double absolute,
-                                double minimum, double maximum) const;
+        Interpolator()
+        {
+        }
+        virtual double absolute(double relative, double minimum, double maximum) const;
+        virtual double relative(double absolute, double minimum, double maximum) const;
 
         virtual ~Interpolator();
     };
@@ -54,7 +53,9 @@ public:
     class SqrtInterpolator : public Interpolator
     {
     public:
-        SqrtInterpolator() { }
+        SqrtInterpolator()
+        {
+        }
         double absolute(double relative, double minimum, double maximum) const override;
         double relative(double absolute, double minimum, double maximum) const override;
     };
