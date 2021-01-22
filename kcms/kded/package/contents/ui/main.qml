@@ -1,5 +1,6 @@
 /*
  * Copyright 2020 Kai Uwe Broulik <kde@broulik.de>
+ * Copyright 2021 Harald Sitter <sitter@kde.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -166,6 +167,8 @@ KCM.ScrollViewKCM {
                 hoverEnabled: checkable
                 focusPolicy: Qt.ClickFocus
                 Accessible.description: i18n("Toggle automatically loading this service on startup")
+
+                // FIXME this is actually inconsistent behavior with kwin and krunner's kcms -sitter
                 onClicked: {
                     if (checkable) {
                         model.autoloadEnabled = !model.autoloadEnabled;
@@ -236,6 +239,22 @@ KCM.ScrollViewKCM {
                             case Private.KCM.Running: return i18n("Running");
                             }
                             return "";
+                        }
+                    }
+
+                    QtControls.Button {
+                        icon.name: "configure"
+                        visible: kcm.kdedRunning && hasKCM
+                        onClicked: {
+                            var filterModel = view.model
+                            var filterIndex = filterModel.index(model.index, 0);
+                            var sourceIndex = filterModel.mapToSource(filterIndex)
+                            kcm.model.showConfig(sourceIndex, delegate, Kirigami.Units.gridUnit * 22)
+                        }
+                        Accessible.name: i18nc("@action", "Configure Service")
+
+                        QtControls.ToolTip {
+                            text: parent.Accessible.name
                         }
                     }
 
