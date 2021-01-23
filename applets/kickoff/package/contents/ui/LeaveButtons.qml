@@ -48,7 +48,7 @@ Item {
                 text: model.display
                 icon.name: model.decoration
                 onClicked: {
-                    itemModel.model.trigger(index, "", "")
+                    systemFavorites.trigger(index, "", "")
                 }
             }
         }
