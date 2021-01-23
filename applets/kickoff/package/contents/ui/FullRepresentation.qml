@@ -906,7 +906,7 @@ Item {
         }
     }
     onCurrentContentViewChanged: {
-        if (keyboardNavigation.state == "RightColumn" && root.state != "search") {
+        if (keyboardNavigation.state == "RightColumn" && root.currentContentView != searchPage.item) {
             root.currentContentView.forceActiveFocus()
         }
     }
