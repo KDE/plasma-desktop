@@ -78,29 +78,17 @@ PlasmaExtras.PlasmoidHeading {
         anchors.right: parent.right
         anchors.verticalCenter: parent.verticalCenter
         anchors.rightMargin: Math.round(parent.width/1.5) + PlasmaCore.Units.gridUnit
-        PlasmaComponents.RoundButton {
-            id: avatarButton
-            visible: KQuickAddons.KCMShell.authorize("kcm_users.desktop").length > 0
 
-            flat: true
+        Kirigami.Avatar {
+            source: kuser.faceIconUrl
+            name: nameLabel.text
 
             Layout.preferredWidth: PlasmaCore.Units.gridUnit * 2
             Layout.preferredHeight: PlasmaCore.Units.gridUnit * 2
 
-            Accessible.name: nameLabel.text
-            Accessible.description: i18n("Go to user settings")
-
-            Kirigami.Avatar {
-                source: kuser.faceIconUrl
-                name: nameLabel.text
-                anchors {
-                    fill: parent
-                    margins: PlasmaCore.Units.smallSpacing
-                }
-            }
-
-            onClicked: {
-                KQuickAddons.KCMShell.openSystemSettings("kcm_users")
+            actions.main: Kirigami.Action {
+                text: i18n("Go to user settings")
+                onTriggered: KQuickAddons.KCMShell.openSystemSettings("kcm_users")
             }
 
             Keys.onPressed: {
