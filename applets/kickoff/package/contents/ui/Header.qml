@@ -81,6 +81,9 @@ PlasmaExtras.PlasmoidHeading {
 
         Kirigami.Avatar {
             id: avatarButton
+
+            activeFocusOnTab: true
+
             source: kuser.faceIconUrl
             name: nameLabel.text
 
