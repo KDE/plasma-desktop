@@ -80,6 +80,7 @@ PlasmaExtras.PlasmoidHeading {
         anchors.rightMargin: Math.round(parent.width/1.5) + PlasmaCore.Units.gridUnit
 
         Kirigami.Avatar {
+            id: avatarButton
             source: kuser.faceIconUrl
             name: nameLabel.text
 
