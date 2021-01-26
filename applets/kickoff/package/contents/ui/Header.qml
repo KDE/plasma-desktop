@@ -79,21 +79,40 @@ PlasmaExtras.PlasmoidHeading {
         anchors.right: parent.right
         anchors.verticalCenter: parent.verticalCenter
         anchors.rightMargin: Math.round(parent.width/1.5) + PlasmaCore.Units.gridUnit
-
-        Kirigami.Avatar {
+        PlasmaComponents.RoundButton {
             id: avatarButton
+            visible: KQuickAddons.KCMShell.authorize("kcm_users.desktop").length > 0
 
-            activeFocusOnTab: true
-
-            source: kuser.faceIconUrl
-            name: nameLabel.text
+            flat: true
 
             Layout.preferredWidth: PlasmaCore.Units.gridUnit * 2
             Layout.preferredHeight: PlasmaCore.Units.gridUnit * 2
 
-            actions.main: Kirigami.Action {
-                text: i18n("Go to user settings")
-                onTriggered: KQuickAddons.KCMShell.openSystemSettings("kcm_users")
+            Accessible.name: nameLabel.text
+            Accessible.description: i18n("Go to user settings")
+
+            Kirigami.Avatar {
+                source: kuser.faceIconUrl
+                name: nameLabel.text
+                anchors {
+                    fill: parent
+                    margins: PlasmaCore.Units.smallSpacing
+                }
+                // NOTE: for some reason Avatar eats touch events even though it shouldn't
+                // Ideally we'd be using Avatar but it doesn't have proper key nav yet
+                // see https://invent.kde.org/frameworks/kirigami/-/merge_requests/218
+                actions.main: Kirigami.Action {
+                    text: avatarButton.Accessible.description
+                    onTriggered: avatarButton.clicked()
+                }
+                // no keyboard nav
+                activeFocusOnTab: false
+                // ignore accessibility (done by the button)
+                Accessible.ignored: true
+            }
+
+            onClicked: {
+                KQuickAddons.KCMShell.openSystemSettings("kcm_users")
             }
 
             Keys.onPressed: {
