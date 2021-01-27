@@ -185,11 +185,12 @@ PlasmaExtras.PlasmoidHeading {
     RowLayout {
         anchors.left: parent.left
         anchors.right: parent.right
-        anchors.rightMargin: PlasmaCore.Units.gridUnit - PlasmaCore.Units.devicePixelRatio //separator width
+        anchors.rightMargin: PlasmaCore.Units.gridUnit - PlasmaCore.Units.devicePixelRatio - PlasmaCore.Units.smallSpacing //separator width
         anchors.verticalCenter: parent.verticalCenter
         anchors.leftMargin: Math.round(parent.width/3) + PlasmaCore.Units.gridUnit + header.leftInset
 
-        spacing: PlasmaCore.Units.gridUnit
+        // looks visually balanced that way
+        spacing: Math.round(PlasmaCore.Units.smallSpacing * 2.5)
 
         PlasmaComponents.TextField {
             id: queryField
