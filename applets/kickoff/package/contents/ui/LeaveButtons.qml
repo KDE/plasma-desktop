@@ -100,7 +100,7 @@ Item {
 
         // Make it look pressed while the menu is open
         checked: contextMenu.status === PlasmaComponents.DialogStatus.Open
-        onClicked: contextMenu.openRelative()
+        onPressed: contextMenu.openRelative()
 
         Keys.forwardTo: [leaveButtonRoot]
 
