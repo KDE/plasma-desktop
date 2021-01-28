@@ -30,7 +30,7 @@ Item {
     property var prettyStrings: {
         "LeftButton": i18nd("plasma_shell_org.kde.plasma.desktop", "Left-Button"),
         "RightButton": i18nd("plasma_shell_org.kde.plasma.desktop", "Right-Button"),
-        "MidButton": i18nd("plasma_shell_org.kde.plasma.desktop", "Middle-Button"),
+        "MiddleButton": i18nd("plasma_shell_org.kde.plasma.desktop", "Middle-Button"),
         "BackButton": i18nd("plasma_shell_org.kde.plasma.desktop", "Back-Button"),
         "ForwardButton": i18nd("plasma_shell_org.kde.plasma.desktop", "Forward-Button"),
 
