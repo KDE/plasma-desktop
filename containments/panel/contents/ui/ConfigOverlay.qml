@@ -252,7 +252,7 @@ MouseArea {
 
     Timer {
         id: hideTimer
-        interval: PlasmaCore.Units.longDuration * 6
+        interval: PlasmaCore.Units.longDuration
         onTriggered: tooltip.visible = false;
     }
 
