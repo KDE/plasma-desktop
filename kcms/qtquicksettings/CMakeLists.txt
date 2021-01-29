@@ -8,7 +8,7 @@ ki18n_wrap_ui(kcm_qtquicksettings_PART_SRCS kcmqtquicksettingswidget.ui)
 add_library(kcm_qtquicksettings ${kcm_qtquicksettings_PART_SRCS})
 
 target_link_libraries(kcm_qtquicksettings
-    Qt5::Widgets
+    Qt::Widgets
     KF5::WidgetsAddons
     KF5::KCMUtils
     KF5::I18n

@@ -7,12 +7,12 @@ set(trashplugin_SRCS
 
 add_library(trashplugin SHARED ${trashplugin_SRCS})
 target_link_libraries(trashplugin
-        Qt5::Core
-        Qt5::Qml
+        Qt::Core
+        Qt::Qml
         KF5::KIOCore
         KF5::KIOWidgets
         KF5::GuiAddons
-        Qt5::DBus
+        Qt::DBus
         )
 
 install(TARGETS trashplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/trash)

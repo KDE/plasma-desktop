@@ -47,10 +47,10 @@ set_target_properties(kded_keyboard PROPERTIES OUTPUT_NAME keyboard)
 kcoreaddons_desktop_to_json(kded_keyboard keyboard.desktop SERVICE_TYPES kdedmodule.desktop)
 
 target_link_libraries(kded_keyboard
-    Qt5::Concurrent
-    Qt5::Widgets
-    Qt5::X11Extras
-    Qt5::Xml
+    Qt::Concurrent
+    Qt::Widgets
+    Qt::X11Extras
+    Qt::Xml
     KF5::ConfigCore
     KF5::CoreAddons
     KF5::DBusAddons
@@ -110,10 +110,10 @@ ki18n_wrap_ui(kcm_keyboard_PART_SRCS kcm_keyboard.ui kcm_add_layout_dialog.ui kc
 add_library(kcm_keyboard MODULE ${kcm_keyboard_PART_SRCS})
 
 target_link_libraries(kcm_keyboard
-    Qt5::Concurrent
-    Qt5::Widgets
-    Qt5::X11Extras
-    Qt5::Xml
+    Qt::Concurrent
+    Qt::Widgets
+    Qt::X11Extras
+    Qt::Xml
     KF5::KCMUtils
     KF5::GlobalAccel
     KF5::I18n

@@ -8,10 +8,10 @@ install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/private/desktopco
 add_library(desktopplugin SHARED ${desktopplugin_SRCS})
 
 target_link_libraries(desktopplugin
-                      Qt5::Core
-                      Qt5::Qml
-                      Qt5::Quick
-                      Qt5::Widgets
+                      Qt::Core
+                      Qt::Qml
+                      Qt::Quick
+                      Qt::Widgets
                       KF5::Notifications)
 
 install(TARGETS desktopplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/private/desktopcontainment/desktop)

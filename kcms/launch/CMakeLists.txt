@@ -18,7 +18,7 @@ kconfig_add_kcfg_files(kcm_launchfeedback_PART_SRCS launchfeedbacksettingsbase.k
 add_library(kcm_launchfeedback MODULE ${kcm_launchfeedback_PART_SRCS})
 
 target_link_libraries(kcm_launchfeedback
-    Qt5::DBus
+    Qt::DBus
     KF5::I18n
     KF5::KCMUtils
     KF5::QuickAddons

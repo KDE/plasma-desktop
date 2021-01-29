@@ -24,7 +24,7 @@ kcmutils_generate_module_data(
 add_library(kcm_access MODULE ${kcm_access_PART_SRCS})
 
 target_link_libraries(kcm_access
-    Qt5::DBus
+    Qt::DBus
     KF5::KCMUtils
     KF5::CoreAddons
     KF5::Declarative
@@ -34,7 +34,7 @@ target_link_libraries(kcm_access
     KF5::QuickAddons
     KF5::WindowSystem
     KF5::NotifyConfig
-    Qt5::X11Extras
+    Qt::X11Extras
     ${X11_LIBRARIES}
 )
 

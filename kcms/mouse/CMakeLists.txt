@@ -37,8 +37,8 @@ add_executable(kapplymousetheme
 
 target_link_libraries(kapplymousetheme
     ${backend_LIBS}
-    Qt5::Gui
-    Qt5::DBus
+    Qt::Gui
+    Qt::DBus
     KF5::CoreAddons
     KF5::ConfigCore
     KF5::I18n
@@ -76,8 +76,8 @@ target_link_libraries(kcm_mouse
     KF5::Declarative
     PW::KWorkspace
 
-    Qt5::DBus
-    Qt5::QuickWidgets
+    Qt::DBus
+    Qt::QuickWidgets
 )
 
 install(TARGETS kcm_mouse  DESTINATION ${KDE_INSTALL_PLUGINDIR} )

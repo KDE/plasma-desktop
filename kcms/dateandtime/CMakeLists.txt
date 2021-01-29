@@ -11,7 +11,7 @@ qt5_add_dbus_interface(kcm_clock_PART_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/timedated
 add_library(kcm_clock MODULE ${kcm_clock_PART_SRCS})
 
 target_link_libraries(kcm_clock
-    Qt5::DBus
+    Qt::DBus
     KF5::ItemViews
     KF5::AuthCore
     KF5::KCMUtils

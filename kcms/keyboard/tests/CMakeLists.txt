@@ -4,11 +4,11 @@ macro(KEYBOARD_DAEMON_UNIT_TESTS _testname)
                ecm_mark_as_test(${_testname}_test)
                add_test(NAME kcm-keyboard-${_testname} COMMAND ${_testname}_test)
                target_link_libraries(${_testname}_test
-                                     Qt5::Concurrent
-                                     Qt5::Widgets
-                                     Qt5::X11Extras
-                                     Qt5::Xml
-                                     Qt5::Test
+                                     Qt::Concurrent
+                                     Qt::Widgets
+                                     Qt::X11Extras
+                                     Qt::Xml
+                                     Qt::Test
                                      KF5::I18n
                                      KF5::WindowSystem
                                      ${X11_Xkbfile_LIB}
@@ -24,12 +24,12 @@ ecm_mark_nongui_executable(flags_test)
 ecm_mark_as_test(flags_test)
 add_test(NAME kcm-keyboard-flags_test COMMAND flags_test)
 target_link_libraries(flags_test
-                      Qt5::Concurrent
-                      Qt5::X11Extras
-                      Qt5::Xml
-                      Qt5::Test
-                      Qt5::DBus
-                      Qt5::Widgets
+                      Qt::Concurrent
+                      Qt::X11Extras
+                      Qt::Xml
+                      Qt::Test
+                      Qt::DBus
+                      Qt::Widgets
                       KF5::GuiAddons
                       KF5::I18n
                       KF5::Plasma
@@ -51,10 +51,10 @@ if( X11_XTest_FOUND )
    ecm_mark_nongui_executable(keyboard_daemon_test)
    ecm_mark_as_test(keyboard_daemon_test)
    target_link_libraries(keyboard_daemon_test
-                         Qt5::Concurrent
-                         Qt5::X11Extras
-                         Qt5::Xml
-                         Qt5::Test
+                         Qt::Concurrent
+                         Qt::X11Extras
+                         Qt::Xml
+                         Qt::Test
                          KF5::ConfigCore
                          KF5::CoreAddons
                          KF5::DBusAddons

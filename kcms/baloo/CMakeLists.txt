@@ -16,8 +16,8 @@ target_link_libraries(kcm_baloofile
   KF5::Solid
   KF5::Baloo
   KF5::QuickAddons
-  Qt5::DBus
-  Qt5::Widgets
+  Qt::DBus
+  Qt::Widgets
 )
 
 kcoreaddons_desktop_to_json(kcm_baloofile "kcm_baloofile.desktop")

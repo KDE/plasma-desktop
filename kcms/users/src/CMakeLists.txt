@@ -43,15 +43,15 @@ ecm_qt_install_logging_categories(
 add_library(kcm_users MODULE ${kcm_users_SRCS})
 
 target_link_libraries(kcm_users
-    Qt5::Quick
-    Qt5::QuickWidgets
-    Qt5::Concurrent
+    Qt::Quick
+    Qt::QuickWidgets
+    Qt::Concurrent
     KF5::CoreAddons
     KF5::Declarative
     KF5::I18n
     KF5::QuickAddons
     KF5::Wallet
-    Qt5::DBus
+    Qt::DBus
     crypt
 )
 

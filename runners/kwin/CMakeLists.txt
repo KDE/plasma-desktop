@@ -7,7 +7,7 @@ set(krunner_kwin_SRCS
 add_library(krunner_kwin MODULE ${krunner_kwin_SRCS})
 kcoreaddons_desktop_to_json(krunner_kwin plasma-runner-kwin.desktop)
 target_link_libraries(krunner_kwin
-                        Qt5::DBus
+                        Qt::DBus
                         KF5::KIOCore
                         KF5::I18n
                         KF5::Runner)

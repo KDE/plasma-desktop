@@ -19,7 +19,7 @@ kconfig_add_kcfg_files(kcm_device_automounter_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/.
 add_library(kcm_device_automounter ${kcm_device_automounter_SRCS} ${device_automounter_lib_SRCS})
 
 target_link_libraries(kcm_device_automounter
-                      Qt5::DBus
+                      Qt::DBus
                       KF5::CoreAddons
                       KF5::KCMUtils
                       KF5::ConfigWidgets
