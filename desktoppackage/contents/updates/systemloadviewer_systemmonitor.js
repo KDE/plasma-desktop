@@ -1,14 +1,16 @@
 
-function swapWidget(desktop, oldWidget, newType, geometry) {
+function swapWidget(cont, oldWidget, newType, geometry) {
     oldWidget.remove();
-    desktop.addWidget(newType, geometry.x, geometry.y, geometry.width, geometry.height);
+    cont.addWidget(newType, geometry.x, geometry.y, geometry.width, geometry.height);
 }
 
-for (var i in desktops()) {
-    var desktop = desktops()[i];
+var containments = desktops().concat(panels());
 
-    for (var j in desktop.widgetIds) {
-        var widget = desktop.widgetById(desktop.widgetIds[j]);
+for (var i in containments) {
+    var cont = containments[i];
+
+    for (var j in cont.widgetIds) {
+        var widget = cont.widgetById(cont.widgetIds[j]);
 
         let newType = ""
         if (widget.type == "org.kde.plasma.systemloadviewer") {
@@ -16,12 +18,12 @@ for (var i in desktops()) {
             geometry.width = geometry.width/3
             
             widget.remove();
-            desktop.addWidget("org.kde.ksysguard.sensorchart.cpuusage", geometry.x, geometry.y, geometry.width, geometry.height);
+            cont.addWidget("org.kde.plasma.systemmonitor.cpuusage", geometry.x, geometry.y, geometry.width, geometry.height);
             geometry.x += geometry.width;
-            desktop.addWidget("org.kde.ksysguard.sensorchart.memoryusage", geometry.x, geometry.y, geometry.width, geometry.height);
+            cont.addWidget("org.kde.plasma.systemmonitor.memoryusage", geometry.x, geometry.y, geometry.width, geometry.height);
             geometry.x += geometry.width;
 
-            let swapWidget = desktop.addWidget("org.kde.ksysguard.sensorchart", geometry.x, geometry.y, geometry.width, geometry.height);
+            let swapWidget = cont.addWidget("org.kde.plasma.systemmonitor", geometry.x, geometry.y, geometry.width, geometry.height);
             swapWidget.currentConfigGroup = ["Appearance"];
             swapWidget.writeConfig("title", "Swap");
             swapWidget.currentConfigGroup = ["Sensors"];
