@@ -57,4 +57,4 @@ target_link_libraries(kcm_users
 
 kcoreaddons_desktop_to_json(kcm_users "../kcm_users.desktop" SERVICE_TYPES kcmodule.desktop)
 
-install(TARGETS kcm_users DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
+install(TARGETS kcm_users DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)

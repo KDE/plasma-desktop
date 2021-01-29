@@ -16,5 +16,5 @@ target_link_libraries(kcm_qtquicksettings
 
 ########### install files ###############
 
-install(TARGETS kcm_qtquicksettings  DESTINATION ${PLUGIN_INSTALL_DIR})
+install(TARGETS kcm_qtquicksettings  DESTINATION ${KDE_INSTALL_PLUGINDIR})
 install(FILES qtquicksettings.desktop  DESTINATION  ${SERVICES_INSTALL_DIR})
