@@ -4,7 +4,7 @@ if(X11_Xkb_FOUND AND XCB_XKB_FOUND)
     add_subdirectory( keyboard )
 endif()
 
-if (EVDEV_FOUND AND XORGLIBINPUT_FOUND AND X11_Xinput_FOUND)
+if (EVDEV_FOUND AND XORGLIBINPUT_FOUND AND X11_Xi_FOUND)
     add_subdirectory( mouse )
 endif()
 
@@ -41,6 +41,6 @@ if (KF5Baloo_FOUND)
 endif()
 add_subdirectory(solid_actions)
 
-if (XORGSERVER_FOUND AND SYNAPTICS_FOUND AND X11_Xinput_FOUND)
+if (SYNAPTICS_FOUND AND X11_XCB_FOUND AND X11_Xi_FOUND)
     add_subdirectory(touchpad)
 endif()

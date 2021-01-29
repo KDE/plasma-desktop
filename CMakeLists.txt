@@ -133,28 +133,24 @@ find_package(XCB
     REQUIRED COMPONENTS
         XCB SHM IMAGE
     OPTIONAL_COMPONENTS
-        XKB XINPUT
+        XKB XINPUT ATOM RECORD
 )
+
+find_package(X11_XCB)
+set_package_properties(X11_XCB PROPERTIES TYPE OPTIONAL
+                        PURPOSE "Required for needed for touchpad KCM (X11 backend)"
+                      )
 
 set_package_properties(XCB PROPERTIES TYPE REQUIRED)
 add_feature_info("XCB-XKB" XCB_XKB_FOUND "Required for building kcm/keyboard")
 add_feature_info("libxft" X11_Xft_FOUND "X FreeType interface library required for font installation")
 
-find_package(Evdev)
-set_package_properties(Evdev PROPERTIES TYPE OPTIONAL)
-add_feature_info("Evdev" EVDEV_FOUND "Evdev driver headers needed for mouse KCM")
+pkg_check_modules(XORGLIBINPUT xorg-libinput IMPORTED_TARGET)
+pkg_check_modules(EVDEV xorg-evdev>=2.8.99.1 IMPORTED_TARGET)
 
 find_package(Synaptics)
 set_package_properties(Synaptics PROPERTIES TYPE OPTIONAL)
 add_feature_info("Synaptics" SYNAPTICS_FOUND "Synaptics libraries needed for touchpad KCM")
-
-find_package(XorgServer)
-set_package_properties(XorgServer PROPERTIES TYPE OPTIONAL)
-add_feature_info("XorgServer" XORGSERVER_FOUND "XServer header needed for touchpad KCM (X11 backend)")
-
-find_package(XorgLibinput)
-set_package_properties(XorgLibinput PROPERTIES TYPE OPTIONAL)
-add_feature_info("XorgLibinput" XORGLIBINPUT_FOUND "Libinput driver headers needed for mouse and touchpad KCM")
 
 if(XORGLIBINPUT_FOUND)
   set(HAVE_XORGLIBINPUT 1)
