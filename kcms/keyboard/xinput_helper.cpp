@@ -102,7 +102,8 @@ static bool isRealKeyboard(const char* deviceName)
 	return strstr(deviceName, "Video Bus") == nullptr
 		&& strstr(deviceName, "Sleep Button") == nullptr
 		&& strstr(deviceName, "Power Button") == nullptr
-		&& strstr(deviceName, "WMI hotkeys") == nullptr;
+		&& strstr(deviceName, "WMI hotkeys") == nullptr
+		&& strstr(deviceName, "Camera") == nullptr;
 }
 
 int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* event)
