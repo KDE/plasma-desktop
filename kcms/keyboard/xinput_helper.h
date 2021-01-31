@@ -25,13 +25,14 @@
 #include <X11/Xlib.h>
 #include <fixx11h.h>
 
+class QTimer;
 class UdevDeviceNotifier;
 
 class XInputEventNotifier: public XEventNotifier {
 	Q_OBJECT
 
 public:
-	XInputEventNotifier(QWidget* parent=nullptr);
+	explicit XInputEventNotifier(QWidget* parent=nullptr);
 
 	void start() override;
 	void stop() override;
@@ -51,6 +52,8 @@ private:
 	int xinputEventType;
 	Display* display;
 	UdevDeviceNotifier *udevNotifier;
+	QTimer* keyboardNotificationTimer;
+	QTimer* mouseNotificationTimer;
 };
 
 #endif /* XINPUT_HELPER_H_ */

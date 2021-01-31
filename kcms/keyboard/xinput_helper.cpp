@@ -23,6 +23,7 @@
 #include <QCoreApplication>
 #include <QX11Info>
 #include <QDebug>
+#include <QTimer>
 
 #include <X11/X.h>
 #include <X11/Xlib.h>
@@ -56,9 +57,21 @@ static const int DEVICE_POINTER = 2;
 XInputEventNotifier::XInputEventNotifier(QWidget* parent):
 	XEventNotifier(), //TODO: destruct properly?
 	xinputEventType(-1),
-	udevNotifier(nullptr)
+	udevNotifier(nullptr),
+	keyboardNotificationTimer(new QTimer(this)),
+	mouseNotificationTimer(new QTimer(this))
 {
-  Q_UNUSED(parent)
+	Q_UNUSED(parent)
+
+	// emit signal only once, even after X11 re-enables N keyboards after resuming from suspend
+	keyboardNotificationTimer->setSingleShot(true);
+	keyboardNotificationTimer->setInterval(500);
+	connect(keyboardNotificationTimer, &QTimer::timeout, this, &XInputEventNotifier::newKeyboardDevice);
+
+	// same for mouse
+	mouseNotificationTimer->setSingleShot(true);
+	mouseNotificationTimer->setInterval(500);
+	connect(mouseNotificationTimer, &QTimer::timeout, this, &XInputEventNotifier::newPointerDevice);
 }
 
 void XInputEventNotifier::start()
@@ -83,11 +96,18 @@ bool XInputEventNotifier::processOtherEvents(xcb_generic_event_t* event)
 {
 	int newDeviceType = getNewDeviceEventType(event);
 	if( newDeviceType == DEVICE_KEYBOARD ) {
-		emit(newKeyboardDevice());
+		if (!keyboardNotificationTimer->isActive()) {
+			keyboardNotificationTimer->start();
+		}
 	}
 	else if( newDeviceType == DEVICE_POINTER ) {
-		emit(newPointerDevice());
-		emit(newKeyboardDevice());	// arghhh, looks like X resets xkb map even when only pointer device is connected
+		if (!mouseNotificationTimer->isActive()) {
+			mouseNotificationTimer->start();
+		}
+		// arghhh, looks like X resets xkb map even when only pointer device is connected
+		if (!keyboardNotificationTimer->isActive()) {
+			keyboardNotificationTimer->start();
+		}
 	}
 	return true;
 }
