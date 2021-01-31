@@ -22,6 +22,14 @@ ecm_qt_declare_logging_category(common_SRCS
         kcm_mouse
     DEFAULT_SEVERITY
         Critical
+    DESCRIPTION
+        "KCM for mouse input"
+    EXPORT
+        kcm_mouse
+)
+ecm_qt_install_logging_categories(
+    EXPORT kcm_mouse
+    DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
 
 include(backends/x11.cmake)
