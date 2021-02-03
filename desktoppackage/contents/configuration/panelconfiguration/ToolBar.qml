@@ -225,11 +225,11 @@ Item {
 
             function open() {
                 active = true
-                item.visible = true
+                item.open()
             }
             function close() {
                 if (item) {
-                    item.visible = false
+                    item.close()
                 }
             }
         }
