@@ -15,6 +15,19 @@ PlasmaComponents.Menu {
     id: contextMenu
 
     PlasmaComponents.MenuItem {
+        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Maximize Panel")
+        icon: panel.formFactor === PlasmaCore.Types.Vertical ? "zoom-fit-height" : "zoom-fit-width"
+        visible: panel.location === PlasmaCore.Types.TopEdge
+        onClicked: panel.maximize()
+    }
+    PlasmaComponents.MenuItem {
+        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
+        icon: "delete"
+        visible: panel.location !== PlasmaCore.Types.TopEdge
+        onClicked: plasmoid.action("remove").trigger()
+    }
+
+    PlasmaComponents.MenuItem {
         text: i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Alignment")
         section: true
     }
@@ -82,14 +95,16 @@ PlasmaComponents.Menu {
     PlasmaComponents.MenuItem { separator: true }
 
     PlasmaComponents.MenuItem {
-        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Maximize Panel")
-        icon: panel.formFactor === PlasmaCore.Types.Vertical ? "zoom-fit-height" : "zoom-fit-width"
-        onClicked: panel.maximize()
-    }
-    PlasmaComponents.MenuItem {
         text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
         icon: "delete"
+        visible: panel.location === PlasmaCore.Types.TopEdge
         onClicked: plasmoid.action("remove").trigger()
+    }
+    PlasmaComponents.MenuItem {
+        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Maximize Panel")
+        icon: panel.formFactor === PlasmaCore.Types.Vertical ? "zoom-fit-height" : "zoom-fit-width"
+        visible: panel.location !== PlasmaCore.Types.TopEdge
+        onClicked: panel.maximize()
     }
 
     function hide() {
