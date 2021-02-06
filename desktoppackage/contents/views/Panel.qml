@@ -35,8 +35,8 @@ Item {
         property string completedState: ""
         // Work around the fact that we can't use a ternary if in an alias
         readonly property var mask: {
-            if (completedState == "opaque") {
-                return opaqueItem.mask
+            if (completedState == "solid") {
+                return solidItem.mask
             } else {
                 return translucentItem.mask
             }
@@ -93,11 +93,11 @@ Item {
     }
 
     PlasmaCore.FrameSvgItem {
-        id: opaqueItem
+        id: solidItem
         enabledBorders: panel.enabledBorders
         anchors.fill: parent
 
-        imagePath: containment && containment.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "opaque/widgets/panel-background"
+        imagePath: containment && containment.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "solid/widgets/panel-background"
     }
 
     transitions: [
@@ -111,7 +111,7 @@ Item {
                     }
                 }
                 NumberAnimation {
-                    target: opaqueItem
+                    target: solidItem
                     properties: "opacity"
                     from: 1
                     to: 0
@@ -120,7 +120,7 @@ Item {
                 }
                 ScriptAction {
                     script: {
-                        opaqueItem.visible = false
+                        solidItem.visible = false
                         privateSwapper.completedState = "transparent"
                         root.panelMaskChanged()
                     }
@@ -129,15 +129,15 @@ Item {
         },
         Transition {
             from: "*"
-            to: "opaque"
+            to: "solid"
             SequentialAnimation {
                 ScriptAction {
                     script: {
-                        opaqueItem.visible = true
+                        solidItem.visible = true
                     }
                 }
                 NumberAnimation {
-                    target: opaqueItem
+                    target: solidItem
                     properties: "opacity"
                     from: 0
                     to: 1
@@ -147,7 +147,7 @@ Item {
                 ScriptAction {
                     script: {
                         translucentItem.visible = false
-                        privateSwapper.completedState = "opaque"
+                        privateSwapper.completedState = "solid"
                         root.panelMaskChanged()
                     }
                 }
@@ -159,17 +159,15 @@ Item {
         state = Qt.binding(function() {
             let mstate = '';
             if (panel.opacityMode == 0) {
-                mstate = visibleWindowsModel.count > 0 ? "opaque" : "transparent"
+                mstate = visibleWindowsModel.count > 0 ? "solid" : "transparent"
             } else if (panel.opacityMode == 1) {
-                mstate = "opaque"
+                mstate = "solid"
             } else {
                 mstate = "transparent"
             }
-            if (mstate == 'opaque') {
-                //containment.setContainmentDisplayHints(containment.containmentDisplayHints)
+            if (mstate == 'solid') {
                 containment.containmentDisplayHints |= PlasmaCore.Types.DesktopFullyCovered;
             } else {
-                //containment.setContainmentDisplayHints(containment.containmentDisplayHints)
                 containment.containmentDisplayHints &= ~PlasmaCore.Types.DesktopFullyCovered;
             }
             return mstate;
@@ -177,7 +175,7 @@ Item {
     }
     state: ""
     states: [
-        State { name: "opaque" },
+        State { name: "solid" },
         State { name: "transparent" }
     ]
 

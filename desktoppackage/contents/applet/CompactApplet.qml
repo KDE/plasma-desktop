@@ -153,7 +153,7 @@ PlasmaCore.ToolTipArea {
         visualParent: compactRepresentation ? compactRepresentation : null
         location: plasmoid.location
         hideOnWindowDeactivate: plasmoid.hideOnWindowDeactivate
-        backgroundHints: (plasmoid.containmentDisplayHints & PlasmaCore.Types.DesktopFullyCovered) ? PlasmaCore.Dialog.OpaqueBackground : PlasmaCore.Dialog.StandardBackground
+        backgroundHints: (plasmoid.containmentDisplayHints & PlasmaCore.Types.DesktopFullyCovered) ? PlasmaCore.Dialog.SolidBackground : PlasmaCore.Dialog.StandardBackground
 
         property var oldStatus: PlasmaCore.Types.UnknownStatus
 
