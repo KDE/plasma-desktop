@@ -20,19 +20,18 @@
 
 #include <cmath>
 
-#include <QWidget>
 #include <QGroupBox>
+#include <QWidget>
 
-#include <KConfigSkeleton>
 #include <KComboBox>
+#include <KConfigSkeleton>
 #include <QDebug>
 
 #include "customslider.h"
 
-CustomConfigDialogManager::CustomConfigDialogManager(QWidget *parent,
-                                                     KCoreConfigSkeleton *conf,
-                                                     const QStringList &supported)
-    : KConfigDialogManager(parent, conf), m_config(conf)
+CustomConfigDialogManager::CustomConfigDialogManager(QWidget *parent, KCoreConfigSkeleton *conf, const QStringList &supported)
+    : KConfigDialogManager(parent, conf)
+    , m_config(conf)
 {
     static const QString kcfgPrefix("kcfg_");
 
@@ -40,22 +39,20 @@ CustomConfigDialogManager::CustomConfigDialogManager(QWidget *parent,
     for (KConfigSkeletonItem *i : itemList) {
         QString name(i->name());
 
-        QWidget *child = parent->findChild<QWidget*>(kcfgPrefix + name);
+        QWidget *child = parent->findChild<QWidget *>(kcfgPrefix + name);
         if (!child) {
             continue;
         }
         m_widgets[name] = child;
 
         /* FIXME: this should probably be less hackish */
-        if (name == "Tapping" &&
-            !supported.contains("Tapping"))
+        if (name == "Tapping" && !supported.contains("Tapping"))
             qobject_cast<QGroupBox *>(child)->setCheckable(false);
         else if (!supported.contains(name)) {
             child->setEnabled(false);
         }
 
-        KCoreConfigSkeleton::ItemEnum *asEnum =
-                dynamic_cast<KCoreConfigSkeleton::ItemEnum *>(i);
+        KCoreConfigSkeleton::ItemEnum *asEnum = dynamic_cast<KCoreConfigSkeleton::ItemEnum *>(i);
         if (!asEnum) {
             continue;
         }
@@ -80,9 +77,7 @@ CustomConfigDialogManager::~CustomConfigDialogManager()
 QVariantHash CustomConfigDialogManager::currentWidgetProperties() const
 {
     QVariantHash r;
-    for (QMap<QString, QWidget *>::ConstIterator i = m_widgets.begin();
-         i != m_widgets.end(); ++i)
-    {
+    for (QMap<QString, QWidget *>::ConstIterator i = m_widgets.begin(); i != m_widgets.end(); ++i) {
         r[i.key()] = property(i.value());
     }
     return r;
@@ -105,8 +100,7 @@ static bool variantFuzzyCompare(const QVariant &a, const QVariant &b)
     }
 
     bool isDouble_a = false, isDouble_b = false;
-    float d_a = static_cast<float>(a.toDouble(&isDouble_a)),
-            d_b = static_cast<float>(b.toDouble(&isDouble_b));
+    float d_a = static_cast<float>(a.toDouble(&isDouble_a)), d_b = static_cast<float>(b.toDouble(&isDouble_b));
     if (!isDouble_a || !isDouble_b) {
         return false;
     }
@@ -132,7 +126,7 @@ QVariant CustomConfigDialogManager::fixup(QWidget *widget, QVariant v) const
     }
 
     double k = std::pow(10.0, decimals.toInt());
-    return std::floor(value * k + 0.5) / k; //round
+    return std::floor(value * k + 0.5) / k; // round
 }
 
 bool CustomConfigDialogManager::compareWidgetProperties(const QVariantHash &p) const
@@ -149,8 +143,7 @@ bool CustomConfigDialogManager::compareWidgetProperties(const QVariantHash &p) c
         QVariant fixed(fixup(widget, i.value()));
         if (!variantFuzzyCompare(widgetValue, fixed)) {
             result = false;
-            qDebug() << "Config mismatch:"
-                     << widget->objectName() << widgetValue << fixed;
+            qDebug() << "Config mismatch:" << widget->objectName() << widgetValue << fixed;
         }
     }
     return result;
@@ -158,9 +151,7 @@ bool CustomConfigDialogManager::compareWidgetProperties(const QVariantHash &p) c
 
 bool CustomConfigDialogManager::hasChangedFuzzy() const
 {
-    for (QMap<QString, QWidget *>::ConstIterator i = m_widgets.begin();
-         i != m_widgets.end(); ++i)
-    {
+    for (QMap<QString, QWidget *>::ConstIterator i = m_widgets.begin(); i != m_widgets.end(); ++i) {
         KConfigSkeletonItem *config = m_config->findItem(i.key());
         QWidget *widget = i.value();
         QVariant widgetValue(fixup(widget, property(widget)));

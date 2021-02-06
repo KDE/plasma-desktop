@@ -28,7 +28,8 @@
 #include <QJSValue>
 #include <QKeySequence>
 
-class ExtraActivitiesInterface : public QObject {
+class ExtraActivitiesInterface : public QObject
+{
     Q_OBJECT
 
 public:
@@ -36,8 +37,7 @@ public:
     ~ExtraActivitiesInterface() override;
 
 public Q_SLOTS:
-    void setIsPrivate(const QString &activity, bool isPrivate,
-                      QJSValue callback);
+    void setIsPrivate(const QString &activity, bool isPrivate, QJSValue callback);
     void getIsPrivate(const QString &activity, QJSValue callback);
 
     void setShortcut(const QString &activity, const QKeySequence &keySequence);

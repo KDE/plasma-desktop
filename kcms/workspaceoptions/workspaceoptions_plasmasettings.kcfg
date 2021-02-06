@@ -13,6 +13,12 @@
   <group name="OSD">
     <entry name="osdEnabled" key="Enabled" type="Bool">
       <label>Display visual feedback for status changes</label>
+      <tooltip>Show an on-screen display to indicate status changes such as brightness or volume</tooltip>
+      <default>true</default>
+    </entry>
+    <entry name="osdKbdLayoutChangedEnabled" key="kbdLayoutChangedEnabled" type="Bool">
+      <label>OSD on layout change</label>
+      <tooltip>Show a popup on layout changes</tooltip>
       <default>true</default>
     </entry>
   </group>

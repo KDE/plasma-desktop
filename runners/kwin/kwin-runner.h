@@ -26,18 +26,18 @@ class KWinRunner : public Plasma::AbstractRunner
 {
     Q_OBJECT
 
-    public:
-        explicit KWinRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
-        ~KWinRunner() override;
+public:
+    explicit KWinRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    ~KWinRunner() override;
 
-        void match(Plasma::RunnerContext &context) override;
-        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
+    void match(Plasma::RunnerContext &context) override;
+    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
 
-    private:
-      void checkAvailability(const QString &name, const QString &oldOwner, const QString &newOwner);
+private:
+    void checkAvailability(const QString &name, const QString &oldOwner, const QString &newOwner);
 
-    private:
-        bool m_enabled;
+private:
+    bool m_enabled;
 };
 
 #endif

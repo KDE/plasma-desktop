@@ -138,7 +138,7 @@ Item {
             left: elementIcon.right
             right: arrow.left
             leftMargin: PlasmaCore.Units.smallSpacing * 4
-            rightMargin: PlasmaCore.Units.smallSpacing * 6
+            rightMargin: PlasmaCore.Units.smallSpacing * 2
             verticalCenter: parent.verticalCenter
         }
         text: listItem.displayName
@@ -151,7 +151,7 @@ Item {
 
         anchors {
             left: parent.left
-            leftMargin: elementIcon.anchors.leftMargin + elementIcon.width + titleElement.anchors.leftMargin + titleElement.contentWidth + titleElement.anchors.rightMargin
+            leftMargin: elementIcon.anchors.leftMargin + elementIcon.width + titleElement.anchors.leftMargin + titleElement.contentWidth + titleElement.anchors.rightMargin + PlasmaCore.Units.smallSpacing * 4
             right: arrow.right
             verticalCenter: parent.verticalCenter
         }

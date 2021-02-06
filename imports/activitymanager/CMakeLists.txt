@@ -28,11 +28,11 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasmaactivitymanager\")
 target_link_libraries (
    activityswitcherextensionplugin
 
-   Qt5::Core
-   Qt5::Quick
-   Qt5::Qml
-   Qt5::Widgets
-   Qt5::X11Extras
+   Qt::Core
+   Qt::Quick
+   Qt::Qml
+   Qt::Widgets
+   Qt::X11Extras
 
    KF5::I18n
    KF5::Activities

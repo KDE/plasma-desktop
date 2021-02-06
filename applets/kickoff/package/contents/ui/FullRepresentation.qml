@@ -481,7 +481,7 @@ Item {
                     // On back tab focus on right pane
                     if (event.key == Qt.Key_Backtab) {
                         if (mainTabGroup.state == "top") {
-                            header.input.forceActiveFocus(Qt.TabFocusReason)
+                            header.configureButton.forceActiveFocus(Qt.TabFocusReason)
                         } else {
                             navigationMethod.state = "keyboard"
                             keyboardNavigation.state = "RightColumn"
@@ -690,7 +690,7 @@ Item {
             if (root.currentContentView.activeFocus) {
                 // There's no left panel when we search
                 if (root.state == "Search") {
-                    header.input.forceActiveFocus(Qt.BacktabFocusReason)
+                    header.configureButton.forceActiveFocus(Qt.BacktabFocusReason)
                 } else {
                     keyboardNavigation.state = "LeftColumn"
                 }
@@ -700,7 +700,7 @@ Item {
                 if (mainTabGroup.state == "top" && root.state != "Search") {
                     leaveButtons.leave.forceActiveFocus(Qt.TabFocusReason)
                 } else {
-                    header.input.forceActiveFocus(Qt.BacktabFocusReason)
+                    header.configureButton.forceActiveFocus(Qt.BacktabFocusReason)
                 }
                 event.accepted = true;
                 return;
@@ -906,7 +906,7 @@ Item {
         }
     }
     onCurrentContentViewChanged: {
-        if (keyboardNavigation.state == "RightColumn" && root.state != "search") {
+        if (keyboardNavigation.state == "RightColumn" && root.currentContentView != searchPage.item) {
             root.currentContentView.forceActiveFocus()
         }
     }

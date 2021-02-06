@@ -30,7 +30,6 @@ class BalooData;
 
 namespace Baloo
 {
-
 class ServerConfigModule : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
@@ -38,7 +37,7 @@ class ServerConfigModule : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(BalooSettings *balooSettings READ balooSettings CONSTANT)
 
 public:
-    ServerConfigModule(QObject* parent, const QVariantList& args);
+    ServerConfigModule(QObject *parent, const QVariantList &args);
     virtual ~ServerConfigModule() override;
 
     BalooSettings *balooSettings() const;

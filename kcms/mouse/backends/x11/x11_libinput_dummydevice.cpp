@@ -21,13 +21,12 @@
 #include <libinput-properties.h>
 
 #include <X11/Xatom.h>
-#include <X11/extensions/XInput2.h>
 #include <X11/extensions/XInput.h>
+#include <X11/extensions/XInput2.h>
 
 static Atom s_touchpadAtom;
 
-template<typename Callback>
-static void XIForallPointerDevices(Display* dpy, const Callback& callback)
+template<typename Callback> static void XIForallPointerDevices(Display *dpy, const Callback &callback)
 {
     int ndevices_return;
     XDeviceInfo *info = XListInputDevices(dpy, &ndevices_return);
@@ -36,8 +35,7 @@ static void XIForallPointerDevices(Display* dpy, const Callback& callback)
     }
     for (int i = 0; i < ndevices_return; ++i) {
         XDeviceInfo *dev = info + i;
-        if ((dev->use == IsXPointer || dev->use == IsXExtensionPointer) &&
-                dev->type != s_touchpadAtom) {
+        if ((dev->use == IsXPointer || dev->use == IsXExtensionPointer) && dev->type != s_touchpadAtom) {
             callback(dev);
         }
     }
@@ -45,7 +43,7 @@ static void XIForallPointerDevices(Display* dpy, const Callback& callback)
 }
 
 struct ScopedXDeleter {
-    static inline void cleanup(void* pointer)
+    static inline void cleanup(void *pointer)
     {
         if (pointer) {
             XFree(pointer);
@@ -53,19 +51,18 @@ struct ScopedXDeleter {
     }
 };
 
-namespace {
-template<typename T>
-void valueWriterPart(T val, Atom valAtom, Display *dpy)
+namespace
+{
+template<typename T> void valueWriterPart(T val, Atom valAtom, Display *dpy)
 {
     Q_UNUSED(val);
     Q_UNUSED(valAtom);
     Q_UNUSED(dpy);
 }
 
-template<>
-void valueWriterPart<bool>(bool val, Atom valAtom, Display *dpy)
+template<> void valueWriterPart<bool>(bool val, Atom valAtom, Display *dpy)
 {
-    XIForallPointerDevices(dpy, [&] (XDeviceInfo *info) {
+    XIForallPointerDevices(dpy, [&](XDeviceInfo *info) {
         int deviceid = info->id;
         Status status;
         Atom type_return;
@@ -74,10 +71,8 @@ void valueWriterPart<bool>(bool val, Atom valAtom, Display *dpy)
         unsigned long bytes_after_return;
 
         unsigned char *_data = nullptr;
-        //data returned is an 1 byte boolean
-        status = XIGetProperty(dpy, deviceid, valAtom, 0, 1,
-                               False, XA_INTEGER, &type_return, &format_return,
-                               &num_items_return, &bytes_after_return, &_data);
+        // data returned is an 1 byte boolean
+        status = XIGetProperty(dpy, deviceid, valAtom, 0, 1, False, XA_INTEGER, &type_return, &format_return, &num_items_return, &bytes_after_return, &_data);
         if (status != Success) {
             return;
         }
@@ -85,12 +80,11 @@ void valueWriterPart<bool>(bool val, Atom valAtom, Display *dpy)
         QScopedArrayPointer<unsigned char, ScopedXDeleter> data(_data);
         _data = nullptr;
 
-
         if (type_return != XA_INTEGER || !data || format_return != 8) {
             return;
         }
 
-        unsigned char sendVal[2] = { 0 };
+        unsigned char sendVal[2] = {0};
         if (num_items_return == 1) {
             sendVal[0] = val;
         } else {
@@ -102,29 +96,24 @@ void valueWriterPart<bool>(bool val, Atom valAtom, Display *dpy)
             sendVal[val] = 1;
         }
 
-        XIChangeProperty(dpy, deviceid, valAtom, XA_INTEGER,
-                         8, XIPropModeReplace, sendVal, num_items_return);
-
+        XIChangeProperty(dpy, deviceid, valAtom, XA_INTEGER, 8, XIPropModeReplace, sendVal, num_items_return);
     });
 }
 
-template<>
-void valueWriterPart<qreal>(qreal val, Atom valAtom, Display *dpy)
+template<> void valueWriterPart<qreal>(qreal val, Atom valAtom, Display *dpy)
 {
-    XIForallPointerDevices(dpy, [&] (XDeviceInfo *info) {
+    XIForallPointerDevices(dpy, [&](XDeviceInfo *info) {
         int deviceid = info->id;
         Status status;
-        Atom float_type = XInternAtom (dpy, "FLOAT", False);
+        Atom float_type = XInternAtom(dpy, "FLOAT", False);
         Atom type_return;
         int format_return;
         unsigned long num_items_return;
         unsigned long bytes_after_return;
 
         unsigned char *_data = nullptr;
-        //data returned is an 1 byte boolean
-        status = XIGetProperty(dpy, deviceid, valAtom, 0, 1,
-                               False, float_type, &type_return, &format_return,
-                               &num_items_return, &bytes_after_return, &_data);
+        // data returned is an 1 byte boolean
+        status = XIGetProperty(dpy, deviceid, valAtom, 0, 1, False, float_type, &type_return, &format_return, &num_items_return, &bytes_after_return, &_data);
         if (status != Success) {
             return;
         }
@@ -132,26 +121,23 @@ void valueWriterPart<qreal>(qreal val, Atom valAtom, Display *dpy)
         QScopedArrayPointer<unsigned char, ScopedXDeleter> data(_data);
         _data = nullptr;
 
-
         if (type_return != float_type || !data || format_return != 32 || num_items_return != 1) {
             return;
         }
 
         unsigned char buffer[4096];
-        float *sendPtr = (float*)buffer;
+        float *sendPtr = (float *)buffer;
         *sendPtr = val;
 
-        XIChangeProperty(dpy, deviceid, valAtom, float_type,
-                         format_return, XIPropModeReplace, buffer, 1);
-
+        XIChangeProperty(dpy, deviceid, valAtom, float_type, format_return, XIPropModeReplace, buffer, 1);
     });
 }
 }
 
 X11LibinputDummyDevice::X11LibinputDummyDevice(QObject *parent, Display *dpy)
-    : QObject(parent),
-      m_settings(new LibinputSettings()),
-      m_dpy(dpy)
+    : QObject(parent)
+    , m_settings(new LibinputSettings())
+    , m_dpy(dpy)
 {
     m_leftHanded.atom = XInternAtom(dpy, LIBINPUT_PROP_LEFT_HANDED, True);
     m_middleEmulation.atom = XInternAtom(dpy, LIBINPUT_PROP_MIDDLE_EMULATION_ENABLED, True);
@@ -189,7 +175,7 @@ X11LibinputDummyDevice::~X11LibinputDummyDevice()
 bool X11LibinputDummyDevice::getConfig()
 {
     auto reset = [this](Prop<bool> &prop, bool defVal) {
-         prop.reset(m_settings->load(prop.cfgName, defVal));
+        prop.reset(m_settings->load(prop.cfgName, defVal));
     };
 
     reset(m_leftHanded, false);
@@ -229,8 +215,7 @@ bool X11LibinputDummyDevice::applyConfig()
     return true;
 }
 
-template<typename T>
-bool X11LibinputDummyDevice::valueWriter(Prop<T> &prop)
+template<typename T> bool X11LibinputDummyDevice::valueWriter(Prop<T> &prop)
 {
     // Check atom availability first.
     if (prop.atom == None) {
@@ -250,10 +235,6 @@ bool X11LibinputDummyDevice::valueWriter(Prop<T> &prop)
 
 bool X11LibinputDummyDevice::isChangedConfig() const
 {
-    return m_leftHanded.changed() ||
-           m_pointerAcceleration.changed() ||
-           m_pointerAccelerationProfileFlat.changed() ||
-           m_pointerAccelerationProfileAdaptive.changed() ||
-           m_middleEmulation.changed() ||
-           m_naturalScroll.changed();
+    return m_leftHanded.changed() || m_pointerAcceleration.changed() || m_pointerAccelerationProfileFlat.changed()
+        || m_pointerAccelerationProfileAdaptive.changed() || m_middleEmulation.changed() || m_naturalScroll.changed();
 }

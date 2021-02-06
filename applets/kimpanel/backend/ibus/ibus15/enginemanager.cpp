@@ -21,9 +21,10 @@
 
 #define THRESHOLD 256
 
-EngineManager::EngineManager() : m_engines(nullptr), m_length(0)
+EngineManager::EngineManager()
+    : m_engines(nullptr)
+    , m_length(0)
 {
-
 }
 
 EngineManager::~EngineManager()
@@ -41,7 +42,7 @@ void EngineManager::freeOldEngine()
     }
 }
 
-void EngineManager::setEngines(IBusEngineDesc** engines)
+void EngineManager::setEngines(IBusEngineDesc **engines)
 {
     freeOldEngine();
     m_engineMap.clear();
@@ -64,7 +65,7 @@ void EngineManager::setUseGlobalEngine(gboolean use)
     }
 }
 
-void EngineManager::setCurrentContext(const gchar* input_context_path)
+void EngineManager::setCurrentContext(const gchar *input_context_path)
 {
     m_currentContext = QString::fromLatin1(input_context_path);
 }
@@ -80,7 +81,7 @@ QString EngineManager::currentEngine()
     }
 }
 
-void EngineManager::setCurrentEngine(const char* name)
+void EngineManager::setCurrentEngine(const char *name)
 {
     if (!m_useGlobalEngine && !m_currentContext.isEmpty()) {
         if (!m_engineMap.contains(m_currentContext)) {
@@ -94,16 +95,15 @@ void EngineManager::setCurrentEngine(const char* name)
     }
 }
 
-const char* EngineManager::navigate(IBusEngineDesc* engine, bool forward)
+const char *EngineManager::navigate(IBusEngineDesc *engine, bool forward)
 {
     if (length() == 0) {
         return "";
     }
 
     size_t i = 0;
-    for ( ; i < m_length; i ++) {
-        if (m_engines[i] == engine ||
-            0 == g_strcmp0(ibus_engine_desc_get_name(engine), ibus_engine_desc_get_name(m_engines[i]))) {
+    for (; i < m_length; i++) {
+        if (m_engines[i] == engine || 0 == g_strcmp0(ibus_engine_desc_get_name(engine), ibus_engine_desc_get_name(m_engines[i]))) {
             break;
         }
     }
@@ -111,12 +111,11 @@ const char* EngineManager::navigate(IBusEngineDesc* engine, bool forward)
     return ibus_engine_desc_get_name(m_engines[i]);
 }
 
-void EngineManager::moveToFirst(IBusEngineDesc* engine)
+void EngineManager::moveToFirst(IBusEngineDesc *engine)
 {
     size_t i = 0;
     while (i < length()) {
-        if (m_engines[i] == engine ||
-            0 == g_strcmp0(ibus_engine_desc_get_name(engine), ibus_engine_desc_get_name(m_engines[i]))) {
+        if (m_engines[i] == engine || 0 == g_strcmp0(ibus_engine_desc_get_name(engine), ibus_engine_desc_get_name(m_engines[i]))) {
             break;
         }
         i++;
@@ -136,10 +135,10 @@ void EngineManager::moveToFirst(IBusEngineDesc* engine)
     m_engines[0] = engine;
 }
 
-size_t EngineManager::getIndexByName(const char* name)
+size_t EngineManager::getIndexByName(const char *name)
 {
     size_t i = 0;
-    for ( ; i < m_length; i++) {
+    for (; i < m_length; i++) {
         if (0 == g_strcmp0(name, ibus_engine_desc_get_name(m_engines[i]))) {
             break;
         }
@@ -147,19 +146,19 @@ size_t EngineManager::getIndexByName(const char* name)
     return i;
 }
 
-void EngineManager::setOrder(const gchar** engine_names, size_t len)
+void EngineManager::setOrder(const gchar **engine_names, size_t len)
 {
     size_t k = 0;
-    for (size_t i = 0; i < len; i ++) {
-         size_t j = getIndexByName(engine_names[i]);
-         if (j < length() && j >= k) {
-             if (j != k) {
-                 IBusEngineDesc* temp = m_engines[k];
-                 m_engines[k] = m_engines[j];
-                 m_engines[j] = temp;
-             }
-             k ++;
-         }
+    for (size_t i = 0; i < len; i++) {
+        size_t j = getIndexByName(engine_names[i]);
+        if (j < length() && j >= k) {
+            if (j != k) {
+                IBusEngineDesc *temp = m_engines[k];
+                m_engines[k] = m_engines[j];
+                m_engines[j] = temp;
+            }
+            k++;
+        }
     }
 }
 

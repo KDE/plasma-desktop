@@ -21,17 +21,18 @@
 #ifndef MAIN_CONFIGURATION_WIDGET_H
 #define MAIN_CONFIGURATION_WIDGET_H
 
-#include <KCModule>
-#include <KPluginFactory>
 #include <KActivities/Consumer>
 #include <KActivities/Info>
+#include <KCModule>
+#include <KPluginFactory>
 
 #include <utils/d_ptr.h>
 
 /**
  * MainConfigurationWidget
  */
-class MainConfigurationWidget : public KCModule {
+class MainConfigurationWidget : public KCModule
+{
     Q_OBJECT
 public:
     MainConfigurationWidget(QWidget *parent, QVariantList args);

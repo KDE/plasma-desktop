@@ -21,17 +21,17 @@
 #include "kcm.h"
 #include "fileexcludefilters.h"
 
-#include <KPluginFactory>
 #include <KAboutData>
-#include <QStandardPaths>
 #include <KLocalizedString>
+#include <KPluginFactory>
+#include <QStandardPaths>
 
-#include <QPushButton>
-#include <QDir>
-#include <QProcess>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
+#include <QDir>
+#include <QProcess>
+#include <QPushButton>
 
 #include <Baloo/IndexerConfig>
 #include <baloo/baloosettings.h>
@@ -41,18 +41,20 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "kcm_baloofile.json", registerPlugi
 
 using namespace Baloo;
 
-ServerConfigModule::ServerConfigModule(QObject* parent, const QVariantList& args)
+ServerConfigModule::ServerConfigModule(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
     , m_data(new BalooData(this))
     , m_filteredFolderModel(new FilteredFolderModel(m_data->settings(), this))
-    {
+{
     qmlRegisterType<FilteredFolderModel>();
     qmlRegisterType<BalooSettings>();
 
-    KAboutData* about = new KAboutData(
-        QStringLiteral("kcm_baloofile"), i18n("File Search"),
-        QStringLiteral("0.1"), QString(), KAboutLicense::GPL,
-        i18n("Copyright 2007-2010 Sebastian Trüg"));
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_baloofile"),
+                                       i18n("File Search"),
+                                       QStringLiteral("0.1"),
+                                       QString(),
+                                       KAboutLicense::GPL,
+                                       i18n("Copyright 2007-2010 Sebastian Trüg"));
 
     about->addAuthor(i18n("Sebastian Trüg"), QString(), QStringLiteral("trueg@kde.org"));
     about->addAuthor(i18n("Vishesh Handa"), QString(), QStringLiteral("vhanda@kde.org"));
@@ -89,14 +91,9 @@ void ServerConfigModule::save()
         // Trying to start baloo when it is already running is fine
         const QString exe = QStandardPaths::findExecutable(QStringLiteral("baloo_file"));
         QProcess::startDetached(exe, QStringList());
-    }
-    else {
-        QDBusMessage message = QDBusMessage::createMethodCall(
-            QStringLiteral("org.kde.baloo"),
-            QStringLiteral("/"),
-            QStringLiteral("org.kde.baloo.main"),
-            QStringLiteral("quit")
-        );
+    } else {
+        QDBusMessage message =
+            QDBusMessage::createMethodCall(QStringLiteral("org.kde.baloo"), QStringLiteral("/"), QStringLiteral("org.kde.baloo.main"), QStringLiteral("quit"));
 
         QDBusConnection::sessionBus().asyncCall(message);
     }

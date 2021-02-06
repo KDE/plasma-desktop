@@ -51,4 +51,3 @@ void TaskManagerPlugin::registerTypes(const char *uri)
 
     qmlRegisterType<SmartLauncher::Item>(uri, 0, 1, "SmartLauncherItem");
 }
-

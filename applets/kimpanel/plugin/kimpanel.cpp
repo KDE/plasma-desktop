@@ -19,7 +19,9 @@
  */
 #include "kimpanel.h"
 
-Kimpanel::Kimpanel(QObject* parent) : QObject(parent), m_panelAgent(new PanelAgent(this))
+Kimpanel::Kimpanel(QObject *parent)
+    : QObject(parent)
+    , m_panelAgent(new PanelAgent(this))
 {
     connect(m_panelAgent, &PanelAgent::updateAux, this, &Kimpanel::updateAux);
     connect(m_panelAgent, &PanelAgent::updatePreeditText, this, &Kimpanel::updatePreeditText);
@@ -39,8 +41,7 @@ Kimpanel::Kimpanel(QObject* parent) : QObject(parent), m_panelAgent(new PanelAge
     connect(m_panelAgent, &PanelAgent::execDialog, this, &Kimpanel::execDialog);
 }
 
-
-void Kimpanel::updateAux(const QString& text, const QList< TextAttribute >& attrList)
+void Kimpanel::updateAux(const QString &text, const QList<TextAttribute> &attrList)
 {
     Q_UNUSED(attrList);
     if (m_auxText != text) {
@@ -49,7 +50,7 @@ void Kimpanel::updateAux(const QString& text, const QList< TextAttribute >& attr
     }
 }
 
-void Kimpanel::updatePreeditText(const QString& text, const QList<TextAttribute>& attrList)
+void Kimpanel::updatePreeditText(const QString &text, const QList<TextAttribute> &attrList)
 {
     Q_UNUSED(attrList);
     if (m_preeditText != text) {
@@ -66,11 +67,11 @@ void Kimpanel::updatePreeditCaret(int pos)
     }
 }
 
-void Kimpanel::updateLookupTable(const KimpanelLookupTable& lookupTable)
+void Kimpanel::updateLookupTable(const KimpanelLookupTable &lookupTable)
 {
     m_labels.clear();
     m_texts.clear();
-    Q_FOREACH(const KimpanelLookupTable::Entry & entry, lookupTable.entries) {
+    Q_FOREACH (const KimpanelLookupTable::Entry &entry, lookupTable.entries) {
         m_labels << entry.label;
         m_texts << entry.text;
     }
@@ -122,11 +123,11 @@ void Kimpanel::updateLookupTableCursor(int cursor)
     }
 }
 
-void Kimpanel::updateLookupTableFull(const KimpanelLookupTable& lookupTable, int cursor, int layout)
+void Kimpanel::updateLookupTableFull(const KimpanelLookupTable &lookupTable, int cursor, int layout)
 {
     m_labels.clear();
     m_texts.clear();
-    Q_FOREACH(const KimpanelLookupTable::Entry & entry, lookupTable.entries) {
+    Q_FOREACH (const KimpanelLookupTable::Entry &entry, lookupTable.entries) {
         m_labels << entry.label;
         m_texts << entry.text;
     }
@@ -135,10 +136,9 @@ void Kimpanel::updateLookupTableFull(const KimpanelLookupTable& lookupTable, int
     m_lookupTableCursor = cursor;
     m_lookupTableLayout = layout;
     emit lookupTableChanged();
-
 }
 
-void Kimpanel::updateProperty(const KimpanelProperty& property)
+void Kimpanel::updateProperty(const KimpanelProperty &property)
 {
     for (auto &prop : m_props) {
         if (prop.toMap()["key"] == property.key) {
@@ -149,7 +149,7 @@ void Kimpanel::updateProperty(const KimpanelProperty& property)
     }
 }
 
-void Kimpanel::registerProperties(const QList<KimpanelProperty>& props)
+void Kimpanel::registerProperties(const QList<KimpanelProperty> &props)
 {
     m_props.clear();
     for (const auto &prop : props) {
@@ -158,7 +158,7 @@ void Kimpanel::registerProperties(const QList<KimpanelProperty>& props)
     emit propertiesChanged();
 }
 
-void Kimpanel::execMenu(const QList<KimpanelProperty>& props)
+void Kimpanel::execMenu(const QList<KimpanelProperty> &props)
 {
     QVariantList menuProps;
     for (const auto &prop : props) {
@@ -167,7 +167,7 @@ void Kimpanel::execMenu(const QList<KimpanelProperty>& props)
     emit menuTriggered(menuProps);
 }
 
-void Kimpanel::execDialog(const KimpanelProperty& prop)
+void Kimpanel::execDialog(const KimpanelProperty &prop)
 {
     Q_UNUSED(prop)
 }
@@ -207,7 +207,7 @@ void Kimpanel::selectCandidate(int candidate)
     m_panelAgent->selectCandidate(candidate);
 }
 
-void Kimpanel::triggerProperty(const QString& key)
+void Kimpanel::triggerProperty(const QString &key)
 {
     m_panelAgent->triggerProperty(key);
 }

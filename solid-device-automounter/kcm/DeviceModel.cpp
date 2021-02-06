@@ -1,32 +1,32 @@
 /**************************************************************************
-*   Copyright (C) 2009-2010 Trever Fischer <tdfischer@fedoraproject.org>  *
-*   Copyright (C) 2015 Kai Uwe Broulik <kde@privat.broulik.de>            *
-*                                                                         *
-*   This program is free software; you can redistribute it and/or modify  *
-*   it under the terms of the GNU General Public License as published by  *
-*   the Free Software Foundation; either version 2 of the License, or     *
-*   (at your option) any later version.                                   *
-*                                                                         *
-*   This program is distributed in the hope that it will be useful,       *
-*   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
-*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
-*   GNU General Public License for more details.                          *
-*                                                                         *
-*   You should have received a copy of the GNU General Public License     *
-*   along with this program; if not, write to the                         *
-*   Free Software Foundation, Inc.,                                       *
-*   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
-***************************************************************************/
+ *   Copyright (C) 2009-2010 Trever Fischer <tdfischer@fedoraproject.org>  *
+ *   Copyright (C) 2015 Kai Uwe Broulik <kde@privat.broulik.de>            *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
+ ***************************************************************************/
 
 #include "DeviceModel.h"
 
 #include <QIcon>
 
 #include <KLocalizedString>
-#include <Solid/DeviceNotifier>
 #include <Solid/Device>
-#include <Solid/StorageVolume>
+#include <Solid/DeviceNotifier>
 #include <Solid/StorageAccess>
+#include <Solid/StorageVolume>
 
 #include "AutomounterSettings.h"
 
@@ -35,7 +35,7 @@ DeviceModel::DeviceModel(AutomounterSettings *m_settings, QObject *parent)
     , m_settings(m_settings)
 {
     reload();
-    
+
     connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded, this, &DeviceModel::deviceAttached);
     connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceRemoved, this, &DeviceModel::deviceRemoved);
 }
@@ -60,10 +60,13 @@ void DeviceModel::forgetDevice(const QString &udi)
 QVariant DeviceModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
     if (orientation == Qt::Horizontal && role == Qt::DisplayRole) {
-        switch(section) {
-        case 0: return i18n("Device");
-        case 1: return i18nc("As in automount on login", "On Login");
-        case 2: return i18nc("As in automoount on attach", "On Attach");
+        switch (section) {
+        case 0:
+            return i18n("Device");
+        case 1:
+            return i18nc("As in automount on login", "On Login");
+        case 2:
+            return i18nc("As in automoount on attach", "On Attach");
         }
     }
     return QVariant();
@@ -177,9 +180,9 @@ QModelIndex DeviceModel::index(int row, int column, const QModelIndex &parent) c
             }
         }
     } else {
-         if ((row == 0 || row == 1) && column >= 0 && column <= 2) {
+        if ((row == 0 || row == 1) && column >= 0 && column <= 2) {
             return createIndex(row, column, 3);
-         }
+        }
     }
     return QModelIndex();
 }
@@ -240,7 +243,7 @@ bool DeviceModel::setData(const QModelIndex &index, const QVariant &value, int r
 {
     if (index.isValid() && role == Qt::CheckStateRole && index.column() > 0) {
         const QString &udi = index.data(Qt::UserRole).toString();
-        switch(index.column()) {
+        switch (index.column()) {
         case 1:
             m_loginForced[udi] = (value.toInt() == Qt::Checked) ? true : false;
             break;
@@ -260,7 +263,7 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
     if (index.isValid() && index.parent().isValid()) {
         if (index.parent().row() == 0) {
             if (role == TypeRole) {
-				return Attached;
+                return Attached;
             }
 
             const QString &udi = m_attached.at(index.row());
@@ -271,7 +274,7 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
             }
 
             if (index.column() == 0) {
-                switch(role) {
+                switch (role) {
                 case Qt::DisplayRole:
                     return dev.description();
                 case Qt::ToolTipRole:
@@ -280,7 +283,7 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
                     return QIcon::fromTheme(dev.icon());
                 }
             } else if (index.column() == 1) {
-                switch(role) {
+                switch (role) {
                 case Qt::CheckStateRole:
                     return m_loginForced[udi] ? Qt::Checked : Qt::Unchecked;
                 case Qt::ToolTipRole:
@@ -289,7 +292,7 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
                     return i18n("This device will not be automatically mounted at login.");
                 }
             } else if (index.column() == 2) {
-                switch(role) {
+                switch (role) {
                 case Qt::CheckStateRole:
                     return m_attachedForced[udi] ? Qt::Checked : Qt::Unchecked;
                 case Qt::ToolTipRole:
@@ -300,7 +303,7 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
             }
         } else if (index.parent().row() == 1) {
             if (role == TypeRole) {
-				return Detatched;
+                return Detatched;
             }
 
             const QString &udi = m_disconnected[index.row()];
@@ -310,7 +313,7 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
             }
 
             if (index.column() == 0) {
-                switch(role) {
+                switch (role) {
                 case Qt::DisplayRole:
                     return m_settings->getDeviceName(udi);
                 case Qt::ToolTipRole:
@@ -319,7 +322,7 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
                     return QIcon::fromTheme(m_settings->getDeviceIcon(udi));
                 }
             } else if (index.column() == 1) {
-                switch(role) {
+                switch (role) {
                 case Qt::CheckStateRole:
                     return m_loginForced[udi] ? Qt::Checked : Qt::Unchecked;
                 case Qt::ToolTipRole:
@@ -328,7 +331,7 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
                     return i18n("This device will not be automatically mounted at login.");
                 }
             } else if (index.column() == 2) {
-                switch(role) {
+                switch (role) {
                 case Qt::CheckStateRole:
                     return m_attachedForced[udi] ? Qt::Checked : Qt::Unchecked;
                 case Qt::ToolTipRole:

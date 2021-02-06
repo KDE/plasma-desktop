@@ -22,8 +22,7 @@
 
 G_BEGIN_DECLS
 
-guint
-_gdk_keyval_from_name (const gchar *keyval_name);
+guint _gdk_keyval_from_name(const gchar *keyval_name);
 
 G_END_DECLS
 

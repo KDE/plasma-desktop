@@ -16,79 +16,82 @@
  * along with this program; if not, write to the Free Software            *
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA          *
  * 02110-1301, USA.                                                       *
-***************************************************************************/
+ ***************************************************************************/
 
 #include "ActionModel.h"
 #include "ActionItem.h"
 
 #include <KDesktopFileActions>
 
+#include <QDirIterator>
 #include <QIcon>
 #include <QStandardPaths>
-#include <QDirIterator>
 
-class ActionModel::Private {
+class ActionModel::Private
+{
 public:
-    Private() {}
+    Private()
+    {
+    }
 
-    QList<ActionItem*> actions;
+    QList<ActionItem *> actions;
 };
 
-static bool sortAction( ActionItem * left, ActionItem * right )
+static bool sortAction(ActionItem *left, ActionItem *right)
 {
     return left->name().localeAwareCompare(right->name()) < 0;
 }
 
-ActionModel::ActionModel( QObject *parent )
-    : QAbstractTableModel( parent )
-    , d( new Private() )
+ActionModel::ActionModel(QObject *parent)
+    : QAbstractTableModel(parent)
+    , d(new Private())
 {
 }
 
 ActionModel::~ActionModel()
 {
-    qDeleteAll( d->actions );
+    qDeleteAll(d->actions);
     d->actions.clear();
     delete d;
 }
 
-int ActionModel::columnCount( const QModelIndex &parent ) const
+int ActionModel::columnCount(const QModelIndex &parent) const
 {
-    Q_UNUSED( parent );
+    Q_UNUSED(parent);
     return 2;
 }
 
-int ActionModel::rowCount( const QModelIndex &parent ) const
+int ActionModel::rowCount(const QModelIndex &parent) const
 {
-    if( !parent.isValid() ) {
+    if (!parent.isValid()) {
         return d->actions.count();
     }
     return 0;
 }
 
-QVariant ActionModel::data( const QModelIndex &index, int role ) const
+QVariant ActionModel::data(const QModelIndex &index, int role) const
 {
     QVariant theData;
-    if ( !index.isValid() ) {
+    if (!index.isValid()) {
         return QVariant();
     }
 
-    ActionItem * mi = d->actions.at( index.row() );
-    switch ( role ) {
+    ActionItem *mi = d->actions.at(index.row());
+    switch (role) {
     case Qt::DisplayRole:
-        if( index.column() == 0 ) {
-            theData.setValue( mi->name() );
-        } else if( index.column() == 1 ) {
-            theData.setValue( mi->involvedTypes() );
+        if (index.column() == 0) {
+            theData.setValue(mi->name());
+        } else if (index.column() == 1) {
+            theData.setValue(mi->involvedTypes());
         }
         break;
     case Qt::DecorationRole:
-        if( index.column() == 0 ) {
+        if (index.column() == 0) {
             theData = QIcon::fromTheme(mi->icon());
         }
         break;
     case Qt::UserRole:
-        theData.setValue( mi );
+        theData.setValue(mi);
         break;
     default:
         break;
@@ -99,10 +102,11 @@ QVariant ActionModel::data( const QModelIndex &index, int role ) const
 void ActionModel::buildActionList()
 {
     beginResetModel();
-    qDeleteAll( d->actions );
+    qDeleteAll(d->actions);
     d->actions.clear();
     // Prepare to search for possible actions -> we only want solid types
-    const QStringList actionDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("solid/actions"), QStandardPaths::LocateDirectory);
+    const QStringList actionDirs =
+        QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("solid/actions"), QStandardPaths::LocateDirectory);
     // Get service objects for those actions and add them to the display
     for (const QString &actionDir : actionDirs) {
         QDirIterator it(actionDir, QStringList() << QStringLiteral("*.desktop"));
@@ -112,8 +116,8 @@ void ActionModel::buildActionList()
             // Get contained services list
             const QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(desktop, true);
             for (const KServiceAction &deviceAction : services) {
-                ActionItem * actionItem = new ActionItem( desktop, deviceAction.name(), this ); // Create an action
-                d->actions.append( actionItem );
+                ActionItem *actionItem = new ActionItem(desktop, deviceAction.name(), this); // Create an action
+                d->actions.append(actionItem);
             }
         }
     }
@@ -122,8 +126,7 @@ void ActionModel::buildActionList()
     endResetModel();
 }
 
-QList<ActionItem*> ActionModel::actionList() const
+QList<ActionItem *> ActionModel::actionList() const
 {
     return d->actions;
 }
-

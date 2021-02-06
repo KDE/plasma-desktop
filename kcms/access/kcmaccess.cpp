@@ -21,38 +21,38 @@
 
 #include "kcmaccess.h"
 
-#include <stdlib.h>
 #include <math.h>
+#include <stdlib.h>
 
 #include <QFileDialog>
-#include <QStandardPaths>
 #include <QProcess>
-#include <QX11Info>
 #include <QQuickItem>
 #include <QQuickRenderControl>
+#include <QStandardPaths>
 #include <QWindow>
+#include <QX11Info>
 
 #include <KAboutData>
 #include <KConfigGroup>
-#include <KSharedConfig>
 #include <KKeyServer>
+#include <KLocalizedString>
 #include <KNotifyConfigWidget>
 #include <KPluginFactory>
+#include <KSharedConfig>
 #include <KToolInvocation>
-#include <KLocalizedString>
-#include <X11/Xlib.h>
 #include <X11/XKBlib.h>
+#include <X11/Xlib.h>
 
 #define XK_MISCELLANY
 #define XK_XKB_KEYS
 #include <X11/keysymdef.h>
 
 #include "kcmaccessibilitybell.h"
+#include "kcmaccessibilitydata.h"
 #include "kcmaccessibilitykeyboard.h"
 #include "kcmaccessibilitykeyboardfilters.h"
 #include "kcmaccessibilitymouse.h"
 #include "kcmaccessibilityscreenreader.h"
-#include "kcmaccessibilitydata.h"
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMAccessFactory, "kcm_access.json", registerPlugin<KAccessConfig>(); registerPlugin<AccessibilityData>();)
 
@@ -106,24 +106,21 @@ QString mouseKeysShortcut(Display *display)
     KKeyServer::xEventToQt(&ev, &key);
     QString keyname = QKeySequence(key).toString();
 
-    unsigned int AltMask   = KKeyServer::modXAlt();
-    unsigned int WinMask   = KKeyServer::modXMeta();
-    unsigned int NumMask   = KKeyServer::modXNumLock();
+    unsigned int AltMask = KKeyServer::modXAlt();
+    unsigned int WinMask = KKeyServer::modXMeta();
+    unsigned int NumMask = KKeyServer::modXNumLock();
     unsigned int ScrollMask = KKeyServer::modXScrollLock();
 
-    unsigned int MetaMask  = XkbKeysymToModifiers(display, XK_Meta_L);
+    unsigned int MetaMask = XkbKeysymToModifiers(display, XK_Meta_L);
     unsigned int SuperMask = XkbKeysymToModifiers(display, XK_Super_L);
     unsigned int HyperMask = XkbKeysymToModifiers(display, XK_Hyper_L);
-    unsigned int AltGrMask = XkbKeysymToModifiers(display, XK_Mode_switch)
-                             | XkbKeysymToModifiers(display, XK_ISO_Level3_Shift)
-                             | XkbKeysymToModifiers(display, XK_ISO_Level3_Latch)
-                             | XkbKeysymToModifiers(display, XK_ISO_Level3_Lock);
+    unsigned int AltGrMask = XkbKeysymToModifiers(display, XK_Mode_switch) | XkbKeysymToModifiers(display, XK_ISO_Level3_Shift)
+        | XkbKeysymToModifiers(display, XK_ISO_Level3_Latch) | XkbKeysymToModifiers(display, XK_ISO_Level3_Lock);
 
-    unsigned int mods = ShiftMask | ControlMask | AltMask | WinMask
-                        | LockMask | NumMask | ScrollMask;
+    unsigned int mods = ShiftMask | ControlMask | AltMask | WinMask | LockMask | NumMask | ScrollMask;
 
     AltGrMask &= ~mods;
-    MetaMask  &= ~(mods | AltGrMask);
+    MetaMask &= ~(mods | AltGrMask);
     SuperMask &= ~(mods | AltGrMask | MetaMask);
     HyperMask &= ~(mods | AltGrMask | MetaMask | SuperMask);
 
@@ -142,17 +139,18 @@ QString mouseKeysShortcut(Display *display)
     if ((modifiers & ShiftMask) != 0)
         keyname = QKeySequence(Qt::SHIFT).toString() + QLatin1Char('+') + keyname;
 
-    return modifiers & ScrollMask & LockMask & NumMask ? i18n("Press %1 while NumLock, CapsLock and ScrollLock are active", keyname)
-         : modifiers & ScrollMask & LockMask ? i18n("Press %1 while CapsLock and ScrollLock are active", keyname)
-         : modifiers & ScrollMask & NumMask ? i18n("Press %1 while NumLock and ScrollLock are active", keyname)
-         : modifiers & ScrollMask ? i18n("Press %1 while ScrollLock is active", keyname)
-         : modifiers & LockMask & NumMask ? i18n("Press %1 while NumLock and CapsLock are active", keyname)
-         : modifiers & LockMask ? i18n("Press %1 while CapsLock is active", keyname)
-         : modifiers & NumMask ? i18n("Press %1 while NumLock is active", keyname)
-         : i18n("Press %1", keyname);
+    return modifiers & ScrollMask & LockMask & NumMask
+        ? i18n("Press %1 while NumLock, CapsLock and ScrollLock are active", keyname)
+        : modifiers & ScrollMask & LockMask ? i18n("Press %1 while CapsLock and ScrollLock are active", keyname)
+                                            : modifiers & ScrollMask & NumMask ? i18n("Press %1 while NumLock and ScrollLock are active", keyname)
+                                                                               : modifiers & ScrollMask ? i18n("Press %1 while ScrollLock is active", keyname)
+                                                                                                        : modifiers & LockMask & NumMask
+                        ? i18n("Press %1 while NumLock and CapsLock are active", keyname)
+                        : modifiers & LockMask ? i18n("Press %1 while CapsLock is active", keyname)
+                                               : modifiers & NumMask ? i18n("Press %1 while NumLock is active", keyname) : i18n("Press %1", keyname);
 }
 
-KAccessConfig::KAccessConfig(QObject *parent, const QVariantList& args)
+KAccessConfig::KAccessConfig(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
     , m_data(new AccessibilityData(this))
     , m_desktopShortcutInfo(QX11Info::isPlatformX11() ? mouseKeysShortcut(QX11Info::display()) : QString())
@@ -163,11 +161,14 @@ KAccessConfig::KAccessConfig(QObject *parent, const QVariantList& args)
     qmlRegisterType<KeyboardFiltersSettings>();
     qmlRegisterType<ScreenReaderSettings>();
 
-    KAboutData *about =
-        new KAboutData(QStringLiteral("kcmaccess"), i18n("Accessibility"), QStringLiteral("1.0"),
-                       QString(), KAboutLicense::GPL, i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
+    KAboutData *about = new KAboutData(QStringLiteral("kcmaccess"),
+                                       i18n("Accessibility"),
+                                       QStringLiteral("1.0"),
+                                       QString(),
+                                       KAboutLicense::GPL,
+                                       i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
 
-    about->addAuthor(i18n("Matthias Hoelzer-Kluepfel"), i18n("Author") , QStringLiteral("hoelzer@kde.org"));
+    about->addAuthor(i18n("Matthias Hoelzer-Kluepfel"), i18n("Author"), QStringLiteral("hoelzer@kde.org"));
 
     int tryOrcaRun = QProcess::execute(QStringLiteral("orca"), {QStringLiteral("--version")});
     m_screenReaderInstalled = tryOrcaRun != -2;
@@ -191,19 +192,16 @@ void KAccessConfig::configureKNotify(QQuickItem *parent)
     auto dialog = KNotifyConfigWidget::configure(nullptr, QStringLiteral("kaccess"));
     if (parent && parent->window()) {
         dialog->winId();
-        dialog->windowHandle()
-            ->setTransientParent(QQuickRenderControl::renderWindowFor(parent->window()));
+        dialog->windowHandle()->setTransientParent(QQuickRenderControl::renderWindowFor(parent->window()));
     }
 }
 
 void KAccessConfig::launchOrcaConfiguration()
 {
-    const QStringList gsettingArgs = {
-        QStringLiteral("set"),
-        QStringLiteral("org.gnome.desktop.a11y.applications"),
-        QStringLiteral("screen-reader-enabled"),
-        QStringLiteral("true")
-    };
+    const QStringList gsettingArgs = {QStringLiteral("set"),
+                                      QStringLiteral("org.gnome.desktop.a11y.applications"),
+                                      QStringLiteral("screen-reader-enabled"),
+                                      QStringLiteral("true")};
 
     int ret = QProcess::execute(QStringLiteral("gsettings"), gsettingArgs);
     if (ret) {
@@ -215,7 +213,7 @@ void KAccessConfig::launchOrcaConfiguration()
     qint64 pid = 0;
     bool started = QProcess::startDetached(QStringLiteral("orca"), {QStringLiteral("--setup")}, QString(), &pid);
     if (!started) {
-       setOrcaLaunchFeedback(i18n("Error: Could not launch \"orca --setup\""));
+        setOrcaLaunchFeedback(i18n("Error: Could not launch \"orca --setup\""));
     }
 }
 
@@ -241,7 +239,7 @@ QString KAccessConfig::orcaLaunchFeedback() const
     return m_orcaLaunchFeedback;
 }
 
-void KAccessConfig::setOrcaLaunchFeedback(const QString& value)
+void KAccessConfig::setOrcaLaunchFeedback(const QString &value)
 {
     if (m_orcaLaunchFeedback != value) {
         m_orcaLaunchFeedback = value;

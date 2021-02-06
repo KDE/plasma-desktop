@@ -25,7 +25,11 @@
 #include <KService>
 
 ComponentChooserEmail::ComponentChooserEmail(QObject *parent)
-    : ComponentChooser(parent, QStringLiteral("x-scheme-handler/mailto"), QStringLiteral("Email"), QStringLiteral("org.kde.kmail2.desktop"), i18n("Select default e-mail client"))
+    : ComponentChooser(parent,
+                       QStringLiteral("x-scheme-handler/mailto"),
+                       QStringLiteral("Email"),
+                       QStringLiteral("org.kde.kmail2.desktop"),
+                       i18n("Select default e-mail client"))
 {
 }
 

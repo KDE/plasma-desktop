@@ -25,13 +25,13 @@ add_library (kactivitiessettingsplugin SHARED ${kactivities_KCM_imports_LIB_SRCS
 
 target_link_libraries (
    kactivitiessettingsplugin
-   Qt5::Core
-   Qt5::DBus
-   Qt5::Gui
-   Qt5::Qml
-   Qt5::Quick
-   Qt5::Widgets
-   Qt5::QuickWidgets
+   Qt::Core
+   Qt::DBus
+   Qt::Gui
+   Qt::Qml
+   Qt::Quick
+   Qt::Widgets
+   Qt::QuickWidgets
    KF5::I18n
    KF5::Activities
    KF5::ConfigCore

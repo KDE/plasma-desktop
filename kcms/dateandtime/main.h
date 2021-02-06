@@ -26,25 +26,24 @@
 class Dtime;
 class QTabWidget;
 
-
 class KclockModule : public KCModule
 {
-  Q_OBJECT
+    Q_OBJECT
 
 public:
-  explicit KclockModule(QWidget *parent, const QVariantList &);
+    explicit KclockModule(QWidget *parent, const QVariantList &);
 
-  void	save() override;
-  void	load() override;
+    void save() override;
+    void load() override;
 
 private:
-  bool kauthSave();
-  bool timedatedSave();
+    bool kauthSave();
+    bool timedatedSave();
 
-  QTabWidget   *tab;
-  Dtime	*dtime;
+    QTabWidget *tab;
+    Dtime *dtime;
 
-  bool m_haveTimedated = false;
+    bool m_haveTimedated = false;
 };
 
 #endif // main_included

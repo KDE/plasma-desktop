@@ -16,22 +16,25 @@
  * along with this program; if not, write to the Free Software            *
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA          *
  * 02110-1301, USA.                                                       *
-***************************************************************************/
+ ***************************************************************************/
 
 #include "PredicateModel.h"
 
 #include "PredicateItem.h"
 
-class PredicateModel::Private {
+class PredicateModel::Private
+{
 public:
-    Private() {}
+    Private()
+    {
+    }
 
-    PredicateItem * rootItem;
+    PredicateItem *rootItem;
 };
 
-PredicateModel::PredicateModel( PredicateItem * menuRoot, QObject *parent )
-    : QAbstractItemModel( parent )
-    , d( new Private() )
+PredicateModel::PredicateModel(PredicateItem *menuRoot, QObject *parent)
+    : QAbstractItemModel(parent)
+    , d(new Private())
 {
     d->rootItem = menuRoot;
 }
@@ -41,17 +44,17 @@ PredicateModel::~PredicateModel()
     delete d;
 }
 
-int PredicateModel::columnCount( const QModelIndex &parent ) const
+int PredicateModel::columnCount(const QModelIndex &parent) const
 {
-    Q_UNUSED( parent );
+    Q_UNUSED(parent);
     return 1;
 }
 
-int PredicateModel::rowCount( const QModelIndex &parent ) const
+int PredicateModel::rowCount(const QModelIndex &parent) const
 {
-    PredicateItem * mi;
-    if ( parent.isValid() ) {
-        mi = static_cast<PredicateItem*>( parent.internalPointer() );
+    PredicateItem *mi;
+    if (parent.isValid()) {
+        mi = static_cast<PredicateItem *>(parent.internalPointer());
     } else {
         mi = d->rootItem;
     }
@@ -59,118 +62,117 @@ int PredicateModel::rowCount( const QModelIndex &parent ) const
     return mi->children().count();
 }
 
-QVariant PredicateModel::data( const QModelIndex &index, int role ) const
+QVariant PredicateModel::data(const QModelIndex &index, int role) const
 {
-    PredicateItem * mi = nullptr;
+    PredicateItem *mi = nullptr;
     QVariant theData;
-    if ( !index.isValid() ) {
+    if (!index.isValid()) {
         return QVariant();
     }
 
-    mi = static_cast<PredicateItem*>( index.internalPointer() );
-    switch ( role ) {
-        case Qt::DisplayRole:
-            theData.setValue( mi->prettyName() );
-            break;
-        case Qt::UserRole:
-            theData.setValue( mi );
-            break;
-        default:
-            break;
+    mi = static_cast<PredicateItem *>(index.internalPointer());
+    switch (role) {
+    case Qt::DisplayRole:
+        theData.setValue(mi->prettyName());
+        break;
+    case Qt::UserRole:
+        theData.setValue(mi);
+        break;
+    default:
+        break;
     }
     return theData;
 }
 
-Qt::ItemFlags PredicateModel::flags( const QModelIndex &index ) const
+Qt::ItemFlags PredicateModel::flags(const QModelIndex &index) const
 {
-    if ( !index.isValid() ) {
+    if (!index.isValid()) {
         return Qt::ItemFlags();
     }
 
     return Qt::ItemIsEnabled | Qt::ItemIsSelectable;
 }
 
-QModelIndex PredicateModel::index( int row, int column, const QModelIndex &parent ) const
+QModelIndex PredicateModel::index(int row, int column, const QModelIndex &parent) const
 {
-    if ( !hasIndex(row, column, parent) ) {
+    if (!hasIndex(row, column, parent)) {
         return QModelIndex();
     }
 
     PredicateItem *parentItem;
-    if ( !parent.isValid() ) {
+    if (!parent.isValid()) {
         parentItem = d->rootItem;
     } else {
-        parentItem = static_cast<PredicateItem*>( parent.internalPointer() );
+        parentItem = static_cast<PredicateItem *>(parent.internalPointer());
     }
 
     PredicateItem *childItem = parentItem->children().value(row);
-    if ( childItem ) {
-        return createIndex( row, column, childItem );
+    if (childItem) {
+        return createIndex(row, column, childItem);
     } else {
         return QModelIndex();
     }
 }
 
-QModelIndex PredicateModel::parent( const QModelIndex &index ) const
+QModelIndex PredicateModel::parent(const QModelIndex &index) const
 {
-    PredicateItem *childItem = static_cast<PredicateItem*>( index.internalPointer() );
-    if( !childItem ) {
+    PredicateItem *childItem = static_cast<PredicateItem *>(index.internalPointer());
+    if (!childItem) {
         return QModelIndex();
     }
 
-    PredicateItem * parent = childItem->parent();
-    PredicateItem * grandParent = parent->parent();
+    PredicateItem *parent = childItem->parent();
+    PredicateItem *grandParent = parent->parent();
 
     int childRow = 0;
-    if( grandParent ) {
-        childRow = grandParent->children().indexOf( parent );
+    if (grandParent) {
+        childRow = grandParent->children().indexOf(parent);
     }
 
-    if ( parent == d->rootItem ) {
+    if (parent == d->rootItem) {
         return QModelIndex();
     }
-    return createIndex( childRow, 0, parent );
+    return createIndex(childRow, 0, parent);
 }
 
-PredicateItem * PredicateModel::rootItem() const
+PredicateItem *PredicateModel::rootItem() const
 {
     return d->rootItem;
 }
 
-void PredicateModel::setRootPredicate( PredicateItem * item )
+void PredicateModel::setRootPredicate(PredicateItem *item)
 {
     beginResetModel();
     d->rootItem = item;
     endResetModel();
 }
 
-void PredicateModel::itemUpdated( const QModelIndex& item )
+void PredicateModel::itemUpdated(const QModelIndex &item)
 {
-    emit dataChanged( item, item );
+    emit dataChanged(item, item);
 }
 
-void PredicateModel::childrenChanging( const QModelIndex& item, Solid::Predicate::Type oldType )
+void PredicateModel::childrenChanging(const QModelIndex &item, Solid::Predicate::Type oldType)
 {
-    PredicateItem * currentItem = static_cast<PredicateItem*>( item.internalPointer() );
+    PredicateItem *currentItem = static_cast<PredicateItem *>(item.internalPointer());
     Solid::Predicate::Type newType = currentItem->itemType;
-    
-    if( oldType == newType ) {
+
+    if (oldType == newType) {
         return;
     }
 
-    if( rowCount(item) != 0 && newType != Solid::Predicate::Conjunction && newType != Solid::Predicate::Disjunction ) {
-        emit beginRemoveRows( item, 0, 1 );
+    if (rowCount(item) != 0 && newType != Solid::Predicate::Conjunction && newType != Solid::Predicate::Disjunction) {
+        emit beginRemoveRows(item, 0, 1);
         currentItem->updateChildrenStatus();
         emit endRemoveRows();
         return;
     }
 
     bool hasChildren = (newType == Solid::Predicate::Conjunction || newType == Solid::Predicate::Disjunction);
- 
-    if( rowCount(item) == 0 && hasChildren ) {
-        emit beginInsertRows( item, 0, 1 );
+
+    if (rowCount(item) == 0 && hasChildren) {
+        emit beginInsertRows(item, 0, 1);
         currentItem->updateChildrenStatus();
         emit endInsertRows();
     }
 }
-

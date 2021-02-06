@@ -20,10 +20,10 @@
 
 #include <QCommandLineParser>
 #include <QDebug>
+#include <QProcess>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QX11Info>
-#include <QProcess>
 
 #include <KAboutData>
 #include <KLocalizedString>
@@ -73,13 +73,13 @@ int main(int argc, char *argv[])
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
 
-    QCommandLineOption modelOption(QStringList { "m", "model" }, {}, QStringLiteral("MODEL"));
+    QCommandLineOption modelOption(QStringList{"m", "model"}, {}, QStringLiteral("MODEL"));
     parser.addOption(modelOption);
-    QCommandLineOption layoutOption(QStringList { "l", "layout" }, {}, QStringLiteral("LAYOUT"));
+    QCommandLineOption layoutOption(QStringList{"l", "layout"}, {}, QStringLiteral("LAYOUT"));
     parser.addOption(layoutOption);
-    QCommandLineOption variantOption(QStringList { "a", "variant" }, {}, QStringLiteral("VARIANT"));
+    QCommandLineOption variantOption(QStringList{"a", "variant"}, {}, QStringLiteral("VARIANT"));
     parser.addOption(variantOption);
-    QCommandLineOption optionsOption(QStringList { "o", "options" }, {}, QStringLiteral("OPTIONS"));
+    QCommandLineOption optionsOption(QStringList{"o", "options"}, {}, QStringLiteral("OPTIONS"));
     parser.addOption(optionsOption);
     parser.process(app);
     aboutData.processCommandLine(&parser);
@@ -123,23 +123,29 @@ int main(int argc, char *argv[])
     QString errorDetails;
     std::unique_ptr<Geometry> geometry;
 
-    XkbDescPtr xkb = XkbGetKeyboardByName(QX11Info::display(),
-                                          XkbUseCoreKbd,
-                                          &componentNames,
-                                          0,
-                                          XkbGBN_GeometryMask |
-                                          XkbGBN_KeyNamesMask |
-                                          XkbGBN_OtherNamesMask |
-                                          XkbGBN_ClientSymbolsMask |
-                                          XkbGBN_IndicatorMapMask,
-                                          false);
+    XkbDescPtr xkb =
+        XkbGetKeyboardByName(QX11Info::display(),
+                             XkbUseCoreKbd,
+                             &componentNames,
+                             0,
+                             XkbGBN_GeometryMask | XkbGBN_KeyNamesMask | XkbGBN_OtherNamesMask | XkbGBN_ClientSymbolsMask | XkbGBN_IndicatorMapMask,
+                             false);
     if (!xkb) {
         QProcess setxkbmap;
         QProcess xkbcomp;
 
         setxkbmap.setStandardOutputProcess(&xkbcomp);
         xkbcomp.setProcessChannelMode(QProcess::MergedChannels); // combine in single channel
-        setxkbmap.start(QStringLiteral("setxkbmap"), {QStringLiteral("-print"), QStringLiteral("-model"), model, QStringLiteral("-layout"), layout, QStringLiteral("-variant"), variant, QStringLiteral("-option"), options});
+        setxkbmap.start(QStringLiteral("setxkbmap"),
+                        {QStringLiteral("-print"),
+                         QStringLiteral("-model"),
+                         model,
+                         QStringLiteral("-layout"),
+                         layout,
+                         QStringLiteral("-variant"),
+                         variant,
+                         QStringLiteral("-option"),
+                         options});
         xkbcomp.start(QStringLiteral("xkbcomp"), {QStringLiteral("-")});
         setxkbmap.waitForFinished();
         xkbcomp.waitForFinished();
@@ -172,11 +178,15 @@ int main(int argc, char *argv[])
     // faster). Constructing our QObjects takes 1ms.
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/qml/main.qml"));
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-                     &app, [url](QObject *obj, const QUrl &objUrl) {
-        if (!obj && url == objUrl)
-            QCoreApplication::exit(-1);
-    }, Qt::QueuedConnection);
+    QObject::connect(
+        &engine,
+        &QQmlApplicationEngine::objectCreated,
+        &app,
+        [url](QObject *obj, const QUrl &objUrl) {
+            if (!obj && url == objUrl)
+                QCoreApplication::exit(-1);
+        },
+        Qt::QueuedConnection);
     engine.rootContext()->setContextProperty("geometry", geometry.get());
     engine.rootContext()->setContextProperty("errorDescription", errorDescription);
     engine.rootContext()->setContextProperty("errorDetails", errorDetails);

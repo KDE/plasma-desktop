@@ -16,13 +16,11 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-
 #ifndef PAGERPLUGIN_H
 #define PAGERPLUGIN_H
 
 #include <QQmlEngine>
 #include <QQmlExtensionPlugin>
-
 
 class KickoffPlugin : public QQmlExtensionPlugin
 {

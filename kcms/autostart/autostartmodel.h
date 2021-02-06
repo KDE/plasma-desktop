@@ -39,7 +39,7 @@ public:
         Enabled = Qt::UserRole + 1,
         Source,
         FileName,
-        OnlyInPlasma
+        OnlyInPlasma,
     };
 
     enum AutostartEntrySource {
@@ -75,7 +75,7 @@ private:
 };
 
 struct AutostartEntry {
-    QString name;    // Human readable name or script file path. In case of symlinks the target file path
+    QString name; // Human readable name or script file path. In case of symlinks the target file path
     AutostartModel::AutostartEntrySource source;
     bool enabled;
     QString fileName; // the file backing the entry

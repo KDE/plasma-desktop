@@ -19,8 +19,8 @@
 #ifndef KWINWAYLANDTOUCHPAD_H
 #define KWINWAYLANDTOUCHPAD_H
 
-#include <backends/libinputcommon.h>
 #include <QString>
+#include <backends/libinputcommon.h>
 
 class QDBusInterface;
 
@@ -43,72 +43,91 @@ public:
 
     //
     // general
-    QString name() const override {
+    QString name() const override
+    {
         return m_name.val;
     }
-    QString sysName() const {
+    QString sysName() const
+    {
         return m_sysName.val;
     }
-    bool supportsDisableEvents() const override {
+    bool supportsDisableEvents() const override
+    {
         return m_supportsDisableEvents.val;
     }
-    void setEnabled(bool enabled) override {
+    void setEnabled(bool enabled) override
+    {
         m_enabled.set(enabled);
     }
-    bool isEnabled() const override {
+    bool isEnabled() const override
+    {
         return m_enabled.val;
     }
     //
     // advanced
-    bool supportsLeftHanded() const override {
+    bool supportsLeftHanded() const override
+    {
         return m_supportsLeftHanded.val;
     }
-    bool supportsDisableEventsOnExternalMouse() const override {
+    bool supportsDisableEventsOnExternalMouse() const override
+    {
         return m_supportsDisableEventsOnExternalMouse.val;
     }
-    bool supportsDisableWhileTyping() const override {
+    bool supportsDisableWhileTyping() const override
+    {
         return m_supportsDisableWhileTyping.val;
     }
-    bool supportsMiddleEmulation() const override {
+    bool supportsMiddleEmulation() const override
+    {
         return m_supportsMiddleEmulation.val;
     }
     //
     // tapping
-    void setLmrTapButtonMap(bool set) override {
+    void setLmrTapButtonMap(bool set) override
+    {
         m_lmrTapButtonMap.set(set);
     }
     //
     // acceleration speed and profile
-    bool supportsPointerAcceleration() const override {
+    bool supportsPointerAcceleration() const override
+    {
         return m_supportsPointerAcceleration.val;
     }
-    bool supportsPointerAccelerationProfileFlat() const override {
+    bool supportsPointerAccelerationProfileFlat() const override
+    {
         return m_supportsPointerAccelerationProfileFlat.val;
     }
-    bool supportsPointerAccelerationProfileAdaptive() const override {
+    bool supportsPointerAccelerationProfileAdaptive() const override
+    {
         return m_supportsPointerAccelerationProfileAdaptive.val;
     }
     //
     // scrolling
-    bool supportsNaturalScroll() const override {
+    bool supportsNaturalScroll() const override
+    {
         return m_supportsNaturalScroll.val;
     }
-    bool supportsHorizontalScrolling() const override {
+    bool supportsHorizontalScrolling() const override
+    {
         return false;
     }
-    bool supportsScrollTwoFinger() const override {
+    bool supportsScrollTwoFinger() const override
+    {
         return m_supportsScrollTwoFinger.val;
     }
-    bool supportsScrollEdge() const override {
+    bool supportsScrollEdge() const override
+    {
         return m_supportsScrollEdge.val;
     }
-    bool supportsScrollOnButtonDown() const override {
+    bool supportsScrollOnButtonDown() const override
+    {
         return m_supportsScrollOnButtonDown.val;
     }
 
     //
     // Scroll Factor
-    bool supportsScrollFactor() const override {
+    bool supportsScrollFactor() const override
+    {
         return true;
     }
     qreal scrollFactor() const
@@ -122,10 +141,12 @@ public:
 
     //
     // Click method
-    bool supportsClickMethodAreas() const override {
+    bool supportsClickMethodAreas() const override
+    {
         return m_supportsClickMethodAreas.val;
     }
-    bool supportsClickMethodClickfinger() const override {
+    bool supportsClickMethodClickfinger() const override
+    {
         return m_supportsClickMethodClickfinger.val;
     }
 
@@ -133,12 +154,9 @@ Q_SIGNALS:
     void scrollFactorChanged();
 
 private:
+    template<typename T> bool valueLoader(Prop<T> &prop);
 
-    template<typename T>
-    bool valueLoader(Prop<T> &prop);
-
-    template<typename T>
-    QString valueWriter(const Prop<T> &prop);
+    template<typename T> QString valueWriter(const Prop<T> &prop);
     //
     // general
     Prop<QString> m_name = Prop<QString>("name");

@@ -20,12 +20,12 @@
 
 #include "ActivitiesTab.h"
 
+#include <QQmlComponent>
 #include <QQmlContext>
 #include <QQmlEngine>
-#include <QQmlComponent>
 
-#include <QQuickView>
 #include <QGuiApplication>
+#include <QQuickView>
 #include <QVBoxLayout>
 
 #include "ExtraActivitiesInterface.h"
@@ -35,7 +35,8 @@
 
 #include "kactivities-kcm-features.h"
 
-class ActivitiesTab::Private {
+class ActivitiesTab::Private
+{
 public:
     ExtraActivitiesInterface *extraActivitiesInterface;
 };
@@ -53,4 +54,3 @@ ActivitiesTab::ActivitiesTab(QWidget *parent)
 ActivitiesTab::~ActivitiesTab()
 {
 }
-

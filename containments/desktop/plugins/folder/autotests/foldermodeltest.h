@@ -48,8 +48,7 @@ private Q_SLOTS:
     void tst_multiScreen();
     void tst_multiScreenDifferenPath();
 
-
-private:    
+private:
     void createTestFolder(const QString &path);
 
     FolderModel *m_folderModel;

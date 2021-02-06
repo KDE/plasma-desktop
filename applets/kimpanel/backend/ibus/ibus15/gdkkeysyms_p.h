@@ -16,7 +16,6 @@
  * License along with this library. If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 /*
  * File auto-generated from script https://gitlab.gnome.org/GNOME/gtk/blob/master/gdk/gdkkeysyms-update.pl
  * using the input file
@@ -34,7 +33,6 @@
 
 #ifndef __GDK_KEYSYMS_H__
 #define __GDK_KEYSYMS_H__
-
 
 #define GDK_KEY_VoidSymbol 0xffffff
 #define GDK_KEY_BackSpace 0xff08

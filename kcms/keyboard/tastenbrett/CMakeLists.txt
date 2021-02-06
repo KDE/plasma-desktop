@@ -21,10 +21,10 @@ target_compile_definitions(tastenbrett
 
 target_link_libraries(tastenbrett
     PRIVATE
-        Qt5::Core
-        Qt5::Quick
-        Qt5::Gui
-        Qt5::X11Extras
+        Qt::Core
+        Qt::Quick
+        Qt::Gui
+        Qt::X11Extras
         KF5::CoreAddons
         KF5::I18n
         XCB::XCB

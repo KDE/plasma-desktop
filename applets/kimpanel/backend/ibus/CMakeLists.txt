@@ -27,14 +27,14 @@ if(IBUS_FOUND AND GLIB2_FOUND AND GIO_FOUND AND GOBJECT_FOUND)
             ibus15/panel.cpp
             ibus15/propertymanager.cpp)
         target_compile_definitions(kimpanel-ibus-panel PRIVATE -DQT_NO_KEYWORDS)
-        target_link_libraries(kimpanel-ibus-panel ${IBUS_LIBRARIES} GLIB2::GLIB2 ${GIO_LIBRARIES} ${GOBJECT_LIBRARIES} Qt5::Core Qt5::DBus Qt5::Gui Qt5::X11Extras XCB::KEYSYMS)
+        target_link_libraries(kimpanel-ibus-panel ${IBUS_LIBRARIES} GLIB2::GLIB2 ${GIO_LIBRARIES} ${GOBJECT_LIBRARIES} Qt::Core Qt::DBus Qt::Gui Qt::X11Extras XCB::KEYSYMS)
         # configure_file(${CMAKE_CURRENT_SOURCE_DIR}/kimpanel.xml.in ${CMAKE_CURRENT_BINARY_DIR}/kimpanel.xml @ONLY)
         # install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kimpanel.xml DESTINATION ${CMAKE_INSTALL_PREFIX}/share/ibus/component)
 
         target_include_directories(kimpanel-ibus-panel PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
 
         add_executable(kimpanel-ibus-panel-launcher launcher.cpp)
-        target_link_libraries(kimpanel-ibus-panel-launcher Qt5::Core Qt5::DBus)
+        target_link_libraries(kimpanel-ibus-panel-launcher Qt::Core Qt::DBus)
         install(TARGETS kimpanel-ibus-panel kimpanel-ibus-panel-launcher DESTINATION ${KDE_INSTALL_LIBEXECDIR})
     endif()
 endif()

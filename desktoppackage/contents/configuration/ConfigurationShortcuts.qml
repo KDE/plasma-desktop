@@ -42,8 +42,10 @@ Item {
         KeySequenceItem {
             id: button
             keySequence: plasmoid.globalShortcut
-            onCaptureFinished: {
-                root.configurationChanged();
+            onKeySequenceChanged: {
+                if (keySequence != plasmoid.globalShortcut) {
+                    root.configurationChanged();
+                }
             }
         }
     }

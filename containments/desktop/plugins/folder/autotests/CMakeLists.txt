@@ -9,7 +9,7 @@ ecm_add_tests(
    foldermodeltest.cpp 
    positionertest.cpp
    viewpropertiesmenutest.cpp
-   LINK_LIBRARIES Qt5::Test folderplugin
+   LINK_LIBRARIES Qt::Test folderplugin
 )
 
 

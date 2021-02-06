@@ -28,7 +28,7 @@ target_link_libraries(kcm_workspace
     KF5::Declarative
     KF5::KDELibs4Support # kglobalsettings
 
-    Qt5::DBus
+    Qt::DBus
 )
 
 kcoreaddons_desktop_to_json(kcm_workspace "kcm_workspace.desktop" SERVICE_TYPES kcmodule.desktop)

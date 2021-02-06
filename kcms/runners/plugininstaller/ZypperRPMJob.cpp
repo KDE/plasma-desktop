@@ -5,12 +5,12 @@
 */
 
 #include "ZypperRPMJob.h"
-#include <QFileInfo>
-#include <QRegularExpression>
-#include <QProcess>
-#include <QDir>
-#include <KShell>
 #include <KLocalizedString>
+#include <KShell>
+#include <QDir>
+#include <QFileInfo>
+#include <QProcess>
+#include <QRegularExpression>
 
 void ZypperRPMJob::executeOperation(const QFileInfo &fileInfo, const QString &mimeType, bool install)
 {
@@ -18,8 +18,7 @@ void ZypperRPMJob::executeOperation(const QFileInfo &fileInfo, const QString &mi
 
     if (install) {
         const QString command = QStringLiteral("sudo zypper install %1").arg(KShell::quoteArg(fileInfo.absoluteFilePath()));
-        const QString bashCommand = QStringLiteral("echo %1;%1")
-            .arg(command, KShell::quoteArg(terminalCloseMessage(install)));
+        const QString bashCommand = QStringLiteral("echo %1;%1").arg(command, KShell::quoteArg(terminalCloseMessage(install)));
         runScriptInTerminal(QStringLiteral("sh -c %1").arg(KShell::quoteArg(bashCommand)), QDir::homePath());
     } else {
         QProcess rpmInfoProcess;

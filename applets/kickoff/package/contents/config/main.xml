@@ -7,13 +7,13 @@
     <group name="General">
         <entry name="switchTabsOnHover" type="Bool">
             <label>Whether to switch between menu tabs by hovering them.</label>
-            <default>true</default>
+            <default>false</default>
         </entry>
         <entry name="icon" type="String">
             <label>The name of the icon used in the compact representation (e.g. on a small panel).</label>
             <default>start-here-kde</default>
         </entry>
-            <entry name="favorites" type="StringList">
+        <entry name="favorites" type="StringList">
             <label>List of general favorites. Supported values are menu id's (usually .desktop file names), special URLs that expand into default applications (e.g. preferred://browser), document URLs and KPeople contact URIs.</label>
             <default>preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover.desktop</default>
         </entry>
@@ -21,7 +21,7 @@
             <label>List of system action favorites.</label>
             <default>suspend,hibernate,reboot,shutdown</default>
         </entry>
-            <entry name="primaryActions" type="Int">
+        <entry name="primaryActions" type="Int">
             <label>Which actions should be displayed in the footer: 0 = Power, 1 = Session, 2 = Custom</label>
             <default>0</default>
         </entry>
@@ -33,9 +33,9 @@
             <label>List of applications at the top of the "Computer" tab.</label>
             <default>systemsettings.desktop,org.kde.kinfocenter.desktop,org.kde.discover.desktop</default>
         </entry>
-            <entry name="favoritesDisplay" type="Int">
+        <entry name="favoritesDisplay" type="Int">
             <label>How to display favorites: 0 = Grid, 1 = List</label>
-        <default>0</default>
+            <default>0</default>
         </entry>
         <entry name="gridAllowTwoLines" type="Bool">
             <label>Whether to allow showing two lines in grid view.</label>

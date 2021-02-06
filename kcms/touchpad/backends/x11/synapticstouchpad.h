@@ -19,8 +19,8 @@
 #ifndef SYNAPTICSTOUCHPAD_H
 #define SYNAPTICSTOUCHPAD_H
 
-#include "xlibtouchpad.h"
 #include "xcbatom.h"
+#include "xlibtouchpad.h"
 
 class SynapticsTouchpad : public QObject, public XlibTouchpad
 {

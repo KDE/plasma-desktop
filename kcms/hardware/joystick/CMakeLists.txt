@@ -20,7 +20,6 @@ target_link_libraries(kcm_joystick
     KF5::KCMUtils
     KF5::I18n
     KF5::KIOWidgets
-    KF5::KDELibs4Support
 )
 
 install(TARGETS kcm_joystick  DESTINATION ${KDE_INSTALL_PLUGINDIR} )

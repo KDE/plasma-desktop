@@ -25,7 +25,8 @@
 #include <KService>
 #include <KServiceTypeTrader>
 
-PlacesModel::PlacesModel(QObject *parent) : QSortFilterProxyModel(parent)
+PlacesModel::PlacesModel(QObject *parent)
+    : QSortFilterProxyModel(parent)
 {
     m_sourceModel = new KFilePlacesModel(this);
 
@@ -51,8 +52,8 @@ QHash<int, QByteArray> PlacesModel::roleNames() const
 
 bool PlacesModel::activityLinkingEnabled() const
 {
-    const KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("KFileItemAction/Plugin"),
-        QStringLiteral("Library == 'kactivitymanagerd_fileitem_linking_plugin'"));
+    const KService::List services =
+        KServiceTypeTrader::self()->query(QStringLiteral("KFileItemAction/Plugin"), QStringLiteral("Library == 'kactivitymanagerd_fileitem_linking_plugin'"));
 
     if (services.isEmpty()) {
         return false;
@@ -82,8 +83,7 @@ QString PlacesModel::urlForIndex(int idx) const
     return m_sourceModel->url(mapToSource(index(idx, 0))).toString();
 }
 
-
-int PlacesModel::indexForUrl(const QString& url) const
+int PlacesModel::indexForUrl(const QString &url) const
 {
     QUrl _url(url);
     QModelIndex idx;

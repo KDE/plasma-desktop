@@ -12,9 +12,9 @@
 class QFileInfo;
 class QProcess;
 
-class AbstractJob: public QObject
+class AbstractJob : public QObject
 {
-Q_OBJECT
+    Q_OBJECT
 
 public:
     /**

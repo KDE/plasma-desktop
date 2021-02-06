@@ -39,10 +39,19 @@ public:
     bool getConfig() override;
     bool getDefaultConfig() override;
     bool isChangedConfig() const override;
-    QString errorString() const override { return m_errorString; }
+    QString errorString() const override
+    {
+        return m_errorString;
+    }
 
-    virtual int deviceCount() const override { return m_devices.count(); }
-    virtual QVector<QObject*> getDevices() const override { return m_devices; }
+    virtual int deviceCount() const override
+    {
+        return m_devices.count();
+    }
+    virtual QVector<QObject *> getDevices() const override
+    {
+        return m_devices;
+    }
 
 private Q_SLOTS:
     void onDeviceAdded(QString);
@@ -51,8 +60,8 @@ private Q_SLOTS:
 private:
     void findDevices();
 
-    QDBusInterface* m_deviceManager;
-    QVector<QObject*> m_devices;
+    QDBusInterface *m_deviceManager;
+    QVector<QObject *> m_devices;
 
     QString m_errorString = QString();
 };

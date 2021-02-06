@@ -38,6 +38,7 @@ PlasmaExtras.PlasmoidHeading {
 
     property alias query: queryField.text
     property Item input: queryField
+    property Item configureButton: configureButton
     property Item avatar: avatarButton
 
     KCoreAddons.KUser {
@@ -97,6 +98,17 @@ PlasmaExtras.PlasmoidHeading {
                     fill: parent
                     margins: PlasmaCore.Units.smallSpacing
                 }
+                // NOTE: for some reason Avatar eats touch events even though it shouldn't
+                // Ideally we'd be using Avatar but it doesn't have proper key nav yet
+                // see https://invent.kde.org/frameworks/kirigami/-/merge_requests/218
+                actions.main: Kirigami.Action {
+                    text: avatarButton.Accessible.description
+                    onTriggered: avatarButton.clicked()
+                }
+                // no keyboard nav
+                activeFocusOnTab: false
+                // ignore accessibility (done by the button)
+                Accessible.ignored: true
             }
 
             onClicked: {
@@ -170,46 +182,68 @@ PlasmaExtras.PlasmoidHeading {
         }
     }
 
-    PlasmaComponents.TextField {
-        id: queryField
+    RowLayout {
         anchors.left: parent.left
         anchors.right: parent.right
-        anchors.rightMargin: PlasmaCore.Units.gridUnit - PlasmaCore.Units.devicePixelRatio //separator width
+        anchors.rightMargin: PlasmaCore.Units.gridUnit - PlasmaCore.Units.devicePixelRatio - PlasmaCore.Units.smallSpacing //separator width
         anchors.verticalCenter: parent.verticalCenter
         anchors.leftMargin: Math.round(parent.width/3) + PlasmaCore.Units.gridUnit + header.leftInset
 
-        placeholderText: i18n("Search...")
-        clearButtonShown: true
+        // looks visually balanced that way
+        spacing: Math.round(PlasmaCore.Units.smallSpacing * 2.5)
 
-        Accessible.editable: true
-        Accessible.searchEdit: true
+        PlasmaComponents.TextField {
+            id: queryField
 
-        Keys.onPressed: {
-            // On tab focus on left pane (or search when searching)
-            if (event.key == Qt.Key_Tab) {
-                navigationMethod.state = "keyboard"
-                // There's no left panel when we search
-                if (root.state == "Search") {
-                    keyboardNavigation.state = "RightColumn"
-                    root.currentContentView.forceActiveFocus()
-                } else if (mainTabGroup.state == "top") {
-                    applicationButton.forceActiveFocus(Qt.TabFocusReason)
-                } else {
-                    keyboardNavigation.state = "LeftColumn"
-                    root.currentView.forceActiveFocus()
+            Layout.fillWidth: true
+
+            placeholderText: i18n("Search...")
+            clearButtonShown: true
+
+            Accessible.editable: true
+            Accessible.searchEdit: true
+
+            onTextChanged: {
+                if (root.state != "Search") {
+                    root.previousState = root.state;
+                    root.state = "Search";
                 }
-                event.accepted = true;
-                return;
+                if (text == "") {
+                    root.state = root.previousState;
+                }
             }
         }
 
-        onTextChanged: {
-            if (root.state != "Search") {
-                root.previousState = root.state;
-                root.state = "Search";
+        PlasmaComponents.ToolButton {
+            id: configureButton
+
+            visible: plasmoid.action("configure").enabled
+            icon.name: "configure"
+
+            Accessible.name: plasmoid.action("configure").text
+
+            onClicked: plasmoid.action("configure").trigger()
+            PlasmaComponents.ToolTip {
+                text: plasmoid.action("configure").text
             }
-            if (text == "") {
-                root.state = root.previousState;
+
+            Keys.onPressed: {
+                // On tab focus on left pane (or search when searching)
+                if (event.key == Qt.Key_Tab) {
+                    navigationMethod.state = "keyboard"
+                    // There's no left panel when we search
+                    if (root.state == "Search") {
+                        keyboardNavigation.state = "RightColumn"
+                        root.currentContentView.forceActiveFocus()
+                    } else if (mainTabGroup.state == "top") {
+                        applicationButton.forceActiveFocus(Qt.TabFocusReason)
+                    } else {
+                        keyboardNavigation.state = "LeftColumn"
+                        root.currentView.forceActiveFocus()
+                    }
+                    event.accepted = true;
+                    return;
+                }
             }
         }
     }

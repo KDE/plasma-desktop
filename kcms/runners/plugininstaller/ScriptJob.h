@@ -11,7 +11,7 @@
 
 class ScriptJob : public AbstractJob
 {
-Q_OBJECT
+    Q_OBJECT
 
 public:
     void executeOperation(const QFileInfo &fileInfo, const QString &mimeType, bool install) override;
@@ -20,4 +20,4 @@ private:
     QString formatScriptCommand(bool install, const QString &installerPath);
 };
 
-#endif //SCRIPTJOB_H
+#endif // SCRIPTJOB_H

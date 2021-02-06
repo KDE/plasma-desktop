@@ -23,8 +23,8 @@
 #define __kcmaccess_h__
 
 #include <KQuickAddons/ManagedConfigModule>
-#include <QString>
 #include <QColor>
+#include <QString>
 
 class MouseSettings;
 class BellSettings;
@@ -51,8 +51,7 @@ class KAccessConfig : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(bool screenReaderIsDefaults READ screenReaderIsDefaults NOTIFY screenReaderIsDefaultsChanged)
 
 public:
-
-    KAccessConfig(QObject *parent, const QVariantList&);
+    KAccessConfig(QObject *parent, const QVariantList &);
     ~KAccessConfig() override;
 
     void save() override;
@@ -84,13 +83,12 @@ Q_SIGNALS:
     void screenReaderIsDefaultsChanged();
 
 private:
-    void setOrcaLaunchFeedback(const QString& value);
+    void setOrcaLaunchFeedback(const QString &value);
 
     AccessibilityData *m_data;
     QString m_orcaLaunchFeedback;
     QString m_desktopShortcutInfo;
     bool m_screenReaderInstalled;
 };
-
 
 #endif

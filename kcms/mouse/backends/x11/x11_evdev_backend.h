@@ -20,8 +20,8 @@
 #ifndef X11EVDEVBACKEND_H
 #define X11EVDEVBACKEND_H
 
-#include "x11_backend.h"
 #include "evdev_settings.h"
+#include "x11_backend.h"
 
 #include <QX11Info>
 #include <X11/Xdefs.h>
@@ -36,13 +36,17 @@ public:
 
     void kcmInit() override;
 
-    bool isValid() const override { return m_dpy != nullptr; }
+    bool isValid() const override
+    {
+        return m_dpy != nullptr;
+    }
 
     void load() override;
 
     void apply(bool force = false);
 
-    EvdevSettings* settings() {
+    EvdevSettings *settings()
+    {
         return m_settings;
     }
 
@@ -60,7 +64,6 @@ Q_SIGNALS:
 private:
     void initAtom();
     bool evdevApplyReverseScroll(int deviceid, bool reverse);
-
 
     Atom m_evdevWheelEmulationAtom;
     Atom m_evdevScrollDistanceAtom;

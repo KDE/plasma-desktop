@@ -25,212 +25,210 @@
 
 // Qt
 #include <QAction>
-#include <QX11Info>
-#include <QDateTime>
-#include <QDBusMessage>
 #include <QDBusConnection>
+#include <QDBusMessage>
+#include <QDateTime>
+#include <QX11Info>
 
 // Qml and QtQuick
-#include <QQuickImageProvider>
 #include <QQmlEngine>
+#include <QQuickImageProvider>
 
 // KDE
-#include <KGlobalAccel>
-#include <KLocalizedString>
-#include <KIO/PreviewJob>
 #include <KConfig>
 #include <KConfigGroup>
+#include <KGlobalAccel>
+#include <KIO/PreviewJob>
+#include <KLocalizedString>
 #include <KWindowSystem>
 #include <windowtasksmodel.h>
 #include <xwindowtasksmodel.h>
 
 // X11
+#include <X11/Xlib.h>
 #include <X11/keysym.h>
 #include <X11/keysymdef.h>
-#include <X11/Xlib.h>
 
 #define ACTION_NAME_NEXT_ACTIVITY "next activity"
 #define ACTION_NAME_PREVIOUS_ACTIVITY "previous activity"
 
-namespace {
-    bool isPlatformX11()
-    {
-        static const bool isX11 = QX11Info::isPlatformX11();
-        return isX11;
+namespace
+{
+bool isPlatformX11()
+{
+    static const bool isX11 = QX11Info::isPlatformX11();
+    return isX11;
+}
+
+// Taken from kwin/tabbox/tabbox.cpp
+Display *x11_display()
+{
+    static Display *s_display = nullptr;
+    if (!s_display) {
+        s_display = QX11Info::display();
     }
+    return s_display;
+}
 
-    // Taken from kwin/tabbox/tabbox.cpp
-    Display* x11_display()
-    {
-        static Display *s_display = nullptr;
-        if (!s_display) {
-            s_display = QX11Info::display();
-        }
-        return s_display;
-    }
+bool x11_areKeySymXsDepressed(bool bAll, const uint keySyms[], int nKeySyms)
+{
+    char keymap[32];
 
-    bool x11_areKeySymXsDepressed(bool bAll, const uint keySyms[], int nKeySyms) {
-        char keymap[32];
+    XQueryKeymap(x11_display(), keymap);
 
-        XQueryKeymap(x11_display(), keymap);
+    for (int iKeySym = 0; iKeySym < nKeySyms; iKeySym++) {
+        uint keySymX = keySyms[iKeySym];
+        uchar keyCodeX = XKeysymToKeycode(x11_display(), keySymX);
+        int i = keyCodeX / 8;
+        char mask = 1 << (keyCodeX - (i * 8));
 
-        for (int iKeySym = 0; iKeySym < nKeySyms; iKeySym++) {
-            uint keySymX = keySyms[ iKeySym ];
-            uchar keyCodeX = XKeysymToKeycode(x11_display(), keySymX);
-            int i = keyCodeX / 8;
-            char mask = 1 << (keyCodeX - (i * 8));
+        // Abort if bad index value,
+        if (i < 0 || i >= 32)
+            return false;
 
-            // Abort if bad index value,
-            if (i < 0 || i >= 32)
+        // If ALL keys passed need to be depressed,
+        if (bAll) {
+            if ((keymap[i] & mask) == 0)
                 return false;
-
-            // If ALL keys passed need to be depressed,
-            if (bAll) {
-                if ((keymap[i] & mask) == 0)
-                    return false;
-            } else {
-                // If we are looking for ANY key press, and this key is depressed,
-                if (keymap[i] & mask)
-                    return true;
-            }
-        }
-
-        // If we were looking for ANY key press, then none was found, return false,
-        // If we were looking for ALL key presses, then all were found, return true.
-        return bAll;
-    }
-
-    bool x11_areModKeysDepressed(const QKeySequence& seq) {
-        uint rgKeySyms[10];
-        int nKeySyms = 0;
-        if (seq.isEmpty()) {
-            return false;
-        }
-        int mod = seq[seq.count()-1] & Qt::KeyboardModifierMask;
-
-        if (mod & Qt::SHIFT) {
-            rgKeySyms[nKeySyms++] = XK_Shift_L;
-            rgKeySyms[nKeySyms++] = XK_Shift_R;
-        }
-        if (mod & Qt::CTRL) {
-            rgKeySyms[nKeySyms++] = XK_Control_L;
-            rgKeySyms[nKeySyms++] = XK_Control_R;
-        }
-        if (mod & Qt::ALT) {
-            rgKeySyms[nKeySyms++] = XK_Alt_L;
-            rgKeySyms[nKeySyms++] = XK_Alt_R;
-        }
-        if (mod & Qt::META) {
-            // It would take some code to determine whether the Win key
-            // is associated with Super or Meta, so check for both.
-            // See bug #140023 for details.
-            rgKeySyms[nKeySyms++] = XK_Super_L;
-            rgKeySyms[nKeySyms++] = XK_Super_R;
-            rgKeySyms[nKeySyms++] = XK_Meta_L;
-            rgKeySyms[nKeySyms++] = XK_Meta_R;
-        }
-
-        return x11_areKeySymXsDepressed(false, rgKeySyms, nKeySyms);
-    }
-
-    bool x11_isReverseTab(const QKeySequence &prevAction) {
-
-        if (prevAction == QKeySequence(Qt::ShiftModifier | Qt::Key_Tab)) {
-            return x11_areModKeysDepressed(Qt::SHIFT);
         } else {
-            return false;
+            // If we are looking for ANY key press, and this key is depressed,
+            if (keymap[i] & mask)
+                return true;
         }
     }
 
-    class ThumbnailImageResponse: public QQuickImageResponse {
-    public:
-        ThumbnailImageResponse(const QString &id, const QSize &requestedSize);
+    // If we were looking for ANY key press, then none was found, return false,
+    // If we were looking for ALL key presses, then all were found, return true.
+    return bAll;
+}
 
-        QQuickTextureFactory *textureFactory() const override;
+bool x11_areModKeysDepressed(const QKeySequence &seq)
+{
+    uint rgKeySyms[10];
+    int nKeySyms = 0;
+    if (seq.isEmpty()) {
+        return false;
+    }
+    int mod = seq[seq.count() - 1] & Qt::KeyboardModifierMask;
 
-        void run();
+    if (mod & Qt::SHIFT) {
+        rgKeySyms[nKeySyms++] = XK_Shift_L;
+        rgKeySyms[nKeySyms++] = XK_Shift_R;
+    }
+    if (mod & Qt::CTRL) {
+        rgKeySyms[nKeySyms++] = XK_Control_L;
+        rgKeySyms[nKeySyms++] = XK_Control_R;
+    }
+    if (mod & Qt::ALT) {
+        rgKeySyms[nKeySyms++] = XK_Alt_L;
+        rgKeySyms[nKeySyms++] = XK_Alt_R;
+    }
+    if (mod & Qt::META) {
+        // It would take some code to determine whether the Win key
+        // is associated with Super or Meta, so check for both.
+        // See bug #140023 for details.
+        rgKeySyms[nKeySyms++] = XK_Super_L;
+        rgKeySyms[nKeySyms++] = XK_Super_R;
+        rgKeySyms[nKeySyms++] = XK_Meta_L;
+        rgKeySyms[nKeySyms++] = XK_Meta_R;
+    }
 
-    private:
-        QString m_id;
-        QSize m_requestedSize;
-        QQuickTextureFactory *m_texture = nullptr;
-    };
+    return x11_areKeySymXsDepressed(false, rgKeySyms, nKeySyms);
+}
 
-    ThumbnailImageResponse::ThumbnailImageResponse(const QString &id,
-                                                   const QSize &requestedSize)
-        : m_id(id)
-        , m_requestedSize(requestedSize)
-        , m_texture(nullptr)
-    {
-        int width = m_requestedSize.width();
-        int height = m_requestedSize.height();
+bool x11_isReverseTab(const QKeySequence &prevAction)
+{
+    if (prevAction == QKeySequence(Qt::ShiftModifier | Qt::Key_Tab)) {
+        return x11_areModKeysDepressed(Qt::SHIFT);
+    } else {
+        return false;
+    }
+}
 
-        if (width <= 0) {
-            width = 320;
-        }
+class ThumbnailImageResponse : public QQuickImageResponse
+{
+public:
+    ThumbnailImageResponse(const QString &id, const QSize &requestedSize);
 
-        if (height <= 0) {
-            height = 240;
-        }
+    QQuickTextureFactory *textureFactory() const override;
 
-        if (m_id.isEmpty()) {
+    void run();
+
+private:
+    QString m_id;
+    QSize m_requestedSize;
+    QQuickTextureFactory *m_texture = nullptr;
+};
+
+ThumbnailImageResponse::ThumbnailImageResponse(const QString &id, const QSize &requestedSize)
+    : m_id(id)
+    , m_requestedSize(requestedSize)
+    , m_texture(nullptr)
+{
+    int width = m_requestedSize.width();
+    int height = m_requestedSize.height();
+
+    if (width <= 0) {
+        width = 320;
+    }
+
+    if (height <= 0) {
+        height = 240;
+    }
+
+    if (m_id.isEmpty()) {
+        emit finished();
+        return;
+    }
+
+    const auto file = QUrl::fromUserInput(m_id);
+
+    KFileItemList list;
+    list.append(KFileItem(file, QString(), 0));
+
+    auto job = KIO::filePreview(list, QSize(width, height));
+    job->setScaleType(KIO::PreviewJob::Scaled);
+    job->setIgnoreMaximumSize(true);
+
+    connect(
+        job,
+        &KIO::PreviewJob::gotPreview,
+        this,
+        [this, file](const KFileItem &item, const QPixmap &pixmap) {
+            Q_UNUSED(item);
+
+            auto image = pixmap.toImage();
+
+            m_texture = QQuickTextureFactory::textureFactoryForImage(image);
             emit finished();
-            return;
-        }
+        },
+        Qt::QueuedConnection);
 
-        const auto file = QUrl::fromUserInput(m_id);
+    connect(job, &KIO::PreviewJob::failed, this, [this, job](const KFileItem &item) {
+        Q_UNUSED(item);
+        qWarning() << "SwitcherBackend: FAILED to get the thumbnail" << job->errorString() << job->detailedErrorStrings();
+        emit finished();
+    });
+}
 
-        KFileItemList list;
-        list.append(KFileItem(file, QString(), 0));
+QQuickTextureFactory *ThumbnailImageResponse::textureFactory() const
+{
+    return m_texture;
+}
 
-        auto job =
-            KIO::filePreview(list, QSize(width, height));
-        job->setScaleType(KIO::PreviewJob::Scaled);
-        job->setIgnoreMaximumSize(true);
-
-        connect(job, &KIO::PreviewJob::gotPreview,
-                this, [this,file] (const KFileItem& item, const QPixmap& pixmap) {
-                    Q_UNUSED(item);
-
-                    auto image = pixmap.toImage();
-
-                    m_texture = QQuickTextureFactory::textureFactoryForImage(image);
-                    emit finished();
-                }, Qt::QueuedConnection);
-
-        connect(job, &KIO::PreviewJob::failed,
-                this, [this,job] (const KFileItem& item) {
-                    Q_UNUSED(item);
-                    qWarning() << "SwitcherBackend: FAILED to get the thumbnail"
-                               << job->errorString()
-                               << job->detailedErrorStrings();
-                    emit finished();
-                });
-    }
-
-    QQuickTextureFactory *ThumbnailImageResponse::textureFactory() const
+class ThumbnailImageProvider : public QQuickAsyncImageProvider
+{
+public:
+    QQuickImageResponse *requestImageResponse(const QString &id, const QSize &requestedSize) override
     {
-        return m_texture;
+        return new ThumbnailImageResponse(id, requestedSize);
     }
-
-    class ThumbnailImageProvider: public QQuickAsyncImageProvider {
-    public:
-        QQuickImageResponse *requestImageResponse(const QString &id,
-                                                  const QSize &requestedSize) override
-        {
-            return new ThumbnailImageResponse(id, requestedSize);
-        }
-    };
-
-
+};
 
 } // local namespace
 
-template <typename Handler>
-inline void SwitcherBackend::registerShortcut(const QString &actionName,
-                                              const QString &text,
-                                              const QKeySequence &shortcut,
-                                              Handler &&handler)
+template<typename Handler>
+inline void SwitcherBackend::registerShortcut(const QString &actionName, const QString &text, const QKeySequence &shortcut, Handler &&handler)
 {
     auto action = new QAction(this);
 
@@ -239,7 +237,7 @@ inline void SwitcherBackend::registerShortcut(const QString &actionName,
     action->setObjectName(actionName);
     action->setText(text);
 
-    KGlobalAccel::self()->setShortcut(action, { shortcut });
+    KGlobalAccel::self()->setShortcut(action, {shortcut});
 
     using KActivities::Controller;
 
@@ -253,30 +251,25 @@ SwitcherBackend::SwitcherBackend(QObject *parent)
     , m_runningActivitiesModel(new SortedActivitiesModel({KActivities::Info::Running, KActivities::Info::Stopping}, this))
     , m_stoppedActivitiesModel(new SortedActivitiesModel({KActivities::Info::Stopped, KActivities::Info::Starting}, this))
 {
-    registerShortcut(ACTION_NAME_NEXT_ACTIVITY,
-                     i18n("Walk through activities"),
-                     Qt::META | Qt::Key_Tab,
-                     &SwitcherBackend::keybdSwitchToNextActivity);
+    registerShortcut(ACTION_NAME_NEXT_ACTIVITY, i18n("Walk through activities"), Qt::META | Qt::Key_Tab, &SwitcherBackend::keybdSwitchToNextActivity);
 
     registerShortcut(ACTION_NAME_PREVIOUS_ACTIVITY,
                      i18n("Walk through activities (Reverse)"),
                      Qt::META | Qt::SHIFT | Qt::Key_Tab,
                      &SwitcherBackend::keybdSwitchToPreviousActivity);
 
-    connect(this, &SwitcherBackend::shouldShowSwitcherChanged,
-            m_runningActivitiesModel, &SortedActivitiesModel::setInhibitUpdates);
+    connect(this, &SwitcherBackend::shouldShowSwitcherChanged, m_runningActivitiesModel, &SortedActivitiesModel::setInhibitUpdates);
 
     m_modKeyPollingTimer.setInterval(100);
-    connect(&m_modKeyPollingTimer, &QTimer::timeout,
-            this, &SwitcherBackend::showActivitySwitcherIfNeeded);
+    connect(&m_modKeyPollingTimer, &QTimer::timeout, this, &SwitcherBackend::showActivitySwitcherIfNeeded);
 
     m_dropModeHider.setInterval(500);
     m_dropModeHider.setSingleShot(true);
-    connect(&m_dropModeHider, &QTimer::timeout,
-            this, [this] { setShouldShowSwitcher(false); });
+    connect(&m_dropModeHider, &QTimer::timeout, this, [this] {
+        setShouldShowSwitcher(false);
+    });
 
-    connect(&m_activities, &KActivities::Controller::currentActivityChanged,
-            this, &SwitcherBackend::onCurrentActivityChanged);
+    connect(&m_activities, &KActivities::Controller::currentActivityChanged, this, &SwitcherBackend::onCurrentActivityChanged);
     m_previousActivity = m_activities.currentActivity();
 }
 
@@ -315,21 +308,21 @@ void SwitcherBackend::keybdSwitchToPreviousActivity()
 
 void SwitcherBackend::switchToActivity(Direction direction)
 {
-    const auto activityToSet =
-        m_runningActivitiesModel->relativeActivity(direction == Next ? 1 : -1);
+    const auto activityToSet = m_runningActivitiesModel->relativeActivity(direction == Next ? 1 : -1);
 
-    if (activityToSet.isEmpty()) return;
+    if (activityToSet.isEmpty())
+        return;
 
-    QTimer::singleShot(0, this, [this,activityToSet] () {
-                setCurrentActivity(activityToSet);
-            });
+    QTimer::singleShot(0, this, [this, activityToSet]() {
+        setCurrentActivity(activityToSet);
+    });
 
     keybdSwitchedToAnotherActivity();
 }
 
 void SwitcherBackend::keybdSwitchedToAnotherActivity()
 {
-    m_lastInvokedAction = dynamic_cast<QAction*>(sender());
+    m_lastInvokedAction = dynamic_cast<QAction *>(sender());
 
     QTimer::singleShot(90, this, &SwitcherBackend::showActivitySwitcherIfNeeded);
 }
@@ -360,7 +353,6 @@ void SwitcherBackend::showActivitySwitcherIfNeeded()
         // TODO: This is a regression on wayland
         setShouldShowSwitcher(false);
     }
-
 }
 
 void SwitcherBackend::init()
@@ -377,7 +369,8 @@ void SwitcherBackend::onCurrentActivityChanged(const QString &id)
         return;
     }
 
-    if (m_previousActivity == id) return;
+    if (m_previousActivity == id)
+        return;
 
     // Safe, we have a long-lived Consumer object
     KActivities::Info activity(id);
@@ -411,7 +404,8 @@ bool SwitcherBackend::shouldShowSwitcher() const
 
 void SwitcherBackend::setShouldShowSwitcher(bool shouldShowSwitcher)
 {
-    if (m_shouldShowSwitcher == shouldShowSwitcher) return;
+    if (m_shouldShowSwitcher == shouldShowSwitcher)
+        return;
 
     m_shouldShowSwitcher = shouldShowSwitcher;
 
@@ -457,17 +451,17 @@ bool SwitcherBackend::dropEnabled() const
 #endif
 }
 
-void SwitcherBackend::dropCopy(QMimeData* mimeData, const QVariant &activityId)
+void SwitcherBackend::dropCopy(QMimeData *mimeData, const QVariant &activityId)
 {
     drop(mimeData, Qt::ControlModifier, activityId);
 }
 
-void SwitcherBackend::dropMove(QMimeData* mimeData, const QVariant &activityId)
+void SwitcherBackend::dropMove(QMimeData *mimeData, const QVariant &activityId)
 {
     drop(mimeData, 0, activityId);
 }
 
-void SwitcherBackend::drop(QMimeData* mimeData, int modifiers, const QVariant &activityId)
+void SwitcherBackend::drop(QMimeData *mimeData, int modifiers, const QVariant &activityId)
 {
     setDropMode(false);
 
@@ -516,7 +510,8 @@ void SwitcherBackend::drop(QMimeData* mimeData, int modifiers, const QVariant &a
 
 void SwitcherBackend::setDropMode(bool value)
 {
-    if (m_dropModeActive == value) return;
+    if (m_dropModeActive == value)
+        return;
 
     m_dropModeActive = value;
     if (value) {
@@ -529,13 +524,9 @@ void SwitcherBackend::setDropMode(bool value)
 
 void SwitcherBackend::toggleActivityManager()
 {
-    auto message = QDBusMessage::createMethodCall(
-            QStringLiteral("org.kde.plasmashell"),
-            QStringLiteral("/PlasmaShell"),
-            QStringLiteral("org.kde.PlasmaShell"),
-            QStringLiteral("toggleActivityManager"));
+    auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
+                                                  QStringLiteral("/PlasmaShell"),
+                                                  QStringLiteral("org.kde.PlasmaShell"),
+                                                  QStringLiteral("toggleActivityManager"));
     QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
-
 }
-
-

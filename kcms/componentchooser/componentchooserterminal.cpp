@@ -30,7 +30,11 @@
 #include "terminal_settings.h"
 
 ComponentChooserTerminal::ComponentChooserTerminal(QObject *parent)
-    : ComponentChooser(parent, QLatin1String(""), QStringLiteral("TerminalEmulator"), QStringLiteral("org.kde.konsole.desktop"), i18n("Select default terminal emulator"))
+    : ComponentChooser(parent,
+                       QLatin1String(""),
+                       QStringLiteral("TerminalEmulator"),
+                       QStringLiteral("org.kde.konsole.desktop"),
+                       i18n("Select default terminal emulator"))
 {
 }
 
@@ -65,9 +69,8 @@ void ComponentChooserTerminal::load()
     if (!preferredService.isEmpty() && !preferredServiceAdded) {
         // standard application was specified by the user
         QVariantMap application;
-        TerminalSettings settings;
-        auto service = KService::serviceByStorageId(QStringLiteral("org.kde.ksysguard.desktop"));
-        if (settings.defaultTerminalServiceValue() != settings.terminalService() && service != nullptr) {
+        auto service = KService::serviceByStorageId(settings.terminalService());
+        if (service) {
             application["name"] = service->name();
             application["icon"] = service->icon();
             application["storageId"] = service->storageId();

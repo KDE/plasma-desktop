@@ -27,20 +27,20 @@
 
 #include <KWindowSystem/kwindowsystem.h>
 
-#include <QGuiApplication>
 #include <QFile>
+#include <QGuiApplication>
 
 #include <QDebug>
 
-int main( int argc, char* argv[] )
+int main(int argc, char *argv[])
 {
     int ret = 0;
     QGuiApplication::setDesktopSettingsAware(false);
     QGuiApplication app(argc, argv);
-    if( argc != 3 )
+    if (argc != 3)
         return 1;
-    QString theme = QFile::decodeName(argv[ 1 ]);
-    QString size = QFile::decodeName(argv[ 2 ]);
+    QString theme = QFile::decodeName(argv[1]);
+    QString size = QFile::decodeName(argv[2]);
 
     if (!KWindowSystem::isPlatformX11()) {
         qDebug() << "X11 backend not detected. Exit.";
@@ -56,8 +56,7 @@ int main( int argc, char* argv[] )
     // Note: If you update this code, update main.cpp as well.
 
     // use a default value for theme only if it's not configured at all, not even in X resources
-    if(theme.isEmpty() && backend->currentCursorTheme().isEmpty())
-    {
+    if (theme.isEmpty() && backend->currentCursorTheme().isEmpty()) {
         theme = "breeze_cursors";
         ret = 10; // means to switch to default
     }

@@ -66,20 +66,14 @@ IndicatorDoodad::IndicatorDoodad(XkbDoodadPtr doodad_, XkbDescPtr xkb_, QObject 
     : Doodad(doodad_, xkb_, parent)
     , shape(new Shape(xkb->geom->shapes + doodad_->indicator.shape_ndx, xkb, this))
 {
-    connect(Application::instance(), &Application::keyEvent,
-            this, &IndicatorDoodad::refreshState);
+    connect(Application::instance(), &Application::keyEvent, this, &IndicatorDoodad::refreshState);
     refreshState();
 }
 
 void IndicatorDoodad::refreshState()
 {
     int onInt = False;
-    if (!XkbGetNamedIndicator(QX11Info::display(),
-                              doodad->indicator.name,
-                              nullptr,
-                              &onInt,
-                              nullptr,
-                              nullptr)) {
+    if (!XkbGetNamedIndicator(QX11Info::display(), doodad->indicator.name, nullptr, &onInt, nullptr, nullptr)) {
         on = false;
     } else {
         on = onInt == True ? true : false;

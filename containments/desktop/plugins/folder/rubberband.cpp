@@ -22,7 +22,8 @@
 #include <QApplication>
 #include <QStyleOptionRubberBand>
 
-RubberBand::RubberBand(QQuickItem *parent) : QQuickPaintedItem(parent)
+RubberBand::RubberBand(QQuickItem *parent)
+    : QQuickPaintedItem(parent)
 {
 }
 

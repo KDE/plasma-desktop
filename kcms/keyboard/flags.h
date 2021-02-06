@@ -16,13 +16,12 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #ifndef FLAGS_H_
 #define FLAGS_H_
 
+#include <QMap>
 #include <QObject>
 #include <QString>
-#include <QMap>
 
 class QPixmap;
 class QIcon;
@@ -30,43 +29,49 @@ class LayoutUnit;
 class KeyboardConfig;
 struct Rules;
 class QPainter;
-namespace Plasma {
-	class Svg;
+namespace Plasma
+{
+class Svg;
 }
 
 class Flags : public QObject
 {
-	Q_OBJECT
+    Q_OBJECT
 
 public:
-	Flags();
-	~Flags() override;
+    Flags();
+    ~Flags() override;
 
-	const QIcon getIcon(const QString& layout);
-	const QIcon getIconWithText(const LayoutUnit& layoutUnit, const KeyboardConfig& keyboardConfig);
-	const QPixmap& getTransparentPixmap() const { return *transparentPixmap; }
+    enum ColorType { Plasma = Qt::UserRole, ColorScheme };
 
-	static QString getLongText(const LayoutUnit& layoutUnit, const Rules* rules);
-	static QString getShortText(const LayoutUnit& layoutUnit, const KeyboardConfig& keyboardConfig);
-	static QString getFullText(const LayoutUnit& layoutUnit, const KeyboardConfig& keyboardConfig, const Rules* rules);
+    const QIcon getIcon(const QString &layout);
+    const QIcon getIconWithText(const LayoutUnit &layoutUnit, const KeyboardConfig &keyboardConfig, ColorType colorType = ColorType::Plasma);
+    const QPixmap &getTransparentPixmap() const
+    {
+        return *transparentPixmap;
+    }
+
+    static QString getLongText(const LayoutUnit &layoutUnit, const Rules *rules);
+    static QString getShortText(const LayoutUnit &layoutUnit, const KeyboardConfig &keyboardConfig);
+    static QString getFullText(const LayoutUnit &layoutUnit, const KeyboardConfig &keyboardConfig, const Rules *rules);
 
 public Q_SLOTS:
-	void themeChanged();
-	void clearCache();
+    void themeChanged();
+    void clearCache();
 
 Q_SIGNALS:
-	void pixmapChanged();
+    void pixmapChanged();
 
 private:
-	QIcon createIcon(const QString& layout);
-	QString getCountryFromLayoutName(const QString& fullLayoutName) const;
-	void drawLabel(QPainter& painter, const QString& layoutText, bool flagShown);
-	Plasma::Svg* getSvg();
+    QIcon createIcon(const QString &layout);
+    QString getCountryFromLayoutName(const QString &fullLayoutName) const;
+    void drawLabel(QPainter &painter, const QString &layoutText, bool flagShown, ColorType colorType);
+    Plasma::Svg *getSvg();
 
-	QMap<QString, QIcon> iconMap;
-	QMap<QString, QIcon> iconOrTextMap;
-	QPixmap* transparentPixmap;
-	Plasma::Svg* svg;
+    QMap<QString, QIcon> iconMap;
+    QMap<QString, QIcon> iconOrTextMap;
+    QPixmap *transparentPixmap;
+    Plasma::Svg *svg;
 };
 
 #endif /* FLAGS_H_ */

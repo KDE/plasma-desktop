@@ -19,17 +19,17 @@
 
 #include "workspaceoptions.h"
 
-#include <KPluginFactory>
 #include <KAboutData>
-#include <KLocalizedString>
 #include <KGlobalSettings>
+#include <KLocalizedString>
+#include <KPluginFactory>
 
-#include <QDBusMessage>
 #include <QDBusConnection>
+#include <QDBusMessage>
 
-#include "workspaceoptionsdata.h"
 #include "workspaceoptions_kdeglobalssettings.h"
 #include "workspaceoptions_plasmasettings.h"
+#include "workspaceoptionsdata.h"
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMWorkspaceOptionsFactory, "kcm_workspace.json", registerPlugin<KCMWorkspaceOptions>(); registerPlugin<WorkspaceOptionsData>();)
 

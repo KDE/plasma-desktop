@@ -20,9 +20,9 @@
 #include "componentchooserdata.h"
 
 #include "componentchooserbrowser.h"
+#include "componentchooseremail.h"
 #include "componentchooserfilemanager.h"
 #include "componentchooserterminal.h"
-#include "componentchooseremail.h"
 
 ComponentChooserData::ComponentChooserData(QObject *parent, const QVariantList &args)
     : KCModuleData(parent, args)

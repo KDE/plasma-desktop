@@ -45,7 +45,7 @@ ecm_qt_install_logging_categories(
 add_library(kcm_keys MODULE ${kcm_keys_SRCS})
 
 target_link_libraries(kcm_keys
-    Qt5::DBus
+    Qt::DBus
     KF5::ConfigGui
     KF5::GlobalAccel
     KF5::I18n

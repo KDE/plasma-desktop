@@ -20,8 +20,8 @@
 #pragma once
 
 #include <KCModule>
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
 
 namespace Ui
 {
@@ -48,4 +48,3 @@ private:
     QScopedPointer<Ui::KCMQtQuickSettingsWidget> m_ui;
     QScopedPointer<PlasmaQtQuickSettings::RendererSettings> m_settings;
 };
-

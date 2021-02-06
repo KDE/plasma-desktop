@@ -10,8 +10,8 @@ set(kaccess_KDEINIT_SRCS kaccess.cpp main.cpp )
 kf5_add_kdeinit_executable(kaccess ${kaccess_KDEINIT_SRCS})
 
 target_link_libraries(kdeinit_kaccess
-    Qt5::Widgets
-    Qt5::X11Extras
+    Qt::Widgets
+    Qt::X11Extras
     KF5::CoreAddons
     KF5::ConfigCore
     KF5::Completion

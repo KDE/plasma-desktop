@@ -30,13 +30,23 @@ class TouchpadConfigPlugin : public QWidget
 
 public:
     TouchpadConfigPlugin(QWidget *parent, TouchpadBackend *backend);
-    virtual ~TouchpadConfigPlugin() {}
+    virtual ~TouchpadConfigPlugin()
+    {
+    }
 
-    virtual void load() {}
-    virtual void save() {}
-    virtual void defaults() {}
+    virtual void load()
+    {
+    }
+    virtual void save()
+    {
+    }
+    virtual void defaults()
+    {
+    }
 
-    void hideEvent(QHideEvent *) override {}
+    void hideEvent(QHideEvent *) override
+    {
+    }
 
 protected:
     TouchpadConfigContainer *m_parent;

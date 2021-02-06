@@ -33,8 +33,7 @@ class TouchpadConfigContainer : public KCModule
     friend TouchpadConfigLibinput;
 
 public:
-    explicit TouchpadConfigContainer(QWidget *parent,
-                            const QVariantList &args = QVariantList());
+    explicit TouchpadConfigContainer(QWidget *parent, const QVariantList &args = QVariantList());
 
     static void kcmInit();
 
@@ -46,15 +45,24 @@ public:
     void save() override;
     void defaults() override;
 
-    void kcmLoad() {KCModule::load();}
-    void kcmSave() {KCModule::save();}
-    void kcmDefaults() {KCModule::defaults();}
+    void kcmLoad()
+    {
+        KCModule::load();
+    }
+    void kcmSave()
+    {
+        KCModule::save();
+    }
+    void kcmDefaults()
+    {
+        KCModule::defaults();
+    }
 
 protected:
     void hideEvent(QHideEvent *) override;
 
 private:
-    TouchpadConfigPlugin* m_plugin = nullptr;
+    TouchpadConfigPlugin *m_plugin = nullptr;
 };
 
 #endif // TOUCHPADCONFIGCONTAINER_H

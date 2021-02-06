@@ -84,11 +84,11 @@ static std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName)
     }
 
     return std::optional<AutostartEntry>({name,
-            AutostartModel::AutostartEntrySource::XdgAutoStart, // .config/autostart load desktop at startup
-            enabled,
-            fileName,
-            onlyInPlasma,
-            iconName});
+                                          AutostartModel::AutostartEntrySource::XdgAutoStart, // .config/autostart load desktop at startup
+                                          enabled,
+                                          fileName,
+                                          onlyInPlasma,
+                                          iconName});
 }
 
 AutostartModel::AutostartModel(QObject *parent)
@@ -244,12 +244,12 @@ void AutostartModel::addApplication(const KService::Ptr &service)
         newDeskTopFile->sync();
     }
 
-    const auto entry = AutostartEntry {service->name(),
-                                       AutostartModel::AutostartEntrySource::XdgAutoStart, // .config/autostart load desktop at startup
-                                       true,
-                                       desktopPath,
-                                       false,
-                                       service->icon()};
+    const auto entry = AutostartEntry{service->name(),
+                                      AutostartModel::AutostartEntrySource::XdgAutoStart, // .config/autostart load desktop at startup
+                                      true,
+                                      desktopPath,
+                                      false,
+                                      service->icon()};
 
     int lastApplication = -1;
     for (const AutostartEntry &e : qAsConst(m_entries)) {
@@ -322,7 +322,6 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
     QString folder;
 
     if (kind == AutostartModel::AutostartEntrySource::XdgScripts) {
-
         int lastLoginScript = -1;
         for (const AutostartEntry &e : qAsConst(m_entries)) {
             if (e.source == AutostartModel::AutostartEntrySource::PlasmaShutdown) {
@@ -361,7 +360,7 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
 
         const QUrl dest = theJob->property("finalUrl").toUrl();
 
-        AutostartEntry entry = AutostartEntry {dest.fileName(), kind, true, dest.path(), false, QStringLiteral("dialog-scripts")};
+        AutostartEntry entry = AutostartEntry{dest.fileName(), kind, true, dest.path(), false, QStringLiteral("dialog-scripts")};
 
         m_entries.insert(index, entry);
 

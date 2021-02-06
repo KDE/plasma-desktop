@@ -18,10 +18,10 @@
  */
 #include "evdev_settings.h"
 #include "x11_evdev_backend.h"
-#include <QDBusMessage>
-#include <QDBusConnection>
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
+#include <QDBusConnection>
+#include <QDBusMessage>
 
 #include "../migrationlib/kdelibs4config.h"
 
@@ -84,15 +84,28 @@ void EvdevSettings::load(X11EvdevBackend *backend)
 }
 
 // see KGlobalSettings::emitChange
-enum ChangeType { PaletteChanged = 0, FontChanged, StyleChanged,
-                  SettingsChanged, IconChanged, CursorChanged,
-                  ToolbarStyleChanged, ClipboardConfigChanged,
-                  BlockShortcuts, NaturalSortingChanged
-                };
-enum SettingsCategory { SETTINGS_MOUSE, SETTINGS_COMPLETION, SETTINGS_PATHS,
-                        SETTINGS_POPUPMENU, SETTINGS_QT, SETTINGS_SHORTCUTS,
-                        SETTINGS_LOCALE, SETTINGS_STYLE
-                      };
+enum ChangeType {
+    PaletteChanged = 0,
+    FontChanged,
+    StyleChanged,
+    SettingsChanged,
+    IconChanged,
+    CursorChanged,
+    ToolbarStyleChanged,
+    ClipboardConfigChanged,
+    BlockShortcuts,
+    NaturalSortingChanged
+};
+enum SettingsCategory {
+    SETTINGS_MOUSE,
+    SETTINGS_COMPLETION,
+    SETTINGS_PATHS,
+    SETTINGS_POPUPMENU,
+    SETTINGS_QT,
+    SETTINGS_SHORTCUTS,
+    SETTINGS_LOCALE,
+    SETTINGS_STYLE
+};
 
 static void emitChange(ChangeType changeType, int arg)
 {
@@ -109,12 +122,12 @@ void EvdevSettings::save()
 {
     KSharedConfig::Ptr kcminputProfile = KSharedConfig::openConfig("kcminputrc");
     KConfigGroup kcminputGroup(kcminputProfile, "Mouse");
-    kcminputGroup.writeEntry("Acceleration",accelRate);
-    kcminputGroup.writeEntry("Threshold",thresholdMove);
+    kcminputGroup.writeEntry("Acceleration", accelRate);
+    kcminputGroup.writeEntry("Threshold", thresholdMove);
     if (handed == Handed::Right) {
-        kcminputGroup.writeEntry("MouseButtonMapping",QString("RightHanded"));
+        kcminputGroup.writeEntry("MouseButtonMapping", QString("RightHanded"));
     } else {
-        kcminputGroup.writeEntry("MouseButtonMapping",QString("LeftHanded"));
+        kcminputGroup.writeEntry("MouseButtonMapping", QString("LeftHanded"));
     }
     kcminputGroup.writeEntry("ReverseScrollPolarity", reverseScrollPolarity);
     kcminputGroup.sync();

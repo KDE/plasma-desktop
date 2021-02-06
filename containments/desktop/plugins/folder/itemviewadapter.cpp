@@ -23,10 +23,11 @@
 #include <QPalette>
 #include <QSize>
 
-ItemViewAdapter::ItemViewAdapter(QObject *parent) : KAbstractViewAdapter(parent),
-    m_adapterView(nullptr),
-    m_adapterModel(nullptr),
-    m_adapterIconSize(-1)
+ItemViewAdapter::ItemViewAdapter(QObject *parent)
+    : KAbstractViewAdapter(parent)
+    , m_adapterView(nullptr)
+    , m_adapterModel(nullptr)
+    , m_adapterIconSize(-1)
 {
 }
 
@@ -37,7 +38,7 @@ QAbstractItemModel *ItemViewAdapter::model() const
 
 QSize ItemViewAdapter::iconSize() const
 {
-   return QSize(m_adapterIconSize, m_adapterIconSize);
+    return QSize(m_adapterIconSize, m_adapterIconSize);
 }
 
 QPalette ItemViewAdapter::palette() const
@@ -68,17 +69,17 @@ void ItemViewAdapter::connect(Signal signal, QObject *receiver, const char *slot
     }
 }
 
-QAbstractItemModel* ItemViewAdapter::adapterModel() const
+QAbstractItemModel *ItemViewAdapter::adapterModel() const
 {
     return m_adapterModel;
 }
 
-QObject* ItemViewAdapter::adapterView() const
+QObject *ItemViewAdapter::adapterView() const
 {
     return m_adapterView;
 }
 
-void ItemViewAdapter::setAdapterView(QObject* view)
+void ItemViewAdapter::setAdapterView(QObject *view)
 {
     if (m_adapterView != view) {
         m_adapterView = view;

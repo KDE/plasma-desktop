@@ -16,8 +16,8 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-//Debug tool
-//Must NOT be translated/localized
+// Debug tool
+// Must NOT be translated/localized
 
 #include <iostream>
 
@@ -37,15 +37,25 @@ int main(void)
         }
         const char *use;
         switch (devices[i].use) {
-        case IsXPointer: use = "Pointer"; break;
-        case IsXKeyboard: use = "Keyboard"; break;
-        case IsXExtensionDevice: use = "Extension Device"; break;
-        case IsXExtensionPointer: use = "Extension Pointer"; break;
-        case IsXExtensionKeyboard: use = "Extension Keyboard"; break;
-        default: use = "Unknown";
+        case IsXPointer:
+            use = "Pointer";
+            break;
+        case IsXKeyboard:
+            use = "Keyboard";
+            break;
+        case IsXExtensionDevice:
+            use = "Extension Device";
+            break;
+        case IsXExtensionPointer:
+            use = "Extension Pointer";
+            break;
+        case IsXExtensionKeyboard:
+            use = "Extension Keyboard";
+            break;
+        default:
+            use = "Unknown";
         }
-        std::cout << "Name: " << name << " Type: " << (type ? type : "unknown")
-                  << " Use: " << use << std::endl;
+        std::cout << "Name: " << name << " Type: " << (type ? type : "unknown") << " Use: " << use << std::endl;
         XFree(type);
     }
     XFreeDeviceList(devices);

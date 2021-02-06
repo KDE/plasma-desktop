@@ -34,31 +34,31 @@
 // Desktop menus, paths
 // (c) David Faure 2000
 
-
 // Own
 #include "globalpaths.h"
-#include "ui_globalpaths.h"
-#include "desktoppathssettings.h"
 #include "desktoppathsdata.h"
+#include "desktoppathssettings.h"
+#include "ui_globalpaths.h"
 
+#include <KLineEdit>
 #include <KPluginFactory>
 #include <KUrlRequester>
-#include <KLineEdit>
 
 K_PLUGIN_FACTORY(KcmDesktopPathsFactory, registerPlugin<DesktopPathConfig>(); registerPlugin<DesktopPathsData>();)
 
 //-----------------------------------------------------------------------------
 
 DesktopPathConfig::DesktopPathConfig(QWidget *parent, const QVariantList &)
-    : KCModule( parent )
+    : KCModule(parent)
     , m_ui(new Ui::DesktopPathsView)
     , m_data(new DesktopPathsData(this))
 {
     m_ui->setupUi(this);
-    setQuickHelp(i18n("<h1>Paths</h1>\n"
-                      "This module allows you to choose where in the filesystem the "
-                      "files on your desktop should be stored.\n"
-                      "Use the \"Whats This?\" (Shift+F1) to get help on specific options."));
+    setQuickHelp(
+        i18n("<h1>Paths</h1>\n"
+             "This module allows you to choose where in the filesystem the "
+             "files on your desktop should be stored.\n"
+             "Use the \"Whats This?\" (Shift+F1) to get help on specific options."));
     addConfig(m_data->settings(), this);
 
     connect(this, &DesktopPathConfig::defaultsIndicatorsVisibleChanged, this, &DesktopPathConfig::updateDefaultIndicator);
@@ -85,6 +85,5 @@ void DesktopPathConfig::setDefaultIndicatorVisible(KUrlRequester *widget, const 
     widget->lineEdit()->setProperty("_kde_highlight_neutral", defaultsIndicatorsVisible() && !isDefault);
     widget->update();
 }
-
 
 #include "globalpaths.moc"

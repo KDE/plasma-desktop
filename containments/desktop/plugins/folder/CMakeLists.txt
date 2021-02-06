@@ -28,9 +28,9 @@ install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/private/desktopco
 add_library(folderplugin SHARED ${folderplugin_SRCS})
 
 target_link_libraries(folderplugin
-                      Qt5::Core
-                      Qt5::Qml
-                      Qt5::Quick
+                      Qt::Core
+                      Qt::Qml
+                      Qt::Quick
                       KF5::KIOCore
                       KF5::KIOWidgets
                       KF5::KIOFileWidgets

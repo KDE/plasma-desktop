@@ -29,24 +29,24 @@ class KNetAttach : public QWizard, private Ui_KNetAttach
     Q_OBJECT
 
 public:
-    explicit KNetAttach( QWidget* parent = nullptr );
+    explicit KNetAttach(QWidget *parent = nullptr);
 
 public slots:
-    virtual void setInformationText( const QString & type );
+    virtual void setInformationText(const QString &type);
 
 private:
     QString _type;
 
-    bool doConnectionTest(const QUrl &url );
-    bool updateForProtocol( const QString & protocol );
+    bool doConnectionTest(const QUrl &url);
+    bool updateForProtocol(const QString &protocol);
 
 private slots:
     void updateParametersPageStatus();
     bool validateCurrentPage() override;
-    void updatePort( bool encryption );
-    void updateFinishButtonText( bool save );
+    void updatePort(bool encryption);
+    void updateFinishButtonText(bool save);
     void slotHelpClicked();
-    void slotPageChanged( int );
+    void slotPageChanged(int);
 };
 
 #endif

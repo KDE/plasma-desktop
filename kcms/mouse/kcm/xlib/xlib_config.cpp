@@ -25,14 +25,13 @@
  */
 #include "xlib_config.h"
 
-#include "backends/x11/x11_evdev_backend.h"
 #include "../configcontainer.h"
+#include "backends/x11/x11_evdev_backend.h"
 
 #include "../../../migrationlib/kdelibs4config.h"
 
-
-#include <KToolInvocation>
 #include <KLocalizedString>
+#include <KToolInvocation>
 //#include <KConfig>
 #include <KAboutData>
 #include <KPluginFactory>
@@ -41,16 +40,16 @@
 #include <QDoubleSpinBox>
 #include <QFormLayout>
 #include <QSpinBox>
-#include <QWhatsThis>
-#include <QTabWidget>
 #include <QStandardPaths>
+#include <QTabWidget>
+#include <QWhatsThis>
 
 #include <KConfig>
 #include <KConfigGroup>
 
 XlibConfig::XlibConfig(ConfigContainer *parent, InputBackend *backend)
-  : ConfigPlugin(parent),
-    m_backend(dynamic_cast<X11EvdevBackend*>(backend))
+    : ConfigPlugin(parent)
+    , m_backend(dynamic_cast<X11EvdevBackend *>(backend))
 {
     setupUi(this);
 
@@ -90,8 +89,10 @@ XlibConfig::XlibConfig(ConfigContainer *parent, InputBackend *backend)
     connect(mk_max_speed, SIGNAL(valueChanged(int)), m_parent, SLOT(changed()));
     connect(mk_curve, SIGNAL(valueChanged(int)), m_parent, SLOT(changed()));
 
-    KAboutData* about = new KAboutData(QStringLiteral("kcmmouse"), i18n("Mouse"),
-                                       QStringLiteral("1.0"), QString(),
+    KAboutData *about = new KAboutData(QStringLiteral("kcmmouse"),
+                                       i18n("Mouse"),
+                                       QStringLiteral("1.0"),
+                                       QString(),
                                        KAboutLicense::GPL,
                                        i18n("(c) 1997 - 2018 Mouse developers"));
     about->addAuthor(i18n("Patrick Dowler"));
@@ -149,8 +150,7 @@ void XlibConfig::setHandedness(Handed val)
     if (val == Handed::Right) {
         rightHanded->setChecked(true);
         mousePix->setPixmap(QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kcmmouse/pics/mouse_rh.png"));
-    }
-    else {
+    } else {
         leftHanded->setChecked(true);
         mousePix->setPixmap(QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kcmmouse/pics/mouse_lh.png"));
     }
@@ -166,13 +166,10 @@ void XlibConfig::load()
 
     // Only allow setting reversing scroll polarity if we have scroll buttons
     if (m_backend) {
-        if (m_backend->supportScrollPolarity())
-        {
+        if (m_backend->supportScrollPolarity()) {
             cbScrollPolarity->setEnabled(true);
             cbScrollPolarity->show();
-        }
-        else
-        {
+        } else {
             cbScrollPolarity->setEnabled(false);
             cbScrollPolarity->hide();
         }
@@ -203,8 +200,8 @@ void XlibConfig::load()
     mk_interval->setValue(interval);
 
     // Default time to reach maximum speed: 5000 msec
-    int time_to_max = group.readEntry("MKTimeToMax", (5000+interval/2)/interval);
-    time_to_max = group.readEntry("MK-TimeToMax", time_to_max*interval);
+    int time_to_max = group.readEntry("MKTimeToMax", (5000 + interval / 2) / interval);
+    time_to_max = group.readEntry("MK-TimeToMax", time_to_max * interval);
     mk_time_to_max->setValue(time_to_max);
 
     // Default maximum speed: 1000 pixels/sec
@@ -249,9 +246,9 @@ void XlibConfig::save()
     group.writeEntry("MKDelay", mk_delay->value());
     group.writeEntry("MKInterval", interval);
     group.writeEntry("MK-TimeToMax", mk_time_to_max->value());
-    group.writeEntry("MKTimeToMax", (mk_time_to_max->value() + interval/2)/interval);
+    group.writeEntry("MKTimeToMax", (mk_time_to_max->value() + interval / 2) / interval);
     group.writeEntry("MK-MaxSpeed", mk_max_speed->value());
-    group.writeEntry("MKMaxSpeed", (mk_max_speed->value()*interval + 500)/1000);
+    group.writeEntry("MKMaxSpeed", (mk_max_speed->value() * interval + 500) / 1000);
     group.writeEntry("MKCurve", mk_curve->value());
     group.sync();
 

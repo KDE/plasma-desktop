@@ -35,7 +35,6 @@ class ComponentChooser : public QObject
     Q_PROPERTY(bool isDefaults READ isDefaults NOTIFY isDefaultsChanged)
 
 public:
-
     ComponentChooser(QObject *parent, const QString &mimeType, const QString &type, const QString &defaultApplication, const QString &dialogText);
 
     void defaults();
@@ -44,7 +43,6 @@ public:
     bool isSaveNeeded() const;
 
     Q_INVOKABLE void select(int index);
-
 
     virtual void save() = 0;
     void saveMimeTypeAssociation(const QString &mime, const QString &storageId);
@@ -58,7 +56,7 @@ Q_SIGNALS:
 
 protected:
     QVariantList m_applications;
-    int m_index;
+    int m_index = -1;
     std::optional<int> m_defaultIndex;
     QString m_mimeType;
     QString m_type;

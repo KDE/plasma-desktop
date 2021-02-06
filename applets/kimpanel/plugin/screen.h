@@ -28,7 +28,7 @@ class Screen : public QObject
 {
     Q_OBJECT
 public:
-    Screen(QObject* parent = nullptr);
+    Screen(QObject *parent = nullptr);
     ~Screen() override;
 
     Q_INVOKABLE QRect geometryForPoint(int x, int y);

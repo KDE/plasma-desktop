@@ -81,8 +81,8 @@ target_link_libraries(kded_touchpad
 		      KF5::Plasma
 		      KF5::Declarative
                       
-		      Qt5::X11Extras
-		      Qt5::QuickWidgets
+		      Qt::X11Extras
+		      Qt::QuickWidgets
 )
 
 add_subdirectory(applet)

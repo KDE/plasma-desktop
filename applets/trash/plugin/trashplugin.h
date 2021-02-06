@@ -22,7 +22,6 @@
 
 #include <QQmlExtensionPlugin>
 
-
 class TrashPrivatePlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT

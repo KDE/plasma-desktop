@@ -103,34 +103,37 @@
         </property>
         <layout class="QGridLayout" name="gridLayout_3">
          <item row="0" column="0">
+          <widget class="QCheckBox" name="showOSD_Chk"/>
+         </item>
+         <item row="1" column="0">
           <widget class="QCheckBox" name="showIndicatorChk">
            <property name="text">
             <string>Show layout indicator</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="0">
+         <item row="2" column="0">
           <widget class="QCheckBox" name="showSingleChk">
            <property name="text">
             <string>Show for single layout</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="0">
+         <item row="3" column="0">
           <widget class="QRadioButton" name="showFlagRadioBtn">
            <property name="text">
             <string>Show flag</string>
            </property>
           </widget>
          </item>
-         <item row="3" column="0">
+         <item row="4" column="0">
           <widget class="QRadioButton" name="showLabelRadioBtn">
            <property name="text">
             <string>Show label</string>
            </property>
           </widget>
          </item>
-         <item row="4" column="0">
+         <item row="5" column="0">
           <widget class="QRadioButton" name="showLabelOnFlagRadioBtn">
            <property name="text">
             <string>Show label on flag</string>

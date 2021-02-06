@@ -5,18 +5,20 @@
 */
 
 #include <QDialog>
-#include <QVBoxLayout>
 #include <QDialogButtonBox>
-#include <QPushButton>
-#include <QLabel>
 #include <QIcon>
+#include <QLabel>
+#include <QPushButton>
+#include <QVBoxLayout>
 
-#include <KLocalizedString>
 #include <KIO/OpenFileManagerWindowJob>
+#include <KLocalizedString>
 
-class PackageKitConfirmationDialog : public QDialog {
+class PackageKitConfirmationDialog : public QDialog
+{
 public:
-    PackageKitConfirmationDialog(const QString &packagePath, QWidget *parent = nullptr) : QDialog(parent)
+    PackageKitConfirmationDialog(const QString &packagePath, QWidget *parent = nullptr)
+        : QDialog(parent)
     {
         setWindowTitle(i18nc("@title:window", "Confirm Installation"));
         setWindowIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));

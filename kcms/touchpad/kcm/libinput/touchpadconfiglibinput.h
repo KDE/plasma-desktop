@@ -31,10 +31,10 @@ class TouchpadConfigLibinput : public TouchpadConfigPlugin
     Q_OBJECT
 
 public:
-    explicit TouchpadConfigLibinput(TouchpadConfigContainer *parent,
-                                    TouchpadBackend *backend,
-                            const QVariantList &args = QVariantList());
-    virtual ~TouchpadConfigLibinput() {}
+    explicit TouchpadConfigLibinput(TouchpadConfigContainer *parent, TouchpadBackend *backend, const QVariantList &args = QVariantList());
+    virtual ~TouchpadConfigLibinput()
+    {
+    }
 
     void load() override;
     void save() override;
@@ -43,7 +43,9 @@ public:
     QSize sizeHint() const override;
     QSize minimumSizeHint() const override;
 
-    void hideEvent(QHideEvent *) override {}
+    void hideEvent(QHideEvent *) override
+    {
+    }
 
 private Q_SLOTS:
     void onChange();

@@ -25,13 +25,14 @@
 
 #include <cstdlib>
 
-Positioner::Positioner(QObject *parent): QAbstractItemModel(parent)
-, m_enabled(false)
-, m_folderModel(nullptr)
-, m_perStripe(0)
-, m_ignoreNextTransaction(false)
-, m_deferApplyPositions(false)
-, m_updatePositionsTimer(new QTimer(this))
+Positioner::Positioner(QObject *parent)
+    : QAbstractItemModel(parent)
+    , m_enabled(false)
+    , m_folderModel(nullptr)
+    , m_perStripe(0)
+    , m_ignoreNextTransaction(false)
+    , m_deferApplyPositions(false)
+    , m_updatePositionsTimer(new QTimer(this))
 {
     m_updatePositionsTimer->setSingleShot(true);
     m_updatePositionsTimer->setInterval(0);
@@ -68,7 +69,7 @@ void Positioner::setEnabled(bool enabled)
     }
 }
 
-FolderModel* Positioner::folderModel() const
+FolderModel *Positioner::folderModel() const
 {
     return m_folderModel;
 }
@@ -160,20 +161,20 @@ int Positioner::nearestItem(int currentIndex, Qt::ArrowType direction)
     int vDirection = 0;
 
     switch (direction) {
-        case Qt::LeftArrow:
-            hDirection = -1;
-            break;
-        case Qt::RightArrow:
-            hDirection = 1;
-            break;
-        case Qt::UpArrow:
-            vDirection = -1;
-            break;
-        case Qt::DownArrow:
-            vDirection = 1;
-            break;
-        default:
-            return -1;
+    case Qt::LeftArrow:
+        hDirection = -1;
+        break;
+    case Qt::RightArrow:
+        hDirection = 1;
+        break;
+    case Qt::UpArrow:
+        vDirection = -1;
+        break;
+    case Qt::DownArrow:
+        vDirection = 1;
+        break;
+    default:
+        return -1;
     }
 
     QList<int> rows(m_proxyToSource.keys());
@@ -195,8 +196,7 @@ int Positioner::nearestItem(int currentIndex, Qt::ArrowType direction)
             if (vDirection * pos.y() > vDirection * currentPos.y()) {
                 distance = (pos - currentPos).manhattanLength();
 
-                if (nearestItem == -1 || distance < lastDistance
-                    || (distance == lastDistance && pos.x() == currentPos.x())) {
+                if (nearestItem == -1 || distance < lastDistance || (distance == lastDistance && pos.x() == currentPos.x())) {
                     nearestItem = row;
                     lastDistance = distance;
                 }
@@ -205,8 +205,7 @@ int Positioner::nearestItem(int currentIndex, Qt::ArrowType direction)
             if (hDirection * pos.x() > hDirection * currentPos.x()) {
                 distance = (pos - currentPos).manhattanLength();
 
-                if (nearestItem == -1 || distance < lastDistance
-                    || (distance == lastDistance && pos.y() == currentPos.y())) {
+                if (nearestItem == -1 || distance < lastDistance || (distance == lastDistance && pos.y() == currentPos.y())) {
                     nearestItem = row;
                     lastDistance = distance;
                 }
@@ -223,9 +222,7 @@ bool Positioner::isBlank(int row) const
         return m_folderModel->isBlank(row);
     }
 
-    if (m_proxyToSource.contains(row) &&
-            m_folderModel &&
-            !m_folderModel->isBlank(m_proxyToSource.value(row))) {
+    if (m_proxyToSource.contains(row) && m_folderModel && !m_folderModel->isBlank(m_proxyToSource.value(row))) {
         return false;
     }
 
@@ -277,7 +274,7 @@ void Positioner::setRangeSelected(int anchor, int to)
     }
 }
 
-QHash< int, QByteArray > Positioner::roleNames() const
+QHash<int, QByteArray> Positioner::roleNames() const
 {
     return FolderModel::staticRoleNames();
 }
@@ -321,7 +318,7 @@ QVariant Positioner::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-int Positioner::rowCount(const QModelIndex& parent) const
+int Positioner::rowCount(const QModelIndex &parent) const
 {
     if (m_folderModel) {
         if (m_enabled) {
@@ -338,7 +335,7 @@ int Positioner::rowCount(const QModelIndex& parent) const
     return 0;
 }
 
-int Positioner::columnCount(const QModelIndex& parent) const
+int Positioner::columnCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
 
@@ -361,7 +358,8 @@ void Positioner::reset()
     emit positionsChanged();
 }
 
-void Positioner::move(const QVariantList &moves) {
+void Positioner::move(const QVariantList &moves)
+{
     // Don't allow moves while listing.
     if (m_folderModel->status() == FolderModel::Listing) {
         m_deferMovePositions = moves;
@@ -389,8 +387,7 @@ void Positioner::move(const QVariantList &moves) {
 
     const int oldCount = rowCount();
 
-    for (int i = 0; i < fromIndices.count(); ++i)
-    {
+    for (int i = 0; i < fromIndices.count(); ++i) {
         const int from = fromIndices[i];
         int to = toIndices[i];
         const int sourceRow = sourceRows[i];
@@ -465,8 +462,7 @@ void Positioner::updatePositions()
         while (it.hasNext()) {
             it.next();
 
-            const QString &name = m_folderModel->data(m_folderModel->index(it.value(), 0),
-                FolderModel::UrlRole).toString();
+            const QString &name = m_folderModel->data(m_folderModel->index(it.value(), 0), FolderModel::UrlRole).toString();
 
             if (name.isEmpty()) {
                 qDebug() << this << it.value() << "Source model doesn't know this index!";
@@ -499,8 +495,7 @@ void Positioner::sourceStatusChanged()
     }
 }
 
-void Positioner::sourceDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight,
-    const QVector<int>& roles)
+void Positioner::sourceDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles)
 {
     if (m_enabled) {
         int start = topLeft.row();
@@ -596,8 +591,11 @@ void Positioner::sourceRowsAboutToBeInserted(const QModelIndex &parent, int star
     }
 }
 
-void Positioner::sourceRowsAboutToBeMoved(const QModelIndex &sourceParent, int sourceStart,
-    int sourceEnd, const QModelIndex& destinationParent, int destinationRow)
+void Positioner::sourceRowsAboutToBeMoved(const QModelIndex &sourceParent,
+                                          int sourceStart,
+                                          int sourceEnd,
+                                          const QModelIndex &destinationParent,
+                                          int destinationRow)
 {
     emit beginMoveRows(sourceParent, sourceStart, sourceEnd, destinationParent, destinationRow);
 }
@@ -646,8 +644,7 @@ void Positioner::sourceRowsAboutToBeRemoved(const QModelIndex &parent, int first
     }
 }
 
-void Positioner::sourceLayoutAboutToBeChanged(const QList<QPersistentModelIndex> &parents,
-    QAbstractItemModel::LayoutChangeHint hint)
+void Positioner::sourceLayoutAboutToBeChanged(const QList<QPersistentModelIndex> &parents, QAbstractItemModel::LayoutChangeHint hint)
 {
     Q_UNUSED(parents)
 
@@ -678,8 +675,7 @@ void Positioner::sourceRowsInserted(const QModelIndex &parent, int first, int la
     }
 }
 
-void Positioner::sourceRowsMoved(const QModelIndex &sourceParent, int sourceStart,
-    int sourceEnd, const QModelIndex &destinationParent, int destinationRow)
+void Positioner::sourceRowsMoved(const QModelIndex &sourceParent, int sourceStart, int sourceEnd, const QModelIndex &destinationParent, int destinationRow)
 {
     Q_UNUSED(sourceParent)
     Q_UNUSED(sourceStart)
@@ -707,8 +703,7 @@ void Positioner::sourceRowsRemoved(const QModelIndex &parent, int first, int las
     m_updatePositionsTimer->start();
 }
 
-void Positioner::sourceLayoutChanged(const QList<QPersistentModelIndex>& parents,
-    QAbstractItemModel::LayoutChangeHint hint)
+void Positioner::sourceLayoutChanged(const QList<QPersistentModelIndex> &parents, QAbstractItemModel::LayoutChangeHint hint)
 {
     Q_UNUSED(parents)
 
@@ -791,7 +786,6 @@ void Positioner::applyPositions()
         return;
     }
 
-
     if (m_positions.size() < 5) {
         // We were waiting for listing to complete before proxying source rows,
         // but we don't have positions to apply. Reset to populate.
@@ -817,8 +811,7 @@ void Positioner::applyPositions()
     QHash<QString, int> sourceIndices;
 
     for (int i = 0; i < m_folderModel->rowCount(); ++i) {
-        sourceIndices.insert(m_folderModel->data(m_folderModel->index(i, 0),
-            FolderModel::UrlRole).toString(), i);
+        sourceIndices.insert(m_folderModel->data(m_folderModel->index(i, 0), FolderModel::UrlRole).toString(), i);
     }
 
     QString name;
@@ -833,12 +826,16 @@ void Positioner::applyPositions()
     for (int i = 0; i < positions.count() / 3; ++i) {
         offset = i * 3;
         pos = positions.at(offset + 2).toInt(&ok);
-        if (!ok) { return; }
+        if (!ok) {
+            return;
+        }
 
         if (pos <= m_perStripe) {
             name = positions.at(offset);
             stripe = positions.at(offset + 1).toInt(&ok);
-            if (!ok) { return; }
+            if (!ok) {
+                return;
+            }
 
             if (!sourceIndices.contains(name)) {
                 continue;
@@ -861,7 +858,9 @@ void Positioner::applyPositions()
     for (int i = 0; i < positions.count() / 3; ++i) {
         offset = i * 3;
         pos = positions.at(offset + 2).toInt(&ok);
-        if (!ok) { return; }
+        if (!ok) {
+            return;
+        }
 
         if (pos > m_perStripe) {
             name = positions.at(offset);
@@ -921,65 +920,32 @@ void Positioner::flushPendingChanges()
     m_pendingChanges.clear();
 }
 
-void Positioner::connectSignals(FolderModel* model)
+void Positioner::connectSignals(FolderModel *model)
 {
-    connect(model, &QAbstractItemModel::dataChanged,
-            this, &Positioner::sourceDataChanged,
-            Qt::UniqueConnection);
-    connect(model, &QAbstractItemModel::rowsAboutToBeInserted,
-            this, &Positioner::sourceRowsAboutToBeInserted,
-            Qt::UniqueConnection);
-    connect(model, &QAbstractItemModel::rowsAboutToBeMoved,
-            this, &Positioner::sourceRowsAboutToBeMoved,
-            Qt::UniqueConnection);
-    connect(model, &QAbstractItemModel::rowsAboutToBeRemoved,
-            this, &Positioner::sourceRowsAboutToBeRemoved,
-            Qt::UniqueConnection);
-    connect(model, &QAbstractItemModel::layoutAboutToBeChanged,
-            this, &Positioner::sourceLayoutAboutToBeChanged,
-            Qt::UniqueConnection);
-    connect(model, &QAbstractItemModel::rowsInserted,
-            this, &Positioner::sourceRowsInserted,
-            Qt::UniqueConnection);
-    connect(model, &QAbstractItemModel::rowsMoved,
-            this, &Positioner::sourceRowsMoved,
-            Qt::UniqueConnection);
-    connect(model, &QAbstractItemModel::rowsRemoved,
-            this, &Positioner::sourceRowsRemoved,
-            Qt::UniqueConnection);
-    connect(model, &QAbstractItemModel::layoutChanged,
-            this, &Positioner::sourceLayoutChanged,
-            Qt::UniqueConnection);
-    connect(m_folderModel, &FolderModel::urlChanged,
-            this, &Positioner::reset,
-            Qt::UniqueConnection);
-    connect(m_folderModel, &FolderModel::statusChanged,
-            this, &Positioner::sourceStatusChanged,
-            Qt::UniqueConnection);
+    connect(model, &QAbstractItemModel::dataChanged, this, &Positioner::sourceDataChanged, Qt::UniqueConnection);
+    connect(model, &QAbstractItemModel::rowsAboutToBeInserted, this, &Positioner::sourceRowsAboutToBeInserted, Qt::UniqueConnection);
+    connect(model, &QAbstractItemModel::rowsAboutToBeMoved, this, &Positioner::sourceRowsAboutToBeMoved, Qt::UniqueConnection);
+    connect(model, &QAbstractItemModel::rowsAboutToBeRemoved, this, &Positioner::sourceRowsAboutToBeRemoved, Qt::UniqueConnection);
+    connect(model, &QAbstractItemModel::layoutAboutToBeChanged, this, &Positioner::sourceLayoutAboutToBeChanged, Qt::UniqueConnection);
+    connect(model, &QAbstractItemModel::rowsInserted, this, &Positioner::sourceRowsInserted, Qt::UniqueConnection);
+    connect(model, &QAbstractItemModel::rowsMoved, this, &Positioner::sourceRowsMoved, Qt::UniqueConnection);
+    connect(model, &QAbstractItemModel::rowsRemoved, this, &Positioner::sourceRowsRemoved, Qt::UniqueConnection);
+    connect(model, &QAbstractItemModel::layoutChanged, this, &Positioner::sourceLayoutChanged, Qt::UniqueConnection);
+    connect(m_folderModel, &FolderModel::urlChanged, this, &Positioner::reset, Qt::UniqueConnection);
+    connect(m_folderModel, &FolderModel::statusChanged, this, &Positioner::sourceStatusChanged, Qt::UniqueConnection);
 }
 
-void Positioner::disconnectSignals(FolderModel* model)
+void Positioner::disconnectSignals(FolderModel *model)
 {
-    disconnect(model, &QAbstractItemModel::dataChanged,
-            this, &Positioner::sourceDataChanged);
-    disconnect(model, &QAbstractItemModel::rowsAboutToBeInserted,
-            this, &Positioner::sourceRowsAboutToBeInserted);
-    disconnect(model, &QAbstractItemModel::rowsAboutToBeMoved,
-            this, &Positioner::sourceRowsAboutToBeMoved);
-    disconnect(model, &QAbstractItemModel::rowsAboutToBeRemoved,
-            this, &Positioner::sourceRowsAboutToBeRemoved);
-    disconnect(model, &QAbstractItemModel::layoutAboutToBeChanged,
-            this, &Positioner::sourceLayoutAboutToBeChanged);
-    disconnect(model, &QAbstractItemModel::rowsInserted,
-            this, &Positioner::sourceRowsInserted);
-    disconnect(model, &QAbstractItemModel::rowsMoved,
-            this, &Positioner::sourceRowsMoved);
-    disconnect(model, &QAbstractItemModel::rowsRemoved,
-            this, &Positioner::sourceRowsRemoved);
-    disconnect(model, &QAbstractItemModel::layoutChanged,
-            this, &Positioner::sourceLayoutChanged);
-    disconnect(m_folderModel, &FolderModel::urlChanged,
-            this, &Positioner::reset);
-    disconnect(m_folderModel, &FolderModel::statusChanged,
-            this, &Positioner::sourceStatusChanged);
+    disconnect(model, &QAbstractItemModel::dataChanged, this, &Positioner::sourceDataChanged);
+    disconnect(model, &QAbstractItemModel::rowsAboutToBeInserted, this, &Positioner::sourceRowsAboutToBeInserted);
+    disconnect(model, &QAbstractItemModel::rowsAboutToBeMoved, this, &Positioner::sourceRowsAboutToBeMoved);
+    disconnect(model, &QAbstractItemModel::rowsAboutToBeRemoved, this, &Positioner::sourceRowsAboutToBeRemoved);
+    disconnect(model, &QAbstractItemModel::layoutAboutToBeChanged, this, &Positioner::sourceLayoutAboutToBeChanged);
+    disconnect(model, &QAbstractItemModel::rowsInserted, this, &Positioner::sourceRowsInserted);
+    disconnect(model, &QAbstractItemModel::rowsMoved, this, &Positioner::sourceRowsMoved);
+    disconnect(model, &QAbstractItemModel::rowsRemoved, this, &Positioner::sourceRowsRemoved);
+    disconnect(model, &QAbstractItemModel::layoutChanged, this, &Positioner::sourceLayoutChanged);
+    disconnect(m_folderModel, &FolderModel::urlChanged, this, &Positioner::reset);
+    disconnect(m_folderModel, &FolderModel::statusChanged, this, &Positioner::sourceStatusChanged);
 }

@@ -21,23 +21,23 @@
 
 #include <config-X11.h>
 
-#include <QFile>
 #include <KLocalizedString>
+#include <QFile>
 #include <evdev-properties.h>
 
 #include <X11/X.h>
-#include <X11/Xlib.h>
 #include <X11/Xatom.h>
-#include <X11/extensions/XInput2.h>
-#include <X11/extensions/XI.h>
+#include <X11/Xlib.h>
 #include <X11/Xutil.h>
+#include <X11/extensions/XI.h>
+#include <X11/extensions/XInput2.h>
 #ifdef HAVE_XCURSOR
 #include <X11/Xcursor/Xcursor.h>
 #include <X11/extensions/XInput.h>
 #endif
 
 struct ScopedXDeleter {
-    static inline void cleanup(void* pointer)
+    static inline void cleanup(void *pointer)
     {
         if (pointer) {
             XFree(pointer);
@@ -45,11 +45,10 @@ struct ScopedXDeleter {
     }
 };
 
-template<typename Callback>
-static void XIForallPointerDevices(Display* dpy, const Callback& callback)
+template<typename Callback> static void XIForallPointerDevices(Display *dpy, const Callback &callback)
 {
     int ndevices_return;
-    XDeviceInfo* info = XListInputDevices(dpy, &ndevices_return);
+    XDeviceInfo *info = XListInputDevices(dpy, &ndevices_return);
     if (!info) {
         return;
     }
@@ -61,7 +60,7 @@ static void XIForallPointerDevices(Display* dpy, const Callback& callback)
     XFreeDeviceList(info);
 }
 
-X11EvdevBackend::X11EvdevBackend(QObject* parent)
+X11EvdevBackend::X11EvdevBackend(QObject *parent)
     : X11Backend(parent)
 {
     m_mode = InputBackendMode::XEvdev;
@@ -81,7 +80,6 @@ void X11EvdevBackend::initAtom()
 
     m_touchpadAtom = XInternAtom(m_dpy, XI_TOUCHPAD, True);
 }
-
 
 X11EvdevBackend::~X11EvdevBackend()
 {
@@ -154,49 +152,46 @@ void X11EvdevBackend::apply(bool force)
 
     if (m_settings->handedEnabled && (m_settings->handedNeedsApply || force)) {
         if (m_numButtons == 1) {
-            map[0] = (unsigned char) 1;
+            map[0] = (unsigned char)1;
         } else if (m_numButtons == 2) {
             if (m_settings->handed == Handed::Right) {
-                map[0] = (unsigned char) 1;
-                map[1] = (unsigned char) 3;
+                map[0] = (unsigned char)1;
+                map[1] = (unsigned char)3;
             } else {
-                map[0] = (unsigned char) 3;
-                map[1] = (unsigned char) 1;
+                map[0] = (unsigned char)3;
+                map[1] = (unsigned char)1;
             }
         } else { // 3 buttons and more
             if (m_settings->handed == Handed::Right) {
-                map[0] = (unsigned char) 1;
-                map[1] = (unsigned char) m_middleButton;
-                map[2] = (unsigned char) 3;
+                map[0] = (unsigned char)1;
+                map[1] = (unsigned char)m_middleButton;
+                map[2] = (unsigned char)3;
             } else {
-                map[0] = (unsigned char) 3;
-                map[1] = (unsigned char) m_middleButton;
-                map[2] = (unsigned char) 1;
+                map[0] = (unsigned char)3;
+                map[1] = (unsigned char)m_middleButton;
+                map[2] = (unsigned char)1;
             }
         }
 
         int retval;
         if (m_numButtons >= 1) {
-            while ((retval = XSetPointerMapping(m_dpy, map,
-                                                m_numButtons)) == MappingBusy)
-                /* keep trying until the pointer is free */
+            while ((retval = XSetPointerMapping(m_dpy, map, m_numButtons)) == MappingBusy)
+            /* keep trying until the pointer is free */
             { };
         }
 
         // apply reverseScrollPolarity for all non-touchpad pointer, touchpad
         // are belong to kcm touchpad.
-        XIForallPointerDevices(m_dpy, [this](XDeviceInfo * info) {
+        XIForallPointerDevices(m_dpy, [this](XDeviceInfo *info) {
             int deviceid = info->id;
             if (info->type == m_touchpadAtom) {
                 return;
             }
             evdevApplyReverseScroll(deviceid, m_settings->reverseScrollPolarity);
         });
-
     }
 
-    XChangePointerControl(m_dpy,
-                          true, true, int(qRound(m_settings->accelRate * 10)), 10, m_settings->thresholdMove);
+    XChangePointerControl(m_dpy, true, true, int(qRound(m_settings->accelRate * 10)), 10, m_settings->thresholdMove);
 
     XFlush(m_dpy);
 }
@@ -204,8 +199,7 @@ void X11EvdevBackend::apply(bool force)
 bool X11EvdevBackend::evdevApplyReverseScroll(int deviceid, bool reverse)
 {
     // Check atom availability first.
-    if (m_evdevWheelEmulationAtom == None || m_evdevScrollDistanceAtom == None ||
-        m_evdevWheelEmulationAxesAtom == None) {
+    if (m_evdevWheelEmulationAtom == None || m_evdevScrollDistanceAtom == None || m_evdevWheelEmulationAxesAtom == None) {
         return false;
     }
     Status status;
@@ -214,11 +208,20 @@ bool X11EvdevBackend::evdevApplyReverseScroll(int deviceid, bool reverse)
     unsigned long num_items_return;
     unsigned long bytes_after_return;
 
-    unsigned char* _data = nullptr;
-    //data returned is an 1 byte boolean
-    status = XIGetProperty(m_dpy, deviceid, m_evdevWheelEmulationAtom, 0, 1,
-                           False, XA_INTEGER, &type_return, &format_return,
-                           &num_items_return, &bytes_after_return, &_data);
+    unsigned char *_data = nullptr;
+    // data returned is an 1 byte boolean
+    status = XIGetProperty(m_dpy,
+                           deviceid,
+                           m_evdevWheelEmulationAtom,
+                           0,
+                           1,
+                           False,
+                           XA_INTEGER,
+                           &type_return,
+                           &format_return,
+                           &num_items_return,
+                           &bytes_after_return,
+                           &_data);
     QScopedArrayPointer<unsigned char, ScopedXDeleter> data(_data);
     _data = nullptr;
     if (status != Success) {
@@ -227,30 +230,45 @@ bool X11EvdevBackend::evdevApplyReverseScroll(int deviceid, bool reverse)
 
     // pointer device without wheel emulation
     if (type_return != XA_INTEGER || data == NULL || *data == False) {
-        status = XIGetProperty(m_dpy, deviceid, m_evdevScrollDistanceAtom, 0, 3,
-                               False, XA_INTEGER, &type_return, &format_return,
-                               &num_items_return, &bytes_after_return, &_data);
+        status = XIGetProperty(m_dpy,
+                               deviceid,
+                               m_evdevScrollDistanceAtom,
+                               0,
+                               3,
+                               False,
+                               XA_INTEGER,
+                               &type_return,
+                               &format_return,
+                               &num_items_return,
+                               &bytes_after_return,
+                               &_data);
         data.reset(_data);
         _data = nullptr;
         // negate scroll distance
-        if (status == Success && type_return == XA_INTEGER &&
-                format_return == 32 && num_items_return == 3) {
-            int32_t* vals = (int32_t*)data.data();
+        if (status == Success && type_return == XA_INTEGER && format_return == 32 && num_items_return == 3) {
+            int32_t *vals = (int32_t *)data.data();
             for (unsigned long i = 0; i < num_items_return; ++i) {
                 int32_t val = *(vals + i);
                 *(vals + i) = (int32_t)(reverse ? -abs(val) : abs(val));
             }
-            XIChangeProperty(m_dpy, deviceid, m_evdevScrollDistanceAtom, XA_INTEGER,
-                             32, XIPropModeReplace, data.data(), 3);
+            XIChangeProperty(m_dpy, deviceid, m_evdevScrollDistanceAtom, XA_INTEGER, 32, XIPropModeReplace, data.data(), 3);
         }
     } else { // wheel emulation used, reverse wheel axes
-        status = XIGetProperty(m_dpy, deviceid, m_evdevWheelEmulationAxesAtom, 0, 4,
-                               False, XA_INTEGER, &type_return, &format_return,
-                               &num_items_return, &bytes_after_return, &_data);
+        status = XIGetProperty(m_dpy,
+                               deviceid,
+                               m_evdevWheelEmulationAxesAtom,
+                               0,
+                               4,
+                               False,
+                               XA_INTEGER,
+                               &type_return,
+                               &format_return,
+                               &num_items_return,
+                               &bytes_after_return,
+                               &_data);
         data.reset(_data);
         _data = nullptr;
-        if (status == Success && type_return == XA_INTEGER &&
-                format_return == 8 && num_items_return == 4) {
+        if (status == Success && type_return == XA_INTEGER && format_return == 8 && num_items_return == 4) {
             // when scroll direction is not reversed,
             // up button id should be smaller than down button id,
             // up/left are odd elements, down/right are even elements
@@ -262,8 +280,7 @@ bool X11EvdevBackend::evdevApplyReverseScroll(int deviceid, bool reverse)
                 data[i * 2] = reverse ? max_elem : min_elem;
                 data[i * 2 + 1] = reverse ? min_elem : max_elem;
             }
-            XIChangeProperty(m_dpy, deviceid, m_evdevWheelEmulationAxesAtom, XA_INTEGER,
-                             8, XIPropModeReplace, data.data(), 4);
+            XIChangeProperty(m_dpy, deviceid, m_evdevWheelEmulationAxesAtom, XA_INTEGER, 8, XIPropModeReplace, data.data(), 4);
         }
     }
 

@@ -25,7 +25,8 @@
 
 #include <KCModuleData>
 
-namespace NotificationManager {
+namespace NotificationManager
+{
 class DoNotDisturbSettings;
 class NotificationSettings;
 class JobSettings;

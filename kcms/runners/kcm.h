@@ -21,15 +21,14 @@
 #ifndef _KCM_SEARCH_H
 #define _KCM_SEARCH_H
 
+#include <KActivities/Consumer>
 #include <KCModule>
-#include <KSharedConfig>
 #include <KConfigGroup>
-#include <QRadioButton>
+#include <KSharedConfig>
 #include <QCheckBox>
 #include <QPushButton>
+#include <QRadioButton>
 #include <QToolButton>
-#include <KActivities/Consumer>
-
 
 class KPluginSelector;
 class KRunnerSettings;
@@ -41,10 +40,10 @@ class SearchConfigModule : public KCModule
 public:
     enum Roles {
         RunnersRole = Qt::UserRole + 1,
-        DescriptionRole
+        DescriptionRole,
     };
 
-    SearchConfigModule(QWidget* parent, const QVariantList& args);
+    SearchConfigModule(QWidget *parent, const QVariantList &args);
 
 public Q_SLOTS:
     void load() override;

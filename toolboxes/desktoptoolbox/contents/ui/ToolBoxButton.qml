@@ -208,23 +208,28 @@ Item {
                 onClicked: qAction.trigger()
             }
             PlasmaComponents3.ToolButton {
-                property QtObject qAction: plasmoid.globalAction("manage activities")
-                text: qAction.text
-                icon.name: "activities"
-                onClicked: qAction.trigger()
-            }
-            PlasmaComponents3.ToolButton {
                 property QtObject qAction: plasmoid.action("configure")
                 text: qAction.text
                 icon.name: "preferences-desktop-wallpaper"
                 onClicked: qAction.trigger()
             }
             PlasmaComponents3.ToolButton {
+                text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Choose Global Theme...")
+                icon.name: "preferences-desktop-theme-global"
+                onClicked: KQuickControlsAddons.KCMShell.openSystemSettings("kcm_lookandfeel")
+            }            
+            PlasmaComponents3.ToolButton {
+                property QtObject qAction: plasmoid.globalAction("manage activities")
+                text: qAction.text
+                icon.name: "activities"
+                onClicked: qAction.trigger()
+            }            
+            PlasmaComponents3.ToolButton {
                 icon.name: "window-close"
                 Layout.preferredWidth: height
                 onClicked: plasmoid.editMode = false
                 PlasmaComponents3.ToolTip {
-                    text: i18n("Exit Edit Mode")
+                    text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Exit Edit Mode")
                 }
             }
         }

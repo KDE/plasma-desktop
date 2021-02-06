@@ -17,10 +17,10 @@ add_library(taskmanagerplugin SHARED ${taskmanagerplugin_SRCS})
 
 # FIXME Cleanup no longer used libs.
 target_link_libraries(taskmanagerplugin
-                      Qt5::Core
-                      Qt5::DBus
-                      Qt5::Qml
-                      Qt5::Quick
+                      Qt::Core
+                      Qt::DBus
+                      Qt::Qml
+                      Qt::Quick
                       KF5::Activities
                       KF5::ActivitiesStats
                       KF5::I18n

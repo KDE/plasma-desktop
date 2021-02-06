@@ -28,10 +28,10 @@
 #include "positioner.h"
 #include "previewpluginsmodel.h"
 #include "rubberband.h"
+#include "shortcut.h"
 #include "subdialog.h"
 #include "viewpropertiesmenu.h"
 #include "wheelinterceptor.h"
-#include "shortcut.h"
 
 #include <QQmlContext>
 #include <QQmlEngine>
@@ -61,4 +61,3 @@ void FolderPlugin::registerTypes(const char *uri)
     qmlRegisterType<WheelInterceptor>(uri, 0, 1, "WheelInterceptor");
     qmlRegisterType<ShortCut>(uri, 0, 1, "ShortCut");
 }
-

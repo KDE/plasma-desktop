@@ -20,7 +20,7 @@
 
 namespace
 {
-const char* const s_defaultFileExcludeFilters[] = {
+const char *const s_defaultFileExcludeFilters[] = {
     // tmp files
     "*~",
     "*.part",
@@ -67,16 +67,15 @@ const char* const s_defaultFileExcludeFilters[] = {
 
     // Compiled files
     "*.class", // Java
-    "*.pyc",   // Python
-    "*.elc",   // Emacs Lisp
+    "*.pyc", // Python
+    "*.elc", // Emacs Lisp
 
     // end of list
-    nullptr
-};
+    nullptr};
 
 const int s_defaultFileExcludeFiltersVersion = 2;
 
-const char* const s_defaultFolderExcludeFilters[] = {
+const char *const s_defaultFolderExcludeFilters[] = { //
     "po",
 
     // VCS
@@ -96,17 +95,16 @@ const char* const s_defaultFolderExcludeFilters[] = {
     ".pch",
     ".uic",
 
-    //misc
+    // misc
     "core-dumps",
     "lost+found",
 
     // end of list
-    nullptr
-};
+    nullptr};
 
 const int s_defaultFolderExcludeFiltersVersion = 1;
 
-const char* const s_sourceCodeMimeTypes[] = {
+const char *const s_sourceCodeMimeTypes[] = { //
     "text/css",
     "text/x-c++src",
     "text/x-c++hdr",
@@ -135,11 +133,9 @@ const char* const s_sourceCodeMimeTypes[] = {
     "application/x-tex",
 
     // end of list
-    nullptr
-};
+    nullptr};
 const int s_sourceCodeMimeTypesVersion = 1;
 }
-
 
 QStringList Baloo::defaultExcludeFilterList()
 {
@@ -175,4 +171,3 @@ int Baloo::defaultExcludeMimetypesVersion()
     // The +1 is the image, video and audio mimetypes
     return s_sourceCodeMimeTypesVersion + 1;
 }
-

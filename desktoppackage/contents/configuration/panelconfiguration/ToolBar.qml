@@ -16,7 +16,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -140,6 +140,34 @@ Item {
                     default:
                         configDialog.y = panel.y - configDialog.height;
                         break;
+                }
+            }
+             DragHandler {
+                property int magnitude: units.gridUnit
+                target: null
+                xAxis.enabled: panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge
+                yAxis.enabled: panel.location == PlasmaCore.Types.TopEdge || panel.location == PlasmaCore.Types.BottomEdge
+                grabPermissions: PointerHandler.CanTakeOverFromAnything
+
+                onTranslationChanged: {
+                    var distance
+                    switch (panel.location) {
+                    case PlasmaCore.Types.TopEdge:
+                        distance = translation.y
+                        break;
+                    case PlasmaCore.Types.LeftEdge:
+                        distance = translation.x
+                        break;
+                    case PlasmaCore.Types.RightEdge:
+                        distance = -translation.x
+                        break;
+                    case PlasmaCore.Types.BottomEdge:
+                    default:
+                        distance = -translation.y
+                        break;
+                    }
+                    parent.value = parent.value + (Math.floor(distance / magnitude) * parent.stepSize)
+                    parent.valueModified()
                 }
             }
         }

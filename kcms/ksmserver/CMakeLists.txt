@@ -18,8 +18,8 @@ kconfig_add_kcfg_files(kcm_smserver_PART_SRCS smserversettings.kcfgc GENERATE_MO
 add_library(kcm_smserver MODULE ${kcm_smserver_PART_SRCS})
 
 target_link_libraries(kcm_smserver
-    Qt5::Core
-    Qt5::DBus
+    Qt::Core
+    Qt::DBus
     KF5::QuickAddons
     KF5::I18n
     KF5::ConfigCore

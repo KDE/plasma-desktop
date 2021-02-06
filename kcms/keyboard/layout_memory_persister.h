@@ -26,27 +26,36 @@
 class LayoutMemory;
 class QFile;
 
-class LayoutMemoryPersister {
+class LayoutMemoryPersister
+{
 public:
-	LayoutMemoryPersister(LayoutMemory& layoutMemory_):
-		layoutMemory(layoutMemory_) {}
+    LayoutMemoryPersister(LayoutMemory &layoutMemory_)
+        : layoutMemory(layoutMemory_)
+    {
+    }
 
-	bool saveToFile(const QFile& file);
-	bool restoreFromFile(const QFile& file);
+    bool saveToFile(const QFile &file);
+    bool restoreFromFile(const QFile &file);
 
-	bool save();
-	bool restore();
+    bool save();
+    bool restore();
 
-	LayoutUnit getGlobalLayout() const { return globalLayout; }
-	void setGlobalLayout(const LayoutUnit& layout) { globalLayout = layout; }
+    LayoutUnit getGlobalLayout() const
+    {
+        return globalLayout;
+    }
+    void setGlobalLayout(const LayoutUnit &layout)
+    {
+        globalLayout = layout;
+    }
 
 private:
-	LayoutMemory& layoutMemory;
+    LayoutMemory &layoutMemory;
     LayoutUnit globalLayout;
 
-	QString getLayoutMapAsString();
+    QString getLayoutMapAsString();
 
-	bool canPersist();
+    bool canPersist();
 };
 
 #endif /* LAYOUT_MEMORY_PERSISTER_H_ */

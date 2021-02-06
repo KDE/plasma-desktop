@@ -10,7 +10,7 @@ add_library(attica_kde MODULE kdeplatformdependent.cpp ${SRCS})
 target_include_directories(attica_kde PRIVATE "${ACCOUNTSQT_INCLUDE_DIRS}")
 target_link_libraries(attica_kde
     PUBLIC
-        Qt5::Widgets
+        Qt::Widgets
         KF5::KIOWidgets
         KF5::KCMUtils
         KF5::Attica

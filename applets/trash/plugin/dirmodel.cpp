@@ -19,20 +19,20 @@
 
 #include "dirmodel.h"
 
-#include <QImage>
-#include <QPixmap>
-#include <QTimer>
-#include <QProcess>
 #include <QDebug>
+#include <QImage>
 #include <QMimeDatabase>
+#include <QPixmap>
+#include <QProcess>
+#include <QTimer>
 
 #include <KDirLister>
-#include <kio/previewjob.h>
 #include <KIO/EmptyTrashJob>
+#include <kio/previewjob.h>
 
 DirModel::DirModel(QObject *parent)
-    : KDirModel(parent),
-      m_screenshotSize(180, 120)
+    : KDirModel(parent)
+    , m_screenshotSize(180, 120)
 {
 #if 0 // unused here in trash
     QMimeDatabase db;
@@ -51,18 +51,14 @@ DirModel::DirModel(QObject *parent)
 
     m_previewTimer = new QTimer(this);
     m_previewTimer->setSingleShot(true);
-    connect(m_previewTimer, &QTimer::timeout,
-            this, &DirModel::delayedPreview);
+    connect(m_previewTimer, &QTimer::timeout, this, &DirModel::delayedPreview);
 
-    //using the same cache of the engine, they index both by url
+    // using the same cache of the engine, they index both by url
     m_imageCache = new KImageCache(QStringLiteral("org.kde.dirmodel-qml"), 10485760);
 
-    connect(this, &QAbstractItemModel::rowsInserted,
-            this, &DirModel::countChanged);
-    connect(this, &QAbstractItemModel::rowsRemoved,
-            this, &DirModel::countChanged);
-    connect(this, &QAbstractItemModel::modelReset,
-            this, &DirModel::countChanged);
+    connect(this, &QAbstractItemModel::rowsInserted, this, &DirModel::countChanged);
+    connect(this, &QAbstractItemModel::rowsRemoved, this, &DirModel::countChanged);
+    connect(this, &QAbstractItemModel::modelReset, this, &DirModel::countChanged);
 }
 
 DirModel::~DirModel()
@@ -72,13 +68,11 @@ DirModel::~DirModel()
 
 QHash<int, QByteArray> DirModel::roleNames() const
 {
-    return {
-        { Qt::DisplayRole, "display" },
-        { Qt::DecorationRole, "decoration" },
-        { UrlRole, "url" },
-        { MimeTypeRole, "mimeType" },
-        { Thumbnail, "thumbnail" }
-    };
+    return {{Qt::DisplayRole, "display"}, //
+            {Qt::DecorationRole, "decoration"},
+            {UrlRole, "url"},
+            {MimeTypeRole, "mimeType"},
+            {Thumbnail, "thumbnail"}};
 }
 
 QString DirModel::url() const
@@ -86,7 +80,7 @@ QString DirModel::url() const
     return dirLister()->url().toString();
 }
 
-void DirModel::setUrl(const QString& url)
+void DirModel::setUrl(const QString &url)
 {
     if (url.isEmpty()) {
         return;
@@ -170,7 +164,6 @@ void DirModel::delayedPreview()
         QUrl file = i.key();
         QPersistentModelIndex index = i.value();
 
-
         if (!m_previewJobs.contains(file) && file.isValid()) {
             list.append(KFileItem(file, QString(), 0));
             m_previewJobs.insert(file, QPersistentModelIndex(index));
@@ -180,13 +173,11 @@ void DirModel::delayedPreview()
     }
 
     if (!list.isEmpty()) {
-        KIO::PreviewJob* job = KIO::filePreview(list, m_screenshotSize);
+        KIO::PreviewJob *job = KIO::filePreview(list, m_screenshotSize);
         job->setIgnoreMaximumSize(true);
         // qDebug() << "Created job" << job;
-        connect(job, &KIO::PreviewJob::gotPreview,
-                this, &DirModel::showPreview);
-        connect(job, &KIO::PreviewJob::failed,
-                this, &DirModel::previewFailed);
+        connect(job, &KIO::PreviewJob::gotPreview, this, &DirModel::showPreview);
+        connect(job, &KIO::PreviewJob::failed, this, &DirModel::previewFailed);
     }
 
     m_filesToPreview.clear();
@@ -202,7 +193,7 @@ void DirModel::showPreview(const KFileItem &item, const QPixmap &preview)
     }
 
     m_imageCache->insertImage(item.url().toString(), preview.toImage());
-    //qDebug() << "preview size:" << preview.size();
+    // qDebug() << "preview size:" << preview.size();
     emit dataChanged(index, index);
 }
 

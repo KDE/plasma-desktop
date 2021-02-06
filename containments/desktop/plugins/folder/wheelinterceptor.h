@@ -27,23 +27,23 @@ class WheelInterceptor : public QQuickItem
 {
     Q_OBJECT
 
-    Q_PROPERTY(QObject* destination READ destination WRITE setDestination NOTIFY destinationChanged)
+    Q_PROPERTY(QObject *destination READ destination WRITE setDestination NOTIFY destinationChanged)
 
-    public:
-        explicit WheelInterceptor(QQuickItem *parent = nullptr);
-        ~WheelInterceptor() override;
+public:
+    explicit WheelInterceptor(QQuickItem *parent = nullptr);
+    ~WheelInterceptor() override;
 
-        QObject *destination() const;
-        void setDestination(QObject *destination);
+    QObject *destination() const;
+    void setDestination(QObject *destination);
 
-    Q_SIGNALS:
-        void destinationChanged() const;
+Q_SIGNALS:
+    void destinationChanged() const;
 
-    protected:
-        void wheelEvent(QWheelEvent *event) override;
+protected:
+    void wheelEvent(QWheelEvent *event) override;
 
-    private:
-        QPointer<QObject> m_destination;
+private:
+    QPointer<QObject> m_destination;
 };
 
 #endif

@@ -34,7 +34,8 @@ KCM.ScrollViewKCM {
     id: root
 
     title: i18n("Manage Users")
-
+    // Make the first page a sidebar
+    Kirigami.ColumnView.fillWidth: false
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 

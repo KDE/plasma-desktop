@@ -20,7 +20,7 @@ set(backend_SRCS
 set(backend_LIBS
     ${backend_LIBS}
     KF5::WindowSystem
-    Qt5::X11Extras
+    Qt::X11Extras
     ${X11_X11_LIB}
     ${X11_Xinput_LIB}
 )

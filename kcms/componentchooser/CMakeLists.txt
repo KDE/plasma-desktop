@@ -1,5 +1,5 @@
 # KI18N Translation Domain for this library
-add_definitions(-DTRANSLATION_DOMAIN=\"kcm5_componentchooser\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_componentchooser\")
 
 set(componentchooser_SRCS
     kcm_componentchooser.cpp
@@ -17,7 +17,7 @@ kconfig_add_kcfg_files(componentchooser_SRCS terminal_settings.kcfgc GENERATE_MO
 add_library(kcm_componentchooser MODULE ${componentchooser_SRCS})
 
 target_link_libraries(kcm_componentchooser
-    Qt5::Core
+    Qt::Core
     KF5::CoreAddons
     KF5::I18n
     KF5::QuickAddons

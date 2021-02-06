@@ -22,19 +22,19 @@
 
 #include <KCModule>
 
-#include "ActionModel.h"
 #include "ActionEditor.h"
+#include "ActionModel.h"
 #include "ui_AddAction.h"
 #include "ui_SolidActions.h"
 
 class ActionItem;
 
-class SolidActions: public KCModule
+class SolidActions : public KCModule
 {
     Q_OBJECT
 
 public:
-    SolidActions(QWidget* parent, const QVariantList&);
+    SolidActions(QWidget *parent, const QVariantList &);
     ~SolidActions() override;
     void load() override;
     void save() override;
@@ -44,20 +44,19 @@ private slots:
     void addAction();
     void editAction();
     void deleteAction();
-    ActionItem * selectedAction() const;
+    ActionItem *selectedAction() const;
     void fillActionsList();
     void acceptActionChanges();
     void toggleEditDelete();
-    void slotTextChanged( const QString& );
+    void slotTextChanged(const QString &);
     void slotShowAddDialog();
 
 private:
     Ui::SolidActions mainUi;
-    ActionModel * actionModel;
-    ActionEditor * editUi;
+    ActionModel *actionModel;
+    ActionEditor *editUi;
     Ui::AddAction addUi;
-    QDialog * addDialog;
-
+    QDialog *addDialog;
 };
 
 #endif

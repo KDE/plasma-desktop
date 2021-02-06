@@ -21,17 +21,20 @@
 
 #include "usermodel.h"
 
-#include <QDBusPendingReply>
-#include <QDBusInterface>
-#include <algorithm>
 #include <KLocalizedString>
+#include <QDBusInterface>
+#include <QDBusPendingReply>
+#include <algorithm>
 
 #include "accounts_interface.h"
 #include "kcmusers_debug.h"
 
-UserModel::UserModel(QObject* parent)
+UserModel::UserModel(QObject *parent)
     : QAbstractListModel(parent)
-    , m_dbusInterface(new OrgFreedesktopAccountsInterface(QStringLiteral("org.freedesktop.Accounts"), QStringLiteral("/org/freedesktop/Accounts"), QDBusConnection::systemBus(), this))
+    , m_dbusInterface(new OrgFreedesktopAccountsInterface(QStringLiteral("org.freedesktop.Accounts"),
+                                                          QStringLiteral("/org/freedesktop/Accounts"),
+                                                          QDBusConnection::systemBus(),
+                                                          this))
 {
     connect(m_dbusInterface, &OrgFreedesktopAccountsInterface::UserAdded, this, [this](const QDBusObjectPath &path) {
         User *user = new User(this);
@@ -42,7 +45,7 @@ UserModel::UserModel(QObject* parent)
     });
 
     connect(m_dbusInterface, &OrgFreedesktopAccountsInterface::UserDeleted, this, [this](const QDBusObjectPath &path) {
-        QList<User*> toRemove;
+        QList<User *> toRemove;
         for (int i = 0; i < m_userList.length(); i++) {
             if (m_userList[i]->path().path() == path.path()) {
                 toRemove << m_userList[i];
@@ -65,11 +68,11 @@ UserModel::UserModel(QObject* parent)
     }
 
     const QList<QDBusObjectPath> users = reply.value();
-    for (const QDBusObjectPath& path: users) {
+    for (const QDBusObjectPath &path : users) {
         User *user = new User(this);
         user->setPath(path);
 
-        const std::list<QPair<void(User::*const)(),int>> set = {
+        const std::list<QPair<void (User::*const)(), int>> set = {
             {&User::uidChanged, UidRole},
             {&User::nameChanged, NameRole},
             {&User::faceValidChanged, FaceValidRole},
@@ -78,8 +81,8 @@ UserModel::UserModel(QObject* parent)
             {&User::administratorChanged, AdministratorRole},
         };
 
-        for (const auto &item: set) {
-            connect(user, item.first, [this, user, item]{
+        for (const auto &item : set) {
+            connect(user, item.first, [this, user, item] {
                 auto idx = index(m_userList.lastIndexOf(user));
                 Q_EMIT dataChanged(idx, idx, {item.second});
             });
@@ -110,7 +113,7 @@ UserModel::~UserModel()
 {
 }
 
-User* UserModel::getLoggedInUser() const
+User *UserModel::getLoggedInUser() const
 {
     for (const auto user : qAsConst(m_userList)) {
         if (user->loggedIn()) {
@@ -120,43 +123,42 @@ User* UserModel::getLoggedInUser() const
     return nullptr;
 }
 
-QVariant UserModel::data(const QModelIndex& index, int role) const
+QVariant UserModel::data(const QModelIndex &index, int role) const
 {
-    if (!checkIndex(index))
-    {
+    if (!checkIndex(index)) {
         return QVariant();
     }
 
     User *user = m_userList.at(index.row());
 
     switch (role) {
-        case NameRole:
-            return user->name();
-        case FaceRole:
-            return user->face().toString();
-        case RealNameRole:
-            return user->realName();
-        case EmailRole:
-            return user->email();
-        case AdministratorRole:
-            return user->administrator();
-        case FaceValidRole:
-            return QFile::exists(user->face().toString());
-        case UserRole:
-            return QVariant::fromValue(user);
-        case LoggedInRole:
-            return user->loggedIn();
-        case SectionHeaderRole:
-            return user->loggedIn() ? i18n("Your Account") : i18n("Other Accounts");
+    case NameRole:
+        return user->name();
+    case FaceRole:
+        return user->face().toString();
+    case RealNameRole:
+        return user->realName();
+    case EmailRole:
+        return user->email();
+    case AdministratorRole:
+        return user->administrator();
+    case FaceValidRole:
+        return QFile::exists(user->face().toString());
+    case UserRole:
+        return QVariant::fromValue(user);
+    case LoggedInRole:
+        return user->loggedIn();
+    case SectionHeaderRole:
+        return user->loggedIn() ? i18n("Your Account") : i18n("Other Accounts");
     }
 
     return QVariant();
 }
 
-int UserModel::rowCount(const QModelIndex& parent) const
+int UserModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid()) {
-        //Return size 0 if we are a child because this is not a tree
+        // Return size 0 if we are a child because this is not a tree
         return 0;
     }
 

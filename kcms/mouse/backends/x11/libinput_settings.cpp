@@ -17,11 +17,10 @@
  */
 #include "libinput_settings.h"
 
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
 
-template<>
-bool LibinputSettings::load(QString key, bool defVal)
+template<> bool LibinputSettings::load(QString key, bool defVal)
 {
     KSharedConfig::Ptr kcminputPtr = KSharedConfig::openConfig("kcminputrc");
     KConfigGroup group(kcminputPtr, "Mouse");
@@ -29,8 +28,7 @@ bool LibinputSettings::load(QString key, bool defVal)
     return group.readEntry(key, defVal);
 }
 
-template<>
-qreal LibinputSettings::load(QString key, qreal defVal)
+template<> qreal LibinputSettings::load(QString key, qreal defVal)
 {
     KSharedConfig::Ptr kcminputPtr = KSharedConfig::openConfig("kcminputrc");
     KConfigGroup group(kcminputPtr, "Mouse");
@@ -38,8 +36,7 @@ qreal LibinputSettings::load(QString key, qreal defVal)
     return group.readEntry(key, defVal);
 }
 
-template<>
-void LibinputSettings::save(QString key, bool val)
+template<> void LibinputSettings::save(QString key, bool val)
 {
     KSharedConfig::Ptr kcminputPtr = KSharedConfig::openConfig("kcminputrc");
     KConfigGroup group(kcminputPtr, "Mouse");
@@ -50,8 +47,7 @@ void LibinputSettings::save(QString key, bool val)
     kcminputPtr->sync();
 }
 
-template<>
-void LibinputSettings::save(QString key, qreal val)
+template<> void LibinputSettings::save(QString key, qreal val)
 {
     KSharedConfig::Ptr kcminputPtr = KSharedConfig::openConfig("kcminputrc");
     KConfigGroup group(kcminputPtr, "Mouse");

@@ -22,6 +22,7 @@
 
 #include <QAction>
 #include <QDialogButtonBox>
+#include <QGuiApplication>
 #include <QPushButton>
 #include <QQmlContext>
 #include <QQmlEngine>
@@ -32,23 +33,23 @@
 #include <QTabWidget>
 #include <QTimer>
 #include <QVBoxLayout>
-#include <QGuiApplication>
 
-#include <KLocalizedString>
 #include <KGlobalAccel>
+#include <KLocalizedString>
 #include <KMessageWidget>
 
 #include "../kactivities-kcm-features.h"
 
-#include "kactivities/info.h"
-#include "kactivities/controller.h"
 #include "features_interface.h"
+#include "kactivities/controller.h"
+#include "kactivities/info.h"
 
 #include "common/dbus/common.h"
 #include "utils/continue_with.h"
 #include "utils/d_ptr_implementation.h"
 
-class Dialog::Private {
+class Dialog::Private
+{
 public:
     Private(Dialog *parent)
         : q(parent)
@@ -64,7 +65,7 @@ public:
 
     Dialog *const q;
     QVBoxLayout *layout;
-    QTabWidget  *tabs;
+    QTabWidget *tabs;
 
     QQuickWidget *tabGeneral;
     KMessageWidget *message;
@@ -81,14 +82,13 @@ public:
 
         view->rootContext()->setContextProperty(QStringLiteral("dialog"), q);
 
-        const QString sourceFile = QStringLiteral(KAMD_KCM_DATADIR) +"qml/activityDialog/" + file;
+        const QString sourceFile = QStringLiteral(KAMD_KCM_DATADIR) + "qml/activityDialog/" + file;
 
         if (QFile::exists(sourceFile)) {
             view->setSource(QUrl::fromLocalFile(sourceFile));
             tabs->addTab(view, title);
         } else {
-            message->setText(i18n("Error loading the QML files. Check your installation.\nMissing %1",
-                                  sourceFile));
+            message->setText(i18n("Error loading the QML files. Check your installation.\nMissing %1", sourceFile));
             message->setVisible(true);
         }
 
@@ -101,10 +101,10 @@ public:
         widget->setFocus();
         auto root = widget->rootObject();
 
-        if (!root) return;
+        if (!root)
+            return;
 
-        QMetaObject::invokeMethod(widget->rootObject(), "setFocus",
-                                  Qt::DirectConnection);
+        QMetaObject::invokeMethod(widget->rootObject(), "setFocus", Qt::DirectConnection);
     }
 
     QString activityId;
@@ -155,26 +155,21 @@ Dialog::Dialog(QObject *parent)
     d->tabGeneral = d->createTab(i18n("General"), QStringLiteral("GeneralTab.qml"));
 
     // Buttons
-    d->buttons = new QDialogButtonBox(
-        QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    d->buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     d->layout->QLayout::addWidget(d->buttons);
 
-    connect(d->buttons->button(QDialogButtonBox::Ok), &QAbstractButton::clicked,
-            this, &Dialog::save);
-    connect(d->buttons, &QDialogButtonBox::rejected,
-            this, &Dialog::close);
+    connect(d->buttons->button(QDialogButtonBox::Ok), &QAbstractButton::clicked, this, &Dialog::save);
+    connect(d->buttons, &QDialogButtonBox::rejected, this, &Dialog::close);
 
     d->defaultOKText = d->buttons->button(QDialogButtonBox::Ok)->text();
 }
 
 void Dialog::init(const QString &activityId)
 {
-    setWindowTitle(activityId.isEmpty() ? i18nc("@title:window", "Create a New Activity")
+    setWindowTitle(activityId.isEmpty() ? i18nc("@title:window", "Create a New Activity") //
                                         : i18nc("@title:window", "Activity Settings"));
 
-    d->buttons->button(QDialogButtonBox::Ok)->setText(
-                    activityId.isEmpty() ? i18nc("@action:button", "Create")
-                                         : d->defaultOKText);
+    d->buttons->button(QDialogButtonBox::Ok)->setText(activityId.isEmpty() ? i18nc("@action:button", "Create") : d->defaultOKText);
 
     d->tabs->setCurrentIndex(0);
 
@@ -194,22 +189,19 @@ void Dialog::init(const QString &activityId)
         setActivityIcon(activityInfo.icon());
 
         // finding the key shortcut
-        const auto shortcuts = KGlobalAccel::self()->globalShortcut(
-            QStringLiteral("ActivityManager"), QStringLiteral("switch-to-activity-") + activityId);
+        const auto shortcuts = KGlobalAccel::self()->globalShortcut(QStringLiteral("ActivityManager"), QStringLiteral("switch-to-activity-") + activityId);
         setActivityShortcut(shortcuts.isEmpty() ? QKeySequence() : shortcuts.first());
 
         // is private?
-        auto result = d->features->GetValue(
-            QStringLiteral("org.kde.ActivityManager.Resources.Scoring/isOTR/") + activityId);
+        auto result = d->features->GetValue(QStringLiteral("org.kde.ActivityManager.Resources.Scoring/isOTR/") + activityId);
 
         auto watcher = new QDBusPendingCallWatcher(result, this);
 
-        QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this,
-                         [&] (QDBusPendingCallWatcher *watcher) mutable {
-                             QDBusPendingReply<QDBusVariant> reply = *watcher;
-                             setActivityIsPrivate(reply.value().variant().toBool());
-                             watcher->deleteLater();
-                         });
+        QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [&](QDBusPendingCallWatcher *watcher) mutable {
+            QDBusPendingReply<QDBusVariant> reply = *watcher;
+            setActivityIsPrivate(reply.value().variant().toBool());
+            watcher->deleteLater();
+        });
     }
 }
 
@@ -224,38 +216,38 @@ void Dialog::showEvent(QShowEvent *event)
     d->setFocus(d->tabGeneral);
 }
 
-#define IMPLEMENT_PROPERTY(Scope, Type, PType, PropName)                       \
-    Type Dialog::activity##PropName() const                                    \
-    {                                                                          \
-        auto root = d->tab##Scope->rootObject();                               \
-                                                                               \
-        if (!root) {                                                           \
-            qDebug() << "Root does not exist";                                 \
-            return Type();                                                     \
-        }                                                                      \
-                                                                               \
-        return root->property("activity" #PropName).value<Type>();             \
-    }                                                                          \
-                                                                               \
-    void Dialog::setActivity##PropName(PType value)                            \
-    {                                                                          \
-        auto root = d->tab##Scope->rootObject();                               \
-                                                                               \
-        if (!root) {                                                           \
-            qDebug() << "Root does not exist";                                 \
-            return;                                                            \
-        }                                                                      \
-                                                                               \
-        root->setProperty("activity" #PropName, value);                        \
+#define IMPLEMENT_PROPERTY(Scope, Type, PType, PropName)                                                                                                       \
+    Type Dialog::activity##PropName() const                                                                                                                    \
+    {                                                                                                                                                          \
+        auto root = d->tab##Scope->rootObject();                                                                                                               \
+                                                                                                                                                               \
+        if (!root) {                                                                                                                                           \
+            qDebug() << "Root does not exist";                                                                                                                 \
+            return Type();                                                                                                                                     \
+        }                                                                                                                                                      \
+                                                                                                                                                               \
+        return root->property("activity" #PropName).value<Type>();                                                                                             \
+    }                                                                                                                                                          \
+                                                                                                                                                               \
+    void Dialog::setActivity##PropName(PType value)                                                                                                            \
+    {                                                                                                                                                          \
+        auto root = d->tab##Scope->rootObject();                                                                                                               \
+                                                                                                                                                               \
+        if (!root) {                                                                                                                                           \
+            qDebug() << "Root does not exist";                                                                                                                 \
+            return;                                                                                                                                            \
+        }                                                                                                                                                      \
+                                                                                                                                                               \
+        root->setProperty("activity" #PropName, value);                                                                                                        \
     }
 
-IMPLEMENT_PROPERTY(General, QString,      const QString &,      Id)
-IMPLEMENT_PROPERTY(General, QString,      const QString &,      Name)
-IMPLEMENT_PROPERTY(General, QString,      const QString &,      Description)
-IMPLEMENT_PROPERTY(General, QString,      const QString &,      Icon)
-IMPLEMENT_PROPERTY(General, QString,      const QString &,      Wallpaper)
+IMPLEMENT_PROPERTY(General, QString, const QString &, Id)
+IMPLEMENT_PROPERTY(General, QString, const QString &, Name)
+IMPLEMENT_PROPERTY(General, QString, const QString &, Description)
+IMPLEMENT_PROPERTY(General, QString, const QString &, Icon)
+IMPLEMENT_PROPERTY(General, QString, const QString &, Wallpaper)
 IMPLEMENT_PROPERTY(General, QKeySequence, const QKeySequence &, Shortcut)
-IMPLEMENT_PROPERTY(General, bool,         bool,                 IsPrivate)
+IMPLEMENT_PROPERTY(General, bool, bool, IsPrivate)
 #undef IMPLEMENT_PROPERTY
 
 void Dialog::save()
@@ -265,20 +257,17 @@ void Dialog::save()
 
     } else {
         saveChanges(activityId());
-
     }
 }
 
 void Dialog::create()
 {
     using namespace kamd::utils;
-    continue_with(
-        d->activities.addActivity(activityName()),
-        [this](const optional_view<QString> &activityId) {
-            if (activityId.is_initialized()) {
-                saveChanges(activityId.get());
-            }
-        });
+    continue_with(d->activities.addActivity(activityName()), [this](const optional_view<QString> &activityId) {
+        if (activityId.is_initialized()) {
+            saveChanges(activityId.get());
+        }
+    });
 }
 
 void Dialog::saveChanges(const QString &activityId)
@@ -295,9 +284,7 @@ void Dialog::saveChanges(const QString &activityId)
     KGlobalAccel::self()->setShortcut(&action, {activityShortcut()}, KGlobalAccel::NoAutoloading);
 
     // is private?
-    d->features->SetValue(QStringLiteral("org.kde.ActivityManager.Resources.Scoring/isOTR/")
-                              + activityId,
-                          QDBusVariant(activityIsPrivate()));
+    d->features->SetValue(QStringLiteral("org.kde.ActivityManager.Resources.Scoring/isOTR/") + activityId, QDBusVariant(activityIsPrivate()));
 
     close();
 }

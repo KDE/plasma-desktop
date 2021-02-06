@@ -34,7 +34,9 @@ class KCMWorkspaceOptions : public KQuickAddons::ManagedConfigModule
 
 public:
     KCMWorkspaceOptions(QObject *parent, const QVariantList &args);
-    ~KCMWorkspaceOptions() override {}
+    ~KCMWorkspaceOptions() override
+    {
+    }
 
     WorkspaceOptionsGlobalsSettings *globalsSettings() const;
     WorkspaceOptionsPlasmaSettings *plasmaSettings() const;
@@ -46,4 +48,4 @@ private:
     WorkspaceOptionsData *m_data;
 };
 
-#endif  // _KCM_WORKSPACEOPTIONS_H
+#endif // _KCM_WORKSPACEOPTIONS_H

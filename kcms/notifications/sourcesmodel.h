@@ -25,8 +25,7 @@
 #include <QString>
 #include <QVector>
 
-struct EventData
-{
+struct EventData {
     QString name;
     QString comment;
     QString iconName;
@@ -35,8 +34,7 @@ struct EventData
 };
 
 // FIXME add constructors for KService and KConfigGroup
-struct SourceData
-{
+struct SourceData {
     QString name;
     QString comment;
     QString iconName;
@@ -68,13 +66,13 @@ public:
         IsDefaultRole,
 
         EventIdRole,
-        ActionsRole
+        ActionsRole,
     };
     Q_ENUM(Roles)
 
     enum Type {
         ApplicationType,
-        ServiceType
+        ServiceType,
     };
     Q_ENUM(Type)
 
@@ -98,5 +96,4 @@ public:
 
 private:
     QVector<SourceData> m_data;
-
 };

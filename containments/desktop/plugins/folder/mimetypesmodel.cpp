@@ -26,7 +26,8 @@ static bool lessThan(const QMimeType &a, const QMimeType &b)
     return QString::localeAwareCompare(a.name(), b.name()) < 0;
 }
 
-MimeTypesModel::MimeTypesModel(QObject *parent) : QAbstractListModel(parent)
+MimeTypesModel::MimeTypesModel(QObject *parent)
+    : QAbstractListModel(parent)
 {
     QMimeDatabase db;
     m_mimeTypesList = db.allMimeTypes();
@@ -41,12 +42,7 @@ MimeTypesModel::~MimeTypesModel()
 
 QHash<int, QByteArray> MimeTypesModel::roleNames() const
 {
-    return {
-        { Qt::DisplayRole, "comment" },
-        { Qt::UserRole, "name" },
-        { Qt::DecorationRole, "decoration" },
-        { Qt::CheckStateRole, "checked" }
-    };
+    return {{Qt::DisplayRole, "comment"}, {Qt::UserRole, "name"}, {Qt::DecorationRole, "decoration"}, {Qt::CheckStateRole, "checked"}};
 }
 
 QVariant MimeTypesModel::data(const QModelIndex &index, int role) const
@@ -56,24 +52,23 @@ QVariant MimeTypesModel::data(const QModelIndex &index, int role) const
     }
 
     switch (role) {
-        case Qt::DisplayRole:
-            return m_mimeTypesList.at(index.row()).comment();
-        case Qt::UserRole:
-            return m_mimeTypesList.at(index.row()).name();
+    case Qt::DisplayRole:
+        return m_mimeTypesList.at(index.row()).comment();
+    case Qt::UserRole:
+        return m_mimeTypesList.at(index.row()).name();
 
-        case Qt::DecorationRole:
-        {
-            QString icon = m_mimeTypesList.at(index.row()).iconName();
+    case Qt::DecorationRole: {
+        QString icon = m_mimeTypesList.at(index.row()).iconName();
 
-            if (icon.isEmpty()) {
-                icon = m_mimeTypesList.at(index.row()).genericIconName();
-            }
-
-            return icon;
+        if (icon.isEmpty()) {
+            icon = m_mimeTypesList.at(index.row()).genericIconName();
         }
 
-        case Qt::CheckStateRole:
-            return m_checkedRows.at(index.row()) ? Qt::Checked : Qt::Unchecked;
+        return icon;
+    }
+
+    case Qt::CheckStateRole:
+        return m_checkedRows.at(index.row()) ? Qt::Checked : Qt::Unchecked;
     }
 
     return QVariant();
@@ -112,7 +107,7 @@ QStringList MimeTypesModel::checkedTypes() const
 {
     QStringList list;
 
-    for (int i =0; i < m_checkedRows.size(); ++i) {
+    for (int i = 0; i < m_checkedRows.size(); ++i) {
         if (m_checkedRows.at(i)) {
             list.append(m_mimeTypesList.at(i).name());
         }

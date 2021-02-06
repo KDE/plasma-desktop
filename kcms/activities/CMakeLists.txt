@@ -63,12 +63,12 @@ kconfig_add_kcfg_files(KAMD_KCM_SRCS kactivitymanagerd_plugins_settings.kcfgc GE
 add_library (kcm_activities MODULE ${KAMD_KCM_SRCS})
 
 target_link_libraries (kcm_activities
-   Qt5::Quick
-   Qt5::QuickWidgets
-   Qt5::Core
-   Qt5::Sql
-   Qt5::Qml
-   Qt5::DBus
+   Qt::Quick
+   Qt::QuickWidgets
+   Qt::Core
+   Qt::Sql
+   Qt::Qml
+   Qt::DBus
    KF5::KCMUtils
    KF5::I18n
    KF5::Service

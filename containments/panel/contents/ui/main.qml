@@ -53,7 +53,6 @@ DragDrop.DropArea {
     // These are invisible and only used to read panel margins
     // Both will fallback to "standard" panel margins if the theme does not
     // define a normal or a thick margin.
-    // TODO accidentally flipped the two
     PlasmaCore.FrameSvgItem {
         id: panelSvg
         visible: false
@@ -66,11 +65,11 @@ DragDrop.DropArea {
         prefix: 'thick'
         imagePath: "widgets/panel-background"
     }
-    property bool marginAreasEnabled: panelSvg.margins != thickPanelSvg.margins
+    property bool marginAreasEnabled: panelSvg.margins != thickPanelSvg.margins 
     property var marginHighlightSvg: PlasmaCore.Svg{imagePath: "widgets/margins-highlight"}
-    //Margins are either the size of the margins in the SVG, unless that prevents the panel from being at least half a smallMedium icon + smallSpace) tall at which point we set the margin to whatever allows it to be that...or if it still won't fit, 1.
+    //Margins are either the size of the margins in the SVG, unless that prevents the panel from being at least half a smallMedium icon) tall at which point we set the margin to whatever allows it to be that...or if it still won't fit, 1.
     //the size a margin should be to force a panel to be the required size above
-    readonly property real spacingAtMinSize: Math.max(1, (currentLayout.isLayoutHorizontal ? root.height+panelSvg.fixedMargins.top*2 : root.width+panelSvg.fixedMargins.left*2) - units.iconSizes.smallMedium - units.smallSpacing*2)/2
+    readonly property real spacingAtMinSize: Math.round(Math.max(1, (currentLayout.isLayoutHorizontal ? root.height : root.width) - units.iconSizes.smallMedium)/2)
 
 //END properties
 
@@ -280,7 +279,7 @@ function checkLastSpacer() {
             property bool inThickArea: false
             property bool animationsEnabled: true
 
-            //when the applet moves caused by its resize, don't animate.
+            //when the applet moves caused by its resize, don't animate.    
             //this is completely heuristic, but looks way less "jumpy"
             property bool movingForResize: false
 
@@ -300,13 +299,11 @@ function checkLastSpacer() {
             function getMargins(side) {
                 //Margins are either the size of the margins in the SVG, unless that prevents the panel from being at least half a smallMedium icon + smallSpace) tall at which point we set the margin to whatever allows it to be that...or if it still won't fit, 1.
                 var layout = {
-                    top: 'isLayoutHorizontal', bottom: 'isLayoutHorizontal',
-                    left: 'isLayoutVertical', right: 'isLayoutVertical'
+                    top: currentLayout.isLayoutHorizontal, bottom: currentLayout.isLayoutHorizontal,
+                    right: !currentLayout.isLayoutHorizontal, left: !currentLayout.isLayoutHorizontal
                 };
-                var panelHeight = root.height+panelSvg.fixedMargins.top*2;
-                var panelWidth = root.width+panelSvg.fixedMargins.left*2;
                 var fillArea = applet && (applet.constraintHints & PlasmaCore.Types.CanFillArea);
-                return (currentLayout[layout[side]] && !fillArea) ?Math.round(Math.min(spacingAtMinSize, (inThickArea ? thickPanelSvg.fixedMargins[side] : panelSvg.fixedMargins[side]))) : 0;
+                return (layout[side] && !fillArea) ? Math.round(Math.min(spacingAtMinSize, (inThickArea ? thickPanelSvg.fixedMargins[side] : panelSvg.fixedMargins[side]))) : 0;
             }
 
             Layout.topMargin: getMargins('top')
@@ -418,14 +415,14 @@ function checkLastSpacer() {
                         w: startApplet ? (startApplet[ptc.w] + startApplet[ptc.width]) : -panelSvg.margins[horizontal ? 'left' : 'top'],
                         get width() {return positions.step.w - positions.fill.w},
                         get h() {return topSide ? 0 : root[ptc.height]-this.height},
-                        height: (thickArea ? thickPanelSvg : panelSvg).fixedMargins[svgSide],
+                        height: Math.min(spacingAtMinSize, (thickArea ? thickPanelSvg : panelSvg).fixedMargins[svgSide]),
                         elementId: 'fill', visible: true
                     },
                     step: {
                         w: endApplet ? endApplet[ptc.w] : root[ptc.width] + panelSvg.margins[horizontal ? 'right' : 'bottom'],
                         width: endApplet ? endApplet[ptc.width] : 0,
                         get h() {return (topSide ? 0 : root[ptc.height]-this.height)+mod*panelSvg.fixedMargins[svgSide]},
-                        height: thickPanelSvg.fixedMargins[svgSide] - panelSvg.fixedMargins[svgSide],
+                        height: Math.min(spacingAtMinSize, thickPanelSvg.fixedMargins[svgSide]) - Math.min(spacingAtMinSize, panelSvg.fixedMargins[svgSide]),
                         elementId: ((horizontal ? topSide : thickArea) ? 'top' : 'bottom') + ((horizontal ? thickArea : topSide) ? "left" : "right"),
                         visible: endApplet
                     },
@@ -433,7 +430,7 @@ function checkLastSpacer() {
                         get w() {return positions.step.w},
                         get width() {return positions.step.width},
                         get h() {return topSide ? 0 : root[ptc.height]-this.height},
-                        height: panelSvg.fixedMargins[svgSide],
+                        height: Math.min(spacingAtMinSize, panelSvg.fixedMargins[svgSide]),
                         elementId: 'fill', visible: endApplet
                     }
                 })

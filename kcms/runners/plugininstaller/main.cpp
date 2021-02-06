@@ -4,22 +4,22 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include <QDebug>
-#include <QUrl>
-#include <QApplication>
 #include <KLocalizedString>
-#include <QCommandLineParser>
 #include <KMessageBox>
-#include <QMimeDatabase>
-#include <QFileInfo>
 #include <KOSRelease>
+#include <QApplication>
+#include <QCommandLineParser>
+#include <QDebug>
+#include <QFileInfo>
+#include <QMimeDatabase>
+#include <QUrl>
 
 #include "config-workspace.h"
 #ifdef HAVE_PACKAGEKIT
 #include "PackageKitJob.h"
 #endif
-#include "ZypperRPMJob.h"
 #include "ScriptJob.h"
+#include "ZypperRPMJob.h"
 
 void fail(const QString &str)
 {
@@ -81,12 +81,22 @@ int main(int argc, char *argv[])
         job.reset(new ScriptJob());
     }
 
-    QObject::connect(job.data(), &AbstractJob::finished, qApp,  []() {
-        qApp->exit();
-    }, Qt::QueuedConnection);
-    QObject::connect(job.data(), &AbstractJob::error, qApp, [](const QString &error) {
-        fail(error);
-    }, Qt::QueuedConnection);
+    QObject::connect(
+        job.data(),
+        &AbstractJob::finished,
+        qApp,
+        []() {
+            qApp->exit();
+        },
+        Qt::QueuedConnection);
+    QObject::connect(
+        job.data(),
+        &AbstractJob::error,
+        qApp,
+        [](const QString &error) {
+            fail(error);
+        },
+        Qt::QueuedConnection);
 
     job->executeOperation(fileInfo, mimeType, install);
 

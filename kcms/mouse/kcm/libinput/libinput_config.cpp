@@ -21,15 +21,15 @@
 
 #include <KAboutData>
 #include <KLocalizedString>
-#include <kdeclarative/kdeclarative.h>
 #include <KMessageWidget>
+#include <kdeclarative/kdeclarative.h>
 
+#include <QMetaObject>
+#include <QQmlContext>
+#include <QQmlProperty>
 #include <QQuickItem>
 #include <QQuickWidget>
-#include <QQmlContext>
 #include <QVBoxLayout>
-#include <QQmlProperty>
-#include <QMetaObject>
 
 #include "inputbackend.h"
 
@@ -43,17 +43,15 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
 {
     m_backend = backend;
 
-    KAboutData* data = new KAboutData(QStringLiteral("kcmmouse"),
-                    i18n("Pointer device KCM"),
-                    QStringLiteral("1.0"),
-                    i18n("System Settings module for managing mice and trackballs."),
-                    KAboutLicense::GPL_V2,
-                    i18n("Copyright 2018 Roman Gilg"),
-                    QString());
+    KAboutData *data = new KAboutData(QStringLiteral("kcmmouse"),
+                                      i18n("Pointer device KCM"),
+                                      QStringLiteral("1.0"),
+                                      i18n("System Settings module for managing mice and trackballs."),
+                                      KAboutLicense::GPL_V2,
+                                      i18n("Copyright 2018 Roman Gilg"),
+                                      QString());
 
-    data->addAuthor(i18n("Roman Gilg"),
-                   i18n("Developer"),
-                   QStringLiteral("subdiff@gmail.com"));
+    data->addAuthor(i18n("Roman Gilg"), i18n("Developer"), QStringLiteral("subdiff@gmail.com"));
 
     m_parent->setAboutData(data);
 
@@ -80,7 +78,7 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     m_view->rootContext()->setContextProperty("deviceModel", getDeviceList(m_backend));
 
     KDeclarative::KDeclarative kdeclarative;
-    kdeclarative.setupEngine(m_view->engine());  // This is a new engine
+    kdeclarative.setupEngine(m_view->engine()); // This is a new engine
     kdeclarative.setDeclarativeEngine(m_view->engine());
     kdeclarative.setupContext();
 
@@ -93,8 +91,7 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     if (m_initError) {
         m_errorMessage->setMessageType(KMessageWidget::Error);
         m_errorMessage->setText(m_backend->errorString());
-        QMetaObject::invokeMethod(m_errorMessage, "animatedShow",
-                                  Qt::QueuedConnection);
+        QMetaObject::invokeMethod(m_errorMessage, "animatedShow", Qt::QueuedConnection);
     } else {
         connect(m_backend, SIGNAL(deviceAdded(bool)), this, SLOT(onDeviceAdded(bool)));
         connect(m_backend, SIGNAL(deviceRemoved(int)), this, SLOT(onDeviceRemoved(int)));

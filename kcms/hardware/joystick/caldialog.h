@@ -23,28 +23,28 @@
 
 #include <QLabel>
 
-#include <KDialog>
+#include <QDialog>
 
 class JoyDevice;
 
 // the dialog which tells the user all steps to calibrate the device
 
-class CalDialog : public KDialog
+class CalDialog : public QDialog
 {
-  Q_OBJECT
-  
-  public:
+    Q_OBJECT
+
+public:
     CalDialog(QWidget *parent, JoyDevice *joy);
 
     void calibrate();
 
-  private:
+private:
     void waitButton(int axis, bool press, int &lastVal);
 
-  private Q_SLOTS:
-    virtual void slotUser1();
+private Q_SLOTS:
+    virtual void slotNext();
 
-  private:
+private:
     JoyDevice *joydev;
 
     QLabel *text;

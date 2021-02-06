@@ -7,13 +7,13 @@
 #include "AbstractJob.h"
 
 #include <KConfig>
-#include <KSharedConfig>
 #include <KConfigGroup>
-#include <KShell>
 #include <KLocalizedString>
+#include <KSharedConfig>
+#include <KShell>
 
-#include <QProcess>
 #include <QDebug>
+#include <QProcess>
 
 void AbstractJob::runScriptInTerminal(const QString &script, const QString &pwd)
 {
@@ -51,17 +51,15 @@ QString AbstractJob::terminalCloseMessage(bool install)
 
 void AbstractJob::connectSignals(QProcess *process)
 {
-    connect(process, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this,
-            [this] (int, QProcess::ExitStatus exitStatus) {
-                if (exitStatus == QProcess::NormalExit) {
-                    Q_EMIT finished();
-                }
-            });
+    connect(process, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this, [this](int, QProcess::ExitStatus exitStatus) {
+        if (exitStatus == QProcess::NormalExit) {
+            Q_EMIT finished();
+        }
+    });
 
-    connect(process, &QProcess::errorOccurred, this,
-            [this, process] (QProcess::ProcessError) {
-                Q_EMIT error(i18nc("@info", "Failed to run install script in terminal \"%1\"", process->program()));
-            });
+    connect(process, &QProcess::errorOccurred, this, [this, process](QProcess::ProcessError) {
+        Q_EMIT error(i18nc("@info", "Failed to run install script in terminal \"%1\"", process->program()));
+    });
 }
 
 #include "AbstractJob.moc"

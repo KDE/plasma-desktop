@@ -20,8 +20,8 @@
 #include "kwin-runner.h"
 
 #include <QDBusConnection>
-#include <QDBusServiceWatcher>
 #include <QDBusConnectionInterface>
+#include <QDBusServiceWatcher>
 
 #include <KLocalizedString>
 
@@ -31,12 +31,11 @@ static const QString s_kwinService = QStringLiteral("org.kde.KWin");
 static const QString s_keyword = QStringLiteral("KWin");
 
 KWinRunner::KWinRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, metaData, args),
-      m_enabled(false)
+    : Plasma::AbstractRunner(parent, metaData, args)
+    , m_enabled(false)
 {
     setObjectName(s_keyword);
-    QDBusServiceWatcher *watcher = new QDBusServiceWatcher(s_kwinService, QDBusConnection::sessionBus(),
-                                                           QDBusServiceWatcher::WatchForOwnerChange, this);
+    QDBusServiceWatcher *watcher = new QDBusServiceWatcher(s_kwinService, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this);
     connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged, this, &KWinRunner::checkAvailability);
     checkAvailability(QString(), QString(), QString());
 }
@@ -83,8 +82,7 @@ void KWinRunner::checkAvailability(const QString &name, const QString &oldOwner,
         m_enabled = enabled;
 
         if (m_enabled) {
-            addSyntax(Plasma::RunnerSyntax(s_keyword,
-                                           i18n("Opens the KWin (Plasma Window Manager) debug console.")));
+            addSyntax(Plasma::RunnerSyntax(s_keyword, i18n("Opens the KWin (Plasma Window Manager) debug console.")));
         } else {
             setSyntaxes(QList<Plasma::RunnerSyntax>());
         }

@@ -19,8 +19,9 @@
  *
  *  Date: Thu Nov  2 17:26:30 2006
  *
- * Do not edit.   
+ * Do not edit.
  */
+// clang-format off
 static const char keynames[] =
   "space\0"
   "exclam\0"
@@ -4033,3 +4034,4 @@ NC_("keyboard label", "XF86WakeUp")
 NC_("keyboard label", "XF86Suspend")
 
 #endif
+// clang-format on

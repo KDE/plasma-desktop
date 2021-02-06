@@ -20,13 +20,14 @@
 
 #include <QDir>
 
-namespace {
-    //save in XDG user-dirs.dirs config file, this is where KGlobalSettings/QDesktopServices reads from.
-    KSharedConfig::Ptr userDirsConfig()
-    {
-        const QString userDirsFilePath = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs");
-        return KSharedConfig::openConfig(userDirsFilePath, KConfig::SimpleConfig);
-    }
+namespace
+{
+// save in XDG user-dirs.dirs config file, this is where KGlobalSettings/QDesktopServices reads from.
+KSharedConfig::Ptr userDirsConfig()
+{
+    const QString userDirsFilePath = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs");
+    return KSharedConfig::openConfig(userDirsFilePath, KConfig::SimpleConfig);
+}
 }
 
 class XdgPathsSettingsStore : public QObject
@@ -144,7 +145,9 @@ DesktopPathsSettings::DesktopPathsSettings(QObject *parent)
 void DesktopPathsSettings::addItemInternal(const QByteArray &propertyName, const QVariant &defaultValue)
 {
     auto *item = new KPropertySkeletonItem(m_xdgPathsStore, propertyName, defaultValue);
-    item->setNotifyFunction([this] { emit this->widgetChanged(); });
+    item->setNotifyFunction([this] {
+        emit this->widgetChanged();
+    });
     addItem(item, propertyName);
 }
 

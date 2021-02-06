@@ -5,6 +5,7 @@ set(kcm_kded_SRCS
     kcmkded.cpp
     modulesmodel.cpp
     filterproxymodel.cpp
+    kdedconfigdata.cpp
 )
 
 qt5_add_dbus_interface(kcm_kded_SRCS ${KDED_DBUS_INTERFACE} kded_interface)
@@ -12,13 +13,20 @@ qt5_add_dbus_interface(kcm_kded_SRCS ${KDED_DBUS_INTERFACE} kded_interface)
 ecm_qt_declare_logging_category(kcm_kded_SRCS HEADER debug.h
                                 IDENTIFIER KCM_KDED
                                 CATEGORY_NAME kcm_kded
-                                DEFAULT_SEVERITY Info)
+                                DEFAULT_SEVERITY Info
+                                DESCRIPTION "KCM for kded services"
+                                EXPORT kcm_kded)
+
+ecm_qt_install_logging_categories(
+       EXPORT kcm_kded
+       DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
+)
 
 add_library(kcm_kded MODULE ${kcm_kded_SRCS})
 
 kcoreaddons_desktop_to_json(kcm_kded "kcmkded.desktop")
 
-target_link_libraries(kcm_kded KF5::QuickAddons KF5::Service KF5::I18n Qt5::DBus)
+target_link_libraries(kcm_kded KF5::QuickAddons KF5::Service KF5::I18n KF5::KCMUtils Qt::DBus)
 
 install(TARGETS kcm_kded  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms )
 

@@ -23,14 +23,14 @@
 #include <QDesktopWidget>
 #include <QFileInfo>
 
-#include <KIO/Job>
 #include <KIO/CopyJob>
 #include <KIO/EmptyTrashJob>
+#include <KIO/Job>
 #include <KIO/JobUiDelegate>
 
-Trash::Trash(QObject *parent) : QObject(parent)
+Trash::Trash(QObject *parent)
+    : QObject(parent)
 {
-
 }
 
 void Trash::trashUrls(const QList<QUrl> &urls)

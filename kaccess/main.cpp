@@ -20,14 +20,14 @@
 */
 
 #include "kaccess.h"
-#include <QDebug>
-#include <QApplication>
-#include <QX11Info>
 #include <KAboutData>
 #include <KLocalizedString>
 #include <Kdelibs4ConfigMigrator>
+#include <QApplication>
+#include <QDebug>
+#include <QX11Info>
 
-extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
+extern "C" Q_DECL_EXPORT int kdemain(int argc, char *argv[])
 {
     Kdelibs4ConfigMigrator migrate(QStringLiteral("kaccess"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("kaccessrc"));
@@ -35,8 +35,8 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
 
     qunsetenv("SESSION_MANAGER");
 
-    //this application is currently only relevant on X, force to run under X
-    //note if someone does port this we still need to run kaccess under X for xwayland apps
+    // this application is currently only relevant on X, force to run under X
+    // note if someone does port this we still need to run kaccess under X for xwayland apps
     qputenv("QT_QPA_PLATFORM", "xcb");
 
     // verify the Xlib has matching XKB extension
@@ -51,11 +51,9 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
     // we need an application object for QX11Info
     QApplication app(argc, argv);
 
-    KAboutData about(QStringLiteral("kaccess"), QString(), i18n("Accessibility"),
-                      {}, KAboutLicense::GPL_V2,
-                      i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
+    KAboutData about(QStringLiteral("kaccess"), QString(), i18n("Accessibility"), {}, KAboutLicense::GPL_V2, i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
 
-    about.addAuthor(i18n("Matthias Hoelzer-Kluepfel"), i18n("Author") , QStringLiteral("hoelzer@kde.org"));
+    about.addAuthor(i18n("Matthias Hoelzer-Kluepfel"), i18n("Author"), QStringLiteral("hoelzer@kde.org"));
     // set data as used for D-Bus by KAccessApp
     KAboutData::setApplicationData(about);
 
@@ -69,8 +67,7 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
     int opcode_rtrn;
     int error_rtrn;
     int xkb_opcode;
-    if (!XkbQueryExtension(QX11Info::display(), &opcode_rtrn, &xkb_opcode, &error_rtrn,
-                           &major, &minor)) {
+    if (!XkbQueryExtension(QX11Info::display(), &opcode_rtrn, &xkb_opcode, &error_rtrn, &major, &minor)) {
         qWarning() << "X server has not matching XKB extension" << Qt::endl;
         return 1;
     }
@@ -78,7 +75,7 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
 
     app.installNativeEventFilter(&acc);
 
-    //Without that, the application dies when the dialog is closed only once.
+    // Without that, the application dies when the dialog is closed only once.
     app.setQuitOnLastWindowClosed(false);
 
     acc.setXkbOpcode(xkb_opcode);

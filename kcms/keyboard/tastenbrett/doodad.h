@@ -31,11 +31,14 @@ class Doodad : public XkbObject
 {
     Q_OBJECT
 
-#define D_P(type, name) \
-private: \
-    Q_PROPERTY(type name READ auto_prop_##name CONSTANT) \
-public: \
-    type auto_prop_##name () const { return doodad->any. name ; }
+#define D_P(type, name)                                                                                                                                        \
+private:                                                                                                                                                       \
+    Q_PROPERTY(type name READ auto_prop_##name CONSTANT)                                                                                                       \
+public:                                                                                                                                                        \
+    type auto_prop_##name() const                                                                                                                              \
+    {                                                                                                                                                          \
+        return doodad->any.name;                                                                                                                               \
+    }
 
     D_P(unsigned char, priority)
 
@@ -51,11 +54,14 @@ class ShapeDoodad : public Doodad
 {
     Q_OBJECT
 
-#define SD_P(type, name) \
-private: \
-    Q_PROPERTY(type name READ auto_prop_##name CONSTANT) \
-public: \
-    type auto_prop_##name () const { return doodad->shape. name ; }
+#define SD_P(type, name)                                                                                                                                       \
+private:                                                                                                                                                       \
+    Q_PROPERTY(type name READ auto_prop_##name CONSTANT)                                                                                                       \
+public:                                                                                                                                                        \
+    type auto_prop_##name() const                                                                                                                              \
+    {                                                                                                                                                          \
+        return doodad->shape.name;                                                                                                                             \
+    }
 
     SD_P(short, top)
     SD_P(short, left)
@@ -78,11 +84,14 @@ class TextDoodad : public Doodad
 {
     Q_OBJECT
 
-#define TD_P(type, name) \
-private: \
-    Q_PROPERTY(type name READ auto_prop_##name CONSTANT) \
-public: \
-    type auto_prop_##name () const { return doodad->text. name ; }
+#define TD_P(type, name)                                                                                                                                       \
+private:                                                                                                                                                       \
+    Q_PROPERTY(type name READ auto_prop_##name CONSTANT)                                                                                                       \
+public:                                                                                                                                                        \
+    type auto_prop_##name() const                                                                                                                              \
+    {                                                                                                                                                          \
+        return doodad->text.name;                                                                                                                              \
+    }
 
     TD_P(short, top)
     TD_P(short, left)
@@ -108,11 +117,14 @@ class IndicatorDoodad : public Doodad
 {
     Q_OBJECT
 
-#define ID_P(type, name) \
-private: \
-    Q_PROPERTY(type name READ auto_prop_##name CONSTANT) \
-public: \
-    type auto_prop_##name () const { return doodad->indicator. name ; }
+#define ID_P(type, name)                                                                                                                                       \
+private:                                                                                                                                                       \
+    Q_PROPERTY(type name READ auto_prop_##name CONSTANT)                                                                                                       \
+public:                                                                                                                                                        \
+    type auto_prop_##name() const                                                                                                                              \
+    {                                                                                                                                                          \
+        return doodad->indicator.name;                                                                                                                         \
+    }
 
     ID_P(short, top)
     ID_P(short, left)
@@ -137,11 +149,14 @@ class LogoDoodad : public ShapeDoodad
 {
     Q_OBJECT
 
-#define LD_P(type, name) \
-private: \
-    Q_PROPERTY(type name READ auto_prop_##name CONSTANT) \
-public: \
-    type auto_prop_##name () const { return doodad->logo. name ; }
+#define LD_P(type, name)                                                                                                                                       \
+private:                                                                                                                                                       \
+    Q_PROPERTY(type name READ auto_prop_##name CONSTANT)                                                                                                       \
+public:                                                                                                                                                        \
+    type auto_prop_##name() const                                                                                                                              \
+    {                                                                                                                                                          \
+        return doodad->logo.name;                                                                                                                              \
+    }
 
     LD_P(short, top)
     LD_P(short, left)

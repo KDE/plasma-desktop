@@ -16,19 +16,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "kcm.h"
 
-#include <KPluginFactory>
 #include <KAboutData>
 #include <KLocalizedString>
+#include <KPluginFactory>
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMNightColorFactory, "kcm_nightcolor.json", registerPlugin<ColorCorrect::KCMNightColor>();)
 
-namespace ColorCorrect {
-
-KCMNightColor::KCMNightColor(QObject *parent, const QVariantList& args)
+namespace ColorCorrect
+{
+KCMNightColor::KCMNightColor(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
 {
-    KAboutData* about = new KAboutData(QStringLiteral("kcm_nightcolor"), i18n("Night Color"),
-                                       QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_nightcolor"), i18n("Night Color"), QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Roman Gilg"), QString(), QStringLiteral("subdiff@gmail.com"));
     setAboutData(about);
     setButtons(Apply | Default);

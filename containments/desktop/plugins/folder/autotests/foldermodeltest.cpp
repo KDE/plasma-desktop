@@ -23,9 +23,9 @@
 #include "foldermodel.h"
 #include "screenmapper.h"
 
-#include <QTest>
-#include <QTemporaryDir>
 #include <QSignalSpy>
+#include <QTemporaryDir>
+#include <QTest>
 
 QTEST_MAIN(FolderModelTest)
 
@@ -56,7 +56,7 @@ void FolderModelTest::init()
     createTestFolder(desktop);
     m_folderModel = new FolderModel(this);
     m_folderModel->classBegin();
-    m_folderModel->setUrl(m_folderDir->path()  + QDir::separator() + desktop );
+    m_folderModel->setUrl(m_folderDir->path() + QDir::separator() + desktop);
     m_folderModel->componentComplete();
     QSignalSpy s(m_folderModel, &FolderModel::listingCompleted);
     s.wait(1000);
@@ -72,30 +72,25 @@ void FolderModelTest::cleanup()
 
 void FolderModelTest::tst_listing()
 {
-    
     QCOMPARE(m_folderModel->url(), m_folderDir->path() + QDir::separator() + desktop);
 
     const auto count = m_folderModel->rowCount();
     QCOMPARE(count, 10);
-    QCOMPARE(m_folderModel->index(0, 0).data(FolderModel::FileNameRole).toString(),
-             QLatin1String("firstDir"));
+    QCOMPARE(m_folderModel->index(0, 0).data(FolderModel::FileNameRole).toString(), QLatin1String("firstDir"));
     for (int i = 1; i < count; i++) {
         const auto index = m_folderModel->index(i, 0);
-        QCOMPARE(index.data(FolderModel::FileNameRole).toString(),
-                 QStringLiteral("file%1.txt").arg(i));
+        QCOMPARE(index.data(FolderModel::FileNameRole).toString(), QStringLiteral("file%1.txt").arg(i));
     }
 }
 
 void FolderModelTest::tst_listingDescending()
 {
     m_folderModel->setSortDesc(true);
-    QCOMPARE(m_folderModel->index(0, 0).data(FolderModel::FileNameRole).toString(),
-             QLatin1String("firstDir"));
+    QCOMPARE(m_folderModel->index(0, 0).data(FolderModel::FileNameRole).toString(), QLatin1String("firstDir"));
     const auto count = m_folderModel->rowCount();
     for (int i = 1; i < count; i++) {
         const auto index = m_folderModel->index(i, 0);
-        QCOMPARE(index.data(FolderModel::FileNameRole).toString(),
-                 QStringLiteral("file%1.txt").arg(count - i));
+        QCOMPARE(index.data(FolderModel::FileNameRole).toString(), QStringLiteral("file%1.txt").arg(count - i));
     }
 }
 
@@ -104,12 +99,10 @@ void FolderModelTest::tst_listingFolderNotFirst()
     const auto count = m_folderModel->rowCount();
     m_folderModel->setSortDirsFirst(false);
     QCOMPARE(count, 10);
-    QCOMPARE(m_folderModel->index(9, 0).data(FolderModel::FileNameRole).toString(),
-             QLatin1String("firstDir"));
+    QCOMPARE(m_folderModel->index(9, 0).data(FolderModel::FileNameRole).toString(), QLatin1String("firstDir"));
     for (int i = 0; i < count - 1; i++) {
         const auto index = m_folderModel->index(i, 0);
-        QCOMPARE(index.data(FolderModel::FileNameRole).toString(),
-                 QStringLiteral("file%1.txt").arg(i + 1));
+        QCOMPARE(index.data(FolderModel::FileNameRole).toString(), QStringLiteral("file%1.txt").arg(i + 1));
     }
 }
 
@@ -123,8 +116,7 @@ void FolderModelTest::tst_filterListing()
     QCOMPARE(count, 9);
     for (int i = 0; i < count; i++) {
         const auto index = m_folderModel->index(i, 0);
-        QCOMPARE(index.data(FolderModel::FileNameRole).toString(),
-                 QStringLiteral("file%1.txt").arg(i + 1));
+        QCOMPARE(index.data(FolderModel::FileNameRole).toString(), QStringLiteral("file%1.txt").arg(i + 1));
     }
 }
 
@@ -132,21 +124,21 @@ void FolderModelTest::tst_cd()
 {
     QSignalSpy s(m_folderModel, &FolderModel::listingCompleted);
 
-    //go into firstDir subfolder
+    // go into firstDir subfolder
     const auto url = m_folderModel->resolvedUrl();
     m_folderModel->cd(0);
     QVERIFY(s.wait(500));
     const auto url2 = m_folderModel->resolvedUrl();
     QVERIFY(url.isParentOf(url2));
 
-    //go back to Desktop
+    // go back to Desktop
     m_folderModel->up();
     QVERIFY(s.wait(500));
     QCOMPARE(m_folderModel->resolvedUrl(), url);
 
-    //try to cd to an invalid entry (a file)
+    // try to cd to an invalid entry (a file)
     m_folderModel->cd(1);
-    //Signal is not emitted here as it's invalided
+    // Signal is not emitted here as it's invalided
     QVERIFY(!s.wait(500));
     QCOMPARE(m_folderModel->resolvedUrl(), url);
 }
@@ -237,22 +229,20 @@ void FolderModelTest::tst_defaultValues()
 
 void FolderModelTest::tst_actionMenu()
 {
-    const QStringList lst {
-        QStringLiteral("open"),
-                QStringLiteral("cut"),
-                QStringLiteral("open"),
-                QStringLiteral("cut"),
-                QStringLiteral("undo"),
-                QStringLiteral("copy"),
-                QStringLiteral("paste"),
-                QStringLiteral("pasteto"),
-                QStringLiteral("refresh"),
-                QStringLiteral("rename"),
-                QStringLiteral("trash"),
-                QStringLiteral("del"),
-                QStringLiteral("restoreFromTrash"),
-                QStringLiteral("emptyTrash")
-    };
+    const QStringList lst{QStringLiteral("open"),
+                          QStringLiteral("cut"),
+                          QStringLiteral("open"),
+                          QStringLiteral("cut"),
+                          QStringLiteral("undo"),
+                          QStringLiteral("copy"),
+                          QStringLiteral("paste"),
+                          QStringLiteral("pasteto"),
+                          QStringLiteral("refresh"),
+                          QStringLiteral("rename"),
+                          QStringLiteral("trash"),
+                          QStringLiteral("del"),
+                          QStringLiteral("restoreFromTrash"),
+                          QStringLiteral("emptyTrash")};
     for (const QString &str : lst) {
         QVERIFY(m_folderModel->action(str));
     }
@@ -276,7 +266,7 @@ void FolderModelTest::tst_multiScreen()
     // as complete.
     m_folderModel = new FolderModel(this);
     m_folderModel->classBegin();
-    m_folderModel->setUrl(m_folderDir->path()  + QDir::separator() + desktop );
+    m_folderModel->setUrl(m_folderDir->path() + QDir::separator() + desktop);
     m_folderModel->setUsedByContainment(true);
     m_folderModel->setScreen(0);
     m_folderModel->componentComplete();
@@ -297,7 +287,7 @@ void FolderModelTest::tst_multiScreen()
     const auto movedItem = m_folderModel->index(0, 0).data(FolderModel::UrlRole).toUrl();
     FolderModel secondFolderModel;
     secondFolderModel.classBegin();
-    secondFolderModel.setUrl(m_folderDir->path()  + QDir::separator() + desktop );
+    secondFolderModel.setUrl(m_folderDir->path() + QDir::separator() + desktop);
     secondFolderModel.setUsedByContainment(true);
     secondFolderModel.setScreen(1);
     secondFolderModel.componentComplete();
@@ -314,7 +304,7 @@ void FolderModelTest::tst_multiScreen()
     // we have one less item
     QCOMPARE(m_folderModel->rowCount(), count - 1);
     QCOMPARE(secondFolderModel.rowCount(), 1);
-    QCOMPARE(secondFolderModel.index(0,0).data(FolderModel::UrlRole).toUrl(), movedItem);
+    QCOMPARE(secondFolderModel.index(0, 0).data(FolderModel::UrlRole).toUrl(), movedItem);
     QCOMPARE(screenMapper->screenForItem(movedItem), 1);
 
     // remove extra screen, we have all items back
@@ -330,7 +320,7 @@ void FolderModelTest::tst_multiScreen()
     s2.wait(500);
     QCOMPARE(m_folderModel->rowCount(), count - 1);
     QCOMPARE(secondFolderModel.rowCount(), 1);
-    QCOMPARE(secondFolderModel.index(0,0).data(FolderModel::UrlRole).toUrl(), movedItem);
+    QCOMPARE(secondFolderModel.index(0, 0).data(FolderModel::UrlRole).toUrl(), movedItem);
     QCOMPARE(screenMapper->screenForItem(movedItem), 1);
 
     // create a new item, it appears on the first screen
@@ -357,7 +347,7 @@ void FolderModelTest::tst_multiScreenDifferenPath()
     createTestFolder(desktop2);
     FolderModel secondFolderModel;
     secondFolderModel.setUsedByContainment(true);
-    secondFolderModel.setUrl(m_folderDir->path()  + QDir::separator() + desktop2 );
+    secondFolderModel.setUrl(m_folderDir->path() + QDir::separator() + desktop2);
     secondFolderModel.setScreen(1);
     QSignalSpy s2(&secondFolderModel, &FolderModel::listingCompleted);
     s2.wait(1000);
@@ -372,7 +362,6 @@ void FolderModelTest::tst_multiScreenDifferenPath()
     QCOMPARE(m_folderModel->rowCount(), count + 1);
     QCOMPARE(secondFolderModel.rowCount(), count2);
 
-
     // create a new item, it appears on the second screen
     dir.cd(m_folderDir->path() + QDir::separator() + desktop2);
     dir.mkdir("secondDir2");
@@ -380,4 +369,3 @@ void FolderModelTest::tst_multiScreenDifferenPath()
     QCOMPARE(m_folderModel->rowCount(), count + 1);
     QCOMPARE(secondFolderModel.rowCount(), count2 + 1);
 }
-

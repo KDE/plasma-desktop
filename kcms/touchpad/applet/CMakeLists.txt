@@ -23,7 +23,7 @@ qt5_add_dbus_interfaces(Applet_SRCS
 add_library(plasma_engine_touchpad MODULE ${Applet_SRCS})
 target_link_libraries(plasma_engine_touchpad
                       KF5::Plasma
-		      Qt5::DBus
+		      Qt::DBus
 )
 
 kcoreaddons_desktop_to_json(plasma_engine_touchpad ${CMAKE_CURRENT_BINARY_DIR}/plasma-dataengine-touchpad.desktop SERVICE_TYPES kcmodule.desktop)
