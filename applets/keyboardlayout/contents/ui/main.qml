@@ -58,6 +58,7 @@ KeyboardLayoutButton {
             source: icon.name
             visible: display === AbstractButton.IconOnly
             anchors.fill: parent
+            active: hovered
         }
 
         PlasmaComponents3.Label {
@@ -69,6 +70,8 @@ KeyboardLayoutButton {
             font.pointSize: height
         }
     }
+
+    background: undefined
 
     // to fit at least 2 letters in systray
     leftPadding: 0
