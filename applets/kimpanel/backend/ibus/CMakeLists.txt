@@ -1,10 +1,4 @@
-find_package(IBus 1.5.0)
-find_package(GLIB2)
-find_package(GIO)
-find_package(GObject)
-
-if(IBUS_FOUND AND GLIB2_FOUND AND GIO_FOUND AND GOBJECT_FOUND)
-    include_directories(${IBUS_INCLUDE_DIR} ${GLIB2_INCLUDE_DIR})
+if(IBUS_FOUND AND GLIB2_FOUND AND GOBJECT_FOUND)
     add_subdirectory(emojier)
 
     configure_file(config-kimpanel.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kimpanel.h)
@@ -12,10 +6,6 @@ if(IBUS_FOUND AND GLIB2_FOUND AND GIO_FOUND AND GOBJECT_FOUND)
     find_package(XCB COMPONENTS XCB KEYSYMS)
 
     if (Qt5X11Extras_FOUND AND XCB_XCB_FOUND AND XCB_KEYSYMS_FOUND)
-        include_directories(${GIO_INCLUDE_DIR})
-        include_directories(${GOBJECT_INCLUDE_DIR})
-        include_directories(${XCB_XCB_INCLUDE_DIRS})
-        include_directories(${XCB_KEYSYMS_INCLUDE_DIRS})
         set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99")
         add_executable(kimpanel-ibus-panel
             ibus15/xkblayoutmanager.cpp
@@ -27,7 +17,7 @@ if(IBUS_FOUND AND GLIB2_FOUND AND GIO_FOUND AND GOBJECT_FOUND)
             ibus15/panel.cpp
             ibus15/propertymanager.cpp)
         target_compile_definitions(kimpanel-ibus-panel PRIVATE -DQT_NO_KEYWORDS)
-        target_link_libraries(kimpanel-ibus-panel ${IBUS_LIBRARIES} GLIB2::GLIB2 ${GIO_LIBRARIES} ${GOBJECT_LIBRARIES} Qt::Core Qt::DBus Qt::Gui Qt::X11Extras XCB::KEYSYMS)
+        target_link_libraries(kimpanel-ibus-panel GLIB2::GLIB2 PkgConfig::IBUS PkgConfig::GOBJECT Qt::Core Qt::DBus Qt::Gui Qt::X11Extras XCB::KEYSYMS)
         # configure_file(${CMAKE_CURRENT_SOURCE_DIR}/kimpanel.xml.in ${CMAKE_CURRENT_BINARY_DIR}/kimpanel.xml @ONLY)
         # install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kimpanel.xml DESTINATION ${CMAKE_INSTALL_PREFIX}/share/ibus/component)
 
