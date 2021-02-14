@@ -61,7 +61,7 @@ Image {
     Drag.hotSpot.y: 32
 
     MouseArea {
-        id: moudeArea
+        id: mouseArea
         anchors.fill: parent
 
         drag {
