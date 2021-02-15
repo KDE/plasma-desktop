@@ -327,10 +327,10 @@ bool XEventNotifier::processXkbEvents(xcb_generic_event_t *event)
     _xkb_event *xkbevt = reinterpret_cast<_xkb_event *>(event);
     if (XEventNotifier::isGroupSwitchEvent(xkbevt)) {
         //		qDebug() << "group switch event";
-        Q_EMIT emit(layoutChanged());
+        Q_EMIT layoutChanged();
     } else if (XEventNotifier::isLayoutSwitchEvent(xkbevt)) {
         //		qDebug() << "layout switch event";
-        Q_EMIT emit(layoutMapChanged());
+        Q_EMIT layoutMapChanged();
     }
     return true;
 }
