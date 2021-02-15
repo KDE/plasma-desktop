@@ -7,6 +7,6 @@ for line in sys.stdin:
     if line.startswith("KeyboardRepeating=0"):
         print("KeyRepeat=nothing")
     elif line.startswith("KeyboardRepeating="):
-        print("KeyRepeat=accent")
+        print("KeyRepeat=repeat")
 
 print("# DELETE KeyboardRepeating")
