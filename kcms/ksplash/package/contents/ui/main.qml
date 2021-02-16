@@ -45,11 +45,15 @@ KCM.GridViewKCM {
             Layout.fillWidth: true
             showCloseButton: true
             type: Kirigami.MessageType.Error
-            text: i18n("Failed to test the splash screen.")
 
             Connections {
                 target: kcm
                 function onTestingFailed() {
+                    testingFailedLabel.text = i18n("Failed to test the splash screen.")
+                    testingFailedLabel.visible = true
+                }
+                function onError(text) {
+                    testingFailedLabel.text = text
                     testingFailedLabel.visible = true
                 }
             }
@@ -68,6 +72,7 @@ KCM.GridViewKCM {
             source: model.screenshot || ""
             sourceSize: Qt.size(delegate.GridView.view.cellWidth * Screen.devicePixelRatio,
                                 delegate.GridView.view.cellHeight * Screen.devicePixelRatio)
+            opacity: model.pendingDeletion ? 0.3 : 1
         }
         actions: [
             Kirigami.Action {
@@ -75,6 +80,12 @@ KCM.GridViewKCM {
                 iconName: "media-playback-start"
                 tooltip: i18n("Preview Splash Screen")
                 onTriggered: kcm.test(model.pluginName)
+            },
+            Kirigami.Action {
+                iconName: model.pendingDeletion ? "edit-undo" : "edit-delete"
+                tooltip: i18n("Uninstall")
+                enabled: model.uninstallable
+                onTriggered: model.pendingDeletion = !model.pendingDeletion
             }
         ]
         onClicked: {

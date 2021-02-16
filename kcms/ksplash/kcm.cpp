@@ -29,7 +29,9 @@
 #include <QStandardItemModel>
 #include <QStandardPaths>
 
+#include <KPackage/Package>
 #include <KPackage/PackageLoader>
+#include <KPackage/PackageStructure>
 
 #include "splashscreendata.h"
 #include "splashscreensettings.h"
@@ -53,8 +55,15 @@ KCMSplashScreen::KCMSplashScreen(QObject *parent, const QVariantList &args)
     roles[PluginNameRole] = "pluginName";
     roles[ScreenshotRole] = "screenshot";
     roles[DescriptionRole] = "description";
+    roles[UninstallableRole] = "uninstallable";
+    roles[PendingDeletionRole] = "pendingDeletion";
     m_model->setItemRoleNames(roles);
-    loadModel();
+
+    connect(m_model, &QAbstractItemModel::dataChanged, this, [this] {
+        bool hasPendingDeletions = !pendingDeletions().isEmpty();
+        setNeedsSave(m_data->settings()->isSaveNeeded() || hasPendingDeletions);
+        setRepresentsDefaults(m_data->settings()->isDefaults() && !hasPendingDeletions);
+    });
 }
 
 QList<KPackage::Package> KCMSplashScreen::availablePackages(const QString &component)
@@ -93,20 +102,25 @@ QStandardItemModel *KCMSplashScreen::splashModel() const
 void KCMSplashScreen::ghnsEntriesChanged(const QQmlListReference &changedEntries)
 {
     if (changedEntries.count() > 0) {
-        loadModel();
+        load();
     }
 }
 
-void KCMSplashScreen::loadModel()
+void KCMSplashScreen::load()
 {
+    m_data->settings()->load();
     m_model->clear();
 
     const QList<KPackage::Package> pkgs = availablePackages(QStringLiteral("splashmainscript"));
+    const QString writableLocation = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
     for (const KPackage::Package &pkg : pkgs) {
         QStandardItem *row = new QStandardItem(pkg.metadata().name());
         row->setData(pkg.metadata().pluginId(), PluginNameRole);
         row->setData(pkg.filePath("previews", QStringLiteral("splash.png")), ScreenshotRole);
         row->setData(pkg.metadata().description(), DescriptionRole);
+        row->setData(pkg.path().startsWith(writableLocation), UninstallableRole);
+        row->setData(false, PendingDeletionRole);
+        m_packageRoot = writableLocation + QLatin1Char('/') + pkg.defaultPackageRoot();
         m_model->appendRow(row);
     }
     m_model->sort(0 /*column*/);
@@ -114,6 +128,7 @@ void KCMSplashScreen::loadModel()
     QStandardItem *row = new QStandardItem(i18n("None"));
     row->setData("None", PluginNameRole);
     row->setData(i18n("No splash screen will be shown"), DescriptionRole);
+    row->setData(false, UninstallableRole);
     m_model->insertRow(0, row);
 
     if (-1 == pluginIndex(m_data->settings()->theme())) {
@@ -125,6 +140,19 @@ void KCMSplashScreen::loadModel()
 
 void KCMSplashScreen::save()
 {
+    using namespace KPackage;
+    PackageStructure *structure = PackageLoader::self()->loadPackageStructure(QStringLiteral("Plasma/LookAndFeel"));
+    const QStringList pendingDeletionPlugins = pendingDeletions();
+    for (const QString &plugin : pendingDeletionPlugins) {
+        KJob *uninstallJob = Package(structure).uninstall(plugin, m_packageRoot);
+        connect(uninstallJob, &KJob::result, this, [this, uninstallJob, plugin]() {
+            if (uninstallJob->error()) {
+                Q_EMIT error(uninstallJob->errorString());
+            } else {
+                m_model->removeRows(pluginIndex(plugin), 1);
+            }
+        });
+    }
     m_data->settings()->setEngine(m_data->settings()->theme() == QStringLiteral("None") ? QStringLiteral("none") : QStringLiteral("KSplashQML"));
     ManagedConfigModule::save();
 }
@@ -166,6 +194,26 @@ void KCMSplashScreen::test(const QString &plugin)
 
     emit testingChanged();
     m_testProcess->start(QStringLiteral("ksplashqml"), {plugin, QStringLiteral("--test")});
+}
+
+QStringList KCMSplashScreen::pendingDeletions()
+{
+    QStringList pendingDeletions;
+    for (int i = 0, count = m_model->rowCount(); i < count; ++i) {
+        if (m_model->item(i)->data(Roles::PendingDeletionRole).toBool()) {
+            pendingDeletions << m_model->item(i)->data(Roles::PluginNameRole).toString();
+        }
+    }
+    return pendingDeletions;
+}
+
+void KCMSplashScreen::defaults()
+{
+    ManagedConfigModule::defaults();
+    // Make sure we clear all pending deletions
+    for (int i = 0, count = m_model->rowCount(); i < count; ++i) {
+        m_model->item(i)->setData(false, Roles::PendingDeletionRole);
+    }
 }
 
 #include "kcm.moc"
