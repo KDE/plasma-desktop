@@ -196,13 +196,6 @@ Item {
                         location: PlasmaExtras.PlasmoidHeading.Location.Header
                     }
                     AnchorChanges {
-                        target: ignoreArea
-                        anchors {
-                            top: root.top
-                            bottom: header.top
-                        }
-                    }
-                    AnchorChanges {
                         target: mainArea
                         anchors {
                             top: footer.bottom
@@ -256,13 +249,6 @@ Item {
                         target: footer
                         height: footer.implicitHeight
                         location: PlasmaExtras.PlasmoidHeading.Location.Footer
-                    }
-                    AnchorChanges {
-                        target: ignoreArea
-                        anchors {
-                            top: header.bottom
-                            bottom: root.bottom
-                        }
                     }
                     AnchorChanges {
                         target: mainArea
@@ -530,91 +516,6 @@ Item {
             anchors.fill: parent
             anchors.rightMargin: PlasmaCore.Units.gridUnit
             anchors.leftMargin: Math.round(parent.width/3) + PlasmaCore.Units.gridUnit
-        }
-    }
-
-    // The cursor often passes over the sidebar while moving towards the main list, causing the view to change unintentionally.
-    // This prevents it by having a MouseArea that blocks hover until we're sure that it's wanted
-    // After that there's no further delays until mouse exists the area
-
-    Item {
-        // Filter area includes left sidebar and footer
-        id: ignoreArea
-        anchors.left: parent.left
-        anchors.right:parent.right
-        anchors.rightMargin: mainArea.opacity == 0 ? parent.width : Math.round(parent.width/1.5)
-    }
-
-    HoverHandler {
-        // activate filter when we're out of the area
-        target: ignoreArea
-        onHoveredChanged: {
-            if (!hoverFilter.visible) {
-                hoverFilter.visible = !hovered
-            }
-        }
-    }
-
-    TapHandler {
-        // on any tap/button disable filter immediately
-        acceptedButtons: Qt.AllButtons
-        target: parent
-        onTapped: hoverFilter.visible = false
-    }
-
-    MouseArea {
-        id: hoverFilter
-        anchors.fill: ignoreArea
-
-        property var oldPos: null
-        hoverEnabled: true
-        visible: false
-
-        acceptedButtons: Qt.NoButton
-
-        onExited: {
-            // Reset so we switch immediately when MouseArea is entered
-            // freshly, e.g. from the panel.
-            oldPos = null;
-
-            hoverFilterTimer.stop();
-        }
-
-        onPositionChanged: {
-            // Reject multiple events with the same coordinates that QQuickWindow
-            // synthesizes.
-            if (oldPos === Qt.point(mouse.x, mouse.y)) {
-                return;
-            }
-
-            // Switch immediately when MouseArea was freshly entered, e.g.
-            // from the panel. NOTE: Disabled since it's questionable usability wise. Needs more thorough testing
-            if (oldPos === null) {
-                oldPos = Qt.point(mouse.x, mouse.y);
-
-                hoverFilterTimer.stop();
-                //hoverFilter.visible = false
-
-                return;
-            }
-
-            var dx  = (mouse.x - oldPos.x);
-            var dy  = (mouse.y - oldPos.y);
-
-            // Check Manhattan length against drag distance to get a decent
-            // pointer motion vector.
-            if ((Math.abs(dx) + Math.abs(dy)) > Qt.styleHints.startDragDistance) {
-                hoverFilterTimer.start();
-            }
-        }
-
-        Timer {
-            id: hoverFilterTimer
-
-            // this is an interaction and not an animation, so we want it as a constant
-            interval: 250
-
-            onTriggered: hoverFilter.visible = false
         }
     }
 
