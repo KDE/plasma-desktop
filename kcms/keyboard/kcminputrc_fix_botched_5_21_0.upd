@@ -1,0 +1,35 @@
+#
+# Every KConfig .upd file needs this magic header of "Version=5"
+#
+Version=5
+
+#
+# That brings us to our first migration script for this file, kcminputrc_fix_botched_5_21_0_pre.
+# We need this pre-script before the actual fix in order to prepare information the main migration
+# script uses.
+#
+Id=kcminputrc_fix_botched_5_21_0_pre
+#
+# We're operating on kcminputrc, the file we botched with the 5.21.0 upgrade.
+#
+File=kcminputrc
+#
+# Since our desired information is in the group called $Version, which KConfig's update process
+# tries really hard to hide from the migration script, we need to copy it into another group,
+# which KConfig is fine with showing to the migration script.
+#
+Group=$Version,Tmp
+Options=copy
+#
+# The specific key in $Version that we want to make available is update_info, which contains
+# all of the migrations that have ran on kcminputrc. We need this information in order to discern
+# whether or not the botched migration was applied to kcminputrc.
+#
+Key=update_info
+
+#
+# After copying the information into the Tmp group, we can run our actual migration script now.
+#
+Id=kcminputrc_fix_botched_5_21_0
+File=kcminputrc
+Script=kcminputrc_fix_botched_5_21_0.py
