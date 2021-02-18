@@ -35,6 +35,8 @@
 #include <KOpenWithDialog>
 #include <KPropertiesDialog>
 
+#include <optional>
+
 // FDO user autostart directories are
 // .config/autostart which has .desktop files executed by klaunch
 
