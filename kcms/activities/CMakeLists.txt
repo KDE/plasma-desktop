@@ -49,6 +49,14 @@ qt5_add_dbus_interface (
    features_interface
    )
 
+qt5_add_dbus_interface (
+   KAMD_KCM_SRCS
+
+   common/dbus/org.kde.ActivityManager.ResourceScoring.xml
+   resourcescoring_interface
+   )
+
+
 kcmutils_generate_module_data(
     KAMD_KCM_SRCS
     MODULE_DATA_HEADER kactivitiesdata.h
