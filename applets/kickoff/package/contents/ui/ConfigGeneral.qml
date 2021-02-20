@@ -130,7 +130,7 @@ ColumnLayout {
 
         CheckBox {
             id: gridAllowTwoLines
-            text: i18n("Allow label to have two lines")
+            text: i18n("Allow labels to have two lines")
             enabled: showFavoritesInGrid.checked
         }
 
