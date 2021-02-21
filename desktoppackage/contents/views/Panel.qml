@@ -35,8 +35,8 @@ Item {
         property string completedState: ""
         // Work around the fact that we can't use a ternary if in an alias
         readonly property var mask: {
-            if (completedState == "solid") {
-                return solidItem.mask
+            if (completedState == "opaque") {
+                return opaqueItem.mask
             } else {
                 return translucentItem.mask
             }
@@ -93,7 +93,7 @@ Item {
     }
 
     PlasmaCore.FrameSvgItem {
-        id: solidItem
+        id: opaqueItem
         enabledBorders: panel.enabledBorders
         anchors.fill: parent
 
@@ -111,7 +111,7 @@ Item {
                     }
                 }
                 NumberAnimation {
-                    target: solidItem
+                    target: opaqueItem
                     properties: "opacity"
                     from: 1
                     to: 0
@@ -120,7 +120,7 @@ Item {
                 }
                 ScriptAction {
                     script: {
-                        solidItem.visible = false
+                        opaqueItem.visible = false
                         privateSwapper.completedState = "transparent"
                         root.panelMaskChanged()
                     }
@@ -129,15 +129,15 @@ Item {
         },
         Transition {
             from: "*"
-            to: "solid"
+            to: "opaque"
             SequentialAnimation {
                 ScriptAction {
                     script: {
-                        solidItem.visible = true
+                        opaqueItem.visible = true
                     }
                 }
                 NumberAnimation {
-                    target: solidItem
+                    target: opaqueItem
                     properties: "opacity"
                     from: 0
                     to: 1
@@ -147,7 +147,7 @@ Item {
                 ScriptAction {
                     script: {
                         translucentItem.visible = false
-                        privateSwapper.completedState = "solid"
+                        privateSwapper.completedState = "opaque"
                         root.panelMaskChanged()
                     }
                 }
@@ -159,13 +159,13 @@ Item {
         state = Qt.binding(function() {
             let mstate = '';
             if (panel.opacityMode == 0) {
-                mstate = visibleWindowsModel.count > 0 ? "solid" : "transparent"
+                mstate = visibleWindowsModel.count > 0 ? "opaque" : "transparent"
             } else if (panel.opacityMode == 1) {
-                mstate = "solid"
+                mstate = "opaque"
             } else {
                 mstate = "transparent"
             }
-            if (mstate == 'solid') {
+            if (mstate == 'opaque') {
                 containment.containmentDisplayHints |= PlasmaCore.Types.DesktopFullyCovered;
             } else {
                 containment.containmentDisplayHints &= ~PlasmaCore.Types.DesktopFullyCovered;
@@ -175,7 +175,7 @@ Item {
     }
     state: ""
     states: [
-        State { name: "solid" },
+        State { name: "opaque" },
         State { name: "transparent" }
     ]
 
