@@ -58,12 +58,14 @@ void ActivitySettings::newActivity()
 
 void ActivitySettings::deleteActivity(const QString &id)
 {
-    KActivities::Info info(id);
+    QMetaObject::invokeMethod(this, [id] {
+         KActivities::Info info(id);
 
-    if (QMessageBox::question(nullptr, i18nc("@title:window", "Delete Activity"), i18n("Are you sure you want to delete '%1'?", info.name()))
-        == QMessageBox::Yes) {
-        KActivities::Controller().removeActivity(id);
-    }
+        if (QMessageBox::question(nullptr, i18nc("@title:window", "Delete Activity"), i18n("Are you sure you want to delete '%1'?", info.name()))
+            == QMessageBox::Yes) {
+            KActivities::Controller().removeActivity(id);
+        }
+    }, Qt::ConnectionType::QueuedConnection);
 }
 
 void ActivitySettings::configureActivities()

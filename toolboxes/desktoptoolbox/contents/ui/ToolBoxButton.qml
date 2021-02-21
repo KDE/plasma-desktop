@@ -217,13 +217,13 @@ Item {
                 text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Choose Global Theme...")
                 icon.name: "preferences-desktop-theme-global"
                 onClicked: KQuickControlsAddons.KCMShell.openSystemSettings("kcm_lookandfeel")
-            }            
+            }
             PlasmaComponents3.ToolButton {
                 property QtObject qAction: plasmoid.globalAction("manage activities")
                 text: qAction.text
                 icon.name: "activities"
                 onClicked: qAction.trigger()
-            }            
+            }
             PlasmaComponents3.ToolButton {
                 icon.name: "window-close"
                 Layout.preferredWidth: height

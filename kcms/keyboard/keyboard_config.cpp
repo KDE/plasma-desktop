@@ -177,7 +177,9 @@ void KeyboardConfig::save()
     }
 
     auto cleanTail = [](QStringList &list) {
-        while (!list.isEmpty() && list.constLast().isEmpty()) {
+        // we need trailing comma in case of multiple layouts but only one variant,
+        // see https://github.com/xkbcommon/libxkbcommon/issues/208
+        while (list.size() > 2 && list.constLast().isEmpty()) {
             list.removeLast();
         }
     };

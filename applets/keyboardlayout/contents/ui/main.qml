@@ -9,6 +9,7 @@ import Qt.labs.platform 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.workspace.components 2.0
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 KeyboardLayoutButton {
     id: root
@@ -51,6 +52,26 @@ KeyboardLayoutButton {
     function actionTriggered(selectedLayout) {
         keyboardLayout.layout = selectedLayout
     }
+
+    contentItem: Item {
+        PlasmaCore.IconItem {
+            source: icon.name
+            visible: display === AbstractButton.IconOnly
+            anchors.fill: parent
+            active: hovered
+        }
+
+        PlasmaComponents3.Label {
+            text: root.text
+            visible: display === AbstractButton.TextOnly
+            anchors.fill: parent
+            horizontalAlignment: Text.AlignHCenter
+            fontSizeMode: Text.Fit
+            font.pointSize: height
+        }
+    }
+
+    background: undefined
 
     // to fit at least 2 letters in systray
     leftPadding: 0

@@ -364,7 +364,7 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
         const QString resource = (*resultIt).resource();
         ++resultIt;
 
-        const QUrl url(resource);
+        const QUrl url = QUrl::fromLocalFile(resource);
 
         if (!url.isValid()) {
             continue;

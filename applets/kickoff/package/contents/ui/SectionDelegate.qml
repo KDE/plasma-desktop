@@ -40,7 +40,9 @@ Item {
         horizontalAlignment: Text.AlignLeft
         y: Math.round(PlasmaCore.Units.gridUnit / 4)
         level: 4
-        text: section
+        // Force it to be uppercase or else if the first item in a section starts
+        // with a lowercase letter, the header letter will be lowercase too!
+        text: section.toUpperCase()
     }
     Item {
         width: parent.width

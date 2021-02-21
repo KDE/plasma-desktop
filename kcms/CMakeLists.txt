@@ -19,7 +19,11 @@ add_subdirectory( ksmserver )
 add_subdirectory( nightcolor )
 add_subdirectory( users )
 
-add_subdirectory( hardware )
+if (CMAKE_SYSTEM_NAME MATCHES Linux)
+   # this one doesn't seem to be very portable, Alex
+   add_subdirectory( joystick )
+endif ()
+
 add_subdirectory( desktoppaths )
 
 add_subdirectory(activities)

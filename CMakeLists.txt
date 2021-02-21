@@ -171,6 +171,17 @@ if(PackageKitQt5_FOUND)
     set(HAVE_PACKAGEKIT TRUE)
 endif()
 
+find_package(GLIB2)
+set_package_properties(GLIB2
+        PROPERTIES TYPE OPTIONAL
+        PURPOSE "Required for building kimpanel"
+        )
+
+# For kimpanel
+pkg_check_modules(IBUS "ibus-1.0>=1.5.0" IMPORTED_TARGET)
+pkg_check_modules(GOBJECT gobject-2.0 IMPORTED_TARGET)
+pkg_check_modules(SCIM scim IMPORTED_TARGET)
+
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
