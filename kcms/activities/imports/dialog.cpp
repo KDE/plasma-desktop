@@ -59,7 +59,7 @@ public:
         , activityWallpaper(QStringLiteral("activityWallpaper"))
         , activityIsPrivate(true)
         , activityShortcut(QStringLiteral("activityShortcut"))
-        , features(new KAMD_DBUS_CLASS_INTERFACE(Features, Features, q))
+        , features(new org::kde::ActivityManager::Features(QStringLiteral(KAMD_DBUS_SERVICE), QStringLiteral(KAMD_DBUS_FEATURES_PATH), QDBusConnection::sessionBus(), q))
     {
     }
 

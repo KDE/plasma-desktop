@@ -4,21 +4,17 @@
  */
 
 import QtQuick 2.12
-import QtQuick.Controls 2.15
 import Qt.labs.platform 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.workspace.components 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.workspace.components 2.0
 
-KeyboardLayoutButton {
+KeyboardLayoutSwitcher {
     id: root
 
-    text: layoutNames.displayName || layoutNames.shortName
     Plasmoid.toolTipSubText: layoutNames.longName
-    icon.name: iconURL(layoutNames.shortName)
 
-    display: plasmoid.configuration.showFlag && icon.name ? AbstractButton.IconOnly : AbstractButton.TextOnly
     Plasmoid.status: hasMultipleKeyboardLayouts ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
@@ -53,29 +49,24 @@ KeyboardLayoutButton {
         keyboardLayout.layout = selectedLayout
     }
 
-    contentItem: Item {
-        PlasmaCore.IconItem {
-            source: icon.name
-            visible: display === AbstractButton.IconOnly
-            anchors.fill: parent
-            active: hovered
-        }
 
-        PlasmaComponents3.Label {
-            text: root.text
-            visible: display === AbstractButton.TextOnly
-            anchors.fill: parent
-            horizontalAlignment: Text.AlignHCenter
-            fontSizeMode: Text.Fit
-            font.pointSize: height
-        }
+    hoverEnabled: true
+
+    PlasmaCore.IconItem {
+        id: icon
+
+        source: iconURL(layoutNames.shortName)
+        visible: plasmoid.configuration.showFlag && source
+        anchors.fill: parent
+        active: containsMouse
     }
 
-    background: undefined
-
-    // to fit at least 2 letters in systray
-    leftPadding: 0
-    rightPadding: 0
-    topPadding: 0
-    bottomPadding: 0
+    PlasmaComponents3.Label {
+        text: layoutNames.displayName || layoutNames.shortName
+        visible: !icon.visible
+        anchors.fill: parent
+        horizontalAlignment: Text.AlignHCenter
+        fontSizeMode: Text.Fit
+        font.pointSize: height
+    }
 }
