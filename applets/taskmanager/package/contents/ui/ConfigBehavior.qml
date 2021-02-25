@@ -43,6 +43,7 @@ Item {
     property alias cfg_showOnlyCurrentActivity: showOnlyCurrentActivity.checked
     property alias cfg_showOnlyMinimized: showOnlyMinimized.checked
     property alias cfg_minimizeActiveTaskOnClick: minimizeActive.checked
+    property alias cfg_unhideOnAttention: unhideOnAttention.checked
 
     TaskManagerApplet.Backend {
         id: backend
@@ -195,6 +196,16 @@ Item {
         CheckBox {
             id: showOnlyMinimized
             text: i18n("That are minimized")
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        CheckBox {
+            id: unhideOnAttention
+            Kirigami.FormData.label: i18n("Panel Hiding:")
+            text: i18n("Unhide when a window wants attention")
         }
     }
 }

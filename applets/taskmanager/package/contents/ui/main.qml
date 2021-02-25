@@ -326,7 +326,7 @@ MouseArea {
     Binding {
         target: plasmoid
         property: "status"
-        value: (tasksModel.anyTaskDemandsAttention
+        value: (tasksModel.anyTaskDemandsAttention && plasmoid.configuration.unhideOnAttention
             ? PlasmaCore.Types.NeedsAttentionStatus : PlasmaCore.Types.PassiveStatus)
         restoreMode: Binding.RestoreBinding
     }
