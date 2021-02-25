@@ -28,7 +28,6 @@
 #include <QLocale>
 #include <QStandardPaths>
 #include <QTextCodec>
-#include <QTextStream>
 
 // Frameworks
 #include <KLocalizedString>
