@@ -106,21 +106,25 @@ Component GlobalAccelModel::loadComponent(const QList<KGlobalShortcutInfo> &info
 {
     const QString &componentUnique = info[0].componentUniqueName();
     const QString &componentFriendly = info[0].componentFriendlyName();
-    KService::Ptr service = KService::serviceByStorageId(componentUnique);
+    KService::Ptr service;
+    // The shortcuts were imported by desktop file
+     if (componentUnique.endsWith(QLatin1String(".desktop"))) {
+        service = new KService(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kglobalaccel/") + componentUnique));
+    } else {
+        service = KService::serviceByStorageId(componentUnique);
+    }
+
     if (!service) {
-        // Do we have an application with that name?
-        const KService::List apps = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
+        // Do we have a service with that name?
+        const KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
                                                                       QStringLiteral("Name == '%1' or Name == '%2'").arg(componentUnique, componentFriendly));
-        if (!apps.isEmpty()) {
-            service = apps[0];
-        }
+        service = services.value(0, KService::Ptr());
     }
     const QString type = service && service->isApplication() ? i18n("Applications") : i18n("System Services");
     QString icon;
 
     static const QHash<QString, QString> hardCodedIcons = {{"ActivityManager", "preferences-desktop-activities"},
                                                            {"KDE Keyboard Layout Switcher", "input-keyboard"},
-                                                           {"krunner.desktop", "krunner"},
                                                            {"org_kde_powerdevil", "preferences-system-power-management"}};
 
     if (service && !service->icon().isEmpty()) {
