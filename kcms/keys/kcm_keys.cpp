@@ -177,7 +177,7 @@ void KCMKeys::addApplication(QQuickItem *ctx)
         if (result == QDialog::Accepted && dialog->service()) {
             const KService::Ptr service = dialog->service();
             const QString desktopFileName = service->desktopEntryName() + ".desktop";
-            if (m_globalAccelModel->match(m_shortcutsModel->index(0, 0), BaseModel::ComponentRole, desktopFileName).isEmpty()) {
+            if (m_globalAccelModel->match(m_shortcutsModel->index(0, 0), BaseModel::ComponentRole, desktopFileName, 1, Qt::MatchExactly).isEmpty()) {
                 m_globalAccelModel->addApplication(desktopFileName, service->name());
             } else {
                 qCDebug(KCMKEYS) << "Already have component" << service->storageId();

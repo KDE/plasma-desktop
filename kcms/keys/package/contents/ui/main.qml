@@ -172,7 +172,7 @@ KCM.AbstractKCM {
                             onToggled: {
                                 const checked = sectionCheckbox.checked
                                 const startIndex = kcm.shortcutsModel.index(0, 0)
-                                const indices = kcm.shortcutsModel.match(startIndex, Private.BaseModel.SectionRole, section, -1)
+                                const indices = kcm.shortcutsModel.match(startIndex, Private.BaseModel.SectionRole, section, -1, Qt.MatchExactly)
                                 for (const index of indices) {
                                     kcm.shortcutsModel.setData(index, checked, Private.BaseModel.CheckedRole)
                                 }
@@ -182,7 +182,7 @@ KCM.AbstractKCM {
                                 target: kcm.shortcutsModel
                                 function onDataChanged (topLeft, bottomRight, roles) {
                                     const startIndex = kcm.shortcutsModel.index(0, 0)
-                                    const indices = kcm.shortcutsModel.match(startIndex, Private.BaseModel.SectionRole, section, -1)
+                                    const indices = kcm.shortcutsModel.match(startIndex, Private.BaseModel.SectionRole, section, -1, Qt.MatchExactly)
                                     sectionCheckbox.checked = indices.reduce((acc, index) => acc && kcm.shortcutsModel.data(index, Private.BaseModel.CheckedRole), true)
                                 }
                             }
