@@ -64,25 +64,25 @@ add_library(kded_touchpad MODULE
             ${backend_SRCS}
 )
 target_link_libraries(kded_touchpad
-                      ${backend_LIBS}
-		      KF5::KCMUtils
-		      KF5::Notifications
-		      KF5::CoreAddons
-		      KF5::WindowSystem
-		      KF5::ConfigWidgets
-		      KF5::DBusAddons
-		      KF5::Completion
-		      KF5::WidgetsAddons
-		      KF5::I18n
-		      KF5::Service
-		      KF5::NotifyConfig
-		      KF5::XmlGui
-		      KF5::GlobalAccel
-		      KF5::Plasma
-		      KF5::Declarative
-                      
-		      Qt::X11Extras
-		      Qt::QuickWidgets
+    ${backend_LIBS}
+    KF5::KCMUtils
+    KF5::Notifications
+    KF5::CoreAddons
+    KF5::WindowSystem
+    KF5::ConfigWidgets
+    KF5::DBusAddons
+    KF5::Completion
+    KF5::WidgetsAddons
+    KF5::I18n
+    KF5::Service
+    KF5::NotifyConfig
+    KF5::XmlGui
+    KF5::GlobalAccel
+    KF5::Plasma
+    KF5::Declarative
+
+    Qt::X11Extras
+    Qt::QuickWidgets
 )
 
 add_subdirectory(applet)
