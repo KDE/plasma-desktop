@@ -406,7 +406,7 @@ void KGlobalShortcutsEditor::activateComponent(const QString &component)
         Q_ASSERT(iter != d->components.end());
         return;
     } else {
-        QModelIndexList results = d->proxyModel->match(d->proxyModel->index(0, 0), Qt::DisplayRole, component);
+        QModelIndexList results = d->proxyModel->match(d->proxyModel->index(0, 0), Qt::DisplayRole, component, 1, Qt::MatchExactly);
         Q_ASSERT(!results.isEmpty());
         if (results.first().isValid()) {
             // Known component. Get it.
@@ -831,7 +831,7 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::removeComponent(
         if (components.value(text)->uniqueName() == componentUnique)
             {
             // Remove from QComboBox
-            QModelIndexList results = proxyModel->match(proxyModel->index(0, 0), Qt::DisplayRole, text);
+            QModelIndexList results = proxyModel->match(proxyModel->index(0, 0), Qt::DisplayRole, text, 1, Qt::MatchExactly);
             Q_ASSERT(!results.isEmpty());
             model->removeRow(proxyModel->mapToSource(results.first()).row());
 

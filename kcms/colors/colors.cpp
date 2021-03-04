@@ -243,7 +243,7 @@ void KCMColors::installSchemeFile(const QString &path)
 
     m_model->load();
 
-    const auto results = m_model->match(m_model->index(0, 0), ColorsModel::SchemeNameRole, newName);
+    const auto results = m_model->match(m_model->index(0, 0), ColorsModel::SchemeNameRole, newName, 1, Qt::MatchExactly);
     if (!results.isEmpty()) {
         m_model->setSelectedScheme(newName);
     }

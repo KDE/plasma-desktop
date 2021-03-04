@@ -121,7 +121,7 @@ QStandardItemModel *KCMLookandFeel::lookAndFeelModel() const
 
 int KCMLookandFeel::pluginIndex(const QString &pluginName) const
 {
-    const auto results = m_model->match(m_model->index(0, 0), PluginNameRole, pluginName);
+    const auto results = m_model->match(m_model->index(0, 0), PluginNameRole, pluginName, 1, Qt::MatchExactly);
     if (results.count() == 1) {
         return results.first().row();
     }

@@ -53,7 +53,7 @@ void FilterProxyModel::setSelectedTheme(const QString &pluginName)
 int FilterProxyModel::selectedThemeIndex() const
 {
     // We must search in the source model and then map the index to our proxy model.
-    const auto results = sourceModel()->match(sourceModel()->index(0, 0), ThemesModel::PluginNameRole, m_selectedTheme);
+    const auto results = sourceModel()->match(sourceModel()->index(0, 0), ThemesModel::PluginNameRole, m_selectedTheme, 1, Qt::MatchExactly);
 
     if (results.count() == 1) {
         const QModelIndex result = mapFromSource(results.first());

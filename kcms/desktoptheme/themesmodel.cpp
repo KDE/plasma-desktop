@@ -135,7 +135,7 @@ void ThemesModel::setSelectedTheme(const QString &pluginName)
 
 int ThemesModel::pluginIndex(const QString &pluginName) const
 {
-    const auto results = match(index(0, 0), PluginNameRole, pluginName);
+    const auto results = match(index(0, 0), PluginNameRole, pluginName, 1, Qt::MatchExactly);
     if (results.count() == 1) {
         return results.first().row();
     }

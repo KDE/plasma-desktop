@@ -494,7 +494,7 @@ QPixmap IconModule::getBestIcon(KIconTheme &theme, const QStringList &iconNames,
 
 int IconModule::pluginIndex(const QString &themeName) const
 {
-    const auto results = m_model->match(m_model->index(0, 0), ThemeNameRole, themeName);
+    const auto results = m_model->match(m_model->index(0, 0), ThemeNameRole, themeName, 1, Qt::MatchExactly);
     if (results.count() == 1) {
         return results.first().row();
     }

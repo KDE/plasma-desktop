@@ -49,7 +49,7 @@ void FilterProxyModel::setSelectedScheme(const QString &scheme)
 int FilterProxyModel::selectedSchemeIndex() const
 {
     // We must search in the source model and then map the index to our proxy model.
-    const auto results = sourceModel()->match(sourceModel()->index(0, 0), ColorsModel::SchemeNameRole, m_selectedScheme);
+    const auto results = sourceModel()->match(sourceModel()->index(0, 0), ColorsModel::SchemeNameRole, m_selectedScheme, 1, Qt::MatchExactly);
 
     if (results.count() == 1) {
         const QModelIndex result = mapFromSource(results.first());
