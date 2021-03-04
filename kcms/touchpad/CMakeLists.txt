@@ -1,13 +1,7 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_touchpad\")
 
-set(TOUCHPAD_KCM_VERSION ${PROJECT_VERSION})
-
 add_subdirectory(icon)
-
-configure_file("${CMAKE_CURRENT_SOURCE_DIR}/version.h.cmake"
-               "${CMAKE_CURRENT_BINARY_DIR}/version.h"
-)
 
 SET(SRCS
     plugins.cpp

@@ -33,14 +33,14 @@
 #include "../touchpadconfigcontainer.h"
 #include "touchpadbackend.h"
 
-#include "version.h"
+#include "plasma_version.h"
 
 TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, TouchpadBackend *backend, const QVariantList & /*args*/)
     : TouchpadConfigPlugin(parent, backend)
 {
     KAboutData *data = new KAboutData(QStringLiteral("kcm_touchpad"),
                                       i18n("Touchpad KCM"),
-                                      TOUCHPAD_KCM_VERSION,
+                                      PLASMA_VERSION_STRING,
                                       i18n("System Settings module for managing your touchpad"),
                                       KAboutLicense::GPL_V2,
                                       i18n("Copyright © 2016 Roman Gilg"),
