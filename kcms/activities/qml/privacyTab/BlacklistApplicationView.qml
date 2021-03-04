@@ -52,7 +52,7 @@ QQC2.ScrollView {
                 source: model.icon
                 opacity: model.blocked ? 0.6 : 1.0
 
-                Behavior on opacity { NumberAnimation { duration: 100 } }
+                Behavior on opacity { NumberAnimation { duration: PlasmaCore.Units.shortDuration } }
             }
 
             Kirigami.Icon {
@@ -63,7 +63,7 @@ QQC2.ScrollView {
                 source: "emblem-unavailable"
                 opacity: model.blocked ? 1.0 : 0.0
 
-                Behavior on opacity { NumberAnimation { duration: 100 } }
+                Behavior on opacity { NumberAnimation { duration: PlasmaCore.Units.shortDuration } }
             }
 
             QQC2.Label {
@@ -77,7 +77,7 @@ QQC2.ScrollView {
                 wrapMode: Text.Wrap
                 opacity: model.blocked ? 0.6 : 1.0
 
-                Behavior on opacity { NumberAnimation { duration: 100 } }
+                Behavior on opacity { NumberAnimation { duration: PlasmaCore.Units.shortDuration } }
             }
 
             MouseArea {

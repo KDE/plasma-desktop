@@ -258,7 +258,7 @@ Item {
                 target: internal.oldContainment
                 properties: "x"
                 to: internal.newContainment != null ? -root.width : 0
-                duration: 400
+                duration: PlasmaCore.Units.veryLongDuration
                 easing.type: Easing.InOutQuad
             }
             NumberAnimation {
