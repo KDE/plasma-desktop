@@ -79,7 +79,7 @@ Item {
     Plasmoid.compactRepresentation: PlasmaCore.ToolTipArea {
         id: toolTip
 
-        Layout.minimumWidth: units.iconSizes.small
+        Layout.minimumWidth: PlasmaCore.Units.iconSizes.small
         Layout.minimumHeight: Layout.minimumWidth
 
         mainText: plasmoid.title

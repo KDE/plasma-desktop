@@ -143,7 +143,7 @@ Item {
                 }
             }
              DragHandler {
-                property int magnitude: units.gridUnit
+                property int magnitude: PlasmaCore.Units.gridUnit
                 target: null
                 xAxis.enabled: panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge
                 yAxis.enabled: panel.location == PlasmaCore.Types.TopEdge || panel.location == PlasmaCore.Types.BottomEdge

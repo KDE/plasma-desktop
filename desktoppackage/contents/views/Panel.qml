@@ -115,7 +115,7 @@ Item {
                     properties: "opacity"
                     from: 1
                     to: 0
-                    duration: units.veryLongDuration
+                    duration: PlasmaCore.Units.veryLongDuration
                     easing.type: Easing.InOutQuad
                 }
                 ScriptAction {
@@ -141,7 +141,7 @@ Item {
                     properties: "opacity"
                     from: 0
                     to: 1
-                    duration: units.veryLongDuration
+                    duration: PlasmaCore.Units.veryLongDuration
                     easing.type: Easing.InOutQuad
                 }
                 ScriptAction {
