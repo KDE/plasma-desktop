@@ -99,7 +99,6 @@ Q_SIGNALS:
 
 private:
     void setRepeat(KeyBehaviour flag, int delay, double rate);
-    void setRepeatRate(int);
 
     int sliderMax;
     int clickVolume;

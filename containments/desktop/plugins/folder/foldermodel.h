@@ -311,7 +311,6 @@ private:
     };
 
     void createActions();
-    void updatePasteAction();
     void addDragImage(QDrag *drag, int x, int y);
     void setStatus(Status status);
     static bool isTrashEmpty();

@@ -40,7 +40,6 @@ public:
     {
         return selectedLayoutUnit;
     }
-    QString getvariant(QString variant);
     void accept() override;
 
 public Q_SLOTS:
