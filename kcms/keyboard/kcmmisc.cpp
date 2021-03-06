@@ -59,7 +59,7 @@ KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent)
 
     ui.delay->setRange(100, 5000);
     ui.delay->setSingleStep(50);
-    ui.rate->setRange(0.2, 50);
+    ui.rate->setRange(0.2, 100);
     ui.rate->setSingleStep(5);
 
     sliderMax = (int)floor(0.5 + 2 * (log(5000.0L) - log(100.0L)) / (log(5000.0L) - log(4999.0L)));
@@ -68,7 +68,7 @@ KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent)
     ui.delaySlider->setPageStep(sliderMax / 10);
     ui.delaySlider->setTickInterval(sliderMax / 10);
 
-    ui.rateSlider->setRange(20, 5000);
+    ui.rateSlider->setRange(20, 10000);
     ui.rateSlider->setSingleStep(30);
     ui.rateSlider->setPageStep(500);
     ui.rateSlider->setTickInterval(498);
