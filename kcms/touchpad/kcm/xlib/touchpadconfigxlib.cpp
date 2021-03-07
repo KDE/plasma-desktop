@@ -33,24 +33,12 @@
 #include "../touchpadconfigcontainer.h"
 #include "customconfigdialogmanager.h"
 #include "customslider.h"
-#include "kded/kdedactions.h"
-#include "plugins.h"
+#include "actions.h"
 #include "sliderpair.h"
 #include "touchpadbackend.h"
 #include "touchpadinterface.h"
 
 #include "plasma_version.h"
-
-void touchpadApplySavedConfig()
-{
-    TouchpadBackend *backend = TouchpadBackend::implementation();
-    if (!backend) {
-        return;
-    }
-
-    TouchpadParameters config;
-    backend->applyConfig(config.values());
-}
 
 void TouchpadConfigXlib::kcmInit()
 {

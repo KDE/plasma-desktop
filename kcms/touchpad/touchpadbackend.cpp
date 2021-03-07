@@ -22,11 +22,23 @@
 #include "backends/kwin_wayland/kwinwaylandbackend.h"
 #include "backends/x11/xlibbackend.h"
 #include "logging.h"
+#include "touchpadparameters.h"
 
 #include <QSharedPointer>
 #include <QThreadStorage>
 
-#include <KWindowSystem/kwindowsystem.h>
+#include <KWindowSystem>
+
+void touchpadApplySavedConfig()
+{
+    TouchpadBackend *backend = TouchpadBackend::implementation();
+    if (!backend) {
+        return;
+    }
+
+    TouchpadParameters config;
+    backend->applyConfig(config.values());
+}
 
 void TouchpadBackend::setMode(TouchpadInputBackendMode mode)
 {

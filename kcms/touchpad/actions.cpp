@@ -16,14 +16,12 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include "kdedactions.h"
+#include "actions.h"
 
 #include <KGlobalAccel>
 #include <KLocalizedString>
 #include <QAction>
 #include <QDebug>
-
-#include "plugins.h"
 
 TouchpadGlobalActions::TouchpadGlobalActions(bool isConfiguration, QObject *parent)
     : KActionCollection(parent)

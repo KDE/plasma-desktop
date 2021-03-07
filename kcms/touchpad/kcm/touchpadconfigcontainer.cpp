@@ -17,12 +17,15 @@
  */
 
 #include "touchpadconfigcontainer.h"
-#include "kcm/libinput/touchpadconfiglibinput.h"
-#include "kcm/xlib/touchpadconfigxlib.h"
+#include "libinput/touchpadconfiglibinput.h"
+#include "xlib/touchpadconfigxlib.h"
 #include "touchpadbackend.h"
 #include "touchpadconfigplugin.h"
 
-#include <KWindowSystem/kwindowsystem.h>
+#include <KWindowSystem>
+#include <KPluginFactory>
+
+K_PLUGIN_FACTORY(TouchpadConfigContainerFactory, registerPlugin<TouchpadConfigContainer>();)
 
 extern "C" {
 Q_DECL_EXPORT void kcminit_touchpad()
@@ -97,3 +100,5 @@ void TouchpadConfigContainer::hideEvent(QHideEvent *e)
     m_plugin->hideEvent(e);
     KCModule::hideEvent(e);
 }
+
+#include "touchpadconfigcontainer.moc"

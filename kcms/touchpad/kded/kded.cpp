@@ -18,14 +18,16 @@
 
 #include "kded.h"
 
+#include <KPluginFactory>
 #include <KLocalizedString>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusMessage>
 #include <QDebug>
 
-#include "kdedactions.h"
-#include "plugins.h"
+#include "actions.h"
+
+K_PLUGIN_CLASS_WITH_JSON(TouchpadDisabler, "kded_touchpad.json")
 
 bool TouchpadDisabler::workingTouchpadFound() const
 {
@@ -257,8 +259,6 @@ void TouchpadDisabler::lateInit()
     mousePlugged();
 }
 
-void touchpadApplySavedConfig();
-
 void TouchpadDisabler::handleReset()
 {
     updateCurrentState();
@@ -298,3 +298,5 @@ void TouchpadDisabler::showOsd()
 
     QDBusConnection::sessionBus().asyncCall(msg);
 }
+
+#include "kded.moc"

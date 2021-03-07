@@ -31,6 +31,8 @@ enum class TouchpadInputBackendMode {
     XSynaptics = 3,
 };
 
+void touchpadApplySavedConfig();
+
 class Q_DECL_EXPORT TouchpadBackend : public QObject
 {
     Q_OBJECT
