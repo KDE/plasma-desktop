@@ -59,6 +59,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Config
     Wallet
     WidgetsAddons
+    Codecs
 )
 
 find_package(AccountsQt5 ${ACCOUNTSQT_DEP_VERSION} CONFIG)
