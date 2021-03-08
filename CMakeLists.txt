@@ -150,7 +150,11 @@ pkg_check_modules(EVDEV xorg-evdev>=2.8.99.1 IMPORTED_TARGET)
 
 find_package(Synaptics)
 set_package_properties(Synaptics PROPERTIES TYPE OPTIONAL)
-add_feature_info("Synaptics" SYNAPTICS_FOUND "Synaptics libraries needed for touchpad KCM")
+add_feature_info("Synaptics" SYNAPTICS_FOUND "Synaptics libraries are needed for the synaptics touchpad KCM")
+
+if(SYNAPTICS_FOUND)
+    set(HAVE_SYNAPTICS 1)
+endif()
 
 if(XORGLIBINPUT_FOUND)
   set(HAVE_XORGLIBINPUT 1)

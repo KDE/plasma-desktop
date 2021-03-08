@@ -41,6 +41,6 @@ if (KF5Baloo_FOUND)
 endif()
 add_subdirectory(solid_actions)
 
-if (SYNAPTICS_FOUND AND X11_XCB_FOUND AND X11_Xi_FOUND)
+if (X11_XCB_FOUND AND X11_Xi_FOUND)
     add_subdirectory(touchpad)
 endif()

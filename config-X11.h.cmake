@@ -45,3 +45,6 @@
 
 /* Define if you have X11 at all */
 #cmakedefine01 HAVE_X11
+
+/* Define if you have synaptics */
+#cmakedefine01 HAVE_SYNAPTICS
