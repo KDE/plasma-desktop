@@ -62,7 +62,7 @@ static QString keySymToString(KeySym keysym)
 {
     // Strangely enough xkbcommons's UTF map is incomplete with regards to
     // dead keys. Extend it a bit.
-    static QHash<unsigned long, char> deadMap{
+    static QHash<unsigned long, uint> deadMap{
         {XK_dead_grave, 0x0060},
         {XK_dead_acute, 0x00b4},
         {XK_dead_circumflex, 0x02c6},
@@ -78,7 +78,7 @@ static QString keySymToString(KeySym keysym)
         {XK_dead_ogonek, 0x02DB},
         {XK_dead_iota, 0x0269},
         {XK_dead_voiced_sound, 0x309B},
-        {XK_dead_semivoiced_sound, 0x309A},
+        {XK_dead_semivoiced_sound, 0x309C},
         {XK_dead_belowdot, 0x0323},
         {XK_dead_hook, 0x0309},
         {XK_dead_horn, 0x031b},
@@ -151,10 +151,28 @@ static QString keySymToString(KeySym keysym)
     }
 
     if (deadMap.contains(keysym)) {
-        str = QChar(deadMap[keysym]);
+        QChar c =  QChar(deadMap[keysym]);
+
+        // Make sure non-spacing diacritics are rendered
+        if (c.category() == QChar::Mark_NonSpacing
+                || c.category() == QChar::Mark_Enclosing) {
+            // FIXME: should really be NBSP, but it doesn't seem to
+            // render properly, so use SPACE which is not recommended
+            // since Unicode 4.1
+            str = QString("\x20") + c;
+        } else {
+            str = c;
+        }
     }
 
-    return str.replace('_', ' ');
+    // X11 keys can be of the form "Control_L".
+    // Split them so they are easier on the eyes.
+    // But only do that on strings of 3 chars of more to not lose "_"
+    if (str.size() > 2) {
+        str.replace('_', ' ');
+    }
+
+    return str;
 }
 
 KeyCap::KeyCap(const QString symbols[], QObject *parent)
