@@ -35,6 +35,7 @@ SET(backend_LIBS
     X11::X11
     X11::Xi
     X11::XCB
+    PkgConfig::XORGSERVER
 )
 
 if(SYNAPTICS_FOUND)
