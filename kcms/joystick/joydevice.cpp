@@ -166,6 +166,8 @@ JoyDevice::ErrorCode JoyDevice::open()
     }
 
     if (bt < 0) {
+        ::close(fd);
+        delete[] oldCorr;
         return JoyDevice::ERR_GET_BUTTONS;
     }
 
