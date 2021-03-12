@@ -146,15 +146,11 @@ SearchConfigModule::SearchConfigModule(QWidget *parent, const QVariantList &args
     connect(downloadButton, &KNS3::Button::dialogFinished, this, [this](const KNS3::Entry::List &changedEntries) {
         if (!changedEntries.isEmpty()) {
             m_pluginSelector->clearPlugins();
-            QT_WARNING_PUSH
-            QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
-            QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
-            m_pluginSelector->addPlugins(Plasma::RunnerManager::listRunnerInfo(),
+            m_pluginSelector->addPlugins(KPluginInfo::fromMetaData(Plasma::RunnerManager::runnerMetaDataList()),
                                          KPluginSelector::ReadConfigFile,
                                          i18n("Available Plugins"),
                                          QString(),
                                          m_config);
-            QT_WARNING_POP
         }
     });
     downloadLayout->addStretch();
@@ -181,7 +177,11 @@ void SearchConfigModule::load()
     QT_WARNING_PUSH
     QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
     QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
-    m_pluginSelector->addPlugins(Plasma::RunnerManager::listRunnerInfo(), KPluginSelector::ReadConfigFile, i18n("Available Plugins"), QString(), m_config);
+    m_pluginSelector->addPlugins(KPluginInfo::fromMetaData(Plasma::RunnerManager::runnerMetaDataList()),
+                                 KPluginSelector::ReadConfigFile,
+                                 i18n("Available Plugins"),
+                                 QString(),
+                                 m_config);
     QT_WARNING_POP
     m_pluginSelector->load();
 

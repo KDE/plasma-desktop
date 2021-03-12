@@ -37,7 +37,7 @@ KRunnerData::KRunnerData(QObject *parent, const QVariantList &args)
 
 bool KRunnerData::isDefaults() const
 {
-    QList<KPluginInfo> runnerInfos = Plasma::RunnerManager::listRunnerInfo();
+    QList<KPluginInfo> runnerInfos = KPluginInfo::fromMetaData(Plasma::RunnerManager::runnerMetaDataList());
     KConfigGroup cfgGroup(m_krunnerConfig, "Plugins");
     for (auto &plugin : runnerInfos) {
         plugin.load(cfgGroup);
