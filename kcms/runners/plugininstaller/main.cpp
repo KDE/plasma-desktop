@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
     const QStringList binaryPackages = {QStringLiteral("application/vnd.debian.binary-package"),
                                         QStringLiteral("application/x-rpm"),
                                         QStringLiteral("application/x-xz"),
-                                        QStringLiteral("application/zstd")};
+                                        QStringLiteral("application/zstd"),};
     bool install;
     if (cmd == QLatin1String("install")) {
         install = true;
