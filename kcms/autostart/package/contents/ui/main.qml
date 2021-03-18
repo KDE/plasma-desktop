@@ -99,6 +99,14 @@ KCM.ScrollViewKCM {
                 }
             }
         }
+
+        Kirigami.PlaceholderMessage {
+            anchors.centerIn: parent
+            width: parent.width - (Kirigami.Units.largeSpacing * 4)
+            visible: parent.count === 0
+            text: i18n("No user-specified autostart items")
+            explanation: xi18nc("@info", "Click the <interface>Add...</interface> button below to add some")
+        }
     }
 
     footer: Row {
