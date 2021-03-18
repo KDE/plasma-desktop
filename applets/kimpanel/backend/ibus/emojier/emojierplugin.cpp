@@ -18,41 +18,16 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <KAboutData>
-#include <KCrash>
-#include <KDBusService>
-#include <KLocalizedString>
-#include <KQuickAddons/QtQuickSettings>
-#include <KWindowConfig>
-#include <QAbstractListModel>
-#include <QApplication>
-#include <QByteArray>
-#include <QClipboard>
-#include <QCommandLineParser>
-#include <QDBusConnection>
-#include <QDBusConnectionInterface>
-#include <QDBusMessage>
-#include <QDebug>
-#include <QFontMetrics>
-#include <QIcon>
-#include <QLocale>
-#include <QPainter>
-#include <QQmlApplicationEngine>
-#include <QQuickImageProvider>
-#include <QQuickWindow>
-#include <QSessionManager>
-#include <QSortFilterProxyModel>
-#include <QStandardPaths>
-#include <QVector>
-#include <QX11Info>
-
-#include <kstartupinfo.h>
-
-#include "config-workspace.h"
-#include "emojiersettings.h"
+#include "emojierplugin.h"
 
 #undef signals
+#include "emojiersettings.h"
+#include <QClipboard>
+#include <QGuiApplication>
+#include <QSortFilterProxyModel>
+#include <QStandardPaths>
 #include <ibus.h>
+#include <qqml.h>
 
 struct Emoji {
     QString content;
@@ -312,112 +287,17 @@ public:
     }
 };
 
-class EngineWatcher : public QObject
+void EmojierDeclarativePlugin::registerTypes(const char *uri)
 {
-public:
-    EngineWatcher(QQmlApplicationEngine *engine)
-        : QObject(engine)
-    {
-        connect(engine, &QQmlApplicationEngine::objectCreated, this, &EngineWatcher::integrateObject);
-    }
+    Q_ASSERT(uri == QByteArray("org.kde.plasma.emoji"));
 
-    void integrateObject(QObject *object)
-    {
-        QWindow *window = qobject_cast<QWindow *>(object);
-
-        auto conf = KSharedConfig::openConfig();
-        KWindowConfig::restoreWindowSize(window, conf->group("Window"));
-
-        object->installEventFilter(this);
-    }
-
-    bool eventFilter(QObject *object, QEvent *event) override
-    {
-        if (event->type() == QEvent::Close) {
-            QWindow *window = qobject_cast<QWindow *>(object);
-
-            auto conf = KSharedConfig::openConfig();
-            auto group = conf->group("Window");
-            KWindowConfig::saveWindowSize(window, group);
-            group.sync();
-        }
-        return false;
-    }
-};
-
-int main(int argc, char **argv)
-{
-    QGuiApplication::setFallbackSessionManagementEnabled(false);
-    QApplication app(argc, argv);
-    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
-    app.setWindowIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-emoticons")));
-    KCrash::initialize();
-    KQuickAddons::QtQuickSettings::init();
-
-    KLocalizedString::setApplicationDomain("org.kde.plasma.emojier");
-
-    KAboutData about(QStringLiteral("plasma.emojier"),
-                     i18n("Emoji Selector"),
-                     QStringLiteral(WORKSPACE_VERSION_STRING),
-                     i18n("Emoji Selector"),
-                     KAboutLicense::GPL,
-                     i18n("(C) 2019 Aleix Pol i Gonzalez"));
-    about.addAuthor(QStringLiteral("Aleix Pol i Gonzalez"), QString(), QStringLiteral("aleixpol@kde.org"));
-    about.setTranslator(i18nc("NAME OF TRANSLATORS", "Your names"), i18nc("EMAIL OF TRANSLATORS", "Your emails"));
-    //     about.setProductName("");
-    about.setProgramLogo(app.windowIcon());
-    KAboutData::setApplicationData(about);
-
-    auto disableSessionManagement = [](QSessionManager &sm) {
-        sm.setRestartHint(QSessionManager::RestartNever);
-    };
-    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
-    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
-
-    KDBusService::StartupOptions startup = {};
-    {
-        QCommandLineParser parser;
-
-        QCommandLineOption replaceOption({QStringLiteral("replace")}, i18n("Replace an existing instance"));
-        parser.addOption(replaceOption);
-        about.setupCommandLine(&parser);
-        parser.process(app);
-        about.processCommandLine(&parser);
-
-        if (parser.isSet(replaceOption)) {
-            startup |= KDBusService::Replace;
-        }
-    }
-
-    KDBusService *service = new KDBusService(KDBusService::Unique | startup, &app);
-
-    qmlRegisterType<EmojiModel>("org.kde.plasma.emoji", 1, 0, "EmojiModel");
-    qmlRegisterType<CategoryModelFilter>("org.kde.plasma.emoji", 1, 0, "CategoryModelFilter");
-    qmlRegisterType<SearchModelFilter>("org.kde.plasma.emoji", 1, 0, "SearchModelFilter");
-    qmlRegisterType<RecentEmojiModel>("org.kde.plasma.emoji", 1, 0, "RecentEmojiModel");
-    qmlRegisterSingletonType<CopyHelperPrivate>("org.kde.plasma.emoji", 1, 0, "CopyHelper", [](QQmlEngine *, QJSEngine *) -> QObject * {
+    qmlRegisterType<EmojiModel>(uri, 1, 0, "EmojiModel");
+    qmlRegisterType<CategoryModelFilter>(uri, 1, 0, "CategoryModelFilter");
+    qmlRegisterType<SearchModelFilter>(uri, 1, 0, "SearchModelFilter");
+    qmlRegisterType<RecentEmojiModel>(uri, 1, 0, "RecentEmojiModel");
+    qmlRegisterSingletonType<CopyHelperPrivate>(uri, 1, 0, "CopyHelper", [](QQmlEngine *, QJSEngine *) -> QObject * {
         return new CopyHelperPrivate;
     });
-
-    QQmlApplicationEngine engine;
-    new EngineWatcher(&engine);
-    engine.load(QUrl(QStringLiteral("qrc:/ui/emojier.qml")));
-
-    QObject::connect(service, &KDBusService::activateRequested, &engine, [&engine](const QStringList & /*arguments*/, const QString & /*workingDirectory*/) {
-        for (QObject *object : engine.rootObjects()) {
-            auto w = qobject_cast<QQuickWindow *>(object);
-            if (!w)
-                continue;
-
-            if (w && QX11Info::isPlatformX11())
-                KStartupInfo::setNewStartupId(w, QX11Info::nextStartupId());
-
-            w->setVisible(true);
-            w->raise();
-        }
-    });
-
-    return app.exec();
 }
 
-#include "emojier.moc"
+#include "emojierplugin.moc"
