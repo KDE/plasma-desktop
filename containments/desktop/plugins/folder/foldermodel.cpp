@@ -274,6 +274,10 @@ void FolderModel::newFileMenuItemCreated(const QUrl &url)
         m_dropTargetPositions.insert(url.fileName(), m_menuPosition);
         m_menuPosition = {};
         m_dropTargetPositionsCleanup->start();
+        // TODO: need to turn the url (in the form of "desktop:/something") into
+        // a QModelIndex
+        int newlyCreatedItemIndex = indexForUrl(url); // doesn't work, returns -1
+        setRangeSelected(newlyCreatedItemIndex, newlyCreatedItemIndex);
     }
 }
 
