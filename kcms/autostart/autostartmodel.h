@@ -69,6 +69,7 @@ Q_SIGNALS:
 private:
     void addApplication(const KService::Ptr &service);
     void loadScriptsFromDir(const QString &subDir, AutostartEntrySource kind);
+    void insertScriptEntry(int index, const QString &name, const QString &path, AutostartModel::AutostartEntrySource kind);
     QString XdgAutoStartPath() const;
 
     QVector<AutostartEntry> m_entries;
