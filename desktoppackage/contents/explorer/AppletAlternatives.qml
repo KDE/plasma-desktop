@@ -154,6 +154,7 @@ PlasmaCore.Dialog {
                                 Layout.fillWidth: true
                                 text: model.description
                                 font: PlasmaCore.Theme.smallestFont
+                                opacity: 0.6
                                 maximumLineCount: 2
                                 wrapMode: Text.WordWrap
                                 elide: Text.ElideRight
