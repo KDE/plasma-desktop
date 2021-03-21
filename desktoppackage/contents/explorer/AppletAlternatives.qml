@@ -152,7 +152,7 @@ PlasmaCore.Dialog {
                             PlasmaComponents3.Label {
                                 Layout.fillWidth: true
                                 text: model.description
-                                font: theme.smallestFont
+                                font: PlasmaCore.Theme.smallestFont
                                 maximumLineCount: 2
                                 wrapMode: Text.WordWrap
                                 elide: Text.ElideRight
