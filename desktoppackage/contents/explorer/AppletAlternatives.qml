@@ -21,7 +21,8 @@ import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 2.0 as PlasmaComponents // for Highlight and ListItem
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.plasma.private.shell 2.0
@@ -150,7 +151,7 @@ PlasmaCore.Dialog {
                                 wrapMode: Text.NoWrap
                                 elide: Text.ElideRight
                             }
-                            PlasmaComponents.Label {
+                            PlasmaComponents3.Label {
                                 Layout.fillWidth: true
                                 text: model.description
                                 font: theme.smallestFont
@@ -167,7 +168,7 @@ PlasmaCore.Dialog {
             id: buttonsRow
 
             Layout.fillWidth: true
-            PlasmaComponents.Button {
+            PlasmaComponents3.Button {
                 id: switchButton
                 enabled: root.currentPlugin !== alternativesHelper.currentPlugin
                 Layout.fillWidth: true
@@ -179,7 +180,7 @@ PlasmaCore.Dialog {
                     }
                 }
             }
-            PlasmaComponents.Button {
+            PlasmaComponents3.Button {
                 id: cancelButton
                 Layout.fillWidth: true
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel");
