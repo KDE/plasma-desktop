@@ -131,8 +131,17 @@ static QString keySymToString(KeySym keysym)
     if (static_cast<KeySym>(xkbKeysym) == keysym) {
         str = xkbKeysymToUtf8(xkbKeysym);
 
-        for (const auto &c : qAsConst(str)) {
-            if (!c.isPrint() && !c.isNull()) {
+        const auto ucs4Str = str.toUcs4();
+
+        if (!str.isEmpty()) {
+            const QChar::Category category = QChar::category(ucs4Str[0]);
+            if (category == QChar::Mark_NonSpacing || category == QChar::Mark_Enclosing) {
+                str.prepend(" ");
+            }
+        }
+
+        for (const auto &c : qAsConst(ucs4Str)) {
+            if (!QChar::isPrint(c) && !(c == 0) && !(QChar::category(c) == QChar::Other_PrivateUse)) {
                 str = "";
                 break;
             }
