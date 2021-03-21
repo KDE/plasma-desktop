@@ -62,7 +62,7 @@ static QString keySymToString(KeySym keysym)
 {
     // Strangely enough xkbcommons's UTF map is incomplete with regards to
     // dead keys. Extend it a bit.
-    static QHash<unsigned long, uint> deadMap{
+    static QHash<unsigned long, char16_t> deadMap{
         {XK_dead_grave, 0x0060},
         {XK_dead_acute, 0x00b4},
         {XK_dead_circumflex, 0x02c6},
@@ -151,7 +151,7 @@ static QString keySymToString(KeySym keysym)
     }
 
     if (deadMap.contains(keysym)) {
-        QChar c =  QChar(deadMap[keysym]);
+        const QChar c(deadMap[keysym]);
 
         // Make sure non-spacing diacritics are rendered
         if (c.category() == QChar::Mark_NonSpacing
@@ -159,7 +159,7 @@ static QString keySymToString(KeySym keysym)
             // FIXME: should really be NBSP, but it doesn't seem to
             // render properly, so use SPACE which is not recommended
             // since Unicode 4.1
-            str = QString("\x20") + c;
+            str = QStringLiteral(" ") + c;
         } else {
             str = c;
         }
@@ -167,7 +167,7 @@ static QString keySymToString(KeySym keysym)
 
     // X11 keys can be of the form "Control_L".
     // Split them so they are easier on the eyes.
-    // But only do that on strings of 3 chars of more to not lose "_"
+    // But only do that on strings of 3 chars or more to not lose "_"
     if (str.size() > 2) {
         str.replace('_', ' ');
     }
