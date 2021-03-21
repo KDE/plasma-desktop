@@ -21,7 +21,7 @@ import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents // for Highlight and ListItem
+import org.kde.plasma.components 2.0 as PlasmaComponents // for Highlight
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
@@ -110,7 +110,9 @@ PlasmaCore.Dialog {
                 highlightMoveDuration : 0
                 highlightResizeDuration: 0
 
-                delegate: PlasmaComponents.ListItem {
+                delegate: PlasmaExtras.ListItem {
+                    implicitHeight: PlasmaCore.Units.iconSizes.huge + PlasmaCore.Units.smallSpacing * 2
+
                     onClicked: mainList.currentIndex = index
 
                     Component.onCompleted: {
@@ -129,24 +131,23 @@ PlasmaCore.Dialog {
                         }
                     }
 
-                    RowLayout {
-                        x: 2 * PlasmaCore.Units.smallSpacing
-                        width: parent.width - 2 * x
+                    contentItem: RowLayout {
                         spacing: PlasmaCore.Units.largeSpacing
+
                         PlasmaCore.IconItem {
-                            Layout.preferredWidth: PlasmaCore.Units.iconSizes.huge
-                            Layout.preferredHeight: PlasmaCore.Units.iconSizes.huge
+                            implicitWidth: PlasmaCore.Units.iconSizes.huge
+                            implicitHeight: PlasmaCore.Units.iconSizes.huge
                             source: model.decoration
                         }
 
                         ColumnLayout {
-                            height: parent.height
+                            Layout.fillHeight: true
                             Layout.fillWidth: true
+
                             PlasmaExtras.Heading {
                                 level: 4
                                 Layout.fillWidth: true
                                 text: model.name
-                                wrapMode: Text.NoWrap
                                 elide: Text.ElideRight
                             }
                             PlasmaComponents3.Label {
