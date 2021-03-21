@@ -95,7 +95,6 @@ PlasmaCore.Dialog {
         }
 
         PlasmaExtras.ScrollArea {
-            id: scrollArea
             Layout.fillWidth: true
             Layout.fillHeight: true
 
@@ -112,7 +111,6 @@ PlasmaCore.Dialog {
                 highlightResizeDuration: 0
 
                 delegate: PlasmaComponents.ListItem {
-                    enabled: true
                     onClicked: mainList.currentIndex = index
 
                     Component.onCompleted: {
@@ -181,7 +179,6 @@ PlasmaCore.Dialog {
                 }
             }
             PlasmaComponents3.Button {
-                id: cancelButton
                 Layout.fillWidth: true
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel");
                 onClicked: {
