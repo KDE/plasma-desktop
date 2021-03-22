@@ -119,9 +119,6 @@
 /* KDE's default home directory */
 #cmakedefine KDE_DEFAULT_HOME "${KDE_DEFAULT_HOME}"
 
-/* KDE's binaries directory */
-#define KDE_BINDIR "${KDE_INSTALL_BINDIR}"
-
 /* KDE's configuration directory */
 #define KDE_CONFDIR "${KDE_INSTALL_CONFDIR}"
 
