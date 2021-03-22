@@ -14,6 +14,7 @@ add_subdirectory( autostart )
 add_subdirectory( ksplash )
 
 add_subdirectory( launch )
+add_subdirectory( landingpage )
 add_subdirectory( keys )
 add_subdirectory( ksmserver )
 add_subdirectory( nightcolor )

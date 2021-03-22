@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="kdeglobals" />
+  <group name="General">
+    <entry name="colorScheme" key="ColorScheme" type="String">
+      <label>Color scheme name</label>
+      <default>BreezeLight</default>
+    </entry>
+  </group>
+  <group name="KDE">
+    <entry name="singleClick" key="SingleClick" type="Bool">
+      <label>Single click to open files</label>
+      <default>true</default>
+    </entry>
+    <entry name="lookAndFeelPackage" key="LookAndFeelPackage" type="String">
+      <label>Global Look and Feel package</label>
+      <default>org.kde.breeze.desktop</default>
+    </entry>
+    <entry name="defaultLightLookAndFeel" key="DefaultLightLookAndFeel" type="String">
+      <label>Global Look and Feel package, alternate</label>
+      <default>org.kde.breeze.desktop</default>
+    </entry>
+    <entry name="defaultDarkLookAndFeel" key="DefaultDarkLookAndFeel" type="String">
+      <label>Global Look and Feel package, alternate</label>
+      <default>org.kde.breezedark.desktop</default>
+    </entry>
+    <entry name="animationDurationFactor" key="AnimationDurationFactor" type="Double">
+      <label>Animation speed</label>
+      <default>1.0</default>
+    </entry>
+  </group>
+</kcfg>
