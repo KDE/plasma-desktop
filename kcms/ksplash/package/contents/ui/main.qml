@@ -48,8 +48,11 @@ KCM.GridViewKCM {
 
             Connections {
                 target: kcm
-                function onTestingFailed() {
-                    testingFailedLabel.text = i18n("Failed to test the splash screen.")
+                function onTestingFailed(processErrorOutput) {
+                    testingFailedLabel.text = i18n("Failed to show the splash screen preview.")
+                    if (processErrorOutput) {
+                        testingFailedLabel.text += "\n" + processErrorOutput
+                    }
                     testingFailedLabel.visible = true
                 }
                 function onError(text) {

@@ -62,7 +62,7 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void testingChanged();
-    void testingFailed();
+    void testingFailed(const QString &processErrorOutput);
     void error(const QString &message);
 
 private:

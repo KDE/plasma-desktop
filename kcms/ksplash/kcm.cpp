@@ -187,7 +187,7 @@ void KCMSplashScreen::test(const QString &plugin)
     m_testProcess = new QProcess(this);
     connect(m_testProcess, &QProcess::errorOccurred, this, [this](QProcess::ProcessError error) {
         Q_UNUSED(error)
-        emit testingFailed();
+        emit testingFailed(QString::fromLocal8Bit(m_testProcess->readAllStandardError()));
     });
     connect(m_testProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this](int exitCode, QProcess::ExitStatus exitStatus) {
         Q_UNUSED(exitCode)
