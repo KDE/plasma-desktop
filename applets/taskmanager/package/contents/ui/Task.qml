@@ -314,6 +314,11 @@ MouseArea {
             Component.onCompleted: timer.start()
         }
     }
+    
+    ToolTipDelegate {
+        id: toolTipDelegate
+        visible: false
+    }
 
     PlasmaCore.FrameSvgItem {
         id: frame

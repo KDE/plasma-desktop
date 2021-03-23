@@ -109,22 +109,6 @@ void Backend::setTaskManagerItem(QQuickItem *item)
     }
 }
 
-QQuickItem *Backend::toolTipItem() const
-{
-    return m_toolTipItem;
-}
-
-void Backend::setToolTipItem(QQuickItem *item)
-{
-    if (item != m_toolTipItem) {
-        m_toolTipItem = item;
-
-        connect(item, &QQuickItem::windowChanged, this, &Backend::toolTipWindowChanged);
-
-        emit toolTipItemChanged();
-    }
-}
-
 QQuickWindow *Backend::groupDialog() const
 {
     return m_groupDialog;
@@ -432,13 +416,6 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
     return actions;
 }
 
-void Backend::toolTipWindowChanged(QQuickWindow *window)
-{
-    Q_UNUSED(window)
-
-    updateWindowHighlight();
-}
-
 void Backend::handleRecentDocumentAction() const
 {
     const QAction *action = qobject_cast<QAction *>(sender());
@@ -605,4 +582,28 @@ void Backend::updateWindowHighlight()
     auto message = QDBusMessage::createMethodCall(highlightWindowName, highlightWindowPath, highlightWindowInterface, QStringLiteral("highlightWindows"));
     message << (m_highlightWindows ? m_windowsToHighlight : QStringList());
     QDBusConnection::sessionBus().asyncCall(message);
+    
+    if (!m_highlightWindows) {
+        if (m_panelWinId) {
+            KWindowEffects::highlightWindows(m_panelWinId, QList<WId>());
+
+            m_panelWinId = 0;
+        }
+
+        return;
+    }
+
+    if (m_taskManagerItem && m_taskManagerItem->window()) {
+        m_panelWinId = m_taskManagerItem->window()->winId();
+    } else {
+        return;
+    }
+
+    QList<WId> windows = m_windowsToHighlight;
+
+    if (!windows.isEmpty() && m_groupDialog) {
+        windows.append(m_groupDialog->winId());
+    }
+
+    KWindowEffects::highlightWindows(m_panelWinId, windows);
 }

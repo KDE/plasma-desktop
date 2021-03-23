@@ -42,7 +42,6 @@ class Backend : public QObject
     Q_OBJECT
 
     Q_PROPERTY(QQuickItem *taskManagerItem READ taskManagerItem WRITE setTaskManagerItem NOTIFY taskManagerItemChanged)
-    Q_PROPERTY(QQuickItem *toolTipItem READ toolTipItem WRITE setToolTipItem NOTIFY toolTipItemChanged)
     Q_PROPERTY(QQuickWindow *groupDialog READ groupDialog WRITE setGroupDialog NOTIFY groupDialogChanged)
     Q_PROPERTY(bool highlightWindows READ highlightWindows WRITE setHighlightWindows NOTIFY highlightWindowsChanged)
     Q_PROPERTY(bool canPresentWindows READ canPresentWindows NOTIFY canPresentWindowsChanged)
@@ -64,9 +63,6 @@ public:
 
     QQuickItem *taskManagerItem() const;
     void setTaskManagerItem(QQuickItem *item);
-
-    QQuickItem *toolTipItem() const;
-    void setToolTipItem(QQuickItem *item);
 
     QQuickWindow *groupDialog() const;
     void setGroupDialog(QQuickWindow *dialog);
@@ -101,7 +97,6 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void taskManagerItemChanged() const;
-    void toolTipItemChanged() const;
     void groupDialogChanged() const;
     void highlightWindowsChanged() const;
     void addLauncher(const QUrl &url) const;
@@ -110,7 +105,6 @@ Q_SIGNALS:
     void showAllPlaces();
 
 private Q_SLOTS:
-    void toolTipWindowChanged(QQuickWindow *window);
     void handleRecentDocumentAction() const;
 
 private:
@@ -119,7 +113,6 @@ private:
     QVariantList systemSettingsActions(QObject *parent) const;
 
     QQuickItem *m_taskManagerItem = nullptr;
-    QQuickItem *m_toolTipItem = nullptr;
     QQuickWindow *m_groupDialog = nullptr;
     bool m_highlightWindows;
     QStringList m_windowsToHighlight;

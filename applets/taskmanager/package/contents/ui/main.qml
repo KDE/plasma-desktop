@@ -221,7 +221,6 @@ MouseArea {
         id: backend
 
         taskManagerItem: tasks
-        toolTipItem: toolTipDelegate
         groupDialog: groupDialog
         highlightWindows: plasmoid.configuration.highlightWindows
 
@@ -408,12 +407,6 @@ MouseArea {
             // as you probably don't expect some of your files to open in the app and others to spawn launchers.
             tasksModel.requestOpenUrls(hoveredItem.modelIndex(), urlsList);
         }
-    }
-
-    ToolTipDelegate {
-        id: toolTipDelegate
-
-        visible: false
     }
 
     TaskList {
