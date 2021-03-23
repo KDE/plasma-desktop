@@ -417,6 +417,7 @@ FocusScope {
                     && previouslySelectedItemIndex == gridView.currentIndex
                     && gridView.currentIndex != -1
                     && !Qt.styleHints.singleClickActivation
+                    && plasmoid.configuration.renameInline
                     && !doubleClickInProgress
                 ) {
                     rename();

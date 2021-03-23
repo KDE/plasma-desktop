@@ -82,6 +82,10 @@
       <label>Whether to show selection markers when hovering Folder View icons.</label>
       <default>true</default>
     </entry>
+    <entry name="renameInline" type="Bool">
+      <label>Whether to initiate inline renaming when clicking on the text of an already-selected item, while using the systemwide double-click mode.</label>
+      <default>true</default>
+    </entry>
     <entry name="popups" type="Bool">
       <label>Whether to show a popup preview window for Folder View icons for folders.</label>
       <default>true</default>

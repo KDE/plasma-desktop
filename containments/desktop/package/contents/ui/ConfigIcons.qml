@@ -48,6 +48,7 @@ Item {
     property alias cfg_sortDirsFirst: sortDirsFirst.checked
     property alias cfg_toolTips: toolTips.checked
     property alias cfg_selectionMarkers: selectionMarkers.checked
+    property alias cfg_renameInline: renameInline.checked
     property alias cfg_popups: popups.checked
     property alias cfg_previews: previews.checked
     property alias cfg_previewPlugins: previewPluginsDialog.previewPlugins
@@ -300,6 +301,13 @@ Item {
             visible: Qt.styleHints.singleClickActivation
 
             text: i18n("Selection markers")
+        }
+
+        CheckBox {
+            id: renameInline
+            visible: !selectionMarkers.visible
+
+            text: i18n("Rename inline by clicking selected item's text")
         }
 
         CheckBox {
