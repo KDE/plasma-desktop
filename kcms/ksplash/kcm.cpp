@@ -144,6 +144,12 @@ void KCMSplashScreen::save()
     PackageStructure *structure = PackageLoader::self()->loadPackageStructure(QStringLiteral("Plasma/LookAndFeel"));
     const QStringList pendingDeletionPlugins = pendingDeletions();
     for (const QString &plugin : pendingDeletionPlugins) {
+        if (plugin == m_data->settings()->theme()) {
+            Q_EMIT error(i18n("You cannot delete the currently selected splash screen"));
+            m_model->setData(m_model->index(pluginIndex(plugin), 0), false, Roles::PendingDeletionRole);
+            continue;
+        }
+
         KJob *uninstallJob = Package(structure).uninstall(plugin, m_packageRoot);
         connect(uninstallJob, &KJob::result, this, [this, uninstallJob, plugin]() {
             if (uninstallJob->error()) {
