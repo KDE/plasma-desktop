@@ -52,8 +52,6 @@
 
 // share/autostart shouldn't be an option as this should be reserved for global autostart entries
 
-static QString autoStartScriptServiceType = QStringLiteral("Plasma/AutostartScript");
-
 static std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName)
 {
     KDesktopFile config(fileName);
@@ -76,10 +74,10 @@ static std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName)
 
     const auto lstEntry = grp.readXdgListEntry("OnlyShowIn");
     const bool onlyInPlasma = lstEntry.contains(QLatin1String("KDE"));
-    const auto kind = KService(&config).hasServiceType(autoStartScriptServiceType)
+    const QString iconName = config.readIcon();
+    const auto kind = config.desktopGroup().hasKey("X-KDE-AutostartScript")
         ? AutostartModel::AutostartEntrySource::XdgScripts
         : AutostartModel::AutostartEntrySource::XdgAutoStart; // .config/autostart load desktop at startup
-    const QString iconName = kind == AutostartModel::AutostartEntrySource::XdgScripts ? QStringLiteral("dialog-scripts") : config.readIcon();
     const QString tryCommand = grp.readEntry("TryExec");
 
     // Try to filter out entries that point to nonexistant programs
@@ -345,7 +343,7 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
         kcg.writeEntry("Exec", file.filePath());
         kcg.writeEntry("Path", "");
         kcg.writeEntry("Type", "Application");
-        kcg.writeEntry("X-KDE-ServiceTypes", autoStartScriptServiceType);
+        kcg.writeEntry("X-KDE-AutostartScript", "true");
         desktopFile.sync();
 
         insertScriptEntry(index, fileName, desktopPath, kind);
