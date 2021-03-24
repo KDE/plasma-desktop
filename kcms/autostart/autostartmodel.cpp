@@ -350,7 +350,7 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
     } else if (kind == AutostartModel::AutostartEntrySource::PlasmaShutdown) {
         index = m_entries.size();
         folder = QStringLiteral("/plasma-workspace/shutdown/");
-        QUrl destinationScript = QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + folder + fileName);
+        const QUrl destinationScript = QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + folder + fileName);
         KIO::CopyJob *job = KIO::link(url, destinationScript, KIO::HideProgressInfo);
         job->setAutoRename(true);
         job->setProperty("finalUrl", destinationScript);
