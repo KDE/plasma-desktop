@@ -38,7 +38,6 @@ Item {
     Layout.maximumHeight: Layout.minimumHeight
 
     property string previousState
-    property bool switchTabsOnHover: plasmoid.configuration.switchTabsOnHover
     property Item currentView: mainTabGroup.currentTab.keyNavDown ? mainTabGroup.currentTab : mainTabGroup.currentTab.item
     property Item currentContentView: contentTabGroup.currentItem.keyNavDown ? contentTabGroup.currentItem : contentTabGroup.currentItem.item
 
@@ -457,12 +456,7 @@ Item {
                 icon.height: PlasmaCore.Units.iconSizes.smallMedium
                 icon.name: "applications-other"
                 text: i18n("Applications")
-                hoverEnabled: plasmoid.configuration.switchTabsOnHover
-                onHoveredChanged: {
-                    if (hovered) {
-                        tabBar.currentIndex = PC3.TabBar.index
-                    }
-                }
+                hoverEnabled: false
                 Keys.onPressed: {
                     // On back tab focus on right pane
                     if (event.key == Qt.Key_Backtab) {
@@ -484,12 +478,7 @@ Item {
                 icon.height: PlasmaCore.Units.iconSizes.smallMedium
                 icon.name: "compass"
                 text: i18n("Places") //Explore?
-                hoverEnabled: plasmoid.configuration.switchTabsOnHover
-                onHoveredChanged: {
-                    if (hovered) {
-                        tabBar.currentIndex = PC3.TabBar.index
-                    }
-                }
+                hoverEnabled: false
             }
             position: {
                 switch (plasmoid.location) {

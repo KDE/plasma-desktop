@@ -28,7 +28,6 @@ import org.kde.kirigami 2.5 as Kirigami
 ColumnLayout {
 
     property string cfg_icon: plasmoid.configuration.icon
-    property alias cfg_switchTabsOnHover: switchTabsOnHoverCheckbox.checked
     property int cfg_favoritesDisplay: plasmoid.configuration.favoritesDisplay
     property alias cfg_gridAllowTwoLines: gridAllowTwoLines.checked
     property alias cfg_alphaSort: alphaSort.checked
@@ -88,12 +87,6 @@ ColumnLayout {
 
         Item {
             Kirigami.FormData.isSection: true
-        }
-
-        CheckBox {
-            id: switchTabsOnHoverCheckbox
-            Kirigami.FormData.label: i18n("General:")
-            text: i18n("Switch tabs on hover")
         }
 
         CheckBox {
