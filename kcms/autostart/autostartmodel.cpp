@@ -341,6 +341,7 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
         KConfigGroup kcg = desktopFile.desktopGroup();
         kcg.writeEntry("Name", fileName);
         kcg.writeEntry("Exec", file.filePath());
+        kcg.writeEntry("Icon", "dialog-scripts");
         kcg.writeEntry("Path", "");
         kcg.writeEntry("Type", "Application");
         kcg.writeEntry("X-KDE-AutostartScript", "true");
