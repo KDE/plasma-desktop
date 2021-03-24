@@ -408,6 +408,16 @@ MouseArea {
             tasksModel.requestOpenUrls(hoveredItem.modelIndex(), urlsList);
         }
     }
+    
+    ToolTipDelegate {
+        id: openWindowToolTipDelegate
+        visible: false
+    }
+    
+    ToolTipDelegate {
+        id: pinnedAppToolTipDelegate
+        visible: false
+    }
 
     TaskList {
         id: taskList
