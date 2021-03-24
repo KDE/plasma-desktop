@@ -341,7 +341,7 @@ MouseArea {
             active: !inPopup && !groupDialog.visible && plasmoid.configuration.showToolTips
             interactive: true
 
-            mainItem: model.IsWindow ? openWindowToolTipDelegate : pinnedAppToolTipDelegate
+            mainItem: (model.IsWindow === true) ? openWindowToolTipDelegate : pinnedAppToolTipDelegate
 
             onContainsMouseChanged:  {
                 if (containsMouse) {
