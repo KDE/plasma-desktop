@@ -75,7 +75,7 @@ static std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName)
     const auto lstEntry = grp.readXdgListEntry("OnlyShowIn");
     const bool onlyInPlasma = lstEntry.contains(QLatin1String("KDE"));
     const QString iconName = config.readIcon();
-    const auto kind = config.desktopGroup().hasKey("X-KDE-AutostartScript")
+    const auto kind = config.desktopGroup().readEntry<bool>("X-KDE-AutostartScript", false)
         ? AutostartModel::AutostartEntrySource::XdgScripts
         : AutostartModel::AutostartEntrySource::XdgAutoStart; // .config/autostart load desktop at startup
     const QString tryCommand = grp.readEntry("TryExec");
