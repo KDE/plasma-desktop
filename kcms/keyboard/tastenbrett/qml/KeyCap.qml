@@ -31,6 +31,7 @@ Item {
     KeyCapLabel {
         id: topLeft
         width: topRight.text == "" ? parent.width : parent.width / 2.0
+        horizontalAlignment: Text.AlignLeft
         height: (bottomLeft.text == "" && bottomRight.text == "") ? parent.height / 1.7 : parent.height  /2.0
         anchors.top: parent.top
         anchors.left: parent.left
@@ -39,6 +40,7 @@ Item {
     KeyCapLabel {
         id: topRight
         width: parent.width /2.0
+        horizontalAlignment: Text.AlignLeft
         height: parent.height  /2.0
         anchors.top: parent.top
         anchors.right: parent.right
@@ -47,6 +49,7 @@ Item {
     KeyCapLabel {
         id: bottomLeft
         width: bottomRight.text == "" ? parent.width : parent.width / 2.0
+        horizontalAlignment: Text.AlignLeft
         height: (topLeft.text == "" && topRight.text == "") ? parent.height / 1.7 : parent.height  /2.0
         anchors.bottom: parent.bottom
         anchors.left: parent.left
@@ -55,6 +58,7 @@ Item {
     KeyCapLabel {
         id: bottomRight
         width: parent.width /2.0
+        horizontalAlignment: Text.AlignLeft
         height: parent.height  /2.0
         anchors.bottom: parent.bottom
         anchors.right: parent.right
