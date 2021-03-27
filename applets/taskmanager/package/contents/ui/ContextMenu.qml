@@ -737,6 +737,8 @@ PlasmaComponents.ContextMenu {
         }
     }
 
+    PlasmaComponents.MenuItem { separator: true }
+
     PlasmaComponents.MenuItem {
         id: closeWindowItem
         visible: (visualParent && get(atm.IsLauncher) !== true && get(atm.IsStartup) !== true)
