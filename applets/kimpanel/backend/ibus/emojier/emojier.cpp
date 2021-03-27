@@ -223,6 +223,13 @@ public:
         refresh();
     }
 
+    Q_INVOKABLE void clearHistory()
+    {
+        m_settings.setRecent(QStringList());
+        m_settings.setRecentDescriptions(QStringList());
+        refresh();
+    }
+
 private:
     void refresh()
     {

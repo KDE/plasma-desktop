@@ -67,7 +67,7 @@ Kirigami.ApplicationWindow
 
         icon.name: "document-open-recent-symbolic"
         onTriggered: {
-            window.pageStack.replace("qrc:/ui/CategoryPage.qml", {title: text, category: "", model: recentEmojiModel})
+            window.pageStack.replace("qrc:/ui/CategoryPage.qml", {title: text, category: "", model: recentEmojiModel, showClearHistoryButton: true})
         }
     }
     Kirigami.Action {

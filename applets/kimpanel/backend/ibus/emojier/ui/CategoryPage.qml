@@ -31,6 +31,7 @@ Kirigami.ScrollablePage
     property string searchText: ""
     property alias category: filter.category
     property bool showSearch: false
+    property bool showClearHistoryButton: false
     leftPadding: 0
     rightPadding: 0
 
@@ -74,6 +75,13 @@ Kirigami.ScrollablePage
                     Qt.quit()
                 }
             }
+        }
+
+        QQC2.ToolButton {
+            visible: view.showClearHistoryButton
+            text: i18n("Clear History")
+            icon.name: "edit-clear-history"
+            onClicked: { recentEmojiModel.clearHistory(); }
         }
     }
 
