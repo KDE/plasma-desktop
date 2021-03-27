@@ -26,7 +26,6 @@ target_link_libraries(kcm_workspace
     KF5::KCMUtils
     KF5::ConfigWidgets
     KF5::Declarative
-    KF5::KDELibs4Support # kglobalsettings
 
     Qt::DBus
 )

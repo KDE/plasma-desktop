@@ -20,7 +20,6 @@
 #include "workspaceoptions.h"
 
 #include <KAboutData>
-#include <KGlobalSettings>
 #include <KLocalizedString>
 #include <KPluginFactory>
 
@@ -68,8 +67,8 @@ void KCMWorkspaceOptions::save()
 
     QDBusMessage message = QDBusMessage::createSignal("/KGlobalSettings", "org.kde.KGlobalSettings", "notifyChange");
     QList<QVariant> args;
-    args.append(KGlobalSettings::SettingsChanged);
-    args.append(KGlobalSettings::SETTINGS_MOUSE);
+    args.append(3 /*KGlobalSettings::SettingsChanged*/);
+    args.append(0 /*GlobalSettings::SettingsCategory::SETTINGS_MOUSE*/);
     message.setArguments(args);
     QDBusConnection::sessionBus().send(message);
 }

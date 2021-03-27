@@ -1,12 +1,3 @@
-/* Define if you have DPMS support */
-#cmakedefine HAVE_DPMS 1
-
-/* Define if you have the DPMSCapable prototype in <X11/extensions/dpms.h> */
-#cmakedefine HAVE_DPMSCAPABLE_PROTO 1
-
-/* Define if you have the DPMSInfo prototype in <X11/extensions/dpms.h> */
-#cmakedefine HAVE_DPMSINFO_PROTO 1
-
 /* Define if you have gethostname */
 #cmakedefine HAVE_GETHOSTNAME 1
 

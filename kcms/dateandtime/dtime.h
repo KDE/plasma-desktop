@@ -33,7 +33,6 @@
 #include <QWidget>
 
 #include <KDatePicker>
-#include <KNumInput>
 
 class Kclock;
 class QTimeEdit;

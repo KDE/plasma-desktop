@@ -21,10 +21,10 @@
 #define DIRMODEL_H
 
 #include <KDirModel>
-#include <KImageCache>
 #include <KSharedDataCache>
 #include <QSize>
 #include <QVariant>
+#include <kimagecache.h>
 
 class QTimer;
 

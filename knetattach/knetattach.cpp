@@ -19,6 +19,7 @@
 
 #include "knetattach.h"
 
+#include <QUrlQuery>
 #include <QVariant>
 
 #include <KCharsets>
@@ -236,7 +237,7 @@ bool KNetAttach::validateCurrentPage()
             desktopFile.writeEntry("Name", name);
             desktopFile.writeEntry("Type", "Link");
             desktopFile.writeEntry("URL", url.toDisplayString());
-            desktopFile.writeEntry("Charset", url.queryItemValue("charset"));
+            desktopFile.writeEntry("Charset", QUrlQuery(url).queryItemValue(QStringLiteral("charset")));
             desktopFile.sync();
             org::kde::KDirNotify::emitFilesAdded(QUrl(QStringLiteral("remote:/")));
         }

@@ -24,7 +24,6 @@
 #include <KAboutData>
 #include <KColorScheme>
 #include <KLocalizedString>
-#include <KGlobalSettings>
 #include <KPackage/PackageLoader>
 #include <KService>
 #include <KCModuleInfo>
@@ -227,8 +226,8 @@ void KCMLandingPage::save()
 
     QDBusMessage message = QDBusMessage::createSignal("/KGlobalSettings", "org.kde.KGlobalSettings", "notifyChange");
     QList<QVariant> args;
-    args.append(KGlobalSettings::SettingsChanged);
-    args.append(KGlobalSettings::SETTINGS_MOUSE);
+    args.append(3 /*KGlobalSettings::SettingsChanged*/);
+    args.append(0 /*KGlobalSettings::SETTINGS_MOUSE*/);
     message.setArguments(args);
     QDBusConnection::sessionBus().send(message);
 

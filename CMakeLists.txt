@@ -40,6 +40,7 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Auth
+    Crash
     Plasma
     PlasmaQuick
     DocTools
@@ -47,12 +48,14 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     KCMUtils
     NewStuff
     NewStuffQuick
-    KDELibs4Support
+    KIO
     Notifications
     NotifyConfig
     Attica
     Runner
     GlobalAccel
+    CoreAddons # KSharedDataCache required by KImageCache
+    GuiAddons # KImageCache
     Declarative
     DBusAddons
     Activities
@@ -61,6 +64,8 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Wallet
     WidgetsAddons
     Codecs
+    Sonnet
+    KDELibs4Support # kcms/dateandtime
 )
 
 find_package(AccountsQt5 ${ACCOUNTSQT_DEP_VERSION} CONFIG)
