@@ -37,7 +37,7 @@ public:
 
     void setActionToEdit(ActionItem *item);
 
-public slots:
+public Q_SLOTS:
     void accept() override;
 
 private:
@@ -50,7 +50,7 @@ private:
     PredicateItem *rootItem;
     PredicateModel *rootModel;
 
-private slots:
+private Q_SLOTS:
     void updatePropertyList();
     void manageControlStatus();
     void updateParameter();

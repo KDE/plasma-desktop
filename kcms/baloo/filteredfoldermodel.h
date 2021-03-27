@@ -48,7 +48,7 @@ public:
     Q_INVOKABLE void removeFolder(int row);
     QHash<int, QByteArray> roleNames() const override;
 
-public slots:
+public Q_SLOTS:
     void updateDirectoryList();
 
 private:

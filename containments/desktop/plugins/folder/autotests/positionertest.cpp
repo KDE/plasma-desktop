@@ -40,7 +40,7 @@ void PositionerTest::initTestCase()
     QDir dir(m_folderDir->path());
     dir.mkdir(desktop);
     dir.cd(desktop);
-    dir.mkdir("firstDir");
+    dir.mkdir(QStringLiteral("firstDir"));
     QFile f;
     for (int i = 1; i < 10; i++) {
         f.setFileName(QStringLiteral("%1/file%2.txt").arg(dir.path(), QString::number(i)));

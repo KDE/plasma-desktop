@@ -96,15 +96,6 @@ KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent)
 
     connect(_keyboardRepeatButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(changed()));
     connect(_keyboardRepeatButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(keyboardRepeatStateChanged(int)));
-
-    // Not sure why we need this - if XKB is not found the whole keyboard module won't be compiled
-    //#if !defined(HAVE_XTEST) && !defined(HAVE_XKB)
-    //  ui.numlockButtonGroup->setDisabled( true );
-    //#endif
-    //#if !defined(HAVE_XKB) && !defined(HAVE_XF86MISC)
-    //  ui.delay->setDisabled( true );
-    //  ui.rate->setDisabled( true );
-    //#endif
 }
 
 KCMiscKeyboardWidget::~KCMiscKeyboardWidget()

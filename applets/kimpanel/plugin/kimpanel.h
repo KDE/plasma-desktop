@@ -60,7 +60,7 @@ public:
     Q_INVOKABLE void configure();
     Q_INVOKABLE void exit();
 
-signals:
+Q_SIGNALS:
     void auxTextChanged();
     void preeditTextChanged();
     void lookupTableChanged();
@@ -68,7 +68,7 @@ signals:
     void propertiesChanged();
     void menuTriggered(const QVariantList &props);
 
-private slots:
+private Q_SLOTS:
     void updatePreeditText(const QString &text, const QList<TextAttribute> &attrList);
     void updateAux(const QString &text, const QList<TextAttribute> &attrList);
     void updatePreeditCaret(int pos);

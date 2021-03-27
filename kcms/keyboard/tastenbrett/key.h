@@ -89,7 +89,7 @@ public:
     KeyCap *cap = nullptr;
     bool pressed = false;
 
-signals:
+Q_SIGNALS:
     void pressedChanged();
 };
 

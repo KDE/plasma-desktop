@@ -49,8 +49,8 @@
 #include <X11/keysym.h>
 #include <X11/keysymdef.h>
 
-#define ACTION_NAME_NEXT_ACTIVITY "next activity"
-#define ACTION_NAME_PREVIOUS_ACTIVITY "previous activity"
+static const char *s_action_name_next_activity = "next activity";
+static const char *s_action_name_previous_activity = "previous activity";
 
 namespace
 {
@@ -251,9 +251,9 @@ SwitcherBackend::SwitcherBackend(QObject *parent)
     , m_runningActivitiesModel(new SortedActivitiesModel({KActivities::Info::Running, KActivities::Info::Stopping}, this))
     , m_stoppedActivitiesModel(new SortedActivitiesModel({KActivities::Info::Stopped, KActivities::Info::Starting}, this))
 {
-    registerShortcut(ACTION_NAME_NEXT_ACTIVITY, i18n("Walk through activities"), Qt::META | Qt::Key_Tab, &SwitcherBackend::keybdSwitchToNextActivity);
+    registerShortcut(QString::fromLatin1(s_action_name_next_activity), i18n("Walk through activities"), Qt::META | Qt::Key_Tab, &SwitcherBackend::keybdSwitchToNextActivity);
 
-    registerShortcut(ACTION_NAME_PREVIOUS_ACTIVITY,
+    registerShortcut(QString::fromLatin1(s_action_name_previous_activity),
                      i18n("Walk through activities (Reverse)"),
                      Qt::META | Qt::SHIFT | Qt::Key_Tab,
                      &SwitcherBackend::keybdSwitchToPreviousActivity);
@@ -280,7 +280,7 @@ SwitcherBackend::~SwitcherBackend()
 QObject *SwitcherBackend::instance(QQmlEngine *engine, QJSEngine *scriptEngine)
 {
     Q_UNUSED(scriptEngine)
-    engine->addImageProvider("wallpaperthumbnail", new ThumbnailImageProvider());
+    engine->addImageProvider(QStringLiteral("wallpaperthumbnail"), new ThumbnailImageProvider());
     return new SwitcherBackend();
 }
 
@@ -289,7 +289,7 @@ void SwitcherBackend::keybdSwitchToNextActivity()
     if (isPlatformX11()) {
         // If we are on X11, we have all needed features for meta+tab
         // to work properly
-        if (x11_isReverseTab(m_actionShortcut[ACTION_NAME_PREVIOUS_ACTIVITY])) {
+        if (x11_isReverseTab(m_actionShortcut[QString::fromLatin1(s_action_name_previous_activity)])) {
             switchToActivity(Previous);
         } else {
             switchToActivity(Next);
@@ -376,7 +376,7 @@ void SwitcherBackend::onCurrentActivityChanged(const QString &id)
     KActivities::Info activity(id);
     emit showSwitchNotification(id, activity.name(), activity.icon());
 
-    KConfig config("kactivitymanagerd-switcher");
+    KConfig config(QStringLiteral("kactivitymanagerd-switcher"));
     KConfigGroup times(&config, "LastUsed");
 
     const auto now = QDateTime::currentDateTime().toTime_t();

@@ -81,7 +81,7 @@ public:
     void save() override;
     void defaults() override;
 
-signals:
+Q_SIGNALS:
     void kdedRunningChanged();
 
     void errorMessage(const QString &errorString);

@@ -40,7 +40,7 @@ public:
     bool busyCursorBlinking() const;
     bool busyCursorBouncing() const;
 
-public slots:
+public Q_SLOTS:
     void setBusyCursorDisabled(bool busyCursorDisabled);
     void setBusyCursorStatic(bool busyCursorStatic);
     void setBusyCursorBlinking(bool busyCursorBlinking);
@@ -48,7 +48,7 @@ public slots:
 
     void setSelectedBusyCursor(QString selectedBusyCursor);
 
-signals:
+Q_SIGNALS:
     void busyCursorDisabledChanged();
     void busyCursorStaticChanged();
     void busyCursorBlinkingChanged();

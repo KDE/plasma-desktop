@@ -138,10 +138,10 @@ public:
     Shape *shape = nullptr;
     bool on = false;
 
-signals:
+Q_SIGNALS:
     void onChanged();
 
-private slots:
+private Q_SLOTS:
     void refreshState();
 };
 

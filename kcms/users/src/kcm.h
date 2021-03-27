@@ -48,7 +48,7 @@ public:
     Q_SCRIPTABLE QString initializeString(const QString &stringToGrabInitialsOf);
     Q_SCRIPTABLE QString plonkImageInTempfile(const QImage &image);
 
-signals:
+Q_SIGNALS:
     Q_SCRIPTABLE void apply();
     Q_SCRIPTABLE void reset();
 

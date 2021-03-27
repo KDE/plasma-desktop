@@ -30,7 +30,7 @@ public:
     explicit DeviceAutomounter(QObject *parent = nullptr, const QVariantList &args = QVariantList());
     ~DeviceAutomounter() override;
 
-private slots:
+private Q_SLOTS:
     void init();
     void deviceAdded(const QString &udi);
     void deviceMountChanged(bool accessible, const QString &udi);

@@ -44,7 +44,7 @@ void XkbLayoutManager::setLatinLayouts(const gchar **variants, gsize length)
 void XkbLayoutManager::getLayout()
 {
     QProcess process;
-    process.start(XKB_COMMAND, QStringList(XKB_QUERY_ARG));
+    process.start(QString::fromLatin1(XKB_COMMAND), QStringList(QString::fromLatin1(XKB_QUERY_ARG)));
     process.waitForFinished();
     QByteArray output = process.readAllStandardOutput();
     QList<QByteArray> lines = output.split('\n');
@@ -76,63 +76,65 @@ void XkbLayoutManager::setLayout(IBusEngineDesc *desc)
     QString variant = QString::fromUtf8(cvariant ? cvariant : "");
     QString option = QString::fromUtf8(coption ? coption : "");
 
-    if (layout == "default" && (variant == "default" || variant == "") && (option == "default" || option == "")) {
+    if (layout == QLatin1String{"default"}
+        && (variant.isEmpty() || variant == QLatin1String{"default"})
+        && (option.isEmpty() && option == QLatin1String{"default"})) {
         return;
     }
 
     bool need_us_layout = false;
-    if (variant != "eng") {
+    if (variant != QLatin1String{"eng"}) {
         need_us_layout = m_latinLayouts.contains(layout);
     }
-    if (!need_us_layout && variant != "") {
-        need_us_layout = m_latinLayouts.contains(QString("%1(%2)").arg(layout, variant));
+    if (!variant.isEmpty() && !need_us_layout) {
+        need_us_layout = m_latinLayouts.contains(QLatin1String("%1(%2)").arg(layout, variant));
     }
 
-    if (m_defaultLayout == "") {
+    if (m_defaultLayout.isEmpty()) {
         getLayout();
     }
 
-    if (layout == "default" || layout == "") {
+    if (layout.isEmpty() || layout == QLatin1String{"default"}) {
         layout = m_defaultLayout;
         variant = m_defaultVariant;
     }
 
-    if (layout == "") {
+    if (layout.isEmpty()) {
         g_warning("Could not get the correct layout");
         return;
     }
 
-    if (option == "default" || option == "") {
+    if (option.isEmpty() || option == QLatin1String{"default"}) {
         option = m_defaultOption;
     } else {
-        if (!(m_defaultOption.split(",").contains(option))) {
-            option = QString("%1,%2").arg(m_defaultOption, option);
+        if (!(m_defaultOption.split(QLatin1Char{','}).contains(option))) {
+            option = QLatin1String("%1,%2").arg(m_defaultOption, option);
         } else {
             option = m_defaultOption;
         }
     }
 
     if (need_us_layout) {
-        layout += ",us";
-        if (variant != "") {
-            variant += ",";
+        layout += QLatin1String{",us"};
+        if (!variant.isEmpty()) {
+            variant += QLatin1Char{','};
         }
     }
 
     QStringList args;
-    args << XKB_LAYOUT_ARG;
+    args << QString::fromLatin1(XKB_LAYOUT_ARG);
     args << layout;
-    if (variant != "" && variant != "default") {
-        args << "-variant";
+    if (!variant.isEmpty() && variant != QLatin1String("default")) {
+        args << QStringLiteral("-variant");
         args << variant;
     }
-    if (option != "" && option != "default") {
+    if (!option.isEmpty() && option != QLatin1String("default")) {
         /*TODO: Need to get the session XKB options */
-        args << "-option";
+        args << QStringLiteral("-option");
         args << option;
     }
 
-    int exit_status = QProcess::execute(XKB_COMMAND, args);
+    int exit_status = QProcess::execute(QString::fromLatin1(XKB_COMMAND), args);
 
     if (exit_status != 0) {
         g_warning("Execute setxkbmap failed.");
@@ -149,8 +151,8 @@ void XkbLayoutManager::runXmodmap()
 
     QDir home = QDir::home();
     for (size_t i = 0; i < sizeof(XMODMAP_KNOWN_FILES) / sizeof(XMODMAP_KNOWN_FILES[0]); i++) {
-        if (home.exists(XMODMAP_KNOWN_FILES[i])) {
-            QProcess::startDetached(XMODMAP_COMMAND, QStringList(home.filePath(XMODMAP_KNOWN_FILES[i])));
+        if (home.exists(QString::fromLatin1(XMODMAP_KNOWN_FILES[i]))) {
+            QProcess::startDetached(QString::fromLatin1(XMODMAP_COMMAND), QStringList{home.filePath(QString::fromLatin1(XMODMAP_KNOWN_FILES[i]))});
             break;
         }
     }

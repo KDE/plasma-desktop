@@ -67,7 +67,7 @@ QString KdePlatformDependent::getAccessToken(const QUrl & /*baseUrl*/) const
     QString idToken;
     Accounts::Manager *accountsManager = KAccounts::accountsManager();
     if (accountsManager) {
-        static const QString serviceType{"opendesktop-rating"};
+        static const QString serviceType{QStringLiteral("opendesktop-rating")};
         Accounts::AccountIdList accountIds = accountsManager->accountList(serviceType);
         // TODO Present the user with a choice in case there's more than one, but for now just pick the first successful one
         // loop through the accounts, and attempt to get them
@@ -81,8 +81,8 @@ QString KdePlatformDependent::getAccessToken(const QUrl & /*baseUrl*/) const
                 connect(job, &KJob::finished, [&completed, &accessToken, &idToken](KJob *kjob) {
                     GetCredentialsJob *job = qobject_cast<GetCredentialsJob *>(kjob);
                     QVariantMap credentialsData = job->credentialsData();
-                    accessToken = credentialsData["AccessToken"].toString();
-                    idToken = credentialsData["IdToken"].toString();
+                    accessToken = credentialsData[QStringLiteral("AccessToken")].toString();
+                    idToken = credentialsData[QStringLiteral("IdToken")].toString();
                     // As this can be useful for more heavy duty debugging purposes, leaving this in so it doesn't have to be rewritten
                     //                     if (!accessToken.isEmpty()) {
                     //                         qCDebug(ATTICA_PLUGIN_LOG) << "Credentials data was retrieved";
@@ -122,7 +122,7 @@ QString KdePlatformDependent::getAccessToken(const QUrl & /*baseUrl*/) const
 QUrl baseUrlFromRequest(const QNetworkRequest &request)
 {
     const QUrl url{request.url()};
-    QString baseUrl = QString("%1://%2").arg(url.scheme()).arg(url.host());
+    QString baseUrl = QLatin1String("%1://%2").arg(url.scheme(), url.host());
     int port = url.port();
     if (port != -1) {
         baseUrl.append(QString::number(port));

@@ -71,7 +71,7 @@ public:
     bool needsSave() const;
     void refreshAutoloadEnabledSavedState();
 
-signals:
+Q_SIGNALS:
     void autoloadedModulesChanged();
 
 private:

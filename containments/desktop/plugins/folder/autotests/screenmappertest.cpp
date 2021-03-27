@@ -77,7 +77,7 @@ void ScreenMapperTest::tst_addMapping()
     const auto path = ScreenMapper::stringToUrl(QStringLiteral("desktop:/"));
     addScreens(path);
     QSignalSpy s(m_screenMapper, &ScreenMapper::screenMappingChanged);
-    QString file("desktop:/foo%1.txt");
+    QString file(QStringLiteral("desktop:/foo%1.txt"));
 
     for (int i = 0; i < 3; i++) {
         const QUrl url = ScreenMapper::stringToUrl(file.arg(i));
@@ -91,7 +91,7 @@ void ScreenMapperTest::tst_addRemoveScreenWithItems()
 {
     const auto path = ScreenMapper::stringToUrl(QStringLiteral("desktop:/"));
     addScreens(path);
-    QString file("desktop:/foo%1.txt");
+    QString file(QStringLiteral("desktop:/foo%1.txt"));
 
     for (int i = 0; i < 3; i++) {
         const QUrl url = ScreenMapper::stringToUrl(file.arg(i));

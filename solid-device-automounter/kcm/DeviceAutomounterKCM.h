@@ -36,11 +36,11 @@ public:
     explicit DeviceAutomounterKCM(QWidget *parent = nullptr, const QVariantList &args = QVariantList());
     ~DeviceAutomounterKCM() override;
 
-public slots:
+public Q_SLOTS:
     void load() override;
     void save() override;
 
-private slots:
+private Q_SLOTS:
     void updateForgetDeviceButton();
     void forgetSelectedDevices();
 

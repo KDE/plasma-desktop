@@ -39,7 +39,7 @@
 #include <KWindowSystem>
 #include <QX11Info>
 
-#define PLASMACONFIG "plasma-org.kde.plasma.desktop-appletsrc"
+static const char *s_plasma_config = "plasma-org.kde.plasma.desktop-appletsrc";
 
 namespace
 {
@@ -48,11 +48,11 @@ class BackgroundCache : public QObject
 public:
     BackgroundCache()
         : initialized(false)
-        , plasmaConfig(KSharedConfig::openConfig(PLASMACONFIG))
+        , plasmaConfig(KSharedConfig::openConfig(QString::fromLatin1(s_plasma_config)))
     {
         using namespace std::placeholders;
 
-        const QString configFile = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1Char('/') + PLASMACONFIG;
+        const QString configFile = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1Char{'/'} + QLatin1String{s_plasma_config};
 
         KDirWatch::self()->addFile(configFile);
 
@@ -62,7 +62,7 @@ public:
 
     void settingsFileChanged(const QString &file)
     {
-        if (!file.endsWith(PLASMACONFIG)) {
+        if (!file.endsWith(QLatin1String{s_plasma_config})) {
             return;
         }
 
@@ -146,7 +146,7 @@ public:
             //          << "last screen is" << lastScreen
             //          ;
 
-            if (processed && newForActivity[activity][0] != '#')
+            if (processed && newForActivity[activity][0] != QLatin1Char{'#'})
                 continue;
 
             // Marking the current activity as processed
@@ -233,7 +233,7 @@ SortedActivitiesModel::SortedActivitiesModel(const QVector<KActivities::Info::St
         KWindowInfo info(window, NET::WMVisibleName, NET::WM2Activities);
         const QStringList activities = info.activities();
 
-        if (activities.isEmpty() || activities.contains("00000000-0000-0000-0000-000000000000"))
+        if (activities.isEmpty() || activities.contains(QLatin1String{"00000000-0000-0000-0000-000000000000"}))
             continue;
 
         for (const auto &activity : activities) {
@@ -275,7 +275,7 @@ uint SortedActivitiesModel::lastUsedTime(const QString &activity) const
         return ~(uint)0;
 
     } else {
-        KConfig config("kactivitymanagerd-switcher", KConfig::SimpleConfig);
+        KConfig config(QStringLiteral("kactivitymanagerd-switcher"), KConfig::SimpleConfig);
         KConfigGroup times(&config, "LastUsed");
 
         return times.readEntry(activity, (uint)0);
@@ -444,7 +444,7 @@ void SortedActivitiesModel::onWindowAdded(WId window)
     KWindowInfo info(window, NET::Properties(), NET::WM2Activities);
     const QStringList activities = info.activities();
 
-    if (activities.isEmpty() || activities.contains("00000000-0000-0000-0000-000000000000"))
+    if (activities.isEmpty() || activities.contains(QLatin1String{"00000000-0000-0000-0000-000000000000"}))
         return;
 
     for (const auto &activity : activities) {

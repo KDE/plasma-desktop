@@ -62,11 +62,11 @@ public:
     void setAutomaticMountOnLogin(bool automaticLogin);
     void setAutomaticMountOnPlugin(bool automaticAttached);
 
-public slots:
+public Q_SLOTS:
     void forgetDevice(const QString &udi);
     void reload();
 
-private slots:
+private Q_SLOTS:
     void deviceAttached(const QString &udi);
     void deviceRemoved(const QString &udi);
 

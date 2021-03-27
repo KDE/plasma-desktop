@@ -109,7 +109,7 @@ public:
         QLocale locale;
         QVector<QString> dicts;
         const auto bcp = locale.bcp47Name();
-        const QString dictName = "ibus/dicts/emoji-" + QString(bcp).replace(QLatin1Char('-'), QLatin1Char('_')) + ".dict";
+        const QString dictName = QLatin1String{"ibus/dicts/emoji-"} + QString(bcp).replace(QLatin1Char('-'), QLatin1Char('_')) + QLatin1String{".dict"};
         const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, dictName);
         if (!path.isEmpty()) {
             dicts << path;
@@ -117,7 +117,7 @@ public:
 
         const auto idxSpecific = bcp.indexOf(QLatin1Char('-'));
         if (idxSpecific > 0) {
-            const QString genericDictName = "ibus/dicts/emoji-" + bcp.leftRef(idxSpecific) + ".dict";
+            const QString genericDictName = QLatin1String{"ibus/dicts/emoji-"} + bcp.leftRef(idxSpecific) + QLatin1String{".dict"};
             const QString genericPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, genericDictName);
 
             if (!genericPath.isEmpty()) {
@@ -126,8 +126,7 @@ public:
         }
 
         if (dicts.isEmpty()) {
-            const QString genericDictName = "ibus/dicts/emoji-en.dict";
-            const QString genericPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, genericDictName);
+            const QString genericPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("ibus/dicts/emoji-en.dict"));
 
             if (!genericPath.isEmpty()) {
                 dicts << genericPath;
@@ -154,7 +153,7 @@ public:
                 }
 
                 const QString emoji = QString::fromUtf8(ibus_emoji_data_get_emoji(data));
-                const QString description = ibus_emoji_data_get_description(data);
+                const QString description = QString::fromUtf8(ibus_emoji_data_get_description(data));
                 if (description == QString::fromUtf8("↑↑↑") || description.isEmpty() || processedEmoji.contains(emoji)) {
                     continue;
                 }

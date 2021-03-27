@@ -54,7 +54,7 @@ public:
     bool progressVisible() const;
     bool urgent() const;
 
-signals:
+Q_SIGNALS:
     void launcherUrlChanged(const QUrl &launcherUrl);
 
     void countChanged(int count);

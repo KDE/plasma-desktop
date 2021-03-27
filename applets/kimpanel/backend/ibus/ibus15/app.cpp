@@ -189,7 +189,7 @@ App::App(int &argc, char *argv[])
 
     initIconMap(m_iconMap);
     m_watcher->setConnection(QDBusConnection::sessionBus());
-    m_watcher->addWatchedService("org.kde.impanel");
+    m_watcher->addWatchedService(QStringLiteral("org.kde.impanel"));
     init();
 }
 

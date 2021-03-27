@@ -63,7 +63,7 @@ public:
 
     QHash<QString, QString> unityMappingRules() const;
 
-signals:
+Q_SIGNALS:
     void countChanged(const QString &uri, int count);
     void countVisibleChanged(const QString &uri, bool countVisible);
     void progressChanged(const QString &uri, int progress);
@@ -73,7 +73,7 @@ signals:
     void reloadRequested(const QString &uri);
     void launcherRemoved(const QString &uri);
 
-private slots:
+private Q_SLOTS:
     void update(const QString &uri, const QMap<QString, QVariant> &properties);
 
 private:

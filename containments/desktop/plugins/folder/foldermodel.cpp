@@ -1040,6 +1040,25 @@ static bool isDropBetweenSharedViews(const QList<QUrl> &urls, const QUrl &folder
     return true;
 }
 
+static const char *s_ark_dndextract_service = "application/x-kde-ark-dndextract-service";
+static const char *s_ark_dndextract_path = "application/x-kde-ark-dndextract-path";
+
+static QString arkDbusServiceName(const QMimeData *mimeData)
+{
+    return QString::fromUtf8(mimeData->data(QString::fromLatin1(s_ark_dndextract_service)));
+}
+
+static QString arkDbusPath(const QMimeData *mimeData)
+{
+    return QString::fromUtf8(mimeData->data(QString::fromLatin1(s_ark_dndextract_path)));
+}
+
+static bool isMimeDataArkDnd(const QMimeData *mimeData)
+{
+    return mimeData->hasFormat(QString::fromLatin1(s_ark_dndextract_service)) //
+        && mimeData->hasFormat(QString::fromLatin1(s_ark_dndextract_path));
+}
+
 void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool showMenuManually)
 {
     QMimeData *mimeData = qobject_cast<QMimeData *>(dropEvent->property("mimeData").value<QObject *>());
@@ -1122,13 +1141,9 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
         return;
     }
 
-    if (mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-service"))
-        && mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-path"))) {
-        const QString remoteDBusClient = mimeData->data(QStringLiteral("application/x-kde-ark-dndextract-service"));
-        const QString remoteDBusPath = mimeData->data(QStringLiteral("application/x-kde-ark-dndextract-path"));
-
-        QDBusMessage message = QDBusMessage::createMethodCall(remoteDBusClient,
-                                                              remoteDBusPath,
+    if (isMimeDataArkDnd(mimeData)) {
+        QDBusMessage message = QDBusMessage::createMethodCall(arkDbusServiceName(mimeData),
+                                                              arkDbusPath(mimeData),
                                                               QStringLiteral("org.kde.ark.DndExtract"),
                                                               QStringLiteral("extractSelectedFilesTo"));
         message.setArguments({dropTargetUrl.toDisplayString(QUrl::PreferLocalFile)});
@@ -1238,13 +1253,9 @@ void FolderModel::dropCwd(QObject *dropEvent)
         return;
     }
 
-    if (mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-service"))
-        && mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-path"))) {
-        const QString remoteDBusClient = mimeData->data(QStringLiteral("application/x-kde-ark-dndextract-service"));
-        const QString remoteDBusPath = mimeData->data(QStringLiteral("application/x-kde-ark-dndextract-path"));
-
-        QDBusMessage message = QDBusMessage::createMethodCall(remoteDBusClient,
-                                                              remoteDBusPath,
+    if (isMimeDataArkDnd(mimeData)) {
+        QDBusMessage message = QDBusMessage::createMethodCall(arkDbusServiceName(mimeData),
+                                                              arkDbusPath(mimeData),
                                                               QStringLiteral("org.kde.ark.DndExtract"),
                                                               QStringLiteral("extractSelectedFilesTo"));
         message.setArguments(QVariantList() << m_dirModel->dirLister()->url().adjusted(QUrl::PreferLocalFile).toString());

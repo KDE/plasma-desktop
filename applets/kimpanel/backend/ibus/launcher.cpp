@@ -47,30 +47,35 @@ public Q_SLOTS:
         // Check if applet is still there.
         connect(m_watcher, &QDBusServiceWatcher::serviceUnregistered, this, &IBusPanelLauncher::serviceUnregistered);
         connect(m_watcher, &QDBusServiceWatcher::serviceRegistered, this, &IBusPanelLauncher::serviceRegistered);
-        m_watcher->addWatchedService("org.kde.impanel");
-        m_watcher->addWatchedService("org.freedesktop.IBus");
+        m_watcher->addWatchedService(QStringLiteral("org.kde.impanel"));
+        m_watcher->addWatchedService(QStringLiteral("org.freedesktop.IBus"));
 
         // check if panel is already created
-        QDBusConnection::sessionBus().connect("org.kde.impanel", "/org/kde/impanel", "org.kde.impanel2", "PanelRegistered", this, SLOT(quit()));
-        if (!QDBusConnection::sessionBus().interface()->isServiceRegistered("org.kde.impanel")) {
+        QDBusConnection::sessionBus().connect(QStringLiteral("org.kde.impanel"),
+                                              QStringLiteral("/org/kde/impanel"),
+                                              QStringLiteral("org.kde.impanel2"),
+                                              QStringLiteral("PanelRegistered"),
+                                              this,
+                                              SLOT(quit()));
+        if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.impanel"))) {
             quit();
             return;
         }
-        if (QDBusConnection::sessionBus().interface()->isServiceRegistered("org.freedesktop.IBus")) {
-            serviceRegistered("org.freedesktop.IBus");
+        if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.freedesktop.IBus"))) {
+            serviceRegistered(QStringLiteral("org.freedesktop.IBus"));
         }
     }
 
     void serviceRegistered(const QString &service)
     {
-        if (service == "org.freedesktop.IBus") {
+        if (service == QLatin1String{"org.freedesktop.IBus"}) {
             launchIBusPanel();
         }
     }
 
     void serviceUnregistered(const QString &service)
     {
-        if (service == "org.kde.impanel") {
+        if (service == QLatin1String{"org.kde.impanel"}) {
             quit();
         }
     }

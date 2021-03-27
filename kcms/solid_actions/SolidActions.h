@@ -40,7 +40,7 @@ public:
     void save() override;
     void defaults() override;
 
-private slots:
+private Q_SLOTS:
     void addAction();
     void editAction();
     void deleteAction();

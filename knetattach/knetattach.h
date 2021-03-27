@@ -31,7 +31,7 @@ class KNetAttach : public QWizard, private Ui_KNetAttach
 public:
     explicit KNetAttach(QWidget *parent = nullptr);
 
-public slots:
+public Q_SLOTS:
     virtual void setInformationText(const QString &type);
 
 private:
@@ -40,7 +40,7 @@ private:
     bool doConnectionTest(const QUrl &url);
     bool updateForProtocol(const QString &protocol);
 
-private slots:
+private Q_SLOTS:
     void updateParametersPageStatus();
     bool validateCurrentPage() override;
     void updatePort(bool encryption);

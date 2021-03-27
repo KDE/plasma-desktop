@@ -41,7 +41,7 @@ void FolderModelTest::createTestFolder(const QString &path)
     QDir dir(m_folderDir->path());
     dir.mkdir(path);
     dir.cd(path);
-    dir.mkdir("firstDir");
+    dir.mkdir(QStringLiteral("firstDir"));
     QFile f;
     for (int i = 1; i < 10; i++) {
         f.setFileName(QStringLiteral("%1/file%2.txt").arg(dir.path(), QString::number(i)));
@@ -109,8 +109,8 @@ void FolderModelTest::tst_listingFolderNotFirst()
 void FolderModelTest::tst_filterListing()
 {
     // a little bit weird API, as both pattern and mimetype needs to be set
-    m_folderModel->setFilterPattern("*.txt");
-    m_folderModel->setFilterMimeTypes({"all/all"});
+    m_folderModel->setFilterPattern(QStringLiteral("*.txt"));
+    m_folderModel->setFilterMimeTypes(QStringList{QStringLiteral("all/all")});
     m_folderModel->setFilterMode(FolderModel::FilterShowMatches);
     const auto count = m_folderModel->rowCount();
     QCOMPARE(count, 9);
@@ -326,12 +326,12 @@ void FolderModelTest::tst_multiScreen()
     // create a new item, it appears on the first screen
     QDir dir(m_folderDir->path());
     dir.cd(desktop);
-    dir.mkdir("secondDir");
-    dir.cd("secondDir");
+    dir.mkdir(QStringLiteral("secondDir"));
+    dir.cd(QStringLiteral("secondDir"));
     s.wait(1000);
     QCOMPARE(m_folderModel->rowCount(), count);
     QCOMPARE(secondFolderModel.rowCount(), 1);
-    QCOMPARE(screenMapper->screenForItem(stringToUrl("file://" + dir.path())), 0);
+    QCOMPARE(screenMapper->screenForItem(stringToUrl(QLatin1String("file://") + dir.path())), 0);
 }
 
 void FolderModelTest::tst_multiScreenDifferenPath()
@@ -357,14 +357,14 @@ void FolderModelTest::tst_multiScreenDifferenPath()
     // create a new item, it appears on the first screen
     QDir dir(m_folderDir->path());
     dir.cd(desktop);
-    dir.mkdir("secondDir");
+    dir.mkdir(QStringLiteral("secondDir"));
     s.wait(1000);
     QCOMPARE(m_folderModel->rowCount(), count + 1);
     QCOMPARE(secondFolderModel.rowCount(), count2);
 
     // create a new item, it appears on the second screen
     dir.cd(m_folderDir->path() + QDir::separator() + desktop2);
-    dir.mkdir("secondDir2");
+    dir.mkdir(QStringLiteral("secondDir2"));
     s.wait(1000);
     QCOMPARE(m_folderModel->rowCount(), count + 1);
     QCOMPARE(secondFolderModel.rowCount(), count2 + 1);

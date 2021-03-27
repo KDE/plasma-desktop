@@ -367,8 +367,8 @@ static void impanel_get_default_engine(IBusPanelImpanel *impanel, char ***pengin
 
     QList<QByteArray> engineList;
     impanel->xkbLayoutManager->getLayout();
-    QStringList layouts = impanel->xkbLayoutManager->defaultLayout().split(',');
-    QStringList variants = impanel->xkbLayoutManager->defaultVariant().split(',');
+    QStringList layouts = impanel->xkbLayoutManager->defaultLayout().split(QLatin1Char{','});
+    QStringList variants = impanel->xkbLayoutManager->defaultVariant().split(QLatin1Char{','});
 
     for (int i = 0; i < layouts.size(); i++) {
         QString variant;
@@ -393,8 +393,8 @@ static void impanel_get_default_engine(IBusPanelImpanel *impanel, char ***pengin
         locale = "C";
     }
 
-    QStringList localeList = QString(locale).split('.');
-    QString lang = localeList.size() > 0 ? localeList[0] : "";
+    QStringList localeList = QString::fromLocal8Bit(locale).split(QLatin1Char{'.'});
+    const QString lang = localeList.size() > 0 ? localeList.at(0) : QString{};
 
     bool added = false;
     for (GList *engine = g_list_first(engines); engine != nullptr; engine = g_list_next(engine)) {
@@ -411,8 +411,8 @@ static void impanel_get_default_engine(IBusPanelImpanel *impanel, char ***pengin
     }
 
     if (!added) {
-        localeList = QString(lang).split('_');
-        QString lang = localeList.size() > 0 ? localeList[0] : "";
+        localeList = QString(lang).split(QLatin1Char{'_'});
+        QString _lang = localeList.size() > 0 ? localeList.at(0) : QString{};
 
         for (GList *engine = g_list_first(engines); engine != nullptr; engine = g_list_next(engine)) {
             IBusEngineDesc *desc = IBUS_ENGINE_DESC(engine->data);
@@ -421,7 +421,7 @@ static void impanel_get_default_engine(IBusPanelImpanel *impanel, char ***pengin
                 continue;
             }
 
-            if (QLatin1String(ibus_engine_desc_get_language(desc)) == lang && ibus_engine_desc_get_rank(desc) > 0) {
+            if (QLatin1String(ibus_engine_desc_get_language(desc)) == _lang && ibus_engine_desc_get_rank(desc) > 0) {
                 engineList << name;
             }
         }

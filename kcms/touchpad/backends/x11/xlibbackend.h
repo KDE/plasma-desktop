@@ -82,7 +82,7 @@ public:
     QStringList listMouses(const QStringList &blacklist) override;
     QVector<QObject *> getDevices() const override;
 
-private slots:
+private Q_SLOTS:
     void propertyChanged(xcb_atom_t);
     void touchpadDetached();
     void devicePlugged(int);

@@ -141,7 +141,7 @@ void Kimpanel::updateLookupTableFull(const KimpanelLookupTable &lookupTable, int
 void Kimpanel::updateProperty(const KimpanelProperty &property)
 {
     for (auto &prop : m_props) {
-        if (prop.toMap()["key"] == property.key) {
+        if (prop.toMap()[QStringLiteral("key")] == property.key) {
             prop = property.toMap();
             emit propertiesChanged();
             break;
