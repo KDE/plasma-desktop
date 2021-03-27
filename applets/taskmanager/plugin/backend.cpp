@@ -390,12 +390,15 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
     }
 
     if (actionCount > 0) {
+        QAction *separatorAction = new QAction(parent);
+        separatorAction->setSeparator(true);
+        actions << QVariant::fromValue<QAction *>(separatorAction);
+
         QAction *action = new QAction(parent);
         action->setText(i18n("Forget Recent Files"));
         action->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear-history")));
         action->setProperty("agent", storageId);
         connect(action, &QAction::triggered, this, &Backend::handleRecentDocumentAction);
-
         actions << QVariant::fromValue<QAction *>(action);
     }
 
