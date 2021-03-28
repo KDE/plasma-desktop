@@ -37,7 +37,7 @@
 #include "xkb_helper.h"
 #include "xkb_rules.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(KeyboardFactory, "keyboard.json", registerPlugin<KeyboardDaemon>();)
+K_PLUGIN_CLASS_WITH_JSON(KeyboardDaemon, "keyboard.json")
 
 KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)

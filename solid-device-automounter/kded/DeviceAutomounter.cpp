@@ -30,7 +30,7 @@
 
 #include <QTimer>
 
-K_PLUGIN_FACTORY_WITH_JSON(DeviceAutomounterFactory, "device_automounter.json", registerPlugin<DeviceAutomounter>();)
+K_PLUGIN_CLASS_WITH_JSON(DeviceAutomounter, "device_automounter.json")
 
 DeviceAutomounter::DeviceAutomounter(QObject *parent, const QVariantList &args)
     : KDEDModule(parent)

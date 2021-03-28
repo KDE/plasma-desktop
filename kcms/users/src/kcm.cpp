@@ -40,7 +40,7 @@
 
 Q_LOGGING_CATEGORY(kcm_users, "kcm_users")
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMUserFactory, "kcm_users.json", registerPlugin<KCMUser>();)
+K_PLUGIN_CLASS_WITH_JSON(KCMUser, "kcm_users.json")
 
 KCMUser::KCMUser(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)

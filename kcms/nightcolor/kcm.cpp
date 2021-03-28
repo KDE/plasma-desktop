@@ -20,10 +20,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <KLocalizedString>
 #include <KPluginFactory>
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMNightColorFactory, "kcm_nightcolor.json", registerPlugin<ColorCorrect::KCMNightColor>();)
 
 namespace ColorCorrect
 {
+K_PLUGIN_CLASS_WITH_JSON(KCMNightColor, "kcm_nightcolor.json")
+
 KCMNightColor::KCMNightColor(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
 {

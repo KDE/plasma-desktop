@@ -35,7 +35,7 @@
 #include <KPluginFactory>
 #include <KSharedConfig>
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMFormatsFactory, "formats.json", registerPlugin<KCMFormats>();)
+K_PLUGIN_CLASS_WITH_JSON(KCMFormats, "formats.json")
 
 KCMFormats::KCMFormats(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
