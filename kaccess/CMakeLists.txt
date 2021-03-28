@@ -5,11 +5,11 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kaccess\")
 find_package(Phonon4Qt5 REQUIRED NO_MODULE)
 include_directories(${PHONON_INCLUDE_DIR})
 
-set(kaccess_KDEINIT_SRCS kaccess.cpp main.cpp )
+set(kaccess_SRCS kaccess.cpp main.cpp )
 
-kf5_add_kdeinit_executable(kaccess ${kaccess_KDEINIT_SRCS})
+add_executable(kaccess ${kaccess_SRCS})
 
-target_link_libraries(kdeinit_kaccess
+target_link_libraries(kaccess
     Qt::Widgets
     Qt::X11Extras
     KF5::CoreAddons
@@ -25,8 +25,7 @@ target_link_libraries(kdeinit_kaccess
     ${X11_LIBRARIES}
 )
 
-install(TARGETS kdeinit_kaccess ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
-install(TARGETS kaccess         ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS kaccess ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### install files ###############
 

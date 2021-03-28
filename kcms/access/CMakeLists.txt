@@ -3,8 +3,6 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcmaccess\")
 
 set(kcm_access_PART_SRCS kcmaccess.cpp )
 
-# needed for krdb
-qt5_add_dbus_interface(kcm_access_PART_SRCS ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml klauncher_iface)
 kconfig_add_kcfg_files(kcm_access_PART_SRCS
     kcmaccessibilitybell.kcfgc
     kcmaccessibilitykeyboard.kcfgc

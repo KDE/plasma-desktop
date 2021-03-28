@@ -20,6 +20,7 @@
 */
 
 #include "kaccess.h"
+
 #include <KAboutData>
 #include <KLocalizedString>
 #include <Kdelibs4ConfigMigrator>
@@ -27,7 +28,7 @@
 #include <QDebug>
 #include <QX11Info>
 
-extern "C" Q_DECL_EXPORT int kdemain(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     Kdelibs4ConfigMigrator migrate(QStringLiteral("kaccess"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("kaccessrc"));
