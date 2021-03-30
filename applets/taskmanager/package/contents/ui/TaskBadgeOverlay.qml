@@ -33,12 +33,14 @@ Item {
             readonly property int offset: Math.round(Math.max(PlasmaCore.Units.smallSpacing / 2, badgeMask.width / 32))
             x: Qt.application.layoutDirection === Qt.RightToLeft ? -offset + iconWidthDelta : parent.width - width + offset - iconWidthDelta
             y: -offset
+            visible: task.smartLauncherItem.countVisible
             width: badgeRect.width + offset * 2
             height: badgeRect.height + offset * 2
             radius: badgeRect.radius + offset * 2
 
             // Badge changes width based on number.
             onWidthChanged: maskShaderSource.scheduleUpdate()
+            onVisibleChanged: maskShaderSource.scheduleUpdate()
         }
     }
 
@@ -82,6 +84,7 @@ Item {
         id: badgeRect
         x: Qt.application.layoutDirection === Qt.RightToLeft ? iconWidthDelta : parent.width - width - iconWidthDelta
         height: Math.round(parent.height * 0.4)
+        visible: task.smartLauncherItem.countVisible
 
         number: task.smartLauncherItem.count
     }
