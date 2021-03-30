@@ -119,9 +119,8 @@ private:
     QQuickItem *m_taskManagerItem = nullptr;
     QQuickItem *m_toolTipItem = nullptr;
     QQuickWindow *m_groupDialog = nullptr;
-    WId m_panelWinId;
     bool m_highlightWindows;
-    QList<WId> m_windowsToHighlight;
+    QStringList m_windowsToHighlight;
     QActionGroup *m_actionGroup = nullptr;
     KActivities::Consumer *m_activitiesConsumer = nullptr;
 };
