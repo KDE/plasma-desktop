@@ -163,7 +163,7 @@ function activateTask(index, model, modifiers, task) {
         // ==================================================
         // Make sure the Present Windows effect is  are actually enabled though;
         // if not, fall through to the next option.
-        else if (backend.canPresentWindows()
+        else if (backend.canPresentWindows
             && (plasmoid.configuration.groupedTaskVisualization === 2
             || plasmoid.configuration.groupedTaskVisualization === 1)
         ) {

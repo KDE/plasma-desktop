@@ -45,6 +45,7 @@ class Backend : public QObject
     Q_PROPERTY(QQuickItem *toolTipItem READ toolTipItem WRITE setToolTipItem NOTIFY toolTipItemChanged)
     Q_PROPERTY(QQuickWindow *groupDialog READ groupDialog WRITE setGroupDialog NOTIFY groupDialogChanged)
     Q_PROPERTY(bool highlightWindows READ highlightWindows WRITE setHighlightWindows NOTIFY highlightWindowsChanged)
+    Q_PROPERTY(bool canPresentWindows READ canPresentWindows NOTIFY canPresentWindowsChanged)
 
 public:
     enum MiddleClickAction {
@@ -82,7 +83,7 @@ public:
 
     Q_INVOKABLE void ungrabMouse(QQuickItem *item) const;
 
-    Q_INVOKABLE bool canPresentWindows() const;
+    bool canPresentWindows() const;
 
     Q_INVOKABLE bool isApplication(const QUrl &url) const;
 
@@ -104,6 +105,7 @@ Q_SIGNALS:
     void groupDialogChanged() const;
     void highlightWindowsChanged() const;
     void addLauncher(const QUrl &url) const;
+    void canPresentWindowsChanged();
 
     void showAllPlaces();
 
@@ -123,6 +125,7 @@ private:
     QStringList m_windowsToHighlight;
     QActionGroup *m_actionGroup = nullptr;
     KActivities::Consumer *m_activitiesConsumer = nullptr;
+    bool m_canPresentWindows = false;
 };
 
 #endif

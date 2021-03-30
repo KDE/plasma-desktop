@@ -79,21 +79,21 @@ Item {
         // "You asked for Tooltips but Tooltips are disabled" message
         Kirigami.InlineMessage {
             Layout.fillWidth: true
-            visible: groupedTaskVisualization.currentIndex === 1 && !plasmoid.configuration.showToolTips && backend.canPresentWindows()
+            visible: groupedTaskVisualization.currentIndex === 1 && !plasmoid.configuration.showToolTips && backend.canPresentWindows
             type: Kirigami.MessageType.Warning
             text: i18n("Tooltips are disabled, so the 'Present Windows' effect will be displayed instead.")
         }
         // "You asked for Tooltips but Tooltips are disabled and Present Windows is not available" message
         Kirigami.InlineMessage {
             Layout.fillWidth: true
-            visible: groupedTaskVisualization.currentIndex === 1 && !plasmoid.configuration.showToolTips && !backend.canPresentWindows()
+            visible: groupedTaskVisualization.currentIndex === 1 && !plasmoid.configuration.showToolTips && !backend.canPresentWindows
             type: Kirigami.MessageType.Warning
             text: i18n("Tooltips are disabled, and the 'Present Windows' effect is not enabled or otherwise available right now, so a textual list will be displayed instead")
         }
         // "You asked for Present Windows but Present Windows is not available" message
         Kirigami.InlineMessage {
             Layout.fillWidth: true
-            visible: groupedTaskVisualization.currentIndex === 2 && !backend.canPresentWindows()
+            visible: groupedTaskVisualization.currentIndex === 2 && !backend.canPresentWindows
             type: Kirigami.MessageType.Warning
             text: i18n("The 'Present Windows' effect is not enabled or otherwise available right now, so a textual list will be displayed instead.")
         }

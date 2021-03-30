@@ -36,9 +36,12 @@
 #include <QActionGroup>
 #include <QApplication>
 #include <QDBusConnection>
+#include <QDBusConnectionInterface>
 #include <QDBusMessage>
 #include <QDBusMetaType>
 #include <QDBusPendingCall>
+#include <QDBusReply>
+#include <QDBusServiceWatcher>
 #include <QJsonArray>
 #include <QMenu>
 #include <QQuickItem>
@@ -64,11 +67,28 @@ static const QString highlightWindowName = QStringLiteral("org.kde.KWin.Highligh
 static const QString highlightWindowPath = QStringLiteral("/org/kde/KWin/HighlightWindow");
 static const QString &highlightWindowInterface = highlightWindowName;
 
+static const QString presentWindowsName = QStringLiteral("org.kde.KWin.PresentWindows");
+static const QString presentWindowsPath = QStringLiteral("org/kde/KWin/PresentWindows");
+static const QString &presentWindowsInterface = presentWindowsName;
+
 Backend::Backend(QObject *parent)
     : QObject(parent)
     , m_highlightWindows(false)
     , m_actionGroup(new QActionGroup(this))
 {
+    m_canPresentWindows = QDBusConnection::sessionBus().interface()->isServiceRegistered(presentWindowsName);
+    auto watcher = new QDBusServiceWatcher(presentWindowsName,
+                                           QDBusConnection::sessionBus(),
+                                           QDBusServiceWatcher::WatchForRegistration | QDBusServiceWatcher::WatchForUnregistration,
+                                           this);
+    connect(watcher, &QDBusServiceWatcher::serviceRegistered, this, [this] {
+        m_canPresentWindows = true;
+        Q_EMIT canPresentWindowsChanged();
+    });
+    connect(watcher, &QDBusServiceWatcher::serviceUnregistered, this, [this] {
+        m_canPresentWindows = false;
+        Q_EMIT canPresentWindowsChanged();
+    });
 }
 
 Backend::~Backend()
@@ -506,38 +526,20 @@ void Backend::ungrabMouse(QQuickItem *item) const
 
 bool Backend::canPresentWindows() const
 {
-    return (KWindowSystem::compositingActive() && KWindowEffects::isEffectAvailable(KWindowEffects::PresentWindowsGroup));
+    return m_canPresentWindows;
 }
 
 void Backend::presentWindows(const QVariant &_winIds)
 {
-    if (!m_taskManagerItem || !m_taskManagerItem->window()) {
-        return;
-    }
-
-    QList<WId> winIds;
-
-    const QVariantList &_winIdsList = _winIds.toList();
-
-    foreach (const QVariant &_winId, _winIdsList) {
-        bool ok = false;
-        qlonglong winId = _winId.toLongLong(&ok);
-
-        if (ok) {
-            winIds.append(winId);
-        }
-    }
-
-    if (winIds.isEmpty()) {
-        return;
-    }
 
     if (m_windowsToHighlight.count()) {
         m_windowsToHighlight.clear();
         updateWindowHighlight();
     }
 
-    KWindowEffects::presentWindows(m_taskManagerItem->window()->winId(), winIds);
+    auto message = QDBusMessage::createMethodCall(presentWindowsName, presentWindowsPath, presentWindowsInterface, QStringLiteral("presentWindows"));
+    message << _winIds.toStringList();
+    QDBusConnection::sessionBus().asyncCall(message);
 }
 
 bool Backend::isApplication(const QUrl &url) const
@@ -592,7 +594,7 @@ void Backend::windowsHovered(const QVariant &_winIds, bool hovered)
     m_windowsToHighlight.clear();
 
     if (hovered) {
-        m_windowsToHighlight = _winIds.value<QStringList>();
+        m_windowsToHighlight = _winIds.toStringList();
     }
 
     updateWindowHighlight();
