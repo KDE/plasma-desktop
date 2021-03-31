@@ -101,24 +101,20 @@ PlasmaExtras.ScrollArea {
         Component {
             id: groupToolTip
 
-            Grid {
-                rows: !isVerticalPanel
-                columns: isVerticalPanel
-                flow: isVerticalPanel ? Grid.TopToBottom : Grid.LeftToRight
-                spacing: PlasmaCore.Units.largeSpacing
+            ListView {
+                implicitHeight: contentItem.childrenRect.height
+                implicitWidth: contentItem.childrenRect.width
+                model: DelegateModel {
+                    model: toolTipDelegate.rootIndex ? tasksModel : null
 
-                Repeater {
-                    id: groupRepeater
-                    model: DelegateModel {
-                        model: toolTipDelegate.rootIndex ? tasksModel : null
+                    rootIndex: toolTipDelegate.rootIndex
 
-                        rootIndex: toolTipDelegate.rootIndex
-
-                        delegate: ToolTipInstance {
-                            submodelIndex: tasksModel.makeModelIndex(toolTipDelegate.rootIndex.row, index)
-                        }
+                    delegate: ToolTipInstance {
+                        submodelIndex: tasksModel.makeModelIndex(toolTipDelegate.rootIndex.row, index)
                     }
                 }
+                orientation: isVerticalPanel ? ListView.Vertical : ListView.Horizontal
+                spacing: PlasmaCore.Units.largeSpacing
             }
         }
     }
