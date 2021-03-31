@@ -187,7 +187,7 @@ void KeyboardConfig::save()
     cleanTail(displayNames);
 
     config.writeEntry("LayoutList", layoutStrings.join(LIST_SEPARATOR));
-    config.writeEntry("VariantList", variants.join((LIST_SEPARATOR)));
+    config.writeEntry("VariantList", variants.join(LIST_SEPARATOR));
     config.writeEntry("DisplayNames", displayNames.join(LIST_SEPARATOR));
 
     config.writeEntry("LayoutLoopCount", layoutLoopCount);
