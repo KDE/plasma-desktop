@@ -246,7 +246,7 @@ void KCMLandingPage::save()
 
 
     if (m_lnfDirty) {
-        QProcess::startDetached(QStringLiteral("lookandfeeltool"), QStringList({QStringLiteral("-a"), m_data->landingPageGlobalsSettings()->lookAndFeelPackage()}));
+        QProcess::startDetached(QStringLiteral("plasma-apply-lookandfeel"), QStringList({QStringLiteral("-a"), m_data->landingPageGlobalsSettings()->lookAndFeelPackage()}));
     }
 }
 
