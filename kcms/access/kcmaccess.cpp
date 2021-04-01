@@ -39,7 +39,6 @@
 #include <KNotifyConfigWidget>
 #include <KPluginFactory>
 #include <KSharedConfig>
-#include <KToolInvocation>
 #include <X11/XKBlib.h>
 #include <X11/Xlib.h>
 
