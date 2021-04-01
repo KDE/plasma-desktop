@@ -29,6 +29,10 @@ class KeysData : public KCModuleData
 public:
     KeysData(QObject *parent = nullptr, const QVariantList &args = {});
     bool isDefaults() const override;
+
+private:
+    bool m_isDefault = true;
+    int m_pendingComponentCalls = 0;
 };
 
 #endif
