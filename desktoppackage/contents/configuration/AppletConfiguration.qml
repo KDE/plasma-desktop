@@ -68,7 +68,7 @@ Rectangle {
 
     function pushReplace(item, config) {
         let page;
-        if (app.pageStack.depth === 1) {
+        if (app.pageStack.depth === 0) {
             page = app.pageStack.push(item, config);
         } else {
             page = app.pageStack.replace(item, config);
@@ -121,134 +121,160 @@ Rectangle {
         return app;
     }
 
-    Kirigami.ApplicationItem {
-        id: app
-        anchors.fill: parent
 
-        pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
-        wideScreen: true
+    QtControls.ScrollView {
+        id: categoriesScroll
+        anchors {
+            left: parent.left
+            top: parent.top
+            bottom: parent.bottom
+        }
+        width: Kirigami.Units.gridUnit * 7
+        Kirigami.Theme.colorSet: Kirigami.Theme.View
+        leftPadding: 0
+        rightPadding: 0
+        topPadding: 0
+        bottomPadding: 0
+        focus: true
+        Accessible.role: Accessible.MenuBar
+        background: Rectangle {
+            color: Kirigami.Theme.backgroundColor
+        }
 
-        property var currentConfigPage: null
-        property bool isAboutPage: false
+        ColumnLayout {
+            id: categories
+            Keys.onUpPressed: {
+                const buttons = categories.children
 
-        // HACK: setting columnResizeMode to DynamicColumns has weird effects
-        // and since we only have maximum 2 pages, settings the left page with
-        // columnWidth also works.
-        pageStack.columnView.columnWidth: Kirigami.Units.gridUnit * 7
-        pageStack.initialPage: Kirigami.ScrollablePage {
-            id: categoriesScroll
-            title: i18n("Settings")
-            Kirigami.Theme.colorSet: Kirigami.Theme.View
-            leftPadding: 0
-            rightPadding: 0
-            topPadding: 0
-            bottomPadding: 0
-            focus: true
-
-            FocusScope {
-                focus: true
-                Accessible.role: Accessible.MenuBar
-                ColumnLayout {
-                    id: categories
-                    Keys.onUpPressed: {
-                        const buttons = categories.children
-
-                        let foundPrevious = false
-                        for (let i = buttons.length - 1; i >= 0; --i) {
-                            const button = buttons[i];
-                            if (!button.hasOwnProperty("highlighted")) {
-                                // not a ConfigCategoryDelegate
-                                continue;
-                            }
-
-                            if (foundPrevious) {
-                                categories.openCategory(button.item)
-                                return
-                            } else if (button.highlighted) {
-                                foundPrevious = true
-                            }
-                        }
+                let foundPrevious = false
+                for (let i = buttons.length - 1; i >= 0; --i) {
+                    const button = buttons[i];
+                    if (!button.hasOwnProperty("highlighted")) {
+                        // not a ConfigCategoryDelegate
+                        continue;
                     }
 
-                    Keys.onDownPressed: {
-                        const buttons = categories.children
-
-                        let foundNext = false
-                        for (let i = 0, length = buttons.length; i < length; ++i) {
-                            const button = buttons[i];
-                            if (!button.hasOwnProperty("highlighted")) {
-                                continue;
-                            }
-
-                            if (foundNext) {
-                                categories.openCategory(button.item)
-                                return
-                            } else if (button.highlighted) {
-                                foundNext = true
-                            }
-                        }
-                    }
-                    spacing: 0
-                    anchors.fill: parent
-                    focus: true
-
-                    function openCategory(item) {
-                        if (applyButton.enabled) {
-                            messageDialog.item = item;
-                            messageDialog.open();
-                            return;
-                        }
-                        open(item)
-                    }
-
-                    Component {
-                        id: categoryDelegate
-                        ConfigCategoryDelegate {
-                            id: delegate
-                            onActivated: categories.openCategory(model);
-                            highlighted: {
-                                if (model.kcm && app.pageStack.currentItem.kcm) {
-                                    return model.kcm == app.pageStack.currentItem.kcm
-                                }
-
-                                if (app.pageStack.currentItem && app.pageStack.currentItem.configItem) {
-                                    return model.source == app.pageStack.currentItem.configItem.source
-                                }
-                                return app.pageStack.currentItem.source == Qt.resolvedUrl(model.source)
-                            }
-                            item: model
-                        }
-                    }
-
-                    Repeater {
-                        Layout.fillWidth: true
-                        model: root.isContainment ? globalConfigModel : undefined
-                        delegate: categoryDelegate
-                    }
-                    Repeater {
-                        Layout.fillWidth: true
-                        model: configDialogFilterModel
-                        delegate: categoryDelegate
-                    }
-                    Repeater {
-                        Layout.fillWidth: true
-                        model: !root.isContainment ? globalConfigModel : undefined
-                        delegate: categoryDelegate
-                    }
-                    Repeater {
-                        Layout.fillWidth: true
-                        model: ConfigModel {
-                            ConfigCategory{
-                                name: i18nd("plasma_shell_org.kde.plasma.desktop", "About")
-                                icon: "help-about"
-                                source: "AboutPlugin.qml"
-                            }
-                        }
-                        delegate: categoryDelegate
+                    if (foundPrevious) {
+                        categories.openCategory(button.item)
+                        return
+                    } else if (button.highlighted) {
+                        foundPrevious = true
                     }
                 }
             }
+
+            Keys.onDownPressed: {
+                const buttons = categories.children
+
+                let foundNext = false
+                for (let i = 0, length = buttons.length; i < length; ++i) {
+                    const button = buttons[i];
+                    if (!button.hasOwnProperty("highlighted")) {
+                        continue;
+                    }
+
+                    if (foundNext) {
+                        categories.openCategory(button.item)
+                        return
+                    } else if (button.highlighted) {
+                        foundNext = true
+                    }
+                }
+            }
+            spacing: 0
+            anchors.fill: parent
+            focus: true
+
+            function openCategory(item) {
+                if (applyButton.enabled) {
+                    messageDialog.item = item;
+                    messageDialog.open();
+                    return;
+                }
+                open(item)
+            }
+
+            Component {
+                id: categoryDelegate
+                ConfigCategoryDelegate {
+                    id: delegate
+                    onActivated: categories.openCategory(model);
+                    highlighted: {
+                        if (model.kcm && app.pageStack.currentItem.kcm) {
+                            return model.kcm == app.pageStack.currentItem.kcm
+                        }
+
+                        if (app.pageStack.currentItem && app.pageStack.currentItem.configItem) {
+                            return model.source == app.pageStack.currentItem.configItem.source
+                        }
+                        return app.pageStack.currentItem.source == Qt.resolvedUrl(model.source)
+                    }
+                    item: model
+                }
+            }
+
+            Repeater {
+                Layout.fillWidth: true
+                model: root.isContainment ? globalConfigModel : undefined
+                delegate: categoryDelegate
+            }
+            Repeater {
+                Layout.fillWidth: true
+                model: configDialogFilterModel
+                delegate: categoryDelegate
+            }
+            Repeater {
+                Layout.fillWidth: true
+                model: !root.isContainment ? globalConfigModel : undefined
+                delegate: categoryDelegate
+            }
+            Repeater {
+                Layout.fillWidth: true
+                model: ConfigModel {
+                    ConfigCategory{
+                        name: i18nd("plasma_shell_org.kde.plasma.desktop", "About")
+                        icon: "help-about"
+                        source: "AboutPlugin.qml"
+                    }
+                }
+                delegate: categoryDelegate
+            }
         }
+    }
+
+    Kirigami.Separator {
+        anchors {
+            left: parent.left
+            right: parent.right
+            top: parent.top
+        }
+        z: 1
+    }
+    Kirigami.Separator {
+        anchors {
+            right: categoriesScroll.right
+            top: parent.top
+            bottom: parent.bottom
+        }
+        z: 1
+    }
+
+    Kirigami.ApplicationItem {
+        id: app
+        anchors {
+            left: categoriesScroll.right
+            top: parent.top
+            right: parent.right
+            bottom: parent.bottom
+        }
+
+        pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
+        wideScreen: true
+        pageStack.globalToolBar.separatorVisible: bottomSeparator.visible
+        pageStack.globalToolBar.colorSet: Kirigami.Theme.Window
+
+        property var currentConfigPage: null
+        property bool isAboutPage: false
 
         MessageDialog {
             id: messageDialog
@@ -266,7 +292,8 @@ Rectangle {
             }
         }
 
-        footer: QtControls.ToolBar {
+        footer: QtControls.Pane {
+            
             contentItem: RowLayout {
                 id: buttonsRow
                 spacing: Kirigami.Units.smallSpacing
@@ -294,6 +321,20 @@ Rectangle {
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel")
                     onClicked: cancelAction.trigger()
                     visible: !app.isAboutPage
+                }
+            }
+            background: Item {
+                Kirigami.Separator {
+                    id: bottomSeparator
+                    visible: app.pageStack.currentItem
+                        && app.pageStack.currentItem.flickable
+                        && !(app.pageStack.currentItem.flickable.atYBeginning
+                        && app.pageStack.currentItem.flickable.atYEnd)
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                        top: parent.top
+                    }
                 }
             }
         }

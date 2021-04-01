@@ -64,7 +64,7 @@ QtControls.ItemDelegate {
             width: PlasmaCore.Units.iconSizes.medium
             height: width
             icon: model.icon
-            state: highlighted && categoriesScroll.activeFocus ? QIconItem.SelectedState : QIconItem.DefaultState
+            state: highlighted && Window.active ? QIconItem.SelectedState : QIconItem.DefaultState
         }
 
         QtControls.Label {
@@ -75,7 +75,7 @@ QtControls.ItemDelegate {
             text: model.name
             wrapMode: Text.Wrap
             horizontalAlignment: Text.AlignHCenter
-            color: highlighted && categoriesScroll.activeFocus ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+            color: highlighted && Window.active ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
             Behavior on color {
                 ColorAnimation {
                     duration: PlasmaCore.Units.longDuration
