@@ -351,7 +351,7 @@ Rectangle {
         QtControls.Action {
             id: applyAction
             onTriggered: {
-                app.pageStack.get(1).saveConfig()
+                app.pageStack.get(0).saveConfig()
 
                 applyButton.enabled = false;
             }
