@@ -21,12 +21,12 @@
 #include <QDBusPendingCallWatcher>
 #include <QIcon>
 
+#include <KApplicationTrader>
 #include <KConfigGroup>
 #include <KGlobalAccel>
 #include <KGlobalShortcutInfo>
 #include <KLocalizedString>
 #include <KService>
-#include <KServiceTypeTrader>
 #include <kglobalaccel_component_interface.h>
 #include <kglobalaccel_interface.h>
 
@@ -116,8 +116,11 @@ Component GlobalAccelModel::loadComponent(const QList<KGlobalShortcutInfo> &info
 
     if (!service) {
         // Do we have a service with that name?
-        const KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
-                                                                      QStringLiteral("Name == '%1' or Name == '%2'").arg(componentUnique, componentFriendly));
+        auto filter = [componentUnique, componentFriendly](const KService::Ptr service) {
+            return service->name() == componentUnique || service->name() == componentFriendly;
+        };
+
+        const KService::List services = KApplicationTrader::query(filter);
         service = services.value(0, KService::Ptr());
     }
     const QString type = service && service->isApplication() ? i18n("Applications") : i18n("System Services");
