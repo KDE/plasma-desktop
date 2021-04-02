@@ -29,11 +29,11 @@
 #include <QStandardPaths>
 #include <QStringList>
 
+#include <KApplicationTrader>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KService>
-#include <KServiceTypeTrader>
 #include <KSharedConfig>
 
 #include <algorithm>
@@ -315,17 +315,35 @@ void SourcesModel::load()
         }
     }
 
-    const auto services =
-        KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and TRUE == [X-GNOME-UsesNotifications]"));
-    for (const auto &service : services) {
+    auto filter = [&desktopEntries](const KService::Ptr service) {
+        if (service->exec().isEmpty()) {
+            return false;
+        }
+
         if (service->noDisplay()) {
-            continue;
+            return false;
         }
 
         if (desktopEntries.contains(service->desktopEntryName())) {
-            continue;
+            return false;
         }
 
+        const QVariant gnomeUsesNotifications = service->property("X-GNOME-UsesNotifications", QVariant::Bool);
+
+        if (!gnomeUsesNotifications.isValid()) {
+            return false;
+        }
+
+        if (!gnomeUsesNotifications.toBool()) {
+            return false;
+        }
+
+        return true;
+    };
+
+    const auto services = KApplicationTrader::query(filter);
+
+    for (const auto &service : services) {
         SourceData source{
             service->name(),
             service->comment(),
