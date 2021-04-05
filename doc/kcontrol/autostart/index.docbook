@@ -12,8 +12,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2018-03-25</date>
-<releaseinfo>&plasma; 5.12</releaseinfo>
+<date>2021-04-05</date>
+<releaseinfo>&plasma; 5.20</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -55,60 +55,51 @@ than <filename class="directory">$HOME/.config/autostart</filename>.</para></not
 </simplelist>
 </sect2>
 
-<!--FIXME Disabling Autostart Files Provided By Your Distribution -> http://www.sharpley.org.uk/node/8 -->
+<sect2 id="disabling_autostart">
+<title>Disabling Autostart Files Provided by Your Distribution</title>
+<para>The correct way to disable an autostart item, for example the printer-applet if you use printer from time to time, is to copy its <filename class="extension">.desktop</filename> file to your personal autostart folder. Anything of the same name in <filename class="directory">$HOME/.config/autostart</filename> overrides the <filename class="extension">.desktop</filename> file in the default package. Add the following line to the copied <filename class="extension">.desktop</filename> file:</para>
+<programlisting>
+Hidden=true
+</programlisting>
+</sect2>
 
 <sect2 id="current">
 <title>Files display</title>
-<para>The main part of the module displays the programs that are loaded when &plasma; starts and scripts that are run when &plasma; starts, shutdowns or before &plasma; starts.</para>
+<para>The main part of the module displays the programs that are loaded when &plasma; starts and scripts that are run when &plasma; starts or shutdowns.</para>
 
 <variablelist>
+<varlistentry><term><guilabel>Icon</guilabel></term>
+<listitem>
+<para>
+This column shows the icon of the program or script you want to start with &plasma;. The icon is extracted from the Desktop file from the Icon key for a program and is the default icon for a script.
+</para>
+</listitem>
+</varlistentry>
+
 <varlistentry><term><guilabel>Name</guilabel></term>
 <listitem>
 <para>
-You cannot amend this column. It states the name of the program or script you want to start with &plasma;. The name is extracted from the Desktop file from the Name key for a program and is the filename for a script.
+This column shows the name of the program or script you want to start with &plasma;. The name is extracted from the <filename class="extension">.desktop</filename> file from the <literal>Name</literal> key for a program and is the filename for a script.
 </para>
 </listitem>
 </varlistentry>
 
-<varlistentry><term><guilabel>Command</guilabel></term>
+<varlistentry><term><guilabel>Properties</guilabel></term>
 <listitem>
 <para>
-This column lists the commands that are run to start the program. Commands for a program can be modified through the <guibutton>Properties</guibutton> button or by double clicking the program row. The command is extracted from the Desktop file from the Exec key.
+This button is only shown when you hover the item with the mouse pointer. The button (only enabled for programs &ie; <filename class="extension">.desktop</filename> files) allows you to change the properties of the program or script. You have general properties, permissions properties, a preview when applicable, and properties related to the application for programs. The default command is extracted from the <filename class="extension">.desktop</filename> file from the <literal>Exec</literal> key.
 </para>
 <para>
-For a script the command is the path to the script and can not be modified.
+For a script, the command is the path to the script and can not be modified.
 </para>
 </listitem>
 </varlistentry>
 
-<varlistentry><term><guilabel>Status</guilabel></term>
+<varlistentry><term><guilabel>Remove</guilabel></term>
 <listitem>
 <para>
-This setting is only available for programs through Desktop files. You can keep a program in the <filename class="directory">Autostart</filename> folder but disable it from being run at &plasma; start. Unchecking the status <guilabel>Enabled</guilabel> the program will not run on start.
+This button is only shown when you hover the item with the mouse pointer. Pressing the <guibutton>&minus;</guibutton> button will immediately remove the Desktop file for the program or the script or symbolic link in the <filename class="directory">Autostart</filename> folder.
 </para>
-<para>
-Unchecking the status <guilabel>Enabled</guilabel> sets the Desktop file Hidden property to true in the <filename class="directory">Autostart</filename> folder.
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry><term><guilabel>Run On</guilabel></term>
-<listitem>
-<para>
-Programs (Desktop files) can only be run on startup. Scripts can be run on <guilabel>Startup</guilabel>, <guilabel>Shutdown</guilabel> or <guilabel>Before session startup</guilabel>. This column allows you to change when your script is run. Startup is when &plasma; starts, shutdown is when you log out of &plasma; and before session startup is before &plasma; starts. 
-</para>
-<para>
-Scripts and desktop files set to run on <guilabel>Startup</guilabel> are copied or symlinked in <filename class="directory">$HOME/.config/autostart</filename> and will be run during &plasma; startup.
-</para>
-<para>
-Scripts set on to be ran on <guilabel>Shutdown</guilabel> are copied or symlinked in the <filename class="directory">$HOME/.config/plasma-workspace/shutdown</filename> directory and will be automatically run during &plasma; shutdown after the user has logged out.
-</para>
-<para>
-Scripts set to run at <guilabel>Pre-&plasma; Startup</guilabel> are copied or symlinked in <filename class="directory">$HOME/.config/plasma-workspace/env</filename> and are sourced during &plasma; startup (the <filename>startkde</filename> script will look for scripts here).
-</para>
-<note><para>
-Only scripts with the <filename class="extension">.sh</filename> extension can be read by &plasma; for <guilabel>Before session startup</guilabel> and <guilabel>Shutdown</guilabel> modes.
-</para></note>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -117,49 +108,32 @@ Only scripts with the <filename class="extension">.sh</filename> extension can b
 <sect2 id="actions">
 <title>Actions</title>
 <para>
-On the bottom you have some buttons to change the way Autostart is configured. You can add programs or scripts, remove them or change their properties.
+On the bottom, you have the combined <guibutton>Add...</guibutton> button to choose the type of item you want to add. You can add programs and login or logout scripts.
 </para>
 
 <variablelist>
-<varlistentry><term><guibutton>Add Program</guibutton></term>
+<varlistentry><term><guimenuitem>Add Program</guimenuitem></term>
 <listitem>
 <para>
-Clicking this button displays the standard &plasma; <guilabel>Choose Application</guilabel> dialog and allows you to choose which program you want to start. After choosing the program, clicking <guibutton>OK</guibutton> brings you the properties for this program. 
+Clicking this item displays the standard &plasma; <guilabel>Choose Application</guilabel> dialog and allows you to choose which program you want to start. After choosing the program, clicking <guibutton>OK</guibutton> brings you the properties for this program. 
 </para>
 <para>
-This will copy the program Desktop file in your <filename class="directory">Autostart</filename> folder. 
+This will copy the program <filename class="extension">.desktop</filename> file in your <filename class="directory">Autostart</filename> folder. 
 </para>
 </listitem>
 </varlistentry>
 
-<varlistentry><term><guibutton>Add Script</guibutton></term>
+<varlistentry><term><guimenuitem>Add Login Script...</guimenuitem></term>
 <listitem>
 <para>
-This button opens a dialog which asks you for the location of the script you want to add. If you keep <guilabel>Create as symlink</guilabel> checked (default) then the script will be added as a symlink. If you uncheck this option then the script will be copied to the corresponding local folder.
+This item opens a dialog that asks you for the location of the script you want to add. Scripts set to run on login are copied or symlinked in <filename class="directory">$HOME/.config/autostart</filename> and will be run during Plasma startup.
 </para>
 </listitem>
 </varlistentry>
-<varlistentry><term><guibutton>Remove</guibutton></term>
+<varlistentry><term><guimenuitem>Add Logout Script...</guimenuitem></term>
 <listitem>
 <para>
-Remove will immediately remove the Desktop file for the program or the script or symbolic link in the <filename class="directory">Autostart</filename> folder.
-</para>
-</listitem>
-</varlistentry>
-<varlistentry><term><guibutton>Properties</guibutton></term>
-<listitem>
-<para>
-This button (only enabled for programs &ie; Desktop files) allows you to change the properties of the program or script. You have general properties, permissions properties, a preview when applicable and properties related to the application for programs.
-</para>
-</listitem>
-</varlistentry>
-<varlistentry><term><guibutton>Advanced</guibutton></term>
-<listitem>
-<para>
-This button only applies to programs (&ie; Desktop files). A dialog asks you if you want the program to autostart only in &plasma; (and not in other desktop environments you might run). By default, the program will autostart in all desktop environments you might run. Checking <guilabel>Autostart only in Plasma</guilabel> will autostart the program only if you start the &plasma; desktop environment.
-</para>
-<para>
-This sets the value Plasma to the OnlyShowIn key of the program Desktop file.
+This item opens a dialog that asks you for the location of the script you want to add. Scripts set on to be run on logout are copied or symlinked in the <filename class="directory">$HOME/.config/plasma-workspace/shutdown</filename> directory and will be automatically run during &plasma; shutdown after the user has logged out.
 </para>
 </listitem>
 </varlistentry>
