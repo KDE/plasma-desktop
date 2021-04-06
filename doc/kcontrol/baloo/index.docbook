@@ -15,8 +15,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2017-07-28</date>
-<releaseinfo>Plasma 5.10</releaseinfo>
+<date>2021-04-06</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
 
 <keywordset>
 <keyword>Plasma</keyword>
@@ -38,29 +38,53 @@ It internally uses a technology called Baloo to efficiently search through the f
 to use the indexing results for faster access to your documents.
 </para>
 
+<para>
+Activate the <guilabel>Enable File Search</guilabel> item if you want to use desktop search capabilities in &dolphin; and other &kde; applications. Uncheck the item if you do not want to use the file search with Baloo (it is possible to use other search technologies, &eg; &kfind;).
+</para>
+
+<para>Use <guilabel>Also index file content</guilabel> to also index the file contents additional to the file names.
+</para>
+
+<para>Check the <guilabel>Index hidden files and folders</guilabel> item to make Baloo index the hidden files and folders.
+</para>
+
+<note>
+    <para>
+        Any file or folder name that starts with a period (<literal>.</literal>) is hidden by default.
+    </para>
+</note>
+
 <variablelist>
-<varlistentry><term><guilabel>Do not search in these locations</guilabel></term>
+<varlistentry><term><guilabel>Folder specific configuration</guilabel></term>
 <listitem>
     <para>
-        You are presented with a list of folders which should not be searched. By default only
+        You are presented with a list of folders that can be indexed. By default only
         your entire <filename class="directory"><envar>$HOME</envar></filename> folder is
         indexed, and no other folders or drives are indexed.
     </para>
     <para>
         Removable media is never indexed by default. It can be explicitly removed from
-        the list of exclude folders and it will then be indexed.
+        the list of excluded folders and it will then be indexed.
+    </para>
+    <para>
+        It is possible to use the combo box next to each item in the list to configure if it is <guimenuitem>Indexed</guimenuitem> or <guimenuitem>Not indexed</guimenuitem>.
+    </para>
+    <para>
+        Use the trash button to remove an item from the list.
     </para>
 </listitem>
 </varlistentry>
-
+<varlistentry><term><guibutton>Add folder configuration...</guibutton></term>
+<listitem>
+    <para>
+        Press this button to open selector with two options, namely <guimenuitem>Start indexing a folder...</guimenuitem> and <guimenuitem>Stop indexing a folder...</guimenuitem>.
+    </para>
+    <para>
+        Clicking any of the above-mentioned options displays the standard &plasma; <guilabel>Select a folder to filter</guilabel> dialog and allows you to choose the folder to be treated accordingly.
+    </para>
+</listitem>
+</varlistentry>
 </variablelist>
-
-<para>By default <guilabel>Enable File Search</guilabel> is activated, uncheck this setting if
-you do not want to use the file search at all.
-</para>
-
-<para>Use <guilabel>Also index file content</guilabel> to also index the file contents additional to the file names.
-</para>
 
 <para>For more info about additional configuration options &eg; how to add a drive mounted outside your 
 <filename class="directory"><envar>$HOME</envar></filename> folder please read
