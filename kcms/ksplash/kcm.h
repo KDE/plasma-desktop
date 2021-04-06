@@ -21,6 +21,7 @@
 #ifndef _KCM_SEARCH_H
 #define _KCM_SEARCH_H
 
+#include <KNSCore/EntryWrapper>
 #include <KPackage/Package>
 #include <KQuickAddons/ManagedConfigModule>
 
@@ -33,7 +34,7 @@ class KCMSplashScreen : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(SplashScreenSettings *splashScreenSettings READ splashScreenSettings CONSTANT)
-    Q_PROPERTY(QAbstractProxyModel *splashModel READ splashModel CONSTANT)
+    Q_PROPERTY(QAbstractProxyModel *splashSortedModel READ splashSortedModel CONSTANT)
     Q_PROPERTY(bool testing READ testing NOTIFY testingChanged)
 
 public:
@@ -48,14 +49,14 @@ public:
     KCMSplashScreen(QObject *parent, const QVariantList &args);
 
     SplashScreenSettings *splashScreenSettings() const;
-    QAbstractProxyModel *splashModel() const;
+    QAbstractProxyModel *splashSortedModel() const;
     bool testing() const;
 
     Q_INVOKABLE int sortModelPluginIndex(const QString &pluginName) const;
+    Q_INVOKABLE void ghnsEntryChanged(KNSCore::EntryWrapper *wrapper);
     QStringList pendingDeletions();
 
 public Q_SLOTS:
-    void ghnsEntriesChanged(const QQmlListReference &changedEntries);
     void save() override;
     void load() override;
     void defaults() override;
@@ -69,6 +70,7 @@ Q_SIGNALS:
 private:
     QList<KPackage::Package> availablePackages(const QString &component);
     int pluginIndex(const QString &pluginName) const;
+    void addKPackageToModel(const KPackage::Package &pkg);
 
     SplashScreenData *m_data;
     QStandardItemModel *m_model;

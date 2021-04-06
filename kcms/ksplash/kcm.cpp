@@ -63,7 +63,9 @@ KCMSplashScreen::KCMSplashScreen(QObject *parent, const QVariantList &args)
     m_sortModel = new QSortFilterProxyModel(this);
     m_sortModel->setSourceModel(m_model);
     m_sortModel->setSortLocaleAware(true);
+    m_sortModel->setSortRole(Qt::DisplayRole);
     m_sortModel->setSortCaseSensitivity(Qt::CaseInsensitive);
+    m_sortModel->setDynamicSortFilter(true);
 
     connect(m_model, &QAbstractItemModel::dataChanged, this, [this] {
         bool hasPendingDeletions = !pendingDeletions().isEmpty();
@@ -100,16 +102,46 @@ SplashScreenSettings *KCMSplashScreen::splashScreenSettings() const
     return m_data->settings();
 }
 
-QAbstractProxyModel *KCMSplashScreen::splashModel() const
+QAbstractProxyModel *KCMSplashScreen::splashSortedModel() const
 {
     return m_sortModel;
 }
 
-void KCMSplashScreen::ghnsEntriesChanged(const QQmlListReference &changedEntries)
+void KCMSplashScreen::ghnsEntryChanged(KNSCore::EntryWrapper *wrapper)
 {
-    if (changedEntries.count() > 0) {
-        load();
+    auto removeItemFromModel = [this](const QStringList &files) {
+        if (!files.isEmpty()) {
+            const QString guessedPluginId = QFileInfo(files.constFirst()).fileName();
+            const int index = pluginIndex(guessedPluginId);
+            if (index != -1) {
+                m_model->removeRows(index, 1);
+            }
+        }
+    };
+
+    const KNSCore::EntryInternal entry = wrapper->entry();
+    if (entry.status() == KNS3::Entry::Deleted) {
+        removeItemFromModel(entry.uninstalledFiles());
+    } else if (entry.status() == KNS3::Entry::Installed) {
+        removeItemFromModel(entry.installedFiles());
+        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+        pkg.setPath(entry.installedFiles().constFirst());
+        addKPackageToModel(pkg);
+        m_sortModel->sort(Qt::DisplayRole);
     }
+}
+
+void KCMSplashScreen::addKPackageToModel(const KPackage::Package &pkg)
+{
+    const static QString writableLocation = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
+    QStandardItem *row = new QStandardItem(pkg.metadata().name());
+    row->setData(pkg.metadata().pluginId(), PluginNameRole);
+    row->setData(pkg.filePath("previews", QStringLiteral("splash.png")), ScreenshotRole);
+    row->setData(pkg.metadata().description(), DescriptionRole);
+    row->setData(pkg.path().startsWith(writableLocation), UninstallableRole);
+    row->setData(false, PendingDeletionRole);
+    m_packageRoot = writableLocation + QLatin1Char('/') + pkg.defaultPackageRoot();
+    m_model->appendRow(row);
 }
 
 void KCMSplashScreen::load()
@@ -118,18 +150,10 @@ void KCMSplashScreen::load()
     m_model->clear();
 
     const QList<KPackage::Package> pkgs = availablePackages(QStringLiteral("splashmainscript"));
-    const QString writableLocation = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
     for (const KPackage::Package &pkg : pkgs) {
-        QStandardItem *row = new QStandardItem(pkg.metadata().name());
-        row->setData(pkg.metadata().pluginId(), PluginNameRole);
-        row->setData(pkg.filePath("previews", QStringLiteral("splash.png")), ScreenshotRole);
-        row->setData(pkg.metadata().description(), DescriptionRole);
-        row->setData(pkg.path().startsWith(writableLocation), UninstallableRole);
-        row->setData(false, PendingDeletionRole);
-        m_packageRoot = writableLocation + QLatin1Char('/') + pkg.defaultPackageRoot();
-        m_model->appendRow(row);
+        addKPackageToModel(pkg);
     }
-    m_sortModel->sort(PluginNameRole);
+    m_sortModel->sort(Qt::DisplayRole);
 
     QStandardItem *row = new QStandardItem(i18n("None"));
     row->setData("None", PluginNameRole);
