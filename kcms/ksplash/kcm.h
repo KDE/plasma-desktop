@@ -25,6 +25,7 @@
 #include <KQuickAddons/ManagedConfigModule>
 
 class QStandardItemModel;
+class QSortFilterProxyModel;
 class SplashScreenSettings;
 class SplashScreenData;
 
@@ -32,7 +33,7 @@ class KCMSplashScreen : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(SplashScreenSettings *splashScreenSettings READ splashScreenSettings CONSTANT)
-    Q_PROPERTY(QStandardItemModel *splashModel READ splashModel CONSTANT)
+    Q_PROPERTY(QAbstractProxyModel *splashModel READ splashModel CONSTANT)
     Q_PROPERTY(bool testing READ testing NOTIFY testingChanged)
 
 public:
@@ -47,10 +48,10 @@ public:
     KCMSplashScreen(QObject *parent, const QVariantList &args);
 
     SplashScreenSettings *splashScreenSettings() const;
-    QStandardItemModel *splashModel() const;
+    QAbstractProxyModel *splashModel() const;
     bool testing() const;
 
-    Q_INVOKABLE int pluginIndex(const QString &pluginName) const;
+    Q_INVOKABLE int sortModelPluginIndex(const QString &pluginName) const;
     QStringList pendingDeletions();
 
 public Q_SLOTS:
@@ -67,12 +68,14 @@ Q_SIGNALS:
 
 private:
     QList<KPackage::Package> availablePackages(const QString &component);
+    int pluginIndex(const QString &pluginName) const;
 
     SplashScreenData *m_data;
     QStandardItemModel *m_model;
 
     QProcess *m_testProcess = nullptr;
     QString m_packageRoot;
+    QSortFilterProxyModel *m_sortModel;
 };
 
 #endif

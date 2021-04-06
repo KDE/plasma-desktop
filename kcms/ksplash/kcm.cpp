@@ -26,6 +26,7 @@
 
 #include <QDir>
 #include <QProcess>
+#include <QSortFilterProxyModel>
 #include <QStandardItemModel>
 #include <QStandardPaths>
 
@@ -58,6 +59,11 @@ KCMSplashScreen::KCMSplashScreen(QObject *parent, const QVariantList &args)
     roles[UninstallableRole] = "uninstallable";
     roles[PendingDeletionRole] = "pendingDeletion";
     m_model->setItemRoleNames(roles);
+
+    m_sortModel = new QSortFilterProxyModel(this);
+    m_sortModel->setSourceModel(m_model);
+    m_sortModel->setSortLocaleAware(true);
+    m_sortModel->setSortCaseSensitivity(Qt::CaseInsensitive);
 
     connect(m_model, &QAbstractItemModel::dataChanged, this, [this] {
         bool hasPendingDeletions = !pendingDeletions().isEmpty();
@@ -94,9 +100,9 @@ SplashScreenSettings *KCMSplashScreen::splashScreenSettings() const
     return m_data->settings();
 }
 
-QStandardItemModel *KCMSplashScreen::splashModel() const
+QAbstractProxyModel *KCMSplashScreen::splashModel() const
 {
-    return m_model;
+    return m_sortModel;
 }
 
 void KCMSplashScreen::ghnsEntriesChanged(const QQmlListReference &changedEntries)
@@ -123,7 +129,7 @@ void KCMSplashScreen::load()
         m_packageRoot = writableLocation + QLatin1Char('/') + pkg.defaultPackageRoot();
         m_model->appendRow(row);
     }
-    m_model->sort(0 /*column*/);
+    m_sortModel->sort(PluginNameRole);
 
     QStandardItem *row = new QStandardItem(i18n("None"));
     row->setData("None", PluginNameRole);
@@ -161,6 +167,11 @@ void KCMSplashScreen::save()
     }
     m_data->settings()->setEngine(m_data->settings()->theme() == QStringLiteral("None") ? QStringLiteral("none") : QStringLiteral("KSplashQML"));
     ManagedConfigModule::save();
+}
+
+int KCMSplashScreen::sortModelPluginIndex(const QString &pluginName) const
+{
+    return m_sortModel->mapFromSource(m_model->index(pluginIndex(pluginName), 0)).row();
 }
 
 int KCMSplashScreen::pluginIndex(const QString &pluginName) const

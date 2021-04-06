@@ -36,7 +36,7 @@ KCM.GridViewKCM {
 
     view.model: kcm.splashModel
     //NOTE: pay attention to never break this binding
-    view.currentIndex: kcm.pluginIndex(kcm.splashScreenSettings.theme)
+    view.currentIndex: kcm.sortModelPluginIndex(kcm.splashScreenSettings.theme)
 
     // putting the InlineMessage as header item causes it to show up initially despite visible false
     header: ColumnLayout {
