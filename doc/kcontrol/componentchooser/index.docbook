@@ -15,8 +15,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2017-01-10</date>
-<releaseinfo>Plasma 5.8</releaseinfo>
+<date>2021-04-06</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -25,11 +25,11 @@
 </keywordset>
 </articleinfo>
 
-<para>In this module you can change &kde; default components.</para>
+<para>In this module, you can change &kde; default components.</para>
 
-<para>Components are programs that handle basic tasks, like the terminal emulator, the text 
-editor and the email client. Different &kde; applications sometimes need to 
-invoke a console emulator, send a mail or display some text.</para> 
+<para>Components are programs that handle basic tasks, like the web browser, terminal emulator, the file 
+manager, and the email client. Different &kde; applications sometimes need to 
+invoke a console emulator, send a mail or manage files and folders.</para> 
 
 <para>To do so consistently, these applications always call the same components. Here you 
 can select which programs these components are.</para>
@@ -37,21 +37,19 @@ can select which programs these components are.</para>
 <para>The list on the left shows the configurable component types:</para>
 <itemizedlist>
 <listitem>
-<para>Email Client</para>
+<para>Web Browser</para>
 </listitem>
 <listitem>
 <para>File Manager</para>
 </listitem>
 <listitem>
-<para>Terminal Emulator</para>
+<para>Email Client</para>
 </listitem>
 <listitem>
-<para>Web Browser</para>
+<para>Terminal Emulator</para>
 </listitem>
 </itemizedlist>
 
-<para> Click the component you want to configure. In the right part of the dialog then all available
-applications for this service are displayed and you are able to select your favorite terminal emulator, text 
-editor and the email client &etc;</para>
+<para>Click the combo box of the component you want to configure. In the list, select your favorite web browser, file manager, email client, and terminal emulator. Choose <guimenuitem>Other...</guimenuitem> to open the <guilabel>Choose Application</guilabel> dialog and select your application manually.</para>
 
 </article>
