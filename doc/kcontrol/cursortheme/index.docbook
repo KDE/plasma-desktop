@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2018-03-24</date>
-<releaseinfo>Plasma 5.12</releaseinfo>
+<date>2021-04-07</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
 
 <abstract>
 <para>This is the documentation for the &systemsettings; module to 
@@ -32,7 +32,7 @@ customize the mouse cursor appearance.
 </articleinfo>
 
 <para>
-This module allows you to select from a number of installed cursor themes
+This module allows you to select from several installed cursor themes
 from a preview of the cursor display.
 </para>
 
@@ -41,19 +41,16 @@ Your system may need to be updated to support cursor themes.
 </para>
 
 <para>
-If you have additional cursor themes available, you can install and remove 
-them using the buttons at the bottom of the list box. Note that you cannot remove the default themes.
+If you have additional cursor themes available, you can remove them using the trash button that appears when you hover the mouse pointer over the theme item in the list. Note that you cannot remove the default themes.
 </para>
 
-<para>Use the <guibutton>Get new Themes</guibutton> button to launch the <guilabel>Get Hot New Stuff</guilabel> dialog and 
-download additional themes from the Internet.</para>
-
-<para>Some themes allow to choose the cursor size. Available sizes are
-displayed hoovering a theme.
+<para>Some themes allow choosing the cursor size. Use the <guilabel>Size</guilabel> field to select the appropriate size. Available sizes are displayed when you hoover the theme item in the list box with the mouse pointer.
 </para>
 
 <para>
-The size can be set to one of the sizes available for your theme.
+If you have additional cursor themes available, you can install them using the <guibutton>Install from File...</guibutton> button below the list box. See <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme">these instructions</ulink> on the details on how to create the custom cursor theme.
 </para>
+
+<para>Use the <guibutton>Get New Cursors...</guibutton> button to launch the <guilabel>Download New Cursors</guilabel> dialog and download additional themes from the Internet.</para>
 
 </article>
