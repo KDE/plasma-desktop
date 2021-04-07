@@ -113,6 +113,7 @@ void AutostartModel::load()
 
     autostartdir.setFilter(QDir::Files | QDir::NoDotAndDotDot);
 
+    // Needed to add all script entries after application entries
     QVector<AutostartEntry> scriptEntries;
     const auto filesInfo = autostartdir.entryInfoList();
     for (const QFileInfo &fi : filesInfo) {
