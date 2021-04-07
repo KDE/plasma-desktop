@@ -13,8 +13,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2018-03-25</date>
-<releaseinfo>Plasma 5.12</releaseinfo>
+<date>2021-04-07</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
 
 </articleinfo>
 
@@ -34,8 +34,9 @@ can configure how long this icon is displayed beside your cursor with the
 default is 5 seconds.</para>
 
 <para>There are several variations of busy cursor available, including
-a <guilabel>Blinking</guilabel>, a <guilabel>Bouncing</guilabel>
-or a <guilabel>Static</guilabel> cursor icon with no animation.</para>
+a <guilabel>No Feedback</guilabel>, a <guilabel>Blinking</guilabel>, a 
+<guilabel>Bouncing</guilabel> or a <guilabel>Static</guilabel> cursor 
+icon with no animation.</para>
 
 <para>Traditional &plasma; launch notification has taken another form,
 which you can also enable and disable here.  Normally when you start an
@@ -44,14 +45,15 @@ replaced by a spinning hourglass to let you know something is
 happening.  You can toggle this behavior on and off with the
 <guilabel>Enable animation</guilabel> checkbox.</para>
 
-<para>Not all applications that you start will eventually show a
-window, or an entry in the taskbar.  Some of them, for example, are
-docked into the &plasma; system tray. Alternatively, it might be that you
-sent it off to a different virtual desktop, and in the <guilabel>Filters</guilabel> 
-section of the <ulink url="help:/plasma-desktop/panel.html">
-<guilabel>Task Manager Settings</guilabel></ulink> the option <guilabel>Only show
-tasks from the current desktop</guilabel> is checked.  Setting a timeout ensures that,
-even in these cases, you can still get launch feedback, but also that
-it will go away when the job is done.</para>
+<para>Not all applications that you start will eventually show a window, or 
+an entry in the taskbar.  Some of them, for example, are docked into the 
+&plasma; system tray. Alternatively, it might be that you sent it off to a 
+different virtual desktop, and in the <guilabel>Behavior</guilabel> section 
+of the <ulink url="help:/plasma-desktop/panel.html"> <guilabel>Task Manager 
+Settings</guilabel></ulink> the option <guilabel>From the current 
+desktop</guilabel> is checked for the <guilabel>Show only tasks</guilabel> 
+switcher.  Setting a timeout ensures that, even in these cases, you can 
+still get launch feedback, but also that it will go away when the job is 
+done.</para>
 
 </article>
