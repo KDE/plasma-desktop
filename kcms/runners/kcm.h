@@ -30,7 +30,7 @@
 #include <QRadioButton>
 #include <QToolButton>
 
-class KPluginSelector;
+class KPluginWidget;
 class KRunnerSettings;
 
 class SearchConfigModule : public KCModule
@@ -57,7 +57,7 @@ public Q_SLOTS:
 private:
     void setDefaultIndicatorVisible(QWidget *widget, bool visible);
 
-    KPluginSelector *m_pluginSelector;
+    KPluginWidget *m_pluginSelector;
     KSharedConfigPtr m_config;
     QString m_pluginID;
     QRadioButton *m_topPositioning;

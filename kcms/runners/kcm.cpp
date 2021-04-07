@@ -26,7 +26,7 @@
 #include <KLocalizedString>
 #include <KNS3/Button>
 #include <KPluginFactory>
-#include <KPluginSelector>
+#include <KPluginWidget>
 #include <KRunner/RunnerManager>
 #include <QDebug>
 #include <QStandardPaths>
@@ -123,16 +123,16 @@ SearchConfigModule::SearchConfigModule(QWidget *parent, const QVariantList &args
     headerLayout->addWidget(label);
     headerLayout->addStretch();
 
-    m_pluginSelector = new KPluginSelector(this);
-    connect(m_pluginSelector, &KPluginSelector::changed, this, &SearchConfigModule::updateUnmanagedState);
+    m_pluginSelector = new KPluginWidget(this);
+    connect(m_pluginSelector, &KPluginWidget::changed, this, &SearchConfigModule::updateUnmanagedState);
 
     qDBusRegisterMetaType<QByteArrayList>();
     qDBusRegisterMetaType<QHash<QString, QByteArrayList>>();
     // This will trigger the reloadConfiguration method for the runner
-    connect(m_pluginSelector, &KPluginSelector::configCommitted, this, [](const QByteArray &componentName) {
+    connect(m_pluginSelector, &KPluginWidget::configCommitted, this, [](const QString &componentName) {
         QDBusMessage message =
             QDBusMessage::createSignal(QStringLiteral("/krunnerrc"), QStringLiteral("org.kde.kconfig.notify"), QStringLiteral("ConfigChanged"));
-        const QHash<QString, QByteArrayList> changes = {{QStringLiteral("Runners"), {componentName}}};
+        const QHash<QString, QByteArrayList> changes = {{QStringLiteral("Runners"), {componentName.toUtf8()}}};
         message.setArguments({QVariant::fromValue(changes)});
         QDBusConnection::sessionBus().send(message);
     });
@@ -145,12 +145,9 @@ SearchConfigModule::SearchConfigModule(QWidget *parent, const QVariantList &args
     KNS3::Button *downloadButton = new KNS3::Button(i18n("Get New Plugins..."), QStringLiteral("krunner.knsrc"), this);
     connect(downloadButton, &KNS3::Button::dialogFinished, this, [this](const KNS3::Entry::List &changedEntries) {
         if (!changedEntries.isEmpty()) {
-            m_pluginSelector->clearPlugins();
-            m_pluginSelector->addPlugins(KPluginInfo::fromMetaData(Plasma::RunnerManager::runnerMetaDataList()),
-                                         KPluginSelector::ReadConfigFile,
-                                         i18n("Available Plugins"),
-                                         QString(),
-                                         m_config);
+            m_pluginSelector->clear();
+            m_pluginSelector->setConfig(m_config->group(QStringLiteral("Plugins")));
+            m_pluginSelector->addPlugins(Plasma::RunnerManager::runnerMetaDataList(), i18n("Available Plugins"));
         }
     });
     downloadLayout->addStretch();
@@ -158,7 +155,7 @@ SearchConfigModule::SearchConfigModule(QWidget *parent, const QVariantList &args
     layout->addLayout(downloadLayout);
 
     connect(this, &SearchConfigModule::defaultsIndicatorsVisibleChanged, this, &SearchConfigModule::updateUnmanagedState);
-    connect(this, &SearchConfigModule::defaultsIndicatorsVisibleChanged, m_pluginSelector, &KPluginSelector::setDefaultsIndicatorsVisible);
+    //     connect(this, &SearchConfigModule::defaultsIndicatorsVisibleChanged, m_pluginSelector, &KPluginWidget::setDefaultsIndicatorsVisible);
     addConfig(m_settings, this);
 }
 
@@ -173,17 +170,14 @@ void SearchConfigModule::load()
 
     // Set focus on the pluginselector to pass focus to search bar.
     m_pluginSelector->setFocus(Qt::OtherFocusReason);
+    m_pluginSelector->setConfig(m_config->group(QStringLiteral("Plugins")));
 
     QT_WARNING_PUSH
     QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
     QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
-    m_pluginSelector->addPlugins(KPluginInfo::fromMetaData(Plasma::RunnerManager::runnerMetaDataList()),
-                                 KPluginSelector::ReadConfigFile,
-                                 i18n("Available Plugins"),
-                                 QString(),
-                                 m_config);
+    m_pluginSelector->addPlugins(Plasma::RunnerManager::runnerMetaDataList(), i18n("Available Plugins"));
     QT_WARNING_POP
-    m_pluginSelector->load();
+    //     m_pluginSelector->load();
 
     if (!m_pluginID.isEmpty()) {
         m_pluginSelector->showConfiguration(m_pluginID);
@@ -284,7 +278,7 @@ void SearchConfigModule::deleteAllHistory()
 void SearchConfigModule::updateUnmanagedState()
 {
     bool isNeedSave = false;
-    isNeedSave |= m_pluginSelector->isSaveNeeded();
+    //     isNeedSave |= m_pluginSelector->isSaveNeeded();
     isNeedSave |= m_topPositioning->isChecked() == m_settings->freeFloating();
     isNeedSave |= m_freeFloating->isChecked() != m_settings->freeFloating();
 
