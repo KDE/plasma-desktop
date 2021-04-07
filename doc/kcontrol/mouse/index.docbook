@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2020-10-01</date>
-<releaseinfo>Plasma 5.20</releaseinfo>
+<date>2021-04-06</date>
+<releaseinfo>Plasma 5.21</releaseinfo>
 
 <abstract>
 <para>This is the documentation for the &systemsettings; module that configures mice and other pointing devices.
@@ -29,150 +29,69 @@
 </keywordset>
 </articleinfo>
 
-<sect1 id="kcm_mouse">
-<title>Mouse</title>
-
 <para>This module allows you to configure your pointing device. Your
 pointing device may be a mouse, a track ball, a touch-pad, or another piece
 of hardware that performs a similar function.</para>
 
-<para>This module is divided into two tabs:
-<link linkend="mouse-general">General</link> and
-<link linkend="mouse-advanced">Advanced</link>.
-</para>
-
-<sect2 id="mouse-general">
-<title>General</title>
-
 <variablelist>
 <varlistentry>
-<term><guilabel>Button Order</guilabel></term>
+<term><guilabel>General</guilabel></term>
+<listitem>
+<variablelist>
+<varlistentry>
+<term><guilabel>Left handed mouse</guilabel></term>
 <listitem><para>
 If you are left-handed, you may
 prefer to swap the functions of the <mousebutton>left</mousebutton> and
-<mousebutton>right</mousebutton> buttons on your pointing device by choosing the
-<guilabel>Left handed</guilabel> option. If your pointing device has more than two
+<mousebutton>right</mousebutton> buttons on your pointing device by checking this option. If your pointing device has more than two
 buttons, only those that function as the <mousebutton>left</mousebutton> and
 <mousebutton>right</mousebutton> buttons are affected. For example, if you have
 a three-button mouse, the <mousebutton>middle</mousebutton> button is
 unaffected.</para>
 </listitem>
 </varlistentry>
-
 <varlistentry>
-<term><guilabel>Reverse scroll direction</guilabel></term>
+<term><guilabel>Press left and right buttons for middle-click</guilabel></term>
 <listitem><para>
-With this check box selected, the scroll wheel (if any) will work in the opposite direction (so that if rolling the top of the scroll wheel towards you previously causes a scroll down, then it will now cause a scroll up). This may be useful to handle a unusual setup of the X server.
+Check this item if you don't have a &MMB;. You can press the left and right mouse buttons at the same time to emulate middle-click.
 </para>
 </listitem>
 </varlistentry>
-<!--FIXME http://kdeblog.mageprojects.com/2016/06/24/plasma-5-6-clean-installation-impression/
-Just tick the “reverse scroll direction” in your mouse settings (in the system settings under “Input Devices”). That did the trick, but not completely. It only seems to be applied for the Qt applications! Yay, we have a good old setting per UI Toolkit again… But that’s wrong., we have libinput now and we can set “natural sorting” there. Why isn’t the settings page doing that under the hood if libinput is being used? Anyway, the fix here (comes from this link) was to do:
+</variablelist>
+</listitem>
+</varlistentry>
 
-xinput set-prop 11 282 1
--->
+<varlistentry>
+<term id="peripherals-mouse-acceleration">
+<guilabel>Pointer speed</guilabel></term>
+<listitem><para>
+This option allows you to change the relationship
+between the distance that the mouse pointer moves on the
+screen and the relative movement of the physical device
+itself (which may be a mouse, track-ball, or some other
+pointing device.)</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Acceleration profile</guilabel></term>
+<listitem><para>
+The <guilabel>Adaptive</guilabel> profile is the default profile for all devices and takes the current speed of the device into account when deciding on acceleration. The <guilabel>Flat</guilabel> profile is simply a constant factor applied to all device deltas, regardless of the speed of motion.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Scrolling: Invert scroll direction</guilabel></term>
+<listitem><para>
+With this check box selected, the scroll wheel (if any) will work in the opposite direction (so that if rolling the top of the scroll wheel towards you previously causes a scroll down, then it will now cause a scroll up).
+</para>
+</listitem>
+</varlistentry>
 </variablelist>
 
 <note><para>In &plasma; 5.13 you find the setting to use single or double mouse clicks
 to open files and folders in the module <ulink url="help:/kcontrol/workspaceoptions/index.html">Workspace</ulink>.
 </para></note>
-</sect2>
-
-<sect2 id="mouse-advanced">
-<title>Advanced</title>
-
-<variablelist>
-<varlistentry>
-<term id="peripherals-mouse-acceleration">
-<guilabel>Pointer acceleration</guilabel></term>
-<listitem>
-<para>This option allows you to change the relationship
-between the distance that the mouse pointer moves on the
-screen and the relative movement of the physical device
-itself (which may be a mouse, track-ball, or some other
-pointing device.)</para>
-
-<para>A high value for the acceleration multiplier will lead to large
-movements of the mouse pointer on the screen, even when
-you only make a small movement with the physical device.</para>
-
-<tip><para>A multiplier between <guilabel>1x</guilabel> and
-<guilabel>3x</guilabel> will works well for many systems.  With a multiplier
-over <guilabel>3x</guilabel> the mouse pointer may become difficult to
-control.</para></tip>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Pointer threshold</guilabel></term>
-<listitem>
-<para>The threshold is the smallest distance that the mouse pointer must
-move on the screen before acceleration has any effect. If the movement
-is within the threshold, the mouse pointer moves as if the acceleration
-were set to <guilabel>1x</guilabel>.</para>
-
-<para>Thus, when you make small movements with the physical device (&eg;
-mouse), you still have fine control of the mouse pointer on the screen,
-whereas larger movements of the physical device will move the mouse
-pointer rapidly to different areas on the screen.</para>
-
-<para>You can set the threshold by entering a value into the edit box or
-by clicking the up/down arrows to the right of the box.</para>
-
-<tip><para>In general, the higher you set the <guilabel>Pointer
-acceleration</guilabel> value, the higher you will want to set the
-<guilabel>Pointer threshold</guilabel> value.  For example, a
-<guilabel>Pointer threshold</guilabel> of 4 pixels may
-be appropriate for a <guilabel>Pointer Acceleration</guilabel> of
-2x, but 10 pixels might be
-better for 3x.</para></tip>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Double click interval</guilabel></term>
-<listitem>
-<para>This is the maximum amount of time between clicks to
-register a double click.  If you click twice, and the time between those
-two clicks is less than this number, that is recognized as a double
-click.  If the time between these two clicks is greater than this
-number, it is recognized as two <emphasis>separate</emphasis>
-single clicks.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Drag start time</guilabel> and <guilabel>Drag start
-distance</guilabel></term>
-
-<listitem>
-<para>If you
-<itemizedlist>
-<listitem><para>click with the mouse</para></listitem>
-<listitem><para>drag within the time specified in <guilabel>Drag start
-time</guilabel>, and </para></listitem>
-<listitem><para>move a distance equal to or greater than the number (of
-pixels) specified in <guilabel>Drag start distance</guilabel></para>
-</listitem>
-</itemizedlist>
-
-the selected item will be dragged.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Mouse wheel scrolls by</guilabel></term>
-<listitem>
-<para>If you have a wheel mouse, use the spin box to determine how many
-lines of text one <quote>step</quote> of the mouse wheel will
-scroll.</para>
-</listitem>
-</varlistentry>
-
-</variablelist>
-
-</sect2>
-
-</sect1>
 
 </article>
