@@ -30,8 +30,8 @@ MouseArea {
     onEntered: toolTipHideTimer.running = false
     onExited: toolTipHideTimer.running = true
 
-    width: theme.mSize(theme.defaultFont).width * 35
-    height: theme.mSize(theme.defaultFont).height * 16
+    width: PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 35
+    height: PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height * 16
 
     property variant icon
     property string title

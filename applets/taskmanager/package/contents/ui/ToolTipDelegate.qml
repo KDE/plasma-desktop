@@ -70,7 +70,7 @@ PlasmaComponents3.ScrollView {
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    property int textWidth: theme.mSize(theme.defaultFont).width * 20
+    property int textWidth: PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 20
 
     Component.onCompleted: {
         flickableItem.interactive = Qt.binding(function() {

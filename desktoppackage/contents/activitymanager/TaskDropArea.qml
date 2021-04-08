@@ -57,7 +57,7 @@ DND.DropArea {
             rightMargin: PlasmaCore.Units.largeSpacing
         }
 
-        color: theme.textColor
+        color: PlasmaCore.Theme.textColor
         visible: root.actionVisible
 
         text: root.actionTitle

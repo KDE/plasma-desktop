@@ -185,7 +185,7 @@ KCM.SimpleKCM {
                 Layout.fillWidth: true
                 text: singleClick.checked ? i18n("Select by clicking on item's selection marker") : i18n("Open by double-clicking instead")
                 elide: Text.ElideRight
-                font: theme.smallestFont
+                font: PlasmaCore.Theme.smallestFont
             }
 
             Item {

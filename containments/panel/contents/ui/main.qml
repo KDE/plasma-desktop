@@ -475,8 +475,8 @@ function checkLastSpacer() {
         id: dndSpacer
         Layout.preferredWidth: width
         Layout.preferredHeight: height
-        width: (plasmoid.formFactor === PlasmaCore.Types.Vertical) ? currentLayout.width : theme.mSize(theme.defaultFont).width * 10
-        height: (plasmoid.formFactor === PlasmaCore.Types.Vertical) ?  theme.mSize(theme.defaultFont).width * 10 : currentLayout.height
+        width: (plasmoid.formFactor === PlasmaCore.Types.Vertical) ? currentLayout.width : PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 10
+        height: (plasmoid.formFactor === PlasmaCore.Types.Vertical) ?  PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 10 : currentLayout.height
     }
 
     // while the user is moving the applet when configuring the panel, the applet is reparented

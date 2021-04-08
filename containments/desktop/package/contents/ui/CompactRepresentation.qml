@@ -30,7 +30,7 @@ DragDrop.DropArea {
         || plasmoid.location === PlasmaCore.Types.LeftEdge)
 
     Layout.minimumWidth: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : PlasmaCore.Units.iconSizes.small
-    Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (PlasmaCore.Units.iconSizes.small + 2 * theme.mSize(theme.defaultFont).height)
+    Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (PlasmaCore.Units.iconSizes.small + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
 
     Layout.maximumWidth: inPanel && plasmoid.formFactor !== PlasmaCore.Types.Vertical ? PlasmaCore.Units.iconSizeHints.panel : -1
     Layout.maximumHeight: inPanel && plasmoid.formFactor !== PlasmaCore.Types.Vertical ? PlasmaCore.Units.iconSizeHints.panel : -1

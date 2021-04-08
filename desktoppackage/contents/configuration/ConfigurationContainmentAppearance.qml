@@ -95,7 +95,7 @@ AbstractKCM {
                 Kirigami.FormData.label: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout:")
                 enabled: !plasmoid.immutable
                 model: configDialog.containmentPluginsConfigModel
-                implicitWidth: theme.mSize(theme.defaultFont).width * 24
+                implicitWidth: PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 24
                 textRole: "name"
                 onActivated: {
                     var model = configDialog.containmentPluginsConfigModel.get(currentIndex)
@@ -112,7 +112,7 @@ AbstractKCM {
                     id: wallpaperComboBox
                     Layout.preferredWidth: Math.max(implicitWidth, pluginComboBox.implicitWidth)
                     model: configDialog.wallpaperConfigModel
-                    implicitWidth: theme.mSize(theme.defaultFont).width * 24
+                    implicitWidth: PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 24
                     textRole: "name"
                     onActivated: {
                         var model = configDialog.wallpaperConfigModel.get(currentIndex)

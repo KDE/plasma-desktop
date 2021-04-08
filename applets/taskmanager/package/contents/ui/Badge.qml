@@ -30,7 +30,7 @@ Rectangle {
     property int number: 0
 
     implicitWidth: Math.max(height, Math.round(label.contentWidth + radius / 2)) // Add some padding around.
-    color: theme.highlightColor
+    color: PlasmaCore.Theme.highlightColor
     radius: height / 2
 
     PlasmaComponents.Label {
@@ -43,7 +43,7 @@ Rectangle {
         fontSizeMode: Text.VerticalFit
         font.pointSize: 1024
         minimumPointSize: 5
-        color: theme.highlightedTextColor
+        color: PlasmaCore.Theme.highlightedTextColor
         text: {
             if (badgeRect.number < 0) {
                 return i18nc("Invalid number of new messages, overlay, keep short", "—");

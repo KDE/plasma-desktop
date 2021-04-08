@@ -248,7 +248,7 @@ Item {
                     return (PlasmaCore.Units.smallSpacing // icon.anchors.topMargin (acts as top padding)
                         + icon.height
                         + PlasmaCore.Units.smallSpacing // label.anchors.topMargin (acts as spacing between icon and label)
-                        + (label.lineCount * theme.mSize(theme.defaultFont).height)
+                        + (label.lineCount * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
                         + PlasmaCore.Units.smallSpacing); // leftover (acts as bottom padding)
                 }
 

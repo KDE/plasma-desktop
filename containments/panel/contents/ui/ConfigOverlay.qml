@@ -267,7 +267,7 @@ MouseArea {
     Rectangle {
         id: handle
         visible: configurationArea.containsMouse
-        color: theme.backgroundColor
+        color: PlasmaCore.Theme.backgroundColor
         radius: 3
         opacity: currentApplet ? 0.5 : 0
         PlasmaCore.IconItem {
@@ -287,7 +287,7 @@ MouseArea {
             opacity: visible && !xAnim.running && !yAnim.running ? 1.0 : 0
             width: configurationArea.spacerHandleSize
             height: configurationArea.spacerHandleSize
-            color: theme.textColor
+            color: PlasmaCore.Theme.textColor
             Behavior on opacity {
                 NumberAnimation {
                     duration: PlasmaCore.Units.longDuration
@@ -306,7 +306,7 @@ MouseArea {
             opacity: visible && !xAnim.running && !yAnim.running ? 1.0 : 0
             width: configurationArea.spacerHandleSize
             height: configurationArea.spacerHandleSize
-            color: theme.textColor
+            color: PlasmaCore.Theme.textColor
             Behavior on opacity {
                 NumberAnimation {
                     duration: PlasmaCore.Units.longDuration

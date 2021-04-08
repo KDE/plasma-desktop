@@ -88,7 +88,7 @@ Kirigami.FormLayout {
         id: fontDialog
         title: i18nc("@title:window", "Select Font")
 
-        font: !cfg_font || cfg_font.family === "" ? theme.defaultFont : cfg_font
+        font: !cfg_font || cfg_font.family === "" ? PlasmaCore.Theme.defaultFont : cfg_font
 
         onAccepted: {
             cfg_font = font

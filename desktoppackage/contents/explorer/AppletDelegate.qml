@@ -126,9 +126,9 @@ Item {
                 Rectangle {
                     id: runningBadge
                     width: height
-                    height: Math.round(theme.mSize(countLabel.font).height * 1.3)
+                    height: Math.round(PlasmaCore.Theme.mSize(countLabel.font).height * 1.3)
                     radius: height
-                    color: theme.highlightColor
+                    color: PlasmaCore.Theme.highlightColor
                     visible: running && delegate.GridView.isCurrentItem
                     onVisibleChanged: maskShaderSource.scheduleUpdate()
 
@@ -224,7 +224,7 @@ Item {
                 // otherwise causes binding loop due to the way the Plasma sets the height
                 height: implicitHeight
                 text: model.description
-                font: theme.smallestFont
+                font: PlasmaCore.Theme.smallestFont
                 wrapMode: Text.WordWrap
                 elide: Text.ElideRight
                 maximumLineCount: heading.lineCount === 1 ? 3 : 2

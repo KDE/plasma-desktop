@@ -35,7 +35,7 @@ FocusScope {
 
     property Item view: folderView
     property Item label: null
-    property int labelHeight: theme.mSize(theme.defaultFont).height
+    property int labelHeight: PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height
         + (root.isPopup ? (PlasmaCore.Units.smallSpacing * 2) : 0)
 
     property alias model: folderView.model

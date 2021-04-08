@@ -37,7 +37,7 @@ FocusScope {
     }
 
     //this is used to perfectly align the filter field and delegates
-    property int cellWidth: theme.mSize(theme.defaultFont).width * 30
+    property int cellWidth: PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 30
     property int spacing: 2 * PlasmaCore.Units.smallSpacing
 
     property bool showSwitcherOnly: false

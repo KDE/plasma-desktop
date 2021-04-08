@@ -274,7 +274,7 @@ Item {
         }
 
         updateSvgMetrics();
-        theme.themeChanged.connect(updateSvgMetrics);
+        PlasmaCore.Theme.themeChanged.connect(updateSvgMetrics);
 
         rootModel.refreshed.connect(reset);
 

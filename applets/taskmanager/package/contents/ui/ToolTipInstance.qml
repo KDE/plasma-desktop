@@ -296,7 +296,7 @@ ColumnLayout {
                     lineHeight: 1
                     elide: parent.state ? Text.ElideNone : Text.ElideRight
                     text: artist || ""
-                    font: theme.smallestFont
+                    font: PlasmaCore.Theme.smallestFont
                 }
             }
         }

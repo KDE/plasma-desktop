@@ -79,7 +79,7 @@ PlasmaComponents.ToolButton {
             wrapMode: Text.WordWrap
             elide: Text.ElideRight
             // The handle uses always the main global theme
-            color: theme.textColor
+            color: PlasmaCore.Theme.textColor
             visible: text.length > 0
         }
     }

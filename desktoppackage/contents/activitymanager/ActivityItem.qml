@@ -121,7 +121,7 @@ Item {
             visible:  root.current
 
             border.width: root.current ? PlasmaCore.Units.smallSpacing : 0
-            border.color: theme.highlightColor
+            border.color: PlasmaCore.Theme.highlightColor
 
             z: 10
 
@@ -246,7 +246,7 @@ Item {
             }
 
             opacity: .75
-            color: theme.backgroundColor
+            color: PlasmaCore.Theme.backgroundColor
         }
 
         TaskDropArea {
@@ -345,7 +345,7 @@ Item {
                 }
 
                 opacity: .75
-                color: theme.backgroundColor
+                color: PlasmaCore.Theme.backgroundColor
             }
 
             PlasmaComponents.Button {

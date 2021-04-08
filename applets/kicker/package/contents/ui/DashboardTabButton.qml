@@ -38,7 +38,7 @@ Item {
     Rectangle {
         anchors.fill: parent
 
-        color: tab.parent.focus ? theme.highlightColor : "black"
+        color: tab.parent.focus ? PlasmaCore.Theme.highlightColor : "black"
 
         opacity: tab.active ? 0.4 : 0.15
         Behavior on opacity { SmoothedAnimation { duration: PlasmaCore.Units.shortDuration; velocity: 0.01 } }
@@ -54,7 +54,7 @@ Item {
         opacity: tab.active ? 1.0 : 0.6
         Behavior on opacity { SmoothedAnimation { duration: PlasmaCore.Units.shortDuration; velocity: 0.01 } }
 
-        color: tab.parent.focus ? theme.highlightedTextColor : "white"
+        color: tab.parent.focus ? PlasmaCore.Theme.highlightedTextColor : "white"
 
         level: 1
     }

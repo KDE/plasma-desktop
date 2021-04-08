@@ -69,7 +69,7 @@ PlasmaCore.ToolTipArea {
             })
         } else {
             popupWindow.mainItem.width = Qt.binding(function() {
-                return theme.mSize(theme.defaultFont).width * 35
+                return PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 35
             })
         }
 
@@ -87,7 +87,7 @@ PlasmaCore.ToolTipArea {
             })
         } else {
             popupWindow.mainItem.height = Qt.binding(function() {
-                return theme.mSize(theme.defaultFont).height * 25
+                return PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height * 25
             })
         }
 

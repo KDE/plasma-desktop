@@ -702,11 +702,11 @@ FocusScope {
 
                 cellHeight: {
                     if (root.useListViewMode) {
-                        return Math.ceil((Math.max(theme.mSize(theme.defaultFont).height, iconSize)
+                        return Math.ceil((Math.max(PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height, iconSize)
                             + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
                             listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2;
                     } else {
-                        var iconHeight = iconSize + (theme.mSize(theme.defaultFont).height * plasmoid.configuration.textLines) + (4 * PlasmaCore.Units.smallSpacing);
+                        var iconHeight = iconSize + (PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height * plasmoid.configuration.textLines) + (4 * PlasmaCore.Units.smallSpacing);
                         if (root.isContainment && isRootView && scrollArea.viewportHeight > 0) {
                             var extraHeight = calcExtraSpacing(iconHeight, scrollArea.viewportHeight);
                             return iconHeight + extraHeight;
@@ -1427,7 +1427,7 @@ FocusScope {
                         _height = targetItem.labelArea.height + __style.padding.top + __style.padding.bottom;
                     } else {
                         var realHeight = contentHeight + __style.padding.top + __style.padding.bottom;
-                        var maxHeight = theme.mSize(theme.defaultFont).height * (plasmoid.configuration.textLines + 1) + __style.padding.top + __style.padding.bottom;
+                        var maxHeight = PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height * (plasmoid.configuration.textLines + 1) + __style.padding.top + __style.padding.bottom;
                         _height = Math.min(realHeight, maxHeight);
                     }
                     return(_height + (addWidthHoriozontalScroller ? __horizontalScrollBar.parent.horizontalScrollbarOffset : 0));

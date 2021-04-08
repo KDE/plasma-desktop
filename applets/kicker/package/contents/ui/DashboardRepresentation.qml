@@ -46,7 +46,7 @@ Kicker.DashboardWindow {
     property bool smallScreen: ((Math.floor(width / PlasmaCore.Units.iconSizes.huge) <= 22) || (Math.floor(height / PlasmaCore.Units.iconSizes.huge) <= 14))
 
     property int iconSize: smallScreen ? PlasmaCore.Units.iconSizes.large : PlasmaCore.Units.iconSizes.huge
-    property int cellSize: iconSize + theme.mSize(theme.defaultFont).height
+    property int cellSize: iconSize + PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height
         + (2 * PlasmaCore.Units.smallSpacing)
         + (2 * Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
                         highlightItemSvg.margins.left + highlightItemSvg.margins.right))

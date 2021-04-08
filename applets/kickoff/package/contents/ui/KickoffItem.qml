@@ -158,7 +158,7 @@ Item {
 
         text: isManagerMode ? "" : model.description || ""
         opacity: isCurrent ? 0.8 : 0.6
-        font: theme.smallestFont
+        font: PlasmaCore.Theme.smallestFont
         elide: Text.ElideMiddle
         horizontalAlignment: Text.AlignRight
     }

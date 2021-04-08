@@ -169,7 +169,7 @@ FocusScope {
             property int iconSize: PlasmaCore.Units.iconSizes.large
 
             property bool animating: false
-            cellWidth: gridView.iconSize + theme.mSize(theme.defaultFont).height
+            cellWidth: gridView.iconSize + PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height
                 + (4 * PlasmaCore.Units.smallSpacing + Math.round(PlasmaCore.Units.smallSpacing * 1.5)) //item margins + spacing
                 + (2 * gridView.cellMargin) //highlight padding
                 + cellMargin * 2 //actual margins

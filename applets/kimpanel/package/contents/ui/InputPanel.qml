@@ -33,8 +33,8 @@ PlasmaCore.Dialog {
     readonly property bool verticalLayout: (helper.lookupTableLayout === 1) || (helper.lookupTableLayout === 0 && plasmoid.configuration.vertical_lookup_table);
     property int highlightCandidate: helper.lookupTableCursor
     property int hoveredCandidate: -1
-    property font preferredFont: plasmoid.configuration.use_default_font ? theme.defaultFont : plasmoid.configuration.font
-    property int baseSize: theme.mSize(preferredFont).height
+    property font preferredFont: plasmoid.configuration.use_default_font ? PlasmaCore.Theme.defaultFont : plasmoid.configuration.font
+    property int baseSize: PlasmaCore.Theme.mSize(preferredFont).height
     property rect position: helper.spotRect
 
     onPositionChanged : updatePosition();
@@ -71,7 +71,7 @@ PlasmaCore.Dialog {
                         font: preferredFont
                     }
                     Rectangle {
-                        color: theme.textColor
+                        color: PlasmaCore.Theme.textColor
                         height: baseSize
                         width: 2
                         opacity: 0.8
@@ -122,13 +122,13 @@ PlasmaCore.Dialog {
                                 text: model.label
                                 font: preferredFont
                                 opacity: 0.8
-                                color: selected ? theme.highlightedTextColor : theme.textColor
+                                color: selected ? PlasmaCore.Theme.highlightedTextColor : PlasmaCore.Theme.textColor
                             }
                             PlasmaComponents.Label {
                                 id: textLabel
                                 text: model.text
                                 font: preferredFont
-                                color: selected ? theme.highlightedTextColor : theme.textColor
+                                color: selected ? PlasmaCore.Theme.highlightedTextColor : PlasmaCore.Theme.textColor
                             }
                         }
                         MouseArea {
