@@ -12,8 +12,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2016-08-24</date>
-<releaseinfo>&plasma; 5.8</releaseinfo>
+<date>2021-04-08</date>
+<releaseinfo>&plasma; 5.20</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -58,7 +58,7 @@ accessible to your system.
 </para></listitem>
 </varlistentry>
 
-<varlistentry><term><guilabel>Mount all removable media at login</guilabel></term>
+<varlistentry><term><guilabel>Automatically mount all removable media at login</guilabel></term>
 <listitem><para>
 If any removable storage devices are connected to your system when you login 
 to your desktop, &plasma; will automatically make the contents available to your
@@ -73,12 +73,12 @@ storage device available to the system when it is plugged in or attached.
 </para></listitem>
 </varlistentry>
 
-<varlistentry><term><guilabel>Device Overrides</guilabel></term>
+<varlistentry><term><guilabel>Automatic mount</guilabel></term>
 <listitem><para>
-This list contains the storage devices known to &plasma;. If <guilabel>Automount on Login
-</guilabel>is checked, the device will be automatically mounted even though <guilabel>Mount 
+This list contains the storage devices known to &plasma;. If <guilabel>On Login</guilabel>
+is checked, the device will be automatically mounted even though <guilabel>Automatically mount 
 all removable media at login</guilabel> is unchecked. The same applies for 
-<guilabel>Automount on Attach</guilabel>.</para>
+<guilabel>On Attach</guilabel>.</para>
 <para>
 If <guilabel>Enable automatic mounting of removable media</guilabel> is unchecked, the 
 overrides do not apply and no devices will be automatically mounted.
