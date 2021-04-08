@@ -18,8 +18,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2018-11-10</date>
-<releaseinfo>Plasma 5.14</releaseinfo>
+<date>2021-04-08</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -47,11 +47,11 @@
 
 <para>On this page you can see previews of already installed splash screens. The preview of the current splash screen is highlighted.</para>
 
-<para>Hover a preview image with the mouse cursor then the button <guilabel>Test Splashscreen</guilabel> appears at the bottom right of the image.
+<para>Hover a preview image with the mouse cursor then the button <guilabel>Preview Splash Screen</guilabel> appears at the bottom right of the image.
 Press this button to view the splashscreen in action.</para>
 
 <variablelist>
-<varlistentry><term><guilabel>Get New Theme...</guilabel></term>
+<varlistentry><term><guilabel>Get New Splash Screens...</guilabel></term>
 <listitem>
 <para>
 You need to be connected to the Internet to use this action. A dialog will display a list of themes from the <ulink url="https://store.kde.org">https://store.kde.org</ulink> website. Clicking the <guibutton>Install</guibutton> button associated with a theme will install this theme locally.
@@ -70,38 +70,12 @@ You need to be connected to the Internet to use this action. A dialog will displ
 </screenshot>
 </para>
 <para>
-This new theme is immediately available after you close the &systemsettings; Add-On Installer dialog and is highlighted. The preview displays the picture. You need to click the <guibutton>Apply</guibutton> button to make this theme your current splash-screen theme.
+This new theme is immediately available after you close the &systemsettings; Download New Splash Screens dialog and is highlighted. The preview displays the picture. You need to click the <guibutton>Apply</guibutton> button to make this theme your current splash-screen theme.
 </para>
 </listitem>
 </varlistentry>
 </variablelist>
 
-<!-- not in 5.14
-<varlistentry><term><guilabel>Install Theme File...</guilabel></term>
-<listitem>
-<para>
-Instead of installing a theme directly as above you might have a tarball of a theme locally that you want to install. Clicking on this button will open a file dialog and you choose the tarball of the theme you want to install. The installer then unpacks the theme locally and makes it immediately available in the themes list.
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry><term><guilabel>Remove Theme</guilabel></term>
-<listitem>
-<para>
-Removing a theme means removing the theme files from your disk. A message box warns you before doing anything and indicates to you what it will remove. Clicking on <guibutton>Delete</guibutton> in this message box will remove the splash screen theme from your disk. Clicking <guibutton>Cancel</guibutton> will abort the remove action. If you choose <guibutton>Delete</guibutton>, the theme is then no longer available in the list.
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry><term><guilabel>Test Theme</guilabel></term>
-<listitem>
-<para>
-This shows you the theme and the associated icons as they will be displayed as splash screen when &kde; starts. Clicking on the splash screen hides it.
-</para>
-</listitem>
-</varlistentry>
-
--->
 </article>
 
 <!--
