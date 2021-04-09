@@ -92,12 +92,9 @@ static std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName)
 
 AutostartModel::AutostartModel(QObject *parent)
     : QAbstractListModel(parent)
+    , m_xdgAutoStartPath(QDir(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation)).filePath(QStringLiteral("autostart")))
 {
-}
-
-QString AutostartModel::XdgAutoStartPath() const
-{
-    return QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/autostart/");
+    m_xdgAutoStartPath.setFilter(QDir::Files | QDir::NoDotAndDotDot);
 }
 
 void AutostartModel::load()
@@ -106,16 +103,12 @@ void AutostartModel::load()
 
     m_entries.clear();
 
-    QDir autostartdir(XdgAutoStartPath());
-    if (!autostartdir.exists()) {
-        autostartdir.mkpath(XdgAutoStartPath());
-    }
-
-    autostartdir.setFilter(QDir::Files | QDir::NoDotAndDotDot);
+    // Creates if doesn't already exist
+    m_xdgAutoStartPath.mkpath(".");
 
     // Needed to add all script entries after application entries
     QVector<AutostartEntry> scriptEntries;
-    const auto filesInfo = autostartdir.entryInfoList();
+    const auto filesInfo = m_xdgAutoStartPath.entryInfoList();
     for (const QFileInfo &fi : filesInfo) {
         if (!KDesktopFile::isDesktopFile(fi.fileName())) {
             continue;
@@ -226,7 +219,7 @@ void AutostartModel::addApplication(const KService::Ptr &service)
     // https://bugs.launchpad.net/ubuntu/+source/kde-workspace/+bug/923360
     if (service->desktopEntryName().isEmpty() || service->entryPath().isEmpty()) {
         // create a new desktop file in s_desktopPath
-        desktopPath = XdgAutoStartPath() + service->name() + QStringLiteral(".desktop");
+        desktopPath = m_xdgAutoStartPath.filePath(service->name() + QStringLiteral(".desktop"));
 
         KDesktopFile desktopFile(desktopPath);
         KConfigGroup kcg = desktopFile.desktopGroup();
@@ -239,7 +232,7 @@ void AutostartModel::addApplication(const KService::Ptr &service)
         desktopFile.sync();
 
     } else {
-        desktopPath = XdgAutoStartPath() + service->desktopEntryName() + QStringLiteral(".desktop");
+        desktopPath = m_xdgAutoStartPath.filePath(service->desktopEntryName() + QStringLiteral(".desktop"));
 
         QFile::remove(desktopPath);
 
@@ -337,7 +330,7 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
 
         index = lastLoginScript + 1;
 
-        const QString desktopPath = XdgAutoStartPath() + fileName + QStringLiteral(".desktop");
+        const QString desktopPath = m_xdgAutoStartPath.filePath(fileName + QStringLiteral(".desktop"));
         KDesktopFile desktopFile(desktopPath);
         KConfigGroup kcg = desktopFile.desktopGroup();
         kcg.writeEntry("Name", fileName);
@@ -378,7 +371,7 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
     }
 }
 
-void AutostartModel::insertScriptEntry(int index, const QString &name, const QString &path, AutostartModel::AutostartEntrySource kind)
+void AutostartModel::insertScriptEntry(int index, const QString &name, const QString &path, AutostartEntrySource kind)
 {
     beginInsertRows(QModelIndex(), index, index);
 

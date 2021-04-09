@@ -20,6 +20,7 @@
 #define AUTOSTARTMODEL_H
 
 #include <QAbstractListModel>
+#include <QDir>
 
 #include <KService>
 
@@ -70,8 +71,8 @@ private:
     void addApplication(const KService::Ptr &service);
     void loadScriptsFromDir(const QString &subDir, AutostartEntrySource kind);
     void insertScriptEntry(int index, const QString &name, const QString &path, AutostartModel::AutostartEntrySource kind);
-    QString XdgAutoStartPath() const;
 
+    QDir m_xdgAutoStartPath;
     QVector<AutostartEntry> m_entries;
 };
 
