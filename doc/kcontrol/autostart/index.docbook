@@ -31,10 +31,10 @@
 
 <note><para>Please note that in this module all changes are immediately applied.</para></note>
 
-<para>The program scans <filename>$HOME/.config/autostart/</filename> for applications and login scripts, <filename class="directory">$HOME/.config/plasma-workspace/env</filename> for pre-login scripts and <filename class="directory">$HOME/.config/plasma-workspace/shutdown</filename> for logout scripts to check what programs and scripts are already there and displays them. It allows you to manage them easily.
+<para>The program scans <filename>$HOME/.config/autostart/</filename> for applications and login scripts, <filename class="directory">$HOME/.config/plasma-workspace/env</filename> for pre-startup scripts and <filename class="directory">$HOME/.config/plasma-workspace/shutdown</filename> for logout scripts to check what programs and scripts are already there and displays them. It allows you to manage them easily.
 </para>
 
-<para>Login scripts are <filename class="extension">.desktop</filename> files with a <literal>X-KDE-AutostartScript=true</literal> key. Pre-startup scripts are run earlier and also appear in the <guilabel>Login Scripts</guilabel> section.
+<para>Login scripts are <filename class="extension">.desktop</filename> files with a <literal>X-KDE-AutostartScript=true</literal> key. Pre-startup scripts are run earlier and can be used to set environment variables.
 </para>
 
 <note><para>Note that you can change the location of your <filename class="directory">Autostart</filename>

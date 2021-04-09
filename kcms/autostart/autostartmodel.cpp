@@ -128,8 +128,8 @@ void AutostartModel::load()
     }
 
     m_entries.append(scriptEntries);
-    // Treat them as XdgScripts so they appear together in the UI
-    loadScriptsFromDir(QStringLiteral("/plasma-workspace/env/"), AutostartModel::AutostartEntrySource::XdgScripts);
+
+    loadScriptsFromDir(QStringLiteral("/plasma-workspace/env/"), AutostartModel::AutostartEntrySource::PlasmaEnvScripts);
 
     loadScriptsFromDir(QStringLiteral("/plasma-workspace/shutdown/"), AutostartModel::AutostartEntrySource::PlasmaShutdown);
 

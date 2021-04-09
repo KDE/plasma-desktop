@@ -47,7 +47,7 @@ public:
         XdgAutoStart = 0,
         XdgScripts = 1,
         PlasmaShutdown = 2,
-        PlasmaStart = 3,
+        PlasmaEnvScripts = 3,
     };
     Q_ENUM(AutostartEntrySource)
 
