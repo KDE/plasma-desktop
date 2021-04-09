@@ -75,7 +75,7 @@ KCM.ScrollViewKCM {
                     text: i18n("Properties")
                     icon.name: "document-properties"
                     onTriggered: kcm.model.editApplication(model.index, root)
-                    visible: model.source === AutostartModel.XdgAutoStart
+                    visible: model.source === AutostartModel.XdgAutoStart || model.source === AutostartModel.XdgScripts
                 },
                 Kirigami.Action {
                     text: i18n("Remove")

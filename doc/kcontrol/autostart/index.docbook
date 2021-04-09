@@ -89,10 +89,10 @@ This column shows the name of the program or script you want to start with &plas
 <varlistentry><term><guilabel>Properties</guilabel></term>
 <listitem>
 <para>
-This button is only shown when you hover the item with the mouse pointer. The button (only enabled for programs &ie; <filename class="extension">.desktop</filename> files) allows you to change the properties of the program or script. You have general properties, permissions properties, a preview when applicable, and properties related to the application for programs. The default command is extracted from the <filename class="extension">.desktop</filename> file from the <literal>Exec</literal> key.
+This button is only shown when you hover the item with the mouse pointer. The button (only enabled for programs and login scripts &ie; <filename class="extension">.desktop</filename> files) allows you to change the properties of the program or script. You have general properties, permissions properties, a preview when applicable, and properties related to the application or login script. The default command is extracted from the <filename class="extension">.desktop</filename> file from the <literal>Exec</literal> key.
 </para>
 <para>
-For a script, the command is the path to the script and can not be modified.
+For a logout script, the command is the path to the script and can not be modified.
 </para>
 </listitem>
 </varlistentry>
