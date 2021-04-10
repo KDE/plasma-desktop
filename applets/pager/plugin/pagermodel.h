@@ -39,9 +39,6 @@ class PagerModel : public QAbstractListModel, public QQmlParserStatus
 
     Q_INTERFACES(QQmlParserStatus)
 
-    Q_ENUMS(PagerType)
-    Q_ENUMS(AdditionalRoles)
-
     Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
     Q_PROPERTY(PagerType pagerType READ pagerType WRITE setPagerType NOTIFY pagerTypeChanged)
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
@@ -58,10 +55,12 @@ public:
         VirtualDesktops = 0,
         Activities,
     };
+    Q_ENUM(PagerType)
 
     enum AdditionalRoles {
         TasksModel = Qt::UserRole + 1,
     };
+    Q_ENUM(AdditionalRoles)
 
     explicit PagerModel(QObject *parent = nullptr);
     ~PagerModel() override;
