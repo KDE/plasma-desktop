@@ -1151,9 +1151,9 @@ int main(int argc, char *argv[])
     KDE_signal(SIGINT, signalhandler);
     KDE_signal(SIGHUP, signalhandler);
 
-    const char *p = qgetenv("DISPLAY").constData();
-    if (p)
-        display_name = String(p);
+    const QByteArray display = qgetenv("DISPLAY");
+    if (display.constData())
+        display_name = String(display.constData());
 
     if (!initialize_panel_agent(config_name, display_name, should_resident)) {
         std::cerr << "Failed to initialize Panel Agent!\n";
