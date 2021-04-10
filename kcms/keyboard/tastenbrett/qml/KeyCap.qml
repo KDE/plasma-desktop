@@ -40,7 +40,7 @@ Item {
     KeyCapLabel {
         id: topRight
         width: parent.width /2.0
-        horizontalAlignment: Text.AlignLeft
+        horizontalAlignment: Text.AlignRight
         height: parent.height  /2.0
         anchors.top: parent.top
         anchors.right: parent.right
@@ -58,7 +58,7 @@ Item {
     KeyCapLabel {
         id: bottomRight
         width: parent.width /2.0
-        horizontalAlignment: Text.AlignLeft
+        horizontalAlignment: Text.AlignRight
         height: parent.height  /2.0
         anchors.bottom: parent.bottom
         anchors.right: parent.right
