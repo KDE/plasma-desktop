@@ -515,7 +515,7 @@ void Positioner::sourceDataChanged(const QModelIndex &topLeft, const QModelIndex
 
 void Positioner::sourceModelAboutToBeReset()
 {
-    emit beginResetModel();
+    beginResetModel();
 }
 
 void Positioner::sourceModelReset()
@@ -524,7 +524,7 @@ void Positioner::sourceModelReset()
         initMaps();
     }
 
-    emit endResetModel();
+    endResetModel();
 }
 
 void Positioner::sourceRowsAboutToBeInserted(const QModelIndex &parent, int start, int end)
@@ -585,7 +585,7 @@ void Positioner::sourceRowsAboutToBeInserted(const QModelIndex &parent, int star
             m_ignoreNextTransaction = true;
         }
     } else {
-        emit beginInsertRows(parent, start, end);
+        beginInsertRows(parent, start, end);
         beginInsertRows(parent, start, end);
         m_beginInsertRowsCalled = true;
     }
@@ -597,7 +597,7 @@ void Positioner::sourceRowsAboutToBeMoved(const QModelIndex &sourceParent,
                                           const QModelIndex &destinationParent,
                                           int destinationRow)
 {
-    emit beginMoveRows(sourceParent, sourceStart, sourceEnd, destinationParent, destinationRow);
+    beginMoveRows(sourceParent, sourceStart, sourceEnd, destinationParent, destinationRow);
 }
 
 void Positioner::sourceRowsAboutToBeRemoved(const QModelIndex &parent, int first, int last)
@@ -640,7 +640,7 @@ void Positioner::sourceRowsAboutToBeRemoved(const QModelIndex &parent, int first
             m_ignoreNextTransaction = true;
         }
     } else {
-        emit beginRemoveRows(parent, first, last);
+        beginRemoveRows(parent, first, last);
     }
 }
 
@@ -683,7 +683,7 @@ void Positioner::sourceRowsMoved(const QModelIndex &sourceParent, int sourceStar
     Q_UNUSED(destinationParent)
     Q_UNUSED(destinationRow)
 
-    emit endMoveRows();
+    endMoveRows();
 }
 
 void Positioner::sourceRowsRemoved(const QModelIndex &parent, int first, int last)

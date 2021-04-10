@@ -162,17 +162,17 @@ void PredicateModel::childrenChanging(const QModelIndex &item, Solid::Predicate:
     }
 
     if (rowCount(item) != 0 && newType != Solid::Predicate::Conjunction && newType != Solid::Predicate::Disjunction) {
-        emit beginRemoveRows(item, 0, 1);
+        beginRemoveRows(item, 0, 1);
         currentItem->updateChildrenStatus();
-        emit endRemoveRows();
+        endRemoveRows();
         return;
     }
 
     bool hasChildren = (newType == Solid::Predicate::Conjunction || newType == Solid::Predicate::Disjunction);
 
     if (rowCount(item) == 0 && hasChildren) {
-        emit beginInsertRows(item, 0, 1);
+        beginInsertRows(item, 0, 1);
         currentItem->updateChildrenStatus();
-        emit endInsertRows();
+        endInsertRows();
     }
 }

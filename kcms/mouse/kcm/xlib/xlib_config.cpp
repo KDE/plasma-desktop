@@ -279,7 +279,7 @@ void XlibConfig::defaults()
     checkAccess();
     m_parent->kcmDefaults();
 
-    m_parent->changed(true);
+    Q_EMIT m_parent->changed(true);
 }
 
 /** No descriptions */

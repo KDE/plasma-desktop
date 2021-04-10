@@ -423,19 +423,19 @@ void SortedActivitiesModel::onCurrentActivityChanged(const QString &currentActiv
         return;
 
     const int previousActivityRow = rowForActivityId(m_previousActivity);
-    emit rowChanged(previousActivityRow, {LastTimeUsed, LastTimeUsedString});
+    rowChanged(previousActivityRow, {LastTimeUsed, LastTimeUsedString});
 
     m_previousActivity = currentActivity;
 
     const int currentActivityRow = rowForActivityId(m_previousActivity);
-    emit rowChanged(currentActivityRow, {LastTimeUsed, LastTimeUsedString});
+    rowChanged(currentActivityRow, {LastTimeUsed, LastTimeUsedString});
 }
 
 void SortedActivitiesModel::onBackgroundsUpdated(const QStringList &activities)
 {
     for (const auto &activity : activities) {
         const int row = rowForActivityId(activity);
-        emit rowChanged(row, {KActivities::ActivitiesModel::ActivityBackground});
+        rowChanged(row, {KActivities::ActivitiesModel::ActivityBackground});
     }
 }
 

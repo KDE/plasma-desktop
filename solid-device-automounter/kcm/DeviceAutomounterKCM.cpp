@@ -107,7 +107,7 @@ void DeviceAutomounterKCM::forgetSelectedDevices()
         }
     }
 
-    emit markAsChanged();
+    markAsChanged();
 }
 
 void DeviceAutomounterKCM::load()

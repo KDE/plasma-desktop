@@ -144,7 +144,7 @@ void BlacklistedApplicationsModel::defaults()
         d->applications[i].blocked = false;
     }
 
-    dataChanged(QAbstractListModel::index(0), QAbstractListModel::index(rowCount() - 1));
+    Q_EMIT dataChanged(QAbstractListModel::index(0), QAbstractListModel::index(rowCount() - 1));
 
     emit defaulted(true);
 }
@@ -156,7 +156,7 @@ void BlacklistedApplicationsModel::toggleApplicationBlocked(int index)
     }
 
     d->applications[index].blocked = !d->applications[index].blocked;
-    dataChanged(QAbstractListModel::index(index), QAbstractListModel::index(index));
+    Q_EMIT dataChanged(QAbstractListModel::index(index), QAbstractListModel::index(index));
 
     QStringList blockedApplications;
     QStringList allowedApplications;
