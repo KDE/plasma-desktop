@@ -49,7 +49,7 @@ KclockModule::KclockModule(QWidget *parent, const QVariantList &)
                                                                                   QStringLiteral("org.freedesktop.DBus"),
                                                                                   QStringLiteral("ListActivatableNames")));
 
-    if (!reply.arguments().isEmpty() && reply.arguments().first().value<QStringList>().contains(QLatin1String("org.freedesktop.timedate1"))) {
+    if (!reply.arguments().isEmpty() && reply.arguments().constFirst().value<QStringList>().contains(QLatin1String("org.freedesktop.timedate1"))) {
         m_haveTimedated = true;
     }
 

@@ -150,7 +150,7 @@ KConfigGroup *ActionItem::configItem(DesktopAction actionType, GroupType keyGrou
         if (isUserSupplied()) {
             countAccess = 1;
         }
-        return actionGroups.values(keyGroup)[countAccess];
+        return actionGroups.values(keyGroup).at(countAccess);
     }
-    return actionGroups.values(keyGroup)[0]; // Implement a backstop so a valid value is always returned
+    return actionGroups.values(keyGroup).at(0); // Implement a backstop so a valid value is always returned
 }

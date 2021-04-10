@@ -132,7 +132,7 @@ void Dtime::currentZone()
         m_local->setText(i18nc("%1 is name of time zone, %2 is its abbreviation",
                                "Current local time zone: %1 (%2)",
                                K4TimeZoneWidget::displayName(localZone),
-                               QString::fromUtf8(localZone.abbreviations().first())));
+                               QString::fromUtf8(localZone.abbreviations().constFirst())));
     }
 }
 
