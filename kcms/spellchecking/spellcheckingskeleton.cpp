@@ -25,7 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <Sonnet/Settings>
 
 SpellCheckingSkeleton::SpellCheckingSkeleton(QObject *parent)
-    : KCoreConfigSkeleton(QStringLiteral(""), parent)
+    : KCoreConfigSkeleton(QString(), parent)
     , m_store(new Sonnet::Settings(this))
 {
     // Associated with managed widget
