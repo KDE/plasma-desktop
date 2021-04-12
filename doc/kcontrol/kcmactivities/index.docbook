@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="kcmactivities" lang="&language;">
+<title>Activities</title>
+<articleinfo>
+<authorgroup>	
+<author><firstname>Yuri</firstname><surname>Chornoivan</surname>
+<email>yurchor@ukr.net</email></author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2021-04-12</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>activity</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="activities">
+<title>Activities</title>
+<sect2 id="activities-intro">
+
+<title>Introduction</title>
+
+<para>
+    This module allows configuring activities. Activities are a way to have multiple &plasma; setups, with each a different set of widgets and themes. Some activities can be private. Such activities do not track your actions. For example, they do not track what recent document you opened.
+</para>
+
+<para>
+    The module is divided into three tabs:
+    <link linkend="activities-main"><guilabel>Activities</guilabel></link>,
+    <link linkend="activities-switching"><guilabel>Switching</guilabel></link>, and
+    <link linkend="activities-privacy"><guilabel>Privacy</guilabel></link>.
+</para>
+
+<sect3 id="activities-main">
+<title><guilabel>Activities</guilabel></title>
+
+<para>
+    This tab lists your current activities. Hover items in the list with the mouse pointer to reveal the buttons to configure or remove activities.
+</para>
+
+<para>
+    Use the <inlinemediaobject><imageobject><imagedata fileref="configure.png" format="PNG"/></imageobject></inlinemediaobject> overlay button to configure activity. You can change the following activity parameters:
+</para>
+
+<variablelist>
+    <varlistentry>
+        <term><guilabel>Icon</guilabel></term>
+        <listitem>
+            <para>
+                The icon of activity can be seen on the activity manager selector of the &plasma; panel. Click on the current icon to choose some system-wide icon or browse the file system to select a custom icon.
+            </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term><guilabel>Name</guilabel></term>
+        <listitem>
+            <para>
+                Give your activity a recognizable name.
+            </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term><guilabel>Description</guilabel></term>
+        <listitem>
+            <para>
+                A free-form description of the activity that is shown below the name on the activity manager selector of the &plasma; panel.
+            </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term><guilabel>Privacy</guilabel></term>
+        <listitem>
+            <para>
+                Check the <guilabel>Do not track usage for this activity</guilabel> item to switch off any tracking for your activity.
+            </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term><guilabel>Shortcut for switching</guilabel></term>
+        <listitem>
+            <para>
+                Press the first button to input the new shortcut to switch to the activity. Press the second button to remove the current shortcut.
+            </para>
+        </listitem>
+    </varlistentry>
+</variablelist>
+<para>
+    Clicking on the <inlinemediaobject><imageobject><imagedata fileref="edit-delete.png" format="PNG"/></imageobject></inlinemediaobject> button removes the activity.
+</para>
+<para>
+    Clicking on the <guibutton>Create New...</guibutton> button below the list opens <guilabel>Create a New Activity</guilabel> dialog which is similar to the activity configuration dialog described above.
+</para>
+</sect3>
+
+<sect3 id="activities-switching">
+<title><guilabel>Switching</guilabel></title>
+
+<para>
+    Here, you can configure if &plasma; should remember the <guilabel>Current virtual desktop</guilabel> for each activity (needs restart). It is also possible to configure shortcuts for walking through the list of activities.
+</para>
+<para>
+    For more information on how to use the &kde; shortcut system, see the <ulink url="help:/fundamentals/shortcuts.html"><emphasis>Using and Customizing Shortcuts</emphasis> section of the <emphasis>&kde; Fundamentals</emphasis> documentation</ulink>.
+</para>
+</sect3>
+
+<sect3 id="activities-privacy">
+<title><guilabel>Privacy</guilabel></title>
+
+<para>
+    This tab allows configuring the time for activities to <guilabel>Keep history</guilabel> and clean some tracking data. Use the <guibutton>Clear History</guibutton> drop-down button to make &plasma; <guimenuitem>Forget the last hour</guimenuitem>, <guimenuitem>Forget the last two hours</guimenuitem>, <guimenuitem>Forget a day</guimenuitem>, or <guimenuitem>Forget everything</guimenuitem>.
+</para>
+<para>
+    Below, you can configure the range of applications for memorizing opened documents in your activities. Use the <guilabel>For all applications</guilabel> item to store all data, the <guilabel>Do not remember</guilabel> item to switch off storing data, or <guilabel>Only for specific applications</guilabel> item for fine-grained selection (clicking on the application item toggles its current mode).
+</para>
+<para>
+    Check the <guilabel>Blacklist applications not on the list</guilabel> item to switch off tracking for all applications that are not on the list.
+</para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
