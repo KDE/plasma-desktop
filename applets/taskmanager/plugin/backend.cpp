@@ -68,7 +68,7 @@ static const QString highlightWindowPath = QStringLiteral("/org/kde/KWin/Highlig
 static const QString &highlightWindowInterface = highlightWindowName;
 
 static const QString presentWindowsName = QStringLiteral("org.kde.KWin.PresentWindows");
-static const QString presentWindowsPath = QStringLiteral("org/kde/KWin/PresentWindows");
+static const QString presentWindowsPath = QStringLiteral("/org/kde/KWin/PresentWindows");
 static const QString &presentWindowsInterface = presentWindowsName;
 
 Backend::Backend(QObject *parent)
