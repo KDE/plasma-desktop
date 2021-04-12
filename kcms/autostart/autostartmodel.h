@@ -23,6 +23,7 @@
 #include <QDir>
 
 #include <KService>
+#include <optional>
 
 struct AutostartEntry;
 class QQuickItem;
@@ -71,6 +72,7 @@ private:
     void addApplication(const KService::Ptr &service);
     void loadScriptsFromDir(const QString &subDir, AutostartEntrySource kind);
     void insertScriptEntry(int index, const QString &name, const QString &path, AutostartModel::AutostartEntrySource kind);
+    static std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName);
 
     QDir m_xdgAutoStartPath;
     QVector<AutostartEntry> m_entries;

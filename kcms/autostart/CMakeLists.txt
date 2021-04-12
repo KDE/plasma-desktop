@@ -7,7 +7,7 @@ set(kcm_autostart_PART_SRCS
 
 add_library(kcm_autostart MODULE ${kcm_autostart_PART_SRCS})
 
-target_link_libraries(kcm_autostart KF5::I18n KF5::KIOCore KF5::KIOWidgets KF5::QuickAddons)
+target_link_libraries(kcm_autostart KF5::I18n KF5::KIOCore KF5::KIOWidgets KF5::QuickAddons PW::KWorkspace)
 
 kcoreaddons_desktop_to_json(kcm_autostart "package/metadata.desktop")
 

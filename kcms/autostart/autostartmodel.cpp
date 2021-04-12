@@ -34,8 +34,7 @@
 #include <KLocalizedString>
 #include <KOpenWithDialog>
 #include <KPropertiesDialog>
-
-#include <optional>
+#include <autostartscriptdesktopfile.h>
 
 // FDO user autostart directories are
 // .config/autostart which has .desktop files executed by klaunch or systemd, some of which might be scripts
@@ -52,7 +51,7 @@
 
 // share/autostart shouldn't be an option as this should be reserved for global autostart entries
 
-static std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName)
+std::optional<AutostartEntry> AutostartModel::loadDesktopEntry(const QString &fileName)
 {
     KDesktopFile config(fileName);
     const KConfigGroup grp = config.desktopGroup();
@@ -75,9 +74,7 @@ static std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName)
     const auto lstEntry = grp.readXdgListEntry("OnlyShowIn");
     const bool onlyInPlasma = lstEntry.contains(QLatin1String("KDE"));
     const QString iconName = config.readIcon();
-    const auto kind = config.desktopGroup().readEntry<bool>("X-KDE-AutostartScript", false)
-        ? AutostartModel::AutostartEntrySource::XdgScripts
-        : AutostartModel::AutostartEntrySource::XdgAutoStart; // .config/autostart load desktop at startup
+    const auto kind = AutostartScriptDesktopFile::isAutostartScript(config) ? XdgScripts : XdgAutoStart; // .config/autostart load desktop at startup
     const QString tryCommand = grp.readEntry("TryExec");
 
     // Try to filter out entries that point to nonexistant programs
@@ -87,7 +84,7 @@ static std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName)
         return {};
     }
 
-    return std::optional<AutostartEntry>({name, kind, enabled, fileName, onlyInPlasma, iconName});
+    return AutostartEntry{name, kind, enabled, fileName, onlyInPlasma, iconName};
 }
 
 AutostartModel::AutostartModel(QObject *parent)
@@ -331,15 +328,7 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
         index = lastLoginScript + 1;
 
         const QString desktopPath = m_xdgAutoStartPath.filePath(fileName + QStringLiteral(".desktop"));
-        KDesktopFile desktopFile(desktopPath);
-        KConfigGroup kcg = desktopFile.desktopGroup();
-        kcg.writeEntry("Name", fileName);
-        kcg.writeEntry("Exec", file.filePath());
-        kcg.writeEntry("Icon", "dialog-scripts");
-        kcg.writeEntry("Path", "");
-        kcg.writeEntry("Type", "Application");
-        kcg.writeEntry("X-KDE-AutostartScript", "true");
-        desktopFile.sync();
+        AutostartScriptDesktopFile(fileName, file.filePath(), desktopPath).sync();
 
         insertScriptEntry(index, fileName, desktopPath, kind);
     } else if (kind == AutostartModel::AutostartEntrySource::PlasmaShutdown) {
