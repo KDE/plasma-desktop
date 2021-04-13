@@ -183,6 +183,7 @@ KCM.SimpleKCM {
 
             QQC2.Label {
                 Layout.fillWidth: true
+                Layout.minimumWidth: Kirigami.Units.gridUnit * 15
                 text: singleClick.checked ? i18n("Select by clicking on item's selection marker") : i18n("Open by double-clicking instead")
                 elide: Text.ElideRight
                 font: PlasmaCore.Theme.smallestFont
