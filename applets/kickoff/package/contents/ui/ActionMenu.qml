@@ -2,122 +2,80 @@
     SPDX-FileCopyrightText: 2013 Aurélien Gâteau <agateau@kde.org>
     SPDX-FileCopyrightText: 2014-2015 Eike Hein <hein@kde.org>
     SPDX-FileCopyrightText: 2021 Mikel Johnson <mikel5764@gmail.com>
+    SPDX-FileCopyrightText: 2021 Noah Davis <noahadvs@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+pragma Singleton
 
-import org.kde.plasma.components 2.0 as PlasmaComponents // for Menu + MenuItem
+import QtQuick 2.15
+import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PC2 // for Menu + MenuItem
+import "code/tools.js" as Tools
 
 Item {
-    id: actionMenuRoot
+    id: root
+    property var actionList: menu.visualParent ? menu.visualParent.actionList : null
+    // Workaround for `plasmoid` context property not working in singletons
+    readonly property var plasmoid: KickoffSingleton.plasmoid
 
-    property QtObject menu
-    property Item visualParent
-    property variant actionList
-
-    signal actionClicked(string actionId, variant actionArgument)
-
-    onActionListChanged: refreshMenu();
-
-    function open(x, y) {
-        if (!actionList || !actionList.length) {
-            return;
-        }
-
-        if (x && y) {
-            menu.open(x, y);
-        } else {
-            menu.open();
-        }
+    // Not a QQC1 Menu. It's actually a custom QObject that uses a QMenu.
+    readonly property PC2.Menu menu: PC2.Menu {
+        id: menu
+        visualParent: root.parent
+        placement: PlasmaCore.Types.BottomPosedLeftAlignedPopup
     }
 
-    function refreshMenu() {
-        if (menu) {
-            menu.destroy();
-        }
+    visible: false
 
-        if (!actionList) {
-            return;
-        }
-
-        menu = contextMenuComponent.createObject(actionMenuRoot);
-
-        // actionList.forEach(function(actionItem) {
-        //     var item = contextMenuItemComponent.createObject(menu, {
-        //         "actionItem": actionItem,
-        //     });
-        // });
-
-        fillMenu(menu, actionList);
+    Instantiator {
+        active: actionList != null
+        model: actionList
+        delegate: menuItemComponent
+        onObjectAdded: menu.addMenuItem(object)
+        onObjectRemoved: menu.removeMenuItem(object)
     }
 
-    function fillMenu(menu, items) {
-        items.forEach(function(actionItem) {
-            if (actionItem.subActions) {
-                // This is a menu
-                var submenuItem = contextSubmenuItemComponent.createObject(
-                                        menu, { "actionItem" : actionItem });
+    Component { id: menuComponent; PC2.Menu {} }
 
-                fillMenu(submenuItem.submenu, actionItem.subActions);
-
+    Component {
+        id: menuItemComponent
+        PC2.MenuItem {
+            id: menuItem
+            required property var modelData
+            property PC2.Menu subMenu: if (modelData.subActions) {
+                return menuComponent.createObject(menuItem, {visualParent: menuItem.action})
             } else {
-                var item = contextMenuItemComponent.createObject(
-                                menu,
-                                {
-                                    "actionItem": actionItem,
-                                }
-                );
+                return null
             }
-        });
 
-    }
+            text: modelData.text ? modelData.text : ""
+            enabled: modelData.type !== "title" && ("enabled" in modelData ? modelData.enabled : true)
+            separator: modelData.type === "separator"
+            section: modelData.type === "title"
+            icon: modelData.icon ? modelData.icon : null
+            checkable: modelData.hasOwnProperty("checkable") ? modelData.checkable : false
+            checked: modelData.hasOwnProperty("checked") ? modelData.checked : false
 
-    Component {
-        id: contextMenuComponent
-
-        PlasmaComponents.Menu {
-            visualParent: actionMenuRoot.visualParent
-        }
-    }
-
-    Component {
-        id: contextSubmenuItemComponent
-
-        PlasmaComponents.MenuItem {
-            id: submenuItem
-
-            property variant actionItem
-
-            text: actionItem.text ? actionItem.text : ""
-            icon: actionItem.icon ? actionItem.icon : null
-
-            property variant submenu : submenu_
-
-            PlasmaComponents.Menu {
-                id: submenu_
-                visualParent: submenuItem.action
+            Instantiator {
+                active: menuItem.subMenu != null
+                model: modelData.subActions
+                delegate: menuItemComponent
+                onObjectAdded: subMenu.addMenuItem(object)
+                onObjectRemoved: subMenu.removeMenuItem(object)
             }
-        }
-    }
-
-    Component {
-        id: contextMenuItemComponent
-
-        PlasmaComponents.MenuItem {
-            property variant actionItem
-
-            text      : actionItem.text ? actionItem.text : ""
-            enabled   : actionItem.type !== "title" && ("enabled" in actionItem ? actionItem.enabled : true)
-            separator : actionItem.type === "separator"
-            section   : actionItem.type === "title"
-            icon      : actionItem.icon ? actionItem.icon : null
-            checkable : actionItem.checkable ? actionItem.checkable : false
-            checked   : actionItem.checked ? actionItem.checked : false
 
             onClicked: {
-                actionMenuRoot.actionClicked(actionItem.actionId, actionItem.actionArgument);
+                const modelActionTriggered = Tools.triggerAction(
+                    menu.visualParent.view.model,
+                    menu.visualParent.index,
+                    modelData.actionId,
+                    modelData.actionArgument
+                )
+                if (modelActionTriggered) {
+                    root.plasmoid.expanded = false
+                }
             }
         }
     }

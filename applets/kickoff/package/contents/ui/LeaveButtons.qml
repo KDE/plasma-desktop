@@ -4,125 +4,73 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-import QtQuick 2.12
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
 import org.kde.plasma.private.kicker 0.1 as Kicker
-import org.kde.plasma.components 2.0 as PlasmaComponents // for Menu + MenuItem
-import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.components 2.0 as PC2 // for Menu + MenuItem
+import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.core 2.0 as PlasmaCore
-import QtQuick.Layouts 1.12
+import org.kde.kirigami 2.16 as Kirigami
 
-Item {
-    id: leaveButtonRoot
+RowLayout {
+    id: root
     property alias leave: leaveButton
+    spacing: KickoffSingleton.spacing
 
-    RowLayout {
-        id: leaveButtonsRow
-        anchors {
-            verticalCenter: parent.verticalCenter
-            left: parent.left
-            right: leaveButton.left
-            rightMargin: spacing
-        }
-        spacing: PlasmaCore.Units.smallSpacing * 2
+    Kicker.SystemModel {
+        id: systemModel
+        favoritesModel: KickoffSingleton.rootModel.systemFavoritesModel
+    }
 
-        Repeater {
-            model: systemFavorites
-
-            PlasmaComponents3.ToolButton {
-                // so that it lets the buttons elide...
-                Layout.fillWidth: true
-                // ... but does not make the buttons grow
-                Layout.maximumWidth: implicitWidth
-                text: model.display
-                icon.name: model.decoration
-                onClicked: {
-                    systemFavorites.trigger(index, "", "")
-                }
-            }
-        }
-
-        Item { // compact layout
-            Layout.fillWidth: true
+    Repeater {
+        model: systemModel
+        delegate: PC3.ToolButton {
+            id: buttonDelegate
+            text: model.display
+            icon.name: model.decoration
+            // TODO: Don't generate items that will never be seen. Maybe DelegateModel can help?
+            visible: String(plasmoid.configuration.systemFavorites).includes(model.favoriteId)
+            onClicked: systemModel.trigger(index, "", null)
         }
     }
 
-    // Purely for layouting
-    PlasmaComponents3.ToolButton {
-        id: leaveButtonReference
-        icon: leaveButton.icon
-        text: leaveButton.text
-        visible: false
+    Item {
+        Layout.fillWidth: true
     }
 
-    PlasmaComponents3.ToolButton {
+    PC3.ToolButton {
         id: leaveButton
-
         readonly property int currentId: plasmoid.configuration.primaryActions
-
-        anchors {
-            right: parent.right
-            verticalCenter: parent.verticalCenter
-        }
-
-        display: {
-            if (leaveButtonsRow.implicitWidth > leaveButtonRoot.width - leaveButtonsRow.anchors.rightMargin - leaveButtonReference.width) {
-                return PlasmaComponents3.AbstractButton.IconOnly;
-            }
-            return PlasmaComponents3.AbstractButton.TextBesideIcon;
-        }
-
-        icon.name: {
-            return [
-                "system-log-out",
-                "system-shutdown",
-                "view-more-symbolic"
-            ][currentId];
-        }
-        text: {
-            return [
-                i18n("Leave…"),
-                i18n("Power…"),
-                i18n("More…")
-            ][currentId];
-        }
-
+        Accessible.role: Accessible.ButtonMenu
+        icon.width: PlasmaCore.Units.iconSizes.smallMedium
+        icon.height: PlasmaCore.Units.iconSizes.smallMedium
+        icon.name: ["system-log-out", "system-shutdown", "view-more-symbolic"][currentId];
+        text: [i18n("Leave…"), i18n("Power…"), i18n("More…")][currentId]
         // Make it look pressed while the menu is open
-        checked: contextMenu.status === PlasmaComponents.DialogStatus.Open
+        down: contextMenu.status === PC2.DialogStatus.Open || pressed
+        PC3.ToolTip.text: [i18n("Leave"), i18n("Power"), i18n("More")][leaveButton.currentId]
+        PC3.ToolTip.visible: leaveButton.display === PC3.AbstractButton.IconOnly && leaveButton.hovered
+        PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
         onPressed: contextMenu.openRelative()
-
-        Keys.forwardTo: [leaveButtonRoot]
-
-        PlasmaComponents3.ToolTip {
-            text: {
-                return [
-                    i18n("Leave"),
-                    i18n("Power"),
-                    i18n("More")
-                ][leaveButton.currentId];
-            }
-            visible: leaveButton.display === PlasmaComponents3.AbstractButton.IconOnly && leaveButton.hovered
-        }
     }
 
     Instantiator {
-        model: Kicker.SystemModel {
-            id: systemModel
-            favoritesModel: globalFavorites
-        }
-        delegate: PlasmaComponents.MenuItem {
+        model: systemModel
+        // Not a QQC1 MenuItem. It's actually a custom QQuickItem.
+        delegate: PC2.MenuItem {
             text: model.display
             icon: model.decoration
+            // TODO: Don't generate items that will never be seen. Maybe DelegateModel can help?
             visible: !String(plasmoid.configuration.systemFavorites).includes(model.favoriteId)
-
-            onClicked: systemModel.trigger(index, "", "")
+            Accessible.role: Accessible.MenuItem
+            onClicked: systemModel.trigger(index, "", null)
         }
-
-        onObjectAdded: {
-            contextMenu.addMenuItem(object);
-        }
+        onObjectAdded: contextMenu.addMenuItem(object)
+        onObjectRemoved: contextMenu.removeMenuItem(object)
     }
 
-    PlasmaComponents.Menu {
+    // Not a QQC1 Menu. It's actually a custom QObject that uses a QMenu.
+    PC2.Menu {
         id: contextMenu
         visualParent: leaveButton
         placement: {
@@ -137,13 +85,4 @@ Item {
             }
         }
     }
-
-    Keys.onPressed: {
-        if (event.key == Qt.Key_Tab && mainTabGroup.state == "top") {
-            keyboardNavigation.state = "LeftColumn"
-            root.currentView.forceActiveFocus()
-            event.accepted = true;
-        }
-    }
-
 }

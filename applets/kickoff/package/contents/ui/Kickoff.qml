@@ -5,42 +5,42 @@
     SPDX-FileCopyrightText: 2013 David Edmundson <davidedmundson@kde.org>
     SPDX-FileCopyrightText: 2015 Eike Hein <hein@kde.org>
     SPDX-FileCopyrightText: 2021 Mikel Johnson <mikel5764@gmail.com>
+    SPDX-FileCopyrightText: 2021 Noah Davis <noahadvs@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
-
-import org.kde.plasma.plasmoid 2.0 as PlasmaPlasmoid
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
+import QtQml 2.15
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-
+import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
 Item {
     id: kickoff
 
-    readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
-        || plasmoid.location === PlasmaCore.Types.RightEdge
-        || plasmoid.location === PlasmaCore.Types.BottomEdge
-        || plasmoid.location === PlasmaCore.Types.LeftEdge)
-    readonly property bool vertical: (plasmoid.formFactor === PlasmaCore.Types.Vertical)
+    Plasmoid.switchWidth: plasmoid.fullRepresentationItem ? plasmoid.fullRepresentationItem.Layout.minimumWidth : -1
+    Plasmoid.switchHeight: plasmoid.fullRepresentationItem ? plasmoid.fullRepresentationItem.Layout.minimumHeight : -1
 
-    PlasmaPlasmoid.Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 28
-    PlasmaPlasmoid.Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 20
+    Plasmoid.preferredRepresentation: plasmoid.compactRepresentation
 
-    PlasmaPlasmoid.Plasmoid.fullRepresentation: FullRepresentation {}
+    Plasmoid.fullRepresentation: FullRepresentation { focus: true }
 
-    PlasmaPlasmoid.Plasmoid.icon: plasmoid.configuration.icon
+    Plasmoid.icon: plasmoid.configuration.icon
 
-    PlasmaPlasmoid.Plasmoid.compactRepresentation: MouseArea {
+    Plasmoid.compactRepresentation: MouseArea {
         id: compactRoot
 
+        implicitWidth: PlasmaCore.Units.iconSizeHints.panel
+        implicitHeight: PlasmaCore.Units.iconSizeHints.panel
+
         Layout.minimumWidth: {
-            if (!inPanel) {
-                return PlasmaCore.Units.iconSizeHints.panel;
+            if (!KickoffSingleton.inPanel) {
+                return PlasmaCore.Units.iconSizes.small
             }
 
-            if (vertical) {
+            if (KickoffSingleton.vertical) {
                 return -1;
             } else {
                 return Math.min(PlasmaCore.Units.iconSizeHints.panel, parent.height) * buttonIcon.aspectRatio;
@@ -48,11 +48,11 @@ Item {
         }
 
         Layout.minimumHeight: {
-            if (!inPanel) {
-                return PlasmaCore.Units.iconSizeHints.panel;
+            if (!KickoffSingleton.inPanel) {
+                return PlasmaCore.Units.iconSizes.small
             }
 
-            if (vertical) {
+            if (KickoffSingleton.vertical) {
                 return Math.min(PlasmaCore.Units.iconSizeHints.panel, parent.width) * buttonIcon.aspectRatio;
             } else {
                 return -1;
@@ -60,11 +60,11 @@ Item {
         }
 
         Layout.maximumWidth: {
-            if (!inPanel) {
+            if (!KickoffSingleton.inPanel) {
                 return -1;
             }
 
-            if (vertical) {
+            if (KickoffSingleton.vertical) {
                 return PlasmaCore.Units.iconSizeHints.panel;
             } else {
                 return Math.min(PlasmaCore.Units.iconSizeHints.panel, parent.height) * buttonIcon.aspectRatio;
@@ -72,19 +72,21 @@ Item {
         }
 
         Layout.maximumHeight: {
-            if (!inPanel) {
+            if (!KickoffSingleton.inPanel) {
                 return -1;
             }
 
-            if (vertical) {
+            if (KickoffSingleton.vertical) {
                 return Math.min(PlasmaCore.Units.iconSizeHints.panel, parent.width) * buttonIcon.aspectRatio;
             } else {
                 return PlasmaCore.Units.iconSizeHints.panel;
             }
         }
 
-
         hoverEnabled: true
+        // For some reason, onClicked can cause the plasmoid to expand after
+        // releasing sometimes in plasmoidviewer.
+        // plasmashell doesn't seem to have this issue.
         onClicked: plasmoid.expanded = !plasmoid.expanded
 
         DropArea {
@@ -103,7 +105,7 @@ Item {
         PlasmaCore.IconItem {
             id: buttonIcon
 
-            readonly property double aspectRatio: (vertical ? implicitHeight / implicitWidth
+            readonly property double aspectRatio: (KickoffSingleton.vertical ? implicitHeight / implicitWidth
                 : implicitWidth / implicitHeight)
 
             anchors.fill: parent
@@ -118,6 +120,30 @@ Item {
 
     Kicker.ProcessRunner {
         id: processRunner;
+    }
+
+    // Workaround for `plasmoid` context property not working in singletons
+    // and `Plasmoid` not giving access to the plasmoid either.
+    Binding {
+        target: KickoffSingleton
+        property: "plasmoid"
+        value: plasmoid
+        restoreMode: Binding.RestoreBindingOrValue
+    }
+    Binding {
+        target: KickoffSingleton
+        property: "inPanel"
+        value: plasmoid.location === PlasmaCore.Types.TopEdge
+            || plasmoid.location === PlasmaCore.Types.RightEdge
+            || plasmoid.location === PlasmaCore.Types.BottomEdge
+            || plasmoid.location === PlasmaCore.Types.LeftEdge
+        restoreMode: Binding.RestoreBindingOrValue
+    }
+    Binding {
+        target: KickoffSingleton
+        property: "vertical"
+        value: plasmoid.formFactor === PlasmaCore.Types.Vertical
+        restoreMode: Binding.RestoreBindingOrValue
     }
 
     function action_menuedit() {

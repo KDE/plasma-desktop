@@ -17,7 +17,7 @@ ColumnLayout {
 
     property string cfg_icon: plasmoid.configuration.icon
     property int cfg_favoritesDisplay: plasmoid.configuration.favoritesDisplay
-    property alias cfg_gridAllowTwoLines: gridAllowTwoLines.checked
+    property int cfg_applicationsDisplay: plasmoid.configuration.applicationsDisplay
     property alias cfg_alphaSort: alphaSort.checked
     property var cfg_systemFavorites: String(plasmoid.configuration.systemFavorites)
     property int cfg_primaryActions: plasmoid.configuration.primaryActions
@@ -85,7 +85,7 @@ ColumnLayout {
         Button {
             icon.name: "settings-configure"
             text: i18n("Configure enabled search plugins")
-            onPressed: KQuickAddons.KCMShell.openSystemSettings("kcm_plasmasearch")
+            onClicked: KQuickAddons.KCMShell.openSystemSettings("kcm_plasmasearch")
         }
 
         Item {
@@ -95,24 +95,35 @@ ColumnLayout {
         RadioButton {
             id: showFavoritesInGrid
             Kirigami.FormData.label: i18n("Show favorites:")
-            text: i18n("In a grid")
-            ButtonGroup.group: displayGroup
+            text: i18nc("Part of a sentence: 'Show favorites in a grid'", "In a grid")
+            ButtonGroup.group: favoritesDisplayGroup
             property int index: 0
             checked: plasmoid.configuration.favoritesDisplay == index
         }
 
         RadioButton {
             id: showFavoritesInList
-            text: i18n("In a list")
-            ButtonGroup.group: displayGroup
+            text: i18nc("Part of a sentence: 'Show favorites in a list'", "In a list")
+            ButtonGroup.group: favoritesDisplayGroup
             property int index: 1
             checked: plasmoid.configuration.favoritesDisplay == index
         }
 
-        CheckBox {
-            id: gridAllowTwoLines
-            text: i18n("Allow labels to have two lines")
-            enabled: showFavoritesInGrid.checked
+        RadioButton {
+            id: showAppsInGrid
+            Kirigami.FormData.label: i18n("Show other applications:")
+            text: i18nc("Part of a sentence: 'Show other applications in a grid'", "In a grid")
+            ButtonGroup.group: applicationsDisplayGroup
+            property int index: 0
+            checked: plasmoid.configuration.applicationsDisplay == index
+        }
+
+        RadioButton {
+            id: showAppsInList
+            text: i18nc("Part of a sentence: 'Show other applications in a list'", "In a list")
+            ButtonGroup.group: applicationsDisplayGroup
+            property int index: 1
+            checked: plasmoid.configuration.applicationsDisplay == index
         }
 
         Item {
@@ -140,10 +151,19 @@ ColumnLayout {
     }
 
     ButtonGroup {
-        id: displayGroup
+        id: favoritesDisplayGroup
         onCheckedButtonChanged: {
             if (checkedButton) {
                 cfg_favoritesDisplay = checkedButton.index
+            }
+        }
+    }
+
+    ButtonGroup {
+        id: applicationsDisplayGroup
+        onCheckedButtonChanged: {
+            if (checkedButton) {
+                cfg_applicationsDisplay = checkedButton.index
             }
         }
     }
