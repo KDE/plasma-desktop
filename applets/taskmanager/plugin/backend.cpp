@@ -586,7 +586,31 @@ qint64 Backend::parentPid(qint64 pid) const
         return -1;
     }
 
-    return proc->parentPid();
+    int parentPid = proc->parentPid();
+    if (parentPid != -1) {
+        KSysGuard::Process *parentProc = procs.getProcess(parentPid);
+        if (!parentProc) {
+            // make sure the parent process details are loaded
+            procs.updateAllProcesses();
+            parentProc = procs.getProcess(parentPid);
+        }
+        if (!parentProc) {
+            return -1;
+        }
+
+        const QStringList command = proc->command().split(" ");
+        if (command.size() == 0) {
+            return -1;
+        }
+
+        const QString &firstWord = command.at(0);
+        if (parentProc->command().startsWith(firstWord)) {
+            // only when command seems to share the same executable
+            return parentProc->pid();
+        }
+    }
+
+    return -1;
 }
 
 void Backend::windowsHovered(const QVariant &_winIds, bool hovered)
