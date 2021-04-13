@@ -118,7 +118,9 @@ SimpleKCM {
             Layout.fillWidth: true
         }
         RowLayout {
+            Layout.topMargin: Kirigami.Units.gridUnit
             Layout.alignment: Qt.AlignHCenter
+
             Kirigami.Avatar {
                 source: usersDetailPage.user.face
                 cache: false
