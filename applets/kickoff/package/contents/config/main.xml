@@ -33,12 +33,16 @@
             <label>How to display favorites: 0 = Grid, 1 = List</label>
             <default>0</default>
         </entry>
-        <entry name="gridAllowTwoLines" type="Bool">
-            <label>Whether to allow showing two lines in grid view.</label>
-            <default>true</default>
+        <entry name="applicationsDisplay" type="Int">
+            <label>How to display applications: 0 = List for all, 1 = Grid for favorites, 2 = Grid for all</label>
+            <default>1</default>
         </entry>
         <entry name="alphaSort" type="Bool">
             <label>Whether to sort menu contents alphabetically or use manual/system sort order.</label>
+            <default>false</default>
+        </entry>
+        <entry name="pin" type="Bool">
+            <label>Whether the popup should remain open when another window is activated</label>
             <default>false</default>
         </entry>
     </group>

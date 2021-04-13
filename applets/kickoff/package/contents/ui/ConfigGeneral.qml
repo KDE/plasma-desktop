@@ -17,7 +17,7 @@ ColumnLayout {
 
     property string cfg_icon: plasmoid.configuration.icon
     property int cfg_favoritesDisplay: plasmoid.configuration.favoritesDisplay
-    property alias cfg_gridAllowTwoLines: gridAllowTwoLines.checked
+    property int cfg_applicationsDisplay: plasmoid.configuration.applicationsDisplay
     property alias cfg_alphaSort: alphaSort.checked
     property var cfg_systemFavorites: String(plasmoid.configuration.systemFavorites)
     property int cfg_primaryActions: plasmoid.configuration.primaryActions
@@ -96,7 +96,7 @@ ColumnLayout {
             id: showFavoritesInGrid
             Kirigami.FormData.label: i18n("Show favorites:")
             text: i18n("In a grid")
-            ButtonGroup.group: displayGroup
+            ButtonGroup.group: favoritesDisplayGroup
             property int index: 0
             checked: plasmoid.configuration.favoritesDisplay == index
         }
@@ -104,15 +104,26 @@ ColumnLayout {
         RadioButton {
             id: showFavoritesInList
             text: i18n("In a list")
-            ButtonGroup.group: displayGroup
+            ButtonGroup.group: favoritesDisplayGroup
             property int index: 1
             checked: plasmoid.configuration.favoritesDisplay == index
         }
 
-        CheckBox {
-            id: gridAllowTwoLines
-            text: i18n("Allow labels to have two lines")
-            enabled: showFavoritesInGrid.checked
+        RadioButton {
+            id: showAppsInGrid
+            Kirigami.FormData.label: i18n("Show other applications:")
+            text: i18n("In a grid")
+            ButtonGroup.group: applicationsDisplayGroup
+            property int index: 0
+            checked: plasmoid.configuration.applicationsDisplay == index
+        }
+
+        RadioButton {
+            id: showAppsInList
+            text: i18n("In a list")
+            ButtonGroup.group: applicationsDisplayGroup
+            property int index: 1
+            checked: plasmoid.configuration.applicationsDisplay == index
         }
 
         Item {
@@ -140,10 +151,19 @@ ColumnLayout {
     }
 
     ButtonGroup {
-        id: displayGroup
+        id: favoritesDisplayGroup
         onCheckedButtonChanged: {
             if (checkedButton) {
                 cfg_favoritesDisplay = checkedButton.index
+            }
+        }
+    }
+    
+    ButtonGroup {
+        id: applicationsDisplayGroup
+        onCheckedButtonChanged: {
+            if (checkedButton) {
+                cfg_applicationsDisplay = checkedButton.index
             }
         }
     }

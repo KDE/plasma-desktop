@@ -29,7 +29,7 @@ function fillActionMenu(i18n, actionMenu, actionList, favoriteModel, favoriteId)
 }
 
 function createFavoriteActions(i18n, favoriteModel, favoriteId) {
-    if (favoriteModel === null || !favoriteModel.enabled || favoriteId == null) {
+    if (!favoriteModel || !favoriteId || !favoriteModel.enabled) {
         return null;
     }
 
