@@ -72,7 +72,7 @@ KCM.ScrollViewKCM {
         delegate: Kirigami.AbstractListItem {
             width: userList.width
             Kirigami.Theme.colorSet: highlighted ? Kirigami.Theme.Selection : Kirigami.Theme.View
-            contentItem: Row {
+            contentItem: RowLayout {
                 spacing: Kirigami.Units.largeSpacing
 
                 Rectangle {
@@ -95,15 +95,22 @@ KCM.ScrollViewKCM {
                     }
                 }
 
-                Column {
+                ColumnLayout {
                     id: col
+
+                    Layout.fillWidth: true
+
                     Kirigami.Heading {
                         level: 3
                         text: model.display
+                        elide: Text.ElideMiddle
+                        Layout.fillWidth: true
                     }
                     QQC2.Label {
                         text: model.name
                         opacity: 0.8
+                        elide: Text.ElideMiddle
+                        Layout.fillWidth: true
                     }
                 }
             }
