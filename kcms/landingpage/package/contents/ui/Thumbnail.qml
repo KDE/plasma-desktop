@@ -24,8 +24,6 @@ import QtQuick.Window 2.2
 import org.kde.kirigami 2.15 as Kirigami
 import org.kde.kcm 1.3 as KCM
 
-import org.kde.plasma.core 2.0 as PlasmaCore
-
 QQC2.RadioButton {
     id: delegate
 

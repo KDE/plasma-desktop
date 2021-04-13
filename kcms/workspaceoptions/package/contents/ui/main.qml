@@ -22,8 +22,6 @@ import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kcm 1.3 as KCM
 
-import org.kde.plasma.core 2.0 as PlasmaCore
-
 KCM.SimpleKCM {
     id: root
 
@@ -154,7 +152,7 @@ KCM.SimpleKCM {
             Layout.minimumWidth: Kirigami.Units.gridUnit * 15
             text: singleClick.checked ? i18n("Select by clicking on item's selection marker") : i18n("Open by double-clicking instead")
             elide: Text.ElideRight
-            font: PlasmaCore.Theme.smallestFont
+            font: Kirigami.Theme.smallFont
         }
 
         Item {
@@ -202,7 +200,7 @@ KCM.SimpleKCM {
             visible: scrollbarLeftClickNavigatesByPage.checked
             text: i18n("Middle-click to scroll to clicked location")
             elide: Text.ElideRight
-            font: PlasmaCore.Theme.smallestFont
+            font: Kirigami.Theme.smallFont
         }
     }
 }
