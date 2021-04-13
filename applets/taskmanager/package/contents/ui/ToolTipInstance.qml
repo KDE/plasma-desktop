@@ -170,9 +170,13 @@ ColumnLayout {
         }
 
         PlasmaCore.WindowThumbnail {
+            id: x11Thumbnail
+
             anchors.fill: hoverHandler
-            // Indent by one pixel to make sure we never cover up the entire highlight
-            anchors.margins: 1
+            // Indent a little bit so that neither the thumbnail nor the drop
+            // shadow can cover up the highlight
+            anchors.margins: PlasmaCore.Units.smallSpacing * 2
+
 
             visible: !albumArtImage.visible && !thumbnailSourceItem.isMinimized && Number.isInteger(thumbnailSourceItem.winId)
             winId: Number.isInteger(thumbnailSourceItem.winId) ? thumbnailSourceItem.winId : 0
@@ -181,12 +185,25 @@ ColumnLayout {
         Loader {
             id: pipeWireLoader
             anchors.fill: hoverHandler
-            anchors.margins: 1
+            // Indent a little bit so that neither the thumbnail nor the drop
+            // shadow can cover up the highlight
+            anchors.margins: PlasmaCore.Units.smallSpacing * 2
 
             active: !albumArtImage.visible && !Number.isInteger(thumbnailSourceItem.winId)
 
             //In a loader since we might not have PipeWire available yet
             source: "PipeWireThumbnail.qml"
+        }
+
+        DropShadow {
+            anchors.fill: pipeWireLoader.active ? pipeWireLoader.item : x11Thumbnail
+            visible: pipeWireLoader.active ? pipeWireLoader.item.visible : x11Thumbnail.visible
+            horizontalOffset: 0
+            verticalOffset: Math.round(3 * PlasmaCore.Units.devicePixelRatio)
+            radius: Math.round(8.0 * PlasmaCore.Units.devicePixelRatio)
+            samples: Math.round(radius * 1.5)
+            color: "Black"
+            source: pipeWireLoader.active ? pipeWireLoader.item : x11Thumbnail
         }
 
         Image {
