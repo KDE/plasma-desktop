@@ -69,51 +69,9 @@ KCM.ScrollViewKCM {
             }
         }
 
-        delegate: Kirigami.AbstractListItem {
-            width: userList.width
-            Kirigami.Theme.colorSet: highlighted ? Kirigami.Theme.Selection : Kirigami.Theme.View
-            contentItem: RowLayout {
-                spacing: Kirigami.Units.largeSpacing
-
-                Rectangle {
-                    height: col.height
-                    width: height
-
-                    color: "transparent"
-                    border.color: Kirigami.ColorUtils.adjustColor(Kirigami.Theme.textColor, {alpha: 0.4*255})
-                    border.width: 1
-                    radius: height/2
-
-                    Kirigami.Avatar {
-                        source: model.decoration + '?' + avatarVersion // force reload after saving
-                        cache: false // avoid caching
-                        name: model.display
-                        anchors {
-                            fill: parent
-                            margins: 1
-                        }
-                    }
-                }
-
-                ColumnLayout {
-                    id: col
-
-                    Layout.fillWidth: true
-
-                    Kirigami.Heading {
-                        level: 3
-                        text: model.display
-                        elide: Text.ElideMiddle
-                        Layout.fillWidth: true
-                    }
-                    QQC2.Label {
-                        text: model.name
-                        opacity: 0.8
-                        elide: Text.ElideMiddle
-                        Layout.fillWidth: true
-                    }
-                }
-            }
+        delegate: Kirigami.BasicListItem {
+            text: model.display
+            subtitle: model.name
 
             highlighted: index == userList.currentIndex
 
@@ -124,6 +82,27 @@ KCM.ScrollViewKCM {
             }
 
             onClicked: openPage()
+
+            Kirigami.Theme.colorSet: highlighted ? Kirigami.Theme.Selection : Kirigami.Theme.View
+
+            leading: Rectangle {
+                width: height
+
+                color: "transparent"
+                border.color: Kirigami.ColorUtils.adjustColor(Kirigami.Theme.textColor, {alpha: 0.4*255})
+                border.width: 1
+                radius: height/2
+
+                Kirigami.Avatar {
+                    source: model.decoration + '?' + avatarVersion // force reload after saving
+                    cache: false // avoid caching
+                    name: model.display
+                    anchors {
+                        fill: parent
+                        margins: 1
+                    }
+                }
+            }
         }
     }
 
