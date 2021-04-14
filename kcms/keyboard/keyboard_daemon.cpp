@@ -221,6 +221,17 @@ bool KeyboardDaemon::setLayout(QAction *action)
 
 bool KeyboardDaemon::setLayout(uint index)
 {
+    if (keyboardConfig.layoutLoopCount != KeyboardConfig::NO_LOOPING && index >= uint(keyboardConfig.layoutLoopCount)) {
+        QList<LayoutUnit> layouts = X11Helper::getLayoutsList();
+        if ( int(index) <= keyboardConfig.layouts.lastIndexOf(layouts.takeLast()) ) {
+            // got to a shifted diapason due to previously selected spare layout, so adjusting the index accordingly
+            --index;
+        }
+        // spare layout preempts last one in the loop
+        layouts.append(keyboardConfig.layouts.at(index));
+        XkbHelper::initializeKeyboardLayouts(layouts);
+        index = layouts.size() - 1;
+    }
     return X11Helper::setGroup(index);
 }
 
@@ -233,8 +244,16 @@ QVector<LayoutNames> KeyboardDaemon::getLayoutsList() const
 {
     QVector<LayoutNames> ret;
 
-    const auto layoutsList = X11Helper::getLayoutsList();
-    for (auto &layoutUnit : layoutsList) {
+    auto layoutsList = X11Helper::getLayoutsList();
+    if (keyboardConfig.layoutLoopCount != KeyboardConfig::NO_LOOPING) {
+        // extra layouts list overlaps with the main layouts loop initially by 1 position
+        auto extraLayouts = keyboardConfig.layouts.mid(keyboardConfig.layoutLoopCount - 1);
+        // spare layout currently placed in the loop is removed from the extra layouts
+        // as it was already "moved" to the last loop position
+        extraLayouts.removeOne(layoutsList.last());
+        layoutsList.append(extraLayouts);
+    }
+    for (auto &layoutUnit : std::as_const(layoutsList)) {
         ret.append({layoutUnit.layout(), Flags::getShortText(layoutUnit, keyboardConfig), Flags::getLongText(layoutUnit, rules)});
     }
     return ret;
