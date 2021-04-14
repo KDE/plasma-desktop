@@ -142,8 +142,6 @@ ColumnLayout {
             Layout.alignment: Qt.AlignRight | Qt.AlignTop
             visible: isWin
             icon.name: "window-close"
-            icon.width: PlasmaCore.Units.iconSizes.small
-            icon.height: PlasmaCore.Units.iconSizes.small
             onClicked: {
                 backend.cancelHighlightWindows();
                 tasksModel.requestClose(submodelIndex);
