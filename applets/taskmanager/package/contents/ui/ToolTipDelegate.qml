@@ -72,12 +72,6 @@ PlasmaComponents3.ScrollView {
 
     property int textWidth: PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 20
 
-    Component.onCompleted: {
-        flickableItem.interactive = Qt.binding(function() {
-            return isVerticalPanel ? contentItem.height > viewport.height : contentItem.width > viewport.width
-        });
-    }
-
     Loader {
         id: contentItem
 
