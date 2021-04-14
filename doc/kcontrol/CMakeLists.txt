@@ -9,7 +9,6 @@ ecm_optional_add_subdirectory(splashscreen)
 ecm_optional_add_subdirectory(cookies)
 ecm_optional_add_subdirectory(baloo)
 
-ecm_optional_add_subdirectory(autostart)
 ecm_optional_add_subdirectory(cursortheme)
 ecm_optional_add_subdirectory(fonts)
 ecm_optional_add_subdirectory(fontinst)

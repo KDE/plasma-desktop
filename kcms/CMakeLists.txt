@@ -10,7 +10,6 @@ endif()
 
 add_subdirectory( access )
 add_subdirectory( dateandtime )
-add_subdirectory( autostart )
 add_subdirectory( ksplash )
 
 add_subdirectory( launch )
