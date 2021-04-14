@@ -88,6 +88,21 @@ KCM.SimpleKCM {
         }
 
         QtControls.CheckBox {
+            text: i18nc("Do not disturb while screen sharing", "Enable while screen sharing")
+            checked: kcm.dndSettings.whenScreenSharing
+            onClicked: kcm.dndSettings.whenScreenSharing = checked
+            // Only applicable to Wayland where we can control who can cast the screen
+            visible: Qt.platform.pluginName.includes("wayland")
+
+            KCM.SettingStateBinding {
+                configObject: kcm.dndSettings
+                settingName: "WhenScreenSharing"
+                extraEnabledConditions: root.notificationsAvailable
+            }
+        }
+
+
+        QtControls.CheckBox {
             text: i18n("Show critical notifications")
             checked: kcm.notificationSettings.criticalInDndMode
             onClicked: kcm.notificationSettings.criticalInDndMode = checked
