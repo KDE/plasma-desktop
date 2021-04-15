@@ -74,6 +74,7 @@ private:
     void insertScriptEntry(int index, const QString &name, const QString &path, AutostartModel::AutostartEntrySource kind);
     static std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName);
 
+    QDir m_xdgConfigPath;
     QDir m_xdgAutoStartPath;
     QVector<AutostartEntry> m_entries;
 };

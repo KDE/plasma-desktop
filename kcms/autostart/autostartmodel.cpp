@@ -89,9 +89,9 @@ std::optional<AutostartEntry> AutostartModel::loadDesktopEntry(const QString &fi
 
 AutostartModel::AutostartModel(QObject *parent)
     : QAbstractListModel(parent)
-    , m_xdgAutoStartPath(QDir(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation)).filePath(QStringLiteral("autostart")))
+    , m_xdgConfigPath(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation))
+    , m_xdgAutoStartPath(m_xdgConfigPath.filePath(QStringLiteral("autostart")))
 {
-    m_xdgAutoStartPath.setFilter(QDir::Files | QDir::NoDotAndDotDot);
 }
 
 void AutostartModel::load()
@@ -101,11 +101,11 @@ void AutostartModel::load()
     m_entries.clear();
 
     // Creates if doesn't already exist
-    m_xdgAutoStartPath.mkpath(".");
+    m_xdgAutoStartPath.mkpath(QStringLiteral("."));
 
     // Needed to add all script entries after application entries
     QVector<AutostartEntry> scriptEntries;
-    const auto filesInfo = m_xdgAutoStartPath.entryInfoList();
+    const auto filesInfo = m_xdgAutoStartPath.entryInfoList(QDir::Files);
     for (const QFileInfo &fi : filesInfo) {
         if (!KDesktopFile::isDesktopFile(fi.fileName())) {
             continue;
@@ -135,15 +135,11 @@ void AutostartModel::load()
 
 void AutostartModel::loadScriptsFromDir(const QString &subDir, AutostartModel::AutostartEntrySource kind)
 {
-    const QString path = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + subDir;
-    QDir dir(path);
-    if (!dir.exists()) {
-        dir.mkpath(path);
-    }
+    QDir dir(m_xdgConfigPath.filePath(subDir));
+    // Creates if doesn't already exist
+    dir.mkpath(QStringLiteral("."));
 
-    dir.setFilter(QDir::Files | QDir::NoDotAndDotDot);
-
-    const auto autostartDirFilesInfo = dir.entryInfoList();
+    const auto autostartDirFilesInfo = dir.entryInfoList(QDir::Files);
     for (const QFileInfo &fi : autostartDirFilesInfo) {
         QString fileName = fi.absoluteFilePath();
         const bool isSymlink = fi.isSymLink();
@@ -313,8 +309,6 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
     }
 
     const QString fileName = url.fileName();
-    int index = 0;
-    QString folder;
 
     if (kind == AutostartModel::AutostartEntrySource::XdgScripts) {
         int lastLoginScript = -1;
@@ -325,16 +319,10 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
             ++lastLoginScript;
         }
 
-        index = lastLoginScript + 1;
-
-        const QString desktopPath = m_xdgAutoStartPath.filePath(fileName + QStringLiteral(".desktop"));
-        AutostartScriptDesktopFile(fileName, file.filePath(), desktopPath).sync();
-
-        insertScriptEntry(index, fileName, desktopPath, kind);
+        AutostartScriptDesktopFile desktopFile(fileName, file.filePath());
+        insertScriptEntry(lastLoginScript + 1, fileName, desktopFile.fileName(), kind);
     } else if (kind == AutostartModel::AutostartEntrySource::PlasmaShutdown) {
-        index = m_entries.size();
-        folder = QStringLiteral("/plasma-workspace/shutdown/");
-        const QUrl destinationScript = QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + folder + fileName);
+        const QUrl destinationScript = QUrl::fromLocalFile(QDir(m_xdgConfigPath.filePath(QStringLiteral("/plasma-workspace/shutdown/"))).filePath(fileName));
         KIO::CopyJob *job = KIO::link(url, destinationScript, KIO::HideProgressInfo);
         job->setAutoRename(true);
         job->setProperty("finalUrl", destinationScript);
@@ -345,13 +333,13 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
             job->setProperty("finalUrl", to);
         });
 
-        connect(job, &KJob::finished, this, [this, index, url, kind](KJob *theJob) {
+        connect(job, &KJob::finished, this, [this, url, kind](KJob *theJob) {
             if (theJob->error()) {
-                qWarning() << "Could add script entry" << theJob->errorString();
+                qWarning() << "Could not add script entry" << theJob->errorString();
                 return;
             }
             const QUrl dest = theJob->property("finalUrl").toUrl();
-            insertScriptEntry(index, dest.fileName(), dest.path(), kind);
+            insertScriptEntry(m_entries.size(), dest.fileName(), dest.path(), kind);
         });
 
         job->start();
