@@ -165,11 +165,14 @@ Item {
             } else {
                 mstate = "transparent"
             }
-            if (mstate == 'opaque') {
-                containment.containmentDisplayHints |= PlasmaCore.Types.DesktopFullyCovered;
-            } else {
-                containment.containmentDisplayHints &= ~PlasmaCore.Types.DesktopFullyCovered;
+            if (containment) {
+                if (mstate == 'opaque') {
+                    containment.containmentDisplayHints |= PlasmaCore.Types.DesktopFullyCovered;
+                } else {
+                    containment.containmentDisplayHints &= ~PlasmaCore.Types.DesktopFullyCovered;
+                }
             }
+
             return mstate;
         })
     }
