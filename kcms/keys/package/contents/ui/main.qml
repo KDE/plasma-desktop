@@ -29,8 +29,8 @@ import org.kde.private.kcms.keys 2.0 as Private
 
 KCM.AbstractKCM {
     id: root
-    implicitWidth: 800
-    implicitHeight: 600
+    implicitWidth: Kirigami.Units.gridUnit * 44
+    implicitHeight: Kirigami.Units.gridUnit * 33
     property alias exportActive: exportInfo.visible
     readonly property bool errorOccured: kcm.lastError != ""
     ColumnLayout {
@@ -87,7 +87,7 @@ KCM.AbstractKCM {
             columns: 2
             QQC2.ScrollView {
                 Component.onCompleted:  background.visible = true
-                Layout.preferredWidth: 300
+                Layout.preferredWidth: Kirigami.Units.gridUnit * 15
                 Layout.fillHeight:true
                 ListView {
                     id: components
