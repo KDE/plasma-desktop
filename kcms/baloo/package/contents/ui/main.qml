@@ -22,6 +22,7 @@ import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.11 as QQC2
 import QtQuick.Dialogs 1.2 as QtDialogs
+import org.kde.baloo.experimental 0.1 as Baloo
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kcm 1.3 as KCM
 
@@ -32,6 +33,28 @@ KCM.SimpleKCM {
     implicitHeight: Kirigami.Units.gridUnit * 25
 
     KCM.ConfigModule.quickHelp: i18n("This module lets you configure the file indexer and search functionality.")
+
+    Baloo.Monitor {
+        id: monitor
+
+        readonly property bool currentlyIndexing: switch(monitor.IndexerState) {
+                                                      case Baloo.FirstRun:
+                                                      case Baloo.NewFiles:
+                                                      case Baloo.ModifiedFiles:
+                                                      case Baloo.XAttrFiles:
+                                                      case Baloo.ContentIndexing:
+                                                      case Baloo.UnindexedFileCheck:
+                                                      case Baloo.StaleIndexEntriesClean:
+                                                          return true;
+                                                          break;
+                                                      default:
+                                                          return false;
+                                                          break;
+        }
+
+        readonly property int completionPercentage: Math.floor(monitor.filesIndexed / monitor.totalFiles * 100)
+    }
+
     ColumnLayout {
         anchors.fill: parent
         anchors.margins: Kirigami.Units.largeSpacing
@@ -92,6 +115,38 @@ KCM.SimpleKCM {
         Item {
             Layout.preferredHeight: Kirigami.Units.gridUnit
         }
+
+        // Current status, if indexing
+        ColumnLayout {
+            Layout.fillWidth: true
+            Layout.bottomMargin: Kirigami.Units.gridUnit
+
+            visible: fileSearchEnabled.checked
+
+            RowLayout {
+                //Layout.alignment: Qt.AlignHCenter
+                QQC2.Label {
+                    text: i18n("Status: %1, %2\% complete", monitor.stateString, monitor.completionPercentage)
+                }
+
+                QQC2.Button {
+                    text: monitor.currentlyIndexing ? i18n("Pause Indexer") : i18n("Resume Indexer")
+                    onClicked: monitor.toggleSuspendState()
+                }
+            }
+
+            QQC2.Label {
+                id: filePath
+
+                Layout.fillWidth: true
+
+                visible: text.length > 0
+
+                elide: Text.ElideMiddle
+                text: monitor.currentlyIndexing && monitor.completionPercentage != 100 ? i18n("Currently indexing: %1", monitor.filePath) : ""
+            }
+        }
+
         QQC2.Label {
             text: i18n("Folder specific configuration:")
         }
