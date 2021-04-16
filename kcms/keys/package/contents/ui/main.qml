@@ -93,6 +93,7 @@ KCM.AbstractKCM {
                     id: components
                     clip: true
                     model: kcm.filteredModel
+                    activeFocusOnTab: true
                     add: Transition {
                         id: transition
                         PropertyAction {
@@ -216,6 +217,7 @@ KCM.AbstractKCM {
                             id: dm
                             model: rootIndex.valid ?  kcm.filteredModel : undefined
                             delegate: ShortcutActionDelegate {}
+                            KeyNavigation.left: components
                         }
                     }
                 }

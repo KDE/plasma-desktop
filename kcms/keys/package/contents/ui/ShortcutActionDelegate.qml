@@ -31,7 +31,11 @@ Kirigami.AbstractListItem {
     highlighted: false
     hoverEnabled: true
     width: shortcutsList.width
-    onClicked: shortcutsList.selectedIndex = index
+    action: QQC2.Action {
+        id: expandAction
+        onTriggered: root.state == 'expanded' ?  shortcutsList.selectedIndex = -1 : shortcutsList.selectedIndex = index
+    }
+    Accessible.name: root.state == 'expanded' ? i18n("Editing shortcut: %1", displayLabel.text) : displayLabel.text + keySequenceList.text
     contentItem: ColumnLayout {
         clip: true
         Item {
@@ -73,9 +77,8 @@ Kirigami.AbstractListItem {
                     Layout.alignment: Qt.AlignRight
                     id: expandButton
                     icon.name: "expand"
-                    onClicked: {
-                    root.state == 'expanded' ?  shortcutsList.selectedIndex = -1 : shortcutsList.selectedIndex = index
-                    }
+                    activeFocusOnTab: false
+                    onClicked: expandAction.trigger()
                 }
             }
         }
@@ -84,7 +87,7 @@ Kirigami.AbstractListItem {
             active: false
             visible: false
             Layout.fillWidth: true
-            sourceComponent:  RowLayout {
+            sourceComponent: RowLayout {
                 readonly property var originalIndex : {
                     const concatenatedIndex = kcm.filteredModel.mapToSource(dm.modelIndex(index))
                     return kcm.shortcutsModel.mapToSource(concatenatedIndex)
@@ -98,7 +101,7 @@ Kirigami.AbstractListItem {
                         text: model.defaultShortcuts &&  model.defaultShortcuts.length != 0 ? 
                             i18ncp("%1 decides if singular or plural will be used", "Default shortcut",
                             "Default shortcuts", model.defaultShortcuts.length) :
-                            i18n("No default shortcuts") 
+                            i18n("No default shortcuts")
                     }
                     Kirigami.Separator {
                         Layout.fillWidth: true
@@ -106,6 +109,7 @@ Kirigami.AbstractListItem {
                     Repeater {
                         model: defaultShortcuts
                         QQC2.CheckBox {
+                            Accessible.name: checked ? i18n("Default shortcut %1 is enabled.", modelData) : i18n("Default shortcut %1 is disabled.", modelData)
                             checked: activeShortcuts.indexOf(modelData) != -1
                             text: modelData
                             onToggled: {
@@ -203,7 +207,7 @@ Kirigami.AbstractListItem {
         State {
             name: "expanded"
             when: shortcutsList.selectedIndex == index || shortcutsList.count == 1
-             PropertyChanges {
+            PropertyChanges {
                 target: root
                 hoverEnabled: false
             }
