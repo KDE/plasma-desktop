@@ -122,15 +122,17 @@ KCM.AbstractKCM {
                             QQC2.Label {
                                 Layout.fillWidth: true
                                 text: model.display
+                                elide: Text.ElideRight
                                 color: foregroundColor
                                 opacity: model.pendingDeletion ? 0.3 : 1
                             }
                             QQC2.ToolButton {
                                 Layout.preferredHeight: Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.smallSpacing
                                 Layout.preferredWidth: Layout.preferredHeight
-                                visible: model.section != i18n("Common Actions") && !exportActive && !model.pendingDeletion
-                                opacity: componentDelegate.containsMouse || componentDelegate.ListView.isCurrentItem ? 1 : 0
-                                enabled: opacity
+                                visible: model.section != i18n("Common Actions")
+                                         && !exportActive
+                                         && !model.pendingDeletion
+                                         && (componentDelegate.containsMouse || componentDelegate.ListView.isCurrentItem)
                                 icon.name: "edit-delete"
                                 icon.width: Kirigami.Units.iconSizes.small
                                 onClicked: model.pendingDeletion = true
