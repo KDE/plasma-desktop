@@ -101,6 +101,10 @@ KCM.AbstractKCM {
                             value: transition.ViewTransition.index
                         }
                     }
+
+                    // We're using a custom list delegate because we want to be
+                    // able to control the opacity of the icon and text independently
+                    // from everything else, which BasicListItem doesn't offer
                     delegate: Kirigami.AbstractListItem {
                         id: componentDelegate
                         readonly property color foregroundColor: ListView.isCurrentItem ? activeTextColor : textColor
