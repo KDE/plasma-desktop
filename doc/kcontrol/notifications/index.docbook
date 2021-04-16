@@ -15,8 +15,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2020-01-14</date>
-<releaseinfo>Plasma 5.18</releaseinfo>
+<date>2021-04-16</date>
+<releaseinfo>Plasma 5.21</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -50,6 +50,11 @@ each event.</para>
     <varlistentry>
     <term><guiicon>Enable when screens are mirrored</guiicon></term>
     <listitem><para>Automatically enable do not disturb mode when you mirror your screens, for example during a presentation.</para></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term><guiicon>Enable while screen sharing</guiicon></term>
+    <listitem><para>Automatically enable do not disturb mode when you share your screens, for example during an online lecture.</para></listitem>
     </varlistentry>
 
     <varlistentry>
