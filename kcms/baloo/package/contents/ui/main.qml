@@ -102,6 +102,8 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
             Layout.fillHeight: true
 
+            enabled: fileSearchEnabled.checked
+
             ListView {
                 id: directoryConfigList
                 clip: true
@@ -116,6 +118,8 @@ KCM.SimpleKCM {
             id: menuButton
 
             Layout.alignment: Qt.AlignRight
+
+            enabled: fileSearchEnabled.checked
 
             icon.name: "folder-add"
             text: i18n("Add folder configuration...")
