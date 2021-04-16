@@ -22,6 +22,7 @@
 #include "fileexcludefilters.h"
 
 #include <KAboutData>
+#include <KFormat>
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <QStandardPaths>
@@ -38,6 +39,17 @@
 #include <baloodata.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "kcm_baloofile.json", registerPlugin<Baloo::ServerConfigModule>(); registerPlugin<BalooData>();)
+
+static QString balooDatabaseLocation()
+{
+    // First consult the environment variable, in case the index has been
+    // relocated manually
+    QString location = QString::fromLocal8Bit(qgetenv("BALOO_DB_PATH"));
+    if (location.isEmpty()) {
+        location = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/baloo/index");
+    }
+    return location;
+}
 
 using namespace Baloo;
 
@@ -107,6 +119,16 @@ FilteredFolderModel *ServerConfigModule::filteredModel() const
 BalooSettings *ServerConfigModule::balooSettings() const
 {
     return m_data->settings();
+}
+
+void ServerConfigModule::deleteIndex()
+{
+    QFile(balooDatabaseLocation()).remove();
+}
+
+QString ServerConfigModule::indexFileSize()
+{
+    return KFormat().formatByteSize(QFile(balooDatabaseLocation()).size());
 }
 
 #include "kcm.moc"
