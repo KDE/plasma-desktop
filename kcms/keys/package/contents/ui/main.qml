@@ -129,7 +129,7 @@ KCM.AbstractKCM {
                             QQC2.ToolButton {
                                 Layout.preferredHeight: Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.smallSpacing
                                 Layout.preferredWidth: Layout.preferredHeight
-                                visible: model.section != i18n("Common Actions")
+                                visible: model.section != i18n("Common Actions") // FIXME: don't compare translated strings
                                          && !exportActive
                                          && !model.pendingDeletion
                                          && (componentDelegate.containsMouse || componentDelegate.ListView.isCurrentItem)
