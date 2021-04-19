@@ -1791,7 +1791,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
         KFileItemListProperties itemProperties(KFileItemList() << rootItem());
         m_fileItemActions->setItemListProperties(itemProperties);
 
-        menu->addAction(m_fileItemActions->preferredOpenWithAction(QString()));
+        m_fileItemActions->insertOpenWithActionsTo(nullptr, menu, QStringList());
     } else {
         KFileItemList items;
         QList<QUrl> urls;
