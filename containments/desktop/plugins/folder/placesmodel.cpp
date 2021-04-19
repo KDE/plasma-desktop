@@ -22,8 +22,8 @@
 #include <QStandardPaths>
 
 #include <KFilePlacesModel>
-#include <KService>
-#include <KServiceTypeTrader>
+#include <KPluginLoader>
+#include <KPluginMetaData>
 
 PlacesModel::PlacesModel(QObject *parent)
     : QSortFilterProxyModel(parent)
@@ -52,14 +52,10 @@ QHash<int, QByteArray> PlacesModel::roleNames() const
 
 bool PlacesModel::activityLinkingEnabled() const
 {
-    const KService::List services =
-        KServiceTypeTrader::self()->query(QStringLiteral("KFileItemAction/Plugin"), QStringLiteral("Library == 'kactivitymanagerd_fileitem_linking_plugin'"));
-
-    if (services.isEmpty()) {
-        return false;
-    }
-
-    return !services.at(0).data()->noDisplay();
+    QVector<KPluginMetaData> jsonPlugins = KPluginLoader::findPlugins("kf5/kfileitemaction", [](const KPluginMetaData &metaData) {
+        return metaData.pluginId() == QStringLiteral("kactivitymanagerd_fileitem_linking_plugin");
+    });
+    return !jsonPlugins.isEmpty();
 }
 
 bool PlacesModel::showDesktopEntry() const
