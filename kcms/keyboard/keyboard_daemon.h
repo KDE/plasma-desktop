@@ -42,7 +42,6 @@ class Q_DECL_EXPORT KeyboardDaemon : public KDEDModule
     XInputEventNotifier *xEventNotifier;
     LayoutTrayIcon *layoutTrayIcon;
     LayoutMemory layoutMemory;
-    LayoutUnit currentLayout;
     const Rules *rules;
 
     void registerListeners();

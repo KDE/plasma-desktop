@@ -45,7 +45,6 @@ KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant> &)
     , xEventNotifier(nullptr)
     , layoutTrayIcon(nullptr)
     , layoutMemory(keyboardConfig)
-    , currentLayout(X11Helper::getCurrentLayout())
     , rules(Rules::readRules(Rules::READ_EXTRAS))
 {
     if (!X11Helper::xkbSupported(nullptr))
@@ -72,7 +71,7 @@ KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant> &)
 KeyboardDaemon::~KeyboardDaemon()
 {
     LayoutMemoryPersister layoutMemoryPersister(layoutMemory);
-    layoutMemoryPersister.setGlobalLayout(currentLayout);
+    layoutMemoryPersister.setGlobalLayout(X11Helper::getCurrentLayout());
     layoutMemoryPersister.save();
 
     QDBusConnection dbus = QDBusConnection::sessionBus();
@@ -175,18 +174,12 @@ void KeyboardDaemon::unregisterListeners()
 
 void KeyboardDaemon::layoutChangedSlot()
 {
-    // TODO: pass newLayout into layoutTrayIcon?
-    LayoutUnit newLayout = X11Helper::getCurrentLayout();
-
     layoutMemory.layoutChanged();
     if (layoutTrayIcon != nullptr) {
         layoutTrayIcon->layoutChanged();
     }
 
-    if (newLayout != currentLayout) {
-        currentLayout = newLayout;
-        emit layoutChanged(getLayout());
-    }
+    emit layoutChanged(getLayout());
 }
 
 void KeyboardDaemon::layoutMapChanged()
