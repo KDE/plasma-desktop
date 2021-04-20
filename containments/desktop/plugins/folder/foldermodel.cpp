@@ -1866,18 +1866,16 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
         }
     }
 
-    if (visualParent) {
-        m_menuPosition = visualParent->mapToGlobal(QPointF(0, visualParent->height())).toPoint();
-    } else {
-        m_menuPosition = QCursor::pos();
+    menu->setAttribute(Qt::WA_TranslucentBackground);
+    menu->winId(); // force surface creation before ensurePolish call in menu::Popup which happens before show
+
+    if (visualParent && menu->windowHandle()) {
+        menu->windowHandle()->setTransientParent(visualParent->window());
     }
 
     // Used to monitor Shift modifier usage while the menu is open, to
     // swap the Trash and Delete actions.
     menu->installEventFilter(this);
-
-    menu->setAttribute(Qt::WA_TranslucentBackground);
-    menu->winId(); // force surface creation before ensurePolish call in menu::Popup which happens before show
     menu->popup(m_menuPosition);
     connect(menu, &QMenu::aboutToHide, [menu]() {
         menu->deleteLater();
