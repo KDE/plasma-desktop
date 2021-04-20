@@ -582,28 +582,4 @@ void Backend::updateWindowHighlight()
     auto message = QDBusMessage::createMethodCall(highlightWindowName, highlightWindowPath, highlightWindowInterface, QStringLiteral("highlightWindows"));
     message << (m_highlightWindows ? m_windowsToHighlight : QStringList());
     QDBusConnection::sessionBus().asyncCall(message);
-    
-    if (!m_highlightWindows) {
-        if (m_panelWinId) {
-            KWindowEffects::highlightWindows(m_panelWinId, QList<WId>());
-
-            m_panelWinId = 0;
-        }
-
-        return;
-    }
-
-    if (m_taskManagerItem && m_taskManagerItem->window()) {
-        m_panelWinId = m_taskManagerItem->window()->winId();
-    } else {
-        return;
-    }
-
-    QList<WId> windows = m_windowsToHighlight;
-
-    if (!windows.isEmpty() && m_groupDialog) {
-        windows.append(m_groupDialog->winId());
-    }
-
-    KWindowEffects::highlightWindows(m_panelWinId, windows);
 }
