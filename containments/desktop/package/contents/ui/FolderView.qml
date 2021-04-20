@@ -306,7 +306,7 @@ FocusScope {
 
                 if (mouse.buttons & Qt.RightButton) {
                     clearPressState();
-                    dir.openContextMenu(null, mouse.modifiers);
+                    dir.openContextMenu(main, mouse.modifiers);
                     mouse.accepted = true;
                 }
             } else {
@@ -344,7 +344,7 @@ FocusScope {
 
                         clearPressState();
 
-                        dir.openContextMenu(null, mouse.modifiers);
+                        dir.openContextMenu(hoveredItem, mouse.modifiers);
                         mouse.accepted = true;
                     }
                 }
@@ -365,7 +365,7 @@ FocusScope {
                 }
                 clearPressState();
                 if (hoveredItem) {
-                    dir.openContextMenu(null, mouse.modifiers);
+                    dir.openContextMenu(hoveredItem, mouse.modifiers);
                 }
             }
         }
