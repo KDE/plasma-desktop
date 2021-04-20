@@ -75,13 +75,11 @@ KCM.ScrollViewKCM {
 
             highlighted: index == userList.currentIndex
 
-            function openPage() {
+            onClicked: {
                 userList.currentIndex = index
                 kcm.pop(0)
                 kcm.push("UserDetailsPage.qml", {user: userObject})
             }
-
-            onClicked: openPage()
 
             Kirigami.Theme.colorSet: highlighted ? Kirigami.Theme.Selection : Kirigami.Theme.View
 
