@@ -28,11 +28,11 @@ MouseArea {
     property alias text: label.text
     property string module
     property int iconSize: Kirigami.Units.iconSizes.medium
-    Layout.minimumWidth: Kirigami.Units.iconSizes.medium
-    Layout.minimumHeight: column.implicitHeight
+
+    implicitWidth: Kirigami.Units.gridUnit * 5
+    implicitHeight: column.implicitHeight
+
     cursorShape: Qt.PointingHandCursor
-    Layout.fillWidth: true
-    Layout.alignment: Qt.AlignTop
     activeFocusOnTab: true
     hoverEnabled: true
 

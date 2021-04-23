@@ -22,13 +22,14 @@ import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.3
 import QtQuick.Window 2.2
 import org.kde.kirigami 2.5 as Kirigami
-import org.kde.kcm 1.3 as KCM
+import org.kde.kcm 1.4 as KCM
 
-KCM.SimpleKCM {
+KCM.AbstractKCM {
     id: root
 
     ColumnLayout {
-        height: Math.max(implicitHeight, root.flickable.height - root.topPadding - root.bottomPadding)
+        anchors.fill: parent
+
         QQC2.ButtonGroup { id: themeGroup }
 
         // Spacer for vertical centering
@@ -226,6 +227,8 @@ KCM.SimpleKCM {
         }
         RowLayout {
             Layout.fillHeight: false
+            spacing: Kirigami.Units.largeSpacing
+
             Item {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
@@ -234,6 +237,7 @@ KCM.SimpleKCM {
             Repeater {
                 model: kcm.mostUsedModel
                 delegate: MostUsedIcon {
+                    Layout.alignment: Qt.AlignTop
                     icon: model.decoration
                     text: model.display
                     onClicked: kcm.openKCM(model.kcmPlugin)
