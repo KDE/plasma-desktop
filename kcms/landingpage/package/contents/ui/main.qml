@@ -70,7 +70,7 @@ KCM.AbstractKCM {
         }
 
         Item {
-            Layout.preferredHeight: Kirigami.Units.largeSpacing
+            implicitHeight: Kirigami.Units.largeSpacing
         }
 
         Kirigami.FormLayout {
@@ -210,14 +210,14 @@ KCM.AbstractKCM {
             onClicked: kcm.openKCM("kcm_workspace")
         }
         Item {
-            Layout.preferredHeight: Kirigami.Units.largeSpacing
+            implicitHeight: Kirigami.Units.largeSpacing
         }
         Kirigami.Separator {
             Layout.alignment: Qt.AlignCenter
             Layout.preferredWidth: separator.width
         }
         Item {
-            Layout.preferredHeight: Kirigami.Units.largeSpacing
+            implicitHeight: Kirigami.Units.largeSpacing
         }
 
         Kirigami.Heading {
@@ -227,7 +227,7 @@ KCM.AbstractKCM {
             horizontalAlignment: Text.AlignHCenter
         }
         Item {
-            Layout.preferredHeight: Kirigami.Units.smallSpacing
+            implicitHeight: Kirigami.Units.smallSpacing
         }
         RowLayout {
             Layout.fillHeight: false
