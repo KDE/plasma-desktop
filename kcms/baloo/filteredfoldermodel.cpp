@@ -144,7 +144,7 @@ QVariant FilteredFolderModel::data(const QModelIndex &idx, int role) const
     case EnableIndex:
         return entry.enableIndex;
     case Deletable:
-        return entry.isFromConfig;
+        return entry.isFromConfig && entry.url != normalizeTrailingSlashes(QDir::homePath());
     default:
         return {};
     }
