@@ -36,10 +36,6 @@ MouseArea {
     activeFocusOnTab: true
     hoverEnabled: true
 
-    Keys.onPressed: {
-       print (key)
-    }
-
     Kirigami.Separator {
         anchors{
             left: parent.left
