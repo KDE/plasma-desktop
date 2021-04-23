@@ -132,7 +132,6 @@ KCM.AbstractKCM {
                 onClicked: kcm.openWallpaperDialog()
             }
             QQC2.Button {
-                //Layout.alignment: Qt.AlignCenter
                 text: i18n("Show More Appearance Settings...")
                 icon.name: "preferences-desktop-theme-global"
                 onClicked: kcm.openKCM("kcm_lookandfeel")
