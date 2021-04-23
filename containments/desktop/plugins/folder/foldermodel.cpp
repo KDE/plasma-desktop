@@ -1602,7 +1602,7 @@ void FolderModel::createActions()
     QAction *copy = KStandardAction::copy(this, &FolderModel::copy, this);
 
     QAction *undo = KStandardAction::undo(manager, &KIO::FileUndoManager::undo, this);
-    undo->setEnabled(manager->undoAvailable());
+    undo->setEnabled(manager->isUndoAvailable());
     undo->setShortcutContext(Qt::WidgetShortcut);
     connect(manager, SIGNAL(undoAvailable(bool)), undo, SLOT(setEnabled(bool)));
     connect(manager, &KIO::FileUndoManager::undoTextChanged, this, &FolderModel::undoTextChanged);
