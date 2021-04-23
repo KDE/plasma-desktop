@@ -36,6 +36,14 @@ MouseArea {
     activeFocusOnTab: true
     hoverEnabled: true
 
+    Accessible.role: Accessible.Button
+    Accessible.name: label.text
+    Accessible.description: i18n("Most used module number %1", index+1)
+    Accessible.onPressAction: { item.clicked(model.kcmPlugin); }
+    Keys.onReturnPressed: { item.clicked(model.kcmPlugin); }
+    Keys.onEnterPressed: { item.clicked(model.kcmPlugin); }
+    Keys.onSpacePressed: { item.clicked(model.kcmPlugin); }
+
     Kirigami.Separator {
         anchors{
             left: parent.left
@@ -65,10 +73,5 @@ MouseArea {
             wrapMode: Text.Wrap
         }
     }
-
-    Accessible.role: Accessible.Button
-    Accessible.name: label.text
-    Accessible.description: i18n("Most used module number %1", index+1)
-    Accessible.onPressAction: item.clicked();
 }
 
