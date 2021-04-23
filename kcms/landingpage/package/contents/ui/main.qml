@@ -69,13 +69,14 @@ KCM.AbstractKCM {
             }
         }
 
+        Item {
+            Layout.preferredHeight: Kirigami.Units.largeSpacing
+        }
+
         Kirigami.FormLayout {
             id: appearanceForm
 
             twinFormLayouts: behaviorForm
-            Item {
-                Kirigami.FormData.isSection: true
-            }
 
             // We want to show the slider in a logarithmic way. ie
             // move from 4x, 3x, 2x, 1x, 0.5x, 0.25x, 0.125x
@@ -224,6 +225,9 @@ KCM.AbstractKCM {
             text: i18n("Most Used Settings")
             Layout.fillWidth: true
             horizontalAlignment: Text.AlignHCenter
+        }
+        Item {
+            Layout.preferredHeight: Kirigami.Units.smallSpacing
         }
         RowLayout {
             Layout.fillHeight: false
