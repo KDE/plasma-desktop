@@ -47,6 +47,8 @@ static QString balooDatabaseLocation()
     QString location = QString::fromLocal8Bit(qgetenv("BALOO_DB_PATH"));
     if (location.isEmpty()) {
         location = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/baloo/index");
+    } else {
+        location.append(QLatin1String("/index"));
     }
     return location;
 }
