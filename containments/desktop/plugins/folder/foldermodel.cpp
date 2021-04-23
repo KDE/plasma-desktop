@@ -1841,11 +1841,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
 
         menu->addSeparator();
 
-        // Service actions
-        m_fileItemActions->addServiceActionsTo(menu);
-        menu->addSeparator();
-        // Plugin actions
-        m_fileItemActions->addPluginActionsTo(menu);
+        m_fileItemActions->addActionsTo(menu);
 
         // Copy To, Move To
         KSharedConfig::Ptr dolphin = KSharedConfig::openConfig(QStringLiteral("dolphinrc"));
