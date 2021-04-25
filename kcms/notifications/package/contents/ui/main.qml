@@ -149,6 +149,23 @@ KCM.SimpleKCM {
         }
 
         QtControls.CheckBox {
+            Kirigami.FormData.label: i18n("Normal notifications:")
+            text: i18n("Always keep on top")
+            checked: kcm.notificationSettings.normalAlwaysOnTop
+            onClicked: kcm.notificationSettings.normalAlwaysOnTop = checked
+
+            KCM.SettingStateBinding {
+                configObject: kcm.notificationSettings
+                settingName: "NormalAlwaysOnTop"
+                extraEnabledConditions: root.notificationsAvailable
+            }
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        QtControls.CheckBox {
             Kirigami.FormData.label: i18n("Low priority notifications:")
             text: i18n("Show popup")
             checked: kcm.notificationSettings.lowPriorityPopups
