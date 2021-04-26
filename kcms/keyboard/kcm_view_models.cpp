@@ -56,8 +56,6 @@ void LayoutsTableModel::refresh()
 {
     beginResetModel();
     endResetModel();
-
-    countryFlags->clearCache();
 }
 
 int LayoutsTableModel::rowCount(const QModelIndex & /*parent*/) const
@@ -132,8 +130,7 @@ QVariant LayoutsTableModel::data(const QModelIndex &index, int role) const
         switch (index.column()) {
         case DISPLAY_NAME_COLUMN: {
             // if(keyboardConfig->isFlagShown()) {
-            QIcon icon = countryFlags->getIconWithText(layoutUnit, *keyboardConfig, Flags::ColorType::ColorScheme);
-            return icon.isNull() ? countryFlags->getTransparentPixmap() : icon;
+            return countryFlags->getIcon(layoutUnit.layout());
             // }
         }
         // TODO: show the cells are editable
@@ -233,7 +230,6 @@ bool LayoutsTableModel::setData(const QModelIndex &index, const QVariant &value,
     case DISPLAY_NAME_COLUMN: {
         QString displayText = value.toString().left(3);
         layoutUnit.setDisplayName(displayText);
-        countryFlags->clearCache(); // regenerate the label
     } break;
     case VARIANT_COLUMN: {
         layoutUnit.setVariant(value.toString());
@@ -258,9 +254,6 @@ LabelEditDelegate::LabelEditDelegate(const KeyboardConfig *keyboardConfig_, QObj
 
 QWidget *LabelEditDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    if (keyboardConfig->indicatorType == KeyboardConfig::SHOW_FLAG)
-        return nullptr;
-
     QWidget *widget = QStyledItemDelegate::createEditor(parent, option, index);
     QLineEdit *lineEdit = static_cast<QLineEdit *>(widget);
     if (lineEdit != nullptr) {

@@ -97,53 +97,6 @@
     <item row="0" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
-       <widget class="QGroupBox" name="kbuttongroup">
-        <property name="title">
-         <string>Layout Indicator</string>
-        </property>
-        <layout class="QGridLayout" name="gridLayout_3">
-         <item row="0" column="0">
-          <widget class="QCheckBox" name="showOSD_Chk"/>
-         </item>
-         <item row="1" column="0">
-          <widget class="QCheckBox" name="showIndicatorChk">
-           <property name="text">
-            <string>Show layout indicator</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QCheckBox" name="showSingleChk">
-           <property name="text">
-            <string>Show for single layout</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QRadioButton" name="showFlagRadioBtn">
-           <property name="text">
-            <string>Show flag</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QRadioButton" name="showLabelRadioBtn">
-           <property name="text">
-            <string>Show label</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0">
-          <widget class="QRadioButton" name="showLabelOnFlagRadioBtn">
-           <property name="text">
-            <string>Show label on flag</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
        <widget class="QGroupBox" name="switchingPolicyGroupBox">
         <property name="whatsThis">
          <string>If you select &quot;Application&quot; or &quot;Window&quot; switching policy, changing the keyboard layout will only affect the current application or window.</string>
@@ -210,7 +163,7 @@
             <string>Main shortcuts:</string>
            </property>
            <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
            </property>
            <property name="buddy">
             <cstring>xkbGrpShortcutBtn</cstring>
@@ -240,7 +193,7 @@
             <string>3rd level shortcuts:</string>
            </property>
            <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
            </property>
            <property name="buddy">
             <cstring>xkb3rdLevelShortcutBtn</cstring>
@@ -270,7 +223,7 @@
             <string>Alternative shortcut:</string>
            </property>
            <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
            </property>
            <property name="buddy">
             <cstring>kdeKeySequence</cstring>
@@ -284,6 +237,13 @@
            </property>
            <property name="multiKeyShortcutsAllowed">
             <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QCheckBox" name="showOSD_Chk">
+           <property name="layoutDirection">
+            <enum>Qt::RightToLeft</enum>
            </property>
           </widget>
          </item>

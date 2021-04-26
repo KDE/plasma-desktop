@@ -161,20 +161,8 @@ void KCMKeyboardWidget::uiChanged()
 
     m_workspaceOptions.setOsdKbdLayoutChangedEnabled(uiWidget->showOSD_Chk->isChecked());
 
-    keyboardConfig->showIndicator = uiWidget->showIndicatorChk->isChecked();
-    keyboardConfig->showSingle = uiWidget->showSingleChk->isChecked();
-
     keyboardConfig->configureLayouts = uiWidget->layoutsGroupBox->isChecked();
     keyboardConfig->keyboardModel = uiWidget->keyboardModelComboBox->itemData(uiWidget->keyboardModelComboBox->currentIndex()).toString();
-
-    if (uiWidget->showFlagRadioBtn->isChecked()) {
-        keyboardConfig->indicatorType = KeyboardConfig::SHOW_FLAG;
-    } else if (uiWidget->showLabelRadioBtn->isChecked()) {
-        keyboardConfig->indicatorType = KeyboardConfig::SHOW_LABEL;
-    } else {
-        //	if( uiWidget->showFlagRadioBtn->isChecked() ) {
-        keyboardConfig->indicatorType = KeyboardConfig::SHOW_LABEL_ON_FLAG;
-    }
 
     keyboardConfig->resetOldXkbOptions = uiWidget->configureKeyboardOptionsChk->isChecked();
 
@@ -225,10 +213,10 @@ void KCMKeyboardWidget::addLayout()
     }
 
     AddLayoutDialog dialog(rules,
-                           keyboardConfig->isFlagShown() ? flags : nullptr,
+                           flags,
                            keyboardConfig->keyboardModel,
                            keyboardConfig->xkbOptions,
-                           keyboardConfig->isLabelShown(),
+                           false,
                            this);
     dialog.setModal(true);
     if (dialog.exec() == QDialog::Accepted) {
@@ -277,7 +265,7 @@ void KCMKeyboardWidget::initializeLayoutsUI()
     uiWidget->layoutsTableView->setEditTriggers(QAbstractItemView::SelectedClicked | QAbstractItemView::DoubleClicked | QAbstractItemView::EditKeyPressed
                                                 | QAbstractItemView::AnyKeyPressed);
     uiWidget->layoutsTableView->setModel(layoutsTableModel);
-    uiWidget->layoutsTableView->setIconSize(flags->getTransparentPixmap().size());
+    uiWidget->layoutsTableView->setIconSize({22, 22});
 
     // TODO: do we need to delete this delegate or parent will take care of it?
     VariantComboDelegate *variantDelegate = new VariantComboDelegate(keyboardConfig, rules, uiWidget->layoutsTableView);
@@ -346,17 +334,10 @@ void KCMKeyboardWidget::initializeLayoutsUI()
     connect(uiWidget->switchingPolicyButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(uiChanged()));
     connect(uiWidget->xkbGrpShortcutBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::scrollToGroupShortcut);
     connect(uiWidget->xkb3rdLevelShortcutBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::scrollTo3rdLevelShortcut);
+    connect(uiWidget->showOSD_Chk, &QAbstractButton::clicked, this, &KCMKeyboardWidget::uiChanged);
 
     //	connect(uiWidget->configureLayoutsChk, SIGNAL(toggled(bool)), uiWidget->layoutsGroupBox, SLOT(setEnabled(bool)));
     connect(uiWidget->layoutsGroupBox, &QGroupBox::toggled, this, &KCMKeyboardWidget::configureLayoutsChanged);
-
-    connect(uiWidget->showOSD_Chk, &QAbstractButton::clicked, this, &KCMKeyboardWidget::uiChanged);
-    connect(uiWidget->showIndicatorChk, &QAbstractButton::clicked, this, &KCMKeyboardWidget::uiChanged);
-    connect(uiWidget->showIndicatorChk, &QAbstractButton::toggled, uiWidget->showSingleChk, &QWidget::setEnabled);
-    connect(uiWidget->showFlagRadioBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::uiChanged);
-    connect(uiWidget->showLabelRadioBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::uiChanged);
-    connect(uiWidget->showLabelOnFlagRadioBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::uiChanged);
-    connect(uiWidget->showSingleChk, &QAbstractButton::toggled, this, &KCMKeyboardWidget::uiChanged);
 
     connect(uiWidget->layoutLoopingCheckBox, &QAbstractButton::clicked, this, &KCMKeyboardWidget::uiChanged);
     connect(uiWidget->layoutLoopCountSpinBox, SIGNAL(valueChanged(int)), this, SLOT(uiChanged()));
@@ -646,11 +627,6 @@ void KCMKeyboardWidget::updateLayoutsUI()
 {
     uiWidget->layoutsGroupBox->setChecked(keyboardConfig->configureLayouts);
     uiWidget->showOSD_Chk->setChecked(m_workspaceOptions.osdKbdLayoutChangedEnabled());
-    uiWidget->showIndicatorChk->setChecked(keyboardConfig->showIndicator);
-    uiWidget->showSingleChk->setChecked(keyboardConfig->showSingle);
-    uiWidget->showFlagRadioBtn->setChecked(keyboardConfig->indicatorType == KeyboardConfig::SHOW_FLAG);
-    uiWidget->showLabelRadioBtn->setChecked(keyboardConfig->indicatorType == KeyboardConfig::SHOW_LABEL);
-    uiWidget->showLabelOnFlagRadioBtn->setChecked(keyboardConfig->indicatorType == KeyboardConfig::SHOW_LABEL_ON_FLAG);
 
     bool loopingOn = keyboardConfig->configureLayouts && keyboardConfig->layoutLoopCount != KeyboardConfig::NO_LOOPING;
     uiWidget->layoutLoopingCheckBox->setChecked(loopingOn);

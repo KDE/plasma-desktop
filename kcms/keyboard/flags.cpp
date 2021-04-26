@@ -20,14 +20,8 @@
 
 #include <KLocalizedString>
 
-#include <KFontUtils>
-#include <plasma/svg.h>
-#include <plasma/theme.h>
-
-#include <QFontDatabase>
 #include <QIcon>
 #include <QPainter>
-#include <QPalette>
 #include <QPixmap>
 #include <QStandardPaths>
 #include <QStringList>
@@ -40,7 +34,6 @@
 #include "keyboard_config.h"
 #include "xkb_rules.h"
 
-static const int FLAG_MAX_SIZE = 22;
 static const char flagTemplate[] = "kf5/locale/countries/%1/flag.png";
 
 int iconSize(int s)
@@ -58,22 +51,6 @@ int iconSize(int s)
     } else {
         return 128;
     }
-}
-
-Flags::Flags()
-    : svg(nullptr)
-{
-    transparentPixmap = new QPixmap(FLAG_MAX_SIZE, FLAG_MAX_SIZE);
-    transparentPixmap->fill(Qt::transparent);
-}
-
-Flags::~Flags()
-{
-    if (svg != nullptr) {
-        disconnect(svg, &Plasma::Svg::repaintNeeded, this, &Flags::themeChanged);
-        delete svg;
-    }
-    delete transparentPixmap;
 }
 
 const QIcon Flags::getIcon(const QString &layout)
@@ -159,13 +136,6 @@ QString Flags::getShortText(const LayoutUnit &layoutUnit, const KeyboardConfig &
     return layoutText;
 }
 
-QString Flags::getFullText(const LayoutUnit &layoutUnit, const KeyboardConfig &keyboardConfig, const Rules *rules)
-{
-    QString shortText = Flags::getShortText(layoutUnit, keyboardConfig);
-    QString longText = Flags::getLongText(layoutUnit, rules);
-    return i18nc("short layout label - full layout name", "%1 - %2", shortText, longText);
-}
-
 static QString getDisplayText(const QString &layout, const QString &variant, const Rules *rules)
 {
     if (variant.isEmpty())
@@ -195,106 +165,4 @@ QString Flags::getLongText(const LayoutUnit &layoutUnit, const Rules *rules)
     }
 
     return layoutText;
-}
-
-static QString getPixmapKey(const KeyboardConfig &keyboardConfig)
-{
-    switch (keyboardConfig.indicatorType) {
-    case KeyboardConfig::SHOW_FLAG:
-        return QStringLiteral("_fl");
-    case KeyboardConfig::SHOW_LABEL_ON_FLAG:
-        return QStringLiteral("_bt");
-    case KeyboardConfig::SHOW_LABEL:
-        return QStringLiteral("_lb");
-    }
-    return QStringLiteral("_"); // should not happen
-}
-
-void Flags::drawLabel(QPainter &painter, const QString &layoutText, bool flagShown, ColorType colorType)
-{
-    QFont font = painter.font();
-    QRect rect = painter.window();
-
-    font.setPointSize(KFontUtils::adaptFontSize(painter, layoutText, rect.size(), rect.height()));
-
-    // we init svg so that we get notification about theme change
-    getSvg();
-
-    QColor textColor;
-    if (flagShown) {
-        textColor = Qt::black;
-    } else if (colorType == ColorType::Plasma) {
-        textColor = Plasma::Theme().color(Plasma::Theme::TextColor);
-    } else {
-        textColor = QPalette().color(QPalette::Text);
-    }
-
-    painter.setPen(textColor);
-    painter.setFont(font);
-    painter.drawText(rect, Qt::AlignCenter, layoutText);
-}
-
-const QIcon Flags::getIconWithText(const LayoutUnit &layoutUnit, const KeyboardConfig &keyboardConfig, ColorType colorType)
-{
-    const QString keySuffix(getPixmapKey(keyboardConfig));
-    const QString key(layoutUnit.toString() + keySuffix);
-    if (iconOrTextMap.contains(key)) {
-        return iconOrTextMap[key];
-    }
-
-    if (keyboardConfig.indicatorType == KeyboardConfig::SHOW_FLAG) {
-        QIcon icon = getIcon(layoutUnit.layout());
-        if (!icon.isNull()) {
-            iconOrTextMap[key] = icon;
-            return icon;
-        }
-    }
-
-    QString layoutText = Flags::getShortText(layoutUnit, keyboardConfig);
-
-    const QSize TRAY_ICON_SIZE(128, 128);
-    QPixmap pixmap = QPixmap(TRAY_ICON_SIZE);
-    pixmap.fill(Qt::transparent);
-
-    QPainter painter(&pixmap);
-    painter.setRenderHint(QPainter::SmoothPixmapTransform);
-    //	p.setRenderHint(QPainter::Antialiasing);
-
-    if (keyboardConfig.indicatorType == KeyboardConfig::SHOW_LABEL_ON_FLAG) {
-        QIcon iconf = createIcon(layoutUnit.layout());
-        painter.drawPixmap(pixmap.rect(), iconf.pixmap(TRAY_ICON_SIZE));
-    }
-
-    drawLabel(painter, layoutText, keyboardConfig.isFlagShown(), colorType);
-
-    painter.end();
-
-    QIcon icon(pixmap);
-    iconOrTextMap[key] = icon;
-
-    return icon;
-}
-
-Plasma::Svg *Flags::getSvg()
-{
-    if (svg == nullptr) {
-        svg = new Plasma::Svg;
-        svg->setImagePath(QStringLiteral("widgets/labeltexture"));
-        svg->setContainsMultipleImages(true);
-        connect(svg, &Plasma::Svg::repaintNeeded, this, &Flags::themeChanged);
-    }
-    return svg;
-}
-
-void Flags::themeChanged()
-{
-    //	qCDebug(KCM_KEYBOARD, ) << "Theme changed, new text color" << Plasma::Theme::defaultTheme()->color(Plasma::Theme::TextColor);
-    clearCache();
-    emit pixmapChanged();
-}
-
-void Flags::clearCache()
-{
-    //	qCDebug(KCM_KEYBOARD, ) << "Clearing flag pixmap cache";
-    iconOrTextMap.clear();
 }

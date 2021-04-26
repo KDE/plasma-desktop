@@ -68,23 +68,6 @@ void KeyboardConfig::setDefaults()
     switchingPolicy = SWITCH_POLICY_GLOBAL;
     //	stickySwitching = false;
     //	stickySwitchingDepth = 2;
-
-    // display options
-    showIndicator = true;
-    indicatorType = SHOW_LABEL;
-    showSingle = false;
-}
-
-static KeyboardConfig::IndicatorType getIndicatorType(bool showFlag, bool showLabel)
-{
-    if (showFlag) {
-        if (showLabel)
-            return KeyboardConfig::SHOW_LABEL_ON_FLAG;
-        else
-            return KeyboardConfig::SHOW_FLAG;
-    } else {
-        return KeyboardConfig::SHOW_LABEL;
-    }
 }
 
 void KeyboardConfig::load()
@@ -122,14 +105,6 @@ void KeyboardConfig::load()
 
     QString layoutMode = config.readEntry("SwitchMode", "Global");
     switchingPolicy = static_cast<SwitchingPolicy>(findStringIndex(SWITCHING_POLICIES, layoutMode, SWITCH_POLICY_GLOBAL));
-
-    showIndicator = config.readEntry("ShowLayoutIndicator", true);
-
-    bool showFlag = config.readEntry("ShowFlag", false);
-    bool showLabel = config.readEntry("ShowLabel", true);
-    indicatorType = getIndicatorType(showFlag, showLabel);
-
-    showSingle = config.readEntry("ShowSingle", false);
 
     QString labelsStr = config.readEntry("DisplayNames", "");
     QStringList labels = labelsStr.split(LIST_SEPARATOR, Qt::KeepEmptyParts);
@@ -193,11 +168,6 @@ void KeyboardConfig::save()
     config.writeEntry("LayoutLoopCount", layoutLoopCount);
 
     config.writeEntry("SwitchMode", SWITCHING_POLICIES[switchingPolicy]);
-
-    config.writeEntry("ShowLayoutIndicator", showIndicator);
-    config.writeEntry("ShowFlag", indicatorType == SHOW_FLAG || indicatorType == SHOW_LABEL_ON_FLAG);
-    config.writeEntry("ShowLabel", indicatorType == SHOW_LABEL || indicatorType == SHOW_LABEL_ON_FLAG);
-    config.writeEntry("ShowSingle", showSingle);
 
     config.sync();
 }

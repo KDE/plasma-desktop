@@ -27,9 +27,6 @@ set( kded_keyboard_SRCS
     keyboard_config.cpp
     keyboard_hardware.cpp
     bindings.cpp
-# next are temporary for sys tray UI
-    layout_tray_icon.cpp
-    layouts_menu.cpp
     flags.cpp
     xkb_rules.cpp
     layoutnames.cpp

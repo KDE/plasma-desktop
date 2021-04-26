@@ -55,7 +55,7 @@ QAction *KeyboardLayoutActionCollection::getToggleAction()
     return action(0);
 }
 
-QAction *KeyboardLayoutActionCollection::createLayoutShortcutActon(const LayoutUnit &layoutUnit, const Rules *rules, bool autoload)
+QAction *KeyboardLayoutActionCollection::createLayoutShortcutActon(const LayoutUnit &layoutUnit, int layoutIndex, const Rules *rules, bool autoload)
 {
     QString longLayoutName = Flags::getLongText(layoutUnit, rules);
     QString actionName = QStringLiteral("Switch keyboard layout to ");
@@ -68,7 +68,7 @@ QAction *KeyboardLayoutActionCollection::createLayoutShortcutActon(const LayoutU
         shortcuts << layoutUnit.getShortcut();
     }
     KGlobalAccel::self()->setShortcut(action, shortcuts, loading);
-    action->setData(layoutUnit.toString());
+    action->setData(layoutIndex);
     if (configAction) {
         action->setProperty("isConfigurationAction", true);
     }
@@ -82,10 +82,10 @@ void KeyboardLayoutActionCollection::setToggleShortcut(const QKeySequence &keySe
 
 void KeyboardLayoutActionCollection::setLayoutShortcuts(QList<LayoutUnit> &layoutUnits, const Rules *rules)
 {
-    for (QList<LayoutUnit>::iterator i = layoutUnits.begin(); i != layoutUnits.end(); ++i) {
-        LayoutUnit &layoutUnit = *i;
+    for (int i = 0; i < layoutUnits.size(); ++i) {
+        const LayoutUnit &layoutUnit = layoutUnits.at(i);
         if (!layoutUnit.getShortcut().isEmpty()) {
-            createLayoutShortcutActon(layoutUnit, rules, false);
+            createLayoutShortcutActon(layoutUnit, i, rules, false);
         }
     }
     qCDebug(KCM_KEYBOARD) << "Cleaning component shortcuts on save" << KGlobalAccel::cleanComponent(COMPONENT_NAME);
@@ -93,9 +93,9 @@ void KeyboardLayoutActionCollection::setLayoutShortcuts(QList<LayoutUnit> &layou
 
 void KeyboardLayoutActionCollection::loadLayoutShortcuts(QList<LayoutUnit> &layoutUnits, const Rules *rules)
 {
-    for (QList<LayoutUnit>::iterator i = layoutUnits.begin(); i != layoutUnits.end(); ++i) {
-        LayoutUnit &layoutUnit = *i;
-        QAction *action = createLayoutShortcutActon(layoutUnit, rules, true);
+    for (int i = 0; i < layoutUnits.size(); ++i) {
+        LayoutUnit &layoutUnit = layoutUnits[i];
+        QAction *action = createLayoutShortcutActon(layoutUnit, i, rules, true);
         const auto shortcut = KGlobalAccel::self()->shortcut(action);
         if (!shortcut.isEmpty()) {
             qCDebug(KCM_KEYBOARD, ) << "Restored shortcut for" << layoutUnit.toString() << shortcut.first();
