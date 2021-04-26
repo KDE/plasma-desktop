@@ -293,7 +293,9 @@ Rectangle {
         }
 
         footer: QtControls.Pane {
-            
+
+            padding: Kirigami.Units.largeSpacing
+
             contentItem: RowLayout {
                 id: buttonsRow
                 spacing: Kirigami.Units.smallSpacing

@@ -44,6 +44,9 @@ Kirigami.ScrollablePage {
 
     implicitHeight: loader.height
 
+    padding: Kirigami.Units.largeSpacing
+    bottomPadding: 0
+
     Loader {
         id: loader
         width: parent.width
