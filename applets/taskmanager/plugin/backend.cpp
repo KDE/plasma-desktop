@@ -579,7 +579,10 @@ void Backend::windowsHovered(const QVariant &_winIds, bool hovered)
 
 void Backend::updateWindowHighlight()
 {
+    if (!m_highlightWindows) {
+        return;
+    }
     auto message = QDBusMessage::createMethodCall(highlightWindowName, highlightWindowPath, highlightWindowInterface, QStringLiteral("highlightWindows"));
-    message << (m_highlightWindows ? m_windowsToHighlight : QStringList());
+    message << m_windowsToHighlight;
     QDBusConnection::sessionBus().asyncCall(message);
 }
