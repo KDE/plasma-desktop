@@ -310,6 +310,7 @@ private:
         bool blank;
     };
 
+    void setMenuPos();
     void createActions();
     void addDragImage(QDrag *drag, int x, int y);
     void setStatus(Status status);

@@ -42,6 +42,7 @@
 #include <QQuickItem>
 #include <QQuickWindow>
 #include <QTimer>
+#include <QScreen>
 #include <qplatformdefs.h>
 
 #include <KAuthorized>
@@ -237,6 +238,22 @@ QHash<int, QByteArray> FolderModel::staticRoleNames()
     roleNames[TypeRole] = "type";
 
     return roleNames;
+}
+
+void FolderModel::setMenuPos()
+{
+    QPoint pos = QCursor::pos();
+    QScreen *screen = nullptr;
+    for (auto *s : qApp->screens()) {
+        if (s->geometry().contains(pos)) {
+            screen = s;
+            break;
+        }
+    }
+    if (screen) {
+        pos -= screen->geometry().topLeft();
+    }
+    m_menuPosition = pos;
 }
 
 void FolderModel::classBegin()
@@ -1703,7 +1720,7 @@ void FolderModel::updateActions()
         m_newMenu->checkUpToDate();
         m_newMenu->setPopupFiles(QList<QUrl>() << m_dirModel->dirLister()->url());
         // we need to set here as well, when the menu is shown via AppletInterface::eventFilter
-        m_menuPosition = QCursor::pos();
+        setMenuPos();
 
         if (QAction *newMenuAction = m_actionCollection.action(QStringLiteral("newMenu"))) {
             newMenuAction->setEnabled(itemProperties.supportsWriting());
