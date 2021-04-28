@@ -68,6 +68,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Codecs
     Sonnet
     KDELibs4Support # kcms/dateandtime
+    Wayland # emoji keyboard
 )
 
 find_package(AccountsQt5 ${ACCOUNTSQT_DEP_VERSION} CONFIG)
@@ -163,6 +164,10 @@ pkg_check_modules(XORGSERVER xorg-server IMPORTED_TARGET)
 find_package(Synaptics)
 set_package_properties(Synaptics PROPERTIES TYPE OPTIONAL)
 add_feature_info("Synaptics" SYNAPTICS_FOUND "Synaptics libraries are needed for the synaptics touchpad KCM")
+
+find_package(Wayland 1.2 OPTIONAL_COMPONENTS Client)
+find_package(QtWaylandScanner ${QT_MIN_VERSION})
+find_package(WaylandProtocols 1.19)
 
 if(SYNAPTICS_FOUND)
     set(HAVE_SYNAPTICS 1)

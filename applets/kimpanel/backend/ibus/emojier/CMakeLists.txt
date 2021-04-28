@@ -7,3 +7,6 @@ install (TARGETS EmojierDeclarativePlugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/
 install (FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/emoji)
 
 add_subdirectory(app)
+if (TARGET Wayland::Client)
+    add_subdirectory(inputmethod)
+endif()
