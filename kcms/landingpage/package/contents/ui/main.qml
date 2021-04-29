@@ -189,16 +189,17 @@ KCM.AbstractKCM {
             }
 
             Item {
-                Kirigami.FormData.isSection: false
+                // This is outside the loaded in order to have perfect label alignemnt
+                Layout.preferredHeight: Kirigami.Units.smallSpacing
+                visible: feedbackLoader.visible
             }
-
-            QQC2.CheckBox {
-                Kirigami.FormData.label: i18n("File Indexing:")
-                text: i18n("Enabled")
-                checked: kcm.balooSettings.indexingEnabled
-                onToggled: {
-                    kcm.balooSettings.indexingEnabled = checked
-                }
+            // This is in a loader because the import FeedbackControls uses won't always exist being KUserFeedback optional
+            Loader {
+                id: feedbackLoader
+                visible: item !== null
+                Kirigami.FormData.label: item ? i18n("Send User Feedback:") : ""
+                Kirigami.FormData.buddyFor: item ? item.slider : null
+                source: Qt.resolvedUrl("FeedbackControls.qml")
             }
         }
 
