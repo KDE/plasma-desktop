@@ -23,10 +23,14 @@
 
 void fail(const QString &str)
 {
-    if (!str.isEmpty()) {
+    if (str.isEmpty()) {
+        // 130 means Ctrl+C as an exit code this is interpreted by KNewStuff as cancel operation
+        // and no error will be displayed to the user, BUG: 436355
+        qApp->exit(130);
+    } else {
         KMessageBox::error(nullptr, str, i18nc("@info", "KRunner plugin installation failed"));
+        qApp->exit(1);
     }
-    qApp->exit(1);
 }
 
 int main(int argc, char *argv[])
