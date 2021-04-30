@@ -198,8 +198,8 @@ KCMLandingPage::KCMLandingPage(QObject *parent, const QVariantList &args)
     m_defaultLightLookAndFeel = new LookAndFeelGroup(this);
     m_defaultDarkLookAndFeel = new LookAndFeelGroup(this);
 
-    m_defaultLightLookAndFeel->m_package.setPath(m_data->landingPageGlobalsSettings()->defaultLightLookAndFeel());
-    m_defaultDarkLookAndFeel->m_package.setPath(m_data->landingPageGlobalsSettings()->defaultDarkLookAndFeel());
+    m_defaultLightLookAndFeel->m_package.setPath(globalsSettings()->defaultLightLookAndFeel());
+    m_defaultDarkLookAndFeel->m_package.setPath(globalsSettings()->defaultDarkLookAndFeel());
 
     connect(globalsSettings(), &LandingPageGlobalsSettings::lookAndFeelPackageChanged, this, [this]() {
         m_lnfDirty = true;
@@ -285,7 +285,11 @@ MostUsedModel *KCMLandingPage::mostUsedModel() const
 
 LandingPageGlobalsSettings *KCMLandingPage::globalsSettings() const
 {
+#if HAVE_KUSERFEEDBACK
     return m_data->landingPageGlobalsSettings();
+#else
+    return m_data->settings();
+#endif
 }
 
 #if HAVE_KUSERFEEDBACK
@@ -314,7 +318,7 @@ void KCMLandingPage::save()
 
     if (m_lnfDirty) {
         QProcess::startDetached(QStringLiteral("plasma-apply-lookandfeel"),
-                                QStringList({QStringLiteral("-a"), m_data->landingPageGlobalsSettings()->lookAndFeelPackage()}));
+                                QStringList({QStringLiteral("-a"), globalsSettings()->lookAndFeelPackage()}));
     }
 }
 
