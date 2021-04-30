@@ -95,6 +95,9 @@ KCM.GridViewKCM {
             kcm.splashScreenSettings.theme = model.pluginName;
             view.forceActiveFocus();
         }
+        onDoubleClicked: {
+            kcm.save();
+        }
     }
 
     footer: RowLayout {
