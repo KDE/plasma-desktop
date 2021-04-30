@@ -144,10 +144,6 @@ KCM.SimpleKCM {
             }
         }
 
-        Item {
-            Kirigami.FormData.isSection: true
-        }
-
         QtControls.CheckBox {
             Kirigami.FormData.label: i18n("Normal notifications:")
             text: i18n("Always keep on top")
@@ -159,10 +155,6 @@ KCM.SimpleKCM {
                 settingName: "NormalAlwaysOnTop"
                 extraEnabledConditions: root.notificationsAvailable
             }
-        }
-
-        Item {
-            Kirigami.FormData.isSection: true
         }
 
         QtControls.CheckBox {
