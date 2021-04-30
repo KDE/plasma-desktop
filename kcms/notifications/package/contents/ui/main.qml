@@ -121,18 +121,6 @@ KCM.SimpleKCM {
 
         QtControls.CheckBox {
             Kirigami.FormData.label: i18n("Critical notifications:")
-            text: i18n("Show over full screen windows")
-            checked: kcm.notificationSettings.criticalAlwaysOnTop
-            onClicked: kcm.notificationSettings.criticalAlwaysOnTop = checked
-
-            KCM.SettingStateBinding {
-                configObject: kcm.notificationSettings
-                settingName: "CriticalAlwaysOnTop"
-                extraEnabledConditions: root.notificationsAvailable
-            }
-        }
-
-        QtControls.CheckBox {
             text: i18n("Show in Do Not Disturb mode")
             checked: kcm.notificationSettings.criticalInDndMode
             onClicked: kcm.notificationSettings.criticalInDndMode = checked
