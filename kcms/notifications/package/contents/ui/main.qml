@@ -102,18 +102,6 @@ KCM.SimpleKCM {
         }
 
 
-        QtControls.CheckBox {
-            text: i18n("Show critical notifications")
-            checked: kcm.notificationSettings.criticalInDndMode
-            onClicked: kcm.notificationSettings.criticalInDndMode = checked
-
-            KCM.SettingStateBinding {
-                configObject: kcm.notificationSettings
-                settingName: "CriticalInDndMode"
-                extraEnabledConditions: root.notificationsAvailable
-            }
-        }
-
         RowLayout {
             enabled: root.notificationsAvailable
 
@@ -133,7 +121,7 @@ KCM.SimpleKCM {
 
         QtControls.CheckBox {
             Kirigami.FormData.label: i18n("Critical notifications:")
-            text: i18n("Always keep on top")
+            text: i18n("Show over full screen windows")
             checked: kcm.notificationSettings.criticalAlwaysOnTop
             onClicked: kcm.notificationSettings.criticalAlwaysOnTop = checked
 
@@ -145,8 +133,20 @@ KCM.SimpleKCM {
         }
 
         QtControls.CheckBox {
+            text: i18n("Show in Do Not Disturb mode")
+            checked: kcm.notificationSettings.criticalInDndMode
+            onClicked: kcm.notificationSettings.criticalInDndMode = checked
+
+            KCM.SettingStateBinding {
+                configObject: kcm.notificationSettings
+                settingName: "CriticalInDndMode"
+                extraEnabledConditions: root.notificationsAvailable
+            }
+        }
+
+        QtControls.CheckBox {
             Kirigami.FormData.label: i18n("Normal notifications:")
-            text: i18n("Always keep on top")
+            text: i18n("Show over full screen windows")
             checked: kcm.notificationSettings.normalAlwaysOnTop
             onClicked: kcm.notificationSettings.normalAlwaysOnTop = checked
 
