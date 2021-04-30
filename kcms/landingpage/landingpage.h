@@ -97,12 +97,11 @@ public:
     {
     }
 
-    void programFinished(int exitCode);
-
     MostUsedModel *mostUsedModel() const;
 
     LandingPageGlobalsSettings *globalsSettings() const;
 #if HAVE_KUSERFEEDBACK
+    void programFinished(int exitCode);
     bool feedbackEnabled() const;
     FeedbackSettings *feedbackSettings() const;
 #endif

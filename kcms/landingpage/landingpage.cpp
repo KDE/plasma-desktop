@@ -38,7 +38,10 @@
 #include <QScreen>
 #include <QStandardItemModel>
 
+#if HAVE_KUSERFEEDBACK
 #include "landingpage_feedbacksettings.h"
+#endif
+
 #include "landingpage_kdeglobalssettings.h"
 #include "landingpagedata.h"
 
@@ -172,7 +175,9 @@ KCMLandingPage::KCMLandingPage(QObject *parent, const QVariantList &args)
     , m_data(new LandingPageData(this))
 {
     qmlRegisterType<LandingPageGlobalsSettings>();
+#if HAVE_KUSERFEEDBACK
     qmlRegisterType<FeedbackSettings>();
+#endif
     qmlRegisterType<MostUsedModel>();
     qmlRegisterType<LookAndFeelGroup>();
 
@@ -200,6 +205,7 @@ KCMLandingPage::KCMLandingPage(QObject *parent, const QVariantList &args)
         m_lnfDirty = true;
     });
 
+#if HAVE_KUSERFEEDBACK
     QVector<QProcess *> processes;
     for (const auto &exec : s_programs.keys()) {
         QProcess *p = new QProcess(this);
@@ -209,6 +215,7 @@ KCMLandingPage::KCMLandingPage(QObject *parent, const QVariantList &args)
         connect(p, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, &KCMLandingPage::programFinished);
         processes << p;
     }
+#endif
 }
 
 inline void swap(QJsonValueRef v1, QJsonValueRef v2)
@@ -218,6 +225,7 @@ inline void swap(QJsonValueRef v1, QJsonValueRef v2)
     v2 = temp;
 }
 
+#if HAVE_KUSERFEEDBACK
 void KCMLandingPage::programFinished(int exitCode)
 {
     auto mo = KUserFeedback::Provider::staticMetaObject;
@@ -252,7 +260,7 @@ void KCMLandingPage::programFinished(int exitCode)
         m_uses[modeValue][description] << s_programs[program];
     }
     p->deleteLater();
-#if HAVE_KUSERFEEDBACK
+
     m_feedbackSources = {};
     for (auto it = m_uses.constBegin(), itEnd = m_uses.constEnd(); it != itEnd; ++it) {
         const auto modeUses = *it;
@@ -267,8 +275,8 @@ void KCMLandingPage::programFinished(int exitCode)
         return modeL < modeR || (modeL == modeR && objL["description"].toString() < objR["description"].toString());
     });
     Q_EMIT feedbackSourcesChanged();
-#endif
 }
+#endif
 
 MostUsedModel *KCMLandingPage::mostUsedModel() const
 {
