@@ -22,7 +22,7 @@ SimpleKCM {
     property QtObject user
     property bool overrideImage: false
     property url oldImage
-
+    
     Connections {
         target: user
         function onApplyError(errorText) {
@@ -169,6 +169,17 @@ SimpleKCM {
                 onClicked: {
                     changePassword.account = user
                     changePassword.openAndClear()
+                }
+            }
+            
+            QQC2.Button {
+                flat: false
+                visible: kcm.fingerprintModel.deviceFound
+                text: i18n("Fingerprints")
+                icon.name: "fingerprint-gui"
+                onClicked: {
+                    fingerprintDialog.account = user;
+                    fingerprintDialog.openAndClear();
                 }
             }
 
@@ -422,8 +433,8 @@ SimpleKCM {
             }
         }
     }
-
+    
     ChangePassword { id: changePassword; account: user }
-
     ChangeWalletPassword { id: changeWalletPassword }
+    FingerprintDialog { id: fingerprintDialog; account: user }
 }
