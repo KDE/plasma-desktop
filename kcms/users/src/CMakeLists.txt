@@ -2,6 +2,8 @@ set(kcm_users_SRCS
     kcm.cpp
     user.cpp
     usermodel.cpp
+    fprintdevice.cpp
+    fingerprintmodel.cpp
 )
 
 set_source_files_properties(org.freedesktop.Accounts.xml
@@ -10,7 +12,13 @@ set_source_files_properties(org.freedesktop.Accounts.xml
 set_source_files_properties(org.freedesktop.Accounts.User.xml
                         PROPERTIES NO_NAMESPACE TRUE)
 
-qt_add_dbus_interface(kcm_users_SRCS
+set_source_files_properties(net.reactivated.Fprint.Device.xml
+                        PROPERTIES NO_NAMESPACE TRUE)
+
+set_source_files_properties(net.reactivated.Fprint.Manager.xml
+                        PROPERTIES NO_NAMESPACE TRUE)
+                        
+qt5_add_dbus_interface(kcm_users_SRCS
     org.freedesktop.Accounts.xml
     accounts_interface
 )
@@ -18,6 +26,16 @@ qt_add_dbus_interface(kcm_users_SRCS
 qt_add_dbus_interface(kcm_users_SRCS
     org.freedesktop.Accounts.User.xml
     user_interface
+)
+
+qt5_add_dbus_interface(kcm_users_SRCS
+    net.reactivated.Fprint.Device.xml
+    fprint_device_interface
+)
+
+qt5_add_dbus_interface(kcm_users_SRCS
+    net.reactivated.Fprint.Manager.xml
+    fprint_manager_interface
 )
 
 set(login1_manager_xml org.freedesktop.login1.Manager.xml)
