@@ -57,9 +57,11 @@ static const int TAB_ADVANCED = 2;
 
 static const int MIN_LOOPING_COUNT = 2;
 
-
-KCMKeyboardWidget::KCMKeyboardWidget(Rules *rules_, KeyboardConfig *keyboardConfig_, WorkspaceOptions &workspaceOptions,
-                                     const QVariantList &args, QWidget * /*parent*/)
+KCMKeyboardWidget::KCMKeyboardWidget(Rules *rules_,
+                                     KeyboardConfig *keyboardConfig_,
+                                     WorkspaceOptions &workspaceOptions,
+                                     const QVariantList &args,
+                                     QWidget * /*parent*/)
     : rules(rules_)
     , m_workspaceOptions(workspaceOptions)
     , actionCollection(nullptr)

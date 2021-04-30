@@ -30,7 +30,6 @@
 KeysData::KeysData(QObject *parent, const QVariantList &args)
     : KCModuleData(parent, args)
 {
-
     for (int i = KStandardShortcut::AccelNone + 1; i < KStandardShortcut::StandardShortcutCount; ++i) {
         const auto id = static_cast<KStandardShortcut::StandardShortcut>(i);
         const QList<QKeySequence> activeShortcuts = KStandardShortcut::shortcut(id);
@@ -40,7 +39,6 @@ KeysData::KeysData(QObject *parent, const QVariantList &args)
             return;
         }
     }
-
 
     KGlobalAccelInterface globalAccelInterface(QStringLiteral("org.kde.kglobalaccel"), QStringLiteral("/kglobalaccel"), QDBusConnection::sessionBus());
     if (!globalAccelInterface.isValid()) {

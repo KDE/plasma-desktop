@@ -27,7 +27,8 @@ namespace kamd
 {
 namespace utils
 {
-template<typename T> class d_ptr
+template<typename T>
+class d_ptr
 {
 private:
     std::unique_ptr<T> d;
@@ -35,7 +36,8 @@ private:
 public:
     d_ptr();
 
-    template<typename... Args> d_ptr(Args &&...);
+    template<typename... Args>
+    d_ptr(Args &&...);
 
     ~d_ptr();
 

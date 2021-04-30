@@ -360,7 +360,8 @@ XcbAtom &LibinputTouchpad::touchpadOffAtom()
     return *m_atoms[QLatin1String(LIBINPUT_PROP_SENDEVENTS_ENABLED)].data();
 }
 
-template<typename T> bool LibinputTouchpad::valueLoader(Prop<T> &prop)
+template<typename T>
+bool LibinputTouchpad::valueLoader(Prop<T> &prop)
 {
     const Parameter *p = findParameter(QString::fromLatin1(prop.name));
 
@@ -385,7 +386,8 @@ template<typename T> bool LibinputTouchpad::valueLoader(Prop<T> &prop)
     return true;
 }
 
-template<typename T> QString LibinputTouchpad::valueWriter(const Prop<T> &prop)
+template<typename T>
+QString LibinputTouchpad::valueWriter(const Prop<T> &prop)
 {
     const Parameter *p = findParameter(QString::fromLatin1(prop.name));
 

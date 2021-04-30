@@ -76,8 +76,7 @@ void XkbLayoutManager::setLayout(IBusEngineDesc *desc)
     QString variant = QString::fromUtf8(cvariant ? cvariant : "");
     QString option = QString::fromUtf8(coption ? coption : "");
 
-    if (layout == QLatin1String{"default"}
-        && (variant.isEmpty() || variant == QLatin1String{"default"})
+    if (layout == QLatin1String{"default"} && (variant.isEmpty() || variant == QLatin1String{"default"})
         && (option.isEmpty() && option == QLatin1String{"default"})) {
         return;
     }

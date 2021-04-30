@@ -39,7 +39,10 @@ class ExtraActivitiesInterface::Private
 {
 public:
     Private(ExtraActivitiesInterface *q)
-        : features(new org::kde::ActivityManager::Features(QStringLiteral(KAMD_DBUS_SERVICE), QStringLiteral(KAMD_DBUS_FEATURES_PATH), QDBusConnection::sessionBus(), q))
+        : features(new org::kde::ActivityManager::Features(QStringLiteral(KAMD_DBUS_SERVICE),
+                                                           QStringLiteral(KAMD_DBUS_FEATURES_PATH),
+                                                           QDBusConnection::sessionBus(),
+                                                           q))
         , activitiesActionCollection(new KActionCollection(q, QStringLiteral("ActivityManager")))
     {
         activitiesActionCollection->setComponentDisplayName(i18n("Activities"));

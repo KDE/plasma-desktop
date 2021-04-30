@@ -343,12 +343,12 @@ QVariant SortedActivitiesModel::data(const QModelIndex &index, int role) const
             diff /= 12;
             const auto years = diff;
 
-            return (years > 0) ? i18n("Used more than a year ago")
-                               : (months > 0) ? i18ncp("amount in months", "Used a month ago", "Used %1 months ago", months)
-                                              : (days > 0) ? i18ncp("amount in days", "Used a day ago", "Used %1 days ago", days)
-                                                           : (hours > 0)
-                            ? i18ncp("amount in hours", "Used an hour ago", "Used %1 hours ago", hours)
-                            : (minutes > 0) ? i18ncp("amount in minutes", "Used a minute ago", "Used %1 minutes ago", minutes) : i18n("Used a moment ago");
+            return (years > 0)  ? i18n("Used more than a year ago")
+                : (months > 0)  ? i18ncp("amount in months", "Used a month ago", "Used %1 months ago", months)
+                : (days > 0)    ? i18ncp("amount in days", "Used a day ago", "Used %1 days ago", days)
+                : (hours > 0)   ? i18ncp("amount in hours", "Used an hour ago", "Used %1 hours ago", hours)
+                : (minutes > 0) ? i18ncp("amount in minutes", "Used a minute ago", "Used %1 minutes ago", minutes)
+                                : i18n("Used a moment ago");
         }
 
     } else if (role == HasWindows || role == WindowCount) {

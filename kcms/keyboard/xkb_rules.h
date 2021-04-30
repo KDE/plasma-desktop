@@ -30,7 +30,8 @@ struct ConfigItem {
     QString description;
 };
 
-template<class T> inline T *findByName(QList<T *> list, QString name)
+template<class T>
+inline T *findByName(QList<T *> list, QString name)
 {
     for (T *info : qAsConst(list)) {
         if (info->name == name)

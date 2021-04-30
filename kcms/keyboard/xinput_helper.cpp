@@ -22,8 +22,8 @@
 
 #include <QCoreApplication>
 #include <QDebug>
-#include <QX11Info>
 #include <QTimer>
+#include <QX11Info>
 
 #include <X11/X.h>
 #include <X11/Xatom.h>
@@ -92,8 +92,7 @@ bool XInputEventNotifier::processOtherEvents(xcb_generic_event_t *event)
         if (!keyboardNotificationTimer->isActive()) {
             keyboardNotificationTimer->start();
         }
-    }
-    else if (newDeviceType == DEVICE_POINTER) {
+    } else if (newDeviceType == DEVICE_POINTER) {
         if (!mouseNotificationTimer->isActive()) {
             mouseNotificationTimer->start();
         }

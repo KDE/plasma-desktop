@@ -19,8 +19,8 @@
 #ifndef KCM_KEYBOARD_H_
 #define KCM_KEYBOARD_H_
 
-#include <KCModule>
 #include "workspace_options.h"
+#include <KCModule>
 
 class KCMKeyboardWidget;
 class KeyboardConfig;

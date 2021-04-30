@@ -508,7 +508,6 @@ bool Backend::canPresentWindows() const
 
 void Backend::presentWindows(const QVariant &_winIds)
 {
-
     if (m_windowsToHighlight.count()) {
         m_windowsToHighlight.clear();
         updateWindowHighlight();

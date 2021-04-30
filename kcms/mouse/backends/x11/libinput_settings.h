@@ -22,9 +22,11 @@
 #include <QString>
 
 struct LibinputSettings {
-    template<class T> T load(QString key, T defVal);
+    template<class T>
+    T load(QString key, T defVal);
 
-    template<class T> void save(QString key, T val);
+    template<class T>
+    void save(QString key, T val);
 };
 
 #endif // LIBINPUTSETTINGS_H

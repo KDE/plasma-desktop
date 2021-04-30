@@ -163,8 +163,7 @@ static QString keySymToString(KeySym keysym)
         const QChar c(deadMap[keysym]);
 
         // Make sure non-spacing diacritics are rendered
-        if (c.category() == QChar::Mark_NonSpacing
-                || c.category() == QChar::Mark_Enclosing) {
+        if (c.category() == QChar::Mark_NonSpacing || c.category() == QChar::Mark_Enclosing) {
             // FIXME: should really be NBSP, but it doesn't seem to
             // render properly, so use SPACE which is not recommended
             // since Unicode 4.1

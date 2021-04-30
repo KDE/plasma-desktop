@@ -20,27 +20,27 @@
 
 #include "landingpage.h"
 
-#include <KPluginFactory>
 #include <KAboutData>
+#include <KCModuleInfo>
 #include <KColorScheme>
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
+#include <KPluginFactory>
 #include <KService>
-#include <KCModuleInfo>
 
-#include <QDBusMessage>
 #include <QDBusConnection>
+#include <QDBusMessage>
 #include <QDBusPendingCall>
+#include <QGuiApplication>
 #include <QQuickItem>
-#include <QQuickWindow>
 #include <QQuickRenderControl>
+#include <QQuickWindow>
 #include <QScreen>
 #include <QStandardItemModel>
-#include <QGuiApplication>
 
-#include "landingpagedata.h"
-#include "landingpage_kdeglobalssettings.h"
 #include "landingpage_feedbacksettings.h"
+#include "landingpage_kdeglobalssettings.h"
+#include "landingpagedata.h"
 
 #include <KActivities/Stats/ResultModel>
 #include <KActivities/Stats/ResultSet>
@@ -51,22 +51,18 @@ namespace KAStats = KActivities::Stats;
 using namespace KAStats;
 using namespace KAStats::Terms;
 
-
-
 K_PLUGIN_FACTORY_WITH_JSON(KCMLandingPageFactory, "kcm_landingpage.json", registerPlugin<KCMLandingPage>(); registerPlugin<LandingPageData>();)
-
 
 // Program to icon hash
 static QHash<QString, QString> s_programs = {{"plasmashell", "plasmashell"}, {"plasma-discover", "plasmadiscover"}};
 
-
 MostUsedModel::MostUsedModel(QObject *parent)
-    : QSortFilterProxyModel (parent)
+    : QSortFilterProxyModel(parent)
 {
     sort(0, Qt::DescendingOrder);
     setSortRole(ResultModel::ScoreRole);
     setDynamicSortFilter(true);
-    //prepare default items
+    // prepare default items
     m_defaultModel = new QStandardItemModel(this);
 
     KService::Ptr service = KService::serviceByDesktopName(qGuiApp->desktopFileName());
@@ -123,7 +119,7 @@ bool MostUsedModel::filterAcceptsRow(int source_row, const QModelIndex &source_p
 
 QVariant MostUsedModel::data(const QModelIndex &index, int role) const
 {
-    //MenuItem *mi;
+    // MenuItem *mi;
     const QString desktopName = QSortFilterProxyModel::data(index, ResultModel::ResourceRole).toUrl().path();
 
     KService::Ptr service = KService::serviceByStorageId(desktopName);
@@ -133,24 +129,21 @@ QVariant MostUsedModel::data(const QModelIndex &index, int role) const
     }
 
     switch (role) {
-
-        case Qt::DisplayRole:
-            return service->name();
-        case Qt::DecorationRole:
-            return service->icon();
-        case KcmPluginRole: {
-            return service->desktopEntryName();
-            KCModuleInfo info(service);
-            return info.handle();
-        }
-        case ResultModel::ScoreRole:
-            return QSortFilterProxyModel::data(index, ResultModel::ScoreRole);
-        default:
-            return QVariant();
+    case Qt::DisplayRole:
+        return service->name();
+    case Qt::DecorationRole:
+        return service->icon();
+    case KcmPluginRole: {
+        return service->desktopEntryName();
+        KCModuleInfo info(service);
+        return info.handle();
+    }
+    case ResultModel::ScoreRole:
+        return QSortFilterProxyModel::data(index, ResultModel::ScoreRole);
+    default:
+        return QVariant();
     }
 }
-
-
 
 LookAndFeelGroup::LookAndFeelGroup(QObject *parent)
     : QObject(parent)
@@ -170,10 +163,9 @@ QString LookAndFeelGroup::name() const
 
 QString LookAndFeelGroup::thumbnail() const
 {
-    return m_package.filePath("preview");;
+    return m_package.filePath("preview");
+    ;
 }
-
-
 
 KCMLandingPage::KCMLandingPage(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
@@ -196,7 +188,7 @@ KCMLandingPage::KCMLandingPage(QObject *parent, const QVariantList &args)
     setButtons(Apply | Help);
 
     m_mostUsedModel = new MostUsedModel(this);
-    m_mostUsedModel->setResultModel(new ResultModel( AllResources | Agent(QStringLiteral("org.kde.systemsettings")) | HighScoredFirst | Limit(5), this));
+    m_mostUsedModel->setResultModel(new ResultModel(AllResources | Agent(QStringLiteral("org.kde.systemsettings")) | HighScoredFirst | Limit(5), this));
 
     m_defaultLightLookAndFeel = new LookAndFeelGroup(this);
     m_defaultDarkLookAndFeel = new LookAndFeelGroup(this);
@@ -204,9 +196,9 @@ KCMLandingPage::KCMLandingPage(QObject *parent, const QVariantList &args)
     m_defaultLightLookAndFeel->m_package.setPath(m_data->landingPageGlobalsSettings()->defaultLightLookAndFeel());
     m_defaultDarkLookAndFeel->m_package.setPath(m_data->landingPageGlobalsSettings()->defaultDarkLookAndFeel());
 
-    connect(globalsSettings(), &LandingPageGlobalsSettings::lookAndFeelPackageChanged,
-            this, [this]() {m_lnfDirty = true;});
-
+    connect(globalsSettings(), &LandingPageGlobalsSettings::lookAndFeelPackageChanged, this, [this]() {
+        m_lnfDirty = true;
+    });
 
     QVector<QProcess *> processes;
     for (const auto &exec : s_programs.keys()) {
@@ -218,7 +210,6 @@ KCMLandingPage::KCMLandingPage(QObject *parent, const QVariantList &args)
         processes << p;
     }
 }
-
 
 inline void swap(QJsonValueRef v1, QJsonValueRef v2)
 {
@@ -269,7 +260,8 @@ void KCMLandingPage::programFinished(int exitCode)
             m_feedbackSources << QJsonObject({{"mode", it.key()}, {"icons", *itMode}, {"description", itMode.key()}});
         }
     }
-    std::sort(m_feedbackSources.begin(), m_feedbackSources.end(), [](const QJsonValue &valueL, const QJsonValue &valueR) {return true;
+    std::sort(m_feedbackSources.begin(), m_feedbackSources.end(), [](const QJsonValue &valueL, const QJsonValue &valueR) {
+        return true;
         const QJsonObject objL(valueL.toObject()), objR(valueR.toObject());
         const auto modeL = objL["mode"].toInt(), modeR = objR["mode"].toInt();
         return modeL < modeR || (modeL == modeR && objL["description"].toString() < objR["description"].toString());
@@ -313,7 +305,8 @@ void KCMLandingPage::save()
     QDBusConnection::sessionBus().send(message);
 
     if (m_lnfDirty) {
-        QProcess::startDetached(QStringLiteral("plasma-apply-lookandfeel"), QStringList({QStringLiteral("-a"), m_data->landingPageGlobalsSettings()->lookAndFeelPackage()}));
+        QProcess::startDetached(QStringLiteral("plasma-apply-lookandfeel"),
+                                QStringList({QStringLiteral("-a"), m_data->landingPageGlobalsSettings()->lookAndFeelPackage()}));
     }
 }
 
@@ -358,8 +351,10 @@ void KCMLandingPage::openWallpaperDialog()
         connector = screen->name();
     }
 
-    QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"), QStringLiteral("/PlasmaShell"),
-                                                   QStringLiteral("org.kde.PlasmaShell"), QStringLiteral("evaluateScript"));
+    QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
+                                                          QStringLiteral("/PlasmaShell"),
+                                                          QStringLiteral("org.kde.PlasmaShell"),
+                                                          QStringLiteral("evaluateScript"));
 
     QList<QVariant> args;
     args << QStringLiteral(R"(
@@ -368,7 +363,8 @@ void KCMLandingPage::openWallpaperDialog()
         if (id >= 0) {
             let desktop = desktopForScreen(id);
             desktop.showConfigurationInterface();
-        })").arg(connector);
+        })")
+                .arg(connector);
 
     message.setArguments(args);
 

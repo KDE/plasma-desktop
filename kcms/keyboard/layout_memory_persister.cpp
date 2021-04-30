@@ -198,7 +198,8 @@ private:
     const KeyboardConfig::SwitchingPolicy &switchingPolicy;
 };
 
-template<typename T> static bool containsAll(QList<T> set1, QList<T> set2)
+template<typename T>
+static bool containsAll(QList<T> set1, QList<T> set2)
 {
     foreach (const T &t, set2) {
         if (!set1.contains(t))

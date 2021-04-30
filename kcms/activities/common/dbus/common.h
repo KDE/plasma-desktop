@@ -18,6 +18,8 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+// clang-format off
+
 #ifndef DBUS_COMMON_H
 #define DBUS_COMMON_H
 

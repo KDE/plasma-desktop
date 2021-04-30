@@ -203,7 +203,8 @@ bool KWinWaylandTouchpad::isChangedConfig() const
     // clang-format on
 }
 
-template<typename T> QString KWinWaylandTouchpad::valueWriter(const Prop<T> &prop)
+template<typename T>
+QString KWinWaylandTouchpad::valueWriter(const Prop<T> &prop)
 {
     if (!prop.changed()) {
         return QString();
@@ -217,7 +218,8 @@ template<typename T> QString KWinWaylandTouchpad::valueWriter(const Prop<T> &pro
     return QString();
 }
 
-template<typename T> bool KWinWaylandTouchpad::valueLoader(Prop<T> &prop)
+template<typename T>
+bool KWinWaylandTouchpad::valueLoader(Prop<T> &prop)
 {
     QVariant reply = m_iface->property(prop.name);
     if (!reply.isValid()) {

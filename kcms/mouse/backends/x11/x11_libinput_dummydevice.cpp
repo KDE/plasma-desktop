@@ -26,7 +26,8 @@
 
 static Atom s_touchpadAtom;
 
-template<typename Callback> static void XIForallPointerDevices(Display *dpy, const Callback &callback)
+template<typename Callback>
+static void XIForallPointerDevices(Display *dpy, const Callback &callback)
 {
     int ndevices_return;
     XDeviceInfo *info = XListInputDevices(dpy, &ndevices_return);
@@ -53,14 +54,16 @@ struct ScopedXDeleter {
 
 namespace
 {
-template<typename T> void valueWriterPart(T val, Atom valAtom, Display *dpy)
+template<typename T>
+void valueWriterPart(T val, Atom valAtom, Display *dpy)
 {
     Q_UNUSED(val);
     Q_UNUSED(valAtom);
     Q_UNUSED(dpy);
 }
 
-template<> void valueWriterPart<bool>(bool val, Atom valAtom, Display *dpy)
+template<>
+void valueWriterPart<bool>(bool val, Atom valAtom, Display *dpy)
 {
     XIForallPointerDevices(dpy, [&](XDeviceInfo *info) {
         int deviceid = info->id;
@@ -100,7 +103,8 @@ template<> void valueWriterPart<bool>(bool val, Atom valAtom, Display *dpy)
     });
 }
 
-template<> void valueWriterPart<qreal>(qreal val, Atom valAtom, Display *dpy)
+template<>
+void valueWriterPart<qreal>(qreal val, Atom valAtom, Display *dpy)
 {
     XIForallPointerDevices(dpy, [&](XDeviceInfo *info) {
         int deviceid = info->id;
@@ -215,7 +219,8 @@ bool X11LibinputDummyDevice::applyConfig()
     return true;
 }
 
-template<typename T> bool X11LibinputDummyDevice::valueWriter(Prop<T> &prop)
+template<typename T>
+bool X11LibinputDummyDevice::valueWriter(Prop<T> &prop)
 {
     // Check atom availability first.
     if (prop.atom == None) {

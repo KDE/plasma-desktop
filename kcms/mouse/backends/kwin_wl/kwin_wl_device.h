@@ -229,7 +229,8 @@ Q_SIGNALS:
     void scrollFactorChanged();
 
 private:
-    template<typename T> struct Prop {
+    template<typename T>
+    struct Prop {
         explicit Prop(const QByteArray &dbusName)
             : dbus(dbusName)
         {
@@ -258,9 +259,11 @@ private:
         T val;
     };
 
-    template<typename T> bool valueLoader(Prop<T> &prop);
+    template<typename T>
+    bool valueLoader(Prop<T> &prop);
 
-    template<typename T> QString valueWriter(const Prop<T> &prop);
+    template<typename T>
+    QString valueWriter(const Prop<T> &prop);
 
     //
     // general

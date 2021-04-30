@@ -33,12 +33,14 @@ public:
 
     static void setSystemDefaults();
     static QVariant systemDefault(const QString &name, const QVariant &hardcoded = QVariant());
-    template<typename T> static T systemDefault(const QString &name, const T &hardcoded = T())
+    template<typename T>
+    static T systemDefault(const QString &name, const T &hardcoded = T())
     {
         return qvariant_cast<T>(systemDefault(name, QVariant(hardcoded)));
     }
 
-    template<typename T> static T systemDefaultEnum(const QString &name, const T &hardcoded = T())
+    template<typename T>
+    static T systemDefaultEnum(const QString &name, const T &hardcoded = T())
     {
         return static_cast<T>(systemDefault(name, static_cast<int>(hardcoded)));
     }

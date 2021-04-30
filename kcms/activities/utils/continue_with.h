@@ -46,7 +46,8 @@ inline void test_continuation(const QJSValue &continuation)
     }
 }
 
-template<typename _ReturnType> inline void pass_value(const QFuture<_ReturnType> &future, QJSValue continuation)
+template<typename _ReturnType>
+inline void pass_value(const QFuture<_ReturnType> &future, QJSValue continuation)
 {
     auto result = continuation.call({future.result()});
     if (result.isError()) {
@@ -64,25 +65,29 @@ inline void pass_value(const QFuture<void> &future, QJSValue continuation)
 }
 #endif
 
-template<typename _Continuation> inline void test_continuation(_Continuation &&continuation)
+template<typename _Continuation>
+inline void test_continuation(_Continuation &&continuation)
 {
     Q_UNUSED(continuation);
 }
 
-template<typename _ReturnType, typename _Continuation> inline void pass_value(const QFuture<_ReturnType> &future, _Continuation &&continuation)
+template<typename _ReturnType, typename _Continuation>
+inline void pass_value(const QFuture<_ReturnType> &future, _Continuation &&continuation)
 {
     using namespace kamd::utils;
     continuation(future.resultCount() > 0 ? make_optional_view(future.result()) : none());
 }
 
-template<typename _Continuation> inline void pass_value(_Continuation &&continuation)
+template<typename _Continuation>
+inline void pass_value(_Continuation &&continuation)
 {
     continuation();
 }
 
 } //^ namespace detail
 
-template<typename _ReturnType, typename _Continuation> inline void continue_with(const QFuture<_ReturnType> &future, _Continuation &&continuation)
+template<typename _ReturnType, typename _Continuation>
+inline void continue_with(const QFuture<_ReturnType> &future, _Continuation &&continuation)
 {
     detail::test_continuation(continuation);
 

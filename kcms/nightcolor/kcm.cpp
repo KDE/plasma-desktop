@@ -20,7 +20,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <KLocalizedString>
 #include <KPluginFactory>
 
-
 namespace ColorCorrect
 {
 K_PLUGIN_CLASS_WITH_JSON(KCMNightColor, "kcm_nightcolor.json")

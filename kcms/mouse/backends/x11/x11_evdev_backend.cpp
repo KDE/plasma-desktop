@@ -45,7 +45,8 @@ struct ScopedXDeleter {
     }
 };
 
-template<typename Callback> static void XIForallPointerDevices(Display *dpy, const Callback &callback)
+template<typename Callback>
+static void XIForallPointerDevices(Display *dpy, const Callback &callback)
 {
     int ndevices_return;
     XDeviceInfo *info = XListInputDevices(dpy, &ndevices_return);

@@ -25,38 +25,45 @@
 
 namespace
 {
-template<typename T> inline T valueLoaderPart(QVariant const &reply)
+template<typename T>
+inline T valueLoaderPart(QVariant const &reply)
 {
     Q_UNUSED(reply);
     return T();
 }
 
-template<> inline bool valueLoaderPart(QVariant const &reply)
+template<>
+inline bool valueLoaderPart(QVariant const &reply)
 {
     return reply.toBool();
 }
 
-template<> inline int valueLoaderPart(QVariant const &reply)
+template<>
+inline int valueLoaderPart(QVariant const &reply)
 {
     return reply.toInt();
 }
 
-template<> inline quint32 valueLoaderPart(QVariant const &reply)
+template<>
+inline quint32 valueLoaderPart(QVariant const &reply)
 {
     return reply.toInt();
 }
 
-template<> inline qreal valueLoaderPart(QVariant const &reply)
+template<>
+inline qreal valueLoaderPart(QVariant const &reply)
 {
     return reply.toReal();
 }
 
-template<> inline QString valueLoaderPart(QVariant const &reply)
+template<>
+inline QString valueLoaderPart(QVariant const &reply)
 {
     return reply.toString();
 }
 
-template<> inline Qt::MouseButtons valueLoaderPart(QVariant const &reply)
+template<>
+inline Qt::MouseButtons valueLoaderPart(QVariant const &reply)
 {
     return static_cast<Qt::MouseButtons>(reply.toInt());
 }
@@ -457,7 +464,8 @@ Q_SIGNALS:
     void clickMethodChanged();
 
 protected:
-    template<typename T> struct Prop {
+    template<typename T>
+    struct Prop {
         explicit Prop(const QByteArray &name)
             : name(name)
         {

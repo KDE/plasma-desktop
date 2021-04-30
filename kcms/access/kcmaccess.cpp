@@ -138,15 +138,14 @@ QString mouseKeysShortcut(Display *display)
     if ((modifiers & ShiftMask) != 0)
         keyname = QKeySequence(Qt::SHIFT).toString() + QLatin1Char('+') + keyname;
 
-    return modifiers & ScrollMask & LockMask & NumMask
-        ? i18n("Press %1 while NumLock, CapsLock and ScrollLock are active", keyname)
-        : modifiers & ScrollMask & LockMask ? i18n("Press %1 while CapsLock and ScrollLock are active", keyname)
-                                            : modifiers & ScrollMask & NumMask ? i18n("Press %1 while NumLock and ScrollLock are active", keyname)
-                                                                               : modifiers & ScrollMask ? i18n("Press %1 while ScrollLock is active", keyname)
-                                                                                                        : modifiers & LockMask & NumMask
-                        ? i18n("Press %1 while NumLock and CapsLock are active", keyname)
-                        : modifiers & LockMask ? i18n("Press %1 while CapsLock is active", keyname)
-                                               : modifiers & NumMask ? i18n("Press %1 while NumLock is active", keyname) : i18n("Press %1", keyname);
+    return modifiers & ScrollMask & LockMask & NumMask ? i18n("Press %1 while NumLock, CapsLock and ScrollLock are active", keyname)
+        : modifiers & ScrollMask & LockMask            ? i18n("Press %1 while CapsLock and ScrollLock are active", keyname)
+        : modifiers & ScrollMask & NumMask             ? i18n("Press %1 while NumLock and ScrollLock are active", keyname)
+        : modifiers & ScrollMask                       ? i18n("Press %1 while ScrollLock is active", keyname)
+        : modifiers & LockMask & NumMask               ? i18n("Press %1 while NumLock and CapsLock are active", keyname)
+        : modifiers & LockMask                         ? i18n("Press %1 while CapsLock is active", keyname)
+        : modifiers & NumMask                          ? i18n("Press %1 while NumLock is active", keyname)
+                                                       : i18n("Press %1", keyname);
 }
 
 KAccessConfig::KAccessConfig(QObject *parent, const QVariantList &args)

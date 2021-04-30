@@ -44,9 +44,11 @@ public:
     XcbAtom &touchpadOffAtom() override;
 
 private:
-    template<typename T> bool valueLoader(Prop<T> &prop);
+    template<typename T>
+    bool valueLoader(Prop<T> &prop);
 
-    template<typename T> QString valueWriter(const Prop<T> &prop);
+    template<typename T>
+    QString valueWriter(const Prop<T> &prop);
 
     KSharedConfigPtr m_config;
 

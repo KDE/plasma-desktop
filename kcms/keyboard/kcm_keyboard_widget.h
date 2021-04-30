@@ -41,8 +41,7 @@ class KCMKeyboardWidget : public QTabWidget
     Q_OBJECT
 
 public:
-    KCMKeyboardWidget(Rules *rules, KeyboardConfig *keyboardConfig, WorkspaceOptions &workspaceOptions,
-                      const QVariantList &args, QWidget *parent = nullptr);
+    KCMKeyboardWidget(Rules *rules, KeyboardConfig *keyboardConfig, WorkspaceOptions &workspaceOptions, const QVariantList &args, QWidget *parent = nullptr);
     ~KCMKeyboardWidget() override;
 
     void updateUI();

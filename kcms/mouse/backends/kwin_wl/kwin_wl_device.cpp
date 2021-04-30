@@ -26,38 +26,45 @@
 
 namespace
 {
-template<typename T> T valueLoaderPart(QVariant const &reply)
+template<typename T>
+T valueLoaderPart(QVariant const &reply)
 {
     Q_UNUSED(reply);
     return T();
 }
 
-template<> bool valueLoaderPart(QVariant const &reply)
+template<>
+bool valueLoaderPart(QVariant const &reply)
 {
     return reply.toBool();
 }
 
-template<> int valueLoaderPart(QVariant const &reply)
+template<>
+int valueLoaderPart(QVariant const &reply)
 {
     return reply.toInt();
 }
 
-template<> quint32 valueLoaderPart(QVariant const &reply)
+template<>
+quint32 valueLoaderPart(QVariant const &reply)
 {
     return reply.toInt();
 }
 
-template<> qreal valueLoaderPart(QVariant const &reply)
+template<>
+qreal valueLoaderPart(QVariant const &reply)
 {
     return reply.toReal();
 }
 
-template<> QString valueLoaderPart(QVariant const &reply)
+template<>
+QString valueLoaderPart(QVariant const &reply)
 {
     return reply.toString();
 }
 
-template<> Qt::MouseButtons valueLoaderPart(QVariant const &reply)
+template<>
+Qt::MouseButtons valueLoaderPart(QVariant const &reply)
 {
     return static_cast<Qt::MouseButtons>(reply.toInt());
 }
@@ -168,7 +175,8 @@ bool KWinWaylandDevice::isChangedConfig() const
         || m_pointerAccelerationProfileAdaptive.changed() || m_middleEmulation.changed() || m_scrollFactor.changed() || m_naturalScroll.changed();
 }
 
-template<typename T> QString KWinWaylandDevice::valueWriter(const Prop<T> &prop)
+template<typename T>
+QString KWinWaylandDevice::valueWriter(const Prop<T> &prop)
 {
     if (!prop.changed()) {
         return QString();
@@ -182,7 +190,8 @@ template<typename T> QString KWinWaylandDevice::valueWriter(const Prop<T> &prop)
     return QString();
 }
 
-template<typename T> bool KWinWaylandDevice::valueLoader(Prop<T> &prop)
+template<typename T>
+bool KWinWaylandDevice::valueLoader(Prop<T> &prop)
 {
     QVariant reply = m_iface->property(prop.dbus);
     if (!reply.isValid()) {

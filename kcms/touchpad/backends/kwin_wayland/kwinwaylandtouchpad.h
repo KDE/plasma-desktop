@@ -154,9 +154,11 @@ Q_SIGNALS:
     void scrollFactorChanged();
 
 private:
-    template<typename T> bool valueLoader(Prop<T> &prop);
+    template<typename T>
+    bool valueLoader(Prop<T> &prop);
 
-    template<typename T> QString valueWriter(const Prop<T> &prop);
+    template<typename T>
+    QString valueWriter(const Prop<T> &prop);
     //
     // general
     Prop<QString> m_name = Prop<QString>("name");

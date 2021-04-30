@@ -23,7 +23,8 @@
 
 struct Rules;
 class LayoutUnit;
-template<typename T> class QList;
+template<typename T>
+class QList;
 
 class KeyboardLayoutActionCollection : public KActionCollection
 {

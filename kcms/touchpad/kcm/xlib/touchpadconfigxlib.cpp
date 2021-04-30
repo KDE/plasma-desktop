@@ -78,7 +78,8 @@ static void copyHelpFromBuddy(QObject *root)
     }
 }
 
-template<typename T> QWidget *addTab(QTabWidget *tabs, T &form)
+template<typename T>
+QWidget *addTab(QTabWidget *tabs, T &form)
 {
     QScrollArea *container = new QScrollArea(tabs);
     container->setWidgetResizable(true);

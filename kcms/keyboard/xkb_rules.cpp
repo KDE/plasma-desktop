@@ -82,7 +82,8 @@ static bool notEmpty(const ConfigItem *item)
     return !item->name.isEmpty();
 }
 
-template<class T> void removeEmptyItems(QList<T *> &list)
+template<class T>
+void removeEmptyItems(QList<T *> &list)
 {
 #ifdef __GNUC__
 #if __GNUC__ == 4 && (__GNUC_MINOR__ == 8 && __GNUC_PATCHLEVEL__ < 3) || (__GNUC_MINOR__ == 7 && __GNUC_PATCHLEVEL__ < 4)

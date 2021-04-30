@@ -52,8 +52,8 @@ private:
     int xinputEventType;
     Display *display;
     UdevDeviceNotifier *udevNotifier;
-    QTimer* keyboardNotificationTimer;
-    QTimer* mouseNotificationTimer;
+    QTimer *keyboardNotificationTimer;
+    QTimer *mouseNotificationTimer;
 };
 
 #endif /* XINPUT_HELPER_H_ */

@@ -219,7 +219,8 @@ Q_SIGNALS:
     void naturalScrollChanged();
 
 private:
-    template<typename T> struct Prop {
+    template<typename T>
+    struct Prop {
         explicit Prop(const QString &_name, const QString &_cfgName = "")
             : name(_name)
             , cfgName(_cfgName)
@@ -259,7 +260,8 @@ private:
         Atom atom;
     };
 
-    template<typename T> bool valueWriter(Prop<T> &prop);
+    template<typename T>
+    bool valueWriter(Prop<T> &prop);
 
     //
     // general

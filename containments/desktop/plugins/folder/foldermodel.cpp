@@ -41,8 +41,8 @@
 #include <QPixmap>
 #include <QQuickItem>
 #include <QQuickWindow>
-#include <QTimer>
 #include <QScreen>
+#include <QTimer>
 #include <qplatformdefs.h>
 
 #include <KAuthorized>

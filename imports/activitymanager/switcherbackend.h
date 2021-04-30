@@ -81,7 +81,8 @@ public Q_SLOTS:
     void toggleActivityManager();
 
 private:
-    template<typename Handler> inline void registerShortcut(const QString &actionName, const QString &name, const QKeySequence &shortcut, Handler &&handler);
+    template<typename Handler>
+    inline void registerShortcut(const QString &actionName, const QString &name, const QKeySequence &shortcut, Handler &&handler);
 
     enum Direction {
         Next,

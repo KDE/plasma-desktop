@@ -22,10 +22,10 @@
 
 #include "config-landingpage.h"
 
-#include <KQuickAddons/ManagedConfigModule>
 #include <KPackage/Package>
-#include <QJsonValue>
+#include <KQuickAddons/ManagedConfigModule>
 #include <QJsonArray>
+#include <QJsonValue>
 
 class QStandardItemModel;
 
@@ -34,10 +34,12 @@ class LandingPageGlobalsSettings;
 
 class FeedbackSettings;
 
-namespace KActivities {
-    namespace Stats {
-        class ResultModel;
-    }
+namespace KActivities
+{
+namespace Stats
+{
+class ResultModel;
+}
 }
 
 class MostUsedModel : public QSortFilterProxyModel
@@ -45,9 +47,7 @@ class MostUsedModel : public QSortFilterProxyModel
     Q_OBJECT
 
 public:
-    enum Roles {
-        KcmPluginRole = Qt::UserRole + 1000
-    };
+    enum Roles { KcmPluginRole = Qt::UserRole + 1000 };
 
     explicit MostUsedModel(QObject *parent = nullptr);
     void setResultModel(KActivities::Stats::ResultModel *model);
@@ -62,7 +62,8 @@ private:
     KActivities::Stats::ResultModel *m_resultModel;
 };
 
-class LookAndFeelGroup : public QObject {
+class LookAndFeelGroup : public QObject
+{
     Q_OBJECT
     Q_PROPERTY(QString id READ id CONSTANT)
     Q_PROPERTY(QString name READ name CONSTANT)
@@ -92,9 +93,10 @@ class KCMLandingPage : public KQuickAddons::ManagedConfigModule
 
 public:
     KCMLandingPage(QObject *parent, const QVariantList &args);
-    ~KCMLandingPage() override {}
+    ~KCMLandingPage() override
+    {
+    }
 
-    
     void programFinished(int exitCode);
 
     MostUsedModel *mostUsedModel() const;
@@ -134,4 +136,4 @@ private:
     bool m_lnfDirty = false;
 };
 
-#endif  // _KCM_LANDINGPAGE_H
+#endif // _KCM_LANDINGPAGE_H

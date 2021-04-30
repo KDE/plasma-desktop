@@ -251,7 +251,10 @@ SwitcherBackend::SwitcherBackend(QObject *parent)
     , m_runningActivitiesModel(new SortedActivitiesModel({KActivities::Info::Running, KActivities::Info::Stopping}, this))
     , m_stoppedActivitiesModel(new SortedActivitiesModel({KActivities::Info::Stopped, KActivities::Info::Starting}, this))
 {
-    registerShortcut(QString::fromLatin1(s_action_name_next_activity), i18n("Walk through activities"), Qt::META | Qt::Key_Tab, &SwitcherBackend::keybdSwitchToNextActivity);
+    registerShortcut(QString::fromLatin1(s_action_name_next_activity),
+                     i18n("Walk through activities"),
+                     Qt::META | Qt::Key_Tab,
+                     &SwitcherBackend::keybdSwitchToNextActivity);
 
     registerShortcut(QString::fromLatin1(s_action_name_previous_activity),
                      i18n("Walk through activities (Reverse)"),

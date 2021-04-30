@@ -23,7 +23,8 @@
 #include <Solid/Predicate>
 
 class QString;
-template<typename T> class QList;
+template<typename T>
+class QList;
 
 class PredicateItem
 {

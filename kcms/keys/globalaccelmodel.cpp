@@ -108,7 +108,7 @@ Component GlobalAccelModel::loadComponent(const QList<KGlobalShortcutInfo> &info
     const QString &componentFriendly = info[0].componentFriendlyName();
     KService::Ptr service;
     // The shortcuts were imported by desktop file
-     if (componentUnique.endsWith(QLatin1String(".desktop"))) {
+    if (componentUnique.endsWith(QLatin1String(".desktop"))) {
         service = new KService(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kglobalaccel/") + componentUnique));
     } else {
         service = KService::serviceByStorageId(componentUnique);
@@ -126,9 +126,11 @@ Component GlobalAccelModel::loadComponent(const QList<KGlobalShortcutInfo> &info
     const QString type = service && service->isApplication() ? i18n("Applications") : i18n("System Services");
     QString icon;
 
-    static const QHash<QString, QString> hardCodedIcons = {{"ActivityManager", "preferences-desktop-activities"},
-                                                           {"KDE Keyboard Layout Switcher", "input-keyboard"},
-                                                           {"org_kde_powerdevil", "preferences-system-power-management"},};
+    static const QHash<QString, QString> hardCodedIcons = {
+        {"ActivityManager", "preferences-desktop-activities"},
+        {"KDE Keyboard Layout Switcher", "input-keyboard"},
+        {"org_kde_powerdevil", "preferences-system-power-management"},
+    };
 
     if (service && !service->icon().isEmpty()) {
         icon = service->icon();
