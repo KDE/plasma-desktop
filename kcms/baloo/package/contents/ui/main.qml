@@ -62,10 +62,10 @@ KCM.SimpleKCM {
         Kirigami.InlineMessage {
             id: indexingDisabledWarning
             Layout.fillWidth: true
-            visible: !kcm.balooSettings.indexingEnabled && !kcm.needsSave
+            visible: !kcm.balooSettings.indexingEnabled && !kcm.needsSave && kcm.rawIndexFileSize() > 0
             type: Kirigami.MessageType.Warning
             showCloseButton: true
-            text: i18n("Do you want to delete the saved index data? %1 of space will be freed, but if indexing is re-enabled later, the entire index will have to be re-created from scratch. This may take some time, depending on how many files you have.", kcm.indexFileSize());
+            text: i18n("Do you want to delete the saved index data? %1 of space will be freed, but if indexing is re-enabled later, the entire index will have to be re-created from scratch. This may take some time, depending on how many files you have.", kcm.prettyIndexFileSize());
             actions: [
                 Kirigami.Action {
                     text: i18n("Delete Index Data")

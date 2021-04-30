@@ -128,9 +128,14 @@ void ServerConfigModule::deleteIndex()
     QFile(balooDatabaseLocation()).remove();
 }
 
-QString ServerConfigModule::indexFileSize()
+int ServerConfigModule::rawIndexFileSize()
 {
-    return KFormat().formatByteSize(QFile(balooDatabaseLocation()).size());
+    return QFile(balooDatabaseLocation()).size();
+}
+
+QString ServerConfigModule::prettyIndexFileSize()
+{
+    return KFormat().formatByteSize(rawIndexFileSize());
 }
 
 #include "kcm.moc"
