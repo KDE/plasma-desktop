@@ -74,6 +74,11 @@ MouseArea {
     readonly property bool highlighted: (inPopup && activeFocus) || (!inPopup && containsMouse)
         || (task.contextMenu && task.contextMenu.status === PlasmaComponents.DialogStatus.Open)
         || (groupDialog.visible && groupDialog.visualParent === task)
+        
+    onHighlightedChanged: {
+        // ensure it doesn't get stuck with a window highlighted
+        backend.cancelHighlightWindows();
+    }
 
     function showToolTip() {
         toolTipArea.showToolTip();
@@ -127,10 +132,6 @@ MouseArea {
             }
         } else {
             pressed = false;
-        }
-
-        if (model.IsWindow === true) {
-            tasks.windowsHovered(model.WinIdList, containsMouse);
         }
     }
 

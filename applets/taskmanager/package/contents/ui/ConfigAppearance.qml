@@ -48,10 +48,16 @@ Item {
             Kirigami.FormData.label: i18n ("General:")
             text: i18n("Show tooltips")
         }
-
-       CheckBox {
-            id: highlightWindows
-            text: i18n("Highlight windows when hovering over tasks")
+        
+        RowLayout {
+            // HACK: Workaround for Kirigami bug 434625
+            // due to which a simple Layout.leftMargin on CheckBox doesn't work
+            Item { implicitWidth: Kirigami.Units.gridUnit }
+            CheckBox {
+                id: highlightWindows
+                text: i18n("Highlight windows when hovering over task tooltips")
+                enabled: showToolTips.checked
+            }
         }
 
         CheckBox {
