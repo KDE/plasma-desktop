@@ -18,6 +18,7 @@
  ***************************************************************************/
 
 import QtQuick 2.0
+import QtQuick.Window 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -242,6 +243,8 @@ MouseArea {
     }
 
     function showContextMenu(args) {
+        // Workaround for BUG 417939
+        toolTipArea.mainItem.Window.window.visible = false
         contextMenu = tasks.createContextMenu(task, modelIndex(), args);
         contextMenu.show();
     }
