@@ -54,8 +54,7 @@ target_link_libraries(kded_keyboard
     KF5::GuiAddons
     XCB::XCB
     XCB::XKB
-    ${X11_LIBRARIES}
-    ${X11_Xkbfile_LIB}
+    X11::xkbfile
  )
 
 if (HAVE_XINPUT)

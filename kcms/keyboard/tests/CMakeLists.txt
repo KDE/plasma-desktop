@@ -11,8 +11,8 @@ macro(KEYBOARD_DAEMON_UNIT_TESTS _testname)
                                      Qt::Test
                                      KF5::I18n
                                      KF5::WindowSystem
-                                     ${X11_Xkbfile_LIB}
-                                     ${X11_LIBRARIES}
+                                     X11::X11
+                                     X11::xkbfile
 )
 endmacro(KEYBOARD_DAEMON_UNIT_TESTS)
 
@@ -36,8 +36,7 @@ target_link_libraries(flags_test
                       KF5::WindowSystem
                       XCB::XCB
                       XCB::XKB
-                      ${X11_Xkbfile_LIB}
-                      ${X11_LIBRARIES}
+                      X11::xkbfile
 )
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config/base.1.1.xml ${CMAKE_CURRENT_BINARY_DIR}/config/base.1.1.xml COPYONLY)
@@ -67,12 +66,11 @@ if( X11_XTest_FOUND )
                          KF5::XmlGui
                          XCB::XCB
                          XCB::XKB
-                         ${X11_Xkbfile_LIB}
-                         ${X11_XTest_LIB}
-                         ${X11_LIBRARIES}
+                         X11::Xkb
+                         X11::xkbfile
 )
    if (HAVE_XINPUT)
-      target_link_libraries(keyboard_daemon_test ${X11_Xinput_LIB})
+      target_link_libraries(keyboard_daemon_test X11::Xi)
    endif()
 
    if (HAVE_UDEV)
