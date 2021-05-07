@@ -43,7 +43,7 @@ Kirigami.FormLayout {
 
         enabled: !kcm.screenReaderSettings.isImmutable("Enabled") && screenReaderInstalled
 
-        onClicked: kcm.screenReaderSettings.launchOrcaConfiguration()
+        onClicked: kcm.launchOrcaConfiguration()
     }
     QQC2.Label {
         text: kcm.orcaLaunchFeedback
