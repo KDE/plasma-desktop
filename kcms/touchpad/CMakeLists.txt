@@ -79,7 +79,7 @@ target_link_libraries(kded_touchpad
     Qt::QuickWidgets
 )
 
-add_subdirectory(applet)
+add_subdirectory(dataengine)
 
 install(FILES kcm/kcm_touchpad.desktop
         DESTINATION ${KDE_INSTALL_KSERVICES5DIR}
