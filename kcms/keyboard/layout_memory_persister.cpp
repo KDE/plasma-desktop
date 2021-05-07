@@ -19,9 +19,6 @@
 #include "layout_memory_persister.h"
 #include "debug.h"
 
-#include <KConfigGroup>
-#include <KSharedConfig>
-
 #include <QDir>
 #include <QFile>
 #include <QStandardPaths>
@@ -64,7 +61,7 @@ QString LayoutMemoryPersister::getLayoutMapAsString()
     root.setAttribute(SWITCH_MODE_ATTRIBUTE, KeyboardConfig::getSwitchingPolicyString(layoutMemory.keyboardConfig.switchingPolicy));
     doc.appendChild(root);
 
-    if (layoutMemory.keyboardConfig.switchingPolicy == KeyboardConfig::SWITCH_POLICY_GLOBAL) {
+    if (layoutMemory.keyboardConfig.switchingPolicy == KeyboardSettings::EnumSwitchMode::Global) {
         if (!globalLayout.isValid())
             return QLatin1String("");
 
@@ -150,7 +147,7 @@ bool LayoutMemoryPersister::saveToFile(const QFile &file_)
 class MapHandler : public QXmlDefaultHandler
 {
 public:
-    MapHandler(const KeyboardConfig::SwitchingPolicy &switchingPolicy_)
+    MapHandler(const KeyboardSettings::EnumSwitchMode::type switchingPolicy_)
         : verified(false)
         , switchingPolicy(switchingPolicy_)
     {
@@ -170,7 +167,7 @@ public:
             if (!verified)
                 return false;
 
-            if (switchingPolicy == KeyboardConfig::SWITCH_POLICY_GLOBAL) {
+            if (switchingPolicy == KeyboardSettings::EnumSwitchMode::Global) {
                 globalLayout = LayoutUnit(attributes.value(CURRENT_LAYOUT_ATTRIBUTE));
             } else {
                 QStringList layoutStrings = attributes.value(LAYOUTS_ATTRIBUTE).split(LIST_SEPARATOR_LM);
@@ -195,7 +192,7 @@ public:
     LayoutUnit globalLayout;
 
 private:
-    const KeyboardConfig::SwitchingPolicy &switchingPolicy;
+    const KeyboardSettings::EnumSwitchMode::type switchingPolicy;
 };
 
 template<typename T>
@@ -235,7 +232,7 @@ bool LayoutMemoryPersister::restoreFromFile(const QFile &file_)
         return false;
     }
 
-    if (layoutMemory.keyboardConfig.switchingPolicy == KeyboardConfig::SWITCH_POLICY_GLOBAL) {
+    if (layoutMemory.keyboardConfig.switchingPolicy == KeyboardSettings::EnumSwitchMode::Global) {
         if (mapHandler.globalLayout.isValid() && layoutMemory.keyboardConfig.layouts.contains(mapHandler.globalLayout)) {
             globalLayout = mapHandler.globalLayout;
             qCDebug(KCM_KEYBOARD) << "Restored global layout" << globalLayout.toString();
@@ -255,7 +252,7 @@ bool LayoutMemoryPersister::restoreFromFile(const QFile &file_)
 bool LayoutMemoryPersister::canPersist()
 {
     // we can't persist per window - as we're using window id which is not preserved between sessions
-    bool windowMode = layoutMemory.keyboardConfig.switchingPolicy == KeyboardConfig::SWITCH_POLICY_WINDOW;
+    bool windowMode = layoutMemory.keyboardConfig.switchingPolicy == KeyboardSettings::EnumSwitchMode::Window;
     if (windowMode) {
         qCDebug(KCM_KEYBOARD) << "Not saving session for window mode";
     }

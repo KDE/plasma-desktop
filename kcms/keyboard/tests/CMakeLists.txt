@@ -22,6 +22,7 @@ keyboard_daemon_unit_tests(iso_codes)
 add_executable(flags_test flags_test.cpp ../flags.cpp ../x11_helper.cpp ../keyboard_config.cpp ../xkb_rules.cpp ../debug.cpp ../layoutnames.cpp)
 ecm_mark_nongui_executable(flags_test)
 ecm_mark_as_test(flags_test)
+kconfig_add_kcfg_files(flags_test ../keyboardsettings.kcfgc GENERATE_MOC)
 add_test(NAME kcm-keyboard-flags_test COMMAND flags_test)
 target_link_libraries(flags_test
                       Qt::Concurrent
@@ -34,6 +35,7 @@ target_link_libraries(flags_test
                       KF5::I18n
                       KF5::Plasma
                       KF5::WindowSystem
+                      KF5::ConfigGui
                       XCB::XCB
                       XCB::XKB
                       ${X11_Xkbfile_LIB}
@@ -50,6 +52,7 @@ if( X11_XTest_FOUND )
    add_dependencies(keyboard_daemon_test kded_keyboard)
 
    kconfig_add_kcfg_files(keyboard_daemon_test ../keyboardhardware.kcfgc GENERATE_MOC)
+   kconfig_add_kcfg_files(keyboard_daemon_test ../keyboardsettings.kcfgc GENERATE_MOC)
 
    ecm_mark_nongui_executable(keyboard_daemon_test)
    ecm_mark_as_test(keyboard_daemon_test)

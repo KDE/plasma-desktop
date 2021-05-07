@@ -179,13 +179,13 @@ void KCMKeyboardWidget::uiChanged()
     keyboardConfig->resetOldXkbOptions = uiWidget->configureKeyboardOptionsChk->isChecked();
 
     if (uiWidget->switchByDesktopRadioBtn->isChecked()) {
-        keyboardConfig->switchingPolicy = KeyboardConfig::SWITCH_POLICY_DESKTOP;
+        keyboardConfig->switchingPolicy = KeyboardSettings::EnumSwitchMode::Desktop;
     } else if (uiWidget->switchByApplicationRadioBtn->isChecked()) {
-        keyboardConfig->switchingPolicy = KeyboardConfig::SWITCH_POLICY_APPLICATION;
+        keyboardConfig->switchingPolicy = KeyboardSettings::EnumSwitchMode::WinClass;
     } else if (uiWidget->switchByWindowRadioBtn->isChecked()) {
-        keyboardConfig->switchingPolicy = KeyboardConfig::SWITCH_POLICY_WINDOW;
+        keyboardConfig->switchingPolicy = KeyboardSettings::EnumSwitchMode::Window;
     } else {
-        keyboardConfig->switchingPolicy = KeyboardConfig::SWITCH_POLICY_GLOBAL;
+        keyboardConfig->switchingPolicy = KeyboardSettings::EnumSwitchMode::Global;
     }
 
     updateXkbShortcutsButtons();

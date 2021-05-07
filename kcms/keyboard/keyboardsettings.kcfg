@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="kxkbrc" />
+  <group name="Layout">
+    <entry name="Model" type="String">
+      <label>Keyboard Model</label>
+      <default>pc104</default>
+    </entry>
+    <entry name="ResetOldOptions" type="Bool">
+      <label>Reset old options</label>
+      <default>false</default>
+    </entry>
+    <entry name="Use" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="Options" type="StringList">
+      <label>List of XKB options</label>
+      <default></default>
+    </entry>
+    <entry name="LayoutList" type="StringList">
+      <label>Keyboard layouts</label>
+    </entry>
+    <entry name="DisplayNames" type="StringList">
+      <label>Layout display names</label>
+    </entry>
+    <entry name="VariantList" type="StringList">
+      <label>Layout variants</label>
+    </entry>
+    <entry name="LayoutLoopCount" type="Int">
+      <default>-1</default>
+    </entry>
+    <entry name="ShowLayoutIndicator" type="Bool">
+      <label>Show Keyboard Layout indicator</label>
+      <default>true</default>
+    </entry>
+    <entry name="ShowFlag" type="Bool">
+      <label>Show Keyboard Layout Flag</label>
+      <default>false</default>
+    </entry>
+    <entry name="ShowLabel" type="Bool">
+      <label>Show Keyboard Layout Label</label>
+      <default>true</default>
+    </entry>
+    <entry name="ShowSingle" type="Bool">
+      <label>Show Keyboard Layout indicator for single layout</label>
+      <default>false</default>
+    </entry>
+    <entry name="SwitchMode" type="Enum">
+      <choices>
+       <choice name="Global" />
+       <choice name="Desktop" />
+       <choice name="WinClass" />
+       <choice name="Window" />
+      </choices>
+      <default>Global</default>
+    </entry>
+  </group>
+</kcfg>

@@ -27,6 +27,8 @@
 #include <QString>
 #include <QStringList>
 
+#include "keyboardsettings.h"
+
 /**
  * This class provides configuration options for keyboard module
  */
@@ -60,7 +62,7 @@ public:
     int layoutLoopCount;
 
     // switch control options
-    SwitchingPolicy switchingPolicy;
+    KeyboardSettings::EnumSwitchMode::type switchingPolicy;
     //	bool stickySwitching;
     //	int stickySwitchingDepth;
 
@@ -86,7 +88,7 @@ public:
     void load();
     void save();
 
-    static QString getSwitchingPolicyString(SwitchingPolicy switchingPolicy);
+    static QString getSwitchingPolicyString(KeyboardSettings::EnumSwitchMode::type switchingPolicy);
 };
 
 #endif /* KEYBOARD_CONFIG_H_ */

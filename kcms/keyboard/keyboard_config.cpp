@@ -19,16 +19,7 @@
 #include "keyboard_config.h"
 #include "debug.h"
 
-#include <KConfigGroup>
-#include <KSharedConfig>
-
 static const char *const SWITCHING_POLICIES[] = {"Global", "Desktop", "WinClass", "Window", nullptr};
-static const char LIST_SEPARATOR[] = ",";
-// static const char* DEFAULT_LAYOUT = "us";
-static const char DEFAULT_MODEL[] = "pc104";
-
-static const QString CONFIG_FILENAME(QStringLiteral("kxkbrc"));
-static const QString CONFIG_GROUPNAME(QStringLiteral("Layout"));
 
 const int KeyboardConfig::NO_LOOPING = -1;
 
@@ -37,42 +28,34 @@ KeyboardConfig::KeyboardConfig()
     setDefaults();
 }
 
-QString KeyboardConfig::getSwitchingPolicyString(SwitchingPolicy switchingPolicy)
+QString KeyboardConfig::getSwitchingPolicyString(KeyboardSettings::EnumSwitchMode::type switchingPolicy)
 {
     return SWITCHING_POLICIES[switchingPolicy];
 }
 
-static int findStringIndex(const char *const strings[], const QString &toFind, int defaultIndex)
-{
-    for (int i = 0; strings[i] != nullptr; i++) {
-        if (toFind == strings[i]) {
-            return i;
-        }
-    }
-    return defaultIndex;
-}
-
 void KeyboardConfig::setDefaults()
 {
-    keyboardModel = DEFAULT_MODEL;
-    resetOldXkbOptions = false;
+    KeyboardSettings config;
+
+    keyboardModel = config.defaultModelValue();
+    resetOldXkbOptions = config.defaultResetOldOptionsValue();
     xkbOptions.clear();
 
     // init layouts options
-    configureLayouts = false;
+    configureLayouts = config.defaultUseValue();
     layouts.clear();
     //	layouts.append(LayoutUnit(DEFAULT_LAYOUT));
-    layoutLoopCount = NO_LOOPING;
+    layoutLoopCount = config.defaultLayoutLoopCountValue();
 
     // switch control options
-    switchingPolicy = SWITCH_POLICY_GLOBAL;
+    switchingPolicy = config.defaultSwitchModeValue();
     //	stickySwitching = false;
     //	stickySwitchingDepth = 2;
 
     // display options
-    showIndicator = true;
+    showIndicator = config.defaultShowLayoutIndicatorValue();
     indicatorType = SHOW_LABEL;
-    showSingle = false;
+    showSingle = config.defaultShowSingleValue();
 }
 
 static KeyboardConfig::IndicatorType getIndicatorType(bool showFlag, bool showLabel)
@@ -89,17 +72,16 @@ static KeyboardConfig::IndicatorType getIndicatorType(bool showFlag, bool showLa
 
 void KeyboardConfig::load()
 {
-    KConfigGroup config(KSharedConfig::openConfig(CONFIG_FILENAME, KConfig::NoGlobals), CONFIG_GROUPNAME);
+    KeyboardSettings config;
 
-    keyboardModel = config.readEntry("Model", "");
+    keyboardModel = config.model();
 
-    resetOldXkbOptions = config.readEntry("ResetOldOptions", false);
-    QString options = config.readEntry("Options", "");
-    xkbOptions = options.split(LIST_SEPARATOR, Qt::SkipEmptyParts);
+    resetOldXkbOptions = config.resetOldOptions();
+    xkbOptions = config.options();
 
-    configureLayouts = config.readEntry("Use", false);
-    const QStringList layoutStrings = config.readEntry("LayoutList", QStringList());
-    const QStringList variants = config.readEntry("VariantList", QStringList());
+    configureLayouts = config.use();
+    const QStringList layoutStrings = config.layoutList();
+    const QStringList variants = config.variantList();
     layouts.clear();
     if (layoutStrings.isEmpty()) {
         QList<LayoutUnit> x11layouts = X11Helper::getLayoutsList();
@@ -118,21 +100,20 @@ void KeyboardConfig::load()
     }
     configureLayouts = !layouts.isEmpty();
 
-    layoutLoopCount = config.readEntry("LayoutLoopCount", NO_LOOPING);
+    layoutLoopCount = config.layoutLoopCount();
 
-    QString layoutMode = config.readEntry("SwitchMode", "Global");
-    switchingPolicy = static_cast<SwitchingPolicy>(findStringIndex(SWITCHING_POLICIES, layoutMode, SWITCH_POLICY_GLOBAL));
+    auto layoutMode = config.switchMode();
+    switchingPolicy = layoutMode;
 
-    showIndicator = config.readEntry("ShowLayoutIndicator", true);
+    showIndicator = config.showLayoutIndicator();
 
-    bool showFlag = config.readEntry("ShowFlag", false);
-    bool showLabel = config.readEntry("ShowLabel", true);
+    bool showFlag = config.showFlag();
+    bool showLabel = config.showLabel();
     indicatorType = getIndicatorType(showFlag, showLabel);
 
-    showSingle = config.readEntry("ShowSingle", false);
+    showSingle = config.showSingle();
 
-    QString labelsStr = config.readEntry("DisplayNames", "");
-    QStringList labels = labelsStr.split(LIST_SEPARATOR, Qt::KeepEmptyParts);
+    QStringList labels = config.displayNames();
     for (int i = 0; i < labels.count() && i < layouts.count(); i++) {
         if (!labels[i].isEmpty() && labels[i] != layouts[i].layout()) {
             layouts[i].setDisplayName(labels[i]);
@@ -152,18 +133,17 @@ void KeyboardConfig::load()
 
 void KeyboardConfig::save()
 {
-    KConfigGroup config(KSharedConfig::openConfig(CONFIG_FILENAME, KConfig::NoGlobals), CONFIG_GROUPNAME);
+    KeyboardSettings config;
 
-    config.writeEntry("Model", keyboardModel);
-
-    config.writeEntry("ResetOldOptions", resetOldXkbOptions);
+    config.setModel(keyboardModel);
+    config.setResetOldOptions(resetOldXkbOptions);
     if (resetOldXkbOptions) {
-        config.writeEntry("Options", xkbOptions.join(LIST_SEPARATOR));
+        config.setOptions(xkbOptions);
     } else {
-        config.deleteEntry("Options");
+        config.setOptions({});
     }
 
-    config.writeEntry("Use", configureLayouts);
+    config.setUse(configureLayouts);
 
     QStringList layoutStrings;
     QStringList variants;
@@ -176,30 +156,17 @@ void KeyboardConfig::save()
         //    	shortcuts.append(layoutUnit.getShortcut().toString());
     }
 
-    auto cleanTail = [](QStringList &list) {
-        // we need trailing comma in case of multiple layouts but only one variant,
-        // see https://github.com/xkbcommon/libxkbcommon/issues/208
-        while (list.size() > 2 && list.constLast().isEmpty()) {
-            list.removeLast();
-        }
-    };
-    cleanTail(variants);
-    cleanTail(displayNames);
+    config.setLayoutList(layoutStrings);
+    config.setVariantList(variants);
+    config.setDisplayNames(displayNames);
+    config.setLayoutLoopCount(layoutLoopCount);
+    config.setSwitchMode(switchingPolicy);
+    config.setShowLayoutIndicator(showIndicator);
+    config.setShowFlag(indicatorType == SHOW_FLAG || indicatorType == SHOW_LABEL_ON_FLAG);
+    config.setShowLabel(indicatorType == SHOW_LABEL || indicatorType == SHOW_LABEL_ON_FLAG);
+    config.setShowSingle(showSingle);
 
-    config.writeEntry("LayoutList", layoutStrings.join(LIST_SEPARATOR));
-    config.writeEntry("VariantList", variants.join(LIST_SEPARATOR));
-    config.writeEntry("DisplayNames", displayNames.join(LIST_SEPARATOR));
-
-    config.writeEntry("LayoutLoopCount", layoutLoopCount);
-
-    config.writeEntry("SwitchMode", SWITCHING_POLICIES[switchingPolicy]);
-
-    config.writeEntry("ShowLayoutIndicator", showIndicator);
-    config.writeEntry("ShowFlag", indicatorType == SHOW_FLAG || indicatorType == SHOW_LABEL_ON_FLAG);
-    config.writeEntry("ShowLabel", indicatorType == SHOW_LABEL || indicatorType == SHOW_LABEL_ON_FLAG);
-    config.writeEntry("ShowSingle", showSingle);
-
-    config.sync();
+    config.save();
 }
 
 QList<LayoutUnit> KeyboardConfig::getDefaultLayouts() const
