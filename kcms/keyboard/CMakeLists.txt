@@ -13,23 +13,47 @@ else()
     message(STATUS "X11 XInput and UDev is not found, either is required to keep layouts with keyboard hotplugging")
 endif()
 
+add_library(keyboard STATIC
+    keyboard_config.cpp
+    x11_helper.cpp
+    xkb_helper.cpp
+    xkb_rules.cpp
+    flags.cpp
+    bindings.cpp
+    iso_codes.cpp
+    layoutnames.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/debug.cpp
+)
+
+target_link_libraries(keyboard
+    PUBLIC
+    Qt::Core
+    Qt::Gui
+    Qt::Widgets
+    Qt::Xml
+    Qt::X11Extras
+    PRIVATE
+    Qt::Concurrent
+    KF5::I18n
+    KF5::GuiAddons
+    KF5::Plasma
+    KF5::WindowSystem
+    KF5::XmlGui
+    KF5::GlobalAccel
+    XCB::XCB
+    XCB::XKB
+    X11::xkbfile
+)
+
 ### kded daemon ###
 
 set( kded_keyboard_SRCS
-    ${CMAKE_CURRENT_BINARY_DIR}/debug.cpp
     keyboard_daemon.cpp
     layout_memory.cpp
     layout_memory_persister.cpp
     udev_helper.cpp
-    x11_helper.cpp
     xinput_helper.cpp
-    xkb_helper.cpp
-    keyboard_config.cpp
     keyboard_hardware.cpp
-    bindings.cpp
-    flags.cpp
-    xkb_rules.cpp
-    layoutnames.cpp
 )
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
@@ -38,23 +62,14 @@ set_target_properties(kded_keyboard PROPERTIES OUTPUT_NAME keyboard)
 kcoreaddons_desktop_to_json(kded_keyboard keyboard.desktop SERVICE_TYPES kdedmodule.desktop)
 
 target_link_libraries(kded_keyboard
-    Qt::Concurrent
-    Qt::Widgets
-    Qt::X11Extras
-    Qt::Xml
     KF5::ConfigCore
-    KF5::CoreAddons
     KF5::DBusAddons
-    KF5::GlobalAccel
     KF5::I18n
     KF5::Notifications
     KF5::WindowSystem
-    KF5::Plasma
     KF5::XmlGui
     KF5::GuiAddons
-    XCB::XCB
-    XCB::XKB
-    X11::xkbfile
+    keyboard
  )
 
 if (HAVE_XINPUT)
@@ -74,14 +89,7 @@ set(kcm_keyboard_PART_SRCS
   kcm_keyboard_widget.cpp
   kcm_view_models.cpp
   kcm_add_layout_dialog.cpp
-  keyboard_config.cpp
-  x11_helper.cpp
-  xkb_helper.cpp
-  xkb_rules.cpp
-  flags.cpp
-  iso_codes.cpp
   kcmmisc.cpp
-  bindings.cpp
   tastenbrett.cpp)
 
 install(FILES kcminputrc_repeat.upd
@@ -112,21 +120,12 @@ ki18n_wrap_ui(kcm_keyboard_PART_SRCS kcm_keyboard.ui kcm_add_layout_dialog.ui kc
 add_library(kcm_keyboard MODULE ${kcm_keyboard_PART_SRCS})
 
 target_link_libraries(kcm_keyboard
-    Qt::Concurrent
-    Qt::Widgets
-    Qt::X11Extras
-    Qt::Xml
     KF5::KCMUtils
     KF5::GlobalAccel
     KF5::I18n
     KF5::WindowSystem
-    KF5::Plasma
     KF5::XmlGui
-    KF5::GuiAddons
-    XCB::XCB
-    XCB::XKB
-    X11::X11
-    X11::xkbfile
+    keyboard
 )
 
 install(TARGETS kcm_keyboard DESTINATION ${KDE_INSTALL_PLUGINDIR} )
