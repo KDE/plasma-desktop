@@ -34,10 +34,9 @@
 #include <QWhatsThis>
 #include <QX11Info>
 
-#include <KConfig>
-#include <KConfigGroup>
 #include <KLocalizedString>
-#include <KSharedConfig>
+
+#include "keyboardhardware.h"
 
 #include <X11/Xlib.h>
 #include <cmath>
@@ -104,10 +103,10 @@ KCMiscKeyboardWidget::~KCMiscKeyboardWidget()
 }
 
 // set the slider and LCD values
-void KCMiscKeyboardWidget::setRepeat(KeyBehaviour keyboardRepeat, int delay_, double rate_)
+void KCMiscKeyboardWidget::setRepeat(KeyboardHardwareConfig::EnumKeyRepeat::type keyboardRepeat, int delay_, double rate_)
 {
-    if (keyboardRepeat == KeyBehaviour::AccentMenu && !hasAccentSupport()) {
-        keyboardRepeat = KeyBehaviour::RepeatKey;
+    if (keyboardRepeat == KeyboardHardwareConfig::EnumKeyRepeat::AccentMenu && !hasAccentSupport()) {
+        keyboardRepeat = KeyboardHardwareConfig::EnumKeyRepeat::RepeatKey;
     }
     _keyboardRepeatButtonGroup->button(keyboardRepeat)->click();
     ui.delay->setValue(delay_);
@@ -116,43 +115,21 @@ void KCMiscKeyboardWidget::setRepeat(KeyBehaviour keyboardRepeat, int delay_, do
     rateSpinboxChanged(rate_);
 }
 
-TriState TriStateHelper::getTriState(const QButtonGroup *group)
-{
-    int selected = group->checkedId();
-    return selected < 0 ? STATE_UNCHANGED : getTriState(selected);
-}
-
-void TriStateHelper::setTriState(QButtonGroup *group, TriState state)
-{
-    group->button(getInt(state))->click();
-}
 
 void KCMiscKeyboardWidget::load()
 {
-    KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kcminputrc"), KConfig::NoGlobals), "Keyboard");
-
     ui.delay->blockSignals(true);
     ui.rate->blockSignals(true);
 
-    // need to read as string to support old "true/false" parameter
-    QString key = config.readEntry("KeyRepeat", TriStateHelper::getString(STATE_ON));
-    if (key == QLatin1String("true") || key == TriStateHelper::getString(STATE_ON) || key == QLatin1String("accent")) {
-        keyboardRepeat = KeyBehaviour::AccentMenu;
-    } else if (key == QLatin1String("false") || key == TriStateHelper::getString(STATE_OFF) || key == QLatin1String("nothing")) {
-        keyboardRepeat = KeyBehaviour::DoNothing;
-    } else if (key == QLatin1String("repeat")) {
-        keyboardRepeat = KeyBehaviour::RepeatKey;
-    }
+    KeyboardHardwareConfig config;
 
-    //  keyboardRepeat = (key ? AutoRepeatModeOn : AutoRepeatModeOff);
-    int delay = config.readEntry("RepeatDelay", DEFAULT_REPEAT_DELAY);
-    double rate = config.readEntry("RepeatRate", DEFAULT_REPEAT_RATE);
-    setRepeat(keyboardRepeat, delay, rate);
+    int delay = config.repeatDelay();
+    double rate = config.repeatRate();
+    setRepeat(config.keyRepeat(), delay, rate);
 
     //  setRepeat(kbd.global_auto_repeat, ui.delay->value(), ui.rate->value());
 
-    numlockState = TriStateHelper::getTriState(config.readEntry("NumLock", TriStateHelper::getInt(STATE_UNCHANGED)));
-    TriStateHelper::setTriState(_numlockButtonGroup, numlockState);
+    _numlockButtonGroup->button(config.numLock())->click();
 
     ui.delay->blockSignals(false);
     ui.rate->blockSignals(false);
@@ -160,22 +137,22 @@ void KCMiscKeyboardWidget::load()
 
 void KCMiscKeyboardWidget::save()
 {
-    KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kcminputrc"), KConfig::NoGlobals), "Keyboard");
+    KeyboardHardwareConfig config;
 
-    keyboardRepeat = KeyBehaviour(_keyboardRepeatButtonGroup->checkedId());
-    numlockState = TriStateHelper::getTriState(_numlockButtonGroup);
+    config.setKeyRepeat(static_cast<KeyboardHardwareConfig::EnumKeyRepeat::type>(_keyboardRepeatButtonGroup->checkedId()));
+    config.setRepeatRate(ui.rate->value());
+    config.setRepeatDelay(ui.delay->value());
+    config.setNumLock(static_cast<KeyboardHardwareConfig::EnumNumLock::type>(_numlockButtonGroup->checkedId()));
 
-    config.writeEntry("KeyRepeat", keybehaviourNames[KeyBehaviour(_keyboardRepeatButtonGroup->checkedId())], KConfig::Notify);
-    config.writeEntry("RepeatRate", ui.rate->value(), KConfig::Notify);
-    config.writeEntry("RepeatDelay", ui.delay->value(), KConfig::Notify);
-    config.writeEntry("NumLock", TriStateHelper::getInt(numlockState));
-    config.sync();
+    config.save();
 }
 
 void KCMiscKeyboardWidget::defaults()
 {
-    setRepeat(KeyBehaviour::AccentMenu, DEFAULT_REPEAT_DELAY, DEFAULT_REPEAT_RATE);
-    TriStateHelper::setTriState(_numlockButtonGroup, STATE_UNCHANGED);
+    KeyboardHardwareConfig config;
+
+    setRepeat(config.defaultKeyRepeatValue(), config.defaultRepeatDelayValue(), config.defaultRepeatRateValue());
+    _numlockButtonGroup->button(config.defaultNumLockValue())->click();
     emit changed(true);
 }
 
@@ -232,6 +209,6 @@ void KCMiscKeyboardWidget::changed()
 
 void KCMiscKeyboardWidget::keyboardRepeatStateChanged(int selection)
 {
-    ui.keyboardRepeatParamsGroupBox->setVisible(selection == KeyBehaviour::RepeatKey);
+    ui.keyboardRepeatParamsGroupBox->setVisible(selection == KeyboardHardwareConfig::EnumKeyRepeat::RepeatKey);
     changed();
 }

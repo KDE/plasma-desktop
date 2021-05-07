@@ -16,9 +16,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <KConfigGroup>
 #include <KModifierKeyInfo>
-#include <KSharedConfig>
 
 #include <QDebug>
 #include <QX11Info>
@@ -28,6 +26,8 @@
 #include "debug.h"
 #include "kcmmisc.h"
 #include "x11_helper.h"
+
+#include "keyboardhardware.h"
 
 #include <X11/XKBlib.h>
 #include <X11/Xlib.h>
@@ -70,25 +70,23 @@ static int set_repeat_mode(bool enabled)
 
 void init_keyboard_hardware()
 {
-    auto inputConfig = KSharedConfig::openConfig(QStringLiteral("kcminputrc"));
-    inputConfig->reparseConfiguration();
-    KConfigGroup config(inputConfig, "Keyboard");
+    KeyboardHardwareConfig config;
 
-    QString keyRepeatStr = config.readEntry("KeyRepeat", "accent");
+    KeyboardHardwareConfig::EnumKeyRepeat::type keyRepeat = config.keyRepeat();
 
-    if (keyRepeatStr == QLatin1String("accent") || keyRepeatStr == QLatin1String("repeat")) {
-        int delay_ = config.readEntry("RepeatDelay", DEFAULT_REPEAT_DELAY);
-        double rate_ = config.readEntry("RepeatRate", DEFAULT_REPEAT_RATE);
+    if (keyRepeat == KeyboardHardwareConfig::EnumKeyRepeat::AccentMenu || keyRepeat == KeyboardHardwareConfig::EnumKeyRepeat::RepeatKey) {
+        int delay_ = config.repeatDelay();
+        double rate_ = config.repeatRate();
         set_repeatrate(delay_, rate_);
         set_repeat_mode(true);
     } else {
         set_repeat_mode(false);
     }
 
-    TriState numlockState = TriStateHelper::getTriState(config.readEntry("NumLock", TriStateHelper::getInt(STATE_UNCHANGED)));
-    if (numlockState != STATE_UNCHANGED) {
+    KeyboardHardwareConfig::EnumNumLock::type numlockState = config.numLock();
+    if (numlockState != KeyboardHardwareConfig::EnumNumLock::Unchanged) {
         KModifierKeyInfo keyInfo;
-        keyInfo.setKeyLocked(Qt::Key_NumLock, numlockState == STATE_ON);
+        keyInfo.setKeyLocked(Qt::Key_NumLock, numlockState == KeyboardHardwareConfig::EnumNumLock::On);
     }
     XFlush(QX11Info::display());
 }

@@ -40,6 +40,8 @@ add_library(kded_keyboard MODULE ${kded_keyboard_SRCS})
 set_target_properties(kded_keyboard PROPERTIES OUTPUT_NAME keyboard)
 kcoreaddons_desktop_to_json(kded_keyboard keyboard.desktop SERVICE_TYPES kdedmodule.desktop)
 
+kconfig_add_kcfg_files(kded_keyboard keyboardhardware.kcfgc GENERATE_MOC)
+
 target_link_libraries(kded_keyboard
     Qt::Concurrent
     Qt::Widgets
@@ -114,6 +116,8 @@ kconfig_add_kcfg_files(kcm_keyboard_PART_SRCS workspace_options.kcfgc)
 ki18n_wrap_ui(kcm_keyboard_PART_SRCS kcm_keyboard.ui kcm_add_layout_dialog.ui kcmmiscwidget.ui)
 
 add_library(kcm_keyboard MODULE ${kcm_keyboard_PART_SRCS})
+
+kconfig_add_kcfg_files(kcm_keyboard keyboardhardware.kcfgc GENERATE_MOC)
 
 target_link_libraries(kcm_keyboard
     Qt::Concurrent
