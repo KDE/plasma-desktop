@@ -123,7 +123,6 @@ Item {
 
         ComboBox {
             id: sortingStrategy
-            visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
             Kirigami.FormData.label: i18n("Sort:")
             Layout.fillWidth: true
             Layout.minimumWidth: Kirigami.Units.gridUnit * 14

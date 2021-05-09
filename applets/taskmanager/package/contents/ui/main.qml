@@ -130,9 +130,8 @@ MouseArea {
         filterByActivity: plasmoid.configuration.showOnlyCurrentActivity
         filterNotMinimized: plasmoid.configuration.showOnlyMinimized
 
-        sortMode: iconsOnly ? TaskManager.TasksModel.SortManual
-            : sortModeEnumValue(plasmoid.configuration.sortingStrategy)
-        launchInPlace: iconsOnly
+        sortMode: sortModeEnumValue(plasmoid.configuration.sortingStrategy)
+        launchInPlace: iconsOnly && plasmoid.configuration.sortingStrategy === 1
         separateLaunchers: {
             if (!iconsOnly && !plasmoid.configuration.separateLaunchers
                 && plasmoid.configuration.sortingStrategy === 1) {
