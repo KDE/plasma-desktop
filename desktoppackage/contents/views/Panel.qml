@@ -74,6 +74,7 @@ Item {
             filterByActivity: true
             filterNotMaximized: true
             filterByScreen: true
+            filterHidden: true
 
             screenGeometry: panel.screenGeometry
             virtualDesktop: virtualDesktopInfo.currentDesktop
