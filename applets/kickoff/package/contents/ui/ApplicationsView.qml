@@ -22,6 +22,7 @@
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 FocusScope {
     id: appViewContainer
@@ -345,9 +346,11 @@ FocusScope {
         }
     }
 
-    PlasmaComponents3.Label {
+    PlasmaExtras.PlaceholderMessage {
         id: updatedLabel
-        text: i18n("Applications updated.")
+        width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
+        text: i18n("Updating applications...")
+        iconName: "view-refresh"
         opacity: 0
         visible: opacity != 0
         anchors.centerIn: parent
