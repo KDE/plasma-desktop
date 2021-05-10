@@ -119,7 +119,7 @@ FocusScope {
         onRunningChanged: {
             if (running) {
                 updatedLabel.opacity = 1;
-                applicationsView.listView.opacity = 0.3;
+                applicationsView.listView.opacity = 0;
             }
         }
         onTriggered: {

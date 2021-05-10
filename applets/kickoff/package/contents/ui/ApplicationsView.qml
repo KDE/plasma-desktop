@@ -333,8 +333,8 @@ FocusScope {
         onRunningChanged: {
             if (running) {
                 updatedLabel.opacity = 1;
-                crumbContainer.opacity = 0.3;
-                applicationsView.listView.opacity = 0.3;
+                crumbContainer.opacity = 0;
+                applicationsView.listView.opacity = 0;
             }
         }
         onTriggered: {
