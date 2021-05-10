@@ -52,7 +52,7 @@ Item {
         var clients = []
         for (var i = 0 ; i < tasksModel.count; i++) {
             var idx = tasksModel.makeModelIndex(i);
-            if (!tasksModel.data(idx, TaskManager.AbstractTasksModel.IsMinimized)) {
+            if (!tasksModel.data(idx, TaskManager.AbstractTasksModel.IsHidden)) {
                 tasksModel.requestToggleMinimized(idx);
                 clients.push(tasksModel.makePersistentModelIndex(i));
             }
@@ -70,7 +70,7 @@ Item {
                 continue;
             }
             //if the user has restored it already, do nothing
-            if (!tasksModel.data(idx, TaskManager.AbstractTasksModel.IsMinimized)) {
+            if (!tasksModel.data(idx, TaskManager.AbstractTasksModel.IsHidden)) {
                 continue;
             }
             tasksModel.requestToggleMinimized(idx);
