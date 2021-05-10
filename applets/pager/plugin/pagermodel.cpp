@@ -33,6 +33,7 @@ Free Software Foundation, Inc.,
 #include <QDBusPendingCall>
 #include <QGuiApplication>
 #include <QMetaEnum>
+#include <QUuid>
 #include <QScreen>
 
 #include <KWindowSystem>
@@ -613,14 +614,14 @@ void PagerModel::drop(QMimeData *mimeData, int modifiers, const QVariant &itemId
     if (KWindowSystem::isPlatformWayland()) {
         bool ok;
 
-        const QList<quint32> &ids = TaskManager::WaylandTasksModel::winIdsFromMimeData(mimeData, &ok);
+        const QList<QUuid> &ids = TaskManager::WaylandTasksModel::winIdsFromMimeData(mimeData, &ok);
 
         if (!ok) {
             return;
         }
 
         if (d->pagerType == VirtualDesktops) {
-            for (const quint32 &id : ids) {
+            for (const QUuid &id : ids) {
                 QAbstractItemModel *model = d->windowModels.at(0)->sourceModel();
                 TaskManager::WindowTasksModel *tasksModel = static_cast<TaskManager::WindowTasksModel *>(model);
 
@@ -632,8 +633,7 @@ void PagerModel::drop(QMimeData *mimeData, int modifiers, const QVariant &itemId
                     }
 
                     const QVariantList &winIds = idx.data(TaskManager::AbstractTasksModel::WinIdList).toList();
-
-                    if (!winIds.isEmpty() && winIds.at(0).toUInt() == id) {
+                    if (!winIds.isEmpty() && winIds.at(0).value<QUuid>() == id) {
                         tasksModel->requestVirtualDesktops(idx, QVariantList() << itemId.toString());
                         break;
                     }
