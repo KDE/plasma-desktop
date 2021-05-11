@@ -450,7 +450,7 @@ void PagerModel::refresh()
     emit countChanged();
 }
 
-void PagerModel::moveWindow(int window,
+void PagerModel::moveWindow(const QVariant &window,
                             double x,
                             double y,
                             const QVariant &targetItemId,
@@ -460,7 +460,7 @@ void PagerModel::moveWindow(int window,
 {
 #if HAVE_X11
     if (KWindowSystem::isPlatformX11()) {
-        const WId windowId = (WId)window;
+        const WId windowId = window.toUInt();
 
         QPointF dest(x / widthScaleFactor, y / heightScaleFactor);
 
@@ -528,8 +528,7 @@ void PagerModel::moveWindow(int window,
                 }
 
                 const QVariantList &winIds = idx.data(TaskManager::AbstractTasksModel::WinIdList).toList();
-
-                if (!winIds.isEmpty() && winIds.at(0).toInt() == window) {
+                if (!winIds.isEmpty() && winIds.at(0) == window) {
                     tasksModel->requestVirtualDesktops(idx, QVariantList() << targetItemId.toString());
                     break;
                 }

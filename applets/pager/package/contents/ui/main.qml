@@ -425,7 +425,7 @@ MouseArea {
                             z: 1 + model.StackingOrder
 
                             property rect geometry: model.Geometry
-                            property int windowId: model.WinIdList[0]
+                            property var windowId: model.WinIdList[0]
                             property string visibleName: model.display
                             property bool minimized: (model.IsMinimized === true)
                             onMinimizedChanged: desktop.updateSubText()
