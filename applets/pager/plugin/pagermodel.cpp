@@ -450,7 +450,7 @@ void PagerModel::refresh()
     Q_EMIT countChanged();
 }
 
-void PagerModel::moveWindow(const QVariant &window,
+void PagerModel::moveWindow(const QModelIndex &index,
                             double x,
                             double y,
                             const QVariant &targetItemId,
@@ -458,10 +458,32 @@ void PagerModel::moveWindow(const QVariant &window,
                             qreal widthScaleFactor,
                             qreal heightScaleFactor)
 {
-#if HAVE_X11
-    if (KWindowSystem::isPlatformX11()) {
-        const WId windowId = window.toUInt();
+    const auto taskModelIndex = static_cast<const WindowModel *>(index.model())->mapToSource(index);
+    const bool isOnAllDesktops = index.data(TaskManager::AbstractTasksModel::IsOnAllVirtualDesktops).toBool();
 
+    if (d->pagerType == VirtualDesktops) {
+        if (!isOnAllDesktops) {
+            d->tasksModel->requestVirtualDesktops(taskModelIndex, {targetItemId});
+        }
+    } else {
+        const QStringList &runningActivities = d->activityInfo->runningActivities();
+        const QString &newActivity = targetItemId.toString();
+        if (runningActivities.contains(newActivity)) {
+            QStringList activities = index.data(TaskManager::AbstractTasksModel::Activities).toStringList();
+            if (!activities.contains(newActivity)) {
+                activities.removeOne(sourceItemId.toString());
+                activities.append(newActivity);
+                d->tasksModel->requestActivities(taskModelIndex, activities);
+            }
+        }
+    }
+#if HAVE_X11
+    if (KWindowSystem::isPlatformX11() && !index.data(TaskManager::AbstractTasksModel::IsFullScreen).toBool()
+        && (targetItemId == sourceItemId || isOnAllDesktops)) {
+        const auto winIds = index.data(TaskManager::AbstractTasksModel::WinIdList).toList();
+        if (winIds.isEmpty()) {
+            return;
+        }
         QPointF dest(x / widthScaleFactor, y / heightScaleFactor);
 
         // Don't move windows to negative positions.
@@ -470,73 +492,10 @@ void PagerModel::moveWindow(const QVariant &window,
         // Use _NET_MOVERESIZE_WINDOW rather than plain move, so that the WM knows this is a pager request.
         NETRootInfo info(QX11Info::connection(), NET::Properties());
         const int flags = (0x20 << 12) | (0x03 << 8) | 1; // From tool, x/y, northwest gravity.
-
-        if (!KWindowSystem::mapViewport()) {
-            KWindowInfo windowInfo(windowId, NET::WMDesktop | NET::WMState, NET::WM2Activities);
-
-            if (d->pagerType == VirtualDesktops) {
-                if (!windowInfo.onAllDesktops()) {
-                    KWindowSystem::setOnDesktop(windowId, targetItemId.toInt());
-                }
-            } else {
-                const QStringList &runningActivities = d->activityInfo->runningActivities();
-
-                if (targetItemId.toInt() < runningActivities.length()) {
-                    const QString &newActivity = targetItemId.toString();
-                    QStringList activities = windowInfo.activities();
-
-                    if (!activities.contains(newActivity)) {
-                        activities.removeOne(sourceItemId.toString());
-                        activities.append(newActivity);
-                        KWindowSystem::setOnActivities(windowId, activities);
-                    }
-                }
-            }
-
-            // Only move the window if it is not full screen and if it is kept within the same desktop.
-            // Moving when dropping between desktop is too annoying due to the small drop area.
-            if (!(windowInfo.state() & NET::FullScreen) && (targetItemId == sourceItemId || windowInfo.onAllDesktops())) {
-                const QPoint &d = dest.toPoint();
-                info.moveResizeWindowRequest(windowId, flags, d.x(), d.y(), 0, 0);
-            }
-        } else {
-            // setOnDesktop() with viewports is also moving a window, and since it takes a moment
-            // for the WM to do the move, there's a race condition with figuring out how much to move,
-            // so do it only as one move.
-            dest += KWindowSystem::desktopToViewport(targetItemId.toInt(), false);
-            const QPoint &d = KWindowSystem::constrainViewportRelativePosition(dest.toPoint());
-            info.moveResizeWindowRequest(windowId, flags, d.x(), d.y(), 0, 0);
-        }
+        const QPoint &d = dest.toPoint();
+        info.moveResizeWindowRequest(winIds[0].toUInt(), flags, d.x(), d.y(), 0, 0);
     }
-#else
-    Q_UNUSED(window)
-    Q_UNUSED(x)
-    Q_UNUSED(y)
-    Q_UNUSED(sourceItemId)
 #endif
-
-    if (KWindowSystem::isPlatformWayland()) {
-        if (d->pagerType == VirtualDesktops) {
-            QAbstractItemModel *model = d->windowModels.at(0)->sourceModel();
-            TaskManager::WindowTasksModel *tasksModel = static_cast<TaskManager::WindowTasksModel *>(model);
-
-            for (int i = 0; i < tasksModel->rowCount(); ++i) {
-                const QModelIndex &idx = tasksModel->index(i, 0);
-
-                if (idx.data(TaskManager::AbstractTasksModel::IsOnAllVirtualDesktops).toBool()) {
-                    break;
-                }
-
-                const QVariantList &winIds = idx.data(TaskManager::AbstractTasksModel::WinIdList).toList();
-                if (!winIds.isEmpty() && winIds.at(0) == window) {
-                    tasksModel->requestVirtualDesktops(idx, QVariantList() << targetItemId.toString());
-                    break;
-                }
-            }
-        } else {
-            // FIXME TODO: Activities support.
-        }
-    }
 }
 
 void PagerModel::changePage(int page)
@@ -567,19 +526,36 @@ void PagerModel::drop(QMimeData *mimeData, int modifiers, const QVariant &itemId
         return;
     }
 
-#if HAVE_X11
-    if (KWindowSystem::isPlatformX11()) {
-        bool ok;
-
-        const QList<WId> &ids = TaskManager::XWindowTasksModel::winIdsFromMimeData(mimeData, &ok);
-
-        if (!ok) {
-            return;
+    auto findWindows = [this](const auto &windowIds) -> QVector<QModelIndex> {
+        QVector<QModelIndex> indices;
+        for (const auto &id : windowIds) {
+            for (int i = 0; i < d->tasksModel->rowCount(); ++i) {
+                const QModelIndex &idx = d->tasksModel->index(i, 0);
+                const QVariantList &winIds = idx.data(TaskManager::AbstractTasksModel::WinIdList).toList();
+                if (!winIds.isEmpty() && winIds.at(0).value<typename std::remove_reference_t<decltype(windowIds)>::value_type>() == id) {
+                    indices.push_back(idx);
+                    break;
+                }
+            }
         }
+        return indices;
+    };
 
+    bool ok = false;
+    QVector<QModelIndex> indices;
+    if (KWindowSystem::isPlatformX11()) {
+        indices = findWindows(TaskManager::XWindowTasksModel::winIdsFromMimeData(mimeData, &ok));
+    } else if (KWindowSystem::isPlatformWayland()) {
+        indices = findWindows(TaskManager::WaylandTasksModel::winIdsFromMimeData(mimeData, &ok));
+    }
+    if (!ok) {
+        return;
+    }
+
+    for (const auto &index : qAsConst(indices)) {
         if (d->pagerType == VirtualDesktops) {
-            for (const auto &id : ids) {
-                KWindowSystem::setOnDesktop(id, itemId.toInt());
+            if (!index.data(TaskManager::AbstractTasksModel::IsOnAllVirtualDesktops).toBool()) {
+                d->tasksModel->requestVirtualDesktops(index, {itemId});
             }
         } else {
             QString newActivity = itemId.toString();
@@ -589,55 +565,20 @@ void PagerModel::drop(QMimeData *mimeData, int modifiers, const QVariant &itemId
                 return;
             }
 
-            for (const auto &id : ids) {
-                QStringList activities = KWindowInfo(id, NET::Properties(), NET::WM2Activities).activities();
+            QStringList activities = index.data(TaskManager::AbstractTasksModel::Activities).toStringList();
 
-                if (modifiers & Qt::ControlModifier) { // 'copy' => add to activity
-                    if (!activities.contains(newActivity))
-                        activities << newActivity;
-                } else { // 'move' to activity
-                    // if on only one activity, set it to only the new activity
-                    // if on >1 activity, remove it from the current activity and add it to the new activity
-                    const QString currentActivity = d->activityInfo->currentActivity();
-                    activities.removeAll(currentActivity);
+            if (modifiers & Qt::ControlModifier) { // 'copy' => add to activity
+                if (!activities.contains(newActivity)) {
                     activities << newActivity;
                 }
-                KWindowSystem::setOnActivities(id, activities);
+            } else { // 'move' to activity
+                // if on only one activity, set it to only the new activity
+                // if on >1 activity, remove it from the current activity and add it to the new activity
+                const QString currentActivity = d->activityInfo->currentActivity();
+                activities.removeAll(currentActivity);
+                activities << newActivity;
             }
-        }
-
-        return;
-    }
-#endif
-
-    if (KWindowSystem::isPlatformWayland()) {
-        bool ok;
-
-        const QList<QUuid> &ids = TaskManager::WaylandTasksModel::winIdsFromMimeData(mimeData, &ok);
-
-        if (!ok) {
-            return;
-        }
-
-        if (d->pagerType == VirtualDesktops) {
-            for (const QUuid &id : ids) {
-                QAbstractItemModel *model = d->windowModels.at(0)->sourceModel();
-                TaskManager::WindowTasksModel *tasksModel = static_cast<TaskManager::WindowTasksModel *>(model);
-
-                for (int i = 0; i < tasksModel->rowCount(); ++i) {
-                    const QModelIndex &idx = tasksModel->index(i, 0);
-
-                    if (idx.data(TaskManager::AbstractTasksModel::IsOnAllVirtualDesktops).toBool()) {
-                        break;
-                    }
-
-                    const QVariantList &winIds = idx.data(TaskManager::AbstractTasksModel::WinIdList).toList();
-                    if (!winIds.isEmpty() && winIds.at(0).value<QUuid>() == id) {
-                        tasksModel->requestVirtualDesktops(idx, QVariantList() << itemId.toString());
-                        break;
-                    }
-                }
-            }
+            d->tasksModel->requestActivities(index, activities);
         }
     }
 }

@@ -423,7 +423,6 @@ MouseArea {
                             z: 1 + model.StackingOrder
 
                             property rect geometry: model.Geometry
-                            property var windowId: model.WinIdList[0]
                             property string visibleName: model.display
                             property bool minimized: (model.IsMinimized === true)
                             onMinimizedChanged: desktop.updateSubText()
@@ -487,7 +486,8 @@ MouseArea {
                                         if (pagerItem) {
                                             var relativeTopLeft = root.mapToItem(pagerItem, windowRect.x, windowRect.y);
 
-                                            pagerModel.moveWindow(windowRect.windowId, relativeTopLeft.x, relativeTopLeft.y,
+                                            const modelIndex = windowRectRepeater.model.index(index, 0)
+                                            pagerModel.moveWindow(modelIndex, relativeTopLeft.x, relativeTopLeft.y,
                                                 pagerItem.desktopId, root.dragId,
                                                 pagerItemGrid.widthScaleFactor, pagerItemGrid.heightScaleFactor);
                                         }
