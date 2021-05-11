@@ -52,7 +52,7 @@ private Q_SLOTS:
     {
         QVERIFY(flags != nullptr);
 
-        QVERIFY(!flags->getTransparentPixmap().isNull());
+        //QVERIFY(!flags->getTransparentPixmap().isNull());
 
         const QIcon iconUs(flags->getIcon(QStringLiteral("us")));
         QVERIFY(!iconUs.isNull());
