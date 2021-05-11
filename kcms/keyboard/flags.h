@@ -22,6 +22,7 @@
 #include <QMap>
 #include <QObject>
 #include <QString>
+#include <QIcon>
 
 class QIcon;
 class LayoutUnit;
