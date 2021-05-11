@@ -103,60 +103,50 @@ KCM.AbstractKCM {
                         }
                     }
 
-                    // We're using a custom list delegate because we want to be
-                    // able to control the opacity of the icon and text independently
-                    // from everything else, which BasicListItem doesn't offer
-                    delegate: Kirigami.AbstractListItem {
+                    delegate: Kirigami.BasicListItem {
                         id: componentDelegate
-                        readonly property color foregroundColor: ListView.isCurrentItem ? activeTextColor : textColor
+
+                        height: deleteButton.height + (Kirigami.Units.smallSpacing * 2)
+
+                        fadeContent: model.pendingDeletion
+
                         KeyNavigation.right: shortcutsList
-                        height: Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.smallSpacing + topPadding + bottomPadding
-                        RowLayout {
-                            Kirigami.Icon {
-                                id: appIcon
-                                source: model.decoration
-                                Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                                Layout.preferredHeight: Layout.preferredWidth
-                                color: foregroundColor
-                                opacity: model.pendingDeletion ? 0.3 : 1
+
+                        icon: model.decoration
+                        label: model.display
+
+                        trailing: RowLayout {
+                            QQC2.CheckBox {
+                                checked: model.checked
+                                visible: exportActive
+                                onToggled: model.checked = checked
                             }
-                            QQC2.Label {
-                                Layout.fillWidth: true
-                                text: model.display
-                                elide: Text.ElideRight
-                                color: foregroundColor
-                                opacity: model.pendingDeletion ? 0.3 : 1
-                            }
-                            QQC2.ToolButton {
-                                Layout.preferredHeight: Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.smallSpacing
-                                Layout.preferredWidth: Layout.preferredHeight
+                            QQC2.Button {
+                                id: deleteButton
+
+                                implicitHeight: Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.smallSpacing
+                                implicitWidth: implicitHeight
+
                                 visible: model.section != i18n("Common Actions") // FIXME: don't compare translated strings
                                          && !exportActive
                                          && !model.pendingDeletion
                                          && (componentDelegate.containsMouse || componentDelegate.ListView.isCurrentItem)
                                 icon.name: "edit-delete"
-                                icon.width: Kirigami.Units.iconSizes.small
                                 onClicked: model.pendingDeletion = true
                                 QQC2.ToolTip {
                                     text: i18n("Remove all shortcuts for %1", model.display)
                                 }
                             }
-                            QQC2.ToolButton {
-                                Layout.preferredHeight: Kirigami.Units.iconSizes.small +  2 * Kirigami.Units.smallSpacing
-                                Layout.preferredWidth: Layout.preferredHeight
+                            QQC2.Button {
+                                implicitHeight: Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.smallSpacing
+                                implicitWidth: implicitHeight
+
                                 visible: !exportActive && model.pendingDeletion
                                 icon.name: "edit-undo"
-                                icon.width: Kirigami.Units.iconSizes.small
                                 onClicked: model.pendingDeletion = false
                                 QQC2.ToolTip {
                                     text: i18n("Undo deletion")
                                 }
-                            }
-                            QQC2.CheckBox {
-                                id: checkbox
-                                checked: model.checked
-                                visible: exportActive
-                                onToggled: model.checked = checked
                             }
                             Rectangle {
                                 id: defaultIndicator
