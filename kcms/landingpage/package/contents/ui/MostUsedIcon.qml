@@ -30,7 +30,7 @@ MouseArea {
     property int iconSize: Kirigami.Units.iconSizes.medium
 
     implicitWidth: Kirigami.Units.gridUnit * 5
-    implicitHeight: column.implicitHeight
+    implicitHeight: Kirigami.Units.gridUnit * 4
 
     cursorShape: Qt.PointingHandCursor
     activeFocusOnTab: true
@@ -54,22 +54,20 @@ MouseArea {
         color: Kirigami.Theme.highlightColor
     }
     ColumnLayout {
-        id: column
-        width: parent.width
+        anchors.fill: parent
         Kirigami.Icon {
             id: iconItem
             active: item.containsMouse || item.activeFocus
             Layout.alignment: Qt.AlignHCenter
-            Layout.minimumWidth: item.iconSize
-            Layout.minimumHeight: Layout.minimumWidth
-            height: width
+            implicitWidth: item.iconSize
+            implicitHeight: item.iconSize
         }
         QQC2.Label {
             id: label
             Layout.fillWidth: true
-            Layout.maximumWidth: item.width
-            Layout.alignment: Qt.AlignHCenter
+            Layout.fillHeight: true
             horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignTop
             wrapMode: Text.Wrap
         }
     }
