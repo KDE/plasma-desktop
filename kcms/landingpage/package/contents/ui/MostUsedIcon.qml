@@ -45,7 +45,7 @@ MouseArea {
     Keys.onSpacePressed: { item.clicked(model.kcmPlugin); }
 
     Kirigami.Separator {
-        anchors{
+        anchors {
             left: parent.left
             right: parent.right
             bottom: parent.bottom
