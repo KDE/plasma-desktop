@@ -23,11 +23,6 @@
 #include "../keyboard_config.h"
 #include "../xkb_rules.h"
 
-static QImage image(const QIcon &icon)
-{
-    return icon.pixmap(QSize(16, 16), QIcon::Normal, QIcon::On).toImage();
-}
-
 class FlagsTest : public QObject
 {
     Q_OBJECT
@@ -52,8 +47,6 @@ private Q_SLOTS:
     {
         QVERIFY(flags != nullptr);
 
-        //QVERIFY(!flags->getTransparentPixmap().isNull());
-
         const QIcon iconUs(flags->getIcon(QStringLiteral("us")));
         QVERIFY(!iconUs.isNull());
         QVERIFY(flags->getIcon("--").isNull());
@@ -63,16 +56,6 @@ private Q_SLOTS:
         LayoutUnit layoutUnit1(QStringLiteral("us"), QStringLiteral("intl"));
         layoutUnit1.setDisplayName(QStringLiteral("usi"));
         LayoutUnit layoutUnit2(QStringLiteral("us"), QStringLiteral("other"));
-
-        keyboardConfig.indicatorType = KeyboardConfig::SHOW_FLAG;
-        const QIcon iconUsFlag = flags->getIconWithText(layoutUnit, keyboardConfig);
-        QVERIFY(!iconUsFlag.isNull());
-        QCOMPARE(image(iconUsFlag), image(iconUs));
-
-        keyboardConfig.indicatorType = KeyboardConfig::SHOW_LABEL;
-        const QIcon iconUsText = flags->getIconWithText(layoutUnit, keyboardConfig);
-        QVERIFY(!iconUsText.isNull());
-        QVERIFY(image(iconUsText) != image(iconUs));
 
         keyboardConfig.layouts.append(layoutUnit1);
         QCOMPARE(flags->getShortText(layoutUnit, keyboardConfig), QString("us"));
@@ -85,8 +68,6 @@ private Q_SLOTS:
 
         rules = nullptr; // when no rules found
         QCOMPARE(flags->getLongText(layoutUnit1, rules), QString("us - intl"));
-
-        flags->clearCache();
     }
 
     //    void loadRulesBenchmark() {
