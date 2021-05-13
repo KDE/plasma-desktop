@@ -196,7 +196,7 @@ ColumnLayout {
         }
 
         DropShadow {
-            anchors.fill: pipeWireLoader.active ? pipeWireLoader.item : x11Thumbnail
+            anchors.fill: pipeWireLoader.active ? pipeWireLoader : x11Thumbnail
             visible: pipeWireLoader.active ? pipeWireLoader.item.visible : x11Thumbnail.visible
             horizontalOffset: 0
             verticalOffset: Math.round(3 * PlasmaCore.Units.devicePixelRatio)
