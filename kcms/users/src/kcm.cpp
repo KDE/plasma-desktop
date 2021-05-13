@@ -122,7 +122,7 @@ QString KCMUser::initializeString(const QString &stringToGrabInitialsOf)
         if (last.isEmpty()) {
             return QString(first.front());
         }
-        return first.front() + last.front();
+        return QString(first.front()) + last.front();
     } else {
         return QString(normalized.front());
     }
