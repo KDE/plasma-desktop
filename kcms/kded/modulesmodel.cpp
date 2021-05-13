@@ -133,13 +133,13 @@ bool ModulesModel::setData(const QModelIndex &index, const QVariant &value, int 
             item.autoloadEnabled = autoloadEnabled;
             dirty = true;
         }
-        emit autoloadedModulesChanged();
+        Q_EMIT autoloadedModulesChanged();
         break;
     }
     }
 
     if (dirty) {
-        emit dataChanged(index, index, {role});
+        Q_EMIT dataChanged(index, index, {role});
     }
 
     return dirty;
@@ -273,7 +273,7 @@ void ModulesModel::setRunningModulesKnown(bool known)
 {
     if (m_runningModulesKnown != known) {
         m_runningModulesKnown = known;
-        emit dataChanged(index(0, 0), index(m_data.count() - 1, 0), {StatusRole});
+        Q_EMIT dataChanged(index(0, 0), index(m_data.count() - 1, 0), {StatusRole});
     }
 }
 
@@ -290,7 +290,7 @@ void ModulesModel::setRunningModules(const QStringList &runningModules)
 
     m_runningModules = runningModules;
     if (m_runningModulesKnown) {
-        emit dataChanged(index(0, 0), index(m_data.count() - 1, 0), {StatusRole});
+        Q_EMIT dataChanged(index(0, 0), index(m_data.count() - 1, 0), {StatusRole});
     }
 }
 

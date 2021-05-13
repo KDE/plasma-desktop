@@ -177,7 +177,7 @@ ThumbnailImageResponse::ThumbnailImageResponse(const QString &id, const QSize &r
     }
 
     if (m_id.isEmpty()) {
-        emit finished();
+        Q_EMIT finished();
         return;
     }
 
@@ -200,14 +200,14 @@ ThumbnailImageResponse::ThumbnailImageResponse(const QString &id, const QSize &r
             auto image = pixmap.toImage();
 
             m_texture = QQuickTextureFactory::textureFactoryForImage(image);
-            emit finished();
+            Q_EMIT finished();
         },
         Qt::QueuedConnection);
 
     connect(job, &KIO::PreviewJob::failed, this, [this, job](const KFileItem &item) {
         Q_UNUSED(item);
         qWarning() << "SwitcherBackend: FAILED to get the thumbnail" << job->errorString() << job->detailedErrorStrings();
-        emit finished();
+        Q_EMIT finished();
     });
 }
 
@@ -377,7 +377,7 @@ void SwitcherBackend::onCurrentActivityChanged(const QString &id)
 
     // Safe, we have a long-lived Consumer object
     KActivities::Info activity(id);
-    emit showSwitchNotification(id, activity.name(), activity.icon());
+    Q_EMIT showSwitchNotification(id, activity.name(), activity.icon());
 
     KConfig config(QStringLiteral("kactivitymanagerd-switcher"));
     KConfigGroup times(&config, "LastUsed");
@@ -422,7 +422,7 @@ void SwitcherBackend::setShouldShowSwitcher(bool shouldShowSwitcher)
         onCurrentActivityChanged(m_activities.currentActivity());
     }
 
-    emit shouldShowSwitcherChanged(m_shouldShowSwitcher);
+    Q_EMIT shouldShowSwitcherChanged(m_shouldShowSwitcher);
 }
 
 QAbstractItemModel *SwitcherBackend::runningActivitiesModel() const

@@ -105,7 +105,7 @@ void Backend::setTaskManagerItem(QQuickItem *item)
     if (item != m_taskManagerItem) {
         m_taskManagerItem = item;
 
-        emit taskManagerItemChanged();
+        Q_EMIT taskManagerItemChanged();
     }
 }
 
@@ -119,7 +119,7 @@ void Backend::setGroupDialog(QQuickWindow *dialog)
     if (dialog != m_groupDialog) {
         m_groupDialog = dialog;
 
-        emit groupDialogChanged();
+        Q_EMIT groupDialogChanged();
     }
 }
 
@@ -135,7 +135,7 @@ void Backend::setHighlightWindows(bool highlight)
 
         updateWindowHighlight();
 
-        emit highlightWindowsChanged();
+        Q_EMIT highlightWindowsChanged();
     }
 }
 

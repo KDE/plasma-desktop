@@ -263,7 +263,7 @@ void SortedActivitiesModel::setInhibitUpdates(bool inhibitUpdates)
 {
     if (m_inhibitUpdates != inhibitUpdates) {
         m_inhibitUpdates = inhibitUpdates;
-        emit inhibitUpdatesChanged(m_inhibitUpdates);
+        Q_EMIT inhibitUpdatesChanged(m_inhibitUpdates);
 
         setDynamicSortFilter(!inhibitUpdates);
     }
@@ -487,5 +487,5 @@ void SortedActivitiesModel::rowChanged(int row, const QVector<int> &roles)
 {
     if (row == -1)
         return;
-    emit dataChanged(index(row, 0), index(row, 0), roles);
+    Q_EMIT dataChanged(index(row, 0), index(row, 0), roles);
 }

@@ -1,4 +1,4 @@
-﻿/*
+/*
     Copyright 2019 Harald Sitter <sitter@kde.org>
 
     This program is free software; you can redistribute it and/or
@@ -207,7 +207,7 @@ Key::Key(XkbKeyPtr key_, XkbDescPtr xkb_, QObject *parent)
         Q_ASSERT(event);
         if (event->nativeScanCode() == nativeScanCode) {
             pressed = event->type() == QKeyEvent::KeyPress;
-            emit pressedChanged();
+            Q_EMIT pressedChanged();
         }
     });
 }

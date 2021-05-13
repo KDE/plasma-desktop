@@ -176,7 +176,7 @@ void KCMiscKeyboardWidget::defaults()
 {
     setRepeat(KeyBehaviour::AccentMenu, DEFAULT_REPEAT_DELAY, DEFAULT_REPEAT_RATE);
     TriStateHelper::setTriState(_numlockButtonGroup, STATE_UNCHANGED);
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 QString KCMiscKeyboardWidget::quickHelp() const
@@ -198,7 +198,7 @@ void KCMiscKeyboardWidget::delaySliderChanged(int value)
 
     ui.delay->setValue((int)floor(0.5 + linearValue));
 
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 void KCMiscKeyboardWidget::delaySpinboxChanged(int value)
@@ -208,26 +208,26 @@ void KCMiscKeyboardWidget::delaySpinboxChanged(int value)
 
     ui.delaySlider->setValue((int)floor(0.5 + logVal));
 
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 void KCMiscKeyboardWidget::rateSliderChanged(int value)
 {
     ui.rate->setValue(value / 100.0);
 
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 void KCMiscKeyboardWidget::rateSpinboxChanged(double value)
 {
     ui.rateSlider->setValue((int)(value * 100));
 
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 void KCMiscKeyboardWidget::changed()
 {
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 void KCMiscKeyboardWidget::keyboardRepeatStateChanged(int selection)

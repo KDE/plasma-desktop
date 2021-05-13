@@ -185,7 +185,7 @@ void KCMKeyboardWidget::uiChanged()
     layoutsTableModel->refresh();
     layoutSelectionChanged();
 
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 void KCMKeyboardWidget::initializeKeyboardModelUI()
@@ -517,7 +517,7 @@ void KCMKeyboardWidget::clearXkbGroup(const QString &groupName)
     ((XkbOptionsTreeModel *)uiWidget->xkbOptionsTreeView->model())->reset();
     uiWidget->xkbOptionsTreeView->update();
     updateXkbShortcutsButtons();
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 static bool xkbOptionGroupLessThan(const OptionGroupInfo *og1, const OptionGroupInfo *og2)

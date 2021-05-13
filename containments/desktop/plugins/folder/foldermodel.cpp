@@ -95,7 +95,7 @@ DirLister::~DirLister()
 void DirLister::handleError(KIO::Job *job)
 {
     if (!autoErrorHandlingEnabled()) {
-        emit error(job->errorString());
+        Q_EMIT error(job->errorString());
         return;
     }
 
@@ -139,13 +139,13 @@ FolderModel::FolderModel(QObject *parent)
     void (KCoreDirLister::*myCompletedSignal)() = &KCoreDirLister::completed;
     QObject::connect(dirLister, myCompletedSignal, this, [this] {
         setStatus(Status::Ready);
-        emit listingCompleted();
+        Q_EMIT listingCompleted();
     });
 
     void (KCoreDirLister::*myCanceledSignal)() = &KCoreDirLister::canceled;
     QObject::connect(dirLister, myCanceledSignal, this, [this] {
         setStatus(Status::Canceled);
-        emit listingCanceled();
+        Q_EMIT listingCanceled();
     });
 
     m_dirModel = new KDirModel(this);
@@ -168,7 +168,7 @@ FolderModel::FolderModel(QObject *parent)
             if (it != m_dropTargetPositions.end()) {
                 const auto pos = it.value();
                 m_dropTargetPositions.erase(it);
-                emit move(pos.x(), pos.y(), {url});
+                Q_EMIT move(pos.x(), pos.y(), {url});
             }
         }
     });
@@ -318,11 +318,11 @@ void FolderModel::setUrl(const QString &url)
     m_dragIndexes.clear();
     endResetModel();
 
-    emit urlChanged();
-    emit resolvedUrlChanged();
+    Q_EMIT urlChanged();
+    Q_EMIT resolvedUrlChanged();
 
     m_errorString.clear();
-    emit errorStringChanged();
+    Q_EMIT errorStringChanged();
 
     if (m_dirWatch) {
         delete m_dirWatch;
@@ -340,7 +340,7 @@ void FolderModel::setUrl(const QString &url)
         m_urlChangedWhileDragging = true;
     }
 
-    emit iconNameChanged();
+    Q_EMIT iconNameChanged();
 
     if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
         m_screenMapper->removeScreen(m_screen, oldUrl);
@@ -386,7 +386,7 @@ void FolderModel::setStatus(Status status)
 {
     if (m_status != status) {
         m_status = status;
-        emit statusChanged();
+        Q_EMIT statusChanged();
     }
 }
 
@@ -421,7 +421,7 @@ void FolderModel::setUsedByContainment(bool used)
         connect(m_screenMapper, &ScreenMapper::screensChanged, this, &FolderModel::invalidateFilterIfComplete);
         connect(m_screenMapper, &ScreenMapper::screenMappingChanged, this, &FolderModel::invalidateFilterIfComplete);
 
-        emit usedByContainmentChanged();
+        Q_EMIT usedByContainmentChanged();
     }
 }
 
@@ -435,14 +435,14 @@ void FolderModel::setLocked(bool locked)
     if (m_locked != locked) {
         m_locked = locked;
 
-        emit lockedChanged();
+        Q_EMIT lockedChanged();
     }
 }
 
 void FolderModel::dirListFailed(const QString &error)
 {
     m_errorString = error;
-    emit errorStringChanged();
+    Q_EMIT errorStringChanged();
 }
 
 int FolderModel::sortMode() const
@@ -463,7 +463,7 @@ void FolderModel::setSortMode(int mode)
             setDynamicSortFilter(true);
         }
 
-        emit sortModeChanged();
+        Q_EMIT sortModeChanged();
     }
 }
 
@@ -482,7 +482,7 @@ void FolderModel::setSortDesc(bool desc)
             sort(m_sortMode, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
         }
 
-        emit sortDescChanged();
+        Q_EMIT sortDescChanged();
     }
 }
 
@@ -501,7 +501,7 @@ void FolderModel::setSortDirsFirst(bool enable)
             sort(m_sortMode, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
         }
 
-        emit sortDirsFirstChanged();
+        Q_EMIT sortDirsFirstChanged();
     }
 }
 
@@ -514,7 +514,7 @@ void FolderModel::setParseDesktopFiles(bool enable)
 {
     if (m_parseDesktopFiles != enable) {
         m_parseDesktopFiles = enable;
-        emit parseDesktopFilesChanged();
+        Q_EMIT parseDesktopFilesChanged();
     }
 }
 
@@ -536,7 +536,7 @@ void FolderModel::setViewAdapter(QObject *adapter)
             m_previewGenerator->setEnabledPlugins(m_effectivePreviewPlugins);
         }
 
-        emit viewAdapterChanged();
+        Q_EMIT viewAdapterChanged();
     }
 }
 
@@ -554,7 +554,7 @@ void FolderModel::setPreviews(bool previews)
             m_previewGenerator->setPreviewShown(m_previews);
         }
 
-        emit previewsChanged();
+        Q_EMIT previewsChanged();
     }
 }
 
@@ -582,7 +582,7 @@ void FolderModel::setPreviewPlugins(const QStringList &previewPlugins)
 
     if (m_previewPlugins != previewPlugins) {
         m_previewPlugins = previewPlugins;
-        emit previewPluginsChanged();
+        Q_EMIT previewPluginsChanged();
     }
 }
 
@@ -598,7 +598,7 @@ void FolderModel::setFilterMode(int filterMode)
 
         invalidateFilterIfComplete();
 
-        emit filterModeChanged();
+        Q_EMIT filterModeChanged();
     }
 }
 
@@ -629,7 +629,7 @@ void FolderModel::setFilterPattern(const QString &pattern)
 
     invalidateFilterIfComplete();
 
-    emit filterPatternChanged();
+    Q_EMIT filterPatternChanged();
 }
 
 QStringList FolderModel::filterMimeTypes() const
@@ -646,7 +646,7 @@ void FolderModel::setFilterMimeTypes(const QStringList &mimeList)
 
         invalidateFilterIfComplete();
 
-        emit filterMimeTypesChanged();
+        Q_EMIT filterMimeTypesChanged();
     }
 }
 
@@ -661,7 +661,7 @@ void FolderModel::setScreen(int screen)
     if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
         m_screenMapper->addScreen(screen, resolvedUrl());
     }
-    emit screenChanged();
+    Q_EMIT screenChanged();
 }
 
 bool FolderModel::eventFilter(QObject *watched, QEvent *event)
@@ -984,7 +984,7 @@ void FolderModel::dragSelected(int x, int y)
     }
 
     m_dragInProgress = true;
-    emit draggingChanged();
+    Q_EMIT draggingChanged();
     m_urlChangedWhileDragging = false;
 
     // Avoid starting a drag synchronously in a mouse handler or interferes with
@@ -997,7 +997,7 @@ void FolderModel::dragSelectedInternal(int x, int y)
 {
     if (!m_viewAdapter || !m_selectionModel->hasSelection()) {
         m_dragInProgress = false;
-        emit draggingChanged();
+        Q_EMIT draggingChanged();
         return;
     }
 
@@ -1013,7 +1013,7 @@ void FolderModel::dragSelectedInternal(int x, int y)
     std::sort(m_dragIndexes.begin(), m_dragIndexes.end());
 
     // TODO: Optimize to emit contiguous groups.
-    emit dataChanged(m_dragIndexes.first(), m_dragIndexes.last(), QVector<int>() << BlankRole);
+    Q_EMIT dataChanged(m_dragIndexes.first(), m_dragIndexes.last(), QVector<int>() << BlankRole);
 
     QModelIndexList sourceDragIndexes;
     sourceDragIndexes.reserve(m_dragIndexes.count());
@@ -1035,7 +1035,7 @@ void FolderModel::dragSelectedInternal(int x, int y)
     item->ungrabMouse();
 
     m_dragInProgress = false;
-    emit draggingChanged();
+    Q_EMIT draggingChanged();
     m_urlChangedWhileDragging = false;
 
     if (m_dirModel->dirLister()->url() == currentUrl) {
@@ -1043,7 +1043,7 @@ void FolderModel::dragSelectedInternal(int x, int y)
         const QModelIndex last(m_dragIndexes.last());
         m_dragIndexes.clear();
         // TODO: Optimize to emit contiguous groups.
-        emit dataChanged(first, last, QVector<int>() << BlankRole);
+        Q_EMIT dataChanged(first, last, QVector<int>() << BlankRole);
     }
 }
 
@@ -1153,7 +1153,7 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
             m_screenMapper->addMapping(mappableUrl(url), m_screen, ScreenMapper::DelayedSignal);
             m_screenMapper->removeItemFromDisabledScreen(mappableUrl(url));
         }
-        emit move(x, y, mimeData->urls());
+        Q_EMIT move(x, y, mimeData->urls());
 
         return;
     }
@@ -1217,7 +1217,7 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
     }
 
     connect(dropJob, &KIO::DropJob::popupMenuAboutToShow, this, [this, mimeCopy, x, y, dropJob](const KFileItemListProperties &) {
-        emit popupMenuAboutToShow(dropJob, mimeCopy, x, y);
+        Q_EMIT popupMenuAboutToShow(dropJob, mimeCopy, x, y);
         mimeCopy->deleteLater();
     });
 
@@ -1301,7 +1301,7 @@ void FolderModel::selectionChanged(const QItemSelection &selected, const QItemSe
     roles.append(SelectedRole);
 
     foreach (const QModelIndex &index, indices) {
-        emit dataChanged(index, index, roles);
+        Q_EMIT dataChanged(index, index, roles);
     }
 
     if (!m_selectionModel->hasSelection()) {
@@ -1443,7 +1443,7 @@ void FolderModel::statResult(KJob *job)
     if (idx.isValid() && statJob->error() == KJob::NoError) {
         m_isDirCache[url] = statJob->statResult().isDir();
 
-        emit dataChanged(idx, idx, QVector<int>() << IsDirRole);
+        Q_EMIT dataChanged(idx, idx, QVector<int>() << IsDirRole);
     }
 
     m_isDirJobs.remove(url);
@@ -1992,7 +1992,7 @@ void FolderModel::pasteTo()
 void FolderModel::refresh()
 {
     m_errorString.clear();
-    emit errorStringChanged();
+    Q_EMIT errorStringChanged();
 
     m_dirModel->dirLister()->updateDirectory(m_dirModel->dirLister()->url());
 }
@@ -2027,7 +2027,7 @@ void FolderModel::setAppletInterface(QObject *appletInterface)
             }
         }
 
-        emit appletInterfaceChanged();
+        Q_EMIT appletInterfaceChanged();
     }
 }
 

@@ -83,7 +83,7 @@ void KCMKeyboard::defaults()
     widget->updateUI();
     widget->getKcmMiscWidget()->defaults();
 
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 void KCMKeyboard::load()

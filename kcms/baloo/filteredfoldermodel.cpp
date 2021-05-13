@@ -159,7 +159,7 @@ bool FilteredFolderModel::setData(const QModelIndex &idx, const QVariant &value,
     if (role == EnableIndex) {
         entry.enableIndex = value.toBool();
         syncFolderConfig(entry);
-        emit dataChanged(idx, idx);
+        Q_EMIT dataChanged(idx, idx);
         return true;
     }
     return false;

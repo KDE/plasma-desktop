@@ -1,4 +1,4 @@
-﻿/*
+/*
     Copyright 2019 Harald Sitter <sitter@kde.org>
 
     This program is free software; you can redistribute it and/or
@@ -25,7 +25,7 @@
 bool Application::notify(QObject *receiver, QEvent *event)
 {
     if (event->type() == QEvent::KeyPress || event->type() == QEvent::KeyRelease) {
-        emit keyEvent(dynamic_cast<QKeyEvent *>(event));
+        Q_EMIT keyEvent(dynamic_cast<QKeyEvent *>(event));
     }
     return QGuiApplication::notify(receiver, event);
 }

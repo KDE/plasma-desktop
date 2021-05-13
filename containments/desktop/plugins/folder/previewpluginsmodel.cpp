@@ -75,7 +75,7 @@ bool PreviewPluginsModel::setData(const QModelIndex &index, const QVariant &valu
 
     if (role == Qt::CheckStateRole) {
         m_checkedRows[index.row()] = value.toBool();
-        emit dataChanged(index, index, {role});
+        Q_EMIT dataChanged(index, index, {role});
         return true;
     }
 
@@ -108,9 +108,9 @@ void PreviewPluginsModel::setCheckedPlugins(const QStringList &list)
         }
     }
 
-    emit dataChanged(index(0, 0), index(m_plugins.size() - 1, 0), {Qt::CheckStateRole});
+    Q_EMIT dataChanged(index(0, 0), index(m_plugins.size() - 1, 0), {Qt::CheckStateRole});
 
-    emit checkedPluginsChanged();
+    Q_EMIT checkedPluginsChanged();
 }
 
 QStringList PreviewPluginsModel::checkedPlugins() const

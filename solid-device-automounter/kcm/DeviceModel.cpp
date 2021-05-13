@@ -251,7 +251,7 @@ bool DeviceModel::setData(const QModelIndex &index, const QVariant &value, int r
             m_attachedForced[udi] = (value.toInt() == Qt::Checked) ? true : false;
             break;
         }
-        emit dataChanged(index, index);
+        Q_EMIT dataChanged(index, index);
         return true;
     }
 
@@ -381,7 +381,7 @@ void DeviceModel::setAutomaticMountOnLogin(bool automaticLogin)
         m_automaticLogin = automaticLogin;
         for (int parent = 0; parent < rowCount(); parent++) {
             const auto parentIndex = index(parent, 0);
-            emit dataChanged(index(0, 1, parentIndex), index(rowCount(parentIndex), 1, parentIndex));
+            Q_EMIT dataChanged(index(0, 1, parentIndex), index(rowCount(parentIndex), 1, parentIndex));
         }
     }
 }
@@ -392,7 +392,7 @@ void DeviceModel::setAutomaticMountOnPlugin(bool automaticAttached)
         m_automaticAttached = automaticAttached;
         for (int parent = 0; parent < rowCount(); parent++) {
             const auto parentIndex = index(parent, 0);
-            emit dataChanged(index(0, 2, parentIndex), index(rowCount(parentIndex), 2, parentIndex));
+            Q_EMIT dataChanged(index(0, 2, parentIndex), index(rowCount(parentIndex), 2, parentIndex));
         }
     }
 }

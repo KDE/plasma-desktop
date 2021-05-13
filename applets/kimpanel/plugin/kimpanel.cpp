@@ -46,7 +46,7 @@ void Kimpanel::updateAux(const QString &text, const QList<TextAttribute> &attrLi
     Q_UNUSED(attrList);
     if (m_auxText != text) {
         m_auxText = text;
-        emit auxTextChanged();
+        Q_EMIT auxTextChanged();
     }
 }
 
@@ -55,7 +55,7 @@ void Kimpanel::updatePreeditText(const QString &text, const QList<TextAttribute>
     Q_UNUSED(attrList);
     if (m_preeditText != text) {
         m_preeditText = text;
-        emit preeditTextChanged();
+        Q_EMIT preeditTextChanged();
     }
 }
 
@@ -63,7 +63,7 @@ void Kimpanel::updatePreeditCaret(int pos)
 {
     if (m_caretPos != pos) {
         m_caretPos = pos;
-        emit preeditTextChanged();
+        Q_EMIT preeditTextChanged();
     }
 }
 
@@ -77,7 +77,7 @@ void Kimpanel::updateLookupTable(const KimpanelLookupTable &lookupTable)
     }
     m_hasPrev = lookupTable.has_prev;
     m_hasNext = lookupTable.has_next;
-    emit lookupTableChanged();
+    Q_EMIT lookupTableChanged();
 }
 
 void Kimpanel::updateSpotLocation(int x, int y)
@@ -88,14 +88,14 @@ void Kimpanel::updateSpotLocation(int x, int y)
 void Kimpanel::updateSpotRect(int x, int y, int w, int h)
 {
     m_spotRect = QRect(x, y, w, h);
-    emit spotRectChanged();
+    Q_EMIT spotRectChanged();
 }
 
 void Kimpanel::showAux(bool visible)
 {
     if (m_auxVisible != visible) {
         m_auxVisible = visible;
-        emit auxTextChanged();
+        Q_EMIT auxTextChanged();
     }
 }
 
@@ -103,7 +103,7 @@ void Kimpanel::showPreedit(bool visible)
 {
     if (m_preeditVisible != visible) {
         m_preeditVisible = visible;
-        emit preeditTextChanged();
+        Q_EMIT preeditTextChanged();
     }
 }
 
@@ -111,7 +111,7 @@ void Kimpanel::showLookupTable(bool visible)
 {
     if (m_lookupTableVisible != visible) {
         m_lookupTableVisible = visible;
-        emit lookupTableChanged();
+        Q_EMIT lookupTableChanged();
     }
 }
 
@@ -119,7 +119,7 @@ void Kimpanel::updateLookupTableCursor(int cursor)
 {
     if (m_lookupTableCursor != cursor) {
         m_lookupTableCursor = cursor;
-        emit lookupTableChanged();
+        Q_EMIT lookupTableChanged();
     }
 }
 
@@ -135,7 +135,7 @@ void Kimpanel::updateLookupTableFull(const KimpanelLookupTable &lookupTable, int
     m_hasNext = lookupTable.has_next;
     m_lookupTableCursor = cursor;
     m_lookupTableLayout = layout;
-    emit lookupTableChanged();
+    Q_EMIT lookupTableChanged();
 }
 
 void Kimpanel::updateProperty(const KimpanelProperty &property)
@@ -143,7 +143,7 @@ void Kimpanel::updateProperty(const KimpanelProperty &property)
     for (auto &prop : m_props) {
         if (prop.toMap()[QStringLiteral("key")] == property.key) {
             prop = property.toMap();
-            emit propertiesChanged();
+            Q_EMIT propertiesChanged();
             break;
         }
     }
@@ -155,7 +155,7 @@ void Kimpanel::registerProperties(const QList<KimpanelProperty> &props)
     for (const auto &prop : props) {
         m_props << prop.toMap();
     }
-    emit propertiesChanged();
+    Q_EMIT propertiesChanged();
 }
 
 void Kimpanel::execMenu(const QList<KimpanelProperty> &props)
@@ -164,7 +164,7 @@ void Kimpanel::execMenu(const QList<KimpanelProperty> &props)
     for (const auto &prop : props) {
         menuProps << prop.toMap();
     }
-    emit menuTriggered(menuProps);
+    Q_EMIT menuTriggered(menuProps);
 }
 
 void Kimpanel::execDialog(const KimpanelProperty &prop)

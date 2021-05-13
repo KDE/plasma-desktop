@@ -157,7 +157,7 @@ void PagerModel::Private::refreshDataSource()
         QObject::disconnect(virtualDesktopNamesConn);
         virtualDesktopNamesConn = QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::desktopNamesChanged, q, [this]() {
             if (q->rowCount()) {
-                emit q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0), QVector<int>{Qt::DisplayRole});
+                Q_EMIT q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0), QVector<int>{Qt::DisplayRole});
             }
         });
 
@@ -184,7 +184,7 @@ void PagerModel::Private::refreshDataSource()
         QObject::connect(activityInfo, &ActivityInfo::currentActivityChanged, q, &PagerModel::currentPageChanged, Qt::UniqueConnection);
     }
 
-    emit q->currentPageChanged();
+    Q_EMIT q->currentPageChanged();
 }
 
 PagerModel::PagerModel(QObject *parent)
@@ -252,8 +252,8 @@ void PagerModel::setPagerType(PagerType type)
 
         refresh();
 
-        emit pagerTypeChanged();
-        emit shouldShowPagerChanged();
+        Q_EMIT pagerTypeChanged();
+        Q_EMIT shouldShowPagerChanged();
     }
 }
 
@@ -267,7 +267,7 @@ void PagerModel::setEnabled(bool enabled)
     if (enabled && !d->enabled) {
         refresh();
         d->enabled = true;
-        emit enabledChanged();
+        Q_EMIT enabledChanged();
     } else if (!enabled && d->enabled) {
         beginResetModel();
 
@@ -282,9 +282,9 @@ void PagerModel::setEnabled(bool enabled)
         endResetModel();
 
         d->enabled = false;
-        emit enabledChanged();
+        Q_EMIT enabledChanged();
 
-        emit countChanged();
+        Q_EMIT countChanged();
     }
 }
 
@@ -303,7 +303,7 @@ void PagerModel::setShowDesktop(bool show)
     if (d->showDesktop != show) {
         d->showDesktop = show;
 
-        emit showDesktopChanged();
+        Q_EMIT showDesktopChanged();
     }
 }
 
@@ -318,12 +318,12 @@ void PagerModel::setShowOnlyCurrentScreen(bool show)
         d->showOnlyCurrentScreen = show;
 
         if (d->screenGeometry.isValid()) {
-            emit pagerItemSizeChanged();
+            Q_EMIT pagerItemSizeChanged();
 
             refresh();
         }
 
-        emit showOnlyCurrentScreenChanged();
+        Q_EMIT showOnlyCurrentScreenChanged();
     }
 }
 
@@ -338,12 +338,12 @@ void PagerModel::setScreenGeometry(const QRect &geometry)
         d->screenGeometry = geometry;
 
         if (d->showOnlyCurrentScreen) {
-            emit pagerItemSizeChanged();
+            Q_EMIT pagerItemSizeChanged();
 
             refresh();
         }
 
-        emit showOnlyCurrentScreenChanged();
+        Q_EMIT showOnlyCurrentScreenChanged();
     }
 }
 
@@ -447,7 +447,7 @@ void PagerModel::refresh()
 
     endResetModel();
 
-    emit countChanged();
+    Q_EMIT countChanged();
 }
 
 void PagerModel::moveWindow(const QVariant &window,

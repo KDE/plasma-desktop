@@ -84,7 +84,7 @@ void ItemViewAdapter::setAdapterView(QObject *view)
     if (m_adapterView != view) {
         m_adapterView = view;
 
-        emit adapterViewChanged();
+        Q_EMIT adapterViewChanged();
     }
 }
 
@@ -93,7 +93,7 @@ void ItemViewAdapter::setAdapterModel(QAbstractItemModel *model)
     if (m_adapterModel != model) {
         m_adapterModel = model;
 
-        emit adapterModelChanged();
+        Q_EMIT adapterModelChanged();
     }
 }
 
@@ -107,7 +107,7 @@ void ItemViewAdapter::setAdapterIconSize(int size)
     if (m_adapterIconSize != size) {
         m_adapterIconSize = size;
 
-        emit adapterIconSizeChanged();
+        Q_EMIT adapterIconSizeChanged();
     }
 }
 
@@ -121,6 +121,6 @@ void ItemViewAdapter::setAdapterVisibleArea(QRect rect)
     if (m_adapterVisibleArea != rect) {
         m_adapterVisibleArea = rect;
 
-        emit adapterVisibleAreaChanged();
+        Q_EMIT adapterVisibleAreaChanged();
     }
 }

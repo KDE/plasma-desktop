@@ -1,4 +1,4 @@
-﻿/*
+/*
     Copyright 2019 Harald Sitter <sitter@kde.org>
 
     This program is free software; you can redistribute it and/or
@@ -78,7 +78,7 @@ void IndicatorDoodad::refreshState()
     } else {
         on = onInt == True ? true : false;
     }
-    emit onChanged();
+    Q_EMIT onChanged();
 }
 
 LogoDoodad::LogoDoodad(XkbDoodadPtr doodad_, XkbDescPtr xkb_, QObject *parent)

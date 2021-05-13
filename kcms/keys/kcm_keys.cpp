@@ -122,7 +122,7 @@ FilteredShortcutsModel *KCMKeys::filteredModel() const
 void KCMKeys::setError(const QString &errorMessage)
 {
     m_lastError = errorMessage;
-    emit this->errorOccured();
+    Q_EMIT this->errorOccured();
 }
 
 QString KCMKeys::lastError() const

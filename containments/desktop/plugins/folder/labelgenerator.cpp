@@ -62,7 +62,7 @@ void LabelGenerator::setFolderModel(FolderModel *folderModel)
         connect(m_folderModel.data(), &FolderModel::listingCompleted, this, &LabelGenerator::updateDisplayLabel);
         connect(m_folderModel.data(), &FolderModel::listingCanceled, this, &LabelGenerator::updateDisplayLabel);
 
-        emit folderModelChanged();
+        Q_EMIT folderModelChanged();
         updateDisplayLabel();
     }
 }
@@ -76,7 +76,7 @@ void LabelGenerator::setRtl(bool rtl)
 {
     if (rtl != m_rtl) {
         m_rtl = rtl;
-        emit rtlChanged();
+        Q_EMIT rtlChanged();
         updateDisplayLabel();
     }
 }
@@ -90,7 +90,7 @@ void LabelGenerator::setLabelMode(int mode)
 {
     if (mode != m_labelMode) {
         m_labelMode = mode;
-        emit labelModeChanged();
+        Q_EMIT labelModeChanged();
         updateDisplayLabel();
     }
 }
@@ -104,7 +104,7 @@ void LabelGenerator::setLabelText(const QString &text)
 {
     if (text != m_labelText) {
         m_labelText = text;
-        emit labelTextChanged();
+        Q_EMIT labelTextChanged();
         updateDisplayLabel();
     }
 }
@@ -119,7 +119,7 @@ void LabelGenerator::updateDisplayLabel()
     const QString displayLabel = generatedDisplayLabel();
     if (m_displayLabel != displayLabel) {
         m_displayLabel = displayLabel;
-        emit displayLabelChanged();
+        Q_EMIT displayLabelChanged();
     }
 }
 

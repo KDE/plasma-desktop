@@ -61,6 +61,6 @@ void DirectoryPicker::dialogAccepted()
     if (!urls.isEmpty()) {
         m_url = urls.at(0);
 
-        emit urlChanged();
+        Q_EMIT urlChanged();
     }
 }

@@ -93,7 +93,7 @@ void DirModel::setUrl(const QString &url)
     beginResetModel();
     dirLister()->openUrl(QUrl(url));
     endResetModel();
-    emit urlChanged();
+    Q_EMIT urlChanged();
 }
 
 int DirModel::indexForUrl(const QString &url) const
@@ -194,7 +194,7 @@ void DirModel::showPreview(const KFileItem &item, const QPixmap &preview)
 
     m_imageCache->insertImage(item.url().toString(), preview.toImage());
     // qDebug() << "preview size:" << preview.size();
-    emit dataChanged(index, index);
+    Q_EMIT dataChanged(index, index);
 }
 
 void DirModel::previewFailed(const KFileItem &item)

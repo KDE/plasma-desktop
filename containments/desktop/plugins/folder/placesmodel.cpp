@@ -70,7 +70,7 @@ void PlacesModel::setShowDesktopEntry(bool showDesktopEntry)
 
         invalidateFilter();
 
-        emit showDesktopEntryChanged();
+        Q_EMIT showDesktopEntryChanged();
     }
 }
 

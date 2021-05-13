@@ -142,6 +142,6 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
 void WindowModel::refreshStackingOrder()
 {
     if (rowCount()) {
-        emit dataChanged(index(0, 0), index(rowCount() - 1, 0), QVector<int>{StackingOrder});
+        Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0), QVector<int>{StackingOrder});
     }
 }
