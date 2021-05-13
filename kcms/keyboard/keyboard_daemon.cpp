@@ -159,14 +159,14 @@ void KeyboardDaemon::layoutChangedSlot()
 {
     layoutMemory.layoutChanged();
 
-    emit layoutChanged(getLayout());
+    Q_EMIT layoutChanged(getLayout());
 }
 
 void KeyboardDaemon::layoutMapChanged()
 {
     keyboardConfig.load();
     layoutMemory.layoutMapChanged();
-    emit layoutListChanged();
+    Q_EMIT layoutListChanged();
 }
 
 void KeyboardDaemon::switchToNextLayout()

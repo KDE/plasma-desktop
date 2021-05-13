@@ -149,7 +149,7 @@ void PredicateModel::setRootPredicate(PredicateItem *item)
 
 void PredicateModel::itemUpdated(const QModelIndex &item)
 {
-    emit dataChanged(item, item);
+    Q_EMIT dataChanged(item, item);
 }
 
 void PredicateModel::childrenChanging(const QModelIndex &item, Solid::Predicate::Type oldType)

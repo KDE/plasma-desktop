@@ -42,11 +42,11 @@ bool ShortCut::eventFilter(QObject *obj, QEvent *e)
         QKeyEvent *keyEvent = static_cast<QKeyEvent *>(e);
         int keyInt = keyEvent->modifiers() + keyEvent->key();
         if (KStandardShortcut::deleteFile().contains(QKeySequence(keyInt))) {
-            emit deleteFile();
+            Q_EMIT deleteFile();
         } else if (KStandardShortcut::renameFile().contains(QKeySequence(keyInt))) {
-            emit renameFile();
+            Q_EMIT renameFile();
         } else if (KStandardShortcut::moveToTrash().contains(QKeySequence(keyInt))) {
-            emit moveToTrash();
+            Q_EMIT moveToTrash();
         }
     }
 

@@ -45,8 +45,8 @@ KeysData::KeysData(QObject *parent, const QVariantList &args)
         return;
     }
 
-    // Default behavior of KCModuleData is to emit the 'aboutToLoad' after construction which
-    // triggers the 'loaded' signal. Because we query the data in an async way we emit 'loaded'
+    // Default behavior of KCModuleData is to Q_EMIT the 'aboutToLoad' after construction which
+    // triggers the 'loaded' signal. Because we query the data in an async way we Q_EMIT 'loaded'
     // manually when were are done.
     disconnect(this, &KCModuleData::aboutToLoad, this, &KCModuleData::loaded);
 

@@ -261,7 +261,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 // we don't set action, since we want to catch the button click,
                 // animate, and then trigger the "remove" action
                 // Triggering the action is handled in the overlay.itemContainer, we just
-                // emit a signal here to avoid the applet-gets-removed-before-we-
+                // Q_EMIT a signal here to avoid the applet-gets-removed-before-we-
                 // can-animate it race condition.
                 onClicked: {
                     removeAnim.restart();

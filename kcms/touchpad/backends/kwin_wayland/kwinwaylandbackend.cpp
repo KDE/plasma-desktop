@@ -141,12 +141,12 @@ void KWinWaylandBackend::onDeviceAdded(QString sysName)
     if (reply.isValid() && reply.toBool()) {
         KWinWaylandTouchpad *tp = new KWinWaylandTouchpad(sysName);
         if (!tp->init() || !tp->getConfig()) {
-            emit touchpadAdded(false);
+            Q_EMIT touchpadAdded(false);
             return;
         }
         m_devices.append(tp);
         qCDebug(KCM_TOUCHPAD).nospace() << "Touchpad connected: " << tp->name() << " (" << tp->sysName() << ")";
-        emit touchpadAdded(true);
+        Q_EMIT touchpadAdded(true);
     }
 }
 
@@ -164,5 +164,5 @@ void KWinWaylandBackend::onDeviceRemoved(QString sysName)
 
     int index = it - m_devices.cbegin();
     m_devices.removeAt(index);
-    emit touchpadRemoved(index);
+    Q_EMIT touchpadRemoved(index);
 }

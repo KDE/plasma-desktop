@@ -196,10 +196,10 @@ void GlobalAccelModel::save()
                     if (reply.error().isValid()) {
                         qCCritical(KCMKEYS) << reply.error().name() << reply.error().message();
                     }
-                    emit errorOccured(i18nc("%1 is the name of the component, %2 is the action for which saving failed",
-                                            "Error while saving shortcut %1: %2",
-                                            it->displayName,
-                                            it->displayName));
+                    Q_EMIT errorOccured(i18nc("%1 is the name of the component, %2 is the action for which saving failed",
+                                              "Error while saving shortcut %1: %2",
+                                              it->displayName,
+                                              it->displayName));
                 } else {
                     action.initialShortcuts = action.activeShortcuts;
                 }
@@ -333,5 +333,5 @@ void GlobalAccelModel::genericErrorOccured(const QString &description, const QDB
     if (error.isValid()) {
         qCCritical(KCMKEYS) << error.name() << error.message();
     }
-    emit this->errorOccured(i18n("Error while communicating with the global shortcuts service"));
+    Q_EMIT this->errorOccured(i18n("Error while communicating with the global shortcuts service"));
 }

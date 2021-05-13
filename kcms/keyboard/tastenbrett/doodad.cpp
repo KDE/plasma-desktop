@@ -78,7 +78,7 @@ void IndicatorDoodad::refreshState()
     } else {
         on = onInt == True ? true : false;
     }
-    emit onChanged();
+    Q_EMIT onChanged();
 }
 
 LogoDoodad::LogoDoodad(XkbDoodadPtr doodad_, XkbDescPtr xkb_, QObject *parent)

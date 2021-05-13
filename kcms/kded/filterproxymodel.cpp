@@ -39,7 +39,7 @@ void FilterProxyModel::setQuery(const QString &query)
     if (m_query != query) {
         m_query = query;
         invalidateFilter();
-        emit queryChanged();
+        Q_EMIT queryChanged();
     }
 }
 
@@ -53,7 +53,7 @@ void FilterProxyModel::setStatusFilter(KDEDConfig::ModuleStatus statusFilter)
     if (m_statusFilter != statusFilter) {
         m_statusFilter = statusFilter;
         invalidateFilter();
-        emit statusFilterChanged();
+        Q_EMIT statusFilterChanged();
     }
 }
 

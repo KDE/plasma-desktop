@@ -122,7 +122,7 @@ FilteredShortcutsModel *KCMKeys::filteredModel() const
 void KCMKeys::setError(const QString &errorMessage)
 {
     m_lastError = errorMessage;
-    emit this->errorOccured();
+    Q_EMIT this->errorOccured();
 }
 
 QString KCMKeys::lastError() const
@@ -259,7 +259,7 @@ void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index, 
     connect(dialog, &QDialog::finished, this, [index, conflict, newSequence, oldSequence](int result) {
         auto model = const_cast<BaseModel *>(static_cast<const BaseModel *>(index.model()));
         if (result != QDialogButtonBox::Yes) {
-            // Also emit if we are not changing anything, to force the frontend to update and be consistent
+            // Also Q_EMIT if we are not changing anything, to force the frontend to update and be consistent
             // with the model. It is currently out of sync because it reflects the user input that
             // was rejected now.
             Q_EMIT model->dataChanged(index, index, {BaseModel::ActiveShortcutsRole, BaseModel::CustomShortcutsRole});

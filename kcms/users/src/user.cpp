@@ -234,7 +234,7 @@ void User::setPassword(const QString &password)
     auto invocation = m_dbusIface->SetPassword(saltPassword(password), QString());
     invocation.waitForFinished();
     if (!invocation.isError()) {
-        emit passwordSuccessfullyChanged();
+        Q_EMIT passwordSuccessfullyChanged();
     }
 }
 

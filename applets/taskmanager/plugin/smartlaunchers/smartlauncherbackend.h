@@ -103,7 +103,7 @@ private:
             const T newSanitizedValue = ((this)->*getter)(storageId);
 
             if (newSanitizedValue != oldSanitizedValue) {
-                emit((this)->*changeSignal)(storageId, newSanitizedValue);
+                Q_EMIT((this)->*changeSignal)(storageId, newSanitizedValue);
             }
         }
     }

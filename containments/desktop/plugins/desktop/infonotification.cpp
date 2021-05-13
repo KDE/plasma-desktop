@@ -42,7 +42,7 @@ void InfoNotification::setEnabled(bool enabled)
     if (m_enabled != enabled) {
         m_enabled = enabled;
 
-        emit enabledChanged();
+        Q_EMIT enabledChanged();
     }
 }
 
@@ -74,7 +74,7 @@ void InfoNotification::setIconName(const QString &iconName)
     if (m_iconName != iconName) {
         m_iconName = iconName;
 
-        emit iconNameChanged();
+        Q_EMIT iconNameChanged();
     }
 }
 
@@ -88,7 +88,7 @@ void InfoNotification::setTitleText(const QString &titleText)
     if (m_titleText != titleText) {
         m_titleText = titleText;
 
-        emit titleTextChanged();
+        Q_EMIT titleTextChanged();
     }
 }
 
@@ -102,7 +102,7 @@ void InfoNotification::setText(const QString &text)
     if (m_text != text) {
         m_text = text;
 
-        emit textChanged();
+        Q_EMIT textChanged();
     }
 }
 
@@ -116,6 +116,6 @@ void InfoNotification::setAcknowledgeActionText(const QString &acknowledgeAction
     if (m_acknowledgeActionText != acknowledgeActionText) {
         m_acknowledgeActionText = acknowledgeActionText;
 
-        emit acknowledgeActionTextChanged();
+        Q_EMIT acknowledgeActionTextChanged();
     }
 }

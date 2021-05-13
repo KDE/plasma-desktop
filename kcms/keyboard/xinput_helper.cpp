@@ -60,7 +60,7 @@ XInputEventNotifier::XInputEventNotifier(QWidget *parent)
 {
     Q_UNUSED(parent)
 
-    // emit signal only once, even after X11 re-enables N keyboards after resuming from suspend
+    // Q_EMIT signal only once, even after X11 re-enables N keyboards after resuming from suspend
     keyboardNotificationTimer->setSingleShot(true);
     keyboardNotificationTimer->setInterval(500);
     connect(keyboardNotificationTimer, &QTimer::timeout, this, &XInputEventNotifier::newKeyboardDevice);
@@ -170,7 +170,7 @@ int XInputEventNotifier::registerForNewDeviceEvent(Display * /*display*/)
         udevNotifier = new UdevDeviceNotifier(this);
         connect(udevNotifier, &UdevDeviceNotifier::newKeyboardDevice, this, &XInputEventNotifier::newKeyboardDevice);
         connect(udevNotifier, &UdevDeviceNotifier::newPointerDevice, this, &XInputEventNotifier::newPointerDevice);
-        // Same as with XInput notifier, also emit newKeyboardDevice when pointer device is found
+        // Same as with XInput notifier, also Q_EMIT newKeyboardDevice when pointer device is found
         connect(udevNotifier, &UdevDeviceNotifier::newPointerDevice, this, &XInputEventNotifier::newKeyboardDevice);
     }
 

@@ -100,7 +100,7 @@ void ScreenMapper::removeScreen(int screenId, const QUrl &screenUrl)
         }
     }
 
-    emit screensChanged();
+    Q_EMIT screensChanged();
 }
 
 void ScreenMapper::addScreen(int screenId, const QUrl &screenUrl)
@@ -141,7 +141,7 @@ void ScreenMapper::addScreen(int screenId, const QUrl &screenUrl)
         }
     }
 
-    emit screensChanged();
+    Q_EMIT screensChanged();
 }
 
 void ScreenMapper::addMapping(const QUrl &url, int screen, MappingSignalBehavior behavior)
@@ -150,7 +150,7 @@ void ScreenMapper::addMapping(const QUrl &url, int screen, MappingSignalBehavior
     if (behavior == DelayedSignal) {
         m_screenMappingChangedTimer->start();
     } else {
-        emit screenMappingChanged();
+        Q_EMIT screenMappingChanged();
     }
 }
 
@@ -250,7 +250,7 @@ void ScreenMapper::setScreenMapping(const QStringList &mapping)
 
     if (m_screenItemMap != newMap) {
         m_screenItemMap = newMap;
-        emit screenMappingChanged();
+        Q_EMIT screenMappingChanged();
     }
 }
 

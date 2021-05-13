@@ -165,7 +165,7 @@ void KCMSplashScreen::load()
         defaults();
     }
 
-    emit m_data->settings()->themeChanged();
+    Q_EMIT m_data->settings()->themeChanged();
 }
 
 void KCMSplashScreen::save()
@@ -222,7 +222,7 @@ void KCMSplashScreen::test(const QString &plugin)
     m_testProcess = new QProcess(this);
     connect(m_testProcess, &QProcess::errorOccurred, this, [this](QProcess::ProcessError error) {
         Q_UNUSED(error)
-        emit testingFailed(QString::fromLocal8Bit(m_testProcess->readAllStandardError()));
+        Q_EMIT testingFailed(QString::fromLocal8Bit(m_testProcess->readAllStandardError()));
     });
     connect(m_testProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this](int exitCode, QProcess::ExitStatus exitStatus) {
         Q_UNUSED(exitCode)
@@ -230,10 +230,10 @@ void KCMSplashScreen::test(const QString &plugin)
 
         m_testProcess->deleteLater();
         m_testProcess = nullptr;
-        emit testingChanged();
+        Q_EMIT testingChanged();
     });
 
-    emit testingChanged();
+    Q_EMIT testingChanged();
     m_testProcess->start(QStringLiteral("ksplashqml"), {plugin, QStringLiteral("--test")});
 }
 

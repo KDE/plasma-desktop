@@ -133,7 +133,7 @@ void TouchpadConfigLibinput::save()
     // load newly written values
     load();
     // in case of error, config still in changed state
-    emit m_parent->changed(m_backend->isChangedConfig());
+    Q_EMIT m_parent->changed(m_backend->isChangedConfig());
 }
 
 void TouchpadConfigLibinput::defaults()
@@ -149,7 +149,7 @@ void TouchpadConfigLibinput::defaults()
         m_errorMessage->animatedShow();
     }
     QMetaObject::invokeMethod(m_view->rootObject(), "syncValuesFromBackend");
-    emit m_parent->changed(m_backend->isChangedConfig());
+    Q_EMIT m_parent->changed(m_backend->isChangedConfig());
 }
 
 void TouchpadConfigLibinput::onChange()
@@ -158,7 +158,7 @@ void TouchpadConfigLibinput::onChange()
         return;
     }
     hideErrorMessage();
-    emit m_parent->changed(m_backend->isChangedConfig());
+    Q_EMIT m_parent->changed(m_backend->isChangedConfig());
 }
 
 void TouchpadConfigLibinput::onTouchpadAdded(bool success)
@@ -206,7 +206,7 @@ void TouchpadConfigLibinput::onTouchpadRemoved(int index)
     QMetaObject::invokeMethod(m_view->rootObject(), "resetModel", Q_ARG(QVariant, activeIndex));
     QMetaObject::invokeMethod(rootObj, "syncValuesFromBackend");
 
-    emit m_parent->changed(m_backend->isChangedConfig());
+    Q_EMIT m_parent->changed(m_backend->isChangedConfig());
 }
 
 void TouchpadConfigLibinput::hideErrorMessage()

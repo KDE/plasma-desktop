@@ -84,8 +84,8 @@ bool MimeTypesModel::setData(const QModelIndex &index, const QVariant &value, in
         const bool newChecked = value.toBool();
         if (m_checkedRows.at(index.row()) != newChecked) {
             m_checkedRows[index.row()] = newChecked;
-            emit dataChanged(index, index, {role});
-            emit checkedTypesChanged();
+            Q_EMIT dataChanged(index, index, {role});
+            Q_EMIT checkedTypesChanged();
             return true;
         }
     }
@@ -132,7 +132,7 @@ void MimeTypesModel::setCheckedTypes(const QStringList &list)
         }
     }
 
-    emit dataChanged(index(0, 0), index(m_mimeTypesList.size() - 1, 0), {Qt::CheckStateRole});
+    Q_EMIT dataChanged(index(0, 0), index(m_mimeTypesList.size() - 1, 0), {Qt::CheckStateRole});
 
-    emit checkedTypesChanged();
+    Q_EMIT checkedTypesChanged();
 }

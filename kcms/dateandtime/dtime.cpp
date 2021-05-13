@@ -181,18 +181,18 @@ void Dtime::set_time()
     time = timeEdit->time();
     kclock->setTime(time);
 
-    emit timeChanged(true);
+    Q_EMIT timeChanged(true);
 }
 
 void Dtime::changeDate(const QDate &d)
 {
     date = d;
-    emit timeChanged(true);
+    Q_EMIT timeChanged(true);
 }
 
 void Dtime::configChanged()
 {
-    emit timeChanged(true);
+    Q_EMIT timeChanged(true);
 }
 
 void Dtime::load()
@@ -245,7 +245,7 @@ void Dtime::load()
     currentZone();
 
     tzonelist->setSelected(currentTimeZone, true);
-    emit timeChanged(false);
+    Q_EMIT timeChanged(false);
 }
 
 QString Dtime::selectedTimeZone() const

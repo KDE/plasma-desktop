@@ -61,7 +61,7 @@ void Positioner::setEnabled(bool enabled)
 
         endResetModel();
 
-        emit enabledChanged();
+        Q_EMIT enabledChanged();
 
         if (!enabled) {
             m_updatePositionsTimer->start();
@@ -95,7 +95,7 @@ void Positioner::setFolderModel(QObject *folderModel)
 
         endResetModel();
 
-        emit folderModelChanged();
+        Q_EMIT folderModelChanged();
     }
 }
 
@@ -109,7 +109,7 @@ void Positioner::setPerStripe(int perStripe)
     if (m_perStripe != perStripe) {
         m_perStripe = perStripe;
 
-        emit perStripeChanged();
+        Q_EMIT perStripeChanged();
 
         if (m_enabled && perStripe > 0 && !m_proxyToSource.isEmpty()) {
             applyPositions();
@@ -127,7 +127,7 @@ void Positioner::setPositions(const QStringList &positions)
     if (m_positions != positions) {
         m_positions = positions;
 
-        emit positionsChanged();
+        Q_EMIT positionsChanged();
 
         // Defer applying positions until listing completes.
         if (m_folderModel->status() == FolderModel::Listing) {
@@ -355,7 +355,7 @@ void Positioner::reset()
     endResetModel();
 
     m_positions = QStringList();
-    emit positionsChanged();
+    Q_EMIT positionsChanged();
 }
 
 void Positioner::move(const QVariantList &moves)
@@ -422,11 +422,11 @@ void Positioner::move(const QVariantList &moves)
         updateMaps(to, sourceRow);
 
         const QModelIndex &fromIdx = index(from, 0);
-        emit dataChanged(fromIdx, fromIdx);
+        Q_EMIT dataChanged(fromIdx, fromIdx);
 
         if (to < oldCount) {
             const QModelIndex &toIdx = index(to, 0);
-            emit dataChanged(toIdx, toIdx);
+            Q_EMIT dataChanged(toIdx, toIdx);
         }
     }
 
@@ -479,7 +479,7 @@ void Positioner::updatePositions()
     if (positions != m_positions) {
         m_positions = positions;
 
-        emit positionsChanged();
+        Q_EMIT positionsChanged();
     }
 }
 
@@ -505,11 +505,11 @@ void Positioner::sourceDataChanged(const QModelIndex &topLeft, const QModelIndex
             if (m_sourceToProxy.contains(i)) {
                 const QModelIndex &idx = index(m_sourceToProxy.value(i), 0);
 
-                emit dataChanged(idx, idx);
+                Q_EMIT dataChanged(idx, idx);
             }
         }
     } else {
-        emit dataChanged(topLeft, bottomRight, roles);
+        Q_EMIT dataChanged(topLeft, bottomRight, roles);
     }
 }
 
@@ -648,7 +648,7 @@ void Positioner::sourceLayoutAboutToBeChanged(const QList<QPersistentModelIndex>
 {
     Q_UNUSED(parents)
 
-    emit layoutAboutToBeChanged(QList<QPersistentModelIndex>(), hint);
+    Q_EMIT layoutAboutToBeChanged(QList<QPersistentModelIndex>(), hint);
 }
 
 void Positioner::sourceRowsInserted(const QModelIndex &parent, int first, int last)
@@ -693,7 +693,7 @@ void Positioner::sourceRowsRemoved(const QModelIndex &parent, int first, int las
     Q_UNUSED(last)
 
     if (!m_ignoreNextTransaction) {
-        emit endRemoveRows();
+        Q_EMIT endRemoveRows();
     } else {
         m_ignoreNextTransaction = false;
     }
@@ -711,7 +711,7 @@ void Positioner::sourceLayoutChanged(const QList<QPersistentModelIndex> &parents
         initMaps();
     }
 
-    emit layoutChanged(QList<QPersistentModelIndex>(), hint);
+    Q_EMIT layoutChanged(QList<QPersistentModelIndex>(), hint);
 }
 
 void Positioner::initMaps(int size)
@@ -913,7 +913,7 @@ void Positioner::flushPendingChanges()
 
     foreach (const QModelIndex &idx, m_pendingChanges) {
         if (idx.row() <= last) {
-            emit dataChanged(idx, idx);
+            Q_EMIT dataChanged(idx, idx);
         }
     }
 

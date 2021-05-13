@@ -123,7 +123,7 @@ void Item::setLauncherUrl(const QUrl &launcherUrl)
 {
     if (launcherUrl != m_launcherUrl) {
         m_launcherUrl = launcherUrl;
-        emit launcherUrlChanged(launcherUrl);
+        Q_EMIT launcherUrlChanged(launcherUrl);
 
         m_storageId.clear();
         clear();
@@ -171,7 +171,7 @@ void Item::setCount(int count)
 {
     if (m_count != count) {
         m_count = count;
-        emit countChanged(count);
+        Q_EMIT countChanged(count);
     }
 }
 
@@ -184,7 +184,7 @@ void Item::setCountVisible(bool countVisible)
 {
     if (m_countVisible != countVisible) {
         m_countVisible = countVisible;
-        emit countVisibleChanged(countVisible);
+        Q_EMIT countVisibleChanged(countVisible);
     }
 }
 
@@ -197,7 +197,7 @@ void Item::setProgress(int progress)
 {
     if (m_progress != progress) {
         m_progress = progress;
-        emit progressChanged(progress);
+        Q_EMIT progressChanged(progress);
     }
 }
 
@@ -210,7 +210,7 @@ void Item::setProgressVisible(bool progressVisible)
 {
     if (m_progressVisible != progressVisible) {
         m_progressVisible = progressVisible;
-        emit progressVisibleChanged(progressVisible);
+        Q_EMIT progressVisibleChanged(progressVisible);
     }
 }
 
@@ -223,6 +223,6 @@ void Item::setUrgent(bool urgent)
 {
     if (m_urgent != urgent) {
         m_urgent = urgent;
-        emit urgentChanged(urgent);
+        Q_EMIT urgentChanged(urgent);
     }
 }

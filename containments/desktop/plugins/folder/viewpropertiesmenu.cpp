@@ -121,7 +121,7 @@ void ViewPropertiesMenu::setShowLayoutActions(bool show)
         m_arrangementMenu->menuAction()->setVisible(show);
         m_alignmentMenu->menuAction()->setVisible(show);
 
-        emit showLayoutActionsChanged();
+        Q_EMIT showLayoutActionsChanged();
     }
 }
 
@@ -135,7 +135,7 @@ void ViewPropertiesMenu::setShowLockAction(bool show)
     if (m_locked->isVisible() != show) {
         m_locked->setVisible(show);
 
-        emit showLockActionChanged();
+        Q_EMIT showLockActionChanged();
     }
 }
 
@@ -148,7 +148,7 @@ void ViewPropertiesMenu::setShowIconSizeActions(bool show)
 {
     if (showIconSizeActions() != show) {
         m_iconSizeMenu->menuAction()->setVisible(show);
-        emit showIconSizeActionsChanged();
+        Q_EMIT showIconSizeActionsChanged();
     }
 }
 
@@ -219,7 +219,7 @@ void ViewPropertiesMenu::setLockedEnabled(bool enabled)
 {
     if (m_locked->isEnabled() != enabled) {
         m_locked->setEnabled(enabled);
-        emit lockedEnabledChanged();
+        Q_EMIT lockedEnabledChanged();
     }
 }
 

@@ -106,7 +106,7 @@ void KDEDConfig::setKdedRunning(bool kdedRunning)
     }
 
     m_kdedRunning = kdedRunning;
-    emit kdedRunningChanged();
+    Q_EMIT kdedRunningChanged();
 
     if (kdedRunning) {
         getModuleStatus();
@@ -136,18 +136,18 @@ void KDEDConfig::startOrStopModule(const QString &moduleName, ModuleStatus statu
 
         if (reply.isError()) {
             if (status == NotRunning) {
-                emit errorMessage(i18n("Failed to stop service: %1", reply.error().message()));
+                Q_EMIT errorMessage(i18n("Failed to stop service: %1", reply.error().message()));
             } else {
-                emit errorMessage(i18n("Failed to start service: %1", reply.error().message()));
+                Q_EMIT errorMessage(i18n("Failed to start service: %1", reply.error().message()));
             }
             return;
         }
 
         if (!reply.value()) {
             if (status == NotRunning) {
-                emit errorMessage(i18n("Failed to stop service."));
+                Q_EMIT errorMessage(i18n("Failed to stop service."));
             } else {
-                emit errorMessage(i18n("Failed to start service."));
+                Q_EMIT errorMessage(i18n("Failed to start service."));
             }
             return;
         }
@@ -185,7 +185,7 @@ void KDEDConfig::getModuleStatus()
         // based on some configuration independ of kded or the current environment.
         // At least provide some feedback and not leave the user wondering why the service doesn't start.
         if (!m_lastStartedModule.isEmpty() && !runningModules.contains(m_lastStartedModule)) {
-            emit showSelfDisablingModulesHint();
+            Q_EMIT showSelfDisablingModulesHint();
         }
         m_lastStartedModule.clear();
 
@@ -195,7 +195,7 @@ void KDEDConfig::getModuleStatus()
             std::sort(runningModules.begin(), runningModules.end());
 
             if (m_runningModulesBeforeReconfigure != runningModules) {
-                emit showRunningModulesChangedAfterSaveHint();
+                Q_EMIT showRunningModulesChangedAfterSaveHint();
             }
         }
         m_runningModulesBeforeReconfigure.clear();
@@ -245,7 +245,7 @@ void KDEDConfig::save()
         watcher->deleteLater();
 
         if (reply.isError()) {
-            emit errorMessage(i18n("Failed to notify KDE Service Manager (kded5) of saved changed: %1", reply.error().message()));
+            Q_EMIT errorMessage(i18n("Failed to notify KDE Service Manager (kded5) of saved changed: %1", reply.error().message()));
             return;
         }
 

@@ -76,5 +76,5 @@ void FilteredShortcutsModel::setFilter(const QString &filter)
     }
     m_filter = filter;
     invalidateFilter();
-    emit filterChanged();
+    Q_EMIT filterChanged();
 }

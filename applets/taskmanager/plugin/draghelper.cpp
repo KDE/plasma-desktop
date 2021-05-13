@@ -49,7 +49,7 @@ void DragHelper::setDragIconSize(int size)
     if (m_dragIconSize != size) {
         m_dragIconSize = size;
 
-        emit dragIconSizeChanged();
+        Q_EMIT dragIconSizeChanged();
     }
 }
 
@@ -92,5 +92,5 @@ void DragHelper::startDragInternal(QQuickItem *item, const QString &mimeType, co
         grabber->ungrabMouse();
     }
 
-    emit dropped();
+    Q_EMIT dropped();
 }

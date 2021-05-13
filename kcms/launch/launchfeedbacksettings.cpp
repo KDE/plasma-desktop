@@ -113,7 +113,7 @@ void LaunchFeedbackSettings::addItemInternal(const QByteArray &propertyName, con
     auto item = new KPropertySkeletonItem(m_settingsStore, propertyName, defaultValue);
     addItem(item, propertyName);
     item->setNotifyFunction([this, notifySignal] {
-        emit(this->*notifySignal)();
+        Q_EMIT(this->*notifySignal)();
     });
 }
 

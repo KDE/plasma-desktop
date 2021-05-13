@@ -144,7 +144,7 @@ void LibinputConfig::save()
     // load newly written values
     load();
     // in case of error, config still in changed state
-    emit m_parent->changed(m_backend->isChangedConfig());
+    Q_EMIT m_parent->changed(m_backend->isChangedConfig());
 }
 
 void LibinputConfig::defaults()
@@ -160,7 +160,7 @@ void LibinputConfig::defaults()
         m_errorMessage->animatedShow();
     }
     QMetaObject::invokeMethod(m_view->rootObject(), "syncValuesFromBackend");
-    emit m_parent->changed(m_backend->isChangedConfig());
+    Q_EMIT m_parent->changed(m_backend->isChangedConfig());
 }
 
 void LibinputConfig::onChange()
@@ -169,7 +169,7 @@ void LibinputConfig::onChange()
         return;
     }
     hideErrorMessage();
-    emit m_parent->changed(m_backend->isChangedConfig());
+    Q_EMIT m_parent->changed(m_backend->isChangedConfig());
 }
 
 void LibinputConfig::onDeviceAdded(bool success)
@@ -217,7 +217,7 @@ void LibinputConfig::onDeviceRemoved(int index)
     QMetaObject::invokeMethod(m_view->rootObject(), "resetModel", Q_ARG(QVariant, activeIndex));
     QMetaObject::invokeMethod(rootObj, "syncValuesFromBackend");
 
-    emit m_parent->changed(m_backend->isChangedConfig());
+    Q_EMIT m_parent->changed(m_backend->isChangedConfig());
 }
 
 void LibinputConfig::hideErrorMessage()

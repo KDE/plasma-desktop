@@ -110,41 +110,41 @@ void PanelAgent::serviceUnregistered(const QString &service)
         m_watcher->setWatchedServices(QStringList());
         m_cachedProps.clear();
         m_currentService = QString();
-        emit showAux(false);
-        emit showPreedit(false);
-        emit showLookupTable(false);
-        emit registerProperties(QList<KimpanelProperty>());
+        Q_EMIT showAux(false);
+        Q_EMIT showPreedit(false);
+        Q_EMIT showLookupTable(false);
+        Q_EMIT registerProperties(QList<KimpanelProperty>());
     }
 }
 
 void PanelAgent::configure()
 {
-    emit Configure();
+    Q_EMIT Configure();
 }
 
 void PanelAgent::lookupTablePageDown()
 {
-    emit LookupTablePageDown();
+    Q_EMIT LookupTablePageDown();
 }
 
 void PanelAgent::lookupTablePageUp()
 {
-    emit LookupTablePageUp();
+    Q_EMIT LookupTablePageUp();
 }
 
 void PanelAgent::movePreeditCaret(int pos)
 {
-    emit MovePreeditCaret(pos);
+    Q_EMIT MovePreeditCaret(pos);
 }
 
 void PanelAgent::triggerProperty(const QString &key)
 {
-    emit TriggerProperty(key);
+    Q_EMIT TriggerProperty(key);
 }
 
 void PanelAgent::selectCandidate(int idx)
 {
-    emit SelectCandidate(idx);
+    Q_EMIT SelectCandidate(idx);
 }
 
 static QList<TextAttribute> String2AttrList(const QString &str)
@@ -224,33 +224,33 @@ static KimpanelLookupTable Args2LookupTable(const QStringList &labels, const QSt
 
 void PanelAgent::created()
 {
-    emit PanelCreated();
-    emit PanelCreated2();
+    Q_EMIT PanelCreated();
+    Q_EMIT PanelCreated2();
 }
 
 void PanelAgent::exit()
 {
-    emit Exit();
+    Q_EMIT Exit();
 }
 
 void PanelAgent::reloadConfig()
 {
-    emit ReloadConfig();
+    Q_EMIT ReloadConfig();
 }
 
 void PanelAgent::UpdateLookupTable(const QStringList &labels, const QStringList &candis, const QStringList &attrlists, bool has_prev, bool has_next)
 {
-    emit updateLookupTable(Args2LookupTable(labels, candis, attrlists, has_prev, has_next));
+    Q_EMIT updateLookupTable(Args2LookupTable(labels, candis, attrlists, has_prev, has_next));
 }
 
 void PanelAgent::UpdatePreeditText(const QString &text, const QString &attr)
 {
-    emit updatePreeditText(text, String2AttrList(attr));
+    Q_EMIT updatePreeditText(text, String2AttrList(attr));
 }
 
 void PanelAgent::UpdateAux(const QString &text, const QString &attr)
 {
-    emit updateAux(text, String2AttrList(attr));
+    Q_EMIT updateAux(text, String2AttrList(attr));
 }
 
 void PanelAgent::UpdateScreen(int screen_id)
@@ -260,7 +260,7 @@ void PanelAgent::UpdateScreen(int screen_id)
 
 void PanelAgent::UpdateProperty(const QString &prop)
 {
-    emit updateProperty(String2Property(prop));
+    Q_EMIT updateProperty(String2Property(prop));
 }
 
 void PanelAgent::RegisterProperties(const QStringList &props)
@@ -269,7 +269,7 @@ void PanelAgent::RegisterProperties(const QStringList &props)
     if (msg.service() != m_currentService) {
         m_watcher->removeWatchedService(m_currentService);
         if (m_currentService.isEmpty()) {
-            emit PanelRegistered();
+            Q_EMIT PanelRegistered();
         }
         m_currentService = msg.service();
         m_watcher->addWatchedService(m_currentService);
@@ -281,13 +281,13 @@ void PanelAgent::RegisterProperties(const QStringList &props)
             list << String2Property(prop);
         }
 
-        emit registerProperties(list);
+        Q_EMIT registerProperties(list);
     }
 }
 
 void PanelAgent::ExecDialog(const QString &prop)
 {
-    emit execDialog(String2Property(prop));
+    Q_EMIT execDialog(String2Property(prop));
 }
 
 void PanelAgent::ExecMenu(const QStringList &entries)
@@ -297,12 +297,12 @@ void PanelAgent::ExecMenu(const QStringList &entries)
         list << String2Property(entry);
     }
 
-    emit execMenu(list);
+    Q_EMIT execMenu(list);
 }
 
 void PanelAgent::SetSpotRect(int x, int y, int w, int h)
 {
-    emit updateSpotRect(x, y, w, h);
+    Q_EMIT updateSpotRect(x, y, w, h);
 }
 
 void PanelAgent::SetLookupTable(const QStringList &labels,
@@ -313,5 +313,5 @@ void PanelAgent::SetLookupTable(const QStringList &labels,
                                 int cursor,
                                 int layout)
 {
-    emit updateLookupTableFull(Args2LookupTable(labels, candis, attrlists, hasPrev, hasNext), cursor, layout);
+    Q_EMIT updateLookupTableFull(Args2LookupTable(labels, candis, attrlists, hasPrev, hasNext), cursor, layout);
 }

@@ -135,7 +135,7 @@ void BlacklistedApplicationsModel::load()
 void BlacklistedApplicationsModel::save()
 {
     d->pluginConfig->save();
-    emit changed(false);
+    Q_EMIT changed(false);
 }
 
 void BlacklistedApplicationsModel::defaults()
@@ -146,7 +146,7 @@ void BlacklistedApplicationsModel::defaults()
 
     Q_EMIT dataChanged(QAbstractListModel::index(0), QAbstractListModel::index(rowCount() - 1));
 
-    emit defaulted(true);
+    Q_EMIT defaulted(true);
 }
 
 void BlacklistedApplicationsModel::toggleApplicationBlocked(int index)
@@ -178,8 +178,8 @@ void BlacklistedApplicationsModel::toggleApplicationBlocked(int index)
     const auto blockedApplicationsItem = d->pluginConfig->findItem("allowedApplications");
     Q_ASSERT(blockedApplicationsItem);
 
-    emit changed(blockedApplicationsItem->isSaveNeeded() && allowedApplicationsItem->isSaveNeeded());
-    emit defaulted(blockedApplicationsItem->isDefault() && allowedApplicationsItem->isDefault());
+    Q_EMIT changed(blockedApplicationsItem->isSaveNeeded() && allowedApplicationsItem->isSaveNeeded());
+    Q_EMIT defaulted(blockedApplicationsItem->isDefault() && allowedApplicationsItem->isDefault());
 }
 
 QVariant BlacklistedApplicationsModel::headerData(int section, Qt::Orientation orientation, int role) const
@@ -232,7 +232,7 @@ bool BlacklistedApplicationsModel::enabled() const
 void BlacklistedApplicationsModel::setEnabled(bool enabled)
 {
     d->enabled = enabled;
-    emit enabledChanged(enabled);
+    Q_EMIT enabledChanged(enabled);
 }
 
 // #include <BlacklistedApplicationsModel.moc>

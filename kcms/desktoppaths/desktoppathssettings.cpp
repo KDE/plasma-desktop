@@ -148,7 +148,7 @@ void DesktopPathsSettings::addItemInternal(const QByteArray &propertyName, const
 {
     auto *item = new KPropertySkeletonItem(m_xdgPathsStore, propertyName, defaultValue);
     item->setNotifyFunction([this] {
-        emit this->widgetChanged();
+        Q_EMIT this->widgetChanged();
     });
     addItem(item, propertyName);
 }

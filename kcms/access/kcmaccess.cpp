@@ -241,7 +241,7 @@ void KAccessConfig::setOrcaLaunchFeedback(const QString &value)
 {
     if (m_orcaLaunchFeedback != value) {
         m_orcaLaunchFeedback = value;
-        emit orcaLaunchFeedbackChanged();
+        Q_EMIT orcaLaunchFeedbackChanged();
     }
 }
 

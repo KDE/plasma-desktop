@@ -238,7 +238,7 @@ bool LayoutsTableModel::setData(const QModelIndex &index, const QVariant &value,
         layoutUnit.setShortcut(QKeySequence(value.toString()));
     } break;
     }
-    emit dataChanged(index, index);
+    Q_EMIT dataChanged(index, index);
 
     return true;
 }
@@ -448,8 +448,8 @@ bool XkbOptionsTreeModel::setData(const QModelIndex &index, const QVariant &valu
         keyboardConfig->xkbOptions.removeAll(option->name);
     }
 
-    emit dataChanged(index, index);
-    emit dataChanged(index.parent(), index.parent());
+    Q_EMIT dataChanged(index, index);
+    Q_EMIT dataChanged(index.parent(), index.parent());
     return true;
 }
 

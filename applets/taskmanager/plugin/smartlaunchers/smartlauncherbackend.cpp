@@ -59,7 +59,7 @@ void Backend::reload()
 
     setupApplicationJobs();
 
-    emit reloadRequested(QString() /*all*/);
+    Q_EMIT reloadRequested(QString() /*all*/);
 }
 
 bool Backend::doNotDisturbMode() const
@@ -209,7 +209,7 @@ void Backend::update(const QString &uri, const QMap<QString, QVariant> &properti
             int saneCount = static_cast<int>(newCount);
             if (saneCount != foundEntry->count) {
                 foundEntry->count = saneCount;
-                emit countChanged(storageId, saneCount);
+                Q_EMIT countChanged(storageId, saneCount);
             }
         }
     }
@@ -233,7 +233,7 @@ void Backend::update(const QString &uri, const QMap<QString, QVariant> &properti
         const int newSanitizedProgress = progress(storageId);
 
         if (oldSanitizedProgress != newSanitizedProgress) {
-            emit progressChanged(storageId, newSanitizedProgress);
+            Q_EMIT progressChanged(storageId, newSanitizedProgress);
         }
     }
 
@@ -259,5 +259,5 @@ void Backend::onServiceUnregistered(const QString &service)
     }
 
     m_launchers.remove(storageId);
-    emit launcherRemoved(storageId);
+    Q_EMIT launcherRemoved(storageId);
 }

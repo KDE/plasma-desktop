@@ -40,7 +40,7 @@ void WheelInterceptor::setDestination(QObject *destination)
     if (m_destination != destination) {
         m_destination = destination;
 
-        emit destinationChanged();
+        Q_EMIT destinationChanged();
     }
 }
 
