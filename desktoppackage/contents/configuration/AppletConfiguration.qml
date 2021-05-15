@@ -190,14 +190,16 @@ Rectangle {
                     id: delegate
                     onActivated: categories.openCategory(model);
                     highlighted: {
-                        if (model.kcm && app.pageStack.currentItem.kcm) {
-                            return model.kcm == app.pageStack.currentItem.kcm
+                        if ( app.pageStack.currentItem ){
+                            if (model.kcm && app.pageStack.currentItem.kcm) {
+                                return model.kcm == app.pageStack.currentItem.kcm
+                            } else if (app.pageStack.currentItem.configItem) {
+                                return model.source == app.pageStack.currentItem.configItem.source
+                            } else {
+                                return app.pageStack.currentItem.source == Qt.resolvedUrl(model.source)
+                            }
                         }
-
-                        if (app.pageStack.currentItem && app.pageStack.currentItem.configItem) {
-                            return model.source == app.pageStack.currentItem.configItem.source
-                        }
-                        return app.pageStack.currentItem.source == Qt.resolvedUrl(model.source)
+                        return false
                     }
                     item: model
                 }
