@@ -203,7 +203,7 @@ Item {
 
         CheckBox {
             id: unhideOnAttention
-            Kirigami.FormData.label: i18n("Panel Hiding:")
+            Kirigami.FormData.label: i18n("When panel is hidden:")
             text: i18n("Unhide when a window wants attention")
         }
     }
