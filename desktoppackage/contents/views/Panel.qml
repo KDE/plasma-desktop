@@ -201,10 +201,10 @@ Item {
             pre = "south";
             break;
         default:
-            prefix = "";
+            thickPanelSvg.prefix = "";
             return;
         }
-        prefix = [pre, ""];
+        thickPanelSvg.prefix = [pre, ""];
     }
 
     onContainmentChanged: {
