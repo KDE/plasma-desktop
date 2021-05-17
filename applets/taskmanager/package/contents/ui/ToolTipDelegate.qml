@@ -91,20 +91,24 @@ PlasmaComponents3.ScrollView {
         Component {
             id: groupToolTip
 
-            ListView {
-                implicitHeight: contentItem.childrenRect.height
-                implicitWidth: contentItem.childrenRect.width
-                model: DelegateModel {
-                    model: toolTipDelegate.rootIndex ? tasksModel : null
+            Grid {
+                rows: !isVerticalPanel
+                columns: isVerticalPanel
+                flow: isVerticalPanel ? Grid.TopToBottom : Grid.LeftToRight
+                spacing: PlasmaCore.Units.largeSpacing
 
-                    rootIndex: toolTipDelegate.rootIndex
+                Repeater {
+                    id: groupRepeater
+                    model: DelegateModel {
+                        model: toolTipDelegate.rootIndex ? tasksModel : null
 
-                    delegate: ToolTipInstance {
-                        submodelIndex: tasksModel.makeModelIndex(toolTipDelegate.rootIndex.row, index)
+                        rootIndex: toolTipDelegate.rootIndex
+
+                        delegate: ToolTipInstance {
+                            submodelIndex: tasksModel.makeModelIndex(toolTipDelegate.rootIndex.row, index)
+                        }
                     }
                 }
-                orientation: isVerticalPanel ? ListView.Vertical : ListView.Horizontal
-                spacing: PlasmaCore.Units.largeSpacing
             }
         }
     }
