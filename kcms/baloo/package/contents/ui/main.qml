@@ -60,6 +60,13 @@ KCM.SimpleKCM {
         anchors.margins: Kirigami.Units.largeSpacing
 
         Kirigami.InlineMessage {
+            Layout.fillWidth: true
+            visible: !fileSearchEnabled.checked && kcm.needsSave
+            type: Kirigami.MessageType.Warning
+            showCloseButton: true
+            text: i18n("This will disable file searching in KRunner and launcher menus, and remove extended metadata display from all KDE applications.");
+        }
+        Kirigami.InlineMessage {
             id: indexingDisabledWarning
             Layout.fillWidth: true
             visible: !kcm.balooSettings.indexingEnabled && !kcm.needsSave && kcm.rawIndexFileSize() > 0
