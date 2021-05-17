@@ -112,6 +112,7 @@ KCM.AbstractKCM {
                         KeyNavigation.right: shortcutsList
                         height: Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.smallSpacing + topPadding + bottomPadding
                         RowLayout {
+                        spacing: Kirigami.Units.smallSpacing
                             Kirigami.Icon {
                                 id: appIcon
                                 source: model.decoration
@@ -175,6 +176,8 @@ KCM.AbstractKCM {
                         QQC2.CheckBox {
                             id: sectionCheckbox
                             Layout.alignment: Qt.AlignRight
+                            // width of indicator + layout spacing
+                            Layout.rightMargin: kcm.defaultsIndicatorsVisible ? Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing : 0
                             visible: exportActive
                             onToggled: {
                                 const checked = sectionCheckbox.checked
