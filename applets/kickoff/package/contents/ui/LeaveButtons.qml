@@ -149,13 +149,4 @@ Item {
             }
         }
     }
-
-    Keys.onPressed: {
-        if (event.key == Qt.Key_Tab && mainTabGroup.state == "top") {
-            keyboardNavigation.state = "LeftColumn"
-            root.currentView.forceActiveFocus()
-            event.accepted = true;
-        }
-    }
-
 }

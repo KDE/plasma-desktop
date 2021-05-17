@@ -40,14 +40,6 @@ FocusScope {
 
     property ListView listView: applicationsView.listView
 
-    function keyNavUp() {
-        return applicationsView.keyNavUp();
-    }
-
-    function keyNavDown() {
-        return applicationsView.keyNavDown();
-    }
-
     function activateCurrentIndex() {
         applicationsView.state = "OutgoingLeft";
     }

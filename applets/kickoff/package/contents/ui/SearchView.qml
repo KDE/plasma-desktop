@@ -27,14 +27,6 @@ FocusScope {
 
     objectName: "SearchView"
 
-    function keyNavUp() {
-        return searchView.keyNavUp();
-    }
-
-    function keyNavDown() {
-        return searchView.keyNavDown();
-    }
-
     function activateCurrentIndex() {
         searchView.currentItem.activate();
     }

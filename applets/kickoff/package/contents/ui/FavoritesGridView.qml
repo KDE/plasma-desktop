@@ -31,11 +31,6 @@ FocusScope {
 
     property GridView gridView: favoritesGridView.gridView
 
-    function keyNavLeft() { return favoritesGridView.keyNavLeft() }
-    function keyNavRight() { return favoritesGridView.keyNavRight() }
-    function keyNavUp() { return favoritesGridView.keyNavUp() }
-    function keyNavDown() { return favoritesGridView.keyNavDown() }
-
     function activateCurrentIndex() {
         favoritesGridView.currentItem.activate();
     }

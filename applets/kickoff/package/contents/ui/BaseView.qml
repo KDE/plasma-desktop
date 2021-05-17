@@ -28,14 +28,6 @@ FocusScope {
 
     property ListView listView: baseView.listView
 
-    function keyNavUp() {
-        return baseView.keyNavUp();
-    }
-
-    function keyNavDown() {
-        return baseView.keyNavDown();
-    }
-
     function activateCurrentIndex() {
         baseView.currentItem.activate();
     }

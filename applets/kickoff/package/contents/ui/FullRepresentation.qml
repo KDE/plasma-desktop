@@ -44,10 +44,6 @@ Item {
     property QtObject globalFavorites: rootModel.favoritesModel
     property QtObject systemFavorites: rootModel.systemFavoritesModel
 
-    onFocusChanged: {
-        header.input.forceActiveFocus();
-    }
-
     function switchToInitial() {
         root.state = "Normal";
         tabBar.currentIndex = 0;
@@ -443,11 +439,6 @@ Item {
             id: tabBar
             anchors.fill: parent
             anchors.rightMargin: Math.round(parent.width/1.5)
-            onCurrentIndexChanged: {
-                header.input.forceActiveFocus();
-                keyboardNavigation.state = "LeftColumn"
-                root.currentView.listView.positionAtBeginning();
-            }
 
             PC3.TabButton {
                 id: applicationButton
@@ -457,20 +448,6 @@ Item {
                 icon.name: "applications-other"
                 text: i18n("Applications")
                 hoverEnabled: false
-                Keys.onPressed: {
-                    // On back tab focus on right pane
-                    if (event.key == Qt.Key_Backtab) {
-                        if (mainTabGroup.state == "top") {
-                            header.configureButton.forceActiveFocus(Qt.TabFocusReason)
-                        } else {
-                            navigationMethod.state = "keyboard"
-                            keyboardNavigation.state = "RightColumn"
-                            root.currentContentView.forceActiveFocus()
-                        }
-                        event.accepted = true;
-                        return;
-                    }
-                }
             }
             PC3.TabButton {
                 id: computerButton
@@ -508,231 +485,29 @@ Item {
         }
     }
 
-    // we need to reverse left and right arrows for RTL support
-    function keyBackwardFunction() {
-        if (header.input.activeFocus) { return; }
-        if (keyboardNavigation.state == "RightColumn") {
-            if (root.currentContentView.gridView) {
-                if (!root.currentContentView.keyNavLeft()) { //go left if we're on the first column
-                    keyboardNavigation.state = "LeftColumn";
-                }
-                return;
-            }
-            if (root.currentContentView !== applicationsPage || !root.currentContentView.deactivateCurrentIndex()) {
-                if (root.state != "Search") {
-                    keyboardNavigation.state = "LeftColumn"
-                }
-            }
-        }
-        return;
-    }
-    function keyForwardFunction() {
-        // allow going to right panel immediately even if left panel is not focused
-        if (root.currentContentView.gridView) {
-            if (keyboardNavigation.state != "RightColumn") {
-                keyboardNavigation.state = "RightColumn";
-                if (root.currentContentView.gridView.currentIndex === -1) {
-                    root.currentContentView.keyNavRight()
-                }
-            } else if (root.currentContentView.activeFocus) { // only if focused
-                root.currentContentView.keyNavRight()
-            }
-            return;
-        }
-        // search ignores keyboardNavigation and is always current
-        if ((keyboardNavigation.state == "RightColumn" || root.state == "Search") && root.currentContentView.activeFocus) { // only if focused
-            currentContentView.activateCurrentIndex();
+    function handleCtrlTab(event) {
+        event.accepted = true
+        if (tabBar.currentIndex == 0) {
+            tabBar.currentIndex = 0
         } else {
-            keyboardNavigation.state = "RightColumn";
+            tabBar.currentIndex = 1
         }
-        return;
     }
+    Keys.onTabPressed: if (event.modifiers & Qt.ControlModifier) handleCtrlTab(event)
+    Keys.onBacktabPressed: if (event.modifiers & Qt.ControlModifier) handleCtrlTab(event)
     Keys.onPressed: {
-        // switch tabs on CTRL+Tab (and CTRL+Shift+Tab)
-        if ((event.key == Qt.Key_Tab || event.key == Qt.Key_Backtab) && (event.modifiers & Qt.ControlModifier)) {
-            // only 2 tabs so no need to handle Shift
-            tabBar.currentIndex = !tabBar.currentIndex
-            event.accepted = true;
-            return;
+        if (event.text != "" && !header.input.activeFocus && event.key != Qt.Key_Backspace && event.key != Qt.Key_Backtab && event.key != Qt.Key_Tab) {
+            // Works for both LTR and RTL
+            header.input.insert(header.input.length, event.text.charAt(0))
+            header.input.forceActiveFocus()
         }
-
-        // handle tab navigation for main columns
-        if (event.key == Qt.Key_Tab) {
-            navigationMethod.state = "keyboard"
-            if (root.currentView.activeFocus) {
-                keyboardNavigation.state = "RightColumn"
-                event.accepted = true;
-                return;
-            } else if (root.currentContentView.activeFocus) {
-                // There's no footer when we search
-                if (root.state == "Search" || mainTabGroup.state == "top") {
-                    header.avatar.forceActiveFocus(Qt.TabFocusReason)
-                } else {
-                    applicationButton.forceActiveFocus(Qt.TabFocusReason)
-                }
-                event.accepted = true;
-                return;
-            }
-        }
-        // and backtab navigation
-        if (event.key == Qt.Key_Backtab) {
-            navigationMethod.state = "keyboard"
-            if (root.currentContentView.activeFocus) {
-                // There's no left panel when we search
-                if (root.state == "Search") {
-                    header.configureButton.forceActiveFocus(Qt.BacktabFocusReason)
-                } else {
-                    keyboardNavigation.state = "LeftColumn"
-                }
-                event.accepted = true;
-                return;
-            } else if (root.currentView.activeFocus) {
-                if (mainTabGroup.state == "top" && root.state != "Search") {
-                    leaveButtons.leave.forceActiveFocus(Qt.TabFocusReason)
-                } else {
-                    header.configureButton.forceActiveFocus(Qt.BacktabFocusReason)
-                }
-                event.accepted = true;
-                return;
-            }
-        }
-        var headerUpFooterDown = (event.key == Qt.Key_Down && footer.activeFocus) || (event.key == Qt.Key_Up && header.activeFocus)
-        var headerDownFooterUp = (event.key == Qt.Key_Down && header.activeFocus) || (event.key == Qt.Key_Up && footer.activeFocus)
-        // Don't react on down presses with active footer or up presses with active header (this is inverse when upside down)
-        if ((mainTabGroup.state == "bottom" && headerUpFooterDown) || (mainTabGroup.state == "top" && headerDownFooterUp)) {
-            return;
-        }
-        if (event.key != Qt.Key_Shift) {
-            navigationMethod.state = "keyboard"
-            // Focus on content when pressing down and up from header and footer respectively (this is inverse when upside down)
-            // Note however that we don't filter left and right keys. We still want to move between columns even without focus
-            // Instead we block moving (grid) and submenus (list) and *only* change focus
-            if (((mainTabGroup.state == "bottom" && headerDownFooterUp) || (mainTabGroup.state == "top" && headerUpFooterDown)) && !root.currentView.activeFocus && !root.currentContentView.activeFocus) {
-                if (root.state == "Search") {
-                    keyboardNavigation.state = "RightColumn"
-                }
-                if (keyboardNavigation.state == "LeftColumn") {
-                    root.currentView.forceActiveFocus()
-                } else {
-                    root.currentContentView.forceActiveFocus()
-                }
-
-                return;
-            }
-        }
-
-        switch(event.key) {
-            case Qt.Key_Up: {
-                // Focus on header when reaching the beginning of the list/grid
-                if (keyboardNavigation.state == "LeftColumn" && root.state != "Search") {
-                    if (!root.currentView.keyNavUp()) {
-                        if (mainTabGroup.state == "top") {
-                            tabBar.currentItem.forceActiveFocus(Qt.TabFocusReason);
-                        } else {
-                            header.forceActiveFocus();
-                        }
-                    }
-                } else {
-                    if (!root.currentContentView.keyNavUp()) {
-                        if (mainTabGroup.state == "top") {
-                            if (root.state != "Search") {
-                                tabBar.currentItem.forceActiveFocus(Qt.TabFocusReason);
-                            }
-                        } else {
-                            header.forceActiveFocus();
-                        }
-                    }
-                }
-                event.accepted = true;
-                break;
-            }
-            case Qt.Key_Down: {
-                // Focus on footer when reaching the end of the list/grid
-                if (keyboardNavigation.state == "LeftColumn" && root.state != "Search") {
-                    if (!root.currentView.keyNavDown()) {
-                        if (mainTabGroup.state == "top") {
-                            header.forceActiveFocus();
-                        } else {
-                            // forces activeFocus visuals
-                            tabBar.currentItem.forceActiveFocus(Qt.TabFocusReason);
-                        }
-                    }
-                } else {
-                    if (!root.currentContentView.keyNavDown()) {
-                        if (mainTabGroup.state == "top") {
-                            header.forceActiveFocus();
-                        } else if (root.state != "Search") {
-                            tabBar.currentItem.forceActiveFocus(Qt.TabFocusReason);
-                        }
-                    }
-                }
-                event.accepted = true;
-                break;
-            }
-            case Qt.Key_Left: {
-                if (!LayoutMirroring.enabled) {
-                    keyBackwardFunction()
-                } else {
-                    keyForwardFunction()
-                }
-                event.accepted = true;
-                break;
-            }
-            case Qt.Key_Right: {
-                if (!LayoutMirroring.enabled) {
-                    keyForwardFunction()
-                } else {
-                    keyBackwardFunction()
-                }
-                event.accepted = true;
-                break;
-            }
-            case Qt.Key_Escape: {
-                if (header.query.length == 0) {
-                    plasmoid.expanded = false;
-                } else {
-                    header.query = "";
-                }
-                event.accepted = true;
-                break;
-            }
-            case Qt.Key_Enter:
-            case Qt.Key_Return: {
-                if (keyboardNavigation.state == "LeftColumn" && root.state != "Search") {
-                    currentView.activateCurrentIndex();
-                    keyboardNavigation.state = "RightColumn";
-                } else {
-                    currentContentView.activateCurrentIndex();
-                }
-                event.accepted = true;
-                break;
-            }
-            case Qt.Key_Menu: {
-                if (keyboardNavigation.state == "RightColumn" || root.state == "Search") {
-                    currentContentView.openContextMenu();
-                } else if (root.currentView == applicationsGroupPage && applicationsGroupPage.listView.currentIndex != -1) {
-                    if (!applicationsGroupPage.listView.currentItem.modelChildren) {
-                        currentView.openContextMenu();
-                    }
-                }
-                event.accepted = true;
-                break;
-            }
-            default: {
-                // Relay first key press to search field, make sure it's a proper character
-                if (event.text != "" && !header.input.activeFocus && event.key != Qt.Key_Backspace && event.key != Qt.Key_Backtab && event.key != Qt.Key_Tab) {
-                    // Works for both LTR and RTL
-                    header.input.insert(header.input.length, event.text.charAt(0))
-                    header.input.forceActiveFocus()
-                }
-                // Relay backspace
-                if (!header.input.activeFocus && event.key == Qt.Key_Backspace && header.input.length != 0) {
-                    header.input.remove(header.input.length - 1, header.input.length)
-                    header.input.forceActiveFocus()
-                }
-            }
+        // Relay backspace
+        if (!header.input.activeFocus && event.key == Qt.Key_Backspace && header.input.length != 0) {
+            header.input.remove(header.input.length - 1, header.input.length)
+            header.input.forceActiveFocus()
         }
     }
+
     state: "Normal"
     states: [
         State {
@@ -771,35 +546,6 @@ Item {
             }
         }
     ] // states
-    Item {
-        id: keyboardNavigation
-        state: "LeftColumn"
-        states: [
-            State {
-                name: "LeftColumn"
-            },
-            State {
-                name: "RightColumn"
-            }
-        ]
-        onStateChanged: {
-            if (state == "LeftColumn") {
-                root.currentView.forceActiveFocus()
-            } else if (root.state != "search") {
-                root.currentContentView.forceActiveFocus()
-            }
-        }
-    }
-    onCurrentViewChanged: {
-        if (keyboardNavigation.state == "LeftColumn") {
-            root.currentView.forceActiveFocus()
-        }
-    }
-    onCurrentContentViewChanged: {
-        if (keyboardNavigation.state == "RightColumn" && root.currentContentView != searchPage.item) {
-            root.currentContentView.forceActiveFocus()
-        }
-    }
     Item {
         id: navigationMethod
         property bool inSearch: root.state == "Search"

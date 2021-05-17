@@ -18,7 +18,7 @@
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
-import QtQuick 2.0
+import QtQuick 2.10
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 
@@ -55,38 +55,6 @@ FocusScope {
     // Accessibility NOTE: We don't name panes because doing so would be annoying and redundant
 
     property bool upsideDown: false
-
-    function incrementCurrentIndex() {
-        if (listView.currentIndex < listView.count - 1) {
-            listView.incrementCurrentIndex();
-            return true;
-        } else {
-            return false;
-        }
-    }
-    function decrementCurrentIndex() {
-        if (listView.currentIndex > 0) {
-            listView.decrementCurrentIndex();
-            return true;
-        } else {
-            return false;
-        }
-    }
-    function keyNavDown() {
-        if (upsideDown) {
-            return view.decrementCurrentIndex()
-        } else {
-            return view.incrementCurrentIndex()
-        }
-    }
-
-    function keyNavUp() {
-        if (upsideDown) {
-            return view.incrementCurrentIndex()
-        } else {
-            return view.decrementCurrentIndex()
-        }
-    }
 
     Connections {
         target: plasmoid
@@ -146,6 +114,7 @@ FocusScope {
             bottomMargin: view.upsideDown ? listBeginningMargin : listEndMargin
 
             focus: true
+            activeFocusOnTab: true
 
             verticalLayoutDirection: view.upsideDown ? ListView.BottomToTop : ListView.TopToBottom
 
@@ -168,9 +137,6 @@ FocusScope {
             onActiveFocusChanged: {
                 accessibilityCount = true
             }
-
-            // Let root handle keyboard interaction
-            Keys.forwardTo: [root]
 
             function positionAtBeginning() {
                 positionViewAtBeginning();

@@ -26,55 +26,6 @@ import org.kde.plasma.components 3.0 as PC3
 FocusScope {
     id: itemGrid
 
-    function keyNavLeft() {
-        if (itemGrid.currentCol() !== 0) {
-            if (LayoutMirroring.enabled) {
-                gridView.moveCurrentIndexRight();
-            } else {
-                gridView.moveCurrentIndexLeft();
-            }
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    function keyNavRight() {
-        if (itemGrid.currentCol() !== columns - 1 && gridView.currentIndex != gridView.count -1) {
-            if (LayoutMirroring.enabled) {
-                gridView.moveCurrentIndexLeft();
-            } else {
-                gridView.moveCurrentIndexRight();
-            }
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    function keyNavUp() {
-        if (itemGrid.currentRow() !== 0) {
-            gridView.moveCurrentIndexUp();
-            gridView.positionViewAtIndex(gridView.currentIndex, GridView.Contain);
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    function keyNavDown() {
-        if (itemGrid.currentRow() < itemGrid.lastRow()) {
-            //Fix moveCurrentIndexDown()'s lack of proper spatial nav down
-            //into partial columns.
-            var newIndex = gridView.currentIndex + columns;
-            gridView.currentIndex = Math.min(newIndex, gridView.count - 1);
-            gridView.positionViewAtIndex(gridView.currentIndex, GridView.Contain);
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     readonly property Item gridView: gridView
 
     property alias currentIndex: gridView.currentIndex
@@ -95,12 +46,6 @@ FocusScope {
     // NOTE: We don't name panes because doing so would be annoying and redundant
     Accessible.role: Accessible.Paragraph
     Accessible.name: i18n("Grid with %1 rows, %2 columns", rows, columns) // can't use i18np here
-
-    onFocusChanged: {
-        if (!focus) {
-            currentIndex = 0;
-        }
-    }
 
     Connections {
         target: plasmoid
@@ -183,9 +128,6 @@ FocusScope {
             bottomMargin: (contentHeight + topMargin) > parent.height ? Math.round(PlasmaCore.Units.smallSpacing * 0.25) : 0
             focus: true
 
-            // Let root handle keyboard interaction
-            Keys.forwardTo: [root]
-
             currentIndex: 0
             function positionAtBeginning() {
                 positionViewAtBeginning();
@@ -196,7 +138,8 @@ FocusScope {
                 }
                 currentIndex = 0;
             }
-            keyNavigationWraps: false
+            activeFocusOnTab: true
+            keyNavigationWraps: true
             boundsBehavior: Flickable.StopAtBounds
 
             delegate: KickoffGridItem { }

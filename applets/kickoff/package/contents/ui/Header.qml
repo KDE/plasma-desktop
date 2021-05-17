@@ -114,17 +114,6 @@ PlasmaExtras.PlasmoidHeading {
             onClicked: {
                 KQuickAddons.KCMShell.openSystemSettings("kcm_users")
             }
-
-            Keys.onPressed: {
-                // In search on backtab focus on search pane
-                if (event.key == Qt.Key_Backtab && (root.state == "Search" || mainTabGroup.state == "top")) {
-                    navigationMethod.state = "keyboard"
-                    keyboardNavigation.state = "RightColumn"
-                    root.currentContentView.forceActiveFocus()
-                    event.accepted = true;
-                    return;
-                }
-            }
         }
 
         Item {
@@ -225,25 +214,6 @@ PlasmaExtras.PlasmoidHeading {
             onClicked: plasmoid.action("configure").trigger()
             PlasmaComponents.ToolTip {
                 text: plasmoid.action("configure").text
-            }
-
-            Keys.onPressed: {
-                // On tab focus on left pane (or search when searching)
-                if (event.key == Qt.Key_Tab) {
-                    navigationMethod.state = "keyboard"
-                    // There's no left panel when we search
-                    if (root.state == "Search") {
-                        keyboardNavigation.state = "RightColumn"
-                        root.currentContentView.forceActiveFocus()
-                    } else if (mainTabGroup.state == "top") {
-                        applicationButton.forceActiveFocus(Qt.TabFocusReason)
-                    } else {
-                        keyboardNavigation.state = "LeftColumn"
-                        root.currentView.forceActiveFocus()
-                    }
-                    event.accepted = true;
-                    return;
-                }
             }
         }
     }

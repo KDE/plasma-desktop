@@ -31,14 +31,6 @@ FocusScope {
 
     property ListView listView: favoritesView.listView
 
-    function keyNavUp() {
-        return favoritesView.keyNavUp();
-    }
-
-    function keyNavDown() {
-        return favoritesView.keyNavDown();
-    }
-
     function activateCurrentIndex() {
         favoritesView.currentItem.activate();
     }
