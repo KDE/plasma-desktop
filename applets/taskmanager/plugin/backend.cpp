@@ -564,12 +564,9 @@ qint64 Backend::parentPid(qint64 pid) const
 
     int parentPid = proc->parentPid();
     if (parentPid != -1) {
+        procs.updateOrAddProcess(parentPid);
+
         KSysGuard::Process *parentProc = procs.getProcess(parentPid);
-        if (!parentProc) {
-            // make sure the parent process details are loaded
-            procs.updateAllProcesses();
-            parentProc = procs.getProcess(parentPid);
-        }
         if (!parentProc) {
             return -1;
         }
