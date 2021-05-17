@@ -120,6 +120,7 @@ KCM.AbstractKCM {
                         label: model.display
 
                         trailing: RowLayout {
+                            spacing: Kirigami.Units.smallSpacing
                             QQC2.CheckBox {
                                 checked: model.checked
                                 visible: exportActive
@@ -169,6 +170,8 @@ KCM.AbstractKCM {
                         QQC2.CheckBox {
                             id: sectionCheckbox
                             Layout.alignment: Qt.AlignRight
+                            // width of indicator + layout spacing
+                            Layout.rightMargin: kcm.defaultsIndicatorsVisible ? Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing : 0
                             visible: exportActive
                             onToggled: {
                                 const checked = sectionCheckbox.checked
