@@ -197,6 +197,7 @@ KCM.AbstractKCM {
             Loader {
                 id: feedbackLoader
                 visible: item !== null
+                active: kcm.hasOwnProperty("feedbackEnabled")
                 Kirigami.FormData.label: item ? i18n("Send User Feedback:") : ""
                 Kirigami.FormData.buddyFor: item ? item.slider : null
                 source: Qt.resolvedUrl("FeedbackControls.qml")
