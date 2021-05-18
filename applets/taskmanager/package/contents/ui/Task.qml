@@ -243,8 +243,12 @@ MouseArea {
     }
 
     function showContextMenu(args) {
-        // Workaround for BUG 417939
-        toolTipArea.mainItem.Window.window.visible = false
+        // Workaround for BUG 417939, if the tooltip hides after the contextmenu shows, the menu will also be hidden
+        let tooltipWindow = toolTipArea.mainItem.Window.window
+        // mainItem is only parented to the tooltip dialog on first show, don't accidentally hide the PanelView
+        if (tooltipWindow != task.Window.window && tooltipWindow.visible) {
+            tooltipWindow.visible = false
+        }
         contextMenu = tasks.createContextMenu(task, modelIndex(), args);
         contextMenu.show();
     }
