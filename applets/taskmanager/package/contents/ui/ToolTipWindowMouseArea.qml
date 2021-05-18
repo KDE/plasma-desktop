@@ -37,6 +37,7 @@ MouseArea {
         if (mouse.button == Qt.LeftButton) {
             tasksModel.requestActivate(modelIndex);
             rootTask.hideToolTipTemporarily();
+            backend.cancelHighlightWindows();
         } else if (mouse.button == Qt.MiddleButton) {
             backend.cancelHighlightWindows();
             tasksModel.requestClose(modelIndex);
