@@ -24,6 +24,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
     readonly property int iconWidthDelta: (icon.width - icon.paintedWidth) / 2
+    readonly property bool shiftBadgeDown: (plasmoid.pluginName === "org.kde.plasma.icontasks") && task.playingAudio && task.audioIndicatorsEnabled
 
     Item {
         id: badgeMask
@@ -31,8 +32,12 @@ Item {
 
         Rectangle {
             readonly property int offset: Math.round(Math.max(PlasmaCore.Units.smallSpacing / 2, badgeMask.width / 32))
-            x: Qt.application.layoutDirection === Qt.RightToLeft ? -offset + iconWidthDelta : parent.width - width + offset - iconWidthDelta
-            y: -offset
+            anchors.right: Qt.application.layoutDirection === Qt.RightToLeft ? undefined : parent.right
+            anchors.left: Qt.application.layoutDirection === Qt.RightToLeft ? parent.left : undefined
+            anchors.rightMargin: Qt.application.layoutDirection === Qt.RightToLeft ? 0 : -offset
+            anchors.leftMargin: Qt.application.layoutDirection === Qt.RightToLeft ? -offset : 0
+            y: shiftBadgeDown ? (icon.height/2) : 0
+
             visible: task.smartLauncherItem.countVisible
             width: badgeRect.width + offset * 2
             height: badgeRect.height + offset * 2
@@ -41,6 +46,7 @@ Item {
             // Badge changes width based on number.
             onWidthChanged: maskShaderSource.scheduleUpdate()
             onVisibleChanged: maskShaderSource.scheduleUpdate()
+            onYChanged: maskShaderSource.scheduleUpdate()
         }
     }
 
@@ -81,11 +87,13 @@ Item {
     }
 
     Badge {
+        readonly property int offset: Math.round(Math.max(PlasmaCore.Units.smallSpacing / 2, badgeMask.width / 32))
         id: badgeRect
-        x: Qt.application.layoutDirection === Qt.RightToLeft ? iconWidthDelta : parent.width - width - iconWidthDelta
+        anchors.right: Qt.application.layoutDirection === Qt.RightToLeft ? undefined : parent.right
+        anchors.left: Qt.application.layoutDirection === Qt.RightToLeft ? parent.left : undefined
+        y: offset + (shiftBadgeDown ? (icon.height/2) : 0)
         height: Math.round(parent.height * 0.4)
         visible: task.smartLauncherItem.countVisible
-
         number: task.smartLauncherItem.count
     }
 }
