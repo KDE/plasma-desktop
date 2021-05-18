@@ -107,7 +107,7 @@ ColumnLayout {
                 elide: Text.ElideRight
                 text: generateTitle()
                 opacity: 0.75
-                visible: !hasPlayer && text.length !== 0 && text !== appNameHeading.text
+                visible: text.length !== 0 && text !== appNameHeading.text && (!hasPlayer || !text.includes(songText.text))
             }
             // subtext
             PlasmaComponents.Label {
