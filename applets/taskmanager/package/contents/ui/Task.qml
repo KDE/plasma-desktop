@@ -58,6 +58,7 @@ MouseArea {
     readonly property bool smartLauncherEnabled: !inPopup && model.IsStartup !== true
     property QtObject smartLauncherItem: null
     property alias toolTipAreaItem: toolTipArea
+    property alias audioStreamIconLoaderItem: audioStreamIconLoader
 
     property Item audioStreamOverlay
     property var audioStreams: []

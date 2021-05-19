@@ -24,7 +24,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
     readonly property int iconWidthDelta: (icon.width - icon.paintedWidth) / 2
-    readonly property bool shiftBadgeDown: (plasmoid.pluginName === "org.kde.plasma.icontasks") && task.playingAudio && task.audioIndicatorsEnabled
+    readonly property bool shiftBadgeDown: (plasmoid.pluginName === "org.kde.plasma.icontasks") && task.audioStreamIconLoaderItem.shown
 
     Item {
         id: badgeMask
