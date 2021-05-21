@@ -1,12 +1,10 @@
 /*
-    main.cpp
-
     SPDX-FileCopyrightText: 1998 Luca Montecchiani <m.luca@usa.net>
     SPDX-FileCopyrightText: 2015 David Edmundson <davidedmundson@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
-
 */
+
 #include "main.h"
 
 #include <time.h>

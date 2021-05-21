@@ -1,8 +1,5 @@
 /*
-    main.h
-
     SPDX-FileCopyrightText: 1998 Luca Montecchiani <m.luca@usa.net>
-
     SPDX-License-Identifier: GPL-2.0-or-later
 
 */

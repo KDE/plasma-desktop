@@ -1,16 +1,13 @@
 /*
-    dtime.cpp
-
-    SPDX-FileCopyrightText: 1998 Luca Montecchiani <m.luca@usa.net>
-
     Plasma analog-clock drawing code:
 
+    SPDX-FileCopyrightText: 1998 Luca Montecchiani <m.luca@usa.net>
     SPDX-FileCopyrightText: 2007 Aaron Seigo <aseigo@kde.org>
     SPDX-FileCopyrightText: 2007 Riccardo Iaconelli <riccardo@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
-
 */
+
 #include "dtime.h"
 
 #include <stdlib.h>

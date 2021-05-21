@@ -1,15 +1,7 @@
 /*
-    tzone.cpp
-
+    A helper that's run using KAuth and does the system modifications.
     SPDX-FileCopyrightText: 1998 Luca Montecchiani <m.luca@usa.net>
-
     SPDX-License-Identifier: GPL-2.0-or-later
-
-*/
-
-/*
-
- A helper that's run using KAuth and does the system modifications.
 
 */
 
