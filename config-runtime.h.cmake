@@ -34,8 +34,8 @@
 #define _FILE_OFFSET_BITS 64
 
 /*
- * On HP-UX, the declaration of vsnprintf() is needed every time !
- */
+    On HP-UX, the declaration of vsnprintf() is needed every time !
+*/
 
 /* type to use in place of socklen_t if not defined */
 #define kde_socklen_t socklen_t

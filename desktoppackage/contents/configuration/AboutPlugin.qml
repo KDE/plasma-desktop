@@ -1,9 +1,9 @@
 /*
- *  SPDX-FileCopyrightText: 2018 Aleix Pol Gonzalez <aleixpol@blue-systems.com>
- *  SPDX-FileCopyrightText: 2020 David Redondo <kde@david-redondo.de>
- *
- *  SPDX-License-Identifier: LGPL-2.0-or-later
- */
+    SPDX-FileCopyrightText: 2018 Aleix Pol Gonzalez <aleixpol@blue-systems.com>
+    SPDX-FileCopyrightText: 2020 David Redondo <kde@david-redondo.de>
+
+    SPDX-License-Identifier: LGPL-2.0-or-later
+*/
 
 import QtQuick 2.4
 import QtQuick.Controls 2.4 as QQC2

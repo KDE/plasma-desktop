@@ -1,28 +1,16 @@
 /*
- * Copyright 1997 Patrick Dowler dowler@morgul.fsh.uvic.ca
- * Copyright 1999 Dirk A. Mueller <dmuell@gmx.net>
- * Copyright 1999 Matthias Hoelzer-Kluepfel <hoelzer@kde.org>
- * Copyright 2000 David Faure <faure@kde.org>
- * Copyright 2000 Bernd Gehrmann
- * Copyright 2000 Rik Hemsley <rik@kde.org>
- * Copyright 2000 Brad Hughes <bhughes@trolltech.com>
- * Copyright 2004 Brad Hards <bradh@frogmouth.net>
- * Copyright 2018 Roman Gilg <subdiff@gmail.com>
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- */
+    SPDX-FileCopyrightText: 1997 Patrick Dowler dowler @morgul.fsh.uvic.ca
+    SPDX-FileCopyrightText: 1999 Dirk A. Mueller <dmuell@gmx.net>
+    SPDX-FileCopyrightText: 1999 Matthias Hoelzer-Kluepfel <hoelzer@kde.org>
+    SPDX-FileCopyrightText: 2000 David Faure <faure@kde.org>
+    SPDX-FileCopyrightText: 2000 Bernd Gehrmann
+    SPDX-FileCopyrightText: 2000 Rik Hemsley <rik@kde.org>
+    SPDX-FileCopyrightText: 2000 Brad Hughes <bhughes@trolltech.com>
+    SPDX-FileCopyrightText: 2004 Brad Hards <bradh@frogmouth.net>
+    SPDX-FileCopyrightText: 2018 Roman Gilg <subdiff@gmail.com>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
 #include "xlib_config.h"
 
 #include "../configcontainer.h"

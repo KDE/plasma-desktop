@@ -1,22 +1,9 @@
-/**************************************************************************
- *   Copyright (C) 2009-2010 Trever Fischer <tdfischer@fedoraproject.org>  *
- *   Copyright (C) 2015 Kai UWe Broulik <kde@privat.broulik.de>            *
- *                                                                         *
- *   This program is free software; you can redistribute it and/or modify  *
- *   it under the terms of the GNU General Public License as published by  *
- *   the Free Software Foundation; either version 2 of the License, or     *
- *   (at your option) any later version.                                   *
- *                                                                         *
- *   This program is distributed in the hope that it will be useful,       *
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
- *   GNU General Public License for more details.                          *
- *                                                                         *
- *   You should have received a copy of the GNU General Public License     *
- *   along with this program; if not, write to the                         *
- *   Free Software Foundation, Inc.,                                       *
- *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
- ***************************************************************************/
+/*
+    SPDX-FileCopyrightText: 2009-2010 Trever Fischer <tdfischer@fedoraproject.org>
+    SPDX-FileCopyrightText: 2015 Kai UWe Broulik <kde@privat.broulik.de>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
 
 #include "DeviceAutomounterKCM.h"
 #include <QDBusConnection>
@@ -50,7 +37,7 @@ DeviceAutomounterKCM::DeviceAutomounterKCM(QWidget *parent, const QVariantList &
                                        QStringLiteral("2.0"),
                                        QString(),
                                        KAboutLicense::GPL_V2,
-                                       i18n("(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"));
+                                       i18n("(c) 2009 Trever Fischer, SPDX-FileCopyrightText: 2015 Kai Uwe Broulik "));
     about->addAuthor(i18n("Trever Fischer"), i18n("Original Author"));
     about->addAuthor(i18n("Kai Uwe Broulik"), i18n("Plasma 5 Port"), QStringLiteral("kde@privat.broulik.de"));
 

@@ -1,23 +1,11 @@
 /*
- * This file is part of the KDE Baloo project
- * Copyright (C) 2014  Vishesh Handa <me@vhanda.in>
- * Copyright (c) 2020 Benjamin Port <benjamin.port@enioka.com>
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- */
+    This file is part of the KDE Baloo project
+    SPDX-FileCopyrightText: 2014 Vishesh Handa <me@vhanda.in>
+    SPDX-FileCopyrightText: 2020 Benjamin Port <benjamin.port@enioka.com>
+
+    SPDX-License-Identifier: LGPL-2.1-or-later
+
+*/
 
 #ifndef FILTEREDFOLDERMODEL_H
 #define FILTEREDFOLDERMODEL_H
