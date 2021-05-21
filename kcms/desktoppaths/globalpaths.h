@@ -1,19 +1,11 @@
 /*
-    Copyright (c) Martin R. Jones 1996
+    "Desktop Icons Options" Tab for KDesktop configuration
+
+    SPDX-FileCopyrightText: 1996 Martin R. Jones
     SPDX-FileCopyrightText: 1998-2007 David Faure <faure@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
-// Summarized history:
-//
-// "Desktop Icons Options" Tab for KDesktop configuration
-// Martin Jones
-//
-// Port to KControl, split from "Misc" Tab, Port to KControl2
-// (c) David Faure 1998
-// Desktop menus, paths
-// (c) David Faure 2000
 
 #ifndef __GLOBALPATHS_H
 #define __GLOBALPATHS_H

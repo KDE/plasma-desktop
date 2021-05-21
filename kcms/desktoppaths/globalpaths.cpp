@@ -1,26 +1,14 @@
 /*
-    Copyright (c) Martin R. Jones 1996
-    Copyright (c) Bernd Wuebben 1998
-    Copyright (c) Christian Tibirna 1998
+    "Desktop Options" Tab for KDesktop configuration
+
+    SPDX-FileCopyrightText: 1996 Martin R. Jones
+    SPDX-FileCopyrightText: 1998 Bernd Wuebben
+    SPDX-FileCopyrightText: 1998 Christian Tibirna
     SPDX-FileCopyrightText: 1998-2007 David Faure <faure@kde.org>
     SPDX-FileCopyrightText: 2010 Matthias Fuchs <mat69@gmx.net>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
-//
-//
-// "Desktop Options" Tab for KDesktop configuration
-//
-// (c) Martin R. Jones 1996
-// (c) Bernd Wuebben 1998
-//
-// Layouts
-// (c) Christian Tibirna 1998
-// Port to KControl, split from Misc Tab, Port to KControl2
-// (c) David Faure 1998
-// Desktop menus, paths
-// (c) David Faure 2000
 
 // Own
 #include "globalpaths.h"
