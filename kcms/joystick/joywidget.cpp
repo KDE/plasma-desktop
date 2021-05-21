@@ -1,10 +1,10 @@
 /*
-    SPDX-FileCopyrightText: 2003, 2012 Martin Koller
-    kollix@aon.at
     This file is part of the KDE Control Center Module for Joysticks
 
+    SPDX-FileCopyrightText: 2003, 2012 Martin Koller <kollix@aon.at>
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+
 #include "joywidget.h"
 #include "caldialog.h"
 #include "joydevice.h"
