@@ -1,7 +1,6 @@
 /*
-SPDX-FileCopyrightText: 2016 Eike Hein <hein.org>
-
-SPDX-License-Identifier: GPL-2.0-or-later
+    SPDX-FileCopyrightText: 2016 Eike Hein <hein.org>
+    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #ifndef WINDOWMODEL_H

@@ -1,4 +1,5 @@
-/* This file is part of the KDE project
+/*
+    This file is part of the KDE project
     SPDX-FileCopyrightText: 2002 Daniel Molkentin <molkentin@kde.org>
     SPDX-FileCopyrightText: 2020 Kai Uwe Broulik <kde@broulik.de>
 

@@ -1,4 +1,5 @@
-/* GDK - The GIMP Drawing Kit
+/*
+    GDK - The GIMP Drawing Kit
     SPDX-FileCopyrightText: 1995-1997 Peter
     SPDX-FileCopyrightText: 1995-1997 Spencer Kimball
     SPDX-FileCopyrightText: 1995-1997 Josh MacDonald

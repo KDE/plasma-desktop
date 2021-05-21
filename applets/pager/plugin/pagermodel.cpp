@@ -1,9 +1,9 @@
 /*
-SPDX-FileCopyrightText: 2007 Daniel Laidig <d.laidig@gmx.de>
-SPDX-FileCopyrightText: 2012 Luís Gabriel Lima <lampih@gmail.com>
-SPDX-FileCopyrightText: 2016 Eike Hein <hein.org>
+    SPDX-FileCopyrightText: 2007 Daniel Laidig <d.laidig@gmx.de>
+    SPDX-FileCopyrightText: 2012 Luís Gabriel Lima <lampih@gmail.com>
+    SPDX-FileCopyrightText: 2016 Eike Hein <hein.org>
 
-SPDX-License-Identifier: GPL-2.0-or-later
+    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "pagermodel.h"

@@ -1,4 +1,5 @@
-/* This file is part of the KDE Project
+/*
+    This file is part of the KDE project
     SPDX-FileCopyrightText: 2008-2010 Sebastian Trueg <trueg@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-only

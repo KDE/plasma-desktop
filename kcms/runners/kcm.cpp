@@ -1,4 +1,5 @@
-/* This file is part of the KDE Project
+/*
+    This file is part of the KDE project
     SPDX-FileCopyrightText: 2014 Vishesh Handa <me@vhanda.in>
     SPDX-FileCopyrightText: 2020 Alexander Lohnau <alexander.lohnau@gmx.de>
     SPDX-FileCopyrightText: 2020 Cyril Rossi <cyril.rossi@enioka.com>
