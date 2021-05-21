@@ -59,7 +59,7 @@ function activateNextPrevTask(anchor, next) {
                 }
 
                 for (var j = 0; j < tasksModel.rowCount(modelIndex); ++j) {
-                    var childModelIndex = tasksModel.makeModelIndex(i, j);
+                    const childModelIndex = tasksModel.makeModelIndex(i, j);
                     if (!task.m.IsHidden) {
                         taskIndexList.push(childModelIndex);
                     }
