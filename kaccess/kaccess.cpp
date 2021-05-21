@@ -154,7 +154,7 @@ void KAccessApp::readSettings()
     KSharedConfig::Ptr _config = KSharedConfig::openConfig();
     KConfigGroup cg(_config, "Bell");
 
-    // bell ---------------------------------------------------------------
+    // bell
     _systemBell = cg.readEntry("SystemBell", true);
     _artsBell = cg.readEntry("ArtsBell", false);
     _currentPlayerSource = cg.readPathEntry("ArtsBellFile", QString());
@@ -173,7 +173,7 @@ void KAccessApp::readSettings()
     else
         XkbChangeEnabledControls(QX11Info::display(), XkbUseCoreKbd, XkbAudibleBellMask, XkbAudibleBellMask);
 
-    // keyboard -------------------------------------------------------------
+    // keyboard
     KConfigGroup keyboardGroup(_config, "Keyboard");
 
     // get keyboard state
@@ -266,7 +266,7 @@ void KAccessApp::readSettings()
     _kNotifyModifiers = keyboardGroup.readEntry("kNotifyModifiers", false);
     _kNotifyAccessX = keyboardGroup.readEntry("kNotifyAccessX", false);
 
-    // mouse-by-keyboard ----------------------------------------------
+    // mouse-by-keyboard
 
     KConfigGroup mouseGroup(_config, "Mouse");
 

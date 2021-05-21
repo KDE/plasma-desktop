@@ -30,9 +30,7 @@
 
 #include <stdio.h>
 
-//--------------------------------------------------------------
 static QString PRESSED = I18N_NOOP("PRESSED");
-//--------------------------------------------------------------
 
 class TableWidget : public QTableWidget
 {
@@ -47,8 +45,6 @@ public:
         return QSize(150, 100); // return a smaller size than the Qt default(256, 192)
     }
 };
-
-//--------------------------------------------------------------
 
 JoyWidget::JoyWidget(QWidget *parent)
     : QWidget(parent)
@@ -152,14 +148,10 @@ JoyWidget::JoyWidget(QWidget *parent)
     init();
 }
 
-//--------------------------------------------------------------
-
 JoyWidget::~JoyWidget()
 {
     delete joydev;
 }
-
-//--------------------------------------------------------------
 
 void JoyWidget::init()
 {
@@ -210,14 +202,10 @@ void JoyWidget::init()
     }
 }
 
-//--------------------------------------------------------------
-
 void JoyWidget::traceChanged(bool state)
 {
     xyPos->showTrace(state);
 }
-
-//--------------------------------------------------------------
 
 void JoyWidget::restoreCurrDev()
 {
@@ -235,8 +223,6 @@ void JoyWidget::restoreCurrDev()
             device->setEditText(device->itemText(index));
     }
 }
-
-//--------------------------------------------------------------
 
 void JoyWidget::deviceChanged(const QString &dev)
 {
@@ -277,8 +263,6 @@ void JoyWidget::deviceChanged(const QString &dev)
     showDeviceProps(joy);
 }
 
-//--------------------------------------------------------------
-
 void JoyWidget::showDeviceProps(JoyDevice *joy)
 {
     joydev = joy;
@@ -303,8 +287,6 @@ void JoyWidget::showDeviceProps(JoyDevice *joy)
     axesTbl->verticalHeader()->setFixedWidth(buttonTbl->verticalHeader()->width());
     */
 }
-
-//--------------------------------------------------------------
 
 void JoyWidget::checkDevice()
 {
@@ -340,8 +322,6 @@ void JoyWidget::checkDevice()
         axesTbl->item(number, 0)->setText(QStringLiteral("%1").arg(int(value)));
     }
 }
-
-//--------------------------------------------------------------
 
 void JoyWidget::calibrateDevice()
 {
@@ -379,8 +359,6 @@ void JoyWidget::calibrateDevice()
     idle->start(0); // continue with event getting
 }
 
-//--------------------------------------------------------------
-
 void JoyWidget::resetCalibration()
 {
     if (!joydev)
@@ -394,5 +372,3 @@ void JoyWidget::resetCalibration()
         KMessageBox::information(this, i18n("Restored all calibration values for joystick device %1.", joydev->device()), i18n("Calibration Success"));
     }
 }
-
-//--------------------------------------------------------------

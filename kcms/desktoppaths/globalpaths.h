@@ -21,7 +21,6 @@ class KUrlRequester;
 class DesktopPathsSettings;
 class DesktopPathsData;
 
-//-----------------------------------------------------------------------------
 // The "Path" Tab contains :
 // The paths for Desktop and Documents
 

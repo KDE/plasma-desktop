@@ -13,8 +13,6 @@
 #define MARK_WIDTH 10
 #define MAX_POINTS 500
 
-//-----------------------------------------------------------------
-
 PosWidget::PosWidget(QWidget *parent)
     : QWidget(parent)
     , x(0)
@@ -28,8 +26,6 @@ PosWidget::PosWidget(QWidget *parent)
     palette.setColor(backgroundRole(), Qt::white);
     setPalette(palette);
 }
-
-//-----------------------------------------------------------------
 
 void PosWidget::paintEvent(QPaintEvent *)
 {
@@ -63,8 +59,6 @@ void PosWidget::paintEvent(QPaintEvent *)
     paint.drawLine(x - MARK_WIDTH / 2, y + MARK_WIDTH / 2, x + MARK_WIDTH / 2, y - MARK_WIDTH / 2);
 }
 
-//-----------------------------------------------------------------
-
 void PosWidget::changeX(int newX)
 {
     // transform coordinates from joystick to widget coordinates
@@ -82,8 +76,6 @@ void PosWidget::changeX(int newX)
     x = newX;
     update();
 }
-
-//-----------------------------------------------------------------
 
 void PosWidget::changeY(int newY)
 {
@@ -103,8 +95,6 @@ void PosWidget::changeY(int newY)
     update();
 }
 
-//-----------------------------------------------------------------
-
 void PosWidget::showTrace(bool t)
 {
     trace = t;
@@ -112,5 +102,3 @@ void PosWidget::showTrace(bool t)
 
     update();
 }
-
-//-----------------------------------------------------------------

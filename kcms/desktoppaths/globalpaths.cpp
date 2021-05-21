@@ -22,8 +22,6 @@
 
 K_PLUGIN_FACTORY(KcmDesktopPathsFactory, registerPlugin<DesktopPathConfig>(); registerPlugin<DesktopPathsData>();)
 
-//-----------------------------------------------------------------------------
-
 DesktopPathConfig::DesktopPathConfig(QWidget *parent, const QVariantList &)
     : KCModule(parent)
     , m_ui(new Ui::DesktopPathsView)

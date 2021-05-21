@@ -17,8 +17,6 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 
-//--------------------------------------------------------------
-
 CalDialog::CalDialog(QWidget *parent, JoyDevice *joy)
     : QDialog(parent)
     , joydev(joy)
@@ -46,8 +44,6 @@ CalDialog::CalDialog(QWidget *parent, JoyDevice *joy)
 
     connect(Next, &QPushButton::clicked, this, &CalDialog::slotNext);
 }
-
-//--------------------------------------------------------------
 
 void CalDialog::calibrate()
 {
@@ -169,8 +165,6 @@ void CalDialog::calibrate()
     accept();
 }
 
-//--------------------------------------------------------------
-
 void CalDialog::waitButton(int axis, bool press, int &lastVal)
 {
     JoyDevice::EventType type;
@@ -192,7 +186,6 @@ void CalDialog::waitButton(int axis, bool press, int &lastVal)
     } while (!button && (result() == -1));
 }
 
-//--------------------------------------------------------------
 // Next button
 
 void CalDialog::slotNext()

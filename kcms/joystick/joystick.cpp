@@ -19,11 +19,7 @@
 
 #include <QVBoxLayout>
 
-//---------------------------------------------------------------------------------------------
-
 K_PLUGIN_FACTORY(JoystickFactory, registerPlugin<Joystick>();)
-
-//---------------------------------------------------------------------------------------------
 
 Joystick::Joystick(QWidget *parent, const QVariantList &)
     : KCModule(parent)
@@ -65,20 +61,14 @@ Joystick::Joystick(QWidget *parent, const QVariantList &)
     top->addWidget(joyWidget);
 }
 
-//---------------------------------------------------------------------------------------------
-
 void Joystick::load()
 {
     joyWidget->init();
 }
 
-//---------------------------------------------------------------------------------------------
-
 void Joystick::defaults()
 {
     joyWidget->resetCalibration();
 }
-
-//---------------------------------------------------------------------------------------------
 
 #include "joystick.moc"

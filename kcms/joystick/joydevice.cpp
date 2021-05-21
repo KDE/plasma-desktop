@@ -19,8 +19,6 @@
 #include <sys/time.h>
 #include <unistd.h>
 
-//--------------------------------------------------------------
-
 JoyDevice::JoyDevice(const QString &devicefile)
     : devName(devicefile)
     , joyFd(-1)
@@ -32,8 +30,6 @@ JoyDevice::JoyDevice(const QString &devicefile)
     , origCorr(nullptr)
 {
 }
-
-//--------------------------------------------------------------
 
 QString JoyDevice::errText(ErrorCode code) const
 {
@@ -99,8 +95,6 @@ QString JoyDevice::errText(ErrorCode code) const
         return i18n("internal error - code %1 unknown", int(code));
     }
 }
-
-//--------------------------------------------------------------
 
 JoyDevice::ErrorCode JoyDevice::open()
 {
@@ -175,8 +169,6 @@ JoyDevice::ErrorCode JoyDevice::open()
     return JoyDevice::SUCCESS;
 }
 
-//--------------------------------------------------------------
-
 void JoyDevice::close()
 {
     if (joyFd == -1)
@@ -198,8 +190,6 @@ void JoyDevice::close()
     origCorr = nullptr;
 }
 
-//--------------------------------------------------------------
-
 int JoyDevice::axisMin(int axis) const
 {
     if ((axis < 0) || (axis >= axes))
@@ -208,8 +198,6 @@ int JoyDevice::axisMin(int axis) const
     return amin[axis];
 }
 
-//--------------------------------------------------------------
-
 int JoyDevice::axisMax(int axis) const
 {
     if ((axis < 0) || (axis >= axes))
@@ -217,8 +205,6 @@ int JoyDevice::axisMax(int axis) const
 
     return amax[axis];
 }
-
-//--------------------------------------------------------------
 
 JoyDevice::ErrorCode JoyDevice::initCalibration()
 {
@@ -242,8 +228,6 @@ JoyDevice::ErrorCode JoyDevice::initCalibration()
     return JoyDevice::SUCCESS;
 }
 
-//--------------------------------------------------------------
-
 JoyDevice::ErrorCode JoyDevice::applyCalibration()
 {
     if (joyFd == -1)
@@ -255,15 +239,11 @@ JoyDevice::ErrorCode JoyDevice::applyCalibration()
     return JoyDevice::SUCCESS;
 }
 
-//--------------------------------------------------------------
-
 void JoyDevice::resetMinMax(int axis, int value)
 {
     amin[axis] = value;
     amax[axis] = value;
 }
-
-//--------------------------------------------------------------
 
 void JoyDevice::calcPrecision()
 {
@@ -278,8 +258,6 @@ void JoyDevice::calcPrecision()
     }
 }
 
-//--------------------------------------------------------------
-
 JoyDevice::ErrorCode JoyDevice::restoreCorr()
 {
     if (joyFd == -1)
@@ -291,14 +269,10 @@ JoyDevice::ErrorCode JoyDevice::restoreCorr()
         return JoyDevice::SUCCESS;
 }
 
-//--------------------------------------------------------------
-
 JoyDevice::~JoyDevice()
 {
     close();
 }
-
-//--------------------------------------------------------------
 
 bool JoyDevice::getEvent(JoyDevice::EventType &type, int &number, int &value)
 {
@@ -349,8 +323,6 @@ bool JoyDevice::getEvent(JoyDevice::EventType &type, int &number, int &value)
     return false; // no event
 }
 
-//--------------------------------------------------------------
-
 void JoyDevice::calcCorrection(int axis, int *min, int *center, int *max)
 {
     const int MIN = 0;
@@ -373,5 +345,3 @@ void JoyDevice::calcCorrection(int axis, int *min, int *center, int *max)
     qDebug() << "Correction values for axis: " << axis << ": " << corr[axis].coef[0] << ", " << corr[axis].coef[1] << ", " << corr[axis].coef[2] << ", "
              << corr[axis].coef[3] << Qt::endl;
 }
-
-//--------------------------------------------------------------
