@@ -43,8 +43,6 @@ Kirigami.ScrollablePage {
 
     property bool loading: false
 
-//     enabled: touchpadCount > 0
-
     function resetModel(index) {
         touchpadCount = backend.touchpadCount
         formLayout.enabled = touchpadCount
@@ -96,6 +94,11 @@ Kirigami.ScrollablePage {
         target: TouchpadConfig
 
         function onShowMessage(message, type) {
+
+            if (touchpadCount === 0) {
+                return
+            }
+
             if (message.length !== 0) {
                 inlineMessage.text = message
                 inlineMessage.type = type
@@ -106,8 +109,17 @@ Kirigami.ScrollablePage {
         }
     }
 
+    Kirigami.PlaceholderMessage {
+        text: i18n("No touchpad found")
+        anchors.centerIn: parent
+        visible: touchpadCount === 0
+    }
+
+
     Kirigami.FormLayout {
         id: formLayout
+
+        visible: touchpadCount > 0
 
         // Device
         Controls.ComboBox {
