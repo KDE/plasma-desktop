@@ -266,8 +266,10 @@ FocusScope {
                             if (isManagerMode && view.currentItem && !view.currentItem.modelChildren) {
                                 view.activatedItem = view.currentItem;
                                 view.moveRight();
-                            } else if (!isManagerMode) {
+                            } else if (!isManagerMode && item.modelChildren) {
                                 view.state = "OutgoingLeft";
+                            } else if (!isManagerMode) {
+                                item.activate();
                             }
                         } else {
                             item.activate();
