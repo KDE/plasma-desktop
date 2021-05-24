@@ -20,7 +20,6 @@
 
 #include <KAboutData>
 #include <KLocalizedString>
-#include <KMessageWidget>
 #include <kdeclarative/kdeclarative.h>
 
 #include <QMetaObject>
@@ -54,14 +53,8 @@ TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, 
 
     m_view = new QQuickWidget(this);
 
-    m_errorMessage = new KMessageWidget(this);
-    m_errorMessage->setCloseButtonVisible(false);
-    m_errorMessage->setWordWrap(true);
-    m_errorMessage->setVisible(false);
-
     QVBoxLayout *layout = new QVBoxLayout(parent);
 
-    layout->addWidget(m_errorMessage);
     layout->addWidget(m_view);
     parent->setLayout(layout);
 
@@ -72,15 +65,15 @@ TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, 
     m_view->rootContext()->setContextProperty("backend", m_backend);
     m_view->rootContext()->setContextProperty("deviceModel", QVariant::fromValue(m_backend->getDevices().toList()));
 
+    qmlRegisterSingletonInstance("org.kde.touchpad.kcm", 1, 0, "TouchpadConfig", this);
+
     KDeclarative::KDeclarative kdeclarative;
     kdeclarative.setDeclarativeEngine(m_view->engine());
     kdeclarative.setupBindings();
     m_view->setSource(QUrl("qrc:/libinput/touchpad.qml"));
 
     if (m_initError) {
-        m_errorMessage->setMessageType(KMessageWidget::Error);
-        m_errorMessage->setText(m_backend->errorString());
-        QMetaObject::invokeMethod(m_errorMessage, "animatedShow", Qt::QueuedConnection);
+        Q_EMIT showMessage(m_backend->errorString());
     } else {
         connect(m_backend, SIGNAL(touchpadAdded(bool)), this, SLOT(onTouchpadAdded(bool)));
         connect(m_backend, SIGNAL(touchpadRemoved(int)), this, SLOT(onTouchpadRemoved(int)));
@@ -108,14 +101,10 @@ void TouchpadConfigLibinput::load()
     }
 
     if (!m_backend->getConfig()) {
-        m_errorMessage->setMessageType(KMessageWidget::Error);
-        m_errorMessage->setText(i18n("Error while loading values. See logs for more information. Please restart this configuration module."));
-        m_errorMessage->animatedShow();
+        Q_EMIT showMessage(i18n("Error while loading values. See logs for more information. Please restart this configuration module."));
     } else {
         if (!m_backend->touchpadCount()) {
-            m_errorMessage->setMessageType(KMessageWidget::Information);
-            m_errorMessage->setText(i18n("No touchpad found. Connect touchpad now."));
-            m_errorMessage->animatedShow();
+            Q_EMIT showMessage(i18n("No touchpad found. Connect touchpad now."));
         }
     }
     QMetaObject::invokeMethod(m_view->rootObject(), "syncValuesFromBackend");
@@ -124,12 +113,11 @@ void TouchpadConfigLibinput::load()
 void TouchpadConfigLibinput::save()
 {
     if (!m_backend->applyConfig()) {
-        m_errorMessage->setMessageType(KMessageWidget::Error);
-        m_errorMessage->setText(i18n("Not able to save all changes. See logs for more information. Please restart this configuration module and try again."));
-        m_errorMessage->animatedShow();
+        Q_EMIT showMessage(i18n("Not able to save all changes. See logs for more information. Please restart this configuration module and try again."));
     } else {
-        hideErrorMessage();
+        Q_EMIT showMessage(QString());
     }
+
     // load newly written values
     load();
     // in case of error, config still in changed state
@@ -144,9 +132,7 @@ void TouchpadConfigLibinput::defaults()
     }
 
     if (!m_backend->getDefaultConfig()) {
-        m_errorMessage->setMessageType(KMessageWidget::Error);
-        m_errorMessage->setText(i18n("Error while loading default values. Failed to set some options to their default values."));
-        m_errorMessage->animatedShow();
+        Q_EMIT showMessage(i18n("Error while loading default values. Failed to set some options to their default values."));
     }
     QMetaObject::invokeMethod(m_view->rootObject(), "syncValuesFromBackend");
     Q_EMIT m_parent->changed(m_backend->isChangedConfig());
@@ -166,8 +152,7 @@ void TouchpadConfigLibinput::onTouchpadAdded(bool success)
     QQuickItem *rootObj = m_view->rootObject();
 
     if (!success) {
-        m_errorMessage->setMessageType(KMessageWidget::Error);
-        m_errorMessage->setText(i18n("Error while adding newly connected device. Please reconnect it and restart this configuration module."));
+        Q_EMIT showMessage(i18n("Error while adding newly connected device. Please reconnect it and restart this configuration module."));
     }
 
     int activeIndex;
@@ -189,13 +174,11 @@ void TouchpadConfigLibinput::onTouchpadRemoved(int index)
 
     int activeIndex = QQmlProperty::read(rootObj, "deviceIndex").toInt();
     if (activeIndex == index) {
-        m_errorMessage->setMessageType(KMessageWidget::Information);
         if (m_backend->touchpadCount()) {
-            m_errorMessage->setText(i18n("Touchpad disconnected. Closed its setting dialog."));
+            Q_EMIT showMessage(i18n("Touchpad disconnected. Closed its setting dialog."), 0 /*Kirigami.MessageType.Information*/);
         } else {
-            m_errorMessage->setText(i18n("Touchpad disconnected. No other touchpads found."));
+            Q_EMIT showMessage(i18n("Touchpad disconnected. No other touchpads found."), 0 /*Kirigami.MessageType.Information*/);
         }
-        m_errorMessage->animatedShow();
         activeIndex = 0;
     } else {
         if (index < activeIndex) {
@@ -211,7 +194,5 @@ void TouchpadConfigLibinput::onTouchpadRemoved(int index)
 
 void TouchpadConfigLibinput::hideErrorMessage()
 {
-    if (m_errorMessage->isVisible()) {
-        m_errorMessage->animatedHide();
-    }
+    Q_EMIT showMessage(QString());
 }

@@ -24,7 +24,6 @@
 class TouchpadBackend;
 class QHideEvent;
 class QQuickWidget;
-class KMessageWidget;
 
 class TouchpadConfigLibinput : public TouchpadConfigPlugin
 {
@@ -47,6 +46,9 @@ public:
     {
     }
 
+Q_SIGNALS:
+    void showMessage(const QString message, int type = 3 /*Kirigami.MessageType.Error*/);
+
 private Q_SLOTS:
     void onChange();
     void onTouchpadAdded(bool success);
@@ -56,7 +58,6 @@ private:
     void hideErrorMessage();
 
     QQuickWidget *m_view;
-    KMessageWidget *m_errorMessage;
 
     bool m_initError;
 };

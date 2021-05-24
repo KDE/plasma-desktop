@@ -22,7 +22,9 @@ import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.3 as Layouts
 
 import org.kde.kcm 1.1 as KCM
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.13 as Kirigami
+
+import org.kde.touchpad.kcm 1.0
 
 // TODO: Change ScrollablePage as KCM.SimpleKCM
 // after rewrite the KCM in KConfigModule.
@@ -41,7 +43,7 @@ Kirigami.ScrollablePage {
 
     property bool loading: false
 
-    enabled: touchpadCount > 0
+//     enabled: touchpadCount > 0
 
     function resetModel(index) {
         touchpadCount = backend.touchpadCount
@@ -84,6 +86,24 @@ Kirigami.ScrollablePage {
         disableHorizontalScrolling.load()
 
         loading = false
+    }
+
+    header: Kirigami.InlineMessage {
+        id: inlineMessage
+    }
+
+    Connections {
+        target: TouchpadConfig
+
+        function onShowMessage(message, type) {
+            if (message.length !== 0) {
+                inlineMessage.text = message
+                inlineMessage.type = type
+                inlineMessage.visible = true
+            } else {
+                inlineMessage.visible = false
+            }
+        }
     }
 
     Kirigami.FormLayout {
