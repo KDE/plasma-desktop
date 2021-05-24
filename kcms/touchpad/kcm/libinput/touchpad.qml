@@ -113,6 +113,7 @@ Kirigami.ScrollablePage {
         text: i18n("No touchpad found")
         anchors.centerIn: parent
         visible: touchpadCount === 0
+        width: parent.width - (Kirigami.Units.largeSpacing * 4)
     }
 
 

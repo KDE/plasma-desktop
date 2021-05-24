@@ -41,7 +41,7 @@ TouchpadConfigContainer::TouchpadConfigContainer(QWidget *parent, const QVariant
 {
     TouchpadBackend *backend = TouchpadBackend::implementation();
     if (KWindowSystem::isPlatformX11()) {
-        if (backend->getMode() == TouchpadInputBackendMode::XLibinput) {
+        if (backend->getMode() == TouchpadInputBackendMode::XLibinput || backend->getMode() == TouchpadInputBackendMode::Unset) {
             m_plugin = new TouchpadConfigLibinput(this, backend);
         }
         // For now, if no touchpad is found, always fall back to synaptics frontend,
