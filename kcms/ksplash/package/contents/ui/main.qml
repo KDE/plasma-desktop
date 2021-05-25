@@ -106,7 +106,7 @@ KCM.GridViewKCM {
         }
         NewStuff.Button {
             id: newStuffButton
-            text: i18n("&Get New Splash Screens...")
+            text: i18n("&Get New Splash Screens…")
             configFile: "ksplash.knsrc"
             viewMode: NewStuff.Page.ViewMode.Preview
             onEntryEvent: function(entry, event) {

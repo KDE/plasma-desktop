@@ -197,7 +197,7 @@ PlasmaExtras.PlasmoidHeading {
 
             Layout.fillWidth: true
 
-            placeholderText: i18n("Search...")
+            placeholderText: i18n("Search…")
             clearButtonShown: true
 
             Accessible.editable: true

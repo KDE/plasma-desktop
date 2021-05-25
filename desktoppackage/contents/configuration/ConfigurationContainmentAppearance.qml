@@ -124,7 +124,7 @@ AbstractKCM {
                 }
                 NewStuff.Button {
                     configFile: "wallpaperplugin.knsrc"
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Plugins...")
+                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Plugins…")
                     Layout.preferredHeight: wallpaperComboBox.height
                 }
             }

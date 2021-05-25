@@ -106,7 +106,7 @@ Kirigami.FormLayout {
     }
     QQC2.Button {
         id: this
-        text: i18n("Configure Notifications...")
+        text: i18n("Configure Notifications…")
         icon.name: "preferences-desktop-notification"
 
         onClicked: kcm.configureKNotify(this)

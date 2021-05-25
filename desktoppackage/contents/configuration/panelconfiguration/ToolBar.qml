@@ -31,9 +31,9 @@ Item {
     implicitWidth: Math.max(buttonsLayout_1.width, buttonsLayout_2.width, row.width) + PlasmaCore.Units.smallSpacing * 2
     implicitHeight: row.height + 20
 
-    readonly property string addWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets...")
+    readonly property string addWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets…")
     readonly property string addSpacerButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Spacer")
-    readonly property string settingsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "More Options...")
+    readonly property string settingsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "More Options…")
 
     QQC2.Action {
         shortcut: "Escape"

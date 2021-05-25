@@ -142,7 +142,7 @@ SearchConfigModule::SearchConfigModule(QWidget *parent, const QVariantList &args
     layout->addWidget(m_pluginSelector);
 
     QHBoxLayout *downloadLayout = new QHBoxLayout;
-    KNS3::Button *downloadButton = new KNS3::Button(i18n("Get New Plugins..."), QStringLiteral("krunner.knsrc"), this);
+    KNS3::Button *downloadButton = new KNS3::Button(i18n("Get New Plugins…"), QStringLiteral("krunner.knsrc"), this);
     connect(downloadButton, &KNS3::Button::dialogFinished, this, [this](const KNS3::Entry::List &changedEntries) {
         if (!changedEntries.isEmpty()) {
             m_pluginSelector->clearPlugins();
@@ -257,7 +257,7 @@ void SearchConfigModule::configureClearHistoryButton()
                 deleteHistoryGroup(key);
             });
             installMenu->addAction(singleActivity);
-            m_clearHistoryButton->setText(i18n("Clear History..."));
+            m_clearHistoryButton->setText(i18n("Clear History…"));
         }
         m_clearHistoryButton->setMenu(installMenu);
     } else {

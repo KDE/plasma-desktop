@@ -137,7 +137,7 @@ FocusScope {
             PlasmaComponents.ToolButton {
                 id: newActivityButton
 
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Create activity...")
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Create activity…")
                 iconSource: "list-add"
 
                 width: parent.width

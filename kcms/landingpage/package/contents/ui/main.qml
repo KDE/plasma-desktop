@@ -128,11 +128,11 @@ KCM.AbstractKCM {
             Layout.alignment: Qt.AlignCenter
             QQC2.Button {
                 icon.name: "preferences-desktop-wallpaper"
-                text: i18n("Change Wallpaper...")
+                text: i18n("Change Wallpaper…")
                 onClicked: kcm.openWallpaperDialog()
             }
             QQC2.Button {
-                text: i18n("Show More Appearance Settings...")
+                text: i18n("Show More Appearance Settings…")
                 icon.name: "preferences-desktop-theme-global"
                 onClicked: kcm.openKCM("kcm_lookandfeel")
             }
@@ -206,7 +206,7 @@ KCM.AbstractKCM {
 
         QQC2.Button {
             Layout.alignment: Qt.AlignCenter
-            text: i18n("Show More Behavior Settings...")
+            text: i18n("Show More Behavior Settings…")
             icon.name: "preferences-desktop"
             onClicked: kcm.openKCM("kcm_workspace")
         }

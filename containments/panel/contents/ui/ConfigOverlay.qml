@@ -410,7 +410,7 @@ MouseArea {
                     id: configureButton
                     Layout.fillWidth: true
                     iconSource: "configure"
-                    text: i18n("Configure...")
+                    text: i18n("Configure…")
                     onClicked: {
                         tooltip.visible = false;
                         currentApplet.applet.action("configure").trigger()
@@ -420,7 +420,7 @@ MouseArea {
                     id: alternativesButton
                     Layout.fillWidth: true
                     iconSource: "widget-alternatives"
-                    text: i18n("Show Alternatives...")
+                    text: i18n("Show Alternatives…")
                     onClicked: {
                         tooltip.visible = false;
                         currentApplet.applet.action("alternatives").trigger()

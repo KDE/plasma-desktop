@@ -203,7 +203,7 @@ KCM.SimpleKCM {
             enabled: fileSearchEnabled.checked
 
             icon.name: "folder-add"
-            text: i18n("Add folder configuration...")
+            text: i18n("Add folder configuration…")
 
             checkable: true
             checked: menu.opened
@@ -228,7 +228,7 @@ KCM.SimpleKCM {
             modal: true
 
             QQC2.MenuItem {
-                text: i18n("Start indexing a folder...")
+                text: i18n("Start indexing a folder…")
                 icon.name: "list-add"
 
                 onClicked: {
@@ -237,7 +237,7 @@ KCM.SimpleKCM {
                 }
             }
             QQC2.MenuItem {
-                text: i18n("Stop indexing a folder...")
+                text: i18n("Stop indexing a folder…")
                 icon.name: "list-remove"
 
                 onClicked: {

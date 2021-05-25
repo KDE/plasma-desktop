@@ -65,7 +65,7 @@ Kirigami.FormLayout {
 
             QQC2.ToolTip {
                 visible: parent.hovered
-                text: i18n("Select Font...")
+                text: i18n("Select Font…")
             }
         }
     }

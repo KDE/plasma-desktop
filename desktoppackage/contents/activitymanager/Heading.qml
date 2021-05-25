@@ -86,7 +86,7 @@ Item {
                 clearButtonShown: true
                 visible: root.showingSearch
 
-                placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Search...")
+                placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Search…")
 
                 onTextChanged: if (text != "") root.showingSearch = true
             }

@@ -148,7 +148,7 @@ Item {
                 enabled: locationCustom.checked
                 Layout.fillWidth: true
 
-                placeholderText: i18n("Type path or URL...")
+                placeholderText: i18n("Type path or URL…")
 
                 onEnabledChanged: {
                     if (enabled && text != "") {
@@ -206,7 +206,7 @@ Item {
                 Layout.fillWidth: true
                 enabled: (labelMode.currentIndex == 3)
 
-                placeholderText: i18n("Enter custom title...")
+                placeholderText: i18n("Enter custom title…")
             }
         }
     }

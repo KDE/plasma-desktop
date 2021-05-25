@@ -83,7 +83,7 @@ ColumnLayout {
     QQC2.Button {
         id: buttonCreateActivity
         visible: ActivitySettings.newActivityAuthorized
-        text: i18nd("kcm_activities5", "Create New...")
+        text: i18nd("kcm_activities5", "Create New…")
         icon.name: "list-add"
         onClicked: ActivitySettings.newActivity();
     }

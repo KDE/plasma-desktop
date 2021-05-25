@@ -87,7 +87,7 @@ ColumnLayout {
             id: mimeFilter
             Kirigami.FormData.label: i18n("File types:")
             enabled: (filterMode.currentIndex > 0)
-            placeholderText: i18n("Search...")
+            placeholderText: i18n("Search…")
         }
     }
 

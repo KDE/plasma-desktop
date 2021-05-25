@@ -83,7 +83,7 @@ void ComponentChooser::load()
         m_index = m_applications.length() - 1;
     }
     QVariantMap application;
-    application["name"] = i18n("Other...");
+    application["name"] = i18n("Other…");
     application["icon"] = QStringLiteral("application-x-shellscript");
     application["storageId"] = QLatin1String("");
     m_applications += application;

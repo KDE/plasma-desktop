@@ -298,7 +298,7 @@ public:
         QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "Configure", this, SLOT(Configure()));
 
         logo_prop = Property("/Logo", "SCIM", String(SCIM_ICON_DIR) + "/trademark.png", "SCIM Input Method");
-        show_help_prop = Property("/StartHelp", "Help", "help-about", "About SCIM...");
+        show_help_prop = Property("/StartHelp", "Help", "help-about", "About SCIM…");
         factory_prop_prefix = QString::fromUtf8("/Factory/");
         helper_prop_prefix = QString::fromUtf8("/Helper/");
     }

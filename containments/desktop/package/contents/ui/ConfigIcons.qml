@@ -113,7 +113,7 @@ Item {
                 visualParent: iconButton
 
                 PlasmaComponents.MenuItem {
-                    text: i18nc("@item:inmenu Open icon chooser dialog", "Choose...")
+                    text: i18nc("@item:inmenu Open icon chooser dialog", "Choose…")
                     icon: "document-open-folder"
                     onClicked: iconDialog.open()
                 }
@@ -328,7 +328,7 @@ Item {
             Layout.fillWidth: true
 
             icon.name: "configure"
-            text: i18n("Configure Preview Plugins...")
+            text: i18n("Configure Preview Plugins…")
 
             onClicked: {
                 previewPluginsDialog.visible = true;

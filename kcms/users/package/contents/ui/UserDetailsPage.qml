@@ -217,7 +217,7 @@ SimpleKCM {
                         }
                     }
                 }
-                text: i18n("Delete User...")
+                text: i18n("Delete User…")
                 icon.name: "edit-delete"
                 onClicked: deleteMenu.open()
             }
@@ -272,7 +272,7 @@ SimpleKCM {
                                 Layout.alignment: Qt.AlignHCenter
                             }
                             QQC2.Label {
-                                text: i18n("Choose File...")
+                                text: i18n("Choose File…")
 
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignBottom

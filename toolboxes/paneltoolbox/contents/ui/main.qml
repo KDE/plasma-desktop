@@ -108,7 +108,7 @@ Item {
         PlasmaCore.ToolTipArea {
             id: toolTipArea
             anchors.fill: parent
-            mainText: i18nd("plasma_toolbox_org.kde.paneltoolbox", "Configure Panel...")
+            mainText: i18nd("plasma_toolbox_org.kde.paneltoolbox", "Configure Panel…")
             icon: "configure"
             enabled: mouseArea.containsMouse
         }

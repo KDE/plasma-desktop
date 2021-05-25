@@ -222,7 +222,7 @@ Item {
                 PlasmaComponents.ToolButton {
                     id: getWidgetsButton
                     iconSource: "get-hot-new-stuff"
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Widgets...")
+                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Widgets…")
                     onClicked: {
                         getWidgetsDialog.model = widgetExplorer.widgetsMenuActions
                         getWidgetsDialog.openRelative()
@@ -240,7 +240,7 @@ Item {
                     id: searchInput
                     Layout.fillWidth: true
                     clearButtonShown: true
-                    placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Search...")
+                    placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Search…")
                     onTextChanged: {
                         list.positionViewAtBeginning()
                         list.currentIndex = -1

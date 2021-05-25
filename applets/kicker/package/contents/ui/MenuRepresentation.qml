@@ -318,7 +318,7 @@ FocusScope {
 
         focus: true
 
-        placeholderText: i18n("Search...")
+        placeholderText: i18n("Search…")
         clearButtonShown: true
 
         onTextChanged: {

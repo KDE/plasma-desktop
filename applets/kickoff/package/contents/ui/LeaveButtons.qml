@@ -92,9 +92,9 @@ Item {
         }
         text: {
             return [
-                i18n("Leave..."),
-                i18n("Power..."),
-                i18n("More...")
+                i18n("Leave…"),
+                i18n("Power…"),
+                i18n("More…")
             ][currentId];
         }
 

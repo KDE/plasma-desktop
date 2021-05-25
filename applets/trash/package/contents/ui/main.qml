@@ -104,7 +104,7 @@ DragDrop.DropArea {
         });
 
         if (KCMShell.authorize("kcmtrash.desktop").length > 0) {
-            plasmoid.setAction("openkcm", i18n("Trash Settings..."), "configure");
+            plasmoid.setAction("openkcm", i18n("Trash Settings…"), "configure");
         }
     }
 

@@ -73,7 +73,7 @@ ColumnLayout {
                 y: +parent.height
 
                 MenuItem {
-                    text: i18nc("@item:inmenu Open icon chooser dialog", "Choose...")
+                    text: i18nc("@item:inmenu Open icon chooser dialog", "Choose…")
                     icon.name: "document-open-folder"
                     onClicked: iconDialog.open()
                 }

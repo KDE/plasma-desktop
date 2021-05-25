@@ -57,7 +57,7 @@ Kirigami.ScrollablePage
             id: searchField
             Layout.fillWidth: true
             text: view.searchText
-            placeholderText: i18n("Search...")
+            placeholderText: i18n("Search…")
             visible: view.showSearch
             onTextChanged: {
                 emojiModel.search = text

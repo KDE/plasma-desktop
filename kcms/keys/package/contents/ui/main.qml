@@ -229,7 +229,7 @@ KCM.AbstractKCM {
                 enabled: !exportActive
                 Layout.alignment: Qt.AlignRight
                 icon.name: "list-add"
-                text: i18n("Add Application...")
+                text: i18n("Add Application…")
                 onClicked: {
                     kcm.addApplication(this)
                 }
@@ -239,12 +239,12 @@ KCM.AbstractKCM {
                 QQC2.Button {
                     enabled: !exportActive
                     icon.name: "document-import"
-                    text: i18n("Import Scheme...")
+                    text: i18n("Import Scheme…")
                     onClicked: importSheet.open()
                 }
                 QQC2.Button {
                     icon.name: exportActive ? "dialog-cancel" : "document-export"
-                    text: exportActive ? i18n("Cancel Export") : i18n("Export Scheme...")
+                    text: exportActive ? i18n("Cancel Export") : i18n("Export Scheme…")
                     onClicked: {
                         if (exportActive) {
                             exportActive = false
@@ -311,7 +311,7 @@ KCM.AbstractKCM {
                     }
                 }
                 QQC2.Button {
-                    text: schemeBox.customSchemeSelected ? i18n("Select File...") : i18n("Import")
+                    text: schemeBox.customSchemeSelected ? i18n("Select File…") : i18n("Import")
                     onClicked: {
                         if (schemeBox.customSchemeSelected) {
                             fileDialogLoader.save = false;

@@ -148,7 +148,7 @@ PlasmaComponents.ContextMenu {
                 }
 
                 if (elided) {
-                    item.action.text += "...";
+                    item.action.text += "…";
                 }
 
                 menu.addMenuItem(item, startNewInstanceItem);

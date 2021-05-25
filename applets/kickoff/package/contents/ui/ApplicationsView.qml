@@ -349,7 +349,7 @@ FocusScope {
     PlasmaExtras.PlaceholderMessage {
         id: updatedLabel
         width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
-        text: i18n("Updating applications...")
+        text: i18n("Updating applications…")
         iconName: "view-refresh"
         opacity: 0
         visible: opacity != 0

@@ -214,7 +214,7 @@ Item {
                 onClicked: qAction.trigger()
             }
             PlasmaComponents3.ToolButton {
-                text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Choose Global Theme...")
+                text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Choose Global Theme…")
                 icon.name: "preferences-desktop-theme-global"
                 onClicked: KQuickControlsAddons.KCMShell.openSystemSettings("kcm_lookandfeel")
             }
