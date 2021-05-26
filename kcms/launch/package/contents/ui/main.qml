@@ -120,6 +120,9 @@ KCM.SimpleKCM {
 
             Kirigami.FormData.label: i18n("Stop animation after:")
 
+            // Don't resize if the suffix changes length
+            Layout.minimumWidth: Kirigami.Units.gridUnit * 7
+
             stepSize: 1
             editable: true
 
@@ -129,7 +132,7 @@ KCM.SimpleKCM {
                 kcm.launchFeedbackSettings.taskbarTimeout = value
             }
 
-            textFromValue: function(value, locale) { return i18np("%1 sec", "%1 secs", value)}
+            textFromValue: function(value, locale) { return i18np("%1 second", "%1 seconds", value)}
             valueFromText: function(text, locale) { return parseInt(text) }
 
             KCM.SettingStateBinding {
