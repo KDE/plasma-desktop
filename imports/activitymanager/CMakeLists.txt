@@ -15,7 +15,6 @@ target_link_libraries (
    Qt::Quick
    Qt::Qml
    Qt::Widgets
-   Qt::X11Extras
 
    KF5::I18n
    KF5::Activities
@@ -28,8 +27,6 @@ target_link_libraries (
    KF5::WindowSystem
 
    PW::LibTaskManager
-
-   ${X11_X11_LIB}
    )
 
 ## install

@@ -37,7 +37,6 @@
 #define KWINDOWSYSTEM_NO_DEPRECATED
 
 #include <KWindowSystem>
-#include <QX11Info>
 
 static const char *s_plasma_config = "plasma-org.kde.plasma.desktop-appletsrc";
 
