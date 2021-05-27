@@ -110,7 +110,18 @@ void KeyboardDaemon::registerShortcut()
         actionCollection = new KeyboardLayoutActionCollection(this, false);
 
         QAction *toggleLayoutAction = actionCollection->getToggleAction();
-        connect(toggleLayoutAction, &QAction::triggered, this, &KeyboardDaemon::switchToNextLayout);
+        connect(toggleLayoutAction, &QAction::triggered, this, [this]() {
+            switchToNextLayout();
+
+            LayoutUnit newLayout = X11Helper::getCurrentLayout();
+            QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
+                                                              QStringLiteral("/org/kde/osdService"),
+                                                              QStringLiteral("org.kde.osdService"),
+                                                              QStringLiteral("kbdLayoutChanged"));
+            msg << Flags::getLongText(newLayout, rules);
+            QDBusConnection::sessionBus().asyncCall(msg);
+        });
+
         actionCollection->loadLayoutShortcuts(keyboardConfig.layouts, rules);
         // clang-format off
 		connect(actionCollection, SIGNAL(actionTriggered(QAction*)), this, SLOT(setLayout(QAction*)));
