@@ -16,6 +16,11 @@
 #include <X11/Xlib.h>
 #include <X11/extensions/XKBrules.h>
 
+// FIXME
+#define XK_XKB_KEYS
+#include <X11/keysymdef.h>
+#include <xcb/xcb_keysyms.h>
+
 #include <fixx11h.h>
 
 // more information about the limit https://bugs.freedesktop.org/show_bug.cgi?id=19501
@@ -304,8 +309,17 @@ bool XEventNotifier::isXkbEvent(xcb_generic_event_t *event)
     return (event->response_type & ~0x80) == xkbOpcode + XkbEventCode;
 }
 
-bool XEventNotifier::processOtherEvents(xcb_generic_event_t * /*event*/)
+bool XEventNotifier::processOtherEvents(xcb_generic_event_t *event)
 {
+    if ( (event->response_type & ~0x80) == XCB_KEY_PRESS ) {
+        xcb_key_symbols_t *symbols = xcb_key_symbols_alloc(QX11Info::connection());
+        const xcb_keysym_t keySymX = xcb_key_press_lookup_keysym(symbols, reinterpret_cast<xcb_key_press_event_t *>(event), 0);
+
+        if (keySymX == XK_ISO_Next_Group) {
+            emit layoutChangedByXKBShortcut();
+        }
+    }
+
     return true;
 }
 
@@ -360,6 +374,20 @@ int XEventNotifier::registerForXkbEvents(Display *display)
         qCWarning(KCM_KEYBOARD) << "Couldn't select desired XKB events";
         return false;
     }
+
+    xcb_void_cookie_t cookie = xcb_grab_key_checked(QX11Info::connection(),
+                                                    true,
+                                                    QX11Info::appRootWindow(),
+                                                    XCB_MOD_MASK_ANY,
+                                                    XCB_GRAB_ANY,
+                                                    XCB_GRAB_MODE_ASYNC,
+                                                    XCB_GRAB_MODE_ASYNC);
+    QScopedPointer<xcb_generic_error_t, QScopedPointerPodDeleter> error(xcb_request_check(QX11Info::connection(), cookie));
+    if (!error.isNull()) {
+        qCWarning(KCM_KEYBOARD) << "Couldn't grab keys";
+        return false;
+    }
+
     return true;
 }
 

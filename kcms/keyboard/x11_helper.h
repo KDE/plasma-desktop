@@ -43,6 +43,7 @@ class XEventNotifier : public QObject, public QAbstractNativeEventFilter
 Q_SIGNALS:
     void layoutChanged();
     void layoutMapChanged();
+    void layoutChangedByXKBShortcut();
 
 public:
     XEventNotifier();
