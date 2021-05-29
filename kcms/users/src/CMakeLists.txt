@@ -40,7 +40,7 @@ ecm_qt_install_logging_categories(
     DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
 )
 
-add_library(kcm_users MODULE ${kcm_users_SRCS})
+kcoreaddons_add_plugin(kcm_users SOURCES ${kcm_users_SRCS} INSTALL_NAMESPACE "kcms")
 
 target_link_libraries(kcm_users
     Qt::Quick
@@ -56,5 +56,3 @@ target_link_libraries(kcm_users
 )
 
 kcoreaddons_desktop_to_json(kcm_users "../kcm_users.desktop" SERVICE_TYPES kcmodule.desktop)
-
-install(TARGETS kcm_users DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)

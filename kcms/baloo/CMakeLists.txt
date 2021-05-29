@@ -7,7 +7,7 @@ set(kcm_file_SRCS
   baloodata.cpp
 )
 
-add_library(kcm_baloofile MODULE ${kcm_file_SRCS})
+kcoreaddons_add_plugin(kcm_baloofile SOURCES ${kcm_file_SRCS} INSTALL_NAMESPACE "kcms")
 
 target_link_libraries(kcm_baloofile
   KF5::CoreAddons
@@ -23,6 +23,5 @@ target_link_libraries(kcm_baloofile
 kcoreaddons_desktop_to_json(kcm_baloofile "kcm_baloofile.desktop")
 
 install(FILES kcm_baloofile.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
-install(TARGETS kcm_baloofile DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
 kpackage_install_package(package kcm_baloofile kcms)

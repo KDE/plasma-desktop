@@ -14,7 +14,7 @@ set(componentchooser_SRCS
 kconfig_add_kcfg_files(componentchooser_SRCS browser_settings.kcfgc GENERATE_MOC)
 kconfig_add_kcfg_files(componentchooser_SRCS terminal_settings.kcfgc GENERATE_MOC)
 
-add_library(kcm_componentchooser MODULE ${componentchooser_SRCS})
+kcoreaddons_add_plugin(kcm_componentchooser SOURCES ${componentchooser_SRCS} INSTALL_NAMESPACE "kcms")
 
 target_link_libraries(kcm_componentchooser
     Qt::Core
@@ -28,8 +28,6 @@ target_link_libraries(kcm_componentchooser
 )
 
 kcoreaddons_desktop_to_json(kcm_componentchooser "package/metadata.desktop")
-
-install(TARGETS kcm_componentchooser DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
 install(FILES package/metadata.desktop RENAME componentchooser.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 kpackage_install_package(package kcm_componentchooser kcms)

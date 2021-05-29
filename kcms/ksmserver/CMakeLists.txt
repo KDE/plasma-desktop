@@ -15,7 +15,7 @@ qt_add_dbus_interface(kcm_smserver_PART_SRCS org.freedesktop.login1.Manager.xml 
 
 kconfig_add_kcfg_files(kcm_smserver_PART_SRCS smserversettings.kcfgc GENERATE_MOC)
 
-add_library(kcm_smserver MODULE ${kcm_smserver_PART_SRCS})
+kcoreaddons_add_plugin(kcm_smserver SOURCES ${kcm_smserver_PART_SRCS} INSTALL_NAMESPACE "kcms")
 
 target_link_libraries(kcm_smserver
     Qt::Core
@@ -32,7 +32,6 @@ add_subdirectory(kconf_update)
 
 ########### install files ###############
 
-install(TARGETS kcm_smserver DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 install(FILES package/metadata.desktop RENAME kcm_smserver.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 kpackage_install_package(package kcm_smserver kcms)
 

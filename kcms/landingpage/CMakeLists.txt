@@ -29,7 +29,7 @@ if (KUserFeedback_FOUND)
 kconfig_add_kcfg_files(kcm_landingpage_SRCS landingpage_feedbacksettings.kcfgc GENERATE_MOC)
 endif()
 
-add_library(kcm_landingpage MODULE ${kcm_landingpage_SRCS})
+kcoreaddons_add_plugin(kcm_landingpage SOURCES ${kcm_landingpage_SRCS} INSTALL_NAMESPACE "kcms")
 
 target_link_libraries(kcm_landingpage
     KF5::QuickAddons
@@ -59,6 +59,5 @@ if (KUserFeedback_FOUND)
 install(FILES landingpage_feedbacksettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 endif()
 install(FILES kcm_landingpage.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
-install(TARGETS kcm_landingpage DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
 kpackage_install_package(package kcm_landingpage kcms)

@@ -15,7 +15,7 @@ kcmutils_generate_module_data(
 
 kconfig_add_kcfg_files(kcm_launchfeedback_PART_SRCS launchfeedbacksettingsbase.kcfgc GENERATE_MOC)
 
-add_library(kcm_launchfeedback MODULE ${kcm_launchfeedback_PART_SRCS})
+kcoreaddons_add_plugin(kcm_launchfeedback SOURCES ${kcm_launchfeedback_PART_SRCS} INSTALL_NAMESPACE "kcms")
 
 target_link_libraries(kcm_launchfeedback
     Qt::DBus
@@ -29,6 +29,5 @@ kcoreaddons_desktop_to_json(kcm_launchfeedback "kcm_launchfeedback.desktop")
 ########### install files ###############
 
 install(FILES launchfeedbacksettingsbase.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-install(TARGETS kcm_launchfeedback DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 install(FILES kcm_launchfeedback.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR})
 kpackage_install_package(package kcm_launchfeedback kcms)

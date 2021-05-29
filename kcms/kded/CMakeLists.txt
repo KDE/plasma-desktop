@@ -22,13 +22,11 @@ ecm_qt_install_logging_categories(
        DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
 
-add_library(kcm_kded MODULE ${kcm_kded_SRCS})
+kcoreaddons_add_plugin(kcm_kded SOURCES ${kcm_kded_SRCS} INSTALL_NAMESPACE "kcms")
 
 kcoreaddons_desktop_to_json(kcm_kded "kcmkded.desktop")
 
 target_link_libraries(kcm_kded KF5::QuickAddons KF5::Service KF5::I18n KF5::KCMUtils Qt::DBus)
-
-install(TARGETS kcm_kded  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms )
 
 ########### install files ###############
 

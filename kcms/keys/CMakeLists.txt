@@ -42,7 +42,7 @@ ecm_qt_install_logging_categories(
 )
 
 
-add_library(kcm_keys MODULE ${kcm_keys_SRCS})
+kcoreaddons_add_plugin(kcm_keys SOURCES ${kcm_keys_SRCS} INSTALL_NAMESPACE "kcms")
 
 target_link_libraries(kcm_keys
     Qt::DBus
@@ -57,7 +57,6 @@ target_link_libraries(kcm_keys
 kcoreaddons_desktop_to_json(kcm_keys "kcm_keys.desktop")
 
 install(FILES kcm_keys.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
-install(TARGETS kcm_keys DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
 kpackage_install_package(package kcm_keys kcms)
 

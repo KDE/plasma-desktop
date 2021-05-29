@@ -19,7 +19,7 @@ kcmutils_generate_module_data(
     SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ScreenReaderSettings
 )
 
-add_library(kcm_access MODULE ${kcm_access_PART_SRCS})
+kcoreaddons_add_plugin(kcm_access SOURCES ${kcm_access_PART_SRCS} INSTALL_NAMESPACE "kcms")
 
 target_link_libraries(kcm_access
     Qt::DBus
@@ -39,7 +39,6 @@ target_link_libraries(kcm_access
 kcoreaddons_desktop_to_json(kcm_access "kcm_access.desktop")
 
 install(FILES kcm_access.desktop  DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
-install(TARGETS kcm_access DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 install(
     FILES
         kcmaccessibilitybell.kcfg
