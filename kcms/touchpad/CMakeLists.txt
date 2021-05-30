@@ -13,7 +13,7 @@ SET(TOUCHPAD_SRCS
 include(backends/x11.cmake)
 include(backends/kwin_wayland.cmake)
 
-qt5_add_dbus_interfaces(TOUCHPAD_SRCS
+qt_add_dbus_interfaces(TOUCHPAD_SRCS
                         ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 )
 

@@ -14,7 +14,7 @@ set (
    dialog.cpp
    )
 
-qt5_add_dbus_interface (
+qt_add_dbus_interface (
    kactivities_KCM_imports_LIB_SRCS
 
    ../common/dbus/org.kde.ActivityManager.Features.xml

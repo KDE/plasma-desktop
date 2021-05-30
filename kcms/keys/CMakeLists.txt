@@ -17,7 +17,7 @@ set_source_files_properties(${kglobalaccel_xml} PROPERTIES
     NO_NAMESPACE TRUE
     CLASSNAME "KGlobalAccelInterface"
 )
-qt5_add_dbus_interface(kcm_keys_SRCS ${kglobalaccel_xml} kglobalaccel_interface)
+qt_add_dbus_interface(kcm_keys_SRCS ${kglobalaccel_xml} kglobalaccel_interface)
 
 set(kglobalaccel_component_xml ${KGLOBALACCEL_DBUS_INTERFACES_DIR}/kf5_org.kde.kglobalaccel.Component.xml)
 set_source_files_properties(${kglobalaccel_component_xml} PROPERTIES
@@ -25,7 +25,7 @@ set_source_files_properties(${kglobalaccel_component_xml} PROPERTIES
     NO_NAMESPACE TRUE
     CLASSNAME "KGlobalAccelComponentInterface"
 )
-qt5_add_dbus_interface(kcm_keys_SRCS ${kglobalaccel_component_xml} kglobalaccel_component_interface)
+qt_add_dbus_interface(kcm_keys_SRCS ${kglobalaccel_component_xml} kglobalaccel_component_interface)
 
 
 ecm_qt_declare_logging_category(kcm_keys_SRCS

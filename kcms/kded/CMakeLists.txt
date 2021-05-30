@@ -8,7 +8,7 @@ set(kcm_kded_SRCS
     kdedconfigdata.cpp
 )
 
-qt5_add_dbus_interface(kcm_kded_SRCS ${KDED_DBUS_INTERFACE} kded_interface)
+qt_add_dbus_interface(kcm_kded_SRCS ${KDED_DBUS_INTERFACE} kded_interface)
 
 ecm_qt_declare_logging_category(kcm_kded_SRCS HEADER debug.h
                                 IDENTIFIER KCM_KDED

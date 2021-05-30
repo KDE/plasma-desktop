@@ -42,14 +42,14 @@ ki18n_wrap_ui (
    ui/SwitchingTabBase.ui
    )
 
-qt5_add_dbus_interface (
+qt_add_dbus_interface (
    KAMD_KCM_SRCS
 
    common/dbus/org.kde.ActivityManager.Features.xml
    features_interface
    )
 
-qt5_add_dbus_interface (
+qt_add_dbus_interface (
    KAMD_KCM_SRCS
 
    common/dbus/org.kde.ActivityManager.ResourceScoring.xml

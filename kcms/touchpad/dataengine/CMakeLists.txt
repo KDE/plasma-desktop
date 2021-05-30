@@ -4,10 +4,10 @@ set(DataEngine_SRCS
 )
 
 qt5_generate_dbus_interface(../kded/kded.h org.kde.touchpad.xml)
-qt5_add_dbus_interfaces(DataEngine_SRCS
+qt_add_dbus_interfaces(DataEngine_SRCS
                         ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 )
-qt5_add_dbus_interfaces(DataEngine_SRCS
+qt_add_dbus_interfaces(DataEngine_SRCS
                         ${KDED_DBUS_INTERFACE}
 )
 

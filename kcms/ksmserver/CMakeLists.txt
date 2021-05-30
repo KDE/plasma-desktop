@@ -11,7 +11,7 @@ kcmutils_generate_module_data(
     SETTINGS_CLASSES SMServerSettings
 )
 
-qt5_add_dbus_interface(kcm_smserver_PART_SRCS org.freedesktop.login1.Manager.xml login1_manager)
+qt_add_dbus_interface(kcm_smserver_PART_SRCS org.freedesktop.login1.Manager.xml login1_manager)
 
 kconfig_add_kcfg_files(kcm_smserver_PART_SRCS smserversettings.kcfgc GENERATE_MOC)
 

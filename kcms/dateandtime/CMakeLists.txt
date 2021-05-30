@@ -6,7 +6,7 @@ set(kcm_clock_PART_SRCS dtime.cpp main.cpp )
 
 ki18n_wrap_ui(kcm_clock_PART_SRCS dateandtime.ui)
 
-qt5_add_dbus_interface(kcm_clock_PART_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/timedated1.xml timedated_interface)
+qt_add_dbus_interface(kcm_clock_PART_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/timedated1.xml timedated_interface)
 
 add_library(kcm_clock MODULE ${kcm_clock_PART_SRCS})
 
