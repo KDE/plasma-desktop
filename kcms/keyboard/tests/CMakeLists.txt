@@ -19,18 +19,17 @@ endmacro(KEYBOARD_DAEMON_UNIT_TESTS)
 keyboard_daemon_unit_tests(xkb_rules)
 keyboard_daemon_unit_tests(iso_codes)
 
-add_executable(flags_test flags_test.cpp ../flags.cpp ../x11_helper.cpp ../keyboard_config.cpp ../xkb_rules.cpp ../debug.cpp ../layoutnames.cpp)
+add_executable(flags_test flags_test.cpp)
 ecm_mark_nongui_executable(flags_test)
 ecm_mark_as_test(flags_test)
 add_test(NAME kcm-keyboard-flags_test COMMAND flags_test)
 target_link_libraries(flags_test
-                      Qt::Concurrent
-                      Qt::X11Extras
-                      Qt::Xml
+                      kcm_keyboard_static
                       Qt::Test
                       Qt::DBus
                       Qt::Widgets
                       KF5::GuiAddons
+                      KF5::KCMUtils
                       KF5::I18n
                       KF5::Plasma
                       KF5::WindowSystem
@@ -51,12 +50,14 @@ if( X11_XTest_FOUND )
    ecm_mark_nongui_executable(keyboard_daemon_test)
    ecm_mark_as_test(keyboard_daemon_test)
    target_link_libraries(keyboard_daemon_test
+                         kcm_keyboard_static
                          Qt::Concurrent
                          Qt::X11Extras
                          Qt::Xml
                          Qt::Test
                          KF5::ConfigCore
                          KF5::CoreAddons
+                         KF5::KCMUtils
                          KF5::DBusAddons
                          KF5::GuiAddons
                          KF5::I18n

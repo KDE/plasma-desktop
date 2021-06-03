@@ -6,11 +6,14 @@
     Layout management, cleanups:
     SPDX-FileCopyrightText: 1999 Dirk A. Mueller <dmuell@gmx.net>
 
+    SPDX-FileCopyrightText: 2021 Cyril Rossi <cyril.rossi@enioka.com>
+
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "kcmmisc.h"
 #include "ui_kcmmiscwidget.h"
+#include "keyboardmiscsettings.h"
 
 #include <QButtonGroup>
 #include <QCheckBox>
@@ -36,16 +39,15 @@ bool hasAccentSupport()
 }
 }
 
-KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent)
+KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent, KeyboardMiscSettings *settings)
     : QWidget(parent)
     , ui(*new Ui_KeyboardConfigWidget)
+    , m_settings(settings)
 {
     ui.setupUi(this);
 
-    ui.delay->setRange(100, 5000);
-    ui.delay->setSingleStep(50);
-    ui.rate->setRange(0.2, 100);
-    ui.rate->setSingleStep(5);
+    ui.kcfg_repeatDelay->setSingleStep(50);
+    ui.kcfg_repeatRate->setSingleStep(5);
 
     sliderMax = (int)floor(0.5 + 2 * (log(5000.0L) - log(100.0L)) / (log(5000.0L) - log(4999.0L)));
     ui.delaySlider->setRange(0, sliderMax);
@@ -58,9 +60,9 @@ KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent)
     ui.rateSlider->setPageStep(500);
     ui.rateSlider->setTickInterval(498);
 
-    connect(ui.delay, SIGNAL(valueChanged(int)), this, SLOT(delaySpinboxChanged(int)));
+    connect(ui.kcfg_repeatDelay, SIGNAL(valueChanged(int)), this, SLOT(delaySpinboxChanged(int)));
     connect(ui.delaySlider, &QAbstractSlider::valueChanged, this, &KCMiscKeyboardWidget::delaySliderChanged);
-    connect(ui.rate, SIGNAL(valueChanged(double)), this, SLOT(rateSpinboxChanged(double)));
+    connect(ui.kcfg_repeatRate, SIGNAL(valueChanged(double)), this, SLOT(rateSpinboxChanged(double)));
     connect(ui.rateSlider, &QAbstractSlider::valueChanged, this, &KCMiscKeyboardWidget::rateSliderChanged);
 
     _numlockButtonGroup = new QButtonGroup(ui.numlockButtonGroup);
@@ -81,6 +83,11 @@ KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent)
 
     connect(_keyboardRepeatButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(changed()));
     connect(_keyboardRepeatButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(keyboardRepeatStateChanged(int)));
+
+    connect(_numlockButtonGroup, qOverload<QAbstractButton *>(&QButtonGroup::buttonClicked),
+            this, &KCMiscKeyboardWidget::updateUiDefaultIndicator);
+    connect(_keyboardRepeatButtonGroup, qOverload<QAbstractButton *>(&QButtonGroup::buttonClicked),
+            this, &KCMiscKeyboardWidget::updateUiDefaultIndicator);
 }
 
 KCMiscKeyboardWidget::~KCMiscKeyboardWidget()
@@ -91,12 +98,8 @@ KCMiscKeyboardWidget::~KCMiscKeyboardWidget()
 // set the slider and LCD values
 void KCMiscKeyboardWidget::setRepeat(KeyBehaviour keyboardRepeat, int delay_, double rate_)
 {
-    if (keyboardRepeat == KeyBehaviour::AccentMenu && !hasAccentSupport()) {
-        keyboardRepeat = KeyBehaviour::RepeatKey;
-    }
     _keyboardRepeatButtonGroup->button(keyboardRepeat)->click();
-    ui.delay->setValue(delay_);
-    ui.rate->setValue(rate_);
+
     delaySpinboxChanged(delay_);
     rateSpinboxChanged(rate_);
 }
@@ -114,13 +117,8 @@ void TriStateHelper::setTriState(QButtonGroup *group, TriState state)
 
 void KCMiscKeyboardWidget::load()
 {
-    KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kcminputrc"), KConfig::NoGlobals), "Keyboard");
-
-    ui.delay->blockSignals(true);
-    ui.rate->blockSignals(true);
-
     // need to read as string to support old "true/false" parameter
-    QString key = config.readEntry("KeyRepeat", TriStateHelper::getString(STATE_ON));
+    QString key = m_settings->keyboardRepeat();
     if (key == QLatin1String("true") || key == TriStateHelper::getString(STATE_ON) || key == QLatin1String("accent")) {
         keyboardRepeat = KeyBehaviour::AccentMenu;
     } else if (key == QLatin1String("false") || key == TriStateHelper::getString(STATE_OFF) || key == QLatin1String("nothing")) {
@@ -128,39 +126,25 @@ void KCMiscKeyboardWidget::load()
     } else if (key == QLatin1String("repeat")) {
         keyboardRepeat = KeyBehaviour::RepeatKey;
     }
+    setRepeat(keyboardRepeat, m_settings->repeatDelay(), m_settings->repeatRate());
 
-    //  keyboardRepeat = (key ? AutoRepeatModeOn : AutoRepeatModeOff);
-    int delay = config.readEntry("RepeatDelay", DEFAULT_REPEAT_DELAY);
-    double rate = config.readEntry("RepeatRate", DEFAULT_REPEAT_RATE);
-    setRepeat(keyboardRepeat, delay, rate);
-
-    //  setRepeat(kbd.global_auto_repeat, ui.delay->value(), ui.rate->value());
-
-    numlockState = TriStateHelper::getTriState(config.readEntry("NumLock", TriStateHelper::getInt(STATE_UNCHANGED)));
+    numlockState = TriStateHelper::getTriState(m_settings->numLock());
     TriStateHelper::setTriState(_numlockButtonGroup, numlockState);
-
-    ui.delay->blockSignals(false);
-    ui.rate->blockSignals(false);
 }
 
 void KCMiscKeyboardWidget::save()
 {
-    KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kcminputrc"), KConfig::NoGlobals), "Keyboard");
-
-    keyboardRepeat = KeyBehaviour(_keyboardRepeatButtonGroup->checkedId());
     numlockState = TriStateHelper::getTriState(_numlockButtonGroup);
+    keyboardRepeat = KeyBehaviour(_keyboardRepeatButtonGroup->checkedId());
 
-    config.writeEntry("KeyRepeat", keybehaviourNames[KeyBehaviour(_keyboardRepeatButtonGroup->checkedId())], KConfig::Notify);
-    config.writeEntry("RepeatRate", ui.rate->value(), KConfig::Notify);
-    config.writeEntry("RepeatDelay", ui.delay->value(), KConfig::Notify);
-    config.writeEntry("NumLock", TriStateHelper::getInt(numlockState));
-    config.sync();
+    m_settings->setKeyboardRepeat(keybehaviourNames[keyboardRepeat]);
+    m_settings->setNumLock(TriStateHelper::getInt(numlockState));
 }
 
 void KCMiscKeyboardWidget::defaults()
 {
-    setRepeat(KeyBehaviour::AccentMenu, DEFAULT_REPEAT_DELAY, DEFAULT_REPEAT_RATE);
-    TriStateHelper::setTriState(_numlockButtonGroup, STATE_UNCHANGED);
+    setRepeat(defaultValueKeyboardRepeat(), m_settings->defaultRepeatDelayValue(), m_settings->defaultRepeatRateValue());
+    TriStateHelper::setTriState(_numlockButtonGroup, static_cast<TriState>(m_settings->defaultNumLockValue()));
     Q_EMIT changed(true);
 }
 
@@ -176,12 +160,47 @@ QString KCMiscKeyboardWidget::quickHelp() const
        " has no effect because this feature is not available on your system." */
 }
 
+bool KCMiscKeyboardWidget::isSaveNeeded() const
+{
+    return m_settings->keyboardRepeat() != keybehaviourNames[KeyBehaviour(_keyboardRepeatButtonGroup->checkedId())]
+            || m_settings->numLock() != TriStateHelper::getInt(TriStateHelper::getTriState(_numlockButtonGroup));
+}
+
+bool KCMiscKeyboardWidget::isDefault() const
+{
+    return defaultValueKeyboardRepeat() == KeyBehaviour(_keyboardRepeatButtonGroup->checkedId())
+            && m_settings->defaultNumLockValue() == TriStateHelper::getInt(TriStateHelper::getTriState(_numlockButtonGroup));
+}
+
+void KCMiscKeyboardWidget::setDefaultIndicator(bool visible)
+{
+    m_highlightVisible = visible;
+    updateUiDefaultIndicator();
+}
+
+void KCMiscKeyboardWidget::updateUiDefaultIndicator()
+{
+    const auto isNumLockDefault = m_settings->defaultNumLockValue() == TriStateHelper::getInt(TriStateHelper::getTriState(_numlockButtonGroup));
+    for (auto button : _numlockButtonGroup->buttons()) {
+        setDefaultIndicatorVisible(button, m_highlightVisible && !isNumLockDefault && _numlockButtonGroup->checkedButton() == button);
+    }
+
+    const auto isKeyboardRepeatDefault = defaultValueKeyboardRepeat() == KeyBehaviour(_keyboardRepeatButtonGroup->checkedId());
+    for (auto button : _keyboardRepeatButtonGroup->buttons()) {
+        setDefaultIndicatorVisible(button, m_highlightVisible && !isKeyboardRepeatDefault && _keyboardRepeatButtonGroup->checkedButton() == button);
+    }
+
+    setDefaultIndicatorVisible(ui.delaySlider, m_highlightVisible && ui.kcfg_repeatDelay->value() != m_settings->defaultRepeatDelayValue());
+    setDefaultIndicatorVisible(ui.rateSlider, m_highlightVisible && ui.kcfg_repeatRate->value() != m_settings->defaultRepeatRateValue());
+}
+
 void KCMiscKeyboardWidget::delaySliderChanged(int value)
 {
     double alpha = sliderMax / (log(5000.0L) - log(100.0L));
     double linearValue = exp(value / alpha + log(100.0L));
 
-    ui.delay->setValue((int)floor(0.5 + linearValue));
+    ui.kcfg_repeatDelay->setValue((int)floor(0.5 + linearValue));
+    updateUiDefaultIndicator();
 
     Q_EMIT changed(true);
 }
@@ -198,7 +217,8 @@ void KCMiscKeyboardWidget::delaySpinboxChanged(int value)
 
 void KCMiscKeyboardWidget::rateSliderChanged(int value)
 {
-    ui.rate->setValue(value / 100.0);
+    ui.kcfg_repeatRate->setValue(value / 100.0);
+    updateUiDefaultIndicator();
 
     Q_EMIT changed(true);
 }
@@ -206,7 +226,6 @@ void KCMiscKeyboardWidget::rateSliderChanged(int value)
 void KCMiscKeyboardWidget::rateSpinboxChanged(double value)
 {
     ui.rateSlider->setValue((int)(value * 100));
-
     Q_EMIT changed(true);
 }
 
@@ -219,4 +238,24 @@ void KCMiscKeyboardWidget::keyboardRepeatStateChanged(int selection)
 {
     ui.keyboardRepeatParamsGroupBox->setVisible(selection == KeyBehaviour::RepeatKey);
     changed();
+}
+
+void KCMiscKeyboardWidget::setDefaultIndicatorVisible(QWidget *widget, bool visible)
+{
+    widget->setProperty("_kde_highlight_neutral", visible);
+    widget->update();
+}
+
+KeyBehaviour KCMiscKeyboardWidget::defaultValueKeyboardRepeat() const
+{
+    if (m_settings->defaultKeyboardRepeatValue() == keybehaviourNames[KeyBehaviour::AccentMenu] && !hasAccentSupport()) {
+        return KeyBehaviour::RepeatKey;
+    }
+
+    const auto keys = keybehaviourNames.keys();
+    auto defaultRepeat = std::find_if(keys.constBegin(), keys.constEnd(), [=](const KeyBehaviour &key) {
+        return keybehaviourNames[key] == m_settings->defaultKeyboardRepeatValue();
+    });
+
+    return *defaultRepeat;
 }

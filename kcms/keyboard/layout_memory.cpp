@@ -34,11 +34,11 @@ void LayoutMemory::configChanged()
 
 void LayoutMemory::registerListeners()
 {
-    if (keyboardConfig.switchingPolicy == KeyboardConfig::SWITCH_POLICY_WINDOW || keyboardConfig.switchingPolicy == KeyboardConfig::SWITCH_POLICY_APPLICATION) {
+    if (keyboardConfig.switchingPolicy() == KeyboardConfig::SWITCH_POLICY_WINDOW || keyboardConfig.switchingPolicy() == KeyboardConfig::SWITCH_POLICY_APPLICATION) {
         connect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, this, &LayoutMemory::windowChanged);
         //		connect(KWindowSystem::self(), SIGNAL(windowRemoved(WId)), this, SLOT(windowRemoved(WId)));
     }
-    if (keyboardConfig.switchingPolicy == KeyboardConfig::SWITCH_POLICY_DESKTOP) {
+    if (keyboardConfig.switchingPolicy() == KeyboardConfig::SWITCH_POLICY_DESKTOP) {
         connect(KWindowSystem::self(), &KWindowSystem::currentDesktopChanged, this, &LayoutMemory::desktopChanged);
     }
 }
@@ -52,7 +52,7 @@ void LayoutMemory::unregisterListeners()
 
 QString LayoutMemory::getCurrentMapKey()
 {
-    switch (keyboardConfig.switchingPolicy) {
+    switch (keyboardConfig.switchingPolicy()) {
     case KeyboardConfig::SWITCH_POLICY_WINDOW: {
         WId wid = KWindowSystem::self()->activeWindow();
         KWindowInfo winInfo(wid, NET::WMWindowType);
@@ -115,7 +115,7 @@ void LayoutMemory::layoutMapChanged()
     prevLayoutList = newLayoutList;
 
     // TODO: need more thinking here on how to support external map resetting
-    if (keyboardConfig.configureLayouts && isExtraSubset(keyboardConfig.layouts, newLayoutList)) {
+    if (keyboardConfig.configureLayouts() && isExtraSubset(keyboardConfig.layouts, newLayoutList)) {
         qCDebug(KCM_KEYBOARD, ) << "Layout map change for extra layout";
         layoutChanged(); // to remember new map for active "window"
     } else {
@@ -146,7 +146,7 @@ void LayoutMemory::setCurrentLayoutFromMap()
 
         if (!X11Helper::isDefaultLayout()) {
             //			qCDebug(KCM_KEYBOARD, ) << "setting default layout for container key" << layoutMapKey;
-            if (keyboardConfig.configureLayouts && X11Helper::getLayoutsList() != keyboardConfig.getDefaultLayouts()) {
+            if (keyboardConfig.configureLayouts() && X11Helper::getLayoutsList() != keyboardConfig.getDefaultLayouts()) {
                 XkbHelper::initializeKeyboardLayouts(keyboardConfig.getDefaultLayouts());
             }
             X11Helper::setDefaultLayout();
@@ -157,7 +157,7 @@ void LayoutMemory::setCurrentLayoutFromMap()
 
         LayoutSet currentLayouts = X11Helper::getCurrentLayouts();
         if (layoutFromMap.layouts != currentLayouts.layouts) {
-            if (keyboardConfig.configureLayouts) {
+            if (keyboardConfig.configureLayouts()) {
                 XkbHelper::initializeKeyboardLayouts(layoutFromMap.layouts);
             }
             X11Helper::setLayout(layoutFromMap.currentLayout);

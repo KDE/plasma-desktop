@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2010 Andriy Rysin <rysin@kde.org>
+    SPDX-FileCopyrightText: 2021 Cyril Rossi <cyril.rossi@enioka.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -23,6 +24,7 @@
 
 #include "keyboard_config.h"
 #include "workspace_options.h"
+#include "keyboardmiscsettings.h"
 
 #include "bindings.h"
 #include "flags.h"
@@ -48,6 +50,7 @@ static const int MIN_LOOPING_COUNT = 2;
 KCMKeyboardWidget::KCMKeyboardWidget(Rules *rules_,
                                      KeyboardConfig *keyboardConfig_,
                                      WorkspaceOptions &workspaceOptions,
+                                     KCMiscKeyboardWidget *kcmMiscWidget,
                                      const QVariantList &args,
                                      QWidget * /*parent*/)
     : rules(rules_)
@@ -60,10 +63,8 @@ KCMKeyboardWidget::KCMKeyboardWidget(Rules *rules_,
 
     uiWidget = new Ui::TabWidget;
     uiWidget->setupUi(this);
-
-    kcmMiscWidget = new KCMiscKeyboardWidget(uiWidget->lowerHardwareWidget);
+    kcmMiscWidget->setParent(uiWidget->lowerHardwareWidget);
     uiWidget->lowerHardwareWidget->layout()->addWidget(kcmMiscWidget);
-    connect(kcmMiscWidget, SIGNAL(changed(bool)), this, SIGNAL(changed(bool)));
 
     if (rules != nullptr) {
         initializeKeyboardModelUI();
@@ -105,14 +106,49 @@ void KCMKeyboardWidget::save()
     if (rules == nullptr)
         return;
 
-    if (actionCollection != nullptr) {
-        actionCollection->resetLayoutShortcuts();
-        actionCollection->clear();
-        delete actionCollection;
+    keyboardConfig->setKeyboardModel(keyboardModelFromUI());
+    keyboardConfig->setSwitchingPolicy(switcingPolicyFromUI());
+
+    saveXkbOptions();
+}
+
+void KCMKeyboardWidget::defaults()
+{
+    updateHardwareUI(keyboardConfig->defaultKeyboardModelValue());
+    updateSwitcingPolicyUI(keyboardConfig->defaultSwitchingPolicyValue());
+    auto *xkbOptionModel = dynamic_cast<XkbOptionsTreeModel *>(uiWidget->xkbOptionsTreeView->model());
+    xkbOptionModel->setXkbOptions(keyboardConfig->defaultXkbOptionsValue());
+    keyboardConfig->setDefaults();
+}
+
+bool KCMKeyboardWidget::isSaveNeeded() const
+{
+    return keyboardModelFromUI() != keyboardConfig->keyboardModel() ||
+            switcingPolicyFromUI() != keyboardConfig->switchingPolicy() ||
+            xkbOptionsFromUI() != keyboardConfig->xkbOptions() ||
+            keyboardConfig->layoutsSaveNeeded();
+}
+
+bool KCMKeyboardWidget::isDefault() const
+{
+    return keyboardModelFromUI() == keyboardConfig->defaultKeyboardModelValue() &&
+            switcingPolicyFromUI() == keyboardConfig->defaultSwitchingPolicyValue() &&
+            xkbOptionsFromUI() == keyboardConfig->xkbOptions();
+}
+
+void KCMKeyboardWidget::setDefaultIndicator(bool visible)
+{
+    m_highlightVisible = visible;
+    updateUiDefaultIndicator();
+}
+
+void KCMKeyboardWidget::updateUiDefaultIndicator()
+{
+    setDefaultIndicatorVisible(uiWidget->keyboardModelComboBox, m_highlightVisible && keyboardModelFromUI() != keyboardConfig->defaultKeyboardModelValue());
+    const auto isDefaultswitchingPolicy = switcingPolicyFromUI() == keyboardConfig->defaultSwitchingPolicyValue();
+    for (auto button : uiWidget->switchingPolicyButtonGroup->buttons()) {
+        setDefaultIndicatorVisible(button, m_highlightVisible && !isDefaultswitchingPolicy && uiWidget->switchingPolicyButtonGroup->checkedButton() == button);
     }
-    actionCollection = new KeyboardLayoutActionCollection(this, true);
-    actionCollection->setToggleShortcut(uiWidget->kdeKeySequence->keySequence());
-    actionCollection->setLayoutShortcuts(keyboardConfig->layouts, rules);
 }
 
 void KCMKeyboardWidget::updateUI()
@@ -125,9 +161,10 @@ void KCMKeyboardWidget::updateUI()
     uiWidget->layoutsTableView->resizeRowsToContents();
 
     uiUpdating = true;
-    updateHardwareUI();
-    updateXkbOptionsUI();
-    updateSwitcingPolicyUI();
+    updateHardwareUI(keyboardConfig->keyboardModel());
+    updateSwitcingPolicyUI(keyboardConfig->switchingPolicy());
+    XkbOptionsTreeModel *model = dynamic_cast<XkbOptionsTreeModel *>(uiWidget->xkbOptionsTreeView->model());
+    model->setXkbOptions(keyboardConfig->xkbOptions());
     updateLayoutsUI();
     updateShortcutsUI();
     layoutSelectionChanged();
@@ -136,42 +173,29 @@ void KCMKeyboardWidget::updateUI()
 
 void KCMKeyboardWidget::uiChanged()
 {
-    if (rules == nullptr)
+    if (rules == nullptr) {
         return;
+    }
 
     ((LayoutsTableModel *)uiWidget->layoutsTableView->model())->refresh();
     layoutSelectionChanged();
     // this collapses the tree so use more fine-grained updates
     //	((LayoutsTableModel*)uiWidget->xkbOptionsTreeView->model())->refresh();
 
-    if (uiUpdating)
+    if (uiUpdating) {
         return;
-
-    m_workspaceOptions.setOsdKbdLayoutChangedEnabled(uiWidget->showOSD_Chk->isChecked());
-
-    keyboardConfig->configureLayouts = uiWidget->layoutsGroupBox->isChecked();
-    keyboardConfig->keyboardModel = uiWidget->keyboardModelComboBox->itemData(uiWidget->keyboardModelComboBox->currentIndex()).toString();
-
-    keyboardConfig->resetOldXkbOptions = uiWidget->configureKeyboardOptionsChk->isChecked();
-
-    if (uiWidget->switchByDesktopRadioBtn->isChecked()) {
-        keyboardConfig->switchingPolicy = KeyboardConfig::SWITCH_POLICY_DESKTOP;
-    } else if (uiWidget->switchByApplicationRadioBtn->isChecked()) {
-        keyboardConfig->switchingPolicy = KeyboardConfig::SWITCH_POLICY_APPLICATION;
-    } else if (uiWidget->switchByWindowRadioBtn->isChecked()) {
-        keyboardConfig->switchingPolicy = KeyboardConfig::SWITCH_POLICY_WINDOW;
-    } else {
-        keyboardConfig->switchingPolicy = KeyboardConfig::SWITCH_POLICY_GLOBAL;
     }
 
     updateXkbShortcutsButtons();
 
     updateLoopCount();
     int loop = uiWidget->layoutLoopCountSpinBox->text().isEmpty() ? KeyboardConfig::NO_LOOPING : uiWidget->layoutLoopCountSpinBox->value();
-    keyboardConfig->layoutLoopCount = loop;
+    keyboardConfig->setLayoutLoopCount(loop);
 
     layoutsTableModel->refresh();
     layoutSelectionChanged();
+    // Refresh layout shortcuts
+    switchKeyboardShortcutChanged();
 
     Q_EMIT changed(true);
 }
@@ -187,6 +211,7 @@ void KCMKeyboardWidget::initializeKeyboardModelUI()
     }
     uiWidget->keyboardModelComboBox->model()->sort(0);
     connect(uiWidget->keyboardModelComboBox, SIGNAL(activated(int)), this, SLOT(uiChanged()));
+    connect(uiWidget->keyboardModelComboBox, qOverload<int>(&QComboBox::currentIndexChanged), this, &KCMKeyboardWidget::updateUiDefaultIndicator);
 }
 
 void KCMKeyboardWidget::addLayout()
@@ -202,8 +227,8 @@ void KCMKeyboardWidget::addLayout()
 
     AddLayoutDialog dialog(rules,
                            flags,
-                           keyboardConfig->keyboardModel,
-                           keyboardConfig->xkbOptions,
+                           keyboardModelFromUI(),
+                           xkbOptionsFromUI(),
                            false,
                            this);
     dialog.setModal(true);
@@ -222,8 +247,6 @@ void KCMKeyboardWidget::updateLoopCount()
     int maxLoop = qMin(X11Helper::MAX_GROUP_COUNT, keyboardConfig->layouts.count() - 1);
     uiWidget->layoutLoopCountSpinBox->setMaximum(qMax(MIN_LOOPING_COUNT, maxLoop));
 
-    bool layoutsConfigured = uiWidget->layoutsGroupBox->isChecked();
-
     if (maxLoop < MIN_LOOPING_COUNT) {
         uiWidget->layoutLoopingCheckBox->setEnabled(false);
         uiWidget->layoutLoopingCheckBox->setChecked(false);
@@ -231,19 +254,19 @@ void KCMKeyboardWidget::updateLoopCount()
         uiWidget->layoutLoopingCheckBox->setEnabled(false);
         uiWidget->layoutLoopingCheckBox->setChecked(true);
     } else {
-        uiWidget->layoutLoopingCheckBox->setEnabled(layoutsConfigured);
+        uiWidget->layoutLoopingCheckBox->setEnabled(keyboardConfig->configureLayouts());
     }
 
-    uiWidget->layoutLoopingGroupBox->setEnabled(layoutsConfigured && uiWidget->layoutLoopingCheckBox->isChecked());
+    uiWidget->layoutLoopingGroupBox->setEnabled(keyboardConfig->configureLayouts() && uiWidget->layoutLoopingCheckBox->isChecked());
 
     if (uiWidget->layoutLoopingCheckBox->isChecked()) {
         if (uiWidget->layoutLoopCountSpinBox->text().isEmpty()) {
             uiWidget->layoutLoopCountSpinBox->setValue(maxLoop);
-            keyboardConfig->layoutLoopCount = maxLoop;
+            keyboardConfig->setLayoutLoopCount(maxLoop);
         }
     } else {
         uiWidget->layoutLoopCountSpinBox->clear();
-        keyboardConfig->layoutLoopCount = KeyboardConfig::NO_LOOPING;
+        keyboardConfig->setLayoutLoopCount(KeyboardConfig::NO_LOOPING);
     }
 }
 
@@ -299,16 +322,15 @@ void KCMKeyboardWidget::initializeLayoutsUI()
 
     uiWidget->kdeKeySequence->setModifierlessAllowed(false);
 
-    uiWidget->showOSD_Chk->setText(m_workspaceOptions.osdKbdLayoutChangedEnabledItem()->label());
-    uiWidget->showOSD_Chk->setToolTip(m_workspaceOptions.osdKbdLayoutChangedEnabledItem()->toolTip());
+    uiWidget->kcfg_osdKbdLayoutChangedEnabled->setText(m_workspaceOptions.osdKbdLayoutChangedEnabledItem()->label());
+    uiWidget->kcfg_osdKbdLayoutChangedEnabled->setToolTip(m_workspaceOptions.osdKbdLayoutChangedEnabledItem()->toolTip());
 
     connect(uiWidget->addLayoutBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::addLayout);
     connect(uiWidget->removeLayoutBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::removeLayout);
-    //	connect(uiWidget->layoutsTable, SIGNAL(itemSelectionChanged()), this, SLOT(layoutSelectionChanged()));
     connect(uiWidget->layoutsTableView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &KCMKeyboardWidget::layoutSelectionChanged);
+    connect(uiWidget->layoutsTableView->model(), qOverload<const QModelIndex &, const QModelIndex &, const QVector<int> &>(&QAbstractItemModel::dataChanged),
+            this, &KCMKeyboardWidget::uiChanged);
 
-    //	connect(uiWidget->moveUpBtn, SIGNAL(triggered(QAction*)), this, SLOT(moveUp()));
-    //	connect(uiWidget->moveDownBtn, SIGNAL(triggered(QAction*)), this, SLOT(moveDown()));
     connect(uiWidget->moveUpBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::moveUp);
     connect(uiWidget->moveDownBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::moveDown);
 
@@ -316,16 +338,14 @@ void KCMKeyboardWidget::initializeLayoutsUI()
     connect(uiWidget->xkbGrpClearBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::clearGroupShortcuts);
     connect(uiWidget->xkb3rdLevelClearBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::clear3rdLevelShortcuts);
 
-    //	connect(uiWidget->xkbGrpClearBtn, SIGNAL(triggered(QAction*)), this, SLOT(uiChanged()));
-    //	connect(uiWidget->xkb3rdLevelClearBtn, SIGNAL(triggered(QAction*)), this, SLOT(uiChanged()));
-    connect(uiWidget->kdeKeySequence, &KKeySequenceWidget::keySequenceChanged, this, &KCMKeyboardWidget::uiChanged);
+    connect(uiWidget->kdeKeySequence, &KKeySequenceWidget::keySequenceChanged, this, &KCMKeyboardWidget::alternativeShortcutChanged);
     connect(uiWidget->switchingPolicyButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(uiChanged()));
+    connect(uiWidget->switchingPolicyButtonGroup, qOverload<int>(&QButtonGroup::buttonClicked), this, &KCMKeyboardWidget::updateUiDefaultIndicator);
+
     connect(uiWidget->xkbGrpShortcutBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::scrollToGroupShortcut);
     connect(uiWidget->xkb3rdLevelShortcutBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::scrollTo3rdLevelShortcut);
-    connect(uiWidget->showOSD_Chk, &QAbstractButton::clicked, this, &KCMKeyboardWidget::uiChanged);
 
-    //	connect(uiWidget->configureLayoutsChk, SIGNAL(toggled(bool)), uiWidget->layoutsGroupBox, SLOT(setEnabled(bool)));
-    connect(uiWidget->layoutsGroupBox, &QGroupBox::toggled, this, &KCMKeyboardWidget::configureLayoutsChanged);
+    connect(uiWidget->kcfg_configureLayouts, &QGroupBox::toggled, this, &KCMKeyboardWidget::configureLayoutsChanged);
 
     connect(uiWidget->layoutLoopingCheckBox, &QAbstractButton::clicked, this, &KCMKeyboardWidget::uiChanged);
     connect(uiWidget->layoutLoopCountSpinBox, SIGNAL(valueChanged(int)), this, SLOT(uiChanged()));
@@ -339,8 +359,8 @@ void KCMKeyboardWidget::previewLayout()
     const QString country = uiWidget->layoutsTableView->model()->data(idcountry).toString();
     const QModelIndex idvariant = index.sibling(index.row(), 2);
     QString variant = uiWidget->layoutsTableView->model()->data(idvariant).toString();
-    const QString model = keyboardConfig->keyboardModel;
-    const QStringList options = keyboardConfig->xkbOptions;
+    const QString model = keyboardModelFromUI();
+    const QStringList options = xkbOptionsFromUI();
 
     const LayoutInfo *layoutInfo = rules->getLayoutInfo(country);
     if (!layoutInfo) {
@@ -358,10 +378,39 @@ void KCMKeyboardWidget::previewLayout()
     Tastenbrett::launch(model, country, variant, options.join(','), title);
 }
 
+void KCMKeyboardWidget::alternativeShortcutChanged(const QKeySequence &seq)
+{
+    Q_UNUSED(seq)
+
+    if (rules == nullptr) {
+        return;
+    }
+
+    if (actionCollection == nullptr) {
+        actionCollection = new KeyboardLayoutActionCollection(this, true);
+    }
+    actionCollection->setToggleShortcut(uiWidget->kdeKeySequence->keySequence());
+}
+
+void KCMKeyboardWidget::switchKeyboardShortcutChanged()
+{
+    if (rules == nullptr) {
+        return;
+    }
+
+    if (actionCollection == nullptr) {
+        actionCollection = new KeyboardLayoutActionCollection(this, true);
+    }
+    actionCollection->resetLayoutShortcuts();
+    actionCollection->setLayoutShortcuts(keyboardConfig->layouts, rules);
+}
+
 void KCMKeyboardWidget::configureLayoutsChanged()
 {
-    if (uiWidget->layoutsGroupBox->isChecked() && keyboardConfig->layouts.isEmpty()) {
+    if (uiWidget->kcfg_configureLayouts->isChecked() && keyboardConfig->layouts.isEmpty()) {
         populateWithCurrentLayouts();
+    } else {
+        keyboardConfig->layouts.clear();
     }
     uiChanged();
 }
@@ -470,8 +519,8 @@ void KCMKeyboardWidget::moveSelectedLayouts(int shift)
 void KCMKeyboardWidget::scrollToGroupShortcut()
 {
     this->setCurrentIndex(TAB_ADVANCED);
-    if (!uiWidget->configureKeyboardOptionsChk->isChecked()) {
-        uiWidget->configureKeyboardOptionsChk->setChecked(true);
+    if (!uiWidget->kcfg_resetOldXkbOptions->isChecked()) {
+        uiWidget->kcfg_resetOldXkbOptions->setChecked(true);
     }
     ((XkbOptionsTreeModel *)uiWidget->xkbOptionsTreeView->model())->gotoGroup(GROUP_SWITCH_GROUP_NAME, uiWidget->xkbOptionsTreeView);
 }
@@ -479,8 +528,8 @@ void KCMKeyboardWidget::scrollToGroupShortcut()
 void KCMKeyboardWidget::scrollTo3rdLevelShortcut()
 {
     this->setCurrentIndex(TAB_ADVANCED);
-    if (!uiWidget->configureKeyboardOptionsChk->isChecked()) {
-        uiWidget->configureKeyboardOptionsChk->setChecked(true);
+    if (!uiWidget->kcfg_resetOldXkbOptions->isChecked()) {
+        uiWidget->kcfg_resetOldXkbOptions->setChecked(true);
     }
     ((XkbOptionsTreeModel *)uiWidget->xkbOptionsTreeView->model())->gotoGroup(LV3_SWITCH_GROUP_NAME, uiWidget->xkbOptionsTreeView);
 }
@@ -497,12 +546,16 @@ void KCMKeyboardWidget::clear3rdLevelShortcuts()
 
 void KCMKeyboardWidget::clearXkbGroup(const QString &groupName)
 {
-    for (int ii = keyboardConfig->xkbOptions.count() - 1; ii >= 0; ii--) {
-        if (keyboardConfig->xkbOptions[ii].startsWith(groupName + Rules::XKB_OPTION_GROUP_SEPARATOR)) {
-            keyboardConfig->xkbOptions.removeAt(ii);
+    auto *xkbOptionModel = dynamic_cast<XkbOptionsTreeModel *>(uiWidget->xkbOptionsTreeView->model());
+    QStringList xkbOptions = xkbOptionModel->xkbOptions();
+    for (int ii = xkbOptions.count() - 1; ii >= 0; ii--) {
+        if (xkbOptions.at(ii).startsWith(groupName + Rules::XKB_OPTION_GROUP_SEPARATOR)) {
+            xkbOptions.removeAt(ii);
         }
     }
-    ((XkbOptionsTreeModel *)uiWidget->xkbOptionsTreeView->model())->reset();
+    xkbOptionModel->setXkbOptions(xkbOptions);
+
+    xkbOptionModel->reset();
     uiWidget->xkbOptionsTreeView->update();
     updateXkbShortcutsButtons();
     Q_EMIT changed(true);
@@ -524,27 +577,41 @@ void KCMKeyboardWidget::initializeXkbOptionsUI()
         std::sort(optionGroupInfo->optionInfos.begin(), optionGroupInfo->optionInfos.end(), xkbOptionLessThan);
     }
 
-    XkbOptionsTreeModel *model = new XkbOptionsTreeModel(rules, keyboardConfig, uiWidget->xkbOptionsTreeView);
+    XkbOptionsTreeModel *model = new XkbOptionsTreeModel(rules, uiWidget->xkbOptionsTreeView);
     uiWidget->xkbOptionsTreeView->setModel(model);
     connect(model, &QAbstractItemModel::dataChanged, this, &KCMKeyboardWidget::uiChanged);
 
-    connect(uiWidget->configureKeyboardOptionsChk, &QAbstractButton::toggled, this, &KCMKeyboardWidget::configureXkbOptionsChanged);
-    //	connect(uiWidget->configureKeyboardOptionsChk, SIGNAL(toggled(bool)), this, SLOT(uiChanged()));
-    connect(uiWidget->configureKeyboardOptionsChk, &QAbstractButton::toggled, uiWidget->xkbOptionsTreeView, &QWidget::setEnabled);
+    connect(uiWidget->kcfg_resetOldXkbOptions, &QAbstractButton::toggled, this, &KCMKeyboardWidget::configureXkbOptionsChanged);
+    connect(uiWidget->kcfg_resetOldXkbOptions, &QAbstractButton::toggled, uiWidget->xkbOptionsTreeView, &QWidget::setEnabled);
 }
 
 void KCMKeyboardWidget::configureXkbOptionsChanged()
 {
-    if (uiWidget->configureKeyboardOptionsChk->isChecked() && keyboardConfig->xkbOptions.isEmpty()) {
+    if (uiWidget->kcfg_resetOldXkbOptions->isChecked() && keyboardConfig->xkbOptions().isEmpty()) {
         populateWithCurrentXkbOptions();
     }
     ((XkbOptionsTreeModel *)uiWidget->xkbOptionsTreeView->model())->reset();
     uiChanged();
 }
 
-void KCMKeyboardWidget::updateSwitcingPolicyUI()
+void KCMKeyboardWidget::saveXkbOptions()
 {
-    switch (keyboardConfig->switchingPolicy) {
+    if (uiWidget->kcfg_resetOldXkbOptions->isChecked()) {
+        keyboardConfig->setXkbOptions(xkbOptionsFromUI());
+    } else {
+        keyboardConfig->setXkbOptions(QStringList());
+    }
+}
+
+QStringList KCMKeyboardWidget::xkbOptionsFromUI() const
+{
+    XkbOptionsTreeModel *model = dynamic_cast<XkbOptionsTreeModel *>(uiWidget->xkbOptionsTreeView->model());
+    return model->xkbOptions();
+}
+
+void KCMKeyboardWidget::updateSwitcingPolicyUI(KeyboardConfig::SwitchingPolicy policy)
+{
+    switch (policy) {
     case KeyboardConfig::SWITCH_POLICY_DESKTOP:
         uiWidget->switchByDesktopRadioBtn->setChecked(true);
         break;
@@ -563,9 +630,10 @@ void KCMKeyboardWidget::updateSwitcingPolicyUI()
 void KCMKeyboardWidget::updateXkbShortcutButton(const QString &groupName, QPushButton *button)
 {
     QStringList grpOptions;
-    if (keyboardConfig->resetOldXkbOptions) {
+    if (uiWidget->kcfg_resetOldXkbOptions->isChecked()) {
         QRegExp regexp = QRegExp("^" + groupName + Rules::XKB_OPTION_GROUP_SEPARATOR);
-        grpOptions = keyboardConfig->xkbOptions.filter(regexp);
+        XkbOptionsTreeModel *model = dynamic_cast<XkbOptionsTreeModel *>(uiWidget->xkbOptionsTreeView->model());
+        grpOptions = model->xkbOptions().filter(regexp);
     }
     switch (grpOptions.size()) {
     case 0:
@@ -602,28 +670,21 @@ void KCMKeyboardWidget::updateShortcutsUI()
     QAction *toggleAction = actionCollection->getToggleAction();
     const auto shortcuts = KGlobalAccel::self()->shortcut(toggleAction);
     uiWidget->kdeKeySequence->setKeySequence(shortcuts.isEmpty() ? QKeySequence() : shortcuts.first());
+
     actionCollection->loadLayoutShortcuts(keyboardConfig->layouts, rules);
     layoutsTableModel->refresh();
 }
 
-void KCMKeyboardWidget::updateXkbOptionsUI()
-{
-    uiWidget->configureKeyboardOptionsChk->setChecked(keyboardConfig->resetOldXkbOptions);
-}
-
 void KCMKeyboardWidget::updateLayoutsUI()
 {
-    uiWidget->layoutsGroupBox->setChecked(keyboardConfig->configureLayouts);
-    uiWidget->showOSD_Chk->setChecked(m_workspaceOptions.osdKbdLayoutChangedEnabled());
-
-    bool loopingOn = keyboardConfig->configureLayouts && keyboardConfig->layoutLoopCount != KeyboardConfig::NO_LOOPING;
+    bool loopingOn = keyboardConfig->configureLayouts() && keyboardConfig->layoutLoopCount() != KeyboardConfig::NO_LOOPING;
     uiWidget->layoutLoopingCheckBox->setChecked(loopingOn);
     uiWidget->layoutLoopingGroupBox->setEnabled(loopingOn);
     if (loopingOn) {
         // Set maximum to 99 to make sure following setValue succeeds
         // Correct maximum value will be set in updateLoopCount()
         uiWidget->layoutLoopCountSpinBox->setMaximum(99);
-        uiWidget->layoutLoopCountSpinBox->setValue(keyboardConfig->layoutLoopCount);
+        uiWidget->layoutLoopCountSpinBox->setValue(keyboardConfig->layoutLoopCount());
     } else {
         uiWidget->layoutLoopCountSpinBox->clear();
     }
@@ -631,9 +692,9 @@ void KCMKeyboardWidget::updateLayoutsUI()
     updateLoopCount();
 }
 
-void KCMKeyboardWidget::updateHardwareUI()
+void KCMKeyboardWidget::updateHardwareUI(const QString &model)
 {
-    int idx = uiWidget->keyboardModelComboBox->findData(keyboardConfig->keyboardModel);
+    int idx = uiWidget->keyboardModelComboBox->findData(model);
     if (idx != -1) {
         uiWidget->keyboardModelComboBox->setCurrentIndex(idx);
     }
@@ -654,9 +715,35 @@ void KCMKeyboardWidget::populateWithCurrentXkbOptions()
         return;
     }
     XkbConfig xkbConfig;
+    QStringList xkbOptions;
     if (X11Helper::getGroupNames(QX11Info::display(), &xkbConfig, X11Helper::ALL)) {
         for (const QString &xkbOption : qAsConst(xkbConfig.options)) {
-            keyboardConfig->xkbOptions.append(xkbOption);
+            xkbOptions.append(xkbOption);
         }
     }
+    keyboardConfig->setXkbOptions(xkbOptions);
+}
+
+QString KCMKeyboardWidget::keyboardModelFromUI() const
+{
+    return uiWidget->keyboardModelComboBox->itemData(uiWidget->keyboardModelComboBox->currentIndex()).toString();
+}
+
+KeyboardConfig::SwitchingPolicy KCMKeyboardWidget::switcingPolicyFromUI() const
+{
+    if (uiWidget->switchByDesktopRadioBtn->isChecked()) {
+        return KeyboardConfig::SWITCH_POLICY_DESKTOP;
+    } else if (uiWidget->switchByApplicationRadioBtn->isChecked()) {
+        return KeyboardConfig::SWITCH_POLICY_APPLICATION;
+    } else if (uiWidget->switchByWindowRadioBtn->isChecked()) {
+        return KeyboardConfig::SWITCH_POLICY_WINDOW;
+    } else {
+        return KeyboardConfig::SWITCH_POLICY_GLOBAL;
+    }
+}
+
+void KCMKeyboardWidget::setDefaultIndicatorVisible(QWidget *widget, bool visible)
+{
+    widget->setProperty("_kde_highlight_neutral", visible);
+    widget->update();
 }

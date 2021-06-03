@@ -106,12 +106,10 @@ private:
 class XkbOptionsTreeModel : public QAbstractItemModel
 {
 public:
-    XkbOptionsTreeModel(Rules *rules_, KeyboardConfig *keyboardConfig_, QObject *parent)
-        : QAbstractItemModel(parent)
-        , keyboardConfig(keyboardConfig_)
-        , rules(rules_)
-    {
-    }
+    XkbOptionsTreeModel(Rules *rules_, QObject *parent);
+
+    void setXkbOptions(const QStringList &options);
+    QStringList xkbOptions() const;
 
     int columnCount(const QModelIndex & /*parent*/) const override
     {
@@ -153,8 +151,8 @@ public:
     void gotoGroup(const QString &group, QTreeView *view);
 
 private:
-    KeyboardConfig *keyboardConfig;
     Rules *rules;
+    QStringList m_xkbOptions;
 };
 
 #endif /* KCM_VIEW_MODELS_H_ */

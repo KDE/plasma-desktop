@@ -32,7 +32,10 @@ set( kded_keyboard_SRCS
     layoutnames.cpp
 )
 
+kconfig_add_kcfg_files(kded_keyboard_SRCS keyboardsettings.kcfgc)
+
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
+
 kcoreaddons_add_plugin(kded_keyboard SOURCES ${kded_keyboard_SRCS} INSTALL_NAMESPACE "kf5/kded")
 set_target_properties(kded_keyboard PROPERTIES OUTPUT_NAME keyboard)
 kcoreaddons_desktop_to_json(kded_keyboard keyboard.desktop SERVICE_TYPES kdedmodule.desktop)
@@ -44,6 +47,7 @@ target_link_libraries(kded_keyboard
     Qt::Xml
     KF5::ConfigCore
     KF5::CoreAddons
+    KF5::KCMUtils
     KF5::DBusAddons
     KF5::GlobalAccel
     KF5::I18n
@@ -74,6 +78,7 @@ set(kcm_keyboard_PART_SRCS
   kcm_view_models.cpp
   kcm_add_layout_dialog.cpp
   keyboard_config.cpp
+  keyboardsettingsdata.cpp
   x11_helper.cpp
   xkb_helper.cpp
   xkb_rules.cpp
@@ -104,13 +109,13 @@ ecm_qt_install_logging_categories(
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
 
-kconfig_add_kcfg_files(kcm_keyboard_PART_SRCS workspace_options.kcfgc)
+kconfig_add_kcfg_files(kcm_keyboard_PART_SRCS workspace_options.kcfgc keyboardsettings.kcfgc keyboardmiscsettings.kcfgc)
 
 ki18n_wrap_ui(kcm_keyboard_PART_SRCS kcm_keyboard.ui kcm_add_layout_dialog.ui kcmmiscwidget.ui)
 
-add_library(kcm_keyboard MODULE ${kcm_keyboard_PART_SRCS})
+add_library(kcm_keyboard_static STATIC ${kcm_keyboard_PART_SRCS})
 
-target_link_libraries(kcm_keyboard
+target_link_libraries(kcm_keyboard_static
     Qt::Concurrent
     Qt::Widgets
     Qt::X11Extras
@@ -127,6 +132,9 @@ target_link_libraries(kcm_keyboard
     X11::X11
     X11::xkbfile
 )
+
+kcoreaddons_add_plugin(kcm_keyboard SOURCES kcmmain.cpp INSTALL_NAMESPACE "kcms")
+target_link_libraries(kcm_keyboard kcm_keyboard_static)
 
 install(TARGETS kcm_keyboard DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 

@@ -241,7 +241,7 @@
           </widget>
          </item>
          <item row="3" column="0">
-          <widget class="QCheckBox" name="showOSD_Chk">
+          <widget class="QCheckBox" name="kcfg_osdKbdLayoutChangedEnabled">
            <property name="layoutDirection">
             <enum>Qt::RightToLeft</enum>
            </property>
@@ -253,7 +253,7 @@
      </layout>
     </item>
     <item row="1" column="0">
-     <widget class="QGroupBox" name="layoutsGroupBox">
+     <widget class="QGroupBox" name="kcfg_configureLayouts">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -413,7 +413,7 @@
    </attribute>
    <layout class="QGridLayout" name="gridLayout_1">
     <item row="0" column="0" colspan="2">
-     <widget class="QCheckBox" name="configureKeyboardOptionsChk">
+     <widget class="QCheckBox" name="kcfg_resetOldXkbOptions">
       <property name="text">
        <string>&amp;Configure keyboard options</string>
       </property>

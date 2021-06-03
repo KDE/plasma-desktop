@@ -39,16 +39,16 @@ private Q_SLOTS:
         QVERIFY(!iconUs.isNull());
         QVERIFY(flags->getIcon("--").isNull());
 
-        KeyboardConfig keyboardConfig;
+        KeyboardConfig *keyboardConfig = new KeyboardConfig(this);
         LayoutUnit layoutUnit(QStringLiteral("us"));
         LayoutUnit layoutUnit1(QStringLiteral("us"), QStringLiteral("intl"));
         layoutUnit1.setDisplayName(QStringLiteral("usi"));
         LayoutUnit layoutUnit2(QStringLiteral("us"), QStringLiteral("other"));
 
-        keyboardConfig.layouts.append(layoutUnit1);
-        QCOMPARE(flags->getShortText(layoutUnit, keyboardConfig), QString("us"));
-        QCOMPARE(flags->getShortText(layoutUnit1, keyboardConfig), QString("usi"));
-        QCOMPARE(flags->getShortText(layoutUnit2, keyboardConfig), QString("us"));
+        keyboardConfig->layouts.append(layoutUnit1);
+        QCOMPARE(flags->getShortText(layoutUnit, *keyboardConfig), QString("us"));
+        QCOMPARE(flags->getShortText(layoutUnit1, *keyboardConfig), QString("usi"));
+        QCOMPARE(flags->getShortText(layoutUnit2, *keyboardConfig), QString("us"));
 
         const Rules *rules = Rules::readRules(Rules::NO_EXTRAS);
         QCOMPARE(flags->getLongText(layoutUnit, rules), QString("English (US)"));

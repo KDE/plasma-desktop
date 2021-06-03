@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <include>QtGlobal</include>
+  <kcfgfile name="kcminputrc" />
+  <group name="Keyboard">
+    <entry name="keyboardRepeat" key="KeyRepeat" type="String">
+      <default code="true">qgetenv("QT_IM_MODULE") == "plasmaim" ? QStringLiteral("accent") : QStringLiteral("repeat")</default>
+    </entry>
+    <entry name="numLock" key="NumLock" type="Int">
+    <!-- STATE_UNCHANGED -->
+      <default>2</default>
+    </entry>
+    <entry name="repeatDelay" key="RepeatDelay" type="Int">
+      <tooltip>If supported, this option allows you to set the delay after which a pressed key will start generating keycodes. The 'Repeat rate' option controls the frequency of these keycodes.If supported, this option allows you to set the delay after which a pressed key will start generating keycodes. The 'Repeat rate' option controls the frequency of these keycodes.</tooltip>
+      <default>600</default>
+      <min>100</min>
+      <max>5000</max>
+    </entry>
+    <entry name="repeatRate" key="RepeatRate" type="Double">
+      <tooltip>If supported, this option allows you to set the rate at which keycodes are generated while a key is pressed.</tooltip>
+      <default>25.0</default>
+      <min>0.2</min>
+      <max>100</max>
+    </entry>
+  </group>
+</kcfg>

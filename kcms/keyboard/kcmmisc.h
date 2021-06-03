@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 1997 Patrick Dowler <dowler@morgul.fsh.uvic.ca>
+    SPDX-FileCopyrightText: 2021 Cyril Rossi <cyril.rossi@enioka.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -13,6 +14,7 @@
 
 class QButtonGroup;
 class Ui_KeyboardConfigWidget;
+class KeyboardMiscSettings;
 
 const int DEFAULT_REPEAT_DELAY = 600;
 const double DEFAULT_REPEAT_RATE = 25.0;
@@ -59,7 +61,7 @@ class KCMiscKeyboardWidget : public QWidget
 {
     Q_OBJECT
 public:
-    KCMiscKeyboardWidget(QWidget *parent);
+    KCMiscKeyboardWidget(QWidget *parent, KeyboardMiscSettings *settings);
     ~KCMiscKeyboardWidget() override;
 
     void save();
@@ -68,29 +70,40 @@ public:
 
     QString quickHelp() const;
 
+    bool isSaveNeeded() const;
+    bool isDefault() const;
+
+public Q_SLOTS:
+    void setDefaultIndicator(bool visible);
+
+Q_SIGNALS:
+    void changed(bool state);
+
 private Q_SLOTS:
     void changed();
 
+    void updateUiDefaultIndicator();
     void delaySliderChanged(int value);
     void delaySpinboxChanged(int value);
     void rateSliderChanged(int value);
     void rateSpinboxChanged(double value);
     void keyboardRepeatStateChanged(int selection);
 
-Q_SIGNALS:
-    void changed(bool state);
-
 private:
     void setRepeat(KeyBehaviour flag, int delay, double rate);
+    void setDefaultIndicatorVisible(QWidget *widget, bool visible);
+
+    KeyBehaviour defaultValueKeyboardRepeat() const;
 
     int sliderMax;
-    int clickVolume;
-    KeyBehaviour keyboardRepeat;
-    enum TriState numlockState;
+    KeyBehaviour keyboardRepeat {};
+    enum TriState numlockState {};
+    bool m_highlightVisible = false;
 
     QButtonGroup *_numlockButtonGroup;
     QButtonGroup *_keyboardRepeatButtonGroup;
     Ui_KeyboardConfigWidget &ui;
+    KeyboardMiscSettings *m_settings;
 };
 
 #endif

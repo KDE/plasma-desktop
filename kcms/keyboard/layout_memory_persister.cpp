@@ -49,10 +49,10 @@ QString LayoutMemoryPersister::getLayoutMapAsString()
     QDomDocument doc(DOC_NAME);
     QDomElement root = doc.createElement(ROOT_NODE);
     root.setAttribute(VERSION_ATTRIBUTE, VERSION);
-    root.setAttribute(SWITCH_MODE_ATTRIBUTE, KeyboardConfig::getSwitchingPolicyString(layoutMemory.keyboardConfig.switchingPolicy));
+    root.setAttribute(SWITCH_MODE_ATTRIBUTE, layoutMemory.keyboardConfig.switchMode());
     doc.appendChild(root);
 
-    if (layoutMemory.keyboardConfig.switchingPolicy == KeyboardConfig::SWITCH_POLICY_GLOBAL) {
+    if (layoutMemory.keyboardConfig.switchingPolicy() == KeyboardConfig::SWITCH_POLICY_GLOBAL) {
         if (!globalLayout.isValid())
             return QLatin1String("");
 
@@ -209,7 +209,7 @@ bool LayoutMemoryPersister::restoreFromFile(const QFile &file_)
         return false;
     }
 
-    MapHandler mapHandler(layoutMemory.keyboardConfig.switchingPolicy);
+    MapHandler mapHandler(layoutMemory.keyboardConfig.switchingPolicy());
 
     QXmlSimpleReader reader;
     reader.setContentHandler(&mapHandler);
@@ -223,7 +223,7 @@ bool LayoutMemoryPersister::restoreFromFile(const QFile &file_)
         return false;
     }
 
-    if (layoutMemory.keyboardConfig.switchingPolicy == KeyboardConfig::SWITCH_POLICY_GLOBAL) {
+    if (layoutMemory.keyboardConfig.switchingPolicy() == KeyboardConfig::SWITCH_POLICY_GLOBAL) {
         if (mapHandler.globalLayout.isValid() && layoutMemory.keyboardConfig.layouts.contains(mapHandler.globalLayout)) {
             globalLayout = mapHandler.globalLayout;
             qCDebug(KCM_KEYBOARD) << "Restored global layout" << globalLayout.toString();
@@ -243,7 +243,7 @@ bool LayoutMemoryPersister::restoreFromFile(const QFile &file_)
 bool LayoutMemoryPersister::canPersist()
 {
     // we can't persist per window - as we're using window id which is not preserved between sessions
-    bool windowMode = layoutMemory.keyboardConfig.switchingPolicy == KeyboardConfig::SWITCH_POLICY_WINDOW;
+    bool windowMode = layoutMemory.keyboardConfig.switchingPolicy() == KeyboardConfig::SWITCH_POLICY_WINDOW;
     if (windowMode) {
         qCDebug(KCM_KEYBOARD) << "Not saving session for window mode";
     }

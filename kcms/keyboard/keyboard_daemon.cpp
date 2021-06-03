@@ -28,6 +28,7 @@ K_PLUGIN_CLASS_WITH_JSON(KeyboardDaemon, "keyboard.json")
 
 KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)
+    , keyboardConfig(new KeyboardConfig(this))
     , actionCollection(nullptr)
     , xEventNotifier(nullptr)
     , layoutMemory(keyboardConfig)
@@ -77,8 +78,8 @@ void KeyboardDaemon::configureKeyboard()
     qCDebug(KCM_KEYBOARD) << "Configuring keyboard";
     init_keyboard_hardware();
 
-    keyboardConfig.load();
-    XkbHelper::initializeKeyboardLayouts(keyboardConfig);
+    keyboardConfig->load();
+    XkbHelper::initializeKeyboardLayouts(*keyboardConfig);
     layoutMemory.configChanged();
 
     unregisterShortcut();
@@ -110,7 +111,7 @@ void KeyboardDaemon::registerShortcut()
             QDBusConnection::sessionBus().asyncCall(msg);
         });
 
-        actionCollection->loadLayoutShortcuts(keyboardConfig.layouts, rules);
+        actionCollection->loadLayoutShortcuts(keyboardConfig->layouts, rules);
         // clang-format off
 		connect(actionCollection, SIGNAL(actionTriggered(QAction*)), this, SLOT(setLayout(QAction*)));
         // clang-format on
@@ -163,7 +164,7 @@ void KeyboardDaemon::layoutChangedSlot()
 
 void KeyboardDaemon::layoutMapChanged()
 {
-    keyboardConfig.load();
+    keyboardConfig->load();
     layoutMemory.layoutMapChanged();
     Q_EMIT layoutListChanged();
 }
@@ -188,14 +189,14 @@ bool KeyboardDaemon::setLayout(QAction *action)
 
 bool KeyboardDaemon::setLayout(uint index)
 {
-    if (keyboardConfig.layoutLoopCount != KeyboardConfig::NO_LOOPING && index >= uint(keyboardConfig.layoutLoopCount)) {
+    if (keyboardConfig->layoutLoopCount() != KeyboardConfig::NO_LOOPING && index >= uint(keyboardConfig->layoutLoopCount())) {
         QList<LayoutUnit> layouts = X11Helper::getLayoutsList();
-        if ( int(index) <= keyboardConfig.layouts.lastIndexOf(layouts.takeLast()) ) {
+        if ( int(index) <= keyboardConfig->layouts.lastIndexOf(layouts.takeLast()) ) {
             // got to a shifted diapason due to previously selected spare layout, so adjusting the index accordingly
             --index;
         }
         // spare layout preempts last one in the loop
-        layouts.append(keyboardConfig.layouts.at(index));
+        layouts.append(keyboardConfig->layouts.at(index));
         XkbHelper::initializeKeyboardLayouts(layouts);
         index = layouts.size() - 1;
     }
@@ -212,9 +213,9 @@ QVector<LayoutNames> KeyboardDaemon::getLayoutsList() const
     QVector<LayoutNames> ret;
 
     auto layoutsList = X11Helper::getLayoutsList();
-    if (keyboardConfig.layoutLoopCount != KeyboardConfig::NO_LOOPING) {
+    if (keyboardConfig->layoutLoopCount() != KeyboardConfig::NO_LOOPING) {
         // extra layouts list overlaps with the main layouts loop initially by 1 position
-        auto extraLayouts = keyboardConfig.layouts.mid(keyboardConfig.layoutLoopCount - 1);
+        auto extraLayouts = keyboardConfig->layouts.mid(keyboardConfig->layoutLoopCount() - 1);
         // spare layout currently placed in the loop is removed from the extra layouts
         // as it was already "moved" to the last loop position
         extraLayouts.removeOne(layoutsList.last());

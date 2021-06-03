@@ -1,0 +1,6 @@
+File=keyboardmiscsettings.kcfg
+ClassName=KeyboardMiscSettings
+Mutators=true
+DefaultValueGetters=true
+ParentInConstructor=true
+Notify=KeyRepeat,RepeatRate,RepeatDelay

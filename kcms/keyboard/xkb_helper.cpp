@@ -20,6 +20,7 @@
 #include <KProcess>
 
 #include "keyboard_config.h"
+#include "keyboardsettings.h"
 
 static const char SETXKBMAP_EXEC[] = "setxkbmap";
 static const char XMODMAP_EXEC[] = "xmodmap";
@@ -126,15 +127,15 @@ bool XkbHelper::initializeKeyboardLayouts(const QList<LayoutUnit> &layoutUnits)
 bool XkbHelper::initializeKeyboardLayouts(KeyboardConfig &config)
 {
     QStringList setxkbmapCommandArguments;
-    if (!config.keyboardModel.isEmpty()) {
+    if (!config.keyboardModel().isEmpty()) {
         XkbConfig xkbConfig;
         X11Helper::getGroupNames(QX11Info::display(), &xkbConfig, X11Helper::MODEL_ONLY);
-        if (xkbConfig.keyboardModel != config.keyboardModel) {
+        if (xkbConfig.keyboardModel != config.keyboardModel()) {
             setxkbmapCommandArguments.append(QStringLiteral("-model"));
-            setxkbmapCommandArguments.append(config.keyboardModel);
+            setxkbmapCommandArguments.append(config.keyboardModel());
         }
     }
-    if (config.configureLayouts) {
+    if (config.configureLayouts()) {
         QStringList layouts;
         QStringList variants;
         const QList<LayoutUnit> defaultLayouts = config.getDefaultLayouts();
@@ -150,17 +151,17 @@ bool XkbHelper::initializeKeyboardLayouts(KeyboardConfig &config)
             setxkbmapCommandArguments.append(variants.join(COMMAND_OPTIONS_SEPARATOR));
         }
     }
-    if (config.resetOldXkbOptions) {
+    if (config.resetOldXkbOptions()) {
         setxkbmapCommandArguments.append(QStringLiteral("-option"));
     }
-    if (!config.xkbOptions.isEmpty()) {
+    if (!config.xkbOptions().isEmpty()) {
         setxkbmapCommandArguments.append(QStringLiteral("-option"));
-        setxkbmapCommandArguments.append(config.xkbOptions.join(COMMAND_OPTIONS_SEPARATOR));
+        setxkbmapCommandArguments.append(config.xkbOptions());
     }
 
     if (!setxkbmapCommandArguments.isEmpty()) {
         return runConfigLayoutCommand(setxkbmapCommandArguments);
-        if (config.configureLayouts) {
+        if (config.configureLayouts()) {
             X11Helper::setDefaultLayout();
         }
     }

@@ -1,5 +1,6 @@
-/*
+﻿/*
     SPDX-FileCopyrightText: 2010 Andriy Rysin <rysin@kde.org>
+    SPDX-FileCopyrightText: 2021 Cyril Rossi <cyril.rossi@enioka.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -12,6 +13,7 @@
 #include <QTabWidget>
 
 #include <config-keyboard.h>
+#include "keyboard_config.h"
 
 class QWidget;
 class KeyboardConfig;
@@ -23,31 +25,35 @@ class QPushButton;
 class LayoutsTableModel;
 class KCMiscKeyboardWidget;
 class KeyboardLayoutActionCollection;
+class KeyboardMiscSettings;
 
 class KCMKeyboardWidget : public QTabWidget
 {
     Q_OBJECT
 
 public:
-    KCMKeyboardWidget(Rules *rules, KeyboardConfig *keyboardConfig, WorkspaceOptions &workspaceOptions, const QVariantList &args, QWidget *parent = nullptr);
+    KCMKeyboardWidget(Rules *rules, KeyboardConfig *keyboardConfig, WorkspaceOptions &workspaceOptions, KCMiscKeyboardWidget *kcmMiscWidget, const QVariantList &args, QWidget *parent = nullptr);
     ~KCMKeyboardWidget() override;
 
-    void updateUI();
+    void updateUI(); // load
     void save();
+    void defaults();
 
-    // temp hack
-    KCMiscKeyboardWidget *getKcmMiscWidget() const
-    {
-        return kcmMiscWidget;
-    }
+    bool isSaveNeeded() const;
+    bool isDefault() const;
 
 Q_SIGNALS:
     void changed(bool state);
 
+public Q_SLOTS:
+    void setDefaultIndicator(bool visible);
+
 private Q_SLOTS:
+    void updateUiDefaultIndicator();
     void addLayout();
     void removeLayout();
     void layoutSelectionChanged();
+    // Set move UI values to config
     void uiChanged();
     void scrollToGroupShortcut();
     void scrollTo3rdLevelShortcut();
@@ -59,6 +65,8 @@ private Q_SLOTS:
     void configureLayoutsChanged();
     void configureXkbOptionsChanged();
     void previewLayout();
+    void alternativeShortcutChanged(const QKeySequence &seq);
+    void switchKeyboardShortcutChanged();
 
 private:
     Rules *rules;
@@ -68,17 +76,16 @@ private:
     WorkspaceOptions &m_workspaceOptions;
     KeyboardLayoutActionCollection *actionCollection;
     LayoutsTableModel *layoutsTableModel;
-    KCMiscKeyboardWidget *kcmMiscWidget;
     bool uiUpdating;
+    bool m_highlightVisible = false;
 
     void initializeLayoutsUI();
     void initializeXkbOptionsUI();
     void initializeKeyboardModelUI();
-    void updateHardwareUI();
+    void updateHardwareUI(const QString &model);
     void updateLayoutsUI();
     void updateShortcutsUI();
-    void updateXkbOptionsUI();
-    void updateSwitcingPolicyUI();
+    void updateSwitcingPolicyUI(KeyboardConfig::SwitchingPolicy policy);
     void updateXkbShortcutButton(const QString &groupName, QPushButton *button);
     void clearXkbGroup(const QString &groupName);
     void moveSelectedLayouts(int shift);
@@ -86,6 +93,12 @@ private:
     void populateWithCurrentXkbOptions();
     void updateLoopCount();
     void handleParameters(const QVariantList &args);
+    void saveXkbOptions();
+    QStringList xkbOptionsFromUI() const;
+
+    QString keyboardModelFromUI() const;
+    KeyboardConfig::SwitchingPolicy switcingPolicyFromUI() const;
+    void setDefaultIndicatorVisible(QWidget *widget, bool visible);
 };
 
 #endif /* KCM_KEYBOARD_WIDGET_H_ */

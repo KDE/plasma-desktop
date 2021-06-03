@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2010 Andriy Rysin <rysin@kde.org>
+    SPDX-FileCopyrightText: 2021 Cyril Rossi <cyril.rossi@enioka.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -11,24 +12,7 @@
 #include <KSharedConfig>
 
 static const char *const SWITCHING_POLICIES[] = {"Global", "Desktop", "WinClass", "Window", nullptr};
-static const char LIST_SEPARATOR[] = ",";
-// static const char* DEFAULT_LAYOUT = "us";
-static const char DEFAULT_MODEL[] = "pc104";
-
-static const QString CONFIG_FILENAME(QStringLiteral("kxkbrc"));
-static const QString CONFIG_GROUPNAME(QStringLiteral("Layout"));
-
 const int KeyboardConfig::NO_LOOPING = -1;
-
-KeyboardConfig::KeyboardConfig()
-{
-    setDefaults();
-}
-
-QString KeyboardConfig::getSwitchingPolicyString(SwitchingPolicy switchingPolicy)
-{
-    return SWITCHING_POLICIES[switchingPolicy];
-}
 
 static int findStringIndex(const char *const strings[], const QString &toFind, int defaultIndex)
 {
@@ -40,37 +24,63 @@ static int findStringIndex(const char *const strings[], const QString &toFind, i
     return defaultIndex;
 }
 
+KeyboardConfig::KeyboardConfig(QObject *parent)
+    : KeyboardSettingsBase(parent)
+{
+    layouts.clear();
+}
+
+KeyboardConfig::SwitchingPolicy KeyboardConfig::switchingPolicy() const
+{
+    return static_cast<SwitchingPolicy>(findStringIndex(SWITCHING_POLICIES, switchMode(), SWITCH_POLICY_GLOBAL));
+}
+
+void KeyboardConfig::setSwitchingPolicy(KeyboardConfig::SwitchingPolicy switchingPolicy)
+{
+    setSwitchMode(SWITCHING_POLICIES[switchingPolicy]);
+}
+
+KeyboardConfig::SwitchingPolicy KeyboardConfig::defaultSwitchingPolicyValue() const
+{
+    return static_cast<SwitchingPolicy>(findStringIndex(SWITCHING_POLICIES, defaultSwitchModeValue(), SWITCH_POLICY_GLOBAL));
+}
+
+bool KeyboardConfig::layoutsSaveNeeded() const
+{
+    if (layouts.size() != m_referenceLayouts.size()) {
+        return true;
+    }
+    // Due to layoutUnit operator==() that does not test all properties.
+    // Do not compare shortcuts, they are automatically applied
+    bool isSaveNeeded = false;
+    for (int i = 0; i < layouts.size(); ++i) {
+        isSaveNeeded |= layouts.at(i).getDisplayName() != m_referenceLayouts.at(i).getDisplayName();
+        isSaveNeeded |= layouts.at(i).layout() != m_referenceLayouts.at(i).layout();
+        isSaveNeeded |= layouts.at(i).variant() != m_referenceLayouts.at(i).variant();
+        if (isSaveNeeded) {
+            return isSaveNeeded;
+        }
+    }
+    return isSaveNeeded;
+}
+
+QString KeyboardConfig::getSwitchingPolicyString(SwitchingPolicy switchingPolicy)
+{
+    return SWITCHING_POLICIES[switchingPolicy];
+}
+
 void KeyboardConfig::setDefaults()
 {
-    keyboardModel = DEFAULT_MODEL;
-    resetOldXkbOptions = false;
-    xkbOptions.clear();
-
-    // init layouts options
-    configureLayouts = false;
     layouts.clear();
-    //	layouts.append(LayoutUnit(DEFAULT_LAYOUT));
-    layoutLoopCount = NO_LOOPING;
-
-    // switch control options
-    switchingPolicy = SWITCH_POLICY_GLOBAL;
-    //	stickySwitching = false;
-    //	stickySwitchingDepth = 2;
 }
 
 void KeyboardConfig::load()
 {
-    KConfigGroup config(KSharedConfig::openConfig(CONFIG_FILENAME, KConfig::NoGlobals), CONFIG_GROUPNAME);
+    KeyboardSettingsBase::load();
 
-    keyboardModel = config.readEntry("Model", "");
+    const QStringList layoutStrings = layoutList();
+    const QStringList variants = variantList();
 
-    resetOldXkbOptions = config.readEntry("ResetOldOptions", false);
-    QString options = config.readEntry("Options", "");
-    xkbOptions = options.split(LIST_SEPARATOR, Qt::SkipEmptyParts);
-
-    configureLayouts = config.readEntry("Use", false);
-    const QStringList layoutStrings = config.readEntry("LayoutList", QStringList());
-    const QStringList variants = config.readEntry("VariantList", QStringList());
     layouts.clear();
     if (layoutStrings.isEmpty()) {
         QList<LayoutUnit> x11layouts = X11Helper::getLayoutsList();
@@ -87,56 +97,30 @@ void KeyboardConfig::load()
             layouts.append(LayoutUnit(*layout++));
         }
     }
-    configureLayouts = !layouts.isEmpty();
 
-    layoutLoopCount = config.readEntry("LayoutLoopCount", NO_LOOPING);
-
-    QString layoutMode = config.readEntry("SwitchMode", "Global");
-    switchingPolicy = static_cast<SwitchingPolicy>(findStringIndex(SWITCHING_POLICIES, layoutMode, SWITCH_POLICY_GLOBAL));
-
-    QString labelsStr = config.readEntry("DisplayNames", "");
-    QStringList labels = labelsStr.split(LIST_SEPARATOR, Qt::KeepEmptyParts);
-    for (int i = 0; i < labels.count() && i < layouts.count(); i++) {
-        if (!labels[i].isEmpty() && labels[i] != layouts[i].layout()) {
-            layouts[i].setDisplayName(labels[i]);
+    for (int i = 0; i < displayNames().count() && i < layouts.count(); i++) {
+        if (!displayNames().at(i).isEmpty() && displayNames().at(i) != layouts[i].layout()) {
+            layouts[i].setDisplayName(displayNames().at(i));
         }
     }
 
-    //    QString shortcutsStr = config.readEntry("LayoutShortcuts", "");
-    //    QStringList shortcutsList = shortcutsStr.split(LIST_SEPARATOR, QString::KeepEmptyParts);
-    //    for(int i=0; i<shortcutsList.count() && i<layouts.count(); i++) {
-    //    	if( !shortcutsList[i].isEmpty() ) {
-    //    		layouts[i].setShortcut(QKeySequence(shortcutsList[i]));
-    //    	}
-    //    }
+    // layouts' shortcuts are retrieved from GlobalShortcuts in KCMKeyboardWidget
+    m_referenceLayouts = layouts;
 
-    qCDebug(KCM_KEYBOARD) << "configuring layouts" << configureLayouts << "configuring options" << resetOldXkbOptions;
+    qCDebug(KCM_KEYBOARD) << "configuring layouts" << configureLayouts() << "configuring options" << resetOldXkbOptions();
 }
 
 void KeyboardConfig::save()
 {
-    KConfigGroup config(KSharedConfig::openConfig(CONFIG_FILENAME, KConfig::NoGlobals), CONFIG_GROUPNAME);
+    m_referenceLayouts = layouts;
 
-    config.writeEntry("Model", keyboardModel);
-
-    config.writeEntry("ResetOldOptions", resetOldXkbOptions);
-    if (resetOldXkbOptions) {
-        config.writeEntry("Options", xkbOptions.join(LIST_SEPARATOR));
-    } else {
-        config.deleteEntry("Options");
-    }
-
-    config.writeEntry("Use", configureLayouts);
-
-    QStringList layoutStrings;
+    QStringList layoutList;
     QStringList variants;
     QStringList displayNames;
-    //    QStringList shortcuts;
     for (const LayoutUnit &layoutUnit : qAsConst(layouts)) {
-        layoutStrings.append(layoutUnit.layout());
+        layoutList.append(layoutUnit.layout());
         variants.append(layoutUnit.variant());
         displayNames.append(layoutUnit.getRawDisplayName());
-        //    	shortcuts.append(layoutUnit.getShortcut().toString());
     }
 
     auto cleanTail = [](QStringList &list) {
@@ -149,15 +133,11 @@ void KeyboardConfig::save()
     cleanTail(variants);
     cleanTail(displayNames);
 
-    config.writeEntry("LayoutList", layoutStrings.join(LIST_SEPARATOR));
-    config.writeEntry("VariantList", variants.join(LIST_SEPARATOR));
-    config.writeEntry("DisplayNames", displayNames.join(LIST_SEPARATOR));
+    setLayoutList(layoutList);
+    setVariantList(variants);
+    setDisplayNames(displayNames);
 
-    config.writeEntry("LayoutLoopCount", layoutLoopCount);
-
-    config.writeEntry("SwitchMode", SWITCHING_POLICIES[switchingPolicy]);
-
-    config.sync();
+    KeyboardSettingsBase::save();
 }
 
 QList<LayoutUnit> KeyboardConfig::getDefaultLayouts() const
@@ -166,8 +146,9 @@ QList<LayoutUnit> KeyboardConfig::getDefaultLayouts() const
     int i = 0;
     for (const LayoutUnit &layoutUnit : qAsConst(layouts)) {
         defaultLayoutList.append(layoutUnit);
-        if (layoutLoopCount != KeyboardConfig::NO_LOOPING && i >= layoutLoopCount - 1)
+        if (layoutLoopCount() != KeyboardConfig::NO_LOOPING && i >= layoutLoopCount() - 1) {
             break;
+        }
         i++;
     }
     return defaultLayoutList;
@@ -175,8 +156,9 @@ QList<LayoutUnit> KeyboardConfig::getDefaultLayouts() const
 
 QList<LayoutUnit> KeyboardConfig::getExtraLayouts() const
 {
-    if (layoutLoopCount == KeyboardConfig::NO_LOOPING)
+    if (layoutLoopCount() == KeyboardConfig::NO_LOOPING) {
         return QList<LayoutUnit>();
+    }
 
-    return layouts.mid(layoutLoopCount, layouts.size());
+    return layouts.mid(layoutLoopCount(), layouts.size());
 }

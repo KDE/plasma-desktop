@@ -135,7 +135,7 @@ QVariant LayoutsTableModel::data(const QModelIndex &index, int role) const
         break;
         }
     } else if (role == Qt::BackgroundRole) {
-        if (keyboardConfig->layoutLoopCount != KeyboardConfig::NO_LOOPING && index.row() >= keyboardConfig->layoutLoopCount) {
+        if (keyboardConfig->layoutLoopCount() != KeyboardConfig::NO_LOOPING && index.row() >= keyboardConfig->layoutLoopCount()) {
             return QBrush(Qt::lightGray);
         }
     } else if (role == Qt::DisplayRole) {
@@ -363,6 +363,24 @@ void KKeySequenceWidgetDelegate::paint(QPainter *painter, const QStyleOptionView
 // Xkb Options Tree View
 //
 
+XkbOptionsTreeModel::XkbOptionsTreeModel(Rules *rules_, QObject *parent)
+    : QAbstractItemModel(parent)
+    , rules(rules_)
+{
+}
+
+void XkbOptionsTreeModel::setXkbOptions(const QStringList &options)
+{
+    beginResetModel();
+    m_xkbOptions = options;
+    endResetModel();
+}
+
+QStringList XkbOptionsTreeModel::xkbOptions() const
+{
+    return m_xkbOptions;
+}
+
 int XkbOptionsTreeModel::rowCount(const QModelIndex &parent) const
 {
     if (!parent.isValid())
@@ -392,12 +410,12 @@ QVariant XkbOptionsTreeModel::data(const QModelIndex &index, int role) const
             int groupRow = index.parent().row();
             const OptionGroupInfo *xkbGroup = rules->optionGroupInfos[groupRow];
             const QString &xkbOptionName = xkbGroup->optionInfos[row]->name;
-            return keyboardConfig->xkbOptions.indexOf(xkbOptionName) == -1 ? Qt::Unchecked : Qt::Checked;
+            return m_xkbOptions.indexOf(xkbOptionName) == -1 ? Qt::Unchecked : Qt::Checked;
         } else {
             int groupRow = index.row();
             const OptionGroupInfo *xkbGroup = rules->optionGroupInfos[groupRow];
             foreach (const OptionInfo *optionInfo, xkbGroup->optionInfos) {
-                if (keyboardConfig->xkbOptions.indexOf(optionInfo->name) != -1)
+                if (m_xkbOptions.indexOf(optionInfo->name) != -1)
                     return Qt::PartiallyChecked;
             }
             return Qt::Unchecked;
@@ -418,22 +436,20 @@ bool XkbOptionsTreeModel::setData(const QModelIndex &index, const QVariant &valu
     if (value.toInt() == Qt::Checked) {
         if (xkbGroup->exclusive) {
             // clear if exclusive (TODO: radiobutton)
-            int idx = keyboardConfig->xkbOptions.indexOf(QRegExp(xkbGroup->name + ".*"));
+            int idx = m_xkbOptions.indexOf(QRegExp(xkbGroup->name + ".*"));
             if (idx >= 0) {
                 for (int i = 0; i < xkbGroup->optionInfos.count(); i++)
-                    if (xkbGroup->optionInfos[i]->name == keyboardConfig->xkbOptions[idx]) {
+                    if (xkbGroup->optionInfos[i]->name == m_xkbOptions.at(idx)) {
                         setData(createIndex(i, index.column(), static_cast<quint32>(index.internalId()) - index.row() + i), Qt::Unchecked, role);
                         break;
                     }
-                //    m_kxkbConfig->m_options.removeAt(idx);
-                //    idx = m_kxkbConfig->m_options.indexOf(QRegExp(xkbGroupNm+".*"));
             }
         }
-        if (keyboardConfig->xkbOptions.indexOf(option->name) < 0) {
-            keyboardConfig->xkbOptions.append(option->name);
+        if (m_xkbOptions.indexOf(option->name) < 0) {
+            m_xkbOptions.append(option->name);
         }
     } else {
-        keyboardConfig->xkbOptions.removeAll(option->name);
+        m_xkbOptions.removeAll(option->name);
     }
 
     Q_EMIT dataChanged(index, index);

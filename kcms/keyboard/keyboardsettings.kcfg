@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="kxkbrc" />
+  <group name="Layout">
+    <entry name="layoutList" key="LayoutList" type="StringList">
+    <default code="true">QStringList()</default>
+    </entry>
+    <entry name="layoutLoopCount" key="LayoutLoopCount" type="Int">
+      <default>-1</default>
+    </entry>
+    <entry name="keyboardModel" key="Model" type="String">
+      <default>pc104</default>
+    </entry>
+    <entry name="xkbOptions" key="Options" type="StringList">
+      <default code="true">QStringList()</default>
+    </entry>
+    <entry name="resetOldXkbOptions" key="ResetOldOptions" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="switchMode" key="SwitchMode" type="String">
+      <default>Global</default>
+    </entry>
+    <entry name="configureLayouts" key="Use" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="variantList" key="VariantList" type="StringList">
+    <default code="true">QStringList()</default>
+    </entry>
+    <entry name="displayNames" key="DisplayNames" type="StringList">
+    <default code="true">QStringList()</default>
+    </entry>
+  </group>
+</kcfg>

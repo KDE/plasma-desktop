@@ -24,7 +24,7 @@ class Q_DECL_EXPORT KeyboardDaemon : public KDEDModule
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.KeyboardLayouts")
 
-    KeyboardConfig keyboardConfig;
+    KeyboardConfig *keyboardConfig;
     KeyboardLayoutActionCollection *actionCollection;
     XInputEventNotifier *xEventNotifier;
     LayoutMemory layoutMemory;

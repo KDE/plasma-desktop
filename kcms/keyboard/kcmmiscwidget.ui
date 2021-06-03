@@ -148,7 +148,7 @@
          <string>&amp;Rate:</string>
         </property>
         <property name="buddy">
-         <cstring>rate</cstring>
+         <cstring>kcfg_repeatRate</cstring>
         </property>
        </widget>
       </item>
@@ -187,7 +187,7 @@
        </widget>
       </item>
       <item row="2" column="2">
-       <widget class="QDoubleSpinBox" name="rate">
+       <widget class="QDoubleSpinBox" name="kcfg_repeatRate">
         <property name="whatsThis">
          <string>If supported, this option allows you to set the rate at which keycodes are generated while a key is pressed.</string>
         </property>
@@ -197,7 +197,7 @@
        </widget>
       </item>
       <item row="1" column="2">
-       <widget class="QSpinBox" name="delay">
+       <widget class="QSpinBox" name="kcfg_repeatDelay">
         <property name="whatsThis">
          <string>If supported, this option allows you to set the delay after which a pressed key will start generating keycodes. The 'Repeat rate' option controls the frequency of these keycodes.</string>
         </property>
@@ -246,7 +246,7 @@
          <string>&amp;Delay:</string>
         </property>
         <property name="buddy">
-         <cstring>delay</cstring>
+         <cstring>kcfg_repeatDelay</cstring>
         </property>
        </widget>
       </item>

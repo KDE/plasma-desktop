@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2010 Andriy Rysin <rysin@kde.org>
+    SPDX-FileCopyrightText: 2021 Cyril Rossi <cyril.rossi@enioka.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -8,26 +9,24 @@
 
 #include <KAboutData>
 #include <KLocalizedString>
-#include <KPluginFactory>
 
 #include <QDBusConnection>
 #include <QDBusMessage>
 
 #include "kcm_keyboard_widget.h"
 #include "keyboard_config.h"
+#include "keyboardmiscsettings.h"
+#include "kcmmisc.h"
 #include "keyboard_dbus.h"
 #include "x11_helper.h"
 #include "xkb_rules.h"
+#include "keyboardsettingsdata.h"
 
 #include "xkb_helper.h"
 
-// temp hack
-#include "kcmmisc.h"
-
-K_PLUGIN_FACTORY(KeyboardModuleFactory, registerPlugin<KCMKeyboard>();)
-
 KCMKeyboard::KCMKeyboard(QWidget *parent, const QVariantList &args)
     : KCModule(parent)
+    , m_data(new KeyboardSettingsData(this))
 {
     KAboutData *about = new KAboutData(QStringLiteral("kcmkeyboard"),
                                        i18n("KDE Keyboard Control Module"),
@@ -43,54 +42,70 @@ KCMKeyboard::KCMKeyboard(QWidget *parent, const QVariantList &args)
 
     rules = Rules::readRules(Rules::READ_EXTRAS);
 
-    keyboardConfig = new KeyboardConfig();
 
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
     //  layout->setSpacing(KDialog::spacingHint());
 
-    widget = new KCMKeyboardWidget(rules, keyboardConfig, m_workspaceOptions, args, parent);
+    m_miscWidget = new KCMiscKeyboardWidget(parent, m_data->miscSettings());
+    widget = new KCMKeyboardWidget(rules, m_data->keyboardConfig(), m_workspaceOptions, m_miscWidget, args, parent);
     layout->addWidget(widget);
 
-    connect(widget, SIGNAL(changed(bool)), this, SIGNAL(changed(bool)));
-
+    connect(widget, &KCMKeyboardWidget::changed, this, &KCMKeyboard::updateUnmanagedState);
+    connect(m_miscWidget, qOverload<bool>(&KCMiscKeyboardWidget::changed), this, &KCMKeyboard::updateUnmanagedState);
+    connect(this, &KCMKeyboard::defaultsIndicatorsVisibleChanged, this, &KCMKeyboard::updateUnmanagedState);
+    connect(this, &KCMKeyboard::defaultsIndicatorsVisibleChanged, widget, &KCMKeyboardWidget::setDefaultIndicator);
+    connect(this, &KCMKeyboard::defaultsIndicatorsVisibleChanged, m_miscWidget, &KCMiscKeyboardWidget::setDefaultIndicator);
     setButtons(Help | Default | Apply);
+
+    addConfig(m_data->keyboardConfig(), widget);
+    addConfig(m_data->miscSettings(), m_miscWidget);
+    addConfig(&m_workspaceOptions, widget);
 }
 
 KCMKeyboard::~KCMKeyboard()
 {
-    delete keyboardConfig;
     delete rules;
 }
 
 void KCMKeyboard::defaults()
 {
-    keyboardConfig->setDefaults();
-    m_workspaceOptions.osdKbdLayoutChangedEnabledItem()->setDefault();
+    KCModule::defaults();
 
-    widget->updateUI();
-    widget->getKcmMiscWidget()->defaults();
+    widget->defaults();
+    m_miscWidget->defaults();
+}
 
-    Q_EMIT changed(true);
+void KCMKeyboard::updateUnmanagedState()
+{
+    bool isNeedSave = false;
+    isNeedSave |= widget->isSaveNeeded();
+    isNeedSave |= m_miscWidget->isSaveNeeded();
+    unmanagedWidgetChangeState(isNeedSave);
+
+    bool isDefault = true;
+    isDefault &= widget->isDefault();
+    isDefault &= m_miscWidget->isDefault();
+    unmanagedWidgetDefaultState(isDefault);
 }
 
 void KCMKeyboard::load()
 {
-    keyboardConfig->load();
-    m_workspaceOptions.read();
+    m_data->keyboardConfig()->load();
+    KCModule::load();
 
     widget->updateUI();
-    widget->getKcmMiscWidget()->load();
+    m_miscWidget->load();
 }
 
-// static void initializeKeyboardSettings();
 void KCMKeyboard::save()
 {
-    keyboardConfig->save();
-    m_workspaceOptions.save();
-
     widget->save();
-    widget->getKcmMiscWidget()->save();
+    m_miscWidget->save();
+
+    m_data->keyboardConfig()->save();
+    m_data->miscSettings()->save();
+    KCModule::save();
 
     QDBusMessage message = QDBusMessage::createSignal(KEYBOARD_DBUS_OBJECT_PATH, KEYBOARD_DBUS_SERVICE_NAME, KEYBOARD_DBUS_CONFIG_RELOAD_MESSAGE);
     QDBusConnection::sessionBus().send(message);
