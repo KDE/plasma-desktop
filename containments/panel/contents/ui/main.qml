@@ -65,7 +65,7 @@ DragDrop.DropArea {
         prefix: 'thick'
         imagePath: "widgets/panel-background"
     }
-    property bool marginAreasEnabled: panelSvg.margins != thickPanelSvg.margins 
+    property bool marginAreasEnabled: panelSvg.margins != thickPanelSvg.margins
     property var marginHighlightSvg: PlasmaCore.Svg{imagePath: "widgets/margins-highlight"}
     //Margins are either the size of the margins in the SVG, unless that prevents the panel from being at least half a smallMedium icon) tall at which point we set the margin to whatever allows it to be that...or if it still won't fit, 1.
     //the size a margin should be to force a panel to be the required size above
@@ -277,9 +277,10 @@ function checkLastSpacer() {
             id: container
             visible: false
             property bool inThickArea: false
+            property bool isAppletContainer: true
             property bool animationsEnabled: true
 
-            //when the applet moves caused by its resize, don't animate.    
+            //when the applet moves caused by its resize, don't animate.
             //this is completely heuristic, but looks way less "jumpy"
             property bool movingForResize: false
 
@@ -296,14 +297,14 @@ function checkLastSpacer() {
                 }
             }
 
-            function getMargins(side) {
+            function getMargins(side, returnAllMargins = false) {
                 //Margins are either the size of the margins in the SVG, unless that prevents the panel from being at least half a smallMedium icon + smallSpace) tall at which point we set the margin to whatever allows it to be that...or if it still won't fit, 1.
                 var layout = {
                     top: currentLayout.isLayoutHorizontal, bottom: currentLayout.isLayoutHorizontal,
                     right: !currentLayout.isLayoutHorizontal, left: !currentLayout.isLayoutHorizontal
                 };
                 var fillArea = applet && (applet.constraintHints & PlasmaCore.Types.CanFillArea);
-                return (layout[side] && !fillArea) ? Math.round(Math.min(spacingAtMinSize, (inThickArea ? thickPanelSvg.fixedMargins[side] : panelSvg.fixedMargins[side]))) : 0;
+                return ((layout[side] || returnAllMargins) && !fillArea) ? Math.round(Math.min(spacingAtMinSize, (inThickArea ? thickPanelSvg.fixedMargins[side] : panelSvg.fixedMargins[side]))) : 0;
             }
 
             Layout.topMargin: getMargins('top')

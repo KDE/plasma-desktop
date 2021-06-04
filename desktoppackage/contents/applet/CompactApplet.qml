@@ -97,7 +97,28 @@ PlasmaCore.ToolTipArea {
 
     PlasmaCore.FrameSvgItem {
         id: expandedItem
-        anchors.fill: parent
+
+        property var containerMargins: {
+            let item = root;
+            while (item.parent) {
+                item = item.parent;
+                if (item.isAppletContainer) {
+                    return item.getMargins;
+                }
+            }
+            return undefined;
+        }
+
+        anchors {
+            fill: parent
+            property bool returnAllMargins: true 
+            // The above makes sure margin is returned even for side margins, that 
+            // would be otherwise turned off.
+            bottomMargin: containerMargins ? -containerMargins('bottom', returnAllMargins) : 0;
+            topMargin: containerMargins ? -containerMargins('top', returnAllMargins) : 0;
+            leftMargin: containerMargins ? -containerMargins('left', returnAllMargins) : 0;
+            rightMargin: containerMargins ? -containerMargins('right', returnAllMargins) : 0;
+        }
         imagePath: "widgets/tabbar"
         visible: fromCurrentTheme && opacity > 0
         prefix: {
@@ -182,6 +203,27 @@ PlasmaCore.ToolTipArea {
             onActiveFocusChanged: {
                 if (activeFocus && fullRepresentation) {
                     fullRepresentation.forceActiveFocus()
+                }
+            }
+
+            // Draws a line between the applet dialog and the panel
+            PlasmaCore.SvgItem {
+                anchors {
+                    top: plasmoid.location == PlasmaCore.Types.BottomEdge ? undefined : parent.top
+                    left: plasmoid.location == PlasmaCore.Types.RightEdge ? undefined : parent.left
+                    right: plasmoid.location == PlasmaCore.Types.LeftEdge ? undefined : parent.right
+                    bottom: plasmoid.location == PlasmaCore.Types.TopEdge ? undefined : parent.bottom
+                    topMargin: plasmoid.location == PlasmaCore.Types.BottomEdge ? undefined : -popupWindow.margins.top
+                    leftMargin: plasmoid.location == PlasmaCore.Types.RightEdge ? undefined : -popupWindow.margins.left
+                    rightMargin: plasmoid.location == PlasmaCore.Types.LeftEdge ? undefined : -popupWindow.margins.right
+                    bottomMargin: plasmoid.location == PlasmaCore.Types.TopEdge ? undefined : -popupWindow.margins.bottom
+                }
+                height: (plasmoid.location == PlasmaCore.Types.TopEdge || plasmoid.location == PlasmaCore.Types.BottomEdge) ? 1 : undefined
+                width: (plasmoid.location == PlasmaCore.Types.LeftEdge || plasmoid.location == PlasmaCore.Types.RightEdge) ? 1 : undefined
+                z: 999 /* Draw the line on top of the applet */
+                elementId: (plasmoid.location == PlasmaCore.Types.TopEdge || plasmoid.location == PlasmaCore.Types.BottomEdge) ? "horizontal-line" : "vertical-line"
+                svg: PlasmaCore.Svg {
+                    imagePath: "widgets/line"
                 }
             }
         }
