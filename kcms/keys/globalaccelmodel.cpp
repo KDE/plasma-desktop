@@ -106,12 +106,11 @@ Component GlobalAccelModel::loadComponent(const QList<KGlobalShortcutInfo> &info
 {
     const QString &componentUnique = info[0].componentUniqueName();
     const QString &componentFriendly = info[0].componentFriendlyName();
-    KService::Ptr service;
-    // The shortcuts were imported by desktop file
-    if (componentUnique.endsWith(QLatin1String(".desktop"))) {
+
+    KService::Ptr service = KService::serviceByStorageId(componentUnique);
+    // Not a normal desktop file but maybe specific file in kglobalaccel dir
+    if (!service && componentUnique.endsWith(QLatin1String(".desktop"))) {
         service = new KService(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kglobalaccel/") + componentUnique));
-    } else {
-        service = KService::serviceByStorageId(componentUnique);
     }
 
     if (!service) {
