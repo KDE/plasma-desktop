@@ -143,6 +143,11 @@ Rectangle {
 
         ColumnLayout {
             id: categories
+
+            spacing: 0
+            width: categoriesScroll.width
+            focus: true
+
             Keys.onUpPressed: {
                 const buttons = categories.children
 
@@ -181,9 +186,6 @@ Rectangle {
                     }
                 }
             }
-            spacing: 0
-            anchors.fill: parent
-            focus: true
 
             function openCategory(item) {
                 if (applyButton.enabled) {
