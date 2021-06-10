@@ -61,6 +61,10 @@ KeyboardLayoutSwitcher {
         active: containsMouse
     }
 
+    FontMetrics {
+        id: fontmetrics
+    }
+
     PlasmaComponents3.Label {
         text: layoutNames.displayName || layoutNames.shortName
         visible: !icon.visible
@@ -68,5 +72,9 @@ KeyboardLayoutSwitcher {
         horizontalAlignment: Text.AlignHCenter
         fontSizeMode: Text.Fit
         font.pointSize: height
+        // Center the text vertically
+        lineHeight: text == text.toLowerCase()
+            ? fontmetrics.tightBoundingRect('a').height / fontmetrics.tightBoundingRect('A').height
+            : 1
     }
 }
