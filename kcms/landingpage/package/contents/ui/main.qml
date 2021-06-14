@@ -24,19 +24,12 @@ import QtQuick.Window 2.2
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kcm 1.4 as KCM
 
-KCM.AbstractKCM {
+KCM.SimpleKCM {
     id: root
 
     ColumnLayout {
-        anchors.fill: parent
 
         QQC2.ButtonGroup { id: themeGroup }
-
-        // Spacer for vertical centering
-        Item {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-        }
 
         RowLayout {
             Layout.alignment: Qt.AlignCenter
@@ -252,12 +245,6 @@ KCM.AbstractKCM {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
             }
-        }
-
-        // Spacer for vertical centering
-        Item {
-            Layout.fillHeight: true
-            Layout.fillWidth: true
         }
     }
 }
