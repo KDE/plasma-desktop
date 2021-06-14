@@ -12,7 +12,7 @@ set(kcm_joystick_PART_SRCS
    caldialog.cpp )
 
 
-kcoreaddons_add_plugin(kcm_joystick SOURCES ${kcm_joystick_PART_SRCS} INSTALL_NAMESPACE "kcms")
+add_library(kcm_joystick MODULE ${kcm_joystick_PART_SRCS})
 
 
 target_link_libraries(kcm_joystick
@@ -21,6 +21,9 @@ target_link_libraries(kcm_joystick
     KF5::I18n
     KF5::KIOWidgets
 )
+
+install(TARGETS kcm_joystick  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+
 
 ########### install files ###############
 
