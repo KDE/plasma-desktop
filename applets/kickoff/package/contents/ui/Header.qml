@@ -1,6 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2014 Sebastian Kügler <sebas@kde.org>
-    SPDX-FileCopyrightText: SPDX-FileCopyrightText: 2020 Carl Schwan <carl@carlschwan.eu>
+    SPDX-FileCopyrightText: 2020 Carl Schwan <carl@carlschwan.eu>
     SPDX-FileCopyrightText: 2021 Mikel Johnson <mikel5764@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later

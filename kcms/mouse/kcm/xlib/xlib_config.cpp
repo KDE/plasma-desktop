@@ -1,5 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 1997 Patrick Dowler dowler @morgul.fsh.uvic.ca
+    SPDX-FileCopyrightText: 1997 Patrick Dowler <dowler@morgul.fsh.uvic.ca>
     SPDX-FileCopyrightText: 1999 Dirk A. Mueller <dmuell@gmx.net>
     SPDX-FileCopyrightText: 1999 Matthias Hoelzer-Kluepfel <hoelzer@kde.org>
     SPDX-FileCopyrightText: 2000 David Faure <faure@kde.org>

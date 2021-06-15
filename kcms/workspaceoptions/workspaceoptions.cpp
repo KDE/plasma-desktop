@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2018 <furkantokac34@gmail.com>
+    SPDX-FileCopyrightText: 2018 <furkantokac34@gmail.com>
     SPDX-FileCopyrightText: 2019 Cyril Rossi <cyril.rossi@enioka.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later

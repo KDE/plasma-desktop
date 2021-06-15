@@ -2,7 +2,7 @@
     SPDX-FileCopyrightText: 2011 Martin Gräßlin <mgraesslin@kde.org>
     SPDX-FileCopyrightText: 2012 Gregor Taetzner <gregor@freenet.de>
     SPDX-FileCopyrightText: 2012 Marco Martin <mart@kde.org>
-    Copyright (C) 2013 2014 David Edmundson <davidedmundson@kde.org>
+    SPDX-FileCopyrightText: 2013 2014 David Edmundson <davidedmundson@kde.org>
     SPDX-FileCopyrightText: 2014 Sebastian Kügler <sebas@kde.org>
     SPDX-FileCopyrightText: 2021 Mikel Johnson <mikel5764@gmail.com>
 

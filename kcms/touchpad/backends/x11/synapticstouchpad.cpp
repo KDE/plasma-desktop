@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2013 Alexander Mezin <mezin.alexander@gmail.com>
+    SPDX-FileContributor: Peter Osterlund (petero2@telia.com)
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -29,9 +30,6 @@
  * OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
  * NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
- *
- * Authors:
- *      Peter Osterlund (petero2@telia.com)
  */
 
 #include <QDebug>

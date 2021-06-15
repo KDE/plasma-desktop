@@ -1,10 +1,5 @@
 /*
-    keyboard.h
-
-    SPDX-FileCopyrightText: 1997 Patrick Dowler dowler @morgul.fsh.uvic.ca
-
-    Requires the Qt widget libraries, available at no cost at
-    https://www.qt.io/
+    SPDX-FileCopyrightText: 1997 Patrick Dowler <dowler@morgul.fsh.uvic.ca>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */

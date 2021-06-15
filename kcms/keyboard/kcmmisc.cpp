@@ -1,13 +1,10 @@
 /*
     kcmmisc.cpp
 
-    SPDX-FileCopyrightText: 1997 Patrick Dowler dowler @morgul.fsh.uvic.ca
+    SPDX-FileCopyrightText: 1997 Patrick Dowler <dowler@morgul.fsh.uvic.ca>
 
     Layout management, cleanups:
     SPDX-FileCopyrightText: 1999 Dirk A. Mueller <dmuell@gmx.net>
-
-    Requires the Qt widget libraries, available at no cost at
-    https://www.qt.io/
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */

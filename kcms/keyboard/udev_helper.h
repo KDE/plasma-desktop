@@ -1,5 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2015 David Rosca (nowrep@gmail.com)
+    SPDX-FileCopyrightText: 2015 David Rosca <nowrep@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */

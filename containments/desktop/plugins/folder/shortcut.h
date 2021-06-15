@@ -1,5 +1,5 @@
 /*
-    Copyright Ken <https://stackoverflow.com/users/1568857/ken>
+    SPDX-FileCopyrightText: Ken <https://stackoverflow.com/users/1568857/ken>
     SPDX-FileCopyrightText: 2016 Leslie Zhai <xiangzhai83@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later

@@ -37,7 +37,7 @@ DeviceAutomounterKCM::DeviceAutomounterKCM(QWidget *parent, const QVariantList &
                                        QStringLiteral("2.0"),
                                        QString(),
                                        KAboutLicense::GPL_V2,
-                                       i18n("(c) 2009 Trever Fischer, SPDX-FileCopyrightText: 2015 Kai Uwe Broulik "));
+                                       i18n("(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"));
     about->addAuthor(i18n("Trever Fischer"), i18n("Original Author"));
     about->addAuthor(i18n("Kai Uwe Broulik"), i18n("Plasma 5 Port"), QStringLiteral("kde@privat.broulik.de"));
 

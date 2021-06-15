@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2014. 2015 Ivan Cukic <ivan.cukic(at)kde.org>
+    SPDX-FileCopyrightText: 2014, 2015 Ivan Cukic <ivan.cukic(at)kde.org>
     SPDX-FileCopyrightText: 2009 Martin Gräßlin <mgraesslin@kde.org>
     SPDX-FileCopyrightText: 2003 Lubos Lunak <l.lunak@kde.org>
     SPDX-FileCopyrightText: 1999, 2000 Matthias Ettrich <ettrich@kde.org>

@@ -1,16 +1,12 @@
 /*
-    main.cpp
-
     SPDX-FileCopyrightText: 1999 Matthias Hoelzer-Kluepfel <hoelzer@kde.org>
     SPDX-FileCopyrightText: 2005 Lubos Lunak <l.lunak@kde.org>
     SPDX-FileCopyrightText: 2017 Xuetian Weng <wengxt@gmail.com>
     SPDX-FileCopyrightText: 2018 Roman Gilg <subdiff@gmail.com>
 
-    Requires the Qt widget libraries, available at no cost at
-    https://www.qt.io/
-
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+
 #include "backends/x11/x11_backend.h"
 
 #include <KWindowSystem/kwindowsystem.h>

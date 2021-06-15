@@ -1,6 +1,5 @@
 // vim: noexpandtab shiftwidth=4 tabstop=4
 /*
-    This file is part of the KDE project
    SPDX-FileCopyrightText: 2002 Daniel Molkentin <molkentin@kde.org>
    SPDX-FileCopyrightText: 2020 Kai Uwe Broulik <kde@broulik.de>
 
@@ -51,7 +50,7 @@ KDEDConfig::KDEDConfig(QObject *parent, const QVariantList &args)
                                        QStringLiteral("2.0"),
                                        QString(),
                                        KAboutLicense::GPL,
-                                       i18n("(c) 2002 Daniel Molkentin, SPDX-FileCopyrightText: 2020 Kai Uwe Broulik "));
+                                       i18n("(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"));
     about->addAuthor(i18n("Daniel Molkentin"), QString(), QStringLiteral("molkentin@kde.org"));
     about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@broulik.de"));
     setAboutData(about);

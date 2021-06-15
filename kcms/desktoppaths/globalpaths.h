@@ -2,7 +2,7 @@
     "Desktop Icons Options" Tab for KDesktop configuration
 
     SPDX-FileCopyrightText: 1996 Martin R. Jones
-    SPDX-FileCopyrightText: 1998-2007 David Faure <faure@kde.org>
+    SPDX-FileCopyrightText: 1998, 2007 David Faure <faure@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
