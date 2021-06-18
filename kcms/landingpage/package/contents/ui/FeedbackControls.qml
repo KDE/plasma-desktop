@@ -28,7 +28,10 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.userfeedback 1.0 as UserFeedback
 
 ColumnLayout {
+    id: feedbackControlsLayout
+
     property alias slider: statisticsModeSlider
+    readonly property int sliderWidth: Kirigami.Units.gridUnit * 21
 
     enabled: kcm.feedbackEnabled
 
@@ -37,8 +40,8 @@ ColumnLayout {
             id: statisticsModeSlider
             readonly property var currentMode: modeOptions[value]
             Layout.fillWidth: true
-            Layout.minimumWidth: Kirigami.Units.gridUnit * 21
-            Layout.maximumWidth: Kirigami.Units.gridUnit * 21
+            Layout.minimumWidth: feedbackControlsLayout.sliderWidth
+            Layout.maximumWidth: feedbackControlsLayout.sliderWidth
 
             readonly property var modeOptions: [UserFeedback.Provider.NoTelemetry, UserFeedback.Provider.BasicSystemInformation, UserFeedback.Provider.BasicUsageStatistics,
                                                 UserFeedback.Provider.DetailedSystemInformation, UserFeedback.Provider.DetailedUsageStatistics]
@@ -89,7 +92,7 @@ ColumnLayout {
     }
     QQC2.Label {
         Layout.alignment: Qt.AlignHCenter
-        Layout.maximumWidth: Kirigami.Units.gridUnit * 21
+        Layout.maximumWidth: feedbackControlsLayout.sliderWidth
         wrapMode: Text.WordWrap
         text: feedbackController.telemetryName(statisticsModeSlider.currentMode)
     }

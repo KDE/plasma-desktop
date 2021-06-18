@@ -85,6 +85,10 @@ KCM.AbstractKCM {
                 Kirigami.FormData.label: i18n("Animation speed:")
                 Kirigami.FormData.buddyFor: slider
 
+                // Match width of feedback slider for aesthetics
+                Layout.minimumWidth: feedbackLoader.active ? feedbackLoader.item.sliderWidth : implicitWidth
+                Layout.maximumWidth: feedbackLoader.active ? feedbackLoader.item.sliderWidth : implicitWidth
+
                 QQC2.Slider {
                     id: slider
                     Layout.fillWidth: true
