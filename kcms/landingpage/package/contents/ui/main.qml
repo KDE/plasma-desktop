@@ -119,19 +119,20 @@ KCM.SimpleKCM {
                     }
                 }
             }
-        }
 
-        RowLayout {
-            Layout.alignment: Qt.AlignCenter
-            QQC2.Button {
-                icon.name: "preferences-desktop-wallpaper"
-                text: i18n("Change Wallpaper…")
-                onClicked: kcm.openWallpaperDialog()
-            }
-            QQC2.Button {
-                text: i18n("Show More Appearance Settings…")
-                icon.name: "preferences-desktop-theme-global"
-                onClicked: kcm.openKCM("kcm_lookandfeel")
+            RowLayout {
+                QQC2.Button {
+                    icon.name: "preferences-desktop-wallpaper"
+                    text: i18n("Change Wallpaper…")
+                    onClicked: kcm.openWallpaperDialog()
+                }
+                QQC2.Button {
+                    // This button deliberately does not start with a verb to save space
+                    // so that translations don't overflow, as horizontal space is limited
+                    text: i18n("More Appearance Settings…")
+                    icon.name: "preferences-desktop-theme-global"
+                    onClicked: kcm.openKCM("kcm_lookandfeel")
+                }
             }
         }
 
@@ -199,14 +200,15 @@ KCM.SimpleKCM {
                 Kirigami.FormData.buddyFor: item ? item.slider : null
                 source: Qt.resolvedUrl("FeedbackControls.qml")
             }
+            QQC2.Button {
+                // This button deliberately does not start with a verb to save space
+                // so that translations don't overflow, as horizontal space is limited
+                text: i18n("More Behavior Settings…")
+                icon.name: "preferences-desktop"
+                onClicked: kcm.openKCM("kcm_workspace")
+            }
         }
 
-        QQC2.Button {
-            Layout.alignment: Qt.AlignCenter
-            text: i18n("Show More Behavior Settings…")
-            icon.name: "preferences-desktop"
-            onClicked: kcm.openKCM("kcm_workspace")
-        }
         Item {
             implicitHeight: Kirigami.Units.largeSpacing
         }
