@@ -26,7 +26,7 @@
 
 #include <KLocalizedString>
 
-K_EXPORT_PLASMA_RUNNER_WITH_JSON(PlasmaDesktopRunner, "plasma-runner-plasma-desktop.json")
+K_PLUGIN_CLASS_WITH_JSON(PlasmaDesktopRunner, "plasma-runner-plasma-desktop.json")
 
 static const QString s_plasmaService = QLatin1String("org.kde.plasmashell");
 
