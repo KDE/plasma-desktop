@@ -1876,6 +1876,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
     // Used to monitor Shift modifier usage while the menu is open, to
     // swap the Trash and Delete actions.
     menu->installEventFilter(this);
+    QApplication::instance()->installEventFilter(this);
     menu->popup(m_menuPosition);
     connect(menu, &QMenu::aboutToHide, [menu]() {
         menu->deleteLater();
