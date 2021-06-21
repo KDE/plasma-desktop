@@ -8,7 +8,7 @@ import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.private.kimpanel 0.1 as Kimpanel
 
 
@@ -43,12 +43,13 @@ PlasmaCore.Dialog {
         Layout.maximumWidth: childrenRect.width
         Layout.maximumHeight: childrenRect.height
         Column {
+            spacing: PlasmaCore.Units.smallSpacing
             Row {
                 id: textLabel
                 width: auxLabel.width + preedit.width
                 height: Math.max(preedit.height, auxLabel.height)
                 visible: helper.auxVisible || helper.preeditVisible
-                PlasmaComponents.Label {
+                PlasmaComponents3.Label {
                     id: auxLabel
                     font: preferredFont
                     text: helper.auxText
@@ -60,7 +61,7 @@ PlasmaCore.Dialog {
                     height: Math.max(preeditLabel1.height, preeditLabel2.height)
                     clip: true
                     visible: helper.preeditVisible
-                    PlasmaComponents.Label {
+                    PlasmaComponents3.Label {
                         id: preeditLabel1
                         anchors.top: parent.top
                         anchors.left: parent.left
@@ -75,7 +76,7 @@ PlasmaCore.Dialog {
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.left: preeditLabel1.right
                     }
-                    PlasmaComponents.Label {
+                    PlasmaComponents3.Label {
                         id: preeditLabel2
                         anchors.top: parent.top
                         anchors.left: preeditLabel1.right
@@ -113,14 +114,15 @@ PlasmaCore.Dialog {
                             height: childrenRect.height
                             x: highlight.marginHints.left
                             y: highlight.marginHints.top
-                            PlasmaComponents.Label {
+                            spacing: PlasmaCore.Units.smallSpacing
+                            PlasmaComponents3.Label {
                                 id: tableLabel
                                 text: model.label
                                 font: preferredFont
                                 opacity: 0.8
                                 color: selected ? PlasmaCore.Theme.highlightedTextColor : PlasmaCore.Theme.textColor
                             }
-                            PlasmaComponents.Label {
+                            PlasmaComponents3.Label {
                                 id: textLabel
                                 text: model.text
                                 font: preferredFont
@@ -156,6 +158,7 @@ PlasmaCore.Dialog {
                     Layout.minimumHeight: height
                     Layout.maximumWidth: width
                     Layout.maximumHeight: height
+                    spacing: PlasmaCore.Units.smallSpacing
                     PlasmaCore.IconItem {
                         id: prevButton
                         source: inputpanel.verticalLayout ? "arrow-up" : "arrow-left"
