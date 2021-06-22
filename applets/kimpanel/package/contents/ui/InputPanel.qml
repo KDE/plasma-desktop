@@ -120,13 +120,13 @@ PlasmaCore.Dialog {
                                 text: model.label
                                 font: preferredFont
                                 opacity: 0.8
-                                color: selected ? PlasmaCore.Theme.highlightedTextColor : PlasmaCore.Theme.textColor
+                                color: PlasmaCore.Theme.textColor
                             }
                             PlasmaComponents3.Label {
                                 id: textLabel
                                 text: model.text
                                 font: preferredFont
-                                color: selected ? PlasmaCore.Theme.highlightedTextColor : PlasmaCore.Theme.textColor
+                                color: PlasmaCore.Theme.textColor
                             }
                         }
                         MouseArea {
@@ -142,7 +142,6 @@ PlasmaCore.Dialog {
                             id: highlight
                             z: -1
                             visible: inputpanel.highlightCandidate === model.index || inputpanel.hoveredCandidate === model.index
-                            hover: candidateMouseArea.containsMouse
                             selected: candidateDelegate.selected
                             anchors {
                                 fill: parent

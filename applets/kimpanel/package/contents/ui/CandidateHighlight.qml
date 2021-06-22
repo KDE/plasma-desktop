@@ -9,7 +9,6 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 Item {
     id: highlight
 
-    property bool hover: false
     property bool selected: false
     property alias marginHints: background.margins;
 
@@ -25,9 +24,6 @@ Item {
         imagePath: "widgets/viewitem"
         prefix: {
             if (selected)
-                return hover ? "selected+hover" : "selected";
-
-            if (hover)
                 return "hover";
 
             return "normal";
