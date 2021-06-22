@@ -17,15 +17,27 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 Kirigami.FormLayout {
     id: iconsPage
 
-    property alias cfg_vertical_lookup_table: verticalLookupTable.checked
+    property bool cfg_vertical_lookup_table
     property bool cfg_use_default_font
     property font cfg_font
     property bool cfg_scaleIconsToFit
 
-    QQC2.CheckBox {
-        id: verticalLookupTable
+    QQC2.ButtonGroup { id: layoutRadioGroup }
+    QQC2.ButtonGroup { id: scaleRadioGroup }
+
+    QQC2.RadioButton {
+        id: verticalLayoutRadioButton
         Kirigami.FormData.label: i18n("Input method list:")
         text: i18n("Vertical")
+        checked: cfg_vertical_lookup_table == true
+        onToggled: cfg_vertical_lookup_table = checked
+        QQC2.ButtonGroup.group: layoutRadioGroup
+    }
+    QQC2.RadioButton {
+        text: i18n("Horizontal")
+        checked: cfg_vertical_lookup_table == false
+        onToggled: cfg_vertical_lookup_table = !checked
+        QQC2.ButtonGroup.group: layoutRadioGroup
     }
 
     RowLayout {
@@ -63,13 +75,15 @@ Kirigami.FormLayout {
         text: i18n("Small")
         checked: cfg_scaleIconsToFit == false
         onToggled: cfg_scaleIconsToFit = !checked
+        QQC2.ButtonGroup.group: scaleRadioGroup
     }
     QQC2.RadioButton {
-        id: automaticRadioButton
+        id: automaticScaleRadioButton
         text: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? i18n("Scale with Panel height")
                                                                     : i18n("Scale with Panel width")
         checked: cfg_scaleIconsToFit == true
         onToggled: cfg_scaleIconsToFit = checked
+        QQC2.ButtonGroup.group: scaleRadioGroup
     }
 
     QtDialogs.FontDialog {
