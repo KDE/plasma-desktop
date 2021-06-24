@@ -163,7 +163,9 @@ TouchpadConfigXlib::TouchpadConfigXlib(TouchpadConfigContainer *parent, Touchpad
     connect(m_kded.configureNotificationsButton, SIGNAL(clicked()), SLOT(showConfigureNotificationsDialog()));
     m_shortcutsDialog.reset(new KShortcutsDialog(KShortcutsEditor::GlobalAction, KShortcutsEditor::LetterShortcutsDisallowed));
     m_shortcutsDialog->addCollection(new TouchpadGlobalActions(true, this), i18n("Enable/Disable Touchpad"));
-    connect(m_kded.configureShortcutsButton, SIGNAL(clicked()), m_shortcutsDialog.data(), SLOT(show()));
+    connect(m_kded.configureShortcutsButton, &QPushBUtton::clicked, this, [this]() {
+        m_shortcutsDialog->configure(true);
+    });
 
     m_mouseCombo = new KComboBox(true, m_kded.kcfg_MouseBlacklist);
     m_kded.kcfg_MouseBlacklist->setCustomEditor(m_mouseCombo);
