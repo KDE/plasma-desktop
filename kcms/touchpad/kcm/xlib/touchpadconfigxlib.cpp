@@ -163,7 +163,7 @@ TouchpadConfigXlib::TouchpadConfigXlib(TouchpadConfigContainer *parent, Touchpad
     connect(m_kded.configureNotificationsButton, SIGNAL(clicked()), SLOT(showConfigureNotificationsDialog()));
     m_shortcutsDialog.reset(new KShortcutsDialog(KShortcutsEditor::GlobalAction, KShortcutsEditor::LetterShortcutsDisallowed));
     m_shortcutsDialog->addCollection(new TouchpadGlobalActions(true, this), i18n("Enable/Disable Touchpad"));
-    connect(m_kded.configureShortcutsButton, &QPushBUtton::clicked, this, [this]() {
+    connect(m_kded.configureShortcutsButton, &QPushButton::clicked, this, [this]() {
         m_shortcutsDialog->configure(true);
     });
 
