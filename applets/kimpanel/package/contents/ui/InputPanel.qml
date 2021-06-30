@@ -27,7 +27,15 @@ import org.kde.plasma.private.kimpanel 0.1 as Kimpanel
 PlasmaCore.Dialog {
     id: inputpanel
     type: PlasmaCore.Dialog.PopupMenu
-    flags: Qt.Popup | Qt.WindowStaysOnTopHint | Qt.WindowDoesNotAcceptFocus
+    flags: {
+        var flag = Qt.WindowTransparentForInput | Qt.WindowStaysOnTopHint | Qt.WindowDoesNotAcceptFocus;
+        if (Qt.platform.pluginName.includes("wayland")) {
+            flag |= Qt.ToolTip;
+        } else {
+            flag |= Qt.Popup;
+        }
+        return flag;
+    }
     location: PlasmaCore.Types.Floating
     visible: helper.auxVisible || helper.preeditVisible || helper.lookupTableVisible
     readonly property bool verticalLayout: (helper.lookupTableLayout === 1) || (helper.lookupTableLayout === 0 && plasmoid.configuration.vertical_lookup_table);
