@@ -199,6 +199,7 @@ ColumnLayout {
             anchors.fill: parent
             fillMode: Image.PreserveAspectCrop
             visible: albumArtImage.available
+            asynchronous: true
             layer.enabled: true
             opacity: 0.25
             layer.effect: FastBlur {
