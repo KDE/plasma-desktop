@@ -6,38 +6,21 @@
 
 #include "AbstractJob.h"
 
-#include <KConfig>
-#include <KConfigGroup>
 #include <KLocalizedString>
-#include <KSharedConfig>
-#include <KShell>
-
-#include <QDebug>
-#include <QProcess>
+#include <KTerminalLauncherJob>
 
 void AbstractJob::runScriptInTerminal(const QString &script, const QString &pwd)
 {
-    KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
-    QString exec = confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole"));
-
-    if (exec == QLatin1String("konsole")) {
-        exec += QLatin1String(" --noclose --separate");
-    } else if (exec == QLatin1String("xterm")) {
-        exec += QLatin1String(" -hold");
-    }
-    exec += QLatin1String(" -e ");
-    exec += KShell::quoteArg(script);
-
-    QProcess *process = new QProcess(this);
-    process->setWorkingDirectory(pwd);
-    // We don't know if the entry read from the config contains options
-    // so we just split it at the end
-    QStringList split = KShell::splitArgs(exec);
-    const QString program = split.takeFirst();
-    process->setProgram(program);
-    process->setArguments(split);
-    process->start();
-    connectSignals(process);
+    auto job = new KTerminalLauncherJob(script);
+    job->setWorkingDirectory(pwd);
+    connect(job, &KJob::result, [this, job]() {
+        if (job->error()) {
+            Q_EMIT error(i18nc("@info", "Failed to run install script in terminal \"%1\"", job->errorString()));
+        } else {
+            Q_EMIT finished();
+        }
+    });
+    job->start();
 }
 
 QString AbstractJob::terminalCloseMessage(bool install)
@@ -47,19 +30,6 @@ QString AbstractJob::terminalCloseMessage(bool install)
     } else {
         return i18nc("@info", "Uninstallation executed successfully, you may now close this window");
     }
-}
-
-void AbstractJob::connectSignals(QProcess *process)
-{
-    connect(process, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this, [this](int, QProcess::ExitStatus exitStatus) {
-        if (exitStatus == QProcess::NormalExit) {
-            Q_EMIT finished();
-        }
-    });
-
-    connect(process, &QProcess::errorOccurred, this, [this, process](QProcess::ProcessError) {
-        Q_EMIT error(i18nc("@info", "Failed to run install script in terminal \"%1\"", process->program()));
-    });
 }
 
 #include "AbstractJob.moc"

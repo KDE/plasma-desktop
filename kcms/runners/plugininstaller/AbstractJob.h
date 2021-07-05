@@ -10,7 +10,6 @@
 #include <QObject>
 
 class QFileInfo;
-class QProcess;
 
 class AbstractJob : public QObject
 {
@@ -31,7 +30,6 @@ Q_SIGNALS:
 protected:
     void runScriptInTerminal(const QString &script, const QString &pwd);
     QString terminalCloseMessage(bool install);
-    void connectSignals(QProcess *process);
 };
 
 #endif // ABSTRACTJOB_H

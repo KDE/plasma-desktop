@@ -32,6 +32,14 @@ void ZypperRPMJob::executeOperation(const QFileInfo &fileInfo, const QString &mi
         const QString rpmPackageName = KShell::quoteArg(infoMatch.captured(1));
         QProcess *process = new QProcess(this);
         process->start(QStringLiteral("pkexec"), {"zypper", "remove", "--no-confirm", rpmPackageName});
-        connectSignals(process);
+
+        connect(process, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this, [this](int, QProcess::ExitStatus exitStatus) {
+            if (exitStatus == QProcess::NormalExit) {
+                Q_EMIT finished();
+            }
+        });
+        connect(process, &QProcess::errorOccurred, this, [this, process](QProcess::ProcessError) {
+            Q_EMIT error(i18nc("@info", "Failed to run install script in terminal \"%1\"", process->program()));
+        });
     }
 }
