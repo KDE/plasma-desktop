@@ -15,7 +15,7 @@ void AbstractJob::runScriptInTerminal(const QString &script, const QString &pwd)
     job->setWorkingDirectory(pwd);
     connect(job, &KJob::result, [this, job]() {
         if (job->error()) {
-            Q_EMIT error(i18nc("@info", "Failed to run install script in terminal \"%1\"", job->errorString()));
+            Q_EMIT error(xi18nc("@info:status", "Failed to run install script in terminal <message>%1</message>", job->errorString()));
         } else {
             Q_EMIT finished();
         }
