@@ -147,6 +147,7 @@ ColumnLayout {
         Layout.minimumWidth: header.width
         Layout.preferredHeight: header.width / 2
 
+        clip: true
         visible: toolTipDelegate.isWin
 
         readonly property bool isMinimized: isGroup ? IsMinimized == true : isMinimizedParent
@@ -197,20 +198,33 @@ ColumnLayout {
             source: pipeWireLoader.active ? pipeWireLoader.item : x11Thumbnail
         }
 
-        Image {
+        ShaderEffect {
             id: albumArtBackground
-            source: albumArt
-            sourceSize: Qt.size(parent.width, parent.height)
-            anchors.fill: parent
-            fillMode: Image.PreserveAspectCrop
-            visible: albumArtImage.available
-            asynchronous: true
+            readonly property Image source: albumArtImage
+
+            anchors.centerIn: parent
+            visible: source.available
             layer.enabled: true
             opacity: 0.25
             layer.effect: FastBlur {
                 source: albumArtBackground
-                anchors.fill: parent
+                anchors.fill: source
                 radius: 30
+            }
+            // use State to avoid unnecessary reevaluation of width and height
+            // otherwise the size will be reevaluated many times when isGroup is true
+            states: State {
+                name: "albumArtImageReady"
+                // paintedWidth and paintedHeight become positive when image is ready
+                when: albumArtImage.available && albumArtImage.status === Image.Ready
+                PropertyChanges {
+                    target: albumArtBackground
+                    // set explicit to true to further avoid unnecessary reevaluation of size
+                    explicit: true
+                    // manual implementation of Image.PreserveAspectCrop
+                    width: (source.paintedWidth / source.paintedHeight) <= (parent.width / parent.height) ? parent.width : parent.height * (source.paintedWidth / source.paintedHeight)
+                    height: (source.paintedWidth / source.paintedHeight) <= (parent.width / parent.height) ? parent.width * (source.paintedHeight / source.paintedWidth) : parent.height
+                }
             }
         }
 
