@@ -196,6 +196,7 @@ ColumnLayout {
         Image {
             id: albumArtBackground
             source: albumArt
+            sourceSize: Qt.size(parent.width, parent.height)
             anchors.fill: parent
             fillMode: Image.PreserveAspectCrop
             visible: albumArtImage.available
