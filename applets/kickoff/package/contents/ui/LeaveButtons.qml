@@ -35,7 +35,7 @@ RowLayout {
                 // TODO: Don't generate items that will never be seen. Maybe DelegateModel can help?
                 visible: String(plasmoid.configuration.systemFavorites).includes(model.favoriteId)
                 onClicked: {
-                    model.trigger(index, "", "")
+                    systemModel.trigger(index, "", null)
                 }
             }
         }
@@ -68,7 +68,7 @@ RowLayout {
             visible: !String(plasmoid.configuration.systemFavorites).includes(model.favoriteId)
             Accessible.role: Accessible.MenuItem
 
-            onClicked: model.trigger(index, "", "")
+            onClicked: systemModel.trigger(index, "", null)
         }
 
         onObjectAdded: contextMenu.addMenuItem(object)
