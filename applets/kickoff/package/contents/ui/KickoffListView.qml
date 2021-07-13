@@ -80,19 +80,17 @@ EmptyPage {
 
         implicitWidth: {
             if (mainContentView) {
-                if (plasmoid.configuration.favoritesDisplay === 0
-                    && plasmoid.configuration.applicationsDisplay !== 0
-                    && KickoffSingleton.rootModel.favoritesModel.count <= 16) {
-                    return KickoffSingleton.gridCellSize * 4
-                        + KickoffSingleton.leftPadding
-                        + KickoffSingleton.rightPadding
-                } else if (plasmoid.configuration.favoritesDisplay === 0
-                    || plasmoid.configuration.applicationsDisplay === 0) {
+                if (plasmoid.configuration.applicationsDisplay === 0
+                    || (plasmoid.configuration.favoritesDisplay === 0
+                        && KickoffSingleton.rootModel.favoritesModel.count > 16)) {
                     return KickoffSingleton.gridCellSize * 4
                         + KickoffSingleton.leftPadding
                         + KickoffSingleton.rightPadding
                         + verticalScrollBar.implicitWidth
                 }
+                return KickoffSingleton.gridCellSize * 4
+                    + KickoffSingleton.leftPadding
+                    + KickoffSingleton.rightPadding
             }
             return contentWidth + leftMargin + rightMargin
         }
