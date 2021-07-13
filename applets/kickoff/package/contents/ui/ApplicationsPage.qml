@@ -16,6 +16,16 @@ BasePage {
     sideBarComponent: KickoffListView {
         id: sideBar
         focus: true // needed for Loaders
+        contentHeight: {
+            // If either uses a grid, use grid cells to determine size
+            if (plasmoid.configuration.favoritesDisplay == 0 
+                || plasmoid.configuration.applicationsDisplay == 0) {
+                return KickoffSingleton.gridCellSize * 4
+                    + view.topMargin + view.bottomMargin
+            }
+            return Math.max(view.contentHeight, KickoffSingleton.listDelegateHeight * 10)
+                + view.topMargin + view.bottomMargin
+        }
         model: KickoffSingleton.rootModel
         delegate: KickoffItemDelegate {
             id: itemDelegate
@@ -108,6 +118,14 @@ BasePage {
                 } else if (root.sideBarItem.currentIndex > 1
                     && stackView.currentItem.objectName !== stackView.preferredAppsViewObjectName) {
                     stackView.replace(stackView.preferredAppsViewComponent)
+                }
+            }
+        }
+        Connections {
+            target: plasmoid
+            function onExpandedChanged() {
+                if(!plasmoid.expanded) {
+                    KickoffSingleton.contentArea.currentItem.forceActiveFocus()
                 }
             }
         }
