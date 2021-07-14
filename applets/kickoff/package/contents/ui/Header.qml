@@ -233,6 +233,7 @@ PlasmaExtras.PlasmoidHeading {
                 KickoffSingleton.contentArea.currentItem.action.triggered()
                 KickoffSingleton.contentArea.currentItem.forceActiveFocus(Qt.ShortcutFocusReason)
             }
+            Keys.priority: Keys.AfterItem
             Keys.forwardTo: KickoffSingleton.contentArea.view
         }
 
