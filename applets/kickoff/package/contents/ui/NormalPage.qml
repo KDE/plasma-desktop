@@ -11,7 +11,7 @@ import org.kde.plasma.components 3.0 as PC3
 
 EmptyPage {
     id: root
-    property real preferredSideBarWidth: Math.max(footer.implicitTabBarWidth, stackView.currentItem ? stackView.currentItem.implicitSideBarWidth : 0)
+    property real preferredSideBarWidth: 0
 
     contentItem: HorizontalStackView {
         id: stackView
@@ -52,4 +52,6 @@ EmptyPage {
             restoreMode: Binding.RestoreBinding
         }
     }
+
+    Component.onCompleted: preferredSideBarWidth = Math.max(footer.implicitTabBarWidth, stackView.currentItem ? stackView.currentItem.implicitSideBarWidth : 0)
 }
