@@ -151,7 +151,7 @@ T.ItemDelegate {
             rightMargin: root.indicator && root.indicator.visible ? root.spacing + root.indicator.width : 0
             baselineOffset: root.textUnderIcon ? implicitHeight : 0
         }
-        visible: text.length > 0 && text !== root.text && label.lineCount === 1
+        visible: !textUnderIcon && text.length > 0 && text !== root.text && label.lineCount === 1
         enabled: false
         text: root.description
         elide: Text.ElideRight
