@@ -74,7 +74,7 @@ void DeviceAutomounterKCM::updateForgetDeviceButton()
 {
     const auto selectedIndex = deviceView->selectionModel()->selectedIndexes();
     for (const QModelIndex &idx : selectedIndex) {
-        if (idx.data(DeviceModel::TypeRole) == DeviceModel::Detatched) {
+        if (idx.data(DeviceModel::TypeRole) == DeviceModel::Detached) {
             forgetDevice->setEnabled(true);
             return;
         }
@@ -181,7 +181,7 @@ void DeviceAutomounterKCM::saveLayout()
     LayoutSettings::setHeaderWidths(widths);
     // Check DeviceModel.cpp, thats where the magic row numbers come from.
     LayoutSettings::setAttachedExpanded(deviceView->isExpanded(m_devices->index(0, 0)));
-    LayoutSettings::setDetatchedExpanded(deviceView->isExpanded(m_devices->index(1, 0)));
+    LayoutSettings::setDetachedExpanded(deviceView->isExpanded(m_devices->index(1, 0)));
     LayoutSettings::self()->save();
 }
 
@@ -201,7 +201,7 @@ void DeviceAutomounterKCM::loadLayout()
     }
 
     deviceView->setExpanded(m_devices->index(0, 0), LayoutSettings::attachedExpanded());
-    deviceView->setExpanded(m_devices->index(1, 0), LayoutSettings::detatchedExpanded());
+    deviceView->setExpanded(m_devices->index(1, 0), LayoutSettings::detachedExpanded());
 }
 
 #include "DeviceAutomounterKCM.moc"

@@ -290,7 +290,7 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
             }
         } else if (index.parent().row() == 1) {
             if (role == TypeRole) {
-                return Detatched;
+                return Detached;
             }
 
             const QString &udi = m_disconnected[index.row()];

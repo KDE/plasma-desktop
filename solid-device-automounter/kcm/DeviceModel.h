@@ -26,7 +26,7 @@ public:
 
     enum DeviceType {
         Attached,
-        Detatched,
+        Detached,
     };
 
     enum {
