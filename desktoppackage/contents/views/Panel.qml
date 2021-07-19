@@ -22,6 +22,7 @@ import QtQml 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.taskmanager 0.1 as TaskManager
+import org.kde.kwindowsystem 1.0
 
 Item {
     id: root
@@ -83,6 +84,10 @@ Item {
             id: tasksModel
             groupMode: TaskManager.TasksModel.GroupDisabled
         }
+    }
+
+    KWindowSystem {
+        id: kwindowsystem
     }
 
     PlasmaCore.FrameSvgItem {
@@ -160,7 +165,7 @@ Item {
         state = Qt.binding(function() {
             let mstate = '';
             if (panel.opacityMode == 0) {
-                mstate = visibleWindowsModel.count > 0 ? "opaque" : "transparent"
+                mstate = visibleWindowsModel.count > 0 && !kwindowsystem.showingDesktop? "opaque" : "transparent"
             } else if (panel.opacityMode == 1) {
                 mstate = "opaque"
             } else {
