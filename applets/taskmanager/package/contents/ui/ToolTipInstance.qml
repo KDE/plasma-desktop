@@ -88,13 +88,14 @@ ColumnLayout {
             }
             // window title
             PlasmaComponents.Label {
+                readonly property string title: generateTitle()
                 id: winTitle
                 maximumLineCount: 1
                 Layout.fillWidth: true
                 elide: Text.ElideRight
-                text: generateTitle()
+                text: (!hasPlayer || !title.includes(songText.text)) ? title : ""
                 opacity: 0.75
-                visible: text.length !== 0 && text !== appNameHeading.text && (!hasPlayer || !text.includes(songText.text))
+                visible: title.length !== 0 && title !== appNameHeading.text
             }
             // subtext
             PlasmaComponents.Label {
