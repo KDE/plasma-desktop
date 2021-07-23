@@ -21,6 +21,7 @@ ColumnLayout {
     property alias cfg_alphaSort: alphaSort.checked
     property var cfg_systemFavorites: String(plasmoid.configuration.systemFavorites)
     property int cfg_primaryActions: plasmoid.configuration.primaryActions
+    property alias cfg_showActionButtonCaptions: showActionButtonCaptions.checked
 
     Kirigami.FormLayout {
         Button {
@@ -132,8 +133,8 @@ ColumnLayout {
 
         RadioButton {
             id: powerActionsButton
-            Kirigami.FormData.label: i18n("Primary actions:")
-            text: i18n("Power actions")
+            Kirigami.FormData.label: i18n("Show buttons for:")
+            text: i18n("Power")
             ButtonGroup.group: radioGroup
             property string actions: "suspend,hibernate,reboot,shutdown"
             property int index: 0
@@ -142,11 +143,25 @@ ColumnLayout {
 
         RadioButton {
             id: sessionActionsButton
-            text: i18n("Session actions")
+            text: i18n("Session")
             ButtonGroup.group: radioGroup
             property string actions: "lock-screen,logout,save-session,switch-user"
             property int index: 1
             checked: plasmoid.configuration.primaryActions == index
+        }
+
+        RadioButton {
+            id: allActionsButton
+            text: i18n("Power and session")
+            ButtonGroup.group: radioGroup
+            property string actions: "lock-screen,logout,save-session,switch-user,suspend,hibernate,reboot,shutdown"
+            property int index: 3
+            checked: plasmoid.configuration.primaryActions == index
+        }
+
+        CheckBox {
+            id: showActionButtonCaptions
+            text: i18n("Show action button captions")
         }
     }
 

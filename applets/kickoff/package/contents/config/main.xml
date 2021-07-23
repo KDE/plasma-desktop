@@ -18,7 +18,7 @@
             <default>suspend,hibernate,reboot,shutdown</default>
         </entry>
         <entry name="primaryActions" type="Int">
-            <label>Which actions should be displayed in the footer: 0 = Power, 1 = Session, 2 = Custom</label>
+            <label>Which actions should be displayed in the footer: 0 = Power, 1 = Session, 2 = Custom, 3 = Power and session</label>
             <default>0</default>
         </entry>
         <entry name="favoritesPortedToKAstats" type="Bool">
@@ -44,6 +44,10 @@
         <entry name="pin" type="Bool">
             <label>Whether the popup should remain open when another window is activated</label>
             <default>false</default>
+        </entry>
+        <entry name="showActionButtonCaptions" type="Bool">
+            <label>Whether to display captions ("shut down", "log out", etc.) for the footer action buttons</label>
+            <default>true</default>
         </entry>
     </group>
 </kcfg>

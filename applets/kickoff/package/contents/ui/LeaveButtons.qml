@@ -22,6 +22,10 @@ RowLayout {
         favoritesModel: KickoffSingleton.rootModel.systemFavoritesModel
     }
 
+    Item {
+        Layout.fillWidth: !plasmoid.configuration.showActionButtonCaptions && plasmoid.configuration.primaryActions === 3
+    }
+
     Repeater {
         model: systemModel
         delegate: PC3.ToolButton {
@@ -31,11 +35,18 @@ RowLayout {
             // TODO: Don't generate items that will never be seen. Maybe DelegateModel can help?
             visible: String(plasmoid.configuration.systemFavorites).includes(model.favoriteId)
             onClicked: systemModel.trigger(index, "", null)
+            display: plasmoid.configuration.showActionButtonCaptions ? PC3.AbstractButton.TextBesideIcon : PC3.AbstractButton.IconOnly;
+            Layout.rightMargin: model.favoriteId === "switch-user" && plasmoid.configuration.primaryActions === 3 ? PlasmaCore.Units.gridUnit : undefined
+
+            PC3.ToolTip {
+                text: model.display
+                visible: parent.display === PC3.AbstractButton.IconOnly && parent.hovered
+            }
         }
     }
 
     Item {
-        Layout.fillWidth: true
+        Layout.fillWidth: !plasmoid.configuration.showActionButtonCaptions || plasmoid.configuration.primaryActions !== 3
     }
 
     PC3.ToolButton {
@@ -44,12 +55,13 @@ RowLayout {
         Accessible.role: Accessible.ButtonMenu
         icon.width: PlasmaCore.Units.iconSizes.smallMedium
         icon.height: PlasmaCore.Units.iconSizes.smallMedium
-        icon.name: ["system-log-out", "system-shutdown", "view-more-symbolic"][currentId];
-        text: [i18n("Leave…"), i18n("Power…"), i18n("More…")][currentId]
+        icon.name: ["system-log-out", "system-shutdown", "view-more-symbolic", ""][currentId];
+        display: PC3.AbstractButton.IconOnly;
+        visible: plasmoid.configuration.primaryActions !== 3
         // Make it look pressed while the menu is open
         down: contextMenu.status === PC2.DialogStatus.Open || pressed
-        PC3.ToolTip.text: [i18n("Leave"), i18n("Power"), i18n("More")][leaveButton.currentId]
-        PC3.ToolTip.visible: leaveButton.display === PC3.AbstractButton.IconOnly && leaveButton.hovered
+        PC3.ToolTip.text: [i18n("Leave"), i18n("Power"), i18n("More"), ""][leaveButton.currentId]
+        PC3.ToolTip.visible: leaveButton.hovered
         PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
         onPressed: contextMenu.openRelative()
     }
