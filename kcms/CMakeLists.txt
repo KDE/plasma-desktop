@@ -14,7 +14,6 @@ add_subdirectory( access )
 add_subdirectory( dateandtime )
 add_subdirectory( ksplash )
 
-add_subdirectory( launch )
 add_subdirectory( landingpage )
 add_subdirectory( keys )
 add_subdirectory( ksmserver )
