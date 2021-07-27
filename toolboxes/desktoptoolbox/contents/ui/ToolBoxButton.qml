@@ -191,7 +191,7 @@ Item {
             PlasmaComponents3.ToolButton {
                 property QtObject qAction: plasmoid.action("add widgets")
                 text: qAction.text
-                icon.name: "list-add"
+                icon.name: "draw-cuboid"
                 onClicked: qAction.trigger()
             }
             PlasmaComponents3.ToolButton {

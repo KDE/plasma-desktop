@@ -19,7 +19,7 @@ Item {
     implicitWidth: Math.max(buttonsLayout_1.width, buttonsLayout_2.width, row.width) + PlasmaCore.Units.smallSpacing * 2
     implicitHeight: row.height + 20
 
-    readonly property string addWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets…")
+    readonly property string addWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add or Manage Widgets…")
     readonly property string addSpacerButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Spacer")
     readonly property string settingsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "More Options…")
 
@@ -57,7 +57,7 @@ Item {
         PlasmaComponents.Button {
             text: buttonsLayout_2.showText ? root.addWidgetsButtonText : ""
             tooltip: buttonsLayout_2.showText ? "" : root.addWidgetsButtonText
-            iconSource: "list-add"
+            iconSource: "draw-cuboid"
             Layout.fillWidth: true
             onClicked: {
                 configDialog.close();
