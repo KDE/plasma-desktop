@@ -212,11 +212,9 @@ SimpleKCM {
 
     Kirigami.OverlaySheet {
         id: picturesSheet
-        header: RowLayout {
-            Kirigami.Heading {
-                text: i18n("Change Avatar")
-            }
-        }
+
+        title: i18n("Change Avatar")
+
         QQC2.SwipeView {
             id: stackSwitcher
             interactive: false

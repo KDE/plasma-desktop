@@ -23,9 +23,7 @@ Kirigami.OverlaySheet {
 
     property var account
 
-    header: Kirigami.Heading {
-        text: i18n("Change Password")
-    }
+    title: i18n("Change Password")
 
     ColumnLayout {
         id: mainColumn

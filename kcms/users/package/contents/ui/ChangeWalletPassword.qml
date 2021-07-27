@@ -14,9 +14,7 @@ import org.kde.kirigami 2.8 as Kirigami
 Kirigami.OverlaySheet {
     id: walletPasswordRoot
 
-    header: Kirigami.Heading {
-        text: i18n("Change Wallet Password?")
-    }
+    title: i18n("Change Wallet Password?")
 
     ColumnLayout {
         id: baseLayout

@@ -275,9 +275,8 @@ KCM.AbstractKCM {
     }
     Kirigami.OverlaySheet {
         id: importSheet
-        header: Kirigami.Heading {
-            text: i18n("Import Shortcut Scheme")
-        }
+
+        title: i18n("Import Shortcut Scheme")
 
         ColumnLayout {
             anchors.centerIn: parent
