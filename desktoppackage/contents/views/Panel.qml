@@ -207,10 +207,10 @@ Item {
             pre = "south";
             break;
         default:
-            prefix = "";
-            return;
+            pre = "";
+            break;
         }
-        prefix = [pre, ""];
+        translucentItem.prefix = opaqueItem.prefix = [pre, ""];
     }
 
     onContainmentChanged: {
