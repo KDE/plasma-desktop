@@ -1,7 +1,9 @@
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH} )
 
-execute_process(COMMAND ${PKG_CONFIG_EXECUTABLE} --variable=xkb_base xkeyboard-config OUTPUT_VARIABLE XKBDIR OUTPUT_STRIP_TRAILING_WHITESPACE)
-if (CMAKE_CROSSCOMPILING)
+pkg_get_variable(XKBDIR xkeyboard-config xkb_base)
+if (NOT XKBDIR)
+    message(FATAL_ERROR "Couldn't find xkb_base using pkg-config: is xkeyboard-config installed?")
+elseif (CMAKE_CROSSCOMPILING)
     if (NOT EXISTS "${CMAKE_SYSROOT}/${XKBDIR}")
       message(FATAL_ERROR "Couldn't find XKB location in CMAKE_SYSROOT: \"${CMAKE_SYSROOT}/${XKBDIR}\"")
     endif()
