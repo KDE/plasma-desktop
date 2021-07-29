@@ -35,8 +35,8 @@ PlasmaExtras.PlasmoidHeading {
 
     leftPadding: KickoffSingleton.leftPadding
     rightPadding: KickoffSingleton.rightPadding
-    topPadding: background.margins.top
-    bottomPadding: background.margins.bottom
+    topPadding: background.margins.top + Math.round((background.margins.top - background.inset.top) / 2.0)
+    bottomPadding: background.margins.bottom + Math.round((background.margins.bottom - background.inset.bottom) / 2.0)
 
     leftInset: 0
     rightInset: 0

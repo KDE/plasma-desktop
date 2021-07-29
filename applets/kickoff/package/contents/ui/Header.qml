@@ -30,8 +30,8 @@ PlasmaExtras.PlasmoidHeading {
 
     leftPadding: 0
     rightPadding: 0
-    topPadding: 0
-    bottomPadding: background.margins.bottom
+    topPadding: Math.round((background.margins.top - background.inset.top) / 2.0)
+    bottomPadding: background.margins.bottom + Math.round((background.margins.bottom - background.inset.bottom) / 2.0)
 
     leftInset: -KickoffSingleton.leftPadding
     rightInset: -KickoffSingleton.rightPadding
@@ -144,7 +144,7 @@ PlasmaExtras.PlasmoidHeading {
                 anchors.fill: parent
                 opacity: parent.containsMouse ? 0 : 1
                 color: PlasmaCore.Theme.textColor
-                level: 2
+                level: 4
                 text: kuser.fullName
                 elide: Text.ElideRight
                 horizontalAlignment: Text.AlignLeft
