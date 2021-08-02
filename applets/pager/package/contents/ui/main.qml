@@ -301,8 +301,9 @@ MouseArea {
                         var maximum = windows.length === 5 ? 5 : 4
 
                         var text = "<ul><li>"
-                                + windows.slice(0, maximum).join("</li><li>")
-                                + "</li></ul>"
+                        + windows.slice(0, maximum).map(title => title.replace(/[^0-9A-Za-z ]/g,
+                            c => "&#" + c.charCodeAt(0) + ";")).join("</li><li>")
+                                + "</li></ul>";
 
                         if (windows.length > maximum) {
                             text += i18np("…and %1 other window", "…and %1 other windows", windows.length - maximum)

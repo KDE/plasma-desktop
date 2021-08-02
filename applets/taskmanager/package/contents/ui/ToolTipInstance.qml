@@ -85,6 +85,7 @@ ColumnLayout {
                 text: appName
                 opacity: flatIndex == 0
                 visible: text.length !== 0
+                textFormat: Text.PlainText
             }
             // window title
             PlasmaComponents.Label {
@@ -96,6 +97,7 @@ ColumnLayout {
                 text: (!hasPlayer || !title.includes(songText.text)) ? title : ""
                 opacity: 0.75
                 visible: title.length !== 0 && title !== appNameHeading.text
+                textFormat: Text.PlainText
             }
             // subtext
             PlasmaComponents.Label {
@@ -106,6 +108,7 @@ ColumnLayout {
                 text: isWin ? generateSubText() : ""
                 opacity: 0.6
                 visible: text.length !== 0 && text !== appNameHeading.text
+                textFormat: Text.PlainText
             }
         }
 
@@ -282,6 +285,7 @@ ColumnLayout {
                     wrapMode: Text.NoWrap
                     elide: parent.state ? Text.ElideNone : Text.ElideRight
                     text: track || ""
+                    textFormat: Text.PlainText
                 }
              }
 
@@ -303,6 +307,7 @@ ColumnLayout {
                     elide: parent.state ? Text.ElideNone : Text.ElideRight
                     text: artist || ""
                     font: PlasmaCore.Theme.smallestFont
+                    textFormat: Text.PlainText
                 }
             }
         }
