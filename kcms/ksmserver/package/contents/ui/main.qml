@@ -149,7 +149,7 @@ KCM.SimpleKCM {
         }
         Item {
             Kirigami.FormData.isSection: true
-            visible: kcm.canFirmareSetup
+            visible: kcm.canFirmwareSetup
         }
         CheckBox {
             id: uefi
