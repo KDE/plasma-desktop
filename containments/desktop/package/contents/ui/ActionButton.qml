@@ -50,11 +50,9 @@ PC3.ToolButton {
 
         PlasmaCore.SvgItem {
             id: icon
-            Layout.preferredWidth: PlasmaCore.Units.iconSizes.small
+            Layout.preferredWidth: PlasmaCore.Units.roundToIconSize(button.iconSize)
             Layout.preferredHeight: Layout.preferredWidth
             Layout.alignment: Qt.AlignHCenter
-            width: iconSize
-            height: iconSize
             svg: button.svg
         }
 
