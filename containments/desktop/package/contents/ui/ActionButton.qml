@@ -9,9 +9,9 @@ import QtQuick 2.12
 import QtQuick.Layouts 1.4
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PC3
 
-PlasmaComponents.ToolButton {
+PC3.ToolButton {
     id: button
     Layout.fillWidth: true
 
@@ -35,7 +35,7 @@ PlasmaComponents.ToolButton {
     }
 
 
-    PlasmaComponents.ToolTip {
+    PC3.ToolTip {
         id: toolTip
         text: button.qAction ? button.qAction.text : ""
         delay: 0
@@ -58,7 +58,7 @@ PlasmaComponents.ToolButton {
             svg: button.svg
         }
 
-        PlasmaComponents.Label {
+        PC3.Label {
             id: actionText
             Layout.fillWidth: true
             horizontalAlignment: Text.AlignHCenter
