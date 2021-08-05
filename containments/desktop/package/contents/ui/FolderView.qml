@@ -613,7 +613,7 @@ FocusScope {
 
                 if (root.useListViewMode) {
                     doCd(index);
-                } else {
+                } else if (plasmoid.configuration.popups) {
                     hoveredItem.openPopup();
                 }
             }
