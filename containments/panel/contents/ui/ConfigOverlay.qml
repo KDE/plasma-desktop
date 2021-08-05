@@ -150,8 +150,6 @@ MouseArea {
 
     onEntered: hideTimer.stop();
 
-    onExited: hideTimer.restart();
-
     onCurrentAppletChanged: {
         if (!currentApplet || !root.dragOverlay.currentApplet) {
             hideTimer.start();
@@ -164,6 +162,18 @@ MouseArea {
     }
 
     onPressed: {
+        // Need to set currentApplet here too, to make touch selection + drag
+        // with with a touchscreen, because there are no entered events in that
+        // case
+        let item = currentLayout.childAt(mouse.x, mouse.y);
+        if (item) {
+            currentApplet = item;
+            root.dragOverlay.currentApplet = item;
+            tooltip.visible = true;
+            tooltip.raise();
+            hideTimer.stop();
+        }
+
         if (!root.dragOverlay.currentApplet) {
             return;
         }
