@@ -111,7 +111,7 @@ PlasmaCore.Dialog {
                 highlightResizeDuration: 0
 
                 delegate: PlasmaExtras.ListItem {
-                    implicitHeight: PlasmaCore.Units.iconSizes.huge + PlasmaCore.Units.smallSpacing * 2
+                    implicitHeight: contentLayout.implicitHeight + PlasmaCore.Units.smallSpacing * 2
 
                     onClicked: mainList.currentIndex = index
 
@@ -132,6 +132,7 @@ PlasmaCore.Dialog {
                     }
 
                     contentItem: RowLayout {
+                        id: contentLayout
                         spacing: PlasmaCore.Units.largeSpacing
 
                         PlasmaCore.IconItem {
@@ -143,6 +144,7 @@ PlasmaCore.Dialog {
                         ColumnLayout {
                             Layout.fillHeight: true
                             Layout.fillWidth: true
+                            spacing: 0 // The labels bring their own bottom margins
 
                             PlasmaExtras.Heading {
                                 level: 4
