@@ -44,6 +44,7 @@ T.ItemDelegate {
     property bool isCategory: false
     readonly property bool hasActionList: model && (model.favoriteId !== null || ("hasActionList" in model && model.hasActionList === true))
     property var actionList: null
+    property bool isSearchResult: false
 
     function openActionMenu(x = undefined, y = undefined) {
         if (!root.hasActionList) { return }
@@ -100,6 +101,12 @@ T.ItemDelegate {
     // `model` not having the trigger() function
     action: T.Action {
         onTriggered: {
+            // Unless we're showing search results, eat the activation if we
+            // don't have focus, to prevent the return/enter key from
+            // inappropriately activating unfocused items
+            if (!root.activeFocus && !root.isSearchResult) {
+                return;
+            }
             view.currentIndex = index
             // if successfully triggered, close popup
             if(view.model.trigger(index, "", null)) {

@@ -126,6 +126,7 @@ EmptyPage {
             id: itemDelegate
             extendHoverMargins: true
             width: view.availableWidth
+            isSearchResult: root.objectName == "searchView"
         }
 
         section {
