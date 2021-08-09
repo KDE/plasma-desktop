@@ -53,8 +53,6 @@ PlasmaComponents.ToolButton {
         text: button.qAction ? button.qAction.text : ""
         delay: 0
         visible: button.hovered && text.length > 0
-        x: button.width
-        y: button.height/2 - height/2
         PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.NormalColorGroup
         PlasmaCore.ColorScope.inherit: false
     }
