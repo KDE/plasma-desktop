@@ -29,8 +29,8 @@ target_link_libraries(tastenbrett
         KF5::I18n
         XCB::XCB
         PkgConfig::XKBCommon
-        ${X11_Xkbfile_LIB}
-        ${X11_LIBRARIES}
+        X11::xkbfile
+        X11::X11
 )
 
 install(TARGETS tastenbrett DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

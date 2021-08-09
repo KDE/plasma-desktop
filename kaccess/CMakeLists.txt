@@ -22,7 +22,7 @@ target_link_libraries(kaccess
     KF5::WindowSystem
     KF5::DBusAddons
     Phonon::phonon4qt5
-    ${X11_LIBRARIES}
+    X11::X11
 )
 
 install(TARGETS kaccess ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

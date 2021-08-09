@@ -33,7 +33,7 @@ target_link_libraries(kcm_access
     KF5::WindowSystem
     KF5::NotifyConfig
     Qt::X11Extras
-    ${X11_LIBRARIES}
+    X11::X11
 )
 
 kcoreaddons_desktop_to_json(kcm_access "kcm_access.desktop")

@@ -44,7 +44,7 @@ target_link_libraries(kcm_landingpage
 )
 
 if(X11_FOUND)
-    target_link_libraries(kcm_landingpage ${X11_LIBRARIES} Qt5::X11Extras)
+    target_link_libraries(kcm_landingpage X11::X11 Qt5::X11Extras)
 endif()
 
 if (KUserFeedback_FOUND)
