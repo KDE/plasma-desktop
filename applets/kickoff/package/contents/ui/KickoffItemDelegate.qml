@@ -189,6 +189,12 @@ T.ItemDelegate {
                 root.openActionMenu(mouseX, mouseY)
             }
         }
+        
+        onPressAndHold: { // act like right click on press and hold (with touch)
+            root.forceActiveFocus(Qt.MouseFocusReason)
+            root.clicked() // does not trigger the action
+            root.openActionMenu(mouseX, mouseY)
+        }
     }
 
     PC3.ToolTip.text: {
