@@ -9,7 +9,6 @@
 #include <QStandardPaths>
 
 #include <KFilePlacesModel>
-#include <KPluginLoader>
 #include <KPluginMetaData>
 
 PlacesModel::PlacesModel(QObject *parent)
@@ -39,10 +38,8 @@ QHash<int, QByteArray> PlacesModel::roleNames() const
 
 bool PlacesModel::activityLinkingEnabled() const
 {
-    QVector<KPluginMetaData> jsonPlugins = KPluginLoader::findPlugins("kf5/kfileitemaction", [](const KPluginMetaData &metaData) {
-        return metaData.pluginId() == QStringLiteral("kactivitymanagerd_fileitem_linking_plugin");
-    });
-    return !jsonPlugins.isEmpty();
+    KPluginMetaData plugin = KPluginMetaData::findPluginById("kf5/kfileitemaction", QStringLiteral("kactivitymanagerd_fileitem_linking_plugin"));
+    return plugin.isValid();
 }
 
 bool PlacesModel::showDesktopEntry() const

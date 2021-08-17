@@ -11,7 +11,6 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KPluginInfo>
-#include <KPluginLoader>
 #include <KServiceTypeTrader>
 
 #include <algorithm>
@@ -148,7 +147,7 @@ QHash<int, QByteArray> ModulesModel::roleNames() const
 // TODO: move this KCM to the KDED framework and share the code?
 static QVector<KPluginMetaData> availableModules()
 {
-    QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("kf5/kded"));
+    QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("kf5/kded"));
     QSet<QString> moduleIds;
     for (const KPluginMetaData &md : qAsConst(plugins)) {
         moduleIds.insert(md.pluginId());
