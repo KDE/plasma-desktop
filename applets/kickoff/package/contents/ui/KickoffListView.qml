@@ -113,12 +113,14 @@ EmptyPage {
         keyNavigationEnabled: false
         keyNavigationWraps: false
         
-        property bool showHighlight: !root.mainContentView
+        property bool showHighlight: !root.mainContentView || KickoffSingleton.searchField.text !== "" // if we are searching, we want highlight on search items
         
         // turn on highlight when you start searching 
         Connections {
             target: KickoffSingleton.searchField
-            onTextChanged: view.showHighlight = true
+            function onTextChanged() {
+                view.showHighlight = true;
+            }
         }
         
         // This is actually needed. The highlight will animate from thin to wide otherwise.
@@ -138,7 +140,12 @@ EmptyPage {
             isSearchResult: root.objectName == "searchView"
             
             // if menu has closed, remove highlight if not hovering
-            onMenuClosedChanged: if (menuClosed) view.showHighlight = mouseArea.containsMouse;
+            onMenuClosedChanged: {
+                if (menuClosed && KickoffSingleton.searchField.text === "") {
+                    // if we are searching, we want highlight on search items
+                    view.showHighlight = mouseArea.containsMouse || KickoffSingleton.searchField.text !== "";
+                }
+            }
             
             // update whether highlight should be shown based on if item delegate is hovered
             Connections {
