@@ -111,6 +111,8 @@ int main(int argc, char **argv)
 
     KDBusService *service = new KDBusService(KDBusService::Unique | startup, &app);
 
+    qmlRegisterAnonymousType<QAbstractItemModel>("emojier", 1);
+
     QQmlApplicationEngine engine;
     new EngineWatcher(&engine);
 
