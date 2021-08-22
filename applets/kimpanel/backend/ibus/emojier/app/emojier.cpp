@@ -22,6 +22,7 @@
 #include <QLocale>
 #include <QPainter>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
 #include <QQuickImageProvider>
 #include <QQuickWindow>
 #include <QSessionManager>
@@ -112,6 +113,8 @@ int main(int argc, char **argv)
 
     QQmlApplicationEngine engine;
     new EngineWatcher(&engine);
+
+    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.load(QUrl(QStringLiteral("qrc:/ui/emojier.qml")));
 
     QObject::connect(service, &KDBusService::activateRequested, &engine, [&engine](const QStringList & /*arguments*/, const QString & /*workingDirectory*/) {
