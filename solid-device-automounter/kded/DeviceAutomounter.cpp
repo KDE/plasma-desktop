@@ -77,7 +77,8 @@ void DeviceAutomounter::automountDevice(Solid::Device &dev, AutomounterSettings:
         Solid::StorageAccess *sa = dev.as<Solid::StorageAccess>();
 
         m_settings->setDeviceLastSeenMounted(dev.udi(), sa->isAccessible());
-        m_settings->saveDevice(dev);
+        m_settings->setDeviceInfo(dev);
+        m_settings->save();
 
         if (m_settings->shouldAutomountDevice(dev.udi(), type)) {
             Solid::StorageVolume *sv = dev.as<Solid::StorageVolume>();

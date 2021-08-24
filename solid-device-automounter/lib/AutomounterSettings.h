@@ -8,6 +8,7 @@
 #define AUTOMOUNTERSETTINGS_H
 
 #include "AutomounterSettingsBase.h"
+#include "DeviceSettings.h"
 
 #include <KConfigGroup>
 
@@ -21,16 +22,24 @@ public:
         Login,
         Attach,
     };
-    KConfigGroup deviceSettings(const QString &udi);
-    QStringList knownDevices();
-    bool deviceIsKnown(const QString &udi);
-    bool shouldAutomountDevice(const QString &udi, AutomountType type);
+
+    bool hasDeviceInfo(const QString &udi) const;
+    DeviceSettings *deviceSettings(const QString &udi) const;
+    QStringList knownDevices() const;
+    bool shouldAutomountDevice(const QString &udi, AutomountType type) const;
+
     void setDeviceLastSeenMounted(const QString &udi, bool mounted);
-    bool deviceAutomountIsForced(const QString &udi, AutomountType type);
-    QString getDeviceName(const QString &udi);
-    bool getDeviceForcedAutomount(const QString &udi);
-    QString getDeviceIcon(const QString &udi);
-    void saveDevice(const Solid::Device &dev);
+    void setDeviceInfo(const Solid::Device &dev);
+    void removeDeviceGroup(const QString &udi);
+
+    bool usrIsSaveNeeded();
+
+private:
+    void usrRead() override;
+    bool usrSave() override;
+
+private:
+    QHash<QString, DeviceSettings *> m_devices;
 };
 
 #endif

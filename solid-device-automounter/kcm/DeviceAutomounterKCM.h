@@ -26,10 +26,12 @@ public:
 public Q_SLOTS:
     void load() override;
     void save() override;
+    void defaults() override;
 
 private Q_SLOTS:
     void updateForgetDeviceButton();
     void forgetSelectedDevices();
+    void updateState();
 
 private:
     void saveLayout();
@@ -37,6 +39,7 @@ private:
 
     AutomounterSettings *m_settings;
     DeviceModel *m_devices;
+    bool m_unmanagedChanges = false;
 };
 
 #endif

@@ -53,6 +53,9 @@ public:
 
     void setAutomaticMountOnLogin(bool automaticLogin);
     void setAutomaticMountOnPlugin(bool automaticAttached);
+    void setAutomaticUnknown(bool automaticUnknown);
+
+    void updateCheckedColumns(int column = -1);
 
 public Q_SLOTS:
     void forgetDevice(const QString &udi);
@@ -67,10 +70,6 @@ private:
 
     QList<QString> m_attached;
     QList<QString> m_disconnected;
-    QHash<QString, bool> m_loginForced;
-    QHash<QString, bool> m_attachedForced;
-    bool m_automaticLogin;
-    bool m_automaticAttached;
     AutomounterSettings *m_settings;
 };
 

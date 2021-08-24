@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kcfg SYSTEM "http://www.kde.org/standards/kcfg/1.0/kcfg.dtd">
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile arg="true">
+    <parameter name="udi"/>
+  </kcfgfile>
+  <group name="$(udi)" parentGroupName="Devices">
+    <entry name="name" key="LastNameSeen" type="String">
+      <default></default>
+    </entry>
+    <entry name="Icon" type="String">
+        <default></default>
+    </entry>
+    <entry name="isKnown" key="EverMounted" type="Bool">
+        <default>false</default>
+    </entry>
+    <entry name="mountOnAttach" key="ForceAttachAutomount" type="Bool">
+        <default>false</default>
+    </entry>
+    <entry name="mountOnLogin" key="ForceLoginAutomount" type="Bool">
+        <default>false</default>
+    </entry>
+    <entry key="LastSeenMounted" type="Bool">
+        <default>false</default>
+    </entry>
+    <entry key="ForceAutomount" type="Bool">
+        <default>false</default>
+    </entry>
+  </group>
+</kcfg>

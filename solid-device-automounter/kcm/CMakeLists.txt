@@ -14,7 +14,12 @@ kcmutils_generate_module_data(
     SETTINGS_CLASSES AutomounterSettings
 )
 
-kconfig_add_kcfg_files(kcm_device_automounter_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/../lib/AutomounterSettingsBase.kcfgc ${CMAKE_CURRENT_SOURCE_DIR}/LayoutSettings.kcfgc)
+kconfig_add_kcfg_files(kcm_device_automounter_SRCS
+    ${CMAKE_CURRENT_SOURCE_DIR}/../lib/DeviceSettings.kcfgc
+    ${CMAKE_CURRENT_SOURCE_DIR}/../lib/AutomounterSettingsBase.kcfgc
+    ${CMAKE_CURRENT_SOURCE_DIR}/LayoutSettings.kcfgc
+)
+
 
 add_library(kcm_device_automounter ${kcm_device_automounter_SRCS} ${device_automounter_lib_SRCS})
 
