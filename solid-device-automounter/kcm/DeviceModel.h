@@ -35,6 +35,7 @@ public:
     };
 
     enum {
+        RowAll,
         RowAttached,
         RowDetached,
     };

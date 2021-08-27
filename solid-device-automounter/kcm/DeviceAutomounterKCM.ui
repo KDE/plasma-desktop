@@ -10,137 +10,68 @@
     <height>380</height>
    </rect>
   </property>
-  <layout class="QGridLayout" name="gridLayout_2">
-   <item row="0" column="2">
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QCheckBox" name="kcfg_AutomountOnLogin">
-       <property name="whatsThis">
-        <string>If any removable storage devices are connected to your system when you login to your desktop, their contents will automatically be made available to your system for other programs to read.</string>
-       </property>
-       <property name="text">
-        <string>Automatically mount removable medias at login</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="kcfg_AutomountOnPlugin">
-       <property name="whatsThis">
-        <string>When this is checked, the contents of any storage device will automatically be made available to the system when it is plugged in or attached.</string>
-       </property>
-       <property name="text">
-        <string>Automatically mount removable medias when attached</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="kcfg_AutomountUnknownDevices">
-       <property name="whatsThis">
-        <string>When this is not checked, only remembered devices will be automatically mounted. A device is 'remembered' if it has ever been mounted before. For instance, plugging in a USB media player to charge is not sufficient to 'remember' it - if the files are not accessed, it will not be automatically mounted the next time it is seen. Once they have been accessed, however, the device's contents will be automatically made available to the system.</string>
-       </property>
-       <property name="text">
-        <string>Automatically mount removable media that have never been mounted before</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTreeView" name="deviceView">
+     <property name="whatsThis">
+      <string>This list contains the storage devices known to the system. If &quot;Automount on Login&quot; is checked, the device will be automatically mounted even though &quot;Mount all removable media at login&quot; is unchecked. The same applies for &quot;Automount on Attach&quot;.</string>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::ExtendedSelection</enum>
+     </property>
+     <property name="rootIsDecorated">
+      <bool>true</bool>
+     </property>
+     <property name="itemsExpandable">
+      <bool>true</bool>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+     <property name="animated">
+      <bool>true</bool>
+     </property>
+     <property name="allColumnsShowFocus">
+      <bool>true</bool>
+     </property>
+     <property name="expandsOnDoubleClick">
+      <bool>false</bool>
+     </property>
+     <attribute name="headerShowSortIndicator" stdset="0">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="headerStretchLastSection">
+      <bool>false</bool>
+     </attribute>
+    </widget>
    </item>
-   <item row="0" column="0">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
+   <item>
+    <widget class="QPushButton" name="forgetDevice">
+     <property name="whatsThis">
+      <string>Clicking this button causes the selected devices to be 'forgotten'. This is only useful if &quot;Only automatically mount removable media that has been manually mounted before&quot; is checked. Once a device is forgotten and the system is set to only automatically mount familiar devices, the device will not be automatically mounted.</string>
      </property>
-     <property name="sizeType">
-      <enum>QSizePolicy::Fixed</enum>
+     <property name="text">
+      <string>Forget Device</string>
      </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>22</width>
-       <height>76</height>
-      </size>
+     <property name="enabled">
+      <bool>false</bool>
      </property>
-    </spacer>
+    </widget>
    </item>
-   <item row="0" column="3">
-    <spacer name="horizontalSpacer_2">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
+   <item>
+    <widget class="QCheckBox" name="kcfg_AutomountUnknownDevices">
+     <property name="whatsThis">
+      <string>When this is not checked, only remembered devices will be automatically mounted. A device is 'remembered' if it has ever been mounted before. For instance, plugging in a USB media player to charge is not sufficient to 'remember' it - if the files are not accessed, it will not be automatically mounted the next time it is seen. Once they have been accessed, however, the device's contents will be automatically made available to the system.</string>
      </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>40</width>
-       <height>20</height>
-      </size>
+     <property name="text">
+      <string>Automatically mount removable media that have never been mounted before</string>
      </property>
-    </spacer>
-   </item>
-   <item row="1" column="0" colspan="4">
-    <widget class="QGroupBox" name="deviceGroupBox">
-     <property name="title">
-      <string>Automatic mount</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <widget class="QTreeView" name="deviceView">
-        <property name="whatsThis">
-         <string>This list contains the storage devices known to the system. If &quot;Automount on Login&quot; is checked, the device will be automatically mounted even though &quot;Mount all removable media at login&quot; is unchecked. The same applies for &quot;Automount on Attach&quot;.
-
-If &quot;Enable automatic mounting of removable media&quot; is unchecked, the overrides do not apply and no devices will be automatically mounted.</string>
-        </property>
-        <property name="editTriggers">
-         <set>QAbstractItemView::NoEditTriggers</set>
-        </property>
-        <property name="selectionMode">
-         <enum>QAbstractItemView::ExtendedSelection</enum>
-        </property>
-        <property name="rootIsDecorated">
-         <bool>true</bool>
-        </property>
-        <property name="itemsExpandable">
-         <bool>true</bool>
-        </property>
-        <property name="sortingEnabled">
-         <bool>true</bool>
-        </property>
-        <property name="animated">
-         <bool>true</bool>
-        </property>
-        <property name="allColumnsShowFocus">
-         <bool>true</bool>
-        </property>
-        <property name="expandsOnDoubleClick">
-         <bool>false</bool>
-        </property>
-        <attribute name="headerShowSortIndicator" stdset="0">
-         <bool>false</bool>
-        </attribute>
-        <attribute name="headerStretchLastSection">
-         <bool>false</bool>
-        </attribute>
-       </widget>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QPushButton" name="forgetDevice">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="whatsThis">
-           <string>Clicking this button causes the selected devices to be 'forgotten'. This is only useful if &quot;Only automatically mount removable media that has been manually mounted before&quot; is checked. Once a device is forgotten and the system is set to only automatically mount familiar devices, the device will not be automatically mounted.</string>
-          </property>
-          <property name="text">
-           <string>Forget Device</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
     </widget>
    </item>
   </layout>
  </widget>
  <resources/>
- <connections/>
 </ui>

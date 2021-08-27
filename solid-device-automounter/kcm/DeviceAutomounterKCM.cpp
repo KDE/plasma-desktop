@@ -52,14 +52,6 @@ DeviceAutomounterKCM::DeviceAutomounterKCM(QWidget *parent, const QVariantList &
     deviceView->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
     deviceView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
 
-    deviceGroupBox->setEnabled(!kcfg_AutomountOnPlugin->isChecked() || !kcfg_AutomountOnLogin->isChecked());
-
-    connect(kcfg_AutomountOnLogin, &QCheckBox::stateChanged, this, [this](int state) {
-        m_devices->setAutomaticMountOnLogin(state == Qt::Checked);
-    });
-    connect(kcfg_AutomountOnPlugin, &QCheckBox::stateChanged, this, [this](int state) {
-        m_devices->setAutomaticMountOnPlugin(state == Qt::Checked);
-    });
     connect(kcfg_AutomountUnknownDevices, &QCheckBox::stateChanged, this, [this](int state) {
         m_devices->setAutomaticUnknown(state == Qt::Checked);
     });
@@ -115,8 +107,6 @@ void DeviceAutomounterKCM::load()
     m_devices->reload();
     loadLayout();
 
-    kcfg_AutomountOnLogin->setChecked(m_settings->automountOnLogin());
-    kcfg_AutomountOnPlugin->setChecked(m_settings->automountOnPlugin());
     kcfg_AutomountUnknownDevices->setChecked(m_settings->automountUnknownDevices());
 
     m_unmanagedChanges = false;
