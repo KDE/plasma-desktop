@@ -113,14 +113,11 @@ DeviceAutomounterKCM::~DeviceAutomounterKCM()
 
 void DeviceAutomounterKCM::updateForgetDeviceButton()
 {
-    const auto selectedIndex = deviceView->selectionModel()->selectedIndexes();
-    for (const QModelIndex &idx : selectedIndex) {
-        if (idx.data(DeviceModel::TypeRole) == DeviceModel::Detached) {
-            forgetDevice->setEnabled(true);
-            return;
-        }
-    }
-    forgetDevice->setEnabled(false);
+    const auto selectedIndexes = deviceView->selectionModel()->selectedIndexes();
+    const bool isAnyDettached = std::any_of(selectedIndexes.cbegin(), selectedIndexes.cend(), [](const auto &idx) {
+        return idx.data(DeviceModel::TypeRole) == DeviceModel::Detached;
+    });
+    forgetDevice->setEnabled(isAnyDettached);
 }
 
 void DeviceAutomounterKCM::forgetSelectedDevices()
@@ -161,9 +158,7 @@ void DeviceAutomounterKCM::save()
     qDebug() << "save" << m_settings->isSaveNeeded();
 
     QStringList validDevices;
-    for (int i = 0; i < m_devices->rowCount(); ++i) {
-        const QModelIndex &idx = m_devices->index(i, 0);
-
+    for (const QModelIndex &idx : {m_devices->index(DeviceModel::RowAttached, 0), m_devices->index(DeviceModel::RowDetached, 0)}) {
         for (int j = 0; j < m_devices->rowCount(idx); ++j) {
             QModelIndex dev = m_devices->index(j, 1, idx);
             const QString device = dev.data(DeviceModel::UdiRole).toString();
@@ -229,9 +224,8 @@ void DeviceAutomounterKCM::saveLayout()
     }
 
     LayoutSettings::setHeaderWidths(widths);
-    // Check DeviceModel.cpp, thats where the magic row numbers come from.
-    LayoutSettings::setAttachedExpanded(deviceView->isExpanded(m_devices->index(0, 0)));
-    LayoutSettings::setDetachedExpanded(deviceView->isExpanded(m_devices->index(1, 0)));
+    LayoutSettings::setAttachedExpanded(deviceView->isExpanded(m_devices->index(DeviceModel::RowAttached, 0)));
+    LayoutSettings::setDetachedExpanded(deviceView->isExpanded(m_devices->index(DeviceModel::RowDetached, 0)));
     LayoutSettings::self()->save();
 }
 
@@ -250,8 +244,8 @@ void DeviceAutomounterKCM::loadLayout()
         deviceView->setColumnWidth(i, widths[i]);
     }
 
-    deviceView->setExpanded(m_devices->index(0, 0), LayoutSettings::attachedExpanded());
-    deviceView->setExpanded(m_devices->index(1, 0), LayoutSettings::detachedExpanded());
+    deviceView->setExpanded(m_devices->index(DeviceModel::RowAttached, 0), LayoutSettings::attachedExpanded());
+    deviceView->setExpanded(m_devices->index(DeviceModel::RowDetached, 0), LayoutSettings::detachedExpanded());
 }
 
 #include "DeviceAutomounterKCM.moc"
