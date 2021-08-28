@@ -240,8 +240,6 @@ public:
 
     void setScreen(int screen);
 
-    bool eventFilter(QObject *watched, QEvent *event) override;
-
 Q_SIGNALS:
     void urlChanged() const;
     void listingCompleted() const;

@@ -21,6 +21,7 @@ set(folderplugin_SRCS
     wheelinterceptor.cpp
     shortcut.cpp
     screenmapper.cpp
+    removeaction.cpp
 )
 
 install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/private/desktopcontainment/folder)
