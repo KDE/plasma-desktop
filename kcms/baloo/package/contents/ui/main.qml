@@ -155,7 +155,7 @@ KCM.SimpleKCM {
                 visible: text.length > 0
 
                 elide: Text.ElideMiddle
-                text: monitor.currentlyIndexing && monitor.completionPercentage != 100 ? i18n("Currently indexing: %1", monitor.filePath) : ""
+                text: monitor.currentlyIndexing && monitor.completionPercentage != 100 && monitor.filePath ? i18n("Currently indexing: %1", monitor.filePath) : ""
             }
         }
 
