@@ -56,8 +56,9 @@ KCM.ScrollViewKCM {
         }
 
         delegate: Kirigami.BasicListItem {
-            text: model.display
-            subtitle: model.name
+            text: model.display ? model.display : model.name
+            subtitle: model.display ? model.name : ""
+            reserveSpaceForSubtitle: true
 
             highlighted: index == userList.currentIndex
 
@@ -80,7 +81,7 @@ KCM.ScrollViewKCM {
                 Kirigami.Avatar {
                     source: model.decoration + '?' + avatarVersion // force reload after saving
                     cache: false // avoid caching
-                    name: model.display
+                    name: model.display ? model.display : model.name
                     anchors {
                         fill: parent
                         margins: 1
