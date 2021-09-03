@@ -19,6 +19,7 @@ Item {
 
     property int index: model.index
     property string name: model.blank ? "" : model.display
+    property string nameWrapped: model.blank ? "" : model.displayWrapped
     property bool blank: model.blank
     property bool isDir: loader.item ? loader.item.isDir : false
     property QtObject popupDialog: loader.item ? loader.item.popupDialog : null
@@ -367,7 +368,7 @@ Item {
 
                     opacity: model.isHidden ? 0.6 : 1
 
-                    text: model.blank ? "" : model.display
+                    text: main.nameWrapped
 
                     font.italic: model.isLink
 

@@ -57,7 +57,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Attica
     Runner
     GlobalAccel
-    CoreAddons # KSharedDataCache required by KImageCache
+    CoreAddons # KSharedDataCache required by KImageCache, KStringHandler required by FolderModel
     GuiAddons # KImageCache
     Declarative
     DBusAddons

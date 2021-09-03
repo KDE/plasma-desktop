@@ -102,6 +102,7 @@ public:
         SizeRole,
         TypeRole,
         FileNameRole,
+        FileNameWrappedRole,
     };
 
     enum FilterMode {

@@ -59,6 +59,7 @@
 #include <KIO/PreviewJob>
 #include <KProtocolInfo>
 #include <KRun>
+#include <KStringHandler>
 
 #include <Plasma/Applet>
 #include <Plasma/Containment>
@@ -223,6 +224,7 @@ QHash<int, QByteArray> FolderModel::staticRoleNames()
     roleNames[LinkDestinationUrl] = "linkDestinationUrl";
     roleNames[SizeRole] = "size";
     roleNames[TypeRole] = "type";
+    roleNames[FileNameWrappedRole] = "displayWrapped";
 
     return roleNames;
 }
@@ -1356,6 +1358,8 @@ QVariant FolderModel::data(const QModelIndex &index, int role) const
         return m_dirModel->data(mapToSource(QSortFilterProxyModel::index(index.row(), 6)), Qt::DisplayRole);
     } else if (role == FileNameRole) {
         return itemForIndex(index).url().fileName();
+    } else if (role == FileNameWrappedRole) {
+        return KStringHandler::preProcessWrap(itemForIndex(index).text());
     }
 
     return QSortFilterProxyModel::data(index, role);

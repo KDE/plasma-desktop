@@ -1322,7 +1322,7 @@ FocusScope {
                         y = xy[1];
                         width = getWidth();
                         height = getInitHeight();
-                        text = targetItem.label.text;
+                        text = targetItem.name;
                         adjustSize();
                         editor.select(0, dir.fileExtensionBoundary(positioner.map(targetItem.index)));
                         if(isPopup) {
