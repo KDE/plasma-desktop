@@ -54,6 +54,12 @@
 </screenshot>
 </para>
 
+<note>
+    <para>
+        Drives that are automounted at login cannot be used as paths. Such drives will be reverted to defaults during restart of &plasma;.
+    </para>
+</note>
+
 <variablelist>
 <varlistentry>
 <term><guilabel>Desktop path:</guilabel></term>
