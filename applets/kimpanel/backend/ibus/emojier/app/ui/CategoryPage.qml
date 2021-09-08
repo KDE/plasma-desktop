@@ -104,6 +104,13 @@ Kirigami.ScrollablePage
         }
         currentIndex: -1
 
+        Keys.onPressed: {
+            // Force arrow keys to move emoji selection, not the TextInput.
+            if (currentIndex > 0) {
+                forceActiveFocus()
+            }
+        }
+
         delegate: MouseArea {
             QQC2.Label {
                 font.pointSize: 25
@@ -124,7 +131,7 @@ Kirigami.ScrollablePage
             QQC2.ToolTip.visible: mouse.containsMouse
 
             opacity: mouse.containsMouse ? 0.7 : 1
-
+            
             Keys.onReturnPressed: {
                 reportEmoji()
             }
