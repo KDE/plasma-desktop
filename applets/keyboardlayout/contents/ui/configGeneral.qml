@@ -4,11 +4,15 @@ import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kquickcontrolsaddons 2.0
 
 Kirigami.FormLayout {
-    property alias cfg_showFlag: showFlagCheckBox.checked
+    property alias cfg_showFlag: showFlag.checked
 
-    CheckBox {
-        id: showFlagCheckBox
-        text: i18n("Show flag")
+    RadioButton {
+            text: i18n("Show label")
+            checked: true
+    }
+    RadioButton {
+            text: i18n("Show flag")
+            id: showFlag
     }
     
     Button {
