@@ -21,6 +21,8 @@ QQC2.RadioButton {
     implicitHeight: contentItem.implicitHeight
 
     contentItem: ColumnLayout {
+        spacing: 0
+
         Kirigami.ShadowedRectangle {
             implicitWidth: implicitHeight * 1.6
             implicitHeight: Kirigami.Units.gridUnit * 6
@@ -61,8 +63,19 @@ QQC2.RadioButton {
         QQC2.Label {
             id: label
             Layout.fillWidth: true
+            Layout.topMargin: Kirigami.Units.smallSpacing
             text: delegate.text
             horizontalAlignment: Text.AlignHCenter
+        }
+
+        Rectangle {
+            Layout.preferredWidth: label.paintedWidth
+            Layout.preferredHeight: 1
+            Layout.alignment: Qt.AlignHCenter
+
+            color: Kirigami.Theme.highlightColor
+
+            opacity: delegate.visualFocus ? 1 : 0
         }
     }
 
