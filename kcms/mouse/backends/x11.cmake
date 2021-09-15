@@ -15,6 +15,7 @@ set(backend_LIBS
     KF5::WindowSystem
     Qt::X11Extras
     PkgConfig::XORGLIBINPUT
+    PkgConfig::EVDEV
     X11::X11
     X11::Xi
     X11::Xcursor
