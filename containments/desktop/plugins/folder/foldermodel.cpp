@@ -1633,6 +1633,9 @@ void FolderModel::createActions()
     m_actionCollection.addAction(QStringLiteral("emptyTrash"), emptyTrash);
     m_actionCollection.addAction(QStringLiteral("create_dir"), newDirAction);
 
+    // The RemoveAction needs to be updated after adding all actions to the actionCollection
+    remove->update();
+
     m_newMenu = new KNewFileMenu(&m_actionCollection, QStringLiteral("newMenu"), this);
     m_newMenu->setModal(false);
     connect(m_newMenu, &KNewFileMenu::directoryCreated, this, &FolderModel::newFileMenuItemCreated);
