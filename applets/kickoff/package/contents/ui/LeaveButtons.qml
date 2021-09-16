@@ -27,6 +27,7 @@ RowLayout {
     }
 
     Repeater {
+        id: buttonRepeater
         model: systemModel
         delegate: PC3.ToolButton {
             id: buttonDelegate
@@ -41,6 +42,17 @@ RowLayout {
             PC3.ToolTip.text: text
             PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
             PC3.ToolTip.visible: display === PC3.AbstractButton.IconOnly && hovered
+
+            Keys.onLeftPressed: if (!LayoutMirroring.enabled) {
+                nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
+            } else if (index < buttonRepeater.count - 1 || leaveButton.visible) {
+                nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+            }
+            Keys.onRightPressed: if (LayoutMirroring.enabled) {
+                nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
+            } else if (index < buttonRepeater.count - 1 || leaveButton.visible) {
+                nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+            }
         }
     }
 
@@ -62,6 +74,12 @@ RowLayout {
         PC3.ToolTip.text: [i18n("Leave"), i18n("Power"), i18n("More"), ""][leaveButton.currentId]
         PC3.ToolTip.visible: leaveButton.hovered
         PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
+        Keys.onLeftPressed: if (!LayoutMirroring.enabled) {
+            nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
+        }
+        Keys.onRightPressed: if (LayoutMirroring.enabled) {
+            nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
+        }
         onPressed: contextMenu.openRelative()
     }
 

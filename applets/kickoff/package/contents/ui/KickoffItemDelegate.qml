@@ -236,6 +236,4 @@ T.ItemDelegate {
             indicator = null
         }
     }
-
-    Keys.onMenuPressed: openActionMenu()
 }

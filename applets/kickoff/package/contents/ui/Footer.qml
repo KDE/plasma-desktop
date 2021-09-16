@@ -26,9 +26,9 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 PlasmaExtras.PlasmoidHeading {
     id: root
 
-    property alias tabBarCurrentIndex: tabBar.currentIndex
-    readonly property real implicitTabBarWidth: tabBar.implicitWidth
+    readonly property alias tabBar: tabBar
     property real preferredTabBarWidth: 0
+    readonly property alias leaveButtons: leaveButtons
 
     contentWidth: tabBar.implicitWidth + root.spacing + separator.implicitWidth + root.spacing + leaveButtons.implicitWidth
     contentHeight: leaveButtons.implicitHeight
@@ -91,6 +91,7 @@ PlasmaExtras.PlasmoidHeading {
                 prefix: tabBar.position == PC3.TabBar.Header ? "north-active-tab" : "south-active-tab"
                 colorGroup: PlasmaCore.ColorScope.colorGroup
             }
+            keyNavigationEnabled: false
         }
 
         PC3.TabButton {
@@ -128,6 +129,38 @@ PlasmaExtras.PlasmoidHeading {
                 }
             }
         }
+
+        Keys.onLeftPressed: {
+            let moved = false
+            if (LayoutMirroring.enabled && currentIndex === 0) {
+                incrementCurrentIndex()
+                currentItem.forceActiveFocus(Qt.TabFocusReason)
+                moved = true
+            } else if (currentIndex === 1) {
+                decrementCurrentIndex()
+                currentItem.forceActiveFocus(Qt.BacktabFocusReason)
+                moved = true
+            }
+            if (!moved && currentIndex === 1) {
+                leaveButtons.nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+            }
+        }
+        Keys.onRightPressed: {
+            let moved = false
+            if (LayoutMirroring.enabled && currentIndex === 1) {
+                decrementCurrentIndex()
+                currentItem.forceActiveFocus(Qt.BacktabFocusReason)
+                moved = true
+            } else if (currentIndex === 0) {
+                incrementCurrentIndex()
+                currentItem.forceActiveFocus(Qt.TabFocusReason)
+                moved = true
+            }
+            if (!moved && currentIndex === 1) {
+                leaveButtons.nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+            }
+        }
+        Keys.onUpPressed: KickoffSingleton.sideBar.forceActiveFocus(Qt.BacktabFocusReason)
     }
     PlasmaCore.SvgItem {
         id: separator
@@ -150,6 +183,7 @@ PlasmaExtras.PlasmoidHeading {
             bottom: parent.bottom
             leftMargin: root.spacing
         }
+        Keys.onUpPressed: KickoffSingleton.contentArea.forceActiveFocus(Qt.BacktabFocusReason)
     }
 
     Behavior on height {
