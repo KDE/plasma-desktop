@@ -95,22 +95,17 @@ EmptyPage {
         keyNavigationEnabled: false
         keyNavigationWraps: false
 
-        property bool showHighlight: false
-        
-        // turn on highlight when you start searching 
-        Connections {
-            target: KickoffSingleton.searchField
-            onTextChanged: view.showHighlight = true
-        }
-        
         highlightMoveDuration: 0
         highlight: PlasmaCore.FrameSvgItem {
-            opacity: view.activeFocus ? 1 : 0.5
+            opacity: view.activeFocus
+                || (KickoffSingleton.contentArea === root
+                    && KickoffSingleton.searchField.activeFocus) ? 1 : 0.5
             width: view.cellWidth
             height: view.cellHeight
             imagePath: "widgets/viewitem"
             prefix: "hover"
-            visible: view.showHighlight
+            visible: KickoffSingleton.contentArea !== root
+                || ActionMenu.menu.status !== 1
         }
 
         delegate: KickoffItemDelegate {
@@ -120,20 +115,6 @@ EmptyPage {
             display: PC3.AbstractButton.TextUnderIcon
             width: view.cellWidth
             Accessible.role: Accessible.Cell
-            
-            // if menu has closed, remove highlight if not hovering
-            onMenuClosedChanged: if (menuClosed) view.showHighlight = mouseArea.containsMouse;
-            
-            // update whether highlight should be shown based on if item delegate is hovered
-            Connections {
-                target: mouseArea
-                function onContainsMouseChanged() {
-                    // don't remove highlight when opening right click menu
-                    if (itemDelegate.menuClosed || mouseArea.containsMouse) {
-                        view.showHighlight = mouseArea.containsMouse;
-                    }
-                }
-            }
         }
 
         move: normalTransition
@@ -261,11 +242,6 @@ EmptyPage {
             movedWithKeyboard = event.accepted
             if (movedWithKeyboard) {
                 movedWithKeyboardTimer.restart()
-            }
-            
-            if ([Qt.Key_Left, Qt.Key_Right, Qt.Key_Up, Qt.Key_Down, Qt.Key_Home, Qt.Key_End, Qt.Key_PageUp, Qt.Key_PageDown].includes(event.key)) {
-                // show delegate highlight on keyboard arrow press
-                view.showHighlight = true;
             }
         }
     }
