@@ -38,10 +38,9 @@ RowLayout {
             display: plasmoid.configuration.showActionButtonCaptions ? PC3.AbstractButton.TextBesideIcon : PC3.AbstractButton.IconOnly;
             Layout.rightMargin: model.favoriteId === "switch-user" && plasmoid.configuration.primaryActions === 3 ? PlasmaCore.Units.gridUnit : undefined
 
-            PC3.ToolTip {
-                text: model.display
-                visible: parent.display === PC3.AbstractButton.IconOnly && parent.hovered
-            }
+            PC3.ToolTip.text: text
+            PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
+            PC3.ToolTip.visible: display === PC3.AbstractButton.IconOnly && hovered
         }
     }
 
