@@ -14,6 +14,8 @@
 #include <QQuickView>
 #include <QVBoxLayout>
 
+#include <KLocalizedContext>
+
 #include "ExtraActivitiesInterface.h"
 #include "definitions.h"
 
@@ -34,6 +36,7 @@ ActivitiesTab::ActivitiesTab(QWidget *parent)
     setClearColor(QGuiApplication::palette().window().color());
     setResizeMode(QQuickWidget::SizeRootObjectToView);
     rootContext()->setContextProperty(QStringLiteral("kactivitiesExtras"), d->extraActivitiesInterface);
+    engine()->rootContext()->setContextObject(new KLocalizedContext(this));
     setSource(QUrl::fromLocalFile(KAMD_KCM_DATADIR + QStringLiteral("/qml/activitiesTab/main.qml")));
 }
 
