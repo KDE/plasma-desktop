@@ -71,6 +71,8 @@ public:
 
         view->rootContext()->setContextProperty(QStringLiteral("dialog"), q);
 
+        view->rootContext()->setContextObject(new KLocalizedContext(view));
+
         const QString sourceFile = QStringLiteral(KAMD_KCM_DATADIR) + "qml/activityDialog/" + file;
 
         if (QFile::exists(sourceFile)) {
