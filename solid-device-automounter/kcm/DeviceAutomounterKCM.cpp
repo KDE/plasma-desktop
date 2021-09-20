@@ -51,18 +51,59 @@ DeviceAutomounterKCM::DeviceAutomounterKCM(QWidget *parent, const QVariantList &
     deviceView->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
     deviceView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
 
+    deviceGroupBox->setEnabled(!kcfg_AutomountOnPlugin->isChecked() || !kcfg_AutomountOnLogin->isChecked());
+
     connect(kcfg_AutomountOnLogin, &QCheckBox::stateChanged, this, [this](int state) {
         m_devices->setAutomaticMountOnLogin(state == Qt::Checked);
+        kcfg_AutomountUnknownDevices->setEnabled(kcfg_AutomountOnPlugin->isChecked() || kcfg_AutomountOnLogin->isChecked());
+        if (kcfg_AutomountUnknownDevices->isChecked() && !kcfg_AutomountOnPlugin->isChecked() && !kcfg_AutomountOnLogin->isChecked()) {
+            kcfg_AutomountUnknownDevices->setChecked(false);
+        }
+        deviceGroupBox->setEnabled(!kcfg_AutomountOnPlugin->isChecked() || !kcfg_AutomountOnLogin->isChecked());
     });
     connect(kcfg_AutomountOnPlugin, &QCheckBox::stateChanged, this, [this](int state) {
         m_devices->setAutomaticMountOnPlugin(state == Qt::Checked);
+        kcfg_AutomountUnknownDevices->setEnabled(kcfg_AutomountOnPlugin->isChecked() || kcfg_AutomountOnLogin->isChecked());
+        if (kcfg_AutomountUnknownDevices->isChecked() && !kcfg_AutomountOnPlugin->isChecked() && !kcfg_AutomountOnLogin->isChecked()) {
+            kcfg_AutomountUnknownDevices->setChecked(false);
+        }
+        deviceGroupBox->setEnabled(!kcfg_AutomountOnPlugin->isChecked() || !kcfg_AutomountOnLogin->isChecked());
     });
 
     connect(deviceView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &DeviceAutomounterKCM::updateForgetDeviceButton);
-
     connect(forgetDevice, &QAbstractButton::clicked, this, &DeviceAutomounterKCM::forgetSelectedDevices);
 
-    forgetDevice->setEnabled(false);
+    connect(deviceView->model(), &QAbstractListModel::dataChanged, this, [this]() {
+        bool hasChanged = kcfg_AutomountOnLogin->checkState() == Qt::Checked != m_settings->automountOnLogin()
+            || kcfg_AutomountOnPlugin->checkState() == Qt::Checked != m_settings->automountOnPlugin()
+            || kcfg_AutomountUnknownDevices->checkState() == Qt::Checked != m_settings->automountUnknownDevices();
+
+        for (int i = 0; i < m_devices->rowCount(); ++i) {
+            const QModelIndex &idx = m_devices->index(i, 0);
+
+            for (int j = 0; j < m_devices->rowCount(idx); ++j) {
+                QModelIndex dev = m_devices->index(j, 1, idx);
+                const QString device = dev.data(DeviceModel::UdiRole).toString();
+                const auto settingsForDevice = m_settings->deviceSettings(device);
+
+                if (!kcfg_AutomountOnLogin->isChecked()) {
+                    if (dev.data(Qt::CheckStateRole).toInt() == Qt::Checked != settingsForDevice.readEntry("ForceLoginAutomount", false)) {
+                        hasChanged |= true;
+                    }
+                }
+
+                dev = dev.sibling(j, 2);
+
+                if (!kcfg_AutomountOnPlugin->isChecked()) {
+                    if (dev.data(Qt::CheckStateRole).toInt() == Qt::Checked != settingsForDevice.readEntry("ForceAttachAutomount", false)) {
+                        hasChanged |= true;
+                    }
+                }
+            }
+        }
+
+        Q_EMIT changed(hasChanged);
+    });
 }
 
 DeviceAutomounterKCM::~DeviceAutomounterKCM()
@@ -101,9 +142,7 @@ void DeviceAutomounterKCM::load()
 {
     KCModule::load();
 
-    kcfg_AutomountUnknownDevices->setEnabled(m_settings->automountEnabled());
-    kcfg_AutomountOnLogin->setEnabled(m_settings->automountEnabled());
-    kcfg_AutomountOnPlugin->setEnabled(m_settings->automountEnabled());
+    kcfg_AutomountUnknownDevices->setEnabled(m_settings->automountOnLogin() || m_settings->automountOnPlugin());
 
     m_devices->reload();
     loadLayout();
@@ -114,7 +153,12 @@ void DeviceAutomounterKCM::save()
     KCModule::save();
     saveLayout();
 
-    const bool enabled = kcfg_AutomountEnabled->isChecked();
+    bool enabled = false;
+
+    enabled |= kcfg_AutomountOnLogin->isChecked();
+    enabled |= kcfg_AutomountOnPlugin->isChecked();
+
+    qDebug() << "save" << m_settings->isSaveNeeded();
 
     QStringList validDevices;
     for (int i = 0; i < m_devices->rowCount(); ++i) {
@@ -125,18 +169,24 @@ void DeviceAutomounterKCM::save()
             const QString device = dev.data(DeviceModel::UdiRole).toString();
             validDevices << device;
 
-            if (dev.data(Qt::CheckStateRole).toInt() == Qt::Checked) {
-                m_settings->deviceSettings(device).writeEntry("ForceLoginAutomount", true);
-            } else {
-                m_settings->deviceSettings(device).writeEntry("ForceLoginAutomount", false);
+            if (!kcfg_AutomountOnLogin->isChecked()) {
+                if (dev.data(Qt::CheckStateRole).toInt() == Qt::Checked) {
+                    enabled |= true;
+                    m_settings->deviceSettings(device).writeEntry("ForceLoginAutomount", true);
+                } else {
+                    m_settings->deviceSettings(device).writeEntry("ForceLoginAutomount", false);
+                }
             }
 
             dev = dev.sibling(j, 2);
 
-            if (dev.data(Qt::CheckStateRole).toInt() == Qt::Checked) {
-                m_settings->deviceSettings(device).writeEntry("ForceAttachAutomount", true);
-            } else {
-                m_settings->deviceSettings(device).writeEntry("ForceAttachAutomount", false);
+            if (!kcfg_AutomountOnPlugin->isChecked()) {
+                if (dev.data(Qt::CheckStateRole).toInt() == Qt::Checked) {
+                    enabled |= true;
+                    m_settings->deviceSettings(device).writeEntry("ForceAttachAutomount", true);
+                } else {
+                    m_settings->deviceSettings(device).writeEntry("ForceAttachAutomount", false);
+                }
             }
         }
     }

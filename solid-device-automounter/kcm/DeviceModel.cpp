@@ -53,7 +53,7 @@ QVariant DeviceModel::headerData(int section, Qt::Orientation orientation, int r
         case 1:
             return i18nc("As in automount on login", "On Login");
         case 2:
-            return i18nc("As in automoount on attach", "On Attach");
+            return i18nc("As in automount on attach", "On Attach");
         }
     }
     return QVariant();
@@ -272,7 +272,7 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
             } else if (index.column() == 1) {
                 switch (role) {
                 case Qt::CheckStateRole:
-                    return m_loginForced[udi] ? Qt::Checked : Qt::Unchecked;
+                    return m_loginForced[udi] || m_automaticLogin ? Qt::Checked : Qt::Unchecked;
                 case Qt::ToolTipRole:
                     if (m_loginForced[udi] || m_settings->shouldAutomountDevice(udi, AutomounterSettings::Login))
                         return i18n("This device will be automatically mounted at login.");
@@ -281,7 +281,7 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
             } else if (index.column() == 2) {
                 switch (role) {
                 case Qt::CheckStateRole:
-                    return m_attachedForced[udi] ? Qt::Checked : Qt::Unchecked;
+                    return m_attachedForced[udi] || m_automaticAttached ? Qt::Checked : Qt::Unchecked;
                 case Qt::ToolTipRole:
                     if (m_attachedForced[udi] || m_settings->shouldAutomountDevice(udi, AutomounterSettings::Attach))
                         return i18n("This device will be automatically mounted when attached.");
@@ -311,7 +311,7 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
             } else if (index.column() == 1) {
                 switch (role) {
                 case Qt::CheckStateRole:
-                    return m_loginForced[udi] ? Qt::Checked : Qt::Unchecked;
+                    return m_loginForced[udi] || m_automaticLogin ? Qt::Checked : Qt::Unchecked;
                 case Qt::ToolTipRole:
                     if (m_loginForced[udi] || m_settings->shouldAutomountDevice(udi, AutomounterSettings::Login))
                         return i18n("This device will be automatically mounted at login.");
@@ -320,7 +320,7 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
             } else if (index.column() == 2) {
                 switch (role) {
                 case Qt::CheckStateRole:
-                    return m_attachedForced[udi] ? Qt::Checked : Qt::Unchecked;
+                    return m_attachedForced[udi] || m_automaticAttached ? Qt::Checked : Qt::Unchecked;
                 case Qt::ToolTipRole:
                     if (m_attachedForced[udi] || m_settings->shouldAutomountDevice(udi, AutomounterSettings::Attach))
                         return i18n("This device will be automatically mounted when attached.");
