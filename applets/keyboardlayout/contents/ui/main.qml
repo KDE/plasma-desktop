@@ -18,6 +18,12 @@ Item {
                         "kf5/locale/countries/" + name + "/flag.png")
     }
 
+    signal layoutSelected(int layout)
+
+    function actionTriggered(selectedLayout) {
+        layoutSelected(selectedLayout)
+    }
+
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
 
     Plasmoid.compactRepresentation: KeyboardLayoutSwitcher {
@@ -46,10 +52,13 @@ Item {
             }
         }
 
-        function actionTriggered(selectedLayout) {
-            keyboardLayout.layout = selectedLayout
-        }
+        Connections {
+            target: root
 
+            function onLayoutSelected(layout) {
+               keyboardLayout.layout = layout
+            }
+        }
 
         hoverEnabled: true
 
