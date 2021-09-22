@@ -65,39 +65,9 @@ PlasmaExtras.PlasmoidHeading {
             rightPadding: PlasmaCore.Units.devicePixelRatio
             topPadding: PlasmaCore.Units.devicePixelRatio
             bottomPadding: PlasmaCore.Units.devicePixelRatio
-            contentItem: Loader {
-                sourceComponent: kuser.faceIconUrl ? imageComponent : icon
-                Component {
-                    id: imageComponent
-                    Image {
-                        id: imageItem
-                        anchors.fill: avatar.contentItem
-                        source: kuser.faceIconUrl
-                        smooth: true
-                        sourceSize.width: avatar.contentItem.width
-                        sourceSize.height: avatar.contentItem.height
-                        fillMode: Image.PreserveAspectCrop
-                    }
-                }
-                Component {
-                    id: iconComponent
-                    PlasmaCore.IconItem {
-                        id: iconItem
-                        anchors.fill: avatar.contentItem
-                        source: "user"
-                    }
-                }
-                layer.enabled: kuser.faceIconUrl
-                layer.effect: OpacityMask {
-                    anchors.fill: avatar.contentItem
-                    source: avatar.contentItem
-                    maskSource: Rectangle {
-                        visible: false
-                        radius: height/2
-                        width: avatar.contentItem.width
-                        height: avatar.contentItem.height
-                    }
-                }
+            contentItem: Kirigami.Avatar {
+                source: kuser.faceIconUrl
+                name: kuser.fullName
             }
             Rectangle {
                 parent: avatar.background
@@ -108,19 +78,6 @@ PlasmaExtras.PlasmoidHeading {
                 color: "transparent"
                 border.width: avatar.visualFocus ? PlasmaCore.Units.devicePixelRatio * 2 : 0
                 border.color: PlasmaCore.Theme.buttonFocusColor
-            }
-            // Only used to keep the exact circular shape consistent with the image.
-            // Without this, it looks significantly worse.
-            background.layer.enabled: kuser.faceIconUrl
-            background.layer.effect: OpacityMask {
-                anchors.fill: avatar.background
-                source: avatar.background
-                maskSource: Rectangle {
-                    visible: false
-                    radius: height/2
-                    width: avatar.background.width
-                    height: avatar.background.height
-                }
             }
             HoverHandler {
                 id: hoverHandler
