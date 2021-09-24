@@ -32,10 +32,10 @@ Item {
 
         CheckBox {
             id: showToolTips
-            Kirigami.FormData.label: i18n ("General:")
+            Kirigami.FormData.label: i18n("General:")
             text: i18n("Show tooltips")
         }
-        
+
         RowLayout {
             // HACK: Workaround for Kirigami bug 434625
             // due to which a simple Layout.leftMargin on CheckBox doesn't work
@@ -97,7 +97,7 @@ Item {
             id: maxStripes
             Kirigami.FormData.label: plasmoidVertical ? i18n("Maximum columns:") : i18n("Maximum rows:")
             from: 1
-            }
+        }
 
         CheckBox {
             id: forceStripes

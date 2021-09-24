@@ -330,10 +330,10 @@ MouseArea {
     Connections {
         target: plasmoid.configuration
 
-        function onLaunchersChanged() { 
-            tasksModel.launcherList = plasmoid.configuration.launchers 
+        function onLaunchersChanged() {
+            tasksModel.launcherList = plasmoid.configuration.launchers
         }
-        function onGroupingAppIdBlacklistChanged() { 
+        function onGroupingAppIdBlacklistChanged() {
             tasksModel.groupingAppIdBlacklist = plasmoid.configuration.groupingAppIdBlacklist;
         }
         function onGroupingLauncherUrlBlacklistChanged() {
@@ -394,12 +394,12 @@ MouseArea {
             tasksModel.requestOpenUrls(hoveredItem.modelIndex(), urlsList);
         }
     }
-    
+
     ToolTipDelegate {
         id: openWindowToolTipDelegate
         visible: false
     }
-    
+
     ToolTipDelegate {
         id: pinnedAppToolTipDelegate
         visible: false
