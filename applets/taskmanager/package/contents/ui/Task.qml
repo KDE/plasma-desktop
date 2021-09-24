@@ -207,7 +207,7 @@ MouseArea {
     import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet;
     TaskManagerApplet.SmartLauncherItem { }", task);
 
-            smartLauncher.launcherUrl = Qt.binding(function() { return model.LauncherUrlWithoutIcon; });
+            smartLauncher.launcherUrl = Qt.binding(() => model.LauncherUrlWithoutIcon);
 
             smartLauncherItem = smartLauncher;
         }
@@ -338,52 +338,23 @@ MouseArea {
                     mainItem.parentTask = task;
                     mainItem.rootIndex = tasksModel.makeModelIndex(itemIndex, -1);
 
-                    mainItem.appName = Qt.binding(function() {
-                        return model.AppName;
-                    });
-                    mainItem.pidParent = Qt.binding(function() {
-                        return model.AppPid !== undefined ? model.AppPid : 0;
-                    });
-                    mainItem.windows = Qt.binding(function() {
-                        return model.WinIdList;
-                    });
-                    mainItem.isGroup = Qt.binding(function() {
-                        return model.IsGroupParent === true;
-                    });
-                    mainItem.icon = Qt.binding(function() {
-                        return model.decoration;
-                    });
-                    mainItem.launcherUrl = Qt.binding(function() {
-                        return model.LauncherUrlWithoutIcon;
-                    });
-                    mainItem.isLauncher = Qt.binding(function() {
-                        return model.IsLauncher === true;
-                    });
-                    mainItem.isMinimizedParent = Qt.binding(function() {
-                        return model.IsMinimized === true;
-                    });
-                    mainItem.displayParent = Qt.binding(function() {
-                        return model.display;
-                    });
-                    mainItem.genericName = Qt.binding(function() {
-                        return model.GenericName;
-                    });
-                    mainItem.virtualDesktopParent = Qt.binding(function() {
-                        return (model.VirtualDesktops !== undefined && model.VirtualDesktops.length > 0) ? model.VirtualDesktops : [0];
-                    });
-                    mainItem.isOnAllVirtualDesktopsParent = Qt.binding(function() {
-                        return model.IsOnAllVirtualDesktops === true;
-                    });
-                    mainItem.activitiesParent = Qt.binding(function() {
-                        return model.Activities;
-                    });
+                    mainItem.appName = Qt.binding(() => model.AppName);
+                    mainItem.pidParent = Qt.binding(() => model.AppPid !== undefined ? model.AppPid : 0);
+                    mainItem.windows = Qt.binding(() => model.WinIdList);
+                    mainItem.isGroup = Qt.binding(() => model.IsGroupParent === true);
+                    mainItem.icon = Qt.binding(() => model.decoration);
+                    mainItem.launcherUrl = Qt.binding(() => model.LauncherUrlWithoutIcon);
+                    mainItem.isLauncher = Qt.binding(() => model.IsLauncher === true);
+                    mainItem.isMinimizedParent = Qt.binding(() => model.IsMinimized === true);
+                    mainItem.displayParent = Qt.binding(() => model.display);
+                    mainItem.genericName = Qt.binding(() => model.GenericName);
+                    mainItem.virtualDesktopParent = Qt.binding(() =>
+                        (model.VirtualDesktops !== undefined && model.VirtualDesktops.length > 0) ? model.VirtualDesktops : [0]);
+                    mainItem.isOnAllVirtualDesktopsParent = Qt.binding(() => model.IsOnAllVirtualDesktops === true);
+                    mainItem.activitiesParent = Qt.binding(() => model.Activities);
 
-                    mainItem.smartLauncherCountVisible = Qt.binding(function() {
-                        return task.smartLauncherItem && task.smartLauncherItem.countVisible;
-                    });
-                    mainItem.smartLauncherCount = Qt.binding(function() {
-                        return mainItem.smartLauncherCountVisible ? task.smartLauncherItem.count : 0;
-                    });
+                    mainItem.smartLauncherCountVisible = Qt.binding(() => task.smartLauncherItem && task.smartLauncherItem.countVisible);
+                    mainItem.smartLauncherCount = Qt.binding(() => mainItem.smartLauncherCountVisible ? task.smartLauncherItem.count : 0);
                 }
             }
         }
