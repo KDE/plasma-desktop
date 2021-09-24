@@ -490,14 +490,14 @@ MouseArea {
         dragSource = null;
     }
 
-    function createContextMenu(rootTask, modelIndex, args) {
-        var initialArgs = args || {}
-        initialArgs.visualParent = rootTask;
-        initialArgs.modelIndex = modelIndex;
-        initialArgs.mpris2Source = mpris2Source;
-        initialArgs.backend = backend;
-
-        return tasks.contextMenuComponent.createObject(rootTask, initialArgs);
+    function createContextMenu(rootTask, modelIndex, args = {}) {
+        const initialArgs = Object.assign(args, {
+            visualParent: rootTask,
+            modelIndex,
+            mpris2Source,
+            backend,
+        });
+        return contextMenuComponent.createObject(rootTask, initialArgs);
     }
 
     Component.onCompleted: {
