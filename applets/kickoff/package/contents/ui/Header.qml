@@ -161,19 +161,12 @@ PlasmaExtras.PlasmoidHeading {
             right: parent.right
         }
         Keys.onDownPressed: KickoffSingleton.contentArea.forceActiveFocus(Qt.TabFocusReason)
-        PlasmaCore.SvgItem {
-            id: separator
-            Layout.fillHeight: true
-            implicitWidth: naturalSize.width
-            implicitHeight: 0
-            elementId: "vertical-line"
-            svg: KickoffSingleton.lineSvg
-        }
 
         PC3.TextField {
             id: searchField
             Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
             Layout.fillWidth: true
+            Layout.leftMargin: KickoffSingleton.leftPadding
             focus: true
             placeholderText: i18n("Search…")
             clearButtonShown: true

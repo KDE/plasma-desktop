@@ -79,12 +79,13 @@ T.ItemDelegate {
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
                              implicitContentHeight + topPadding + bottomPadding)
 
+    // We use an increased fixed vertical padding to improve touch usability
     leftPadding: KickoffSingleton.listItemMetrics.margins.left
         + (!textUnderIcon && mirrored ? KickoffSingleton.fontMetrics.descent : 0)
     rightPadding: KickoffSingleton.listItemMetrics.margins.right
         + (!textUnderIcon && !mirrored ? KickoffSingleton.fontMetrics.descent : 0)
-    topPadding: textUnderIcon ? KickoffSingleton.listItemMetrics.margins.top + KickoffSingleton.fontMetrics.descent : KickoffSingleton.listItemMetrics.margins.top
-    bottomPadding: KickoffSingleton.listItemMetrics.margins.bottom
+    topPadding: PlasmaCore.Units.smallSpacing*2
+    bottomPadding: PlasmaCore.Units.smallSpacing*2
 
     spacing: KickoffSingleton.fontMetrics.descent
 

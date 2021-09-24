@@ -30,13 +30,14 @@ PlasmaExtras.PlasmoidHeading {
     property real preferredTabBarWidth: 0
     readonly property alias leaveButtons: leaveButtons
 
-    contentWidth: tabBar.implicitWidth + root.spacing + separator.implicitWidth + root.spacing + leaveButtons.implicitWidth
+    contentWidth: tabBar.implicitWidth + root.spacing + root.spacing + leaveButtons.implicitWidth
     contentHeight: leaveButtons.implicitHeight
 
+    // We use an increased vertical padding to improve touch usability
     leftPadding: KickoffSingleton.leftPadding
     rightPadding: KickoffSingleton.rightPadding
-    topPadding: background.margins.top + Math.round((background.margins.top - background.inset.top) / 2.0)
-    bottomPadding: background.margins.bottom + Math.round((background.margins.bottom - background.inset.bottom) / 2.0)
+    topPadding: PlasmaCore.Units.smallSpacing*2
+    bottomPadding: PlasmaCore.Units.smallSpacing*2
 
     leftInset: 0
     rightInset: 0
@@ -162,22 +163,10 @@ PlasmaExtras.PlasmoidHeading {
         }
         Keys.onUpPressed: KickoffSingleton.sideBar.forceActiveFocus(Qt.BacktabFocusReason)
     }
-    PlasmaCore.SvgItem {
-        id: separator
-        anchors {
-            left: tabBar.right
-            top: parent.top
-            bottom: parent.bottom
-        }
-        implicitWidth: naturalSize.width
-        implicitHeight: implicitWidth
-        elementId: "vertical-line"
-        svg: KickoffSingleton.lineSvg
-    }
+
     LeaveButtons {
         id: leaveButtons
         anchors {
-            left: separator.right
             right: parent.right
             top: parent.top
             bottom: parent.bottom
