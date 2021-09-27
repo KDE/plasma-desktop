@@ -163,7 +163,7 @@ EmptyPage {
         Transition {
             id: normalTransition
             NumberAnimation {
-                duration: Plasma.Units.shortDuration
+                duration: PlasmaCore.Units.shortDuration
                 properties: "x, y"
                 easing.type: Easing.OutCubic
             }
