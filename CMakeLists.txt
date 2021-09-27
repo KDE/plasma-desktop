@@ -75,22 +75,28 @@ find_package(AccountsQt5 ${ACCOUNTSQT_DEP_VERSION} CONFIG)
 
 find_package(KUserFeedback)
 
-set_package_properties(AccountsQt5 PROPERTIES DESCRIPTION "Accounts management library for Qt applications"
-   URL "https://gitlab.com/accounts-sso/libaccounts-qt"
-   TYPE OPTIONAL
-   PURPOSE "Required for building the OpenDesktop integration plugin")
+set_package_properties(AccountsQt5 PROPERTIES
+    DESCRIPTION "Accounts management library for Qt applications"
+    URL "https://gitlab.com/accounts-sso/libaccounts-qt"
+    PURPOSE "Required for building the OpenDesktop integration plugin"
+    TYPE OPTIONAL
+)
 
 find_package(KAccounts 20.04)
-set_package_properties(KAccounts PROPERTIES DESCRIPTION "Accounts management library for KDE applications"
-   TYPE OPTIONAL
-   PURPOSE "Required for building the OpenDesktop integration plugin")
+set_package_properties(KAccounts PROPERTIES
+    DESCRIPTION "Accounts management library for KDE applications"
+    PURPOSE "Required for building the OpenDesktop integration plugin"
+    TYPE OPTIONAL
+)
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(SignOnOAuth2 IMPORTED_TARGET signon-oauth2plugin)
-set_package_properties(signon-oauth2plugin PROPERTIES DESCRIPTION "Plugin for SignOnQt5 which handles OAuth and OAuth2 logins"
-   URL "https://gitlab.com/accounts-sso/signon-plugin-oauth2"
-   TYPE RUNTIME
-   PURPOSE "Required for running the OpenDesktop integration plugin")
+set_package_properties(signon-oauth2plugin PROPERTIES
+    DESCRIPTION "Plugin for SignOnQt5 which handles OAuth and OAuth2 logins"
+    URL "https://gitlab.com/accounts-sso/signon-plugin-oauth2"
+    PURPOSE "Required for running the OpenDesktop integration plugin"
+    TYPE RUNTIME
+)
 
 find_package(KF5Kirigami2 ${KF5_MIN_VERSION} CONFIG)
 set_package_properties(KF5Kirigami2 PROPERTIES
@@ -119,27 +125,31 @@ find_package(KSysGuard CONFIG REQUIRED)
 find_package(KDED CONFIG REQUIRED)
 
 find_package(KF5Baloo ${KF5_MIN_VERSION})
-set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"
-                       TYPE RECOMMENDED
-                       PURPOSE "Needed to build the File Search KCM"
-                      )
+set_package_properties(KF5Baloo PROPERTIES
+    DESCRIPTION "File Searching"
+    PURPOSE "Needed to build the File Search KCM"
+    TYPE RECOMMENDED
+)
 
 find_package(X11)
-set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
-                        URL "https://www.x.org"
-                        TYPE REQUIRED
-                        PURPOSE "Required for building the X11 based workspace"
-                      )
+set_package_properties(X11 PROPERTIES
+    DESCRIPTION "X11 libraries"
+    URL "https://www.x.org"
+    PURPOSE "Required for building the X11 based workspace"
+    TYPE REQUIRED
+)
+
 if(X11_FOUND)
   set(HAVE_X11 1)
 endif()
 
 find_package(UDev)
-set_package_properties(UDev PROPERTIES DESCRIPTION "UDev library"
-                        URL "https://www.freedesktop.org/wiki/Software/systemd/"
-                        TYPE OPTIONAL
-                        PURPOSE "Required for device discovery in keyboard daemon"
-                      )
+set_package_properties(UDev PROPERTIES
+    DESCRIPTION "API for enumerating and introspecting local devices (part of systemd)"
+    URL "https://www.freedesktop.org/wiki/Software/systemd/"
+    PURPOSE "Required for device discovery in keyboard daemon"
+    TYPE OPTIONAL
+)
 
 find_package(XCB
     REQUIRED COMPONENTS
@@ -149,9 +159,10 @@ find_package(XCB
 )
 
 find_package(X11_XCB)
-set_package_properties(X11_XCB PROPERTIES TYPE OPTIONAL
-                        PURPOSE "Required for needed for touchpad KCM (X11 backend)"
-                      )
+set_package_properties(X11_XCB PROPERTIES
+    PURPOSE "Required for needed for touchpad KCM (X11 backend)"
+    TYPE OPTIONAL
+)
 
 set_package_properties(XCB PROPERTIES TYPE REQUIRED)
 add_feature_info("XCB-XKB" XCB_XKB_FOUND "Required for building kcm/keyboard")
@@ -176,20 +187,21 @@ endif()
 include(ConfigureChecks.cmake)
 
 find_package(PackageKitQt5)
-set_package_properties(PackageKitQt5
-        PROPERTIES DESCRIPTION "Software Manager integration"
-        TYPE OPTIONAL
-        PURPOSE "Used in the KRunner plugin installer"
-        )
+set_package_properties(PackageKitQt5 PROPERTIES
+    DESCRIPTION "Software Manager integration"
+    PURPOSE "Used in the KRunner plugin installer"
+    TYPE OPTIONAL
+)
+
 if(PackageKitQt5_FOUND)
     set(HAVE_PACKAGEKIT TRUE)
 endif()
 
 find_package(GLIB2)
-set_package_properties(GLIB2
-        PROPERTIES TYPE OPTIONAL
-        PURPOSE "Required for building kimpanel"
-        )
+set_package_properties(GLIB2 PROPERTIES
+    PURPOSE "Required for building kimpanel"
+    TYPE OPTIONAL
+)
 
 # For kimpanel
 pkg_check_modules(IBUS "ibus-1.0>=1.5.0" IMPORTED_TARGET)
@@ -236,8 +248,8 @@ kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 find_package(XdgUserDir)
-set_package_properties(XdgUserDir PROPERTIES DESCRIPTION "Xdg-user-dir script"
+set_package_properties(XdgUserDir PROPERTIES
+    DESCRIPTION "Xdg-user-dir script"
+    PURPOSE "Used to translate default paths in KCM desktoppath"
     TYPE RUNTIME
-    PURPOSE "Used to translate default paths in KCM desktoppath")
-
-
+)
