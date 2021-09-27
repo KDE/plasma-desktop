@@ -18,6 +18,7 @@ BasePage {
         model: placesCategoryModel
         delegate: KickoffItemDelegate {
             action: null
+            url: ""
             description: ""
             extendHoverMargins: true
             width: view.availableWidth

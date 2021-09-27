@@ -8,11 +8,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 import QtQuick 2.15
-import QtQuick.Templates 2.15 as T
 import QtQml 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.16 as Kirigami
 
 // ScrollView makes it difficult to control implicit size using the contentItem.
@@ -29,7 +27,7 @@ EmptyPage {
 
     property bool mainContentView: false
 
-    clip: view.interactive
+    clip: view.height < view.contentHeight
 
     header: MouseArea {
         implicitHeight: KickoffSingleton.listItemMetrics.margins.top
@@ -117,6 +115,10 @@ EmptyPage {
         highlightResizeDuration: 0
         highlightMoveDuration: 0
         highlight: PlasmaCore.FrameSvgItem {
+            // The default Z value for delegates is 1. The default Z value for the section delegate is 2.
+            // The highlight gets a value of 3 while the drag is active and then goes back to the default value of 0.
+            z: root.currentItem && root.currentItem.dragActive ?
+                3 : 0
             opacity: view.activeFocus
                 || (KickoffSingleton.contentArea === root
                     && KickoffSingleton.searchField.activeFocus) ? 1 : 0.5
@@ -167,6 +169,28 @@ EmptyPage {
                 easing.type: Easing.OutCubic
             }
         }
+
+        Item {
+            parent: view
+            anchors.fill: parent
+            z: 1
+            TapHandler { // Filter mouse events to avoid flicking like ScrollView
+                onGrabChanged: {
+                    const pressed = transition & (EventPoint.GrabPassive | EventPoint.GrabExclusive) && point.state & EventPoint.Pressed
+                    const deviceType = point.event.device.type
+                    if (pressed && deviceType & (PointerDevice.Mouse | PointerDevice.TouchPad)) {
+                        view.interactive = false
+                        verticalScrollBar.interactive = true
+                    } else if (pressed && deviceType & PointerDevice.TouchScreen) {
+                        // No need for binding. Touching will cause pressed() to be emitted again.
+                        view.interactive = view.height < view.contentHeight
+                        verticalScrollBar.interactive = false
+                    }
+                    point.accepted = false
+                }
+            }
+        }
+
 
         PC3.ScrollBar.vertical: PC3.ScrollBar {
             id: verticalScrollBar

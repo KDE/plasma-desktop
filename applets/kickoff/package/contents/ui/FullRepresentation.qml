@@ -84,7 +84,6 @@ EmptyPage {
                 // This is absolutely necessary to make the search view work reliably.
                 model: runnerModel.count ? KickoffSingleton.runnerModel.modelForRow(0) : null
                 delegate: KickoffItemDelegate {
-                    id: itemDelegate
                     extendHoverMargins: true
                     width: view.availableWidth
                     isSearchResult: true
@@ -116,13 +115,6 @@ EmptyPage {
                 }
             }
         }
-    }
-
-    Kicker.DragHelper {
-        id: dragHelper
-
-        dragIconSize: PlasmaCore.Units.iconSizes.medium
-        onDropped: root.parent.dragSource = null
     }
 
     Kicker.RootModel {
