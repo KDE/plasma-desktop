@@ -181,7 +181,7 @@ T.ItemDelegate {
         onPositionChanged: {
             // forceActiveFocus() touches multiple items, so check for
             // activeFocus first to be more efficient.
-            if (!activeFocus) {
+            if (!root.activeFocus) {
                 root.forceActiveFocus(Qt.MouseFocusReason)
             }
             // No need to check currentIndex first because it's
