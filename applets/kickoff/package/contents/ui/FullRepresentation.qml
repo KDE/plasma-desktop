@@ -83,6 +83,12 @@ EmptyPage {
                 // Forces the function be re-run every time runnerModel.count changes.
                 // This is absolutely necessary to make the search view work reliably.
                 model: runnerModel.count ? KickoffSingleton.runnerModel.modelForRow(0) : null
+                delegate: KickoffItemDelegate {
+                    id: itemDelegate
+                    extendHoverMargins: true
+                    width: view.availableWidth
+                    isSearchResult: true
+                }
                 activeFocusOnTab: true
                 // always focus the first item in the header focus chain
                 KeyNavigation.tab: root.header.nextItemInFocusChain()
