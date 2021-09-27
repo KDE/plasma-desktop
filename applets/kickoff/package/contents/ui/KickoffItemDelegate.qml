@@ -175,6 +175,9 @@ T.ItemDelegate {
         anchors.leftMargin: root.extendHoverMargins ? (!mirrored ? -root.view.leftMargin : -root.view.rightMargin) : anchors.margins
         anchors.rightMargin: root.extendHoverMargins ? (mirrored ? -root.view.rightMargin : -root.view.leftMargin) : anchors.margins
         hoverEnabled: root.view && !root.view.movedWithKeyboard
+            // Fix VerticalStackView animation causing view currentIndex
+            // to change while delegates are moving under the mouse cursor
+            && plasmoid.fullRepresentationItem && !plasmoid.fullRepresentationItem.contentItem.busy
         acceptedButtons: Qt.LeftButton | Qt.RightButton
         // Using onPositionChanged instead of onEntered to prevent changing
         // categories while scrolling with the mouse wheel.
