@@ -116,8 +116,6 @@ Item {
         }
     }
 
-    property Item dragSource: null
-
     Kicker.ProcessRunner {
         id: processRunner;
     }

@@ -38,7 +38,7 @@ BasePage {
 
         Component {
             id: favoritesListViewComponent
-            KickoffListView {
+            DropAreaListView {
                 id: favoritesListView
                 objectName: "favoritesListView"
                 mainContentView: true
@@ -49,7 +49,7 @@ BasePage {
 
         Component {
             id: favoritesGridViewComponent
-            KickoffGridView {
+            DropAreaGridView {
                 id: favoritesGridView
                 objectName: "favoritesGridView"
                 focus: true

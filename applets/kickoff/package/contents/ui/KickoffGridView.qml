@@ -23,7 +23,7 @@ EmptyPage {
     property alias delegate: view.delegate
     property alias view: view
 
-    clip: view.interactive
+    clip: view.height < view.contentHeight
 
     header: MouseArea {
         implicitHeight: KickoffSingleton.listItemMetrics.margins.top
@@ -113,6 +113,10 @@ EmptyPage {
 
             highlightMoveDuration: 0
             highlight: PlasmaCore.FrameSvgItem {
+                // The default Z value for delegates is 1. The default Z value for the section delegate is 2.
+                // The highlight gets a value of 3 while the drag is active and then goes back to the default value of 0.
+                z: root.currentItem && root.currentItem.dragActive ?
+                    3 : 0
                 opacity: view.activeFocus
                     || (KickoffSingleton.contentArea === root
                         && KickoffSingleton.searchField.activeFocus) ? 1 : 0.5
@@ -145,19 +149,24 @@ EmptyPage {
                 }
             }
 
-            MouseArea { // Filter mouse events to avoid flicking like ScrollView
-                parent: view // Set the Flickable as the parent
-                z: 1
+            Item {
+                parent: view
                 anchors.fill: parent
-                onPressed: if (mouse.source === Qt.MouseEventNotSynthesized) { // Mouse
-                    view.interactive = false
-                    verticalScrollBar.interactive = true
-                    mouse.accepted = false
-                } else if (mouse.source === Qt.MouseEventSynthesizedBySystem) { // Touch
-                    // No need for binding. Touching will cause pressed() to be emitted again.
-                    view.interactive = view.height < view.contentHeight
-                    verticalScrollBar.interactive = false
-                    mouse.accepted = false
+                z: 1
+                TapHandler { // Filter mouse events to avoid flicking like ScrollView
+                    onGrabChanged: {
+                        const pressed = transition & (EventPoint.GrabPassive | EventPoint.GrabExclusive) && point.state & EventPoint.Pressed
+                        const deviceType = point.event.device.type
+                        if (pressed && deviceType & (PointerDevice.Mouse | PointerDevice.TouchPad)) {
+                            view.interactive = false
+                            verticalScrollBar.interactive = true
+                        } else if (pressed && deviceType & PointerDevice.TouchScreen) {
+                            // No need for binding. Touching will cause pressed() to be emitted again.
+                            view.interactive = view.height < view.contentHeight
+                            verticalScrollBar.interactive = false
+                        }
+                        point.accepted = false
+                    }
                 }
             }
 
