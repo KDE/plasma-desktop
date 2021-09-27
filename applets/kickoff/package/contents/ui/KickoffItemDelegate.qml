@@ -172,8 +172,10 @@ T.ItemDelegate {
         parent: root
         anchors.fill: parent
         anchors.margins: 1
-        anchors.leftMargin: root.extendHoverMargins ? (!mirrored ? -root.view.leftMargin : -root.view.rightMargin) : anchors.margins
-        anchors.rightMargin: root.extendHoverMargins ? (mirrored ? -root.view.rightMargin : -root.view.leftMargin) : anchors.margins
+        // Flickable margins are not mirrored, so disable layout mirroring
+        LayoutMirroring.enabled: false
+        anchors.leftMargin: root.extendHoverMargins ? -root.view.leftMargin : anchors.margins
+        anchors.rightMargin: root.extendHoverMargins ? -root.view.rightMargin : anchors.margins
         hoverEnabled: root.view && !root.view.movedWithKeyboard
             // Fix VerticalStackView animation causing view currentIndex
             // to change while delegates are moving under the mouse cursor
@@ -201,7 +203,6 @@ T.ItemDelegate {
                 root.openActionMenu(mouseX, mouseY)
             }
         }
-        
         onPressAndHold: { // act like right click on press and hold (with touch)
             root.forceActiveFocus(Qt.MouseFocusReason)
             root.clicked() // does not trigger the action
