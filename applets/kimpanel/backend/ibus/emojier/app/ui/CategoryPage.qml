@@ -102,6 +102,8 @@ Kirigami.ScrollablePage
             color: Kirigami.Theme.backgroundColor
             z: -1
         }
+        highlightMoveDuration: 0
+
         currentIndex: -1
 
         Keys.onPressed: {
