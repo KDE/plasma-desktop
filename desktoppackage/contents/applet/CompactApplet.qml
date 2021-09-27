@@ -200,6 +200,9 @@ PlasmaCore.ToolTipArea {
 
             // Draws a line between the applet dialog and the panel
             PlasmaCore.SvgItem {
+                // Only draw for popups of panel applets, not desktop applets
+                visible: plasmoid.formFactor === PlasmaCore.Types.Vertical || plasmoid.formFactor === PlasmaCore.Types.Horizontal
+
                 anchors {
                     top: plasmoid.location == PlasmaCore.Types.BottomEdge ? undefined : parent.top
                     left: plasmoid.location == PlasmaCore.Types.RightEdge ? undefined : parent.left
