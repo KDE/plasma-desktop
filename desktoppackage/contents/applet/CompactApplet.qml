@@ -200,6 +200,10 @@ PlasmaCore.ToolTipArea {
 
             // Draws a line between the applet dialog and the panel
             PlasmaCore.SvgItem {
+                visible: (plasmoid.location == PlasmaCore.Types.LeftEdge ||
+                          plasmoid.location == PlasmaCore.Types.RightEdge ||
+                          plasmoid.location == PlasmaCore.Types.TopEdge ||
+                          plasmoid.location == PlasmaCore.Types.BottomEdge)
                 anchors {
                     top: plasmoid.location == PlasmaCore.Types.BottomEdge ? undefined : parent.top
                     left: plasmoid.location == PlasmaCore.Types.RightEdge ? undefined : parent.left
