@@ -7,7 +7,8 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.5 as QQC2
 
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 2.0 as PC2 // for DialogStatus, ModelCOntextMenu, and Highlight
+import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
@@ -18,7 +19,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.private.shell 2.0
 
-Item {
+PC3.Page {
     id: main
 
     width: Math.max(heading.paintedWidth, PlasmaCore.Units.iconSizes.enormous * 3 + PlasmaCore.Units.smallSpacing * 4 + PlasmaCore.Units.gridUnit * 2)
@@ -32,8 +33,8 @@ Item {
     //therefore get deleted whilst we are still in a drag exec()
     //this is a clue to the owning dialog that hideOnWindowDeactivate should be deleted
     //See https://bugs.kde.org/show_bug.cgi?id=332733
-    property bool preventWindowHide: draggingWidget || categoriesDialog.status !== PlasmaComponents.DialogStatus.Closed
-                                  || getWidgetsDialog.status !== PlasmaComponents.DialogStatus.Closed
+    property bool preventWindowHide: draggingWidget || categoriesDialog.status !== PC2.DialogStatus.Closed
+                                  || getWidgetsDialog.status !== PC2.DialogStatus.Closed
 
     property bool outputOnly: draggingWidget
 
@@ -118,7 +119,7 @@ Item {
         }
     }
 
-    PlasmaComponents.ModelContextMenu {
+    PC2.ModelContextMenu {
         id: categoriesDialog
         visualParent: categoryButton
         // model set on first invocation
@@ -132,7 +133,7 @@ Item {
         }
     }
 
-    PlasmaComponents.ModelContextMenu {
+    PC2.ModelContextMenu {
         id: getWidgetsDialog
         visualParent: getWidgetsButton
         placement: PlasmaCore.Types.TopPosedLeftAlignedPopup
@@ -182,17 +183,7 @@ Item {
     }
     */
 
-
-    PlasmaExtras.PlasmoidHeading {
-        id: topArea
-        implicitWidth: header.implicitWidth
-        implicitHeight: header.implicitHeight
-        anchors {
-            top: parent.top
-            left: parent.left
-            right: parent.right
-        }
-
+    header: PlasmaExtras.PlasmoidHeading {
         ColumnLayout {
             id: header
             anchors.fill: parent
@@ -206,24 +197,24 @@ Item {
 
                     Layout.fillWidth: true
                 }
-                PlasmaComponents.ToolButton {
+                PC3.ToolButton {
                     id: getWidgetsButton
-                    iconSource: "get-hot-new-stuff"
+                    icon.name: "get-hot-new-stuff"
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Widgets…")
                     onClicked: {
                         getWidgetsDialog.model = widgetExplorer.widgetsMenuActions
                         getWidgetsDialog.openRelative()
                     }
                 }
-                PlasmaComponents.ToolButton {
+                PC3.ToolButton {
                     id: closeButton
-                    iconSource: "window-close"
+                    icon.name: "window-close"
                     onClicked: main.closed()
                 }
             }
 
             RowLayout {
-                PlasmaComponents.TextField {
+                PC3.TextField {
                     id: searchInput
                     Layout.fillWidth: true
                     clearButtonShown: true
@@ -236,20 +227,19 @@ Item {
 
                     Component.onCompleted: forceActiveFocus()
                 }
-                PlasmaComponents.ToolButton {
+                PC3.ToolButton {
                     id: categoryButton
-                    tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Categories")
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "All Widgets")
-                    iconSource: "view-filter"
+                    icon.name: "view-filter"
                     onClicked: {
                         categoriesDialog.model = widgetExplorer.filterModel
                         categoriesDialog.open(0, categoryButton.height)
                     }
-                }
-            }
 
-            Item {
-                height: PlasmaCore.Units.smallSpacing
+                    PC3.ToolTip {
+                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Categories")
+                    }
+                }
             }
         }
     }
@@ -262,12 +252,7 @@ Item {
     }
 
     PlasmaExtras.ScrollArea {
-        anchors {
-            top: topArea.bottom
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-        }
+        anchors.fill: parent
 
         verticalScrollBarPolicy: Qt.ScrollBarAlwaysOn
 
@@ -291,7 +276,7 @@ Item {
             cellHeight: cellWidth + PlasmaCore.Units.gridUnit * 4 + PlasmaCore.Units.smallSpacing * 2
 
             delegate: AppletDelegate {}
-            highlight: PlasmaComponents.Highlight {}
+            highlight: PC2.Highlight {}
             highlightMoveDuration: 0
             //highlightResizeDuration: 0
 
