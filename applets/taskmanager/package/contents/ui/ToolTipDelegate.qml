@@ -7,7 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.6
+import QtQuick 2.8
 import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
 import QtQml.Models 2.2
@@ -48,10 +48,16 @@ PlasmaComponents3.ScrollView {
 
     readonly property bool isVerticalPanel: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
-    Layout.minimumWidth: contentItem.width
+    Binding on Layout.minimumWidth {
+        value: implicitWidth
+        delayed: true // Prevent early hide of tooltip (BUG439522)
+    }
     Layout.maximumWidth: Layout.minimumWidth
 
-    Layout.minimumHeight: contentItem.height
+    Binding on Layout.minimumHeight {
+        value: implicitHeight
+        delayed: true // Prevent early hide of tooltip (BUG439522)
+    }
     Layout.maximumHeight: Layout.minimumHeight
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
