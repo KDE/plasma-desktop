@@ -1789,7 +1789,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
         // Start adding the actions:
         // "Open" and "Open with" actions
         m_fileItemActions->setItemListProperties(itemProperties);
-        m_fileItemActions->addOpenWithActionsTo(menu);
+        m_fileItemActions->insertOpenWithActionsTo(nullptr, menu, QStringList());
         menu->addSeparator();
         menu->addAction(m_actionCollection.action(QStringLiteral("cut")));
         menu->addAction(m_actionCollection.action(QStringLiteral("copy")));
