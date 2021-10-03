@@ -52,8 +52,6 @@ JoyWidget::JoyWidget(QWidget *parent)
     , joydev(nullptr)
 {
     QVBoxLayout *mainVbox = new QVBoxLayout(this);
-    int defaultSpacing = style()->pixelMetric(QStyle::PM_DefaultLayoutSpacing);
-    mainVbox->setSpacing(defaultSpacing);
     mainVbox->setContentsMargins(0, 0, 0, 0);
 
     // create area to show an icon + message if no joystick was detected
@@ -68,7 +66,6 @@ JoyWidget::JoyWidget(QWidget *parent)
     }
 
     QHBoxLayout *devHbox = new QHBoxLayout;
-    devHbox->setSpacing(defaultSpacing);
     devHbox->addWidget(new QLabel(i18n("Device:")));
     devHbox->addWidget(device = new KComboBox(true));
 
@@ -81,13 +78,11 @@ JoyWidget::JoyWidget(QWidget *parent)
     devHbox->setStretchFactor(device, 3);
 
     QHBoxLayout *hbox = new QHBoxLayout;
-    hbox->setSpacing(defaultSpacing);
 
     mainVbox->addLayout(devHbox);
     mainVbox->addLayout(hbox);
 
     QVBoxLayout *vboxLeft = new QVBoxLayout;
-    vboxLeft->setSpacing(defaultSpacing);
     vboxLeft->addWidget(new QLabel(i18nc("Cue for deflection of the stick", "Position:")));
     vboxLeft->addWidget(xyPos = new PosWidget);
 
@@ -95,10 +90,8 @@ JoyWidget::JoyWidget(QWidget *parent)
     connect(trace, &QAbstractButton::toggled, this, &JoyWidget::traceChanged);
 
     QVBoxLayout *vboxMid = new QVBoxLayout;
-    vboxMid->setSpacing(defaultSpacing);
 
     QVBoxLayout *vboxRight = new QVBoxLayout;
-    vboxRight->setSpacing(defaultSpacing);
 
     // calculate the column width we need
     QFontMetrics fm(font());
