@@ -183,6 +183,13 @@ KCM.AbstractKCM {
                     onCurrentItemChanged: dm.rootIndex = kcm.filteredModel.index(currentIndex, 0)
                     onCurrentIndexChanged:{ shortcutsList.selectedIndex = -1;
                     }
+
+                    Kirigami.PlaceholderMessage {
+                        anchors.centerIn: parent
+                        width: parent.width - (Kirigami.Units.largeSpacing * 4)
+                        visible: components.count === 0 && search.text.length > 0
+                        text: i18n("No items matched the search terms")
+                    }
                 }
             }
             QQC2.ScrollView  {
