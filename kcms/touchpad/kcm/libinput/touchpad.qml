@@ -757,9 +757,9 @@ Kirigami.ScrollablePage {
             Kirigami.FormData.buddyFor: rightClickMethodAreas
             id: rightClickMethod
             enabled: touchpad.supportsClickMethodAreas && touchpad.supportsClickMethodClickfinger
+            visible: touchpad.supportsClickMethodAreas || touchpad.supportsClickMethodClickfinger
 
             spacing: Kirigami.Units.smallSpacing
-            visible: touchpad.supportedButtons & Qt.LeftButton
 
             function load() {
                 rightClickMethodAreas.enabled = touchpad.supportsClickMethodAreas
@@ -819,7 +819,9 @@ Kirigami.ScrollablePage {
             id: middleClickMethod
 
             spacing: Kirigami.Units.smallSpacing
-            visible: rightClickMethod.visible
+            visible: noMiddleSoftwareEmulation.visible ||
+                     middleSoftwareEmulation.visible ||
+                     clickfingerMiddleInfoBox.visible
 
             function load() {
                 enabled = touchpad.supportsMiddleEmulation
