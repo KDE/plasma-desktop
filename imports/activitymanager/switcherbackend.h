@@ -22,6 +22,7 @@
 #include "sortedactivitiesmodel.h"
 
 class QAction;
+class QRasterWindow;
 class QQmlEngine;
 class QJSEngine;
 
@@ -90,6 +91,7 @@ private Q_SLOTS:
 private:
     QHash<QString, QKeySequence> m_actionShortcut;
     QAction *m_lastInvokedAction = nullptr;
+    QRasterWindow *m_inputWindow = nullptr;
     KActivities::Controller m_activities;
     bool m_shouldShowSwitcher;
     QTimer m_modKeyPollingTimer;

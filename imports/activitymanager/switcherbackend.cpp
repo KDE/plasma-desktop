@@ -229,14 +229,13 @@ void SwitcherBackend::switchToActivity(Direction direction)
 void SwitcherBackend::keybdSwitchedToAnotherActivity()
 {
     m_lastInvokedAction = dynamic_cast<QAction *>(sender());
-    if (!qGuiApp->focusWindow()) {
+    if (!qGuiApp->focusWindow() && !m_inputWindow) {
         // create a new Window so the compositor sends us modifier info
-        auto inputWindow = new QRasterWindow();
-        inputWindow->setGeometry(0, 0, 1, 1);
-        inputWindow->show();
-        inputWindow->update();
-        connect(inputWindow, &QWindow::activeChanged, this, [inputWindow, this] {
-            delete inputWindow;
+        m_inputWindow = new QRasterWindow();
+        m_inputWindow->setGeometry(0, 0, 1, 1);
+        m_inputWindow->show();
+        m_inputWindow->update();
+        connect(m_inputWindow, &QWindow::activeChanged, this, [this] {
             showActivitySwitcherIfNeeded();
         });
     } else {
@@ -327,6 +326,11 @@ void SwitcherBackend::setShouldShowSwitcher(bool shouldShowSwitcher)
 
         // We might have an unprocessed onCurrentActivityChanged
         onCurrentActivityChanged(m_activities.currentActivity());
+
+        if (m_inputWindow) {
+            delete m_inputWindow;
+            m_inputWindow = nullptr;
+        }
     }
 
     Q_EMIT shouldShowSwitcherChanged(m_shouldShowSwitcher);
