@@ -230,20 +230,19 @@ QHash<int, QByteArray> FolderModel::staticRoleNames()
     return roleNames;
 }
 
-void FolderModel::setMenuPos()
+QPoint FolderModel::localMenuPosition() const
 {
-    QPoint pos = QCursor::pos();
     QScreen *screen = nullptr;
     for (auto *s : qApp->screens()) {
-        if (s->geometry().contains(pos)) {
+        if (s->geometry().contains(m_menuPosition)) {
             screen = s;
             break;
         }
     }
     if (screen) {
-        pos -= screen->geometry().topLeft();
+        return m_menuPosition - screen->geometry().topLeft();
     }
-    m_menuPosition = pos;
+    return m_menuPosition;
 }
 
 void FolderModel::classBegin()
@@ -278,7 +277,7 @@ void FolderModel::newFileMenuItemCreated(const QUrl &url)
 {
     if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
         m_screenMapper->addMapping(url, m_screen, ScreenMapper::DelayedSignal);
-        m_dropTargetPositions.insert(url.fileName(), m_menuPosition);
+        m_dropTargetPositions.insert(url.fileName(), localMenuPosition());
         m_menuPosition = {};
         m_dropTargetPositionsCleanup->start();
     }
@@ -1692,7 +1691,7 @@ void FolderModel::updateActions()
         m_newMenu->checkUpToDate();
         m_newMenu->setPopupFiles(QList<QUrl>() << m_dirModel->dirLister()->url());
         // we need to set here as well, when the menu is shown via AppletInterface::eventFilter
-        setMenuPos();
+        m_menuPosition = QCursor::pos();
 
         if (QAction *newMenuAction = m_actionCollection.action(QStringLiteral("newMenu"))) {
             newMenuAction->setEnabled(itemProperties.supportsWriting());
