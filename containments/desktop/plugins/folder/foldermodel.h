@@ -296,7 +296,7 @@ private:
         bool blank;
     };
 
-    void setMenuPos();
+    QPoint localMenuPosition() const;
     void createActions();
     void addDragImage(QDrag *drag, int x, int y);
     void setStatus(Status status);
