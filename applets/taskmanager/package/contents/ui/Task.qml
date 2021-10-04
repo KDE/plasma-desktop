@@ -360,7 +360,7 @@ MouseArea {
             // Small delay so that when the mouse is just passing through a Task on its way to a tooltip, we won't change the tooltip
             Timer {
                 id: updateToolTipTimer
-                interval: 100
+                interval: 200
                 onTriggered: { if (containsMouse) { toolTipArea.updateToolTip(); } }
             }
 
