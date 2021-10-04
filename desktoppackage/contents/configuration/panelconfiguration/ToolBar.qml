@@ -116,21 +116,21 @@ Item {
                 // Adjust the position of the config bar too
                 switch (panel.location) {
                     case PlasmaCore.Types.TopEdge:
-                        configDialog.y = panel.y + panel.thickness;
+                        configDialog.y = Qt.binding(function() { return panel.y + panel.thickness });
                         break;
                     case PlasmaCore.Types.LeftEdge:
-                        configDialog.x = panel.x + panel.thickness;
+                        configDialog.x = Qt.binding(function() { return panel.x + panel.thickness });
                         break;
                     case PlasmaCore.Types.RightEdge:
-                        configDialog.x = panel.x - configDialog.width;
+                        configDialog.x = Qt.binding(function() { return panel.x - configDialog.width });
                         break;
                     case PlasmaCore.Types.BottomEdge:
                     default:
-                        configDialog.y = panel.y - configDialog.height;
+                        configDialog.y = Qt.binding(function() { return panel.y - configDialog.height });
                         break;
                 }
             }
-             DragHandler {
+            DragHandler {
                 property int magnitude: PlasmaCore.Units.gridUnit
                 target: null
                 xAxis.enabled: panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge
