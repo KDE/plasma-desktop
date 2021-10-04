@@ -185,32 +185,30 @@ KCM.AbstractKCM {
                     }
                 }
             }
-            Item {
+            QQC2.ScrollView  {
+                enabled: !exportActive
+                id: shortcutsScroll
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                QQC2.ScrollView  {
-                    enabled: !exportActive
-                    id: shortcutsScroll
-                    anchors.fill:parent
-                    clip: true
-                    Component.onCompleted: background.visible = true
-                    ListView {
-                        clip:true
-                        id: shortcutsList
-                        property int selectedIndex: -1
-                        model: DelegateModel {
-                            id: dm
-                            model: rootIndex.valid ?  kcm.filteredModel : undefined
-                            delegate: ShortcutActionDelegate {}
-                            KeyNavigation.left: components
-                        }
+                clip: true
+                Component.onCompleted: background.visible = true
+                ListView {
+                    clip:true
+                    id: shortcutsList
+                    property int selectedIndex: -1
+                    model: DelegateModel {
+                        id: dm
+                        model: rootIndex.valid ?  kcm.filteredModel : undefined
+                        delegate: ShortcutActionDelegate {}
+                        KeyNavigation.left: components
                     }
-                }
-                Kirigami.PlaceholderMessage {
-                    anchors.centerIn: parent
-                    width: parent.width - (Kirigami.Units.largeSpacing * 4)
-                    visible: components.currentIndex == -1
-                    text: i18n("Select an item from the list to view its shortcuts here")
+
+                    Kirigami.PlaceholderMessage {
+                        anchors.centerIn: parent
+                        width: parent.width - (Kirigami.Units.largeSpacing * 4)
+                        visible: components.currentIndex == -1
+                        text: i18n("Select an item from the list to view its shortcuts here")
+                    }
                 }
             }
             QQC2.Button {
