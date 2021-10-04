@@ -395,6 +395,7 @@ MouseArea {
                     // cursor position, so show this on the top unless it's on
                     // a top panel
                     visible: tooltip.location !== PlasmaCore.Types.TopEdge
+                             && currentApplet
                              && currentApplet.applet.action("remove")
                              && currentApplet.applet.action("remove").enabled
                     iconSource: "delete"
@@ -429,6 +430,7 @@ MouseArea {
                     // we want destructive actions to be far from the initial
                     // cursor position, so show this on the bottom for top panels
                     visible: tooltip.location === PlasmaCore.Types.TopEdge
+                             && currentApplet
                              && currentApplet.applet.action("remove")
                              && currentApplet.applet.action("remove").enabled
                     iconSource: "delete"
