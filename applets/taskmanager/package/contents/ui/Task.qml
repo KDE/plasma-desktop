@@ -357,6 +357,7 @@ MouseArea {
                 mainItem.smartLauncherCount = Qt.binding(() => mainItem.smartLauncherCountVisible ? task.smartLauncherItem.count : 0);
             }
 
+            // Small delay so that when the mouse is just passing through a Task on its way to a tooltip, we won't change the tooltip
             Timer {
                 id: updateToolTipTimer
                 interval: 100
