@@ -28,6 +28,16 @@ SimpleKCM {
         function onApplyError(errorText) {
             errorMessage.visible = true
             errorMessage.text = errorText
+            // HACK: reset everything on failure to apply
+            // otherwise old, not-actually-applied data persists and Apply button refuses to be enabled
+            realNametextField.text = usersDetailPage.user.realName
+            emailTextField.text = usersDetailPage.user.email
+            userNameField.text = usersDetailPage.user.name
+            usertypeBox.currentIndex = usersDetailPage.user.administrator ? 1 : 0
+            if (usersDetailPage.oldImage != "") {
+                usersDetailPage.overrideImage = false
+                usersDetailPage.user.face = usersDetailPage.oldImage
+            }
         }
     }
 
@@ -39,8 +49,10 @@ SimpleKCM {
                 changeWalletPassword.open()
             }
         }
+        function onDataChanged() {
+            kcm.needsSave = resolvePending()
+        }
     }
-
 
     Connections {
         target: kcm
@@ -132,14 +144,17 @@ SimpleKCM {
                 focus: true
                 text: user.realName
                 placeholderText: i18nc("Example name", "John Doe")
+                onTextChanged: { kcm.needsSave = resolvePending() }
             }
         }
+
         Kirigami.FormLayout {
             QQC2.TextField {
                 id: userNameField
                 focus: true
                 text: user.name
                 Kirigami.FormData.label: i18n("Username:")
+                onTextChanged: { kcm.needsSave = resolvePending() }
             }
 
             QQC2.ComboBox {
@@ -152,8 +167,8 @@ SimpleKCM {
                 ]
 
                 Kirigami.FormData.label: i18n("Account type:")
-
                 currentIndex: user.administrator ? 1 : 0
+                onCurrentIndexChanged: { kcm.needsSave = resolvePending() }
             }
 
             QQC2.TextField {
@@ -162,6 +177,7 @@ SimpleKCM {
                 text: user.email
                 placeholderText: i18nc("Example email address", "john.doe@kde.org")
                 Kirigami.FormData.label: i18n("Email address:")
+                onTextChanged: { kcm.needsSave = resolvePending() }
             }
 
             QQC2.Button {
@@ -208,6 +224,10 @@ SimpleKCM {
                 onClicked: deleteMenu.open()
             }
         }
+    }
+
+    onOverrideImageChanged: {
+        kcm.needsSave = resolvePending();
     }
 
     Kirigami.OverlaySheet {
