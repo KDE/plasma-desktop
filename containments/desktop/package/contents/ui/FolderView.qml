@@ -305,11 +305,7 @@ FocusScope {
                     if (gridView.shiftPressed && gridView.currentIndex != -1) {
                         positioner.setRangeSelected(gridView.anchorIndex, hoveredItem.index);
                     } else {
-                        // FIXME TODO: Clicking one item with others selected should deselect the others,
-                        // which doesn't happen right now because initiating a drag after the press should
-                        // still drag all of them: The deselect needs to happen on release instead so we
-                        // can distinguish.
-                        // https://bugs.kde.org/show_bug.cgi?id=424152
+                        // Deselecting everything else when one item is clicked is handled in onReleased in order to distinguish between drag and click
                         if (!gridView.ctrlPressed && !dir.isSelected(positioner.map(hoveredItem.index))) {
                             previouslySelectedItemIndex = -1;
                             dir.clearSelection();
@@ -341,7 +337,18 @@ FocusScope {
         }
 
         onCanceled: pressCanceled()
-        onReleased: pressCanceled()
+
+        onReleased: {
+            if (hoveredItem && !hoveredItem.blank) {
+                var pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
+                if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)
+                    && (!(gridView.shiftPressed && gridView.currentIndex != -1) && !gridView.ctrlPressed)) {
+                        dir.clearSelection();
+                        dir.setSelected(positioner.map(hoveredItem.index));
+                }
+            }
+            pressCanceled();
+        }
 
         onPressAndHold: {
             if (mouse.source == Qt.MouseEventSynthesizedByQt) {
