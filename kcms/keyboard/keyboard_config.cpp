@@ -11,17 +11,16 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-static const char *const SWITCHING_POLICIES[] = {"Global", "Desktop", "WinClass", "Window", nullptr};
+static const QStringList SWITCHING_POLICIES = {QStringLiteral("Global"), QStringLiteral("Desktop"), QStringLiteral("WinClass"), QStringLiteral("Window")};
 const int KeyboardConfig::NO_LOOPING = -1;
 
-static int findStringIndex(const char *const strings[], const QString &toFind, int defaultIndex)
+static KeyboardConfig::SwitchingPolicy findStringIndex(const QString &toFind, KeyboardConfig::SwitchingPolicy defaultPolicy)
 {
-    for (int i = 0; strings[i] != nullptr; i++) {
-        if (toFind == strings[i]) {
-            return i;
-        }
+    const int index = SWITCHING_POLICIES.indexOf(toFind);
+    if (index < 0) {
+        return defaultPolicy;
     }
-    return defaultIndex;
+    return static_cast<KeyboardConfig::SwitchingPolicy>(index);
 }
 
 KeyboardConfig::KeyboardConfig(QObject *parent)
@@ -32,17 +31,17 @@ KeyboardConfig::KeyboardConfig(QObject *parent)
 
 KeyboardConfig::SwitchingPolicy KeyboardConfig::switchingPolicy() const
 {
-    return static_cast<SwitchingPolicy>(findStringIndex(SWITCHING_POLICIES, switchMode(), SWITCH_POLICY_GLOBAL));
+    return findStringIndex(switchMode(), SWITCH_POLICY_GLOBAL);
 }
 
 void KeyboardConfig::setSwitchingPolicy(KeyboardConfig::SwitchingPolicy switchingPolicy)
 {
-    setSwitchMode(SWITCHING_POLICIES[switchingPolicy]);
+    setSwitchMode(SWITCHING_POLICIES.at(switchingPolicy));
 }
 
 KeyboardConfig::SwitchingPolicy KeyboardConfig::defaultSwitchingPolicyValue() const
 {
-    return static_cast<SwitchingPolicy>(findStringIndex(SWITCHING_POLICIES, defaultSwitchModeValue(), SWITCH_POLICY_GLOBAL));
+    return findStringIndex(defaultSwitchModeValue(), SWITCH_POLICY_GLOBAL);
 }
 
 bool KeyboardConfig::layoutsSaveNeeded() const
@@ -66,7 +65,7 @@ bool KeyboardConfig::layoutsSaveNeeded() const
 
 QString KeyboardConfig::getSwitchingPolicyString(SwitchingPolicy switchingPolicy)
 {
-    return SWITCHING_POLICIES[switchingPolicy];
+    return SWITCHING_POLICIES.at(switchingPolicy);
 }
 
 void KeyboardConfig::setDefaults()
