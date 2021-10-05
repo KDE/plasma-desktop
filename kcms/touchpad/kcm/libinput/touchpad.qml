@@ -738,13 +738,13 @@ Kirigami.ScrollablePage {
 
             //row 2
             Controls.Label {
-                text: i18nc("Slower Scroll", "Slower")
+                text: i18ndc("kcm_touchpad", "Slower Scroll", "Slower")
             }
             Item {
                 Layouts.Layout.fillWidth: true
             }
             Controls.Label {
-                text: i18nc("Faster Scroll Speed", "Faster")
+                text: i18ndc("kcm_touchpad", "Faster Scroll Speed", "Faster")
             }
         }
 
