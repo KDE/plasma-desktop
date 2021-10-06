@@ -119,6 +119,7 @@ Rectangle {
         }
         width: Kirigami.Units.gridUnit * 7
         Kirigami.Theme.colorSet: Kirigami.Theme.View
+        Kirigami.Theme.inherit: false
         leftPadding: 0
         rightPadding: 0
         topPadding: 0
