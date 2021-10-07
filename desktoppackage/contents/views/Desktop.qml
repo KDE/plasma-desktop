@@ -47,7 +47,7 @@ Item {
             sidePanelStack.state = "closed";
         } else {
             sidePanelStack.state = "widgetExplorer";
-            sidePanelStack.setSource(Qt.resolvedUrl("../explorer/WidgetExplorer.qml"), {"containment": containment})
+            sidePanelStack.setSource(Qt.resolvedUrl("../explorer/WidgetExplorer.qml"), {"containment": containment, "sidePanel": sidePanel})
         }
     }
 

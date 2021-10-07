@@ -28,6 +28,8 @@ PC3.Page {
     opacity: draggingWidget ? 0.3 : 1
 
     property QtObject containment
+    
+    property PlasmaCore.Dialog sidePanel
 
     //external drop events can cause a raise event causing us to lose focus and
     //therefore get deleted whilst we are still in a drag exec()
@@ -251,10 +253,12 @@ PC3.Page {
         onTriggered: list.model = widgetExplorer.widgetsModel
     }
 
-    PlasmaExtras.ScrollArea {
+    PC3.ScrollView {
         anchors.fill: parent
+        anchors.rightMargin: - main.sidePanel.margins.right
 
-        verticalScrollBarPolicy: Qt.ScrollBarAlwaysOn
+        // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
+        PC3.ScrollBar.horizontal.policy: PC3.ScrollBar.AlwaysOff
 
         // hide the flickering by fading in nicely
         opacity: setModelTimer.running ? 0 : 1
@@ -265,13 +269,6 @@ PC3.Page {
             }
         }
 
-        PlasmaExtras.PlaceholderMessage {
-            anchors.centerIn: parent
-            width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
-            text: searchInput.text.length > 0 ? i18n("No widgets matched the search terms") : i18n("No widgets available")
-            visible: list.count == 0
-        }
-
         GridView {
             id: list
 
@@ -279,7 +276,7 @@ PC3.Page {
 
             activeFocusOnTab: true
             keyNavigationWraps: true
-            cellWidth: Math.floor((width - PlasmaCore.Units.smallSpacing) / 3)
+            cellWidth: Math.floor(width / 3)
             cellHeight: cellWidth + PlasmaCore.Units.gridUnit * 4 + PlasmaCore.Units.smallSpacing * 2
 
             delegate: AppletDelegate {}
@@ -318,5 +315,12 @@ PC3.Page {
                 }
             }
         }
+    }
+
+    PlasmaExtras.PlaceholderMessage {
+        anchors.centerIn: parent
+        width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
+        text: searchInput.text.length > 0 ? i18n("No widgets matched the search terms") : i18n("No widgets available")
+        visible: list.count == 0
     }
 }
