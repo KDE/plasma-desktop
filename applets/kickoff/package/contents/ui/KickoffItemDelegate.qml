@@ -198,9 +198,9 @@ T.ItemDelegate {
             axis: Drag.XAndYAxis
             target: root.dragEnabled ? root : undefined
             minimumX: 0
-            maximumX: root.view ? Math.min(root.parent.width - root.width, root.view.availableWidth - root.width) : root.x
+            maximumX: root.view ? Math.min(root.view.contentWidth - root.width, root.view.availableWidth - root.width) : root.x
             minimumY: 0
-            maximumY: root.view ? Math.min(root.parent.height - root.height, root.view.availableHeight - root.height) : root.y
+            maximumY: root.view ? Math.min(root.view.contentHeight - root.height, root.view.availableHeight - root.height) : root.y
         }
         Binding {
             target: KickoffSingleton; when: root.dragActive
