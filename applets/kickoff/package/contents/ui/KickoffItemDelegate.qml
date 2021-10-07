@@ -52,9 +52,8 @@ T.ItemDelegate {
     property point dragStartPosition: Qt.point(x,y)
     property int dragStartIndex: index
     readonly property alias dragActive: mouseArea.drag.active
-    property bool dragEnabled: !root.isCategory
+    property bool dragEnabled: enabled && !root.isCategory && !root.view.interactive
         && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
-        && !root.view.interactive
 
     function openActionMenu(x = undefined, y = undefined) {
         if (!root.hasActionList) { return }
