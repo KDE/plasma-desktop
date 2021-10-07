@@ -24,9 +24,6 @@ ColumnLayout {
     property var submodelIndex
     property int flatIndex: isGroup && index != undefined ? index : 0
 
-    readonly property string mprisSourceName: mpris2Source.sourceNameForLauncherUrl(toolTipDelegate.launcherUrl, isGroup ? AppPid : pidParent)
-    readonly property var playerData: mprisSourceName != "" ? mpris2Source.data[mprisSourceName] : 0
-    readonly property bool hasPlayer: !!mprisSourceName && !!playerData
     readonly property bool playing: hasPlayer && playerData.PlaybackStatus === "Playing"
     readonly property bool canControl: hasPlayer && playerData.CanControl
     readonly property bool canPlay: hasPlayer && playerData.CanPlay

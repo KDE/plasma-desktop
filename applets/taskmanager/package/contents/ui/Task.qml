@@ -329,7 +329,7 @@ MouseArea {
             location: plasmoid.location
 
             active: !inPopup && !groupDialog.visible && plasmoid.configuration.showToolTips
-            interactive: model.IsWindow === true
+            interactive: model.IsWindow === true || mainItem.hasPlayer
 
             mainItem: (model.IsWindow === true) ? openWindowToolTipDelegate : pinnedAppToolTipDelegate
 
