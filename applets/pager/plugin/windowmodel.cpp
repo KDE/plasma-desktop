@@ -92,9 +92,8 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
         }
 
         // Clamp to desktop rect.
-        // TODO: Switch from qBound to std::clamp once we use C++17.
-        windowGeo.setX(qBound(0, windowGeo.x(), desktopGeo.width()));
-        windowGeo.setY(qBound(0, windowGeo.y(), desktopGeo.height()));
+        windowGeo.setX(std::clamp(windowGeo.x(), 0, desktopGeo.width()));
+        windowGeo.setY(std::clamp(windowGeo.y(), 0, desktopGeo.height()));
 
         if ((windowGeo.x() + windowGeo.width()) > desktopGeo.width()) {
             windowGeo.setWidth(desktopGeo.width() - windowGeo.x());
