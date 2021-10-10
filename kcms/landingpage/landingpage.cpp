@@ -126,8 +126,6 @@ QVariant MostUsedModel::data(const QModelIndex &index, int role) const
         return service->icon();
     case KcmPluginRole: {
         return service->desktopEntryName();
-        KCModuleInfo info(service);
-        return info.handle();
     }
     case ResultModel::ScoreRole:
         return QSortFilterProxyModel::data(index, ResultModel::ScoreRole);
