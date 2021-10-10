@@ -734,7 +734,7 @@ void FolderModel::runSelected()
         }
     }
 
-    fileItemActions.runPreferredApplications(items, QString());
+    fileItemActions.runPreferredApplications(items);
 }
 
 void FolderModel::rename(int row, const QString &name)
