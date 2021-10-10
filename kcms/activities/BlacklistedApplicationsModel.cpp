@@ -64,8 +64,10 @@ void BlacklistedApplicationsModel::load()
     // Loading plugin configuration
     d->pluginConfig->load();
     const auto defaultBlockedValue = d->pluginConfig->defaultBlockedByDefaultValue();
-    auto blockedApplications = QSet<QString>::fromList(d->pluginConfig->blockedApplications());
-    auto allowedApplications = QSet<QString>::fromList(d->pluginConfig->allowedApplications());
+    const auto &blockedAppList = d->pluginConfig->blockedApplications();
+    auto blockedApplications = QSet<QString>(blockedAppList.cbegin(), blockedAppList.cend());
+    const auto &allowedAppList = d->pluginConfig->allowedApplications();
+    auto allowedApplications = QSet<QString>(allowedAppList.cbegin(), allowedAppList.cend());
 
     // Reading new applications from the database
 
