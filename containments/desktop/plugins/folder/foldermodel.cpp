@@ -1392,7 +1392,7 @@ bool FolderModel::isDir(const QModelIndex &index, const KDirModel *dirModel) con
         KIO::StatJob *job = KIO::stat(url, KIO::HideProgressInfo);
         job->setProperty("org.kde.plasma.folder_url", item.url());
         job->setSide(KIO::StatJob::SourceSide);
-        job->setDetails(0);
+        job->setDetails(KIO::StatNoDetails);
         connect(job, &KJob::result, this, &FolderModel::statResult);
         m_isDirJobs.insert(item.url(), job);
     }
