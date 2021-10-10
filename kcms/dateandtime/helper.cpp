@@ -206,8 +206,6 @@ ActionReply ClockHelper::save(const QVariantMap &args)
     bool _tz = args.value(QStringLiteral("tz")).toBool();
     bool _tzreset = args.value(QStringLiteral("tzreset")).toBool();
 
-    KComponentData data("kcmdatetimehelper");
-
     int ret = 0; // error code
     //  The order here is important
     if (_ntp)
