@@ -569,7 +569,7 @@ Kicker.DashboardWindow {
                     anchors.fill: parent
                     z: (opacity == 1.0) ? 1 : 0
 
-                    enabled: (opacity == 1.0) ? 1 : 0
+                    visible: opacity != 0.0
 
                     property int headerHeight: mainColumnLabel.height + mainColumnLabelUnderline.height + PlasmaCore.Units.largeSpacing
 
@@ -690,7 +690,7 @@ Kicker.DashboardWindow {
                     width: parent.width
                     height: systemFavoritesGrid.y + systemFavoritesGrid.height
 
-                    enabled: (opacity == 1.0) ? 1 : 0
+                    visible: opacity != 0.0
 
                     opacity: filterList.allApps ? 1.0 : 0.0
 
@@ -731,7 +731,7 @@ Kicker.DashboardWindow {
                     width: parent.width
                     height: Math.min(implicitHeight, systemFavoritesGrid.y + systemFavoritesGrid.height)
 
-                    enabled: (opacity == 1.0) ? 1 : 0
+                    visible: opacity != 0.0
 
                     model: runnerModel
 
