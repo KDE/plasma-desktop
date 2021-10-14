@@ -339,7 +339,7 @@ FocusScope {
         onCanceled: pressCanceled()
 
         onReleased: {
-            if (hoveredItem && !hoveredItem.blank) {
+            if (hoveredItem && !hoveredItem.blank && mouse.button != Qt.RightButton) {
                 var pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
                 if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)
                     && (!(gridView.shiftPressed && gridView.currentIndex != -1) && !gridView.ctrlPressed)) {
