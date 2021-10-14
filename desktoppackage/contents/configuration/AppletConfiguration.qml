@@ -20,10 +20,10 @@ Rectangle {
     id: root
 
     implicitWidth: PlasmaCore.Units.gridUnit * 40
-    implicitHeight: PlasmaCore.Units.gridUnit * 31
+    implicitHeight: PlasmaCore.Units.gridUnit * 30
 
-    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 40
-    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 31
+    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 30
+    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 21
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
