@@ -22,9 +22,6 @@ SPDX-License-Identifier: GPL-2.0-or-later
     <entry name="xkbOptions" key="Options" type="StringList">
       <default code="true">QStringList()</default>
     </entry>
-    <entry name="resetOldXkbOptions" key="ResetOldOptions" type="Bool">
-      <default>false</default>
-    </entry>
     <entry name="switchMode" key="SwitchMode" type="String">
       <default>Global</default>
     </entry>
