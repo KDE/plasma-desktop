@@ -145,7 +145,7 @@ Item {
         favoritesModel: globalFavorites
 
         runners: {
-            var runners = new Array("services");
+            var runners = new Array("services", "krunner_systemsettings");
 
             if (kicker.isDash) {
                 runners = runners.concat(new Array("desktopsessions", "PowerDevil",
