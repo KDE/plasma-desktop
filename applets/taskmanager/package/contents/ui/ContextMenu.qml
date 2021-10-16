@@ -52,9 +52,15 @@ PlasmaComponents.ContextMenu {
 
     Component.onCompleted: {
         // Cannot have "Connections" as child of PlasmaCoponents.ContextMenu.
-        backend.showAllPlaces.connect(function() {
-            visualParent.showContextMenu({showAllPlaces: true});
-        });
+        backend.showAllPlaces.connect(showContextMenuWithAllPlaces);
+    }
+
+    Component.onDestruction: {
+        backend.showAllPlaces.disconnect(showContextMenuWithAllPlaces);
+    }
+
+    function showContextMenuWithAllPlaces() {
+        visualParent.showContextMenu({showAllPlaces: true});
     }
 
     function get(modelProp) {
