@@ -352,7 +352,7 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
         storageId = storageId.left(storageId.length() - 8);
     }
 
-    auto query = UsedResources | RecentlyUsedFirst | Agent(storageId) | Type::any() | Activity::current() | Url::file();
+    auto query = UsedResources | RecentlyUsedFirst | Agent(storageId) | Type::files() | Activity::current() | Url::file();
 
     ResultSet results(query);
 
@@ -371,11 +371,7 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
             continue;
         }
 
-        const KFileItem fileItem(url);
-
-        if (!fileItem.isFile()) {
-            continue;
-        }
+        const KFileItem fileItem(url, KFileItem::SkipMimeTypeFromContent);
 
         QAction *action = new QAction(parent);
         action->setText(url.fileName());
