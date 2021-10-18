@@ -187,6 +187,8 @@ public:
     {
         m_settings.setRecent(QStringList());
         m_settings.setRecentDescriptions(QStringList());
+        m_settings.save();
+
         refresh();
     }
 
