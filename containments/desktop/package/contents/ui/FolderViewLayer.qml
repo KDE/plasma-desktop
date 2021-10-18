@@ -17,7 +17,7 @@ import org.kde.private.desktopcontainment.folder 0.1 as Folder
 FocusScope {
     id: folderViewLayerComponent
 
-    property variant sharedActions: ["newMenu", "paste", "undo", "refresh", "emptyTrash", "create_dir"]
+    property variant sharedActions: ["newMenu", "paste", "undo", "refresh", "emptyTrash"]
     property Component folderViewDialogComponent: Qt.createComponent("FolderViewDialog.qml", Qt.Asynchronous, root)
 
     property Item view: folderView

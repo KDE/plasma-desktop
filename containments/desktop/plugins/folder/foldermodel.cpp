@@ -1597,11 +1597,6 @@ void FolderModel::createActions()
     refresh->setShortcut(QKeySequence(QKeySequence::Refresh));
     connect(refresh, &QAction::triggered, this, &FolderModel::refresh);
 
-    QAction *newDirAction = new QAction(QIcon::fromTheme(QStringLiteral("create_dir")), i18n("&Create Folder"), this);
-    m_actionCollection.setDefaultShortcut(newDirAction, KStandardShortcut::createFolder().last());
-    newDirAction->setVisible(false);
-    connect(newDirAction, &QAction::triggered, this, &FolderModel::createFolder);
-
     QAction *rename = KStandardAction::renameFile(this, &FolderModel::requestRename, this);
     QAction *trash = KStandardAction::moveToTrash(this, &FolderModel::moveSelectedToTrash, this);
     RemoveAction *remove = new RemoveAction(&m_actionCollection, this);
@@ -1630,7 +1625,6 @@ void FolderModel::createActions()
     m_actionCollection.addAction(QStringLiteral("del"), del);
     m_actionCollection.addAction(QStringLiteral("restoreFromTrash"), restoreFromTrash);
     m_actionCollection.addAction(QStringLiteral("emptyTrash"), emptyTrash);
-    m_actionCollection.addAction(QStringLiteral("create_dir"), newDirAction);
 
     // The RemoveAction needs to be updated after adding all actions to the actionCollection
     remove->update();
