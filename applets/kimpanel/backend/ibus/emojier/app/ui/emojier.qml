@@ -15,7 +15,8 @@ Kirigami.ApplicationWindow
     id: window
 
     minimumWidth: Math.round(minimumHeight * 1.25)
-    minimumHeight: drawer.contentHeight
+    // The extra gridUnit is to account for the header that appears when expanded
+    minimumHeight: drawer.contentHeight + Kirigami.Units.gridUnit * 2
     width: Kirigami.Units.gridUnit * 25
     height: Kirigami.Units.gridUnit * 25
 
