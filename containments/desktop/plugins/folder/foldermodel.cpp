@@ -1599,6 +1599,7 @@ void FolderModel::createActions()
 
     QAction *rename = KStandardAction::renameFile(this, &FolderModel::requestRename, this);
     QAction *trash = KStandardAction::moveToTrash(this, &FolderModel::moveSelectedToTrash, this);
+    QAction *del = KStandardAction::deleteFile(this, &FolderModel::deleteSelected, this);
     RemoveAction *remove = new RemoveAction(&m_actionCollection, this);
 
     QAction *emptyTrash = new QAction(QIcon::fromTheme(QStringLiteral("trash-empty")), i18n("&Empty Trash"), this);
@@ -1606,8 +1607,6 @@ void FolderModel::createActions()
 
     QAction *restoreFromTrash = new QAction(i18nc("Restore from trash", "Restore"), this);
     connect(restoreFromTrash, &QAction::triggered, this, &FolderModel::restoreSelectedFromTrash);
-
-    QAction *del = KStandardAction::deleteFile(this, &FolderModel::deleteSelected, this);
 
     QAction *actOpen = new QAction(QIcon::fromTheme(QStringLiteral("window-new")), i18n("&Open"), this);
     connect(actOpen, &QAction::triggered, this, &FolderModel::openSelected);
@@ -1803,20 +1802,20 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
         menu->addSeparator();
         menu->addAction(m_actionCollection.action(QStringLiteral("restoreFromTrash")));
 
-        KConfigGroup cg(KSharedConfig::openConfig(), "KDE");
-        bool showDeleteCommand = cg.readEntry("ShowDeleteCommand", false);
-
-        if (showDeleteCommand) {
+        if (isDeleteCommandShown()) {
             QAction *trashAction = m_actionCollection.action(QStringLiteral("trash"));
             QAction *deleteAction = m_actionCollection.action(QStringLiteral("del"));
-            deleteAction->setVisible(showDeleteCommand);
-            trashAction->setVisible(showDeleteCommand);
             menu->addAction(trashAction);
             menu->addAction(deleteAction);
         } else {
             if (RemoveAction *removeAction = qobject_cast<RemoveAction *>(m_actionCollection.action(QStringLiteral("remove")))) {
                 removeAction->update();
                 menu->addAction(removeAction);
+
+                // Used to monitor Shift modifier usage while the menu is open, to
+                // swap the Trash and Delete actions.
+                menu->installEventFilter(removeAction);
+                QCoreApplication::instance()->installEventFilter(removeAction);
             }
         }
 
@@ -1850,13 +1849,6 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
 
     if (visualParent && menu->windowHandle()) {
         menu->windowHandle()->setTransientParent(visualParent->window());
-    }
-
-    // Used to monitor Shift modifier usage while the menu is open, to
-    // swap the Trash and Delete actions.
-    if (RemoveAction *removeAction = qobject_cast<RemoveAction *>(m_actionCollection.action(QStringLiteral("remove")))) {
-        menu->installEventFilter(removeAction);
-        QCoreApplication::instance()->installEventFilter(removeAction);
     }
 
     menu->popup(m_menuPosition);
@@ -2007,8 +1999,16 @@ void FolderModel::moveSelectedToTrash()
         return;
     }
 
-    if (RemoveAction *action = qobject_cast<RemoveAction *>(m_actionCollection.action(QStringLiteral("remove")))) {
-        if (action->proxyAction() != m_actionCollection.action(QStringLiteral("trash"))) {
+    if (!isDeleteCommandShown()) {
+        if (RemoveAction *action = qobject_cast<RemoveAction *>(m_actionCollection.action(QStringLiteral("remove")))) {
+            if (action->proxyAction() != m_actionCollection.action(QStringLiteral("trash"))) {
+                return;
+            }
+        }
+    }
+
+    if (QAction *action = m_actionCollection.action(QStringLiteral("trash"))) {
+        if (!action->isEnabled()) {
             return;
         }
     }
@@ -2029,8 +2029,16 @@ void FolderModel::deleteSelected()
         return;
     }
 
-    if (RemoveAction *action = qobject_cast<RemoveAction *>(m_actionCollection.action(QStringLiteral("remove")))) {
-        if (action->proxyAction() != m_actionCollection.action(QStringLiteral("del"))) {
+    if (!isDeleteCommandShown()) {
+        if (RemoveAction *action = qobject_cast<RemoveAction *>(m_actionCollection.action(QStringLiteral("remove")))) {
+            if (action->proxyAction() != m_actionCollection.action(QStringLiteral("del"))) {
+                return;
+            }
+        }
+    }
+
+    if (QAction *action = m_actionCollection.action(QStringLiteral("del"))) {
+        if (!action->isEnabled()) {
             return;
         }
     }
@@ -2106,4 +2114,10 @@ void FolderModel::createFolder()
 {
     m_newMenu->setPopupFiles(QList<QUrl>() << m_dirModel->dirLister()->url());
     m_newMenu->createDirectory();
+}
+
+bool FolderModel::isDeleteCommandShown()
+{
+    KConfigGroup cg(KSharedConfig::openConfig(), "KDE");
+    return cg.readEntry("ShowDeleteCommand", false);
 }
