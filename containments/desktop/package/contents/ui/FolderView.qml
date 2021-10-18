@@ -1004,8 +1004,13 @@ FocusScope {
                     onDeleteFile: {
                         dir.deleteSelected();
                     }
+
                     onRenameFile: {
                         rename();
+                    }
+
+                    onCreateFolder: {
+                        model.createFolder();
                     }
                 }
 

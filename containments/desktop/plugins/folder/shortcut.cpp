@@ -34,6 +34,8 @@ bool ShortCut::eventFilter(QObject *obj, QEvent *e)
             Q_EMIT renameFile();
         } else if (KStandardShortcut::moveToTrash().contains(QKeySequence(keyInt))) {
             Q_EMIT moveToTrash();
+        } else if (KStandardShortcut::createFolder().contains(QKeySequence(keyInt))) {
+            Q_EMIT createFolder();
         }
     }
 

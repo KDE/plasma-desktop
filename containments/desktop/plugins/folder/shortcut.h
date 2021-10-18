@@ -34,6 +34,7 @@ Q_SIGNALS:
     void deleteFile();
     void renameFile();
     void moveToTrash();
+    void createFolder();
 
 protected:
     bool eventFilter(QObject *obj, QEvent *e) override;
