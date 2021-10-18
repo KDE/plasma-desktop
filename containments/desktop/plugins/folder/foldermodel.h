@@ -301,6 +301,7 @@ private:
     void addDragImage(QDrag *drag, int x, int y);
     void setStatus(Status status);
     static bool isTrashEmpty();
+    static bool isDeleteCommandShown();
     QList<QUrl> selectedUrls() const;
     KDirModel *m_dirModel;
     KDirWatch *m_dirWatch;
