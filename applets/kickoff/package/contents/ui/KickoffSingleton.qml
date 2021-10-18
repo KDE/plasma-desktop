@@ -45,17 +45,6 @@ Item {
     }
     //END
 
-    //BEGIN Drag and Drop elements
-    property Item dragSource: null
-    // We have to use DragHelper here because the models use QIcons for the decoration role.
-    // DragHelper supports QIcons and Drag.imageSource only supports urls.
-    readonly property Kicker.DragHelper dragHelper: Kicker.DragHelper {
-        id: dragHelper
-        dragIconSize: PlasmaCore.Units.iconSizes.medium
-        onDropped: dragSource = null
-    }
-    //END
-
     //BEGIN UI elements
     // Set in FullRepresentation.qml
     property Item header: null
