@@ -179,6 +179,11 @@ T.ItemDelegate {
         maximumLineCount: 1
     }
 
+    Drag.active: mouseArea.drag.active
+    Drag.dragType: Drag.Automatic
+    Drag.mimeData: { "text/uri-list" : root.url }
+    Drag.onDragFinished: Drag.imageSource = ""
+
     MouseArea {
         id: mouseArea
         parent: root
@@ -201,16 +206,6 @@ T.ItemDelegate {
             minimumY: 0
             maximumY: root.view ? Math.min(root.view.contentHeight - root.height, root.view.availableHeight - root.height) : root.y
         }
-        Binding {
-            target: KickoffSingleton; when: root.dragActive
-            property: "dragSource"; value: root
-            restoreMode: Binding.RestoreBindingOrValue
-        }
-        Binding {
-            target: KickoffSingleton.dragHelper; when: root.dragActive
-            property: "dragIconSize"; value: root.icon.height
-            restoreMode: Binding.RestoreBindingOrValue
-        }
         // Using onPositionChanged instead of onEntered to prevent changing
         // categories while scrolling with the mouse wheel.
         onPositionChanged: {
@@ -222,6 +217,11 @@ T.ItemDelegate {
             // No need to check currentIndex first because it's
             // built into QQuickListView::setCurrentIndex() already
             root.view.currentIndex = index
+        }
+        onPressed: if (root.dragEnabled && root.Drag.imageSource == "") {
+            iconItem.grabToImage((result) => {
+                return root.Drag.imageSource = result.url
+            })
         }
         onClicked: if (mouse.button === Qt.LeftButton) {
             root.forceActiveFocus(Qt.MouseFocusReason)
@@ -277,15 +277,9 @@ T.ItemDelegate {
             indicator = null
         }
     }
-
-    // NOTE: Not using Drag attached properties because we're using DragHelper instead.
-    // Drag doesn't support QIcons for the imageSource, only URLs.
     onDragActiveChanged: if (dragActive) {
         dragStartPosition = Qt.point(x,y)
         dragStartIndex = index
-        // Fixes warning: "Passing incompatible arguments to C++ functions from JavaScript is dangerous and deprecated."
-        //const url = root.url ? root.url : ""
-        KickoffSingleton.dragHelper.startDrag(root, url, decoration)
     } else if (dragStartIndex === index) {
         x = dragStartPosition.x
         y = dragStartPosition.y
