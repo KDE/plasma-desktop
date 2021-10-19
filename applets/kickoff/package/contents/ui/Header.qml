@@ -60,7 +60,7 @@ PlasmaExtras.PlasmoidHeading {
             Layout.maximumWidth: height
             // FIXME: Not using text with display because of RoundButton bugs in plasma-framework
             // See https://bugs.kde.org/show_bug.cgi?id=440022
-            Accessible.name: i18n("Go to user settings")
+            Accessible.name: i18n("Open user settings")
             leftPadding: PlasmaCore.Units.devicePixelRatio
             rightPadding: PlasmaCore.Units.devicePixelRatio
             topPadding: PlasmaCore.Units.devicePixelRatio
