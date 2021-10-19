@@ -6,7 +6,7 @@
 
 import QtQuick 2.11
 import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.6 as Kirigami
+import org.kde.kirigami 2.15 as Kirigami
 import QtQuick.Controls 2.11 as QQC2
 import org.kde.plasma.emoji 1.0
 
@@ -146,6 +146,13 @@ Kirigami.ScrollablePage
             id: mouse
             hoverEnabled: true
             onClicked: reportEmoji()
+        }
+
+        Kirigami.PlaceholderMessage {
+            anchors.centerIn: parent
+            width: parent.width - (Kirigami.Units.largeSpacing * 8)
+            text: i18n("No recent Emojis")
+            visible: emojiView.count === 0 && view.showClearHistoryButton
         }
     }
 }

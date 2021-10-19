@@ -50,7 +50,6 @@ Kirigami.ApplicationWindow
         id: recentAction
         checked: window.pageStack.get(0).title === text
         text: i18n("Recent")
-        enabled: recentEmojiModel.count > 0
 
         icon.name: "document-open-recent-symbolic"
         onTriggered: {
