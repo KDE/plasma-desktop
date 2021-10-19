@@ -48,7 +48,7 @@ PlasmaComponents3.ScrollView {
 
     readonly property bool isVerticalPanel: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
-    readonly property string mprisSourceName: mpris2Source.sourceNameForLauncherUrl(launcherUrl, isGroup ? AppPid : pidParent)
+    readonly property string mprisSourceName: mpris2Source.sourceNameForLauncherUrl(launcherUrl, pidParent)
     readonly property var playerData: mprisSourceName != "" ? mpris2Source.data[mprisSourceName] : 0
     readonly property bool hasPlayer: !!mprisSourceName && !!playerData
 
