@@ -206,10 +206,9 @@ Item {
                 onClicked: KQuickControlsAddons.KCMShell.openSystemSettings("kcm_lookandfeel")
             }
             PlasmaComponents3.ToolButton {
-                property QtObject qAction: plasmoid.globalAction("manage activities")
-                text: qAction.text
-                icon.name: "activities"
-                onClicked: qAction.trigger()
+                text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Configure Display Settings…")
+                icon.name: "preferences-desktop-display"
+                onClicked: KQuickControlsAddons.KCMShell.openSystemSettings("kcm_kscreen")
             }
             PlasmaComponents3.ToolButton {
                 icon.name: "window-close"
