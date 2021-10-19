@@ -228,6 +228,9 @@ Item {
                     Layout.fillWidth: true
                     clearButtonShown: true
                     placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Search…")
+
+                    inputMethodHints: Qt.ImhNoPredictiveText
+
                     onTextChanged: {
                         list.positionViewAtBeginning()
                         list.currentIndex = -1

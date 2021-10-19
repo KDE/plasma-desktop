@@ -308,6 +308,8 @@ FocusScope {
         placeholderText: i18n("Search…")
         clearButtonShown: true
 
+        inputMethodHints: Qt.ImhNoPredictiveText
+
         onTextChanged: {
             runnerModel.query = text;
         }

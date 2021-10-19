@@ -68,6 +68,7 @@ ColumnLayout {
             id: filterPattern
             Kirigami.FormData.label: i18n("File name pattern:")
             enabled: (filterMode.currentIndex > 0)
+            inputMethodHints: Qt.ImhNoPredictiveText
         }
 
         TextField {
@@ -75,6 +76,7 @@ ColumnLayout {
             Kirigami.FormData.label: i18n("File types:")
             enabled: (filterMode.currentIndex > 0)
             placeholderText: i18n("Search…")
+            inputMethodHints: Qt.ImhNoPredictiveText
         }
     }
 
