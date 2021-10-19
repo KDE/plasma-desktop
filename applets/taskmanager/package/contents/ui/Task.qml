@@ -328,7 +328,8 @@ MouseArea {
             anchors.fill: parent
             location: plasmoid.location
 
-            active: !inPopup && !groupDialog.visible && plasmoid.configuration.showToolTips
+            enabled: plasmoid.configuration.showToolTips
+            active: !inPopup && !groupDialog.visible
             interactive: model.IsWindow === true || mainItem.hasPlayer
 
             mainItem: (model.IsWindow === true) ? openWindowToolTipDelegate : pinnedAppToolTipDelegate
