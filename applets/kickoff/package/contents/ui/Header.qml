@@ -172,6 +172,7 @@ PlasmaExtras.PlasmoidHeading {
             clearButtonShown: true
             Accessible.editable: true
             Accessible.searchEdit: true
+            inputMethodHints: Qt.ImhNoPredictiveText
             Binding {
                 target: KickoffSingleton
                 property: "searchField"

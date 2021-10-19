@@ -137,6 +137,8 @@ Item {
 
                 placeholderText: i18n("Type path or URL…")
 
+                inputMethodHints: Qt.ImhNoPredictiveText
+
                 onEnabledChanged: {
                     if (enabled && text != "") {
                         cfg_url = text;

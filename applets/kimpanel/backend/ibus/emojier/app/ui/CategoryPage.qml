@@ -45,6 +45,7 @@ Kirigami.ScrollablePage
             text: view.searchText
             placeholderText: i18n("Search…")
             visible: view.showSearch
+            inputMethodHints: Qt.ImhNoPredictiveText
             onTextChanged: {
                 emojiModel.search = text
                 if (emojiView.currentIndex < 0) {

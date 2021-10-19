@@ -73,6 +73,8 @@ Item {
                 clearButtonShown: true
                 visible: root.showingSearch
 
+                inputMethodHints: Qt.ImhNoPredictiveText
+
                 placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Search…")
 
                 onTextChanged: if (text != "") root.showingSearch = true
