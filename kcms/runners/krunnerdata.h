@@ -16,6 +16,7 @@ class KRunnerSettings;
 
 class KRunnerData : public KCModuleData
 {
+    Q_OBJECT
 public:
     KRunnerData(QObject *parent = nullptr, const QVariantList &args = QVariantList());
 

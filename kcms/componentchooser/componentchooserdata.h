@@ -15,6 +15,7 @@ class ComponentChooser;
 
 class ComponentChooserData : public KCModuleData
 {
+    Q_OBJECT
 public:
     ComponentChooserData(QObject *parent = nullptr, const QVariantList &args = QVariantList());
 
