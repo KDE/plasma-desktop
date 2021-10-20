@@ -1906,8 +1906,12 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
     }
 
     menu->popup(m_menuPosition);
-    connect(menu, &QMenu::aboutToHide, [menu]() {
+    connect(menu, &QMenu::aboutToHide, [this, menu]() {
         menu->deleteLater();
+
+        // Remove the event filter for swapping delete and trash action from the QCoreApplication as it is no longer needed
+        if (RemoveAction *removeAction = qobject_cast<RemoveAction *>(m_actionCollection.action(QStringLiteral("remove"))))
+            QCoreApplication::instance()->removeEventFilter(removeAction);
     });
 }
 
