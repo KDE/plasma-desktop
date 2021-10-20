@@ -16,7 +16,6 @@ add_subdirectory( launch )
 add_subdirectory( landingpage )
 add_subdirectory( keys )
 add_subdirectory( ksmserver )
-add_subdirectory( users )
 
 if (CMAKE_SYSTEM_NAME MATCHES Linux)
    # this one doesn't seem to be very portable, Alex
