@@ -94,7 +94,7 @@ BasePage {
             function onCurrentIndexChanged() {
                 // Only update row index if the condition is met.
                 // The 0 index modelForRow isn't supposed to be used. That's just how it works.
-                if (root.sideBarItem.currentIndex > 0 && sideBarItem.currentItem.model.hasChildren) {
+                if (root.sideBarItem.currentIndex > 0) {
                     appsModelRow = root.sideBarItem.currentIndex
                 }
                 if (root.sideBarItem.currentIndex === 0
