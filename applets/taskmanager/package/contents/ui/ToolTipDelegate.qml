@@ -30,6 +30,7 @@ PlasmaComponents3.ScrollView {
     property string appName
     property int pidParent
     property bool isGroup
+    property bool isLoaderActive: false
 
     property var windows
     readonly property bool isWin: windows !== undefined
@@ -104,8 +105,12 @@ PlasmaComponents3.ScrollView {
 
                         rootIndex: toolTipDelegate.rootIndex
 
-                        delegate: ToolTipInstance {
-                            submodelIndex: tasksModel.makeModelIndex(toolTipDelegate.rootIndex.row, index)
+                        delegate: Loader {
+                            active: toolTipDelegate.isLoaderActive
+                            asynchronous: true
+                            sourceComponent: ToolTipInstance {
+                                submodelIndex: tasksModel.makeModelIndex(toolTipDelegate.rootIndex.row, index)
+                            }
                         }
                     }
                 }
