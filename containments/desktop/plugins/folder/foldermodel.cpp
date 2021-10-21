@@ -2029,14 +2029,6 @@ void FolderModel::deleteSelected()
         return;
     }
 
-    if (!isDeleteCommandShown()) {
-        if (RemoveAction *action = qobject_cast<RemoveAction *>(m_actionCollection.action(QStringLiteral("remove")))) {
-            if (action->proxyAction() != m_actionCollection.action(QStringLiteral("del"))) {
-                return;
-            }
-        }
-    }
-
     if (QAction *action = m_actionCollection.action(QStringLiteral("del"))) {
         if (!action->isEnabled()) {
             return;
