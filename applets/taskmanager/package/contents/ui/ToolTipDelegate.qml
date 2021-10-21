@@ -23,6 +23,9 @@ PlasmaComponents3.ScrollView {
 
     property Item parentTask
     property var rootIndex
+    // hasRootIndex is needed to avoid unnecessary reevaluation of model property in DelegateModel,
+    // because !!toolTipDelegate.rootIndex will not work as expected.
+    readonly property bool hasRootIndex: !!rootIndex
 
     property string appName
     property int pidParent
@@ -97,7 +100,7 @@ PlasmaComponents3.ScrollView {
                 Repeater {
                     id: groupRepeater
                     model: DelegateModel {
-                        model: toolTipDelegate.rootIndex ? tasksModel : null
+                        model: toolTipDelegate.hasRootIndex ? tasksModel : null
 
                         rootIndex: toolTipDelegate.rootIndex
 
