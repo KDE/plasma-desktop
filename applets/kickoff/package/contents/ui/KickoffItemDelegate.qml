@@ -49,9 +49,6 @@ T.ItemDelegate {
     property bool isSearchResult: false
     readonly property bool menuClosed: ActionMenu.menu.status == 3 // corresponds to DialogStatus.Closed
 
-    property point dragStartPosition: Qt.point(x,y)
-    property int dragStartIndex: index
-    readonly property alias dragActive: mouseArea.drag.active
     property bool dragEnabled: enabled && !root.isCategory && !root.view.interactive
         && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
 
@@ -84,7 +81,7 @@ T.ItemDelegate {
 
     // The default Z value for delegates is 1. The default Z value for the section delegate is 2.
     // The highlight gets a value of 3 while the drag is active and then goes back to the default value of 0.
-    z: dragActive ? 4 : 1
+    z: Drag.active ? 4 : 1
 
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
                             implicitContentWidth + leftPadding + rightPadding)
@@ -202,12 +199,9 @@ T.ItemDelegate {
         acceptedButtons: Qt.LeftButton | Qt.RightButton
         drag {
             axis: Drag.XAndYAxis
-            target: root.dragEnabled ? root : undefined
-            minimumX: 0
-            maximumX: root.view ? Math.min(root.view.contentWidth - root.width, root.view.availableWidth - root.width) : root.x
-            minimumY: 0
-            maximumY: root.view ? Math.min(root.view.contentHeight - root.height, root.view.availableHeight - root.height) : root.y
+            target: root.dragEnabled ? dragItem : undefined
         }
+        Item { id: dragItem }
         // Using onPositionChanged instead of onEntered to prevent changing
         // categories while scrolling with the mouse wheel.
         onPositionChanged: {
@@ -278,12 +272,5 @@ T.ItemDelegate {
         } else {
             indicator = null
         }
-    }
-    onDragActiveChanged: if (dragActive) {
-        dragStartPosition = Qt.point(x,y)
-        dragStartIndex = index
-    } else if (dragStartIndex === index) {
-        x = dragStartPosition.x
-        y = dragStartPosition.y
     }
 }
