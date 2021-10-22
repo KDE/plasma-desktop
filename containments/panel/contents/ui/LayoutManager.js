@@ -168,9 +168,14 @@ function insertAtCoordinates(item, x, y) {
         if (root.isHorizontal) {
             for (var i = 0; i < layout.children.length; ++i) {
                 var candidate = layout.children[i];
-                if (x >= candidate.x && x < candidate.x + candidate.width + layout.rowSpacing) {
-                    child = candidate;
-                    break;
+                // It must be at on the same or a higner x position as the candidate
+                if (x >= candidate.x) {
+                    // Taking the candidate with & rowSpacing into account, it must be smaller
+                    const totalXofCondidate= candidate.x + candidate.width + layout.rowSpacing * 2
+                    if (x <= totalXofCondidate) {
+                        child = candidate;
+                        break;
+                    }
                 }
             }
         } else {
