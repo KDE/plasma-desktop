@@ -29,18 +29,18 @@ import FingerprintModel 1.0
 
 Kirigami.OverlaySheet {
     id: fingerprintRoot
-    
+
     property var account
     property var fingerprintModel: kcm.fingerprintModel
     property string currentFinger
-    
+
     enum DialogState {
         FingerprintList,
         PickFinger,
         Enrolling,
         EnrollComplete
     }
-    
+
     function openAndClear() {
         fingerprintModel.switchUser(account.name == kcm.userModel.getLoggedInUser().name ? "" : account.name);
         this.open();
@@ -51,17 +51,17 @@ Kirigami.OverlaySheet {
             fingerprintModel.stopEnrolling();
         }
     }
-    
+
     header: Kirigami.Heading {
         level: 2
         text: i18n("Configure Fingerprints")
     }
-    
+
     footer: RowLayout {
         Item {
             Layout.fillWidth: true
         }
-        
+
         // FingerprintList State
         QQC2.Button {
             text: i18n("Clear Fingerprints")
@@ -77,7 +77,7 @@ Kirigami.OverlaySheet {
             icon.name: "list-add"
             onClicked: fingerprintModel.dialogState = FingerprintDialog.DialogState.PickFinger
         }
-        
+
         // PickFinger State
         QQC2.Button {
             text: i18n("Cancel")
@@ -94,7 +94,7 @@ Kirigami.OverlaySheet {
                 fingerprintModel.startEnrolling(pickFingerBox.currentValue);
             }
         }
-        
+
         // Enrolling State
         QQC2.Button {
             text: i18n("Cancel")
@@ -102,7 +102,7 @@ Kirigami.OverlaySheet {
             icon.name: "dialog-cancel"
             onClicked: fingerprintModel.stopEnrolling();
         }
-        
+
         // EnrollComplete State
         QQC2.Button {
             text: i18n("Done")
@@ -119,20 +119,20 @@ Kirigami.OverlaySheet {
         Layout.leftMargin: Kirigami.Units.smallSpacing
         Layout.rightMargin: Kirigami.Units.smallSpacing
         height: Kirigami.Units.gridUnit * 12
-        
+
         ColumnLayout {
             id: enrollFeedback
             spacing: Kirigami.Units.largeSpacing * 2
             visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.Enrolling || fingerprintModel.dialogState === FingerprintDialog.DialogState.EnrollComplete
             anchors.fill: parent
-            
+
             Kirigami.Heading {
                 level: 2
                 text: i18n("Enrolling Fingerprint")
                 Layout.alignment: Qt.AlignHCenter
                 visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.Enrolling
             }
-            
+
             QQC2.Label {
                 text: i18n("Please repeatedly " + fingerprintModel.scanType + " your " + fingerprintRoot.currentFinger.toLowerCase() + " on the fingerprint sensor.")
                 Layout.alignment: Qt.AlignHCenter
@@ -141,7 +141,7 @@ Kirigami.OverlaySheet {
                 Layout.maximumWidth: parent.width
                 visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.Enrolling
             }
-            
+
             Kirigami.Heading {
                 level: 2
                 text: i18n("Finger Enrolled")
@@ -151,12 +151,12 @@ Kirigami.OverlaySheet {
 
             // reset from back from whatever color was used before
             onVisibleChanged: progressCircle.colorTimer.restart();
-            
+
             // progress circle
             FingerprintProgressCircle {
                 id: progressCircle
             }
-            
+
             QQC2.Label {
                 text: fingerprintModel.enrollFeedback
                 wrapMode: Text.Wrap
@@ -164,26 +164,26 @@ Kirigami.OverlaySheet {
                 Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
             }
         }
-        
+
         ColumnLayout {
             id: pickFinger
             visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.PickFinger
             anchors.centerIn: parent
             spacing: Kirigami.Units.largeSpacing
-            
+
             Kirigami.Icon {
                 source: "fingerprint"
                 implicitHeight: Kirigami.Units.iconSizes.huge
                 implicitWidth: Kirigami.Units.iconSizes.huge
                 Layout.alignment: Qt.AlignHCenter
             }
-            
+
             Kirigami.Heading {
                 level: 2
                 text: i18n("Pick a finger to enroll")
                 Layout.alignment: Qt.AlignHCenter
             }
-            
+
             QQC2.ComboBox {
                 id: pickFingerBox
                 model: fingerprintModel.availableFingersToEnroll
@@ -193,13 +193,13 @@ Kirigami.OverlaySheet {
                 onActivated: fingerprintRoot.currentFinger = currentText
             }
         }
-        
+
         ColumnLayout {
             id: fingerprints
             spacing: Kirigami.Units.smallSpacing
             visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
             anchors.fill: parent
-            
+
             Kirigami.InlineMessage {
                 id: errorMessage
                 type: Kirigami.MessageType.Error
@@ -213,7 +213,7 @@ Kirigami.OverlaySheet {
                     }
                 ]
             }
-            
+
             ListView {
                 id: fingerprintsList
                 model: kcm.fingerprintModel.deviceFound ? fingerprintModel.enrolledFingerprints : 0
@@ -254,7 +254,7 @@ Kirigami.OverlaySheet {
                         //}
                     ]
                 }
-                
+
                 Kirigami.PlaceholderMessage {
                     anchors.centerIn: parent
                     width: parent.width - (Kirigami.Units.largeSpacing * 4)

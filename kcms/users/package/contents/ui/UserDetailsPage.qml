@@ -171,7 +171,7 @@ SimpleKCM {
                     changePassword.openAndClear()
                 }
             }
-            
+
             QQC2.Button {
                 flat: false
                 visible: kcm.fingerprintModel.deviceFound
