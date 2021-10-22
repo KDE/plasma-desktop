@@ -172,17 +172,6 @@ SimpleKCM {
                 }
             }
 
-            QQC2.Button {
-                flat: false
-                visible: kcm.fingerprintModel.deviceFound
-                text: i18n("Fingerprints")
-                icon.name: "fingerprint-gui"
-                onClicked: {
-                    fingerprintDialog.account = user;
-                    fingerprintDialog.openAndClear();
-                }
-            }
-
             Item {
                 Layout.preferredHeight: deleteUser.height
             }
@@ -218,6 +207,31 @@ SimpleKCM {
                 icon.name: "edit-delete"
                 onClicked: deleteMenu.open()
             }
+        }
+
+        QQC2.Button {
+            Layout.topMargin: deleteUser.height
+            Layout.alignment: Qt.AlignHCenter
+            flat: false
+            visible: kcm.fingerprintModel.deviceFound
+            text: i18n("Configure Fingerprint Authentication…")
+            icon.name: "fingerprint-gui"
+            onClicked: {
+                fingerprintDialog.account = user;
+                fingerprintDialog.openAndClear();
+            }
+        }
+        QQC2.Label {
+            Layout.fillWidth: true
+            Layout.leftMargin: Kirigami.Units.largeSpacing * 2
+            Layout.rightMargin: Kirigami.Units.largeSpacing * 2
+
+            visible: kcm.fingerprintModel.deviceFound
+
+            text: xi18nc("@info", "Fingerprints can be used in place of a password when unlocking the screen and providing administrator permissions to applications and command-line programs that request them.<nl/><nl/>Logging into the system with your fingerprint is not yet supported.")
+
+            font: Kirigami.Theme.smallFont
+            wrapMode: Text.Wrap
         }
     }
 
