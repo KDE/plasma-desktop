@@ -73,7 +73,7 @@ void KWinWaylandBackend::findTouchpads()
         const QVariant reply = deviceIface.property("touchpad");
         if (reply.isValid() && reply.toBool()) {
             KWinWaylandTouchpad *tp = new KWinWaylandTouchpad(sn);
-            if (!tp->init()) {
+            if (!tp->init() || !tp->getConfig()) {
                 qCCritical(KCM_TOUCHPAD) << "Error on creating touchpad object" << sn;
                 m_errorString = i18n("Critical error on reading fundamental device infos for touchpad %1.", sn);
                 return;
