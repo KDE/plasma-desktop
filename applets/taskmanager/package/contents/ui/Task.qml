@@ -336,17 +336,8 @@ MouseArea {
 
             onContainsMouseChanged:  {
                 if (containsMouse) {
-                    // Only assign different values to mainItem to avoid unnecessary reevaluation
-                    if (mainItem.parentTask !== task) {
-                        mainItem.parentTask = task;
-                        mainItem.isLoaderActive = false;
-                    }
-
-                    let rootIndex = tasksModel.makeModelIndex(itemIndex, -1);
-
-                    if (mainItem.rootIndex !== rootIndex) {
-                        mainItem.rootIndex = rootIndex;
-                    }
+                    mainItem.parentTask = task;
+                    mainItem.rootIndex = tasksModel.makeModelIndex(itemIndex, -1);
 
                     mainItem.appName = Qt.binding(() => model.AppName);
                     mainItem.pidParent = Qt.binding(() => model.AppPid !== undefined ? model.AppPid : 0);
@@ -367,9 +358,6 @@ MouseArea {
                     mainItem.smartLauncherCount = Qt.binding(() => mainItem.smartLauncherCountVisible ? task.smartLauncherItem.count : 0);
                 }
             }
-
-            // For grouped tooltips, show highlight before ToolTipInstance starts loading to make user feel less unresponsive
-            onAboutToShow: if (mainItem.isGroup) mainItem.isLoaderActive = active
         }
     }
 

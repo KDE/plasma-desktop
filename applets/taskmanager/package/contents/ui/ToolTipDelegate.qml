@@ -7,8 +7,9 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.8
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
+import QtQuick.Window 2.0
 import QtGraphicalEffects 1.0
 import QtQml.Models 2.2
 
@@ -18,7 +19,7 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 import org.kde.taskmanager 0.1 as TaskManager
 
-PlasmaComponents3.ScrollView {
+Loader {
     id: toolTipDelegate
 
     property Item parentTask
@@ -30,7 +31,6 @@ PlasmaComponents3.ScrollView {
     property string appName
     property int pidParent
     property bool isGroup
-    property bool isLoaderActive: false
 
     property var windows
     readonly property bool isWin: windows !== undefined
@@ -73,47 +73,44 @@ PlasmaComponents3.ScrollView {
 
     property int textWidth: PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 20
 
-    Loader {
-        id: contentItem
+    active: rootIndex !== undefined
+    asynchronous: true
 
-        active: toolTipDelegate.rootIndex !== undefined
-        asynchronous: true
+    sourceComponent: isGroup ? groupToolTip : singleTooltip
 
-        sourceComponent: isGroup ? groupToolTip : singleTooltip
+    Component {
+        id: singleTooltip
 
-        Component {
-            id: singleTooltip
-
-            ToolTipInstance {
-                submodelIndex: toolTipDelegate.rootIndex
-            }
+        ToolTipInstance {
+            submodelIndex: toolTipDelegate.rootIndex
         }
+    }
 
-        Component {
-            id: groupToolTip
+    Component {
+        id: groupToolTip
 
-            Grid {
-                rows: !isVerticalPanel
-                columns: isVerticalPanel
-                flow: isVerticalPanel ? Grid.TopToBottom : Grid.LeftToRight
-                spacing: PlasmaCore.Units.largeSpacing
+        PlasmaComponents3.ScrollView {
+            // 2 * PlasmaCore.Units.smallSpacing is for the margin of tooltipDialog
+            implicitWidth: leftPadding + rightPadding + Math.min(Screen.desktopAvailableWidth - 2 * PlasmaCore.Units.smallSpacing, contentItem.contentItem.childrenRect.width)
+            implicitHeight: bottomPadding + Math.min(Screen.desktopAvailableHeight - 2 * PlasmaCore.Units.smallSpacing, contentItem.contentItem.childrenRect.height)
 
-                Repeater {
-                    id: groupRepeater
-                    model: DelegateModel {
-                        model: toolTipDelegate.hasRootIndex ? tasksModel : null
+            ListView {
+                id: groupToolTipListView
 
-                        rootIndex: toolTipDelegate.rootIndex
+                model: DelegateModel {
+                    model: toolTipDelegate.hasRootIndex ? tasksModel : null
 
-                        delegate: Loader {
-                            active: toolTipDelegate.isLoaderActive
-                            asynchronous: true
-                            sourceComponent: ToolTipInstance {
-                                submodelIndex: tasksModel.makeModelIndex(toolTipDelegate.rootIndex.row, index)
-                            }
-                        }
+                    rootIndex: toolTipDelegate.rootIndex
+                    onRootIndexChanged: groupToolTipListView.positionViewAtBeginning() // Fix a visual glitch (when the mouse moves from a tooltip with a moved scrollbar to another tooltip without a scrollbar)
+
+                    delegate: ToolTipInstance {
+                        submodelIndex: tasksModel.makeModelIndex(toolTipDelegate.rootIndex.row, index)
                     }
                 }
+
+                orientation: isVerticalPanel ? ListView.Vertical : ListView.Horizontal
+                reuseItems: true
+                spacing: PlasmaCore.Units.largeSpacing
             }
         }
     }
