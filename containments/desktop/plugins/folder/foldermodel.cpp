@@ -709,7 +709,8 @@ void FolderModel::run(int row)
     // otherwise ask for security reasons. We also don't use the targetUrl()
     // from above since we don't want the resolved /home/foo/Desktop URL.
     run->setShowScriptExecutionPrompt(item.url().scheme() != QLatin1String("desktop")
-                                      || item.url().adjusted(QUrl::RemoveFilename).path() != QLatin1String("/"));
+                                      || item.url().adjusted(QUrl::RemoveFilename).path() != QLatin1String("/")
+                                      || !item.isDesktopFile());
 }
 
 void FolderModel::runSelected()
