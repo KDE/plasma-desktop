@@ -103,38 +103,37 @@ SimpleKCM {
             type: Kirigami.MessageType.Error
             Layout.fillWidth: true
         }
-        RowLayout {
-            Layout.topMargin: Kirigami.Units.gridUnit
+
+        Kirigami.Avatar {
+            readonly property int size: 6 * Kirigami.Units.gridUnit
+            Layout.preferredWidth: size
+            Layout.preferredHeight: size
             Layout.alignment: Qt.AlignHCenter
+            Layout.topMargin: Kirigami.Units.largeSpacing
 
-            Kirigami.Avatar {
-                source: usersDetailPage.user.face
-                cache: false
-                name: user.realName
+            source: usersDetailPage.user.face
+            cache: false
+            name: user.realName
 
-                readonly property int size: 6 * Kirigami.Units.gridUnit
-
-                Layout.preferredWidth: size
-                Layout.preferredHeight: size
-
-                actions {
-                    main: Kirigami.Action {
-                        text: i18n("Change avatar")
-                        onTriggered: {
-                            picturesSheet.open()
-                            stackSwitcher.forceActiveFocus()
-                        }
+            actions {
+                main: Kirigami.Action {
+                    text: i18n("Change avatar")
+                    onTriggered: {
+                        picturesSheet.open()
+                        stackSwitcher.forceActiveFocus()
                     }
                 }
             }
+        }
+
+        Kirigami.FormLayout {
             QQC2.TextField  {
                 id: realNametextField
                 focus: true
                 text: user.realName
-                placeholderText: i18nc("Example name", "John Doe")
+                Kirigami.FormData.label: i18n("Name:")
             }
-        }
-        Kirigami.FormLayout {
+
             QQC2.TextField {
                 id: userNameField
                 focus: true
