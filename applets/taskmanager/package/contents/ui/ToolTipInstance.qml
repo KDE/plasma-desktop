@@ -91,7 +91,7 @@ ColumnLayout {
                 maximumLineCount: 1
                 Layout.fillWidth: true
                 elide: Text.ElideRight
-                text: (!hasPlayer || !title.includes(songText.text)) ? title : ""
+                text: (!hasPlayer || !title.includes(track || "")) ? title : ""
                 opacity: 0.75
                 visible: title.length !== 0 && title !== appNameHeading.text
                 textFormat: Text.PlainText
@@ -255,89 +255,94 @@ ColumnLayout {
         }
     }
 
-    // Player controls row
-    RowLayout {
+    // Player controls row, load on demand so group tooltips could be loaded faster
+    Loader {
+        active: hasPlayer && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
+        asynchronous: true
+        visible: active
+        Layout.fillWidth: true
         Layout.maximumWidth: header.Layout.maximumWidth
         // Match margins of header
         Layout.leftMargin: isWin ? 0 : PlasmaCore.Units.gridUnit / 2
         Layout.rightMargin: isWin ? 0 : PlasmaCore.Units.gridUnit / 2
 
-        visible: hasPlayer
-        enabled: canControl
+        sourceComponent: RowLayout {
+            enabled: canControl
 
-        ColumnLayout {
-            Layout.fillWidth: true
-            Layout.topMargin: PlasmaCore.Units.smallSpacing
-            Layout.bottomMargin: PlasmaCore.Units.smallSpacing
-            Layout.rightMargin: isWin ? PlasmaCore.Units.smallSpacing : PlasmaCore.Units.largeSpacing
-            spacing: 0
-
-             ScrollableTextWrapper {
-                id: songTextWrapper
-
+            ColumnLayout {
                 Layout.fillWidth: true
-                Layout.preferredHeight: songText.height
-                implicitWidth: songText.implicitWidth
+                Layout.topMargin: PlasmaCore.Units.smallSpacing
+                Layout.bottomMargin: PlasmaCore.Units.smallSpacing
+                Layout.rightMargin: isWin ? PlasmaCore.Units.smallSpacing : PlasmaCore.Units.largeSpacing
+                spacing: 0
 
-                PlasmaComponents3.Label {
-                    id: songText
-                    parent: songTextWrapper
-                    width: parent.width
-                    height: undefined
-                    lineHeight: 1
-                    maximumLineCount: artistText.visible? 1 : 2
-                    wrapMode: Text.NoWrap
-                    elide: parent.state ? Text.ElideNone : Text.ElideRight
-                    text: track || ""
-                    textFormat: Text.PlainText
-                }
-             }
+                 ScrollableTextWrapper {
+                    id: songTextWrapper
 
-            ScrollableTextWrapper {
-                id: artistTextWrapper
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: songText.height
+                    implicitWidth: songText.implicitWidth
 
-                Layout.fillWidth: true
-                Layout.preferredHeight: artistText.height
-                implicitWidth: artistText.implicitWidth
-                visible: artistText.text !== ""
+                    PlasmaComponents3.Label {
+                        id: songText
+                        parent: songTextWrapper
+                        width: parent.width
+                        height: undefined
+                        lineHeight: 1
+                        maximumLineCount: artistText.visible? 1 : 2
+                        wrapMode: Text.NoWrap
+                        elide: parent.state ? Text.ElideNone : Text.ElideRight
+                        text: track || ""
+                        textFormat: Text.PlainText
+                    }
+                 }
 
-                PlasmaExtras.DescriptiveLabel {
-                    id: artistText
-                    parent: artistTextWrapper
-                    width: parent.width
-                    height: undefined
-                    wrapMode: Text.NoWrap
-                    lineHeight: 1
-                    elide: parent.state ? Text.ElideNone : Text.ElideRight
-                    text: artist || ""
-                    font: PlasmaCore.Theme.smallestFont
-                    textFormat: Text.PlainText
+                ScrollableTextWrapper {
+                    id: artistTextWrapper
+
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: artistText.height
+                    implicitWidth: artistText.implicitWidth
+                    visible: artistText.text !== ""
+
+                    PlasmaExtras.DescriptiveLabel {
+                        id: artistText
+                        parent: artistTextWrapper
+                        width: parent.width
+                        height: undefined
+                        wrapMode: Text.NoWrap
+                        lineHeight: 1
+                        elide: parent.state ? Text.ElideNone : Text.ElideRight
+                        text: artist || ""
+                        font: PlasmaCore.Theme.smallestFont
+                        textFormat: Text.PlainText
+                    }
                 }
             }
-        }
 
-        PlasmaComponents3.ToolButton {
-            enabled: canGoBack
-            icon.name: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
-            onClicked: mpris2Source.goPrevious(mprisSourceName)
-        }
+            PlasmaComponents3.ToolButton {
+                enabled: canGoBack
+                icon.name: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
+                onClicked: mpris2Source.goPrevious(mprisSourceName)
+            }
 
-        PlasmaComponents3.ToolButton {
-            enabled: playing ? canPause : canPlay
-            icon.name: playing ? "media-playback-pause" : "media-playback-start"
-            onClicked: {
-                if (!playing) {
-                    mpris2Source.play(mprisSourceName);
-                } else {
-                    mpris2Source.pause(mprisSourceName);
+            PlasmaComponents3.ToolButton {
+                enabled: playing ? canPause : canPlay
+                icon.name: playing ? "media-playback-pause" : "media-playback-start"
+                onClicked: {
+                    if (!playing) {
+                        mpris2Source.play(mprisSourceName);
+                    } else {
+                        mpris2Source.pause(mprisSourceName);
+                    }
                 }
             }
-        }
 
-        PlasmaComponents3.ToolButton {
-            enabled: canGoNext
-            icon.name: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
-            onClicked: mpris2Source.goNext(mprisSourceName)
+            PlasmaComponents3.ToolButton {
+                enabled: canGoNext
+                icon.name: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
+                onClicked: mpris2Source.goNext(mprisSourceName)
+            }
         }
     }
 
