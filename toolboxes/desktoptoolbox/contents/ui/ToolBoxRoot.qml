@@ -41,8 +41,8 @@ Item {
     LayoutMirroring.enabled: (Qt.application.layoutDirection === Qt.RightToLeft)
     LayoutMirroring.childrenInherit: true
 
-    ToolBoxButton {
-        id: toolBoxButton
+    ToolBoxContent {
+        id: toolBoxContent
         Component.onCompleted: {
             placeToolBox(plasmoid.configuration.ToolBoxButtonState);
         }
@@ -72,27 +72,27 @@ Item {
         switch (ts) {
         case "top":
             ty = main.y;
-            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxButton.width, toolBoxButton.height);
+            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
             break;
         case "bottom":
-            ty = main.height + main.y - toolBoxButton.height;
-            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxButton.width, toolBoxButton.height);
+            ty = main.height + main.y - toolBoxContent.height;
+            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
             break;
         case "bottomcenter":
-            tx = main.width / 2 - toolBoxButton.width / 2;
-            ty = main.height + main.y - toolBoxButton.height;
-            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxButton.width, toolBoxButton.height);
+            tx = main.width / 2 - toolBoxContent.width / 2;
+            ty = main.height + main.y - toolBoxContent.height;
+            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
             break;
         case "topcenter":
         default:
-            tx = main.width / 2 - toolBoxButton.width / 2;
+            tx = main.width / 2 - toolBoxContent.width / 2;
             ty = main.y;
-            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxButton.width, toolBoxButton.height);
+            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
             break;
         }
         //print("XXXY Setting toolbox to: " + ts + " " + tx + "x" + ty + " screen: " + main.width+ "x" + main.height+"");
 
-        toolBoxButton.x = pos.x;
-        toolBoxButton.y = pos.y;
+        toolBoxContent.x = pos.x;
+        toolBoxContent.y = pos.y;
     }
 }

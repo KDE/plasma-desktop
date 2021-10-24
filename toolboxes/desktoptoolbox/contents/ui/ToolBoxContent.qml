@@ -14,7 +14,7 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.plasma.plasmoid 2.0
 
 Item {
-    id: toolBoxButton
+    id: toolBoxContent
 
     transform: Translate {
         y: plasmoid.editMode ? 0
@@ -77,31 +77,31 @@ Item {
     }
     function updateState() {
         var container = main;
-        //print("    w: " + container.width +"x"+container.height+" : "+x+"/"+y+" tbw: " + toolBoxButton.width);
+        //print("    w: " + container.width +"x"+container.height+" : "+x+"/"+y+" tbw: " + toolBoxContent.width);
 
-        var x = toolBoxButton.x - main.x;
-        var y = toolBoxButton.y - main.y;
+        var x = toolBoxContent.x - main.x;
+        var y = toolBoxContent.y - main.y;
 
         var cornerSnap = iconWidth
 
         //top
         if (y + height / 2 < container.height / 2) {
             if (Math.abs(container.width/2 - (x + width/2)) < PlasmaCore.Units.gridUnit) {
-                toolBoxButton.state = "topcenter";
+                toolBoxContent.state = "topcenter";
             } else {
-                toolBoxButton.state = "top";
+                toolBoxContent.state = "top";
             }
         //bottom
         } else {
             if (Math.abs(container.width/2 - (x + height/2)) < PlasmaCore.Units.gridUnit) {
-                toolBoxButton.state = "bottomcenter";
+                toolBoxContent.state = "bottomcenter";
             } else {
-                toolBoxButton.state = "bottom";
+                toolBoxContent.state = "bottom";
             }
         }
 
         if (!buttonMouse.pressed) {
-            main.placeToolBox(toolBoxButton.state);
+            main.placeToolBox(toolBoxContent.state);
         }
 
         stateTimer.running = false;
@@ -135,9 +135,9 @@ Item {
 
         drag {
             filterChildren: true
-            target: main.Plasmoid.immutable ? undefined : toolBoxButton
+            target: main.Plasmoid.immutable ? undefined : toolBoxContent
             minimumX: 0
-            maximumX: container.width - toolBoxButton.width
+            maximumX: container.width - toolBoxContent.width
             minimumY: 0
             maximumY: container.height
         }
@@ -145,34 +145,34 @@ Item {
         hoverEnabled: true
 
         onPressed: {
-            pressedX = toolBoxButton.x
-            pressedY = toolBoxButton.y
+            pressedX = toolBoxContent.x
+            pressedY = toolBoxContent.y
         }
         onPositionChanged: {
-            if (pressed && (Math.abs(toolBoxButton.x - pressedX) > iconSize ||
-                Math.abs(toolBoxButton.y - pressedY) > iconSize)) {
+            if (pressed && (Math.abs(toolBoxContent.x - pressedX) > iconSize ||
+                Math.abs(toolBoxContent.y - pressedY) > iconSize)) {
                 dragging = true;
             }
 
             // Center snapping X
             if (snapX && Math.abs(snapStartX - mouse.x) > PlasmaCore.Units.gridUnit) {
-                toolBoxButton.anchors.horizontalCenter = undefined;
+                toolBoxContent.anchors.horizontalCenter = undefined;
                 snapX = false;
-            } else if (!snapX && Math.abs(main.width/2 - (toolBoxButton.x + toolBoxButton.width/2)) < PlasmaCore.Units.gridUnit) {
-                toolBoxButton.anchors.horizontalCenter = main.horizontalCenter;
+            } else if (!snapX && Math.abs(main.width/2 - (toolBoxContent.x + toolBoxContent.width/2)) < PlasmaCore.Units.gridUnit) {
+                toolBoxContent.anchors.horizontalCenter = main.horizontalCenter;
                 snapStartX = mouse.x;
                 snapX = true;
             }
         }
 
         onReleased: {
-            toolBoxButton.anchors.horizontalCenter = undefined;
-            toolBoxButton.anchors.verticalCenter = undefined;
+            toolBoxContent.anchors.horizontalCenter = undefined;
+            toolBoxContent.anchors.verticalCenter = undefined;
             snapX = false;
-            main.Plasmoid.configuration.ToolBoxButtonState = toolBoxButton.state;
-            main.Plasmoid.configuration.ToolBoxButtonX = toolBoxButton.x;
-            main.Plasmoid.configuration.ToolBoxButtonY = toolBoxButton.y;
-            //print("Saved coordinates for ToolBox in config: " + toolBoxButton.x + ", " +toolBoxButton.x);
+            main.Plasmoid.configuration.ToolBoxButtonState = toolBoxContent.state;
+            main.Plasmoid.configuration.ToolBoxButtonX = toolBoxContent.x;
+            main.Plasmoid.configuration.ToolBoxButtonY = toolBoxContent.y;
+            //print("Saved coordinates for ToolBox in config: " + toolBoxContent.x + ", " +toolBoxContent.x);
             if (dragging) {
                 main.placeToolBox();
             }
