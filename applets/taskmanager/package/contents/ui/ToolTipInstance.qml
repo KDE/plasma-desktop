@@ -10,6 +10,7 @@
 
 import QtQuick 2.6
 import QtQuick.Layouts 1.1
+import QtQuick.Window 2.15
 import QtGraphicalEffects 1.0
 import QtQml.Models 2.2
 
@@ -19,6 +20,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
+import org.kde.taskmanager 0.1 as TaskManager
 
 ColumnLayout {
     property var submodelIndex
@@ -158,41 +160,62 @@ ColumnLayout {
             pressed: hoverHandler.containsPress
         }
 
-        PlasmaCore.WindowThumbnail {
-            id: x11Thumbnail
-
-            anchors.fill: hoverHandler
-            // Indent a little bit so that neither the thumbnail nor the drop
-            // shadow can cover up the highlight
-            anchors.margins: PlasmaCore.Units.smallSpacing * 2
-
-
-            visible: !albumArtImage.visible && !thumbnailSourceItem.isMinimized && Number.isInteger(thumbnailSourceItem.winId)
-            winId: Number.isInteger(thumbnailSourceItem.winId) ? thumbnailSourceItem.winId : 0
-        }
-
         Loader {
-            id: pipeWireLoader
+            id: thumbnailLoader
+            active: !albumArtImage.visible && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
+            asynchronous: true
+            visible: active
             anchors.fill: hoverHandler
             // Indent a little bit so that neither the thumbnail nor the drop
             // shadow can cover up the highlight
             anchors.margins: PlasmaCore.Units.smallSpacing * 2
 
-            active: !albumArtImage.visible && !Number.isInteger(thumbnailSourceItem.winId)
+            sourceComponent: Number.isInteger(thumbnailSourceItem.winId) ? (thumbnailSourceItem.isMinimized ? iconItem : x11Thumbnail) : pipeWireThumbnail
 
-            //In a loader since we might not have PipeWire available yet
-            source: "PipeWireThumbnail.qml"
+            Component {
+                id: x11Thumbnail
+
+                PlasmaCore.WindowThumbnail {
+                    winId: thumbnailSourceItem.winId
+                }
+            }
+
+            Component {
+                id: pipeWireThumbnail
+
+                TaskManager.PipeWireSourceItem {
+                    visible: waylandItem.nodeId > 0
+                    nodeId: waylandItem.nodeId
+
+                    TaskManager.ScreencastingRequest {
+                        id: waylandItem
+                        uuid: toolTipDelegate.Window.visibility === Window.Hidden ? "" : thumbnailSourceItem.winId
+                    }
+                }
+            }
+
+            // when minimized, we don't have a preview on X11, so show the icon
+            Component {
+                id: iconItem
+
+                PlasmaCore.IconItem {
+                    source: icon
+                    animated: false
+                    usesPlasmaTheme: false
+                    visible: valid
+                }
+            }
         }
 
         DropShadow {
-            anchors.fill: pipeWireLoader.active ? pipeWireLoader : x11Thumbnail
-            visible: pipeWireLoader.active ? pipeWireLoader.item.visible : x11Thumbnail.visible
+            anchors.fill: thumbnailLoader
+            visible: thumbnailLoader.visible && !(Number.isInteger(thumbnailSourceItem.winId) && thumbnailSourceItem.isMinimized)
             horizontalOffset: 0
             verticalOffset: Math.round(3 * PlasmaCore.Units.devicePixelRatio)
             radius: Math.round(8.0 * PlasmaCore.Units.devicePixelRatio)
             samples: Math.round(radius * 1.5)
             color: "Black"
-            source: pipeWireLoader.active ? pipeWireLoader.item : x11Thumbnail
+            source: thumbnailLoader.item
         }
 
         Loader {
@@ -233,17 +256,6 @@ ColumnLayout {
             source: albumArt
             fillMode: Image.PreserveAspectFit
             visible: available
-        }
-
-        // when minimized, we don't have a preview on X11, so show the icon
-        PlasmaCore.IconItem {
-            width: parent.width
-            height: thumbnailSourceItem.height
-            anchors.horizontalCenter: parent.horizontalCenter
-            source: thumbnailSourceItem.isMinimized && !albumArtImage.visible && Number.isInteger(thumbnailSourceItem.winId) ? icon : ""
-            animated: false
-            usesPlasmaTheme: false
-            visible: valid && !pipeWireLoader.active
         }
 
         ToolTipWindowMouseArea {
