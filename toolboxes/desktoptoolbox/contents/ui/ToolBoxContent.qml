@@ -195,6 +195,19 @@ Item {
                 onClicked: qAction.trigger()
             }
             PlasmaComponents3.ToolButton {
+                // FIXME: "add panel" does not seem to be available
+                property QtObject qAction: plasmoid.action("add panel")
+                text: qAction.text
+                icon.name: "list-add"
+                onClicked: console.warn("ACTIONS: " + plasmoid.actions);
+                //onClicked: panelsMenu.open(0, height);
+
+                PlasmaComponents.ModelContextMenu {
+                    id: panelsMenu
+                    model: parent.qAction.menu.actions
+                }
+            }
+            PlasmaComponents3.ToolButton {
                 property QtObject qAction: plasmoid.action("configure")
                 text: qAction.text
                 icon.name: "preferences-desktop-wallpaper"
