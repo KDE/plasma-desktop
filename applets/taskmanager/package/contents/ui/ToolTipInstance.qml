@@ -195,32 +195,25 @@ ColumnLayout {
             source: pipeWireLoader.active ? pipeWireLoader.item : x11Thumbnail
         }
 
-        ShaderEffect {
-            id: albumArtBackground
-            readonly property Image source: albumArtImage
+        Loader {
+            active: albumArtImage.visible && albumArtImage.status === Image.Ready && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
+            asynchronous: true
+            visible: active
+            anchors.centerIn: hoverHandler
 
-            anchors.centerIn: parent
-            visible: source.available
-            layer.enabled: true
-            opacity: 0.25
-            layer.effect: FastBlur {
-                source: albumArtBackground
-                anchors.fill: source
-                radius: 30
-            }
-            // use State to avoid unnecessary reevaluation of width and height
-            // otherwise the size will be reevaluated many times when isGroup is true
-            states: State {
-                name: "albumArtImageReady"
-                // paintedWidth and paintedHeight become positive when image is ready
-                when: albumArtImage.available && albumArtImage.status === Image.Ready
-                PropertyChanges {
-                    target: albumArtBackground
-                    // set explicit to true to further avoid unnecessary reevaluation of size
-                    explicit: true
-                    // manual implementation of Image.PreserveAspectCrop
-                    width: (source.paintedWidth / source.paintedHeight) <= (parent.width / parent.height) ? parent.width : parent.height * (source.paintedWidth / source.paintedHeight)
-                    height: (source.paintedWidth / source.paintedHeight) <= (parent.width / parent.height) ? parent.width * (source.paintedHeight / source.paintedWidth) : parent.height
+            sourceComponent: ShaderEffect {
+                id: albumArtBackground
+                readonly property Image source: albumArtImage
+
+                // Manual implementation of Image.PreserveAspectCrop
+                width: (source.paintedWidth / source.paintedHeight) <= (hoverHandler.width / hoverHandler.height) ? hoverHandler.width : hoverHandler.height * (source.paintedWidth / source.paintedHeight)
+                height: (source.paintedWidth / source.paintedHeight) <= (hoverHandler.width / hoverHandler.height) ? hoverHandler.width * (source.paintedHeight / source.paintedWidth) : hoverHandler.height
+                layer.enabled: true
+                opacity: 0.25
+                layer.effect: FastBlur {
+                    source: albumArtBackground
+                    anchors.fill: source
+                    radius: 30
                 }
             }
         }
