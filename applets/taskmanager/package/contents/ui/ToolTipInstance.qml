@@ -34,20 +34,20 @@ ColumnLayout {
     readonly property var currentMetadata: hasPlayer ? playerData.Metadata : ({})
 
     readonly property string track: {
-        var xesamTitle = currentMetadata["xesam:title"]
+        const xesamTitle = currentMetadata["xesam:title"]
         if (xesamTitle) {
             return xesamTitle;
         }
         // if no track title is given, print out the file name
-        var xesamUrl = currentMetadata["xesam:url"] ? currentMetadata["xesam:url"].toString() : ""
+        const xesamUrl = currentMetadata["xesam:url"] ? currentMetadata["xesam:url"].toString() : ""
         if (!xesamUrl) {
             return "";
         }
-        var lastSlashPos = xesamUrl.lastIndexOf('/')
+        const lastSlashPos = xesamUrl.lastIndexOf('/')
         if (lastSlashPos < 0) {
             return "";
         }
-        var lastUrlPart = xesamUrl.substring(lastSlashPos + 1)
+        const lastUrlPart = xesamUrl.substring(lastSlashPos + 1)
         return decodeURIComponent(lastUrlPart);
     }
     readonly property string artist: currentMetadata["xesam:artist"] || ""
@@ -346,7 +346,7 @@ ColumnLayout {
             return genericName != undefined ? genericName : "";
         }
 
-        var text;
+        let text;
         if (isGroup) {
             if (model.display === undefined) {
                 return "";
@@ -358,11 +358,11 @@ ColumnLayout {
 
         // KWin appends increasing integers in between pointy brackets to otherwise equal window titles.
         // In this case save <#number> as counter and delete it at the end of text.
-        var counter = text.match(/<\d+>\W*$/);
+        const counter = text.match(/<\d+>\W*$/);
         text = text.replace(/\s*<\d+>\W*$/, "");
 
         // Remove appName from the end of text.
-        var appNameRegex = new RegExp(appName + "$", "i");
+        const appNameRegex = new RegExp(appName + "$", "i");
         text = text.replace(appNameRegex, "");
         text = text.replace(/\s*(?:-|—)*\s*$/, "");
 
@@ -388,16 +388,16 @@ ColumnLayout {
             return "";
         }
 
-        var subTextEntries = [];
+        let subTextEntries = [];
 
-        var onAllDesktops = (isGroup ? IsOnAllVirtualDesktops : isOnAllVirtualDesktopsParent) === true;
+        const onAllDesktops = (isGroup ? IsOnAllVirtualDesktops : isOnAllVirtualDesktopsParent) === true;
         if (!plasmoid.configuration.showOnlyCurrentDesktop && virtualDesktopInfo.numberOfDesktops > 1) {
-            var virtualDesktops = isGroup ? VirtualDesktops : virtualDesktopParent;
+            const virtualDesktops = isGroup ? VirtualDesktops : virtualDesktopParent;
 
             if (!onAllDesktops && virtualDesktops !== undefined && virtualDesktops.length > 0) {
-                var virtualDesktopNameList = new Array();
+                let virtualDesktopNameList = new Array();
 
-                for (var i = 0; i < virtualDesktops.length; ++i) {
+                for (let i = 0; i < virtualDesktops.length; ++i) {
                     virtualDesktopNameList.push(virtualDesktopInfo.desktopNames[virtualDesktopInfo.desktopIds.indexOf(virtualDesktops[i])]);
                 }
 
@@ -408,7 +408,7 @@ ColumnLayout {
             }
         }
 
-        var act = isGroup ? Activities : activitiesParent;
+        const act = isGroup ? Activities : activitiesParent;
         if (act === undefined) {
             return subTextEntries.join("\n");
         }
@@ -417,11 +417,11 @@ ColumnLayout {
             subTextEntries.push(i18nc("Which virtual desktop a window is currently on",
                 "Available on all activities"));
         } else if (act.length > 0) {
-           var activityNames = [];
+            let activityNames = [];
 
-            for (var i = 0; i < act.length; i++) {
-                var activity = act[i];
-                var activityName = activityInfo.activityName(act[i]);
+            for (let i = 0; i < act.length; i++) {
+                const activity = act[i];
+                const activityName = activityInfo.activityName(act[i]);
                 if (activityName === "") {
                     continue;
                 }
