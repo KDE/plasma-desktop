@@ -207,15 +207,20 @@ ColumnLayout {
             }
         }
 
-        DropShadow {
+        Loader {
+            active: thumbnailLoader.status === Loader.Ready && !(Number.isInteger(thumbnailSourceItem.winId) && thumbnailSourceItem.isMinimized)
+            asynchronous: true
+            visible: active
             anchors.fill: thumbnailLoader
-            visible: thumbnailLoader.visible && !(Number.isInteger(thumbnailSourceItem.winId) && thumbnailSourceItem.isMinimized)
-            horizontalOffset: 0
-            verticalOffset: Math.round(3 * PlasmaCore.Units.devicePixelRatio)
-            radius: Math.round(8.0 * PlasmaCore.Units.devicePixelRatio)
-            samples: Math.round(radius * 1.5)
-            color: "Black"
-            source: thumbnailLoader.item
+
+            sourceComponent: DropShadow {
+                horizontalOffset: 0
+                verticalOffset: Math.round(3 * PlasmaCore.Units.devicePixelRatio)
+                radius: Math.round(8.0 * PlasmaCore.Units.devicePixelRatio)
+                samples: Math.round(radius * 1.5)
+                color: "Black"
+                source: thumbnailLoader.item // source could be undefined when albumArt is available, so put it in a Loader.
+            }
         }
 
         Loader {
