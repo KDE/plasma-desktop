@@ -48,7 +48,7 @@ ColumnLayout {
             return "";
         }
         const lastUrlPart = xesamUrl.substring(lastSlashPos + 1)
-        return decodeURIComponent(lastUrlPart);
+        return decodeURIComponent(lastUrlPart) || "";
     }
     readonly property string artist: currentMetadata["xesam:artist"] || ""
     readonly property string albumArt: currentMetadata["mpris:artUrl"] || ""
@@ -91,7 +91,7 @@ ColumnLayout {
                 maximumLineCount: 1
                 Layout.fillWidth: true
                 elide: Text.ElideRight
-                text: (!hasPlayer || !title.includes(track || "")) ? title : ""
+                text: (!hasPlayer || !title.includes(track)) ? title : ""
                 opacity: 0.75
                 visible: title.length !== 0 && title !== appNameHeading.text
                 textFormat: Text.PlainText
@@ -307,7 +307,7 @@ ColumnLayout {
                         maximumLineCount: artistText.visible? 1 : 2
                         wrapMode: Text.NoWrap
                         elide: parent.state ? Text.ElideNone : Text.ElideRight
-                        text: track || ""
+                        text: track
                         textFormat: Text.PlainText
                     }
                  }
@@ -328,7 +328,7 @@ ColumnLayout {
                         wrapMode: Text.NoWrap
                         lineHeight: 1
                         elide: parent.state ? Text.ElideNone : Text.ElideRight
-                        text: artist || ""
+                        text: artist
                         font: PlasmaCore.Theme.smallestFont
                         textFormat: Text.PlainText
                     }
