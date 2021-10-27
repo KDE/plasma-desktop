@@ -277,9 +277,8 @@ ColumnLayout {
         visible: active
         Layout.fillWidth: true
         Layout.maximumWidth: header.Layout.maximumWidth
-        // Match margins of header
-        Layout.leftMargin: isWin ? 0 : PlasmaCore.Units.gridUnit / 2
-        Layout.rightMargin: isWin ? 0 : PlasmaCore.Units.gridUnit / 2
+        Layout.leftMargin: header.Layout.margins
+        Layout.rightMargin: header.Layout.margins
 
         sourceComponent: RowLayout {
             enabled: canControl
