@@ -24,13 +24,9 @@ public:
     void match(Plasma::RunnerContext &context) override;
     void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
 
-private Q_SLOTS:
-    void checkAvailability(const QString &name, const QString &oldOwner, const QString &newOwner);
-
 private:
     const QString m_desktopConsoleKeyword;
     const QString m_kwinConsoleKeyword;
-    bool m_enabled;
 };
 
 #endif
