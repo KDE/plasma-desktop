@@ -243,6 +243,11 @@ MouseArea {
             delayAudioStreamIndicator = !!args.delay;
         }
 
+        if (task.winIdList.length === 0) {
+            task.audioStreams = [];
+            return;
+        }
+
         var pa = pulseAudio.item;
         if (!pa) {
             task.audioStreams = [];
