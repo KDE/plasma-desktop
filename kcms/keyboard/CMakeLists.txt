@@ -67,7 +67,7 @@ if (HAVE_XINPUT)
 endif()
 
 if (HAVE_UDEV)
-    target_link_libraries(kded_keyboard ${UDEV_LIBS})
+    target_link_libraries(kded_keyboard UDev::UDev)
 endif()
 
 ### kcm keyboard ###

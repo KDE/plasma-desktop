@@ -77,6 +77,6 @@ if( X11_XTest_FOUND )
    endif()
 
    if (HAVE_UDEV)
-      target_link_libraries(keyboard_daemon_test ${UDEV_LIBS})
+      target_link_libraries(keyboard_daemon_test UDev::UDev)
    endif()
 endif()
