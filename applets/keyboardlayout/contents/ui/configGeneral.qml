@@ -11,19 +11,16 @@ Kirigami.FormLayout {
     readonly property var layoutShortName: keyboardLayout.layoutsList.length ? keyboardLayout.layoutsList[keyboardLayout.layout].shortName
                                                                              : ""
     KeyboardLayout { id: keyboardLayout }
-    ButtonGroup { id: radioGroup }
 
     RadioButton {
         id: showLabel
         Kirigami.FormData.label: i18n("Display style:")
         checked: true
-        ButtonGroup.group: radioGroup
         text: layoutShortName.toUpperCase()
     }
 
     RadioButton {
         id: showFlag
-        ButtonGroup.group: radioGroup
         contentItem: Item {
             implicitWidth: flagImage.implicitWidth + showFlag.indicator.width
             implicitHeight: flagImage.implicitHeight
