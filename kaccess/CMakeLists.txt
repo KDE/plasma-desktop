@@ -1,9 +1,7 @@
 # KI18N Translation Domain for this application
 add_definitions(-DTRANSLATION_DOMAIN=\"kaccess\")
 
-
 find_package(Phonon4Qt5 REQUIRED NO_MODULE)
-include_directories(${PHONON_INCLUDE_DIR})
 
 set(kaccess_SRCS kaccess.cpp main.cpp )
 
