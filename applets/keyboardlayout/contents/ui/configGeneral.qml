@@ -13,29 +13,28 @@ Kirigami.FormLayout {
     KeyboardLayout { id: keyboardLayout }
     ButtonGroup { id: radioGroup }
 
-    RowLayout {
+    RadioButton {
+        id: showLabel
         Kirigami.FormData.label: i18n("Display style:")
-
-        RadioButton {
-            id: showLabel
-            checked: true
-            ButtonGroup.group: radioGroup
-        }
-
-        Label {
-            text: layoutShortName.toUpperCase()
-        }
+        checked: true
+        ButtonGroup.group: radioGroup
+        text: layoutShortName.toUpperCase()
     }
 
-    RowLayout {
-        RadioButton {
-            id: showFlag
-            ButtonGroup.group: radioGroup
-        }
+    RadioButton {
+        id: showFlag
+        ButtonGroup.group: radioGroup
+        contentItem: Item {
+            implicitWidth: flagImage.implicitWidth + showFlag.indicator.width
+            implicitHeight: flagImage.implicitHeight
 
-        Image {
-            source: Platform.StandardPaths.locate(Platform.StandardPaths.GenericDataLocation,
-                              "kf5/locale/countries/" + layoutShortName + "/flag.png")
+            Image {
+                id: flagImage
+                anchors.right: parent.right
+                anchors.verticalCenter: parent.verticalCenter
+                source: Platform.StandardPaths.locate(Platform.StandardPaths.GenericDataLocation,
+                                                      "kf5/locale/countries/" + layoutShortName + "/flag.png")
+            }
         }
     }
 
