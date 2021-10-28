@@ -292,7 +292,6 @@ Item {
                     smooth: true
 
                     source: model.decoration
-                    overlays: model.overlays
                 }
 
                     Rectangle {

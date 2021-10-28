@@ -92,7 +92,6 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
 public:
     enum DataRole {
         BlankRole = Qt::UserRole + 1,
-        OverlaysRole,
         SelectedRole,
         IsDirRole,
         IsLinkRole,
