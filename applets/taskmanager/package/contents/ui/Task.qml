@@ -329,13 +329,28 @@ MouseArea {
             location: plasmoid.location
 
             enabled: plasmoid.configuration.showToolTips
-            active: !inPopup && !groupDialog.visible
+            active: !inPopup && !groupDialog.visible && (tasks.toolTipOpenedByClick === task || tasks.toolTipOpenedByClick === null)
             interactive: model.IsWindow === true || mainItem.hasPlayer
+
+            // when the mouse leaves the tooltip area, a timer to hide is set for (timeout / 20) ms
+            // see plasma-framework/src/declarativeimports/core/tooltipdialog.cpp function dismiss()
+            // to compensate for that we multiply by 20 here, to get an effective leave timeout of 2s.
+            timeout: (tasks.toolTipOpenedByClick === task) ? 2000*20 : 4000
 
             mainItem: (model.IsWindow === true) ? openWindowToolTipDelegate : pinnedAppToolTipDelegate
 
+            onToolTipVisibleChanged: {
+                if (!toolTipVisible) {
+                    tasks.toolTipOpenedByClick = null;
+                }
+            }
+
             onContainsMouseChanged:  {
                 if (containsMouse) {
+                    if (tasks.toolTipOpenedByClick !== null && tasks.toolTipOpenedByClick !== task) {
+                        return;
+                    }
+
                     mainItem.parentTask = task;
                     mainItem.rootIndex = tasksModel.makeModelIndex(itemIndex, -1);
 

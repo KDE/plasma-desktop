@@ -148,7 +148,13 @@ function activateTask(index, model, modifiers, task) {
         else if (plasmoid.configuration.showToolTips
             && plasmoid.configuration.groupedTaskVisualization === 1
         ) {
-            task.showToolTip();
+            if (tasks.toolTipOpenedByClick) {
+                task.toolTipAreaItem.hideImmediately();
+            } else {
+                tasks.toolTipOpenedByClick = task;
+                task.showToolTip();
+                task.toolTipAreaItem.onContainsMouseChanged();
+            }
         }
 
         // Option 3: show Present Windows for all child tasks
