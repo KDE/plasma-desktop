@@ -115,7 +115,7 @@ Kirigami.ScrollablePage {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Device:")
             id: deviceSelector
 
-            enabled: touchpadCount > 1
+            visible: touchpadCount > 1
             Layouts.Layout.fillWidth: true
             model: deviceModel
             textRole: "name"
