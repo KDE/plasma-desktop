@@ -22,6 +22,10 @@ ColumnLayout {
     property var submodelIndex
     property int flatIndex: isGroup && index != undefined ? index : 0
 
+    // HACK: Avoid blank space in the tooltip after closing a window
+    ListView.onPooled: width = height = 0
+    ListView.onReused: width = height = undefined
+
     readonly property bool playing: hasPlayer && playerData.PlaybackStatus === "Playing"
     readonly property bool canControl: hasPlayer && playerData.CanControl
     readonly property bool canPlay: hasPlayer && playerData.CanPlay
@@ -152,8 +156,8 @@ ColumnLayout {
         // There's no PlasmaComponents3 version
         PlasmaComponents.Highlight {
             anchors.fill: hoverHandler
-            visible: hoverHandler.containsMouse
-            pressed: hoverHandler.containsPress
+            visible: hoverHandler.item ? hoverHandler.item.containsMouse : false
+            pressed: hoverHandler.item ? hoverHandler.item.containsPress : false
         }
 
         Loader {
@@ -257,12 +261,16 @@ ColumnLayout {
             visible: available
         }
 
-        ToolTipWindowMouseArea {
+        // hoverHandler has to be unloaded after the instance is pooled in order to avoid getting the old containsMouse status when the same instance is reused, so put it in a Loader.
+        Loader {
             id: hoverHandler
+            active: flatIndex !== -1
             anchors.fill: parent
-            rootTask: parentTask
-            modelIndex: submodelIndex
-            winId: thumbnailSourceItem.winId
+            sourceComponent: ToolTipWindowMouseArea {
+                rootTask: parentTask
+                modelIndex: submodelIndex
+                winId: thumbnailSourceItem.winId
+            }
         }
     }
 
