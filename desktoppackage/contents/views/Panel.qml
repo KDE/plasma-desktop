@@ -107,7 +107,6 @@ Item {
                 NumberAnimation {
                     target: opaqueItem
                     properties: "opacity"
-                    from: 1
                     to: 0
                     duration: PlasmaCore.Units.veryLongDuration
                     easing.type: Easing.InOutQuad
@@ -133,7 +132,6 @@ Item {
                 NumberAnimation {
                     target: opaqueItem
                     properties: "opacity"
-                    from: 0
                     to: 1
                     duration: PlasmaCore.Units.veryLongDuration
                     easing.type: Easing.InOutQuad
