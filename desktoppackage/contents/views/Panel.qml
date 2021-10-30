@@ -147,26 +147,16 @@ Item {
         }
     ]
 
-    Component.onCompleted: {
-        state = Qt.binding(function() {
-            let mstate = '';
-            if (panel.opacityMode == 0) {
-                mstate = visibleWindowsModel.count > 0 && !kwindowsystem.showingDesktop? "opaque" : "transparent"
-            } else if (panel.opacityMode == 1) {
-                mstate = "opaque"
+    Component.onCompleted: state = Qt.binding(() => panel.opacityMode === 0 ? (visibleWindowsModel.count > 0 && !kwindowsystem.showingDesktop ? "opaque" : "transparent")
+                                                                            : (panel.opacityMode === 1 ? "opaque" : "transparent"))
+    onStateChanged: {
+        if (containment) {
+            if (state === 'opaque') {
+                containment.containmentDisplayHints |= PlasmaCore.Types.DesktopFullyCovered;
             } else {
-                mstate = "transparent"
+                containment.containmentDisplayHints &= ~PlasmaCore.Types.DesktopFullyCovered;
             }
-            if (containment) {
-                if (mstate == 'opaque') {
-                    containment.containmentDisplayHints |= PlasmaCore.Types.DesktopFullyCovered;
-                } else {
-                    containment.containmentDisplayHints &= ~PlasmaCore.Types.DesktopFullyCovered;
-                }
-            }
-
-            return mstate;
-        })
+        }
     }
     state: ""
     states: [
