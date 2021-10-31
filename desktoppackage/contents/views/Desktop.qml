@@ -47,30 +47,16 @@ Item {
             sidePanelStack.state = "closed";
         } else {
             sidePanelStack.state = "widgetExplorer";
-            sidePanelStack.setSource(Qt.resolvedUrl("../explorer/WidgetExplorer.qml"), {"containment": containment, "sidePanel": sidePanel})
+            sidePanelStack.setSource(Qt.resolvedUrl("../explorer/WidgetExplorer.qml"), {"containment": containment, "sidePanel": sidePanel});
         }
     }
-
-    // Qt has a bug where invoking a global shortcut steal focus from the
-    // current window, which makes the activity switcher hide itself and
-    // popup again when the user presses meta+q (instead of just hiding).
-    // This 'timestamp' forbids the switcher to be toggled consecutively.
-    //
-    // The relevant patch to Qt is here:
-    //     https://codereview.qt-project.org/#/c/143658/
-    property int lastToggleActivityManagerTimestamp: 0
 
     function toggleActivityManager() {
         if (sidePanelStack.state == "activityManager") {
             sidePanelStack.state = "closed";
         } else {
-            var currentTimestamp = new Date().getTime() / 1000;
-
-            if (currentTimestamp - lastToggleActivityManagerTimestamp > 1) {
-                sidePanelStack.state = "activityManager";
-                sidePanelStack.setSource(Qt.resolvedUrl("../activitymanager/ActivityManager.qml"))
-                lastToggleActivityManagerTimestamp = currentTimestamp;
-            }
+            sidePanelStack.state = "activityManager";
+            sidePanelStack.setSource(Qt.resolvedUrl("../activitymanager/ActivityManager.qml"));
         }
     }
 
@@ -127,8 +113,6 @@ Item {
                 sidePanelStack.state = "closed";
                 ActivitySwitcher.Backend.shouldShowSwitcher = false;
             }
-
-            lastToggleActivityManagerTimestamp = new Date().getTime() / 1000;
         }
 
         mainItem: Loader {
