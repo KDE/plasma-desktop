@@ -10,7 +10,6 @@
 
 import QtQuick 2.6
 import QtQuick.Layouts 1.1
-import QtQuick.Window 2.15
 import QtGraphicalEffects 1.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -18,7 +17,6 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.taskmanager 0.1 as TaskManager
 
 ColumnLayout {
     property var submodelIndex
@@ -160,7 +158,7 @@ ColumnLayout {
 
         Loader {
             id: thumbnailLoader
-            active: !albumArtImage.visible && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
+            active: !albumArtImage.visible && Number.isInteger(thumbnailSourceItem.winId) && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
             asynchronous: true
             visible: active
             anchors.fill: hoverHandler
@@ -168,27 +166,13 @@ ColumnLayout {
             // shadow can cover up the highlight
             anchors.margins: PlasmaCore.Units.smallSpacing * 2
 
-            sourceComponent: Number.isInteger(thumbnailSourceItem.winId) ? (thumbnailSourceItem.isMinimized ? iconItem : x11Thumbnail) : pipeWireThumbnail
+            sourceComponent: thumbnailSourceItem.isMinimized ? iconItem : x11Thumbnail
 
             Component {
                 id: x11Thumbnail
 
                 PlasmaCore.WindowThumbnail {
                     winId: thumbnailSourceItem.winId
-                }
-            }
-
-            Component {
-                id: pipeWireThumbnail
-
-                TaskManager.PipeWireSourceItem {
-                    visible: waylandItem.nodeId > 0
-                    nodeId: waylandItem.nodeId
-
-                    TaskManager.ScreencastingRequest {
-                        id: waylandItem
-                        uuid: toolTipDelegate.Window.visibility === Window.Hidden ? "" : thumbnailSourceItem.winId
-                    }
                 }
             }
 
@@ -206,10 +190,22 @@ ColumnLayout {
         }
 
         Loader {
-            active: thumbnailLoader.status === Loader.Ready && !(Number.isInteger(thumbnailSourceItem.winId) && thumbnailSourceItem.isMinimized)
+            id: pipeWireLoader
+            anchors.fill: hoverHandler
+            // Indent a little bit so that neither the thumbnail nor the drop
+            // shadow can cover up the highlight
+            anchors.margins: thumbnailLoader.anchors.margins
+
+            active: !albumArtImage.visible && !Number.isInteger(thumbnailSourceItem.winId) && flatIndex !== -1
+            //In a loader since we might not have PipeWire available yet (WITH_PIPEWIRE could be undefined in plasma-workspace/libtaskmanager/declarative/taskmanagerplugin.cpp)
+            source: "PipeWireThumbnail.qml"
+        }
+
+        Loader {
+            active: (pipeWireLoader.active && pipeWireLoader.item.visible) || (thumbnailLoader.status === Loader.Ready && !thumbnailSourceItem.isMinimized)
             asynchronous: true
             visible: active
-            anchors.fill: thumbnailLoader
+            anchors.fill: pipeWireLoader.active ? pipeWireLoader : thumbnailLoader
 
             sourceComponent: DropShadow {
                 horizontalOffset: 0
@@ -217,7 +213,7 @@ ColumnLayout {
                 radius: Math.round(8.0 * PlasmaCore.Units.devicePixelRatio)
                 samples: Math.round(radius * 1.5)
                 color: "Black"
-                source: thumbnailLoader.item // source could be undefined when albumArt is available, so put it in a Loader.
+                source: pipeWireLoader.active ? pipeWireLoader.item : thumbnailLoader.item // source could be undefined when albumArt is available, so put it in a Loader.
             }
         }
 
