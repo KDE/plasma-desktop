@@ -182,9 +182,15 @@ int Item::progress() const
 
 void Item::setProgress(int progress)
 {
-    if (m_progress != progress) {
-        m_progress = progress;
-        Q_EMIT progressChanged(progress);
+    int boundedProgress = std::clamp(progress, 0, 100);
+
+    if (progress != boundedProgress) {
+        qWarning().nospace() << qUtf8Printable(m_launcherUrl.toString()) << ": Progress value " << progress << " is out of bounds!";
+    }
+
+    if (m_progress != boundedProgress) {
+        m_progress = boundedProgress;
+        Q_EMIT progressChanged(boundedProgress);
     }
 }
 
