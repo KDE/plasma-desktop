@@ -18,7 +18,6 @@
 #include <QWindow>
 #include <QX11Info>
 
-#include <KAboutData>
 #include <KConfigGroup>
 #include <KKeyServer>
 #include <KLocalizedString>
@@ -134,8 +133,8 @@ QString mouseKeysShortcut(Display *display)
                                                        : i18n("Press %1", keyname);
 }
 
-KAccessConfig::KAccessConfig(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, metaData, args)
     , m_data(new AccessibilityData(this))
     , m_desktopShortcutInfo(QX11Info::isPlatformX11() ? mouseKeysShortcut(QX11Info::display()) : QString())
 {
@@ -145,20 +144,10 @@ KAccessConfig::KAccessConfig(QObject *parent, const QVariantList &args)
     qmlRegisterType<KeyboardFiltersSettings>();
     qmlRegisterType<ScreenReaderSettings>();
 
-    KAboutData *about = new KAboutData(QStringLiteral("kcmaccess"),
-                                       i18n("Accessibility"),
-                                       QStringLiteral("1.0"),
-                                       QString(),
-                                       KAboutLicense::GPL,
-                                       i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
-
-    about->addAuthor(i18n("Matthias Hoelzer-Kluepfel"), i18n("Author"), QStringLiteral("hoelzer@kde.org"));
-
     int tryOrcaRun = QProcess::execute(QStringLiteral("orca"), {QStringLiteral("--version")});
     m_screenReaderInstalled = tryOrcaRun != -2;
 
     setButtons(ConfigModule::Apply | ConfigModule::Default | ConfigModule::Help);
-    setAboutData(about);
 
     connect(m_data->bellSettings(), &BellSettings::configChanged, this, &KAccessConfig::bellIsDefaultsChanged);
     connect(m_data->mouseSettings(), &MouseSettings::configChanged, this, &KAccessConfig::mouseIsDefaultsChanged);

@@ -49,4 +49,4 @@ install(
         ${KDE_INSTALL_KCFGDIR}
 )
 
-kpackage_install_package(package kcmaccess kcms)
+kpackage_install_package(package kcm_access kcms)
