@@ -504,12 +504,22 @@ MouseArea {
             bottomMargin: taskFrame.margins.bottom
         }
 
-        text: model.display || ""
         wrapMode: (maximumLineCount == 1) ? Text.NoWrap : Text.Wrap
         elide: Text.ElideRight
         textFormat: Text.PlainText
         verticalAlignment: Text.AlignVCenter
         maximumLineCount: plasmoid.configuration.maxTextLines || undefined
+
+        // use State to avoid unnecessary re-evaluation when the label is invisible
+        states: State {
+            name: "labelVisible"
+            when: label.visible
+
+            PropertyChanges {
+                target: label
+                text: model.display || ""
+            }
+        }
     }
 
     states: [
