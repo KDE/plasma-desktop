@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=Drawing Tablet
+
+Icon=preferences-desktop-tablet
+Type=Service
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=kcm_tablet
+X-KDE-ServiceTypes=Plasma/Generic
+X-KDE-FormFactors=tablet,handset,desktop
+X-KDE-Keywords=drawing,tablet,wacom,pen
+Categories=Qt;KDE;X-KDE-settings-hardware
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/main.qml
+X-KDE-Library=kcm_tablet
+X-KDE-ServiceTypes=KCModule
+X-KDE-ParentApp=kcontrol
+X-KDE-System-Settings-Parent-Category=input-devices
+X-KDE-OnlyShowOnQtPlatforms=wayland

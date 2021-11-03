@@ -30,6 +30,7 @@ add_subdirectory(kded)
 add_subdirectory(runners)
 add_subdirectory(spellchecking)
 add_subdirectory(qtquicksettings)
+add_subdirectory(tablet)
 
 add_subdirectory(workspaceoptions)
 if (KF5Baloo_FOUND)
