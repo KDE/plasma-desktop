@@ -294,7 +294,10 @@ MouseArea {
                 // it also gives us more flexibility when it comes to styling the <li>
                 textFormat: Text.RichText
 
-                function updateSubText() {
+                function updateSubTextIfNeeded() {
+                    if (!containsMouse) {
+                        return;
+                    }
                     var generateWindowList = function windowList(windows) {
                         // if we have 5 windows, we would show "4 and another one" with the
                         // hint that there's 1 more taking the same amount of space than just showing it
@@ -405,7 +408,7 @@ MouseArea {
 
                         model: TasksModel
 
-                        onCountChanged: desktop.updateSubText()
+                        onCountChanged: desktop.updateSubTextIfNeeded()
 
                         Rectangle {
                             id: windowRect
@@ -415,8 +418,8 @@ MouseArea {
                             property rect geometry: model.Geometry
                             property string visibleName: model.display
                             property bool minimized: (model.IsMinimized === true)
-                            onMinimizedChanged: desktop.updateSubText()
-                            onVisibleNameChanged: desktop.updateSubText()
+                            onMinimizedChanged: desktop.updateSubTextIfNeeded()
+                            onVisibleNameChanged: desktop.updateSubTextIfNeeded()
 
                             /* since we move clipRect with 1, move it back */
                             x: (geometry.x * pagerItemGrid.widthScaleFactor) - Math.round(PlasmaCore.Units.devicePixelRatio)
@@ -508,6 +511,8 @@ MouseArea {
                         desktopLabelComponent.createObject(desktop, {"index": index, "model": model, "desktopFrame": desktopFrame});
                     }
                 }
+
+                onContainsMouseChanged: updateSubTextIfNeeded()
             }
         }
     }
