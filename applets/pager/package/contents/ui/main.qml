@@ -78,6 +78,23 @@ MouseArea {
         ActivitySwitcher.Backend.toggleActivityManager()
     }
 
+    function generateWindowList(windows) {
+        // if we have 5 windows, we would show "4 and another one" with the
+        // hint that there's 1 more taking the same amount of space than just showing it
+        var maximum = windows.length === 5 ? 5 : 4
+
+        var text = "<ul><li>"
+        + windows.slice(0, maximum).map(title => title.replace(/[^0-9A-Za-z ]/g,
+            c => "&#" + c.charCodeAt(0) + ";")).join("</li><li>")
+                + "</li></ul>";
+
+        if (windows.length > maximum) {
+            text += i18np("…and %1 other window", "…and %1 other windows", windows.length - maximum)
+        }
+
+        return text
+    }
+
     onContainsMouseChanged: {
         if (!containsMouse && dragging) {
             // Somewhat heavy-handed way to clean up after a window delegate drag
@@ -297,22 +314,6 @@ MouseArea {
                 function updateSubTextIfNeeded() {
                     if (!containsMouse) {
                         return;
-                    }
-                    var generateWindowList = function windowList(windows) {
-                        // if we have 5 windows, we would show "4 and another one" with the
-                        // hint that there's 1 more taking the same amount of space than just showing it
-                        var maximum = windows.length === 5 ? 5 : 4
-
-                        var text = "<ul><li>"
-                        + windows.slice(0, maximum).map(title => title.replace(/[^0-9A-Za-z ]/g,
-                            c => "&#" + c.charCodeAt(0) + ";")).join("</li><li>")
-                                + "</li></ul>";
-
-                        if (windows.length > maximum) {
-                            text += i18np("…and %1 other window", "…and %1 other windows", windows.length - maximum)
-                        }
-
-                        return text
                     }
 
                     var text = ""
