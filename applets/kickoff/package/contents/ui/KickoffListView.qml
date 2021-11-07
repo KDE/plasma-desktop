@@ -175,6 +175,8 @@ EmptyPage {
             anchors.fill: parent
             z: 1
             TapHandler { // Filter mouse events to avoid flicking like ScrollView
+                // Do not accept stylus as it will cause bug 445111.
+                acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad | PointerDevice.TouchScreen
                 onGrabChanged: {
                     const pressed = transition & (EventPoint.GrabPassive | EventPoint.GrabExclusive) && point.state & EventPoint.Pressed
                     const deviceType = point.event.device.type
