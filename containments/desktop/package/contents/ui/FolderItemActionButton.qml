@@ -23,6 +23,7 @@ PlasmaCore.SvgItem {
             case 3: return PlasmaCore.Units.iconSizes.smallMedium;
             case 4: return PlasmaCore.Units.iconSizes.smallMedium;
             case 5: return PlasmaCore.Units.iconSizes.medium;
+            case 6: return PlasmaCore.Units.iconSizes.large;
             default: return PlasmaCore.Units.iconSizes.small;
         }
     }

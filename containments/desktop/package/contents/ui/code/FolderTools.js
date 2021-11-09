@@ -9,7 +9,8 @@ var iconSizes = [PlasmaCore.Units.iconSizes.smallMedium,
                  PlasmaCore.Units.iconSizes.large,
                  PlasmaCore.Units.iconSizes.huge,
                  PlasmaCore.Units.iconSizes.large*2,
-                 PlasmaCore.Units.iconSizes.enormous];
+                 PlasmaCore.Units.iconSizes.enormous,
+                 PlasmaCore.Units.iconSizes.enormous*2];
 
 function iconSizeFromTheme(size) {
     return iconSizes[size];

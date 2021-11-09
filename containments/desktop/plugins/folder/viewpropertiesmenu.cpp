@@ -48,7 +48,7 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent)
     m_iconSizeMenu = m_menu->addMenu(QIcon::fromTheme(QStringLiteral("transform-scale")), i18n("Icon Size"));
     m_iconSize = new QActionGroup(this);
     connect(m_iconSize, &QActionGroup::triggered, this, &ViewPropertiesMenu::iconSizeChanged);
-    const QStringList iconSizes{i18n("Tiny"), i18n("Small"), i18n("Small Medium"), i18n("Medium"), i18n("Large"), i18n("Huge")};
+    const QStringList iconSizes{i18n("Tiny"), i18n("Very Small"), i18n("Small"), i18n("Small-Medium"), i18n("Medium"), i18n("Large"), i18n("Huge")};
     for (int i = 0; i < iconSizes.count(); ++i) {
         action = m_iconSizeMenu->addAction(iconSizes.at(i));
         action->setCheckable(true);

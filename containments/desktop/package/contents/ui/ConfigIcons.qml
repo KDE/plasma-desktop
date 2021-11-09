@@ -219,7 +219,7 @@ Item {
             Kirigami.FormData.label: i18n("Icon size:")
 
             from: 0
-            to: 5
+            to: 6
             stepSize: 1
             snapMode: Slider.SnapAlways
         }
