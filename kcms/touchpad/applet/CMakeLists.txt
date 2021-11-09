@@ -1,17 +1,23 @@
-set(DataEngine_SRCS
+remove_definitions(-DTRANSLATION_DOMAIN="kcm_touchpad")
+add_definitions(-DTRANSLATION_DOMAIN="plasma_applet_touchpad")
+
+plasma_install_package(qml touchpad)
+
+set(Applet_SRCS
     touchpadengine.cpp
     touchpadservice.cpp
 )
 
 qt5_generate_dbus_interface(../kded/kded.h org.kde.touchpad.xml)
-qt_add_dbus_interfaces(DataEngine_SRCS
+qt_add_dbus_interfaces(Applet_SRCS
                         ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 )
-qt_add_dbus_interfaces(DataEngine_SRCS
+qt_add_dbus_interfaces(Applet_SRCS
                         ${KDED_DBUS_INTERFACE}
 )
 
-kcoreaddons_add_plugin(plasma_engine_touchpad SOURCES ${DataEngine_SRCS} INSTALL_NAMESPACE "plasma/dataengine")
+kcoreaddons_add_plugin(plasma_engine_touchpad SOURCES ${Applet_SRCS} INSTALL_NAMESPACE "plasma/dataengine")
+
 target_link_libraries(plasma_engine_touchpad
     KF5::Plasma
     Qt::DBus
@@ -24,4 +30,7 @@ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/plasma-dataengine-touchpad.desktop
 )
 install(FILES touchpad.operations
         DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services
+)
+install(FILES touchpad.svg
+        DESTINATION ${KDE_INSTALL_DATADIR}/plasma/desktoptheme/default/icons
 )

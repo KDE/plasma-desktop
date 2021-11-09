@@ -41,7 +41,7 @@ target_link_libraries(touchpad
 
 add_subdirectory(kcm)
 add_subdirectory(kded)
-add_subdirectory(dataengine)
+add_subdirectory(applet)
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
         DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR}
