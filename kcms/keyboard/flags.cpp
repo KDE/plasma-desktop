@@ -88,10 +88,6 @@ QString Flags::getCountryFromLayoutName(const QString &layout) const
     if (countryCode == QLatin1String("nec_vndr/jp"))
         return QStringLiteral("jp");
 
-    //	if( NON_COUNTRY_LAYOUTS.contain(layout) )
-    if (countryCode.length() > 2)
-        return QLatin1String("");
-
     return countryCode;
 }
 
