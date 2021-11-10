@@ -24,6 +24,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.plasma.plasmoid 2.0
 
@@ -36,15 +37,9 @@ Item {
 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     Plasmoid.icon: touchpadEnabled ? "input-touchpad-on" : "input-touchpad-off"
-    Plasmoid.status: {
-        if (confirmDialog.status !== PlasmaComponents.DialogStatus.Closed) {
-            return PlasmaCore.Types.AcceptingInputStatus;
-        } else if (hasTouchpad) {
-            return PlasmaCore.Types.ActiveStatus;
-        } else {
-            return PlasmaCore.Types.HiddenStatus;
-        }
-    }
+    // Touchpad being enabled is normal; only show the applet when it's disabled
+    Plasmoid.status: !hasTouchpad ? PlasmaCore.Types.HiddenStatus: (touchpadEnabled ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus)
+
     Plasmoid.toolTipSubText: {
         if (!hasTouchpad) {
             return i18n("No touchpad was found");
@@ -53,21 +48,6 @@ Item {
         } else {
             return i18n("Touchpad is disabled");
         }
-    }
-    Plasmoid.onActivated: action_toggle()
-
-    Component.onCompleted: {
-        // the "text" argument for setAction is mandatory but we overwrite
-        // it by a binding right away anyway
-        plasmoid.setAction("toggle", "");
-
-        var action = plasmoid.action("toggle");
-        action.text = Qt.binding(function() {
-            return root.touchpadEnabled ? i18n("Disable touchpad") : i18n("Enable touchpad");
-        });
-        action.visible = Qt.binding(function() {
-            return root.hasTouchpad;
-        });
     }
 
     PlasmaCore.DataSource {
@@ -85,23 +65,6 @@ Item {
         mainText: plasmoid.title
         subText: plasmoid.toolTipSubText
 
-        active: confirmDialog.status === PlasmaComponents.DialogStatus.Closed
-
-        Connections {
-            target: confirmDialog
-            function onStatusChanged() {
-                if (confirmDialog.status === PlasmaComponents.DialogStatus.Open) {
-                    toolTip.hideToolTip()
-                }
-            }
-        }
-
-        MouseArea {
-            anchors.fill: parent
-            enabled: root.hasTouchpad
-            onClicked: root.action_toggle()
-        }
-
         PlasmaCore.IconItem {
             anchors.fill: parent
             source: plasmoid.icon
@@ -114,42 +77,11 @@ Item {
     // and you click the list item text instead of the icon
     Plasmoid.fullRepresentation: Item {
 
-        PlasmaComponents.Button {
-            readonly property QtObject action: plasmoid.action("toggle")
+        PlasmaExtras.PlaceholderMessage {
             anchors.centerIn: parent
-            text: action.text
-            enabled: action.visible
-            onClicked: action.trigger()
+            width: parent.width - (PlasmaCore.Units.largeSpacing * 8)
+            text: plasmoid.toolTipSubText
+            iconName: plasmoid.icon
         }
-
-    }
-
-    function action_toggle() {
-        if (!root.hasTouchpad) {
-            return;
-        }
-
-        if (!root.hasMouse && root.touchpadEnabled) {
-            confirmDialog.open()
-            return;
-        }
-
-        execOp("toggle")
-    }
-
-    function execOp(op) {
-        var service = dataSource.serviceForSource("touchpad")
-        service.startOperationCall(service.operationDescription(op))
-    }
-
-    PlasmaComponents.QueryDialog {
-        id: confirmDialog
-        visualParent: plasmoid.compactRepresentationItem
-        hideOnWindowDeactivate: true
-        titleText: i18n("Touchpad")
-        titleIcon: "dialog-warning"
-        message: i18n("No mouse was detected.\nAre you sure you want to disable the touchpad?")
-        acceptButtonText: i18n("Disable")
-        onAccepted: execOp("disable")
     }
 }
