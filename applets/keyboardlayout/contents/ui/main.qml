@@ -14,9 +14,6 @@ Item {
     id: root
 
     function iconURL(name) {
-        if (name === "epo") {
-            return StandardPaths.locate(StandardPaths.GenericDataLocation, "kcmkeyboard/pics/epo.png")
-        }
         return StandardPaths.locate(StandardPaths.GenericDataLocation,
                         "kf5/locale/countries/" + name + "/flag.png")
     }

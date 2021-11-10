@@ -53,15 +53,10 @@ QIcon Flags::createIcon(const QString &layout)
 {
     QIcon icon;
     if (!layout.isEmpty()) {
+        QString countryCode = getCountryFromLayoutName(layout);
         QString file;
-        if (layout == QLatin1String("epo")) {
-            file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kcmkeyboard/pics/epo.png"));
-        } else {
-            QString countryCode = getCountryFromLayoutName(layout);
-            if (!countryCode.isEmpty()) {
-                file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QString(flagTemplate).arg(countryCode));
-                //			qCDebug(KCM_KEYBOARD, ) << "Creating icon for" << layout << "with" << file;
-            }
+        if (!countryCode.isEmpty()) {
+            file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QString(flagTemplate).arg(countryCode));
         }
 
         if (!file.isEmpty()) {

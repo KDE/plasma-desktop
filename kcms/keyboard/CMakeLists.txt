@@ -142,10 +142,6 @@ install( FILES kcm_keyboard.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
 
 add_subdirectory(kconf_update)
 
-# Images
-
-add_subdirectory( pics )
-
 configure_file(config-keyboard.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-keyboard.h)
 
 # Unit tests
