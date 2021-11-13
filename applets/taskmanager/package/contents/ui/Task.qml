@@ -311,10 +311,10 @@ MouseArea {
         anchors {
             fill: parent
 
-            topMargin: (!tasks.vertical && taskList.rows > 1) ? PlasmaCore.Units.smallSpacing / 4 : 0
-            bottomMargin: (!tasks.vertical && taskList.rows > 1) ? PlasmaCore.Units.smallSpacing / 4 : 0
-            leftMargin: ((inPopup || tasks.vertical) && taskList.columns > 1) ? PlasmaCore.Units.smallSpacing / 4 : 0
-            rightMargin: ((inPopup || tasks.vertical) && taskList.columns > 1) ? PlasmaCore.Units.smallSpacing / 4 : 0
+            topMargin: (!tasks.vertical && taskList.rows > 1) ? LayoutManager.iconMargin : 0
+            bottomMargin: (!tasks.vertical && taskList.rows > 1) ? LayoutManager.iconMargin : 0
+            leftMargin: ((inPopup || tasks.vertical) && taskList.columns > 1) ? LayoutManager.iconMargin : 0
+            rightMargin: ((inPopup || tasks.vertical) && taskList.columns > 1) ? LayoutManager.iconMargin : 0
         }
 
         imagePath: "widgets/tasks"
@@ -498,9 +498,9 @@ MouseArea {
 
         anchors {
             fill: parent
-            leftMargin: taskFrame.margins.left + iconBox.width + PlasmaCore.Units.smallSpacing
+            leftMargin: taskFrame.margins.left + iconBox.width + LayoutManager.labelMargin
             topMargin: taskFrame.margins.top
-            rightMargin: taskFrame.margins.right + (audioStreamIconLoader.shown ? (audioStreamIconLoader.width + PlasmaCore.Units.smallSpacing) : 0)
+            rightMargin: taskFrame.margins.right + (audioStreamIconLoader.shown ? (audioStreamIconLoader.width + LayoutManager.labelMargin) : 0)
             bottomMargin: taskFrame.margins.bottom
         }
 

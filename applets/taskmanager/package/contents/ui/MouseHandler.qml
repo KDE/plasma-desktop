@@ -17,6 +17,7 @@ Item {
 
     property Item target
     property Item ignoredItem
+    property bool isGroupDialog: false
     property bool moved: false
 
     property alias hoveredItem: dropHandler.hoveredItem
@@ -65,7 +66,12 @@ Item {
                 return;
             }
 
-            var above = target.childAt(event.x, event.y);
+            let above;
+            if (isGroupDialog) {
+                above = target.itemAt(event.x, event.y);
+            } else {
+                above = target.childAt(event.x, event.y);
+            }
 
             if (!above) {
                 hoveredItem = null;

@@ -7,6 +7,8 @@
 .import org.kde.plasma.core 2.0 as PlasmaCore
 
 var iconSizes = ["small", "smallMedium", "medium", "large", "huge", "enormous"];
+const iconMargin = Math.round(PlasmaCore.Units.smallSpacing / 4);
+const labelMargin = PlasmaCore.Units.smallSpacing;
 
 function horizontalMargins() {
     return taskFrame.margins.left + taskFrame.margins.right;
