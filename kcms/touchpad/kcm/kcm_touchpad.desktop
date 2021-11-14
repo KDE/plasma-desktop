@@ -4,7 +4,7 @@ Type=Service
 Categories=Qt;KDE;X-KDE-settings-hardware;
 OnlyShowIn=KDE;
 
-X-KDE-ServiceTypes=KCModule,KCModuleInit
+X-KDE-ServiceTypes=KCModule
 X-KDE-Init-Symbol=touchpad
 X-KDE-Init-Phase=1
 X-KDE-Library=kcm_touchpad

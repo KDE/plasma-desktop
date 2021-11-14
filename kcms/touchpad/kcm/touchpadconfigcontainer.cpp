@@ -13,10 +13,10 @@
 #include <KWindowSystem>
 #include <KPluginFactory>
 
-K_PLUGIN_FACTORY(TouchpadConfigContainerFactory, registerPlugin<TouchpadConfigContainer>();)
+K_PLUGIN_CLASS_WITH_JSON(TouchpadConfigContainer, "kcm_touchpad.json")
 
 extern "C" {
-Q_DECL_EXPORT void kcminit_touchpad()
+Q_DECL_EXPORT void kcminit()
 {
     if (KWindowSystem::isPlatformX11()) {
         TouchpadConfigContainer::kcmInit();

@@ -74,6 +74,7 @@ add_library(kcm_mouse MODULE
     ${common_SRCS}
     ${backend_SRCS}
 )
+kcoreaddons_desktop_to_json(kcm_mouse "mouse.desktop")
 
 target_link_libraries(kcm_mouse
     ${backend_LIBS}
@@ -88,8 +89,12 @@ target_link_libraries(kcm_mouse
     Qt::QuickWidgets
 )
 
-install(TARGETS kcm_mouse  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+install(TARGETS kcm_mouse DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings)
 
 ########### install files ###############
 
-install( FILES mouse.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+
+add_custom_command(TARGET kcm_mouse POST_BUILD
+                   COMMAND ${CMAKE_COMMAND} -E create_symlink ../kcms/systemsettings/kcm_mouse.so kcm_mouse_init.so)
+
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kcm_mouse_init.so DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcminit)

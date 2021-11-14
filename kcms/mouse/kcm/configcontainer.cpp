@@ -12,7 +12,7 @@
 #include <KWindowSystem/kwindowsystem.h>
 
 extern "C" {
-Q_DECL_EXPORT void kcminit_mouse()
+Q_DECL_EXPORT void kcminit()
 {
     InputBackend *backend = InputBackend::implementation();
     backend->kcmInit();

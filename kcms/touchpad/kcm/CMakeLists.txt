@@ -22,6 +22,7 @@ ki18n_wrap_ui(KCM_TOUCHPAD_SRCS
 
 add_library(kcm_touchpad MODULE ${KCM_TOUCHPAD_SRCS})
 
+kcoreaddons_desktop_to_json(kcm_touchpad "kcm_touchpad.desktop")
 target_link_libraries(kcm_touchpad
     PRIVATE
     Qt::Core
@@ -41,10 +42,11 @@ target_link_libraries(kcm_touchpad
     touchpad
 )
 
-install(FILES kcm_touchpad.desktop
-        DESTINATION ${KDE_INSTALL_KSERVICES5DIR}
+install(TARGETS kcm_touchpad
+        DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings
 )
 
-install(TARGETS kcm_touchpad
-        DESTINATION ${KDE_INSTALL_PLUGINDIR}
-)
+add_custom_command(TARGET kcm_touchpad POST_BUILD
+                   COMMAND ${CMAKE_COMMAND} -E create_symlink ../kcms/systemsettings/kcm_touchpad.so kcm_touchpad_init.so)
+
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kcm_touchpad_init.so DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcminit)
