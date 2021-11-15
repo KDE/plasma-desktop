@@ -5,7 +5,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.4
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -41,17 +41,13 @@ Item {
             main.draggingWidget = false;
         }
 
-        MouseArea {
-            id: mouseArea
-            anchors.fill: parent
-            hoverEnabled: true
-            onDoubleClicked: {
-                if (!delegate.pendingUninstall) {
-                    widgetExplorer.addApplet(pluginName)
-                }
+        HoverHandler {
+            onHoveredChanged: () => {
+                if (hovered)
+                    delegate.GridView.view.currentIndex = model.index
+                else if (delegate.GridView.view.currentIndex === model.index)
+                    delegate.GridView.view.currentIndex = -1
             }
-            onEntered: delegate.GridView.view.currentIndex = index
-            onExited: delegate.GridView.view.currentIndex = - 1
         }
 
         ColumnLayout {
@@ -60,7 +56,7 @@ Item {
             anchors {
                 left: parent.left
                 right: parent.right
-                //bottom: parent.bottom
+                bottom: parent.bottom
                 margins: PlasmaCore.Units.smallSpacing * 2
                 rightMargin: PlasmaCore.Units.smallSpacing * 2 // don't cram the text to the border too much
                 top: parent.top
@@ -93,6 +89,9 @@ Item {
                         anchors.fill: parent
                         fillMode: Image.PreserveAspectFit
                         source: model.screenshot
+                    }
+                    HoverHandler {
+                        cursorShape: Qt.OpenHandCursor
                     }
                 }
 
@@ -216,6 +215,13 @@ Item {
                 elide: Text.ElideRight
                 maximumLineCount: heading.lineCount === 1 ? 3 : 2
                 horizontalAlignment: Text.AlignHCenter
+            }
+            Item { Layout.fillHeight: true }
+            // TODO: make UI for selecting which containment to add to
+            PlasmaComponents.Button {
+                text: i18n("Add")
+                onClicked: widgetExplorer.addApplet(model.pluginName)
+                Layout.alignment: Qt.AlignRight
             }
         }
     }

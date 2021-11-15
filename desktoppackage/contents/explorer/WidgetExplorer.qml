@@ -4,7 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.7
+import QtQuick 2.15
 import QtQuick.Controls 2.5 as QQC2
 
 import org.kde.plasma.components 2.0 as PC2 // for DialogStatus, ModelCOntextMenu, and Highlight
@@ -22,7 +22,7 @@ import org.kde.plasma.private.shell 2.0
 PC3.Page {
     id: main
 
-    width: Math.max(heading.paintedWidth, PlasmaCore.Units.iconSizes.enormous * 3 + PlasmaCore.Units.smallSpacing * 4 + PlasmaCore.Units.gridUnit * 2)
+    width: contentItem.implicitWidth
     height: 800//Screen.height
 
     opacity: draggingWidget ? 0.3 : 1
@@ -71,13 +71,6 @@ PC3.Page {
         }
     }
 
-    function addCurrentApplet() {
-        var pluginName = list.currentItem ? list.currentItem.pluginName : ""
-        if (pluginName) {
-            widgetExplorer.addApplet(pluginName)
-        }
-    }
-
     KWindowSystem {
         id: kwindowsystem
     }
@@ -93,25 +86,6 @@ PC3.Page {
         }
     }
 
-    QQC2.Action {
-        shortcut: "Up"
-        onTriggered: list.currentIndex = (list.count + list.currentIndex - 1) % list.count 
-    }
-
-    QQC2.Action {
-        shortcut: "Down"
-        onTriggered: list.currentIndex = (list.currentIndex + 1) % list.count
-    }
-
-    QQC2.Action {
-        shortcut: "Enter"
-        onTriggered: addCurrentApplet()
-    }
-    QQC2.Action {
-        shortcut: "Return"
-        onTriggered: addCurrentApplet()
-    }
-
     Component {
         id: widgetExplorerComponent
 
@@ -122,68 +96,12 @@ PC3.Page {
     }
 
     PC2.ModelContextMenu {
-        id: categoriesDialog
-        visualParent: categoryButton
-        // model set on first invocation
-
-        onClicked: {
-            list.contentX = 0
-            list.contentY = 0
-            categoryButton.text = (model.filterData ? model.display : i18nd("plasma_shell_org.kde.plasma.desktop", "All Widgets"))
-            widgetExplorer.widgetsModel.filterQuery = model.filterData
-            widgetExplorer.widgetsModel.filterType = model.filterType
-        }
-    }
-
-    PC2.ModelContextMenu {
         id: getWidgetsDialog
         visualParent: getWidgetsButton
         placement: PlasmaCore.Types.TopPosedLeftAlignedPopup
         // model set on first invocation
         onClicked: model.trigger()
     }
-    /*
-    PlasmaCore.Dialog {
-        id: tooltipDialog
-        property Item appletDelegate
-        location: PlasmaCore.Types.RightEdge //actually we want this to be the opposite location of the explorer itself
-
-        type: PlasmaCore.Dialog.Tooltip
-        flags:Qt.Window|Qt.WindowStaysOnTopHint|Qt.X11BypassWindowManagerHint
-
-        onAppletDelegateChanged: {
-            if (!appletDelegate) {
-                toolTipHideTimer.restart()
-                toolTipShowTimer.running = false
-            } else if (tooltipDialog.visible) {
-                tooltipDialog.visualParent = appletDelegate
-            } else {
-                tooltipDialog.visualParent = appletDelegate
-                toolTipShowTimer.restart()
-                toolTipHideTimer.running = false
-            }
-        }
-        mainItem: Tooltip { id: tooltipWidget }
-
-        Behavior on y {
-            NumberAnimation { duration: PlasmaCore.Units.longDuration }
-        }
-    }
-    Timer {
-        id: toolTipShowTimer
-        interval: 500
-        repeat: false
-        onTriggered: {
-            tooltipDialog.visible = true
-        }
-    }
-    Timer {
-        id: toolTipHideTimer
-        interval: 1000
-        repeat: false
-        onTriggered: tooltipDialog.visible = false
-    }
-    */
 
     header: PlasmaExtras.PlasmoidHeading {
         ColumnLayout {
@@ -198,15 +116,6 @@ PC3.Page {
                     elide: Text.ElideRight
 
                     Layout.fillWidth: true
-                }
-                PC3.ToolButton {
-                    id: getWidgetsButton
-                    icon.name: "get-hot-new-stuff"
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Widgets…")
-                    onClicked: {
-                        getWidgetsDialog.model = widgetExplorer.widgetsMenuActions
-                        getWidgetsDialog.openRelative()
-                    }
                 }
                 PC3.ToolButton {
                     id: closeButton
@@ -233,16 +142,12 @@ PC3.Page {
                     Component.onCompleted: forceActiveFocus()
                 }
                 PC3.ToolButton {
-                    id: categoryButton
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "All Widgets")
-                    icon.name: "view-filter"
+                    id: getWidgetsButton
+                    icon.name: "get-hot-new-stuff"
+                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Widgets…")
                     onClicked: {
-                        categoriesDialog.model = widgetExplorer.filterModel
-                        categoriesDialog.open(0, categoryButton.height)
-                    }
-
-                    PC3.ToolTip {
-                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Categories")
+                        getWidgetsDialog.model = widgetExplorer.widgetsMenuActions
+                        getWidgetsDialog.openRelative()
                     }
                 }
             }
@@ -256,74 +161,123 @@ PC3.Page {
         onTriggered: list.model = widgetExplorer.widgetsModel
     }
 
-    PC3.ScrollView {
-        anchors.fill: parent
-        anchors.rightMargin: - main.sidePanel.margins.right
-
-        // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
-        PC3.ScrollBar.horizontal.policy: PC3.ScrollBar.AlwaysOff
-
-        // hide the flickering by fading in nicely
-        opacity: setModelTimer.running ? 0 : 1
-        Behavior on opacity {
-            OpacityAnimator {
-                duration: PlasmaCore.Units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
-
-        GridView {
-            id: list
-
-            // model set delayed by Timer above
-
+    contentItem: RowLayout {
+        PC3.ScrollView {
+            Layout.fillHeight: true
+            implicitWidth: PlasmaCore.Units.gridUnit * 10
             activeFocusOnTab: true
-            keyNavigationWraps: true
-            cellWidth: Math.floor(width / 3)
-            cellHeight: cellWidth + PlasmaCore.Units.gridUnit * 4 + PlasmaCore.Units.smallSpacing * 2
 
-            delegate: AppletDelegate {}
-            highlight: PC2.Highlight {}
-            highlightMoveDuration: 0
-            //highlightResizeDuration: 0
+            PC3.ScrollBar.horizontal.policy: PC3.ScrollBar.AlwaysOff
 
-            //slide in to view from the left
-            add: Transition {
-                NumberAnimation {
-                    properties: "x"
-                    from: -list.width
-                    duration: PlasmaCore.Units.shortDuration
-                }
-            }
+            ListView {
+                id: sideView
+                model: widgetExplorer.filterModel
+                activeFocusOnTab: true
+                highlight: PC2.Highlight {}
+                highlightMoveDuration: 0
+                onCurrentItemChanged: if (currentItem) currentItem.apply()
 
-            //slide out of view to the right
-            remove: Transition {
-                NumberAnimation {
-                    properties: "x"
-                    to: list.width
-                    duration: PlasmaCore.Units.shortDuration
-                }
-            }
+                delegate: PC2.ListItem {
+                    RowLayout {
+                        PlasmaExtras.Heading {
+                            visible: model.separator === true
+                            level: 4
+                            text: model.display
+                            elide: Text.ElideRight
+                            Layout.fillWidth: true
+                            Layout.topMargin: PlasmaCore.Units.smallSpacing*2
+                        }
+                        PC3.Label {
+                            visible: !(model.separator === true)
+                            text: model.display
+                            elide: Text.ElideRight
+                            Layout.fillWidth: true
+                        }
+                    }
+                    function apply() {
+                        if (model.separator === true)
+                            return
 
-            //if we are adding other items into the view use the same animation as normal adding
-            //this makes everything slide in together
-            //if we make it move everything ends up weird
-            addDisplaced: list.add
-
-            //moved due to filtering
-            displaced: Transition {
-                NumberAnimation {
-                    properties: "x,y"
-                    duration: PlasmaCore.Units.shortDuration
+                        sideView.currentIndex = model.index
+                        widgetExplorer.widgetsModel.filterQuery = model.filterData
+                        widgetExplorer.widgetsModel.filterType = model.filterType
+                    }
+                    TapHandler {
+                        onTapped: apply()
+                    }
                 }
             }
         }
-    }
+        QQC2.ToolSeparator {
+            Layout.fillHeight: true
+        }
+        PC3.ScrollView {
+            Layout.fillHeight: true
+            implicitWidth: list.cellWidth * 3 + PlasmaCore.Units.gridUnit
 
-    PlasmaExtras.PlaceholderMessage {
-        anchors.centerIn: parent
-        width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
-        text: searchInput.text.length > 0 ? i18n("No widgets matched the search terms") : i18n("No widgets available")
-        visible: list.count == 0
+            PC3.ScrollBar.horizontal.policy: PC3.ScrollBar.AlwaysOff
+
+            // hide the flickering by fading in nicely
+            opacity: setModelTimer.running ? 0 : 1
+            Behavior on opacity {
+                OpacityAnimator {
+                    duration: PlasmaCore.Units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
+
+            GridView {
+                id: list
+
+                // model set delayed by Timer above
+
+                PlasmaExtras.PlaceholderMessage {
+                    anchors.centerIn: parent
+                    width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
+                    text: searchInput.text.length > 0 ? i18n("No widgets matched the search terms") : i18n("No widgets available")
+                    visible: list.count == 0
+                }
+
+                activeFocusOnTab: true
+                cellWidth: PlasmaCore.Units.iconSizes.enormous + (PlasmaCore.Units.gridUnit*2)
+                cellHeight: cellWidth + PlasmaCore.Units.gridUnit * 4 + PlasmaCore.Units.smallSpacing * 2
+
+                delegate: AppletDelegate {}
+                highlight: PC2.Highlight {}
+                highlightMoveDuration: 0
+                //highlightResizeDuration: 0
+
+                //slide in to view from the left
+                add: Transition {
+                    NumberAnimation {
+                        properties: "y"
+                        from: -list.height
+                        duration: PlasmaCore.Units.shortDuration
+                    }
+                }
+
+                //slide out of view to the right
+                remove: Transition {
+                    NumberAnimation {
+                        properties: "y"
+                        to: list.height
+                        duration: PlasmaCore.Units.shortDuration
+                    }
+                }
+
+                //if we are adding other items into the view use the same animation as normal adding
+                //this makes everything slide in together
+                //if we make it move everything ends up weird
+                addDisplaced: list.add
+
+                //moved due to filtering
+                displaced: Transition {
+                    NumberAnimation {
+                        properties: "x,y"
+                        duration: PlasmaCore.Units.shortDuration
+                    }
+                }
+            }
+        }
     }
 }
