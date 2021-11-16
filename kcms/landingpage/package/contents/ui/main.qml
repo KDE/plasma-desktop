@@ -17,47 +17,46 @@ KCM.SimpleKCM {
 
     ColumnLayout {
 
-        QQC2.ButtonGroup { id: themeGroup }
-
-        RowLayout {
-            Layout.alignment: Qt.AlignCenter
-            spacing: Kirigami.Units.gridUnit * 2
-            Thumbnail {
-                imageSource: kcm.defaultLightLookAndFeel.thumbnail
-                text: i18n("Light Theme")
-                checked: kcm.globalsSettings.lookAndFeelPackage === kcm.defaultLightLookAndFeel.id
-                QQC2.ButtonGroup.group: themeGroup
-
-                onToggled: kcm.globalsSettings.lookAndFeelPackage = kcm.defaultLightLookAndFeel.id
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.globalsSettings
-                    settingName: "lookAndFeelPackage"
-                }
-            }
-            Thumbnail {
-                imageSource: kcm.defaultDarkLookAndFeel.thumbnail
-                text: i18n("Dark Theme")
-                checked: kcm.globalsSettings.lookAndFeelPackage === kcm.defaultDarkLookAndFeel.id
-                QQC2.ButtonGroup.group: themeGroup
-
-                onToggled: kcm.globalsSettings.lookAndFeelPackage = kcm.defaultDarkLookAndFeel.id
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.globalsSettings
-                    settingName: "lookAndFeelPackage"
-                }
-            }
-        }
-
-        Item {
-            implicitHeight: Kirigami.Units.largeSpacing
-        }
-
         Kirigami.FormLayout {
             id: appearanceForm
 
             twinFormLayouts: behaviorForm
+
+            RowLayout {
+                Kirigami.FormData.label: i18n("Theme:")
+
+                Layout.alignment: Qt.AlignCenter
+                spacing: Kirigami.Units.gridUnit * 2
+
+                QQC2.ButtonGroup { id: themeGroup } // needed?
+
+                Thumbnail {
+                    imageSource: kcm.defaultLightLookAndFeel.thumbnail
+                    text: i18nc("Adjective; as in, 'light theme'", "Light")
+                    checked: kcm.globalsSettings.lookAndFeelPackage === kcm.defaultLightLookAndFeel.id
+                    QQC2.ButtonGroup.group: themeGroup
+
+                    onToggled: kcm.globalsSettings.lookAndFeelPackage = kcm.defaultLightLookAndFeel.id
+
+                    KCM.SettingStateBinding {
+                        configObject: kcm.globalsSettings
+                        settingName: "lookAndFeelPackage"
+                    }
+                }
+                Thumbnail {
+                    imageSource: kcm.defaultDarkLookAndFeel.thumbnail
+                    text: i18nc("Adjective; as in, 'dark theme'", "Dark")
+                    checked: kcm.globalsSettings.lookAndFeelPackage === kcm.defaultDarkLookAndFeel.id
+                    QQC2.ButtonGroup.group: themeGroup
+
+                    onToggled: kcm.globalsSettings.lookAndFeelPackage = kcm.defaultDarkLookAndFeel.id
+
+                    KCM.SettingStateBinding {
+                        configObject: kcm.globalsSettings
+                        settingName: "lookAndFeelPackage"
+                    }
+                }
+            }
 
             // We want to show the slider in a logarithmic way. ie
             // move from 4x, 3x, 2x, 1x, 0.5x, 0.25x, 0.125x

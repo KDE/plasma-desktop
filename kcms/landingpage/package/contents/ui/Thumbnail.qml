@@ -25,7 +25,7 @@ QQC2.RadioButton {
 
         Kirigami.ShadowedRectangle {
             implicitWidth: implicitHeight * 1.6
-            implicitHeight: Kirigami.Units.gridUnit * 6
+            implicitHeight: Kirigami.Units.gridUnit * 5
             radius: Kirigami.Units.smallSpacing
             Kirigami.Theme.inherit: false
             Kirigami.Theme.colorSet: Kirigami.Theme.View
