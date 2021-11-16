@@ -72,6 +72,56 @@
 
 Q_LOGGING_CATEGORY(FOLDERMODEL, "plasma.containments.desktop.folder.foldermodel")
 
+
+class DragTrackerSingleton
+{
+public:
+    DragTracker self;
+};
+
+Q_GLOBAL_STATIC(DragTrackerSingleton, privateDragTrackerSelf)
+
+DragTracker::DragTracker(QObject *parent)
+    : QObject(parent)
+{
+}
+
+DragTracker::~DragTracker()
+{
+}
+
+bool DragTracker::isDragInProgress() const
+{
+    return m_dragInProgress;
+}
+
+void DragTracker::setDragInProgress(FolderModel *dragOwner, bool dragInProgress)
+{
+    if (dragInProgress == m_dragInProgress) {
+        return;
+    }
+
+    m_dragInProgress = dragInProgress;
+    if (dragInProgress) {
+        m_dragOwner = dragOwner;
+    } else {
+        m_dragOwner.clear();
+    }
+
+    Q_EMIT dragInProgressChanged(m_dragInProgress);
+}
+
+FolderModel *DragTracker::dragOwner()
+{
+    return m_dragOwner;
+}
+
+DragTracker *DragTracker::self()
+{
+    return &privateDragTrackerSelf()->self;
+}
+
+
 DirLister::DirLister(QObject *parent)
     : KDirLister(parent)
 {
@@ -94,7 +144,6 @@ void DirLister::handleError(KIO::Job *job)
 FolderModel::FolderModel(QObject *parent)
     : QSortFilterProxyModel(parent)
     , m_dirWatch(nullptr)
-    , m_dragInProgress(false)
     , m_urlChangedWhileDragging(false)
     , m_dropTargetPositionsCleanup(new QTimer(this))
     , m_previewGenerator(nullptr)
@@ -115,6 +164,8 @@ FolderModel::FolderModel(QObject *parent)
     , m_screenMapper(ScreenMapper::instance())
     , m_complete(false)
 {
+    connect(DragTracker::self(), &DragTracker::dragInProgressChanged, this, &FolderModel::draggingChanged);
+    connect(DragTracker::self(), &DragTracker::dragInProgressChanged, this, &FolderModel::dragInProgressAnywhereChanged);
     // needed to pass the job around with qml
     qmlRegisterType<KIO::DropJob>();
     DirLister *dirLister = new DirLister(this);
@@ -324,7 +375,7 @@ void FolderModel::setUrl(const QString &url)
         m_dirWatch->addFile(resolvedNewUrl.toLocalFile() + QLatin1String("/.directory"));
     }
 
-    if (m_dragInProgress) {
+    if (dragging()) {
         m_urlChangedWhileDragging = true;
     }
 
@@ -385,7 +436,12 @@ QString FolderModel::errorString() const
 
 bool FolderModel::dragging() const
 {
-    return m_dragInProgress;
+    return DragTracker::self()->isDragInProgress() && DragTracker::self()->dragOwner() == this;
+}
+
+bool FolderModel::isDragInProgressAnywhere() const
+{
+    return DragTracker::self()->isDragInProgress();
 }
 
 bool FolderModel::usedByContainment() const
@@ -945,12 +1001,11 @@ void FolderModel::addDragImage(QDrag *drag, int x, int y)
 
 void FolderModel::dragSelected(int x, int y)
 {
-    if (m_dragInProgress) {
+    if (dragging()) {
         return;
     }
 
-    m_dragInProgress = true;
-    Q_EMIT draggingChanged();
+    DragTracker::self()->setDragInProgress(this, true);
     m_urlChangedWhileDragging = false;
 
     // Avoid starting a drag synchronously in a mouse handler or interferes with
@@ -962,8 +1017,7 @@ void FolderModel::dragSelected(int x, int y)
 void FolderModel::dragSelectedInternal(int x, int y)
 {
     if (!m_viewAdapter || !m_selectionModel->hasSelection()) {
-        m_dragInProgress = false;
-        Q_EMIT draggingChanged();
+        DragTracker::self()->setDragInProgress(nullptr, false);
         return;
     }
 
@@ -1000,8 +1054,7 @@ void FolderModel::dragSelectedInternal(int x, int y)
 
     item->ungrabMouse();
 
-    m_dragInProgress = false;
-    Q_EMIT draggingChanged();
+    DragTracker::self()->setDragInProgress(nullptr, false);
     m_urlChangedWhileDragging = false;
 
     if (m_dirModel->dirLister()->url() == currentUrl) {
@@ -1107,7 +1160,7 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
     const int y = dropEvent->property("y").toInt();
     const QPoint dropPos = {x, y};
 
-    if (m_dragInProgress && row == -1 && !m_urlChangedWhileDragging) {
+    if (dragging() && row == -1 && !m_urlChangedWhileDragging) {
         if (m_locked || mimeData->urls().isEmpty()) {
             return;
         }

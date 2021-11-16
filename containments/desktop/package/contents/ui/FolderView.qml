@@ -33,6 +33,7 @@ FocusScope {
     property alias positions: positioner.positions
     property alias errorString: dir.errorString
     property alias dragging: dir.dragging
+    property alias dragInProgressAnywhere: dir.dragInProgressAnywhere
     property alias locked: dir.locked
     property alias sortMode: dir.sortMode
     property alias filterMode: dir.filterMode

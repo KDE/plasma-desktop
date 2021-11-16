@@ -70,8 +70,8 @@ Folder.SubDialog {
             flow:  GridView.FlowLeftToRight
             layoutDirection: Qt.LeftToRight
 
-            onDraggingChanged: {
-                if (!dragging && !dialog.visible) {
+            onDragInProgressAnywhereChanged: {
+                if (!dragInProgressAnywhere && !dialog.visible) {
                     dialog.destroy();
                 }
             }
@@ -97,7 +97,7 @@ Folder.SubDialog {
     ]
 
     function requestDestroy() {
-        if (folderView.dragging) {
+        if (folderView.dragInProgressAnywhere) {
             visible = false;
         } else {
             destroy();

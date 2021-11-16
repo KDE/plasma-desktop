@@ -74,6 +74,7 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
     Q_PROPERTY(Status status READ status NOTIFY statusChanged)
     Q_PROPERTY(QString errorString READ errorString NOTIFY errorStringChanged)
     Q_PROPERTY(bool dragging READ dragging NOTIFY draggingChanged)
+    Q_PROPERTY(bool dragInProgressAnywhere READ isDragInProgressAnywhere NOTIFY dragInProgressAnywhereChanged)
     Q_PROPERTY(bool usedByContainment READ usedByContainment WRITE setUsedByContainment NOTIFY usedByContainmentChanged)
     Q_PROPERTY(bool locked READ locked WRITE setLocked NOTIFY lockedChanged)
     Q_PROPERTY(int sortMode READ sortMode WRITE setSortMode NOTIFY sortModeChanged)
@@ -140,6 +141,7 @@ public:
     QString errorString() const;
 
     bool dragging() const;
+    bool isDragInProgressAnywhere() const;
 
     bool usedByContainment() const;
     void setUsedByContainment(bool used);
@@ -248,6 +250,7 @@ Q_SIGNALS:
     void statusChanged() const;
     void errorStringChanged() const;
     void draggingChanged() const;
+    void dragInProgressAnywhereChanged() const;
     void usedByContainmentChanged() const;
     void lockedChanged() const;
     void sortModeChanged() const;
@@ -312,7 +315,6 @@ private:
     QModelIndexList m_dragIndexes;
     QHash<int, DragImage *> m_dragImages;
     QPoint m_dragHotSpotScrollOffset;
-    bool m_dragInProgress;
     bool m_urlChangedWhileDragging;
     // target filename to target position of a drop event, note that this deliberately
     // is not using the URL to easily support desktop:/ URL schemes
@@ -349,6 +351,28 @@ private:
     QObject *m_appletInterface = nullptr;
     bool m_complete;
     QPoint m_menuPosition;
+};
+
+class DragTracker : public QObject
+{
+    Q_OBJECT
+public:
+    DragTracker(QObject *parent = nullptr);
+    ~DragTracker();
+
+    bool isDragInProgress() const;
+    void setDragInProgress(FolderModel *dragOwner, bool drag);
+
+    FolderModel *dragOwner();
+
+    static DragTracker *self();
+
+Q_SIGNALS:
+    void dragInProgressChanged(bool dragInProgress);
+
+private:
+    bool m_dragInProgress = false;
+    QPointer<FolderModel> m_dragOwner;
 };
 
 #endif
