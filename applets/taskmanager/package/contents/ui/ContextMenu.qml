@@ -638,15 +638,22 @@ PlasmaComponents.ContextMenu {
                      && get(atm.IsStartup) !== true
                      && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
                      && (activityInfo.numberOfRunningActivities < 2)
-                     && tasksModel.launcherPosition(get(atm.LauncherUrlWithoutIcon)) == -1
+                     && !doesBelongToCurrentActivity()
 
         enabled: visualParent && get(atm.LauncherUrlWithoutIcon) != ""
 
         text: i18n("&Pin to Task Manager")
         icon: "window-pin"
 
+        function doesBelongToCurrentActivity() {
+            return tasksModel.launcherActivities(get(atm.LauncherUrlWithoutIcon)).some(function(activity) {
+                var NULL_UUID = "00000000-0000-0000-0000-000000000000";
+                return activity === activityInfo.currentActivity || activity === NULL_UUID;
+            });
+        }
+
         onClicked: {
-            if (tasksModel.launcherPosition(get(atm.LauncherUrlWithoutIcon)) !== -1) {
+            if (doesBelongToCurrentActivity()) {
                 tasksModel.requestRemoveLauncher(get(atm.LauncherUrlWithoutIcon));
             } else {
                 tasksModel.requestAddLauncher(get(atm.LauncherUrl));
