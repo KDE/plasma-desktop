@@ -661,7 +661,6 @@ PlasmaComponents.ContextMenu {
         icon: "window-pin"
 
         visible: visualParent
-                     && get(atm.IsLauncher) !== true
                      && get(atm.IsStartup) !== true
                      && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
                      && (activityInfo.numberOfRunningActivities >= 2)
@@ -737,8 +736,7 @@ PlasmaComponents.ContextMenu {
     PlasmaComponents.MenuItem {
         visible: (visualParent
                 && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
-                && !launcherToggleAction.visible
-                && !showLauncherInActivitiesItem.visible)
+                && !launcherToggleAction.visible)
 
         text: i18n("Unpin from Task Manager")
         icon: "window-unpin"
