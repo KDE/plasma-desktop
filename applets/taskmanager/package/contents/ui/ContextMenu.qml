@@ -647,17 +647,12 @@ PlasmaComponents.ContextMenu {
 
         function doesBelongToCurrentActivity() {
             return tasksModel.launcherActivities(get(atm.LauncherUrlWithoutIcon)).some(function(activity) {
-                var NULL_UUID = "00000000-0000-0000-0000-000000000000";
-                return activity === activityInfo.currentActivity || activity === NULL_UUID;
+                return activity === activityInfo.currentActivity || activity === activityInfo.nullUuid;
             });
         }
 
         onClicked: {
-            if (doesBelongToCurrentActivity()) {
-                tasksModel.requestRemoveLauncher(get(atm.LauncherUrlWithoutIcon));
-            } else {
-                tasksModel.requestAddLauncher(get(atm.LauncherUrl));
-            }
+            tasksModel.requestAddLauncher(get(atm.LauncherUrl));
         }
     }
 
@@ -744,7 +739,7 @@ PlasmaComponents.ContextMenu {
         visible: (visualParent
                 && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
                 && !launcherToggleAction.visible
-                && (activityInfo.numberOfRunningActivities < 2))
+                && activityInfo.numberOfRunningActivities < 2)
 
         text: i18n("Unpin from Task Manager")
         icon: "window-unpin"
