@@ -710,9 +710,7 @@ PlasmaComponents.ContextMenu {
 
                 var activities = tasksModel.launcherActivities(url);
 
-                var NULL_UUID = "00000000-0000-0000-0000-000000000000";
-
-                createNewItem(NULL_UUID, i18n("On All Activities"), url, activities);
+                createNewItem(activityInfo.nullUuid, i18n("On All Activities"), url, activities);
 
                 if (activityInfo.numberOfRunningActivities <= 1) {
                     return;
