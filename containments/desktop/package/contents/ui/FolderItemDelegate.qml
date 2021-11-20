@@ -389,6 +389,11 @@ Item {
                     id: frameComponent
 
                     PlasmaCore.FrameSvgItem {
+                        // Workaround for a bug where the frameComponent does not
+                        // get unloaded when items are dragged to a different
+                        // place on the desktop.
+                        visible: this === frameLoader.item
+
                         prefix: frameLoader.prefix
 
                         imagePath: "widgets/viewitem"
