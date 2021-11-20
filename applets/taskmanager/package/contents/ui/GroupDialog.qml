@@ -21,7 +21,6 @@ PlasmaCore.Dialog {
     id: groupDialog
     visible: false
 
-    type: PlasmaCore.Dialog.PopupMenu
     flags: Qt.WindowStaysOnTopHint
     hideOnWindowDeactivate: true
     location: plasmoid.location
