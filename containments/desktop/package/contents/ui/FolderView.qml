@@ -1209,6 +1209,12 @@ FocusScope {
             previewPlugins: plasmoid.configuration.previewPlugins
             appletInterface: plasmoid
 
+            onSelectionChanged: {
+                if (usedByContainment) {
+                    gridView.currentIndex = positioner.firstSelectedItem();
+                }
+            }
+
             onListingCompleted: {
                 if (!gridView.model && plasmoid.expanded) {
                     gridView.model = positioner;
@@ -1236,6 +1242,7 @@ FocusScope {
                 var row = -1;
                 var from = -1;
                 var to = -1;
+                let noItemMoved = true;
 
                 for (var i = 0; i < urls.length; i++) {
                     from = positioner.indexForUrl(urls[i]);
@@ -1276,13 +1283,21 @@ FocusScope {
                     }
                 }
 
+                if (!noItemMoved) {
+                    // Do not clear the selection when the items were moved
+                    // right to the place where they were. Otherwise the
+                    // call of Positioner::move() will not reselect them.
+                    // Also, this should only be called after filling the
+                    // moves list.
+                    dir.clearSelection();
+                }
+
                 if (moves.length) {
                     positioner.move(moves);
                     gridView.forceLayout();
                 }
 
                 previouslySelectedItemIndex = -1;
-                dir.clearSelection();
             }
         }
 

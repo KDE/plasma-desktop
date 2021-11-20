@@ -134,6 +134,23 @@ int Positioner::map(int row) const
     return row;
 }
 
+int Positioner::firstSelectedItem() const
+{
+    int index = -1;
+    int min = std::numeric_limits<int>::max();
+
+    for (int i = 0; i < m_folderModel->rowCount(); i++) {
+        if (m_sourceToProxy.value(i) < min) {
+            if (m_folderModel->data(m_folderModel->index(i, 0), FolderModel::SelectedRole).toBool()) {
+                min = m_sourceToProxy.value(i);
+                index = min;
+            }
+        }
+    }
+
+    return index;
+}
+
 int Positioner::nearestItem(int currentIndex, Qt::ArrowType direction)
 {
     if (!m_enabled || currentIndex >= rowCount()) {
@@ -355,7 +372,7 @@ void Positioner::move(const QVariantList &moves)
 
     QVector<int> fromIndices;
     QVector<int> toIndices;
-    QVector<int> sourceRows;
+    QVariantList sourceRows;
 
     for (int i = 0; i < moves.count(); ++i) {
         const int isFrom = (i % 2 == 0);
@@ -377,7 +394,7 @@ void Positioner::move(const QVariantList &moves)
     for (int i = 0; i < fromIndices.count(); ++i) {
         const int from = fromIndices[i];
         int to = toIndices[i];
-        const int sourceRow = sourceRows[i];
+        const int sourceRow = sourceRows[i].toInt();
 
         if (sourceRow == -1 || from == to) {
             continue;
@@ -432,6 +449,8 @@ void Positioner::move(const QVariantList &moves)
         beginRemoveRows(QModelIndex(), newCount, oldCount - 1);
         endRemoveRows();
     }
+
+    m_folderModel->updateSelection(sourceRows, true);
 
     m_updatePositionsTimer->start();
 }

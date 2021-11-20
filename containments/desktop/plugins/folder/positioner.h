@@ -43,6 +43,7 @@ public:
     Q_INVOKABLE int map(int row) const;
 
     Q_INVOKABLE int nearestItem(int currentIndex, Qt::ArrowType direction);
+    Q_INVOKABLE int firstSelectedItem() const;
 
     Q_INVOKABLE bool isBlank(int row) const;
     Q_INVOKABLE int indexForUrl(const QUrl &url) const;

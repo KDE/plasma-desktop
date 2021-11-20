@@ -233,6 +233,7 @@ FolderModel::FolderModel(QObject *parent)
     });
 
     m_selectionModel = new QItemSelectionModel(this, this);
+    connect(m_selectionModel, &QItemSelectionModel::selectionChanged, this, &FolderModel::changeSelection);
     connect(m_selectionModel, &QItemSelectionModel::selectionChanged, this, &FolderModel::selectionChanged);
 
     setSourceModel(m_dirModel);
@@ -1311,7 +1312,7 @@ void FolderModel::dropCwd(QObject *dropEvent)
     }
 }
 
-void FolderModel::selectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
+void FolderModel::changeSelection(const QItemSelection &selected, const QItemSelection &deselected)
 {
     QModelIndexList indices = selected.indexes();
     indices.append(deselected.indexes());
