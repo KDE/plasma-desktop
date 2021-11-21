@@ -15,8 +15,9 @@ import org.kde.kirigami 2.0 as Kirigami
 
 Item {
     id: root
-    implicitWidth: Math.max(buttonsLayout_1.width, buttonsLayout_2.width, row.width) + PlasmaCore.Units.smallSpacing * 2
-    implicitHeight: row.height + 20
+    // Do not use Layout's implicitWidth/implicitHeight as they are updated too late (BUG 443294)
+    implicitWidth: Math.max(addWidgetsButton.implicitWidth, addSpacerButton.implicitWidth, edgeHandle.implicitWidth, settingsButton.implicitWidth, spinBoxLabel.implicitWidth, spinBox.implicitWidth) + PlasmaCore.Units.smallSpacing * 2
+    implicitHeight: Math.max(addWidgetsButton.implicitHeight, addSpacerButton.implicitHeight, edgeHandle.implicitHeight, settingsButton.implicitHeight, spinBoxLabel.implicitHeight, spinBox.implicitHeight) + PlasmaCore.Units.smallSpacing * 5
 
     readonly property string addWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets…")
     readonly property string addSpacerButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Spacer")
@@ -54,6 +55,7 @@ Item {
         columnSpacing: PlasmaCore.Units.smallSpacing
 
         PlasmaComponents.Button {
+            id: addWidgetsButton
             text: buttonsLayout_2.showText ? root.addWidgetsButtonText : ""
             tooltip: buttonsLayout_2.showText ? "" : root.addWidgetsButtonText
             iconSource: "list-add"
@@ -65,6 +67,7 @@ Item {
         }
 
         PlasmaComponents.Button {
+            id: addSpacerButton
             iconSource: "distribute-horizontal-x"
             text: buttonsLayout_2.showText ? root.addSpacerButtonText : ""
             tooltip: buttonsLayout_2.showText ? "" : root.addSpacerButtonText
@@ -93,12 +96,14 @@ Item {
             Layout.preferredHeight: PlasmaCore.Units.gridUnit
         }
         PlasmaComponents3.Label {
+            id: spinBoxLabel
             Layout.fillWidth: true
             wrapMode: Text.Wrap
 
             text: panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge ? i18nd("plasma_shell_org.kde.plasma.desktop", "Panel width:") : i18nd("plasma_shell_org.kde.plasma.desktop", "Panel height:")
         }
         PlasmaComponents3.SpinBox {
+            id: spinBox
             Layout.fillWidth: true
 
             editable: true
@@ -330,6 +335,10 @@ Item {
                 target: root
                 width: root.implicitWidth
             }
+            PropertyChanges {
+                target: buttonsLayout_2
+                implicitHeight: -1 // Prevent the panel from being too narrow
+            }
             AnchorChanges {
                 target: root
                 anchors {
@@ -365,6 +374,10 @@ Item {
             PropertyChanges {
                 target: root
                 width: root.implicitWidth
+            }
+            PropertyChanges {
+                target: buttonsLayout_2
+                implicitHeight: -1 // Prevent the panel from being too narrow
             }
             AnchorChanges {
                 target: root
