@@ -80,8 +80,8 @@ PlasmaCore.Dialog {
                     readonly property TextMetrics textMetrics: TextMetrics {}
                     property int maxTextWidth: 0
 
-                    model: groupDialog.visualParent && groupDialog.visible ? tasksModel : null
-                    rootIndex: groupDialog.visualParent && groupDialog.visible ? tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex) : null
+                    model: groupDialog.visualParent ? tasksModel : null
+                    rootIndex: groupDialog.visualParent ? tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex) : null
                     delegate: Task {
                         visible: true
                         inPopup: true
