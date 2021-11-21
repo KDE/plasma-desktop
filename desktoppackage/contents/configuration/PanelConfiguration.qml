@@ -76,6 +76,7 @@ PlasmaCore.FrameSvgItem {
 
     ToolBar {
         id: toolBar
+        state: dialogRoot.state
     }
 //END UI components
 

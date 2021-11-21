@@ -15,7 +15,6 @@ import org.kde.kirigami 2.0 as Kirigami
 
 Item {
     id: root
-    state: parent.state
     implicitWidth: Math.max(buttonsLayout_1.width, buttonsLayout_2.width, row.width) + PlasmaCore.Units.smallSpacing * 2
     implicitHeight: row.height + 20
 
