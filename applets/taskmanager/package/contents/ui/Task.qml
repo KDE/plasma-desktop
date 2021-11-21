@@ -29,7 +29,7 @@ MouseArea {
     readonly property var m: model
 
     readonly property int pid: model.AppPid !== undefined ? model.AppPid : 0
-    readonly property string appName: model.AppName
+    readonly property string appName: model.AppName || ""
     readonly property variant winIdList: model.WinIdList
     property int itemIndex: index
     property bool inPopup: false
@@ -504,7 +504,7 @@ MouseArea {
             bottomMargin: taskFrame.margins.bottom
         }
 
-        text: model.display
+        text: model.display || ""
         wrapMode: (maximumLineCount == 1) ? Text.NoWrap : Text.Wrap
         elide: Text.ElideRight
         textFormat: Text.PlainText
