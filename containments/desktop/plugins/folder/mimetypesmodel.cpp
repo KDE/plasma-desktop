@@ -29,7 +29,12 @@ MimeTypesModel::~MimeTypesModel()
 
 QHash<int, QByteArray> MimeTypesModel::roleNames() const
 {
-    return {{Qt::DisplayRole, "comment"}, {Qt::UserRole, "name"}, {Qt::DecorationRole, "decoration"}, {Qt::CheckStateRole, "checked"}};
+    return {
+        {Qt::DisplayRole, "comment"},
+        {Qt::UserRole, "name"},
+        {Qt::DecorationRole, "decoration"},
+        {Qt::CheckStateRole, "checked"},
+    };
 }
 
 QVariant MimeTypesModel::data(const QModelIndex &index, int role) const
