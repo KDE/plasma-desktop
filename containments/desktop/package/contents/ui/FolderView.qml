@@ -1295,6 +1295,10 @@ FocusScope {
                 if (moves.length) {
                     positioner.move(moves);
                     gridView.forceLayout();
+
+                    // Update the currentIndex, otherwise it is not
+                    // set properly.
+                    gridView.currentIndex = positioner.firstSelectedItem();
                 }
 
                 previouslySelectedItemIndex = -1;
