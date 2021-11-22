@@ -417,7 +417,7 @@ public Q_SLOTS:
     void Configure()
     {
         SCIM_DEBUG_MAIN(1) << Q_FUNC_INFO << "\n";
-        QProcess::startDetached("scim-setup");
+        QProcess::startDetached("scim-setup", QStringList());
     }
 
 protected:
