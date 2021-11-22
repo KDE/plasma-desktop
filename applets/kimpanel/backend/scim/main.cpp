@@ -433,20 +433,20 @@ protected:
             switch (ev->scim_event_type()) {
             case DBusEvent::TURN_ON:
                 /*
-                                list_result.clear();
-                                list_result << Property2String(logo_prop);
-                                list_result << PropertyList2LeafOnlyStringList(panel_props);
-                                Q_FOREACH(const QList<Property> &props, helper_props_map.values()) {
-                                    list_result << PropertyList2LeafOnlyStringList(props);
-                                }
-                                list_result << Property2String(show_help_prop);
+                list_result.clear();
+                list_result << Property2String(logo_prop);
+                list_result << PropertyList2LeafOnlyStringList(panel_props);
+                Q_FOREACH(const QList<Property> &props, helper_props_map.values()) {
+                    list_result << PropertyList2LeafOnlyStringList(props);
+                }
+                list_result << Property2String(show_help_prop);
 
-                                message = QDBusMessage::createSignal("/kimpanel",
-                                    "org.kde.kimpanel.inputmethod",
-                                    "RegisterProperties");
+                message = QDBusMessage::createSignal("/kimpanel",
+                    "org.kde.kimpanel.inputmethod",
+                    "RegisterProperties");
 
-                                message << list_result;
-                                QDBusConnection("scim_panel").send(message);
+                message << list_result;
+                QDBusConnection("scim_panel").send(message);
                 */
                 message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "Enable");
                 message << true;
@@ -459,20 +459,20 @@ protected:
                 message << Property2String(logo_prop);
                 QDBusConnection("scim_panel").send(message);
                 /*
-                                list_result.clear();
-                                list_result << Property2String(logo_prop);
-                                Q_FOREACH (const QList<Property> &prop_list, helper_props_map.values()) {
-                                    list_result << PropertyList2LeafOnlyStringList(prop_list);
-                                }
-                                list_result << Property2String(show_help_prop);
+                list_result.clear();
+                list_result << Property2String(logo_prop);
+                Q_FOREACH (const QList<Property> &prop_list, helper_props_map.values()) {
+                    list_result << PropertyList2LeafOnlyStringList(prop_list);
+                }
+                list_result << Property2String(show_help_prop);
 
-                                message = QDBusMessage::createSignal("/kimpanel",
-                                    "org.kde.kimpanel.inputmethod",
-                                    "RegisterProperties");
+                message = QDBusMessage::createSignal("/kimpanel",
+                    "org.kde.kimpanel.inputmethod",
+                    "RegisterProperties");
 
-                                message << list_result;
+                message << list_result;
 
-                                QDBusConnection("scim_panel").send(message);
+                QDBusConnection("scim_panel").send(message);
                 */
                 message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "Enable");
                 message << false;
