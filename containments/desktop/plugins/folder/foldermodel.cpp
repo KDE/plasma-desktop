@@ -1739,6 +1739,8 @@ void FolderModel::updateActions()
 
 void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifiers modifiers)
 {
+    Q_UNUSED(modifiers)
+
     if (m_usedByContainment && !KAuthorized::authorize(QStringLiteral("action/kdesktop_rmb"))) {
         return;
     }
