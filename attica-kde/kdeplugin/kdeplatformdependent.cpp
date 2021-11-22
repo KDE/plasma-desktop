@@ -158,7 +158,7 @@ bool KdePlatformDependent::saveCredentials(const QUrl & /*baseUrl*/, const QStri
     // directly requests the accounts kcm to start adding a new account if it's not there, maybe even pre-fills the fields...)
 
     KCMultiDialog *dialog = new KCMultiDialog;
-    dialog->addModule(QStringLiteral("kcm_kaccounts"));
+    dialog->addModule(KPluginMetaData(QStringLiteral("kcm_kaccounts")));
     dialog->setAttribute(Qt::WA_DeleteOnClose);
     dialog->show();
 
