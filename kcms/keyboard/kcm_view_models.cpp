@@ -90,12 +90,12 @@ QMimeData *LayoutsTableModel::mimeData(const QModelIndexList &indexes) const
     QDataStream stream(&encodedData, QIODevice::WriteOnly);
 
     QSet<int> rows;
-    foreach (const QModelIndex &index, indexes) {
+    for (const QModelIndex &index : indexes) {
         if (index.isValid()) {
             rows << index.row();
         }
     }
-    foreach (int row, rows) {
+    for (int row : std::as_const(rows)) {
         stream << row;
     }
 
@@ -266,7 +266,7 @@ static void populateComboWithVariants(QComboBox *combo, const QString &layout, c
 {
     combo->clear();
     const LayoutInfo *layoutInfo = rules->getLayoutInfo(layout);
-    foreach (const VariantInfo *variantInfo, layoutInfo->variantInfos) {
+    for (const VariantInfo *variantInfo : layoutInfo->variantInfos) {
         combo->addItem(variantInfo->description, variantInfo->name);
     }
     combo->model()->sort(0);
@@ -414,7 +414,7 @@ QVariant XkbOptionsTreeModel::data(const QModelIndex &index, int role) const
         } else {
             int groupRow = index.row();
             const OptionGroupInfo *xkbGroup = rules->optionGroupInfos[groupRow];
-            foreach (const OptionInfo *optionInfo, xkbGroup->optionInfos) {
+            for (const OptionInfo *optionInfo : xkbGroup->optionInfos) {
                 if (m_xkbOptions.indexOf(optionInfo->name) != -1)
                     return Qt::PartiallyChecked;
             }

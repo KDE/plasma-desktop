@@ -37,11 +37,11 @@ Screen::~Screen()
 
 QScreen *screenForPoint(int x, int y)
 {
-    auto screens = qApp->screens();
+    const QList<QScreen *> screens = qApp->screens();
     QScreen *closestScreen = nullptr;
     int shortestDistance = INT_MAX;
-    foreach (QScreen *screen, screens) {
-        auto rect = screen->availableGeometry();
+    for (QScreen *screen : screens) {
+        QRect rect = screen->availableGeometry();
         rect.setSize(rect.size() * screen->devicePixelRatio());
         int thisDistance = pointToRect(x, y, rect);
         if (thisDistance < shortestDistance) {

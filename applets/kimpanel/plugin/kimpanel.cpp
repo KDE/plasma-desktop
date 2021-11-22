@@ -57,7 +57,7 @@ void Kimpanel::updateLookupTable(const KimpanelLookupTable &lookupTable)
 {
     m_labels.clear();
     m_texts.clear();
-    Q_FOREACH (const KimpanelLookupTable::Entry &entry, lookupTable.entries) {
+    for (const KimpanelLookupTable::Entry &entry : lookupTable.entries) {
         m_labels << entry.label;
         m_texts << entry.text;
     }
@@ -113,7 +113,7 @@ void Kimpanel::updateLookupTableFull(const KimpanelLookupTable &lookupTable, int
 {
     m_labels.clear();
     m_texts.clear();
-    Q_FOREACH (const KimpanelLookupTable::Entry &entry, lookupTable.entries) {
+    for (const KimpanelLookupTable::Entry &entry : lookupTable.entries) {
         m_labels << entry.label;
         m_texts << entry.text;
     }

@@ -172,7 +172,7 @@ int Positioner::nearestItem(int currentIndex, Qt::ArrowType direction)
     int lastDistance = -1;
     int distance = 0;
 
-    foreach (int row, rows) {
+    for (const int row : std::as_const(rows)) {
         const QPoint pos(row % m_perStripe, row / m_perStripe);
 
         if (row == currentIndex) {
@@ -898,9 +898,9 @@ void Positioner::flushPendingChanges()
 
     int last = lastRow();
 
-    foreach (const QModelIndex &idx, m_pendingChanges) {
-        if (idx.row() <= last) {
-            Q_EMIT dataChanged(idx, idx);
+    for (const QModelIndex &index : std::as_const(m_pendingChanges)) {
+        if (index.row() <= last) {
+            Q_EMIT dataChanged(index, index);
         }
     }
 

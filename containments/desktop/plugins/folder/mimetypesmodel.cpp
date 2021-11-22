@@ -116,7 +116,7 @@ void MimeTypesModel::setCheckedTypes(const QStringList &list)
 {
     m_checkedRows = QVector<bool>(m_mimeTypesList.size(), false);
 
-    foreach (const QString &name, list) {
+    for (const QString &name : list) {
         const int row = indexOfType(name);
 
         if (row != -1) {

@@ -32,9 +32,9 @@ void XkbLayoutManager::getLayout()
     QProcess process;
     process.start(QString::fromLatin1(XKB_COMMAND), QStringList(QString::fromLatin1(XKB_QUERY_ARG)));
     process.waitForFinished();
-    QByteArray output = process.readAllStandardOutput();
-    QList<QByteArray> lines = output.split('\n');
-    Q_FOREACH (const QByteArray &line, lines) {
+    const QByteArray output = process.readAllStandardOutput();
+    const QList<QByteArray> lines = output.split('\n');
+    for (const QByteArray &line : lines) {
         QByteArray element("layout:");
         if (line.startsWith(element)) {
             m_defaultLayout = QString::fromLatin1(line.mid(element.length(), line.length())).trimmed();

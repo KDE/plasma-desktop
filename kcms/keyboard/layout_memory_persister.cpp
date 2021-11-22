@@ -60,7 +60,8 @@ QString LayoutMemoryPersister::getLayoutMapAsString()
         item.setAttribute(CURRENT_LAYOUT_ATTRIBUTE, globalLayout.toString());
         root.appendChild(item);
     } else {
-        foreach (const QString &key, layoutMemory.layoutMap.keys()) {
+        const QStringList keys = layoutMemory.layoutMap.keys();
+        for (const QString &key : keys) {
             if (isDefaultLayoutConfig(layoutMemory.layoutMap[key], layoutMemory.keyboardConfig.getDefaultLayouts())) {
                 continue;
             }
@@ -70,7 +71,8 @@ QString LayoutMemoryPersister::getLayoutMapAsString()
             item.setAttribute(CURRENT_LAYOUT_ATTRIBUTE, layoutMemory.layoutMap[key].currentLayout.toString());
 
             QString layoutSetString;
-            foreach (const LayoutUnit &layoutUnit, layoutMemory.layoutMap[key].layouts) {
+            const QList<LayoutUnit> layouts = layoutMemory.layoutMap[key].layouts;
+            for (const LayoutUnit &layoutUnit : layouts) {
                 if (!layoutSetString.isEmpty()) {
                     layoutSetString += LIST_SEPARATOR_LM;
                 }
@@ -161,9 +163,9 @@ public:
             if (switchingPolicy == KeyboardConfig::SWITCH_POLICY_GLOBAL) {
                 globalLayout = LayoutUnit(attributes.value(CURRENT_LAYOUT_ATTRIBUTE));
             } else {
-                QStringList layoutStrings = attributes.value(LAYOUTS_ATTRIBUTE).split(LIST_SEPARATOR_LM);
+                const QStringList layoutStrings = attributes.value(LAYOUTS_ATTRIBUTE).split(LIST_SEPARATOR_LM);
                 LayoutSet layoutSet;
-                foreach (const QString &layoutString, layoutStrings) {
+                for (const QString &layoutString : layoutStrings) {
                     layoutSet.layouts.append(LayoutUnit(layoutString));
                 }
                 layoutSet.currentLayout = LayoutUnit(attributes.value(CURRENT_LAYOUT_ATTRIBUTE));
@@ -187,9 +189,9 @@ private:
 };
 
 template<typename T>
-static bool containsAll(QList<T> set1, QList<T> set2)
+static bool containsAll(const QList<T> &set1, const QList<T> &set2)
 {
-    foreach (const T &t, set2) {
+    for (const T &t : set2) {
         if (!set1.contains(t))
             return false;
     }
@@ -230,7 +232,7 @@ bool LayoutMemoryPersister::restoreFromFile(const QFile &file_)
         }
     } else {
         layoutMemory.layoutMap.clear();
-        foreach (const QString &key, mapHandler.layoutMap.keys()) {
+        for (const QString &key : mapHandler.layoutMap.keys()) {
             if (containsAll(layoutMemory.keyboardConfig.layouts, mapHandler.layoutMap[key].layouts)) {
                 layoutMemory.layoutMap.insert(key, mapHandler.layoutMap[key]);
             }

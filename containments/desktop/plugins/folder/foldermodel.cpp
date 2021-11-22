@@ -608,7 +608,7 @@ void FolderModel::setFilterPattern(const QString &pattern)
     m_regExps.clear();
     m_regExps.reserve(patterns.count());
 
-    foreach (const QString &pattern, patterns) {
+    for (const QString &pattern : patterns) {
         QRegExp rx(pattern);
         rx.setPatternSyntax(QRegExp::Wildcard);
         rx.setCaseSensitivity(Qt::CaseInsensitive);
@@ -714,19 +714,21 @@ void FolderModel::run(int row)
 
 void FolderModel::runSelected()
 {
-    if (!m_selectionModel->hasSelection()) {
+    const QModelIndexList indexes = m_selectionModel->selectedIndexes();
+
+    if (indexes.isEmpty()) {
         return;
     }
 
-    if (m_selectionModel->selectedIndexes().count() == 1) {
-        run(m_selectionModel->selectedIndexes().constFirst().row());
+    if (indexes.count() == 1) {
+        run(indexes.first().row());
         return;
     }
 
     KFileItemActions fileItemActions(this);
     KFileItemList items;
 
-    foreach (const QModelIndex &index, m_selectionModel->selectedIndexes()) {
+    for (const QModelIndex &index : indexes) {
         // Skip over directories.
         if (!index.data(IsDirRole).toBool()) {
             items << itemForIndex(index);
@@ -821,7 +823,7 @@ void FolderModel::updateSelection(const QVariantList &rows, bool toggle)
 
     int iRow = -1;
 
-    foreach (const QVariant &row, rows) {
+    for (const QVariant &row : rows) {
         iRow = row.toInt();
 
         if (iRow < 0) {
@@ -905,7 +907,7 @@ void FolderModel::addDragImage(QDrag *drag, int x, int y)
 
     QRegion region;
 
-    foreach (DragImage *image, m_dragImages) {
+    for (DragImage *image : std::as_const(m_dragImages)) {
         image->blank = isBlank(image->row);
         image->rect.translate(-m_dragHotSpotScrollOffset.x(), -m_dragHotSpotScrollOffset.y());
         if (!image->blank && !image->image.isNull()) {
@@ -924,7 +926,7 @@ void FolderModel::addDragImage(QDrag *drag, int x, int y)
 
     QPoint pos;
 
-    foreach (DragImage *image, m_dragImages) {
+    for (DragImage *image : std::as_const(m_dragImages)) {
         if (!image->blank && !image->image.isNull()) {
             pos = image->rect.translated(-offset.x(), -offset.y()).topLeft();
             image->cursorOffset.setX(pos.x() - (x - offset.x()));
@@ -981,7 +983,7 @@ void FolderModel::dragSelectedInternal(int x, int y)
 
     QModelIndexList sourceDragIndexes;
     sourceDragIndexes.reserve(m_dragIndexes.count());
-    foreach (const QModelIndex &index, m_dragIndexes) {
+    for (const QModelIndex &index : std::as_const(m_dragIndexes)) {
         sourceDragIndexes.append(mapToSource(index));
     }
 
@@ -1263,15 +1265,16 @@ void FolderModel::selectionChanged(const QItemSelection &selected, const QItemSe
 
     const QVector<int> roles{SelectedRole};
 
-    foreach (const QModelIndex &index, indices) {
+    for (const QModelIndex &index : std::as_const(indices)) {
         Q_EMIT dataChanged(index, index, roles);
     }
 
     if (!m_selectionModel->hasSelection()) {
         clearDragImages();
     } else {
-        foreach (const QModelIndex &idx, deselected.indexes()) {
-            delete m_dragImages.take(idx.row());
+        const QModelIndexList deselectedIndices = deselected.indexes();
+        for (const QModelIndex &index : deselectedIndices) {
+            delete m_dragImages.take(index.row());
         }
     }
 
@@ -1413,7 +1416,7 @@ void FolderModel::statResult(KJob *job)
 
 void FolderModel::evictFromIsDirCache(const KFileItemList &items)
 {
-    foreach (const KFileItem &item, items) {
+    for (const KFileItem &item : items) {
         m_screenMapper->removeFromMap(item.url());
         m_isDirCache.remove(item.url());
     }
@@ -1858,6 +1861,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
 void FolderModel::openPropertiesDialog()
 {
     const QModelIndexList indexes = m_selectionModel->selectedIndexes();
+
     if (indexes.isEmpty()) {
         return;
     }

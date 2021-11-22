@@ -429,7 +429,7 @@ static void impanel_get_default_engine(IBusPanelImpanel *impanel, char ***pengin
         *pengine_names = g_new0(gchar *, engineList.size() + 1);
         *plen = engineList.size();
         size_t i = 0;
-        Q_FOREACH (const QByteArray &name, engineList) {
+        for (const QByteArray &name : std::as_const(engineList)) {
             (*pengine_names)[i] = g_strdup(name.constData());
             i++;
         }
@@ -1359,7 +1359,7 @@ static void ibus_panel_impanel_state_changed(IBusPanelService *panel)
 
     gchar **engine_names = g_new0(gchar *, engineList.size() + 1);
     size_t i = 0;
-    Q_FOREACH (const QString &name, engineList) {
+    for (const QString &name : std::as_const(engineList)) {
         engine_names[i] = g_strdup(name.toUtf8().constData());
         i++;
     }

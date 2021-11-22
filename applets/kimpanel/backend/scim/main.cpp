@@ -136,7 +136,7 @@ static void ui_config_reload_callback(const ConfigPointer &config)
 static QString AttrList2String(const AttributeList &attr_list)
 {
     QString result;
-    Q_FOREACH (const Attribute &attr, attr_list) {
+    for (const Attribute &attr : attr_list) {
         int type = (int)attr.get_type();
         unsigned int start = attr.get_start();
         unsigned int length = attr.get_length();
@@ -258,7 +258,7 @@ public:
     {
         return m_evtype;
     }
-    QVariantList data() const
+    const QVariantList &data() const
     {
         return m_data;
     }
@@ -296,7 +296,7 @@ public:
     void setInitialHelpers(const std::vector<HelperInfo> &_helper_list)
     {
         QList<Property> props;
-        Q_FOREACH (const HelperInfo &info, _helper_list) {
+        for (const HelperInfo &info : _helper_list) {
             if (((info.option & SCIM_HELPER_STAND_ALONE) != 0) && ((info.option & SCIM_HELPER_AUTO_START) == 0)) {
                 props << Property(String(helper_prop_prefix.toUtf8().constData()) + info.uuid, info.name, info.icon, info.description);
             }
@@ -389,7 +389,7 @@ public Q_SLOTS:
         list_result << Property2String(logo_prop);
         list_result << PropertyList2LeafOnlyStringList(panel_props);
 
-        Q_FOREACH (const QList<Property> &props, helper_props_map) {
+        for (const QList<Property> &props : std::as_const(helper_props_map)) {
             list_result << PropertyList2LeafOnlyStringList(props);
         }
 
@@ -429,6 +429,7 @@ protected:
             DBusEvent *ev = (DBusEvent *)e;
 
             QDBusMessage message;
+            QVariantList data;
 
             switch (ev->scim_event_type()) {
             case DBusEvent::TURN_ON:
@@ -436,7 +437,7 @@ protected:
                 list_result.clear();
                 list_result << Property2String(logo_prop);
                 list_result << PropertyList2LeafOnlyStringList(panel_props);
-                Q_FOREACH(const QList<Property> &props, helper_props_map.values()) {
+                for(const QList<Property> &props : std::as_const(helper_props_map)) {
                     list_result << PropertyList2LeafOnlyStringList(props);
                 }
                 list_result << Property2String(show_help_prop);
@@ -461,7 +462,7 @@ protected:
                 /*
                 list_result.clear();
                 list_result << Property2String(logo_prop);
-                Q_FOREACH (const QList<Property> &prop_list, helper_props_map.values()) {
+                for (const QList<Property> &prop_list : std::as_const(helper_props_map)) {
                     list_result << PropertyList2LeafOnlyStringList(prop_list);
                 }
                 list_result << Property2String(show_help_prop);
@@ -487,7 +488,8 @@ protected:
                 message = QDBusMessage::createSignal("/kimpanel", "org.kde.kimpanel.inputmethod", "ExecMenu");
                 // X                 _factory_list.clear();
                 list_result.clear();
-                Q_FOREACH (const QVariant &v, ev->data()) {
+                data = ev->data();
+                for (const QVariant &v : std::as_const(data)) {
                     PanelFactoryInfo factory_info = v.value<PanelFactoryInfo>();
                     // X                     _factory_list << factory_info;
                     list_result << Property2String(Property(String(factory_prop_prefix.toUtf8().constData()) + factory_info.uuid,
@@ -589,7 +591,8 @@ protected:
             case DBusEvent::REG_HELPER_PROPERTIES:
                 helper_props_map.clear();
                 prop_list.clear();
-                Q_FOREACH (const QVariant &v, ev->data().at(1).toList()) {
+                data = ev->data().at(1).toList();
+                for (const QVariant &v : std::as_const(data)) {
                     Property prop = v.value<Property>();
                     prop_list << prop;
                 }
@@ -598,7 +601,7 @@ protected:
                 list_result.clear();
                 list_result << Property2String(logo_prop);
                 list_result << PropertyList2LeafOnlyStringList(panel_props);
-                Q_FOREACH (const QList<Property> &props, helper_props_map) {
+                for (const QList<Property> &props : std::as_const(helper_props_map)) {
                     list_result << PropertyList2LeafOnlyStringList(props);
                 }
                 list_result << Property2String(show_help_prop);
@@ -611,7 +614,8 @@ protected:
                 break;
             case DBusEvent::REG_PROPERTIES:
                 panel_props.clear();
-                Q_FOREACH (const QVariant &v, ev->data()) {
+                data = ev->data();
+                for (const QVariant &v : std::as_const(data)) {
                     Property prop = v.value<Property>();
                     panel_props << prop;
                     SCIM_DEBUG_MAIN(1) << "REG_PROPERTIES" << qPrintable(Property2String(v.value<Property>())) << "\n";
@@ -621,7 +625,7 @@ protected:
                 list_result << Property2String(logo_prop);
                 list_result << PropertyList2LeafOnlyStringList(panel_props);
                 SCIM_DEBUG_MAIN(1) << "SIMPLIFY_PROPS " << panel_props.size() << " " << list_result.size() - 1 << "\n";
-                Q_FOREACH (const QList<Property> &props, helper_props_map) {
+                for (const QList<Property> &props : std::as_const(helper_props_map)) {
                     list_result << PropertyList2LeafOnlyStringList(props);
                 }
                 list_result << Property2String(show_help_prop);
@@ -637,7 +641,7 @@ protected:
                 list_result.clear();
                 list_result << Property2String(logo_prop);
                 list_result << PropertyList2LeafOnlyStringList(panel_props);
-                Q_FOREACH (const QList<Property> &props, helper_props_map) {
+                for (const QList<Property> &props : std::as_const(helper_props_map)) {
                     list_result << PropertyList2LeafOnlyStringList(props);
                 }
                 list_result << Property2String(show_help_prop);
@@ -827,7 +831,7 @@ static void slot_show_factory_menu(const std::vector<PanelFactoryInfo> &factorie
 {
     SCIM_DEBUG_MAIN(1) << "slot_show_factory_menu ()\n";
     QVariantList list;
-    Q_FOREACH (const PanelFactoryInfo &info, factories) {
+    for (const PanelFactoryInfo &info : factories) {
         list << QVariant::fromValue(info);
     }
     qApp->postEvent(_dbus_handler, new DBusEvent(DBusEvent::SHOW_FACTORY_MENU, list));
@@ -907,7 +911,7 @@ static void slot_register_properties(const PropertyList &props)
 {
     SCIM_DEBUG_MAIN(1) << "slot_register_properties ()\n";
     QVariantList list;
-    Q_FOREACH (const Property &prop, props) {
+    for (const Property &prop : props) {
         list << QVariant::fromValue(prop);
     }
     qApp->postEvent(_dbus_handler, new DBusEvent(DBusEvent::REG_PROPERTIES, list));
@@ -923,7 +927,7 @@ static void slot_register_helper_properties(int id, const PropertyList &props)
 {
     SCIM_DEBUG_MAIN(1) << "slot_register_helper_properties ()\n";
     QVariantList list;
-    Q_FOREACH (const Property &prop, props) {
+    for (const Property &prop : props) {
         list << QVariant::fromValue(prop);
     }
     qApp->postEvent(_dbus_handler, new DBusEvent(DBusEvent::REG_HELPER_PROPERTIES, QVariantList() << id << list));

@@ -98,14 +98,14 @@ void BlacklistedApplicationsModel::load()
         }
     }
 
-    auto applications = (blockedApplications + allowedApplications).values();
+    QStringList applications = (blockedApplications + allowedApplications).values();
 
     if (applications.length() > 0) {
         std::sort(applications.begin(), applications.end());
 
         beginInsertRows(QModelIndex(), 0, applications.length() - 1);
 
-        foreach (const auto &name, applications) {
+        for (const auto &name : std::as_const(applications)) {
             const auto service = KService::serviceByDesktopName(name);
             const auto blocked = blockedApplications.contains(name);
 

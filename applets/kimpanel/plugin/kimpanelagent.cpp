@@ -140,12 +140,13 @@ static QList<TextAttribute> String2AttrList(const QString &str)
     if (str.isEmpty()) {
         return result;
     }
-    foreach (const QString &s, str.split(QLatin1Char(';'))) {
+    const QStringList semicolons = str.split(QLatin1Char(';'));
+    for (const QString &s : semicolons) {
         TextAttribute attr;
-        QStringList list = s.split(QLatin1Char(':'));
-        if (list.size() < 4)
+        const QStringList colons = s.split(QLatin1Char(':'));
+        if (colons.size() < 4)
             continue;
-        switch (list.at(0).toInt()) {
+        switch (colons.at(0).toInt()) {
         case 0:
             attr.type = TextAttribute::None;
             break;
@@ -161,9 +162,9 @@ static QList<TextAttribute> String2AttrList(const QString &str)
         default:
             attr.type = TextAttribute::None;
         }
-        attr.start = list.at(1).toInt();
-        attr.length = list.at(2).toInt();
-        attr.value = list.at(3).toInt();
+        attr.start = colons.at(1).toInt();
+        attr.length = colons.at(2).toInt();
+        attr.value = colons.at(3).toInt();
         result << attr;
     }
     return result;
@@ -264,7 +265,7 @@ void PanelAgent::RegisterProperties(const QStringList &props)
     if (m_cachedProps != props) {
         m_cachedProps = props;
         QList<KimpanelProperty> list;
-        foreach (const QString &prop, props) {
+        for (const QString &prop : props) {
             list << String2Property(prop);
         }
 
@@ -280,7 +281,7 @@ void PanelAgent::ExecDialog(const QString &prop)
 void PanelAgent::ExecMenu(const QStringList &entries)
 {
     QList<KimpanelProperty> list;
-    foreach (const QString &entry, entries) {
+    for (const QString &entry : entries) {
         list << String2Property(entry);
     }
 

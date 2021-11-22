@@ -352,7 +352,7 @@ void App::setDoGrab(bool doGrab)
 
 void App::grabKey()
 {
-    Q_FOREACH (const TriggerKey &key, m_triggersList) {
+    for (const TriggerKey &key : std::as_const(m_triggersList)) {
         xcb_keysym_t sym = key.first;
         uint modifiers = key.second;
         xcb_keycode_t *keycode = xcb_key_symbols_get_keycode(m_syms, sym);
@@ -376,7 +376,7 @@ void App::grabKey()
 
 void App::ungrabKey()
 {
-    Q_FOREACH (const TriggerKey &key, m_triggersList) {
+    for (const TriggerKey &key : std::as_const(m_triggersList)) {
         xcb_keysym_t sym = key.first;
         uint modifiers = key.second;
         xcb_keycode_t *keycode = xcb_key_symbols_get_keycode(m_syms, sym);

@@ -58,7 +58,8 @@ QRect SubDialog::availableScreenRectForItem(QQuickItem *item) const
 
     const QPoint globalPosition = item->window()->mapToGlobal(item->position().toPoint());
 
-    foreach (QScreen *s, QGuiApplication::screens()) {
+    const QList<QScreen *> screens = QGuiApplication::screens();
+    for (QScreen *s : screens) {
         if (s->geometry().contains(globalPosition)) {
             screen = s;
         }

@@ -23,10 +23,10 @@ DirModel::DirModel(QObject *parent)
 {
 #if 0 // unused here in trash
     QMimeDatabase db;
-    QList<QMimeType> mimeList = db.allMimeTypes();
+    const QList<QMimeType> mimeList = db.allMimeTypes();
 
     m_mimeTypes << "inode/directory";
-    foreach (const QMimeType &mime, mimeList) {
+    for (const QMimeType &mime : mimeList) {
         if (mime.name().startsWith(QLatin1String("image/"))) {
             m_mimeTypes << mime.name();
         }
