@@ -977,7 +977,7 @@ void FolderModel::dragSelectedInternal(int x, int y)
     std::sort(m_dragIndexes.begin(), m_dragIndexes.end());
 
     // TODO: Optimize to Q_EMIT contiguous groups.
-    Q_EMIT dataChanged(m_dragIndexes.first(), m_dragIndexes.last(), QVector<int>() << BlankRole);
+    Q_EMIT dataChanged(m_dragIndexes.constFirst(), m_dragIndexes.constLast(), {BlankRole});
 
     QModelIndexList sourceDragIndexes;
     sourceDragIndexes.reserve(m_dragIndexes.count());
@@ -1007,7 +1007,7 @@ void FolderModel::dragSelectedInternal(int x, int y)
         const QModelIndex last(m_dragIndexes.last());
         m_dragIndexes.clear();
         // TODO: Optimize to Q_EMIT contiguous groups.
-        Q_EMIT dataChanged(first, last, QVector<int>() << BlankRole);
+        Q_EMIT dataChanged(first, last, {BlankRole});
     }
 }
 
@@ -1261,8 +1261,7 @@ void FolderModel::selectionChanged(const QItemSelection &selected, const QItemSe
     QModelIndexList indices = selected.indexes();
     indices.append(deselected.indexes());
 
-    QVector<int> roles;
-    roles.append(SelectedRole);
+    const QVector<int> roles{SelectedRole};
 
     foreach (const QModelIndex &index, indices) {
         Q_EMIT dataChanged(index, index, roles);
