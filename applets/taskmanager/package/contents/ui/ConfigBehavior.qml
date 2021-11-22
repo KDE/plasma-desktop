@@ -60,30 +60,30 @@ Item {
             model: [
                 i18nc("Completes the sentence 'Clicking grouped task cycles through tasks' ", "Cycles through tasks"),
                 i18nc("Completes the sentence 'Clicking grouped task shows tooltip window thumbnails' ", "Shows tooltip window thumbnails"),
-                i18nc("Completes the sentence 'Clicking grouped task shows 'Present Windows' effect' ", "Shows 'Present Windows' effect"),
+                i18nc("Completes the sentence 'Clicking grouped task shows windows side by side' ", "Shows windows side by side"),
                 i18nc("Completes the sentence 'Clicking grouped task shows textual list' ", "Shows textual list"),
             ]
         }
         // "You asked for Tooltips but Tooltips are disabled" message
         Kirigami.InlineMessage {
             Layout.fillWidth: true
-            visible: groupedTaskVisualization.currentIndex === 1 && !plasmoid.configuration.showToolTips && backend.canPresentWindows
+            visible: groupedTaskVisualization.currentIndex === 1 && !plasmoid.configuration.showToolTips && backend.windowViewAvailable
             type: Kirigami.MessageType.Warning
-            text: i18n("Tooltips are disabled, so the 'Present Windows' effect will be displayed instead.")
+            text: i18n("Tooltips are disabled, so the windows will be displayed side by side instead.")
         }
-        // "You asked for Tooltips but Tooltips are disabled and Present Windows is not available" message
+        // "You asked for Tooltips but Tooltips are disabled and Window View is not available" message
         Kirigami.InlineMessage {
             Layout.fillWidth: true
-            visible: groupedTaskVisualization.currentIndex === 1 && !plasmoid.configuration.showToolTips && !backend.canPresentWindows
+            visible: groupedTaskVisualization.currentIndex === 1 && !plasmoid.configuration.showToolTips && !backend.windowViewAvailable
             type: Kirigami.MessageType.Warning
-            text: i18n("Tooltips are disabled, and the 'Present Windows' effect is not enabled or otherwise available right now, so a textual list will be displayed instead")
+            text: i18n("Tooltips are disabled, and the compositor does not support displaying windows side by side, so a textual list will be displayed instead")
         }
-        // "You asked for Present Windows but Present Windows is not available" message
+        // "You asked for Window View but Window View is not available" message
         Kirigami.InlineMessage {
             Layout.fillWidth: true
-            visible: groupedTaskVisualization.currentIndex === 2 && !backend.canPresentWindows
+            visible: groupedTaskVisualization.currentIndex === 2 && !backend.windowViewAvailable
             type: Kirigami.MessageType.Warning
-            text: i18n("The 'Present Windows' effect is not enabled or otherwise available right now, so a textual list will be displayed instead.")
+            text: i18n("The compositor does not support displaying windows side by side, so a textual list will be displayed instead.")
         }
 
         Item {

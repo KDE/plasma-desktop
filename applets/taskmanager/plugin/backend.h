@@ -31,7 +31,7 @@ class Backend : public QObject
     Q_PROPERTY(QQuickItem *taskManagerItem READ taskManagerItem WRITE setTaskManagerItem NOTIFY taskManagerItemChanged)
     Q_PROPERTY(QQuickWindow *groupDialog READ groupDialog WRITE setGroupDialog NOTIFY groupDialogChanged)
     Q_PROPERTY(bool highlightWindows READ highlightWindows WRITE setHighlightWindows NOTIFY highlightWindowsChanged)
-    Q_PROPERTY(bool canPresentWindows READ canPresentWindows NOTIFY canPresentWindowsChanged)
+    Q_PROPERTY(bool windowViewAvailable READ windowViewAvailable NOTIFY windowViewAvailableChanged)
 
 public:
     enum MiddleClickAction {
@@ -66,7 +66,7 @@ public:
 
     Q_INVOKABLE void ungrabMouse(QQuickItem *item) const;
 
-    bool canPresentWindows() const;
+    bool windowViewAvailable() const;
 
     Q_INVOKABLE bool isApplication(const QUrl &url) const;
 
@@ -80,7 +80,7 @@ public:
     Q_INVOKABLE static QStringList applicationCategories(const QUrl &launcherUrl);
 
 public Q_SLOTS:
-    void presentWindows(const QVariant &winIds);
+    void activateWindowView(const QVariant &winIds);
     void windowsHovered(const QVariant &winIds, bool hovered);
 
 Q_SIGNALS:
@@ -88,7 +88,7 @@ Q_SIGNALS:
     void groupDialogChanged() const;
     void highlightWindowsChanged() const;
     void addLauncher(const QUrl &url) const;
-    void canPresentWindowsChanged();
+    void windowViewAvailableChanged();
 
     void showAllPlaces();
 
@@ -106,7 +106,7 @@ private:
     QStringList m_windowsToHighlight;
     QActionGroup *m_actionGroup = nullptr;
     KActivities::Consumer *m_activitiesConsumer = nullptr;
-    bool m_canPresentWindows = false;
+    bool m_windowViewAvailable = false;
 };
 
 #endif
