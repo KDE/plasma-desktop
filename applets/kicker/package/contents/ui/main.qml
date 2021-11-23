@@ -31,7 +31,7 @@ Item {
     Plasmoid.compactRepresentation: isDash ? null : compactRepresentation
     Plasmoid.fullRepresentation: isDash ? compactRepresentation : menuRepresentation
 
-    property QtObject itemListDialogComponent: Qt.createComponent("ItemListDialog.qml");
+    property Component itemListDialogComponent: Qt.createComponent(Qt.resolvedUrl("./ItemListDialog.qml"))
     property Item dragSource: null
 
     property QtObject globalFavorites: rootModel.favoritesModel
