@@ -64,12 +64,13 @@ ColumnLayout {
         }
         KCM.ContextualHelpButton {
             toolTipText: {
-                let description = i18n("You can help KDE improve Plasma by contributing information on how you use it, so we can focus on things that matter to you.<nl/><nl/>Contributing this information is optional and entirely anonymous. We never collect your personal data, files you use, websites you visit, or information that could identify you.");
+                // TODO: use KUIT markup here instead of raw HTML
+                let description = i18n("You can help KDE improve Plasma by contributing information on how you use it, so we can focus on things that matter to you.<br/><br/>Contributing this information is optional and entirely anonymous. We never collect your personal data, files you use, websites you visit, or information that could identify you.");
 
                 if (kcm.feedbackSettings.feedbackLevel === UserFeedback.Provider.NoTelemetry) {
-                    return "<h4>" + i18n("No data will be sent.") + "</h4><nl/><p>" + description + "</p>";
+                    return "<h4>" + i18n("No data will be sent.") + "</h4><br/><p>" + description + "</p>";
                 }
-                let text = "<p>" + description + "</p><nl/><h4>" + i18n("The following information will be sent:") + "</h4><ul>";
+                let text = "<p>" + description + "</p><br/><h4>" + i18n("The following information will be sent:") + "</h4><ul>";
                 for (let i in kcm.feedbackSources) {
                     text += "<li>" + kcm.feedbackSources[i].description + "</li>";
                 }
