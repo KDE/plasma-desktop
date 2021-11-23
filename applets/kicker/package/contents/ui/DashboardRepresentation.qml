@@ -977,7 +977,7 @@ Kicker.DashboardWindow {
                             opacity: filterListScrollArea.focus ? 1.0 : 0.7
 
                             width: (highlightItemSvg.margins.left
-                                + filterList.currentItem.textWidth
+                                + (filterList.currentItem ? filterList.currentItem.textWidth : 0)
                                 + highlightItemSvg.margins.right
                                 + PlasmaCore.Units.smallSpacing)
 
