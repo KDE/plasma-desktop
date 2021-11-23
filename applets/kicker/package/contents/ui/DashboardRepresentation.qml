@@ -37,7 +37,7 @@ Kicker.DashboardWindow {
         + (2 * Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
                         highlightItemSvg.margins.left + highlightItemSvg.margins.right))
     property int columns: Math.floor(((smallScreen ? 85 : 80)/100) * Math.ceil(width / cellSize))
-    property bool searching: (searchField.text != "")
+    property bool searching: searchField.text !== ""
     property var widgetExplorer: null
 
     keyEventProxy: searchField
@@ -66,7 +66,7 @@ Kicker.DashboardWindow {
         } else {
             filterList.currentIndex = -1;
 
-            if (tabBar.activeTab == 1) {
+            if (tabBar.activeTab === 1) {
                 widgetExplorer.widgetsModel.filterQuery = "";
                 widgetExplorer.widgetsModel.filterType = "";
             }
@@ -79,14 +79,14 @@ Kicker.DashboardWindow {
         systemFavoritesGrid.currentIndex = -1;
         filterList.currentIndex = 0;
         funnelModel.sourceModel = rootModel.modelForRow(0);
-        mainGrid.model = (tabBar.activeTab == 0) ? funnelModel : root.widgetExplorer.widgetsModel;
+        mainGrid.model = (tabBar.activeTab === 0) ? funnelModel : root.widgetExplorer.widgetsModel;
         mainGrid.currentIndex = -1;
         filterListScrollArea.focus = true;
-        filterList.model = (tabBar.activeTab == 0) ? rootModel : root.widgetExplorer.filterModel;
+        filterList.model = (tabBar.activeTab === 0) ? rootModel : root.widgetExplorer.filterModel;
     }
 
     function updateWidgetExplorer() {
-        if (tabBar.activeTab == 1 /* Widgets */ || tabBar.hoveredTab == 1) {
+        if (tabBar.activeTab === 1 /* Widgets */ || tabBar.hoveredTab === 1) {
             if (!root.widgetExplorer) {
                 root.widgetExplorer = widgetExplorerComponent.createObject(root, {
                     containment: containmentInterface.screenContainment(plasmoid)
@@ -105,7 +105,7 @@ Kicker.DashboardWindow {
 
         acceptedButtons: Qt.LeftButton | Qt.RightButton
 
-        LayoutMirroring.enabled: Qt.application.layoutDirection == Qt.RightToLeft
+        LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
 
         Connections {
@@ -115,7 +115,7 @@ Kicker.DashboardWindow {
                 if (!root.searching) {
                     filterList.applyFilter();
 
-                    if (tabBar.activeTab == 0) {
+                    if (tabBar.activeTab === 0) {
                         funnelModel.reset();
                     }
                 }
@@ -128,7 +128,7 @@ Kicker.DashboardWindow {
                     // Needs a more involved hunt through Qt Quick sources later since
                     // it's not happening with near-identical code in the menu repr.
                     rootModel.refresh();
-                } else if (tabBar.activeTab == 1) {
+                } else if (tabBar.activeTab === 1) {
                     root.toggle();
                     containmentInterface.ensureMutable(containmentInterface.screenContainment(plasmoid));
                     kwindowsystem.showingDesktop = true;
@@ -257,7 +257,7 @@ Kicker.DashboardWindow {
             persistentSelection: true
 
             onTextChanged: {
-                if (tabBar.activeTab == 0) {
+                if (tabBar.activeTab === 0) {
                     runnerModel.query = searchField.text;
                 } else {
                     root.widgetExplorer.widgetsModel.searchTerm = searchField.text;
@@ -314,7 +314,7 @@ Kicker.DashboardWindow {
             width: PlasmaCore.Units.iconSizes.large
             height: width
 
-            visible: (searchField.text != "")
+            visible: (searchField.text !== "")
 
             iconName: "dialog-close"
             flat: false
@@ -374,7 +374,7 @@ Kicker.DashboardWindow {
                 PlasmaExtras.Heading {
                     id: favoritesColumnLabel
 
-                    enabled: (tabBar.activeTab == 0)
+                    enabled: tabBar.activeTab === 0
 
                     anchors {
                         top: parent.top
@@ -400,7 +400,7 @@ Kicker.DashboardWindow {
                 PlasmaCore.SvgItem {
                     id: favoritesColumnLabelUnderline
 
-                    enabled: (tabBar.activeTab == 0)
+                    enabled: (tabBar.activeTab === 0)
 
                     anchors {
                         top: favoritesColumnLabel.bottom
@@ -420,7 +420,7 @@ Kicker.DashboardWindow {
                 ItemGridView {
                     id: globalFavoritesGrid
 
-                    enabled: (tabBar.activeTab == 0)
+                    enabled: tabBar.activeTab === 0
 
                     anchors {
                         top: favoritesColumnLabelUnderline.bottom
@@ -566,14 +566,14 @@ Kicker.DashboardWindow {
                     id: mainGridContainer
 
                     anchors.fill: parent
-                    z: (opacity == 1.0) ? 1 : 0
+                    z: (opacity === 1.0) ? 1 : 0
 
-                    visible: opacity != 0.0
+                    visible: opacity !== 0.0
 
                     property int headerHeight: mainColumnLabel.height + mainColumnLabelUnderline.height + PlasmaCore.Units.largeSpacing
 
                     opacity: {
-                        if (tabBar.activeTab == 0 && root.searching) {
+                        if (tabBar.activeTab === 0 && root.searching) {
                             return 0.0;
                         }
 
@@ -585,7 +585,7 @@ Kicker.DashboardWindow {
                     }
 
                     onOpacityChanged: {
-                        if (opacity == 1.0) {
+                        if (opacity === 1.0) {
                             mainColumn.visibleGrid = mainGrid;
                         }
                     }
@@ -608,7 +608,7 @@ Kicker.DashboardWindow {
 
                         level: 1
 
-                        text: (tabBar.activeTab == 0) ? funnelModel.description : i18n("Widgets")
+                        text: (tabBar.activeTab === 0) ? funnelModel.description : i18n("Widgets")
                     }
 
                     PlasmaCore.SvgItem {
@@ -638,9 +638,9 @@ Kicker.DashboardWindow {
                         width: parent.width
                         height: systemFavoritesGrid.y + systemFavoritesGrid.height - mainGridContainer.headerHeight
 
-                        cellWidth: (tabBar.activeTab == 0 ? root.cellSize : root.cellSize * 2)
+                        cellWidth: (tabBar.activeTab === 0 ? root.cellSize : root.cellSize * 2)
                         cellHeight: cellWidth
-                        iconSize: (tabBar.activeTab == 0 ? root.iconSize : cellWidth - (PlasmaCore.Units.largeSpacing * 2))
+                        iconSize: (tabBar.activeTab === 0 ? root.iconSize : cellWidth - (PlasmaCore.Units.largeSpacing * 2))
 
                         model: funnelModel
 
@@ -649,7 +649,7 @@ Kicker.DashboardWindow {
                         }
 
                         onKeyNavLeft: {
-                            if (tabBar.activeTab == 0) {
+                            if (tabBar.activeTab === 0) {
                                 var row = currentRow();
                                 var target = row + 1 > globalFavoritesGrid.rows ? systemFavoritesGrid : globalFavoritesGrid;
                                 var targetRow = row + 1 > globalFavoritesGrid.rows ? row - globalFavoritesGrid.rows : row;
@@ -668,7 +668,7 @@ Kicker.DashboardWindow {
                         }
 
                         onItemActivated: {
-                            if (tabBar.activeTab == 1) {
+                            if (tabBar.activeTab === 1) {
                                 containmentInterface.ensureMutable(containmentInterface.screenContainment(plasmoid));
                                 root.widgetExplorer.addApplet(currentItem.m.pluginName);
                                 root.toggle();
@@ -685,16 +685,16 @@ Kicker.DashboardWindow {
                         top: parent.top
                     }
 
-                    z: (opacity == 1.0) ? 1 : 0
+                    z: (opacity === 1.0) ? 1 : 0
                     width: parent.width
                     height: systemFavoritesGrid.y + systemFavoritesGrid.height
 
-                    visible: opacity != 0.0
+                    visible: opacity !== 0.0
 
                     opacity: filterList.allApps ? 1.0 : 0.0
 
                     onOpacityChanged: {
-                        if (opacity == 1.0) {
+                        if (opacity === 1.0) {
                             allAppsGrid.flickableItem.contentY = 0;
                             mainColumn.visibleGrid = allAppsGrid;
                         }
@@ -726,20 +726,20 @@ Kicker.DashboardWindow {
                         top: parent.top
                     }
 
-                    z: (opacity == 1.0) ? 1 : 0
+                    z: (opacity === 1.0) ? 1 : 0
                     width: parent.width
                     height: Math.min(implicitHeight, systemFavoritesGrid.y + systemFavoritesGrid.height)
 
-                    visible: opacity != 0.0
+                    visible: opacity !== 0.0
 
                     model: runnerModel
 
                     grabFocus: true
 
-                    opacity: (tabBar.activeTab == 0 && root.searching) ? 1.0 : 0.0
+                    opacity: (tabBar.activeTab === 0 && root.searching) ? 1.0 : 0.0
 
                     onOpacityChanged: {
-                        if (opacity == 1.0) {
+                        if (opacity === 1.0) {
                             mainColumn.visibleGrid = runnerGrid;
                         }
                     }
@@ -815,7 +815,7 @@ Kicker.DashboardWindow {
 
                     Behavior on opacity { SmoothedAnimation { duration: PlasmaCore.Units.longDuration; velocity: 0.01 } }
 
-                    verticalScrollBarPolicy: (opacity == 1.0) ? Qt.ScrollBarAsNeeded : Qt.ScrollBarAlwaysOff
+                    verticalScrollBarPolicy: (opacity === 1.0) ? Qt.ScrollBarAsNeeded : Qt.ScrollBarAlwaysOff
 
                     onEnabledChanged: {
                         if (!enabled) {
@@ -824,7 +824,7 @@ Kicker.DashboardWindow {
                     }
 
                     onCurrentIndexChanged: {
-                        focus = (currentIndex != -1);
+                        focus = (currentIndex !== -1);
                     }
 
                     ListView {
@@ -880,8 +880,8 @@ Kicker.DashboardWindow {
 
                                 if (justOpenedTimer.running || ListView.view.currentIndex === 0 || index === ListView.view.currentIndex) {
                                     updateCurrentItem();
-                                } else if ((index == ListView.view.currentIndex - 1) && mouse.y < (height - 6)
-                                    || (index == ListView.view.currentIndex + 1) && mouse.y > 5) {
+                                } else if ((index === ListView.view.currentIndex - 1) && mouse.y < (height - 6)
+                                    || (index === ListView.view.currentIndex + 1) && mouse.y > 5) {
 
                                     if (mouse.x > ListView.view.eligibleWidth - 5) {
                                         updateCurrentItem();
@@ -902,7 +902,7 @@ Kicker.DashboardWindow {
                             }
 
                             onClicked: mouse => {
-                                if (mouse.button == Qt.LeftButton) {
+                                if (mouse.button === Qt.LeftButton) {
                                     updateCurrentItem();
                                 }
                             }
@@ -1007,7 +1007,7 @@ Kicker.DashboardWindow {
 
                         function applyFilter() {
                             if (!root.searching && currentIndex >= 0) {
-                                if (tabBar.activeTab == 1) {
+                                if (tabBar.activeTab === 1) {
                                     root.widgetExplorer.widgetsModel.filterQuery = currentItem.m.filterData;
                                     root.widgetExplorer.widgetsModel.filterType = currentItem.m.filterType;
 
@@ -1058,13 +1058,13 @@ Kicker.DashboardWindow {
         }
 
         onPressed: mouse => {
-            if (mouse.button == Qt.RightButton) {
+            if (mouse.button === Qt.RightButton) {
                 contextMenu.open(mouse.x, mouse.y);
             }
         }
 
         onClicked: mouse => {
-            if (mouse.button == Qt.LeftButton) {
+            if (mouse.button === Qt.LeftButton) {
                 root.toggle();
             }
         }

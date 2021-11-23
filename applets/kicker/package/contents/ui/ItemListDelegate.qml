@@ -108,7 +108,7 @@ Item {
         }
 
         onPositionChanged: mouse => {
-            if (pressX != -1 && model.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+            if (pressX !== -1 && model.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                 dragHelper.startDrag(kicker, model.url, model.decoration);
                 pressed = false;
                 pressX = -1;
@@ -125,14 +125,14 @@ Item {
 
                 if (index === item.ListView.view.currentIndex) {
                     updateCurrentItem();
-                } else if ((index == item.ListView.view.currentIndex - 1) && mouse.y < (itemHeight - 6)
-                    || (index == item.ListView.view.currentIndex + 1) && mouse.y > 5) {
+                } else if ((index === item.ListView.view.currentIndex - 1) && mouse.y < (itemHeight - 6)
+                    || (index === item.ListView.view.currentIndex + 1) && mouse.y > 5) {
 
-                    if ((item.childDialog != null && item.childDialog.facingLeft)
+                    if ((item.childDialog && item.childDialog.facingLeft)
                         ? mouse.x > item.ListView.view.eligibleWidth - 5 : mouse.x < item.ListView.view.eligibleWidth + 5) {
                         updateCurrentItem();
                     }
-                } else if ((item.childDialog != null && item.childDialog.facingLeft)
+                } else if ((item.childDialog && item.childDialog.facingLeft)
                     ? mouse.x > item.ListView.view.eligibleWidth : mouse.x < item.ListView.view.eligibleWidth) {
                     updateCurrentItem();
                 }
@@ -178,7 +178,7 @@ Item {
         spacing: PlasmaCore.Units.smallSpacing * 2
         readonly property real actualSpacing: ((icon.visible ? 1 : 0) * spacing) + ((arrow.visible ? 1 : 0) * spacing)
 
-        LayoutMirroring.enabled: (Qt.application.layoutDirection == Qt.RightToLeft)
+        LayoutMirroring.enabled: (Qt.application.layoutDirection === Qt.RightToLeft)
 
         PlasmaCore.IconItem {
             id: icon
@@ -226,7 +226,7 @@ Item {
             opacity: (item.ListView.view.currentIndex === index) ? 1.0 : 0.4
 
             svg: arrows
-            elementId: (Qt.application.layoutDirection == Qt.RightToLeft) ? "left-arrow" : "right-arrow"
+            elementId: (Qt.application.layoutDirection === Qt.RightToLeft) ? "left-arrow" : "right-arrow"
         }
     }
 

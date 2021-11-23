@@ -52,7 +52,7 @@ Kicker.SubMenu {
             }
 
             onCountChanged: {
-                if (sourceModel && count == 0) {
+                if (sourceModel && count === 0) {
                     itemDialog.delayedDestroy();
                 }
             }

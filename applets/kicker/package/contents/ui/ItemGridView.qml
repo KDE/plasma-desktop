@@ -53,7 +53,7 @@ FocusScope {
     }
 
     function currentRow() {
-        if (currentIndex == -1) {
+        if (currentIndex === -1) {
             return -1;
         }
 
@@ -61,7 +61,7 @@ FocusScope {
     }
 
     function currentCol() {
-        if (currentIndex == -1) {
+        if (currentIndex === -1) {
             return -1;
         }
 
@@ -273,7 +273,7 @@ FocusScope {
                 highlightMoveDuration: 0
 
                 onCurrentIndexChanged: {
-                    if (currentIndex != -1) {
+                    if (currentIndex !== -1) {
                         hoverArea.hoverEnabled = false
                         focus = true;
                     }
@@ -300,7 +300,7 @@ FocusScope {
                 Keys.onRightPressed: {
                     var columns = Math.floor(width / cellWidth);
 
-                    if (itemGrid.currentCol() !== columns - 1 && currentIndex != count -1) {
+                    if (itemGrid.currentCol() !== columns - 1 && currentIndex !== count -1) {
                         event.accepted = true;
                         moveCurrentIndexRight();
                     } else {
@@ -384,7 +384,7 @@ FocusScope {
                     pressedItem = null;
                 } else {
                     gridView.currentIndex = item.itemIndex;
-                    itemGrid.focus = (itemGrid.currentIndex != -1)
+                    itemGrid.focus = (itemGrid.currentIndex !== -1)
                 }
 
                 return item;
@@ -398,7 +398,7 @@ FocusScope {
                 pressX = mouse.x;
                 pressY = mouse.y;
 
-                if (mouse.button == Qt.RightButton) {
+                if (mouse.button === Qt.RightButton) {
                     if (gridView.currentItem) {
                         if (gridView.currentItem.hasActionList) {
                             var mapped = mapToItem(gridView.currentItem, mouse.x, mouse.y);
@@ -417,14 +417,14 @@ FocusScope {
                 mouse.accepted = true;
                 updatePositionProperties(mouse.x, mouse.y);
 
-                if (gridView.currentItem && gridView.currentItem == pressedItem) {
+                if (gridView.currentItem && gridView.currentItem === pressedItem) {
                     if ("trigger" in gridView.model) {
                         gridView.model.trigger(pressedItem.itemIndex, "", null);
                         root.toggle();
                     }
 
                     itemGrid.itemActivated(pressedItem.itemIndex, "", null);
-                } else if (!dragHelper.dragging && !pressedItem && mouse.button == Qt.LeftButton) {
+                } else if (!dragHelper.dragging && !pressedItem && mouse.button === Qt.LeftButton) {
                     root.toggle();
                 }
 
@@ -436,8 +436,8 @@ FocusScope {
             onPositionChanged: mouse => {
                 var item = pressedItem? pressedItem : updatePositionProperties(mouse.x, mouse.y);
 
-                if (gridView.currentIndex != -1) {
-                    if (itemGrid.dragEnabled && pressX != -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+                if (gridView.currentIndex !== -1) {
+                    if (itemGrid.dragEnabled && pressX !== -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                         if ("pluginName" in item.m) {
                             dragHelper.startDrag(kicker, item.url, item.icon,
                             "text/x-plasmoidservicename", item.m.pluginName);

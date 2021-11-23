@@ -47,7 +47,7 @@ FocusScope {
         spacing: PlasmaCore.Units.smallSpacing
 
         LayoutMirroring.enabled: ((plasmoid.location === PlasmaCore.Types.RightEdge)
-            || (Qt.application.layoutDirection == Qt.RightToLeft && plasmoid.location !== PlasmaCore.Types.LeftEdge))
+            || (Qt.application.layoutDirection === Qt.RightToLeft && plasmoid.location !== PlasmaCore.Types.LeftEdge))
 
         PlasmaCore.FrameSvgItem {
             id: sideBar
@@ -169,7 +169,7 @@ FocusScope {
             minimumWidth: root.Layout.minimumWidth - sideBar.width - mainRow.spacing
             height: ((rootModel.count - rootModel.separatorCount) * itemHeight) + (rootModel.separatorCount * separatorHeight)
 
-            visible: (searchField.text == "")
+            visible: searchField.text === ""
 
             iconsEnabled: plasmoid.configuration.showIconsRootLevel
 
@@ -201,7 +201,7 @@ FocusScope {
 
             signal focusChanged()
 
-            visible: (searchField.text != "" && runnerModel.count > 0)
+            visible: searchField.text !== "" && runnerModel.count > 0
 
             Repeater {
                 id: runnerColumnsRepeater
@@ -300,9 +300,9 @@ FocusScope {
         anchors.leftMargin: sideBar.width + (sideBar.width ? mainRow.spacing : 0) + PlasmaCore.Units.smallSpacing
 
         readonly property real defaultWidth: PlasmaCore.Units.gridUnit * 14
-        width: (runnerColumnsRepeater.count != 0 ? runnerColumnsRepeater.itemAt(0).width
-                                                 : (rootList.visible ? rootList.width : defaultWidth))
-                                                 - PlasmaCore.Units.smallSpacing
+        width: (runnerColumnsRepeater.count !== 0 ? runnerColumnsRepeater.itemAt(0).width
+                                                  : (rootList.visible ? rootList.width : defaultWidth))
+                - PlasmaCore.Units.smallSpacing
 
         focus: true
 
@@ -348,8 +348,8 @@ FocusScope {
         },
         State {
             name: "right"
-            when: (plasmoid.location === PlasmaCore.Types.RightEdge && Qt.application.layoutDirection == Qt.LeftToRight)
-                || (plasmoid.location === PlasmaCore.Types.LeftEdge && Qt.application.layoutDirection == Qt.RightToLeft)
+            when: (plasmoid.location === PlasmaCore.Types.RightEdge && Qt.application.layoutDirection === Qt.LeftToRight)
+                || (plasmoid.location === PlasmaCore.Types.LeftEdge && Qt.application.layoutDirection === Qt.RightToLeft)
 
             AnchorChanges {
                 target: searchField
@@ -403,7 +403,7 @@ FocusScope {
                         }
                     }
                 }
-            } else if (event.key === Qt.Key_Left && cursorPosition == 0) {
+            } else if (event.key === Qt.Key_Left && cursorPosition === 0) {
                     for (var i = runnerModel.count; i >= 0; --i) {
                         if (runnerModel.modelForRow(i).count) {
                             var targetList = runnerColumnsRepeater.itemAt(i);
@@ -412,7 +412,7 @@ FocusScope {
                             break;
                         }
                     }
-            } else if (event.key === Qt.Key_Right && cursorPosition == length) {
+            } else if (event.key === Qt.Key_Right && cursorPosition === length) {
                 for (var i = 1; i < runnerModel.count; ++i) {
                     if (runnerModel.modelForRow(i).count) {
                         var targetList = runnerColumnsRepeater.itemAt(i);

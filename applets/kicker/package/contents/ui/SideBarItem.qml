@@ -109,7 +109,7 @@ Item {
         }
 
         onPositionChanged: {
-            if (pressX != -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+            if (pressX !== -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                 kicker.dragSource = item;
                 dragHelper.startDrag(kicker, model.url, model.icon);
                 pressed = false;
@@ -133,8 +133,8 @@ Item {
         }
 
         interactive: false
-        location: (((plasmoid.location == PlasmaCore.Types.RightEdge)
-            || (Qt.application.layoutDirection == Qt.RightToLeft))
+        location: (((plasmoid.location === PlasmaCore.Types.RightEdge)
+            || (Qt.application.layoutDirection === Qt.RightToLeft))
             ? PlasmaCore.Types.RightEdge : PlasmaCore.Types.LeftEdge)
 
         mainItem: toolTipDelegate
