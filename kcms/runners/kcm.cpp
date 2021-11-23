@@ -44,7 +44,7 @@ SearchConfigModule::SearchConfigModule(QWidget *parent, const QVariantList &args
     , m_settings(new KRunnerSettings(this))
 {
     KAboutData *about = new KAboutData(QStringLiteral("kcm_search"),
-                                       i18nc("kcm name for About dialog", "Configure Search Bar"),
+                                       i18nc("kcm name for About dialog", "Configure search settings"),
                                        QStringLiteral("0.1"),
                                        QString(),
                                        KAboutLicense::LGPL);
@@ -65,7 +65,7 @@ SearchConfigModule::SearchConfigModule(QWidget *parent, const QVariantList &args
     QHBoxLayout *headerLayout = new QHBoxLayout;
     layout->addLayout(headerLayout);
 
-    QLabel *label = new QLabel(i18n("Enable or disable plugins (used in KRunner and Application Launcher)"));
+    QLabel *label = new QLabel(i18n("Enable or disable plugins (used in KRunner, Application Launcher, and the Overview effect)"));
 
     m_clearHistoryButton = new QToolButton(this);
     m_clearHistoryButton->setIcon(
@@ -85,12 +85,12 @@ SearchConfigModule::SearchConfigModule(QWidget *parent, const QVariantList &args
     connect(m_freeFloating, &QRadioButton::toggled, this, &SearchConfigModule::updateUnmanagedState);
 
     QFormLayout *positionLayout = new QFormLayout;
-    positionLayout->addRow(i18n("Position on screen:"), m_topPositioning);
+    positionLayout->addRow(i18n("KRunner position:"), m_topPositioning);
     positionLayout->addRow(QString(), m_freeFloating);
     m_enableHistory = new QCheckBox(i18n("Enable"), this);
     m_enableHistory->setObjectName("kcfg_historyEnabled");
     positionLayout->addItem(new QSpacerItem(0, 0));
-    positionLayout->addRow(i18n("History:"), m_enableHistory);
+    positionLayout->addRow(i18n("KRunner history:"), m_enableHistory);
     connect(m_enableHistory, &QCheckBox::toggled, m_clearHistoryButton, &QPushButton::setEnabled);
     m_retainPriorSearch = new QCheckBox(i18n("Retain previous search"), this);
     m_retainPriorSearch->setObjectName("kcfg_retainPriorSearch");
