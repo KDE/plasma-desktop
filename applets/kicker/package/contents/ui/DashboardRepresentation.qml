@@ -857,7 +857,7 @@ Kicker.DashboardWindow {
                                 || (("hasActionList" in model) && (model.hasActionList === true)))
                             property Item menu: actionMenu
 
-                            width: parent.width
+                            width: ListView.view.width
                             height: Math.ceil((label.paintedHeight
                                 + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
                                 listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2
