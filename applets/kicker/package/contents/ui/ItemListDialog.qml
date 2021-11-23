@@ -33,10 +33,33 @@ Kicker.SubMenu {
     mainItem: ItemListView {
         id: itemListView
 
-        height: itemDialog.model !== undefined ? Math.min(((Math.floor((itemDialog.availableScreenRectForItem(itemListView).height
-            - itemDialog.margins.top - itemDialog.margins.bottom) / itemHeight) - 1)
-            * itemHeight) - (itemDialog.model.separatorCount * itemHeight) + (itemDialog.model.separatorCount * separatorHeight),
-            ((itemDialog.model.count - itemDialog.model.separatorCount) * itemHeight) + (itemDialog.model.separatorCount * separatorHeight)) : 0
+        height: {
+            const m = funnelModel.sourceModel;
+
+            if (m === null || m === undefined) {
+                // TODO: setting height to 0 triggers a warning in PlasmaQuick::Dialog
+                return 0;
+            }
+
+            // get x rounded down to the multiple of y, minus extra y.
+            function subFloorMultipleOf(x, y) {
+                return (Math.floor(x / y) - 1) * y;
+            }
+
+            return Math.min(
+                // either fit in screen boundaries (cut to the nearest item/separator boundary), ...
+                subFloorMultipleOf(
+                    itemDialog.availableScreenRectForItem(itemListView).height
+                    - itemDialog.margins.top
+                    - itemDialog.margins.bottom,
+                    itemHeight
+                ) + m.separatorCount * (separatorHeight - itemHeight)
+                ,
+                // ...or fit the content itself -- whichever is shorter.
+                ((m.count - m.separatorCount) * itemHeight)
+                + (m.separatorCount * separatorHeight)
+            );
+        }
 
         iconsEnabled: true
 
