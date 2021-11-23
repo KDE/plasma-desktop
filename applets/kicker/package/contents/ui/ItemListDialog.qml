@@ -41,14 +41,9 @@ Kicker.SubMenu {
                 return 0;
             }
 
-            // get x rounded down to the multiple of y, minus extra y.
-            function subFloorMultipleOf(x, y) {
-                return (Math.floor(x / y) - 1) * y;
-            }
-
             return Math.min(
                 // either fit in screen boundaries (cut to the nearest item/separator boundary), ...
-                subFloorMultipleOf(
+                __subFloorMultipleOf(
                     itemDialog.availableScreenRectForItem(itemListView).height
                     - itemDialog.margins.top
                     - itemDialog.margins.bottom,
@@ -59,6 +54,11 @@ Kicker.SubMenu {
                 ((m.count - m.separatorCount) * itemHeight)
                 + (m.separatorCount * separatorHeight)
             );
+        }
+
+        // get x rounded down to the multiple of y, minus extra y.
+        function __subFloorMultipleOf(x : real, y : real) : real {
+            return (Math.floor(x / y) - 1) * y;
         }
 
         iconsEnabled: true
