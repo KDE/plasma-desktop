@@ -9,6 +9,8 @@ import QtQuick.Layouts 1.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
+import org.kde.plasma.private.kicker 0.1 as Kicker
+
 Item {
     id: root
 
@@ -19,16 +21,13 @@ Item {
     readonly property bool vertical: (plasmoid.formFactor === PlasmaCore.Types.Vertical)
     readonly property bool useCustomButtonImage: (plasmoid.configuration.useCustomButtonImage
         && plasmoid.configuration.customButtonImage.length !== 0)
-    property QtObject dashWindow: null
+
+    readonly property Component dashWindowComponent: kicker.isDash ? Qt.createComponent(Qt.resolvedUrl("./DashboardRepresentation.qml"), root) : null
+    readonly property Kicker.DashboardWindow dashWindow: dashWindowComponent && dashWindowComponent.status === Component.Ready
+        ? dashWindowComponent.createObject(root, { visualParent: root }) : null
 
     onWidthChanged: updateSizeHints()
     onHeightChanged: updateSizeHints()
-
-    onDashWindowChanged: {
-        if (dashWindow) {
-            dashWindow.visualParent = root;
-        }
-    }
 
     function updateSizeHints() {
         if (useCustomButtonImage) {
@@ -91,13 +90,13 @@ Item {
         hoverEnabled: !root.dashWindow || !root.dashWindow.visible
 
         onPressed: {
-            if (!isDash) {
+            if (!kicker.isDash) {
                 wasExpanded = plasmoid.expanded
             }
         }
 
         onClicked: {
-            if (isDash) {
+            if (kicker.isDash) {
                 root.dashWindow.toggle();
                 justOpenedTimer.start();
             } else {
@@ -106,13 +105,13 @@ Item {
         }
     }
 
-    Component.onCompleted: {
-        if (isDash) {
-            dashWindow = Qt.createQmlObject("DashboardRepresentation {}", root);
-            plasmoid.activated.connect(function() {
-                dashWindow.toggle()
-                justOpenedTimer.start()
-            })
+    Connections {
+        target: plasmoid
+        enabled: kicker.isDash && root.dashWindow !== null
+
+        function onActivated() {
+            root.dashWindow.toggle();
+            justOpenedTimer.start();
         }
     }
 }
