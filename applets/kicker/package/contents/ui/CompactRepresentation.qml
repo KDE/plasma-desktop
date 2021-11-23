@@ -33,13 +33,13 @@ Item {
     function updateSizeHints() {
         if (useCustomButtonImage) {
             if (vertical) {
-                var scaledHeight = Math.floor(parent.width * (buttonIcon.implicitHeight / buttonIcon.implicitWidth));
+                const scaledHeight = Math.floor(parent.width * (buttonIcon.implicitHeight / buttonIcon.implicitWidth));
                 root.Layout.minimumHeight = scaledHeight;
                 root.Layout.maximumHeight = scaledHeight;
                 root.Layout.minimumWidth = PlasmaCore.Units.iconSizes.small;
                 root.Layout.maximumWidth = inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1;
             } else {
-                var scaledWidth = Math.floor(parent.height * (buttonIcon.implicitWidth / buttonIcon.implicitHeight));
+                const scaledWidth = Math.floor(parent.height * (buttonIcon.implicitWidth / buttonIcon.implicitHeight));
                 root.Layout.minimumWidth = scaledWidth;
                 root.Layout.maximumWidth = scaledWidth;
                 root.Layout.minimumHeight = PlasmaCore.Units.iconSizes.small;
@@ -64,16 +64,15 @@ Item {
     PlasmaCore.IconItem {
         id: buttonIcon
 
+        readonly property double aspectRatio: root.vertical
+            ? implicitHeight / implicitWidth
+            : implicitWidth / implicitHeight
+
         anchors.fill: parent
 
-        readonly property double aspectRatio: (root.vertical ? implicitHeight / implicitWidth
-            : implicitWidth / implicitHeight)
-
-        source: root.useCustomButtonImage ? plasmoid.configuration.customButtonImage : plasmoid.configuration.icon
-
         active: mouseArea.containsMouse && !justOpenedTimer.running
-
         smooth: true
+        source: root.useCustomButtonImage ? plasmoid.configuration.customButtonImage : plasmoid.configuration.icon
 
         // A custom icon could also be rectangular. However, if a square, custom, icon is given, assume it
         // to be an icon and round it to the nearest icon size again to avoid scaling artifacts.

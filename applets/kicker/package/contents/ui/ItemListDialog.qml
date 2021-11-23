@@ -21,9 +21,7 @@ Kicker.SubMenu {
 
     visible: false
     hideOnWindowDeactivate: plasmoid.hideOnWindowDeactivate
-
     location: PlasmaCore.Types.Floating
-
     offset: PlasmaCore.Units.smallSpacing
 
     onWindowDeactivated: {
@@ -70,8 +68,6 @@ Kicker.SubMenu {
         plasmoid.hideOnWindowDeactivate = false;
         visible = false;
 
-        Qt.callLater(function() {
-            itemDialog.destroy();
-        });
+        Qt.callLater(() => itemDialog.destroy());
     }
 }

@@ -20,7 +20,7 @@ Item {
 
     signal reset
 
-    property bool isDash: (plasmoid.pluginName === "org.kde.plasma.kickerdash")
+    property bool isDash: plasmoid.pluginName === "org.kde.plasma.kickerdash"
 
     Plasmoid.switchWidth: isDash || !Plasmoid.fullRepresentationItem ? 0 : Plasmoid.fullRepresentationItem.Layout.minimumWidth
     Plasmoid.switchHeight: isDash || !Plasmoid.fullRepresentationItem ? 0 : Plasmoid.fullRepresentationItem.Layout.minimumHeight
@@ -68,7 +68,7 @@ Item {
         autoPopulate: false
 
         appNameFormat: plasmoid.configuration.appNameFormat
-        flat: kicker.isDash ? true : plasmoid.configuration.limitDepth
+        flat: kicker.isDash || plasmoid.configuration.limitDepth
         sorted: plasmoid.configuration.alphaSort
         showSeparators: !kicker.isDash
         appletInterface: plasmoid
@@ -145,18 +145,17 @@ Item {
         favoritesModel: globalFavorites
 
         runners: {
-            var runners = new Array("services", "krunner_systemsettings");
+            const results = ["services", "krunner_systemsettings"];
 
             if (kicker.isDash) {
-                runners = runners.concat(new Array("desktopsessions", "PowerDevil",
-                    "calculator", "unitconverter"));
+                results.push("desktopsessions", "PowerDevil", "calculator", "unitconverter");
             }
 
             if (plasmoid.configuration.useExtraRunners) {
-                runners = runners.concat(plasmoid.configuration.extraRunners);
+                results.push(...plasmoid.configuration.extraRunners);
             }
 
-            return runners;
+            return results;
         }
 
         deleteWhenEmpty: kicker.isDash
@@ -169,15 +168,15 @@ Item {
     }
 
     Kicker.ProcessRunner {
-        id: processRunner;
+        id: processRunner
     }
 
     Kicker.WindowSystem {
-        id: windowSystem;
+        id: windowSystem
     }
 
     PlasmaCore.FrameSvgItem {
-        id : highlightItemSvg
+        id: highlightItemSvg
 
         visible: false
 
@@ -186,7 +185,7 @@ Item {
     }
 
     PlasmaCore.FrameSvgItem {
-        id : listItemSvg
+        id: listItemSvg
 
         visible: false
 
@@ -217,7 +216,7 @@ Item {
 
         property Item toolTip
 
-        text: (toolTip != null) ? toolTip.text : ""
+        text: toolTip ? toolTip.text : ""
     }
 
     Timer {

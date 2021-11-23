@@ -392,7 +392,7 @@ Kicker.DashboardWindow {
 
                     text: i18n("Favorites")
 
-                    opacity: (enabled ? 1.0 : 0.3)
+                    opacity: enabled ? 1.0 : 0.3
 
                     Behavior on opacity { SmoothedAnimation { duration: PlasmaCore.Units.longDuration; velocity: 0.01 } }
                 }
@@ -412,7 +412,7 @@ Kicker.DashboardWindow {
                     svg: lineSvg
                     elementId: "horizontal-line"
 
-                    opacity: (enabled ? 1.0 : 0.3)
+                    opacity: enabled ? 1.0 : 0.3
 
                     Behavior on opacity { SmoothedAnimation { duration: PlasmaCore.Units.longDuration; velocity: 0.01 } }
                 }
@@ -443,7 +443,7 @@ Kicker.DashboardWindow {
                     dropEnabled: true
                     usesPlasmaTheme: false
 
-                    opacity: (enabled ? 1.0 : 0.3)
+                    opacity: enabled ? 1.0 : 0.3
 
                     Behavior on opacity { SmoothedAnimation { duration: PlasmaCore.Units.longDuration; velocity: 0.01 } }
 
@@ -1042,7 +1042,7 @@ Kicker.DashboardWindow {
                             if (event.key === Qt.Key_Left) {
                                 event.accepted = true;
 
-                                var currentRow = Math.max(0, Math.ceil(currentItem.y / mainGrid.cellHeight) - 1);
+                                const currentRow = Math.max(0, Math.ceil(currentItem.y / mainGrid.cellHeight) - 1);
                                 mainColumn.tryActivate(currentRow, mainColumn.columns - 1);
                             } else if (event.key === Qt.Key_Tab) {
                                 event.accepted = true;
