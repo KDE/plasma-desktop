@@ -81,9 +81,9 @@ MouseArea {
     function generateWindowList(windows) {
         // if we have 5 windows, we would show "4 and another one" with the
         // hint that there's 1 more taking the same amount of space than just showing it
-        var maximum = windows.length === 5 ? 5 : 4
+        const maximum = windows.length === 5 ? 5 : 4
 
-        var text = "<ul><li>"
+        let text = "<ul><li>"
         + windows.slice(0, maximum).map(title => title.replace(/[^0-9A-Za-z ]/g,
             c => "&#" + c.charCodeAt(0) + ";")).join("</li><li>")
                 + "</li></ul>";
@@ -109,7 +109,7 @@ MouseArea {
         // https://doc.qt.io/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
         wheelDelta += wheel.angleDelta.y || wheel.angleDelta.x;
 
-        var increment = 0;
+        let increment = 0;
 
         while (wheelDelta >= 120) {
             wheelDelta -= 120;
@@ -123,12 +123,12 @@ MouseArea {
 
         while (increment !== 0) {
             if (increment < 0) {
-                var nextPage = plasmoid.configuration.wrapPage?
+                const nextPage = plasmoid.configuration.wrapPage?
                     (pagerModel.currentPage + 1) % repeater.count :
                     Math.min(pagerModel.currentPage + 1, repeater.count - 1);
                 pagerModel.changePage(nextPage);
             } else {
-                var previousPage = plasmoid.configuration.wrapPage ?
+                const previousPage = plasmoid.configuration.wrapPage ?
                     (repeater.count + pagerModel.currentPage - 1) % repeater.count :
                     Math.max(pagerModel.currentPage - 1, 0);
                 pagerModel.changePage(previousPage);
@@ -240,7 +240,7 @@ MouseArea {
                 return 1;
             }
 
-            var rows = 1;
+            let rows = 1;
 
             if (isActivityPager && plasmoid.configuration.pagerLayout !== 0 /*No Default*/) {
                 if (plasmoid.configuration.pagerLayout === 1 /*Horizontal*/) {
@@ -249,7 +249,7 @@ MouseArea {
                     rows = pagerModel.count;
                 }
             } else {
-                var columns = Math.floor(pagerModel.count / pagerModel.layoutRows);
+                let columns = Math.floor(pagerModel.count / pagerModel.layoutRows);
 
                 if (pagerModel.count % pagerModel.layoutRows > 0) {
                     columns += 1;
@@ -316,12 +316,12 @@ MouseArea {
                         return;
                     }
 
-                    var text = ""
-                    var visibleWindows = []
-                    var minimizedWindows = []
+                    let text = ""
+                    let visibleWindows = []
+                    let minimizedWindows = []
 
-                    for (var i = 0, length = windowRectRepeater.count; i < length; ++i) {
-                        var window = windowRectRepeater.itemAt(i)
+                    for (let i = 0, length = windowRectRepeater.count; i < length; ++i) {
+                        const window = windowRectRepeater.itemAt(i)
                         if (window) {
                             if (window.minimized) {
                                 minimizedWindows.push(window.visibleName)
@@ -464,7 +464,7 @@ MouseArea {
 
                                     if (drag.active) {
                                         // Reparent to allow drags outside of this desktop.
-                                        var value = root.mapFromItem(clipRect, windowRect.x, windowRect.y);
+                                        const value = root.mapFromItem(clipRect, windowRect.x, windowRect.y);
                                         windowRect.parent = root;
                                         windowRect.x = value.x;
                                         windowRect.y = value.y
@@ -474,11 +474,11 @@ MouseArea {
                                 onReleased: {
                                     if (root.dragging) {
                                         windowRect.visible = false;
-                                        var windowCenter = Qt.point(windowRect.x + windowRect.width / 2, windowRect.y + windowRect.height / 2);
-                                        var pagerItem = pagerItemGrid.childAt(windowCenter.x, windowCenter.y);
+                                        const windowCenter = Qt.point(windowRect.x + windowRect.width / 2, windowRect.y + windowRect.height / 2);
+                                        const pagerItem = pagerItemGrid.childAt(windowCenter.x, windowCenter.y);
 
                                         if (pagerItem) {
-                                            var relativeTopLeft = root.mapToItem(pagerItem, windowRect.x, windowRect.y);
+                                            const relativeTopLeft = root.mapToItem(pagerItem, windowRect.x, windowRect.y);
 
                                             const modelIndex = windowRectRepeater.model.index(index, 0)
                                             pagerModel.moveWindow(modelIndex, relativeTopLeft.x, relativeTopLeft.y,
