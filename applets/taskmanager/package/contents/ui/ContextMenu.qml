@@ -394,6 +394,7 @@ PlasmaComponents.ContextMenu {
                     return;
                 }
 
+                const runningActivities = activityInfo.runningActivities();
                 var menuItem = menu.newMenuItem(activitiesDesktopsMenu);
                 menuItem.text = i18n("Add To Current Activity");
                 menuItem.enabled = Qt.binding(function() {
@@ -405,22 +406,19 @@ PlasmaComponents.ContextMenu {
                 });
 
                 menuItem = menu.newMenuItem(activitiesDesktopsMenu);
-                menuItem.text = i18n("All Activities");
+                menuItem.text = i18n("All Running Activities");
                 menuItem.checkable = true;
                 menuItem.checked = Qt.binding(function() {
-                    return menu.visualParent && menu.get(atm.Activities).length === 0;
+                    const len = menu.get(atm.Activities).length;
+                    // When at least an activity is stopped, len is equal to activityInfo.numberOfRunningActivities.
+                    return menu.visualParent && (len === 0 || len === activityInfo.numberOfRunningActivities);
                 });
                 menuItem.toggled.connect(function(checked) {
-                    var newActivities = undefined; // will cast to an empty QStringList i.e all activities
-                    if (!checked) {
-                        newActivities = new Array(activityInfo.currentActivity);
-                    }
-                    tasksModel.requestActivities(menu.modelIndex, newActivities);
+                    tasksModel.requestActivities(menu.modelIndex, checked ? runningActivities : [activityInfo.currentActivity]);
                 });
 
                 menu.newSeparator(activitiesDesktopsMenu);
 
-                var runningActivities = activityInfo.runningActivities();
                 for (var i = 0; i < runningActivities.length; ++i) {
                     var activityId = runningActivities[i];
 
@@ -429,14 +427,21 @@ PlasmaComponents.ContextMenu {
                     menuItem.checkable = true;
                     menuItem.checked = Qt.binding( (function(activityId) {
                         return function() {
-                            return menu.visualParent && menu.get(atm.Activities).indexOf(activityId) >= 0;
+                            const activities = menu.get(atm.Activities);
+                            return menu.visualParent && activities.indexOf(activityId) >= 0
+                                   && activities.length !== activityInfo.numberOfRunningActivities; // When at least an activity is stopped
                         };
                     })(activityId));
                     menuItem.toggled.connect((function(activityId) {
                         return function (checked) {
                             var newActivities = menu.get(atm.Activities);
                             if (checked) {
-                                newActivities = newActivities.concat(activityId);
+                                // If there is at least a stopped activity and "All Running Activities" is checked, we need to reset newActivities.
+                                if (newActivities.length === activityInfo.numberOfRunningActivities) {
+                                    newActivities = [activityId];
+                                } else {
+                                    newActivities = newActivities.concat(activityId);
+                                }
                             } else {
                                 var index = newActivities.indexOf(activityId)
                                 if (index < 0) {
