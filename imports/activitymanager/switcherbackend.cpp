@@ -313,6 +313,11 @@ bool SwitcherBackend::shouldShowSwitcher() const
 
 void SwitcherBackend::setShouldShowSwitcher(bool shouldShowSwitcher)
 {
+    if (m_inputWindow) {
+        delete m_inputWindow;
+        m_inputWindow = nullptr;
+    }
+
     if (m_shouldShowSwitcher == shouldShowSwitcher)
         return;
 
@@ -326,11 +331,6 @@ void SwitcherBackend::setShouldShowSwitcher(bool shouldShowSwitcher)
 
         // We might have an unprocessed onCurrentActivityChanged
         onCurrentActivityChanged(m_activities.currentActivity());
-
-        if (m_inputWindow) {
-            delete m_inputWindow;
-            m_inputWindow = nullptr;
-        }
     }
 
     Q_EMIT shouldShowSwitcherChanged(m_shouldShowSwitcher);
