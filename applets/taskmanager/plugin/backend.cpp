@@ -141,6 +141,20 @@ QUrl Backend::tryDecodeApplicationsUrl(const QUrl &launcherUrl)
     return launcherUrl;
 }
 
+QStringList Backend::applicationCategories(const QUrl &launcherUrl)
+{
+    const QUrl desktopEntryUrl = tryDecodeApplicationsUrl(launcherUrl);
+
+    if (!desktopEntryUrl.isValid() || !desktopEntryUrl.isLocalFile() || !KDesktopFile::isDesktopFile(desktopEntryUrl.toLocalFile())) {
+        return QStringList();
+    }
+
+    KDesktopFile desktopFile(desktopEntryUrl.toLocalFile());
+
+    // Since we can't have dynamic jump list actions, at least add the user's "Places" for file managers.
+    return desktopFile.desktopGroup().readXdgListEntry(QStringLiteral("Categories"));
+}
+
 QVariantList Backend::jumpListActions(const QUrl &launcherUrl, QObject *parent)
 {
     QVariantList actions;
@@ -249,11 +263,9 @@ QVariantList Backend::placesActions(const QUrl &launcherUrl, bool showAllPlaces,
     }
 
     QVariantList actions;
-    KDesktopFile desktopFile(desktopEntryUrl.toLocalFile());
 
     // Since we can't have dynamic jump list actions, at least add the user's "Places" for file managers.
-    const QStringList &categories = desktopFile.desktopGroup().readXdgListEntry(QStringLiteral("Categories"));
-    if (!categories.contains(QLatin1String("FileManager"))) {
+    if (!applicationCategories(launcherUrl).contains(QLatin1String("FileManager"))) {
         return actions;
     }
 
