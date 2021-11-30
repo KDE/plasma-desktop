@@ -120,7 +120,7 @@ T.ItemDelegate {
             }
             view.currentIndex = index
             // if successfully triggered, close popup
-            if(view.model.trigger(index, "", null)) {
+            if(view.model.trigger && view.model.trigger(index, "", null)) {
                 if (plasmoid.hideOnWindowDeactivate) {
                     plasmoid.expanded = false;
                 }
