@@ -17,7 +17,6 @@ BasePage {
         focus: true // needed for Loaders
         model: placesCategoryModel
         delegate: KickoffItemDelegate {
-            action: null
             url: ""
             description: ""
             extendHoverMargins: true
