@@ -77,6 +77,7 @@ public:
     Q_INVOKABLE qint64 parentPid(qint64 pid) const;
 
     static QUrl tryDecodeApplicationsUrl(const QUrl &launcherUrl);
+    Q_INVOKABLE static QStringList applicationCategories(const QUrl &launcherUrl);
 
 public Q_SLOTS:
     void presentWindows(const QVariant &winIds);
