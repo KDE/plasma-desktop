@@ -170,13 +170,13 @@ void GlobalAccelModel::save()
                 const QStringList actionId = buildActionId(it->id, it->displayName, action.id, action.displayName);
                 // TODO: pass action.activeShortcuts to m_globalAccelInterface->setForeignShortcut() as a QSet<QKeySequence>
                 // or QList<QKeySequence>?
-                QList<int> keys;
+                QList<QKeySequence> keys;
                 keys.reserve(action.activeShortcuts.size());
                 for (const QKeySequence &key : qAsConst(action.activeShortcuts)) {
-                    keys.append(key[0]);
+                    keys.append(key);
                 }
                 qCDebug(KCMKEYS) << "Saving" << actionId << action.activeShortcuts << keys;
-                auto reply = m_globalAccelInterface->setForeignShortcut(actionId, keys);
+                auto reply = m_globalAccelInterface->setForeignShortcut_v2(actionId, keys);
                 reply.waitForFinished();
                 if (!reply.isValid()) {
                     qCCritical(KCMKEYS) << "Error while saving";
