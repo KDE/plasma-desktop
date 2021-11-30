@@ -88,7 +88,7 @@ target_link_libraries (kcm_activities
 
 install (
    TARGETS kcm_activities
-   DESTINATION ${KDE_INSTALL_PLUGINDIR}
+   DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets
    )
 
 install (

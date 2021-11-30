@@ -22,7 +22,7 @@ target_link_libraries(kcm_clock
     KF5::KDELibs4Support
 )
 
-install(TARGETS kcm_clock  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+install(TARGETS kcm_clock  DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets )
 
 ########### next target ###############
 #This is only needed when not using timedated and can be removed in future

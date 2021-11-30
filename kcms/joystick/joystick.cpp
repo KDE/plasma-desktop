@@ -19,7 +19,7 @@
 
 #include <QVBoxLayout>
 
-K_PLUGIN_FACTORY(JoystickFactory, registerPlugin<Joystick>();)
+K_PLUGIN_CLASS_WITH_JSON(Joystick, "joystick.json")
 
 Joystick::Joystick(QWidget *parent, const QVariantList &)
     : KCModule(parent)

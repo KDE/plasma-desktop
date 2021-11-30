@@ -18,7 +18,7 @@ kcmutils_generate_module_data(
 kconfig_add_kcfg_files(kcm_workspace_SRCS workspaceoptions_kdeglobalssettings.kcfgc GENERATE_MOC)
 kconfig_add_kcfg_files(kcm_workspace_SRCS workspaceoptions_plasmasettings.kcfgc GENERATE_MOC)
 
-kcoreaddons_add_plugin(kcm_workspace SOURCES ${kcm_workspace_SRCS} INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_workspace SOURCES ${kcm_workspace_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_link_libraries(kcm_workspace
     KF5::QuickAddons

@@ -132,10 +132,8 @@ target_link_libraries(kcm_keyboard_static
     X11::xkbfile
 )
 
-kcoreaddons_add_plugin(kcm_keyboard SOURCES kcmmain.cpp INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_keyboard SOURCES kcmmain.cpp INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 target_link_libraries(kcm_keyboard kcm_keyboard_static)
-
-install(TARGETS kcm_keyboard DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 install( FILES kcm_keyboard.desktop DESTINATION ${KDE_INSTALL_APPDIR} )
 

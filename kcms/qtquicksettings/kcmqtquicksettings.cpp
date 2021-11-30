@@ -13,7 +13,7 @@
 #include "renderersettings.h"
 #include "ui_kcmqtquicksettingswidget.h"
 
-K_PLUGIN_FACTORY(KCMQtQuickSettingsFactory, registerPlugin<KCMQtQuickSettingsModule>();)
+K_PLUGIN_CLASS_WITH_JSON(KCMQtQuickSettingsModule, "qtquicksettings.json")
 
 KCMQtQuickSettingsModule::KCMQtQuickSettingsModule(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)

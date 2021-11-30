@@ -15,7 +15,7 @@ kcmutils_generate_module_data(
 
 kconfig_add_kcfg_files(kcm_launchfeedback_PART_SRCS launchfeedbacksettingsbase.kcfgc GENERATE_MOC)
 
-kcoreaddons_add_plugin(kcm_launchfeedback SOURCES ${kcm_launchfeedback_PART_SRCS} INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_launchfeedback SOURCES ${kcm_launchfeedback_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_link_libraries(kcm_launchfeedback
     Qt::DBus

@@ -7,7 +7,7 @@ set(kcm_file_SRCS
   baloodata.cpp
 )
 
-kcoreaddons_add_plugin(kcm_baloofile SOURCES ${kcm_file_SRCS} INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_baloofile SOURCES ${kcm_file_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_link_libraries(kcm_baloofile
   KF5::CoreAddons

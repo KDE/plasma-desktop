@@ -14,7 +14,7 @@ set(componentchooser_SRCS
 kconfig_add_kcfg_files(componentchooser_SRCS browser_settings.kcfgc GENERATE_MOC)
 kconfig_add_kcfg_files(componentchooser_SRCS terminal_settings.kcfgc GENERATE_MOC)
 
-kcoreaddons_add_plugin(kcm_componentchooser SOURCES ${componentchooser_SRCS} INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_componentchooser SOURCES ${componentchooser_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_link_libraries(kcm_componentchooser
     Qt::Core

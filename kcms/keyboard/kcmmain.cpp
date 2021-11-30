@@ -9,6 +9,6 @@
 
 #include <KPluginFactory>
 
-K_PLUGIN_FACTORY(KeyboardModuleFactory, registerPlugin<KCMKeyboard>(); registerPlugin<KeyboardSettingsData>();)
+K_PLUGIN_FACTORY_WITH_JSON(KeyboardModuleFactory, "keyboard.json", registerPlugin<KCMKeyboard>(); registerPlugin<KeyboardSettingsData>();)
 
 #include "kcmmain.moc"

@@ -22,7 +22,7 @@ target_link_libraries(kcm_joystick
     KF5::KIOWidgets
 )
 
-install(TARGETS kcm_joystick  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+install(TARGETS kcm_joystick  DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets )
 
 
 ########### install files ###############

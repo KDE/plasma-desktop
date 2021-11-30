@@ -22,7 +22,7 @@ ecm_qt_install_logging_categories(
        DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
 
-kcoreaddons_add_plugin(kcm_kded SOURCES ${kcm_kded_SRCS} INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_kded SOURCES ${kcm_kded_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_link_libraries(kcm_kded KF5::QuickAddons KF5::Service KF5::I18n KF5::KCMUtils Qt::DBus)
 

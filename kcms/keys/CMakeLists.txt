@@ -42,7 +42,7 @@ ecm_qt_install_logging_categories(
 )
 
 
-kcoreaddons_add_plugin(kcm_keys SOURCES ${kcm_keys_SRCS} INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_keys SOURCES ${kcm_keys_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_link_libraries(kcm_keys
     Qt::DBus

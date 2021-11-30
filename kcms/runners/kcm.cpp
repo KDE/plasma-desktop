@@ -36,7 +36,7 @@
 #include <QToolButton>
 #include <QVBoxLayout>
 
-K_PLUGIN_FACTORY(SearchConfigModuleFactory, registerPlugin<SearchConfigModule>(); registerPlugin<KRunnerData>();)
+K_PLUGIN_FACTORY_WITH_JSON(SearchConfigModuleFactory, "kcm_plasmasearch.json", registerPlugin<SearchConfigModule>(); registerPlugin<KRunnerData>();)
 
 SearchConfigModule::SearchConfigModule(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)

@@ -15,7 +15,7 @@
 #include "SwitchingTab.h"
 #include "kactivitiesdata.h"
 
-K_PLUGIN_FACTORY(ActivitiesKCMFactory, registerPlugin<MainConfigurationWidget>(); registerPlugin<KActivitiesData>();)
+K_PLUGIN_FACTORY_WITH_JSON(ActivitiesKCMFactory, "kcm_activities.json", registerPlugin<MainConfigurationWidget>(); registerPlugin<KActivitiesData>();)
 
 class MainConfigurationWidget::Private : public Ui::MainConfigurationWidgetBase
 {

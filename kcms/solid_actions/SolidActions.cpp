@@ -24,7 +24,7 @@
 #include <Solid/DeviceInterface>
 #include <Solid/Predicate>
 
-K_PLUGIN_FACTORY(SolidActionsFactory, registerPlugin<SolidActions>();)
+K_PLUGIN_CLASS_WITH_JSON(SolidActions, "solid-actions.json")
 
 SolidActions::SolidActions(QWidget *parent, const QVariantList &)
     : KCModule(parent)

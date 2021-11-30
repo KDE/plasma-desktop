@@ -13,5 +13,5 @@ target_link_libraries(kcmspellchecking
                       KF5::SonnetUi
                      )
 
-install(TARGETS kcmspellchecking   DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+install(TARGETS kcmspellchecking   DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets )
 install( FILES spellchecking.desktop   DESTINATION  ${KDE_INSTALL_APPDIR} )

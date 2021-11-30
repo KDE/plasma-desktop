@@ -19,7 +19,7 @@ kcmutils_generate_module_data(
     SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ScreenReaderSettings
 )
 
-kcoreaddons_add_plugin(kcm_access SOURCES ${kcm_access_PART_SRCS} INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_access SOURCES ${kcm_access_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_link_libraries(kcm_access
     Qt::DBus

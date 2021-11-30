@@ -15,7 +15,7 @@ qt_add_dbus_interface(kcm_smserver_PART_SRCS org.freedesktop.login1.Manager.xml 
 
 kconfig_add_kcfg_files(kcm_smserver_PART_SRCS smserversettings.kcfgc GENERATE_MOC)
 
-kcoreaddons_add_plugin(kcm_smserver SOURCES ${kcm_smserver_PART_SRCS} INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_smserver SOURCES ${kcm_smserver_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_link_libraries(kcm_smserver
     Qt::Core

@@ -15,7 +15,7 @@ kcmutils_generate_module_data(
 
 kconfig_add_kcfg_files(kcm_splashscreen_SRCS splashscreensettings.kcfgc GENERATE_MOC)
 
-kcoreaddons_add_plugin(kcm_splashscreen SOURCES ${kcm_splashscreen_SRCS} INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_splashscreen SOURCES ${kcm_splashscreen_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_link_libraries(kcm_splashscreen
   KF5::KIOWidgets

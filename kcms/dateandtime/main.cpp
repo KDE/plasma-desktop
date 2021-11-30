@@ -25,7 +25,7 @@
 
 #include "timedated_interface.h"
 
-K_PLUGIN_FACTORY(KlockModuleFactory, registerPlugin<KclockModule>();)
+K_PLUGIN_CLASS_WITH_JSON(KclockModule, "clock.json")
 
 KclockModule::KclockModule(QWidget *parent, const QVariantList &)
     : KCModule(parent)
