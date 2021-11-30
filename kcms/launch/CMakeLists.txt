@@ -24,8 +24,6 @@ target_link_libraries(kcm_launchfeedback
     KF5::QuickAddons
 )
 
-kcoreaddons_desktop_to_json(kcm_launchfeedback "kcm_launchfeedback.desktop")
-
 ########### install files ###############
 
 install(FILES launchfeedbacksettingsbase.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})

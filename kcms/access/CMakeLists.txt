@@ -36,8 +36,6 @@ target_link_libraries(kcm_access
     X11::X11
 )
 
-kcoreaddons_desktop_to_json(kcm_access "kcm_access.desktop")
-
 install(FILES kcm_access.desktop  DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(
     FILES

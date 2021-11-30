@@ -26,8 +26,6 @@ target_link_libraries(kcm_smserver
     KF5::KCMUtils
     PW::KWorkspace)
 
-kcoreaddons_desktop_to_json(kcm_smserver "kcm_smserver.desktop" SERVICE_TYPES kcmodule.desktop)
-
 add_subdirectory(kconf_update)
 
 ########### install files ###############

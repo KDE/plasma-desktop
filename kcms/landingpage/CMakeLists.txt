@@ -51,8 +51,6 @@ if (KUserFeedback_FOUND)
     target_link_libraries(kcm_landingpage KUserFeedbackCore)
 endif()
 
-kcoreaddons_desktop_to_json(kcm_landingpage "kcm_landingpage.desktop" SERVICE_TYPES kcmodule.desktop)
-
 ########### install files ###############
 install(FILES landingpage_kdeglobalssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 if (KUserFeedback_FOUND)

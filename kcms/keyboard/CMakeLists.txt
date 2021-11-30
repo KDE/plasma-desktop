@@ -38,7 +38,6 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 kcoreaddons_add_plugin(kded_keyboard SOURCES ${kded_keyboard_SRCS} INSTALL_NAMESPACE "kf5/kded")
 set_target_properties(kded_keyboard PROPERTIES OUTPUT_NAME keyboard)
-kcoreaddons_desktop_to_json(kded_keyboard keyboard.desktop SERVICE_TYPES kdedmodule.desktop)
 
 target_link_libraries(kded_keyboard
     Qt::Concurrent

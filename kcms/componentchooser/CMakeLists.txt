@@ -27,7 +27,5 @@ target_link_libraries(kcm_componentchooser
     KF5::KCMUtils
 )
 
-kcoreaddons_desktop_to_json(kcm_componentchooser "componentchooser.desktop")
-
 install(FILES componentchooser.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 kpackage_install_package(package kcm_componentchooser kcms)

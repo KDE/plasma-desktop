@@ -1,7 +1,5 @@
 kcoreaddons_add_plugin(kded_touchpad SOURCES kded.cpp INSTALL_NAMESPACE "kf5/kded")
 
-kcoreaddons_desktop_to_json(kded_touchpad kded_touchpad.desktop)
-
 target_link_libraries(kded_touchpad
     PRIVATE
     Qt::DBus

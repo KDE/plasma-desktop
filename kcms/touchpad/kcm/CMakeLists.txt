@@ -22,7 +22,6 @@ ki18n_wrap_ui(KCM_TOUCHPAD_SRCS
 
 add_library(kcm_touchpad MODULE ${KCM_TOUCHPAD_SRCS})
 
-kcoreaddons_desktop_to_json(kcm_touchpad "kcm_touchpad.desktop")
 target_link_libraries(kcm_touchpad
     PRIVATE
     Qt::Core

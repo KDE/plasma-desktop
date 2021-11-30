@@ -20,8 +20,6 @@ target_link_libraries(kcm_baloofile
   Qt::Widgets
 )
 
-kcoreaddons_desktop_to_json(kcm_baloofile "kcm_baloofile.desktop")
-
 install(FILES kcm_baloofile.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 
 kpackage_install_package(package kcm_baloofile kcms)

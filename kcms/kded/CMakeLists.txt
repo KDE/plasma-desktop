@@ -24,8 +24,6 @@ ecm_qt_install_logging_categories(
 
 kcoreaddons_add_plugin(kcm_kded SOURCES ${kcm_kded_SRCS} INSTALL_NAMESPACE "kcms")
 
-kcoreaddons_desktop_to_json(kcm_kded "kcmkded.desktop")
-
 target_link_libraries(kcm_kded KF5::QuickAddons KF5::Service KF5::I18n KF5::KCMUtils Qt::DBus)
 
 ########### install files ###############

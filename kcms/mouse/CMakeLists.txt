@@ -74,7 +74,6 @@ add_library(kcm_mouse MODULE
     ${common_SRCS}
     ${backend_SRCS}
 )
-kcoreaddons_desktop_to_json(kcm_mouse "mouse.desktop")
 
 target_link_libraries(kcm_mouse
     ${backend_LIBS}

@@ -54,8 +54,6 @@ target_link_libraries(kcm_keys
     KF5::QuickAddons
 )
 
-kcoreaddons_desktop_to_json(kcm_keys "kcm_keys.desktop")
-
 install(FILES kcm_keys.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 
 kpackage_install_package(package kcm_keys kcms)
