@@ -1,4 +1,8 @@
 [Desktop Entry]
+Type=Application
+Exec=systemsettings kcm_componentchooser
+NoDisplay=true
+
 Name=Default Applications
 Name[af]=Verstektoepassings
 Name[ar]=التطبيقات المبدئية
@@ -121,5 +125,4 @@ Comment[x-test]=xxChoose default Applicationsxx
 Comment[zh_CN]=选择默认应用程序
 Comment[zh_TW]=選擇預設應用程式
 Encoding=UTF-8
-Type=Service
 Icon=preferences-desktop-default-applications

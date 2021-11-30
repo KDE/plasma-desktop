@@ -48,7 +48,7 @@ if(HAVE_PACKAGEKIT)
     target_link_libraries(plugininstaller PK::packagekitqt5)
 endif()
 
-install(FILES kcm_plasmasearch.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_plasmasearch.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(TARGETS kcm_plasmasearch DESTINATION ${KDE_INSTALL_PLUGINDIR})
 install(FILES krunner.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 install(TARGETS plugininstaller DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

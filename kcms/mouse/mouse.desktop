@@ -1,6 +1,8 @@
 [Desktop Entry]
 Icon=preferences-desktop-mouse
-Type=Service
+Type=Application
+Exec=systemsettings kcm_mouse
+NoDisplay=true
 
 Name=Mouse
 Name[af]=Muis

@@ -27,5 +27,5 @@ target_link_libraries(kcm_launchfeedback
 ########### install files ###############
 
 install(FILES launchfeedbacksettingsbase.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-install(FILES kcm_launchfeedback.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_launchfeedback.desktop  DESTINATION  ${KDE_INSTALL_APPDIR})
 kpackage_install_package(package kcm_launchfeedback kcms)

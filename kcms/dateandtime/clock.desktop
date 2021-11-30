@@ -1,6 +1,8 @@
 [Desktop Entry]
 Icon=preferences-system-time
-Type=Service
+Type=Application
+Exec=systemsettings kcm_clock
+NoDisplay=true
 
 Name=Date & Time
 Name[af]=Datum & Tyd

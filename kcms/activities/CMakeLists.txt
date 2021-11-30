@@ -93,7 +93,7 @@ install (
 
 install (
    FILES kcm_activities.desktop
-   DESTINATION ${KDE_INSTALL_KSERVICES5DIR}
+   DESTINATION ${KDE_INSTALL_APPDIR}
    )
 
 install (

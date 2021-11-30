@@ -1,6 +1,8 @@
 [Desktop Entry]
 Icon=preferences-desktop-keyboard-shortcut
-Type=Service
+Type=Application
+Exec=systemsettings kcm_keys
+NoDisplay=true
 
 Name=Shortcuts
 Name[ar]=الاختصارات

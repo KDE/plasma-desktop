@@ -1,6 +1,8 @@
 [Desktop Entry]
 Icon=preferences-desktop-baloo
-Type=Service
+Type=Application
+Exec=systemsettings kcm_baloofile
+NoDisplay=true
 
 Name=File Search
 Name[ar]=بحث الملفّات

@@ -1,6 +1,8 @@
 [Desktop Entry]
 Icon=tools-check-spelling
-Type=Service
+Type=Application
+Exec=systemsettings kcmspellchecking
+NoDisplay=true
 
 Name=Spell Check
 Name[ar]=تدقيق الهجاء

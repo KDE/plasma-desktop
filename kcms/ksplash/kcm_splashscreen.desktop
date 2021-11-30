@@ -1,6 +1,8 @@
 [Desktop Entry]
 Icon=preferences-system-splash
-Type=Service
+Type=Application
+Exec=systemsettings kcm_splashscreen
+NoDisplay=true
 
 Name=Splash Screen
 Name[ar]=شاشة البدء

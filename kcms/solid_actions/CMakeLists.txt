@@ -32,6 +32,6 @@ target_link_libraries(solid-action-desktop-gen KF5::Solid KF5::KIOCore KF5::I18n
 
 install( TARGETS kcm_solid_actions DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 install( TARGETS solid-action-desktop-gen ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
-install( FILES solid-actions.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
+install( FILES solid-actions.desktop DESTINATION ${KDE_INSTALL_APPDIR} )
 install( FILES solid-action-template.desktop DESTINATION ${KDE_INSTALL_DATADIR}/kcmsolidactions )
 install( FILES solid-device-type.desktop DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR} )

@@ -20,6 +20,6 @@ target_link_libraries(kcm_baloofile
   Qt::Widgets
 )
 
-install(FILES kcm_baloofile.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_baloofile.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 kpackage_install_package(package kcm_baloofile kcms)

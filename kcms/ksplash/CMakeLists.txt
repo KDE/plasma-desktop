@@ -35,7 +35,7 @@ target_link_libraries(kcm_splashscreen
 
 #this desktop file is installed only for retrocompatibility with sycoca
 install(FILES splashscreensettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-install(FILES kcm_splashscreen.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_splashscreen.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install( FILES ksplash.knsrc DESTINATION  ${KDE_INSTALL_KNSRCDIR} )
 
 kpackage_install_package(package kcm_splashscreen kcms)

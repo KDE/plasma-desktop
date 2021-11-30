@@ -1,7 +1,8 @@
 [Desktop Entry]
 Icon=system-run
-Type=Service
-
+Type=Application
+Exec=systemsettings kcm_solid_actions
+NoDisplay=true
 
 Name=Device Actions
 Name[ar]=إجراءات الجهاز

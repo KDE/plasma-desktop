@@ -28,6 +28,6 @@ target_link_libraries(kcm_kded KF5::QuickAddons KF5::Service KF5::I18n KF5::KCMU
 
 ########### install files ###############
 
-install( FILES kcmkded.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+install( FILES kcmkded.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
 
 kpackage_install_package(package kcm5_kded kcms)

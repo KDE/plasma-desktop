@@ -1,6 +1,8 @@
 [Desktop Entry]
 Icon=preferences-desktop-launch-feedback
-Type=Service
+Type=Application
+Exec=systemsettings kcm_launchfeedback
+NoDisplay=true
 
 Name=Launch Feedback
 Name[af]=Lanseer Terugvoer

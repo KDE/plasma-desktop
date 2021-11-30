@@ -1,6 +1,8 @@
 [Desktop Entry]
 Icon=preferences-desktop-locale
-Type=Service
+Type=Application
+Exec=kcmshell5 kcm_qtquicksettings
+NoDisplay=true
 
 Name=Plasma Renderer
 Name[ar]=مُصيِّر بلازما

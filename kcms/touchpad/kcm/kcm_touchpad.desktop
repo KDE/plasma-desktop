@@ -1,6 +1,8 @@
 [Desktop Entry]
 Icon=preferences-desktop-touchpad
-Type=Service
+Type=Application
+Exec=systemsettings kcm_touchpad
+NoDisplay=true
 Categories=Qt;KDE;X-KDE-settings-hardware;
 
 Name=Touchpad

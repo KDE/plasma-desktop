@@ -137,7 +137,7 @@ target_link_libraries(kcm_keyboard kcm_keyboard_static)
 
 install(TARGETS kcm_keyboard DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
-install( FILES kcm_keyboard.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
+install( FILES kcm_keyboard.desktop DESTINATION ${KDE_INSTALL_APPDIR} )
 
 add_subdirectory(kconf_update)
 

@@ -34,4 +34,4 @@ target_link_libraries(kcm_device_automounter
 
 install(TARGETS kcm_device_automounter DESTINATION ${KDE_INSTALL_PLUGINDIR})
 
-install(FILES device_automounter_kcm.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES device_automounter_kcm.desktop DESTINATION ${KDE_INSTALL_APPDIR})

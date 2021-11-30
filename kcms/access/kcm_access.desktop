@@ -1,6 +1,8 @@
 [Desktop Entry]
 Icon=preferences-desktop-accessibility
-Type=Service
+Type=Application
+Exec=systemsettings kcm_access
+NoDisplay=true
 
 Name=Accessibility
 Name[af]=Toeganklikheid

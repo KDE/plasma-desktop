@@ -1,6 +1,8 @@
 [Desktop Entry]
 Icon=preferences-desktop-activities
-Type=Service
+Type=Application
+Exec=systemsettings kcm_activities
+NoDisplay=true
 
 Name=Activities
 Name[ar]=الأنشطة

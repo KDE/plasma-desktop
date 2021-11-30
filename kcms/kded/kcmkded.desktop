@@ -1,6 +1,8 @@
 [Desktop Entry]
 Icon=preferences-system-session-services
-Type=Service
+Type=Application
+Exec=systemsettings kcm_kded
+NoDisplay=true
 
 Name=Background Services
 Name[ar]=خدمات الخلفيّة

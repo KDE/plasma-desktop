@@ -1,5 +1,7 @@
 [Desktop Entry]
-Type=Service
+Type=Application
+Exec=systemsettings kcm_desktoppaths
+NoDisplay=true
 
 Name=Locations
 Name[ar]=الأماكن

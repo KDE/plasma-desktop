@@ -1,9 +1,8 @@
 [Desktop Entry]
-X-DocPath=kcontrol/joystick/index.html
-Terminal=false
-Type=Service
+Type=Application
 Icon=preferences-desktop-gaming
-Categories=Qt;KDE;X-KDE-settings-hardware;
+Exec=systemsettings kcm_joystick
+NoDisplay=true
 
 Comment=Calibrate Game Controller
 Comment[ar]=تضبط متحكم الألعاب

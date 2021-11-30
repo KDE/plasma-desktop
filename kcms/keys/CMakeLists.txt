@@ -54,7 +54,7 @@ target_link_libraries(kcm_keys
     KF5::QuickAddons
 )
 
-install(FILES kcm_keys.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_keys.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 kpackage_install_package(package kcm_keys kcms)
 

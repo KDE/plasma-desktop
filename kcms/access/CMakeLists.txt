@@ -36,7 +36,7 @@ target_link_libraries(kcm_access
     X11::X11
 )
 
-install(FILES kcm_access.desktop  DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_access.desktop  DESTINATION ${KDE_INSTALL_APPDIR})
 install(
     FILES
         kcmaccessibilitybell.kcfg

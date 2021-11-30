@@ -30,6 +30,6 @@ add_subdirectory(kconf_update)
 
 ########### install files ###############
 
-install(FILES kcm_smserver.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_smserver.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 kpackage_install_package(package kcm_smserver kcms)
 

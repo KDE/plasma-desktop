@@ -1,6 +1,9 @@
 [Desktop Entry]
 Icon=drive-removable-media
-Type=Service
+Type=Application
+Exec=systemsettings kcm_device_automounter
+NoDisplay=true
+
 Name=Removable Devices
 Name[ar]=الأجهزة القابلة للإزالة
 Name[ast]=Preseos estrayibles

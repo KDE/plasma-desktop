@@ -1,6 +1,8 @@
 [Desktop Entry]
 Icon=system-log-out
-Type=Service
+Type=Application
+Exec=systemsettings kcm_smserver
+NoDisplay=true
 
 Name=Desktop Session
 Name[ar]=جلسة سطح المكتب

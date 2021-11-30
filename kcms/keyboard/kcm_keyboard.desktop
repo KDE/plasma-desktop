@@ -1,6 +1,8 @@
 [Desktop Entry]
 Icon=preferences-desktop-keyboard
-Type=Service
+Type=Application
+Exec=systemsettings kded_keyboard
+NoDisplay=true
 
 Name=Keyboard
 Name[af]=Sleutelbord

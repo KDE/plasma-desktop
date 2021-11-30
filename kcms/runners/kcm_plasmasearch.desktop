@@ -1,6 +1,8 @@
 [Desktop Entry]
 Icon=plasma-search
-Type=Service
+Type=Application
+Exec=systemsettings kcm_plasmasearch
+NoDisplay=true
 
 Name=Plasma Search
 Comment=Configure search settings

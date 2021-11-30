@@ -27,5 +27,5 @@ target_link_libraries(kcm_componentchooser
     KF5::KCMUtils
 )
 
-install(FILES componentchooser.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES componentchooser.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 kpackage_install_package(package kcm_componentchooser kcms)

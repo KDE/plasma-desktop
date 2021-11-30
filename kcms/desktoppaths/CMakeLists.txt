@@ -26,5 +26,5 @@ target_link_libraries(kcm_desktoppaths
 )
 
 install(TARGETS kcm_desktoppaths DESTINATION ${KDE_INSTALL_PLUGINDIR})
-install(FILES desktoppath.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES desktoppath.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
