@@ -222,6 +222,12 @@ MouseArea {
         id: mpris2Source
         engine: "mpris2"
         connectedSources: sources
+        onSourceAdded: {
+            connectSource(source);
+        }
+        onSourceRemoved: {
+            disconnectSource(source);
+        }
         function sourceNameForLauncherUrl(launcherUrl, pid) {
             if (!launcherUrl || launcherUrl === "") {
                 return "";
