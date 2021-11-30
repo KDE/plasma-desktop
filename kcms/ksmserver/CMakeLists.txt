@@ -26,12 +26,12 @@ target_link_libraries(kcm_smserver
     KF5::KCMUtils
     PW::KWorkspace)
 
-kcoreaddons_desktop_to_json(kcm_smserver "package/metadata.desktop" SERVICE_TYPES kcmodule.desktop)
+kcoreaddons_desktop_to_json(kcm_smserver "kcm_smserver.desktop" SERVICE_TYPES kcmodule.desktop)
 
 add_subdirectory(kconf_update)
 
 ########### install files ###############
 
-install(FILES package/metadata.desktop RENAME kcm_smserver.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_smserver.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 kpackage_install_package(package kcm_smserver kcms)
 

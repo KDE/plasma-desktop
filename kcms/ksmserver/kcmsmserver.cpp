@@ -35,7 +35,7 @@
 
 #include "login1_manager.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(SMServerConfigFactory, "metadata.json", registerPlugin<SMServerConfig>(); registerPlugin<SMServerData>();)
+K_PLUGIN_FACTORY_WITH_JSON(SMServerConfigFactory, "kcm_smserver.json", registerPlugin<SMServerConfig>(); registerPlugin<SMServerData>();)
 
 SMServerConfig::SMServerConfig(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
