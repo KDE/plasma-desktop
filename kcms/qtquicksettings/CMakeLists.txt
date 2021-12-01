@@ -17,4 +17,4 @@ target_link_libraries(kcm_qtquicksettings
 ########### install files ###############
 
 install(TARGETS kcm_qtquicksettings  DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets)
-install(FILES qtquicksettings.desktop  DESTINATION  ${KDE_INSTALL_APPDIR})
+install(FILES kcm_qtquicksettings.desktop  DESTINATION  ${KDE_INSTALL_APPDIR})

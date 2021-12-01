@@ -26,5 +26,5 @@ target_link_libraries(kcm_desktoppaths
 )
 
 install(TARGETS kcm_desktoppaths DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets)
-install(FILES desktoppath.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES kcm_desktoppaths.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 

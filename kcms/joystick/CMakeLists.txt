@@ -27,6 +27,6 @@ install(TARGETS kcm_joystick  DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/s
 
 ########### install files ###############
 
-install( FILES joystick.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
+install( FILES kcm_joystick.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
 
 #

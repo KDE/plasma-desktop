@@ -37,4 +37,4 @@ kauth_install_actions(org.kde.kcontrol.kcmclock kcmclock_actions.actions)
 
 ########### install files ###############
 
-install( FILES clock.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
+install( FILES kcm_clock.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )

@@ -14,4 +14,4 @@ target_link_libraries(kcmspellchecking
                      )
 
 install(TARGETS kcmspellchecking   DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets )
-install( FILES spellchecking.desktop   DESTINATION  ${KDE_INSTALL_APPDIR} )
+install( FILES kcmspellchecking.desktop   DESTINATION  ${KDE_INSTALL_APPDIR} )
