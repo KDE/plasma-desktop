@@ -31,11 +31,7 @@ TouchpadConfigContainer::TouchpadConfigContainer(QWidget *parent, const QVariant
     if (KWindowSystem::isPlatformX11()) {
         if (backend->getMode() == TouchpadInputBackendMode::XLibinput || backend->getMode() == TouchpadInputBackendMode::Unset) {
             m_plugin = new TouchpadConfigLibinput(this, backend);
-        }
-        // For now, if no touchpad is found, always fall back to synaptics frontend,
-        // which has a "no touchpad found" message.
-        // TODO: show a disabled version of the Libinput frontend as appropriate
-        else {
+        } else {
             m_plugin = new TouchpadConfigXlib(this, backend);
         }
     } else if (KWindowSystem::isPlatformWayland()) {
