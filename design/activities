@@ -38,7 +38,7 @@ In 4.5
 ------
 all important code so far has been in kdebase.
 
-runtime/activitymanager/ is a kded service that manages activities; it controls the list of activities and which one is currrent. It uses a config file to store the IDs and names, so that this information is available even when nepomuk is down; other data, like the icon, is fetched through nepomuk.
+runtime/activitymanager/ is a kded service that manages activities; it controls the list of activities and which one is current. It uses a config file to store the IDs and names, so that this information is available even when nepomuk is down; other data, like the icon, is fetched through nepomuk.
 
 workspace/libs/kworkspace contains KActivityController, KActivityConsumer, and KActivityInfo - classes that talk to the activity manager over dbus and provide an easy API. Controller inherits Consumer, and is meant only for workspace (kwin and plasma); the other two are meant for use by any application, and will move to kdelibs when they've had a chance to mature.
 
@@ -53,7 +53,7 @@ Future
 
 * kwin needs to automatically associate a window with the activities for its resources.
 * applications need to start advertising what resources they've got in what windows
-* it needs to be easy to associate documents with activites (in dolphin?)
+* it needs to be easy to associate documents with activities (in dolphin?)
 
 * the taskbar & pager shouldn't show windows from other activities (but perhaps there should be a way to reach them in case you forget where one is)
 * I'd like to see a plasmoid that can go in the panel for quick activity switching
@@ -77,7 +77,7 @@ I think it's worth trying to re-use it. If it works, it gives us some basic supp
 
 So, how do we re-use it? well, for an application that's on exactly one activity, that's easy: tell it to quit, store its sssion key somewhere along with the activity id, and when it's time to restore that activity you start it again with that key.
 If an application is on >1 running activity, merely tell it that one of its activities has quit. if it's activity-aware it should close down stuff that belongs to that activity; if not, oh well, at least nothing is lost. When its last aactivity is closed, we tell it to quit, and save the key with every activity it was associated with, so that as soon as one of them is opened it gets restored.
-We will have to be careful that logging out doesn't duplicate any session stuff that activites handle, of course; and once this is in place we may also be able to offer the option of only opening a single activity on login.
+We will have to be careful that logging out doesn't duplicate any session stuff that activities handle, of course; and once this is in place we may also be able to offer the option of only opening a single activity on login.
 
 Oh, and we'll have to watch that the windows created as an application is restored get associated with the correct activities. I'm not sure how much work that is; depends how hard it is to go from a WID to a PID to a session key.
 

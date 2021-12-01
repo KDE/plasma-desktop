@@ -59,7 +59,7 @@ QString LayoutMemory::getCurrentMapKey()
         NET::WindowType windowType = winInfo.windowType(NET::NormalMask | NET::DesktopMask | NET::DialogMask);
         qCDebug(KCM_KEYBOARD, ) << "window type" << windowType;
 
-        // we ignore desktop type so that our keybaord layout applet on desktop could change layout properly
+        // we ignore desktop type so that our keyboard layout applet on desktop could change layout properly
         if (windowType == NET::Desktop)
             return previousLayoutMapKey;
         if (windowType != NET::Unknown && windowType != NET::Normal && windowType != NET::Dialog)
@@ -73,7 +73,7 @@ QString LayoutMemory::getCurrentMapKey()
         NET::WindowType windowType = winInfo.windowType(NET::NormalMask | NET::DesktopMask | NET::DialogMask);
         qCDebug(KCM_KEYBOARD, ) << "window type" << windowType;
 
-        // we ignore desktop type so that our keybaord layout applet on desktop could change layout properly
+        // we ignore desktop type so that our keyboard layout applet on desktop could change layout properly
         if (windowType == NET::Desktop)
             return previousLayoutMapKey;
         if (windowType != NET::Unknown && windowType != NET::Normal && windowType != NET::Dialog)

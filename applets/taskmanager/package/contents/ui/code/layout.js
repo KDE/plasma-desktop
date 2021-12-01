@@ -148,7 +148,7 @@ function preferredMaxHeight() {
                      // Hence in case the user prefers icons smaller than the
                      // height of his font, the font height will win even if the
                      // text will stay invisible. We leave it for the future
-                     // developers to improve this expresssion if the named
+                     // developers to improve this expression if the named
                      // corner case turns out to be important.
                      PlasmaCore.Units
                          .iconSizes[iconSizes[plasmoid.configuration.iconSize]],

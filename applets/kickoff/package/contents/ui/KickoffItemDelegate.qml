@@ -221,7 +221,7 @@ T.ItemDelegate {
         }
         onClicked: if (mouse.button === Qt.LeftButton) {
             root.forceActiveFocus(Qt.MouseFocusReason)
-            root.action.trigger() // clicked() is emmitted when action is triggered
+            root.action.trigger() // clicked() is emitted when action is triggered
         } else if (mouse.button === Qt.RightButton) {
             root.forceActiveFocus(Qt.MouseFocusReason)
             root.clicked() // does not trigger the action

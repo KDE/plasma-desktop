@@ -103,7 +103,7 @@ private:
     QHash<QString, QString> m_launcherUrlToStorageId;
     // these rules can be configured in the taskmanagerrulesrc in the "Unity Launcher Mapping" section
     // key is the actual desktop file name of the application (some-broken-app-beta.desktop)
-    // vaue is how it actually announces itself on the Unity API (some-broken-app.desktop)
+    // value is how it actually announces itself on the Unity API (some-broken-app.desktop)
     QHash<QString, QString> m_unityMappingRules;
 
     // Application Jobs

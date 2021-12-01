@@ -172,7 +172,7 @@ function activateTask(index, model, modifiers, task) {
         // Option 4: show group dialog/textual list
         // ========================================
         // This is also the final fallback option if Tooltips or Present windows
-        // are chosen but not actully available
+        // are chosen but not actually available
         else {
             if (groupDialog.visible) {
                 task.hideToolTipTemporarily();

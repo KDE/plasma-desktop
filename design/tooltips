@@ -18,7 +18,7 @@ Registering Tooltips
 --------------------
 ToolTipManger is quite simple to use: simply call setWidgetToolTipContent using the struct ToolTipContent. This causes the widget to be registered if it isn't already. Alternatively, for widgets that fill the data on demand, call registerWidget directly.
 
-Widgets are unregistered automatically upon destruction, but can also be manually unregsitered by calling ToolTipMnager::unregisterWidget.
+Widgets are unregistered automatically upon destruction, but can also be manually unregistered by calling ToolTipMnager::unregisterWidget.
 
 An event filter is registered on each registered widget and hover events that occur trigger calls to showToolTip and hideToolTip. The hover events are not, however, filtered out. 
 

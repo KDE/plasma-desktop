@@ -174,7 +174,7 @@ KCM.SimpleKCM {
             }
 
             Item {
-                // This is outside the loaded in order to have perfect label alignemnt
+                // This is outside the loaded in order to have perfect label alignment
                 Layout.preferredHeight: Kirigami.Units.smallSpacing
                 visible: feedbackLoader.visible
             }

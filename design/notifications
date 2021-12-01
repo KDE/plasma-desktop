@@ -16,7 +16,7 @@ Visualization components
 
 Alert
 
-As soon as notifications arrive, they are placed in the NotificationStack widget: it is an automatic popup, so in order to disturb the user workflow as less as possible, the size is kept fairly small, limiting the maximum nuber of notification displayed. For the same reason ony one notification at a time is displayed: the oldest (newest?) one, with the others partially covered, but permitting to still see the title.
+As soon as notifications arrive, they are placed in the NotificationStack widget: it is an automatic popup, so in order to disturb the user workflow as less as possible, the size is kept fairly small, limiting the maximum number of notification displayed. For the same reason only one notification at a time is displayed: the oldest (newest?) one, with the others partially covered, but permitting to still see the title.
 Moving the mouse over the title of the semi-hidden notifications will show them completely.
 The NotificationStack window is always on top of every other window.
 When a new notification arrives it is added in the NotificationStack with the following strategy:
@@ -37,7 +37,7 @@ Clicking anywhere in the stack area hides the whole stack, but in order to preve
 Information
 
 If the user missed some notification, it's possible to view the old ones by manually invoking a different ui by hitting the "i" button.
-The notifications are contained in a widget called NotificationScroller, that appears as a popup window. A tabbar lets the user filter the notifications by the sender application (useful for instance if the user is looking for informations about completition of an old running file tranfer or battery warning notices).
+The notifications are contained in a widget called NotificationScroller, that appears as a popup window. A tabbar lets the user filter the notifications by the sender application (useful for instance if the user is looking for information about completion of an old running file transfer or battery warning notices).
 Notifications are in a scrolling view that permits a fairly large amount of those to be displayed without using too much screen space.
 It features also the following behaviour:
 * If a new notification arrives the current status of the widget is not changed, to not interrupt the user workflow. (current selected tab and scrollbar value)
@@ -63,5 +63,5 @@ When the user opens the main widget popup that contains the NotificationScroller
 * The body contains
   * The source and destination URLs
   * A progressbar to show the job status 
-  * Optional extra informations such as file size, transfer speed and size already transfered
+  * Optional extra information such as file size, transfer speed and size already transferred
 

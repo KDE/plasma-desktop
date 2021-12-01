@@ -170,7 +170,7 @@ Window {
             height: section.height
 
             // Fix rotation to mod90, we cannot spin around as that'd put the text upside down ;)
-            // Unclear if spinning around like that is in fact desired for anyting, if so I guess
+            // Unclear if spinning around like that is in fact desired for anything, if so I guess
             // we need to counter rotate text or something.
             rotation: section.angle != 0 ? section.angle % 90 : section.angle
             transformOrigin: Item.TopLeft

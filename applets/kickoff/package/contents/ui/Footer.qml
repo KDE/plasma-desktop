@@ -193,7 +193,7 @@ PlasmaExtras.PlasmoidHeading {
         anchors.left: parent.left
         height: root.height
         width: tabBar.width
-        z: 1 // Has to be above contentItem to recieve mouse wheel events
+        z: 1 // Has to be above contentItem to receive mouse wheel events
         WheelHandler {
             id: tabScrollHandler
             acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad

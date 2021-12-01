@@ -23,7 +23,7 @@ this, along with the central Manager, allows any Task to be shared simultaneousl
 multiple widgets.
 
 Notifications and Jobs don't have this problem as they simply provide access to
-data which the ui is reponsible for showing in some way.
+data which the ui is responsible for showing in some way.
 
 Also provided in the core is a Task specifically for managing the Extenders of a host
 Plasma::Applet for Jobs and Notifications call, rather creatively, ExtenderTask.

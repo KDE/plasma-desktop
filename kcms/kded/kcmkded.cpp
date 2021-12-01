@@ -169,7 +169,7 @@ void KDEDConfig::getModuleStatus()
 
         // Check if the user just tried starting a module that then disabled itself again.
         // Some kded modules disable themselves on start when they deem themselves unnecessary
-        // based on some configuration independ of kded or the current environment.
+        // based on some configuration independent of kded or the current environment.
         // At least provide some feedback and not leave the user wondering why the service doesn't start.
         if (!m_lastStartedModule.isEmpty() && !runningModules.contains(m_lastStartedModule)) {
             Q_EMIT showSelfDisablingModulesHint();

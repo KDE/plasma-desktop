@@ -22,7 +22,7 @@ Security
 
 The plasma shell can control the security aspects of remote widgets, combined with a system wide config file (/etc/plasma-remotewidgets.conf) containing rules that can allow/disallow certain machines access to certain published widgets/services/engines. As a plasma shell you've got the following options:
 
-* Use one of the sensible presets in which case you don't have to case about security. The only thing you'll need to do is set the desired behavior using AuthorizationManager::self()->setAuthorizationPolicy(). This will set the AuthorizationInterface implementation to one of the ones built in into libplasma. Do note that even when you whish to use the default policy (DenyAll), you should still call this function, since that automatically locks this value so a potential malicious plasma plugin can't change this to serve it's own evil desires.
+* Use one of the sensible presets in which case you don't have to case about security. The only thing you'll need to do is set the desired behavior using AuthorizationManager::self()->setAuthorizationPolicy(). This will set the AuthorizationInterface implementation to one of the ones built in into libplasma. Do note that even when you wish to use the default policy (DenyAll), you should still call this function, since that automatically locks this value so a potential malicious plasma plugin can't change this to serve it's own evil desires.
 * Supply your own behavior by implementing AuthorizationInterface, set authorizationPolicy to custom, and use AuthorizationManager::self()->setAuthorizationInterface() to your own implementation.
 
 Security wise, every incoming message will get processed as follows:

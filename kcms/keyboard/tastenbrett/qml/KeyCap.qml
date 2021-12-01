@@ -9,7 +9,7 @@ import QtQuick 2.12
 Item {
     property QtObject key
 
-    // NB: we scale hight only by a portion of the available space if
+    // NB: we scale height only by a portion of the available space if
     //   some of the levels aren't there. Visually it looks weird when some
     //   labels are full center, so let's still bias them towards an edge, but
     //   increase the height ever so slightly

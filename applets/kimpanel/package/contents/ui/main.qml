@@ -74,7 +74,7 @@ Item {
                 }
             }
 
-            //depending on the form factor, we are calculating only one dimention, second is always the same as root/parent
+            //depending on the form factor, we are calculating only one dimension, second is always the same as root/parent
             implicitHeight: kimpanel.vertical ? cellHeight * Math.ceil(count / rowsOrColumns) : kimpanel.height
             implicitWidth: !kimpanel.vertical ? cellWidth * Math.ceil(count / rowsOrColumns) : kimpanel.width
 

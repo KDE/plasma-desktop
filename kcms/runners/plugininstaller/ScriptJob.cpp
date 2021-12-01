@@ -29,7 +29,7 @@ void ScriptJob::executeOperation(const QFileInfo &fileInfo, const QString &mimeT
             installerPath = file.absoluteFilePath();
         }
     }
-    // We want the user to be exactly aware of whats going on
+    // We want the user to be exactly aware of what's going on
     if (install || installerPath.isEmpty()) {
         ScriptConfirmationDialog dlg(installerPath, install, fileInfo.absolutePath());
         if (dlg.exec() == QDialog::Accepted) {
