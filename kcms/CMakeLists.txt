@@ -40,3 +40,6 @@ add_subdirectory(solid_actions)
 if (X11_XCB_FOUND AND X11_Xi_FOUND AND XORGSERVER_FOUND)
     add_subdirectory(touchpad)
 endif()
+
+install(FILES migrationlib/kcm_rename_plasma_desktop.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
+install(PROGRAMS migrationlib/kcm_rename_plasma_desktop.sh DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR} )
