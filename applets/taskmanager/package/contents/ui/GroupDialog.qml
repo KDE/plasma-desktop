@@ -6,6 +6,7 @@
 */
 
 import QtQuick 2.15
+// Deliberately imported after QtQuick to avoid missing restoreMode property in Binding. Fix in Qt 6.
 import QtQml 2.15
 import QtQml.Models 2.2
 import QtQuick.Window 2.2
