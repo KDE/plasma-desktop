@@ -61,7 +61,7 @@ Item {
         implicitHeight: PlasmaCore.Units.iconSizes.small
 
         source: plasmoid.icon
-        active: parent.containsMouse
+        active: mousearea.containsMouse
 
         PlasmaCore.ToolTipArea {
             mainText: plasmoid.title
@@ -69,6 +69,8 @@ Item {
         }
 
         MouseArea {
+            id: mousearea
+
             anchors.fill: parent
             onClicked: {
                 plasmoid.expanded = !plasmoid.expanded;
