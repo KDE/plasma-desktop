@@ -27,7 +27,11 @@ Kirigami.ScrollablePage
         }
         if (event.text.length > 0 && !view.showSearch && event.modifiers === Qt.NoModifier) {
             // We want to prevent unprintable characters like backspace
-            window.startSearch(/[\x00-\x1F\x7F]/.test(event.text) ? "" : event.text)
+            model = emoji
+            searchText += /[\x00-\x1F\x7F]/.test(event.text) ? "" : event.text
+            showSearch = true
+            title = i18n("Search")
+            category = ""
         }
     }
 
@@ -47,6 +51,7 @@ Kirigami.ScrollablePage
             visible: view.showSearch
             inputMethodHints: Qt.ImhNoPredictiveText
             onTextChanged: {
+                forceActiveFocus()
                 emojiModel.search = text
                 if (emojiView.currentIndex < 0) {
                     Qt.callLater(function() {
@@ -62,6 +67,7 @@ Kirigami.ScrollablePage
                     Qt.quit()
                 }
             }
+            Keys.forwardTo: emojiView
         }
 
         QQC2.ToolButton {
@@ -106,13 +112,6 @@ Kirigami.ScrollablePage
         highlightMoveDuration: 0
 
         currentIndex: -1
-
-        Keys.onPressed: {
-            // Force arrow keys to move emoji selection, not the TextInput.
-            if (currentIndex > 0) {
-                forceActiveFocus()
-            }
-        }
 
         delegate: MouseArea {
             QQC2.Label {
