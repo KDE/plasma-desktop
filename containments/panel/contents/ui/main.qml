@@ -154,14 +154,12 @@ function checkLastSpacer() {
 
 //BEGIN connections
     Component.onCompleted: {
-        currentLayout.isLayoutHorizontal = isHorizontal
         LayoutManager.plasmoid = plasmoid;
         LayoutManager.root = root;
         LayoutManager.layout = currentLayout;
         LayoutManager.lastSpacer = lastSpacer;
         LayoutManager.marginHighlights = [];
         LayoutManager.restore();
-        containmentSizeSyncTimer.restart();
 
         plasmoid.action("configure").visible = Qt.binding(function() {
             return !plasmoid.immutable;
@@ -200,7 +198,6 @@ function checkLastSpacer() {
         event.accept(event.proposedAction);
         root.fixedWidth = 0;
         root.fixedHeight = 0;
-        containmentSizeSyncTimer.restart();
     }
 
 
@@ -215,8 +212,6 @@ function checkLastSpacer() {
     }
 
     Plasmoid.onUserConfiguringChanged: {
-        containmentSizeSyncTimer.restart();
-
         if (plasmoid.immutable) {
             if (dragOverlay) {
                 dragOverlay.destroy();
@@ -245,11 +240,7 @@ function checkLastSpacer() {
         }
     }
 
-    Plasmoid.onFormFactorChanged: containmentSizeSyncTimer.restart();
-    Containment.onEditModeChanged: containmentSizeSyncTimer.restart();
-
     onToolBoxChanged: {
-        containmentSizeSyncTimer.restart();
         if (startupTimer.running) {
             startupTimer.restart();
         }
@@ -478,9 +469,15 @@ function checkLastSpacer() {
 
     GridLayout {
         id: currentLayout
-        property bool isLayoutHorizontal
+        readonly property bool isLayoutHorizontal: root.isHorizontal
         rowSpacing: PlasmaCore.Units.smallSpacing
         columnSpacing: PlasmaCore.Units.smallSpacing
+
+        x: (isLayoutHorizontal && root.toolBox && Qt.application.layoutDirection === Qt.RightToLeft && plasmoid.editMode) ? root.toolBox.width : 0;
+        y: 0
+
+        width: root.width - (isLayoutHorizontal && root.toolBox && plasmoid.editMode ? root.toolBox.width : 0)
+        height: root.height - (!isLayoutHorizontal && root.toolBox && plasmoid.editMode ? root.toolBox.height : 0)
 
         Layout.preferredWidth: {
             var width = 0;
@@ -505,33 +502,18 @@ function checkLastSpacer() {
         rows: 1
         columns: 1
         //when horizontal layout top-to-bottom, this way it will obey our limit of one row and actually lay out left to right
-        flow: isHorizontal ? GridLayout.TopToBottom : GridLayout.LeftToRight
+        flow: isLayoutHorizontal ? GridLayout.TopToBottom : GridLayout.LeftToRight
         layoutDirection: Qt.application.layoutDirection
     }
 
     onWidthChanged: {
-        containmentSizeSyncTimer.restart()
         if (startupTimer.running) {
             startupTimer.restart();
         }
     }
     onHeightChanged: {
-        containmentSizeSyncTimer.restart()
         if (startupTimer.running) {
             startupTimer.restart();
-        }
-    }
-
-    Timer {
-        id: containmentSizeSyncTimer
-        interval: 150
-        onTriggered: {
-            dndSpacer.parent = root;
-            currentLayout.x = (isHorizontal && toolBox && Qt.application.layoutDirection === Qt.RightToLeft && plasmoid.editMode) ? toolBox.width : 0;
-            currentLayout.y = 0
-            currentLayout.width = root.width - (isHorizontal && toolBox && plasmoid.editMode ? toolBox.width : 0)
-            currentLayout.height = root.height - (!isHorizontal && toolBox && plasmoid.editMode ? toolBox.height : 0)
-            currentLayout.isLayoutHorizontal = isHorizontal
         }
     }
 
