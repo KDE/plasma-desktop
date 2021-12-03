@@ -56,20 +56,23 @@ Item {
         connectedSources: dataSource.sources
     }
 
-    Plasmoid.compactRepresentation: PlasmaCore.ToolTipArea {
-        id: toolTip
+    Plasmoid.compactRepresentation: PlasmaCore.IconItem {
+        implicitWidth: PlasmaCore.Units.iconSizes.small
+        implicitHeight: PlasmaCore.Units.iconSizes.small
 
-        Layout.minimumWidth: PlasmaCore.Units.iconSizes.small
-        Layout.minimumHeight: Layout.minimumWidth
+        source: plasmoid.icon
+        active: parent.containsMouse
 
-        mainText: plasmoid.title
-        subText: plasmoid.toolTipSubText
+        PlasmaCore.ToolTipArea {
+            mainText: plasmoid.title
+            subText: plasmoid.toolTipSubText
+        }
 
-        PlasmaCore.IconItem {
+        MouseArea {
             anchors.fill: parent
-            source: plasmoid.icon
-            active: parent.containsMouse
-            enabled: root.hasTouchpad
+            onClicked: {
+                plasmoid.expanded = !plasmoid.expanded;
+            }
         }
     }
 
