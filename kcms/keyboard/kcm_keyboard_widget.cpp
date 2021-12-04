@@ -218,15 +218,6 @@ void KCMKeyboardWidget::initializeKeyboardModelUI()
 
 void KCMKeyboardWidget::addLayout()
 {
-    if (keyboardConfig->layouts.count() >= X11Helper::ARTIFICIAL_GROUP_LIMIT_COUNT) { // artificial limit now
-        QMessageBox msgBox;
-        msgBox.setText(
-            i18np("Only up to %1 keyboard layout is supported", "Only up to %1 keyboard layouts are supported", X11Helper::ARTIFICIAL_GROUP_LIMIT_COUNT));
-        // more information https://bugs.freedesktop.org/show_bug.cgi?id=19501
-        msgBox.exec();
-        return;
-    }
-
     AddLayoutDialog dialog(rules,
                            flags,
                            keyboardModelFromUI(),

@@ -227,7 +227,6 @@ class X11Helper
 {
 public:
     static const int MAX_GROUP_COUNT;
-    static const int ARTIFICIAL_GROUP_LIMIT_COUNT;
 
     static const char LEFT_VARIANT_STR[];
     static const char RIGHT_VARIANT_STR[];
