@@ -45,15 +45,13 @@ Item {
             id: mouseArea
             anchors.fill: parent
             hoverEnabled: true
-            onEntered: delegate.GridView.view.currentIndex = index
-            onExited: delegate.GridView.view.currentIndex = - 1
-
-            onClicked: {
-                delegate.GridView.view.currentIndex = index;
+            onDoubleClicked: {
                 if (!delegate.pendingUninstall) {
                     widgetExplorer.addApplet(pluginName)
                 }
             }
+            onEntered: delegate.GridView.view.currentIndex = index
+            onExited: delegate.GridView.view.currentIndex = - 1
         }
 
         ColumnLayout {
