@@ -148,7 +148,6 @@ T.ItemDelegate {
             Layout.alignment: root.textUnderIcon ? Qt.AlignHCenter | Qt.AlignTop : Qt.AlignLeft | Qt.AlignVCenter
             Layout.fillWidth: true
             Layout.preferredHeight: root.textUnderIcon && lineCount === 1 ? implicitHeight * 2 : implicitHeight
-            Layout.rightMargin: root.indicator && root.indicator.visible ? root.spacing + root.indicator.width : 0
             text: root.text
             elide: Text.ElideRight
             horizontalAlignment: root.textUnderIcon ? Text.AlignHCenter : Text.AlignLeft
@@ -166,7 +165,6 @@ T.ItemDelegate {
             right: root.contentItem.right
             baseline: root.contentItem.baseline
             leftMargin: root.textUnderIcon ? 0 : root.implicitContentWidth + root.spacing
-            rightMargin: root.indicator && root.indicator.visible ? root.spacing + root.indicator.width : 0
             baselineOffset: root.textUnderIcon ? implicitHeight : 0
         }
         visible: !textUnderIcon && text.length > 0 && text !== root.text && label.lineCount === 1
@@ -253,24 +251,4 @@ T.ItemDelegate {
     }
     PC3.ToolTip.visible: mouseArea.containsMouse && ((label.visible && label.truncated) || (descriptionLabel.visible && descriptionLabel.truncated))
     PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
-
-    Component {
-        id: arrowIndicator
-        PlasmaCore.SvgItem {
-            anchors.right: parent.contentItem.right
-            anchors.verticalCenter: parent.contentItem.verticalCenter
-            implicitWidth: naturalSize.width
-            implicitHeight: naturalSize.height
-            svg: KickoffSingleton.arrowsSvg
-            elementId: parent.mirrored ? "left-arrow" : "right-arrow"
-        }
-    }
-
-    onIsCategoryChanged: {
-        if (isCategory) {
-            indicator = arrowIndicator.createObject(root)
-        } else {
-            indicator = null
-        }
-    }
 }
