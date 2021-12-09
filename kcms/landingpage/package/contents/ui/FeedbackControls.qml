@@ -24,6 +24,8 @@ ColumnLayout {
     enabled: kcm.feedbackEnabled
 
     RowLayout {
+        id: rowLayout
+
         QQC2.Slider {
             id: statisticsModeSlider
             readonly property var currentMode: modeOptions[value]
@@ -63,6 +65,8 @@ ColumnLayout {
             }
         }
         KCM.ContextualHelpButton {
+            id: helpButton
+
             toolTipText: {
                 // TODO: use KUIT markup here instead of raw HTML
                 let description = i18n("You can help KDE improve Plasma by contributing information on how you use it, so we can focus on things that matter to you.<br/><br/>Contributing this information is optional and entirely anonymous. We never collect your personal data, files you use, websites you visit, or information that could identify you.");
@@ -80,6 +84,8 @@ ColumnLayout {
         }
     }
     QQC2.Label {
+        // center under the slider, not the whole layout
+        Layout.rightMargin: helpButton.implicitWidth + rowLayout.spacing
         Layout.alignment: Qt.AlignHCenter
         Layout.maximumWidth: feedbackControlsLayout.sliderWidth
         wrapMode: Text.WordWrap
