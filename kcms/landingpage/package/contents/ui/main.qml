@@ -121,17 +121,16 @@ KCM.SimpleKCM {
                     onClicked: kcm.openKCM("kcm_lookandfeel")
                 }
             }
+
+            Kirigami.Separator {
+                Kirigami.FormData.isSection: true
+            }
         }
 
         Kirigami.FormLayout {
             id: behaviorForm
 
             twinFormLayouts: appearanceForm
-
-            Kirigami.Separator {
-                id: separator
-                Kirigami.FormData.isSection: true
-            }
 
             // Click behavior settings
 
@@ -194,17 +193,10 @@ KCM.SimpleKCM {
                 icon.name: "preferences-desktop"
                 onClicked: kcm.openKCM("kcm_workspace")
             }
-        }
 
-        Item {
-            implicitHeight: Kirigami.Units.largeSpacing
-        }
-        Kirigami.Separator {
-            Layout.alignment: Qt.AlignCenter
-            Layout.preferredWidth: separator.width
-        }
-        Item {
-            implicitHeight: Kirigami.Units.largeSpacing
+            Kirigami.Separator {
+                Kirigami.FormData.isSection: true
+            }
         }
 
         Kirigami.Heading {
