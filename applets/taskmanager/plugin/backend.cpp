@@ -604,7 +604,8 @@ void Backend::windowsHovered(const QVariant &_winIds, bool hovered)
         m_windowsToHighlight = _winIds.toStringList();
     }
 
-    updateWindowHighlight();
+    // Avoid flickering when scrolling in the tooltip
+    QTimer::singleShot(0, this, &Backend::updateWindowHighlight);
 }
 
 void Backend::updateWindowHighlight()
