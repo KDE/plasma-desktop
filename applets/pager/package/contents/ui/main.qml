@@ -339,6 +339,9 @@ MouseArea {
                     }
 
                     if (visibleWindows.length && minimizedWindows.length) {
+                        if (visibleWindows.length === 1) {
+                            text += "<br>"
+                        }
                         text += "<br>"
                     }
 
