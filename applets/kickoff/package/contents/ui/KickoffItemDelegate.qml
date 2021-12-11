@@ -154,6 +154,7 @@ T.ItemDelegate {
             verticalAlignment: root.textUnderIcon ? Text.AlignTop : Text.AlignVCenter
             maximumLineCount: 2
             wrapMode: Text.Wrap
+            textFormat: Text.PlainText
         }
     }
 
