@@ -3,11 +3,27 @@
         "Authors": [
             {
                 "Email": "heena393@gmail.com",
-                "Name": "Heena"
+                "Name": "Heena",
+                "Name[ca]": "Heena",
+                "Name[hu]": "Heena",
+                "Name[nl]": "Heena",
+                "Name[sl]": "Heena",
+                "Name[sv]": "Heena",
+                "Name[uk]": "Heena",
+                "Name[vi]": "Heena",
+                "Name[x-test]": "xxHeenaxx"
             }
         ],
         "Category": "File System",
         "Description": "Provides access to the files sent to trash",
+        "Description[ca]": "Proporciona accés als fitxers enviats a la paperera",
+        "Description[hu]": "Hozzáférést biztosít a kukába helyezett fájlokhoz",
+        "Description[nl]": "Biedt toegang tot de bestanden verzonden naar de prullenbak",
+        "Description[sl]": "Ponuja dostop do datotek poslanih v Smeti",
+        "Description[sv]": "Tillhandahåller åtkomst av filerna skickade till papperskorgen",
+        "Description[uk]": "Надає доступ до файлів, які було надіслано до Смітника",
+        "Description[vi]": "Cho phép truy cập các tệp đã bị đưa vào thùng rác",
+        "Description[x-test]": "xxProvides access to the files sent to trashxx",
         "EnabledByDefault": true,
         "Icon": "user-trash",
         "Id": "org.kde.plasma.trash",
