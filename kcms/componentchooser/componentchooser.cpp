@@ -47,9 +47,9 @@ void ComponentChooser::load()
             return false;
         }
         QVariantMap application;
-        application["name"] = service->name();
-        application["icon"] = service->icon();
-        application["storageId"] = service->storageId();
+        application[QStringLiteral("name")] = service->name();
+        application[QStringLiteral("icon")] = service->icon();
+        application[QStringLiteral("storageId")] = service->storageId();
         m_applications += application;
         if ((preferredService && preferredService->storageId() == service->storageId())) {
             m_index = m_applications.length() - 1;

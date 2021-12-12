@@ -39,7 +39,7 @@ protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
 
 private:
-    KFilePlacesModel *m_sourceModel;
+    KFilePlacesModel *const m_sourceModel;
     bool m_showDesktopEntry = true;
 };
 

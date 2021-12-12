@@ -38,7 +38,7 @@ private:
     void setDefaultIndicatorVisible(KUrlRequester *widget, const QVariant &defaultValue);
 
     QScopedPointer<Ui::DesktopPathsView> m_ui;
-    DesktopPathsData *m_data;
+    DesktopPathsData *const m_data;
 };
 
 #endif

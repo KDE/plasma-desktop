@@ -14,6 +14,9 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <Plasma/Corona>
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 ScreenMapper *ScreenMapper::instance()
 {
@@ -33,15 +36,15 @@ ScreenMapper::ScreenMapper(QObject *parent)
             return;
 
         auto config = m_corona->config();
-        KConfigGroup group(config, QLatin1String("ScreenMapping"));
-        group.writeEntry(QLatin1String("screenMapping"), screenMapping());
+        KConfigGroup group(config, QStringLiteral("ScreenMapping"));
+        group.writeEntry(QStringLiteral("screenMapping"), screenMapping());
         config->sync();
     });
 
     // used to compress screenMappingChanged signals when addMapping is called multiple times,
     // eg. from FolderModel::filterAcceptRows. The timer interval is an arbitrary number,
     // that doesn't delay too much the signal, but still compresses as much as possible
-    m_screenMappingChangedTimer->setInterval(100);
+    m_screenMappingChangedTimer->setInterval(100ms);
     m_screenMappingChangedTimer->setSingleShot(true);
 }
 
@@ -171,8 +174,8 @@ void ScreenMapper::setSharedDesktop(bool sharedDesktops)
             return;
 
         auto config = m_corona->config();
-        KConfigGroup group(config, QLatin1String("ScreenMapping"));
-        group.writeEntry(QLatin1String("sharedDesktops"), m_sharedDesktops);
+        KConfigGroup group(config, QStringLiteral("ScreenMapping"));
+        group.writeEntry(QStringLiteral("sharedDesktops"), m_sharedDesktops);
     }
 }
 
@@ -201,10 +204,10 @@ void ScreenMapper::setCorona(Plasma::Corona *corona)
             });
 
             auto config = m_corona->config();
-            KConfigGroup group(config, QLatin1String("ScreenMapping"));
-            const QStringList mapping = group.readEntry(QLatin1String("screenMapping"), QStringList{});
+            KConfigGroup group(config, QStringLiteral("ScreenMapping"));
+            const QStringList mapping = group.readEntry(QStringLiteral("screenMapping"), QStringList{});
             setScreenMapping(mapping);
-            m_sharedDesktops = group.readEntry(QLatin1String("sharedDesktops"), false);
+            m_sharedDesktops = group.readEntry(QStringLiteral("sharedDesktops"), false);
             readDisabledScreensMap();
         }
     }
@@ -262,8 +265,8 @@ void ScreenMapper::readDisabledScreensMap()
         return;
 
     auto config = m_corona->config();
-    KConfigGroup group(config, QLatin1String("ScreenMapping"));
-    const QStringList serializedMap = group.readEntry(QLatin1String("itemsOnDisabledScreens"), QStringList{});
+    KConfigGroup group(config, QStringLiteral("ScreenMapping"));
+    const QStringList serializedMap = group.readEntry(QStringLiteral("itemsOnDisabledScreens"), QStringList{});
     m_itemsOnDisabledScreensMap.clear();
     bool readingScreenId = true;
     int vectorSize = -1;
@@ -295,7 +298,7 @@ void ScreenMapper::saveDisabledScreensMap() const
         return;
 
     auto config = m_corona->config();
-    KConfigGroup group(config, QLatin1String("ScreenMapping"));
+    KConfigGroup group(config, QStringLiteral("ScreenMapping"));
     QStringList serializedMap;
     auto it = m_itemsOnDisabledScreensMap.constBegin();
     for (; it != m_itemsOnDisabledScreensMap.constEnd(); ++it) {
@@ -307,5 +310,5 @@ void ScreenMapper::saveDisabledScreensMap() const
         }
     }
 
-    group.writeEntry(QLatin1String("itemsOnDisabledScreens"), serializedMap);
+    group.writeEntry(QStringLiteral("itemsOnDisabledScreens"), serializedMap);
 }

@@ -71,9 +71,9 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     kdeclarative.setupContext();
 
     if (m_backend->mode() == InputBackendMode::XLibinput) {
-        m_view->setSource(QUrl("qrc:/libinput/main_deviceless.qml"));
+        m_view->setSource(QUrl(QStringLiteral("qrc:/libinput/main_deviceless.qml")));
     } else {
-        m_view->setSource(QUrl("qrc:/libinput/main.qml"));
+        m_view->setSource(QUrl(QStringLiteral("qrc:/libinput/main.qml")));
     }
 
     if (m_initError) {
@@ -91,12 +91,12 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
 
 QSize LibinputConfig::sizeHint() const
 {
-    return QQmlProperty::read(m_view->rootObject(), "sizeHint").toSize();
+    return QQmlProperty::read(m_view->rootObject(), QStringLiteral("sizeHint")).toSize();
 }
 
 QSize LibinputConfig::minimumSizeHint() const
 {
-    return QQmlProperty::read(m_view->rootObject(), "minimumSizeHint").toSize();
+    return QQmlProperty::read(m_view->rootObject(), QStringLiteral("minimumSizeHint")).toSize();
 }
 
 void LibinputConfig::load()

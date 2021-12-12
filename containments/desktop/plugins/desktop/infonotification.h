@@ -52,7 +52,7 @@ Q_SIGNALS:
     void acknowledgeActionTextChanged() const;
 
 private:
-    bool m_enabled;
+    bool m_enabled = false;
     QString m_iconName;
     QString m_titleText;
     QString m_text;

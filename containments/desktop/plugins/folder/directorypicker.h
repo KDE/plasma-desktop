@@ -33,7 +33,7 @@ private Q_SLOTS:
     void dialogAccepted();
 
 private:
-    QFileDialog *m_dialog;
+    QFileDialog *m_dialog = nullptr;
     QUrl m_url;
 };
 

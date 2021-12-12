@@ -10,7 +10,6 @@
 
 InfoNotification::InfoNotification(QObject *parent)
     : QObject(parent)
-    , m_enabled(false)
 {
 }
 

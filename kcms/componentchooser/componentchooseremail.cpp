@@ -22,7 +22,7 @@ ComponentChooserEmail::ComponentChooserEmail(QObject *parent)
 
 void ComponentChooserEmail::save()
 {
-    const QString storageId = m_applications[m_index].toMap()["storageId"].toString();
+    const QString storageId = m_applications[m_index].toMap()[QStringLiteral("storageId")].toString();
     const KService::Ptr emailClientService = KService::serviceByStorageId(storageId);
     if (!emailClientService) {
         return;

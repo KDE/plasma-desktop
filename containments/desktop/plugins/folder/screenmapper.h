@@ -75,7 +75,7 @@ private:
     QHash<QUrl, QVector<int>> m_screensPerPath; // screens per registered path
     QVector<int> m_availableScreens;
     Plasma::Corona *m_corona = nullptr;
-    QTimer *m_screenMappingChangedTimer = nullptr;
+    QTimer *const m_screenMappingChangedTimer;
     bool m_sharedDesktops = false; // all screens share the same desktops, disabling the screen mapping
 };
 

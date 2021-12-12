@@ -13,7 +13,6 @@
 
 DirectoryPicker::DirectoryPicker(QObject *parent)
     : QObject(parent)
-    , m_dialog(nullptr)
 {
 }
 

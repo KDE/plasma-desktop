@@ -36,7 +36,7 @@ public:
     bool isSaveNeeded() const override;
 
 private:
-    ComponentChooserData *m_data;
+    ComponentChooserData *const m_data;
 };
 
 #endif
