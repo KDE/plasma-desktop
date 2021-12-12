@@ -215,8 +215,12 @@ MouseArea {
         currentApplet.z = 900;
     }
 
-    onReleased: {
-        if (!root.dragOverlay.currentApplet) {
+    onReleased: finishDragOperation()
+
+    onCanceled: finishDragOperation()
+
+    function finishDragOperation() {
+        if (!currentApplet) {
             return;
         }
 
