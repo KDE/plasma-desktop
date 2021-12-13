@@ -29,6 +29,10 @@ Item {
         || plasmoid.location === PlasmaCore.Types.LeftEdge
     property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
+    // Used to prevent the width from changing frequently when the scrollbar appears or disappears
+    property bool mayHaveGridWithScrollBar: plasmoid.configuration.applicationsDisplay === 0
+        || (plasmoid.configuration.favoritesDisplay === 0 && plasmoid.rootItem.rootModel.favoritesModel.count > 16)
+
     //BEGIN Models
     property Kicker.RootModel rootModel: Kicker.RootModel {
         autoPopulate: false

@@ -53,241 +53,241 @@ EmptyPage {
         }
     }
 
-    /* Putting GridView inside an Item to center its content because
-     * GridView has no way to set horizontal alignment. I don't want
-     * to use leftPadding/rightPadding for that because I'd have to
-     * change the implicitWidth formula and use a more complicated
-     * calculation to get the correct padding and all that is annoying.
+    /* Not setting GridView as the contentItem because GridView has no way to
+     * set horizontal alignment. I don't want to use leftPadding/rightPadding
+     * for that because I'd have to change the implicitWidth formula and use a
+     * more complicated calculation to get the correct padding.
      */
-    contentItem: Item {
-        implicitWidth: view.implicitWidth
-        implicitHeight: view.implicitHeight
-        GridView {
-            id: view
-            readonly property real availableWidth: width - leftMargin - rightMargin
-            readonly property real availableHeight: height - topMargin - bottomMargin
-            readonly property int columns: Math.floor(availableWidth / cellWidth)
-            readonly property int rows: Math.floor(availableHeight / cellHeight)
-            property bool movedWithKeyboard: false
+    GridView {
+        id: view
+        readonly property real availableWidth: width - leftMargin - rightMargin
+        readonly property real availableHeight: height - topMargin - bottomMargin
+        readonly property int columns: Math.floor(availableWidth / cellWidth)
+        readonly property int rows: Math.floor(availableHeight / cellHeight)
+        property bool movedWithKeyboard: false
 
-            anchors.top: parent.top
-            anchors.bottom: parent.bottom
-            // There are lots of ways to try to center the content of a GridView
-            // and many of them have bad visual flaws. This way works pretty well.
-            anchors.horizontalCenter: parent.horizontalCenter
-            width: Math.min(parent.width, Math.floor((parent.width - leftMargin - rightMargin) / cellWidth) * cellWidth + leftMargin + rightMargin)
+        // NOTE: parent is the contentItem that Control subclasses automatically
+        // create when no contentItem is set, but content is added.
+        height: parent.height
+        // There are lots of ways to try to center the content of a GridView
+        // and many of them have bad visual flaws. This way works pretty well.
+        // Not center aligning when there might be a scrollbar to keep click target positions consistent.
+        anchors.horizontalCenter: plasmoid.rootItem.mayHaveGridWithScrollBar ? undefined : parent.horizontalCenter
+        anchors.horizontalCenterOffset: if (plasmoid.rootItem.mayHaveGridWithScrollBar) {
+            if (root.mirrored) {
+                return verticalScrollBar.implicitWidth/2
+            } else {
+                return -verticalScrollBar.implicitWidth/2
+            }
+        } else {
+            return 0
+        }
+        width: Math.min(parent.width, Math.floor((parent.width - leftMargin - rightMargin) / cellWidth) * cellWidth + leftMargin + rightMargin)
 
-            Accessible.description: i18n("Grid with %1 rows, %2 columns", rows, columns) // can't use i18np here
+        Accessible.description: i18n("Grid with %1 rows, %2 columns", rows, columns) // can't use i18np here
 
-            implicitWidth: {
-                if (plasmoid.configuration.applicationsDisplay === 0
-                    || (plasmoid.configuration.favoritesDisplay === 0
-                        && KickoffSingleton.rootModel.favoritesModel.count > 16)) {
-                    return view.cellWidth * 4
-                        + KickoffSingleton.leftPadding
-                        + KickoffSingleton.rightPadding
-                        + verticalScrollBar.implicitWidth
+
+        implicitWidth: {
+            let w = view.cellWidth * 4 + leftMargin + rightMargin
+            if (plasmoid.rootItem.mayHaveGridWithScrollBar) {
+                w += verticalScrollBar.implicitWidth
+            }
+            return w
+        }
+        implicitHeight: view.cellHeight * 4 + topMargin + bottomMargin
+
+        leftMargin: plasmoid.rootItem.backgroundMetrics.leftPadding
+        rightMargin: plasmoid.rootItem.backgroundMetrics.rightPadding
+
+        cellHeight: KickoffSingleton.gridCellSize
+        cellWidth: KickoffSingleton.gridCellSize
+
+        currentIndex: count > 0 ? 0 : -1
+        focus: true
+        interactive: height < contentHeight
+        pixelAligned: true
+        reuseItems: true
+        boundsBehavior: Flickable.StopAtBounds
+        // default keyboard navigation doesn't allow focus reasons to be used
+        // and eats up/down key events when at the beginning or end of the list.
+        keyNavigationEnabled: false
+        keyNavigationWraps: false
+
+        highlightMoveDuration: 0
+        highlight: PlasmaCore.FrameSvgItem {
+            // The default Z value for delegates is 1. The default Z value for the section delegate is 2.
+            // The highlight gets a value of 3 while the drag is active and then goes back to the default value of 0.
+            z: root.currentItem && root.currentItem.Drag.active ?
+                3 : 0
+            opacity: view.activeFocus
+                || (plasmoid.rootItem.contentArea === root
+                    && plasmoid.rootItem.searchField.activeFocus) ? 1 : 0.5
+            width: view.cellWidth
+            height: view.cellHeight
+            imagePath: "widgets/viewitem"
+            prefix: "hover"
+            visible: plasmoid.rootItem.contentArea !== root
+                || ActionMenu.menu.status !== 1
+        }
+
+        delegate: KickoffItemDelegate {
+            id: itemDelegate
+            icon.width: PlasmaCore.Units.iconSizes.large
+            icon.height: PlasmaCore.Units.iconSizes.large
+            display: PC3.AbstractButton.TextUnderIcon
+            width: view.cellWidth
+            Accessible.role: Accessible.Cell
+        }
+
+        move: normalTransition
+        moveDisplaced: normalTransition
+
+        Transition {
+            id: normalTransition
+            NumberAnimation {
+                duration: PlasmaCore.Units.shortDuration
+                properties: "x, y"
+                easing.type: Easing.OutCubic
+            }
+        }
+
+        Item {
+            parent: view
+            anchors.fill: parent
+            z: 1
+            TapHandler { // Filter mouse events to avoid flicking like ScrollView
+                // Do not accept stylus as it will cause bug 445111.
+                acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad | PointerDevice.TouchScreen
+                onGrabChanged: {
+                    const pressed = transition & (EventPoint.GrabPassive | EventPoint.GrabExclusive) && point.state & EventPoint.Pressed
+                    const deviceType = point.event.device.type
+                    if (pressed && deviceType & (PointerDevice.Mouse | PointerDevice.TouchPad)) {
+                        view.interactive = false
+                        verticalScrollBar.interactive = true
+                    } else if (pressed && deviceType & PointerDevice.TouchScreen) {
+                        // No need for binding. Touching will cause pressed() to be emitted again.
+                        view.interactive = view.height < view.contentHeight
+                        verticalScrollBar.interactive = false
+                    }
+                    point.accepted = false
                 }
-                return view.cellWidth * 4 + leftMargin + rightMargin
             }
-            implicitHeight: view.cellHeight * 4 + topMargin + bottomMargin
+        }
 
-            leftMargin: KickoffSingleton.leftPadding
-                + (verticalScrollBar.visible && root.mirrored ? verticalScrollBar.implicitWidth : 0)
-            rightMargin: KickoffSingleton.rightPadding
-                + (verticalScrollBar.visible && !root.mirrored ? verticalScrollBar.implicitWidth : 0)
+        PC3.ScrollBar.vertical: PC3.ScrollBar {
+            id: verticalScrollBar
+            parent: root
+            z: 2
+            height: root.height
+            anchors.right: parent.right
+        }
 
-            cellHeight: KickoffSingleton.gridCellSize
-            cellWidth: KickoffSingleton.gridCellSize
+        Kirigami.WheelHandler {
+            target: view
+        }
 
-            currentIndex: count > 0 ? 0 : -1
-            focus: true
-            interactive: height < contentHeight
-            pixelAligned: true
-            reuseItems: true
-            boundsBehavior: Flickable.StopAtBounds
-            // default keyboard navigation doesn't allow focus reasons to be used
-            // and eats up/down key events when at the beginning or end of the list.
-            keyNavigationEnabled: false
-            keyNavigationWraps: false
-
-            highlightMoveDuration: 0
-            highlight: PlasmaCore.FrameSvgItem {
-                // The default Z value for delegates is 1. The default Z value for the section delegate is 2.
-                // The highlight gets a value of 3 while the drag is active and then goes back to the default value of 0.
-                z: root.currentItem && root.currentItem.Drag.active ?
-                    3 : 0
-                opacity: view.activeFocus
-                    || (KickoffSingleton.contentArea === root
-                        && KickoffSingleton.searchField.activeFocus) ? 1 : 0.5
-                width: view.cellWidth
-                height: view.cellHeight
-                imagePath: "widgets/viewitem"
-                prefix: "hover"
-                visible: KickoffSingleton.contentArea !== root
-                    || ActionMenu.menu.status !== 1
-            }
-
-            delegate: KickoffItemDelegate {
-                id: itemDelegate
-                icon.width: PlasmaCore.Units.iconSizes.large
-                icon.height: PlasmaCore.Units.iconSizes.large
-                display: PC3.AbstractButton.TextUnderIcon
-                width: view.cellWidth
-                Accessible.role: Accessible.Cell
-            }
-
-            move: normalTransition
-            moveDisplaced: normalTransition
-
-            Transition {
-                id: normalTransition
-                NumberAnimation {
-                    duration: PlasmaCore.Units.shortDuration
-                    properties: "x, y"
-                    easing.type: Easing.OutCubic
+        Connections {
+            target: plasmoid
+            function onExpandedChanged() {
+                if(!plasmoid.expanded) {
+                    view.currentIndex = 0
+                    view.positionViewAtBeginning()
                 }
             }
+        }
 
-            Item {
-                parent: view
-                anchors.fill: parent
-                z: 1
-                TapHandler { // Filter mouse events to avoid flicking like ScrollView
-                    // Do not accept stylus as it will cause bug 445111.
-                    acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad | PointerDevice.TouchScreen
-                    onGrabChanged: {
-                        const pressed = transition & (EventPoint.GrabPassive | EventPoint.GrabExclusive) && point.state & EventPoint.Pressed
-                        const deviceType = point.event.device.type
-                        if (pressed && deviceType & (PointerDevice.Mouse | PointerDevice.TouchPad)) {
-                            view.interactive = false
-                            verticalScrollBar.interactive = true
-                        } else if (pressed && deviceType & PointerDevice.TouchScreen) {
-                            // No need for binding. Touching will cause pressed() to be emitted again.
-                            view.interactive = view.height < view.contentHeight
-                            verticalScrollBar.interactive = false
+        // Used to block hover events temporarily after using keyboard navigation.
+        // If you have one hand on the touch pad or mouse and another hand on the keyboard,
+        // it's easy to accidentally reset the highlight/focus position to the mouse position.
+        Timer {
+            id: movedWithKeyboardTimer
+            interval: 200
+            onTriggered: view.movedWithKeyboard = false
+        }
+
+        function focusCurrentItem(event, focusReason) {
+            currentItem.forceActiveFocus(focusReason)
+            event.accepted = true
+        }
+
+        Keys.onMenuPressed: if (currentItem !== null) {
+            currentItem.forceActiveFocus(Qt.ShortcutFocusReason)
+            currentItem.openActionMenu()
+        }
+        Keys.onPressed: {
+            let targetX = currentItem ? currentItem.x : contentX
+            let targetY = currentItem ? currentItem.y : contentY
+            let targetIndex = currentIndex
+            // supports mirroring
+            let atLeft = currentIndex % columns === 0
+            // at the top of a given column and in the top row
+            let atTop = currentIndex < columns
+            // supports mirroring
+            let atRight = currentIndex % columns === columns - 1
+            // at bottom of a given column, not necessarily in the last row
+            let atBottom = currentIndex >= count - columns
+            // Implements the keyboard navigation described in https://www.w3.org/TR/wai-aria-practices-1.2/#grid
+            if (count > 1) {
+                switch (event.key) {
+                    case Qt.Key_Left: if (!atLeft && !plasmoid.rootItem.searchField.activeFocus) {
+                        moveCurrentIndexLeft()
+                        focusCurrentItem(event, Qt.BacktabFocusReason)
+                    } break
+                    case Qt.Key_Up: if (!atTop) {
+                        moveCurrentIndexUp()
+                        focusCurrentItem(event, Qt.BacktabFocusReason)
+                    } break
+                    case Qt.Key_Right: if (!atRight && !plasmoid.rootItem.searchField.activeFocus) {
+                        moveCurrentIndexRight()
+                        focusCurrentItem(event, Qt.TabFocusReason)
+                    } break
+                    case Qt.Key_Down: if (!atBottom) {
+                        moveCurrentIndexDown()
+                        focusCurrentItem(event, Qt.TabFocusReason)
+                    } break
+                    case Qt.Key_Home: if (event.modifiers === Qt.ControlModifier && currentIndex !== 0) {
+                        currentIndex = 0
+                        focusCurrentItem(event, Qt.BacktabFocusReason)
+                    } else if (!atLeft) {
+                        targetIndex -= currentIndex % columns
+                        currentIndex = Math.max(targetIndex, 0)
+                        focusCurrentItem(event, Qt.BacktabFocusReason)
+                    } break
+                    case Qt.Key_End: if (event.modifiers === Qt.ControlModifier && currentIndex !== count - 1) {
+                        currentIndex = count - 1
+                        focusCurrentItem(event, Qt.TabFocusReason)
+                    } else if (!atRight) {
+                        targetIndex += columns - 1 - (currentIndex % columns)
+                        currentIndex = Math.min(targetIndex, count - 1)
+                        focusCurrentItem(event, Qt.TabFocusReason)
+                    } break
+                    case Qt.Key_PageUp: if (!atTop) {
+                        targetY = targetY - height + 1
+                        targetIndex = indexAt(targetX, targetY)
+                        // TODO: Find a more efficient, but accurate way to do this
+                        while (targetIndex === -1) {
+                            targetY += 1
+                            targetIndex = indexAt(targetX, targetY)
                         }
-                        point.accepted = false
-                    }
-                }
-            }
-
-            PC3.ScrollBar.vertical: PC3.ScrollBar {
-                id: verticalScrollBar
-                parent: root
-                visible: size < 1 && policy !== PC3.ScrollBar.AlwaysOff
-                z: 2
-                height: root.height
-                anchors.right: parent.right
-            }
-
-            Kirigami.WheelHandler {
-                target: view
-            }
-
-            Connections {
-                target: plasmoid
-                function onExpandedChanged() {
-                    if(!plasmoid.expanded) {
-                        view.currentIndex = 0
-                        view.positionViewAtBeginning()
-                    }
-                }
-            }
-
-            // Used to block hover events temporarily after using keyboard navigation.
-            // If you have one hand on the touch pad or mouse and another hand on the keyboard,
-            // it's easy to accidentally reset the highlight/focus position to the mouse position.
-            Timer {
-                id: movedWithKeyboardTimer
-                interval: 200
-                onTriggered: view.movedWithKeyboard = false
-            }
-
-            function focusCurrentItem(event, focusReason) {
-                currentItem.forceActiveFocus(focusReason)
-                event.accepted = true
-            }
-
-            Keys.onMenuPressed: if (currentItem !== null) {
-                currentItem.forceActiveFocus(Qt.ShortcutFocusReason)
-                currentItem.openActionMenu()
-            }
-            Keys.onPressed: {
-                let targetX = currentItem ? currentItem.x : contentX
-                let targetY = currentItem ? currentItem.y : contentY
-                let targetIndex = currentIndex
-                // supports mirroring
-                let atLeft = currentIndex % columns === 0
-                // at the top of a given column and in the top row
-                let atTop = currentIndex < columns
-                // supports mirroring
-                let atRight = currentIndex % columns === columns - 1
-                // at bottom of a given column, not necessarily in the last row
-                let atBottom = currentIndex >= count - columns
-                // Implements the keyboard navigation described in https://www.w3.org/TR/wai-aria-practices-1.2/#grid
-                if (count > 1) {
-                    switch (event.key) {
-                        case Qt.Key_Left: if (!atLeft && !KickoffSingleton.searchField.activeFocus) {
-                            moveCurrentIndexLeft()
-                            focusCurrentItem(event, Qt.BacktabFocusReason)
-                        } break
-                        case Qt.Key_Up: if (!atTop) {
-                            moveCurrentIndexUp()
-                            focusCurrentItem(event, Qt.BacktabFocusReason)
-                        } break
-                        case Qt.Key_Right: if (!atRight && !KickoffSingleton.searchField.activeFocus) {
-                            moveCurrentIndexRight()
-                            focusCurrentItem(event, Qt.TabFocusReason)
-                        } break
-                        case Qt.Key_Down: if (!atBottom) {
-                            moveCurrentIndexDown()
-                            focusCurrentItem(event, Qt.TabFocusReason)
-                        } break
-                        case Qt.Key_Home: if (event.modifiers === Qt.ControlModifier && currentIndex !== 0) {
-                            currentIndex = 0
-                            focusCurrentItem(event, Qt.BacktabFocusReason)
-                        } else if (!atLeft) {
-                            targetIndex -= currentIndex % columns
-                            currentIndex = Math.max(targetIndex, 0)
-                            focusCurrentItem(event, Qt.BacktabFocusReason)
-                        } break
-                        case Qt.Key_End: if (event.modifiers === Qt.ControlModifier && currentIndex !== count - 1) {
-                            currentIndex = count - 1
-                            focusCurrentItem(event, Qt.TabFocusReason)
-                        } else if (!atRight) {
-                            targetIndex += columns - 1 - (currentIndex % columns)
-                            currentIndex = Math.min(targetIndex, count - 1)
-                            focusCurrentItem(event, Qt.TabFocusReason)
-                        } break
-                        case Qt.Key_PageUp: if (!atTop) {
-                            targetY = targetY - height + 1
+                        currentIndex = Math.max(targetIndex, 0)
+                        focusCurrentItem(event, Qt.BacktabFocusReason)
+                    } break
+                    case Qt.Key_PageDown: if (!atBottom) {
+                        targetY = targetY + height - 1
+                        targetIndex = indexAt(targetX, targetY)
+                        // TODO: Find a more efficient, but accurate way to do this
+                        while (targetIndex === -1) {
+                            targetY -= 1
                             targetIndex = indexAt(targetX, targetY)
-                            // TODO: Find a more efficient, but accurate way to do this
-                            while (targetIndex === -1) {
-                                targetY += 1
-                                targetIndex = indexAt(targetX, targetY)
-                            }
-                            currentIndex = Math.max(targetIndex, 0)
-                            focusCurrentItem(event, Qt.BacktabFocusReason)
-                        } break
-                        case Qt.Key_PageDown: if (!atBottom) {
-                            targetY = targetY + height - 1
-                            targetIndex = indexAt(targetX, targetY)
-                            // TODO: Find a more efficient, but accurate way to do this
-                            while (targetIndex === -1) {
-                                targetY -= 1
-                                targetIndex = indexAt(targetX, targetY)
-                            }
-                            currentIndex = Math.min(targetIndex, count - 1)
-                            focusCurrentItem(event, Qt.TabFocusReason)
-                        } break
-                    }
+                        }
+                        currentIndex = Math.min(targetIndex, count - 1)
+                        focusCurrentItem(event, Qt.TabFocusReason)
+                    } break
                 }
-                movedWithKeyboard = event.accepted
-                if (movedWithKeyboard) {
-                    movedWithKeyboardTimer.restart()
-                }
+            }
+            movedWithKeyboard = event.accepted
+            if (movedWithKeyboard) {
+                movedWithKeyboardTimer.restart()
             }
         }
     }
