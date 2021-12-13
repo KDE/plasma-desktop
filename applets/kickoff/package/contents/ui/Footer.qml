@@ -34,8 +34,8 @@ PlasmaExtras.PlasmoidHeading {
     contentHeight: leaveButtons.implicitHeight
 
     // We use an increased vertical padding to improve touch usability
-    leftPadding: KickoffSingleton.leftPadding
-    rightPadding: KickoffSingleton.rightPadding
+    leftPadding: plasmoid.rootItem.backgroundMetrics.leftPadding
+    rightPadding: plasmoid.rootItem.backgroundMetrics.rightPadding
     topPadding: PlasmaCore.Units.smallSpacing*2
     bottomPadding: PlasmaCore.Units.smallSpacing*2
 
@@ -44,7 +44,7 @@ PlasmaExtras.PlasmoidHeading {
     topInset: 0
     bottomInset: 0
 
-    spacing: KickoffSingleton.spacing
+    spacing: plasmoid.rootItem.backgroundMetrics.spacing
     position: PC3.ToolBar.Footer
 
     PC3.TabBar {
@@ -107,7 +107,7 @@ PlasmaExtras.PlasmoidHeading {
             icon.height: PlasmaCore.Units.iconSizes.smallMedium
             icon.name: "applications-other"
             text: i18n("Applications")
-            KeyNavigation.backtab: KickoffSingleton.contentArea ? KickoffSingleton.contentArea : null
+            KeyNavigation.backtab: plasmoid.rootItem.contentArea ? plasmoid.rootItem.contentArea : null
         }
         PC3.TabButton {
             id: placesTab
@@ -161,7 +161,7 @@ PlasmaExtras.PlasmoidHeading {
                 leaveButtons.nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
             }
         }
-        Keys.onUpPressed: KickoffSingleton.sideBar.forceActiveFocus(Qt.BacktabFocusReason)
+        Keys.onUpPressed: plasmoid.rootItem.sideBar.forceActiveFocus(Qt.BacktabFocusReason)
     }
 
     LeaveButtons {
@@ -172,7 +172,7 @@ PlasmaExtras.PlasmoidHeading {
             bottom: parent.bottom
             leftMargin: root.spacing
         }
-        Keys.onUpPressed: KickoffSingleton.contentArea.forceActiveFocus(Qt.BacktabFocusReason)
+        Keys.onUpPressed: plasmoid.rootItem.contentArea.forceActiveFocus(Qt.BacktabFocusReason)
     }
 
     Behavior on height {

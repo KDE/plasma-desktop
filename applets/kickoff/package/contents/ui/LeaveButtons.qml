@@ -15,11 +15,11 @@ import org.kde.kirigami 2.16 as Kirigami
 RowLayout {
     id: root
     property alias leave: leaveButton
-    spacing: KickoffSingleton.spacing
+    spacing: plasmoid.rootItem.backgroundMetrics.spacing
 
     Kicker.SystemModel {
         id: systemModel
-        favoritesModel: KickoffSingleton.rootModel.systemFavoritesModel
+        favoritesModel: plasmoid.rootItem.rootModel.systemFavoritesModel
     }
 
     Item {

@@ -33,8 +33,8 @@ PlasmaExtras.PlasmoidHeading {
     topPadding: Math.round((background.margins.top - background.inset.top) / 2.0)
     bottomPadding: background.margins.bottom + Math.round((background.margins.bottom - background.inset.bottom) / 2.0)
 
-    leftInset: -KickoffSingleton.leftPadding
-    rightInset: -KickoffSingleton.rightPadding
+    leftInset: -plasmoid.rootItem.backgroundMetrics.leftPadding
+    rightInset: -plasmoid.rootItem.backgroundMetrics.rightPadding
     topInset: -background.margins.top
     bottomInset: 0
 
@@ -42,7 +42,7 @@ PlasmaExtras.PlasmoidHeading {
         id: kuser
     }
 
-    spacing: KickoffSingleton.spacing
+    spacing: plasmoid.rootItem.backgroundMetrics.spacing
 
     RowLayout {
         id: nameAndIcon
@@ -93,10 +93,10 @@ PlasmaExtras.PlasmoidHeading {
             Keys.onRightPressed: if (!LayoutMirroring.enabled) {
                 searchField.forceActiveFocus(Qt.TabFocusReason)
             }
-            Keys.onDownPressed: if (KickoffSingleton.sideBar) {
-                KickoffSingleton.sideBar.forceActiveFocus(Qt.TabFocusReason)
+            Keys.onDownPressed: if (plasmoid.rootItem.sideBar) {
+                plasmoid.rootItem.sideBar.forceActiveFocus(Qt.TabFocusReason)
             } else {
-                KickoffSingleton.contentArea.forceActiveFocus(Qt.TabFocusReason)
+                plasmoid.rootItem.contentArea.forceActiveFocus(Qt.TabFocusReason)
             }
 
             onClicked: KQuickAddons.KCMShell.openSystemSettings("kcm_users")
@@ -160,13 +160,13 @@ PlasmaExtras.PlasmoidHeading {
             left: nameAndIcon.right
             right: parent.right
         }
-        Keys.onDownPressed: KickoffSingleton.contentArea.forceActiveFocus(Qt.TabFocusReason)
+        Keys.onDownPressed: plasmoid.rootItem.contentArea.forceActiveFocus(Qt.TabFocusReason)
 
         PC3.TextField {
             id: searchField
             Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
             Layout.fillWidth: true
-            Layout.leftMargin: KickoffSingleton.leftPadding
+            Layout.leftMargin: plasmoid.rootItem.backgroundMetrics.leftPadding
             focus: true
             placeholderText: i18n("Search…")
             clearButtonShown: true
@@ -174,7 +174,7 @@ PlasmaExtras.PlasmoidHeading {
             Accessible.searchEdit: true
             inputMethodHints: Qt.ImhNoPredictiveText
             Binding {
-                target: KickoffSingleton
+                target: plasmoid.rootItem
                 property: "searchField"
                 value: searchField
             }
@@ -197,11 +197,11 @@ PlasmaExtras.PlasmoidHeading {
                 searchField.forceActiveFocus(Qt.ShortcutFocusReason)
             }
             onAccepted: {
-                KickoffSingleton.contentArea.currentItem.action.triggered()
-                KickoffSingleton.contentArea.currentItem.forceActiveFocus(Qt.ShortcutFocusReason)
+                plasmoid.rootItem.contentArea.currentItem.action.triggered()
+                plasmoid.rootItem.contentArea.currentItem.forceActiveFocus(Qt.ShortcutFocusReason)
             }
             Keys.priority: Keys.AfterItem
-            Keys.forwardTo: KickoffSingleton.contentArea.view
+            Keys.forwardTo: plasmoid.rootItem.contentArea.view
             Keys.onLeftPressed: if (activeFocus) {
                 if (LayoutMirroring.enabled) {
                     nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
@@ -256,8 +256,8 @@ PlasmaExtras.PlasmoidHeading {
                 value: !plasmoid.configuration.pin
             }
             KeyNavigation.backtab: configureButton
-            KeyNavigation.tab: if (KickoffSingleton.sideBar) {
-                return KickoffSingleton.sideBar
+            KeyNavigation.tab: if (plasmoid.rootItem.sideBar) {
+                return plasmoid.rootItem.sideBar
             } else {
                 return nextItemInFocusChain()
             }
