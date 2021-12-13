@@ -7,23 +7,26 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-pragma Singleton
+pragma Singleton // NOTE: Singletons are shared between all instances of a plasmoid
 
 import QtQuick 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.components 2.0 as PC2 // for Menu + MenuItem
 import "code/tools.js" as Tools
 
 Item {
     id: root
     property var actionList: menu.visualParent ? menu.visualParent.actionList : null
-    // Workaround for `plasmoid` context property not working in singletons
-    readonly property var plasmoid: KickoffSingleton.plasmoid
+
+    // Workaround for `plasmoid` context property not working in singletons.
+    // Only one action menu can be open at a time, so this should be safe to use.
+    property Plasmoid plasmoid: null
 
     // Not a QQC1 Menu. It's actually a custom QObject that uses a QMenu.
     readonly property PC2.Menu menu: PC2.Menu {
         id: menu
-        visualParent: root.parent
+        visualParent: null
         placement: PlasmaCore.Types.BottomPosedLeftAlignedPopup
     }
 

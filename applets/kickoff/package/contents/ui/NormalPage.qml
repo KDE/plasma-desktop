@@ -19,12 +19,12 @@ EmptyPage {
         reverseTransitions: footer.tabBar.currentIndex === 1
         initialItem: ApplicationsPage {
             id: applicationsPage
-            preferredSideBarWidth: root.preferredSideBarWidth + KickoffSingleton.leftPadding
+            preferredSideBarWidth: root.preferredSideBarWidth + plasmoid.rootItem.backgroundMetrics.leftPadding
         }
         Component {
             id: placesPage
             PlacesPage {
-                preferredSideBarWidth: root.preferredSideBarWidth + KickoffSingleton.leftPadding
+                preferredSideBarWidth: root.preferredSideBarWidth + plasmoid.rootItem.backgroundMetrics.leftPadding
                 preferredSideBarHeight: applicationsPage.implicitSideBarHeight
             }
         }
@@ -44,7 +44,7 @@ EmptyPage {
         id: footer
         preferredTabBarWidth: root.preferredSideBarWidth
         Binding {
-            target: KickoffSingleton
+            target: plasmoid.rootItem
             property: "footer"
             value: footer
             restoreMode: Binding.RestoreBinding

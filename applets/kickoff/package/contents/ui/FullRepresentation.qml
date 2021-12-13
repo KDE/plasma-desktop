@@ -19,10 +19,11 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 EmptyPage {
     id: root
 
-    leftPadding: -KickoffSingleton.leftPadding
-    rightPadding: -KickoffSingleton.rightPadding
+    // plasmoid.rootItem is Kickoff.qml
+    leftPadding: -plasmoid.rootItem.backgroundMetrics.leftPadding
+    rightPadding: -plasmoid.rootItem.backgroundMetrics.rightPadding
     topPadding: 0
-    bottomPadding: -KickoffSingleton.bottomPadding
+    bottomPadding: -plasmoid.rootItem.backgroundMetrics.bottomPadding
 
     Layout.minimumWidth: implicitWidth
     Layout.minimumHeight: implicitHeight
@@ -55,7 +56,7 @@ EmptyPage {
         id: header
         preferredNameAndIconWidth: normalPage.preferredSideBarWidth
         Binding {
-            target: KickoffSingleton
+            target: plasmoid.rootItem
             property: "header"
             value: header
             restoreMode: Binding.RestoreBinding
@@ -82,7 +83,7 @@ EmptyPage {
                 implicitHeight: normalPage.implicitHeight
                 // Forces the function be re-run every time runnerModel.count changes.
                 // This is absolutely necessary to make the search view work reliably.
-                model: runnerModel.count ? KickoffSingleton.runnerModel.modelForRow(0) : null
+                model: plasmoid.rootItem.runnerModel.count ? plasmoid.rootItem.runnerModel.modelForRow(0) : null
                 delegate: KickoffItemDelegate {
                     extendHoverMargins: true
                     width: view.availableWidth
@@ -92,8 +93,8 @@ EmptyPage {
                 // always focus the first item in the header focus chain
                 KeyNavigation.tab: root.header.nextItemInFocusChain()
                 T.StackView.onActivated: {
-                    KickoffSingleton.sideBar = null
-                    KickoffSingleton.contentArea = searchView
+                    plasmoid.rootItem.sideBar = null
+                    plasmoid.rootItem.contentArea = searchView
                 }
             }
         }
@@ -101,7 +102,7 @@ EmptyPage {
         Keys.priority: Keys.AfterItem
         // This is here rather than root because events are implicitly forwarded
         // to parent items. Don't want to send multiple events to searchField.
-        Keys.forwardTo: KickoffSingleton.searchField
+        Keys.forwardTo: plasmoid.rootItem.searchField
 
         Connections {
             target: root.header
@@ -115,71 +116,5 @@ EmptyPage {
                 }
             }
         }
-    }
-
-    Kicker.RootModel {
-        id: rootModel
-
-        autoPopulate: false
-
-        appletInterface: plasmoid
-
-        flat: true // have categories, but no subcategories
-        sorted: plasmoid.configuration.alphaSort
-        showSeparators: false
-        showTopLevelItems: true
-
-        showAllApps: true
-        showAllAppsCategorized: false
-        showRecentApps: false
-        showRecentDocs: false
-        showRecentContacts: false
-        showPowerSession: false
-        showFavoritesPlaceholder: true
-
-        Component.onCompleted: {
-            favoritesModel.initForClient("org.kde.plasma.kickoff.favorites.instance-" + plasmoid.id)
-
-            if (!plasmoid.configuration.favoritesPortedToKAstats) {
-                favoritesModel.portOldFavorites(plasmoid.configuration.favorites);
-                plasmoid.configuration.favoritesPortedToKAstats = true;
-            }
-
-            rootModel.refresh();
-            KickoffSingleton.rootModel = Qt.binding(() => { return rootModel })
-        }
-    }
-
-    Kicker.RunnerModel {
-        id: runnerModel
-        query: KickoffSingleton.searchField.text
-        appletInterface: plasmoid
-        mergeResults: true
-        favoritesModel: rootModel.favoritesModel
-        Component.onCompleted: KickoffSingleton.runnerModel = Qt.binding(() => { return runnerModel })
-    }
-
-    Kicker.ComputerModel {
-        id: computerModel
-        appletInterface: plasmoid
-        favoritesModel: rootModel.favoritesModel
-        systemApplications: plasmoid.configuration.systemApplications
-        Component.onCompleted: {
-            //systemApplications = plasmoid.configuration.systemApplications;
-            KickoffSingleton.computerModel = Qt.binding(() => { return computerModel })
-        }
-    }
-
-    Kicker.RecentUsageModel {
-        id: recentUsageModel
-        favoritesModel: rootModel.favoritesModel
-        Component.onCompleted: KickoffSingleton.recentUsageModel = Qt.binding(() => { return recentUsageModel })
-    }
-
-    Kicker.RecentUsageModel {
-        id: frequentUsageModel
-        favoritesModel: rootModel.favoritesModel
-        ordering: 1 // Popular / Frequently Used
-        Component.onCompleted: KickoffSingleton.frequentUsageModel = Qt.binding(() => { return frequentUsageModel })
     }
 }

@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-pragma Singleton
+pragma Singleton // NOTE: Singletons are shared between all instances of a plasmoid
 
 import QtQml.Models 2.15
 import QtQuick 2.15
@@ -17,19 +17,8 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 Item {
     id: root
     visible: false
-    // Workaround for `plasmoid` context property not working in singletons
-    property var plasmoid: null
-    //BEGIN Models and Data Sources
-    // These are set in FullRepresentation.qml because the `plasmoid` context property
-    // doesn't work here and using `Plasmoid` from org.kde.plasma.plasmoid doesn't work either.
-    // Even the `plasmoid` property defined above doesn't quite work,
-    // but it works better than nothing for things like `plasmoid.expanded`
-    property Kicker.RootModel rootModel
-    property Kicker.RunnerModel runnerModel
-    property Kicker.ComputerModel computerModel
-    property Kicker.RecentUsageModel recentUsageModel
-    property Kicker.RecentUsageModel frequentUsageModel
 
+    //BEGIN Models and Data Sources
     readonly property PlasmaCore.DataSource powerManagement: PlasmaCore.DataSource {
         engine: "powermanagement"
         connectedSources: ["PowerDevil"]
@@ -44,21 +33,6 @@ Item {
     }
     //END
 
-    //BEGIN UI elements
-    // Set in FullRepresentation.qml
-    property Item header: null
-
-    // Set in Header.qml
-    property PC3.TextField searchField: null
-
-    // Set in FullRepresentation.qml, ApplicationPage.qml, PlacesPage.qml
-    property Item sideBar: null // is null when searching
-    property Item contentArea: null // is searchView when searching
-
-    // Set in NormalPage.qml
-    property Item footer: null
-    //END
-
     //BEGIN Reusable Objects
     readonly property PlasmaCore.Svg lineSvg: PlasmaCore.Svg {
         imagePath: "widgets/line"
@@ -68,18 +42,7 @@ Item {
     }
     //END
 
-    //BEGIN State Properties
-    // Set in Kickoff.qml
-    property bool inPanel: false
-    property bool vertical: false
-    //END
-
     //BEGIN Metrics
-    readonly property PlasmaCore.FrameSvgItem backgroundMetrics: PlasmaCore.FrameSvgItem {
-        visible: false
-        imagePath: plasmoid.formFactor === PlasmaCore.Types.Planar ? "widgets/background" : "dialogs/background"
-    }
-
     readonly property PlasmaCore.FrameSvgItem listItemMetrics: PlasmaCore.FrameSvgItem {
         visible: false
         imagePath: "widgets/listitem"
@@ -91,11 +54,6 @@ Item {
         font: PlasmaCore.Theme.defaultFont
     }
 
-    readonly property real leftPadding: backgroundMetrics.margins.left - backgroundMetrics.inset.left
-    readonly property real rightPadding: backgroundMetrics.margins.right - backgroundMetrics.inset.right
-    readonly property real topPadding: backgroundMetrics.margins.top - backgroundMetrics.inset.top
-    readonly property real bottomPadding: backgroundMetrics.margins.bottom - backgroundMetrics.inset.bottom
-    readonly property real spacing: KickoffSingleton.leftPadding
     readonly property real gridCellSize: gridDelegate.implicitHeight
     readonly property real listDelegateHeight: listDelegate.implicitHeight
     readonly property real listDelegateContentHeight: listDelegate.implicitContentHeight

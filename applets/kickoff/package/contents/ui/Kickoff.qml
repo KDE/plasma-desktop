@@ -20,6 +20,102 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 Item {
     id: kickoff
 
+    // The properties are defined here instead of the singleton because each
+    // instance of Kickoff requires different instances of these properties
+
+    property bool inPanel: plasmoid.location === PlasmaCore.Types.TopEdge
+        || plasmoid.location === PlasmaCore.Types.RightEdge
+        || plasmoid.location === PlasmaCore.Types.BottomEdge
+        || plasmoid.location === PlasmaCore.Types.LeftEdge
+    property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
+
+    //BEGIN Models
+    property Kicker.RootModel rootModel: Kicker.RootModel {
+        autoPopulate: false
+
+        appletInterface: plasmoid
+
+        flat: true // have categories, but no subcategories
+        sorted: plasmoid.configuration.alphaSort
+        showSeparators: false
+        showTopLevelItems: true
+
+        showAllApps: true
+        showAllAppsCategorized: false
+        showRecentApps: false
+        showRecentDocs: false
+        showRecentContacts: false
+        showPowerSession: false
+        showFavoritesPlaceholder: true
+
+        Component.onCompleted: {
+            favoritesModel.initForClient("org.kde.plasma.kickoff.favorites.instance-" + plasmoid.id)
+
+            if (!plasmoid.configuration.favoritesPortedToKAstats) {
+                if (favoritesModel.count < 1) {
+                    favoritesModel.portOldFavorites(plasmoid.configuration.favorites);
+                }
+                plasmoid.configuration.favoritesPortedToKAstats = true;
+            }
+
+            refresh();
+        }
+    }
+
+    property Kicker.RunnerModel runnerModel: Kicker.RunnerModel {
+        query: kickoff.searchField ? kickoff.searchField.text : ""
+        appletInterface: plasmoid
+        mergeResults: true
+        favoritesModel: rootModel.favoritesModel
+    }
+
+    property Kicker.ComputerModel computerModel: Kicker.ComputerModel {
+        appletInterface: plasmoid
+        favoritesModel: rootModel.favoritesModel
+        systemApplications: plasmoid.configuration.systemApplications
+        Component.onCompleted: {
+            //systemApplications = plasmoid.configuration.systemApplications;
+        }
+    }
+
+    property Kicker.RecentUsageModel recentUsageModel: Kicker.RecentUsageModel {
+        favoritesModel: rootModel.favoritesModel
+    }
+
+    property Kicker.RecentUsageModel frequentUsageModel: Kicker.RecentUsageModel {
+        favoritesModel: rootModel.favoritesModel
+        ordering: 1 // Popular / Frequently Used
+    }
+    //END
+
+    //BEGIN UI elements
+    // Set in FullRepresentation.qml
+    property Item header: null
+
+    // Set in Header.qml
+    property PC3.TextField searchField: null
+
+    // Set in FullRepresentation.qml, ApplicationPage.qml, PlacesPage.qml
+    property Item sideBar: null // is null when searching
+    property Item contentArea: null // is searchView when searching
+
+    // Set in NormalPage.qml
+    property Item footer: null
+    //END
+
+    //BEGIN Metrics
+    readonly property PlasmaCore.FrameSvgItem backgroundMetrics: PlasmaCore.FrameSvgItem {
+        // Inset defaults to a negative value when not set by margin hints
+        readonly property real leftPadding: margins.left - Math.max(inset.left, 0)
+        readonly property real rightPadding: margins.right - Math.max(inset.right, 0)
+        readonly property real topPadding: margins.top - Math.max(inset.top, 0)
+        readonly property real bottomPadding: margins.bottom - Math.max(inset.bottom, 0)
+        readonly property real spacing: leftPadding
+        visible: false
+        imagePath: plasmoid.formFactor === PlasmaCore.Types.Planar ? "widgets/background" : "dialogs/background"
+    }
+    //END
+
     Plasmoid.switchWidth: plasmoid.fullRepresentationItem ? plasmoid.fullRepresentationItem.Layout.minimumWidth : -1
     Plasmoid.switchHeight: plasmoid.fullRepresentationItem ? plasmoid.fullRepresentationItem.Layout.minimumHeight : -1
 
@@ -36,11 +132,11 @@ Item {
         implicitHeight: PlasmaCore.Units.iconSizeHints.panel
 
         Layout.minimumWidth: {
-            if (!KickoffSingleton.inPanel) {
+            if (!kickoff.inPanel) {
                 return PlasmaCore.Units.iconSizes.small
             }
 
-            if (KickoffSingleton.vertical) {
+            if (kickoff.vertical) {
                 return -1;
             } else {
                 return Math.min(PlasmaCore.Units.iconSizeHints.panel, parent.height) * buttonIcon.aspectRatio;
@@ -48,11 +144,11 @@ Item {
         }
 
         Layout.minimumHeight: {
-            if (!KickoffSingleton.inPanel) {
+            if (!kickoff.inPanel) {
                 return PlasmaCore.Units.iconSizes.small
             }
 
-            if (KickoffSingleton.vertical) {
+            if (kickoff.vertical) {
                 return Math.min(PlasmaCore.Units.iconSizeHints.panel, parent.width) * buttonIcon.aspectRatio;
             } else {
                 return -1;
@@ -60,11 +156,11 @@ Item {
         }
 
         Layout.maximumWidth: {
-            if (!KickoffSingleton.inPanel) {
+            if (!kickoff.inPanel) {
                 return -1;
             }
 
-            if (KickoffSingleton.vertical) {
+            if (kickoff.vertical) {
                 return PlasmaCore.Units.iconSizeHints.panel;
             } else {
                 return Math.min(PlasmaCore.Units.iconSizeHints.panel, parent.height) * buttonIcon.aspectRatio;
@@ -72,11 +168,11 @@ Item {
         }
 
         Layout.maximumHeight: {
-            if (!KickoffSingleton.inPanel) {
+            if (!kickoff.inPanel) {
                 return -1;
             }
 
-            if (KickoffSingleton.vertical) {
+            if (kickoff.vertical) {
                 return Math.min(PlasmaCore.Units.iconSizeHints.panel, parent.width) * buttonIcon.aspectRatio;
             } else {
                 return PlasmaCore.Units.iconSizeHints.panel;
@@ -105,7 +201,7 @@ Item {
         PlasmaCore.IconItem {
             id: buttonIcon
 
-            readonly property double aspectRatio: (KickoffSingleton.vertical ? implicitHeight / implicitWidth
+            readonly property double aspectRatio: (kickoff.vertical ? implicitHeight / implicitWidth
                 : implicitWidth / implicitHeight)
 
             anchors.fill: parent
@@ -118,30 +214,6 @@ Item {
 
     Kicker.ProcessRunner {
         id: processRunner;
-    }
-
-    // Workaround for `plasmoid` context property not working in singletons
-    // and `Plasmoid` not giving access to the plasmoid either.
-    Binding {
-        target: KickoffSingleton
-        property: "plasmoid"
-        value: plasmoid
-        restoreMode: Binding.RestoreBindingOrValue
-    }
-    Binding {
-        target: KickoffSingleton
-        property: "inPanel"
-        value: plasmoid.location === PlasmaCore.Types.TopEdge
-            || plasmoid.location === PlasmaCore.Types.RightEdge
-            || plasmoid.location === PlasmaCore.Types.BottomEdge
-            || plasmoid.location === PlasmaCore.Types.LeftEdge
-        restoreMode: Binding.RestoreBindingOrValue
-    }
-    Binding {
-        target: KickoffSingleton
-        property: "vertical"
-        value: plasmoid.formFactor === PlasmaCore.Types.Vertical
-        restoreMode: Binding.RestoreBindingOrValue
     }
 
     function action_menuedit() {
