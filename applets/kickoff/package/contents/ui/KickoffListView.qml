@@ -57,6 +57,14 @@ EmptyPage {
         }
     }
 
+    implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
+                            contentWidth, // exclude padding to avoid scrollbars automatically affecting implicitWidth
+                            implicitHeaderWidth2,
+                            implicitFooterWidth2)
+
+    leftPadding: verticalScrollBar.visible && root.mirrored ? verticalScrollBar.implicitWidth : 0
+    rightPadding: verticalScrollBar.visible && !root.mirrored ? verticalScrollBar.implicitWidth : 0
+
     contentItem: ListView {
         id: view
 
@@ -67,38 +75,27 @@ EmptyPage {
         Accessible.role: Accessible.List
 
         implicitWidth: {
+            let totalMargins = leftMargin + rightMargin
             if (mainContentView) {
-                if (plasmoid.configuration.applicationsDisplay === 0
-                    || (plasmoid.configuration.favoritesDisplay === 0
-                        && KickoffSingleton.rootModel.favoritesModel.count > 16)) {
-                    return KickoffSingleton.gridCellSize * 4
-                        + KickoffSingleton.leftPadding
-                        + KickoffSingleton.rightPadding
-                        + verticalScrollBar.implicitWidth
+                if (plasmoid.rootItem.mayHaveGridWithScrollBar) {
+                    totalMargins += verticalScrollBar.implicitWidth
                 }
-                return KickoffSingleton.gridCellSize * 4
-                    + KickoffSingleton.leftPadding
-                    + KickoffSingleton.rightPadding
+                return KickoffSingleton.gridCellSize * 4 + totalMargins
             }
-            return contentWidth + leftMargin + rightMargin
+            return contentWidth + totalMargins
         }
-        // If either uses a grid, use grid cells to determine size
-        implicitHeight: (plasmoid.configuration.favoritesDisplay == 0 || plasmoid.configuration.applicationsDisplay == 0
-                ? KickoffSingleton.gridCellSize * 4
-                : Math.floor(KickoffSingleton.gridCellSize * 4 / KickoffSingleton.listDelegateHeight)
-                    * KickoffSingleton.listDelegateHeight)
-            + topMargin + bottomMargin
+        implicitHeight: {
+            // use grid cells to determine size
+            let h = KickoffSingleton.gridCellSize * 4
+            // If no grids are used, use the number of items that would fit in the grid height
+            if (plasmoid.configuration.favoritesDisplay != 0 && plasmoid.configuration.applicationsDisplay != 0) {
+                h = Math.floor(h / KickoffSingleton.listDelegateHeight) * KickoffSingleton.listDelegateHeight
+            }
+            return h + topMargin + bottomMargin
+        }
 
-        leftMargin: if (root.mirrored && verticalScrollBar.visible) {
-            return verticalScrollBar.implicitWidth + KickoffSingleton.leftPadding
-        } else {
-            return KickoffSingleton.leftPadding
-        }
-        rightMargin: if (!root.mirrored && verticalScrollBar.visible) {
-            return verticalScrollBar.implicitWidth + KickoffSingleton.rightPadding
-        } else {
-            return KickoffSingleton.rightPadding
-        }
+        leftMargin: plasmoid.rootItem.backgroundMetrics.leftPadding
+        rightMargin: plasmoid.rootItem.backgroundMetrics.rightPadding
 
         currentIndex: count > 0 ? 0 : -1
         focus: true
@@ -120,11 +117,11 @@ EmptyPage {
             z: root.currentItem && root.currentItem.Drag.active ?
                 3 : 0
             opacity: view.activeFocus
-                || (KickoffSingleton.contentArea === root
-                    && KickoffSingleton.searchField.activeFocus) ? 1 : 0.5
+                || (plasmoid.rootItem.contentArea === root
+                    && plasmoid.rootItem.searchField.activeFocus) ? 1 : 0.5
             imagePath: "widgets/viewitem"
             prefix: "hover"
-            visible: KickoffSingleton.contentArea !== root
+            visible: plasmoid.rootItem.contentArea !== root
                 || ActionMenu.menu.status !== 1
         }
 
@@ -197,7 +194,6 @@ EmptyPage {
         PC3.ScrollBar.vertical: PC3.ScrollBar {
             id: verticalScrollBar
             parent: root
-            visible: size < 1 && policy !== PC3.ScrollBar.AlwaysOff
             z: 2
             height: root.height
             anchors.right: parent.right
