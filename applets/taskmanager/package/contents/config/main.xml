@@ -122,6 +122,11 @@
     <entry name="minimizeActiveTaskOnClick" type="Bool">
       <label>Whether to minimize the currently-active task when clicked. If false, clicking on the currently-active task will do nothing.</label>
       <default>true</default>
+    <entry name="reverseMode" type="Bool">
+      <label>Whether to grow the tasks in according to system configuration or opposite to system configuration.</label>
+      <default>false</default>
+    </entry>
+
     </entry>
   </group>
 

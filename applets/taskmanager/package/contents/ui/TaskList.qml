@@ -4,13 +4,19 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 Flow {
     property bool animating: false
 
-    layoutDirection: Qt.application.layoutDirection
+    readonly property bool tasksGrowInOppositeDirection: plasmoid.configuration.reverseMode
+    readonly property bool isHorizontalPanel: plasmoid.formFactor === PlasmaCore.Types.Horizontal
+
+    layoutDirection: (tasksGrowInOppositeDirection && isHorizontalPanel) ? Qt.application.layoutDirection === Qt.LeftToRight
+                                                     ? Qt.RightToLeft
+                                                     : Qt.LeftToRight
+                                                  : Qt.application.layoutDirection
 
     property int rows: Math.floor(height / children[0].height)
     property int columns: Math.floor(width / children[0].width)

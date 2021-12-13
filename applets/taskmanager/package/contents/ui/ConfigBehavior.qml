@@ -31,6 +31,7 @@ Item {
     property alias cfg_showOnlyMinimized: showOnlyMinimized.checked
     property alias cfg_minimizeActiveTaskOnClick: minimizeActive.checked
     property alias cfg_unhideOnAttention: unhideOnAttention.checked
+    property alias cfg_reverseMode: reverseMode.checked
 
     TaskManagerApplet.Backend {
         id: backend
@@ -193,5 +194,30 @@ Item {
             Kirigami.FormData.label: i18n("When panel is hidden:")
             text: i18n("Unhide when a window wants attention")
         }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        ButtonGroup {
+            id: reverseModeRadioButtonGroup
+        }
+
+        RadioButton {
+            Kirigami.FormData.label: i18n("New tasks appear:")
+            checked: !reverseMode.checked
+            text: Qt.application.layoutDirection === Qt.LeftToRight ? i18n("To the right") : i18n("To the left")
+            ButtonGroup.group: reverseModeRadioButtonGroup
+            visible: reverseMode.visible
+        }
+
+        RadioButton {
+            id: reverseMode
+            checked: plasmoid.configuration.reverseMode === true
+            text: Qt.application.layoutDirection === Qt.RightToLeft ? i18n("To the right") : i18n("To the left")
+            ButtonGroup.group: reverseModeRadioButtonGroup
+            visible: plasmoid.formFactor === PlasmaCore.Types.Horizontal
+        }
+
     }
 }
