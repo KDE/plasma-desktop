@@ -94,3 +94,18 @@ void InputDevice::load()
     m_leftHanded.resetFromSaved();
     m_outputName.resetFromSaved();
 }
+
+void InputDevice::setOrientation(int ori)
+{
+    m_orientation.set(ori);
+}
+
+void InputDevice::setOutputName(const QString &outputName)
+{
+    m_outputName.set(outputName);
+}
+
+void InputDevice::setLeftHanded(bool set)
+{
+    m_leftHanded.set(set);
+}
