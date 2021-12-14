@@ -95,7 +95,7 @@ AbstractKCM {
             RowLayout {
                 Layout.fillWidth: true
                 visible: !switchContainmentWarning.visible
-                Kirigami.FormData.label: i18nd("plasma_shell_org.kde.plasma.desktop", "Wallpaper Type:")
+                Kirigami.FormData.label: i18nd("plasma_shell_org.kde.plasma.desktop", "Wallpaper type:")
                 QtControls.ComboBox {
                     id: wallpaperComboBox
                     Layout.preferredWidth: Math.max(implicitWidth, pluginComboBox.implicitWidth)
