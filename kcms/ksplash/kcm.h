@@ -60,12 +60,12 @@ private:
     int pluginIndex(const QString &pluginName) const;
     void addKPackageToModel(const KPackage::Package &pkg);
 
-    SplashScreenData *m_data;
-    QStandardItemModel *m_model;
+    SplashScreenData *const m_data;
+    QStandardItemModel *const m_model;
 
     QProcess *m_testProcess = nullptr;
     QString m_packageRoot;
-    QSortFilterProxyModel *m_sortModel;
+    QSortFilterProxyModel *m_sortModel = nullptr;
 };
 
 #endif

@@ -117,7 +117,7 @@ private:
         group.writeEntry(key, QString(QStringLiteral("\"") + path + QStringLiteral("\"")));
     }
 
-    DesktopPathsSettings *m_settings;
+    DesktopPathsSettings *const m_settings;
 };
 
 DesktopPathsSettings::DesktopPathsSettings(QObject *parent)

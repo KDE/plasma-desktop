@@ -82,12 +82,12 @@ private:
     void getModuleStatus();
     void startOrStopModule(const QString &moduleName, ModuleStatus status /*better than a bool*/);
 
-    ModulesModel *m_model;
-    FilterProxyModel *m_filteredModel;
+    ModulesModel *const m_model;
+    FilterProxyModel *const m_filteredModel;
 
-    org::kde::kded5 *m_kdedInterface;
+    org::kde::kded5 *const m_kdedInterface;
 
-    QDBusServiceWatcher *m_kdedWatcher;
+    QDBusServiceWatcher *const m_kdedWatcher;
     bool m_kdedRunning = false;
 
     QString m_lastStartedModule;

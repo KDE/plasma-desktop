@@ -20,7 +20,6 @@ static const QString s_keyword = QStringLiteral("KWin");
 
 KWinRunner::KWinRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
     : Plasma::AbstractRunner(parent, metaData, args)
-    , m_enabled(false)
 {
     setObjectName(s_keyword);
     QDBusServiceWatcher *watcher = new QDBusServiceWatcher(s_kwinService, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this);

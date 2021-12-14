@@ -48,7 +48,7 @@ private:
     void addItemInternal(const QByteArray &propertyName, const QVariant &defaultValue);
 
 private:
-    XdgPathsSettingsStore *m_xdgPathsStore;
+    XdgPathsSettingsStore *const m_xdgPathsStore;
 };
 
 #endif

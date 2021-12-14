@@ -25,7 +25,7 @@ private:
     void checkAvailability(const QString &name, const QString &oldOwner, const QString &newOwner);
 
 private:
-    bool m_enabled;
+    bool m_enabled = false;
 };
 
 #endif

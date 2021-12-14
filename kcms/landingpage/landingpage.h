@@ -45,9 +45,9 @@ public:
 
 private:
     // Model when there is nothing from kactivities-stat
-    QStandardItemModel *m_defaultModel;
+    QStandardItemModel *m_defaultModel = nullptr;
     // Model fed by kactivities-stats
-    KActivities::Stats::ResultModel *m_resultModel;
+    KActivities::Stats::ResultModel *m_resultModel = nullptr;
 };
 
 class LookAndFeelGroup : public QObject
@@ -109,7 +109,7 @@ Q_SIGNALS:
 #endif
 
 private:
-    LandingPageData *m_data;
+    LandingPageData *m_data = nullptr;
 
     LookAndFeelGroup *m_defaultLightLookAndFeel = nullptr;
     LookAndFeelGroup *m_defaultDarkLookAndFeel = nullptr;

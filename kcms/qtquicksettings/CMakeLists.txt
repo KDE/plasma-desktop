@@ -1,6 +1,6 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmqtquicksettings\")
 
-set(kcm_qtquicksettings_PART_SRCS kcmqtquicksettings.cpp)
+set(kcm_qtquicksettings_PART_SRCS kcmqtquicksettings.cpp kcmqtquicksettings.h)
 kconfig_add_kcfg_files(kcm_qtquicksettings_PART_SRCS renderersettings.kcfgc)
 
 ki18n_wrap_ui(kcm_qtquicksettings_PART_SRCS kcmqtquicksettingswidget.ui)

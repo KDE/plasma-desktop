@@ -35,7 +35,7 @@ public:
     LaunchFeedbackSettings *launchFeedbackSettings() const;
 
 private:
-    LaunchFeedbackData *m_data;
+    LaunchFeedbackData *const m_data;
 };
 
 #endif

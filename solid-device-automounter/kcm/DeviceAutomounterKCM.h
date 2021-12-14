@@ -37,8 +37,8 @@ private:
     void saveLayout();
     void loadLayout();
 
-    AutomounterSettings *m_settings;
-    DeviceModel *m_devices;
+    AutomounterSettings *const m_settings;
+    DeviceModel *const m_devices;
     bool m_unmanagedChanges = false;
 };
 

@@ -71,7 +71,7 @@ private:
 
     QList<QString> m_attached;
     QList<QString> m_disconnected;
-    AutomounterSettings *m_settings;
+    AutomounterSettings *const m_settings;
 };
 
 #endif
