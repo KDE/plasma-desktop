@@ -1708,7 +1708,7 @@ void FolderModel::updateActions()
 
     if (m_newMenu) {
         m_newMenu->checkUpToDate();
-        m_newMenu->setPopupFiles(QList<QUrl>() << m_dirModel->dirLister()->url());
+        m_newMenu->setWorkingDirectory(m_dirModel->dirLister()->url());
         // we need to set here as well, when the menu is shown via AppletInterface::eventFilter
         m_menuPosition = QCursor::pos();
 
@@ -2139,7 +2139,7 @@ void FolderModel::undoTextChanged(const QString &text)
 
 void FolderModel::createFolder()
 {
-    m_newMenu->setPopupFiles(QList<QUrl>() << m_dirModel->dirLister()->url());
+    m_newMenu->setWorkingDirectory(m_dirModel->dirLister()->url());
     m_newMenu->createDirectory();
 }
 
