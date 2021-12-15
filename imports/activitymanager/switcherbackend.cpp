@@ -229,7 +229,7 @@ void SwitcherBackend::switchToActivity(Direction direction)
 void SwitcherBackend::keybdSwitchedToAnotherActivity()
 {
     m_lastInvokedAction = dynamic_cast<QAction *>(sender());
-    if (!qGuiApp->focusWindow() && !m_inputWindow) {
+    if (KWindowSystem::isPlatformWayland() && !qGuiApp->focusWindow() && !m_inputWindow) {
         // create a new Window so the compositor sends us modifier info
         m_inputWindow = new QRasterWindow();
         m_inputWindow->setGeometry(0, 0, 1, 1);
