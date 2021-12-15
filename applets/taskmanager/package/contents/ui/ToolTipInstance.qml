@@ -232,8 +232,9 @@ ColumnLayout {
                 readonly property Image source: albumArtImage
 
                 // Manual implementation of Image.PreserveAspectCrop
-                width: (source.paintedWidth / source.paintedHeight) <= (hoverHandler.width / hoverHandler.height) ? hoverHandler.width : hoverHandler.height * (source.paintedWidth / source.paintedHeight)
-                height: (source.paintedWidth / source.paintedHeight) <= (hoverHandler.width / hoverHandler.height) ? hoverHandler.width * (source.paintedHeight / source.paintedWidth) : hoverHandler.height
+                readonly property real scaleFactor: Math.max(hoverHandler.width / source.paintedWidth, hoverHandler.height / source.paintedHeight)
+                width: Math.round(source.paintedWidth * scaleFactor)
+                height: Math.round(source.paintedHeight * scaleFactor)
                 layer.enabled: true
                 opacity: 0.25
                 layer.effect: FastBlur {
