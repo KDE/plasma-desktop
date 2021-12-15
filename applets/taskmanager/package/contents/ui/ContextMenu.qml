@@ -411,9 +411,11 @@ PlasmaComponents.ContextMenu {
                     return menu.visualParent && menu.get(atm.Activities).length === 0;
                 });
                 menuItem.toggled.connect(function(checked) {
-                    var newActivities = undefined; // will cast to an empty QStringList i.e all activities
+                    let newActivities;
                     if (!checked) {
                         newActivities = new Array(activityInfo.currentActivity);
+                    } else {
+                        newActivities = activityInfo.activities();
                     }
                     tasksModel.requestActivities(menu.modelIndex, newActivities);
                 });
