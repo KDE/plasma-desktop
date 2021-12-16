@@ -21,11 +21,15 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 ColumnLayout {
     property var submodelIndex
     property int flatIndex: isGroup && index != undefined ? index : 0
+    readonly property int appPid: isGroup ? model.AppPid : pidParent
 
     // HACK: Avoid blank space in the tooltip after closing a window
     ListView.onPooled: width = height = 0
     ListView.onReused: width = height = undefined
 
+    readonly property string mprisSourceName: mpris2Source.sourceNameForLauncherUrl(launcherUrl, appPid)
+    readonly property var playerData: mprisSourceName != "" ? mpris2Source.data[mprisSourceName] : 0
+    readonly property bool hasPlayer: !!mprisSourceName && !!playerData
     readonly property bool playing: hasPlayer && playerData.PlaybackStatus === "Playing"
     readonly property bool canControl: hasPlayer && playerData.CanControl
     readonly property bool canPlay: hasPlayer && playerData.CanPlay

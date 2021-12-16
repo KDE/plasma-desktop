@@ -48,6 +48,7 @@ Loader {
 
     readonly property bool isVerticalPanel: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
+    // These properties are required to make tooltip interactive when there is a player but no window is present.
     readonly property string mprisSourceName: mpris2Source.sourceNameForLauncherUrl(launcherUrl, pidParent)
     readonly property var playerData: mprisSourceName != "" ? mpris2Source.data[mprisSourceName] : 0
     readonly property bool hasPlayer: !!mprisSourceName && !!playerData

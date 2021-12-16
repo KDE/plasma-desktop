@@ -240,6 +240,8 @@ MouseArea {
                 desktopFileName = desktopFileName.substr(13)
             }
 
+            let fallbackSource = "";
+
             for (var i = 0, length = connectedSources.length; i < length; ++i) {
                 var source = connectedSources[i];
                 // we intend to connect directly, otherwise the multiplexer steals the connection away
@@ -252,8 +254,15 @@ MouseArea {
                     continue;
                 }
 
-                if (sourceData.DesktopEntry === desktopFileName || (pid && sourceData.InstancePid === pid)) {
+                /**
+                 * If the task is in a group, we can't use desktopFileName to match the task.
+                 * but in case PID match fails, use the match result from desktopFileName.
+                 */
+                if (pid && sourceData.InstancePid === pid) {
                     return source;
+                }
+                if (sourceData.DesktopEntry === desktopFileName) {
+                    fallbackSource = source;
                 }
 
                 var metadata = sourceData.Metadata;
@@ -265,7 +274,8 @@ MouseArea {
                 }
             }
 
-            return ""
+            // If PID match fails, return fallbackSource.
+            return fallbackSource;
         }
 
         function startOperation(source, op) {
