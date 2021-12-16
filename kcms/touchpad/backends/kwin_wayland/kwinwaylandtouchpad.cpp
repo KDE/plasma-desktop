@@ -134,8 +134,8 @@ bool KWinWaylandTouchpad::applyConfig()
 {
     QVector<QString> msgs;
 
-    msgs << valueWriter(m_enabled) << valueWriter(m_leftHanded) << valueWriter(m_pointerAcceleration) << valueWriter(m_defaultPointerAccelerationProfileFlat)
-         << valueWriter(m_defaultPointerAccelerationProfileAdaptive)
+    msgs << valueWriter(m_enabled) << valueWriter(m_leftHanded) << valueWriter(m_pointerAcceleration) << valueWriter(m_pointerAccelerationProfileFlat)
+         << valueWriter(m_pointerAccelerationProfileAdaptive)
 
          << valueWriter(m_disableWhileTyping) << valueWriter(m_middleEmulation)
 
