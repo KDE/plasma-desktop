@@ -233,8 +233,11 @@ void SwitcherBackend::keybdSwitchedToAnotherActivity()
         // create a new Window so the compositor sends us modifier info
         m_inputWindow = new QRasterWindow();
         m_inputWindow->setGeometry(0, 0, 1, 1);
-        m_inputWindow->show();
-        m_inputWindow->update();
+        // Only show once the initial switch has been completed, not cause a switch back
+        connect(&m_activities, &KActivities::Consumer::currentActivityChanged, m_inputWindow, [this] {
+            m_inputWindow->show();
+            m_inputWindow->update();
+        });
         connect(m_inputWindow, &QWindow::activeChanged, this, [this] {
             showActivitySwitcherIfNeeded();
         });
