@@ -79,6 +79,7 @@ void KeyboardConfig::load()
 
     const QStringList layoutStrings = layoutList();
     const QStringList variants = variantList();
+    const QStringList names = displayNames();
 
     layouts.clear();
     if (layoutStrings.isEmpty()) {
@@ -87,19 +88,16 @@ void KeyboardConfig::load()
             layouts.append(layoutUnit);
         }
     } else {
-        QStringList::ConstIterator layout = layoutStrings.begin();
-        const int range = qMin(layoutStrings.size(), variants.size());
-        for (int i = 0; i < range; ++i) {
-            layouts.append({*layout++, variants.at(i)});
-        }
-        while (layout != layoutStrings.end()) {
-            layouts.append(LayoutUnit(*layout++));
-        }
-    }
+        for (int i = 0; i < layoutStrings.size(); ++i) {
+            if (i < variants.size()) {
+                layouts.append({layoutStrings[i], variants[i]});
+            } else {
+                layouts.append(LayoutUnit(layoutStrings[i]));
+            }
 
-    for (int i = 0; i < displayNames().count() && i < layouts.count(); i++) {
-        if (!displayNames().at(i).isEmpty() && displayNames().at(i) != layouts[i].layout()) {
-            layouts[i].setDisplayName(displayNames().at(i));
+            if (i < names.size() && !names[i].isEmpty() && names[i] != layouts[i].layout()) {
+                layouts[i].setDisplayName(names[i]);
+            }
         }
     }
 
