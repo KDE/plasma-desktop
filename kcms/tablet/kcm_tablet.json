@@ -1,0 +1,41 @@
+{
+    "Categories": "Qt;KDE;X-KDE-settings-hardware",
+    "KPlugin": {
+        "FormFactors": [
+            "tablet",
+            "handset",
+            "desktop"
+        ],
+        "Icon": "preferences-desktop-tablet",
+        "Id": "kcm_tablet",
+        "License": "GPL",
+        "Name": "Drawing Tablet",
+        "Name[ca]": "Tauleta de dibuix",
+        "Name[es]": "Tableta de dibujo",
+        "Name[fr]": "Tablette de dessin",
+        "Name[it]": "Tavoletta da disegno",
+        "Name[nl]": "Tekentablet",
+        "Name[sl]": "Tablica za risanje",
+        "Name[sv]": "Ritplatta",
+        "Name[uk]": "Планшет для малювання",
+        "Name[x-test]": "xxDrawing Tabletxx",
+        "ServiceTypes": [
+            "KCModule"
+        ]
+    },
+    "X-KDE-Keywords": "drawing,tablet,wacom,pen",
+    "X-KDE-Keywords[ca]": "dibuix,dibuixar,tauleta,wacom,llapis",
+    "X-KDE-Keywords[es]": "dibujo,tableta,wacom,lápiz",
+    "X-KDE-Keywords[fr]": "dessin, tablette, wacom, stylet",
+    "X-KDE-Keywords[it]": "disegno,tavoletta,wacom,penna",
+    "X-KDE-Keywords[nl]": "tekenen,tablet,wacom,pen",
+    "X-KDE-Keywords[sl]": "risanje,tablica,wacom,pisalo",
+    "X-KDE-Keywords[sv]": "ritplatta,platta,wacom,penna",
+    "X-KDE-Keywords[uk]": "drawing,tablet,wacom,pen,малювання,рисування,планшет,ваком,перо",
+    "X-KDE-Keywords[x-test]": "xxdrawingxx,xxtabletxx,xxwacomxx,xxpenxx",
+    "X-KDE-OnlyShowOnQtPlatforms": "wayland",
+    "X-KDE-ParentApp": "kcontrol",
+    "X-KDE-System-Settings-Parent-Category": "input-devices",
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml"
+}
