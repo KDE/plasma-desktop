@@ -43,5 +43,13 @@ KCM.SimpleKCM {
                 highlight: !kcm.terminalEmulators.isDefaults
             }
         }
+        ComponentComboBox {
+            component: kcm.geoUriHandlers
+            label: i18n("Map:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.geoUriHandlers.isDefaults
+            }
+        }
     }
 }

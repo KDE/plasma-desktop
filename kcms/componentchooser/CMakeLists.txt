@@ -9,6 +9,7 @@ set(componentchooser_SRCS
     componentchooserterminal.cpp
     componentchooserfilemanager.cpp
     componentchooserdata.cpp
+    componentchoosergeo.cpp
 )
 
 kconfig_add_kcfg_files(componentchooser_SRCS browser_settings.kcfgc GENERATE_MOC)

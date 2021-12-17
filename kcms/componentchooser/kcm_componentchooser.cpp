@@ -40,6 +40,7 @@ KcmComponentChooser::KcmComponentChooser(QObject *parent, const QVariantList &ar
     connect(fileManagers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
     connect(terminalEmulators(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
     connect(emailClients(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
+    connect(geoUriHandlers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
 }
 
 ComponentChooser *KcmComponentChooser::browsers() const
@@ -60,6 +61,11 @@ ComponentChooser *KcmComponentChooser::terminalEmulators() const
 ComponentChooser *KcmComponentChooser::fileManagers() const
 {
     return m_data->fileManagers();
+}
+
+ComponentChooser *KcmComponentChooser::geoUriHandlers() const
+{
+    return m_data->geoUriHandlers();
 }
 
 void KcmComponentChooser::defaults()

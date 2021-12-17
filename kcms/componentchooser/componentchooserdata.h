@@ -30,12 +30,14 @@ public:
     ComponentChooser *fileManagers() const;
     ComponentChooser *terminalEmulators() const;
     ComponentChooser *emailClients() const;
+    ComponentChooser *geoUriHandlers() const;
 
 private:
     ComponentChooser *m_browsers;
     ComponentChooser *m_fileManagers;
     ComponentChooser *m_terminalEmulators;
     ComponentChooser *m_emailClients;
+    ComponentChooser *m_geoUriHandlers;
 };
 
 #endif // COMPONENTCHOOSERDATA_H

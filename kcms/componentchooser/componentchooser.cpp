@@ -43,7 +43,7 @@ void ComponentChooser::load()
     KService::Ptr preferredService = KApplicationTrader::preferredService(m_mimeType);
 
     KApplicationTrader::query([&preferredServiceAdded, preferredService, this](const KService::Ptr &service) {
-        if (service->exec().isEmpty() || !service->categories().contains(m_type) || (!service->serviceTypes().contains(m_mimeType))) {
+        if (service->exec().isEmpty() || (!m_type.isEmpty() && !service->categories().contains(m_type)) || (!service->serviceTypes().contains(m_mimeType))) {
             return false;
         }
         QVariantMap application;
