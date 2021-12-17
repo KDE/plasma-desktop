@@ -122,16 +122,6 @@ void KeyboardConfig::save()
         displayNames.append(layoutUnit.getRawDisplayName());
     }
 
-    auto cleanTail = [](QStringList &list) {
-        // we need trailing comma in case of multiple layouts but only one variant,
-        // see https://github.com/xkbcommon/libxkbcommon/issues/208
-        while (list.size() > 2 && list.constLast().isEmpty()) {
-            list.removeLast();
-        }
-    };
-    cleanTail(variants);
-    cleanTail(displayNames);
-
     setLayoutList(layoutList);
     setVariantList(variants);
     setDisplayNames(displayNames);
