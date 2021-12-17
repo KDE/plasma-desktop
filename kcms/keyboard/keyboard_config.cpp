@@ -106,7 +106,7 @@ void KeyboardConfig::load()
     // layouts' shortcuts are retrieved from GlobalShortcuts in KCMKeyboardWidget
     m_referenceLayouts = layouts;
 
-    qCDebug(KCM_KEYBOARD) << "configuring layouts" << configureLayouts() << "configuring options" << xkbOptions();
+    qCDebug(KCM_KEYBOARD) << "configuring layouts" << configureLayouts() << "configuring options" << resetOldXkbOptions();
 }
 
 void KeyboardConfig::save()

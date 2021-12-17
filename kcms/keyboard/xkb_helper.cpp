@@ -151,14 +151,12 @@ bool XkbHelper::initializeKeyboardLayouts(KeyboardConfig &config)
             setxkbmapCommandArguments.append(variants.join(COMMAND_OPTIONS_SEPARATOR));
         }
     }
-
-    // First '-option' allows to reset xkbmap options list,
-    // second -option with xkbOptions set xkbmap options,
-    // otherwise xkbmap will only add option, and not remove the old options.
-    setxkbmapCommandArguments.append(QStringLiteral("-option"));
+    if (config.resetOldXkbOptions()) {
+        setxkbmapCommandArguments.append(QStringLiteral("-option"));
+    }
     if (!config.xkbOptions().isEmpty()) {
         setxkbmapCommandArguments.append(QStringLiteral("-option"));
-        setxkbmapCommandArguments.append(config.xkbOptions().join(COMMAND_OPTIONS_SEPARATOR));
+        setxkbmapCommandArguments.append(config.xkbOptions());
     }
 
     if (!setxkbmapCommandArguments.isEmpty()) {

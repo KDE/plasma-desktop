@@ -118,7 +118,6 @@ void KCMKeyboardWidget::defaults()
     updateSwitcingPolicyUI(keyboardConfig->defaultSwitchingPolicyValue());
     auto *xkbOptionModel = dynamic_cast<XkbOptionsTreeModel *>(uiWidget->xkbOptionsTreeView->model());
     xkbOptionModel->setXkbOptions(keyboardConfig->defaultXkbOptionsValue());
-    uiWidget->configureKeyboardOptionsChk->setChecked(!keyboardConfig->defaultXkbOptionsValue().empty());
     keyboardConfig->setDefaults();
 }
 
@@ -134,7 +133,7 @@ bool KCMKeyboardWidget::isDefault() const
 {
     return keyboardModelFromUI() == keyboardConfig->defaultKeyboardModelValue() &&
             switcingPolicyFromUI() == keyboardConfig->defaultSwitchingPolicyValue() &&
-            xkbOptionsFromUI() == keyboardConfig->defaultXkbOptionsValue();
+            xkbOptionsFromUI() == keyboardConfig->xkbOptions();
 }
 
 void KCMKeyboardWidget::setDefaultIndicator(bool visible)
@@ -166,7 +165,6 @@ void KCMKeyboardWidget::updateUI()
     updateSwitcingPolicyUI(keyboardConfig->switchingPolicy());
     XkbOptionsTreeModel *model = dynamic_cast<XkbOptionsTreeModel *>(uiWidget->xkbOptionsTreeView->model());
     model->setXkbOptions(keyboardConfig->xkbOptions());
-    uiWidget->configureKeyboardOptionsChk->setChecked(!keyboardConfig->xkbOptions().empty());
     updateLayoutsUI();
     updateShortcutsUI();
     layoutSelectionChanged();
@@ -512,8 +510,8 @@ void KCMKeyboardWidget::moveSelectedLayouts(int shift)
 void KCMKeyboardWidget::scrollToGroupShortcut()
 {
     this->setCurrentIndex(TAB_ADVANCED);
-    if (!uiWidget->configureKeyboardOptionsChk->isChecked()) {
-        uiWidget->configureKeyboardOptionsChk->setChecked(true);
+    if (!uiWidget->kcfg_resetOldXkbOptions->isChecked()) {
+        uiWidget->kcfg_resetOldXkbOptions->setChecked(true);
     }
     ((XkbOptionsTreeModel *)uiWidget->xkbOptionsTreeView->model())->gotoGroup(GROUP_SWITCH_GROUP_NAME, uiWidget->xkbOptionsTreeView);
 }
@@ -521,8 +519,8 @@ void KCMKeyboardWidget::scrollToGroupShortcut()
 void KCMKeyboardWidget::scrollTo3rdLevelShortcut()
 {
     this->setCurrentIndex(TAB_ADVANCED);
-    if (!uiWidget->configureKeyboardOptionsChk->isChecked()) {
-        uiWidget->configureKeyboardOptionsChk->setChecked(true);
+    if (!uiWidget->kcfg_resetOldXkbOptions->isChecked()) {
+        uiWidget->kcfg_resetOldXkbOptions->setChecked(true);
     }
     ((XkbOptionsTreeModel *)uiWidget->xkbOptionsTreeView->model())->gotoGroup(LV3_SWITCH_GROUP_NAME, uiWidget->xkbOptionsTreeView);
 }
@@ -574,18 +572,14 @@ void KCMKeyboardWidget::initializeXkbOptionsUI()
     uiWidget->xkbOptionsTreeView->setModel(model);
     connect(model, &QAbstractItemModel::dataChanged, this, &KCMKeyboardWidget::uiChanged);
 
-    connect(uiWidget->configureKeyboardOptionsChk, &QAbstractButton::toggled, this, &KCMKeyboardWidget::configureXkbOptionsChanged);
-    connect(uiWidget->configureKeyboardOptionsChk, &QAbstractButton::toggled, uiWidget->xkbOptionsTreeView, &QWidget::setEnabled);
+    connect(uiWidget->kcfg_resetOldXkbOptions, &QAbstractButton::toggled, this, &KCMKeyboardWidget::configureXkbOptionsChanged);
+    connect(uiWidget->kcfg_resetOldXkbOptions, &QAbstractButton::toggled, uiWidget->xkbOptionsTreeView, &QWidget::setEnabled);
 }
 
 void KCMKeyboardWidget::configureXkbOptionsChanged()
 {
-    if (uiWidget->configureKeyboardOptionsChk->isChecked() && keyboardConfig->xkbOptions().isEmpty()) {
+    if (uiWidget->kcfg_resetOldXkbOptions->isChecked() && keyboardConfig->xkbOptions().isEmpty()) {
         populateWithCurrentXkbOptions();
-    }
-    if (!uiWidget->configureKeyboardOptionsChk->isChecked()) {
-        auto *xkbOptionModel = dynamic_cast<XkbOptionsTreeModel *>(uiWidget->xkbOptionsTreeView->model());
-        xkbOptionModel->setXkbOptions(QStringList());
     }
     ((XkbOptionsTreeModel *)uiWidget->xkbOptionsTreeView->model())->reset();
     uiChanged();
@@ -595,7 +589,7 @@ void KCMKeyboardWidget::saveXkbOptions()
 {
     QStringList options;
 
-    if(uiWidget->configureKeyboardOptionsChk->isChecked()) {
+    if(uiWidget->kcfg_resetOldXkbOptions->isChecked()) {
         options = xkbOptionsFromUI();
 
         // QStringLists with a single empty string are serialized as "\\0", avoid that
@@ -636,7 +630,7 @@ void KCMKeyboardWidget::updateSwitcingPolicyUI(KeyboardConfig::SwitchingPolicy p
 void KCMKeyboardWidget::updateXkbShortcutButton(const QString &groupName, QPushButton *button)
 {
     QStringList grpOptions;
-    if (!keyboardConfig->xkbOptions().isEmpty()) {
+    if (uiWidget->kcfg_resetOldXkbOptions->isChecked()) {
         QRegExp regexp = QRegExp("^" + groupName + Rules::XKB_OPTION_GROUP_SEPARATOR);
         XkbOptionsTreeModel *model = dynamic_cast<XkbOptionsTreeModel *>(uiWidget->xkbOptionsTreeView->model());
         grpOptions = model->xkbOptions().filter(regexp);
@@ -727,8 +721,7 @@ void KCMKeyboardWidget::populateWithCurrentXkbOptions()
             xkbOptions.append(xkbOption);
         }
     }
-    auto *xkbOptionModel = dynamic_cast<XkbOptionsTreeModel *>(uiWidget->xkbOptionsTreeView->model());
-    xkbOptionModel->setXkbOptions(xkbOptions);
+    keyboardConfig->setXkbOptions(xkbOptions);
 }
 
 QString KCMKeyboardWidget::keyboardModelFromUI() const
