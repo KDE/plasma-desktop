@@ -10,6 +10,10 @@ SPDX-License-Identifier: GPL-2.0-or-later
       http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
   <kcfgfile name="kxkbrc" />
   <group name="Layout">
+    <!-- Note: LayoutList/VariantList/Options are meant to be in
+        a setxkbmap/libxkbcommon-compatible format. This means that
+        they must not be set to a list with a single empty string,
+        which gets serialized as "\\0" by KConfig. -->
     <entry name="layoutList" key="LayoutList" type="StringList">
     <default code="true">QStringList()</default>
     </entry>

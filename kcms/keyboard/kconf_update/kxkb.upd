@@ -1,0 +1,8 @@
+Version=5
+
+# After the KConfigXT port, DisplayNames/VariantList and Options could end up
+# being serialized as "\\0" (single empty element) instead of an empty string.
+Id=remove-empty-lists
+File=kxkbrc
+Group=Layout
+Script=kxkb_emptylists.awk

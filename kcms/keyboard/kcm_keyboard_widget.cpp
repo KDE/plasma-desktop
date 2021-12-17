@@ -593,11 +593,20 @@ void KCMKeyboardWidget::configureXkbOptionsChanged()
 
 void KCMKeyboardWidget::saveXkbOptions()
 {
-    if (uiWidget->configureKeyboardOptionsChk->isChecked()) {
-        keyboardConfig->setXkbOptions(xkbOptionsFromUI());
-    } else {
-        keyboardConfig->setXkbOptions(QStringList());
+    QStringList options;
+
+    if(uiWidget->configureKeyboardOptionsChk->isChecked()) {
+        options = xkbOptionsFromUI();
+
+        // QStringLists with a single empty string are serialized as "\\0", avoid that
+        // by saving them as an empty list instead. This way it can be passed as-is to
+        // libxkbcommon/setxkbmap. Before KConfigXT it used QStringList::join(",").
+        if (options.size() == 1 && options.constFirst().isEmpty()) {
+            options.clear();
+        }
     }
+
+    keyboardConfig->setXkbOptions(options);
 }
 
 QStringList KCMKeyboardWidget::xkbOptionsFromUI() const

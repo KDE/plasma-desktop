@@ -122,6 +122,16 @@ void KeyboardConfig::save()
         displayNames.append(layoutUnit.getRawDisplayName());
     }
 
+    // QStringLists with a single empty string are serialized as "\\0", avoid that
+    // by saving them as an empty list instead. This way it can be passed as-is to
+    // libxkbcommon/setxkbmap. Before KConfigXT it used QStringList::join(",").
+    if (variants.size() == 1 && variants.constFirst().isEmpty()) {
+        variants.clear();
+    }
+    if (displayNames.size() == 1 && displayNames.constFirst().isEmpty()) {
+        displayNames.clear();
+    }
+
     setLayoutList(layoutList);
     setVariantList(variants);
     setDisplayNames(displayNames);
