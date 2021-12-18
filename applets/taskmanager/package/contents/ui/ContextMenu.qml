@@ -271,10 +271,7 @@ PlasmaComponents.ContextMenu {
 
     PlasmaComponents.MenuItem {
         id: startNewInstanceItem
-        visible: (visualParent && get(atm.IsLauncher) !== true && get(atm.IsStartup) !== true)
-
-        enabled: visualParent && get(atm.LauncherUrlWithoutIcon) != ""
-
+        visible: get(atm.CanLaunchNewInstance)
         text: i18n("Start New Instance")
         icon: "list-add-symbolic"
 
