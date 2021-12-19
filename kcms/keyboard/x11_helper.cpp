@@ -244,23 +244,26 @@ bool X11Helper::getGroupNames(Display *display, XkbConfig *xkbConfig, FetchType 
         QStringList variants = names[3].split(OPTIONS_SEPARATOR);
 
         for (int ii = 0; ii < layouts.count(); ii++) {
-            xkbConfig->layouts << (layouts[ii] != nullptr ? layouts[ii] : QLatin1String(""));
-            xkbConfig->variants << (ii < variants.count() && variants[ii] != nullptr ? variants[ii] : QLatin1String(""));
+            xkbConfig->layouts << layouts[ii];
+            xkbConfig->variants << variants.value(ii); // Empty if not specified
         }
         qCDebug(KCM_KEYBOARD) << "Fetched layout groups from X server:"
                               << "\tlayouts:" << xkbConfig->layouts << "\tvariants:" << xkbConfig->variants;
     }
 
     if (fetchType == ALL || fetchType == MODEL_ONLY) {
-        xkbConfig->keyboardModel = (names[1] != nullptr ? names[1] : QLatin1String(""));
+        xkbConfig->keyboardModel = names[1];
         qCDebug(KCM_KEYBOARD) << "Fetched keyboard model from X server:" << xkbConfig->keyboardModel;
     }
 
     if (fetchType == ALL) {
         if (names.count() >= 5) {
-            QString options = (names[4] != nullptr ? names[4] : QLatin1String(""));
-            xkbConfig->options = options.split(OPTIONS_SEPARATOR);
-            qCDebug(KCM_KEYBOARD) << "Fetched xkbOptions from X server:" << options;
+            if (!names[4].isEmpty())
+                xkbConfig->options = names[4].split(OPTIONS_SEPARATOR);
+            else
+                xkbConfig->options.clear();
+
+            qCDebug(KCM_KEYBOARD) << "Fetched xkbOptions from X server:" << xkbConfig->options;
         }
     }
 
