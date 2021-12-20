@@ -82,22 +82,15 @@ void KeyboardConfig::load()
     const QStringList names = displayNames();
 
     layouts.clear();
-    if (layoutStrings.isEmpty()) {
-        QList<LayoutUnit> x11layouts = X11Helper::getLayoutsList();
-        for (const LayoutUnit &layoutUnit : x11layouts) {
-            layouts.append(layoutUnit);
+    for (int i = 0; i < layoutStrings.size(); ++i) {
+        if (i < variants.size()) {
+            layouts.append({layoutStrings[i], variants[i]});
+        } else {
+            layouts.append(LayoutUnit(layoutStrings[i]));
         }
-    } else {
-        for (int i = 0; i < layoutStrings.size(); ++i) {
-            if (i < variants.size()) {
-                layouts.append({layoutStrings[i], variants[i]});
-            } else {
-                layouts.append(LayoutUnit(layoutStrings[i]));
-            }
 
-            if (i < names.size() && !names[i].isEmpty() && names[i] != layouts[i].layout()) {
-                layouts[i].setDisplayName(names[i]);
-            }
+        if (i < names.size() && !names[i].isEmpty() && names[i] != layouts[i].layout()) {
+            layouts[i].setDisplayName(names[i]);
         }
     }
 
