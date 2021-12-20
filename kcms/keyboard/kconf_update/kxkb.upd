@@ -6,3 +6,10 @@ Id=remove-empty-lists
 File=kxkbrc
 Group=Layout
 Script=kxkb_emptylists.awk
+
+# After the KConfigXT port, ResetOldOptions was dropped. It was reintroduced to
+# distinguish the cases of "don't change options" and "reset options".
+Id=add-back-resetoptions
+File=kxkbrc
+Group=Layout
+Script=kxkb_resetoptions.awk

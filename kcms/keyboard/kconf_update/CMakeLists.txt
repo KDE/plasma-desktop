@@ -6,3 +6,5 @@ install(FILES kxkb.upd
         DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
 install(PROGRAMS kxkb_emptylists.awk
         DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
+install(PROGRAMS kxkb_resetoptions.awk
+        DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
