@@ -178,14 +178,28 @@ PC3.Page {
                 onCurrentItemChanged: if (currentItem) currentItem.apply()
 
                 delegate: PC2.ListItem {
+                    // this beautiful hunk of code basically says
+                    // "only show the separarator if the next item isn't a header"
+                    separatorVisible: !(sideView.model.data(sideView.model.index(model.index, 0), 0x0100 + 3) === true)
+                    /*                 ^                    ^                                     ^
+                                       |                    | since this is a list model, we      | this is the "data role"
+                                       |                    | can't use a regular array[index].   | in code, the data role for
+                                       |                    | instead, we must call that          | the "separator" property
+                                       |                    | function. the 0 is there because    | is defined as Qt::UserRole + 3
+                                       |                    | this is a list, not a table,        | or 0x0100 + 3.
+                                       |                    | so the column is always 0.
+                                       |
+                                       | this is how we access the "separator" property of the item after us in this list.
+                    */
+
                     RowLayout {
                         PlasmaExtras.Heading {
                             visible: model.separator === true
-                            level: 4
+                            level: 3
                             text: model.display
                             elide: Text.ElideRight
                             Layout.fillWidth: true
-                            Layout.topMargin: PlasmaCore.Units.smallSpacing*2
+                            Layout.topMargin: PlasmaCore.Units.smallSpacing*3
                         }
                         PC3.Label {
                             visible: !(model.separator === true)
