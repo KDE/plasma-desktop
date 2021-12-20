@@ -717,10 +717,10 @@ void KCMKeyboardWidget::populateWithCurrentXkbOptions()
     XkbConfig xkbConfig;
     QStringList xkbOptions;
     if (X11Helper::getGroupNames(QX11Info::display(), &xkbConfig, X11Helper::ALL)) {
-        for (const QString &xkbOption : qAsConst(xkbConfig.options)) {
-            xkbOptions.append(xkbOption);
-        }
+        xkbOptions = xkbConfig.options;
     }
+    auto *xkbOptionModel = dynamic_cast<XkbOptionsTreeModel *>(uiWidget->xkbOptionsTreeView->model());
+    xkbOptionModel->setXkbOptions(xkbOptions);
     keyboardConfig->setXkbOptions(xkbOptions);
 }
 
