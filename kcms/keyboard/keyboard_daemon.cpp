@@ -24,7 +24,7 @@
 #include "xkb_rules.h"
 #include "flags.h"
 
-K_PLUGIN_CLASS_WITH_JSON(KeyboardDaemon, "keyboard.json")
+K_PLUGIN_CLASS_WITH_JSON(KeyboardDaemon, "kded_keyboard.json")
 
 KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)
