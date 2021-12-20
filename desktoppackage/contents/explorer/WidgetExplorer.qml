@@ -177,30 +177,15 @@ PC3.Page {
                 highlightMoveDuration: 0
                 onCurrentItemChanged: if (currentItem) currentItem.apply()
 
-                delegate: QQC2.Control {
-                    implicitHeight: implicitContentHeight + topPadding + bottomPadding
-                    width: sideView.width
-
-                    background: Rectangle {
-                        color: model.separator === true ?
-                            PlasmaCore.Theme.backgroundColor :
-                            "transparent"
-
-                        QQC2.ToolSeparator {
-                            anchors {
-                                bottom: parent.bottom
-                                right: parent.right
-                                left: parent.left
-                            }
-                        }
-                    }
-                    contentItem: RowLayout {
+                delegate: PC2.ListItem {
+                    RowLayout {
                         PlasmaExtras.Heading {
                             visible: model.separator === true
-                            level: 3
+                            level: 4
                             text: model.display
                             elide: Text.ElideRight
                             Layout.fillWidth: true
+                            Layout.topMargin: PlasmaCore.Units.smallSpacing*2
                         }
                         PC3.Label {
                             visible: !(model.separator === true)
