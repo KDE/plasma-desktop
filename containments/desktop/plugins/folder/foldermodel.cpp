@@ -170,7 +170,7 @@ FolderModel::FolderModel(QObject *parent)
     qmlRegisterType<KIO::DropJob>();
     DirLister *dirLister = new DirLister(this);
     dirLister->setDelayedMimeTypes(true);
-    dirLister->setAutoErrorHandlingEnabled(false, nullptr);
+    dirLister->setAutoErrorHandlingEnabled(false);
     connect(dirLister, &DirLister::error, this, &FolderModel::dirListFailed);
     connect(dirLister, &KCoreDirLister::itemsDeleted, this, &FolderModel::evictFromIsDirCache);
 
