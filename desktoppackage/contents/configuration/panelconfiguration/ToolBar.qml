@@ -12,23 +12,100 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.configuration 2.0
 import org.kde.kirigami 2.0 as Kirigami
+import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 Item {
     id: root
     // Do not use Layout's implicitWidth/implicitHeight as they are updated too late (BUG 443294)
-    implicitWidth: Math.max(addWidgetsButton.implicitWidth, addSpacerButton.implicitWidth, edgeHandle.implicitWidth, settingsButton.implicitWidth, spinBoxLabel.implicitWidth, spinBox.implicitWidth) + PlasmaCore.Units.smallSpacing * 2
-    implicitHeight: Math.max(addWidgetsButton.implicitHeight, addSpacerButton.implicitHeight, edgeHandle.implicitHeight, settingsButton.implicitHeight, spinBoxLabel.implicitHeight, spinBox.implicitHeight) + PlasmaCore.Units.smallSpacing * 5
+    implicitWidth: Math.max(addWidgetsButton.implicitWidth, addSpacerButton.implicitWidth, settingsButton.implicitWidth, spinBoxLabel.implicitWidth, spinBox.implicitWidth) + PlasmaCore.Units.smallSpacing * 2
+    implicitHeight: Math.max(addWidgetsButton.implicitHeight, addSpacerButton.implicitHeight, settingsButton.implicitHeight, spinBoxLabel.implicitHeight, spinBox.implicitHeight) + PlasmaCore.Units.smallSpacing * 5
 
     readonly property string addWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets…")
     readonly property string addSpacerButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Spacer")
     readonly property string settingsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "More Options…")
 
+    KQuickControlsAddons.MouseEventListener {
+        id: mel
+        cursorShape: Qt.SizeAllCursor
+        anchors.fill: parent
+        property int lastX
+        property int lastY
+        property int startMouseX
+        property int startMouseY
+        onPressed: {
+            dialogRoot.closeContextMenu();
+            lastX = mouse.screenX
+            lastY = mouse.screenY
+            startMouseX = mouse.x
+            startMouseY = mouse.y
+            tooltip.visible = true
+        }
+        onPositionChanged: {
+            panel.screenToFollow = mouse.screen;
+
+            var newLocation = panel.location;
+            //If the mouse is in an internal rectangle, do nothing
+            if ((mouse.screenX < panel.screenGeometry.x + panel.screenGeometry.width/3 ||
+                mouse.screenX > panel.screenGeometry.x + panel.screenGeometry.width/3*2) ||
+                (mouse.screenY < panel.screenGeometry.y + panel.screenGeometry.height/3 ||
+                mouse.screenY > panel.screenGeometry.y + panel.screenGeometry.height/3*2))
+            {
+                var screenAspect = panel.screenGeometry.height / panel.screenGeometry.width;
+
+                if (mouse.screenY < panel.screenGeometry.y+(mouse.screenX-panel.screenGeometry.x)*screenAspect) {
+                    if (mouse.screenY < panel.screenGeometry.y + panel.screenGeometry.height-(mouse.screenX-panel.screenGeometry.x)*screenAspect) {
+                        newLocation = PlasmaCore.Types.TopEdge;
+                    } else {
+                        newLocation = PlasmaCore.Types.RightEdge;
+                    }
+
+                } else {
+                    if (mouse.screenY < panel.screenGeometry.y + panel.screenGeometry.height-(mouse.screenX-panel.screenGeometry.x)*screenAspect) {
+                        newLocation = PlasmaCore.Types.LeftEdge;
+                    } else {
+                        newLocation = PlasmaCore.Types.BottomEdge;
+                    }
+                }
+            }
+            panel.location = newLocation
+
+            switch (newLocation) {
+                case PlasmaCore.Types.TopEdge:
+                    var y = Math.max(mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y, panel.height);
+                    configDialog.y = y;
+                    panel.distance = Math.max(y - panel.height - panel.screenToFollow.geometry.y, 0);
+                    break
+                case PlasmaCore.Types.LeftEdge:
+                    var x = Math.max(mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x, panel.width);
+                    configDialog.x = x;
+                    panel.distance = Math.max(x - panel.width - panel.screenToFollow.geometry.x, 0);
+                    break;
+                case PlasmaCore.Types.RightEdge:
+                    var x = Math.min(mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x, mouse.screen.geometry.x + mouse.screen.size.width - panel.width - configDialog.width);
+                    configDialog.x = x;
+                    panel.distance = Math.max(mouse.screen.size.width - (x - mouse.screen.geometry.x) - panel.width - configDialog.width, 0);
+                    break;
+                case PlasmaCore.Types.BottomEdge:
+                default:
+                    var y = Math.min(mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y, mouse.screen.geometry.y + mouse.screen.size.height - panel.height - configDialog.height);
+                    configDialog.y = y;
+                    panel.distance = Math.max(mouse.screen.size.height - (y - mouse.screen.geometry.y) - panel.height - configDialog.height, 0);
+            }
+
+            lastX = mouse.screenX
+            lastY = mouse.screenY
+        }
+        onReleased: {
+            panel.distance = 0
+            panelResetAnimation.running = true
+        }
+    }
+
     QQC2.Action {
         shortcut: "Escape"
         onTriggered: {
             // avoid leaving the panel in an inconsistent state when escaping while dragging it
-            // "checked" means "pressed" in this case, we abuse that property to make the button look pressed
-            if (edgeHandle.checked) {
+            if (mel.pressed) {
                 return
             }
 
@@ -87,13 +164,15 @@ Item {
         rowSpacing: PlasmaCore.Units.smallSpacing
         columnSpacing: PlasmaCore.Units.smallSpacing
 
-        EdgeHandle {
-            id: edgeHandle
-            Layout.alignment: Qt.AlignHCenter
+        PlasmaComponents3.Label {
+            Layout.fillWidth: true
+            wrapMode: Text.Wrap
+            horizontalAlignment: Qt.AlignHCenter
+            text: i18ndc("plasma_shell_org.kde.plasma.desktop", "Minimize the length of this string as much as possible", "Drag to move")
         }
         Item {
-            Layout.preferredWidth: PlasmaCore.Units.gridUnit
-            Layout.preferredHeight: PlasmaCore.Units.gridUnit
+            Layout.preferredWidth: dialogRoot.vertical ? 0 : PlasmaCore.Units.gridUnit * 8
+            Layout.preferredHeight: dialogRoot.vertical ? PlasmaCore.Units.gridUnit * 8 : 0
         }
         PlasmaComponents3.Label {
             id: spinBoxLabel
