@@ -176,7 +176,7 @@ void GlobalAccelModel::save()
                     keys.append(key);
                 }
                 qCDebug(KCMKEYS) << "Saving" << actionId << action.activeShortcuts << keys;
-                auto reply = m_globalAccelInterface->setForeignShortcut_v2(actionId, keys);
+                auto reply = m_globalAccelInterface->setForeignShortcutKeys(actionId, keys);
                 reply.waitForFinished();
                 if (!reply.isValid()) {
                     qCCritical(KCMKEYS) << "Error while saving";
