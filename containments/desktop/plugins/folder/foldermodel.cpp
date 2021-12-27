@@ -1349,21 +1349,20 @@ QVariant FolderModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    if (role == BlankRole) {
+    switch (role) {
+    case BlankRole:
         return m_dragIndexes.contains(index);
-    } else if (role == SelectedRole) {
+    case SelectedRole:
         return m_selectionModel->isSelected(index);
-    } else if (role == IsDirRole) {
+    case IsDirRole:
         return isDir(mapToSource(index), m_dirModel);
-    } else if (role == IsLinkRole) {
-        const KFileItem item = itemForIndex(index);
-        return item.isLink();
-    } else if (role == IsHiddenRole) {
-        const KFileItem item = itemForIndex(index);
-        return item.isHidden();
-    } else if (role == UrlRole) {
+    case IsLinkRole:
+        return itemForIndex(index).isLink();
+    case IsHiddenRole:
+        return itemForIndex(index).isHidden();
+    case UrlRole:
         return itemForIndex(index).url();
-    } else if (role == LinkDestinationUrl) {
+    case LinkDestinationUrl: {
         const KFileItem item = itemForIndex(index);
 
         if (m_parseDesktopFiles && item.isDesktopFile()) {
@@ -1375,17 +1374,21 @@ QVariant FolderModel::data(const QModelIndex &index, int role) const
         }
 
         return item.targetUrl();
-    } else if (role == SizeRole) {
-        bool isDir = data(index, IsDirRole).toBool();
+    }
+    case SizeRole: {
+        const bool isDir = data(index, IsDirRole).toBool();
 
         if (!isDir) {
             return m_dirModel->data(mapToSource(QSortFilterProxyModel::index(index.row(), 1)), Qt::DisplayRole);
         }
-    } else if (role == TypeRole) {
+
+        break;
+    }
+    case TypeRole:
         return m_dirModel->data(mapToSource(QSortFilterProxyModel::index(index.row(), 6)), Qt::DisplayRole);
-    } else if (role == FileNameRole) {
+    case FileNameRole:
         return itemForIndex(index).url().fileName();
-    } else if (role == FileNameWrappedRole) {
+    case FileNameWrappedRole:
         return KStringHandler::preProcessWrap(itemForIndex(index).text());
     }
 
