@@ -151,29 +151,6 @@ EmptyPage {
             }
         }
 
-        Item {
-            parent: view
-            anchors.fill: parent
-            z: 1
-            TapHandler { // Filter mouse events to avoid flicking like ScrollView
-                // Do not accept stylus as it will cause bug 445111.
-                acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad | PointerDevice.TouchScreen
-                onGrabChanged: {
-                    const pressed = transition & (EventPoint.GrabPassive | EventPoint.GrabExclusive) && point.state & EventPoint.Pressed
-                    const deviceType = point.event.device.type
-                    if (pressed && deviceType & (PointerDevice.Mouse | PointerDevice.TouchPad)) {
-                        view.interactive = false
-                        verticalScrollBar.interactive = true
-                    } else if (pressed && deviceType & PointerDevice.TouchScreen) {
-                        // No need for binding. Touching will cause pressed() to be emitted again.
-                        view.interactive = view.height < view.contentHeight
-                        verticalScrollBar.interactive = false
-                    }
-                    point.accepted = false
-                }
-            }
-        }
-
         PC3.ScrollBar.vertical: PC3.ScrollBar {
             id: verticalScrollBar
             parent: root
@@ -184,6 +161,7 @@ EmptyPage {
 
         Kirigami.WheelHandler {
             target: view
+            filterMouseEvents: true
         }
 
         Connections {
