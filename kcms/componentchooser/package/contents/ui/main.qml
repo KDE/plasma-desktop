@@ -90,6 +90,14 @@ KCM.SimpleKCM {
             }
         }
         ComponentComboBox {
+            component: kcm.musicPlayers
+            label: i18n("Music player:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.musicPlayers.isDefaults
+            }
+        }
+        ComponentComboBox {
             component: kcm.geoUriHandlers
             label: i18n("Map:")
 

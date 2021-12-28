@@ -34,6 +34,7 @@ public:
     ComponentChooser *telUriHandlers() const;
     ComponentChooser *textEditors() const;
     ComponentChooser *imageViewers() const;
+    ComponentChooser *musicPlayers() const;
 
 private:
     ComponentChooser *m_browsers;
@@ -44,6 +45,7 @@ private:
     ComponentChooser *m_telUriHandlers;
     ComponentChooser *m_textEditors;
     ComponentChooser *m_imageViewers;
+    ComponentChooser *m_musicPlayers;
 };
 
 #endif // COMPONENTCHOOSERDATA_H

@@ -24,6 +24,7 @@ class KcmComponentChooser : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(ComponentChooser *telUriHandlers READ telUriHandlers CONSTANT)
     Q_PROPERTY(ComponentChooser *textEditors READ textEditors CONSTANT)
     Q_PROPERTY(ComponentChooser *imageViewers READ imageViewers CONSTANT)
+    Q_PROPERTY(ComponentChooser *musicPlayers READ musicPlayers CONSTANT)
 
 public:
     KcmComponentChooser(QObject *parent, const QVariantList &args);
@@ -36,6 +37,7 @@ public:
     ComponentChooser *telUriHandlers() const;
     ComponentChooser *textEditors() const;
     ComponentChooser *imageViewers() const;
+    ComponentChooser *musicPlayers() const;
 
     void defaults() override;
     void load() override;
