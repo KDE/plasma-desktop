@@ -50,26 +50,10 @@ KCM.SimpleKCM {
 
             Layout.preferredWidth: form.longestComboBox
 
-            component: kcm.emailClients
-            label: i18n("Email client:")
-
-            KCM.SettingHighlighter {
-                highlight: !kcm.emailClients.isDefaults
-            }
-        }
-        ComponentComboBox {
             id: terminalCombo
 
             Layout.preferredWidth: form.longestComboBox
 
-            component: kcm.terminalEmulators
-            label: i18n("Terminal emulator:")
-
-            KCM.SettingHighlighter {
-                highlight: !kcm.terminalEmulators.isDefaults
-            }
-        }
-        ComponentComboBox {
             id: mapCombo
 
             Layout.preferredWidth: form.longestComboBox
@@ -90,6 +74,14 @@ KCM.SimpleKCM {
             }
         }
         ComponentComboBox {
+            component: kcm.pdfViewers
+            label: i18n("PDF viewer:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.pdfViewers.isDefaults
+            }
+        }
+        ComponentComboBox {
             component: kcm.musicPlayers
             label: i18n("Music player:")
 
@@ -106,11 +98,19 @@ KCM.SimpleKCM {
             }
         }
         ComponentComboBox {
-            component: kcm.pdfViewers
-            label: i18n("PDF viewer:")
+            component: kcm.emailClients
+            label: i18n("Email client:")
 
             KCM.SettingHighlighter {
-                highlight: !kcm.pdfViewers.isDefaults
+                highlight: !kcm.emailClients.isDefaults
+            }
+        }
+        ComponentComboBox {
+            component: kcm.terminalEmulators
+            label: i18n("Terminal emulator:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.terminalEmulators.isDefaults
             }
         }
         ComponentComboBox {
