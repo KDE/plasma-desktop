@@ -93,8 +93,14 @@ PlasmaCore.Dialog {
                         visible: true
                         inPopup: true
 
-                        onLabelTextChanged: Qt.callLater(groupFilter.updateMaxTextWidth) // ListView.onAdd included
                         ListView.onRemove: Qt.callLater(groupFilter.updateMaxTextWidth)
+                        Connections {
+                            enabled: index < 20 // 20 is based on performance considerations.
+
+                            function onLabelTextChanged() { // ListView.onAdd included
+                                Qt.callLater(groupFilter.updateMaxTextWidth);
+                            }
+                        }
                     }
 
                     function updateMaxTextWidth() {
