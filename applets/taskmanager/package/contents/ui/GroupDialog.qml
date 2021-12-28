@@ -120,9 +120,6 @@ PlasmaCore.Dialog {
 
                 onCountChanged: if (count > 0) backend.cancelHighlightWindows()
             }
-            // HACK: Prevent binding loop warnings, so the scrollbar will not block the text.
-            onLeftPaddingChanged: groupListView.maxWidth = Qt.binding(() => groupListView.getMaxWidth() + leftPadding + rightPadding)
-            onRightPaddingChanged: groupListView.maxWidth = Qt.binding(() => groupListView.getMaxWidth() + leftPadding + rightPadding)
         }
     }
 
