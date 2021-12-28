@@ -98,6 +98,22 @@ KCM.SimpleKCM {
             }
         }
         ComponentComboBox {
+            component: kcm.videoPlayers
+            label: i18n("Video player:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.videoPlayers.isDefaults
+            }
+        }
+        ComponentComboBox {
+            component: kcm.pdfViewers
+            label: i18n("PDF viewer:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.pdfViewers.isDefaults
+            }
+        }
+        ComponentComboBox {
             component: kcm.geoUriHandlers
             label: i18n("Map:")
 

@@ -9,7 +9,7 @@
 ComponentChooserImageViewer::ComponentChooserImageViewer(QObject *parent)
     : ComponentChooser(parent,
                        QStringLiteral("image/png"),
-                       QStringLiteral("ImageViewer"),
+                       QStringLiteral("Viewer"),
                        QStringLiteral("org.kde.gwenview.desktop"),
                        i18n("Select default image viewer"))
 {
