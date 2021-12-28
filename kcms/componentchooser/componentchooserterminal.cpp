@@ -35,7 +35,7 @@ void ComponentChooserTerminal::load()
     QString preferredService = settings.terminalApplication();
 
     KApplicationTrader::query([&preferredServiceAdded, preferredService, this](const KService::Ptr &service) {
-        if (service->exec().isEmpty() || !service->categories().contains(m_type) || service->noDisplay()) {
+        if (service->exec().isEmpty() || !service->categories().contains(m_category) || service->noDisplay()) {
             return false;
         }
         QVariantMap application;

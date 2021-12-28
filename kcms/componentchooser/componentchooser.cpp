@@ -18,10 +18,10 @@
 #include <KService>
 #include <KSharedConfig>
 
-ComponentChooser::ComponentChooser(QObject *parent, const QString &mimeType, const QString &type, const QString &defaultApplication, const QString &dialogText)
+ComponentChooser::ComponentChooser(QObject *parent, const QString &mimeType, const QString &category, const QString &defaultApplication, const QString &dialogText)
     : QObject(parent)
     , m_mimeType(mimeType)
-    , m_type(type)
+    , m_category(category)
     , m_defaultApplication(defaultApplication)
     , m_dialogText(dialogText)
 {
@@ -43,7 +43,7 @@ void ComponentChooser::load()
     KService::Ptr preferredService = KApplicationTrader::preferredService(m_mimeType);
 
     KApplicationTrader::query([&preferredServiceAdded, preferredService, this](const KService::Ptr &service) {
-        if (service->exec().isEmpty() || (!m_type.isEmpty() && !service->categories().contains(m_type)) || (!service->serviceTypes().contains(m_mimeType))) {
+        if (service->exec().isEmpty() || (!m_category.isEmpty() && !service->categories().contains(m_category)) || (!service->serviceTypes().contains(m_mimeType))) {
             return false;
         }
         QVariantMap application;

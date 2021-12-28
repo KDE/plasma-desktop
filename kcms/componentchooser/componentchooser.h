@@ -46,7 +46,7 @@ protected:
     int m_index = -1;
     std::optional<int> m_defaultIndex;
     QString m_mimeType;
-    QString m_type;
+    QString m_category;
     QString m_defaultApplication;
     QString m_previousApplication;
     QString m_dialogText;
