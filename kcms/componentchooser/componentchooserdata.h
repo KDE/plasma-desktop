@@ -32,6 +32,7 @@ public:
     ComponentChooser *emailClients() const;
     ComponentChooser *geoUriHandlers() const;
     ComponentChooser *telUriHandlers() const;
+    ComponentChooser *textEditors() const;
 
 private:
     ComponentChooser *m_browsers;
@@ -40,6 +41,7 @@ private:
     ComponentChooser *m_emailClients;
     ComponentChooser *m_geoUriHandlers;
     ComponentChooser *m_telUriHandlers;
+    ComponentChooser *m_textEditors;
 };
 
 #endif // COMPONENTCHOOSERDATA_H

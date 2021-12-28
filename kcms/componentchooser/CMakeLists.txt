@@ -8,6 +8,7 @@ set(componentchooser_SRCS
     componentchooseremail.cpp
     componentchooserterminal.cpp
     componentchooserfilemanager.cpp
+    componentchoosertexteditor.cpp
     componentchooserdata.cpp
     componentchoosergeo.cpp
     componentchoosertel.cpp

@@ -16,6 +16,7 @@
 #include "componentchooseremail.h"
 #include "componentchooserfilemanager.h"
 #include "componentchooserterminal.h"
+#include "componentchoosertexteditor.h"
 
 K_PLUGIN_FACTORY_WITH_JSON(KcmComponentChooserFactory, "componentchooser.json", registerPlugin<KcmComponentChooser>(); registerPlugin<ComponentChooserData>();)
 
@@ -42,6 +43,7 @@ KcmComponentChooser::KcmComponentChooser(QObject *parent, const QVariantList &ar
     connect(emailClients(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
     connect(geoUriHandlers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
     connect(telUriHandlers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
+    connect(textEditors(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
 }
 
 ComponentChooser *KcmComponentChooser::browsers() const
@@ -72,6 +74,11 @@ ComponentChooser *KcmComponentChooser::geoUriHandlers() const
 ComponentChooser *KcmComponentChooser::telUriHandlers() const
 {
     return m_data->telUriHandlers();
+}
+
+ComponentChooser *KcmComponentChooser::textEditors() const
+{
+    return m_data->textEditors();
 }
 
 void KcmComponentChooser::defaults()
