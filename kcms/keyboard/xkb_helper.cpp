@@ -151,7 +151,6 @@ bool XkbHelper::initializeKeyboardLayouts(KeyboardConfig &config)
         }
     }
     if (config.resetOldXkbOptions) {
-    if (config.resetOldXkbOptions) {
         // Pass -option "" to clear previously set options
         setxkbmapCommandArguments.append(QStringLiteral("-option"));
         setxkbmapCommandArguments.append(QStringLiteral(""));
