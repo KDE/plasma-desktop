@@ -82,6 +82,14 @@ KCM.SimpleKCM {
             }
         }
         ComponentComboBox {
+            component: kcm.imageViewers
+            label: i18n("Image viewer:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.imageViewers.isDefaults
+            }
+        }
+        ComponentComboBox {
             component: kcm.geoUriHandlers
             label: i18n("Map:")
 

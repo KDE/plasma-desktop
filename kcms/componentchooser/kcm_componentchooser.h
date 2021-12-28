@@ -23,6 +23,7 @@ class KcmComponentChooser : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(ComponentChooser *geoUriHandlers READ geoUriHandlers CONSTANT)
     Q_PROPERTY(ComponentChooser *telUriHandlers READ telUriHandlers CONSTANT)
     Q_PROPERTY(ComponentChooser *textEditors READ textEditors CONSTANT)
+    Q_PROPERTY(ComponentChooser *imageViewers READ imageViewers CONSTANT)
 
 public:
     KcmComponentChooser(QObject *parent, const QVariantList &args);
@@ -34,6 +35,7 @@ public:
     ComponentChooser *geoUriHandlers() const;
     ComponentChooser *telUriHandlers() const;
     ComponentChooser *textEditors() const;
+    ComponentChooser *imageViewers() const;
 
     void defaults() override;
     void load() override;
