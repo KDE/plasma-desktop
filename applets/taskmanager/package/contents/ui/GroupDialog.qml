@@ -98,14 +98,15 @@ PlasmaCore.Dialog {
                     }
 
                     function updateMaxTextWidth() {
-                        maxTextWidth = 0;
+                        let tempMaxTextWidth = 0;
                         // 20 is based on performance considerations.
                         for (let i = 0; i < Math.min(count, 20); i++) {
                             textMetrics.text = items.get(i).model.display;
-                            if (textMetrics.boundingRect.width > maxTextWidth) {
-                                maxTextWidth = textMetrics.boundingRect.width;
+                            if (textMetrics.boundingRect.width > tempMaxTextWidth) {
+                                tempMaxTextWidth = textMetrics.boundingRect.width;
                             }
                         }
+                        maxTextWidth = tempMaxTextWidth;
                     }
                 }
 
