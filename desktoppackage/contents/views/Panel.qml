@@ -150,12 +150,17 @@ Item {
     Component.onCompleted: state = Qt.binding(() => panel.opacityMode === 0 ? (visibleWindowsModel.count > 0 && !kwindowsystem.showingDesktop ? "opaque" : "transparent")
                                                                             : (panel.opacityMode === 1 ? "opaque" : "transparent"))
     onStateChanged: {
-        if (containment) {
-            if (state === 'opaque') {
-                containment.containmentDisplayHints |= PlasmaCore.Types.DesktopFullyCovered;
+        if (!containment) {
+            return
+        }
+        if (state === 'opaque') {
+            if (panel.opacityMode === 1) {
+                containment.containmentDisplayHints |= PlasmaCore.Types.ContainmentOpaque
             } else {
-                containment.containmentDisplayHints &= ~PlasmaCore.Types.DesktopFullyCovered;
+                containment.containmentDisplayHints |= PlasmaCore.Types.DesktopFullyCovered
             }
+        } else {
+            containment.containmentDisplayHints &= ~PlasmaCore.Types.DesktopFullyCovered
         }
     }
     state: ""
