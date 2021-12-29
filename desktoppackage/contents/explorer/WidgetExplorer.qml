@@ -156,6 +156,7 @@ PC3.Page {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Click on an applet to add it to the desktop, or drag to place it anywhere")
 
                 wrapMode: Text.Wrap
+                horizontalAlignment: Text.AlignHCenter
                 Layout.fillWidth: true
             }
         }
@@ -225,6 +226,9 @@ PC3.Page {
                     }
                     TapHandler {
                         onTapped: apply()
+                    }
+                    HoverHandler {
+                        onHoveredChanged: if (hovered) apply()
                     }
                 }
             }
