@@ -69,13 +69,12 @@ PlasmaCore.Dialog {
             ListView {
                 id: groupListView
 
-                readonly property int maxWidth: getMaxWidth()
+                readonly property int maxWidth: groupFilter.maxTextWidth
+                                                + LayoutManager.horizontalMargins()
+                                                + PlasmaCore.Units.iconSizes.medium
+                                                + 2 * (LayoutManager.labelMargin + LayoutManager.iconMargin)
                 // Use groupFilter.count because sometimes count is not updated in time (BUG 446105)
                 readonly property int maxHeight: groupFilter.count * (LayoutManager.verticalMargins() + Math.max(theme.mSize(theme.defaultFont).height, PlasmaCore.Units.iconSizes.medium))
-
-                function getMaxWidth() {
-                    return groupFilter.maxTextWidth + LayoutManager.horizontalMargins() + PlasmaCore.Units.iconSizes.medium + 2 * (LayoutManager.labelMargin + LayoutManager.iconMargin);
-                }
 
                 model: DelegateModel {
                     id: groupFilter
