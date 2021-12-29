@@ -187,32 +187,40 @@ Item {
             anchors.centerIn: parent
             spacing: PlasmaCore.Units.smallSpacing
 
+            ColumnLayout {
+                spacing: PlasmaCore.Units.smallSpacing
 
-            PlasmaComponents3.ToolButton {
-                property QtObject qAction: plasmoid.action("add widgets")
-                text: qAction.text
-                icon.name: "list-add"
-                onClicked: qAction.trigger()
+                PlasmaComponents3.ToolButton {
+                    property QtObject qAction: plasmoid.action("add widgets")
+                    text: qAction.text
+                    icon.name: "list-add"
+                    onClicked: qAction.trigger()
+                }
+                PlasmaComponents3.ToolButton {
+                    property QtObject qAction: plasmoid.action("configure")
+                    text: qAction.text
+                    icon.name: "preferences-desktop-wallpaper"
+                    onClicked: qAction.trigger()
+                }
             }
-            PlasmaComponents3.ToolButton {
-                property QtObject qAction: plasmoid.action("configure")
-                text: qAction.text
-                icon.name: "preferences-desktop-wallpaper"
-                onClicked: qAction.trigger()
-            }
-            PlasmaComponents3.ToolButton {
-                text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Choose Global Theme…")
-                icon.name: "preferences-desktop-theme-global"
-                onClicked: KQuickControlsAddons.KCMShell.openSystemSettings("kcm_lookandfeel")
-            }
-            PlasmaComponents3.ToolButton {
-                text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Configure Display Settings…")
-                icon.name: "preferences-desktop-display"
-                onClicked: KQuickControlsAddons.KCMShell.openSystemSettings("kcm_kscreen")
+            ColumnLayout {
+                spacing: PlasmaCore.Units.smallSpacing
+
+                PlasmaComponents3.ToolButton {
+                    text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Choose Global Theme…")
+                    icon.name: "preferences-desktop-theme-global"
+                    onClicked: KQuickControlsAddons.KCMShell.openSystemSettings("kcm_lookandfeel")
+                }
+                PlasmaComponents3.ToolButton {
+                    text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Configure Display Settings…")
+                    icon.name: "preferences-desktop-display"
+                    onClicked: KQuickControlsAddons.KCMShell.openSystemSettings("kcm_kscreen")
+                }
             }
             PlasmaComponents3.ToolButton {
                 icon.name: "window-close"
                 Layout.preferredWidth: height
+                Layout.alignment: Qt.AlignVCenter
                 onClicked: plasmoid.editMode = false
                 PlasmaComponents3.ToolTip {
                     text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Exit Edit Mode")
