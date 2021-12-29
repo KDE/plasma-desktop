@@ -218,10 +218,8 @@ Item {
             }
             Item { Layout.fillHeight: true }
             // TODO: make UI for selecting which containment to add to
-            PlasmaComponents.Button {
-                text: i18n("Add")
-                onClicked: widgetExplorer.addApplet(model.pluginName)
-                Layout.alignment: Qt.AlignRight
+            TapHandler {
+                onTapped: widgetExplorer.addApplet(model.pluginName)
             }
         }
     }

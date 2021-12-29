@@ -151,6 +151,13 @@ PC3.Page {
                     }
                 }
             }
+
+            PC3.Label {
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Click on an applet to add it to the desktop, or drag to place it anywhere")
+
+                wrapMode: Text.Wrap
+                Layout.fillWidth: true
+            }
         }
     }
 
