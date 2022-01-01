@@ -352,6 +352,11 @@ private:
     QObject *m_appletInterface = nullptr;
     bool m_complete;
     QPoint m_menuPosition;
+
+    /**
+     * This property is used to save the current activity when FolderModel is initialized.
+     */
+    QString m_currentActivity;
 };
 
 class DragTracker : public QObject

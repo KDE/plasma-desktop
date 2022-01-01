@@ -21,6 +21,7 @@ static const QLatin1String desktop(QLatin1String("Desktop"));
 
 void PositionerTest::initTestCase()
 {
+    m_currentActivity = QStringLiteral("00000000-0000-0000-0000-000000000000");
     m_folderDir = new QTemporaryDir();
 
     QDir dir(m_folderDir->path());
@@ -249,7 +250,7 @@ void PositionerTest::tst_proxyMapping()
     const auto movedItem = m_folderModel->index(1, 0).data(FolderModel::UrlRole).toUrl();
 
     // move the item 1 from source (now in position 2) to the second screen
-    screenMapper->addMapping(movedItem, 1);
+    screenMapper->addMapping(movedItem, 1, m_currentActivity);
 
     expectedProxy2SourceScreen1[0] = 0;
     expectedSource2ProxyScreen1[0] = 0;
@@ -268,7 +269,7 @@ void PositionerTest::tst_proxyMapping()
     verifyMapping(secondPositioner.sourceToProxyMapping(), expectedSource2ProxyScreen1);
 
     // move back the same item to the first screen
-    screenMapper->addMapping(movedItem, 0);
+    screenMapper->addMapping(movedItem, 0, m_currentActivity);
 
     // nothing on the second screen
     expectedSource2ProxyScreen1.clear();

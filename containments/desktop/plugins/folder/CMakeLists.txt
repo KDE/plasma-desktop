@@ -32,6 +32,7 @@ target_link_libraries(folderplugin
                       Qt::Core
                       Qt::Qml
                       Qt::Quick
+                      KF5::Activities
                       KF5::CoreAddons
                       KF5::KIOCore
                       KF5::KIOWidgets

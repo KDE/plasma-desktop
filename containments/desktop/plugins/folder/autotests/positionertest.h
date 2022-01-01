@@ -42,6 +42,7 @@ private Q_SLOTS:
 private:
     void checkPositions(int perStripe);
 
+    QString m_currentActivity;
     Positioner *m_positioner;
     FolderModel *m_folderModel;
     QTemporaryDir *m_folderDir;

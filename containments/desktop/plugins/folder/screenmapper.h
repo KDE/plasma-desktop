@@ -35,17 +35,27 @@ public:
     static ScreenMapper *instance();
     ~ScreenMapper() override = default;
 
+    /**
+     * Convert m_screenItemMap to QStringList
+     *
+     * The format of screenMapping is
+     * - URL of the item
+     * - Screen ID
+     * - Activity ID
+     *
+     * @return QStringList the formatted config strings in a list
+     */
     QStringList screenMapping() const;
     void setScreenMapping(const QStringList &mapping);
 
-    int screenForItem(const QUrl &url) const;
-    void addMapping(const QUrl &url, int screen, MappingSignalBehavior behavior = ImmediateSignal);
-    void removeFromMap(const QUrl &url);
-    void setCorona(Plasma::Corona *corona);
+    int screenForItem(const QUrl &url, const QString &activity) const;
+    void addMapping(const QUrl &url, int screen, const QString &activity, MappingSignalBehavior behavior = ImmediateSignal);
+    void removeFromMap(const QUrl &url, const QString &activity);
+    void setCorona(Plasma::Corona *corona, const QString &activity);
 
-    void addScreen(int screenId, const QUrl &screenUrl);
-    void removeScreen(int screenId, const QUrl &screenUrl);
-    int firstAvailableScreen(const QUrl &screenUrl) const;
+    void addScreen(int screenId, const QString &activity, const QUrl &screenUrl);
+    void removeScreen(int screenId, const QString &activity, const QUrl &screenUrl);
+    int firstAvailableScreen(const QUrl &screenUrl, const QString &activity) const;
     void removeItemFromDisabledScreen(const QUrl &url);
 
     bool sharedDesktops() const
@@ -65,15 +75,25 @@ Q_SIGNALS:
     void screensChanged() const;
 
 private:
+    /**
+     * The format of DisabledScreensMap is:
+     * - Screen ID (controlled by readingScreenId)
+     * - Activity ID (controlled by readingActivityId)
+     * - The number of items
+     * - List of items
+     *
+     * @return QStringList the formatted config strings in a list
+     */
+    QStringList disabledScreensMap() const;
     void saveDisabledScreensMap() const;
-    void readDisabledScreensMap();
+    void readDisabledScreensMap(const QStringList &serializedMap);
 
     ScreenMapper(QObject *parent = nullptr);
 
-    QHash<QUrl, int> m_screenItemMap;
-    QHash<int, QVector<QUrl>> m_itemsOnDisabledScreensMap;
-    QHash<QUrl, QVector<int>> m_screensPerPath; // screens per registered path
-    QVector<int> m_availableScreens;
+    QHash<std::pair<QUrl, QString /* activity ID */>, int> m_screenItemMap;
+    QHash<std::pair<int /* screen */, QString /* activity ID */>, QVector<QUrl>> m_itemsOnDisabledScreensMap;
+    QHash<QUrl, QVector<std::pair<int /* screen */, QString /* activity ID */>>> m_screensPerPath; // screens per registered path
+    QVector<std::pair<int /* screen */, QString /* activity ID */>> m_availableScreens;
     Plasma::Corona *m_corona = nullptr;
     QTimer *const m_screenMappingChangedTimer;
     bool m_sharedDesktops = false; // all screens share the same desktops, disabling the screen mapping

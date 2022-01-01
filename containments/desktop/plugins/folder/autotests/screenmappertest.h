@@ -32,6 +32,7 @@ private:
     void addScreens(const QUrl &path);
 
     ScreenMapper *m_screenMapper;
+    QString m_currentActivity;
 };
 
 #endif // SCREENMAPPERTEST_H

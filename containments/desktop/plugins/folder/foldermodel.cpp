@@ -33,6 +33,7 @@
 #include <QTimer>
 #include <qplatformdefs.h>
 
+#include <KActivities/Consumer>
 #include <KAuthorized>
 #include <KConfigGroup>
 #include <KDirWatch>
@@ -163,6 +164,7 @@ FolderModel::FolderModel(QObject *parent)
     , m_screenUsed(false)
     , m_screenMapper(ScreenMapper::instance())
     , m_complete(false)
+    , m_currentActivity(KActivities::Consumer().currentActivity())
 {
     connect(DragTracker::self(), &DragTracker::dragInProgressChanged, this, &FolderModel::draggingChanged);
     connect(DragTracker::self(), &DragTracker::dragInProgressChanged, this, &FolderModel::dragInProgressAnywhereChanged);
@@ -253,7 +255,7 @@ FolderModel::~FolderModel()
         // disconnect so we don't handle signals from the screen mapper when
         // removeScreen is called
         m_screenMapper->disconnect(this);
-        m_screenMapper->removeScreen(m_screen, resolvedUrl());
+        m_screenMapper->removeScreen(m_screen, m_currentActivity, resolvedUrl());
     }
 }
 
@@ -327,7 +329,7 @@ void FolderModel::invalidateFilterIfComplete()
 void FolderModel::newFileMenuItemCreated(const QUrl &url)
 {
     if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
-        m_screenMapper->addMapping(url, m_screen, ScreenMapper::DelayedSignal);
+        m_screenMapper->addMapping(url, m_screen, m_currentActivity, ScreenMapper::DelayedSignal);
         m_dropTargetPositions.insert(url.fileName(), localMenuPosition());
         m_menuPosition = {};
         m_dropTargetPositionsCleanup->start();
@@ -383,8 +385,8 @@ void FolderModel::setUrl(const QString &url)
     Q_EMIT iconNameChanged();
 
     if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
-        m_screenMapper->removeScreen(m_screen, oldUrl);
-        m_screenMapper->addScreen(m_screen, resolvedUrl());
+        m_screenMapper->removeScreen(m_screen, m_currentActivity, oldUrl);
+        m_screenMapper->addScreen(m_screen, m_currentActivity, resolvedUrl());
     }
 }
 
@@ -704,7 +706,7 @@ void FolderModel::setScreen(int screen)
 
     m_screen = screen;
     if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
-        m_screenMapper->addScreen(screen, resolvedUrl());
+        m_screenMapper->addScreen(screen, m_currentActivity, resolvedUrl());
     }
     Q_EMIT screenChanged();
 }
@@ -1170,7 +1172,7 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
 
         for (const auto &url : mimeData->urls()) {
             m_dropTargetPositions.insert(url.fileName(), dropPos);
-            m_screenMapper->addMapping(mappableUrl(url), m_screen, ScreenMapper::DelayedSignal);
+            m_screenMapper->addMapping(mappableUrl(url), m_screen, m_currentActivity, ScreenMapper::DelayedSignal);
             m_screenMapper->removeItemFromDisabledScreen(mappableUrl(url));
         }
         Q_EMIT move(x, y, mimeData->urls());
@@ -1206,7 +1208,7 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
             const QList<QUrl> urls = mimeData->urls();
             for (const auto &url : urls) {
                 m_dropTargetPositions.insert(url.fileName(), dropPos);
-                m_screenMapper->addMapping(mappableUrl(url), m_screen, ScreenMapper::DelayedSignal);
+                m_screenMapper->addMapping(mappableUrl(url), m_screen, m_currentActivity, ScreenMapper::DelayedSignal);
                 m_screenMapper->removeItemFromDisabledScreen(mappableUrl(url));
             }
             m_dropTargetPositionsCleanup->start();
@@ -1259,7 +1261,7 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
                 QUrl url = resolvedUrl();
                 // if the folderview's folder is a standard path, just use the targetUrl for mapping
                 if (targetUrl.toString().startsWith(url.toString())) {
-                    m_screenMapper->addMapping(targetUrl, m_screen, ScreenMapper::DelayedSignal);
+                    m_screenMapper->addMapping(targetUrl, m_screen, m_currentActivity, ScreenMapper::DelayedSignal);
                 } else if (targetUrl.toString().startsWith(dropTargetUrl.toString())) {
                     // if the folderview's folder is a special path, like desktop:// , we need to convert
                     // the targetUrl file:// path to a desktop:/ path for mapping
@@ -1267,7 +1269,7 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
                     auto filePath = targetUrl.path();
                     if (filePath.startsWith(destPath)) {
                         url.setPath(filePath.remove(0, destPath.length()));
-                        m_screenMapper->addMapping(url, m_screen, ScreenMapper::DelayedSignal);
+                        m_screenMapper->addMapping(url, m_screen, m_currentActivity, ScreenMapper::DelayedSignal);
                     }
                 }
             }
@@ -1471,7 +1473,7 @@ void FolderModel::statResult(KJob *job)
 void FolderModel::evictFromIsDirCache(const KFileItemList &items)
 {
     for (const KFileItem &item : items) {
-        m_screenMapper->removeFromMap(item.url());
+        m_screenMapper->removeFromMap(item.url(), m_currentActivity);
         m_isDirCache.remove(item.url());
     }
 }
@@ -1602,14 +1604,14 @@ bool FolderModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParen
 
     if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
         const QUrl url = item.url();
-        const int screen = m_screenMapper->screenForItem(url);
+        const int screen = m_screenMapper->screenForItem(url, m_currentActivity);
         // don't do anything if the folderview is not associated with a screen
         if (m_screenUsed && screen == -1) {
             // The item is not associated with a screen, probably because this is the first
             // time we see it or the folderview was previously used as a regular applet.
             // Associated with this folderview if the view is on the first available screen
-            if (m_screen == m_screenMapper->firstAvailableScreen(resolvedUrl())) {
-                m_screenMapper->addMapping(url, m_screen, ScreenMapper::DelayedSignal);
+            if (m_screen == m_screenMapper->firstAvailableScreen(resolvedUrl(), m_currentActivity)) {
+                m_screenMapper->addMapping(url, m_screen, m_currentActivity, ScreenMapper::DelayedSignal);
             } else {
                 return false;
             }
@@ -2041,7 +2043,7 @@ void FolderModel::setAppletInterface(QObject *appletInterface)
                     Plasma::Corona *corona = containment->corona();
 
                     if (corona) {
-                        m_screenMapper->setCorona(corona);
+                        m_screenMapper->setCorona(corona, m_currentActivity);
                     }
                     setScreen(containment->screen());
                     connect(containment, &Plasma::Containment::screenChanged, this, &FolderModel::setScreen);

@@ -37,6 +37,7 @@ private Q_SLOTS:
 private:
     void createTestFolder(const QString &path);
 
+    QString m_currentActivity;
     FolderModel *m_folderModel;
     QTemporaryDir *m_folderDir;
 };

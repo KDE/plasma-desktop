@@ -38,6 +38,7 @@ void FolderModelTest::createTestFolder(const QString &path)
 
 void FolderModelTest::init()
 {
+    m_currentActivity = QStringLiteral("00000000-0000-0000-0000-000000000000");
     m_folderDir = new QTemporaryDir();
     createTestFolder(desktop);
     m_folderModel = new FolderModel(this);
@@ -273,7 +274,7 @@ void FolderModelTest::tst_multiScreen()
         const auto index = m_folderModel->index(i, 0);
         const auto name = index.data(FolderModel::UrlRole).toUrl();
         // all items are on the first screen by default
-        QCOMPARE(screenMapper->screenForItem(name), 0);
+        QCOMPARE(screenMapper->screenForItem(name, m_currentActivity), 0);
     }
 
     // move one file to a new screen
@@ -289,7 +290,7 @@ void FolderModelTest::tst_multiScreen()
     const auto count2 = secondFolderModel.rowCount();
     QCOMPARE(count2, 0);
 
-    screenMapper->addMapping(movedItem, 1);
+    screenMapper->addMapping(movedItem, 1, m_currentActivity);
     m_folderModel->invalidate();
     secondFolderModel.invalidate();
     s.wait(1000);
@@ -298,23 +299,23 @@ void FolderModelTest::tst_multiScreen()
     QCOMPARE(m_folderModel->rowCount(), count - 1);
     QCOMPARE(secondFolderModel.rowCount(), 1);
     QCOMPARE(secondFolderModel.index(0, 0).data(FolderModel::UrlRole).toUrl(), movedItem);
-    QCOMPARE(screenMapper->screenForItem(movedItem), 1);
+    QCOMPARE(screenMapper->screenForItem(movedItem, m_currentActivity), 1);
 
     // remove extra screen, we have all items back
-    screenMapper->removeScreen(1, stringToUrl(m_folderModel->url()));
+    screenMapper->removeScreen(1, m_currentActivity, stringToUrl(m_folderModel->url()));
     s.wait(500);
     QCOMPARE(m_folderModel->rowCount(), count);
     QCOMPARE(secondFolderModel.rowCount(), 0);
-    QCOMPARE(screenMapper->screenForItem(movedItem), 0);
+    QCOMPARE(screenMapper->screenForItem(movedItem, m_currentActivity), 0);
 
     // add back extra screen, the item is moved there
-    screenMapper->addScreen(1, stringToUrl(m_folderModel->url()));
+    screenMapper->addScreen(1, m_currentActivity, stringToUrl(m_folderModel->url()));
     s.wait(500);
     s2.wait(500);
     QCOMPARE(m_folderModel->rowCount(), count - 1);
     QCOMPARE(secondFolderModel.rowCount(), 1);
     QCOMPARE(secondFolderModel.index(0, 0).data(FolderModel::UrlRole).toUrl(), movedItem);
-    QCOMPARE(screenMapper->screenForItem(movedItem), 1);
+    QCOMPARE(screenMapper->screenForItem(movedItem, m_currentActivity), 1);
 
     // create a new item, it appears on the first screen
     QDir dir(m_folderDir->path());
@@ -324,7 +325,7 @@ void FolderModelTest::tst_multiScreen()
     s.wait(1000);
     QCOMPARE(m_folderModel->rowCount(), count);
     QCOMPARE(secondFolderModel.rowCount(), 1);
-    QCOMPARE(screenMapper->screenForItem(stringToUrl(QLatin1String("file://") + dir.path())), 0);
+    QCOMPARE(screenMapper->screenForItem(stringToUrl(QLatin1String("file://") + dir.path()), m_currentActivity), 0);
 }
 
 void FolderModelTest::tst_multiScreenDifferenPath()
