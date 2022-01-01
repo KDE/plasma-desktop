@@ -101,6 +101,16 @@ Item {
                 }
             }
 
+            Connections {
+                target: model
+
+                function onSelectedChanged() {
+                    if (dir.usedByContainment && model.selected) {
+                        gridView.currentIndex = model.index;
+                    }
+                }
+            }
+
             onHoveredChanged: {
                 if (hovered) {
                     if (plasmoid.configuration.selectionMarkers && Qt.styleHints.singleClickActivation) {

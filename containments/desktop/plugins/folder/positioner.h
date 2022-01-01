@@ -43,7 +43,6 @@ public:
     Q_INVOKABLE int map(int row) const;
 
     Q_INVOKABLE int nearestItem(int currentIndex, Qt::ArrowType direction);
-    Q_INVOKABLE int firstSelectedItem() const;
 
     Q_INVOKABLE bool isBlank(int row) const;
     Q_INVOKABLE int indexForUrl(const QUrl &url) const;
@@ -52,7 +51,17 @@ public:
 
     Q_INVOKABLE void reset();
 
-    Q_INVOKABLE void move(const QVariantList &moves);
+    /**
+     * Performs the move operation in the underlying model.
+     *
+     * @param moves List of indexes that were moved. Two
+     *              consecutive entries correspond to the
+     *              from and to position.
+     *
+     * @return The lowest index that was moved. Used to
+     *         determine the first selected item.
+     */
+    Q_INVOKABLE int move(const QVariantList &moves);
 
     QHash<int, QByteArray> roleNames() const override;
 
