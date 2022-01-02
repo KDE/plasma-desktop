@@ -28,11 +28,19 @@ private Q_SLOTS:
     void tst_addRemoveScreenWithItems();
     void tst_addRemoveScreenDifferentPaths();
 
+    // Configuration read/write tests
+    void tst_readScreenActivityMapping();
+    void tst_readScreenActivityMappingFromOldConfig();
+    void tst_saveScreenActivityMapping();
+    void tst_readAndSaveItemsOnActivitiesOnDisabledScreens();
+    void tst_readAndSaveItemsOnActivitiesOnDisabledScreensFromOldConfig();
+
 private:
-    void addScreens(const QUrl &path);
+    void addScreens(const QUrl &path, const QString &activity);
 
     ScreenMapper *m_screenMapper;
     QString m_currentActivity;
+    QString m_alternativeActivity;
 };
 
 #endif // SCREENMAPPERTEST_H
