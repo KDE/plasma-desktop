@@ -23,14 +23,14 @@ KCM.SimpleKCM {
     Baloo.Monitor {
         id: monitor
 
-        readonly property bool currentlyIndexing: switch(monitor.IndexerState) {
-                                                      case Baloo.FirstRun:
-                                                      case Baloo.NewFiles:
-                                                      case Baloo.ModifiedFiles:
-                                                      case Baloo.XAttrFiles:
-                                                      case Baloo.ContentIndexing:
-                                                      case Baloo.UnindexedFileCheck:
-                                                      case Baloo.StaleIndexEntriesClean:
+        readonly property bool currentlyIndexing: switch(monitor.state) {
+                                                      case Baloo.Global.FirstRun:
+                                                      case Baloo.Global.NewFiles:
+                                                      case Baloo.Global.ModifiedFiles:
+                                                      case Baloo.Global.XAttrFiles:
+                                                      case Baloo.Global.ContentIndexing:
+                                                      case Baloo.Global.UnindexedFileCheck:
+                                                      case Baloo.Global.StaleIndexEntriesClean:
                                                           return true;
                                                           break;
                                                       default:
@@ -142,7 +142,7 @@ KCM.SimpleKCM {
                 }
 
                 QQC2.Button {
-                    text: monitor.currentlyIndexing ? i18n("Pause Indexer") : i18n("Resume Indexer")
+                    text: monitor.state !== Baloo.Global.Suspended ? i18n("Pause Indexer") : i18n("Resume Indexer")
                     onClicked: monitor.toggleSuspendState()
                 }
             }
