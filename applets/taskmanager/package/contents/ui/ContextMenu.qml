@@ -233,7 +233,7 @@ PlasmaComponents.ContextMenu {
 
                 // If we don't have a window associated with the player but we can raise
                 // it through MPRIS we'll offer a "Restore" option
-                if (!startNewInstanceItem.visible && playerData.CanRaise) {
+                if (get(atm.IsLauncher) === true && !startNewInstanceItem.visible && playerData.CanRaise) {
                     menuItem = menu.newMenuItem(menu);
                     menuItem.text = i18nc("Open or bring to the front window of media player app", "Restore");
                     menuItem.icon = playerData["Desktop Icon Name"];
