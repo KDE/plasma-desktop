@@ -120,6 +120,16 @@ KCM.SimpleKCM {
                 settingName: "singleClick"
             }
         }
+        QQC2.Label {
+            Layout.fillWidth: true
+            text: i18n("Select by clicking on item's selection marker")
+            elide: Text.ElideRight
+            font: Kirigami.Theme.smallFont
+        }
+
+        Item {
+            Kirigami.FormData.isSection: false
+        }
 
         QQC2.RadioButton {
             id: doubleClick
@@ -134,11 +144,9 @@ KCM.SimpleKCM {
                 extraEnabledConditions: singleClick.enabled
             }
         }
-
         QQC2.Label {
             Layout.fillWidth: true
-            Layout.minimumWidth: Kirigami.Units.gridUnit * 15
-            text: singleClick.checked ? i18n("Select by clicking on item's selection marker") : i18n("Open by double-clicking instead")
+            text: i18n("Open by double-clicking instead")
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
         }
@@ -164,6 +172,16 @@ KCM.SimpleKCM {
                 settingName: "scrollbarLeftClickNavigatesByPage"
             }
         }
+        QQC2.Label {
+            Layout.fillWidth: true
+            text: i18n("Middle-click to scroll to clicked location")
+            elide: Text.ElideRight
+            font: Kirigami.Theme.smallFont
+        }
+
+        Item {
+            Kirigami.FormData.isSection: false
+        }
 
         QQC2.RadioButton {
             id: scrollBarLeftClickWarpsScrollHandle
@@ -179,16 +197,9 @@ KCM.SimpleKCM {
             }
         }
 
-        // Don't show a label for what middle-clicking does when using the
+        // There is no label for what middle-clicking does when using the
         // "click to zoom the handle" behavior because Qt doesn't invert the
         // middle-click functionality when using this; see
         // https://bugreports.qt.io/browse/QTBUG-80728
-        QQC2.Label {
-            Layout.fillWidth: true
-            visible: scrollbarLeftClickNavigatesByPage.checked
-            text: i18n("Middle-click to scroll to clicked location")
-            elide: Text.ElideRight
-            font: Kirigami.Theme.smallFont
-        }
     }
 }
