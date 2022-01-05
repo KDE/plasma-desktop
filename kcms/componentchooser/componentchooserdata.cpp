@@ -118,12 +118,12 @@ ComponentChooser *ComponentChooserData::emailClients() const
 
 ComponentChooser *ComponentChooserData::geoUriHandlers() const
 {
-    return m_textEditors;
+    return m_geoUriHandlers;
 }
 
 ComponentChooser *ComponentChooserData::textEditors() const
 {
-    return m_geoUriHandlers;
+    return m_textEditors;
 }
 
 ComponentChooser *ComponentChooserData::telUriHandlers() const
