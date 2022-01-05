@@ -37,6 +37,8 @@ TouchpadConfigContainer::TouchpadConfigContainer(QWidget *parent, const QVariant
     } else if (KWindowSystem::isPlatformWayland()) {
         m_plugin = new TouchpadConfigLibinput(this, backend);
     }
+
+    setButtons(KCModule::Default | KCModule::Apply);
 }
 
 void TouchpadConfigContainer::kcmInit()
