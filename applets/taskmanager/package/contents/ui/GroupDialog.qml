@@ -85,7 +85,11 @@ PlasmaCore.Dialog {
 
                     model: groupDialog.visualParent ? tasksModel : null
                     Binding on rootIndex { // Use Binding to re-evaluate rootIndex only when visible is true
-                        value: tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex)
+                        // TasksModel::makeModelIndex() returns QModelIndex()
+                        // when row argument is less than 0 or more than count
+                        value: tasksModel.makeModelIndex(
+                            groupDialog.visualParent ? groupDialog.visualParent.itemIndex : -1
+                        )
                         when: groupDialog.visualParent && groupDialog.visible // implicitly using visible as a way to trigger re-evaluation
                         restoreMode: Binding.RestoreNone // Store rootIndex to avoid sudden changes in height
                     }
