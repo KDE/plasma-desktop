@@ -151,14 +151,14 @@ bool XkbHelper::initializeKeyboardLayouts(KeyboardConfig &config)
             setxkbmapCommandArguments.append(variants.join(COMMAND_OPTIONS_SEPARATOR));
         }
     }
-    if (config.resetOldXkbOptions()) {
+    if (config.xkbOptionsEnabled()) {
         // Pass -option "" to clear previously set options
         setxkbmapCommandArguments.append(QStringLiteral("-option"));
         setxkbmapCommandArguments.append(QStringLiteral(""));
-    }
-    if (!config.xkbOptions().isEmpty()) {
-        setxkbmapCommandArguments.append(QStringLiteral("-option"));
-        setxkbmapCommandArguments.append(config.xkbOptions());
+        if (!config.xkbOptions().isEmpty()) {
+            setxkbmapCommandArguments.append(QStringLiteral("-option"));
+            setxkbmapCommandArguments.append(config.xkbOptions());
+        }
     }
 
     if (!setxkbmapCommandArguments.isEmpty()) {

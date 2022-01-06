@@ -13,3 +13,9 @@ Id=add-back-resetoptions
 File=kxkbrc
 Group=Layout
 Script=kxkb_resetoptions.awk
+
+# Rename ResetOldOptions to OptionsEnabled.
+Id=rename-resetoldoptions-to-optionsenabled
+File=kxkbrc
+Group=Layout
+Key=ResetOldOptions,OptionsEnabled
