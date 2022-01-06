@@ -155,7 +155,7 @@ T.ItemDelegate {
             verticalAlignment: root.textUnderIcon ? Text.AlignTop : Text.AlignVCenter
             maximumLineCount: 2
             wrapMode: Text.Wrap
-            textFormat: model.isMultilineText ? Text.StyledText : Text.PlainText
+            textFormat: root.model && root.model.isMultilineText ? Text.StyledText : Text.PlainText
         }
     }
 
