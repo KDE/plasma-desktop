@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.6
+import QtQuick 2.12
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -42,23 +42,30 @@ PlasmaCore.Dialog {
         Layout.minimumHeight: childrenRect.height
         Layout.maximumWidth: childrenRect.width
         Layout.maximumHeight: childrenRect.height
+        TextMetrics {
+            id: textMetrics
+            font: preferredFont
+            text: "1Ag[-.文あ언"
+        }
         Column {
             spacing: PlasmaCore.Units.smallSpacing
             Row {
                 id: textLabel
                 width: auxLabel.width + preedit.width
-                height: Math.max(preedit.height, auxLabel.height)
+                height: textMetrics.height
                 visible: helper.auxVisible || helper.preeditVisible
                 PlasmaComponents3.Label {
                     id: auxLabel
                     font: preferredFont
                     text: helper.auxText
+                    height: textMetrics.height
+                    verticalAlignment: Text.AlignBottom
                     visible: helper.auxVisible
                 }
                 Item {
                     id: preedit
                     width: preeditLabel1.width + preeditLabel2.width + 2
-                    height: Math.max(preeditLabel1.height, preeditLabel2.height)
+                    height: textMetrics.height
                     clip: true
                     visible: helper.preeditVisible
                     PlasmaComponents3.Label {
@@ -66,10 +73,12 @@ PlasmaCore.Dialog {
                         anchors.top: parent.top
                         anchors.left: parent.left
                         font: preferredFont
+                        height: textMetrics.height
+                        verticalAlignment: Text.AlignBottom
                     }
                     Rectangle {
                         color: PlasmaCore.Theme.textColor
-                        height: baseSize
+                        height: textMetrics.height
                         width: 2
                         opacity: 0.8
                         z: 1
@@ -81,6 +90,8 @@ PlasmaCore.Dialog {
                         anchors.top: parent.top
                         anchors.left: preeditLabel1.right
                         font: preferredFont
+                        height: textMetrics.height
+                        verticalAlignment: Text.AlignBottom
                     }
                 }
             }
@@ -89,8 +100,6 @@ PlasmaCore.Dialog {
                 flow: inputpanel.verticalLayout ? GridLayout.TopToBottom : GridLayout.LeftToRight
                 columns: inputpanel.verticalLayout ? 1 : tableList.count + 1
                 rows: inputpanel.verticalLayout ? tableList.count + 1 : 1
-                columnSpacing: PlasmaCore.Units.smallSpacing / 2
-                rowSpacing: PlasmaCore.Units.smallSpacing / 2
 
                 Repeater {
                     model: ListModel {
@@ -100,7 +109,7 @@ PlasmaCore.Dialog {
                     delegate: Item {
                         id: candidateDelegate
                         width: candidate.width + highlight.marginHints.left + highlight.marginHints.right
-                        height: candidate.height + highlight.marginHints.top + highlight.marginHints.bottom
+                        height: textMetrics.height + highlight.marginHints.top + highlight.marginHints.bottom
                         Layout.minimumWidth: width
                         Layout.minimumHeight: height
                         Layout.maximumWidth: width
@@ -121,12 +130,16 @@ PlasmaCore.Dialog {
                                 font: preferredFont
                                 opacity: 0.8
                                 color: PlasmaCore.Theme.textColor
+                                height: textMetrics.height
+                                verticalAlignment: Text.AlignBottom
                             }
                             PlasmaComponents3.Label {
                                 id: textLabel
                                 text: model.text
                                 font: preferredFont
                                 color: PlasmaCore.Theme.textColor
+                                height: textMetrics.height
+                                verticalAlignment: Text.AlignBottom
                             }
                         }
                         MouseArea {
@@ -152,7 +165,7 @@ PlasmaCore.Dialog {
                 Row {
                     id: button
                     width: inputpanel.baseSize * 2
-                    height: inputpanel.baseSize
+                    height: textMetrics.height
                     Layout.minimumWidth: width
                     Layout.minimumHeight: height
                     Layout.maximumWidth: width
