@@ -10,6 +10,7 @@
 #include "componentchooseremail.h"
 #include "componentchooserfilemanager.h"
 #include "componentchoosergeo.h"
+#include "componentchoosertel.h"
 #include "componentchooserterminal.h"
 
 ComponentChooserData::ComponentChooserData(QObject *parent, const QVariantList &args)
@@ -19,6 +20,7 @@ ComponentChooserData::ComponentChooserData(QObject *parent, const QVariantList &
     , m_terminalEmulators(new ComponentChooserTerminal(this))
     , m_emailClients(new ComponentChooserEmail(this))
     , m_geoUriHandlers(new ComponentChooserGeo(this))
+    , m_telUriHandlers(new ComponentChooserTel(this))
 {
     load();
 }
@@ -30,6 +32,7 @@ void ComponentChooserData::load()
     m_terminalEmulators->load();
     m_emailClients->load();
     m_geoUriHandlers->load();
+    m_telUriHandlers->load();
 }
 
 void ComponentChooserData::save()
@@ -39,6 +42,7 @@ void ComponentChooserData::save()
     m_terminalEmulators->save();
     m_emailClients->save();
     m_geoUriHandlers->save();
+    m_telUriHandlers->save();
 }
 
 void ComponentChooserData::defaults()
@@ -48,18 +52,19 @@ void ComponentChooserData::defaults()
     m_terminalEmulators->defaults();
     m_emailClients->defaults();
     m_geoUriHandlers->defaults();
+    m_telUriHandlers->defaults();
 }
 
 bool ComponentChooserData::isDefaults() const
 {
     return m_browsers->isDefaults() && m_fileManagers->isDefaults() && m_terminalEmulators->isDefaults() && m_emailClients->isDefaults()
-        && m_geoUriHandlers->isDefaults();
+        && m_geoUriHandlers->isDefaults() && m_telUriHandlers->isDefaults();
 }
 
 bool ComponentChooserData::isSaveNeeded() const
 {
     return m_browsers->isSaveNeeded() || m_fileManagers->isSaveNeeded() || m_terminalEmulators->isSaveNeeded() || m_emailClients->isSaveNeeded()
-        || m_geoUriHandlers->isSaveNeeded();
+        || m_geoUriHandlers->isSaveNeeded() || m_telUriHandlers->isSaveNeeded();
 }
 
 ComponentChooser *ComponentChooserData::browsers() const
@@ -85,4 +90,9 @@ ComponentChooser *ComponentChooserData::emailClients() const
 ComponentChooser *ComponentChooserData::geoUriHandlers() const
 {
     return m_geoUriHandlers;
+}
+
+ComponentChooser *ComponentChooserData::telUriHandlers() const
+{
+    return m_telUriHandlers;
 }

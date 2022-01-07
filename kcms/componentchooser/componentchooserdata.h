@@ -31,6 +31,7 @@ public:
     ComponentChooser *terminalEmulators() const;
     ComponentChooser *emailClients() const;
     ComponentChooser *geoUriHandlers() const;
+    ComponentChooser *telUriHandlers() const;
 
 private:
     ComponentChooser *m_browsers;
@@ -38,6 +39,7 @@ private:
     ComponentChooser *m_terminalEmulators;
     ComponentChooser *m_emailClients;
     ComponentChooser *m_geoUriHandlers;
+    ComponentChooser *m_telUriHandlers;
 };
 
 #endif // COMPONENTCHOOSERDATA_H

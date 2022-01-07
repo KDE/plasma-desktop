@@ -21,6 +21,7 @@ class KcmComponentChooser : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(ComponentChooser *terminalEmulators READ terminalEmulators CONSTANT)
     Q_PROPERTY(ComponentChooser *fileManagers READ fileManagers CONSTANT)
     Q_PROPERTY(ComponentChooser *geoUriHandlers READ geoUriHandlers CONSTANT)
+    Q_PROPERTY(ComponentChooser *telUriHandlers READ telUriHandlers CONSTANT)
 
 public:
     KcmComponentChooser(QObject *parent, const QVariantList &args);
@@ -30,6 +31,7 @@ public:
     ComponentChooser *terminalEmulators() const;
     ComponentChooser *fileManagers() const;
     ComponentChooser *geoUriHandlers() const;
+    ComponentChooser *telUriHandlers() const;
 
     void defaults() override;
     void load() override;

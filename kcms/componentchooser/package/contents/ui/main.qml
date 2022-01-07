@@ -51,5 +51,13 @@ KCM.SimpleKCM {
                 highlight: !kcm.geoUriHandlers.isDefaults
             }
         }
+        ComponentComboBox {
+            component: kcm.telUriHandlers
+            label: i18nc("Default phone app", "Dialer:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.telUriHandlers.isDefaults
+            }
+        }
     }
 }
