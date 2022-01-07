@@ -76,19 +76,22 @@ QtObject {
         }
 
         delegate: QtObject {
-            readonly property int pid: Client ? Client.properties["application.process.id"] : 0
+            id: delegate
+            required property var model
+            readonly property int pid: model.Client ? model.Client.properties["application.process.id"] : 0
             // Determined on demand.
             property int parentPid: -1
-            readonly property string appName: Client ? Client.properties["application.name"] : ""
-            readonly property bool muted: Muted
+            readonly property string appName: model.Client ? model.Client.properties["application.name"] : ""
+            readonly property bool muted: model.Muted
             // whether there is nothing actually going on on that stream
-            readonly property bool corked: Corked
+            readonly property bool corked: model.Corked
+            readonly property int volume: model.Volume
 
             function mute() {
-                Muted = true
+                model.Muted = true
             }
             function unmute() {
-                Muted = false
+                model.Muted = false
             }
         }
 
