@@ -18,8 +18,6 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-import org.kde.plasma.private.volume 0.1
-
 ColumnLayout {
     property var submodelIndex
     property int flatIndex: isGroup && index != undefined ? index : 0
@@ -376,7 +374,7 @@ ColumnLayout {
 
     // Volume controls
     Loader {
-        active: parentTask
+        active: parentTask && pulseAudio.item
             && parentTask.audioIndicatorsEnabled
             && parentTask.playingAudio
             && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
@@ -412,7 +410,7 @@ ColumnLayout {
             PlasmaComponents3.Slider {
                 id: slider
 
-                readonly property int displayValue: Math.round(value / PulseAudio.NormalVolume * 100)
+                readonly property int displayValue: Math.round(value / to * 100)
                 readonly property int loudestVolume: {
                     let v = 0
                     parentTask.audioStreams.forEach((stream) => {
@@ -422,8 +420,8 @@ ColumnLayout {
                 }
 
                 Layout.fillWidth: true
-                from: PulseAudio.MinimalVolume
-                to: PulseAudio.NormalVolume
+                from: pulseAudio.item.minimalVolume
+                to: pulseAudio.item.normalVolume
                 value: loudestVolume
                 stepSize: to / 100
                 opacity: parentTask.muted ? 0.5 : 1
