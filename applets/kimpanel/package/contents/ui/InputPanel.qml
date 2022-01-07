@@ -79,7 +79,7 @@ PlasmaCore.Dialog {
                     Rectangle {
                         color: PlasmaCore.Theme.textColor
                         height: textMetrics.height
-                        width: 2
+                        width: 1
                         opacity: 0.8
                         z: 1
                         anchors.verticalCenter: parent.verticalCenter
