@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.12
+import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -30,7 +30,8 @@ PlasmaCore.Dialog {
     property int highlightCandidate: helper.lookupTableCursor
     property int hoveredCandidate: -1
     property font preferredFont: plasmoid.configuration.use_default_font ? PlasmaCore.Theme.defaultFont : plasmoid.configuration.font
-    property int baseSize: PlasmaCore.Theme.mSize(preferredFont).height
+    readonly property alias textOffset: fontMetrics.ascent
+    readonly property alias labelHeight: fontMetrics.height
     property rect position: helper.spotRect
 
     onPositionChanged : updatePosition();
@@ -42,43 +43,41 @@ PlasmaCore.Dialog {
         Layout.minimumHeight: childrenRect.height
         Layout.maximumWidth: childrenRect.width
         Layout.maximumHeight: childrenRect.height
-        TextMetrics {
-            id: textMetrics
+        FontMetrics {
+            id: fontMetrics
             font: preferredFont
-            text: "1Ag[-.文あ언"
         }
         Column {
             spacing: PlasmaCore.Units.smallSpacing
             Row {
                 id: textLabel
                 width: auxLabel.width + preedit.width
-                height: textMetrics.height
+                height: inputpanel.labelHeight
                 visible: helper.auxVisible || helper.preeditVisible
+                baselineOffset: inputpanel.textOffset
                 PlasmaComponents3.Label {
                     id: auxLabel
+                    anchors.baseline: parent.baseline
                     font: preferredFont
                     text: helper.auxText
-                    height: textMetrics.height
-                    verticalAlignment: Text.AlignBottom
                     visible: helper.auxVisible
                 }
                 Item {
                     id: preedit
                     width: preeditLabel1.width + preeditLabel2.width + 2
-                    height: textMetrics.height
+                    height: parent.height
                     clip: true
                     visible: helper.preeditVisible
+                    baselineOffset: inputpanel.textOffset
                     PlasmaComponents3.Label {
                         id: preeditLabel1
-                        anchors.top: parent.top
+                        anchors.baseline: parent.baseline
                         anchors.left: parent.left
                         font: preferredFont
-                        height: textMetrics.height
-                        verticalAlignment: Text.AlignBottom
                     }
                     Rectangle {
                         color: PlasmaCore.Theme.textColor
-                        height: textMetrics.height
+                        height: parent.height
                         width: 1
                         opacity: 0.8
                         z: 1
@@ -87,11 +86,9 @@ PlasmaCore.Dialog {
                     }
                     PlasmaComponents3.Label {
                         id: preeditLabel2
-                        anchors.top: parent.top
+                        anchors.baseline: parent.baseline
                         anchors.left: preeditLabel1.right
                         font: preferredFont
-                        height: textMetrics.height
-                        verticalAlignment: Text.AlignBottom
                     }
                 }
             }
@@ -109,7 +106,7 @@ PlasmaCore.Dialog {
                     delegate: Item {
                         id: candidateDelegate
                         width: candidate.width + highlight.marginHints.left + highlight.marginHints.right
-                        height: textMetrics.height + highlight.marginHints.top + highlight.marginHints.bottom
+                        height: inputpanel.labelHeight + highlight.marginHints.top + highlight.marginHints.bottom
                         Layout.minimumWidth: width
                         Layout.minimumHeight: height
                         Layout.maximumWidth: width
@@ -123,6 +120,7 @@ PlasmaCore.Dialog {
                             height: childrenRect.height
                             x: highlight.marginHints.left
                             y: highlight.marginHints.top
+                            baselineOffset: inputpanel.textOffset
                             spacing: PlasmaCore.Units.smallSpacing
                             PlasmaComponents3.Label {
                                 id: tableLabel
@@ -130,16 +128,14 @@ PlasmaCore.Dialog {
                                 font: preferredFont
                                 opacity: 0.8
                                 color: PlasmaCore.Theme.textColor
-                                height: textMetrics.height
-                                verticalAlignment: Text.AlignBottom
+                                anchors.baseline: parent.baseline
                             }
                             PlasmaComponents3.Label {
                                 id: textLabel
                                 text: model.text
                                 font: preferredFont
                                 color: PlasmaCore.Theme.textColor
-                                height: textMetrics.height
-                                verticalAlignment: Text.AlignBottom
+                                anchors.baseline: parent.baseline
                             }
                         }
                         MouseArea {
@@ -164,8 +160,8 @@ PlasmaCore.Dialog {
                 }
                 Row {
                     id: button
-                    width: inputpanel.baseSize * 2
-                    height: textMetrics.height
+                    width: inputpanel.labelHeight * 2
+                    height: inputpanel.labelHeight
                     Layout.minimumWidth: width
                     Layout.minimumHeight: height
                     Layout.maximumWidth: width
@@ -174,7 +170,7 @@ PlasmaCore.Dialog {
                     PlasmaCore.IconItem {
                         id: prevButton
                         source: inputpanel.verticalLayout ? "arrow-up" : "arrow-left"
-                        width: inputpanel.baseSize
+                        width: inputpanel.labelHeight
                         height: width
                         scale: prevButtonMouseArea.pressed ? 0.9 : 1
                         active: prevButtonMouseArea.containsMouse
@@ -188,7 +184,7 @@ PlasmaCore.Dialog {
                     PlasmaCore.IconItem {
                         id: nextButton
                         source: inputpanel.verticalLayout ? "arrow-down" : "arrow-right"
-                        width: inputpanel.baseSize
+                        width: inputpanel.labelHeight
                         height: width
                         scale: nextButtonMouseArea.pressed ? 0.9 : 1
                         active: nextButtonMouseArea.containsMouse
