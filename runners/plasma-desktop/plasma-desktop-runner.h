@@ -13,7 +13,7 @@
  * This class runs programs using the literal name of the binary, much as one
  * would use at a shell prompt.
  */
-class PlasmaDesktopRunner : public Plasma::AbstractRunner
+class PlasmaDesktopRunner : public AbstractRunner
 {
     Q_OBJECT
 
@@ -21,8 +21,8 @@ public:
     PlasmaDesktopRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~PlasmaDesktopRunner() override;
 
-    void match(Plasma::RunnerContext &context) override;
-    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
+    void match(RunnerContext &context) override;
+    void run(const RunnerContext &context, const QueryMatch &action) override;
 
 private:
     const QString m_desktopConsoleKeyword;

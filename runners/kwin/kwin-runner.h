@@ -10,7 +10,7 @@
 
 #include <krunner/abstractrunner.h>
 
-class KWinRunner : public Plasma::AbstractRunner
+class KWinRunner : public AbstractRunner
 {
     Q_OBJECT
 
@@ -18,8 +18,8 @@ public:
     explicit KWinRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~KWinRunner() override;
 
-    void match(Plasma::RunnerContext &context) override;
-    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
+    void match(RunnerContext &context) override;
+    void run(const RunnerContext &context, const QueryMatch &action) override;
 
 private:
     void checkAvailability(const QString &name, const QString &oldOwner, const QString &newOwner);

@@ -19,7 +19,7 @@ static const QString s_kwinService = QStringLiteral("org.kde.KWin");
 static const QString s_keyword = QStringLiteral("KWin");
 
 KWinRunner::KWinRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, metaData, args)
+    : AbstractRunner(parent, metaData, args)
 {
     setObjectName(s_keyword);
     QDBusServiceWatcher *watcher = new QDBusServiceWatcher(s_kwinService, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this);
@@ -31,12 +31,12 @@ KWinRunner::~KWinRunner()
 {
 }
 
-void KWinRunner::match(Plasma::RunnerContext &context)
+void KWinRunner::match(RunnerContext &context)
 {
     if (m_enabled && context.query().compare(s_keyword, Qt::CaseInsensitive) == 0) {
-        Plasma::QueryMatch match(this);
+        QueryMatch match(this);
         match.setId(QStringLiteral("kwin"));
-        match.setType(Plasma::QueryMatch::ExactMatch);
+        match.setType(QueryMatch::ExactMatch);
         match.setIconName(QStringLiteral("kwin"));
         match.setText(i18n("Open KWin debug console"));
         match.setRelevance(1.0);
@@ -44,7 +44,7 @@ void KWinRunner::match(Plasma::RunnerContext &context)
     }
 }
 
-void KWinRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
+void KWinRunner::run(const RunnerContext &context, const QueryMatch &match)
 {
     Q_UNUSED(match)
 
@@ -69,9 +69,9 @@ void KWinRunner::checkAvailability(const QString &name, const QString &oldOwner,
         m_enabled = enabled;
 
         if (m_enabled) {
-            addSyntax(Plasma::RunnerSyntax(s_keyword, i18n("Opens the KWin (Plasma Window Manager) debug console.")));
+            addSyntax(RunnerSyntax(s_keyword, i18n("Opens the KWin (Plasma Window Manager) debug console.")));
         } else {
-            setSyntaxes(QList<Plasma::RunnerSyntax>());
+            setSyntaxes(QList<RunnerSyntax>());
         }
     }
 }
