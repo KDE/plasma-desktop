@@ -377,7 +377,7 @@ ColumnLayout {
         active: parentTask
              && pulseAudio.item
              && parentTask.audioIndicatorsEnabled
-             && parentTask.playingAudio
+             && parentTask.hasAudioStream
              && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
         asynchronous: true
         visible: active
