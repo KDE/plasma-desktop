@@ -374,10 +374,11 @@ ColumnLayout {
 
     // Volume controls
     Loader {
-        active: parentTask && pulseAudio.item
-            && parentTask.audioIndicatorsEnabled
-            && parentTask.playingAudio
-            && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
+        active: parentTask
+             && pulseAudio.item
+             && parentTask.audioIndicatorsEnabled
+             && parentTask.playingAudio
+             && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
         asynchronous: true
         visible: active
         Layout.fillWidth: true
