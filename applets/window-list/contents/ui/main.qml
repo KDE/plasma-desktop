@@ -8,7 +8,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.taskmanager 0.1 as TaskManager
@@ -100,7 +100,7 @@ FocusScope {
             spacing: 0
             keyNavigationWraps: true
 
-            highlight: PlasmaComponents.Highlight {}
+            highlight: PlasmaExtras.Highlight {}
             highlightMoveDuration: 0
 
             onOverflowingChanged: {
@@ -117,7 +117,7 @@ FocusScope {
 
             section.property: virtualDesktopInfo.numberOfDesktops ? "VirtualDesktop" : undefined
             section.criteria: ViewSection.FullString
-            section.delegate: PlasmaComponents.Label {
+            section.delegate: PlasmaComponents3.Label {
                 height: root.itemHeight
                 width: root.width
 
@@ -184,7 +184,7 @@ FocusScope {
                         source: model.decoration
                     }
 
-                    PlasmaComponents.Label {
+                    PlasmaComponents3.Label {
                         id: label
 
                         width: (parent.width - icon.width - parent.spacing - (underPin ? root.width - windowPin.x : 0))
@@ -218,7 +218,7 @@ FocusScope {
         }
     }
 
-    PlasmaComponents.ToolButton {
+    PlasmaComponents3.ToolButton {
         id: windowPin
 
         anchors.top: parent.top
@@ -228,7 +228,7 @@ FocusScope {
         width: Math.round(PlasmaCore.Units.gridUnit * 1.25)
         height: width
 
-        iconSource: "window-pin"
+        icon.name: "window-pin"
 
         visible: plasmoid.compactRepresentationItem && plasmoid.compactRepresentationItem.visible
 
