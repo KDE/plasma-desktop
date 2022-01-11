@@ -100,6 +100,11 @@ void ServerConfigModule::save()
 
         QDBusConnection::sessionBus().asyncCall(message);
     }
+
+    // enable baloo runner if we have indexing enabled, otherwise disable it
+    KConfig cfg(QStringLiteral("krunnerrc"));
+    KConfigGroup grp = cfg.group("Plugins");
+    grp.writeEntry("baloosearchEnabled", balooSettings()->indexingEnabled(), KConfig::Notify);
 }
 
 FilteredFolderModel *ServerConfigModule::filteredModel() const
