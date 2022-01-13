@@ -156,9 +156,10 @@ bool XkbHelper::initializeKeyboardLayouts(KeyboardConfig &config)
         setxkbmapCommandArguments.append(QStringLiteral("-option"));
         setxkbmapCommandArguments.append(QStringLiteral(""));
     }
-    if (!config.xkbOptions().isEmpty()) {
+    const QStringList xkbOpts = config.xkbOptions();
+    for (const auto &option : xkbOpts) {
         setxkbmapCommandArguments.append(QStringLiteral("-option"));
-        setxkbmapCommandArguments.append(config.xkbOptions());
+        setxkbmapCommandArguments.append(option);
     }
 
     if (!setxkbmapCommandArguments.isEmpty()) {
