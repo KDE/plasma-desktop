@@ -17,8 +17,11 @@ Rectangle {
     property int number: 0
 
     implicitWidth: Math.max(height, Math.round(label.contentWidth + radius / 2)) // Add some padding around.
-    color: PlasmaCore.Theme.highlightColor
+    readonly property color color_: PlasmaCore.Theme.highlightColor
+    color: Qt.rgba(color_.r, color_.g, color_.b, 0.3)
     radius: height / 2
+    border.color: color_
+    border.width: PlasmaCore.Units.devicePixelRatio
 
     PlasmaComponents.Label {
         id: label
@@ -30,7 +33,6 @@ Rectangle {
         fontSizeMode: Text.VerticalFit
         font.pointSize: 1024
         minimumPointSize: 5
-        color: PlasmaCore.Theme.highlightedTextColor
         text: {
             if (badgeRect.number < 0) {
                 return i18nc("Invalid number of new messages, overlay, keep short", "—");
