@@ -5,7 +5,7 @@
 */
 
 import QtQuick 2.0
-import QtQuick.Controls 2.3 as QtControls
+import QtQuick.Controls 2.3 as QQC2
 import QtQuick.Layouts 1.0
 
 Item {
@@ -82,7 +82,7 @@ Item {
         Repeater {
             model: configDialog.currentContainmentActionsModel
 
-            QtControls.ComboBox {
+            QQC2.ComboBox {
                 id: pluginsCombo
                 // "index" argument of onActivated shadows the model index
                 readonly property int pluginIndex: index
@@ -124,7 +124,7 @@ Item {
                 Layout.column: 2
                 Layout.row: index
 
-                QtControls.Button {
+                QQC2.Button {
                     icon.name: "configure"
                     width: height
                     enabled: model.hasConfigurationInterface
@@ -132,14 +132,14 @@ Item {
                         configDialog.currentContainmentActionsModel.showConfiguration(index, this);
                     }
                 }
-                QtControls.Button {
+                QQC2.Button {
                     icon.name: "dialog-information"
                     width: height
                     onClicked: {
                         configDialog.currentContainmentActionsModel.showAbout(index, this);
                     }
                 }
-                QtControls.Button {
+                QQC2.Button {
                     icon.name: "list-remove"
                     width: height
                     onClicked: {

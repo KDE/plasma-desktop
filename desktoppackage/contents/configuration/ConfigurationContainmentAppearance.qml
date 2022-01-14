@@ -6,7 +6,7 @@
 
 import QtQuick 2.0
 import org.kde.plasma.configuration 2.0
-import QtQuick.Controls 2.3 as QtControls
+import QtQuick.Controls 2.3 as QQC2
 import QtQuick.Layouts 1.1
 import QtQml 2.15
 
@@ -77,7 +77,7 @@ AbstractKCM {
             id: parentLayout // needed for twinFormLayouts to work in wallpaper plugins
             twinFormLayouts: main.currentItem.formLayout
             Layout.fillWidth: true
-            QtControls.ComboBox {
+            QQC2.ComboBox {
                 id: pluginComboBox
                 Layout.preferredWidth: Math.max(implicitWidth, wallpaperComboBox.implicitWidth)
                 Kirigami.FormData.label: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout:")
@@ -96,7 +96,7 @@ AbstractKCM {
                 Layout.fillWidth: true
                 visible: !switchContainmentWarning.visible
                 Kirigami.FormData.label: i18nd("plasma_shell_org.kde.plasma.desktop", "Wallpaper type:")
-                QtControls.ComboBox {
+                QQC2.ComboBox {
                     id: wallpaperComboBox
                     Layout.preferredWidth: Math.max(implicitWidth, pluginComboBox.implicitWidth)
                     model: configDialog.wallpaperConfigModel
@@ -122,13 +122,13 @@ AbstractKCM {
             id: switchContainmentWarning
             Layout.fillWidth: true
             visible: configDialog.containmentPlugin !== root.containmentPlugin
-            QtControls.Label {
+            QQC2.Label {
                 Layout.fillWidth: true
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout changes must be applied before other changes can be made")
                 wrapMode: Text.Wrap
                 horizontalAlignment: Text.AlignHCenter
             }
-            QtControls.Button {
+            QQC2.Button {
                 Layout.alignment: Qt.AlignHCenter
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply now")
                 onClicked: saveConfig()
@@ -151,7 +151,7 @@ AbstractKCM {
             id: emptyConfig
         }
 
-        QtControls.StackView {
+        QQC2.StackView {
             id: main
 
             Layout.fillHeight: true;
