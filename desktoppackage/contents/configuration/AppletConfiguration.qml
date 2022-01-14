@@ -18,11 +18,11 @@ import org.kde.plasma.configuration 2.0
 Rectangle {
     id: root
 
-    implicitWidth: PlasmaCore.Units.gridUnit * 40
-    implicitHeight: PlasmaCore.Units.gridUnit * 30
+    implicitWidth: Kirigami.Units.gridUnit * 40
+    implicitHeight: Kirigami.Units.gridUnit * 30
 
-    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 30
-    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 21
+    Layout.minimumWidth: Kirigami.Units.gridUnit * 30
+    Layout.minimumHeight: Kirigami.Units.gridUnit * 21
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -42,6 +42,7 @@ Rectangle {
         }
     }
 
+    // TODO: port to KItemModels.KSortFilterProxyModel
     PlasmaCore.SortFilterModel {
         id: configDialogFilterModel
         sourceModel: configDialog.configModel
