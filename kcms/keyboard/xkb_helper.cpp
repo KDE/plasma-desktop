@@ -11,13 +11,12 @@
 #include <QDir>
 #include <QElapsedTimer>
 #include <QFile>
+#include <QProcess>
 #include <QStandardPaths>
 #include <QString>
 #include <QStringList>
 #include <QTime>
 #include <QX11Info>
-
-#include <KProcess>
 
 #include "keyboard_config.h"
 #include "keyboardsettings.h"
@@ -64,12 +63,10 @@ static void executeXmodmap(const QString &configFileName)
             }
         }
 
-        KProcess xmodmapProcess;
-        xmodmapProcess << xmodmapExe;
-        xmodmapProcess << configFileName;
-        qCDebug(KCM_KEYBOARD) << "Executing" << xmodmapProcess.program().join(QLatin1Char(' '));
-        if (xmodmapProcess.execute() != 0) {
-            qCCritical(KCM_KEYBOARD) << "Failed to execute " << xmodmapProcess.program();
+        qCDebug(KCM_KEYBOARD) << "Executing" << xmodmapExe << configFileName;
+        const int res = QProcess::execute(xmodmapExe, QStringList{configFileName});
+        if (res != 0) {
+            qCCritical(KCM_KEYBOARD) << "Failed with return code:" << res;
         }
     }
 }
@@ -89,19 +86,24 @@ bool XkbHelper::runConfigLayoutCommand(const QStringList &setxkbmapCommandArgume
     QElapsedTimer timer;
     timer.start();
 
-    KProcess setxkbmapProcess;
-    setxkbmapProcess << getSetxkbmapExe() << setxkbmapCommandArguments;
-    int res = setxkbmapProcess.execute();
-
-    if (res == 0) { // restore Xmodmap mapping reset by setxkbmap
-        qCDebug(KCM_KEYBOARD) << "Executed successfully in " << timer.elapsed() << "ms" << setxkbmapProcess.program().join(QLatin1Char(' '));
-        restoreXmodmap();
-        qCDebug(KCM_KEYBOARD) << "\t and with xmodmap" << timer.elapsed() << "ms";
-        return true;
-    } else {
-        qCCritical(KCM_KEYBOARD) << "Failed to run" << setxkbmapProcess.program().join(QLatin1Char(' ')) << "return code:" << res;
+    const auto setxkbmapExe = getSetxkbmapExe();
+    if (setxkbmapExe.isEmpty()) {
+        return false;
     }
-    return false;
+
+    qCDebug(KCM_KEYBOARD) << "Running" << setxkbmapExe << setxkbmapCommandArguments.join(QLatin1Char(' '));
+
+    const int res = QProcess::execute(setxkbmapExe, setxkbmapCommandArguments);
+    if (res != 0) {
+        qCCritical(KCM_KEYBOARD) << "Failed with return code:" << res;
+        return false;
+    }
+
+    // restore Xmodmap mapping reset by setxkbmap
+    qCDebug(KCM_KEYBOARD) << "Executed successfully in " << timer.elapsed() << "ms";
+    restoreXmodmap();
+    qCDebug(KCM_KEYBOARD) << "\t and with xmodmap" << timer.elapsed() << "ms";
+    return true;
 }
 
 bool XkbHelper::initializeKeyboardLayouts(const QList<LayoutUnit> &layoutUnits)
