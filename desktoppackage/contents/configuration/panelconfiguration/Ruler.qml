@@ -5,10 +5,8 @@
 */
 
 import QtQuick 2.0
-import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.configuration 2.0
-import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 
 PlasmaCore.FrameSvgItem {
