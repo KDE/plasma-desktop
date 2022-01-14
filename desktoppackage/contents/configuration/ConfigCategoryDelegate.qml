@@ -7,14 +7,14 @@
 
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.3 as QtControls
+import QtQuick.Controls 2.3 as QQC2
 import QtQuick.Window 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.5 as Kirigami
 
-QtControls.ItemDelegate {
+QQC2.ItemDelegate {
     id: delegate
 
     signal activated()
@@ -55,7 +55,7 @@ QtControls.ItemDelegate {
             state: highlighted && Window.active ? QIconItem.SelectedState : QIconItem.DefaultState
         }
 
-        QtControls.Label {
+        QQC2.Label {
             id: nameLabel
             Layout.fillWidth: true
             Layout.leftMargin: PlasmaCore.Units.smallSpacing
