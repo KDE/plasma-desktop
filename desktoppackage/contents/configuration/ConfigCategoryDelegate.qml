@@ -64,12 +64,6 @@ QtControls.ItemDelegate {
             wrapMode: Text.Wrap
             horizontalAlignment: Text.AlignHCenter
             color: highlighted && Window.active ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
-            Behavior on color {
-                ColorAnimation {
-                    duration: PlasmaCore.Units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
         }
     }
 //END UI components
