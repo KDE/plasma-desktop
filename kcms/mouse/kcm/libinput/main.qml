@@ -6,7 +6,7 @@
 */
 
 import QtQuick 2.7
-import QtQuick.Controls 2.0 as Controls
+import QtQuick.Controls 2.0 as QQC2
 import QtQuick.Layouts 1.3 as Layouts
 
 import org.kde.kcm 1.1 as KCM
@@ -72,7 +72,7 @@ Kirigami.ScrollablePage {
         enabled: deviceCount
 
         // Device
-        Controls.ComboBox {
+        QQC2.ComboBox {
             Kirigami.FormData.label: i18nd("kcmmouse", "Device:")
             id: deviceSelector
             enabled: deviceCount > 1
@@ -98,7 +98,7 @@ Kirigami.ScrollablePage {
         }
 
         // General
-        Controls.CheckBox {
+        QQC2.CheckBox {
             Kirigami.FormData.label: i18nd("kcmmouse", "General:")
             id: deviceEnabled
             text: i18nd("kcmmouse", "Device enabled")
@@ -124,7 +124,7 @@ Kirigami.ScrollablePage {
             }
         }
 
-        Controls.CheckBox {
+        QQC2.CheckBox {
             id: leftHanded
             text: i18nd("kcmmouse", "Left handed mode")
 
@@ -149,7 +149,7 @@ Kirigami.ScrollablePage {
             }
         }
 
-        Controls.CheckBox {
+        QQC2.CheckBox {
             id: middleEmulation
             text: i18nd("kcmmouse", "Press left and right buttons for middle-click")
 
@@ -179,7 +179,7 @@ Kirigami.ScrollablePage {
         }
 
         // Acceleration
-        Controls.Slider {
+        QQC2.Slider {
             Kirigami.FormData.label: i18nd("kcmmouse", "Pointer speed:")
             id: accelSpeed
 
@@ -241,7 +241,7 @@ Kirigami.ScrollablePage {
                 }
             }
 
-            Controls.RadioButton {
+            QQC2.RadioButton {
                 id: accelProfileFlat
                 text: i18nd("kcmmouse", "Flat")
 
@@ -251,7 +251,7 @@ Kirigami.ScrollablePage {
                 onCheckedChanged: accelProfile.syncCurrent()
             }
 
-            Controls.RadioButton {
+            QQC2.RadioButton {
                 id: accelProfileAdaptive
                 text: i18nd("kcmmouse", "Adaptive")
 
@@ -267,7 +267,7 @@ Kirigami.ScrollablePage {
         }
 
         // Scrolling
-        Controls.CheckBox {
+        QQC2.CheckBox {
             Kirigami.FormData.label: i18nd("kcmmouse", "Scrolling:")
             id: naturalScroll
             text: i18nd("kcmmouse", "Invert scroll direction")
@@ -296,7 +296,7 @@ Kirigami.ScrollablePage {
 
             columns: 3
 
-            Controls.Slider {
+            QQC2.Slider {
                 id: scrollFactor
 
                 from: 0
@@ -338,13 +338,13 @@ Kirigami.ScrollablePage {
             }
 
             //row 2
-            Controls.Label {
+            QQC2.Label {
                 text: i18ndc("kcmmouse", "Slower Scroll", "Slower")
             }
             Item {
                 Layouts.Layout.fillWidth: true
             }
-            Controls.Label {
+            QQC2.Label {
                 text: i18ndc("kcmmouse", "Faster Scroll Speed", "Faster")
             }
         }

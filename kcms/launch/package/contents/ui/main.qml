@@ -6,7 +6,7 @@
 
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.2 as QtControls
+import QtQuick.Controls 2.2 as QQC2
 import org.kde.kirigami 2.3 as Kirigami
 import org.kde.kcm 1.3 as KCM
 import org.kde.private.kcms.launchfeedback 1.0 as Private
@@ -21,19 +21,19 @@ KCM.SimpleKCM {
 
         readonly property bool cursorImmutable: kcm.launchFeedbackSettings.isImmutable("busyCursor") || kcm.launchFeedbackSettings.isImmutable("blinking") || kcm.launchFeedbackSettings.isImmutable("bouncing")
 
-        QtControls.ButtonGroup {
+        QQC2.ButtonGroup {
             id: busyCursorGroup
             onCheckedButtonChanged: kcm.launchFeedbackSettings.setSelectedBusyCursor(checkedButton.settingName)
         }
 
-        QtControls.RadioButton {
+        QQC2.RadioButton {
             id: busyCursorDisabled
             readonly property string settingName: "busyCursorDisabled"
 
             Kirigami.FormData.label: i18n("Cursor:")
             text: i18n("No Feedback")
             checked: kcm.launchFeedbackSettings.busyCursorDisabled
-            QtControls.ButtonGroup.group: busyCursorGroup
+            QQC2.ButtonGroup.group: busyCursorGroup
 
             KCM.SettingStateBinding {
                 configObject: kcm.launchFeedbackSettings
@@ -42,13 +42,13 @@ KCM.SimpleKCM {
             }
         }
 
-        QtControls.RadioButton {
+        QQC2.RadioButton {
             id: busyCursorStatic
             readonly property string settingName: "busyCursorStatic"
 
             text: i18n("Static")
             checked: kcm.launchFeedbackSettings.busyCursorStatic
-            QtControls.ButtonGroup.group: busyCursorGroup
+            QQC2.ButtonGroup.group: busyCursorGroup
 
             KCM.SettingStateBinding {
                 configObject: kcm.launchFeedbackSettings
@@ -57,13 +57,13 @@ KCM.SimpleKCM {
             }
         }
 
-        QtControls.RadioButton {
+        QQC2.RadioButton {
             id: busyCursorBlinking
             readonly property string settingName: "busyCursorBlinking"
 
             text: i18n("Blinking")
             checked: kcm.launchFeedbackSettings.busyCursorBlinking
-            QtControls.ButtonGroup.group: busyCursorGroup
+            QQC2.ButtonGroup.group: busyCursorGroup
 
             KCM.SettingStateBinding {
                 configObject: kcm.launchFeedbackSettings
@@ -72,13 +72,13 @@ KCM.SimpleKCM {
             }
         }
 
-        QtControls.RadioButton {
+        QQC2.RadioButton {
             id: busyCursorBouncing
             readonly property string settingName: "busyCursorBouncing"
 
             text: i18n("Bouncing")
             checked: kcm.launchFeedbackSettings.busyCursorBouncing
-            QtControls.ButtonGroup.group: busyCursorGroup
+            QQC2.ButtonGroup.group: busyCursorGroup
 
             KCM.SettingStateBinding {
                 configObject: kcm.launchFeedbackSettings
@@ -87,7 +87,7 @@ KCM.SimpleKCM {
             }
         }
 
-        QtControls.CheckBox {
+        QQC2.CheckBox {
             id: taskManagerNotification
 
             Kirigami.FormData.label: i18n("Task Manager:")
@@ -103,7 +103,7 @@ KCM.SimpleKCM {
             }
         }
 
-        QtControls.SpinBox {
+        QQC2.SpinBox {
             id: notificationTimeout
 
             Kirigami.FormData.label: i18n("Stop animation after:")

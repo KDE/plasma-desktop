@@ -6,7 +6,7 @@
 
 import QtQuick 2.6
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.3 as QtControls
+import QtQuick.Controls 2.3 as QQC2
 import QtQml 2.15
 
 import org.kde.kirigami 2.10 as Kirigami
@@ -90,7 +90,7 @@ KCM.ScrollViewKCM {
                 Layout.fillWidth: true
             }
 
-            QtControls.ComboBox {
+            QQC2.ComboBox {
                 id: filterCombo
                 textRole: "text"
                 enabled: kcm.kdedRunning || currentIndex > 0
@@ -169,7 +169,7 @@ KCM.ScrollViewKCM {
                 }
 
                 contentItem: RowLayout {
-                    QtControls.CheckBox {
+                    QQC2.CheckBox {
                         id: autoloadCheck
                         // Keep focus on the delegate
                         focusPolicy: Qt.NoFocus
@@ -177,7 +177,7 @@ KCM.ScrollViewKCM {
                         visible: delegate.checkable
                         onToggled: model.autoloadEnabled = !model.autoloadEnabled
 
-                        QtControls.ToolTip {
+                        QQC2.ToolTip {
                             text: delegate.Accessible.description
                         }
 
@@ -190,7 +190,7 @@ KCM.ScrollViewKCM {
                         Layout.fillWidth: true
                         spacing: 0
 
-                        QtControls.Label {
+                        QQC2.Label {
                             id: displayLabel
                             Layout.fillWidth: true
                             text: delegate.text
@@ -199,7 +199,7 @@ KCM.ScrollViewKCM {
                             color: (delegate.highlighted || (delegate.pressed && delegate.supportsMouseEvents)) ? delegate.activeTextColor : delegate.textColor
                         }
 
-                        QtControls.Label {
+                        QQC2.Label {
                             Layout.fillWidth: true
                             text: model.description
                             // FIXME do we have a descriptive label component?
@@ -210,7 +210,7 @@ KCM.ScrollViewKCM {
                         }
                     }
 
-                    QtControls.Label {
+                    QQC2.Label {
                         id: statusLabel
                         horizontalAlignment: Text.AlignRight
                         opacity: model.status === Private.KCM.Running ? 1 : delegate.hovered ? 0.8 : 0.6
@@ -225,7 +225,7 @@ KCM.ScrollViewKCM {
                         }
                     }
 
-                    QtControls.Button {
+                    QQC2.Button {
                         icon.name: model.status === Private.KCM.Running ? "media-playback-pause" : "media-playback-start"
                         visible: kcm.kdedRunning && model.status !== Private.KCM.UnknownStatus && model.type !== Private.KCM.OnDemandType
                         onClicked: {
@@ -240,7 +240,7 @@ KCM.ScrollViewKCM {
                         }
                         Accessible.name: model.status === Private.KCM.Running ? i18n("Stop Service") : i18n("Start Service")
 
-                        QtControls.ToolTip {
+                        QQC2.ToolTip {
                             text: parent.Accessible.name
                         }
                     }

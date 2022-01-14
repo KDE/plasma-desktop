@@ -6,7 +6,7 @@
 */
 
 import QtQuick 2.7
-import QtQuick.Controls 2.0 as Controls
+import QtQuick.Controls 2.0 as QQC2
 import QtQuick.Layouts 1.3 as Layouts
 
 import org.kde.kcm 1.1 as KCM
@@ -50,7 +50,7 @@ Kirigami.ScrollablePage {
         id: formLayout
 
         // General
-        Controls.CheckBox {
+        QQC2.CheckBox {
             Kirigami.FormData.label: i18nd("kcmmouse", "General:")
             id: leftHanded
             text: i18nd("kcmmouse", "Left handed mode")
@@ -76,7 +76,7 @@ Kirigami.ScrollablePage {
             }
         }
 
-        Controls.CheckBox {
+        QQC2.CheckBox {
             id: middleEmulation
             text: i18nd("kcmmouse", "Press left and right buttons for middle-click")
 
@@ -106,7 +106,7 @@ Kirigami.ScrollablePage {
         }
 
         // Acceleration
-        Controls.Slider {
+        QQC2.Slider {
             Kirigami.FormData.label: i18nd("kcmmouse", "Pointer speed:")
             id: accelSpeed
 
@@ -168,7 +168,7 @@ Kirigami.ScrollablePage {
                 }
             }
 
-            Controls.RadioButton {
+            QQC2.RadioButton {
                 id: accelProfileFlat
                 text: i18nd("kcmmouse", "Flat")
 
@@ -178,7 +178,7 @@ Kirigami.ScrollablePage {
                 onCheckedChanged: accelProfile.syncCurrent()
             }
 
-            Controls.RadioButton {
+            QQC2.RadioButton {
                 id: accelProfileAdaptive
                 text: i18nd("kcmmouse", "Adaptive")
 
@@ -194,7 +194,7 @@ Kirigami.ScrollablePage {
         }
 
         // Scrolling
-        Controls.CheckBox {
+        QQC2.CheckBox {
             Kirigami.FormData.label: i18nd("kcmmouse", "Scrolling:")
             id: naturalScroll
             text: i18nd("kcmmouse", "Invert scroll direction")

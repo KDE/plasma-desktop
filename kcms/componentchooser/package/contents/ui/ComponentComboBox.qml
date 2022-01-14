@@ -5,11 +5,11 @@
 */
 
 import QtQuick 2.12
-import QtQuick.Controls 2.12 as Controls
+import QtQuick.Controls 2.12 as QQC2
 
 import org.kde.kirigami 2.7 as Kirigami
 
-Controls.ComboBox {
+QQC2.ComboBox {
     id: comboBox
     
     property string label
@@ -21,7 +21,7 @@ Controls.ComboBox {
     currentIndex: component.index
     onActivated: component.select(currentIndex, true)
     
-    delegate: Controls.ItemDelegate {
+    delegate: QQC2.ItemDelegate {
         width: comboBox.popup.width
         text: modelData[comboBox.textRole]
         highlighted: comboBox.highlightedIndex == index

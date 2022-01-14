@@ -6,7 +6,7 @@
 */
 
 import QtQuick 2.7
-import QtQuick.Controls 2.0 as Controls
+import QtQuick.Controls 2.0 as QQC2
 import QtQuick.Layouts 1.3 as Layouts
 
 import org.kde.kcm 1.1 as KCM
@@ -111,7 +111,7 @@ Kirigami.ScrollablePage {
         visible: touchpadCount > 0
 
         // Device
-        Controls.ComboBox {
+        QQC2.ComboBox {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Device:")
             id: deviceSelector
 
@@ -138,13 +138,13 @@ Kirigami.ScrollablePage {
         }
 
         // General settings
-        Controls.CheckBox {
+        QQC2.CheckBox {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "General:")
             id: deviceEnabled
             text: i18nd("kcm_touchpad", "Device enabled")
 
             hoverEnabled: true
-            Controls.ToolTip {
+            QQC2.ToolTip {
                 text: i18nd("kcm_touchpad", "Accept input through this device.")
                 visible: parent.hovered
                 delay: 1000
@@ -167,12 +167,12 @@ Kirigami.ScrollablePage {
             }
         }
 
-        Controls.CheckBox {
+        QQC2.CheckBox {
             id: dwt
             text: i18nd("kcm_touchpad", "Disable while typing")
 
             hoverEnabled: true
-            Controls.ToolTip {
+            QQC2.ToolTip {
                 text: i18nd("kcm_touchpad", "Disable touchpad while typing to prevent accidental inputs.")
                 visible: parent.hovered
                 delay: 1000
@@ -195,12 +195,12 @@ Kirigami.ScrollablePage {
             }
         }
 
-        Controls.CheckBox {
+        QQC2.CheckBox {
             id: leftHanded
             text: i18nd("kcm_touchpad", "Left handed mode")
 
             hoverEnabled: true
-            Controls.ToolTip {
+            QQC2.ToolTip {
                 text: i18nd("kcm_touchpad", "Swap left and right buttons.")
                 visible: parent.hovered
                 delay: 1000
@@ -223,12 +223,12 @@ Kirigami.ScrollablePage {
             }
         }
 
-        Controls.CheckBox {
+        QQC2.CheckBox {
             id: middleEmulation
             text: i18nd("kcm_touchpad", "Press left and right buttons for middle click")
 
             hoverEnabled: true
-            Controls.ToolTip {
+            QQC2.ToolTip {
                 text: i18nd("kcm_touchpad", "Clicking left and right button simultaneously sends middle button click.")
                 visible: parent.hovered
                 delay: 1000
@@ -282,7 +282,7 @@ Kirigami.ScrollablePage {
                 }
             }
 
-            Controls.Slider {
+            QQC2.Slider {
                 id: accelSpeedSlider
 
                 from: 1
@@ -312,7 +312,7 @@ Kirigami.ScrollablePage {
                 }
             }
 
-            Controls.SpinBox {
+            QQC2.SpinBox {
                 id: accelSpeedSpinbox
 
                 Layouts.Layout.minimumWidth: Kirigami.Units.gridUnit * 4
@@ -385,12 +385,12 @@ Kirigami.ScrollablePage {
                 }
             }
 
-            Controls.RadioButton {
+            QQC2.RadioButton {
                 id: accelProfileFlat
                 text: i18nd("kcm_touchpad", "Flat")
 
                 hoverEnabled: true
-                Controls.ToolTip {
+                QQC2.ToolTip {
                     text: i18nd("kcm_touchpad", "Cursor moves the same distance as finger.")
                     visible: parent.hovered
                     delay: 1000
@@ -398,12 +398,12 @@ Kirigami.ScrollablePage {
                 onCheckedChanged: accelProfile.syncCurrent()
             }
 
-            Controls.RadioButton {
+            QQC2.RadioButton {
                 id: accelProfileAdaptive
                 text: i18nd("kcm_touchpad", "Adaptive")
 
                 hoverEnabled: true
-                Controls.ToolTip {
+                QQC2.ToolTip {
                     text: i18nd("kcm_touchpad", "Cursor travel distance depends on movement speed of finger.")
                     visible: parent.hovered
                     delay: 1000
@@ -417,13 +417,13 @@ Kirigami.ScrollablePage {
         }
 
         // Tapping
-        Controls.CheckBox {
+        QQC2.CheckBox {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Tapping:")
             id: tapToClick
             text: i18nd("kcm_touchpad", "Tap-to-click")
 
             hoverEnabled: true
-            Controls.ToolTip {
+            QQC2.ToolTip {
                 text: i18nd("kcm_touchpad", "Single tap is left button click.")
                 visible: parent.hovered
                 delay: 1000
@@ -451,12 +451,12 @@ Kirigami.ScrollablePage {
             }
         }
 
-        Controls.CheckBox {
+        QQC2.CheckBox {
             id: tapAndDrag
             text: i18nd("kcm_touchpad", "Tap-and-drag")
 
             hoverEnabled: true
-            Controls.ToolTip {
+            QQC2.ToolTip {
                 text: i18nd("kcm_touchpad", "Sliding over touchpad directly after tap drags.")
                 visible: parent.hovered
                 delay: 1000
@@ -482,12 +482,12 @@ Kirigami.ScrollablePage {
             }
         }
 
-        Controls.CheckBox {
+        QQC2.CheckBox {
             id: tapAndDragLock
             text: i18nd("kcm_touchpad", "Tap-and-drag lock")
 
             hoverEnabled: true
-            Controls.ToolTip {
+            QQC2.ToolTip {
                 text: i18nd("kcm_touchpad", "Dragging continues after a short finger lift.")
                 visible: parent.hovered
                 delay: 1000
@@ -549,12 +549,12 @@ Kirigami.ScrollablePage {
                 }
             }
 
-            Controls.RadioButton {
+            QQC2.RadioButton {
                 id: multiTapRightClick
                 // text: is handled dynamically on load.
 
                 hoverEnabled: true
-                Controls.ToolTip {
+                QQC2.ToolTip {
                     id: multiTapRightClickToolTip
                     visible: parent.hovered
                     delay: 1000
@@ -563,12 +563,12 @@ Kirigami.ScrollablePage {
                 onCheckedChanged: multiTap.syncCurrent()
             }
 
-            Controls.RadioButton {
+            QQC2.RadioButton {
                 id: multiTapMiddleClick
                 // text: is handled dynamically on load.
 
                 hoverEnabled: true
-                Controls.ToolTip {
+                QQC2.ToolTip {
                     id: multiTapMiddleClickToolTip
                     visible: parent.hovered
                     delay: 1000
@@ -612,24 +612,24 @@ Kirigami.ScrollablePage {
                 loading = false
             }
 
-            Controls.RadioButton {
+            QQC2.RadioButton {
                 id: scrollMethodTwoFingers
                 text: i18nd("kcm_touchpad", "Two fingers")
 
                 hoverEnabled: true
-                Controls.ToolTip {
+                QQC2.ToolTip {
                     text: i18nd("kcm_touchpad", "Slide with two fingers scrolls.")
                     visible: parent.hovered
                     delay: 1000
                 }
             }
 
-            Controls.RadioButton {
+            QQC2.RadioButton {
                 id: scrollMethodTouchpadEdges
                 text: i18nd("kcm_touchpad", "Touchpad edges")
 
                 hoverEnabled: true
-                Controls.ToolTip {
+                QQC2.ToolTip {
                     text: i18nd("kcm_touchpad", "Slide on the touchpad edges scrolls.")
                     visible: parent.hovered
                     delay: 1000
@@ -638,7 +638,7 @@ Kirigami.ScrollablePage {
             }
         }
 
-        Controls.CheckBox {
+        QQC2.CheckBox {
             id: naturalScroll
             text: i18nd("kcm_touchpad", "Invert scroll direction (Natural scrolling)")
 
@@ -655,14 +655,14 @@ Kirigami.ScrollablePage {
             }
 
             hoverEnabled: true
-            Controls.ToolTip {
+            QQC2.ToolTip {
                 text: i18nd("kcm_touchpad", "Touchscreen like scrolling.")
                 visible: parent.hovered
                 delay: 1000
             }
         }
 
-        Controls.CheckBox {
+        QQC2.CheckBox {
             id: disableHorizontalScrolling
             text: i18nd("kcm_touchpad", "Disable horizontal scrolling")
 
@@ -680,7 +680,7 @@ Kirigami.ScrollablePage {
             }
 
             hoverEnabled: true
-            Controls.ToolTip {
+            QQC2.ToolTip {
                 text: i18nd("kcm_touchpad", "Disable horizontal scrolling")
                 visible: parent.hovered
                 delay: 1000
@@ -695,7 +695,7 @@ Kirigami.ScrollablePage {
 
             columns: 3
 
-            Controls.Slider {
+            QQC2.Slider {
                 id: scrollFactor
 
                 from: 0
@@ -737,13 +737,13 @@ Kirigami.ScrollablePage {
             }
 
             //row 2
-            Controls.Label {
+            QQC2.Label {
                 text: i18ndc("kcm_touchpad", "Slower Scroll", "Slower")
             }
             Item {
                 Layouts.Layout.fillWidth: true
             }
-            Controls.Label {
+            QQC2.Label {
                 text: i18ndc("kcm_touchpad", "Faster Scroll Speed", "Faster")
             }
         }
@@ -783,24 +783,24 @@ Kirigami.ScrollablePage {
                 loading = false
             }
 
-            Controls.RadioButton {
+            QQC2.RadioButton {
                 id: rightClickMethodAreas
                 text: i18nd("kcm_touchpad", "Press bottom-right corner")
 
                 hoverEnabled: true
-                Controls.ToolTip {
+                QQC2.ToolTip {
                     text: i18nd("kcm_touchpad", "Software enabled buttons will be added to bottom portion of your touchpad.")
                     visible: parent.hovered
                     delay: 1000
                 }
             }
 
-            Controls.RadioButton {
+            QQC2.RadioButton {
                 id: rightClickMethodClickfinger
                 text: i18nd("kcm_touchpad", "Press anywhere with two fingers")
 
                 hoverEnabled: true
-                Controls.ToolTip {
+                QQC2.ToolTip {
                     text: i18nd("kcm_touchpad", "Tap with two finger to enable right click.")
                     visible: parent.hovered
                     delay: 1000
@@ -842,24 +842,24 @@ Kirigami.ScrollablePage {
                 loading = false
             }
 
-            Controls.RadioButton {
+            QQC2.RadioButton {
                 id: noMiddleSoftwareEmulation
                 text: i18nd("kcm_touchpad", "Press bottom-middle")
                 visible: rightClickMethodAreas.checked
                 hoverEnabled: true
-                Controls.ToolTip {
+                QQC2.ToolTip {
                     text: i18nd("kcm_touchpad", "Software enabled middle-button will be added to bottom portion of your touchpad.")
                     visible: parent.hovered
                     delay: 1000
                 }
             }
 
-            Controls.RadioButton {
+            QQC2.RadioButton {
                 id: middleSoftwareEmulation
                 text: i18nd("kcm_touchpad", "Press bottom left and bottom right corners simultaneously")
                 visible: rightClickMethodAreas.checked
                 hoverEnabled: true
-                Controls.ToolTip {
+                QQC2.ToolTip {
                     text: i18nd("kcm_touchpad", "Clicking left and right button simultaneously sends middle button click.")
                     visible: parent.hovered
                     delay: 1000
@@ -867,14 +867,14 @@ Kirigami.ScrollablePage {
                 onCheckedChanged: middleClickMethod.syncCurrent()
             }
 
-            Controls.CheckBox {
+            QQC2.CheckBox {
                 id: clickfingerMiddleInfoBox
                 text: i18nd("kcm_touchpad", "Press anywhere with three fingers")
                 checked: true
                 enabled: false
                 visible: rightClickMethodClickfinger.checked
                 hoverEnabled: true
-                Controls.ToolTip {
+                QQC2.ToolTip {
                     text: i18nd("kcm_touchpad", "Press anywhere with three fingers.")
                     visible: parent.hovered
                     delay: 1000

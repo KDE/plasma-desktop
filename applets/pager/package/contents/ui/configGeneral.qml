@@ -6,7 +6,7 @@
  */
 
 import QtQuick 2.5
-import QtQuick.Controls 2.5 as QtControls
+import QtQuick.Controls 2.5 as QQC2
 
 import org.kde.kirigami 2.5 as Kirigami
 
@@ -58,15 +58,15 @@ Kirigami.FormLayout {
         cfg_displayedTextChanged();
     }
 
-    QtControls.ButtonGroup {
+    QQC2.ButtonGroup {
         id: displayedTextGroup
     }
-    QtControls.ButtonGroup {
+    QQC2.ButtonGroup {
         id: currentDesktopSelectedGroup
     }
 
 
-    QtControls.CheckBox {
+    QQC2.CheckBox {
         id: showWindowIcons
 
         Kirigami.FormData.label: i18n("General:")
@@ -74,12 +74,12 @@ Kirigami.FormLayout {
         text: i18n("Show application icons on window outlines")
     }
 
-    QtControls.CheckBox {
+    QQC2.CheckBox {
         id: showOnlyCurrentScreen
         text: i18n("Show only current screen")
     }
 
-    QtControls.CheckBox {
+    QQC2.CheckBox {
         id: wrapPage
         text: i18n("Navigation wraps around")
     }
@@ -90,7 +90,7 @@ Kirigami.FormLayout {
     }
 
 
-    QtControls.ComboBox {
+    QQC2.ComboBox {
         id: pagerLayout
 
         Kirigami.FormData.label: i18n("Layout:")
@@ -106,24 +106,24 @@ Kirigami.FormLayout {
     }
 
 
-    QtControls.RadioButton {
+    QQC2.RadioButton {
         id: noTextRadio
 
         Kirigami.FormData.label: i18n("Text display:")
 
-        QtControls.ButtonGroup.group: displayedTextGroup
+        QQC2.ButtonGroup.group: displayedTextGroup
         text: i18n("No text")
         onCheckedChanged: if (checked) cfg_displayedText = 2;
     }
-    QtControls.RadioButton {
+    QQC2.RadioButton {
         id: desktopNumberRadio
-        QtControls.ButtonGroup.group: displayedTextGroup
+        QQC2.ButtonGroup.group: displayedTextGroup
         text: isActivityPager ? i18n("Activity number") : i18n("Desktop number")
         onCheckedChanged: if (checked) cfg_displayedText = 0;
     }
-    QtControls.RadioButton {
+    QQC2.RadioButton {
         id: desktopNameRadio
-        QtControls.ButtonGroup.group: displayedTextGroup
+        QQC2.ButtonGroup.group: displayedTextGroup
         text: isActivityPager ? i18n("Activity name") : i18n("Desktop name")
         onCheckedChanged: if (checked) cfg_displayedText = 1;
     }
@@ -134,18 +134,18 @@ Kirigami.FormLayout {
     }
 
 
-    QtControls.RadioButton {
+    QQC2.RadioButton {
         id: doesNothingRadio
 
         Kirigami.FormData.label: isActivityPager ? i18n("Selecting current Activity:") : i18n("Selecting current virtual desktop:")
 
-        QtControls.ButtonGroup.group: currentDesktopSelectedGroup
+        QQC2.ButtonGroup.group: currentDesktopSelectedGroup
         text: i18n("Does nothing")
         onCheckedChanged: if (checked) cfg_currentDesktopSelected = 0;
     }
-    QtControls.RadioButton {
+    QQC2.RadioButton {
         id: showsDesktopRadio
-        QtControls.ButtonGroup.group: currentDesktopSelectedGroup
+        QQC2.ButtonGroup.group: currentDesktopSelectedGroup
         text: i18n("Shows the desktop")
         onCheckedChanged: if (checked) cfg_currentDesktopSelected = 1;
     }
