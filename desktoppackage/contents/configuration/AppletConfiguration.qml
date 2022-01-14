@@ -8,7 +8,7 @@
 
 import QtQuick 2.15
 import QtQuick.Dialogs 1.1
-import QtQuick.Controls 2.3 as QtControls
+import QtQuick.Controls 2.3 as QQC2
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 
@@ -110,7 +110,7 @@ Rectangle {
     }
 
 
-    QtControls.ScrollView {
+    QQC2.ScrollView {
         id: categoriesScroll
         anchors {
             left: parent.left
@@ -285,7 +285,7 @@ Rectangle {
             }
         }
 
-        footer: QtControls.Pane {
+        footer: QQC2.Pane {
 
             padding: Kirigami.Units.largeSpacing
 
@@ -297,13 +297,13 @@ Rectangle {
                     Layout.fillWidth: true
                 }
 
-                QtControls.Button {
+                QQC2.Button {
                     icon.name: "dialog-ok"
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "OK")
                     onClicked: acceptAction.trigger()
                     KeyNavigation.tab: categories
                 }
-                QtControls.Button {
+                QQC2.Button {
                     id: applyButton
                     enabled: false
                     icon.name: "dialog-ok-apply"
@@ -311,7 +311,7 @@ Rectangle {
                     visible: !app.isAboutPage && app.pageStack.currentItem && (!app.pageStack.currentItem.kcm || app.pageStack.currentItem.kcm.buttons & 4) // 4 = Apply button
                     onClicked: applyAction.trigger()
                 }
-                QtControls.Button {
+                QQC2.Button {
                     icon.name: "dialog-cancel"
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel")
                     onClicked: cancelAction.trigger()
@@ -334,7 +334,7 @@ Rectangle {
             }
         }
 
-        QtControls.Action {
+        QQC2.Action {
             id: acceptAction
             onTriggered: {
                 applyAction.trigger();
@@ -343,7 +343,7 @@ Rectangle {
             shortcut: "Return"
         }
 
-        QtControls.Action {
+        QQC2.Action {
             id: applyAction
             onTriggered: {
                 app.pageStack.get(0).saveConfig()
@@ -352,7 +352,7 @@ Rectangle {
             }
         }
 
-        QtControls.Action {
+        QQC2.Action {
             id: cancelAction
             onTriggered: configDialog.close();
             shortcut: "Escape"
