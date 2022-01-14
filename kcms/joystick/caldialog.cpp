@@ -80,7 +80,7 @@ void CalDialog::calibrate()
         else if (i == 1)
             hint = i18n("(usually Y)");
         else
-            hint = QLatin1String("");
+            hint = QString();
 
         // minimum position
         text->setText(

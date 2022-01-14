@@ -36,14 +36,14 @@ static const QString COMMAND_OPTIONS_SEPARATOR(QStringLiteral(","));
 static QString getSetxkbmapExe()
 {
     if (setxkbmapNotFound)
-        return QLatin1String("");
+        return QString();
 
     if (setxkbmapExe.isEmpty()) {
         setxkbmapExe = QStandardPaths::findExecutable(SETXKBMAP_EXEC);
         if (setxkbmapExe.isEmpty()) {
             setxkbmapNotFound = true;
             qCCritical(KCM_KEYBOARD) << "Can't find" << SETXKBMAP_EXEC << "- keyboard layouts won't be configured";
-            return QLatin1String("");
+            return QString();
         }
     }
     return setxkbmapExe;
@@ -116,7 +116,7 @@ bool XkbHelper::initializeKeyboardLayouts(const QList<LayoutUnit> &layoutUnits)
     QStringList setxkbmapCommandArguments;
     setxkbmapCommandArguments.append(QStringLiteral("-layout"));
     setxkbmapCommandArguments.append(layouts.join(COMMAND_OPTIONS_SEPARATOR));
-    if (!variants.join(QLatin1String("")).isEmpty()) {
+    if (!variants.join(QString()).isEmpty()) {
         setxkbmapCommandArguments.append(QStringLiteral("-variant"));
         setxkbmapCommandArguments.append(variants.join(COMMAND_OPTIONS_SEPARATOR));
     }
@@ -146,7 +146,7 @@ bool XkbHelper::initializeKeyboardLayouts(KeyboardConfig &config)
 
         setxkbmapCommandArguments.append(QStringLiteral("-layout"));
         setxkbmapCommandArguments.append(layouts.join(COMMAND_OPTIONS_SEPARATOR));
-        if (!variants.join(QLatin1String("")).isEmpty()) {
+        if (!variants.join(QString()).isEmpty()) {
             setxkbmapCommandArguments.append(QStringLiteral("-variant"));
             setxkbmapCommandArguments.append(variants.join(COMMAND_OPTIONS_SEPARATOR));
         }

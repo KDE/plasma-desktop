@@ -109,7 +109,7 @@ void AddLayoutDialog::accept()
 {
     QString label = layoutDialogUi->labelEdit->text();
     if (label == selectedLayout) {
-        label = QLatin1String("");
+        label = QString();
     }
     selectedLayoutUnit.setDisplayName(label);
     selectedLayoutUnit.setShortcut(layoutDialogUi->kkeysequencewidget->keySequence());

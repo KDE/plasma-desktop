@@ -204,7 +204,7 @@ void JoyWidget::restoreCurrDev()
 {
     if (!joydev) // no device open
     {
-        device->setEditText(QLatin1String(""));
+        device->setEditText(QString());
         calibrate->setEnabled(false);
     } else {
         // try to find the current open device in the combobox list

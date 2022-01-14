@@ -18,7 +18,7 @@
 
 ComponentChooserTerminal::ComponentChooserTerminal(QObject *parent)
     : ComponentChooser(parent,
-                       QLatin1String(""),
+                       QString(),
                        QStringLiteral("TerminalEmulator"),
                        QStringLiteral("org.kde.konsole.desktop"),
                        i18n("Select default terminal emulator"))
@@ -73,7 +73,7 @@ void ComponentChooserTerminal::load()
     QVariantMap application;
     application["name"] = i18n("Other…");
     application["icon"] = QStringLiteral("application-x-shellscript");
-    application["storageId"] = QLatin1String("");
+    application["storageId"] = QString();
     m_applications += application;
     if (m_index == -1) {
         m_index = 0;

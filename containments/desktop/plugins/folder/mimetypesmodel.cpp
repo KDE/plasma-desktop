@@ -109,7 +109,7 @@ QStringList MimeTypesModel::checkedTypes() const
         return list;
     }
 
-    return QStringList(QLatin1String(""));
+    return QStringList(QString());
 }
 
 void MimeTypesModel::setCheckedTypes(const QStringList &list)

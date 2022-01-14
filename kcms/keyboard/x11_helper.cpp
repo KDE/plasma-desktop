@@ -382,7 +382,7 @@ LayoutUnit::LayoutUnit(const QString &fullLayoutName)
 {
     QStringList lv = fullLayoutName.split(LAYOUT_VARIANT_SEPARATOR_PREFIX);
     m_layout = lv[0];
-    m_variant = lv.size() > 1 ? stripVariantName(lv[1]) : QLatin1String("");
+    m_variant = lv.size() > 1 ? stripVariantName(lv[1]) : QString();
 }
 
 QString LayoutUnit::toString() const

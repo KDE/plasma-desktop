@@ -35,7 +35,7 @@ ActionItem::ActionItem(const QString &pathToDesktop, const QString &action, QObj
     configGroups.append(desktopFileWrite->actionGroup(actionName));
     actionGroups.insert(ActionItem::GroupAction, &configGroups.last());
 
-    const QString predicateString = readKey(ActionItem::GroupDesktop, QStringLiteral("X-KDE-Solid-Predicate"), QLatin1String(""));
+    const QString predicateString = readKey(ActionItem::GroupDesktop, QStringLiteral("X-KDE-Solid-Predicate"), QString());
     predicateItem = Solid::Predicate::fromString(predicateString);
 }
 
@@ -54,17 +54,17 @@ bool ActionItem::isUserSupplied() const
 
 QString ActionItem::icon() const
 {
-    return readKey(ActionItem::GroupAction, QStringLiteral("Icon"), QLatin1String(""));
+    return readKey(ActionItem::GroupAction, QStringLiteral("Icon"), QString());
 }
 
 QString ActionItem::exec() const
 {
-    return readKey(ActionItem::GroupAction, QStringLiteral("Exec"), QLatin1String(""));
+    return readKey(ActionItem::GroupAction, QStringLiteral("Exec"), QString());
 }
 
 QString ActionItem::name() const
 {
-    return readKey(ActionItem::GroupAction, QStringLiteral("Name"), QLatin1String(""));
+    return readKey(ActionItem::GroupAction, QStringLiteral("Name"), QString());
 }
 
 Solid::Predicate ActionItem::predicate() const

@@ -35,7 +35,7 @@ QString JoyDevice::errText(ErrorCode code) const
 {
     switch (code) {
     case SUCCESS:
-        return QLatin1String("");
+        return QString();
 
     case OPEN_FAILED: {
         return i18n("The given device %1 could not be opened: %2", devName, strerror(errno));
@@ -177,7 +177,7 @@ void JoyDevice::close()
     ::close(joyFd);
 
     joyFd = -1;
-    descr = QLatin1String("");
+    descr = QString();
 
     delete[] amin;
     delete[] amax;

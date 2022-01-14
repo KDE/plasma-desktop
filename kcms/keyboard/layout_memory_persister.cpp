@@ -44,7 +44,7 @@ static bool isDefaultLayoutConfig(const LayoutSet &layout, const QList<LayoutUni
 QString LayoutMemoryPersister::getLayoutMapAsString()
 {
     if (!canPersist())
-        return QLatin1String("");
+        return QString();
 
     QDomDocument doc(DOC_NAME);
     QDomElement root = doc.createElement(ROOT_NODE);
@@ -54,7 +54,7 @@ QString LayoutMemoryPersister::getLayoutMapAsString()
 
     if (layoutMemory.keyboardConfig.switchingPolicy() == KeyboardConfig::SWITCH_POLICY_GLOBAL) {
         if (!globalLayout.isValid())
-            return QLatin1String("");
+            return QString();
 
         QDomElement item = doc.createElement(ITEM_NODE);
         item.setAttribute(CURRENT_LAYOUT_ATTRIBUTE, globalLayout.toString());
