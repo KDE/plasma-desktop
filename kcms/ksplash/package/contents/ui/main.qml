@@ -7,7 +7,6 @@
 import QtQuick 2.1
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 1.0 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.newstuff 1.62 as NewStuff
 import org.kde.kcm 1.3 as KCM
