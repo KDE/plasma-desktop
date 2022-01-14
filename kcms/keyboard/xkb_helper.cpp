@@ -11,13 +11,13 @@
 #include <QDir>
 #include <QElapsedTimer>
 #include <QFile>
+#include <QProcess>
 #include <QStandardPaths>
 #include <QString>
 #include <QStringList>
 #include <QTime>
 #include <QX11Info>
 
-#include <KProcess>
 
 #include "keyboard_config.h"
 #include "keyboardsettings.h"
@@ -89,17 +89,16 @@ bool XkbHelper::runConfigLayoutCommand(const QStringList &setxkbmapCommandArgume
     QElapsedTimer timer;
     timer.start();
 
-    KProcess setxkbmapProcess;
-    setxkbmapProcess << getSetxkbmapExe() << setxkbmapCommandArguments;
-    int res = setxkbmapProcess.execute();
+    const QString cmd = getSetxkbmapExe() + QLatin1Char(' ') + setxkbmapCommandArguments.join(QLatin1Char(' '));
+    const int res = QProcess::execute(cmd, QStringList{});
 
     if (res == 0) { // restore Xmodmap mapping reset by setxkbmap
-        qCDebug(KCM_KEYBOARD) << "Executed successfully in " << timer.elapsed() << "ms" << setxkbmapProcess.program().join(QLatin1Char(' '));
+        qCDebug(KCM_KEYBOARD) << "Executed successfully in " << timer.elapsed() << "ms" << cmd;
         restoreXmodmap();
         qCDebug(KCM_KEYBOARD) << "\t and with xmodmap" << timer.elapsed() << "ms";
         return true;
     } else {
-        qCCritical(KCM_KEYBOARD) << "Failed to run" << setxkbmapProcess.program().join(QLatin1Char(' ')) << "return code:" << res;
+        qCCritical(KCM_KEYBOARD) << "Failed to run" << cmd << "return code:" << res;
     }
     return false;
 }
@@ -156,9 +155,9 @@ bool XkbHelper::initializeKeyboardLayouts(KeyboardConfig &config)
         setxkbmapCommandArguments.append(QStringLiteral("-option"));
         setxkbmapCommandArguments.append(QStringLiteral(""));
     }
-    if (!config.xkbOptions().isEmpty()) {
-        setxkbmapCommandArguments.append(QStringLiteral("-option"));
-        setxkbmapCommandArguments.append(config.xkbOptions());
+    const QStringList xkbOpts = config.xkbOptions();
+    for (const auto &opt : xkbOpts) {
+        setxkbmapCommandArguments.append(QLatin1String("-option ") + opt);
     }
 
     if (!setxkbmapCommandArguments.isEmpty()) {
