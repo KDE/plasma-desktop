@@ -7,7 +7,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.0
-import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.configuration 2.0
@@ -130,26 +129,37 @@ Item {
         rowSpacing: PlasmaCore.Units.smallSpacing
         columnSpacing: PlasmaCore.Units.smallSpacing
 
-        PlasmaComponents.Button {
+        PlasmaComponents3.Button {
             id: addWidgetsButton
             text: buttonsLayout_2.showText ? root.addWidgetsButtonText : ""
-            tooltip: buttonsLayout_2.showText ? "" : root.addWidgetsButtonText
-            iconSource: "list-add"
+            icon.name: "list-add"
             Layout.fillWidth: true
             onClicked: {
                 configDialog.close();
                 configDialog.showAddWidgetDialog();
             }
+            Loader {
+                active: !buttonsLayout_2.showText
+                sourceComponent: PlasmaComponents3.ToolTip {
+                    text: root.addWidgetsButtonText
+                }
+            }
+
         }
 
-        PlasmaComponents.Button {
+        PlasmaComponents3.Button {
             id: addSpacerButton
-            iconSource: "distribute-horizontal-x"
             text: buttonsLayout_2.showText ? root.addSpacerButtonText : ""
-            tooltip: buttonsLayout_2.showText ? "" : root.addSpacerButtonText
+            icon.name: "distribute-horizontal-x"
             Layout.fillWidth: true
             onClicked: {
                 configDialog.addPanelSpacer();
+            }
+            Loader {
+                active: !buttonsLayout_2.showText
+                sourceComponent: PlasmaComponents3.ToolTip {
+                    text: root.addSpacerButtonText
+                }
             }
         }
     }
@@ -243,7 +253,7 @@ Item {
         }
     }
 
-    PlasmaComponents.Label {
+    PlasmaComponents3.Label {
         id: placeHolder
         visible: false
         text: addWidgetsButtonText + addSpacerButtonText + settingsButtonText
@@ -271,11 +281,10 @@ Item {
         rowSpacing: PlasmaCore.Units.smallSpacing
         columnSpacing: PlasmaCore.Units.smallSpacing
 
-        PlasmaComponents.Button {
+        PlasmaComponents3.Button {
             id: settingsButton
-            iconSource: "configure"
             text: buttonsLayout_2.showText ? root.settingsButtonText : ""
-            tooltip: buttonsLayout_2.showText ? "" : root.settingsButtonText
+            icon.name: "configure"
             Layout.fillWidth: true
             checkable: true
             onCheckedChanged: {
@@ -285,16 +294,24 @@ Item {
                     contextMenuLoader.close()
                 }
             }
+            Loader {
+                active: !buttonsLayout_2.showText
+                sourceComponent: PlasmaComponents3.ToolTip {
+                    text: root.settingsButtonText
+                }
+            }
         }
 
-        PlasmaComponents.ToolButton {
+        PlasmaComponents3.ToolButton {
             id: closeButton
             parent: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? buttonsLayout_2 : root
             anchors.right: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? undefined : parent.right
-            iconSource: "window-close"
-            tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Close")
+            icon.name: "window-close"
             onClicked: {
                 configDialog.close()
+            }
+            PlasmaComponents3.ToolTip {
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Close")
             }
         }
 
