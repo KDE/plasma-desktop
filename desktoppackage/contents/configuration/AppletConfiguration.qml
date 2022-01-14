@@ -12,7 +12,7 @@ import QtQuick.Controls 2.3 as QQC2
 import QtQuick.Layouts 1.1
 
 import org.kde.kirigami 2.14 as Kirigami
-import org.kde.plasma.core 2.1 as PlasmaCore
+import org.kde.kitemmodels 1.0 as KItemModels
 import org.kde.plasma.configuration 2.0
 
 Rectangle {
@@ -42,12 +42,12 @@ Rectangle {
         }
     }
 
-    // TODO: port to KItemModels.KSortFilterProxyModel
-    PlasmaCore.SortFilterModel {
+    KItemModels.KSortFilterProxyModel {
         id: configDialogFilterModel
         sourceModel: configDialog.configModel
-        filterRole: "visible"
-        filterCallback: function(source_row, value) { return value; }
+        filterRowCallback: (row, parent) => {
+            return sourceModel.data(sourceModel.index(row, 0), ConfigModel.VisibleRole);
+        }
     }
 
     function settingValueChanged() {
