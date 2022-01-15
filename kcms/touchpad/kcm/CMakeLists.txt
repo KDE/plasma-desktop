@@ -44,6 +44,7 @@ target_link_libraries(kcm_touchpad
 install(TARGETS kcm_touchpad
         DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings
 )
+install(FILES kcm_touchpad.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 add_custom_command(TARGET kcm_touchpad POST_BUILD
                    COMMAND ${CMAKE_COMMAND} -E create_symlink ../kcms/systemsettings/kcm_touchpad.so kcm_touchpad_init.so)
