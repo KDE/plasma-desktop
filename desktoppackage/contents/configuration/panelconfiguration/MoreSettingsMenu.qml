@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.shell.panel 0.1 as Panel
 
 
 PlasmaCore.Dialog {
@@ -90,32 +91,32 @@ PlasmaCore.Dialog {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Always Visible")
                 checkable: true
-                checked: configDialog.visibilityMode === 0
-                onClicked: configDialog.visibilityMode = 0
+                checked: configDialog.visibilityMode === Panel.Global.NormalPanel
+                onClicked: configDialog.visibilityMode = Panel.Global.NormalPanel
                 flat: false
             }
             PlasmaComponents.ToolButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Auto Hide")
                 checkable: true
-                checked: configDialog.visibilityMode === 1
-                onClicked: configDialog.visibilityMode = 1
+                checked: configDialog.visibilityMode === Panel.Global.AutoHide
+                onClicked: configDialog.visibilityMode = Panel.Global.AutoHide
                 flat: false
             }
             PlasmaComponents.ToolButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Can Cover")
                 checkable: true
-                checked: configDialog.visibilityMode === 2
-                onClicked: configDialog.visibilityMode = 2
+                checked: configDialog.visibilityMode === Panel.Global.LetWindowsCover
+                onClicked: configDialog.visibilityMode = Panel.Global.LetWindowsCover
                 flat: false
             }
             PlasmaComponents.ToolButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Go Below")
                 checkable: true
-                checked: configDialog.visibilityMode === 3
-                onClicked: configDialog.visibilityMode = 3
+                checked: configDialog.visibilityMode === Panel.Global.WindowsGoBelow
+                onClicked: configDialog.visibilityMode = Panel.Global.WindowsGoBelow
                 flat: false
             }
         }
