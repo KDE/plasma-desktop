@@ -134,24 +134,24 @@ PlasmaCore.Dialog {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Adaptive")
                 checkable: true
-                checked: configDialog.opacityMode === 0
-                onClicked: configDialog.opacityMode = 0
+                checked: configDialog.opacityMode === Panel.Global.Adaptive
+                onClicked: configDialog.opacityMode = Panel.Global.Adaptive
                 flat: false
             }
             PlasmaComponents.ToolButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Opaque")
                 checkable: true
-                checked: configDialog.opacityMode === 1
-                onClicked: configDialog.opacityMode = 1
+                checked: configDialog.opacityMode === Panel.Global.Opaque
+                onClicked: configDialog.opacityMode = Panel.Global.Opaque
                 flat: false
             }
             PlasmaComponents.ToolButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Translucent")
                 checkable: true
-                checked: configDialog.opacityMode === 2
-                onClicked: configDialog.opacityMode = 2
+                checked: configDialog.opacityMode === Panel.Global.Translucent
+                onClicked: configDialog.opacityMode = Panel.Global.Translucent
                 flat: false
             }
         }
