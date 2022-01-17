@@ -9,13 +9,23 @@ import QtQuick 2.8
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kirigami 2.15 as Kirigami
 
 Item {
     id: main
 
-    width: isVertical ? PlasmaCore.Units.iconSizes.medium : PlasmaCore.Units.iconSizes.smallMedium + PlasmaCore.Units.smallSpacing * 2
-    height: isVertical ? PlasmaCore.Units.iconSizes.smallMedium + PlasmaCore.Units.smallSpacing * 2 : PlasmaCore.Units.iconSizes.medium
     property bool isVertical: plasmoid.formFactor === 3
+
+    width: Kirigami.Settings.hasTransientTouchInput
+            ? (isVertical ? plasmoid.width : height)
+            : (isVertical
+                ? PlasmaCore.Units.iconSizes.medium
+                : PlasmaCore.Units.iconSizes.smallMedium + PlasmaCore.Units.smallSpacing * 2)
+    height: Kirigami.Settings.hasTransientTouchInput
+            ? (isVertical ? width : plasmoid.height)
+            : (isVertical
+                ? PlasmaCore.Units.iconSizes.smallMedium + PlasmaCore.Units.smallSpacing * 2
+                : PlasmaCore.Units.iconSizes.medium)
 
     z: 999
 
@@ -69,7 +79,7 @@ Item {
         elementId: "configure"
 
         anchors.centerIn: mouseArea
-        width: PlasmaCore.Units.iconSizes.small
+        width: Kirigami.Settings.hasTransientTouchInput ? parent.width : PlasmaCore.Units.iconSizes.small
         height: width
     }
 
