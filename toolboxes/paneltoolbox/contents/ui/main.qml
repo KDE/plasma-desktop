@@ -79,7 +79,7 @@ Item {
         elementId: "configure"
 
         anchors.centerIn: mouseArea
-        width: Kirigami.Settings.hasTransientTouchInput ? parent.width : PlasmaCore.Units.iconSizes.small
+        width: Kirigami.Settings.hasTransientTouchInput ? Math.min(PlasmaCore.Units.iconSizes.medium, parent.width - Kirigami.Units.smallSpacing * 2) : PlasmaCore.Units.iconSizes.small
         height: width
     }
 
