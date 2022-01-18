@@ -95,7 +95,7 @@ QString LayoutMemory::getCurrentMapKey()
 
 static bool isExtraSubset(const QList<LayoutUnit> &allLayouts, const QList<LayoutUnit> &newList)
 {
-    if (allLayouts.first() != newList.first())
+    if (allLayouts.isEmpty() || newList.isEmpty() || allLayouts.first() != newList.first())
         return false;
     for (const LayoutUnit &layoutUnit : newList) {
         if (!allLayouts.contains(layoutUnit))
