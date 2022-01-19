@@ -9,16 +9,20 @@
 
 #include <KAboutData>
 #include <KLocalizedString>
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <Kdelibs4ConfigMigrator>
+#endif
 #include <QApplication>
 #include <QDebug>
 #include <QX11Info>
 
 int main(int argc, char *argv[])
 {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     Kdelibs4ConfigMigrator migrate(QStringLiteral("kaccess"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("kaccessrc"));
     migrate.migrate();
+#endif
 
     qunsetenv("SESSION_MANAGER");
 
