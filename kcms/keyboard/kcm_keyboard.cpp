@@ -91,9 +91,8 @@ void KCMKeyboard::updateUnmanagedState()
 
 void KCMKeyboard::load()
 {
-    m_data->keyboardConfig()->load();
     KCModule::load();
-
+    m_data->keyboardConfig()->load();
     widget->updateUI();
     m_miscWidget->load();
 }
