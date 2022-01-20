@@ -16,16 +16,20 @@ KCM.SimpleKCM {
 
         readonly property int longestComboBox: Math.max(browserCombo.implicitWidth,
                                                         fileManagerCombo.implicitWidth,
+                                                        textEditorCombo.implicitWidth,
+                                                        imageViewerCombo.implicitWidth,
+                                                        pdfViewerCombo.implicitWidth,
+                                                        musicPlayerCombo.implicitWidth,
+                                                        videoPlayerCombo.implicitWidth,
                                                         emailCombo.implicitWidth,
                                                         terminalCombo.implicitWidth,
                                                         mapCombo.implicitWidth,
-                                                        dialerCombo.implicitWidth)
+                                                        dialerCombo.implicitWidth,
+                                                        )
 
         ComponentComboBox {
             id: browserCombo
-
             Layout.preferredWidth: form.longestComboBox
-
             component: kcm.browsers
             label: i18n("Web browser:")
 
@@ -35,9 +39,7 @@ KCM.SimpleKCM {
         }
         ComponentComboBox {
             id: fileManagerCombo
-
             Layout.preferredWidth: form.longestComboBox
-
             component: kcm.fileManagers
             label: i18n("File manager:")
 
@@ -46,18 +48,8 @@ KCM.SimpleKCM {
             }
         }
         ComponentComboBox {
-            id: emailCombo
-
+            id: textEditorCombo
             Layout.preferredWidth: form.longestComboBox
-
-            id: terminalCombo
-
-            Layout.preferredWidth: form.longestComboBox
-
-            id: mapCombo
-
-            Layout.preferredWidth: form.longestComboBox
-
             component: kcm.textEditors
             label: i18n("Text editor:")
 
@@ -66,6 +58,8 @@ KCM.SimpleKCM {
             }
         }
         ComponentComboBox {
+            id: imageViewerCombo
+            Layout.preferredWidth: form.longestComboBox
             component: kcm.imageViewers
             label: i18n("Image viewer:")
 
@@ -74,6 +68,8 @@ KCM.SimpleKCM {
             }
         }
         ComponentComboBox {
+            id: pdfViewerCombo
+            Layout.preferredWidth: form.longestComboBox
             component: kcm.pdfViewers
             label: i18n("PDF viewer:")
 
@@ -82,6 +78,8 @@ KCM.SimpleKCM {
             }
         }
         ComponentComboBox {
+            id: musicPlayerCombo
+            Layout.preferredWidth: form.longestComboBox
             component: kcm.musicPlayers
             label: i18n("Music player:")
 
@@ -90,6 +88,8 @@ KCM.SimpleKCM {
             }
         }
         ComponentComboBox {
+            id: videoPlayerCombo
+            Layout.preferredWidth: form.longestComboBox
             component: kcm.videoPlayers
             label: i18n("Video player:")
 
@@ -98,6 +98,8 @@ KCM.SimpleKCM {
             }
         }
         ComponentComboBox {
+            id: emailCombo
+            Layout.preferredWidth: form.longestComboBox
             component: kcm.emailClients
             label: i18n("Email client:")
 
@@ -106,6 +108,8 @@ KCM.SimpleKCM {
             }
         }
         ComponentComboBox {
+            id: terminalCombo
+            Layout.preferredWidth: form.longestComboBox
             component: kcm.terminalEmulators
             label: i18n("Terminal emulator:")
 
@@ -114,6 +118,8 @@ KCM.SimpleKCM {
             }
         }
         ComponentComboBox {
+            id: mapCombo
+            Layout.preferredWidth: form.longestComboBox
             component: kcm.geoUriHandlers
             label: i18n("Map:")
 
@@ -123,9 +129,7 @@ KCM.SimpleKCM {
         }
         ComponentComboBox {
             id: dialerCombo
-
             Layout.preferredWidth: form.longestComboBox
-
             component: kcm.telUriHandlers
             label: i18nc("Default phone app", "Dialer:")
 
