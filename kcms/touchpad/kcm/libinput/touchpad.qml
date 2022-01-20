@@ -756,12 +756,13 @@ Kirigami.ScrollablePage {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Right-click:")
             Kirigami.FormData.buddyFor: rightClickMethodAreas
             id: rightClickMethod
-            enabled: touchpad.supportsClickMethodAreas && touchpad.supportsClickMethodClickfinger
-            visible: touchpad.supportsClickMethodAreas || touchpad.supportsClickMethodClickfinger
 
             spacing: Kirigami.Units.smallSpacing
 
             function load() {
+                enabled = touchpad.supportsClickMethodAreas && touchpad.supportsClickMethodClickfinger
+                visible = touchpad.supportsClickMethodAreas || touchpad.supportsClickMethodClickfinger
+
                 rightClickMethodAreas.enabled = touchpad.supportsClickMethodAreas
                 rightClickMethodClickfinger.enabled = touchpad.supportsClickMethodClickfinger
 
