@@ -24,8 +24,7 @@ KCM.SimpleKCM {
                                                         emailCombo.implicitWidth,
                                                         terminalCombo.implicitWidth,
                                                         mapCombo.implicitWidth,
-                                                        dialerCombo.implicitWidth,
-                                                        )
+                                                        dialerCombo.implicitWidth)
 
         ComponentComboBox {
             id: browserCombo
