@@ -408,7 +408,7 @@ PlasmaComponents.ContextMenu {
                     return menu.visualParent && menu.get(atm.Activities).length === 0;
                 });
                 menuItem.toggled.connect(function(checked) {
-                    var newActivities = undefined; // will cast to an empty QStringList i.e all activities
+                    let newActivities = []; // will cast to an empty QStringList i.e all activities
                     if (!checked) {
                         newActivities = new Array(activityInfo.currentActivity);
                     }
