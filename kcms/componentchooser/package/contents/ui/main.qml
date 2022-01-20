@@ -17,8 +17,8 @@ KCM.SimpleKCM {
         readonly property int longestComboBox: Math.max(browserCombo.implicitWidth,
                                                         fileManagerCombo.implicitWidth,
                                                         textEditorCombo.implicitWidth,
-                                                        imageViewerCombo.implicitWidth,
                                                         pdfViewerCombo.implicitWidth,
+                                                        imageViewerCombo.implicitWidth,
                                                         musicPlayerCombo.implicitWidth,
                                                         videoPlayerCombo.implicitWidth,
                                                         emailCombo.implicitWidth,
@@ -57,16 +57,6 @@ KCM.SimpleKCM {
             }
         }
         ComponentComboBox {
-            id: imageViewerCombo
-            Layout.preferredWidth: form.longestComboBox
-            component: kcm.imageViewers
-            label: i18n("Image viewer:")
-
-            KCM.SettingHighlighter {
-                highlight: !kcm.imageViewers.isDefaults
-            }
-        }
-        ComponentComboBox {
             id: pdfViewerCombo
             Layout.preferredWidth: form.longestComboBox
             component: kcm.pdfViewers
@@ -74,6 +64,16 @@ KCM.SimpleKCM {
 
             KCM.SettingHighlighter {
                 highlight: !kcm.pdfViewers.isDefaults
+            }
+        }
+        ComponentComboBox {
+            id: imageViewerCombo
+            Layout.preferredWidth: form.longestComboBox
+            component: kcm.imageViewers
+            label: i18n("Image viewer:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.imageViewers.isDefaults
             }
         }
         ComponentComboBox {
