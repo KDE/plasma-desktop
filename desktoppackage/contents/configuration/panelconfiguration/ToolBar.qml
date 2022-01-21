@@ -13,6 +13,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.configuration 2.0
 import org.kde.kirigami 2.0 as Kirigami
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
+import org.kde.kirigami 2.19 as Kirigami
 
 Item {
     id: root
@@ -186,7 +187,7 @@ Item {
             Layout.fillWidth: true
 
             editable: true
-            focus: true
+            focus: Kirigami.InputMethod ? !Kirigami.InputMethod.willShowOnActive : true
 
             from: 20 // below this size, the panel is mostly unusable
             to: PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge ? panel.screenToFollow.geometry.width / 2 : panel.screenToFollow.geometry.height / 2
