@@ -13,6 +13,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kwindowsystem 1.0
+import org.kde.kirigami 2.19 as Kirigami
 
 import QtQuick.Window 2.1
 import QtQuick.Layouts 1.1
@@ -230,7 +231,7 @@ PC3.Page {
                         widgetExplorer.widgetsModel.searchTerm = text
                     }
 
-                    Component.onCompleted: forceActiveFocus()
+                    Component.onCompleted: if (!Kirigami.InputMethod.willShowOnActive) { forceActiveFocus() }
                 }
                 PC3.ToolButton {
                     id: categoryButton
