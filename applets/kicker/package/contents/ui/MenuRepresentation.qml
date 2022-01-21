@@ -12,6 +12,8 @@ import QtQml 2.15
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 
+import org.kde.kirigami 2.19 as Kirigami
+
 FocusScope {
     id: root
 
@@ -304,7 +306,7 @@ FocusScope {
                                                   : (rootList.visible ? rootList.width : defaultWidth))
                 - PlasmaCore.Units.smallSpacing
 
-        focus: true
+        focus: !Kirigami.InputMethod.willShowOnActive
 
         placeholderText: i18n("Search…")
         clearButtonShown: true
