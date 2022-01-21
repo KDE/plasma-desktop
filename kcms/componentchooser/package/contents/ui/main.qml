@@ -22,6 +22,7 @@ KCM.SimpleKCM {
                                                         musicPlayerCombo.implicitWidth,
                                                         videoPlayerCombo.implicitWidth,
                                                         emailCombo.implicitWidth,
+                                                        archiveCombo.implicitWidth,
                                                         terminalCombo.implicitWidth,
                                                         mapCombo.implicitWidth,
                                                         dialerCombo.implicitWidth)
@@ -104,6 +105,16 @@ KCM.SimpleKCM {
 
             KCM.SettingHighlighter {
                 highlight: !kcm.emailClients.isDefaults
+            }
+        }
+        ComponentComboBox {
+            id: archiveCombo
+            Layout.preferredWidth: form.longestComboBox
+            component: kcm.archiveManagers
+            label: i18n("Archive manager:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.archiveManagers.isDefaults
             }
         }
         ComponentComboBox {

@@ -21,6 +21,7 @@
 #include "componentchooserterminal.h"
 #include "componentchoosertexteditor.h"
 #include "componentchooservideoplayer.h"
+#include "componentchooserarchivemanager.h"
 
 K_PLUGIN_FACTORY_WITH_JSON(KcmComponentChooserFactory, "componentchooser.json", registerPlugin<KcmComponentChooser>(); registerPlugin<ComponentChooserData>();)
 
@@ -52,6 +53,7 @@ KcmComponentChooser::KcmComponentChooser(QObject *parent, const QVariantList &ar
     connect(musicPlayers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
     connect(videoPlayers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
     connect(pdfViewers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
+    connect(archiveManagers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
 }
 
 ComponentChooser *KcmComponentChooser::browsers() const
@@ -105,6 +107,10 @@ ComponentChooser *KcmComponentChooser::videoPlayers() const
 ComponentChooser *KcmComponentChooser::pdfViewers() const
 {
     return m_data->pdfViewers();
+}
+ComponentChooser *KcmComponentChooser::archiveManagers() const
+{
+    return m_data->archiveManagers();
 }
 
 void KcmComponentChooser::defaults()

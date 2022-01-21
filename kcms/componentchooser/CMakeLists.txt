@@ -13,6 +13,7 @@ set(componentchooser_SRCS
     componentchoosermusicplayer.cpp
     componentchooservideoplayer.cpp
     componentchooserpdfviewer.cpp
+    componentchooserarchivemanager.cpp
     componentchooserdata.cpp
     componentchoosergeo.cpp
     componentchoosertel.cpp
