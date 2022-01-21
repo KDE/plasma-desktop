@@ -210,6 +210,15 @@ Item {
                 icon.name: "preferences-desktop-display"
                 onClicked: KQuickControlsAddons.KCMShell.openSystemSettings("kcm_kscreen")
             }
+
+            PlasmaComponents3.ToolButton {
+                property QtObject qAction: plasmoid.globalAction("manage-containments")
+                text: qAction.text
+                visible: qAction.visible
+                icon.name: "preferences-system-windows-effect-fadedesktop"
+                onClicked: qAction.trigger()
+            }
+
             PlasmaComponents3.ToolButton {
                 icon.name: "window-close"
                 Layout.preferredWidth: height
