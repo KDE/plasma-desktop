@@ -6,18 +6,18 @@
 
 #include "componentchooserdata.h"
 
+#include "componentchooserarchivemanager.h"
 #include "componentchooserbrowser.h"
 #include "componentchooseremail.h"
 #include "componentchooserfilemanager.h"
 #include "componentchoosergeo.h"
-#include "componentchoosertel.h"
 #include "componentchooserimageviewer.h"
 #include "componentchoosermusicplayer.h"
 #include "componentchooserpdfviewer.h"
+#include "componentchoosertel.h"
 #include "componentchooserterminal.h"
 #include "componentchoosertexteditor.h"
 #include "componentchooservideoplayer.h"
-#include "componentchooserarchivemanager.h"
 
 ComponentChooserData::ComponentChooserData(QObject *parent, const QVariantList &args)
     : KCModuleData(parent, args)
@@ -88,18 +88,15 @@ void ComponentChooserData::defaults()
 bool ComponentChooserData::isDefaults() const
 {
     return m_browsers->isDefaults() && m_fileManagers->isDefaults() && m_terminalEmulators->isDefaults() && m_emailClients->isDefaults()
-        && m_geoUriHandlers->isDefaults() && m_telUriHandlers->isDefaults()
-        && m_textEditors->isDefaults() && m_imageViewers->isDefaults() && m_musicPlayers->isDefaults() && m_videoPlayers->isDefaults()
-        && m_pdfViewers->isDefaults() && m_archiveManagers->isDefaults();
+        && m_geoUriHandlers->isDefaults() && m_telUriHandlers->isDefaults() && m_textEditors->isDefaults() && m_imageViewers->isDefaults()
+        && m_musicPlayers->isDefaults() && m_videoPlayers->isDefaults() && m_pdfViewers->isDefaults() && m_archiveManagers->isDefaults();
 }
 
 bool ComponentChooserData::isSaveNeeded() const
 {
     return m_browsers->isSaveNeeded() || m_fileManagers->isSaveNeeded() || m_terminalEmulators->isSaveNeeded() || m_emailClients->isSaveNeeded()
-        || m_geoUriHandlers->isSaveNeeded() || m_telUriHandlers->isSaveNeeded()
-        || m_textEditors->isSaveNeeded() || m_imageViewers->isSaveNeeded() || m_musicPlayers->isSaveNeeded() || m_videoPlayers->isSaveNeeded()
-        || m_pdfViewers->isSaveNeeded()
-        || m_archiveManagers->isSaveNeeded();
+        || m_geoUriHandlers->isSaveNeeded() || m_telUriHandlers->isSaveNeeded() || m_textEditors->isSaveNeeded() || m_imageViewers->isSaveNeeded()
+        || m_musicPlayers->isSaveNeeded() || m_videoPlayers->isSaveNeeded() || m_pdfViewers->isSaveNeeded() || m_archiveManagers->isSaveNeeded();
 }
 
 ComponentChooser *ComponentChooserData::browsers() const

@@ -11,6 +11,7 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 
+#include "componentchooserarchivemanager.h"
 #include "componentchooserbrowser.h"
 #include "componentchooserdata.h"
 #include "componentchooseremail.h"
@@ -21,7 +22,6 @@
 #include "componentchooserterminal.h"
 #include "componentchoosertexteditor.h"
 #include "componentchooservideoplayer.h"
-#include "componentchooserarchivemanager.h"
 
 K_PLUGIN_FACTORY_WITH_JSON(KcmComponentChooserFactory, "componentchooser.json", registerPlugin<KcmComponentChooser>(); registerPlugin<ComponentChooserData>();)
 
