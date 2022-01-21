@@ -9,6 +9,9 @@ import QtQuick 2.4
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
+// This top-level item is an opaque background that goes behind the colored
+// background, for contrast. It's not an Item since that it would be square,
+// and not round, as required here
 Rectangle {
     id: badgeRect
 
@@ -17,12 +20,25 @@ Rectangle {
     property int number: 0
 
     implicitWidth: Math.max(height, Math.round(label.contentWidth + radius / 2)) // Add some padding around.
-    readonly property color color_: PlasmaCore.Theme.highlightColor
-    color: Qt.rgba(color_.r, color_.g, color_.b, 0.3)
-    radius: height / 2
-    border.color: color_
-    border.width: PlasmaCore.Units.devicePixelRatio
+    implicitHeight: implicitWidth
 
+    radius: height / 2
+
+    color: PlasmaCore.Theme.backgroundColor
+
+    // Colored background
+    Rectangle {
+        readonly property color color_: PlasmaCore.Theme.highlightColor
+
+        anchors.fill: parent
+        radius: height / 2
+
+        color: Qt.rgba(color_.r, color_.g, color_.b, 0.3)
+        border.color: color_
+        border.width: PlasmaCore.Units.devicePixelRatio
+    }
+
+    // Number
     PlasmaComponents.Label {
         id: label
         anchors.centerIn: parent
