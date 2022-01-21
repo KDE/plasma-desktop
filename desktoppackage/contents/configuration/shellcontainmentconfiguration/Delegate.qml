@@ -189,8 +189,8 @@ QQC2.Control {
                                     model: ShellContainmentModel
                                     QQC2.MenuItem {
                                         text: edge == "floating"
-                                            ? i18nd("plasma_shell_org.kde.plasma.desktop", "Swap With Desktop On Screen %1", model.screenName)
-                                            : i18nd("plasma_shell_org.kde.plasma.desktop", "Move Desktop To Screen %1", model.screenName)
+                                            ? i18nd("plasma_shell_org.kde.plasma.desktop", "Swap with Desktop on Screen %1", model.screenName)
+                                            : i18nd("plasma_shell_org.kde.plasma.desktop", "Move to Screen %1", model.screenName)
                                         visible: model.screenName !== delegate.screenName
                                         height: visible ? implicitHeight : 0
                                         onTriggered: {
