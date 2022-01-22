@@ -38,6 +38,7 @@ public:
     ComponentChooser *videoPlayers() const;
     ComponentChooser *pdfViewers() const;
     ComponentChooser *archiveManagers() const;
+    ComponentChooser *matrixUriHandlers() const;
 
 private:
     ComponentChooser *m_browsers;
@@ -52,6 +53,7 @@ private:
     ComponentChooser *m_videoPlayers;
     ComponentChooser *m_pdfViewers;
     ComponentChooser *m_archiveManagers;
+    ComponentChooser *m_matrixUriHandlers;
 };
 
 #endif // COMPONENTCHOOSERDATA_H

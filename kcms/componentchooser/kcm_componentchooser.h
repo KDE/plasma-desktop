@@ -28,6 +28,7 @@ class KcmComponentChooser : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(ComponentChooser *videoPlayers READ videoPlayers CONSTANT)
     Q_PROPERTY(ComponentChooser *pdfViewers READ pdfViewers CONSTANT)
     Q_PROPERTY(ComponentChooser *archiveManagers READ archiveManagers CONSTANT)
+    Q_PROPERTY(ComponentChooser *matrixUriHandlers READ matrixUriHandlers CONSTANT)
 
 public:
     KcmComponentChooser(QObject *parent, const QVariantList &args);
@@ -44,6 +45,7 @@ public:
     ComponentChooser *videoPlayers() const;
     ComponentChooser *pdfViewers() const;
     ComponentChooser *archiveManagers() const;
+    ComponentChooser *matrixUriHandlers() const;
 
     void defaults() override;
     void load() override;
