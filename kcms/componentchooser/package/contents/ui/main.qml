@@ -49,6 +49,16 @@ KCM.SimpleKCM {
             }
         }
         ComponentComboBox {
+            id: archiveCombo
+            Layout.preferredWidth: form.longestComboBox
+            component: kcm.archiveManagers
+            label: i18n("Archive manager:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.archiveManagers.isDefaults
+            }
+        }
+        ComponentComboBox {
             id: textEditorCombo
             Layout.preferredWidth: form.longestComboBox
             component: kcm.textEditors
@@ -116,16 +126,6 @@ KCM.SimpleKCM {
 
             KCM.SettingHighlighter {
                 highlight: !kcm.matrixUriHandlers.isDefaults
-            }
-        }
-        ComponentComboBox {
-            id: archiveCombo
-            Layout.preferredWidth: form.longestComboBox
-            component: kcm.archiveManagers
-            label: i18n("Archive manager:")
-
-            KCM.SettingHighlighter {
-                highlight: !kcm.archiveManagers.isDefaults
             }
         }
         ComponentComboBox {
