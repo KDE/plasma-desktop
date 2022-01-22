@@ -25,6 +25,18 @@ KCM.GridViewKCM {
     //NOTE: pay attention to never break this binding
     view.currentIndex: kcm.sortModelPluginIndex(kcm.splashScreenSettings.theme)
 
+    actions.main: NewStuff.Action {
+        id: newStuffButton
+        text: i18n("&Get New…")
+        configFile: "ksplash.knsrc"
+        viewMode: NewStuff.Page.ViewMode.Preview
+        onEntryEvent: function(entry, event) {
+            if (event === NewStuff.Entry.StatusChangedEvent) {
+                kcm.ghnsEntryChanged(entry);
+            }
+        }
+    }
+
     // putting the InlineMessage as header item causes it to show up initially despite visible false
     header: ColumnLayout {
         Kirigami.InlineMessage {
@@ -84,23 +96,6 @@ KCM.GridViewKCM {
         }
         onDoubleClicked: {
             kcm.save();
-        }
-    }
-
-    footer: RowLayout {
-        Item {
-            Layout.fillWidth: true
-        }
-        NewStuff.Button {
-            id: newStuffButton
-            text: i18n("&Get New Splash Screens…")
-            configFile: "ksplash.knsrc"
-            viewMode: NewStuff.Page.ViewMode.Preview
-            onEntryEvent: function(entry, event) {
-                if (event === NewStuff.Entry.StatusChangedEvent) {
-                    kcm.ghnsEntryChanged(entry);
-                }
-            }
         }
     }
 }
