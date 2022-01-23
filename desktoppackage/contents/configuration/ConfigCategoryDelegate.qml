@@ -51,7 +51,7 @@ QQC2.ItemDelegate {
             width: Kirigami.Units.iconSizes.medium
             height: width
             icon: model.icon
-            state: highlighted && Window.active ? QIconItem.SelectedState : QIconItem.DefaultState
+            state: Window.active && (delegate.highlighted || delegate.pressed) ? QIconItem.SelectedState : QIconItem.DefaultState
         }
 
         QQC2.Label {
@@ -62,7 +62,7 @@ QQC2.ItemDelegate {
             text: model.name
             wrapMode: Text.Wrap
             horizontalAlignment: Text.AlignHCenter
-            color: highlighted && Window.active ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+            color: Window.active && (delegate.highlighted || delegate.pressed) ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
         }
     }
 //END UI components
