@@ -17,15 +17,15 @@ ComponentChooserMusicPlayer::ComponentChooserMusicPlayer(QObject *parent)
 
 void ComponentChooserMusicPlayer::save()
 {
-    saveMimeTypeAssociation(QStringLiteral("audio/mpeg"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
+    saveMimeTypeAssociation(QStringLiteral("application/x-ogm-audio"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("audio/aac"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("audio/mp4"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
+    saveMimeTypeAssociation(QStringLiteral("audio/mpeg"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
+    saveMimeTypeAssociation(QStringLiteral("audio/mpegurl"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
+    saveMimeTypeAssociation(QStringLiteral("audio/ogg"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
+    saveMimeTypeAssociation(QStringLiteral("audio/vnd.rn-realaudio"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("audio/vorbis"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("audio/x-flac"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/x-wav"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/ogg"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/mpegurl"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/vnd.rn-realaudio"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("audio/x-mp3"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("audio/x-mpegurl"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("audio/x-ms-wma"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
@@ -35,6 +35,6 @@ void ComponentChooserMusicPlayer::save()
     saveMimeTypeAssociation(QStringLiteral("audio/x-scpls"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("audio/x-speex"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("audio/x-vorbis"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-ogm-audio"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("audio/x-vorbis+ogg"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
+    saveMimeTypeAssociation(QStringLiteral("audio/x-wav"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
 }
