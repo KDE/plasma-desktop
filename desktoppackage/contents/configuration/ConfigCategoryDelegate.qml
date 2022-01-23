@@ -45,13 +45,12 @@ QQC2.ItemDelegate {
         id: delegateContents
         spacing: Kirigami.Units.smallSpacing
 
-        QIconItem {
-            id: iconItem
+        Kirigami.Icon {
             Layout.alignment: Qt.AlignHCenter
-            width: Kirigami.Units.iconSizes.medium
-            height: width
-            icon: model.icon
-            state: Window.active && (delegate.highlighted || delegate.pressed) ? QIconItem.SelectedState : QIconItem.DefaultState
+            implicitWidth: Kirigami.Units.iconSizes.medium
+            implicitHeight: Kirigami.Units.iconSizes.medium
+            source: model.icon
+            selected: Window.active && (delegate.highlighted || delegate.pressed)
         }
 
         QQC2.Label {
