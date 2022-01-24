@@ -126,8 +126,6 @@ EmptyPage {
         }
 
         delegate: KickoffItemDelegate {
-            id: itemDelegate
-            extendHoverMargins: true
             width: view.availableWidth
         }
 

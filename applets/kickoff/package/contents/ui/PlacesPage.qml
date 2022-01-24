@@ -19,7 +19,6 @@ BasePage {
         delegate: KickoffItemDelegate {
             url: ""
             description: ""
-            extendHoverMargins: true
             width: view.availableWidth
             isCategory: true
         }

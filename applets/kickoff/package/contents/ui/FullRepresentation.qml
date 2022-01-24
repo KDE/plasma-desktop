@@ -85,7 +85,6 @@ EmptyPage {
                 // This is absolutely necessary to make the search view work reliably.
                 model: plasmoid.rootItem.runnerModel.count ? plasmoid.rootItem.runnerModel.modelForRow(0) : null
                 delegate: KickoffItemDelegate {
-                    extendHoverMargins: true
                     width: view.availableWidth
                     isSearchResult: true
                 }

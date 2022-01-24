@@ -18,8 +18,6 @@ BasePage {
         focus: true // needed for Loaders
         model: plasmoid.rootItem.rootModel
         delegate: KickoffItemDelegate {
-            id: itemDelegate
-            extendHoverMargins: true
             width: view.availableWidth
             isCategory: model.hasChildren
         }
