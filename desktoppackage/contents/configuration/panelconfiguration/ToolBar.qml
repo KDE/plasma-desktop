@@ -127,15 +127,12 @@ Item {
         anchors.margins: rowSpacing
         anchors.topMargin: plasmoid.formFactor === PlasmaCore.Types.Vertical ? rowSpacing + closeButton.height : rowSpacing
 
-        property bool showText: plasmoid.formFactor === PlasmaCore.Types.Vertical || (row.x + row.width < root.width - placeHolder.width - PlasmaCore.Units.iconSizes.small*4 - PlasmaCore.Units.largeSpacing*5)
-
         rowSpacing: PlasmaCore.Units.smallSpacing
         columnSpacing: PlasmaCore.Units.smallSpacing
 
         PlasmaComponents.Button {
             id: addWidgetsButton
-            text: buttonsLayout_2.showText ? root.addWidgetsButtonText : ""
-            tooltip: buttonsLayout_2.showText ? "" : root.addWidgetsButtonText
+            text: root.addWidgetsButtonText
             iconSource: "list-add"
             Layout.fillWidth: true
             onClicked: {
@@ -147,8 +144,7 @@ Item {
         PlasmaComponents.Button {
             id: addSpacerButton
             iconSource: "distribute-horizontal-x"
-            text: buttonsLayout_2.showText ? root.addSpacerButtonText : ""
-            tooltip: buttonsLayout_2.showText ? "" : root.addSpacerButtonText
+            text: root.addSpacerButtonText
             Layout.fillWidth: true
             onClicked: {
                 configDialog.addPanelSpacer();
@@ -268,16 +264,13 @@ Item {
 
         anchors.margins: rowSpacing
 
-        property bool showText: plasmoid.formFactor === PlasmaCore.Types.Vertical || (row.x + row.width < root.width - placeHolder.width - PlasmaCore.Units.iconSizes.small*4 - PlasmaCore.Units.largeSpacing*5)
-
         rowSpacing: PlasmaCore.Units.smallSpacing
         columnSpacing: PlasmaCore.Units.smallSpacing
 
         PlasmaComponents.Button {
             id: settingsButton
             iconSource: "configure"
-            text: buttonsLayout_2.showText ? root.settingsButtonText : ""
-            tooltip: buttonsLayout_2.showText ? "" : root.settingsButtonText
+            text: root.settingsButtonText
             Layout.fillWidth: true
             checkable: true
             onCheckedChanged: {
