@@ -178,6 +178,11 @@ EmptyPage {
         Kirigami.WheelHandler {
             target: view
             filterMouseEvents: true
+            // `20 * Qt.styleHints.wheelScrollLines` is the default speed.
+            // `* PlasmaCore.Units.devicePixelRatio` is needed on X11
+            // because Plasma doesn't support Qt scaling.
+            horizontalStepSize: 20 * Qt.styleHints.wheelScrollLines * PlasmaCore.Units.devicePixelRatio
+            verticalStepSize: 20 * Qt.styleHints.wheelScrollLines * PlasmaCore.Units.devicePixelRatio
         }
 
         Connections {
