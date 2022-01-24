@@ -40,7 +40,6 @@ T.ItemDelegate {
     required property string description
 
     readonly property Flickable view: ListView.view ?? GridView.view
-    property alias mouseArea: mouseArea
     readonly property bool textUnderIcon: display === PC3.AbstractButton.TextUnderIcon
     property bool isCategory: false
     readonly property bool hasActionList: model && (model.favoriteId !== null || ("hasActionList" in model && model.hasActionList === true))
