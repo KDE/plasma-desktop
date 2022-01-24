@@ -41,7 +41,6 @@ T.ItemDelegate {
 
     readonly property Flickable view: ListView.view ?? GridView.view
     readonly property bool textUnderIcon: display === PC3.AbstractButton.TextUnderIcon
-    property bool extendHoverMargins: false
     property bool isCategory: false
     readonly property bool hasActionList: model && (model.favoriteId !== null || ("hasActionList" in model && model.hasActionList === true))
     property var actionList: null
@@ -189,8 +188,9 @@ T.ItemDelegate {
         anchors.margins: 1
         // Flickable margins are not mirrored, so disable layout mirroring
         LayoutMirroring.enabled: false
-        anchors.leftMargin: root.extendHoverMargins ? -root.view.leftMargin : anchors.margins
-        anchors.rightMargin: root.extendHoverMargins ? -root.view.rightMargin : anchors.margins
+        // Only for ListView since extending margins for GridView is hard
+        anchors.leftMargin: root.view instanceof ListView ? -root.view.leftMargin : anchors.margins
+        anchors.rightMargin: root.view instanceof ListView ? -root.view.rightMargin : anchors.margins
         hoverEnabled: root.view && !root.view.movedWithKeyboard
             // Fix VerticalStackView animation causing view currentIndex
             // to change while delegates are moving under the mouse cursor
