@@ -55,7 +55,6 @@ KcmComponentChooser::KcmComponentChooser(QObject *parent, const QVariantList &ar
     connect(videoPlayers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
     connect(pdfViewers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
     connect(archiveManagers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
-    connect(matrixUriHandlers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
 }
 
 ComponentChooser *KcmComponentChooser::browsers() const
@@ -113,10 +112,6 @@ ComponentChooser *KcmComponentChooser::pdfViewers() const
 ComponentChooser *KcmComponentChooser::archiveManagers() const
 {
     return m_data->archiveManagers();
-}
-ComponentChooser *KcmComponentChooser::matrixUriHandlers() const
-{
-    return m_data->matrixUriHandlers();
 }
 
 void KcmComponentChooser::defaults()

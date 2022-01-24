@@ -12,7 +12,6 @@
 #include "componentchooserfilemanager.h"
 #include "componentchoosergeo.h"
 #include "componentchooserimageviewer.h"
-#include "componentchoosermatrix.h"
 #include "componentchoosermusicplayer.h"
 #include "componentchooserpdfviewer.h"
 #include "componentchoosertel.h"
@@ -34,7 +33,6 @@ ComponentChooserData::ComponentChooserData(QObject *parent, const QVariantList &
     , m_videoPlayers(new ComponentChooserVideoPlayer(this))
     , m_pdfViewers(new ComponentChooserPdfViewer(this))
     , m_archiveManagers(new ComponentChooserArchiveManager(this))
-    , m_matrixUriHandlers(new ComponentChooserMatrix(this))
 {
     load();
 }
@@ -53,7 +51,6 @@ void ComponentChooserData::load()
     m_videoPlayers->load();
     m_pdfViewers->load();
     m_archiveManagers->load();
-    m_matrixUriHandlers->load();
 }
 
 void ComponentChooserData::save()
@@ -70,7 +67,6 @@ void ComponentChooserData::save()
     m_videoPlayers->save();
     m_pdfViewers->save();
     m_archiveManagers->save();
-    m_matrixUriHandlers->save();
 }
 
 void ComponentChooserData::defaults()
@@ -87,23 +83,20 @@ void ComponentChooserData::defaults()
     m_videoPlayers->defaults();
     m_pdfViewers->defaults();
     m_archiveManagers->defaults();
-    m_matrixUriHandlers->defaults();
 }
 
 bool ComponentChooserData::isDefaults() const
 {
     return m_browsers->isDefaults() && m_fileManagers->isDefaults() && m_terminalEmulators->isDefaults() && m_emailClients->isDefaults()
         && m_geoUriHandlers->isDefaults() && m_telUriHandlers->isDefaults() && m_textEditors->isDefaults() && m_imageViewers->isDefaults()
-        && m_musicPlayers->isDefaults() && m_videoPlayers->isDefaults() && m_pdfViewers->isDefaults() && m_archiveManagers->isDefaults()
-        && m_matrixUriHandlers->isDefaults();
+        && m_musicPlayers->isDefaults() && m_videoPlayers->isDefaults() && m_pdfViewers->isDefaults() && m_archiveManagers->isDefaults();
 }
 
 bool ComponentChooserData::isSaveNeeded() const
 {
     return m_browsers->isSaveNeeded() || m_fileManagers->isSaveNeeded() || m_terminalEmulators->isSaveNeeded() || m_emailClients->isSaveNeeded()
         || m_geoUriHandlers->isSaveNeeded() || m_telUriHandlers->isSaveNeeded() || m_textEditors->isSaveNeeded() || m_imageViewers->isSaveNeeded()
-        || m_musicPlayers->isSaveNeeded() || m_videoPlayers->isSaveNeeded() || m_pdfViewers->isSaveNeeded() || m_archiveManagers->isSaveNeeded()
-        || m_matrixUriHandlers->isSaveNeeded();
+        || m_musicPlayers->isSaveNeeded() || m_videoPlayers->isSaveNeeded() || m_pdfViewers->isSaveNeeded() || m_archiveManagers->isSaveNeeded();
 }
 
 ComponentChooser *ComponentChooserData::browsers() const
@@ -162,8 +155,4 @@ ComponentChooser *ComponentChooserData::pdfViewers() const
 ComponentChooser *ComponentChooserData::archiveManagers() const
 {
     return m_archiveManagers;
-}
-ComponentChooser *ComponentChooserData::matrixUriHandlers() const
-{
-    return m_matrixUriHandlers;
 }

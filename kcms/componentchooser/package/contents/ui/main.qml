@@ -25,8 +25,7 @@ KCM.SimpleKCM {
                                                         archiveCombo.implicitWidth,
                                                         terminalCombo.implicitWidth,
                                                         mapCombo.implicitWidth,
-                                                        dialerCombo.implicitWidth,
-                                                        matrixCombo.implicitWidth)
+                                                        dialerCombo.implicitWidth)
 
         ComponentComboBox {
             id: browserCombo
@@ -116,16 +115,6 @@ KCM.SimpleKCM {
 
             KCM.SettingHighlighter {
                 highlight: !kcm.emailClients.isDefaults
-            }
-        }
-        ComponentComboBox {
-            id: matrixCombo
-            Layout.preferredWidth: form.longestComboBox
-            component: kcm.matrixUriHandlers
-            label: i18n("Matrix client:")
-
-            KCM.SettingHighlighter {
-                highlight: !kcm.matrixUriHandlers.isDefaults
             }
         }
         ComponentComboBox {
