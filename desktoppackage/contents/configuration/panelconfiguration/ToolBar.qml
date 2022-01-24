@@ -415,10 +415,6 @@ Item {
                 target: root
                 width: root.implicitWidth
             }
-            PropertyChanges {
-                target: buttonsLayout_2
-                implicitHeight: -1 // Prevent the panel from being too narrow
-            }
             AnchorChanges {
                 target: root
                 anchors {
@@ -454,10 +450,6 @@ Item {
             PropertyChanges {
                 target: root
                 width: root.implicitWidth
-            }
-            PropertyChanges {
-                target: buttonsLayout_2
-                implicitHeight: -1 // Prevent the panel from being too narrow
             }
             AnchorChanges {
                 target: root
