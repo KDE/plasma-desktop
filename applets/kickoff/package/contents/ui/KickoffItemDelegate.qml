@@ -215,18 +215,19 @@ T.ItemDelegate {
             // built into QQuickListView::setCurrentIndex() already
             root.view.currentIndex = index
         }
-        onPressed: if (root.dragEnabled && root.Drag.imageSource == "") {
-            iconItem.grabToImage((result) => {
-                return root.Drag.imageSource = result.url
-            })
+        onPressed: {
+            // We normally try to open right click menus on press like Qt Widgets
+            if (mouse.button === Qt.RightButton) {
+                root.openActionMenu(mouseX, mouseY)
+            } else if (mouse.button === Qt.LeftButton && root.dragEnabled && root.Drag.imageSource == "") {
+                iconItem.grabToImage((result) => {
+                    return root.Drag.imageSource = result.url
+                })
+            }
         }
         onClicked: if (mouse.button === Qt.LeftButton) {
             root.forceActiveFocus(Qt.MouseFocusReason)
-            root.action.trigger() // clicked() is emitted when action is triggered
-        } else if (mouse.button === Qt.RightButton) {
-            root.forceActiveFocus(Qt.MouseFocusReason)
-            root.clicked() // does not trigger the action
-            root.openActionMenu(mouseX, mouseY)
+            root.action.trigger()
         }
         onPressAndHold: {
             /* TODO: make press and hold to drag exclusive to touch.
