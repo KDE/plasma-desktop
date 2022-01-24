@@ -231,16 +231,16 @@ T.ItemDelegate {
         onClicked: if (mouse.button === Qt.LeftButton) {
             root.action.trigger()
         }
-        onPressAndHold: {
-            /* TODO: make press and hold to drag exclusive to touch.
+        onPressAndHold: if (mouse.button === Qt.LeftButton) {
+            /* TODO: make press and hold to open menu exclusive to touch.
              * I (ndavis) tried `if (lastDeviceType & ~(PointerDevice.Mouse | PointerDevice.TouchPad))`
-             * and ngraham said it wouldn't work because it was preventing single taps on touch.
-             * I didn't have a touch screen to test it with.
+             * with a TapHandler. lastDeviceType was gotten from the EventPoint argument of the
+             * grabChanged() signal. ngraham said it wouldn't work because it was preventing single
+             * taps on touch. I didn't have a touch screen to test it with.
              *
              * TODO: find a good way to expose the context menu to touch input that doesn't conflict with
              * flick to scroll or drag to reorder act like right click on press and hold (with touch).
              */
-            root.pressAndHold()
             root.openActionMenu(mouseX, mouseY)
         }
     }
