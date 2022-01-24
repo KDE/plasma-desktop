@@ -17,7 +17,6 @@
 #include "componentchooseremail.h"
 #include "componentchooserfilemanager.h"
 #include "componentchooserimageviewer.h"
-#include "componentchoosermatrix.h"
 #include "componentchoosermusicplayer.h"
 #include "componentchooserpdfviewer.h"
 #include "componentchooserterminal.h"
