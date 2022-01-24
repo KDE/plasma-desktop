@@ -40,7 +40,6 @@ T.ItemDelegate {
     required property string description
 
     readonly property Flickable view: ListView.view ?? GridView.view
-    property alias mouseArea: mouseArea
     readonly property bool textUnderIcon: display === PC3.AbstractButton.TextUnderIcon
     property bool extendHoverMargins: false
     property bool isCategory: false
