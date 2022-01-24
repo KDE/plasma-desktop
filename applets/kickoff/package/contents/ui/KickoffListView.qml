@@ -137,7 +137,7 @@ EmptyPage {
                 width: section.length === 1
                     ? KickoffSingleton.listDelegateContentHeight + leftPadding + rightPadding
                     // Accessing implicitWidth fixes the width being 0 when loaded.
-                    : Math.min(Math.ceil(implicitWidth), view.contentWidth)
+                    : Math.min(Math.ceil(implicitWidth), view.availableWidth)
                 height: KickoffSingleton.listDelegateHeight
                 leftPadding: view.effectiveLayoutDirection === Qt.LeftToRight
                     ? KickoffSingleton.listItemMetrics.margins.left : 0
