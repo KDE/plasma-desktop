@@ -216,6 +216,9 @@ T.ItemDelegate {
             root.view.currentIndex = index
         }
         onPressed: {
+            // Select and focus on press to improve responsiveness and touch feedback
+            view.currentIndex = index
+            root.forceActiveFocus(Qt.MouseFocusReason)
             // We normally try to open right click menus on press like Qt Widgets
             if (mouse.button === Qt.RightButton) {
                 root.openActionMenu(mouseX, mouseY)
@@ -226,7 +229,6 @@ T.ItemDelegate {
             }
         }
         onClicked: if (mouse.button === Qt.LeftButton) {
-            root.forceActiveFocus(Qt.MouseFocusReason)
             root.action.trigger()
         }
         onPressAndHold: {
@@ -238,7 +240,6 @@ T.ItemDelegate {
              * TODO: find a good way to expose the context menu to touch input that doesn't conflict with
              * flick to scroll or drag to reorder act like right click on press and hold (with touch).
              */
-            root.forceActiveFocus(Qt.MouseFocusReason)
             root.pressAndHold()
             root.openActionMenu(mouseX, mouseY)
         }
