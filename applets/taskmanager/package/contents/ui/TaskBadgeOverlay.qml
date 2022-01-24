@@ -62,7 +62,7 @@ Item {
 
         supportsAtlasTextures: true
 
-        fragmentShader: "
+        fragmentShader: `
             varying highp vec2 qt_TexCoord0;
             uniform highp float qt_Opacity;
             uniform lowp sampler2D source;
@@ -70,7 +70,7 @@ Item {
             void main() {
                 gl_FragColor = texture2D(source, qt_TexCoord0.st) * (1.0 - (texture2D(mask, qt_TexCoord0.st).a)) * qt_Opacity;
             }
-        "
+        `
     }
 
     Badge {

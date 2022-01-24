@@ -73,17 +73,19 @@ PlasmaComponents.ContextMenu {
     }
 
     function newMenuItem(parent) {
-        return Qt.createQmlObject(
-            "import org.kde.plasma.components 2.0 as PlasmaComponents;" +
-            "PlasmaComponents.MenuItem {}",
-            parent);
+        return Qt.createQmlObject(`
+            import org.kde.plasma.components 2.0 as PlasmaComponents
+
+            PlasmaComponents.MenuItem {}
+        `, parent);
     }
 
     function newSeparator(parent) {
-        return Qt.createQmlObject(
-            "import org.kde.plasma.components 2.0 as PlasmaComponents;" +
-            "PlasmaComponents.MenuItem { separator: true }",
-            parent);
+        return Qt.createQmlObject(`
+            import org.kde.plasma.components 2.0 as PlasmaComponents
+
+            PlasmaComponents.MenuItem { separator: true }
+            `, parent);
     }
 
     function loadDynamicLaunchActions(launcherUrl) {

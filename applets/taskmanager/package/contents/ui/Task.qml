@@ -203,9 +203,11 @@ MouseArea {
 
     onSmartLauncherEnabledChanged: {
         if (smartLauncherEnabled && !smartLauncherItem) {
-            var smartLauncher = Qt.createQmlObject("
-    import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet;
-    TaskManagerApplet.SmartLauncherItem { }", task);
+            const smartLauncher = Qt.createQmlObject(`
+                import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet;
+
+                TaskManagerApplet.SmartLauncherItem { }
+            `, task);
 
             smartLauncher.launcherUrl = Qt.binding(() => model.LauncherUrlWithoutIcon);
 
