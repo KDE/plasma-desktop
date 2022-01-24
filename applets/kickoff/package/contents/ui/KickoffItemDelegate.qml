@@ -200,6 +200,8 @@ T.ItemDelegate {
             axis: Drag.XAndYAxis
             target: root.dragEnabled ? dragItem : undefined
         }
+        // Using this Item fixes drag and drop causing delegates
+        // to reset to a 0 X position and overlapping each other.
         Item { id: dragItem }
         // Using onPositionChanged instead of onEntered to prevent changing
         // categories while scrolling with the mouse wheel.
