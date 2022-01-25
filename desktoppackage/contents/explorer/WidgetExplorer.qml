@@ -95,16 +95,6 @@ PC3.Page {
     }
 
     QQC2.Action {
-        shortcut: "Up"
-        onTriggered: list.currentIndex = (list.count + list.currentIndex - 1) % list.count 
-    }
-
-    QQC2.Action {
-        shortcut: "Down"
-        onTriggered: list.currentIndex = (list.currentIndex + 1) % list.count
-    }
-
-    QQC2.Action {
         shortcut: "Enter"
         onTriggered: addCurrentApplet()
     }
