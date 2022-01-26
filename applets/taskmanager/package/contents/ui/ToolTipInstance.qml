@@ -205,6 +205,7 @@ ColumnLayout {
             anchors.margins: thumbnailLoader.anchors.margins
 
             active: !albumArtImage.visible && !Number.isInteger(thumbnailSourceItem.winId) && flatIndex !== -1
+            asynchronous: true
             //In a loader since we might not have PipeWire available yet (WITH_PIPEWIRE could be undefined in plasma-workspace/libtaskmanager/declarative/taskmanagerplugin.cpp)
             source: "PipeWireThumbnail.qml"
         }
