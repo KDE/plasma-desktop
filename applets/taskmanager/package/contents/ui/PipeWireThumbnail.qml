@@ -4,17 +4,36 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+import QtQuick 2.15
 import QtQuick.Window 2.14
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.taskmanager 0.1 as TaskManager
 
-TaskManager.PipeWireSourceItem {
-    visible: waylandItem.nodeId > 0
-    nodeId: waylandItem.nodeId
-
+// opacity doesn't work in the root item
+Item {
     anchors.fill: parent
 
-    TaskManager.ScreencastingRequest {
-        id: waylandItem
-        uuid: toolTipDelegate.Window.visibility === Window.Hidden ? "" : thumbnailSourceItem.winId
+    TaskManager.PipeWireSourceItem {
+        id: pipeWireSourceItem
+
+        enabled: false // Must be set in pipewiresourceitem.cpp so opacity animation can work
+        visible: waylandItem.nodeId > 0
+        nodeId: waylandItem.nodeId
+
+        anchors.fill: parent
+
+        opacity: enabled ? 1 : 0
+
+        TaskManager.ScreencastingRequest {
+            id: waylandItem
+            uuid: toolTipDelegate.Window.visibility === Window.Hidden ? "" : thumbnailSourceItem.winId
+        }
+
+        Behavior on opacity {
+            OpacityAnimator {
+                duration: PlasmaCore.Units.longDuration
+                easing.type: Easing.OutQuad
+            }
+        }
     }
 }
