@@ -9,6 +9,8 @@
 
 #include <krunner/abstractrunner.h>
 
+using namespace Plasma;
+
 /**
  * This class runs programs using the literal name of the binary, much as one
  * would use at a shell prompt.

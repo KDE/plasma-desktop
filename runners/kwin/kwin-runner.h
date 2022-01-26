@@ -10,6 +10,8 @@
 
 #include <krunner/abstractrunner.h>
 
+using namespace Plasma;
+
 class KWinRunner : public AbstractRunner
 {
     Q_OBJECT
