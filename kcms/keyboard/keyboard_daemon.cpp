@@ -222,7 +222,19 @@ QVector<LayoutNames> KeyboardDaemon::getLayoutsList() const
         layoutsList.append(extraLayouts);
     }
     for (auto &layoutUnit : std::as_const(layoutsList)) {
-        ret.append({layoutUnit.layout(), Flags::getShortText(layoutUnit, keyboardConfig), Flags::getLongText(layoutUnit, rules)});
+        QString displayName = layoutUnit.getDisplayName();
+        const auto configDefaultLayouts = keyboardConfig->getDefaultLayouts();
+        auto it = std::find(configDefaultLayouts.begin(), configDefaultLayouts.end(), layoutUnit);
+        if (it != configDefaultLayouts.end()) {
+            displayName = it->getDisplayName();
+        } else {
+            const auto configExtraLayouts = keyboardConfig->getExtraLayouts();
+            it = std::find(configExtraLayouts.begin(), configExtraLayouts.end(), layoutUnit);
+            if (it != configExtraLayouts.end()) {
+                displayName = it->getDisplayName();
+            }
+        }
+        ret.append({layoutUnit.layout(), displayName, Flags::getLongText(layoutUnit, rules)});
     }
     return ret;
 }
