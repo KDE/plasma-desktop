@@ -31,8 +31,13 @@ import org.kde.plasma.plasmoid 2.0
 Item {
     id: root
 
+    // Don't de-duplicate `touchpadEnabled` expression using `hasTouchpad`
+    // property, QML doesn't work that way. Order of signals propagation is
+    // not specified, so if/when data source disconnects, touchpadEnabled
+    // might get re-evaluated while hasTouchpad is still true.
     readonly property bool hasTouchpad: typeof dataSource.data.touchpad !== "undefined" && dataSource.data.touchpad.workingTouchpadFound
-    readonly property bool touchpadEnabled: hasTouchpad ? dataSource.data.touchpad.enabled : false
+    readonly property bool touchpadEnabled: typeof dataSource.data.touchpad !== "undefined" && dataSource.data.touchpad.workingTouchpadFound
+        && dataSource.data.touchpad.enabled
 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     Plasmoid.icon: touchpadEnabled ? "input-touchpad-on" : "input-touchpad-off"
