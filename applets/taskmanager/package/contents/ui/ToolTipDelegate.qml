@@ -47,6 +47,8 @@ Loader {
     property int smartLauncherCount
 
     readonly property bool isVerticalPanel: plasmoid.formFactor === PlasmaCore.Types.Vertical
+    // This number controls the overall size of the window tooltips
+    readonly property int tooltipInstanceMaximumWidth: PlasmaCore.Units.gridUnit * 16
 
     // These properties are required to make tooltip interactive when there is a player but no window is present.
     readonly property string mprisSourceName: mpris2Source.sourceNameForLauncherUrl(launcherUrl, pidParent)

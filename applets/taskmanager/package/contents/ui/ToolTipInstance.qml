@@ -93,7 +93,7 @@ ColumnLayout {
         spacing: isWin ? PlasmaCore.Units.smallSpacing : PlasmaCore.Units.largeSpacing
 
         // This number controls the overall size of the window tooltips
-        Layout.maximumWidth: PlasmaCore.Units.gridUnit * 16
+        Layout.maximumWidth: toolTipDelegate.tooltipInstanceMaximumWidth
         Layout.minimumWidth: isWin ? Layout.maximumWidth : 0
         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         // match margins of DefaultToolTip.qml in plasma-framework
