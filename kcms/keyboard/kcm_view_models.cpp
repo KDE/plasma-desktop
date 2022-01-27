@@ -246,7 +246,7 @@ QWidget *LabelEditDelegate::createEditor(QWidget *parent, const QStyleOptionView
     QLineEdit *lineEdit = static_cast<QLineEdit *>(widget);
     if (lineEdit != nullptr) {
         lineEdit->setMaxLength(LayoutUnit::MAX_LABEL_LENGTH);
-        connect(lineEdit, &QLineEdit::textEdited, this, [this, lineEdit]() {
+        connect(lineEdit, &QLineEdit::editingFinished, this, [this, lineEdit]() {
             Q_EMIT const_cast<LabelEditDelegate *>(this)->commitData(lineEdit);
         });
     }
