@@ -37,7 +37,15 @@ Item {
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     Plasmoid.icon: touchpadEnabled ? "input-touchpad-on" : "input-touchpad-off"
     // Touchpad being enabled is normal; only show the applet when it's disabled
-    Plasmoid.status: !hasTouchpad ? PlasmaCore.Types.HiddenStatus: (touchpadEnabled ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus)
+    Plasmoid.status: {
+        if (!hasTouchpad) {
+            return PlasmaCore.Types.HiddenStatus;
+        } else if (touchpadEnabled) {
+            return PlasmaCore.Types.PassiveStatus;
+        } else {
+            return PlasmaCore.Types.ActiveStatus;
+        }
+    }
 
     Plasmoid.toolTipSubText: {
         if (!hasTouchpad) {
