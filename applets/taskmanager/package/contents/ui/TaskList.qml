@@ -13,10 +13,11 @@ Flow {
     readonly property bool tasksGrowInOppositeDirection: plasmoid.configuration.reverseMode
     readonly property bool isHorizontalPanel: plasmoid.formFactor === PlasmaCore.Types.Horizontal
 
-    layoutDirection: (tasksGrowInOppositeDirection && isHorizontalPanel) ? Qt.application.layoutDirection === Qt.LeftToRight
-                                                     ? Qt.RightToLeft
-                                                     : Qt.LeftToRight
-                                                  : Qt.application.layoutDirection
+    layoutDirection: (tasksGrowInOppositeDirection && isHorizontalPanel)
+        ? (Qt.application.layoutDirection === Qt.LeftToRight)
+            ? Qt.RightToLeft
+            : Qt.LeftToRight
+        : Qt.application.layoutDirection
 
     property int rows: Math.floor(height / children[0].height)
     property int columns: Math.floor(width / children[0].width)

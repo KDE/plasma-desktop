@@ -278,7 +278,7 @@ PlasmaComponents.ContextMenu {
         onClicked: tasksModel.requestNewInstance(modelIndex)
     }
 
-        PlasmaComponents.MenuItem {
+    PlasmaComponents.MenuItem {
         id: virtualDesktopsMenuItem
 
         visible: virtualDesktopInfo.numberOfDesktops > 1
