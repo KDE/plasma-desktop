@@ -8,8 +8,8 @@
 import QtQuick 2.15
 // Deliberately imported after QtQuick to avoid missing restoreMode property in Binding. Fix in Qt 6.
 import QtQml 2.15
-import QtQml.Models 2.2
-import QtQuick.Window 2.2
+import QtQml.Models 2.15
+import QtQuick.Window 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3

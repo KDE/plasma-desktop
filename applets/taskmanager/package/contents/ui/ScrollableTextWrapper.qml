@@ -4,7 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.6
+import QtQuick 2.15
 
 MouseArea {
     id: textWrapper
