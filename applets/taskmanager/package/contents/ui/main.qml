@@ -27,6 +27,8 @@ MouseArea {
     property bool iconsOnly: plasmoid.pluginName === "org.kde.plasma.icontasks"
 
     property var toolTipOpenedByClick: null
+    property var toolTipOpenedLocation: null
+    property var toolTipOpenedAreaItem: null
 
     property QtObject contextMenuComponent: Qt.createComponent("ContextMenu.qml")
     property QtObject pulseAudioComponent: Qt.createComponent("PulseAudio.qml")

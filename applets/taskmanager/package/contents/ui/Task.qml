@@ -331,6 +331,10 @@ MouseArea {
             enabled: plasmoid.configuration.showToolTips && !inPopup && !groupDialog.visible && (tasks.toolTipOpenedByClick === task || tasks.toolTipOpenedByClick === null)
             interactive: model.IsWindow === true || mainItem.hasPlayer
 
+            triangleMouseFiltering: tasks.toolTipOpenedLocation !== null
+            triangleMouseStartPoint: (tasks.toolTipOpenedLocation !== null) ? toolTipArea.mapFromItem(tasks, tasks.toolTipOpenedLocation) : Qt.point(0, 0)
+            triangleMouseStartAreaItem: tasks.toolTipOpenedAreaItem
+
             // when the mouse leaves the tooltip area, a timer to hide is set for (timeout / 20) ms
             // see plasma-framework/src/declarativeimports/core/tooltipdialog.cpp function dismiss()
             // to compensate for that we multiply by 20 here, to get an effective leave timeout of 2s.
@@ -341,11 +345,16 @@ MouseArea {
             onToolTipVisibleChanged: {
                 if (!toolTipVisible) {
                     tasks.toolTipOpenedByClick = null;
+                    tasks.toolTipOpenedLocation = null;
                 }
             }
 
-            onContainsMouseChanged:  {
+            onAboutToShow:  {
+                tasks.toolTipOpenedLocation = tasks.mapFromItem(toolTipArea, toolTipOpenedPoint);
+                tasks.toolTipOpenedAreaItem = toolTipArea;
                 if (containsMouse) {
+                    tasks.toolTipOpenedLocation = tasks.mapFromItem(toolTipArea, toolTipOpenedPoint);
+                    tasks.toolTipOpenedAreaItem = toolTipArea;
                     if (tasks.toolTipOpenedByClick !== null && tasks.toolTipOpenedByClick !== task) {
                         return;
                     }
@@ -370,6 +379,9 @@ MouseArea {
 
                     mainItem.smartLauncherCountVisible = Qt.binding(() => task.smartLauncherItem && task.smartLauncherItem.countVisible);
                     mainItem.smartLauncherCount = Qt.binding(() => mainItem.smartLauncherCountVisible ? task.smartLauncherItem.count : 0);
+                } else {
+                    tasks.toolTipOpenedByClick = null;
+                    tasks.toolTipOpenedLocation = null;
                 }
             }
         }
