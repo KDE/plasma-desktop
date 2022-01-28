@@ -33,7 +33,7 @@ Item {
         Behavior on opacity {
             OpacityAnimator {
                 duration: PlasmaCore.Units.longDuration
-                easing.type: Easing.OutQuad
+                easing.type: Easing.OutCubic
             }
         }
     }
