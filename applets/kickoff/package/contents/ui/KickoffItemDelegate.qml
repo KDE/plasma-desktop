@@ -47,7 +47,7 @@ T.ItemDelegate {
     property bool isSearchResult: false
     readonly property bool menuClosed: ActionMenu.menu.status == 3 // corresponds to DialogStatus.Closed
 
-    property bool dragEnabled: enabled && !root.isCategory && !root.view.interactive
+    property bool dragEnabled: enabled && !root.isCategory
         && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
 
     function openActionMenu(x = undefined, y = undefined) {
