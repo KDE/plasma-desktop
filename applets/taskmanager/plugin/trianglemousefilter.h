@@ -7,7 +7,7 @@
 #pragma once
 
 #include <QGuiApplication>
-#include <QQuickItem>
+#include <QQuickPaintedItem>
 #include <QTimer>
 
 #include <optional>
@@ -25,7 +25,7 @@
  *
  * See: https://bjk5.com/post/44698559168/breaking-down-amazons-mega-dropdown
  */
-class TriangleMouseFilter : public QQuickItem
+class TriangleMouseFilter : public QQuickPaintedItem
 {
     Q_OBJECT
 
@@ -74,6 +74,7 @@ class TriangleMouseFilter : public QQuickItem
 public:
     TriangleMouseFilter(QQuickItem *parent = nullptr);
     ~TriangleMouseFilter() = default;
+    void paint(QPainter *painter);
 
 Q_SIGNALS:
     void filterTimoutChanged();

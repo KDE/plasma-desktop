@@ -6,10 +6,11 @@
 
 #include "trianglemousefilter.h"
 
+#include <QPainter>
 #include <QPolygonF>
 
 TriangleMouseFilter::TriangleMouseFilter(QQuickItem *parent)
-    : QQuickItem(parent)
+    : QQuickPaintedItem(parent)
     , m_active(true)
     , m_blockFirstEnter(false)
     , m_edgeLine()
@@ -19,6 +20,7 @@ TriangleMouseFilter::TriangleMouseFilter(QQuickItem *parent)
     m_resetTimer.setSingleShot(true);
     connect(&m_resetTimer, &QTimer::timeout, this, [this]() {
         m_interceptionPos.reset();
+        update();
         if (!m_interceptedHoverItem) {
             return;
         }
@@ -36,6 +38,7 @@ TriangleMouseFilter::TriangleMouseFilter(QQuickItem *parent)
 
 bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
 {
+    update();
     if (!m_active) {
         event->setAccepted(false);
         return false;
@@ -105,6 +108,46 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
     default:
         return false;
     }
+}
+
+void TriangleMouseFilter::paint(QPainter *painter)
+{
+    if (!m_interceptionPos) {
+        return;
+    }
+
+    // We add some jitter protection by extending our triangle out slight past the mouse position in the opposite direction of the edge;
+    const int jitterThreshold = 3;
+
+    painter->setBrush(QBrush(QColor(0, 0, 255, 50)));
+
+    // QPolygonF.contains returns false if we're on the edge, so we pad our main item
+    const QRectF shape = (m_edgeLine.size() == 4) ? QRect(m_edgeLine[0] - 1, m_edgeLine[1] - 1, width() + m_edgeLine[2] + 1, height() + m_edgeLine[3] + 1)
+                                                  : QRect(-1, -1, width() + 1, height() + 1);
+
+    QPolygonF poly;
+
+    switch (m_edge) {
+    case Qt::RightEdge:
+        poly << m_interceptionPos.value() + QPointF(-jitterThreshold, 0) << shape.topRight() << shape.bottomRight();
+        break;
+    case Qt::TopEdge:
+        poly << m_interceptionPos.value() + QPointF(0, -jitterThreshold) << shape.topLeft() << shape.topRight();
+        break;
+    case Qt::LeftEdge:
+        poly << m_interceptionPos.value() + QPointF(jitterThreshold, 0) << shape.topLeft() << shape.bottomLeft();
+        break;
+    case Qt::BottomEdge:
+        poly << m_interceptionPos.value() + QPointF(0, jitterThreshold) << shape.bottomLeft() << shape.bottomRight();
+    }
+
+    painter->drawPolygon(poly);
+
+    painter->drawPolygon(poly);
+
+    painter->setBrush(QBrush(QColor(0, 255, 255, 50)));
+    poly.replace(0, m_secondaryPoint);
+    painter->drawPolygon(poly);
 }
 
 bool TriangleMouseFilter::filterContains(const QPointF &p) const
