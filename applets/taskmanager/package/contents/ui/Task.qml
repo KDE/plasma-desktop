@@ -350,6 +350,9 @@ MouseArea {
                         return;
                     }
 
+                    tasks.openToolTip = mainItem;
+                    tasks.openToolTipArea = toolTipArea;
+
                     mainItem.parentTask = task;
                     mainItem.rootIndex = tasksModel.makeModelIndex(itemIndex, -1);
 
@@ -370,6 +373,11 @@ MouseArea {
 
                     mainItem.smartLauncherCountVisible = Qt.binding(() => task.smartLauncherItem && task.smartLauncherItem.countVisible);
                     mainItem.smartLauncherCount = Qt.binding(() => mainItem.smartLauncherCountVisible ? task.smartLauncherItem.count : 0);
+                } else {
+                    if (tasks.openToolTip === mainItem) {
+                        tasks.openToolTip = null;
+                        tasks.openToolTipArea = null;
+                    }
                 }
             }
         }

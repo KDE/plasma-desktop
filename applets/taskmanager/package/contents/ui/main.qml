@@ -27,6 +27,8 @@ MouseArea {
     property bool iconsOnly: plasmoid.pluginName === "org.kde.plasma.icontasks"
 
     property var toolTipOpenedByClick: null
+    property var openToolTip: null
+    property var openToolTipArea: null
 
     property QtObject contextMenuComponent: Qt.createComponent("ContextMenu.qml")
     property QtObject pulseAudioComponent: Qt.createComponent("PulseAudio.qml")
@@ -425,7 +427,55 @@ MouseArea {
     }
 
     TaskManagerApplet.TriangleMouseFilter {
+        id: tmf
         edge: Qt.TopEdge
+        filterTimeOut: 300
+        active: true
+        secondaryPoint: {
+            var basePoint = Qt.point(0, 0);
+            if (tasks.openToolTipArea !== null) {
+                const height = tasks.openToolTipArea.height;
+                const width = tasks.openToolTipArea.width;
+                if (plasmoid.location === PlasmaCore.Types.BottomEdge) {
+                    basePoint = Qt.point(width / 2, height - 2);
+                } else if (plasmoid.location === PlasmaCore.Types.LeftEdge) {
+                    basePoint = Qt.point(2, height / 2);
+                } else if (plasmoid.location === PlasmaCore.Types.RightEdge) {
+                    basePoint = Qt.point(width - 2, height / 2);
+                } else if (plasmoid.location === PlasmaCore.Types.TopEdge) {
+                    basePoint = Qt.point(width / 2, 2);
+                }
+                basePoint = tasks.openToolTipArea.mapToItem(taskList, basePoint);
+                console.log("basePoint mapped", basePoint);
+                return basePoint;
+            }
+            return Qt.point(0, 0);
+        }
+        edgeLine: {
+            if (tasks.openToolTip !== null) {
+                const x = tasks.openToolTip.x;
+                const y = tasks.openToolTip.y;
+                const height = tasks.openToolTip.height;
+                const width = tasks.openToolTip.width;
+                console.log(height, width);
+                let line = [];
+                if (plasmoid.location === PlasmaCore.Types.BottomEdge) {
+                    line = [Qt.point(x, y + height), Qt.point(x + width, y + height)];
+                } else if (plasmoid.location === PlasmaCore.Types.LeftEdge) {
+                    line = [Qt.point(x, y), Qt.point(x, y + height)];
+                } else if (plasmoid.location === PlasmaCore.Types.RightEdge) {
+                    line = [Qt.point(x + width, y), Qt.point(x + width, y + height)];
+                } else if (plasmoid.location === PlasmaCore.Types.TopEdge) {
+                    line = [Qt.point(x + width, y), Qt.point(x + width, y + height)];
+                }
+                let ret = line.map(function(pt) {
+                    return tasks.openToolTip.mapToItem(tmf, pt);
+                });
+                //console.log(ret)
+                return ret
+            }
+            return []
+        }
 
         anchors {
             left: parent.left
