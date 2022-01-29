@@ -8,6 +8,7 @@
 #include "taskmanagerplugin.h"
 #include "backend.h"
 #include "draghelper.h"
+#include "trianglemousefilter.h"
 
 #include "smartlaunchers/smartlauncheritem.h"
 
@@ -18,6 +19,7 @@ void TaskManagerPlugin::registerTypes(const char *uri)
     Q_ASSERT(QLatin1String(uri) == QLatin1String("org.kde.plasma.private.taskmanager"));
     qmlRegisterType<Backend>(uri, 0, 1, "Backend");
     qmlRegisterType<DragHelper>(uri, 0, 1, "DragHelper");
+    qmlRegisterType<TriangleMouseFilter>(uri, 0, 1, "TriangleMouseFilter");
 
     qmlRegisterType<SmartLauncher::Item>(uri, 0, 1, "SmartLauncherItem");
 }

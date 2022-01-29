@@ -424,6 +424,17 @@ MouseArea {
         visible: false
     }
 
+    TaskManagerApplet.TriangleMouseFilter {
+        edge: Qt.TopEdge
+
+        anchors {
+            left: parent.left
+            top: parent.top
+        }
+
+        height: taskList.implicitHeight
+        width: taskList.implicitWidth
+
     TaskList {
         id: taskList
 
@@ -479,6 +490,8 @@ MouseArea {
                 taskClosedWithMouseMiddleButton = [];
             }
         }
+    }
+
     }
 
     GroupDialog { id: groupDialog }
