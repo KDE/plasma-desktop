@@ -37,6 +37,8 @@ QtObject {
     }
 
     Plasmoid.fullRepresentation: PlasmaCore.ToolTipArea {
+        id: fullRep
+
         readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
             || plasmoid.location === PlasmaCore.Types.RightEdge
             || plasmoid.location === PlasmaCore.Types.BottomEdge
@@ -74,6 +76,59 @@ QtObject {
                 onTriggered: plasmoid.activated()
             }
         }
-    }
 
+        // Active/not active indicator
+        PlasmaCore.FrameSvgItem {
+            property var containerMargins: {
+                let item = fullRep;
+                while (item.parent) {
+                    item = item.parent;
+                    if (item.isAppletContainer) {
+                        return item.getMargins;
+                    }
+                }
+                return undefined;
+            }
+
+            anchors {
+                fill: parent
+                property bool returnAllMargins: true
+                // The above makes sure margin is returned even for side margins
+                // that would be otherwise turned off.
+                bottomMargin: containerMargins ? -containerMargins('bottom', returnAllMargins) : 0;
+                topMargin: containerMargins ? -containerMargins('top', returnAllMargins) : 0;
+                leftMargin: containerMargins ? -containerMargins('left', returnAllMargins) : 0;
+                rightMargin: containerMargins ? -containerMargins('right', returnAllMargins) : 0;
+            }
+            imagePath: "widgets/tabbar"
+            visible: fromCurrentTheme && opacity > 0
+            prefix: {
+                var prefix;
+                switch (plasmoid.location) {
+                    case PlasmaCore.Types.LeftEdge:
+                        prefix = "west-active-tab";
+                        break;
+                    case PlasmaCore.Types.TopEdge:
+                        prefix = "north-active-tab";
+                        break;
+                    case PlasmaCore.Types.RightEdge:
+                        prefix = "east-active-tab";
+                        break;
+                    default:
+                        prefix = "south-active-tab";
+                }
+                if (!hasElementPrefix(prefix)) {
+                    prefix = "active-tab";
+                }
+                return prefix;
+            }
+            opacity: showdesktop.showingDesktop ? 1 : 0
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: PlasmaCore.Units.shortDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
+        }
+    }
 }
