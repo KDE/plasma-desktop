@@ -349,7 +349,7 @@ int Positioner::move(const QVariantList &moves)
 {
     // Don't allow moves while listing.
     if (m_folderModel->status() == FolderModel::Listing) {
-        m_deferMovePositions = moves;
+        m_deferMovePositions.append(moves);
         return -1;
     }
 
