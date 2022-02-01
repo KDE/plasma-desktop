@@ -14,7 +14,7 @@ import org.kde.newstuff 1.62 as NewStuff
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kcm 1.4
 
-AbstractKCM {
+SimpleKCM {
     id: root
     signal settingValueChanged
 
@@ -38,9 +38,9 @@ AbstractKCM {
         configDialog.containmentPlugin = root.containmentPlugin
     }
 
-    ColumnLayout {
-        anchors.fill: parent
-        spacing: 0 // unless it's 0 there will be an additional gap between two FormLayouts
+    Item {
+        id: parentItem
+        width: root.width - root.leftPadding - root.rightPadding // Center FormLayouts
 
         Component.onCompleted: {
             for (var i = 0; i < configDialog.containmentPluginsConfigModel.count; ++i) {
@@ -63,19 +63,28 @@ AbstractKCM {
         }
 
         Kirigami.InlineMessage {
+            id: inlineMessage
             visible: plasmoid.immutable || animating
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout changes have been restricted by the system administrator")
             showCloseButton: true
-            Layout.fillWidth: true
-            Layout.leftMargin: Kirigami.Units.smallSpacing
-            Layout.rightMargin: Kirigami.Units.smallSpacing
-            Layout.bottomMargin: Kirigami.Units.smallSpacing * 2 // we need this because ColumnLayout's spacing is 0
+            anchors {
+                top: parent.top
+                left: parent.left
+                right: parent.right
+                leftMargin: Kirigami.Units.smallSpacing
+                rightMargin: Kirigami.Units.smallSpacing
+                bottomMargin: Kirigami.Units.smallSpacing * 2
+            }
         }
 
         Kirigami.FormLayout {
             id: parentLayout // needed for twinFormLayouts to work in wallpaper plugins
             twinFormLayouts: main.currentItem.formLayout || []
-            Layout.fillWidth: true
+            anchors {
+                top: inlineMessage.bottom
+                left: parent.left
+                right: parent.right
+            }
             QQC2.ComboBox {
                 id: pluginComboBox
                 Layout.preferredWidth: Math.max(implicitWidth, wallpaperComboBox.implicitWidth)
@@ -117,7 +126,12 @@ AbstractKCM {
 
         ColumnLayout {
             id: switchContainmentWarning
-            Layout.fillWidth: true
+            anchors {
+                top: parentLayout.bottom
+                left: parent.left
+                right: parent.right
+            }
+            height: visible ? implicitHeight : 0
             visible: configDialog.containmentPlugin !== root.containmentPlugin
             QQC2.Label {
                 Layout.fillWidth: true
@@ -140,19 +154,17 @@ AbstractKCM {
         }
 
         Item {
-            Layout.fillHeight: true
-            visible: switchContainmentWarning.visible
-        }
-
-        Item {
             id: emptyConfig
         }
 
         QQC2.StackView {
             id: main
 
-            Layout.fillHeight: true;
-            Layout.fillWidth: true;
+            anchors {
+                top: switchContainmentWarning.bottom
+                left: parent.left
+                right: parent.right
+            }
 
             visible: !switchContainmentWarning.visible
 
@@ -183,4 +195,37 @@ AbstractKCM {
             }
         }
     }
+
+
+    states: [
+        State {
+            when: configDialog.currentWallpaper === "org.kde.image" || configDialog.currentWallpaper === "org.kde.slideshow"
+            PropertyChanges {
+                target: parentItem
+                // The height of KCM.GridView depends on the height of the window.
+                height: root.height - root.topPadding - root.bottomPadding
+            }
+            AnchorChanges {
+                target: main
+                anchors.bottom: parentItem.bottom
+            }
+        },
+        State {
+            when: !(configDialog.currentWallpaper === "org.kde.image" || configDialog.currentWallpaper === "org.kde.slideshow")
+            PropertyChanges {
+                target: main
+                // Need to explicitly set the height of StackView.
+                // See https://doc.qt.io/qt-5/qml-qtquick-controls2-stackview.html#size
+                height: main.currentItem.implicitHeight
+            }
+            PropertyChanges {
+                target: parentItem
+                // HACK: Eliminate binding loop warnings on height
+                height: inlineMessage.height
+                      + parentLayout.implicitHeight
+                      + switchContainmentWarning.height
+                      + main.height
+            }
+        }
+    ]
 }
