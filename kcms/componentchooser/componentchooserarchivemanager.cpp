@@ -28,15 +28,12 @@ void ComponentChooserArchiveManager::save()
     saveMimeTypeAssociation(QStringLiteral("application/x-lrzip-compressed-tar"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("application/x-lz4-compressed-tar"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("application/x-zstd-compressed-tar"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/vnd.debian.binary-package"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-deb"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("application/x-cd-image"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("application/x-bcpio"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("application/x-cpio"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("application/x-cpio-compressed"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("application/x-sv4cpio"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("application/x-sv4crc"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-rpm"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("application/x-source-rpm"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("application/vnd.ms-cab-compressed"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("application/x-xar"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
@@ -46,7 +43,6 @@ void ComponentChooserArchiveManager::save()
     saveMimeTypeAssociation(QStringLiteral("application/x-rar"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("application/x-7z-compressed"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("application/zip"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-java-archive"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("application/x-compress"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("application/gzip"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
     saveMimeTypeAssociation(QStringLiteral("application/x-bzip"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
