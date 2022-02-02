@@ -10,6 +10,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.shell.panel 0.1 as Panel
+import org.kde.kquickcontrols 2.0
 
 
 PlasmaCore.Dialog {
@@ -169,6 +170,20 @@ PlasmaCore.Dialog {
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
             iconSource: "delete"
             onClicked: plasmoid.action("remove").trigger();
+        }
+        PlasmaExtras.Heading {
+            level: 3
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Shortcut")
+            visible: panel.adaptiveOpacityEnabled
+        }
+        KeySequenceItem {
+            id: button
+            keySequence: plasmoid.globalShortcut
+            onKeySequenceChanged: {
+                if (keySequence != plasmoid.globalShortcut) {
+                    plasmoid.globalShortcut = button.keySequence
+                }
+            }
         }
     }
 

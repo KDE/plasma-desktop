@@ -4,13 +4,16 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import QtQml 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.taskmanager 0.1 as TaskManager
 import org.kde.kwindowsystem 1.0
+import org.kde.kirigami 2.15 as Kirigami
+
+import org.kde.plasma.plasmoid 2.0
 
 Item {
     id: root
@@ -94,6 +97,10 @@ Item {
         imagePath: containment && containment.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "solid/widgets/panel-background"
     }
 
+    Keys.onEscapePressed: {
+        root.parent.focus = false
+    }
+
     transitions: [
         Transition {
             from: "*"
@@ -153,6 +160,7 @@ Item {
         if (containment) {
             if (state === 'opaque') {
                 containment.containmentDisplayHints |= PlasmaCore.Types.DesktopFullyCovered;
+
             } else {
                 containment.containmentDisplayHints &= ~PlasmaCore.Types.DesktopFullyCovered;
             }
@@ -231,6 +239,65 @@ Item {
         restoreMode: Binding.RestoreBinding
     }
 
+    Connections {
+        target: containment
+        function onActivated() {
+            containment.status = PlasmaCore.Types.AcceptingInputStatus;
+            // When the containment is set to AcceptingInputStatus he window will be given focus and
+            // will try to give focus to an itemof the scene, but not the one we wnant. if we call immediately
+            // forceActiveFocus on the one we want we'll have a race condition that won't happen if we do it later
+            Qt.callLater(root.nextItemInFocusChain().forceActiveFocus);
+        }
+    }
+
+    Connections {
+        target: parent
+        function onActiveFocusChanged() {
+            if (!parent.activeFocus) {
+                containment.status = PlasmaCore.Types.PassiveStatus
+            }
+        }
+    }
+
+    PlasmaCore.FrameSvgItem {
+        x: root.verticalPanel || !panel.activeFocusItem
+            ? 0
+            : Math.max(panel.activeFocusItem.Kirigami.ScenePosition.x, panel.activeFocusItem.Kirigami.ScenePosition.x)
+        y: root.verticalPanel && panel.activeFocusItem
+            ? Math.max(panel.activeFocusItem.Kirigami.ScenePosition.y, panel.activeFocusItem.Kirigami.ScenePosition.y)
+            : 0
+
+        width: panel.activeFocusItem
+            ? (root.verticalPanel ? root.width : Math.min(panel.activeFocusItem.width, panel.activeFocusItem.width))
+            : 0
+        height: panel.activeFocusItem
+            ? (root.verticalPanel ?  Math.min(panel.activeFocusItem.height, panel.activeFocusItem.height) : root.height)
+            : 0
+
+        visible: panel.active && panel.activeFocusItem
+
+        imagePath: "widgets/tabbar"
+        prefix: {
+            var prefix = ""
+            switch (root.containment.location) {
+                case PlasmaCore.Types.LeftEdge:
+                    prefix = "west-active-tab";
+                    break;
+                case PlasmaCore.Types.TopEdge:
+                    prefix = "north-active-tab";
+                    break;
+                case PlasmaCore.Types.RightEdge:
+                    prefix = "east-active-tab";
+                    break;
+                default:
+                    prefix = "south-active-tab";
+            }
+            if (!hasElementPrefix(prefix)) {
+                prefix = "active-tab";
+            }
+            return prefix;
+        }
+    }
     Item {
         id: containmentParent
         anchors.fill: parent

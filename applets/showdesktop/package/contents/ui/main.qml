@@ -5,7 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.1
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -53,6 +53,20 @@ QtObject {
 
         MouseArea {
             anchors.fill: parent
+            activeFocusOnTab: true
+            Keys.onPressed: {
+                switch (event.key) {
+                case Qt.Key_Space:
+                case Qt.Key_Enter:
+                case Qt.Key_Return:
+                case Qt.Key_Select:
+                    showdesktop.showingDesktop = !showdesktop.showingDesktop;
+                    break;
+                }
+            }
+            Accessible.name: root.Plasmoid.title
+            Accessible.description: root.Plasmoid.toolTipSubText
+            Accessible.role: Accessible.Button
             onClicked: showdesktop.showingDesktop = !showdesktop.showingDesktop
         }
 

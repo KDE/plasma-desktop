@@ -101,6 +101,21 @@ Item {
         onClicked: {
             main.Plasmoid.action("configure").trigger()
         }
+        activeFocusOnTab: true
+        Keys.onPressed: {
+            switch (event.key) {
+            case Qt.Key_Space:
+            case Qt.Key_Enter:
+            case Qt.Key_Return:
+            case Qt.Key_Select:
+                main.Plasmoid.action("configure").trigger();
+                break;
+            }
+        }
+        Accessible.name: i18nd("plasma_toolbox_org.kde.paneltoolbox", "Configure Panel…")
+        Accessible.description: i18nd("plasma_toolbox_org.kde.paneltoolbox", "Open Panel configuration ui")
+        Accessible.role: Accessible.Button
+        Accessible.onPressAction: main.Plasmoid.action("configure").trigger();
 
         PlasmaCore.ToolTipArea {
             id: toolTipArea

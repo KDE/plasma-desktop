@@ -3,7 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.0
 
@@ -29,8 +29,8 @@ PlasmaCore.ToolTipArea {
 
     onCompactRepresentationChanged: {
         if (compactRepresentation) {
-            compactRepresentation.parent = root;
-            compactRepresentation.anchors.fill = root;
+            compactRepresentation.parent = compactRepresentationParent;
+            compactRepresentation.anchors.fill = compactRepresentationParent;
             compactRepresentation.visible = true;
         }
         root.visible = true;
@@ -81,6 +81,44 @@ PlasmaCore.ToolTipArea {
 
         fullRepresentation.parent = appletParent;
         fullRepresentation.anchors.fill = fullRepresentation.parent;
+    }
+
+    FocusScope {
+        id: compactRepresentationParent
+        anchors.fill: parent
+        activeFocusOnTab: true
+        onActiveFocusChanged: {
+            // When the scope gets the active focus, try to focus its first descendant,
+            // if there is on which has activeFocusOnTab
+            if (!activeFocus) {
+                return;
+            }
+            let nextItem = nextItemInFocusChain();
+            let candidate = nextItem;
+            while (candidate.parent) {
+                if (candidate === compactRepresentationParent) {
+                    nextItem.forceActiveFocus();
+                    return;
+                }
+                candidate = candidate.parent;
+            }
+        }
+
+        Accessible.name: root.mainText
+        Accessible.description: i18n("Open %1", root.subText)
+        Accessible.role: Accessible.Button
+        Accessible.onPressAction: plasmoid.nativeInterface.activated()
+
+        Keys.onPressed: {
+            switch (event.key) {
+                case Qt.Key_Space:
+                case Qt.Key_Enter:
+                case Qt.Key_Return:
+                case Qt.Key_Select:
+                    plasmoid.nativeInterface.activated();
+                    break;
+            }
+        }
     }
 
     PlasmaCore.FrameSvgItem {

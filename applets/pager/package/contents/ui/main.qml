@@ -6,7 +6,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -395,7 +395,21 @@ MouseArea {
                     id: desktopMouseArea
                     anchors.fill: parent
                     hoverEnabled : true
+                    activeFocusOnTab: true
                     onClicked: pagerModel.changePage(index);
+                    Accessible.name: plasmoid.configuration.displayedText ? model.display : i18n("Desktop %1", (index + 1))
+                    Accessible.description: plasmoid.configuration.displayedText ? i18n("Activate %1", model.display) : i18n("Activate %1", (index + 1))
+                    Accessible.role: Accessible.Button
+                    Keys.onPressed: {
+                        switch (event.key) {
+                        case Qt.Key_Space:
+                        case Qt.Key_Enter:
+                        case Qt.Key_Return:
+                        case Qt.Key_Select:
+                            pagerModel.changePage(index);
+                            break;
+                        }
+                    }
                 }
 
                 Item {

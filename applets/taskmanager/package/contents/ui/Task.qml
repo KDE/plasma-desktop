@@ -18,6 +18,8 @@ import "code/tools.js" as TaskTools
 MouseArea {
     id: task
 
+    activeFocusOnTab: true
+
     width: groupDialog.contentWidth
     height: Math.max(theme.mSize(theme.defaultFont).height, PlasmaCore.Units.iconSizes.medium) + LayoutManager.verticalMargins()
 
@@ -62,6 +64,10 @@ MouseArea {
     readonly property bool highlighted: (inPopup && activeFocus) || (!inPopup && containsMouse)
         || (task.contextMenu && task.contextMenu.status === PlasmaComponents.DialogStatus.Open)
         || (groupDialog.visible && groupDialog.visualParent === task)
+
+    Accessible.name: task.labelText
+    Accessible.description: task.labelText ? i18n("Activate %1", task.labelText) : ""
+    Accessible.role: Accessible.Button
 
     onHighlightedChanged: {
         // ensure it doesn't get stuck with a window highlighted
