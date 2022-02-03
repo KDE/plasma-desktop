@@ -27,7 +27,7 @@ KCM.SimpleKCM {
                                                         mapCombo.implicitWidth,
                                                         dialerCombo.implicitWidth)
         Item {
-            Kirigami.FormData.label: "Internet"
+            Kirigami.FormData.label: i18n("Internet:")
             Kirigami.FormData.isSection: true
         }
         ComponentComboBox {
@@ -61,7 +61,7 @@ KCM.SimpleKCM {
             }
         }
         Kirigami.Separator {
-            Kirigami.FormData.label: "Utilities"
+            Kirigami.FormData.label: i18n("Utilities")
             Kirigami.FormData.isSection: true
         }
         ComponentComboBox {
@@ -105,7 +105,7 @@ KCM.SimpleKCM {
             }
         }
         Kirigami.Separator {
-            Kirigami.FormData.label: "Documents"
+            Kirigami.FormData.label: i18n("Documents")
             Kirigami.FormData.isSection: true
         }
         ComponentComboBox {
@@ -129,7 +129,7 @@ KCM.SimpleKCM {
             }
         }
         Kirigami.Separator {
-            Kirigami.FormData.label: "Multimedia"
+            Kirigami.FormData.label: i18n("Multimedia")
             Kirigami.FormData.isSection: true
         }
 
