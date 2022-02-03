@@ -27,7 +27,7 @@ KCM.SimpleKCM {
                                                         mapCombo.implicitWidth,
                                                         dialerCombo.implicitWidth)
         Item {
-            Kirigami.FormData.label: i18n("Internet:")
+            Kirigami.FormData.label: i18n("Internet")
             Kirigami.FormData.isSection: true
         }
         ComponentComboBox {
