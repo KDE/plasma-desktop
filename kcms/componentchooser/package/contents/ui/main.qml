@@ -5,6 +5,7 @@
 */
 
 import QtQuick 2.12
+import QtQuick.Controls 2.12 as Controls
 import QtQuick.Layouts 1.15
 
 import org.kde.kirigami 2.7 as Kirigami
@@ -26,7 +27,10 @@ KCM.SimpleKCM {
                                                         terminalCombo.implicitWidth,
                                                         mapCombo.implicitWidth,
                                                         dialerCombo.implicitWidth)
-
+        Item {
+            Kirigami.FormData.label: "Internet"
+            Kirigami.FormData.isSection: true
+        }
         ComponentComboBox {
             id: browserCombo
             Layout.preferredWidth: form.longestComboBox
@@ -36,6 +40,30 @@ KCM.SimpleKCM {
             KCM.SettingHighlighter {
                 highlight: !kcm.browsers.isDefaults
             }
+        }
+        ComponentComboBox {
+            id: emailCombo
+            Layout.preferredWidth: form.longestComboBox
+            component: kcm.emailClients
+            label: i18n("Email client:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.emailClients.isDefaults
+            }
+        }
+        ComponentComboBox {
+            id: dialerCombo
+            Layout.preferredWidth: form.longestComboBox
+            component: kcm.telUriHandlers
+            label: i18nc("Default phone app", "Dialer:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.telUriHandlers.isDefaults
+            }
+        }
+        Kirigami.Separator {
+            Kirigami.FormData.label: "Utilities"
+            Kirigami.FormData.isSection: true
         }
         ComponentComboBox {
             id: fileManagerCombo
@@ -48,6 +76,16 @@ KCM.SimpleKCM {
             }
         }
         ComponentComboBox {
+            id: terminalCombo
+            Layout.preferredWidth: form.longestComboBox
+            component: kcm.terminalEmulators
+            label: i18n("Terminal emulator:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.terminalEmulators.isDefaults
+            }
+        }
+        ComponentComboBox {
             id: archiveCombo
             Layout.preferredWidth: form.longestComboBox
             component: kcm.archiveManagers
@@ -56,6 +94,20 @@ KCM.SimpleKCM {
             KCM.SettingHighlighter {
                 highlight: !kcm.archiveManagers.isDefaults
             }
+        }
+        ComponentComboBox {
+            id: mapCombo
+            Layout.preferredWidth: form.longestComboBox
+            component: kcm.geoUriHandlers
+            label: i18n("Map:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.geoUriHandlers.isDefaults
+            }
+        }
+        Kirigami.Separator {
+            Kirigami.FormData.label: "Documents"
+            Kirigami.FormData.isSection: true
         }
         ComponentComboBox {
             id: textEditorCombo
@@ -77,6 +129,11 @@ KCM.SimpleKCM {
                 highlight: !kcm.pdfViewers.isDefaults
             }
         }
+        Kirigami.Separator {
+            Kirigami.FormData.label: "Multimedia"
+            Kirigami.FormData.isSection: true
+        }
+
         ComponentComboBox {
             id: imageViewerCombo
             Layout.preferredWidth: form.longestComboBox
@@ -107,45 +164,7 @@ KCM.SimpleKCM {
                 highlight: !kcm.videoPlayers.isDefaults
             }
         }
-        ComponentComboBox {
-            id: emailCombo
-            Layout.preferredWidth: form.longestComboBox
-            component: kcm.emailClients
-            label: i18n("Email client:")
 
-            KCM.SettingHighlighter {
-                highlight: !kcm.emailClients.isDefaults
-            }
-        }
-        ComponentComboBox {
-            id: terminalCombo
-            Layout.preferredWidth: form.longestComboBox
-            component: kcm.terminalEmulators
-            label: i18n("Terminal emulator:")
 
-            KCM.SettingHighlighter {
-                highlight: !kcm.terminalEmulators.isDefaults
-            }
-        }
-        ComponentComboBox {
-            id: mapCombo
-            Layout.preferredWidth: form.longestComboBox
-            component: kcm.geoUriHandlers
-            label: i18n("Map:")
-
-            KCM.SettingHighlighter {
-                highlight: !kcm.geoUriHandlers.isDefaults
-            }
-        }
-        ComponentComboBox {
-            id: dialerCombo
-            Layout.preferredWidth: form.longestComboBox
-            component: kcm.telUriHandlers
-            label: i18nc("Default phone app", "Dialer:")
-
-            KCM.SettingHighlighter {
-                highlight: !kcm.telUriHandlers.isDefaults
-            }
-        }
     }
 }
