@@ -11,7 +11,7 @@ import org.kde.kirigami 2.7 as Kirigami
 import org.kde.kcm 1.5 as KCM
 
 KCM.SimpleKCM {
-    topPadding: 0
+    topPadding: -12
     bottomPadding: 0
     Kirigami.FormLayout {
         id: form
