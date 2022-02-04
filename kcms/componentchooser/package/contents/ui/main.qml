@@ -63,6 +63,65 @@ KCM.SimpleKCM {
             }
         }
         Kirigami.Separator {
+            Kirigami.FormData.label: i18n("Multimedia")
+            Kirigami.FormData.isSection: true
+        }
+
+        ComponentComboBox {
+            id: imageViewerCombo
+            Layout.preferredWidth: form.longestComboBox
+            component: kcm.imageViewers
+            label: i18n("Image viewer:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.imageViewers.isDefaults
+            }
+        }
+        ComponentComboBox {
+            id: musicPlayerCombo
+            Layout.preferredWidth: form.longestComboBox
+            component: kcm.musicPlayers
+            label: i18n("Music player:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.musicPlayers.isDefaults
+            }
+        }
+        ComponentComboBox {
+            id: videoPlayerCombo
+            Layout.preferredWidth: form.longestComboBox
+            component: kcm.videoPlayers
+            label: i18n("Video player:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.videoPlayers.isDefaults
+            }
+        }
+        Kirigami.Separator {
+            Kirigami.FormData.label: i18n("Documents")
+            Kirigami.FormData.isSection: true
+        }
+        ComponentComboBox {
+            id: textEditorCombo
+            Layout.preferredWidth: form.longestComboBox
+            component: kcm.textEditors
+            label: i18n("Text editor:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.textEditors.isDefaults
+            }
+        }
+        ComponentComboBox {
+            id: pdfViewerCombo
+            Layout.preferredWidth: form.longestComboBox
+            component: kcm.pdfViewers
+            label: i18n("PDF viewer:")
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.pdfViewers.isDefaults
+            }
+        }
+        Kirigami.Separator {
             Kirigami.FormData.label: i18n("Utilities")
             Kirigami.FormData.isSection: true
         }
@@ -106,66 +165,5 @@ KCM.SimpleKCM {
                 highlight: !kcm.geoUriHandlers.isDefaults
             }
         }
-        Kirigami.Separator {
-            Kirigami.FormData.label: i18n("Documents")
-            Kirigami.FormData.isSection: true
-        }
-        ComponentComboBox {
-            id: textEditorCombo
-            Layout.preferredWidth: form.longestComboBox
-            component: kcm.textEditors
-            label: i18n("Text editor:")
-
-            KCM.SettingHighlighter {
-                highlight: !kcm.textEditors.isDefaults
-            }
-        }
-        ComponentComboBox {
-            id: pdfViewerCombo
-            Layout.preferredWidth: form.longestComboBox
-            component: kcm.pdfViewers
-            label: i18n("PDF viewer:")
-
-            KCM.SettingHighlighter {
-                highlight: !kcm.pdfViewers.isDefaults
-            }
-        }
-        Kirigami.Separator {
-            Kirigami.FormData.label: i18n("Multimedia")
-            Kirigami.FormData.isSection: true
-        }
-
-        ComponentComboBox {
-            id: imageViewerCombo
-            Layout.preferredWidth: form.longestComboBox
-            component: kcm.imageViewers
-            label: i18n("Image viewer:")
-
-            KCM.SettingHighlighter {
-                highlight: !kcm.imageViewers.isDefaults
-            }
-        }
-        ComponentComboBox {
-            id: musicPlayerCombo
-            Layout.preferredWidth: form.longestComboBox
-            component: kcm.musicPlayers
-            label: i18n("Music player:")
-
-            KCM.SettingHighlighter {
-                highlight: !kcm.musicPlayers.isDefaults
-            }
-        }
-        ComponentComboBox {
-            id: videoPlayerCombo
-            Layout.preferredWidth: form.longestComboBox
-            component: kcm.videoPlayers
-            label: i18n("Video player:")
-
-            KCM.SettingHighlighter {
-                highlight: !kcm.videoPlayers.isDefaults
-            }
-        }
-
-
     }
 }
