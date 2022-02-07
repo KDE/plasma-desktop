@@ -125,6 +125,8 @@ QNetworkRequest KdePlatformDependent::addOAuthToRequest(const QNetworkRequest &r
         const QString bearer = bearer_format.arg(token);
         notConstReq.setRawHeader("Authorization", bearer.toUtf8());
     }
+
+    notConstReq.setAttribute(QNetworkRequest::Http2AllowedAttribute, true);
     return notConstReq;
 }
 
