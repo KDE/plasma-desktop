@@ -66,7 +66,7 @@ QString KdePlatformDependent::getAccessToken(const QUrl & /*baseUrl*/) const
                 GetCredentialsJob *job = new GetCredentialsJob(accountId, accountsManager);
                 connect(job, &KJob::finished, [&completed, &accessToken, &idToken](KJob *kjob) {
                     GetCredentialsJob *job = qobject_cast<GetCredentialsJob *>(kjob);
-                    QVariantMap credentialsData = job->credentialsData();
+                    const QVariantMap credentialsData = job->credentialsData();
                     accessToken = credentialsData[QStringLiteral("AccessToken")].toString();
                     idToken = credentialsData[QStringLiteral("IdToken")].toString();
                     // As this can be useful for more heavy duty debugging purposes, leaving this in so it doesn't have to be rewritten
