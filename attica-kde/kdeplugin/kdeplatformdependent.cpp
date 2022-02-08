@@ -137,11 +137,11 @@ QNetworkRequest KdePlatformDependent::addOAuthToRequest(const QNetworkRequest& r
     }
 
     // Add cache preference in a granular fashion (we will almost certainly want more of these, but...)
-    static const QList<QString> preferCacheEndpoints{
+    static const QStringList preferCacheEndpoints{
         QLatin1String{"/content/categories"}
     }
     for (const QString &endpoint : preferCacheEndpoints) {
-        if (notConstReq.url().endsWith()) {
+        if (notConstReq.url().endsWith(endpoint)) {
             notConstReq.setAttribute(QNetworkRequest::CacheLoadControlAttribute, QNetworkRequest::PreferCache);
             break;
         }
