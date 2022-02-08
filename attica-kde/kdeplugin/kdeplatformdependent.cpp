@@ -135,6 +135,18 @@ QNetworkRequest KdePlatformDependent::addOAuthToRequest(const QNetworkRequest& r
         const QString bearer = bearer_format.arg(token);
         notConstReq.setRawHeader("Authorization", bearer.toUtf8());
     }
+
+    // Add cache preference in a granular fashion (we will almost certainly want more of these, but...)
+    static const QList<QString> preferCacheEndpoints{
+        QLatin1String{"/content/categories"}
+    }
+    for (const QString &endpoint : preferCacheEndpoints) {
+        if (notConstReq.url().endsWith()) {
+            notConstReq.setAttribute(QNetworkRequest::CacheLoadControlAttribute, QNetworkRequest::PreferCache);
+            break;
+        }
+    }
+
     return notConstReq;
 }
 
