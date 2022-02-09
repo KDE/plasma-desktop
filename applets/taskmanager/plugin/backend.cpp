@@ -530,32 +530,6 @@ QRect Backend::globalRect(QQuickItem *item) const
     return iconRect;
 }
 
-void Backend::ungrabMouse(QQuickItem *item) const
-{
-    // this is a workaround where Qt will fail to realize a mouse has been released
-
-    // this happens if a window which does not accept focus spawns a new window that takes focus and X grab
-    // whilst the mouse is depressed
-    // https://bugreports.qt.io/browse/QTBUG-59044
-    // this causes the next click to go missing
-
-    // by releasing manually we avoid that situation
-    auto ungrabMouseHack = [item]() {
-        if (item && item->window() && item->window()->mouseGrabberItem()) {
-            item->window()->mouseGrabberItem()->ungrabMouse();
-        }
-    };
-
-    // pre 5.8.0 QQuickWindow code is "item->grabMouse(); sendEvent(item, mouseEvent)"
-    // post 5.8.0 QQuickWindow code is sendEvent(item, mouseEvent); item->grabMouse()
-    if (QVersionNumber::fromString(QString::fromLatin1(qVersion())) > QVersionNumber(5, 8, 0)) {
-        QTimer::singleShot(0, item, ungrabMouseHack);
-    } else {
-        ungrabMouseHack();
-    }
-    // end workaround
-}
-
 bool Backend::windowViewAvailable() const
 {
     return m_windowViewAvailable;

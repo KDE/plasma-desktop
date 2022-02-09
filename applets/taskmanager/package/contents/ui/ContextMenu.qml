@@ -46,7 +46,6 @@ PlasmaComponents.ContextMenu {
 
         } else if (status == PlasmaComponents.DialogStatus.Closed) {
             menu.destroy();
-            backend.ungrabMouse(visualParent);
         }
     }
 
