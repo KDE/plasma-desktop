@@ -132,7 +132,16 @@ QNetworkRequest KdePlatformDependent::addOAuthToRequest(const QNetworkRequest &r
     }
     for (const QString &endpoint : preferCacheEndpoints) {
         if (notConstReq.url().endsWith(endpoint)) {
-            notConstReq.setAttribute(QNetworkRequest::CacheLoadControlAttribute, QNetworkRequest::PreferCache);
+            QNetworkCacheMetaData cacheMeta{m_accessManager->cache.metaData(notConstReq.url())};
+            if (cacheMeta.isValid()) {
+                // If the expiration date is valid, but longer than 24 hours, don't trust that things
+                // haven't changed and check first, otherwise just use the cached version to relieve
+                // server strain and reduce network traffic.
+                const QDateTime tomorrow{QDateTime::currentDateTime().addDays(1)};
+                if (cacheMeta.expirationDate().isValid() && cacheMeta.expirationDate() < tomorrow) {
+                    notConstReq.setAttribute(QNetworkRequest::CacheLoadControlAttribute, QNetworkRequest::PreferCache);
+                }
+            }
             break;
         }
     }
