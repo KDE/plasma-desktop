@@ -137,12 +137,10 @@ QNetworkRequest KdePlatformDependent::addOAuthToRequest(const QNetworkRequest& r
     }
 
     // Add cache preference in a granular fashion (we will almost certainly want more of these, but...)
-    static const QStringList preferCacheEndpoints{
-        QLatin1String{"/content/categories"}
-    }
+    static const QStringList preferCacheEndpoints{QLatin1String{"/content/categories"}};
     for (const QString &endpoint : preferCacheEndpoints) {
-        if (notConstReq.url().endsWith(endpoint)) {
-            QNetworkCacheMetaData cacheMeta{m_accessManager->cache.metaData(notConstReq.url())};
+        if (notConstReq.url().toString().endsWith(endpoint)) {
+            QNetworkCacheMetaData cacheMeta{m_accessManager->cache()->metaData(notConstReq.url())};
             if (cacheMeta.isValid()) {
                 // If the expiration date is valid, but longer than 24 hours, don't trust that things
                 // haven't changed and check first, otherwise just use the cached version to relieve
