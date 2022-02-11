@@ -76,7 +76,7 @@ void MostUsedModel::setResultModel(ResultModel *model)
     }
 
     auto updateModel = [this]() {
-        if (m_resultModel->rowCount() >= 5) {
+        if (m_resultModel->rowCount() >= 6) {
             setSourceModel(m_resultModel);
         } else {
             setSourceModel(m_defaultModel);
@@ -179,7 +179,7 @@ KCMLandingPage::KCMLandingPage(QObject *parent, const QVariantList &args)
     setButtons(Apply | Help);
 
     m_mostUsedModel = new MostUsedModel(this);
-    m_mostUsedModel->setResultModel(new ResultModel(AllResources | Agent(QStringLiteral("org.kde.systemsettings")) | HighScoredFirst | Limit(5), this));
+    m_mostUsedModel->setResultModel(new ResultModel(AllResources | Agent(QStringLiteral("org.kde.systemsettings")) | HighScoredFirst | Limit(6), this));
 
     m_defaultLightLookAndFeel = new LookAndFeelGroup(this);
     m_defaultDarkLookAndFeel = new LookAndFeelGroup(this);
