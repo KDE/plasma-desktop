@@ -18,8 +18,6 @@
 #include <kglobalaccel_component_interface.h>
 #include <kglobalaccel_interface.h>
 
-#include <kglobalaccel_version.h>
-
 #include "kcmkeys_debug.h"
 
 static QStringList buildActionId(const QString &componentUnique, const QString &componentFriendly, const QString &actionUnique, const QString &actionFriendly)
@@ -178,11 +176,7 @@ void GlobalAccelModel::save()
                     keys.append(key);
                 }
                 qCDebug(KCMKEYS) << "Saving" << actionId << action.activeShortcuts << keys;
-#if KGLOBALACCEL_VERSION >= QT_VERSION_CHECK(5, 90, 0)
                 auto reply = m_globalAccelInterface->setForeignShortcutKeys(actionId, keys);
-#else
-                auto reply = m_globalAccelInterface->setForeignShortcut(actionId, keys);
-#endif
                 reply.waitForFinished();
                 if (!reply.isValid()) {
                     qCCritical(KCMKEYS) << "Error while saving";
