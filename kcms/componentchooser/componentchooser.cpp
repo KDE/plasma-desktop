@@ -59,8 +59,8 @@ void ComponentChooser::load()
      * - Defining which application will be set up
      * The logic follows like so:
      * - if the executable for an application is inexistent;
-     * - OR the mimetype category (from .desktop files, e.g. Video, Viewer, TerminalEmulator) is not defined AND the list of categories DOES NOT contain a
-     * category;
+     * - OR the mimetype category (from .desktop files, e.g. Video, Viewer, TerminalEmulator) is not defined
+     * AND the list of categories DOES NOT contain a category;
      * - OR the list of service types does not include a mimetype;
      * - then fail immediately.
      * A service type in this context is a URI handler or a mimetype.
