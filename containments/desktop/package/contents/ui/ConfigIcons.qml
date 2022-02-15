@@ -124,7 +124,7 @@ Item {
         ComboBox {
             id: arrangement
             Layout.fillWidth: true
-            visible: !isPopup || viewMode.currentIndex === 1
+            visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
             Kirigami.FormData.label: i18n("Arrangement:")
 
@@ -134,7 +134,7 @@ Item {
         ComboBox {
             id: alignment
             Layout.fillWidth: true
-            visible: !isPopup || viewMode.currentIndex === 1
+            visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
             model: [i18n("Align left"), i18n("Align right")]
         }
@@ -156,7 +156,7 @@ Item {
 
         Item {
             Kirigami.FormData.isSection: true
-            visible: !isPopup || viewMode.currentIndex === 1
+            visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
         }
 
 
@@ -217,7 +217,7 @@ Item {
             id: iconSize
 
             Layout.fillWidth: true
-            visible: !isPopup || viewMode.currentIndex === 1
+            visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
             Kirigami.FormData.label: i18n("Icon size:")
 
@@ -232,7 +232,7 @@ Item {
 
             Label {
                 Layout.alignment: Qt.AlignLeft
-                visible: !isPopup || viewMode.currentIndex === 1
+                visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
                 text: i18n("Small")
             }
@@ -241,7 +241,7 @@ Item {
             }
             Label {
                 Layout.alignment: Qt.AlignRight
-                visible: !isPopup || viewMode.currentIndex === 1
+                visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
                 text: i18n("Large")
             }
@@ -249,7 +249,7 @@ Item {
 
         ComboBox {
             id: labelWidth
-            visible: !isPopup || viewMode.currentIndex === 1
+            visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
             Layout.fillWidth: true
 
             Kirigami.FormData.label: i18n("Label width:")
@@ -263,7 +263,7 @@ Item {
 
         SpinBox {
             id: textLines
-            visible: !isPopup || viewMode.currentIndex === 1
+            visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
             Kirigami.FormData.label: i18n("Text lines:")
 
