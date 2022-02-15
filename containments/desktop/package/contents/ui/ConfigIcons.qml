@@ -124,6 +124,7 @@ Item {
         ComboBox {
             id: arrangement
             Layout.fillWidth: true
+            visible: !isPopup || viewMode.currentIndex === 1
 
             Kirigami.FormData.label: i18n("Arrangement:")
 
@@ -133,6 +134,7 @@ Item {
         ComboBox {
             id: alignment
             Layout.fillWidth: true
+            visible: !isPopup || viewMode.currentIndex === 1
 
             model: [i18n("Align left"), i18n("Align right")]
         }
@@ -154,6 +156,7 @@ Item {
 
         Item {
             Kirigami.FormData.isSection: true
+            visible: !isPopup || viewMode.currentIndex === 1
         }
 
 
