@@ -43,11 +43,10 @@ Kirigami.ScrollablePage
             Layout.fillWidth: true
         }
 
-        QQC2.TextField {
+        Kirigami.SearchField {
             id: searchField
             Layout.fillWidth: true
             text: view.searchText
-            placeholderText: i18n("Search…")
             visible: view.showSearch
             inputMethodHints: Qt.ImhNoPredictiveText
             onTextChanged: {
