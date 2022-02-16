@@ -95,8 +95,27 @@ Item {
     }
 
     PlasmaCore.FrameSvgItem {
-        id: expandedItem
-        anchors.fill: parent
+        property var containerMargins: {
+            let item = tooltip;
+            while (item.parent) {
+                item = item.parent;
+                if (item.isAppletContainer) {
+                    return item.getMargins;
+                }
+            }
+            return undefined;
+        }
+
+        anchors {
+            fill: parent
+            property bool returnAllMargins: true
+            // The above makes sure margin is returned even for side margins
+            // that would be otherwise turned off.
+            bottomMargin: containerMargins ? -containerMargins('bottom', returnAllMargins) : 0;
+            topMargin: containerMargins ? -containerMargins('top', returnAllMargins) : 0;
+            leftMargin: containerMargins ? -containerMargins('left', returnAllMargins) : 0;
+            rightMargin: containerMargins ? -containerMargins('right', returnAllMargins) : 0;
+        }
         imagePath: "widgets/tabbar"
         prefix: {
             var prefix;
