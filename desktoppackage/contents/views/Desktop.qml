@@ -12,6 +12,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kwindowsystem 1.0
 import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
 import org.kde.plasma.shell 2.0 as Shell
+import org.kde.kirigami 2.15 as Kirigami
 import "../activitymanager"
 import "../explorer"
 
@@ -64,6 +65,37 @@ Item {
         id: kwindowsystem
     }
 
+    Kirigami.ImageColors {
+        id: wallpaperColors
+        source: root.containment.wallpaper
+    }
+    Connections {
+        target: root.containment.wallpaper
+        function onConfigurationChanged() {
+            colorsTimer.restart()
+        }
+        function onRepaintNeeded() {
+            colorsTimer.restart()
+        }
+    }
+    Timer {
+        id: colorsTimer
+        interval: 500
+        onTriggered: wallpaperColors.update()
+    }
+    Rectangle {
+        width: 100
+        height: 100
+        z: 999999
+        color: wallpaperColors.highlight
+        MouseArea {
+            anchors.fill:parent
+            onClicked: {
+                print(root.containment.wallpaper)
+                wallpaperColors.update()
+            }
+        }
+    }
     Timer {
         id: pendingUninstallTimer
         // keeps track of the applets the user wants to uninstall
