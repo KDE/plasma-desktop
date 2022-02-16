@@ -17,7 +17,7 @@ Kirigami.Action {
             case 'People & Body': return 'user'
             case 'Smileys & Emotion':
             case 'Smileys & People': return 'smiley'
-            case 'Symbols': return 'love'
+            case 'Symbols': return 'checkmark'
             case 'Travel & Places': return 'globe'
             default: return 'folder'
         }
