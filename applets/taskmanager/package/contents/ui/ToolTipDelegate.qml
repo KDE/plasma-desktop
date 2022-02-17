@@ -91,6 +91,10 @@ Loader {
             implicitWidth: leftPadding + rightPadding + Math.min(Screen.desktopAvailableWidth - 2 * PlasmaCore.Units.smallSpacing, contentItem.contentItem.childrenRect.width)
             implicitHeight: bottomPadding + Math.min(Screen.desktopAvailableHeight - 2 * PlasmaCore.Units.smallSpacing, contentItem.contentItem.childrenRect.height)
 
+            // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
+            PlasmaComponents3.ScrollBar.horizontal.policy: isVerticalPanel ? PlasmaComponents3.ScrollBar.AlwaysOff : PlasmaComponents3.ScrollBar.AsNeeded
+            PlasmaComponents3.ScrollBar.vertical.policy: isVerticalPanel ? PlasmaComponents3.ScrollBar.AsNeeded : PlasmaComponents3.ScrollBar.AlwaysOff
+
             ListView {
                 id: groupToolTipListView
 
