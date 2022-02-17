@@ -145,6 +145,22 @@ MouseArea {
         }
     }
 
+    onPressAndHold: if (mouse.button === Qt.LeftButton) {
+        /* TODO: make press and hold to open menu exclusive to touch.
+         * I (ndavis) tried `if (lastDeviceType & ~(PointerDevice.Mouse | PointerDevice.TouchPad))`
+         * with a TapHandler. lastDeviceType was gotten from the EventPoint argument of the
+         * grabChanged() signal. ngraham said it wouldn't work because it was preventing single
+         * taps on touch. I didn't have a touch screen to test it with.
+         */
+        // When we're a launcher, there's no window controls, so we can show all
+        // places without the menu getting super huge.
+        if (model.IsLauncher === true) {
+            showContextMenu({showAllPlaces: true})
+        } else {
+            showContextMenu();
+        }
+    }
+
     onReleased: {
         if (pressed) {
             if (mouse.button == Qt.MidButton) {
