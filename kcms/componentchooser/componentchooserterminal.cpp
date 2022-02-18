@@ -1,10 +1,10 @@
 /*
-    SPDX-FileCopyrightText: 2002 Joseph Wenninger <jowenn@kde.org>
-    SPDX-FileCopyrightText: 2020 Méven Car <meven.car@kdemail.net>
-    SPDX-FileCopyrightText: 2020 Tobias Fella <fella@posteo.de>
-
-    SPDX-License-Identifier: GPL-2.0-or-later
-*/
+ *    SPDX-FileCopyrightText: 2002 Joseph Wenninger <jowenn@kde.org>
+ *    SPDX-FileCopyrightText: 2020 Méven Car <meven.car@kdemail.net>
+ *    SPDX-FileCopyrightText: 2020 Tobias Fella <fella@posteo.de>
+ *
+ *    SPDX-License-Identifier: GPL-2.0-or-later
+ */
 
 #include "componentchooserterminal.h"
 

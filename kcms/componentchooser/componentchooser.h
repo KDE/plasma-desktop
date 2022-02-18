@@ -33,7 +33,6 @@ public:
     Q_INVOKABLE void select(int index);
 
     virtual void save() = 0;
-    void saveMimeTypeAssociation(const QString &mime, const QString &storageId);
     void saveMimeTypeAssociations(const QStringList &mimes, const QString &storageId);
 
     bool isDefault() const;

@@ -1,8 +1,8 @@
 /*
-    SPDX-FileCopyrightText: 2020 Tobias Fella <fella@posteo.de>
-
-    SPDX-License-Identifier: GPL-2.0-or-later
-*/
+ *    SPDX-FileCopyrightText: 2020 Tobias Fella <fella@posteo.de>
+ *
+ *    SPDX-License-Identifier: GPL-2.0-or-later
+ */
 
 #include "componentchooserfilemanager.h"
 
@@ -17,5 +17,5 @@ ComponentChooserFileManager::ComponentChooserFileManager(QObject *parent)
 
 void ComponentChooserFileManager::save()
 {
-    saveMimeTypeAssociation(QStringLiteral("inode/directory"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
+    saveMimeTypeAssociations(QStringList("inode/directory"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
 }

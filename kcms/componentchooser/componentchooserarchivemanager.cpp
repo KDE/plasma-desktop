@@ -1,8 +1,8 @@
 /*
-    SPDX-FileCopyrightText: 2022 Thiago Sueto <herzenschein@gmail.com>
-
-    SPDX-License-Identifier: GPL-2.0-or-later
-*/
+ *    SPDX-FileCopyrightText: 2022 Thiago Sueto <herzenschein@gmail.com>
+ *
+ *    SPDX-License-Identifier: GPL-2.0-or-later
+ */
 
 #include "componentchooserarchivemanager.h"
 
@@ -15,39 +15,41 @@ ComponentChooserArchiveManager::ComponentChooserArchiveManager(QObject *parent)
 {
 }
 
+QStringList mimetypes{"application/x-tar",
+                      "application/x-compressed-tar",
+                      "application/x-bzip-compressed-tar",
+                      "application/x-tarz",
+                      "application/x-xz-compressed-tar",
+                      "application/x-lzma-compressed-tar",
+                      "application/x-lzip-compressed-tar",
+                      "application/x-tzo",
+                      "application/x-lrzip-compressed-tar",
+                      "application/x-lz4-compressed-tar",
+                      "application/x-zstd-compressed-tar",
+                      "application/x-cd-image",
+                      "application/x-bcpio",
+                      "application/x-cpio",
+                      "application/x-cpio-compressed",
+                      "application/x-sv4cpio",
+                      "application/x-sv4crc",
+                      "application/x-source-rpm",
+                      "application/vnd.ms-cab-compressed",
+                      "application/x-xar",
+                      "application/x-iso9660-appimage",
+                      "application/x-archive",
+                      "application/vnd.rar",
+                      "application/x-rar",
+                      "application/x-7z-compressed",
+                      "application/zip",
+                      "application/x-compress",
+                      "application/gzip",
+                      "application/x-bzip",
+                      "application/x-lzma",
+                      "application/x-xz",
+                      "application/zstd",
+                      "application/x-lha"};
+
 void ComponentChooserArchiveManager::save()
 {
-    saveMimeTypeAssociation(QStringLiteral("application/x-tar"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-compressed-tar"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-bzip-compressed-tar"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-tarz"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-xz-compressed-tar"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-lzma-compressed-tar"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-lzip-compressed-tar"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-tzo"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-lrzip-compressed-tar"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-lz4-compressed-tar"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-zstd-compressed-tar"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-cd-image"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-bcpio"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-cpio"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-cpio-compressed"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-sv4cpio"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-sv4crc"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-source-rpm"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/vnd.ms-cab-compressed"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-xar"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-iso9660-appimage"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-archive"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/vnd.rar"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-rar"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-7z-compressed"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/zip"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-compress"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/gzip"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-bzip"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-lzma"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-xz"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/zstd"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-lha"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
+    saveMimeTypeAssociations(mimetypes, m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
 }

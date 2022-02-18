@@ -1,8 +1,8 @@
 /*
-    SPDX-FileCopyrightText: 2022 Thiago Sueto <herzenschein@gmail.com>
-
-    SPDX-License-Identifier: GPL-2.0-or-later
-*/
+ *    SPDX-FileCopyrightText: 2022 Thiago Sueto <herzenschein@gmail.com>
+ *
+ *    SPDX-License-Identifier: GPL-2.0-or-later
+ */
 
 #include "componentchooserimageviewer.h"
 
@@ -17,12 +17,8 @@ ComponentChooserImageViewer::ComponentChooserImageViewer(QObject *parent)
 
 void ComponentChooserImageViewer::save()
 {
-    saveMimeTypeAssociation(QStringLiteral("image/png"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("image/jpeg"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("image/webp"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("image/avif"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("image/heif"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("image/bmp"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("image/vnd.microsoft.icon"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("image/x-icns"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
+    QStringList mimetypes{"image/png", "image/jpeg", "image/webp", "image/avif", "image/heif", "image/bmp", "image/vnd.microsoft.icon", "image/x-icns"
+
+    };
+    saveMimeTypeAssociations(mimetypes, m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
 }

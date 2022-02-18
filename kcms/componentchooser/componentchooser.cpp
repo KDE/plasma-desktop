@@ -197,67 +197,49 @@ void ComponentChooser::select(int index)
 
 void ComponentChooser::saveMimeTypeAssociations(const QStringList &mimes, const QString &storageId)
 {
-    KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
-
-    if (profile->isConfigWritable(true))
-    {
-        KConfigGroup defaultApp(profile, "Default Applications");
-        KConfigGroup addedApps(profile, QStringLiteral("Added Associations"));
-        for (QString m : mimes)
-        {
-        defaultApp.writeXdgListEntry(m, QStringList(storageId));
-
-        QStringList apps = addedApps.readXdgListEntry(m);
-        apps.removeAll(storageId);
-        apps.prepend(storageId);
-        addedApps.writeXdgListEntry(m, apps);
-
-        m_previousApplication = m_applications[m_index].toMap()["storageId"].toString();
-        }
-        profile->sync();
-        QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
-                                                              QStringLiteral("/KLauncher"),
-                                                              QStringLiteral("org.kde.KLauncher"),
-                                                              QStringLiteral("reparseConfiguration"));
-        QDBusConnection::sessionBus().send(message);
-
-    }
-}
-
-void ComponentChooser::saveMimeTypeAssociation(const QString &mime, const QString &storageId)
-{
     /* This grabs the configuration from mimeapps.list, which is DE agnostic and part of the XDG standard.
      * KConfig::NoGlobals is used because the file is local and not added to kdeglobals.
      * QStandardPaths::GenericConfigLocation points to $XDG_CONFIG_HOME.
      */
     KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
-    if (profile->isConfigWritable(true)) {
-        /* KConfigGroup creates an object that refers to the group [Default Applications]
-         * which is found in mimeapps.list and is used for the
+
+    if (profile->isConfigWritable(true))
+    {
+        /* KConfigGroup creates an object that refers to the groups
+         * [Default Applications] and [Added Associations]
+         * which are found in mimeapps.list and used for the
          * --group flag of kwriteconfig5 for instance.
-         * Then we write the data from the file into the created group object.
          */
-        KConfigGroup defaultApp(profile, "Default Applications");
-        defaultApp.writeXdgListEntry(mime, QStringList(storageId));
-
-        // Do the same for the group [Added Associations].
+        KConfigGroup defaultApps(profile, "Default Applications");
         KConfigGroup addedApps(profile, QStringLiteral("Added Associations"));
-        // We grab a list of applications with the storageId we passed to it,
-        // then make it the first in the list and sync.
-        QStringList apps = addedApps.readXdgListEntry(mime);
-        apps.removeAll(storageId);
-        apps.prepend(storageId);
-        addedApps.writeXdgListEntry(mime, apps);
-        profile->sync();
+        /* In the ComponentChooser child classes for each association, we add a QStringList
+         * containing all mimetypes we want to associate to a certain application.
+         * We pass this as mimes here and iterate through it
+         * so that we can set associations in bulk.
+         */
+        for (QString m : mimes)
+        {
+            // We grab each mimetype and storage id and pass it to our default apps list.
+            defaultApps.writeXdgListEntry(m, QStringList(storageId));
 
+            // We make a list of applications relative to a given mimetype,
+            // then make it the first in the list and sync.
+            QStringList apps = addedApps.readXdgListEntry(m);
+            apps.removeAll(storageId);
+            apps.prepend(storageId);
+            addedApps.writeXdgListEntry(m, apps);
+
+            m_previousApplication = m_applications[m_index].toMap()["storageId"].toString();
+        }
         // And we finish by notifying that the changes are done.
+        profile->sync();
         QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
                                                               QStringLiteral("/KLauncher"),
                                                               QStringLiteral("org.kde.KLauncher"),
                                                               QStringLiteral("reparseConfiguration"));
         QDBusConnection::sessionBus().send(message);
+
     }
-    m_previousApplication = m_applications[m_index].toMap()["storageId"].toString();
 }
 
 bool ComponentChooser::isDefaults() const

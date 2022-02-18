@@ -1,8 +1,8 @@
 /*
-    SPDX-FileCopyrightText: 2022 Thiago Sueto <herzenschein@gmail.com>
-
-    SPDX-License-Identifier: GPL-2.0-or-later
-*/
+ *    SPDX-FileCopyrightText: 2022 Thiago Sueto <herzenschein@gmail.com>
+ *
+ *    SPDX-License-Identifier: GPL-2.0-or-later
+ */
 
 #include "componentchoosertexteditor.h"
 
@@ -17,10 +17,6 @@ ComponentChooserTextEditor::ComponentChooserTextEditor(QObject *parent)
 
 void ComponentChooserTextEditor::save()
 {
-    saveMimeTypeAssociation(QStringLiteral("text/plain"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("text/x-cmake"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("text/markdown"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-docbook+xml"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/json"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("application/x-yaml"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
+    QStringList mimetypes{"text/plain", "text/x-cmake", "text/markdown", "application/x-docbook+xml", "application/json", "application/x-yaml"};
+    saveMimeTypeAssociations(mimetypes, m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
 }

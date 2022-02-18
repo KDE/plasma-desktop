@@ -1,7 +1,7 @@
 /*
-    SPDX-FileCopyrightText: 2022 Kai Uwe Broulik <kde@broulik.de>
-    SPDX-License-Identifier: LGPL-2.0-or-later
-*/
+ *    SPDX-FileCopyrightText: 2022 Kai Uwe Broulik <kde@broulik.de>
+ *    SPDX-License-Identifier: LGPL-2.0-or-later
+ */
 
 #include "componentchoosertel.h"
 
@@ -24,5 +24,5 @@ void ComponentChooserTel::save()
         return;
     }
 
-    saveMimeTypeAssociation(QStringLiteral("x-scheme-handler/tel"), storageId);
+    saveMimeTypeAssociations(QStringList("x-scheme-handler/tel"), storageId);
 }

@@ -1,8 +1,8 @@
 /*
-    SPDX-FileCopyrightText: 2022 Thiago Sueto <herzenschein@gmail.com>
-
-    SPDX-License-Identifier: GPL-2.0-or-later
-*/
+ *    SPDX-FileCopyrightText: 2022 Thiago Sueto <herzenschein@gmail.com>
+ *
+ *    SPDX-License-Identifier: GPL-2.0-or-later
+ */
 
 #include "componentchoosermusicplayer.h"
 
@@ -17,24 +17,25 @@ ComponentChooserMusicPlayer::ComponentChooserMusicPlayer(QObject *parent)
 
 void ComponentChooserMusicPlayer::save()
 {
-    saveMimeTypeAssociation(QStringLiteral("application/x-ogm-audio"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/aac"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/mp4"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/mpeg"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/mpegurl"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/ogg"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/vnd.rn-realaudio"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/vorbis"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/x-flac"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/x-mp3"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/x-mpegurl"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/x-ms-wma"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/x-musepack"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/x-oggflac"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/x-pn-realaudio"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/x-scpls"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/x-speex"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/x-vorbis"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/x-vorbis+ogg"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
-    saveMimeTypeAssociation(QStringLiteral("audio/x-wav"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
+    QStringList mimetypes{"application/x-ogm-audio",
+                          "audio/aac",
+                          "audio/mp4",
+                          "audio/mpeg",
+                          "audio/mpegurl",
+                          "audio/ogg",
+                          "audio/vnd.rn-realaudio",
+                          "audio/vorbis",
+                          "audio/x-flac",
+                          "audio/x-mp3",
+                          "audio/x-mpegurl",
+                          "audio/x-ms-wma",
+                          "audio/x-musepack",
+                          "audio/x-oggflac",
+                          "audio/x-pn-realaudio",
+                          "audio/x-scpls",
+                          "audio/x-speex",
+                          "audio/x-vorbis",
+                          "audio/x-vorbis+ogg",
+                          "audio/x-wav"};
+    saveMimeTypeAssociations(mimetypes, m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
 }
