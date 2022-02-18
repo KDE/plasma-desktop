@@ -205,13 +205,20 @@ MouseArea {
         PlasmaCore.IconItem {
             anchors.centerIn: parent
 
-            height: Math.min(PlasmaCore.Units.iconSizes.small, parent.height - (PlasmaCore.Units.smallSpacing * 2))
-            width: Math.min(PlasmaCore.Units.iconSizes.small, parent.width - (PlasmaCore.Units.smallSpacing * 2))
+            height: Math.min(PlasmaCore.Units.iconSizes.small,
+                             parent.height,
+                             Math.max(parent.height - (PlasmaCore.Units.smallSpacing * 2),
+                                      PlasmaCore.Units.smallSpacing * 2))
+            width: Math.min(PlasmaCore.Units.iconSizes.small,
+                            parent.width,
+                            Math.max(parent.width - (PlasmaCore.Units.smallSpacing * 2),
+                                     PlasmaCore.Units.smallSpacing * 2))
 
             property var model: null
 
             source: model ? model.decoration : undefined
             usesPlasmaTheme: false
+            roundToIconSize: false
             animated: false
         }
     }
