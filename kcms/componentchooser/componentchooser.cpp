@@ -194,6 +194,35 @@ void ComponentChooser::select(int index)
     Q_EMIT isDefaultsChanged();
 }
 
+void ComponentChooser::saveMimeTypeAssociations(const QStringList &mimes, const QString &storageId)
+{
+    KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
+
+    if (profile->isConfigWritable(true))
+    {
+        KConfigGroup defaultApp(profile, "Default Applications");
+        KConfigGroup addedApps(profile, QStringLiteral("Added Associations"));
+        for (QString m : mimes)
+        {
+        defaultApp.writeXdgListEntry(m, QStringList(storageId));
+
+        QStringList apps = addedApps.readXdgListEntry(m);
+        apps.removeAll(storageId);
+        apps.prepend(storageId);
+        addedApps.writeXdgListEntry(m, apps);
+
+        m_previousApplication = m_applications[m_index].toMap()["storageId"].toString();
+        }
+        profile->sync();
+        QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
+                                                              QStringLiteral("/KLauncher"),
+                                                              QStringLiteral("org.kde.KLauncher"),
+                                                              QStringLiteral("reparseConfiguration"));
+        QDBusConnection::sessionBus().send(message);
+
+    }
+}
+
 void ComponentChooser::saveMimeTypeAssociation(const QString &mime, const QString &storageId)
 {
     /* This grabs the configuration from mimeapps.list, which is DE agnostic and part of the XDG standard.
@@ -243,4 +272,9 @@ bool ComponentChooser::isSaveNeeded() const
      * then a change was made.
      */
     return !m_applications.isEmpty() && (m_previousApplication != m_applications[m_index].toMap()["storageId"].toString());
+}
+
+QStringList ComponentChooser::getMimeTypes() const
+{
+    return m_mimeTypes;
 }
