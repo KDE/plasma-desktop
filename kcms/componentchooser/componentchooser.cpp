@@ -49,6 +49,7 @@ void ComponentChooser::load()
      */
     KService::Ptr preferredService = KApplicationTrader::preferredService(m_mimeType);
 
+    m_mimeTypes = preferredService->mimeTypes();
     /* This function is for populating the list of applications.
      * KApplicationTrader::query asks for the list of applications that match a mimetype
      * according to a selected filter made with KApplicationTrader::FilterFunc,
