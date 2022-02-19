@@ -24,5 +24,5 @@ void ComponentChooserTel::save()
         return;
     }
 
-    saveMimeTypeAssociations(QStringList("x-scheme-handler/tel"), storageId);
+    saveMimeTypeAssociations({QStringLiteral("x-scheme-handler/tel")}, storageId);
 }

@@ -20,5 +20,5 @@ void ComponentChooserGeo::save()
         return;
     }
 
-    saveMimeTypeAssociations(QStringList("x-scheme-handler/geo"), storageId);
+    saveMimeTypeAssociations({QStringLiteral("x-scheme-handler/geo")}, storageId);
 }

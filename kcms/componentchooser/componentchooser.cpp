@@ -210,7 +210,7 @@ void ComponentChooser::saveMimeTypeAssociations(const QStringList &mimes, const 
          * which are found in mimeapps.list and used for the
          * --group flag of kwriteconfig5 for instance.
          */
-        KConfigGroup defaultApps(profile, "Default Applications");
+        KConfigGroup defaultApps(profile, QStringLiteral("Default Applications"));
         KConfigGroup addedApps(profile, QStringLiteral("Added Associations"));
         /* In the ComponentChooser child classes for each association, we add a QStringList
          * containing all mimetypes we want to associate to a certain application.
@@ -228,9 +228,8 @@ void ComponentChooser::saveMimeTypeAssociations(const QStringList &mimes, const 
             apps.removeAll(storageId);
             apps.prepend(storageId);
             addedApps.writeXdgListEntry(m, apps);
-
-            m_previousApplication = m_applications[m_index].toMap()["storageId"].toString();
         }
+        m_previousApplication = m_applications[m_index].toMap()["storageId"].toString();
         // And we finish by notifying that the changes are done.
         profile->sync();
         QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),

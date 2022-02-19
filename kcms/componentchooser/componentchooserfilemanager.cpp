@@ -17,5 +17,5 @@ ComponentChooserFileManager::ComponentChooserFileManager(QObject *parent)
 
 void ComponentChooserFileManager::save()
 {
-    saveMimeTypeAssociations(QStringList("inode/directory"), m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
+    saveMimeTypeAssociations({QStringLiteral("inode/directory")}, m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
 }
