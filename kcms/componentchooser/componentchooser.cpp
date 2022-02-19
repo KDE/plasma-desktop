@@ -217,7 +217,7 @@ void ComponentChooser::saveMimeTypeAssociations(const QStringList &mimes, const 
          * We pass this as mimes here and iterate through it
          * so that we can set associations in bulk.
          */
-        for (QString m : mimes)
+        for (const QString &m : mimes)
         {
             // We grab each mimetype and storage id and pass it to our default apps list.
             defaultApps.writeXdgListEntry(m, QStringList(storageId));
@@ -238,7 +238,6 @@ void ComponentChooser::saveMimeTypeAssociations(const QStringList &mimes, const 
                                                               QStringLiteral("org.kde.KLauncher"),
                                                               QStringLiteral("reparseConfiguration"));
         QDBusConnection::sessionBus().send(message);
-
     }
 }
 
