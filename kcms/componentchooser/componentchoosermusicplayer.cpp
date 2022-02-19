@@ -1,8 +1,8 @@
 /*
- *    SPDX-FileCopyrightText: 2022 Thiago Sueto <herzenschein@gmail.com>
- *
- *    SPDX-License-Identifier: GPL-2.0-or-later
- */
+      SPDX-FileCopyrightText: 2022 Thiago Sueto <herzenschein@gmail.com>
+
+      SPDX-License-Identifier: GPL-2.0-or-later
+*/
 
 #include "componentchoosermusicplayer.h"
 
