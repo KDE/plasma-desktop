@@ -63,19 +63,25 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
 {
     if (role == AbstractTasksModel::Geometry) {
         QRect windowGeo = TaskFilterProxyModel::data(index, role).toRect();
-        QList<QScreen *> screens = QGuiApplication::screens();
-        const QRect desktopGeo = screens.at(0)->virtualGeometry();
+        const QScreen *const screen = QGuiApplication::screens().constFirst();
+        const QSize desktopSize = screen->virtualSize();
+
+        // KWindowInfoPrivateX11::frameGeometry() returns the true geometry of a window, so devicePixelRatio is needed.
+        if (const auto ratio = screen->devicePixelRatio(); KWindowSystem::isPlatformX11() && ratio != 1.0) {
+            windowGeo.setTopLeft(windowGeo.topLeft() / ratio);
+            windowGeo.setBottomRight(windowGeo.bottomRight() / ratio);
+        }
 
         if (KWindowSystem::mapViewport()) {
-            int x = windowGeo.center().x() % desktopGeo.width();
-            int y = windowGeo.center().y() % desktopGeo.height();
+            int x = windowGeo.center().x() % desktopSize.width();
+            int y = windowGeo.center().y() % desktopSize.height();
 
             if (x < 0) {
-                x = x + desktopGeo.width();
+                x = x + desktopSize.width();
             }
 
             if (y < 0) {
-                y = y + desktopGeo.height();
+                y = y + desktopSize.height();
             }
 
             const QRect mappedGeo(x - windowGeo.width() / 2, y - windowGeo.height() / 2, windowGeo.width(), windowGeo.height());
@@ -92,15 +98,15 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
         }
 
         // Clamp to desktop rect.
-        windowGeo.setX(std::clamp(windowGeo.x(), 0, desktopGeo.width()));
-        windowGeo.setY(std::clamp(windowGeo.y(), 0, desktopGeo.height()));
+        windowGeo.setX(std::clamp(windowGeo.x(), 0, desktopSize.width()));
+        windowGeo.setY(std::clamp(windowGeo.y(), 0, desktopSize.height()));
 
-        if ((windowGeo.x() + windowGeo.width()) > desktopGeo.width()) {
-            windowGeo.setWidth(desktopGeo.width() - windowGeo.x());
+        if ((windowGeo.x() + windowGeo.width()) > desktopSize.width()) {
+            windowGeo.setWidth(desktopSize.width() - windowGeo.x());
         }
 
-        if ((windowGeo.y() + windowGeo.height()) > desktopGeo.height()) {
-            windowGeo.setHeight(desktopGeo.height() - windowGeo.y());
+        if ((windowGeo.y() + windowGeo.height()) > desktopSize.height()) {
+            windowGeo.setHeight(desktopSize.height() - windowGeo.y());
         }
 
         return windowGeo;
