@@ -59,9 +59,9 @@ void ComponentChooser::load()
      * - Knowledge of the preferred application (a.k.a. at index [0])
      * - Defining which application will be set up
      * The logic follows like so:
-     * - if the executable for an application is inexistent;
+     * - if there is no Exec= for the application;
      * - OR the mimetype category (from .desktop files, e.g. Video, Viewer, TerminalEmulator) is not defined
-     * AND the list of categories DOES NOT contain a category;
+     * AND the list of categories DOES NOT contain that category;
      * - OR the list of service types does not include a mimetype;
      * - then fail immediately.
      * A service type in this context is a URI handler or a mimetype.
@@ -71,13 +71,12 @@ void ComponentChooser::load()
             return false;
         }
         // A QVariantMap is a map of a QString and a QVariant.
-        // Haven't learned about variants yet, but I know of maps.
         QVariantMap application;
         // We essentially grab the information provided by the service/application
         // and store it in this new map object.
+        // storageId = org.kde.myapplication.desktop
         application[QStringLiteral("name")] = service->name();
         application[QStringLiteral("icon")] = service->icon();
-        // storageId = org.kde.myapplication.desktop
         application[QStringLiteral("storageId")] = service->storageId();
         // We then add this mapped object to our list of applications.
         m_applications += application;
@@ -115,8 +114,8 @@ void ComponentChooser::load()
         m_applications += application;
         m_index = m_applications.length() - 1;
     }
-    // This adds a default application that is unlabeled,
-    // that is, it can be set to anything and is executed with a shell.
+    // This adds an unlabeled default application (Other...),
+    // which can be set to anything and is executed with a shell.
     QVariantMap application;
     application["name"] = i18n("Other…");
     application["icon"] = QStringLiteral("application-x-shellscript");
@@ -143,10 +142,9 @@ void ComponentChooser::select(int index)
     if (m_index == index && m_applications.size() != 1) {
         return;
     }
-    /* If the passed index is the same as the list of applications,
-     * create an Open With... window,
-     * then use a lambda to connect the selected result
-     * and notify that the index and default application changed.
+    /* The Other... option is always the last,
+     * so if the option the user clicked (index) is the same as the list of applications -1,
+     * a dialog is created and confirmation syncs the changes.
      */
     if (index == m_applications.length() - 1) {
         KOpenWithDialog *dialog = new KOpenWithDialog(QList<QUrl>(), m_mimeType, m_dialogText, QString());
@@ -170,8 +168,8 @@ void ComponentChooser::select(int index)
                     return;
                 }
             }
-            // When selecting the application, check if it has an icon,
-            // if it does, set it, if it doesn't, use a generic icon.
+            // If the application has an icon, set it,
+            // otherwise fallback to generic icon.
             const QString icon = !service->icon().isEmpty() ? service->icon() : QStringLiteral("application-x-shellscript");
             // Now that the default application selection window has finished,
             // add its data to the list of applications.
@@ -205,7 +203,7 @@ void ComponentChooser::saveMimeTypeAssociations(const QStringList &mimes, const 
 
     if (profile->isConfigWritable(true))
     {
-        /* KConfigGroup creates an object that refers to the groups
+        /* KConfigGroup creates objects that refer to the groups
          * [Default Applications] and [Added Associations]
          * which are found in mimeapps.list and used for the
          * --group flag of kwriteconfig5 for instance.
