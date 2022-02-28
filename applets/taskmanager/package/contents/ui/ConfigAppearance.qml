@@ -21,7 +21,6 @@ Kirigami.FormLayout {
     property alias cfg_showToolTips: showToolTips.checked
     property alias cfg_highlightWindows: highlightWindows.checked
     property bool cfg_indicateAudioStreams
-    property alias cfg_iconSize: iconSize.value
     property alias cfg_maxStripes: maxStripes.value
     property alias cfg_forceStripes: forceStripes.checked
 
@@ -48,40 +47,6 @@ Kirigami.FormLayout {
         checked: cfg_indicateAudioStreams && plasmaPaAvailable
         onCheckedChanged: cfg_indicateAudioStreams = checked
         enabled: plasmaPaAvailable
-    }
-
-    Item {
-        Kirigami.FormData.isSection: true
-        visible: plasmoidVertical
-    }
-
-    Slider {
-        id: iconSize
-        visible: plasmoidVertical
-        Kirigami.FormData.label: i18n("Icon size:")
-        Layout.fillWidth: true
-        from: 0
-        to: 5
-        stepSize: 1
-    }
-
-    RowLayout {
-        visible: plasmoidVertical
-        Layout.fillWidth: true
-
-        Label {
-            text: i18n("Small")
-            Layout.alignment: Qt.AlignLeft
-        }
-
-        Item {
-            Layout.fillWidth: true
-        }
-
-        Label {
-            text: i18n("Large")
-            Layout.alignment: Qt.AlignRight
-        }
     }
 
     Item {

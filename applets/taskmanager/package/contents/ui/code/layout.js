@@ -6,7 +6,6 @@
 
 .import org.kde.plasma.core 2.0 as PlasmaCore
 
-var iconSizes = ["small", "smallMedium", "medium", "large", "huge", "enormous"];
 const iconMargin = Math.round(PlasmaCore.Units.smallSpacing / 4);
 const labelMargin = PlasmaCore.Units.smallSpacing;
 
@@ -138,22 +137,8 @@ function preferredMaxHeight() {
                  // Do not allow the preferred icon size to exceed the width of
                  // the vertical task manager.
                  tasks.width,
-                 Math.max(
-                     // This assumes that we show some text and that we need
-                     // some minimal vertical space for it. In reality, we do
-                     // not always show the text. We show the text only if there
-                     // is enough horizontal space for some hard coded amount of
-                     // 'm' characters
-                     // - see minimumMColumns() below.
-                     // Hence in case the user prefers icons smaller than the
-                     // height of his font, the font height will win even if the
-                     // text will stay invisible. We leave it for the future
-                     // developers to improve this expression if the named
-                     // corner case turns out to be important.
-                     PlasmaCore.Units
-                         .iconSizes[iconSizes[plasmoid.configuration.iconSize]],
-                     PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont)
-                         .height));
+                 tasks.iconsOnly ? tasks.width : PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height
+             );
     } else {
       return verticalMargins() +
              Math.min(
