@@ -248,8 +248,23 @@ void GlobalAccelModel::importConfig(const KConfigBase &config)
 
 void GlobalAccelModel::addApplication(const QString &desktopFileName, const QString &displayName)
 {
+    if (desktopFileName.isEmpty()) {
+        qCWarning(KCMKEYS()) << "Tried to add empty application" << displayName;
+        return;
+    }
+
+    // In certain cases, we can get an absolute file name as desktopFileName,
+    // but the rest of the code assumes we're using a relative filename. So in
+    // that case, strip the paths off and only use the file name.
+    QFileInfo info(desktopFileName);
+
+    QString desktopName = desktopFileName;
+    if (info.isAbsolute()) {
+        desktopName = info.fileName();
+    }
+
     // Register a dummy action to trigger kglobalaccel to parse the desktop file
-    QStringList actionId = buildActionId(desktopFileName, displayName, QString(), QString());
+    QStringList actionId = buildActionId(desktopName, displayName, QString(), QString());
     m_globalAccelInterface->doRegister(actionId);
     m_globalAccelInterface->unRegister(actionId);
     QCollator collator;
@@ -258,12 +273,12 @@ void GlobalAccelModel::addApplication(const QString &desktopFileName, const QStr
     auto pos = std::lower_bound(m_components.begin(), m_components.end(), displayName, [&](const Component &c, const QString &name) {
         return c.type != i18n("System Services") && collator.compare(c.displayName, name) < 0;
     });
-    auto watcher = new QDBusPendingCallWatcher(m_globalAccelInterface->getComponent(desktopFileName));
+    auto watcher = new QDBusPendingCallWatcher(m_globalAccelInterface->getComponent(desktopName));
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [=] {
         QDBusPendingReply<QDBusObjectPath> reply = *watcher;
         watcher->deleteLater();
         if (!reply.isValid()) {
-            genericErrorOccured(QStringLiteral("Error while calling objectPath of added application") + desktopFileName, reply.error());
+            genericErrorOccured(QStringLiteral("Error while calling objectPath of added application") + desktopName, reply.error());
             return;
         }
         KGlobalAccelComponentInterface component(m_globalAccelInterface->service(), reply.value().path(), m_globalAccelInterface->connection());
@@ -272,7 +287,7 @@ void GlobalAccelModel::addApplication(const QString &desktopFileName, const QStr
             QDBusPendingReply<QList<KGlobalShortcutInfo>> infoReply = *infoWatcher;
             infoWatcher->deleteLater();
             if (!infoReply.isValid()) {
-                genericErrorOccured(QStringLiteral("Error while calling allShortCutInfos on new component") + desktopFileName, infoReply.error());
+                genericErrorOccured(QStringLiteral("Error while calling allShortCutInfos on new component") + desktopName, infoReply.error());
                 return;
             }
             if (infoReply.value().isEmpty()) {

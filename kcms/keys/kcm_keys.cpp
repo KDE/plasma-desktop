@@ -158,6 +158,7 @@ void KCMKeys::addApplication(QQuickItem *ctx)
         dialog->setWindowModality(Qt::WindowModal);
     }
     dialog->hideRunInTerminal();
+    dialog->setSaveNewApplications(true);
     dialog->open();
     connect(dialog, &KOpenWithDialog::finished, this, [this, dialog](int result) {
         if (result == QDialog::Accepted && dialog->service()) {
