@@ -137,7 +137,11 @@ function preferredMaxHeight() {
                  // Do not allow the preferred icon size to exceed the width of
                  // the vertical task manager.
                  tasks.width,
-                 tasks.iconsOnly ? tasks.width : PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height
+                 tasks.iconsOnly ? tasks.width :
+                    Math.max(
+                        PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height,
+                        PlasmaCore.Units.iconSizes.medium
+                    )
              );
     } else {
       return verticalMargins() +
