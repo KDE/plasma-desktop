@@ -18,7 +18,11 @@
 #include <KService>
 #include <KSharedConfig>
 
-ComponentChooser::ComponentChooser(QObject *parent, const QString &mimeType, const QString &category, const QString &defaultApplication, const QString &dialogText)
+ComponentChooser::ComponentChooser(QObject *parent,
+                                   const QString &mimeType,
+                                   const QString &category,
+                                   const QString &defaultApplication,
+                                   const QString &dialogText)
     : QObject(parent)
     , m_mimeType(mimeType)
     , m_category(category)
@@ -67,7 +71,8 @@ void ComponentChooser::load()
      * A service type in this context is a URI handler or a mimetype.
      */
     KApplicationTrader::query([&preferredServiceAdded, preferredService, this](const KService::Ptr &service) {
-        if (service->exec().isEmpty() || (!m_category.isEmpty() && !service->categories().contains(m_category)) || (!service->serviceTypes().contains(m_mimeType))) {
+        if (service->exec().isEmpty() || (!m_category.isEmpty() && !service->categories().contains(m_category))
+            || (!service->serviceTypes().contains(m_mimeType))) {
             return false;
         }
         // A QVariantMap is a map of a QString and a QVariant.
@@ -195,28 +200,23 @@ void ComponentChooser::select(int index)
 
 void ComponentChooser::saveMimeTypeAssociations(const QStringList &mimes, const QString &storageId)
 {
-    /* This grabs the configuration from mimeapps.list, which is DE agnostic and part of the XDG standard.
-     * KConfig::NoGlobals is used because the file is local and not added to kdeglobals.
-     * QStandardPaths::GenericConfigLocation points to $XDG_CONFIG_HOME.
-     */
-    KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
+    // This grabs the configuration from mimeapps.list, which is DE agnostic and part of the XDG standard.
+    KSharedConfig::Ptr mimeAppsList = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
 
-    if (profile->isConfigWritable(true))
-    {
+    if (mimeAppsList->isConfigWritable(true)) {
         /* KConfigGroup creates objects that refer to the groups
          * [Default Applications] and [Added Associations]
          * which are found in mimeapps.list and used for the
          * --group flag of kwriteconfig5 for instance.
          */
-        KConfigGroup defaultApps(profile, QStringLiteral("Default Applications"));
-        KConfigGroup addedApps(profile, QStringLiteral("Added Associations"));
+        KConfigGroup defaultApps(mimeAppsList, QStringLiteral("Default Applications"));
+        KConfigGroup addedApps(mimeAppsList, QStringLiteral("Added Associations"));
         /* In the ComponentChooser child classes for each association, we add a QStringList
          * containing all mimetypes we want to associate to a certain application.
          * We pass this as mimes here and iterate through it
          * so that we can set associations in bulk.
          */
-        for (const QString &m : mimes)
-        {
+        for (const QString &m : mimes) {
             // We grab each mimetype and storage id and pass it to our default apps list.
             defaultApps.writeXdgListEntry(m, QStringList(storageId));
 
@@ -229,7 +229,7 @@ void ComponentChooser::saveMimeTypeAssociations(const QStringList &mimes, const 
         }
         m_previousApplication = m_applications[m_index].toMap()["storageId"].toString();
         // And we finish by notifying that the changes are done.
-        profile->sync();
+        mimeAppsList->sync();
         QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.klauncher5"),
                                                               QStringLiteral("/KLauncher"),
                                                               QStringLiteral("org.kde.KLauncher"),
