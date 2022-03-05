@@ -15,27 +15,28 @@ ComponentChooserMusicPlayer::ComponentChooserMusicPlayer(QObject *parent)
 {
 }
 
+QStringList audioMimetypes{"application/x-ogm-audio",
+                           "audio/aac",
+                           "audio/mp4",
+                           "audio/mpeg",
+                           "audio/mpegurl",
+                           "audio/ogg",
+                           "audio/vnd.rn-realaudio",
+                           "audio/vorbis",
+                           "audio/x-flac",
+                           "audio/x-mp3",
+                           "audio/x-mpegurl",
+                           "audio/x-ms-wma",
+                           "audio/x-musepack",
+                           "audio/x-oggflac",
+                           "audio/x-pn-realaudio",
+                           "audio/x-scpls",
+                           "audio/x-speex",
+                           "audio/x-vorbis",
+                           "audio/x-vorbis+ogg",
+                           "audio/x-wav"};
+
 void ComponentChooserMusicPlayer::save()
 {
-    QStringList mimetypes{"application/x-ogm-audio",
-                          "audio/aac",
-                          "audio/mp4",
-                          "audio/mpeg",
-                          "audio/mpegurl",
-                          "audio/ogg",
-                          "audio/vnd.rn-realaudio",
-                          "audio/vorbis",
-                          "audio/x-flac",
-                          "audio/x-mp3",
-                          "audio/x-mpegurl",
-                          "audio/x-ms-wma",
-                          "audio/x-musepack",
-                          "audio/x-oggflac",
-                          "audio/x-pn-realaudio",
-                          "audio/x-scpls",
-                          "audio/x-speex",
-                          "audio/x-vorbis",
-                          "audio/x-vorbis+ogg",
-                          "audio/x-wav"};
-    saveMimeTypeAssociations(mimetypes, m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
+    saveMimeTypeAssociations(audioMimetypes, m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
 }

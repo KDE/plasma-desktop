@@ -15,7 +15,9 @@ ComponentChooserPdfViewer::ComponentChooserPdfViewer(QObject *parent)
 {
 }
 
+QStringList pdfMimetypes{"application/pdf"};
+
 void ComponentChooserPdfViewer::save()
 {
-    saveMimeTypeAssociations({QStringLiteral("application/pdf")}, m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
+    saveMimeTypeAssociations(pdfMimetypes, m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
 }

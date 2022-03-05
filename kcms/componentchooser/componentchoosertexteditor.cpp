@@ -15,8 +15,9 @@ ComponentChooserTextEditor::ComponentChooserTextEditor(QObject *parent)
 {
 }
 
+QStringList textEditorMimetypes{"text/plain", "text/x-cmake", "text/markdown", "application/x-docbook+xml", "application/json", "application/x-yaml"};
+
 void ComponentChooserTextEditor::save()
 {
-    QStringList mimetypes{"text/plain", "text/x-cmake", "text/markdown", "application/x-docbook+xml", "application/json", "application/x-yaml"};
-    saveMimeTypeAssociations(mimetypes, m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
+    saveMimeTypeAssociations(textEditorMimetypes, m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
 }

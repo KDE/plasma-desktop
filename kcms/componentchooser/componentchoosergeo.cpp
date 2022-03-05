@@ -12,6 +12,8 @@ ComponentChooserGeo::ComponentChooserGeo(QObject *parent)
 {
 }
 
+QStringList geolocationMimetypes{"x-scheme-handler/geo"};
+
 void ComponentChooserGeo::save()
 {
     const QString storageId = m_applications[m_index].toMap()[QStringLiteral("storageId")].toString();
@@ -20,5 +22,5 @@ void ComponentChooserGeo::save()
         return;
     }
 
-    saveMimeTypeAssociations({QStringLiteral("x-scheme-handler/geo")}, storageId);
+    saveMimeTypeAssociations(geolocationMimetypes, storageId);
 }

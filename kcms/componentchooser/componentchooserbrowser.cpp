@@ -19,14 +19,15 @@ ComponentChooserBrowser::ComponentChooserBrowser(QObject *parent)
 {
 }
 
+QStringList browserMimetypes{"x-scheme-handler/http", "x-scheme-handler/https"};
+
 void ComponentChooserBrowser::save()
 {
-    QStringList mimetypes{"x-scheme-handler/http", "x-scheme-handler/https"};
     const QString storageId = m_applications[m_index].toMap()["storageId"].toString();
 
     BrowserSettings browserSettings;
     browserSettings.setBrowserApplication(storageId);
     browserSettings.save();
 
-    saveMimeTypeAssociations(mimetypes, storageId);
+    saveMimeTypeAssociations(browserMimetypes, storageId);
 }

@@ -15,10 +15,9 @@ ComponentChooserImageViewer::ComponentChooserImageViewer(QObject *parent)
 {
 }
 
+QStringList imageViewerMimetypes{"image/png", "image/jpeg", "image/webp", "image/avif", "image/heif", "image/bmp", "image/vnd.microsoft.icon", "image/x-icns"};
+
 void ComponentChooserImageViewer::save()
 {
-    QStringList mimetypes{"image/png", "image/jpeg", "image/webp", "image/avif", "image/heif", "image/bmp", "image/vnd.microsoft.icon", "image/x-icns"
-
-    };
-    saveMimeTypeAssociations(mimetypes, m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
+    saveMimeTypeAssociations(imageViewerMimetypes, m_applications[m_index].toMap()[QStringLiteral("storageId")].toString());
 }

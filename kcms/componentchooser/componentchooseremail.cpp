@@ -20,6 +20,8 @@ ComponentChooserEmail::ComponentChooserEmail(QObject *parent)
 {
 }
 
+QStringList emailMimetypes{"x-scheme-handler/mailto"};
+
 void ComponentChooserEmail::save()
 {
     const QString storageId = m_applications[m_index].toMap()[QStringLiteral("storageId")].toString();
@@ -41,5 +43,5 @@ void ComponentChooserEmail::save()
 
     delete emailSettings;
 
-    saveMimeTypeAssociations(QStringList("x-scheme-handler/mailto"), storageId);
+    saveMimeTypeAssociations(emailMimetypes, storageId);
 }

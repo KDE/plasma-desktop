@@ -16,6 +16,8 @@ ComponentChooserTel::ComponentChooserTel(QObject *parent)
 {
 }
 
+QStringList telMimetypes{"x-scheme-handler/tel"};
+
 void ComponentChooserTel::save()
 {
     const QString storageId = m_applications[m_index].toMap()[QStringLiteral("storageId")].toString();
@@ -24,5 +26,5 @@ void ComponentChooserTel::save()
         return;
     }
 
-    saveMimeTypeAssociations({QStringLiteral("x-scheme-handler/tel")}, storageId);
+    saveMimeTypeAssociations(telMimetypes, storageId);
 }
