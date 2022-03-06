@@ -7,7 +7,6 @@
 import QtQuick 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
     readonly property int iconWidthDelta: (icon.width - icon.paintedWidth) / 2

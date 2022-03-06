@@ -8,8 +8,6 @@
 
 import QtQuick 2.15
 
-import org.kde.plasma.components 2.0 as PlasmaComponents
-
 MouseArea {
     property var modelIndex
     // winId won't be an int wayland
