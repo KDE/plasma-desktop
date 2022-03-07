@@ -22,6 +22,7 @@ import QtQml 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.plasmoid 2.0
 
 PlasmaExtras.PlasmoidHeading {
     id: root
@@ -34,8 +35,8 @@ PlasmaExtras.PlasmoidHeading {
     contentHeight: leaveButtons.implicitHeight
 
     // We use an increased vertical padding to improve touch usability
-    leftPadding: plasmoid.rootItem.backgroundMetrics.leftPadding
-    rightPadding: plasmoid.rootItem.backgroundMetrics.rightPadding
+    leftPadding: Plasmoid.rootItem.backgroundMetrics.leftPadding
+    rightPadding: Plasmoid.rootItem.backgroundMetrics.rightPadding
     topPadding: PlasmaCore.Units.smallSpacing*2
     bottomPadding: PlasmaCore.Units.smallSpacing*2
 
@@ -44,7 +45,7 @@ PlasmaExtras.PlasmoidHeading {
     topInset: 0
     bottomInset: 0
 
-    spacing: plasmoid.rootItem.backgroundMetrics.spacing
+    spacing: Plasmoid.rootItem.backgroundMetrics.spacing
     position: PC3.ToolBar.Footer
 
     PC3.TabBar {
@@ -107,7 +108,7 @@ PlasmaExtras.PlasmoidHeading {
             icon.height: PlasmaCore.Units.iconSizes.smallMedium
             icon.name: "applications-other"
             text: i18n("Applications")
-            KeyNavigation.backtab: plasmoid.rootItem.contentArea ? plasmoid.rootItem.contentArea : null
+            KeyNavigation.backtab: Plasmoid.rootItem.contentArea ? Plasmoid.rootItem.contentArea : null
         }
         PC3.TabButton {
             id: placesTab
@@ -123,9 +124,9 @@ PlasmaExtras.PlasmoidHeading {
         }
 
         Connections {
-            target: plasmoid
+            target: Plasmoid.self
             function onExpandedChanged() {
-                if(!plasmoid.expanded) {
+                if(!Plasmoid.expanded) {
                     tabBar.currentIndex = 0
                 }
             }
@@ -161,7 +162,7 @@ PlasmaExtras.PlasmoidHeading {
                 leaveButtons.nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
             }
         }
-        Keys.onUpPressed: plasmoid.rootItem.sideBar.forceActiveFocus(Qt.BacktabFocusReason)
+        Keys.onUpPressed: Plasmoid.rootItem.sideBar.forceActiveFocus(Qt.BacktabFocusReason)
     }
 
     LeaveButtons {
@@ -172,11 +173,11 @@ PlasmaExtras.PlasmoidHeading {
             bottom: parent.bottom
             leftMargin: root.spacing
         }
-        Keys.onUpPressed: plasmoid.rootItem.contentArea.forceActiveFocus(Qt.BacktabFocusReason)
+        Keys.onUpPressed: Plasmoid.rootItem.contentArea.forceActiveFocus(Qt.BacktabFocusReason)
     }
 
     Behavior on height {
-        enabled: plasmoid.expanded
+        enabled: Plasmoid.expanded
         NumberAnimation {
             duration: PlasmaCore.Units.longDuration
             easing.type: Easing.InQuad

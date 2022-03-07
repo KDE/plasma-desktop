@@ -19,8 +19,8 @@ import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
 MouseArea {
     id: root
 
-    property bool isActivityPager: (plasmoid.pluginName === "org.kde.plasma.activitypager")
-    property bool vertical: (plasmoid.formFactor === PlasmaCore.Types.Vertical)
+    property bool isActivityPager: (Plasmoid.pluginName === "org.kde.plasma.activitypager")
+    property bool vertical: (Plasmoid.formFactor === PlasmaCore.Types.Vertical)
 
     readonly property real aspectRatio: (((pagerModel.pagerItemSize.width * pagerItemGrid.effectiveColumns)
         + ((pagerItemGrid.effectiveColumns * pagerItemGrid.spacing) - pagerItemGrid.spacing))
@@ -123,12 +123,12 @@ MouseArea {
 
         while (increment !== 0) {
             if (increment < 0) {
-                const nextPage = plasmoid.configuration.wrapPage?
+                const nextPage = Plasmoid.configuration.wrapPage?
                     (pagerModel.currentPage + 1) % repeater.count :
                     Math.min(pagerModel.currentPage + 1, repeater.count - 1);
                 pagerModel.changePage(nextPage);
             } else {
-                const previousPage = plasmoid.configuration.wrapPage ?
+                const previousPage = Plasmoid.configuration.wrapPage ?
                     (repeater.count + pagerModel.currentPage - 1) % repeater.count :
                     Math.max(pagerModel.currentPage - 1, 0);
                 pagerModel.changePage(previousPage);
@@ -143,16 +143,16 @@ MouseArea {
 
         enabled: root.visible
 
-        showDesktop: (plasmoid.configuration.currentDesktopSelected === 1)
+        showDesktop: (Plasmoid.configuration.currentDesktopSelected === 1)
 
-        showOnlyCurrentScreen: plasmoid.configuration.showOnlyCurrentScreen
-        screenGeometry: plasmoid.screenGeometry
+        showOnlyCurrentScreen: Plasmoid.configuration.showOnlyCurrentScreen
+        screenGeometry: Plasmoid.screenGeometry
 
         pagerType: isActivityPager ? PagerModel.Activities : PagerModel.VirtualDesktops
     }
 
     Connections {
-        target: plasmoid.configuration
+        target: Plasmoid.configuration
 
         function onShowWindowIconsChanged() {
             // Causes the model to reset; Component.onCompleted in the
@@ -185,7 +185,7 @@ MouseArea {
             property var model: null
             property Item desktopFrame: null
 
-            text: plasmoid.configuration.displayedText ? model.display : index + 1
+            text: Plasmoid.configuration.displayedText ? model.display : index + 1
 
             wrapMode: Text.NoWrap
             elide: Text.ElideRight
@@ -249,10 +249,10 @@ MouseArea {
 
             let rows = 1;
 
-            if (isActivityPager && plasmoid.configuration.pagerLayout !== 0 /*No Default*/) {
-                if (plasmoid.configuration.pagerLayout === 1 /*Horizontal*/) {
+            if (isActivityPager && Plasmoid.configuration.pagerLayout !== 0 /*No Default*/) {
+                if (Plasmoid.configuration.pagerLayout === 1 /*Horizontal*/) {
                     rows = 1;
-                } else if (plasmoid.configuration.pagerLayout === 2 /*Vertical*/) {
+                } else if (Plasmoid.configuration.pagerLayout === 2 /*Vertical*/) {
                     rows = pagerModel.count;
                 }
             } else {
@@ -404,8 +404,8 @@ MouseArea {
                     hoverEnabled : true
                     activeFocusOnTab: true
                     onClicked: pagerModel.changePage(index);
-                    Accessible.name: plasmoid.configuration.displayedText ? model.display : i18n("Desktop %1", (index + 1))
-                    Accessible.description: plasmoid.configuration.displayedText ? i18n("Activate %1", model.display) : i18n("Activate %1", (index + 1))
+                    Accessible.name: Plasmoid.configuration.displayedText ? model.display : i18n("Desktop %1", (index + 1))
+                    Accessible.description: Plasmoid.configuration.displayedText ? i18n("Activate %1", model.display) : i18n("Activate %1", (index + 1))
                     Accessible.role: Accessible.Button
                     Keys.onPressed: {
                         switch (event.key) {
@@ -523,7 +523,7 @@ MouseArea {
                             }
 
                             Component.onCompleted: {
-                                if (plasmoid.configuration.showWindowIcons) {
+                                if (Plasmoid.configuration.showWindowIcons) {
                                     windowIconComponent.createObject(windowRect, {"model": model});
                                 }
                             }
@@ -532,7 +532,7 @@ MouseArea {
                 }
 
                 Component.onCompleted: {
-                    if (plasmoid.configuration.displayedText < 2) {
+                    if (Plasmoid.configuration.displayedText < 2) {
                         desktopLabelComponent.createObject(desktop, {"index": index, "model": model, "desktopFrame": desktopFrame});
                     }
                 }
@@ -544,16 +544,16 @@ MouseArea {
 
     Component.onCompleted: {
         if (isActivityPager) {
-            plasmoid.setAction("showActivityManager", i18n("Show Activity Manager…"), "activities");
+            Plasmoid.setAction("showActivityManager", i18n("Show Activity Manager…"), "activities");
         } else {
             if (KQuickControlsAddonsComponents.KCMShell.authorize("kcm_kwin_virtualdesktops.desktop").length > 0) {
-                plasmoid.setAction("addDesktop", i18n("Add Virtual Desktop"), "list-add");
-                plasmoid.setAction("removeDesktop", i18n("Remove Virtual Desktop"), "list-remove");
-                plasmoid.action("removeDesktop").enabled = Qt.binding(function() {
+                Plasmoid.setAction("addDesktop", i18n("Add Virtual Desktop"), "list-add");
+                Plasmoid.setAction("removeDesktop", i18n("Remove Virtual Desktop"), "list-remove");
+                Plasmoid.action("removeDesktop").enabled = Qt.binding(function() {
                     return repeater.count > 1;
                 });
 
-                plasmoid.setAction("openKCM", i18n("Configure Virtual Desktops…"), "configure");
+                Plasmoid.setAction("openKCM", i18n("Configure Virtual Desktops…"), "configure");
             }
         }
     }

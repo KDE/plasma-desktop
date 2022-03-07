@@ -7,6 +7,7 @@
 import QtQuick 2.5
 import QtQuick.Layouts 1.0
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -36,7 +37,7 @@ MouseArea {
     onPositionChanged: {
         if (currentApplet && currentApplet.applet &&
             currentApplet.applet.pluginName === "org.kde.plasma.panelspacer") {
-            if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+            if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
                 if ((mouse.y - handle.y) < spacerHandleSize ||
                     (mouse.y - handle.y) > (handle.height - spacerHandleSize)) {
                     configurationArea.cursorShape = Qt.SizeVerCursor;
@@ -63,7 +64,7 @@ MouseArea {
             if (currentApplet && currentApplet.applet.pluginName === "org.kde.plasma.panelspacer") {
 
                 if (isResizingLeft) {
-                    if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+                    if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
                         handle.y += (mouse.y - lastY);
                         handle.height = currentApplet.height + (currentApplet.y - handle.y);
                     } else {
@@ -76,7 +77,7 @@ MouseArea {
                     return;
 
                 } else if (isResizingRight) {
-                    if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+                    if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
                         handle.height = mouse.y - handle.y;
                     } else {
                         handle.width = mouse.x - handle.x;
@@ -91,7 +92,7 @@ MouseArea {
             var padding = PlasmaCore.Units.gridUnit * 3;
             if (currentApplet && (mouse.x < -padding || mouse.y < -padding ||
                 mouse.x > width + padding || mouse.y > height + padding)) {
-                var newCont = plasmoid.containmentAt(mouse.x, mouse.y);
+                var newCont = Plasmoid.containmentAt(mouse.x, mouse.y);
 
                 if (newCont && newCont !== plasmoid) {
                     var newPos = newCont.mapFromApplet(plasmoid, mouse.x, mouse.y);
@@ -103,7 +104,7 @@ MouseArea {
                 }
             }
 
-            if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+            if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
                 currentApplet.y += (mouse.y - lastY);
                 handle.y = currentApplet.y;
             } else {
@@ -123,8 +124,8 @@ MouseArea {
                 var posInItem = mapToItem(item, mouse.x, mouse.y);
                 let i = 0;
 
-                if ((plasmoid.formFactor === PlasmaCore.Types.Vertical && posInItem.y < item.height/2) ||
-                    (plasmoid.formFactor !== PlasmaCore.Types.Vertical && posInItem.x < item.width/2)) {
+                if ((Plasmoid.formFactor === PlasmaCore.Types.Vertical && posInItem.y < item.height/2) ||
+                    (Plasmoid.formFactor !== PlasmaCore.Types.Vertical && posInItem.x < item.width/2)) {
                     i = root.layoutManager.insertBefore(item, placeHolder);
                 } else {
                     i = root.layoutManager.insertAfter(item, placeHolder);
@@ -179,7 +180,7 @@ MouseArea {
         }
 
         if (currentApplet.applet.pluginName === "org.kde.plasma.panelspacer") {
-            if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+            if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
                 if ((mouse.y - handle.y) < spacerHandleSize) {
                     configurationArea.isResizingLeft = true;
                     configurationArea.isResizingRight = false;
@@ -224,7 +225,7 @@ MouseArea {
             return;
         }
 
-        if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+        if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
             currentApplet.applet.configuration.length = handle.height;
         } else {
             currentApplet.applet.configuration.length = handle.width;
@@ -282,8 +283,8 @@ MouseArea {
             anchors {
                 left: parent.left
                 top: parent.top
-                bottom: (plasmoid.formFactor !== PlasmaCore.Types.Vertical) ? parent.bottom : undefined
-                right: (plasmoid.formFactor !== PlasmaCore.Types.Vertical) ? undefined : parent.right
+                bottom: (Plasmoid.formFactor !== PlasmaCore.Types.Vertical) ? parent.bottom : undefined
+                right: (Plasmoid.formFactor !== PlasmaCore.Types.Vertical) ? undefined : parent.right
             }
             visible: currentApplet && currentApplet.applet.pluginName === "org.kde.plasma.panelspacer"
             opacity: visible && !xAnim.running && !yAnim.running ? 1.0 : 0
@@ -300,9 +301,9 @@ MouseArea {
         Rectangle {
             anchors {
                 right: parent.right
-                top: (plasmoid.formFactor !== PlasmaCore.Types.Vertical) ? parent.top : undefined
+                top: (Plasmoid.formFactor !== PlasmaCore.Types.Vertical) ? parent.top : undefined
                 bottom: parent.bottom
-                left: (plasmoid.formFactor !== PlasmaCore.Types.Vertical) ? undefined : parent.left
+                left: (Plasmoid.formFactor !== PlasmaCore.Types.Vertical) ? undefined : parent.left
             }
             visible: currentApplet && currentApplet.applet.pluginName === "org.kde.plasma.panelspacer"
             opacity: visible && !xAnim.running && !yAnim.running ? 1.0 : 0
@@ -359,7 +360,7 @@ MouseArea {
 
         type: PlasmaCore.Dialog.Dock
         flags: Qt.WindowStaysOnTopHint|Qt.WindowDoesNotAcceptFocus|Qt.BypassWindowManagerHint
-        location: plasmoid.location
+        location: Plasmoid.location
 
         onVisualParentChanged: {
             if (visualParent) {

@@ -77,7 +77,7 @@ Item {
                     modelData.actionArgument
                 )
                 if (modelActionTriggered) {
-                    root.plasmoid.expanded = false
+                    root.Plasmoid.expanded = false
                 }
             }
         }

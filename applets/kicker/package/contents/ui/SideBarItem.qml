@@ -7,6 +7,7 @@
 import QtQuick 2.15
 
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 import "code/tools.js" as Tools
@@ -31,7 +32,7 @@ Item {
 
     onActionTriggered: (actionId, actionArgument) => {
         if (Tools.triggerAction(repeater.model, model.index, actionId, actionArgument) === true) {
-            plasmoid.expanded = false;
+            Plasmoid.expanded = false;
         }
     }
 
@@ -92,7 +93,7 @@ Item {
         onReleased: {
             if (pressed) {
                 repeater.model.trigger(index, "", null);
-                plasmoid.expanded = false;
+                Plasmoid.expanded = false;
             }
 
             pressed = false;
@@ -133,7 +134,7 @@ Item {
         }
 
         interactive: false
-        location: (((plasmoid.location === PlasmaCore.Types.RightEdge)
+        location: (((Plasmoid.location === PlasmaCore.Types.RightEdge)
             || (Qt.application.layoutDirection === Qt.RightToLeft))
             ? PlasmaCore.Types.RightEdge : PlasmaCore.Types.LeftEdge)
 

@@ -20,7 +20,7 @@ Item {
 
     signal reset
 
-    property bool isDash: plasmoid.pluginName === "org.kde.plasma.kickerdash"
+    property bool isDash: Plasmoid.pluginName === "org.kde.plasma.kickerdash"
 
     Plasmoid.switchWidth: isDash || !Plasmoid.fullRepresentationItem ? 0 : Plasmoid.fullRepresentationItem.Layout.minimumWidth
     Plasmoid.switchHeight: isDash || !Plasmoid.fullRepresentationItem ? 0 : Plasmoid.fullRepresentationItem.Layout.minimumHeight
@@ -37,10 +37,10 @@ Item {
     property QtObject globalFavorites: rootModel.favoritesModel
     property QtObject systemFavorites: rootModel.systemFavoritesModel
 
-    Plasmoid.icon: plasmoid.configuration.useCustomButtonImage ? plasmoid.configuration.customButtonImage : plasmoid.configuration.icon
+    Plasmoid.icon: Plasmoid.configuration.useCustomButtonImage ? Plasmoid.configuration.customButtonImage : Plasmoid.configuration.icon
 
     onSystemFavoritesChanged: {
-        systemFavorites.favorites = plasmoid.configuration.favoriteSystemActions;
+        systemFavorites.favorites = Plasmoid.configuration.favoriteSystemActions;
     }
 
     function action_menuedit() {
@@ -67,42 +67,42 @@ Item {
 
         autoPopulate: false
 
-        appNameFormat: plasmoid.configuration.appNameFormat
-        flat: kicker.isDash || plasmoid.configuration.limitDepth
-        sorted: plasmoid.configuration.alphaSort
+        appNameFormat: Plasmoid.configuration.appNameFormat
+        flat: kicker.isDash || Plasmoid.configuration.limitDepth
+        sorted: Plasmoid.configuration.alphaSort
         showSeparators: !kicker.isDash
         appletInterface: plasmoid
 
         showAllApps: kicker.isDash
         showAllAppsCategorized: true
         showTopLevelItems: !kicker.isDash
-        showRecentApps: plasmoid.configuration.showRecentApps
-        showRecentDocs: plasmoid.configuration.showRecentDocs
-        showRecentContacts: plasmoid.configuration.showRecentContacts
-        recentOrdering: plasmoid.configuration.recentOrdering
+        showRecentApps: Plasmoid.configuration.showRecentApps
+        showRecentDocs: Plasmoid.configuration.showRecentDocs
+        showRecentContacts: Plasmoid.configuration.showRecentContacts
+        recentOrdering: Plasmoid.configuration.recentOrdering
 
         onShowRecentAppsChanged: {
-            plasmoid.configuration.showRecentApps = showRecentApps;
+            Plasmoid.configuration.showRecentApps = showRecentApps;
         }
 
         onShowRecentDocsChanged: {
-            plasmoid.configuration.showRecentDocs = showRecentDocs;
+            Plasmoid.configuration.showRecentDocs = showRecentDocs;
         }
 
         onShowRecentContactsChanged: {
-            plasmoid.configuration.showRecentContacts = showRecentContacts;
+            Plasmoid.configuration.showRecentContacts = showRecentContacts;
         }
 
         onRecentOrderingChanged: {
-            plasmoid.configuration.recentOrdering = recentOrdering;
+            Plasmoid.configuration.recentOrdering = recentOrdering;
         }
 
         Component.onCompleted: {
-            favoritesModel.initForClient("org.kde.plasma.kicker.favorites.instance-" + plasmoid.id)
+            favoritesModel.initForClient("org.kde.plasma.kicker.favorites.instance-" + Plasmoid.id)
 
-            if (!plasmoid.configuration.favoritesPortedToKAstats) {
-                favoritesModel.portOldFavorites(plasmoid.configuration.favoriteApps);
-                plasmoid.configuration.favoritesPortedToKAstats = true;
+            if (!Plasmoid.configuration.favoritesPortedToKAstats) {
+                favoritesModel.portOldFavorites(Plasmoid.configuration.favoriteApps);
+                Plasmoid.configuration.favoritesPortedToKAstats = true;
             }
 
             rootModel.refresh();
@@ -113,7 +113,7 @@ Item {
         target: globalFavorites
 
         function onFavoritesChanged() {
-            plasmoid.configuration.favoriteApps = target.favorites;
+            Plasmoid.configuration.favoriteApps = target.favorites;
         }
     }
 
@@ -121,19 +121,19 @@ Item {
         target: systemFavorites
 
         function onFavoritesChanged() {
-            plasmoid.configuration.favoriteSystemActions = target.favorites;
+            Plasmoid.configuration.favoriteSystemActions = target.favorites;
         }
     }
 
     Connections {
-        target: plasmoid.configuration
+        target: Plasmoid.configuration
 
         function onFavoriteAppsChanged() {
-            globalFavorites.favorites = plasmoid.configuration.favoriteApps;
+            globalFavorites.favorites = Plasmoid.configuration.favoriteApps;
         }
 
         function onFavoriteSystemActionsChanged() {
-            systemFavorites.favorites = plasmoid.configuration.favoriteSystemActions;
+            systemFavorites.favorites = Plasmoid.configuration.favoriteSystemActions;
         }
     }
 
@@ -151,8 +151,8 @@ Item {
                 results.push("desktopsessions", "PowerDevil", "calculator", "unitconverter");
             }
 
-            if (plasmoid.configuration.useExtraRunners) {
-                results.push(...plasmoid.configuration.extraRunners);
+            if (Plasmoid.configuration.useExtraRunners) {
+                results.push(...Plasmoid.configuration.extraRunners);
             }
 
             return results;
@@ -227,11 +227,11 @@ Item {
     }
 
     Connections {
-        target: plasmoid
+        target: Plasmoid.self
 
         function onExpandedChanged(expanded) {
             if (expanded) {
-                windowSystem.monitorWindowVisibility(plasmoid.fullRepresentationItem);
+                windowSystem.monitorWindowVisibility(Plasmoid.fullRepresentationItem);
                 justOpenedTimer.start();
             } else {
                 kicker.reset();
@@ -244,19 +244,19 @@ Item {
     }
 
     function enableHideOnWindowDeactivate() {
-        plasmoid.hideOnWindowDeactivate = true;
+        Plasmoid.hideOnWindowDeactivate = true;
     }
 
     Component.onCompleted: {
-        if (plasmoid.hasOwnProperty("activationTogglesExpanded")) {
-            plasmoid.activationTogglesExpanded = !kicker.isDash
+        if (Plasmoid.hasOwnProperty("activationTogglesExpanded")) {
+            Plasmoid.activationTogglesExpanded = !kicker.isDash
         }
 
         windowSystem.focusIn.connect(enableHideOnWindowDeactivate);
-        plasmoid.hideOnWindowDeactivate = true;
+        Plasmoid.hideOnWindowDeactivate = true;
 
-        if (plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
-            plasmoid.setAction("menuedit", i18n("Edit Applications…"), "kmenuedit");
+        if (Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
+            Plasmoid.setAction("menuedit", i18n("Edit Applications…"), "kmenuedit");
         }
 
         updateSvgMetrics();

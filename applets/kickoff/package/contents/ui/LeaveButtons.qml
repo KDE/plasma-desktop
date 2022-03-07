@@ -11,19 +11,20 @@ import org.kde.plasma.components 2.0 as PC2 // for Menu + MenuItem
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.16 as Kirigami
+import org.kde.plasma.plasmoid 2.0
 
 RowLayout {
     id: root
     property alias leave: leaveButton
-    spacing: plasmoid.rootItem.backgroundMetrics.spacing
+    spacing: Plasmoid.rootItem.backgroundMetrics.spacing
 
     Kicker.SystemModel {
         id: systemModel
-        favoritesModel: plasmoid.rootItem.rootModel.systemFavoritesModel
+        favoritesModel: Plasmoid.rootItem.rootModel.systemFavoritesModel
     }
 
     Item {
-        Layout.fillWidth: !plasmoid.configuration.showActionButtonCaptions && plasmoid.configuration.primaryActions === 3
+        Layout.fillWidth: !Plasmoid.configuration.showActionButtonCaptions && Plasmoid.configuration.primaryActions === 3
     }
 
     Repeater {
@@ -34,10 +35,10 @@ RowLayout {
             text: model.display
             icon.name: model.decoration
             // TODO: Don't generate items that will never be seen. Maybe DelegateModel can help?
-            visible: String(plasmoid.configuration.systemFavorites).includes(model.favoriteId)
+            visible: String(Plasmoid.configuration.systemFavorites).includes(model.favoriteId)
             onClicked: systemModel.trigger(index, "", null)
-            display: plasmoid.configuration.showActionButtonCaptions ? PC3.AbstractButton.TextBesideIcon : PC3.AbstractButton.IconOnly;
-            Layout.rightMargin: model.favoriteId === "switch-user" && plasmoid.configuration.primaryActions === 3 ? PlasmaCore.Units.gridUnit : undefined
+            display: Plasmoid.configuration.showActionButtonCaptions ? PC3.AbstractButton.TextBesideIcon : PC3.AbstractButton.IconOnly;
+            Layout.rightMargin: model.favoriteId === "switch-user" && Plasmoid.configuration.primaryActions === 3 ? PlasmaCore.Units.gridUnit : undefined
 
             PC3.ToolTip.text: text
             PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
@@ -57,18 +58,18 @@ RowLayout {
     }
 
     Item {
-        Layout.fillWidth: !plasmoid.configuration.showActionButtonCaptions || plasmoid.configuration.primaryActions !== 3
+        Layout.fillWidth: !Plasmoid.configuration.showActionButtonCaptions || Plasmoid.configuration.primaryActions !== 3
     }
 
     PC3.ToolButton {
         id: leaveButton
-        readonly property int currentId: plasmoid.configuration.primaryActions
+        readonly property int currentId: Plasmoid.configuration.primaryActions
         Accessible.role: Accessible.ButtonMenu
         icon.width: PlasmaCore.Units.iconSizes.smallMedium
         icon.height: PlasmaCore.Units.iconSizes.smallMedium
         icon.name: ["system-log-out", "system-shutdown", "view-more-symbolic", ""][currentId];
         display: PC3.AbstractButton.IconOnly;
-        visible: plasmoid.configuration.primaryActions !== 3
+        visible: Plasmoid.configuration.primaryActions !== 3
         // Make it look pressed while the menu is open
         down: contextMenu.status === PC2.DialogStatus.Open || pressed
         PC3.ToolTip.text: [i18n("Leave"), i18n("Power"), i18n("More"), ""][leaveButton.currentId]
@@ -90,7 +91,7 @@ RowLayout {
             text: model.display
             icon: model.decoration
             // TODO: Don't generate items that will never be seen. Maybe DelegateModel can help?
-            visible: !String(plasmoid.configuration.systemFavorites).includes(model.favoriteId)
+            visible: !String(Plasmoid.configuration.systemFavorites).includes(model.favoriteId)
             Accessible.role: Accessible.MenuItem
             onClicked: systemModel.trigger(index, "", null)
         }
@@ -103,7 +104,7 @@ RowLayout {
         id: contextMenu
         visualParent: leaveButton
         placement: {
-            switch (plasmoid.location) {
+            switch (Plasmoid.location) {
             case PlasmaCore.Types.LeftEdge:
             case PlasmaCore.Types.RightEdge:
             case PlasmaCore.Types.TopEdge:

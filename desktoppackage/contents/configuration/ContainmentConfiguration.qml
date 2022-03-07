@@ -7,6 +7,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
 import org.kde.kirigami 2.15 as Kirigami
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.configuration 2.0
 
 
@@ -17,8 +18,8 @@ AppletConfiguration {
     Layout.minimumHeight: Kirigami.Units.gridUnit * 20
     Layout.preferredWidth: Kirigami.Units.gridUnit * 32
     Layout.preferredHeight: Kirigami.Units.gridUnit * 36
-    Layout.maximumWidth: plasmoid.availableScreenRect.width
-    Layout.maximumHeight: plasmoid.availableScreenRect.height
+    Layout.maximumWidth: Plasmoid.availableScreenRect.width
+    Layout.maximumHeight: Plasmoid.availableScreenRect.height
 
 //BEGIN model
     globalConfigModel: globalContainmentConfigModel

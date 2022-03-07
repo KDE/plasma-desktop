@@ -9,18 +9,19 @@ import QtQuick.Window 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.plasma.plasmoid 2.0
 
 PlasmaCore.ToolTipArea {
     id: root
     objectName: "org.kde.desktop-CompactApplet"
     anchors.fill: parent
 
-    mainText: plasmoid.toolTipMainText
-    subText: plasmoid.toolTipSubText
-    location: plasmoid.location
-    active: !plasmoid.expanded
-    textFormat: plasmoid.toolTipTextFormat
-    mainItem: plasmoid.toolTipItem ? plasmoid.toolTipItem : null
+    mainText: Plasmoid.toolTipMainText
+    subText: Plasmoid.toolTipSubText
+    location: Plasmoid.location
+    active: !Plasmoid.expanded
+    textFormat: Plasmoid.toolTipTextFormat
+    mainItem: Plasmoid.toolTipItem ? Plasmoid.toolTipItem : null
 
     property Item fullRepresentation
     property Item compactRepresentation
@@ -106,7 +107,7 @@ PlasmaCore.ToolTipArea {
         Accessible.name: root.mainText
         Accessible.description: i18n("Open %1", root.subText)
         Accessible.role: Accessible.Button
-        Accessible.onPressAction: plasmoid.nativeInterface.activated()
+        Accessible.onPressAction: Plasmoid.nativeInterface.activated()
 
         Keys.onPressed: {
             switch (event.key) {
@@ -114,7 +115,7 @@ PlasmaCore.ToolTipArea {
                 case Qt.Key_Enter:
                 case Qt.Key_Return:
                 case Qt.Key_Select:
-                    plasmoid.nativeInterface.activated();
+                    Plasmoid.nativeInterface.activated();
                     break;
             }
         }
@@ -148,7 +149,7 @@ PlasmaCore.ToolTipArea {
         visible: fromCurrentTheme && opacity > 0
         prefix: {
             var prefix;
-            switch (plasmoid.location) {
+            switch (Plasmoid.location) {
                 case PlasmaCore.Types.LeftEdge:
                     prefix = "west-active-tab";
                     break;
@@ -166,7 +167,7 @@ PlasmaCore.ToolTipArea {
                 }
                 return prefix;
             }
-        opacity: plasmoid.expanded ? 1 : 0
+        opacity: Plasmoid.expanded ? 1 : 0
         Behavior on opacity {
             NumberAnimation {
                 duration: PlasmaCore.Units.shortDuration
@@ -178,20 +179,20 @@ PlasmaCore.ToolTipArea {
     Timer {
         id: expandedSync
         interval: 100
-        onTriggered: plasmoid.expanded = popupWindow.visible;
+        onTriggered: Plasmoid.expanded = popupWindow.visible;
     }
 
     Connections {
-        target: plasmoid.action("configure")
+        target: Plasmoid.action("configure")
         function onTriggered() {
-            if (plasmoid.hideOnWindowDeactivate) {
-                plasmoid.expanded = false
+            if (Plasmoid.hideOnWindowDeactivate) {
+                Plasmoid.expanded = false
             }
         }
     }
 
     Connections {
-        target: plasmoid
+        target: Plasmoid.self
         function onContextualActionsAboutToShow() { root.hideImmediately() }
     }
 
@@ -199,11 +200,11 @@ PlasmaCore.ToolTipArea {
         id: popupWindow
         objectName: "popupWindow"
         flags: Qt.WindowStaysOnTopHint
-        visible: plasmoid.expanded && fullRepresentation
+        visible: Plasmoid.expanded && fullRepresentation
         visualParent: compactRepresentation ? compactRepresentation : null
-        location: plasmoid.location
-        hideOnWindowDeactivate: plasmoid.hideOnWindowDeactivate
-        backgroundHints: (plasmoid.containmentDisplayHints & PlasmaCore.Types.DesktopFullyCovered) ? PlasmaCore.Dialog.SolidBackground : PlasmaCore.Dialog.StandardBackground
+        location: Plasmoid.location
+        hideOnWindowDeactivate: Plasmoid.hideOnWindowDeactivate
+        backgroundHints: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.DesktopFullyCovered) ? PlasmaCore.Dialog.SolidBackground : PlasmaCore.Dialog.StandardBackground
 
         property var oldStatus: PlasmaCore.Types.UnknownStatus
 
@@ -214,7 +215,7 @@ PlasmaCore.ToolTipArea {
             focus: true
 
             Keys.onEscapePressed: {
-                plasmoid.expanded = false;
+                Plasmoid.expanded = false;
             }
 
             LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
@@ -238,22 +239,22 @@ PlasmaCore.ToolTipArea {
             // Draws a line between the applet dialog and the panel
             PlasmaCore.SvgItem {
                 // Only draw for popups of panel applets, not desktop applets
-                visible: plasmoid.formFactor === PlasmaCore.Types.Vertical || plasmoid.formFactor === PlasmaCore.Types.Horizontal
+                visible: Plasmoid.formFactor === PlasmaCore.Types.Vertical || Plasmoid.formFactor === PlasmaCore.Types.Horizontal
 
                 anchors {
-                    top: plasmoid.location == PlasmaCore.Types.BottomEdge ? undefined : parent.top
-                    left: plasmoid.location == PlasmaCore.Types.RightEdge ? undefined : parent.left
-                    right: plasmoid.location == PlasmaCore.Types.LeftEdge ? undefined : parent.right
-                    bottom: plasmoid.location == PlasmaCore.Types.TopEdge ? undefined : parent.bottom
-                    topMargin: plasmoid.location == PlasmaCore.Types.BottomEdge ? undefined : -popupWindow.margins.top
-                    leftMargin: plasmoid.location == PlasmaCore.Types.RightEdge ? undefined : -popupWindow.margins.left
-                    rightMargin: plasmoid.location == PlasmaCore.Types.LeftEdge ? undefined : -popupWindow.margins.right
-                    bottomMargin: plasmoid.location == PlasmaCore.Types.TopEdge ? undefined : -popupWindow.margins.bottom
+                    top: Plasmoid.location == PlasmaCore.Types.BottomEdge ? undefined : parent.top
+                    left: Plasmoid.location == PlasmaCore.Types.RightEdge ? undefined : parent.left
+                    right: Plasmoid.location == PlasmaCore.Types.LeftEdge ? undefined : parent.right
+                    bottom: Plasmoid.location == PlasmaCore.Types.TopEdge ? undefined : parent.bottom
+                    topMargin: Plasmoid.location == PlasmaCore.Types.BottomEdge ? undefined : -popupWindow.margins.top
+                    leftMargin: Plasmoid.location == PlasmaCore.Types.RightEdge ? undefined : -popupWindow.margins.left
+                    rightMargin: Plasmoid.location == PlasmaCore.Types.LeftEdge ? undefined : -popupWindow.margins.right
+                    bottomMargin: Plasmoid.location == PlasmaCore.Types.TopEdge ? undefined : -popupWindow.margins.bottom
                 }
-                height: (plasmoid.location == PlasmaCore.Types.TopEdge || plasmoid.location == PlasmaCore.Types.BottomEdge) ? 1 : undefined
-                width: (plasmoid.location == PlasmaCore.Types.LeftEdge || plasmoid.location == PlasmaCore.Types.RightEdge) ? 1 : undefined
+                height: (Plasmoid.location == PlasmaCore.Types.TopEdge || Plasmoid.location == PlasmaCore.Types.BottomEdge) ? 1 : undefined
+                width: (Plasmoid.location == PlasmaCore.Types.LeftEdge || Plasmoid.location == PlasmaCore.Types.RightEdge) ? 1 : undefined
                 z: 999 /* Draw the line on top of the applet */
-                elementId: (plasmoid.location == PlasmaCore.Types.TopEdge || plasmoid.location == PlasmaCore.Types.BottomEdge) ? "horizontal-line" : "vertical-line"
+                elementId: (Plasmoid.location == PlasmaCore.Types.TopEdge || Plasmoid.location == PlasmaCore.Types.BottomEdge) ? "horizontal-line" : "vertical-line"
                 svg: PlasmaCore.Svg {
                     imagePath: "widgets/line"
                 }
@@ -263,10 +264,10 @@ PlasmaCore.ToolTipArea {
         onVisibleChanged: {
             if (!visible) {
                 expandedSync.restart();
-                plasmoid.status = oldStatus;
+                Plasmoid.status = oldStatus;
             } else {
-                oldStatus = plasmoid.status;
-                plasmoid.status = PlasmaCore.Types.RequiresAttentionStatus;
+                oldStatus = Plasmoid.status;
+                Plasmoid.status = PlasmaCore.Types.RequiresAttentionStatus;
                 // This call currently fails and complains at runtime:
                 // QWindow::setWindowState: QWindow::setWindowState does not accept Qt::WindowActive
                 popupWindow.requestActivate();

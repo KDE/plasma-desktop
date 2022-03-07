@@ -34,11 +34,11 @@ Item {
             target: keyboardLayout
 
             function onLayoutsListChanged() {
-                plasmoid.clearActions()
+                Plasmoid.clearActions()
 
                 keyboardLayout.layoutsList.forEach(
                             function(layout, index) {
-                                plasmoid.setAction(
+                                Plasmoid.setAction(
                                             index,
                                             layout.longName,
                                             iconURL(layout.shortName).toString().substring(7) // remove file:// scheme
@@ -66,7 +66,7 @@ Item {
             id: icon
 
             source: iconURL(layoutNames.shortName)
-            visible: plasmoid.configuration.showFlag && source
+            visible: Plasmoid.configuration.showFlag && source
             anchors.fill: parent
             active: containsMouse
         }

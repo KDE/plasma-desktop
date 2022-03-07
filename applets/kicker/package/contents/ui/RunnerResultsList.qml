@@ -7,6 +7,7 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 
@@ -60,8 +61,8 @@ FocusScope {
     ItemListView {
         id: runnerMatches
 
-        anchors.top: plasmoid.configuration.alignResultsToBottom ? undefined : header.bottom
-        anchors.bottom: plasmoid.configuration.alignResultsToBottom ? parent.bottom : undefined
+        anchors.top: Plasmoid.configuration.alignResultsToBottom ? undefined : header.bottom
+        anchors.bottom: Plasmoid.configuration.alignResultsToBottom ? parent.bottom : undefined
         anchors.bottomMargin: (index == 0 && anchors.bottom !== undefined) ? searchField.height + (2 * PlasmaCore.Units.smallSpacing) : undefined
         anchors.left: vertLine.right
         anchors.leftMargin: (index > 0) ? PlasmaCore.Units.smallSpacing : 0

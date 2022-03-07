@@ -5,13 +5,14 @@
 */
 
 import QtQuick 2.15
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 Flow {
     property bool animating: false
 
-    readonly property bool tasksGrowInOppositeDirection: plasmoid.configuration.reverseMode
-    readonly property bool isHorizontalPanel: plasmoid.formFactor === PlasmaCore.Types.Horizontal
+    readonly property bool tasksGrowInOppositeDirection: Plasmoid.configuration.reverseMode
+    readonly property bool isHorizontalPanel: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
 
     layoutDirection: (tasksGrowInOppositeDirection && isHorizontalPanel)
         ? (Qt.application.layoutDirection === Qt.LeftToRight)

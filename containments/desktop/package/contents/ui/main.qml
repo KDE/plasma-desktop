@@ -39,7 +39,7 @@ FolderViewDropArea {
 
     function switchSize() {
         // Support expanding into the full representation on very thick vertical panels.
-        if (isPopup && plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+        if (isPopup && Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
             return PlasmaCore.Units.gridUnit * 8;
         }
 
@@ -52,10 +52,10 @@ FolderViewDropArea {
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    property bool isFolder: (plasmoid.pluginName === "org.kde.plasma.folder")
-    property bool isContainment: ("containmentType" in plasmoid)
-    property bool isPopup: (plasmoid.location !== PlasmaCore.Types.Floating)
-    property bool useListViewMode: isPopup && plasmoid.configuration.viewMode === 0
+    property bool isFolder: (Plasmoid.pluginName === "org.kde.plasma.folder")
+    property bool isContainment: ("containmentType" in Plasmoid)
+    property bool isPopup: (Plasmoid.location !== PlasmaCore.Types.Floating)
+    property bool useListViewMode: isPopup && Plasmoid.configuration.viewMode === 0
 
     property Component appletAppearanceComponent
     property Item toolBox
@@ -73,21 +73,21 @@ FolderViewDropArea {
 
     // Plasmoid.title is set by a Binding {} in FolderViewLayer
     Plasmoid.toolTipSubText: ""
-    Plasmoid.icon: (!plasmoid.configuration.useCustomIcon && folderViewLayer.ready) ? folderViewLayer.view.model.iconName : plasmoid.configuration.icon
+    Plasmoid.icon: (!Plasmoid.configuration.useCustomIcon && folderViewLayer.ready) ? folderViewLayer.view.model.iconName : Plasmoid.configuration.icon
     Plasmoid.compactRepresentation: (isFolder && !isContainment) ? compactRepresentation : null
     Plasmoid.associatedApplicationUrls: folderViewLayer.ready ? folderViewLayer.model.resolvedUrl : null
 
     onIconHeightChanged: updateGridSize()
 
     anchors {
-        leftMargin: (isContainment && plasmoid.availableScreenRect) ? plasmoid.availableScreenRect.x : 0
-        topMargin: (isContainment && plasmoid.availableScreenRect) ? plasmoid.availableScreenRect.y : 0
+        leftMargin: (isContainment && Plasmoid.availableScreenRect) ? Plasmoid.availableScreenRect.x : 0
+        topMargin: (isContainment && Plasmoid.availableScreenRect) ? Plasmoid.availableScreenRect.y : 0
 
-        rightMargin: (isContainment && plasmoid.availableScreenRect) && parent
-            ? parent.width - (plasmoid.availableScreenRect.x + plasmoid.availableScreenRect.width) : 0
+        rightMargin: (isContainment && Plasmoid.availableScreenRect) && parent
+            ? parent.width - (Plasmoid.availableScreenRect.x + Plasmoid.availableScreenRect.width) : 0
 
-        bottomMargin: (isContainment && plasmoid.availableScreenRect) && parent
-            ? parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height) : 0
+        bottomMargin: (isContainment && Plasmoid.availableScreenRect) && parent
+            ? parent.height - (Plasmoid.availableScreenRect.y + Plasmoid.availableScreenRect.height) : 0
     }
 
     Behavior on anchors.topMargin {
@@ -138,7 +138,7 @@ FolderViewDropArea {
             var height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 2)) + PlasmaCore.Units.largeSpacing
         }
 
-        if (plasmoid.configuration.labelMode !== 0) {
+        if (Plasmoid.configuration.labelMode !== 0) {
             height += folderViewLayer.item.labelHeight;
         }
 
@@ -157,7 +157,7 @@ FolderViewDropArea {
     }
 
     onDragEnter: {
-        if (isContainment && plasmoid.immutable && !(isFolder && FolderTools.isFileDrag(event))) {
+        if (isContainment && Plasmoid.immutable && !(isFolder && FolderTools.isFileDrag(event))) {
             event.ignore();
         }
 
@@ -207,7 +207,7 @@ FolderViewDropArea {
             handleDragEnd(folderViewLayer.view);
             folderViewLayer.view.drop(root, event, mapToItem(folderViewLayer.view, event.x, event.y));
         } else if (isContainment) {
-            plasmoid.processMimeData(event.mimeData,
+            Plasmoid.processMimeData(event.mimeData,
                         event.x - appletsLayout.placeHolder.width / 2, event.y - appletsLayout.placeHolder.height / 2);
             event.accept(event.proposedAction);
             appletsLayout.hidePlaceHolder();
@@ -252,27 +252,27 @@ FolderViewDropArea {
     }
 
     Connections {
-        target: plasmoid
+        target: Plasmoid.self
         ignoreUnknownSignals: true
         function onEditModeChanged() {
-            appletsLayout.editMode = plasmoid.editMode
+            appletsLayout.editMode = Plasmoid.editMode
         }
     }
 
     ContainmentLayoutManager.AppletsLayout {
         id: appletsLayout
         anchors.fill: parent
-        // NOTE: use plasmoid.availableScreenRect and not own width and height as they are updated not atomically
-        configKey: "ItemGeometries-" + Math.round(plasmoid.screenGeometry.width) + "x" + Math.round(plasmoid.screenGeometry.height)
-        fallbackConfigKey: plasmoid.availableScreenRect.width > plasmoid.availableScreenRect.height ? "ItemGeometriesHorizontal" : "ItemGeometriesVertical"
+        // NOTE: use Plasmoid.availableScreenRect and not own width and height as they are updated not atomically
+        configKey: "ItemGeometries-" + Math.round(Plasmoid.screenGeometry.width) + "x" + Math.round(Plasmoid.screenGeometry.height)
+        fallbackConfigKey: Plasmoid.availableScreenRect.width > Plasmoid.availableScreenRect.height ? "ItemGeometriesHorizontal" : "ItemGeometriesVertical"
 
-        containment: plasmoid
-        editModeCondition: plasmoid.immutable
+        containment: Plasmoid
+        editModeCondition: Plasmoid.immutable
                 ? ContainmentLayoutManager.AppletsLayout.Locked
                 : ContainmentLayoutManager.AppletsLayout.AfterPressAndHold
 
         // Sets the containment in edit mode when we go in edit mode as well
-        onEditModeChanged: plasmoid.editMode = editMode
+        onEditModeChanged: Plasmoid.editMode = editMode
 
         minimumItemWidth: PlasmaCore.Units.gridUnit * 3
         minimumItemHeight: minimumItemWidth
@@ -284,16 +284,16 @@ FolderViewDropArea {
 
         appletContainerComponent: ContainmentLayoutManager.BasicAppletContainer {
             id: appletContainer
-            editModeCondition: plasmoid.immutable
+            editModeCondition: Plasmoid.immutable
                 ? ContainmentLayoutManager.ItemContainer.Locked
                 : ContainmentLayoutManager.ItemContainer.AfterPressAndHold
             configOverlayComponent: ConfigOverlay {}
             onUserDrag: {
                 var pos = mapToItem(root.parent, dragCenter.x, dragCenter.y);
-                var newCont = plasmoid.containmentAt(pos.x, pos.y);
+                var newCont = Plasmoid.containmentAt(pos.x, pos.y);
 
-                if (newCont && newCont !== plasmoid) {
-                    var newPos = newCont.mapFromApplet(plasmoid, pos.x, pos.y);
+                if (newCont && newCont !== Plasmoid) {
+                    var newPos = newCont.mapFromApplet(Plasmoid, pos.x, pos.y);
 
                     newCont.addApplet(appletContainer.applet, newPos.x, newPos.y);
                     appletsLayout.hidePlaceHolder();
@@ -352,12 +352,12 @@ FolderViewDropArea {
         }
 
         // Customize the icon and text to improve discoverability
-        plasmoid.setAction("configure", i18n("Configure Desktop and Wallpaper…"), "preferences-desktop-wallpaper")
+        Plasmoid.setAction("configure", i18n("Configure Desktop and Wallpaper…"), "preferences-desktop-wallpaper")
 
         // WORKAROUND: that's the only place where we can inject a sensible size.
         // if root has width defined, it will override the value we set before
         // the component completes
-        root.width = plasmoid.width;
+        root.width = Plasmoid.width;
 
         updateGridSize();
     }

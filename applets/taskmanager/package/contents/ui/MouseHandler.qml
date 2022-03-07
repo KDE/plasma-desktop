@@ -6,6 +6,7 @@
 
 import QtQuick 2.15
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.draganddrop 2.0
 
 import org.kde.taskmanager 0.1 as TaskManager
@@ -90,7 +91,7 @@ Item {
             // by tracking the cursor movement vector and allowing the drag if
             // the movement direction has reversed, establishing user intent to
             // move back.
-            if (!plasmoid.configuration.separateLaunchers && tasks.dragSource != null
+            if (!Plasmoid.configuration.separateLaunchers && tasks.dragSource != null
                  && tasks.dragSource.m.IsLauncher === true && above.m.IsLauncher !== true
                  && above === ignoredItem) {
                 return;
@@ -169,7 +170,7 @@ Item {
 
         anchors.fill: parent
 
-        enabled: active && plasmoid.configuration.wheelEnabled
+        enabled: active && Plasmoid.configuration.wheelEnabled
 
         property bool active: true
         property int wheelDelta: 0;

@@ -9,18 +9,19 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.5
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 import org.kde.kirigami 2.5 as Kirigami
 
 ColumnLayout {
 
-    property string cfg_icon: plasmoid.configuration.icon
-    property int cfg_favoritesDisplay: plasmoid.configuration.favoritesDisplay
-    property int cfg_applicationsDisplay: plasmoid.configuration.applicationsDisplay
+    property string cfg_icon: Plasmoid.configuration.icon
+    property int cfg_favoritesDisplay: Plasmoid.configuration.favoritesDisplay
+    property int cfg_applicationsDisplay: Plasmoid.configuration.applicationsDisplay
     property alias cfg_alphaSort: alphaSort.checked
-    property var cfg_systemFavorites: String(plasmoid.configuration.systemFavorites)
-    property int cfg_primaryActions: plasmoid.configuration.primaryActions
+    property var cfg_systemFavorites: String(Plasmoid.configuration.systemFavorites)
+    property int cfg_primaryActions: Plasmoid.configuration.primaryActions
     property alias cfg_showActionButtonCaptions: showActionButtonCaptions.checked
 
     Kirigami.FormLayout {
@@ -42,7 +43,7 @@ ColumnLayout {
             PlasmaCore.FrameSvgItem {
                 id: previewFrame
                 anchors.centerIn: parent
-                imagePath: plasmoid.location === PlasmaCore.Types.Vertical || plasmoid.location === PlasmaCore.Types.Horizontal
+                imagePath: Plasmoid.location === PlasmaCore.Types.Vertical || Plasmoid.location === PlasmaCore.Types.Horizontal
                         ? "widgets/panel-background" : "widgets/background"
                 width: PlasmaCore.Units.iconSizes.large + fixedMargins.left + fixedMargins.right
                 height: PlasmaCore.Units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
@@ -100,7 +101,7 @@ ColumnLayout {
             text: i18nc("Part of a sentence: 'Show favorites in a grid'", "In a grid")
             ButtonGroup.group: favoritesDisplayGroup
             property int index: 0
-            checked: plasmoid.configuration.favoritesDisplay == index
+            checked: Plasmoid.configuration.favoritesDisplay == index
         }
 
         RadioButton {
@@ -108,7 +109,7 @@ ColumnLayout {
             text: i18nc("Part of a sentence: 'Show favorites in a list'", "In a list")
             ButtonGroup.group: favoritesDisplayGroup
             property int index: 1
-            checked: plasmoid.configuration.favoritesDisplay == index
+            checked: Plasmoid.configuration.favoritesDisplay == index
         }
 
         RadioButton {
@@ -117,7 +118,7 @@ ColumnLayout {
             text: i18nc("Part of a sentence: 'Show other applications in a grid'", "In a grid")
             ButtonGroup.group: applicationsDisplayGroup
             property int index: 0
-            checked: plasmoid.configuration.applicationsDisplay == index
+            checked: Plasmoid.configuration.applicationsDisplay == index
         }
 
         RadioButton {
@@ -125,7 +126,7 @@ ColumnLayout {
             text: i18nc("Part of a sentence: 'Show other applications in a list'", "In a list")
             ButtonGroup.group: applicationsDisplayGroup
             property int index: 1
-            checked: plasmoid.configuration.applicationsDisplay == index
+            checked: Plasmoid.configuration.applicationsDisplay == index
         }
 
         Item {
@@ -139,7 +140,7 @@ ColumnLayout {
             ButtonGroup.group: radioGroup
             property string actions: "suspend,hibernate,reboot,shutdown"
             property int index: 0
-            checked: plasmoid.configuration.primaryActions == index
+            checked: Plasmoid.configuration.primaryActions == index
         }
 
         RadioButton {
@@ -148,7 +149,7 @@ ColumnLayout {
             ButtonGroup.group: radioGroup
             property string actions: "lock-screen,logout,save-session,switch-user"
             property int index: 1
-            checked: plasmoid.configuration.primaryActions == index
+            checked: Plasmoid.configuration.primaryActions == index
         }
 
         RadioButton {
@@ -157,7 +158,7 @@ ColumnLayout {
             ButtonGroup.group: radioGroup
             property string actions: "lock-screen,logout,save-session,switch-user,suspend,hibernate,reboot,shutdown"
             property int index: 3
-            checked: plasmoid.configuration.primaryActions == index
+            checked: Plasmoid.configuration.primaryActions == index
         }
 
         CheckBox {

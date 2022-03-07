@@ -6,11 +6,12 @@
 
 import QtQuick 2.15
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 Item {
     readonly property int iconWidthDelta: (icon.width - icon.paintedWidth) / 2
-    readonly property bool shiftBadgeDown: (plasmoid.pluginName === "org.kde.plasma.icontasks") && task.audioStreamIconLoaderItem.shown
+    readonly property bool shiftBadgeDown: (Plasmoid.pluginName === "org.kde.plasma.icontasks") && task.audioStreamIconLoaderItem.shown
 
     Item {
         id: badgeMask

@@ -6,6 +6,7 @@
 
 import QtQuick 2.15
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 
@@ -47,7 +48,7 @@ Item {
 
     onActionTriggered: {
         if (Tools.triggerAction(ListView.view.model, model.index, actionId, actionArgument) === true) {
-            plasmoid.expanded = false;
+            Plasmoid.expanded = false;
         }
     }
 
@@ -99,7 +100,7 @@ Item {
         onReleased: mouse => {
             if (pressed && !item.hasChildren) {
                 item.ListView.view.model.trigger(index, "", null);
-                plasmoid.expanded = false;
+                Plasmoid.expanded = false;
             }
 
             pressed = false;
@@ -265,7 +266,7 @@ Item {
             if (!item.hasChildren) {
                 event.accepted = true;
                 item.ListView.view.model.trigger(index, "", null);
-                plasmoid.expanded = false;
+                Plasmoid.expanded = false;
             }
         }
     }

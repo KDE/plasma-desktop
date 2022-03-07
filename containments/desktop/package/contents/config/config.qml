@@ -10,7 +10,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.configuration 2.0
 
 ConfigModel {
-    property bool isFolder: (plasmoid.pluginName === "org.kde.plasma.folder")
+    property bool isFolder: (Plasmoid.pluginName === "org.kde.plasma.folder")
 
     ConfigCategory {
          name: i18n("Location")

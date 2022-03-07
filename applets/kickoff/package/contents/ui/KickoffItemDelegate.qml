@@ -24,6 +24,7 @@ import QtQuick 2.15
 import QtQml 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Templates 2.15 as T
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.kirigami 2.16 as Kirigami
@@ -48,7 +49,7 @@ T.ItemDelegate {
     readonly property bool menuClosed: ActionMenu.menu.status == 3 // corresponds to DialogStatus.Closed
 
     property bool dragEnabled: enabled && !root.isCategory
-        && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
+        && Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
 
     function openActionMenu(x = undefined, y = undefined) {
         if (!root.hasActionList) { return }
@@ -120,8 +121,8 @@ T.ItemDelegate {
             view.currentIndex = index
             // if successfully triggered, close popup
             if(view.model.trigger && view.model.trigger(index, "", null)) {
-                if (plasmoid.hideOnWindowDeactivate) {
-                    plasmoid.expanded = false;
+                if (Plasmoid.hideOnWindowDeactivate) {
+                    Plasmoid.expanded = false;
                 }
             }
         }
@@ -194,7 +195,7 @@ T.ItemDelegate {
         hoverEnabled: root.view && !root.view.movedWithKeyboard
             // Fix VerticalStackView animation causing view currentIndex
             // to change while delegates are moving under the mouse cursor
-            && plasmoid.fullRepresentationItem && !plasmoid.fullRepresentationItem.contentItem.busy
+            && Plasmoid.fullRepresentationItem && !Plasmoid.fullRepresentationItem.contentItem.busy
         acceptedButtons: Qt.LeftButton | Qt.RightButton
         drag {
             axis: Drag.XAndYAxis

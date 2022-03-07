@@ -12,13 +12,13 @@ import org.kde.plasma.plasmoid 2.0
 PlasmaCore.IconItem {
     id: icon
 
-    readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
-        || plasmoid.location === PlasmaCore.Types.RightEdge
-        || plasmoid.location === PlasmaCore.Types.BottomEdge
-        || plasmoid.location === PlasmaCore.Types.LeftEdge)
+    readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
+        || Plasmoid.location === PlasmaCore.Types.RightEdge
+        || Plasmoid.location === PlasmaCore.Types.BottomEdge
+        || Plasmoid.location === PlasmaCore.Types.LeftEdge)
 
     Layout.minimumWidth: {
-        switch (plasmoid.formFactor) {
+        switch (Plasmoid.formFactor) {
         case PlasmaCore.Types.Vertical:
             return 0;
         case PlasmaCore.Types.Horizontal:
@@ -29,7 +29,7 @@ PlasmaCore.IconItem {
     }
 
     Layout.minimumHeight: {
-        switch (plasmoid.formFactor) {
+        switch (Plasmoid.formFactor) {
         case PlasmaCore.Types.Vertical:
             return width;
         case PlasmaCore.Types.Horizontal:
@@ -42,7 +42,7 @@ PlasmaCore.IconItem {
     Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1;
     Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1;
 
-    source: plasmoid.icon ? plasmoid.icon : "plasma"
+    source: Plasmoid.icon ? Plasmoid.icon : "plasma"
     active: mouseArea.containsMouse
 
     MouseArea {
@@ -52,7 +52,7 @@ PlasmaCore.IconItem {
 
         anchors.fill: parent
         hoverEnabled: true
-        onPressed: wasExpanded = plasmoid.expanded
-        onClicked: plasmoid.expanded = !wasExpanded
+        onPressed: wasExpanded = Plasmoid.expanded
+        onClicked: Plasmoid.expanded = !wasExpanded
     }
 }

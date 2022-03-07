@@ -8,6 +8,7 @@ import QtQuick.Templates 2.15 as T
 import QtQml 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
+import org.kde.plasma.plasmoid 2.0
 
 EmptyPage {
     id: root
@@ -19,12 +20,12 @@ EmptyPage {
         reverseTransitions: footer.tabBar.currentIndex === 1
         initialItem: ApplicationsPage {
             id: applicationsPage
-            preferredSideBarWidth: root.preferredSideBarWidth + plasmoid.rootItem.backgroundMetrics.leftPadding
+            preferredSideBarWidth: root.preferredSideBarWidth + Plasmoid.rootItem.backgroundMetrics.leftPadding
         }
         Component {
             id: placesPage
             PlacesPage {
-                preferredSideBarWidth: root.preferredSideBarWidth + plasmoid.rootItem.backgroundMetrics.leftPadding
+                preferredSideBarWidth: root.preferredSideBarWidth + Plasmoid.rootItem.backgroundMetrics.leftPadding
                 preferredSideBarHeight: applicationsPage.implicitSideBarHeight
             }
         }
@@ -44,7 +45,7 @@ EmptyPage {
         id: footer
         preferredTabBarWidth: root.preferredSideBarWidth
         Binding {
-            target: plasmoid.rootItem
+            target: Plasmoid.rootItem
             property: "footer"
             value: footer
             restoreMode: Binding.RestoreBinding

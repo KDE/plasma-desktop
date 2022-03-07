@@ -14,16 +14,17 @@ import QtQuick.Templates 2.15 as T
 import QtQuick.Layouts 1.15
 import QtQml 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
 EmptyPage {
     id: root
 
-    // plasmoid.rootItem is Kickoff.qml
-    leftPadding: -plasmoid.rootItem.backgroundMetrics.leftPadding
-    rightPadding: -plasmoid.rootItem.backgroundMetrics.rightPadding
+    // Plasmoid.rootItem is Kickoff.qml
+    leftPadding: -Plasmoid.rootItem.backgroundMetrics.leftPadding
+    rightPadding: -Plasmoid.rootItem.backgroundMetrics.rightPadding
     topPadding: 0
-    bottomPadding: -plasmoid.rootItem.backgroundMetrics.bottomPadding
+    bottomPadding: -Plasmoid.rootItem.backgroundMetrics.bottomPadding
 
     Layout.minimumWidth: implicitWidth
     Layout.minimumHeight: implicitHeight
@@ -56,7 +57,7 @@ EmptyPage {
         id: header
         preferredNameAndIconWidth: normalPage.preferredSideBarWidth
         Binding {
-            target: plasmoid.rootItem
+            target: Plasmoid.rootItem
             property: "header"
             value: header
             restoreMode: Binding.RestoreBinding
@@ -83,7 +84,7 @@ EmptyPage {
                 implicitHeight: normalPage.implicitHeight
                 // Forces the function be re-run every time runnerModel.count changes.
                 // This is absolutely necessary to make the search view work reliably.
-                model: plasmoid.rootItem.runnerModel.count ? plasmoid.rootItem.runnerModel.modelForRow(0) : null
+                model: Plasmoid.rootItem.runnerModel.count ? Plasmoid.rootItem.runnerModel.modelForRow(0) : null
                 delegate: KickoffItemDelegate {
                     width: view.availableWidth
                     isSearchResult: true
@@ -92,8 +93,8 @@ EmptyPage {
                 // always focus the first item in the header focus chain
                 KeyNavigation.tab: root.header.nextItemInFocusChain()
                 T.StackView.onActivated: {
-                    plasmoid.rootItem.sideBar = null
-                    plasmoid.rootItem.contentArea = searchView
+                    Plasmoid.rootItem.sideBar = null
+                    Plasmoid.rootItem.contentArea = searchView
                 }
             }
         }
@@ -101,7 +102,7 @@ EmptyPage {
         Keys.priority: Keys.AfterItem
         // This is here rather than root because events are implicitly forwarded
         // to parent items. Don't want to send multiple events to searchField.
-        Keys.forwardTo: plasmoid.rootItem.searchField
+        Keys.forwardTo: Plasmoid.rootItem.searchField
 
         Connections {
             target: root.header

@@ -20,13 +20,13 @@ Kicker.SubMenu {
     property bool aboutToBeDestroyed: false
 
     visible: false
-    hideOnWindowDeactivate: plasmoid.hideOnWindowDeactivate
+    hideOnWindowDeactivate: Plasmoid.hideOnWindowDeactivate
     location: PlasmaCore.Types.Floating
     offset: PlasmaCore.Units.smallSpacing
 
     onWindowDeactivated: {
         if (!aboutToBeDestroyed) {
-            plasmoid.expanded = false;
+            Plasmoid.expanded = false;
         }
     }
 
@@ -88,7 +88,7 @@ Kicker.SubMenu {
 
     function delayedDestroy() {
         aboutToBeDestroyed = true;
-        plasmoid.hideOnWindowDeactivate = false;
+        Plasmoid.hideOnWindowDeactivate = false;
         visible = false;
 
         Qt.callLater(() => itemDialog.destroy());

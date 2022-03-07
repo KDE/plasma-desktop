@@ -8,6 +8,7 @@
 import QtQuick 2.5
 import QtQuick.Controls 2.5 as QQC2
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.kirigami 2.5 as Kirigami
 
 
@@ -16,7 +17,7 @@ Kirigami.FormLayout {
     anchors.left: parent.left
     anchors.right: parent.right
 
-    property bool isActivityPager: (plasmoid.pluginName === "org.kde.plasma.activitypager")
+    property bool isActivityPager: (Plasmoid.pluginName === "org.kde.plasma.activitypager")
 
     property int cfg_displayedText
     property alias cfg_showWindowIcons: showWindowIcons.checked

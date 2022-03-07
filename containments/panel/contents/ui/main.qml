@@ -7,7 +7,6 @@
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
@@ -34,7 +33,7 @@ DragDrop.DropArea {
 
     property Item dragOverlay
 
-    property bool isHorizontal: plasmoid.formFactor !== PlasmaCore.Types.Vertical
+    property bool isHorizontal: Plasmoid.formFactor !== PlasmaCore.Types.Vertical
     property int fixedWidth: 0
     property int fixedHeight: 0
 
@@ -57,7 +56,7 @@ DragDrop.DropArea {
     property var marginHighlightSvg: PlasmaCore.Svg{imagePath: "widgets/margins-highlight"}
     //Margins are either the size of the margins in the SVG, unless that prevents the panel from being at least half a smallMedium icon) tall at which point we set the margin to whatever allows it to be that...or if it still won't fit, 1.
     //the size a margin should be to force a panel to be the required size above
-    readonly property real spacingAtMinSize: Math.round(Math.max(1, (currentLayout.isLayoutHorizontal ? root.height : root.width) - units.iconSizes.smallMedium)/2)
+    readonly property real spacingAtMinSize: Math.round(Math.max(1, (currentLayout.isLayoutHorizontal ? root.height : root.width) - PlasmaCore.Units.iconSizes.smallMedium)/2)
 
 //END properties
 
@@ -72,7 +71,7 @@ function addApplet(applet, x, y) {
     // starts thinking that way on teardown (virtual desktop pager)
     // leading to crashes
     var visibleBinding = Qt.binding(function() {
-        return applet.status !== PlasmaCore.Types.HiddenStatus || (!plasmoid.immutable && plasmoid.userConfiguring);
+        return applet.status !== PlasmaCore.Types.HiddenStatus || (!Plasmoid.immutable && Plasmoid.userConfiguring);
     })
 
     var container = appletContainerComponent.createObject(root, {
@@ -161,16 +160,16 @@ function checkLastSpacer() {
         LayoutManager.marginHighlights = [];
         LayoutManager.restore();
 
-        plasmoid.action("configure").visible = Qt.binding(function() {
-            return !plasmoid.immutable;
+        Plasmoid.action("configure").visible = Qt.binding(function() {
+            return !Plasmoid.immutable;
         });
-        plasmoid.action("configure").enabled = Qt.binding(function() {
-            return !plasmoid.immutable;
+        Plasmoid.action("configure").enabled = Qt.binding(function() {
+            return !Plasmoid.immutable;
         });
     }
 
     onDragEnter: {
-        if (plasmoid.immutable) {
+        if (Plasmoid.immutable) {
             event.ignore();
             return;
         }
@@ -194,7 +193,7 @@ function checkLastSpacer() {
     }
 
     onDrop: {
-        plasmoid.processMimeData(event.mimeData, event.x, event.y);
+        Plasmoid.processMimeData(event.mimeData, event.x, event.y);
         event.accept(event.proposedAction);
         root.fixedWidth = 0;
         root.fixedHeight = 0;
@@ -212,16 +211,16 @@ function checkLastSpacer() {
     }
 
     Plasmoid.onUserConfiguringChanged: {
-        if (plasmoid.immutable) {
+        if (Plasmoid.immutable) {
             if (dragOverlay) {
                 dragOverlay.destroy();
             }
             return;
         }
 
-        if (plasmoid.userConfiguring) {
-            for (var i = 0; i < plasmoid.applets.length; ++i) {
-                plasmoid.applets[i].expanded = false;
+        if (Plasmoid.userConfiguring) {
+            for (var i = 0; i < Plasmoid.applets.length; ++i) {
+                Plasmoid.applets[i].expanded = false;
             }
 
             if (!dragOverlay) {
@@ -265,13 +264,13 @@ function checkLastSpacer() {
 
             Layout.fillWidth: applet && applet.Layout.fillWidth
             Layout.onFillWidthChanged: {
-                if (plasmoid.formFactor !== PlasmaCore.Types.Vertical) {
+                if (Plasmoid.formFactor !== PlasmaCore.Types.Vertical) {
                     checkLastSpacer();
                 }
             }
             Layout.fillHeight: applet && applet.Layout.fillHeight
             Layout.onFillHeightChanged: {
-                if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+                if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
                     checkLastSpacer();
                 }
             }
@@ -366,7 +365,7 @@ function checkLastSpacer() {
     Component {
         id: rectHighlightEl
         Item {
-            visible: plasmoid.editMode && marginAreasEnabled
+            visible: Plasmoid.editMode && marginAreasEnabled
             property Item startApplet
             property Item endApplet
             property bool thickArea
@@ -377,7 +376,7 @@ function checkLastSpacer() {
                 // I don't know if the panel is vertical or horizontal, so I'll use panel
                 // (w) width and (h) height as a (w, h) coordinate system, defining two helper
                 // functions to switch between it and cartesian (x, y).
-                property bool horizontal: plasmoid.formFactor === PlasmaCore.Types.Horizontal
+                property bool horizontal: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
                 property int mod: topSide ? 1 : -1
                 property string svgSide: horizontal ? (topSide ? 'top' : 'bottom') : (topSide ? 'left' : 'right')
                 // Panel To Cartesian
@@ -455,8 +454,8 @@ function checkLastSpacer() {
         id: dndSpacer
         Layout.preferredWidth: width
         Layout.preferredHeight: height
-        width: (plasmoid.formFactor === PlasmaCore.Types.Vertical) ? currentLayout.width : PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 10
-        height: (plasmoid.formFactor === PlasmaCore.Types.Vertical) ?  PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 10 : currentLayout.height
+        width: (Plasmoid.formFactor === PlasmaCore.Types.Vertical) ? currentLayout.width : PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 10
+        height: (Plasmoid.formFactor === PlasmaCore.Types.Vertical) ?  PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 10 : currentLayout.height
     }
 
     // while the user is moving the applet when configuring the panel, the applet is reparented
@@ -473,11 +472,11 @@ function checkLastSpacer() {
         rowSpacing: PlasmaCore.Units.smallSpacing
         columnSpacing: PlasmaCore.Units.smallSpacing
 
-        x: (isLayoutHorizontal && root.toolBox && Qt.application.layoutDirection === Qt.RightToLeft && plasmoid.editMode) ? root.toolBox.width : 0;
+        x: (isLayoutHorizontal && root.toolBox && Qt.application.layoutDirection === Qt.RightToLeft && Plasmoid.editMode) ? root.toolBox.width : 0;
         y: 0
 
-        width: root.width - (isLayoutHorizontal && root.toolBox && plasmoid.editMode ? root.toolBox.width : 0)
-        height: root.height - (!isLayoutHorizontal && root.toolBox && plasmoid.editMode ? root.toolBox.height : 0)
+        width: root.width - (isLayoutHorizontal && root.toolBox && Plasmoid.editMode ? root.toolBox.width : 0)
+        height: root.height - (!isLayoutHorizontal && root.toolBox && Plasmoid.editMode ? root.toolBox.height : 0)
 
         Layout.preferredWidth: {
             var width = 0;

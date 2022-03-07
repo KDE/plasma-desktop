@@ -6,6 +6,7 @@
 
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -16,7 +17,7 @@ import org.kde.kquickcontrols 2.0
 PlasmaCore.Dialog {
     id: contextMenu
     visualParent: settingsButton
-    location: plasmoid.location
+    location: Plasmoid.location
     type: PlasmaCore.Dialog.PopupMenu
     flags: Qt.Popup | Qt.FramelessWindowHint | Qt.WindowDoesNotAcceptFocus
     mainItem: ColumnLayout {
@@ -35,7 +36,7 @@ PlasmaCore.Dialog {
             visible: location !== PlasmaCore.Types.TopEdge
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
             iconSource: "delete"
-            onClicked: plasmoid.action("remove").trigger();
+            onClicked: Plasmoid.action("remove").trigger();
         }
 
         PlasmaExtras.Heading {
@@ -169,7 +170,7 @@ PlasmaCore.Dialog {
             visible: location === PlasmaCore.Types.TopEdge
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
             iconSource: "delete"
-            onClicked: plasmoid.action("remove").trigger();
+            onClicked: Plasmoid.action("remove").trigger();
         }
         PlasmaExtras.Heading {
             level: 3
@@ -178,10 +179,10 @@ PlasmaCore.Dialog {
         }
         KeySequenceItem {
             id: button
-            keySequence: plasmoid.globalShortcut
+            keySequence: Plasmoid.globalShortcut
             onKeySequenceChanged: {
-                if (keySequence != plasmoid.globalShortcut) {
-                    plasmoid.globalShortcut = button.keySequence
+                if (keySequence != Plasmoid.globalShortcut) {
+                    Plasmoid.globalShortcut = button.keySequence
                 }
             }
         }

@@ -9,6 +9,7 @@
 */
 import QtQuick 2.15
 import QtQml 2.15
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.kirigami 2.16 as Kirigami
@@ -77,7 +78,7 @@ EmptyPage {
         implicitWidth: {
             let totalMargins = leftMargin + rightMargin
             if (mainContentView) {
-                if (plasmoid.rootItem.mayHaveGridWithScrollBar) {
+                if (Plasmoid.rootItem.mayHaveGridWithScrollBar) {
                     totalMargins += verticalScrollBar.implicitWidth
                 }
                 return KickoffSingleton.gridCellSize * 4 + totalMargins
@@ -88,14 +89,14 @@ EmptyPage {
             // use grid cells to determine size
             let h = KickoffSingleton.gridCellSize * 4
             // If no grids are used, use the number of items that would fit in the grid height
-            if (plasmoid.configuration.favoritesDisplay != 0 && plasmoid.configuration.applicationsDisplay != 0) {
+            if (Plasmoid.configuration.favoritesDisplay != 0 && Plasmoid.configuration.applicationsDisplay != 0) {
                 h = Math.floor(h / KickoffSingleton.listDelegateHeight) * KickoffSingleton.listDelegateHeight
             }
             return h + topMargin + bottomMargin
         }
 
-        leftMargin: plasmoid.rootItem.backgroundMetrics.leftPadding
-        rightMargin: plasmoid.rootItem.backgroundMetrics.rightPadding
+        leftMargin: Plasmoid.rootItem.backgroundMetrics.leftPadding
+        rightMargin: Plasmoid.rootItem.backgroundMetrics.rightPadding
 
         currentIndex: count > 0 ? 0 : -1
         focus: true
@@ -117,11 +118,11 @@ EmptyPage {
             z: root.currentItem && root.currentItem.Drag.active ?
                 3 : 0
             opacity: view.activeFocus
-                || (plasmoid.rootItem.contentArea === root
-                    && plasmoid.rootItem.searchField.activeFocus) ? 1 : 0.5
+                || (Plasmoid.rootItem.contentArea === root
+                    && Plasmoid.rootItem.searchField.activeFocus) ? 1 : 0.5
             imagePath: "widgets/viewitem"
             prefix: "hover"
-            visible: plasmoid.rootItem.contentArea !== root
+            visible: Plasmoid.rootItem.contentArea !== root
                 || ActionMenu.menu.status !== 1
         }
 
@@ -184,9 +185,9 @@ EmptyPage {
         }
 
         Connections {
-            target: plasmoid
+            target: Plasmoid.self
             function onExpandedChanged() {
-                if(!plasmoid.expanded) {
+                if(!Plasmoid.expanded) {
                     view.currentIndex = 0
                     view.positionViewAtBeginning()
                 }

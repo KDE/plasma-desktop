@@ -8,6 +8,7 @@
 
 import QtQuick 2.15
 import QtQml 2.15
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.kirigami 2.16 as Kirigami
@@ -72,8 +73,8 @@ EmptyPage {
         // There are lots of ways to try to center the content of a GridView
         // and many of them have bad visual flaws. This way works pretty well.
         // Not center aligning when there might be a scrollbar to keep click target positions consistent.
-        anchors.horizontalCenter: plasmoid.rootItem.mayHaveGridWithScrollBar ? undefined : parent.horizontalCenter
-        anchors.horizontalCenterOffset: if (plasmoid.rootItem.mayHaveGridWithScrollBar) {
+        anchors.horizontalCenter: Plasmoid.rootItem.mayHaveGridWithScrollBar ? undefined : parent.horizontalCenter
+        anchors.horizontalCenterOffset: if (Plasmoid.rootItem.mayHaveGridWithScrollBar) {
             if (root.mirrored) {
                 return verticalScrollBar.implicitWidth/2
             } else {
@@ -89,15 +90,15 @@ EmptyPage {
 
         implicitWidth: {
             let w = view.cellWidth * 4 + leftMargin + rightMargin
-            if (plasmoid.rootItem.mayHaveGridWithScrollBar) {
+            if (Plasmoid.rootItem.mayHaveGridWithScrollBar) {
                 w += verticalScrollBar.implicitWidth
             }
             return w
         }
         implicitHeight: view.cellHeight * 4 + topMargin + bottomMargin
 
-        leftMargin: plasmoid.rootItem.backgroundMetrics.leftPadding
-        rightMargin: plasmoid.rootItem.backgroundMetrics.rightPadding
+        leftMargin: Plasmoid.rootItem.backgroundMetrics.leftPadding
+        rightMargin: Plasmoid.rootItem.backgroundMetrics.rightPadding
 
         cellHeight: KickoffSingleton.gridCellSize
         cellWidth: KickoffSingleton.gridCellSize
@@ -120,13 +121,13 @@ EmptyPage {
             z: root.currentItem && root.currentItem.Drag.active ?
                 3 : 0
             opacity: view.activeFocus
-                || (plasmoid.rootItem.contentArea === root
-                    && plasmoid.rootItem.searchField.activeFocus) ? 1 : 0.5
+                || (Plasmoid.rootItem.contentArea === root
+                    && Plasmoid.rootItem.searchField.activeFocus) ? 1 : 0.5
             width: view.cellWidth
             height: view.cellHeight
             imagePath: "widgets/viewitem"
             prefix: "hover"
-            visible: plasmoid.rootItem.contentArea !== root
+            visible: Plasmoid.rootItem.contentArea !== root
                 || ActionMenu.menu.status !== 1
         }
 
@@ -170,9 +171,9 @@ EmptyPage {
         }
 
         Connections {
-            target: plasmoid
+            target: Plasmoid.self
             function onExpandedChanged() {
-                if(!plasmoid.expanded) {
+                if(!Plasmoid.expanded) {
                     view.currentIndex = 0
                     view.positionViewAtBeginning()
                 }
@@ -212,7 +213,7 @@ EmptyPage {
             // Implements the keyboard navigation described in https://www.w3.org/TR/wai-aria-practices-1.2/#grid
             if (count > 1) {
                 switch (event.key) {
-                    case Qt.Key_Left: if (!atLeft && !plasmoid.rootItem.searchField.activeFocus) {
+                    case Qt.Key_Left: if (!atLeft && !Plasmoid.rootItem.searchField.activeFocus) {
                         moveCurrentIndexLeft()
                         focusCurrentItem(event, Qt.BacktabFocusReason)
                     } break
@@ -220,7 +221,7 @@ EmptyPage {
                         moveCurrentIndexUp()
                         focusCurrentItem(event, Qt.BacktabFocusReason)
                     } break
-                    case Qt.Key_Right: if (!atRight && !plasmoid.rootItem.searchField.activeFocus) {
+                    case Qt.Key_Right: if (!atRight && !Plasmoid.rootItem.searchField.activeFocus) {
                         moveCurrentIndexRight()
                         focusCurrentItem(event, Qt.TabFocusReason)
                     } break

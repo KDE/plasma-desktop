@@ -17,6 +17,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.13 as Kirigami
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
+import org.kde.plasma.plasmoid 2.0
 
 PlasmaExtras.PlasmoidHeading {
     id: root
@@ -33,8 +34,8 @@ PlasmaExtras.PlasmoidHeading {
     topPadding: Math.round((background.margins.top - background.inset.top) / 2.0)
     bottomPadding: background.margins.bottom + Math.round((background.margins.bottom - background.inset.bottom) / 2.0)
 
-    leftInset: -plasmoid.rootItem.backgroundMetrics.leftPadding
-    rightInset: -plasmoid.rootItem.backgroundMetrics.rightPadding
+    leftInset: -Plasmoid.rootItem.backgroundMetrics.leftPadding
+    rightInset: -Plasmoid.rootItem.backgroundMetrics.rightPadding
     topInset: -background.margins.top
     bottomInset: 0
 
@@ -42,7 +43,7 @@ PlasmaExtras.PlasmoidHeading {
         id: kuser
     }
 
-    spacing: plasmoid.rootItem.backgroundMetrics.spacing
+    spacing: Plasmoid.rootItem.backgroundMetrics.spacing
 
     RowLayout {
         id: nameAndIcon
@@ -93,10 +94,10 @@ PlasmaExtras.PlasmoidHeading {
             Keys.onRightPressed: if (!LayoutMirroring.enabled) {
                 searchField.forceActiveFocus(Qt.TabFocusReason)
             }
-            Keys.onDownPressed: if (plasmoid.rootItem.sideBar) {
-                plasmoid.rootItem.sideBar.forceActiveFocus(Qt.TabFocusReason)
+            Keys.onDownPressed: if (Plasmoid.rootItem.sideBar) {
+                Plasmoid.rootItem.sideBar.forceActiveFocus(Qt.TabFocusReason)
             } else {
-                plasmoid.rootItem.contentArea.forceActiveFocus(Qt.TabFocusReason)
+                Plasmoid.rootItem.contentArea.forceActiveFocus(Qt.TabFocusReason)
             }
 
             onClicked: KQuickAddons.KCMShell.openSystemSettings("kcm_users")
@@ -160,24 +161,24 @@ PlasmaExtras.PlasmoidHeading {
             left: nameAndIcon.right
             right: parent.right
         }
-        Keys.onDownPressed: plasmoid.rootItem.contentArea.forceActiveFocus(Qt.TabFocusReason)
+        Keys.onDownPressed: Plasmoid.rootItem.contentArea.forceActiveFocus(Qt.TabFocusReason)
 
         PlasmaExtras.SearchField {
             id: searchField
             Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
             Layout.fillWidth: true
-            Layout.leftMargin: plasmoid.rootItem.backgroundMetrics.leftPadding
+            Layout.leftMargin: Plasmoid.rootItem.backgroundMetrics.leftPadding
             focus: true
 
             Binding {
-                target: plasmoid.rootItem
+                target: Plasmoid.rootItem
                 property: "searchField"
                 value: searchField
             }
             Connections {
-                target: plasmoid
+                target: Plasmoid.self
                 function onExpandedChanged() {
-                    if(!plasmoid.expanded) {
+                    if(!Plasmoid.expanded) {
                         searchField.clear()
                     }
                 }
@@ -186,11 +187,11 @@ PlasmaExtras.PlasmoidHeading {
                 searchField.forceActiveFocus(Qt.ShortcutFocusReason)
             }
             onAccepted: {
-                plasmoid.rootItem.contentArea.currentItem.action.triggered()
-                plasmoid.rootItem.contentArea.currentItem.forceActiveFocus(Qt.ShortcutFocusReason)
+                Plasmoid.rootItem.contentArea.currentItem.action.triggered()
+                Plasmoid.rootItem.contentArea.currentItem.forceActiveFocus(Qt.ShortcutFocusReason)
             }
             Keys.priority: Keys.AfterItem
-            Keys.forwardTo: plasmoid.rootItem.contentArea.view
+            Keys.forwardTo: Plasmoid.rootItem.contentArea.view
             Keys.onLeftPressed: if (activeFocus) {
                 if (LayoutMirroring.enabled) {
                     nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
@@ -210,9 +211,9 @@ PlasmaExtras.PlasmoidHeading {
         PC3.ToolButton {
             id: configureButton
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-            visible: plasmoid.action("configure").enabled
+            visible: Plasmoid.action("configure").enabled
             icon.name: "configure"
-            text: plasmoid.action("configure").text
+            text: Plasmoid.action("configure").text
             display: PC3.ToolButton.IconOnly
 
             PC3.ToolTip.text: text
@@ -228,11 +229,11 @@ PlasmaExtras.PlasmoidHeading {
             } else {
                 nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
             }
-            onClicked: plasmoid.action("configure").trigger()
+            onClicked: Plasmoid.action("configure").trigger()
         }
         PC3.ToolButton {
             checkable: true
-            checked: plasmoid.configuration.pin
+            checked: Plasmoid.configuration.pin
             icon.name: "window-pin"
             text: i18n("Keep Open")
             display: PC3.ToolButton.IconOnly
@@ -240,13 +241,13 @@ PlasmaExtras.PlasmoidHeading {
             PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
             PC3.ToolTip.visible: hovered
             Binding {
-                target: plasmoid
+                target: Plasmoid.self
                 property: "hideOnWindowDeactivate"
-                value: !plasmoid.configuration.pin
+                value: !Plasmoid.configuration.pin
             }
             KeyNavigation.backtab: configureButton
-            KeyNavigation.tab: if (plasmoid.rootItem.sideBar) {
-                return plasmoid.rootItem.sideBar
+            KeyNavigation.tab: if (Plasmoid.rootItem.sideBar) {
+                return Plasmoid.rootItem.sideBar
             } else {
                 return nextItemInFocusChain()
             }
@@ -256,7 +257,7 @@ PlasmaExtras.PlasmoidHeading {
             Keys.onRightPressed: if (LayoutMirroring.enabled) {
                 nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
             }
-            onToggled: plasmoid.configuration.pin = checked
+            onToggled: Plasmoid.configuration.pin = checked
         }
     }
 }

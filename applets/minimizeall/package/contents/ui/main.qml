@@ -17,10 +17,10 @@ import org.kde.taskmanager 0.1 as TaskManager
 Item {
     id: root
 
-    readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
-        || plasmoid.location === PlasmaCore.Types.RightEdge
-        || plasmoid.location === PlasmaCore.Types.BottomEdge
-        || plasmoid.location === PlasmaCore.Types.LeftEdge)
+    readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
+        || Plasmoid.location === PlasmaCore.Types.RightEdge
+        || Plasmoid.location === PlasmaCore.Types.BottomEdge
+        || Plasmoid.location === PlasmaCore.Types.LeftEdge)
 
     Layout.minimumWidth: PlasmaCore.Units.gridUnit
     Layout.minimumHeight: PlasmaCore.Units.gridUnit
@@ -119,7 +119,7 @@ Item {
         imagePath: "widgets/tabbar"
         prefix: {
             var prefix;
-            switch (plasmoid.location) {
+            switch (Plasmoid.location) {
                 case PlasmaCore.Types.LeftEdge:
                     prefix = "west-active-tab";
                     break;
@@ -148,7 +148,7 @@ Item {
 
     PlasmaCore.IconItem {
         id:icon
-        source: plasmoid.configuration.icon
+        source: Plasmoid.configuration.icon
         active: tooltip.containsMouse
         anchors.fill: parent
     }

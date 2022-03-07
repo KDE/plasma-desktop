@@ -17,7 +17,7 @@ Item {
     id: toolBoxContent
 
     transform: Translate {
-        y: plasmoid.editMode ? 0
+        y: Plasmoid.editMode ? 0
            : state == "top" || state == "topcenter" ? -height
            : state == "bottom" || state == "bottomcenter" ? height
            : 0
@@ -30,8 +30,8 @@ Item {
         }
     }
     transformOrigin: Item.Center
-    opacity: plasmoid.editMode
-    visible: plasmoid.editMode
+    opacity: Plasmoid.editMode
+    visible: Plasmoid.editMode
     Behavior on opacity {
         OpacityAnimator {
             duration: PlasmaCore.Units.longDuration
@@ -189,13 +189,13 @@ Item {
 
 
             PlasmaComponents3.ToolButton {
-                property QtObject qAction: plasmoid.action("add widgets")
+                property QtObject qAction: Plasmoid.action("add widgets")
                 text: qAction.text
                 icon.name: "list-add"
                 onClicked: qAction.trigger()
             }
             PlasmaComponents3.ToolButton {
-                property QtObject qAction: plasmoid.action("configure")
+                property QtObject qAction: Plasmoid.action("configure")
                 text: qAction.text
                 icon.name: "preferences-desktop-wallpaper"
                 onClicked: qAction.trigger()
@@ -212,7 +212,7 @@ Item {
             }
 
             PlasmaComponents3.ToolButton {
-                property QtObject qAction: plasmoid.globalAction("manage-containments")
+                property QtObject qAction: Plasmoid.globalAction("manage-containments")
                 text: qAction.text
                 visible: qAction.visible
                 icon.name: "preferences-system-windows-effect-fadedesktop"
@@ -222,7 +222,7 @@ Item {
             PlasmaComponents3.ToolButton {
                 icon.name: "window-close"
                 Layout.preferredWidth: height
-                onClicked: plasmoid.editMode = false
+                onClicked: Plasmoid.editMode = false
                 PlasmaComponents3.ToolTip {
                     text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Exit Edit Mode")
                 }

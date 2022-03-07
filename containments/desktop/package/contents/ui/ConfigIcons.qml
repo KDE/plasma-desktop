@@ -23,9 +23,9 @@ import org.kde.private.desktopcontainment.folder 0.1 as Folder
 Item {
     id: configIcons
 
-    property bool isPopup: (plasmoid.location !== PlasmaCore.Types.Floating)
+    property bool isPopup: (Plasmoid.location !== PlasmaCore.Types.Floating)
 
-    property string cfg_icon: plasmoid.configuration.icon
+    property string cfg_icon: Plasmoid.configuration.icon
     property alias cfg_useCustomIcon: useCustomIcon.checked
     property alias cfg_arrangement: arrangement.currentIndex
     property alias cfg_alignment: alignment.currentIndex

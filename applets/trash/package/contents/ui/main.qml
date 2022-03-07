@@ -19,10 +19,10 @@ import org.kde.plasma.private.trash 1.0 as TrashPrivate
 DragDrop.DropArea {
     id: root
 
-    readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
-        || plasmoid.location === PlasmaCore.Types.RightEdge
-        || plasmoid.location === PlasmaCore.Types.BottomEdge
-        || plasmoid.location === PlasmaCore.Types.LeftEdge)
+    readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
+        || Plasmoid.location === PlasmaCore.Types.RightEdge
+        || Plasmoid.location === PlasmaCore.Types.BottomEdge
+        || Plasmoid.location === PlasmaCore.Types.LeftEdge)
 
     property bool containsAcceptableDrag: false
 
@@ -42,7 +42,7 @@ DragDrop.DropArea {
     Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
     Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
 
-    readonly property int formFactor: plasmoid.formFactor
+    readonly property int formFactor: Plasmoid.formFactor
     readonly property bool constrained: formFactor === PlasmaCore.Types.Vertical || formFactor === PlasmaCore.Types.Horizontal
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
@@ -85,15 +85,15 @@ DragDrop.DropArea {
     }
 
     Component.onCompleted: {
-        plasmoid.removeAction("configure");
-        plasmoid.setAction("open", i18nc("a verb", "Open"),"document-open");
-        plasmoid.setAction("empty",i18nc("a verb", "Empty"),"trash-empty");
-        plasmoid.action("empty").enabled = Qt.binding(function() {
+        Plasmoid.removeAction("configure");
+        Plasmoid.setAction("open", i18nc("a verb", "Open"),"document-open");
+        Plasmoid.setAction("empty",i18nc("a verb", "Empty"),"trash-empty");
+        Plasmoid.action("empty").enabled = Qt.binding(function() {
             return dirModel.count > 0;
         });
 
         if (KCMShell.authorize("kcmtrash.desktop").length > 0) {
-            plasmoid.setAction("openkcm", i18n("Trash Settings…"), "configure");
+            Plasmoid.setAction("openkcm", i18n("Trash Settings…"), "configure");
         }
     }
 
@@ -105,7 +105,7 @@ DragDrop.DropArea {
 
     PlasmaCore.IconItem {
         id: icon
-        source: plasmoid.icon
+        source: Plasmoid.icon
         anchors {
             left: parent.left
             right: parent.right

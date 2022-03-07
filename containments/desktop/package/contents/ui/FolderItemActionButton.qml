@@ -16,7 +16,7 @@ PlasmaCore.SvgItem {
         if (!visible) {
             return 0;
         }
-        switch(plasmoid.configuration.iconSize) {
+        switch(Plasmoid.configuration.iconSize) {
             case 0: return PlasmaCore.Units.iconSizes.small;
             case 1: return PlasmaCore.Units.iconSizes.small;
             case 2: return PlasmaCore.Units.iconSizes.smallMedium;

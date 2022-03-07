@@ -9,6 +9,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 import org.kde.kirigami 2.19 as Kirigami
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
@@ -67,14 +68,14 @@ Item {
         // "You asked for Tooltips but Tooltips are disabled" message
         Kirigami.InlineMessage {
             Layout.fillWidth: true
-            visible: groupedTaskVisualization.currentIndex === 1 && !plasmoid.configuration.showToolTips && backend.windowViewAvailable
+            visible: groupedTaskVisualization.currentIndex === 1 && !Plasmoid.configuration.showToolTips && backend.windowViewAvailable
             type: Kirigami.MessageType.Warning
             text: i18n("Tooltips are disabled, so the windows will be displayed side by side instead.")
         }
         // "You asked for Tooltips but Tooltips are disabled and Window View is not available" message
         Kirigami.InlineMessage {
             Layout.fillWidth: true
-            visible: groupedTaskVisualization.currentIndex === 1 && !plasmoid.configuration.showToolTips && !backend.windowViewAvailable
+            visible: groupedTaskVisualization.currentIndex === 1 && !Plasmoid.configuration.showToolTips && !backend.windowViewAvailable
             type: Kirigami.MessageType.Warning
             text: i18n("Tooltips are disabled, and the compositor does not support displaying windows side by side, so a textual list will be displayed instead")
         }
@@ -92,21 +93,21 @@ Item {
 
         CheckBox {
             id: groupPopups
-            visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
+            visible: (Plasmoid.pluginName !== "org.kde.plasma.icontasks")
             text: i18n("Combine into single button")
             enabled: groupingStrategy.currentIndex > 0
         }
 
         CheckBox {
             id: onlyGroupWhenFull
-            visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
+            visible: (Plasmoid.pluginName !== "org.kde.plasma.icontasks")
             text: i18n("Group only when the Task Manager is full")
             enabled: groupingStrategy.currentIndex > 0 && groupPopups.checked
         }
 
         Item {
             Kirigami.FormData.isSection: true
-            visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
+            visible: (Plasmoid.pluginName !== "org.kde.plasma.icontasks")
         }
 
         ComboBox {
@@ -119,14 +120,14 @@ Item {
 
         CheckBox {
             id: separateLaunchers
-            visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
+            visible: (Plasmoid.pluginName !== "org.kde.plasma.icontasks")
             text: i18n("Keep launchers separate")
             enabled: sortingStrategy.currentIndex == 1
         }
 
         Item {
             Kirigami.FormData.isSection: true
-            visible: (plasmoid.pluginName !== "org.kde.plasma.icontasks")
+            visible: (Plasmoid.pluginName !== "org.kde.plasma.icontasks")
         }
 
         CheckBox {
@@ -213,10 +214,10 @@ Item {
 
         RadioButton {
             id: reverseMode
-            checked: plasmoid.configuration.reverseMode === true
+            checked: Plasmoid.configuration.reverseMode === true
             text: Qt.application.layoutDirection === Qt.RightToLeft ? i18n("To the right") : i18n("To the left")
             ButtonGroup.group: reverseModeRadioButtonGroup
-            visible: plasmoid.formFactor === PlasmaCore.Types.Horizontal
+            visible: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
         }
 
     }

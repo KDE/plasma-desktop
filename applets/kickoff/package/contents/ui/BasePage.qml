@@ -23,6 +23,7 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Templates 2.15 as T
 import QtQml 2.15
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.private.kicker 0.1 as Kicker
@@ -59,8 +60,8 @@ FocusScope {
             // backtab is implicitly set by the last button in Header.qml
             KeyNavigation.tab: root.contentAreaItem
             KeyNavigation.right: contentAreaLoader
-            Keys.onUpPressed: plasmoid.rootItem.header.nextItemInFocusChain().forceActiveFocus(Qt.BacktabFocusReason)
-            Keys.onDownPressed: plasmoid.rootItem.footer.tabBar.forceActiveFocus(Qt.TabFocusReason)
+            Keys.onUpPressed: Plasmoid.rootItem.header.nextItemInFocusChain().forceActiveFocus(Qt.BacktabFocusReason)
+            Keys.onDownPressed: Plasmoid.rootItem.footer.tabBar.forceActiveFocus(Qt.TabFocusReason)
         }
     }
     PlasmaCore.SvgItem {
@@ -86,9 +87,9 @@ FocusScope {
         }
         KeyNavigation.backtab: root.sideBarItem
         // Tab should go to the start of the footer focus chain
-        KeyNavigation.tab: plasmoid.rootItem.footer.nextItemInFocusChain()
+        KeyNavigation.tab: Plasmoid.rootItem.footer.nextItemInFocusChain()
         KeyNavigation.left: sideBarLoader
-        Keys.onUpPressed: plasmoid.rootItem.searchField.forceActiveFocus(Qt.BacktabFocusReason)
-        Keys.onDownPressed: plasmoid.rootItem.footer.leaveButtons.nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+        Keys.onUpPressed: Plasmoid.rootItem.searchField.forceActiveFocus(Qt.BacktabFocusReason)
+        Keys.onDownPressed: Plasmoid.rootItem.footer.leaveButtons.nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
     }
 }

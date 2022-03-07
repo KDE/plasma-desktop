@@ -11,6 +11,7 @@ import org.kde.draganddrop 2.0 as DragDrop
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
@@ -20,11 +21,11 @@ Kirigami.FormLayout {
     anchors.left: parent.left
     anchors.right: parent.right
 
-    property bool isDash: (plasmoid.pluginName === "org.kde.plasma.kickerdash")
+    property bool isDash: (Plasmoid.pluginName === "org.kde.plasma.kickerdash")
 
-    property string cfg_icon: plasmoid.configuration.icon
-    property bool cfg_useCustomButtonImage: plasmoid.configuration.useCustomButtonImage
-    property string cfg_customButtonImage: plasmoid.configuration.customButtonImage
+    property string cfg_icon: Plasmoid.configuration.icon
+    property bool cfg_useCustomButtonImage: Plasmoid.configuration.useCustomButtonImage
+    property string cfg_customButtonImage: Plasmoid.configuration.customButtonImage
 
     property alias cfg_appNameFormat: appNameFormat.currentIndex
     property alias cfg_limitDepth: limitDepth.checked
@@ -101,7 +102,7 @@ Kirigami.FormLayout {
         PlasmaCore.FrameSvgItem {
             id: previewFrame
             anchors.centerIn: parent
-            imagePath: plasmoid.location === PlasmaCore.Types.Vertical || plasmoid.location === PlasmaCore.Types.Horizontal
+            imagePath: Plasmoid.location === PlasmaCore.Types.Vertical || Plasmoid.location === PlasmaCore.Types.Horizontal
                     ? "widgets/panel-background" : "widgets/background"
             width: PlasmaCore.Units.iconSizes.large + fixedMargins.left + fixedMargins.right
             height: PlasmaCore.Units.iconSizes.large + fixedMargins.top + fixedMargins.bottom

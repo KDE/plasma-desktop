@@ -8,6 +8,7 @@ import QtQuick 2.0
 import QtQuick.Controls 1.1
 import QtQuick.Layouts 1.1
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 import org.kde.plasma.core 2.0 as PlasmaCore
 
@@ -19,7 +20,7 @@ ApplicationWindow {
 
     visible: false
 
-    property variant previewPlugins: plasmoid.configuration.previewPlugins
+    property variant previewPlugins: Plasmoid.configuration.previewPlugins
 
     title: i18n("Preview Plugins")
 
@@ -27,7 +28,7 @@ ApplicationWindow {
     modality: Qt.WindowModal
 
     onVisibleChanged: {
-        previewPluginsModel.checkedPlugins = plasmoid.configuration.previewPlugins;
+        previewPluginsModel.checkedPlugins = Plasmoid.configuration.previewPlugins;
     }
 
     Folder.PreviewPluginsModel {

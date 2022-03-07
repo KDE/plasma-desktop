@@ -11,6 +11,8 @@ import QtQuick.Layouts 1.3
 
 import org.kde.kirigami 2.6 as Kirigami
 
+import org.kde.plasma.plasmoid 2.0
+
 /**
  * A copy of Kirigami.AboutPage adapted to KPluginMetadata instead of KAboutData
  */
@@ -70,18 +72,18 @@ Kirigami.ScrollablePage {
                 Layout.preferredWidth: height
                 Layout.maximumWidth: page.width / 3;
                 Layout.rightMargin: Kirigami.Units.largeSpacing
-                source: plasmoid.metaData.iconName || plasmoid.metaData.pluginId
+                source: Plasmoid.metaData.iconName || Plasmoid.metaData.pluginId
                 fallback: "application-x-plasma"
             }
             Kirigami.Heading {
                 Layout.fillWidth: true
-                text: plasmoid.metaData.name + " " + plasmoid.metaData.version
+                text: Plasmoid.metaData.name + " " + Plasmoid.metaData.version
             }
             Kirigami.Heading {
                 Layout.fillWidth: true
                 level: 2
                 wrapMode: Text.WordWrap
-                text: plasmoid.metaData.description
+                text: Plasmoid.metaData.description
             }
         }
 
@@ -95,17 +97,17 @@ Kirigami.ScrollablePage {
         }
         QQC2.Label {
             Layout.leftMargin: Kirigami.Units.gridUnit
-            text: plasmoid.metaData.extraInformation
+            text: Plasmoid.metaData.extraInformation
             visible: text.length > 0
         }
         QQC2.Label {
             Layout.leftMargin: Kirigami.Units.gridUnit
-            text: plasmoid.metaData.copyrightText
+            text: Plasmoid.metaData.copyrightText
             visible: text.length > 0
         }
         Kirigami.UrlButton {
             Layout.leftMargin: Kirigami.Units.gridUnit
-            url: plasmoid.metaData.website
+            url: Plasmoid.metaData.website
             visible: url.length > 0
         }
 
@@ -113,10 +115,10 @@ Kirigami.ScrollablePage {
             Layout.leftMargin: Kirigami.Units.smallSpacing
             QQC2.Label { text: i18nd("plasma_shell_org.kde.plasma.desktop", "License:") }
             Kirigami.LinkButton {
-                text: plasmoid.metaData.license
+                text: Plasmoid.metaData.license
                 onClicked: {
-                    licenseSheet.text = plasmoid.metaData.licenseText
-                    licenseSheet.title = plasmoid.metaData.license
+                    licenseSheet.text = Plasmoid.metaData.licenseText
+                    licenseSheet.title = Plasmoid.metaData.license
                     licenseSheet.open()
                 }
             }
@@ -125,10 +127,10 @@ Kirigami.ScrollablePage {
             Layout.fillWidth: true
             Kirigami.FormData.isSection: visible
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Authors")
-            visible: plasmoid.metaData.authors.length > 0
+            visible: Plasmoid.metaData.authors.length > 0
         }
         Repeater {
-            model: plasmoid.metaData.authors
+            model: Plasmoid.metaData.authors
             delegate: personDelegate
         }
         Kirigami.Heading {
@@ -139,7 +141,7 @@ Kirigami.ScrollablePage {
         }
         Repeater {
             id: repCredits
-            model: plasmoid.metaData.otherContributors
+            model: Plasmoid.metaData.otherContributors
             delegate: personDelegate
         }
         Kirigami.Heading {
@@ -150,7 +152,7 @@ Kirigami.ScrollablePage {
         }
         Repeater {
             id: repTranslators
-            model: plasmoid.metaData.translators
+            model: Plasmoid.metaData.translators
             delegate: personDelegate
         }
     }

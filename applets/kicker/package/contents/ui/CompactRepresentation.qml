@@ -7,6 +7,7 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
@@ -14,13 +15,13 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 Item {
     id: root
 
-    readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
-        || plasmoid.location === PlasmaCore.Types.RightEdge
-        || plasmoid.location === PlasmaCore.Types.BottomEdge
-        || plasmoid.location === PlasmaCore.Types.LeftEdge)
-    readonly property bool vertical: (plasmoid.formFactor === PlasmaCore.Types.Vertical)
-    readonly property bool useCustomButtonImage: (plasmoid.configuration.useCustomButtonImage
-        && plasmoid.configuration.customButtonImage.length !== 0)
+    readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
+        || Plasmoid.location === PlasmaCore.Types.RightEdge
+        || Plasmoid.location === PlasmaCore.Types.BottomEdge
+        || Plasmoid.location === PlasmaCore.Types.LeftEdge)
+    readonly property bool vertical: (Plasmoid.formFactor === PlasmaCore.Types.Vertical)
+    readonly property bool useCustomButtonImage: (Plasmoid.configuration.useCustomButtonImage
+        && Plasmoid.configuration.customButtonImage.length !== 0)
 
     readonly property Component dashWindowComponent: kicker.isDash ? Qt.createComponent(Qt.resolvedUrl("./DashboardRepresentation.qml"), root) : null
     readonly property Kicker.DashboardWindow dashWindow: dashWindowComponent && dashWindowComponent.status === Component.Ready
@@ -71,7 +72,7 @@ Item {
 
         active: mouseArea.containsMouse && !justOpenedTimer.running
         smooth: true
-        source: root.useCustomButtonImage ? plasmoid.configuration.customButtonImage : plasmoid.configuration.icon
+        source: root.useCustomButtonImage ? Plasmoid.configuration.customButtonImage : Plasmoid.configuration.icon
 
         // A custom icon could also be rectangular. However, if a square, custom, icon is given, assume it
         // to be an icon and round it to the nearest icon size again to avoid scaling artifacts.
@@ -91,7 +92,7 @@ Item {
 
         onPressed: {
             if (!kicker.isDash) {
-                wasExpanded = plasmoid.expanded
+                wasExpanded = Plasmoid.expanded
             }
         }
 
@@ -100,13 +101,13 @@ Item {
                 root.dashWindow.toggle();
                 justOpenedTimer.start();
             } else {
-                plasmoid.expanded = !wasExpanded;
+                Plasmoid.expanded = !wasExpanded;
             }
         }
     }
 
     Connections {
-        target: plasmoid
+        target: Plasmoid.self
         enabled: kicker.isDash && root.dashWindow !== null
 
         function onActivated() {

@@ -23,24 +23,24 @@ Item {
     // The properties are defined here instead of the singleton because each
     // instance of Kickoff requires different instances of these properties
 
-    property bool inPanel: plasmoid.location === PlasmaCore.Types.TopEdge
-        || plasmoid.location === PlasmaCore.Types.RightEdge
-        || plasmoid.location === PlasmaCore.Types.BottomEdge
-        || plasmoid.location === PlasmaCore.Types.LeftEdge
-    property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
+    property bool inPanel: Plasmoid.location === PlasmaCore.Types.TopEdge
+        || Plasmoid.location === PlasmaCore.Types.RightEdge
+        || Plasmoid.location === PlasmaCore.Types.BottomEdge
+        || Plasmoid.location === PlasmaCore.Types.LeftEdge
+    property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     // Used to prevent the width from changing frequently when the scrollbar appears or disappears
-    property bool mayHaveGridWithScrollBar: plasmoid.configuration.applicationsDisplay === 0
-        || (plasmoid.configuration.favoritesDisplay === 0 && plasmoid.rootItem.rootModel.favoritesModel.count > 16)
+    property bool mayHaveGridWithScrollBar: Plasmoid.configuration.applicationsDisplay === 0
+        || (Plasmoid.configuration.favoritesDisplay === 0 && Plasmoid.rootItem.rootModel.favoritesModel.count > 16)
 
     //BEGIN Models
     property Kicker.RootModel rootModel: Kicker.RootModel {
         autoPopulate: false
 
-        appletInterface: plasmoid
+        appletInterface: Plasmoid
 
         flat: true // have categories, but no subcategories
-        sorted: plasmoid.configuration.alphaSort
+        sorted: Plasmoid.configuration.alphaSort
         showSeparators: false
         showTopLevelItems: true
 
@@ -53,13 +53,13 @@ Item {
         showFavoritesPlaceholder: true
 
         Component.onCompleted: {
-            favoritesModel.initForClient("org.kde.plasma.kickoff.favorites.instance-" + plasmoid.id)
+            favoritesModel.initForClient("org.kde.plasma.kickoff.favorites.instance-" + Plasmoid.id)
 
-            if (!plasmoid.configuration.favoritesPortedToKAstats) {
+            if (!Plasmoid.configuration.favoritesPortedToKAstats) {
                 if (favoritesModel.count < 1) {
-                    favoritesModel.portOldFavorites(plasmoid.configuration.favorites);
+                    favoritesModel.portOldFavorites(Plasmoid.configuration.favorites);
                 }
-                plasmoid.configuration.favoritesPortedToKAstats = true;
+                Plasmoid.configuration.favoritesPortedToKAstats = true;
             }
 
             refresh();
@@ -68,17 +68,17 @@ Item {
 
     property Kicker.RunnerModel runnerModel: Kicker.RunnerModel {
         query: kickoff.searchField ? kickoff.searchField.text : ""
-        appletInterface: plasmoid
+        appletInterface: Plasmoid
         mergeResults: true
         favoritesModel: rootModel.favoritesModel
     }
 
     property Kicker.ComputerModel computerModel: Kicker.ComputerModel {
-        appletInterface: plasmoid
+        appletInterface: Plasmoid
         favoritesModel: rootModel.favoritesModel
-        systemApplications: plasmoid.configuration.systemApplications
+        systemApplications: Plasmoid.configuration.systemApplications
         Component.onCompleted: {
-            //systemApplications = plasmoid.configuration.systemApplications;
+            //systemApplications = Plasmoid.configuration.systemApplications;
         }
     }
 
@@ -116,18 +116,18 @@ Item {
         readonly property real bottomPadding: margins.bottom - Math.max(inset.bottom, 0)
         readonly property real spacing: leftPadding
         visible: false
-        imagePath: plasmoid.formFactor === PlasmaCore.Types.Planar ? "widgets/background" : "dialogs/background"
+        imagePath: Plasmoid.formFactor === PlasmaCore.Types.Planar ? "widgets/background" : "dialogs/background"
     }
     //END
 
-    Plasmoid.switchWidth: plasmoid.fullRepresentationItem ? plasmoid.fullRepresentationItem.Layout.minimumWidth : -1
-    Plasmoid.switchHeight: plasmoid.fullRepresentationItem ? plasmoid.fullRepresentationItem.Layout.minimumHeight : -1
+    Plasmoid.switchWidth: Plasmoid.fullRepresentationItem ? Plasmoid.fullRepresentationItem.Layout.minimumWidth : -1
+    Plasmoid.switchHeight: Plasmoid.fullRepresentationItem ? Plasmoid.fullRepresentationItem.Layout.minimumHeight : -1
 
-    Plasmoid.preferredRepresentation: plasmoid.compactRepresentation
+    Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
 
     Plasmoid.fullRepresentation: FullRepresentation { focus: true }
 
-    Plasmoid.icon: plasmoid.configuration.icon
+    Plasmoid.icon: Plasmoid.configuration.icon
 
     Plasmoid.compactRepresentation: MouseArea {
         id: compactRoot
@@ -187,7 +187,7 @@ Item {
         // For some reason, onClicked can cause the plasmoid to expand after
         // releasing sometimes in plasmoidviewer.
         // plasmashell doesn't seem to have this issue.
-        onClicked: plasmoid.expanded = !plasmoid.expanded
+        onClicked: Plasmoid.expanded = !Plasmoid.expanded
 
         DropArea {
             id: compactDragArea
@@ -199,7 +199,7 @@ Item {
             // this is an interaction and not an animation, so we want it as a constant
             interval: 250
             running: compactDragArea.containsDrag
-            onTriggered: plasmoid.expanded = true
+            onTriggered: Plasmoid.expanded = true
         }
 
         PlasmaCore.IconItem {
@@ -209,7 +209,7 @@ Item {
                 : implicitWidth / implicitHeight)
 
             anchors.fill: parent
-            source: plasmoid.icon
+            source: Plasmoid.icon
             active: parent.containsMouse || compactDragArea.containsDrag
             smooth: true
             roundToIconSize: aspectRatio === 1
@@ -225,11 +225,11 @@ Item {
     }
 
     Component.onCompleted: {
-        if (plasmoid.hasOwnProperty("activationTogglesExpanded")) {
-            plasmoid.activationTogglesExpanded = true
+        if (Plasmoid.hasOwnProperty("activationTogglesExpanded")) {
+            Plasmoid.activationTogglesExpanded = true
         }
-        if (plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
-            plasmoid.setAction("menuedit", i18n("Edit Applications…"), "kmenuedit");
+        if (Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
+            Plasmoid.setAction("menuedit", i18n("Edit Applications…"), "kmenuedit");
         }
     }
 } // root

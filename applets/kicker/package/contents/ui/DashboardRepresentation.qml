@@ -15,6 +15,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.private.shell 2.0
+import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
@@ -147,9 +148,9 @@ Kicker.DashboardWindow {
         }
 
         Connections {
-            target: plasmoid
+            target: Plasmoid.self
             function onUserConfiguringChanged() {
-                if (plasmoid.userConfiguring) {
+                if (Plasmoid.userConfiguring) {
                     root.hide()
                 }
             }
@@ -159,7 +160,7 @@ Kicker.DashboardWindow {
             id: contextMenu
 
             PlasmaComponents.MenuItem {
-                action: plasmoid.action("configure")
+                action: Plasmoid.action("configure")
             }
         }
 
@@ -232,7 +233,7 @@ Kicker.DashboardWindow {
 
             anchors.horizontalCenter: parent.horizontalCenter
 
-            visible: (plasmoid.immutability !== PlasmaCore.Types.SystemImmutable)
+            visible: (Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable)
 
             onActiveTabChanged: {
                 root.updateWidgetExplorer();
@@ -914,7 +915,7 @@ Kicker.DashboardWindow {
 
                             onActionTriggered: {
                                 if (Tools.triggerAction(ListView.view.model, model.index, actionId, actionArgument) === true) {
-                                    plasmoid.expanded = false;
+                                    Plasmoid.expanded = false;
                                 }
                             }
 

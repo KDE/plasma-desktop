@@ -22,13 +22,13 @@ DND.DropArea {
     height: PlasmaCore.Units.iconSizes.large
     width: PlasmaCore.Units.iconSizes.large
 
-    property bool showActivityName: plasmoid.configuration.showActivityName
-    property bool showActivityIcon: plasmoid.configuration.showActivityIcon
+    property bool showActivityName: Plasmoid.configuration.showActivityName
+    property bool showActivityIcon: Plasmoid.configuration.showActivityIcon
 
-    readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
-        || plasmoid.location === PlasmaCore.Types.RightEdge
-        || plasmoid.location === PlasmaCore.Types.BottomEdge
-        || plasmoid.location === PlasmaCore.Types.LeftEdge)
+    readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
+        || Plasmoid.location === PlasmaCore.Types.RightEdge
+        || Plasmoid.location === PlasmaCore.Types.BottomEdge
+        || Plasmoid.location === PlasmaCore.Types.LeftEdge)
 
     Layout.maximumWidth: Infinity
     Layout.maximumHeight: Infinity

@@ -7,6 +7,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.0
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.configuration 2.0
@@ -120,10 +121,10 @@ Item {
         id: buttonsLayout_1
         rows: 1
         columns: 1
-        flow: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? GridLayout.TopToBottom : GridLayout.LeftToRight
+        flow: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? GridLayout.TopToBottom : GridLayout.LeftToRight
 
         anchors.margins: rowSpacing
-        anchors.topMargin: plasmoid.formFactor === PlasmaCore.Types.Vertical ? rowSpacing + closeButton.height : rowSpacing
+        anchors.topMargin: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? rowSpacing + closeButton.height : rowSpacing
 
         rowSpacing: PlasmaCore.Units.smallSpacing
         columnSpacing: PlasmaCore.Units.smallSpacing
@@ -258,7 +259,7 @@ Item {
         id: buttonsLayout_2
         rows: 1
         columns: 1
-        flow: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? GridLayout.TopToBottom : GridLayout.LeftToRight
+        flow: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? GridLayout.TopToBottom : GridLayout.LeftToRight
 
         anchors.margins: rowSpacing
 
@@ -282,8 +283,8 @@ Item {
 
         PlasmaComponents3.ToolButton {
             id: closeButton
-            parent: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? buttonsLayout_2 : root
-            anchors.right: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? undefined : parent.right
+            parent: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? buttonsLayout_2 : root
+            anchors.right: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? undefined : parent.right
             icon.name: "window-close"
             onClicked: {
                 configDialog.close()

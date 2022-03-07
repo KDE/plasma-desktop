@@ -65,8 +65,8 @@ Item {
         MenuButton {
             Layout.minimumWidth: implicitWidth
             Layout.maximumWidth: implicitWidth
-            Layout.fillHeight: plasmoid.formFactor === PlasmaCore.Types.Horizontal
-            Layout.fillWidth: plasmoid.formFactor === PlasmaCore.Types.Vertical
+            Layout.fillHeight: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
+            Layout.fillWidth: Plasmoid.formFactor === PlasmaCore.Types.Vertical
 
             onClicked: tasksMenu.open()
             down: pressed || tasksMenu.status === PC2.DialogStatus.Open

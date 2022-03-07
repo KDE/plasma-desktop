@@ -57,11 +57,11 @@ Item {
             visualParent: root.visualParent
 
             placement: {
-                if (plasmoid.location === PlasmaCore.Types.LeftEdge) {
+                if (Plasmoid.location === PlasmaCore.Types.LeftEdge) {
                     return PlasmaCore.Types.RightPosedTopAlignedPopup;
-                } else if (plasmoid.location === PlasmaCore.Types.TopEdge) {
+                } else if (Plasmoid.location === PlasmaCore.Types.TopEdge) {
                     return PlasmaCore.Types.BottomPosedLeftAlignedPopup;
-                } else if (plasmoid.location === PlasmaCore.Types.RightEdge) {
+                } else if (Plasmoid.location === PlasmaCore.Types.RightEdge) {
                     return PlasmaCore.Types.LeftPosedTopAlignedPopup;
                 } else {
                     return PlasmaCore.Types.TopPosedLeftAlignedPopup;

@@ -5,6 +5,7 @@
 */
 
 import QtQuick 2.0
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.configuration 2.0
 import "panelconfiguration"
@@ -56,7 +57,7 @@ PlasmaCore.FrameSvgItem {
     }
 
     Connections {
-        target: plasmoid
+        target: Plasmoid.self
         function onImmutableChanged() {
             configDialog.close()
         }

@@ -7,6 +7,7 @@
 import QtQuick 2.15
 
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
@@ -54,7 +55,7 @@ FocusScope {
         repeat: false
 
         onTriggered: {
-            if (!plasmoid.expanded || model === undefined || currentIndex == -1) {
+            if (!Plasmoid.expanded || model === undefined || currentIndex == -1) {
                 return;
             }
 
@@ -63,7 +64,7 @@ FocusScope {
             }
 
             // Gets reenabled after the dialog spawn causes a focus-in on the dialog window.
-            plasmoid.hideOnWindowDeactivate = false;
+            Plasmoid.hideOnWindowDeactivate = false;
 
             itemList.childDialog = itemListDialogComponent.createObject(itemList);
             itemList.childDialog.focusParent = itemList;
@@ -163,7 +164,7 @@ FocusScope {
                             return;
                         }
 
-                        if (currentItem == null || !currentItem.hasChildren || !plasmoid.expanded) {
+                        if (currentItem == null || !currentItem.hasChildren || !Plasmoid.expanded) {
                             dialogSpawnTimer.stop();
 
                             return;
@@ -231,7 +232,7 @@ FocusScope {
                     } else if (event.key === Qt.Key_Left && dialog != null) {
                         dialog.destroy();
                     } else if (event.key === Qt.Key_Escape) {
-                        plasmoid.expanded = false;
+                        Plasmoid.expanded = false;
                     } else if (event.key === Qt.Key_Tab) {
                         //do nothing, and skip appending text
                     } else if (event.text !== "") {

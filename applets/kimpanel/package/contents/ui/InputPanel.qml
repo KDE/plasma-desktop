@@ -26,10 +26,10 @@ PlasmaCore.Dialog {
     }
     location: PlasmaCore.Types.Floating
     visible: helper.auxVisible || helper.preeditVisible || helper.lookupTableVisible
-    readonly property bool verticalLayout: (helper.lookupTableLayout === 1) || (helper.lookupTableLayout === 0 && plasmoid.configuration.vertical_lookup_table);
+    readonly property bool verticalLayout: (helper.lookupTableLayout === 1) || (helper.lookupTableLayout === 0 && Plasmoid.configuration.vertical_lookup_table);
     property int highlightCandidate: helper.lookupTableCursor
     property int hoveredCandidate: -1
-    property font preferredFont: plasmoid.configuration.use_default_font ? PlasmaCore.Theme.defaultFont : plasmoid.configuration.font
+    property font preferredFont: Plasmoid.configuration.use_default_font ? PlasmaCore.Theme.defaultFont : Plasmoid.configuration.font
     readonly property alias textOffset: fontMetrics.ascent
     readonly property alias labelHeight: fontMetrics.height
     property rect position: helper.spotRect

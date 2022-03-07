@@ -71,12 +71,12 @@ Item {
         implicitWidth: PlasmaCore.Units.iconSizes.small
         implicitHeight: PlasmaCore.Units.iconSizes.small
 
-        source: plasmoid.icon
+        source: Plasmoid.icon
         active: mousearea.containsMouse
 
         PlasmaCore.ToolTipArea {
-            mainText: plasmoid.title
-            subText: plasmoid.toolTipSubText
+            mainText: Plasmoid.title
+            subText: Plasmoid.toolTipSubText
         }
 
         MouseArea {
@@ -84,7 +84,7 @@ Item {
 
             anchors.fill: parent
             onClicked: {
-                plasmoid.expanded = !plasmoid.expanded;
+                Plasmoid.expanded = !Plasmoid.expanded;
             }
         }
     }
@@ -96,8 +96,8 @@ Item {
         PlasmaExtras.PlaceholderMessage {
             anchors.centerIn: parent
             width: parent.width - (PlasmaCore.Units.largeSpacing * 8)
-            text: plasmoid.toolTipSubText
-            iconName: plasmoid.icon
+            text: Plasmoid.toolTipSubText
+            iconName: Plasmoid.icon
         }
     }
 }

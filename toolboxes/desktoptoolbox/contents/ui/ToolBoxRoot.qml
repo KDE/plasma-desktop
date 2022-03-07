@@ -22,7 +22,7 @@ Item {
     anchors.fill: parent
 
     Connections {
-        target: plasmoid
+        target: Plasmoid.self
         function onAvailableScreenRegionChanged() {
             placeToolBoxTimer.restart();
         }
@@ -43,7 +43,7 @@ Item {
     ToolBoxContent {
         id: toolBoxContent
         Component.onCompleted: {
-            placeToolBox(plasmoid.configuration.ToolBoxButtonState);
+            placeToolBox(Plasmoid.configuration.ToolBoxButtonState);
         }
     }
 
@@ -53,7 +53,7 @@ Item {
         repeat: false
         running: false
         onTriggered: {
-            placeToolBox(plasmoid.configuration.ToolBoxButtonState);
+            placeToolBox(Plasmoid.configuration.ToolBoxButtonState);
         }
     }
 
@@ -71,22 +71,22 @@ Item {
         switch (ts) {
         case "top":
             ty = main.y;
-            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
+            pos = Plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
             break;
         case "bottom":
             ty = main.height + main.y - toolBoxContent.height;
-            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
+            pos = Plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
             break;
         case "bottomcenter":
             tx = main.width / 2 - toolBoxContent.width / 2;
             ty = main.height + main.y - toolBoxContent.height;
-            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
+            pos = Plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
             break;
         case "topcenter":
         default:
             tx = main.width / 2 - toolBoxContent.width / 2;
             ty = main.y;
-            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
+            pos = Plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
             break;
         }
         //print("XXXY Setting toolbox to: " + ts + " " + tx + "x" + ty + " screen: " + main.width+ "x" + main.height+"");

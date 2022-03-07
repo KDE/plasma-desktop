@@ -7,6 +7,7 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Templates 2.15 as T
 import QtQml 2.15
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.private.kicker 0.1 as Kicker
@@ -16,7 +17,7 @@ BasePage {
     sideBarComponent: KickoffListView {
         id: sideBar
         focus: true // needed for Loaders
-        model: plasmoid.rootItem.rootModel
+        model: Plasmoid.rootItem.rootModel
         delegate: KickoffItemDelegate {
             width: view.availableWidth
             isCategory: model.hasChildren
@@ -24,13 +25,13 @@ BasePage {
     }
     contentAreaComponent: VerticalStackView {
         id: stackView
-        readonly property string preferredFavoritesViewObjectName: plasmoid.configuration.favoritesDisplay == 0 ? "favoritesGridView" : "favoritesListView"
-        readonly property Component preferredFavoritesViewComponent: plasmoid.configuration.favoritesDisplay == 0 ? favoritesGridViewComponent : favoritesListViewComponent
-        readonly property string preferredAppsViewObjectName: plasmoid.configuration.applicationsDisplay == 0 ? "applicationsGridView" : "applicationsListView"
-        readonly property Component preferredAppsViewComponent: plasmoid.configuration.applicationsDisplay == 0 ? applicationsGridViewComponent : applicationsListViewComponent
+        readonly property string preferredFavoritesViewObjectName: Plasmoid.configuration.favoritesDisplay == 0 ? "favoritesGridView" : "favoritesListView"
+        readonly property Component preferredFavoritesViewComponent: Plasmoid.configuration.favoritesDisplay == 0 ? favoritesGridViewComponent : favoritesListViewComponent
+        readonly property string preferredAppsViewObjectName: Plasmoid.configuration.applicationsDisplay == 0 ? "applicationsGridView" : "applicationsListView"
+        readonly property Component preferredAppsViewComponent: Plasmoid.configuration.applicationsDisplay == 0 ? applicationsGridViewComponent : applicationsListViewComponent
         // NOTE: The 0 index modelForRow isn't supposed to be used. That's just how it works.
         property int appsModelRow: 1
-        readonly property Kicker.AppsModel appsModel: plasmoid.rootItem.rootModel.modelForRow(appsModelRow)
+        readonly property Kicker.AppsModel appsModel: Plasmoid.rootItem.rootModel.modelForRow(appsModelRow)
         focus: true
         initialItem: preferredFavoritesViewComponent
 
@@ -41,7 +42,7 @@ BasePage {
                 objectName: "favoritesListView"
                 mainContentView: true
                 focus: true
-                model: plasmoid.rootItem.rootModel.favoritesModel
+                model: Plasmoid.rootItem.rootModel.favoritesModel
             }
         }
 
@@ -51,7 +52,7 @@ BasePage {
                 id: favoritesGridView
                 objectName: "favoritesGridView"
                 focus: true
-                model: plasmoid.rootItem.rootModel.favoritesModel
+                model: Plasmoid.rootItem.rootModel.favoritesModel
             }
         }
 
@@ -110,10 +111,10 @@ BasePage {
             }
         }
         Connections {
-            target: plasmoid
+            target: Plasmoid.self
             function onExpandedChanged() {
-                if(!plasmoid.expanded) {
-                    plasmoid.rootItem.contentArea.currentItem.forceActiveFocus()
+                if(!Plasmoid.expanded) {
+                    Plasmoid.rootItem.contentArea.currentItem.forceActiveFocus()
                 }
             }
         }
@@ -122,14 +123,14 @@ BasePage {
     // StackView.status and visible. This way the bindings are reset when
     // NormalPage is Activated again.
     Binding {
-        target: plasmoid.rootItem
+        target: Plasmoid.rootItem
         property: "sideBar"
         value: root.sideBarItem
         when: root.T.StackView.status === T.StackView.Active && root.visible
         restoreMode: Binding.RestoreBinding
     }
     Binding {
-        target: plasmoid.rootItem
+        target: Plasmoid.rootItem
         property: "contentArea"
         value: root.contentAreaItem.currentItem // NOT just root.contentAreaItem
         when: root.T.StackView.status === T.StackView.Active && root.visible
