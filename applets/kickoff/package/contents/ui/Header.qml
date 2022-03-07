@@ -162,17 +162,13 @@ PlasmaExtras.PlasmoidHeading {
         }
         Keys.onDownPressed: plasmoid.rootItem.contentArea.forceActiveFocus(Qt.TabFocusReason)
 
-        PC3.TextField {
+        PlasmaExtras.SearchField {
             id: searchField
             Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
             Layout.fillWidth: true
             Layout.leftMargin: plasmoid.rootItem.backgroundMetrics.leftPadding
             focus: true
-            placeholderText: i18n("Search…")
-            clearButtonShown: true
-            Accessible.editable: true
-            Accessible.searchEdit: true
-            inputMethodHints: Qt.ImhNoPredictiveText
+
             Binding {
                 target: plasmoid.rootItem
                 property: "searchField"
@@ -184,13 +180,6 @@ PlasmaExtras.PlasmoidHeading {
                     if(!plasmoid.expanded) {
                         searchField.clear()
                     }
-                }
-            }
-            Shortcut {
-                sequence: StandardKey.Find
-                onActivated: {
-                    searchField.forceActiveFocus(Qt.ShortcutFocusReason)
-                    searchField.selectAll()
                 }
             }
             onTextEdited: {
