@@ -8,7 +8,6 @@ import QtQuick 2.15
 
 import org.kde.draganddrop 2.0
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
@@ -236,7 +235,7 @@ FocusScope {
                 highlight: Item {
                     property bool isDropPlaceHolder: "dropPlaceholderIndex" in itemGrid.model && itemGrid.currentIndex === itemGrid.model.dropPlaceholderIndex
 
-                    PlasmaComponents.Highlight {
+                    PlasmaExtras.Highlight {
                         visible: gridView.currentItem && !isDropPlaceHolder
 
                         anchors.fill: parent

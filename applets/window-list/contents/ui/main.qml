@@ -100,7 +100,7 @@ FocusScope {
             spacing: 0
             keyNavigationWraps: true
 
-            highlight: PlasmaComponents.Highlight {}
+            highlight: PlasmaExtras.Highlight {}
             highlightMoveDuration: 0
 
             onOverflowingChanged: {

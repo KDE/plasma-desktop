@@ -967,7 +967,7 @@ Kicker.DashboardWindow {
                             }
                         }
 
-                        highlight: PlasmaComponents.Highlight {
+                        highlight: PlasmaExtras.Highlight {
                             anchors {
                                 top: filterList.currentItem ? filterList.currentItem.top : undefined
                                 left: filterList.currentItem ? filterList.currentItem.left : undefined

@@ -9,7 +9,6 @@ import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents // for Highlight
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
@@ -92,7 +91,7 @@ PlasmaCore.Dialog {
                 id: mainList
                 model: widgetExplorer.widgetsModel
                 boundsBehavior: Flickable.StopAtBounds
-                highlight: PlasmaComponents.Highlight {
+                highlight: PlasmaExtras.Highlight {
                     id: highlight
                 }
                 highlightMoveDuration : 0

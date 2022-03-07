@@ -7,9 +7,9 @@
 import QtQuick 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.draganddrop 2.0 as DND
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 DND.DropArea {
     id: root
@@ -25,7 +25,7 @@ DND.DropArea {
     property bool isHovered: false
     property bool actionVisible: false
 
-    PlasmaComponents.Highlight {
+    PlasmaExtras.Highlight {
         id: dropHighlight
         anchors {
             fill: parent
