@@ -9,7 +9,7 @@ import QtQuick.Controls 2.5
 import QtQuick.Controls 1.0 as QQC1
 import QtQuick.Layouts 1.0
 
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2.15 as Kirigami
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
@@ -71,12 +71,10 @@ ColumnLayout {
             inputMethodHints: Qt.ImhNoPredictiveText
         }
 
-        TextField {
+        Kirigami.SearchField {
             id: mimeFilter
             Kirigami.FormData.label: i18n("File types:")
             enabled: (filterMode.currentIndex > 0)
-            placeholderText: i18n("Search…")
-            inputMethodHints: Qt.ImhNoPredictiveText
         }
     }
 

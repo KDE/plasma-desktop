@@ -207,13 +207,9 @@ PC3.Page {
             }
 
             RowLayout {
-                PC3.TextField {
+                PlasmaExtras.SearchField {
                     id: searchInput
                     Layout.fillWidth: true
-                    clearButtonShown: true
-                    placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Search…")
-
-                    inputMethodHints: Qt.ImhNoPredictiveText
 
                     onTextChanged: {
                         list.positionViewAtBeginning()

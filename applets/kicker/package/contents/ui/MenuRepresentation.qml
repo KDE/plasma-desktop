@@ -11,6 +11,7 @@ import QtQml 2.15
 
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.kirigami 2.19 as Kirigami
 
@@ -294,7 +295,7 @@ FocusScope {
         }
     }
 
-    PlasmaComponents.TextField {
+    PlasmaExtras.SearchField {
         id: searchField
 
         anchors.bottom: mainRow.bottom
@@ -307,11 +308,6 @@ FocusScope {
                 - PlasmaCore.Units.smallSpacing
 
         focus: !Kirigami.InputMethod.willShowOnActive
-
-        placeholderText: i18n("Search…")
-        clearButtonShown: true
-
-        inputMethodHints: Qt.ImhNoPredictiveText
 
         onTextChanged: {
             runnerModel.query = text;
