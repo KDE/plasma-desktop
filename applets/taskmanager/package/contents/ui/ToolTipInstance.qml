@@ -13,8 +13,6 @@ import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-// for Highlight
-import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
@@ -91,7 +89,7 @@ ColumnLayout {
                 textFormat: Text.PlainText
             }
             // window title
-            PlasmaComponents.Label {
+            PlasmaComponents3.Label {
                 readonly property string title: generateTitle()
                 id: winTitle
                 maximumLineCount: 1
@@ -103,7 +101,7 @@ ColumnLayout {
                 textFormat: Text.PlainText
             }
             // subtext
-            PlasmaComponents.Label {
+            PlasmaComponents3.Label {
                 id: subtext
                 maximumLineCount: 1
                 Layout.fillWidth: true

@@ -7,7 +7,8 @@
 import QtQuick 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 2.0 as PlasmaComponents // for DialogStatus
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.draganddrop 2.0
 
 import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
@@ -492,7 +493,7 @@ MouseArea {
         Component {
             id: busyIndicator
 
-            PlasmaComponents.BusyIndicator { anchors.fill: parent }
+            PlasmaComponents3.BusyIndicator { anchors.fill: parent }
         }
     }
 
@@ -514,7 +515,7 @@ MouseArea {
         }
     }
 
-    PlasmaComponents.Label {
+    PlasmaComponents3.Label {
         id: label
 
         visible: (inPopup || !iconsOnly && model.IsLauncher !== true

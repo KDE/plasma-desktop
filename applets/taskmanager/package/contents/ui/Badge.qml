@@ -7,7 +7,7 @@
 import QtQuick 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 // This top-level item is an opaque background that goes behind the colored
 // background, for contrast. It's not an Item since that it would be square,
@@ -39,7 +39,7 @@ Rectangle {
     }
 
     // Number
-    PlasmaComponents.Label {
+    PlasmaComponents3.Label {
         id: label
         anchors.centerIn: parent
         width: height
