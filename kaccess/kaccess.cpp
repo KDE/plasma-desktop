@@ -402,7 +402,11 @@ struct xkb_any_ {
     uint8_t deviceID;
 };
 
-bool KAccessApp::nativeEventFilter(const QByteArray &eventType, void *message, long int *result)
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+bool KAccessApp::nativeEventFilter(const QByteArray &eventType, void *message, long *result)
+#else
+bool KAccessApp::nativeEventFilter(const QByteArray &eventType, void *message, qintptr *result)
+#endif
 {
     if (eventType == "xcb_generic_event_t") {
         xcb_generic_event_t *event = static_cast<xcb_generic_event_t *>(message);
