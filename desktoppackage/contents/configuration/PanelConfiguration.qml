@@ -17,8 +17,11 @@ PlasmaCore.FrameSvgItem {
     signal closeContextMenu
 
 //BEGIN Properties
-    width: 640
-    height: 64
+    readonly property bool vertical: (panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge)
+
+    implicitWidth: vertical ? ruler.implicitWidth + toolBar.implicitWidth : -1
+    implicitHeight: !vertical ? ruler.implicitHeight + toolBar.implicitHeight : -1
+
     imagePath: "dialogs/background"
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
@@ -38,7 +41,6 @@ PlasmaCore.FrameSvgItem {
         }
     }
 
-    property bool vertical: (panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge)
 //END properties
 
 //BEGIN Connections
@@ -74,6 +76,8 @@ PlasmaCore.FrameSvgItem {
     ToolBar {
         id: toolBar
         state: dialogRoot.state
+        width: dialogRoot.vertical ? implicitWidth : -1
+        height: !dialogRoot.vertical ? implicitHeight : -1
     }
 //END UI components
 

@@ -19,9 +19,14 @@ Item {
     implicitWidth: Math.max(addWidgetsButton.implicitWidth, addSpacerButton.implicitWidth, settingsButton.implicitWidth, spinBoxLabel.implicitWidth, spinBox.implicitWidth) + PlasmaCore.Units.smallSpacing * 2
     implicitHeight: Math.max(addWidgetsButton.implicitHeight, addSpacerButton.implicitHeight, settingsButton.implicitHeight, spinBoxLabel.implicitHeight, spinBox.implicitHeight) + PlasmaCore.Units.smallSpacing * 5
 
-    readonly property string addWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets…")
-    readonly property string addSpacerButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Spacer")
-    readonly property string settingsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "More Options…")
+    Connections {
+        target: configDialog
+        function onVisibleChanged() {
+            if (!configDialog.visible) {
+                settingsButton.checked = false
+            }
+        }
+    }
 
     KQuickControlsAddons.MouseEventListener {
         id: mel
@@ -37,7 +42,6 @@ Item {
             lastY = mouse.screenY
             startMouseX = mouse.x
             startMouseY = mouse.y
-            tooltip.visible = true
         }
         onPositionChanged: {
             panel.screenToFollow = mouse.screen;
@@ -117,22 +121,35 @@ Item {
     }
 
     GridLayout {
-        id: buttonsLayout_1
-        rows: 1
-        columns: 1
-        flow: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? GridLayout.TopToBottom : GridLayout.LeftToRight
+        id: buttonsLayout
 
-        anchors.margins: rowSpacing
-        anchors.topMargin: plasmoid.formFactor === PlasmaCore.Types.Vertical ? rowSpacing + closeButton.height : rowSpacing
+        readonly property int spacing: PlasmaCore.Units.smallSpacing
 
-        rowSpacing: PlasmaCore.Units.smallSpacing
-        columnSpacing: PlasmaCore.Units.smallSpacing
+        anchors.fill: parent
+        anchors.margins: spacing
+        rowSpacing: spacing
+        columnSpacing: spacing
+
+        columns: dialogRoot.vertical ? 1 : 8
+        rows: dialogRoot.vertical ? 8 : 1
+
+        PlasmaComponents3.ToolButton {
+            Layout.alignment: Qt.AlignRight
+            visible: dialogRoot.vertical
+            icon.name: "window-close"
+            onClicked: {
+                configDialog.close()
+            }
+            PlasmaComponents3.ToolTip {
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Close")
+            }
+        }
 
         PlasmaComponents3.Button {
             id: addWidgetsButton
-            text: root.addWidgetsButtonText
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets…")
             icon.name: "list-add"
-            Layout.fillWidth: true
+            Layout.fillWidth: dialogRoot.vertical
             onClicked: {
                 configDialog.close();
                 configDialog.showAddWidgetDialog();
@@ -141,44 +158,34 @@ Item {
 
         PlasmaComponents3.Button {
             id: addSpacerButton
-            text: root.addSpacerButtonText
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Spacer")
             icon.name: "distribute-horizontal-x"
-            Layout.fillWidth: true
+            Layout.fillWidth: dialogRoot.vertical
             onClicked: {
                 configDialog.addPanelSpacer();
             }
         }
-    }
-
-    GridLayout {
-        id: row
-        columns: dialogRoot.vertical ? 1 : 4
-        rows: dialogRoot.vertical ? 4 : 1
-        anchors.centerIn: parent
-
-        rowSpacing: PlasmaCore.Units.smallSpacing
-        columnSpacing: PlasmaCore.Units.smallSpacing
 
         PlasmaComponents3.Label {
+            Layout.fillHeight: true
             Layout.fillWidth: true
             wrapMode: Text.Wrap
             horizontalAlignment: Qt.AlignHCenter
+            verticalAlignment: Qt.AlignVCenter
             text: i18ndc("plasma_shell_org.kde.plasma.desktop", "Minimize the length of this string as much as possible", "Drag to move")
         }
-        Item {
-            Layout.preferredWidth: dialogRoot.vertical ? 0 : PlasmaCore.Units.gridUnit * 8
-            Layout.preferredHeight: dialogRoot.vertical ? PlasmaCore.Units.gridUnit * 8 : 0
-        }
+
         PlasmaComponents3.Label {
             id: spinBoxLabel
-            Layout.fillWidth: true
+            Layout.fillWidth: dialogRoot.vertical
             wrapMode: Text.Wrap
 
             text: panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge ? i18nd("plasma_shell_org.kde.plasma.desktop", "Panel width:") : i18nd("plasma_shell_org.kde.plasma.desktop", "Panel height:")
         }
+
         PlasmaComponents3.SpinBox {
             id: spinBox
-            Layout.fillWidth: true
+            Layout.fillWidth: dialogRoot.vertical
 
             editable: true
             focus: !Kirigami.InputMethod.willShowOnActive
@@ -237,39 +244,18 @@ Item {
                 }
             }
         }
-    }
 
-    PlasmaComponents3.Label {
-        id: placeHolder
-        visible: false
-        text: addWidgetsButtonText + addSpacerButtonText + settingsButtonText
-    }
-
-    Connections {
-        target: configDialog
-        function onVisibleChanged() {
-            if (!configDialog.visible) {
-                settingsButton.checked = false
-            }
+        // FIXME: this item should be much wider/taller than it actually is
+        Item {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
         }
-    }
-
-    GridLayout {
-        id: buttonsLayout_2
-        rows: 1
-        columns: 1
-        flow: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? GridLayout.TopToBottom : GridLayout.LeftToRight
-
-        anchors.margins: rowSpacing
-
-        rowSpacing: PlasmaCore.Units.smallSpacing
-        columnSpacing: PlasmaCore.Units.smallSpacing
 
         PlasmaComponents3.Button {
             id: settingsButton
-            text: root.settingsButtonText
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "More Options…")
             icon.name: "configure"
-            Layout.fillWidth: true
+            Layout.fillWidth: dialogRoot.vertical
             checkable: true
             onCheckedChanged: {
                 if (checked) {
@@ -281,9 +267,7 @@ Item {
         }
 
         PlasmaComponents3.ToolButton {
-            id: closeButton
-            parent: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? buttonsLayout_2 : root
-            anchors.right: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? undefined : parent.right
+            visible: !dialogRoot.vertical
             icon.name: "window-close"
             onClicked: {
                 configDialog.close()
@@ -292,34 +276,30 @@ Item {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Close")
             }
         }
+    }
 
-        Loader {
-            id: contextMenuLoader
-            property bool opened: item && item.visible
-            onOpenedChanged: settingsButton.checked = opened
-            source: "MoreSettingsMenu.qml"
-            active: false
+    Loader {
+        id: contextMenuLoader
+        property bool opened: item && item.visible
+        onOpenedChanged: settingsButton.checked = opened
+        source: "MoreSettingsMenu.qml"
+        active: false
 
-            function open() {
-                active = true
-                item.visible = true
-            }
-            function close() {
-                if (item) {
-                    item.visible = false
-                }
+        function open() {
+            active = true
+            item.visible = true
+        }
+        function close() {
+            if (item) {
+                item.visible = false
             }
         }
-
     }
-//BEGIN States
+
+    //BEGIN States
     states: [
         State {
             name: "TopEdge"
-            PropertyChanges {
-                target: root
-                height: root.implicitHeight
-            }
             AnchorChanges {
                 target: root
                 anchors {
@@ -328,42 +308,10 @@ Item {
                     left: root.parent.left
                     right: root.parent.right
                 }
-            }
-            AnchorChanges {
-                target: buttonsLayout_1
-                anchors {
-                    verticalCenter: root.verticalCenter
-                    top: undefined
-                    bottom: undefined
-                    left: root.left
-                    right: undefined
-                }
-            }
-            AnchorChanges {
-                target: buttonsLayout_2
-                anchors {
-                    verticalCenter: root.verticalCenter
-                    top: undefined
-                    bottom: undefined
-                    left: undefined
-                    right: root.right
-                }
-            }
-            PropertyChanges {
-                target: buttonsLayout_1
-                width: buttonsLayout_1.implicitWidth
-            }
-            PropertyChanges {
-                target: buttonsLayout_2
-                width: buttonsLayout_2.implicitWidth
             }
         },
         State {
             name: "BottomEdge"
-            PropertyChanges {
-                target: root
-                height: root.implicitHeight
-            }
             AnchorChanges {
                 target: root
                 anchors {
@@ -373,41 +321,9 @@ Item {
                     right: root.parent.right
                 }
             }
-            AnchorChanges {
-                target: buttonsLayout_1
-                anchors {
-                    verticalCenter: root.verticalCenter
-                    top: undefined
-                    bottom: undefined
-                    left: root.left
-                    right: undefined
-                }
-            }
-            AnchorChanges {
-                target: buttonsLayout_2
-                anchors {
-                    verticalCenter: root.verticalCenter
-                    top: undefined
-                    bottom: undefined
-                    left: undefined
-                    right: root.right
-                }
-            }
-            PropertyChanges {
-                target: buttonsLayout_1
-                width: buttonsLayout_1.implicitWidth
-            }
-            PropertyChanges {
-                target: buttonsLayout_2
-                width: buttonsLayout_2.implicitWidth
-            }
         },
         State {
             name: "LeftEdge"
-            PropertyChanges {
-                target: root
-                width: root.implicitWidth
-            }
             AnchorChanges {
                 target: root
                 anchors {
@@ -415,35 +331,11 @@ Item {
                     bottom: root.parent.bottom
                     left: undefined
                     right: root.parent.right
-                }
-            }
-            AnchorChanges {
-                target: buttonsLayout_1
-                anchors {
-                    verticalCenter: undefined
-                    top: root.top
-                    bottom: undefined
-                    left: root.left
-                    right: root.right
-                }
-            }
-            AnchorChanges {
-                target: buttonsLayout_2
-                anchors {
-                    verticalCenter: undefined
-                    top: undefined
-                    bottom: root.bottom
-                    left: root.left
-                    right: root.right
                 }
             }
         },
         State {
             name: "RightEdge"
-            PropertyChanges {
-                target: root
-                width: root.implicitWidth
-            }
             AnchorChanges {
                 target: root
                 anchors {
@@ -453,27 +345,7 @@ Item {
                     right: undefined
                 }
             }
-            AnchorChanges {
-                target: buttonsLayout_1
-                anchors {
-                    verticalCenter: undefined
-                    top: root.top
-                    bottom: undefined
-                    left: root.left
-                    right: root.right
-                }
-            }
-            AnchorChanges {
-                target: buttonsLayout_2
-                anchors {
-                    verticalCenter: undefined
-                    top: undefined
-                    bottom: root.bottom
-                    left: root.left
-                    right: root.right
-                }
-            }
         }
     ]
-//END States
+    //END States
 }
