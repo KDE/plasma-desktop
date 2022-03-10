@@ -150,8 +150,9 @@ X11LibinputDummyDevice::X11LibinputDummyDevice(QObject *parent, Display *dpy)
     m_supportsPointerAccelerationProfileAdaptive.val = true;
     m_supportsPointerAccelerationProfileFlat.val = true;
 
-    m_defaultPointerAccelerationProfileAdaptive.val = true;
-    m_defaultPointerAccelerationProfileFlat.val = false;
+    auto x11DefaultFlat = m_settings->load(QStringLiteral("X11LibInputXAccelProfileFlat"), false);
+    m_defaultPointerAccelerationProfileFlat.val = x11DefaultFlat;
+    m_defaultPointerAccelerationProfileAdaptive.val = !x11DefaultFlat;
 
     m_supportsNaturalScroll.val = true;
     m_naturalScrollEnabledByDefault.val = false;
@@ -174,9 +175,10 @@ bool X11LibinputDummyDevice::getConfig()
 
     reset(m_middleEmulation, false);
     reset(m_naturalScroll, false);
-    reset(m_pointerAccelerationProfileFlat, false);
+    auto flatDefault = m_defaultPointerAccelerationProfileFlat.val;
+    reset(m_pointerAccelerationProfileFlat, flatDefault);
 
-    m_pointerAccelerationProfileAdaptive.reset(!m_settings->load(m_pointerAccelerationProfileFlat.cfgName, false));
+    m_pointerAccelerationProfileAdaptive.reset(!m_settings->load(m_pointerAccelerationProfileFlat.cfgName, flatDefault));
     m_pointerAcceleration.reset(m_settings->load(m_pointerAcceleration.cfgName, 0.));
 
     return true;
@@ -205,6 +207,43 @@ bool X11LibinputDummyDevice::applyConfig()
     valueWriter(m_pointerAccelerationProfileFlat);
 
     return true;
+}
+
+void X11LibinputDummyDevice::getDefaultConfigFromX()
+{
+    // The user can override certain values in their X configuration. We want to
+    // account for those in our default values, but if we just read this when
+    // loading the KCM, we end up reading the current settings which may already
+    // have been modified by us. So instead, read these defaults during startup
+    // and write them to config, so we can later on read them again to know the
+    // system-wide defaults.
+    bool flatProfile = true;
+    XIForallPointerDevices(m_dpy, [&](XDeviceInfo *info) {
+        Atom property = m_pointerAccelerationProfileFlat.atom;
+        Atom type_return;
+        int format_return;
+        unsigned long num_items_return;
+        unsigned long bytes_after_return;
+        unsigned char *_data = nullptr;
+
+        auto status =
+            XIGetProperty(m_dpy, info->id, property, 0, 1, False, XA_INTEGER, &type_return, &format_return, &num_items_return, &bytes_after_return, &_data);
+        if (status != Success) {
+            return;
+        }
+
+        QScopedArrayPointer<unsigned char, ScopedXDeleter> data(_data);
+        _data = nullptr;
+
+        if (type_return != XA_INTEGER || !data || format_return != 8 || num_items_return != 2) {
+            return;
+        }
+
+        if (data[0] == 1 && data[1] == 0) {
+            flatProfile = false;
+        }
+    });
+    m_settings->save(QStringLiteral("X11LibInputXAccelProfileFlat"), flatProfile);
 }
 
 template<typename T>

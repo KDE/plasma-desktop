@@ -36,6 +36,8 @@ bool X11LibinputBackend::isChangedConfig() const
 
 void X11LibinputBackend::kcmInit()
 {
+    static_cast<X11LibinputDummyDevice *>(m_device)->getDefaultConfigFromX();
+
     getConfig();
     applyConfig();
     X11Backend::kcmInit();
