@@ -13,7 +13,7 @@
 #include <KActivities/Consumer>
 #include <KActivities/Info>
 #include <KLocalizedString>
-#include <KNS3/Button>
+#include <KNSWidgets/Button>
 #include <KPluginFactory>
 #include <KPluginWidget>
 #include <KRunner/RunnerManager>
@@ -133,8 +133,8 @@ SearchConfigModule::SearchConfigModule(QWidget *parent, const QVariantList &args
     layout->addWidget(m_pluginSelector);
 
     QHBoxLayout *downloadLayout = new QHBoxLayout;
-    KNS3::Button *downloadButton = new KNS3::Button(i18n("Get New Plugins…"), QStringLiteral("krunner.knsrc"), this);
-    connect(downloadButton, &KNS3::Button::dialogFinished, this, [this](const KNS3::Entry::List &changedEntries) {
+    KNSWidgets::Button *downloadButton = new KNSWidgets::Button(i18n("Get New Plugins…"), QStringLiteral("krunner.knsrc"), this);
+    connect(downloadButton, &KNSWidgets::Button::dialogFinished, this, [this](const QList<KNSCore::Entry> &changedEntries) {
         if (!changedEntries.isEmpty()) {
             m_pluginSelector->clear();
             m_pluginSelector->addPlugins(Plasma::RunnerManager::runnerMetaDataList(), i18n("Available Plugins"));

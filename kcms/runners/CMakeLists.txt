@@ -29,7 +29,7 @@ target_link_libraries(kcm_plasmasearch
   KF5::KCMUtils
   KF5::Runner
   KF5::I18n
-  KF5::NewStuff
+  KF5::NewStuffWidgets
   KF5::Activities
 
   Qt::DBus
