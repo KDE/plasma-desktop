@@ -196,6 +196,7 @@ KCM.SimpleKCM {
         }
 
         Item {
+            visible: feedbackLoader.visible
             Kirigami.FormData.isSection: false
         }
 
