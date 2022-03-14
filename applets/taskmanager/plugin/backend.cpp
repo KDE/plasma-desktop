@@ -13,6 +13,7 @@
 #include <KFilePlacesModel>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
+#include <KProtocolInfo>
 #include <KService>
 #include <KServiceAction>
 #include <KWindowEffects>
@@ -36,6 +37,7 @@
 #include <QQuickItem>
 #include <QQuickWindow>
 #include <QScopedPointer>
+#include <QStandardPaths>
 #include <QTimer>
 #include <QVersionNumber>
 
@@ -346,8 +348,9 @@ QVariantList Backend::placesActions(const QUrl &launcherUrl, bool showAllPlaces,
 
 QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *parent)
 {
+    QVariantList actions;
     if (!parent) {
-        return QVariantList();
+        return actions;
     }
 
     QUrl desktopEntryUrl = tryDecodeApplicationsUrl(launcherUrl);
@@ -356,7 +359,6 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
         return QVariantList();
     }
 
-    QVariantList actions;
     QString desktopName = desktopEntryUrl.fileName();
     QString storageId = desktopName;
 
@@ -364,7 +366,7 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
         storageId = storageId.left(storageId.length() - 8);
     }
 
-    auto query = UsedResources | RecentlyUsedFirst | Agent(storageId) | Type::files() | Activity::current() | Url::file();
+    auto query = UsedResources | RecentlyUsedFirst | Agent(storageId) | Type::any() | Activity::current();
 
     ResultSet results(query);
 
@@ -372,22 +374,56 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
 
     int actionCount = 0;
 
+    bool allFolders = true;
+    bool allDownloads = true;
+    bool allRemoteWithoutFileName = true;
+    const QString downloadsPath = QStandardPaths::writableLocation(QStandardPaths::DownloadLocation);
+
     while (actionCount < 5 && resultIt != results.end()) {
         const QString resource = (*resultIt).resource();
         const QString mimetype = (*resultIt).mimetype();
         ++resultIt;
 
-        const QUrl url = QUrl::fromLocalFile(resource);
+        QUrl url(resource);
+        if (url.scheme().isEmpty()) {
+            url = QUrl::fromLocalFile(resource);
+        }
 
         if (!url.isValid()) {
             continue;
         }
 
-        const KFileItem fileItem(url, KFileItem::SkipMimeTypeFromContent);
+        allFolders = allFolders && mimetype == QLatin1String("inode/directory");
+        allDownloads = allDownloads && url.toLocalFile().startsWith(downloadsPath);
+        allRemoteWithoutFileName = allRemoteWithoutFileName && !url.isLocalFile() && url.fileName().isEmpty();
+
+        QString name = url.fileName();
+        if (name.isEmpty()) {
+            name = url.toDisplayString();
+        }
+
+        QString iconName;
+
+        const QString protocol = url.scheme();
+        if (!KProtocolInfo::isKnownProtocol(protocol) || KProtocolInfo::isHelperProtocol(protocol)) {
+            const KService::Ptr service = KApplicationTrader::preferredService(QLatin1String("x-scheme-handler/") + protocol);
+            if (service) {
+                iconName = service->icon();
+            } else if (KProtocolInfo::isKnownProtocol(protocol)) {
+                Q_ASSERT(KProtocolInfo::isHelperProtocol(protocol));
+                iconName = KProtocolInfo::icon(protocol);
+            } else {
+                // Should not happen?
+                continue;
+            }
+        } else {
+            const KFileItem fileItem(url, mimetype);
+            iconName = fileItem.iconName();
+        }
 
         QAction *action = new QAction(parent);
-        action->setText(url.fileName());
-        action->setIcon(QIcon::fromTheme(fileItem.iconName(), QIcon::fromTheme(QStringLiteral("unknown"))));
+        action->setText(name);
+        action->setIcon(QIcon::fromTheme(iconName, QIcon::fromTheme(QStringLiteral("unknown"))));
         action->setProperty("agent", storageId);
         action->setProperty("entryPath", desktopEntryUrl);
         action->setProperty("mimeType", mimetype);
@@ -400,12 +436,29 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
     }
 
     if (actionCount > 0) {
+        // Overrides section heading on QML side
+        if (allDownloads) {
+            actions.prepend(i18n("Recent Downloads"));
+        } else if (allRemoteWithoutFileName) {
+            actions.prepend(i18n("Recent Connections"));
+        } else if (allFolders) {
+            actions.prepend(i18n("Recent Places"));
+        }
+
         QAction *separatorAction = new QAction(parent);
         separatorAction->setSeparator(true);
         actions << QVariant::fromValue<QAction *>(separatorAction);
 
         QAction *action = new QAction(parent);
-        action->setText(i18n("Forget Recent Files"));
+        if (allDownloads) {
+            action->setText(i18nc("@action:inmenu", "Forget Recent Downloads"));
+        } else if (allRemoteWithoutFileName) {
+            action->setText(i18nc("@action:inmenu", "Forget Recent Connections"));
+        } else if (allFolders) {
+            action->setText(i18nc("@action:inmenu", "Forget Recent Places"));
+        } else {
+            action->setText(i18nc("@action:inmenu", "Forget Recent Files"));
+        }
         action->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear-history")));
         action->setProperty("agent", storageId);
         connect(action, &QAction::triggered, this, &Backend::handleRecentDocumentAction);

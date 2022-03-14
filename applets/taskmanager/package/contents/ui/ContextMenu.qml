@@ -107,6 +107,13 @@ PlasmaComponents.ContextMenu {
             }
         ]
 
+        // C++ can override section heading by returning a QString as first action
+        sections.forEach((section) => {
+            if (typeof section.actions[0] === "string") {
+                section.title = section.actions.shift(); // take first
+            }
+        });
+
         // QMenu does not limit its width automatically. Even if we set a maximumWidth
         // it would just cut off text rather than eliding. So we do this manually.
         var textMetrics = Qt.createQmlObject("import QtQuick 2.4; TextMetrics {}", menu);
