@@ -17,16 +17,13 @@
 #include "flags.h"
 #include "x11_helper.h"
 
-static const char actionName[] = I18N_NOOP("Switch to Next Keyboard Layout");
-static const char COMPONENT_NAME[] = I18N_NOOP("KDE Keyboard Layout Switcher");
-
 KeyboardLayoutActionCollection::KeyboardLayoutActionCollection(QObject *parent, bool configAction_)
-    : KActionCollection(parent, COMPONENT_NAME)
+    : KActionCollection(parent, QStringLiteral("KDE Keyboard Layout Switcher"))
     , configAction(configAction_)
 {
     setComponentDisplayName(i18n("Keyboard Layout Switcher"));
-    QAction *toggleAction = addAction(actionName);
-    toggleAction->setText(i18n(actionName));
+    QAction *toggleAction = addAction(QStringLiteral("Switch to Next Keyboard Layout"));
+    toggleAction->setText(i18n("Switch to Next Keyboard Layout"));
     KGlobalAccel::self()->setShortcut(toggleAction, QList<QKeySequence>() << QKeySequence(Qt::ALT + Qt::CTRL + Qt::Key_K), KGlobalAccel::Autoloading);
     if (configAction) {
         toggleAction->setProperty("isConfigurationAction", true);
@@ -76,7 +73,7 @@ void KeyboardLayoutActionCollection::setLayoutShortcuts(QList<LayoutUnit> &layou
             createLayoutShortcutActon(layoutUnit, i, rules, false);
         }
     }
-    qCDebug(KCM_KEYBOARD) << "Cleaning component shortcuts on save" << KGlobalAccel::cleanComponent(COMPONENT_NAME);
+    qCDebug(KCM_KEYBOARD) << "Cleaning component shortcuts on save" << KGlobalAccel::cleanComponent(QStringLiteral("KDE Keyboard Layout Switcher"));
 }
 
 void KeyboardLayoutActionCollection::loadLayoutShortcuts(QList<LayoutUnit> &layoutUnits, const Rules *rules)
@@ -93,7 +90,7 @@ void KeyboardLayoutActionCollection::loadLayoutShortcuts(QList<LayoutUnit> &layo
             removeAction(action);
         }
     }
-    qCDebug(KCM_KEYBOARD) << "Cleaning component shortcuts on load" << KGlobalAccel::cleanComponent(COMPONENT_NAME);
+    qCDebug(KCM_KEYBOARD) << "Cleaning component shortcuts on load" << KGlobalAccel::cleanComponent(QStringLiteral("KDE Keyboard Layout Switcher"));
 }
 
 void KeyboardLayoutActionCollection::resetLayoutShortcuts()
