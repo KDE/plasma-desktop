@@ -25,13 +25,13 @@ KRunnerData::KRunnerData(QObject *parent, const QVariantList &args)
 
 bool KRunnerData::isDefaults() const
 {
-    QList<KPluginInfo> runnerInfos = KPluginInfo::fromMetaData(Plasma::RunnerManager::runnerMetaDataList());
+    const QVector<KPluginMetaData> runnerData = Plasma::RunnerManager::runnerMetaDataList();
     KConfigGroup cfgGroup(m_krunnerConfig, "Plugins");
-    for (auto &plugin : runnerInfos) {
-        plugin.load(cfgGroup);
-        if (plugin.isPluginEnabled() != plugin.isPluginEnabledByDefault()) {
-            return false;
-        }
+
+    if (std::any_of(runnerData.cbegin(), runnerData.cend(), [&cfgGroup](const KPluginMetaData &pluginData) {
+            return pluginData.isEnabled(cfgGroup) != pluginData.isEnabledByDefault();
+        })) {
+        return false;
     }
 
     return m_settings->isDefaults();
