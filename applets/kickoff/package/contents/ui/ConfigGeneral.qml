@@ -85,7 +85,7 @@ ColumnLayout {
 
         Button {
             icon.name: "settings-configure"
-            text: i18n("Configure enabled search plugins")
+            text: i18nc("@action:button", "Configure Enabled Search Plugins…")
             onClicked: KQuickAddons.KCMShell.openSystemSettings("kcm_plasmasearch")
         }
 
