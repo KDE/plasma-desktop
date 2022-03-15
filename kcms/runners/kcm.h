@@ -9,17 +9,12 @@
 #ifndef _KCM_SEARCH_H
 #define _KCM_SEARCH_H
 
-#include <KActivities/Consumer>
 #include <KCModule>
-#include <KConfigGroup>
 #include <KSharedConfig>
-#include <QCheckBox>
 #include <QPushButton>
-#include <QRadioButton>
-#include <QToolButton>
 
 class KPluginWidget;
-class KRunnerSettings;
+class KCMultiDialog;
 
 class SearchConfigModule : public KCModule
 {
@@ -38,9 +33,6 @@ public Q_SLOTS:
     void save() override;
     void defaults() override;
     void updateUnmanagedState();
-    void configureClearHistoryButton();
-    void deleteHistoryGroup(const QString &key);
-    void deleteAllHistory();
 
 private:
     void setDefaultIndicatorVisible(QWidget *widget, bool visible);
@@ -48,16 +40,8 @@ private:
     KPluginWidget *m_pluginSelector;
     KSharedConfigPtr m_config;
     QString m_pluginID;
-    QRadioButton *m_topPositioning;
-    QRadioButton *m_freeFloating;
-    QCheckBox *m_retainPriorSearch;
-    QCheckBox *m_activityAware;
-    QToolButton *m_clearHistoryButton;
-    QCheckBox *m_enableHistory;
-    KRunnerSettings *m_settings;
-    KActivities::Consumer *m_consumer;
-    KConfigGroup m_historyConfigGroup;
-    const QString nullUuid = QStringLiteral("00000000-0000-0000-0000-000000000000");
+    QPushButton *m_krunnerSettingsButton = nullptr;
+    KCMultiDialog *m_krunnerSettingsDialog = nullptr;
 };
 
 #endif

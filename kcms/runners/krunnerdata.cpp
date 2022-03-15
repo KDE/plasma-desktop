@@ -13,12 +13,12 @@
 #include <KPluginInfo>
 #include <KRunner/RunnerManager>
 
-#include "krunnersettings.h"
+#include "krunnersettingsbase.h"
 
 KRunnerData::KRunnerData(QObject *parent, const QVariantList &args)
     : KCModuleData(parent, args)
     , m_krunnerConfig(KSharedConfig::openConfig("krunnerrc"))
-    , m_settings(new KRunnerSettings(this))
+    , m_settings(new KRunnerSettingsBase(this))
 {
     m_settings->load();
 }

@@ -12,7 +12,7 @@
 #include <KCModuleData>
 #include <KSharedConfig>
 
-class KRunnerSettings;
+class KRunnerSettingsBase;
 
 class KRunnerData : public KCModuleData
 {
@@ -24,7 +24,7 @@ public:
 
 private:
     KSharedConfigPtr m_krunnerConfig;
-    KRunnerSettings *m_settings;
+    KRunnerSettingsBase *m_settings;
 };
 
 #endif // KRUNNERDATA_H
