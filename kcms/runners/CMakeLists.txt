@@ -25,7 +25,6 @@ set_target_properties(plugininstaller PROPERTIES
 
 
 target_link_libraries(kcm_plasmasearch
-  KF5::KIOWidgets
   KF5::CoreAddons
   KF5::KCMUtils
   KF5::Runner
