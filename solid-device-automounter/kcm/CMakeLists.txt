@@ -1,6 +1,6 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm5_device_automounter\")
 
-set(kcm_device_automounter_SRCS DeviceAutomounterKCM.cpp DeviceModel.cpp)
+set(kcm_device_automounter_SRCS DeviceAutomounterKCM.cpp DeviceModel.cpp DeviceAutomounterKCM.h DeviceModel.h)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
 
