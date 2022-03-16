@@ -67,9 +67,12 @@
 #include <Plasma/Containment>
 #include <Plasma/Corona>
 
+#include <chrono>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
+
+using namespace std::chrono_literals;
 
 Q_LOGGING_CATEGORY(FOLDERMODEL, "plasma.containments.desktop.folder.foldermodel")
 
@@ -225,7 +228,7 @@ FolderModel::FolderModel(QObject *parent)
      * adding an entry in the map and it showing up in the model should be
      * small, this should rarely, if ever happen.
      */
-    m_dropTargetPositionsCleanup->setInterval(10000);
+    m_dropTargetPositionsCleanup->setInterval(10s);
     m_dropTargetPositionsCleanup->setSingleShot(true);
     connect(m_dropTargetPositionsCleanup, &QTimer::timeout, this, [this]() {
         if (!m_dropTargetPositions.isEmpty()) {
@@ -375,7 +378,7 @@ void FolderModel::setUrl(const QString &url)
         m_dirWatch = new KDirWatch(this);
         connect(m_dirWatch, &KDirWatch::created, this, &FolderModel::iconNameChanged);
         connect(m_dirWatch, &KDirWatch::dirty, this, &FolderModel::iconNameChanged);
-        m_dirWatch->addFile(resolvedNewUrl.toLocalFile() + QLatin1String("/.directory"));
+        m_dirWatch->addFile(resolvedNewUrl.toLocalFile() + QStringLiteral("/.directory"));
     }
 
     if (dragging()) {
