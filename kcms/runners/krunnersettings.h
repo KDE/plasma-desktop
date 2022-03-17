@@ -37,7 +37,6 @@ class KRunnerSettings : public KQuickAddons::ManagedConfigModule
 
 public:
     KRunnerSettings(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
-    ~KRunnerSettings() override;
 
     KRunnerSettingsBase *krunnerSettings() const;
 

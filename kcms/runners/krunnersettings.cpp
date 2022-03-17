@@ -30,7 +30,7 @@ KRunnerSettings::KRunnerSettings(QObject *parent, const KPluginMetaData &metaDat
                                ->group("PlasmaRunnerManager")
                                .group("History"))
     , m_historyKeys(m_historyConfigGroup.keyList())
-    , m_doesShowPluginButton(args.size() == 0 || args.constFirst() != QLatin1String("openedFromPluginSettings"))
+    , m_doesShowPluginButton(args.isEmpty() || args.constFirst() != QLatin1String("openedFromPluginSettings"))
 {
     qmlRegisterType<KRunnerSettingsBase>();
 
@@ -39,10 +39,6 @@ KRunnerSettings::KRunnerSettings(QObject *parent, const KPluginMetaData &metaDat
     connect(krunnerSettings(), &KRunnerSettingsBase::activityAwareChanged, this, &KRunnerSettings::hasSingleHistoryChanged);
     connect(m_consumer, &KActivities::Consumer::activitiesChanged, this, &KRunnerSettings::activityCountChanged);
     connect(m_consumer, &KActivities::Consumer::activitiesChanged, this, &KRunnerSettings::hasSingleHistoryChanged);
-}
-
-KRunnerSettings::~KRunnerSettings()
-{
 }
 
 KRunnerSettingsBase *KRunnerSettings::krunnerSettings() const
