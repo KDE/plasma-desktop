@@ -1,4 +1,7 @@
 /*
+    SPDX-FileCopyrightText: 2014 Vishesh Handa <me@vhanda.in>
+    SPDX-FileCopyrightText: 2020 Alexander Lohnau <alexander.lohnau@gmx.de>
+    SPDX-FileCopyrightText: 2020 Cyril Rossi <cyril.rossi@enioka.com>
     SPDX-FileCopyrightText: 2022 Fushan Wen <qydwhotmail@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
