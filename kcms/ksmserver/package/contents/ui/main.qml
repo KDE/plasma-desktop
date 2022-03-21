@@ -36,7 +36,7 @@ KCM.SimpleKCM {
     Kirigami.FormLayout {
         CheckBox {
             Kirigami.FormData.label: i18n("General:")
-            text: i18n("Confirm logout")
+            text: i18nc("@option:check", "Confirm logout")
             checked: Settings.confirmLogout
             onToggled: Settings.confirmLogout = checked
             KCM.SettingStateBinding {
@@ -45,7 +45,7 @@ KCM.SimpleKCM {
             }
         }
         CheckBox {
-            text: i18n("Offer shutdown options")
+            text: i18nc("@option:check", "Offer shutdown options")
             checked: Settings.offerShutdown
             onToggled: Settings.offerShutdown = checked
             KCM.SettingStateBinding {
@@ -63,7 +63,7 @@ KCM.SimpleKCM {
         RadioButton {
             id: leaveEnd
             Kirigami.FormData.label: i18n("Default leave option:")
-            text: i18n("End current session")
+            text: i18nc("@option:radio Here 'session' refers to the technical concept of session restoration, whereby the windows that were open on logout are re-opened on the next login", "End current session")
             checked: Settings.shutdownType === 0
             onToggled: Settings.shutdownType = 0
             KCM.SettingStateBinding {
@@ -73,7 +73,7 @@ KCM.SimpleKCM {
         }
         RadioButton {
             id: leaveRestart
-            text: i18n("Restart computer")
+            text: i18nc("@option:radio", "Restart computer")
             checked: Settings.shutdownType === 1
             onToggled: Settings.shutdownType = 1
             KCM.SettingStateBinding {
@@ -83,7 +83,7 @@ KCM.SimpleKCM {
         }
         RadioButton {
             id: leaveOff
-            text: i18n("Turn off computer")
+            text: i18nc("@option:radio", "Turn off computer")
             checked: Settings.shutdownType === 2
             onToggled: Settings.shutdownType = 2
             KCM.SettingStateBinding {
@@ -100,7 +100,7 @@ KCM.SimpleKCM {
         RadioButton {
             id: loginRestore
             Kirigami.FormData.label: i18n("When logging in:")
-            text: i18n("Restore last session")
+            text: i18nc("@option:radio Here 'session' refers to the technical concept of session restoration, whereby the windows that were open on logout are re-opened on the next login", "Restore last session")
             checked: Settings.loginMode === 0
             onToggled: Settings.loginMode = 0
             KCM.SettingStateBinding {
@@ -110,7 +110,7 @@ KCM.SimpleKCM {
         }
         RadioButton {
             id: loginManual
-            text: i18n("Restore last manually saved session")
+            text: i18nc("@option:radio Here 'session' refers to the technical concept of session restoration, whereby the windows that were open on logout are re-opened on the next login", "Restore last manually saved session")
             checked: Settings.loginMode === 1
             onToggled: Settings.loginMode = 1
             KCM.SettingStateBinding {
@@ -120,7 +120,7 @@ KCM.SimpleKCM {
         }
         RadioButton {
             id: loginEmpty
-            text: i18n("Start with an empty session")
+            text: i18nc("@option:radio Here 'session' refers to the technical concept of session restoration, whereby the windows that were open on logout are re-opened on the next login", "Start with an empty session")
             checked: Settings.loginMode === 2
             onToggled: Settings.loginMode = 2
             KCM.SettingStateBinding {
@@ -153,7 +153,7 @@ KCM.SimpleKCM {
         }
         CheckBox {
             id: uefi
-            text: i18n("Enter firmware setup screen on next restart")
+            text: i18nc("@option:check", "Enter firmware setup screen on next restart")
             visible: kcm.canFirmwareSetup
             checked: kcm.restartInSetupScreen
             onToggled: kcm.restartInSetupScreen = checked
