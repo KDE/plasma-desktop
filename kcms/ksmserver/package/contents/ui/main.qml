@@ -100,7 +100,7 @@ KCM.SimpleKCM {
         RadioButton {
             id: loginRestore
             Kirigami.FormData.label: i18n("When logging in:")
-            text: i18n("Restore previous saved session")
+            text: i18n("Restore last session")
             checked: Settings.loginMode === 0
             onToggled: Settings.loginMode = 0
             KCM.SettingStateBinding {
@@ -110,7 +110,7 @@ KCM.SimpleKCM {
         }
         RadioButton {
             id: loginManual
-            text: i18n("Restore manually saved session")
+            text: i18n("Restore last manually saved session")
             checked: Settings.loginMode === 1
             onToggled: Settings.loginMode = 1
             KCM.SettingStateBinding {
