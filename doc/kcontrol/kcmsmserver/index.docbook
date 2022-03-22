@@ -13,8 +13,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2018-11-28</date>
-<releaseinfo>Plasma 5.14</releaseinfo>
+<date>2022-03-22</date>
+<releaseinfo>Plasma 5.25</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -83,7 +83,7 @@ you log into &plasma;:</para>
 
 <variablelist>
 <varlistentry>
-<term><guilabel>Restore previous session</guilabel></term>
+<term><guilabel>Restore last session</guilabel></term>
 <listitem><para>If this option is checked, &plasma; will save your current
 session's state when you logout.  &plasma; will restore your session on the
 next login, so you can continue to work with a desktop just like you
@@ -91,7 +91,7 @@ left it.</para>
 </listitem>
 </varlistentry>
 <varlistentry>
-<term><guilabel>Restore manually saved session</guilabel></term>
+<term><guilabel>Restore last manually saved session</guilabel></term>
 <listitem><para>Instead of restoring &plasma; to the state it was when
 you logged out last, it will be restored to a specific state that you
 have saved manually.</para>
