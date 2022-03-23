@@ -10,7 +10,7 @@ import QtQuick.Layouts 1.11
 import org.kde.kirigami 2.13 as Kirigami
 import QtQuick.Dialogs 1.3
 import org.kde.desktopsession.private 1.0 
-import org.kde.kcm 1.3 as KCM
+import org.kde.kcm 1.6 as KCM
 
 KCM.SimpleKCM {
     id: root
@@ -131,20 +131,25 @@ KCM.SimpleKCM {
         Item {
             Kirigami.FormData.isSection: true
         }
-        TextField {
-            id: notRestoredApplications
+        RowLayout {
             Kirigami.FormData.label: i18n("Don't restore these applications:")
-            text: Settings.excludeApps
-            // onTextEdited instead of onAccepted because otherwise the apply and
-            // reset buttons won't work, since otherwise in many case no change will
-            // be sent to the kconfigXt backend.
-            onTextEdited: Settings.excludeApps = text
-            ToolTip.text: i18n("Here you can enter a colon or comma separated list of applications that should not be saved in sessions, and therefore will not be started when restoring a session. For example 'xterm:konsole' or 'xterm,konsole'.")
-            ToolTip.visible: notRestoredApplications.hovered
-            ToolTip.delay: Kirigami.Units.toolTipDelay
-            KCM.SettingStateBinding {
-                configObject: Settings
-                settingName: "excludeApps"
+            spacing: Kirigami.Units.smallSpacing
+
+            TextField {
+                text: Settings.excludeApps
+                // onTextEdited instead of onAccepted because otherwise the apply and
+                // reset buttons won't work, since otherwise in many case no change will
+                // be sent to the kconfigXt backend.
+                onTextEdited: Settings.excludeApps = text
+
+                KCM.SettingStateBinding {
+                    configObject: Settings
+                    settingName: "excludeApps"
+                }
+            }
+
+            KCM.ContextualHelpButton {
+                toolTipText: i18n("Here you can enter a colon or comma separated list of applications that should not be saved in sessions, and therefore will not be started when restoring a session. For example 'xterm:konsole' or 'xterm,konsole'.")
             }
         }
         Item {
