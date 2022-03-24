@@ -8,7 +8,6 @@
 #include <KCrash>
 #include <KDBusService>
 #include <KLocalizedString>
-#include <KQuickAddons/QtQuickSettings>
 #include <KSharedConfig>
 #include <KWindowConfig>
 #include <QAbstractListModel>
@@ -72,7 +71,6 @@ int main(int argc, char **argv)
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-emoticons")));
     KCrash::initialize();
-    KQuickAddons::QtQuickSettings::init();
 
     KLocalizedString::setApplicationDomain("org.kde.plasma.emojier");
 
