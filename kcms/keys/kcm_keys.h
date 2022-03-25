@@ -50,6 +50,7 @@ public:
     QString lastError() const;
 
 Q_SIGNALS:
+    void showComponent(int row);
     void errorOccured();
 
 private:
@@ -62,6 +63,7 @@ private:
     KGlobalAccelInterface *m_globalAccelInterface;
     ShortcutsModel *m_shortcutsModel;
     StandardShortcutsModel *m_standardShortcutsModel;
+    QString m_argument;
 };
 
 #endif

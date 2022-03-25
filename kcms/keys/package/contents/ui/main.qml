@@ -21,6 +21,12 @@ KCM.AbstractKCM {
     implicitHeight: Kirigami.Units.gridUnit * 33
     property alias exportActive: exportInfo.visible
     readonly property bool errorOccured: kcm.lastError != ""
+    Connections {
+        target: kcm
+        onShowComponent: {
+            components.currentIndex = row
+        }
+    }
     ColumnLayout {
         anchors.fill: parent
         Kirigami.InlineMessage {

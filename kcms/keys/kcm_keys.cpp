@@ -65,6 +65,7 @@ KCMKeys::KCMKeys(QObject *parent, const QVariantList &args)
     m_filteredModel = new FilteredShortcutsModel(this);
     m_filteredModel->setSourceModel(m_shortcutsModel);
 
+    m_argument = args.isEmpty() ? QString() : args.first().toString();
     connect(m_shortcutsModel, &QAbstractItemModel::dataChanged, this, [this] {
         setNeedsSave(m_globalAccelModel->needsSave() || m_standardShortcutsModel->needsSave());
         setRepresentsDefaults(m_globalAccelModel->isDefault() && m_standardShortcutsModel->isDefault());
@@ -72,6 +73,17 @@ KCMKeys::KCMKeys(QObject *parent, const QVariantList &args)
     connect(m_shortcutsModel, &QAbstractItemModel::modelReset, this, [this] {
         setNeedsSave(false);
         setRepresentsDefaults(m_globalAccelModel->isDefault() && m_standardShortcutsModel->isDefault());
+    });
+    connect(m_globalAccelModel, &QAbstractItemModel::modelReset, this, [this] {
+        if (!m_argument.isEmpty()) {
+            for (int i = 0, c = m_filteredModel->rowCount(); i < c; ++i) {
+                if (m_filteredModel->data(m_filteredModel->index(i, 0), BaseModel::ComponentRole) == m_argument) {
+                    Q_EMIT showComponent(i);
+                    break;
+                }
+            }
+            m_argument.clear();
+        }
     });
 
     connect(m_globalAccelModel, &GlobalAccelModel::errorOccured, this, &KCMKeys::setError);
