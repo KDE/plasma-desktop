@@ -128,7 +128,8 @@ Item {
 
             Kirigami.FormData.label: i18n("Arrangement:")
 
-            model: [i18n("Rows"), i18n("Columns")]
+            model: [i18nc("@item:inlistbox arrangement of icons", "Rows"),
+                    i18nc("@item:inlistbox arrangement of icons", "Columns")]
         }
 
         ComboBox {
@@ -136,7 +137,8 @@ Item {
             Layout.fillWidth: true
             visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
-            model: [i18n("Align left"), i18n("Align right")]
+            model: [i18nc("@item:inlistbox alignment of icons", "Align left"),
+                    i18nc("@item:inlistbox alignment of icons", "Align right")]
         }
 
         CheckBox {
@@ -173,7 +175,11 @@ Item {
             property variant indexToMode: [-1, 0, 1, 6, 2]
             property variant modeToIndex: {'-1' : '0', '0' : '1', '1' : '2', '6' : '3', '2' : '4'}
 
-            model: [i18n("Manual"), i18n("Name"), i18n("Size"), i18n("Type"), i18n("Date")]
+            model: [i18nc("@item:inlistbox sort icons manually", "Manual"),
+                    i18nc("@item:inlistbox sort icons by name", "Name"),
+                    i18nc("@item:inlistbox sort icons by size", "Size"),
+                    i18nc("@item:inlistbox sort icons by file type", "Type"),
+                    i18nc("@item:inlistbox sort icons by date", "Date")]
 
             Component.onCompleted: currentIndex = modeToIndex[mode]
             onActivated: mode = indexToMode[index]
@@ -184,7 +190,7 @@ Item {
 
             enabled: (sortMode.currentIndex != 0)
 
-            text: i18n("Descending")
+            text: i18nc("@option:check sort icons in descending order", "Descending")
         }
 
         CheckBox {
@@ -192,7 +198,7 @@ Item {
 
             enabled: (sortMode.currentIndex != 0)
 
-            text: i18n("Folders first")
+            text: i18nc("@option:check sort icons with folders first", "Folders first")
         }
 
         Item {
@@ -208,7 +214,8 @@ Item {
 
             Kirigami.FormData.label: i18nc("whether to use icon or list view", "View mode:")
 
-            model: [i18n("List"), i18n("Icons")]
+            model: [i18nc("@item:inlistbox show icons in a list", "List"),
+                    i18nc("@item:inlistbox show icons in an icon grid", "Icons")]
         }
 
 
@@ -234,7 +241,7 @@ Item {
                 Layout.alignment: Qt.AlignLeft
                 visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
-                text: i18n("Small")
+                text: i18nc("@label:slider smallest icon size", "Small")
             }
             Item {
                 Layout.fillWidth: true
@@ -243,7 +250,7 @@ Item {
                 Layout.alignment: Qt.AlignRight
                 visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
-                text: i18n("Large")
+                text: i18nc("@label:slider largest icon size", "Large")
             }
         }
 
@@ -255,9 +262,9 @@ Item {
             Kirigami.FormData.label: i18n("Label width:")
 
             model: [
-                i18n("Narrow"),
-                i18n("Medium"),
-                i18n("Wide")
+                i18nc("@item:inlistbox how long a text label should be", "Narrow"),
+                i18nc("@item:inlistbox how long a text label should be", "Medium"),
+                i18nc("@item:inlistbox how long a text label should be", "Wide")
             ]
         }
 
