@@ -2,7 +2,9 @@ if(IBUS_FOUND AND GLIB2_FOUND AND GOBJECT_FOUND)
     add_subdirectory(emojier)
 
     configure_file(config-kimpanel.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kimpanel.h)
-    find_package(Qt5X11Extras)
+    if (QT_MAJOR_VERSION EQUAL "5")
+        find_package(Qt5X11Extras)
+    endif()
     find_package(XCB COMPONENTS XCB KEYSYMS)
 
     if (Qt5X11Extras_FOUND AND XCB_XCB_FOUND AND XCB_KEYSYMS_FOUND)

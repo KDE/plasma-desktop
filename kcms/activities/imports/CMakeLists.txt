@@ -1,7 +1,7 @@
 # vim:set softtabstop=3 shiftwidth=3 tabstop=3 expandtab:
 
 project (kactivities-settings)
-find_package (Qt5 REQUIRED NO_MODULE COMPONENTS Sql Gui Widgets Qml Quick Sql QuickWidgets)
+find_package (Qt${QT_MAJOR_VERSION} REQUIRED NO_MODULE COMPONENTS Sql Gui Widgets Qml Quick Sql QuickWidgets)
 find_package (KF5GlobalAccel ${KF5_DEP_VERSION} CONFIG REQUIRED)
 find_package (KF5I18n       ${KF5_DEP_VERSION} CONFIG REQUIRED)
 find_package (KF5WidgetsAddons ${KF5_DEP_VERSION} CONFIG REQUIRED)

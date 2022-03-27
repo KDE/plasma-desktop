@@ -4,7 +4,7 @@ set(kimpanelplugin_SRCS
     kimpanelplugin.cpp
     kimpanelagent.cpp
 )
-QT5_ADD_DBUS_ADAPTOR(kimpanelplugin_SRCS
+QT_ADD_DBUS_ADAPTOR(kimpanelplugin_SRCS
     org.kde.impanel.xml
     kimpanelagent.h
     PanelAgent)

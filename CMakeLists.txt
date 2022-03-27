@@ -6,7 +6,7 @@ set(PROJECT_VERSION "5.24.80")
 set(PROJECT_VERSION_MAJOR 5)
 
 set(QT_MIN_VERSION "5.15.0")
-set(KF5_MIN_VERSION "5.89")
+set(KF5_MIN_VERSION "5.90")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 set(ACCOUNTSQT_DEP_VERSION "1.13")
 
@@ -31,15 +31,17 @@ include(CheckIncludeFiles)
 include(KDEClangFormat)
 include(KDEGitCommitHooks)
 
-find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
+find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Quick
     QuickWidgets
     DBus
     Widgets
-    X11Extras
     Svg
     Concurrent
 )
+if (QT_MAJOR_VERSION EQUAL "5")
+    find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
+endif()
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Auth
@@ -70,11 +72,11 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     KDELibs4Support # kcms/dateandtime
 )
 
-find_package(AccountsQt5 ${ACCOUNTSQT_DEP_VERSION} CONFIG)
+find_package(AccountsQt${QT_MAJOR_VERSION} ${ACCOUNTSQT_DEP_VERSION} CONFIG)
 
 find_package(KUserFeedback)
 
-set_package_properties(AccountsQt5 PROPERTIES
+set_package_properties(AccountsQt${QT_MAJOR_VERSION} PROPERTIES
     DESCRIPTION "Accounts management library for Qt applications"
     URL "https://gitlab.com/accounts-sso/libaccounts-qt"
     PURPOSE "Required for building the OpenDesktop integration plugin"
@@ -91,7 +93,7 @@ set_package_properties(KAccounts PROPERTIES
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(SignOnOAuth2 IMPORTED_TARGET signon-oauth2plugin)
 set_package_properties(signon-oauth2plugin PROPERTIES
-    DESCRIPTION "Plugin for SignOnQt5 which handles OAuth and OAuth2 logins"
+    DESCRIPTION "Plugin for SignOnQt${QT_MAJOR_VERSION} which handles OAuth and OAuth2 logins"
     URL "https://gitlab.com/accounts-sso/signon-plugin-oauth2"
     PURPOSE "Required for running the OpenDesktop integration plugin"
     TYPE RUNTIME
@@ -185,14 +187,14 @@ endif()
 
 include(ConfigureChecks.cmake)
 
-find_package(PackageKitQt5)
-set_package_properties(PackageKitQt5 PROPERTIES
+find_package(PackageKitQt${QT_MAJOR_VERSION})
+set_package_properties(PackageKitQt${QT_MAJOR_VERSION} PROPERTIES
     DESCRIPTION "Software Manager integration"
     PURPOSE "Used in the KRunner plugin installer"
     TYPE OPTIONAL
 )
 
-if(PackageKitQt5_FOUND)
+if(PackageKitQt${QT_MAJOR_VERSION}_FOUND)
     set(HAVE_PACKAGEKIT TRUE)
 endif()
 
@@ -229,7 +231,7 @@ add_subdirectory(toolboxes)
 add_subdirectory(applets)
 add_subdirectory(kcms)
 add_subdirectory(knetattach)
-if(KAccounts_FOUND AND AccountsQt5_FOUND)
+if(KAccounts_FOUND AND AccountsQt${QT_MAJOR_VERSION}_FOUND)
     add_subdirectory(attica-kde)
 endif()
 add_subdirectory(imports/activitymanager/)

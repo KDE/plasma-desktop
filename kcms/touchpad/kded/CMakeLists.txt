@@ -10,5 +10,5 @@ target_link_libraries(kded_touchpad
 )
 
 install(FILES kcm_touchpad.notifyrc
-        DESTINATION ${KDE_INSTALL_KNOTIFY5RCDIR}
+        DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR}
 )

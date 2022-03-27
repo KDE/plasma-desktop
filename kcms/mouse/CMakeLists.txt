@@ -68,7 +68,7 @@ set(common_SRCS
 
 ki18n_wrap_ui(common_SRCS kcm/xlib/kcmmouse.ui)
 
-qt5_add_resources( common_SRCS kcm/resources.qrc )
+qt_add_resources( common_SRCS kcm/resources.qrc )
 
 add_library(kcm_mouse MODULE
     ${common_SRCS}

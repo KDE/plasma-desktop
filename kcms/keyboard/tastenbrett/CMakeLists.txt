@@ -24,7 +24,6 @@ target_link_libraries(tastenbrett
         Qt::Core
         Qt::Quick
         Qt::Gui
-        Qt::X11Extras
         KF5::CoreAddons
         KF5::I18n
         XCB::XCB
@@ -32,5 +31,8 @@ target_link_libraries(tastenbrett
         X11::xkbfile
         X11::X11
 )
+if (QT_MAJOR_VERSION EQUAL "5")
+    target_link_libraries(tastenbrett PRIVATE Qt5::X11Extras)
+endif()
 
 install(TARGETS tastenbrett DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

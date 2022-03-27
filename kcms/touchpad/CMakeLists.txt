@@ -17,7 +17,7 @@ qt_add_dbus_interfaces(TOUCHPAD_SRCS
                         ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 )
 
-qt5_generate_dbus_interface(kded/kded.h org.kde.touchpad.xml)
+qt_generate_dbus_interface(kded/kded.h org.kde.touchpad.xml)
 
 kconfig_add_kcfg_files(TOUCHPAD_SRCS kdedsettings.kcfgc)
 kconfig_add_kcfg_files(TOUCHPAD_SRCS touchpadparameters.kcfgc)
@@ -30,7 +30,6 @@ target_link_libraries(touchpad
     KF5::XmlGui
     PRIVATE
     ${backend_LIBS}
-    Qt::X11Extras
     Qt::DBus
     KF5::ConfigCore
     KF5::ConfigGui
@@ -38,6 +37,9 @@ target_link_libraries(touchpad
     KF5::I18n
     KF5::GlobalAccel
 )
+if (QT_MAJOR_VERSION EQUAL "5")
+    target_link_libraries(touchpad PRIVATE Qt5::X11Extras)
+endif()
 
 add_subdirectory(kcm)
 add_subdirectory(kded)

@@ -40,11 +40,14 @@ target_link_libraries(kcm_landingpage
     PW::KWorkspace
     KF5::ActivitiesStats
 
-    Qt5::DBus
+    Qt::DBus
 )
 
 if(X11_FOUND)
-    target_link_libraries(kcm_landingpage X11::X11 Qt5::X11Extras)
+    target_link_libraries(kcm_landingpage X11::X11)
+    if (QT_MAJOR_VERSION EQUAL "5")
+        target_link_libraries(kcm_landingpage Qt5::X11Extras)
+    endif()
 endif()
 
 if (KUserFeedback_FOUND)

@@ -42,7 +42,6 @@ set_target_properties(kded_keyboard PROPERTIES OUTPUT_NAME keyboard)
 target_link_libraries(kded_keyboard
     Qt::Concurrent
     Qt::Widgets
-    Qt::X11Extras
     Qt::Xml
     KF5::ConfigCore
     KF5::CoreAddons
@@ -60,6 +59,9 @@ target_link_libraries(kded_keyboard
     X11::X11
     X11::xkbfile
  )
+if (QT_MAJOR_VERSION EQUAL "5")
+    target_link_libraries(kded_keyboard Qt5::X11Extras)
+endif()
 
 if (HAVE_XINPUT)
     target_link_libraries(kded_keyboard X11::Xi)
@@ -117,7 +119,6 @@ add_library(kcm_keyboard_static STATIC ${kcm_keyboard_PART_SRCS})
 target_link_libraries(kcm_keyboard_static
     Qt::Concurrent
     Qt::Widgets
-    Qt::X11Extras
     Qt::Xml
     KF5::KCMUtils
     KF5::GlobalAccel
@@ -131,6 +132,9 @@ target_link_libraries(kcm_keyboard_static
     X11::X11
     X11::xkbfile
 )
+if (QT_MAJOR_VERSION EQUAL "5")
+    target_link_libraries(kcm_keyboard_static Qt5::X11Extras)
+endif()
 
 kcoreaddons_add_plugin(kcm_keyboard SOURCES kcmmain.cpp INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 target_link_libraries(kcm_keyboard kcm_keyboard_static)
@@ -143,7 +147,7 @@ configure_file(config-keyboard.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-keyboa
 
 # Unit tests
 if(BUILD_TESTING)
-    find_package(Qt5Test ${QT_MIN_VERSION} CONFIG REQUIRED)
+    find_package(Qt${QT_MAJOR_VERSION}Test ${QT_MIN_VERSION} CONFIG REQUIRED)
     add_subdirectory( tests )
 endif()
 

@@ -20,7 +20,9 @@ target_link_libraries(pagerplugin
                       Qt::Quick)
 
 if (X11_FOUND)
-    target_link_libraries(pagerplugin Qt::X11Extras)
+    if (QT_MAJOR_VERSION EQUAL "5")
+        target_link_libraries(pagerplugin Qt::X11Extras)
+    endif()
 endif()
 
 install(TARGETS pagerplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/pager)

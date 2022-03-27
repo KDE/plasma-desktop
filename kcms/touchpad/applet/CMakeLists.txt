@@ -8,7 +8,7 @@ set(Applet_SRCS
     touchpadservice.cpp
 )
 
-qt5_generate_dbus_interface(../kded/kded.h org.kde.touchpad.xml)
+qt_generate_dbus_interface(../kded/kded.h org.kde.touchpad.xml)
 qt_add_dbus_interfaces(Applet_SRCS
                         ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 )

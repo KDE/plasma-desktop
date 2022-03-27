@@ -32,9 +32,11 @@ target_link_libraries(kcm_access
     KF5::QuickAddons
     KF5::WindowSystem
     KF5::NotifyConfig
-    Qt::X11Extras
     X11::X11
 )
+if (QT_MAJOR_VERSION EQUAL "5")
+    target_link_libraries(kcm_access Qt::X11Extras)
+endif()
 
 install(FILES kcm_access.desktop  DESTINATION ${KDE_INSTALL_APPDIR})
 install(

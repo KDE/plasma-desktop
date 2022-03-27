@@ -6,14 +6,16 @@ macro(KEYBOARD_DAEMON_UNIT_TESTS _testname)
                target_link_libraries(${_testname}_test
                                      Qt::Concurrent
                                      Qt::Widgets
-                                     Qt::X11Extras
                                      Qt::Xml
                                      Qt::Test
                                      KF5::I18n
                                      KF5::WindowSystem
                                      X11::xkbfile
                                      X11::X11
-)
+               )
+               if (QT_MAJOR_VERSION EQUAL "5")
+                  target_link_libraries(${_testname}_test Qt5::X11Extras)
+               endif()
 endmacro(KEYBOARD_DAEMON_UNIT_TESTS)
 
 keyboard_daemon_unit_tests(xkb_rules)
@@ -52,7 +54,6 @@ if( X11_XTest_FOUND )
    target_link_libraries(keyboard_daemon_test
                          kcm_keyboard_static
                          Qt::Concurrent
-                         Qt::X11Extras
                          Qt::Xml
                          Qt::Test
                          KF5::ConfigCore
@@ -71,7 +72,11 @@ if( X11_XTest_FOUND )
                          X11::xkbfile
                          ${X11_XTest_LIB}
                          X11::X11
-)
+   )
+   if (QT_MAJOR_VERSION EQUAL "5")
+      target_link_libraries(keyboard_daemon_test Qt5::X11Extras)
+   endif()
+
    if (HAVE_XINPUT)
       target_link_libraries(keyboard_daemon_test X11::Xi)
    endif()

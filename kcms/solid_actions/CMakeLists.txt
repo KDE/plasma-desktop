@@ -34,4 +34,4 @@ install( TARGETS kcm_solid_actions DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/k
 install( TARGETS solid-action-desktop-gen ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 install( FILES kcm_solid_actions.desktop DESTINATION ${KDE_INSTALL_APPDIR} )
 install( FILES solid-action-template.desktop DESTINATION ${KDE_INSTALL_DATADIR}/kcmsolidactions )
-install( FILES solid-device-type.desktop DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR} )
+install( FILES solid-device-type.desktop DESTINATION ${KDE_INSTALL_KSERVICETYPESDIR} )
