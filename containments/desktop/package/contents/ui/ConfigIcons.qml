@@ -215,7 +215,7 @@ Item {
             Kirigami.FormData.label: i18nc("whether to use icon or list view", "View mode:")
 
             model: [i18nc("@item:inlistbox show icons in a list", "List"),
-                    i18nc("@item:inlistbox show icons in an icon grid", "Icons")]
+                    i18nc("@item:inlistbox show icons in a grid", "Grid")]
         }
 
 
