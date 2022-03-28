@@ -288,36 +288,50 @@ Item {
         CheckBox {
             id: toolTips
 
-            Kirigami.FormData.label: i18n("Features:")
+            Kirigami.FormData.label: i18n("When hovering over icons:")
 
-            text: i18n("Tooltips")
+            text: i18n("Show tooltips")
         }
 
         CheckBox {
             id: selectionMarkers
             visible: Qt.styleHints.singleClickActivation
 
-            text: i18n("Selection markers")
-        }
-
-        CheckBox {
-            id: renameInline
-            visible: !selectionMarkers.visible
-
-            text: i18n("Rename inline by clicking selected item's text")
+            text: i18n("Show selection markers")
         }
 
         CheckBox {
             id: popups
             visible: !isPopup
 
-            text: i18n("Folder preview popups")
+            text: i18n("Show folder preview popups")
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        CheckBox {
+            id: renameInline
+
+            Kirigami.FormData.label: i18n("Rename:")
+
+            visible: !selectionMarkers.visible
+
+            text: i18n("Rename inline by clicking selected item's text")
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+            visible: renameInline.visible
         }
 
         CheckBox {
             id: previews
 
-            text: i18n("Preview thumbnails")
+            Kirigami.FormData.label: i18n("Previews:")
+
+            text: i18n("Show preview thumbnails")
         }
 
         Button {
