@@ -41,9 +41,8 @@ KDEDConfig::KDEDConfig(QObject *parent, const QVariantList &args)
     , m_kdedWatcher(new QDBusServiceWatcher(s_kdedServiceName, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this))
 {
     qmlRegisterUncreatableType<KDEDConfig>("org.kde.private.kcms.style", 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
-    // FIXME Qt 5.14 qmlRegisterAnonymousType
-    qmlRegisterType<ModulesModel>();
-    qmlRegisterType<FilterProxyModel>();
+    qmlRegisterAnonymousType<ModulesModel>("org.kde.plasma.kded.kcm", 0);
+    qmlRegisterAnonymousType<FilterProxyModel>("org.kde.plasma.kded.kcm", 0);
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm5_kded"),
                                        i18n("Background Services"),

@@ -142,11 +142,11 @@ KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData, c
     , m_data(new AccessibilityData(this))
     , m_desktopShortcutInfo(QX11Info::isPlatformX11() ? mouseKeysShortcut(QX11Info::display()) : QString())
 {
-    qmlRegisterType<MouseSettings>();
-    qmlRegisterType<BellSettings>();
-    qmlRegisterType<KeyboardSettings>();
-    qmlRegisterType<KeyboardFiltersSettings>();
-    qmlRegisterType<ScreenReaderSettings>();
+    qmlRegisterAnonymousType<MouseSettings>("org.kde.plasma.access.kcm", 0);
+    qmlRegisterAnonymousType<BellSettings>("org.kde.plasma.access.kcm", 0);
+    qmlRegisterAnonymousType<KeyboardSettings>("org.kde.plasma.access.kcm", 0);
+    qmlRegisterAnonymousType<KeyboardFiltersSettings>("org.kde.plasma.access.kcm", 0);
+    qmlRegisterAnonymousType<ScreenReaderSettings>("org.kde.plasma.access.kcm", 0);
 
     int tryOrcaRun = QProcess::execute(QStringLiteral("orca"), {QStringLiteral("--version")});
     m_screenReaderInstalled = tryOrcaRun != -2;

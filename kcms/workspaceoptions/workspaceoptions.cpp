@@ -24,8 +24,8 @@ KCMWorkspaceOptions::KCMWorkspaceOptions(QObject *parent, const QVariantList &ar
     : KQuickAddons::ManagedConfigModule(parent, args)
     , m_data(new WorkspaceOptionsData(this))
 {
-    qmlRegisterType<WorkspaceOptionsGlobalsSettings>();
-    qmlRegisterType<WorkspaceOptionsPlasmaSettings>();
+    qmlRegisterAnonymousType<WorkspaceOptionsGlobalsSettings>("org.kde.plasma.workspaceoptions.kcm", 0);
+    qmlRegisterAnonymousType<WorkspaceOptionsPlasmaSettings>("org.kde.plasma.workspaceoptions.kcm", 0);
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm_workspace"),
                                        i18n("General Behavior"),

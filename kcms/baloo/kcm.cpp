@@ -49,8 +49,8 @@ ServerConfigModule::ServerConfigModule(QObject *parent, const QVariantList &args
     , m_data(new BalooData(this))
     , m_filteredFolderModel(new FilteredFolderModel(m_data->settings(), this))
 {
-    qmlRegisterType<FilteredFolderModel>();
-    qmlRegisterType<BalooSettings>();
+    qmlRegisterAnonymousType<FilteredFolderModel>("org.kde.plasma.baloo.kcm", 0);
+    qmlRegisterAnonymousType<BalooSettings>("org.kde.plasma.baloo.kcm", 0);
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm_baloofile"),
                                        i18n("File Search"),

@@ -160,12 +160,12 @@ KCMLandingPage::KCMLandingPage(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
     , m_data(new LandingPageData(this))
 {
-    qmlRegisterType<LandingPageGlobalsSettings>();
+    qmlRegisterAnonymousType<LandingPageGlobalsSettings>("org.kde.plasma.landingpage.kcm", 0);
 #if HAVE_KUSERFEEDBACK
-    qmlRegisterType<FeedbackSettings>();
+    qmlRegisterAnonymousType<FeedbackSettings>("org.kde.plasma.landingpage.kcm", 0);
 #endif
-    qmlRegisterType<MostUsedModel>();
-    qmlRegisterType<LookAndFeelGroup>();
+    qmlRegisterAnonymousType<MostUsedModel>("org.kde.plasma.landingpage.kcm", 0);
+    qmlRegisterAnonymousType<LookAndFeelGroup>("org.kde.plasma.landingpage.kcm", 0);
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm_landingpage"),
                                        i18n("Quick Settings"),
