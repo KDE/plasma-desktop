@@ -9,6 +9,7 @@
 #include <QDirIterator>
 #include <QList>
 #include <QMetaProperty>
+#include <QRegularExpression>
 
 #include <KConfigGroup>
 #include <KDesktopFile>
@@ -132,7 +133,7 @@ int SolidActionData::interfacePosition(Solid::DeviceInterface::Type devInterface
 QString SolidActionData::generateUserString(QString className)
 {
     QString finalString;
-    QRegExp camelCase(QStringLiteral("([A-Z])")); // Create the split regexp
+    QRegularExpression camelCase(QStringLiteral("([A-Z])")); // Create the split regexp
 
     finalString = className.remove(0, className.lastIndexOf(':') + 1); // Remove any Class information
     finalString.replace(camelCase, QStringLiteral(" \\1")); // Use Camel Casing to add spaces

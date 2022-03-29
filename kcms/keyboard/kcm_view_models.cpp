@@ -436,7 +436,7 @@ bool XkbOptionsTreeModel::setData(const QModelIndex &index, const QVariant &valu
     if (value.toInt() == Qt::Checked) {
         if (xkbGroup->exclusive) {
             // clear if exclusive (TODO: radiobutton)
-            int idx = m_xkbOptions.indexOf(QRegExp(xkbGroup->name + ".*"));
+            int idx = m_xkbOptions.indexOf(QRegularExpression(xkbGroup->name + ".*"));
             if (idx >= 0) {
                 for (int i = 0; i < xkbGroup->optionInfos.count(); i++)
                     if (xkbGroup->optionInfos[i]->name == m_xkbOptions.at(idx)) {

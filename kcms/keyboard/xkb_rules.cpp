@@ -11,7 +11,7 @@
 #include <KLocalizedString>
 
 #include <QDir>
-#include <QRegExp>
+#include <QRegularExpression>
 #include <QTextDocument> // for Qt::escape
 #include <QXmlAttributes>
 
@@ -191,7 +191,7 @@ Rules *Rules::readRules(ExtrasFlag extrasFlag)
         return nullptr;
     }
     if (extrasFlag == Rules::READ_EXTRAS) {
-        QRegExp regex(QStringLiteral("\\.xml$"));
+        QRegularExpression regex(QStringLiteral("\\.xml$"));
         Rules *rulesExtra = new Rules();
         QString extraRulesFile = rulesFile.replace(regex, QStringLiteral(".extras.xml"));
         if (readRules(rulesExtra, extraRulesFile, true)) { // not fatal if it fails

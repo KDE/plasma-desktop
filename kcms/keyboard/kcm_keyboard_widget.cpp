@@ -635,7 +635,7 @@ void KCMKeyboardWidget::updateXkbShortcutButton(const QString &groupName, QPushB
 {
     QStringList grpOptions;
     if (uiWidget->kcfg_resetOldXkbOptions->isChecked()) {
-        QRegExp regexp = QRegExp("^" + groupName + Rules::XKB_OPTION_GROUP_SEPARATOR);
+        QRegularExpression regexp("^" + groupName + Rules::XKB_OPTION_GROUP_SEPARATOR);
         XkbOptionsTreeModel *model = dynamic_cast<XkbOptionsTreeModel *>(uiWidget->xkbOptionsTreeView->model());
         grpOptions = model->xkbOptions().filter(regexp);
     }
