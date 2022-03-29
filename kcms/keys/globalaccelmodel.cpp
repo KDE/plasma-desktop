@@ -313,7 +313,7 @@ void GlobalAccelModel::removeComponent(const Component &component)
         return;
     }
     KGlobalAccelComponentInterface componentInterface(m_globalAccelInterface->service(), componentReply.value().path(), m_globalAccelInterface->connection());
-    qCDebug(KCMKEYS) << "Cleaning up component at" << componentReply.value();
+    qCDebug(KCMKEYS) << "Cleaning up component at" << componentReply.value().path();
     auto cleanUpReply = componentInterface.cleanUp();
     cleanUpReply.waitForFinished();
     if (!cleanUpReply.isValid()) {
