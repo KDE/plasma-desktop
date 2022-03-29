@@ -9,7 +9,6 @@
 
 #include <QList>
 #include <QStringList>
-#include <QXmlDefaultHandler>
 
 #include <config-keyboard.h>
 

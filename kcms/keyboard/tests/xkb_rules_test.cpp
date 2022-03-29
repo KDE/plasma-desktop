@@ -9,7 +9,6 @@
 #include "../xkb_rules.h"
 
 #include <qdom.h>
-#include <qxml.h>
 
 static const Rules::ExtrasFlag readExtras = Rules::NO_EXTRAS;
 

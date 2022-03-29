@@ -13,7 +13,7 @@
 #include <QDir>
 #include <QRegularExpression>
 #include <QTextDocument> // for Qt::escape
-#include <QXmlAttributes>
+#include <QXmlStreamReader>
 
 #include <QtConcurrent>
 
@@ -30,25 +30,6 @@
 #include <X11/Xlib.h>
 #include <X11/extensions/XKBrules.h>
 #include <fixx11h.h>
-
-class RulesHandler : public QXmlDefaultHandler
-{
-public:
-    RulesHandler(Rules *rules_, bool fromExtras_)
-        : rules(rules_)
-        , fromExtras(fromExtras_)
-    {
-    }
-
-    bool startElement(const QString &namespaceURI, const QString &localName, const QString &qName, const QXmlAttributes &attributes) override;
-    bool endElement(const QString &namespaceURI, const QString &localName, const QString &qName) override;
-    bool characters(const QString &str) override;
-
-private:
-    QStringList path;
-    Rules *rules;
-    const bool fromExtras;
-};
 
 static QString translate_xml_item(const QString &itemText)
 {
@@ -210,17 +191,67 @@ Rules *Rules::readRules(Rules *rules, const QString &filename, bool fromExtras)
         return nullptr;
     }
 
-    RulesHandler rulesHandler(rules, fromExtras);
+    QStringList path;
+    QXmlStreamReader reader(&file);
+    while (!reader.atEnd()) {
+        const auto token = reader.readNext();
+        if (token == QXmlStreamReader::StartElement) {
+            path << reader.name().toString();
+            QString strPath = path.join(QLatin1String("/"));
 
-    QXmlSimpleReader reader;
-    reader.setContentHandler(&rulesHandler);
-    reader.setErrorHandler(&rulesHandler);
+            if (strPath.endsWith(QLatin1String("layoutList/layout/configItem"))) {
+                rules->layoutInfos << new LayoutInfo(fromExtras);
+            } else if (strPath.endsWith(QLatin1String("layoutList/layout/variantList/variant"))) {
+                rules->layoutInfos.last()->variantInfos << new VariantInfo(fromExtras);
+            } else if (strPath.endsWith(QLatin1String("modelList/model"))) {
+                rules->modelInfos << new ModelInfo();
+            } else if (strPath.endsWith(QLatin1String("optionList/group"))) {
+                rules->optionGroupInfos << new OptionGroupInfo();
+                rules->optionGroupInfos.last()->exclusive = (reader.attributes().value(QStringLiteral("allowMultipleSelection")) != QLatin1String("true"));
+            } else if (strPath.endsWith(QLatin1String("optionList/group/option"))) {
+                rules->optionGroupInfos.last()->optionInfos << new OptionInfo();
+            } else if (strPath == ("xkbConfigRegistry") && !reader.attributes().value(QStringLiteral("version")).isEmpty()) {
+                rules->version = reader.attributes().value(QStringLiteral("version")).toString();
+                qCDebug(KCM_KEYBOARD) << "xkbConfigRegistry version" << rules->version;
+            }
 
-    QXmlInputSource xmlInputSource(&file);
+            if (strPath.endsWith(QLatin1String("layoutList/layout/configItem/name"))) {
+                if (rules->layoutInfos.last() != nullptr) {
+                    rules->layoutInfos.last()->name = reader.readElementText().trimmed();
+                }
+            } else if (strPath.endsWith(QLatin1String("layoutList/layout/configItem/description"))) {
+                rules->layoutInfos.last()->description = reader.readElementText().trimmed();
+            } else if (strPath.endsWith(QLatin1String("layoutList/layout/configItem/languageList/iso639Id"))) {
+                rules->layoutInfos.last()->languages << reader.readElementText().trimmed();
+            } else if (strPath.endsWith(QLatin1String("layoutList/layout/variantList/variant/configItem/name"))) {
+                rules->layoutInfos.last()->variantInfos.last()->name = reader.readElementText().trimmed();
+            } else if (strPath.endsWith(QLatin1String("layoutList/layout/variantList/variant/configItem/description"))) {
+                rules->layoutInfos.last()->variantInfos.last()->description = reader.readElementText().trimmed();
+            } else if (strPath.endsWith(QLatin1String("layoutList/layout/variantList/variant/configItem/languageList/iso639Id"))) {
+                rules->layoutInfos.last()->variantInfos.last()->languages << reader.readElementText().trimmed();
+            } else if (strPath.endsWith(QLatin1String("modelList/model/configItem/name"))) {
+                rules->modelInfos.last()->name = reader.readElementText().trimmed();
+            } else if (strPath.endsWith(QLatin1String("modelList/model/configItem/description"))) {
+                rules->modelInfos.last()->description = reader.readElementText().trimmed();
+            } else if (strPath.endsWith(QLatin1String("modelList/model/configItem/vendor"))) {
+                rules->modelInfos.last()->vendor = reader.readElementText().trimmed();
+            } else if (strPath.endsWith(QLatin1String("optionList/group/configItem/name"))) {
+                rules->optionGroupInfos.last()->name = reader.readElementText().trimmed();
+            } else if (strPath.endsWith(QLatin1String("optionList/group/configItem/description"))) {
+                rules->optionGroupInfos.last()->description = reader.readElementText().trimmed();
+            } else if (strPath.endsWith(QLatin1String("optionList/group/option/configItem/name"))) {
+                rules->optionGroupInfos.last()->optionInfos.last()->name = reader.readElementText().trimmed();
+            } else if (strPath.endsWith(QLatin1String("optionList/group/option/configItem/description"))) {
+                rules->optionGroupInfos.last()->optionInfos.last()->description = reader.readElementText().trimmed();
+            }
+        } else if (token == QXmlStreamReader::EndElement) {
+            path.removeLast();
+        }
+    }
 
     qCDebug(KCM_KEYBOARD) << "Parsing xkb rules from" << file.fileName();
 
-    if (!reader.parse(xmlInputSource)) {
+    if (reader.hasError()) {
         qCCritical(KCM_KEYBOARD) << "Failed to parse the rules file" << file.fileName();
         return nullptr;
     }
@@ -228,72 +259,6 @@ Rules *Rules::readRules(Rules *rules, const QString &filename, bool fromExtras)
     postProcess(rules);
 
     return rules;
-}
-
-bool RulesHandler::startElement(const QString & /*namespaceURI*/, const QString & /*localName*/, const QString &qName, const QXmlAttributes &attributes)
-{
-    path << QString(qName);
-
-    QString strPath = path.join(QLatin1String("/"));
-    if (strPath.endsWith(QLatin1String("layoutList/layout/configItem"))) {
-        rules->layoutInfos << new LayoutInfo(fromExtras);
-    } else if (strPath.endsWith(QLatin1String("layoutList/layout/variantList/variant"))) {
-        rules->layoutInfos.last()->variantInfos << new VariantInfo(fromExtras);
-    } else if (strPath.endsWith(QLatin1String("modelList/model"))) {
-        rules->modelInfos << new ModelInfo();
-    } else if (strPath.endsWith(QLatin1String("optionList/group"))) {
-        rules->optionGroupInfos << new OptionGroupInfo();
-        rules->optionGroupInfos.last()->exclusive = (attributes.value(QStringLiteral("allowMultipleSelection")) != QLatin1String("true"));
-    } else if (strPath.endsWith(QLatin1String("optionList/group/option"))) {
-        rules->optionGroupInfos.last()->optionInfos << new OptionInfo();
-    } else if (strPath == ("xkbConfigRegistry") && !attributes.value(QStringLiteral("version")).isEmpty()) {
-        rules->version = attributes.value(QStringLiteral("version"));
-        qCDebug(KCM_KEYBOARD) << "xkbConfigRegistry version" << rules->version;
-    }
-    return true;
-}
-
-bool RulesHandler::endElement(const QString & /*namespaceURI*/, const QString & /*localName*/, const QString & /*qName*/)
-{
-    path.removeLast();
-    return true;
-}
-
-bool RulesHandler::characters(const QString &str)
-{
-    if (!str.trimmed().isEmpty()) {
-        QString strPath = path.join(QLatin1String("/"));
-        if (strPath.endsWith(QLatin1String("layoutList/layout/configItem/name"))) {
-            if (rules->layoutInfos.last() != nullptr) {
-                rules->layoutInfos.last()->name = str.trimmed();
-            }
-        } else if (strPath.endsWith(QLatin1String("layoutList/layout/configItem/description"))) {
-            rules->layoutInfos.last()->description = str.trimmed();
-        } else if (strPath.endsWith(QLatin1String("layoutList/layout/configItem/languageList/iso639Id"))) {
-            rules->layoutInfos.last()->languages << str.trimmed();
-        } else if (strPath.endsWith(QLatin1String("layoutList/layout/variantList/variant/configItem/name"))) {
-            rules->layoutInfos.last()->variantInfos.last()->name = str.trimmed();
-        } else if (strPath.endsWith(QLatin1String("layoutList/layout/variantList/variant/configItem/description"))) {
-            rules->layoutInfos.last()->variantInfos.last()->description = str.trimmed();
-        } else if (strPath.endsWith(QLatin1String("layoutList/layout/variantList/variant/configItem/languageList/iso639Id"))) {
-            rules->layoutInfos.last()->variantInfos.last()->languages << str.trimmed();
-        } else if (strPath.endsWith(QLatin1String("modelList/model/configItem/name"))) {
-            rules->modelInfos.last()->name = str.trimmed();
-        } else if (strPath.endsWith(QLatin1String("modelList/model/configItem/description"))) {
-            rules->modelInfos.last()->description = str.trimmed();
-        } else if (strPath.endsWith(QLatin1String("modelList/model/configItem/vendor"))) {
-            rules->modelInfos.last()->vendor = str.trimmed();
-        } else if (strPath.endsWith(QLatin1String("optionList/group/configItem/name"))) {
-            rules->optionGroupInfos.last()->name = str.trimmed();
-        } else if (strPath.endsWith(QLatin1String("optionList/group/configItem/description"))) {
-            rules->optionGroupInfos.last()->description = str.trimmed();
-        } else if (strPath.endsWith(QLatin1String("optionList/group/option/configItem/name"))) {
-            rules->optionGroupInfos.last()->optionInfos.last()->name = str.trimmed();
-        } else if (strPath.endsWith(QLatin1String("optionList/group/option/configItem/description"))) {
-            rules->optionGroupInfos.last()->optionInfos.last()->description = str.trimmed();
-        }
-    }
-    return true;
 }
 
 bool LayoutInfo::isLanguageSupportedByLayout(const QString &lang) const
