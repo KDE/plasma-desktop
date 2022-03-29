@@ -11,7 +11,9 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include "../migrationlib/kdelibs4config.h"
+#endif
 
 void EvdevSettings::apply(X11EvdevBackend *backend, bool force)
 {
@@ -130,8 +132,10 @@ void EvdevSettings::save()
     group.sync();
     kcminputProfile->sync();
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("Mouse"), "kcminputrc");
     Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("KDE"), "kdeglobals");
+#endif
 
     emitChange(SettingsChanged, SETTINGS_MOUSE);
 }

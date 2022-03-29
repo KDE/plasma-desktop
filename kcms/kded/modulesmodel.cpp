@@ -152,6 +152,7 @@ static QVector<KPluginMetaData> availableModules()
     for (const KPluginMetaData &md : qAsConst(plugins)) {
         moduleIds.insert(md.pluginId());
     }
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     // also search for old .desktop based kded modules
     const KPluginInfo::List oldStylePlugins = KPluginInfo::fromServices(KServiceTypeTrader::self()->query(QStringLiteral("KDEDModule")));
     for (const KPluginInfo &info : oldStylePlugins) {
@@ -166,6 +167,7 @@ static QVector<KPluginMetaData> availableModules()
             plugins.append(info.toMetaData());
         }
     }
+#endif
     return plugins;
 }
 

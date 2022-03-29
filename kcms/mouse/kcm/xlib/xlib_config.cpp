@@ -16,8 +16,6 @@
 #include "../configcontainer.h"
 #include "backends/x11/x11_evdev_backend.h"
 
-#include "../../../migrationlib/kdelibs4config.h"
-
 #include <KLocalizedString>
 #include <KToolInvocation>
 //#include <KConfig>
