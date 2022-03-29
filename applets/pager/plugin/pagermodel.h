@@ -8,14 +8,18 @@
 
 #include <config-X11.h>
 
-#if HAVE_X11
-#include <QX11Info>
-#include <netwm.h>
-#endif
-
 #include <QAbstractListModel>
 #include <QQmlParserStatus>
 #include <qwindowdefs.h>
+
+#if HAVE_X11
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#include <QX11Info>
+#else
+#include <QtGui/private/qtx11extras_p.h>
+#endif
+#include <netwm.h>
+#endif
 
 class QMimeData;
 

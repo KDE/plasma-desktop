@@ -11,7 +11,11 @@
 #include <QDBusServiceWatcher>
 #include <QDebug>
 #include <QTimer>
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <QX11Info>
+#else
+#include <QtGui/private/qtx11extras_p.h>
+#endif
 
 #define USED_MASK (XCB_MOD_MASK_SHIFT | XCB_MOD_MASK_CONTROL | XCB_MOD_MASK_1 | XCB_MOD_MASK_4)
 

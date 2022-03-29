@@ -22,6 +22,8 @@ target_link_libraries(pagerplugin
 if (X11_FOUND)
     if (QT_MAJOR_VERSION EQUAL "5")
         target_link_libraries(pagerplugin Qt::X11Extras)
+    else()
+        target_link_libraries(pagerplugin Qt::GuiPrivate)
     endif()
 endif()
 

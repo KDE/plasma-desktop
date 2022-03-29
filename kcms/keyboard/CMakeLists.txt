@@ -61,6 +61,8 @@ target_link_libraries(kded_keyboard
  )
 if (QT_MAJOR_VERSION EQUAL "5")
     target_link_libraries(kded_keyboard Qt5::X11Extras)
+else()
+    target_link_libraries(kded_keyboard Qt::GuiPrivate)
 endif()
 
 if (HAVE_XINPUT)
@@ -134,6 +136,8 @@ target_link_libraries(kcm_keyboard_static
 )
 if (QT_MAJOR_VERSION EQUAL "5")
     target_link_libraries(kcm_keyboard_static Qt5::X11Extras)
+else()
+    target_link_libraries(kcm_keyboard_static Qt::GuiPrivate)
 endif()
 
 kcoreaddons_add_plugin(kcm_keyboard SOURCES kcmmain.cpp INSTALL_NAMESPACE "plasma/kcms/systemsettings")

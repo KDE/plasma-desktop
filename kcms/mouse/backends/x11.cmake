@@ -21,4 +21,6 @@ set(backend_LIBS
 )
 if (QT_MAJOR_VERSION EQUAL "5")
     list(APPEND backend_LIBS Qt::X11Extras)
+else()
+    list(APPEND backend_LIBS Qt::GuiPrivate)
 endif()

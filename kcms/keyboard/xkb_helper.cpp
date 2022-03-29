@@ -16,7 +16,11 @@
 #include <QString>
 #include <QStringList>
 #include <QTime>
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <QX11Info>
+#else
+#include <QtGui/private/qtx11extras_p.h>
+#endif
 
 #include "keyboard_config.h"
 #include "keyboardsettings.h"

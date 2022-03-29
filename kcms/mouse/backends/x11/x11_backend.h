@@ -10,7 +10,11 @@
 
 #include "inputbackend.h"
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <QX11Info>
+#else
+#include <QtGui/private/qtx11extras_p.h>
+#endif
 #include <X11/Xdefs.h>
 
 class X11Backend : public InputBackend

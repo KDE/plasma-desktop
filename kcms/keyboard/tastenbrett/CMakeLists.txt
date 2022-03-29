@@ -33,6 +33,8 @@ target_link_libraries(tastenbrett
 )
 if (QT_MAJOR_VERSION EQUAL "5")
     target_link_libraries(tastenbrett PRIVATE Qt5::X11Extras)
+else()
+    target_link_libraries(tastenbrett PRIVATE Qt::GuiPrivate)
 endif()
 
 install(TARGETS tastenbrett DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

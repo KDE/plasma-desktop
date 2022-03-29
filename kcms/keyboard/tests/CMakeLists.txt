@@ -15,6 +15,8 @@ macro(KEYBOARD_DAEMON_UNIT_TESTS _testname)
                )
                if (QT_MAJOR_VERSION EQUAL "5")
                   target_link_libraries(${_testname}_test Qt5::X11Extras)
+               else()
+                  target_link_libraries(${_testname}_test Qt::GuiPrivate)
                endif()
 endmacro(KEYBOARD_DAEMON_UNIT_TESTS)
 

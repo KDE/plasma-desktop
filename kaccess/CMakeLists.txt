@@ -23,6 +23,8 @@ target_link_libraries(kaccess
 )
 if (QT_MAJOR_VERSION EQUAL "5")
     target_link_libraries(kaccess Qt::X11Extras)
+else()
+    target_link_libraries(kaccess Qt::GuiPrivate)
 endif()
 
 install(TARGETS kaccess ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

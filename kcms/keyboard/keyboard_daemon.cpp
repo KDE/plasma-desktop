@@ -12,7 +12,6 @@
 #include <QDBusMessage>
 #include <QDBusPendingCall>
 #include <QProcess>
-#include <QX11Info>
 
 #include <KPluginFactory>
 

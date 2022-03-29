@@ -39,6 +39,8 @@ target_link_libraries(touchpad
 )
 if (QT_MAJOR_VERSION EQUAL "5")
     target_link_libraries(touchpad PRIVATE Qt5::X11Extras)
+else()
+    target_link_libraries(touchpad PRIVATE Qt::GuiPrivate)
 endif()
 
 add_subdirectory(kcm)

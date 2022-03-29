@@ -36,6 +36,8 @@ target_link_libraries(kcm_access
 )
 if (QT_MAJOR_VERSION EQUAL "5")
     target_link_libraries(kcm_access Qt::X11Extras)
+else()
+    target_link_libraries(kcm_access Qt::GuiPrivate)
 endif()
 
 install(FILES kcm_access.desktop  DESTINATION ${KDE_INSTALL_APPDIR})
