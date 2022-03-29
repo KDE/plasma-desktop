@@ -47,7 +47,7 @@ if(HAVE_PACKAGEKIT)
     target_link_libraries(plugininstaller PK::packagekitqt5)
 endif()
 
-install(FILES kcm_plasmasearch.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES kcm_krunnersettings.desktop kcm_plasmasearch.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(TARGETS kcm_plasmasearch DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets)
 install(FILES krunner.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 install(TARGETS plugininstaller DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
