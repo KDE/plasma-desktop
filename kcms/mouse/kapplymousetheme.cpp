@@ -9,7 +9,7 @@
 
 #include "backends/x11/x11_backend.h"
 
-#include <KWindowSystem/kwindowsystem.h>
+#include <KWindowSystem>
 
 #include <QFile>
 #include <QGuiApplication>

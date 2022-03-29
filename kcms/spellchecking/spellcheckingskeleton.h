@@ -7,7 +7,7 @@
 #ifndef SPELLCHECKINGSKELETON_H
 #define SPELLCHECKINGSKELETON_H
 
-#include <KConfigCore/KCoreConfigSkeleton>
+#include <KCoreConfigSkeleton>
 
 namespace Sonnet
 {

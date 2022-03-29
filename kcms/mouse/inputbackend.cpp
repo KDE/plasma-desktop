@@ -10,7 +10,7 @@
 #include "backends/x11/x11_backend.h"
 #include "logging.h"
 
-#include <KWindowSystem/kwindowsystem.h>
+#include <KWindowSystem>
 
 InputBackend *InputBackend::implementation(QObject *parent)
 {
