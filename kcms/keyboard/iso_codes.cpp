@@ -9,6 +9,7 @@
 
 #include <KLocalizedString>
 
+#include <QFile>
 #include <QXmlAttributes>
 
 class IsoCodesPrivate

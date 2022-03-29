@@ -61,4 +61,5 @@ void KCMWorkspaceOptions::save()
     QDBusConnection::sessionBus().send(message);
 }
 
+#include "moc_workspaceoptions.cpp"
 #include "workspaceoptions.moc"

@@ -8,6 +8,7 @@
 #define TRASH_H
 
 #include <QObject>
+#include <QUrl>
 
 class Trash : public QObject
 {

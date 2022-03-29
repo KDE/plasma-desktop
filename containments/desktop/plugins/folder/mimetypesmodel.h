@@ -9,8 +9,7 @@
 
 #include <QAbstractListModel>
 #include <QMimeType>
-
-class QStringList;
+#include <QStringList>
 
 class MimeTypesModel : public QAbstractListModel
 {

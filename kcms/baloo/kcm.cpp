@@ -133,3 +133,4 @@ QString ServerConfigModule::prettyIndexFileSize()
 }
 
 #include "kcm.moc"
+#include "moc_kcm.cpp"

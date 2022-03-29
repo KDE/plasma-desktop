@@ -282,3 +282,4 @@ bool KAccessConfig::screenReaderIsDefaults() const
 }
 
 #include "kcmaccess.moc"
+#include "moc_kcmaccess.cpp"

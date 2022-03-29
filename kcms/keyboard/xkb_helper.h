@@ -7,10 +7,9 @@
 #ifndef XKB_HELPER_H_
 #define XKB_HELPER_H_
 
-template<typename T>
-class QList;
+#include <QStringList>
+
 class LayoutUnit;
-class QStringList;
 class KeyboardConfig;
 
 class XkbHelper

@@ -10,8 +10,7 @@
 
 #include <KService>
 #include <QAbstractListModel>
-
-class QStringList;
+#include <QStringList>
 
 class PreviewPluginsModel : public QAbstractListModel
 {

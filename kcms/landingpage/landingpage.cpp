@@ -374,3 +374,4 @@ Q_INVOKABLE void KCMLandingPage::openKCM(const QString &kcm)
 }
 
 #include "landingpage.moc"
+#include "moc_landingpage.cpp"

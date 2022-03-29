@@ -6,6 +6,7 @@
 
 #include "viewpropertiesmenu.h"
 
+#include <QActionGroup>
 #include <QMenu>
 
 #include <KDirModel>

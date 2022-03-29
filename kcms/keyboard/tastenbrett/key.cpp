@@ -266,3 +266,5 @@ KeyCap *Key::resolveCap()
 
     return new KeyCap(symbols, this);
 }
+
+#include "moc_key.cpp"

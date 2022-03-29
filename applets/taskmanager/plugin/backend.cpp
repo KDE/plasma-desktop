@@ -670,3 +670,5 @@ void Backend::updateWindowHighlight()
     message << m_windowsToHighlight;
     QDBusConnection::sessionBus().asyncCall(message);
 }
+
+#include "moc_backend.cpp"

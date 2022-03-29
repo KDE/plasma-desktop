@@ -45,3 +45,4 @@ LaunchFeedbackSettings *LaunchFeedback::launchFeedbackSettings() const
 }
 
 #include "launchfeedback.moc"
+#include "moc_launchfeedback.cpp"
