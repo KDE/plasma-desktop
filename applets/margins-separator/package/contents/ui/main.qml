@@ -10,9 +10,12 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-Item {
+Rectangle {
     id: root
-    Layout.minimumWidth:   units.largeSpacing
+    readonly property bool editMode : Plasmoid.nativeInterface.containment.editMode
+
+    color: editMode ? PlasmaCore.Theme.buttonFocusColor : "transparent" // So that user can identify the Plasmoid in edit mode
+    Layout.minimumWidth:   editMode ? units.largeSpacing : 1 // We don't have zeroSpacing and assigning 0 does not work as well
     Layout.preferredWidth: Layout.minimumWidth
     Layout.maximumWidth:   Layout.minimumWidth
 
