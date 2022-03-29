@@ -243,7 +243,7 @@ void XlibBackend::setTouchpadOff(TouchpadBackend::TouchpadOffState state)
 
 bool XlibBackend::isTouchpadAvailable()
 {
-    return m_device;
+    return !m_device.isNull();
 }
 
 bool XlibBackend::isTouchpadEnabled()
@@ -288,7 +288,7 @@ void XlibBackend::devicePlugged(int device)
         if (m_device) {
             qWarning() << "Touchpad reset";
             m_notifications.reset();
-            watchForEvents(m_keyboard);
+            watchForEvents(!m_keyboard.isNull());
             Q_EMIT touchpadReset();
         }
     }
