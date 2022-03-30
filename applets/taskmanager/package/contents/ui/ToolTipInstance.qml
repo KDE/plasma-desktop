@@ -162,6 +162,7 @@ ColumnLayout {
             anchors.fill: hoverHandler
             visible: hoverHandler.item ? hoverHandler.item.containsMouse : false
             pressed: hoverHandler.item ? hoverHandler.item.containsPress : false
+            hover: true
         }
 
         Loader {
