@@ -129,20 +129,19 @@ DragTracker *DragTracker::self()
 DirLister::DirLister(QObject *parent)
     : KDirLister(parent)
 {
+    connect(this, &KCoreDirLister::jobError, this, &DirLister::handleJobError);
 }
 
 DirLister::~DirLister()
 {
 }
 
-void DirLister::handleError(KIO::Job *job)
+void DirLister::handleJobError(KIO::Job *job)
 {
     if (!autoErrorHandlingEnabled()) {
         Q_EMIT error(job->errorString());
         return;
     }
-
-    KDirLister::handleError(job);
 }
 
 FolderModel::FolderModel(QObject *parent)

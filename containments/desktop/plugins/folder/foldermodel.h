@@ -59,8 +59,8 @@ public:
 Q_SIGNALS:
     void error(const QString &string);
 
-protected:
-    void handleError(KIO::Job *job) override;
+private:
+    void handleJobError(KIO::Job *job);
 };
 
 class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, public QQmlParserStatus
