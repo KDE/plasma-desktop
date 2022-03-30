@@ -26,7 +26,7 @@ class KRunnerSettings : public KQuickAddons::ManagedConfigModule
      * otherwise.
      */
     Q_PROPERTY(bool doesShowPluginButton MEMBER m_doesShowPluginButton CONSTANT)
-    Q_PROPERTY(QString activityCount READ activityCount NOTIFY activityCountChanged)
+    Q_PROPERTY(int activityCount READ activityCount NOTIFY activityCountChanged)
     /**
      * @return @c true if activity aware is not enabled or only one activity has
      * history, @c false otherwise.
