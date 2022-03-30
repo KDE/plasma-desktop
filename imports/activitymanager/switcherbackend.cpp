@@ -291,7 +291,7 @@ void SwitcherBackend::onCurrentActivityChanged(const QString &id)
     KConfig config(QStringLiteral("kactivitymanagerd-switcher"));
     KConfigGroup times(&config, "LastUsed");
 
-    const auto now = QDateTime::currentDateTime().toTime_t();
+    const auto now = QDateTime::currentDateTime().toSecsSinceEpoch();
 
     // Updating the time for the activity we just switched to
     // in the case we do not power off properly, and on the next

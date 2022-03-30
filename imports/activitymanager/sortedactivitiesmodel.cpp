@@ -310,7 +310,7 @@ QVariant SortedActivitiesModel::data(const QModelIndex &index, int role) const
             return QVariant(time);
 
         } else {
-            const auto now = QDateTime::currentDateTime().toTime_t();
+            const auto now = QDateTime::currentDateTime().toSecsSinceEpoch();
 
             if (time == 0)
                 return i18n("Used some time ago");
