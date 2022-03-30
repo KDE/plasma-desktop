@@ -57,9 +57,9 @@
 #include <KDirModel>
 #include <KIO/CopyJob>
 #include <KIO/Job>
+#include <KIO/OpenUrlJob>
 #include <KIO/PreviewJob>
 #include <KProtocolInfo>
-#include <KRun>
 #include <KStringHandler>
 
 #include <Plasma/Applet>
@@ -763,13 +763,15 @@ void FolderModel::run(int row)
         url.setScheme(QStringLiteral("file"));
     }
 
-    KRun *run = new KRun(url, nullptr);
+    auto job = new KIO::OpenUrlJob(url);
+    job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
     // On desktop:/ we want to be able to run .desktop files right away,
     // otherwise ask for security reasons. We also don't use the targetUrl()
     // from above since we don't want the resolved /home/foo/Desktop URL.
-    run->setShowScriptExecutionPrompt(item.url().scheme() != QLatin1String("desktop")
-                                      || item.url().adjusted(QUrl::RemoveFilename).path() != QLatin1String("/")
-                                      || !item.isDesktopFile());
+    job->setShowOpenOrExecuteDialog(item.url().scheme() != QLatin1String("desktop") || item.url().adjusted(QUrl::RemoveFilename).path() != QLatin1String("/")
+                                    || !item.isDesktopFile());
+    job->setRunExecutables(true);
+    job->start();
 }
 
 void FolderModel::runSelected()
@@ -2084,7 +2086,9 @@ void FolderModel::openSelected()
 
     const QList<QUrl> urls = selectedUrls();
     for (const QUrl &url : urls) {
-        (void)new KRun(url, nullptr);
+        auto job = new KIO::OpenUrlJob(url);
+        job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
+        job->start();
     }
 }
 
