@@ -335,7 +335,7 @@ void KCMKeyboardWidget::initializeLayoutsUI()
 
     connect(uiWidget->kdeKeySequence, &KKeySequenceWidget::keySequenceChanged, this, &KCMKeyboardWidget::alternativeShortcutChanged);
     connect(uiWidget->switchingPolicyButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(uiChanged()));
-    connect(uiWidget->switchingPolicyButtonGroup, qOverload<int>(&QButtonGroup::buttonClicked), this, &KCMKeyboardWidget::updateUiDefaultIndicator);
+    connect(uiWidget->switchingPolicyButtonGroup, &QButtonGroup::idClicked, this, &KCMKeyboardWidget::updateUiDefaultIndicator);
 
     connect(uiWidget->xkbGrpShortcutBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::scrollToGroupShortcut);
     connect(uiWidget->xkb3rdLevelShortcutBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::scrollTo3rdLevelShortcut);
