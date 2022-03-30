@@ -48,7 +48,7 @@ Folder.SubDialog {
     mainItem: FolderViewDropArea {
         id: folderViewDropArea
 
-        width: folderView.cellWidth * 3 + (16 * PlasmaCore.Units.devicePixelRatio) // FIXME HACK: Use actual scrollbar width.
+        width: folderView.cellWidth * 3 + PlasmaCore.Units.gridUnit // FIXME HACK: Use actual scrollbar width.
         height: folderView.cellHeight * 2
 
         folderView: folderView
