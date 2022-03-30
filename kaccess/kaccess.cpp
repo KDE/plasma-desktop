@@ -28,6 +28,7 @@
 #include <KDBusService>
 #include <KGlobalAccel>
 #include <KKeyServer>
+#include <KLazyLocalizedString>
 #include <KLocalizedString>
 #include <KNotification>
 #include <KSharedConfig>
@@ -51,64 +52,64 @@ struct ModifierKey {
     const unsigned int mask;
     const KeySym keysym;
     const char *name;
-    const char *lockedText;
-    const char *latchedText;
-    const char *unlatchedText;
+    const KLazyLocalizedString lockedText;
+    const KLazyLocalizedString latchedText;
+    const KLazyLocalizedString unlatchedText;
 };
 
 static const ModifierKey modifierKeys[] = {
     {ShiftMask,
      0,
      "Shift",
-     I18N_NOOP("The Shift key has been locked and is now active for all of the following keypresses."),
-     I18N_NOOP("The Shift key is now active."),
-     I18N_NOOP("The Shift key is now inactive.")},
+     kli18n("The Shift key has been locked and is now active for all of the following keypresses."),
+     kli18n("The Shift key is now active."),
+     kli18n("The Shift key is now inactive.")},
     {ControlMask,
      0,
      "Control",
-     I18N_NOOP("The Control key has been locked and is now active for all of the following keypresses."),
-     I18N_NOOP("The Control key is now active."),
-     I18N_NOOP("The Control key is now inactive.")},
+     kli18n("The Control key has been locked and is now active for all of the following keypresses."),
+     kli18n("The Control key is now active."),
+     kli18n("The Control key is now inactive.")},
     {0,
      XK_Alt_L,
      "Alt",
-     I18N_NOOP("The Alt key has been locked and is now active for all of the following keypresses."),
-     I18N_NOOP("The Alt key is now active."),
-     I18N_NOOP("The Alt key is now inactive.")},
+     kli18n("The Alt key has been locked and is now active for all of the following keypresses."),
+     kli18n("The Alt key is now active."),
+     kli18n("The Alt key is now inactive.")},
     {0,
      0,
      "Win",
-     I18N_NOOP("The Win key has been locked and is now active for all of the following keypresses."),
-     I18N_NOOP("The Win key is now active."),
-     I18N_NOOP("The Win key is now inactive.")},
+     kli18n("The Win key has been locked and is now active for all of the following keypresses."),
+     kli18n("The Win key is now active."),
+     kli18n("The Win key is now inactive.")},
     {0,
      XK_Meta_L,
      "Meta",
-     I18N_NOOP("The Meta key has been locked and is now active for all of the following keypresses."),
-     I18N_NOOP("The Meta key is now active."),
-     I18N_NOOP("The Meta key is now inactive.")},
+     kli18n("The Meta key has been locked and is now active for all of the following keypresses."),
+     kli18n("The Meta key is now active."),
+     kli18n("The Meta key is now inactive.")},
     {0,
      XK_Super_L,
      "Super",
-     I18N_NOOP("The Super key has been locked and is now active for all of the following keypresses."),
-     I18N_NOOP("The Super key is now active."),
-     I18N_NOOP("The Super key is now inactive.")},
+     kli18n("The Super key has been locked and is now active for all of the following keypresses."),
+     kli18n("The Super key is now active."),
+     kli18n("The Super key is now inactive.")},
     {0,
      XK_Hyper_L,
      "Hyper",
-     I18N_NOOP("The Hyper key has been locked and is now active for all of the following keypresses."),
-     I18N_NOOP("The Hyper key is now active."),
-     I18N_NOOP("The Hyper key is now inactive.")},
+     kli18n("The Hyper key has been locked and is now active for all of the following keypresses."),
+     kli18n("The Hyper key is now active."),
+     kli18n("The Hyper key is now inactive.")},
     {0,
      0,
      "Alt Graph",
-     I18N_NOOP("The Alt Graph key has been locked and is now active for all of the following keypresses."),
-     I18N_NOOP("The Alt Graph key is now active."),
-     I18N_NOOP("The Alt Graph key is now inactive.")},
-    {0, XK_Num_Lock, "Num Lock", I18N_NOOP("The Num Lock key has been activated."), "", I18N_NOOP("The Num Lock key is now inactive.")},
-    {LockMask, 0, "Caps Lock", I18N_NOOP("The Caps Lock key has been activated."), "", I18N_NOOP("The Caps Lock key is now inactive.")},
-    {0, XK_Scroll_Lock, "Scroll Lock", I18N_NOOP("The Scroll Lock key has been activated."), "", I18N_NOOP("The Scroll Lock key is now inactive.")},
-    {0, 0, "", "", "", ""}};
+     kli18n("The Alt Graph key has been locked and is now active for all of the following keypresses."),
+     kli18n("The Alt Graph key is now active."),
+     kli18n("The Alt Graph key is now inactive.")},
+    {0, XK_Num_Lock, "Num Lock", kli18n("The Num Lock key has been activated."), {}, kli18n("The Num Lock key is now inactive.")},
+    {LockMask, 0, "Caps Lock", kli18n("The Caps Lock key has been activated."), {}, kli18n("The Caps Lock key is now inactive.")},
+    {0, XK_Scroll_Lock, "Scroll Lock", kli18n("The Scroll Lock key has been activated."), {}, kli18n("The Scroll Lock key is now inactive.")},
+    {0, 0, "", {}, {}, {}}};
 
 /********************************************************************/
 
@@ -459,19 +460,19 @@ void KAccessApp::xkbStateNotify()
         if (_kNotifyModifiers)
             for (int i = 0; i < 8; i++) {
                 if (keys[i] != -1) {
-                    if (!strcmp(modifierKeys[keys[i]].latchedText, "") && ((((mods >> i) & 0x101) != 0) != (((state >> i) & 0x101) != 0))) {
+                    if (modifierKeys[keys[i]].latchedText.isEmpty() && ((((mods >> i) & 0x101) != 0) != (((state >> i) & 0x101) != 0))) {
                         if ((mods >> i) & 1) {
-                            KNotification::event(QStringLiteral("lockkey-locked"), i18n(modifierKeys[keys[i]].lockedText));
+                            KNotification::event(QStringLiteral("lockkey-locked"), modifierKeys[keys[i]].lockedText.toString());
                         } else {
-                            KNotification::event(QStringLiteral("lockkey-unlocked"), i18n(modifierKeys[keys[i]].unlatchedText));
+                            KNotification::event(QStringLiteral("lockkey-unlocked"), modifierKeys[keys[i]].unlatchedText.toString());
                         }
-                    } else if (strcmp(modifierKeys[keys[i]].latchedText, "") && (((mods >> i) & 0x101) != ((state >> i) & 0x101))) {
+                    } else if (!modifierKeys[keys[i]].latchedText.isEmpty() && (((mods >> i) & 0x101) != ((state >> i) & 0x101))) {
                         if ((mods >> i) & 0x100) {
-                            KNotification::event(QStringLiteral("modifierkey-locked"), i18n(modifierKeys[keys[i]].lockedText));
+                            KNotification::event(QStringLiteral("modifierkey-locked"), modifierKeys[keys[i]].lockedText.toString());
                         } else if ((mods >> i) & 1) {
-                            KNotification::event(QStringLiteral("modifierkey-latched"), i18n(modifierKeys[keys[i]].latchedText));
+                            KNotification::event(QStringLiteral("modifierkey-latched"), modifierKeys[keys[i]].latchedText.toString());
                         } else {
-                            KNotification::event(QStringLiteral("modifierkey-unlatched"), i18n(modifierKeys[keys[i]].unlatchedText));
+                            KNotification::event(QStringLiteral("modifierkey-unlatched"), modifierKeys[keys[i]].unlatchedText.toString());
                         }
                     }
                 }
