@@ -5,17 +5,18 @@
 */
 
 .import org.kde.plasma.core 2.0 as PlasmaCore
+.import org.kde.kirigami 2.19 as Kirigami
 
 const iconMargin = Math.round(PlasmaCore.Units.smallSpacing / 4);
 const labelMargin = PlasmaCore.Units.smallSpacing;
 
 function horizontalMargins() {
-    const spacingAdjustment = (plasmoid.pluginName === "org.kde.plasma.icontasks") ? plasmoid.configuration.iconSpacing : 1
+    const spacingAdjustment = (plasmoid.pluginName === "org.kde.plasma.icontasks") ? (Kirigami.Settings.tabletMode ? 3 : plasmoid.configuration.iconSpacing) : 1
     return (taskFrame.margins.left + taskFrame.margins.right) * spacingAdjustment;
 }
 
 function verticalMargins() {
-    const spacingAdjustment = (plasmoid.pluginName === "org.kde.plasma.icontasks") ? plasmoid.configuration.iconSpacing : 1
+    const spacingAdjustment = (plasmoid.pluginName === "org.kde.plasma.icontasks") ? (Kirigami.Settings.tabletMode ? 3 : plasmoid.configuration.iconSpacing) : 1
     return (taskFrame.margins.top + taskFrame.margins.bottom) * spacingAdjustment;
 }
 

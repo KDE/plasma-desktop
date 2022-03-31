@@ -82,27 +82,29 @@ Kirigami.FormLayout {
 
         RadioButton {
             id: small
+            enabled: !Kirigami.Settings.tabletMode
             text: i18n("Small")
-            checked: iconSpacingRadioButtons.iconSpacing === 0
+            checked: iconSpacingRadioButtons.iconSpacing === 0 && !Kirigami.Settings.tabletMode
             onToggled: parent.iconSpacing = 0
         }
 
         RadioButton {
+            enabled: !Kirigami.Settings.tabletMode
             text: i18n("Normal")
-            checked: iconSpacingRadioButtons.iconSpacing === 1
+            checked: iconSpacingRadioButtons.iconSpacing === 1 && !Kirigami.Settings.tabletMode
             onToggled: parent.iconSpacing = 1
         }
 
         RadioButton {
+            enabled: !Kirigami.Settings.tabletMode
             text: i18n("Large")
-            checked: iconSpacingRadioButtons.iconSpacing === 2
-            onToggled: parent.iconSpacing = 2
-        }
-
-        RadioButton {
-            text: i18n("Huge")
-            checked: iconSpacingRadioButtons.iconSpacing === 3
+            checked: iconSpacingRadioButtons.iconSpacing === 3 || Kirigami.Settings.tabletMode
             onToggled: parent.iconSpacing = 3
+        }
+        Label {
+            visible: Kirigami.Settings.tabletMode
+            text: i18nc("@info:usagetip under a set of radio buttons when tablet mode is on", "Automatically set to Large when in tablet mode")
+            font: Kirigami.Theme.smallFont
         }
     }
 }
