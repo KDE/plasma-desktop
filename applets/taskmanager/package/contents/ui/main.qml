@@ -358,6 +358,9 @@ MouseArea {
         function onGroupingLauncherUrlBlacklistChanged() {
             tasksModel.groupingLauncherUrlBlacklist = plasmoid.configuration.groupingLauncherUrlBlacklist;
         }
+        function onIconSpacingChanged() {
+            taskList.layout();
+        }
     }
 
     TaskManagerApplet.DragHelper {

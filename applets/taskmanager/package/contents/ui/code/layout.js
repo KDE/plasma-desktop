@@ -10,11 +10,13 @@ const iconMargin = Math.round(PlasmaCore.Units.smallSpacing / 4);
 const labelMargin = PlasmaCore.Units.smallSpacing;
 
 function horizontalMargins() {
-    return taskFrame.margins.left + taskFrame.margins.right;
+    const spacingAdjustment = (plasmoid.pluginName === "org.kde.plasma.icontasks") ? plasmoid.configuration.iconSpacing : 1
+    return (taskFrame.margins.left + taskFrame.margins.right) * spacingAdjustment;
 }
 
 function verticalMargins() {
-    return taskFrame.margins.top + taskFrame.margins.bottom;
+    const spacingAdjustment = (plasmoid.pluginName === "org.kde.plasma.icontasks") ? plasmoid.configuration.iconSpacing : 1
+    return (taskFrame.margins.top + taskFrame.margins.bottom) * spacingAdjustment;
 }
 
 function adjustMargin(height, margin) {

@@ -115,7 +115,10 @@
       <label>Whether to grow the tasks in according to system configuration or opposite to system configuration.</label>
       <default>false</default>
     </entry>
-
+    <entry name="iconSpacing" type="Int">
+      <label> Spacing between icons in task manager. Margin is multiplied by this value.</label>
+      <default>1</default>
+    </entry>
   </group>
 
 </kcfg>
