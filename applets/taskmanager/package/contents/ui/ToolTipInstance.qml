@@ -469,22 +469,7 @@ ColumnLayout {
 
         // KWin appends increasing integers in between pointy brackets to otherwise equal window titles.
         // In this case save <#number> as counter and delete it at the end of text.
-        const counter = text.match(/<\d+>\W*$/);
-        text = text.replace(/\s*<\d+>\W*$/, "");
-
-        // Remove appName from the end of text.
-        const appNameRegex = new RegExp(appName + "$", "i");
-        text = text.replace(appNameRegex, "");
-        text = text.replace(/\s*(?:-|—)*\s*$/, "");
-
-        // Add counter back at the end.
-        if (counter !== null) {
-            if (text === "") {
-                text = counter;
-            } else {
-                text = text + " " + counter;
-            }
-        }
+        text = `${(text.match(/.*(?=\s*(—|-))/) || [""])[0]}${(text.match(/<\d+>/) || [""]).pop()}`;
 
         // In case the window title had only redundant information (i.e. appName), text is now empty.
         // Add a hyphen to indicate that and avoid empty space.
