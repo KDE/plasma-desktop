@@ -454,7 +454,7 @@ ColumnLayout {
 
     function generateTitle() {
         if (!isWin) {
-            return genericName != undefined ? genericName : "";
+            return genericName || "";
         }
 
         let text;
