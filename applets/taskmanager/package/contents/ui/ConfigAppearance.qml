@@ -25,7 +25,7 @@ Kirigami.FormLayout {
     property bool cfg_indicateAudioStreams
     property alias cfg_maxStripes: maxStripes.value
     property alias cfg_forceStripes: forceStripes.checked
-    property alias cfg_iconSpacing: iconSpacingRadioButtons.iconSpacing
+    property int cfg_iconSpacing: 0
 
     CheckBox {
         id: showToolTips
@@ -72,39 +72,45 @@ Kirigami.FormLayout {
         Kirigami.FormData.isSection: true
     }
 
-    ColumnLayout {
-        id: iconSpacingRadioButtons
-
-        property int iconSpacing: 0
+    ComboBox {
         visible: iconOnly
         Kirigami.FormData.label: i18n("Spacing between icons:")
-        Kirigami.FormData.buddyFor: small
 
-        RadioButton {
-            id: small
-            enabled: !Kirigami.Settings.tabletMode
-            text: i18n("Small")
-            checked: iconSpacingRadioButtons.iconSpacing === 0 && !Kirigami.Settings.tabletMode
-            onToggled: parent.iconSpacing = 0
-        }
+        model: [
+            {
+                "label": i18nc("@item:inlistbox Icon spacing", "Small"),
+                "spacing": 0
+            },
+            {
+                "label": i18nc("@item:inlistbox Icon spacing", "Normal"),
+                "spacing": 1
+            },
+            {
+                "label": i18nc("@item:inlistbox Icon spacing", "Large"),
+                "spacing": 3
+            },
+        ]
 
-        RadioButton {
-            enabled: !Kirigami.Settings.tabletMode
-            text: i18n("Normal")
-            checked: iconSpacingRadioButtons.iconSpacing === 1 && !Kirigami.Settings.tabletMode
-            onToggled: parent.iconSpacing = 1
-        }
+        textRole: "label"
+        enabled: !Kirigami.Settings.tabletMode
 
-        RadioButton {
-            enabled: !Kirigami.Settings.tabletMode
-            text: i18n("Large")
-            checked: iconSpacingRadioButtons.iconSpacing === 3 || Kirigami.Settings.tabletMode
-            onToggled: parent.iconSpacing = 3
+        currentIndex: {
+            if (Kirigami.Settings.tabletMode) {
+                return 2; // Large
+            }
+
+            switch (cfg_iconSpacing) {
+                case 0: return 0; // Small
+                case 1: return 1; // Normal
+                case 3: return 2; // Large
+            }
         }
-        Label {
-            visible: Kirigami.Settings.tabletMode
-            text: i18nc("@info:usagetip under a set of radio buttons when tablet mode is on", "Automatically set to Large when in tablet mode")
-            font: Kirigami.Theme.smallFont
-        }
+        onActivated: cfg_iconSpacing = model[currentIndex]["spacing"];
+    }
+
+    Label {
+        visible: Kirigami.Settings.tabletMode
+        text: i18nc("@info:usagetip under a set of radio buttons when tablet mode is on", "Automatically set to Large when in tablet mode")
+        font: Kirigami.Theme.smallFont
     }
 }
