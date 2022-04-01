@@ -37,6 +37,33 @@ ColumnLayout {
     readonly property bool canRaise: hasPlayer && playerData.CanRaise
     readonly property var currentMetadata: hasPlayer ? playerData.Metadata : ({})
 
+    readonly property string title: {
+        if (!isWin) {
+            return genericName || "";
+        }
+
+        let text;
+        if (isGroup) {
+            if (model.display === undefined) {
+                return "";
+            }
+            text = model.display.toString();
+        } else {
+            text = displayParent;
+        }
+
+        // KWin appends increasing integers in between pointy brackets to otherwise equal window titles.
+        // In this case save <#number> as counter and delete it at the end of text.
+        text = `${(text.match(/.*(?=\s*(—|-))/) || [""])[0]}${(text.match(/<\d+>/) || [""]).pop()}`;
+
+        // In case the window title had only redundant information (i.e. appName), text is now empty.
+        // Add a hyphen to indicate that and avoid empty space.
+        if (text === "") {
+            text = "—";
+        }
+        return text;
+    }
+
     readonly property string track: {
         const xesamTitle = currentMetadata["xesam:title"]
         if (xesamTitle) {
@@ -90,7 +117,6 @@ ColumnLayout {
             }
             // window title
             PlasmaComponents3.Label {
-                readonly property string title: generateTitle()
                 id: winTitle
                 maximumLineCount: 1
                 Layout.fillWidth: true
@@ -256,7 +282,7 @@ ColumnLayout {
             // if this app is a browser, we also check the title, so album art is not shown when the user is on some other tab
             // in all other cases we can safely show the album art without checking the title
             readonly property bool available: (status === Image.Ready || status === Image.Loading)
-                && (!(isGroup || backend.applicationCategories(launcherUrl).includes("WebBrowser")) || generateTitle().includes(track))
+                && (!(isGroup || backend.applicationCategories(launcherUrl).includes("WebBrowser")) || title.includes(track))
 
             anchors.fill: hoverHandler
             // Indent by one pixel to make sure we never cover up the entire highlight
@@ -450,33 +476,6 @@ ColumnLayout {
                 }
             }
         }
-    }
-
-    function generateTitle() {
-        if (!isWin) {
-            return genericName || "";
-        }
-
-        let text;
-        if (isGroup) {
-            if (model.display === undefined) {
-                return "";
-            }
-            text = model.display.toString();
-        } else {
-            text = displayParent;
-        }
-
-        // KWin appends increasing integers in between pointy brackets to otherwise equal window titles.
-        // In this case save <#number> as counter and delete it at the end of text.
-        text = `${(text.match(/.*(?=\s*(—|-))/) || [""])[0]}${(text.match(/<\d+>/) || [""]).pop()}`;
-
-        // In case the window title had only redundant information (i.e. appName), text is now empty.
-        // Add a hyphen to indicate that and avoid empty space.
-        if (text === "") {
-            text = "—";
-        }
-        return text;
     }
 
     function generateSubText() {
