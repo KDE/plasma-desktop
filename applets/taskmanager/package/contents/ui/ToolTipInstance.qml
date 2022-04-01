@@ -476,7 +476,7 @@ ColumnLayout {
         if (text === "") {
             text = "—";
         }
-        return text.toString();
+        return text;
     }
 
     function generateSubText() {
