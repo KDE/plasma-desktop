@@ -10,7 +10,7 @@
 #include <KLocalizedString>
 
 #include <QFile>
-#include <QXmlAttributes>
+#include <QXmlStreamReader>
 
 class IsoCodesPrivate
 {
@@ -28,38 +28,6 @@ public:
     QList<IsoCodeEntry> isoEntryList;
     bool loaded;
 };
-
-class XmlHandler : public QXmlDefaultHandler
-{
-public:
-    XmlHandler(const QString &isoCode_, QList<IsoCodeEntry> &isoEntryList_)
-        : isoCode(isoCode_)
-        , qName("iso_" + isoCode + "_entry")
-        , isoEntryList(isoEntryList_)
-    {
-    }
-
-    bool startElement(const QString &namespaceURI, const QString &localName, const QString &qName, const QXmlAttributes &attributes) override;
-    //    bool fatalError(const QXmlParseException &exception);
-    //    QString errorString() const;
-
-private:
-    const QString isoCode;
-    const QString qName;
-    QList<IsoCodeEntry> &isoEntryList;
-};
-
-bool XmlHandler::startElement(const QString & /*namespaceURI*/, const QString & /*localName*/, const QString &qName, const QXmlAttributes &attributes)
-{
-    if (qName == this->qName) {
-        IsoCodeEntry entry;
-        for (int i = 0; i < attributes.count(); i++) {
-            entry.insert(attributes.qName(i), attributes.value(i));
-        }
-        isoEntryList.append(entry);
-    }
-    return true;
-}
 
 IsoCodes::IsoCodes(const QString &isoCode, const QString &isoCodesXmlDir)
     : d(new IsoCodesPrivate(isoCode, isoCodesXmlDir))
@@ -110,16 +78,21 @@ void IsoCodesPrivate::buildIsoEntryList()
         return;
     }
 
-    XmlHandler xmlHandler(isoCode, isoEntryList);
+    QString qName("iso_" + isoCode + "_entry");
+    QXmlStreamReader reader(&file);
+    while (!reader.atEnd()) {
+        if (reader.readNext() == QXmlStreamReader::StartElement && reader.name() == qName) {
+            IsoCodeEntry entry;
+            const auto attributes = reader.attributes();
+            for (const auto &attr : attributes) {
+                entry.insert(attr.qualifiedName().toString(), attr.value().toString());
+            }
+            isoEntryList.append(entry);
+        }
+    }
 
-    QXmlSimpleReader reader;
-    reader.setContentHandler(&xmlHandler);
-    reader.setErrorHandler(&xmlHandler);
-
-    QXmlInputSource xmlInputSource(&file);
-
-    if (!reader.parse(xmlInputSource)) {
-        qCCritical(KCM_KEYBOARD) << "Failed to parse the xml file" << file.fileName();
+    if (reader.hasError()) {
+        qCCritical(KCM_KEYBOARD) << "Failed to parse the xml file" << file.fileName() << reader.errorString();
         return;
     }
 
