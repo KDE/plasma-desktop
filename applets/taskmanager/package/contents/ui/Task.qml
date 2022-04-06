@@ -493,7 +493,11 @@ MouseArea {
         Component {
             id: busyIndicator
 
-            PlasmaComponents3.BusyIndicator { anchors.fill: parent }
+            PlasmaComponents3.BusyIndicator {
+                anchors.fill: parent
+                anchors.leftMargin: !tasks.vertical ? Math.round(LayoutManager.horizontalMargins() / 2) : 0
+                anchors.topMargin: tasks.vertical ? Math.round(LayoutManager.verticalMargins() / 2) : 0
+            }
         }
     }
 
