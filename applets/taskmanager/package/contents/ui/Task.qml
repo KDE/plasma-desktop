@@ -484,20 +484,16 @@ MouseArea {
         ]
 
         Loader {
-            anchors.fill: parent
-
+            anchors.centerIn: parent
+            width: Math.min(parent.width, parent.height)
+            height: width
             active: model.IsStartup === true
             sourceComponent: busyIndicator
         }
 
         Component {
             id: busyIndicator
-
-            PlasmaComponents3.BusyIndicator {
-                anchors.fill: parent
-                anchors.leftMargin: !tasks.vertical ? Math.round(LayoutManager.horizontalMargins() / 2) : 0
-                anchors.topMargin: tasks.vertical ? Math.round(LayoutManager.verticalMargins() / 2) : 0
-            }
+            PlasmaComponents3.BusyIndicator {}
         }
     }
 
