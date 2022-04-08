@@ -1080,25 +1080,6 @@ static bool isDropBetweenSharedViews(const QList<QUrl> &urls, const QUrl &folder
     return true;
 }
 
-static const char *s_ark_dndextract_service = "application/x-kde-ark-dndextract-service";
-static const char *s_ark_dndextract_path = "application/x-kde-ark-dndextract-path";
-
-static QString arkDbusServiceName(const QMimeData *mimeData)
-{
-    return QString::fromUtf8(mimeData->data(QString::fromLatin1(s_ark_dndextract_service)));
-}
-
-static QString arkDbusPath(const QMimeData *mimeData)
-{
-    return QString::fromUtf8(mimeData->data(QString::fromLatin1(s_ark_dndextract_path)));
-}
-
-static bool isMimeDataArkDnd(const QMimeData *mimeData)
-{
-    return mimeData->hasFormat(QString::fromLatin1(s_ark_dndextract_service)) //
-        && mimeData->hasFormat(QString::fromLatin1(s_ark_dndextract_path));
-}
-
 void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool showMenuManually)
 {
     QMimeData *mimeData = qobject_cast<QMimeData *>(dropEvent->property("mimeData").value<QObject *>());
@@ -1177,18 +1158,6 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
             m_screenMapper->removeItemFromDisabledScreen(mappableUrl(url));
         }
         Q_EMIT move(x, y, mimeData->urls());
-
-        return;
-    }
-
-    if (isMimeDataArkDnd(mimeData)) {
-        QDBusMessage message = QDBusMessage::createMethodCall(arkDbusServiceName(mimeData),
-                                                              arkDbusPath(mimeData),
-                                                              QStringLiteral("org.kde.ark.DndExtract"),
-                                                              QStringLiteral("extractSelectedFilesTo"));
-        message.setArguments({dropTargetUrl.toDisplayString(QUrl::PreferLocalFile)});
-
-        QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
 
         return;
     }
@@ -1293,26 +1262,16 @@ void FolderModel::dropCwd(QObject *dropEvent)
         return;
     }
 
-    if (isMimeDataArkDnd(mimeData)) {
-        QDBusMessage message = QDBusMessage::createMethodCall(arkDbusServiceName(mimeData),
-                                                              arkDbusPath(mimeData),
-                                                              QStringLiteral("org.kde.ark.DndExtract"),
-                                                              QStringLiteral("extractSelectedFilesTo"));
-        message.setArguments(QVariantList() << m_dirModel->dirLister()->url().adjusted(QUrl::PreferLocalFile).toString());
+    Qt::DropAction proposedAction((Qt::DropAction)dropEvent->property("proposedAction").toInt());
+    Qt::DropActions possibleActions(dropEvent->property("possibleActions").toInt());
+    Qt::MouseButtons buttons(dropEvent->property("buttons").toInt());
+    Qt::KeyboardModifiers modifiers(dropEvent->property("modifiers").toInt());
 
-        QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
-    } else {
-        Qt::DropAction proposedAction((Qt::DropAction)dropEvent->property("proposedAction").toInt());
-        Qt::DropActions possibleActions(dropEvent->property("possibleActions").toInt());
-        Qt::MouseButtons buttons(dropEvent->property("buttons").toInt());
-        Qt::KeyboardModifiers modifiers(dropEvent->property("modifiers").toInt());
+    QDropEvent ev(QPoint(), possibleActions, mimeData, buttons, modifiers);
+    ev.setDropAction(proposedAction);
 
-        QDropEvent ev(QPoint(), possibleActions, mimeData, buttons, modifiers);
-        ev.setDropAction(proposedAction);
-
-        KIO::DropJob *dropJob = KIO::drop(&ev, m_dirModel->dirLister()->url().adjusted(QUrl::PreferLocalFile));
-        dropJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
-    }
+    KIO::DropJob *dropJob = KIO::drop(&ev, m_dirModel->dirLister()->url().adjusted(QUrl::PreferLocalFile));
+    dropJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
 }
 
 void FolderModel::changeSelection(const QItemSelection &selected, const QItemSelection &deselected)
