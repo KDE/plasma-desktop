@@ -344,33 +344,36 @@ MouseArea {
                 }
             }
 
-            onContainsMouseChanged:  {
-                if (containsMouse) {
-                    if (tasks.toolTipOpenedByClick !== null && tasks.toolTipOpenedByClick !== task) {
-                        return;
-                    }
+            onContainsMouseChanged: if (containsMouse) {
+                updateMainItemBindings();
+            }
 
-                    mainItem.parentTask = task;
-                    mainItem.rootIndex = tasksModel.makeModelIndex(itemIndex, -1);
-
-                    mainItem.appName = Qt.binding(() => model.AppName);
-                    mainItem.pidParent = Qt.binding(() => model.AppPid !== undefined ? model.AppPid : 0);
-                    mainItem.windows = Qt.binding(() => model.WinIdList);
-                    mainItem.isGroup = Qt.binding(() => model.IsGroupParent === true);
-                    mainItem.icon = Qt.binding(() => model.decoration);
-                    mainItem.launcherUrl = Qt.binding(() => model.LauncherUrlWithoutIcon);
-                    mainItem.isLauncher = Qt.binding(() => model.IsLauncher === true);
-                    mainItem.isMinimizedParent = Qt.binding(() => model.IsMinimized === true);
-                    mainItem.displayParent = Qt.binding(() => model.display);
-                    mainItem.genericName = Qt.binding(() => model.GenericName);
-                    mainItem.virtualDesktopParent = Qt.binding(() =>
-                        (model.VirtualDesktops !== undefined && model.VirtualDesktops.length > 0) ? model.VirtualDesktops : [0]);
-                    mainItem.isOnAllVirtualDesktopsParent = Qt.binding(() => model.IsOnAllVirtualDesktops === true);
-                    mainItem.activitiesParent = Qt.binding(() => model.Activities);
-
-                    mainItem.smartLauncherCountVisible = Qt.binding(() => task.smartLauncherItem && task.smartLauncherItem.countVisible);
-                    mainItem.smartLauncherCount = Qt.binding(() => mainItem.smartLauncherCountVisible ? task.smartLauncherItem.count : 0);
+            // Will also be called in activateTaskAtIndex(index)
+            function updateMainItemBindings() {
+                if (tasks.toolTipOpenedByClick !== null && tasks.toolTipOpenedByClick !== task) {
+                    return;
                 }
+
+                mainItem.parentTask = task;
+                mainItem.rootIndex = tasksModel.makeModelIndex(itemIndex, -1);
+
+                mainItem.appName = Qt.binding(() => model.AppName);
+                mainItem.pidParent = Qt.binding(() => model.AppPid !== undefined ? model.AppPid : 0);
+                mainItem.windows = Qt.binding(() => model.WinIdList);
+                mainItem.isGroup = Qt.binding(() => model.IsGroupParent === true);
+                mainItem.icon = Qt.binding(() => model.decoration);
+                mainItem.launcherUrl = Qt.binding(() => model.LauncherUrlWithoutIcon);
+                mainItem.isLauncher = Qt.binding(() => model.IsLauncher === true);
+                mainItem.isMinimizedParent = Qt.binding(() => model.IsMinimized === true);
+                mainItem.displayParent = Qt.binding(() => model.display);
+                mainItem.genericName = Qt.binding(() => model.GenericName);
+                mainItem.virtualDesktopParent = Qt.binding(() =>
+                    (model.VirtualDesktops !== undefined && model.VirtualDesktops.length > 0) ? model.VirtualDesktops : [0]);
+                mainItem.isOnAllVirtualDesktopsParent = Qt.binding(() => model.IsOnAllVirtualDesktops === true);
+                mainItem.activitiesParent = Qt.binding(() => model.Activities);
+
+                mainItem.smartLauncherCountVisible = Qt.binding(() => task.smartLauncherItem && task.smartLauncherItem.countVisible);
+                mainItem.smartLauncherCount = Qt.binding(() => mainItem.smartLauncherCountVisible ? task.smartLauncherItem.count : 0);
             }
         }
     }

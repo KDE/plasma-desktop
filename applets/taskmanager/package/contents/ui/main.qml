@@ -501,6 +501,16 @@ MouseArea {
 
         var task = taskRepeater.itemAt(index);
         if (task) {
+            /**
+             * BUG 452187: when activating a task from keyboard, there is no
+             * containsMouse changed signal, so we need to update the tooltip
+             * properties here.
+             */
+            if (plasmoid.configuration.showToolTips
+                && plasmoid.configuration.groupedTaskVisualization === 1) {
+                task.toolTipAreaItem.updateMainItemBindings();
+            }
+
             TaskTools.activateTask(task.modelIndex(), task.m, null, task);
         }
     }
