@@ -30,6 +30,7 @@ FocusScope {
     property alias currentIndex: gridView.currentIndex
     property alias url: dir.url
     property alias status: dir.status
+    property alias perStripe: positioner.perStripe
     property alias positions: positioner.positions
     property alias errorString: dir.errorString
     property alias dragging: dir.dragging
@@ -825,20 +826,6 @@ FocusScope {
                     } else {
                         contentY = contentY;
                         smoothY.enabled = false;
-                    }
-                }
-
-                onFlowChanged: {
-                    // FIXME TODO: Preserve positions.
-                    if (positioner.enabled) {
-                        positioner.reset();
-                    }
-                }
-
-                onLayoutDirectionChanged: {
-                    // FIXME TODO: Preserve positions.
-                    if (positioner.enabled) {
-                        positioner.reset();
                     }
                 }
 
