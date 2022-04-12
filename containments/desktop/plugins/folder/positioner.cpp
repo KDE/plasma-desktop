@@ -854,6 +854,7 @@ void Positioner::applyPositions()
         }
 
         if (pos > m_perStripe) {
+            qDebug() << "Some items did not fit, rearranging";
             name = positions.at(offset);
 
             if (!sourceIndices.contains(name)) {
