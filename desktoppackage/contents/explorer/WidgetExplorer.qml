@@ -310,6 +310,7 @@ PC3.Page {
     PlasmaExtras.PlaceholderMessage {
         anchors.centerIn: parent
         width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
+        iconName: "edit-none"
         text: searchInput.text.length > 0 ? i18n("No widgets matched the search terms") : i18n("No widgets available")
         visible: list.count == 0
     }
