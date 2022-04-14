@@ -17,7 +17,6 @@
 #include <QApplication>
 #include <QClipboard>
 #include <QCollator>
-#include <QDesktopWidget>
 #include <QDrag>
 #include <QImage>
 #include <QItemSelectionModel>
@@ -1812,7 +1811,6 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
     QMenu *menu = new QMenu();
     if (!m_fileItemActions) {
         m_fileItemActions = new KFileItemActions(this);
-        m_fileItemActions->setParentWidget(QApplication::desktop());
     }
 
     if (indexes.isEmpty()) {
@@ -2135,7 +2133,6 @@ void FolderModel::undo()
 void FolderModel::emptyTrashBin()
 {
     KIO::JobUiDelegate uiDelegate;
-    uiDelegate.setWindow(QApplication::desktop());
 
     if (uiDelegate.askDeleteConfirmation(QList<QUrl>(), KIO::JobUiDelegate::EmptyTrash, KIO::JobUiDelegate::DefaultConfirmation)) {
         KIO::Job *job = KIO::emptyTrash();

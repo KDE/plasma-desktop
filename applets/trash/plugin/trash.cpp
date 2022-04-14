@@ -7,7 +7,6 @@
 #include "trash.h"
 
 #include <QApplication>
-#include <QDesktopWidget>
 #include <QFileInfo>
 
 #include <KIO/CopyJob>
@@ -32,7 +31,6 @@ void Trash::trashUrls(const QList<QUrl> &urls)
 void Trash::emptyTrash()
 {
     KIO::JobUiDelegate uiDelegate;
-    uiDelegate.setWindow(QApplication::desktop());
     if (uiDelegate.askDeleteConfirmation(QList<QUrl>(), KIO::JobUiDelegate::EmptyTrash, KIO::JobUiDelegate::DefaultConfirmation)) {
         KIO::Job *job = KIO::emptyTrash();
         job->uiDelegate()->setAutoErrorHandlingEnabled(true);
