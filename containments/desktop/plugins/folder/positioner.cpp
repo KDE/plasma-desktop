@@ -7,7 +7,6 @@
 #include "positioner.h"
 #include "foldermodel.h"
 
-#include <QDebug>
 #include <QTimer>
 
 #include <cstdlib>
@@ -456,8 +455,6 @@ void Positioner::updatePositions()
             const QString &name = m_folderModel->data(m_folderModel->index(it.value(), 0), FolderModel::UrlRole).toString();
 
             if (name.isEmpty()) {
-                qDebug() << this << it.value() << "Source model doesn't know this index!";
-
                 return;
             }
 
@@ -854,7 +851,6 @@ void Positioner::applyPositions()
         }
 
         if (pos > m_perStripe) {
-            qDebug() << "Some items did not fit, rearranging";
             name = positions.at(offset);
 
             if (!sourceIndices.contains(name)) {
