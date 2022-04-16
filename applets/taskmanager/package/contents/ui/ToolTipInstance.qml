@@ -25,17 +25,8 @@ ColumnLayout {
     ListView.onPooled: width = height = 0
     ListView.onReused: width = height = undefined
 
-    readonly property string mprisSourceName: mpris2Source.sourceNameForLauncherUrl(launcherUrl, appPid)
     readonly property var playerData: mprisSourceName != "" ? mpris2Source.data[mprisSourceName] : 0
     readonly property bool hasPlayer: !!mprisSourceName && !!playerData
-    readonly property bool playing: hasPlayer && playerData.PlaybackStatus === "Playing"
-    readonly property bool canControl: hasPlayer && playerData.CanControl
-    readonly property bool canPlay: hasPlayer && playerData.CanPlay
-    readonly property bool canPause: hasPlayer && playerData.CanPause
-    readonly property bool canGoBack: hasPlayer && playerData.CanGoPrevious
-    readonly property bool canGoNext: hasPlayer && playerData.CanGoNext
-    readonly property bool canRaise: hasPlayer && playerData.CanRaise
-    readonly property var currentMetadata: hasPlayer ? playerData.Metadata : ({})
 
     readonly property string title: {
         if (!isWin) {
@@ -63,26 +54,8 @@ ColumnLayout {
         }
         return text;
     }
-
-    readonly property string track: {
-        const xesamTitle = currentMetadata["xesam:title"]
-        if (xesamTitle) {
-            return xesamTitle;
-        }
-        // if no track title is given, print out the file name
-        const xesamUrl = currentMetadata["xesam:url"] ? currentMetadata["xesam:url"].toString() : ""
-        if (!xesamUrl) {
-            return "";
-        }
-        const lastSlashPos = xesamUrl.lastIndexOf('/')
-        if (lastSlashPos < 0) {
-            return "";
-        }
-        const lastUrlPart = xesamUrl.substring(lastSlashPos + 1)
-        return decodeURIComponent(lastUrlPart) || "";
-    }
-    readonly property string artist: currentMetadata["xesam:artist"] || ""
-    readonly property string albumArt: currentMetadata["mpris:artUrl"] || ""
+    readonly property bool titleIncludesTrack: playerController.item
+        && title.includes(playerController.item.track)
 
     spacing: PlasmaCore.Units.smallSpacing
 
@@ -121,7 +94,7 @@ ColumnLayout {
                 maximumLineCount: 1
                 Layout.fillWidth: true
                 elide: Text.ElideRight
-                text: (!hasPlayer || !title.includes(track)) ? title : ""
+                text: titleIncludesTrack ? "" : title
                 opacity: 0.75
                 visible: title.length !== 0 && title !== appNameHeading.text
                 textFormat: Text.PlainText
@@ -282,7 +255,7 @@ ColumnLayout {
             // if this app is a browser, we also check the title, so album art is not shown when the user is on some other tab
             // in all other cases we can safely show the album art without checking the title
             readonly property bool available: (status === Image.Ready || status === Image.Loading)
-                && (!(isGroup || backend.applicationCategories(launcherUrl).includes("WebBrowser")) || title.includes(track))
+                && (!(isGroup || backend.applicationCategories(launcherUrl).includes("WebBrowser")) || titleIncludesTrack)
 
             anchors.fill: hoverHandler
             // Indent by one pixel to make sure we never cover up the entire highlight
@@ -290,7 +263,7 @@ ColumnLayout {
             sourceSize: Qt.size(parent.width, parent.height)
 
             asynchronous: true
-            source: albumArt
+            source: playerController.item ? playerController.item.albumArt : ""
             fillMode: Image.PreserveAspectFit
             visible: available
         }
@@ -310,6 +283,7 @@ ColumnLayout {
 
     // Player controls row, load on demand so group tooltips could be loaded faster
     Loader {
+        id: playerController
         active: hasPlayer && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
         asynchronous: true
         visible: active
@@ -318,84 +292,7 @@ ColumnLayout {
         Layout.leftMargin: header.Layout.margins
         Layout.rightMargin: header.Layout.margins
 
-        sourceComponent: RowLayout {
-            enabled: canControl
-
-            ColumnLayout {
-                Layout.fillWidth: true
-                Layout.topMargin: PlasmaCore.Units.smallSpacing
-                Layout.bottomMargin: PlasmaCore.Units.smallSpacing
-                Layout.rightMargin: isWin ? PlasmaCore.Units.smallSpacing : PlasmaCore.Units.largeSpacing
-                spacing: 0
-
-                 ScrollableTextWrapper {
-                    id: songTextWrapper
-
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: songText.height
-                    implicitWidth: songText.implicitWidth
-
-                    PlasmaComponents3.Label {
-                        id: songText
-                        parent: songTextWrapper
-                        width: parent.width
-                        height: undefined
-                        lineHeight: 1
-                        maximumLineCount: artistText.visible? 1 : 2
-                        wrapMode: Text.NoWrap
-                        elide: parent.state ? Text.ElideNone : Text.ElideRight
-                        text: track
-                        textFormat: Text.PlainText
-                    }
-                 }
-
-                ScrollableTextWrapper {
-                    id: artistTextWrapper
-
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: artistText.height
-                    implicitWidth: artistText.implicitWidth
-                    visible: artistText.text !== ""
-
-                    PlasmaExtras.DescriptiveLabel {
-                        id: artistText
-                        parent: artistTextWrapper
-                        width: parent.width
-                        height: undefined
-                        wrapMode: Text.NoWrap
-                        lineHeight: 1
-                        elide: parent.state ? Text.ElideNone : Text.ElideRight
-                        text: artist
-                        font: PlasmaCore.Theme.smallestFont
-                        textFormat: Text.PlainText
-                    }
-                }
-            }
-
-            PlasmaComponents3.ToolButton {
-                enabled: canGoBack
-                icon.name: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
-                onClicked: mpris2Source.goPrevious(mprisSourceName)
-            }
-
-            PlasmaComponents3.ToolButton {
-                enabled: playing ? canPause : canPlay
-                icon.name: playing ? "media-playback-pause" : "media-playback-start"
-                onClicked: {
-                    if (!playing) {
-                        mpris2Source.play(mprisSourceName);
-                    } else {
-                        mpris2Source.pause(mprisSourceName);
-                    }
-                }
-            }
-
-            PlasmaComponents3.ToolButton {
-                enabled: canGoNext
-                icon.name: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
-                onClicked: mpris2Source.goNext(mprisSourceName)
-            }
-        }
+        source: "PlayerController.qml"
     }
 
     // Volume controls
