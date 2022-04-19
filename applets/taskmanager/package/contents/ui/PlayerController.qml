@@ -16,12 +16,13 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 RowLayout {
-    enabled: playerData.CanControl
+    enabled: !!playerData.CanControl
 
     readonly property string mprisSourceName: mpris2Source.sourceNameForLauncherUrl(launcherUrl, appPid)
-    readonly property bool playing: playerData.PlaybackStatus === "Playing"
+    readonly property var playerData: mprisSourceName != "" ? mpris2Source.data[mprisSourceName] : 0
+    readonly property bool playing: !!(playerData.PlaybackStatus === "Playing")
 
-    readonly property var currentMetadata: playerData.Metadata
+    readonly property var currentMetadata: !!playerData ? playerData.Metadata : ""
 
     readonly property string track: {
         const xesamTitle = currentMetadata["xesam:title"]
@@ -95,13 +96,13 @@ RowLayout {
     }
 
     PlasmaComponents3.ToolButton {
-        enabled: playerData.CanGoPrevious
+        enabled: !!playerData.CanGoPrevious
         icon.name: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
         onClicked: mpris2Source.goPrevious(mprisSourceName)
     }
 
     PlasmaComponents3.ToolButton {
-        enabled: playing ? playerData.CanPause : playerData.CanPlay
+        enabled: playing ? !!playerData.CanPause : !!playerData.CanPlay
         icon.name: playing ? "media-playback-pause" : "media-playback-start"
         onClicked: {
             if (!playing) {
@@ -113,7 +114,7 @@ RowLayout {
     }
 
     PlasmaComponents3.ToolButton {
-        enabled: playerData.CanGoNext
+        enabled: !!playerData.CanGoNext
         icon.name: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
         onClicked: mpris2Source.goNext(mprisSourceName)
     }

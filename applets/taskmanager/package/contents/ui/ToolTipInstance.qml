@@ -25,9 +25,6 @@ ColumnLayout {
     ListView.onPooled: width = height = 0
     ListView.onReused: width = height = undefined
 
-    readonly property var playerData: mprisSourceName != "" ? mpris2Source.data[mprisSourceName] : 0
-    readonly property bool hasPlayer: !!mprisSourceName && !!playerData
-
     readonly property string title: {
         if (!isWin) {
             return genericName || "";
