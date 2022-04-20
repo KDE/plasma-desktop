@@ -184,19 +184,6 @@ MouseArea {
         }
     }
 
-    Connections {
-        target: tasksModel
-
-        function onActiveTaskChanged() {
-            if (!plasmoid.configuration.groupPopups) {
-                return;
-            }
-            if (tasksModel.activeTask.parent.valid) {
-                groupDialog.activeTask = tasksModel.activeTask;
-            }
-        }
-    }
-
     TaskManager.VirtualDesktopInfo {
         id: virtualDesktopInfo
     }

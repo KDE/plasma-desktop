@@ -33,14 +33,12 @@ PlasmaCore.Dialog {
     property alias overflowing: scrollView.overflowing
     property var _oldAppletStatus: PlasmaCore.Types.UnknownStatus
 
-    property var activeTask: null
-
     function findActiveTaskIndex() {
-        if (!activeTask) {
+        if (!tasksModel.activeTask) {
             return;
         }
         for (let i = 0; i < groupListView.count; i++) {
-            if (tasksModel.makeModelIndex(visualParent.itemIndex, i) === activeTask) {
+            if (tasksModel.makeModelIndex(visualParent.itemIndex, i) === tasksModel.activeTask) {
                 groupListView.positionViewAtIndex(i, ListView.Contain); // Prevent visual glitches
                 groupListView.currentIndex = i;
                 return;
