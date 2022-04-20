@@ -100,20 +100,6 @@ void Backend::setTaskManagerItem(QQuickItem *item)
     }
 }
 
-QQuickWindow *Backend::groupDialog() const
-{
-    return m_groupDialog;
-}
-
-void Backend::setGroupDialog(QQuickWindow *dialog)
-{
-    if (dialog != m_groupDialog) {
-        m_groupDialog = dialog;
-
-        Q_EMIT groupDialogChanged();
-    }
-}
-
 bool Backend::highlightWindows() const
 {
     return m_highlightWindows;

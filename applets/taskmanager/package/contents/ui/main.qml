@@ -210,7 +210,6 @@ MouseArea {
         id: backend
 
         taskManagerItem: tasks
-        groupDialog: groupDialog
         highlightWindows: plasmoid.configuration.highlightWindows
 
         onAddLauncher: {
