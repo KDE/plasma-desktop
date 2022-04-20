@@ -49,9 +49,8 @@ PlasmaCore.Dialog {
 
     mainItem: MouseHandler {
         id: mouseHandler
-        // HACK: 1 is to prevent "trying to show an empty dialog" warning.
-        width: Math.min(groupDialog.preferredWidth, Math.max(groupListView.maxWidth, groupDialog.visualParent ? groupDialog.visualParent.width : 0, 1))
-        height: Math.max(Math.min(groupDialog.preferredHeight, groupListView.maxHeight), 1)
+        width: Math.min(groupDialog.preferredWidth, Math.max(groupListView.maxWidth, groupDialog.visualParent.width))
+        height: Math.min(groupDialog.preferredHeight, groupListView.maxHeight)
 
         target: groupListView
         handleWheelEvents: !scrollView.overflowing
