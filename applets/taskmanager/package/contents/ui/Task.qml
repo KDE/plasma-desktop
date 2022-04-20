@@ -21,7 +21,6 @@ MouseArea {
 
     activeFocusOnTab: true
 
-    width: groupDialog.contentWidth
     height: Math.max(theme.mSize(theme.defaultFont).height, PlasmaCore.Units.iconSizes.medium) + LayoutManager.verticalMargins()
 
     visible: false

@@ -92,6 +92,7 @@ PlasmaCore.Dialog {
                         restoreMode: Binding.RestoreNone // Store rootIndex to avoid sudden changes in height
                     }
                     delegate: Task {
+                        width: groupListView.width
                         visible: true
                         inPopup: true
 
