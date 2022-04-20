@@ -121,7 +121,13 @@ PlasmaCore.Dialog {
 
                 reuseItems: false
 
-                onCountChanged: if (count > 0) backend.cancelHighlightWindows()
+                onCountChanged: {
+                    if (count > 0) {
+                        backend.cancelHighlightWindows()
+                    } else {
+                        groupDialog.visible = false;
+                    }
+                }
             }
         }
     }
