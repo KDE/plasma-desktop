@@ -107,9 +107,9 @@ Item {
                 var insertAt = TaskTools.insertIndexAt(above, event.x, event.y);
 
                 if (tasks.dragSource !== above && tasks.dragSource.itemIndex !== insertAt) {
-                    if (groupDialog.visible && groupDialog.visualParent) {
+                    if (!!tasks.groupDialog) {
                         tasksModel.move(tasks.dragSource.itemIndex, insertAt,
-                            tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex));
+                            tasksModel.makeModelIndex(tasks.groupDialog.visualParent.itemIndex));
                     } else {
                         tasksModel.move(tasks.dragSource.itemIndex, insertAt);
                     }
