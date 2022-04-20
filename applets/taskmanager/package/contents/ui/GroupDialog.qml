@@ -92,7 +92,12 @@ PlasmaCore.Dialog {
                             enabled: index < 20 // 20 is based on performance considerations.
 
                             function onLabelTextChanged() { // ListView.onAdd included
-                                Qt.callLater(groupFilter.updateMaxTextWidth);
+                                if (groupFilter.maxTextWidth === 0) {
+                                    // Update immediately to avoid shrinking
+                                    groupFilter.updateMaxTextWidth();
+                                } else {
+                                    Qt.callLater(groupFilter.updateMaxTextWidth);
+                                }
                             }
                         }
                     }
