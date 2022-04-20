@@ -19,7 +19,7 @@ import "code/layout.js" as LayoutManager
 
 PlasmaCore.Dialog {
     id: groupDialog
-    visible: false
+    visible: true
 
     type: PlasmaCore.Dialog.PopupMenu
     flags: Qt.WindowStaysOnTopHint
@@ -126,7 +126,7 @@ PlasmaCore.Dialog {
     }
 
     onVisibleChanged: {
-        if (visible && visualParent) {
+        if (visible) {
             _oldAppletStatus = plasmoid.status;
             plasmoid.status = PlasmaCore.Types.RequiresAttentionStatus;
 
@@ -135,8 +135,8 @@ PlasmaCore.Dialog {
             Qt.callLater(findActiveTaskIndex);
         } else {
             plasmoid.status = _oldAppletStatus;
+            tasks.groupDialog = null;
+            destroy();
         }
     }
-
-    onVisualParentChanged: activeTask = null
 }

@@ -155,8 +155,7 @@ Item {
 
             onTriggered: {
                 if (parent.hoveredItem.m.IsGroupParent === true) {
-                    groupDialog.visualParent = parent.hoveredItem;
-                    groupDialog.visible = true;
+                    TaskTools.createGroupDialog(parent.hoveredItem);
                 } else if (parent.hoveredItem.m.IsLauncher !== true) {
                     tasksModel.requestActivate(parent.hoveredItem.modelIndex());
                 }

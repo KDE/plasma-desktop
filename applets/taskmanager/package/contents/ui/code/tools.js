@@ -5,6 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+.import QtQml 2.15 as QtQml
 .import org.kde.taskmanager 0.1 as TaskManager
 .import org.kde.plasma.core 2.0 as PlasmaCore // Needed by TaskManager
 
@@ -175,12 +176,11 @@ function activateTask(index, model, modifiers, task) {
         // This is also the final fallback option if Tooltips or Present windows
         // are chosen but not actually available
         else {
-            if (groupDialog.visible) {
+            if (!!groupDialog) {
                 task.hideToolTipTemporarily();
                 groupDialog.visible = false;
             } else {
-                groupDialog.visualParent = task;
-                groupDialog.visible = true;
+                createGroupDialog(task);
             }
         }
     } else {
@@ -252,4 +252,23 @@ function taskPrefixHovered(prefix) {
         ];
 
     return effectivePrefix;
+}
+
+function createGroupDialog(visualParent) {
+    if (!visualParent) {
+        return;
+    }
+
+    if (!!tasks.groupDialog) {
+        tasks.groupDialog.visualParent = visualParent;
+        return;
+    }
+
+    if (groupDialogComponent.status === QtQml.Component.Ready) {
+        tasks.groupDialog = groupDialogComponent.createObject(tasks,
+            {
+                visualParent: visualParent,
+            }
+        );
+    }
 }
