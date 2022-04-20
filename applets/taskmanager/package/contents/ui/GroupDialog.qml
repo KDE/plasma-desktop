@@ -80,16 +80,8 @@ PlasmaCore.Dialog {
                     readonly property TextMetrics textMetrics: TextMetrics {}
                     property int maxTextWidth: 0
 
-                    model: groupDialog.visualParent ? tasksModel : null
-                    Binding on rootIndex { // Use Binding to re-evaluate rootIndex only when visible is true
-                        // TasksModel::makeModelIndex() returns QModelIndex()
-                        // when row argument is less than 0 or more than count
-                        value: tasksModel.makeModelIndex(
-                            groupDialog.visualParent ? groupDialog.visualParent.itemIndex : -1
-                        )
-                        when: groupDialog.visualParent && groupDialog.visible // implicitly using visible as a way to trigger re-evaluation
-                        restoreMode: Binding.RestoreNone // Store rootIndex to avoid sudden changes in height
-                    }
+                    model: tasksModel
+                    rootIndex: tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex)
                     delegate: Task {
                         width: groupListView.width
                         visible: true
