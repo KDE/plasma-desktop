@@ -8,6 +8,7 @@
 #include "../configcontainer.h"
 
 #include <KAboutData>
+#include <KLocalizedContext>
 #include <KLocalizedString>
 #include <KMessageWidget>
 #include <kdeclarative/kdeclarative.h>
@@ -65,10 +66,8 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     m_view->rootContext()->setContextProperty("backend", m_backend);
     m_view->rootContext()->setContextProperty("deviceModel", getDeviceList(m_backend));
 
-    KDeclarative::KDeclarative kdeclarative;
-    kdeclarative.setupEngine(m_view->engine()); // This is a new engine
-    kdeclarative.setDeclarativeEngine(m_view->engine());
-    kdeclarative.setupContext();
+    KDeclarative::KDeclarative::setupEngine(m_view->engine()); // This is a new engine
+    m_view->engine()->rootContext()->setContextObject(new KLocalizedContext(m_view->engine()));
 
     if (m_backend->mode() == InputBackendMode::XLibinput) {
         m_view->setSource(QUrl(QStringLiteral("qrc:/libinput/main_deviceless.qml")));

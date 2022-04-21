@@ -7,6 +7,7 @@
 #include "touchpadconfiglibinput.h"
 
 #include <KAboutData>
+#include <KLocalizedContext>
 #include <KLocalizedString>
 #include <kdeclarative/kdeclarative.h>
 
@@ -55,9 +56,8 @@ TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, 
 
     qmlRegisterSingletonInstance("org.kde.touchpad.kcm", 1, 0, "TouchpadConfig", this);
 
-    KDeclarative::KDeclarative kdeclarative;
-    kdeclarative.setDeclarativeEngine(m_view->engine());
-    kdeclarative.setupBindings();
+    KDeclarative::KDeclarative::setupEngine(m_view->engine());
+    m_view->engine()->rootContext()->setContextObject(new KLocalizedContext(m_view->engine()));
     m_view->setSource(QUrl("qrc:/libinput/touchpad.qml"));
 
     if (m_initError) {
