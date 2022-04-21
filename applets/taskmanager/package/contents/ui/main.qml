@@ -160,6 +160,8 @@ MouseArea {
                     return TaskManager.TasksModel.SortVirtualDesktop;
                 case 4:
                     return TaskManager.TasksModel.SortActivity;
+                case 5:
+                    return TaskManager.TasksModel.SortLastActivated;
                 default:
                     return TaskManager.TasksModel.SortDisabled;
             }

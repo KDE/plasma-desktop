@@ -114,7 +114,14 @@ Item {
             Kirigami.FormData.label: i18n("Sort:")
             Layout.fillWidth: true
             Layout.minimumWidth: Kirigami.Units.gridUnit * 14
-            model: [i18n("Do not sort"), i18n("Manually"), i18n("Alphabetically"), i18n("By desktop"), i18n("By activity")]
+            model: [
+                i18n("Do not sort"),
+                i18n("Manually"),
+                i18n("Alphabetically"),
+                i18n("By desktop"),
+                i18n("By activity"),
+                i18nc("@item:inlistbox", "By last activated"),
+            ]
         }
 
         CheckBox {
