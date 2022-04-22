@@ -13,7 +13,7 @@ import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
 import org.kde.plasma.shell 2.0 as Shell
 import "../activitymanager"
 import "../explorer"
-
+import org.kde.kirigami 2.15 as Kirigami
 
 Item {
     id: root
@@ -61,6 +61,28 @@ Item {
 
     KWindowSystem {
         id: kwindowsystem
+    }
+
+    Kirigami.ImageColors {
+        id: wallpaperColors
+        source: root.containment.wallpaper
+    }
+
+    Connections {
+        target: root.containment.wallpaper
+        function onConfigurationChanged() {
+            colorsTimer.restart()
+        }
+        function onRepaintNeeded() {
+            colorsTimer.restart();
+        }
+    }
+
+    Timer {
+        id: colorsTimer
+        onTriggered: {
+            Qt.callLater(wallpaperColors.update)
+        }
     }
 
     Timer {
@@ -260,5 +282,11 @@ Item {
     Component.onCompleted: {
         //configure the view behavior
         desktop.windowType = Shell.Desktop.Desktop;
+    }
+
+    Binding {
+        target: desktop
+        property: "accentColor"
+        value: wallpaperColors.highlight
     }
 }
