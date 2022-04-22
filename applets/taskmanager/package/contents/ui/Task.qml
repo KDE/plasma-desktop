@@ -11,6 +11,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents // for DialogStatus
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.draganddrop 2.0
 
+import org.kde.taskmanager 0.1 as TaskManager
 import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
 
 import "code/layout.js" as LayoutManager
@@ -204,6 +205,10 @@ MouseArea {
     }
 
     onPositionChanged: {
+        if (tasksModel.sortModeEnumValue(plasmoid.configuration.sortingStrategy) !== TaskManager.TasksModel.SortManual) {
+            return;
+        }
+
         // mouse.button is always 0 here, hence checking with mouse.buttons
         if (pressX != -1 && mouse.buttons == Qt.LeftButton && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
             tasks.dragSource = task;
