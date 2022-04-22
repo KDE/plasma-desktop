@@ -145,7 +145,6 @@ TouchpadConfigXlib::TouchpadConfigXlib(TouchpadConfigContainer *parent, Touchpad
     new SliderPair(m_sensitivity.kcfg_FingerLow, m_sensitivity.kcfg_FingerHigh, this);
     new SliderPair(m_pointerMotion.kcfg_PressureMotionMinZ, m_pointerMotion.kcfg_PressureMotionMaxZ, this);
 
-    KConfigDialogManager::changedMap()->insert("CustomSlider", SIGNAL(valueChanged(double)));
     m_manager = new CustomConfigDialogManager(this, &m_config, m_backend->supportedParameters());
     connect(m_manager, SIGNAL(widgetModified()), SLOT(checkChanges()), Qt::QueuedConnection);
 
