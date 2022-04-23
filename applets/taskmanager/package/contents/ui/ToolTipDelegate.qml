@@ -70,8 +70,6 @@ Loader {
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    property int textWidth: PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 20
-
     active: rootIndex !== undefined
     asynchronous: true
 
