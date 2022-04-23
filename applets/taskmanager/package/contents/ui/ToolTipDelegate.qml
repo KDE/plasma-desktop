@@ -20,9 +20,6 @@ Loader {
 
     property Item parentTask
     property var rootIndex
-    // hasRootIndex is needed to avoid unnecessary reevaluation of model property in DelegateModel,
-    // because !!toolTipDelegate.rootIndex will not work as expected.
-    readonly property bool hasRootIndex: !!rootIndex
 
     property string appName
     property int pidParent
@@ -105,7 +102,7 @@ Loader {
                     readonly property int estimatedWidth: (toolTipDelegate.isVerticalPanel ? 1 : count) * (toolTipDelegate.tooltipInstanceMaximumWidth + PlasmaCore.Units.smallSpacing * 2) - PlasmaCore.Units.smallSpacing * 2
                     readonly property int estimatedHeight: (toolTipDelegate.isVerticalPanel ? count : 1) * (toolTipDelegate.tooltipInstanceMaximumWidth / 2 + PlasmaCore.Units.smallSpacing * 2) - PlasmaCore.Units.smallSpacing * 2
 
-                    model: toolTipDelegate.hasRootIndex ? tasksModel : null
+                    model: tasksModel
 
                     rootIndex: toolTipDelegate.rootIndex
                     onRootIndexChanged: groupToolTipListView.positionViewAtBeginning() // Fix a visual glitch (when the mouse moves from a tooltip with a moved scrollbar to another tooltip without a scrollbar)
