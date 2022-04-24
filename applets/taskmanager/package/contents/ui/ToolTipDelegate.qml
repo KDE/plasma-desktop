@@ -95,26 +95,29 @@ Loader {
             ListView {
                 id: groupToolTipListView
 
-                model: DelegateModel {
-                    id: delegateModel
-
-                    // On Wayland, a tooltip has a significant resizing process, so estimate the size first.
-                    readonly property int estimatedWidth: (toolTipDelegate.isVerticalPanel ? 1 : count) * (toolTipDelegate.tooltipInstanceMaximumWidth + PlasmaCore.Units.largeSpacing) - PlasmaCore.Units.largeSpacing
-                    readonly property int estimatedHeight: (toolTipDelegate.isVerticalPanel ? count : 1) * (toolTipDelegate.tooltipInstanceMaximumWidth / 2 + PlasmaCore.Units.largeSpacing) - PlasmaCore.Units.largeSpacing
-
-                    model: tasksModel
-
-                    rootIndex: toolTipDelegate.rootIndex
-                    onRootIndexChanged: groupToolTipListView.positionViewAtBeginning() // Fix a visual glitch (when the mouse moves from a tooltip with a moved scrollbar to another tooltip without a scrollbar)
-
-                    delegate: ToolTipInstance {
-                        submodelIndex: tasksModel.makeModelIndex(toolTipDelegate.rootIndex.row, index)
-                    }
-                }
+                // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-102811
+                model: delegateModel.count > 0 ? delegateModel : null
 
                 orientation: isVerticalPanel ? ListView.Vertical : ListView.Horizontal
                 reuseItems: true
                 spacing: PlasmaCore.Units.largeSpacing
+            }
+
+            DelegateModel {
+                id: delegateModel
+
+                // On Wayland, a tooltip has a significant resizing process, so estimate the size first.
+                readonly property int estimatedWidth: (toolTipDelegate.isVerticalPanel ? 1 : count) * (toolTipDelegate.tooltipInstanceMaximumWidth + PlasmaCore.Units.largeSpacing) - PlasmaCore.Units.largeSpacing
+                readonly property int estimatedHeight: (toolTipDelegate.isVerticalPanel ? count : 1) * (toolTipDelegate.tooltipInstanceMaximumWidth / 2 + PlasmaCore.Units.largeSpacing) - PlasmaCore.Units.largeSpacing
+
+                model: tasksModel
+
+                rootIndex: toolTipDelegate.rootIndex
+                onRootIndexChanged: groupToolTipListView.positionViewAtBeginning() // Fix a visual glitch (when the mouse moves from a tooltip with a moved scrollbar to another tooltip without a scrollbar)
+
+                delegate: ToolTipInstance {
+                    submodelIndex: tasksModel.makeModelIndex(toolTipDelegate.rootIndex.row, index)
+                }
             }
         }
     }
