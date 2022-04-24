@@ -110,7 +110,7 @@ Loader {
                 }
 
                 orientation: isVerticalPanel ? ListView.Vertical : ListView.Horizontal
-                reuseItems: true
+                reuseItems: false
                 spacing: PlasmaCore.Units.largeSpacing
             }
         }
