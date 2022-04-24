@@ -6,16 +6,16 @@
   <kcfgfile name="kded_device_automounterrc"/>
   <group name="General">
     <entry name="AutomountOnLogin" type="Bool">
-        <default>true</default>
+        <default>false</default>
     </entry>
     <entry name="AutomountOnPlugin" type="Bool">
-        <default>true</default>
+        <default>false</default>
     </entry>
     <entry name="AutomountUnknownDevices" type="Bool">
         <default>false</default>
     </entry>
     <entry name="AutomountEnabled" type="Bool">
-        <default>true</default>
+        <default>false</default>
     </entry>
   </group>
 </kcfg>
