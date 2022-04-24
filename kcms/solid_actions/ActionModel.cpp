@@ -9,6 +9,7 @@
 #include "ActionItem.h"
 
 #include <KDesktopFileActions>
+#include <KService>
 
 #include <QDirIterator>
 #include <QIcon>
@@ -100,8 +101,9 @@ void ActionModel::buildActionList()
         while (it.hasNext()) {
             it.next();
             const QString desktop = it.filePath();
+            const KService::Ptr desktopService = KService::serviceByStorageId(it.filePath());
             // Get contained services list
-            const QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(desktop, true);
+            const QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(*desktopService, true);
             for (const KServiceAction &deviceAction : services) {
                 ActionItem *actionItem = new ActionItem(desktop, deviceAction.name(), this); // Create an action
                 d->actions.append(actionItem);
