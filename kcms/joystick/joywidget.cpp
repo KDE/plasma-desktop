@@ -30,8 +30,6 @@
 
 #include <stdio.h>
 
-static QString PRESSED = I18N_NOOP("PRESSED");
-
 class TableWidget : public QTableWidget
 {
 public:
@@ -95,7 +93,7 @@ JoyWidget::JoyWidget(QWidget *parent)
 
     // calculate the column width we need
     QFontMetrics fm(font());
-    int colWidth = qMax(fm.horizontalAdvance(PRESSED), fm.horizontalAdvance(QStringLiteral("-32767"))) + 10; // -32767 largest string
+    int colWidth = qMax(fm.horizontalAdvance(i18n("PRESSED")), fm.horizontalAdvance(QStringLiteral("-32767"))) + 10; // -32767 largest string
 
     vboxMid->addWidget(new QLabel(i18n("Buttons:")));
     buttonTbl = new TableWidget(0, 1);
@@ -299,7 +297,7 @@ void JoyWidget::checkDevice()
         if (value == 0) // button release
             buttonTbl->item(number, 0)->setText(QStringLiteral("-"));
         else
-            buttonTbl->item(number, 0)->setText(PRESSED);
+            buttonTbl->item(number, 0)->setText(i18n("PRESSED"));
     }
 
     if (type == JoyDevice::AXIS) {
