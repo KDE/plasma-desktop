@@ -48,7 +48,7 @@ Kirigami.FormLayout {
         id: slowKeysPressBeep
 
         Kirigami.FormData.label: i18n("Ring system bell:")
-        text: i18nc("Use system bell when a key is pressed", "&when any key is pressed")
+        text: i18nc("Use system bell when a key is pressed", "when any key is &pressed")
 
         KCM.SettingStateBinding {
             configObject: kcm.keyboardFiltersSettings
@@ -62,7 +62,7 @@ Kirigami.FormLayout {
     QQC2.CheckBox {
         id: slowKeysAcceptBeep
 
-        text: i18nc("Use system bell when a key is accepted", "&when any key is accepted")
+        text: i18nc("Use system bell when a key is accepted", "when any key is &accepted")
 
         KCM.SettingStateBinding {
             configObject: kcm.keyboardFiltersSettings
@@ -76,7 +76,7 @@ Kirigami.FormLayout {
     QQC2.CheckBox {
         id: slowKeysRejectBeep
 
-        text: i18nc("Use system bell when a key is rejected", "&when any key is rejected")
+        text: i18nc("Use system bell when a key is rejected", "when any key is &rejected")
 
         KCM.SettingStateBinding {
             configObject: kcm.keyboardFiltersSettings
