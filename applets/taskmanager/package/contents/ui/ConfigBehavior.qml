@@ -25,6 +25,7 @@ Item {
     property alias cfg_separateLaunchers: separateLaunchers.checked
     property alias cfg_middleClickAction: middleClickAction.currentIndex
     property alias cfg_wheelEnabled: wheelEnabled.checked
+    property alias cfg_wheelSkipMinimized: wheelSkipMinimized.checked
     property alias cfg_showOnlyCurrentScreen: showOnlyCurrentScreen.checked
     property alias cfg_showOnlyCurrentDesktop: showOnlyCurrentDesktop.checked
     property alias cfg_showOnlyCurrentActivity: showOnlyCurrentActivity.checked
@@ -158,6 +159,17 @@ Item {
             id: wheelEnabled
             Kirigami.FormData.label: i18nc("Part of a sentence: 'Mouse wheel cycles through tasks'", "Mouse wheel:")
             text: i18nc("Part of a sentence: 'Mouse wheel cycles through tasks'", "Cycles through tasks")
+        }
+
+        RowLayout {
+            // HACK: Workaround for Kirigami bug 434625
+            // due to which a simple Layout.leftMargin on CheckBox doesn't work
+            Item { implicitWidth: Kirigami.Units.gridUnit }
+            CheckBox {
+                id: wheelSkipMinimized
+                text: i18n("Skip minimized tasks")
+                enabled: wheelEnabled.checked
+            }
         }
 
         Item {

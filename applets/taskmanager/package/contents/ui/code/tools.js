@@ -47,7 +47,8 @@ function activateNextPrevTask(anchor, next) {
 
                 for (var j = 0; j < tasksModel.rowCount(modelIndex); ++j) {
                     const childModelIndex = tasksModel.makeModelIndex(i, j);
-                    if (!task.m.IsHidden) {
+                    const childHidden = tasksModel.data(childModelIndex, TaskManager.AbstractTasksModel.IsHidden);
+                    if (!plasmoid.configuration.wheelSkipMinimized || !childHidden) {
                         taskIndexList.push(childModelIndex);
                     }
                 }
@@ -56,7 +57,7 @@ function activateNextPrevTask(anchor, next) {
                     break;
                 }
             } else {
-                if (!task.m.IsHidden) {
+                if (!plasmoid.configuration.wheelSkipMinimized || !task.m.IsHidden) {
                     taskIndexList.push(modelIndex);
                 }
             }

@@ -75,6 +75,10 @@
       <label>Whether using the mouse wheel with the mouse pointer above the widget should switch between tasks.</label>
       <default>true</default>
     </entry>
+    <entry name="wheelSkipMinimized" type="Bool">
+      <label>Whether to skip minimized tasks when switching between them using the mouse wheel.</label>
+      <default>true</default>
+    </entry>
     <entry name="highlightWindows" type="Bool">
       <label>Whether to request the window manager highlight windows when hovering corresponding task tooltips.</label>
       <default>true</default>
