@@ -62,7 +62,6 @@ public:
 
     bool init();
 
-    bool getConfig();
     bool getDefaultConfig();
     bool applyConfig();
     bool isChangedConfig() const;
@@ -219,7 +218,8 @@ Q_SIGNALS:
 private:
     template<typename T>
     struct Prop {
-        explicit Prop(const QByteArray &dbusName)
+        using value_type = T;
+        explicit Prop(const char *dbusName)
             : dbus(dbusName)
         {
         }
@@ -241,7 +241,7 @@ private:
             return avail && (old != val);
         }
 
-        QByteArray dbus;
+        QLatin1String dbus;
         bool avail;
         T old;
         T val;
@@ -293,7 +293,7 @@ private:
     Prop<bool> m_naturalScroll = Prop<bool>("naturalScroll");
     Prop<qreal> m_scrollFactor = Prop<qreal>("scrollFactor");
 
-    QDBusInterface *m_iface;
+    QString m_dbusName;
 };
 
 #endif // KWINWAYLANDDEVICE_H

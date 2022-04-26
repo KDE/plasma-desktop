@@ -6,8 +6,10 @@
 
 #include "kwin_wl_device.h"
 
+#include <QDBusConnection>
 #include <QDBusError>
-#include <QDBusInterface>
+#include <QDBusMessage>
+#include <QDBusReply>
 #include <QVector>
 
 #include "logging.h"
@@ -59,30 +61,44 @@ Qt::MouseButtons valueLoaderPart(QVariant const &reply)
 }
 
 KWinWaylandDevice::KWinWaylandDevice(const QString &dbusName)
+    : m_dbusName(dbusName)
 {
-    m_iface = new QDBusInterface(QStringLiteral("org.kde.KWin"),
-                                 QStringLiteral("/org/kde/KWin/InputDevice/") + dbusName,
-                                 QStringLiteral("org.kde.KWin.InputDevice"),
-                                 QDBusConnection::sessionBus(),
-                                 this);
 }
 
 KWinWaylandDevice::~KWinWaylandDevice()
 {
-    delete m_iface;
 }
 
 bool KWinWaylandDevice::init()
 {
-    // need to do it here in order to populate combobox and handle events
-    return valueLoader(m_name) && valueLoader(m_sysName);
-}
-
-bool KWinWaylandDevice::getConfig()
-{
     bool success = true;
 
+    auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                                  QStringLiteral("/org/kde/KWin/InputDevice/") + m_dbusName,
+                                                  QStringLiteral("org.freedesktop.DBus.Properties"),
+                                                  QStringLiteral("GetAll"));
+    message << QStringLiteral("org.kde.KWin.InputDevice");
+    QDBusReply<QVariantMap> reply = QDBusConnection::sessionBus().call(message);
+
+    if (!reply.isValid()) {
+        return false;
+    }
+
+    auto valueLoader = [properties = reply.value(), this](auto &prop) {
+        if (QVariant variant = properties.value(prop.dbus); variant.isValid()) {
+            prop.avail = true;
+            prop.old = valueLoaderPart<typename std::remove_reference_t<decltype(prop)>::value_type>(variant);
+            prop.val = prop.old;
+            return true;
+        }
+        qCCritical(KCM_MOUSE) << "Device" << m_dbusName << "does not have property on d-bus read of" << prop.dbus;
+        prop.avail = false;
+        return false;
+    };
+
     // general
+    success &= valueLoader(m_name);
+    success &= valueLoader(m_sysName);
     success &= valueLoader(m_supportsDisableEvents);
     success &= valueLoader(m_enabled);
     // advanced
@@ -169,29 +185,15 @@ QString KWinWaylandDevice::valueWriter(const Prop<T> &prop)
     if (!prop.changed()) {
         return QString();
     }
-    m_iface->setProperty(prop.dbus, prop.val);
-    QDBusError error = m_iface->lastError();
-    if (error.isValid()) {
-        qCCritical(KCM_MOUSE) << error.message();
-        return error.message();
+    auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                                  QStringLiteral("/org/kde/KWin/InputDevice/") + m_dbusName,
+                                                  QStringLiteral("org.freedesktop.DBus.Properties"),
+                                                  QStringLiteral("Set"));
+    message << QStringLiteral("org.kde.KWin.InputDevice") << prop.dbus << QVariant::fromValue(QDBusVariant(prop.val));
+    QDBusReply<void> reply = QDBusConnection::sessionBus().call(message);
+    if (reply.error().isValid()) {
+        qCCritical(KCM_MOUSE) << reply.error().message();
+        return reply.error().message();
     }
     return QString();
-}
-
-template<typename T>
-bool KWinWaylandDevice::valueLoader(Prop<T> &prop)
-{
-    QVariant reply = m_iface->property(prop.dbus);
-    if (!reply.isValid()) {
-        qCCritical(KCM_MOUSE) << "Error on d-bus read of" << prop.dbus;
-        prop.avail = false;
-        return false;
-    }
-    prop.avail = true;
-
-    T replyValue = valueLoaderPart<T>(reply);
-
-    prop.old = replyValue;
-    prop.val = replyValue;
-    return true;
 }

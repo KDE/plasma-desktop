@@ -99,7 +99,7 @@ bool KWinWaylandBackend::applyConfig()
 bool KWinWaylandBackend::getConfig()
 {
     return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](QObject *t) {
-        return static_cast<KWinWaylandDevice *>(t)->getConfig();
+        return static_cast<KWinWaylandDevice *>(t)->init();
     });
 }
 
@@ -139,7 +139,7 @@ void KWinWaylandBackend::onDeviceAdded(QString sysName)
         }
 
         KWinWaylandDevice *dev = new KWinWaylandDevice(sysName);
-        if (!dev->init() || !dev->getConfig()) {
+        if (!dev->init()) {
             Q_EMIT deviceAdded(false);
             return;
         }
