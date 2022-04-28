@@ -15,10 +15,10 @@ import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kcm 1.4
 
 AbstractKCM {
-    id: root
+    id: appearanceRoot
     signal settingValueChanged
 
-    property int formAlignment: wallpaperComboBox.Kirigami.ScenePosition.x - root.Kirigami.ScenePosition.x + (Kirigami.Units.largeSpacing/2)
+    property int formAlignment: wallpaperComboBox.Kirigami.ScenePosition.x - appearanceRoot.Kirigami.ScenePosition.x + (Kirigami.Units.largeSpacing/2)
     property string currentWallpaper: ""
     property string containmentPlugin: ""
 
@@ -33,9 +33,9 @@ AbstractKCM {
                 configDialog.wallpaperConfiguration[key] = main.currentItem["cfg_"+key]
             }
         }
-        configDialog.currentWallpaper = root.currentWallpaper;
+        configDialog.currentWallpaper = appearanceRoot.currentWallpaper;
         configDialog.applyWallpaper()
-        configDialog.containmentPlugin = root.containmentPlugin
+        configDialog.containmentPlugin = appearanceRoot.containmentPlugin
     }
 
     ColumnLayout {
@@ -85,8 +85,8 @@ AbstractKCM {
                 textRole: "name"
                 onActivated: {
                     var model = configDialog.containmentPluginsConfigModel.get(currentIndex)
-                    root.containmentPlugin = model.pluginName
-                    root.settingValueChanged()
+                    appearanceRoot.containmentPlugin = model.pluginName
+                    appearanceRoot.settingValueChanged()
                 }
             }
 
@@ -101,10 +101,10 @@ AbstractKCM {
                     textRole: "name"
                     onActivated: {
                         var model = configDialog.wallpaperConfigModel.get(currentIndex)
-                        root.currentWallpaper = model.pluginName
+                        appearanceRoot.currentWallpaper = model.pluginName
                         configDialog.currentWallpaper = model.pluginName
                         main.sourceFile = model.source
-                        root.settingValueChanged()
+                        appearanceRoot.settingValueChanged()
                     }
                 }
                 NewStuff.Button {
@@ -118,7 +118,7 @@ AbstractKCM {
         ColumnLayout {
             id: switchContainmentWarning
             Layout.fillWidth: true
-            visible: configDialog.containmentPlugin !== root.containmentPlugin
+            visible: configDialog.containmentPlugin !== appearanceRoot.containmentPlugin
             QQC2.Label {
                 Layout.fillWidth: true
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout changes must be applied before other changes can be made")
@@ -174,7 +174,7 @@ AbstractKCM {
                     for (var key in wallpaperConfig) {
                         var changedSignal = newItem["cfg_" + key + "Changed"]
                         if (changedSignal) {
-                            changedSignal.connect(root.settingValueChanged)
+                            changedSignal.connect(appearanceRoot.settingValueChanged)
                         }
                     }
                 } else {
