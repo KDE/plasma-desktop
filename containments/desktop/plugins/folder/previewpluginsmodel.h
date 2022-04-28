@@ -8,7 +8,7 @@
 #ifndef PREVIEWPLUGINSMODEL_H
 #define PREVIEWPLUGINSMODEL_H
 
-#include <KService>
+#include <KPluginMetaData>
 #include <QAbstractListModel>
 #include <QStringList>
 
@@ -39,9 +39,9 @@ Q_SIGNALS:
     void checkedPluginsChanged() const;
 
 private:
-    int indexOfPlugin(const QString &name) const;
+    int indexOfPlugin(const QString &pluginId) const;
 
-    KService::List m_plugins;
+    QVector<KPluginMetaData> m_plugins;
     QVector<bool> m_checkedRows;
 };
 

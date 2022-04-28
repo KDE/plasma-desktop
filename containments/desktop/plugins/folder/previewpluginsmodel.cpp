@@ -13,15 +13,15 @@
 
 #include <algorithm>
 
-static bool lessThan(const KService::Ptr &a, const KService::Ptr &b)
+static bool lessThan(const KPluginMetaData &a, const KPluginMetaData &b)
 {
-    return QString::localeAwareCompare(a->name(), b->name()) < 0;
+    return QString::localeAwareCompare(a.name(), b.name()) < 0;
 }
 
 PreviewPluginsModel::PreviewPluginsModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    m_plugins = KServiceTypeTrader::self()->query(QStringLiteral("ThumbCreator"));
+    m_plugins = KIO::PreviewJob::availableThumbnailerPlugins();
     std::stable_sort(m_plugins.begin(), m_plugins.end(), lessThan);
 
     m_checkedRows = QVector<bool>(m_plugins.size(), false);
@@ -33,8 +33,10 @@ PreviewPluginsModel::~PreviewPluginsModel()
 
 QHash<int, QByteArray> PreviewPluginsModel::roleNames() const
 {
-    return {{Qt::DisplayRole, "display"}, //
-            {Qt::CheckStateRole, "checked"}};
+    return {
+        {Qt::DisplayRole, "display"},
+        {Qt::CheckStateRole, "checked"},
+    };
 }
 
 QVariant PreviewPluginsModel::data(const QModelIndex &index, int role) const
@@ -45,7 +47,7 @@ QVariant PreviewPluginsModel::data(const QModelIndex &index, int role) const
 
     switch (role) {
     case Qt::DisplayRole:
-        return m_plugins.at(index.row())->name();
+        return m_plugins.at(index.row()).name();
 
     case Qt::CheckStateRole:
         return m_checkedRows.at(index.row()) ? Qt::Checked : Qt::Unchecked;
@@ -69,10 +71,10 @@ bool PreviewPluginsModel::setData(const QModelIndex &index, const QVariant &valu
     return false;
 }
 
-int PreviewPluginsModel::indexOfPlugin(const QString &name) const
+int PreviewPluginsModel::indexOfPlugin(const QString &pluginId) const
 {
     for (int i = 0; i < m_plugins.size(); i++) {
-        if (m_plugins.at(i)->desktopEntryName() == name) {
+        if (m_plugins.at(i).pluginId() == pluginId) {
             return i;
         }
     }
@@ -105,7 +107,7 @@ QStringList PreviewPluginsModel::checkedPlugins() const
     QStringList list;
     for (int i = 0; i < m_checkedRows.size(); ++i) {
         if (m_checkedRows.at(i)) {
-            list.append(m_plugins.at(i)->desktopEntryName());
+            list.append(m_plugins.at(i).pluginId());
         }
     }
 
