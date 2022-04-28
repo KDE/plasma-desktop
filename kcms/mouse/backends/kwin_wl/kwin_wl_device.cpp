@@ -19,38 +19,7 @@ namespace
 template<typename T>
 T valueLoaderPart(QVariant const &reply)
 {
-    Q_UNUSED(reply);
-    return T();
-}
-
-template<>
-bool valueLoaderPart(QVariant const &reply)
-{
-    return reply.toBool();
-}
-
-template<>
-int valueLoaderPart(QVariant const &reply)
-{
-    return reply.toInt();
-}
-
-template<>
-quint32 valueLoaderPart(QVariant const &reply)
-{
-    return reply.toInt();
-}
-
-template<>
-qreal valueLoaderPart(QVariant const &reply)
-{
-    return reply.toReal();
-}
-
-template<>
-QString valueLoaderPart(QVariant const &reply)
-{
-    return reply.toString();
+    return reply.value<T>();
 }
 
 template<>
