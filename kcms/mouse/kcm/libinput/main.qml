@@ -8,19 +8,21 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.0 as QQC2
 import QtQuick.Layouts 1.3 as Layouts
+import QtQuick.Window 2.15
 
 import org.kde.kcm 1.1 as KCM
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.14 as Kirigami
+import org.kde.kquickcontrols 2.0
 
 import "components"
 
-// TODO: Change ScrollablePage as KCM.SimpleKCM
-// after rewrite the KCM in KConfigModule.
-Kirigami.ScrollablePage {
+Kirigami.ApplicationItem {
     id: root
-    
-    spacing: Kirigami.Units.smallSpacing
-    
+
+    pageStack.globalToolBar.style:  Kirigami.ApplicationHeaderStyle.None
+    pageStack.columnView.columnResizeMode: Kirigami.ColumnView.SingleColumn
+    pageStack.defaultColumnWidth: Kirigami.Units.gridUnit * 20
+
     property size sizeHint: Qt.size(formLayout.width, Math.round(1.3 * formLayout.height))
     property size minimumSizeHint: Qt.size(formLayout.width/2, Math.round(1.3 * formLayout.height))
 
@@ -60,287 +62,424 @@ Kirigami.ScrollablePage {
         accelProfile.load()
         naturalScroll.load()
         scrollFactor.load()
+        buttonMappings.load()
 
         loading = false
     }
 
-    Kirigami.FormLayout {
-        id: formLayout
-        enabled: deviceCount
+    pageStack.initialPage: Kirigami.ScrollablePage {
+        spacing: Kirigami.Units.smallSpacing
 
-        // Device
-        QQC2.ComboBox {
-            Kirigami.FormData.label: i18nd("kcmmouse", "Device:")
-            id: deviceSelector
-            enabled: deviceCount > 1
-            Layouts.Layout.fillWidth: true
-            model: deviceModel
-            textRole: "name"
+        Kirigami.FormLayout {
+            id: formLayout
+            enabled: deviceCount
 
-            onCurrentIndexChanged: {
-                if (deviceCount) {
-                    device = deviceModel[currentIndex]
-                    if (!loading) {
-                        changeSignal()
+            // Device
+            QQC2.ComboBox {
+                Kirigami.FormData.label: i18nd("kcmmouse", "Device:")
+                id: deviceSelector
+                enabled: deviceCount > 1
+                Layouts.Layout.fillWidth: true
+                model: deviceModel
+                textRole: "name"
+
+                onCurrentIndexChanged: {
+                    if (deviceCount) {
+                        device = deviceModel[currentIndex]
+                        if (!loading) {
+                            changeSignal()
+                        }
                     }
-                }
-                root.syncValuesFromBackend()
-            }
-        }
-
-        Item {
-            Kirigami.FormData.isSection: false
-        }
-
-        // General
-        QQC2.CheckBox {
-            Kirigami.FormData.label: i18nd("kcmmouse", "General:")
-            id: deviceEnabled
-            text: i18nd("kcmmouse", "Device enabled")
-
-            function load() {
-                if (!formLayout.enabled) {
-                    checked = false
-                    return
-                }
-                enabled = device.supportsDisableEvents
-                checked = enabled && device.enabled
-            }
-
-            onCheckedChanged: {
-                if (enabled && !root.loading) {
-                    device.enabled = checked
-                    root.changeSignal()
+                    root.syncValuesFromBackend()
                 }
             }
 
-            ToolTip {
-                text: i18nd("kcmmouse", "Accept input through this device.")
-            }
-        }
-
-        QQC2.CheckBox {
-            id: leftHanded
-            text: i18nd("kcmmouse", "Left handed mode")
-
-            function load() {
-                if (!formLayout.enabled) {
-                    checked = false
-                    return
-                }
-                enabled = device.supportsLeftHanded
-                checked = enabled && device.leftHanded
+            Item {
+                Kirigami.FormData.isSection: false
             }
 
-            onCheckedChanged: {
-                if (enabled && !root.loading) {
-                    device.leftHanded = checked
-                    root.changeSignal()
-                }
-            }
-
-            ToolTip {
-                text: i18nd("kcmmouse", "Swap left and right buttons.")
-            }
-        }
-
-        QQC2.CheckBox {
-            id: middleEmulation
-            text: i18nd("kcmmouse", "Press left and right buttons for middle-click")
-
-            function load() {
-                if (!formLayout.enabled) {
-                    checked = false
-                    return
-                }
-                enabled = device.supportsMiddleEmulation
-                checked = enabled && device.middleEmulation
-            }
-
-            onCheckedChanged: {
-                if (enabled && !root.loading) {
-                    device.middleEmulation = checked
-                    root.changeSignal()
-                }
-            }
-
-            ToolTip {
-                text: i18nd("kcmmouse", "Clicking left and right button simultaneously sends middle button click.")
-            }
-        }
-
-        Item {
-            Kirigami.FormData.isSection: false
-        }
-
-        // Acceleration
-        QQC2.Slider {
-            Kirigami.FormData.label: i18nd("kcmmouse", "Pointer speed:")
-            id: accelSpeed
-
-            from: 1
-            to: 11
-            stepSize: 1
-
-            function load() {
-                enabled = device.supportsPointerAcceleration
-                if (!enabled) {
-                    value = 0.2
-                    return
-                }
-                // transform libinput's pointer acceleration range [-1, 1] to slider range [1, 11]
-                //value = 4.5 * device.pointerAcceleration + 5.5
-                value = 6 + device.pointerAcceleration / 0.2
-            }
-
-            onValueChanged: {
-                if (device != undefined && enabled && !root.loading) {
-                    // transform slider range [1, 10] to libinput's pointer acceleration range [-1, 1]
-                    // by *10 and /10, we ignore the floating points after 1 digit. This prevents from
-                    // having a libinput value like 0.60000001
-                    device.pointerAcceleration = Math.round(((value-6) * 0.2) * 10) / 10
-                    root.changeSignal()
-                }
-            }
-        }
-
-        Layouts.ColumnLayout {
-            id: accelProfile
-            spacing: Kirigami.Units.smallSpacing
-            Kirigami.FormData.label: i18nd("kcmmouse", "Acceleration profile:")
-            Kirigami.FormData.buddyFor: accelProfileFlat
-
-            function load() {
-                enabled = device.supportsPointerAccelerationProfileAdaptive
-
-                if (!enabled) {
-                    accelProfileAdaptive.checked = false
-                    accelProfileFlat.checked = false
-                    return
-                }
-
-                if(device.pointerAccelerationProfileAdaptive) {
-                    accelProfileAdaptive.checked = true
-                    accelProfileFlat.checked = false
-                } else {
-                    accelProfileAdaptive.checked = false
-                    accelProfileFlat.checked = true
-                }
-            }
-
-            function syncCurrent() {
-                if (enabled && !root.loading) {
-                    device.pointerAccelerationProfileFlat = accelProfileFlat.checked
-                    device.pointerAccelerationProfileAdaptive = accelProfileAdaptive.checked
-                    root.changeSignal()
-                }
-            }
-
-            QQC2.RadioButton {
-                id: accelProfileFlat
-                text: i18nd("kcmmouse", "Flat")
-
-                ToolTip {
-                    text: i18nd("kcmmouse", "Cursor moves the same distance as the mouse movement.")
-                }
-                onCheckedChanged: accelProfile.syncCurrent()
-            }
-
-            QQC2.RadioButton {
-                id: accelProfileAdaptive
-                text: i18nd("kcmmouse", "Adaptive")
-
-                ToolTip {
-                    text: i18nd("kcmmouse", "Cursor travel distance depends on the mouse movement speed.")
-                }
-                onCheckedChanged: accelProfile.syncCurrent()
-            }
-        }
-
-        Item {
-            Kirigami.FormData.isSection: false
-        }
-
-        // Scrolling
-        QQC2.CheckBox {
-            Kirigami.FormData.label: i18nd("kcmmouse", "Scrolling:")
-            id: naturalScroll
-            text: i18nd("kcmmouse", "Invert scroll direction")
-
-            function load() {
-                enabled = device.supportsNaturalScroll
-                checked = enabled && device.naturalScroll
-            }
-
-            onCheckedChanged: {
-                if (enabled && !root.loading) {
-                    device.naturalScroll = checked
-                    root.changeSignal()
-                }
-            }
-
-            ToolTip {
-                text: i18nd("kcmmouse", "Touchscreen like scrolling.")
-            }
-        }
-
-        // Scroll Speed aka scroll Factor
-        Layouts.GridLayout {
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling speed:")
-            Kirigami.FormData.buddyFor: scrollFactor
-
-            columns: 3
-
-            QQC2.Slider {
-                id: scrollFactor
-
-                from: 0
-                to: 14
-                stepSize: 1
-
-                property variant values : [
-                    0.1,
-                    0.3,
-                    0.5,
-                    0.75,
-                    1, // default
-                    1.5,
-                    2,
-                    3,
-                    4,
-                    5,
-                    7,
-                    9,
-                    12,
-                    15,
-                    20
-                ]
-
-                Layouts.Layout.columnSpan: 3
+            // General
+            QQC2.CheckBox {
+                Kirigami.FormData.label: i18nd("kcmmouse", "General:")
+                id: deviceEnabled
+                text: i18nd("kcmmouse", "Device enabled")
 
                 function load() {
-                    let index = values.indexOf(device.scrollFactor)
-                    if (index === -1) {
-                        index = values.indexOf(1);
+                    if (!formLayout.enabled) {
+                        checked = false
+                        return
                     }
-                    value = index
+                    enabled = device.supportsDisableEvents
+                    checked = enabled && device.enabled
                 }
 
-                onMoved: {
-                    device.scrollFactor = values[value]
-                    root.changeSignal()
+                onCheckedChanged: {
+                    if (enabled && !root.loading) {
+                        device.enabled = checked
+                        root.changeSignal()
+                    }
+                }
+
+                ToolTip {
+                    text: i18nd("kcmmouse", "Accept input through this device.")
                 }
             }
 
-            //row 2
-            QQC2.Label {
-                text: i18ndc("kcmmouse", "Slower Scroll", "Slower")
+            QQC2.CheckBox {
+                id: leftHanded
+                text: i18nd("kcmmouse", "Left handed mode")
+
+                function load() {
+                    if (!formLayout.enabled) {
+                        checked = false
+                        return
+                    }
+                    enabled = device.supportsLeftHanded
+                    checked = enabled && device.leftHanded
+                }
+
+                onCheckedChanged: {
+                    if (enabled && !root.loading) {
+                        device.leftHanded = checked
+                        root.changeSignal()
+                    }
+                }
+
+                ToolTip {
+                    text: i18nd("kcmmouse", "Swap left and right buttons.")
+                }
             }
+
+            QQC2.CheckBox {
+                id: middleEmulation
+                text: i18nd("kcmmouse", "Press left and right buttons for middle-click")
+
+                function load() {
+                    if (!formLayout.enabled) {
+                        checked = false
+                        return
+                    }
+                    enabled = device.supportsMiddleEmulation
+                    checked = enabled && device.middleEmulation
+                }
+
+                onCheckedChanged: {
+                    if (enabled && !root.loading) {
+                        device.middleEmulation = checked
+                        root.changeSignal()
+                    }
+                }
+
+                ToolTip {
+                    text: i18nd("kcmmouse", "Clicking left and right button simultaneously sends middle button click.")
+                }
+            }
+
             Item {
-                Layouts.Layout.fillWidth: true
+                Kirigami.FormData.isSection: false
             }
-            QQC2.Label {
-                text: i18ndc("kcmmouse", "Faster Scroll Speed", "Faster")
+
+            // Acceleration
+            QQC2.Slider {
+                Kirigami.FormData.label: i18nd("kcmmouse", "Pointer speed:")
+                id: accelSpeed
+
+                from: 1
+                to: 11
+                stepSize: 1
+
+                function load() {
+                    enabled = device.supportsPointerAcceleration
+                    if (!enabled) {
+                        value = 0.2
+                        return
+                    }
+                    // transform libinput's pointer acceleration range [-1, 1] to slider range [1, 11]
+                    //value = 4.5 * device.pointerAcceleration + 5.5
+                    value = 6 + device.pointerAcceleration / 0.2
+                }
+
+                onValueChanged: {
+                    if (device != undefined && enabled && !root.loading) {
+                        // transform slider range [1, 10] to libinput's pointer acceleration range [-1, 1]
+                        // by *10 and /10, we ignore the floating points after 1 digit. This prevents from
+                        // having a libinput value like 0.60000001
+                        device.pointerAcceleration = Math.round(((value-6) * 0.2) * 10) / 10
+                        root.changeSignal()
+                    }
+                }
+            }
+
+            Layouts.ColumnLayout {
+                id: accelProfile
+                spacing: Kirigami.Units.smallSpacing
+                Kirigami.FormData.label: i18nd("kcmmouse", "Acceleration profile:")
+                Kirigami.FormData.buddyFor: accelProfileFlat
+
+                function load() {
+                    enabled = device.supportsPointerAccelerationProfileAdaptive
+
+                    if (!enabled) {
+                        accelProfileAdaptive.checked = false
+                        accelProfileFlat.checked = false
+                        return
+                    }
+
+                    if(device.pointerAccelerationProfileAdaptive) {
+                        accelProfileAdaptive.checked = true
+                        accelProfileFlat.checked = false
+                    } else {
+                        accelProfileAdaptive.checked = false
+                        accelProfileFlat.checked = true
+                    }
+                }
+
+                function syncCurrent() {
+                    if (enabled && !root.loading) {
+                        device.pointerAccelerationProfileFlat = accelProfileFlat.checked
+                        device.pointerAccelerationProfileAdaptive = accelProfileAdaptive.checked
+                        root.changeSignal()
+                    }
+                }
+
+                QQC2.RadioButton {
+                    id: accelProfileFlat
+                    text: i18nd("kcmmouse", "Flat")
+
+                    ToolTip {
+                        text: i18nd("kcmmouse", "Cursor moves the same distance as the mouse movement.")
+                    }
+                    onCheckedChanged: accelProfile.syncCurrent()
+                }
+
+                QQC2.RadioButton {
+                    id: accelProfileAdaptive
+                    text: i18nd("kcmmouse", "Adaptive")
+
+                    ToolTip {
+                        text: i18nd("kcmmouse", "Cursor travel distance depends on the mouse movement speed.")
+                    }
+                    onCheckedChanged: accelProfile.syncCurrent()
+                }
+            }
+
+            Item {
+                Kirigami.FormData.isSection: false
+            }
+
+            // Scrolling
+            QQC2.CheckBox {
+                Kirigami.FormData.label: i18nd("kcmmouse", "Scrolling:")
+                id: naturalScroll
+                text: i18nd("kcmmouse", "Invert scroll direction")
+
+                function load() {
+                    enabled = device.supportsNaturalScroll
+                    checked = enabled && device.naturalScroll
+                }
+
+                onCheckedChanged: {
+                    if (enabled && !root.loading) {
+                        device.naturalScroll = checked
+                        root.changeSignal()
+                    }
+                }
+
+                ToolTip {
+                    text: i18nd("kcmmouse", "Touchscreen like scrolling.")
+                }
+            }
+
+            // Scroll Speed aka scroll Factor
+            Layouts.GridLayout {
+                Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling speed:")
+                Kirigami.FormData.buddyFor: scrollFactor
+
+                columns: 3
+
+                QQC2.Slider {
+                    id: scrollFactor
+
+                    from: 0
+                    to: 14
+                    stepSize: 1
+
+                    property variant values : [
+                        0.1,
+                        0.3,
+                        0.5,
+                        0.75,
+                        1, // default
+                        1.5,
+                        2,
+                        3,
+                        4,
+                        5,
+                        7,
+                        9,
+                        12,
+                        15,
+                        20
+                    ]
+
+                    Layouts.Layout.columnSpan: 3
+
+                    function load() {
+                        let index = values.indexOf(device.scrollFactor)
+                        if (index === -1) {
+                            index = values.indexOf(1);
+                        }
+                        value = index
+                    }
+
+                    onMoved: {
+                        device.scrollFactor = values[value]
+                        root.changeSignal()
+                    }
+                }
+
+                //row 2
+                QQC2.Label {
+                    text: i18ndc("kcmmouse", "Slower Scroll", "Slower")
+                }
+                Item {
+                    Layouts.Layout.fillWidth: true
+                }
+                QQC2.Label {
+                    text: i18ndc("kcmmouse", "Faster Scroll Speed", "Faster")
+                }
+
+            }
+
+            Item {
+                Kirigami.FormData.isSection: true
+            }
+
+
+            QQC2.Button  {
+                text: i18ndc("kcmmouse", "@action:button", "Re-bind Additional Mouse Buttons…")
+                visible: buttonMappings.model.length > 0 || Array.prototype.some.call(deviceModel, device => device.supportedButtons & ~(Qt.LeftButton | Qt.RightButton | Qt.MiddleButton))
+                onClicked: root.pageStack.push(buttonPage)
+            }
+        }
+    }
+    Kirigami.ScrollablePage {
+        id: buttonPage
+
+        MouseArea {
+            // Deliberately using MouseArea on the page instead of a TapHandler on the button, so we can capture clicks anywhere
+            id: buttonCapture
+            property var lastButton: {}
+
+            anchors.fill: parent
+            enabled: newBinding.checked
+            acceptedButtons: Qt.AllButtons & ~(Qt.LeftButton | Qt.RightButton | Qt.MiddleButton)
+            onClicked: {
+                lastButton = buttonMappings.extraButtons.find(entry => Qt[entry.buttonName] == mouse.button)
+                newBinding.visible = false
+                newKeySequenceItem.visible = true
+                newKeySequenceItem.startCapturing()
+            }
+        }
+
+       Layouts.ColumnLayout {
+            Kirigami.FormLayout {
+                id: buttonLayout
+                twinFormLayouts: otherLayout
+                Repeater {
+                    id: buttonMappings
+
+                    readonly property var extraButtons: Array.from({length: 24}, (value,index) => ({
+                        buttonName: "ExtraButton" + (index + 1),
+                        button: Qt["ExtraButton" + (index + 1)],
+                        label: i18ndc("kcmmouse", "@label for assigning an action to a numbered button", "Extra Button %1:", index + 1)
+                    }))
+
+                    function load() {
+                        model = Qt.binding(() => extraButtons.filter(entry => backend.buttonMapping.hasOwnProperty(entry.buttonName)))
+                    }
+
+                    delegate: KeySequenceItem {
+                        Kirigami.FormData.label: modelData.label
+
+                        keySequence: backend.buttonMapping[modelData.buttonName]
+
+                        modifierlessAllowed: true
+                        multiKeyShortcutsAllowed: false
+                        checkForConflictsAgainst: ShortcutType.None
+
+                        onKeySequenceChanged: {
+                            if (!root.loading) {
+                                let copy = backend.buttonMapping;
+                                copy[modelData.buttonName] = keySequence
+                                backend.buttonMapping = copy
+                                root.changeSignal()
+                            }
+                        }
+                    }
+                }
+            }
+
+            Kirigami.InlineMessage {
+                id: explanationLabel
+                Layouts.Layout.fillWidth: true
+                visible: newBinding.checked || newKeySequenceItem.visible
+                text: newBinding.visible ? i18ndc("kcmmouse","@action:button", "Press the mouse button for which you want to add a key binding") :
+                    i18ndc("kcmmouse","@action:button, %1 is the translation of 'Extra Button %1' from above", "Enter the new key combination for %1", buttonCapture.lastButton.label)
+                actions: [
+                    Kirigami.Action {
+                        icon.name: "dialog-cancel"
+                        text: i18ndc("kcmmouse", "@action:button", "Cancel")
+                        onTriggered: {
+                            newKeySequenceItem.visible = false;
+                            newBinding.visible = true
+                            newBinding.checked = false
+                        }
+                    }
+                ]
+            }
+
+            Kirigami.FormLayout {
+                id: otherLayout
+                twinFormLayouts: buttonLayout
+
+                QQC2.Button {
+                    id:newBinding
+                    checkable: true
+                    text: checked ? i18ndc("kcmmouse", "@action:button", "Press a mouse button ") :
+                        i18ndc("kcmmouse", "@action:button, Bind a mousebutton to keyboard key(s)", "Add Binding…")
+                    icon.name: "list-add"
+                }
+                KeySequenceItem {
+                    id: newKeySequenceItem
+                    visible: false
+
+                    modifierlessAllowed: true
+                    multiKeyShortcutsAllowed: false
+                    checkForConflictsAgainst: ShortcutType.None
+
+                    onCaptureFinished: {
+                        visible = false
+                        newBinding.visible = true
+                        newBinding.checked = false
+                        let copy = backend.buttonMapping;
+                        copy[buttonCapture.lastButton.buttonName] = keySequence
+                        backend.buttonMapping = copy
+                        root.changeSignal()
+                    }
+                }
+
+
+                Item {
+                    Kirigami.FormData.isSection: true
+                }
+
+                QQC2.Button  {
+                    onClicked: root.pageStack.pop()
+                    text: i18ndc("kcmmouse", "@action:button", "Go back")
+                    icon.name: "go-previous"
+
+                }
             }
         }
     }

@@ -27,6 +27,7 @@ Qt::MouseButtons valueLoaderPart(QVariant const &reply)
 {
     return static_cast<Qt::MouseButtons>(reply.toInt());
 }
+
 }
 
 KWinWaylandDevice::KWinWaylandDevice(const QString &dbusName)
@@ -121,7 +122,6 @@ bool KWinWaylandDevice::applyConfig()
 
     msgs << valueWriter(m_enabled) << valueWriter(m_leftHanded) << valueWriter(m_pointerAcceleration) << valueWriter(m_pointerAccelerationProfileFlat)
          << valueWriter(m_pointerAccelerationProfileAdaptive) << valueWriter(m_middleEmulation) << valueWriter(m_naturalScroll) << valueWriter(m_scrollFactor);
-
     bool success = true;
     QString error_msg;
 
