@@ -73,11 +73,7 @@ Rectangle {
         app.isAboutPage = false;
         if (item.source) {
             app.isAboutPage = item.source === "AboutPlugin.qml";
-            if (item.source === "ConfigurationContainmentAppearance.qml") {
-                pushReplace(Qt.resolvedUrl(item.source), {title: item.name});
-            } else {
-                pushReplace(Qt.resolvedUrl("ConfigurationAppletPage.qml"), {configItem: item, title: item.name});
-            }
+            pushReplace(Qt.resolvedUrl("ConfigurationAppletPage.qml"), {configItem: item, title: item.name});
         } else if (item.kcm) {
             pushReplace(configurationKcmPageComponent, {kcm: item.kcm, internalPage: item.kcm.mainUi});
         } else {

@@ -14,15 +14,13 @@ import org.kde.newstuff 1.62 as NewStuff
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kcm 1.4
 
-AbstractKCM {
+Item {
     id: appearanceRoot
-    signal settingValueChanged
+    signal configurationChanged
 
     property int formAlignment: wallpaperComboBox.Kirigami.ScenePosition.x - appearanceRoot.Kirigami.ScenePosition.x + (Kirigami.Units.largeSpacing/2)
     property string currentWallpaper: ""
     property string containmentPlugin: ""
-
-    title: i18n("Appearance")
 
     function saveConfig() {
         if (main.currentItem.saveConfig) {
@@ -39,7 +37,8 @@ AbstractKCM {
     }
 
     ColumnLayout {
-        anchors.fill: parent
+        width: root.availableWidth
+        height: Math.max(implicitHeight, root.availableHeight)
         spacing: 0 // unless it's 0 there will be an additional gap between two FormLayouts
 
         Component.onCompleted: {
@@ -86,7 +85,7 @@ AbstractKCM {
                 onActivated: {
                     var model = configDialog.containmentPluginsConfigModel.get(currentIndex)
                     appearanceRoot.containmentPlugin = model.pluginName
-                    appearanceRoot.settingValueChanged()
+                    appearanceRoot.configurationChanged()
                 }
             }
 
@@ -104,7 +103,7 @@ AbstractKCM {
                         appearanceRoot.currentWallpaper = model.pluginName
                         configDialog.currentWallpaper = model.pluginName
                         main.sourceFile = model.source
-                        appearanceRoot.settingValueChanged()
+                        appearanceRoot.configurationChanged()
                     }
                 }
                 NewStuff.Button {
@@ -151,6 +150,8 @@ AbstractKCM {
         QQC2.StackView {
             id: main
 
+            implicitHeight: main.empty ? 0 : currentItem.implicitHeight
+
             Layout.fillHeight: true;
             Layout.fillWidth: true;
 
@@ -174,7 +175,7 @@ AbstractKCM {
                     for (var key in wallpaperConfig) {
                         var changedSignal = newItem["cfg_" + key + "Changed"]
                         if (changedSignal) {
-                            changedSignal.connect(appearanceRoot.settingValueChanged)
+                            changedSignal.connect(appearanceRoot.configurationChanged)
                         }
                     }
                 } else {
