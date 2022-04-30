@@ -6,6 +6,8 @@
 
 #include "desktoppathssettings.h"
 
+#include <KBookmarks/KBookmark>
+#include <KIOFileWidgets/KFilePlacesModel>
 #include <KLocalizedString>
 
 #include <QDir>
@@ -110,11 +112,26 @@ private:
 
     void writeUrl(const QString &key, const QUrl &url)
     {
+        const auto oldUrl = readUrl(key, QUrl());
+
         KConfigGroup group(m_settings->config(), QString());
         // HACK to benefit from path translation (thus unexpanding $HOME)
         group.writePathEntry(key, url.toLocalFile());
         const auto path = group.readEntryUntranslated(key, QString());
         group.writeEntry(key, QString(QStringLiteral("\"") + path + QStringLiteral("\"")));
+
+        if (oldUrl.isValid() && oldUrl != url) {
+            KFilePlacesModel placesModel;
+
+            const auto &bookmark = placesModel.bookmarkForUrl(oldUrl);
+            if (bookmark.isNull()) {
+                return;
+            }
+            const auto &matchedPlaces = placesModel.match(placesModel.index(0, 0), KFilePlacesModel::UrlRole, oldUrl, 1, Qt::MatchFixedString);
+            if (matchedPlaces.count() == 1) {
+                placesModel.editPlace(matchedPlaces.at(0), url.fileName(), url, bookmark.icon(), bookmark.metaDataItem(QStringLiteral("OnlyInApp")));
+            }
+        }
     }
 
     DesktopPathsSettings *const m_settings;

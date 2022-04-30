@@ -23,6 +23,8 @@ target_link_libraries(kcm_desktoppaths
     KF5::I18n
     KF5::KIOCore
     KF5::KIOWidgets
+    KF5::KIOFileWidgets
+    KF5::Bookmarks
 )
 
 install(TARGETS kcm_desktoppaths DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets)
