@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2022 Alexander Lohnau <alexander.lohnau@gmx.de>
+# SPDX-License-Identifier: BSD-3-Clause
+
 add_executable(krunner-plugininstaller
         main.cpp
         AbstractJob.cpp

@@ -1,7 +1,7 @@
 /*
     This file is part of the KDE project
     SPDX-FileCopyrightText: 2014 Vishesh Handa <me@vhanda.in>
-    SPDX-FileCopyrightText: 2020 Alexander Lohnau <alexander.lohnau@gmx.de>
+    SPDX-FileCopyrightText: 2020, 2022 Alexander Lohnau <alexander.lohnau@gmx.de>
     SPDX-FileCopyrightText: 2020 Cyril Rossi <cyril.rossi@enioka.com>
 
     SPDX-License-Identifier: LGPL-2.0-only
@@ -9,123 +9,102 @@
 
 #include "kcm.h"
 
-#include <KAboutData>
+#include <KCModuleData>
 #include <KCMultiDialog>
 #include <KConfigGroup>
 #include <KLocalizedString>
-#include <KNSWidgets/Button>
 #include <KPluginFactory>
-#include <KPluginWidget>
 #include <KRunner/RunnerManager>
-#include <QDebug>
 
-#include <QApplication>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusMetaType>
-#include <QLabel>
-#include <QVBoxLayout>
 
-#include "krunnerdata.h"
+class KRunnerData : public KCModuleData
+{
+    Q_OBJECT
+public:
+    using KCModuleData::KCModuleData;
+
+    bool isDefaults() const override
+    {
+        const QVector<KPluginMetaData> runnerData = Plasma::RunnerManager::runnerMetaDataList();
+        KConfigGroup cfgGroup(m_krunnerConfig, "Plugins");
+        return std::all_of(runnerData.begin(), runnerData.end(), [&cfgGroup](const KPluginMetaData &pluginData) {
+            return pluginData.isEnabled(cfgGroup) != pluginData.isEnabledByDefault();
+        });
+    }
+
+private:
+    KSharedConfigPtr m_krunnerConfig = KSharedConfig::openConfig("krunnerrc");
+};
 
 K_PLUGIN_FACTORY_WITH_JSON(SearchConfigModuleFactory, "kcm_plasmasearch.json", registerPlugin<SearchConfigModule>(); registerPlugin<KRunnerData>();)
 
-SearchConfigModule::SearchConfigModule(QWidget *parent, const QVariantList &args)
-    : KCModule(parent, args)
+SearchConfigModule::SearchConfigModule(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, data, args)
+    , m_model(new KPluginModel(this))
     , m_config(KSharedConfig::openConfig("krunnerrc"))
 {
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_search"),
-                                       i18nc("kcm name for About dialog", "Configure search settings"),
-                                       QStringLiteral("0.1"),
-                                       QString(),
-                                       KAboutLicense::LGPL);
-    about->addAuthor(i18n("Vishesh Handa"), QString(), QStringLiteral("vhanda@kde.org"));
-    setAboutData(about);
-    setButtons(Apply | Default);
-
-    if (!args.at(0).toString().isEmpty()) {
-        m_pluginID = args.at(0).toString();
-    }
-
-    QVBoxLayout *layout = new QVBoxLayout(this);
-
-    QHBoxLayout *headerLayout = new QHBoxLayout;
-    layout->addLayout(headerLayout);
-
-    QLabel *label = new QLabel(i18n("Enable or disable plugins (used in KRunner, Application Launcher, and the Overview effect)"));
-
-    headerLayout->addWidget(label);
-    headerLayout->addStretch();
-
-    m_pluginSelector = new KPluginWidget(this);
-    connect(m_pluginSelector, &KPluginWidget::changed, this, &SearchConfigModule::updateUnmanagedState);
-
     qDBusRegisterMetaType<QByteArrayList>();
     qDBusRegisterMetaType<QHash<QString, QByteArrayList>>();
-    // This will trigger the reloadConfiguration method for the runner
-    connect(m_pluginSelector, &KPluginWidget::pluginConfigSaved, this, [](const QString &componentName) {
-        QDBusMessage message =
-            QDBusMessage::createSignal(QStringLiteral("/krunnerrc"), QStringLiteral("org.kde.kconfig.notify"), QStringLiteral("ConfigChanged"));
-        const QHash<QString, QByteArrayList> changes = {
-            {QStringLiteral("Runners"), {componentName.toLocal8Bit()}},
-        };
-        message.setArguments({QVariant::fromValue(changes)});
-        QDBusConnection::sessionBus().send(message);
+
+    if (!args.isEmpty()) {
+        m_pluginID = args.at(0).toString();
+    }
+    qDBusRegisterMetaType<QByteArrayList>();
+    qDBusRegisterMetaType<QHash<QString, QByteArrayList>>();
+
+    connect(m_model, &KPluginModel::defaulted, this, &SearchConfigModule::representsDefaults);
+    connect(m_model, &KPluginModel::isSaveNeededChanged, this, [this]() {
+        setNeedsSave(m_model->isSaveNeeded());
     });
-
-    layout->addWidget(m_pluginSelector);
-
-    QHBoxLayout *downloadLayout = new QHBoxLayout;
-
-    // Open KRunner settings
-    m_krunnerSettingsButton = new QPushButton(QIcon::fromTheme(QStringLiteral("krunner")), QStringLiteral("Configure KRunner…"), this);
-    connect(m_krunnerSettingsButton, &QPushButton::clicked, this, [this] {
-        if (!m_krunnerSettingsDialog) {
-            m_krunnerSettingsDialog = new KCMultiDialog(this);
-            m_krunnerSettingsDialog->addModule(KPluginMetaData(QStringLiteral("plasma/kcms/desktop/kcm_krunnersettings")),
-                                               {QStringLiteral("openedFromPluginSettings")});
-        }
-
-        m_krunnerSettingsDialog->show();
-    });
-
-    KNSWidgets::Button *downloadButton = new KNSWidgets::Button(i18n("Get New Plugins…"), QStringLiteral("krunner.knsrc"), this);
-    connect(downloadButton, &KNSWidgets::Button::dialogFinished, this, [this](const QList<KNSCore::Entry> &changedEntries) {
-        if (!changedEntries.isEmpty()) {
-            m_pluginSelector->clear();
-            m_pluginSelector->addPlugins(Plasma::RunnerManager::runnerMetaDataList(), i18n("Available Plugins"));
-        }
-    });
-    downloadLayout->addStretch();
-    downloadLayout->addWidget(m_krunnerSettingsButton);
-    downloadLayout->addWidget(downloadButton);
-    layout->addLayout(downloadLayout);
-
-    connect(this, &SearchConfigModule::defaultsIndicatorsVisibleChanged, this, &SearchConfigModule::updateUnmanagedState);
-    connect(this, &SearchConfigModule::defaultsIndicatorsVisibleChanged, m_pluginSelector, &KPluginWidget::setDefaultsIndicatorsVisible);
 }
 
 void SearchConfigModule::load()
 {
-    m_pluginSelector->clear();
-    KCModule::load();
-
-    // Set focus on the pluginselector to pass focus to search bar.
-    m_pluginSelector->setFocus(Qt::OtherFocusReason);
-
-    m_pluginSelector->addPlugins(Plasma::RunnerManager::runnerMetaDataList(), i18n("Available Plugins"));
-    m_pluginSelector->setConfig(m_config->group("Plugins"));
+    reloadPlugins();
 
     if (!m_pluginID.isEmpty()) {
-        m_pluginSelector->showConfiguration(m_pluginID);
+        const KPluginMetaData data = m_model->findConfigForPluginId(m_pluginID);
+        if (data.isValid()) {
+            showKCM(data);
+        } else {
+            qWarning() << "Could not find plugin with id" << m_pluginID;
+        }
+        m_pluginID.clear(); // Clear this to avoid showing the plugin's config again if we reset the KCM
     }
+}
+
+void SearchConfigModule::reloadPlugins()
+{
+    m_model->clear();
+
+    m_model->addPlugins(Plasma::RunnerManager::runnerMetaDataList(), i18n("Available Plugins"));
+    m_model->setConfig(m_config->group("Plugins"));
+}
+
+void SearchConfigModule::showKCM(const KPluginMetaData &data, const QStringList args) const
+{
+    auto dlg = new KCMultiDialog();
+    dlg->addModule(data, args);
+    dlg->show();
+    connect(dlg, qOverload<>(&KCMultiDialog::configCommitted), dlg, [data]() {
+        QDBusMessage message =
+            QDBusMessage::createSignal(QStringLiteral("/krunnerrc"), QStringLiteral("org.kde.kconfig.notify"), QStringLiteral("ConfigChanged"));
+        const QHash<QString, QByteArrayList> changes = {
+            {QStringLiteral("Runners"), {data.pluginId().toLocal8Bit()}},
+        };
+        message.setArguments({QVariant::fromValue(changes)});
+        QDBusConnection::sessionBus().send(message);
+    });
 }
 
 void SearchConfigModule::save()
 {
-    KCModule::save();
+    KQuickAddons::ManagedConfigModule::save();
 
-    m_pluginSelector->save();
+    m_model->save();
 
     QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/krunnerrc"), QStringLiteral("org.kde.kconfig.notify"), QStringLiteral("ConfigChanged"));
     const QHash<QString, QByteArrayList> changes = {{QStringLiteral("Plugins"), {}}};
@@ -135,15 +114,9 @@ void SearchConfigModule::save()
 
 void SearchConfigModule::defaults()
 {
-    KCModule::defaults();
+    KQuickAddons::ManagedConfigModule::defaults();
 
-    m_pluginSelector->defaults();
-}
-
-void SearchConfigModule::updateUnmanagedState()
-{
-    unmanagedWidgetChangeState(m_pluginSelector->isSaveNeeded());
-    unmanagedWidgetDefaultState(m_pluginSelector->isDefault());
+    m_model->defaults();
 }
 
 void SearchConfigModule::setDefaultIndicatorVisible(QWidget *widget, bool visible)
