@@ -12,8 +12,6 @@
 #include <KCModuleData>
 #include <KSharedConfig>
 
-class KRunnerSettingsBase;
-
 class KRunnerData : public KCModuleData
 {
     Q_OBJECT
@@ -24,7 +22,6 @@ public:
 
 private:
     KSharedConfigPtr m_krunnerConfig;
-    KRunnerSettingsBase *m_settings;
 };
 
 #endif // KRUNNERDATA_H

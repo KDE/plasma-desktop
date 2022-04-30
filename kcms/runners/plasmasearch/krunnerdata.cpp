@@ -13,14 +13,10 @@
 #include <KPluginInfo>
 #include <KRunner/RunnerManager>
 
-#include "krunnersettingsbase.h"
-
 KRunnerData::KRunnerData(QObject *parent, const QVariantList &args)
     : KCModuleData(parent, args)
     , m_krunnerConfig(KSharedConfig::openConfig("krunnerrc"))
-    , m_settings(new KRunnerSettingsBase(this))
 {
-    m_settings->load();
 }
 
 bool KRunnerData::isDefaults() const
@@ -34,5 +30,5 @@ bool KRunnerData::isDefaults() const
         return false;
     }
 
-    return m_settings->isDefaults();
+    return true;
 }
