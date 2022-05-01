@@ -54,17 +54,17 @@ KWinWaylandBackend::~KWinWaylandBackend()
 void KWinWaylandBackend::findDevices()
 {
     QStringList devicesSysNames;
-    const QVariant reply = m_deviceManager->property("devicesSysNames");
-    if (reply.isValid()) {
+    const QVariant replyDevicesSysNames = m_deviceManager->property("devicesSysNames");
+    if (replyDevicesSysNames.isValid()) {
         qCDebug(KCM_MOUSE) << "Devices list received successfully from KWin.";
-        devicesSysNames = reply.toStringList();
+        devicesSysNames = replyDevicesSysNames.toStringList();
     } else {
         qCCritical(KCM_MOUSE) << "Error on receiving device list from KWin.";
         m_errorString = i18n("Querying input devices failed. Please reopen this settings module.");
         return;
     }
 
-    for (QString sn : devicesSysNames) {
+    for (const QString &sn : qAsConst(devicesSysNames)) {
         QDBusInterface deviceIface(QStringLiteral("org.kde.KWin"),
                                    QStringLiteral("/org/kde/KWin/InputDevice/") + sn,
                                    QStringLiteral("org.kde.KWin.InputDevice"),

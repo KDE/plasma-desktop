@@ -57,7 +57,7 @@ class KWinWaylandDevice : public QObject
     Q_PROPERTY(qreal scrollFactor READ scrollFactor WRITE setScrollFactor NOTIFY scrollFactorChanged)
 
 public:
-    KWinWaylandDevice(QString dbusName);
+    KWinWaylandDevice(const QString &dbusName);
     ~KWinWaylandDevice() override;
 
     bool init();

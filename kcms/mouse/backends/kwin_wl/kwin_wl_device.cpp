@@ -58,7 +58,7 @@ Qt::MouseButtons valueLoaderPart(QVariant const &reply)
 }
 }
 
-KWinWaylandDevice::KWinWaylandDevice(QString dbusName)
+KWinWaylandDevice::KWinWaylandDevice(const QString &dbusName)
 {
     m_iface = new QDBusInterface(QStringLiteral("org.kde.KWin"),
                                  QStringLiteral("/org/kde/KWin/InputDevice/") + dbusName,
