@@ -244,7 +244,9 @@ Rules *Rules::readRules(Rules *rules, const QString &filename, bool fromExtras)
             } else if (strPath.endsWith(QLatin1String("optionList/group/option/configItem/description"))) {
                 rules->optionGroupInfos.last()->optionInfos.last()->description = reader.readElementText().trimmed();
             }
-        } else if (token == QXmlStreamReader::EndElement) {
+        }
+        // don't use token here, readElementText() above can have moved us forward meanwhile
+        if (reader.tokenType() == QXmlStreamReader::EndElement) {
             path.removeLast();
         }
     }
