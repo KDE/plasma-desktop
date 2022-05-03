@@ -31,7 +31,6 @@ Kirigami.ApplicationWindow
     function report(thing, description) {
         if (!visible)
             return;
-        console.log("Copied to clipboard:", thing)
         CopyHelper.copyTextToClipboard(thing)
         recentEmojiModel.includeRecent(thing, description);
         window.showPassiveNotification(i18n("%1 copied to the clipboard", thing))

@@ -41,11 +41,8 @@ Kirigami.ScrollablePage {
             touchpad = deviceModel[index]
             deviceSelector.model = deviceModel
             deviceSelector.currentIndex = index
-            console.log("Touchpad configuration of device '" +
-                        (index + 1) + " : " + touchpad.name + "' opened")
         } else {
             deviceSelector.model = [""]
-            console.log("No touchpad found")
         }
         loading = false
     }
@@ -126,8 +123,6 @@ Kirigami.ScrollablePage {
                     if (!loading) {
                         changeSignal()
                     }
-                    console.log("Touchpad configuration of device '" +
-                                (currentIndex+1) + " : " + touchpad.name + "' opened")
                 }
                 root.syncValuesFromBackend()
             }

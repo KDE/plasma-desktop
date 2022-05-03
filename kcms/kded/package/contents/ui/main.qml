@@ -231,7 +231,6 @@ KCM.ScrollViewKCM {
                         onClicked: {
                             errorMessage.visible = false;
 
-                            console.log("DELEGATE", delegate)
                             if (model.status === Private.KCM.Running) {
                                 kcm.stopModule(model.moduleName);
                             } else {

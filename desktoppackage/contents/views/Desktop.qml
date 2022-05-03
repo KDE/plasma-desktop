@@ -40,7 +40,6 @@ Item {
     }
 
     function toggleWidgetExplorer(containment) {
-//         console.log("Widget Explorer toggled");
 
         if (sidePanelStack.state == "widgetExplorer") {
             sidePanelStack.state = "closed";

@@ -54,8 +54,6 @@ Image {
         drag {
             target: title
         }
-
-        onClicked: console.log("Clicked")
     }
 }
 

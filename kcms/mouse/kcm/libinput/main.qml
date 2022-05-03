@@ -44,11 +44,8 @@ Kirigami.ScrollablePage {
             device = deviceModel[index]
             deviceSelector.model = deviceModel
             deviceSelector.currentIndex = index
-            console.log("Configuration of device '" +
-                        (index + 1) + " : " + device.name + "' opened")
         } else {
             deviceSelector.model = [""]
-            console.log("No device found")
         }
         loading = false
     }
@@ -86,8 +83,6 @@ Kirigami.ScrollablePage {
                     if (!loading) {
                         changeSignal()
                     }
-                    console.log("Configuration of device '" +
-                                (currentIndex+1) + " : " + device.name + "' opened")
                 }
                 root.syncValuesFromBackend()
             }
