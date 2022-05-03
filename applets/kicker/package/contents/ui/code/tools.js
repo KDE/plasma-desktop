@@ -161,29 +161,19 @@ function handleFavoriteAction(actionId, actionArgument) {
     var favoriteId = actionArgument.favoriteId;
     var favoriteModel = actionArgument.favoriteModel;
 
-    console.log(actionId);
-
     if (favoriteModel === null || favoriteId == null) {
         return null;
     }
 
     if (actionId == "_kicker_favorite_remove") {
-        console.log("Removing from all activities");
         favoriteModel.removeFavorite(favoriteId);
     } else if (actionId == "_kicker_favorite_add") {
-        console.log("Adding to global activity");
         favoriteModel.addFavorite(favoriteId);
     } else if (actionId == "_kicker_favorite_remove_from_activity") {
-        console.log("Removing from a specific activity");
         favoriteModel.removeFavoriteFrom(favoriteId, actionArgument.favoriteActivity);
-
     } else if (actionId == "_kicker_favorite_add_to_activity") {
-        console.log("Adding to another activity");
         favoriteModel.addFavoriteTo(favoriteId, actionArgument.favoriteActivity);
-
     } else if (actionId == "_kicker_favorite_set_to_activity") {
-        console.log("Removing the item from the favourites, and re-adding it just to be on a specific activity");
         favoriteModel.setFavoriteOn(favoriteId, actionArgument.favoriteActivity);
-
     }
 }
