@@ -19,7 +19,6 @@
 #include <QStandardItemModel>
 #include <QStandardPaths>
 
-#include <KPackage/Package>
 #include <KPackage/PackageLoader>
 #include <KPackage/PackageStructure>
 

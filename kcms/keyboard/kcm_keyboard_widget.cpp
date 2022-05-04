@@ -26,7 +26,6 @@
 #include <QtGui/private/qtx11extras_p.h>
 #endif
 
-#include "keyboard_config.h"
 #include "workspace_options.h"
 #include "keyboardmiscsettings.h"
 

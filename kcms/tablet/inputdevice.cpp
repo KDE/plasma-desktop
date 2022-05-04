@@ -5,7 +5,6 @@
 */
 
 #include "inputdevice.h"
-#include "InputDevice_interface.h"
 
 #include <QDBusError>
 #include <QDBusInterface>

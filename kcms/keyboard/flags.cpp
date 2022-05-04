@@ -8,7 +8,6 @@
 
 #include <KLocalizedString>
 
-#include <QIcon>
 #include <QPainter>
 #include <QPixmap>
 #include <QStandardPaths>
