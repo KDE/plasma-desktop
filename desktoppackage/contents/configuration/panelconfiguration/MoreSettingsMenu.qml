@@ -164,6 +164,13 @@ PlasmaCore.Dialog {
         }
         PlasmaComponents.ToolButton {
             Layout.fillWidth: true
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Floating Panel")
+            iconSource: "zoom-select"
+            onClicked: panel.floating = !panel.floating
+            checked: panel.floating
+        }
+        PlasmaComponents.ToolButton {
+            Layout.fillWidth: true
             // we want destructive actions to be far from the initial cursor
             // position, so show this on the bottom for top panels
             visible: location === PlasmaCore.Types.TopEdge
