@@ -61,12 +61,7 @@ void ComponentChooser::load()
      * - Confirmation that the preferred service has been added
      * - Knowledge of the preferred application (a.k.a. at index [0])
      * - Defining which application will be set up
-     * The logic follows like so:
-     * - if there is no Exec= for the application;
-     * - OR the mimetype category (from .desktop files, e.g. Video, Viewer, TerminalEmulator) is not defined
-     * AND the list of categories DOES NOT contain that category;
-     * - OR the list of service types does not include a mimetype;
-     * - then fail immediately.
+     * Else, if the .desktop file is invalid in any way, fail immediately.
      * A service type in this context is a URI handler or a mimetype.
      */
     KApplicationTrader::query([&preferredServiceAdded, preferredService, this](const KService::Ptr &service) {
@@ -74,21 +69,16 @@ void ComponentChooser::load()
             || (!service->serviceTypes().contains(m_mimeType))) {
             return false;
         }
-        // A QVariantMap is a map of a QString and a QVariant.
         QVariantMap application;
-        // We essentially grab the information provided by the service/application
-        // and store it in this new map object.
-        // storageId = org.kde.myapplication.desktop
         application[QStringLiteral("name")] = service->name();
         application[QStringLiteral("icon")] = service->icon();
+        // storageId = org.kde.myapplication.desktop
         application[QStringLiteral("storageId")] = service->storageId();
         // We then add this mapped object to our list of applications.
         m_applications += application;
-        /* Here we evaluate:
-         * - if there is a preferred application AND the preferred application is the one we just passed;
-         * - then we set our index to the number of applications listed minus one
-         * because it is an array that starts from 0.
-         * - then we have successfully added a preferred application.
+        /* Here we evaluate
+         * if there is a preferred application AND the preferred application is the one we just passed
+         * then we set its index to the number of applications listed minus one.
          */
         if ((preferredService && preferredService->storageId() == service->storageId())) {
             m_index = m_applications.length() - 1;
@@ -110,7 +100,6 @@ void ComponentChooser::load()
      * by using a mapped object.
      */
     if (preferredService && !preferredServiceAdded) {
-        // standard application was specified by the user
         QVariantMap application;
         application["name"] = preferredService->name();
         application["icon"] = preferredService->icon();
@@ -118,14 +107,15 @@ void ComponentChooser::load()
         m_applications += application;
         m_index = m_applications.length() - 1;
     }
-    // This adds an unlabeled default application (Other...),
-    // which can be set to anything and is executed with a shell.
+    /* This adds an unlabeled default application (Other...),
+     * which can be set to anything and is executed with a shell.
+     * It is at the bottom of the ComboBox list.
+     */
     QVariantMap application;
     application["name"] = i18n("Other…");
     application["icon"] = QStringLiteral("application-x-shellscript");
     application["storageId"] = QString();
     m_applications += application;
-    // This is just in case the Other... default application is at index 0.
     if (m_index == -1) {
         m_index = 0;
     }
@@ -138,18 +128,13 @@ void ComponentChooser::load()
 }
 
 // This is for the case the user clicks in Other...
-// regardless of whether it is the first option or not.
 void ComponentChooser::select(int index)
 {
-    // If the current index is the same as the passed one
+    // If the current index is the same as the selected one
     // and there's more than one item in the list, proceed.
     if (m_index == index && m_applications.size() != 1) {
         return;
     }
-    /* The Other... option is always the last,
-     * so if the option the user clicked (index) is the same as the list of applications -1,
-     * a dialog is created and confirmation syncs the changes.
-     */
     if (index == m_applications.length() - 1) {
         KOpenWithDialog *dialog = new KOpenWithDialog(QList<QUrl>(), m_mimeType, m_dialogText, QString());
         dialog->setSaveNewApplications(true);
@@ -163,7 +148,7 @@ void ComponentChooser::select(int index)
 
             const KService::Ptr service = dialog->service();
             // Check if the selected application is already in the list,
-            // if it is, notify that it is now default.
+            // if it is, set it as a default application.
             for (int i = 0; i < m_applications.length(); i++) {
                 if (m_applications[i].toMap()["storageId"] == service->storageId()) {
                     m_index = i;
@@ -183,7 +168,6 @@ void ComponentChooser::select(int index)
             application["storageId"] = service->storageId();
             application["execLine"] = service->exec();
             m_applications.insert(m_applications.length() - 1, application);
-            // -2 because the default application must come before Other...
             m_index = m_applications.length() - 2;
             Q_EMIT applicationsChanged();
             Q_EMIT indexChanged();
@@ -212,7 +196,7 @@ void ComponentChooser::saveMimeTypeAssociations(const QStringList &mimes, const 
         KConfigGroup addedApps(mimeAppsList, QStringLiteral("Added Associations"));
         /* In the ComponentChooser child classes for each association, we add a QStringList
          * containing all mimetypes we want to associate to a certain application.
-         * We pass this as mimes here and iterate through it
+         * We pass this as `mimes` here and iterate through it
          * so that we can set associations in bulk.
          */
         for (const QString &m : mimes) {
@@ -239,7 +223,7 @@ void ComponentChooser::saveMimeTypeAssociations(const QStringList &mimes, const 
 
 bool ComponentChooser::isDefaults() const
 {
-    // We check if the default index is assigned to anything or that the index is a default.
+    // We check whether the default index is assigned to anything or whether the index is a default.
     return !m_defaultIndex.has_value() || *m_defaultIndex == m_index;
 }
 
