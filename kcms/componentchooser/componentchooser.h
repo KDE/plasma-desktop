@@ -20,7 +20,6 @@ class ComponentChooser : public QObject
     Q_PROPERTY(QVariantList applications MEMBER m_applications NOTIFY applicationsChanged)
     Q_PROPERTY(int index MEMBER m_index NOTIFY indexChanged)
     Q_PROPERTY(bool isDefaults READ isDefaults NOTIFY isDefaultsChanged)
-    Q_PROPERTY(QStringList mimetypes MEMBER m_mimeTypes NOTIFY mimetypesChanged)
 
 public:
     ComponentChooser(QObject *parent, const QString &mimeType, const QString &type, const QString &defaultApplication, const QString &dialogText);
@@ -36,20 +35,17 @@ public:
     void saveMimeTypeAssociations(const QStringList &mimes, const QString &storageId);
 
     bool isDefault() const;
-    QStringList getMimeTypes() const;
 
 Q_SIGNALS:
     void applicationsChanged();
     void indexChanged();
     void isDefaultsChanged();
-    void mimetypesChanged();
 
 protected:
     QVariantList m_applications;
     int m_index = -1;
     std::optional<int> m_defaultIndex;
     QString m_mimeType;
-    QStringList m_mimeTypes;
     QString m_category;
     QString m_defaultApplication;
     QString m_previousApplication;
