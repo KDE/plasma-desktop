@@ -44,6 +44,19 @@ function logicalTaskCount() {
     return Math.max(tasksModel.count ? 1 : 0, count);
 }
 
+// natalie: add versions for modified layout
+function illogicalTaskCount() {
+    return tasksModel.count - tasksModel.logicalLauncherCount
+}
+
+function illogicalLauncherCount() {
+    return tasksModel.logicalLauncherCount
+}
+
+function illogicalTotalCount() {
+    return tasksModel.count
+}
+
 function maxStripes() {
     var length = tasks.vertical ? taskList.width : taskList.height;
     var minimum = tasks.vertical ? preferredMinWidth() : preferredMinHeight();
@@ -106,7 +119,8 @@ function preferredMinWidth() {
     if (!tasks.vertical && !tasks.iconsOnly) {
       width +=
           (PlasmaCore.Units.smallSpacing * 2) +
-          (PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 12);
+          // natalie: modify width
+          (PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 8.75);
     }
 
     return width;
@@ -125,7 +139,8 @@ function preferredMaxWidth() {
         return preferredMinWidth();
     }
 
-    return Math.floor(preferredMinWidth() * 1.6);
+    // natalie: modify width
+    return Math.floor(preferredMinWidth() * 1.65);
 }
 
 function preferredMinHeight() {

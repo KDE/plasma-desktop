@@ -39,7 +39,7 @@ Kirigami.FormLayout {
         Item { implicitWidth: Kirigami.Units.gridUnit }
         CheckBox {
             id: highlightWindows
-            text: i18n("Highlight windows when hovering over task tooltips")
+            text: i18n("Highlight windows when hovering over tasks")
             enabled: showToolTips.checked
         }
     }

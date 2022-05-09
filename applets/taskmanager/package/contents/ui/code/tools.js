@@ -68,6 +68,10 @@ function activateNextPrevTask(anchor, next) {
     }
 
     var target = taskIndexList[0];
+    // natalie: wrap around for switch to previous/next
+    if (!next) {
+        var target = taskIndexList[taskIndexList.length-1]
+    }
 
     for (var i = 0; i < taskIndexList.length; ++i) {
         if (taskIndexList[i] === activeTaskIndex)

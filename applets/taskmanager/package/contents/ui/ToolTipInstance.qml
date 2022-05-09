@@ -56,7 +56,7 @@ ColumnLayout {
 
     spacing: PlasmaCore.Units.smallSpacing
 
-    // text labels + close button
+    // text labels + window buttons
     RowLayout {
         id: header
         // match spacing of DefaultToolTip.qml in plasma-framework
@@ -72,25 +72,73 @@ ColumnLayout {
         // all textlabels
         ColumnLayout {
             spacing: 0
-            // app name
-            PlasmaExtras.Heading {
-                id: appNameHeading
-                level: 3
-                maximumLineCount: 1
-                lineHeight: isWin ? 1 : appNameHeading.lineHeight
-                Layout.fillWidth: true
-                elide: Text.ElideRight
-                text: appName
-                opacity: flatIndex == 0
-                visible: text.length !== 0
-                textFormat: Text.PlainText
+
+            // natalie: change layout to add window buttons
+            RowLayout {
+                // app name
+                PlasmaExtras.Heading {
+                    id: appNameHeading
+                    // natalie: change font size
+                    level: 5
+                    maximumLineCount: 1
+                    lineHeight: isWin ? 1 : appNameHeading.lineHeight
+                    Layout.fillWidth: true
+                    // natalie: elide middle
+                    elide: Text.ElideMiddle
+                    text: appName
+                    opacity: flatIndex == 0
+                    visible: text.length !== 0
+                    textFormat: Text.PlainText
+                }
+                // natalie: add window buttons
+                PlasmaComponents3.ToolButton {
+                    id: keepaboveothersButton
+                    Layout.alignment: Qt.AlignRight | Qt.AlignTop
+                    visible: isWin
+                    icon.name: "window-keepaboveothers"
+                    onClicked: {
+                        backend.cancelHighlightWindows();
+                        tasksModel.requestToggleKeepAbove(submodelIndex);
+                    }
+                }
+                PlasmaComponents3.ToolButton {
+                    id: minimizeButton
+                    Layout.alignment: Qt.AlignRight | Qt.AlignTop
+                    visible: isWin
+                    icon.name: "window-minimize"
+                    onClicked: {
+                        backend.cancelHighlightWindows();
+                        tasksModel.requestToggleMinimized(submodelIndex);
+                    }
+                }
+                PlasmaComponents3.ToolButton {
+                    id: maximizeButton
+                    Layout.alignment: Qt.AlignRight | Qt.AlignTop
+                    visible: isWin
+                    icon.name: "window-maximize"
+                    onClicked: {
+                        backend.cancelHighlightWindows();
+                        tasksModel.requestToggleMaximized(submodelIndex);
+                    }
+                }
+                PlasmaComponents3.ToolButton {
+                    id: closeButton
+                    Layout.alignment: Qt.AlignRight | Qt.AlignTop
+                    visible: isWin
+                    icon.name: "window-close"
+                    onClicked: {
+                        backend.cancelHighlightWindows();
+                        tasksModel.requestClose(submodelIndex);
+                    }
+                }
             }
             // window title
             PlasmaComponents3.Label {
                 id: winTitle
                 maximumLineCount: 1
                 Layout.fillWidth: true
-                elide: Text.ElideRight
+                // natalie: elide middle
+                elide: Text.ElideMiddle
                 text: titleIncludesTrack ? "" : title
                 opacity: 0.75
                 visible: title.length !== 0 && title !== appNameHeading.text
@@ -101,7 +149,8 @@ ColumnLayout {
                 id: subtext
                 maximumLineCount: 1
                 Layout.fillWidth: true
-                elide: Text.ElideRight
+                // natalie: elide middle
+                elide: Text.ElideMiddle
                 text: isWin ? generateSubText() : ""
                 opacity: 0.6
                 visible: text.length !== 0 && text !== appNameHeading.text
@@ -145,7 +194,8 @@ ColumnLayout {
         Layout.preferredHeight: header.width / 2
 
         clip: true
-        visible: toolTipDelegate.isWin
+        // natalie: disable thumbnails
+        visible: false
 
         readonly property bool isMinimized: isGroup ? IsMinimized == true : isMinimizedParent
         // TODO: this causes XCB error message when being visible the first time

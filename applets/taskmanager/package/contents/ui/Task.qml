@@ -128,6 +128,11 @@ MouseArea {
         } else {
             pressed = false;
         }
+
+        // natalie: highlight windows when hovering over tasks (not just)
+        if (model.IsWindow === true) {
+            tasks.windowsHovered(model.WinIdList, containsMouse);
+        }
     }
 
     onPressed: {
@@ -414,15 +419,19 @@ MouseArea {
         id: iconBox
 
         anchors {
+            // natalie: adjust margins
             left: parent.left
             leftMargin: adjustMargin(true, parent.width, taskFrame.margins.left)
             top: parent.top
-            topMargin: adjustMargin(false, parent.height, taskFrame.margins.top)
+            topMargin: adjustMargin(false, parent.height, taskFrame.margins.top) + 4
+            bottom: parent.bottom
+            bottomMargin: adjustMargin(false, parent.height, taskFrame.margins.top) + 2
         }
 
         width: height
+        // natalie: adjust margins
         height: (parent.height - adjustMargin(false, parent.height, taskFrame.margins.top)
-            - adjustMargin(false, parent.height, taskFrame.margins.bottom))
+            - adjustMargin(false, parent.height, taskFrame.margins.bottom) - 4)
 
         function adjustMargin(vert, size, margin) {
             if (!size) {
@@ -480,8 +489,9 @@ MouseArea {
                 PropertyChanges {
                     target: iconBox
                     anchors.leftMargin: 0
+                    // natalie: adjust margins
                     width: parent.width - adjustMargin(true, task.width, taskFrame.margins.left)
-                                        - adjustMargin(true, task.width, taskFrame.margins.right)
+                                        - adjustMargin(true, task.width, taskFrame.margins.right) - 4
                 }
             }
         ]
@@ -526,16 +536,23 @@ MouseArea {
 
         anchors {
             fill: parent
-            leftMargin: taskFrame.margins.left + iconBox.width + LayoutManager.labelMargin
-            topMargin: taskFrame.margins.top
-            rightMargin: taskFrame.margins.right + (audioStreamIconLoader.shown ? (audioStreamIconLoader.width + LayoutManager.labelMargin) : 0)
+            // natalie: adjust margins
+            leftMargin: taskFrame.margins.left + iconBox.width + PlasmaCore.Units.smallSpacing + 1
+            topMargin: taskFrame.margins.top + 2
+            rightMargin: taskFrame.margins.right + iconBox.width - PlasmaCore.Units.smallSpacing - 1
             bottomMargin: taskFrame.margins.bottom
         }
 
+
+        // natalie: change label text
+        text: generateTitle() || ""
         wrapMode: (maximumLineCount == 1) ? Text.NoWrap : Text.Wrap
-        elide: Text.ElideRight
+        // natalie: elide middle
+        elide: Text.ElideMiddle
         textFormat: Text.PlainText
         verticalAlignment: Text.AlignVCenter
+        // natlie: align horizontally center
+        horizontalAlignment: Text.AlignHCenter
         maximumLineCount: plasmoid.configuration.maxTextLines || undefined
 
         // use State to avoid unnecessary re-evaluation when the label is invisible
@@ -545,8 +562,83 @@ MouseArea {
 
             PropertyChanges {
                 target: label
-                text: model.display || ""
+                // natalie: change label text
+                text: generateTitle() || ""
             }
+        }
+
+        // natalie: generate title
+        function generateTitle() {
+            var text = model.display;
+
+            var no_strip = ["RStudio"].some(appname => text.includes(appname));
+            var no_truncate = ["Mozilla"].some(appname => text.includes(appname));
+            var media = ["Spotify"].some(appname => text.includes(appname));
+
+            // KWin appends increasing integers in between pointy brackets to otherwise equal window titles.
+            // In this case save <#number> as counter and delete it at the end of text.
+            var counter = text.match(/<\d+>\W*$/);
+            text = text.replace(/\s*<\d+>\W*$/, "");
+
+            // Remove appName from the end of text.
+            var appNameRegex = new RegExp(appName + "$", "i");
+            if (!no_strip) {
+            text = text.replace(appNameRegex, "");
+                text = text.replace(/\s*(?:-|—|–|—|⸺|\|)*\s*$/, ""); // application name
+            }
+            text = text.replace(" - Mozilla", "");
+            text = text.replace(" — Mozilla", "");
+            text = text.replace("Mozilla", "");
+            text = text.replace(" - Brave", "");
+            text = text.replace(" : bash", "");
+            text = text.replace(" : zsh", "");
+            text = text.replace(" : xonsh", "");
+            text = text.replace(" - Privat", "");
+            text = text.replace(" - Uni", "");
+            text = text.replace(" - Local", "");
+            text = text.replace(" - Untitled (Workspace)", "");
+            text = text.replace(" ⸺", "");
+            if (!no_strip && !no_truncate) {            // var path_atom = text.match(/\s—\s((~|\/).*)/)[1];
+                text = text.replace(/\s—\s(~|\/).*/, ""); // path in atom
+                // var path_kate = text.match(/((~|\/).*\/)([\w\-]+\.\w+)/)[2];
+                text = text.replace(/((~|\/).*\/)([\w\-]+\.\w+)/, "$3"); // path in kate
+                // var path_dolphin = text.match(/^(.*\/)([^\/]+)$/)[1];
+                text = text.replace(/^(.*\/)([^\/]+)$/, "$2"); // path in dolphin
+                text = text.replace(/ - .* \(Workspace\)/, "");  // workspace in vscode
+                text = text.replace(/•?(\s\*)?\s*$/, ""); // modification indicator in atom
+                text = text.replace(/^\s*●\s*/, ""); // modification indicator in vscode
+                text = text.replace(/\.[A-Za-z]+$/, ""); // file ending
+            }
+
+            // add whitespace
+            if (text.length * 6.5 < frame.width - 4 * iconBox.width) {
+              text = text + "   "
+            }
+
+            return text.toString();
+        }
+    }
+
+    // natalie: add close button
+    PlasmaComponents3.ToolButton {
+        id: closeButton
+        // Layout.alignment: Qt.AlignRight | Qt.AlignTop
+        visible: model.IsWindow === true && model.isLauncher !== true
+        opacity: model.isActive ? 1 : 0.25
+        icon.name: "window-close"
+
+        anchors {
+            right: frame.right
+            top: frame.top
+            rightMargin: 0
+            topMargin: 1
+            // rightMargin: taskFrame.margins.right
+            // topMargin: Math.round(taskFrame.margins.top * indicatorScale)
+        }
+
+        onClicked: {
+            backend.cancelHighlightWindows();
+            tasksModel.requestClose(modelIndex());
         }
     }
 

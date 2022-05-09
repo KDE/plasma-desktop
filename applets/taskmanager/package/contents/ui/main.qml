@@ -46,11 +46,13 @@ MouseArea {
 
     Layout.fillWidth: true
     Layout.fillHeight: true
-    Layout.minimumWidth: tasks.vertical ? 0 : LayoutManager.preferredMinWidth()
+    // natalie: change width
+    Layout.minimumWidth: tasks.vertical ? 0 : LayoutManager.illogicalTotalCount() * LayoutManager.launcherWidth()
     Layout.minimumHeight: !tasks.vertical ? 0 : LayoutManager.preferredMinHeight()
 
 //BEGIN TODO: this is not precise enough: launchers are smaller than full tasks
-    Layout.preferredWidth: tasks.vertical ? PlasmaCore.Units.gridUnit * 10 : ((LayoutManager.logicalTaskCount() * LayoutManager.preferredMaxWidth()) / LayoutManager.calculateStripes())
+    // natalie: change width
+    Layout.preferredWidth: tasks.vertical ? PlasmaCore.Units.gridUnit * 10 : (((LayoutManager.illogicalTaskCount() * LayoutManager.preferredMaxWidth()) + LayoutManager.illogicalLauncherCount() * LayoutManager.launcherWidth()) / LayoutManager.calculateStripes());
     Layout.preferredHeight: tasks.vertical ? ((LayoutManager.logicalTaskCount() * LayoutManager.preferredMaxHeight()) / LayoutManager.calculateStripes()) : PlasmaCore.Units.gridUnit * 2
 //END TODO
 
@@ -501,19 +503,29 @@ MouseArea {
             return;
         }
 
-        var task = taskRepeater.itemAt(index);
-        if (task) {
-            /**
-             * BUG 452187: when activating a task from keyboard, there is no
-             * containsMouse changed signal, so we need to update the tooltip
-             * properties here.
-             */
-            if (plasmoid.configuration.showToolTips
-                && plasmoid.configuration.groupedTaskVisualization === 1) {
-                task.toolTipAreaItem.updateMainItemBindings();
-            }
+        // natalie: abuse this to provide shortcut go to next/previous task
+        switch (index) {
+            case 0:
+            TaskTools.activateNextPrevTask(null, true);
+            break;
+            case 9:
+                TaskTools.activateNextPrevTask(null, false);
+                break:
+            default:
+                var task = taskRepeater.itemAt(index);
+                if (task) {
+                    /**
+                    * BUG 452187: when activating a task from keyboard, there is no
+                    * containsMouse changed signal, so we need to update the tooltip
+                    * properties here.
+                    */
+                    if (plasmoid.configuration.showToolTips
+                        && plasmoid.configuration.groupedTaskVisualization === 1) {
+                        task.toolTipAreaItem.updateMainItemBindings();
+                    }
 
-            TaskTools.activateTask(task.modelIndex(), task.m, null, task);
+                    TaskTools.activateTask(task.modelIndex(), task.m, null, task);
+                }
         }
     }
 
@@ -537,5 +549,13 @@ MouseArea {
         tasks.windowsHovered.connect(backend.windowsHovered);
         tasks.activateWindowView.connect(backend.activateWindowView);
         dragHelper.dropped.connect(resetDragSource);
+    }
+
+    // natalie: add shortcut to switch to previous/next task
+    Keys.onPressed: {
+        if ((event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.AltModifier) && (event.key === Qt.Key_Tab)) {
+            console.log('window switch shortcut registered');
+            TaskTools.activateNextPrevTask(null, ~ Qt.ShiftModifier);
+        }
     }
 }
