@@ -6,8 +6,8 @@
 
 #include "desktoppathssettings.h"
 
-#include <KBookmarks/KBookmark>
-#include <KIOFileWidgets/KFilePlacesModel>
+#include <KBookmark>
+#include <KFilePlacesModel>
 #include <KLocalizedString>
 
 #include <QDir>
