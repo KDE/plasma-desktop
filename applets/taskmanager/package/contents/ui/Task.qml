@@ -70,10 +70,7 @@ MouseArea {
     Accessible.description: task.labelText ? i18n("Activate %1", task.labelText) : ""
     Accessible.role: Accessible.Button
 
-    onHighlightedChanged: {
-        // ensure it doesn't get stuck with a window highlighted
-        backend.cancelHighlightWindows();
-    }
+    // natalie: highlight window when hovering over task
 
     function showToolTip() {
         toolTipArea.showToolTip();
@@ -129,7 +126,7 @@ MouseArea {
             pressed = false;
         }
 
-        // natalie: highlight windows when hovering over tasks (not just)
+        // natalie: highlight windows when hovering over tasks
         if (model.IsWindow === true) {
             tasks.windowsHovered(model.WinIdList, containsMouse);
         }
@@ -335,16 +332,18 @@ MouseArea {
         }
     }
 
+
     PlasmaCore.FrameSvgItem {
         id: frame
 
         anchors {
             fill: parent
 
-            topMargin: (!tasks.vertical && taskList.rows > 1) ? LayoutManager.iconMargin : 0
-            bottomMargin: (!tasks.vertical && taskList.rows > 1) ? LayoutManager.iconMargin : 0
-            leftMargin: ((inPopup || tasks.vertical) && taskList.columns > 1) ? LayoutManager.iconMargin : 0
-            rightMargin: ((inPopup || tasks.vertical) && taskList.columns > 1) ? LayoutManager.iconMargin : 0
+            // natalie: adjust margins
+            topMargin: (!tasks.vertical && taskList.rows > 1) ? LayoutManager.iconMargin : 4
+            bottomMargin: (!tasks.vertical && taskList.rows > 1) ? LayoutManager.iconMargin : 4
+            leftMargin: ((inPopup || tasks.vertical) && taskList.columns > 1) ? LayoutManager.iconMargin : 1
+            rightMargin: ((inPopup || tasks.vertical) && taskList.columns > 1) ? LayoutManager.iconMargin : 1
         }
 
         imagePath: "widgets/tasks"
@@ -546,7 +545,8 @@ MouseArea {
 
         // natalie: change label text
         text: generateTitle() || ""
-        wrapMode: (maximumLineCount == 1) ? Text.NoWrap : Text.Wrap
+        // natalie: don't wrap
+        wrapMode: Text.NoWrap
         // natalie: elide middle
         elide: Text.ElideMiddle
         textFormat: Text.PlainText
@@ -554,6 +554,8 @@ MouseArea {
         // natlie: align horizontally center
         horizontalAlignment: Text.AlignHCenter
         maximumLineCount: plasmoid.configuration.maxTextLines || undefined
+        // natalie: inactive text color
+        color: theme.disabledTextColor
 
         // use State to avoid unnecessary re-evaluation when the label is invisible
         states: State {
@@ -677,6 +679,12 @@ MouseArea {
             PropertyChanges {
                 target: frame
                 basePrefix: "focus"
+            }
+
+            // natalie text color onyl for acive tasks
+            PropertyChanges {
+                target: label
+                color: theme.textColor
             }
         }
     ]

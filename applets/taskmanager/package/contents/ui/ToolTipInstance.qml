@@ -64,7 +64,8 @@ ColumnLayout {
 
         // This number controls the overall size of the window tooltips
         Layout.maximumWidth: toolTipDelegate.tooltipInstanceMaximumWidth
-        Layout.minimumWidth: isWin ? Layout.maximumWidth : 0
+        // natalie: modify width
+        Layout.minimumWidth: isWin ? Layout.maximumWidth + PlasmaCore.Units.gridUnit * 2 : 0
         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         // match margins of DefaultToolTip.qml in plasma-framework
         Layout.margins: isWin ? 0 : PlasmaCore.Units.gridUnit / 2
@@ -173,17 +174,7 @@ ColumnLayout {
             }
         }
 
-        // close button
-        PlasmaComponents3.ToolButton {
-            id: closeButton
-            Layout.alignment: Qt.AlignRight | Qt.AlignTop
-            visible: isWin
-            icon.name: "window-close"
-            onClicked: {
-                backend.cancelHighlightWindows();
-                tasksModel.requestClose(submodelIndex);
-            }
-        }
+        // natalie: remove close button
     }
 
     // thumbnail container

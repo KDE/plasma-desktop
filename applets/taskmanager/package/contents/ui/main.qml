@@ -505,12 +505,12 @@ MouseArea {
 
         // natalie: abuse this to provide shortcut go to next/previous task
         switch (index) {
-            case 0:
-            TaskTools.activateNextPrevTask(null, true);
-            break;
+                case 0:
+                TaskTools.activateNextPrevTask(null, true);
+                break;
             case 9:
                 TaskTools.activateNextPrevTask(null, false);
-                break:
+                break;
             default:
                 var task = taskRepeater.itemAt(index);
                 if (task) {
