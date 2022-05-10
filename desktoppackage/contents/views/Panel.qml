@@ -85,11 +85,13 @@ Item {
     Behavior on floatingness {
         NumberAnimation {
             duration: PlasmaCore.Units.longDuration
+            easing.type: Easing.OutCubic
         }
     }
     Behavior on panelOpacity {
         NumberAnimation {
             duration: PlasmaCore.Units.longDuration
+            easing.type: Easing.OutCubic
         }
     }
 
