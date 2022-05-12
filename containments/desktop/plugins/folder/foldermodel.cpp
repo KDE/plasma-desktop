@@ -1072,6 +1072,10 @@ void FolderModel::dragSelectedInternal(int x, int y)
 
 static bool isDropBetweenSharedViews(const QList<QUrl> &urls, const QUrl &folderUrl)
 {
+    if (urls.empty()) {
+        return false;
+    }
+
     for (const auto &url : urls) {
         if (folderUrl.adjusted(QUrl::StripTrailingSlash) != url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash)) {
             return false;
@@ -1199,6 +1203,11 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
     KIO::DropJobFlag flag = showMenuManually ? KIO::ShowMenuManually : KIO::DropJobDefaultFlags;
     KIO::DropJob *dropJob = KIO::drop(&ev, dropTargetUrl, flag);
     dropJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
+
+    // No menu will be shown so skip copying QMimeData
+    if (mimeData->urls().empty()) {
+        return;
+    }
 
     // The QMimeData we extract from the DropArea's drop event is deleted as soon as this method
     // ends but we need to keep a copy for when popupMenuAboutToShow fires.
