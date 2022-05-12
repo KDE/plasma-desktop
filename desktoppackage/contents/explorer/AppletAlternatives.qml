@@ -66,9 +66,11 @@ PlasmaCore.Dialog {
             provides: alternativesHelper.appletProvides
         }
 
-        PlasmaExtras.Heading {
-            id: heading
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alternative Widgets");
+        PlasmaExtras.PlasmoidHeading {
+            PlasmaExtras.Heading {
+                id: heading
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alternative Widgets");
+            }
         }
 
         // HACK for some reason initially setting the index does not work
