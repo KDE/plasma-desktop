@@ -31,7 +31,7 @@ MouseArea {
             // If the object has been dragged outside of the panel and there's
             // a different containment there, we remove it from the panel
             // containment and add it to the new one.
-            var padding = PlasmaCore.Units.gridUnit * 3;
+            var padding = PlasmaCore.Units.gridUnit * 5;
             if (currentApplet && (mouse.x < -padding || mouse.y < -padding ||
                 mouse.x > width + padding || mouse.y > height + padding)) {
                 var newCont = plasmoid.containmentAt(mouse.x, mouse.y);
