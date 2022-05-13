@@ -111,8 +111,15 @@ function checkLastSpacer() {
     }
 
     onDragLeave: {
-        appletsModel.remove(dndSpacer.parent.index);
-        root.fixedWidth = root.fixedHeight = 0;
+        /*
+         * When reordering task items, dragLeave signal will be emitted directly
+         * without dragEnter, and in this case parent.index is undefined, so also
+         * check if dndSpacer is in appletsModel.
+         */
+        if (typeof(dndSpacer.parent.index) === "number") {
+            appletsModel.remove(dndSpacer.parent.index);
+            root.fixedWidth = root.fixedHeight = 0;
+        }
     }
 
     onDrop: {
