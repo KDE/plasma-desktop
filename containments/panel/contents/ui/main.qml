@@ -125,7 +125,8 @@ function checkLastSpacer() {
     Containment.onAppletAdded: {
         LayoutManager.addApplet(applet, x, y);
         checkLastSpacer();
-        LayoutManager.save();
+        // When a new preset panel is added, avoid calling save() multiple times
+        Qt.callLater(LayoutManager.save);
     }
 
     Containment.onAppletRemoved: {
