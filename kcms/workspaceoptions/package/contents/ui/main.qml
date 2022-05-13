@@ -204,7 +204,7 @@ KCM.SimpleKCM {
         QQC2.ButtonGroup { id: tabletModeBehaviorGroup }
 
         RowLayout {
-            Kirigami.FormData.label: i18n("Tablet mode:")
+            Kirigami.FormData.label: i18n("Tablet Mode:")
             QQC2.RadioButton {
                 text: kcm.isWayland ? i18n("Automatically enable as needed") : i18n("Never optimize for touch usage")
                 checked: kcm.kwinSettings.tabletMode === "auto"
@@ -218,7 +218,7 @@ KCM.SimpleKCM {
             }
             KCM.ContextualHelpButton {
                 visible: kcm.isWayland
-                toolTipText: i18n("Tablet mode will be automatically activated whenever the system detects a touchscreen but no mouse or touchpad. For example: when a transformable laptop's keyboard is flipped around or detached.")
+                toolTipText: i18n("Tablet Mode will be automatically activated whenever the system detects a touchscreen but no mouse or touchpad. For example: when a transformable laptop's keyboard is flipped around or detached.")
             }
         }
 
@@ -248,7 +248,7 @@ KCM.SimpleKCM {
         QQC2.Label {
             Layout.fillWidth: true
             Layout.preferredWidth: Kirigami.Units.gridUnit * 20
-            text: i18n("In Tablet mode, many elements of the user interface will become larger to more easily accommodate touch interaction.")
+            text: i18n("In Tablet Mode, many elements of the user interface will become larger to more easily accommodate touch interaction.")
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
             wrapMode: Text.WordWrap
