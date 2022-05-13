@@ -22,7 +22,7 @@ MouseArea {
     hoverEnabled: true
 
     property Item currentApplet
-    property int startDragOffset: 0
+    property real startDragOffset: 0.0
 
     onPositionChanged: {
         if (pressed) {
