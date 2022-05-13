@@ -10,11 +10,13 @@
 #include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginFactory>
+#include <KWindowSystem>
 
 #include <QDBusConnection>
 #include <QDBusMessage>
 
 #include "workspaceoptions_kdeglobalssettings.h"
+#include "workspaceoptions_kwinsettings.h"
 #include "workspaceoptions_plasmasettings.h"
 #include "workspaceoptionsdata.h"
 
@@ -26,6 +28,7 @@ KCMWorkspaceOptions::KCMWorkspaceOptions(QObject *parent, const QVariantList &ar
 {
     qmlRegisterAnonymousType<WorkspaceOptionsGlobalsSettings>("org.kde.plasma.workspaceoptions.kcm", 0);
     qmlRegisterAnonymousType<WorkspaceOptionsPlasmaSettings>("org.kde.plasma.workspaceoptions.kcm", 0);
+    qmlRegisterAnonymousType<WorkspaceOptionsKwinSettings>("org.kde.plasma.workspaceoptions.kcm", 0);
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm_workspace"),
                                        i18n("General Behavior"),
@@ -47,6 +50,16 @@ WorkspaceOptionsGlobalsSettings *KCMWorkspaceOptions::globalsSettings() const
 WorkspaceOptionsPlasmaSettings *KCMWorkspaceOptions::plasmaSettings() const
 {
     return m_data->workspaceOptionsPlasmaSettings();
+}
+
+WorkspaceOptionsKwinSettings *KCMWorkspaceOptions::kwinSettings() const
+{
+    return m_data->workspaceOptionsKwinSettings();
+}
+
+bool KCMWorkspaceOptions::isWayland() const
+{
+    return KWindowSystem::isPlatformWayland();
 }
 
 void KCMWorkspaceOptions::save()

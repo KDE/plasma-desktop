@@ -11,12 +11,13 @@ kcmutils_generate_module_data(
     kcm_workspace_SRCS
     MODULE_DATA_HEADER workspaceoptionsdata.h
     MODULE_DATA_CLASS_NAME WorkspaceOptionsData
-    SETTINGS_HEADERS workspaceoptions_plasmasettings.h workspaceoptions_kdeglobalssettings.h
-    SETTINGS_CLASSES WorkspaceOptionsPlasmaSettings WorkspaceOptionsGlobalsSettings
+    SETTINGS_HEADERS workspaceoptions_plasmasettings.h workspaceoptions_kdeglobalssettings.h workspaceoptions_kwinsettings.h
+    SETTINGS_CLASSES WorkspaceOptionsPlasmaSettings WorkspaceOptionsGlobalsSettings WorkspaceOptionsKwinSettings
 )
 
 kconfig_add_kcfg_files(kcm_workspace_SRCS workspaceoptions_kdeglobalssettings.kcfgc GENERATE_MOC)
 kconfig_add_kcfg_files(kcm_workspace_SRCS workspaceoptions_plasmasettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(kcm_workspace_SRCS workspaceoptions_kwinsettings.kcfgc GENERATE_MOC)
 
 kcoreaddons_add_plugin(kcm_workspace SOURCES ${kcm_workspace_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
@@ -26,6 +27,7 @@ target_link_libraries(kcm_workspace
     KF5::KCMUtils
     KF5::ConfigWidgets
     KF5::Declarative
+    KF5::WindowSystem
 
     Qt::DBus
 )
@@ -33,6 +35,7 @@ target_link_libraries(kcm_workspace
 ########### install files ###############
 install(FILES workspaceoptions_kdeglobalssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES workspaceoptions_plasmasettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
+install(FILES workspaceoptions_kwinsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES kcm_workspace.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 kpackage_install_package(package kcm_workspace kcms)

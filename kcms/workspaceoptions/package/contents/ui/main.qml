@@ -8,7 +8,7 @@ import QtQuick 2.7
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.5 as Kirigami
-import org.kde.kcm 1.3 as KCM
+import org.kde.kcm 1.6 as KCM
 
 KCM.SimpleKCM {
     id: root
@@ -195,6 +195,63 @@ KCM.SimpleKCM {
                 settingName: "scrollbarLeftClickNavigatesByPage"
                 extraEnabledConditions: scrollbarLeftClickNavigatesByPage.enabled
             }
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        QQC2.ButtonGroup { id: tabletModeBehaviorGroup }
+
+        RowLayout {
+            Kirigami.FormData.label: i18n("Tablet mode:")
+            QQC2.RadioButton {
+                text: kcm.isWayland ? i18n("Automatically enable as needed") : i18n("Never optimize for touch usage")
+                checked: kcm.kwinSettings.tabletMode === "auto"
+                onToggled: if (checked) kcm.kwinSettings.tabletMode = "auto"
+                QQC2.ButtonGroup.group: tabletModeBehaviorGroup
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.kwinSettings
+                    settingName: "tabletMode"
+                }
+            }
+            KCM.ContextualHelpButton {
+                visible: kcm.isWayland
+                toolTipText: i18n("Tablet mode will be automatically activated whenever the system detects a touchscreen but no mouse or touchpad. For example: when a transformable laptop's keyboard is flipped around or detached.")
+            }
+        }
+
+        QQC2.RadioButton {
+            text: i18n("Always optimize for touch usage")
+            checked: kcm.kwinSettings.tabletMode === "on"
+            onToggled: if (checked) kcm.kwinSettings.tabletMode = "on"
+            QQC2.ButtonGroup.group: tabletModeBehaviorGroup
+
+            KCM.SettingStateBinding {
+                configObject: kcm.kwinSettings
+                settingName: "tabletMode"
+            }
+        }
+        QQC2.RadioButton {
+            visible: kcm.isWayland
+            text: i18n("Never optimize for touch usage")
+            checked: kcm.kwinSettings.tabletMode === "off"
+            onToggled: if (checked) kcm.kwinSettings.tabletMode = "off"
+            QQC2.ButtonGroup.group: tabletModeBehaviorGroup
+
+            KCM.SettingStateBinding {
+                configObject: kcm.kwinSettings
+                settingName: "tabletMode"
+            }
+        }
+        QQC2.Label {
+            Layout.fillWidth: true
+            Layout.preferredWidth: Kirigami.Units.gridUnit * 20
+            text: i18n("In Tablet mode, many elements of the user interface will become larger to more easily accommodate touch interaction.")
+            elide: Text.ElideRight
+            font: Kirigami.Theme.smallFont
+            wrapMode: Text.WordWrap
         }
 
         // There is no label for what middle-clicking does when using the
