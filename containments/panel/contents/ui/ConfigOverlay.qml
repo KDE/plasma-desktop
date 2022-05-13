@@ -22,8 +22,7 @@ MouseArea {
     hoverEnabled: true
 
     property Item currentApplet
-    property int lastX
-    property int lastY
+    property int startDragOffset: 0
 
     onPositionChanged: {
         if (pressed) {
@@ -47,9 +46,9 @@ MouseArea {
                 }
             }
             if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
-                currentApplet.y += (mouse.y - lastY);
+                currentApplet.y = mouse.y - configurationArea.startDragOffset;
             } else {
-                currentApplet.x += (mouse.x - lastX);
+                currentApplet.x = mouse.x - configurationArea.startDragOffset;
             }
 
             var item = currentLayout.childAt(mouse.x, mouse.y);
@@ -76,8 +75,6 @@ MouseArea {
             hideTimer.stop();
             tooltip.raise();
         }
-        lastX = mouse.x;
-        lastY = mouse.y;
     }
 
     onEntered: hideTimer.stop();
@@ -109,6 +106,12 @@ MouseArea {
         placeHolder.parent.dragging = currentApplet
         appletsModel.remove(item.index)
         root.dragAndDropping = true
+
+        if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+            configurationArea.startDragOffset = mouse.y - currentApplet.y;
+        } else {
+            configurationArea.startDragOffset = mouse.x - currentApplet.x;
+        }
     }
 
     onReleased: finishDragOperation()
