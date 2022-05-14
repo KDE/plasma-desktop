@@ -13,9 +13,9 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2020-06-30</date>
+<date>2022-05-14</date>
 
-<releaseinfo>&plasma; 5.20</releaseinfo>
+<releaseinfo>&plasma; 5.25</releaseinfo>
 
 <keywordset>
 <keyword>System Settings</keyword>
@@ -88,6 +88,23 @@ operating systems.</para>
 <term><menuchoice><guimenu>Clicking in scrollbar track</guimenu><guimenuitem>Scrolls to the clicked location</guimenuitem></menuchoice></term>
 <listitem>
 <para>Turns on the behavior when the scroll handle position jumps right to the position in the document where you have clicked. This is the behavior you may know from other desktops or operating systems.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice><guimenu>Tablet Mode</guimenu><guimenuitem>Automatically enable as needed/Never optimize for touch usage</guimenuitem></menuchoice></term>
+<listitem>
+<para>Tablet Mode will be automatically activated whenever the system detects a 
+touchscreen but no mouse or touchpad. For example: when a transformable 
+laptop's keyboard is flipped around or detached.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guimenuitem>Always optimize for touch usage (default)/Never optimize for touch usage</guimenuitem></term>
+<listitem>
+<para>In Tablet Mode, many elements of the user interface will become larger to 
+more easily accommodate touch interaction.</para>
 </listitem>
 </varlistentry>
 
