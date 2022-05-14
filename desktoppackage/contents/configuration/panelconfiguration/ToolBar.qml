@@ -31,13 +31,47 @@ Item {
         property int lastY
         property int startMouseX
         property int startMouseY
+
+        property real startDragOffset: 0.0
+        property real toolbarWidth: 0.0
+        property real toolbarHeight: 0.0
+
         onPressed: {
             dialogRoot.closeContextMenu();
             lastX = mouse.screenX
             lastY = mouse.screenY
             startMouseX = mouse.x
             startMouseY = mouse.y
-            tooltip.visible = true
+
+            /*
+             * Calculate the correct start drag position before the panel
+             * is dragged from vertical to horizontal (or vice versa)
+             */
+            switch (panel.location) {
+            case PlasmaCore.Types.TopEdge:
+                // Calculate from the bottom edge of the toolbar
+                toolbarHeight = root.height;
+                startDragOffset = toolbarHeight - startMouseY;
+                break;
+
+            case PlasmaCore.Types.LeftEdge:
+                // Calculate from the right edge of the toolbar
+                toolbarWidth = root.width;
+                startDragOffset = toolbarWidth - startMouseX;
+                break;
+
+            case PlasmaCore.Types.RightEdge:
+                // Calculate from the left edge of the toolbar
+                startDragOffset = startMouseX;
+                toolbarWidth = root.width;
+                break;
+
+            case PlasmaCore.Types.BottomEdge:
+            default:
+                // Calculate from the top edge of the toolbar
+                startDragOffset = startMouseY;
+                toolbarHeight = root.height;
+            }
         }
         onPositionChanged: {
             panel.screenToFollow = mouse.screen;
@@ -66,35 +100,53 @@ Item {
                     }
                 }
             }
+
             panel.location = newLocation
 
             switch (newLocation) {
-                case PlasmaCore.Types.TopEdge:
-                    var y = Math.max(mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y, panel.height);
+                case PlasmaCore.Types.TopEdge: {
+                    const zoomFactor = toolbarWidth > 0 ? root.height / toolbarWidth : 1;
+                    // mouse.screenY + startDragOffset: the bottom edge of the toolbar
+                    var y = Math.max(mouse.screenY + startDragOffset * zoomFactor - configDialog.height, panel.height);
                     configDialog.y = y;
                     panel.distance = Math.max(y - panel.height - panel.screenToFollow.geometry.y, 0);
                     break
-                case PlasmaCore.Types.LeftEdge:
-                    var x = Math.max(mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x, panel.width);
+                }
+
+                case PlasmaCore.Types.LeftEdge: {
+                    const zoomFactor = toolbarHeight > 0 ? root.width / toolbarHeight : 1;
+                    // mouse.screenX + startDragOffset: the right edge of the toolbar
+                    var x = Math.max(mouse.screenX + startDragOffset * zoomFactor - configDialog.width, panel.width);
                     configDialog.x = x;
                     panel.distance = Math.max(x - panel.width - panel.screenToFollow.geometry.x, 0);
                     break;
-                case PlasmaCore.Types.RightEdge:
-                    var x = Math.min(mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x, mouse.screen.geometry.x + mouse.screen.size.width - panel.width - configDialog.width);
+                }
+
+                case PlasmaCore.Types.RightEdge: {
+                    const zoomFactor = toolbarHeight > 0 ? root.width / toolbarHeight : 1;
+                    // mouse.screenX - startDragOffset: the left edge of the toolbar
+                    var x = Math.min(mouse.screenX - startDragOffset * zoomFactor, mouse.screen.geometry.x + mouse.screen.size.width - panel.width - configDialog.width);
                     configDialog.x = x;
                     panel.distance = Math.max(mouse.screen.size.width - (x - mouse.screen.geometry.x) - panel.width - configDialog.width, 0);
                     break;
+                }
+
                 case PlasmaCore.Types.BottomEdge:
-                default:
-                    var y = Math.min(mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y, mouse.screen.geometry.y + mouse.screen.size.height - panel.height - configDialog.height);
+                default: {
+                    const zoomFactor = toolbarWidth > 0 ? root.height / toolbarWidth : 1;
+                    // mouse.screenY - startDragOffset: the top edge of the toolbar
+                    var y = Math.min(mouse.screenY - startDragOffset * zoomFactor, mouse.screen.geometry.y + mouse.screen.size.height - panel.height - configDialog.height);
                     configDialog.y = y;
                     panel.distance = Math.max(mouse.screen.size.height - (y - mouse.screen.geometry.y) - panel.height - configDialog.height, 0);
+                }
             }
 
             lastX = mouse.screenX
             lastY = mouse.screenY
         }
         onReleased: {
+            startDragOffset = 0.0;
+            toolbarWidth = toolbarHeight = 0.0;
             panel.distance = 0
             panelResetAnimation.running = true
         }
