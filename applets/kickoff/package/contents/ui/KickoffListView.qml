@@ -26,6 +26,12 @@ EmptyPage {
     property alias view: view
 
     property bool mainContentView: false
+    property bool hasSectionView: false
+
+    /**
+     * Request showing the section view
+     */
+    signal showSectionViewRequested(string sectionName)
 
     clip: view.height < view.contentHeight
 
@@ -133,24 +139,37 @@ EmptyPage {
         section {
             property: "group"
             criteria: ViewSection.FullString
-            delegate: PC3.Label {
-                //readonly property bool visualFocus: false
-                width: section.length === 1
-                    ? KickoffSingleton.listDelegateContentHeight + leftPadding + rightPadding
-                    // Accessing implicitWidth fixes the width being 0 when loaded.
-                    : Math.min(Math.ceil(implicitWidth), view.availableWidth)
+            delegate: PC3.AbstractButton {
+                width: view.availableWidth
                 height: KickoffSingleton.listDelegateHeight
-                leftPadding: view.effectiveLayoutDirection === Qt.LeftToRight
-                    ? KickoffSingleton.listItemMetrics.margins.left : 0
-                rightPadding: view.effectiveLayoutDirection === Qt.RightToLeft
-                    ? KickoffSingleton.listItemMetrics.margins.right : 0
-                horizontalAlignment: section.length === 1 ? Text.AlignHCenter : Text.AlignLeft
-                verticalAlignment: Text.AlignVCenter
-                maximumLineCount: 1
-                elide: Text.ElideRight
-                font.pixelSize: KickoffSingleton.listDelegateContentHeight
-                enabled: false
-                text: section.length === 1 ? section.toUpperCase() : section
+
+                PC3.Label {
+                    id: contentLabel
+                    anchors.left: parent.left
+                    width: section.length === 1
+                        ? KickoffSingleton.listDelegateContentHeight + leftPadding + rightPadding
+                        : parent.width
+                    height: parent.height
+                    leftPadding: view.effectiveLayoutDirection === Qt.LeftToRight
+                        ? KickoffSingleton.listItemMetrics.margins.left : 0
+                    rightPadding: view.effectiveLayoutDirection === Qt.RightToLeft
+                        ? KickoffSingleton.listItemMetrics.margins.right : 0
+                    horizontalAlignment: section.length === 1 ? Text.AlignHCenter : Text.AlignLeft
+                    verticalAlignment: Text.AlignVCenter
+                    maximumLineCount: 1
+                    elide: Text.ElideRight
+                    font.pixelSize: KickoffSingleton.listDelegateContentHeight
+                    enabled: hoverHandler.hovered
+                    text: section.length === 1 ? section.toUpperCase() : section
+                }
+
+                HoverHandler {
+                    id: hoverHandler
+                    enabled: root.hasSectionView
+                    cursorShape: enabled ? Qt.PointingHandCursor : undefined
+                }
+
+                onClicked: root.showSectionViewRequested(contentLabel.text)
             }
         }
 

@@ -59,6 +59,7 @@ BasePage {
 
         Component {
             id: applicationsListViewComponent
+
             KickoffListView {
                 id: applicationsListView
                 objectName: "applicationsListView"
@@ -66,6 +67,29 @@ BasePage {
                 model: stackView.appsModel
                 section.property: model && model.description == "KICKER_ALL_MODEL" ? "group" : ""
                 section.criteria: ViewSection.FirstCharacter
+                hasSectionView: stackView.appsModelRow === 1
+
+                onShowSectionViewRequested: {
+                    stackView.push(applicationsSectionViewComponent, {
+                        "currentSection": sectionName,
+                        "view.implicitWidth": applicationsListView.view.implicitWidth,
+                    });
+                }
+            }
+        }
+
+        Component {
+            id: applicationsSectionViewComponent
+
+            SectionView {
+                id: sectionView
+                model: stackView.appsModel.sections
+
+                onHideSectionViewRequested: {
+                    stackView.pop();
+                    stackView.currentItem.view.positionViewAtIndex(index, ListView.Beginning);
+                    stackView.currentItem.currentIndex = index;
+                }
             }
         }
 
