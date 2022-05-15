@@ -17,6 +17,8 @@ BasePage {
         id: sideBar
         focus: true // needed for Loaders
         model: plasmoid.rootItem.rootModel
+        // needed otherwise app displayed at top-level will show a first character as group.
+        section.property: ""
         delegate: KickoffItemDelegate {
             width: view.availableWidth
             isCategory: model.hasChildren
@@ -62,7 +64,7 @@ BasePage {
                 objectName: "applicationsListView"
                 mainContentView: true
                 model: stackView.appsModel
-                section.property: model && model.description == "KICKER_ALL_MODEL" ? "display" : ""
+                section.property: model && model.description == "KICKER_ALL_MODEL" ? "group" : ""
                 section.criteria: ViewSection.FirstCharacter
             }
         }
