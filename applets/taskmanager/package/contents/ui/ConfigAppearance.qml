@@ -110,7 +110,7 @@ Kirigami.FormLayout {
 
     Label {
         visible: Kirigami.Settings.tabletMode
-        text: i18nc("@info:usagetip under a set of radio buttons when tablet mode is on", "Automatically set to Large when in tablet mode")
+        text: i18nc("@info:usagetip under a set of radio buttons when Touch Mode is on", "Automatically set to Large when in Touch Mode")
         font: Kirigami.Theme.smallFont
     }
 }
