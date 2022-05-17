@@ -181,39 +181,11 @@ KCM.SimpleKCM {
             }
         }
 
-        QQC2.Button {
-            id: menuButton
-
+        RowLayout {
             Layout.alignment: Qt.AlignRight
 
-            enabled: fileSearchEnabled.checked
-
-            icon.name: "folder-add"
-            text: i18n("Add folder configuration…")
-
-            checkable: true
-            checked: menu.opened
-
-            onClicked: {
-                // Appear above the button, not below it, since the button is at
-                // the bottom of the window and QQC2 items can't leave the window
-
-                // HACK: since we want to position the menu above the button,
-                // we need to know the menu's height, but it only has a height
-                // after the first time it's been shown, so until then, we need
-                // to provide an artificially-synthesized-and-hopefully-good-enough
-                // height value
-                var menuHeight = menu.height && menu.height > 0 ? menu.height : Kirigami.Units.gridUnit * 3
-                menu.popup(menuButton, 0, -menuHeight)
-            }
-        }
-
-        QQC2.Menu {
-            id: menu
-
-            modal: true
-
-            QQC2.MenuItem {
+            QQC2.Button {
+                enabled: fileSearchEnabled.checked
                 text: i18n("Start indexing a folder…")
                 icon.name: "list-add"
 
@@ -222,7 +194,9 @@ KCM.SimpleKCM {
                     fileDialogLoader.active = true
                 }
             }
-            QQC2.MenuItem {
+
+            QQC2.Button {
+                enabled: fileSearchEnabled.checked
                 text: i18n("Stop indexing a folder…")
                 icon.name: "list-remove"
 
