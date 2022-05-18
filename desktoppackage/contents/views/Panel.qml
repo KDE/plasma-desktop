@@ -100,8 +100,8 @@ Item {
     property var panelMask: floatingness === 0 ? (panelOpacity === 1 ? opaqueItem.mask : translucentItem.mask) : (panelOpacity === 1 ? floatingOpaqueItem.mask : floatingTranslucentItem.mask)
 
     // These two values are read from panelview.cpp and are used as an offset for the mask
-    property int maskOffsetX: leftFloatingPadding * floatingness
-    property int maskOffsetY: topFloatingPadding * floatingness
+    property int maskOffsetX: Math.round(leftFloatingPadding * floatingness)
+    property int maskOffsetY: Math.round(topFloatingPadding * floatingness)
 
     PlasmaCore.FrameSvgItem {
         id: translucentItem
@@ -115,10 +115,10 @@ Item {
         visible: floatingness !== 0 && panelOpacity !== 1
         anchors {
             fill: parent
-            bottomMargin: bottomFloatingPadding * floatingness
-            leftMargin: leftFloatingPadding * floatingness
-            rightMargin: rightFloatingPadding * floatingness
-            topMargin: topFloatingPadding * floatingness
+            bottomMargin: Math.round(bottomFloatingPadding * floatingness)
+            leftMargin: Math.round(leftFloatingPadding * floatingness)
+            rightMargin: Math.round(rightFloatingPadding * floatingness)
+            topMargin: Math.round(topFloatingPadding * floatingness)
         }
         imagePath: containment && containment.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "widgets/panel-background"
     }
@@ -128,10 +128,10 @@ Item {
         opacity: panelOpacity
         anchors {
             fill: parent
-            bottomMargin: bottomFloatingPadding * floatingness
-            leftMargin: leftFloatingPadding * floatingness
-            rightMargin: rightFloatingPadding * floatingness
-            topMargin: topFloatingPadding * floatingness
+            bottomMargin: Math.round(bottomFloatingPadding * floatingness)
+            leftMargin: Math.round(leftFloatingPadding * floatingness)
+            rightMargin: Math.round(rightFloatingPadding * floatingness)
+            topMargin: Math.round(topFloatingPadding * floatingness)
         }
         imagePath: containment && containment.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "solid/widgets/panel-background"
     }
@@ -239,7 +239,7 @@ Item {
                 return;
             }
 
-            return containment.backgroundHints; 
+            return containment.backgroundHints;
         }
         restoreMode: Binding.RestoreBinding
     }
