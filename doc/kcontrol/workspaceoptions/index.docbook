@@ -13,7 +13,7 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2022-05-14</date>
+<date>2022-05-18</date>
 
 <releaseinfo>&plasma; 5.25</releaseinfo>
 
@@ -92,18 +92,18 @@ operating systems.</para>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice><guimenu>Tablet Mode</guimenu><guimenuitem>Automatically enable as needed/Never optimize for touch usage</guimenuitem></menuchoice></term>
+<term><menuchoice><guimenu>Touch Mode</guimenu><guimenuitem>Automatically enable as needed/Never enabled</guimenuitem></menuchoice></term>
 <listitem>
-<para>Tablet Mode will be automatically activated whenever the system detects a 
+<para>Touch Mode will be automatically activated whenever the system detects a 
 touchscreen but no mouse or touchpad. For example: when a transformable 
 laptop's keyboard is flipped around or detached.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><guimenuitem>Always optimize for touch usage (default)/Never optimize for touch usage</guimenuitem></term>
+<term><guimenuitem>Always enabled (default)/Never enabled</guimenuitem></term>
 <listitem>
-<para>In Tablet Mode, many elements of the user interface will become larger to 
+<para>In Touch Mode, many elements of the user interface will become larger to 
 more easily accommodate touch interaction.</para>
 </listitem>
 </varlistentry>
