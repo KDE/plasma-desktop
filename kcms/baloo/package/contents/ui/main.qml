@@ -24,18 +24,16 @@ KCM.SimpleKCM {
         id: monitor
 
         readonly property bool currentlyIndexing: switch(monitor.state) {
-                                                      case Baloo.Global.FirstRun:
-                                                      case Baloo.Global.NewFiles:
-                                                      case Baloo.Global.ModifiedFiles:
-                                                      case Baloo.Global.XAttrFiles:
-                                                      case Baloo.Global.ContentIndexing:
-                                                      case Baloo.Global.UnindexedFileCheck:
-                                                      case Baloo.Global.StaleIndexEntriesClean:
-                                                          return true;
-                                                          break;
-                                                      default:
-                                                          return false;
-                                                          break;
+            case Baloo.Global.FirstRun:
+            case Baloo.Global.NewFiles:
+            case Baloo.Global.ModifiedFiles:
+            case Baloo.Global.XAttrFiles:
+            case Baloo.Global.ContentIndexing:
+            case Baloo.Global.UnindexedFileCheck:
+            case Baloo.Global.StaleIndexEntriesClean:
+                return true;
+            default:
+                return false;
         }
 
         readonly property int completionPercentage: Math.floor(monitor.filesIndexed / monitor.totalFiles * 100)
@@ -59,16 +57,14 @@ KCM.SimpleKCM {
             type: Kirigami.MessageType.Warning
             showCloseButton: true
             text: i18n("Do you want to delete the saved index data? %1 of space will be freed, but if indexing is re-enabled later, the entire index will have to be re-created from scratch. This may take some time, depending on how many files you have.", kcm.prettyIndexFileSize());
-            actions: [
-                Kirigami.Action {
-                    text: i18n("Delete Index Data")
-                    icon.name: "edit-delete"
-                    onTriggered: {
-                        kcm.deleteIndex();
-                        indexingDisabledWarning.visible = false;
-                    }
+            actions: Kirigami.Action {
+                text: i18n("Delete Index Data")
+                icon.name: "edit-delete"
+                onTriggered: {
+                    kcm.deleteIndex();
+                    indexingDisabledWarning.visible = false;
                 }
-            ]
+            }
         }
 
         QQC2.Label {
