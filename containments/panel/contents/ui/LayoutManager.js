@@ -111,8 +111,19 @@ function indexAtCoordinates(x, y) {
         } else {
             y -= layout.columnSpacing
         }
-        // childAt won't find any applet when adding a new preset panel
-        if (x < 0 || y < 0) return appletsModel.count;
+        if (x < 0 || y < 0) {
+            if (layout.width === 0) {
+                /*
+                 * childAt won't find any applet when adding a new preset panel
+                 * because all applets don't have a valid width during initialization.
+                 */
+                return appletsModel.count;
+            } else {
+                // BUG 453998: After initialization, all applets have valid widths, so
+                // we need to avoid placing the leftmost/topmost applet at the end
+                return 0;
+            }
+        }
         child = layout.childAt(x, y);
     }
     if ((plasmoid.formFactor === 3 && y < child.y + child.height/2) ||
