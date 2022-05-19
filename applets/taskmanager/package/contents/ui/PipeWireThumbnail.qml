@@ -8,13 +8,13 @@ import QtQuick 2.15
 import QtQuick.Window 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.taskmanager 0.1 as TaskManager
+import org.kde.pipewire 0.1 as PipeWire
 
 // opacity doesn't work in the root item
 Item {
     anchors.fill: parent
 
-    TaskManager.PipeWireSourceItem {
+    PipeWire.PipeWireSourceItem {
         id: pipeWireSourceItem
 
         enabled: false // Must be set in pipewiresourceitem.cpp so opacity animation can work
@@ -25,7 +25,7 @@ Item {
 
         opacity: enabled ? 1 : 0
 
-        TaskManager.ScreencastingRequest {
+        PipeWire.ScreencastingRequest {
             id: waylandItem
             uuid: toolTipDelegate.Window.visibility === Window.Hidden ? "" : thumbnailSourceItem.winId
         }
