@@ -17,7 +17,6 @@
 #include "backends/x11/x11_evdev_backend.h"
 
 #include <KLocalizedString>
-#include <KToolInvocation>
 //#include <KConfig>
 #include <KAboutData>
 #include <KPluginFactory>
@@ -25,6 +24,7 @@
 #include <QCheckBox>
 #include <QDoubleSpinBox>
 #include <QFormLayout>
+#include <QProcess>
 #include <QSpinBox>
 #include <QStandardPaths>
 #include <QTabWidget>
@@ -239,7 +239,7 @@ void XlibConfig::save()
     group.sync();
 
     // restart kaccess
-    KToolInvocation::startServiceByDesktopName("kaccess");
+    QProcess::startDetached(QStringLiteral("kaccess"), {});
 
     Q_EMIT m_parent->changed(false);
 }
