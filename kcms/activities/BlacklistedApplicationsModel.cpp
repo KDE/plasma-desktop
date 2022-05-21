@@ -8,6 +8,7 @@
 
 #include <QDebug>
 #include <QList>
+#include <QScopeGuard>
 #include <QSet>
 #include <QSqlDatabase>
 #include <QSqlError>
@@ -33,7 +34,6 @@ public:
     };
 
     QList<ApplicationData> applications;
-    QSqlDatabase database;
 
     KActivityManagerdPluginsSettings *pluginConfig;
     bool enabled;
@@ -44,10 +44,6 @@ BlacklistedApplicationsModel::BlacklistedApplicationsModel(QObject *parent)
 {
     d->enabled = false;
     d->pluginConfig = new KActivityManagerdPluginsSettings;
-
-    const QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/kactivitymanagerd/resources/database");
-    d->database = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), QStringLiteral("plugins_sqlite_db_resources"));
-    d->database.setDatabaseName(path);
 }
 
 BlacklistedApplicationsModel::~BlacklistedApplicationsModel()
@@ -61,6 +57,15 @@ QHash<int, QByteArray> BlacklistedApplicationsModel::roleNames() const
 
 void BlacklistedApplicationsModel::load()
 {
+    QSqlDatabase database;
+
+    const QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/kactivitymanagerd/resources/database");
+    database = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), QStringLiteral("plugins_sqlite_db_resources"));
+    database.setDatabaseName(path);
+    auto databaseRemove = qScopeGuard([&] {
+        QSqlDatabase::removeDatabase(database.connectionName());
+    });
+
     // Loading plugin configuration
     d->pluginConfig->load();
     const auto defaultBlockedValue = d->pluginConfig->defaultBlockedByDefaultValue();
@@ -71,12 +76,12 @@ void BlacklistedApplicationsModel::load()
 
     // Reading new applications from the database
 
-    if (!d->database.open()) {
+    if (!database.open()) {
         // qDebug() << "Failed to open the database" << path << d->database.lastError();
         return;
     }
 
-    auto query = d->database.exec(QStringLiteral("SELECT DISTINCT(initiatingAgent) FROM ResourceScoreCache ORDER BY initiatingAgent"));
+    auto query = database.exec(QStringLiteral("SELECT DISTINCT(initiatingAgent) FROM ResourceScoreCache ORDER BY initiatingAgent"));
 
     if (d->applications.length() > 0) {
         beginRemoveRows(QModelIndex(), 0, d->applications.length() - 1);
