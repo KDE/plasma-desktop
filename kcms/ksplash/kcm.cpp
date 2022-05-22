@@ -27,6 +27,24 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMSplashScreenFactory, "kcm_splashscreen.json", registerPlugin<KCMSplashScreen>(); registerPlugin<SplashScreenData>();)
 
+const QLatin1String s_nonePluginName("None");
+
+class SplashScreenSortModel : public QSortFilterProxyModel
+{
+    using QSortFilterProxyModel::QSortFilterProxyModel;
+    virtual bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const
+    {
+        // The "None" entry should be the last item of the model, BUG: 451422
+        if (source_left.data(KCMSplashScreen::PluginNameRole).toString() == s_nonePluginName) {
+            return false;
+        }
+        if (source_right.data(KCMSplashScreen::PluginNameRole).toString() == s_nonePluginName) {
+            return true;
+        }
+        return QSortFilterProxyModel::lessThan(source_left, source_right);
+    }
+};
+
 KCMSplashScreen::KCMSplashScreen(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
     , m_data(new SplashScreenData(this))
@@ -48,7 +66,7 @@ KCMSplashScreen::KCMSplashScreen(QObject *parent, const QVariantList &args)
     roles[PendingDeletionRole] = "pendingDeletion";
     m_model->setItemRoleNames(roles);
 
-    m_sortModel = new QSortFilterProxyModel(this);
+    m_sortModel = new SplashScreenSortModel(this);
     m_sortModel->setSourceModel(m_model);
     m_sortModel->setSortLocaleAware(true);
     m_sortModel->setSortRole(Qt::DisplayRole);
@@ -144,7 +162,7 @@ void KCMSplashScreen::load()
     m_sortModel->sort(Qt::DisplayRole);
 
     QStandardItem *row = new QStandardItem(i18n("None"));
-    row->setData("None", PluginNameRole);
+    row->setData(s_nonePluginName, PluginNameRole);
     row->setData(i18n("No splash screen will be shown"), DescriptionRole);
     row->setData(false, UninstallableRole);
     m_model->insertRow(0, row);
