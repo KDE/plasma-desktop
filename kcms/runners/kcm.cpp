@@ -11,6 +11,7 @@
 
 #include <KAboutData>
 #include <KCMultiDialog>
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KNSWidgets/Button>
 #include <KPluginFactory>
