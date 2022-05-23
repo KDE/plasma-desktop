@@ -155,9 +155,10 @@ Item {
     readonly property bool screenCovered: visibleWindowsModel.count > 0 && !kwindowsystem.showingDesktop
     property var stateTriggers: [floating, screenCovered, isOpaque, isAdaptive, isTransparent]
     onStateTriggersChanged: {
-        let oldState = root.state
+        let opaqueApplets = false
         if ((!floating || screenCovered) && (isOpaque || (screenCovered && isAdaptive))) {
             panelOpacity = 1
+            opaqueApplets = true
             floatingness = 0
         } else if ((!floating || screenCovered) && (isTransparent || (!screenCovered && isAdaptive))) {
             panelOpacity = 0
@@ -167,9 +168,12 @@ Item {
             floatingness = 1
         } else if (floating && !screenCovered && isOpaque) {
             panelOpacity = 1
+            opaqueApplets = true
             floatingness = 1
         }
-        if ((panelOpacity == 1) && containment) {
+        // Not using panelOpacity to check as it has a NumberAnimation, and it will thus
+        // be still read as the initial value here, before the animation starts.
+        if (opaqueApplets && containment) {
             containment.containmentDisplayHints |= PlasmaCore.Types.DesktopFullyCovered
         } else {
             containment.containmentDisplayHints &= ~PlasmaCore.Types.DesktopFullyCovered
