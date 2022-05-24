@@ -63,8 +63,8 @@ DragDrop.DropArea {
 //BEGIN functions
 function checkLastSpacer() {
     var flexibleFound = false;
-    for (var i = 0; i < currentLayout.children.length; ++i) {
-        var applet = currentLayout.children[i].applet;
+    for (var i = 0; i < appletsModel.count; ++i) {
+        const applet = appletsModel.get(i).applet;
         if (!applet || !applet.visible || !applet.Layout) {
             continue;
         }
