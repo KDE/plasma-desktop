@@ -248,26 +248,6 @@ Item {
         restoreMode: Binding.RestoreBinding
     }
 
-    Connections {
-        target: containment
-        function onActivated() {
-            containment.status = PlasmaCore.Types.AcceptingInputStatus;
-            // When the containment is set to AcceptingInputStatus he window will be given focus and
-            // will try to give focus to an itemof the scene, but not the one we wnant. if we call immediately
-            // forceActiveFocus on the one we want we'll have a race condition that won't happen if we do it later
-            Qt.callLater(root.nextItemInFocusChain().forceActiveFocus);
-        }
-    }
-
-    Connections {
-        target: parent
-        function onActiveFocusChanged() {
-            if (!parent.activeFocus) {
-                containment.status = PlasmaCore.Types.PassiveStatus
-            }
-        }
-    }
-
     PlasmaCore.FrameSvgItem {
         x: root.verticalPanel || !panel.activeFocusItem
             ? 0
