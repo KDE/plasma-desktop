@@ -36,9 +36,23 @@ function addApplet(applet, x, y) {
     // of a specific type, and the containment caring about the applet type. In a better
     // system the containment would be informed of requested launchers, and determine by
     // itself what it wants to do with that information.
-    if (applet.pluginName === "org.kde.plasma.icon" &&
-            (middle = currentLayout.childAt(root.width / 2, root.height / 2))) {
-        appletsModel.insert(middle.index, new_element);
+
+    // x === 0 && y === 0: when adding a new application icon applet
+    // x === -1 && y === -1: when adding an application icon applet from the configuration
+    if (applet.pluginName === "org.kde.plasma.icon" && x === 0 && y === 0) {
+        let targetIndex = null;
+        // Find task manager applet's index
+        for (let i = 0; i < appletsModel.count; ++i) {
+            const child = appletsModel.get(i).applet;
+            if (child.pluginName === "org.kde.plasma.icontasks"
+             || child.pluginName === "org.kde.plasma.taskmanager"
+             || child.pluginName === "org.kde.plasma.windowlist") {
+                targetIndex = i;
+                break;
+            }
+        }
+        // Fall back to the left of center applet
+        appletsModel.insert(targetIndex || indexAtCoordinates(root.width / 2, root.height / 2), new_element);
     // Fall through to determining an appropriate insert position.
     } else if (x >= 0 && y >= 0) {
         appletsModel.insert(indexAtCoordinates(x, y), new_element)
