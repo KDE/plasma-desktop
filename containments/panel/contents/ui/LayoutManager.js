@@ -20,14 +20,11 @@ function addApplet(applet, x, y) {
     // happen that an applet erroneously thinks it's visible, or suddenly
     // starts thinking that way on teardown (virtual desktop pager)
     // leading to crashes
-    var new_element = {applet: applet}
+    var middle, new_element = {applet: applet}
 
     applet.visible = Qt.binding(function() {
         return applet.status !== PlasmaCore.Types.HiddenStatus || (!plasmoid.immutable && plasmoid.userConfiguring);
     });
-
-    if (x >= 0 && y >= 0) {
-        appletsModel.insert(indexAtCoordinates(x, y), new_element)
 
     // Insert icons to the left of whatever is at the center (usually a Task Manager),
     // if it exists.
@@ -39,10 +36,13 @@ function addApplet(applet, x, y) {
     // of a specific type, and the containment caring about the applet type. In a better
     // system the containment would be informed of requested launchers, and determine by
     // itself what it wants to do with that information.
-    } else if (applet.pluginName === "org.kde.plasma.icon" &&
+    if (applet.pluginName === "org.kde.plasma.icon" &&
             (middle = currentLayout.childAt(root.width / 2, root.height / 2))) {
         appletsModel.insert(middle.index, new_element);
     // Fall through to determining an appropriate insert position.
+    } else if (x >= 0 && y >= 0) {
+        appletsModel.insert(indexAtCoordinates(x, y), new_element)
+
     } else {
         appletsModel.append(new_element);
     }
