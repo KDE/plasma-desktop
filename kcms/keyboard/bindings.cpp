@@ -24,7 +24,7 @@ KeyboardLayoutActionCollection::KeyboardLayoutActionCollection(QObject *parent, 
     setComponentDisplayName(i18n("Keyboard Layout Switcher"));
     QAction *toggleAction = addAction(QStringLiteral("Switch to Next Keyboard Layout"));
     toggleAction->setText(i18n("Switch to Next Keyboard Layout"));
-    KGlobalAccel::self()->setShortcut(toggleAction, QList<QKeySequence>() << QKeySequence(Qt::ALT | Qt::CTRL | Qt::Key_K), KGlobalAccel::Autoloading);
+    KGlobalAccel::self()->setShortcut(toggleAction, QList<QKeySequence>() << QKeySequence(Qt::META | Qt::ALT | Qt::Key_K), KGlobalAccel::Autoloading);
     if (configAction) {
         toggleAction->setProperty("isConfigurationAction", true);
     }
