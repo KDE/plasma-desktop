@@ -13,6 +13,7 @@ import QtQuick 2.15
 import QtQuick.Templates 2.15 as T
 import QtQuick.Layouts 1.15
 import QtQml 2.15
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
@@ -24,9 +25,12 @@ EmptyPage {
     rightPadding: -plasmoid.rootItem.backgroundMetrics.rightPadding
     topPadding: 0
     bottomPadding: -plasmoid.rootItem.backgroundMetrics.bottomPadding
+    readonly property var appletInterface: plasmoid.self
 
     Layout.minimumWidth: implicitWidth
+    Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
     Layout.minimumHeight: implicitHeight
+    Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
 
     /* NOTE: Important things to know about keyboard input handling:
      *

@@ -206,6 +206,12 @@ PlasmaCore.ToolTipArea {
         backgroundHints: (plasmoid.containmentDisplayHints & PlasmaCore.Types.DesktopFullyCovered) ? PlasmaCore.Dialog.SolidBackground : PlasmaCore.Dialog.StandardBackground
 
         property var oldStatus: PlasmaCore.Types.UnknownStatus
+        appletInterface: {
+            if (!fullRepresentation || !fullRepresentation.appletInterface)
+                return null
+            return fullRepresentation.appletInterface
+        }
+        type: PlasmaCore.Dialog.AppletPopup
 
         //It's a MouseEventListener to get all the events, so the eventfilter will be able to catch them
         mainItem: MouseEventListener {
