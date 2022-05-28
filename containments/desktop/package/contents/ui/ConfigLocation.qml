@@ -25,14 +25,14 @@ Item {
     onCfg_urlChanged: applyConfig()
 
     function applyConfig(force) {
-        if (!force && locationGroup.checkedButton != null) {
+        if (!force && locationGroup.checkedButton !== null) {
             return;
         }
 
-        if (cfg_url == "desktop:/") {
+        if (cfg_url === "desktop:/") {
             locationDesktop.checked = true;
             locationCustomValue.text = "";
-        } else if (cfg_url == "activities:/current/") {
+        } else if (cfg_url === "activities:/current/") {
             locationCurrentActivity.checked = true;
             locationCustomValue.text = "";
         } else {
@@ -64,9 +64,9 @@ Item {
         buttons:  [locationDesktop, locationCurrentActivity, locationPlace, locationCustom]
 
         onCheckedButtonChanged: {
-            if (checkedButton == locationDesktop) {
+            if (checkedButton === locationDesktop) {
                 cfg_url = "desktop:/";
-            } else if (checkedButton == locationCurrentActivity) {
+            } else if (checkedButton === locationCurrentActivity) {
                 cfg_url = "activities:/current/";
             }
         }
@@ -112,7 +112,7 @@ Item {
                 enabled: true
 
                 onEnabledChanged: {
-                    if (enabled && currentIndex != -1) {
+                    if (enabled && currentIndex !== -1) {
                         cfg_url = placesModel.urlForIndex(currentIndex);
                     }
                 }
@@ -140,7 +140,7 @@ Item {
                 inputMethodHints: Qt.ImhNoPredictiveText
 
                 onEnabledChanged: {
-                    if (enabled && text != "") {
+                    if (enabled && text !== "") {
                         cfg_url = text;
                     }
                 }
@@ -193,7 +193,7 @@ Item {
             TextField {
                 id: labelText
                 Layout.fillWidth: true
-                enabled: (labelMode.currentIndex == 3)
+                enabled: (labelMode.currentIndex === 3)
 
                 placeholderText: i18n("Enter custom title…")
             }
