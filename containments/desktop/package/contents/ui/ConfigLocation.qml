@@ -7,6 +7,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import QtQml 2.15
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.1 as PlasmaCore
@@ -108,6 +109,28 @@ Item {
 
                 model: placesModel
                 textRole: "display"
+                property int iconRole: 0x00a45c00 // KFilePlacesModel, AdditionalRoles::IconNameRole
+                property string iconRoleName: "iconName"
+                readonly property string currentIconName: currentIndex === -1 ? "" : model.data(model.index(currentIndex, 0), iconRole)
+
+                Binding {
+                    target: locationPlaceValue.background
+                    property: 'properties'
+                    value: ({
+                        "editable": false,
+                        "currentIcon": locationPlaceValue.currentIconName,
+                    })
+                    restoreMode: Binding.RestoreBindingOrValue
+                }
+
+                delegate: ItemDelegate {
+                    width: ListView.view.width
+                    text: model[locationPlaceValue.textRole]
+                    icon.name: model[locationPlaceValue.iconRoleName]
+                    highlighted: locationPlaceValue.highlightedIndex === index
+                    Kirigami.Theme.colorSet: Kirigami.Theme.View
+                    Kirigami.Theme.inherit: false
+                }
 
                 enabled: true
 
