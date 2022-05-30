@@ -13,6 +13,7 @@ import QtQml 2.15
 import org.kde.newstuff 1.62 as NewStuff
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kcm 1.4
+import org.kde.plasma.plasmoid 2.0
 
 Item {
     id: appearanceRoot
@@ -34,6 +35,21 @@ Item {
         configDialog.currentWallpaper = appearanceRoot.currentWallpaper;
         configDialog.applyWallpaper()
         configDialog.containmentPlugin = appearanceRoot.containmentPlugin
+    }
+
+    /*
+     * BUG 407619: `wallpaperGraphicsObject`, `wallpaper` or `wallpaperInterface`
+     * is not set before calling `ContainmentInterface::loadWallpaper()`, so wait
+     * until `wallpaperInterfaceChanged` signal is emitted. At that time
+     * `applyWallpaper()` will call `syncWallpaperObjects()` to update
+     * `wallpaperConfiguration`.
+     */
+    Connections {
+        target: Plasmoid.self
+        function onWallpaperInterfaceChanged() {
+            configDialog.applyWallpaper();
+            main.loadSourceFile();
+        }
     }
 
     ColumnLayout {
@@ -161,11 +177,15 @@ Item {
             // so we wouldn't load emptyConfig and break all over the place
             // hence set it to some random value initially
             property string sourceFile: "tbd"
-            onSourceFileChanged: {
-                if (sourceFile) {
+
+            onSourceFileChanged: loadSourceFile()
+
+            function loadSourceFile() {
+                const wallpaperConfig = configDialog.wallpaperConfiguration
+                // BUG 407619: wallpaperConfig can be null before calling `ContainmentInterface::loadWallpaper()`
+                if (wallpaperConfig && sourceFile) {
                     var props = {}
 
-                    var wallpaperConfig = configDialog.wallpaperConfiguration
                     for (var key in wallpaperConfig) {
                         props["cfg_" + key] = wallpaperConfig[key]
                     }
