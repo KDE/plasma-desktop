@@ -43,7 +43,7 @@ PlasmaCore.ToolTipArea {
         }
 
         //if the fullRepresentation size was restored to a stored size, or if is dragged from the desktop, restore popup size
-        if (fullRepresentation.Layout && fullRepresentation.Layout.preferredWidth > 0) {
+        if (fullRepresentation.Layout.preferredWidth > 0) {
             popupWindow.mainItem.width = Qt.binding(function() {
                 return fullRepresentation.Layout.preferredWidth
             })
@@ -61,7 +61,7 @@ PlasmaCore.ToolTipArea {
             })
         }
 
-        if (fullRepresentation.Layout && fullRepresentation.Layout.preferredHeight > 0) {
+        if (fullRepresentation.Layout.preferredHeight > 0) {
             popupWindow.mainItem.height = Qt.binding(function() {
                 return fullRepresentation.Layout.preferredHeight
             })
@@ -227,14 +227,14 @@ PlasmaCore.ToolTipArea {
             LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
             LayoutMirroring.childrenInherit: true
 
-            Layout.minimumWidth: (fullRepresentation && fullRepresentation.Layout) ? fullRepresentation.Layout.minimumWidth : 0
-            Layout.minimumHeight: (fullRepresentation && fullRepresentation.Layout) ? fullRepresentation.Layout.minimumHeight : 0
+            Layout.minimumWidth: fullRepresentation ? fullRepresentation.Layout.minimumWidth : 0
+            Layout.minimumHeight: fullRepresentation ? fullRepresentation.Layout.minimumHeight : 0
 
-            Layout.preferredWidth: (fullRepresentation && fullRepresentation.Layout) ? fullRepresentation.Layout.preferredWidth : -1
-            Layout.preferredHeight: (fullRepresentation && fullRepresentation.Layout) ? fullRepresentation.Layout.preferredHeight : -1
+            Layout.preferredWidth: fullRepresentation ? fullRepresentation.Layout.preferredWidth : -1
+            Layout.preferredHeight: fullRepresentation ? fullRepresentation.Layout.preferredHeight : -1
 
-            Layout.maximumWidth: (fullRepresentation && fullRepresentation.Layout) ? fullRepresentation.Layout.maximumWidth : Infinity
-            Layout.maximumHeight: (fullRepresentation && fullRepresentation.Layout) ? fullRepresentation.Layout.maximumHeight : Infinity
+            Layout.maximumWidth: fullRepresentation ? fullRepresentation.Layout.maximumWidth : Infinity
+            Layout.maximumHeight: fullRepresentation ? fullRepresentation.Layout.maximumHeight : Infinity
 
             onActiveFocusChanged: {
                 if (activeFocus && fullRepresentation) {
