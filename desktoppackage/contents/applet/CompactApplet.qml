@@ -136,8 +136,8 @@ PlasmaCore.ToolTipArea {
 
         anchors {
             fill: parent
-            property bool returnAllMargins: true 
-            // The above makes sure margin is returned even for side margins, that 
+            property bool returnAllMargins: true
+            // The above makes sure margin is returned even for side margins, that
             // would be otherwise turned off.
             bottomMargin: containerMargins ? -containerMargins('bottom', returnAllMargins) : 0;
             topMargin: containerMargins ? -containerMargins('top', returnAllMargins) : 0;
@@ -227,13 +227,13 @@ PlasmaCore.ToolTipArea {
             LayoutMirroring.childrenInherit: true
 
             Layout.minimumWidth: (fullRepresentation && fullRepresentation.Layout) ? fullRepresentation.Layout.minimumWidth : 0
-            Layout.minimumHeight: (fullRepresentation && fullRepresentation.Layout) ? fullRepresentation.Layout.minimumHeight: 0
+            Layout.minimumHeight: (fullRepresentation && fullRepresentation.Layout) ? fullRepresentation.Layout.minimumHeight : 0
 
             Layout.preferredWidth: (fullRepresentation && fullRepresentation.Layout) ? fullRepresentation.Layout.preferredWidth : -1
-            Layout.preferredHeight: (fullRepresentation && fullRepresentation.Layout) ? fullRepresentation.Layout.preferredHeight: -1
+            Layout.preferredHeight: (fullRepresentation && fullRepresentation.Layout) ? fullRepresentation.Layout.preferredHeight : -1
 
             Layout.maximumWidth: (fullRepresentation && fullRepresentation.Layout) ? fullRepresentation.Layout.maximumWidth : Infinity
-            Layout.maximumHeight: (fullRepresentation && fullRepresentation.Layout) ? fullRepresentation.Layout.maximumHeight: Infinity
+            Layout.maximumHeight: (fullRepresentation && fullRepresentation.Layout) ? fullRepresentation.Layout.maximumHeight : Infinity
 
             onActiveFocusChanged: {
                 if (activeFocus && fullRepresentation) {
@@ -278,6 +278,5 @@ PlasmaCore.ToolTipArea {
                 popupWindow.requestActivate();
             }
         }
-
     }
 }
