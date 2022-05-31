@@ -247,19 +247,19 @@ PlasmaCore.ToolTipArea {
                 visible: plasmoid.formFactor === PlasmaCore.Types.Vertical || plasmoid.formFactor === PlasmaCore.Types.Horizontal
 
                 anchors {
-                    top: plasmoid.location == PlasmaCore.Types.BottomEdge ? undefined : parent.top
-                    left: plasmoid.location == PlasmaCore.Types.RightEdge ? undefined : parent.left
-                    right: plasmoid.location == PlasmaCore.Types.LeftEdge ? undefined : parent.right
-                    bottom: plasmoid.location == PlasmaCore.Types.TopEdge ? undefined : parent.bottom
-                    topMargin: plasmoid.location == PlasmaCore.Types.BottomEdge ? undefined : -popupWindow.margins.top
-                    leftMargin: plasmoid.location == PlasmaCore.Types.RightEdge ? undefined : -popupWindow.margins.left
-                    rightMargin: plasmoid.location == PlasmaCore.Types.LeftEdge ? undefined : -popupWindow.margins.right
-                    bottomMargin: plasmoid.location == PlasmaCore.Types.TopEdge ? undefined : -popupWindow.margins.bottom
+                    top: plasmoid.location === PlasmaCore.Types.BottomEdge ? undefined : parent.top
+                    left: plasmoid.location === PlasmaCore.Types.RightEdge ? undefined : parent.left
+                    right: plasmoid.location === PlasmaCore.Types.LeftEdge ? undefined : parent.right
+                    bottom: plasmoid.location === PlasmaCore.Types.TopEdge ? undefined : parent.bottom
+                    topMargin: plasmoid.location === PlasmaCore.Types.BottomEdge ? undefined : -popupWindow.margins.top
+                    leftMargin: plasmoid.location === PlasmaCore.Types.RightEdge ? undefined : -popupWindow.margins.left
+                    rightMargin: plasmoid.location === PlasmaCore.Types.LeftEdge ? undefined : -popupWindow.margins.right
+                    bottomMargin: plasmoid.location === PlasmaCore.Types.TopEdge ? undefined : -popupWindow.margins.bottom
                 }
-                height: (plasmoid.location == PlasmaCore.Types.TopEdge || plasmoid.location == PlasmaCore.Types.BottomEdge) ? 1 : undefined
-                width: (plasmoid.location == PlasmaCore.Types.LeftEdge || plasmoid.location == PlasmaCore.Types.RightEdge) ? 1 : undefined
+                height: (plasmoid.location === PlasmaCore.Types.TopEdge || plasmoid.location === PlasmaCore.Types.BottomEdge) ? 1 : undefined
+                width: (plasmoid.location === PlasmaCore.Types.LeftEdge || plasmoid.location === PlasmaCore.Types.RightEdge) ? 1 : undefined
                 z: 999 /* Draw the line on top of the applet */
-                elementId: (plasmoid.location == PlasmaCore.Types.TopEdge || plasmoid.location == PlasmaCore.Types.BottomEdge) ? "horizontal-line" : "vertical-line"
+                elementId: (plasmoid.location === PlasmaCore.Types.TopEdge || plasmoid.location === PlasmaCore.Types.BottomEdge) ? "horizontal-line" : "vertical-line"
                 svg: PlasmaCore.Svg {
                     imagePath: "widgets/line"
                 }
