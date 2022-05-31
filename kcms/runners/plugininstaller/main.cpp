@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    QScopedPointer<AbstractJob> job;
+    std::unique_ptr<AbstractJob> job;
     QFileInfo fileInfo(file);
     const QString mimeType = QMimeDatabase().mimeTypeForFile(fileInfo).name();
     if (mimeType == QLatin1String("application/x-rpm") && KOSRelease().idLike().contains(u"suse")) {
@@ -88,7 +88,7 @@ int main(int argc, char *argv[])
     }
 
     QObject::connect(
-        job.data(),
+        job.get(),
         &AbstractJob::finished,
         qApp,
         []() {
@@ -96,7 +96,7 @@ int main(int argc, char *argv[])
         },
         Qt::QueuedConnection);
     QObject::connect(
-        job.data(),
+        job.get(),
         &AbstractJob::error,
         qApp,
         [](const QString &error) {

@@ -12,7 +12,6 @@
 #include "logging.h"
 #include "touchpadparameters.h"
 
-#include <QSharedPointer>
 #include <QThreadStorage>
 
 #include <KWindowSystem>
@@ -37,12 +36,12 @@ TouchpadBackend *TouchpadBackend::implementation()
 {
     // There are multiple possible backends
     if (KWindowSystem::isPlatformX11()) {
-        static QThreadStorage<QSharedPointer<XlibBackend>> backend;
+        static QThreadStorage<std::shared_ptr<XlibBackend>> backend;
         if (!backend.hasLocalData()) {
             qCDebug(KCM_TOUCHPAD) << "Using X11 backend";
-            backend.setLocalData(QSharedPointer<XlibBackend>(XlibBackend::initialize()));
+            backend.setLocalData(std::shared_ptr<XlibBackend>(XlibBackend::initialize()));
         }
-        return backend.localData().data();
+        return backend.localData().get();
     }
     // TODO: test on kwin_wayland specifically? What about possibly other compositors under Wayland?
     else if (KWindowSystem::isPlatformWayland()) {

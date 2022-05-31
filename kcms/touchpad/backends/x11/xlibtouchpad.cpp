@@ -134,7 +134,7 @@ void XlibTouchpad::loadSupportedProperties(const Parameter *props)
         QLatin1String name(param->prop_name);
 
         if (!m_atoms.contains(name)) {
-            m_atoms.insert(name, QSharedPointer<XcbAtom>(new XcbAtom(m_connection, param->prop_name)));
+            m_atoms.insert(name, std::make_shared<XcbAtom>(m_connection, param->prop_name));
         }
     }
 

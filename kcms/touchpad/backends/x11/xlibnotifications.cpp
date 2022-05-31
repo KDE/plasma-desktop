@@ -5,6 +5,7 @@
 */
 
 #include "xlibnotifications.h"
+#include "c_ptr.h"
 
 #include <cstring>
 
@@ -22,7 +23,7 @@ XlibNotifications::XlibNotifications(Display *display, int device)
     m_notifier = new QSocketNotifier(xcb_get_file_descriptor(m_connection), QSocketNotifier::Read, this);
 
     xcb_query_extension_cookie_t inputExtCookie = xcb_query_extension(m_connection, std::strlen(INAME), INAME);
-    QScopedPointer<xcb_query_extension_reply_t, QScopedPointerPodDeleter> inputExt(xcb_query_extension_reply(m_connection, inputExtCookie, nullptr));
+    std::unique_ptr<xcb_query_extension_reply_t, CDeleter> inputExt(xcb_query_extension_reply(m_connection, inputExtCookie, nullptr));
     if (!inputExt) {
         return;
     }

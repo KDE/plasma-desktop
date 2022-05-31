@@ -32,7 +32,7 @@
 #include <xserver-properties.h>
 
 struct DeviceListDeleter {
-    static void cleanup(XDeviceInfo *p)
+    void operator()(XDeviceInfo *p)
     {
         if (p) {
             XFreeDeviceList(p);
@@ -40,7 +40,7 @@ struct DeviceListDeleter {
     }
 };
 
-void XlibBackend::XDisplayCleanup::cleanup(Display *p)
+void XlibBackend::XDisplayCleanup::operator()(Display *p)
 {
     if (p) {
         XCloseDisplay(p);
@@ -67,7 +67,7 @@ XlibBackend::XlibBackend(QObject *parent)
     , m_connection(nullptr)
 {
     if (m_display) {
-        m_connection = XGetXCBConnection(m_display.data());
+        m_connection = XGetXCBConnection(m_display.get());
     }
 
     if (!m_connection) {
@@ -94,28 +94,29 @@ XlibBackend::XlibBackend(QObject *parent)
 XlibTouchpad *XlibBackend::findTouchpad()
 {
     int nDevices = 0;
-    QScopedPointer<XDeviceInfo, DeviceListDeleter> deviceInfo(XListInputDevices(m_display.data(), &nDevices));
+    std::unique_ptr<XDeviceInfo, DeviceListDeleter> deviceInfo(XListInputDevices(m_display.get(), &nDevices));
 
-    for (XDeviceInfo *info = deviceInfo.data(); info < deviceInfo.data() + nDevices; info++) {
+    for (XDeviceInfo *info = deviceInfo.get(); info < deviceInfo.get() + nDevices; info++) {
         // Make sure device is touchpad
         if (info->type != m_touchpadAtom.atom()) {
             continue;
         }
         int nProperties = 0;
-        QSharedPointer<Atom> properties(XIListProperties(m_display.data(), info->id, &nProperties), XDeleter);
+        std::shared_ptr<Atom> properties(XIListProperties(m_display.get(), info->id, &nProperties), XDeleter);
 
-        Atom *atom = properties.data(), *atomEnd = properties.data() + nProperties;
+        Atom *atom = properties.get();
+        Atom *atomEnd = properties.get() + nProperties;
         for (; atom != atomEnd; atom++) {
 #if HAVE_XORGLIBINPUT
             if (*atom == m_libinputIdentifierAtom.atom()) {
                 setMode(TouchpadInputBackendMode::XLibinput);
-                return new LibinputTouchpad(m_display.data(), info->id);
+                return new LibinputTouchpad(m_display.get(), info->id);
             }
 #endif
 #if HAVE_SYNAPTICS
             if (*atom == m_synapticsIdentifierAtom.atom()) {
                 setMode(TouchpadInputBackendMode::XSynaptics);
-                return new SynapticsTouchpad(m_display.data(), info->id);
+                return new SynapticsTouchpad(m_display.get(), info->id);
             }
 #endif
         }
@@ -243,7 +244,7 @@ void XlibBackend::setTouchpadOff(TouchpadBackend::TouchpadOffState state)
 
 bool XlibBackend::isTouchpadAvailable()
 {
-    return !m_device.isNull();
+    return m_device != nullptr;
 }
 
 bool XlibBackend::isTouchpadEnabled()
@@ -288,7 +289,7 @@ void XlibBackend::devicePlugged(int device)
         if (m_device) {
             qWarning() << "Touchpad reset";
             m_notifications.reset();
-            watchForEvents(!m_keyboard.isNull());
+            watchForEvents(m_keyboard != nullptr);
             Q_EMIT touchpadReset();
         }
     }
@@ -307,9 +308,9 @@ void XlibBackend::propertyChanged(xcb_atom_t prop)
 QStringList XlibBackend::listMouses(const QStringList &blacklist)
 {
     int nDevices = 0;
-    QScopedPointer<XDeviceInfo, DeviceListDeleter> info(XListInputDevices(m_display.data(), &nDevices));
+    std::unique_ptr<XDeviceInfo, DeviceListDeleter> info(XListInputDevices(m_display.get(), &nDevices));
     QStringList list;
-    for (XDeviceInfo *i = info.data(); i != info.data() + nDevices; i++) {
+    for (XDeviceInfo *i = info.get(); i != info.get() + nDevices; i++) {
         if (m_device && i->id == static_cast<XID>(m_device->deviceId())) {
             continue;
         }
@@ -325,7 +326,7 @@ QStringList XlibBackend::listMouses(const QStringList &blacklist)
         if (blacklist.contains(name, Qt::CaseInsensitive)) {
             continue;
         }
-        PropertyInfo enabled(m_display.data(), i->id, m_enabledAtom.atom(), 0);
+        PropertyInfo enabled(m_display.get(), i->id, m_enabledAtom.atom(), 0);
         if (enabled.value(0) == false) {
             continue;
         }
@@ -340,14 +341,14 @@ QVector<QObject *> XlibBackend::getDevices() const
     QVector<QObject *> touchpads;
 
 #if HAVE_XORGLIBINPUT
-    LibinputTouchpad *libinputtouchpad = dynamic_cast<LibinputTouchpad *>(m_device.data());
+    LibinputTouchpad *libinputtouchpad = dynamic_cast<LibinputTouchpad *>(m_device.get());
     if (libinputtouchpad) {
         touchpads.push_back(libinputtouchpad);
     }
 #endif
 
 #if HAVE_SYNAPTICS
-    SynapticsTouchpad *synaptics = dynamic_cast<SynapticsTouchpad *>(m_device.data());
+    SynapticsTouchpad *synaptics = dynamic_cast<SynapticsTouchpad *>(m_device.get());
     if (synaptics) {
         touchpads.push_back(synaptics);
     }
@@ -359,13 +360,13 @@ QVector<QObject *> XlibBackend::getDevices() const
 void XlibBackend::watchForEvents(bool keyboard)
 {
     if (!m_notifications) {
-        m_notifications.reset(new XlibNotifications(m_display.data(), m_device ? m_device->deviceId() : XIAllDevices));
-        connect(m_notifications.data(), SIGNAL(devicePlugged(int)), SLOT(devicePlugged(int)));
-        connect(m_notifications.data(), SIGNAL(touchpadDetached()), SLOT(touchpadDetached()));
-        connect(m_notifications.data(), SIGNAL(propertyChanged(xcb_atom_t)), SLOT(propertyChanged(xcb_atom_t)));
+        m_notifications.reset(new XlibNotifications(m_display.get(), m_device ? m_device->deviceId() : XIAllDevices));
+        connect(m_notifications.get(), SIGNAL(devicePlugged(int)), SLOT(devicePlugged(int)));
+        connect(m_notifications.get(), SIGNAL(touchpadDetached()), SLOT(touchpadDetached()));
+        connect(m_notifications.get(), SIGNAL(propertyChanged(xcb_atom_t)), SLOT(propertyChanged(xcb_atom_t)));
     }
 
-    if (keyboard == !m_keyboard.isNull()) {
+    if (keyboard == (m_keyboard != nullptr)) {
         return;
     }
 
@@ -374,7 +375,7 @@ void XlibBackend::watchForEvents(bool keyboard)
         return;
     }
 
-    m_keyboard.reset(new XRecordKeyboardMonitor(m_display.data()));
-    connect(m_keyboard.data(), SIGNAL(keyboardActivityStarted()), SIGNAL(keyboardActivityStarted()));
-    connect(m_keyboard.data(), SIGNAL(keyboardActivityFinished()), SIGNAL(keyboardActivityFinished()));
+    m_keyboard.reset(new XRecordKeyboardMonitor(m_display.get()));
+    connect(m_keyboard.get(), SIGNAL(keyboardActivityStarted()), SIGNAL(keyboardActivityStarted()));
+    connect(m_keyboard.get(), SIGNAL(keyboardActivityFinished()), SIGNAL(keyboardActivityFinished()));
 }

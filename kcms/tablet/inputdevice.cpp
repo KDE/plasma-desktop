@@ -20,7 +20,7 @@ bool InputDevice::Prop<T>::save()
         return false;
     }
 
-    auto iface = m_device->m_iface.data();
+    auto iface = m_device->m_iface.get();
     const bool ret = m_prop.write(iface, *m_value);
     if (ret) {
         m_configValue = *m_value;

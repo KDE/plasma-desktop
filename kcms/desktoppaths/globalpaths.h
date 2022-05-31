@@ -11,6 +11,7 @@
 #define __GLOBALPATHS_H
 
 #include <KCModule>
+#include <memory>
 
 namespace Ui
 {
@@ -37,7 +38,7 @@ private Q_SLOTS:
 private:
     void setDefaultIndicatorVisible(KUrlRequester *widget, const QVariant &defaultValue);
 
-    QScopedPointer<Ui::DesktopPathsView> m_ui;
+    std::unique_ptr<Ui::DesktopPathsView> m_ui;
     DesktopPathsData *const m_data;
 };
 

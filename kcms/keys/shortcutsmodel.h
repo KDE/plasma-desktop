@@ -10,7 +10,7 @@
 #define SHORTCUTSMODEL_H
 
 #include <QAbstractItemModel>
-#include <QScopedPointer>
+#include <memory>
 
 /*
  * This class is based on KConcatenateRowsProxyModel adapted to handle trees with two levels.
@@ -119,7 +119,7 @@ private:
 
 private:
     friend class ShortcutsModelPrivate;
-    const QScopedPointer<ShortcutsModelPrivate> d;
+    const std::unique_ptr<ShortcutsModelPrivate> d;
 };
 
 #endif

@@ -89,7 +89,7 @@ protected:
 
     XcbAtom m_floatType, m_enabledAtom;
 
-    QMap<QLatin1String, QSharedPointer<XcbAtom>> m_atoms;
+    QMap<QLatin1String, std::shared_ptr<XcbAtom>> m_atoms;
 
     QMap<QString, QString> m_negate;
     QMap<QLatin1String, struct PropertyInfo> m_props;

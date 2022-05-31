@@ -10,6 +10,7 @@
 
 #include <QAbstractListModel>
 #include <QQmlParserStatus>
+#include <memory>
 #include <qwindowdefs.h>
 
 #if HAVE_X11
@@ -118,7 +119,7 @@ Q_SIGNALS:
 
 private:
     class Private;
-    QScopedPointer<Private> d;
+    std::unique_ptr<Private> d;
 };
 
 #endif

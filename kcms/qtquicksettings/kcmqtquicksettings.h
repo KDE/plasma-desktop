@@ -9,6 +9,7 @@
 #include <KCModule>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <memory>
 
 namespace Ui
 {
@@ -32,6 +33,6 @@ public:
     ~KCMQtQuickSettingsModule() override;
 
 private:
-    QScopedPointer<Ui::KCMQtQuickSettingsWidget> m_ui;
-    QScopedPointer<PlasmaQtQuickSettings::RendererSettings> m_settings;
+    std::unique_ptr<Ui::KCMQtQuickSettingsWidget> m_ui;
+    std::unique_ptr<PlasmaQtQuickSettings::RendererSettings> m_settings;
 };

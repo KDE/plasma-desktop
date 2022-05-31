@@ -8,7 +8,6 @@
 #define SMARTLAUNCHER_ITEM_H
 
 #include <QObject>
-#include <QSharedPointer>
 #include <QUrl>
 #include <QWeakPointer>
 
@@ -62,9 +61,9 @@ private:
     void setProgressVisible(bool progressVisible);
     void setUrgent(bool urgent);
 
-    static QWeakPointer<Backend> s_backend;
+    static std::weak_ptr<Backend> s_backend;
 
-    QSharedPointer<Backend> m_backendPtr;
+    std::shared_ptr<Backend> m_backendPtr;
 
     QUrl m_launcherUrl;
     QString m_storageId;

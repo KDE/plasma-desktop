@@ -345,7 +345,7 @@ int LibinputTouchpad::touchpadOff()
 
 XcbAtom &LibinputTouchpad::touchpadOffAtom()
 {
-    return *m_atoms[QLatin1String(LIBINPUT_PROP_SENDEVENTS_ENABLED)].data();
+    return *m_atoms[QLatin1String(LIBINPUT_PROP_SENDEVENTS_ENABLED)].get();
 }
 
 template<typename T>

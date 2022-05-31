@@ -5,11 +5,11 @@
 */
 
 #include "xrecordkeyboardmonitor.h"
+#include "c_ptr.h"
 
 #include <cstdlib>
 #include <limits>
-
-#include <QScopedPointer>
+#include <memory>
 
 #include <X11/Xlib.h>
 #include <xcb/xcbext.h>
@@ -34,13 +34,13 @@ XRecordKeyboardMonitor::XRecordKeyboardMonitor(Display *display)
     xcb_record_create_context(m_connection, m_context, 0, 1, 1, &cs, &range);
     xcb_flush(m_connection);
 
-    QScopedPointer<xcb_get_modifier_mapping_reply_t, QScopedPointerPodDeleter> modmap(xcb_get_modifier_mapping_reply(m_connection, modmapCookie, nullptr));
+    std::unique_ptr<xcb_get_modifier_mapping_reply_t, CDeleter> modmap(xcb_get_modifier_mapping_reply(m_connection, modmapCookie, nullptr));
     if (!modmap) {
         return;
     }
 
-    int nModifiers = xcb_get_modifier_mapping_keycodes_length(modmap.data());
-    xcb_keycode_t *modifiers = xcb_get_modifier_mapping_keycodes(modmap.data());
+    int nModifiers = xcb_get_modifier_mapping_keycodes_length(modmap.get());
+    xcb_keycode_t *modifiers = xcb_get_modifier_mapping_keycodes(modmap.get());
     m_modifier.fill(false, std::numeric_limits<xcb_keycode_t>::max() + 1);
     for (xcb_keycode_t *i = modifiers; i < modifiers + nModifiers; i++) {
         m_modifier[*i] = true;
@@ -95,8 +95,8 @@ void XRecordKeyboardMonitor::processNextReply()
             continue;
         }
 
-        QScopedPointer<xcb_record_enable_context_reply_t, QScopedPointerPodDeleter> data(reinterpret_cast<xcb_record_enable_context_reply_t *>(reply));
-        process(data.data());
+        std::unique_ptr<xcb_record_enable_context_reply_t, CDeleter> data(reinterpret_cast<xcb_record_enable_context_reply_t *>(reply));
+        process(data.get());
     }
 }
 

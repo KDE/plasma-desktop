@@ -314,7 +314,7 @@ void TouchpadConfigXlib::beginTesting()
 {
     if (!m_prevConfig) {
         m_prevConfig.reset(new QVariantHash());
-        m_backend->getConfig(*m_prevConfig.data());
+        m_backend->getConfig(*m_prevConfig.get());
     }
     m_backend->applyConfig(m_manager->currentWidgetProperties());
 }
@@ -324,7 +324,7 @@ void TouchpadConfigXlib::endTesting()
     if (!m_prevConfig) {
         return;
     }
-    m_backend->applyConfig(*m_prevConfig.data());
+    m_backend->applyConfig(*m_prevConfig.get());
     m_prevConfig.reset();
 }
 

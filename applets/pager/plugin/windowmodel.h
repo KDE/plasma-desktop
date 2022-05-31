@@ -8,6 +8,8 @@
 
 #include "taskfilterproxymodel.h"
 
+#include <memory>
+
 class PagerModel;
 
 class WindowModel : public TaskManager::TaskFilterProxyModel
@@ -31,7 +33,7 @@ public:
 
 private:
     class Private;
-    QScopedPointer<Private> d;
+    std::unique_ptr<Private> d;
 };
 
 #endif

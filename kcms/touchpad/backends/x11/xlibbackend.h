@@ -9,9 +9,7 @@
 
 #include <QLatin1String>
 #include <QMap>
-#include <QScopedPointer>
 #include <QSet>
-#include <QSharedPointer>
 #include <QStringList>
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <QX11Info>
@@ -83,10 +81,10 @@ protected:
     explicit XlibBackend(QObject *parent);
 
     struct XDisplayCleanup {
-        static void cleanup(Display *);
+        void operator()(Display *);
     };
 
-    QScopedPointer<Display, XDisplayCleanup> m_display;
+    std::unique_ptr<Display, XDisplayCleanup> m_display;
     xcb_connection_t *m_connection;
 
     XcbAtom m_enabledAtom, m_mouseAtom, m_keyboardAtom, m_touchpadAtom;
@@ -94,11 +92,11 @@ protected:
     XcbAtom m_libinputIdentifierAtom;
 
     XlibTouchpad *findTouchpad();
-    QScopedPointer<XlibTouchpad> m_device;
+    std::unique_ptr<XlibTouchpad> m_device;
 
     QString m_errorString;
-    QScopedPointer<XlibNotifications> m_notifications;
-    QScopedPointer<XRecordKeyboardMonitor> m_keyboard;
+    std::unique_ptr<XlibNotifications> m_notifications;
+    std::unique_ptr<XRecordKeyboardMonitor> m_keyboard;
 };
 
 #endif // XLIBBACKEND_H

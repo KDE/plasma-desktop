@@ -111,7 +111,7 @@ private:
         T value() const
         {
             if (!m_value.has_value()) {
-                auto iface = m_device->m_iface.data();
+                auto iface = m_device->m_iface.get();
                 if (isSupported()) {
                     m_value = m_prop.read(iface).value<T>();
                 }
@@ -133,7 +133,7 @@ private:
         void set(T newVal);
         T defaultValue() const
         {
-            return m_defaultValueFunction ? (m_device->m_iface.data()->*m_defaultValueFunction)() : T();
+            return m_defaultValueFunction ? (m_device->m_iface.get()->*m_defaultValueFunction)() : T();
         }
         bool changed() const;
         void set(const Prop<T> &p)
@@ -143,7 +143,7 @@ private:
 
         bool isSupported() const
         {
-            auto iface = m_device->m_iface.data();
+            auto iface = m_device->m_iface.get();
             return !m_supportedFunction || (iface->*m_supportedFunction)();
         }
 
@@ -177,7 +177,7 @@ private:
         Prop<int>(this, "orientationDBus", nullptr, &OrgKdeKWinInputDeviceInterface::supportsCalibrationMatrix, &InputDevice::orientationChanged);
     Prop<QString> m_outputName = Prop<QString>(this, "outputName", nullptr, nullptr, &InputDevice::outputNameChanged);
 
-    QScopedPointer<OrgKdeKWinInputDeviceInterface> m_iface;
+    std::unique_ptr<OrgKdeKWinInputDeviceInterface> m_iface;
 };
 
 #endif // KWINWAYLANDDEVICE_H

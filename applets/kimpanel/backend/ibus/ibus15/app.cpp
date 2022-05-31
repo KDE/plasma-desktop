@@ -179,7 +179,7 @@ App::App(int &argc, char *argv[])
     , m_watcher(new QDBusServiceWatcher(this))
 {
     m_syms = xcb_key_symbols_alloc(QX11Info::connection());
-    installNativeEventFilter(m_eventFilter.data());
+    installNativeEventFilter(m_eventFilter.get());
 
     initIconMap(m_iconMap);
     m_watcher->setConnection(QDBusConnection::sessionBus());

@@ -10,7 +10,6 @@
 #include "../touchpadconfigplugin.h"
 
 #include <KConfigDialogManager>
-#include <QScopedPointer>
 #include <QSpinBox>
 
 #include "kdedsettings.h"
@@ -67,7 +66,7 @@ private:
 
     TouchpadParameters m_config;
 
-    QScopedPointer<QVariantHash> m_prevConfig;
+    std::unique_ptr<QVariantHash> m_prevConfig;
     CustomConfigDialogManager *m_manager;
     TouchpadDisablerSettings m_daemonSettings;
     KConfigDialogManager *m_daemonConfigManager;
@@ -76,7 +75,7 @@ private:
     OrgKdeTouchpadInterface *m_daemon;
     QAction *m_loadActiveConfiguration;
     bool m_configOutOfSync;
-    QScopedPointer<KShortcutsDialog> m_shortcutsDialog;
+    std::unique_ptr<KShortcutsDialog> m_shortcutsDialog;
     QWidget *m_kdedTab;
     QTabWidget *m_tabs;
     KComboBox *m_mouseCombo;

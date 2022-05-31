@@ -16,6 +16,7 @@
 #include <QGuiApplication>
 #include <QMap>
 #include <QPair>
+#include <memory>
 class QDBusServiceWatcher;
 
 class XcbEventFilter : public QAbstractNativeEventFilter
@@ -58,7 +59,7 @@ public Q_SLOTS:
     bool grabXKeyboard();
 
 private:
-    QScopedPointer<XcbEventFilter> m_eventFilter;
+    std::unique_ptr<XcbEventFilter> m_eventFilter;
     bool m_init;
     IBusBus *m_bus;
     IBusPanelImpanel *m_impanel;

@@ -46,7 +46,7 @@ PropertyInfo::PropertyInfo(Display *display, int device, Atom prop, Atom floatTy
     unsigned char *dataPtr = nullptr;
     unsigned long bytes_after;
     XIGetProperty(display, device, prop, 0, 1000, False, AnyPropertyType, &type, &format, &nitems, &bytes_after, &dataPtr);
-    data = QSharedPointer<unsigned char>(dataPtr, XDeleter);
+    data = std::shared_ptr<unsigned char>(dataPtr, XDeleter);
 
     if (format == CHAR_BIT && type == XA_INTEGER) {
         b = reinterpret_cast<char *>(dataPtr);
@@ -81,5 +81,5 @@ QVariant PropertyInfo::value(unsigned offset) const
 
 void PropertyInfo::set()
 {
-    XIChangeProperty(display, device, prop, type, format, XIPropModeReplace, data.data(), nitems);
+    XIChangeProperty(display, device, prop, type, format, XIPropModeReplace, data.get(), nitems);
 }
