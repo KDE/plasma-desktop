@@ -29,6 +29,7 @@ PlasmaCore.ToolTipArea {
 
     onCompactRepresentationChanged: {
         if (compactRepresentation) {
+            compactRepresentation.anchors.fill = null;
             compactRepresentation.parent = compactRepresentationParent;
             compactRepresentation.anchors.fill = compactRepresentationParent;
             compactRepresentation.visible = true;
@@ -37,50 +38,11 @@ PlasmaCore.ToolTipArea {
     }
 
     onFullRepresentationChanged: {
-
-        if (!fullRepresentation) {
-            return;
+        if (fullRepresentation) {
+            fullRepresentation.anchors.fill = null;
+            fullRepresentation.parent = appletParent;
+            fullRepresentation.anchors.fill = appletParent;
         }
-
-        //if the fullRepresentation size was restored to a stored size, or if is dragged from the desktop, restore popup size
-        if (fullRepresentation.Layout.preferredWidth > 0) {
-            popupWindow.mainItem.width = Qt.binding(function() {
-                return fullRepresentation.Layout.preferredWidth
-            })
-        } else if (fullRepresentation.implicitWidth > 0) {
-            popupWindow.mainItem.width = Qt.binding(function() {
-                return fullRepresentation.implicitWidth
-            })
-        } else if (fullRepresentation.width > 0) {
-            popupWindow.mainItem.width = Qt.binding(function() {
-                return fullRepresentation.width
-            })
-        } else {
-            popupWindow.mainItem.width = Qt.binding(function() {
-                return PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 35
-            })
-        }
-
-        if (fullRepresentation.Layout.preferredHeight > 0) {
-            popupWindow.mainItem.height = Qt.binding(function() {
-                return fullRepresentation.Layout.preferredHeight
-            })
-        } else if (fullRepresentation.implicitHeight > 0) {
-            popupWindow.mainItem.height = Qt.binding(function() {
-                return fullRepresentation.implicitHeight
-            })
-        } else if (fullRepresentation.height > 0) {
-            popupWindow.mainItem.height = Qt.binding(function() {
-                return fullRepresentation.height
-            })
-        } else {
-            popupWindow.mainItem.height = Qt.binding(function() {
-                return PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height * 25
-            })
-        }
-
-        fullRepresentation.parent = appletParent;
-        fullRepresentation.anchors.fill = fullRepresentation.parent;
     }
 
     FocusScope {
@@ -235,6 +197,27 @@ PlasmaCore.ToolTipArea {
 
             Layout.maximumWidth: fullRepresentation ? fullRepresentation.Layout.maximumWidth : Infinity
             Layout.maximumHeight: fullRepresentation ? fullRepresentation.Layout.maximumHeight : Infinity
+
+            width: {
+                if (root.fullRepresentation !== null) {
+                    /****/ if (root.fullRepresentation.Layout.preferredWidth > 0) {
+                        return root.fullRepresentation.Layout.preferredWidth;
+                    } else if (root.fullRepresentation.implicitWidth > 0) {
+                        return root.fullRepresentation.implicitWidth;
+                    }
+                }
+                return PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 35;
+            }
+            height: {
+                if (root.fullRepresentation !== null) {
+                    /****/ if (fullRepresentation.Layout.preferredHeight > 0) {
+                        return fullRepresentation.Layout.preferredHeight;
+                    } else if (fullRepresentation.implicitHeight > 0) {
+                        return fullRepresentation.implicitHeight;
+                    }
+                }
+                return PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height * 25;
+            }
 
             onActiveFocusChanged: {
                 if (activeFocus && fullRepresentation) {
