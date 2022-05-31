@@ -201,7 +201,7 @@ PlasmaCore.ToolTipArea {
         objectName: "popupWindow"
         flags: Qt.WindowStaysOnTopHint
         visible: Plasmoid.expanded && fullRepresentation
-        visualParent: compactRepresentation ? compactRepresentation : null
+        visualParent: root.compactRepresentation
         location: Plasmoid.location
         hideOnWindowDeactivate: Plasmoid.hideOnWindowDeactivate
         backgroundHints: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.DesktopFullyCovered) ? PlasmaCore.Dialog.SolidBackground : PlasmaCore.Dialog.StandardBackground
