@@ -10,12 +10,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 
 PlasmaCore.IconItem {
-    id: icon
-
-    readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
-        || Plasmoid.location === PlasmaCore.Types.RightEdge
-        || Plasmoid.location === PlasmaCore.Types.BottomEdge
-        || Plasmoid.location === PlasmaCore.Types.LeftEdge)
+    readonly property bool inPanel: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge, PlasmaCore.Types.LeftEdge]
+        .includes(Plasmoid.location)
 
     Layout.minimumWidth: {
         switch (Plasmoid.formFactor) {
@@ -39,10 +35,10 @@ PlasmaCore.IconItem {
         }
     }
 
-    Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1;
-    Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1;
+    Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
+    Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
 
-    source: Plasmoid.icon ? Plasmoid.icon : "plasma"
+    source: Plasmoid.icon || "plasma"
     active: mouseArea.containsMouse
 
     MouseArea {
