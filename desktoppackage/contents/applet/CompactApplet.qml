@@ -148,7 +148,7 @@ PlasmaCore.ToolTipArea {
         imagePath: "widgets/tabbar"
         visible: fromCurrentTheme && opacity > 0
         prefix: {
-            var prefix;
+            let prefix;
             switch (Plasmoid.location) {
             case PlasmaCore.Types.LeftEdge:
                 prefix = "west-active-tab";
