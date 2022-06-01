@@ -150,23 +150,23 @@ PlasmaCore.ToolTipArea {
         prefix: {
             var prefix;
             switch (Plasmoid.location) {
-                case PlasmaCore.Types.LeftEdge:
-                    prefix = "west-active-tab";
-                    break;
-                case PlasmaCore.Types.TopEdge:
-                    prefix = "north-active-tab";
-                    break;
-                case PlasmaCore.Types.RightEdge:
-                    prefix = "east-active-tab";
-                    break;
-                default:
-                    prefix = "south-active-tab";
-                }
-                if (!hasElementPrefix(prefix)) {
-                    prefix = "active-tab";
-                }
-                return prefix;
+            case PlasmaCore.Types.LeftEdge:
+                prefix = "west-active-tab";
+                break;
+            case PlasmaCore.Types.TopEdge:
+                prefix = "north-active-tab";
+                break;
+            case PlasmaCore.Types.RightEdge:
+                prefix = "east-active-tab";
+                break;
+            default:
+                prefix = "south-active-tab";
             }
+            if (!hasElementPrefix(prefix)) {
+                prefix = "active-tab";
+            }
+            return prefix;
+        }
         opacity: Plasmoid.expanded ? 1 : 0
         Behavior on opacity {
             NumberAnimation {
