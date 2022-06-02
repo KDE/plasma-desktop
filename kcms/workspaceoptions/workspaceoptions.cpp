@@ -66,12 +66,23 @@ void KCMWorkspaceOptions::save()
 {
     ManagedConfigModule::save();
 
-    QDBusMessage message = QDBusMessage::createSignal("/KGlobalSettings", "org.kde.KGlobalSettings", "notifyChange");
-    QList<QVariant> args;
-    args.append(3 /*KGlobalSettings::SettingsChanged*/);
-    args.append(0 /*GlobalSettings::SettingsCategory::SETTINGS_MOUSE*/);
-    message.setArguments(args);
-    QDBusConnection::sessionBus().send(message);
+    {
+        QDBusMessage message = QDBusMessage::createSignal("/KGlobalSettings", "org.kde.KGlobalSettings", "notifyChange");
+        QList<QVariant> args;
+        args.append(3 /*KGlobalSettings::SettingsChanged*/);
+        args.append(0 /*GlobalSettings::SettingsCategory::SETTINGS_MOUSE*/);
+        message.setArguments(args);
+        QDBusConnection::sessionBus().send(message);
+    }
+
+    {
+        QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/kwinrc"), QStringLiteral("org.kde.kconfig.notify"), QStringLiteral("ConfigChanged"));
+        const QHash<QString, QByteArrayList> changes = {
+            {QStringLiteral("Wayland"), {"EnablePrimarySelection"}},
+        };
+        message.setArguments({QVariant::fromValue(changes)});
+        QDBusConnection::sessionBus().send(message);
+    }
 }
 
 #include "moc_workspaceoptions.cpp"

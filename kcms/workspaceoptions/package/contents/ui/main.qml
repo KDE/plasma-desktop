@@ -186,6 +186,27 @@ KCM.SimpleKCM {
 
         Item {
             Kirigami.FormData.isSection: true
+            visible: primarySelectionRadio.visible
+        }
+
+        RowLayout {
+            Kirigami.FormData.label: i18n("Middle Click:")
+            QQC2.CheckBox {
+                id: primarySelectionRadio
+                visible: kcm.isWayland
+                text: i18n("Paste selected text")
+                checked: kcm.kwinSettings.primarySelection
+                onToggled: kcm.kwinSettings.primarySelection = checked
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.kwinSettings
+                    settingName: "primarySelection"
+                }
+            }
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
         }
 
         QQC2.ButtonGroup { id: tabletModeBehaviorGroup }

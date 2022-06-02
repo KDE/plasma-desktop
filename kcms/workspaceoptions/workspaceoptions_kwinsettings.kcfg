@@ -10,4 +10,10 @@
       <default>auto</default>
     </entry>
   </group>
+  <group name="Wayland">
+    <entry name="primarySelection" key="EnablePrimarySelection" type="bool">
+      <label>Enable middle click selection pasting</label>
+      <default>true</default>
+    </entry>
+  </group>
 </kcfg>
