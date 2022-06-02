@@ -274,10 +274,14 @@ Rectangle {
             standardButtons: StandardButton.Apply | StandardButton.Discard | StandardButton.Cancel
             onApply: {
                 applyAction.trigger()
-                root.open(item)
+                discard();
             }
             onDiscard: {
-                root.open(item)
+                if (item) {
+                    root.open(item);
+                } else {
+                    configDialog.close();
+                }
             }
         }
 
@@ -350,7 +354,15 @@ Rectangle {
 
         QQC2.Action {
             id: cancelAction
-            onTriggered: configDialog.close();
+            onTriggered: {
+                if (applyButton.enabled) {
+                    messageDialog.item = null;
+                    messageDialog.open();
+                    return;
+                }
+
+                configDialog.close();
+            }
             shortcut: "Escape"
         }
     }
