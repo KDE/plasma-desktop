@@ -11,19 +11,24 @@ import org.kde.plasma.components 3.0 as PC3
 KickoffGridView {
     id: root
 
-    view.cellWidth: Math.round(KickoffSingleton.listDelegateContentHeight * 2.5)
-    view.cellHeight: view.cellWidth
+    property string currentSection
+    property KickoffListView parentView
 
     /**
      * Request hiding the section view
      */
     signal hideSectionViewRequested(int index)
 
-    property string currentSection
+    // prevent binding loops and preserve minimum popup size
+    view.implicitWidth: parentView.view.implicitWidth
+    view.implicitHeight: parentView.view.implicitHeight
+
+    // Using implicitWidth instead of width so that delegates don't
+    // become super big when using the new popup resizing feature.
+    view.cellWidth: Math.floor((view.implicitWidth - view.leftMargin - view.rightMargin) / 7)
+    view.cellHeight: view.cellWidth
 
     delegate: PC3.AbstractButton {
-        id: sectionButton
-
         width: view.cellWidth
         height: view.cellHeight
 
@@ -32,20 +37,33 @@ KickoffGridView {
             root.view.currentIndex = index;
         }
 
+        padding: fontMetrics.descent / 2
+
         contentItem: PC3.Label {
-            anchors {
-                fill: parent
-                bottomMargin: KickoffSingleton.fontMetrics.descent
-            }
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             maximumLineCount: 1
             elide: Text.ElideRight
-            font.pixelSize: KickoffSingleton.listDelegateContentHeight
+
+            // Sets max size for fontSizeMode, not true size.
+            // Also affects implicit size,
+            // so do not rely on this Label's implicit size.
+            font.pixelSize: fontMetrics.font.pixelSize
+            fontSizeMode: Text.VerticalFit
+
             text: modelData["section"]
         }
 
         onClicked: root.hideSectionViewRequested(modelData["firstIndex"])
+    }
+
+    FontMetrics {
+        id: fontMetrics
+        // This size doesn't actually fill the cell height perfectly.
+        // It goes out of bounts and is slightly below center with Noto Sans.
+        // It's close enough for the calculations this will be used for.
+        // The calculations seem to work fairly well with other fonts too.
+        font.pixelSize: root.view.cellHeight
     }
 
     Component.onCompleted: {

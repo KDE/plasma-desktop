@@ -72,7 +72,7 @@ BasePage {
                 onShowSectionViewRequested: {
                     stackView.push(applicationsSectionViewComponent, {
                         "currentSection": sectionName,
-                        "view.implicitWidth": applicationsListView.view.implicitWidth,
+                        "parentView": applicationsListView
                     });
                 }
             }
