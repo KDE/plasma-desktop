@@ -92,6 +92,9 @@ function activateNextPrevTask(anchor, next) {
 }
 
 function activateTask(index, model, modifiers, task) {
+    // BUG 454729: avoid switching to PassiveStatus in keyboard navigation
+    plasmoid.status = PlasmaCore.Types.ActiveStatus;
+
     if (modifiers & Qt.ShiftModifier) {
         tasksModel.requestNewInstance(index);
     } else if (model.IsGroupParent === true) {
