@@ -67,7 +67,7 @@ MouseArea {
 
         } else {
             var item = currentLayout.childAt(mouse.x, mouse.y);
-            if (configurationArea && item) {
+            if (configurationArea && item && item !== lastSpacer) {
                 configurationArea.currentApplet = item;
             }
         }
@@ -94,7 +94,10 @@ MouseArea {
         // with with a touchscreen, because there are no entered events in that
         // case
         let item = currentLayout.childAt(mouse.x, mouse.y);
-        if (!item) {return}
+        // BUG 454095: Don't allow dragging lastSpacer as it's not a real applet
+        if (!item || item == lastSpacer) {
+            return;
+        }
         tooltip.raise();
         hideTimer.stop();
 

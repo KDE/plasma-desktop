@@ -200,26 +200,21 @@ function checkLastSpacer() {
                 return ((layout[side] || returnAllMargins) && !fillArea) ? Math.round(Math.min(spacingAtMinSize, (inThickArea ? thickPanelSvg.fixedMargins[side] : panelSvg.fixedMargins[side]))) : 0;
             }
 
-            function getLayout(layoutType) {
-                let suffixes = layoutType.endsWith('Width') ? ['height', 'width', 'fillWidth'] : ['width', 'height', 'fillHeight']
-                if (Layout[suffixes[2]]) {suffixes[0] = suffixes[1]};
-                if (isHorizontal == layoutType.endsWith('Width')) {
-                    return Math.round(applet && applet.Layout[layoutType] > 0 ? applet.Layout[layoutType] : root[suffixes[0]])
-                } else {
-                    return Math.round(root[suffixes[1]])
-                }
-            }
-
             Layout.topMargin: getMargins('top')
             Layout.bottomMargin: getMargins('bottom')
             Layout.leftMargin: getMargins('left')
             Layout.rightMargin: getMargins('right')
-            Layout.minimumWidth: getLayout('minimumWidth') - Layout.leftMargin - Layout.rightMargin
-            Layout.minimumHeight: getLayout('minimumHeight') - Layout.bottomMargin - Layout.topMargin
-            Layout.preferredWidth: getLayout('preferredWidth') - Layout.leftMargin - Layout.rightMargin
-            Layout.preferredHeight: getLayout('preferredHeight') - Layout.bottomMargin - Layout.topMargin
-            Layout.maximumWidth: getLayout('maximumWidth') - Layout.leftMargin - Layout.rightMargin
-            Layout.maximumHeight: getLayout('maximumHeight') - Layout.bottomMargin - Layout.topMargin
+
+// BEGIN BUG 454095: do not combine these expressions to a function or the bindings won't work
+            Layout.minimumWidth: (root.isHorizontal ? (applet && applet.Layout.minimumWidth > 0 ? applet.Layout.minimumWidth : root.height) : root.width) - Layout.leftMargin - Layout.rightMargin
+            Layout.minimumHeight: (!root.isHorizontal ? (applet && applet.Layout.minimumHeight > 0 ? applet.Layout.minimumHeight : root.width) : root.height) - Layout.bottomMargin - Layout.topMargin
+
+            Layout.preferredWidth: (root.isHorizontal ? (applet && applet.Layout.preferredWidth > 0 ? applet.Layout.preferredWidth : root.height) : root.width) - Layout.leftMargin - Layout.rightMargin
+            Layout.preferredHeight: (!root.isHorizontal ? (applet && applet.Layout.preferredHeight > 0 ? applet.Layout.preferredHeight : root.width) : root.height) - Layout.bottomMargin - Layout.topMargin
+
+            Layout.maximumWidth: (root.isHorizontal ? (applet && applet.Layout.maximumWidth > 0 ? applet.Layout.maximumWidth : (Layout.fillWidth ? root.width : root.height)) : root.height) - Layout.leftMargin - Layout.rightMargin
+            Layout.maximumHeight: (!root.isHorizontal ? (applet && applet.Layout.maximumHeight > 0 ? applet.Layout.maximumHeight : (Layout.fillHeight ? root.height : root.width)) : root.width) - Layout.bottomMargin - Layout.topMargin
+// END BUG 454095
 
             Item {
                 id: marginHighlightElements
@@ -338,9 +333,19 @@ function checkLastSpacer() {
         columnSpacing: PlasmaCore.Units.smallSpacing
 
         x: Qt.application.layoutDirection === Qt.RightToLeft && isHorizontal ? toolBoxSize : 0;
-        width: (root.hasSpacer || !isHorizontal ? root.width : implicitWidth) - (isHorizontal ? toolBoxSize : 0)
-        height: (root.hasSpacer || isHorizontal ? root.height: implicitHeight) - (!isHorizontal ? toolBoxSize : 0)
-        property int toolBoxSize:  !toolBox || !plasmoid.editMode || Qt.application.layoutDirection === Qt.RightToLeft ? 0 : (isHorizontal ? toolBox.width : toolBox.height)
+        readonly property int toolBoxSize:  !toolBox || !plasmoid.editMode || Qt.application.layoutDirection === Qt.RightToLeft ? 0 : (isHorizontal ? toolBox.width : toolBox.height)
+
+// BEGIN BUG 454095: use lastSpacer to left align applets, as implicitWidth is updated too late
+        width: root.width - (isHorizontal ? toolBoxSize : 0)
+        height: root.height - (!isHorizontal ? toolBoxSize : 0)
+
+        Item {
+            id: lastSpacer
+            visible: !root.hasSpacer
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+        }
+// END BUG 454095
 
         rows: isHorizontal ? 1 : currentLayout.children.length
         columns: isHorizontal ? currentLayout.children.length : 1
