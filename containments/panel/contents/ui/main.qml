@@ -344,6 +344,13 @@ function checkLastSpacer() {
             visible: !root.hasSpacer
             Layout.fillWidth: true
             Layout.fillHeight: true
+
+            /**
+             * This index will be used when adding a new panel.
+             *
+             * @see LayoutManager.indexAtCoordinates
+             */
+            readonly property alias index: appletsModel.count
         }
 // END BUG 454095
 

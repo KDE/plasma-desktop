@@ -102,7 +102,11 @@ function indexAtCoordinates(x, y) {
     } else {
         x = layout.width / 2;
     }
-    var child = undefined;
+    /*
+     * When adding a new panel, childAt will return lastSpacer, and that's where
+     * `index` property works.
+     */
+    var child = layout.childAt(x, y);
     while (!child) {
         if (root.isHorizontal) {
             // Only yields incorrect results for widgets smaller than the
@@ -112,17 +116,7 @@ function indexAtCoordinates(x, y) {
             y -= layout.columnSpacing
         }
         if (x < 0 || y < 0) {
-            if (layout.width === 0) {
-                /*
-                 * childAt won't find any applet when adding a new preset panel
-                 * because all applets don't have a valid width during initialization.
-                 */
-                return appletsModel.count;
-            } else {
-                // BUG 453998: After initialization, all applets have valid widths, so
-                // we need to avoid placing the leftmost/topmost applet at the end
-                return 0;
-            }
+            return 0;
         }
         child = layout.childAt(x, y);
     }
