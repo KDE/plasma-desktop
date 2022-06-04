@@ -178,6 +178,11 @@ Item {
                             changedSignal.connect(appearanceRoot.configurationChanged)
                         }
                     }
+
+                    const configurationChangedSignal = newItem.configurationChanged
+                    if (configurationChangedSignal) {
+                        configurationChangedSignal.connect(appearanceRoot.configurationChanged)
+                    }
                 } else {
                     replace(emptyConfig)
                 }
