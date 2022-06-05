@@ -36,7 +36,7 @@ function addApplet(applet, x, y) {
     // of a specific type, and the containment caring about the applet type. In a better
     // system the containment would be informed of requested launchers, and determine by
     // itself what it wants to do with that information.
-    if (applet.pluginName === "org.kde.plasma.icon" &&
+    if (applet.pluginName === "org.kde.plasma.icon" && x === 0 && y === 0 &&
             (middle = currentLayout.childAt(root.width / 2, root.height / 2))) {
         appletsModel.insert(middle.index, new_element);
     // Fall through to determining an appropriate insert position.
