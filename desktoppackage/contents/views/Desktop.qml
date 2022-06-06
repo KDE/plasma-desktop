@@ -69,18 +69,8 @@ Item {
 
     Connections {
         target: root.containment.wallpaper
-        function onConfigurationChanged() {
-            colorsTimer.restart()
-        }
         function onRepaintNeeded() {
-            colorsTimer.restart();
-        }
-    }
-
-    Timer {
-        id: colorsTimer
-        onTriggered: {
-            Qt.callLater(wallpaperColors.update)
+            wallpaperColors.update();
         }
     }
 
