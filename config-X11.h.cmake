@@ -1,6 +1,3 @@
-/* Define if you have the XKB extension */
-#cmakedefine HAVE_XKB 1
-
 /* Define to 1 if you have Xcursor */
 #cmakedefine HAVE_XCURSOR 1
 
