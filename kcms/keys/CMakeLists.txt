@@ -13,7 +13,7 @@ set(kcm_keys_SRCS
 
 set(kglobalaccel_xml ${KGLOBALACCEL_DBUS_INTERFACES_DIR}/kf5_org.kde.KGlobalAccel.xml)
 set_source_files_properties(${kglobalaccel_xml} PROPERTIES
-    INCLUDE "kglobalshortcutinfo.h"
+    INCLUDE "kglobalaccel.h"
     NO_NAMESPACE TRUE
     CLASSNAME "KGlobalAccelInterface"
 )
@@ -21,7 +21,7 @@ qt_add_dbus_interface(kcm_keys_SRCS ${kglobalaccel_xml} kglobalaccel_interface)
 
 set(kglobalaccel_component_xml ${KGLOBALACCEL_DBUS_INTERFACES_DIR}/kf5_org.kde.kglobalaccel.Component.xml)
 set_source_files_properties(${kglobalaccel_component_xml} PROPERTIES
-    INCLUDE "kglobalshortcutinfo.h"
+    INCLUDE "kglobalaccel.h"
     NO_NAMESPACE TRUE
     CLASSNAME "KGlobalAccelComponentInterface"
 )
