@@ -7,11 +7,6 @@
 /* Number of bits in a file offset, on hosts where this is settable. */
 #define _FILE_OFFSET_BITS 64
 
-/* Define to 1 if you have packagekit available. */
-#cmakedefine HAVE_PACKAGEKIT 1
-
-/*
-    On HP-UX, the declaration of vsnprintf() is needed every time !
-*/
+#cmakedefine01 HAVE_PACKAGEKIT
 
 #define WORKSPACE_VERSION_STRING "${PROJECT_VERSION}"

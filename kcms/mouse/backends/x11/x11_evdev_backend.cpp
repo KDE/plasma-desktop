@@ -19,7 +19,7 @@
 #include <X11/Xutil.h>
 #include <X11/extensions/XI.h>
 #include <X11/extensions/XInput2.h>
-#ifdef HAVE_XCURSOR
+#if HAVE_XCURSOR
 #include <X11/Xcursor/Xcursor.h>
 #include <X11/extensions/XInput.h>
 #endif

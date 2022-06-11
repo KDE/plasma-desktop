@@ -20,7 +20,7 @@
 #include <X11/X.h>
 #include <X11/Xatom.h>
 
-#ifdef HAVE_XINPUT
+#if HAVE_XINPUT
 #include <X11/extensions/XInput.h>
 #include <xcb/xproto.h>
 typedef struct xcb_input_device_presence_notify_event_t {
@@ -96,7 +96,7 @@ bool XInputEventNotifier::processOtherEvents(xcb_generic_event_t *event)
     return true;
 }
 
-#if defined(HAVE_XINPUT)
+#if HAVE_XINPUT
 
 // This is ugly but allows to skip multiple execution of setxkbmap
 // for all keyboard devices that don't care about layouts

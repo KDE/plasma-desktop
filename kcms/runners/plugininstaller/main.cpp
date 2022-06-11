@@ -15,7 +15,7 @@
 #include <QUrl>
 
 #include "config-workspace.h"
-#ifdef HAVE_PACKAGEKIT
+#if HAVE_PACKAGEKIT
 #include "PackageKitJob.h"
 #endif
 #include "ScriptJob.h"
@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
     if (mimeType == QLatin1String("application/x-rpm") && KOSRelease().idLike().contains(u"suse")) {
         job.reset(new ZypperRPMJob());
     } else if (binaryPackages.contains(mimeType)) {
-#ifdef HAVE_PACKAGEKIT
+#if HAVE_PACKAGEKIT
         job.reset(new PackageKitJob());
 #else
         fail(i18nc("@info", "No PackageKit support"));

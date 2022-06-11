@@ -11,7 +11,7 @@
 
 #include <config-keyboard.h>
 
-#ifdef HAVE_UDEV
+#if HAVE_UDEV
 #include <libudev.h>
 #endif
 
@@ -25,7 +25,7 @@ UdevDeviceNotifier::UdevDeviceNotifier(QObject *parent)
     init();
 }
 
-#ifdef HAVE_UDEV
+#if HAVE_UDEV
 UdevDeviceNotifier::~UdevDeviceNotifier()
 {
     if (m_monitor) {

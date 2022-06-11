@@ -29,7 +29,7 @@
 #include <X11/Xutil.h>
 #include <X11/extensions/XI.h>
 #include <X11/extensions/XInput2.h>
-#ifdef HAVE_XCURSOR
+#if HAVE_XCURSOR
 #include <X11/Xcursor/Xcursor.h>
 #include <X11/extensions/XInput.h>
 #endif
@@ -76,7 +76,7 @@ QString X11Backend::currentCursorTheme()
     }
 
     QByteArray name = XGetDefault(m_dpy, "Xcursor", "theme");
-#ifdef HAVE_XCURSOR
+#if HAVE_XCURSOR
     if (name.isEmpty()) {
         name = QByteArray(XcursorGetTheme(m_dpy));
     }
@@ -86,7 +86,7 @@ QString X11Backend::currentCursorTheme()
 
 void X11Backend::applyCursorTheme(const QString &theme, int size)
 {
-#ifdef HAVE_XCURSOR
+#if HAVE_XCURSOR
 
     // Apply the KDE cursor theme to ourselves
     if (m_dpy) {
