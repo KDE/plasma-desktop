@@ -134,6 +134,7 @@ KCM.SimpleKCM {
                 }
 
                 QQC2.Button {
+                    icon.name: monitor.state !== Baloo.Global.Suspended ? "media-playback-pause" : "media-playback-start"
                     text: monitor.state !== Baloo.Global.Suspended ? i18n("Pause Indexer") : i18n("Resume Indexer")
                     onClicked: monitor.toggleSuspendState()
                 }
