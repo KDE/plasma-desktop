@@ -23,7 +23,7 @@ KCM.SimpleKCM {
     Baloo.Monitor {
         id: monitor
 
-        readonly property bool currentlyIndexing: switch(monitor.state) {
+        readonly property bool currentlyIndexing: switch(state) {
             case Baloo.Global.FirstRun:
             case Baloo.Global.NewFiles:
             case Baloo.Global.ModifiedFiles:
@@ -36,12 +36,13 @@ KCM.SimpleKCM {
                 return false;
         }
 
-        readonly property int completionPercentage: Math.floor(monitor.filesIndexed / monitor.totalFiles * 100)
+        readonly property int completionPercentage: Math.floor(filesIndexed / totalFiles * 100)
     }
 
     ColumnLayout {
         anchors.fill: parent
         anchors.margins: Kirigami.Units.largeSpacing
+        spacing: Kirigami.Units.smallSpacing
 
         Kirigami.InlineMessage {
             Layout.fillWidth: true
@@ -50,6 +51,7 @@ KCM.SimpleKCM {
             showCloseButton: true
             text: i18n("This will disable file searching in KRunner and launcher menus, and remove extended metadata display from all KDE applications.");
         }
+
         Kirigami.InlineMessage {
             id: indexingDisabledWarning
             Layout.fillWidth: true
@@ -69,6 +71,8 @@ KCM.SimpleKCM {
 
         QQC2.Label {
             text: i18n("File Search helps you quickly locate all your files based on their content.")
+            Layout.fillWidth: true
+            wrapMode: Text.WordWrap
         }
 
         QQC2.CheckBox {
@@ -85,38 +89,31 @@ KCM.SimpleKCM {
             }
         }
 
-        RowLayout {
-            Layout.fillWidth: true
+        QQC2.CheckBox {
+            id: indexFileContents
+            Layout.leftMargin: Kirigami.Units.gridUnit
+            text: i18n("Also index file content")
+            checked: !kcm.balooSettings.onlyBasicIndexing
+            onCheckStateChanged: kcm.balooSettings.onlyBasicIndexing = !checked
 
-            Item {
-                width: Kirigami.Units.largeSpacing
+            KCM.SettingStateBinding {
+                configObject: kcm.balooSettings
+                settingName: "onlyBasicIndexing"
+                extraEnabledConditions: fileSearchEnabled.checked
             }
+        }
 
-            ColumnLayout {
-                QQC2.CheckBox {
-                    id: indexFileContents
-                    text: i18n("Also index file content")
-                    checked: !kcm.balooSettings.onlyBasicIndexing
-                    onCheckStateChanged: kcm.balooSettings.onlyBasicIndexing = !checked
+        QQC2.CheckBox {
+            id: indexHiddenFolders
+            Layout.leftMargin: Kirigami.Units.gridUnit
+            text: i18n("Index hidden files and folders")
+            checked: kcm.balooSettings.indexHiddenFolders
+            onCheckStateChanged: kcm.balooSettings.indexHiddenFolders = checked
 
-                    KCM.SettingStateBinding {
-                        configObject: kcm.balooSettings
-                        settingName: "onlyBasicIndexing"
-                        extraEnabledConditions: fileSearchEnabled.checked
-                    }
-                }
-                QQC2.CheckBox {
-                    id: indexHiddenFolders
-                    text: i18n("Index hidden files and folders")
-                    checked: kcm.balooSettings.indexHiddenFolders
-                    onCheckStateChanged: kcm.balooSettings.indexHiddenFolders = checked
-
-                    KCM.SettingStateBinding {
-                        configObject: kcm.balooSettings
-                        settingName: "indexHiddenFolders"
-                        extraEnabledConditions: fileSearchEnabled.checked
-                    }
-                }
+            KCM.SettingStateBinding {
+                configObject: kcm.balooSettings
+                settingName: "indexHiddenFolders"
+                extraEnabledConditions: fileSearchEnabled.checked
             }
         }
 
@@ -132,7 +129,6 @@ KCM.SimpleKCM {
             visible: fileSearchEnabled.checked
 
             RowLayout {
-                //Layout.alignment: Qt.AlignHCenter
                 QQC2.Label {
                     text: i18n("Status: %1, %2\% complete", monitor.stateString, monitor.completionPercentage)
                 }
@@ -151,7 +147,7 @@ KCM.SimpleKCM {
                 visible: text.length > 0
 
                 elide: Text.ElideMiddle
-                text: monitor.currentlyIndexing && monitor.completionPercentage != 100 && monitor.filePath ? i18n("Currently indexing: %1", monitor.filePath) : ""
+                text: monitor.currentlyIndexing && monitor.completionPercentage !== 100 && monitor.filePath ? i18n("Currently indexing: %1", monitor.filePath) : ""
             }
         }
 
@@ -164,6 +160,9 @@ KCM.SimpleKCM {
             Component.onCompleted: bgObject.background.visible = true
             Layout.fillWidth: true
             Layout.fillHeight: true
+
+            // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
+            QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
 
             enabled: fileSearchEnabled.checked
 
@@ -179,6 +178,7 @@ KCM.SimpleKCM {
 
         RowLayout {
             Layout.alignment: Qt.AlignRight
+            spacing: Kirigami.Units.smallSpacing
 
             QQC2.Button {
                 enabled: fileSearchEnabled.checked
@@ -245,7 +245,7 @@ KCM.SimpleKCM {
 
                     model: [
                         i18n("Not indexed"),
-                        i18n("Indexed")
+                        i18n("Indexed"),
                     ]
 
                     // Intentionally not a simple ternary to facilitate adding
@@ -295,7 +295,7 @@ KCM.SimpleKCM {
             selectFolder: true
 
             onAccepted: {
-                kcm.filteredModel.addFolder(fileUrls[0], included)
+                kcm.filteredModel.addFolder(fileUrls[0], fileDialogLoader.included)
                 fileDialogLoader.active = false
             }
 
