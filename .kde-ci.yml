@@ -52,3 +52,5 @@ Dependencies:
 - 'on': ['Linux/Qt5', 'FreeBSD/Qt5']
   'require':
     'frameworks/kdelibs4support': '@latest'
+Options:
+  require-passing-tests-on: [ 'Linux/Qt5', 'FreeBSD/Qt5']
