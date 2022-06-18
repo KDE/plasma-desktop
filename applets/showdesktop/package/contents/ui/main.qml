@@ -20,7 +20,7 @@ QtObject {
     // you can't have an applet with just a compact representation :(
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Plasmoid.onActivated: showdesktop.showingDesktop = !showdesktop.showingDesktop
-    Plasmoid.icon: plasmoid.configuration.icon
+    Plasmoid.icon: Plasmoid.configuration.icon
     Plasmoid.title: i18n("Show Desktop")
     Plasmoid.toolTipSubText: i18n("Show the desktop by moving windows aside")
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
@@ -29,7 +29,7 @@ QtObject {
     property QtObject showdesktop: ShowDesktop { }
 
     Component.onCompleted: {
-        plasmoid.setAction("minimizeall", i18nc("@action", "Minimize All Windows"))
+        Plasmoid.setAction("minimizeall", i18nc("@action", "Minimize All Windows"))
     }
 
     function action_minimizeall() {
@@ -39,19 +39,17 @@ QtObject {
     Plasmoid.fullRepresentation: PlasmaCore.ToolTipArea {
         id: fullRep
 
-        readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
-            || plasmoid.location === PlasmaCore.Types.RightEdge
-            || plasmoid.location === PlasmaCore.Types.BottomEdge
-            || plasmoid.location === PlasmaCore.Types.LeftEdge)
+        readonly property bool inPanel: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge, PlasmaCore.Types.LeftEdge]
+            .includes(Plasmoid.location)
 
         Layout.minimumWidth: PlasmaCore.Units.iconSizes.small
-        Layout.minimumHeight: Layout.minimumWidth
+        Layout.minimumHeight: PlasmaCore.Units.iconSizes.small
 
         Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
         Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
 
-        mainText: plasmoid.title
-        subText: plasmoid.toolTipSubText
+        mainText: Plasmoid.title
+        subText: Plasmoid.toolTipSubText
 
         MouseArea {
             anchors.fill: parent
@@ -74,7 +72,7 @@ QtObject {
 
         PlasmaCore.IconItem {
             anchors.fill: parent
-            source: plasmoid.icon
+            source: Plasmoid.icon
             active: parent.containsMouse || showdesktop.showingDesktop
         }
 
@@ -87,7 +85,7 @@ QtObject {
             Timer {
                 id: activateTimer
                 interval: 250 //to match TaskManager
-                onTriggered: plasmoid.activated()
+                onTriggered: Plasmoid.activated()
             }
         }
 
@@ -109,27 +107,27 @@ QtObject {
                 property bool returnAllMargins: true
                 // The above makes sure margin is returned even for side margins
                 // that would be otherwise turned off.
-                bottomMargin: containerMargins ? -containerMargins('bottom', returnAllMargins) : 0;
-                topMargin: containerMargins ? -containerMargins('top', returnAllMargins) : 0;
-                leftMargin: containerMargins ? -containerMargins('left', returnAllMargins) : 0;
-                rightMargin: containerMargins ? -containerMargins('right', returnAllMargins) : 0;
+                bottomMargin: containerMargins ? -containerMargins('bottom', returnAllMargins) : 0
+                topMargin: containerMargins ? -containerMargins('top', returnAllMargins) : 0
+                leftMargin: containerMargins ? -containerMargins('left', returnAllMargins) : 0
+                rightMargin: containerMargins ? -containerMargins('right', returnAllMargins) : 0
             }
             imagePath: "widgets/tabbar"
             visible: fromCurrentTheme && opacity > 0
             prefix: {
-                var prefix;
-                switch (plasmoid.location) {
-                    case PlasmaCore.Types.LeftEdge:
-                        prefix = "west-active-tab";
-                        break;
-                    case PlasmaCore.Types.TopEdge:
-                        prefix = "north-active-tab";
-                        break;
-                    case PlasmaCore.Types.RightEdge:
-                        prefix = "east-active-tab";
-                        break;
-                    default:
-                        prefix = "south-active-tab";
+                let prefix;
+                switch (Plasmoid.location) {
+                case PlasmaCore.Types.LeftEdge:
+                    prefix = "west-active-tab";
+                    break;
+                case PlasmaCore.Types.TopEdge:
+                    prefix = "north-active-tab";
+                    break;
+                case PlasmaCore.Types.RightEdge:
+                    prefix = "east-active-tab";
+                    break;
+                default:
+                    prefix = "south-active-tab";
                 }
                 if (!hasElementPrefix(prefix)) {
                     prefix = "active-tab";
