@@ -70,22 +70,6 @@ MouseArea {
     signal windowsHovered(variant winIds, bool hovered)
     signal activateWindowView(variant winIds)
 
-    onWidthChanged: {
-        taskList.width = LayoutManager.layoutWidth();
-
-        if (plasmoid.configuration.forceStripes) {
-            taskList.height = LayoutManager.layoutHeight();
-        }
-    }
-
-    onHeightChanged: {
-        if (plasmoid.configuration.forceStripes) {
-            taskList.width = LayoutManager.layoutWidth();
-        }
-
-        taskList.height = LayoutManager.layoutHeight();
-    }
-
     onDragSourceChanged: {
         if (dragSource == null) {
             tasksModel.syncLaunchers();
@@ -430,9 +414,8 @@ MouseArea {
             left: parent.left
             top: parent.top
         }
-
-        onWidthChanged: LayoutManager.layout(taskRepeater)
-        onHeightChanged: LayoutManager.layout(taskRepeater)
+        width: LayoutManager.layoutWidth()
+        height: LayoutManager.layoutHeight()
 
         flow: {
             if (tasks.vertical) {
@@ -446,10 +429,10 @@ MouseArea {
                 TaskTools.publishIconGeometries(children);
             }
         }
+        onWidthChanged: layoutTimer.restart()
+        onHeightChanged: layoutTimer.restart()
 
         function layout() {
-            taskList.width = LayoutManager.layoutWidth();
-            taskList.height = LayoutManager.layoutHeight();
             LayoutManager.layout(taskRepeater);
         }
 

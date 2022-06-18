@@ -45,7 +45,7 @@ function logicalTaskCount() {
 }
 
 function maxStripes() {
-    var length = tasks.vertical ? taskList.width : taskList.height;
+    var length = tasks.vertical ? tasks.width : tasks.height;
     var minimum = tasks.vertical ? preferredMinWidth() : preferredMinHeight();
 
     return Math.min(plasmoid.configuration.maxStripes, Math.max(1, Math.floor(length / minimum)));
