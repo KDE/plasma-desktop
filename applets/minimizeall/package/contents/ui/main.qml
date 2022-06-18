@@ -14,13 +14,23 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 
 import org.kde.taskmanager 0.1 as TaskManager
 
-Item {
+MouseArea {
     id: root
 
-    readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
-        || plasmoid.location === PlasmaCore.Types.RightEdge
-        || plasmoid.location === PlasmaCore.Types.BottomEdge
-        || plasmoid.location === PlasmaCore.Types.LeftEdge)
+    readonly property bool inPanel: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge, PlasmaCore.Types.LeftEdge]
+        .includes(Plasmoid.location)
+
+    property bool active: false
+
+    // list of persistentmodelindexes from task manager model of clients minimised by us
+    property var minimizedClients: []
+
+    Plasmoid.icon: Plasmoid.configuration.icon
+    Plasmoid.title: i18n("Minimize all Windows")
+    Plasmoid.toolTipSubText: i18n("Show the desktop by minimizing all windows")
+
+    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+    Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
 
     Layout.minimumWidth: PlasmaCore.Units.gridUnit
     Layout.minimumHeight: PlasmaCore.Units.gridUnit
@@ -28,18 +38,30 @@ Item {
     Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
     Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
 
-    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
-    Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
-
     Plasmoid.onActivated: toggleActive()
+    onClicked: Plasmoid.activated()
 
-    property bool active: false
-    property var minimizedClients: [] //list of persistentmodelindexes from task manager model of clients minimised by us
+    hoverEnabled: true
+
+    activeFocusOnTab: true
+    Keys.onPressed: {
+        switch (event.key) {
+        case Qt.Key_Space:
+        case Qt.Key_Enter:
+        case Qt.Key_Return:
+        case Qt.Key_Select:
+            Plasmoid.activated();
+            break;
+        }
+    }
+    Accessible.name: Plasmoid.title
+    Accessible.description: Plasmoid.toolTipSubText
+    Accessible.role: Accessible.Button
 
     function activate() {
-        var clients = []
-        for (var i = 0 ; i < tasksModel.count; i++) {
-            var idx = tasksModel.makeModelIndex(i);
+        const clients = [];
+        for (let i = 0 ; i < tasksModel.count; i++) {
+            const idx = tasksModel.makeModelIndex(i);
             if (!tasksModel.data(idx, TaskManager.AbstractTasksModel.IsHidden)) {
                 tasksModel.requestToggleMinimized(idx);
                 clients.push(tasksModel.makePersistentModelIndex(i));
@@ -51,13 +73,13 @@ Item {
 
     function deactivate() {
         root.active = false;
-        for (var i = 0 ; i < root.minimizedClients.length; i++) {
-            var idx = root.minimizedClients[i]
-            //client deleted, do nothing
+        for (let i = 0 ; i < root.minimizedClients.length; i++) {
+            const idx = root.minimizedClients[i];
+            // client deleted, do nothing
             if (!idx.valid) {
                 continue;
             }
-            //if the user has restored it already, do nothing
+            // if the user has restored it already, do nothing
             if (!tasksModel.data(idx, TaskManager.AbstractTasksModel.IsHidden)) {
                 continue;
             }
@@ -76,6 +98,7 @@ Item {
 
     TaskManager.TasksModel {
         id: tasksModel
+
         sortMode: TaskManager.TasksModel.SortDisabled
         groupMode: TaskManager.TasksModel.GroupDisabled
     }
@@ -85,18 +108,41 @@ Item {
         enabled: root.active
 
         function onActiveTaskChanged() {
-            if (tasksModel.activeTask.valid) { //to suppress changing focus to non windows, such as the desktop
+            if (tasksModel.activeTask.valid) { // to suppress changing focus to non windows, such as the desktop
                 root.active = false;
                 root.minimizedClients = [];
             }
         }
-        function onVirtualDesktopChanged() {deactivate()}
-        function onActivityChanged() {deactivate()}
+        function onVirtualDesktopChanged() {
+            deactivate();
+        }
+        function onActivityChanged() {
+            deactivate();
+        }
+    }
+
+    PlasmaCore.IconItem {
+        anchors.fill: parent
+        active: root.containsMouse
+        source: Plasmoid.icon
+    }
+
+    // also activate when dragging an item over the plasmoid so a user can easily drag data to the desktop
+    DropArea {
+        anchors.fill: parent
+        onEntered: activateTimer.start()
+        onExited: activateTimer.stop()
+    }
+
+    Timer {
+        id: activateTimer
+        interval: 250 // to match TaskManager
+        onTriggered: Plasmoid.activated()
     }
 
     PlasmaCore.FrameSvgItem {
         property var containerMargins: {
-            let item = tooltip;
+            let item = this;
             while (item.parent) {
                 item = item.parent;
                 if (item.isAppletContainer) {
@@ -111,26 +157,26 @@ Item {
             property bool returnAllMargins: true
             // The above makes sure margin is returned even for side margins
             // that would be otherwise turned off.
-            bottomMargin: containerMargins ? -containerMargins('bottom', returnAllMargins) : 0;
-            topMargin: containerMargins ? -containerMargins('top', returnAllMargins) : 0;
-            leftMargin: containerMargins ? -containerMargins('left', returnAllMargins) : 0;
-            rightMargin: containerMargins ? -containerMargins('right', returnAllMargins) : 0;
+            topMargin: containerMargins ? -containerMargins('top', returnAllMargins) : 0
+            leftMargin: containerMargins ? -containerMargins('left', returnAllMargins) : 0
+            rightMargin: containerMargins ? -containerMargins('right', returnAllMargins) : 0
+            bottomMargin: containerMargins ? -containerMargins('bottom', returnAllMargins) : 0
         }
         imagePath: "widgets/tabbar"
         prefix: {
-            var prefix;
-            switch (plasmoid.location) {
-                case PlasmaCore.Types.LeftEdge:
-                    prefix = "west-active-tab";
-                    break;
-                case PlasmaCore.Types.TopEdge:
-                    prefix = "north-active-tab";
-                    break;
-                case PlasmaCore.Types.RightEdge:
-                    prefix = "east-active-tab";
-                    break;
-                default:
-                    prefix = "south-active-tab";
+            let prefix;
+            switch (Plasmoid.location) {
+            case PlasmaCore.Types.LeftEdge:
+                prefix = "west-active-tab";
+                break;
+            case PlasmaCore.Types.TopEdge:
+                prefix = "north-active-tab";
+                break;
+            case PlasmaCore.Types.RightEdge:
+                prefix = "east-active-tab";
+                break;
+            default:
+                prefix = "south-active-tab";
             }
             if (!hasElementPrefix(prefix)) {
                 prefix = "active-tab";
@@ -146,34 +192,11 @@ Item {
         }
     }
 
-    PlasmaCore.IconItem {
-        id:icon
-        source: plasmoid.configuration.icon
-        active: tooltip.containsMouse
-        anchors.fill: parent
+    function action_showdesktop() {
+        showdesktop.toggleDesktop();
     }
 
-    PlasmaCore.ToolTipArea {
-        id: tooltip
-        anchors.fill: parent
-        mainText : i18n("Minimize all Windows")
-        subText : i18n("Show the desktop by minimizing all windows")
-
-        MouseArea {
-            id: mouseArea
-            anchors.fill: parent
-            onClicked: root.toggleActive()
-        }
-        //also activate when dragging an item over the plasmoid so a user can easily drag data to the desktop
-        DropArea {
-            anchors.fill: parent
-            onEntered: activateTimer.start()
-            onExited: activateTimer.stop()
-            Timer {
-                id: activateTimer
-                interval: 250 //to match TaskManager
-                onTriggered: toggleActive()
-            }
-        }
+    Component.onCompleted: {
+        Plasmoid.setAction("showdesktop", i18nc("@action", "Show Desktop"))
     }
 }

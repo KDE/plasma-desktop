@@ -28,6 +28,7 @@ bool ShowDesktop::showingDesktop() const
 void ShowDesktop::setShowingDesktop(bool showingDesktop)
 {
     KWindowSystem::setShowingDesktop(showingDesktop);
+    Q_EMIT showingDesktopChanged(showingDesktop);
 }
 
 void ShowDesktop::minimizeAll()
@@ -45,4 +46,11 @@ void ShowDesktop::minimizeAll()
             KWindowSystem::minimizeWindow(wid);
         }
     }
+}
+
+void ShowDesktop::toggleDesktop()
+{
+    const bool showingNow = KWindowSystem::showingDesktop();
+    KWindowSystem::setShowingDesktop(!showingNow);
+    Q_EMIT showingDesktopChanged(!showingNow);
 }
