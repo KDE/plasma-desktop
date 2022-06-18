@@ -52,16 +52,8 @@ MouseArea {
     Layout.minimumHeight: !tasks.vertical ? 0 : LayoutManager.preferredMinHeight()
 
 //BEGIN TODO: this is not precise enough: launchers are smaller than full tasks
-
-    Layout.preferredWidth: tasks.vertical ? PlasmaCore.Units.gridUnit * 10 :
-                           (LayoutManager.logicalTaskCount() === 0 ? 0.01 : //Return a small non-zero value to make the panel account for the change in size
-                           (LayoutManager.logicalTaskCount() * LayoutManager.preferredMaxWidth()) / LayoutManager.calculateStripes())
-
-
-    Layout.preferredHeight: !tasks.vertical ? PlasmaCore.Units.gridUnit * 2 :
-                            (LayoutManager.logicalTaskCount() === 0 ? 0.01 : //Same as above
-                            (LayoutManager.logicalTaskCount() * LayoutManager.preferredMaxHeight()) / LayoutManager.calculateStripes())
-
+    Layout.preferredWidth: tasks.vertical ? PlasmaCore.Units.gridUnit * 10 : ((LayoutManager.logicalTaskCount() * LayoutManager.preferredMaxWidth()) / LayoutManager.calculateStripes())
+    Layout.preferredHeight: tasks.vertical ? ((LayoutManager.logicalTaskCount() * LayoutManager.preferredMaxHeight()) / LayoutManager.calculateStripes()) : PlasmaCore.Units.gridUnit * 2
 //END TODO
 
     property Item dragSource: null
