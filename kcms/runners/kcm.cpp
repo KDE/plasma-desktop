@@ -77,7 +77,7 @@ SearchConfigModule::SearchConfigModule(QWidget *parent, const QVariantList &args
     QHBoxLayout *downloadLayout = new QHBoxLayout;
 
     // Open KRunner settings
-    m_krunnerSettingsButton = new QPushButton(QIcon::fromTheme(QStringLiteral("krunner")), QStringLiteral("Configure KRunner…"), this);
+    m_krunnerSettingsButton = new QPushButton(QIcon::fromTheme(QStringLiteral("krunner")), i18n("Configure KRunner…"), this);
     connect(m_krunnerSettingsButton, &QPushButton::clicked, this, [this] {
         if (!m_krunnerSettingsDialog) {
             m_krunnerSettingsDialog = new KCMultiDialog(this);
