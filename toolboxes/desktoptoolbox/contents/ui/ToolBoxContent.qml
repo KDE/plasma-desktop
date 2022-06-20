@@ -7,6 +7,7 @@
 
 import QtQuick 2.4
 import QtQuick.Layouts 1.4
+import QtQuick.Window 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -62,8 +63,8 @@ Item {
         enabled: visible
     }
 
-    width: buttonLayout.width
-    height: buttonLayout.height
+    width: buttonRow.width
+    height: buttonRow.height
 
     state: "topcenter"
 
@@ -182,46 +183,69 @@ Item {
         }
         onCanceled: dragging = false;
 
-        RowLayout {
-            id: buttonLayout
-            anchors.centerIn: parent
-            spacing: PlasmaCore.Units.smallSpacing
+        Row {
+            id: buttonRow
+            spacing: buttonLayout.columnSpacing
 
+            Grid {
+                id: buttonLayout
+                rowSpacing: PlasmaCore.Units.smallSpacing
+                columnSpacing: rowSpacing
+
+                // Show buttons in two lines if screen space is limited
+                readonly property int buttonWidth: addWidgetButton.implicitWidth
+                    + configureButton.implicitWidth
+                    + themeButton.implicitWidth
+                    + displaySettingsButton.implicitWidth
+                    + manageContainmentsButton.implicitWidth
+                    + closeButton.implicitWidth
+                rows: Math.ceil(buttonWidth / (Screen.width * 0.8))
+
+                PlasmaComponents3.ToolButton {
+                    id: addWidgetButton
+                    property QtObject qAction: plasmoid.action("add widgets")
+                    text: qAction.text
+                    icon.name: "list-add"
+                    onClicked: qAction.trigger()
+                }
+
+                PlasmaComponents3.ToolButton {
+                    id: configureButton
+                    property QtObject qAction: plasmoid.action("configure")
+                    text: qAction.text
+                    icon.name: "preferences-desktop-wallpaper"
+                    onClicked: qAction.trigger()
+                }
+
+                PlasmaComponents3.ToolButton {
+                    id: themeButton
+                    text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Choose Global Theme…")
+                    icon.name: "preferences-desktop-theme-global"
+                    onClicked: KQuickControlsAddons.KCMShell.openSystemSettings("kcm_lookandfeel")
+                }
+
+                PlasmaComponents3.ToolButton {
+                    id: displaySettingsButton
+                    text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Configure Display Settings…")
+                    icon.name: "preferences-desktop-display"
+                    onClicked: KQuickControlsAddons.KCMShell.openSystemSettings("kcm_kscreen")
+                }
+
+                PlasmaComponents3.ToolButton {
+                    id: manageContainmentsButton
+                    property QtObject qAction: plasmoid.globalAction("manage-containments")
+                    text: qAction.text
+                    visible: qAction.visible
+                    icon.name: "preferences-system-windows-effect-fadedesktop"
+                    onClicked: qAction.trigger()
+                }
+            }
 
             PlasmaComponents3.ToolButton {
-                property QtObject qAction: plasmoid.action("add widgets")
-                text: qAction.text
-                icon.name: "list-add"
-                onClicked: qAction.trigger()
-            }
-            PlasmaComponents3.ToolButton {
-                property QtObject qAction: plasmoid.action("configure")
-                text: qAction.text
-                icon.name: "preferences-desktop-wallpaper"
-                onClicked: qAction.trigger()
-            }
-            PlasmaComponents3.ToolButton {
-                text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Choose Global Theme…")
-                icon.name: "preferences-desktop-theme-global"
-                onClicked: KQuickControlsAddons.KCMShell.openSystemSettings("kcm_lookandfeel")
-            }
-            PlasmaComponents3.ToolButton {
-                text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Configure Display Settings…")
-                icon.name: "preferences-desktop-display"
-                onClicked: KQuickControlsAddons.KCMShell.openSystemSettings("kcm_kscreen")
-            }
-
-            PlasmaComponents3.ToolButton {
-                property QtObject qAction: plasmoid.globalAction("manage-containments")
-                text: qAction.text
-                visible: qAction.visible
-                icon.name: "preferences-system-windows-effect-fadedesktop"
-                onClicked: qAction.trigger()
-            }
-
-            PlasmaComponents3.ToolButton {
+                id: closeButton
+                anchors.verticalCenter: buttonLayout.verticalCenter
+                height: addWidgetButton.height
                 icon.name: "window-close"
-                Layout.preferredWidth: height
                 onClicked: plasmoid.editMode = false
                 PlasmaComponents3.ToolTip {
                     text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Exit Edit Mode")
