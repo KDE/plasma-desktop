@@ -968,20 +968,16 @@ Kicker.DashboardWindow {
                         }
 
                         highlight: PlasmaExtras.Highlight {
-                            anchors {
-                                top: filterList.currentItem ? filterList.currentItem.top : undefined
-                                left: filterList.currentItem ? filterList.currentItem.left : undefined
-                                bottom: filterList.currentItem ? filterList.currentItem.bottom : undefined
-                            }
-
-                            opacity: filterListScrollArea.focus ? 1.0 : 0.7
-
+                            x: filterList.currentItem ? filterList.currentItem.x : 0
+                            y: filterList.currentItem ? filterList.currentItem.y : 0
+                            height: filterList.currentItem ? filterList.currentItem.height : 0
                             width: (highlightItemSvg.margins.left
                                 + (filterList.currentItem ? filterList.currentItem.textWidth : 0)
                                 + highlightItemSvg.margins.right
                                 + PlasmaCore.Units.smallSpacing)
 
                             visible: filterList.currentItem
+                            opacity: filterListScrollArea.focus ? 1.0 : 0.7
                         }
 
                         highlightFollowsCurrentItem: false
