@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 # KI18N Translation Domain for this library
-add_definitions(-DTRANSLATION_DOMAIN=\"kcm_search\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_plasmasearch\")
 
 add_subdirectory(krunner)
 add_subdirectory(plasmasearch)
