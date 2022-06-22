@@ -6,6 +6,7 @@
 
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
+import QtQuick.Window 2.15
 import QtQml 2.15
 
 import org.kde.plasma.plasmoid 2.0
@@ -23,6 +24,7 @@ MouseArea {
     anchors.fill: parent
     hoverEnabled: true
 
+    readonly property real devicePixelRatio: Screen.devicePixelRatio
     property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
     property bool iconsOnly: plasmoid.pluginName === "org.kde.plasma.icontasks"
 

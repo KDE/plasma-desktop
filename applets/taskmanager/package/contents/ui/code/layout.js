@@ -130,28 +130,23 @@ function preferredMaxWidth() {
 
 function preferredMinHeight() {
     // TODO FIXME UPSTREAM: Port to proper font metrics for descenders once we have access to them.
-    return PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height + 4;
+    return PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height / tasks.devicePixelRatio + 4;
 }
 
 function preferredMaxHeight() {
+    let adjustedHeight;
     if (tasks.vertical) {
-      return verticalMargins() +
-             Math.min(
-                 // Do not allow the preferred icon size to exceed the width of
-                 // the vertical task manager.
-                 tasks.width,
-                 tasks.iconsOnly ? tasks.width :
-                    Math.max(
-                        PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height,
-                        PlasmaCore.Units.iconSizes.medium
-                    )
-             );
+        // Do not allow the preferred icon size to exceed the width of
+        // the vertical task manager.
+        if (tasks.iconsOnly) {
+            adjustedHeight = tasks.width;
+        } else {
+            adjustedHeight = Math.max(PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height / tasks.devicePixelRatio, PlasmaCore.Units.iconSizes.medium);
+        }
+        return verticalMargins() + Math.min(tasks.width, adjustedHeight);
     } else {
-      return verticalMargins() +
-             Math.min(
-                 PlasmaCore.Units.iconSizes.small * 3,
-                 PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height *
-                     3);
+        adjustedHeight = Math.min(PlasmaCore.Units.iconSizes.small, PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height / tasks.devicePixelRatio) * 3
+        return verticalMargins() + adjustedHeight;
     }
 }
 
