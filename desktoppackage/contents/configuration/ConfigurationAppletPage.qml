@@ -54,6 +54,10 @@ Kirigami.ScrollablePage {
             }
 
             setSource(configItem.source, props)
+        }
+
+        onLoaded: {
+            const plasmoidConfig = plasmoid.configuration;
 
             for (let key in plasmoidConfig) {
                 const changedSignal = item["cfg_" + key + "Changed"]
