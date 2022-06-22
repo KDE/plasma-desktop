@@ -4,14 +4,14 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick 2.15
 import org.kde.plasma.configuration 2.0
 import QtQuick.Controls 2.3 as QQC2
 import QtQuick.Layouts 1.1
 import QtQml 2.15
 
 import org.kde.newstuff 1.62 as NewStuff
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kcm 1.4
 import org.kde.plasma.plasmoid 2.0
 
@@ -103,8 +103,9 @@ Item {
 
             RowLayout {
                 Layout.fillWidth: true
-                visible: !switchContainmentWarning.visible
+                enabled: main.currentItem.objectName !== "switchContainmentWarningItem"
                 Kirigami.FormData.label: i18nd("plasma_shell_org.kde.plasma.desktop", "Wallpaper type:")
+
                 QQC2.ComboBox {
                     id: wallpaperComboBox
                     Layout.preferredWidth: Math.max(implicitWidth, pluginComboBox.implicitWidth)
@@ -121,38 +122,10 @@ Item {
                 NewStuff.Button {
                     configFile: "wallpaperplugin.knsrc"
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Plugins…")
+                    visibleWhenDisabled: true // don't hide on disabled
                     Layout.preferredHeight: wallpaperComboBox.height
                 }
             }
-        }
-
-        ColumnLayout {
-            id: switchContainmentWarning
-            Layout.fillWidth: true
-            visible: configDialog.containmentPlugin !== appearanceRoot.containmentPlugin
-            QQC2.Label {
-                Layout.fillWidth: true
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout changes must be applied before other changes can be made")
-                wrapMode: Text.Wrap
-                horizontalAlignment: Text.AlignHCenter
-            }
-            QQC2.Button {
-                Layout.alignment: Qt.AlignHCenter
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply Now")
-                onClicked: saveConfig()
-            }
-
-            Binding {
-                target: categoriesScroll //from parent scope AppletConfiguration
-                property: "enabled"
-                value: !switchContainmentWarning.visible
-                restoreMode: Binding.RestoreBinding
-            }
-        }
-
-        Item {
-            Layout.fillHeight: true
-            visible: switchContainmentWarning.visible
         }
 
         Item {
@@ -166,8 +139,6 @@ Item {
 
             Layout.fillHeight: true;
             Layout.fillWidth: true;
-
-            visible: !switchContainmentWarning.visible
 
             // Bug 360862: if wallpaper has no config, sourceFile will be ""
             // so we wouldn't load emptyConfig and break all over the place
@@ -203,6 +174,46 @@ Item {
                     replace(emptyConfig)
                 }
             }
+        }
+    }
+
+    Component {
+        id: switchContainmentWarning
+
+        Item {
+            objectName: "switchContainmentWarningItem"
+            Kirigami.PlaceholderMessage {
+                id: message
+                anchors {
+                    centerIn: parent
+                    verticalCenterOffset: -applyNowButton.implicitHeight - applyNowButton.anchors.topMargin
+                }
+                icon.name: "documentinfo"
+                width: parent.width - Kirigami.Units.largeSpacing * 8
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout changes must be applied before other changes can be made")
+            }
+
+            QQC2.Button {
+                id: applyNowButton
+                anchors {
+                    top: message.bottom
+                    topMargin: Kirigami.Units.largeSpacing
+                    horizontalCenter: parent.horizontalCenter
+                }
+                icon.name: "dialog-ok-apply"
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply Now")
+                onClicked: saveConfig()
+            }
+        }
+    }
+
+    onContainmentPluginChanged: {
+        if (configDialog.containmentPlugin !== appearanceRoot.containmentPlugin) {
+            main.push(switchContainmentWarning);
+            categoriesScroll.enabled = false;
+        } else if (main.currentItem.objectName === "switchContainmentWarningItem") {
+            main.pop();
+            categoriesScroll.enabled = true;
         }
     }
 }
