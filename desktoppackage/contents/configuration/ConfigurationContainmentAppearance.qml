@@ -40,16 +40,12 @@ AbstractKCM {
         configDialog.containmentPlugin = root.containmentPlugin
     }
 
-    /*
-     * BUG 407619: `wallpaperGraphicsObject`, `wallpaper` or `wallpaperInterface`
-     * is not set before calling `ContainmentInterface::loadWallpaper()`, so wait
-     * until `wallpaperInterfaceChanged` signal is emitted. At that time
-     * `applyWallpaper()` will call `syncWallpaperObjects()` to update
-     * `wallpaperConfiguration`.
-     */
     Connections {
+        // BUG 407619: wallpaperConfiguration can be invalid after changing layout
+        enabled: !configDialog.wallpaperConfiguration
         target: Plasmoid.self
         function onWallpaperInterfaceChanged() {
+            // wallpaperConfiguration is valid now, reload the settings
             configDialog.applyWallpaper();
             main.loadSourceFile();
         }
