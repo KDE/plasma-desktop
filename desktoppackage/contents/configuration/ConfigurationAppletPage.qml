@@ -45,6 +45,8 @@ Kirigami.ScrollablePage {
         // TODO KF6 clean this up by making all configs based on SimpleKCM/ScrollViewKCM/GridViewKCM
         height: Math.max(root.availableHeight, item.implicitHeight ? item.implicitHeight : item.childrenRect.height)
 
+        asynchronous: true
+
         Component.onCompleted: {
             const plasmoidConfig = plasmoid.configuration
 
