@@ -138,7 +138,7 @@ Item {
             }
             QQC2.Button {
                 Layout.alignment: Qt.AlignHCenter
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply now")
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply Now")
                 onClicked: saveConfig()
             }
 
