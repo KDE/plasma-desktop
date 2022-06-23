@@ -25,6 +25,7 @@ static KeyboardConfig::SwitchingPolicy findStringIndex(const QString &toFind, Ke
 
 KeyboardConfig::KeyboardConfig(QObject *parent)
     : KeyboardSettingsBase(parent)
+    , m_referenceLayoutLoopCount(mLayoutLoopCount)
 {
     layouts.clear();
 }
@@ -49,6 +50,10 @@ bool KeyboardConfig::layoutsSaveNeeded() const
     if (layouts.size() != m_referenceLayouts.size()) {
         return true;
     }
+    if (mLayoutLoopCount != m_referenceLayoutLoopCount) {
+        return true;
+    }
+
     // Due to layoutUnit operator==() that does not test all properties.
     // Do not compare shortcuts, they are automatically applied
     bool isSaveNeeded = false;
@@ -96,6 +101,7 @@ void KeyboardConfig::load()
 
     // layouts' shortcuts are retrieved from GlobalShortcuts in KCMKeyboardWidget
     m_referenceLayouts = layouts;
+    m_referenceLayoutLoopCount = mLayoutLoopCount;
 
     qCDebug(KCM_KEYBOARD) << "configuring layouts" << configureLayouts() << "configuring options" << resetOldXkbOptions();
 }
@@ -103,6 +109,7 @@ void KeyboardConfig::load()
 void KeyboardConfig::save()
 {
     m_referenceLayouts = layouts;
+    m_referenceLayoutLoopCount = mLayoutLoopCount;
 
     QStringList layoutList;
     QStringList variants;
