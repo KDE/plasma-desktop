@@ -7,6 +7,7 @@
 #include "viewpropertiesmenu.h"
 
 #include <QActionGroup>
+#include <QApplication>
 #include <QMenu>
 
 #include <KDirModel>
@@ -63,14 +64,16 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent)
         m_iconSize->addAction(action);
     }
 
-    m_arrangementMenu = m_menu->addMenu(QIcon::fromTheme(QStringLiteral("object-rows")), i18n("Arrange In"));
+    m_arrangementMenu = m_menu->addMenu(QIcon::fromTheme(QStringLiteral("object-rows")), i18nc("@item:inmenu arrangement of icons", "Arrange"));
     m_arrangement = new QActionGroup(this);
     connect(m_arrangement, &QActionGroup::triggered, this, &ViewPropertiesMenu::arrangementChanged);
-    action = m_arrangementMenu->addAction(i18nc("@item:inmenu arrangement of icons", "Rows"));
+    const auto isLtR = qApp->layoutDirection() == Qt::LeftToRight;
+    action = m_arrangementMenu->addAction(isLtR ? i18nc("@item:inmenu arrangement of icons", "Left to Right")
+                                                : i18nc("@item:inmenu arrangement of icons", "Right to Left"));
     action->setCheckable(true);
     action->setData(0);
     m_arrangement->addAction(action);
-    action = m_arrangementMenu->addAction(i18nc("@item:inmenu arrangement of icons", "Columns"));
+    action = m_arrangementMenu->addAction(i18nc("@item:inmenu arrangement of icons", "Top to Bottom"));
     action->setData(1);
     action->setCheckable(true);
     m_arrangement->addAction(action);

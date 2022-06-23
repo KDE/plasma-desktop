@@ -128,8 +128,12 @@ Item {
 
             Kirigami.FormData.label: i18n("Arrangement:")
 
-            model: [i18nc("@item:inlistbox arrangement of icons", "Rows"),
-                    i18nc("@item:inlistbox arrangement of icons", "Columns")]
+            model: [
+                Qt.application.layoutDirection == Qt.LeftToRight ?
+                    i18nc("@item:inlistbox arrangement of icons", "Left to Right") :
+                    i18nc("@item:inlistbox arrangement of icons", "Right to Left"),
+                i18nc("@item:inlistbox arrangement of icons", "Top to Bottom"),
+            ]
         }
 
         ComboBox {
