@@ -189,19 +189,17 @@ KCM.SimpleKCM {
             visible: primarySelectionRadio.visible
         }
 
-        RowLayout {
+        QQC2.CheckBox {
+            id: primarySelectionRadio
             Kirigami.FormData.label: i18n("Middle Click:")
-            QQC2.CheckBox {
-                id: primarySelectionRadio
-                visible: kcm.isWayland
-                text: i18n("Paste selected text")
-                checked: kcm.kwinSettings.primarySelection
-                onToggled: kcm.kwinSettings.primarySelection = checked
+            visible: kcm.isWayland
+            text: i18n("Paste selected text")
+            checked: kcm.kwinSettings.primarySelection
+            onToggled: kcm.kwinSettings.primarySelection = checked
 
-                KCM.SettingStateBinding {
-                    configObject: kcm.kwinSettings
-                    settingName: "primarySelection"
-                }
+            KCM.SettingStateBinding {
+                configObject: kcm.kwinSettings
+                settingName: "primarySelection"
             }
         }
 
