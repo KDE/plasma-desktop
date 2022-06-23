@@ -56,6 +56,7 @@ public:
 
 private:
     QList<LayoutUnit> m_referenceLayouts;
+    int m_referenceLayoutLoopCount;
 };
 
 #endif /* KEYBOARD_CONFIG_H_ */
