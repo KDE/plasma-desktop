@@ -18,7 +18,15 @@ import org.kde.kirigami 2.15 as Kirigami
 Item {
     id: root
 
-    property Item containment
+    /**
+     * This property will be overridden in ContainmentViewPrivate::setContainment
+     * It's set here only to prevent undefined warnings.
+     */
+    property Item containment: Item {
+        property Item wallpaper: Item {
+            signal repaintNeeded
+        }
+    }
 
     property QtObject widgetExplorer
 
