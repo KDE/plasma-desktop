@@ -69,12 +69,14 @@ T.ItemDelegate {
             }
             root.actionList = allActions
         }
-        ActionMenu.plasmoid = plasmoid
-        ActionMenu.menu.visualParent = root
-        if (x !== undefined && y !== undefined) {
-            ActionMenu.menu.open(x, y)
-        } else {
-            ActionMenu.menu.openRelative()
+        if (actionList && actionList.length > 0) {
+            ActionMenu.plasmoid = plasmoid
+            ActionMenu.menu.visualParent = root
+            if (x !== undefined && y !== undefined) {
+                ActionMenu.menu.open(x, y)
+            } else {
+                ActionMenu.menu.openRelative()
+            }
         }
     }
 
