@@ -300,12 +300,11 @@ FocusScope {
 
         anchors.bottom: mainRow.bottom
         anchors.left: parent.left
-        anchors.leftMargin: sideBar.width + (sideBar.width ? mainRow.spacing : 0) + PlasmaCore.Units.smallSpacing
+        anchors.leftMargin: sideBar.width + (sideBar.width ? mainRow.spacing : PlasmaCore.Units.smallSpacing)
 
         readonly property real defaultWidth: PlasmaCore.Units.gridUnit * 14
         width: (runnerColumnsRepeater.count !== 0 ? runnerColumnsRepeater.itemAt(0).width
                                                   : (rootList.visible ? rootList.width : defaultWidth))
-                - PlasmaCore.Units.smallSpacing
 
         focus: !Kirigami.InputMethod.willShowOnActive
 
