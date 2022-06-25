@@ -25,6 +25,7 @@ import QtQml 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Templates 2.15 as T
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PC2
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.kirigami 2.16 as Kirigami
 import "code/tools.js" as Tools
@@ -45,37 +46,37 @@ T.ItemDelegate {
     readonly property bool hasActionList: model && (model.favoriteId !== null || ("hasActionList" in model && model.hasActionList === true))
     property var actionList: null
     property bool isSearchResult: false
-    readonly property bool menuClosed: ActionMenu.menu.status == 3 // corresponds to DialogStatus.Closed
+    readonly property bool menuClosed: ActionMenu.menu.status === PC2.DialogStatus.Closed
 
-    property bool dragEnabled: enabled && !root.isCategory
+    property bool dragEnabled: enabled && !isCategory
         && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
 
     function openActionMenu(x = undefined, y = undefined) {
-        if (!root.hasActionList) { return }
+        if (!hasActionList) { return; }
         // fill actionList only when needed to prevent slowness when changing app categories rapidly.
-        if (root.actionList === null) {
-            let allActions = model.actionList
+        if (actionList === null) {
+            let allActions = model.actionList;
             const favoriteActions = Tools.createFavoriteActions(
                 i18n, //i18n() function callback
                 view.model.favoritesModel,
-                model.favoriteId)
+                model.favoriteId,
+            );
             if (favoriteActions) {
                 if (allActions && allActions.length > 0) {
-                    allActions.push({ "type": "separator" });
-                    allActions.push.apply(allActions, favoriteActions);
+                    allActions.push({ "type": "separator" }, ...favoriteActions);
                 } else {
                     allActions = favoriteActions;
                 }
             }
-            root.actionList = allActions
+            actionList = allActions;
         }
         if (actionList && actionList.length > 0) {
-            ActionMenu.plasmoid = plasmoid
-            ActionMenu.menu.visualParent = root
+            ActionMenu.plasmoid = plasmoid;
+            ActionMenu.menu.visualParent = root;
             if (x !== undefined && y !== undefined) {
-                ActionMenu.menu.open(x, y)
+                ActionMenu.menu.open(x, y);
             } else {
-                ActionMenu.menu.openRelative()
+                ActionMenu.menu.openRelative();
             }
         }
     }
@@ -121,7 +122,7 @@ T.ItemDelegate {
             }
             view.currentIndex = index
             // if successfully triggered, close popup
-            if(view.model.trigger && view.model.trigger(index, "", null)) {
+            if (view.model.trigger && view.model.trigger(index, "", null)) {
                 if (plasmoid.hideOnWindowDeactivate) {
                     plasmoid.expanded = false;
                 }
@@ -205,7 +206,7 @@ T.ItemDelegate {
         // Using this Item fixes drag and drop causing delegates
         // to reset to a 0 X position and overlapping each other.
         Item { id: dragItem }
-        // Using onPositionChanged adds subtle freeze when 
+        // Using onPositionChanged adds subtle freeze when
         // changing category. To address scrolling problem
         // we'll rely on check if view was scrolled with wheel.
         onEntered: {
@@ -213,7 +214,7 @@ T.ItemDelegate {
                 root.view.movedWithWheel = false
                 return
             }
-            
+
             // forceActiveFocus() touches multiple items, so check for
             // activeFocus first to be more efficient.
             if (!root.activeFocus) {
@@ -231,8 +232,8 @@ T.ItemDelegate {
             if (mouse.button === Qt.RightButton) {
                 root.openActionMenu(mouseX, mouseY)
             } else if (mouse.button === Qt.LeftButton && root.dragEnabled && root.Drag.imageSource == "") {
-                iconItem.grabToImage((result) => {
-                    return root.Drag.imageSource = result.url
+                iconItem.grabToImage(result => {
+                    root.Drag.imageSource = result.url
                 })
             }
         }

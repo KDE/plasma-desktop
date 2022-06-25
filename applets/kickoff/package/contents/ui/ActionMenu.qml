@@ -17,6 +17,7 @@ import "code/tools.js" as Tools
 
 Item {
     id: root
+
     property var actionList: menu.visualParent ? menu.visualParent.actionList : null
 
     // Workaround for `plasmoid` context property not working in singletons.
@@ -26,6 +27,7 @@ Item {
     // Not a QQC1 Menu. It's actually a custom QObject that uses a QMenu.
     readonly property PC2.Menu menu: PC2.Menu {
         id: menu
+
         visualParent: null
         placement: PlasmaCore.Types.BottomPosedLeftAlignedPopup
     }
@@ -33,25 +35,29 @@ Item {
     visible: false
 
     Instantiator {
-        active: actionList != null
+        active: actionList !== null
         model: actionList
         delegate: menuItemComponent
         onObjectAdded: menu.addMenuItem(object)
         onObjectRemoved: menu.removeMenuItem(object)
     }
 
-    Component { id: menuComponent; PC2.Menu {} }
+    Component {
+        id: menuComponent
+
+        PC2.Menu {}
+    }
 
     Component {
         id: menuItemComponent
+
         PC2.MenuItem {
             id: menuItem
+
             required property var modelData
-            property PC2.Menu subMenu: if (modelData.subActions) {
-                return menuComponent.createObject(menuItem, {visualParent: menuItem.action})
-            } else {
-                return null
-            }
+            property PC2.Menu subMenu: modelData.subActions
+                ? menuComponent.createObject(menuItem, { visualParent: menuItem.action })
+                : null
 
             text: modelData.text ? modelData.text : ""
             enabled: modelData.type !== "title" && ("enabled" in modelData ? modelData.enabled : true)
@@ -62,7 +68,7 @@ Item {
             checked: modelData.hasOwnProperty("checked") ? modelData.checked : false
 
             Instantiator {
-                active: menuItem.subMenu != null
+                active: menuItem.subMenu !== null
                 model: modelData.subActions
                 delegate: menuItemComponent
                 onObjectAdded: subMenu.addMenuItem(object)

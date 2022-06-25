@@ -14,12 +14,9 @@ function fillActionMenu(i18n, actionMenu, actionList, favoriteModel, favoriteId)
 
     var actions = createFavoriteActions(i18n, favoriteModel, favoriteId);
 
-    if (actions) {
+    if (actions && actions.length > 0) {
         if (actionList && actionList.length > 0) {
-            var separator = { "type": "separator" };
-            actionList.push(separator);
-            // actionList = actions.concat(actionList); // this crashes Qt O.o
-            actionList.push.apply(actionList, actions);
+            actionList.push({ "type": "separator" }, ...actions);
         } else {
             actionList = actions;
         }
