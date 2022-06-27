@@ -33,6 +33,22 @@ Rectangle {
 
     property ConfigModel globalConfigModel:  globalAppletConfigModel
 
+    function closing() {
+        if (applyButton.enabled) {
+            messageDialog.item = null;
+            messageDialog.open();
+            return false;
+        }
+        return true;
+    }
+
+    Connections {
+        target: configDialog
+        function onClosing(event) {
+            event.accepted = closing();
+        }
+    }
+
     ConfigModel {
         id: globalAppletConfigModel
         ConfigCategory {
@@ -280,6 +296,7 @@ Rectangle {
                 if (item) {
                     root.open(item);
                 } else {
+                    applyButton.enabled = false;
                     configDialog.close();
                 }
             }
@@ -355,13 +372,9 @@ Rectangle {
         QQC2.Action {
             id: cancelAction
             onTriggered: {
-                if (applyButton.enabled) {
-                    messageDialog.item = null;
-                    messageDialog.open();
-                    return;
+                if (root.closing()) {
+                    configDialog.close();
                 }
-
-                configDialog.close();
             }
             shortcut: "Escape"
         }
