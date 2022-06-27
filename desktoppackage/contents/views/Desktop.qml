@@ -5,7 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kwindowsystem 1.0
@@ -62,15 +62,24 @@ Item {
         id: kwindowsystem
     }
 
-    Kirigami.ImageColors {
+    Loader {
         id: wallpaperColors
-        source: root.containment.wallpaper
+
+        active: desktop.usedInAccentColor && root.containment && root.containment.wallpaper
+        asynchronous: true
+
+        sourceComponent: Kirigami.ImageColors {
+            source: root.containment.wallpaper
+        }
+
+        onLoaded: item.update()
     }
 
     Connections {
+        enabled: wallpaperColors.item
         target: root.containment.wallpaper
         function onRepaintNeeded() {
-            wallpaperColors.update();
+            wallpaperColors.item.update();
         }
     }
 
@@ -276,26 +285,27 @@ Item {
     Binding {
         target: desktop
         property: "accentColor"
+        when: wallpaperColors.item
         value: {
-            if (isCandidateColor(wallpaperColors.dominant)) {
-                return wallpaperColors.dominant;
+            if (isCandidateColor(wallpaperColors.item.dominant)) {
+                return wallpaperColors.item.dominant;
             }
 
             // If the color is too light or too dark, use highlight instead
-            if (isCandidateColor(wallpaperColors.highlight)) {
-                return wallpaperColors.highlight
+            if (isCandidateColor(wallpaperColors.item.highlight)) {
+                return wallpaperColors.item.highlight
             }
 
             // Neither is suitable, check average color.
-            if (isCandidateColor(wallpaperColors.average)) {
-                return wallpaperColors.average;
+            if (isCandidateColor(wallpaperColors.item.average)) {
+                return wallpaperColors.item.average;
             }
 
             // Adjust the lightness of the average color
-            if (lightness(wallpaperColors.average) >= 0.8) {
-                return Qt.darker(wallpaperColors.average, 1.25);
+            if (lightness(wallpaperColors.item.average) >= 0.8) {
+                return Qt.darker(wallpaperColors.item.average, 1.25);
             } else {
-                return Qt.lighter(wallpaperColors.average, 1.25);
+                return Qt.lighter(wallpaperColors.item.average, 1.25);
             }
         }
 
