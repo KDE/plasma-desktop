@@ -113,6 +113,9 @@ Item {
                     textRole: "name"
                     onActivated: {
                         var model = configDialog.wallpaperConfigModel.get(currentIndex)
+                        if (appearanceRoot.currentWallpaper === model.pluginName) {
+                            return;
+                        }
                         appearanceRoot.currentWallpaper = model.pluginName
                         configDialog.currentWallpaper = model.pluginName
                         main.sourceFile = model.source
