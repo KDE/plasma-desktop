@@ -20,6 +20,7 @@ Item {
     property string cfg_url
     property alias cfg_labelMode: labelMode.currentIndex
     property alias cfg_labelText: labelText.text
+    property var cfg_defaultIcons
     property bool titleVisible: !("containmentType" in plasmoid)
 
     onCfg_urlChanged: applyConfig()
@@ -81,6 +82,28 @@ Item {
             Kirigami.FormData.label: i18n("Show:")
 
             text: i18n("Desktop folder")
+        }
+
+        Column {
+            anchors {
+                left: locationDesktop.left
+                leftMargin: Kirigami.Units.gridUnit + Kirigami.Units.largeSpacing
+            }
+            enabled: locationDesktop.checked
+
+            CheckBox {
+                id: showHomeIcon
+                checked: cfg_defaultIcons.indexOf("home") >= 0
+                icon.name: "user-home"
+                text: i18nc("@option:check", "Home")
+            }
+
+            CheckBox {
+                id: showTrashIcon
+                checked: cfg_defaultIcons.indexOf("trash") >= 0
+                icon.name: "user-trash"
+                text: i18nc("@option:check", "Trash")
+            }
         }
 
         RadioButton {

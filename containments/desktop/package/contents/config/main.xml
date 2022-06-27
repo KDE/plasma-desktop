@@ -49,6 +49,10 @@
       <label>Custom text for the Folder View label. Only used if labelMode is 3.</label>
       <default></default>
     </entry>
+    <entry name="defaultIcons" type="StringList">
+      <label>List of default icons that should be shown on the desktop, like trash.</label>
+      <default></default>
+    </entry>
 
     <entry name="arrangement" type="Int">
       <label>How Folder View icons are arranged: 0 = Rows, 1 = Columns</label>
