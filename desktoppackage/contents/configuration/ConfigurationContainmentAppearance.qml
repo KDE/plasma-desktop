@@ -116,6 +116,9 @@ AbstractKCM {
                     textRole: "name"
                     onActivated: {
                         var model = configDialog.wallpaperConfigModel.get(currentIndex)
+                        if (root.currentWallpaper === model.pluginName) {
+                            return;
+                        }
                         root.currentWallpaper = model.pluginName
                         configDialog.currentWallpaper = model.pluginName
                         main.sourceFile = model.source
