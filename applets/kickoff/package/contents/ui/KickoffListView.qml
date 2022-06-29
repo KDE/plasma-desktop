@@ -10,6 +10,7 @@
 import QtQuick 2.15
 import QtQml 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PC2
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.kirigami 2.16 as Kirigami
 
@@ -129,7 +130,7 @@ EmptyPage {
             imagePath: "widgets/viewitem"
             prefix: "hover"
             visible: plasmoid.rootItem.contentArea !== root
-                || ActionMenu.menu.status !== 1
+                || ActionMenu.menu.status !== PC2.DialogStatus.Open
         }
 
         delegate: KickoffItemDelegate {
@@ -201,7 +202,7 @@ EmptyPage {
             // because Plasma doesn't support Qt scaling.
             horizontalStepSize: 20 * Qt.styleHints.wheelScrollLines * PlasmaCore.Units.devicePixelRatio
             verticalStepSize: 20 * Qt.styleHints.wheelScrollLines * PlasmaCore.Units.devicePixelRatio
-            
+
             onWheel: {
                 view.movedWithWheel = true
             }
@@ -222,7 +223,7 @@ EmptyPage {
             interval: 200
             onTriggered: view.movedWithKeyboard = false
         }
-        
+
         Timer {
             id: movedWithWheelTimer
             interval: 200

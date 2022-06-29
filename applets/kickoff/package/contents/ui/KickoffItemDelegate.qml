@@ -25,7 +25,6 @@ import QtQml 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Templates 2.15 as T
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PC2
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.kirigami 2.16 as Kirigami
 import "code/tools.js" as Tools
@@ -46,7 +45,6 @@ T.ItemDelegate {
     readonly property bool hasActionList: model && (model.favoriteId !== null || ("hasActionList" in model && model.hasActionList === true))
     property var actionList: null
     property bool isSearchResult: false
-    readonly property bool menuClosed: ActionMenu.menu.status === PC2.DialogStatus.Closed
 
     property bool dragEnabled: enabled && !isCategory
         && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
