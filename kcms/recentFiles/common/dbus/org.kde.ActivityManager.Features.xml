@@ -1,0 +1,21 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.kde.ActivityManager.Features">
+    <method name="IsFeatureOperational">
+      <arg type="b" direction="out"/>
+      <arg name="feature" type="s" direction="in"/>
+    </method>
+    <method name="ListFeatures">
+      <arg type="as" direction="out"/>
+      <arg name="module" type="s" direction="in"/>
+    </method>
+    <method name="GetValue">
+      <arg type="v" direction="out"/>
+      <arg name="property" type="s" direction="in"/>
+    </method>
+    <method name="SetValue">
+      <arg name="property" type="s" direction="in"/>
+      <arg name="value" type="v" direction="in"/>
+    </method>
+  </interface>
+</node>

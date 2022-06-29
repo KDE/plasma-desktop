@@ -24,7 +24,13 @@ KCM.SimpleKCM {
             Kirigami.FormData.label: i18n("Visual behavior:")
             text: i18n("Display informational tooltips on mouse hover")
             checked: kcm.plasmaSettings.delay > 0
-            onCheckedChanged: kcm.plasmaSettings.delay = (checked ? 0.7 : -1)
+            onCheckedChanged: {
+                if (checked) {
+                    kcm.plasmaSettings.delay = 0.7
+                } else {
+                    kcm.plasmaSettings.delay = -1
+                }
+            }
 
             KCM.SettingStateBinding {
                 configObject: kcm.plasmaSettings
@@ -50,7 +56,7 @@ KCM.SimpleKCM {
 
         // We want to show the slider in a logarithmic way. ie
         // move from 4x, 3x, 2x, 1x, 0.5x, 0.25x, 0.125x
-        // 0 is a special case, which means "instant speed / no animations"
+        // 0 is a special case
         ColumnLayout {
             Kirigami.FormData.label: i18n("Animation speed:")
             Kirigami.FormData.buddyFor: slider
@@ -62,11 +68,18 @@ KCM.SimpleKCM {
                 to: 4
                 stepSize: 0.5
                 snapMode: QQC2.Slider.SnapAlways
-                onMoved: kcm.globalsSettings.animationDurationFactor =
-                    (value === to) ? 0 : (1.0 / Math.pow(2, value))
-                value: (kcm.globalsSettings.animationDurationFactor === 0)
-                    ? slider.to
-                    : -(Math.log(kcm.globalsSettings.animationDurationFactor) / Math.log(2))
+                onMoved: {
+                    if(value === to) {
+                        kcm.globalsSettings.animationDurationFactor = 0;
+                    } else {
+                        kcm.globalsSettings.animationDurationFactor = 1.0 / Math.pow(2, value);
+                    }
+                }
+                value: if (kcm.globalsSettings.animationDurationFactor === 0) {
+                    return slider.to;
+                } else {
+                    return -(Math.log(kcm.globalsSettings.animationDurationFactor) / Math.log(2));
+                }
 
                 KCM.SettingStateBinding {
                     configObject: kcm.globalsSettings
@@ -189,17 +202,19 @@ KCM.SimpleKCM {
             visible: primarySelectionRadio.visible
         }
 
-        QQC2.CheckBox {
-            id: primarySelectionRadio
+        RowLayout {
             Kirigami.FormData.label: i18n("Middle Click:")
-            visible: kcm.isWayland
-            text: i18n("Paste selected text")
-            checked: kcm.kwinSettings.primarySelection
-            onToggled: kcm.kwinSettings.primarySelection = checked
+            QQC2.CheckBox {
+                id: primarySelectionRadio
+                //visible: kcm.isWayland
+                text: i18n("Paste selected text")
+                checked: kcm.kwinSettings.primarySelection
+                onToggled: kcm.kwinSettings.primarySelection = checked
 
-            KCM.SettingStateBinding {
-                configObject: kcm.kwinSettings
-                settingName: "primarySelection"
+                KCM.SettingStateBinding {
+                    configObject: kcm.kwinSettings
+                    settingName: "primarySelection"
+                }
             }
         }
 
