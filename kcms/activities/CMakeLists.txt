@@ -29,16 +29,13 @@ set (KAMD_KCM_SRCS
    MainConfigurationWidget.cpp
    ActivitiesTab.cpp
    SwitchingTab.cpp
-   PrivacyTab.cpp
 
-   BlacklistedApplicationsModel.cpp
    ExtraActivitiesInterface.cpp
    )
 
 ki18n_wrap_ui (
    KAMD_KCM_SRCS
    ui/MainConfigurationWidgetBase.ui
-   ui/PrivacyTabBase.ui
    ui/SwitchingTabBase.ui
    )
 
@@ -100,7 +97,6 @@ install (
    DIRECTORY
 
    qml/activitiesTab
-   qml/privacyTab
 
    DESTINATION ${KAMD_KCM_DATADIR}/qml
    )
