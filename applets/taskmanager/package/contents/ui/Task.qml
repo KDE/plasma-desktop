@@ -237,6 +237,7 @@ MouseArea {
 
     Keys.onReturnPressed: TaskTools.activateTask(modelIndex(), model, event.modifiers, task)
     Keys.onEnterPressed: Keys.onReturnPressed(event);
+    Keys.onSpacePressed: Keys.onReturnPressed(event);
 
     function modelIndex() {
         return (inPopup ? tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex, index)
