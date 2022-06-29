@@ -63,7 +63,7 @@ AbstractButton {
         }
         PC3.Label {
             id: label
-            visible: plasmoid.formFactor === PlasmaCore.Types.Horizontal
+            visible: plasmoid.formFactor === PlasmaCore.Types.Horizontal && plasmoid.configuration.showText
 
             text: controlRoot.Kirigami.MnemonicData.richTextLabel
 
