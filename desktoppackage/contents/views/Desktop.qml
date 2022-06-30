@@ -116,17 +116,16 @@ Item {
                     return l > 0.2 && l < 0.8;
                 }
             }
+
+            property Connections repaintConnection: Connections {
+                target: root.containment.wallpaper
+                function onRepaintNeeded() {
+                    imageColors.update();
+                }
+            }
         }
 
         onLoaded: item.update()
-    }
-
-    Connections {
-        enabled: wallpaperColors.item
-        target: root.containment.wallpaper
-        function onRepaintNeeded() {
-            wallpaperColors.item.update();
-        }
     }
 
     Timer {
