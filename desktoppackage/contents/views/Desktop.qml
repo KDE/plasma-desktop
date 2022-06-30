@@ -69,7 +69,53 @@ Item {
         asynchronous: true
 
         sourceComponent: Kirigami.ImageColors {
+            id: imageColors
             source: root.containment.wallpaper
+
+            property Binding colorBinding: Binding {
+                target: desktop
+                property: "accentColor"
+                value: {
+                    if (isCandidateColor(imageColors.dominant)) {
+                        return imageColors.dominant;
+                    }
+
+                    // If the color is too light or too dark, use highlight instead
+                    if (isCandidateColor(imageColors.highlight)) {
+                        return imageColors.highlight
+                    }
+
+                    // Neither is suitable, check average color.
+                    if (isCandidateColor(imageColors.average)) {
+                        return imageColors.average;
+                    }
+
+                    // Adjust the lightness of the average color
+                    if (lightness(imageColors.average) >= 0.8) {
+                        return Qt.darker(imageColors.average, 1.25);
+                    } else {
+                        return Qt.lighter(imageColors.average, 1.25);
+                    }
+                }
+
+                /**
+                * Converts RGB color to HSL, and only returns the lightness value (0-1)
+                */
+                function lightness(color) {
+                    const r = color.r, g = color.g, b = color.b;
+                    const l = Math.max(r, g, b);
+                    const s = l - Math.min(r, g, b);
+                    return (2 * l - s) / 2;
+                }
+
+                /**
+                * Checks the color is suitable as an accent color
+                */
+                function isCandidateColor(color) {
+                    const l = lightness(color);
+                    return l > 0.2 && l < 0.8;
+                }
+            }
         }
 
         onLoaded: item.update()
@@ -280,51 +326,5 @@ Item {
     Component.onCompleted: {
         //configure the view behavior
         desktop.windowType = Shell.Desktop.Desktop;
-    }
-
-    Binding {
-        target: desktop
-        property: "accentColor"
-        when: wallpaperColors.item
-        value: {
-            if (isCandidateColor(wallpaperColors.item.dominant)) {
-                return wallpaperColors.item.dominant;
-            }
-
-            // If the color is too light or too dark, use highlight instead
-            if (isCandidateColor(wallpaperColors.item.highlight)) {
-                return wallpaperColors.item.highlight
-            }
-
-            // Neither is suitable, check average color.
-            if (isCandidateColor(wallpaperColors.item.average)) {
-                return wallpaperColors.item.average;
-            }
-
-            // Adjust the lightness of the average color
-            if (lightness(wallpaperColors.item.average) >= 0.8) {
-                return Qt.darker(wallpaperColors.item.average, 1.25);
-            } else {
-                return Qt.lighter(wallpaperColors.item.average, 1.25);
-            }
-        }
-
-        /**
-         * Converts RGB color to HSL, and only returns the lightness value (0-1)
-         */
-        function lightness(color) {
-            const r = color.r, g = color.g, b = color.b;
-            const l = Math.max(r, g, b);
-            const s = l - Math.min(r, g, b);
-            return (2 * l - s) / 2;
-        }
-
-        /**
-         * Checks the color is suitable as an accent color
-         */
-        function isCandidateColor(color) {
-            const l = lightness(color);
-            return l > 0.2 && l < 0.8;
-        }
     }
 }
