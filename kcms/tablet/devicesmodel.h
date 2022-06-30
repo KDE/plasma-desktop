@@ -26,7 +26,6 @@ public:
     void defaults();
     bool isSaveNeeded() const;
     bool isDefaults() const;
-    static DevicesModel *self();
 
 private Q_SLOTS:
     void onDeviceAdded(const QString &sysName);

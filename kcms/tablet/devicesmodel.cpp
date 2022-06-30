@@ -11,12 +11,6 @@
 
 #include "logging.h"
 
-DevicesModel *DevicesModel::self()
-{
-    static DevicesModel s_self;
-    return &s_self;
-}
-
 DevicesModel::DevicesModel(QObject *parent)
     : QAbstractListModel(parent)
 {
