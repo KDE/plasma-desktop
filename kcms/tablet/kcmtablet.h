@@ -10,12 +10,15 @@
 
 #include <KSharedConfig>
 
+#include "devicesmodel.h"
+
 class TabletSettings;
 class TabletData;
 
 class Tablet : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
+    Q_PROPERTY(DevicesModel *devicesModel READ devicesModel CONSTANT)
 
 public:
     explicit Tablet(QObject *parent = nullptr, const QVariantList &list = {});
@@ -27,5 +30,10 @@ public:
     bool isSaveNeeded() const override;
     bool isDefaults() const override;
 
+    DevicesModel *devicesModel() const;
+
+private:
     void refreshNeedsSave();
+
+    DevicesModel *m_devicesModel;
 };

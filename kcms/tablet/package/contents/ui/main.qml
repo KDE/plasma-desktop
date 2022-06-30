@@ -32,10 +32,10 @@ SimpleKCM {
         QQC2.ComboBox {
             id: combo
             Kirigami.FormData.label: i18nd("kcmtablet", "Device:")
-            model: DevicesModel
+            model: kcm.devicesModel
 
             onCurrentIndexChanged: {
-                parent.device = DevicesModel.deviceAt(combo.currentIndex)
+                parent.device = kcm.devicesModel.deviceAt(combo.currentIndex)
             }
         }
 
