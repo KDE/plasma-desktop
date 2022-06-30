@@ -6,6 +6,8 @@
 
 #include "kcm_componentchooser.h"
 
+#include <QApplication>
+
 #include <KAboutData>
 #include <KBuildSycocaProgressDialog>
 #include <KLocalizedString>
@@ -87,7 +89,7 @@ void KcmComponentChooser::load()
 void KcmComponentChooser::save()
 {
     m_data->save();
-    KBuildSycocaProgressDialog::rebuildKSycoca(nullptr);
+    KBuildSycocaProgressDialog::rebuildKSycoca(QApplication::activeWindow());
 }
 
 bool KcmComponentChooser::isDefaults() const
