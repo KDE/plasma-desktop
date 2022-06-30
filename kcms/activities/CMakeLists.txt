@@ -3,11 +3,11 @@ project (KCMActivities)
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_activities5\")
 
 find_package (Qt${QT_MAJOR_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Sql Qml DBus)
-find_package (KF5KCMUtils ${KF5_DEP_VERSION} CONFIG REQUIRED)
-find_package (KF5Declarative ${KF5_DEP_VERSION} CONFIG REQUIRED)
-find_package (KF5XmlGui ${KF5_DEP_VERSION} CONFIG REQUIRED)
-find_package (KF5GlobalAccel ${KF5_DEP_VERSION} CONFIG REQUIRED)
-find_package (KF5Activities ${KF5_DEP_VERSION} CONFIG REQUIRED)
+find_package (KF5KCMUtils ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package (KF5Declarative ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package (KF5XmlGui ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package (KF5GlobalAccel ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package (KF5Activities ${KF5_MIN_VERSION} CONFIG REQUIRED)
 
 set (KAMD_KCM_DATADIR
    ${KDE_INSTALL_DATADIR_KF5}/kactivitymanagerd/workspace/settings/
