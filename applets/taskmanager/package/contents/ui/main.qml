@@ -44,8 +44,8 @@ MouseArea {
         }
     }
 
-    Layout.fillWidth: true
-    Layout.fillHeight: true
+    Layout.fillWidth: tasks.vertical ? true : plasmoid.configuration.fill
+    Layout.fillHeight: !tasks.vertical ? true : plasmoid.configuration.fill
     Layout.minimumWidth: tasks.vertical ? 0 : LayoutManager.preferredMinWidth()
     Layout.minimumHeight: !tasks.vertical ? 0 : LayoutManager.preferredMinHeight()
 

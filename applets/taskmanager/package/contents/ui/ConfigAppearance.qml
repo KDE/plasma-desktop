@@ -23,6 +23,7 @@ Kirigami.FormLayout {
     property alias cfg_showToolTips: showToolTips.checked
     property alias cfg_highlightWindows: highlightWindows.checked
     property bool cfg_indicateAudioStreams
+    property alias cfg_fill: fill.checked
     property alias cfg_maxStripes: maxStripes.value
     property alias cfg_forceStripes: forceStripes.checked
     property int cfg_iconSpacing: 0
@@ -50,6 +51,11 @@ Kirigami.FormLayout {
         checked: cfg_indicateAudioStreams && plasmaPaAvailable
         onCheckedChanged: cfg_indicateAudioStreams = checked
         enabled: plasmaPaAvailable
+    }
+
+    CheckBox {
+        id: fill
+        text: i18nc("@option:check", "Fill free space on Panel")
     }
 
     Item {
