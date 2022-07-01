@@ -168,9 +168,9 @@ T.ItemDelegate {
             leftMargin: root.textUnderIcon ? 0 : root.implicitContentWidth + root.spacing
             baselineOffset: root.textUnderIcon ? implicitHeight : 0
         }
-        visible: !textUnderIcon && text.length > 0 && text !== root.text && label.lineCount === 1
+        visible: !textUnderIcon && text.length > 0
         enabled: false
-        text: root.description
+        text: root.Accessible.description
         elide: Text.ElideRight
         horizontalAlignment: root.textUnderIcon ? Text.AlignHCenter : Text.AlignRight
         verticalAlignment: root.textUnderIcon ? Text.AlignTop : Text.AlignVCenter
@@ -253,14 +253,15 @@ T.ItemDelegate {
     }
 
     PC3.ToolTip.text: {
-        if (label.truncated && descriptionLabel.truncated) {
+        const showDescription = descriptionLabel.truncated
+            || (textUnderIcon && Accessible.description.length > 0)
+        if (label.truncated && showDescription) {
             return `${text} (${description})`
-        } else if (descriptionLabel.truncated) {
+        } else if (showDescription) {
             return description
-        } else {
-            return text
         }
+        return ""
     }
-    PC3.ToolTip.visible: mouseArea.containsMouse && ((label.visible && label.truncated) || (descriptionLabel.visible && descriptionLabel.truncated))
+    PC3.ToolTip.visible: mouseArea.containsMouse && PC3.ToolTip.text.length > 0
     PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
 }
