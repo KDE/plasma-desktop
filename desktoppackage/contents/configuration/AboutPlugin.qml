@@ -54,9 +54,14 @@ Kirigami.ScrollablePage {
                     visible: modelData.webAddress
                     width: height
                     icon.name: "globe"
+
+                    display: QQC2.AbstractButton.IconOnly
+                    text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip %1 url", "Open website %1", modelData.webAddress)
+
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                     QQC2.ToolTip.visible: hovered
                     QQC2.ToolTip.text: modelData.webAddress
+
                     onClicked: Qt.openUrlExternally(modelData.webAddress)
                 }
             }
