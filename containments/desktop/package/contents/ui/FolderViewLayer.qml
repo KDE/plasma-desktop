@@ -425,7 +425,7 @@ FocusScope {
                 Folder.MenuHelper.setMenu(plasmoidAction, folderView.model.newMenu);
                 plasmoid.setActionSeparator("separator1");
 
-                plasmoid.setAction("viewProperties", i18n("Icons"), "preferences-desktop-icons");
+                plasmoid.setAction("viewProperties", i18n("Icons"), "view-list-icons");
                 Folder.MenuHelper.setMenu(plasmoid.action("viewProperties"), viewPropertiesMenu.menu);
             } else {
                 plasmoidAction.triggered.connect(modelAction.trigger);
