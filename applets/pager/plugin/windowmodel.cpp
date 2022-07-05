@@ -72,7 +72,7 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
             windowGeo.setBottomRight(windowGeo.bottomRight() / ratio);
         }
 
-        if (KWindowSystem::mapViewport()) {
+        if (KWindowSystem::isPlatformX11() && KWindowSystem::mapViewport()) {
             int x = windowGeo.center().x() % desktopSize.width();
             int y = windowGeo.center().y() % desktopSize.height();
 
