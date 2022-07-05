@@ -122,8 +122,6 @@ EmptyPage {
                     && plasmoid.rootItem.searchField.activeFocus) ? 1 : 0.5
             imagePath: "widgets/viewitem"
             prefix: "hover"
-            visible: plasmoid.rootItem.contentArea !== root
-                || ActionMenu.menu.status !== 1
         }
 
         delegate: KickoffItemDelegate {
