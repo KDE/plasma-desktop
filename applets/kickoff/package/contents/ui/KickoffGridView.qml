@@ -127,8 +127,6 @@ EmptyPage {
             height: view.cellHeight
             imagePath: "widgets/viewitem"
             prefix: "hover"
-            visible: plasmoid.rootItem.contentArea !== root
-                || ActionMenu.menu.status !== PC2.DialogStatus.Open
         }
 
         delegate: KickoffItemDelegate {
