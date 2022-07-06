@@ -59,6 +59,7 @@ InputDevice::InputDevice(QString dbusName)
     connect(this, &InputDevice::leftHandedChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::orientationChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::outputNameChanged, this, &InputDevice::needsSaveChanged);
+    connect(this, &InputDevice::outputAreaChanged, this, &InputDevice::needsSaveChanged);
 }
 
 InputDevice::~InputDevice() = default;
@@ -68,11 +69,12 @@ void InputDevice::save()
     m_orientation.save();
     m_outputName.save();
     m_leftHanded.save();
+    m_outputArea.save();
 }
 
 bool InputDevice::isSaveNeeded() const
 {
-    return m_leftHanded.changed() || m_orientation.changed() || m_outputName.changed();
+    return m_leftHanded.changed() || m_orientation.changed() || m_outputName.changed() || m_outputArea.changed();
 }
 
 void InputDevice::defaults()
@@ -80,11 +82,12 @@ void InputDevice::defaults()
     m_leftHanded.resetFromDefaults();
     m_orientation.resetFromDefaults();
     m_outputName.resetFromDefaults();
+    m_outputArea.resetFromDefaults();
 }
 
 bool InputDevice::isDefaults() const
 {
-    return m_leftHanded.isDefaults() && m_orientation.isDefaults() && m_outputName.isDefaults();
+    return m_leftHanded.isDefaults() && m_orientation.isDefaults() && m_outputName.isDefaults() && m_outputArea.isDefaults();
 }
 
 void InputDevice::load()
@@ -92,6 +95,7 @@ void InputDevice::load()
     m_orientation.resetFromSaved();
     m_leftHanded.resetFromSaved();
     m_outputName.resetFromSaved();
+    m_outputArea.resetFromSaved();
 }
 
 void InputDevice::setOrientation(int ori)
@@ -107,4 +111,9 @@ void InputDevice::setOutputName(const QString &outputName)
 void InputDevice::setLeftHanded(bool set)
 {
     m_leftHanded.set(set);
+}
+
+void InputDevice::setOutputArea(const QRectF &outputArea)
+{
+    m_outputArea.set(outputArea);
 }

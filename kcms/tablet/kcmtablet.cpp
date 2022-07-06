@@ -64,20 +64,27 @@ class OutputsModel : public QStandardItemModel
 public:
     OutputsModel()
     {
-        appendRow(new QStandardItem(i18n("Follow the active screen")));
-
         auto screens = qGuiApp->screens();
+        auto it = new QStandardItem(i18n("Follow the active screen"));
+        it->setData(screens[0]->physicalSize(), Qt::UserRole + 1); // we use the first display to give an idea
+        it->setData(screens[0]->size(), Qt::UserRole + 2);
+        appendRow(it);
+
         for (auto screen : screens) {
             auto geo = screen->geometry();
             auto it =
                 new QStandardItem(i18nc("model - (x,y widthxheight)", "%1 - (%2,%3 %4×%5)", screen->model(), geo.x(), geo.y(), geo.width(), geo.height()));
             it->setData(screen->name(), Qt::UserRole);
+            it->setData(screen->physicalSize(), Qt::UserRole + 1);
+            it->setData(screen->size(), Qt::UserRole + 2);
             appendRow(it);
         }
 
         setItemRoleNames({
             {Qt::DisplayRole, "display"},
             {Qt::UserRole, "name"},
+            {Qt::UserRole + 1, "physicalSize"},
+            {Qt::UserRole + 2, "size"},
         });
     }
 
@@ -98,12 +105,27 @@ public:
     }
 };
 
+/// This model lists the different ways the tablet will fit onto its output
+class OutputsFittingModel : public QStandardItemModel
+{
+public:
+    OutputsFittingModel()
+    {
+        appendRow(new QStandardItem(i18n("Fit to Output")));
+        appendRow(new QStandardItem(i18n("Fit Output in tablet")));
+        appendRow(new QStandardItem(i18n("Custom size")));
+
+        setItemRoleNames({{Qt::DisplayRole, "display"}});
+    }
+};
+
 Tablet::Tablet(QObject *parent, const QVariantList &list)
     : ManagedConfigModule(parent, list)
     , m_devicesModel(new DevicesModel(this))
 {
     qmlRegisterType<OutputsModel>("org.kde.plasma.tablet.kcm", 1, 0, "OutputsModel");
     qmlRegisterType<OrientationsModel>("org.kde.plasma.tablet.kcm", 1, 0, "OrientationsModel");
+    qmlRegisterType<OutputsFittingModel>("org.kde.plasma.tablet.kcm", 1, 1, "OutputsFittingModel");
     qmlRegisterAnonymousType<InputDevice>("org.kde.plasma.tablet.kcm", 1);
 
     setAboutData(new KAboutData(QStringLiteral("kcm_tablet"), i18n("Tablet"), QStringLiteral("1.0"), i18n("Configure drawing tablets"), KAboutLicense::LGPL));
