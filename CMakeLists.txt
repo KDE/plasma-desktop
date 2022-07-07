@@ -10,7 +10,7 @@ set(KF5_MIN_VERSION "5.94")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 set(ACCOUNTSQT_DEP_VERSION "1.13")
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
@@ -211,6 +211,9 @@ set_package_properties(GLIB2 PROPERTIES
 pkg_check_modules(IBUS "ibus-1.0>=1.5.0" IMPORTED_TARGET)
 pkg_check_modules(GOBJECT gobject-2.0 IMPORTED_TARGET)
 pkg_check_modules(SCIM scim IMPORTED_TARGET)
+
+find_package(QCoro5 REQUIRED COMPONENTS Core)
+qcoro_enable_coroutines()
 
 ecm_setup_version(${PROJECT_VERSION} VARIABLE_PREFIX PLASMA VERSION_HEADER plasma_version.h)
 

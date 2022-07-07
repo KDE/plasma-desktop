@@ -31,8 +31,10 @@
 #include "kactivities/info.h"
 
 #include "common/dbus/common.h"
-#include "utils/continue_with.h"
 #include "utils/d_ptr_implementation.h"
+
+#include <QCoroCore>
+#include <QCoroFuture>
 
 class Dialog::Private
 {
@@ -251,14 +253,11 @@ void Dialog::save()
     }
 }
 
-void Dialog::create()
+QCoro::Task<void> Dialog::create()
 {
-    using namespace kamd::utils;
-    continue_with(d->activities.addActivity(activityName()), [this](const optional_view<QString> &activityId) {
-        if (activityId.is_initialized()) {
-            saveChanges(activityId.get());
-        }
-    });
+    const QString activityId = co_await d->activities.addActivity(activityName());
+
+    saveChanges(activityId);
 }
 
 void Dialog::saveChanges(const QString &activityId)

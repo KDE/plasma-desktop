@@ -18,9 +18,6 @@
 #include "common/dbus/common.h"
 #include "features_interface.h"
 
-#define ENABLE_QJSVALUE_CONTINUATION
-#include "utils/continue_with.h"
-
 class ExtraActivitiesInterface::Private
 {
 public:

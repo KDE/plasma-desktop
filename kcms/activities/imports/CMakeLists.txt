@@ -37,6 +37,7 @@ target_link_libraries (
    KF5::ConfigCore
    KF5::GlobalAccel
    KF5::WidgetsAddons
+   QCoro::Core
    )
 
 ## install

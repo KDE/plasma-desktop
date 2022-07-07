@@ -10,6 +10,8 @@
 #include <QDialog>
 #include <QKeySequence>
 
+#include <QCoroCore>
+
 #include "utils/d_ptr.h"
 
 class Dialog : public QDialog
@@ -46,7 +48,7 @@ public:
 
 public Q_SLOTS:
     void save();
-    void create();
+    QCoro::Task<void> create();
     void saveChanges(const QString &activityId);
 
 protected:
