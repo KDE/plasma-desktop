@@ -386,14 +386,37 @@ MouseArea {
                 width: pagerItemGrid.columnWidth
                 height: pagerItemGrid.rowHeight
 
-                PlasmaCore.FrameSvgItem {
-                    id: desktopFrame
+                // These states match the set of SVG prefixes for the "widgets/pager" below.
+                state: {
+                    if ((desktopMouseArea.enabled && desktopMouseArea.containsMouse)
+                            || (root.dragging && root.dragId === desktopId)) {
+                        return "hover";
+                    } else if (active) {
+                        return "active";
+                    } else {
+                        return "normal";
+                    }
+                }
 
+                component PagerFrame : PlasmaCore.FrameSvgItem {
                     anchors.fill: parent
-                    z: 2 // Above window outlines, but below label
                     imagePath: "widgets/pager"
-                    prefix: (desktopMouseArea.enabled && desktopMouseArea.containsMouse) || (root.dragging && root.dragId === desktop.desktopId) ?
-                                "hover" : (desktop.active ? "active" : "normal")
+                    opacity: desktop.state === usedPrefix ? 1 : 0
+                    Behavior on opacity { OpacityAnimator { duration: PlasmaCore.Units.longDuration; easing.type: Easing.OutCubic } }
+                }
+
+                PagerFrame {
+                    id: desktopFrame
+                    z: 2 // Above window outlines, but below label
+                    prefix: "hover"
+                }
+                PagerFrame {
+                    z: 3
+                    prefix: "active"
+                }
+                PagerFrame {
+                    z: 4
+                    prefix: "normal"
                 }
 
                 DropArea {
@@ -488,6 +511,13 @@ MouseArea {
                             border.width: Math.round(PlasmaCore.Units.devicePixelRatio)
                             border.color: (model.IsActive === true) ? windowActiveBorderColor
                                                     : windowInactiveBorderColor
+
+                            Behavior on x      { NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.OutCubic } }
+                            Behavior on y      { NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.OutCubic } }
+                            Behavior on width  { NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.OutCubic } }
+                            Behavior on height { NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.OutCubic } }
+                            Behavior on color        { ColorAnimation  { duration: PlasmaCore.Units.longDuration; easing.type: Easing.OutCubic } }
+                            Behavior on border.color { ColorAnimation  { duration: PlasmaCore.Units.longDuration; easing.type: Easing.OutCubic } }
 
                             MouseArea {
                                 id: windowMouseArea
