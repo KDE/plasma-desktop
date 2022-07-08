@@ -450,10 +450,10 @@ MouseArea {
                             onVisibleNameChanged: desktop.updateSubTextIfNeeded()
 
                             /* since we move clipRect with 1, move it back */
-                            x: (geometry.x * pagerItemGrid.widthScaleFactor) - Math.round(PlasmaCore.Units.devicePixelRatio)
-                            y: (geometry.y * pagerItemGrid.heightScaleFactor) - Math.round(PlasmaCore.Units.devicePixelRatio)
-                            width: geometry.width * pagerItemGrid.widthScaleFactor
-                            height: geometry.height * pagerItemGrid.heightScaleFactor
+                            x: Math.round(geometry.x * pagerItemGrid.widthScaleFactor) - Math.round(PlasmaCore.Units.devicePixelRatio)
+                            y: Math.round(geometry.y * pagerItemGrid.heightScaleFactor) - Math.round(PlasmaCore.Units.devicePixelRatio)
+                            width: Math.round(geometry.width * pagerItemGrid.widthScaleFactor)
+                            height: Math.round(geometry.height * pagerItemGrid.heightScaleFactor)
                             visible: model.IsMinimized !== true
                             color: {
                                 if (desktop.active) {
