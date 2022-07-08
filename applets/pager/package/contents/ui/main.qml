@@ -253,6 +253,7 @@ MouseArea {
     Grid {
         id: pagerItemGrid
 
+        anchors.centerIn: parent
         spacing: PlasmaCore.Units.devicePixelRatio
         rows: effectiveRows
         columns: effectiveColumns
