@@ -493,7 +493,7 @@ MouseArea {
                                 anchors.fill: parent
 
                                 drag.target: windowRect
-                                drag.axis: Drag.XandYAxis
+                                drag.axis: Drag.XAndYAxis
                                 drag.minimumX: -windowRect.width/2
                                 drag.maximumX: root.width - windowRect.width/2
                                 drag.minimumY: -windowRect.height/2
