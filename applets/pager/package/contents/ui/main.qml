@@ -388,8 +388,11 @@ MouseArea {
                         dragTimer.start();
                     }
                     onDragLeave: {
-                        root.dragSwitchDesktopIndex = -1;
-                        dragTimer.stop();
+                        // new onDragEnter may happen before an old onDragLeave
+                        if (root.dragSwitchDesktopIndex === index) {
+                            root.dragSwitchDesktopIndex = -1;
+                            dragTimer.stop();
+                        }
                     }
                     onDrop: {
                         pagerModel.drop(event.mimeData, event.modifiers, desktop.desktopId);
