@@ -19,8 +19,8 @@ import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
 MouseArea {
     id: root
 
-    property bool isActivityPager: (Plasmoid.pluginName === "org.kde.plasma.activitypager")
-    property bool vertical: (Plasmoid.formFactor === PlasmaCore.Types.Vertical)
+    readonly property bool isActivityPager: Plasmoid.pluginName === "org.kde.plasma.activitypager"
+    readonly property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     readonly property real aspectRatio: (((pagerModel.pagerItemSize.width * pagerItemGrid.effectiveColumns)
         + ((pagerItemGrid.effectiveColumns * pagerItemGrid.spacing) - pagerItemGrid.spacing))
@@ -51,7 +51,7 @@ MouseArea {
 
     hoverEnabled: true
 
-    function colorWithAlpha(color, alpha) {
+    function colorWithAlpha(color: color, alpha: real): color {
         return Qt.rgba(color.r, color.g, color.b, alpha)
     }
 
@@ -185,17 +185,17 @@ MouseArea {
         id: desktopLabelComponent
 
         PlasmaComponents3.Label {
+            required property int index
+            required property var model
+            required property PlasmaCore.FrameSvgItem desktopFrame
+
             anchors {
                 fill: parent
                 topMargin: desktopFrame.margins.top
-                bottomMargin: desktopFrame.margins.bottom
                 leftMargin: desktopFrame.margins.left
                 rightMargin: desktopFrame.margins.right
+                bottomMargin: desktopFrame.margins.bottom
             }
-
-            property int index: 0
-            property var model: null
-            property Item desktopFrame: null
 
             text: Plasmoid.configuration.displayedText ? model.display : index + 1
 
@@ -239,8 +239,8 @@ MouseArea {
         id: dragTimer
         interval: 1000
         onTriggered: {
-            if (dragSwitchDesktopIndex !== -1 && dragSwitchDesktopIndex !== pagerModel.currentPage) {
-                pagerModel.changePage(dragSwitchDesktopIndex);
+            if (root.dragSwitchDesktopIndex !== -1 && root.dragSwitchDesktopIndex !== pagerModel.currentPage) {
+                pagerModel.changePage(root.dragSwitchDesktopIndex);
             }
         }
     }
@@ -302,11 +302,10 @@ MouseArea {
         readonly property real widthScaleFactor: columnWidth / pagerModel.pagerItemSize.width
         readonly property real heightScaleFactor: rowHeight / pagerModel.pagerItemSize.height
 
-
         states: [
             State {
                 name: "vertical"
-                when: vertical
+                when: root.vertical
                 PropertyChanges {
                     target: pagerItemGrid
                     innerSpacing: effectiveColumns
@@ -322,13 +321,14 @@ MouseArea {
 
         Repeater {
             id: repeater
+
             model: pagerModel
 
             PlasmaCore.ToolTipArea {
                 id: desktop
 
-                property string desktopId: isActivityPager ? model.TasksModel.activity : model.TasksModel.virtualDesktop
-                property bool active: (index === pagerModel.currentPage)
+                readonly property string desktopId: isActivityPager ? model.TasksModel.activity : model.TasksModel.virtualDesktop
+                readonly property bool active: (index === pagerModel.currentPage)
 
                 mainText: model.display
                 // our ToolTip has maximumLineCount of 8 which doesn't fit but QML doesn't
@@ -392,7 +392,7 @@ MouseArea {
                     anchors.fill: parent
                     z: 2 // Above window outlines, but below label
                     imagePath: "widgets/pager"
-                    prefix: (desktopMouseArea.enabled && desktopMouseArea.containsMouse) || (root.dragging && root.dragId == desktopId) ?
+                    prefix: (desktopMouseArea.enabled && desktopMouseArea.containsMouse) || (root.dragging && root.dragId === desktop.desktopId) ?
                                 "hover" : (desktop.active ? "active" : "normal")
                 }
 
@@ -418,14 +418,15 @@ MouseArea {
 
                 MouseArea {
                     id: desktopMouseArea
+
                     anchors.fill: parent
-                    hoverEnabled : true
+                    hoverEnabled: true
                     activeFocusOnTab: true
                     onClicked: pagerModel.changePage(index);
                     Accessible.name: Plasmoid.configuration.displayedText ? model.display : i18n("Desktop %1", (index + 1))
                     Accessible.description: Plasmoid.configuration.displayedText ? i18n("Activate %1", model.display) : i18n("Activate %1", (index + 1))
                     Accessible.role: Accessible.Button
-                    Keys.onPressed: {
+                    Keys.onPressed: event => {
                         switch (event.key) {
                         case Qt.Key_Space:
                         case Qt.Key_Enter:
@@ -439,12 +440,12 @@ MouseArea {
 
                 Item {
                     id: clipRect
+
                     x: Math.round(PlasmaCore.Units.devicePixelRatio)
                     y: Math.round(PlasmaCore.Units.devicePixelRatio)
+                    z: 1 // Below FrameSvg
                     width: desktop.width - 2 * x
                     height: desktop.height - 2 * y
-
-                    z: 1 // Below FrameSvg
 
                     Repeater {
                         id: windowRectRepeater
@@ -542,7 +543,7 @@ MouseArea {
 
                             Component.onCompleted: {
                                 if (Plasmoid.configuration.showWindowIcons) {
-                                    windowIconComponent.createObject(windowRect, {"model": model});
+                                    windowIconComponent.createObject(windowRect, { model });
                                 }
                             }
                         }
@@ -551,7 +552,7 @@ MouseArea {
 
                 Component.onCompleted: {
                     if (Plasmoid.configuration.displayedText < 2) {
-                        desktopLabelComponent.createObject(desktop, {"index": index, "model": model, "desktopFrame": desktopFrame});
+                        desktopLabelComponent.createObject(desktop, { index, model, desktopFrame });
                     }
                 }
 
@@ -567,9 +568,7 @@ MouseArea {
             if (KQuickControlsAddonsComponents.KCMShell.authorize("kcm_kwin_virtualdesktops.desktop").length > 0) {
                 Plasmoid.setAction("addDesktop", i18n("Add Virtual Desktop"), "list-add");
                 Plasmoid.setAction("removeDesktop", i18n("Remove Virtual Desktop"), "list-remove");
-                Plasmoid.action("removeDesktop").enabled = Qt.binding(function() {
-                    return repeater.count > 1;
-                });
+                Plasmoid.action("removeDesktop").enabled = Qt.binding(() => repeater.count > 1);
 
                 Plasmoid.setAction("openKCM", i18n("Configure Virtual Desktops…"), "configure");
             }
