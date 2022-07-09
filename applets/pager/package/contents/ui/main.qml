@@ -78,15 +78,27 @@ MouseArea {
         ActivitySwitcher.Backend.toggleActivityManager()
     }
 
+    function sanitize(input: string): string {
+        // Based on QQuickStyledTextPrivate::parseEntity
+        const table = {
+            '>': '&gt;',
+            '<': '&lt;',
+            '&': '&amp;',
+            "'": '&apos;',
+            '"': '&quot;',
+            '\u00a0': '&nbsp;',
+        };
+        return input.replace(/[<>&'"\u00a0]/g, c => table[c]);
+    }
+
     function generateWindowList(windows) {
         // if we have 5 windows, we would show "4 and another one" with the
         // hint that there's 1 more taking the same amount of space than just showing it
         const maximum = windows.length === 5 ? 5 : 4
 
         let text = "<ul><li>"
-        + windows.slice(0, maximum).map(title => title.replace(/[^0-9A-Za-z ]/g,
-            c => "&#" + c.charCodeAt(0) + ";")).join("</li><li>")
-                + "</li></ul>";
+            + windows.slice(0, maximum).map(sanitize).join("</li><li>")
+            + "</li></ul>";
 
         if (windows.length > maximum) {
             text += i18np("…and %1 other window", "…and %1 other windows", windows.length - maximum)
