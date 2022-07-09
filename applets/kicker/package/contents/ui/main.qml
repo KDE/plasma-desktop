@@ -101,7 +101,9 @@ Item {
             favoritesModel.initForClient("org.kde.plasma.kicker.favorites.instance-" + plasmoid.id)
 
             if (!plasmoid.configuration.favoritesPortedToKAstats) {
-                favoritesModel.portOldFavorites(plasmoid.configuration.favoriteApps);
+                if (favoritesModel.count < 1) {
+                    favoritesModel.portOldFavorites(plasmoid.configuration.favoriteApps);
+                }
                 plasmoid.configuration.favoritesPortedToKAstats = true;
             }
 
