@@ -232,6 +232,11 @@ MouseArea {
             }
         }
     }
+    onDragSwitchDesktopIndexChanged: if (root.dragSwitchDesktopIndex === -1) {
+        dragTimer.stop();
+    } else {
+        dragTimer.restart();
+    }
 
     Grid {
         id: pagerItemGrid
@@ -385,19 +390,16 @@ MouseArea {
 
                     onDragEnter: {
                         root.dragSwitchDesktopIndex = index;
-                        dragTimer.start();
                     }
                     onDragLeave: {
                         // new onDragEnter may happen before an old onDragLeave
                         if (root.dragSwitchDesktopIndex === index) {
                             root.dragSwitchDesktopIndex = -1;
-                            dragTimer.stop();
                         }
                     }
                     onDrop: {
                         pagerModel.drop(event.mimeData, event.modifiers, desktop.desktopId);
                         root.dragSwitchDesktopIndex = -1;
-                        dragTimer.stop();
                     }
                 }
 
