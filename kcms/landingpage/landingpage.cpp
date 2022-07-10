@@ -242,7 +242,7 @@ void KCMLandingPage::programFinished(int exitCode)
             continue;
         }
 
-        const QString description = line.mid(sepIdx + 1);
+        const QString description = line.mid(sepIdx + 2);
         m_uses[modeValue][description] << s_programs[program];
     }
     p->deleteLater();
