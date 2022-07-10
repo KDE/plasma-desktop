@@ -236,7 +236,7 @@ void KCMLandingPage::programFinished(int exitCode)
 
         const QString mode = line.left(sepIdx);
         bool ok;
-        const int modeValue = modeEnum.keyToValue(qPrintable(mode), &ok);
+        const auto modeValue = static_cast<KUserFeedback::Provider::TelemetryMode>(modeEnum.keyToValue(qPrintable(mode), &ok));
         if (!ok) {
             qWarning() << "error:" << mode << "is not a valid mode";
             continue;

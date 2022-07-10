@@ -12,6 +12,7 @@
 
 #include <KPackage/Package>
 #include <KQuickAddons/ManagedConfigModule>
+#include <KUserFeedback/Provider>
 #include <QJsonArray>
 #include <QJsonValue>
 
@@ -116,7 +117,7 @@ private:
 
     MostUsedModel *m_mostUsedModel = nullptr;
 
-    QHash<int, QHash<QString, QJsonArray>> m_uses;
+    QHash<KUserFeedback::Provider::TelemetryMode, QHash<QString, QJsonArray>> m_uses;
 #if HAVE_KUSERFEEDBACK
     QJsonArray m_feedbackSources;
 #endif
