@@ -21,8 +21,8 @@ MouseArea {
         .includes(Plasmoid.location)
 
     Plasmoid.icon: Plasmoid.configuration.icon
-    Plasmoid.title: i18n("Show Desktop")
-    Plasmoid.toolTipSubText: i18n("Show the desktop by moving windows aside")
+    Plasmoid.title: i18n("Peek at Desktop")
+    Plasmoid.toolTipSubText: i18n("Temporarily reveals the Desktop by moving open windows into screen corners")
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
