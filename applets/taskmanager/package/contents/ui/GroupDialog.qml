@@ -56,6 +56,8 @@ PlasmaCore.Dialog {
         handleWheelEvents: !scrollView.overflowing
         isGroupDialog: true
 
+        Keys.onEscapePressed: groupDialog.visible = false
+
         PlasmaComponents3.ScrollView {
             id: scrollView
             anchors.fill: parent
