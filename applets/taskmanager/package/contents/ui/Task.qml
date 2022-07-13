@@ -66,7 +66,34 @@ MouseArea {
         || (!!tasks.groupDialog && tasks.groupDialog.visualParent === task)
 
     Accessible.name: task.labelText
-    Accessible.description: task.labelText ? i18n("Activate %1", task.labelText) : ""
+    Accessible.description: {
+        if (!task.labelText) {
+            return "";
+        }
+
+        if (model.IsGroupParent) {
+            switch (plasmoid.configuration.groupedTaskVisualization) {
+            case 0:
+                break; // Use the default description
+            case 1: {
+                if (plasmoid.configuration.showToolTips) {
+                    return i18nc("@info:usagetip %1 task name", "Show Task tooltip for %1", task.labelText);
+                }
+                // fallthrough
+            }
+            case 2: {
+                if (backend.windowViewAvailable) {
+                    return i18nc("@info:usagetip %1 task name", "Show windows side by side for %1", task.labelText);
+                }
+                // fallthrough
+            }
+            default:
+                return i18nc("@info:usagetip %1 task name", "Open textual list of windows for %1", task.labelText);
+            }
+        }
+
+        return i18n("Activate %1", task.labelText)
+    }
     Accessible.role: Accessible.Button
 
     onHighlightedChanged: {
