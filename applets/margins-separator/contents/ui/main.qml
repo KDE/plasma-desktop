@@ -10,18 +10,30 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-Rectangle {
+Item {
     id: root
 
-    color: Plasmoid.editMode ? PlasmaCore.Theme.buttonFocusColor : "transparent" // So that user can identify the Plasmoid in edit mode
-    Layout.minimumWidth:   Plasmoid.editMode ? units.largeSpacing : 1 // We don't have zeroSpacing and assigning 0 does not work as well
+    readonly property bool isVertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
+
+    Layout.minimumWidth: Plasmoid.editMode && !isVertical ? PlasmaCore.Units.largeSpacing : PlasmaCore.Units.devicePixelRatio
     Layout.preferredWidth: Layout.minimumWidth
     Layout.maximumWidth:   Layout.minimumWidth
 
-    Layout.minimumHeight: Layout.minimumWidth
+    Layout.minimumHeight: Plasmoid.editMode && isVertical ? PlasmaCore.Units.largeSpacing : Layout.minimumWidth
     Layout.preferredHeight: Layout.minimumHeight
     Layout.maximumHeight: Layout.minimumHeight
 
     Plasmoid.constraintHints: PlasmaCore.Types.MarginAreasSeparator
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+
+    Loader {
+        anchors.centerIn: parent
+        active: Plasmoid.editMode
+        sourceComponent: PlasmaCore.SvgItem {
+            height: root.isVertical ? PlasmaCore.Units.devicePixelRatio : Math.round(root.height / 2)
+            width: root.isVertical ? Math.round(root.width / 2) : PlasmaCore.Units.devicePixelRatio
+            svg: PlasmaCore.Svg {imagePath: "widgets/line"}
+            elementId: root.isVertical ? "vertical-line" : "horizontal-line"
+        }
+    }
 }
