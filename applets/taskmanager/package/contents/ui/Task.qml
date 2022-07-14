@@ -71,6 +71,10 @@ MouseArea {
             return "";
         }
 
+        if (model.IsLauncher) {
+            return i18nc("@info:usagetip %1 application name", "Launch %1", model.display)
+        }
+
         if (model.IsGroupParent) {
             switch (plasmoid.configuration.groupedTaskVisualization) {
             case 0:
@@ -90,10 +94,6 @@ MouseArea {
             default:
                 return i18nc("@info:usagetip %1 task name", "Open textual list of windows for %1", model.display);
             }
-        }
-
-        if (model.IsLauncher) {
-            return i18nc("@info:usagetip %1 application name", "Launch %1", model.display)
         }
 
         return i18n("Activate %1", model.display)
