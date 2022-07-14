@@ -234,7 +234,6 @@ public:
     Q_INVOKABLE void copy();
     Q_INVOKABLE void cut();
     Q_INVOKABLE void deleteSelected();
-    Q_INVOKABLE void openSelected();
     Q_INVOKABLE void undo();
     Q_INVOKABLE void refresh();
     Q_INVOKABLE void createFolder();

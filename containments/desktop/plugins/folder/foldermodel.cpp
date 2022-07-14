@@ -1635,7 +1635,7 @@ void FolderModel::createActions()
     connect(restoreFromTrash, &QAction::triggered, this, &FolderModel::restoreSelectedFromTrash);
 
     QAction *actOpen = new QAction(QIcon::fromTheme(QStringLiteral("window-new")), i18n("&Open"), this);
-    connect(actOpen, &QAction::triggered, this, &FolderModel::openSelected);
+    connect(actOpen, &QAction::triggered, this, &FolderModel::runSelected);
 
     m_actionCollection.addAction(QStringLiteral("open"), actOpen);
     m_actionCollection.addAction(QStringLiteral("cut"), cut);
@@ -2075,20 +2075,6 @@ void FolderModel::deleteSelected()
     if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Delete, KIO::JobUiDelegate::DefaultConfirmation)) {
         KIO::Job *job = KIO::del(urls);
         job->uiDelegate()->setAutoErrorHandlingEnabled(true);
-    }
-}
-
-void FolderModel::openSelected()
-{
-    if (!m_selectionModel->hasSelection()) {
-        return;
-    }
-
-    const QList<QUrl> urls = selectedUrls();
-    for (const QUrl &url : urls) {
-        auto job = new KIO::OpenUrlJob(url);
-        job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
-        job->start();
     }
 }
 
