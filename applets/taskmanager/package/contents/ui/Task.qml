@@ -65,8 +65,8 @@ MouseArea {
         || (task.contextMenu && task.contextMenu.status === PlasmaComponents.DialogStatus.Open)
         || (!!tasks.groupDialog && tasks.groupDialog.visualParent === task)
 
-    Accessible.name: task.labelText
-    Accessible.description: task.labelText ? i18n("Activate %1", task.labelText) : ""
+    Accessible.name: model.display
+    Accessible.description: model.display ? i18n("Activate %1", model.display) : ""
     Accessible.role: Accessible.Button
 
     onHighlightedChanged: {
