@@ -92,6 +92,10 @@ MouseArea {
             }
         }
 
+        if (model.IsLauncher) {
+            return i18nc("@info:usagetip %1 application name", "Launch %1", model.display)
+        }
+
         return i18n("Activate %1", model.display)
     }
     Accessible.role: Accessible.Button
