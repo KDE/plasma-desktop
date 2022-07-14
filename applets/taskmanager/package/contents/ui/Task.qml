@@ -65,9 +65,9 @@ MouseArea {
         || (task.contextMenu && task.contextMenu.status === PlasmaComponents.DialogStatus.Open)
         || (!!tasks.groupDialog && tasks.groupDialog.visualParent === task)
 
-    Accessible.name: task.labelText
+    Accessible.name: model.display
     Accessible.description: {
-        if (!task.labelText) {
+        if (!model.display) {
             return "";
         }
 
@@ -77,22 +77,22 @@ MouseArea {
                 break; // Use the default description
             case 1: {
                 if (plasmoid.configuration.showToolTips) {
-                    return i18nc("@info:usagetip %1 task name", "Show Task tooltip for %1", task.labelText);
+                    return i18nc("@info:usagetip %1 task name", "Show Task tooltip for %1", model.display);
                 }
                 // fallthrough
             }
             case 2: {
                 if (backend.windowViewAvailable) {
-                    return i18nc("@info:usagetip %1 task name", "Show windows side by side for %1", task.labelText);
+                    return i18nc("@info:usagetip %1 task name", "Show windows side by side for %1", model.display);
                 }
                 // fallthrough
             }
             default:
-                return i18nc("@info:usagetip %1 task name", "Open textual list of windows for %1", task.labelText);
+                return i18nc("@info:usagetip %1 task name", "Open textual list of windows for %1", model.display);
             }
         }
 
-        return i18n("Activate %1", task.labelText)
+        return i18n("Activate %1", model.display)
     }
     Accessible.role: Accessible.Button
 
