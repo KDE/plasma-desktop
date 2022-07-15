@@ -85,6 +85,12 @@ MouseArea {
     Keys.onEnterPressed: Keys.onReturnPressed(event);
     Keys.onSpacePressed: Keys.onReturnPressed(event);
 
+    Accessible.checkable: true
+    Accessible.checked: task.muted
+    Accessible.name: task.muted ? i18nc("@action:button", "Unmute") : i18nc("@action:button", "Mute")
+    Accessible.description: task.muted ? i18nc("@info:tooltip %1 is the window title", "Unmute %1", model.display) : i18nc("@info:tooltip %1 is the window title", "Mute %1", model.display)
+    Accessible.role: Accessible.Button
+
     PlasmaCore.FrameSvgItem {
         anchors.fill: audioStreamIcon
         visible: parent.containsMouse || parent.activeFocus
