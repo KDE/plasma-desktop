@@ -4,7 +4,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
 
@@ -51,6 +51,17 @@ DragDrop.DropArea {
     Plasmoid.onActivated: action_open()
 
     preventStealing: true
+
+    Keys.onPressed: {
+        switch (event.key) {
+        case Qt.Key_Space:
+        case Qt.Key_Enter:
+        case Qt.Key_Return:
+        case Qt.Key_Select:
+            Plasmoid.activated();
+            break;
+        }
+    }
 
     onDragEnter: containsAcceptableDrag = TrashPrivate.Trash.trashableUrls(event.mimeData.urls).length > 0
     onDragLeave: containsAcceptableDrag = false
@@ -100,6 +111,9 @@ DragDrop.DropArea {
     MouseArea {
         id: mouseArea
         anchors.fill: parent
+
+        activeFocusOnTab: true
+
         onClicked: Qt.openUrlExternally("trash:/");
     }
 
