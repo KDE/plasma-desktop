@@ -20,9 +20,27 @@ MouseArea {
     readonly property bool inPanel: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge, PlasmaCore.Types.LeftEdge]
         .includes(Plasmoid.location)
 
+    /**
+     * @c true if the current applet is Minimize All, @c false if the
+     * current applet is Show Desktop.
+     */
+    readonly property bool isMinimizeAll: Plasmoid.pluginName === "org.kde.plasma.minimizeall"
+
     Plasmoid.icon: Plasmoid.configuration.icon
-    Plasmoid.title: i18n("Peek at Desktop")
-    Plasmoid.toolTipSubText: i18n("Temporarily reveals the Desktop by moving open windows into screen corners")
+    Plasmoid.title: {
+        if (isMinimizeAll) {
+            return i18n("Minimize all Windows");
+        }
+
+        return i18n("Peek at Desktop");
+    }
+    Plasmoid.toolTipSubText: {
+        if (isMinimizeAll) {
+            return i18n("Show the desktop by minimizing all windows");
+        }
+
+        return i18n("Temporarily reveals the Desktop by moving open windows into screen corners");
+    }
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
@@ -33,12 +51,19 @@ MouseArea {
     Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
     Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
 
-    Plasmoid.onActivated: showdesktop.toggleDesktop()
-    onClicked: Plasmoid.activated();
-
+    activeFocusOnTab: true
     hoverEnabled: true
 
-    activeFocusOnTab: true
+    Plasmoid.onActivated: {
+        if (isMinimizeAll) {
+            minimizeAllComponent.item.toggleActive();
+            return;
+        }
+
+        showdesktop.toggleDesktop();
+    }
+    onClicked: Plasmoid.activated();
+
     Keys.onPressed: {
         switch (event.key) {
         case Qt.Key_Space:
@@ -49,11 +74,23 @@ MouseArea {
             break;
         }
     }
+
     Accessible.name: Plasmoid.title
     Accessible.description: Plasmoid.toolTipSubText
     Accessible.role: Accessible.Button
 
-    ShowDesktop { id: showdesktop }
+    ShowDesktop {
+        id: showdesktop
+    }
+
+    Loader {
+        id: minimizeAllComponent
+
+        active: root.isMinimizeAll
+        asynchronous: true
+
+        source: "MinimizeAllComponent.qml"
+    }
 
     PlasmaCore.IconItem {
         anchors.fill: parent
@@ -98,7 +135,7 @@ MouseArea {
             bottomMargin: containerMargins ? -containerMargins('bottom', returnAllMargins) : 0
         }
         imagePath: "widgets/tabbar"
-        visible: fromCurrentTheme && opacity > 0
+        visible: opacity > 0
         prefix: {
             let prefix;
             switch (Plasmoid.location) {
@@ -119,7 +156,14 @@ MouseArea {
             }
             return prefix;
         }
-        opacity: showdesktop.showingDesktop ? 1 : 0
+        opacity: {
+            if (isMinimizeAll) {
+                return minimizeAllComponent.item.active ? 1 : 0;
+            }
+
+            return showdesktop.showingDesktop ? 1 : 0;
+        }
+
         Behavior on opacity {
             NumberAnimation {
                 duration: PlasmaCore.Units.shortDuration
@@ -132,7 +176,12 @@ MouseArea {
         showdesktop.minimizeAll();
     }
 
+    function action_showdesktop() {
+        showdesktop.toggleDesktop();
+    }
+
     Component.onCompleted: {
-        Plasmoid.setAction("minimizeall", i18nc("@action", "Minimize All Windows"))
+        Plasmoid.setAction("minimizeall", i18nc("@action", "Minimize All Windows"));
+        Plasmoid.setAction("showdesktop", i18nc("@action:button", "Peek at Desktop"));
     }
 }
