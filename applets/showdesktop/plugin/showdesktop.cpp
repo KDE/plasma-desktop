@@ -8,10 +8,6 @@
 
 #include <KWindowSystem>
 
-#include <QDBusConnection>
-#include <QDBusConnectionInterface>
-#include <QDBusMessage>
-
 ShowDesktop::ShowDesktop(QObject *parent)
     : QObject(parent)
 {
@@ -45,18 +41,9 @@ void ShowDesktop::setShowingDesktop(bool showingDesktop)
 
 void ShowDesktop::minimizeAll()
 {
-    QDBusConnection sessionBus = QDBusConnection::sessionBus();
-    if (sessionBus.interface()->isServiceRegistered(QStringLiteral("org.kde.KWin.Script.MinimizeAll1"))) {
-        sessionBus.asyncCall(QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin.Script.MinimizeAll1"),
-                                                            QStringLiteral("/org/kde/KWin/Script/MinimizeAll1"),
-                                                            QStringLiteral("org.kde.KWin.Script.MinimizeAll1"),
-                                                            QStringLiteral("toggle")));
-    } else {
-        // KWin is not running or the minimize all script is disabled, fallback to minimizing each window.
-        const auto &windows = KWindowSystem::windows();
-        for (WId wid : windows) {
-            KWindowSystem::minimizeWindow(wid);
-        }
+    const auto &windows = KWindowSystem::windows();
+    for (WId wid : windows) {
+        KWindowSystem::minimizeWindow(wid);
     }
 }
 
