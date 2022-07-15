@@ -62,6 +62,9 @@ DragDrop.DropArea {
             break;
         }
     }
+    Accessible.name: toolTip.mainText
+    Accessible.description: toolTip.subText
+    Accessible.role: Accessible.Button
 
     onDragEnter: containsAcceptableDrag = TrashPrivate.Trash.trashableUrls(event.mimeData.urls).length > 0
     onDragLeave: containsAcceptableDrag = false
