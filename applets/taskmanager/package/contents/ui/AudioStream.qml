@@ -10,6 +10,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 
 MouseArea {
     id: audioStreamIconBox
+
+    activeFocusOnTab: true
     hoverEnabled: true
     onClicked: toggleMuted()
 
@@ -79,9 +81,13 @@ MouseArea {
     opacity: 0
     visible: opacity > 0
 
+    Keys.onReturnPressed: toggleMuted()
+    Keys.onEnterPressed: Keys.onReturnPressed(event);
+    Keys.onSpacePressed: Keys.onReturnPressed(event);
+
     PlasmaCore.FrameSvgItem {
         anchors.fill: audioStreamIcon
-        visible: parent.containsMouse
+        visible: parent.containsMouse || parent.activeFocus
         imagePath: "widgets/viewitem"
         prefix: "hover"
     }
