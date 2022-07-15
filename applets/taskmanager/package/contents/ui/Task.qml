@@ -75,28 +75,36 @@ MouseArea {
             return i18nc("@info:usagetip %1 application name", "Launch %1", model.display)
         }
 
+        let smartLauncherDescription = "";
+        if (taskProgressOverlayLoader.active) {
+            smartLauncherDescription += i18nc("@info:tooltip", "Progress for the current Task is %1 percent.", task.smartLauncherItem.progress);
+        }
+        if (taskBadgeOverlayLoader.active) {
+            smartLauncherDescription += i18ncp("@info:tooltip", "There is %1 new message.", "There are %1 new messages.", task.smartLauncherItem.count);
+        }
+
         if (model.IsGroupParent) {
             switch (plasmoid.configuration.groupedTaskVisualization) {
             case 0:
                 break; // Use the default description
             case 1: {
                 if (plasmoid.configuration.showToolTips) {
-                    return i18nc("@info:usagetip %1 task name", "Show Task tooltip for %1", model.display);
+                    return `${i18nc("@info:usagetip %1 task name", "Show Task tooltip for %1", model.display)}; ${smartLauncherDescription}`;
                 }
                 // fallthrough
             }
             case 2: {
                 if (backend.windowViewAvailable) {
-                    return i18nc("@info:usagetip %1 task name", "Show windows side by side for %1", model.display);
+                    return `${i18nc("@info:usagetip %1 task name", "Show windows side by side for %1", model.display)}; ${smartLauncherDescription}`;
                 }
                 // fallthrough
             }
             default:
-                return i18nc("@info:usagetip %1 task name", "Open textual list of windows for %1", model.display);
+                return `${i18nc("@info:usagetip %1 task name", "Open textual list of windows for %1", model.display)}; ${smartLauncherDescription}`;
             }
         }
 
-        return i18n("Activate %1", model.display)
+        return `${i18n("Activate %1", model.display)}; ${smartLauncherDescription}`;
     }
     Accessible.role: Accessible.Button
 
@@ -425,6 +433,8 @@ MouseArea {
     }
 
     Loader {
+        id: taskProgressOverlayLoader
+
         anchors.fill: frame
         asynchronous: true
         source: "TaskProgressOverlay.qml"
@@ -474,6 +484,7 @@ MouseArea {
         }
 
         Loader {
+            id: taskBadgeOverlayLoader
             // QTBUG anchors.fill in conjunction with the Loader doesn't reliably work on creation:
             // have a window with a badge, move it from one screen to another, the new task item on the
             // other screen will now have a glitched out badge mask.
