@@ -11,7 +11,6 @@ add_library(showdesktopplugin SHARED ${showdesktop_SRCS})
 
 target_link_libraries(showdesktopplugin
      Qt::Core
-     Qt::DBus
      Qt::Qml
      Qt::Quick
      KF5::WindowSystem
