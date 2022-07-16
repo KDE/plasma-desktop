@@ -38,6 +38,9 @@ Item {
                 break;
             }
         }
+        Accessible.name: Plasmoid.title
+        Accessible.description: i18nc("@info:tooltip", "Current keyboard layout is %1", layoutNames.longName)
+        Accessible.role: Accessible.Button
 
         Connections {
             target: keyboardLayout
