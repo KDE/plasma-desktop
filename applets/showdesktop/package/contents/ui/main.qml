@@ -29,22 +29,14 @@ MouseArea {
     Plasmoid.icon: Plasmoid.configuration.icon
     Plasmoid.title: {
         if (isMinimizeAll) {
-            return minimizeAllComponent.item.active ? i18nc("@action:button", "Restore All Minimized Windows") : i18n("Minimize all Windows");
+            return i18n("Minimize all Windows");
         }
 
-        return showdesktop.showingDesktop ? i18nc("@action:button", "Hide Desktop") : i18n("Peek at Desktop");
+        return i18n("Peek at Desktop");
     }
     Plasmoid.toolTipSubText: {
         if (isMinimizeAll) {
-            if (minimizeAllComponent.item.active) {
-                return i18nc("@info:tooltip", "Restore the previous minimized windows");
-            }
-
             return i18n("Show the desktop by minimizing all windows");
-        }
-
-        if (showdesktop.showingDesktop) {
-            return i18nc("@info:tooltip", "Show open windows that are moved aside by Peek at Desktop");
         }
 
         return i18n("Temporarily reveals the Desktop by moving open windows into screen corners");
