@@ -1,18 +1,18 @@
 /*
-    SPDX-FileCopyrightText: 2014 Ashish Madeti <ashishmadeti@gmail.com>
-    SPDX-FileCopyrightText: 2016 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2015 Sebastian Kügler <sebas@kde.org>
+    SPDX-FileCopyrightText: 2016 Anthony Fieroni <bvbfan@abv.bg>
+    SPDX-FileCopyrightText: 2018 David Edmundson <davidedmundson@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
+import QtQuick 2.7
 import QtQuick.Layouts 1.1
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-import org.kde.plasma.plasmoid 2.0
-
-import org.kde.plasma.private.showdesktop 0.1
+import org.kde.taskmanager 0.1 as TaskManager
 
 MouseArea {
     id: root
@@ -20,21 +20,26 @@ MouseArea {
     readonly property bool inPanel: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge, PlasmaCore.Types.LeftEdge]
         .includes(Plasmoid.location)
 
+    property bool active: false
+
+    // list of persistentmodelindexes from task manager model of clients minimised by us
+    property var minimizedClients: []
+
     Plasmoid.icon: Plasmoid.configuration.icon
-    Plasmoid.title: i18n("Peek at Desktop")
-    Plasmoid.toolTipSubText: i18n("Temporarily reveals the Desktop by moving open windows into screen corners")
+    Plasmoid.title: i18n("Minimize all Windows")
+    Plasmoid.toolTipSubText: i18n("Show the desktop by minimizing all windows")
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
 
-    Layout.minimumWidth: PlasmaCore.Units.iconSizes.small
-    Layout.minimumHeight: PlasmaCore.Units.iconSizes.small
+    Layout.minimumWidth: PlasmaCore.Units.gridUnit
+    Layout.minimumHeight: PlasmaCore.Units.gridUnit
 
     Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
     Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
 
-    Plasmoid.onActivated: showdesktop.toggleDesktop()
-    onClicked: Plasmoid.activated();
+    Plasmoid.onActivated: toggleActive()
+    onClicked: Plasmoid.activated()
 
     hoverEnabled: true
 
@@ -53,11 +58,72 @@ MouseArea {
     Accessible.description: Plasmoid.toolTipSubText
     Accessible.role: Accessible.Button
 
-    ShowDesktop { id: showdesktop }
+    function activate() {
+        const clients = [];
+        for (let i = 0 ; i < tasksModel.count; i++) {
+            const idx = tasksModel.makeModelIndex(i);
+            if (!tasksModel.data(idx, TaskManager.AbstractTasksModel.IsHidden)) {
+                tasksModel.requestToggleMinimized(idx);
+                clients.push(tasksModel.makePersistentModelIndex(i));
+            }
+        }
+        root.minimizedClients = clients;
+        root.active = true;
+    }
+
+    function deactivate() {
+        root.active = false;
+        for (let i = 0 ; i < root.minimizedClients.length; i++) {
+            const idx = root.minimizedClients[i];
+            // client deleted, do nothing
+            if (!idx.valid) {
+                continue;
+            }
+            // if the user has restored it already, do nothing
+            if (!tasksModel.data(idx, TaskManager.AbstractTasksModel.IsHidden)) {
+                continue;
+            }
+            tasksModel.requestToggleMinimized(idx);
+        }
+        root.minimizedClients = [];
+    }
+
+    function toggleActive() {
+        if (root.active) {
+            deactivate();
+        } else {
+            activate();
+        }
+    }
+
+    TaskManager.TasksModel {
+        id: tasksModel
+
+        sortMode: TaskManager.TasksModel.SortDisabled
+        groupMode: TaskManager.TasksModel.GroupDisabled
+    }
+
+    Connections {
+        target: tasksModel
+        enabled: root.active
+
+        function onActiveTaskChanged() {
+            if (tasksModel.activeTask.valid) { // to suppress changing focus to non windows, such as the desktop
+                root.active = false;
+                root.minimizedClients = [];
+            }
+        }
+        function onVirtualDesktopChanged() {
+            deactivate();
+        }
+        function onActivityChanged() {
+            deactivate();
+        }
+    }
 
     PlasmaCore.IconItem {
         anchors.fill: parent
-        active: root.containsMouse || showdesktop.showingDesktop
+        active: root.containsMouse
         source: Plasmoid.icon
     }
 
@@ -74,7 +140,6 @@ MouseArea {
         onTriggered: Plasmoid.activated()
     }
 
-    // Active/not active indicator
     PlasmaCore.FrameSvgItem {
         property var containerMargins: {
             let item = this;
@@ -98,7 +163,6 @@ MouseArea {
             bottomMargin: containerMargins ? -containerMargins('bottom', returnAllMargins) : 0
         }
         imagePath: "widgets/tabbar"
-        visible: fromCurrentTheme && opacity > 0
         prefix: {
             let prefix;
             switch (Plasmoid.location) {
@@ -119,7 +183,7 @@ MouseArea {
             }
             return prefix;
         }
-        opacity: showdesktop.showingDesktop ? 1 : 0
+        opacity: root.active ? 1 : 0
         Behavior on opacity {
             NumberAnimation {
                 duration: PlasmaCore.Units.shortDuration
@@ -128,11 +192,11 @@ MouseArea {
         }
     }
 
-    function action_minimizeall() {
-        showdesktop.minimizeAll();
+    function action_showdesktop() {
+        showdesktop.toggleDesktop();
     }
 
     Component.onCompleted: {
-        Plasmoid.setAction("minimizeall", i18nc("@action", "Minimize All Windows"))
+        Plasmoid.setAction("showdesktop", i18nc("@action", "Show Desktop"))
     }
 }
