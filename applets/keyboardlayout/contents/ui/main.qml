@@ -13,20 +13,13 @@ import org.kde.plasma.workspace.components 2.0
 Item {
     id: root
 
-    function iconURL(name) {
-        return StandardPaths.locate(StandardPaths.GenericDataLocation,
-                        "kf5/locale/countries/" + name + "/flag.png")
-    }
-
     signal layoutSelected(int layout)
-
-    function actionTriggered(selectedLayout) {
-        layoutSelected(selectedLayout)
-    }
 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
 
     Plasmoid.compactRepresentation: KeyboardLayoutSwitcher {
+        hoverEnabled: true
+
         Plasmoid.toolTipSubText: layoutNames.longName
         Plasmoid.status: hasMultipleKeyboardLayouts ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
 
@@ -60,24 +53,33 @@ Item {
             }
         }
 
-        hoverEnabled: true
-
         PlasmaCore.IconItem {
             id: icon
 
-            source: iconURL(layoutNames.shortName)
-            visible: plasmoid.configuration.showFlag && source
             anchors.fill: parent
+            visible: plasmoid.configuration.showFlag && source
+
             active: containsMouse
+            source: iconURL(layoutNames.shortName)
         }
 
         PlasmaComponents3.Label {
-            text: layoutNames.displayName || layoutNames.shortName
-            visible: !icon.visible
             anchors.fill: parent
-            horizontalAlignment: Text.AlignHCenter
-            fontSizeMode: Text.Fit
+            visible: !icon.visible
+
             font.pointSize: height
+            fontSizeMode: Text.Fit
+            horizontalAlignment: Text.AlignHCenter
+            text: layoutNames.displayName || layoutNames.shortName
         }
+    }
+
+    function iconURL(name) {
+        return StandardPaths.locate(StandardPaths.GenericDataLocation,
+                        "kf5/locale/countries/" + name + "/flag.png")
+    }
+
+    function actionTriggered(selectedLayout) {
+        layoutSelected(selectedLayout)
     }
 }
