@@ -111,6 +111,9 @@ Item {
                         break;
                     }
                 }
+                Accessible.name: statusIcon.label
+                Accessible.description: statusIcon.tip
+                Accessible.role: Accessible.Button
 
                 StatusIcon {
                     id: statusIcon
