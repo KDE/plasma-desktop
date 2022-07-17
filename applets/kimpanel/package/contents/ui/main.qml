@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -95,6 +95,23 @@ Item {
             delegate: Item {
                 width: items.cellWidth
                 height: items.cellHeight
+
+                activeFocusOnTab: true
+
+                Keys.onPressed: {
+                    switch (event.key) {
+                    case Qt.Key_Space:
+                    case Qt.Key_Enter:
+                    case Qt.Key_Return:
+                    case Qt.Key_Select:
+                        statusIcon.triggered(Qt.LeftButton);
+                        break;
+                    case Qt.Key_Menu:
+                        statusIcon.triggered(Qt.RightButton);
+                        break;
+                    }
+                }
+
                 StatusIcon {
                     id: statusIcon
                     anchors.centerIn: parent
