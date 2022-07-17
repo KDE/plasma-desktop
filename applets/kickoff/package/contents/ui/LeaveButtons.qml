@@ -68,10 +68,11 @@ RowLayout {
         icon.height: PlasmaCore.Units.iconSizes.smallMedium
         icon.name: ["system-log-out", "system-shutdown", "view-more-symbolic", ""][currentId];
         display: PC3.AbstractButton.IconOnly;
+        text: [i18n("Leave"), i18n("Power"), i18n("More"), ""][leaveButton.currentId]
         visible: plasmoid.configuration.primaryActions !== 3
         // Make it look pressed while the menu is open
         down: contextMenu.status === PC2.DialogStatus.Open || pressed
-        PC3.ToolTip.text: [i18n("Leave"), i18n("Power"), i18n("More"), ""][leaveButton.currentId]
+        PC3.ToolTip.text: text
         PC3.ToolTip.visible: leaveButton.hovered
         PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
         Keys.onLeftPressed: if (!LayoutMirroring.enabled) {
