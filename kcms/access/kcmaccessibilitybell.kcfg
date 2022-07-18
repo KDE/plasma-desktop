@@ -22,11 +22,11 @@
     </entry>
     <entry name="InvertScreen" key="VisibleBellInvert" type="Bool">
       <label>Invert the system colors on the bell</label>
-      <default>true</default>
+      <default>false</default>
     </entry>
     <entry name="VisibleBellColor" key="VisibleBellColor" type="Color">
       <label>Color of the Visible Bell</label>
-      <default></default>
+      <default>Qt::red</default>
     </entry>
     <entry name="VisibleBellPause" key="VisibleBellPause" type="Int">
       <label>Duration of the Visible Bell</label>
