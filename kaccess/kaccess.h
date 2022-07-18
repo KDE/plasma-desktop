@@ -7,6 +7,12 @@
 
 #pragma once
 
+#include "kcmaccessibilitybell.h"
+#include "kcmaccessibilitykeyboard.h"
+#include "kcmaccessibilitykeyboardfilters.h"
+#include "kcmaccessibilitymouse.h"
+#include "kcmaccessibilityscreenreader.h"
+
 #include <QAbstractNativeEventFilter>
 #include <QColor>
 #include <QLabel>
@@ -62,16 +68,15 @@ private:
     void initMasks();
     void setScreenReaderEnabled(bool enabled);
 
+    BellSettings m_bellSettings;
+    KeyboardSettings m_keyboardSettings;
+    KeyboardFiltersSettings m_keyboardFiltersSettings;
+    MouseSettings m_mouseSettings;
+    ScreenReaderSettings m_screenReaderSettings;
+
     int xkb_opcode;
     unsigned int features;
     unsigned int requestedFeatures;
-
-    bool _systemBell, _artsBell, _visibleBell, _visibleBellInvert;
-    QColor _visibleBellColor;
-    int _visibleBellPause;
-
-    bool _gestures, _gestureConfirmation;
-    bool _kNotifyModifiers, _kNotifyAccessX;
 
     QWidget *overlay;
 

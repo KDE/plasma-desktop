@@ -3,7 +3,12 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcmaccess\")
 
 kcmutils_add_qml_kcm(kcm_access SOURCES kcmaccess.cpp)
 
-kconfig_add_kcfg_files(kcm_access
+add_library(kaccess_settings STATIC)
+set_property(TARGET kaccess_settings PROPERTY POSITION_INDEPENDENT_CODE ON)
+
+target_link_libraries(kaccess_settings PUBLIC Qt::Core KF6::ConfigGui)
+
+kconfig_add_kcfg_files(kaccess_settings
     kcmaccessibilitybell.kcfgc
     kcmaccessibilitykeyboard.kcfgc
     kcmaccessibilitykeyboardfilters.kcfgc
@@ -19,6 +24,7 @@ kcmutils_generate_module_data(kcm_access
 )
 
 target_link_libraries(kcm_access
+    kaccess_settings
     Qt::DBus
     Qt::Quick
     Qt::GuiPrivate

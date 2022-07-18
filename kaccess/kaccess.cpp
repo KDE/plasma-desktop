@@ -115,7 +115,12 @@ static const ModifierKey modifierKeys[] = {
 /********************************************************************/
 
 KAccessApp::KAccessApp()
-    : overlay(nullptr)
+    : m_bellSettings(new BellSettings(this))
+    , m_keyboardSettings(new KeyboardSettings(this))
+    , m_keyboardFiltersSettings(new KeyboardFiltersSettings(this))
+    , m_mouseSettings(new MouseSettings(this))
+    , m_screenReaderSettings(new ScreenReaderSettings(this))
+    , overlay(nullptr)
     , _activeWindow(KX11Extras::activeWindow())
     , toggleScreenReaderAction(new QAction(this))
 {
@@ -159,30 +164,15 @@ void KAccessApp::newInstance()
 
 void KAccessApp::readSettings()
 {
-    KSharedConfig::Ptr _config = KSharedConfig::openConfig();
-    KConfigGroup cg(_config, "Bell");
-
-    // bell
-    _systemBell = cg.readEntry("SystemBell", true);
-    _artsBell = cg.readEntry("ArtsBell", false);
-    m_currentPlayerSource = QUrl(cg.readPathEntry("ArtsBellFile", QString()));
-    _visibleBell = cg.readEntry("VisibleBell", false);
-    _visibleBellInvert = cg.readEntry("VisibleBellInvert", false);
-    _visibleBellColor = cg.readEntry("VisibleBellColor", QColor(Qt::red));
-    _visibleBellPause = cg.readEntry("VisibleBellPause", 500);
-
     // select bell events if we need them
-    int state = (_artsBell || _visibleBell) ? XkbBellNotifyMask : 0;
+    int state = (m_bellSettings.customBell() || m_bellSettings.visibleBell()) ? XkbBellNotifyMask : 0;
     XkbSelectEvents(QX11Info::display(), XkbUseCoreKbd, XkbBellNotifyMask, state);
 
     // deactivate system bell if not needed
-    if (!_systemBell)
+    if (!m_bellSettings.systemBell())
         XkbChangeEnabledControls(QX11Info::display(), XkbUseCoreKbd, XkbAudibleBellMask, 0);
     else
         XkbChangeEnabledControls(QX11Info::display(), XkbUseCoreKbd, XkbAudibleBellMask, XkbAudibleBellMask);
-
-    // keyboard
-    KConfigGroup keyboardGroup(_config, "Keyboard");
 
     // get keyboard state
     XkbDescPtr xkb = XkbGetMap(QX11Info::display(), 0, XkbUseCoreKbd);
@@ -192,16 +182,16 @@ void KAccessApp::readSettings()
         return;
 
     // sticky keys
-    if (keyboardGroup.readEntry("StickyKeys", false)) {
-        if (keyboardGroup.readEntry("StickyKeysLatch", true))
+    if (m_keyboardSettings.stickyKeys()) {
+        if (m_keyboardSettings.stickyKeysLatch())
             xkb->ctrls->ax_options |= XkbAX_LatchToLockMask;
         else
             xkb->ctrls->ax_options &= ~XkbAX_LatchToLockMask;
-        if (keyboardGroup.readEntry("StickyKeysAutoOff", false))
+        if (m_keyboardSettings.stickyKeysAutoOff())
             xkb->ctrls->ax_options |= XkbAX_TwoKeysMask;
         else
             xkb->ctrls->ax_options &= ~XkbAX_TwoKeysMask;
-        if (keyboardGroup.readEntry("StickyKeysBeep", false))
+        if (m_keyboardSettings.stickyKeysBeep())
             xkb->ctrls->ax_options |= XkbAX_StickyKeysFBMask;
         else
             xkb->ctrls->ax_options &= ~XkbAX_StickyKeysFBMask;
@@ -210,51 +200,50 @@ void KAccessApp::readSettings()
         xkb->ctrls->enabled_ctrls &= ~XkbStickyKeysMask;
 
     // toggle keys
-    if (keyboardGroup.readEntry("ToggleKeysBeep", false))
+    if (m_keyboardSettings.toggleKeysBeep())
         xkb->ctrls->ax_options |= XkbAX_IndicatorFBMask;
     else
         xkb->ctrls->ax_options &= ~XkbAX_IndicatorFBMask;
 
     // slow keys
-    if (keyboardGroup.readEntry("SlowKeys", false)) {
-        if (keyboardGroup.readEntry("SlowKeysPressBeep", false))
+    if (m_keyboardFiltersSettings.slowKeys()) {
+        if (m_keyboardFiltersSettings.slowKeysPressBeep())
             xkb->ctrls->ax_options |= XkbAX_SKPressFBMask;
         else
             xkb->ctrls->ax_options &= ~XkbAX_SKPressFBMask;
-        if (keyboardGroup.readEntry("SlowKeysAcceptBeep", false))
+        if (m_keyboardFiltersSettings.slowKeysAcceptBeep())
             xkb->ctrls->ax_options |= XkbAX_SKAcceptFBMask;
         else
             xkb->ctrls->ax_options &= ~XkbAX_SKAcceptFBMask;
-        if (keyboardGroup.readEntry("SlowKeysRejectBeep", false))
+        if (m_keyboardFiltersSettings.slowKeysRejectBeep())
             xkb->ctrls->ax_options |= XkbAX_SKRejectFBMask;
         else
             xkb->ctrls->ax_options &= ~XkbAX_SKRejectFBMask;
         xkb->ctrls->enabled_ctrls |= XkbSlowKeysMask;
     } else
         xkb->ctrls->enabled_ctrls &= ~XkbSlowKeysMask;
-    xkb->ctrls->slow_keys_delay = keyboardGroup.readEntry("SlowKeysDelay", 500);
+    xkb->ctrls->slow_keys_delay = m_keyboardFiltersSettings.slowKeysDelay();
 
     // bounce keys
-    if (keyboardGroup.readEntry("BounceKeys", false)) {
-        if (keyboardGroup.readEntry("BounceKeysRejectBeep", false))
+    if (m_keyboardFiltersSettings.bounceKeys()) {
+        if (m_keyboardFiltersSettings.bounceKeysRejectBeep())
             xkb->ctrls->ax_options |= XkbAX_BKRejectFBMask;
         else
             xkb->ctrls->ax_options &= ~XkbAX_BKRejectFBMask;
         xkb->ctrls->enabled_ctrls |= XkbBounceKeysMask;
     } else
         xkb->ctrls->enabled_ctrls &= ~XkbBounceKeysMask;
-    xkb->ctrls->debounce_delay = keyboardGroup.readEntry("BounceKeysDelay", 500);
+    xkb->ctrls->debounce_delay = m_keyboardFiltersSettings.bounceKeysDelay();
 
     // gestures for enabling the other features
-    _gestures = keyboardGroup.readEntry("Gestures", false);
-    if (_gestures)
+    if (m_mouseSettings.gestures())
         xkb->ctrls->enabled_ctrls |= XkbAccessXKeysMask;
     else
         xkb->ctrls->enabled_ctrls &= ~XkbAccessXKeysMask;
 
     // timeout
-    if (keyboardGroup.readEntry("AccessXTimeout", false)) {
-        xkb->ctrls->ax_timeout = keyboardGroup.readEntry("AccessXTimeoutDelay", 30) * 60;
+    if (m_keyboardSettings.accessXTimeout()) {
+        xkb->ctrls->ax_timeout = m_keyboardSettings.accessXTimeoutDelay() * 60;
         xkb->ctrls->axt_opts_mask = 0;
         xkb->ctrls->axt_opts_values = 0;
         xkb->ctrls->axt_ctrls_mask = XkbStickyKeysMask | XkbSlowKeysMask;
@@ -264,32 +253,25 @@ void KAccessApp::readSettings()
         xkb->ctrls->enabled_ctrls &= ~XkbAccessXTimeoutMask;
 
     // gestures for enabling the other features
-    if (keyboardGroup.readEntry("AccessXBeep", true))
+    if (m_keyboardSettings.accessXBeep())
         xkb->ctrls->ax_options |= XkbAX_FeatureFBMask | XkbAX_SlowWarnFBMask;
     else
         xkb->ctrls->ax_options &= ~(XkbAX_FeatureFBMask | XkbAX_SlowWarnFBMask);
 
-    _gestureConfirmation = keyboardGroup.readEntry("GestureConfirmation", false);
-
-    _kNotifyModifiers = keyboardGroup.readEntry("kNotifyModifiers", false);
-    _kNotifyAccessX = keyboardGroup.readEntry("kNotifyAccessX", false);
-
     // mouse-by-keyboard
 
-    KConfigGroup mouseGroup(_config, "Mouse");
+    if (m_mouseSettings.mouseKeys()) {
+        xkb->ctrls->mk_delay = m_mouseSettings.accelerationDelay();
 
-    if (mouseGroup.readEntry("MouseKeys", false)) {
-        xkb->ctrls->mk_delay = mouseGroup.readEntry("MKDelay", 160);
-
-        int interval = mouseGroup.readEntry("MKInterval", 40);
+        const int interval = m_mouseSettings.repetitionInterval();
         xkb->ctrls->mk_interval = interval;
 
-        xkb->ctrls->mk_time_to_max = mouseGroup.readEntry("MKTimeToMax", 30);
+        xkb->ctrls->mk_time_to_max = m_mouseSettings.accelerationTime();
 
-        xkb->ctrls->mk_max_speed = mouseGroup.readEntry("MKMaxSpeed", 30);
+        xkb->ctrls->mk_max_speed = m_mouseSettings.maxSpeed();
 
-        xkb->ctrls->mk_curve = mouseGroup.readEntry("MKCurve", 0);
-        xkb->ctrls->mk_dflt_btn = mouseGroup.readEntry("MKDefaultButton", 0);
+        xkb->ctrls->mk_curve = m_mouseSettings.profileCurve();
+        xkb->ctrls->mk_dflt_btn = 0;
 
         xkb->ctrls->enabled_ctrls |= XkbMouseKeysMask;
     } else
@@ -307,7 +289,8 @@ void KAccessApp::readSettings()
     // select AccessX events
     XkbSelectEvents(QX11Info::display(), XkbUseCoreKbd, XkbAllEventsMask, XkbAllEventsMask);
 
-    if (!_artsBell && !_visibleBell && !(_gestures && _gestureConfirmation) && !_kNotifyModifiers && !_kNotifyAccessX) {
+    if (!m_bellSettings.customBell() && !m_bellSettings.visibleBell() && !(m_mouseSettings.gestures() && m_mouseSettings.gestureConfirmation())
+        && !m_keyboardSettings.keyboardNotifyModifiers() && !m_mouseSettings.keyboardNotifyAccess()) {
         uint ctrls = XkbStickyKeysMask | XkbSlowKeysMask | XkbBounceKeysMask | XkbMouseKeysMask | XkbAudibleBellMask | XkbControlsNotifyMask;
         uint values = xkb->ctrls->enabled_ctrls & ctrls;
         XkbSetAutoResetControls(QX11Info::display(), ctrls, &ctrls, &values);
@@ -321,15 +304,12 @@ void KAccessApp::readSettings()
     delete overlay;
     overlay = nullptr;
 
-    KConfigGroup screenReaderGroup(_config, "ScreenReader");
-    setScreenReaderEnabled(screenReaderGroup.readEntry("Enabled", false));
-
-    QString shortcut = screenReaderGroup.readEntry("Shortcut", QStringLiteral("Meta+Alt+S"));
+    setScreenReaderEnabled(m_screenReaderSettings.enabled());
 
     toggleScreenReaderAction->setText(i18n("Toggle Screen Reader On and Off"));
     toggleScreenReaderAction->setObjectName(QStringLiteral("Toggle Screen Reader On and Off"));
     toggleScreenReaderAction->setProperty("componentDisplayName", i18nc("Name for kaccess shortcuts category", "Accessibility"));
-    KGlobalAccel::self()->setGlobalShortcut(toggleScreenReaderAction, QKeySequence(shortcut));
+    KGlobalAccel::self()->setGlobalShortcut(toggleScreenReaderAction, Qt::META | Qt::ALT | Qt::Key_S);
     connect(toggleScreenReaderAction, &QAction::triggered, this, &KAccessApp::toggleScreenReader);
 }
 
@@ -457,7 +437,7 @@ void KAccessApp::xkbStateNotify()
     int mods = ((int)locked) << 8 | latched;
 
     if (state != mods) {
-        if (_kNotifyModifiers)
+        if (m_keyboardSettings.keyboardNotifyModifiers())
             for (int i = 0; i < 8; i++) {
                 if (keys[i] != -1) {
                     if (modifierKeys[keys[i]].latchedText.isEmpty() && ((((mods >> i) & 0x101) != 0) != (((state >> i) & 0x101) != 0))) {
@@ -488,10 +468,10 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
         return;
 
     // flash the visible bell
-    if (_visibleBell) {
+    if (m_bellSettings.visibleBell()) {
         // create overlay widget
         if (!overlay)
-            overlay = new VisualBell(_visibleBellPause);
+            overlay = new VisualBell(m_bellSettings.visibleBellPause());
 
         WId id = _activeWindow;
 
@@ -502,8 +482,9 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
 
         overlay->setGeometry(window.pos.x, window.pos.y, window.size.width, window.size.height);
 
-        if (_visibleBellInvert) {
+        if (m_bellSettings.invertScreen()) {
             QPixmap screen = QGuiApplication::primaryScreen()->grabWindow(id, 0, 0, window.size.width, window.size.height);
+
 #ifdef __GNUC__
 #warning is this the best way to invert a pixmap?
 #endif
@@ -521,7 +502,7 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
             */
         } else {
             QPalette pal = overlay->palette();
-            pal.setColor(overlay->backgroundRole(), _visibleBellColor);
+            pal.setColor(overlay->backgroundRole(), m_bellSettings.visibleBellColor());
             overlay->setPalette(pal);
         }
 
@@ -532,7 +513,7 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
     }
 
     // ask canberra to ring a nice bell
-    if (_artsBell) {
+    if (m_bellSettings.customBell()) {
         if (!m_caContext) {
             int ret = ca_context_create(&m_caContext);
             if (ret != CA_SUCCESS) {
@@ -724,7 +705,7 @@ void KAccessApp::xkbControlsNotify(xcb_xkb_controls_notify_event_t *event)
         unsigned int enabled = newFeatures & ~features;
         unsigned int disabled = features & ~newFeatures;
 
-        if (!_gestureConfirmation) {
+        if (!m_mouseSettings.gestureConfirmation()) {
             requestedFeatures = enabled | (requestedFeatures & ~disabled);
             notifyChanges();
             features = newFeatures;
@@ -853,7 +834,7 @@ void KAccessApp::xkbControlsNotify(xcb_xkb_controls_notify_event_t *event)
             if (enabledFeatures.count() + disabledFeatures.count() == 1) {
                 explanation = i18n("An application has requested to change this setting.");
 
-                if (_gestures) {
+                if (m_mouseSettings.gestures()) {
                     if ((enabled | disabled) == XCB_XKB_BOOL_CTRL_SLOW_KEYS)
                         explanation = i18n("You held down the Shift key for 8 seconds or an application has requested to change this setting.");
                     else if ((enabled | disabled) == XCB_XKB_BOOL_CTRL_STICKY_KEYS)
@@ -865,7 +846,7 @@ void KAccessApp::xkbControlsNotify(xcb_xkb_controls_notify_event_t *event)
                     }
                 }
             } else {
-                if (_gestures)
+                if (m_mouseSettings.gestures())
                     explanation = i18n("An application has requested to change these settings, or you used a combination of several keyboard gestures.");
                 else
                     explanation = i18n("An application has requested to change these settings.");
@@ -886,7 +867,7 @@ void KAccessApp::xkbControlsNotify(xcb_xkb_controls_notify_event_t *event)
 
 void KAccessApp::notifyChanges()
 {
-    if (!_kNotifyAccessX)
+    if (!m_mouseSettings.keyboardNotifyAccess())
         return;
 
     unsigned int enabled = requestedFeatures & ~features;

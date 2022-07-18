@@ -6,6 +6,7 @@ set(kaccess_SRCS kaccess.cpp main.cpp )
 add_executable(kaccess ${kaccess_SRCS})
 
 target_link_libraries(kaccess
+    kaccess_settings
     Qt::Widgets
     KF6::CoreAddons
     KF6::ConfigCore
