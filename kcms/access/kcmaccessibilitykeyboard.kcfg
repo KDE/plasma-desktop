@@ -19,7 +19,7 @@
     </entry>
     <entry name="StickyKeysBeep" key="StickyKeysBeep" type="Bool">
       <label>Beep on a sticky key press</label>
-      <default>true</default>
+      <default>false</default>
     </entry>
     <entry name="ToggleKeysBeep" key="ToggleKeysBeep" type="Bool">
       <label>Toggle keys beep</label>
@@ -29,17 +29,17 @@
       <label>Notify when a keyboard modifier is pressed</label>
       <default>false</default>
     </entry>
-    <entry name="AccessXTimeout" key="AccessXTimeout" type="Int">
+    <entry name="AccessXTimeout" key="AccessXTimeout" type="Bool">
       <label>Use a timeout delay</label>
-      <default>30</default>
+      <default>false</default>
     </entry>
     <entry name="AccessXTimeoutDelay" key="AccessXTimeoutDelay" type="Bool">
-      <label>Invert the system colors on the bell</label>
-      <default>false</default>
+      <label>Delay for timeout</label>
+      <default>30</default>
     </entry>
-    <entry name="AccessXBeep" key="AccessBeep" type="Bool">
+    <entry name="AccessXBeep" key="AccessXBeep" type="Bool">
       <label>Use a beep for access</label>
-      <default>false</default>
+      <default>true</default>
     </entry>
   </group>
 </kcfg>
