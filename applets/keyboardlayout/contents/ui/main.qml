@@ -3,7 +3,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.12
+import QtQuick 2.15
 import Qt.labs.platform 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -16,12 +16,28 @@ Item {
     signal layoutSelected(int layout)
 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
+    Plasmoid.fullRepresentation: Plasmoid.compactRepresentation
 
     Plasmoid.compactRepresentation: KeyboardLayoutSwitcher {
+        id: keyboardLayoutSwitcher
+
+        activeFocusOnTab: true
         hoverEnabled: true
 
+        Plasmoid.onActivated: keyboardLayout.switchToNextLayout();
         Plasmoid.toolTipSubText: layoutNames.longName
         Plasmoid.status: hasMultipleKeyboardLayouts ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
+
+        Keys.onPressed: {
+            switch (event.key) {
+            case Qt.Key_Space:
+            case Qt.Key_Enter:
+            case Qt.Key_Return:
+            case Qt.Key_Select:
+                Plasmoid.activated();
+                break;
+            }
+        }
 
         Connections {
             target: keyboardLayout
@@ -39,10 +55,6 @@ Item {
                             }
                             )
             }
-
-            function onLayoutChanged() {
-                root.Plasmoid.activated()
-            }
         }
 
         Connections {
@@ -53,24 +65,29 @@ Item {
             }
         }
 
-        PlasmaCore.IconItem {
-            id: icon
+        Component {
+            id: iconComponent
 
-            anchors.fill: parent
-            visible: plasmoid.configuration.showFlag && source
-
-            active: containsMouse
-            source: iconURL(layoutNames.shortName)
+            PlasmaCore.IconItem {
+                active: keyboardLayoutSwitcher.containsMouse
+                source: iconURL(layoutNames.shortName)
+            }
         }
 
-        PlasmaComponents3.Label {
-            anchors.fill: parent
-            visible: !icon.visible
+        Component {
+            id: labelComponent
 
-            font.pointSize: height
-            fontSizeMode: Text.Fit
-            horizontalAlignment: Text.AlignHCenter
-            text: layoutNames.displayName || layoutNames.shortName
+            PlasmaComponents3.Label {
+                font.pointSize: height
+                fontSizeMode: Text.Fit
+                horizontalAlignment: Text.AlignHCenter
+                text: layoutNames.displayName || layoutNames.shortName
+            }
+        }
+
+        Loader {
+            anchors.fill: parent
+            sourceComponent: Plasmoid.configuration.showFlag && source ? iconComponent : labelComponent
         }
     }
 
