@@ -18,8 +18,6 @@ Kirigami.FormLayout {
     property alias cfg_showActivityIcon: radioCurrentActivityIcon.checked
     property alias cfg_showActivityName: checkShowActivityName.checked
 
-    Item { Kirigami.FormData.isSection: true }
-
     RadioButton {
         id: radioCurrentActivityIcon
 
