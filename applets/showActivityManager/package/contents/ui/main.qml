@@ -70,6 +70,9 @@ DND.DropArea {
                 break;
             }
         }
+        Accessible.name: name.text ? i18nc("@info:tooltip", "Current activity is %1", name.text) : ""
+        Accessible.description: tooltip.subText
+        Accessible.role: Accessible.Button
 
         onClicked: Plasmoid.activated()
     }
