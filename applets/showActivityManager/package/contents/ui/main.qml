@@ -18,17 +18,9 @@ import org.kde.activities 0.1 as Activities
 
 DND.DropArea {
     id: root
-    property string activeSource: "Status"
-    height: PlasmaCore.Units.iconSizes.large
+
     width: PlasmaCore.Units.iconSizes.large
-
-    property bool showActivityName: plasmoid.configuration.showActivityName
-    property bool showActivityIcon: plasmoid.configuration.showActivityIcon
-
-    readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
-        || plasmoid.location === PlasmaCore.Types.RightEdge
-        || plasmoid.location === PlasmaCore.Types.BottomEdge
-        || plasmoid.location === PlasmaCore.Types.LeftEdge)
+    height: PlasmaCore.Units.iconSizes.large
 
     Layout.maximumWidth: Infinity
     Layout.maximumHeight: Infinity
@@ -39,14 +31,15 @@ DND.DropArea {
     Layout.minimumWidth: 0
     Layout.minimumHeight: 0
 
-    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+    readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
+        || plasmoid.location === PlasmaCore.Types.RightEdge
+        || plasmoid.location === PlasmaCore.Types.BottomEdge
+        || plasmoid.location === PlasmaCore.Types.LeftEdge)
+    property string activeSource: "Status"
+    property bool showActivityName: plasmoid.configuration.showActivityName
+    property bool showActivityIcon: plasmoid.configuration.showActivityIcon
 
-    MouseArea {
-        anchors.fill: parent
-        onClicked: {
-            ActivitySwitcher.Backend.toggleActivityManager()
-        }
-    }
+    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
     onDragEnter: {
         ActivitySwitcher.Backend.setDropMode(true);
@@ -56,42 +49,47 @@ DND.DropArea {
         ActivitySwitcher.Backend.setDropMode(false);
     }
 
-    PlasmaCore.ToolTipArea {
-        id: tooltip
-        mainText: i18n("Show Activity Manager")
-        subText: i18n("Click to show the activity manager")
-        anchors.fill: parent
-    }
-
     Activities.ActivityInfo {
         id: currentActivity
         activityId: ":current"
     }
 
+    MouseArea {
+        anchors.fill: parent
+        onClicked: {
+            ActivitySwitcher.Backend.toggleActivityManager()
+        }
+    }
+
+    PlasmaCore.ToolTipArea {
+        id: tooltip
+        anchors.fill: parent
+        mainText: i18n("Show Activity Manager")
+        subText: i18n("Click to show the activity manager")
+    }
+
     PlasmaCore.IconItem {
         id: icon
+        height: parent.height
+        width: height
+
         source: !root.showActivityIcon ? "activities" :
                 currentActivity.icon == "" ? "activities" :
                 currentActivity.icon
-
-        height: parent.height
-        width: height
     }
 
     PlasmaComponents.Label {
         id: name
 
-        text: currentActivity.name
-        height: parent.height
-        width: implicitWidth
-
-        visible: root.showActivityName
-
         anchors {
             left: icon.right
             leftMargin: PlasmaCore.Units.smallSpacing
         }
-    }
+        height: parent.height
+        width: implicitWidth
+        visible: root.showActivityName
 
+        text: currentActivity.name
+    }
 }
 
