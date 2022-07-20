@@ -49,6 +49,24 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: false
         }
 
+        QQC2.SpinBox {
+            Kirigami.FormData.label: i18n("KRunner width:")
+            from: 20
+            to: 70
+            stepSize: 5
+            value: kcm.krunnerSettings.runnerWidth
+            onValueModified: kcm.krunnerSettings.runnerWidth = value
+
+            KCM.SettingStateBinding {
+                configObject: kcm.krunnerSettings
+                settingName: "runnerWidth"
+            }
+        }
+
+        Item {
+            Kirigami.FormData.isSection: false
+        }
+
         QQC2.CheckBox {
             Kirigami.FormData.label: i18n("Activation:")
             checked: kcm.krunnerSettings.activateWhenTypingOnDesktop
