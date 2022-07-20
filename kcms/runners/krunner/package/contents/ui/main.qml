@@ -49,13 +49,14 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: false
         }
 
-        QQC2.SpinBox {
+        QQC2.Slider {
             Kirigami.FormData.label: i18n("KRunner width:")
             from: 20
             to: 70
-            stepSize: 5
+            // No current way to hide slider ticks
+            //stepSize: 5
             value: kcm.krunnerSettings.runnerWidth
-            onValueModified: kcm.krunnerSettings.runnerWidth = value
+            onValueChanged: kcm.krunnerSettings.runnerWidth = value
 
             KCM.SettingStateBinding {
                 configObject: kcm.krunnerSettings
