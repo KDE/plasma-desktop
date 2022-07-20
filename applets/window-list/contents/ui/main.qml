@@ -71,6 +71,9 @@ Item {
             onClicked: tasksMenu.open()
             down: pressed || tasksMenu.status === PC2.DialogStatus.Open
 
+            Accessible.name: Plasmoid.title
+            Accessible.description: Plasmoid.toolTipSubText
+
             text: if (tasksModel.activeTask.valid) {
                 return tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
                        tasksModel.data(tasksModel.activeTask, 0 /* display name, window title if app name not present */)
