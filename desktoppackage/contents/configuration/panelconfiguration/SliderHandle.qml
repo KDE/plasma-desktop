@@ -42,6 +42,11 @@ PlasmaCore.SvgItem {
     //The maximum/minimum Position (X/Y) the silder can be moved to
     property int minimumPosition
     property int maximumPosition
+    //Provide default position for "reset" action.
+    function defaultPosition(): int {
+        var dialogSize = dialogRoot.vertical ? dialogRoot.height : dialogRoot.width;
+        return (value === panel.length) ? dialogSize : panel.length;
+    }
 
     // Handle name displayed as a tooltip.
     property string description
@@ -161,6 +166,9 @@ PlasmaCore.SvgItem {
                     }
                 }
             }
+        }
+        onDoubleClicked: {
+            root.value = root.defaultPosition();
         }
     }
 

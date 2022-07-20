@@ -17,8 +17,8 @@ PlasmaCore.FrameSvgItem {
     property alias minimumLength: rightMinimumLengthHandle.value
     property alias maximumLength: rightMaximumLengthHandle.value
 
-    property string maximumText: dialogRoot.vertical ? i18n("Drag to change maximum height") : i18n("Drag to change maximum width")
-    property string minimumText: dialogRoot.vertical ? i18n("Drag to change minimum height") : i18n("Drag to change minimum width")
+    property string maximumText: (dialogRoot.vertical ? i18n("Drag to change maximum height.") : i18n("Drag to change maximum width.")) + "\n" + i18n("Double click to reset.")
+    property string minimumText: (dialogRoot.vertical ? i18n("Drag to change minimum height.") : i18n("Drag to change minimum width.")) + "\n" + i18n("Double click to reset.")
 
     imagePath: "widgets/containment-controls"
     state: "BottomEdge"
@@ -49,6 +49,11 @@ PlasmaCore.FrameSvgItem {
         leftMaximumLengthHandle.value = panel.maximumLength
     }
 
+    function defaultPosition(value: int): int {
+        var dialogSize = dialogRoot.vertical ? dialogRoot.height : dialogRoot.width;
+        return (value === panel.length) ? dialogSize : panel.length;
+    }
+
     PlasmaCore.Svg {
         id: containmentControlsSvg
         imagePath: "widgets/containment-controls"
@@ -66,7 +71,7 @@ PlasmaCore.FrameSvgItem {
     SliderHandle {
         id: offsetHandle
         graphicElementName: "offsetslider"
-        description: i18n("Drag to change position on this screen edge")
+        description: i18n("Drag to change position on this screen edge.\nDouble click to reset.")
         onValueChanged: panel.offset = value
         property int position: (dialogRoot.vertical) ? y : x
         /* The maximum/minimumPosition values are needed to prevent the user from moving a panel with
@@ -99,6 +104,9 @@ PlasmaCore.FrameSvgItem {
             default:
                 return dialogRootSize - panel.maximumLength / 2 - size / 2
             }
+        }
+        function defaultPosition(): int {
+            return 0;
         }
     }
 
