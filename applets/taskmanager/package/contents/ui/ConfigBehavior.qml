@@ -228,6 +228,8 @@ Item {
             checked: plasmoid.configuration.reverseMode === true
             text: Qt.application.layoutDirection === Qt.RightToLeft ? i18n("To the right") : i18n("To the left")
             ButtonGroup.group: reverseModeRadioButtonGroup
+            // Don't show for vertical panels because the layouting is managed
+            // by a Flow object, and that doesn't support a bottom-to-top layout
             visible: plasmoid.formFactor === PlasmaCore.Types.Horizontal
         }
 
