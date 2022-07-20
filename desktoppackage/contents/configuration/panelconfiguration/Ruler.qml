@@ -152,7 +152,7 @@ PlasmaCore.FrameSvgItem {
         alignment: panel.alignment | Qt.AlignRight
         visible: panel.alignment !== Qt.AlignLeft
         offset: panel.offset
-        graphicElementName: "minslider"
+        graphicElementName: "maxslider"
         onValueChanged: panel.minimumLength = value
         maximumPosition: offsetHandle.position - PlasmaCore.Units.gridUnit * 3
         minimumPosition: {
@@ -167,7 +167,7 @@ PlasmaCore.FrameSvgItem {
         alignment: panel.alignment | Qt.AlignRight
         visible: panel.alignment !== Qt.AlignLeft
         offset: panel.offset
-        graphicElementName: "maxslider"
+        graphicElementName: "minslider"
         onValueChanged: panel.maximumLength = value
         maximumPosition: offsetHandle.position - PlasmaCore.Units.gridUnit * 3
         minimumPosition: {
