@@ -80,11 +80,11 @@ PlasmaCore.FrameSvgItem {
             var size = dialogRoot.vertical ? height : width
             switch(panel.alignment){
             case Qt.AlignLeft:
-                    return -size / 2
+                return -size / 2
             case Qt.AlignRight:
-                    return leftMaximumLengthHandle.value - size / 2
+                return leftMaximumLengthHandle.value - size / 2
             default:
-                    return panel.maximumLength / 2 - size / 2
+                return panel.maximumLength / 2 - size / 2
             }
         }
         //Needed for the same reason as above
@@ -93,11 +93,11 @@ PlasmaCore.FrameSvgItem {
             var dialogRootSize = dialogRoot.vertical ? dialogRoot.height : dialogRoot.width
             switch(panel.alignment){
             case Qt.AlignLeft:
-                    return dialogRootSize - rightMaximumLengthHandle.value - size / 2
+                return dialogRootSize - rightMaximumLengthHandle.value - size / 2
             case Qt.AlignRight:
-                    return dialogRootSize - size / 2
+                return dialogRootSize - size / 2
             default:
-                    return dialogRootSize - panel.maximumLength / 2 - size / 2
+                return dialogRootSize - panel.maximumLength / 2 - size / 2
             }
         }
     }
