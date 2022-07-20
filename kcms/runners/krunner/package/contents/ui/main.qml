@@ -50,7 +50,7 @@ KCM.SimpleKCM {
         }
 
         QQC2.Slider {
-            Kirigami.FormData.label: i18n("KRunner width:")
+            Kirigami.FormData.label: i18n("Window width:")
             from: 20
             to: 70
             // No current way to hide slider ticks
