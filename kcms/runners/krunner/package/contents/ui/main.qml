@@ -15,7 +15,7 @@ KCM.SimpleKCM {
     id: root
 
     implicitWidth: Kirigami.Units.gridUnit * 32
-    implicitHeight: Kirigami.Units.gridUnit * 18
+    implicitHeight: Kirigami.Units.gridUnit * 20
 
     Kirigami.FormLayout {
         width: parent.width
