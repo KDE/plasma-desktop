@@ -28,10 +28,10 @@ PlasmaCore.SvgItem {
     property int offset: 0
 
     /*handle type: behave in different ways based on the alignment:
-     * alignment == Qt.AlignRight: Panel aligned to right and handle value relative to the right
-     * alignment == Qt.AlignLeft: Panel aligned to left and handle relative to the left
-     * (alignment != Qt.AlignRight) && (alignment & Qt.AlignRight): Panel aligned to the center and handle right of offset and value doubled
-     * (alignment != Qt.AlignLeft) && (alignment & Qt.AlignLeft): Panel aligned to the center and handle left of offset and value doubled
+     * alignment === Qt.AlignRight: Panel aligned to right and handle value relative to the right
+     * alignment === Qt.AlignLeft: Panel aligned to left and handle relative to the left
+     * (alignment !== Qt.AlignRight) && (alignment & Qt.AlignRight): Panel aligned to the center and handle right of offset and value doubled
+     * (alignment !== Qt.AlignLeft) && (alignment & Qt.AlignLeft): Panel aligned to the center and handle left of offset and value doubled
      * else: Panel aligned to center and handle relative to the center
      * Note that right/left and top/bottom are interchangeable
      */
@@ -43,9 +43,9 @@ PlasmaCore.SvgItem {
 
     function syncPos() {
         if (dialogRoot.vertical) {
-            if (alignment == Qt.AlignRight) {
+            if (alignment === Qt.AlignRight) {
                 y = root.parent.height - (value + offset + root.height/2)
-            } else if (alignment == Qt.AlignLeft) {
+            } else if (alignment === Qt.AlignLeft) {
                 y = value + offset - root.height/2
             } else {
                 if (root.alignment & Qt.AlignRight) {
@@ -57,9 +57,9 @@ PlasmaCore.SvgItem {
                 }
             }
         } else {
-            if (alignment == Qt.AlignRight) {
+            if (alignment === Qt.AlignRight) {
                 x = root.parent.width - (value + offset + root.width/2)
-            } else if (alignment == Qt.AlignLeft) {
+            } else if (alignment === Qt.AlignLeft) {
                 x = value + offset - root.width/2
             } else {
                 if (root.alignment & Qt.AlignRight) {
@@ -104,9 +104,9 @@ PlasmaCore.SvgItem {
         cursorShape: dialogRoot.vertical ? Qt.SizeVerCursor : Qt.SizeHorCursor
         onPositionChanged: {
             if (dialogRoot.vertical) {
-                if (root.alignment == Qt.AlignRight) {
+                if (root.alignment === Qt.AlignRight) {
                     root.value = root.parent.height - (parent.y + offset + root.height/2)
-                } else if (alignment == Qt.AlignLeft) {
+                } else if (alignment === Qt.AlignLeft) {
                     root.value = parent.y - offset + root.height/2
                 //Center
                 } else {
@@ -125,9 +125,9 @@ PlasmaCore.SvgItem {
                     }
                 }
             } else {
-                if (root.alignment == Qt.AlignRight) {
+                if (root.alignment === Qt.AlignRight) {
                     root.value = root.parent.width - (parent.x + offset + root.width/2)
-                } else if (alignment == Qt.AlignLeft) {
+                } else if (alignment === Qt.AlignLeft) {
                     root.value = parent.x - offset + root.width/2
                 //Center
                 } else {
