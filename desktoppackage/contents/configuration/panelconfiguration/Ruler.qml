@@ -14,13 +14,13 @@ PlasmaCore.FrameSvgItem {
 
     //Those properties get updated by PanelConfiguration.qml whenever a value in the panel changes
     property alias offset: offsetHandle.value
-    property alias minimumLength: minimumLengthHandle.value
-    property alias maximumLength: maximumLengthHandle.value
+    property alias minimumLength: rightMinimumLengthHandle.value
+    property alias maximumLength: rightMaximumLengthHandle.value
 
     imagePath: "widgets/containment-controls"
     state: "BottomEdge"
-    implicitWidth: offsetHandle.width + minimumLengthHandle.width
-    implicitHeight: offsetHandle.height + minimumLengthHandle.height
+    implicitWidth: offsetHandle.width + rightMinimumLengthHandle.width
+    implicitHeight: offsetHandle.height + rightMinimumLengthHandle.height
 
     onMinimumLengthChanged: leftMinimumLengthHandle.value = minimumLength
     onMaximumLengthChanged: leftMaximumLengthHandle.value = maximumLength
@@ -40,8 +40,8 @@ PlasmaCore.FrameSvgItem {
 
     Component.onCompleted: {
         offsetHandle.value = panel.offset
-        minimumLengthHandle.value = panel.minimumLength
-        maximumLengthHandle.value = panel.maximumLength
+        rightMinimumLengthHandle.value = panel.minimumLength
+        rightMaximumLengthHandle.value = panel.maximumLength
         leftMinimumLengthHandle.value = panel.minimumLength
         leftMaximumLengthHandle.value = panel.maximumLength
     }
@@ -89,7 +89,7 @@ PlasmaCore.FrameSvgItem {
             var dialogRootSize = dialogRoot.vertical ? dialogRoot.height : dialogRoot.width
             switch(panel.alignment){
             case Qt.AlignLeft:
-                    return dialogRootSize - maximumLengthHandle.value - size / 2
+                    return dialogRootSize - rightMaximumLengthHandle.value - size / 2
             case Qt.AlignRight:
                     return dialogRootSize - size / 2
             default:
@@ -111,7 +111,7 @@ PlasmaCore.FrameSvgItem {
      */
 
     SliderHandle {
-        id: minimumLengthHandle
+        id: rightMinimumLengthHandle
         alignment: panel.alignment | Qt.AlignLeft
         visible: panel.alignment !== Qt.AlignRight
         offset: panel.offset
@@ -126,7 +126,7 @@ PlasmaCore.FrameSvgItem {
     }
 
     SliderHandle {
-        id: maximumLengthHandle
+        id: rightMaximumLengthHandle
         alignment: panel.alignment | Qt.AlignLeft
         visible: panel.alignment !== Qt.AlignRight
         offset: panel.offset
@@ -193,7 +193,7 @@ PlasmaCore.FrameSvgItem {
                 }
             }
             AnchorChanges {
-                target: minimumLengthHandle
+                target: rightMinimumLengthHandle
                 anchors {
                     top: root.top
                     bottom: undefined
@@ -202,7 +202,7 @@ PlasmaCore.FrameSvgItem {
                 }
             }
             AnchorChanges {
-                target: maximumLengthHandle
+                target: rightMaximumLengthHandle
                 anchors {
                     top: undefined
                     bottom: root.bottom
@@ -255,7 +255,7 @@ PlasmaCore.FrameSvgItem {
                 }
             }
             AnchorChanges {
-                target: minimumLengthHandle
+                target: rightMinimumLengthHandle
                 anchors {
                     top: undefined
                     bottom: root.bottom
@@ -264,7 +264,7 @@ PlasmaCore.FrameSvgItem {
                 }
             }
             AnchorChanges {
-                target: maximumLengthHandle
+                target: rightMaximumLengthHandle
                 anchors {
                     top: root.top
                     bottom: undefined
@@ -317,7 +317,7 @@ PlasmaCore.FrameSvgItem {
                 }
             }
             AnchorChanges {
-                target: minimumLengthHandle
+                target: rightMinimumLengthHandle
                 anchors {
                     top: undefined
                     bottom: undefined
@@ -326,7 +326,7 @@ PlasmaCore.FrameSvgItem {
                 }
             }
             AnchorChanges {
-                target: maximumLengthHandle
+                target: rightMaximumLengthHandle
                 anchors {
                     top: undefined
                     bottom: undefined
@@ -379,7 +379,7 @@ PlasmaCore.FrameSvgItem {
                 }
             }
             AnchorChanges {
-                target: minimumLengthHandle
+                target: rightMinimumLengthHandle
                 anchors {
                     top: undefined
                     bottom: undefined
@@ -388,7 +388,7 @@ PlasmaCore.FrameSvgItem {
                 }
             }
             AnchorChanges {
-                target: maximumLengthHandle
+                target: rightMaximumLengthHandle
                 anchors {
                     top: undefined
                     bottom: undefined
