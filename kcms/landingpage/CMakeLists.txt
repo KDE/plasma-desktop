@@ -30,6 +30,7 @@ kconfig_add_kcfg_files(kcm_landingpage_SRCS landingpage_feedbacksettings.kcfgc G
 endif()
 
 kcoreaddons_add_plugin(kcm_landingpage SOURCES ${kcm_landingpage_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
+kcmutils_generate_desktop_file(kcm_landingpage)
 
 target_link_libraries(kcm_landingpage
     KF5::QuickAddons

@@ -22,6 +22,8 @@ ecm_qt_install_logging_categories(
 qt_add_dbus_interface(common_SRCS "${KWIN_INPUTDEVICE_INTERFACE}" InputDevice_interface)
 
 kcoreaddons_add_plugin(kcm_tablet INSTALL_NAMESPACE "plasma/kcms/systemsettings")
+kcmutils_generate_desktop_file(kcm_tablet)
+
 target_sources(kcm_tablet PRIVATE
     ${common_SRCS}
     kcmtablet.cpp
@@ -38,5 +40,4 @@ target_link_libraries(kcm_tablet
     Qt::DBus
 )
 
-install(FILES kcm_tablet.desktop  DESTINATION  ${KDE_INSTALL_APPDIR})
 kpackage_install_package(package kcm_tablet kcms)

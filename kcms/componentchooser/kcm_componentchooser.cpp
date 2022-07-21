@@ -19,7 +19,8 @@
 #include "componentchooserfilemanager.h"
 #include "componentchooserterminal.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(KcmComponentChooserFactory, "componentchooser.json", registerPlugin<KcmComponentChooser>(); registerPlugin<ComponentChooserData>();)
+K_PLUGIN_FACTORY_WITH_JSON(KcmComponentChooserFactory, "kcm_componentchooser.json", registerPlugin<KcmComponentChooser>();
+                           registerPlugin<ComponentChooserData>();)
 
 KcmComponentChooser::KcmComponentChooser(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)

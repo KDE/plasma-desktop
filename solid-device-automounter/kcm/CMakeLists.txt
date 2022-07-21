@@ -34,4 +34,3 @@ target_link_libraries(kcm_device_automounter
 
 install(TARGETS kcm_device_automounter DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets)
 
-install(FILES kcm_device_automounter.desktop DESTINATION ${KDE_INSTALL_APPDIR})

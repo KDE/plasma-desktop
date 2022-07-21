@@ -43,6 +43,7 @@ ecm_qt_install_logging_categories(
 
 
 kcoreaddons_add_plugin(kcm_keys SOURCES ${kcm_keys_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
+kcmutils_generate_desktop_file(kcm_keys)
 
 target_link_libraries(kcm_keys
     Qt::DBus
@@ -53,8 +54,6 @@ target_link_libraries(kcm_keys
     KF5::KIOWidgets
     KF5::QuickAddons
 )
-
-install(FILES kcm_keys.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 kpackage_install_package(package kcm_keys kcms)
 

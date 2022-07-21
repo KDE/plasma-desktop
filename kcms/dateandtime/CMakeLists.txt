@@ -9,6 +9,7 @@ ki18n_wrap_ui(kcm_clock_PART_SRCS dateandtime.ui)
 qt_add_dbus_interface(kcm_clock_PART_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/timedated1.xml timedated_interface)
 
 add_library(kcm_clock MODULE ${kcm_clock_PART_SRCS})
+kcmutils_generate_desktop_file(kcm_clock)
 
 target_link_libraries(kcm_clock
     Qt::DBus
@@ -35,6 +36,3 @@ kauth_install_helper_files(kcmdatetimehelper org.kde.kcontrol.kcmclock root)
 
 kauth_install_actions(org.kde.kcontrol.kcmclock kcmclock_actions.actions)
 
-########### install files ###############
-
-install( FILES kcm_clock.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )

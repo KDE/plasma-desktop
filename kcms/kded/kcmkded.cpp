@@ -29,7 +29,7 @@
 #include "kded_interface.h"
 #include "kdedconfigdata.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcmkded.json", registerPlugin<KDEDConfig>(); registerPlugin<KDEDConfigData>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcm_kded.json", registerPlugin<KDEDConfig>(); registerPlugin<KDEDConfigData>();)
 
 static const QString s_kdedServiceName = QStringLiteral("org.kde.kded5");
 

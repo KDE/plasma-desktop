@@ -17,6 +17,7 @@ kconfig_add_kcfg_files(componentchooser_SRCS browser_settings.kcfgc GENERATE_MOC
 kconfig_add_kcfg_files(componentchooser_SRCS terminal_settings.kcfgc GENERATE_MOC)
 
 kcoreaddons_add_plugin(kcm_componentchooser SOURCES ${componentchooser_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
+kcmutils_generate_desktop_file(kcm_componentchooser)
 
 target_link_libraries(kcm_componentchooser
     Qt::Core
@@ -29,5 +30,4 @@ target_link_libraries(kcm_componentchooser
     KF5::KCMUtils
 )
 
-install(FILES kcm_componentchooser.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 kpackage_install_package(package kcm_componentchooser kcms)

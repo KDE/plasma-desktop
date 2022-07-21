@@ -74,6 +74,7 @@ add_library(kcm_mouse MODULE
     ${common_SRCS}
     ${backend_SRCS}
 )
+kcmutils_generate_desktop_file(kcm_mouse)
 
 target_link_libraries(kcm_mouse
     ${backend_LIBS}
@@ -97,4 +98,3 @@ add_custom_command(TARGET kcm_mouse POST_BUILD
                    COMMAND ${CMAKE_COMMAND} -E create_symlink ../kcms/systemsettings/kcm_mouse.so kcm_mouse_init.so)
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kcm_mouse_init.so DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcminit)
-install( FILES kcm_mouse.desktop DESTINATION ${KDE_INSTALL_APPDIR} )

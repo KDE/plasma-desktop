@@ -17,6 +17,7 @@ kcmutils_generate_module_data(
 ki18n_wrap_ui(kcm_desktoppaths_PART_SRCS globalpaths.ui)
 
 add_library(kcm_desktoppaths MODULE ${kcm_desktoppaths_PART_SRCS})
+kcmutils_generate_desktop_file(kcm_desktoppaths)
 
 target_link_libraries(kcm_desktoppaths
     KF5::KCMUtils
@@ -28,5 +29,4 @@ target_link_libraries(kcm_desktoppaths
 )
 
 install(TARGETS kcm_desktoppaths DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets)
-install(FILES kcm_desktoppaths.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 

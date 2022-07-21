@@ -8,6 +8,7 @@ set(kcm_file_SRCS
 )
 
 kcoreaddons_add_plugin(kcm_baloofile SOURCES ${kcm_file_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
+kcmutils_generate_desktop_file(kcm_baloofile)
 
 target_link_libraries(kcm_baloofile
   KF5::CoreAddons
@@ -19,7 +20,5 @@ target_link_libraries(kcm_baloofile
   Qt::DBus
   Qt::Widgets
 )
-
-install(FILES kcm_baloofile.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 kpackage_install_package(package kcm_baloofile kcms)

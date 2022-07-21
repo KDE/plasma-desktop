@@ -6,6 +6,6 @@
 #include "plugin.h"
 #include "kcm/configcontainer.h"
 
-K_PLUGIN_CLASS_WITH_JSON(ConfigContainer, "mouse.json")
+K_PLUGIN_CLASS_WITH_JSON(ConfigContainer, "kcm_mouse.json")
 
 #include <plugin.moc>

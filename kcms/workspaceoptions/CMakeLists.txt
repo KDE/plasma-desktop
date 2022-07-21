@@ -20,6 +20,7 @@ kconfig_add_kcfg_files(kcm_workspace_SRCS workspaceoptions_plasmasettings.kcfgc 
 kconfig_add_kcfg_files(kcm_workspace_SRCS workspaceoptions_kwinsettings.kcfgc GENERATE_MOC)
 
 kcoreaddons_add_plugin(kcm_workspace SOURCES ${kcm_workspace_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
+kcmutils_generate_desktop_file(kcm_workspace)
 
 target_link_libraries(kcm_workspace
     KF5::QuickAddons
@@ -36,6 +37,5 @@ target_link_libraries(kcm_workspace
 install(FILES workspaceoptions_kdeglobalssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES workspaceoptions_plasmasettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES workspaceoptions_kwinsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-install(FILES kcm_workspace.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 kpackage_install_package(package kcm_workspace kcms)

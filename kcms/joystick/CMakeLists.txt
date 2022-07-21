@@ -13,7 +13,7 @@ set(kcm_joystick_PART_SRCS
 
 
 add_library(kcm_joystick MODULE ${kcm_joystick_PART_SRCS})
-
+kcmutils_generate_desktop_file(kcm_joystick)
 
 target_link_libraries(kcm_joystick
     KF5::Completion
@@ -24,9 +24,3 @@ target_link_libraries(kcm_joystick
 
 install(TARGETS kcm_joystick  DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets )
 
-
-########### install files ###############
-
-install( FILES kcm_joystick.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
-
-#

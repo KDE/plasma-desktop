@@ -66,6 +66,7 @@ kconfig_add_kcfg_files(KAMD_KCM_SRCS kactivitymanagerd_settings.kcfgc GENERATE_M
 kconfig_add_kcfg_files(KAMD_KCM_SRCS kactivitymanagerd_plugins_settings.kcfgc GENERATE_MOC)
 
 add_library (kcm_activities MODULE ${KAMD_KCM_SRCS})
+kcmutils_generate_desktop_file(kcm_activities)
 
 target_link_libraries (kcm_activities
    Qt::Quick
@@ -86,11 +87,6 @@ target_link_libraries (kcm_activities
 install (
    TARGETS kcm_activities
    DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets
-   )
-
-install (
-   FILES kcm_activities.desktop
-   DESTINATION ${KDE_INSTALL_APPDIR}
    )
 
 install (

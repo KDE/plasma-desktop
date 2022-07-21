@@ -20,6 +20,7 @@ kcmutils_generate_module_data(
 )
 
 kcoreaddons_add_plugin(kcm_access SOURCES ${kcm_access_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
+kcmutils_generate_desktop_file(kcm_access)
 
 target_link_libraries(kcm_access
     Qt::DBus
@@ -40,7 +41,6 @@ else()
     target_link_libraries(kcm_access Qt::GuiPrivate)
 endif()
 
-install(FILES kcm_access.desktop  DESTINATION ${KDE_INSTALL_APPDIR})
 install(
     FILES
         kcmaccessibilitybell.kcfg

@@ -20,7 +20,7 @@
 #include <KPluginFactory>
 #include <KUrlRequester>
 
-K_PLUGIN_FACTORY_WITH_JSON(KcmDesktopPathsFactory, "desktoppath.json", registerPlugin<DesktopPathConfig>(); registerPlugin<DesktopPathsData>();)
+K_PLUGIN_FACTORY_WITH_JSON(KcmDesktopPathsFactory, "kcm_desktoppaths.json", registerPlugin<DesktopPathConfig>(); registerPlugin<DesktopPathsData>();)
 
 DesktopPathConfig::DesktopPathConfig(QWidget *parent, const QVariantList &)
     : KCModule(parent)

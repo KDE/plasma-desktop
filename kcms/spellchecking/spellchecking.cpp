@@ -16,7 +16,7 @@
 #include <Sonnet/ConfigView>
 #include <Sonnet/Settings>
 
-K_PLUGIN_FACTORY_WITH_JSON(SpellFactory, "spellchecking.json", registerPlugin<SonnetSpellCheckingModule>(); registerPlugin<SpellCheckingData>();)
+K_PLUGIN_FACTORY_WITH_JSON(SpellFactory, "kcmspellchecking.json", registerPlugin<SonnetSpellCheckingModule>(); registerPlugin<SpellCheckingData>();)
 
 SonnetSpellCheckingModule::SonnetSpellCheckingModule(QWidget *parent, const QVariantList &)
     : KCModule(parent)

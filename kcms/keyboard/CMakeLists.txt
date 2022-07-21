@@ -141,9 +141,9 @@ else()
 endif()
 
 kcoreaddons_add_plugin(kcm_keyboard SOURCES kcmmain.cpp INSTALL_NAMESPACE "plasma/kcms/systemsettings")
-target_link_libraries(kcm_keyboard kcm_keyboard_static)
+kcmutils_generate_desktop_file(kcm_keyboard)
 
-install( FILES kcm_keyboard.desktop DESTINATION ${KDE_INSTALL_APPDIR} )
+target_link_libraries(kcm_keyboard kcm_keyboard_static)
 
 add_subdirectory(kconf_update)
 
