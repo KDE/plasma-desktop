@@ -356,7 +356,7 @@ MouseArea {
             tasksModel.groupingLauncherUrlBlacklist = plasmoid.configuration.groupingLauncherUrlBlacklist;
         }
         function onIconSpacingChanged() {
-            layoutTimer.restart();
+            taskList.layout();
         }
     }
 
@@ -449,27 +449,31 @@ MouseArea {
         onWidthChanged: layoutTimer.restart()
         onHeightChanged: layoutTimer.restart()
 
+        function layout() {
+            LayoutManager.layout(taskRepeater);
+        }
+
         Timer {
             id: layoutTimer
 
-            interval: PlasmaCore.Units.longDuration // Same as animation
+            interval: 0
             repeat: false
 
-            onTriggered: LayoutManager.layout(taskRepeater)
+            onTriggered: taskList.layout()
         }
 
         Repeater {
             id: taskRepeater
 
             delegate: Task {}
-            onItemAdded: layoutTimer.restart()
+            onItemAdded: taskList.layout()
             onItemRemoved: {
                 if (tasks.containsMouse && index != taskRepeater.count &&
                     item.winIdList && item.winIdList.length > 0 &&
                     taskClosedWithMouseMiddleButton.indexOf(item.winIdList[0]) > -1) {
                     needLayoutRefresh = true;
                 } else {
-                    layoutTimer.restart();
+                    taskList.layout();
                 }
                 taskClosedWithMouseMiddleButton = [];
             }
