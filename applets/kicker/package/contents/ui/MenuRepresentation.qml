@@ -443,5 +443,7 @@ FocusScope {
 
         kicker.reset.connect(reset);
         windowSystem.hidden.connect(reset);
+
+        rootModel.refresh();
     }
 }

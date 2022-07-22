@@ -61,8 +61,6 @@ Item {
                 }
                 plasmoid.configuration.favoritesPortedToKAstats = true;
             }
-
-            refresh();
         }
     }
 

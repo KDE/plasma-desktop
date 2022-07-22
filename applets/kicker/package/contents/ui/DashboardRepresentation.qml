@@ -1065,4 +1065,8 @@ Kicker.DashboardWindow {
             }
         }
     }
+
+    Component.onCompleted: {
+        rootModel.refresh();
+    }
 }

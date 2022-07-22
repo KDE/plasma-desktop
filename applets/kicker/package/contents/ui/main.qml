@@ -106,8 +106,6 @@ Item {
                 }
                 plasmoid.configuration.favoritesPortedToKAstats = true;
             }
-
-            rootModel.refresh();
         }
     }
 
