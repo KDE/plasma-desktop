@@ -4,8 +4,10 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick 2.15
+
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.configuration 2.0
 
 
@@ -40,6 +42,9 @@ PlasmaCore.SvgItem {
     //The maximum/minimum Position (X/Y) the silder can be moved to
     property int minimumPosition
     property int maximumPosition
+
+    // Handle name displayed as a tooltip.
+    property string description
 
     function syncPos() {
         if (dialogRoot.vertical) {
@@ -85,7 +90,13 @@ PlasmaCore.SvgItem {
         }
     }
 
+    PlasmaComponents3.ToolTip {
+        text: root.description
+        visible: root.description !== "" && area.containsMouse && !area.containsPress
+    }
+
     MouseArea {
+        id: area
         drag {
             target: parent
             axis: (dialogRoot.vertical) ? Drag.YAxis : Drag.XAxis
@@ -101,8 +112,12 @@ PlasmaCore.SvgItem {
             topMargin: (dialogRoot.vertical) ? -PlasmaCore.Units.gridUnit : 0
             bottomMargin: (dialogRoot.vertical) ? -PlasmaCore.Units.gridUnit : 0
         }
+        hoverEnabled: true
         cursorShape: dialogRoot.vertical ? Qt.SizeVerCursor : Qt.SizeHorCursor
         onPositionChanged: {
+            if (!drag.active) {
+                return;
+            }
             if (dialogRoot.vertical) {
                 if (root.alignment === Qt.AlignRight) {
                     root.value = root.parent.height - (parent.y + offset + root.height/2)

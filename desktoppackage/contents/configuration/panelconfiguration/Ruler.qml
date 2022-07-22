@@ -17,6 +17,9 @@ PlasmaCore.FrameSvgItem {
     property alias minimumLength: rightMinimumLengthHandle.value
     property alias maximumLength: rightMaximumLengthHandle.value
 
+    property string maximumText: dialogRoot.vertical ? i18n("Drag to change maximum height") : i18n("Drag to change maximum width")
+    property string minimumText: dialogRoot.vertical ? i18n("Drag to change minimum height") : i18n("Drag to change minimum width")
+
     imagePath: "widgets/containment-controls"
     state: "BottomEdge"
     implicitWidth: offsetHandle.width + rightMinimumLengthHandle.width
@@ -63,6 +66,7 @@ PlasmaCore.FrameSvgItem {
     SliderHandle {
         id: offsetHandle
         graphicElementName: "offsetslider"
+        description: i18n("Drag to change position on this screen edge")
         onValueChanged: panel.offset = value
         property int position: (dialogRoot.vertical) ? y : x
         /* The maximum/minimumPosition values are needed to prevent the user from moving a panel with
@@ -112,6 +116,7 @@ PlasmaCore.FrameSvgItem {
 
     SliderHandle {
         id: rightMinimumLengthHandle
+        description: root.minimumText
         alignment: panel.alignment | Qt.AlignLeft
         visible: panel.alignment !== Qt.AlignRight
         offset: panel.offset
@@ -127,6 +132,7 @@ PlasmaCore.FrameSvgItem {
 
     SliderHandle {
         id: rightMaximumLengthHandle
+        description: root.maximumText
         alignment: panel.alignment | Qt.AlignLeft
         visible: panel.alignment !== Qt.AlignRight
         offset: panel.offset
@@ -139,8 +145,10 @@ PlasmaCore.FrameSvgItem {
             panel.alignment === Qt.AlignCenter ? Math.min(dialogRootSize - size/2, dialogRootSize + offset * 2 - size/2) : dialogRootSize - size/2
         }
     }
+
     SliderHandle {
         id: leftMinimumLengthHandle
+        description: root.minimumText
         alignment: panel.alignment | Qt.AlignRight
         visible: panel.alignment !== Qt.AlignLeft
         offset: panel.offset
@@ -152,8 +160,10 @@ PlasmaCore.FrameSvgItem {
             panel.alignment === Qt.AlignCenter ? Math.max(-size/2, offset*2 - size/2) : -size/2
         }
     }
+
     SliderHandle {
         id: leftMaximumLengthHandle
+        description: root.maximumText
         alignment: panel.alignment | Qt.AlignRight
         visible: panel.alignment !== Qt.AlignLeft
         offset: panel.offset
