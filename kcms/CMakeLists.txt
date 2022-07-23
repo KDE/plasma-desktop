@@ -25,6 +25,7 @@ endif ()
 add_subdirectory( desktoppaths )
 
 add_subdirectory(activities)
+add_subdirectory(recentFiles)
 add_subdirectory(componentchooser)
 add_subdirectory(kded)
 add_subdirectory(runners)

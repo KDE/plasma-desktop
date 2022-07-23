@@ -1,0 +1,16 @@
+{
+    "KPlugin": {
+        "Description": "Manage your file activity history preferences",
+        "Icon": "preferences-desktop-activities",
+        "Name": "Recent Files",
+        "ServiceTypes": [
+            "KCModule"
+        ]
+    },
+    "X-DocPath": "kcontrol/kcm_recentFiles/index.html",
+    "X-KDE-FactoryName": "kcm_recentFiles",
+    "X-KDE-Keywords": "history,recentlyused,activity privacy, privacy",
+    "X-KDE-ModuleType": "Library",
+    "X-KDE-System-Settings-Parent-Category": "desktopbehavior",
+    "X-KDE-Weight": 100
+}

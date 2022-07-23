@@ -1,0 +1,41 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.kde.ActivityManager.ResourcesScoring">
+    <signal name="ResourceScoreUpdated">
+      <arg direction="out" type="s" name="activity"/>
+      <arg direction="out" type="s" name="client"/>
+      <arg direction="out" type="s" name="resource"/>
+      <arg direction="out" type="d" name="score"/>
+      <arg direction="out" type="u" name="lastUpdate"/>
+      <arg direction="out" type="u" name="firstUpdate"/>
+    </signal>
+    <signal name="ResourceScoreDeleted">
+      <arg direction="out" type="s" name="activity"/>
+      <arg direction="out" type="s" name="client"/>
+      <arg direction="out" type="s" name="resource"/>
+    </signal>
+    <signal name="RecentStatsDeleted">
+      <arg direction="out" type="s" name="activity"/>
+      <arg direction="out" type="i" name="count"/>
+      <arg direction="out" type="s" name="what"/>
+    </signal>
+    <signal name="EarlierStatsDeleted">
+      <arg direction="out" type="s" name="activity"/>
+      <arg direction="out" type="i" name="months"/>
+    </signal>
+    <method name="DeleteStatsForResource">
+      <arg direction="in" type="s" name="activity"/>
+      <arg direction="in" type="s" name="client"/>
+      <arg direction="in" type="s" name="resource"/>
+    </method>
+    <method name="DeleteRecentStats">
+      <arg direction="in" type="s" name="activity"/>
+      <arg direction="in" type="i" name="count"/>
+      <arg direction="in" type="s" name="what"/>
+    </method>
+    <method name="DeleteEarlierStats">
+      <arg direction="in" type="s" name="activity"/>
+      <arg direction="in" type="i" name="months"/>
+    </method>
+  </interface>
+</node>
