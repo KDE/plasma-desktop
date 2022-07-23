@@ -63,11 +63,11 @@ Item {
     PlasmaCore.IconItem {
         id: buttonIcon
 
+        anchors.fill: parent
+
         readonly property double aspectRatio: root.vertical
             ? implicitHeight / implicitWidth
             : implicitWidth / implicitHeight
-
-        anchors.fill: parent
 
         active: mouseArea.containsMouse && !justOpenedTimer.running
         smooth: true
@@ -80,12 +80,12 @@ Item {
         onSourceChanged: root.updateSizeHints()
     }
 
-    MouseArea
-    {
+    MouseArea {
         id: mouseArea
-        property bool wasExpanded: false;
 
         anchors.fill: parent
+
+        property bool wasExpanded: false;
 
         hoverEnabled: !root.dashWindow || !root.dashWindow.visible
 
