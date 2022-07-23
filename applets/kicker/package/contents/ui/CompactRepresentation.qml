@@ -101,6 +101,9 @@ Item {
                 break;
             }
         }
+        Accessible.name: Plasmoid.title
+        Accessible.description: Plasmoid.toolTipSubText
+        Accessible.role: Accessible.Button
 
         onPressed: {
             if (!kicker.isDash) {
