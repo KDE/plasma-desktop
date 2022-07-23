@@ -8,6 +8,7 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
@@ -87,7 +88,19 @@ Item {
 
         property bool wasExpanded: false;
 
+        activeFocusOnTab: true
         hoverEnabled: !root.dashWindow || !root.dashWindow.visible
+
+        Keys.onPressed: {
+            switch (event.key) {
+            case Qt.Key_Space:
+            case Qt.Key_Enter:
+            case Qt.Key_Return:
+            case Qt.Key_Select:
+                Plasmoid.activated();
+                break;
+            }
+        }
 
         onPressed: {
             if (!kicker.isDash) {
