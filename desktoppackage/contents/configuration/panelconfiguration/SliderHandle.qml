@@ -44,8 +44,15 @@ PlasmaCore.SvgItem {
     property int maximumPosition
     //Provide default position for "reset" action.
     function defaultPosition(): int {
-        var dialogSize = dialogRoot.vertical ? dialogRoot.height : dialogRoot.width;
-        return (value === panel.length) ? dialogSize : panel.length;
+        var dialogSize, panelSize;
+        if (dialogRoot.vertical) {
+            dialogSize = dialogRoot.height;
+            panelSize = panel.height;
+        } else {
+            dialogSize = dialogRoot.width;
+            panelSize = panel.width;
+        }
+        return (value === panelSize) ? dialogSize : panelSize;
     }
 
     // Handle name displayed as a tooltip.
