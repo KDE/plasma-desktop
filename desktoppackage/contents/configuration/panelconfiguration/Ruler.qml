@@ -49,11 +49,6 @@ PlasmaCore.FrameSvgItem {
         leftMaximumLengthHandle.value = panel.maximumLength
     }
 
-    function defaultPosition(value: int): int {
-        var dialogSize = dialogRoot.vertical ? dialogRoot.height : dialogRoot.width;
-        return (value === panel.length) ? dialogSize : panel.length;
-    }
-
     PlasmaCore.Svg {
         id: containmentControlsSvg
         imagePath: "widgets/containment-controls"
@@ -105,7 +100,7 @@ PlasmaCore.FrameSvgItem {
                 return dialogRootSize - panel.maximumLength / 2 - size / 2
             }
         }
-        function defaultPosition(): int {
+        function defaultPosition(): int /*override*/ {
             return 0;
         }
     }
