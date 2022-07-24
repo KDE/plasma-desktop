@@ -440,6 +440,15 @@ MouseArea {
             from: 0
             to: 100
             value: task.smartLauncherItem.progress
+
+            Connections {
+                enabled: task.activeFocus
+
+                function onValueChanged() {
+                    // QTBUG-105155: Qt doesn't send valueChanged events to Atspi for ProgressBar
+                    backend.updateProgressBarAccessibleEvent(taskProgressOverlayLoader.item);
+                }
+            }
         }
     }
 

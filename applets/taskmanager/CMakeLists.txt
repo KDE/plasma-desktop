@@ -3,6 +3,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.taskmanager\
 plasma_install_package(package org.kde.plasma.taskmanager)
 
 set(taskmanagerplugin_SRCS
+    plugin/accessibleprogressbar.cpp
     plugin/backend.cpp
     plugin/draghelper.cpp
     plugin/taskmanagerplugin.cpp

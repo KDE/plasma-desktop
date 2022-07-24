@@ -22,6 +22,7 @@
 #include <KIO/ApplicationLauncherJob>
 #include <KService/KApplicationTrader>
 
+#include <QAccessibleEvent>
 #include <QAction>
 #include <QActionGroup>
 #include <QApplication>
@@ -47,6 +48,8 @@
 
 #include <processcore/process.h>
 #include <processcore/processes.h>
+
+#include "accessibleprogressbar.h"
 
 namespace KAStats = KActivities::Stats;
 
@@ -606,6 +609,22 @@ qint64 Backend::parentPid(qint64 pid) const
     }
 
     return -1;
+}
+
+void Backend::updateProgressBarAccessibleEvent(QObject *progressBarItem)
+{
+    if (!progressBarItem || !QAccessible::isActive()) {
+        return;
+    }
+
+    if (!m_progressBarAccessibleIface) {
+        m_progressBarAccessibleIface.reset(new AccessibleProgressBar(progressBarItem));
+    } else {
+        m_progressBarAccessibleIface->setObject(progressBarItem);
+    }
+
+    QAccessibleEvent valueChangedEvent(m_progressBarAccessibleIface.get(), QAccessible::ValueChanged);
+    QAccessible::updateAccessibility(&valueChangedEvent);
 }
 
 void Backend::windowsHovered(const QVariant &_winIds, bool hovered)

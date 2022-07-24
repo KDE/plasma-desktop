@@ -7,6 +7,8 @@
 #ifndef BACKEND_H
 #define BACKEND_H
 
+#include <memory>
+
 #include <QObject>
 #include <QRect>
 
@@ -18,6 +20,8 @@ class QActionGroup;
 class QQuickItem;
 class QQuickWindow;
 class QJsonArray;
+
+class AccessibleProgressBar;
 
 namespace KActivities
 {
@@ -70,6 +74,11 @@ public:
 
     Q_INVOKABLE qint64 parentPid(qint64 pid) const;
 
+    /**
+     * @note workaround for https://bugreports.qt.io/browse/QTBUG-105155
+     */
+    Q_INVOKABLE void updateProgressBarAccessibleEvent(QObject *progressBarItem);
+
     static QUrl tryDecodeApplicationsUrl(const QUrl &launcherUrl);
     Q_INVOKABLE static QStringList applicationCategories(const QUrl &launcherUrl);
 
@@ -99,6 +108,8 @@ private:
     QActionGroup *m_actionGroup = nullptr;
     KActivities::Consumer *m_activitiesConsumer = nullptr;
     bool m_windowViewAvailable = false;
+
+    std::unique_ptr<AccessibleProgressBar> m_progressBarAccessibleIface;
 };
 
 #endif
