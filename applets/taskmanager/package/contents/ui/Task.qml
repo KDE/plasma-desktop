@@ -76,9 +76,6 @@ MouseArea {
         }
 
         let smartLauncherDescription = "";
-        if (taskProgressOverlayLoader.active) {
-            smartLauncherDescription += i18nc("@info:tooltip", "Progress for the current Task is %1 percent.", task.smartLauncherItem.progress);
-        }
         if (taskBadgeOverlayLoader.active) {
             smartLauncherDescription += i18ncp("@info:tooltip", "There is %1 new message.", "There are %1 new messages.", task.smartLauncherItem.count);
         }
@@ -437,8 +434,13 @@ MouseArea {
 
         anchors.fill: frame
         asynchronous: true
-        source: "TaskProgressOverlay.qml"
         active: task.isWindow && task.smartLauncherItem && task.smartLauncherItem.progressVisible
+
+        sourceComponent: TaskProgressOverlay {
+            from: 0
+            to: 100
+            value: task.smartLauncherItem.progress
+        }
     }
 
     Item {

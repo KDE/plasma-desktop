@@ -5,32 +5,36 @@
 */
 
 import QtQuick 2.15
+import QtQuick.Templates 2.15 as T
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 import "code/tools.js" as TaskTools
 
-Item {
-    id: background
+T.ProgressBar {
+    id: control
 
-    Item {
-        id: progress
-        anchors {
-            top: parent.top
-            left: parent.left
-            bottom: parent.bottom
-        }
+    implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
+                            implicitContentWidth + leftPadding + rightPadding)
+    implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
+                             implicitContentHeight + topPadding + bottomPadding)
 
-        width: parent.width * (task.smartLauncherItem.progress / 100)
+    hoverEnabled: false
+
+    contentItem: Item {
         clip: true
 
         PlasmaCore.FrameSvgItem {
             id: progressFrame
-            width: background.width
-            height: background.height
+
+            anchors.left: parent.left
+            width: parent.width * control.position
+            height: parent.height
 
             imagePath: "widgets/tasks"
             prefix: TaskTools.taskPrefix("progress").concat(TaskTools.taskPrefix("hover"))
         }
     }
+
+    background: Item {}
 }
