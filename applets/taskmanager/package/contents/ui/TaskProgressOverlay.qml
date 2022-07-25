@@ -20,6 +20,7 @@ T.ProgressBar {
                              implicitContentHeight + topPadding + bottomPadding)
 
     hoverEnabled: false
+    padding: 0
 
     contentItem: Item {
         clip: true
