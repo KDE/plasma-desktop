@@ -89,7 +89,7 @@ void KeyboardDaemon::configureKeyboard()
 void KeyboardDaemon::configureMouse()
 {
     QStringList modules;
-    modules << QStringLiteral("mouse");
+    modules << QStringLiteral("kcm_mouse");
     QProcess::startDetached(QStringLiteral("kcminit"), modules);
 }
 
