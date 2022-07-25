@@ -9,6 +9,8 @@
 
 #include <QObject>
 
+#include "kwin_interface.h"
+
 class ShowDesktop : public QObject
 {
     Q_OBJECT
@@ -27,6 +29,9 @@ public:
 
 Q_SIGNALS:
     void showingDesktopChanged(bool showingDesktop);
+
+private:
+    OrgKdeKWinInterface *m_interface;
 };
 
 #endif // SHOWDESKTOP_HEADER

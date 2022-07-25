@@ -15,6 +15,9 @@
 ShowDesktop::ShowDesktop(QObject *parent)
     : QObject(parent)
 {
+    m_interface = new OrgKdeKWinInterface(QStringLiteral("org.kde.KWin"), QStringLiteral("/KWin"), QDBusConnection::sessionBus(), this);
+    connect(m_interface, &OrgKdeKWinInterface::showingDesktopChanged, this, &ShowDesktop::showingDesktopChanged);
+
     connect(KWindowSystem::self(), &KWindowSystem::showingDesktopChanged, this, &ShowDesktop::showingDesktopChanged);
 }
 
@@ -22,12 +25,21 @@ ShowDesktop::~ShowDesktop() = default;
 
 bool ShowDesktop::showingDesktop() const
 {
+    if (m_interface->isValid()) {
+        return m_interface->showingDesktop();
+    }
+
     return KWindowSystem::showingDesktop();
 }
 
 void ShowDesktop::setShowingDesktop(bool showingDesktop)
 {
-    KWindowSystem::setShowingDesktop(showingDesktop);
+    if (m_interface->isValid()) {
+        m_interface->showDesktop(showingDesktop);
+    } else {
+        KWindowSystem::setShowingDesktop(showingDesktop);
+    }
+
     Q_EMIT showingDesktopChanged(showingDesktop);
 }
 
@@ -50,7 +62,5 @@ void ShowDesktop::minimizeAll()
 
 void ShowDesktop::toggleDesktop()
 {
-    const bool showingNow = KWindowSystem::showingDesktop();
-    KWindowSystem::setShowingDesktop(!showingNow);
-    Q_EMIT showingDesktopChanged(!showingNow);
+    setShowingDesktop(!showingDesktop());
 }

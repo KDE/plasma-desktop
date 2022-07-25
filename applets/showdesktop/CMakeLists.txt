@@ -7,6 +7,8 @@ set(showdesktop_SRCS
     plugin/showdesktopplugin.cpp
 )
 
+qt_add_dbus_interface(showdesktop_SRCS plugin/org.kde.KWin.xml kwin_interface)
+
 add_library(showdesktopplugin SHARED ${showdesktop_SRCS})
 
 target_link_libraries(showdesktopplugin
