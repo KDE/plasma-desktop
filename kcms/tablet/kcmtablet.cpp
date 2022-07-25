@@ -70,7 +70,7 @@ public:
         for (auto screen : screens) {
             auto geo = screen->geometry();
             auto it =
-                new QStandardItem(i18nc("model - (x,y widthxheight)", "%1 - (%2,%3 %4x%5)", screen->model(), geo.x(), geo.y(), geo.width(), geo.height()));
+                new QStandardItem(i18nc("model - (x,y widthxheight)", "%1 - (%2,%3 %4×%5)", screen->model(), geo.x(), geo.y(), geo.width(), geo.height()));
             it->setData(screen->name(), Qt::UserRole);
             appendRow(it);
         }
