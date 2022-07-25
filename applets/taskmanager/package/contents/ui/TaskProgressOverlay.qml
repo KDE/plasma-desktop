@@ -37,5 +37,5 @@ T.ProgressBar {
         }
     }
 
-    background: Item {}
+    background: null
 }
