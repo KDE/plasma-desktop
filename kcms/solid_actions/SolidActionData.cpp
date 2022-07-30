@@ -14,6 +14,7 @@
 #include <KConfigGroup>
 #include <KDesktopFile>
 #include <KDesktopFileActions>
+#include <KFileUtils>
 #include <KStringHandler>
 
 #include <Solid/Battery>
@@ -52,15 +53,16 @@ SolidActionData::SolidActionData(bool includeFiles)
 
     if (includeFiles) {
         // Fill the lists of possible device types / device values
-        const QString deviceDir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, //
-                                                         QStringLiteral("/solid/devices/"),
-                                                         QStandardPaths::LocateDirectory);
         // List all the known device actions, then add their name and all values to the appropriate lists
-        QDirIterator it(deviceDir, QStringList() << QStringLiteral("*.desktop"));
-        while (it.hasNext()) {
-            it.next();
-            const QString desktop = it.filePath();
-            KDesktopFile deviceFile(desktop);
+
+        const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, //
+                                                           QStringLiteral("/solid/devices/"),
+                                                           QStandardPaths::LocateDirectory);
+
+        const QStringList files = KFileUtils::findAllUniqueFiles(dirs, {QStringLiteral("*.desktop")});
+
+        for (const QString &file : files) {
+            KDesktopFile deviceFile(file);
             KConfigGroup deviceType = deviceFile.desktopGroup(); // Retrieve the configuration group where the user friendly name is
 
             const QString ifaceName = deviceType.readEntry("X-KDE-Solid-Actions-Type");
