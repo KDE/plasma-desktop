@@ -447,7 +447,7 @@ MouseArea {
                     activeFocusOnTab: true
                     onClicked: pagerModel.changePage(index);
                     Accessible.name: Plasmoid.configuration.displayedText ? model.display : i18n("Desktop %1", (index + 1))
-                    Accessible.description: Plasmoid.configuration.displayedText ? i18n("Activate %1", model.display) : i18n("Activate %1", (index + 1))
+                    Accessible.description: Plasmoid.configuration.displayedText ? i18nc("@info:tooltip %1 is the name of a virtual desktop or an activity", "Switch to %1", model.display) : i18nc("@info:tooltip %1 is the name of a virtual desktop or an activity", "Switch to %1", (index + 1))
                     Accessible.role: Accessible.Button
                     Keys.onPressed: event => {
                         switch (event.key) {
