@@ -316,7 +316,7 @@ Kicker.DashboardWindow {
 
             visible: (searchField.text !== "")
 
-            iconName: "dialog-close"
+            iconName: "edit-clear"
             flat: false
 
             onClicked: searchField.clear();
