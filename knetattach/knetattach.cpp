@@ -205,7 +205,7 @@ bool KNetAttach::validateCurrentPage()
         bool success = doConnectionTest(url);
         _folderParameters->setEnabled(true);
         if (!success) {
-            KMessageBox::sorry(this, i18n("Unable to connect to server.  Please check your settings and try again."));
+            KMessageBox::error(this, i18n("Unable to connect to server.  Please check your settings and try again."));
             button(BackButton)->setEnabled(true);
             return false;
         }

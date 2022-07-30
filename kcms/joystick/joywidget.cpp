@@ -222,7 +222,7 @@ void JoyWidget::deviceChanged(const QString &dev)
     QString devName;
 
     if ((start = dev.indexOf(QLatin1String("/dev"))) == -1) {
-        KMessageBox::sorry(this,
+        KMessageBox::error(this,
                            i18n("The given device name is invalid (does not contain /dev).\n"
                                 "Please select a device from the list or\n"
                                 "enter a device file, like /dev/js0."),
