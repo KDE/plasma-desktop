@@ -481,6 +481,7 @@ MouseArea {
             active: task.highlighted
             enabled: true
             usesPlasmaTheme: false
+            opacity: model.IsMinimized === true ? 0.6 : 1
 
             source: model.decoration
         }
