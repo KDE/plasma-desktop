@@ -55,7 +55,7 @@ JoyWidget::JoyWidget(QWidget *parent)
     // create area to show an icon + message if no joystick was detected
     {
         messageBox = new KMessageWidget(this);
-        messageBox->setMessageType(KMessageWidget::Error);
+        messageBox->setMessageType(KMessageWidget::Information);
         messageBox->setCloseButtonVisible(false);
         messageBox->hide();
         messageBox->setWordWrap(true);
