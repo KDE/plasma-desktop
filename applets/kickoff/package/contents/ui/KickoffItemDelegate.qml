@@ -205,15 +205,12 @@ T.ItemDelegate {
         // Using this Item fixes drag and drop causing delegates
         // to reset to a 0 X position and overlapping each other.
         Item { id: dragItem }
-        // Using onPositionChanged adds subtle freeze when 
-        // changing category. To address scrolling problem
-        // we'll rely on check if view was scrolled with wheel.
-        onEntered: {
-            if(root.view.movedWithWheel) {
-                root.view.movedWithWheel = false
-                return
-            }
-            
+        // Using onPositionChanged instead of onEntered because it enables several
+        // desirable behaviors:
+        // 1. prevents changing selection while scrolling with the mouse wheel
+        // 2. Prevents the cursor position resetting selection when navigating using the keyboard
+        // See Bugs 455674 and 454349
+        onPositionChanged: {
             // forceActiveFocus() touches multiple items, so check for
             // activeFocus first to be more efficient.
             if (!root.activeFocus) {
