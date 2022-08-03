@@ -52,6 +52,7 @@ kconfig_add_kcfg_files(KAMD_KCM_SRCS kactivitymanagerd_plugins_settings.kcfgc GE
 
 add_library (kcm_recentFiles MODULE ${KAMD_KCM_SRCS})
 
+kcmutils_generate_desktop_file(kcm_recentFiles)
 target_link_libraries (kcm_recentFiles
    Qt::Quick
    Qt::QuickWidgets
@@ -70,11 +71,6 @@ target_link_libraries (kcm_recentFiles
 install (
    TARGETS kcm_recentFiles
    DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets
-   )
-
-install (
-   FILES kcm_recentFiles.desktop
-   DESTINATION ${KDE_INSTALL_APPDIR}
    )
 
 install (
