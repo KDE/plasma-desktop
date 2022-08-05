@@ -111,10 +111,9 @@ public:
             for (GSList *l = list; l; l = l->next) {
                 IBusEmojiData *data = (IBusEmojiData *)l->data;
                 if (!IBUS_IS_EMOJI_DATA(data)) {
-                    qWarning() << "Your dict format is no longer supported.\n"
-                                  "Need to create the dictionaries again.";
-                    g_slist_free(list);
-                    return;
+                    qWarning() << "Skipping over invaid data in " << dictPath << ".\n"
+                                  "You might need to create the dictionaries again.";
+                    continue;
                 }
 
                 const QString emoji = QString::fromUtf8(ibus_emoji_data_get_emoji(data));
