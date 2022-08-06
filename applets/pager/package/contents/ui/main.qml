@@ -388,7 +388,7 @@ MouseArea {
 
                 // These states match the set of SVG prefixes for the "widgets/pager" below.
                 state: {
-                    if ((desktopMouseArea.enabled && desktopMouseArea.containsMouse)
+                    if ((desktopMouseArea.enabled && (desktopMouseArea.containsMouse || desktopMouseArea.activeFocus))
                             || (root.dragging && root.dragId === desktopId)) {
                         return "hover";
                     } else if (active) {
