@@ -29,7 +29,7 @@ public:
     };
     Q_ENUM(CursorFeedbackType)
 
-    explicit LaunchFeedback(QObject *parent = nullptr, const QVariantList &list = QVariantList());
+    explicit LaunchFeedback(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~LaunchFeedback() override;
 
     LaunchFeedbackSettings *launchFeedbackSettings() const;
