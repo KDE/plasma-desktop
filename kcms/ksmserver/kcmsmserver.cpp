@@ -27,7 +27,6 @@
 #include "smserverdata.h"
 #include "smserversettings.h"
 
-#include <KAboutData>
 #include <KLocalizedString>
 
 #include <sessionmanagement.h>
@@ -36,8 +35,8 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(SMServerConfigFactory, "kcm_smserver.json", registerPlugin<SMServerConfig>(); registerPlugin<SMServerData>();)
 
-SMServerConfig::SMServerConfig(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+SMServerConfig::SMServerConfig(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, metaData, args)
     , m_login1Manager(new OrgFreedesktopLogin1ManagerInterface(QStringLiteral("org.freedesktop.login1"),
                                                                QStringLiteral("/org/freedesktop/login1"),
                                                                QDBusConnection::systemBus(),
@@ -57,16 +56,6 @@ SMServerConfig::SMServerConfig(QObject *parent, const QVariantList &args)
     checkFirmwareSetupRequested();
     m_restartInSetupScreenInitial = m_restartInSetupScreen;
 
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_smserver"),
-                                       i18n("Desktop Session"),
-                                       QStringLiteral("1.0"),
-                                       i18n("Desktop Session Login and Logout"),
-                                       KAboutLicense::GPL,
-                                       i18n("Copyright © 2000–2020 Desktop Session team"));
-
-    about->addAuthor(i18n("Oswald Buddenhagen"), QString(), QStringLiteral("ossi@kde.org"));
-    about->addAuthor(i18n("Carl Schwan"), QStringLiteral("QML rewrite"), QStringLiteral("carl@carlschwan.eu"), QStringLiteral("https://carlschwan.eu"));
-    setAboutData(about);
     setButtons(Help | Apply | Default);
 
     const QString canFirmwareSetup = m_login1Manager->CanRebootToFirmwareSetup().value();
