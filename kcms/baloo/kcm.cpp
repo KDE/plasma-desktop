@@ -10,7 +10,6 @@
 #include "kcm.h"
 #include "fileexcludefilters.h"
 
-#include <KAboutData>
 #include <KFormat>
 #include <KLocalizedString>
 #include <KPluginFactory>
@@ -44,26 +43,14 @@ static QString balooDatabaseLocation()
 
 using namespace Baloo;
 
-ServerConfigModule::ServerConfigModule(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+ServerConfigModule::ServerConfigModule(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, metaData, args)
     , m_data(new BalooData(this))
     , m_filteredFolderModel(new FilteredFolderModel(m_data->settings(), this))
 {
     qmlRegisterAnonymousType<FilteredFolderModel>("org.kde.plasma.baloo.kcm", 0);
     qmlRegisterAnonymousType<BalooSettings>("org.kde.plasma.baloo.kcm", 0);
 
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_baloofile"),
-                                       i18n("File Search"),
-                                       QStringLiteral("0.1"),
-                                       QString(),
-                                       KAboutLicense::GPL,
-                                       i18n("Copyright 2007-2010 Sebastian Trüg"));
-
-    about->addAuthor(i18n("Sebastian Trüg"), QString(), QStringLiteral("trueg@kde.org"));
-    about->addAuthor(i18n("Vishesh Handa"), QString(), QStringLiteral("vhanda@kde.org"));
-    about->addAuthor(i18n("Tomaz Canabrava"), QString(), QStringLiteral("tcnaabrava@kde.org"));
-
-    setAboutData(about);
     setButtons(Help | Apply | Default);
 
     connect(balooSettings(), &BalooSettings::excludedFoldersChanged, m_filteredFolderModel, &FilteredFolderModel::updateDirectoryList);
