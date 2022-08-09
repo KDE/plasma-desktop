@@ -12,7 +12,6 @@
 #include <QQuickRenderControl>
 #include <QWindow>
 
-#include <KAboutData>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KGlobalShortcutInfo>
@@ -32,8 +31,8 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMKeysFactory, "kcm_keys.json", registerPlugin<KCMKeys>(); registerPlugin<KeysData>();)
 
-KCMKeys::KCMKeys(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+KCMKeys::KCMKeys(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : KQuickAddons::ConfigModule(parent, metaData, args)
 {
     constexpr char uri[] = "org.kde.private.kcms.keys";
     qmlRegisterUncreatableType<BaseModel>(uri, 2, 0, "BaseModel", "Can't create BaseModel");
@@ -43,9 +42,6 @@ KCMKeys::KCMKeys(QObject *parent, const QVariantList &args)
     qDBusRegisterMetaType<KGlobalShortcutInfo>();
     qDBusRegisterMetaType<QList<KGlobalShortcutInfo>>();
     qDBusRegisterMetaType<QList<QStringList>>();
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_keys"), i18n("Shortcuts"), QStringLiteral("2.0"), QString(), KAboutLicense::GPL);
-    about->addAuthor(i18n("David Redondo"), QString(), QStringLiteral("kde@david-redondo.de"));
-    setAboutData(about);
     m_globalAccelInterface = new KGlobalAccelInterface(QStringLiteral("org.kde.kglobalaccel"), //
                                                        QStringLiteral("/kglobalaccel"),
                                                        QDBusConnection::sessionBus(),

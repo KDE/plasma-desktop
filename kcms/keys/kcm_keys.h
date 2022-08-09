@@ -27,7 +27,7 @@ class KCMKeys : public KQuickAddons::ConfigModule
     Q_PROPERTY(QString lastError READ lastError NOTIFY errorOccured)
 
 public:
-    KCMKeys(QObject *parent, const QVariantList &args);
+    KCMKeys(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
 
     void defaults() override;
     void load() override;
