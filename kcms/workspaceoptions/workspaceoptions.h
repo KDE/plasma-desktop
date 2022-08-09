@@ -24,7 +24,7 @@ class KCMWorkspaceOptions : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(bool isWayland READ isWayland CONSTANT)
 
 public:
-    KCMWorkspaceOptions(QObject *parent, const QVariantList &args);
+    KCMWorkspaceOptions(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~KCMWorkspaceOptions() override
     {
     }

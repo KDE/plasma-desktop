@@ -7,7 +7,6 @@
 
 #include "workspaceoptions.h"
 
-#include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KWindowSystem>
@@ -22,22 +21,13 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMWorkspaceOptionsFactory, "kcm_workspace.json", registerPlugin<KCMWorkspaceOptions>(); registerPlugin<WorkspaceOptionsData>();)
 
-KCMWorkspaceOptions::KCMWorkspaceOptions(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+KCMWorkspaceOptions::KCMWorkspaceOptions(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, metaData, args)
     , m_data(new WorkspaceOptionsData(this))
 {
     qmlRegisterAnonymousType<WorkspaceOptionsGlobalsSettings>("org.kde.plasma.workspaceoptions.kcm", 0);
     qmlRegisterAnonymousType<WorkspaceOptionsPlasmaSettings>("org.kde.plasma.workspaceoptions.kcm", 0);
     qmlRegisterAnonymousType<WorkspaceOptionsKwinSettings>("org.kde.plasma.workspaceoptions.kcm", 0);
-
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_workspace"),
-                                       i18n("General Behavior"),
-                                       QStringLiteral("1.1"),
-                                       i18n("System Settings module for configuring general workspace behavior."),
-                                       KAboutLicense::GPL);
-
-    about->addAuthor(i18n("Furkan Tokac"), QString(), QStringLiteral("furkantokac34@gmail.com"));
-    setAboutData(about);
 
     setButtons(Apply | Default | Help);
 }
