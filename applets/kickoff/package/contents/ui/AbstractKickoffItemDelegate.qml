@@ -98,7 +98,12 @@ T.ItemDelegate {
     hoverEnabled: false
 
     text: model.name ?? model.display
+    Accessible.role: Accessible.ListItem
     Accessible.description: root.description != root.text ? root.description : ""
+    Accessible.onPressAction: {
+        root.forceActiveFocus() // trigger is focus guarded
+        action.trigger()
+    }
 
     // Using an action so that it can be replaced or manually triggered
     // using `model` () instead of `root.model` leads to errors about
