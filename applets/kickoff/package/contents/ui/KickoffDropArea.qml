@@ -14,7 +14,7 @@ DropArea {
     property real scrollUpMargin: 0
     property real scrollDownMargin: 0
     enabled: plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
-    onPositionChanged: if (drag.source instanceof KickoffItemDelegate) {
+    onPositionChanged: if (drag.source instanceof KickoffGridDelegate || drag.source instanceof KickoffListDelegate) {
         const source = drag.source
         const view = drag.source.view
         if (source.view === root.targetView && !view.move.running && !view.moveDisplaced.running) {

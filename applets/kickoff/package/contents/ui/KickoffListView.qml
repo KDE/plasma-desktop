@@ -130,7 +130,7 @@ EmptyPage {
             prefix: "hover"
         }
 
-        delegate: KickoffItemDelegate {
+        delegate: KickoffListDelegate {
             width: view.availableWidth
         }
 
@@ -139,13 +139,13 @@ EmptyPage {
             criteria: ViewSection.FullString
             delegate: PC3.AbstractButton {
                 width: view.availableWidth
-                height: KickoffSingleton.listDelegateHeight
+                height: KickoffSingleton.compactListDelegateHeight
 
                 PC3.Label {
                     id: contentLabel
                     anchors.left: parent.left
                     width: section.length === 1
-                        ? KickoffSingleton.listDelegateContentHeight + leftPadding + rightPadding
+                        ? KickoffSingleton.compactListDelegateContentHeight + leftPadding + rightPadding
                         : parent.width
                     height: parent.height
                     leftPadding: view.effectiveLayoutDirection === Qt.LeftToRight
@@ -156,7 +156,7 @@ EmptyPage {
                     verticalAlignment: Text.AlignVCenter
                     maximumLineCount: 1
                     elide: Text.ElideRight
-                    font.pixelSize: KickoffSingleton.listDelegateContentHeight
+                    font.pixelSize: KickoffSingleton.compactListDelegateContentHeight
                     enabled: hoverHandler.hovered
                     text: section.length === 1 ? section.toUpperCase() : section
                 }

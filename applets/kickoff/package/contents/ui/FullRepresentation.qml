@@ -88,7 +88,7 @@ EmptyPage {
                 // Forces the function be re-run every time runnerModel.count changes.
                 // This is absolutely necessary to make the search view work reliably.
                 model: plasmoid.rootItem.runnerModel.count ? plasmoid.rootItem.runnerModel.modelForRow(0) : null
-                delegate: KickoffItemDelegate {
+                delegate: KickoffListDelegate {
                     width: view.availableWidth
                     isSearchResult: true
                 }

@@ -19,7 +19,7 @@ BasePage {
         model: plasmoid.rootItem.rootModel
         // needed otherwise app displayed at top-level will show a first character as group.
         section.property: ""
-        delegate: KickoffItemDelegate {
+        delegate: KickoffListDelegate {
             width: view.availableWidth
             isCategory: model.hasChildren
         }

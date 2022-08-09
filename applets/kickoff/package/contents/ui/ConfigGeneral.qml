@@ -1,6 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2013 David Edmundson <davidedmundson@kde.org>
     SPDX-FileCopyrightText: 2021 Mikel Johnson <mikel5764@gmail.com>
+    SPDX-FileCopyrightText: 2022 Nate Graham <nate@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -22,6 +23,7 @@ ColumnLayout {
     property var cfg_systemFavorites: String(plasmoid.configuration.systemFavorites)
     property int cfg_primaryActions: plasmoid.configuration.primaryActions
     property alias cfg_showActionButtonCaptions: showActionButtonCaptions.checked
+    property alias cfg_compactMode: compactModeCheckbox.checked
 
     Kirigami.FormLayout {
         Button {
@@ -80,7 +82,22 @@ ColumnLayout {
 
         CheckBox {
             id: alphaSort
+            Kirigami.FormData.label: i18nc("General options", "General:")
             text: i18n("Always sort applications alphabetically")
+        }
+
+        CheckBox {
+            id: compactModeCheckbox
+            text: i18n("Use compact list item style")
+            checked: Kirigami.Settings.tabletMode ? true : plasmoid.configuration.compactMode
+            enabled: !Kirigami.Settings.tabletMode
+        }
+        Label {
+            visible: Kirigami.Settings.tabletMode
+            text: i18nc("@info:usagetip under a checkbox when Touch Mode is on", "Automatically disabled when in Touch Mode")
+            Layout.fillWidth: true
+            wrapMode: Text.Wrap
+            font: Kirigami.Theme.smallFont
         }
 
         Button {

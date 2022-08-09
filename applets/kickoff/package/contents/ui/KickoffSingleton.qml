@@ -57,32 +57,43 @@ Item {
     readonly property real gridCellSize: gridDelegate.implicitHeight
     readonly property real listDelegateHeight: listDelegate.implicitHeight
     readonly property real listDelegateContentHeight: listDelegate.implicitContentHeight
+    readonly property real compactListDelegateHeight: compactListDelegate.implicitHeight
+    readonly property real compactListDelegateContentHeight: compactListDelegate.implicitContentHeight
     //END
 
     //BEGIN Private
-    KickoffItemDelegate {
+    KickoffGridDelegate {
         id: gridDelegate
         visible: false
         enabled: false
-        icon.width: PlasmaCore.Units.iconSizes.large
-        icon.height: PlasmaCore.Units.iconSizes.large
         model: null
         index: -1
         text: "asdf"
         url: ""
         decoration: "start-here-kde"
         description: "asdf"
-        display: PC3.AbstractButton.TextUnderIcon
         width: implicitHeight
         action: null
         indicator: null
     }
-    KickoffItemDelegate {
+    KickoffListDelegate {
         id: listDelegate
         visible: false
         enabled: false
-        icon.width: PlasmaCore.Units.iconSizes.smallMedium
-        icon.height: PlasmaCore.Units.iconSizes.smallMedium
+        model: null
+        index: -1
+        text: "asdf"
+        url: ""
+        decoration: "start-here-kde"
+        description: "asdf"
+        action: null
+        indicator: null
+    }
+    KickoffListDelegate {
+        id: compactListDelegate
+        visible: false
+        enabled: false
+        compact: true
         model: null
         index: -1
         text: "asdf"

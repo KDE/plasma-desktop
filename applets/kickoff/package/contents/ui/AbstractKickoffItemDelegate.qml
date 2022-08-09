@@ -5,6 +5,7 @@
     Copyright (C) 2015-2018  Eike Hein <hein@kde.org>
     Copyright (C) 2021 by Mikel Johnson <mikel5764@gmail.com>
     Copyright (C) 2021 by Noah Davis <noahadvs@gmail.com>
+    Copyright (C) 2022 Nate Graham <nate@kde.org>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -40,7 +41,6 @@ T.ItemDelegate {
     required property string description
 
     readonly property Flickable view: ListView.view ?? GridView.view
-    readonly property bool textUnderIcon: display === PC3.AbstractButton.TextUnderIcon
     property bool isCategory: false
     readonly property bool hasActionList: model && (model.favoriteId !== null || ("hasActionList" in model && model.hasActionList === true))
     property var actionList: null
@@ -48,6 +48,10 @@ T.ItemDelegate {
 
     property bool dragEnabled: enabled && !isCategory
         && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
+
+    property bool labelTruncated: false
+    property bool descriptionTruncated: false
+    property bool descriptionVisible: true
 
     function openActionMenu(x = undefined, y = undefined) {
         if (!hasActionList) { return; }
@@ -88,21 +92,10 @@ T.ItemDelegate {
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
                              implicitContentHeight + topPadding + bottomPadding)
 
-    // We use an increased fixed vertical padding to improve touch usability
-    leftPadding: KickoffSingleton.listItemMetrics.margins.left
-        + (!textUnderIcon && mirrored ? KickoffSingleton.fontMetrics.descent : 0)
-    rightPadding: KickoffSingleton.listItemMetrics.margins.right
-        + (!textUnderIcon && !mirrored ? KickoffSingleton.fontMetrics.descent : 0)
-    topPadding: PlasmaCore.Units.smallSpacing*2
-    bottomPadding: PlasmaCore.Units.smallSpacing*2
-
     spacing: KickoffSingleton.fontMetrics.descent
 
     enabled: !model.disabled
     hoverEnabled: false
-
-    icon.width: PlasmaCore.Units.iconSizes.smallMedium
-    icon.height: PlasmaCore.Units.iconSizes.smallMedium
 
     text: model.name ?? model.display
     Accessible.description: root.description != root.text ? root.description : ""
@@ -126,55 +119,6 @@ T.ItemDelegate {
                 }
             }
         }
-    }
-
-    background: null
-    contentItem: GridLayout {
-        baselineOffset: label.y + label.baselineOffset
-        columnSpacing: parent.spacing
-        rowSpacing: parent.spacing
-        flow: root.textUnderIcon ? GridLayout.TopToBottom : GridLayout.LeftToRight
-        PlasmaCore.IconItem {
-            id: iconItem
-            Layout.alignment: root.textUnderIcon ? Qt.AlignHCenter | Qt.AlignBottom : Qt.AlignLeft | Qt.AlignVCenter
-            implicitWidth: root.icon.width
-            implicitHeight: root.icon.height
-            animated: false
-            usesPlasmaTheme: false
-            source: root.decoration || root.icon.name || root.icon.source
-        }
-        PC3.Label {
-            id: label
-            Layout.alignment: root.textUnderIcon ? Qt.AlignHCenter | Qt.AlignTop : Qt.AlignLeft | Qt.AlignVCenter
-            Layout.fillWidth: true
-            Layout.preferredHeight: root.textUnderIcon && lineCount === 1 ? implicitHeight * 2 : implicitHeight
-            text: root.text
-            elide: Text.ElideRight
-            horizontalAlignment: root.textUnderIcon ? Text.AlignHCenter : Text.AlignLeft
-            verticalAlignment: root.textUnderIcon ? Text.AlignTop : Text.AlignVCenter
-            maximumLineCount: 2
-            wrapMode: Text.Wrap
-            textFormat: root.model && root.model.isMultilineText ? Text.StyledText : Text.PlainText
-        }
-    }
-
-    PC3.Label {
-        id: descriptionLabel
-        parent: root
-        anchors {
-            left: root.contentItem.left
-            right: root.contentItem.right
-            baseline: root.contentItem.baseline
-            leftMargin: root.textUnderIcon ? 0 : root.implicitContentWidth + root.spacing
-            baselineOffset: root.textUnderIcon ? implicitHeight : 0
-        }
-        visible: !textUnderIcon && text.length > 0
-        enabled: false
-        text: root.Accessible.description
-        elide: Text.ElideRight
-        horizontalAlignment: root.textUnderIcon ? Text.AlignHCenter : Text.AlignRight
-        verticalAlignment: root.textUnderIcon ? Text.AlignTop : Text.AlignVCenter
-        maximumLineCount: 1
     }
 
     Drag.active: mouseArea.drag.active
@@ -250,15 +194,15 @@ T.ItemDelegate {
     }
 
     PC3.ToolTip.text: {
-        const showDescription = descriptionLabel.truncated
-            || (textUnderIcon && Accessible.description.length > 0)
-        if (label.truncated && showDescription) {
+        if (root.labelTruncated && root.descriptionTruncated) {
             return `${text} (${description})`
-        } else if (showDescription) {
+        } else if (root.descriptionTruncated || !root.descriptionVisible) {
             return description
         }
         return ""
     }
     PC3.ToolTip.visible: mouseArea.containsMouse && PC3.ToolTip.text.length > 0
     PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
+
+    background: null
 }

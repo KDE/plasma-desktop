@@ -129,11 +129,8 @@ EmptyPage {
             prefix: "hover"
         }
 
-        delegate: KickoffItemDelegate {
+        delegate: KickoffGridDelegate {
             id: itemDelegate
-            icon.width: PlasmaCore.Units.iconSizes.large
-            icon.height: PlasmaCore.Units.iconSizes.large
-            display: PC3.AbstractButton.TextUnderIcon
             width: view.cellWidth
             Accessible.role: Accessible.Cell
         }
