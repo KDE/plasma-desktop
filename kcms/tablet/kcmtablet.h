@@ -21,7 +21,7 @@ class Tablet : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(DevicesModel *devicesModel READ devicesModel CONSTANT)
 
 public:
-    explicit Tablet(QObject *parent = nullptr, const QVariantList &list = {});
+    explicit Tablet(QObject *parent, const KPluginMetaData &metaData, const QVariantList &list);
     ~Tablet() override;
 
     void load() override;

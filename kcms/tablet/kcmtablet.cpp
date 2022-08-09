@@ -7,7 +7,6 @@
 #include "kcmtablet.h"
 #include "devicesmodel.h"
 #include "inputdevice.h"
-#include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <QGuiApplication>
@@ -119,16 +118,14 @@ public:
     }
 };
 
-Tablet::Tablet(QObject *parent, const QVariantList &list)
-    : ManagedConfigModule(parent, list)
+Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData, const QVariantList &list)
+    : ManagedConfigModule(parent, metaData, list)
     , m_devicesModel(new DevicesModel(this))
 {
     qmlRegisterType<OutputsModel>("org.kde.plasma.tablet.kcm", 1, 0, "OutputsModel");
     qmlRegisterType<OrientationsModel>("org.kde.plasma.tablet.kcm", 1, 0, "OrientationsModel");
     qmlRegisterType<OutputsFittingModel>("org.kde.plasma.tablet.kcm", 1, 1, "OutputsFittingModel");
     qmlRegisterAnonymousType<InputDevice>("org.kde.plasma.tablet.kcm", 1);
-
-    setAboutData(new KAboutData(QStringLiteral("kcm_tablet"), i18n("Tablet"), QStringLiteral("1.0"), i18n("Configure drawing tablets"), KAboutLicense::LGPL));
 
     connect(m_devicesModel, &DevicesModel::needsSaveChanged, this, &Tablet::refreshNeedsSave);
 }
