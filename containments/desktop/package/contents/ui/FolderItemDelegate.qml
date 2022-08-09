@@ -33,9 +33,12 @@ Item {
     Accessible.name: name
     Accessible.role: Accessible.Canvas
 
-    MouseArea { anchors.fill: parent } // This MouseArea exists to intercept press and hold;
-                                       // preventing edit mode from being triggered
-                                       // when pressing and holding on an icon
+    // This MouseArea exists to intercept press and hold; preventing edit mode
+    // from being triggered when pressing and holding on an icon (if there is one).
+    MouseArea {
+        anchors.fill: parent
+        visible: !main.blank
+    }
 
     function openPopup() {
         if (isDir) {
