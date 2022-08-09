@@ -9,7 +9,6 @@
 
 #include "kcm.h"
 
-#include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginFactory>
 
@@ -45,17 +44,14 @@ class SplashScreenSortModel : public QSortFilterProxyModel
     }
 };
 
-KCMSplashScreen::KCMSplashScreen(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+KCMSplashScreen::KCMSplashScreen(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, metaData, args)
     , m_data(new SplashScreenData(this))
     , m_model(new QStandardItemModel(this))
 {
     qmlRegisterAnonymousType<SplashScreenSettings>("org.kde.plasma.splash.kcm", 0);
     qmlRegisterAnonymousType<QStandardItemModel>("org.kde.plasma.splash.kcm", 0);
 
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_splashscreen"), i18n("Splash Screen"), QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
-    about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
-    setAboutData(about);
     setButtons(Help | Apply | Default);
 
     QHash<int, QByteArray> roles = m_model->roleNames();

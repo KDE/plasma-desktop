@@ -34,7 +34,7 @@ public:
         PendingDeletionRole,
     };
 
-    KCMSplashScreen(QObject *parent, const QVariantList &args);
+    KCMSplashScreen(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
 
     SplashScreenSettings *splashScreenSettings() const;
     QAbstractProxyModel *splashSortedModel() const;
