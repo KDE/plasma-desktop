@@ -5,17 +5,17 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.5
-import QtQuick.Controls 2.5
-import QtQuick.Dialogs 1.1
-import QtQuick.Layouts 1.0
+import QtQuick 2.15
+import QtQuick.Controls 2.15
+import QtQuick.Dialogs 1.3
+import QtQuick.Layouts 1.15
 
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.kquickcontrolsaddons 2.0
+import org.kde.kquickcontrolsaddons 2.1
 import org.kde.kconfig 1.0 // for KAuthorized
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
@@ -48,7 +48,7 @@ Item {
 
     IconDialog {
         id: iconDialog
-        onIconNameChanged: cfg_icon = iconName || "folder"
+        onIconNameChanged: cfg_icon = iconName || "folder";
     }
 
     Kirigami.FormLayout {
@@ -80,9 +80,8 @@ Item {
                 enabled: useCustomIcon.checked
 
                 onClicked: {
-                    checked = Qt.binding(function() {
-                        return iconMenu.status === PlasmaComponents.DialogStatus.Open;
-                    })
+                    checked = Qt.binding(() =>
+                        iconMenu.status === PlasmaComponents.DialogStatus.Open);
 
                     iconMenu.open(0, height);
                 }
@@ -108,7 +107,7 @@ Item {
                 PlasmaComponents.MenuItem {
                     text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
                     icon: "edit-clear"
-                    onClicked: cfg_icon = "folder"
+                    onClicked: cfg_icon = "folder";
                 }
             }
         }
@@ -129,7 +128,7 @@ Item {
             Kirigami.FormData.label: i18n("Arrangement:")
 
             model: [
-                Qt.application.layoutDirection == Qt.LeftToRight ?
+                Qt.application.layoutDirection === Qt.LeftToRight ?
                     i18nc("@item:inlistbox arrangement of icons", "Left to Right") :
                     i18nc("@item:inlistbox arrangement of icons", "Right to Left"),
                 i18nc("@item:inlistbox arrangement of icons", "Top to Bottom"),
@@ -176,8 +175,8 @@ Item {
             property int mode
             // FIXME TODO HACK: This maps the combo box list model to the KDirModel::ModelColumns
             // enum, which should be done in C++.
-            property variant indexToMode: [-1, 0, 1, 6, 2]
-            property variant modeToIndex: {'-1' : '0', '0' : '1', '1' : '2', '6' : '3', '2' : '4'}
+            property var indexToMode: [-1, 0, 1, 6, 2]
+            property var modeToIndex: {'-1': '0', '0': '1', '1': '2', '6': '3', '2': '4'}
 
             model: [i18nc("@item:inlistbox sort icons manually", "Manual"),
                     i18nc("@item:inlistbox sort icons by name", "Name"),
@@ -192,7 +191,7 @@ Item {
         CheckBox {
             id: sortDesc
 
-            enabled: (sortMode.currentIndex != 0)
+            enabled: sortMode.currentIndex !== 0
 
             text: i18nc("@option:check sort icons in descending order", "Descending")
         }
@@ -200,7 +199,7 @@ Item {
         CheckBox {
             id: sortDirsFirst
 
-            enabled: (sortMode.currentIndex != 0)
+            enabled: sortMode.currentIndex !== 0
 
             text: i18nc("@option:check sort icons with folders first", "Folders first")
         }
@@ -268,7 +267,7 @@ Item {
             model: [
                 i18nc("@item:inlistbox how long a text label should be", "Narrow"),
                 i18nc("@item:inlistbox how long a text label should be", "Medium"),
-                i18nc("@item:inlistbox how long a text label should be", "Wide")
+                i18nc("@item:inlistbox how long a text label should be", "Wide"),
             ]
         }
 

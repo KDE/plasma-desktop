@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQml 2.15
 
 import org.kde.plasma.plasmoid 2.0
@@ -17,7 +17,7 @@ import org.kde.private.desktopcontainment.folder 0.1 as Folder
 FocusScope {
     id: folderViewLayerComponent
 
-    property variant sharedActions: ["newMenu", "paste", "undo", "refresh", "emptyTrash"]
+    property var sharedActions: ["newMenu", "paste", "undo", "refresh", "emptyTrash"]
     property Component folderViewDialogComponent: Qt.createComponent("FolderViewDialog.qml", Qt.Asynchronous, root)
 
     property Item view: folderView
@@ -59,9 +59,7 @@ FocusScope {
 
     function goHome() {
         if (folderView.url !== plasmoid.configuration.url) {
-            folderView.url = Qt.binding(function() {
-                return plasmoid.configuration.url;
-            });
+            folderView.url = Qt.binding(() => plasmoid.configuration.url);
             folderView.history = [];
             folderView.updateHistory();
         }
@@ -86,7 +84,7 @@ FocusScope {
         id: labelGenerator
 
         folderModel: folderView.model
-        rtl: (Qt.application.layoutDirection == Qt.RightToLeft)
+        rtl: (Qt.application.layoutDirection === Qt.RightToLeft)
         labelMode: plasmoid.configuration.labelMode || (isContainment ? 0 : 1)
         labelText: plasmoid.configuration.labelText
     }
@@ -181,20 +179,22 @@ FocusScope {
     }
 
     function getPositions() {
+        let allPositions;
         try {
-            var allPositions = JSON.parse(plasmoid.configuration.positions);
+            allPositions = JSON.parse(plasmoid.configuration.positions);
         } catch (err) {
-            var allPositions = {};
+            allPositions = {};
             allPositions[resolution] = plasmoid.configuration.positions;
         }
         return allPositions[resolution] || "";
     }
 
     function savePositions(positions) {
+        let allPositions;
         try {
-            var allPositions = JSON.parse(plasmoid.configuration.positions);
+            allPositions = JSON.parse(plasmoid.configuration.positions);
         } catch (err) {
-            var allPositions = {};
+            allPositions = {};
         }
         allPositions[resolution] = positions;
         plasmoid.configuration.positions = JSON.stringify(allPositions, Object.keys(allPositions).sort());
@@ -242,7 +242,7 @@ FocusScope {
 
         anchors.left: parent.left
         anchors.top: parent.top
-        anchors.topMargin: folderViewLayerComponent.label != null ? folderViewLayerComponent.label.height : 0
+        anchors.topMargin: folderViewLayerComponent.label !== null ? folderViewLayerComponent.label.height : 0
         anchors.right: parent.right
         anchors.bottom: parent.bottom
 

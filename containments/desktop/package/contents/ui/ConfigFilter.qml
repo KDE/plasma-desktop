@@ -4,13 +4,13 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.5
-import QtQuick.Controls 2.5
+import QtQuick 2.15
+import QtQuick.Controls 2.15
 import QtQuick.Controls 1.0 as QQC1
-import QtQuick.Layouts 1.0
+import QtQuick.Layouts 1.15
 
-import org.kde.kirigami 2.15 as Kirigami
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.core 2.1 as PlasmaCore
 
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 
@@ -53,8 +53,8 @@ ColumnLayout {
                 types.push(get(i).name);
             }
 
-            mimeTypesModel.checkedTypes = mimeTypesModel.checkedTypes.filter(function(x) {
-                return types.indexOf(x) < 0; });
+            mimeTypesModel.checkedTypes = mimeTypesModel.checkedTypes
+                .filter(x => types.indexOf(x) === -1);
         }
     }
     Kirigami.FormLayout {
@@ -91,7 +91,7 @@ ColumnLayout {
             id: mimeTypesView
 
             // Signal the delegates listen to when user presses space to toggle current row.
-            signal toggleCurrent
+            signal toggleCurrent()
 
             Layout.fillWidth: true
             Layout.fillHeight: true
@@ -139,16 +139,14 @@ ColumnLayout {
                         model.checked = checked
                         // Clicking it breaks the binding to the model value which becomes
                         // an issue during sorting as TableView re-uses delegates.
-                        checked = Qt.binding(function() {
-                            return styleData.value;
-                        });
+                        checked = Qt.binding(() => styleData.value);
                     }
 
                     Connections {
                         target: mimeTypesView
                         function onToggleCurrent() {
                             if (styleData.row === mimeTypesView.currentRow) {
-                                model.checked = !checkBox.checked
+                                model.checked = !checkBox.checked;
                             }
                         }
                     }

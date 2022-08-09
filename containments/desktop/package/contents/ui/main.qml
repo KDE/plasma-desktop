@@ -6,8 +6,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.10
-import QtQuick.Layouts 1.1
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -17,7 +17,7 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 
-import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutManager 
+import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutManager
 
 import "code/FolderTools.js" as FolderTools
 
@@ -83,11 +83,11 @@ FolderViewDropArea {
         leftMargin: (isContainment && plasmoid.availableScreenRect) ? plasmoid.availableScreenRect.x : 0
         topMargin: (isContainment && plasmoid.availableScreenRect) ? plasmoid.availableScreenRect.y : 0
 
-        rightMargin: (isContainment && plasmoid.availableScreenRect) && parent
-            ? parent.width - (plasmoid.availableScreenRect.x + plasmoid.availableScreenRect.width) : 0
+        rightMargin: (isContainment && plasmoid.availableScreenRect && parent)
+            ? (parent.width - plasmoid.availableScreenRect.x - plasmoid.availableScreenRect.width) : 0
 
-        bottomMargin: (isContainment && plasmoid.availableScreenRect) && parent
-            ? parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height) : 0
+        bottomMargin: (isContainment && plasmoid.availableScreenRect && parent)
+            ? (parent.height - plasmoid.availableScreenRect.y - plasmoid.availableScreenRect.height) : 0
     }
 
     Behavior on anchors.topMargin {
@@ -103,9 +103,8 @@ FolderViewDropArea {
         NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.InOutQuad }
     }
 
-    function updateGridSize()
-    {
-        appletsLayout.cellWidth = root.iconWidth + toolBoxSvg.elementSize("left").width + toolBoxSvg.elementSize("right").width
+    function updateGridSize() {
+        appletsLayout.cellWidth = root.iconWidth + toolBoxSvg.elementSize("left").width + toolBoxSvg.elementSize("right").width;
         appletsLayout.cellHeight = root.iconHeight + toolBoxSvg.elementSize("top").height + toolBoxSvg.elementSize("bottom").height;
         appletsLayout.defaultItemWidth = appletsLayout.cellWidth * 6;
         appletsLayout.defaultItemHeight = appletsLayout.cellHeight * 6;
@@ -130,12 +129,13 @@ FolderViewDropArea {
     }
 
     function preferredHeight(minimum) {
+        let height;
         if (isContainment || !folderViewLayer.ready) {
             return -1;
         } else if (useListViewMode) {
-            var height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 15)) + PlasmaCore.Units.smallSpacing;
+            height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 15)) + PlasmaCore.Units.smallSpacing;
         } else {
-            var height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 2)) + PlasmaCore.Units.largeSpacing
+            height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 2)) + PlasmaCore.Units.largeSpacing;
         }
 
         if (plasmoid.configuration.labelMode !== 0) {
@@ -146,7 +146,7 @@ FolderViewDropArea {
     }
 
     function isDrag(fromX, fromY, toX, toY) {
-        var length = Math.abs(fromX - toX) + Math.abs(fromY - toY);
+        const length = Math.abs(fromX - toX) + Math.abs(fromY - toY);
         return length >= Qt.styleHints.startDragDistance;
     }
 
@@ -168,7 +168,7 @@ FolderViewDropArea {
 
         // Firefox tabs are regular drags. Since all of our drop handling is asynchronous
         // we would accept this drop and have Firefox not spawn a new window. (Bug 337711)
-        if (event.mimeData.formats.indexOf("application/x-moz-tabbrowser-tab") > -1) {
+        if (event.mimeData.formats.indexOf("application/x-moz-tabbrowser-tab") !== -1) {
             event.ignore();
         }
     }
@@ -255,7 +255,7 @@ FolderViewDropArea {
         target: plasmoid
         ignoreUnknownSignals: true
         function onEditModeChanged() {
-            appletsLayout.editMode = plasmoid.editMode
+            appletsLayout.editMode = plasmoid.editMode;
         }
     }
 
@@ -273,7 +273,7 @@ FolderViewDropArea {
                 : ContainmentLayoutManager.AppletsLayout.AfterPressAndHold
 
         // Sets the containment in edit mode when we go in edit mode as well
-        onEditModeChanged: plasmoid.editMode = editMode
+        onEditModeChanged: plasmoid.editMode = editMode;
 
         minimumItemWidth: PlasmaCore.Units.gridUnit * 3
         minimumItemHeight: minimumItemWidth
@@ -319,7 +319,7 @@ FolderViewDropArea {
 
             anchors.fill: parent
 
-            property bool ready: status == Loader.Ready
+            property bool ready: status === Loader.Ready
             property Item view: item ? item.view : null
             property QtObject model: item ? item.model : null
 

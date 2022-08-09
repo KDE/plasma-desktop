@@ -4,9 +4,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
-import QtQuick.Controls 1.1
-import QtQuick.Layouts 1.1
+import QtQuick 2.15
+import QtQuick.Controls 1.4
+import QtQuick.Layouts 1.15
 
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -19,7 +19,7 @@ ApplicationWindow {
 
     visible: false
 
-    property variant previewPlugins: plasmoid.configuration.previewPlugins
+    property var previewPlugins: plasmoid.configuration.previewPlugins
 
     title: i18n("Preview Plugins")
 
@@ -35,13 +35,13 @@ ApplicationWindow {
     }
 
     SystemPalette {
-        id: systemPalette;
+        id: systemPalette
         colorGroup: SystemPalette.Active
     }
 
     ColumnLayout {
         anchors.fill: parent
-        anchors.margins: 2*PlasmaCore.Units.smallSpacing
+        anchors.margins: 2 * PlasmaCore.Units.smallSpacing
 
         Rectangle {
             Layout.fillWidth: true
@@ -63,7 +63,7 @@ ApplicationWindow {
                         text: model.display
 
                         checked: model.checked
-                        onCheckedChanged: model.checked = checked
+                        onCheckedChanged: model.checked = checked;
                     }
                 }
             }
@@ -71,7 +71,7 @@ ApplicationWindow {
 
         RowLayout {
             Layout.margins: PlasmaCore.Units.smallSpacing
-            Layout.alignment: (Qt.application.layoutDirection == Qt.LeftToRight) ? Qt.AlignRight : Qt.AlignLeft
+            Layout.alignment: (Qt.application.layoutDirection === Qt.LeftToRight) ? Qt.AlignRight : Qt.AlignLeft
 
             layoutDirection: Qt.application.layoutDirection
 

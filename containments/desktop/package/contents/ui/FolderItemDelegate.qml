@@ -4,9 +4,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.8
-import QtQuick.Window 2.2
-import QtGraphicalEffects 1.0
+import QtQuick 2.15
+import QtQuick.Window 2.15
+import QtGraphicalEffects 1.15
 
 import org.kde.plasma.plasmoid 2.0
 
@@ -17,19 +17,19 @@ import org.kde.kquickcontrolsaddons 2.0
 Item {
     id: main
 
-    property int index: model.index
-    property string name: model.blank ? "" : model.display
+    property int index:          model.index
+    property string name:        model.blank ? "" : model.display
     property string nameWrapped: model.blank ? "" : model.displayWrapped
-    property bool blank: model.blank
-    property bool isDir: loader.item ? loader.item.isDir : false
-    property QtObject popupDialog: loader.item ? loader.item.popupDialog : null
-    property Item iconArea: loader.item ? loader.item.iconArea : null
-    property Item label: loader.item ? loader.item.label : null
-    property Item labelArea: loader.item ? loader.item.labelArea : null
-    property Item actionsOverlay: loader.item ? loader.item.actionsOverlay : null
-    property Item hoverArea: loader.item ? loader.item.hoverArea : null
-    property Item frame: loader.item ? loader.item.frame : null
-    property Item toolTip: loader.item ? loader.item.toolTip : null
+    property bool blank:         model.blank
+    property bool isDir:           loader.item ? loader.item.isDir : false
+    property QtObject popupDialog: loader.item ? loader.item.popupDialog    : null
+    property Item iconArea:        loader.item ? loader.item.iconArea       : null
+    property Item label:           loader.item ? loader.item.label          : null
+    property Item labelArea:       loader.item ? loader.item.labelArea      : null
+    property Item actionsOverlay:  loader.item ? loader.item.actionsOverlay : null
+    property Item hoverArea:       loader.item ? loader.item.hoverArea      : null
+    property Item frame:           loader.item ? loader.item.frame          : null
+    property Item toolTip:         loader.item ? loader.item.toolTip        : null
     Accessible.name: name
     Accessible.role: Accessible.Canvas
 
@@ -98,7 +98,7 @@ Item {
 
             onSelectedChanged: {
                 if (selected && !blank) {
-                    frameLoader.grabToImage(function(result) {
+                    frameLoader.grabToImage(result => {
                         dir.addItemDragImage(positioner.map(index), main.x + frameLoader.x, main.y + frameLoader.y, frameLoader.width, frameLoader.height, result.image);
                     });
                 }
@@ -147,7 +147,7 @@ Item {
             }
 
             function openPopup() {
-                if (folderViewDialogComponent.status == Component.Ready) {
+                if (folderViewDialogComponent.status === Component.Ready) {
                     impl.popupDialog = folderViewDialogComponent.createObject(impl);
                     impl.popupDialog.visualParent = icon;
                     impl.popupDialog.url = model.linkDestinationUrl;
@@ -159,7 +159,7 @@ Item {
                 id: toolTip
 
                 active: (plasmoid.configuration.toolTips || label.truncated)
-                        && popupDialog == null
+                        && popupDialog === null
                         && !model.blank
                 interactive: false
                 location: root.useListViewMode ? (plasmoid.location === PlasmaCore.Types.LeftEdge ? PlasmaCore.Types.LeftEdge : PlasmaCore.Types.RightEdge) : plasmoid.location
@@ -171,7 +171,7 @@ Item {
                             toolTip.mainText = model.display;
 
                             if (model.size !== undefined) {
-                                    toolTip.subText = model.type + "\n" + model.size;
+                                toolTip.subText = model.type + "\n" + model.size;
                             } else {
                                 toolTip.subText = model.type;
                             }
@@ -309,18 +309,18 @@ Item {
                     source: model.decoration
                 }
 
-                    Rectangle {
-                        id: fallbackRectangleBackground
-                        visible: GraphicsInfo.api === GraphicsInfo.Software && !model.selected
-                        anchors {
-                            fill: label
-                            margins: -PlasmaCore.Units.smallSpacing
-                        }
-
-                        color: "black"
-                        radius: PlasmaCore.Units.smallSpacing
-                        opacity: 0.45
+                Rectangle {
+                    id: fallbackRectangleBackground
+                    visible: GraphicsInfo.api === GraphicsInfo.Software && !model.selected
+                    anchors {
+                        fill: label
+                        margins: -PlasmaCore.Units.smallSpacing
                     }
+
+                    color: "black"
+                    radius: PlasmaCore.Units.smallSpacing
+                    opacity: 0.45
+                }
 
                 PlasmaComponents.Label {
                     id: label
@@ -367,7 +367,7 @@ Item {
 
                     textFormat: Text.PlainText
 
-                    wrapMode: (maximumLineCount == 1) ? Text.NoWrap : Text.Wrap
+                    wrapMode: (maximumLineCount === 1) ? Text.NoWrap : Text.Wrap
                     elide: Text.ElideRight
 
                     color: {
@@ -425,8 +425,8 @@ Item {
                         element: model.selected ? "remove" : "add"
 
                         onClicked: {
-                            dir.toggleSelected(positioner.map(index))
-                            main.GridView.view.currentIndex = index
+                            dir.toggleSelected(positioner.map(index));
+                            main.GridView.view.currentIndex = index;
                         }
                     }
                 }
@@ -440,8 +440,8 @@ Item {
                         element: "open"
 
                         onClicked: {
-                            dir.setSelected(positioner.map(index))
-                            main.GridView.view.currentIndex = index
+                            dir.setSelected(positioner.map(index));
+                            main.GridView.view.currentIndex = index;
                             openPopup();
                         }
                     }
@@ -490,7 +490,7 @@ Item {
 
                         source: label
 
-                        visible: !editor || editor.targetItem != main
+                        visible: !editor || editor.targetItem !== main
                     }
                 }
 
@@ -548,7 +548,7 @@ Item {
                     left: frameLoader.left
                     top: frameLoader.top
                     leftMargin: root.useListViewMode ? (icon.x + (icon.width / 2)) - (width / 2) : 0
-                    topMargin: root.useListViewMode ? (icon.y + (icon.height / 2)) - (height / 2)  : 0
+                    topMargin: root.useListViewMode ? (icon.y + (icon.height / 2)) - (height / 2) : 0
                 }
 
                 width: implicitWidth

@@ -4,8 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.12
-import QtQuick.Layouts 1.1
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
 import QtQml 2.15
 
 import org.kde.plasma.plasmoid 2.0
@@ -20,7 +20,7 @@ import "code/FolderTools.js" as FolderTools
 FocusScope {
     id: main
 
-    signal pressed
+    signal pressed()
 
     property QtObject model: dir
     property Item rubberBand: null
@@ -64,7 +64,7 @@ FocusScope {
     }
 
     function rename() {
-        if (gridView.currentIndex != -1) {
+        if (gridView.currentIndex !== -1) {
             var renameAction = folderView.model.action("rename");
             if (renameAction && !renameAction.enabled) {
                 return;
@@ -145,7 +145,7 @@ FocusScope {
         var dragPos = mapToItem(gridView.contentItem, listener.dragX, listener.dragY);
         var dragIndex = gridView.indexAt(dragPos.x, dragPos.y);
 
-        if (listener.dragX == -1 || dragIndex !== dropIndex) {
+        if (listener.dragX === -1 || dragIndex !== dropIndex) {
             dir.drop(target, event, dropItemAt(dropPos), root.isContainment && !plasmoid.immutable);
         }
     }
@@ -180,7 +180,7 @@ FocusScope {
     }
 
     function doCd(row) {
-        history.push({"url": url, "index": gridView.currentIndex, "yPosition": gridView.visibleArea.yPosition});
+        history.push({ url: url, index: gridView.currentIndex, yPosition: gridView.visibleArea.yPosition});
         updateHistory();
         dir.cd(row);
         gridView.currentIndex = -1;
@@ -203,9 +203,9 @@ FocusScope {
         target: root
 
         function onIsPopupChanged() {
-            if (backButton == null && root.useListViewMode) {
+            if (backButton === null && root.useListViewMode) {
                 backButton = makeBackButton();
-            } else if (backButton != null) {
+            } else if (backButton !== null) {
                 backButton.destroy();
             }
         }
@@ -215,7 +215,7 @@ FocusScope {
         id: listener
 
         anchors {
-            topMargin: backButton != null ? backButton.height : undefined
+            topMargin: backButton !== null ? backButton.height : undefined
             fill: parent
         }
 
@@ -226,11 +226,11 @@ FocusScope {
         property int pressY: -1
         property int dragX: -1
         property int dragY: -1
-        property variant cPress: null
+        property var cPress: null
         property bool doubleClickInProgress: false
 
         acceptedButtons: {
-            if (hoveredItem == null && main.isRootView) {
+            if (hoveredItem === null && main.isRootView) {
                 return root.isPopup ? (Qt.LeftButton | Qt.MiddleButton | Qt.BackButton) : Qt.LeftButton;
             }
 
@@ -250,7 +250,7 @@ FocusScope {
 
         onPressed: {
             // Ignore press events outside the viewport (i.e. on scrollbars).
-            if (!scrollArea.viewport.contains(Qt.point(mouse.x,mouse.y))) {
+            if (!scrollArea.viewport.contains(Qt.point(mouse.x, mouse.y))) {
                 return;
             }
 
@@ -304,7 +304,7 @@ FocusScope {
                 var pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
 
                 if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
-                    if (gridView.shiftPressed && gridView.currentIndex != -1) {
+                    if (gridView.shiftPressed && gridView.currentIndex !== -1) {
                         positioner.setRangeSelected(gridView.anchorIndex, hoveredItem.index);
                     } else {
                         // Deselecting everything else when one item is clicked is handled in onReleased in order to distinguish between drag and click
@@ -341,10 +341,10 @@ FocusScope {
         onCanceled: pressCanceled()
 
         onReleased: {
-            if (hoveredItem && !hoveredItem.blank && mouse.button != Qt.RightButton) {
+            if (hoveredItem && !hoveredItem.blank && mouse.button !== Qt.RightButton) {
                 var pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
                 if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)
-                    && (!(gridView.shiftPressed && gridView.currentIndex != -1) && !gridView.ctrlPressed)) {
+                    && (!(gridView.shiftPressed && gridView.currentIndex !== -1) && !gridView.ctrlPressed)) {
                         dir.clearSelection();
                         dir.setSelected(positioner.map(hoveredItem.index));
                 }
@@ -353,7 +353,7 @@ FocusScope {
         }
 
         onPressAndHold: {
-            if (mouse.source == Qt.MouseEventSynthesizedByQt) {
+            if (mouse.source === Qt.MouseEventSynthesizedByQt) {
                 if (pressedItem) {
                     if (pressedItem.toolTip && pressedItem.toolTip.active) {
                         pressedItem.toolTip.hideToolTip();
@@ -374,7 +374,7 @@ FocusScope {
                 return;
             }
 
-            if (!hoveredItem || hoveredItem.blank || gridView.currentIndex == -1 || gridView.ctrlPressed || gridView.shiftPressed) {
+            if (!hoveredItem || hoveredItem.blank || gridView.currentIndex === -1 || gridView.ctrlPressed || gridView.shiftPressed) {
                 // Bug 357367: Replay mouse event, so containment actions assigned to left mouse button work.
                 eventGenerator.sendMouseEvent(plasmoid, EventGenerator.MouseButtonPress, mouse.x, mouse.y, mouse.button, mouse.buttons, mouse.modifiers);
                 return;
@@ -410,8 +410,8 @@ FocusScope {
                     && pos.x <= hoveredItem.labelArea.x + hoveredItem.labelArea.width
                     && pos.y > hoveredItem.labelArea.y
                     && pos.y <= hoveredItem.labelArea.y + hoveredItem.labelArea.height
-                    && previouslySelectedItemIndex == gridView.currentIndex
-                    && gridView.currentIndex != -1
+                    && previouslySelectedItemIndex === gridView.currentIndex
+                    && gridView.currentIndex !== -1
                     && !Qt.styleHints.singleClickActivation
                     && plasmoid.configuration.renameInline
                     && !doubleClickInProgress
@@ -422,15 +422,13 @@ FocusScope {
 
                 // Single-click mode and single-clicked on the item or
                 // double-click mode and double-clicked on the item: open it
-                if (Qt.styleHints.singleClickActivation || doubleClickInProgress || mouse.source == Qt.MouseEventSynthesizedByQt) {
+                if (Qt.styleHints.singleClickActivation || doubleClickInProgress || mouse.source === Qt.MouseEventSynthesizedByQt) {
                     var func = root.useListViewMode && (mouse.button === Qt.LeftButton) && hoveredItem.isDir ? doCd : dir.run;
                     func(positioner.map(gridView.currentIndex));
                     previouslySelectedItemIndex = gridView.currentIndex;
                     hoveredItem = null;
-                }
-
-                // None of the above: select it
-                else {
+                } else {
+                    // None of the above: select it
                     doubleClickInProgress = true;
                     doubleClickTimer.interval = Qt.styleHints.mouseDoubleClickInterval;
                     doubleClickTimer.start();
@@ -460,7 +458,7 @@ FocusScope {
             }
 
             // Trigger autoscroll.
-            if (pressX != -1) {
+            if (pressX !== -1) {
                 gridView.scrollLeft = (mouse.x <= 0 && gridView.contentX > leftEdge);
                 gridView.scrollRight = (mouse.x >= gridView.width
                     && gridView.contentX < gridView.contentItem.width - gridView.width);
@@ -502,12 +500,12 @@ FocusScope {
             }
 
             // Drag initiation.
-            if (pressX != -1 && root.isDrag(pressX, pressY, mouse.x, mouse.y)) {
-                if (pressedItem != null && dir.isSelected(positioner.map(pressedItem.index))) {
+            if (pressX !== -1 && root.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+                if (pressedItem !== null && dir.isSelected(positioner.map(pressedItem.index))) {
                     pressedItem.toolTip.hideToolTip();
                     dragX = mouse.x;
                     dragY = mouse.y;
-                    gridView.verticalDropHitscanOffset = pressedItem.iconArea.y + (pressedItem.iconArea.height / 2)
+                    gridView.verticalDropHitscanOffset = pressedItem.iconArea.y + (pressedItem.iconArea.height / 2);
                     dir.dragSelected(mouse.x, mouse.y);
                     dragX = -1;
                     dragY = -1;
@@ -519,7 +517,7 @@ FocusScope {
                     }
 
                     dir.pinSelection();
-                    main.rubberBand = rubberBandObject.createObject(gridView.contentItem, {x: cPress.x, y: cPress.y})
+                    main.rubberBand = rubberBandObject.createObject(gridView.contentItem, {x: cPress.x, y: cPress.y});
                     gridView.interactive = false;
                 }
             }
@@ -536,7 +534,7 @@ FocusScope {
                 z: 99999
 
                 function close() {
-                    opacityAnimation.restart()
+                    opacityAnimation.restart();
                 }
 
                 OpacityAnimator {
@@ -556,9 +554,9 @@ FocusScope {
                     }
 
                     onFinished: {
-                        rubberBand.visible = false
-                        rubberBand.enabled = false
-                        rubberBand.destroy()
+                        rubberBand.visible = false;
+                        rubberBand.enabled = false;
+                        rubberBand.destroy();
                     }
                 }
             }
@@ -584,8 +582,8 @@ FocusScope {
 
         function pressCanceled() {
             if (main.rubberBand) {
-                main.rubberBand.close()
-                main.rubberBand = null
+                main.rubberBand.close();
+                main.rubberBand = null;
 
                 gridView.interactive = true;
                 gridView.cachedRectangleSelection = null;
@@ -673,7 +671,7 @@ FocusScope {
                 property bool scrollUp: false
                 property bool scrollDown: false
 
-                property variant cachedRectangleSelection: null
+                property var cachedRectangleSelection: null
 
                 currentIndex: -1
 
@@ -740,11 +738,11 @@ FocusScope {
 
                     dir.setDragHotSpotScrollOffset(contentX, contentY);
 
-                    if (contentX == 0) {
+                    if (contentX === 0) {
                         scrollLeft = false;
                     }
 
-                    if (contentX == contentItem.width - width) {
+                    if (contentX === contentItem.width - width) {
                         scrollRight = false;
                     }
 
@@ -775,11 +773,11 @@ FocusScope {
 
                     dir.setDragHotSpotScrollOffset(contentX, contentY);
 
-                    if (contentY == 0) {
+                    if (contentY === 0) {
                         scrollUp = false;
                     }
 
-                    if (contentY == contentItem.height - height) {
+                    if (contentY === contentItem.height - height) {
                         scrollDown = false;
                     }
 
@@ -804,7 +802,7 @@ FocusScope {
                 onScrollLeftChanged: {
                     if (scrollLeft && gridView.visibleArea.widthRatio < 1.0) {
                         smoothX.enabled = true;
-                        contentX = (gridView.flow == GridView.FlowLeftToRight) ? gridView.contentX : gridView.originX;
+                        contentX = (gridView.flow === GridView.FlowLeftToRight) ? gridView.contentX : gridView.originX;
                     } else {
                         contentX = contentX;
                         smoothX.enabled = false;
@@ -814,7 +812,7 @@ FocusScope {
                 onScrollRightChanged: {
                     if (scrollRight && gridView.visibleArea.widthRatio < 1.0) {
                         smoothX.enabled = true;
-                        contentX = ((gridView.flow == GridView.FlowLeftToRight) ? gridView.contentX : gridView.originX)
+                        contentX = ((gridView.flow === GridView.FlowLeftToRight) ? gridView.contentX : gridView.originX)
                             + (contentItem.width - width);
                     } else {
                         contentX = contentX;
@@ -847,7 +845,7 @@ FocusScope {
                 }
 
                 onCachedRectangleSelectionChanged: {
-                    if (cachedRectangleSelection == null) {
+                    if (cachedRectangleSelection === null) {
                         return;
                     }
 
@@ -875,7 +873,7 @@ FocusScope {
                     } else {
                         dir.clearSelection();
                         dir.setSelected(positioner.map(currentIndex));
-                        if (currentIndex == -1) {
+                        if (currentIndex === -1) {
                             previouslySelectedItemIndex = -1;
                         }
                         previouslySelectedItemIndex = currentIndex;
@@ -890,7 +888,7 @@ FocusScope {
                 }
 
                 function rectangleSelect(x, y, width, height) {
-                    var rows = (gridView.flow == GridView.FlowLeftToRight);
+                    var rows = (gridView.flow === GridView.FlowLeftToRight);
                     var axis = rows ? gridView.width : gridView.height;
                     var step = rows ? cellWidth : cellHeight;
                     var perStripe = Math.floor(axis / step);
@@ -916,7 +914,7 @@ FocusScope {
                             var itemX = ((rows ? i : s) * gridView.cellWidth);
                             var itemY = ((rows ? s : i) * gridView.cellHeight);
 
-                            if (gridView.effectiveLayoutDirection == Qt.RightToLeft) {
+                            if (gridView.effectiveLayoutDirection === Qt.RightToLeft) {
                                 itemX -= (rows ? gridView.contentX : gridView.originX);
                                 itemX += cWidth;
                                 itemX = (rows ? gridView.width : gridView.contentItem.width) - itemX;
@@ -958,7 +956,7 @@ FocusScope {
                 }
 
                 function runOrCdSelected() {
-                    if (currentIndex != -1 && dir.hasSelection()) {
+                    if (currentIndex !== -1 && dir.hasSelection()) {
                         if (root.useListViewMode && currentItem.isDir) {
                             doCd(positioner.map(currentIndex));
                         } else {
@@ -980,7 +978,7 @@ FocusScope {
                 Keys.onEnterPressed: Keys.returnPressed(event)
 
                 Keys.onMenuPressed: {
-                    if (currentIndex != -1 && dir.hasSelection() && currentItem) {
+                    if (currentIndex !== -1 && dir.hasSelection() && currentItem) {
                         dir.setSelected(positioner.map(currentIndex));
                         dir.openContextMenu(currentItem.frame, event.modifiers);
                     } else {
@@ -1027,7 +1025,7 @@ FocusScope {
                     } else if (event.key === Qt.Key_Shift) {
                         shiftPressed = true;
 
-                        if (currentIndex != -1) {
+                        if (currentIndex !== -1) {
                             anchorIndex = currentIndex;
                         }
                     } else if (event.key === Qt.Key_Home) {
@@ -1090,7 +1088,7 @@ FocusScope {
 
                 Keys.onRightPressed: {
                     if (root.isPopup && root.useListViewMode) {
-                        if (currentIndex != -1 && dir.hasSelection() && currentItem.isDir) {
+                        if (currentIndex !== -1 && dir.hasSelection() && currentItem.isDir) {
                             doCd(positioner.map(currentIndex));
                         }
                     } else if (positioner.enabled) {
@@ -1222,7 +1220,7 @@ FocusScope {
             }
 
             onMove: {
-                var rows = (gridView.flow == GridView.FlowLeftToRight);
+                var rows = (gridView.flow === GridView.FlowLeftToRight);
                 var axis = rows ? gridView.width : gridView.height;
                 var step = rows ? cellWidth : cellHeight;
                 var perStripe = Math.floor(axis / step);
@@ -1254,7 +1252,7 @@ FocusScope {
                     itemX = dropPos.x + offset.x + (listener.dragX % cellWidth) + (cellWidth / 2);
                     itemY = dropPos.y + offset.y + (listener.dragY % cellHeight) + gridView.verticalDropHitscanOffset;
 
-                    if (gridView.effectiveLayoutDirection == Qt.RightToLeft) {
+                    if (gridView.effectiveLayoutDirection === Qt.RightToLeft) {
                         itemX -= (rows ? gridView.contentX : gridView.originX);
                         itemX = (rows ? gridView.width : gridView.contentItem.width) - itemX;
                     }
@@ -1294,9 +1292,9 @@ FocusScope {
 
             folderModel: dir
 
-            perStripe: Math.floor(((gridView.flow == GridView.FlowLeftToRight)
-                ? gridView.width : gridView.height) / ((gridView.flow == GridView.FlowLeftToRight)
-                ? gridView.cellWidth : gridView.cellHeight));
+            perStripe: Math.floor((gridView.flow === GridView.FlowLeftToRight)
+                ? (gridView.width / gridView.cellWidth)
+                : (gridView.height / gridView.cellHeight))
         }
 
         Folder.ItemViewAdapter {
@@ -1330,7 +1328,7 @@ FocusScope {
                 property Item targetItem: null
 
                 onTargetItemChanged: {
-                    if (targetItem != null) {
+                    if (targetItem !== null) {
                         var xy = getXY();
                         x = xy[0];
                         y = xy[1];
@@ -1339,15 +1337,15 @@ FocusScope {
                         text = targetItem.name;
                         adjustSize();
                         editor.select(0, dir.fileExtensionBoundary(positioner.map(targetItem.index)));
-                        if(isPopup) {
+                        if (isPopup) {
                             flickableItem.contentX = Math.max(flickableItem.contentWidth - contentItem.width, 0);
                         } else {
                             flickableItem.contentY = Math.max(flickableItem.contentHeight - contentItem.height, 0);
                         }
                         visible = true;
                     } else {
-                        x: 0
-                        y: 0
+                        x = 0;
+                        y = 0;
                         visible = false;
                     }
                 }
@@ -1408,13 +1406,13 @@ FocusScope {
                         _x = targetItem.x + Math.abs(Math.min(gridView.contentX, gridView.originX));
                         _x += __style.padding.left;
                         _x += scrollArea.viewport.x;
-                        if (verticalScrollBarPolicy == Qt.ScrollBarAlwaysOn
-                            && gridView.effectiveLayoutDirection == Qt.RightToLeft) {
+                        if (verticalScrollBarPolicy === Qt.ScrollBarAlwaysOn
+                            && gridView.effectiveLayoutDirection === Qt.RightToLeft) {
                             _x -= __verticalScrollBar.parent.verticalScrollbarOffset;
                         }
                         _y = pos.y + PlasmaCore.Units.smallSpacing - __style.padding.top;
                     }
-                    return([ _x, _y ]);
+                    return [ _x, _y ];
                 }
 
                 function getWidth(addWidthVerticalScroller) {
@@ -1425,22 +1423,22 @@ FocusScope {
 
                 function getHeight(addWidthHoriozontalScroller, init) {
                     var _height;
-                    if(isPopup || init) {
+                    if (isPopup || init) {
                         _height = targetItem.labelArea.height + __style.padding.top + __style.padding.bottom;
                     } else {
                         var realHeight = contentHeight + __style.padding.top + __style.padding.bottom;
                         var maxHeight = PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height * (plasmoid.configuration.textLines + 1) + __style.padding.top + __style.padding.bottom;
                         _height = Math.min(realHeight, maxHeight);
                     }
-                    return(_height + (addWidthHoriozontalScroller ? __horizontalScrollBar.parent.horizontalScrollbarOffset : 0));
+                    return _height + (addWidthHoriozontalScroller ? __horizontalScrollBar.parent.horizontalScrollbarOffset : 0);
                 }
 
                 function getInitHeight() {
-                    return(getHeight(false, true));
+                    return getHeight(false, true);
                 }
 
                 function adjustSize() {
-                    if(isPopup) {
+                    if (isPopup) {
                         if(contentWidth + __style.padding.left + __style.padding.right > width) {
                             visible = true;
                             horizontalScrollBarPolicy = Qt.ScrollBarAlwaysOn;
@@ -1481,7 +1479,7 @@ FocusScope {
     }
 
     Component.onCompleted: {
-        if (backButton == null && root.useListViewMode) {
+        if (backButton === null && root.useListViewMode) {
             backButton = makeBackButton();
         }
     }

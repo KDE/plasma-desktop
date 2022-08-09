@@ -5,15 +5,14 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.12
-import QtQuick.Layouts 1.4
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 
 PC3.ToolButton {
     id: button
-    Layout.fillWidth: true
 
     property QtObject qAction
 
@@ -22,8 +21,9 @@ PC3.ToolButton {
     property int iconSize: 32
     property alias toolTip: toolTip.text
 
-    
     implicitWidth: Math.min(buttonColumn.implicitWidth, PlasmaCore.Units.gridUnit * 10) + leftPadding + rightPadding
+
+    Layout.fillWidth: true
 
     onClicked: {
         if (qAction) {

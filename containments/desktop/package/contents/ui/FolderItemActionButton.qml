@@ -4,9 +4,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.2
-import org.kde.plasma.plasmoid 2.0
+import QtQuick 2.15
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 PlasmaCore.SvgItem {
@@ -16,7 +16,7 @@ PlasmaCore.SvgItem {
         if (!visible) {
             return 0;
         }
-        switch(plasmoid.configuration.iconSize) {
+        switch (plasmoid.configuration.iconSize) {
             case 0: return PlasmaCore.Units.iconSizes.small;
             case 1: return PlasmaCore.Units.iconSizes.small;
             case 2: return PlasmaCore.Units.iconSizes.smallMedium;
@@ -29,7 +29,7 @@ PlasmaCore.SvgItem {
     }
     height: width
 
-    signal clicked
+    signal clicked()
 
     property string element
 

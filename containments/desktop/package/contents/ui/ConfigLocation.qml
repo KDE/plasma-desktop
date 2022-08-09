@@ -61,7 +61,7 @@ Item {
     ButtonGroup {
         id: locationGroup
 
-        buttons:  [locationDesktop, locationCurrentActivity, locationPlace, locationCustom]
+        buttons: [locationDesktop, locationCurrentActivity, locationPlace, locationCustom]
 
         onCheckedButtonChanged: {
             if (checkedButton === locationDesktop) {

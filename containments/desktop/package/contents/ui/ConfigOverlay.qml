@@ -4,8 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.12
-import QtQuick.Layouts 1.1
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -16,6 +16,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
     id: overlay
 
     readonly property int iconSize: touchInteraction ? PlasmaCore.Units.iconSizes.medium : PlasmaCore.Units.iconSizes.small
+
     PlasmaCore.Svg {
         id: configIconsSvg
         imagePath: "widgets/configuration-icons"
@@ -23,6 +24,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
 
     SequentialAnimation {
         id: removeAnim
+
         NumberAnimation {
             target: overlay.itemContainer
             property: "scale"
@@ -38,8 +40,10 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
             }
         }
     }
+
     PlasmaCore.FrameSvgItem {
         id: frame
+
         anchors.verticalCenter: parent.verticalCenter
         x: overlay.rightAvailableSpace > width + PlasmaCore.Units.gridUnit
             ? parent.width + PlasmaCore.Units.gridUnit
@@ -86,11 +90,11 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 elementId: "rotate"
                 toolTip: !rotateHandle.pressed ? i18n("Rotate") : ""
                 iconSize: overlay.iconSize
-                action: (applet) ? applet.action("rotate") : null
+                action: applet ? applet.action("rotate") : null
                 down: !rotateHandle.pressed
                 Component.onCompleted: {
-                    if (action && typeof(action) != "undefined") {
-                        action.enabled = true
+                    if (action !== null) {
+                        action.enabled = true;
                     }
                 }
                 MouseArea {
@@ -98,7 +102,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                     anchors.fill: parent
 
                     property int startRotation
-                    property real startCenterRelativeAngle;
+                    property real startCenterRelativeAngle
 
                     function pointAngle(pos) {
                         var r = Math.sqrt(pos.x * pos.x + pos.y * pos.y);
@@ -121,13 +125,13 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                     }
 
                     onPressed: {
-                        mouse.accepted = true
+                        mouse.accepted = true;
                         startRotation = overlay.itemContainer.rotation;
                         startCenterRelativeAngle = pointAngle(centerRelativePos(mouse.x, mouse.y));
                     }
                     onPositionChanged: {
 
-                        var rot = startRotation%360;
+                        var rot = startRotation % 360;
                         var snap = 4;
                         var newRotation = Math.round(pointAngle(centerRelativePos(mouse.x, mouse.y)) - startCenterRelativeAngle + startRotation);
 
@@ -147,12 +151,11 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                                 newRotation = snapTo;
                             }
                         }
-                        //print("Start: " + startRotation  + " new: " + newRotation);
+
                         overlay.itemContainer.rotation = newRotation;
                     }
                     onReleased: {
                         // save rotation
-    //                    print("saving...");
                         appletsLayout.save();
                     }
                 }
@@ -162,11 +165,11 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 svg: configIconsSvg
                 elementId: "configure"
                 iconSize: overlay.iconSize
-                visible: (qAction && typeof(qAction) != "undefined") ? qAction.enabled : false
-                qAction: (applet) ? applet.action("configure") : null
+                visible: qAction && qAction.enabled || false
+                qAction: applet ? applet.action("configure") : null
                 Component.onCompleted: {
-                    if (qAction && typeof(qAction) != "undefined") {
-                        qAction.enabled = true
+                    if (qAction) {
+                        qAction.enabled = true;
                     }
                 }
             }
@@ -176,11 +179,11 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 elementId: "maximize"
                 iconSize: overlay.iconSize
                 toolTip: i18n("Open Externally")
-                visible: (qAction && typeof(qAction) != "undefined") ? qAction.enabled : false
-                qAction: (applet) ? applet.action("run associated application") : null
+                visible: qAction && qAction.enabled || false
+                qAction: applet ? applet.action("run associated application") : null
                 Component.onCompleted: {
-                    if (qAction && typeof(qAction) != "undefined") {
-                        qAction.enabled = true
+                    if (qAction) {
+                        qAction.enabled = true;
                     }
                 }
             }
@@ -214,7 +217,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 Layout.minimumHeight: PlasmaCore.Units.gridUnit * 3
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                cursorShape: containsPress? Qt.DragMoveCursor : Qt.OpenHandCursor
+                cursorShape: containsPress ? Qt.DragMoveCursor : Qt.OpenHandCursor
                 hoverEnabled: true
                 onPressed: appletsLayout.releaseSpace(overlay.itemContainer);
                 onPositionChanged: {
@@ -242,7 +245,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                         return false;
                     }
                     var a = applet.action("remove");
-                    return (a && typeof(a) != "undefined") ? a.enabled : false;
+                    return a && a.enabled || false;
                 }
                 // we don't set action, since we want to catch the button click,
                 // animate, and then trigger the "remove" action
@@ -254,12 +257,11 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 }
                 Component.onCompleted: {
                     var a = applet.action("remove");
-                    if (a && typeof(a) != "undefined") {
-                        a.enabled = true
+                    if (a) {
+                        a.enabled = true;
                     }
                 }
             }
         }
     }
 }
-

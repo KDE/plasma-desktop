@@ -4,9 +4,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
-import org.kde.plasma.plasmoid 2.0
+import QtQuick 2.15
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
@@ -29,13 +29,13 @@ Folder.SubDialog {
     }
 
     property QtObject closeTimer: closeTimer
-    property QtObject childDialog: (folderView.hoveredItem != null) ? folderView.hoveredItem.popupDialog : null
-    property bool containsMouse: folderView.containsMouse || (childDialog != null && childDialog.containsMouse)
+    property QtObject childDialog: (folderView.hoveredItem !== null) ? folderView.hoveredItem.popupDialog : null
+    property bool containsMouse: folderView.containsMouse || (childDialog !== null && childDialog.containsMouse)
 
     property alias url: folderView.url
 
     location: PlasmaCore.Types.Floating
-    hideOnWindowDeactivate: (childDialog == null)
+    hideOnWindowDeactivate: (childDialog === null)
 
     onContainsMouseChanged: {
         if (containsMouse) {
@@ -67,7 +67,7 @@ Folder.SubDialog {
             filterMode: 0
 
             // TODO: Bidi.
-            flow:  GridView.FlowLeftToRight
+            flow: GridView.FlowLeftToRight
             layoutDirection: Qt.LeftToRight
 
             onDragInProgressAnywhereChanged: {
@@ -85,7 +85,7 @@ Folder.SubDialog {
             interval: PlasmaCore.Units.longDuration * 2
 
             onTriggered: {
-                if (childDialog != null) {
+                if (childDialog !== null) {
                     childDialog.closeTimer.stop();
                     childDialog.visible = false;
                 }
@@ -105,9 +105,7 @@ Folder.SubDialog {
     }
 
     function delayedDestroy() {
-        Qt.callLater(function() {
-            itemDialog.destroy();
-        });
+        Qt.callLater(() => itemDialog.destroy());
     }
 
     Component.onDestruction: {
