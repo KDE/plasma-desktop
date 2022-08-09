@@ -24,7 +24,7 @@ class KcmComponentChooser : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(ComponentChooser *telUriHandlers READ telUriHandlers CONSTANT)
 
 public:
-    KcmComponentChooser(QObject *parent, const QVariantList &args);
+    KcmComponentChooser(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
 
     ComponentChooser *browsers() const;
     ComponentChooser *emailClients() const;

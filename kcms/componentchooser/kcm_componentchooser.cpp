@@ -8,7 +8,6 @@
 
 #include <QApplication>
 
-#include <KAboutData>
 #include <KBuildSycocaProgressDialog>
 #include <KLocalizedString>
 #include <KPluginFactory>
@@ -22,21 +21,10 @@
 K_PLUGIN_FACTORY_WITH_JSON(KcmComponentChooserFactory, "kcm_componentchooser.json", registerPlugin<KcmComponentChooser>();
                            registerPlugin<ComponentChooserData>();)
 
-KcmComponentChooser::KcmComponentChooser(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+KcmComponentChooser::KcmComponentChooser(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, metaData, args)
     , m_data(new ComponentChooserData(this))
 {
-    KAboutData *aboutData = new KAboutData("kcm_componentchooser", //
-                                           i18nc("@title", "Default Applications"),
-                                           "1.0",
-                                           QString(),
-                                           KAboutLicense::LicenseKey::GPL_V2);
-
-    aboutData->addAuthor(i18n("Joseph Wenninger"), QString(), QStringLiteral("jowenn@kde.org"));
-    aboutData->addAuthor(i18n("Méven Car"), QString(), QStringLiteral("meven.car@kdemail.net"));
-    aboutData->addAuthor(i18n("Tobias Fella"), QString(), QStringLiteral("fella@posteo.de"));
-
-    setAboutData(aboutData);
     setButtons(Help | Default | Apply);
 
     connect(browsers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
