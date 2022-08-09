@@ -8,7 +8,6 @@
 
 #include "landingpage.h"
 
-#include <KAboutData>
 #include <KCModuleInfo>
 #include <KColorScheme>
 #include <KLocalizedString>
@@ -156,8 +155,8 @@ QString LookAndFeelGroup::thumbnail() const
     ;
 }
 
-KCMLandingPage::KCMLandingPage(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+KCMLandingPage::KCMLandingPage(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, metaData, args)
     , m_data(new LandingPageData(this))
 {
     qmlRegisterAnonymousType<LandingPageGlobalsSettings>("org.kde.plasma.landingpage.kcm", 0);
@@ -166,15 +165,6 @@ KCMLandingPage::KCMLandingPage(QObject *parent, const QVariantList &args)
 #endif
     qmlRegisterAnonymousType<MostUsedModel>("org.kde.plasma.landingpage.kcm", 0);
     qmlRegisterAnonymousType<LookAndFeelGroup>("org.kde.plasma.landingpage.kcm", 0);
-
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_landingpage"),
-                                       i18n("Quick Settings"),
-                                       QStringLiteral("1.1"),
-                                       i18n("Landing page with some basic settings."),
-                                       KAboutLicense::GPL);
-
-    about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
-    setAboutData(about);
 
     setButtons(Apply | Help);
 
