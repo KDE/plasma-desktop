@@ -337,8 +337,8 @@ Item {
                         distance = -translation.y
                         break;
                     }
-                    parent.value = parent.value + (Math.floor(distance / magnitude) * parent.stepSize)
-                    parent.valueModified()
+                    spinBox.value = spinBox.value + (Math.floor(distance / magnitude) * spinBox.stepSize)
+                    spinBox.valueModified()
                 }
             }
         }
