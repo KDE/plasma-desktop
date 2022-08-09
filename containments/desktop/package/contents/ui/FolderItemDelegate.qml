@@ -463,8 +463,6 @@ Item {
                         opacity: model.isHidden ? 0.3 : 0.6
 
                         source: icon
-
-                        visible: !editor || editor.targetItem != main
                     }
                 }
 
