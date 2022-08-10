@@ -168,7 +168,7 @@ PlasmaCore.ToolTipArea {
         visualParent: root.compactRepresentation
         backgroundHints: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.DesktopFullyCovered) ? PlasmaCore.Dialog.SolidBackground : PlasmaCore.Dialog.StandardBackground
         type: PlasmaCore.Dialog.AppletPopup
-        appletInterface: fullRepresentation && fullRepresentation.appletInterface
+        appletInterface: fullRepresentation && fullRepresentation.appletInterface || null
 
         property var oldStatus: PlasmaCore.Types.UnknownStatus
 
