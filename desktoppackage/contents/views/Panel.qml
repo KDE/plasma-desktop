@@ -173,10 +173,12 @@ Item {
         }
         // Not using panelOpacity to check as it has a NumberAnimation, and it will thus
         // be still read as the initial value here, before the animation starts.
-        if (opaqueApplets && containment) {
-            containment.containmentDisplayHints |= PlasmaCore.Types.DesktopFullyCovered
-        } else {
-            containment.containmentDisplayHints &= ~PlasmaCore.Types.DesktopFullyCovered
+        if (containment) {
+            if (opaqueApplets) {
+                containment.containmentDisplayHints |= PlasmaCore.Types.DesktopFullyCovered
+            } else {
+                containment.containmentDisplayHints &= ~PlasmaCore.Types.DesktopFullyCovered
+            }
         }
     }
 
@@ -267,6 +269,9 @@ Item {
 
         imagePath: "widgets/tabbar"
         prefix: {
+            if (!root.containment) {
+                return "";
+            }
             var prefix = ""
             switch (root.containment.location) {
                 case PlasmaCore.Types.LeftEdge:
