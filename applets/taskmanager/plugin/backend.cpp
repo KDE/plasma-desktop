@@ -375,9 +375,8 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
     while (actionCount < 5 && resultIt != results.end()) {
         const QString resource = (*resultIt).resource();
         const QString mimetype = (*resultIt).mimetype();
+        const QUrl url = (*resultIt).url();
         ++resultIt;
-
-        const QUrl url = QUrl::fromLocalFile(resource);
 
         if (!url.isValid()) {
             continue;
@@ -391,7 +390,7 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
         action->setProperty("agent", storageId);
         action->setProperty("entryPath", desktopEntryUrl);
         action->setProperty("mimeType", mimetype);
-        action->setData(resource);
+        action->setData(url);
         connect(action, &QAction::triggered, this, &Backend::handleRecentDocumentAction);
 
         actions << QVariant::fromValue<QAction *>(action);
@@ -430,9 +429,9 @@ void Backend::handleRecentDocumentAction() const
     }
 
     const QString desktopPath = action->property("entryPath").toUrl().toLocalFile();
-    const QString resource = action->data().toString();
+    const QUrl url = action->data().toUrl();
 
-    if (desktopPath.isEmpty() || resource.isEmpty()) {
+    if (desktopPath.isEmpty() || url.isEmpty()) {
         auto query = UsedResources | Agent(agent) | Type::any() | Activity::current() | Url::file();
 
         KAStats::forgetResources(query);
@@ -467,8 +466,7 @@ void Backend::handleRecentDocumentAction() const
     auto *delegate = new KNotificationJobUiDelegate;
     delegate->setAutoErrorHandlingEnabled(true);
     job->setUiDelegate(delegate);
-
-    job->setUrls({QUrl(resource)});
+    job->setUrls({url});
     job->start();
 }
 
