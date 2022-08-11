@@ -238,7 +238,15 @@ EmptyPage {
                         decrementCurrentIndex()
                         focusCurrentItem(event, Qt.BacktabFocusReason)
                     } break
+                    case Qt.Key_K: if (!atFirst && event.modifiers & Qt.ControlModifier) {
+                        decrementCurrentIndex()
+                        focusCurrentItem(event, Qt.BacktabFocusReason)
+                    } break
                     case Qt.Key_Down: if (!atLast) {
+                        incrementCurrentIndex()
+                        focusCurrentItem(event, Qt.TabFocusReason)
+                    } break
+                    case Qt.Key_J: if (!atLast && event.modifiers & Qt.ControlModifier) {
                         incrementCurrentIndex()
                         focusCurrentItem(event, Qt.TabFocusReason)
                     } break

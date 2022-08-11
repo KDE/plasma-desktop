@@ -212,7 +212,15 @@ EmptyPage {
                         moveCurrentIndexLeft()
                         focusCurrentItem(event, Qt.BacktabFocusReason)
                     } break
+                    case Qt.Key_H: if (!atLeft && !plasmoid.rootItem.searchField.activeFocus && event.modifiers & Qt.ControlModifier) {
+                        moveCurrentIndexLeft()
+                        focusCurrentItem(event, Qt.BacktabFocusReason)
+                    } break
                     case Qt.Key_Up: if (!atTop) {
+                        moveCurrentIndexUp()
+                        focusCurrentItem(event, Qt.BacktabFocusReason)
+                    } break
+                    case Qt.Key_K: if (!atTop && event.modifiers & Qt.ControlModifier) {
                         moveCurrentIndexUp()
                         focusCurrentItem(event, Qt.BacktabFocusReason)
                     } break
@@ -220,7 +228,15 @@ EmptyPage {
                         moveCurrentIndexRight()
                         focusCurrentItem(event, Qt.TabFocusReason)
                     } break
+                    case Qt.Key_L: if (!atRight && !plasmoid.rootItem.searchField.activeFocus && event.modifiers & Qt.ControlModifier) {
+                        moveCurrentIndexRight()
+                        focusCurrentItem(event, Qt.TabFocusReason)
+                    } break
                     case Qt.Key_Down: if (!atBottom) {
+                        moveCurrentIndexDown()
+                        focusCurrentItem(event, Qt.TabFocusReason)
+                    } break
+                    case Qt.Key_J: if (!atBottom && event.modifiers & Qt.ControlModifier) {
                         moveCurrentIndexDown()
                         focusCurrentItem(event, Qt.TabFocusReason)
                     } break
