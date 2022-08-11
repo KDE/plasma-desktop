@@ -471,8 +471,6 @@ MouseArea {
             return margin;
         }
 
-        //width: inPopup ? PlasmaCore.Units.iconSizes.small : Math.min(height, parent.width - LayoutManager.horizontalMargins())
-
         PlasmaCore.IconItem {
             id: icon
 
