@@ -206,7 +206,7 @@ ColumnLayout {
         }
 
         Loader {
-            active: (pipeWireLoader.active && pipeWireLoader.item.visible) || (thumbnailLoader.status === Loader.Ready && !thumbnailSourceItem.isMinimized)
+            active: (pipeWireLoader.item && pipeWireLoader.item.visible) || (thumbnailLoader.status === Loader.Ready && !thumbnailSourceItem.isMinimized)
             asynchronous: true
             visible: active
             anchors.fill: pipeWireLoader.active ? pipeWireLoader : thumbnailLoader
