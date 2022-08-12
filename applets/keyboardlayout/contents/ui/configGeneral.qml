@@ -10,7 +10,7 @@ Kirigami.FormLayout {
     id: root
 
     property alias cfg_showFlag: showFlag.checked
-    readonly property var layoutShortName: keyboardLayout.layoutsList.length ? keyboardLayout.layoutsList[keyboardLayout.layout].shortName
+    readonly property string layoutShortName: keyboardLayout.layoutsList.length ? keyboardLayout.layoutsList[keyboardLayout.layout].shortName
                                                                              : ""
     KeyboardLayout { id: keyboardLayout }
 
