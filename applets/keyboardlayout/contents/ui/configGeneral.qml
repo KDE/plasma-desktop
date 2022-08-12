@@ -7,6 +7,8 @@ import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 import org.kde.plasma.workspace.keyboardlayout 1.0
 
 Kirigami.FormLayout {
+    id: root
+
     property alias cfg_showFlag: showFlag.checked
     readonly property var layoutShortName: keyboardLayout.layoutsList.length ? keyboardLayout.layoutsList[keyboardLayout.layout].shortName
                                                                              : ""
@@ -16,7 +18,7 @@ Kirigami.FormLayout {
         id: showLabel
         Kirigami.FormData.label: i18n("Display style:")
         checked: true
-        text: layoutShortName.toUpperCase()
+        text: root.layoutShortName.toUpperCase()
     }
 
     RadioButton {
@@ -30,7 +32,7 @@ Kirigami.FormLayout {
                 anchors.right: parent.right
                 anchors.verticalCenter: parent.verticalCenter
                 source: Platform.StandardPaths.locate(Platform.StandardPaths.GenericDataLocation,
-                                                      "kf5/locale/countries/" + layoutShortName + "/flag.png")
+                                                      "kf5/locale/countries/" + root.layoutShortName + "/flag.png")
             }
         }
     }
