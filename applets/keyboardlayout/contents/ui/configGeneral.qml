@@ -16,12 +16,23 @@ Kirigami.FormLayout {
         id: showLabel
         Kirigami.FormData.label: i18n("Display style:")
         checked: true
-        text: i18nc("@option:radio", "Language code")
+        text: layoutShortName.toUpperCase()
     }
 
     RadioButton {
         id: showFlag
-        text: i18nc("@option:radio", "Flag")
+        contentItem: Item {
+            implicitWidth: flagImage.implicitWidth + showFlag.indicator.width
+            implicitHeight: flagImage.implicitHeight
+
+            Image {
+                id: flagImage
+                anchors.right: parent.right
+                anchors.verticalCenter: parent.verticalCenter
+                source: Platform.StandardPaths.locate(Platform.StandardPaths.GenericDataLocation,
+                                                      "kf5/locale/countries/" + layoutShortName + "/flag.png")
+            }
+        }
     }
 
     Kirigami.Separator {
