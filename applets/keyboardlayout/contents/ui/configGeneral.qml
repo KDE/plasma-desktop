@@ -12,20 +12,22 @@ Kirigami.FormLayout {
     property alias cfg_showFlag: showFlag.checked
     readonly property string layoutShortName: keyboardLayout.layoutsList.length ? keyboardLayout.layoutsList[keyboardLayout.layout].shortName
                                                                              : ""
+    readonly property string displayName: keyboardLayout.layoutsList.length ? keyboardLayout.layoutsList[keyboardLayout.layout].displayName
+                                                                             : ""
     KeyboardLayout { id: keyboardLayout }
 
     RadioButton {
         id: showLabel
         Kirigami.FormData.label: i18n("Display style:")
         checked: true
-        text: root.layoutShortName.toUpperCase()
+        text: root.displayName.length > 0 ? root.displayName: root.layoutShortName
     }
 
     RadioButton {
         id: showFlag
         contentItem: Item {
-            implicitWidth: flagImage.implicitWidth + showFlag.indicator.width
-            implicitHeight: flagImage.implicitHeight
+            implicitWidth: childrenRect.width + showFlag.indicator.width
+            implicitHeight: childrenRect.height
 
             Image {
                 id: flagImage
@@ -33,6 +35,24 @@ Kirigami.FormLayout {
                 anchors.verticalCenter: parent.verticalCenter
                 source: Platform.StandardPaths.locate(Platform.StandardPaths.GenericDataLocation,
                                                       "kf5/locale/countries/" + root.layoutShortName + "/flag.png")
+                visible: status == Image.Ready
+            }
+            RowLayout {
+                anchors.right: parent.right
+                anchors.verticalCenter: parent.verticalCenter
+                spacing: Kirigami.Units.smallSpacing
+                width: visible ? implicitWidth : 0
+                height: visible ? implicitHeight : 0
+                visible: !flagImage.visible
+
+                Kirigami.Icon {
+                    implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                    implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                    source: "emblem-warning"
+                }
+                Label {
+                    text: i18nc("@info:placeholder Make this translation as short as possible", "No flag available")
+                }
             }
         }
     }
