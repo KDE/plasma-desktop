@@ -174,3 +174,18 @@ function handleFavoriteAction(actionId, actionArgument) {
         favoriteModel.setFavoriteOn(favoriteId, actionArgument.favoriteActivity);
     }
 }
+
+function returnValueIfExists(checker, value, optional = 0) {
+    var condition = Array.isArray(checker) ? checker.some(el => el) : checker;
+    
+    return condition ? value : optional;
+}
+
+function dynamicSetWidgetWidth(icon, buttonIconWidth, kickoffMenuLabel, menuLabelWidth, spacing) {
+    return [
+        returnValueIfExists(icon, buttonIconWidth),
+        returnValueIfExists(kickoffMenuLabel, menuLabelWidth),
+        returnValueIfExists(kickoffMenuLabel, spacing),
+        returnValueIfExists(kickoffMenuLabel && icon, spacing)
+    ].reduce((sum, n) => sum + n, 0);
+}

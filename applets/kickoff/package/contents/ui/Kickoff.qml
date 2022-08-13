@@ -17,17 +17,24 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
+import "code/tools.js" as Tools
+
 Item {
     id: kickoff
 
     // The properties are defined here instead of the singleton because each
     // instance of Kickoff requires different instances of these properties
 
+    // Used to display the menu label on the only text mode
+    property string menuLabel: plasmoid.configuration.menuLabel
+
     property bool inPanel: plasmoid.location === PlasmaCore.Types.TopEdge
         || plasmoid.location === PlasmaCore.Types.RightEdge
         || plasmoid.location === PlasmaCore.Types.BottomEdge
         || plasmoid.location === PlasmaCore.Types.LeftEdge
     property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
+
+    property string defaultIcon: "start-here-kde"
 
     // Used to prevent the width from changing frequently when the scrollbar appears or disappears
     property bool mayHaveGridWithScrollBar: plasmoid.configuration.applicationsDisplay === 0
@@ -130,18 +137,21 @@ Item {
     Plasmoid.compactRepresentation: MouseArea {
         id: compactRoot
 
+        // Taken from DigitalClock to ensure uniform sizing when next to each other
+        readonly property bool tooSmall: plasmoid.formFactor === PlasmaCore.Types.Horizontal && Math.round(2 * (compactRoot.height / 5)) <= PlasmaCore.Theme.smallestFont.pixelSize
+
         implicitWidth: PlasmaCore.Units.iconSizeHints.panel
         implicitHeight: PlasmaCore.Units.iconSizeHints.panel
 
         Layout.minimumWidth: {
             if (!kickoff.inPanel) {
-                return PlasmaCore.Units.iconSizes.small
+                return Tools.dynamicSetWidgetWidth(plasmoid.icon, buttonIcon.width, kickoff.menuLabel, labelTextField.width, PlasmaCore.Units.smallSpacing * 2);
             }
 
             if (kickoff.vertical) {
                 return -1;
             } else {
-                return Math.min(PlasmaCore.Units.iconSizeHints.panel, parent.height) * buttonIcon.aspectRatio;
+                return Tools.dynamicSetWidgetWidth(plasmoid.icon, buttonIcon.width, kickoff.menuLabel, labelTextField.width, PlasmaCore.Units.smallSpacing * 2);
             }
         }
 
@@ -165,7 +175,7 @@ Item {
             if (kickoff.vertical) {
                 return PlasmaCore.Units.iconSizeHints.panel;
             } else {
-                return Math.min(PlasmaCore.Units.iconSizeHints.panel, parent.height) * buttonIcon.aspectRatio;
+                return Tools.dynamicSetWidgetWidth(plasmoid.icon, buttonIcon.width, kickoff.menuLabel, labelTextField.width, PlasmaCore.Units.smallSpacing * 2);
             }
         }
 
@@ -200,17 +210,36 @@ Item {
             onTriggered: plasmoid.expanded = true
         }
 
-        PlasmaCore.IconItem {
-            id: buttonIcon
-
-            readonly property double aspectRatio: (kickoff.vertical ? implicitHeight / implicitWidth
-                : implicitWidth / implicitHeight)
-
+        RowLayout {
             anchors.fill: parent
-            source: plasmoid.icon
-            active: parent.containsMouse || compactDragArea.containsDrag
-            smooth: true
-            roundToIconSize: aspectRatio === 1
+            spacing: PlasmaCore.Units.smallSpacing
+
+            PlasmaCore.IconItem {
+                id: buttonIcon
+                
+                readonly property double aspectRatio: (kickoff.vertical ? implicitHeight / implicitWidth
+                    : implicitWidth / implicitHeight)
+                readonly property int iconSize: Tools.returnValueIfExists(plasmoid.icon, compactRoot.height)
+
+                Layout.preferredWidth: iconSize
+                Layout.preferredHeight: iconSize
+                source: !kickoff.vertical ? plasmoid.icon : plasmoid.icon ? plasmoid.icon : kickoff.defaultIcon
+                active: parent.containsMouse || compactDragArea.containsDrag
+                smooth: true
+                roundToIconSize: aspectRatio === 1
+            }
+
+            PC3.Label {
+                id: labelTextField
+                text: !kickoff.vertical ? kickoff.menuLabel : ''
+                horizontalAlignment: Text.AlignLeft
+                verticalAlignment: Text.AlignVCenter
+                wrapMode: Text.NoWrap
+                fontSizeMode: Text.VerticalFit
+                font.pixelSize: compactRoot.tooSmall ? PlasmaCore.Theme.defaultFont.pixelSize : PlasmaCore.Units.roundToIconSize(PlasmaCore.Units.gridUnit * 2)
+                minimumPointSize: PlasmaCore.Theme.smallestFont.pointSize
+                visible: !kickoff.vertical
+            }
         }
     }
 

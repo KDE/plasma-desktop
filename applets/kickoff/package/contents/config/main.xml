@@ -9,6 +9,10 @@
             <label>The name of the icon used in the compact representation (e.g. on a small panel).</label>
             <default>start-here-kde</default>
         </entry>
+        <entry name="menuLabel" type="string">
+            <label>Text label for the Panel button</label>
+            <default></default>
+        </entry>
         <entry name="favorites" type="StringList">
             <label>List of general favorites. Supported values are menu id's (usually .desktop file names), special URLs that expand into default applications (e.g. preferred://browser), document URLs and KPeople contact URIs.</label>
             <default>preferred://browser,org.kde.kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.discover.desktop</default>
