@@ -93,6 +93,9 @@ RecentFilesKcm::RecentFilesKcm(QWidget *parent, QVariantList args)
     d->blacklistedApplicationsModel->setEnabled(false);
 
     d->messageWidget->setVisible(false);
+
+    addConfig(d->pluginConfig, this);
+    addConfig(d->mainConfig, this);
 }
 
 RecentFilesKcm::~RecentFilesKcm()
@@ -102,11 +105,15 @@ RecentFilesKcm::~RecentFilesKcm()
 void RecentFilesKcm::defaults()
 {
     d->blacklistedApplicationsModel->defaults();
+
+    KCModule::defaults();
 }
 
 void RecentFilesKcm::load()
 {
     d->blacklistedApplicationsModel->load();
+
+    KCModule::load();
 }
 
 void RecentFilesKcm::save()
@@ -120,6 +127,8 @@ void RecentFilesKcm::save()
     // clang-format on
     d->mainConfig->setResourceScoringEnabled(whatToRemember != NoApplications);
     d->mainConfig->save();
+
+    KCModule::save();
 }
 
 void RecentFilesKcm::forget(int count, const QString &what)
