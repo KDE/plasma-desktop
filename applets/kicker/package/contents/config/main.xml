@@ -72,7 +72,7 @@
     </entry>
     <entry name="extraRunners" type="StringList">
       <label>The plugin id's of additional KRunner plugins to use. Only used if useExtraRunners is true.</label>
-      <default>shell,bookmarks,baloosearch,locations</default>
+      <default>shell,bookmarks,baloosearch,locations,plasma-runner-baloosearch</default>
     </entry>
     <entry name="alignResultsToBottom" type="Bool">
       <label>Whether to align search results to the bottom of the menu representation (e.g. panel popup) instead of the top.</label>
