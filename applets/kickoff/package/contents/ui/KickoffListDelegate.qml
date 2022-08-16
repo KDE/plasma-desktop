@@ -48,6 +48,8 @@ AbstractKickoffItemDelegate {
     descriptionTruncated: descriptionLabel.truncated
     descriptionVisible: descriptionLabel.visible
 
+    dragIconItem: icon
+
     contentItem: RowLayout {
         id: row
         spacing: KickoffSingleton.listItemMetrics.margins.left * 2

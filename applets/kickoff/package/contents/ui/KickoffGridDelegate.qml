@@ -41,10 +41,13 @@ AbstractKickoffItemDelegate {
     labelTruncated: label.truncated
     descriptionVisible: false
 
+    dragIconItem: iconItem
+
     contentItem: ColumnLayout {
         spacing: root.spacing
 
         PlasmaCore.IconItem {
+            id: iconItem
             implicitWidth: root.icon.width
             implicitHeight: root.icon.height
             Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
