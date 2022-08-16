@@ -216,13 +216,14 @@ Item {
 
             PlasmaCore.IconItem {
                 id: buttonIcon
-                
+
                 readonly property double aspectRatio: (kickoff.vertical ? implicitHeight / implicitWidth
                     : implicitWidth / implicitHeight)
                 readonly property int iconSize: Tools.returnValueIfExists(plasmoid.icon, compactRoot.height)
 
                 Layout.preferredWidth: iconSize
                 Layout.preferredHeight: iconSize
+                Layout.alignment: Qt.AlignVCenter
                 source: !kickoff.vertical ? plasmoid.icon : plasmoid.icon ? plasmoid.icon : kickoff.defaultIcon
                 active: parent.containsMouse || compactDragArea.containsDrag
                 smooth: true
@@ -231,6 +232,9 @@ Item {
 
             PC3.Label {
                 id: labelTextField
+
+                Layout.fillHeight: true
+
                 text: !kickoff.vertical ? kickoff.menuLabel : ''
                 horizontalAlignment: Text.AlignLeft
                 verticalAlignment: Text.AlignVCenter
@@ -238,7 +242,7 @@ Item {
                 fontSizeMode: Text.VerticalFit
                 font.pixelSize: compactRoot.tooSmall ? PlasmaCore.Theme.defaultFont.pixelSize : PlasmaCore.Units.roundToIconSize(PlasmaCore.Units.gridUnit * 2)
                 minimumPointSize: PlasmaCore.Theme.smallestFont.pointSize
-                visible: !kickoff.vertical
+                visible: text && !kickoff.vertical
             }
         }
     }
