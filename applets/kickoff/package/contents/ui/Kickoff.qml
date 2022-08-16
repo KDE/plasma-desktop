@@ -123,6 +123,25 @@ Item {
         visible: false
         imagePath: plasmoid.formFactor === PlasmaCore.Types.Planar ? "widgets/background" : "dialogs/background"
     }
+
+    // This is here rather than in the singleton with the other metrics items
+    // because the list delegate's height depends on a configuration setting
+    // and the singleton can't access those
+    readonly property real listDelegateHeight: listDelegate.height
+    KickoffListDelegate {
+        id: listDelegate
+        visible: false
+        enabled: false
+        model: null
+        index: -1
+        text: "asdf"
+        url: ""
+        decoration: "start-here-kde"
+        description: "asdf"
+        action: null
+        indicator: null
+    }
+
     //END
 
     Plasmoid.switchWidth: plasmoid.fullRepresentationItem ? plasmoid.fullRepresentationItem.Layout.minimumWidth : -1

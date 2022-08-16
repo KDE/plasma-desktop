@@ -55,8 +55,6 @@ Item {
     }
 
     readonly property real gridCellSize: gridDelegate.implicitHeight
-    readonly property real listDelegateHeight: listDelegate.implicitHeight
-    readonly property real listDelegateContentHeight: listDelegate.implicitContentHeight
     readonly property real compactListDelegateHeight: compactListDelegate.implicitHeight
     readonly property real compactListDelegateContentHeight: compactListDelegate.implicitContentHeight
     //END
@@ -73,19 +71,6 @@ Item {
         decoration: "start-here-kde"
         description: "asdf"
         width: implicitHeight
-        action: null
-        indicator: null
-    }
-    KickoffListDelegate {
-        id: listDelegate
-        visible: false
-        enabled: false
-        model: null
-        index: -1
-        text: "asdf"
-        url: ""
-        decoration: "start-here-kde"
-        description: "asdf"
         action: null
         indicator: null
     }
