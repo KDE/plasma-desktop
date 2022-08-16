@@ -46,7 +46,7 @@ ColumnLayout {
             PlasmaCore.FrameSvgItem {
                 id: previewFrame
                 anchors.centerIn: parent
-                imagePath: plasmoid.location === PlasmaCore.Types.Vertical || plasmoid.location === PlasmaCore.Types.Horizontal
+                imagePath: plasmoid.formFactor === PlasmaCore.Types.Vertical || plasmoid.formFactor === PlasmaCore.Types.Horizontal
                         ? "widgets/panel-background" : "widgets/background"
                 width: PlasmaCore.Units.iconSizes.large + fixedMargins.left + fixedMargins.right
                 height: PlasmaCore.Units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
