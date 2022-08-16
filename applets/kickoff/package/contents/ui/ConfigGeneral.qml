@@ -12,7 +12,7 @@ import QtQuick.Controls 2.5
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2.15 as Kirigami
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 ColumnLayout {
@@ -84,7 +84,7 @@ ColumnLayout {
             }
         }
 
-        PlasmaExtras.ActionTextField {
+        Kirigami.ActionTextField {
             id: menuLabel
             enabled: plasmoid.formFactor !== PlasmaCore.Types.Vertical
             Kirigami.FormData.label: i18nc("@label:textbox", "Text label:")
