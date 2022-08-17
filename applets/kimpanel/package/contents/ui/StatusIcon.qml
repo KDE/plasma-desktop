@@ -30,17 +30,6 @@ Item {
         }
     }
 
-    function iconPath(p) {
-        if (p.length > 0) {
-            if (p[0] === '/') {
-                return p;
-            } else {
-                return "image://icon/" + p;
-            }
-        }
-        return p;
-    }
-
     PlasmaCore.IconItem {
         id: imageIcon
         anchors.centerIn: parent
