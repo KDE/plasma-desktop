@@ -52,8 +52,8 @@ SwitchingTab::SwitchingTab(QWidget *parent)
     d->mainActionCollection->setComponentDisplayName(i18n("Activity switching"));
     d->mainActionCollection->setConfigGlobal(true);
 
-    d->createAction(QStringLiteral("next activity"), i18nc("@action", "Walk through activities"), {Qt::META | Qt::Key_Tab});
-    d->createAction(QStringLiteral("previous activity"), i18nc("@action", "Walk through activities (Reverse)"), {Qt::META | Qt::SHIFT | Qt::Key_Tab});
+    d->createAction(QStringLiteral("next activity"), i18nc("@action", "Walk through activities"), {});
+    d->createAction(QStringLiteral("previous activity"), i18nc("@action", "Walk through activities (Reverse)"), {});
 
     d->scActivities->setActionTypes(KShortcutsEditor::GlobalAction);
     d->scActivities->addCollection(d->mainActionCollection);
