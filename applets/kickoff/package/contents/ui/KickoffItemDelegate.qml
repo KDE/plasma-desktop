@@ -185,6 +185,7 @@ T.ItemDelegate {
 
     MouseArea {
         id: mouseArea
+        property bool dragEnabled: false
         parent: root
         anchors.fill: parent
         anchors.margins: 1
@@ -200,7 +201,7 @@ T.ItemDelegate {
         acceptedButtons: Qt.LeftButton | Qt.RightButton
         drag {
             axis: Drag.XAndYAxis
-            target: root.dragEnabled ? dragItem : undefined
+            target: root.dragEnabled && mouseArea.dragEnabled ? dragItem : undefined
         }
         // Using this Item fixes drag and drop causing delegates
         // to reset to a 0 X position and overlapping each other.
@@ -224,10 +225,17 @@ T.ItemDelegate {
             // Select and focus on press to improve responsiveness and touch feedback
             view.currentIndex = index
             root.forceActiveFocus(Qt.MouseFocusReason)
+
+            // Only enable drag and drop with a mouse.
+            // We don't have a good way to handle it and drag scrolling with touch.
+            mouseArea.dragEnabled = mouse.source === Qt.MouseEventNotSynthesized
+
             // We normally try to open right click menus on press like Qt Widgets
             if (mouse.button === Qt.RightButton) {
                 root.openActionMenu(mouseX, mouseY)
-            } else if (mouse.button === Qt.LeftButton && root.dragEnabled && root.Drag.imageSource == "") {
+            } else if (mouseArea.dragEnabled && mouse.button === Qt.LeftButton
+                && root.dragEnabled && root.Drag.imageSource == ""
+            ) {
                 iconItem.grabToImage((result) => {
                     return root.Drag.imageSource = result.url
                 })
@@ -236,16 +244,9 @@ T.ItemDelegate {
         onClicked: if (mouse.button === Qt.LeftButton) {
             root.action.trigger()
         }
+        // MouseEvents for pressAndHold use Qt.MouseEventSynthesizedByQt for mouse.source,
+        // which makes checking mouse.source for whether or not touch input is used useless.
         onPressAndHold: if (mouse.button === Qt.LeftButton) {
-            /* TODO: make press and hold to open menu exclusive to touch.
-             * I (ndavis) tried `if (lastDeviceType & ~(PointerDevice.Mouse | PointerDevice.TouchPad))`
-             * with a TapHandler. lastDeviceType was gotten from the EventPoint argument of the
-             * grabChanged() signal. ngraham said it wouldn't work because it was preventing single
-             * taps on touch. I didn't have a touch screen to test it with.
-             *
-             * TODO: find a good way to expose the context menu to touch input that doesn't conflict with
-             * flick to scroll or drag to reorder act like right click on press and hold (with touch).
-             */
             root.openActionMenu(mouseX, mouseY)
         }
     }
