@@ -76,25 +76,37 @@ Item {
                 target: desktop
                 property: "accentColor"
                 value: {
-                    if (isCandidateColor(imageColors.dominant)) {
-                        return imageColors.dominant;
-                    }
-
-                    // If the color is too light or too dark, use highlight instead
+                    // First try the highlight color
                     if (isCandidateColor(imageColors.highlight)) {
                         return imageColors.highlight
                     }
+                    // If it was too light or dark, adjust lightness a bit and try again
+                    if (lightness(imageColors.highlight) >= 0.75) {
+                        return Qt.darker(imageColors.highlight, 1.20);
+                    } else {
+                        return Qt.lighter(imageColors.highlight, 1.20);
+                    }
 
-                    // Neither is suitable, check average color.
+                    // If it's still is too light or too dark, try the dominant color
+                    if (isCandidateColor(imageColors.dominant)) {
+                        return imageColors.dominant;
+                    }
+                    // As before, adjust lightness a bit and try again
+                    if (lightness(imageColors.dominant) >= 0.75) {
+                        return Qt.darker(imageColors.dominant, 1.20);
+                    } else {
+                        return Qt.lighter(imageColors.dominant, 1.20);
+                    }
+
+                    // Neither is suitable; use the average color
                     if (isCandidateColor(imageColors.average)) {
                         return imageColors.average;
                     }
-
-                    // Adjust the lightness of the average color
-                    if (lightness(imageColors.average) >= 0.8) {
-                        return Qt.darker(imageColors.average, 1.25);
+                    // Adjust lightness and return one of them
+                    if (lightness(imageColors.average) >= 0.75) {
+                        return Qt.darker(imageColors.average, 1.20);
                     } else {
-                        return Qt.lighter(imageColors.average, 1.25);
+                        return Qt.lighter(imageColors.average, 1.20);
                     }
                 }
 
@@ -113,7 +125,7 @@ Item {
                 */
                 function isCandidateColor(color) {
                     const l = lightness(color);
-                    return l > 0.2 && l < 0.8;
+                    return l > 0.4 && l < 0.75;
                 }
             }
 
