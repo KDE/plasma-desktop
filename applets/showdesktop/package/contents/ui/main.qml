@@ -172,6 +172,14 @@ MouseArea {
         }
     }
 
+    PlasmaCore.ToolTipArea {
+        id: toolTip
+        anchors.fill: parent
+        mainText: Plasmoid.title
+        subText: Plasmoid.toolTipSubText
+        textFormat: Text.PlainText
+    }
+
     function action_minimizeall() {
         showdesktop.minimizeAll();
     }
