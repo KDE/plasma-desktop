@@ -52,6 +52,7 @@ private:
     QStandardItemModel *m_defaultModel = nullptr;
     // Model fed by kactivities-stats
     KActivities::Stats::ResultModel *m_resultModel = nullptr;
+    mutable QStringList ignoredKCMs;
 };
 
 class LookAndFeelGroup : public QObject
