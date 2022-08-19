@@ -104,8 +104,15 @@ QHash<int, QByteArray> MostUsedModel::roleNames() const
 bool MostUsedModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
     const QString desktopName = sourceModel()->index(source_row, 0, source_parent).data(ResultModel::ResourceRole).toUrl().path();
+    if (desktopName.endsWith(QLatin1String(".desktop"))) {
+        const bool isAlreadyIgnored = ignoredKCMs.contains(desktopName);
+        if (!isAlreadyIgnored) {
+            ignoredKCMs.append(desktopName);
+        }
+        return false;
+    }
     KService::Ptr service = KService::serviceByStorageId(desktopName);
-    return service;
+    return service && (source_row - ignoredKCMs.size() < 6);
 }
 
 QVariant MostUsedModel::data(const QModelIndex &index, int role) const
@@ -179,7 +186,7 @@ KCMLandingPage::KCMLandingPage(QObject *parent, const QVariantList &args)
     setButtons(Apply | Help);
 
     m_mostUsedModel = new MostUsedModel(this);
-    m_mostUsedModel->setResultModel(new ResultModel(AllResources | Agent(QStringLiteral("org.kde.systemsettings")) | HighScoredFirst | Limit(6), this));
+    m_mostUsedModel->setResultModel(new ResultModel(AllResources | Agent(QStringLiteral("org.kde.systemsettings")) | HighScoredFirst | Limit(12), this));
 
     m_defaultLightLookAndFeel = new LookAndFeelGroup(this);
     m_defaultDarkLookAndFeel = new LookAndFeelGroup(this);
