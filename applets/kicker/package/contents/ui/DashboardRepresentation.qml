@@ -130,7 +130,6 @@ Kicker.DashboardWindow {
                     rootModel.refresh();
                 } else if (tabBar.activeTab === 1) {
                     root.toggle();
-                    containmentInterface.ensureMutable(containmentInterface.screenContainment(plasmoid));
                     kwindowsystem.showingDesktop = true;
                 }
             }
@@ -232,7 +231,7 @@ Kicker.DashboardWindow {
 
             anchors.horizontalCenter: parent.horizontalCenter
 
-            visible: (plasmoid.immutability !== PlasmaCore.Types.SystemImmutable)
+            visible: (plasmoid.immutability === PlasmaCore.Types.Mutable)
 
             onActiveTabChanged: {
                 root.updateWidgetExplorer();
@@ -669,7 +668,6 @@ Kicker.DashboardWindow {
 
                         onItemActivated: {
                             if (tabBar.activeTab === 1) {
-                                containmentInterface.ensureMutable(containmentInterface.screenContainment(plasmoid));
                                 root.widgetExplorer.addApplet(currentItem.m.pluginName);
                                 root.toggle();
                                 kwindowsystem.showingDesktop = true;
