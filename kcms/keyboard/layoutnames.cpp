@@ -1,3 +1,9 @@
+/*
+    SPDX-FileCopyrightText: 2021 Andrey Butirsky <butirsky@gmail.com>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
+
 #include "layoutnames.h"
 #include <QDBusMetaType>
 
