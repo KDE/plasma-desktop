@@ -26,17 +26,19 @@ MouseArea {
      */
     readonly property bool isMinimizeAll: Plasmoid.pluginName === "org.kde.plasma.minimizeall"
 
+    readonly property bool isMinimizing: minimizeAllComponent.status === Loader.Ready ? minimizeAllComponent.item.active : false
+
     Plasmoid.icon: Plasmoid.configuration.icon
     Plasmoid.title: {
         if (isMinimizeAll) {
-            return minimizeAllComponent.item.active ? i18nc("@action:button", "Restore All Minimized Windows") : i18nc("@action", "Minimize All Windows");
+            return isMinimizing ? i18nc("@action:button", "Restore All Minimized Windows") : i18nc("@action", "Minimize All Windows");
         }
 
         return showdesktop.showingDesktop ? i18nc("@action:button", "Stop Peeking at Desktop") : i18nc("@action:button", "Peek at Desktop");
     }
     Plasmoid.toolTipSubText: {
         if (isMinimizeAll) {
-            return minimizeAllComponent.item.active ? i18nc("@info:tooltip", "Restores the previously minimized windows") : i18n("Shows the Desktop by minimizing all windows");
+            return isMinimizing ? i18nc("@info:tooltip", "Restores the previously minimized windows") : i18n("Shows the Desktop by minimizing all windows");
         }
 
         return showdesktop.showingDesktop ? i18nc("@info:tooltip", "Moves windows back to their original positions") : i18n("Temporarily reveals the Desktop by moving open windows into screen corners");
@@ -85,10 +87,7 @@ MouseArea {
 
     Loader {
         id: minimizeAllComponent
-
         active: root.isMinimizeAll
-        asynchronous: true
-
         source: "MinimizeAllComponent.qml"
     }
 
@@ -158,7 +157,7 @@ MouseArea {
         }
         opacity: {
             if (isMinimizeAll) {
-                return minimizeAllComponent.item.active ? 1 : 0;
+                return isMinimizing ? 1 : 0;
             }
 
             return showdesktop.showingDesktop ? 1 : 0;
