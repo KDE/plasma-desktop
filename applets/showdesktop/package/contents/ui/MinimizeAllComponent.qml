@@ -14,6 +14,7 @@ QtObject {
     id: component
 
     readonly property QtObject tasksModel: TaskManager.TasksModel {
+        id: tasksModel
         sortMode: TaskManager.TasksModel.SortDisabled
         groupMode: TaskManager.TasksModel.GroupDisabled
     }
@@ -51,21 +52,21 @@ QtObject {
 
     function activate() {
         const clients = [];
-        for (let i = 0 ; i < tasksModel.count; i++) {
+        for (let i = 0; i < tasksModel.count; i++) {
             const idx = tasksModel.makeModelIndex(i);
             if (!tasksModel.data(idx, TaskManager.AbstractTasksModel.IsHidden)) {
                 tasksModel.requestToggleMinimized(idx);
                 clients.push(tasksModel.makePersistentModelIndex(i));
             }
         }
-        component.minimizedClients = clients;
-        component.active = true;
+        minimizedClients = clients;
+        active = true;
     }
 
     function deactivate() {
-        component.active = false;
-        for (let i = 0 ; i < component.minimizedClients.length; i++) {
-            const idx = component.minimizedClients[i];
+        active = false;
+        for (let i = 0; i < minimizedClients.length; i++) {
+            const idx = minimizedClients[i];
             // client deleted, do nothing
             if (!idx.valid) {
                 continue;
@@ -76,11 +77,11 @@ QtObject {
             }
             tasksModel.requestToggleMinimized(idx);
         }
-        component.minimizedClients = [];
+        minimizedClients = [];
     }
 
     function toggleActive() {
-        if (component.active) {
+        if (active) {
             deactivate();
         } else {
             activate();
