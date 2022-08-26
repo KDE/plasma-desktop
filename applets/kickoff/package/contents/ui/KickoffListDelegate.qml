@@ -77,6 +77,7 @@ AbstractKickoffItemDelegate {
                     return implicitHeight;
                 }
                 text: root.text
+                textFormat: Text.PlainText
                 elide: Text.ElideRight
                 verticalAlignment: Text.AlignVCenter
                 maximumLineCount: 1
@@ -88,6 +89,7 @@ AbstractKickoffItemDelegate {
                 visible: text.length > 0 && text !== root.text
                 enabled: false
                 text: root.description
+                textFormat: Text.PlainText
                 font: PlasmaCore.Theme.smallestFont
                 elide: Text.ElideRight
                 verticalAlignment: Text.AlignVCenter

@@ -53,6 +53,7 @@ AbstractKickoffItemDelegate {
             Layout.preferredHeight: label.lineCount === 1 ? label.implicitHeight * 2 : label.implicitHeight
 
             text: root.text
+            textFormat: Text.PlainText
             elide: Text.ElideRight
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignTop

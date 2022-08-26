@@ -159,6 +159,7 @@ EmptyPage {
                     font.pixelSize: KickoffSingleton.compactListDelegateContentHeight
                     enabled: hoverHandler.hovered
                     text: section.length === 1 ? section.toUpperCase() : section
+                    textFormat: Text.PlainText
                 }
 
                 HoverHandler {
