@@ -134,6 +134,7 @@ Item {
                 id: locationCustomValue
                 enabled: locationCustom.checked
                 Layout.fillWidth: true
+                Layout.preferredHeight: locationDirDialogButton.implicitHeight
 
                 placeholderText: i18n("Type path or URL…")
 
@@ -152,6 +153,7 @@ Item {
                 }
             }
             Button {
+                id: locationDirDialogButton
                 icon.name: "document-open"
 
                 enabled: locationCustom.checked
