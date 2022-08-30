@@ -73,6 +73,7 @@ ColumnLayout {
                 MenuItem {
                     text: i18nc("@item:inmenu Reset icon to default", "Reset to default icon")
                     icon.name: "edit-clear"
+                    enabled: cfg_icon != "start-here-kde"
                     onClicked: cfg_icon = "start-here-kde"
                 }
                 MenuItem {
