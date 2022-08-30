@@ -13,7 +13,7 @@ import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
 import org.kde.plasma.shell 2.0 as Shell
 import "../activitymanager"
 import "../explorer"
-import org.kde.kirigami 2.15 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 Item {
     id: root
@@ -72,60 +72,24 @@ Item {
             id: imageColors
             source: root.containment.wallpaper
 
+            readonly property color backgroundColor: PlasmaCore.Theme.backgroundColor
+            readonly property color textColor: PlasmaCore.Theme.textColor
+
+            Kirigami.Theme.inherit: false
+            Kirigami.Theme.backgroundColor: backgroundColor
+            Kirigami.Theme.textColor: textColor
+
+            onBackgroundColorChanged: Qt.callLater(update)
+            onTextColorChanged: Qt.callLater(update)
+
             property Binding colorBinding: Binding {
                 target: desktop
                 property: "accentColor"
                 value: {
-                    // First try the highlight color
-                    if (isCandidateColor(imageColors.highlight)) {
-                        return imageColors.highlight
+                    if (imageColors.palette.length === 0) {
+                        return "#00000000";
                     }
-                    // If it was too light or dark, adjust lightness a bit and try again
-                    if (lightness(imageColors.highlight) >= 0.75) {
-                        return Qt.darker(imageColors.highlight, 1.20);
-                    } else {
-                        return Qt.lighter(imageColors.highlight, 1.20);
-                    }
-
-                    // If it's still is too light or too dark, try the dominant color
-                    if (isCandidateColor(imageColors.dominant)) {
-                        return imageColors.dominant;
-                    }
-                    // As before, adjust lightness a bit and try again
-                    if (lightness(imageColors.dominant) >= 0.75) {
-                        return Qt.darker(imageColors.dominant, 1.20);
-                    } else {
-                        return Qt.lighter(imageColors.dominant, 1.20);
-                    }
-
-                    // Neither is suitable; use the average color
-                    if (isCandidateColor(imageColors.average)) {
-                        return imageColors.average;
-                    }
-                    // Adjust lightness and return one of them
-                    if (lightness(imageColors.average) >= 0.75) {
-                        return Qt.darker(imageColors.average, 1.20);
-                    } else {
-                        return Qt.lighter(imageColors.average, 1.20);
-                    }
-                }
-
-                /**
-                * Converts RGB color to HSL, and only returns the lightness value (0-1)
-                */
-                function lightness(color) {
-                    const r = color.r, g = color.g, b = color.b;
-                    const l = Math.max(r, g, b);
-                    const s = l - Math.min(r, g, b);
-                    return (2 * l - s) / 2;
-                }
-
-                /**
-                * Checks the color is suitable as an accent color
-                */
-                function isCandidateColor(color) {
-                    const l = lightness(color);
-                    return l > 0.4 && l < 0.75;
+                    return imageColors.dominant;
                 }
             }
 
