@@ -15,6 +15,15 @@ ecm_qt_declare_logging_category(common_SRCS
     EXPORT
         kcm_tablet
 )
+if (QT_MAJOR_VERSION EQUAL "5")
+    ecm_add_qtwayland_client_protocol(common_SRCS
+        PROTOCOL ${WaylandProtocols_DATADIR}/unstable/tablet/tablet-unstable-v2.xml
+        BASENAME tablet-unstable-v2
+    )
+else()
+    qt6_generate_wayland_protocol_client_sources(kcm_tablet FILES
+        ${WaylandProtocols_DATADIR}/unstable/tablet/tablet-unstable-v2.xml)
+endif()
 ecm_qt_install_logging_categories(
     EXPORT kcm_tablet
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
@@ -29,6 +38,7 @@ target_sources(kcm_tablet PRIVATE
     kcmtablet.cpp
     devicesmodel.cpp
     inputdevice.cpp
+    tabletevents.cpp
 )
 
 target_link_libraries(kcm_tablet
@@ -38,6 +48,9 @@ target_link_libraries(kcm_tablet
     KF5::QuickAddons
 
     Qt::DBus
+    Qt::WaylandClient
+    Qt::GuiPrivate
+    Wayland::Client
 )
 
 kpackage_install_package(package kcm_tablet kcms)

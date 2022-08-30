@@ -7,6 +7,9 @@
 #include "kcmtablet.h"
 #include "devicesmodel.h"
 #include "inputdevice.h"
+#include "tabletevents.h"
+
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <QGuiApplication>
@@ -120,14 +123,18 @@ public:
 
 Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData, const QVariantList &list)
     : ManagedConfigModule(parent, metaData, list)
-    , m_devicesModel(new DevicesModel(this))
+    , m_toolsModel(new DevicesModel("tabletTool", this))
+    , m_padsModel(new DevicesModel("tabletPad", this))
 {
     qmlRegisterType<OutputsModel>("org.kde.plasma.tablet.kcm", 1, 0, "OutputsModel");
     qmlRegisterType<OrientationsModel>("org.kde.plasma.tablet.kcm", 1, 0, "OrientationsModel");
     qmlRegisterType<OutputsFittingModel>("org.kde.plasma.tablet.kcm", 1, 1, "OutputsFittingModel");
+    qmlRegisterType<TabletEvents>("org.kde.plasma.tablet.kcm", 1, 1, "TabletEvents");
     qmlRegisterAnonymousType<InputDevice>("org.kde.plasma.tablet.kcm", 1);
 
-    connect(m_devicesModel, &DevicesModel::needsSaveChanged, this, &Tablet::refreshNeedsSave);
+    connect(m_toolsModel, &DevicesModel::needsSaveChanged, this, &Tablet::refreshNeedsSave);
+    connect(m_padsModel, &DevicesModel::needsSaveChanged, this, &Tablet::refreshNeedsSave);
+    connect(this, &Tablet::buttonMappingChanged, this, &Tablet::refreshNeedsSave);
 }
 
 Tablet::~Tablet() = default;
@@ -139,30 +146,109 @@ void Tablet::refreshNeedsSave()
 
 bool Tablet::isSaveNeeded() const
 {
-    return m_devicesModel->isSaveNeeded();
+    return !m_unsavedMappings.isEmpty() || m_toolsModel->isSaveNeeded() || m_padsModel->isSaveNeeded();
 }
 
 bool Tablet::isDefaults() const
 {
-    return m_devicesModel->isDefaults();
+    if (!m_unsavedMappings.isEmpty())
+        return false;
+
+    const auto cfg = KSharedConfig::openConfig("kcminputrc");
+    const auto group = cfg->group("ButtonRebinds").group("Tablet");
+    if (group.isValid()) {
+        return false;
+    }
+    return m_toolsModel->isDefaults() && m_padsModel->isDefaults();
 }
 
 void Tablet::load()
 {
-    m_devicesModel->load();
-}
-void Tablet::save()
-{
-    m_devicesModel->save();
-}
-void Tablet::defaults()
-{
-    m_devicesModel->defaults();
+    m_toolsModel->load();
+    m_padsModel->load();
+
+    m_unsavedMappings.clear();
+    Q_EMIT buttonMappingChanged();
 }
 
-DevicesModel *Tablet::devicesModel() const
+void Tablet::save()
 {
-    return m_devicesModel;
+    m_toolsModel->save();
+    m_padsModel->save();
+
+    const auto cfg = KSharedConfig::openConfig("kcminputrc");
+    auto tabletGroup = cfg->group("ButtonRebinds").group("Tablet");
+    for (auto it = m_unsavedMappings.cbegin(), itEnd = m_unsavedMappings.cend(); it != itEnd; ++it) {
+        auto group = tabletGroup.group(it.key());
+        for (auto itDevice = it->cbegin(), itDeviceEnd = it->cend(); itDevice != itDeviceEnd; ++itDevice) {
+            const auto key = itDevice->toString(QKeySequence::PortableText);
+            const auto button = QString::number(itDevice.key());
+            if (key.isEmpty()) {
+                group.deleteEntry(button, KConfig::Notify);
+            } else {
+                group.writeEntry(button, QStringList{"Key", key}, KConfig::Notify);
+            }
+        }
+    }
+    tabletGroup.sync();
+    m_unsavedMappings.clear();
+}
+
+void Tablet::defaults()
+{
+    m_toolsModel->defaults();
+    m_padsModel->defaults();
+
+    const auto tabletGroup = KSharedConfig::openConfig("kcminputrc")->group("ButtonRebinds").group("Tablet");
+    const auto tablets = tabletGroup.groupList();
+    for (const auto &tablet : tablets) {
+        const auto buttons = tabletGroup.group(tablet).keyList();
+        for (const auto &button : buttons) {
+            m_unsavedMappings[tablet][button.toUInt()] = {};
+        }
+    }
+
+    for (auto it = m_unsavedMappings.begin(), itEnd = m_unsavedMappings.end(); it != itEnd; ++it) {
+        for (auto itDevice = it->begin(), itDeviceEnd = it->end(); itDevice != itDeviceEnd; ++itDevice) {
+            *itDevice = {};
+        }
+    }
+    Q_EMIT buttonMappingChanged();
+}
+
+void Tablet::assignPadButtonMapping(const QString &deviceName, uint button, const QKeySequence &keySequence)
+{
+    m_unsavedMappings[deviceName][button] = keySequence;
+    Q_EMIT buttonMappingChanged();
+}
+
+QKeySequence Tablet::padButtonMapping(const QString &deviceName, uint button) const
+{
+    if (deviceName.isEmpty()) {
+        return {};
+    }
+
+    if (const auto &device = m_unsavedMappings[deviceName]; device.contains(button)) {
+        return device.value(button);
+    }
+
+    const auto cfg = KSharedConfig::openConfig("kcminputrc");
+    const auto group = cfg->group("ButtonRebinds").group("Tablet").group(deviceName);
+    const auto sequence = group.readEntry(QString::number(button), QStringList());
+    if (sequence.size() != 2) {
+        return {};
+    }
+    return QKeySequence(sequence.constLast());
+}
+
+DevicesModel *Tablet::toolsModel() const
+{
+    return m_toolsModel;
+}
+
+DevicesModel *Tablet::padsModel() const
+{
+    return m_padsModel;
 }
 
 #include "kcmtablet.moc"

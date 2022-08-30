@@ -11,8 +11,9 @@
 
 #include "logging.h"
 
-DevicesModel::DevicesModel(QObject *parent)
+DevicesModel::DevicesModel(const QByteArray &kind, QObject *parent)
     : QAbstractListModel(parent)
+    , m_kind(kind)
 {
     m_deviceManager = new QDBusInterface(QStringLiteral("org.kde.KWin"),
                                          QStringLiteral("/org/kde/KWin/InputDevice"),
@@ -95,9 +96,9 @@ void DevicesModel::addDevice(const QString &sysName, bool tellModel)
                                QStringLiteral("org.kde.KWin.InputDevice"),
                                QDBusConnection::sessionBus(),
                                this);
-    QVariant reply = deviceIface.property("tabletTool");
+    QVariant reply = deviceIface.property(m_kind);
     if (reply.isValid() && reply.toBool()) {
-        InputDevice *dev = new InputDevice(sysName);
+        InputDevice *dev = new InputDevice(sysName, this);
         connect(dev, &InputDevice::needsSaveChanged, this, &DevicesModel::needsSaveChanged);
 
         if (tellModel) {

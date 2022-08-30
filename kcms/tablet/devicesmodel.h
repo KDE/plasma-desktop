@@ -14,7 +14,7 @@ class DevicesModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
-    DevicesModel(QObject *parent = nullptr);
+    DevicesModel(const QByteArray &kind, QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
     QVariant data(const QModelIndex &index, int role) const override;
@@ -40,4 +40,5 @@ private:
 
     QVector<InputDevice *> m_devices;
     QDBusInterface *m_deviceManager;
+    QByteArray m_kind;
 };

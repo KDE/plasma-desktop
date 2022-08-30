@@ -17,6 +17,8 @@ class InputDevice : public QObject
 {
     Q_OBJECT
 
+    Q_PROPERTY(QString sysName READ sysName CONSTANT)
+    Q_PROPERTY(QString name READ name CONSTANT)
     Q_PROPERTY(QSizeF size READ size CONSTANT)
     Q_PROPERTY(bool supportsLeftHanded READ supportsLeftHanded CONSTANT)
     Q_PROPERTY(bool leftHanded READ isLeftHanded WRITE setLeftHanded NOTIFY leftHandedChanged)
@@ -27,7 +29,7 @@ class InputDevice : public QObject
     Q_PROPERTY(QRectF outputArea READ outputArea WRITE setOutputArea NOTIFY outputAreaChanged)
 
 public:
-    InputDevice(QString dbusName);
+    InputDevice(const QString &dbusName, QObject *parent);
     ~InputDevice() override;
 
     void load();
@@ -116,6 +118,7 @@ private:
             , m_changedSignalFunction(nullptr)
             , m_device(device)
         {
+            Q_ASSERT(m_device);
             int idx = OrgKdeKWinInputDeviceInterface::staticMetaObject.indexOfProperty(propName);
             Q_ASSERT(idx >= 0);
             m_prop = OrgKdeKWinInputDeviceInterface::staticMetaObject.property(idx);
@@ -141,6 +144,7 @@ private:
         {
             m_value = {};
             value();
+            m_configValue = m_value;
         }
 
         void set(T newVal);
@@ -172,7 +176,7 @@ private:
         const SupportedFunction m_supportedFunction;
         const ChangedSignal m_changedSignalFunction;
         InputDevice *const m_device;
-        T m_configValue = {};
+        mutable std::optional<T> m_configValue;
         mutable std::optional<T> m_value;
     };
 

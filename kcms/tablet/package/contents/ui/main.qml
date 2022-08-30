@@ -7,7 +7,7 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QQC2
-import org.kde.kirigami 2.6 as Kirigami
+import org.kde.kirigami 2.19 as Kirigami
 import org.kde.plasma.tablet.kcm 1.1
 import org.kde.kcm 1.3
 
@@ -33,10 +33,14 @@ SimpleKCM {
         QQC2.ComboBox {
             id: combo
             Kirigami.FormData.label: i18ndc("kcmtablet", "@label:listbox The device we are configuring", "Device:")
-            model: kcm.devicesModel
+            model: kcm.toolsModel
+
+            onCountChanged: if (count > 0 && currentIndex < 0) {
+                currentIndex = 0;
+            }
 
             onCurrentIndexChanged: {
-                parent.device = kcm.devicesModel.deviceAt(combo.currentIndex)
+                parent.device = kcm.toolsModel.deviceAt(combo.currentIndex)
 
                 const initialOutputArea = form.device.outputArea;
                 if (initialOutputArea === Qt.rect(0, 0, 1, 1)) {
@@ -201,6 +205,30 @@ SimpleKCM {
                                                                                     , Math.floor(outputAreaView.outputAreaSetting.y * outputItem.outputSize.height)
                                                                                     , Math.floor(outputAreaView.outputAreaSetting.width * outputItem.outputSize.width)
                                                                                     , Math.floor(outputAreaView.outputAreaSetting.height * outputItem.outputSize.height))
+        }
+
+        Kirigami.Separator {
+            Layout.fillWidth: true
+        }
+
+        property QtObject padDevice: null
+        QQC2.ComboBox {
+            Kirigami.FormData.label: i18ndc("kcmtablet", "@label:listbox The pad we are configuring", "Pad:")
+            model: kcm.padsModel
+
+            onCurrentIndexChanged: {
+                parent.padDevice = kcm.padsModel.deviceAt(currentIndex)
+            }
+
+            onCountChanged: if (count > 0 && currentIndex < 0) {
+                currentIndex = 0;
+            }
+        }
+
+        RebindButtons {
+            Layout.fillWidth: true
+            path: form.padDevice.sysName
+            name: form.padDevice.name
         }
     }
 }

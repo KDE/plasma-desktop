@@ -42,6 +42,13 @@ find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
 )
 if (QT_MAJOR_VERSION EQUAL "5")
     find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
+    find_package(Qt5 ${QT_MIN_VERSION} CONFIG OPTIONAL_COMPONENTS WaylandClient)
+
+    find_package(QtWaylandScanner)
+    set_package_properties(QtWaylandScanner PROPERTIES
+        TYPE REQUIRED
+        PURPOSE "Required for building KWin with Wayland support"
+    )
 endif()
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
@@ -112,6 +119,18 @@ set_package_properties(KF5QQC2DesktopStyle PROPERTIES
     DESCRIPTION "QtQuickControls 2 style that uses QWidget's QStyle for painting"
     PURPOSE "Required at runtime by many KCMs"
     TYPE RUNTIME
+)
+
+find_package(WaylandProtocols 1.25)
+set_package_properties(WaylandProtocols PROPERTIES
+    TYPE REQUIRED
+    PURPOSE "Collection of Wayland protocols that add functionality not available in the Wayland core protocol"
+    URL "https://gitlab.freedesktop.org/wayland/wayland-protocols/"
+)
+find_package(Wayland 1.2)
+set_package_properties(Wayland PROPERTIES
+    TYPE REQUIRED
+    PURPOSE "Required for building Tablet input KCM"
 )
 
 find_package(LibKWorkspace ${PROJECT_VERSION} CONFIG REQUIRED)

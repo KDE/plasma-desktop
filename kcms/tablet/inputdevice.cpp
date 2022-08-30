@@ -50,7 +50,8 @@ bool InputDevice::Prop<T>::changed() const
     return m_value.has_value() && m_value.value() != m_configValue;
 }
 
-InputDevice::InputDevice(QString dbusName)
+InputDevice::InputDevice(const QString &dbusName, QObject *parent)
+    : QObject(parent)
 {
     m_iface.reset(new OrgKdeKWinInputDeviceInterface(QStringLiteral("org.kde.KWin"),
                                                      QStringLiteral("/org/kde/KWin/InputDevice/") + dbusName,
@@ -62,7 +63,9 @@ InputDevice::InputDevice(QString dbusName)
     connect(this, &InputDevice::outputAreaChanged, this, &InputDevice::needsSaveChanged);
 }
 
-InputDevice::~InputDevice() = default;
+InputDevice::~InputDevice()
+{
+}
 
 void InputDevice::save()
 {

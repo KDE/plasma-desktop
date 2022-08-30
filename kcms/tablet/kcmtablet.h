@@ -9,6 +9,7 @@
 #include <KQuickAddons/ManagedConfigModule>
 
 #include <KSharedConfig>
+#include <QKeySequence>
 
 #include "devicesmodel.h"
 
@@ -18,7 +19,8 @@ class TabletData;
 class Tablet : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
-    Q_PROPERTY(DevicesModel *devicesModel READ devicesModel CONSTANT)
+    Q_PROPERTY(DevicesModel *toolsModel READ toolsModel CONSTANT)
+    Q_PROPERTY(DevicesModel *padsModel READ padsModel CONSTANT)
 
 public:
     explicit Tablet(QObject *parent, const KPluginMetaData &metaData, const QVariantList &list);
@@ -30,10 +32,19 @@ public:
     bool isSaveNeeded() const override;
     bool isDefaults() const override;
 
-    DevicesModel *devicesModel() const;
+    DevicesModel *toolsModel() const;
+    DevicesModel *padsModel() const;
+
+    Q_SCRIPTABLE void assignPadButtonMapping(const QString &deviceName, uint button, const QKeySequence &keySequence);
+    Q_SCRIPTABLE QKeySequence padButtonMapping(const QString &deviceName, uint button) const;
+
+Q_SIGNALS:
+    void buttonMappingChanged();
 
 private:
     void refreshNeedsSave();
 
-    DevicesModel *m_devicesModel;
+    DevicesModel *const m_toolsModel;
+    DevicesModel *const m_padsModel;
+    QHash<QString, QHash<uint, QKeySequence>> m_unsavedMappings;
 };
