@@ -358,6 +358,7 @@ PlasmaComponents.ContextMenu {
 
                 menuItem = menu.newMenuItem(virtualDesktopsMenu);
                 menuItem.text = i18n("&New Desktop");
+                menuItem.icon = "list-add";
                 menuItem.clicked.connect(function() {
                     tasksModel.requestNewVirtualDesktop(menu.modelIndex);
                 });
