@@ -185,27 +185,20 @@ Item {
 
         Item {
             objectName: "switchContainmentWarningItem"
+
             Kirigami.PlaceholderMessage {
                 id: message
-                anchors {
-                    centerIn: parent
-                    verticalCenterOffset: -applyNowButton.implicitHeight - applyNowButton.anchors.topMargin
-                }
-                icon.name: "documentinfo"
                 width: parent.width - Kirigami.Units.largeSpacing * 8
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout changes must be applied before other changes can be made")
-            }
+                anchors.centerIn: parent
 
-            QQC2.Button {
-                id: applyNowButton
-                anchors {
-                    top: message.bottom
-                    topMargin: Kirigami.Units.largeSpacing
-                    horizontalCenter: parent.horizontalCenter
+                icon.name: "documentinfo"
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout changes must be applied before other changes can be made")
+
+                helpfulAction: QQC2.Action {
+                    icon.name: "dialog-ok-apply"
+                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply Now")
+                    onTriggered: saveConfig()
                 }
-                icon.name: "dialog-ok-apply"
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply Now")
-                onClicked: saveConfig()
             }
         }
     }
