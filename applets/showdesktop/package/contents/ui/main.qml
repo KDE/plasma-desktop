@@ -177,7 +177,7 @@ MouseArea {
     }
 
     function action_minimizeall() {
-        showdesktop.minimizeAll();
+        minimizeAllController.toggle();
     }
 
     function action_showdesktop() {
