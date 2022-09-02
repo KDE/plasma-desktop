@@ -2,19 +2,23 @@
     SPDX-FileCopyrightText: 2015 Sebastian Kügler <sebas@kde.org>
     SPDX-FileCopyrightText: 2016 Anthony Fieroni <bvbfan@abv.bg>
     SPDX-FileCopyrightText: 2018 David Edmundson <davidedmundson@kde.org>
+    SPDX-FileCopyrightText: 2022 ivan (@ratijas) tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
+import QtQml 2.15
 
 import org.kde.taskmanager 0.1 as TaskManager
 
-QtObject {
+Controller {
     id: controller
 
-    readonly property string title: active ? i18nc("@action:button", "Restore All Minimized Windows") : i18nc("@action", "Minimize All Windows")
-    readonly property string description: active ? i18nc("@info:tooltip", "Restores the previously minimized windows") : i18n("Shows the Desktop by minimizing all windows")
+    titleActive: i18nc("@action:button", "Restore All Minimized Windows")
+    titleInactive: i18nc("@action:button", "Minimize All Windows")
+
+    descriptionActive: i18nc("@info:tooltip", "Restores the previously minimized windows")
+    descriptionInactive: i18nc("@info:tooltip", "Shows the Desktop by minimizing all windows")
 
     readonly property QtObject tasksModel: TaskManager.TasksModel {
         id: tasksModel
@@ -41,11 +45,6 @@ QtObject {
             controller.deactivate();
         }
     }
-
-    /**
-     * Whether the "minimize all" effect is activated
-     */
-    property bool active: false
 
     /**
      * List of persistent model indexes from task manager model of
@@ -83,6 +82,7 @@ QtObject {
         minimizedClients = [];
     }
 
+    // override
     function toggle() {
         if (active) {
             deactivate();
