@@ -13,6 +13,9 @@ import org.kde.taskmanager 0.1 as TaskManager
 QtObject {
     id: controller
 
+    readonly property string title: active ? i18nc("@action:button", "Restore All Minimized Windows") : i18nc("@action", "Minimize All Windows")
+    readonly property string description: active ? i18nc("@info:tooltip", "Restores the previously minimized windows") : i18n("Shows the Desktop by minimizing all windows")
+
     readonly property QtObject tasksModel: TaskManager.TasksModel {
         id: tasksModel
         sortMode: TaskManager.TasksModel.SortDisabled

@@ -31,14 +31,14 @@ MouseArea {
     Plasmoid.icon: Plasmoid.configuration.icon
     Plasmoid.title: {
         if (isMinimizeAll) {
-            return isMinimizing ? i18nc("@action:button", "Restore All Minimized Windows") : i18nc("@action", "Minimize All Windows");
+            return minimizeAllController.title;
         }
 
         return showdesktop.showingDesktop ? i18nc("@action:button", "Stop Peeking at Desktop") : i18nc("@action:button", "Peek at Desktop");
     }
     Plasmoid.toolTipSubText: {
         if (isMinimizeAll) {
-            return isMinimizing ? i18nc("@info:tooltip", "Restores the previously minimized windows") : i18n("Shows the Desktop by minimizing all windows");
+            return minimizeAllController.description;
         }
 
         return showdesktop.showingDesktop ? i18nc("@info:tooltip", "Moves windows back to their original positions") : i18n("Temporarily reveals the Desktop by moving open windows into screen corners");
@@ -154,7 +154,7 @@ MouseArea {
         }
         opacity: {
             if (isMinimizeAll) {
-                return isMinimizing ? 1 : 0;
+                return minimizeAllController.active ? 1 : 0;
             }
 
             return showdesktop.showingDesktop ? 1 : 0;
@@ -185,7 +185,9 @@ MouseArea {
     }
 
     Component.onCompleted: {
-        Plasmoid.setAction("minimizeall", i18nc("@action", "Minimize All Windows"));
+        Plasmoid.setAction("minimizeall", "");
+        Plasmoid.action("minimizeall").text = Qt.binding(() => minimizeAllController.title);
+
         Plasmoid.setAction("showdesktop", i18nc("@action:button", "Peek at Desktop"));
     }
 }
