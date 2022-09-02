@@ -24,6 +24,7 @@ public:
     bool showingDesktop() const;
     void setShowingDesktop(bool showingDesktop);
 
+    Q_INVOKABLE void minimizeAll();
     Q_INVOKABLE void toggleDesktop();
 
 Q_SIGNALS:

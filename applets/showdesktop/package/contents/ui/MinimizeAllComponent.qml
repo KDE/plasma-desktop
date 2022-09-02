@@ -2,23 +2,16 @@
     SPDX-FileCopyrightText: 2015 Sebastian Kügler <sebas@kde.org>
     SPDX-FileCopyrightText: 2016 Anthony Fieroni <bvbfan@abv.bg>
     SPDX-FileCopyrightText: 2018 David Edmundson <davidedmundson@kde.org>
-    SPDX-FileCopyrightText: 2022 ivan (@ratijas) tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQml 2.15
+import QtQuick 2.15
 
 import org.kde.taskmanager 0.1 as TaskManager
 
-Controller {
-    id: controller
-
-    titleActive: i18nc("@action:button", "Restore All Minimized Windows")
-    titleInactive: i18nc("@action:button", "Minimize All Windows")
-
-    descriptionActive: i18nc("@info:tooltip", "Restores the previously minimized windows")
-    descriptionInactive: i18nc("@info:tooltip", "Shows the Desktop by minimizing all windows")
+QtObject {
+    id: component
 
     readonly property QtObject tasksModel: TaskManager.TasksModel {
         id: tasksModel
@@ -28,23 +21,28 @@ Controller {
 
     readonly property Connections activeTaskChangedConnection: Connections {
         target: tasksModel
-        enabled: controller.active
+        enabled: component.active
 
         function onActiveTaskChanged() {
             if (tasksModel.activeTask.valid) { // to suppress changing focus to non windows, such as the desktop
-                controller.active = false;
-                controller.minimizedClients = [];
+                component.active = false;
+                component.minimizedClients = [];
             }
         }
 
         function onVirtualDesktopChanged() {
-            controller.deactivate();
+            component.deactivate();
         }
 
         function onActivityChanged() {
-            controller.deactivate();
+            component.deactivate();
         }
     }
+
+    /**
+     * Whether the "minimize all" effect is activated
+     */
+    property bool active: false
 
     /**
      * List of persistent model indexes from task manager model of
@@ -82,8 +80,7 @@ Controller {
         minimizedClients = [];
     }
 
-    // override
-    function toggle() {
+    function toggleActive() {
         if (active) {
             deactivate();
         } else {

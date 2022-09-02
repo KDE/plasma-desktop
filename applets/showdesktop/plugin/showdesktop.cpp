@@ -39,6 +39,14 @@ void ShowDesktop::setShowingDesktop(bool showingDesktop)
     Q_EMIT showingDesktopChanged(showingDesktop);
 }
 
+void ShowDesktop::minimizeAll()
+{
+    const auto &windows = KWindowSystem::windows();
+    for (WId wid : windows) {
+        KWindowSystem::minimizeWindow(wid);
+    }
+}
+
 void ShowDesktop::toggleDesktop()
 {
     setShowingDesktop(!showingDesktop());

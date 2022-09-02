@@ -1,7 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2014 Ashish Madeti <ashishmadeti@gmail.com>
     SPDX-FileCopyrightText: 2016 Kai Uwe Broulik <kde@privat.broulik.de>
-    SPDX-FileCopyrightText: 2022 ivan (@ratijas) tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -12,6 +11,8 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 import org.kde.plasma.plasmoid 2.0
+
+import org.kde.plasma.private.showdesktop 0.1
 
 MouseArea {
     id: root
@@ -25,11 +26,23 @@ MouseArea {
      */
     readonly property bool isMinimizeAll: Plasmoid.pluginName === "org.kde.plasma.minimizeall"
 
-    readonly property Controller primaryController: isMinimizeAll ? minimizeAllController : peekController
+    readonly property bool isMinimizing: minimizeAllComponent.status === Loader.Ready ? minimizeAllComponent.item.active : false
 
     Plasmoid.icon: Plasmoid.configuration.icon
-    Plasmoid.title: primaryController.title
-    Plasmoid.toolTipSubText: primaryController.description
+    Plasmoid.title: {
+        if (isMinimizeAll) {
+            return isMinimizing ? i18nc("@action:button", "Restore All Minimized Windows") : i18nc("@action", "Minimize All Windows");
+        }
+
+        return showdesktop.showingDesktop ? i18nc("@action:button", "Stop Peeking at Desktop") : i18nc("@action:button", "Peek at Desktop");
+    }
+    Plasmoid.toolTipSubText: {
+        if (isMinimizeAll) {
+            return isMinimizing ? i18nc("@info:tooltip", "Restores the previously minimized windows") : i18n("Shows the Desktop by minimizing all windows");
+        }
+
+        return showdesktop.showingDesktop ? i18nc("@info:tooltip", "Moves windows back to their original positions") : i18n("Temporarily reveals the Desktop by moving open windows into screen corners");
+    }
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
@@ -43,7 +56,14 @@ MouseArea {
     activeFocusOnTab: true
     hoverEnabled: true
 
-    Plasmoid.onActivated: primaryController.toggle();
+    Plasmoid.onActivated: {
+        if (isMinimizeAll) {
+            minimizeAllComponent.item.toggleActive();
+            return;
+        }
+
+        showdesktop.toggleDesktop();
+    }
     onClicked: Plasmoid.activated();
 
     Keys.onPressed: {
@@ -61,17 +81,19 @@ MouseArea {
     Accessible.description: Plasmoid.toolTipSubText
     Accessible.role: Accessible.Button
 
-    PeekController {
-        id: peekController
+    ShowDesktop {
+        id: showdesktop
     }
 
-    MinimizeAllController {
-        id: minimizeAllController
+    Loader {
+        id: minimizeAllComponent
+        active: root.isMinimizeAll
+        source: "MinimizeAllComponent.qml"
     }
 
     PlasmaCore.IconItem {
         anchors.fill: parent
-        active: root.containsMouse || primaryController.active
+        active: root.containsMouse || showdesktop.showingDesktop
         source: Plasmoid.icon
     }
 
@@ -133,7 +155,13 @@ MouseArea {
             }
             return prefix;
         }
-        opacity: primaryController.active ? 1 : 0
+        opacity: {
+            if (isMinimizeAll) {
+                return isMinimizing ? 1 : 0;
+            }
+
+            return showdesktop.showingDesktop ? 1 : 0;
+        }
 
         Behavior on opacity {
             NumberAnimation {
@@ -152,28 +180,15 @@ MouseArea {
     }
 
     function action_minimizeall() {
-        minimizeAllController.toggle();
+        showdesktop.minimizeAll();
     }
 
-    function action_peek() {
-        peekController.toggle();
+    function action_showdesktop() {
+        showdesktop.toggleDesktop();
     }
 
     Component.onCompleted: {
-        var action;
-
-        Plasmoid.setAction("minimizeall", "");
-        action = Plasmoid.action("minimizeall")
-        action.checkable = true;
-        action.checked = Qt.binding(() => minimizeAllController.active);
-        action.text = Qt.binding(() => minimizeAllController.title);
-        action.toolTip = Qt.binding(() => minimizeAllController.description);
-
-        Plasmoid.setAction("peek", "");
-        action = Plasmoid.action("peek")
-        action.checkable = true;
-        action.checked = Qt.binding(() => peekController.active);
-        action.text = Qt.binding(() => peekController.title);
-        action.toolTip = Qt.binding(() => peekController.description);
+        Plasmoid.setAction("minimizeall", i18nc("@action", "Minimize All Windows"));
+        Plasmoid.setAction("showdesktop", i18nc("@action:button", "Peek at Desktop"));
     }
 }
