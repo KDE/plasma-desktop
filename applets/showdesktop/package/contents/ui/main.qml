@@ -26,7 +26,7 @@ MouseArea {
      */
     readonly property bool isMinimizeAll: Plasmoid.pluginName === "org.kde.plasma.minimizeall"
 
-    readonly property bool isMinimizing: minimizeAllController.status === Loader.Ready ? minimizeAllController.item.active : false
+    readonly property alias isMinimizing: minimizeAllController.active
 
     Plasmoid.icon: Plasmoid.configuration.icon
     Plasmoid.title: {
@@ -58,7 +58,7 @@ MouseArea {
 
     Plasmoid.onActivated: {
         if (isMinimizeAll) {
-            minimizeAllController.item.toggle();
+            minimizeAllController.toggle();
         } else {
             showdesktop.toggleDesktop();
         }
@@ -84,10 +84,8 @@ MouseArea {
         id: showdesktop
     }
 
-    Loader {
+    MinimizeAllController {
         id: minimizeAllController
-        active: root.isMinimizeAll
-        source: "MinimizeAllController.qml"
     }
 
     PlasmaCore.IconItem {
