@@ -164,11 +164,15 @@ MouseArea {
 
         Plasmoid.setAction("minimizeall", "");
         action = Plasmoid.action("minimizeall")
+        action.checkable = true;
+        action.checked = Qt.binding(() => minimizeAllController.active);
         action.text = Qt.binding(() => minimizeAllController.title);
         action.toolTip = Qt.binding(() => minimizeAllController.description);
 
         Plasmoid.setAction("peek", "");
         action = Plasmoid.action("peek")
+        action.checkable = true;
+        action.checked = Qt.binding(() => peekController.active);
         action.text = Qt.binding(() => peekController.title);
         action.toolTip = Qt.binding(() => peekController.description);
     }
