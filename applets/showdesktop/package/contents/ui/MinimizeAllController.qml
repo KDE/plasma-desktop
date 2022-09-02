@@ -11,7 +11,7 @@ import QtQuick 2.15
 import org.kde.taskmanager 0.1 as TaskManager
 
 QtObject {
-    id: component
+    id: controller
 
     readonly property QtObject tasksModel: TaskManager.TasksModel {
         id: tasksModel
@@ -21,21 +21,21 @@ QtObject {
 
     readonly property Connections activeTaskChangedConnection: Connections {
         target: tasksModel
-        enabled: component.active
+        enabled: controller.active
 
         function onActiveTaskChanged() {
             if (tasksModel.activeTask.valid) { // to suppress changing focus to non windows, such as the desktop
-                component.active = false;
-                component.minimizedClients = [];
+                controller.active = false;
+                controller.minimizedClients = [];
             }
         }
 
         function onVirtualDesktopChanged() {
-            component.deactivate();
+            controller.deactivate();
         }
 
         function onActivityChanged() {
-            component.deactivate();
+            controller.deactivate();
         }
     }
 
@@ -80,7 +80,7 @@ QtObject {
         minimizedClients = [];
     }
 
-    function toggleActive() {
+    function toggle() {
         if (active) {
             deactivate();
         } else {
