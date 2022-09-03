@@ -9,7 +9,6 @@ import QtQuick 2.5
 import QtQuick.Layouts 1.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
@@ -249,7 +248,7 @@ MouseArea {
                     }
                 }
 
-                PlasmaComponents.ToolButton {
+                PlasmaComponents3.ToolButton {
                     Layout.fillWidth: true
                     // we want destructive actions to be far from the initial
                     // cursor position, so show this on the top unless it's on
@@ -258,34 +257,34 @@ MouseArea {
                              && currentApplet
                              && currentApplet.applet.action("remove")
                              && currentApplet.applet.action("remove").enabled
-                    iconSource: "delete"
+                    icon.name: "delete"
                     text: i18n("Remove")
                     onClicked: {
                         currentApplet.applet.action("remove").trigger();
                         currentApplet = null
                     }
                 }
-                PlasmaComponents.ToolButton {
+                PlasmaComponents3.ToolButton {
                     id: configureButton
                     Layout.fillWidth: true
-                    iconSource: "configure"
+                    icon.name: "configure"
                     text: i18n("Configure…")
                     onClicked: {
                         currentApplet.applet.action("configure").trigger()
                         currentApplet = null
                     }
                 }
-                PlasmaComponents.ToolButton {
+                PlasmaComponents3.ToolButton {
                     id: alternativesButton
                     Layout.fillWidth: true
-                    iconSource: "widget-alternatives"
+                    icon.name: "widget-alternatives"
                     text: i18n("Show Alternatives…")
                     onClicked: {
                         currentApplet.applet.action("alternatives").trigger()
                         currentApplet = null
                     }
                 }
-                PlasmaComponents.ToolButton {
+                PlasmaComponents3.ToolButton {
                     Layout.fillWidth: true
                     // we want destructive actions to be far from the initial
                     // cursor position, so show this on the bottom for top panels
@@ -293,7 +292,7 @@ MouseArea {
                              && currentApplet
                              && currentApplet.applet.action("remove")
                              && currentApplet.applet.action("remove").enabled
-                    iconSource: "delete"
+                    icon.name: "delete"
                     text: i18n("Remove")
                     onClicked: {
                         currentApplet.applet.action("remove").trigger()
