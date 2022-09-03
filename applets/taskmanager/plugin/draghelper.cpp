@@ -42,7 +42,9 @@ void DragHelper::setDragIconSize(int size)
 
 bool DragHelper::isDrag(int oldX, int oldY, int newX, int newY) const
 {
-    return ((QPoint(oldX, oldY) - QPoint(newX, newY)).manhattanLength() >= QApplication::startDragDistance());
+    // Don't let drag threshold fall below 1/2 of icon size, to make accidental
+    // drags less likely.
+    return ((QPoint(oldX, oldY) - QPoint(newX, newY)).manhattanLength() >= std::max(QApplication::startDragDistance(), m_dragIconSize / 2));
 }
 
 void DragHelper::startDrag(QQuickItem *item, const QString &mimeType, const QVariant &mimeData, const QUrl &url, const QIcon &icon)
