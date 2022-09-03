@@ -56,7 +56,7 @@ DragDrop.DropArea {
     property var marginHighlightSvg: PlasmaCore.Svg{imagePath: "widgets/margins-highlight"}
     //Margins are either the size of the margins in the SVG, unless that prevents the panel from being at least half a smallMedium icon) tall at which point we set the margin to whatever allows it to be that...or if it still won't fit, 1.
     //the size a margin should be to force a panel to be the required size above
-    readonly property real spacingAtMinSize: Math.floor(Math.max(1, (isHorizontal ? root.height : root.width) - units.iconSizes.smallMedium)/2)
+    readonly property real spacingAtMinSize: Math.floor(Math.max(1, (isHorizontal ? root.height : root.width) - PlasmaCore.Units.iconSizes.smallMedium)/2)
 
 //END properties
 
