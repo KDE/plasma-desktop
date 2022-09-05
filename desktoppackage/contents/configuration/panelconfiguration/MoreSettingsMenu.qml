@@ -6,7 +6,9 @@
 
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import QtQuick.Controls 2.15 as QQC2
+
+import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.shell.panel 0.1 as Panel
@@ -28,13 +30,13 @@ PlasmaCore.Dialog {
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
 
-        PlasmaComponents.ToolButton {
+        PC3.ToolButton {
             Layout.fillWidth: true
             // we want destructive actions to be far from the initial cursor
             // position, so show this on the top unless it's on a top panel
             visible: location !== PlasmaCore.Types.TopEdge
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
-            iconSource: "delete"
+            icon.name: "delete"
             onClicked: plasmoid.action("remove").trigger();
         }
 
@@ -42,10 +44,16 @@ PlasmaCore.Dialog {
             level: 3
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Alignment")
         }
-        PlasmaComponents.ButtonColumn {
-            spacing: 0
+
+        QQC2.ButtonGroup {
+            buttons: alignmentButtons.children
+        }
+
+        Column {
+            id: alignmentButtons
+            spacing: PlasmaCore.Units.smallSpacing
             Layout.fillWidth: true
-            PlasmaComponents.ToolButton {
+            PC3.ToolButton {
                 anchors {
                     left: parent.left
                     right: parent.right
@@ -56,7 +64,7 @@ PlasmaCore.Dialog {
                 onClicked: panel.alignment = Qt.AlignLeft
                 flat: false
             }
-            PlasmaComponents.ToolButton {
+            PC3.ToolButton {
                 anchors {
                     left: parent.left
                     right: parent.right
@@ -67,7 +75,7 @@ PlasmaCore.Dialog {
                 onClicked: panel.alignment = Qt.AlignCenter
                 flat: false
             }
-            PlasmaComponents.ToolButton {
+            PC3.ToolButton {
                 anchors {
                     left: parent.left
                     right: parent.right
@@ -84,11 +92,17 @@ PlasmaCore.Dialog {
             level: 3
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Visibility")
         }
-        PlasmaComponents.ButtonColumn {
-            spacing: 0
+
+        QQC2.ButtonGroup {
+            buttons: visibilityButtons.children
+        }
+
+        Column {
+            id: visibilityButtons
+            spacing: PlasmaCore.Units.smallSpacing
             Layout.fillWidth: true
             Layout.minimumWidth: implicitWidth
-            PlasmaComponents.ToolButton {
+            PC3.ToolButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Always Visible")
                 checkable: true
@@ -96,7 +110,7 @@ PlasmaCore.Dialog {
                 onClicked: configDialog.visibilityMode = Panel.Global.NormalPanel
                 flat: false
             }
-            PlasmaComponents.ToolButton {
+            PC3.ToolButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Auto Hide")
                 checkable: true
@@ -104,7 +118,7 @@ PlasmaCore.Dialog {
                 onClicked: configDialog.visibilityMode = Panel.Global.AutoHide
                 flat: false
             }
-            PlasmaComponents.ToolButton {
+            PC3.ToolButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Can Cover")
                 checkable: true
@@ -112,7 +126,7 @@ PlasmaCore.Dialog {
                 onClicked: configDialog.visibilityMode = Panel.Global.LetWindowsCover
                 flat: false
             }
-            PlasmaComponents.ToolButton {
+            PC3.ToolButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Go Below")
                 checkable: true
@@ -126,12 +140,18 @@ PlasmaCore.Dialog {
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Opacity")
             visible: panel.adaptiveOpacityEnabled
         }
-        PlasmaComponents.ButtonColumn {
-            spacing: 0
+
+        QQC2.ButtonGroup {
+            buttons: opacityButtons.children
+        }
+
+        Column {
+            id: opacityButtons
+            spacing: PlasmaCore.Units.smallSpacing
             visible: panel.adaptiveOpacityEnabled
             Layout.fillWidth: true
             Layout.minimumWidth: implicitWidth
-            PlasmaComponents.ToolButton {
+            PC3.ToolButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Adaptive")
                 checkable: true
@@ -139,7 +159,7 @@ PlasmaCore.Dialog {
                 onClicked: configDialog.opacityMode = Panel.Global.Adaptive
                 flat: false
             }
-            PlasmaComponents.ToolButton {
+            PC3.ToolButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Opaque")
                 checkable: true
@@ -147,7 +167,7 @@ PlasmaCore.Dialog {
                 onClicked: configDialog.opacityMode = Panel.Global.Opaque
                 flat: false
             }
-            PlasmaComponents.ToolButton {
+            PC3.ToolButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Translucent")
                 checkable: true
@@ -156,26 +176,26 @@ PlasmaCore.Dialog {
                 flat: false
             }
         }
-        PlasmaComponents.ToolButton {
+        PC3.ToolButton {
             Layout.fillWidth: true
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Maximize Panel")
-            iconSource: panel.formFactor === PlasmaCore.Types.Vertical ? "zoom-fit-height" : "zoom-fit-width"
+            icon.name: panel.formFactor === PlasmaCore.Types.Vertical ? "zoom-fit-height" : "zoom-fit-width"
             onClicked: panel.maximize();
         }
-        PlasmaComponents.ToolButton {
+        PC3.ToolButton {
             Layout.fillWidth: true
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Floating Panel")
-            iconSource: "zoom-select"
+            icon.name: "zoom-select"
             onClicked: panel.floating = !panel.floating
             checked: panel.floating
         }
-        PlasmaComponents.ToolButton {
+        PC3.ToolButton {
             Layout.fillWidth: true
             // we want destructive actions to be far from the initial cursor
             // position, so show this on the bottom for top panels
             visible: location === PlasmaCore.Types.TopEdge
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
-            iconSource: "delete"
+            icon.name: "delete"
             onClicked: plasmoid.action("remove").trigger();
         }
         PlasmaExtras.Heading {
