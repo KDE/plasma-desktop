@@ -74,6 +74,7 @@ Item {
 
             readonly property color backgroundColor: PlasmaCore.Theme.backgroundColor
             readonly property color textColor: PlasmaCore.Theme.textColor
+            property color colorFromPlugin: Qt.transparent
 
             Kirigami.Theme.inherit: false
             Kirigami.Theme.backgroundColor: backgroundColor
@@ -86,6 +87,9 @@ Item {
                 target: desktop
                 property: "accentColor"
                 value: {
+                    if (!Qt.colorEqual(imageColors.colorFromPlugin, "transparent")) {
+                        return imageColors.colorFromPlugin;
+                    }
                     if (imageColors.palette.length === 0) {
                         return "#00000000";
                     }
@@ -95,8 +99,12 @@ Item {
 
             property Connections repaintConnection: Connections {
                 target: root.containment.wallpaper
-                function onRepaintNeeded() {
-                    imageColors.update();
+                function onRepaintNeeded(color) {
+                    imageColors.colorFromPlugin = color;
+
+                    if (Qt.colorEqual(color, "transparent")) {
+                        imageColors.update();
+                    }
                 }
             }
         }
