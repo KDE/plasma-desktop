@@ -8,6 +8,7 @@
 
 #include "componentchooser.h"
 
+#include <QApplication>
 #include <QDBusConnection>
 #include <QDBusMessage>
 
@@ -90,7 +91,7 @@ void ComponentChooser::select(int index)
         return;
     }
     if (index == m_applications.length() - 1) {
-        KOpenWithDialog *dialog = new KOpenWithDialog(QList<QUrl>(), m_mimeType, m_dialogText, QString());
+        KOpenWithDialog *dialog = new KOpenWithDialog(QList<QUrl>(), m_mimeType, m_dialogText, QString(), QApplication::activeWindow());
         dialog->setSaveNewApplications(true);
         dialog->setAttribute(Qt::WA_DeleteOnClose);
         connect(dialog, &KOpenWithDialog::finished, this, [this, dialog](int result) {
