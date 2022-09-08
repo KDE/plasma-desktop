@@ -26,6 +26,7 @@ PlasmaCore.Dialog {
         Layout.minimumWidth: menuColumn.implicitWidth
         Layout.minimumHeight: menuColumn.implicitHeight
         spacing: PlasmaCore.Units.smallSpacing
+        readonly property int radioButtonGroupSpacing: PlasmaCore.Units.smallSpacing * 4
 
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
@@ -41,6 +42,7 @@ PlasmaCore.Dialog {
         }
 
         PlasmaExtras.Heading {
+            Layout.topMargin: menuColumn.radioButtonGroupSpacing
             level: 3
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Alignment")
         }
@@ -53,7 +55,7 @@ PlasmaCore.Dialog {
             id: alignmentButtons
             spacing: PlasmaCore.Units.smallSpacing
             Layout.fillWidth: true
-            PC3.ToolButton {
+            PC3.RadioButton {
                 anchors {
                     left: parent.left
                     right: parent.right
@@ -62,9 +64,8 @@ PlasmaCore.Dialog {
                 checkable: true
                 checked: panel.alignment === Qt.AlignLeft
                 onClicked: panel.alignment = Qt.AlignLeft
-                flat: false
             }
-            PC3.ToolButton {
+            PC3.RadioButton {
                 anchors {
                     left: parent.left
                     right: parent.right
@@ -73,9 +74,8 @@ PlasmaCore.Dialog {
                 checkable: true
                 checked: panel.alignment === Qt.AlignCenter
                 onClicked: panel.alignment = Qt.AlignCenter
-                flat: false
             }
-            PC3.ToolButton {
+            PC3.RadioButton {
                 anchors {
                     left: parent.left
                     right: parent.right
@@ -84,11 +84,11 @@ PlasmaCore.Dialog {
                 checkable: true
                 checked: panel.alignment === Qt.AlignRight
                 onClicked: panel.alignment = Qt.AlignRight
-                flat: false
             }
         }
 
         PlasmaExtras.Heading {
+            Layout.topMargin: menuColumn.radioButtonGroupSpacing
             level: 3
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Visibility")
         }
@@ -102,40 +102,37 @@ PlasmaCore.Dialog {
             spacing: PlasmaCore.Units.smallSpacing
             Layout.fillWidth: true
             Layout.minimumWidth: implicitWidth
-            PC3.ToolButton {
+            PC3.RadioButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Always Visible")
                 checkable: true
                 checked: configDialog.visibilityMode === Panel.Global.NormalPanel
                 onClicked: configDialog.visibilityMode = Panel.Global.NormalPanel
-                flat: false
             }
-            PC3.ToolButton {
+            PC3.RadioButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Auto Hide")
                 checkable: true
                 checked: configDialog.visibilityMode === Panel.Global.AutoHide
                 onClicked: configDialog.visibilityMode = Panel.Global.AutoHide
-                flat: false
             }
-            PC3.ToolButton {
+            PC3.RadioButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Can Cover")
                 checkable: true
                 checked: configDialog.visibilityMode === Panel.Global.LetWindowsCover
                 onClicked: configDialog.visibilityMode = Panel.Global.LetWindowsCover
-                flat: false
             }
-            PC3.ToolButton {
+            PC3.RadioButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Go Below")
                 checkable: true
                 checked: configDialog.visibilityMode === Panel.Global.WindowsGoBelow
                 onClicked: configDialog.visibilityMode = Panel.Global.WindowsGoBelow
-                flat: false
             }
         }
         PlasmaExtras.Heading {
+            Layout.topMargin: menuColumn.radioButtonGroupSpacing
             level: 3
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Opacity")
             visible: panel.adaptiveOpacityEnabled
@@ -151,29 +148,27 @@ PlasmaCore.Dialog {
             visible: panel.adaptiveOpacityEnabled
             Layout.fillWidth: true
             Layout.minimumWidth: implicitWidth
-            PC3.ToolButton {
+            Layout.bottomMargin: menuColumn.radioButtonGroupSpacing
+            PC3.RadioButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Adaptive")
                 checkable: true
                 checked: configDialog.opacityMode === Panel.Global.Adaptive
                 onClicked: configDialog.opacityMode = Panel.Global.Adaptive
-                flat: false
             }
-            PC3.ToolButton {
+            PC3.RadioButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Opaque")
                 checkable: true
                 checked: configDialog.opacityMode === Panel.Global.Opaque
                 onClicked: configDialog.opacityMode = Panel.Global.Opaque
-                flat: false
             }
-            PC3.ToolButton {
+            PC3.RadioButton {
                 width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Translucent")
                 checkable: true
                 checked: configDialog.opacityMode === Panel.Global.Translucent
                 onClicked: configDialog.opacityMode = Panel.Global.Translucent
-                flat: false
             }
         }
         PC3.ToolButton {
