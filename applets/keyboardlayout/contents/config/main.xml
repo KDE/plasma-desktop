@@ -6,7 +6,15 @@
   <kcfgfile name=""/>
 
   <group name="General">
-    <entry name="showFlag" type="Bool"/>
+    <entry name="displayStyle" type="Enum">
+      <label>Whether to show text, a flag, or both on the compact representation.</label>
+      <choices>
+        <choice name="Label"/>
+        <choice name="Flag"/>
+        <choice name="LabelOverFlag"/>
+      </choices>
+      <default>0</default>
+    </entry>
   </group>
 
 </kcfg>

@@ -54,22 +54,35 @@ Item {
         }
 
         PlasmaCore.IconItem {
-            id: icon
+            id: flag
 
             anchors.fill: parent
-            visible: plasmoid.configuration.showFlag && source
+            visible: valid && (Plasmoid.configuration.displayStyle === 1 || Plasmoid.configuration.displayStyle === 2)
 
             active: containsMouse
             source: iconURL(layoutNames.shortName)
+
+            BadgeOverlay {
+                anchors.bottom: parent.bottom
+                anchors.right: parent.right
+
+                visible: !countryCode.visible && Plasmoid.configuration.displayStyle === 2
+
+                text: countryCode.text
+                icon: flag
+            }
         }
 
+
         PlasmaComponents3.Label {
+            id: countryCode
             anchors.fill: parent
-            visible: !icon.visible
+            visible: Plasmoid.configuration.displayStyle === 0 || (!flag.valid && (Plasmoid.configuration.displayStyle === 1 || Plasmoid.configuration.displayStyle === 2))
 
             font.pointSize: height
             fontSizeMode: Text.Fit
             horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
             text: layoutNames.displayName || layoutNames.shortName
         }
     }
