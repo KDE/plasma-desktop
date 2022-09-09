@@ -55,7 +55,10 @@ SearchConfigModule::SearchConfigModule(QObject *parent, const KPluginMetaData &d
     qDBusRegisterMetaType<QByteArrayList>();
     qDBusRegisterMetaType<QHash<QString, QByteArrayList>>();
 
-    connect(m_model, &KPluginModel::defaulted, this, &SearchConfigModule::representsDefaults);
+    connect(m_model, &KPluginModel::defaulted, this, [this](bool isDefaults) {
+        setNeedsSave(m_model->isSaveNeeded());
+        setRepresentsDefaults(isDefaults);
+    });
     connect(m_model, &KPluginModel::isSaveNeededChanged, this, [this]() {
         setNeedsSave(m_model->isSaveNeeded());
     });
@@ -80,8 +83,8 @@ void SearchConfigModule::reloadPlugins()
 {
     m_model->clear();
 
-    m_model->addPlugins(Plasma::RunnerManager::runnerMetaDataList(), i18n("Available Plugins"));
     m_model->setConfig(m_config->group("Plugins"));
+    m_model->addPlugins(Plasma::RunnerManager::runnerMetaDataList(), i18n("Available Plugins"));
 }
 
 void SearchConfigModule::showKCM(const KPluginMetaData &data, const QStringList args) const
