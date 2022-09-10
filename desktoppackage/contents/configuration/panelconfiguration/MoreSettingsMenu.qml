@@ -53,7 +53,7 @@ PlasmaCore.Dialog {
 
         Column {
             id: alignmentButtons
-            spacing: PlasmaCore.Units.smallSpacing
+            spacing: PlasmaCore.Units.smallSpacing * 2
             Layout.fillWidth: true
             PC3.RadioButton {
                 anchors {
@@ -99,7 +99,7 @@ PlasmaCore.Dialog {
 
         Column {
             id: visibilityButtons
-            spacing: PlasmaCore.Units.smallSpacing
+            spacing: PlasmaCore.Units.smallSpacing * 2
             Layout.fillWidth: true
             Layout.minimumWidth: implicitWidth
             PC3.RadioButton {
@@ -144,7 +144,7 @@ PlasmaCore.Dialog {
 
         Column {
             id: opacityButtons
-            spacing: PlasmaCore.Units.smallSpacing
+            spacing: PlasmaCore.Units.smallSpacing * 2
             visible: panel.adaptiveOpacityEnabled
             Layout.fillWidth: true
             Layout.minimumWidth: implicitWidth
