@@ -95,6 +95,6 @@ Kirigami.FormLayout {
         text: i18n("Configure Notifications…")
         icon.name: "preferences-desktop-notification"
 
-        onClicked: kcm.configureKNotify(this)
+        onClicked: kcm.configureKNotify()
     }
 }

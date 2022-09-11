@@ -42,7 +42,7 @@ public:
 
     void save() override;
 
-    Q_INVOKABLE void configureKNotify(QQuickItem *parent);
+    Q_INVOKABLE void configureKNotify();
     Q_INVOKABLE void launchOrcaConfiguration();
     Q_INVOKABLE bool orcaInstalled();
 

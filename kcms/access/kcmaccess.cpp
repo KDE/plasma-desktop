@@ -10,10 +10,10 @@
 #include <math.h>
 #include <stdlib.h>
 
+#include <QApplication>
 #include <QFileDialog>
 #include <QProcess>
 #include <QQuickItem>
-#include <QQuickRenderControl>
 #include <QStandardPaths>
 #include <QWindow>
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
@@ -164,13 +164,9 @@ KAccessConfig::~KAccessConfig()
 {
 }
 
-void KAccessConfig::configureKNotify(QQuickItem *parent)
+void KAccessConfig::configureKNotify()
 {
-    auto dialog = KNotifyConfigWidget::configure(nullptr, QStringLiteral("kaccess"));
-    if (parent && parent->window()) {
-        dialog->winId();
-        dialog->windowHandle()->setTransientParent(QQuickRenderControl::renderWindowFor(parent->window()));
-    }
+    KNotifyConfigWidget::configure(QApplication::activeWindow(), QStringLiteral("kaccess"));
 }
 
 void KAccessConfig::launchOrcaConfiguration()
