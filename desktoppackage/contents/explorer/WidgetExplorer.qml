@@ -205,6 +205,10 @@ PC3.Page {
                     id: getWidgetsButton
                     icon.name: "get-hot-new-stuff"
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Widgets…")
+
+                    KeyNavigation.right: closeButton
+                    KeyNavigation.down: searchInput
+
                     onClicked: {
                         getWidgetsDialog.model = widgetExplorer.widgetsMenuActions
                         getWidgetsDialog.openRelative()
@@ -213,6 +217,9 @@ PC3.Page {
                 PC3.ToolButton {
                     id: closeButton
                     icon.name: "window-close"
+
+                    KeyNavigation.down: categoryButton
+
                     onClicked: main.closed()
                 }
             }
@@ -221,6 +228,9 @@ PC3.Page {
                 PlasmaExtras.SearchField {
                     id: searchInput
                     Layout.fillWidth: true
+
+                    KeyNavigation.down: list
+                    KeyNavigation.right: categoryButton
 
                     onTextChanged: {
                         list.positionViewAtBeginning()
@@ -234,6 +244,9 @@ PC3.Page {
                     id: categoryButton
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "All Widgets")
                     icon.name: "view-filter"
+
+                    KeyNavigation.down: list
+
                     onClicked: {
                         categoriesDialog.model = widgetExplorer.filterModel
                         categoriesDialog.open(0, categoryButton.height)
@@ -276,7 +289,6 @@ PC3.Page {
             // model set delayed by Timer above
 
             activeFocusOnTab: true
-            keyNavigationWraps: true
             cellWidth: Math.floor(width / 3)
             cellHeight: cellWidth + PlasmaCore.Units.gridUnit * 4 + PlasmaCore.Units.smallSpacing * 2
 
@@ -315,6 +327,8 @@ PC3.Page {
                     duration: PlasmaCore.Units.shortDuration
                 }
             }
+
+            KeyNavigation.up: searchInput
         }
     }
 
