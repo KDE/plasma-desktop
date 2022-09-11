@@ -279,6 +279,18 @@ MouseArea {
     Keys.onReturnPressed: TaskTools.activateTask(modelIndex(), model, event.modifiers, task)
     Keys.onEnterPressed: Keys.onReturnPressed(event);
     Keys.onSpacePressed: Keys.onReturnPressed(event);
+    Keys.onUpPressed: Keys.onLeftPressed(event)
+    Keys.onDownPressed: Keys.onRightPressed(event)
+    Keys.onLeftPressed: if (!inPopup && (event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.ShiftModifier)) {
+        tasksModel.move(task.itemIndex, task.itemIndex - 1);
+    } else {
+        event.accepted = false;
+    }
+    Keys.onRightPressed: if (!inPopup && (event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.ShiftModifier)) {
+        tasksModel.move(task.itemIndex, task.itemIndex + 1);
+    } else {
+        event.accepted = false;
+    }
 
     function modelIndex() {
         return (inPopup ? tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex, index)

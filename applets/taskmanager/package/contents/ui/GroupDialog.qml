@@ -46,7 +46,6 @@ PlasmaCore.Dialog {
         }
     }
 
-
     mainItem: MouseHandler {
         id: mouseHandler
         width: Math.min(groupDialog.preferredWidth, Math.max(groupListView.maxWidth, groupDialog.visualParent.width))
@@ -57,6 +56,23 @@ PlasmaCore.Dialog {
         isGroupDialog: true
 
         Keys.onEscapePressed: groupDialog.visible = false
+
+        function moveRow(event, insertAt) {
+            if (!(event.modifiers & Qt.ControlModifier) || !(event.modifiers & Qt.ShiftModifier)) {
+                event.accepted = false;
+                return;
+            } else if (insertAt < 0 || insertAt >= groupListView.count) {
+                return;
+            }
+
+            const parentModelIndex = tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex);
+            const status = tasksModel.move(groupListView.currentIndex, insertAt, parentModelIndex);
+            if (!status) {
+                return;
+            }
+
+            groupListView.currentIndex = insertAt;
+        }
 
         PlasmaComponents3.ScrollView {
             id: scrollView
@@ -118,6 +134,9 @@ PlasmaCore.Dialog {
                 }
 
                 reuseItems: false
+
+                Keys.onUpPressed: mouseHandler.moveRow(event, groupListView.currentIndex - 1);
+                Keys.onDownPressed: mouseHandler.moveRow(event, groupListView.currentIndex + 1);
 
                 onCountChanged: {
                     if (count > 0) {
