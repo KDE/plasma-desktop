@@ -52,15 +52,6 @@ PlasmaCore.Dialog {
             onTriggered: switchButton.clicked(null)
         }
 
-        QQC2.Action {
-            shortcut: "Up"
-            onTriggered: mainList.decrementCurrentIndex()
-        }
-        QQC2.Action {
-            shortcut: "Down"
-            onTriggered: mainList.incrementCurrentIndex()
-        }
-
         WidgetExplorer {
             id: widgetExplorer
             provides: alternativesHelper.appletProvides
@@ -89,8 +80,12 @@ PlasmaCore.Dialog {
 
             Layout.preferredHeight: mainList.height
 
+            focus: true
+
             ListView {
                 id: mainList
+
+                focus: dialog.visible
                 model: widgetExplorer.widgetsModel
                 boundsBehavior: Flickable.StopAtBounds
                 highlight: PlasmaExtras.Highlight {
@@ -98,6 +93,8 @@ PlasmaCore.Dialog {
                 }
                 highlightMoveDuration : 0
                 highlightResizeDuration: 0
+
+                KeyNavigation.down: switchButton.enabled ? switchButton : cancelButton
 
                 delegate: PlasmaExtras.ListItem {
                     implicitHeight: contentLayout.implicitHeight + PlasmaCore.Units.smallSpacing * 2
@@ -164,6 +161,10 @@ PlasmaCore.Dialog {
                 enabled: root.currentPlugin !== alternativesHelper.currentPlugin
                 Layout.fillWidth: true
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Switch");
+
+                KeyNavigation.up: mainList
+                KeyNavigation.right: cancelButton
+
                 onClicked: {
                     if (enabled) {
                         alternativesHelper.loadAlternative(root.currentPlugin);
@@ -172,8 +173,13 @@ PlasmaCore.Dialog {
                 }
             }
             PlasmaComponents3.Button {
+                id: cancelButton
+
                 Layout.fillWidth: true
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel");
+
+                KeyNavigation.up: mainList
+
                 onClicked: {
                     dialog.close();
                 }
