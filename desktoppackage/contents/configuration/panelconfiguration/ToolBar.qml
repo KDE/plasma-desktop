@@ -256,6 +256,11 @@ Item {
             }
             // END Keyboard
 
+            PlasmaComponents3.ToolTip {
+                visible: parent.activeFocus
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip", "Use arrow keys to move the panel")
+            }
+
             PlasmaExtras.Highlight {
                 anchors.centerIn: parent
                 width: Math.min(root.implicitWidth, parent.contentWidth + PlasmaCore.Units.largeSpacing)
