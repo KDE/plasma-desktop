@@ -7,8 +7,10 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.0
+import QtQuick.Window 2.15
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.configuration 2.0
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.kirigami 2.19 as Kirigami
@@ -213,9 +215,55 @@ Item {
 
         PlasmaComponents3.Label {
             Layout.fillWidth: true
+
+            activeFocusOnTab: true
             wrapMode: Text.Wrap
             horizontalAlignment: Qt.AlignHCenter
             text: i18ndc("plasma_shell_org.kde.plasma.desktop", "Minimize the length of this string as much as possible", "Drag to move")
+
+            // BEGIN Keyboard
+            Keys.onUpPressed: {
+                if (panel.location === PlasmaCore.Types.TopEdge) {
+                    event.accepted = false;
+                    return;
+                }
+                panel.location = PlasmaCore.Types.TopEdge;
+                configDialog.y = panel.height;
+            }
+            Keys.onDownPressed: {
+                if (panel.location === PlasmaCore.Types.BottomEdge) {
+                    event.accepted = false;
+                    return;
+                }
+                panel.location = PlasmaCore.Types.BottomEdge;
+                configDialog.y = Screen.height - panel.height - configDialog.height;
+            }
+            Keys.onLeftPressed: {
+                if (panel.location === PlasmaCore.Types.LeftEdge) {
+                    event.accepted = false;
+                    return;
+                }
+                panel.location = PlasmaCore.Types.LeftEdge;
+                configDialog.x = panel.width;
+            }
+            Keys.onRightPressed: {
+                if (panel.location === PlasmaCore.Types.RightEdge) {
+                    event.accepted = false;
+                    return;
+                }
+                panel.location = PlasmaCore.Types.RightEdge;
+                configDialog.x = Screen.width - panel.width - configDialog.width;
+            }
+            // END Keyboard
+
+            PlasmaExtras.Highlight {
+                anchors.centerIn: parent
+                width: Math.min(root.implicitWidth, parent.contentWidth + PlasmaCore.Units.largeSpacing)
+                height: spinBox.implicitHeight
+
+                visible: parent.activeFocus
+                hovered: true
+            }
         }
         Item {
             Layout.preferredWidth: dialogRoot.vertical ? 0 : PlasmaCore.Units.gridUnit * 8
