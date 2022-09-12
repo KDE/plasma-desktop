@@ -4,7 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
-import QtQuick 2.1
+import QtQuick 2.5
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.2 as QQC2
 import org.kde.kirigami 2.3 as Kirigami
@@ -87,6 +87,10 @@ KCM.SimpleKCM {
             }
         }
 
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
         QQC2.CheckBox {
             id: taskManagerNotification
 
@@ -105,12 +109,11 @@ KCM.SimpleKCM {
 
         QQC2.SpinBox {
             id: notificationTimeout
-
+            Layout.preferredWidth: notificationTimeoutMetrics.implicitWidth + leftPadding + rightPadding
             Kirigami.FormData.label: i18n("Stop animation after:")
 
-            // Don't resize if the suffix changes length
-            Layout.minimumWidth: Kirigami.Units.gridUnit * 7
-
+            from: 1
+            to: 60
             stepSize: 1
             editable: true
 
@@ -127,6 +130,12 @@ KCM.SimpleKCM {
                 configObject: kcm.launchFeedbackSettings
                 settingName: "cursorTimeout"
                 extraEnabledConditions: taskManagerNotification.checked
+            }
+
+            TextMetrics {
+                id: notificationTimeoutMetrics
+                font: notificationTimeout.font
+                text: i18np("%1 second", "%1 seconds", 60)
             }
         }
     }
