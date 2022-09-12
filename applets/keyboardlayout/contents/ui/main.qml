@@ -77,7 +77,7 @@ Item {
         PlasmaComponents3.Label {
             id: countryCode
             anchors.fill: parent
-            visible: Plasmoid.configuration.displayStyle === 0 || (!flag.valid && (Plasmoid.configuration.displayStyle === 1 || Plasmoid.configuration.displayStyle === 2))
+            visible: Plasmoid.configuration.displayStyle === 0 || !flag.valid
 
             font.pointSize: height
             fontSizeMode: Text.Fit
