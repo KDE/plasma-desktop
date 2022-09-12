@@ -187,7 +187,7 @@ Item {
         onVisibleChanged: {
             if (!visible) {
                 sidePanelStack.state = "closed";
-                ActivitySwitcher.Backend.shouldShowSwitcher = false;
+                ActivitySwitcher.Backend.switcherNoLongerVisible();
             }
         }
 
