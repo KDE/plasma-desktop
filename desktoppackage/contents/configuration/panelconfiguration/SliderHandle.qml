@@ -134,6 +134,10 @@ PlasmaCore.SvgItem {
 
         Accessible.description: root.description
 
+        Keys.onEnterPressed: doubleClicked(null);
+        Keys.onReturnPressed: doubleClicked(null);
+        Keys.onSpacePressed: doubleClicked(null);
+
         // BEGIN Arrow keys
         Keys.onUpPressed: if (dialogRoot.vertical) {
             root.y = Math.max(root.minimumPosition, root.y - ((event.modifiers & Qt.ShiftModifier) ? 1 : keyboardMoveStepSize));
