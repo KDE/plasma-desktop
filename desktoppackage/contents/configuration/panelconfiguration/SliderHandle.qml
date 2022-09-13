@@ -130,6 +130,13 @@ PlasmaCore.SvgItem {
             if (!drag.active) {
                 return;
             }
+            changePosition();
+        }
+        onDoubleClicked: {
+            root.value = root.defaultPosition();
+        }
+
+        function changePosition() {
             if (dialogRoot.vertical) {
                 if (root.alignment === Qt.AlignRight) {
                     root.value = root.parent.height - (root.y + offset + root.height/2)
