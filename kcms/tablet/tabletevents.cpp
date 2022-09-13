@@ -21,6 +21,11 @@ public:
     {
     }
 
+    ~TabletPad()
+    {
+        destroy();
+    }
+
     void zwp_tablet_pad_v2_path(const QString &path) override
     {
         m_path = path;
@@ -56,6 +61,11 @@ public:
     {
     }
 
+    ~Tool()
+    {
+        destroy();
+    }
+
     void zwp_tablet_tool_v2_hardware_serial(uint32_t hardware_serial_hi, uint32_t hardware_serial_lo) override
     {
         m_hardware_serial_hi = hardware_serial_hi;
@@ -89,6 +99,11 @@ public:
         Q_ASSERT(isInitialized());
     }
 
+    ~TabletManager()
+    {
+        destroy();
+    }
+
     TabletEvents *const q;
 };
 
@@ -100,6 +115,11 @@ public:
         , QtWayland::zwp_tablet_seat_v2(seat)
         , m_events(events)
     {
+    }
+
+    ~TabletSeat()
+    {
+        destroy();
     }
 
     void zwp_tablet_seat_v2_tool_added(struct ::zwp_tablet_tool_v2 *id) override
