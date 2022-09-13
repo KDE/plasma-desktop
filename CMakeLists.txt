@@ -40,9 +40,9 @@ find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Svg
     Concurrent
 )
+find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG OPTIONAL_COMPONENTS WaylandClient)
 if (QT_MAJOR_VERSION EQUAL "5")
     find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
-    find_package(Qt5 ${QT_MIN_VERSION} CONFIG OPTIONAL_COMPONENTS WaylandClient)
 
     find_package(QtWaylandScanner)
     set_package_properties(QtWaylandScanner PROPERTIES

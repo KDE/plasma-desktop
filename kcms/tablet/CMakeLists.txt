@@ -15,6 +15,7 @@ ecm_qt_declare_logging_category(common_SRCS
     EXPORT
         kcm_tablet
 )
+kcoreaddons_add_plugin(kcm_tablet INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 if (QT_MAJOR_VERSION EQUAL "5")
     ecm_add_qtwayland_client_protocol(common_SRCS
         PROTOCOL ${WaylandProtocols_DATADIR}/unstable/tablet/tablet-unstable-v2.xml
@@ -30,7 +31,6 @@ ecm_qt_install_logging_categories(
 )
 qt_add_dbus_interface(common_SRCS "${KWIN_INPUTDEVICE_INTERFACE}" InputDevice_interface)
 
-kcoreaddons_add_plugin(kcm_tablet INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 kcmutils_generate_desktop_file(kcm_tablet)
 
 target_sources(kcm_tablet PRIVATE
