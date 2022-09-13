@@ -10,6 +10,7 @@
 #include <QWaylandClientExtensionTemplate>
 #include <qguiapplication.h>
 #include <qpa/qplatformnativeinterface.h>
+#include <qtwaylandclientversion.h>
 
 class TabletPad : public QObject, public QtWayland::zwp_tablet_pad_v2
 {
