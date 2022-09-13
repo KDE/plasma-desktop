@@ -9,6 +9,7 @@ import QtQuick 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.configuration 2.0
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 
 PlasmaCore.SvgItem {
@@ -104,7 +105,7 @@ PlasmaCore.SvgItem {
 
     PlasmaComponents3.ToolTip {
         text: root.description
-        visible: root.description !== "" && area.containsMouse && !area.containsPress
+        visible: root.description !== "" && ((area.containsMouse && !area.containsPress) || area.activeFocus)
     }
 
     MouseArea {
@@ -124,8 +125,42 @@ PlasmaCore.SvgItem {
             topMargin: (dialogRoot.vertical) ? -PlasmaCore.Units.gridUnit : 0
             bottomMargin: (dialogRoot.vertical) ? -PlasmaCore.Units.gridUnit : 0
         }
+
+        readonly property int keyboardMoveStepSize: Math.ceil((root.maximumPosition - root.minimumPosition) / 20)
+
+        activeFocusOnTab: true
         hoverEnabled: true
         cursorShape: dialogRoot.vertical ? Qt.SizeVerCursor : Qt.SizeHorCursor
+
+        Accessible.description: root.description
+
+        // BEGIN Arrow keys
+        Keys.onUpPressed: if (dialogRoot.vertical) {
+            root.y = Math.max(root.minimumPosition, root.y - ((event.modifiers & Qt.ShiftModifier) ? 1 : keyboardMoveStepSize));
+            changePosition();
+        } else {
+            event.accepted = false;
+        }
+        Keys.onDownPressed: if (dialogRoot.vertical) {
+            root.y = Math.min(root.maximumPosition, root.y + ((event.modifiers & Qt.ShiftModifier) ? 1 : keyboardMoveStepSize));
+            changePosition();
+        } else {
+            event.accepted = false;
+        }
+        Keys.onLeftPressed: if (!dialogRoot.vertical) {
+            root.x = Math.max(root.minimumPosition, root.x - ((event.modifiers & Qt.ShiftModifier) ? 1 : keyboardMoveStepSize));
+            changePosition();
+        } else {
+            event.accepted = false;
+        }
+        Keys.onRightPressed: if (!dialogRoot.vertical) {
+            root.x = Math.min(root.maximumPosition, root.x + ((event.modifiers & Qt.ShiftModifier) ? 1 : keyboardMoveStepSize));
+            changePosition();
+        } else {
+            event.accepted = false;
+        }
+        // END Arrow keys
+
         onPositionChanged: {
             if (!drag.active) {
                 return;
@@ -181,8 +216,11 @@ PlasmaCore.SvgItem {
                 }
             }
         }
-        onDoubleClicked: {
-            root.value = root.defaultPosition();
+
+        PlasmaExtras.Highlight {
+            anchors.fill: parent
+            visible: parent.activeFocus
+            hovered: true
         }
     }
 
