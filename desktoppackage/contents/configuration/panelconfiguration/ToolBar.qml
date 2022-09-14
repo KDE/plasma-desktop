@@ -417,6 +417,13 @@ Item {
         }
 
     }
+
+    KeyboardRelayItem {
+        width: 1
+        height: 1
+        z: -2
+    }
+
 //BEGIN States
     states: [
         State {

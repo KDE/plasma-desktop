@@ -78,6 +78,13 @@ Item {
         id: kwindowsystem
     }
 
+    Binding {
+        target: panel
+        property: "configOverlay"
+        value: containment.fullRepresentationItem.configOverlay
+        when: containment
+    }
+
     // Floatingness is a value in [0, 1] that's multiplied to the floating margin; 0: not floating, 1: floating, between 0 and 1: animation between the two states
     property double floatingness
     // PanelOpacity is a value in [0, 1] that's used as the opacity of the opaque elements over the transparent ones; values between 0 and 1 are used for animations

@@ -22,6 +22,9 @@ MouseArea {
 
     property Item currentApplet
     property real startDragOffset: 0.0
+    property bool keyboardNavigating: false
+
+    readonly property int count: appletsModel.count
 
     onPositionChanged: {
         if (pressed) {
@@ -134,6 +137,56 @@ MouseArea {
         root.layoutManager.save()
     }
 
+    /**
+     * Used in Panel Configuration
+     */
+    function currentAppletIndex() {
+        return configurationArea.currentApplet.index;
+    }
+
+    function setCurrentApplet(index) {
+        if (index < 0 || index >= configurationArea.count) {
+            configurationArea.keyboardNavigating = false;
+            configurationArea.currentApplet = null;
+            return;
+        }
+        configurationArea.keyboardNavigating = true;
+        configurationArea.currentApplet = currentLayout.children[index];
+        tooltip.raise();
+    }
+
+    function removeCurrentApplet() {
+        if (!configurationArea.currentApplet || !configurationArea.currentApplet.applet.action("remove") || !configurationArea.currentApplet.applet.action("remove").enabled) {
+            return;
+        }
+        configurationArea.currentApplet.applet.action("remove").trigger();
+        configurationArea.currentApplet = null;
+    }
+
+    function showAlternativesMenu() {
+        if (!configurationArea.currentApplet.applet.action("alternatives") || !configurationArea.currentApplet.applet.action("alternatives").enabled) {
+            return;
+        }
+        configurationArea.currentApplet.applet.action("alternatives").trigger();
+        configurationArea.currentApplet = null;
+    }
+
+    function configureCurrentApplet() {
+        if (!configurationArea.currentApplet.applet.action("configure") || !configurationArea.currentApplet.applet.action("configure").enabled) {
+            return;
+        }
+        configurationArea.currentApplet.applet.action("configure").trigger();
+        configurationArea.currentApplet = null;
+    }
+
+    function moveTo(index) {
+        if (index < 0 || index >= configurationArea.count) {
+            return;
+        }
+        appletsModel.move(currentApplet.index, index, 1)
+        root.layoutManager.save();
+    }
+
     Item {
         id: placeHolder
         property Item dragging
@@ -163,7 +216,7 @@ MouseArea {
         height: currentApplet ? currentApplet.height : NaN
         color: PlasmaCore.Theme.backgroundColor
         radius: 3
-        opacity: currentApplet && configurationArea.containsMouse ? 0.5 : 0
+        opacity: currentApplet && (configurationArea.containsMouse || configurationArea.keyboardNavigating) ? 0.5 : 0
         PlasmaCore.IconItem {
             visible: !root.dragAndDropping
             source: "transform-move"
@@ -224,10 +277,11 @@ MouseArea {
             }
         }
 
+        // NOTE: All the actions here need synced with keyboard shortcuts in KeyboardRelayItem.qml
         mainItem: MouseArea {
             enabled: tooltip.visible
-            width: handleButtons.width
-            height: handleButtons.height
+            width: handleButtons.implicitWidth
+            height: handleButtons.implicitHeight
             hoverEnabled: true
             onEntered: hideTimer.stop();
             onExited:  hideTimer.restart();
@@ -258,30 +312,21 @@ MouseArea {
                              && currentApplet.applet.action("remove").enabled
                     icon.name: "delete"
                     text: i18n("Remove")
-                    onClicked: {
-                        currentApplet.applet.action("remove").trigger();
-                        currentApplet = null
-                    }
+                    onClicked: configurationArea.removeCurrentApplet()
                 }
                 PlasmaComponents3.ToolButton {
                     id: configureButton
                     Layout.fillWidth: true
                     icon.name: "configure"
                     text: i18n("Configure…")
-                    onClicked: {
-                        currentApplet.applet.action("configure").trigger()
-                        currentApplet = null
-                    }
+                    onClicked: configurationArea.configureCurrentApplet()
                 }
                 PlasmaComponents3.ToolButton {
                     id: alternativesButton
                     Layout.fillWidth: true
                     icon.name: "widget-alternatives"
                     text: i18n("Show Alternatives…")
-                    onClicked: {
-                        currentApplet.applet.action("alternatives").trigger()
-                        currentApplet = null
-                    }
+                    onClicked: configurationArea.showAlternativesMenu()
                 }
                 PlasmaComponents3.ToolButton {
                     Layout.fillWidth: true
@@ -293,10 +338,7 @@ MouseArea {
                              && currentApplet.applet.action("remove").enabled
                     icon.name: "delete"
                     text: i18n("Remove")
-                    onClicked: {
-                        currentApplet.applet.action("remove").trigger()
-                        currentApplet = null
-                    }
+                    onClicked: configurationArea.removeCurrentApplet()
                 }
 
                 PlasmaExtras.Heading {
