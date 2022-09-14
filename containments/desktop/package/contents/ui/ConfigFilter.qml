@@ -192,8 +192,7 @@ ColumnLayout {
                 id: selectAllButton
                 enabled: (filterMode.currentIndex > 0)
                 icon.name: "edit-select-all"
-                ToolTip.delay: 1000
-                ToolTip.timeout: 5000
+                ToolTip.delay: Kirigami.Units.toolTipDelay
                 ToolTip.visible: (Kirigami.Settings.isMobile ? pressed : hovered) && ToolTip.text.length > 0
                 ToolTip.text: i18n("Select All")
                 onClicked: filteredMimeTypesModel.checkFiltered()
@@ -203,8 +202,7 @@ ColumnLayout {
                 id: deselectAllButton
                 enabled: (filterMode.currentIndex > 0)
                 icon.name: "edit-select-none"
-                ToolTip.delay: 1000
-                ToolTip.timeout: 5000
+                ToolTip.delay: Kirigami.Units.toolTipDelay
                 ToolTip.visible: (Kirigami.Settings.isMobile ? pressed : hovered) && ToolTip.text.length > 0
                 ToolTip.text: i18n("Deselect All")
                 onClicked: filteredMimeTypesModel.uncheckFiltered()
