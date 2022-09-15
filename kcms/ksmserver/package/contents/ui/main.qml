@@ -89,41 +89,6 @@ KCM.SimpleKCM {
                     toolTipText: xi18nc("@info", "When this setting is turned on, the logout confirmation screen will be shown when you log out, shut down, restart, press the power button, or click on buttons or menu items labeled <interface>Leave…</interface>.")
                 }
             }
-            ButtonGroup {
-                buttons: [leaveEnd, leaveRestart, leaveOff]
-            }
-            RadioButton {
-                id: leaveEnd
-                Kirigami.FormData.label: i18n("Default option:")
-                text: i18nc("@option:radio", "Log Out")
-                checked: Settings.shutdownType === 0
-                enabled: logoutScreenCheckbox.checked
-                onToggled: Settings.shutdownType = 0
-                KCM.SettingStateBinding {
-                    configObject: Settings
-                    settingName: "shutdownType"
-                }
-            }
-            RadioButton {
-                id: leaveRestart
-                text: i18nc("@option:radio", "Restart")
-                checked: Settings.shutdownType === 1
-                onToggled: Settings.shutdownType = 1
-                KCM.SettingStateBinding {
-                    configObject: Settings
-                    settingName: "shutdownType"
-                }
-            }
-            RadioButton {
-                id: leaveOff
-                text: i18nc("@option:radio", "Shut Down")
-                checked: Settings.shutdownType === 2
-                onToggled: Settings.shutdownType = 2
-                KCM.SettingStateBinding {
-                    configObject: Settings
-                    settingName: "shutdownType"
-                }
-            }
 
             Kirigami.Separator {
                 Layout.fillWidth: true
