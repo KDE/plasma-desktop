@@ -168,6 +168,7 @@ MouseArea {
         action.checked = Qt.binding(() => minimizeAllController.active);
         action.text = Qt.binding(() => minimizeAllController.titleInactive);
         action.toolTip = Qt.binding(() => minimizeAllController.description);
+        action.enabled = Qt.binding(() => !peekController.active)
 
         Plasmoid.setAction("peek", "");
         action = Plasmoid.action("peek")
@@ -175,5 +176,6 @@ MouseArea {
         action.checked = Qt.binding(() => peekController.active);
         action.text = Qt.binding(() => peekController.titleInactive);
         action.toolTip = Qt.binding(() => peekController.description);
+        action.enabled = Qt.binding(() => !minimizeAllController.active)
     }
 }
