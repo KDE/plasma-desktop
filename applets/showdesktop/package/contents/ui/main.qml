@@ -27,9 +27,19 @@ MouseArea {
 
     readonly property Controller primaryController: isMinimizeAll ? minimizeAllController : peekController
 
+    readonly property Controller activeController: {
+        if (minimizeAllController.active) {
+            return minimizeAllController;
+        } else if (peekController.active) {
+            return peekController;
+        } else {
+            return primaryController;
+        }
+    }
+
     Plasmoid.icon: Plasmoid.configuration.icon
-    Plasmoid.title: primaryController.title
-    Plasmoid.toolTipSubText: primaryController.description
+    Plasmoid.title: activeController.title
+    Plasmoid.toolTipSubText: activeController.description
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
@@ -43,7 +53,7 @@ MouseArea {
     activeFocusOnTab: true
     hoverEnabled: true
 
-    Plasmoid.onActivated: primaryController.toggle();
+    Plasmoid.onActivated: activeController.toggle();
     onClicked: Plasmoid.activated();
 
     Keys.onPressed: {
@@ -71,7 +81,7 @@ MouseArea {
 
     PlasmaCore.IconItem {
         anchors.fill: parent
-        active: root.containsMouse || primaryController.active
+        active: root.containsMouse || activeController.active
         source: Plasmoid.icon
     }
 
@@ -133,7 +143,7 @@ MouseArea {
             }
             return prefix;
         }
-        opacity: primaryController.active ? 1 : 0
+        opacity: activeController.active ? 1 : 0
 
         Behavior on opacity {
             NumberAnimation {
