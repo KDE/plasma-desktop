@@ -657,7 +657,13 @@ FocusScope {
                 property bool ctrlPressed: false
                 property bool shiftPressed: false
 
-                property bool overflowing: (visibleArea.heightRatio < 1.0 || visibleArea.widthRatio < 1.0)
+                property bool overflowing: {
+                    // widthRatio or heightRatio may be 0 when it's not actually
+                    // overflowing, so account for that.
+                    let widthOverflow =  visibleArea.widthRatio > 0.0 && visibleArea.widthRatio < 1.0
+                    let heightOverflow = visibleArea.heightRatio > 0.0 && visibleArea.heightRatio < 1.0
+                    return widthOverflow || heightOverflow
+                }
 
                 property bool scrollLeft: false
                 property bool scrollRight: false
