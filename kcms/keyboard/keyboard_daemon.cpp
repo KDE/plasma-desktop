@@ -190,14 +190,37 @@ bool KeyboardDaemon::setLayout(uint index)
 {
     if (keyboardConfig->layoutLoopCount() != KeyboardConfig::NO_LOOPING && index >= uint(keyboardConfig->layoutLoopCount())) {
         QList<LayoutUnit> layouts = X11Helper::getLayoutsList();
-        if ( int(index) <= keyboardConfig->layouts.lastIndexOf(layouts.takeLast()) ) {
+        const int indexOfLastMainLayoutInConfig = keyboardConfig->layouts.lastIndexOf(layouts.takeLast());
+        const int indexOfLastMainLayoutInXKB = layouts.size();
+
+        // Re-calculate indexes for layout switching Actions
+        const auto &actions = actionCollection->actions();
+        for (const auto &action : actions) {
+            // clang-format off
+            if (action->data().toInt() == indexOfLastMainLayoutInXKB) {
+                action->setData(indexOfLastMainLayoutInConfig < int(index) ?
+                                    indexOfLastMainLayoutInConfig + 1 :
+                                    indexOfLastMainLayoutInConfig);
+            } else if (action->data().toUInt() == index) {
+                action->setData(indexOfLastMainLayoutInXKB);
+            } else if (int(index) < indexOfLastMainLayoutInConfig
+                       && index < action->data().toUInt() && action->data().toInt() <= indexOfLastMainLayoutInConfig) {
+                action->setData(action->data().toUInt() - 1);
+            } else if (indexOfLastMainLayoutInConfig < int(index)
+                       && indexOfLastMainLayoutInConfig < action->data().toInt() && action->data().toUInt() < index) {
+                action->setData(action->data().toUInt() + 1);
+            }
+            // clang-format on
+        }
+
+        if (int(index) <= indexOfLastMainLayoutInConfig) {
             // got to a shifted diapason due to previously selected spare layout, so adjusting the index accordingly
             --index;
         }
         // spare layout preempts last one in the loop
         layouts.append(keyboardConfig->layouts.at(index));
         XkbHelper::initializeKeyboardLayouts(layouts);
-        index = layouts.size() - 1;
+        index = indexOfLastMainLayoutInXKB;
     }
     return X11Helper::setGroup(index);
 }
