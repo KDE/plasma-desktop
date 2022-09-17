@@ -242,7 +242,7 @@ Item {
 
                 Layout.preferredWidth: iconSize
                 Layout.preferredHeight: iconSize
-                Layout.alignment: Qt.AlignVCenter
+                Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
                 source: !kickoff.vertical ? plasmoid.icon : plasmoid.icon ? plasmoid.icon : kickoff.defaultIcon
                 active: compactRoot.containsMouse || compactDragArea.containsDrag
                 smooth: true
