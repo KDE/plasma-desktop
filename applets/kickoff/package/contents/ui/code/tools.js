@@ -185,7 +185,6 @@ function dynamicSetWidgetWidth(icon, buttonIconWidth, kickoffMenuLabel, menuLabe
     return [
         returnValueIfExists(icon, buttonIconWidth),
         returnValueIfExists(kickoffMenuLabel, menuLabelWidth),
-        returnValueIfExists(kickoffMenuLabel, spacing),
         returnValueIfExists(kickoffMenuLabel && icon, spacing)
     ].reduce((sum, n) => sum + n, 0);
 }
