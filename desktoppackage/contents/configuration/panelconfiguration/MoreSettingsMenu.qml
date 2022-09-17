@@ -201,10 +201,8 @@ PlasmaCore.Dialog {
         KeySequenceItem {
             id: button
             keySequence: plasmoid.globalShortcut
-            onKeySequenceChanged: {
-                if (keySequence != plasmoid.globalShortcut) {
-                    plasmoid.globalShortcut = button.keySequence
-                }
+            onCaptureFinished: {
+                plasmoid.globalShortcut = button.keySequence
             }
         }
     }
