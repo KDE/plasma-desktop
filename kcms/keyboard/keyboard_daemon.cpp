@@ -190,30 +190,30 @@ bool KeyboardDaemon::setLayout(uint index)
 {
     if (keyboardConfig->layoutLoopCount() != KeyboardConfig::NO_LOOPING && index >= uint(keyboardConfig->layoutLoopCount())) {
         QList<LayoutUnit> layouts = X11Helper::getLayoutsList();
-        const int indexOfLastMainLayoutInConfig = keyboardConfig->layouts.lastIndexOf(layouts.takeLast());
-        const int indexOfLastMainLayoutInXKB = layouts.size();
+        const uint indexOfLastMainLayoutInConfig = keyboardConfig->layouts.lastIndexOf(layouts.takeLast());
+        const uint indexOfLastMainLayoutInXKB = layouts.size();
 
         // Re-calculate indexes for layout switching Actions
         const auto &actions = actionCollection->actions();
         for (const auto &action : actions) {
             // clang-format off
-            if (action->data().toInt() == indexOfLastMainLayoutInXKB) {
-                action->setData(indexOfLastMainLayoutInConfig < int(index) ?
+            if (action->data().toUInt() == indexOfLastMainLayoutInXKB) {
+                action->setData(indexOfLastMainLayoutInConfig < index ?
                                     indexOfLastMainLayoutInConfig + 1 :
                                     indexOfLastMainLayoutInConfig);
             } else if (action->data().toUInt() == index) {
                 action->setData(indexOfLastMainLayoutInXKB);
-            } else if (int(index) < indexOfLastMainLayoutInConfig
-                       && index < action->data().toUInt() && action->data().toInt() <= indexOfLastMainLayoutInConfig) {
+            } else if (index < indexOfLastMainLayoutInConfig
+                       && index < action->data().toUInt() && action->data().toUInt() <= indexOfLastMainLayoutInConfig) {
                 action->setData(action->data().toUInt() - 1);
-            } else if (indexOfLastMainLayoutInConfig < int(index)
-                       && indexOfLastMainLayoutInConfig < action->data().toInt() && action->data().toUInt() < index) {
+            } else if (indexOfLastMainLayoutInConfig < index
+                       && indexOfLastMainLayoutInConfig < action->data().toUInt() && action->data().toUInt() < index) {
                 action->setData(action->data().toUInt() + 1);
             }
             // clang-format on
         }
 
-        if (int(index) <= indexOfLastMainLayoutInConfig) {
+        if (index <= indexOfLastMainLayoutInConfig) {
             // got to a shifted diapason due to previously selected spare layout, so adjusting the index accordingly
             --index;
         }
