@@ -164,13 +164,13 @@ Item {
 
         Layout.minimumWidth: {
             if (!kickoff.inPanel) {
-                return Tools.dynamicSetWidgetWidth(plasmoid.icon, buttonIcon.width, kickoff.menuLabel, labelTextField.width, PlasmaCore.Units.smallSpacing * 2);
+                return Tools.dynamicSetWidgetWidth(plasmoid.icon, buttonIcon.width, kickoff.menuLabel, labelTextField.contentWidth, iconLabelRow.spacing);
             }
 
             if (kickoff.vertical) {
                 return -1;
             } else {
-                return Tools.dynamicSetWidgetWidth(plasmoid.icon, buttonIcon.width, kickoff.menuLabel, labelTextField.width, PlasmaCore.Units.smallSpacing * 2);
+                return Tools.dynamicSetWidgetWidth(plasmoid.icon, buttonIcon.width, kickoff.menuLabel, labelTextField.contentWidth, iconLabelRow.spacing);
             }
         }
 
@@ -194,7 +194,7 @@ Item {
             if (kickoff.vertical) {
                 return PlasmaCore.Units.iconSizeHints.panel;
             } else {
-                return Tools.dynamicSetWidgetWidth(plasmoid.icon, buttonIcon.width, kickoff.menuLabel, labelTextField.width, PlasmaCore.Units.smallSpacing * 2);
+                return Tools.dynamicSetWidgetWidth(plasmoid.icon, buttonIcon.width, kickoff.menuLabel, labelTextField.contentWidth, iconLabelRow.spacing);
             }
         }
 
@@ -230,6 +230,7 @@ Item {
         }
 
         RowLayout {
+            id: iconLabelRow
             anchors.fill: parent
             spacing: PlasmaCore.Units.smallSpacing
 
