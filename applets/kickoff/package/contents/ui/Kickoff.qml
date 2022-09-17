@@ -73,6 +73,9 @@ Item {
 
     property Kicker.RunnerModel runnerModel: Kicker.RunnerModel {
         query: kickoff.searchField ? kickoff.searchField.text : ""
+        onRequestUpdateQuery: function (query) {
+            kickoff.searchField && (kickoff.searchField.text = query);
+        }
         appletInterface: plasmoid
         mergeResults: true
         favoritesModel: rootModel.favoritesModel
