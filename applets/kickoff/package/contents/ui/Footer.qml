@@ -125,7 +125,7 @@ PlasmaExtras.PlasmoidHeading {
         Connections {
             target: plasmoid
             function onExpandedChanged() {
-                if(!plasmoid.expanded) {
+                if (plasmoid.expanded) {
                     tabBar.currentIndex = 0
                 }
             }

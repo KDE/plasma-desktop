@@ -112,7 +112,7 @@ BasePage {
         Connections {
             target: plasmoid
             function onExpandedChanged() {
-                if(!plasmoid.expanded) {
+                if (plasmoid.expanded) {
                     plasmoid.rootItem.contentArea.currentItem.forceActiveFocus()
                 }
             }
