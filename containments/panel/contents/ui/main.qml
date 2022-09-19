@@ -149,11 +149,15 @@ function checkLastSpacer() {
             return;
         }
 
+        if (Plasmoid.immutable) {
+            return;
+        }
+
+        Plasmoid.applets.forEach(applet => applet.expanded = false);
         const component = Qt.createComponent("ConfigOverlay.qml");
         root.configOverlay = component.createObject(root, {
             "anchors.fill": root,
         });
-        Plasmoid.applets.forEach(applet => applet.expanded = false);
     }
 
 //END connections
