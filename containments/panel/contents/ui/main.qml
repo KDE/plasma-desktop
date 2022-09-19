@@ -144,8 +144,10 @@ function checkLastSpacer() {
 
     Plasmoid.onUserConfiguringChanged: {
         if (!Plasmoid.userConfiguring) {
-            root.configOverlay.destroy();
-            root.configOverlay = null;
+            if (root.configOverlay) {
+                root.configOverlay.destroy();
+                root.configOverlay = null;
+            }
             return;
         }
 
