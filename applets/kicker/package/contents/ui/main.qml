@@ -158,7 +158,7 @@ Item {
             return results;
         }
 
-        deleteWhenEmpty: kicker.isDash
+        deleteWhenEmpty: true
     }
 
     Kicker.DragHelper {
