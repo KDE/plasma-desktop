@@ -26,8 +26,6 @@ PC3.Page {
     width: Math.max(heading.paintedWidth, PlasmaCore.Units.iconSizes.enormous * 3 + PlasmaCore.Units.smallSpacing * 4 + PlasmaCore.Units.gridUnit * 2)
     height: 800//Screen.height
 
-    opacity: draggingWidget ? 0.3 : 1
-
     property QtObject containment
     
     property PlasmaCore.Dialog sidePanel
@@ -77,6 +75,13 @@ PC3.Page {
         var pluginName = list.currentItem ? list.currentItem.pluginName : ""
         if (pluginName) {
             widgetExplorer.addApplet(pluginName)
+        }
+    }
+
+    Behavior on opacity {
+        NumberAnimation {
+            id: opacityAnimation
+            duration: PlasmaCore.Units.longDuration
         }
     }
 
@@ -269,7 +274,6 @@ PC3.Page {
 
     PC3.ScrollView {
         anchors.fill: parent
-        anchors.rightMargin: - main.sidePanel.margins.right
 
         // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
         PC3.ScrollBar.horizontal.policy: PC3.ScrollBar.AlwaysOff
@@ -339,4 +343,33 @@ PC3.Page {
         text: searchInput.text.length > 0 ? i18n("No widgets matched the search terms") : i18n("No widgets available")
         visible: list.count == 0 && !startupTimer.running
     }
+
+    states: [
+        State {
+            when: main.draggingWidget
+            PropertyChanges {
+                target: opacityAnimation
+                easing.type: Easing.InCubic // Items animating from visible to invisible should be InCubic
+                restoreEntryValues: false
+            }
+            PropertyChanges {
+                target: main
+                opacity: 0.3
+                restoreEntryValues: false
+            }
+        },
+        State {
+            when: !main.draggingWidget
+            PropertyChanges {
+                target: opacityAnimation
+                easing.type: Easing.OutCubic // Items animating from invisible to visible should be OutCubic
+                restoreEntryValues: false
+            }
+            PropertyChanges {
+                target: main
+                opacity: 1
+                restoreEntryValues: false
+            }
+        }
+    ]
 }
