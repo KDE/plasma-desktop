@@ -22,6 +22,8 @@ Flow {
     property int columns: Math.floor(width / children[0].width)
 
     move: Transition {
+        enabled: !tasks.startingUp
+
         SequentialAnimation {
             PropertyAction { target: taskList; property: "animating"; value: true }
 

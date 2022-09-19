@@ -32,6 +32,7 @@ MouseArea {
     property QtObject contextMenuComponent: Qt.createComponent("ContextMenu.qml")
     property QtObject pulseAudioComponent: Qt.createComponent("PulseAudio.qml")
 
+    property bool startingUp: true
     property bool needLayoutRefresh: false;
     property variant taskClosedWithMouseMiddleButton: []
 
@@ -535,5 +536,8 @@ MouseArea {
         tasks.windowsHovered.connect(backend.windowsHovered);
         tasks.activateWindowView.connect(backend.activateWindowView);
         dragHelper.dropped.connect(resetDragSource);
+
+        // Create a timer to set startingUp to false and delete the timer later
+        Qt.createQmlObject('import QtQuick 2.15; Timer { running: true; interval: 5000; repeat: false; onTriggered: { tasks.startingUp = false; destroy(); } }', tasks);
     }
 }
