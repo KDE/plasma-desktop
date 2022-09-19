@@ -18,7 +18,6 @@ MouseArea {
     id: configurationArea
 
     z: 1000
-    anchors.fill: parent
     hoverEnabled: true
 
     property Item currentApplet
