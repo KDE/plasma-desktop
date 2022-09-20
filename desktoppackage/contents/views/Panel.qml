@@ -152,7 +152,7 @@ Item {
     property bool isTransparent: panel.opacityMode === 2
     property bool isAdaptive: panel.opacityMode === 0
     property bool floating: panel.floating
-    readonly property bool screenCovered: visibleWindowsModel.count > 0 && !kwindowsystem.showingDesktop
+    readonly property bool screenCovered: visibleWindowsModel.count > 0 && !kwindowsystem.showingDesktop && panel.visibilityMode == 0
     property var stateTriggers: [floating, screenCovered, isOpaque, isAdaptive, isTransparent]
     onStateTriggersChanged: {
         let opaqueApplets = false
