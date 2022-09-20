@@ -20,7 +20,7 @@ SessionManagementScreen {
     property int visibleBoundary: mapFromItem(loginButton, 0, 0).y
     onHeightChanged: visibleBoundary = mapFromItem(loginButton, 0, 0).y + loginButton.height + PlasmaCore.Units.smallSpacing
 
-    property int fontSize: parseInt(config.fontSize) + 2
+    property int fontSize: parseInt(config.fontSize)
 
     signal loginRequest(string username, string password)
 
