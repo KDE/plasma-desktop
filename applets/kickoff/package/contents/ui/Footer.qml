@@ -24,8 +24,8 @@ PlasmaExtras.PlasmoidHeading {
     // We use an increased vertical padding to improve touch usability
     leftPadding: plasmoid.rootItem.backgroundMetrics.leftPadding
     rightPadding: plasmoid.rootItem.backgroundMetrics.rightPadding
-    topPadding: PlasmaCore.Units.smallSpacing*2
-    bottomPadding: PlasmaCore.Units.smallSpacing*2
+    topPadding: PlasmaCore.Units.smallSpacing * 2
+    bottomPadding: PlasmaCore.Units.smallSpacing * 2
 
     leftInset: 0
     rightInset: 0
@@ -77,7 +77,7 @@ PlasmaExtras.PlasmoidHeading {
                 anchors.topMargin: -root.topPadding
                 anchors.bottomMargin: -root.bottomPadding
                 imagePath: "widgets/tabbar"
-                prefix: tabBar.position == PC3.TabBar.Header ? "north-active-tab" : "south-active-tab"
+                prefix: tabBar.position === PC3.TabBar.Header ? "north-active-tab" : "south-active-tab"
                 colorGroup: PlasmaCore.ColorScope.colorGroup
             }
             keyNavigationEnabled: false
@@ -188,7 +188,7 @@ PlasmaExtras.PlasmoidHeading {
             onWheel: {
                 let shouldDec = rotation >= 15
                 let shouldInc = rotation <= -15
-                let shouldReset = (rotation > 0 && tabBar.currentIndex == 0) || (rotation < 0 && tabBar.currentIndex == tabBar.count-1)
+                let shouldReset = (rotation > 0 && tabBar.currentIndex === 0) || (rotation < 0 && tabBar.currentIndex === tabBar.count - 1)
                 if (shouldDec) {
                     tabBar.decrementCurrentIndex();
                     rotation = 0

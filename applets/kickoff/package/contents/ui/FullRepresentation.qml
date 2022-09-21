@@ -38,7 +38,7 @@ EmptyPage {
      * Be mindful of this when using `Keys.forwardTo`.
      *
      * - Keys defaults to BeforeItem while KeyNavigation defaults to AfterItem.
-     * 
+     *
      * - When Keys and KeyNavigation are using the same priority, it seems like
      * the one declared first in the QML file gets priority over the other.
      *
@@ -110,10 +110,10 @@ EmptyPage {
         Connections {
             target: root.header
             function onSearchTextChanged() {
-                if (root.header.searchText.length === 0 && contentItemStackView.currentItem.objectName != "normalPage") {
+                if (root.header.searchText.length === 0 && contentItemStackView.currentItem.objectName !== "normalPage") {
                     contentItemStackView.reverseTransitions = true
                     contentItemStackView.replace(normalPage)
-                } else if (root.header.searchText.length > 0 && contentItemStackView.currentItem.objectName != "searchView") {
+                } else if (root.header.searchText.length > 0 && contentItemStackView.currentItem.objectName !== "searchView") {
                     contentItemStackView.reverseTransitions = false
                     contentItemStackView.replace(searchViewComponent)
                 }
