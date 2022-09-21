@@ -32,7 +32,7 @@ Item {
     }
     transformOrigin: Item.Center
     opacity: plasmoid.editMode
-    visible: plasmoid.editMode
+    visible: opacity > 0
     Behavior on opacity {
         OpacityAnimator {
             duration: PlasmaCore.Units.longDuration
