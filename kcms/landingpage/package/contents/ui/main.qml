@@ -33,7 +33,7 @@ KCM.SimpleKCM {
 
             Thumbnail {
                 imageSource: kcm.defaultLightLookAndFeel.thumbnail
-                text: i18nc("Adjective; as in, 'light theme'", "Light")
+                text: kcm.defaultLightLookAndFeel.name
                 checked: kcm.globalsSettings.lookAndFeelPackage === kcm.defaultLightLookAndFeel.id
                 QQC2.ButtonGroup.group: themeGroup
 
@@ -46,7 +46,7 @@ KCM.SimpleKCM {
             }
             Thumbnail {
                 imageSource: kcm.defaultDarkLookAndFeel.thumbnail
-                text: i18nc("Adjective; as in, 'dark theme'", "Dark")
+                text: kcm.defaultDarkLookAndFeel.name
                 checked: kcm.globalsSettings.lookAndFeelPackage === kcm.defaultDarkLookAndFeel.id
                 QQC2.ButtonGroup.group: themeGroup
 
