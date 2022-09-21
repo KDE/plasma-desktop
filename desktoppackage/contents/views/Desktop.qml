@@ -144,6 +144,10 @@ Item {
                 result += rect.width - sidePanel.width;
             }
 
+            if (sidePanelStack.state == "widgetExplorer" && mainItem.item.draggingWidget) {
+                result += (Qt.application.layoutDirection === Qt.RightToLeft ? 1 : -1) * (sidePanel.width - PlasmaCore.Units.iconSizes.huge / 2)
+            }
+
             return result;
         }
         y: desktop.y + (containment ? containment.availableScreenRect.y : 0)
@@ -152,6 +156,13 @@ Item {
             if (!visible) {
                 sidePanelStack.state = "closed";
                 ActivitySwitcher.Backend.shouldShowSwitcher = false;
+            }
+        }
+
+        Behavior on x {
+            NumberAnimation {
+                duration: PlasmaCore.Units.shortDuration * 2
+                easing.type: sidePanelStack.state == "widgetExplorer" && mainItem.item.draggingWidget ? Easing.InCubic : Easing.OutCubic
             }
         }
 
