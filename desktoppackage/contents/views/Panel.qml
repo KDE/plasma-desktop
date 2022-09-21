@@ -12,6 +12,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.taskmanager 0.1 as TaskManager
 import org.kde.kwindowsystem 1.0
 import org.kde.kirigami 2.15 as Kirigami
+import org.kde.plasma.shell.panel 0.1 as Panel
 
 import org.kde.plasma.plasmoid 2.0
 
@@ -148,11 +149,11 @@ Item {
         root.parent.focus = false
     }
 
-    property bool isOpaque: panel.opacityMode === 1
-    property bool isTransparent: panel.opacityMode === 2
-    property bool isAdaptive: panel.opacityMode === 0
+    property bool isOpaque: panel.opacityMode === Panel.Global.Opaque
+    property bool isTransparent: panel.opacityMode === Panel.Global.Translucent
+    property bool isAdaptive: panel.opacityMode === Panel.Global.Adaptive
     property bool floating: panel.floating
-    readonly property bool screenCovered: visibleWindowsModel.count > 0 && !kwindowsystem.showingDesktop && panel.visibilityMode == 0
+    readonly property bool screenCovered: visibleWindowsModel.count > 0 && !kwindowsystem.showingDesktop && panel.visibilityMode == Panel.Global.NormalPanel
     property var stateTriggers: [floating, screenCovered, isOpaque, isAdaptive, isTransparent]
     onStateTriggersChanged: {
         let opaqueApplets = false
