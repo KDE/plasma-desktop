@@ -21,6 +21,8 @@ Item {
     z: 999
     anchors.fill: parent
 
+    property Item toolBoxContent
+
     Connections {
         target: plasmoid
         function onAvailableScreenRegionChanged() {
@@ -40,11 +42,16 @@ Item {
     LayoutMirroring.enabled: (Qt.application.layoutDirection === Qt.RightToLeft)
     LayoutMirroring.childrenInherit: true
 
-    ToolBoxContent {
-        id: toolBoxContent
-        Component.onCompleted: {
-            placeToolBox(plasmoid.configuration.ToolBoxButtonState);
+    Plasmoid.onEditModeChanged: {
+        if (!Plasmoid.editMode) {
+            toolBoxContent.exitAnimation.start();
+            return;
         }
+
+        const component = Qt.createComponent(Qt.resolvedUrl("./ToolBoxContent.qml"));
+        toolBoxContent = component.createObject(main);
+        placeToolBox(Plasmoid.configuration.ToolBoxButtonState);
+        toolBoxContent.enterAnimation.start();
     }
 
     Timer {
@@ -58,6 +65,9 @@ Item {
     }
 
     function placeToolBox(ts) {
+        if (!main.toolBoxContent) {
+            return;
+        }
         // if nothing has been setup yet, determine default position based on layout direction
         if (!ts) {
             placeToolBox("topcenter");

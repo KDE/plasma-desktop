@@ -17,29 +17,16 @@ import org.kde.plasma.plasmoid 2.0
 Item {
     id: toolBoxContent
 
-    transform: Translate {
-        y: plasmoid.editMode ? 0
-           : state == "top" || state == "topcenter" ? -height
-           : state == "bottom" || state == "bottomcenter" ? height
-           : 0
+    property alias enterAnimation: enterAnimation
+    property alias exitAnimation: exitAnimation
 
-        Behavior on y {
-            NumberAnimation {
-                duration: PlasmaCore.Units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
+    visible: false
+    opacity: 0
+    transform: Translate {
+        id: translator
     }
     transformOrigin: Item.Center
-    opacity: plasmoid.editMode
-    visible: opacity > 0
-    Behavior on opacity {
-        OpacityAnimator {
-            duration: PlasmaCore.Units.longDuration
-            easing.type: Easing.InOutQuad
-        }
-        enabled: visible
-    }
+
     Behavior on rotation {
         NumberAnimation {
             duration: PlasmaCore.Units.shortDuration;
@@ -106,6 +93,66 @@ Item {
         }
 
         stateTimer.running = false;
+    }
+
+    function destroyToolBox() {
+        main.toolBoxContent = null;
+        toolBoxContent.destroy();
+    }
+
+    SequentialAnimation {
+        id: enterAnimation
+
+        PropertyAction {
+            target: toolBoxContent
+            property: "visible"
+            value: true
+        }
+        ParallelAnimation {
+            NumberAnimation {
+                target: toolBoxContent
+                property: "opacity"
+                duration: PlasmaCore.Units.longDuration
+                easing.type: Easing.OutCubic
+                to: 1
+            }
+            NumberAnimation {
+                target: translator
+                property: "y"
+                duration: PlasmaCore.Units.longDuration
+                easing.type: Easing.OutCubic
+                from: state == "top" || state == "topcenter" ? -height
+                    : state == "bottom" || state == "bottomcenter" ? height
+                    : 0
+                to: 0
+            }
+        }
+    }
+
+    SequentialAnimation {
+        id: exitAnimation
+
+        ParallelAnimation {
+            NumberAnimation {
+                target: toolBoxContent
+                property: "opacity"
+                duration: PlasmaCore.Units.longDuration
+                easing.type: Easing.InCubic
+                to: 0
+            }
+            NumberAnimation {
+                target: translator
+                property: "y"
+                duration: PlasmaCore.Units.longDuration
+                easing.type: Easing.InCubic
+                to: state == "top" || state == "topcenter" ? -toolBoxContent.height
+                    : state == "bottom" || state == "bottomcenter" ? toolBoxContent.height
+                    : 0
+            }
+        }
+        ScriptAction {
+            script: toolBoxContent.destroyToolBox()
+        }
     }
 
     PlasmaCore.FrameSvgItem {
