@@ -190,7 +190,7 @@ PlasmaExtras.PlasmoidHeading {
                 plasmoid.rootItem.contentArea.currentItem.forceActiveFocus(Qt.ShortcutFocusReason)
             }
             Keys.priority: Keys.AfterItem
-            Keys.forwardTo: plasmoid.rootItem.contentArea.view
+            Keys.forwardTo: plasmoid.rootItem.contentArea !== null ? plasmoid.rootItem.contentArea.view : []
             Keys.onLeftPressed: if (activeFocus) {
                 if (LayoutMirroring.enabled) {
                     nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
