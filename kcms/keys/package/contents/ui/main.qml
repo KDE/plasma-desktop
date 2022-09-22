@@ -4,11 +4,11 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
+import QtQuick 2.15
 import QtQuick.Dialogs 1.3
-import QtQuick.Layouts 1.1
+import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.3 as QQC2
-import QtQml 2.14
+import QtQml 2.15
 import QtQml.Models 2.3
 
 import org.kde.kirigami 2.12 as Kirigami
@@ -23,7 +23,7 @@ KCM.AbstractKCM {
     readonly property bool errorOccured: kcm.lastError != ""
     Connections {
         target: kcm
-        onShowComponent: {
+        function onShowComponent() {
             components.currentIndex = row
         }
     }
@@ -80,7 +80,7 @@ KCM.AbstractKCM {
             enabled: !errorOccured
             columns: 2
             QQC2.ScrollView {
-                Component.onCompleted:  background.visible = true
+                Component.onCompleted: background.visible = true
                 Layout.preferredWidth: Kirigami.Units.gridUnit * 15
                 Layout.fillHeight:true
                 ListView {
@@ -187,7 +187,8 @@ KCM.AbstractKCM {
                         }
                     }
                     onCurrentItemChanged: dm.rootIndex = kcm.filteredModel.index(currentIndex, 0)
-                    onCurrentIndexChanged:{ shortcutsList.selectedIndex = -1;
+                    onCurrentIndexChanged: {
+                        shortcutsList.selectedIndex = -1;
                     }
 
                     Kirigami.PlaceholderMessage {
