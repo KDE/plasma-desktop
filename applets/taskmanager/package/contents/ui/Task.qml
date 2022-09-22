@@ -47,9 +47,8 @@ MouseArea {
     readonly property bool smartLauncherEnabled: !inPopup && model.IsStartup !== true
     property QtObject smartLauncherItem: null
     property alias toolTipAreaItem: toolTipArea
-    property alias audioStreamIconLoaderItem: audioStreamIconLoader
 
-    property Item audioStreamOverlay
+    property Item audioStreamIcon: null
     property var audioStreams: []
     property bool delayAudioStreamIndicator: false
     readonly property bool audioIndicatorsEnabled: plasmoid.configuration.indicateAudioStreams
@@ -269,12 +268,19 @@ MouseArea {
     }
 
     onHasAudioStreamChanged: {
-        audioStreamIconLoader.active = hasAudioStream && audioIndicatorsEnabled;
+        const audioStreamIconActive = hasAudioStream && audioIndicatorsEnabled;
+        if (!audioStreamIconActive) {
+            if (audioStreamIcon !== null) {
+                audioStreamIcon.destroy();
+                audioStreamIcon = null;
+            }
+            return;
+        }
+        // Create item on demand instead of using Loader to reduce memory consumption,
+        // because only a few applications have audio streams.
+        audioStreamIcon = Qt.createComponent("AudioStream.qml").createObject(task);
     }
-
-    onAudioIndicatorsEnabledChanged: {
-        audioStreamIconLoader.active = hasAudioStream && audioIndicatorsEnabled;
-    }
+    onAudioIndicatorsEnabledChanged: task.hasAudioStreamChanged()
 
     Keys.onReturnPressed: TaskTools.activateTask(modelIndex(), model, event.modifiers, task)
     Keys.onEnterPressed: Keys.onReturnPressed(event);
@@ -549,24 +555,6 @@ MouseArea {
         }
     }
 
-    Loader {
-        id: audioStreamIconLoader
-
-        readonly property bool shown: item && item.visible
-        readonly property var indicatorScale: 1.2
-
-        source: "AudioStream.qml"
-        width: Math.min(Math.min(iconBox.width, iconBox.height) * 0.4, PlasmaCore.Units.iconSizes.smallMedium)
-        height: width
-
-        anchors {
-            right: frame.right
-            top: frame.top
-            rightMargin: taskFrame.margins.right
-            topMargin: Math.round(taskFrame.margins.top * indicatorScale)
-        }
-    }
-
     PlasmaComponents3.Label {
         id: label
 
@@ -577,7 +565,7 @@ MouseArea {
             fill: parent
             leftMargin: taskFrame.margins.left + iconBox.width + LayoutManager.labelMargin
             topMargin: taskFrame.margins.top
-            rightMargin: taskFrame.margins.right + (audioStreamIconLoader.shown ? (audioStreamIconLoader.width + LayoutManager.labelMargin) : 0)
+            rightMargin: taskFrame.margins.right + (audioStreamIcon !== null ? (audioStreamIcon.width + LayoutManager.labelMargin) : 0)
             bottomMargin: taskFrame.margins.bottom
         }
 

@@ -11,6 +11,17 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 MouseArea {
     id: audioStreamIconBox
 
+    width: Math.min(Math.min(iconBox.width, iconBox.height) * 0.4, PlasmaCore.Units.iconSizes.smallMedium)
+    height: width
+    anchors {
+        top: frame.top
+        right: frame.right
+        rightMargin: taskFrame.margins.right
+        topMargin: Math.round(taskFrame.margins.top * indicatorScale)
+    }
+
+    readonly property real indicatorScale: 1.2
+
     activeFocusOnTab: true
     hoverEnabled: true
     onClicked: toggleMuted()
@@ -126,7 +137,7 @@ MouseArea {
                 when: tasks.vertical && frame.width < audioStreamIcon.requiredSpace
 
                 PropertyChanges {
-                    target: audioStreamIconLoader
+                    target: audioStreamIconBox
                     anchors.rightMargin: Math.round(taskFrame.margins.right * indicatorScale)
                 }
             },
@@ -136,14 +147,14 @@ MouseArea {
                 when: frame.width > audioStreamIcon.requiredSpace
 
                 AnchorChanges {
-                    target: audioStreamIconLoader
+                    target: audioStreamIconBox
 
                     anchors.top: undefined
                     anchors.verticalCenter: frame.verticalCenter
                 }
 
                 PropertyChanges {
-                    target: audioStreamIconLoader
+                    target: audioStreamIconBox
                     width: PlasmaCore.Units.roundToIconSize(Math.min(Math.min(iconBox.width, iconBox.height), PlasmaCore.Units.iconSizes.smallMedium))
                 }
 
@@ -160,14 +171,14 @@ MouseArea {
                 when: frame.height > audioStreamIcon.requiredSpace
 
                 AnchorChanges {
-                    target: audioStreamIconLoader
+                    target: audioStreamIconBox
 
                     anchors.right: undefined
                     anchors.horizontalCenter: frame.horizontalCenter
                 }
 
                 PropertyChanges {
-                    target: audioStreamIconLoader
+                    target: audioStreamIconBox
 
                     anchors.topMargin: taskFrame.margins.top
                     width: PlasmaCore.Units.roundToIconSize(Math.min(Math.min(iconBox.width, iconBox.height), PlasmaCore.Units.iconSizes.smallMedium))
