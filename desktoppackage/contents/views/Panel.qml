@@ -41,10 +41,22 @@ Item {
     readonly property int leftPadding: Math.round(Math.min(thickPanelSvg.fixedMargins.left, spacingAtMinSize));
     readonly property int rightPadding: Math.round(Math.min(thickPanelSvg.fixedMargins.right, spacingAtMinSize));
 
-    readonly property int bottomFloatingPadding: floating  ? (floatingPrefix ? floatingPanelSvg.fixedMargins.bottom : 8) : 0
-    readonly property int leftFloatingPadding: floating    ? (floatingPrefix ? floatingPanelSvg.fixedMargins.left   : 8) : 0
-    readonly property int rightFloatingPadding: floating   ? (floatingPrefix ? floatingPanelSvg.fixedMargins.right  : 8) : 0
-    readonly property int topFloatingPadding: floating     ? (floatingPrefix ? floatingPanelSvg.fixedMargins.top    : 8) : 0
+    // For internal purposes
+    readonly property int _bottomFloatingPadding: floating  ? (floatingPrefix ? floatingPanelSvg.fixedMargins.bottom: 8) : 0
+    readonly property int _leftFloatingPadding: floating    ? (floatingPrefix ? floatingPanelSvg.fixedMargins.left  : 8) : 0
+    readonly property int _rightFloatingPadding: floating   ? (floatingPrefix ? floatingPanelSvg.fixedMargins.right : 8) : 0
+    readonly property int _topFloatingPadding: floating     ? (floatingPrefix ? floatingPanelSvg.fixedMargins.top   : 8) : 0
+    // Read by panelview.cpp
+    readonly property int bottomFloatingPadding: floatingness === 0 ? 0 : _bottomFloatingPadding * floatingness
+    readonly property int leftFloatingPadding:   floatingness === 0 ? 0 : _leftFloatingPadding   * floatingness
+    readonly property int rightFloatingPadding:  floatingness === 0 ? 0 : _rightFloatingPadding  * floatingness
+    readonly property int topFloatingPadding:    floatingness === 0 ? 0 : _topFloatingPadding    * floatingness
+    // These take into account the floatingness status
+    readonly property int floatBottomFloatingPadding: _bottomFloatingPadding * floatingness
+    readonly property int floatLeftFloatingPadding: _leftFloatingPadding * floatingness
+    readonly property int floatRightFloatingPadding: _rightFloatingPadding * floatingness
+    readonly property int floatTopFloatingPadding: root.height - panel.thickness - _bottomFloatingPadding * floatingness
+
 
     TaskManager.VirtualDesktopInfo {
         id: virtualDesktopInfo
@@ -100,8 +112,8 @@ Item {
     property var panelMask: floatingness === 0 ? (panelOpacity === 1 ? opaqueItem.mask : translucentItem.mask) : (panelOpacity === 1 ? floatingOpaqueItem.mask : floatingTranslucentItem.mask)
 
     // These two values are read from panelview.cpp and are used as an offset for the mask
-    property int maskOffsetX: Math.round(leftFloatingPadding * floatingness)
-    property int maskOffsetY: Math.round(topFloatingPadding * floatingness)
+    property int maskOffsetX: Math.round(floatLeftFloatingPadding)
+    property int maskOffsetY: Math.round(floatTopFloatingPadding)
 
     PlasmaCore.FrameSvgItem {
         id: translucentItem
@@ -114,12 +126,14 @@ Item {
         id: floatingTranslucentItem
         visible: floatingness !== 0 && panelOpacity !== 1
         anchors {
-            fill: parent
-            bottomMargin: Math.round(bottomFloatingPadding * floatingness)
-            leftMargin: Math.round(leftFloatingPadding * floatingness)
-            rightMargin: Math.round(rightFloatingPadding * floatingness)
-            topMargin: Math.round(topFloatingPadding * floatingness)
+            bottom: parent.bottom
+            left: parent.left
+            right: parent.right
+            bottomMargin: Math.round(floatBottomFloatingPadding)
+            leftMargin: Math.round(floatLeftFloatingPadding)
+            rightMargin: Math.round(floatRightFloatingPadding)
         }
+        height: panel.thickness
         imagePath: containment && containment.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "widgets/panel-background"
     }
     PlasmaCore.FrameSvgItem {
@@ -127,12 +141,14 @@ Item {
         visible: floatingness !== 0 && panelOpacity !== 0
         opacity: panelOpacity
         anchors {
-            fill: parent
-            bottomMargin: Math.round(bottomFloatingPadding * floatingness)
-            leftMargin: Math.round(leftFloatingPadding * floatingness)
-            rightMargin: Math.round(rightFloatingPadding * floatingness)
-            topMargin: Math.round(topFloatingPadding * floatingness)
+            bottom: parent.bottom
+            left: parent.left
+            right: parent.right
+            bottomMargin: Math.round(floatBottomFloatingPadding)
+            leftMargin: Math.round(floatLeftFloatingPadding)
+            rightMargin: Math.round(floatRightFloatingPadding)
         }
+        height: panel.thickness
         imagePath: containment && containment.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "solid/widgets/panel-background"
     }
     PlasmaCore.FrameSvgItem {
@@ -152,7 +168,12 @@ Item {
     property bool isTransparent: panel.opacityMode === 2
     property bool isAdaptive: panel.opacityMode === 0
     property bool floating: panel.floating
-    readonly property bool screenCovered: visibleWindowsModel.count > 0 && !kwindowsystem.showingDesktop
+    property bool screenCovered: visibleWindowsModel.count > 0 && !kwindowsystem.showingDesktop && panel.visibilityMode == Panel.Global.NormalPanel//true
+    //Timer {
+    //    interval: 2000; running: true; repeat: true
+    //    onTriggered: screenCovered = !screenCovered
+    //}
+
     property var stateTriggers: [floating, screenCovered, isOpaque, isAdaptive, isTransparent]
     onStateTriggersChanged: {
         let opaqueApplets = false
@@ -294,8 +315,6 @@ Item {
     }
     Item {
         id: containmentParent
-        anchors.centerIn: isOpaque ? floatingOpaqueItem : floatingTranslucentItem
-        width: root.width - leftFloatingPadding - rightFloatingPadding
-        height: root.height - topFloatingPadding - bottomFloatingPadding
+        anchors.fill: isOpaque ? floatingOpaqueItem : floatingTranslucentItem
     }
 }
