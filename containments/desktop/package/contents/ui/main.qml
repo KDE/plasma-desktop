@@ -262,6 +262,7 @@ FolderViewDropArea {
     ContainmentLayoutManager.AppletsLayout {
         id: appletsLayout
         anchors.fill: parent
+        relayoutLock: width != plasmoid.availableScreenRect.width || height != plasmoid.availableScreenRect.height
         // NOTE: use plasmoid.availableScreenRect and not own width and height as they are updated not atomically
         configKey: "ItemGeometries-" + Math.round(plasmoid.screenGeometry.width) + "x" + Math.round(plasmoid.screenGeometry.height)
         fallbackConfigKey: plasmoid.availableScreenRect.width > plasmoid.availableScreenRect.height ? "ItemGeometriesHorizontal" : "ItemGeometriesVertical"
