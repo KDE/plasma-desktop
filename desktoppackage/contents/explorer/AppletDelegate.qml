@@ -58,6 +58,7 @@ Item {
                 }, Qt.size(PlasmaCore.Units.iconSizes.huge, PlasmaCore.Units.iconSizes.huge));
             } else {
                 parent.Drag.active = false;
+                parent.Drag.imageSource = "";
             }
         }
     }
