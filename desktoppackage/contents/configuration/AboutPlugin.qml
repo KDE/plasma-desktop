@@ -68,102 +68,119 @@ Kirigami.ScrollablePage {
         }
     }
 
-    Kirigami.FormLayout {
-        id: form
-        GridLayout {
-            columns: 2
-            Layout.fillWidth: true
+    ColumnLayout {
+        spacing: Kirigami.Units.largeSpacing * 3
 
-            Kirigami.Icon {
-                Layout.rowSpan: 2
-                Layout.preferredHeight: Kirigami.Units.iconSizes.huge
-                Layout.preferredWidth: height
-                Layout.maximumWidth: page.width / 3;
-                Layout.rightMargin: Kirigami.Units.largeSpacing
-                source: plasmoid.metaData.iconName || plasmoid.metaData.pluginId
-                fallback: "application-x-plasma"
-            }
-            Kirigami.Heading {
+        Kirigami.FormLayout {
+            id: form
+            GridLayout {
+                columns: 2
                 Layout.fillWidth: true
-                text: plasmoid.metaData.name + " " + plasmoid.metaData.version
-            }
-            Kirigami.Heading {
-                Layout.fillWidth: true
-                level: 2
-                wrapMode: Text.WordWrap
-                text: plasmoid.metaData.description
-            }
-        }
 
-        Kirigami.Separator {
-            Layout.fillWidth: true
-        }
-
-        Kirigami.Heading {
-            Kirigami.FormData.isSection: true
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Copyright")
-        }
-        QQC2.Label {
-            Layout.leftMargin: Kirigami.Units.gridUnit
-            text: plasmoid.metaData.extraInformation
-            visible: text.length > 0
-        }
-        QQC2.Label {
-            Layout.leftMargin: Kirigami.Units.gridUnit
-            text: plasmoid.metaData.copyrightText
-            visible: text.length > 0
-        }
-        Kirigami.UrlButton {
-            Layout.leftMargin: Kirigami.Units.gridUnit
-            url: plasmoid.metaData.website
-            visible: url.length > 0
-        }
-
-        RowLayout {
-            Layout.leftMargin: Kirigami.Units.smallSpacing
-            QQC2.Label { text: i18nd("plasma_shell_org.kde.plasma.desktop", "License:") }
-            Kirigami.LinkButton {
-                text: plasmoid.metaData.license
-                onClicked: {
-                    licenseSheet.text = plasmoid.metaData.licenseText
-                    licenseSheet.title = plasmoid.metaData.license
-                    licenseSheet.open()
+                Kirigami.Icon {
+                    Layout.rowSpan: 2
+                    Layout.preferredHeight: Kirigami.Units.iconSizes.huge
+                    Layout.preferredWidth: height
+                    Layout.maximumWidth: page.width / 3;
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
+                    source: plasmoid.metaData.iconName || plasmoid.metaData.pluginId
+                    fallback: "application-x-plasma"
+                }
+                Kirigami.Heading {
+                    Layout.fillWidth: true
+                    text: plasmoid.metaData.name + " " + plasmoid.metaData.version
+                }
+                Kirigami.Heading {
+                    Layout.fillWidth: true
+                    level: 2
+                    wrapMode: Text.WordWrap
+                    text: plasmoid.metaData.description
                 }
             }
+
+            Kirigami.Separator {
+                Layout.fillWidth: true
+            }
+
+            Kirigami.Heading {
+                Kirigami.FormData.isSection: true
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Copyright")
+            }
+            QQC2.Label {
+                Layout.leftMargin: Kirigami.Units.gridUnit
+                text: plasmoid.metaData.extraInformation
+                visible: text.length > 0
+            }
+            QQC2.Label {
+                Layout.leftMargin: Kirigami.Units.gridUnit
+                text: plasmoid.metaData.copyrightText
+                visible: text.length > 0
+            }
+            Kirigami.UrlButton {
+                Layout.leftMargin: Kirigami.Units.gridUnit
+                url: plasmoid.metaData.website
+                visible: url.length > 0
+            }
+
+            RowLayout {
+                Layout.leftMargin: Kirigami.Units.smallSpacing
+                QQC2.Label { text: i18nd("plasma_shell_org.kde.plasma.desktop", "License:") }
+                Kirigami.LinkButton {
+                    text: plasmoid.metaData.license
+                    onClicked: {
+                        licenseSheet.text = plasmoid.metaData.licenseText
+                        licenseSheet.title = plasmoid.metaData.license
+                        licenseSheet.open()
+                    }
+                }
+            }
+            Kirigami.Heading {
+                Layout.fillWidth: true
+                Kirigami.FormData.isSection: visible
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Authors")
+                visible: plasmoid.metaData.authors.length > 0
+            }
+            Repeater {
+                model: plasmoid.metaData.authors
+                delegate: personDelegate
+            }
+            Kirigami.Heading {
+                height: visible ? implicitHeight : 0
+                Kirigami.FormData.isSection: visible
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Credits")
+                visible: repCredits.count > 0
+            }
+            Repeater {
+                id: repCredits
+                model: plasmoid.metaData.otherContributors
+                delegate: personDelegate
+            }
+            Kirigami.Heading {
+                height: visible ? implicitHeight : 0
+                Kirigami.FormData.isSection: visible
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Translators")
+                visible: repTranslators.count > 0
+            }
+            Repeater {
+                id: repTranslators
+                model: plasmoid.metaData.translators
+                delegate: personDelegate
+            }
         }
-        Kirigami.Heading {
-            Layout.fillWidth: true
-            Kirigami.FormData.isSection: visible
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Authors")
-            visible: plasmoid.metaData.authors.length > 0
-        }
-        Repeater {
-            model: plasmoid.metaData.authors
-            delegate: personDelegate
-        }
-        Kirigami.Heading {
-            height: visible ? implicitHeight : 0
-            Kirigami.FormData.isSection: visible
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Credits")
-            visible: repCredits.count > 0
-        }
-        Repeater {
-            id: repCredits
-            model: plasmoid.metaData.otherContributors
-            delegate: personDelegate
-        }
-        Kirigami.Heading {
-            height: visible ? implicitHeight : 0
-            Kirigami.FormData.isSection: visible
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Translators")
-            visible: repTranslators.count > 0
-        }
-        Repeater {
-            id: repTranslators
-            model: plasmoid.metaData.translators
-            delegate: personDelegate
+
+        QQC2.Button {
+            Layout.alignment: Qt.AlignHCenter
+
+            icon.name: "tools-report-bug"
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Report a Bug…")
+
+            visible: plasmoid.metaData.bugReportUrl.length > 0
+
+            onClicked: Qt.openUrlExternally(plasmoid.metaData.bugReportUrl)
         }
     }
+
+
     QQC2.Dialog {
         id: licenseSheet
         property alias text: licenseLabel.text
