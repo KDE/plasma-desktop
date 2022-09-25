@@ -85,10 +85,10 @@ FolderViewDropArea {
         topMargin: (isContainment && plasmoid.availableScreenRect) ? plasmoid.availableScreenRect.y : 0
 
         rightMargin: (isContainment && plasmoid.availableScreenRect) && parent
-            ? parent.width - (plasmoid.availableScreenRect.x + plasmoid.availableScreenRect.width) : 0
+            ? Math.max(0, parent.width - (plasmoid.availableScreenRect.x + plasmoid.availableScreenRect.width)) : 0
 
         bottomMargin: (isContainment && plasmoid.availableScreenRect) && parent
-            ? parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height) : 0
+            ? Math.max(0, parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height)) : 0
     }
 
     Behavior on anchors.topMargin {
@@ -263,6 +263,7 @@ FolderViewDropArea {
     ContainmentLayoutManager.AppletsLayout {
         id: appletsLayout
         anchors.fill: parent
+        relayoutLock: width != plasmoid.availableScreenRect.width || height != plasmoid.availableScreenRect.height
         // NOTE: use plasmoid.availableScreenRect and not own width and height as they are updated not atomically
         configKey: "ItemGeometries-" + Math.round(plasmoid.screenGeometry.width) + "x" + Math.round(plasmoid.screenGeometry.height)
         fallbackConfigKey: plasmoid.availableScreenRect.width > plasmoid.availableScreenRect.height ? "ItemGeometriesHorizontal" : "ItemGeometriesVertical"
