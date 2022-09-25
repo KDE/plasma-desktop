@@ -85,10 +85,10 @@ FolderViewDropArea {
         topMargin: (isContainment && plasmoid.availableScreenRect) ? plasmoid.availableScreenRect.y : 0
 
         rightMargin: (isContainment && plasmoid.availableScreenRect) && parent
-            ? Math.max(0, parent.width - (plasmoid.availableScreenRect.x + plasmoid.availableScreenRect.width)) : 0
+            ? parent.width - (plasmoid.availableScreenRect.x + plasmoid.availableScreenRect.width) : 0
 
         bottomMargin: (isContainment && plasmoid.availableScreenRect) && parent
-            ? Math.max(0, parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height)) : 0
+            ? parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height) : 0
     }
 
     Behavior on anchors.topMargin {
