@@ -134,7 +134,7 @@ Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData, const QVariantL
 
     connect(m_toolsModel, &DevicesModel::needsSaveChanged, this, &Tablet::refreshNeedsSave);
     connect(m_padsModel, &DevicesModel::needsSaveChanged, this, &Tablet::refreshNeedsSave);
-    connect(this, &Tablet::buttonMappingChanged, this, &Tablet::refreshNeedsSave);
+    connect(this, &Tablet::settingsRestored, this, &Tablet::refreshNeedsSave);
 }
 
 Tablet::~Tablet() = default;
@@ -168,7 +168,7 @@ void Tablet::load()
     m_padsModel->load();
 
     m_unsavedMappings.clear();
-    Q_EMIT buttonMappingChanged();
+    Q_EMIT settingsRestored();
 }
 
 void Tablet::save()
@@ -213,13 +213,13 @@ void Tablet::defaults()
             *itDevice = {};
         }
     }
-    Q_EMIT buttonMappingChanged();
+    Q_EMIT settingsRestored();
 }
 
 void Tablet::assignPadButtonMapping(const QString &deviceName, uint button, const QKeySequence &keySequence)
 {
     m_unsavedMappings[deviceName][button] = keySequence;
-    Q_EMIT buttonMappingChanged();
+    Q_EMIT settingsRestored();
 }
 
 QKeySequence Tablet::padButtonMapping(const QString &deviceName, uint button) const
