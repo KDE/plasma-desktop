@@ -58,7 +58,7 @@ Kirigami.FormLayout
                 keySequence: kcm.padButtonMapping(root.name, modelData)
                 Connections {
                     target: kcm
-                    function onButtonMappingChanged() {
+                    function onSettingsRestored() {
                         seq.keySequence = kcm.padButtonMapping(root.name, modelData)
                     }
                 }

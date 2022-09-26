@@ -145,6 +145,9 @@ private:
             m_value = {};
             value();
             m_configValue = m_value;
+            if (m_changedSignalFunction) {
+                (m_device->*m_changedSignalFunction)();
+            }
         }
 
         void set(T newVal);

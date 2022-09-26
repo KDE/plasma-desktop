@@ -39,7 +39,7 @@ public:
     Q_SCRIPTABLE QKeySequence padButtonMapping(const QString &deviceName, uint button) const;
 
 Q_SIGNALS:
-    void buttonMappingChanged();
+    void settingsRestored();
 
 private:
     void refreshNeedsSave();
