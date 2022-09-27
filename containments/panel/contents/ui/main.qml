@@ -282,7 +282,9 @@ function checkLastSpacer() {
             }
 
             active: applet && applet.busy
-            sourceComponent: PlasmaComponents.BusyIndicator {}
+            sourceComponent: PlasmaComponents.BusyIndicator {
+                z: 999
+            }
 
             property int oldX: 0
             property int oldY: 0
