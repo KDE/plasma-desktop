@@ -142,8 +142,8 @@ QVariant MostUsedModel::data(const QModelIndex &index, int role) const
 
 LookAndFeelGroup::LookAndFeelGroup(QObject *parent)
     : QObject(parent)
+    , m_package(KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel")))
 {
-    m_package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
 }
 
 QString LookAndFeelGroup::id() const

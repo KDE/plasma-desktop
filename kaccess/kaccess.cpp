@@ -120,10 +120,10 @@ static const ModifierKey modifierKeys[] = {
 KAccessApp::KAccessApp()
     : overlay(nullptr)
     , _player(nullptr)
+    , _activeWindow(KWindowSystem::activeWindow())
     , toggleScreenReaderAction(new QAction(this))
 {
     m_error = false;
-    _activeWindow = KWindowSystem::activeWindow();
     connect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, this, &KAccessApp::activeWindowChanged);
 
     features = 0;

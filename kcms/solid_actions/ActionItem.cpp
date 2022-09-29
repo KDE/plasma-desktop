@@ -16,11 +16,11 @@
 #include <Solid/DeviceInterface>
 
 ActionItem::ActionItem(const QString &pathToDesktop, const QString &action, QObject *parent)
+    : desktopMasterPath(pathToDesktop)
+    , actionName(action)
 {
     Q_UNUSED(parent);
 
-    desktopMasterPath = pathToDesktop;
-    actionName = action;
     // Create the desktop file
     desktopFileMaster = new KDesktopFile(desktopMasterPath);
     desktopWritePath = desktopFileMaster->locateLocal(desktopMasterPath);

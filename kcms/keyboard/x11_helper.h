@@ -98,9 +98,9 @@ public:
     }
     explicit LayoutUnit(const QString &fullLayoutName);
     LayoutUnit(const QString &layout, const QString &variant)
+        : m_layout(layout)
+        , m_variant(variant)
     {
-        m_layout = layout;
-        m_variant = variant;
     }
     /*explicit*/ LayoutUnit(const LayoutUnit &other)
     {

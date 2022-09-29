@@ -20,8 +20,8 @@ static bool lessThan(const KPluginMetaData &a, const KPluginMetaData &b)
 
 PreviewPluginsModel::PreviewPluginsModel(QObject *parent)
     : QAbstractListModel(parent)
+    , m_plugins(KIO::PreviewJob::availableThumbnailerPlugins())
 {
-    m_plugins = KIO::PreviewJob::availableThumbnailerPlugins();
     std::stable_sort(m_plugins.begin(), m_plugins.end(), lessThan);
 
     m_checkedRows = QVector<bool>(m_plugins.size(), false);
