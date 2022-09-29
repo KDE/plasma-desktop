@@ -50,18 +50,7 @@ MouseArea {
                 currentApplet.x = mouse.x - configurationArea.startDragOffset;
             }
 
-            var item = currentLayout.childAt(mouse.x, mouse.y);
-
-            if (item && item.applet !== placeHolder) {
-                var posInItem = mapToItem(item, mouse.x, mouse.y);
-                if ((!root.isHorizontal && posInItem.y < item.height/3) ||
-                    (root.isHorizontal && posInItem.x < item.width/3)) {
-                    root.layoutManager.move(item, placeHolder.parent.index+1)
-                } else if ((!root.isHorizontal && posInItem.y > 2*item.height/3) ||
-                          (root.isHorizontal && posInItem.x > 2*item.width/3)) {
-                    root.layoutManager.move(item, placeHolder.parent.index)
-                }
-            }
+            processMouseMoveEvent(mouse);
 
         } else {
             var item = currentLayout.childAt(mouse.x, mouse.y);
@@ -119,6 +108,69 @@ MouseArea {
     onReleased: finishDragOperation()
 
     onCanceled: finishDragOperation()
+
+    function processMouseMoveEvent(mouse) {
+        const item = currentLayout.childAt(mouse.x, mouse.y);
+        if (!item || item.applet === placeHolder) {
+            return;
+        }
+
+        const startIndex = placeHolder.parent.index;
+        const endIndex = item.index;
+        if (startIndex === endIndex) {
+            return;
+        }
+        const posInItem = mapToItem(item, mouse.x, mouse.y);
+        // MouseArea doesn't send events for every single pixel along the path
+        if ((!root.isHorizontal && posInItem.y < item.height/3) ||
+            (root.isHorizontal && posInItem.x < item.width/3)) {
+            // Example: startIndex = 0, endIndex = 2
+            // Before: [placeHolder] [startIndex+1 (←)] [endIndex (not changed)]
+            // After: [startIndex+1] [placeHolder] [endIndex (not changed)]
+            if (startIndex + 1 < endIndex) { // move right, and at least over 1 applet
+                for (let i = startIndex + 1; i < endIndex; ++i) {
+                    root.layoutManager.moveIndex(i, i - 1);
+                }
+
+            // Example: startIndex = 2, endIndex = 0
+            // Before: [endIndex (→)] [startIndex - 1 (→)] [placeHolder]
+            // After: [placeHolder] [endIndex] [startIndex - 1]
+            } else if (startIndex > endIndex) { // move left
+                for (let i = startIndex - 1; i >= endIndex; --i) {
+                    root.layoutManager.moveIndex(i, i + 1);
+                }
+            }
+
+        } else if ((!root.isHorizontal && posInItem.y > 2*item.height/3) ||
+                    (root.isHorizontal && posInItem.x > 2*item.width/3)) {
+            // Example: startIndex = 0, endIndex = 2
+            // Before: [placeHolder] [startIndex+1 (←)] [endIndex (←)]
+            // After: [startIndex+1] [endIndex] [placeHolder]
+            if (startIndex < endIndex) { // move right
+                for (let i = startIndex + 1; i <= endIndex; ++i) {
+                    root.layoutManager.moveIndex(i, i - 1);
+                }
+
+            // Example: startIndex = 2, endIndex = 0
+            // Before: [endIndex (not changed)] [startIndex - 1 (→)] [placeHolder]
+            // After: [endIndex (not changed)] [placeHolder] [startIndex - 1]
+            } else if (startIndex - 1 > endIndex) { // move left, and at least over 1 applet
+                for (let i = startIndex - 1; i > endIndex; --i) {
+                    root.layoutManager.moveIndex(i, i + 1);
+                }
+            }
+        } else { // In the middle
+            if (startIndex + 1 < endIndex) { // move right, and at least over 1 applet
+                for (let i = startIndex + 1; i < endIndex; ++i) {
+                    root.layoutManager.moveIndex(i, i - 1);
+                }
+            } else if (startIndex - 1 > endIndex) { // move left, and at least over 1 applet
+                for (let i = startIndex - 1; i > endIndex; --i) {
+                    root.layoutManager.moveIndex(i, i + 1);
+                }
+            }
+        }
+    }
 
     function finishDragOperation() {
         root.dragAndDropping = false
