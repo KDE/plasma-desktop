@@ -9,7 +9,7 @@ import QtQuick 2.4
 import QtQuick.Controls 2.4 as QQC2
 import QtQuick.Layouts 1.3
 
-import org.kde.kirigami 2.6 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 /**
  * A copy of Kirigami.AboutPage adapted to KPluginMetadata instead of KAboutData
@@ -181,38 +181,14 @@ QQC2.Page {
         }
     }
 
-
-    QQC2.Dialog {
+    Kirigami.OverlaySheet {
         id: licenseSheet
+
         property alias text: licenseLabel.text
 
-        width: 0.75 * parent.width
-        height: 0.75 * parent.height
-
-        x: Math.round((parent.width - width) / 2)
-        y: Kirigami.Units.smallSpacing
-
-        leftPadding: 0
-        rightPadding: 0
-        bottomPadding: 0
-        topPadding: Kirigami.Units.smallSpacing
-        topInset: Kirigami.Units.smallSpacing
-
-        contentItem: QQC2.ScrollView {
-            id: scroll
-            Component.onCompleted: background.visible = true
-            Flickable {
-                id: flickable
-                contentWidth: width
-                contentHeight: licenseLabel.contentHeight
-                clip: true
-                QQC2.Label {
-                    id: licenseLabel
-                    width: parent.width
-                    x: Math.max(0, (width - contentWidth)/2)
-                    wrapMode: Text.WordWrap
-                }
-            }
+        contentItem: Kirigami.SelectableLabel {
+            id: licenseLabel
+            wrapMode: Text.WordWrap
         }
     }
 }
