@@ -275,3 +275,5 @@ set_package_properties(XdgUserDir PROPERTIES
     PURPOSE "Used to translate default paths in KCM desktoppath"
     TYPE RUNTIME
 )
+
+ki18n_install(po)
